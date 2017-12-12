@@ -7,25 +7,25 @@ ms.date: 09/01/2017
 ms.topic: article
 dev_langs: vb
 ms.prod: .net-core
-ms.openlocfilehash: b656ae4746691f2e72eaa666542e98d4abc91069
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b5078a78ea7dae3465680797531e0ff81b9b5845
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 和 MStest 进行 Visual Basic .NET Core 库单元测试
 
-本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-mstest/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-vb-mstest/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="creating-the-source-project"></a>创建源项目
 
-打开 shell 窗口。 创建一个名为 *unit-testing-using-dotnet-test* 的目录，以保留该解决方案。
+打开 shell 窗口。 创建一个名为 unit-testing-vb-mstest 的目录，以保留该解决方案。
 在此新目录中，运行 [`dotnet new sln`](../tools/dotnet-new.md) 创建新的解决方案。 此做法便于管理类库和单元测试项目。
 在解决方案目录中，创建 PrimeService 目录。 目前目录和文件结构如下所示：
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
 ```
 
@@ -50,21 +50,21 @@ End Namespace
 接下来，创建 PrimeService.Tests 目录。 下图显示了它的目录结构：
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
         Source Files
         PrimeService.vbproj
     /PrimeService.Tests
 ```
 
-将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new mstest -lang VB`](../tools/dotnet-new.md) 创建一个新项目。 此命令会创建将 xUnit 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.vbproj 中配置了测试运行程序：
+将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new mstest -lang VB`](../tools/dotnet-new.md) 创建一个新项目。 此命令会创建一个将 MSTest 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.vbproj 中配置了测试运行程序：
 
 ```xml
 <ItemGroup>
-<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
-<PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
-<PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+  <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+  <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
 </ItemGroup>
 ```
 
@@ -74,13 +74,13 @@ End Namespace
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-可以在 GitHub 上的[示例存储库](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService.Tests.vbproj)中看到整个文件。
+可以在 GitHub 上的[示例存储库](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService.Tests.vbproj)中看到整个文件。
 
 最终的解决方案布局将如下所示：
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-vb-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
         Source Files
         PrimeService.vbproj
@@ -89,7 +89,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
         PrimeServiceTests.vbproj
 ```
 
-在 unit-testing-vb-using-mstest 目录中执行 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md)。 
+在 unit-testing-vb-mstest 目录中执行 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md)。
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
@@ -114,7 +114,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-`<TestClass>` 属性指示包含测试的类。 `<TestMethod>` 属性表示由测试运行程序运行的方法。 在 unit-testing-vb-using-mstest 中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 xUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
+`<TestClass>` 属性指示包含测试的类。 `<TestMethod>` 属性表示由测试运行程序运行的方法。 在 unit-testing-vb-mstest 中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 MSTest 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
 
 测试失败。 尚未创建实现。 在起作用的 `PrimeService` 类中编写最简单的代码，以生成此测试：
 
@@ -127,11 +127,11 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-在 unit-testing-vb-using-mstest 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
+在 unit-testing-vb-mstest 目录中，再次运行 `dotnet test`。 `dotnet test` 命令构建 `PrimeService` 项目，然后构建 `PrimeService.Tests` 项目。 构建这两个项目后，该命令将运行此单项测试。 测试通过。
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `<TestMethod>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `<DataTestMethod>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<DataRow>` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `<TestMethod>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 MSTest 属性，使用这些属性可编写类似测试的套件。  `<DataTestMethod>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<DataRow>` 属性来指定这些输入的值。
 
 可以不使用这两个属性创建新测试，而用来创建单个索引。 此索引是测试多个小于 2（即最小的质数）的值的方法：
 
@@ -143,6 +143,6 @@ End Function
 if candidate < 2
 ```
 
-通过在主库中添加更多测试、理论和代码继续循环访问。 你将拥有[已完成的测试版本](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb)和[库的完整实现](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService/PrimeService.vb)。
+通过在主库中添加更多测试、理论和代码继续循环访问。 你将拥有[已完成的测试版本](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb)和[库的完整实现](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService/PrimeService.vb)。
 
 你已生成一个小型库和该库的一组单元测试。 你已将解决方案结构化，使添加新包和新测试成为了正常工作流的一部分。 你已将多数的时间和精力集中在解决应用程序的目标上。

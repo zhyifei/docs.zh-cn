@@ -11,11 +11,11 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 79f5ff0615a572db162906c698c47196c6f045da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d3d9d4c549654341c0739cc8132d953623482d62
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>如何：创建签名的友元程序集 (C#)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
@@ -100,8 +100,8 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
  [友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [如何： 创建未签名友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [如何：创建未签名的友元程序集 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe（强名称工具）](https://msdn.microsoft.com/library/k5b5tt23)  
- [创建和使用具有强名称的程序集](https://msdn.microsoft.com/library/xwb8f617)  
+ [创建和使用具有强名称的程序集](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [C# 编程指南](../../../../csharp/programming-guide/index.md)

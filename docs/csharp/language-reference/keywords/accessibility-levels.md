@@ -1,6 +1,6 @@
 ---
 title: "可访问性级别（C# 参考）"
-ms.date: 07/20/2015
+ms.date: 12/06/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.topic: article
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 77124554d7a0b38414e154e024aceddbfffcfbd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessibility-levels-c-reference"></a>可访问性级别（C# 参考）
+
 使用访问修饰符 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 [private](../../../csharp/language-reference/keywords/private.md)，以为成员指定以下声明的可访问性级别之一。  
   
 |声明的可访问性|含义|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 11/21/2017
 |`internal`|访问限于当前程序集。|  
 |`protected internal`|访问限于当前程序集或派生自包含类的类型。|  
 |`private`|访问限于包含类。|  
-|`private protected`|访问被限制为包含的类或从包含当前程序集中的类派生的类型。|  
+|`private protected`|访问限于包含类或当前程序集中派生自包含类的类型。 自 C# 7.2 之后可用。 |  
   
- 只能有一个访问修饰符时，允许成员或类型，除非你使用`protected internal`或`private protected`组合。  
+ 除使用 `protected internal` 或`private protected` 组合的情况外，一个成员或类型仅允许一个访问修饰符。  
   
  命名空间中不允许出现访问修饰符。 命名空间没有任何访问限制。  
   

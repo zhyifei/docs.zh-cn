@@ -13,14 +13,14 @@ ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7cd3269754f783ab8b26683f5215aa81825673e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f8cc5e19565a0e5044626c4fb8eb9d684fbe0a73
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="baseaddress-c-compiler-options"></a>/baseaddress（C# 编译器选项）
-通过 /baseaddress 选项可指定加载 DLL 的首选基址。 有关何时以及为何要使用此选项的详细信息，请参阅[Larry Osterman 博客](http://go.microsoft.com/fwlink/?LinkId=107044)。  
+通过 /baseaddress 选项可指定加载 DLL 的首选基址。 若要深入了解何时且为何要使用此选项，请参阅 [Larry Osterman 的网络日志](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)。  
   
 ## <a name="syntax"></a>语法  
   

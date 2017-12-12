@@ -1,5 +1,5 @@
 ---
-title: "什么是 C# 7-C# 指南中的新增功能"
+title: "C# 7 中的新增功能 - C# 指南"
 description: "大致了解 C# 语言即将发布的版本 7 中将推出的新功能。"
 keywords: "C#、.NET、.NET Core、最新功能、新增功能"
 author: BillWagner
@@ -10,21 +10,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: f98039404789e8886154e04c4b97a21741c4d885
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-7"></a>C# 7 中的新增功能
 
 C# 7 向 C# 语言添加了许多新功能：
-* [`out`变量](#out-variables)
+* [`out` 变量](#out-variables)
     - 可以将 `out` 值内联作为参数声明到使用这些参数的方法中。
 * [元组](#tuples)
     - 可以创建包含多个公共字段的轻量级未命名类型。 编译器和 IDE 工具可理解这些类型的语义。
 * [放弃](#discards)
-    - 放弃是临时的、 只写的变量时你不关心分配的值在分配中使用。 当解构元组和用户定义的类型，以及调用与方法时，它们是特别有用`out`参数。
+    - 放弃是指在不关心所赋予的值时，赋值中使用的临时只写变量。 在对元组和用户定义类型进行解构，以及在使用 `out` 参数调用方法时，它们特别有用。
 * [模式匹配](#pattern-matching)
     - 可以基于任意类型和这些类型的成员的值创建分支逻辑。
 * [`ref` 局部变量和返回结果](#ref-locals-and-returns)
@@ -82,30 +82,30 @@ return result;
 > 新的元组功能需要 <xref:System.ValueTuple> 类型。
 > 为在不包括该类型的平台上使用它，必须添加 NuGet 包 [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)。
 >
-> 这类似于依赖框架提供的类型的其他语言功能。 示例包括`async`和`await`依赖于`INotifyCompletion`接口，并且依赖于 LINQ `IEnumerable<T>`。 但是，随着 .NET 越来越不依赖平台，交付机制也在发生改变。 .NET Framework 交付频率可能不会与语言编译器的始终相同。 新语言功能依赖于新类型时，这些类型将在交付语言功能时以 NuGet 包的形式提供。 这些新类型添加到 .NET 标准 API 并作为框架的一部分交付后，将删除 NuGet 包要求。
+> 这类似于依赖框架提供的类型的其他语言功能。 例如，依赖 `INotifyCompletion` 接口的 `async` 和 `await`，以及依赖 `IEnumerable<T>` 的 LINQ。 但是，随着 .NET 越来越不依赖平台，交付机制也在发生改变。 .NET Framework 交付频率可能不会与语言编译器的始终相同。 新语言功能依赖于新类型时，这些类型将在交付语言功能时以 NuGet 包的形式提供。 这些新类型添加到 .NET 标准 API 并作为框架的一部分交付后，将删除 NuGet 包要求。
 
 C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是，这种丰富的语法有时会需要额外的工作，但益处却很少。 你可能经常编写需要包含多个数据元素的简单结构的方法。 为了支持这些方案，已将元组添加到了 C#。 元组是包含多个字段以表示数据成员的轻量级数据结构。
 这些字段没有经过验证，并且你无法定义自己的方法
 
 > [!NOTE]
-> 元组已提供之前 C# 7，但它们效率低下和具有无语言支持。
-> 这意味着对元组元素无法仅在作为引用`Item1`， `Item2` ，依此类推。 C# 7 引入了对元组，这样语义的字段的元组使用新的、 更高效的元组类型名称的语言支持。
+> 低于 C# 7 的版本中也提供元组，但它们效率低下且不具有语言支持。
+> 这意味着元组元素只能作为 `Item1` 和 `Item2` 等引用。 C# 7 引入了对元组的语言支持，可利用更有效的新元组类型向元组字段赋予语义名称。
 
 通过为每个成员赋值，可以创建一个元组：
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-分配创建元组的成员是`Item1`和`Item2`，你可以使用方式与<xref:System.Tuple>可以更改用于创建提供语义名称传递给每个元组成员的元组的语法：
+此赋值会创建其成员为 `Item1` 和 `Item2` 的元祖，其使用方式与 <xref:System.Tuple> 的相同。可更改语法，以创建为每个元组成员提供语义名称的元组：
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 
-`namedLetters` 元组包含称为 `Alpha` 和 `Beta` 的字段。 这些名称仅在编译时存在和检查元组在运行时使用反射时不保留的示例。
+`namedLetters` 元组包含称为 `Alpha` 和 `Beta` 的字段。 这些名称仅存在于编译时且不保留，例如在运行时使用反射来检查元组时。
 
 在进行元组赋值时，还可以指定赋值右侧的字段的名称：
 
 [!code-csharp[ImplicitNamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#06_ImplicitNamedTuple "Implicitly named tuple")]
 
-你可以在赋值的左侧和右侧端指定的字段的名称：
+可指定赋值左侧和右侧字段的名称：
 
 [!code-csharp[NamedTupleConflict](../../../samples/snippets/csharp/new-in-7/program.cs#07_NamedTupleConflict "Named tuple conflict")]
 
@@ -151,19 +151,19 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 ## <a name="discards"></a>放弃
 
-通常，当解构元组或调用与方法`out`参数，你要强制可定义变量并不关心和不想要使用其值。 C# 增加了对支持*放弃*处理这种情况。 丢弃是其名称是一个只写变量`_`（下划线字符）; 你可以将所有你想要放弃到单个变量的值进行分配。 丢弃就像未指定的变量;赋值语句中，除了丢弃不能在代码中。
+通常，在进行元组解构或使用 `out` 参数调用方法时，必须定义一个其值无关紧要且你不打算使用的变量。 为处理此情况，C# 增添了对放弃的支持。 放弃是一个名为 `_`（下划线字符）的只写变量，可向单个变量赋予要放弃的所有值。 放弃类似于未赋值的变量；不可在代码中使用放弃（赋值语句除外）。
 
-放弃支持在以下方案：
+在以下方案中支持放弃：
 
-* 当解构元组或用户定义的类型。
+* 在对元组或用户定义的类型进行解构时。
 
-* 调用与方法时[出](../language-reference/keywords/out.md)参数。
+* 在使用 [out](../language-reference/keywords/out.md) 参数调用方法时。
 
-* 在模式匹配操作[是](../language-reference/keywords/is.md)和[切换](../language-reference/keywords/switch.md)语句。
+* 在使用 [is](../language-reference/keywords/is.md) 和 [switch](../language-reference/keywords/switch.md) 语句匹配操作的模式中。
 
-* 作为独立标识符时所需显式确定丢弃分配的值。
+* 在要将某赋值的值显式标识为放弃时用作独立标识符。
 
-下面的示例定义`QueryCityDataForYears`返回 6 元组包含两个不同多年的城市的数据的方法。 该示例中的方法调用而言只能使用由该方法返回的两个填充值，并因此以如将时，它将解构元组丢弃的元组处理剩余的值。
+以下示例定义了 `QueryCityDataForYears` 方法，它返回一个包含两个不同年份的城市数据的六元组。 本例中，方法调用仅与此方法返回的两个人口值相关，因此在进行元组解构时，将元组中的其余值视为放弃。
 
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
@@ -175,15 +175,15 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 模式匹配支持 `is` 表达式和 `switch` 表达式。 每个表达式都允许检查对象及其属性以确定该对象是否满足所寻求的模式。 使用 `when` 关键字来指定模式的其他规则。
 
-### <a name="is-expression"></a>`is`表达式
+### <a name="is-expression"></a>`is` 表达式
 
-`is`模式表达式扩展了熟悉`is`运算符来查询限于其类型的对象。
+`is` 模式表达式扩展了常用 `is` 运算符，使其可查询其类型之外的对象。
 
 我们以一个简单的方案为例。 我们将在此方案中添加功能，以便演示模式匹配表达式如何使处理不相关类型的算法变得简单。 我们从计算多次掷骰数之和的方法开始：
 
 [!code-csharp[SumDieRolls](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#14_SumDieRolls "Sum die rolls")]
 
-你可能很快就发现有时需要在某几次掷骰中骰子多于一个的情况下得出掷骰数总和。 输入序列的一部分可以是多个结果，而非单个数字：
+你可能很快就发现，有时需要在某几次掷骰中骰子多于一个的情况下得出掷骰数总和。 输入序列的一部分可以是多个结果，而非单个数字：
 
 [!code-csharp[SumDieRollsWithGroups](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#15_SumDieRollsWithGroups "Sum die rolls with groups")]
 
@@ -203,7 +203,7 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 [!code-csharp[SwitchWithConstants](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#17_SwitchWithConstants "Switch with constants")]
 
-上面的代码为 `0` 添加 case 作为 `int` 的特殊 case，为 `null` 添加 case 作为没有输出时的特殊 case。 这演示了 switch 模式表达式中一个重要的新功能：`case` 表达式的顺序现在很重要。 `0` case 必须出现在常规 `int` case 之前。 否则，要匹配的第一个模式将为 `int` case，即使值为 `0` 时也是如此。 如果你意外订购匹配表达式以便更高版本的情况下已处理，编译器将标志，并生成错误。
+上面的代码为 `0` 添加 case 作为 `int` 的特殊 case，为 `null` 添加 case 作为没有输出时的特殊 case。 这演示了 switch 模式表达式中一个重要的新功能：`case` 表达式的顺序现在很重要。 `0` case 必须出现在常规 `int` case 之前。 否则，要匹配的第一个模式将为 `int` case，即使值为 `0` 时也是如此。 如果匹配表达式进行意外排序（例如稍后的 case 已经过处理），则编译器将对其标记并生成错误。
 
 这一相同行为可实现空输入序列的特殊 case。
 可以看到，包含元素的 `IEnumerable` 项的 case 必须出现在常规 `IEnumerable` case 之前。
@@ -215,9 +215,9 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 > [!NOTE]
 > 两个 10 面百分比骰子可以表示 0 到 99 之间的每个数字。 一个骰子的各面标记为 `00`、`10`、`20`, ... `90`。 另一个骰子的各面标记为 `0`、`1`、`2`, ... `9`。 将两个骰子的值加在一起，可以得到 0 到 99 之间的每个数字。
 
-若要将这种类型的骰子添加到集合，首先定义一个类型来表示百分比骰子：
+要将此类型的骰子添加到集合，请先定义一个类型来表示百分比骰子。 `TensDigit` 属性将值存储为 `0`、`10`、`20`（依次递增，最大为 `90`）：
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 然后，为新类型添加一个 `case` 匹配表达式：
 
@@ -277,14 +277,14 @@ public static ref int Find2(int[,] matrix, Func<int, bool> predicate)
 
 现在，上例中的第二个 `WriteLine` 语句将打印出值 `24`，指示矩阵中的存储已被修改。 局部变量已使用 `ref` 修饰符进行声明，它将返回 `ref`。 必须在声明时初始化 `ref` 变量，不能拆分声明和初始化。
 
-C# 语言具有三个其他规则，防止误用`ref`局部变量，并返回：
+C# 语言还设有三条规则，可防止你误用 `ref` 局部变量和返回结果：
 
-* 不能将分配标准的方法的返回值以`ref`本地变量。
+* 不可向 `ref` 本地变量赋予标准方法返回值。
     - 因为那将禁止类似 `ref int i = sequence.Count();` 这样的语句
 * 不能将 `ref` 返回给其生存期不超出方法执行的变量。
-    - 这意味着您无法返回到本地变量或具有类似的作用域的变量的引用。
-* `ref`不与异步方法使用局部变量，并返回。
-    - 编译器无法知道此异步方法返回时是否具有已引用的变量设置为其最终值。
+    - 这意味着不可返回对本地变量或对类似作用域变量的引用。
+* `ref` 局部变量和返回结果不可用于异步方法。
+    - 编译器无法知道异步方法返回时，引用的变量是否已设置为其最终值。
 
 添加 ref 局部变量和 ref 返回结果可通过避免复制值或多次执行取消引用操作，允许更为高效的算法。 
 
@@ -366,7 +366,7 @@ C# 6 为成员函数和只读属性引入了 [expression-bodied 成员](csharp-6
 [!code-csharp[UsingValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#30_UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> 你需要添加 NuGet 包[ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)才能使用<xref:System.Threading.Tasks.ValueTask%601>类型。
+> 需要添加 NuGet 包 [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) 才能使用 <xref:System.Threading.Tasks.ValueTask%601> 类型。
 
 一个简单的优化是在之前使用 `Task` 的地方使用 `ValueTask`。 但是，如果要手动执行额外的优化，则可以缓存来自异步工作的结果，并在后续调用中重用结果。 `ValueTask` 结构具有带 `Task` 参数的构造函数，以便你可以从任何现有异步方法的返回值构造 `ValueTask`：
 

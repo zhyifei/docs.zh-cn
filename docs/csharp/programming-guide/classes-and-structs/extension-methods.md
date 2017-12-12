@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 30058a461dddb872e76bef574273c62910e8b2c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="extension-methods-c-programming-guide"></a>扩展方法（C# 编程指南）
 扩展方法使你能够向现有类型“添加”方法，而无需创建新的派生类型、重新编译或以其他方式修改原始类型。 扩展方法是一种特殊的静态方法，但可以像扩展类型上的实例方法一样进行调用。 对于用 C#、F# 和 Visual Basic 编写的客户端代码，调用扩展方法与调用在类型中实际定义的方法没有明显区别。  
@@ -84,14 +84,14 @@ using System.Linq;
   
 -   在命名空间级别将扩展方法置于范围中。 例如，如果你在一个名为 `Extensions` 的命名空间中具有多个包含扩展方法的静态类，则这些扩展方法将全部由 `using Extensions;` 指令置于范围中。  
   
- 针对已实现的类库，不应为了避免程序集的版本号递增而使用扩展方法。 如果要向你拥有源代码的库中添加重要功能，应遵循适用于程序集版本控制的标准 .NET Framework 准则。 有关详细信息，请参阅[程序集版本控制](https://msdn.microsoft.com/library/51ket42z)。  
+ 针对已实现的类库，不应为了避免程序集的版本号递增而使用扩展方法。 如果要向你拥有源代码的库中添加重要功能，应遵循适用于程序集版本控制的标准 .NET Framework 准则。 有关详细信息，请参阅[程序集版本控制](../../../../docs/framework/app-domains/assembly-versioning.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [并行编程示例 （其中包括许多示例扩展方法）](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+ [并行编程示例（这些示例包括许多示例扩展方法）](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [例如，转换规则参数和它们的影响](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [语言之间的扩展方法互操作性](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [扩展方法和扩充委托](http://go.microsoft.com/fwlink/?LinkId=112387)  
+ [Conversion rules for Instance parameters and their impact](http://go.microsoft.com/fwlink/?LinkId=112385)（实例参数及其影响的转换规则）  
+ [Extension methods Interoperability between languages](http://go.microsoft.com/fwlink/?LinkId=112386)（语言间扩展方法的互操作性）  
+ [Extension methods and Curried Delegates](http://go.microsoft.com/fwlink/?LinkId=112387)（扩展方法和扩充委托）  
  [Extension method Binding and Error reporting](http://go.microsoft.com/fwlink/?LinkId=112388)（扩展方法绑定和错误报告）
