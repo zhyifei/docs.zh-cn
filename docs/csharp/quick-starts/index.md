@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: af7b04969519cce49e9d753993245e1347f596d4
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-starts"></a>C# 快速入门 #
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/22/2017
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[分支和循环](branches-and-loops.yml)
 
-[分支和循环](branches-and-loops.yml)快速入门教程将介绍根据变量中存储的值选择不同代码路径的基础知识。 读者将学习控制流的基础知识，这是程序决定选择不同操作的基本依据。 本快速入门教程也可[下载到计算机本地进行学习](branches-and-loops-local.md)。
+[分支和循环](branches-and-loops.yml)快速入门教程将介绍根据变量中存储的值选择不同代码执行路径的基础知识。 读者将学习控制流的基础知识，这是程序决定选择不同操作的基本依据。 本快速入门教程也可[下载到计算机本地进行学习](branches-and-loops-local.md)。
 
 若要更好地学习本入门课程，需要已完成 [Hello World](hello-world.yml) 和 [C# 中的数字](numbers-in-csharp.yml)课程。
 
