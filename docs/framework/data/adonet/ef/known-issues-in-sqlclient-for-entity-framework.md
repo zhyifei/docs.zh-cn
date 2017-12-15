@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  某些数据库行为取决于为数据库设置的兼容级别。 如果 `ProviderManifestToken` 属性设置为 2005 并且 SQL Server 版本为 2005，但数据库的兼容级别设置为“80”(SQL Server 2000)，则生成的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 将以 SQL Server 2005 为目标，但可能会因兼容级别设置而无法正常执行。 例如，如果 ORDER BY 列表中的列名与选择器中的列名相同，则可能会丢失排序信息。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的嵌套查询  
- 投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器（包括 SLQ Server）上，这会导致 TempDB 表变得相当大。 这样会降低服务器性能。  
+ 投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器，包括 SLQ Server，这可能导致 TempDB 表变得相当大。 这样会降低服务器性能。  
   
  下面是投影子句中嵌套查询的示例：  
   
@@ -71,4 +71,4 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
   
 ## <a name="see-also"></a>另请参阅  
  [用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [已知的问题和在 LINQ to Entities 的注意事项](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+ [LINQ to Entities 中的已知问题和注意事项](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

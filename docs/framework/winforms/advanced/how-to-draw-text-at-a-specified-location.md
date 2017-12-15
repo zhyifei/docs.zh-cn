@@ -15,17 +15,17 @@ helpviewer_keywords:
 - text [Windows Forms], drawing at specified locations [Windows Forms]
 - drawing text
 - drawing text [Windows Forms], specified locations [Windows Forms]
-- Windows Forms, drawing text a a specified location
+- Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aab9570b98caec5b3975a5b3ff6f1e62d4ad303b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe6e8563b19ef18b89ad970f3ca35bf5f0782a32
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>如何：在指定位置绘制文本
 在执行自定义绘制时，您可以在一个水平行从指定位置开始绘制文本。 可以通过使用这种方式中绘制文本<xref:System.Drawing.Graphics.DrawString%2A>重载的方法的<xref:System.Drawing.Graphics>采用类<xref:System.Drawing.Point>或<xref:System.Drawing.PointF>参数。 <xref:System.Drawing.Graphics.DrawString%2A>方法还要求<xref:System.Drawing.Brush>和<xref:System.Drawing.Font>  

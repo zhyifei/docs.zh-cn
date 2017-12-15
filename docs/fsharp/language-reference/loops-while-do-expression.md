@@ -1,6 +1,6 @@
 ---
 title: "循环：while...do 表达式 (F#)"
-description: "请参阅如何 while...是否会使用表达式来指定的测试条件为 true 时执行迭代执行 （循环）。"
+description: "请参阅如何时...是否会使用表达式来指定的测试条件为 true 时执行迭代执行 （循环）。"
 keywords: "visual f#, f#, 函数编程"
 author: cartermp
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 0416ffca-7ed9-4aff-9493-e001fdba8c9b
-ms.openlocfilehash: 6a186d75dcda383764949c2cd3b09bc9e3d1080a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5f10fda84a5e748856eb7b2c63ad46cc1fba44bb
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="loops-whiledo-expression"></a>循环：while...do 表达式
 

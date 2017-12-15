@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="weak-event-patterns"></a>弱事件模式
 在应用程序，很可能不会被附加到事件源的处理程序破坏与附加到源的处理程序的侦听器对象结合使用。 这种情况下可能会导致内存泄漏。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]引入了一种设计模式，可以用于解决此问题，通过专用管理器类的特定事件并在该事件的侦听器上实现接口。 此设计模式中被称为*弱事件模式*。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 |--------------|-----------------------|  
 |使用现有弱事件 manager 类|如果你想要订阅的事件具有对应<xref:System.Windows.WeakEventManager>，使用现有弱事件管理器。 弱事件管理器所包含的 WPF 的列表，请参阅中的继承层次结构<xref:System.Windows.WeakEventManager>类。 但是，请注意，有相对较少弱事件管理器将包含在 WPF 中，这样你将可能需要选择其他方法之一。|  
 |使用泛型弱事件管理器类|使用通用<xref:System.Windows.WeakEventManager%602>如果现有<xref:System.Windows.WeakEventManager>不可用，你想轻松实现，并且你不关心效率。 泛型<xref:System.Windows.WeakEventManager%602>效率低于现有或自定义的弱事件管理器。 例如，泛型类执行详细的反射来发现给定名称的事件的事件。 此外，通过使用泛型注册事件的代码<xref:System.Windows.WeakEventManager%602>为更详细比使用的现有或自定义<xref:System.Windows.WeakEventManager>。|  
-|创建自定义弱事件管理器类|创建自定义<xref:System.Windows.WeakEventManager>时你的现有<xref:System.Windows.WeakEventManager>不可用，并且你希望最高的效率。 使用自定义<xref:System.Windows.WeakEventManager>璹綷事件将会更高效，但你执行会产生编写更多代码开头的成本。|  
+|创建自定义弱事件管理器类|创建自定义<xref:System.Windows.WeakEventManager>如果现有<xref:System.Windows.WeakEventManager>不可用，并且你希望最高的效率。 使用自定义<xref:System.Windows.WeakEventManager>璹綷事件将会更高效，但你执行会产生编写更多代码开头的成本。|  
   
  下列各节描述如何实现弱事件模式。  出于本文的讨论，订阅的事件具有以下特征。  
   

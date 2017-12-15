@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: e60ed6fb2fb85faa1d2d744bf29e40d3eaa639c3
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能详细信息
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 向 Windows Workflow Foundation 添加了大量功能。 本文档介绍了大量新的功能，并详述了这些功能可用于的方案。  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/02/2017
   
 -   例如，将消息组合在一起的请求-答复相关性就是用于将消息组合在一起的相关性。  
   
-    -   在 <xref:System.ServiceModel.Activities.Receive> 活动上单击 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> 属性，并使用上一个步骤中创建的 CorrelationHandle 添加 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>。  
+    -   上<xref:System.ServiceModel.Activities.Receive>活动上单击<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>属性并添加<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>使用 CorrelationHandle 在上面的第一步中创建。  
   
     -   创建<xref:System.ServiceModel.Activities.SendReply>通过右键单击活动<xref:System.ServiceModel.Activities.Receive>并单击"创建 SendReply"。 将其粘贴到工作流中的 <xref:System.ServiceModel.Activities.Receive> 活动后。  
   
@@ -180,7 +180,7 @@ ms.lasthandoff: 12/02/2017
   
 -   示例：  
   
-    -   [在使用 TryCatch Flowchart 活动中处理的错误](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    -   [使用 TryCatch 在 Flowchart 活动中进行错误处理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
     -   [使用 FlowChart 与 Pick 的组合的 StateMachine 方案](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
   
@@ -258,7 +258,7 @@ ms.lasthandoff: 12/02/2017
   
 -   示例：  
   
-    1.  [在使用 TryCatch Flowchart 活动中处理的错误](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    1.  [使用 TryCatch 在 Flowchart 活动中进行错误处理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
     2.  [使用过程性活动](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   

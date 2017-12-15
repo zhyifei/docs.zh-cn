@@ -16,11 +16,11 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80cc1418418518efdccbb6dc0429b1ac61b56420
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows 窗体上使用的控件
 下面按字母顺序列出了可在 Windows 窗体上使用的控件和组件。 除本节介绍的 Windows 窗体控件外，还可向 Windows 窗体添加 ActiveX 控件和自定义控件。 如果在此处列出的控件中未找到所需控件，还可创建自己的控件。 有关详细信息，请参阅[设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。 有关选择所需控件的详细信息，请参阅[按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。  
@@ -83,9 +83,8 @@ ms.lasthandoff: 10/18/2017
  [ErrorProvider 组件](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
  以非打扰方式向用户显示错误信息。  
   
- “FileDialog 类”  
- 为文件对话框提供基类功能。  
-  
+ [FileDialog 类](../../../../docs/framework/winforms/controls/filedialog-class.md)提供文件对话框基类功能。
+
  [FlowLayoutPanel 控件](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
  表示以水平或垂直方式动态布置其内容的面板。  
   
@@ -173,8 +172,7 @@ ms.lasthandoff: 10/18/2017
  [SaveFileDialog 组件](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  选择要保存的文件及要保存的位置。  
   
- “SoundPlayer 类”  
- 使你能够轻松地将声音纳入应用程序。  
+ [SoundPlayer 类](../../../../docs/framework/winforms/controls/soundplayer-class.md)使你能够轻松地将声音纳入应用程序。
   
  [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  允许用户调整停靠控件的大小。  

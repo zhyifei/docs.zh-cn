@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 367ca30c577cbb4ed7fed130bdcbd4faac2d46c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 828a28769e164535d4dde989ef8cce91caf9cb48
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows 窗体添加配置元素
 
@@ -113,7 +113,7 @@ Windows 窗体高 DPI 支持的概述，请参阅[高 DPI 支持 Windows 窗体�
 
 ### <a name="single-pass-scaling"></a>单个传递缩放
 
-单个或多传递缩放会影响用户界面的感知响应能力和可视外观的用户界面元素，因为它们缩放。 从.NET Framework 4.7 开始，使用单个传递缩放 Windows 窗体。 在以前版本的.NET Framework 中，通过多个通过，这导致某些控件可按比例超过时需要执行缩放。 如果你的应用程序依赖于这一旧行为应仅禁用单个传递缩放。  
+单个或多传递缩放影响的用户界面的感知响应能力和用户界面元素的可视外观，因为它们缩放。 从.NET Framework 4.7 开始，使用单个传递缩放 Windows 窗体。 在以前版本的.NET Framework 中，通过多个通过，这导致某些控件可按比例超过时需要执行缩放。 如果你的应用程序依赖于这一旧行为应仅禁用单个传递缩放。  
 
 ## <a name="see-also"></a>请参阅
  
