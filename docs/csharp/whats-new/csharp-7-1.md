@@ -133,7 +133,7 @@ Func<string, bool> whereClause = default;
 
 ## <a name="inferred-tuple-element-names"></a>推断元组元素名称
 
-此功能是在 C# 7.0 中引入的元组功能小增强功能。 很多时候时初始化元组，使用分配的左右两边的变量是你想要为元组元素的名称相同：
+此功能是在 C# 7.0 中引入的元组功能的小增强功能。 很多时候，在初始化元组时，变量右侧分配的名称与您想要给元组元素分配的名称相同：
 
 ```csharp
 int count = 5;
@@ -141,7 +141,7 @@ string label = "Colors used in the map";
 var pair = (count: count, label: label);
 ```
 
-用于初始化的元组 7.1 C# 中的变量中推断的元组元素的名称：
+在 C# 7.1 中，用于初始化的元组的变量，可以推断出元组元素的名称：
 
 ```csharp
 int count = 5;
@@ -149,7 +149,7 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-你可以了解有关此功能的详细[元组](../tuples.md)主题。
+您可以在[元组](../tuples.md)主题中了解有关此功能的详细信息。
 
 ## <a name="reference-assembly-generation"></a>引用程序集生成
 
