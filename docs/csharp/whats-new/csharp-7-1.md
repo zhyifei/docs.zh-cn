@@ -26,9 +26,9 @@ C# 7.1 添加[语言版本选择](#language-version-selection)配置元素、 �
 * [`async` `Main`方法](#async-main)
   - 应用程序的入口点可以具有`async`修饰符。
 * [`default`文本表达式](#default-literal-expressions)
-  - 可以推断的目标类型时，可以在默认值表达式中使用默认文本表达式。
+  - 对可推断的目标类型时，可以在默认值表达式中使用默认文本表达式。
 * [推断元组元素名称](#inferred-tuple-element-names)
-  - 可以从在许多情况下的元组初始化推断的元组元素的名称。
+  - 可以从多种情况下的元组初始化中推断出的元组元素的名称。
 
 最后，编译器具有两个选项`/refout`和`/refonly`该控件[引用程序集生成](#reference-assembly-generation)。
 
