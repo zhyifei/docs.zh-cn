@@ -1,5 +1,5 @@
 ---
-title: "什么是 C# 7.1 中的新增功能"
+title: "C# 7.1 中的新增功能是什么"
 description: "C# 7.1 中的新增功能概述。"
 keywords: "C# 语言设计，7.1，Visual Studio 2017，"
 author: billwagner
@@ -14,7 +14,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
-# <a name="whats-new-in-c-71"></a>什么是 C# 7.1 中的新增功能
+# <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能是什么
 
 C# 7.1 是 C# 语言的第一个点版本。 会将标记的语言增加的发布节奏。 你可以使用新的功能更快，理想情况下准备每个新功能时。 C# 7.1 添加了配置以匹配的指定的版本的语言编译器的功能。 它使你可以将分隔从判定升级语言版本升级工具的决策。
 
