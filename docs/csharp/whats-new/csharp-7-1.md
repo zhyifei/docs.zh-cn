@@ -115,21 +115,21 @@ static async Task Main()
 ## <a name="default-literal-expressions"></a>默认文本表达式
 
 默认文本表达式是一项增强功能的默认值表达式。
-这些表达式初始化为默认值的变量。 其中以前编写：
+这些表达式初始化为默认值的变量。 比如以前这样编写：
 
 ```csharp
 Func<string, bool> whereClause = default(Func<string, bool>);
 ```
 
-现在，则可以省略的初始化的右侧类型：
+现在，则可以省略掉初始化的右侧类型：
 
 ```csharp
 Func<string, bool> whereClause = default;
 ```
 
-你可以了解有关 C# 编程指南主题中的此增强功能的详细信息上[默认值表达式](../programming-guide/statements-expressions-operators/default-value-expressions.md)。
+您可以在[默认值表达式](../programming-guide/statements-expressions-operators/default-value-expressions.md)中了解有关 C# 编程指南主题中的此增强功能的详细信息。
 
-此增强功能也会更改某些的分析规则[default 关键字](../language-reference/keywords/default.md)。
+此增强功能也会更改某些[default 关键字](../language-reference/keywords/default.md)的分析规则。
 
 ## <a name="inferred-tuple-element-names"></a>推断元组元素名称
 
