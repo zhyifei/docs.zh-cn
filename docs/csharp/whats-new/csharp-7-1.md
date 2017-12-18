@@ -30,7 +30,7 @@ C# 7.1 添加[语言版本选择](#language-version-selection)配置元素、 �
 * [推断元组元素名称](#inferred-tuple-element-names)
   - 可以从多种情况下的元组初始化中推断出的元组元素的名称。
 
-最后，编译器具有两个选项`/refout`和`/refonly`该控件[引用程序集生成](#reference-assembly-generation)。
+最后，编译器具有两个选项`/refout`和`/refonly`以控件[引用程序集生成](#reference-assembly-generation)。
 
 ## <a name="language-version-selection"></a>语言版本选择
 
