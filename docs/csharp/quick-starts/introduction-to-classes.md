@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ad6e83d427b55482f9615e0083682bdca6c56704
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: b7598309f48cbccf2d270be53a4b40dae11e8df8
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-classes"></a>类简介
 
-若要更好地学习本课程，需要已安装 [.NET Core SDK](http://dot.net/core) 和选定编辑器。 如果尚未安装，请尝试在 Mac 或 Windows 上使用 [Visual Studio Code](https://code.visualstudio.com/) 或 [Visual Studio](https://www.visualstudio.com/)。
+本快速入门教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门简介](local-environment.md)简要概述了你将用到的命令，还提供了详细信息链接。
 
 ## <a name="create-your-application"></a>创建应用程序
 
