@@ -19,7 +19,7 @@ ms.author: wpickett
 manager: wpickett
 ms.openlocfilehash: b8d1214e011e4a6569b5612d7be93ed05b776166
 ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/18/2017
 ---
@@ -46,7 +46,7 @@ ms.lasthandoff: 10/18/2017
  如果你要查找对 XAML 作为一种语言的介绍性材料，则可能会尝试[XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。 该主题讨论 XAML 是新的受众这两项[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]并指向使用 XAML 标记和 XAML 语言功能。 另一个有用的文档中的介绍性材料是[XAML 语言规范](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML 服务和 System.Xaml 中.NET 体系结构  
- 在以前版本的[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]，支持 XAML 语言功能所实现的基础构建的框架[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]和[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)])，并因此不同其行为，具体取决于使用的 API已使用特定的框架。 这包括 XAML 分析器及其对象图创建机制，XAML 语言内部函数、 序列化支持，依次类推。  
+ 在以前版本的[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]，支持 XAML 语言功能所实现的基础构建的框架[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]和[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)])，并因此不同其行为，具体取决于使用的 API已使用特定的框架。 这包括 XAML 分析器及其对象图创建机制，XAML 语言内部函数、 序列化支持，依次类推。  
   
  在[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，.NET Framework XAML 服务和 System.Xaml 程序集中定义了大部分所需的支持 XAML 语言功能。 这包括用于 XAML 读取器和 XAML 编写器的基类，这些类。 添加到未出现在任何特定于框架的 XAML 实现的.NET Framework XAML 服务的最重要功能是 XAML 类型系统表示形式。 类型系统表示形式以侧重于 XAML 功能而不依赖于框架的特定功能的面向对象的方式显示 XAML。  
   
