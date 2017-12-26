@@ -235,7 +235,7 @@ ms.lasthandoff: 10/18/2017
   
      不会挂起运行本机代码的线程。  
   
--   工作站垃圾回收始终用在只有一个处理器，而不考虑的计算机上[ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)设置。 如果你指定服务器垃圾回收，则 CLR 会使用工作站垃圾回收，并禁用并发。  
+-  如果计算机只有一个处理器，那么无论[ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)如何设置，都会使用工作站垃圾回收方式进行处理。 即使你指定了使用服务器垃圾回收，CLR 仍然会使用工作站垃圾回收方式，并禁用并发。  
   
  以下是服务器垃圾回收的线程处理和性能注意事项：  
   
