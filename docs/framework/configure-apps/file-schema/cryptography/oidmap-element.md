@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: eab9be57b6f8fac5f208e39a6aaa8eb7be92558d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08f7eb8e4531d27586bede11bacf598e472b158f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;元素
 包含 ASN.1 对象标识符 (OID) 映射到类。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`cryptographySettings`|包含加密设置。|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  [加密服务](../../../../../docs/standard/security/cryptographic-services.md)  

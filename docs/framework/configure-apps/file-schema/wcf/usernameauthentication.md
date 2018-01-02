@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fded506ce695473843c29a7438fe4818cab8bd91
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cea18a2c8c2244f384b87b48f195b77da4eb5dfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
 指定基于用户名和密码的服务凭据。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/02/2017
   
  如果没有配置服务所用的绑定，以使用 Windows 用户名/密码身份验证，则忽略与登录令牌的缓存相关的设置。 这些设置包括 `cacheLogonTokenLifetime`、`cacheLogonTokens` 和 `maxCacheLogonTokens`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.UserNameServiceElement>  
  <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>  
  <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>  

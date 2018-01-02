@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c7d1e193236528c96e8253668c742883090ae188
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b6d9eeacb38531ced5768f29bf26de3c9294b71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cryptography-settings-schema"></a>密码设置架构
 加密设置架构包含元素，这些元素指定如何将友好算法名称映射到实现加密算法的类。  
@@ -59,6 +60,6 @@ ms.lasthandoff: 11/21/2017
 |[**\<oidEntry>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 对象标识符 (OID) 映射到友好名称。|  
 |[**\<oidMap>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|包含映射到类的 ASN.1 OID。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [加密服务](../../../../../docs/standard/security/cryptographic-services.md)

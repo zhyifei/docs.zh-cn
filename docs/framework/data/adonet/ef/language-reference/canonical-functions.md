@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b80eeedc67678d703664eb705408a72b7e4a2274
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da48efc110669c170fc409e22cb8402f471b22e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="canonical-functions"></a>规范函数
 本节讨论所有数据提供程序支持的并可由所有查询技术使用的规范函数。 规范函数不能由提供程序扩展。  
@@ -36,29 +37,29 @@ ms.lasthandoff: 11/21/2017
  规范函数的命名空间是 <xref:System.Data.Metadata.Edm>。 <xref:System.Data.Metadata.Edm> 命名空间自动包含在所有查询中。 但如果导入的另一个命名空间包含与规范函数（在 <xref:System.Data.Metadata.Edm> 命名空间中）同名的函数，则必须指定命名空间。  
   
 ## <a name="in-this-section"></a>本节内容  
- [聚合规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
+ [聚合 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
  讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 聚合规范函数。  
   
- [数学规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
+ [数学 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
  讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学规范函数。  
   
- [字符串规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
+ [字符串 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
  讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 字符串规范函数。  
   
- [日期和时间规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
+ [日期和事件 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
  讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 日期和时间规范函数。  
   
- [按位规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
+ [按位 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
  讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 按位规范函数。  
   
  [空间函数](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
  讨论空间 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 规范函数。  
   
- [其他规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
+ [其他 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
  讨论未分类为按位、日期/时间、字符串、数字或聚合函数的函数。  
   
-## <a name="see-also"></a>另请参阅  
- [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+## <a name="see-also"></a>请参阅  
+ [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [SQL Server 函数映射的规范化概念模型](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
- [用户定义函数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+ [用户定义的函数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

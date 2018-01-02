@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc2dfd94ffbf8ce08dee9c14421f389861e99e77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f0bd36f0c13aebb75bb9d2147e871224c162b862
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientcertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;clientCertificate&gt;
 定义一个用于在双工通信模式中对从服务发送到客户端的消息进行签名和加密的 X.509 证书。  
@@ -63,12 +64,12 @@ ms.lasthandoff: 12/02/2017
   
  在此元素中设置的证书用于仅针对配置有 `MutualCertificateDuplex` 消息安全身份验证模式的绑定加密发送到客户端的消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
  <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>  
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>  
  <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>  
- [如何： 创建双工协定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [如何：创建双工协定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

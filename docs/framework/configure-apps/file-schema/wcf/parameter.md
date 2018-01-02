@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ccc11dd714c1074b2710280e02a8b5ad47b843b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cdbb47fcb65273d03d226e13730849170d4345c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltparametergt"></a>&lt;参数&gt;
 指定当声明类型是泛型类型时的泛型参数。  
@@ -69,8 +70,8 @@ ms.lasthandoff: 12/02/2017
   
  此配置元素不能同时具有两个属性。 如果设置两个属性，则发生 <xref:System.Configuration.ConfigurationErrorsException>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
- [数据协定已知的类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e1bfd3e88df4bd90cbcebfa645c2a50159f836db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f28f4ed728ee429a691a0a19b3fc143ac0e832ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commands-and-parameters"></a>命令和参数
 建立与数据源的连接后，可以使用 <xref:System.Data.Common.DbCommand> 对象来执行命令并从数据源中返回结果。 您可以使用命令构造函数之一为要使用的 .NET Framework 数据提供程序创建命令。 构造函数可以采用可选参数，如要在数据源中执行的 SQL 语句、<xref:System.Data.Common.DbConnection> 对象或 <xref:System.Data.Common.DbTransaction> 对象。 您也可以将这些对象配置为命令的属性。 也可以使用 <xref:System.Data.Common.DbConnection.CreateCommand%2A> 对象的 `DbConnection` 方法创建用于特定连接的命令。 由命令执行的 SQL 语句可以使用 <xref:System.Data.Common.DbCommand.CommandText%2A> 属性进行配置。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  [配置参数和参数数据类型](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  说明如何使用 `Command` 参数，包括方向、数据类型和参数语法。  
   
- [使用 Commandbuilder 生成命令](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
+ [使用 CommandBuilder 生成命令](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
  说明如何使用命令生成器为具有单表 SELECT 命令的 `DataAdapter` 自动生成 INSERT、UPDATE 和 DELETE 命令。  
   
  [从数据库获取单一值](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
@@ -40,8 +41,8 @@ ms.lasthandoff: 11/21/2017
  [使用命令修改数据](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  说明如何使用数据提供程序来执行存储过程或数据定义语言 (DDL) 语句。  
   
-## <a name="see-also"></a>另请参阅  
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+## <a name="see-also"></a>请参阅  
+ [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

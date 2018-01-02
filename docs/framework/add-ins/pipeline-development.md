@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4991fc65a48d620d30d09c44f1a30c2d1839071e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pipeline-development"></a>管线开发
 外接程序管线是主机应用程序和其外接程序必须使用才能相互之间进行通信的管道段的路径。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="walkthroughs"></a>演练  
  有三个描述如何创建使用 Visual Studio 的管道的演练主题：  
   
--   [演练： 创建可扩展应用程序](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
+-   [演练：创建可扩展的应用程序](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
   
      描述一个计算器外接程序，执行加法、 减法、 乘法和除法计算的主机。  
   
@@ -96,6 +97,6 @@ ms.lasthandoff: 11/21/2017
   
      描述如何通过使用书店方案管道传递数据集合。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [外接程序管线方案](http://msdn.microsoft.com/en-us/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [外接程序和扩展性](../../../docs/framework/add-ins/index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6594e466295eb51ff972c5565cfcd31b600a1ab6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a7475c4a083d27e9c34e3662393981297c93580f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttrackinggt-of-wcf"></a>WCF 的 &lt;tracking&gt;
 表示一个配置节，用于定义工作流服务的跟踪设置。  
@@ -55,6 +56,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  利用跟踪可以检查工作流的执行。 工作流跟踪基础结构检测工作流以发出反应执行期间关键事件的记录。 例如，工作流实例开始或完成时会发出跟踪记录。 跟踪还可以提取与工作流变量关联的相关业务数据。 例如，如果工作流表示一个订单处理系统，则可以提取订单 ID 以及跟踪记录。 一般来讲，启用 WF 跟踪便于对工作流的执行进行诊断或业务分析。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>       
  [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

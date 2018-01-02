@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d48f3b304b337ba61f53bbd81cac8601bc68cb0a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 09496add0adcc11756b6aae01a0236fe590f819f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
 指定自定义绑定的通道池设置。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 12/02/2017
   
 -   `maxOutboundChannelsPerEndpoint` 配额设置服务器与客户端上的缓存限制，用于提高可靠性。 其默认值基于资源的保守适度分配，适用于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查该值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>  
  <xref:System.ServiceModel.Channels.ChannelPoolSettings>  
  <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>  

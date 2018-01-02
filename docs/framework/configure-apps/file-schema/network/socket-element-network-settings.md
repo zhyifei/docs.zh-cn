@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3d1adc163e889a0de6ad27347c8f122ac26d3524
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fefb8e119d428d86501e1c8cdd5eec5ef0809cbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;套接字&gt;元素 （网络设置）
 指定的套接字操作是否使用完成端口。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|指示是否套接字始终应该使用完成端口用于接受方法调用。 默认值为 `false`。|  
 |`alwaysUseCompletionPortsForConnect`|指示是否套接字始终应连接方法调用使用完成端口。 默认值为 `false`。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
  可能值`ipProtectionLevel`属性设置中指定的已定义的保护级别与对应<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>枚举，如下所示：  
   
-|**属性值**|**描述**|  
+|**属性值**|**说明**|  
 |-|-|  
 |EdgeRestricted|IP 保护级别是受限的边缘。 设计在 internet 上运行的应用程序将使用此值。 此设置不允许使用 Windows Teredo 实现的网络地址转换 (NAT) 遍历。 这些应用程序可能会绕过 IPv4 防火墙，因此必须针对 Internet 攻击在打开的端口定向强化应用程序。 在 Windows Server 2003 和 Windows XP，套接字上的 IP 保护级别的默认值是受限的边缘。|  
 |限制|IP 保护级别是受限的。 未实现 Internet 方案的 intranet 应用程序将使用此值。 通常，这些应用程序是不要测试或者针对 Internet 样式攻击强化。 此设置将限制到仅链接本地的接收的流量。|  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>  
  <xref:System.Net.Sockets?displayProperty=nameWithType>  

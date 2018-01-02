@@ -14,11 +14,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35dfb3eee5a01d5fed21bda59f1cab5eb09a1401
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2d20faaee94363a1f54cf398d72955f376087b36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnetpeertcpbindinggt"></a>&lt;netPeerTcpBinding&gt;
 为特定于对等通道的 TCP 消息定义绑定。  
@@ -110,7 +111,7 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.NetPeerTcpBinding>  
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  

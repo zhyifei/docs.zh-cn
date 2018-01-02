@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3fbb3ef0fddd287fa3feb30732b26c651ac0067
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5f6f52eae3ed9ac3236f54c62ce8712656392f0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 元素
 指定客户端对服务进行身份验证时使用的证书。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/02/2017
   
  属性`serviceCertificate`元素的属性相等[ \<t i a l >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
@@ -70,4 +71,4 @@ ms.lasthandoff: 12/02/2017
  [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
  [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [保护服务和客户端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

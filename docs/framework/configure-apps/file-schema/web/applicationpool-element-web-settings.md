@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: df4e7325a42db733fd6a7f5fbc9fe29c2cda4bd1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 70119b3067342dc9bc93e0fb8a43a3242f2dacc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt;元素 （Web 设置）
 指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理进程范围的行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  
@@ -104,5 +105,5 @@ ms.lasthandoff: 10/18/2017
 |验证文件||  
 |可以为空||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<system.web> 元素（Web 设置）](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

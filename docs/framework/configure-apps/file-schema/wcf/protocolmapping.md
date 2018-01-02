@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88eb76a5657bd4a83bebb32ce30f73d32693be9b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2d932e8a7fbe9c1457b5cea5106b69317227a21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 表示一个配置节，用于定义一组的传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 和 WCF 绑定之间的默认协议映射。 当在运行时创建默认终结点时，[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 将查看已配置的映射，并确定要用于基于特定内容的地址的绑定。  
@@ -61,6 +62,6 @@ ms.lasthandoff: 12/02/2017
 </protocolMapping>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>       
  <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd787373b869c31727cfc0d027b6b98774b0d630
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a20061c551f5cb1a19c64a2f92b8180465f58eb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-in-adonet"></a>在 ADO.NET 中的连接字符串
 .NET Framework 2.0 引入了用于处理连接字符串的新功能（包括将新的关键字引入到连接字符串生成器类），这将有助于在运行时创建有效的连接字符串。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 11/21/2017
  [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  演示保护用于连接到数据源的信息的各项技术。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到数据源](/cpp/data/odbc/connecting-to-a-data-source)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

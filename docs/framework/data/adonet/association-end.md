@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7ceb6d40a47c73c4580a8fc33acc3c395a2c5a06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53e52a09533f3e1ead240ec3284371603c82ce53
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="association-end"></a>关联端
 *关联端*标识[实体类型](../../../../docs/framework/data/adonet/entity-type.md)的一个 end[关联](../../../../docs/framework/data/adonet/association-type.md)以及在该末尾关联类型可以存在的实例的实体数。 关联端定义为关联的一部分；关联必须正好有两个关联端。 [导航属性](../../../../docs/framework/data/adonet/navigation-property.md)允许从一个关联端导航到其他。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a64f5ae4573efbd8c0f7d622e6b94b7786585bb1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 66c8686ae4397b9d4bf18fbf7a79aa2408db101d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。  
@@ -60,9 +61,9 @@ ms.lasthandoff: 12/02/2017
 > [!CAUTION]
 >  在配置文件中，`<dataContractSerializer>` 行为元素（如果有）应始终在 `<enableWebScript>` 行为元素之前出现。 否则，产生的行为将是不确定的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
  <xref:System.ServiceModel.Configuration.DataContractSerializerElement>  
- [数据协定已知的类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [数据传输和序列化](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

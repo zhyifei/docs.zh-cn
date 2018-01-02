@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff083cfbcdfa772bb5904f4311d95e399c22c97e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b1ca0d5ae73d01e5bbb719f7bcc9a3f5a19fc291
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt; 的 &lt;add&gt;
 一个 XPath 筛选器，用于指定要记录的消息的种类。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/02/2017
   
 |特性|描述|  
 |---------------|-----------------|  
-|筛选器|一个字符串，用于指定由 XPath 1.0 表达式定义的 XML 文档的查询。 有关更多信息，请参见<xref:System.ServiceModel.Dispatcher.XPathMessageFilter>。|  
+|筛选器|一个字符串，用于指定由 XPath 1.0 表达式定义的 XML 文档的查询。 有关详细信息，请参阅<xref:System.ServiceModel.Dispatcher.XPathMessageFilter>。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/02/2017
 </messageLogging>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.DiagnosticSection>  
  <xref:System.ServiceModel.Diagnostics>  
  <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  

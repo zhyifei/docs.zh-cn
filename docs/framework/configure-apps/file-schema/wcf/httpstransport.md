@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1aa848ebb21c4d0f52d471ff2451f9ec438ea36
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78b0cc2dd260b773c29b8684ab94bfaa0afffff2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。  
@@ -84,7 +85,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  `httpsTransport` 元素是创建实现 HTTPS 传输协议的自定义绑定的起始点。 HTTPS 是用于安全互操作性用途的主要传输。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 支持 HTTPS 以确保与其他 Web 服务堆栈的互操作性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.HttpsTransportElement>  
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  

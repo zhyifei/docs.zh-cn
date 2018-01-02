@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 85ccad3e2c3b237e286f3737589a5e58994521bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38ffe6728ca05022caca8f5973b546f2b17412d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt;元素 （网络设置）
 配置对网络资源的连接。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`checkCertificateName`|指定系统是否应验证证书上的名称与之前使用的证书匹配服务器主机名。 默认值为 `true`。|  
 |`checkCertificateRevocationList`|指定是否应检查系统，然后才能使用该证书是否已吊销证书。 默认值为 `false`。|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.ServicePointManager>  
  <xref:System.Net.Security.EncryptionPolicy>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

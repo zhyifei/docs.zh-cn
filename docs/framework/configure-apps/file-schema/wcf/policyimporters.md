@@ -13,16 +13,17 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ee6b62068a1d9532345dacd84e133064fd540f8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d7c665a976a2a8bf4b66c63b01c1133f0c41a721
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpolicyimportersgt"></a>&lt;policyImporters&gt;
 此配置元素指定用于控制有关绑定的自定义策略断言的导入的所有策略导入程序。 每个子元素均为一个 <`policyImporter`>，可用于搜索有关绑定功能的自定义策略断言，并附加一个实现断言所需功能的自定义绑定元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.MetadataElement>  
  <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  
  <xref:System.ServiceModel.Description.MetadataImporter>  

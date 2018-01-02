@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e342ce805880da848da1e17700c055aba2c74f19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac8209432cd975539983226cfba51f229d696bd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 和 DataRowView
 <xref:System.Data.DataView> 公开 <xref:System.Data.DataRowView> 对象的可枚举集合。 **DataRowView**对象将值公开为按名称或序号引用基础表中的列编制索引的对象数组。 你可以访问<xref:System.Data.DataRow>公开**DataRowView**使用<xref:System.Data.DataRowView.Row%2A>属性**DataRowView**。  
@@ -69,7 +70,7 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataRowVersion>  
  <xref:System.Data.DataViewRowState>  
  <xref:System.Data.DataView>  

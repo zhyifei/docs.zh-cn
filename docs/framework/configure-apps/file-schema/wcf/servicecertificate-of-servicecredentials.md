@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23f56c85f4fbea7eb1ccc41a7b520b2166158fbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e5b6baca250e4fadc2a66bb0fe83b076522f82ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;serviceCertificate&gt;
 指定一个 X.509 证书，以供服务用来向使用 Message 安全模式的客户端证明自己的身份。  
@@ -65,7 +66,7 @@ x509FindType="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/
   
  [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]使用了元素，请参阅[如何： 指定客户端凭据值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>  
  <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>  

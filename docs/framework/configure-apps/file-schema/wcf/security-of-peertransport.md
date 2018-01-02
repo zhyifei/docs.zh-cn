@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f7f85a1d0d5ca720c82d513c7d51ac6ddaf5afb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d08d839d0eb80c23b96f87cf26d3d68db7d358f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; 的 &lt;security&gt;
 包含与对等通道相关的安全设置，包括使用的身份验证类型和用于消息传输的安全性。  
@@ -67,11 +68,11 @@ ms.lasthandoff: 11/21/2017
 |-------------|-----------------|  
 |[\<t >](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|定义自定义绑定的对等传输。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.PeerSecurityElement>  
  <xref:System.ServiceModel.PeerSecuritySettings>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [传输安全](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [传输安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
  [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
  [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  

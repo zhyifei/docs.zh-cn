@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bbb74d9a542833a96c61bcc09f6e4e5f0807843d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;添加&gt;元素&lt;侦听器&gt;为&lt;跟踪&gt;
 将侦听器添加到**侦听器**集合。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`listeners`|指定收集，侦听器存储区，并将消息路由。 侦听器将跟踪输出定向到适当的目标。|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.Debug>  
  <xref:System.Diagnostics.EventLogTraceListener>  

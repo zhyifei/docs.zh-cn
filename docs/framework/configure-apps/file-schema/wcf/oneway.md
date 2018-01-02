@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be70abe745879b5d6f6e8cdde802a6403f90174b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1436bc0c1708649378ec6747aed9c23cfc1744dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltonewaygt"></a>&lt;oneWay&gt;
 对自定义绑定启用数据包路由并使用单向方法。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  若要启用数据包路由，必须使用此元素提供的单向转换层。 用户可以创建一个自定义绑定，将此绑定置于具有会话功能或请求/答复传输的上层，使之可进行数据包路由。 如果希望以更自然的方式公开单向方法，则此元素也十分有用。 在这一层上可应用更多的转换，如复合双工和可靠消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.OneWayBindingElement>  
  <xref:System.ServiceModel.Configuration.OneWayElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  

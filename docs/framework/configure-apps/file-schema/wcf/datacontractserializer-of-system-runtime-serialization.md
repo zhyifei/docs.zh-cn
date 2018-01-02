@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d24f03bde729e99b629162aee86efe4b60fdd1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 836d00cb0c3de36e8fd918babb605cf629239357
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdatacontractserializergt-of-ltsystemruntimeserializationgt"></a>&lt;system.runtime.serialization&gt; 的 &lt;dataContractSerializer&gt;
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的配置数据。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  有关已知类型的详细信息，请参阅<xref:System.Runtime.Serialization.DataContractSerializer>和[数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  
- [数据协定已知的类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

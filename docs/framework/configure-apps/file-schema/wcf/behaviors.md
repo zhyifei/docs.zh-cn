@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f543742ee4d70f64d3bef64be295a7f353c680d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5a41d6134f793c2d8d02fda68a8b61b180485612
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbehaviorsgt"></a>&lt;行为&gt;
 此元素定义名为 `endpointBehaviors` 和 `serviceBehaviors` 的两个子集合。  每个集合分别定义终结点和服务所使用的行为元素。 每个行为元素由其唯一的 `name` 属性标识。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
@@ -57,13 +58,13 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  使用 `<remove>` 元素可以从集合中移除特定行为。 为此，您只需在 `name` 元素的 `<remove>` 特性中提供要移除的行为的名称。  还可以使用 `<clear>` 元素清除集合中的所有内容，来确保行为集合最初为空。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.BehaviorsSection>  
  <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [配置和扩展的运行时带有行为](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
+ [使用行为配置和扩展运行时](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)  
  [配置客户端行为](../../../../../docs/framework/wcf/configuring-client-behaviors.md)  
  [指定客户端运行时行为](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
  [指定服务运行时行为](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)  

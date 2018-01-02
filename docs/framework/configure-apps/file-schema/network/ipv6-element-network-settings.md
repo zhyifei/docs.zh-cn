@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: dd5366b4110d9ec2290e2669919575e07e8ec98a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a98d1d21d7df4e88c668262e60397029fe44c5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;ipv6&gt;元素 （网络设置）
 启用 Internet 协议版本 6 (IPv6) 响应的过时成员<xref:System.Net.Dns>类。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`enabled`|指定是否的成员<xref:System.Net.Dns>类返回 Internet 协议版本 6 (IPv6) 地址。 默认值为 `false`。|  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net?displayProperty=nameWithType>  
  <xref:System.Net.Dns?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  

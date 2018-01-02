@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 06e871ee31880a219d9105ff4ce667618bfb78f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cd981c8e48f003060c74787fdd2f29557c07901d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicetokenresolvergt"></a>&lt;serviceTokenResolver&gt;
 注册的服务令牌解析程序由标记处理程序集合中的处理程序。 服务的标记解析程序用于解析在传入令牌和消息上的加密令牌。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|指定服务令牌解析程序的类型。 任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类型或派生自类型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。 有关如何指定详细信息`type`属性，请参阅 [自定义类型引用]。 必需。|  
+|类型|指定服务令牌解析程序的类型。 任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类型或派生自类型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。 有关如何指定详细信息`type`属性，请参阅 [自定义类型引用]。 必须的。|  
   
 ### <a name="child-elements"></a>子元素  
  无  

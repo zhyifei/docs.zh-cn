@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 757b70d99a7f2b499d4ad5aab2be2bb61b28af0d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e42fba03b50c0ffd765bbe25ef60b3317ed1b307
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-the-connection-string"></a>如何：定义连接字符串
 本主题介绍如何定义在连接到概念模型时使用的连接字符串。 本主题基于[AdventureWorks 销售](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832)概念模型。 AdventureWorks 销售模型将在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 文档的与任务相关的所有主题中使用。 本主题假定你已配置[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]和定义 AdventureWorks 销售模型。 有关详细信息，请参阅[如何： 手动定义模型和映射文件](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a)。 本主题中的过程也包括在[如何： 手动配置实体框架项目](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
      如果你的项目不具有应用程序配置文件，则可以添加一个，方法是选择**添加新项**从**项目**菜单上，选择**常规**类别中，选择**应用程序配置文件**，然后单击**添加**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [快速入门](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675)  
  [如何： 创建新的.edmx 文件](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2)  
  [ADO.NET 实体数据模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

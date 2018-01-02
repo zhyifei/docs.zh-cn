@@ -11,11 +11,12 @@ ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b83f00f82de727812c5737915a6dc35ec98e4734
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f2d83f5dcf6fa93ceba4d670470bd768a2ee1f88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-configuration-section"></a>Windows 窗体配置节
 Windows 窗体配置设置允许 Windows 窗体应用存储和检索有关自定义应用程序设置的信息，如多显示器支持、高 DPI 支持和其他预定义配置设置。

@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a801a5b98d5dcacaf07755fd07a1e4d3986e90cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b976587b452aaf5bc97069d6413c85e13f5f5b61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor 类
 
@@ -38,7 +39,7 @@ internal class DataMemberFieldEditor : UITypeEditor
 > 
 > Microsoft 不支持在生产应用程序在任何情况下使用此类。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 
 **Namespace:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: faf992aa50f8d705caa5f502f61a0fd18cb7ab05
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3720294ac937c6aa7ce99ab687efa76b2e860abb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttransactionflowgt"></a>&lt;transactionFlow&gt;
 指定自定义绑定的事务流支持。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/02/2017
 > [!CAUTION]
 >  使用 `OleTransactions` 协议在终结点之间对事务进行流处理时，如果目标终结点尝试使用任何 `OleTransactions` 之外的协议进行流处理，则可能丢失事务超时。 这可能导致 OleTransactions 跃点后面的所有下级节点的超时时间比预期延迟。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.TransactionFlowElement>  
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  

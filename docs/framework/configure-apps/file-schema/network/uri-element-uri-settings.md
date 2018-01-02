@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 44ef28ca2188973ccd353f4e8615c7c95f5674a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 735a6596b22e6d6fdcff776dd79224230db5b7b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;元素 （Uri 设置）
 包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[idn](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|指定是否对域名应用国际化域名 (IDN) 分析。|  
 |[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否对应用国际资源标识符 (IRI) 分析<xref:System.Uri>以及是否应应用 IRI 分析规则。|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[配置](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空间的设置。|  
   
@@ -77,5 +78,5 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

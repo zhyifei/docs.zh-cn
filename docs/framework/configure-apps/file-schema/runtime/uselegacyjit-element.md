@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 735733fc33a21c2f275c1ea9894c43558f01626e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9d2a71e44db2d6e85ae730f4603bf191f54525c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt;元素
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="enabled-attribute"></a>enabled 的特性  
   
-| 值 | 描述                                                                                                         |  
+| “值” | 描述                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
 | 0     | 公共语言运行时使用新的 64 位 JIT 编译器包含在.NET Framework 4.6 和更高版本。 |  
 | 1     | 公共语言运行时使用较旧的 64 位 JIT 编译器。                                                     |  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-| 元素         | 描述                                                                                                       |  
+| 元素         | 说明                                                                                                       |  
 | --------------- | ----------------------------------------------------------------------------------------------------------------- |  
 | `configuration` | 公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。 |  
 | `runtime`       | 包含有关运行时初始化选项的信息。                                                        |  

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd7bad0734007b68fe6089a11b6b59d5d22e9954
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 594d0516a739986580d37e86eab32da14c359e99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="development-and-deployment-considerations"></a>开发和部署注意事项
 本节中的主题介绍在开发或部署基于 ADO.NET 实体框架的应用程序时要注意的问题。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
  [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 实体框架](../../../../../docs/framework/data/adonet/ef/index.md)  
  [实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [入门](../../../../../docs/framework/data/adonet/ef/getting-started.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 0a4490870cb12ff221f75b043f01baad9b5c7c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dadb2d7635f132b44d6fca8c56f53b847ffb1ff9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt;元素 （网络设置）
 自定义 Web 请求参数。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`maximumResponseHeadersLength`|指定以千字节为单位的响应标头的最大长度。 默认值为 64。 值-1 指示没有大小限制将施加的响应标头。|  
 |`maximumErrorResponseLength`|指定错误响应，最大的长度，以千字节为单位。 默认值为 64。 值-1 指示没有大小限制将施加错误响应。|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
