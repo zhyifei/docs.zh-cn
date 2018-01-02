@@ -13,27 +13,28 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f91e4ac7b74b0ee3ab92e8ae59fe0f20e8f66287
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34ea3b412af75f136255c7e95cc4f321bafe075b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wcf-directive-syntax"></a><span data-ttu-id="f2792-102">WCF 指令语法</span><span class="sxs-lookup"><span data-stu-id="f2792-102">WCF Directive Syntax</span></span>
-<span data-ttu-id="f2792-103">指定由 .svc 文件中的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 指令用来指挥编译器的设置。</span><span class="sxs-lookup"><span data-stu-id="f2792-103">Specifies settings used by the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] directives in the .svc files to direct the compilers.</span></span> <span data-ttu-id="f2792-104">每个指令都可以包含一个或多个特定于该指令的特性（与值成对出现）。</span><span class="sxs-lookup"><span data-stu-id="f2792-104">Each directive can contain one or more attributes (paired with values) that are specific to that directive.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="f2792-105"> 仅具有 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指令。</span><span class="sxs-lookup"><span data-stu-id="f2792-105"> has only the [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive.</span></span>  
+# <a name="wcf-directive-syntax"></a><span data-ttu-id="89695-102">WCF 指令语法</span><span class="sxs-lookup"><span data-stu-id="89695-102">WCF Directive Syntax</span></span>
+<span data-ttu-id="89695-103">指定由 .svc 文件中的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 指令用来指挥编译器的设置。</span><span class="sxs-lookup"><span data-stu-id="89695-103">Specifies settings used by the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] directives in the .svc files to direct the compilers.</span></span> <span data-ttu-id="89695-104">每个指令都可以包含一个或多个特定于该指令的特性（与值成对出现）。</span><span class="sxs-lookup"><span data-stu-id="89695-104">Each directive can contain one or more attributes (paired with values) that are specific to that directive.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="89695-105"> 仅具有 [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 指令。</span><span class="sxs-lookup"><span data-stu-id="89695-105"> has only the [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f2792-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="f2792-106">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="89695-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="89695-106">In This Section</span></span>  
  [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)  
- <span data-ttu-id="f2792-107">定义 .svc 编译器使用的特定于页的属性。</span><span class="sxs-lookup"><span data-stu-id="f2792-107">Defines page-specific attributes used by the .svc compiler.</span></span> <span data-ttu-id="f2792-108">只能包含在 .svc 文件中。</span><span class="sxs-lookup"><span data-stu-id="f2792-108">Can be included only in .svc files.</span></span>  
+ <span data-ttu-id="89695-107">定义 .svc 编译器使用的特定于页的属性。</span><span class="sxs-lookup"><span data-stu-id="89695-107">Defines page-specific attributes used by the .svc compiler.</span></span> <span data-ttu-id="89695-108">只能包含在 .svc 文件中。</span><span class="sxs-lookup"><span data-stu-id="89695-108">Can be included only in .svc files.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="f2792-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="f2792-109">Related Sections</span></span>  
- [<span data-ttu-id="f2792-110">如何：在 IIS 中承载 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="f2792-110">How to: Host a WCF Service in IIS</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
- <span data-ttu-id="f2792-111">描述在 Internet Information Services (IIS) 中承载服务时如何使用 @ServiceHost 指令</span><span class="sxs-lookup"><span data-stu-id="f2792-111">Describes how the @ServiceHost directive is used when hosting a service in Internet Information Services (IIS)</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="89695-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="89695-109">Related Sections</span></span>  
+ [<span data-ttu-id="89695-110">如何：在 IIS 中承载 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="89695-110">How to: Host a WCF Service in IIS</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
+ <span data-ttu-id="89695-111">描述在 Internet Information Services (IIS) 中承载服务时如何使用 @ServiceHost 指令</span><span class="sxs-lookup"><span data-stu-id="89695-111">Describes how the @ServiceHost directive is used when hosting a service in Internet Information Services (IIS)</span></span>  
   
- [<span data-ttu-id="f2792-112">如何：在 WAS 中承载 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="f2792-112">How to: Host a WCF Service in WAS</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- <span data-ttu-id="f2792-113">描述在 Windows Process Activation Service (WAS) 中承载服务时如何使用 @ServiceHost 指令</span><span class="sxs-lookup"><span data-stu-id="f2792-113">Describes how the @ServiceHost directive is used when hosting a service in Windows Process Activation Service (WAS)</span></span>  
+ [<span data-ttu-id="89695-112">如何：在 WAS 中承载 WCF 服务</span><span class="sxs-lookup"><span data-stu-id="89695-112">How to: Host a WCF Service in WAS</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
+ <span data-ttu-id="89695-113">描述在 Windows Process Activation Service (WAS) 中承载服务时如何使用 @ServiceHost 指令</span><span class="sxs-lookup"><span data-stu-id="89695-113">Describes how the @ServiceHost directive is used when hosting a service in Windows Process Activation Service (WAS)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2792-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f2792-114">See Also</span></span>  
- [<span data-ttu-id="f2792-115">承载</span><span class="sxs-lookup"><span data-stu-id="f2792-115">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)  
- [<span data-ttu-id="f2792-116">在 Internet 信息服务中承载</span><span class="sxs-lookup"><span data-stu-id="f2792-116">Hosting in Internet Information Services</span></span>](../../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [<span data-ttu-id="f2792-117">在 Windows Process Activation Service 中承载</span><span class="sxs-lookup"><span data-stu-id="f2792-117">Hosting in Windows Process Activation Service</span></span>](../../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
+## <a name="see-also"></a><span data-ttu-id="89695-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="89695-114">See Also</span></span>  
+ [<span data-ttu-id="89695-115">承载</span><span class="sxs-lookup"><span data-stu-id="89695-115">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)  
+ [<span data-ttu-id="89695-116">在 Internet Information Services 中承载</span><span class="sxs-lookup"><span data-stu-id="89695-116">Hosting in Internet Information Services</span></span>](../../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [<span data-ttu-id="89695-117">在 Windows Process Activation Service 中承载</span><span class="sxs-lookup"><span data-stu-id="89695-117">Hosting in Windows Process Activation Service</span></span>](../../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)

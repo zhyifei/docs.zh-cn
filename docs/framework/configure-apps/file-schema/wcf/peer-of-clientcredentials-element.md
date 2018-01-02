@@ -13,23 +13,24 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f2fa776711223ace6a4cebce7783b1fa0c148a4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: accd6c261a393da3ffcffd261d6603d20b8fcb3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltpeergt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="8775c-102">&lt;clientCredentials&gt; 的 &lt;peer&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="8775c-102">&lt;peer&gt; of &lt;clientCredentials&gt; Element</span></span>
-<span data-ttu-id="8775c-103">指定在向对等客户端进行身份验证时使用的凭据。</span><span class="sxs-lookup"><span data-stu-id="8775c-103">Specifies credentials used when authenticating peer-to-peer clients.</span></span>  
+# <a name="ltpeergt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="2da77-102">&lt;clientCredentials&gt; 的 &lt;peer&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="2da77-102">&lt;peer&gt; of &lt;clientCredentials&gt; Element</span></span>
+<span data-ttu-id="2da77-103">指定在向对等客户端进行身份验证时使用的凭据。</span><span class="sxs-lookup"><span data-stu-id="2da77-103">Specifies credentials used when authenticating peer-to-peer clients.</span></span>  
   
- <span data-ttu-id="8775c-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="8775c-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="8775c-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="8775c-105">\<behaviors></span></span>  
-<span data-ttu-id="8775c-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="8775c-106">\<endpointBehaviors></span></span>  
-<span data-ttu-id="8775c-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="8775c-107">\<behavior></span></span>  
-<span data-ttu-id="8775c-108">\<c a t e ></span><span class="sxs-lookup"><span data-stu-id="8775c-108">\<clientCredentials></span></span>  
-<span data-ttu-id="8775c-109">\<对等 ></span><span class="sxs-lookup"><span data-stu-id="8775c-109">\<peer></span></span>  
+ <span data-ttu-id="2da77-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="2da77-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2da77-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="2da77-105">\<behaviors></span></span>  
+<span data-ttu-id="2da77-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="2da77-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="2da77-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="2da77-107">\<behavior></span></span>  
+<span data-ttu-id="2da77-108">\<c a t e ></span><span class="sxs-lookup"><span data-stu-id="2da77-108">\<clientCredentials></span></span>  
+<span data-ttu-id="2da77-109">\<对等 ></span><span class="sxs-lookup"><span data-stu-id="2da77-109">\<peer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8775c-110">语法</span><span class="sxs-lookup"><span data-stu-id="8775c-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2da77-110">语法</span><span class="sxs-lookup"><span data-stu-id="2da77-110">Syntax</span></span>  
   
 ```xml  
 <peer>  
@@ -39,30 +40,30 @@ ms.lasthandoff: 12/02/2017
 </peer>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8775c-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="8775c-111">Attributes and Elements</span></span>  
- <span data-ttu-id="8775c-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="8775c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2da77-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="2da77-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="2da77-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="2da77-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8775c-113">特性</span><span class="sxs-lookup"><span data-stu-id="8775c-113">Attributes</span></span>  
- <span data-ttu-id="8775c-114">无。</span><span class="sxs-lookup"><span data-stu-id="8775c-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2da77-113">特性</span><span class="sxs-lookup"><span data-stu-id="2da77-113">Attributes</span></span>  
+ <span data-ttu-id="2da77-114">无。</span><span class="sxs-lookup"><span data-stu-id="2da77-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="8775c-115">子元素</span><span class="sxs-lookup"><span data-stu-id="8775c-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2da77-115">子元素</span><span class="sxs-lookup"><span data-stu-id="2da77-115">Child Elements</span></span>  
   
-|<span data-ttu-id="8775c-116">元素</span><span class="sxs-lookup"><span data-stu-id="8775c-116">Element</span></span>|<span data-ttu-id="8775c-117">描述</span><span class="sxs-lookup"><span data-stu-id="8775c-117">Description</span></span>|  
+|<span data-ttu-id="2da77-116">元素</span><span class="sxs-lookup"><span data-stu-id="2da77-116">Element</span></span>|<span data-ttu-id="2da77-117">描述</span><span class="sxs-lookup"><span data-stu-id="2da77-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8775c-118">\<证书 ></span><span class="sxs-lookup"><span data-stu-id="8775c-118">\<certificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|<span data-ttu-id="8775c-119">指定要用于为对等客户端的消息进行签名和加密的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="8775c-119">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span> <span data-ttu-id="8775c-120">.</span><span class="sxs-lookup"><span data-stu-id="8775c-120">.</span></span>|  
-|[<span data-ttu-id="8775c-121">\<peerAuthentication ></span><span class="sxs-lookup"><span data-stu-id="8775c-121">\<peerAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|<span data-ttu-id="8775c-122">指定用于对等客户端的身份验证选项。</span><span class="sxs-lookup"><span data-stu-id="8775c-122">Specifies authentication options for peer clients.</span></span>|  
-|[<span data-ttu-id="8775c-123">\<messageSenderAuthentication ></span><span class="sxs-lookup"><span data-stu-id="8775c-123">\<messageSenderAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|<span data-ttu-id="8775c-124">指定用于消息发送方的身份验证选项。</span><span class="sxs-lookup"><span data-stu-id="8775c-124">Specifies authentication options for message senders.</span></span>|  
+|[<span data-ttu-id="2da77-118">\<证书 ></span><span class="sxs-lookup"><span data-stu-id="2da77-118">\<certificate></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|<span data-ttu-id="2da77-119">指定要用于为对等客户端的消息进行签名和加密的 X.509 证书。</span><span class="sxs-lookup"><span data-stu-id="2da77-119">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span> <span data-ttu-id="2da77-120">方法。</span><span class="sxs-lookup"><span data-stu-id="2da77-120">.</span></span>|  
+|[<span data-ttu-id="2da77-121">\<peerAuthentication ></span><span class="sxs-lookup"><span data-stu-id="2da77-121">\<peerAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|<span data-ttu-id="2da77-122">指定用于对等客户端的身份验证选项。</span><span class="sxs-lookup"><span data-stu-id="2da77-122">Specifies authentication options for peer clients.</span></span>|  
+|[<span data-ttu-id="2da77-123">\<messageSenderAuthentication ></span><span class="sxs-lookup"><span data-stu-id="2da77-123">\<messageSenderAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|<span data-ttu-id="2da77-124">指定用于消息发送方的身份验证选项。</span><span class="sxs-lookup"><span data-stu-id="2da77-124">Specifies authentication options for message senders.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="8775c-125">父元素</span><span class="sxs-lookup"><span data-stu-id="8775c-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2da77-125">父元素</span><span class="sxs-lookup"><span data-stu-id="2da77-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="8775c-126">元素</span><span class="sxs-lookup"><span data-stu-id="8775c-126">Element</span></span>|<span data-ttu-id="8775c-127">描述</span><span class="sxs-lookup"><span data-stu-id="8775c-127">Description</span></span>|  
+|<span data-ttu-id="2da77-126">元素</span><span class="sxs-lookup"><span data-stu-id="2da77-126">Element</span></span>|<span data-ttu-id="2da77-127">描述</span><span class="sxs-lookup"><span data-stu-id="2da77-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8775c-128">\<c a t e ></span><span class="sxs-lookup"><span data-stu-id="8775c-128">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="8775c-129">指定用于向服务验证客户端身份的凭据。</span><span class="sxs-lookup"><span data-stu-id="8775c-129">Specifies the credentials used to authenticate a client to a service.</span></span>|  
+|[<span data-ttu-id="2da77-128">\<c a t e ></span><span class="sxs-lookup"><span data-stu-id="2da77-128">\<clientCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|<span data-ttu-id="2da77-129">指定用于向服务验证客户端身份的凭据。</span><span class="sxs-lookup"><span data-stu-id="2da77-129">Specifies the credentials used to authenticate a client to a service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8775c-130">备注</span><span class="sxs-lookup"><span data-stu-id="8775c-130">Remarks</span></span>  
- <span data-ttu-id="8775c-131">此配置元素指定对等节点用于向网格中的其他节点证明它自己的身份的凭据，以及对等节点用于验证其他对等节点的身份的身份验证设置。</span><span class="sxs-lookup"><span data-stu-id="8775c-131">This configuration element specifies the credentials that a peer node uses to authenticate itself to other nodes in the mesh, as well as authentication settings that a peer node uses to authenticate other peer nodes.</span></span> <span data-ttu-id="8775c-132">有关详细信息，请参阅[对等通道消息身份验证](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)和[保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)。</span><span class="sxs-lookup"><span data-stu-id="8775c-132">For more information, see [Peer Channel Message Authentication](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95) and [Securing Peer Channel Applications](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2da77-130">备注</span><span class="sxs-lookup"><span data-stu-id="2da77-130">Remarks</span></span>  
+ <span data-ttu-id="2da77-131">此配置元素指定对等节点用于向网格中的其他节点证明它自己的身份的凭据，以及对等节点用于验证其他对等节点的身份的身份验证设置。</span><span class="sxs-lookup"><span data-stu-id="2da77-131">This configuration element specifies the credentials that a peer node uses to authenticate itself to other nodes in the mesh, as well as authentication settings that a peer node uses to authenticate other peer nodes.</span></span> <span data-ttu-id="2da77-132">有关详细信息，请参阅[对等通道消息身份验证](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)和[保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)。</span><span class="sxs-lookup"><span data-stu-id="2da77-132">For more information, see [Peer Channel Message Authentication](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95) and [Securing Peer Channel Applications](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8775c-133">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8775c-133">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="2da77-133">请参阅</span><span class="sxs-lookup"><span data-stu-id="2da77-133">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
@@ -70,9 +71,9 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>  
  <xref:System.ServiceModel.Security.PeerCredential>  
- [<span data-ttu-id="8775c-134">对等网络</span><span class="sxs-lookup"><span data-stu-id="8775c-134">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [<span data-ttu-id="8775c-135">保护客户端</span><span class="sxs-lookup"><span data-stu-id="8775c-135">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
- [<span data-ttu-id="8775c-136">对等通道消息身份验证</span><span class="sxs-lookup"><span data-stu-id="8775c-136">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [<span data-ttu-id="8775c-137">对等通道自定义身份验证</span><span class="sxs-lookup"><span data-stu-id="8775c-137">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [<span data-ttu-id="8775c-138">保护对等通道应用程序</span><span class="sxs-lookup"><span data-stu-id="8775c-138">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [<span data-ttu-id="8775c-139">保护服务和客户端</span><span class="sxs-lookup"><span data-stu-id="8775c-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [<span data-ttu-id="2da77-134">对等网络</span><span class="sxs-lookup"><span data-stu-id="2da77-134">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [<span data-ttu-id="2da77-135">保护客户端</span><span class="sxs-lookup"><span data-stu-id="2da77-135">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)  
+ [<span data-ttu-id="2da77-136">对等通道消息身份验证</span><span class="sxs-lookup"><span data-stu-id="2da77-136">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [<span data-ttu-id="2da77-137">对等通道自定义身份验证</span><span class="sxs-lookup"><span data-stu-id="2da77-137">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [<span data-ttu-id="2da77-138">保护对等通道应用程序</span><span class="sxs-lookup"><span data-stu-id="2da77-138">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
+ [<span data-ttu-id="2da77-139">保护服务和客户端的安全</span><span class="sxs-lookup"><span data-stu-id="2da77-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

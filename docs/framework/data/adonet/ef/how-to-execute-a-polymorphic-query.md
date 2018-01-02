@@ -16,32 +16,33 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4c5ee1a815ed638bc8e775abbb1c0541aa70d746
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 587428830cd6a2c4870b4f63a64b3566a2dae148
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-execute-a-polymorphic-query"></a><span data-ttu-id="b1822-102">如何：执行多态查询</span><span class="sxs-lookup"><span data-stu-id="b1822-102">How to: Execute a Polymorphic Query</span></span>
-<span data-ttu-id="b1822-103">本主题演示如何执行多态[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询使用[OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)运算符。</span><span class="sxs-lookup"><span data-stu-id="b1822-103">This topic shows how to execute a polymorphic [!INCLUDE[esql](../../../../../includes/esql-md.md)] query using the [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) operator.</span></span>  
+# <a name="how-to-execute-a-polymorphic-query"></a><span data-ttu-id="1736c-102">如何：执行多态查询</span><span class="sxs-lookup"><span data-stu-id="1736c-102">How to: Execute a Polymorphic Query</span></span>
+<span data-ttu-id="1736c-103">本主题演示如何执行多态[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询使用[OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)运算符。</span><span class="sxs-lookup"><span data-stu-id="1736c-103">This topic shows how to execute a polymorphic [!INCLUDE[esql](../../../../../includes/esql-md.md)] query using the [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) operator.</span></span>  
   
-### <a name="to-run-the-code-in-this-example"></a><span data-ttu-id="b1822-104">运行本示例中的代码</span><span class="sxs-lookup"><span data-stu-id="b1822-104">To run the code in this example</span></span>  
+### <a name="to-run-the-code-in-this-example"></a><span data-ttu-id="1736c-104">运行本示例中的代码</span><span class="sxs-lookup"><span data-stu-id="1736c-104">To run the code in this example</span></span>  
   
-1.  <span data-ttu-id="b1822-105">添加[School 模型](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac)到你的项目和配置项目以使用实体框架。</span><span class="sxs-lookup"><span data-stu-id="b1822-105">Add the [School Model](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) to your project and configure your project to use the Entity Framework.</span></span> <span data-ttu-id="b1822-106">有关详细信息，请参阅[如何： 使用实体数据模型向导](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d)。</span><span class="sxs-lookup"><span data-stu-id="b1822-106">For more information, see [How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d).</span></span>  
+1.  <span data-ttu-id="1736c-105">添加[School 模型](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac)到你的项目和配置项目以使用实体框架。</span><span class="sxs-lookup"><span data-stu-id="1736c-105">Add the [School Model](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) to your project and configure your project to use the Entity Framework.</span></span> <span data-ttu-id="1736c-106">有关详细信息，请参阅[如何： 使用实体数据模型向导](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d)。</span><span class="sxs-lookup"><span data-stu-id="1736c-106">For more information, see [How to: Use the Entity Data Model Wizard](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d).</span></span>  
   
-2.  <span data-ttu-id="b1822-107">在应用程序的代码页中，添加以下 `using` 语句（在 Visual Basic 中为 `Imports`）：</span><span class="sxs-lookup"><span data-stu-id="b1822-107">In the code page for your application, add the following `using` statements (`Imports` in Visual Basic):</span></span>  
+2.  <span data-ttu-id="1736c-107">在应用程序的代码页中，添加以下 `using` 语句（在 Visual Basic 中为 `Imports`）：</span><span class="sxs-lookup"><span data-stu-id="1736c-107">In the code page for your application, add the following `using` statements (`Imports` in Visual Basic):</span></span>  
   
      [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
-3.  <span data-ttu-id="b1822-108">修改要按照中的步骤具有每个 hierrachy 表继承的概念模型[演练： 映射继承-每个层次结构一个表](http://msdn.microsoft.com/en-us/49b685cf-9db8-4d6d-b885-8837ed238f55)。</span><span class="sxs-lookup"><span data-stu-id="b1822-108">Modify the conceptual model to have a table-per-hierrachy inheritance by following the steps in [Walkthrough: Mapping Inheritance - Table-per-Hierarchy](http://msdn.microsoft.com/en-us/49b685cf-9db8-4d6d-b885-8837ed238f55).</span></span>  
+3.  <span data-ttu-id="1736c-108">修改要按照中的步骤具有每个 hierrachy 表继承的概念模型[演练： 映射继承-每个层次结构一个表](http://msdn.microsoft.com/en-us/49b685cf-9db8-4d6d-b885-8837ed238f55)。</span><span class="sxs-lookup"><span data-stu-id="1736c-108">Modify the conceptual model to have a table-per-hierrachy inheritance by following the steps in [Walkthrough: Mapping Inheritance - Table-per-Hierarchy](http://msdn.microsoft.com/en-us/49b685cf-9db8-4d6d-b885-8837ed238f55).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b1822-109">示例</span><span class="sxs-lookup"><span data-stu-id="b1822-109">Example</span></span>  
- <span data-ttu-id="b1822-110">下面的示例使用 OFTYPE 运算符从 `OnsiteCourses` 的集合中获取和显示仅包含 `Courses` 的集合。</span><span class="sxs-lookup"><span data-stu-id="b1822-110">The following example uses an OFTYPE operator to get and display a collection of only `OnsiteCourses` from a collection of `Courses`.</span></span>  
+## <a name="example"></a><span data-ttu-id="1736c-109">示例</span><span class="sxs-lookup"><span data-stu-id="1736c-109">Example</span></span>  
+ <span data-ttu-id="1736c-110">下面的示例使用 OFTYPE 运算符从 `OnsiteCourses` 的集合中获取和显示仅包含 `Courses` 的集合。</span><span class="sxs-lookup"><span data-stu-id="1736c-110">The following example uses an OFTYPE operator to get and display a collection of only `OnsiteCourses` from a collection of `Courses`.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts#PolymorphicQuery](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#polymorphicquery)]
  [!code-vb[DP EntityServices Concepts#PolymorphicQuery](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#polymorphicquery)]  
   
-## <a name="see-also"></a><span data-ttu-id="b1822-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b1822-111">See Also</span></span>  
- [<span data-ttu-id="b1822-112">用于实体框架的 EntityClient 提供程序</span><span class="sxs-lookup"><span data-stu-id="b1822-112">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
- [<span data-ttu-id="b1822-113">实体 SQL 语言</span><span class="sxs-lookup"><span data-stu-id="b1822-113">Entity SQL Language</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+## <a name="see-also"></a><span data-ttu-id="1736c-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="1736c-111">See Also</span></span>  
+ [<span data-ttu-id="1736c-112">用于实体框架的 EntityClient 提供程序</span><span class="sxs-lookup"><span data-stu-id="1736c-112">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
+ [<span data-ttu-id="1736c-113">实体 SQL 语言</span><span class="sxs-lookup"><span data-stu-id="1736c-113">Entity SQL Language</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

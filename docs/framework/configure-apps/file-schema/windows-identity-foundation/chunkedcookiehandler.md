@@ -13,21 +13,22 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906a9e7cafca14dc4ee13dcb9eb9e59736464fd9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c5d526ccd48ea5e822d5d29fb38dacd895c2556c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltchunkedcookiehandlergt"></a><span data-ttu-id="4944b-102">&lt;chunkedCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="4944b-102">&lt;chunkedCookieHandler&gt;</span></span>
-<span data-ttu-id="4944b-103">配置<xref:System.IdentityModel.Services.ChunkedCookieHandler>。</span><span class="sxs-lookup"><span data-stu-id="4944b-103">Configures the <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span></span> <span data-ttu-id="4944b-104">此元素仅可呈现如果`mode`属性`<cookieHandler>`元素是"默认"块"。</span><span class="sxs-lookup"><span data-stu-id="4944b-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Default" or "Chunked".</span></span>  
+# <a name="ltchunkedcookiehandlergt"></a><span data-ttu-id="3bfda-102">&lt;chunkedCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="3bfda-102">&lt;chunkedCookieHandler&gt;</span></span>
+<span data-ttu-id="3bfda-103">配置<xref:System.IdentityModel.Services.ChunkedCookieHandler>。</span><span class="sxs-lookup"><span data-stu-id="3bfda-103">Configures the <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span></span> <span data-ttu-id="3bfda-104">此元素仅可呈现如果`mode`属性`<cookieHandler>`元素是"默认"块"。</span><span class="sxs-lookup"><span data-stu-id="3bfda-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Default" or "Chunked".</span></span>  
   
- <span data-ttu-id="4944b-105">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="4944b-105">\<system.identityModel.services></span></span>  
-<span data-ttu-id="4944b-106">\<federationConfiguration ></span><span class="sxs-lookup"><span data-stu-id="4944b-106">\<federationConfiguration></span></span>  
-<span data-ttu-id="4944b-107">\<cookieHandler ></span><span class="sxs-lookup"><span data-stu-id="4944b-107">\<cookieHandler></span></span>  
-<span data-ttu-id="4944b-108">\<chunkedCookieHandler ></span><span class="sxs-lookup"><span data-stu-id="4944b-108">\<chunkedCookieHandler></span></span>  
+ <span data-ttu-id="3bfda-105">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="3bfda-105">\<system.identityModel.services></span></span>  
+<span data-ttu-id="3bfda-106">\<federationConfiguration ></span><span class="sxs-lookup"><span data-stu-id="3bfda-106">\<federationConfiguration></span></span>  
+<span data-ttu-id="3bfda-107">\<cookieHandler ></span><span class="sxs-lookup"><span data-stu-id="3bfda-107">\<cookieHandler></span></span>  
+<span data-ttu-id="3bfda-108">\<chunkedCookieHandler ></span><span class="sxs-lookup"><span data-stu-id="3bfda-108">\<chunkedCookieHandler></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4944b-109">语法</span><span class="sxs-lookup"><span data-stu-id="4944b-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bfda-109">语法</span><span class="sxs-lookup"><span data-stu-id="3bfda-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel.services>  
@@ -40,31 +41,31 @@ ms.lasthandoff: 10/18/2017
 </system.identityModel.services>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4944b-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="4944b-110">Attributes and Elements</span></span>  
- <span data-ttu-id="4944b-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="4944b-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3bfda-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="3bfda-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="3bfda-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="3bfda-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4944b-112">特性</span><span class="sxs-lookup"><span data-stu-id="4944b-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3bfda-112">特性</span><span class="sxs-lookup"><span data-stu-id="3bfda-112">Attributes</span></span>  
   
-|<span data-ttu-id="4944b-113">特性</span><span class="sxs-lookup"><span data-stu-id="4944b-113">Attribute</span></span>|<span data-ttu-id="4944b-114">描述</span><span class="sxs-lookup"><span data-stu-id="4944b-114">Description</span></span>|  
+|<span data-ttu-id="3bfda-113">特性</span><span class="sxs-lookup"><span data-stu-id="3bfda-113">Attribute</span></span>|<span data-ttu-id="3bfda-114">描述</span><span class="sxs-lookup"><span data-stu-id="3bfda-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="4944b-115">chunkSize</span><span class="sxs-lookup"><span data-stu-id="4944b-115">chunkSize</span></span>|<span data-ttu-id="4944b-116">最大大小，以字符为单位的任何一个的 HTTP cookie 的 HTTP cookie 数据。</span><span class="sxs-lookup"><span data-stu-id="4944b-116">The maximum size, in characters, of the HTTP cookie data for any one HTTP cookie.</span></span> <span data-ttu-id="4944b-117">你必须调整块区大小时请小心。</span><span class="sxs-lookup"><span data-stu-id="4944b-117">You must be careful when adjusting the chunk size.</span></span> <span data-ttu-id="4944b-118">Web 浏览器 cookie 和号允许每个域的大小具有不同的限制。</span><span class="sxs-lookup"><span data-stu-id="4944b-118">Web browsers have different limits on the size of cookies and number allowed per domain.</span></span> <span data-ttu-id="4944b-119">例如，原始的 Netscape 规范规定这些限制： 总 300 cookie，每个 cookie 标头 （包括元数据，而不仅仅是 cookie 值），4096 个字节和每个域的 20 cookie。</span><span class="sxs-lookup"><span data-stu-id="4944b-119">For example, the original Netscape specification stipulated these limits: 300 cookies total, 4096 bytes per cookie header (including metadata, not just the cookie value), and 20 cookies per domain.</span></span> <span data-ttu-id="4944b-120">默认值为 2000年。</span><span class="sxs-lookup"><span data-stu-id="4944b-120">The default is 2000.</span></span> <span data-ttu-id="4944b-121">必需。</span><span class="sxs-lookup"><span data-stu-id="4944b-121">Required.</span></span>|  
+|<span data-ttu-id="3bfda-115">chunkSize</span><span class="sxs-lookup"><span data-stu-id="3bfda-115">chunkSize</span></span>|<span data-ttu-id="3bfda-116">最大大小，以字符为单位的任何一个的 HTTP cookie 的 HTTP cookie 数据。</span><span class="sxs-lookup"><span data-stu-id="3bfda-116">The maximum size, in characters, of the HTTP cookie data for any one HTTP cookie.</span></span> <span data-ttu-id="3bfda-117">你必须调整块区大小时请小心。</span><span class="sxs-lookup"><span data-stu-id="3bfda-117">You must be careful when adjusting the chunk size.</span></span> <span data-ttu-id="3bfda-118">Web 浏览器 cookie 和号允许每个域的大小具有不同的限制。</span><span class="sxs-lookup"><span data-stu-id="3bfda-118">Web browsers have different limits on the size of cookies and number allowed per domain.</span></span> <span data-ttu-id="3bfda-119">例如，原始的 Netscape 规范规定这些限制： 总 300 cookie，每个 cookie 标头 （包括元数据，而不仅仅是 cookie 值），4096 个字节和每个域的 20 cookie。</span><span class="sxs-lookup"><span data-stu-id="3bfda-119">For example, the original Netscape specification stipulated these limits: 300 cookies total, 4096 bytes per cookie header (including metadata, not just the cookie value), and 20 cookies per domain.</span></span> <span data-ttu-id="3bfda-120">默认值为 2000年。</span><span class="sxs-lookup"><span data-stu-id="3bfda-120">The default is 2000.</span></span> <span data-ttu-id="3bfda-121">必须的。</span><span class="sxs-lookup"><span data-stu-id="3bfda-121">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4944b-122">子元素</span><span class="sxs-lookup"><span data-stu-id="4944b-122">Child Elements</span></span>  
- <span data-ttu-id="4944b-123">无</span><span class="sxs-lookup"><span data-stu-id="4944b-123">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3bfda-122">子元素</span><span class="sxs-lookup"><span data-stu-id="3bfda-122">Child Elements</span></span>  
+ <span data-ttu-id="3bfda-123">无</span><span class="sxs-lookup"><span data-stu-id="3bfda-123">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="4944b-124">父元素</span><span class="sxs-lookup"><span data-stu-id="4944b-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3bfda-124">父元素</span><span class="sxs-lookup"><span data-stu-id="3bfda-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="4944b-125">元素</span><span class="sxs-lookup"><span data-stu-id="4944b-125">Element</span></span>|<span data-ttu-id="4944b-126">描述</span><span class="sxs-lookup"><span data-stu-id="4944b-126">Description</span></span>|  
+|<span data-ttu-id="3bfda-125">元素</span><span class="sxs-lookup"><span data-stu-id="3bfda-125">Element</span></span>|<span data-ttu-id="3bfda-126">描述</span><span class="sxs-lookup"><span data-stu-id="3bfda-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4944b-127">\<cookieHandler ></span><span class="sxs-lookup"><span data-stu-id="4944b-127">\<cookieHandler></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|<span data-ttu-id="4944b-128">配置<xref:System.IdentityModel.Services.CookieHandler>， <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) 用于读取和写入 cookie。</span><span class="sxs-lookup"><span data-stu-id="4944b-128">Configures the <xref:System.IdentityModel.Services.CookieHandler> that the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) uses to read and write cookies.</span></span>|  
+|[<span data-ttu-id="3bfda-127">\<cookieHandler ></span><span class="sxs-lookup"><span data-stu-id="3bfda-127">\<cookieHandler></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|<span data-ttu-id="3bfda-128">配置<xref:System.IdentityModel.Services.CookieHandler>， <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) 用于读取和写入 cookie。</span><span class="sxs-lookup"><span data-stu-id="3bfda-128">Configures the <xref:System.IdentityModel.Services.CookieHandler> that the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) uses to read and write cookies.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4944b-129">备注</span><span class="sxs-lookup"><span data-stu-id="4944b-129">Remarks</span></span>  
- <span data-ttu-id="4944b-130">当指定<xref:System.IdentityModel.Services.ChunkedCookieHandler>通过设置`mode`属性`<cookieHandler>`到"默认"或"Chunked"的元素，可以指定的 cookie 处理使用来读取和写入 cookie 包括块区大小`<chunkedCookieHandler>`子元素和设置其`chunkSize`属性。</span><span class="sxs-lookup"><span data-stu-id="4944b-130">When you specify a <xref:System.IdentityModel.Services.ChunkedCookieHandler> by setting the `mode` attribute of the `<cookieHandler>` element to "Default" or "Chunked", you can specify the chunk size that the cookie handler uses to read and write cookies by including a `<chunkedCookieHandler>` child element and setting its `chunkSize` attribute.</span></span> <span data-ttu-id="4944b-131">如果`<chunkedCookieHandler>`元素不存在，则使用默认块区大小的 2000 个字节。</span><span class="sxs-lookup"><span data-stu-id="4944b-131">If the `<chunkedCookieHandler>` element is not present, the default chunk size of 2000 bytes is used.</span></span> <span data-ttu-id="4944b-132">此元素不能为时指定`mode`属性设置为"Custom"。</span><span class="sxs-lookup"><span data-stu-id="4944b-132">This element cannot be specified when the `mode` attribute is set to "Custom".</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3bfda-129">备注</span><span class="sxs-lookup"><span data-stu-id="3bfda-129">Remarks</span></span>  
+ <span data-ttu-id="3bfda-130">当指定<xref:System.IdentityModel.Services.ChunkedCookieHandler>通过设置`mode`属性`<cookieHandler>`到"默认"或"Chunked"的元素，可以指定的 cookie 处理使用来读取和写入 cookie 包括块区大小`<chunkedCookieHandler>`子元素和设置其`chunkSize`属性。</span><span class="sxs-lookup"><span data-stu-id="3bfda-130">When you specify a <xref:System.IdentityModel.Services.ChunkedCookieHandler> by setting the `mode` attribute of the `<cookieHandler>` element to "Default" or "Chunked", you can specify the chunk size that the cookie handler uses to read and write cookies by including a `<chunkedCookieHandler>` child element and setting its `chunkSize` attribute.</span></span> <span data-ttu-id="3bfda-131">如果`<chunkedCookieHandler>`元素不存在，则使用默认块区大小的 2000 个字节。</span><span class="sxs-lookup"><span data-stu-id="3bfda-131">If the `<chunkedCookieHandler>` element is not present, the default chunk size of 2000 bytes is used.</span></span> <span data-ttu-id="3bfda-132">此元素不能为时指定`mode`属性设置为"Custom"。</span><span class="sxs-lookup"><span data-stu-id="3bfda-132">This element cannot be specified when the `mode` attribute is set to "Custom".</span></span>  
   
- <span data-ttu-id="4944b-133">`<chunkedCookieHandler>`元素表示由<xref:System.IdentityModel.Services.ChunkedCookieHandlerElement>类。</span><span class="sxs-lookup"><span data-stu-id="4944b-133">The `<chunkedCookieHandler>` element is represented by the <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> class.</span></span>  
+ <span data-ttu-id="3bfda-133">`<chunkedCookieHandler>`元素表示由<xref:System.IdentityModel.Services.ChunkedCookieHandlerElement>类。</span><span class="sxs-lookup"><span data-stu-id="3bfda-133">The `<chunkedCookieHandler>` element is represented by the <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4944b-134">示例</span><span class="sxs-lookup"><span data-stu-id="4944b-134">Example</span></span>  
- <span data-ttu-id="4944b-135">下面的示例配置中的 3000 个字节块写入 cookie 分块的 cookie 处理程序。</span><span class="sxs-lookup"><span data-stu-id="4944b-135">The following example configures a chunked cookie handler that writes cookies in chunks of 3000 bytes.</span></span>  
+## <a name="example"></a><span data-ttu-id="3bfda-134">示例</span><span class="sxs-lookup"><span data-stu-id="3bfda-134">Example</span></span>  
+ <span data-ttu-id="3bfda-135">下面的示例配置中的 3000 个字节块写入 cookie 分块的 cookie 处理程序。</span><span class="sxs-lookup"><span data-stu-id="3bfda-135">The following example configures a chunked cookie handler that writes cookies in chunks of 3000 bytes.</span></span>  
   
 ```xml  
 <cookieHandler mode="Chunked">  
@@ -72,5 +73,5 @@ ms.lasthandoff: 10/18/2017
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4944b-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4944b-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3bfda-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="3bfda-136">See Also</span></span>  
  <xref:System.IdentityModel.Services.ChunkedCookieHandler>

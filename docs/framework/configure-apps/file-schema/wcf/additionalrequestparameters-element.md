@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f05a1019d7acc45ddc0e1bc3f2a145a297322d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4bc60c292c0daf2bb9f028f1cf643c6f5ae24b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltadditionalrequestparametersgt-element"></a><span data-ttu-id="68d15-102">&lt;additionalRequestParameters&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="68d15-102">&lt;additionalRequestParameters&gt; element</span></span>
-<span data-ttu-id="68d15-103">此元素包含用于指定附加请求参数的配置元素的集合。</span><span class="sxs-lookup"><span data-stu-id="68d15-103">This contains a collection of configuration elements that specify additional request parameters.</span></span>  
+# <a name="ltadditionalrequestparametersgt-element"></a><span data-ttu-id="18c69-102">&lt;additionalRequestParameters&gt; 元素</span><span class="sxs-lookup"><span data-stu-id="18c69-102">&lt;additionalRequestParameters&gt; element</span></span>
+<span data-ttu-id="18c69-103">此元素包含用于指定附加请求参数的配置元素的集合。</span><span class="sxs-lookup"><span data-stu-id="18c69-103">This contains a collection of configuration elements that specify additional request parameters.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68d15-104">另请参阅</span><span class="sxs-lookup"><span data-stu-id="68d15-104">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="18c69-104">请参阅</span><span class="sxs-lookup"><span data-stu-id="18c69-104">See Also</span></span>  
  <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters%2A>  
  <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.AdditionalRequestParameters%2A>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="68d15-105">服务标识和身份验证</span><span class="sxs-lookup"><span data-stu-id="68d15-105">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [<span data-ttu-id="68d15-106">联合身份验证和已颁发的令牌</span><span class="sxs-lookup"><span data-stu-id="68d15-106">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="68d15-107">使用自定义绑定的安全功能</span><span class="sxs-lookup"><span data-stu-id="68d15-107">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [<span data-ttu-id="68d15-108">联合身份验证和已颁发的令牌</span><span class="sxs-lookup"><span data-stu-id="68d15-108">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="68d15-109">绑定</span><span class="sxs-lookup"><span data-stu-id="68d15-109">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="68d15-110">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="68d15-110">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="68d15-111">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="68d15-111">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="68d15-112">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="68d15-112">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [<span data-ttu-id="68d15-113">如何： 创建自定义绑定使用 SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="68d15-113">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [<span data-ttu-id="68d15-114">自定义绑定安全性</span><span class="sxs-lookup"><span data-stu-id="68d15-114">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+ [<span data-ttu-id="18c69-105">服务标识和身份验证</span><span class="sxs-lookup"><span data-stu-id="18c69-105">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="18c69-106">联合令牌与颁发的令牌</span><span class="sxs-lookup"><span data-stu-id="18c69-106">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="18c69-107">使用自定义绑定的安全功能</span><span class="sxs-lookup"><span data-stu-id="18c69-107">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [<span data-ttu-id="18c69-108">联合令牌与颁发的令牌</span><span class="sxs-lookup"><span data-stu-id="18c69-108">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="18c69-109">绑定</span><span class="sxs-lookup"><span data-stu-id="18c69-109">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="18c69-110">扩展绑定</span><span class="sxs-lookup"><span data-stu-id="18c69-110">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="18c69-111">自定义绑定</span><span class="sxs-lookup"><span data-stu-id="18c69-111">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="18c69-112">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="18c69-112">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="18c69-113">如何：使用 SecurityBindingElement 创建自定义绑定</span><span class="sxs-lookup"><span data-stu-id="18c69-113">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [<span data-ttu-id="18c69-114">自定义绑定安全性</span><span class="sxs-lookup"><span data-stu-id="18c69-114">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

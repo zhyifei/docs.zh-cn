@@ -17,19 +17,20 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13d19560e8d8fbf9254f8baea3811f5d29832dc2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 83964d3a6e07267eaa946fa306301bc6d0d16e8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltsystemruntimecachinggt-element-cache-settings"></a><span data-ttu-id="faafa-102">&lt;system.runtime.caching&gt;元素 （缓存设置）</span><span class="sxs-lookup"><span data-stu-id="faafa-102">&lt;system.runtime.caching&gt; Element (Cache Settings)</span></span>
-<span data-ttu-id="faafa-103">通过配置文件中的 <xref:System.Runtime.Caching.ObjectCache> 条目为默认内存中的 `memoryCache` 实现提供配置。</span><span class="sxs-lookup"><span data-stu-id="faafa-103">Provides configuration for the default in-memory <xref:System.Runtime.Caching.ObjectCache> implementation through the `memoryCache` entry in the configuration file.</span></span>  
+# <a name="ltsystemruntimecachinggt-element-cache-settings"></a><span data-ttu-id="41001-102">&lt;system.runtime.caching&gt;元素 （缓存设置）</span><span class="sxs-lookup"><span data-stu-id="41001-102">&lt;system.runtime.caching&gt; Element (Cache Settings)</span></span>
+<span data-ttu-id="41001-103">通过配置文件中的 <xref:System.Runtime.Caching.ObjectCache> 条目为默认内存中的 `memoryCache` 实现提供配置。</span><span class="sxs-lookup"><span data-stu-id="41001-103">Provides configuration for the default in-memory <xref:System.Runtime.Caching.ObjectCache> implementation through the `memoryCache` entry in the configuration file.</span></span>  
   
- <span data-ttu-id="faafa-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="faafa-104">\<configuration></span></span>  
-<span data-ttu-id="faafa-105">\<system.runtime.caching ></span><span class="sxs-lookup"><span data-stu-id="faafa-105">\<system.runtime.caching></span></span>  
+ <span data-ttu-id="41001-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="41001-104">\<configuration></span></span>  
+<span data-ttu-id="41001-105">\<system.runtime.caching ></span><span class="sxs-lookup"><span data-stu-id="41001-105">\<system.runtime.caching></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="faafa-106">语法</span><span class="sxs-lookup"><span data-stu-id="faafa-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41001-106">语法</span><span class="sxs-lookup"><span data-stu-id="41001-106">Syntax</span></span>  
   
 ```xml  
 <system.runtime.caching >  
@@ -37,34 +38,34 @@ ms.lasthandoff: 10/18/2017
 </system.runtime.caching >  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="faafa-107">特性和元素</span><span class="sxs-lookup"><span data-stu-id="faafa-107">Attributes and Elements</span></span>  
- <span data-ttu-id="faafa-108">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="faafa-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="41001-107">特性和元素</span><span class="sxs-lookup"><span data-stu-id="41001-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="41001-108">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="41001-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="faafa-109">特性</span><span class="sxs-lookup"><span data-stu-id="faafa-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="41001-109">特性</span><span class="sxs-lookup"><span data-stu-id="41001-109">Attributes</span></span>  
  `None`  
   
-### <a name="child-elements"></a><span data-ttu-id="faafa-110">子元素</span><span class="sxs-lookup"><span data-stu-id="faafa-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="41001-110">子元素</span><span class="sxs-lookup"><span data-stu-id="41001-110">Child Elements</span></span>  
   
-|<span data-ttu-id="faafa-111">元素</span><span class="sxs-lookup"><span data-stu-id="faafa-111">Element</span></span>|<span data-ttu-id="faafa-112">描述</span><span class="sxs-lookup"><span data-stu-id="faafa-112">Description</span></span>|  
+|<span data-ttu-id="41001-111">元素</span><span class="sxs-lookup"><span data-stu-id="41001-111">Element</span></span>|<span data-ttu-id="41001-112">描述</span><span class="sxs-lookup"><span data-stu-id="41001-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="faafa-113">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="faafa-113">\<memoryCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<span data-ttu-id="faafa-114">定义一个用于配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存的元素。</span><span class="sxs-lookup"><span data-stu-id="faafa-114">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span>|  
+|[<span data-ttu-id="41001-113">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="41001-113">\<memoryCache></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)|<span data-ttu-id="41001-114">定义一个用于配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存的元素。</span><span class="sxs-lookup"><span data-stu-id="41001-114">Defines an element that is used to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="faafa-115">父元素</span><span class="sxs-lookup"><span data-stu-id="faafa-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="41001-115">父元素</span><span class="sxs-lookup"><span data-stu-id="41001-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="faafa-116">元素</span><span class="sxs-lookup"><span data-stu-id="faafa-116">Element</span></span>|<span data-ttu-id="faafa-117">描述</span><span class="sxs-lookup"><span data-stu-id="faafa-117">Description</span></span>|  
+|<span data-ttu-id="41001-116">元素</span><span class="sxs-lookup"><span data-stu-id="41001-116">Element</span></span>|<span data-ttu-id="41001-117">描述</span><span class="sxs-lookup"><span data-stu-id="41001-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="faafa-118">\<configuration></span><span class="sxs-lookup"><span data-stu-id="faafa-118">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="faafa-119">指定公共语言运行时和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="faafa-119">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
+|[<span data-ttu-id="41001-118">\<configuration></span><span class="sxs-lookup"><span data-stu-id="41001-118">\<configuration></span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="41001-119">指定公共语言运行时和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="41001-119">Specifies the root element in every configuration file that is used by the common language runtime and [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="faafa-120">备注</span><span class="sxs-lookup"><span data-stu-id="faafa-120">Remarks</span></span>  
- <span data-ttu-id="faafa-121">此命名空间中的类提供一种使用诸如 ASP.NET 中缓存功能的方法，但不会在 `System.Web` 程序集上产生依赖。</span><span class="sxs-lookup"><span data-stu-id="faafa-121">The classes in this namespace provide a way to use caching facilities like those in ASP.NET, but without a dependency on the `System.Web` assembly.</span></span> <span data-ttu-id="faafa-122">有关详细信息，请参阅 [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md)。</span><span class="sxs-lookup"><span data-stu-id="faafa-122">For more information, see [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41001-120">备注</span><span class="sxs-lookup"><span data-stu-id="41001-120">Remarks</span></span>  
+ <span data-ttu-id="41001-121">此命名空间中的类提供一种使用诸如 ASP.NET 中缓存功能的方法，但不会在 `System.Web` 程序集上产生依赖。</span><span class="sxs-lookup"><span data-stu-id="41001-121">The classes in this namespace provide a way to use caching facilities like those in ASP.NET, but without a dependency on the `System.Web` assembly.</span></span> <span data-ttu-id="41001-122">有关详细信息，请参阅 [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md)。</span><span class="sxs-lookup"><span data-stu-id="41001-122">For more information, see [Caching in .NET Framework Applications](../../../../../docs/framework/performance/caching-in-net-framework-applications.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="faafa-123"><xref:System.Runtime.Caching> 命名空间中的输出缓存功能和类型对于 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]而言是全新的。</span><span class="sxs-lookup"><span data-stu-id="faafa-123">The output caching functionality and types in the <xref:System.Runtime.Caching> namespace are new in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>  
+>  <span data-ttu-id="41001-123"><xref:System.Runtime.Caching> 命名空间中的输出缓存功能和类型对于 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]而言是全新的。</span><span class="sxs-lookup"><span data-stu-id="41001-123">The output caching functionality and types in the <xref:System.Runtime.Caching> namespace are new in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="example"></a><span data-ttu-id="faafa-124">示例</span><span class="sxs-lookup"><span data-stu-id="faafa-124">Example</span></span>  
- <span data-ttu-id="faafa-125">下面的示例演示如何配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存。</span><span class="sxs-lookup"><span data-stu-id="faafa-125">The following example shows how to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span> <span data-ttu-id="faafa-126">该示例演示如何为内存缓存配置 `namedCaches` 条目实例。</span><span class="sxs-lookup"><span data-stu-id="faafa-126">The example shows how to configure an instance of the `namedCaches` entry for memory cache.</span></span> <span data-ttu-id="faafa-127">通过将 `name` 属性设置为“默认”，可以将缓存名称设置为默认缓存项名称。</span><span class="sxs-lookup"><span data-stu-id="faafa-127">The name of the cache is set to the default cache entry name by setting the `name` attribute to "default".</span></span>  
+## <a name="example"></a><span data-ttu-id="41001-124">示例</span><span class="sxs-lookup"><span data-stu-id="41001-124">Example</span></span>  
+ <span data-ttu-id="41001-125">下面的示例演示如何配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存。</span><span class="sxs-lookup"><span data-stu-id="41001-125">The following example shows how to configure a cache that is based on the <xref:System.Runtime.Caching.MemoryCache> class.</span></span> <span data-ttu-id="41001-126">该示例演示如何为内存缓存配置 `namedCaches` 条目实例。</span><span class="sxs-lookup"><span data-stu-id="41001-126">The example shows how to configure an instance of the `namedCaches` entry for memory cache.</span></span> <span data-ttu-id="41001-127">通过将 `name` 属性设置为“默认”，可以将缓存名称设置为默认缓存项名称。</span><span class="sxs-lookup"><span data-stu-id="41001-127">The name of the cache is set to the default cache entry name by setting the `name` attribute to "default".</span></span>  
   
- <span data-ttu-id="faafa-128">将 `cacheMemoryLimitMegabytes` 属性和 `physicalMemoryPercentage` 属性设置为零。</span><span class="sxs-lookup"><span data-stu-id="faafa-128">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryPercentage` attribute are set to zero.</span></span> <span data-ttu-id="faafa-129">将这些特性设置为零意味着默认情况下使用 <xref:System.Runtime.Caching.MemoryCache> 自动调整大小试探法。</span><span class="sxs-lookup"><span data-stu-id="faafa-129">Setting these attributes to zero means that the <xref:System.Runtime.Caching.MemoryCache> autosizing heuristics are used by default.</span></span> <span data-ttu-id="faafa-130">每隔两分钟，缓存实现应对当前内存负载和基于百分比的绝对内存限制进行比较。</span><span class="sxs-lookup"><span data-stu-id="faafa-130">The cache implementation should compare the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
+ <span data-ttu-id="41001-128">将 `cacheMemoryLimitMegabytes` 属性和 `physicalMemoryPercentage` 属性设置为零。</span><span class="sxs-lookup"><span data-stu-id="41001-128">The `cacheMemoryLimitMegabytes` attribute and the `physicalMemoryPercentage` attribute are set to zero.</span></span> <span data-ttu-id="41001-129">将这些特性设置为零意味着默认情况下使用 <xref:System.Runtime.Caching.MemoryCache> 自动调整大小试探法。</span><span class="sxs-lookup"><span data-stu-id="41001-129">Setting these attributes to zero means that the <xref:System.Runtime.Caching.MemoryCache> autosizing heuristics are used by default.</span></span> <span data-ttu-id="41001-130">每隔两分钟，缓存实现应对当前内存负载和基于百分比的绝对内存限制进行比较。</span><span class="sxs-lookup"><span data-stu-id="41001-130">The cache implementation should compare the current memory load against the absolute and percentage-based memory limits every two minutes.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,5 +82,5 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="faafa-131">另请参阅</span><span class="sxs-lookup"><span data-stu-id="faafa-131">See Also</span></span>  
- [<span data-ttu-id="faafa-132">\<memoryCache > 元素 （缓存设置）</span><span class="sxs-lookup"><span data-stu-id="faafa-132">\<memoryCache> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="41001-131">请参阅</span><span class="sxs-lookup"><span data-stu-id="41001-131">See Also</span></span>  
+ [<span data-ttu-id="41001-132">\<memoryCache > 元素 （缓存设置）</span><span class="sxs-lookup"><span data-stu-id="41001-132">\<memoryCache> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

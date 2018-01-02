@@ -13,14 +13,15 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34acc21230650fe5b8da2f81fd176c253c57f69d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 13d79a52690f8262b08c8510e1f78b7efbf3adab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltextensionsgt"></a><span data-ttu-id="88537-102">&lt;扩展&gt;</span><span class="sxs-lookup"><span data-stu-id="88537-102">&lt;extensions&gt;</span></span>
-<span data-ttu-id="88537-103">此配置元素包含一个 XML 元素集合，该集合包含随可检测到的标准元数据（EPR、ContractTypeName、BindingName、Scope 和 ListenURI）一起发布的自定义元数据。</span><span class="sxs-lookup"><span data-stu-id="88537-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="88537-104">下面是使用此配置元素的示例。</span><span class="sxs-lookup"><span data-stu-id="88537-104">The following is an example of using this configuration element.</span></span>  
+# <a name="ltextensionsgt"></a><span data-ttu-id="ac59b-102">&lt;扩展&gt;</span><span class="sxs-lookup"><span data-stu-id="ac59b-102">&lt;extensions&gt;</span></span>
+<span data-ttu-id="ac59b-103">此配置元素包含一个 XML 元素集合，该集合包含随可检测到的标准元数据（EPR、ContractTypeName、BindingName、Scope 和 ListenURI）一起发布的自定义元数据。</span><span class="sxs-lookup"><span data-stu-id="ac59b-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="ac59b-104">下面是使用此配置元素的示例。</span><span class="sxs-lookup"><span data-stu-id="ac59b-104">The following is an example of using this configuration element.</span></span>  
   
 ```xml  
 <services>  
@@ -55,5 +56,5 @@ ms.lasthandoff: 12/02/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="88537-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="88537-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ac59b-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="ac59b-105">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

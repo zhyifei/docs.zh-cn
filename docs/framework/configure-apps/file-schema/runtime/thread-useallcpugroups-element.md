@@ -13,57 +13,58 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 187e391acf3b80a5ae2dfe795c4a3b397af815ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c574d6f5598616776e891ab282c703ce20bc6960
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltthreaduseallcpugroupsgt-element"></a><span data-ttu-id="2dac4-102">&lt;Thread_UseAllCpuGroups&gt;元素</span><span class="sxs-lookup"><span data-stu-id="2dac4-102">&lt;Thread_UseAllCpuGroups&gt; Element</span></span>
-<span data-ttu-id="2dac4-103">指定运行时是否跨所有 CPU 组分发托管的线程。</span><span class="sxs-lookup"><span data-stu-id="2dac4-103">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>  
+# <a name="ltthreaduseallcpugroupsgt-element"></a><span data-ttu-id="8dccb-102">&lt;Thread_UseAllCpuGroups&gt;元素</span><span class="sxs-lookup"><span data-stu-id="8dccb-102">&lt;Thread_UseAllCpuGroups&gt; Element</span></span>
+<span data-ttu-id="8dccb-103">指定运行时是否跨所有 CPU 组分发托管的线程。</span><span class="sxs-lookup"><span data-stu-id="8dccb-103">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>  
   
- <span data-ttu-id="2dac4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2dac4-104">\<configuration></span></span>  
-<span data-ttu-id="2dac4-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="2dac4-105">\<runtime></span></span>  
-<span data-ttu-id="2dac4-106"><Thread_UseAllCpuGroups></span><span class="sxs-lookup"><span data-stu-id="2dac4-106"><Thread_UseAllCpuGroups></span></span>  
+ <span data-ttu-id="8dccb-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8dccb-104">\<configuration></span></span>  
+<span data-ttu-id="8dccb-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="8dccb-105">\<runtime></span></span>  
+<span data-ttu-id="8dccb-106"><Thread_UseAllCpuGroups></span><span class="sxs-lookup"><span data-stu-id="8dccb-106"><Thread_UseAllCpuGroups></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2dac4-107">语法</span><span class="sxs-lookup"><span data-stu-id="2dac4-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8dccb-107">语法</span><span class="sxs-lookup"><span data-stu-id="8dccb-107">Syntax</span></span>  
   
 ```xml
 <Thread_UseAllCpuGroups    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2dac4-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="2dac4-108">Attributes and Elements</span></span>  
- <span data-ttu-id="2dac4-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="2dac4-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8dccb-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="8dccb-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="8dccb-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="8dccb-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2dac4-110">特性</span><span class="sxs-lookup"><span data-stu-id="2dac4-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8dccb-110">特性</span><span class="sxs-lookup"><span data-stu-id="8dccb-110">Attributes</span></span>  
   
-|<span data-ttu-id="2dac4-111">特性</span><span class="sxs-lookup"><span data-stu-id="2dac4-111">Attribute</span></span>|<span data-ttu-id="2dac4-112">描述</span><span class="sxs-lookup"><span data-stu-id="2dac4-112">Description</span></span>|  
+|<span data-ttu-id="8dccb-111">特性</span><span class="sxs-lookup"><span data-stu-id="8dccb-111">Attribute</span></span>|<span data-ttu-id="8dccb-112">描述</span><span class="sxs-lookup"><span data-stu-id="8dccb-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="2dac4-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="2dac4-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="2dac4-114">指定运行时是否跨所有 CPU 组分发托管的线程。</span><span class="sxs-lookup"><span data-stu-id="2dac4-114">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>|  
+|`enabled`|<span data-ttu-id="8dccb-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="8dccb-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="8dccb-114">指定运行时是否跨所有 CPU 组分发托管的线程。</span><span class="sxs-lookup"><span data-stu-id="8dccb-114">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="2dac4-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="2dac4-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="8dccb-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="8dccb-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="2dac4-116">值</span><span class="sxs-lookup"><span data-stu-id="2dac4-116">Value</span></span>|<span data-ttu-id="2dac4-117">描述</span><span class="sxs-lookup"><span data-stu-id="2dac4-117">Description</span></span>|  
+|<span data-ttu-id="8dccb-116">值</span><span class="sxs-lookup"><span data-stu-id="8dccb-116">Value</span></span>|<span data-ttu-id="8dccb-117">描述</span><span class="sxs-lookup"><span data-stu-id="8dccb-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="2dac4-118">运行时不将托管的线程分发跨多个 CPU 组中。</span><span class="sxs-lookup"><span data-stu-id="2dac4-118">The runtime does not distribute managed threads across multiple CPU groups.</span></span> <span data-ttu-id="2dac4-119">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="2dac4-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="2dac4-120">运行时将托管的线程分布到多个 CPU 组，如果计算机具有多个 CPU 组和[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)启用元素。</span><span class="sxs-lookup"><span data-stu-id="2dac4-120">The runtime distributes managed threads across multiple CPU groups, if the computer has multiple CPU groups and the [\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element is enabled.</span></span>|  
+|`false`|<span data-ttu-id="8dccb-118">运行时不将托管的线程分发跨多个 CPU 组中。</span><span class="sxs-lookup"><span data-stu-id="8dccb-118">The runtime does not distribute managed threads across multiple CPU groups.</span></span> <span data-ttu-id="8dccb-119">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="8dccb-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="8dccb-120">运行时将托管的线程分布到多个 CPU 组，如果计算机具有多个 CPU 组和[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)启用元素。</span><span class="sxs-lookup"><span data-stu-id="8dccb-120">The runtime distributes managed threads across multiple CPU groups, if the computer has multiple CPU groups and the [\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element is enabled.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2dac4-121">子元素</span><span class="sxs-lookup"><span data-stu-id="2dac4-121">Child Elements</span></span>  
- <span data-ttu-id="2dac4-122">无。</span><span class="sxs-lookup"><span data-stu-id="2dac4-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8dccb-121">子元素</span><span class="sxs-lookup"><span data-stu-id="8dccb-121">Child Elements</span></span>  
+ <span data-ttu-id="8dccb-122">无。</span><span class="sxs-lookup"><span data-stu-id="8dccb-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="2dac4-123">父元素</span><span class="sxs-lookup"><span data-stu-id="2dac4-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8dccb-123">父元素</span><span class="sxs-lookup"><span data-stu-id="8dccb-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="2dac4-124">元素</span><span class="sxs-lookup"><span data-stu-id="2dac4-124">Element</span></span>|<span data-ttu-id="2dac4-125">描述</span><span class="sxs-lookup"><span data-stu-id="2dac4-125">Description</span></span>|  
+|<span data-ttu-id="8dccb-124">元素</span><span class="sxs-lookup"><span data-stu-id="8dccb-124">Element</span></span>|<span data-ttu-id="8dccb-125">说明</span><span class="sxs-lookup"><span data-stu-id="8dccb-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="2dac4-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="2dac4-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="2dac4-127">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="2dac4-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="8dccb-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="8dccb-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="8dccb-127">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="8dccb-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2dac4-128">备注</span><span class="sxs-lookup"><span data-stu-id="2dac4-128">Remarks</span></span>  
- <span data-ttu-id="2dac4-129">如果计算机具有多个 CPU 组，则启用此元素将导致运行时将托管的线程分发范围的所有 CPU 组。</span><span class="sxs-lookup"><span data-stu-id="2dac4-129">When a computer has multiple CPU groups, enabling this element causes the runtime to distribute managed threads across all CPU groups.</span></span> <span data-ttu-id="2dac4-130">若要使用此功能，你必须启用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)元素，它将垃圾回收扩展到所有的 CPU 组，并将考虑在内时创建和平衡堆的所有内核。</span><span class="sxs-lookup"><span data-stu-id="2dac4-130">To use this feature, you must also enable the [\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element, which extends garbage collection to all CPU groups and takes all cores into account when creating and balancing heaps.</span></span> <span data-ttu-id="2dac4-131">启用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)元素需要启用[ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="2dac4-131">Enabling the [\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element requires enabling the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element.</span></span> <span data-ttu-id="2dac4-132">如果未启用这些元素，则启用`<Thread_UseAllCpuGroups>`元素没有任何影响。</span><span class="sxs-lookup"><span data-stu-id="2dac4-132">If these elements are not enabled, enabling the `<Thread_UseAllCpuGroups>` element has no effect.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8dccb-128">备注</span><span class="sxs-lookup"><span data-stu-id="8dccb-128">Remarks</span></span>  
+ <span data-ttu-id="8dccb-129">如果计算机具有多个 CPU 组，则启用此元素将导致运行时将托管的线程分发范围的所有 CPU 组。</span><span class="sxs-lookup"><span data-stu-id="8dccb-129">When a computer has multiple CPU groups, enabling this element causes the runtime to distribute managed threads across all CPU groups.</span></span> <span data-ttu-id="8dccb-130">若要使用此功能，你必须启用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)元素，它将垃圾回收扩展到所有的 CPU 组，并将考虑在内时创建和平衡堆的所有内核。</span><span class="sxs-lookup"><span data-stu-id="8dccb-130">To use this feature, you must also enable the [\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element, which extends garbage collection to all CPU groups and takes all cores into account when creating and balancing heaps.</span></span> <span data-ttu-id="8dccb-131">启用[ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)元素需要启用[ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="8dccb-131">Enabling the [\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) element requires enabling the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element.</span></span> <span data-ttu-id="8dccb-132">如果未启用这些元素，则启用`<Thread_UseAllCpuGroups>`元素没有任何影响。</span><span class="sxs-lookup"><span data-stu-id="8dccb-132">If these elements are not enabled, enabling the `<Thread_UseAllCpuGroups>` element has no effect.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2dac4-133">示例</span><span class="sxs-lookup"><span data-stu-id="2dac4-133">Example</span></span>  
- <span data-ttu-id="2dac4-134">下面的示例演示如何启用对多个 CPU 组的支持。</span><span class="sxs-lookup"><span data-stu-id="2dac4-134">The following example shows how to enable support for multiple CPU groups.</span></span>  
+## <a name="example"></a><span data-ttu-id="8dccb-133">示例</span><span class="sxs-lookup"><span data-stu-id="8dccb-133">Example</span></span>  
+ <span data-ttu-id="8dccb-134">下面的示例演示如何启用对多个 CPU 组的支持。</span><span class="sxs-lookup"><span data-stu-id="8dccb-134">The following example shows how to enable support for multiple CPU groups.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2dac4-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2dac4-135">See Also</span></span>  
- [<span data-ttu-id="2dac4-136">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="2dac4-136">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="2dac4-137">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="2dac4-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="2dac4-138">\<GCCpuGroup > 元素</span><span class="sxs-lookup"><span data-stu-id="2dac4-138">\<GCCpuGroup> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+## <a name="see-also"></a><span data-ttu-id="8dccb-135">请参阅</span><span class="sxs-lookup"><span data-stu-id="8dccb-135">See Also</span></span>  
+ [<span data-ttu-id="8dccb-136">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="8dccb-136">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="8dccb-137">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="8dccb-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="8dccb-138">\<GCCpuGroup > 元素</span><span class="sxs-lookup"><span data-stu-id="8dccb-138">\<GCCpuGroup> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

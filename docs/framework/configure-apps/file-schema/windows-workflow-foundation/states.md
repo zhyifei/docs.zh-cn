@@ -12,26 +12,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5e9050a01cf58c3c103fdbe4e8b22e173efaf5c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c73ff606d9b8cdaf069b65f7faa48431a974123
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltstatesgt"></a><span data-ttu-id="53bed-102">&lt;状态&gt;</span><span class="sxs-lookup"><span data-stu-id="53bed-102">&lt;states&gt;</span></span>
-<span data-ttu-id="53bed-103">表示创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。</span><span class="sxs-lookup"><span data-stu-id="53bed-103">Represents a collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>  
+# <a name="ltstatesgt"></a><span data-ttu-id="e61d0-102">&lt;状态&gt;</span><span class="sxs-lookup"><span data-stu-id="e61d0-102">&lt;states&gt;</span></span>
+<span data-ttu-id="e61d0-103">表示创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。</span><span class="sxs-lookup"><span data-stu-id="e61d0-103">Represents a collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>  
   
- <span data-ttu-id="53bed-104">有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="53bed-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="e61d0-104">有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="e61d0-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-<span data-ttu-id="53bed-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="53bed-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="53bed-106">\<跟踪 ></span><span class="sxs-lookup"><span data-stu-id="53bed-106">\<tracking></span></span>  
-<span data-ttu-id="53bed-107">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="53bed-107">\<trackingProfile></span></span>  
-<span data-ttu-id="53bed-108">\<工作流 ></span><span class="sxs-lookup"><span data-stu-id="53bed-108">\<workflow></span></span>  
-<span data-ttu-id="53bed-109">\<workflowInstanceQueries ></span><span class="sxs-lookup"><span data-stu-id="53bed-109">\<workflowInstanceQueries></span></span>  
-<span data-ttu-id="53bed-110">\<workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="53bed-110">\<workflowInstanceQuery></span></span>  
-<span data-ttu-id="53bed-111">\<状态 ></span><span class="sxs-lookup"><span data-stu-id="53bed-111">\<states></span></span>  
+<span data-ttu-id="e61d0-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="e61d0-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="e61d0-106">\<跟踪 ></span><span class="sxs-lookup"><span data-stu-id="e61d0-106">\<tracking></span></span>  
+<span data-ttu-id="e61d0-107">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="e61d0-107">\<trackingProfile></span></span>  
+<span data-ttu-id="e61d0-108">\<工作流 ></span><span class="sxs-lookup"><span data-stu-id="e61d0-108">\<workflow></span></span>  
+<span data-ttu-id="e61d0-109">\<workflowInstanceQueries ></span><span class="sxs-lookup"><span data-stu-id="e61d0-109">\<workflowInstanceQueries></span></span>  
+<span data-ttu-id="e61d0-110">\<workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="e61d0-110">\<workflowInstanceQuery></span></span>  
+<span data-ttu-id="e61d0-111">\<状态 ></span><span class="sxs-lookup"><span data-stu-id="e61d0-111">\<states></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="53bed-112">语法</span><span class="sxs-lookup"><span data-stu-id="53bed-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e61d0-112">语法</span><span class="sxs-lookup"><span data-stu-id="e61d0-112">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -49,47 +50,47 @@ ms.lasthandoff: 12/02/2017
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="53bed-113">特性和元素</span><span class="sxs-lookup"><span data-stu-id="53bed-113">Attributes and Elements</span></span>  
- <span data-ttu-id="53bed-114">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="53bed-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e61d0-113">特性和元素</span><span class="sxs-lookup"><span data-stu-id="e61d0-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="e61d0-114">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="e61d0-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="53bed-115">特性</span><span class="sxs-lookup"><span data-stu-id="53bed-115">Attributes</span></span>  
- <span data-ttu-id="53bed-116">无。</span><span class="sxs-lookup"><span data-stu-id="53bed-116">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e61d0-115">特性</span><span class="sxs-lookup"><span data-stu-id="e61d0-115">Attributes</span></span>  
+ <span data-ttu-id="e61d0-116">无。</span><span class="sxs-lookup"><span data-stu-id="e61d0-116">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="53bed-117">子元素</span><span class="sxs-lookup"><span data-stu-id="53bed-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e61d0-117">子元素</span><span class="sxs-lookup"><span data-stu-id="e61d0-117">Child Elements</span></span>  
   
-|<span data-ttu-id="53bed-118">元素</span><span class="sxs-lookup"><span data-stu-id="53bed-118">Element</span></span>|<span data-ttu-id="53bed-119">描述</span><span class="sxs-lookup"><span data-stu-id="53bed-119">Description</span></span>|  
+|<span data-ttu-id="e61d0-118">元素</span><span class="sxs-lookup"><span data-stu-id="e61d0-118">Element</span></span>|<span data-ttu-id="e61d0-119">描述</span><span class="sxs-lookup"><span data-stu-id="e61d0-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="53bed-120">\<状态 ></span><span class="sxs-lookup"><span data-stu-id="53bed-120">\<state></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|<span data-ttu-id="53bed-121">创建跟踪记录时已跟踪工作流实例中的一个已订阅状态。</span><span class="sxs-lookup"><span data-stu-id="53bed-121">A subscribed state from the tracked workflow instance when the tracking record is created.</span></span>|  
+|[<span data-ttu-id="e61d0-120">\<状态 ></span><span class="sxs-lookup"><span data-stu-id="e61d0-120">\<state></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|<span data-ttu-id="e61d0-121">创建跟踪记录时已跟踪工作流实例中的一个已订阅状态。</span><span class="sxs-lookup"><span data-stu-id="e61d0-121">A subscribed state from the tracked workflow instance when the tracking record is created.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="53bed-122">父元素</span><span class="sxs-lookup"><span data-stu-id="53bed-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e61d0-122">父元素</span><span class="sxs-lookup"><span data-stu-id="e61d0-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="53bed-123">元素</span><span class="sxs-lookup"><span data-stu-id="53bed-123">Element</span></span>|<span data-ttu-id="53bed-124">描述</span><span class="sxs-lookup"><span data-stu-id="53bed-124">Description</span></span>|  
+|<span data-ttu-id="e61d0-123">元素</span><span class="sxs-lookup"><span data-stu-id="e61d0-123">Element</span></span>|<span data-ttu-id="e61d0-124">描述</span><span class="sxs-lookup"><span data-stu-id="e61d0-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="53bed-125">\<workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="53bed-125">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="53bed-126">一个查询，该查询跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。</span><span class="sxs-lookup"><span data-stu-id="53bed-126">A query that tracks workflow instance life cycle changes such as a started or completed event.</span></span>|  
+|[<span data-ttu-id="e61d0-125">\<workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="e61d0-125">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="e61d0-126">一个查询，该查询跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。</span><span class="sxs-lookup"><span data-stu-id="e61d0-126">A query that tracks workflow instance life cycle changes such as a started or completed event.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="53bed-127">备注</span><span class="sxs-lookup"><span data-stu-id="53bed-127">Remarks</span></span>  
- <span data-ttu-id="53bed-128">返回的记录由此集合中的状态进行筛选。</span><span class="sxs-lookup"><span data-stu-id="53bed-128">The returned records are filtered by the states in this collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e61d0-127">备注</span><span class="sxs-lookup"><span data-stu-id="e61d0-127">Remarks</span></span>  
+ <span data-ttu-id="e61d0-128">返回的记录由此集合中的状态进行筛选。</span><span class="sxs-lookup"><span data-stu-id="e61d0-128">The returned records are filtered by the states in this collection.</span></span>  
   
- <span data-ttu-id="53bed-129">下表中列出了可能的状态值。</span><span class="sxs-lookup"><span data-stu-id="53bed-129">Possible state values are described in the following table.</span></span>  
+ <span data-ttu-id="e61d0-129">下表中列出了可能的状态值。</span><span class="sxs-lookup"><span data-stu-id="e61d0-129">Possible state values are described in the following table.</span></span>  
   
-|<span data-ttu-id="53bed-130">状态</span><span class="sxs-lookup"><span data-stu-id="53bed-130">State</span></span>|<span data-ttu-id="53bed-131">描述</span><span class="sxs-lookup"><span data-stu-id="53bed-131">Description</span></span>|  
+|<span data-ttu-id="e61d0-130">状态</span><span class="sxs-lookup"><span data-stu-id="e61d0-130">State</span></span>|<span data-ttu-id="e61d0-131">描述</span><span class="sxs-lookup"><span data-stu-id="e61d0-131">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="53bed-132">Aborted</span><span class="sxs-lookup"><span data-stu-id="53bed-132">Aborted</span></span>|<span data-ttu-id="53bed-133">工作流实例已中止。</span><span class="sxs-lookup"><span data-stu-id="53bed-133">The workflow instance is aborted.</span></span>|  
-|<span data-ttu-id="53bed-134">已完成</span><span class="sxs-lookup"><span data-stu-id="53bed-134">Completed</span></span>|<span data-ttu-id="53bed-135">工作流实例已完成。</span><span class="sxs-lookup"><span data-stu-id="53bed-135">The workflow instance is completed.</span></span>|  
-|<span data-ttu-id="53bed-136">Deleted</span><span class="sxs-lookup"><span data-stu-id="53bed-136">Deleted</span></span>|<span data-ttu-id="53bed-137">工作流实例已删除。</span><span class="sxs-lookup"><span data-stu-id="53bed-137">The workflow instance is deleted.</span></span>|  
-|<span data-ttu-id="53bed-138">Idle</span><span class="sxs-lookup"><span data-stu-id="53bed-138">Idle</span></span>|<span data-ttu-id="53bed-139">工作流实例处于空闲状态。</span><span class="sxs-lookup"><span data-stu-id="53bed-139">The workflow instance is idle.</span></span>|  
-|<span data-ttu-id="53bed-140">Persisted</span><span class="sxs-lookup"><span data-stu-id="53bed-140">Persisted</span></span>|<span data-ttu-id="53bed-141">工作流实例已保留。</span><span class="sxs-lookup"><span data-stu-id="53bed-141">The workflow instance is persisted.</span></span>|  
-|<span data-ttu-id="53bed-142">Resumed</span><span class="sxs-lookup"><span data-stu-id="53bed-142">Resumed</span></span>|<span data-ttu-id="53bed-143">工作流实例已恢复。</span><span class="sxs-lookup"><span data-stu-id="53bed-143">The workflow instance is resumed.</span></span>|  
-|<span data-ttu-id="53bed-144">Started</span><span class="sxs-lookup"><span data-stu-id="53bed-144">Started</span></span>|<span data-ttu-id="53bed-145">工作流实例已启动。</span><span class="sxs-lookup"><span data-stu-id="53bed-145">The workflow instance is started.</span></span>|  
-|<span data-ttu-id="53bed-146">UnhandledException</span><span class="sxs-lookup"><span data-stu-id="53bed-146">UnhandledException</span></span>|<span data-ttu-id="53bed-147">工作流实例遇到了未经处理的异常。</span><span class="sxs-lookup"><span data-stu-id="53bed-147">The workflow instance encountered an unhandled exception.</span></span>|  
-|<span data-ttu-id="53bed-148">Unloaded</span><span class="sxs-lookup"><span data-stu-id="53bed-148">Unloaded</span></span>|<span data-ttu-id="53bed-149">工作流实例已卸载。</span><span class="sxs-lookup"><span data-stu-id="53bed-149">The workflow instance is unloaded.</span></span>|  
-|<span data-ttu-id="53bed-150">Canceled</span><span class="sxs-lookup"><span data-stu-id="53bed-150">Canceled</span></span>|<span data-ttu-id="53bed-151">工作流实例已取消。</span><span class="sxs-lookup"><span data-stu-id="53bed-151">The workflow instance is canceled.</span></span>|  
-|<span data-ttu-id="53bed-152">挂起</span><span class="sxs-lookup"><span data-stu-id="53bed-152">Suspended</span></span>|<span data-ttu-id="53bed-153">工作流实例处于挂起状态。</span><span class="sxs-lookup"><span data-stu-id="53bed-153">The workflow instance is suspended.</span></span>|  
-|<span data-ttu-id="53bed-154">Terminated</span><span class="sxs-lookup"><span data-stu-id="53bed-154">Terminated</span></span>|<span data-ttu-id="53bed-155">工作流实例已终止。</span><span class="sxs-lookup"><span data-stu-id="53bed-155">The workflow instance is terminated.</span></span>|  
-|<span data-ttu-id="53bed-156">Unsuspended</span><span class="sxs-lookup"><span data-stu-id="53bed-156">Unsuspended</span></span>|<span data-ttu-id="53bed-157">工作流实例已取消挂起。</span><span class="sxs-lookup"><span data-stu-id="53bed-157">The workflow instance is unsuspended.</span></span>|  
+|<span data-ttu-id="e61d0-132">Aborted</span><span class="sxs-lookup"><span data-stu-id="e61d0-132">Aborted</span></span>|<span data-ttu-id="e61d0-133">工作流实例已中止。</span><span class="sxs-lookup"><span data-stu-id="e61d0-133">The workflow instance is aborted.</span></span>|  
+|<span data-ttu-id="e61d0-134">已完成</span><span class="sxs-lookup"><span data-stu-id="e61d0-134">Completed</span></span>|<span data-ttu-id="e61d0-135">工作流实例已完成。</span><span class="sxs-lookup"><span data-stu-id="e61d0-135">The workflow instance is completed.</span></span>|  
+|<span data-ttu-id="e61d0-136">Deleted</span><span class="sxs-lookup"><span data-stu-id="e61d0-136">Deleted</span></span>|<span data-ttu-id="e61d0-137">工作流实例已删除。</span><span class="sxs-lookup"><span data-stu-id="e61d0-137">The workflow instance is deleted.</span></span>|  
+|<span data-ttu-id="e61d0-138">Idle</span><span class="sxs-lookup"><span data-stu-id="e61d0-138">Idle</span></span>|<span data-ttu-id="e61d0-139">工作流实例处于空闲状态。</span><span class="sxs-lookup"><span data-stu-id="e61d0-139">The workflow instance is idle.</span></span>|  
+|<span data-ttu-id="e61d0-140">Persisted</span><span class="sxs-lookup"><span data-stu-id="e61d0-140">Persisted</span></span>|<span data-ttu-id="e61d0-141">工作流实例已保留。</span><span class="sxs-lookup"><span data-stu-id="e61d0-141">The workflow instance is persisted.</span></span>|  
+|<span data-ttu-id="e61d0-142">Resumed</span><span class="sxs-lookup"><span data-stu-id="e61d0-142">Resumed</span></span>|<span data-ttu-id="e61d0-143">工作流实例已恢复。</span><span class="sxs-lookup"><span data-stu-id="e61d0-143">The workflow instance is resumed.</span></span>|  
+|<span data-ttu-id="e61d0-144">Started</span><span class="sxs-lookup"><span data-stu-id="e61d0-144">Started</span></span>|<span data-ttu-id="e61d0-145">工作流实例已启动。</span><span class="sxs-lookup"><span data-stu-id="e61d0-145">The workflow instance is started.</span></span>|  
+|<span data-ttu-id="e61d0-146">UnhandledException</span><span class="sxs-lookup"><span data-stu-id="e61d0-146">UnhandledException</span></span>|<span data-ttu-id="e61d0-147">工作流实例遇到了未经处理的异常。</span><span class="sxs-lookup"><span data-stu-id="e61d0-147">The workflow instance encountered an unhandled exception.</span></span>|  
+|<span data-ttu-id="e61d0-148">Unloaded</span><span class="sxs-lookup"><span data-stu-id="e61d0-148">Unloaded</span></span>|<span data-ttu-id="e61d0-149">工作流实例已卸载。</span><span class="sxs-lookup"><span data-stu-id="e61d0-149">The workflow instance is unloaded.</span></span>|  
+|<span data-ttu-id="e61d0-150">Canceled</span><span class="sxs-lookup"><span data-stu-id="e61d0-150">Canceled</span></span>|<span data-ttu-id="e61d0-151">工作流实例已取消。</span><span class="sxs-lookup"><span data-stu-id="e61d0-151">The workflow instance is canceled.</span></span>|  
+|<span data-ttu-id="e61d0-152">挂起</span><span class="sxs-lookup"><span data-stu-id="e61d0-152">Suspended</span></span>|<span data-ttu-id="e61d0-153">工作流实例处于挂起状态。</span><span class="sxs-lookup"><span data-stu-id="e61d0-153">The workflow instance is suspended.</span></span>|  
+|<span data-ttu-id="e61d0-154">Terminated</span><span class="sxs-lookup"><span data-stu-id="e61d0-154">Terminated</span></span>|<span data-ttu-id="e61d0-155">工作流实例已终止。</span><span class="sxs-lookup"><span data-stu-id="e61d0-155">The workflow instance is terminated.</span></span>|  
+|<span data-ttu-id="e61d0-156">Unsuspended</span><span class="sxs-lookup"><span data-stu-id="e61d0-156">Unsuspended</span></span>|<span data-ttu-id="e61d0-157">工作流实例已取消挂起。</span><span class="sxs-lookup"><span data-stu-id="e61d0-157">The workflow instance is unsuspended.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="53bed-158">示例</span><span class="sxs-lookup"><span data-stu-id="53bed-158">Example</span></span>  
- <span data-ttu-id="53bed-159">下面的配置使用此查询订阅 `Started` 实例状态的工作流实例级跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="53bed-159">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
+## <a name="example"></a><span data-ttu-id="e61d0-158">示例</span><span class="sxs-lookup"><span data-stu-id="e61d0-158">Example</span></span>  
+ <span data-ttu-id="e61d0-159">下面的配置使用此查询订阅 `Started` 实例状态的工作流实例级跟踪记录。</span><span class="sxs-lookup"><span data-stu-id="e61d0-159">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
   
 ```xml  
 <workflowInstanceQueries>  
@@ -101,9 +102,9 @@ ms.lasthandoff: 12/02/2017
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="53bed-160">另请参阅</span><span class="sxs-lookup"><span data-stu-id="53bed-160">See Also</span></span>  
- <span data-ttu-id="53bed-161"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="53bed-161"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType></span></span>       
- <span data-ttu-id="53bed-162"><xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="53bed-162"><xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType></span></span>       
- <span data-ttu-id="53bed-163"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="53bed-163"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span></span>       
- [<span data-ttu-id="53bed-164">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="53bed-164">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [<span data-ttu-id="53bed-165">跟踪配置文件</span><span class="sxs-lookup"><span data-stu-id="53bed-165">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="e61d0-160">请参阅</span><span class="sxs-lookup"><span data-stu-id="e61d0-160">See Also</span></span>  
+ <span data-ttu-id="e61d0-161"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="e61d0-161"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="e61d0-162"><xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="e61d0-162"><xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="e61d0-163"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="e61d0-163"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="e61d0-164">工作流跟踪</span><span class="sxs-lookup"><span data-stu-id="e61d0-164">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="e61d0-165">跟踪配置文件</span><span class="sxs-lookup"><span data-stu-id="e61d0-165">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

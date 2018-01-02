@@ -16,60 +16,61 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: abcb6d1b5f9dbb7a866b55628aabfe996a0a747c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 510896c6993008f30e7eacf2628ae4cceadea7e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltgccpugroupgt-element"></a><span data-ttu-id="f5984-102">&lt;GCCpuGroup&gt;元素</span><span class="sxs-lookup"><span data-stu-id="f5984-102">&lt;GCCpuGroup&gt; Element</span></span>
-<span data-ttu-id="f5984-103">指定垃圾回收是否支持多个 CPU 组。</span><span class="sxs-lookup"><span data-stu-id="f5984-103">Specifies whether garbage collection supports multiple CPU groups.</span></span>  
+# <a name="ltgccpugroupgt-element"></a><span data-ttu-id="10a15-102">&lt;GCCpuGroup&gt;元素</span><span class="sxs-lookup"><span data-stu-id="10a15-102">&lt;GCCpuGroup&gt; Element</span></span>
+<span data-ttu-id="10a15-103">指定垃圾回收是否支持多个 CPU 组。</span><span class="sxs-lookup"><span data-stu-id="10a15-103">Specifies whether garbage collection supports multiple CPU groups.</span></span>  
   
- <span data-ttu-id="f5984-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f5984-104">\<configuration></span></span>  
-<span data-ttu-id="f5984-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="f5984-105">\<runtime></span></span>  
-<span data-ttu-id="f5984-106">\<GCCpuGroup ></span><span class="sxs-lookup"><span data-stu-id="f5984-106">\<GCCpuGroup></span></span>  
+ <span data-ttu-id="10a15-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="10a15-104">\<configuration></span></span>  
+<span data-ttu-id="10a15-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="10a15-105">\<runtime></span></span>  
+<span data-ttu-id="10a15-106">\<GCCpuGroup ></span><span class="sxs-lookup"><span data-stu-id="10a15-106">\<GCCpuGroup></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f5984-107">语法</span><span class="sxs-lookup"><span data-stu-id="f5984-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10a15-107">语法</span><span class="sxs-lookup"><span data-stu-id="10a15-107">Syntax</span></span>  
   
 ```xml  
 <GCCpuGroup    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f5984-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="f5984-108">Attributes and Elements</span></span>  
- <span data-ttu-id="f5984-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="f5984-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="10a15-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="10a15-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="10a15-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="10a15-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f5984-110">特性</span><span class="sxs-lookup"><span data-stu-id="f5984-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="10a15-110">特性</span><span class="sxs-lookup"><span data-stu-id="10a15-110">Attributes</span></span>  
   
-|<span data-ttu-id="f5984-111">特性</span><span class="sxs-lookup"><span data-stu-id="f5984-111">Attribute</span></span>|<span data-ttu-id="f5984-112">描述</span><span class="sxs-lookup"><span data-stu-id="f5984-112">Description</span></span>|  
+|<span data-ttu-id="10a15-111">特性</span><span class="sxs-lookup"><span data-stu-id="10a15-111">Attribute</span></span>|<span data-ttu-id="10a15-112">描述</span><span class="sxs-lookup"><span data-stu-id="10a15-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="f5984-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="f5984-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="f5984-114">指定垃圾回收是否支持多个 CPU 组。</span><span class="sxs-lookup"><span data-stu-id="f5984-114">Specifies whether garbage collection supports multiple CPU groups.</span></span>|  
+|`enabled`|<span data-ttu-id="10a15-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="10a15-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="10a15-114">指定垃圾回收是否支持多个 CPU 组。</span><span class="sxs-lookup"><span data-stu-id="10a15-114">Specifies whether garbage collection supports multiple CPU groups.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="f5984-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="f5984-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="10a15-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="10a15-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="f5984-116">值</span><span class="sxs-lookup"><span data-stu-id="f5984-116">Value</span></span>|<span data-ttu-id="f5984-117">描述</span><span class="sxs-lookup"><span data-stu-id="f5984-117">Description</span></span>|  
+|<span data-ttu-id="10a15-116">值</span><span class="sxs-lookup"><span data-stu-id="10a15-116">Value</span></span>|<span data-ttu-id="10a15-117">描述</span><span class="sxs-lookup"><span data-stu-id="10a15-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="f5984-118">垃圾回收不支持多个 CPU 组。</span><span class="sxs-lookup"><span data-stu-id="f5984-118">Garbage collection does not support multiple CPU groups.</span></span> <span data-ttu-id="f5984-119">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="f5984-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="f5984-120">垃圾回收支持多个 CPU 组，如果启用服务器垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="f5984-120">Garbage collection supports multiple CPU groups, if server garbage collection is enabled.</span></span>|  
+|`false`|<span data-ttu-id="10a15-118">垃圾回收不支持多个 CPU 组。</span><span class="sxs-lookup"><span data-stu-id="10a15-118">Garbage collection does not support multiple CPU groups.</span></span> <span data-ttu-id="10a15-119">这是默认设置。</span><span class="sxs-lookup"><span data-stu-id="10a15-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="10a15-120">垃圾回收支持多个 CPU 组，如果启用服务器垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="10a15-120">Garbage collection supports multiple CPU groups, if server garbage collection is enabled.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f5984-121">子元素</span><span class="sxs-lookup"><span data-stu-id="f5984-121">Child Elements</span></span>  
- <span data-ttu-id="f5984-122">无。</span><span class="sxs-lookup"><span data-stu-id="f5984-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="10a15-121">子元素</span><span class="sxs-lookup"><span data-stu-id="10a15-121">Child Elements</span></span>  
+ <span data-ttu-id="10a15-122">无。</span><span class="sxs-lookup"><span data-stu-id="10a15-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="f5984-123">父元素</span><span class="sxs-lookup"><span data-stu-id="f5984-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="10a15-123">父元素</span><span class="sxs-lookup"><span data-stu-id="10a15-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="f5984-124">元素</span><span class="sxs-lookup"><span data-stu-id="f5984-124">Element</span></span>|<span data-ttu-id="f5984-125">描述</span><span class="sxs-lookup"><span data-stu-id="f5984-125">Description</span></span>|  
+|<span data-ttu-id="10a15-124">元素</span><span class="sxs-lookup"><span data-stu-id="10a15-124">Element</span></span>|<span data-ttu-id="10a15-125">说明</span><span class="sxs-lookup"><span data-stu-id="10a15-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="f5984-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="f5984-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="f5984-127">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="f5984-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="10a15-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="10a15-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="10a15-127">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="10a15-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f5984-128">备注</span><span class="sxs-lookup"><span data-stu-id="f5984-128">Remarks</span></span>  
- <span data-ttu-id="f5984-129">当一台计算机有多个 CPU 组，并启用服务器垃圾回收 (请参阅[ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素)，启用此元素跨越所有的 CPU 组将扩展垃圾回收和采用到的所有核心创建和平衡堆时的帐户。</span><span class="sxs-lookup"><span data-stu-id="f5984-129">When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="10a15-128">备注</span><span class="sxs-lookup"><span data-stu-id="10a15-128">Remarks</span></span>  
+ <span data-ttu-id="10a15-129">当一台计算机有多个 CPU 组，并启用服务器垃圾回收 (请参阅[ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)元素)，启用此元素跨越所有的 CPU 组将扩展垃圾回收和采用到的所有核心创建和平衡堆时的帐户。</span><span class="sxs-lookup"><span data-stu-id="10a15-129">When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f5984-130">此元素仅适用于垃圾回收线程。</span><span class="sxs-lookup"><span data-stu-id="f5984-130">This element applies only to garbage collection threads.</span></span> <span data-ttu-id="f5984-131">若要启用运行时，将用户线程分布到所有的 CPU 组，你必须启用[< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="f5984-131">To enable the runtime to distribute user threads across all CPU groups, you must also enable the [<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) element.</span></span>  
+>  <span data-ttu-id="10a15-130">此元素仅适用于垃圾回收线程。</span><span class="sxs-lookup"><span data-stu-id="10a15-130">This element applies only to garbage collection threads.</span></span> <span data-ttu-id="10a15-131">若要启用运行时，将用户线程分布到所有的 CPU 组，你必须启用[< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="10a15-131">To enable the runtime to distribute user threads across all CPU groups, you must also enable the [<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5984-132">示例</span><span class="sxs-lookup"><span data-stu-id="f5984-132">Example</span></span>  
- <span data-ttu-id="f5984-133">下面的示例演示如何启用多个 CPU 组的垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="f5984-133">The following example shows how to enable garbage collection for multiple CPU groups.</span></span>  
+## <a name="example"></a><span data-ttu-id="10a15-132">示例</span><span class="sxs-lookup"><span data-stu-id="10a15-132">Example</span></span>  
+ <span data-ttu-id="10a15-133">下面的示例演示如何启用多个 CPU 组的垃圾回收。</span><span class="sxs-lookup"><span data-stu-id="10a15-133">The following example shows how to enable garbage collection for multiple CPU groups.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,8 +81,8 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f5984-134">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f5984-134">See Also</span></span>  
- [<span data-ttu-id="f5984-135">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="f5984-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="f5984-136">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="f5984-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="f5984-137">如何： 禁用并发垃圾回收</span><span class="sxs-lookup"><span data-stu-id="f5984-137">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
- [<span data-ttu-id="f5984-138">工作站和服务器垃圾回收</span><span class="sxs-lookup"><span data-stu-id="f5984-138">Workstation and server garbage collection</span></span>](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+## <a name="see-also"></a><span data-ttu-id="10a15-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="10a15-134">See Also</span></span>  
+ [<span data-ttu-id="10a15-135">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="10a15-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="10a15-136">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="10a15-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="10a15-137">如何： 禁用并发垃圾回收</span><span class="sxs-lookup"><span data-stu-id="10a15-137">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [<span data-ttu-id="10a15-138">工作站和服务器垃圾回收</span><span class="sxs-lookup"><span data-stu-id="10a15-138">Workstation and server garbage collection</span></span>](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

@@ -21,22 +21,23 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: eae909e2f70cfa045dd9a5c6b7496f112a59dc45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bed3abd5522b748a2bd24ba03c7be5d991deae9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="91c04-102">&lt;添加&gt;将 bypasslist （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="91c04-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
-<span data-ttu-id="91c04-103">将 IP 地址或 DNS 名称添加到代理绕过列表。</span><span class="sxs-lookup"><span data-stu-id="91c04-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="ac800-102">&lt;添加&gt;将 bypasslist （网络设置） 的元素</span><span class="sxs-lookup"><span data-stu-id="ac800-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="ac800-103">将 IP 地址或 DNS 名称添加到代理绕过列表。</span><span class="sxs-lookup"><span data-stu-id="ac800-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  
   
- <span data-ttu-id="91c04-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="91c04-104">\<configuration></span></span>  
-<span data-ttu-id="91c04-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="91c04-105">\<system.net></span></span>  
-<span data-ttu-id="91c04-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="91c04-106">\<defaultProxy></span></span>  
-<span data-ttu-id="91c04-107">\<将 bypasslist ></span><span class="sxs-lookup"><span data-stu-id="91c04-107">\<bypasslist></span></span>  
-<span data-ttu-id="91c04-108">\<add></span><span class="sxs-lookup"><span data-stu-id="91c04-108">\<add></span></span>  
+ <span data-ttu-id="ac800-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ac800-104">\<configuration></span></span>  
+<span data-ttu-id="ac800-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="ac800-105">\<system.net></span></span>  
+<span data-ttu-id="ac800-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="ac800-106">\<defaultProxy></span></span>  
+<span data-ttu-id="ac800-107">\<将 bypasslist ></span><span class="sxs-lookup"><span data-stu-id="ac800-107">\<bypasslist></span></span>  
+<span data-ttu-id="ac800-108">\<add></span><span class="sxs-lookup"><span data-stu-id="ac800-108">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="91c04-109">语法</span><span class="sxs-lookup"><span data-stu-id="91c04-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac800-109">语法</span><span class="sxs-lookup"><span data-stu-id="ac800-109">Syntax</span></span>  
   
 ```xml  
 <add   
@@ -44,38 +45,38 @@ ms.lasthandoff: 11/21/2017
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="91c04-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="91c04-110">Attributes and Elements</span></span>  
- <span data-ttu-id="91c04-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="91c04-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ac800-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="ac800-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="ac800-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="ac800-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="91c04-112">特性</span><span class="sxs-lookup"><span data-stu-id="91c04-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ac800-112">特性</span><span class="sxs-lookup"><span data-stu-id="ac800-112">Attributes</span></span>  
   
-|<span data-ttu-id="91c04-113">**特性**</span><span class="sxs-lookup"><span data-stu-id="91c04-113">**Attribute**</span></span>|<span data-ttu-id="91c04-114">**描述**</span><span class="sxs-lookup"><span data-stu-id="91c04-114">**Description**</span></span>|  
+|<span data-ttu-id="ac800-113">**特性**</span><span class="sxs-lookup"><span data-stu-id="ac800-113">**Attribute**</span></span>|<span data-ttu-id="ac800-114">**说明**</span><span class="sxs-lookup"><span data-stu-id="ac800-114">**Description**</span></span>|  
 |-------------------|---------------------|  
-|<span data-ttu-id="91c04-115">**address**</span><span class="sxs-lookup"><span data-stu-id="91c04-115">**address**</span></span>|<span data-ttu-id="91c04-116">正则表达式描述的 IP 地址或 DNS 名称。</span><span class="sxs-lookup"><span data-stu-id="91c04-116">A regular expression describing an IP address or DNS name.</span></span>|  
+|<span data-ttu-id="ac800-115">**address**</span><span class="sxs-lookup"><span data-stu-id="ac800-115">**address**</span></span>|<span data-ttu-id="ac800-116">正则表达式描述的 IP 地址或 DNS 名称。</span><span class="sxs-lookup"><span data-stu-id="ac800-116">A regular expression describing an IP address or DNS name.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="91c04-117">子元素</span><span class="sxs-lookup"><span data-stu-id="91c04-117">Child Elements</span></span>  
- <span data-ttu-id="91c04-118">无。</span><span class="sxs-lookup"><span data-stu-id="91c04-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ac800-117">子元素</span><span class="sxs-lookup"><span data-stu-id="ac800-117">Child Elements</span></span>  
+ <span data-ttu-id="ac800-118">无。</span><span class="sxs-lookup"><span data-stu-id="ac800-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="91c04-119">父元素</span><span class="sxs-lookup"><span data-stu-id="91c04-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ac800-119">父元素</span><span class="sxs-lookup"><span data-stu-id="ac800-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="91c04-120">**元素**</span><span class="sxs-lookup"><span data-stu-id="91c04-120">**Element**</span></span>|<span data-ttu-id="91c04-121">**描述**</span><span class="sxs-lookup"><span data-stu-id="91c04-121">**Description**</span></span>|  
+|<span data-ttu-id="ac800-120">**元素**</span><span class="sxs-lookup"><span data-stu-id="ac800-120">**Element**</span></span>|<span data-ttu-id="ac800-121">**说明**</span><span class="sxs-lookup"><span data-stu-id="ac800-121">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="91c04-122">将 bypasslist</span><span class="sxs-lookup"><span data-stu-id="91c04-122">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="91c04-123">提供一组描述不使用代理的地址的正则表达式。</span><span class="sxs-lookup"><span data-stu-id="91c04-123">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
+|[<span data-ttu-id="ac800-122">将 bypasslist</span><span class="sxs-lookup"><span data-stu-id="ac800-122">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="ac800-123">提供一组描述不使用代理的地址的正则表达式。</span><span class="sxs-lookup"><span data-stu-id="ac800-123">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="91c04-124">备注</span><span class="sxs-lookup"><span data-stu-id="91c04-124">Remarks</span></span>  
- <span data-ttu-id="91c04-125">`add`元素插入正则表达式描述 IP 地址或 DNS 服务器名称的绕过代理服务器的地址的列表。</span><span class="sxs-lookup"><span data-stu-id="91c04-125">The `add` element inserts regular expressions describing IP addresses or DNS server names to the list of addresses that bypass a proxy server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ac800-124">备注</span><span class="sxs-lookup"><span data-stu-id="ac800-124">Remarks</span></span>  
+ <span data-ttu-id="ac800-125">`add`元素插入正则表达式描述 IP 地址或 DNS 服务器名称的绕过代理服务器的地址的列表。</span><span class="sxs-lookup"><span data-stu-id="ac800-125">The `add` element inserts regular expressions describing IP addresses or DNS server names to the list of addresses that bypass a proxy server.</span></span>  
   
- <span data-ttu-id="91c04-126">值`address`属性应为正则表达式描述一组 IP 地址或主机名。</span><span class="sxs-lookup"><span data-stu-id="91c04-126">The value of the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
+ <span data-ttu-id="ac800-126">值`address`属性应为正则表达式描述一组 IP 地址或主机名。</span><span class="sxs-lookup"><span data-stu-id="ac800-126">The value of the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
   
- <span data-ttu-id="91c04-127">指定此元素的正则表达式时，应使用警告。</span><span class="sxs-lookup"><span data-stu-id="91c04-127">You should use caution when specifying a regular expression for this element.</span></span> <span data-ttu-id="91c04-128">正则表达式"[a 到 z] +\\.contoso\\.com"匹配任何承载在 contoso.com 域，但它还将匹配 contoso.com.cpandl.com 域中的任何主机。</span><span class="sxs-lookup"><span data-stu-id="91c04-128">The regular expression "[a-z]+\\.contoso\\.com" matches any host in the contoso.com domain, but it also matches any host in the contoso.com.cpandl.com domain.</span></span> <span data-ttu-id="91c04-129">若要匹配仅在 contoso.com 域中的主机，使用的定位点 （"$"）:"[a 到 z] +\\.contoso\\.com$"。</span><span class="sxs-lookup"><span data-stu-id="91c04-129">To match only a host in the contoso.com domain, use an anchor ("$"): "[a-z]+\\.contoso\\.com$".</span></span>  
+ <span data-ttu-id="ac800-127">指定此元素的正则表达式时，应使用警告。</span><span class="sxs-lookup"><span data-stu-id="ac800-127">You should use caution when specifying a regular expression for this element.</span></span> <span data-ttu-id="ac800-128">正则表达式"[a 到 z] +\\.contoso\\.com"匹配任何承载在 contoso.com 域，但它还将匹配 contoso.com.cpandl.com 域中的任何主机。</span><span class="sxs-lookup"><span data-stu-id="ac800-128">The regular expression "[a-z]+\\.contoso\\.com" matches any host in the contoso.com domain, but it also matches any host in the contoso.com.cpandl.com domain.</span></span> <span data-ttu-id="ac800-129">若要匹配仅在 contoso.com 域中的主机，使用的定位点 （"$"）:"[a 到 z] +\\.contoso\\.com$"。</span><span class="sxs-lookup"><span data-stu-id="ac800-129">To match only a host in the contoso.com domain, use an anchor ("$"): "[a-z]+\\.contoso\\.com$".</span></span>  
   
- <span data-ttu-id="91c04-130">有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="91c04-130">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
+ <span data-ttu-id="ac800-130">有关正则表达式的详细信息，请参阅。[.NET framework 正则表达式](../../../../../docs/standard/base-types/regular-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="ac800-130">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="91c04-131">配置文件</span><span class="sxs-lookup"><span data-stu-id="91c04-131">Configuration Files</span></span>  
- <span data-ttu-id="91c04-132">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="91c04-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="ac800-131">配置文件</span><span class="sxs-lookup"><span data-stu-id="ac800-131">Configuration Files</span></span>  
+ <span data-ttu-id="ac800-132">此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。</span><span class="sxs-lookup"><span data-stu-id="ac800-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="91c04-133">示例</span><span class="sxs-lookup"><span data-stu-id="91c04-133">Example</span></span>  
- <span data-ttu-id="91c04-134">下面的示例将两个地址添加到跳过列表。</span><span class="sxs-lookup"><span data-stu-id="91c04-134">The following example adds two addresses to the bypass list.</span></span> <span data-ttu-id="91c04-135">第一个绕过用于 contoso.com 域; 中的所有服务器的代理第二个绕过用于与 192.168 其 IP 地址开始的所有服务器的代理。</span><span class="sxs-lookup"><span data-stu-id="91c04-135">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
+## <a name="example"></a><span data-ttu-id="ac800-133">示例</span><span class="sxs-lookup"><span data-stu-id="ac800-133">Example</span></span>  
+ <span data-ttu-id="ac800-134">下面的示例将两个地址添加到跳过列表。</span><span class="sxs-lookup"><span data-stu-id="ac800-134">The following example adds two addresses to the bypass list.</span></span> <span data-ttu-id="ac800-135">第一个绕过用于 contoso.com 域; 中的所有服务器的代理第二个绕过用于与 192.168 其 IP 地址开始的所有服务器的代理。</span><span class="sxs-lookup"><span data-stu-id="ac800-135">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
 ```xml  
 <configuration>  
@@ -90,6 +91,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="91c04-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="91c04-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ac800-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="ac800-136">See Also</span></span>  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [<span data-ttu-id="91c04-137">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="91c04-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="ac800-137">网络设置架构</span><span class="sxs-lookup"><span data-stu-id="ac800-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

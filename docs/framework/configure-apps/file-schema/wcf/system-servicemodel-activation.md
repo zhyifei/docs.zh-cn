@@ -13,17 +13,18 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f15466e5ae0421f400d80f66370cb60f75c83990
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae6fb19fe956d819337c7c06a0c5b58ac70c8327
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="e5167-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="e5167-102">&lt;system.serviceModel.activation&gt;</span></span>
-<span data-ttu-id="e5167-103">此配置节描述了 SMSvcHost.exe 工具的配置设置。</span><span class="sxs-lookup"><span data-stu-id="e5167-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="e5167-104">配置元素可在 SMSvcHost.exe.config 文件中配置。</span><span class="sxs-lookup"><span data-stu-id="e5167-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="e5167-105">具体地说，它包括计算机中所有必须配置的设置。</span><span class="sxs-lookup"><span data-stu-id="e5167-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
+# <a name="ltsystemservicemodelactivationgt"></a><span data-ttu-id="5752a-102">&lt;system.serviceModel.activation&gt;</span><span class="sxs-lookup"><span data-stu-id="5752a-102">&lt;system.serviceModel.activation&gt;</span></span>
+<span data-ttu-id="5752a-103">此配置节描述了 SMSvcHost.exe 工具的配置设置。</span><span class="sxs-lookup"><span data-stu-id="5752a-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="5752a-104">配置元素可在 SMSvcHost.exe.config 文件中配置。</span><span class="sxs-lookup"><span data-stu-id="5752a-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="5752a-105">具体地说，它包括计算机中所有必须配置的设置。</span><span class="sxs-lookup"><span data-stu-id="5752a-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
   
-## <a name="sample-configuration-file"></a><span data-ttu-id="e5167-106">示例配置文件</span><span class="sxs-lookup"><span data-stu-id="e5167-106">Sample Configuration File</span></span>  
- <span data-ttu-id="e5167-107">下面是侦听器进程 SMSvcHost.exe 所使用的示例配置文件 (SMSvcHost.exe.config)。</span><span class="sxs-lookup"><span data-stu-id="e5167-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
+## <a name="sample-configuration-file"></a><span data-ttu-id="5752a-106">示例配置文件</span><span class="sxs-lookup"><span data-stu-id="5752a-106">Sample Configuration File</span></span>  
+ <span data-ttu-id="5752a-107">下面是侦听器进程 SMSvcHost.exe 所使用的示例配置文件 (SMSvcHost.exe.config)。</span><span class="sxs-lookup"><span data-stu-id="5752a-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,5 +71,5 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e5167-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e5167-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5752a-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="5752a-108">See Also</span></span>  
  <xref:System.ServiceModel.Activation.Configuration>

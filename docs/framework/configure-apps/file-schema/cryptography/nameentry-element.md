@@ -19,52 +19,53 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 507c71b5c13deeb7c1a81b6a4dd9604c3bd919f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7c9a4b4532d98b7dfc2484dab1bb57e5a26fa392
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltnameentrygt-element"></a><span data-ttu-id="33b08-102">&lt;nameEntry&gt;元素</span><span class="sxs-lookup"><span data-stu-id="33b08-102">&lt;nameEntry&gt; Element</span></span>
-<span data-ttu-id="33b08-103">将类名称映射到友好算法名称，允许一个类具有多个友好名称。</span><span class="sxs-lookup"><span data-stu-id="33b08-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  
+# <a name="ltnameentrygt-element"></a><span data-ttu-id="8a664-102">&lt;nameEntry&gt;元素</span><span class="sxs-lookup"><span data-stu-id="8a664-102">&lt;nameEntry&gt; Element</span></span>
+<span data-ttu-id="8a664-103">将类名称映射到友好算法名称，允许一个类具有多个友好名称。</span><span class="sxs-lookup"><span data-stu-id="8a664-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  
   
- <span data-ttu-id="33b08-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="33b08-104">\<configuration></span></span>  
-<span data-ttu-id="33b08-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="33b08-105">\<mscorlib></span></span>  
-<span data-ttu-id="33b08-106">\<g s ></span><span class="sxs-lookup"><span data-stu-id="33b08-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="33b08-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="33b08-107">\<cryptoNameMapping></span></span>  
-<span data-ttu-id="33b08-108">\<nameEntry ></span><span class="sxs-lookup"><span data-stu-id="33b08-108">\<nameEntry></span></span>  
+ <span data-ttu-id="8a664-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8a664-104">\<configuration></span></span>  
+<span data-ttu-id="8a664-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="8a664-105">\<mscorlib></span></span>  
+<span data-ttu-id="8a664-106">\<g s ></span><span class="sxs-lookup"><span data-stu-id="8a664-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="8a664-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="8a664-107">\<cryptoNameMapping></span></span>  
+<span data-ttu-id="8a664-108">\<nameEntry ></span><span class="sxs-lookup"><span data-stu-id="8a664-108">\<nameEntry></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33b08-109">语法</span><span class="sxs-lookup"><span data-stu-id="33b08-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a664-109">语法</span><span class="sxs-lookup"><span data-stu-id="8a664-109">Syntax</span></span>  
   
 ```xml  
 <nameEntry name="friendly name" Class="class name" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="33b08-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="33b08-110">Attributes and Elements</span></span>  
- <span data-ttu-id="33b08-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="33b08-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8a664-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="8a664-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="8a664-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="8a664-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="33b08-112">特性</span><span class="sxs-lookup"><span data-stu-id="33b08-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8a664-112">特性</span><span class="sxs-lookup"><span data-stu-id="8a664-112">Attributes</span></span>  
   
-|<span data-ttu-id="33b08-113">特性</span><span class="sxs-lookup"><span data-stu-id="33b08-113">Attribute</span></span>|<span data-ttu-id="33b08-114">描述</span><span class="sxs-lookup"><span data-stu-id="33b08-114">Description</span></span>|  
+|<span data-ttu-id="8a664-113">特性</span><span class="sxs-lookup"><span data-stu-id="8a664-113">Attribute</span></span>|<span data-ttu-id="8a664-114">描述</span><span class="sxs-lookup"><span data-stu-id="8a664-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="33b08-115">**name**</span><span class="sxs-lookup"><span data-stu-id="33b08-115">**name**</span></span>|<span data-ttu-id="33b08-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="33b08-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="33b08-117">指定加密类实现的算法的友好名称。</span><span class="sxs-lookup"><span data-stu-id="33b08-117">Specifies the friendly name of the algorithm that the cryptography class implements.</span></span>|  
-|<span data-ttu-id="33b08-118">**类**</span><span class="sxs-lookup"><span data-stu-id="33b08-118">**class**</span></span>|<span data-ttu-id="33b08-119">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="33b08-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="33b08-120">指定的值**名称**属性中[ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="33b08-120">Specifies the value for the **name** attribute in the [\<cryptoClass>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) element.</span></span>|  
+|<span data-ttu-id="8a664-115">**name**</span><span class="sxs-lookup"><span data-stu-id="8a664-115">**name**</span></span>|<span data-ttu-id="8a664-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="8a664-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="8a664-117">指定加密类实现的算法的友好名称。</span><span class="sxs-lookup"><span data-stu-id="8a664-117">Specifies the friendly name of the algorithm that the cryptography class implements.</span></span>|  
+|<span data-ttu-id="8a664-118">**类**</span><span class="sxs-lookup"><span data-stu-id="8a664-118">**class**</span></span>|<span data-ttu-id="8a664-119">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="8a664-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="8a664-120">指定的值**名称**属性中[ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)元素。</span><span class="sxs-lookup"><span data-stu-id="8a664-120">Specifies the value for the **name** attribute in the [\<cryptoClass>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) element.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="33b08-121">子元素</span><span class="sxs-lookup"><span data-stu-id="33b08-121">Child Elements</span></span>  
- <span data-ttu-id="33b08-122">无。</span><span class="sxs-lookup"><span data-stu-id="33b08-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8a664-121">子元素</span><span class="sxs-lookup"><span data-stu-id="8a664-121">Child Elements</span></span>  
+ <span data-ttu-id="8a664-122">无。</span><span class="sxs-lookup"><span data-stu-id="8a664-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="33b08-123">父元素</span><span class="sxs-lookup"><span data-stu-id="33b08-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8a664-123">父元素</span><span class="sxs-lookup"><span data-stu-id="8a664-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="33b08-124">元素</span><span class="sxs-lookup"><span data-stu-id="33b08-124">Element</span></span>|<span data-ttu-id="33b08-125">描述</span><span class="sxs-lookup"><span data-stu-id="33b08-125">Description</span></span>|  
+|<span data-ttu-id="8a664-124">元素</span><span class="sxs-lookup"><span data-stu-id="8a664-124">Element</span></span>|<span data-ttu-id="8a664-125">说明</span><span class="sxs-lookup"><span data-stu-id="8a664-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="33b08-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="33b08-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.web`|<span data-ttu-id="33b08-127">为 ASP.NET 配置节指定根元素。</span><span class="sxs-lookup"><span data-stu-id="33b08-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`configuration`|<span data-ttu-id="8a664-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="8a664-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.web`|<span data-ttu-id="8a664-127">为 ASP.NET 配置节指定根元素。</span><span class="sxs-lookup"><span data-stu-id="8a664-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="33b08-128">备注</span><span class="sxs-lookup"><span data-stu-id="33b08-128">Remarks</span></span>  
- <span data-ttu-id="33b08-129">**名称**属性可以是之一中找到的抽象类的名称<xref:System.Security.Cryptography>命名空间。</span><span class="sxs-lookup"><span data-stu-id="33b08-129">The **name** attribute can be the name of one of the abstract classes found in the <xref:System.Security.Cryptography> namespace.</span></span> <span data-ttu-id="33b08-130">当调用**创建**抽象加密类的方法，抽象类名称传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="33b08-130">When you call the **Create** method on an abstract cryptography class, the abstract class name is passed to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> method.</span></span> <span data-ttu-id="33b08-131">**CreateFromName**返回一个指示的类型的实例**类**属性。</span><span class="sxs-lookup"><span data-stu-id="33b08-131">**CreateFromName** returns an instance of the type indicated by the **class** attribute.</span></span> <span data-ttu-id="33b08-132">如果**名称**特性是一个短名称，例如 RSA，你可以使用该名称，在调用时**CreateFromName**方法。</span><span class="sxs-lookup"><span data-stu-id="33b08-132">If the **name** attribute is a short name, such as RSA, you can use that name when calling the **CreateFromName** method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a664-128">备注</span><span class="sxs-lookup"><span data-stu-id="8a664-128">Remarks</span></span>  
+ <span data-ttu-id="8a664-129">**名称**属性可以是之一中找到的抽象类的名称<xref:System.Security.Cryptography>命名空间。</span><span class="sxs-lookup"><span data-stu-id="8a664-129">The **name** attribute can be the name of one of the abstract classes found in the <xref:System.Security.Cryptography> namespace.</span></span> <span data-ttu-id="8a664-130">当调用**创建**抽象加密类的方法，抽象类名称传递给<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="8a664-130">When you call the **Create** method on an abstract cryptography class, the abstract class name is passed to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> method.</span></span> <span data-ttu-id="8a664-131">**CreateFromName**返回一个指示的类型的实例**类**属性。</span><span class="sxs-lookup"><span data-stu-id="8a664-131">**CreateFromName** returns an instance of the type indicated by the **class** attribute.</span></span> <span data-ttu-id="8a664-132">如果**名称**特性是一个短名称，例如 RSA，你可以使用该名称，在调用时**CreateFromName**方法。</span><span class="sxs-lookup"><span data-stu-id="8a664-132">If the **name** attribute is a short name, such as RSA, you can use that name when calling the **CreateFromName** method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="33b08-133">示例</span><span class="sxs-lookup"><span data-stu-id="33b08-133">Example</span></span>  
- <span data-ttu-id="33b08-134">下面的示例演示如何使用 **\<nameEntry >**元素来引用密码类并配置运行时。</span><span class="sxs-lookup"><span data-stu-id="33b08-134">The following example shows how to use the **\<nameEntry>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="33b08-135">然后，你可以将字符串"RSA"传递到<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。</span><span class="sxs-lookup"><span data-stu-id="33b08-135">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="8a664-133">示例</span><span class="sxs-lookup"><span data-stu-id="8a664-133">Example</span></span>  
+ <span data-ttu-id="8a664-134">下面的示例演示如何使用 **\<nameEntry >**元素来引用密码类并配置运行时。</span><span class="sxs-lookup"><span data-stu-id="8a664-134">The following example shows how to use the **\<nameEntry>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="8a664-135">然后，你可以将字符串"RSA"传递到<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>方法并使用<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>方法以返回`MyCryptoRSAClass`对象。</span><span class="sxs-lookup"><span data-stu-id="8a664-135">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -85,8 +86,8 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="33b08-136">另请参阅</span><span class="sxs-lookup"><span data-stu-id="33b08-136">See Also</span></span>  
- [<span data-ttu-id="33b08-137">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="33b08-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="33b08-138">加密设置架构</span><span class="sxs-lookup"><span data-stu-id="33b08-138">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [<span data-ttu-id="33b08-139">加密服务</span><span class="sxs-lookup"><span data-stu-id="33b08-139">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
- [<span data-ttu-id="33b08-140">配置加密类</span><span class="sxs-lookup"><span data-stu-id="33b08-140">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="8a664-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="8a664-136">See Also</span></span>  
+ [<span data-ttu-id="8a664-137">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="8a664-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="8a664-138">加密设置架构</span><span class="sxs-lookup"><span data-stu-id="8a664-138">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="8a664-139">加密服务</span><span class="sxs-lookup"><span data-stu-id="8a664-139">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="8a664-140">配置加密类</span><span class="sxs-lookup"><span data-stu-id="8a664-140">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

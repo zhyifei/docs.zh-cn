@@ -13,22 +13,23 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 4ffe9764eb730be4859fb66ae2f0cc845c9404e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 31e0c2cf10b8bc93ade0d417763075c4419ac19f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltusernamesecuritytokenhandlerrequirementgt"></a><span data-ttu-id="d6035-102">&lt;userNameSecurityTokenHandlerRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="d6035-102">&lt;userNameSecurityTokenHandlerRequirement&gt;</span></span>
-<span data-ttu-id="d6035-103">提供有关配置<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>类或派生的类。</span><span class="sxs-lookup"><span data-stu-id="d6035-103">Provides configuration for the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> class or derived classes.</span></span>  
+# <a name="ltusernamesecuritytokenhandlerrequirementgt"></a><span data-ttu-id="72352-102">&lt;userNameSecurityTokenHandlerRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="72352-102">&lt;userNameSecurityTokenHandlerRequirement&gt;</span></span>
+<span data-ttu-id="72352-103">提供有关配置<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>类或派生的类。</span><span class="sxs-lookup"><span data-stu-id="72352-103">Provides configuration for the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> class or derived classes.</span></span>  
   
- <span data-ttu-id="d6035-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="d6035-104">\<system.identityModel></span></span>  
-<span data-ttu-id="d6035-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="d6035-105">\<identityConfiguration></span></span>  
-<span data-ttu-id="d6035-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="d6035-106">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="d6035-107">\<add></span><span class="sxs-lookup"><span data-stu-id="d6035-107">\<add></span></span>  
-<span data-ttu-id="d6035-108">\<userNameSecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="d6035-108">\<userNameSecurityTokenHandlerRequirement></span></span>  
+ <span data-ttu-id="72352-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="72352-104">\<system.identityModel></span></span>  
+<span data-ttu-id="72352-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="72352-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="72352-106">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="72352-106">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="72352-107">\<add></span><span class="sxs-lookup"><span data-stu-id="72352-107">\<add></span></span>  
+<span data-ttu-id="72352-108">\<userNameSecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="72352-108">\<userNameSecurityTokenHandlerRequirement></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6035-109">语法</span><span class="sxs-lookup"><span data-stu-id="d6035-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72352-109">语法</span><span class="sxs-lookup"><span data-stu-id="72352-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -43,28 +44,28 @@ ms.lasthandoff: 10/18/2017
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d6035-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="d6035-110">Attributes and Elements</span></span>  
- <span data-ttu-id="d6035-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="d6035-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="72352-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="72352-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="72352-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="72352-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d6035-112">特性</span><span class="sxs-lookup"><span data-stu-id="d6035-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="72352-112">特性</span><span class="sxs-lookup"><span data-stu-id="72352-112">Attributes</span></span>  
   
-|<span data-ttu-id="d6035-113">特性</span><span class="sxs-lookup"><span data-stu-id="d6035-113">Attribute</span></span>|<span data-ttu-id="d6035-114">描述</span><span class="sxs-lookup"><span data-stu-id="d6035-114">Description</span></span>|  
+|<span data-ttu-id="72352-113">特性</span><span class="sxs-lookup"><span data-stu-id="72352-113">Attribute</span></span>|<span data-ttu-id="72352-114">描述</span><span class="sxs-lookup"><span data-stu-id="72352-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="d6035-115">membershipProviderName</span><span class="sxs-lookup"><span data-stu-id="d6035-115">membershipProviderName</span></span>|<span data-ttu-id="d6035-116">指定<xref:System.Web.Security.MembershipProvider>，应由安全令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="d6035-116">Specifies the <xref:System.Web.Security.MembershipProvider> that should be used by the security token handler.</span></span>|  
+|<span data-ttu-id="72352-115">membershipProviderName</span><span class="sxs-lookup"><span data-stu-id="72352-115">membershipProviderName</span></span>|<span data-ttu-id="72352-116">指定<xref:System.Web.Security.MembershipProvider>，应由安全令牌处理程序。</span><span class="sxs-lookup"><span data-stu-id="72352-116">Specifies the <xref:System.Web.Security.MembershipProvider> that should be used by the security token handler.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d6035-117">子元素</span><span class="sxs-lookup"><span data-stu-id="d6035-117">Child Elements</span></span>  
- <span data-ttu-id="d6035-118">无</span><span class="sxs-lookup"><span data-stu-id="d6035-118">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="72352-117">子元素</span><span class="sxs-lookup"><span data-stu-id="72352-117">Child Elements</span></span>  
+ <span data-ttu-id="72352-118">无</span><span class="sxs-lookup"><span data-stu-id="72352-118">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d6035-119">父元素</span><span class="sxs-lookup"><span data-stu-id="d6035-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="72352-119">父元素</span><span class="sxs-lookup"><span data-stu-id="72352-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="d6035-120">元素</span><span class="sxs-lookup"><span data-stu-id="d6035-120">Element</span></span>|<span data-ttu-id="d6035-121">说明</span><span class="sxs-lookup"><span data-stu-id="d6035-121">Description</span></span>|  
+|<span data-ttu-id="72352-120">元素</span><span class="sxs-lookup"><span data-stu-id="72352-120">Element</span></span>|<span data-ttu-id="72352-121">描述</span><span class="sxs-lookup"><span data-stu-id="72352-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d6035-122">\<add></span><span class="sxs-lookup"><span data-stu-id="d6035-122">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|<span data-ttu-id="d6035-123">将指定的安全令牌处理程序添加到令牌处理程序集合中。</span><span class="sxs-lookup"><span data-stu-id="d6035-123">Adds the specified security token handler to the token handler collection.</span></span>|  
+|[<span data-ttu-id="72352-122">\<add></span><span class="sxs-lookup"><span data-stu-id="72352-122">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|<span data-ttu-id="72352-123">将指定的安全令牌处理程序添加到令牌处理程序集合中。</span><span class="sxs-lookup"><span data-stu-id="72352-123">Adds the specified security token handler to the token handler collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d6035-124">备注</span><span class="sxs-lookup"><span data-stu-id="d6035-124">Remarks</span></span>  
- <span data-ttu-id="d6035-125">`<userNameSecurityTokenHandlerRequirement>`元素集<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A>属性时<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>从配置初始化对象。</span><span class="sxs-lookup"><span data-stu-id="d6035-125">The `<userNameSecurityTokenHandlerRequirement>` element sets the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> property when a <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> object is initialized from configuration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="72352-124">备注</span><span class="sxs-lookup"><span data-stu-id="72352-124">Remarks</span></span>  
+ <span data-ttu-id="72352-125">`<userNameSecurityTokenHandlerRequirement>`元素集<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A>属性时<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>从配置初始化对象。</span><span class="sxs-lookup"><span data-stu-id="72352-125">The `<userNameSecurityTokenHandlerRequirement>` element sets the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> property when a <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> object is initialized from configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d6035-126">示例</span><span class="sxs-lookup"><span data-stu-id="d6035-126">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="72352-126">示例</span><span class="sxs-lookup"><span data-stu-id="72352-126">Example</span></span>  
   
 ```xml  
 <add type="System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler, System.IdentityModel.Services">  

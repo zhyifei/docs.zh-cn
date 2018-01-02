@@ -19,78 +19,79 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8d82187248e743d9081a97411f2ff2ad84707e61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 613c02abd7d200bd2e1bf10f85a1aa84994583f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltcompatsortnlsversiongt-element"></a><span data-ttu-id="99adc-102">&lt;CompatSortNLSVersion&gt;元素</span><span class="sxs-lookup"><span data-stu-id="99adc-102">&lt;CompatSortNLSVersion&gt; Element</span></span>
-<span data-ttu-id="99adc-103">指定在执行字符串比较时，运行时应使用旧排序顺序。</span><span class="sxs-lookup"><span data-stu-id="99adc-103">Specifies that the runtime should use legacy sort orders when performing string comparisons.</span></span>  
+# <a name="ltcompatsortnlsversiongt-element"></a><span data-ttu-id="522ac-102">&lt;CompatSortNLSVersion&gt;元素</span><span class="sxs-lookup"><span data-stu-id="522ac-102">&lt;CompatSortNLSVersion&gt; Element</span></span>
+<span data-ttu-id="522ac-103">指定在执行字符串比较时，运行时应使用旧排序顺序。</span><span class="sxs-lookup"><span data-stu-id="522ac-103">Specifies that the runtime should use legacy sort orders when performing string comparisons.</span></span>  
   
- <span data-ttu-id="99adc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="99adc-104">\<configuration></span></span>  
-<span data-ttu-id="99adc-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="99adc-105">\<runtime></span></span>  
-<span data-ttu-id="99adc-106">\<CompatSortNLSVersion > 元素</span><span class="sxs-lookup"><span data-stu-id="99adc-106">\<CompatSortNLSVersion> Element</span></span>  
+ <span data-ttu-id="522ac-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="522ac-104">\<configuration></span></span>  
+<span data-ttu-id="522ac-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="522ac-105">\<runtime></span></span>  
+<span data-ttu-id="522ac-106">\<CompatSortNLSVersion > 元素</span><span class="sxs-lookup"><span data-stu-id="522ac-106">\<CompatSortNLSVersion> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99adc-107">语法</span><span class="sxs-lookup"><span data-stu-id="99adc-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="522ac-107">语法</span><span class="sxs-lookup"><span data-stu-id="522ac-107">Syntax</span></span>  
   
 ```xml  
 <CompatSortNLSVersion    
    enabled="4096"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="99adc-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="99adc-108">Attributes and Elements</span></span>  
- <span data-ttu-id="99adc-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="99adc-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="522ac-108">特性和元素</span><span class="sxs-lookup"><span data-stu-id="522ac-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="522ac-109">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="522ac-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="99adc-110">特性</span><span class="sxs-lookup"><span data-stu-id="99adc-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="522ac-110">特性</span><span class="sxs-lookup"><span data-stu-id="522ac-110">Attributes</span></span>  
   
-|<span data-ttu-id="99adc-111">特性</span><span class="sxs-lookup"><span data-stu-id="99adc-111">Attribute</span></span>|<span data-ttu-id="99adc-112">描述</span><span class="sxs-lookup"><span data-stu-id="99adc-112">Description</span></span>|  
+|<span data-ttu-id="522ac-111">特性</span><span class="sxs-lookup"><span data-stu-id="522ac-111">Attribute</span></span>|<span data-ttu-id="522ac-112">描述</span><span class="sxs-lookup"><span data-stu-id="522ac-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="99adc-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="99adc-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="99adc-114">指定要使用其排序顺序的区域设置 ID。</span><span class="sxs-lookup"><span data-stu-id="99adc-114">Specifies the locale ID whose sort order is to be used.</span></span>|  
+|`enabled`|<span data-ttu-id="522ac-113">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="522ac-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="522ac-114">指定要使用其排序顺序的区域设置 ID。</span><span class="sxs-lookup"><span data-stu-id="522ac-114">Specifies the locale ID whose sort order is to be used.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="99adc-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="99adc-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="522ac-115">enabled 特性</span><span class="sxs-lookup"><span data-stu-id="522ac-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="99adc-116">值</span><span class="sxs-lookup"><span data-stu-id="99adc-116">Value</span></span>|<span data-ttu-id="99adc-117">描述</span><span class="sxs-lookup"><span data-stu-id="99adc-117">Description</span></span>|  
+|<span data-ttu-id="522ac-116">值</span><span class="sxs-lookup"><span data-stu-id="522ac-116">Value</span></span>|<span data-ttu-id="522ac-117">描述</span><span class="sxs-lookup"><span data-stu-id="522ac-117">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="99adc-118">4096</span><span class="sxs-lookup"><span data-stu-id="99adc-118">4096</span></span>|<span data-ttu-id="99adc-119">表示备选排序顺序的区域设置 ID。</span><span class="sxs-lookup"><span data-stu-id="99adc-119">The locale ID that represents an alternate sort order.</span></span> <span data-ttu-id="99adc-120">在此示例中，4096 表示 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 和更早版本的排序顺序。</span><span class="sxs-lookup"><span data-stu-id="99adc-120">In this case, 4096 represents the sort order of the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] and earlier versions.</span></span>|  
+|<span data-ttu-id="522ac-118">4096</span><span class="sxs-lookup"><span data-stu-id="522ac-118">4096</span></span>|<span data-ttu-id="522ac-119">表示备选排序顺序的区域设置 ID。</span><span class="sxs-lookup"><span data-stu-id="522ac-119">The locale ID that represents an alternate sort order.</span></span> <span data-ttu-id="522ac-120">在此示例中，4096 表示 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 和更早版本的排序顺序。</span><span class="sxs-lookup"><span data-stu-id="522ac-120">In this case, 4096 represents the sort order of the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] and earlier versions.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="99adc-121">子元素</span><span class="sxs-lookup"><span data-stu-id="99adc-121">Child Elements</span></span>  
- <span data-ttu-id="99adc-122">无。</span><span class="sxs-lookup"><span data-stu-id="99adc-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="522ac-121">子元素</span><span class="sxs-lookup"><span data-stu-id="522ac-121">Child Elements</span></span>  
+ <span data-ttu-id="522ac-122">无。</span><span class="sxs-lookup"><span data-stu-id="522ac-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="99adc-123">父元素</span><span class="sxs-lookup"><span data-stu-id="99adc-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="522ac-123">父元素</span><span class="sxs-lookup"><span data-stu-id="522ac-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="99adc-124">元素</span><span class="sxs-lookup"><span data-stu-id="99adc-124">Element</span></span>|<span data-ttu-id="99adc-125">描述</span><span class="sxs-lookup"><span data-stu-id="99adc-125">Description</span></span>|  
+|<span data-ttu-id="522ac-124">元素</span><span class="sxs-lookup"><span data-stu-id="522ac-124">Element</span></span>|<span data-ttu-id="522ac-125">说明</span><span class="sxs-lookup"><span data-stu-id="522ac-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="99adc-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="99adc-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="99adc-127">包含有关运行时初始化选项的信息。</span><span class="sxs-lookup"><span data-stu-id="99adc-127">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="522ac-126">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="522ac-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="522ac-127">包含有关运行时初始化选项的信息。</span><span class="sxs-lookup"><span data-stu-id="522ac-127">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="99adc-128">备注</span><span class="sxs-lookup"><span data-stu-id="99adc-128">Remarks</span></span>  
- <span data-ttu-id="99adc-129">由于由执行字符串比较、 排序和大小写操作<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>类[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]如符合 Unicode 5.1 标准，字符串比较方法的结果<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>可能不同于.NET framework 的早期版本。</span><span class="sxs-lookup"><span data-stu-id="99adc-129">Because string comparison, sorting, and casing operations performed by the <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> class in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] conform to the Unicode 5.1 standard, the results of string comparison methods such as <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> and <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> may differ from previous versions of the .NET Framework.</span></span> <span data-ttu-id="99adc-130">如果你的应用程序依赖于旧行为，则可以通过在你的应用程序配置文件中包括 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 元素来还原 `<CompatSortNLSVersion>` 及早期版本中使用的字串比较和排序规则。</span><span class="sxs-lookup"><span data-stu-id="99adc-130">If your application depends on legacy behavior, you can restore the string comparison and sorting rules used in the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] and earlier versions by including the `<CompatSortNLSVersion>` element in your application's configuration file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="522ac-128">备注</span><span class="sxs-lookup"><span data-stu-id="522ac-128">Remarks</span></span>  
+ <span data-ttu-id="522ac-129">由于由执行字符串比较、 排序和大小写操作<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>类[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]如符合 Unicode 5.1 标准，字符串比较方法的结果<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>可能不同于.NET framework 的早期版本。</span><span class="sxs-lookup"><span data-stu-id="522ac-129">Because string comparison, sorting, and casing operations performed by the <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> class in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] conform to the Unicode 5.1 standard, the results of string comparison methods such as <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> and <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> may differ from previous versions of the .NET Framework.</span></span> <span data-ttu-id="522ac-130">如果你的应用程序依赖于旧行为，则可以通过在你的应用程序配置文件中包括 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 元素来还原 `<CompatSortNLSVersion>` 及早期版本中使用的字串比较和排序规则。</span><span class="sxs-lookup"><span data-stu-id="522ac-130">If your application depends on legacy behavior, you can restore the string comparison and sorting rules used in the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] and earlier versions by including the `<CompatSortNLSVersion>` element in your application's configuration file.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="99adc-131">还原旧的字符串比较和排序规则还要求 sort00001000.dll 动态链接库在本地系统上可用。</span><span class="sxs-lookup"><span data-stu-id="99adc-131">Restoring legacy string comparison and sorting rules also requires the sort00001000.dll dynamic link library to be available on the local system.</span></span>  
+>  <span data-ttu-id="522ac-131">还原旧的字符串比较和排序规则还要求 sort00001000.dll 动态链接库在本地系统上可用。</span><span class="sxs-lookup"><span data-stu-id="522ac-131">Restoring legacy string comparison and sorting rules also requires the sort00001000.dll dynamic link library to be available on the local system.</span></span>  
   
- <span data-ttu-id="99adc-132">此外，通过在创建应用程序域时将字符串“NetFx40_Legacy20SortingBehavior”传递到 <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> 方法，可以在特定的应用程序域中使用旧的字符串排序和比较规则。</span><span class="sxs-lookup"><span data-stu-id="99adc-132">You can also use legacy string sorting and comparison rules in a specific application domain by passing the string "NetFx40_Legacy20SortingBehavior" to the <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> method when you create the application domain.</span></span>  
+ <span data-ttu-id="522ac-132">此外，通过在创建应用程序域时将字符串“NetFx40_Legacy20SortingBehavior”传递到 <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> 方法，可以在特定的应用程序域中使用旧的字符串排序和比较规则。</span><span class="sxs-lookup"><span data-stu-id="522ac-132">You can also use legacy string sorting and comparison rules in a specific application domain by passing the string "NetFx40_Legacy20SortingBehavior" to the <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> method when you create the application domain.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="99adc-133">示例</span><span class="sxs-lookup"><span data-stu-id="99adc-133">Example</span></span>  
- <span data-ttu-id="99adc-134">下面的示例实例化两个 <xref:System.String> 对象，并调用 <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法以通过使用当前区域性的约定对它们进行比较。</span><span class="sxs-lookup"><span data-stu-id="99adc-134">The following example instantiates two <xref:System.String> objects and calls the <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method to compare them by using the conventions of the current culture.</span></span>  
+## <a name="example"></a><span data-ttu-id="522ac-133">示例</span><span class="sxs-lookup"><span data-stu-id="522ac-133">Example</span></span>  
+ <span data-ttu-id="522ac-134">下面的示例实例化两个 <xref:System.String> 对象，并调用 <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法以通过使用当前区域性的约定对它们进行比较。</span><span class="sxs-lookup"><span data-stu-id="522ac-134">The following example instantiates two <xref:System.String> objects and calls the <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> method to compare them by using the conventions of the current culture.</span></span>  
   
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- <span data-ttu-id="99adc-135">在 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 上运行此示例时，将显示以下输出。</span><span class="sxs-lookup"><span data-stu-id="99adc-135">When you run the example on the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], it displays the following output.</span></span>  
+ <span data-ttu-id="522ac-135">在 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 上运行此示例时，将显示以下输出。</span><span class="sxs-lookup"><span data-stu-id="522ac-135">When you run the example on the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], it displays the following output.</span></span>  
   
 ```  
 sta follows a in the sort order.  
 ```  
   
- <span data-ttu-id="99adc-136">这完全不同于你在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 上运行此示例时显示的输出。</span><span class="sxs-lookup"><span data-stu-id="99adc-136">This is completely different from the output that is displayed when you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
+ <span data-ttu-id="522ac-136">这完全不同于你在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 上运行此示例时显示的输出。</span><span class="sxs-lookup"><span data-stu-id="522ac-136">This is completely different from the output that is displayed when you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- <span data-ttu-id="99adc-137">但是，如果将下面的配置文件添加到示例的目录中，然后在 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 上运行此示例，则输出将与示例在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 上运行时产生的输出相同。</span><span class="sxs-lookup"><span data-stu-id="99adc-137">However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], the output is identical to that produced by the example when it is run on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
+ <span data-ttu-id="522ac-137">但是，如果将下面的配置文件添加到示例的目录中，然后在 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 上运行此示例，则输出将与示例在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 上运行时产生的输出相同。</span><span class="sxs-lookup"><span data-stu-id="522ac-137">However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], the output is identical to that produced by the example when it is run on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -101,6 +102,6 @@ sta equals a in the sort order.
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="99adc-138">另请参阅</span><span class="sxs-lookup"><span data-stu-id="99adc-138">See Also</span></span>  
- [<span data-ttu-id="99adc-139">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="99adc-139">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="99adc-140">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="99adc-140">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="522ac-138">请参阅</span><span class="sxs-lookup"><span data-stu-id="522ac-138">See Also</span></span>  
+ [<span data-ttu-id="522ac-139">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="522ac-139">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="522ac-140">配置文件架构</span><span class="sxs-lookup"><span data-stu-id="522ac-140">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

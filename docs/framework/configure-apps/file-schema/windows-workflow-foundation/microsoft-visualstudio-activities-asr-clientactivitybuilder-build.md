@@ -15,23 +15,24 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21e3ed09e590a5c01e5e9ca4c9f763a24df0c8df
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ffe51e94c9c968679f2cc3a5522eaf3c7f7b3c54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderbuild"></a><span data-ttu-id="4c831-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="4c831-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>
-<span data-ttu-id="4c831-103">创建和配置为工作流活动提供数据的 <xref:System.Activities.ActivityBuilder> 对象。</span><span class="sxs-lookup"><span data-stu-id="4c831-103">Creates and configures a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
+# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderbuild"></a><span data-ttu-id="42da4-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="42da4-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>
+<span data-ttu-id="42da4-103">创建和配置为工作流活动提供数据的 <xref:System.Activities.ActivityBuilder> 对象。</span><span class="sxs-lookup"><span data-stu-id="42da4-103">Creates and configures a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c831-104">语法</span><span class="sxs-lookup"><span data-stu-id="4c831-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="42da4-104">语法</span><span class="sxs-lookup"><span data-stu-id="42da4-104">Syntax</span></span>  
   
 ```csharp  
 public ActivityBuilder Build();   
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="4c831-105">返回值</span><span class="sxs-lookup"><span data-stu-id="4c831-105">Return Value</span></span>  
- <span data-ttu-id="4c831-106">返回一个 <xref:System.Activities.ActivityBuilder> 对象。</span><span class="sxs-lookup"><span data-stu-id="4c831-106">Returns a <xref:System.Activities.ActivityBuilder> object.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="42da4-105">返回值</span><span class="sxs-lookup"><span data-stu-id="42da4-105">Return Value</span></span>  
+ <span data-ttu-id="42da4-106">返回一个 <xref:System.Activities.ActivityBuilder> 对象。</span><span class="sxs-lookup"><span data-stu-id="42da4-106">Returns a <xref:System.Activities.ActivityBuilder> object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c831-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4c831-107">See Also</span></span>  
- [<span data-ttu-id="4c831-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="4c831-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)
+## <a name="see-also"></a><span data-ttu-id="42da4-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="42da4-107">See Also</span></span>  
+ [<span data-ttu-id="42da4-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="42da4-108">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)
