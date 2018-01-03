@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 30231ea756e80ddeac087fa8b3e46664860c26a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1ecccda5b9570519f69cadc9214daded16edbc89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 对象模型
 在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，用开发人员的编程语言表示的对象模型映射到关系数据库的数据模型。 然后就会按照对象模型来执行对数据的操作。  
@@ -90,6 +91,6 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息，请参阅函数特性、 存储过程属性和参数属性部分[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)和[存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+## <a name="see-also"></a>请参阅  
+ [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 923a6b6cf1523c8a11cb509679443b9658e07ce5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: acc68fd36d2887e5e951f9ba5adc20e8cfd87fd2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>数据集和 XmlDataDocument 同步
 ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。 若要实现分层数据访问，可以使用 .NET Framework 中的可用 XML 类。 以前，数据的这两种表示形式是单独使用的。 不过，.NET Framework 允许对通过数据的关系和分层表示的实时同步访问**数据集**对象和<xref:System.Xml.XmlDataDocument>对象，分别。  
@@ -29,7 +30,7 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
   
  有多种方法可以同步**数据集**与**XmlDataDocument**。 你可以：  
   
--   填充**数据集**使用架构 （即关系结构） 和数据，然后使其与新同步**XmlDataDocument**。 这将提供现有关系数据的分层视图。 例如:   
+-   填充**数据集**使用架构 （即关系结构） 和数据，然后使其与新同步**XmlDataDocument**。 这将提供现有关系数据的分层视图。 例如:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -100,20 +101,20 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
  同步时**数据集**与**XmlDataDocument**，结果可能会有所不同，具体取决于是否你<xref:System.Data.DataRelation>对象是否嵌套。 有关详细信息，请参阅[嵌套 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使 DataSet 与 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [将数据集与 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  演示同步强类型化**数据集**，使用最小的架构与**XmlDataDocument**。  
   
  [对数据集执行 XPath 查询](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  演示的内容执行 XPath 查询**数据集**。  
   
- [将 XSLT 转换应用到数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [将 XSLT 转换应用于 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  演示将 XSLT 转换应用于的内容**数据集**。  
   
 ## <a name="related-sections"></a>相关章节  
  [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  描述如何**数据集**作为数据源，包括加载和保持的内容与 XML 进行交互**数据集**以 XML 数据形式。  
   
- [嵌套 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [嵌套 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  讨论的重要性嵌套**DataRelation**对象表示的内容时**数据集**作为 XML 数据，并描述如何创建这些关系。  
   
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
@@ -122,5 +123,5 @@ ADO.NET <xref:System.Data.DataSet> 为您提供了数据的关系表示形式。
  <xref:System.Xml.XmlDataDocument>  
  包含有关引用信息**XmlDataDocument**类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

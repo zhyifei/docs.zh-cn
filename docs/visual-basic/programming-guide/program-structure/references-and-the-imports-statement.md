@@ -18,11 +18,11 @@ ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 739934b65241a7846b5323d5e75446832d83e5d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 60c62eae57ae127fcbb860fe72853604802cccd9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>引用和 Imports 语句 (Visual Basic)
 你可以向外部对象提供你的项目通过选择**添加引用**命令**项目**菜单。 在引用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可以指向程序集，它们是与类似类型库但包含的详细信息。  
@@ -56,10 +56,10 @@ ms.lasthandoff: 11/21/2017
   
  如果`Imports`语句不包括别名名称，而无需限定的模块可用于在导入的命名空间中定义的元素。 如果指定的别名名称，则它必须用作限定符包含在该命名空间的名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.ControlChars>  
  <xref:Microsoft.VisualBasic>  
- [NIB 如何：使用“添加引用”对话框添加或删除引用](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+   
  [在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
  [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [如何：使用命令行创建和使用程序集](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  

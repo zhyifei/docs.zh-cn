@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 33e34c63988e74be2c22cb7b1358f5e8b04048c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial-methods-visual-basic"></a>分部方法 (Visual Basic)
 分部方法允许开发人员将自定义逻辑插入到代码。 通常情况下，代码是类的设计器生成的一部分。 分部方法定义中创建的代码生成器中，分部类和它们通常用于提供的内容已更改的通知。 它们使开发人员在更改的响应中指定自定义行为。  
@@ -78,10 +78,10 @@ End Sub
   
  `Quantity was changed to 100`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)  
  [Sub 过程](./sub-procedures.md)  
  [可选参数](./optional-parameters.md)  
  [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [LINQ to SQL 中的代码生成](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [通过使用分部方法添加业务逻辑](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
+ [LINQ to SQL 中的代码生成](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [通过使用分部方法添加业务逻辑](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fe56dc279471f77a3f9ae014f65faaa99a113624
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87406da2c591f9f3a8f47adb2029bf1e239cc64e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-and-configuration-files"></a>连接字符串和配置文件
 在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 可以使用查看编译到应用程序源代码的加密的连接字符串[Ildasm.exe （IL 反汇编程序）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)工具。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，我们建议您将连接字符串存储在应用程序配置文件中。  
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Configuration> 命名空间提供以编程方式使用配置设置的类。 <xref:System.Configuration.ConfigurationManager> 类可提供对计算机、应用程序和用户配置文件的访问。 如果要创建 ASP.NET 应用程序，则可以使用<xref:System.Web.Configuration.WebConfigurationManager>类，该类提供相同的功能，同时还允许你访问设置是唯一到 ASP.NET 应用程序，例如那些在 **\<.w e b >**。  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> 命名空间包含提供用于加密和解密数据的其他选项的类。 如果需要采用在使用受保护配置时不可用的加密服务，请使用这些类。 一些类是非托管 Microsoft CryptoAPI 的包装类，而其他类则是纯托管实现。 有关详细信息，请参阅[加密服务](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781)。  
+>  <xref:System.Security.Cryptography> 命名空间包含提供用于加密和解密数据的其他选项的类。 如果需要采用在使用受保护配置时不可用的加密服务，请使用这些类。 一些类是非托管 Microsoft CryptoAPI 的包装类，而其他类则是纯托管实现。 有关更多信息，请参阅[加密服务](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781)。  
   
 ### <a name="appconfig-example"></a>App.config 示例  
  此示例演示如何加密进行切换**connectionStrings**主题中**app.config** Windows 应用程序的文件。 在此示例中，该过程将应用程序的名称（例如“MyApplication.exe”）作为一个自变量。 **App.config**文件然后进行加密或复制到包含名称"MyApplication.exe.config"可执行文件的文件夹。  
@@ -179,7 +180,7 @@ ms.lasthandoff: 11/21/2017
   
  保护 ASP.NET 应用程序的详细信息，请参阅[NIB: ASP.NET 安全](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)和[ASP.NET 2.0 安全方案一眼](http://go.microsoft.com/fwlink/?LinkId=59997)ASP.NET 开发人员中心上。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [使用配置类](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  

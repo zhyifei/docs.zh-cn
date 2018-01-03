@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe2f00d9f735583bb048669ff0ab2659db68bf1f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: accbc05018644e3ead4ee0c08f44ec39cad8f036
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-resources"></a>WCF 数据服务资源
 可以在以下位置找到有关 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的介绍性主题。 其中的许多主题还包含指向包含更多详细信息的相关主题的链接。  
@@ -68,5 +69,5 @@ ms.lasthandoff: 12/02/2017
  [实体关系模型： 向数据的统一视图](http://go.microsoft.com/fwlink/?LinkId=91909)的 Peter Pin-shan Chen，麻省理工学院的  
  介绍 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 实现的实体关系模型的基础。 该文撰写于 1976 年，是计算机领域中最常引用的论文之一。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

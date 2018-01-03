@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 09b2c74673b0126865a7536de77f99e250b3afec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: abb5fd319630392f38effa21f351c1b656727bd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>演练：操作数据 (Visual Basic)
 本演练提供了用于在数据库中添加、修改和删除数据的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将使用 Northwind 示例数据库的一个副本来添加一位客户，更改该客户的姓名，然后删除一个订单。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/18/2017
   
  本演练是使用 Visual Basic 开发设置编写的。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本演练需要如下内容：  
   
 -   本演练使用专用文件夹（“c:\linqtest2”）来保存文件。 请在开始本演练前创建此文件夹。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/18/2017
   
 4.  在**名称**框中，键入**LinqDataManipulationApp**。  
   
-5.  单击“确定”。  
+5.  单击 **“确定”**。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果`System.Data.Linq`未列出为你的项目中的引用 (单击**显示所有文件**中**解决方案资源管理器**展开**引用**节点)，请按照中的说明添加它以下步骤。  
@@ -195,5 +196,5 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  通过提交更改添加了新的客户后，您无法再次按原样执行此解决方案，因为您无法再次按原样添加相同的客户。 若要再次执行此解决方案，请更改要添加的客户 ID 值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

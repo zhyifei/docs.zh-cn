@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 600d4deacd7a9b048fb9c3d996e62d441c87eeaa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2717a94228dc1be8da0d84179201747d60c896a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact 与 LINQ to SQL
 SQL Server Compact 是随 Visual Studio 一起安装的默认数据库。 有关详细信息，请参阅[PAVE 通过使用 SQL Server Compact (Visual Studio)](http://msdn.microsoft.com/en-us/13320dd1-94e5-4077-bf76-8df253695ccc)。  
@@ -52,5 +53,5 @@ SQL Server Compact 是随 Visual Studio 一起安装的默认数据库。 有关
   
 -   SQL Server Compact 不支持部分信任。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

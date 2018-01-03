@@ -14,11 +14,11 @@ ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2154a56f9ff004f906cb2b571f8771e74cfca9c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b583c4272dd6e964de99fb14d2795152c655f3aa
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>值的类型 &#39;&lt;typename1&gt;&#39; 不能转换为 &#39;&lt;typename2&gt;&#39;
 类型的值\<typename1 > 不能转换为\<typename2 >。 类型不匹配可能是由于文件引用与程序集的项目引用混合使用\<程序集名称 >。 请尝试替换为对的文件引用\<filepath > 项目中\<projectname1 > 的项目引用与\<项目名称 2> >。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 -   更改对项目引用的文件引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)  
- [NIB 如何：使用“添加引用”对话框添加或删除引用](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+ 

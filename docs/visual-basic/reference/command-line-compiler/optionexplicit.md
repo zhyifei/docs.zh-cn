@@ -15,11 +15,11 @@ ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1cfdb94ebafa7d6a14253aeb59ab98b3a953fe4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e701addb31b361e55f2761f441c23deaef7c10d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optionexplicit"></a>/optionexplicit
 如果在使用之前，不声明变量，会导致编译器报告错误。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
 /optionexplicit[+ | -]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `+` &#124; `-`  
  可选。 指定`/optionexplicit+`若要要求显式声明变量。 `/optionexplicit+`选项是默认设置，并为相同`/optionexplicit`。 `/optionexplicit-`选项，可以隐式声明变量。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-set-optionexplicit-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置 /optionexplicit  
   
-1.  在 “解决方案资源管理器”中选择一个项目。 在“项目”菜单上，单击“属性”。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+1.  在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。   
   
 2.  单击“编译”选项卡。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
  [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  

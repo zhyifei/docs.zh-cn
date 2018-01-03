@@ -15,11 +15,11 @@ ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99f5129d5cb43cddfb17731f337a72fae22d3626
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yield-statement-visual-basic"></a>Yield 语句 (Visual Basic)
 将发送到集合的下一个元素`For Each...Next`语句。  
@@ -34,7 +34,7 @@ Yield expression
   
 |术语|定义|  
 |---|---|  
-|`expression`|必需。 隐式转换为迭代器函数的类型的表达式或`Get`访问器包含`Yield`语句。|  
+|`expression`|必须的。 隐式转换为迭代器函数的类型的表达式或`Get`访问器包含`Yield`语句。|  
   
 ## <a name="remarks"></a>备注  
  `Yield`语句返回一次集合的一个元素。 `Yield`语句将包括在迭代器函数或`Get`访问器，它对集合执行自定义迭代。  
@@ -47,7 +47,7 @@ Yield expression
   
  "生成"不是保留的字且仅当使用中时，它具有特殊含义`Iterator`函数或`Get`访问器。  
   
- 有关迭代器函数的详细信息和`Get`访问器中，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 有关迭代器函数的详细信息和`Get`访问器中，请参阅[迭代器](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="iterator-functions-and-get-accessors"></a>迭代器函数和 Get 访问器  
  迭代器函数的声明或`Get`访问器必须满足以下要求：  
@@ -60,7 +60,7 @@ Yield expression
   
  在事件、 实例构造函数、 静态构造函数或静态析构函数不能出现迭代器函数。  
   
- 迭代器函数可以是一个匿名函数。 有关详细信息，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 迭代器函数可以是一个匿名函数。 有关更多信息，请参见 [迭代器](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="exception-handling"></a>异常处理  
  A`Yield`语句可以是内部`Try`块[重试...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 A`Try`具有的块`Yield`语句可以有`Catch`阻止，并且可以`Finally`块。  
@@ -97,8 +97,7 @@ Next
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
- 有关其他示例，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 有关其他示例，请参阅[迭代器](../../programming-guide/concepts/iterators.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+## <a name="see-also"></a>请参阅  
  [语句](../../../visual-basic/language-reference/statements/index.md)

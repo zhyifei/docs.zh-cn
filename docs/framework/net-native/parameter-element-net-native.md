@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f603f795682c7ea1f48e5d9356af6e0477246da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 820c36abda104bbf748e5b3a7838f3c7715048e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltparametergt-element-net-native"></a>&lt;参数&gt;元素 (.NET Native)
 将反射策略应用到传递到方法的自变量类型。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>备注  
  `<Parameter>` 元素是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 元素的子元素，用于将策略应用于特定方法参数。 特定的方法参数由名称而不是由类型指定。 表示策略类型，比如 `Activate` 或 `Dynamic`，的至少一个特性必须存在。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<Method> 元素](../../../docs/framework/net-native/method-element-net-native.md)  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  

@@ -14,11 +14,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6a64eaba75128a3844847fbf803c86c2d700db72
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 58568b541c43a35f093c45f5ad0efe978b642c91
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-interop-visual-basic"></a>COM 互操作 (Visual Basic)
 组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 此部分介绍了一些与通过 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 创建和使用 COM 对象相关的问题。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/09/2017
  介绍了如何将现有 COM 对象用作新对象的基础。  
   
 ## <a name="related-sections"></a>相关章节  
- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
+ [与非托管代码交互操作](../../../framework/interop/index.md)  
  描述由公共语言运行时提供的互操作性服务。  
   
  [向 .NET Framework 公开 COM 组件](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
@@ -64,5 +64,5 @@ ms.lasthandoff: 12/09/2017
  [向 COM 公开 .NET Framework 组件](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  介绍了如何准备和使用 COM 中的托管类型。  
   
- [应用互操作属性](../../../../docs/framework/interop/applying-interop-attributes.md)  
+ [应用互操作属性](../../../framework/interop/applying-interop-attributes.md)  
  介绍了在使用非托管代码时可以使用的属性。

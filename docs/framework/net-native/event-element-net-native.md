@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dabb780e24d1316a3d736f7d1f3da249704a4ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a37758ed497211ba0550666ec4857666041c5285
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lteventgt-element-net-native"></a>&lt;事件&gt;元素 (.NET Native)
 将运行时反射策略应用到一个事件。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>备注  
  如果一个事件的策略没有得到显式定义，它将继承其父元素的运行时策略。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

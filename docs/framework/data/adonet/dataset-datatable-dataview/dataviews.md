@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a2653a94992440b747371c5d8a7b9daa66b3e3ab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 26fbae0474253dc9792a0290a36dd52044d148b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataviews"></a>DataView
 您可以利用 <xref:System.Data.DataView> 创建存储在 <xref:System.Data.DataTable>（一种通常在数据绑定应用程序中使用的功能）中的数据的不同视图。 使用**DataView**，您可以公开具有不同的排序顺序的表中的数据，并且你可以按行状态或基于筛选器表达式来筛选数据。  
@@ -29,28 +30,28 @@ ms.lasthandoff: 10/18/2017
  你可以使用<xref:System.Data.DataView.DataViewManager%2A>来管理中的所有表的视图设置**数据集**。 **DataViewManager**提供了方便的方式来管理每个表的默认视图设置。 当一个控件绑定到多个表的**数据集**，绑定到**DataViewManager**是理想的选择。  
   
 ## <a name="in-this-section"></a>本节内容  
- [创建 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
+ [创建数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  描述如何创建**DataView**为**DataTable**。  
   
- [排序和筛选数据](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
+ [对数据进行排序和筛选](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  描述如何设置的属性**DataView**以返回满足指定筛选条件的数据行的子集，或以特定排序顺序返回数据。  
   
- [Datarow 和 Datarowview](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
+ [DataRow 和 DataRowView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
  介绍如何访问由公开的数据**DataView**。  
   
  [查找行](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
  介绍如何以查找中的特定行**DataView**。  
   
- [Childview 和关系](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
+ [ChildView 和关系](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
  描述如何创建父-子关系中使用的数据的视图**DataView**。  
   
- [修改 Dataview](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
+ [修改 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
  描述如何修改在基础数据**DataTable**通过**DataView**，包括启用或禁用更新。  
   
- [处理数据视图事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
+ [处理 DataView 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
  介绍如何使用**ListChanged**可以接收通知的事件时的内容或顺序**DataView**正在更新。  
   
- [管理 Dataview](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
+ [管理 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
  介绍如何使用**DataViewManager**管理**DataView**每个表中的设置**数据集**。  
   
 ## <a name="related-sections"></a>相关章节  
@@ -69,5 +70,5 @@ ms.lasthandoff: 10/18/2017
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  描述 ADO.NET 结构和组件，并说明如何使用 ADO.NET 来访问现有的数据源和管理应用程序数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

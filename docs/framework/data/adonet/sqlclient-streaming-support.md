@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 85999a6aa15b04ffa2751d7312f71aaab1582ea3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 99b5af9f33fa92c6e635ee0190893e377724d970
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 流支持
 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 和应用程序之间的流支持（[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的新增功能）支持服务器上的非结构化数据（文档、图像和媒体文件）。 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 数据库可以存储二进制大型对象 (BLOB)，但检索 BLOB 会使用大量内存。  
@@ -526,5 +527,5 @@ namespace StreamingFromServerToAnother {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

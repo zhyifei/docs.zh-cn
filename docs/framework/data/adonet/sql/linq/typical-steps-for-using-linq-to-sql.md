@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5115fce1d5060d258ae5feeefd99aaaf5123a123
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba49a4394d2a52b199edab88b977d2322bff945f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>使用 LINQ to SQL 的典型步骤
 若要实现 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序，请按照本主题后面部分说明的步骤操作。 请注意，很多步骤是可选的。 您可以以对象模型的默认状态使用它，这种可能性很高。  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="6-debug-and-test-your-application"></a>6.调试并测试应用程序。  
  有关详细信息，请参阅[调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
  [创建对象模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [存储的过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+ [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

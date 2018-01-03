@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 08526aeebd01196c064154a35df267b8040df796
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b580f0611d18b03ba831a3f5a3d0481bd27b0869
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>用于实体框架函数的 SqlClient
 用于实体框架的 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供一组执行数学和聚合运算的函数，以及执行 `System.DateTime` 和 `string` 运算的函数。 这些函数位于 `SQLServer` 命名空间中。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
   
  [系统函数](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 SQL 引用](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Entity SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+ [实体 SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

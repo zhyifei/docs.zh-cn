@@ -16,11 +16,11 @@ ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1ba36440e3f9dd30c21f946ba52732a5ff53e62a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 7230e62a6ce201209df41ad457fbd93f3a5c866f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic 命令行编译器
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令行编译器提供了一种编译来自 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 内的程序的替代方法。 本节包含了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器选项的说明。  
@@ -36,8 +36,5 @@ ms.lasthandoff: 10/22/2017
  显示功能组中的编译器选项。  
   
 ## <a name="related-sections"></a>相关章节  
- [NIB：使用项目设计器管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)  
- 讨论如何使用项目设计器来指定项目的全局设置。  
-  
  [Visual Basic](../../../visual-basic/index.md)  
  开始了解 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 帮助。

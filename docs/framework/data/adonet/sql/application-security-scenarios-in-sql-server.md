@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8576ba3ae26788076fedf71a1f8028afbd263378
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的应用程序安全性方案
 没有用于创建安全 SQL Server 客户端应用程序的一种通用的正确方法。 每个应用程序在其要求、部署环境和用户群方面都是不同的。 最初部署时相当安全的应用程序随着时间的推移可能会变得不太安全。 无法准确预测未来可能出现的威胁。  
@@ -45,28 +46,28 @@ ms.lasthandoff: 11/21/2017
  始终为 `sa` 帐户分配强密码，即使在使用 Windows 身份验证时也是如此。  
   
 ## <a name="in-this-section"></a>本节内容  
- [管理与 SQL Server 中的存储过程的权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  描述如何使用存储过程来管理权限和控制数据访问。 使用存储过程是应对许多安全威胁的一种有效方法。  
   
- [SQL Server 中编写安全动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  描述用于使用存储过程编写安全的动态 SQL 的技术。  
   
- [SQL Server 中的存储的过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  描述如何使用证书为存储过程签名，以使用户可以使用其无直接访问权限的数据。 这就使存储过程可执行调用方无直接执行权限的操作。  
   
- [自定义 SQL Server 中的模拟的权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  描述如何使用 EXECUTE AS 子句来模拟另一用户。 模拟将执行上下文从调用方切换到指定用户。  
   
- [授予 SQL Server 中的行级权限](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
+ [在 SQL Server 中授予行级权限](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
  描述如何实现行级权限以限制数据访问。  
   
  [在 SQL Server 中创建应用程序角色](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  描述应用程序角色的功能。  
   
- [SQL Server 中启用跨数据库访问权限](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [在 SQL Server 中启用跨数据库访问](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  描述如何在不损害安全性的情况启用跨数据库访问。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

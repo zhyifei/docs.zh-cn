@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8f20023e158b388ddd71e518ebcaa48c214252c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b093fce50de6a0437456f4fb0e025e3c853777e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-materialization-wcf-data-services"></a>对象具体化（WCF 数据服务）
 当你使用**添加服务引用**对话框来使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]在基于.NET Framework 的客户端应用程序中的源，等效的数据类生成每个实体类型中公开源的数据模型。 有关详细信息，请参阅[生成数据服务客户端库](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。 查询返回的实体数据将具体化为所生成的客户端数据服务类之一的实例。 合并选项和标识解析的被跟踪的对象有关的信息，请参阅[管理数据服务上下文](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 12/02/2017
   
 5.  客户端库将该对象附加到 <xref:System.Data.Services.Client.DataServiceContext>。 当 <xref:System.Data.Services.Client.MergeOption> 为 <xref:System.Data.Services.Client.MergeOption.NoTracking> 时不附加该对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [查询投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)

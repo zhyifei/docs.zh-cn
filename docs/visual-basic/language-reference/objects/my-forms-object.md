@@ -13,17 +13,17 @@ ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a5aa7af1f07a29660335d968c1ecc17be5f8beec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myforms-object"></a>My.Forms 对象
 提供用于访问在当前项目中声明每个 Windows 窗体的实例的属性。  
   
 ## <a name="remarks"></a>备注  
- `My.Forms`对象提供当前项目中的每个窗体的实例。 属性访问的表单的名称相同的属性名称。 有关向项目添加窗体的信息，请参阅[如何： 向项目添加 Windows 窗体](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+ `My.Forms`对象提供当前项目中的每个窗体的实例。 属性访问的表单的名称相同的属性名称。   
   
  你可以访问提供的表单`My.Forms`对象使用窗体上，而无需限定的名称。 属性名称为与窗体的类型名称相同，因为这允许你访问窗体，就像它在默认实例。 例如，`My.Forms.Form1.Show` 与 `Form1.Show` 等效。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
- 对于此示例正常工作，你的项目必须具有名为窗体`SidebarMenu`。 有关详细信息，请参阅[如何： 向项目添加 Windows 窗体](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)。  
+ 对于此示例正常工作，你的项目必须具有名为窗体`SidebarMenu`。  
   
  此代码将仅适用于 Windows 应用程序项目。  
   
@@ -69,14 +69,13 @@ ms.lasthandoff: 11/21/2017
 |Windows 控件库|No|  
 |Web 控件库|No|  
 |Windows 服务|No|  
-|网站|No|  
+|网站|否|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Form.Close%2A>  
  [对象](../../../visual-basic/language-reference/objects/index.md)  
- [如何： 向项目中添加 Windows 窗体](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)  
  [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)  
  [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)  
  [访问应用程序窗体](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

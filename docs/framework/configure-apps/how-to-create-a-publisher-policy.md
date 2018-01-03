@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 430426e3662582bd904bc088a362e9d7ed331c11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
 程序集的供应商可以状态应用程序应使用通过包括发布服务器策略文件与已升级的程序集的程序集的较新版本。 发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。 发布服务器策略文件编译成程序集和放入全局程序集缓存。  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/21/2017
     > [!IMPORTANT]
     >  无法将发行者策略程序集添加到全局程序集缓存中，除非原始发布服务器策略文件位于与程序集位于同一目录中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [配置应用程序](../../../docs/framework/configure-apps/index.md)  

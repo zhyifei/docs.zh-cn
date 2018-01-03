@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fefbd3894063c0298a7ad5110ed6867408869107
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b29caeed4bf60a5a7ad723ffd46520a89a5bd87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="null-comparisons"></a>Null 比较
 数据源中的 `null` 值指示未知的值。 在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中，可以检查 null 值以便仅对具有有效（非 null）数据的行执行特定的计算或比较。 但是，CLR null 语义可能与数据源的 null 语义不同。 大多数数据库使用某个版本的三值逻辑处理 null 比较。 即，对 null 值的比较不会计算为 `true` 或 `false`，而是计算为 `unknown`。 通常这是 ANSI null 值的实现，但情况并非总是如此。  
@@ -56,5 +57,5 @@ WHERE h.ShipDate IS Null
 ## <a name="passing-null-collections-to-aggregate-functions"></a>将 Null 集合传递到聚合函数  
  在[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]，当你传递的支持集合`IQueryable`到聚合函数，在数据库执行聚合运算。 可能已在内存中执行的查询和已在数据库中执行的查询的结果方面的差异。 使用内存中查询，如果没有匹配项，查询将返回零。 在数据库中，同一查询返回 `null`。 如果`null`值传递到 LINQ 聚合函数，将引发异常。 若要接受可能`null`值，强制转换的类型和接收查询结果为 null 的类型的类型的属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ to Entities 查询中的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

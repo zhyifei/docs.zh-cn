@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cb19589fbba12bba710638e061defa198f9fa169
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 877478ae953dd5867077608a5e93035b77bcee0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 指定由查询 ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 表达式返回的对象要分入的组。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/21/2017
 [ GROUP BY aliasedExpression [ ,...n ] ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `aliasedExpression`  
  要对其执行分组的任何有效查询表达式。 `expression` 可以是属性或者是引用 FROM 子句所返回的属性的非聚合表达式。 GROUP BY 子句中的每一个表达式的求值结果必须为可比较相等性的类型。 这些类型通常为标量基元类型，如数字、字符串和日期。 不可按集合分组。  
   
@@ -78,6 +79,6 @@ GROUP BY 1   -- BAD, a constant is not allowed
   
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [查询表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

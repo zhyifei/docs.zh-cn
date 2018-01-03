@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 25a6666127d16a8245093bdf11ae7d0e76fc8365
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 563d08a5907c8248a74ba992de17ac3dd0679827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>创建 .NET Framework 客户端应用程序（WCF 数据服务快速入门）
 这是最后一项任务[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]快速入门。 在此任务中，你将添加到解决方案的控制台应用程序，添加对的引用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]到此新客户端应用程序，然后访问馈送[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]来自客户端应用程序通过使用生成的客户端数据服务类和客户端的源库。  
@@ -90,6 +91,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="next-steps"></a>后续步骤  
  您已成功创建了用于访问 Northwind [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 示例源的客户端应用程序。 您还完成了 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 快速入门。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]访问[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]来自源[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]应用程序，请参阅[WCF 数据服务客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
  [资源](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

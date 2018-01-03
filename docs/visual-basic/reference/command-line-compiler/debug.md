@@ -15,11 +15,11 @@ ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1c90b28f1df18e7e0a4f9e22730e1c3476fa650
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07ab386ddb456c059b6390b986ec0a880320973b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-visual-basic"></a>/debug (Visual Basic)
 使编译器生成调试信息并将其放在输出文件。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 /debug:[full | pdbonly]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |---|---|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 |在 Visual Studio 中设置 /debug 集成开发环境|  
 |---|  
-|1.在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。<br />2.单击“编译”选项卡。<br />3.单击**高级编译选项**。<br />4.修改中的值**生成调试信息**框。|  
+|1.在“解决方案资源管理器” 中选择了项目的情况下，在“项目”  菜单上单击“属性” 。 <br />2.单击“编译”选项卡。<br />3.单击“高级编译选项”。<br />4.修改中的值**生成调试信息**框。|  
   
 ## <a name="example"></a>示例  
  下面的示例将调试信息放入输出文件`App.exe`。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 vbc /debug /out:app.exe test.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

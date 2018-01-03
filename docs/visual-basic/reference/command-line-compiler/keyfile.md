@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e0be7d230f16750395aaceb3c94539546716b8fd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyfile"></a>/keyfile
 指定包含密钥或密钥对的文件从而为程序集赋予强名称。  
@@ -29,12 +29,12 @@ ms.lasthandoff: 12/09/2017
 /keyfile:file  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `file`  
- 必需。 包含密钥的文件。 如果文件名包含空格，则将名称括在双引号 ("")。  
+ 必须的。 包含密钥的文件。 如果文件名包含空格，则将名称括在双引号 ("")。  
   
 ## <a name="remarks"></a>备注  
- 编译器将公钥插入程序集清单，然后使用私钥进行签名最终的程序集。 若要生成的密钥文件，请键入`sn -k file`在命令行。 有关详细信息，请参阅 [Sn.exe （强名称工具）](https://msdn.microsoft.com/library/k5b5tt23)。  
+ 编译器将公钥插入程序集清单，然后使用私钥进行签名最终的程序集。 若要生成的密钥文件，请键入`sn -k file`在命令行。 有关详细信息，请参阅 [Sn.exe （强名称工具）][Sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
  如果使用编译`/target:module`，密钥文件的名称保存在模块中，并合并到编译为程序集时创建的程序集[/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/09/2017
   
  请注意，密钥文件可能仅包含公钥。  
   
- 请参阅[创建和使用具有强名称程序集](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)有关程序集进行签名的详细信息。  
+ 请参阅[创建和使用具有强名称程序集](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)有关程序集进行签名的详细信息。  
   
 > [!NOTE]
 >  `/keyfile`选项不是可从[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]开发环境中; 仅当从命令行进行编译时，它才可用。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/09/2017
 vbc /keyfile:myfile.sn input.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2b04ba6dde572aa0a8edddc8a2a30a8e11a3e79c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a794c25e0dd7fd0f7169c31da18ce4d6f085503
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remote-vs-local-execution"></a>远程查询执行与本地执行
 您可以决定以远程方式（即数据库引擎对数据库执行查询）或在本地（[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对本地缓存执行查询）执行您的查询。  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/18/2017
 ### <a name="queries-against-unordered-sets"></a>针对无序集的查询  
  请注意实现的本地集合之间的重要差异<xref:System.Collections.Generic.List%601>和集合，可提供针对执行的远程查询*无序集*关系数据库中。 <xref:System.Collections.Generic.List%601> 方法（如使用索引值的那些方法）需要列表语义，列表语义通常无法通过针对无序集的远程查询获得。 因此，此类方法隐式加载 <xref:System.Data.Linq.EntitySet%601>，以允许本地执行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 26efd43a05252e657626063d7dd04b1020dace18
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9361de4726b1dc58238db5ca7b5605f2cc75485d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>向 .NET Framework 公开 COM 组件
 本部分概述向托管代码公开现有 COM 组件所需的步骤。 有关编写与 .NET Framework 紧密集成的 COM 服务器的详细信息，请参阅[互操作的设计注意事项](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
      最好将互操作应用程序部署为全局程序集缓存中具有[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)的签名程序集。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [与非托管代码交互操作](../../../docs/framework/interop/index.md)  
  [互操作的设计注意事项](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
  [COM 互操作示例：.NET 客户端和 COM 服务器](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  

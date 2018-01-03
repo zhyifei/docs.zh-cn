@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 107b222d37d62505c021f277a660741b52a9cdbb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 39de644f0701f11c4083d77071c70bb87147cac9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 除此之外，您还应遵循有关创建安全的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序的建议。 有关详细信息，请参阅[安全概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -171,7 +172,7 @@ ms.lasthandoff: 11/21/2017
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>不要接受来自不可信源的 MetadataWorkspace 对象。  
  应用程序不应接受来自不可信源的 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 类的实例。 正确的做法是从这样的源显式构造并填充工作区。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [迁移注意事项](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

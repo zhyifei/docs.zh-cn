@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 964a4d051600621d581e05dcf6b518b2766e2750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08c66309d4c789acc0f2ddf6159a11c5fb963e80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>调试 LINQ to DataSet 查询
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 支持 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 代码的调试。 但是，有一些差异调试[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码和非-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]托管代码。 大多数调试功能都适用于[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]语句，其中包括单步执行、 设置断点，以及查看调试器窗口中显示的结果。 而且，延迟查询执行一些在调试时应考虑的副作用[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码，并有一些限制使用编辑并继续。 本主题讨论调试方面的问题，该调试对于与非 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 托管代码对比的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 来说是唯一的。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 11/21/2017
   
  在 Visual Studio 中 Visual Basic 中，你可以使用编辑并继续对非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]甚至中包含的方法代码[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查询。 可以在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 语句之前添加或移除代码，即使这些更改会影响 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询的行号。 Visual Basic 调试体验非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]代码保持不变之前,[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]引入了。 但是，您无法更改、添加或移除 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询，除非停止调试才能应用这些更改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试托管代码](/visualstudio/debugger/debugging-managed-code)  
  [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

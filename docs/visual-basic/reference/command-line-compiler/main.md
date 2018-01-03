@@ -14,11 +14,11 @@ ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2697b837a536b1b879196bd10843a2b76314747a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5bb11bc62e951339113f4b48e98e05362490ca1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main"></a>/main
 指定包含 `Sub Main` 过程的类或模块。  
@@ -29,9 +29,9 @@ ms.lasthandoff: 11/21/2017
 /main:location  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `location`  
- 必需。 完全限定位置的类或模块包含`Sub Main`在程序启动时要调用的过程。 这可能是窗体中**/main:module**或**/main:namespace.module**。  
+ 必须的。 完全限定位置的类或模块包含`Sub Main`在程序启动时要调用的过程。 这可能是窗体中**/main:module**或**/main:namespace.module**。  
   
 ## <a name="remarks"></a>备注  
  在创建可执行文件或 Windows 可执行程序时，请使用此选项。 如果**/主要**省略选项，编译器将搜索有效的共享`Sub Main`所有公共类和模块中。  
@@ -44,9 +44,9 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-set-main-in-the-visual-studio-integrated-development-environment"></a>在 Visual Studio 中设置 /main 集成开发环境  
   
-1.  在 “解决方案资源管理器”中选择一个项目。 在“项目”菜单上，单击“属性”。  
+1.  在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。  
   
-     有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+       
   
 2.  单击“应用程序”  选项卡。  
   
@@ -61,9 +61,8 @@ ms.lasthandoff: 11/21/2017
 vbc t2.vb t3.vb /main:Test2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Hello，World NIB: Visual Basic 版本](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
  [Visual Basic 中的 main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

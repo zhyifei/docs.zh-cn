@@ -9,11 +9,11 @@ ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fbc8458231c36f3af9ca4de524e01e19a162ee47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cb8cef696ba93f922dfe0d92195a5fb5147b4cc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>此单实例应用程序未能连接到原始实例
 此单实例应用程序未能连接到原始实例。 一些可能导致此问题的原因包括：  
@@ -36,7 +36,6 @@ ms.lasthandoff: 11/21/2017
   
 5.  记录发生错误的环境，并与 Microsoft 产品支持服务联系。  
   
-## <a name="see-also"></a>另请参阅  
- [NIB： 如何： 指定应用程序 (Visual Basic) 的实例化行为](http://msdn.microsoft.com/en-us/48539ad8-d960-4210-beab-ee65f6c6dc6e)  
+## <a name="see-also"></a>请参阅  
  [调试器基础知识](/visualstudio/debugger/debugger-basics)  
- [PAVEOVER 产品支持和辅助功能](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+

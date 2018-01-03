@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c713cc8e5f3d7e81b196820e0a25fde0018b6c80
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 07892869759ac5856b26099f2421caff1ebaf74d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-data-access"></a>安全数据访问
 要编写安全的 ADO.NET 代码，必须了解基础数据存储（即数据库）中提供的安全机制。 您还需要考虑应用程序可能包含的其他功能或组件对安全性的影响。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |--------------|-----------------|  
 |[DataAdapter 参数](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|描述如何对 `DataAdapter` 使用参数。|  
 |[使用存储过程修改数据](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|描述如何指定参数和获取返回值。|  
-|[管理与 SQL Server 中的存储过程的权限](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|描述如何使用 SQL Server 存储过程包装数据访问。|  
+|[在 SQL Server 中使用存储过程管理权限](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|描述如何使用 SQL Server 存储过程包装数据访问。|  
   
 ## <a name="script-exploits"></a>脚本攻击  
  脚本攻击是另一种形式的注入，它使用插入到网页中的恶意字符。 浏览器无法验证这些插入字符，并且会将它们作为页面的一部分进行处理。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 |[与非托管代码交互操作](../../../../docs/framework/interop/index.md)|包含描述如何向 .NET Framework 公开 COM 组件以及如何向 COM 公开 .NET Framework 组件的主题。|  
 |[高级 COM 互操作性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|包含高级主题，如主互操作程序集、线程和自定义封送处理。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [数据访问策略的建议](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  

@@ -15,11 +15,11 @@ ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6118ca5f73a0d446842c33859e0623032082bcd8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d804ce75929592675068fdc434a1ba7429fa5373
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctype-function-visual-basic"></a>CType 函数 (Visual Basic)
 返回表达式显式转换为指定的数据类型、 对象、 结构、 类或接口的结果。  
@@ -66,11 +66,11 @@ CType(expression, typename)
   
  有关其他示例，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.OverflowException>  
  <xref:System.InvalidCastException>  
  [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [转换函数](../../../visual-basic/language-reference/functions/conversion-functions.md)  
  [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
  [如何：定义转换运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [.NET Framework 中的类型转换](http://msdn.microsoft.com/library/ba36154f-064c-47d3-9f05-72f93a7ca96d)
+ [.NET Framework 中的类型转换](../../../standard/base-types/type-conversion.md)

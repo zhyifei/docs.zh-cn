@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 语句 (Visual Basic)
 集合中每个元素重复一的组语句。  
@@ -57,11 +57,11 @@ Next [ element ]
 |---|---|  
 |`element`|中所需`For Each`语句。 参数是可选的`Next`语句。 变量。 用于循环访问集合的元素。|  
 |`datatype`|如果存在`element`不已声明。 数据类型的`element`。|  
-|`group`|必需。 具有集合类型或对象的类型的变量。 对其引用集合`statements`要重复。|  
+|`group`|必须的。 具有集合类型或对象的类型的变量。 对其引用集合`statements`要重复。|  
 |`statements`|可选。 一个或多个语句之间`For Each`和`Next`运行中的每个项`group`。|  
 |`Continue For`|可选。 将控制转移到开始`For Each`循环。|  
 |`Exit For`|可选。 将扩展的控制转移`For Each`循环。|  
-|`Next`|必需。 终止的定义`For Each`循环。|  
+|`Next`|必须的。 终止的定义`For Each`循环。|  
   
 ## <a name="simple-example"></a>简单的示例  
  使用`For Each`...`Next`循环时要重复的集合或数组每个元素的一组语句。  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- 有关更多示例，请参阅[集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)和[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ 有关更多示例，请参阅[集合](../../../standard/collections/index.md)和[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
 ## <a name="nested-loops"></a>嵌套的循环  
  可以嵌套`For Each`置于另一个循环内的循环。  
@@ -105,7 +105,7 @@ Next [ element ]
   
 -   存在无限循环，即无法运行大型或甚至无限数量的次数的循环。 如果检测到此类条件，则可以使用`Exit For`来退出循环。 有关详细信息，请参阅[执行...循环语句](../../../visual-basic/language-reference/statements/do-loop-statement.md)。  
   
-## <a name="iterators"></a>迭代器  
+## <a name="iterators"></a>Iterators  
  你使用*迭代器*来对集合执行自定义迭代。 迭代器可以是函数或`Get`访问器。 它使用`Yield`语句以返回一次的集合的每个元素。  
   
  通过调用迭代器`For Each...Next`语句。 `For Each` 循环的每次迭代都会调用迭代器。 当`Yield`语句达到迭代器中的表达式中`Yield`语句会返回，并保留当前代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- 有关详细信息，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)， [Yield 语句](../../../visual-basic/language-reference/statements/yield-statement.md)，和[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
+ 有关详细信息，请参阅[迭代器](../../programming-guide/concepts/iterators.md)， [Yield 语句](../../../visual-basic/language-reference/statements/yield-statement.md)，和[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
   
 ## <a name="technical-implementation"></a>技术实现  
  当`For Each`...`Next` 语句在运行时，Visual Basic 对集合仅一次，循环启动之前进行评估。 如果语句块更改`element`或`group`，这些更改不会影响循环的迭代。  
@@ -179,8 +179,8 @@ End Sub
   
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
-## <a name="see-also"></a>另请参阅  
- [集合](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="see-also"></a>请参阅  
+ [集合](../../../standard/collections/index.md)  
  [For...Next 语句](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [循环结构](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [While...End While 语句](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
@@ -188,4 +188,4 @@ End Sub
  [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
  [对象初始值设定项：命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [阵列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+ [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)

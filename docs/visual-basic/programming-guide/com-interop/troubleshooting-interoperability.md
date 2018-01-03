@@ -25,11 +25,11 @@ ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 988d07fe08a6a78ae295d13f694c55a3b8f9d2e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 33e5a03f29f521a2ba7f93bdd084655e8fc7de8d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>互操作性疑难解答 (Visual Basic)
 当你 COM 和托管的代码之间的互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，你可能会遇到一个或多个以下的常见问题。  
@@ -99,7 +99,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  此示例将按预期引发错误。 但是，如果你尝试相同示例而不`Try...Catch...Finally`块，该错误忽略就使用`OnError Resume Next`语句。 如果没有错误处理机制除以零的除法运算以静默方式失败。 因为此类错误永远不会引发未处理的异常错误，务必使用某种形式的处理从 COM 对象的事件的事件处理程序中的异常处理。  
   
 ### <a name="understanding-com-interop-errors"></a>了解 COM 互操作错误  
- 如果没有错误处理机制，互操作调用通常产生错误时提供很少信息。 只要可能，使用结构化的错误处理发生时提供有关问题的详细信息。 在调试应用程序时，这可以是特别有用。 例如:   
+ 如果没有错误处理机制，互操作调用通常产生错误时提供很少信息。 只要可能，使用结构化的错误处理发生时提供有关问题的详细信息。 在调试应用程序时，这可以是特别有用。 例如:  
   
  [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
   
@@ -119,7 +119,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a>传递的控件 ByRef 的 ReadOnly 属性  
  Visual Basic.NET 有时引发 COM 错误，例如，"错误 0x800A017F CTL_E_SETNOTSUPPORTED"传递时`ReadOnly`作为某些较旧的 ActiveX 控件的属性`ByRef`其他过程的参数。 从 Visual Basic 6.0 的类似过程调用不会引发错误，和参数被视为通过值传递。 Visual Basic.NET 错误消息指示你尝试更改一个属性，没有一个属性`Set`过程。  
   
- 如果你有权访问所调用的过程，你可以通过使用来防止出现此错误`ByVal`关键字来声明接受的参数`ReadOnly`属性。 例如:   
+ 如果你有权访问所调用的过程，你可以通过使用来防止出现此错误`ByVal`关键字来声明接受的参数`ReadOnly`属性。 例如:  
   
  [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
   
@@ -134,10 +134,10 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  不共享的程序集应并排放置在与调用应用程序的目录。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tlbimp.exe（类型库导入程序）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ [Tlbimp.exe（类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe（类型库导出程序）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)  

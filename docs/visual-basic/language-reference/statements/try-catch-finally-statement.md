@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally 语句 (Visual Basic)
 提供用于处理部分或全部错误的给定块中的代码，同时仍在运行代码的方法。  
@@ -137,7 +137,7 @@ End Try
 ## <a name="iterators"></a>迭代器  
  迭代器函数或`Get`访问器对集合执行自定义迭代。 迭代器使用[产生](../../../visual-basic/language-reference/statements/yield-statement.md)语句以返回一次的集合的每个元素。 使用调用迭代器函数[每个...下一条语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
   
- A`Yield`语句可以是内部`Try`块。 A`Try`包含块`Yield`语句可以有`Catch`阻止，并且可以`Finally`块。 请参阅的"重试块在 Visual Basic"部分[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)有关示例。  
+ A`Yield`语句可以是内部`Try`块。 A`Try`包含块`Yield`语句可以有`Catch`阻止，并且可以`Finally`块。 请参阅的"重试块在 Visual Basic"部分[迭代器](../../programming-guide/concepts/iterators.md)有关示例。  
   
  A`Yield`语句不能包含在内`Catch`块或`Finally`块。  
   
@@ -188,11 +188,11 @@ End Try
   
  [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_8.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:System.Exception>  
  [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)  
  [On Error 语句](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [有关使用代码片段的最佳做法](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [异常处理](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
+ [异常处理](../../../standard/parallel-programming/exception-handling-task-parallel-library.md)  
  [Throw 语句](../../../visual-basic/language-reference/statements/throw-statement.md)

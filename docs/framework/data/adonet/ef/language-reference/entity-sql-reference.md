@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 776a2a93f559ba54651adc49e6b609c8156e9e31
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 58f30c4c2c220660b62b03ea4eb052bd2cf015eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-reference"></a>Entity SQL 引用
 本节包含 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 参考主题。 本主题总结并组[!INCLUDE[esql](../../../../../../includes/esql-md.md)]按类别的运算符。  
@@ -27,10 +28,10 @@ ms.lasthandoff: 10/18/2017
   
 |运算符|使用|  
 |--------------|---------|  
-|[+ （添加）](../../../../../../docs/framework/data/adonet/ef/language-reference/add.md)|加法。|  
+|[+（加）](../../../../../../docs/framework/data/adonet/ef/language-reference/add.md)|加法。|  
 |"/ （除）"|除法。|  
 |[%（取模）](../../../../../../docs/framework/data/adonet/ef/language-reference/modulo-entity-sql.md)|返回除法运算的余数。|  
-|[* （乘）](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|乘法。|  
+|[*（乘）](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|乘法。|  
 |[-（负号）](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|求反。|  
 |[-（减）](../../../../../../docs/framework/data/adonet/ef/language-reference/subtract-entity-sql.md)|减法。|  
   
@@ -40,11 +41,11 @@ ms.lasthandoff: 10/18/2017
 |函数|类型|  
 |--------------|----------|  
 |[聚合 Entity SQL 规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 聚合规范函数。|  
-|[数学规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学规范函数。|  
-|[字符串规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 字符串规范函数。|  
-|[日期和时间规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 日期和时间规范函数。|  
-|[按位规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 按位规范函数。|  
-|[其他规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)|讨论未分类为按位、日期/时间、字符串、数字或聚合函数的函数。|  
+|[数学 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 数学规范函数。|  
+|[字符串 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 字符串规范函数。|  
+|[日期和事件 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 日期和时间规范函数。|  
+|[按位 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|讨论 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 按位规范函数。|  
+|[其他 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)|讨论未分类为按位、日期/时间、字符串、数字或聚合函数的函数。|  
   
 ## <a name="comparison-operators"></a>比较运算符  
  比较运算符适用于下列类型：`Byte`、`Int16`、`Int32`、`Int64`、`Double`、`Single`、`Decimal`、`String`、`DateTime`、`Date`、`Time`、`DateTimeOffset`。 应用比较运算符之前将对操作数进行隐性类型升级。 比较运算符总是生成布尔值。 如果操作数中至少有一个 `null`，则结果为 `null`。  
@@ -53,14 +54,14 @@ ms.lasthandoff: 10/18/2017
   
 |运算符|描述|  
 |--------------|-----------------|  
-|[= （等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|比较两个表达式是否相等。|  
-|[> （大于）](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否大于右侧表达式的值。|  
-|[> = (大于或等于)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否大于或等于右侧表达式的值。|  
+|[=（等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|比较两个表达式是否相等。|  
+|[>（大于）](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否大于右侧表达式的值。|  
+|[>=（大于或等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否大于或等于右侧表达式的值。|  
 |[是 （& A) #91;不 &#93;NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|确定查询表达式是否为 null。|  
-|[< （小于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于右侧表达式的值。|  
-|[< = （小于或等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于或等于右侧表达式的值。|  
+|[<（小于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于右侧表达式的值。|  
+|[<=（小于或等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于或等于右侧表达式的值。|  
 |[&#91;不 &#93;之间](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|确定表达式的结果值是否在指定范围内。|  
-|[！ = （不等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式是否不等于右侧表达式。|  
+|[!=（不等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式是否不等于右侧表达式。|  
 |[&#91;不 &#93;类似于](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|确定特定字符串是否与指定模式相匹配。|  
   
 ## <a name="logical-and-case-expression-operators"></a>逻辑和 Case 表达式运算符  
@@ -71,24 +72,24 @@ ms.lasthandoff: 10/18/2017
 |[& & （逻辑与）](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|逻辑“与”。|  
 |[!（逻辑非）](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|逻辑非。|  
 |[&#124; &#124;（逻辑或）](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|逻辑“或”。|  
-|[用例](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|求出一组布尔表达式的值以确定结果。|  
-|[然后](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|结果[时](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998)when 子句取值为 true。|  
+|[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|求出一组布尔表达式的值以确定结果。|  
+|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|结果[时](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998)when 子句取值为 true。|  
   
 ## <a name="query-operators"></a>查询运算符  
  查询运算符用于定义返回实体数据的查询表达式。 下表列出了查询运算符。  
   
 |运算符|使用|  
 |--------------|---------|  
-|[从](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|指定在中使用的集合[选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)语句。|  
-|[分组依据](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|指定到的对象，所返回的查询分组 ([选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 表达式的放置。|  
+|[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|指定在中使用的集合[选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)语句。|  
+|[GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|指定到的对象，所返回的查询分组 ([选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 表达式的放置。|  
 |[GroupPartition](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)|返回从聚合与之相关的组分区提取的自变量值集合。|  
-|[无](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|指定组或聚合的搜索条件。|  
-|[限制](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|与使用[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句以执行物理分页。|  
+|[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|指定组或聚合的搜索条件。|  
+|[LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|与使用[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句以执行物理分页。|  
 |[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)|指定返回的对象使用的排序顺序[选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)语句。|  
-|[选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)|指定投影中由查询返回的元素。|  
-|[跳过](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|与使用[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句以执行物理分页。|  
-|[返回页首](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|指定查询结果中将只返回第一组行。|  
-|[其中](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|按条件筛选由查询返回的数据。|  
+|[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)|指定投影中由查询返回的元素。|  
+|[SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|与使用[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句以执行物理分页。|  
+|[TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|指定查询结果中将只返回第一组行。|  
+|[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|按条件筛选由查询返回的数据。|  
   
 ## <a name="reference-operators"></a>引用运算符  
  引用是指向特定实体集中的特定实体的逻辑指针（外键）。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持使用以下运算符进行构造、 解构和导航到引用。  
@@ -97,8 +98,8 @@ ms.lasthandoff: 10/18/2017
 |--------------|---------|  
 |[CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)|创建对实体集中的实体的引用。|  
 |[DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)|取消引用一个引用值，并生成该取消引用的结果。|  
-|[密钥](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|提取引用或实体表达式的键。|  
-|[导航](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|使您可以从一个实体类型到另一个实体类型对关系进行导航|  
+|[KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|提取引用或实体表达式的键。|  
+|[NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|使您可以从一个实体类型到另一个实体类型对关系进行导航|  
 |[REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)|返回对实体实例的引用。|  
   
 ## <a name="set-operators"></a>集运算符  
@@ -107,13 +108,13 @@ ms.lasthandoff: 10/18/2017
 |运算符|使用|  
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|从多值集合中提取元素。|  
-|[除非](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|返回由 EXCEPT 操作数左侧的查询表达式返回而不由 EXCEPT 操作数右侧的查询表达式返回的任何非重复值的集合。|  
+|[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|返回由 EXCEPT 操作数左侧的查询表达式返回而不由 EXCEPT 操作数右侧的查询表达式返回的任何非重复值的集合。|  
 |[&#91;不 &#93;存在](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|确定集合是否为空。|  
-|[平展](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|将一个由多个集合组成的集合转换为一个平展集合。|  
+|[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|将一个由多个集合组成的集合转换为一个平展集合。|  
 |[&#91;不 &#93;在](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|确定某个值是否与某个集合中的任何值匹配。|  
-|[相交](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|返回 INTERSECT 操作数左右两边的两个查询表达式均返回的所有非重复值的集合。|  
-|[重叠](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|确定两个集合是否具有公共元素。|  
-|[设置](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|用于通过生成一个新集合（其中移除了所有重复元素）将对象集合转换为一个集。|  
+|[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|返回 INTERSECT 操作数左右两边的两个查询表达式均返回的所有非重复值的集合。|  
+|[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|确定两个集合是否具有公共元素。|  
+|[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|用于通过生成一个新集合（其中移除了所有重复元素）将对象集合转换为一个集。|  
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|将两个或更多查询的结果组合成单个集合。|  
   
 ## <a name="type-operators"></a>类型运算符  
@@ -121,13 +122,13 @@ ms.lasthandoff: 10/18/2017
   
 |运算符|使用|  
 |--------------|---------|  
-|[强制转换](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|将一种数据类型的表达式转换为另一种数据类型的表达式。|  
-|[集合](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|在中使用[函数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)操作以声明实体类型或复杂类型的集合。|  
+|[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|将一种数据类型的表达式转换为另一种数据类型的表达式。|  
+|[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|在中使用[函数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)操作以声明实体类型或复杂类型的集合。|  
 |[是 （& A) #91;不 &#93;的](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|确定表达式的类型是否为指定类型或指定类型的某个子类型。|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|从查询表达式返回特定类型的对象集合。|  
-|[命名的类型构造函数](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|用于创建实体类型或复杂类型的实例。|  
-|[多重集合](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|根据值列表创建多集的实例。|  
-|[行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|从一个或多个值构造结构上类型化的匿名记录。|  
+|[命名类型构造函数](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|用于创建实体类型或复杂类型的实例。|  
+|[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|根据值列表创建多集的实例。|  
+|[ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|从一个或多个值构造结构上类型化的匿名记录。|  
 |[TREAT](../../../../../../docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md)|将特定基类型的对象视为指定派生类型的对象。|  
   
 ## <a name="other-operators"></a>其他运算符  
@@ -135,10 +136,10 @@ ms.lasthandoff: 10/18/2017
   
 |运算符|使用|  
 |--------------|---------|  
-|[+ （字符串串联）](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|用于在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中串联字符串。|  
+|[+（字符串串联）](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|用于在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中串联字符串。|  
 |[。（成员访问）](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|用于访问结构化概念模型类型实例的属性或字段的值。|  
-|[-（注释）](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 注释。|  
-|[函数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|定义可在 Entity SQL 查询中执行的内联函数。|  
+|[--（注释）](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 注释。|  
+|[FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|定义可在 Entity SQL 查询中执行的内联函数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 SQL 语言](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

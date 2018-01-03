@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: defdaa7f101c12e30e4e3f2b7f099685fa573fc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a20759300c44c8255427272cfa6034a877c4f6da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="string-functions"></a>字符串函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String` 函数，这些函数针对输入 `String` 执行操作并返回 `String` 或数值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。  
@@ -56,6 +57,6 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种 `String
 |---------------------|---------------------|---------------------|  
 |[字符串函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115915)|[字符串函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115916)|[字符串函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115914)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于实体框架函数的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
- [用于实体框架的 SqlClient 中的已知的问题](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)
+ [SqlClient 中的已知问题（实体框架）](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)

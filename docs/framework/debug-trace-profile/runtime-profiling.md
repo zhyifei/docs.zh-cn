@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 876635cfe0349c734a61dcc827a6f9594bb2a5d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4a8f3af4878e0f6911fcc55ec76b26649d517b3b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 6.  在“选定对象的实例”列表框中，单击“\<所有实例>”，指定要在全局（也就是在整个系统范围内）监视公共语言运行时的性能计数器。  
   
-     - 或 -  
+     或  
   
      在“选定对象的实例”  列表框中，单击要监视该应用程序的性能计数器的应用程序的名称。  
   
@@ -74,5 +75,5 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|指定 `PerformanceCounter` 组件的安装程序。|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|为 `NextValue` 指定用于计算 `PerformanceCounter`的方法。|  
   
-## <a name="see-also"></a>另请参阅  
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)
+## <a name="see-also"></a>请参阅  
+ [性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)

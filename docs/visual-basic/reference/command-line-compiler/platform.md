@@ -14,11 +14,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4177b9da15bb89f37a7b3cbb27937e09d1c12635
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-visual-basic"></a>/platform (Visual Basic)
 指定公共语言运行时 (CLR) 的哪个平台版本可以运行输出文件。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/09/2017
 /platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |---|---|  
@@ -71,13 +71,11 @@ ms.lasthandoff: 12/09/2017
   
 -   用 `/platform:anycpu32bitpreferred` 编译的可执行文件将在 32 位 CLR 上执行。  
   
- 了解如何开发 64 位版本的 Windows 上运行的应用程序的详细信息，请参阅[64 位应用程序](../../../../docs/framework/64-bit-apps.md)。  
+ 了解如何开发 64 位版本的 Windows 上运行的应用程序的详细信息，请参阅[64 位应用程序](../../../framework/64-bit-apps.md)。  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中设置 /platform  
   
 1.  在**解决方案资源管理器**，选择项目，打开**项目**菜单，，然后单击**属性**。  
-  
-     有关详细信息，请参阅[NIB： 项目设计器用管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
   
 2.  上**编译**选项卡上，选中或清除**首选 32 位**复选框，或者，在**目标 CPU**列表中，选择一个值。  
   
@@ -90,7 +88,7 @@ ms.lasthandoff: 12/09/2017
 vbc /platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [/target (Visual Basic)](target.md)  
  [Visual Basic 命令行编译器](index.md)  
  [示例编译命令行](sample-compilation-command-lines.md)

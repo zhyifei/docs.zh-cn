@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3e7a0af0b5fabdfacfcc825258242868b0fbb513
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d071622862a645d11ea8228574f81d5f8c3e6e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 和 DataReader
 你可以使用 ADO.NET **DataReader**以从数据库中检索数据的只读、 只进流。 查询执行，以及存储在客户端上的网络缓冲区，直到你请求时，这些结果将返回使用**读取**方法**DataReader**。 使用**DataReader**可以提高应用程序性能，检索数据，只要它不可用，并且 （默认） 存储在内存，从而减少系统开销中一次只有一个行。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  随 .NET Framework 提供的每个 .NET Framework 数据提供程序都具有一个 <xref:System.Data.Common.DbDataReader> 和一个 <xref:System.Data.Common.DbDataAdapter> 对象：用于 OLE DB 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.OleDb.OleDbDataReader> 和一个 <xref:System.Data.OleDb.OleDbDataAdapter> 对象，用于 SQL Server 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.SqlClient.SqlDataReader> 和一个 <xref:System.Data.SqlClient.SqlDataAdapter> 对象，用于 ODBC 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.Odbc.OdbcDataReader> 和一个 <xref:System.Data.Odbc.OdbcDataAdapter> 对象，用于 Oracle 的 .NET Framework 数据提供程序包括一个 <xref:System.Data.OracleClient.OracleDataReader> 和一个 <xref:System.Data.OracleClient.OracleDataAdapter> 对象。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用 DataReader 检索数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
+ [使用 DataReader 检索 ADO 数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
  描述 ADO.NET **DataReader**对象以及如何使用它从数据源返回结果流。  
   
  [从 DataAdapter 填充数据集](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
@@ -51,10 +52,10 @@ ms.lasthandoff: 11/21/2017
  [处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  说明 `DataAdapter` 事件以及如何使用这些事件。  
   
- [使用 Dataadapter 执行批处理操作](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
+ [使用 DataAdapter 执行批处理操作](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  说明在从 `DataSet` 应用更新时，如何通过减少与 SQL Server 之间的往返次数来提高应用程序的性能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  

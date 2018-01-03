@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c040b2a9a4c806d6e0f82ea2b22113b44df7d4c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a042d1b1e78afee632dea20bbafe2383e50430c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>查找数值序列中的最小值
 使用 <xref:System.Linq.Enumerable.Min%2A> 运算符可返回数值序列中的最小值。  
@@ -81,6 +82,6 @@ ms.lasthandoff: 11/21/2017
   
  `Konbu`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [聚合查询](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
  [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

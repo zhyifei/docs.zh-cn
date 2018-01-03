@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93638fc9287b3b44ec066c51b9599d991f9b046d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c45da4ec1fa5d111be19437dde54035a89f9162e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-wcf-data-services"></a>WCF 数据服务的安全
 本主题介绍开发、部署和运行访问支持 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的服务的 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]和应用程序的特定安全注意事项。 除此之外，您还应遵循有关创建安全的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 应用程序的建议。  
@@ -64,7 +65,7 @@ context.Credentials = _
   
  如果数据服务需要的登录凭据不能通过使用 <xref:System.Net.NetworkCredential> 对象（如基于声明的标记或 Cookie）指定，则必须在 HTTP 请求中手动设置标头，通常是 `Authorization` 和 `Cookie` 标头。 有关这种类型的身份验证方案的详细信息，请参阅文章[OData 和身份验证： 客户端一侧的挂钩](http://go.microsoft.com/fwlink/?LinkID=200385)。 有关如何设置请求消息中的 HTTP 标头的示例，请参阅[如何： 设置客户端请求中的标头](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)。  
   
-## <a name="impersonation"></a>模拟  
+## <a name="impersonation"></a>Impersonation  
  通常，数据服务使用承载数据服务的工作进程的凭据访问所需资源，如服务器上的文件或数据库。 使用模拟时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序可以用发出请求的用户的 Windows 标识（用户帐户）执行。 模拟通常用在依赖 IIS 进行用户身份验证的应用程序中，并使用该主体的凭据访问所需资源。 有关详细信息，请参阅[ASP.NET 模拟](http://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d)。  
   
 ## <a name="configuring-data-service-authorization"></a>配置数据服务授权  
@@ -120,6 +121,6 @@ context.Credentials = _
   
 -   我们建议客户端应用程序始终对用户输入以及接受自非信任服务的数据进行验证。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

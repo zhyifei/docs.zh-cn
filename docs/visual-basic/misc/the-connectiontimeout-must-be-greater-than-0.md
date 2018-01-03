@@ -9,22 +9,22 @@ ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4cb1d68a0277ecb1a0dbf5fca46fab5960dd863b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f454b77fa0752f0149037046ba79654dcdfab977
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout 必须大于 0
-使用 [My.Computer.Network Object](../../visual-basic/language-reference/objects/my-computer-network-object.md)上载和下载的文件时，必须指定一个大于 `connectionTimeout` 的 `0`。  
+上载和下载文件，当[My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)，必须指定`connectionTimeout`大于`0`。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
 -   提供一个大于 `connectionTimeout` 的 `0`。  
   
-## <a name="see-also"></a>另请参阅  
- [My.Computer.Network.UploadFile 方法](http://msdn.microsoft.com/en-us/5505ea3e-3dbd-460b-9f8f-62c84c0a4de6)  
- [My.Computer.Network.DownloadFile 方法](http://msdn.microsoft.com/en-us/aeb7ed8f-1ac9-4242-ae57-9f35914eb329)  
+## <a name="see-also"></a>请参阅  
+ [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)  
+ [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)  
  [如何：上载文件](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  [如何：下载文件](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
  [使用 Visual Basic.NET Framework 中的网络操作](http://msdn.microsoft.com/en-us/c5379021-44ef-4d6a-acf5-e951fdcab6b2)

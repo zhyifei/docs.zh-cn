@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bcb29fa522f706f5500ab3cb12f956d5e2236b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 65bf6bfd0bd437848137506605a958f5f2e8d750
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="batching-operations-wcf-data-services"></a>批处理操作（WCF 数据服务）
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]支持对请求的批处理[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于服务。 有关详细信息，请参阅[OData： 批处理](http://go.microsoft.com/fwlink/?LinkId=186075)。 在[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，使用每个操作<xref:System.Data.Services.Client.DataServiceContext>，如执行查询或保存更改，在单独的请求发送到数据服务中的结果。 为保持操作集的合理范围，可以显式定义操作批。 这将确保批处理中的所有操作发送到单个 HTTP 请求中的数据服务，使服务器能够处理这些操作以原子方式，并减少到数据服务的往返次数。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 12/02/2017
   
  此外，还可以采用异步方式保存批处理更改。 有关详细信息，请参阅[异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

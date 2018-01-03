@@ -12,11 +12,11 @@ ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bcb5291737a9f4763f680daaf625c58d308423f8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 51d04c573e91a351c48edefebdb3d32fce1d306f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>如何： 创建 C/c + + 联合使用属性 (Visual Basic)
 通过使用特性，可自定义结构在内存中的布局方式。 例如，可使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 特性在 C/C++ 中创建所谓的联合。  
@@ -75,11 +75,11 @@ Structure TestExplicit
   
  两个整数字段 `i1` 和 `i2` 共享与 `lg` 相同的内存位置。 使用平台调用时，这种对结构布局的控制很有用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
- [特性](../../../../../docs/standard/attributes/index.md)  
+ [特性](../../../../standard/attributes/index.md)  
  [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  

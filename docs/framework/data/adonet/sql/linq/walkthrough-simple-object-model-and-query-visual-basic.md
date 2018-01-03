@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ed6436dcac1791d735132c295943519af36e307d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d202aa7b014b457b3990153e9af470c3d0e5b03b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>演练：简单对象模型和查询 (Visual Basic)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   
  本演练是使用 Visual Basic 开发设置编写的。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
   
 -   本演练使用专用文件夹（“c:\linqtest”）来保存文件。 请在开始本演练前创建此文件夹。  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/18/2017
   
 4.  在**名称**框中，键入**LinqConsoleApp**。  
   
-5.  单击“确定”。  
+5.  单击 **“确定”**。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果`System.Data.Linq`未列出为你的项目中的引用 (单击**显示所有文件**中**解决方案资源管理器**展开**引用**节点)，请按照中的说明添加它以下步骤。  
@@ -161,5 +162,5 @@ ms.lasthandoff: 10/18/2017
   
  如果您希望进行“跨关系进行查询”演练，请务必保存您刚完成的演练的解决方案，这是一项必备条件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

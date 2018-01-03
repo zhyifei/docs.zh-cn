@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b4cdc21b9ecfdb1bb37f26f82200b211967043c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77f115afab9c0ad4b53a38d8cdb3683616738b1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-secure-sockets-layer"></a>使用安全套接字层
 <xref:System.Net> 类使用安全套接字层 (SSL) 为若干网络协议加密连接。  
@@ -71,7 +72,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
   
 -   引用 System.Net 命名空间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)  
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
  [证书选择和验证](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

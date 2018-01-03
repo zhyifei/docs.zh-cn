@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7a0650f444f901d37797ca81343f06cb566f8112
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b5389f4ea65af9160fe5cf077b62fd075fb89b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="external-mapping"></a>外部映射
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持*外部映射*，依据你使用单独的 XML 文件指定数据库的数据模型和对象模型之间的映射的进程。 使用外部映射文件具有以下优点：  
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/21/2017
   
 -   可以将外部映射文件视为类似于配置文件的某种东西。 例如，在发布二进制文件后，只需交换出外部映射文件，就可以更新应用程序的工作方式。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  映射文件必须为 XML 文件，并且该文件必须能够通过 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 架构定义 (.xsd) 文件的验证。  
   
  适用以下规则：  
@@ -151,7 +152,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [如何： 生成对象模型作为外部文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+ [如何：将对象模型作为外部文件生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38c3d10eaefe4608084a5e5f6ad417446200799b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f85dabc8a447db13173a672db37b327ba4a9fe6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>使用单阶段提交和可提升的单阶段通知进行优化
 本主题描述 <xref:System.Transactions> 基础结构所提供的用于优化性能的机制。  
@@ -69,6 +70,6 @@ ms.lasthandoff: 12/02/2017
   
  如果只有一个可变参与者和任何持久登记，可变参与者接收 SPC 通知。  如果有任何易失性的登记和只有一个持久登记，易失性登记接收 2PC。 完成提交后，持久登记会接收到 SPC 通知。  
   
-## <a name="see-also"></a>另请参阅  
- [作为参与者在事务中登记资源](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
- [提交单阶段和多个阶段中的事务](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+## <a name="see-also"></a>请参阅  
+ [在事务中将资源登记为参与者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [单阶段和多阶段确认事务](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

@@ -19,14 +19,14 @@ ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dfdb403519d7e29602fc87445ce32aeb0e55250e
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 97f02fd85d4796d6799a8a5b40a9137eeb79a93f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 命名约定
-在 Visual Basic 应用程序中命名某个元素时，该名称的第一个字符必须是字母字符或下划线。 但请注意，名称以下划线开头不符合[语言独立性和独立于语言的组件](../../../../docs/standard/language-independence-and-language-independent-components.md)(CLS)。  
+在 Visual Basic 应用程序中命名某个元素时，该名称的第一个字符必须是字母字符或下划线。 但请注意，名称以下划线开头不符合[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)。  
   
  以下建议适用于命名。  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/09/2017
   
 -   避免使用内部范围内与外部作用域中的名称相同的名称。 如果访问此错误的变量，则会导致错误。 如果变量与具有相同名称的关键字之间发生冲突，你必须确定关键字符号它前面加上适当的类型库。 例如，如果你有调用变量`Date`，你可以使用内部函数`Date`只是在调用函数<xref:System.DateTime.Date%2A?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [代码中用作元素名称的关键字](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
  [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
  [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

@@ -26,11 +26,11 @@ ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b863ed5c8aca3332f4af3d759789eec153a79aed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-statement"></a>Event 语句
 声明用户定义的事件。  
@@ -69,22 +69,22 @@ End Event
 |`accessmodifier`|可选。 指定哪些代码可以访问事件。 可以是以下各项之一：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)— 可以访问声明它的元素的任何代码都可以访问它。<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)— 只有其类或派生的类中的代码可以访问它。<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)— 只有相同程序集中的代码可以访问它。<br />-   [私有](../../../visual-basic/language-reference/modifiers/private.md)— 只有声明它的元素中的代码可以访问它。<br /><br /> 可以指定 `Protected Friend` 以便可以从事件的类、派生类或相同程序集中的代码进行访问。|  
 |`Shared`|可选。 指定此事件不与类或结构的特定实例关联。|  
 |`Shadows`|可选。 指示此事件重新声明并隐藏基类中具有相同名称的编程元素（或重载元素集）。 可以与任何其他类型一起隐藏任何类型的已声明元素。<br /><br /> 隐藏的元素不可在隐藏它的派生类中使用（除了从隐藏元素不可访问的位置）。 例如，如果 `Private` 元素隐藏一个基类元素，则无权访问 `Private` 元素的代码会改为访问该基类元素。|  
-|`eventname`|必需。 事件的名称；遵循标准变量命名约定。|  
+|`eventname`|必须的。 事件的名称；遵循标准变量命名约定。|  
 |`parameterlist`|可选。 表示此事件的参数的本地变量列表。 必须将括[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。|  
 |`Implements`|可选。 指示此事件实现接口的事件。|  
 |`implementslist`|如果提供 `Implements`，则是必需的。 所实现的 `Sub` 过程的列表。 用逗号分隔多个过程：<br /><br /> *implementedprocedure* [， *implementedprocedure* ...]<br /><br /> 每个 `implementedprocedure` 都具有以下语法和部件：<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`必需。 此过程的包含类或结构所实现的接口的名称。<br />-   `Definedname`必需。 在 `interface` 中用于定义过程的名称。 这不必与 `name`（此过程用于实现定义的过程的名称）相同。|  
-|`Custom`|必需。 声明为 `Custom` 的事件必须定义自定义 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 访问器。|  
+|`Custom`|必须的。 声明为 `Custom` 的事件必须定义自定义 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 访问器。|  
 |`delegatename`|可选。 指定事件处理程序签名的委托的名称。|  
-|`AddHandler`|必需。 声明 `AddHandler` 访问器，它指定要在添加事件处理程序（显式使用 `AddHandler` 语句或隐式使用 `Handles` 子句）时执行的语句。|  
-|`End AddHandler`|必需。 终止 `AddHandler` 块。|  
-|`value`|必需。 参数名。|  
-|`RemoveHandler`|必需。 声明 `RemoveHandler` 访问器，它指定要在使用 `RemoveHandler` 语句移除事件处理程序时执行的语句。|  
-|`End RemoveHandler`|必需。 终止 `RemoveHandler` 块。|  
-|`RaiseEvent`|必需。 声明 `RaiseEvent` 访问器，它指定要在使用 `RaiseEvent` 语句引发事件时执行的语句。 通常这会调用由 `AddHandler` 和 `RemoveHandler` 访问器维护的委托的列表。|  
-|`End RaiseEvent`|必需。 终止 `RaiseEvent` 块。|  
-|`delegatesignature`|必需。 与 `delegatename` 委托需要的参数匹配的参数列表。 必须将括[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。|  
+|`AddHandler`|必须的。 声明 `AddHandler` 访问器，它指定要在添加事件处理程序（显式使用 `AddHandler` 语句或隐式使用 `Handles` 子句）时执行的语句。|  
+|`End AddHandler`|必须的。 终止 `AddHandler` 块。|  
+|`value`|必须的。 参数名。|  
+|`RemoveHandler`|必须的。 声明 `RemoveHandler` 访问器，它指定要在使用 `RemoveHandler` 语句移除事件处理程序时执行的语句。|  
+|`End RemoveHandler`|必须的。 终止 `RemoveHandler` 块。|  
+|`RaiseEvent`|必须的。 声明 `RaiseEvent` 访问器，它指定要在使用 `RaiseEvent` 语句引发事件时执行的语句。 通常这会调用由 `AddHandler` 和 `RemoveHandler` 访问器维护的委托的列表。|  
+|`End RaiseEvent`|必须的。 终止 `RaiseEvent` 块。|  
+|`delegatesignature`|必须的。 与 `delegatename` 委托需要的参数匹配的参数列表。 必须将括[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。|  
 |`statements`|可选。 包含 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 方法体的语句。|  
-|`End Event`|必需。 终止 `Event` 块。|  
+|`End Event`|必须的。 终止 `Event` 块。|  
   
 ## <a name="remarks"></a>备注  
  一旦声明了事件，便可使用 `RaiseEvent` 语句引发事件。 可以按以下片段所示声明和引发典型事件：  
@@ -122,9 +122,9 @@ End Event
  按 F5 以运行前面的示例中，并单击标记按钮**启动**。 第一个文本框中开始倒计时秒数。 经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。  
   
 > [!NOTE]
->  `My.Application.DoEvents` 方法不会按照与窗体相同的方式来处理事件。 若要使窗体可以直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[线程处理](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)。  
+>  `My.Application.DoEvents` 方法不会按照与窗体相同的方式来处理事件。 若要使窗体可以直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[线程处理](../../programming-guide/concepts/threading/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
  [Implements 语句](../../../visual-basic/language-reference/statements/implements-statement.md)  
  [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  

@@ -12,11 +12,11 @@ ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: acf9e15aa03b177533f87417278842735c1d6318
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: b544d63651b481ec39f7e07d4e7f549923d2a475
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="threading-visual-basic"></a>线程处理 (Visual Basic)
 通过线程处理，Visual Basic 程序可以执行并发处理，从而能够一次执行多项操作。 例如，可使用线程处理来监视来自用户的输入、执行后台任务和处理并行输入流。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/09/2017
   
 -   The .NET Framework <xref:System.Threading> 命名空间简化了线程的使用。  
   
--   线程可共享应用程序的资源。 有关更多信息，请参见[使用线程和线程处理](../../../../../docs/standard/threading/using-threads-and-threading.md)。  
+-   线程可共享应用程序的资源。 有关更多信息，请参见[使用线程和线程处理](../../../../standard/threading/using-threads-and-threading.md)。  
   
  Visual Basic 程序默认只有一个线程。 但是，可创建辅助线程，将其用于与主线程并行执行代码。 这些线程通常称为工作线程。  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/09/2017
  可以使用部分或全部类同步多线程的活动，但 Visual Basic 语言对线程处理提供一定程度的支持。 例如，[SynLock 语句](../../../../visual-basic/language-reference/statements/synclock-statement.md)通过隐式使用 <xref:System.Threading.Monitor> 提供同步功能。  
   
 > [!NOTE]
->  自 [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类、[并行 LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的新并发集合类，以及基于任务（而非线程）概念的新编程模型，多线程编程得到了大幅简化。 有关详细信息，请参阅[并行编程](../../../../../docs/standard/parallel-programming/index.md)。  
+>  自 [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)] 起，由于出现了 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 类、[并行 LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的新并发集合类，以及基于任务（而非线程）概念的新编程模型，多线程编程得到了大幅简化。 有关详细信息，请参阅[并行编程](../../../../standard/parallel-programming/index.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   
@@ -53,4 +53,4 @@ ms.lasthandoff: 12/09/2017
 |[线程计时器 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)|描述如何按固定时间间隔在单独的线程上运行过程。|  
 |[线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|描述如何使用由系统托管的工作线程池。|  
 |[如何：使用线程池 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|展示线程池中多线程的同步使用。|  
-|[线程处理](../../../../../docs/standard/threading/index.md)|描述如何在 .NET Framework 中实现线程处理。|
+|[线程处理](../../../../standard/threading/index.md)|描述如何在 .NET Framework 中实现线程处理。|

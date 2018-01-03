@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a8397c106ec45d9e6e1e9ec513536142d3048bd7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2ee0e87c801e15a54229e559ce65cabf5f474a61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attribute-based-mapping"></a>基于特性的映射
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]映射到 SQL Server 数据库[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象模型通过应用属性或通过使用外部映射文件。 本主题概述了基于属性的方法。  
@@ -150,7 +151,7 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|String|与数据库中的名称相同|指定表、列等的名称。|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|String|公共访问器|指定基础存储字段的名称。|  
   
- 有关更多信息，请参见<xref:System.Data.Linq.Mapping.DataAttribute>。  
+ 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.DataAttribute>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

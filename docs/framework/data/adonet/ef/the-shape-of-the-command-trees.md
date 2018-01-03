@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c3311ac88355ac0d7214ec932719e1445757d9e1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 13e2e154a96b46d630b6df11fe3ae024d799c8e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令目录树的形状
 SQL 生成模块负责生成基于给定输入查询命令目录树表达式的后端特定 SQL 查询。 本节讨论查询命令目录树的特征、属性和结构。  
@@ -115,5 +116,5 @@ SQL 生成模块负责生成基于给定输入查询命令目录树表达式的�
 ### <a name="using-primitive-types"></a>使用基元类型  
  在输出命令目录树中引用基元类型时，通常会在概念模型的基元类型中引用它们。 不过，对于某些表达式，提供程序需要相应的存储基元类型。 此类表达式包括 DbCastExpression 且可能包括 DbNullExpression（如果提供程序需要将 null 强制转换为相应类型）等。 在这些情况下，提供程序应基于基元类型的类别和 facet 对提供程序类型进行映射。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

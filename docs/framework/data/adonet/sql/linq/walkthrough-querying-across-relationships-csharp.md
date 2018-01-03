@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c294b888d95c4d6a77d96198f885c2363fda4e36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 61586b8d556a9edccace25b75ceb2696ec675dd3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>演练：跨关系查询 (C#)
 本演练演示如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*关联*来表示数据库中的外键关系。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/18/2017
   
  本演练是使用 Visual C# 开发设置编写的。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你必须已完成[演练： 简单对象模型和查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)。 本演练建立在该演练基础之上，包括在 c:\linqtest5 中须存在 northwnd.mdf 文件。  
   
 ## <a name="overview"></a>概述  
@@ -98,5 +99,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="next-steps"></a>后续步骤  
  下一步的演练 ([演练： 操作数据 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 演示如何处理数据。 该演练不要求您保存本系列中已经完成的两个演练的结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

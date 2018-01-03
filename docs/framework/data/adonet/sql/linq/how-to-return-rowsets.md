@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 24211e82633e41256a8c801000c4d3e17d9d8612
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c5f88ce69239c0ca601344362dc420205291cb74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-return-rowsets"></a>如何：返回行集
 此示例从数据库中返回行集合，并包含用于筛选结果的输入参数。  
@@ -46,6 +47,6 @@ END
  [!code-csharp[DLinqSprox#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#1)]
  [!code-vb[DLinqSprox#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
- [存储的过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+## <a name="see-also"></a>请参阅  
+ [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

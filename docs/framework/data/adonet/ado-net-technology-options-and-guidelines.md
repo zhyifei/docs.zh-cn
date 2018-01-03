@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7f679cdf65d30b47037c1d94a1e7fb6eba3572c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11ca23427460ed4c469fc45e43f3b32e4ec5eb25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 技术选项和准则
 ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对概念性实体数据模型进行编程，减少其所需的编码和维护工作量。 此平台包括 ADO.NET 实体框架和相关技术。  
@@ -29,7 +30,7 @@ ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对
  实体数据模型 (EDM) 是一种将应用程序数据定义为多组实体和关系的设计规范。 此模型中的数据支持跨应用程序边界的数据关系映射和数据可编程性。  
   
 ### <a name="object-services"></a>Object Services — 对象服务  
- 对象服务允许程序员通过一组公共语言运行库 (CLR) 类与概念模型进行交互。 这些类既可以从概念模型自动生成，也可以单独开发以反映概念模型的结构。 对象服务还为实体框架提供基础结构支持，包括状态管理、更改跟踪、标识解析、加载和导航关系、将对象更改传播到数据库修改和实体 SQL 查询生成支持等服务。 有关详细信息，请参阅[对象服务概述 （实体框架）](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038)。  
+ 对象服务允许程序员通过一组公共语言运行库 (CLR) 类与概念模型进行交互。 这些类既可以从概念模型自动生成，也可以单独开发以反映概念模型的结构。 对象服务还为实体框架提供基础结构支持，包括状态管理、更改跟踪、标识解析、加载和导航关系、将对象更改传播到数据库修改和实体 SQL 查询生成支持等服务。 有关详细信息，请参阅[对象服务概述 (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038)。  
   
 ### <a name="linq-to-entities"></a>LINQ to Entities  
  LINQ to Entities 是一种语言集成查询 (LINQ) 实现，它允许开发人员通过使用 LINQ 表达式和 LINQ 标准查询运算符，根据实体框架对象上下文创建强类型查询。 LINQ to Entities 使开发人员能够针对一个概念模型开展工作，在此模型中，可在 Microsoft SQL Server 和第三方数据库之间非常灵活地进行对象关系映射。 有关详细信息，请参阅[LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
@@ -49,7 +50,7 @@ ADO.NET 数据平台是一种多版本策略，通过使开发人员能够针对
 ## <a name="wcf-data-services"></a>WCF 数据服务  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可在 Web 或 Intranet 上部署数据服务。 这些数据将按照实体数据模型的规范组织成不同的实体和关系。 在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。 有关详细信息，请参阅[WCF 数据服务 4.5](../../../../docs/framework/data/wcf/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [ADO.NET 新增功能](../../../../docs/framework/data/adonet/whats-new.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

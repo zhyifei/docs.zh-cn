@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ec2bc90283aa39b8258ad14777cda7180c043c69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92a886ab09978aef6694c37d74af49b27c37c6c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltattributeimpliesgt-element-net-native"></a>&lt;特性暗示&gt;元素 (.NET Native)
 为包含特性应用的代码元素定义策略。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
  反射、序列化和互操作特性都是可选项，但必须存在至少一项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  

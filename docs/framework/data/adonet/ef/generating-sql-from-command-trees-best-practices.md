@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 06d2711d9dac203645c127fa86581a9888db3cb1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d94090eadaa634d1cc2912bf60c987c47c1b6a5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>从命令目录树生成 SQL - 最佳做法
 输出查询命令目录树高度模拟可使用 SQL 表示的查询。 但是，对于提供程序编写者而言，从输出命令目录树生成 SQL 还是存在一些常见的难题。 本主题讨论这些难题。 在下一主题中，示例提供程序将演示如何解决这些难题。  
@@ -148,5 +149,5 @@ ON b.y = d.z
 ## <a name="mapping-primitive-types"></a>映射基元类型  
  在将概念 (EDM) 类型映射到提供程序类型时，应映射到最宽的类型 (Int32)，以便适合所有可能的值。 此外，避免映射到无法用于许多操作的类型，如 BLOB 类型（例如，`ntext` 中的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

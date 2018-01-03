@@ -14,11 +14,11 @@ ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04b79b3d14a9c4a9f9721860cd1ed44032dfa5d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d472795affe0df098d1551daf51a2f0ae20723ba
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="warnaserror-visual-basic"></a>/warnaserror (Visual Basic)
 使编译器将视为错误的警告的第一个匹配项。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/21/2017
 /warnaserror[+ | -][:numberList]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |---|---|  
@@ -48,11 +48,11 @@ ms.lasthandoff: 11/21/2017
   
 |若要设置 /warnaserror 将所有警告视为 Visual Studio IDE 中的错误|  
 |---|  
-|1.在 “解决方案资源管理器”中选择一个项目。 在“项目”菜单上，单击“属性”。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。<br />2.单击“编译”选项卡。<br />3.请确保**禁用所有警告**复选框处于未选中状态。<br />4.检查**将所有警告视为错误**复选框。|  
+|1.在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“编译”选项卡。<br />3.请确保**禁用所有警告**复选框处于未选中状态。<br />4.检查**将所有警告视为错误**复选框。|  
   
 |若要设置 /warnaserror 特定警告视为在 Visual Studio IDE 中的错误|  
 |---|  
-|1.在 “解决方案资源管理器”中选择一个项目。 在“项目”菜单上，单击“属性”。<br />2.单击“编译”选项卡。<br />3.请确保**禁用所有警告**复选框处于未选中状态。<br />4.请确保**将所有警告视为错误**复选框处于未选中状态。<br />5.选择**错误**从**通知**应被视为错误的警告旁边的列。|  
+|1.在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。<br />2.单击“编译”选项卡。<br />3.请确保**禁用所有警告**复选框处于未选中状态。<br />4.请确保**将所有警告视为错误**复选框处于未选中状态。<br />5.选择**错误**从**通知**应被视为错误的警告旁边的列。|  
   
 ## <a name="example"></a>示例  
  下面的代码编译`In.vb`并指示编译器显示找到的每个警告的第一个匹配项错误。  
@@ -68,7 +68,7 @@ vbc /warnaserror in.vb
 vbc /warnaserror:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [在 Visual Basic 中配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)

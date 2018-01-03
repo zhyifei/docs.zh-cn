@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c0c919bb5be12005850b81059fc641f6f25b06bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f67ad1947d421a5221a34ad8392242e4d18039f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-linq-to-dataset"></a>安全性 (LINQ to DataSet)
 本主题讨论 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 中的安全性问题。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/18/2017
   
  任何直接或间接从用户或外部代理派生的输入都可能包含利用目标语言的语法来执行未授权操作的内容。 这称为 SQL 注入式攻击，是以目标语言为 Transact-SQL 的攻击模式命名的。 恶意用户利用这种直接注入到查询的用户输入删除数据库表、产生拒绝服务或者更改所执行操作的性质。 尽管在 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]中可以撰写查询，但是要通过对象模型 API 执行。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]通过使用字符串操作或串联，因为它们都是在 TRANSACT-SQL，并不容易受到 SQL 注入式攻击在传统意义上不编写查询。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

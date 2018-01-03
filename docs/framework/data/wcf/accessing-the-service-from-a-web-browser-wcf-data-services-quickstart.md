@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49deb2e209127f92a333195e9fcd0d1e1bece7d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>从 Web 浏览器访问服务（WCF 数据服务快速入门）
 在此任务中，您将从 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 启动 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]，然后可以选择在 Web 浏览器中禁用源读取。 你将进而检索服务定义文档以及提交给公开的资源的 Web 浏览器通过 HTTP GET 请求以访问数据服务资源。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="next-steps"></a>后续步骤  
  您已成功从 Web 浏览器访问 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，浏览器会向指定资源发出 HTTP GET 请求。 使用 Web 浏览器，可以轻松试验请求的寻址语法并查看结果。 不过，通常情况下并不会通过此方式访问生产数据服务。 通常，应用程序会通过应用程序代码或脚本语言与数据服务进行交互。 接下来，您将创建一个客户端应用程序，该应用程序使用客户端库访问数据服务资源，就像它们是公共语言运行时 (CLR) 对象一样：  
   
- [创建.NET Framework 客户端应用程序](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
+ [创建 .NET Framework 客户端应用程序](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [访问数据服务资源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

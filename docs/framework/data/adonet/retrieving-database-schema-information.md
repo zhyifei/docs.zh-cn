@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 71493eb91415b5f4695e771c7a549244629bb654
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19fee0f90c1f460d253cfdc865035a6b8aa3db48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-database-schema-information"></a>检索数据库架构信息
 从数据库获取架构信息通过架构发现过程来完成。 通过架构发现，应用程序可以请求托管提供程序查找并返回有关数据库架构的信息也称为*元数据*，给定数据库。 不同的数据库架构元素（例如表、列和存储过程）通过架构集合进行公开。 每个架构集合包含所使用的提供程序特定的各种架构信息。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  架构限制  
  描述可与使用的架构限制**GetSchema**。  
   
- [通用架构集合](../../../../docs/framework/data/adonet/common-schema-collections.md)  
+ [公共架构集合](../../../../docs/framework/data/adonet/common-schema-collections.md)  
  描述所有 .NET Framework 托管提供程序均支持的所有通用架构集合。  
   
  [SQL Server 架构集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
@@ -81,6 +82,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
  描述**GetSchemaTable**方法<xref:System.Data.SqlClient.SqlDataReader>类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

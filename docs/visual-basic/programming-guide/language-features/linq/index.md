@@ -12,11 +12,11 @@ ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b0e558e50f75b10a77834a6e94ccb7aadc55fdcb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: acec0a067ef318d34c033529415afb5c321e19a2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
 此部分收录了有助于你了解和使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 的概述、示例和背景信息。  
@@ -52,8 +52,8 @@ ms.lasthandoff: 12/09/2017
  [如何：以特定类型返回 LINQ 查询结果](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  通过示例展示了如何将 LINQ 查询结果作为特定类型（而不是匿名类型）返回。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ（语言集成查询）](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- [LINQ to DataSet 概述](../../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+ [LINQ to DataSet 概述](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

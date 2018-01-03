@@ -9,11 +9,11 @@ ms.assetid: d49242df-dbd1-4b26-bd8c-ed56d24fdfcd
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fa19f1842bcfa82908fe79f6fda69bbc5dd9499c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2e0cf124b4d1fac562e5d1697c53ee7328fa759
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39nper39-must-be-greater-than-zero"></a>自变量 &#39;NPer &#39;必须是大于零
 返回一个指定基于定期固定付款和固定利率的年金的期间数的 `NPer` 的 `Double` 函数要求一个大于零的参数。  
@@ -24,6 +24,5 @@ ms.lasthandoff: 11/21/2017
   
 -   检查之前对表达式中的变量进行的操作，尤其是那些从其他过程作为参数传递给该过程的操作。  
   
-## <a name="see-also"></a>另请参阅  
- [不在生成中：NPer 函数](http://msdn.microsoft.com/en-us/56567d16-29f7-4928-b05f-b4cd56d4fd42)  
+## <a name="see-also"></a>请参阅  
  [按值和按引用传递自变量](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

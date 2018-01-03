@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f820ad757fa6bf5b8367c5c39beff5cc680e519a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c97d98415e1b303c5849f15c4a7bfcca6fd285a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-key-concepts"></a>实体数据模型关键概念
 实体数据模型 (EDM) 使用三个关键概念来描述数据结构：*实体类型*，*关联类型*，和*属性*。 在任何 EDM 实现中，这些都是描述数据结构的最重要概念。  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/18/2017
   
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)

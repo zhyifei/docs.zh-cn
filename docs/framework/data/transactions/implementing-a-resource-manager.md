@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9fe72090de3722137c2b0c2190c11f190be5fbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-resource-manager"></a>实现资源管理器
 事务中使用的每个资源都由资源管理器进行管理，而后者的操作则由事务管理器进行协调。 资源管理器与事务管理器协调工作，为应用程序提供了原子性和隔离性的保证。 例如，Microsoft SQL Server、持久消息队列、内存中的哈希表都是资源管理器。  
@@ -44,11 +45,11 @@ ms.lasthandoff: 12/02/2017
 ## <a name="in-this-section"></a>本节内容  
  下列主题概括了资源管理器通常所遵循的步骤。  
   
- [作为参与者在事务中登记资源](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [在事务中将资源登记为参与者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
   
  描述如何在事务中登记持久或可变资源。  
   
- [提交单阶段和多个阶段中的事务](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [单阶段和多阶段确认事务](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  描述资源管理器如何响应提交通知并准备提交。  
   
@@ -56,10 +57,10 @@ ms.lasthandoff: 12/02/2017
   
  描述如何从故障中恢复持久资源管理器。  
   
- [在访问资源的安全信任级别](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
+ [访问资源中的安全信任级别](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md)  
   
  描述 System.Transactions 的三种信任级别如何限制对 <xref:System.Transactions> 所公开的资源类型的访问。  
   
- [使用单阶段提交和可提升单个阶段通知的优化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [使用单阶段提交和可提升的单阶段通知进行优化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
   
  描述可用于实现资源管理器的最佳做法。

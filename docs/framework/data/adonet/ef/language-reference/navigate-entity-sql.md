@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6c82149fb5d76ac7b95198ce2b29550eade54b48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a860fae543e4d74e2b0569ed3672f3dc113f84c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 导航实体之间建立的关系。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/21/2017
 navigate(instance-expresssion, [relationship-type], [to-end [, from-end] ])  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `instance-expresssion`  
  一个实体的实例。  
   
@@ -87,6 +88,6 @@ From LOB.Customers as c
   
  [!code-csharp[DP EntityServices Concepts 2#NAVIGATE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#navigate)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [如何： 导航与关系导航运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)

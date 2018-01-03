@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2facb328791f07d6def2d466c799f031fe500d6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2eed4db8ee76d6f7bea8b0628219e858a1db9695
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>演练：仅使用存储过程 (Visual Basic)
 本演练提供了通过仅使用存储过程来访问数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 基本端对端方案。 数据库管理员经常使用此方法来限制数据存储的访问方式。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
  本演练是使用 Visual Basic 开发设置编写的。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本演练需要如下内容：  
   
 -   本演练使用专用文件夹（“c:\linqtest3”）来保存文件。 请在开始本演练前创建此文件夹。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  在**名称**框中，键入**SprocOnlyApp**。  
   
-5.  单击“确定”。  
+5.  单击 **“确定”**。  
   
      Windows 窗体设计器即会打开。  
   
@@ -200,6 +201,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-steps"></a>后续步骤  
  您可以通过做一些更改来增强此项目的功能。 例如，您可以在列表框中列出可用的存储过程，供用户选择要执行哪些过程。 您还可以将报告的输出以流的方式传输到文本文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
- [存储的过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+ [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

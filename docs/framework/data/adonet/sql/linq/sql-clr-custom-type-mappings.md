@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 82456bf5b892bc32a6eba0d3cf074b4adc76a305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0df2c3eea706bae92a9cbef9165c374e8efb368a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 自定义类型映射
 当使用 SQLMetal 命令行工具和对象关系设计器（O/R 设计器）时，将自动指定 SQL Server 与公共语言运行库 (CLR) 之间的类型映射。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="incorporating-database-changes"></a>合并数据库更改  
  更改数据库时，您需要更新 DBML 文件以反映这些更改。 完成此任务的一种方式是自动新建一个 DBML 文件，然后重新执行类型映射自定义。 或者，可以比较新 DBML 文件与自定义 DBML 文件之间的差异，并手动更新自定义 DBML 文件以反映数据库更改。  
   
-## <a name="see-also"></a>另请参阅  
- [SQL CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+## <a name="see-also"></a>请参阅  
+ [SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
  [LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

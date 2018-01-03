@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c254865800694af8eb754c3e8d4072688fd7e89a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4a3cc1f0c27af1ad41e14374b4c155e6b8620f28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="schema-restrictions"></a>架构限制
 第二个可选参数**GetSchema**方法是返回用于限制的架构信息量的限制，以及将其传递到**GetSchema**作为一个字符串数组的方法. 在数组中的位置确定可以传递的值，这等效于限制数。  
@@ -153,7 +154,7 @@ class Program
   
 |限制名称|参数名称|限制默认值|限制数|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|名称|@Name|名称|1|  
+|name|@Name|name|1|  
   
 ### <a name="tables"></a>表  
   
@@ -205,7 +206,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|名称|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |参数|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>过程  
@@ -214,7 +215,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Owner|@Owner|SPECIFIC_SCHEMA|2|  
-|名称|@Name|SPECIFIC_NAME|3|  
+|name|@Name|SPECIFIC_NAME|3|  
 |类型|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -249,7 +250,7 @@ class Program
 |Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Owner|@Owner|CONSTRAINT_SCHEMA|2|  
 |表|@Table|TABLE_NAME|3|  
-|名称|@Name|CONSTRAINT_NAME|4|  
+|name|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008       
  下表列出了 SQL Server 2008 架构集合的限制。 这些限制从 .NET Framework 版本 3.5 SP1 和 SQL Server 2008 开始生效。 .NET Framework 和 SQL Server 的早期版本不支持这些限制。  
@@ -271,5 +272,5 @@ class Program
 |表|@Table|TABLE_NAME|3|  
 |列|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

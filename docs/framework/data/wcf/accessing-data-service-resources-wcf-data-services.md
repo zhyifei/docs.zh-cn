@@ -19,11 +19,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c15ca5efcb23fa6705a4fcfa3eac6d6db09fcbad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dddbd9cf8e11f09cf1c2dc36db49281d00e97aac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>访问数据服务资源（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支持[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以将数据公开为与通过 Uri 进行寻址的资源的源。 这些资源表示的实体关系约定根据[实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，实体表示作为应用程序域中数据类型的数据操作单元，如客户、订单、项目和产品。 可以通过使用具象状态传输 (REST) 的语义（尤其是标准 HTTP 谓词 GET、PUT、POST 和 DELETE）访问和更改实体数据。  
@@ -106,5 +107,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
 ## <a name="consuming-the-returned-feed"></a>使用返回的源  
  URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]资源可以由服务公开的地址实体数据。 当 Web 浏览器的地址字段中输入 URI 时[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]返回源的表示形式所请求的资源。 有关详细信息，请参阅[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 尽管可以测试数据服务资源能否返回预期的数据，可以还创建、 更新和删除数据的生产数据服务通常会访问应用程序代码或网页中的语言的脚本编写的 Web 浏览器。 有关详细信息，请参阅[在客户端应用程序中使用数据服务](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Open Data Protocol 网站](http://go.microsoft.com/fwlink/?LinkID=182204)

@@ -14,11 +14,11 @@ ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65149c617220966bc3bb6897d757a71cd60167d6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fc5210d2dcf30d9c4603b67b890c78510af1338
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32icon"></a>/win32icon
 将.ico 文件插入到输出文件中。 此.ico 文件表示中的输出文件**文件资源管理器**。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/21/2017
 /win32icon:filename  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |---|---|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
 |在 Visual Studio IDE 中设置 /win32icon|  
 |---|  
-|1.在 “解决方案资源管理器”中选择一个项目。 在“项目”菜单上，单击“属性”。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。<br />2.单击“应用程序”  选项卡。<br />3.修改中的值**图标**框。|  
+|1.在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。 <br />2.单击“应用程序”  选项卡。<br />3.修改中的值**图标**框。|  
   
 ## <a name="example"></a>示例  
  下面的代码编译`In.vb`和将.ico 文件，附加`Rf.ico`。  
@@ -51,6 +51,6 @@ ms.lasthandoff: 11/21/2017
 vbc /win32icon:rf.ico in.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

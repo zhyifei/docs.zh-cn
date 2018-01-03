@@ -19,11 +19,11 @@ ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4634c198b5fc41a4834cbd3cd96f9d3f1863d09b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-infer-statement"></a>Option Infer 语句
 允许声明变量时使用局部类型推理。  
@@ -68,13 +68,13 @@ Option Infer 处于关闭状态时的 IntelliSense
   
 #### <a name="to-set-option-infer-in-the-ide"></a>若要在 IDE 中设置 Option Infer  
   
-1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。 有关详细信息，请参阅[NIB： 项目设计器用管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
+1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
   
 2.  单击“编译”选项卡。  
   
 3.  设置中的值**Option infer**框。  
   
- 当创建新项目， **Option Infer**上设置**编译**选项卡设置为**Option Infer**中设置**VB 默认值**对话框。 访问**VB 默认值**对话框中，在**工具**菜单上，单击**选项**。 在**选项**对话框框中，展开**项目和解决方案**，然后单击**VB 默认值**。 中的初始默认设置**VB 默认值**是`On`。  
+ 当创建新项目， **Option Infer**上设置**编译**选项卡设置为**Option Infer**中设置**VB 默认值**对话框。 访问**VB 默认值**对话框中，在**工具**菜单上，单击**选项**。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 中的初始默认设置**VB 默认值**是`On`。  
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>若要设置命令行上的 Option Infer  
   
@@ -100,7 +100,7 @@ Option Infer 处于关闭状态时的 IntelliSense
   
  [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
  [局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)  

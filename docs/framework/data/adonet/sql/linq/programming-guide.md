@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 03d4febc7e61425d0057c48949b18281ca3dec4b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 431fb89c31e670b6a35a0d8908351a7ea60ce7ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-guide"></a>编程指南
 本节包含有关如何创建和使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型的信息。 如果您使用的是 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，则还可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来执行这些任务中的许多任务。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/18/2017
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  提供指向一些主题的链接，这些主题阐释了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并演示了一些功能。  
   
- [存储的过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
+ [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  包含指向一些主题的链接，这些主题演示了如何使用存储过程。  
   
  [LINQ 简介](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  

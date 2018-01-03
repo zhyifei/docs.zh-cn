@@ -14,11 +14,11 @@ ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 13df7dc6b325b97411b910c0fc8e05e65a332dc5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 互操作介绍 (Visual Basic)
 组件对象模型 (COM) 允许到其他组件和承载应用程序公开其功能的对象。 COM 对象进行了 Windows 编程多年的基础，而应用程序面向公共语言运行时 (CLR) 提供了许多优点。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/09/2017
 ### <a name="importing-and-exporting-type-libraries"></a>导入和导出类型库  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]包含一个实用工具，Tlbimp，它允许你从类型库到导入信息[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。 通过使用 Tlbexp 实用程序，可以从程序集生成类型库。  
   
- 有关 Tlbimp 和 Tlbexp 的信息，请参阅[Tlbimp.exe （类型库导入程序）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)和[Tlbexp.exe （类型库导出程序）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)。  
+ 有关 Tlbimp 和 Tlbexp 的信息，请参阅[Tlbimp.exe （类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)和[Tlbexp.exe （类型库导出程序）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)。  
   
 ## <a name="interop-assemblies"></a>互操作程序集  
  互操作程序集是[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]代码的桥之间托管和非托管的程序集，映射到等效的 COM 对象成员[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]管理成员。 Visual Basic.net 创建的互操作程序集处理的许多使用 COM 对象，如互操作封送处理的详细信息。  
@@ -59,13 +59,13 @@ ms.lasthandoff: 12/09/2017
 ## <a name="interoperability-marshaling"></a>互操作封送处理  
  所有[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序共享的一组启用的对象，而不考虑使用的编程语言的互操作性的常见类型。 参数和返回值的 COM 对象有时使用不同于在托管代码中使用的数据类型。 *互操作封送处理*是打包参数和返回值为等效的数据类型的过程，因为它们移动到和从 COM 对象。 有关详细信息，请参阅[互操作封送处理](../../../framework/interop/interop-marshaling.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
  [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
+ [与非托管代码交互操作](../../../framework/interop/index.md)  
  [互操作性疑难解答](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Tlbimp.exe（类型库导入程序）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ [Tlbimp.exe（类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe（类型库导出程序）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [互操作封送处理](../../../framework/interop/interop-marshaling.md)  
  [免注册 COM 互操作](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

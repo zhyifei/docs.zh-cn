@@ -18,11 +18,11 @@ ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2575598577820bd7a72fae2d9b8ba52978f5952d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6ba5ce4b009e0d8c675db07b56b9811c595ae2f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 语句
 在类、 表单或文档中的模块级触发器事件的声明。  
@@ -35,7 +35,7 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>部件  
  `eventname`  
- 必需。 要触发的事件的名称。  
+ 必须的。 要触发的事件的名称。  
   
  `argumentlist`  
  可选。 变量、 数组或表达式的以逗号分隔列表。 `argumentlist`自变量必须括在圆括号。 如果不有任何自变量，必须省略括号。  
@@ -80,9 +80,9 @@ RaiseEvent eventname[( argumentlist )]
  按 f5 键以运行前面的示例中，并单击标记按钮**启动**。 第一个文本框中开始倒计时秒数。 经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。  
   
 > [!NOTE]
->  `My.Application.DoEvents`窗体一样方法不完全相同的方式中处理事件。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[线程处理](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)。  
+>  `My.Application.DoEvents`窗体一样方法不完全相同的方式中处理事件。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[线程处理](../../programming-guide/concepts/threading/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  
  [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
  [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)  

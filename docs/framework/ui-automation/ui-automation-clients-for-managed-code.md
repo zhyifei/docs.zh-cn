@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8142ef17bdfb78226e7a65376e132bad18bc258e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68ff7e03fe30ff61a35b20517ebaea73144ff621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>托管代码的 UI 自动化客户端
 > [!NOTE]
@@ -30,16 +31,16 @@ ms.lasthandoff: 10/18/2017
  本部分包含概述和帮助主题以帮助你开发 UI 自动化客户端。  
   
 ## <a name="in-this-section"></a>本节内容  
- [UI Automation and Screen Scaling](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [标准控件的 UI 自动化支持](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
+ [UI 自动化和屏幕缩放](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
+ [UI 自动化对标准控件的支持](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
  [客户端的 UI 自动化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
  [在 UI 自动化客户端中缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [客户端的 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
  [UI 自动化客户端的控件模式映射](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [获取 UI 自动化元素](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
  [UI 自动化线程处理问题](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [操作说明主题](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+ [帮助主题](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Automation>
