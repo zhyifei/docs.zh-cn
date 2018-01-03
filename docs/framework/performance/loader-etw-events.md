@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1643e5d645ec6c3ae35b2e57b8cb4f4bcb048379
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ebdee4427bd0848e75e58443fefd439acaa27f64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loader-etw-events"></a>加载程序 ETW 事件
 <a name="top"></a> 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/18/2017
   
  下表显示了事件信息。  
   
-|Event|事件 ID|说明|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|在加载程序集时引发。|  
 |`AssemblyUnload_V1`|155|在卸载程序集时引发。|  
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/18/2017
   
  下表显示了事件信息。  
   
-|Event|事件 ID|说明|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|在为应用程序域加载模块时引发。|  
 |`DomainModuleDCStart_V1`|151|在启动断开期间为应用程序域枚举加载的模块，并为所有应用程序域记录。|  
@@ -203,7 +204,7 @@ ms.lasthandoff: 10/18/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|如果加载了 CLR 的多个实例，则唯一标识进程中 CLR 的特定实例。|  
 |ModuleID|win:UInt64|标识此模块所属的程序集。|  
@@ -220,5 +221,5 @@ ms.lasthandoff: 10/18/2017
   
  在任何大于或等于 4 的 ETW 级别下引发模块范围事件，并将其归类为信息性事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2f8646fbb1c878e850d9bcda4e7117111dc825f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 92c4d7c6693e3a2a011cb4ac39b42a1d96985a36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink API（非托管 API 参考）
 支持创建 .NET Framework 程序集和未绑定模块。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/18/2017
   
  [AssemblyOptions 枚举](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
   
- [CreateALink 函数](../../../../docs/framework/unmanaged-api/alink/createalink-function.md)  
+ [CreateALink Function](../../../../docs/framework/unmanaged-api/alink/createalink-function.md)  
   
  [GetALinkMessageDll 函数](../../../../docs/framework/unmanaged-api/alink/getalinkmessagedll-function.md)  
   
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/18/2017
   
  [IALink3 接口](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [非托管 API 参考](../../../../docs/framework/unmanaged-api/index.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96304cdde766f264fcfbd0f4aa3cf168adf8422d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2891313c15b4003db5d50f2e9f2d461de9397dfc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>在单阶段和多阶段中提交事务
 事务中所使用的每个资源都由资源管理器 (RM) 进行管理，而资源管理器的操作则由事务管理器 (TM) 进行协调。 [作为参与者在事务中登记资源](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)主题讨论如何在事务中登记资源 （或多个资源）。 本主题讨论如何在已登记的资源之间协调事务提交。  
@@ -118,6 +119,6 @@ public void InDoubt (Enlistment enlistment)
 ## <a name="single-phase-commit-optimization"></a>单阶段提交优化  
  单阶段提交协议在运行时更有效，因为使用它，无需进行任何显式协调就可执行所有更新。 此协议的详细信息，请参阅[优化使用单阶段提交和可提升单个阶段通知](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [使用单阶段提交和可提升单个阶段通知的优化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [作为参与者在事务中登记资源](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+## <a name="see-also"></a>请参阅  
+ [使用单阶段提交和可提升的单阶段通知进行优化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [在事务中将资源登记为参与者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

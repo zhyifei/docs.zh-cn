@@ -49,11 +49,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳做法
 以下可靠性规则是面向 SQL Server 的；但是，它们也适用于任何基于主机的服务器应用程序。 对 SQL Server 等服务器而言，不泄露资源且不会遭遇停机是极其重要的。  然而，这不能通过为改变对象状态的每个方法写入退出代码来实现。  目标不在于编写出将结合退出代码从每个位置的错误进行恢复的 100% 可靠的托管代码。  那将是一项艰巨的任务，并且成功的可能性较小。  公共语言运行时 (CLR) 无法轻松地向托管代码提供足够强大的保证以使编写出完美的代码成为可行的做法。  请注意，不同于 ASP.NET，SQL Server 仅使用一个进程，在没有将数据库关闭相当长的一段时间的情况下，此进程是无法被回收的。  
@@ -286,6 +287,6 @@ public static MyClass SingletonProperty
   
  这样做将指示实时编译器首先在 finally 块中准备所有代码，然后才运行 `try` 块。 这保证代码会在 finally 块中生成并且将在所有情况下运行。 CER 中具有空 `try` 块的情况并不罕见。 使用 CER 防止出现异步线程中止和内存不足异常。 有关进一步为极深代码处理堆栈溢出的 CER 形式，请参阅 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.ConstrainedExecution>  
  [SQL Server 编程和主机保护特性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)

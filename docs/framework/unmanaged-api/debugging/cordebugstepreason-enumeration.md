@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 32892a14de820e8add38654cef92aa44930aec62
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 68c4f9452f8ccc9b4d48ee67755a311f32540247
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 枚举
 指示一个单步执行的结果。  
@@ -54,7 +55,7 @@ typedef enum CorDebugStepReason {
 |`STEP_INTERCEPT`|控件传递到侦听器。|  
 |`STEP_EXIT`|线程退出之前完成该步骤。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -63,6 +64,6 @@ typedef enum CorDebugStepReason {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [StepComplete 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
  [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

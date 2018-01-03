@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d5ec81864fca8ec9c83fd294f722e890f002e510
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6fc9a9b9e5eb739f50c8835a84c7514cf2c5038b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-code-sample-index"></a>WIF 代码示例索引
 以下是 Windows Identity Foundation 4.5 的代码示例：  
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/18/2017
   
 -   [CustomToken](http://go.microsoft.com/fwlink/?LinkID=248412) - 此示例演示如何生成自定义简单 Web 令牌 (SWT) 令牌类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows Identity Foundation](../../../docs/framework/security/index.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ffa3cb853a02af21ca1dd528174e560b8d830a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4998cc0c836cf46d79d854ad9a85e7eacf70d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lazy-initialization"></a>延迟初始化
 对象的迟缓初始化意味着推迟创建该对象，直到它被首次使用。 （在本主题中，术语迟缓初始化和迟缓实例化是同义词。）迟缓初始化主要用于提升性能、避免计算浪费和降低程序内存需求。 以下是常见方案：  
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/21/2017
   
  在此示例中，请注意循环的每次迭代都会调用初始化过程。 在多线程方案中，所有线程都会知道调用初始化过程的第一个线程的值。 后续线程也会调用初始化过程，但不会使用其值。 如果这种潜在的争用条件是不可接受的，请使用 <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> 的重载，获取布尔参数和同步对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)  
  [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)  
  [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  

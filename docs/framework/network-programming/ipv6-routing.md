@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 21edbfee91a759b0b48f9dd6c0c9e900cdff93f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7bfb79c5ab5406793a27f653b7e6a1abf2b2859
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ipv6-routing"></a>IPv6 路由
 灵活的路由机制是 IPv6 的优势之一。 由于 IPv4 网络 ID 以前和现在的分配方式，需要由 Internet 主干网上的路由器来维护大型路由表。 这些路由器必须了解所有路由，才能转发可能定向到 Internet 任何节点的数据包。 借助聚合地址的功能，IPv6 可以灵活寻址，并且大大减小路由表的大小。 在这种新型寻址体系结构中，中间路由器必须仅跟踪网络中的本地部分，才能恰当地转发消息。  
@@ -42,6 +43,6 @@ ms.lasthandoff: 11/21/2017
   
 -   重定向。 由路由器发送，以指示特定目标的下一个更好的跃点地址，用于发送节点。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [套接字](../../../docs/framework/network-programming/sockets.md)

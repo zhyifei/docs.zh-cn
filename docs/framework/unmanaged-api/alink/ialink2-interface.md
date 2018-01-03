@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cd350f7a215af4692bb2384012699812bc50528c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de0ff924e2c9ae20b9796fbcae2df0fd858295dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ialink2-interface"></a>IALink2 接口
 补充[IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)通过声明如运行较新的元数据接口的方法[IMetaDataEmit2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)。 此外，IALink2 声明通过原始 IALink 接口提供其他使用灵活的方法。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  [SetPEKind 方法](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
  [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [Al.exe（程序集链接器）](../../../../docs/framework/tools/al-exe-assembly-linker.md)

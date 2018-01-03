@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 71a5a2e4319debf1a4d8ddd08d7f0979443682b9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f7529c68e96f93ebbba9fc5e750e09331bda9699
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI 自动化对标准控件的支持
 > [!NOTE]
@@ -83,7 +84,7 @@ ms.lasthandoff: 10/18/2017
 |ToolbarWindow32|Separator|  
 |tooltips_class32|ToolTip|  
 |#32774|ToolTip|  
-|ReBarWindow32|ToolBar|  
+|ReBarWindow32|Toolbar|  
 |SysTreeView32|树|  
 |SysTreeView32|TreeItem|  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/18/2017
 |SysDateTimePick32|自定义|  
 |SysMonthCal32|Calendar|  
 |MS_WINNOTE|ToolTip|  
-|VBBubble|ToolTip|  
+|VBBubble|工具提示|  
 |ScrollBar（在用作独立控件时）|Slider|  
 |SuperGrid|自定义|  
   
@@ -177,5 +178,5 @@ ms.lasthandoff: 10/18/2017
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>另请参阅  
- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)
+## <a name="see-also"></a>请参阅  
+ [UI 自动化控件类型](../../../docs/framework/ui-automation/ui-automation-control-types.md)

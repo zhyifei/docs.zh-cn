@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 807452326193d193f3bc603ebc7b74a5a0f1c281
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cf48153454fbb2c24dc3f1cfe1f82deefa4ee723
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 方法
 使您能够指定或重置链接器使用在创建程序集时的清单文件。  
@@ -47,10 +48,10 @@ HRESULT SetManifestFile(
 ## <a name="remarks"></a>备注  
  要求提供 Win32ResBlob 之前调用此操作。 值`pszFile`参数是清单文件被读取其内容并将其放在 RT_MANIFEST ID 的 Win32 资源的名称。 通过使用 NULL 的参数调用时，将清除任何以前读取的清单。 这使另一个用于链接器的状态重置为的初始化时。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  需要 aLink.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IALink3 接口](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
  [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  

@@ -28,11 +28,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: faeb028733ef008f3862e95fde0412f51bf7d1c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 24494ec700054f73e83e8cb8c33bd86eb265b8e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework 中的网络跟踪
 .NET Framework 中的网络跟踪允许访问有关方法调用的信息，以及有关托管应用程序所生成的网络流量的信息。 此功能可用于调试正在开发的应用程序，也可用于分析已部署的应用程序。 可以自定义网络跟踪所提供的输出，以支持在开发时和在生产环境中的不同使用方案。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  当你在应用程序中启用网络跟踪后，此成员将输出跟踪信息。 有关详细信息，请参阅“网络跟踪”。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)  

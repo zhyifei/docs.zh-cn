@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b6eec726342381f7e3ec71aeedd2ff012bc6c3e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: adbdd005bba9e7276a77f2e78c53be43fdceffae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>托管代码的安全编码指南
 有些库代码需要调入非托管代码（如本机代码 API（如 Win32））。 因为这意味着超出托管代码的安全外围，所以需要适当小心。 如果你的代码在安全性方面是非特定的，你的代码和调用它的任何代码都必须具有非托管代码权限（指定了<xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ）。  
@@ -59,5 +60,5 @@ ms.lasthandoff: 10/18/2017
 |**本机**|在安全性方面是非特定的；即需要非托管代码的权限才可进行调用的非托管代码。 检查了安全性，此操作可阻止未经授权的调用方。|  
 |**不安全**|取消了安全性的、具有潜在危险的非托管代码入口点。 使用此类非托管代码时，开发人员应加倍小心，要确保其他保护措施到位以避免出现安全漏洞。 开发人员必须负责，因为此关键字覆盖安全系统。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

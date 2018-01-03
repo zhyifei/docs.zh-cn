@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd714a9e006f87a817ca931757aaaaed920f50f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>如何使用 WebRequest 类请求数据
 以下过程描述从服务器请求资源（如 Web 页或文件）所需的步骤。 资源必须由 URI 标识。  
@@ -181,7 +182,7 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 Internet 请求](../../../docs/framework/network-programming/creating-internet-requests.md)  
  [在网络上使用流](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
  [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15486a55fc15ba2cc3cc64db50f317b39dfd77bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的性能计数器
 本主题提供可在[性能监视器](http://technet.microsoft.com/library/cc749249.aspx)中找到的性能计数器列表。  
@@ -259,6 +260,6 @@ for (int i = 0; i < Array.Length; i++)
 |**堆栈审核深度**|显示在上次运行时代码访问安全检查期间的堆栈深度。 运行时代码访问安全检查通过审核堆栈执行。 此计数器不是平均值；它仅显示最后观测的值。|  
 |**运行时检查总数**|显示自应用程序启动以来执行的运行时代码访问安全检查的总数。 当调用方要求特定权限时，执行运行时代码访问安全检查。 运行时检查在调用方每次调用时都会执行，并会检查调用方的当前线程堆栈。 此计数器与“堆栈审阅深度”计数器一起使用时可指示安全检查出现的性能损失。|  
   
-## <a name="see-also"></a>另请参阅  
- [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
+## <a name="see-also"></a>请参阅  
+ [性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [运行时分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

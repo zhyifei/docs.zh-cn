@@ -17,11 +17,12 @@ caps.latest.revision: "62"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 10af8087eb72577dfabef261544cb2363ba17a0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9960c55e5a47271c0d7091deb61a29daa9ae3433
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI 自动化控件模式帮助主题
 > [!NOTE]
@@ -30,8 +31,8 @@ ms.lasthandoff: 10/18/2017
  本部分包含有关实现控件模式的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Expose the Content of a Table Using UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [使用 UI 自动化公开表的内容](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [获取受支持的 UI 自动化控件模式](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [获取使用 UI 自动化复选框的切换状态](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [使用 UI 自动化获取复选框的切换状态](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [使用 UI 自动化调用控件](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
  [移动 UI 自动化元素](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

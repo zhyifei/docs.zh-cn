@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 996da59640281c8584774fa9e66b42619753afb6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97db1cef60af267087e86f86ecd0a77021604642
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-transparent-code"></a>安全透明的代码
 <a name="top"></a>
@@ -114,6 +115,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="transparency-enforcement"></a>透明度强制  
  在计算透明度之前，不会强制执行透明度规则。 那时，如果违反了透明度规则，则将引发 <xref:System.InvalidOperationException>。 计算透明度的时间取决于多种因素，并且无法预测。 应尽可能晚地计算。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中，程序集级别的透明度计算比 .NET Framework 2.0 中发生得更快。 只能保证透明度计算将在需要的时间之前发生。 这类似于在编译某种方法且在该方法中检测到错误时实时 (JIT) 编译器将如何更改时间点。 如果你的代码没有透明度错误，则透明度计算是不可见的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全透明的代码，级别 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
  [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

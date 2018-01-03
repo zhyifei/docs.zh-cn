@@ -20,11 +20,12 @@ caps.latest.revision: "32"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bdc1a4f9afb8b1d7cf56b74a329353100accc46d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd4655524c74175d03191cbf7065177c10e3ddda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-transparent-code-level-1"></a>安全透明的代码，级别 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -138,6 +139,6 @@ public class B
   
  除 `Critical` 方法显式标记为安全关键之外，前面的代码都是透明的。 即使使用程序集级别的 <xref:System.Security.SecurityCriticalAttribute> 特性，透明度也是默认设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)  
  [安全更改](../../../docs/framework/security/security-changes.md)

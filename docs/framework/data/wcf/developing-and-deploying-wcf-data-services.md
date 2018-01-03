@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87a074b96583f44e8655c9efde145e28b490f6e9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34fd9bc3bf16446505caf12c6cfa4192ffb391c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>开发和部署 WCF 数据服务
 本主题提供有关开发和部署 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]的信息。 有关更多基本信息[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，请参阅[入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)和[概述](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)。  
@@ -129,7 +130,7 @@ ms.lasthandoff: 12/02/2017
   
 -   因为 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现，您可以使用 Windows Server AppFabric 来监视数据服务（它部署到在 Windows Server 上运行的 IIS）。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 有关使用 Windows Server AppFabric 监视数据服务，请参阅博文 [Tracking WCF Data Services with Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005)（使用 Windows Server AppFabric 跟踪 WCF 数据服务）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
- [保护 WCF 数据服务](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
+ [确保 WCF Data Services 的安全](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
  [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

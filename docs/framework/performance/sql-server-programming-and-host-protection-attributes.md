@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f163223842acd4539872ad1a0ff228a76e33870d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a775b1c4f8446e756301650dcc61e3ef378408f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 编程和宿主保护特性
 在 SQL Server 主机中加载和执行托管代码需要满足主机对代码访问安全性和主机资源保护的要求。  代码访问安全性要求由三个 SQL Server 权限集（SAFE、EXTERNAL-ACCESS 或 UNSAFE）其中之一指定。 在 SAFE 或 EXTERNAL-ACCESS 权限集内执行的代码必须避免某些类型或应用了 <xref:System.Security.Permissions.HostProtectionAttribute> 属性的成员。 <xref:System.Security.Permissions.HostProtectionAttribute> 不是可靠性保证的安全权限，因为它标识主机可能禁止的特定代码结构（类型或方法）。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 可执行有助于保护主机稳定性的编程模型。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 |代码访问安全性|仅执行|执行+访问外部资源|不受限制|  
 |编程模型限制|是|是|无限制|  
 |可验证性要求|是|是|No|  
-|调用本机代码的能力|No|No|是|  
+|调用本机代码的能力|No|否|是|  
   
  SAFE 是最可靠且安全的模式，在允许的编程模型方面具有相关限制。 SAFE 代码具有高可靠性和安全性功能。 SAFE 程序集有足够的权限来运行、执行计算，并有权访问本地数据库。 SAFE 程序集需要可验证类型安全，不允许调用非托管代码。  
   
@@ -83,6 +84,6 @@ ms.lasthandoff: 11/21/2017
   
  考虑到这些因素，SQL Server 不允许使用静态变量和静态数据成员。 对于 SAFE 和 EXTERNAL-ACCESS 程序集，SQL Server 将在 CREATE ASSEMBLY 时间检查程序集的元数据，如果发现使用静态数据成员和变量，则无法创建此类程序集。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Security.Permissions.HostProtectionAttribute>  
  <xref:System.Security.Permissions.HostProtectionResource>
