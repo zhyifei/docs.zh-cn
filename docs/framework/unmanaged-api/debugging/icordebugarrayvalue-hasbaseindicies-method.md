@@ -21,16 +21,17 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 256429bfed350181aa13ee2c119eb5c9541ce231
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b1aa7e263c4e6b1460e327869c0c6945cba65328
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugarrayvaluehasbaseindicies-method"></a><span data-ttu-id="ce084-102">ICorDebugArrayValue::HasBaseIndicies 方法</span><span class="sxs-lookup"><span data-stu-id="ce084-102">ICorDebugArrayValue::HasBaseIndicies Method</span></span>
-<span data-ttu-id="ce084-103">获取一个值，该值指示此数组的任何维度是否具有基索引为非零。</span><span class="sxs-lookup"><span data-stu-id="ce084-103">Gets a value that indicates whether any dimensions of this array have a base index of non-zero.</span></span>  
+# <a name="icordebugarrayvaluehasbaseindicies-method"></a><span data-ttu-id="55dd5-102">ICorDebugArrayValue::HasBaseIndicies 方法</span><span class="sxs-lookup"><span data-stu-id="55dd5-102">ICorDebugArrayValue::HasBaseIndicies Method</span></span>
+<span data-ttu-id="55dd5-103">获取一个值，该值指示此数组的任何维度是否具有基索引为非零。</span><span class="sxs-lookup"><span data-stu-id="55dd5-103">Gets a value that indicates whether any dimensions of this array have a base index of non-zero.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce084-104">语法</span><span class="sxs-lookup"><span data-stu-id="ce084-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55dd5-104">语法</span><span class="sxs-lookup"><span data-stu-id="55dd5-104">Syntax</span></span>  
   
 ```  
 HRESULT HasBaseIndicies (  
@@ -38,15 +39,15 @@ HRESULT HasBaseIndicies (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ce084-105">参数</span><span class="sxs-lookup"><span data-stu-id="ce084-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="55dd5-105">参数</span><span class="sxs-lookup"><span data-stu-id="55dd5-105">Parameters</span></span>  
  `pbHasBaseIndicies`  
- <span data-ttu-id="ce084-106">[out]一个布尔值，是一个指向`true`如果一个或多个维度的这`ICorDebugArrayValue`对象具有基索引为非零; 否则，布尔值为`false`。</span><span class="sxs-lookup"><span data-stu-id="ce084-106">[out] A pointer to a Boolean value that is `true` if one or more dimensions of this `ICorDebugArrayValue` object have a base index of non-zero; otherwise, the Boolean value is `false`.</span></span>  
+ <span data-ttu-id="55dd5-106">[out]一个布尔值，是一个指向`true`如果一个或多个维度的这`ICorDebugArrayValue`对象具有基索引为非零; 否则，布尔值为`false`。</span><span class="sxs-lookup"><span data-stu-id="55dd5-106">[out] A pointer to a Boolean value that is `true` if one or more dimensions of this `ICorDebugArrayValue` object have a base index of non-zero; otherwise, the Boolean value is `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce084-107">要求</span><span class="sxs-lookup"><span data-stu-id="ce084-107">Requirements</span></span>  
- <span data-ttu-id="ce084-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ce084-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55dd5-107">惠?</span><span class="sxs-lookup"><span data-stu-id="55dd5-107">Requirements</span></span>  
+ <span data-ttu-id="55dd5-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="55dd5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce084-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ce084-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="55dd5-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="55dd5-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ce084-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce084-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="55dd5-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55dd5-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ce084-111">**.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce084-111">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>
+ <span data-ttu-id="55dd5-111">**.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55dd5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>

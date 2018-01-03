@@ -21,16 +21,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cde844d0664f7dc7643ef60b65befa95f2d039e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5a2ed99c2a939d2b39f6b236165b79634f2fc2c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugevalgetthread-method"></a><span data-ttu-id="c694a-102">ICorDebugEval::GetThread 方法</span><span class="sxs-lookup"><span data-stu-id="c694a-102">ICorDebugEval::GetThread Method</span></span>
-<span data-ttu-id="c694a-103">获取在其中此评估正在执行，或将执行的线程。</span><span class="sxs-lookup"><span data-stu-id="c694a-103">Gets the thread in which this evaluation is executing or will execute.</span></span>  
+# <a name="icordebugevalgetthread-method"></a><span data-ttu-id="c9969-102">ICorDebugEval::GetThread 方法</span><span class="sxs-lookup"><span data-stu-id="c9969-102">ICorDebugEval::GetThread Method</span></span>
+<span data-ttu-id="c9969-103">获取在其中此评估正在执行，或将执行的线程。</span><span class="sxs-lookup"><span data-stu-id="c9969-103">Gets the thread in which this evaluation is executing or will execute.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c694a-104">语法</span><span class="sxs-lookup"><span data-stu-id="c694a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9969-104">语法</span><span class="sxs-lookup"><span data-stu-id="c9969-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThread (  
@@ -38,15 +39,15 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c694a-105">参数</span><span class="sxs-lookup"><span data-stu-id="c694a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c9969-105">参数</span><span class="sxs-lookup"><span data-stu-id="c9969-105">Parameters</span></span>  
  `ppThread`  
- <span data-ttu-id="c694a-106">[out]指向一个 ICorDebugThread 对象，表示线程的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="c694a-106">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
+ <span data-ttu-id="c9969-106">[out]指向一个 ICorDebugThread 对象，表示线程的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="c9969-106">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c694a-107">要求</span><span class="sxs-lookup"><span data-stu-id="c694a-107">Requirements</span></span>  
- <span data-ttu-id="c694a-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c694a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9969-107">惠?</span><span class="sxs-lookup"><span data-stu-id="c9969-107">Requirements</span></span>  
+ <span data-ttu-id="c9969-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c9969-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c694a-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c694a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c9969-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9969-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c694a-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c694a-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9969-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9969-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c694a-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c694a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c9969-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9969-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
