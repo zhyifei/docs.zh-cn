@@ -21,14 +21,15 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d1d869e56b6bfc1b09c40c1eabc5625e96a6d0a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 349fd87c75a2de175322bf114bd2ef9e160ed31b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="ca606-102">ICorDebugEditAndContinueSnapshot::SetILMap 方法</span><span class="sxs-lookup"><span data-stu-id="ca606-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
-<span data-ttu-id="ca606-103">`SetILMap` 已过时。</span><span class="sxs-lookup"><span data-stu-id="ca606-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="ca606-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="ca606-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="8ed86-102">ICorDebugEditAndContinueSnapshot::SetILMap 方法</span><span class="sxs-lookup"><span data-stu-id="8ed86-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
+<span data-ttu-id="8ed86-103">`SetILMap` 已过时。</span><span class="sxs-lookup"><span data-stu-id="8ed86-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="8ed86-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="8ed86-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca606-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ca606-105">See Also</span></span>  
- [<span data-ttu-id="ca606-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="ca606-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="8ed86-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="8ed86-105">See Also</span></span>  
+ [<span data-ttu-id="8ed86-106">调试接口</span><span class="sxs-lookup"><span data-stu-id="8ed86-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
