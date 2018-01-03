@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0293a20f5f735dd38b1d167ebc5057f645fa011a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8c20bb8a9841b5ebc7a4ca9b5463fe4c541c0a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-structures"></a>调试结构
 本节描述调试 API 使用的非托管结构。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
  [CLR_DEBUGGING_VERSION 结构](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)  
  出于调试目的，定义公共语言运行时 (CLR) 的产品版本。  
   
- [CodeChunkInfo 结构 1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
+ [CodeChunkInfo Structure1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)  
  表示内存中的单一代码块。  
   
  [CorDebugBlockingObject 结构](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)  

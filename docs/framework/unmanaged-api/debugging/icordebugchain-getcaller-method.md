@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c714f321dc3c400b980d2d95b4655786fea9543b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 17c55358a1d502ce5946617556222282ac4c4fca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller 方法
 获取调用链的链。  
@@ -47,7 +48,7 @@ HRESULT GetCaller (
 ## <a name="remarks"></a>备注  
  如果调用已跨线程封送处理，则在另一个线程，可能会调用链。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

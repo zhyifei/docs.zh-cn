@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6a40276b28f3d20428f0d7eb0556a762fdb56801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73966ffe89f0e84d5a516f20962472d900332faa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget 接口
 提供与公共语言运行时 (CLR) 目标项进行交互的方法。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |[GetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-getthreadcontext-method.md)|获取具有指定标识符的线程的上下文指针。|  
 |[GetTLSValue 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-gettlsvalue-method.md)|线程本地存储区 (TLS) 中获取一个值，指定线程的指定索引处。|  
 |[ReadVirtual 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-readvirtual-method.md)|从指定的虚拟内存地址的数据读入指定的缓冲区。|  
-|[请求方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|调用由公共语言运行时 (CLR) 数据访问服务以请求操作，如由实现定义。|  
+|[Request 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-request-method.md)|调用由公共语言运行时 (CLR) 数据访问服务以请求操作，如由实现定义。|  
 |[SetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-setthreadcontext-method.md)|设置目标进程中的指定线程的当前上下文。|  
 |[SetTLSValue 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-settlsvalue-method.md)|设置一个值以指定目标进程中线程的线程本地存储 (TLS)。|  
 |[WriteVirtual 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-writevirtual-method.md)|从指定的缓冲区写入指定的虚拟内存地址的数据。|  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>备注  
  API 客户端 （即调试器） 必须实现此接口为适合特定的目标项。 例如，活动进程的实现将不同于内存转储的。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** ClrData.idl、 ClrData.h  
@@ -56,6 +57,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRDataTarget2 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
  [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

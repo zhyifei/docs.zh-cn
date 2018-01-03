@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: da9f61bd9a652b4c8e340ddecdee4b48bbdb086e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5fa9de4482b674173dba6a8316491507330f6376
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus 方法
 对于类的每个方法，设置一个值，该值指示方法是否是由用户定义代码。  
@@ -47,7 +48,7 @@ HRESULT SetJMCStatus (
   
  `SetJMCStatus`如果它无法设置的值的任何方法，即使它已成功设置的值对于所有其他方法，则返回 S_FALSE HRESULT 的值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

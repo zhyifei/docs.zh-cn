@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a695bfc4b7575a1a56dfba3dca515321a07239cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b574d74de1e042ab50e52eb3bb2fe217801bf1eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive 方法
 获取一个值，该值指示当前正在执行此 ICorDebugEval 对象。  
@@ -42,7 +43,7 @@ HRESULT IsActive (
  `pbActive`  
  [out]指向一个值，指示此评估是否处于活动状态的指针。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
