@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 072e5d3ee444444ff9288ffc4243f4a61355f1a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0e71da40af57d00e4651c094ddad9c86fc6fe636
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="36b17-102">ICorDebugBoxValue::GetObject 方法</span><span class="sxs-lookup"><span data-stu-id="36b17-102">ICorDebugBoxValue::GetObject Method</span></span>
-<span data-ttu-id="36b17-103">获取已装箱的值。</span><span class="sxs-lookup"><span data-stu-id="36b17-103">Gets the boxed value.</span></span>  
+# <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="9fd7b-102">ICorDebugBoxValue::GetObject 方法</span><span class="sxs-lookup"><span data-stu-id="9fd7b-102">ICorDebugBoxValue::GetObject Method</span></span>
+<span data-ttu-id="9fd7b-103">获取已装箱的值。</span><span class="sxs-lookup"><span data-stu-id="9fd7b-103">Gets the boxed value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36b17-104">语法</span><span class="sxs-lookup"><span data-stu-id="36b17-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fd7b-104">语法</span><span class="sxs-lookup"><span data-stu-id="9fd7b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject (  
@@ -38,15 +39,15 @@ HRESULT GetObject (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="36b17-105">参数</span><span class="sxs-lookup"><span data-stu-id="36b17-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9fd7b-105">参数</span><span class="sxs-lookup"><span data-stu-id="9fd7b-105">Parameters</span></span>  
  `ppObject`  
- <span data-ttu-id="36b17-106">[out]指向一个 ICorDebugObjectValue 对象，表示装箱的值的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="36b17-106">[out] A pointer to the address of an ICorDebugObjectValue object that represents the boxed value.</span></span>  
+ <span data-ttu-id="9fd7b-106">[out]指向一个 ICorDebugObjectValue 对象，表示装箱的值的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="9fd7b-106">[out] A pointer to the address of an ICorDebugObjectValue object that represents the boxed value.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="36b17-107">要求</span><span class="sxs-lookup"><span data-stu-id="36b17-107">Requirements</span></span>  
- <span data-ttu-id="36b17-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="36b17-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fd7b-107">惠?</span><span class="sxs-lookup"><span data-stu-id="9fd7b-107">Requirements</span></span>  
+ <span data-ttu-id="9fd7b-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9fd7b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="36b17-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="36b17-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9fd7b-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9fd7b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="36b17-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36b17-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9fd7b-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9fd7b-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="36b17-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36b17-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9fd7b-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fd7b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

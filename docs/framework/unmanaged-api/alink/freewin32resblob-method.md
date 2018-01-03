@@ -19,16 +19,17 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ae7b01fee1460abfae8fc2f8f6c12a5f19d83b6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cdecedf319ad235bd635dd1d2edf600b0d00dbb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="freewin32resblob-method"></a><span data-ttu-id="bc468-102">FreeWin32ResBlob 方法</span><span class="sxs-lookup"><span data-stu-id="bc468-102">FreeWin32ResBlob Method</span></span>
-<span data-ttu-id="bc468-103">释放的 Win32 资源 blob 和关联的资源。</span><span class="sxs-lookup"><span data-stu-id="bc468-103">Releases the Win32 resource blob and associated resources.</span></span>  
+# <a name="freewin32resblob-method"></a><span data-ttu-id="2c281-102">FreeWin32ResBlob 方法</span><span class="sxs-lookup"><span data-stu-id="2c281-102">FreeWin32ResBlob Method</span></span>
+<span data-ttu-id="2c281-103">释放的 Win32 资源 blob 和关联的资源。</span><span class="sxs-lookup"><span data-stu-id="2c281-103">Releases the Win32 resource blob and associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc468-104">语法</span><span class="sxs-lookup"><span data-stu-id="bc468-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c281-104">语法</span><span class="sxs-lookup"><span data-stu-id="2c281-104">Syntax</span></span>  
   
 ```  
 HRESULT FreeWin32ResBlob(  
@@ -36,17 +37,17 @@ HRESULT FreeWin32ResBlob(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bc468-105">参数</span><span class="sxs-lookup"><span data-stu-id="bc468-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2c281-105">参数</span><span class="sxs-lookup"><span data-stu-id="2c281-105">Parameters</span></span>  
  `ppResBlob`  
- <span data-ttu-id="bc468-106">要释放的资源 blob。</span><span class="sxs-lookup"><span data-stu-id="bc468-106">The resource blob to be released.</span></span> <span data-ttu-id="bc468-107">此方法将 blob 指针分配给 NULL。</span><span class="sxs-lookup"><span data-stu-id="bc468-107">This method assigns the blob pointer to NULL.</span></span>  
+ <span data-ttu-id="2c281-106">要释放的资源 blob。</span><span class="sxs-lookup"><span data-stu-id="2c281-106">The resource blob to be released.</span></span> <span data-ttu-id="2c281-107">此方法将 blob 指针分配给 NULL。</span><span class="sxs-lookup"><span data-stu-id="2c281-107">This method assigns the blob pointer to NULL.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bc468-108">返回值</span><span class="sxs-lookup"><span data-stu-id="bc468-108">Return Value</span></span>  
- <span data-ttu-id="bc468-109">如果该方法成功，则返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="bc468-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2c281-108">返回值</span><span class="sxs-lookup"><span data-stu-id="2c281-108">Return Value</span></span>  
+ <span data-ttu-id="2c281-109">如果该方法成功，则返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="2c281-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc468-110">要求</span><span class="sxs-lookup"><span data-stu-id="bc468-110">Requirements</span></span>  
- <span data-ttu-id="bc468-111">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="bc468-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c281-110">惠?</span><span class="sxs-lookup"><span data-stu-id="2c281-110">Requirements</span></span>  
+ <span data-ttu-id="2c281-111">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="2c281-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc468-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bc468-112">See Also</span></span>  
- [<span data-ttu-id="bc468-113">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="bc468-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="bc468-114">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="bc468-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="bc468-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="bc468-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="2c281-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="2c281-112">See Also</span></span>  
+ [<span data-ttu-id="2c281-113">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="2c281-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="2c281-114">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="2c281-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="2c281-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="2c281-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
