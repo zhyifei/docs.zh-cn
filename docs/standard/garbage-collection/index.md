@@ -28,11 +28,14 @@ caps.latest.revision: "36"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1636bf1cf047e7505be7567f5b5061df25d899c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c8288473b25b3f3cd75666e1da0611dec37c3127
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="garbage-collection"></a>垃圾回收
 .NET 的垃圾回收器管理应用程序的内存分配和释放。 每当有对象新建时，公共语言运行时都会从托管堆为对象分配内存。 只要托管堆中有地址空间，运行时就会继续为新对象分配空间。 不过，内存并不是无限的。 垃圾回收器最终必须执行垃圾回收来释放一些内存。 垃圾回收器的优化引擎会根据所执行的分配来确定执行回收的最佳时机。 执行回收时，垃圾回收器会在托管堆中检查应用程序不再使用的对象，然后执行必要的操作来回收其内存。  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/18/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|标题|描述|  
 |-----------|-----------------|  
 |[垃圾回收的基础知识](../../../docs/standard/garbage-collection/fundamentals.md)|描述垃圾回收的工作原理、如何在托管堆上分配对象，以及其他核心概念。|  
 |[垃圾回收和性能](../../../docs/standard/garbage-collection/performance.md)|介绍了可用来诊断垃圾回收和性能问题的性能检查。|  
@@ -68,5 +71,5 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Cleaning Up Unmanaged Resources](../../../docs/standard/garbage-collection/unmanaged.md)（清理未托管资源）

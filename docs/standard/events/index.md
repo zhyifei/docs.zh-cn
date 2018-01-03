@@ -20,11 +20,14 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d5b5c8db7dc264185a5f58438ead83d4a65ec492
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
 .NET Framework 中的事件基于委托模型。 委托模型遵守观察者设计模式，使订阅者能够向提供方注册并接收相关通知。 事件发送方推送事件发生的通知，事件接收器接收该通知并定义对它的响应。 本文介绍委托模型的主要组件、如何在应用程序中使用事件以及如何在你的代码中实现事件。  
@@ -87,14 +90,14 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|标题|描述|  
 |-----------|-----------------|  
 |[如何：引发和使用事件](../../../docs/standard/events/how-to-raise-and-consume-events.md)|包含引发和使用事件的示例。|  
 |[如何：使用事件属性处理多个事件](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|演示如何使用事件属性处理多个事件。|  
 |[观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)|描述允许订阅者向提供方注册和接收通知的设计模式。|  
 |[如何：在 Web 窗体应用程序中使用事件](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|演示如何处理 Web 窗体控件引发的事件。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.EventHandler>  
  <xref:System.EventHandler%601>  
  <xref:System.EventArgs>  

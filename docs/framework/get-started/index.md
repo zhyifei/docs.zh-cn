@@ -12,11 +12,12 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7d84b55abd6c7d72c3a74d17b4f24d00e117a0c
-ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
+ms.workload: dotnet
+ms.openlocfilehash: 3295d17b0ef4650c38f264dfc785eee7a452be86
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="related-topics"></a>相关主题
 
-| 标题 | 说明 |
+| 标题 | 描述 |
 | ----- |------------ |
 | [概述](../../../docs/framework/get-started/overview.md) | 为构建面向 .NET Framework 的应用的开发人员提供详细信息。 |
 | [安装指南](../../../docs/framework/install/index.md) | 提供有关安装 .NET Framework 的信息。 |  

@@ -20,11 +20,12 @@ caps.latest.revision: "56"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: eee16adfaa38b9a616f47d8489d99d0d9714cbaa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c88aabf046ac720d14db3e68c8e04092188a7ef1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 本文有助于你开始部署应用程序的 .NET Framework。 大部分信息都是供开发人员、OEM 和企业管理人员使用的。 想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](~/docs/framework/install/index.md)。  
@@ -174,5 +175,5 @@ ms.lasthandoff: 10/18/2017
 |[部署互操作应用程序](../../../docs/framework/interop/deploying-an-interop-application.md)|说明如何传送和安装互操作应用程序，通常包括 .NET Framework 客户端程序集、表示区分 COM 类型库的一个或多个互操作程序集以及一个或多个已注册的 COM 组件。|  
 |[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开发指南](../../../docs/framework/development-guide.md)

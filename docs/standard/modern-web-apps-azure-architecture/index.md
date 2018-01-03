@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 93a74bb7ba537d3c7c0291f7903112dc470133a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 44864274a86634c0199885b5507124f2f54ce0f6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 
 使用 Microsoft Azure 中托管的 ASP.NET Core 生成 web 应用程序，与传统替代方法相比，这能提供许多竞争优势。 ASP.NET Core 针对新式 web 应用程序开发做法和云托管方案进行了优化。 本指南介绍如何构建 ASP.NET Core 应用程序，充分利用这些功能。
 
-## <a name="purpose"></a>用途
+## <a name="purpose"></a>目标
 
 本指南提供了使用 ASP.NET Core 和 Azure 构建单片 web 应用程序的端到端指导。
 

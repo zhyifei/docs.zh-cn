@@ -20,11 +20,14 @@ caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
 文件和流 I/O（输入/输出）是指在存储媒介中传入或传出数据。 在 .NET Framework 中，[System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) 命名空间包含允许以异步方式和同步方式对数据流和文件进行读取和写入操作的类型。 这些命名空间还包含对文件执行压缩和解压缩的类型，以及通过管道和串行端口启用通信的类型。  
@@ -125,7 +128,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="isolated-storage"></a>独立存储  
  独立存储是一种数据存储机制，它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。 存储提供按用户、程序集和（可选）域隔离的虚拟文件系统。 当你的应用程序无权访问用户文件时，独立存储特别有用。 你可以通过一种由计算机的安全策略控制的方式保存应用程序的设置或文件。  
   
- 独立存储不可用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用；请改用 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空间中的应用程序数据类。 有关详细信息，请参阅 Windows 开发人员中心中的[应用程序数据](http://go.microsoft.com/fwlink/?LinkId=229175)。  
+ 独立存储不可用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用；请改用 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空间中的应用程序数据类。 有关详细信息，请参阅 Windows 开发人员中心的 [应用程序数据](http://go.microsoft.com/fwlink/?LinkId=229175) 。  
   
  在实现独立存储时，经常使用以下类：  
   

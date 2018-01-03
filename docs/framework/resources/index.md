@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 24b23d3fd4d3c318fd2fad36bbbbe0cb065db453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8fa1521a5516a4be18352c1bce6abf93e40287f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-in-desktop-apps"></a>桌面应用程序中的资源
 几乎每一个生产性应用都需要使用资源。 资源是在逻辑上随应用部署的任何不可执行的数据。 资源可以在应用中作为错误消息显示，或者作为用户界面的一部分显示。 资源可以包含多种形式的数据，包括字符串、图像和持久的对象。 （若要将持久对象写入资源文件，这些对象必须是可序列化的。）通过在资源文件中存储数据，无需重新编译整个应用即可更改这些数据。 还可以将数据存储在一个位置，而无需依赖存储在多个位置的硬编码数据。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Resources.ResXResourceSet> 类 - 可用于将 XML 资源文件中的所有项目都检索到内存中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Globalization.CultureInfo>  
  <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
  [应用程序要点](../../../docs/standard/application-essentials.md)  

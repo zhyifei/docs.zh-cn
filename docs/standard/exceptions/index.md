@@ -21,11 +21,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 82e314dacc9fb2657a3a7088a928b59d00282a5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中处理和引发异常
 
@@ -65,12 +68,12 @@ ms.lasthandoff: 10/21/2017
 | <xref:System.ArgumentNullException> | <xref:System.Exception> | 由不允许参数为 null 的方法引发。 | `String s = null; "Calculate".IndexOf (s);` |
 | <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | 由验证自变量是否位于给定范围内的方法引发。 | `String s = "string"; s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 * [异常类和属性](exception-class-and-properties.md)
 * [如何：使用 Try-Catch 块捕捉异常](how-to-use-the-try-catch-block-to-catch-exceptions.md)
 * [如何：在 Catch 块中使用特定异常](how-to-use-specific-exceptions-in-a-catch-block.md)
-* [如何：显式引发异常](how-to-explicitly-throw-exceptions.md)
+* [如何显式引发异常](how-to-explicitly-throw-exceptions.md)
 * [如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)
 * [使用用户筛选的异常处理程序](using-user-filtered-exception-handlers.md)
 * [如何：使用 Finally 块](how-to-use-finally-blocks.md)
