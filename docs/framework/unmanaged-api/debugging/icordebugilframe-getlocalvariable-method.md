@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 24b4ed62c3fb68306683d2199f901ec510f0da6d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9694ee2e27d8789b661abc7393a480411c2b0191
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable 方法
 此 Microsoft 中间语言 (MSIL) 堆栈帧中获取指定的本地变量的值。  
@@ -49,7 +50,7 @@ HRESULT GetLocalVariable (
 ## <a name="remarks"></a>备注  
  `GetLocalVariable` MSIL 堆栈帧中或实时 (JIT) 编译框架中，可以使用方法。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
