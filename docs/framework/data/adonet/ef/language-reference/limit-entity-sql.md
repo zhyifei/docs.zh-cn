@@ -13,41 +13,42 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c890bf6950f94c04350902276193f5a43239f63f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 24c5dd3dbe215133de98068be53ad17620ce95c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="limit-entity-sql"></a><span data-ttu-id="6f8ec-102">LIMIT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="6f8ec-102">LIMIT (Entity SQL)</span></span>
-<span data-ttu-id="6f8ec-103">在 ORDER BY 子句中使用 LIMIT 子子句可执行物理分页。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-103">Physical paging can be performed by using LIMIT sub-clause in ORDER BY clause.</span></span> <span data-ttu-id="6f8ec-104">LIMIT 不能脱离 ORDER BY 子句单独使用。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-104">LIMIT can not be used separately from ORDER BY clause.</span></span>  
+# <a name="limit-entity-sql"></a><span data-ttu-id="dfde4-102">LIMIT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="dfde4-102">LIMIT (Entity SQL)</span></span>
+<span data-ttu-id="dfde4-103">在 ORDER BY 子句中使用 LIMIT 子子句可执行物理分页。</span><span class="sxs-lookup"><span data-stu-id="dfde4-103">Physical paging can be performed by using LIMIT sub-clause in ORDER BY clause.</span></span> <span data-ttu-id="dfde4-104">LIMIT 不能脱离 ORDER BY 子句单独使用。</span><span class="sxs-lookup"><span data-stu-id="dfde4-104">LIMIT can not be used separately from ORDER BY clause.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f8ec-105">语法</span><span class="sxs-lookup"><span data-stu-id="6f8ec-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfde4-105">语法</span><span class="sxs-lookup"><span data-stu-id="dfde4-105">Syntax</span></span>  
   
 ```  
 [ LIMIT n ]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6f8ec-106">参数</span><span class="sxs-lookup"><span data-stu-id="6f8ec-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="dfde4-106">自变量</span><span class="sxs-lookup"><span data-stu-id="dfde4-106">Arguments</span></span>  
  `n`  
- <span data-ttu-id="6f8ec-107">将选择的项的数量。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-107">The number of items that will be selected.</span></span>  
+ <span data-ttu-id="dfde4-107">将选择的项的数量。</span><span class="sxs-lookup"><span data-stu-id="dfde4-107">The number of items that will be selected.</span></span>  
   
- <span data-ttu-id="6f8ec-108">如果 ORDER BY 子句中存在 LIMIT 表达式子子句，则将根据排序规范对查询排序，并且结果行数将受到 LIMIT 表达式限制。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-108">If a LIMIT expression sub-clause is present in an ORDER BY clause, the query will be sorted according to the sort specification and the resulting number of rows will be restricted by the LIMIT expression.</span></span> <span data-ttu-id="6f8ec-109">例如，LIMIT 5 将结果集限制为 5 个实例或行。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-109">For instance, LIMIT 5 will restrict the result set to 5 instances or rows.</span></span> <span data-ttu-id="6f8ec-110">LIMIT 的功能与 TOP 相当，区别之处是 LIMIT 要求 ORDER BY 子句存在。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-110">LIMIT is functionally equivalent to TOP with the exception that LIMIT requires ORDER BY clause to be present.</span></span> <span data-ttu-id="6f8ec-111">SKIP 和 LIMIT 可独立与 ORDER BY 子句一起使用。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-111">SKIP and LIMIT can be used independently along with ORDER BY clause.</span></span>  
+ <span data-ttu-id="dfde4-108">如果 ORDER BY 子句中存在 LIMIT 表达式子子句，则将根据排序规范对查询排序，并且结果行数将受到 LIMIT 表达式限制。</span><span class="sxs-lookup"><span data-stu-id="dfde4-108">If a LIMIT expression sub-clause is present in an ORDER BY clause, the query will be sorted according to the sort specification and the resulting number of rows will be restricted by the LIMIT expression.</span></span> <span data-ttu-id="dfde4-109">例如，LIMIT 5 将结果集限制为 5 个实例或行。</span><span class="sxs-lookup"><span data-stu-id="dfde4-109">For instance, LIMIT 5 will restrict the result set to 5 instances or rows.</span></span> <span data-ttu-id="dfde4-110">LIMIT 的功能与 TOP 相当，区别之处是 LIMIT 要求 ORDER BY 子句存在。</span><span class="sxs-lookup"><span data-stu-id="dfde4-110">LIMIT is functionally equivalent to TOP with the exception that LIMIT requires ORDER BY clause to be present.</span></span> <span data-ttu-id="dfde4-111">SKIP 和 LIMIT 可独立与 ORDER BY 子句一起使用。</span><span class="sxs-lookup"><span data-stu-id="dfde4-111">SKIP and LIMIT can be used independently along with ORDER BY clause.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6f8ec-112">如果 TOP 修饰符和 SKIP 子子句出现在同一个查询表达式中，Entity SQL 查询将被视为无效。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-112">An Entity Sql query will be considered invalid if TOP modifier and SKIP sub-clause is present in the same query expression.</span></span> <span data-ttu-id="6f8ec-113">应重写查询，将 TOP 表达式更改为 LIMIT 表达式。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-113">The query should be rewritten by changing TOP expression to LIMIT expression.</span></span>  
+>  <span data-ttu-id="dfde4-112">如果 TOP 修饰符和 SKIP 子子句出现在同一个查询表达式中，Entity SQL 查询将被视为无效。</span><span class="sxs-lookup"><span data-stu-id="dfde4-112">An Entity Sql query will be considered invalid if TOP modifier and SKIP sub-clause is present in the same query expression.</span></span> <span data-ttu-id="dfde4-113">应重写查询，将 TOP 表达式更改为 LIMIT 表达式。</span><span class="sxs-lookup"><span data-stu-id="dfde4-113">The query should be rewritten by changing TOP expression to LIMIT expression.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6f8ec-114">示例</span><span class="sxs-lookup"><span data-stu-id="6f8ec-114">Example</span></span>  
- <span data-ttu-id="6f8ec-115">下面的 Entity SQL 查询将 LIMIT 和 ORDER BY 运算符结合使用来指定用于 SELECT 语句所返回的对象的排序顺序。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-115">The following Entity SQL query uses the ORDER BY operator with LIMIT to specify the sort order used on objects returned in a SELECT statement.</span></span> <span data-ttu-id="6f8ec-116">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="6f8ec-117">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="6f8ec-117">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="dfde4-114">示例</span><span class="sxs-lookup"><span data-stu-id="dfde4-114">Example</span></span>  
+ <span data-ttu-id="dfde4-115">下面的 Entity SQL 查询将 LIMIT 和 ORDER BY 运算符结合使用来指定用于 SELECT 语句所返回的对象的排序顺序。</span><span class="sxs-lookup"><span data-stu-id="dfde4-115">The following Entity SQL query uses the ORDER BY operator with LIMIT to specify the sort order used on objects returned in a SELECT statement.</span></span> <span data-ttu-id="dfde4-116">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="dfde4-116">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="dfde4-117">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="dfde4-117">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="6f8ec-118">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="6f8ec-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="dfde4-118">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="dfde4-118">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="6f8ec-119">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="6f8ec-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="dfde4-119">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="dfde4-119">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#LIMIT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#limit)]  
   
-## <a name="see-also"></a><span data-ttu-id="6f8ec-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6f8ec-120">See Also</span></span>  
- [<span data-ttu-id="6f8ec-121">ORDER BY</span><span class="sxs-lookup"><span data-stu-id="6f8ec-121">ORDER BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
- [<span data-ttu-id="6f8ec-122">如何： 查询结果分页</span><span class="sxs-lookup"><span data-stu-id="6f8ec-122">How to: Page Through Query Results</span></span>](http://msdn.microsoft.com/en-us/ffc0f920-e7de-42e0-9b12-ef356421d030)  
- [<span data-ttu-id="6f8ec-123">分页</span><span class="sxs-lookup"><span data-stu-id="6f8ec-123">Paging</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
- [<span data-ttu-id="6f8ec-124">返回页首</span><span class="sxs-lookup"><span data-stu-id="6f8ec-124">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="dfde4-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="dfde4-120">See Also</span></span>  
+ [<span data-ttu-id="dfde4-121">ORDER BY</span><span class="sxs-lookup"><span data-stu-id="dfde4-121">ORDER BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
+ [<span data-ttu-id="dfde4-122">如何： 查询结果分页</span><span class="sxs-lookup"><span data-stu-id="dfde4-122">How to: Page Through Query Results</span></span>](http://msdn.microsoft.com/en-us/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [<span data-ttu-id="dfde4-123">分页</span><span class="sxs-lookup"><span data-stu-id="dfde4-123">Paging</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
+ [<span data-ttu-id="dfde4-124">TOP</span><span class="sxs-lookup"><span data-stu-id="dfde4-124">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

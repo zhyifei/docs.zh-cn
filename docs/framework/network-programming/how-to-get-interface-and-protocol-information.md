@@ -13,16 +13,17 @@ caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 968727dbdc8897ebe3f88af2f7b7c28c481d8783
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 20bee2f0d6821c8abec08231e9ab0b8fdb211854
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="35457-102">如何：获取接口和协议信息</span><span class="sxs-lookup"><span data-stu-id="35457-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="35457-103">此示例演示如何读取网络接口的 TCP 统计信息。</span><span class="sxs-lookup"><span data-stu-id="35457-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="571b7-102">如何：获取接口和协议信息</span><span class="sxs-lookup"><span data-stu-id="571b7-102">How to: Get Interface and Protocol Information</span></span>
+<span data-ttu-id="571b7-103">此示例演示如何读取网络接口的 TCP 统计信息。</span><span class="sxs-lookup"><span data-stu-id="571b7-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="35457-104">示例</span><span class="sxs-lookup"><span data-stu-id="35457-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="571b7-104">示例</span><span class="sxs-lookup"><span data-stu-id="571b7-104">Example</span></span>  
   
 ```  
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
@@ -77,7 +78,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="35457-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="35457-105">Compiling the Code</span></span>  
- <span data-ttu-id="35457-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="35457-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="571b7-105">编译代码</span><span class="sxs-lookup"><span data-stu-id="571b7-105">Compiling the Code</span></span>  
+ <span data-ttu-id="571b7-106">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="571b7-106">This example requires:</span></span>  
   
--   <span data-ttu-id="35457-107">引用 System.Net 命名空间。</span><span class="sxs-lookup"><span data-stu-id="35457-107">References to the **System.Net** namespace.</span></span>
+-   <span data-ttu-id="571b7-107">引用 System.Net 命名空间。</span><span class="sxs-lookup"><span data-stu-id="571b7-107">References to the **System.Net** namespace.</span></span>

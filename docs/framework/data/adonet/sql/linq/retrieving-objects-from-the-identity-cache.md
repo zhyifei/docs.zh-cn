@@ -16,31 +16,32 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d078476e881c3823d7772a9db4cdbdb23dac8bb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8497f728019c97bb59162d39a9f77e34e4e6f3c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="retrieving-objects-from-the-identity-cache"></a><span data-ttu-id="23f06-102">从实体缓存检索对象</span><span class="sxs-lookup"><span data-stu-id="23f06-102">Retrieving Objects from the Identity Cache</span></span>
-<span data-ttu-id="23f06-103">本主题介绍从 <xref:System.Data.Linq.DataContext> 管理的标识缓存中返回对象的 LINQ to SQL 查询类型。</span><span class="sxs-lookup"><span data-stu-id="23f06-103">This topic describes the types of LINQ to SQL queries that return an object from the identity cache that is managed by the <xref:System.Data.Linq.DataContext>.</span></span>  
+# <a name="retrieving-objects-from-the-identity-cache"></a><span data-ttu-id="b6904-102">从实体缓存检索对象</span><span class="sxs-lookup"><span data-stu-id="b6904-102">Retrieving Objects from the Identity Cache</span></span>
+<span data-ttu-id="b6904-103">本主题介绍从 <xref:System.Data.Linq.DataContext> 管理的标识缓存中返回对象的 LINQ to SQL 查询类型。</span><span class="sxs-lookup"><span data-stu-id="b6904-103">This topic describes the types of LINQ to SQL queries that return an object from the identity cache that is managed by the <xref:System.Data.Linq.DataContext>.</span></span>  
   
- <span data-ttu-id="23f06-104">在 LINQ to SQL 中，<xref:System.Data.Linq.DataContext> 管理对象的一种方法是在执行查询时将对象标识记录到标识缓存中。</span><span class="sxs-lookup"><span data-stu-id="23f06-104">In LINQ to SQL, one of the ways in which the <xref:System.Data.Linq.DataContext> manages objects is by logging object identities in an identity cache as queries are executed.</span></span> <span data-ttu-id="23f06-105">在有些情况下，LINQ to SQL 将先尝试从标识缓存中检索对象，然后再在数据库中执行查询。</span><span class="sxs-lookup"><span data-stu-id="23f06-105">In some cases, LINQ to SQL will attempt to retrieve an object from the identity cache before executing a query in the database.</span></span>  
+ <span data-ttu-id="b6904-104">在 LINQ to SQL 中，<xref:System.Data.Linq.DataContext> 管理对象的一种方法是在执行查询时将对象标识记录到标识缓存中。</span><span class="sxs-lookup"><span data-stu-id="b6904-104">In LINQ to SQL, one of the ways in which the <xref:System.Data.Linq.DataContext> manages objects is by logging object identities in an identity cache as queries are executed.</span></span> <span data-ttu-id="b6904-105">在有些情况下，LINQ to SQL 将先尝试从标识缓存中检索对象，然后再在数据库中执行查询。</span><span class="sxs-lookup"><span data-stu-id="b6904-105">In some cases, LINQ to SQL will attempt to retrieve an object from the identity cache before executing a query in the database.</span></span>  
   
- <span data-ttu-id="23f06-106">通常，如果 LINQ to SQL 查询要从标识缓存中返回对象，该查询必须基于对象的主键，并且必须返回单一对象。</span><span class="sxs-lookup"><span data-stu-id="23f06-106">In general, for a LINQ to SQL query to return an object from the identity cache, the query must be based on the primary key of an object and must return a single object.</span></span> <span data-ttu-id="23f06-107">特别是，该查询必须具有下面显示的常规形式之一。</span><span class="sxs-lookup"><span data-stu-id="23f06-107">In particular, the query must be in one of the general forms shown below.</span></span>  
+ <span data-ttu-id="b6904-106">通常，如果 LINQ to SQL 查询要从标识缓存中返回对象，该查询必须基于对象的主键，并且必须返回单一对象。</span><span class="sxs-lookup"><span data-stu-id="b6904-106">In general, for a LINQ to SQL query to return an object from the identity cache, the query must be based on the primary key of an object and must return a single object.</span></span> <span data-ttu-id="b6904-107">特别是，该查询必须具有下面显示的常规形式之一。</span><span class="sxs-lookup"><span data-stu-id="b6904-107">In particular, the query must be in one of the general forms shown below.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="23f06-108">预编译的查询不会从标识缓存中返回对象。</span><span class="sxs-lookup"><span data-stu-id="23f06-108">Pre-compiled queries will not return objects from the identity cache.</span></span> <span data-ttu-id="23f06-109">有关预编译的查询的详细信息，请参阅<xref:System.Data.Linq.CompiledQuery>和[如何： 存储和重复使用查询](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="23f06-109">For more information about pre-compiled queries, see <xref:System.Data.Linq.CompiledQuery> and [How to: Store and Reuse Queries](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).</span></span>  
+>  <span data-ttu-id="b6904-108">预编译的查询不会从标识缓存中返回对象。</span><span class="sxs-lookup"><span data-stu-id="b6904-108">Pre-compiled queries will not return objects from the identity cache.</span></span> <span data-ttu-id="b6904-109">有关预编译的查询的详细信息，请参阅<xref:System.Data.Linq.CompiledQuery>和[如何： 存储和重复使用查询](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)。</span><span class="sxs-lookup"><span data-stu-id="b6904-109">For more information about pre-compiled queries, see <xref:System.Data.Linq.CompiledQuery> and [How to: Store and Reuse Queries](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).</span></span>  
   
- <span data-ttu-id="23f06-110">查询必须具有以下常规形式之一，才能从标识缓存中检索对象：</span><span class="sxs-lookup"><span data-stu-id="23f06-110">A query must be in one of the following general forms to retrieve an object from the identity cache:</span></span>  
+ <span data-ttu-id="b6904-110">查询必须具有以下常规形式之一，才能从标识缓存中检索对象：</span><span class="sxs-lookup"><span data-stu-id="b6904-110">A query must be in one of the following general forms to retrieve an object from the identity cache:</span></span>  
   
--   <span data-ttu-id="23f06-111"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`</span><span class="sxs-lookup"><span data-stu-id="23f06-111"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`</span></span>  
+-   <span data-ttu-id="b6904-111"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`</span><span class="sxs-lookup"><span data-stu-id="b6904-111"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`</span></span>  
   
--   <span data-ttu-id="23f06-112"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`</span><span class="sxs-lookup"><span data-stu-id="23f06-112"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`</span></span>  
+-   <span data-ttu-id="b6904-112"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`</span><span class="sxs-lookup"><span data-stu-id="b6904-112"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`</span></span>  
   
- <span data-ttu-id="23f06-113">在这些常规形式中，`Function1`、`Function2` 和 `predicate` 定义如下。</span><span class="sxs-lookup"><span data-stu-id="23f06-113">In these general forms, `Function1`, `Function2`, and `predicate` are defined as follows.</span></span>  
+ <span data-ttu-id="b6904-113">在这些常规形式中，`Function1`、`Function2` 和 `predicate` 定义如下。</span><span class="sxs-lookup"><span data-stu-id="b6904-113">In these general forms, `Function1`, `Function2`, and `predicate` are defined as follows.</span></span>  
   
- <span data-ttu-id="23f06-114">`Function1` 可以是以下任意形式：</span><span class="sxs-lookup"><span data-stu-id="23f06-114">`Function1` can be any of the following:</span></span>  
+ <span data-ttu-id="b6904-114">`Function1` 可以是以下任意形式：</span><span class="sxs-lookup"><span data-stu-id="b6904-114">`Function1` can be any of the following:</span></span>  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- <span data-ttu-id="23f06-115">`Function2` 可以是以下任意形式：</span><span class="sxs-lookup"><span data-stu-id="23f06-115">`Function2` can be any of the following:</span></span>  
+ <span data-ttu-id="b6904-115">`Function2` 可以是以下任意形式：</span><span class="sxs-lookup"><span data-stu-id="b6904-115">`Function2` can be any of the following:</span></span>  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -62,20 +63,20 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- <span data-ttu-id="23f06-116">`predicate` 必须是一个表达式，并且其中对象的主键属性必须设置为常量值。</span><span class="sxs-lookup"><span data-stu-id="23f06-116">`predicate` must be an expression in which the object's primary key property is set to a constant value.</span></span> <span data-ttu-id="23f06-117">如果对象的主键由多个属性定义，则每个主键属性都必须设置为常量值。</span><span class="sxs-lookup"><span data-stu-id="23f06-117">If an object has a primary key defined by more than one property, each primary key property must be set to a constant value.</span></span> <span data-ttu-id="23f06-118">下面的示例是 `predicate` 必须采用的形式：</span><span class="sxs-lookup"><span data-stu-id="23f06-118">The following are examples of the form `predicate` must take:</span></span>  
+ <span data-ttu-id="b6904-116">`predicate` 必须是一个表达式，并且其中对象的主键属性必须设置为常量值。</span><span class="sxs-lookup"><span data-stu-id="b6904-116">`predicate` must be an expression in which the object's primary key property is set to a constant value.</span></span> <span data-ttu-id="b6904-117">如果对象的主键由多个属性定义，则每个主键属性都必须设置为常量值。</span><span class="sxs-lookup"><span data-stu-id="b6904-117">If an object has a primary key defined by more than one property, each primary key property must be set to a constant value.</span></span> <span data-ttu-id="b6904-118">下面的示例是 `predicate` 必须采用的形式：</span><span class="sxs-lookup"><span data-stu-id="b6904-118">The following are examples of the form `predicate` must take:</span></span>  
   
 -   `c => c.PK == constant_value`  
   
 -   `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
-## <a name="example"></a><span data-ttu-id="23f06-119">示例</span><span class="sxs-lookup"><span data-stu-id="23f06-119">Example</span></span>  
- <span data-ttu-id="23f06-120">下面的代码提供了从标识缓存中检索对象的 LINQ to SQL 查询类型的示例。</span><span class="sxs-lookup"><span data-stu-id="23f06-120">The following code provides examples of the types of LINQ to SQL queries that retrieve an object from the identity cache.</span></span>  
+## <a name="example"></a><span data-ttu-id="b6904-119">示例</span><span class="sxs-lookup"><span data-stu-id="b6904-119">Example</span></span>  
+ <span data-ttu-id="b6904-120">下面的代码提供了从标识缓存中检索对象的 LINQ to SQL 查询类型的示例。</span><span class="sxs-lookup"><span data-stu-id="b6904-120">The following code provides examples of the types of LINQ to SQL queries that retrieve an object from the identity cache.</span></span>  
   
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="23f06-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="23f06-121">See Also</span></span>  
- [<span data-ttu-id="23f06-122">查询概念</span><span class="sxs-lookup"><span data-stu-id="23f06-122">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [<span data-ttu-id="23f06-123">对象标识</span><span class="sxs-lookup"><span data-stu-id="23f06-123">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [<span data-ttu-id="23f06-124">背景信息</span><span class="sxs-lookup"><span data-stu-id="23f06-124">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [<span data-ttu-id="23f06-125">对象标识</span><span class="sxs-lookup"><span data-stu-id="23f06-125">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a><span data-ttu-id="b6904-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="b6904-121">See Also</span></span>  
+ [<span data-ttu-id="b6904-122">查询概念</span><span class="sxs-lookup"><span data-stu-id="b6904-122">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [<span data-ttu-id="b6904-123">对象标识</span><span class="sxs-lookup"><span data-stu-id="b6904-123">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
+ [<span data-ttu-id="b6904-124">背景信息</span><span class="sxs-lookup"><span data-stu-id="b6904-124">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="b6904-125">对象标识</span><span class="sxs-lookup"><span data-stu-id="b6904-125">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

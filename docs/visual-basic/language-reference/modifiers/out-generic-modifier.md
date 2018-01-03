@@ -12,53 +12,53 @@ ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 94d18200e6d7ce0ad63a229223ae77d99302e0e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e54504cd65b78846af41692f39899140a6d99b5
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="out-generic-modifier-visual-basic"></a><span data-ttu-id="264bb-102">Out（泛型修饰符）(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="264bb-102">Out (Generic Modifier) (Visual Basic)</span></span>
-<span data-ttu-id="264bb-103">对于泛型类型参数，`Out`关键字指定的类型是协变。</span><span class="sxs-lookup"><span data-stu-id="264bb-103">For generic type parameters, the `Out` keyword specifies that the type is covariant.</span></span>  
+# <a name="out-generic-modifier-visual-basic"></a><span data-ttu-id="daf53-102">Out（泛型修饰符）(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="daf53-102">Out (Generic Modifier) (Visual Basic)</span></span>
+<span data-ttu-id="daf53-103">对于泛型类型参数，`Out`关键字指定的类型是协变。</span><span class="sxs-lookup"><span data-stu-id="daf53-103">For generic type parameters, the `Out` keyword specifies that the type is covariant.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="264bb-104">备注</span><span class="sxs-lookup"><span data-stu-id="264bb-104">Remarks</span></span>  
- <span data-ttu-id="264bb-105">协变使你使用的类型可以比泛型参数指定的类型派生程度更大。</span><span class="sxs-lookup"><span data-stu-id="264bb-105">Covariance enables you to use a more derived type than that specified by the generic parameter.</span></span> <span data-ttu-id="264bb-106">这样可以隐式转换实现变体接口的类以及隐式转换委托类型。</span><span class="sxs-lookup"><span data-stu-id="264bb-106">This allows for implicit conversion of classes that implement variant interfaces and implicit conversion of delegate types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="daf53-104">备注</span><span class="sxs-lookup"><span data-stu-id="daf53-104">Remarks</span></span>  
+ <span data-ttu-id="daf53-105">协变使你使用的类型可以比泛型参数指定的类型派生程度更大。</span><span class="sxs-lookup"><span data-stu-id="daf53-105">Covariance enables you to use a more derived type than that specified by the generic parameter.</span></span> <span data-ttu-id="daf53-106">这样可以隐式转换实现变体接口的类以及隐式转换委托类型。</span><span class="sxs-lookup"><span data-stu-id="daf53-106">This allows for implicit conversion of classes that implement variant interfaces and implicit conversion of delegate types.</span></span>  
   
- <span data-ttu-id="264bb-107">有关详细信息，请参阅[协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)。</span><span class="sxs-lookup"><span data-stu-id="264bb-107">For more information, see [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).</span></span>  
+ <span data-ttu-id="daf53-107">有关详细信息，请参阅[协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)。</span><span class="sxs-lookup"><span data-stu-id="daf53-107">For more information, see [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).</span></span>  
   
-## <a name="rules"></a><span data-ttu-id="264bb-108">规则</span><span class="sxs-lookup"><span data-stu-id="264bb-108">Rules</span></span>  
- <span data-ttu-id="264bb-109">可以在泛型接口和委托中使用 `Out` 关键字。</span><span class="sxs-lookup"><span data-stu-id="264bb-109">You can use the `Out` keyword in generic interfaces and delegates.</span></span>  
+## <a name="rules"></a><span data-ttu-id="daf53-108">规则</span><span class="sxs-lookup"><span data-stu-id="daf53-108">Rules</span></span>  
+ <span data-ttu-id="daf53-109">可以在泛型接口和委托中使用 `Out` 关键字。</span><span class="sxs-lookup"><span data-stu-id="daf53-109">You can use the `Out` keyword in generic interfaces and delegates.</span></span>  
   
- <span data-ttu-id="264bb-110">在泛型接口中，如果类型参数满足以下条件，则可以声明为协变：</span><span class="sxs-lookup"><span data-stu-id="264bb-110">In a generic interface, a type parameter can be declared covariant if it satisfies the following conditions:</span></span>  
+ <span data-ttu-id="daf53-110">在泛型接口中，如果类型参数满足以下条件，则可以声明为协变：</span><span class="sxs-lookup"><span data-stu-id="daf53-110">In a generic interface, a type parameter can be declared covariant if it satisfies the following conditions:</span></span>  
   
--   <span data-ttu-id="264bb-111">类型参数只用作接口方法的返回类型，而不用作方法参数的类型。</span><span class="sxs-lookup"><span data-stu-id="264bb-111">The type parameter is used only as a return type of interface methods and not used as a type of method arguments.</span></span>  
+-   <span data-ttu-id="daf53-111">类型参数只用作接口方法的返回类型，而不用作方法参数的类型。</span><span class="sxs-lookup"><span data-stu-id="daf53-111">The type parameter is used only as a return type of interface methods and not used as a type of method arguments.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="264bb-112">此规则有一个例外。</span><span class="sxs-lookup"><span data-stu-id="264bb-112">There is one exception to this rule.</span></span> <span data-ttu-id="264bb-113">如果在协变接口中将逆变泛型委托用作方法参数，则可以将协变类型用作此委托的泛型类型参数。</span><span class="sxs-lookup"><span data-stu-id="264bb-113">If in a covariant interface you have a contravariant generic delegate as a method parameter, you can use the covariant type as a generic type parameter for this delegate.</span></span> <span data-ttu-id="264bb-114">有关协变和逆变泛型委托的详细信息，请参阅[委托中的变体](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)和[对 Func 和 Action 泛型委托使用变体](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)。</span><span class="sxs-lookup"><span data-stu-id="264bb-114">For more information about covariant and contravariant generic delegates, see [Variance in Delegates](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca) and [Using Variance for Func and Action Generic Delegates](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290).</span></span>  
+    >  <span data-ttu-id="daf53-112">此规则有一个例外。</span><span class="sxs-lookup"><span data-stu-id="daf53-112">There is one exception to this rule.</span></span> <span data-ttu-id="daf53-113">如果在协变接口中将逆变泛型委托用作方法参数，则可以将协变类型用作此委托的泛型类型参数。</span><span class="sxs-lookup"><span data-stu-id="daf53-113">If in a covariant interface you have a contravariant generic delegate as a method parameter, you can use the covariant type as a generic type parameter for this delegate.</span></span> <span data-ttu-id="daf53-114">有关协变和逆变泛型委托的详细信息，请参阅[委托中的变体](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)和[对 Func 和 Action 泛型委托使用变体](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)。</span><span class="sxs-lookup"><span data-stu-id="daf53-114">For more information about covariant and contravariant generic delegates, see [Variance in Delegates](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
--   <span data-ttu-id="264bb-115">类型参数不用作接口方法的泛型约束。</span><span class="sxs-lookup"><span data-stu-id="264bb-115">The type parameter is not used as a generic constraint for the interface methods.</span></span>  
+-   <span data-ttu-id="daf53-115">类型参数不用作接口方法的泛型约束。</span><span class="sxs-lookup"><span data-stu-id="daf53-115">The type parameter is not used as a generic constraint for the interface methods.</span></span>  
   
- <span data-ttu-id="264bb-116">在泛型委托中，类型参数可以声明协变如果它是仅用作方法的返回类型，不用于方法参数。</span><span class="sxs-lookup"><span data-stu-id="264bb-116">In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.</span></span>  
+ <span data-ttu-id="daf53-116">在泛型委托中，类型参数可以声明协变如果它是仅用作方法的返回类型，不用于方法参数。</span><span class="sxs-lookup"><span data-stu-id="daf53-116">In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.</span></span>  
   
- <span data-ttu-id="264bb-117">引用类型支持协变和逆变，但值类型不支持它们。</span><span class="sxs-lookup"><span data-stu-id="264bb-117">Covariance and contravariance are supported for reference types, but they are not supported for value types.</span></span>  
+ <span data-ttu-id="daf53-117">引用类型支持协变和逆变，但值类型不支持它们。</span><span class="sxs-lookup"><span data-stu-id="daf53-117">Covariance and contravariance are supported for reference types, but they are not supported for value types.</span></span>  
   
- <span data-ttu-id="264bb-118">在 Visual Basic 中，不能声明协变的接口中的事件，而不指定委托类型。</span><span class="sxs-lookup"><span data-stu-id="264bb-118">In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type.</span></span> <span data-ttu-id="264bb-119">此外，协变的接口不能有嵌套类、 枚举或结构，但它们可以有嵌套接口。</span><span class="sxs-lookup"><span data-stu-id="264bb-119">Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.</span></span>  
+ <span data-ttu-id="daf53-118">在 Visual Basic 中，不能声明协变的接口中的事件，而不指定委托类型。</span><span class="sxs-lookup"><span data-stu-id="daf53-118">In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type.</span></span> <span data-ttu-id="daf53-119">此外，协变的接口不能有嵌套类、 枚举或结构，但它们可以有嵌套接口。</span><span class="sxs-lookup"><span data-stu-id="daf53-119">Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.</span></span>  
   
-## <a name="behavior"></a><span data-ttu-id="264bb-120">行为</span><span class="sxs-lookup"><span data-stu-id="264bb-120">Behavior</span></span>  
- <span data-ttu-id="264bb-121">具有协变类型参数的接口使其方法返回的类型可以比类型参数指定的类型派生程度更大。</span><span class="sxs-lookup"><span data-stu-id="264bb-121">An interface that has a covariant type parameter enables its methods to return more derived types than those specified by the type parameter.</span></span> <span data-ttu-id="264bb-122">例如，因为在 .NET Framework 4 的 <xref:System.Collections.Generic.IEnumerable%601> 中，类型 T 是协变的，所以可以将 `IEnumerabe(Of String)` 类型的对象分配给 `IEnumerable(Of Object)` 类型的对象，而无需使用任何特殊转换方法。</span><span class="sxs-lookup"><span data-stu-id="264bb-122">For example, because in .NET Framework 4, in <xref:System.Collections.Generic.IEnumerable%601>, type T is covariant, you can assign an object of the `IEnumerabe(Of String)` type to an object of the `IEnumerable(Of Object)` type without using any special conversion methods.</span></span>  
+## <a name="behavior"></a><span data-ttu-id="daf53-120">行为</span><span class="sxs-lookup"><span data-stu-id="daf53-120">Behavior</span></span>  
+ <span data-ttu-id="daf53-121">具有协变类型参数的接口使其方法返回的类型可以比类型参数指定的类型派生程度更大。</span><span class="sxs-lookup"><span data-stu-id="daf53-121">An interface that has a covariant type parameter enables its methods to return more derived types than those specified by the type parameter.</span></span> <span data-ttu-id="daf53-122">例如，因为在 .NET Framework 4 的 <xref:System.Collections.Generic.IEnumerable%601> 中，类型 T 是协变的，所以可以将 `IEnumerabe(Of String)` 类型的对象分配给 `IEnumerable(Of Object)` 类型的对象，而无需使用任何特殊转换方法。</span><span class="sxs-lookup"><span data-stu-id="daf53-122">For example, because in .NET Framework 4, in <xref:System.Collections.Generic.IEnumerable%601>, type T is covariant, you can assign an object of the `IEnumerabe(Of String)` type to an object of the `IEnumerable(Of Object)` type without using any special conversion methods.</span></span>  
   
- <span data-ttu-id="264bb-123">可以向协变委托分配相同类型的其他委托，不过要使用派生程度更大的泛型类型参数。</span><span class="sxs-lookup"><span data-stu-id="264bb-123">A covariant delegate can be assigned another delegate of the same type, but with a more derived generic type parameter.</span></span>  
+ <span data-ttu-id="daf53-123">可以向协变委托分配相同类型的其他委托，不过要使用派生程度更大的泛型类型参数。</span><span class="sxs-lookup"><span data-stu-id="daf53-123">A covariant delegate can be assigned another delegate of the same type, but with a more derived generic type parameter.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="264bb-124">示例</span><span class="sxs-lookup"><span data-stu-id="264bb-124">Example</span></span>  
- <span data-ttu-id="264bb-125">下面的示例演示如何声明、扩展和实现协变泛型接口。</span><span class="sxs-lookup"><span data-stu-id="264bb-125">The following example shows how to declare, extend, and implement a covariant generic interface.</span></span> <span data-ttu-id="264bb-126">它还演示如何对实现协变接口的类使用隐式转换。</span><span class="sxs-lookup"><span data-stu-id="264bb-126">It also shows how to use implicit conversion for classes that implement a covariant interface.</span></span>  
+## <a name="example"></a><span data-ttu-id="daf53-124">示例</span><span class="sxs-lookup"><span data-stu-id="daf53-124">Example</span></span>  
+ <span data-ttu-id="daf53-125">下面的示例演示如何声明、扩展和实现协变泛型接口。</span><span class="sxs-lookup"><span data-stu-id="daf53-125">The following example shows how to declare, extend, and implement a covariant generic interface.</span></span> <span data-ttu-id="daf53-126">它还演示如何对实现协变接口的类使用隐式转换。</span><span class="sxs-lookup"><span data-stu-id="daf53-126">It also shows how to use implicit conversion for classes that implement a covariant interface.</span></span>  
   
  [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
-## <a name="example"></a><span data-ttu-id="264bb-127">示例</span><span class="sxs-lookup"><span data-stu-id="264bb-127">Example</span></span>  
- <span data-ttu-id="264bb-128">以下示例演示如何声明、实例化和调用协变泛型委托。</span><span class="sxs-lookup"><span data-stu-id="264bb-128">The following example shows how to declare, instantiate, and invoke a covariant generic delegate.</span></span> <span data-ttu-id="264bb-129">它还显示如何使用隐式转换为委托类型。</span><span class="sxs-lookup"><span data-stu-id="264bb-129">It also shows how you can use implicit conversion for delegate types.</span></span>  
+## <a name="example"></a><span data-ttu-id="daf53-127">示例</span><span class="sxs-lookup"><span data-stu-id="daf53-127">Example</span></span>  
+ <span data-ttu-id="daf53-128">以下示例演示如何声明、实例化和调用协变泛型委托。</span><span class="sxs-lookup"><span data-stu-id="daf53-128">The following example shows how to declare, instantiate, and invoke a covariant generic delegate.</span></span> <span data-ttu-id="daf53-129">它还显示如何使用隐式转换为委托类型。</span><span class="sxs-lookup"><span data-stu-id="daf53-129">It also shows how you can use implicit conversion for delegate types.</span></span>  
   
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="264bb-130">另请参阅</span><span class="sxs-lookup"><span data-stu-id="264bb-130">See Also</span></span>  
- [<span data-ttu-id="264bb-131">泛型接口中的变体</span><span class="sxs-lookup"><span data-stu-id="264bb-131">Variance in Generic Interfaces</span></span>](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [<span data-ttu-id="264bb-132">In</span><span class="sxs-lookup"><span data-stu-id="264bb-132">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+## <a name="see-also"></a><span data-ttu-id="daf53-130">请参阅</span><span class="sxs-lookup"><span data-stu-id="daf53-130">See Also</span></span>  
+ [<span data-ttu-id="daf53-131">泛型接口中的变体</span><span class="sxs-lookup"><span data-stu-id="daf53-131">Variance in Generic Interfaces</span></span>](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [<span data-ttu-id="daf53-132">In</span><span class="sxs-lookup"><span data-stu-id="daf53-132">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

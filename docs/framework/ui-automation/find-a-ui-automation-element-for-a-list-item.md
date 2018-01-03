@@ -20,25 +20,26 @@ caps.latest.revision: "5"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 16016f5e5b0ab9633f9f8e4ac662838dd7936b18
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a00019e5aaaefaddd94689bd192973d5d5ad175a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="find-a-ui-automation-element-for-a-list-item"></a><span data-ttu-id="29cdb-102">查找列表项的 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="29cdb-102">Find a UI Automation Element for a List Item</span></span>
+# <a name="find-a-ui-automation-element-for-a-list-item"></a><span data-ttu-id="269cb-102">查找列表项的 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="269cb-102">Find a UI Automation Element for a List Item</span></span>
 > [!NOTE]
->  <span data-ttu-id="29cdb-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="29cdb-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="29cdb-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="29cdb-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="269cb-103">本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。</span><span class="sxs-lookup"><span data-stu-id="269cb-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="269cb-104">有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新信息，请参阅 [Windows 自动化 API：UI 自动化](http://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="269cb-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="29cdb-105">本主题演示如何检索<xref:System.Windows.Automation.AutomationElement>为列表时已知的项的索引中的项。</span><span class="sxs-lookup"><span data-stu-id="29cdb-105">This topic shows how to retrieve an <xref:System.Windows.Automation.AutomationElement> for an item within a list when the index of the item is known.</span></span>  
+ <span data-ttu-id="269cb-105">本主题演示如何检索<xref:System.Windows.Automation.AutomationElement>为列表时已知的项的索引中的项。</span><span class="sxs-lookup"><span data-stu-id="269cb-105">This topic shows how to retrieve an <xref:System.Windows.Automation.AutomationElement> for an item within a list when the index of the item is known.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="29cdb-106">示例</span><span class="sxs-lookup"><span data-stu-id="29cdb-106">Example</span></span>  
- <span data-ttu-id="29cdb-107">下面的示例演示两种方法检索指定的项从列表中，一个使用<xref:System.Windows.Automation.TreeWalker>和其他使用<xref:System.Windows.Automation.AutomationElement.FindAll%2A>。</span><span class="sxs-lookup"><span data-stu-id="29cdb-107">The following example shows two ways of retrieving a specified item from a list, one using <xref:System.Windows.Automation.TreeWalker> and the other using <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.</span></span>  
+## <a name="example"></a><span data-ttu-id="269cb-106">示例</span><span class="sxs-lookup"><span data-stu-id="269cb-106">Example</span></span>  
+ <span data-ttu-id="269cb-107">下面的示例演示两种方法检索指定的项从列表中，一个使用<xref:System.Windows.Automation.TreeWalker>和其他使用<xref:System.Windows.Automation.AutomationElement.FindAll%2A>。</span><span class="sxs-lookup"><span data-stu-id="269cb-107">The following example shows two ways of retrieving a specified item from a list, one using <xref:System.Windows.Automation.TreeWalker> and the other using <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.</span></span>  
   
- <span data-ttu-id="29cdb-108">第一种方法往往是更快[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]控件，但第二个是更快[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]控件。</span><span class="sxs-lookup"><span data-stu-id="29cdb-108">The first technique tends to be faster for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls, but the second is faster for [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] controls.</span></span>  
+ <span data-ttu-id="269cb-108">第一种方法往往是更快[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]控件，但第二个是更快[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]控件。</span><span class="sxs-lookup"><span data-stu-id="269cb-108">The first technique tends to be faster for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls, but the second is faster for [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] controls.</span></span>  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  
   
-## <a name="see-also"></a><span data-ttu-id="29cdb-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="29cdb-109">See Also</span></span>  
- [<span data-ttu-id="29cdb-110">获取 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="29cdb-110">Obtaining UI Automation Elements</span></span>](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
+## <a name="see-also"></a><span data-ttu-id="269cb-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="269cb-109">See Also</span></span>  
+ [<span data-ttu-id="269cb-110">获取 UI 自动化元素</span><span class="sxs-lookup"><span data-stu-id="269cb-110">Obtaining UI Automation Elements</span></span>](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)

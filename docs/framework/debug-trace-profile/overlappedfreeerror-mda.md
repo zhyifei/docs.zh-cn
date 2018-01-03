@@ -20,35 +20,36 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 645c9f6c5a2a693fb2b88b2b2bc1c40501eecde8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4e17e9d6a93b69d358e89109cf965b7b9856c325
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="overlappedfreeerror-mda"></a><span data-ttu-id="2b857-102">overlappedFreeError MDA</span><span class="sxs-lookup"><span data-stu-id="2b857-102">overlappedFreeError MDA</span></span>
-<span data-ttu-id="2b857-103">如果在重叠操作完成之前调用 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> 方法，将激活 `overlappedFreeError` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="2b857-103">The `overlappedFreeError` managed debugging assistant (MDA) is activated when the <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> method is called before the overlapped operation has completed.</span></span>  
+# <a name="overlappedfreeerror-mda"></a><span data-ttu-id="78cf2-102">overlappedFreeError MDA</span><span class="sxs-lookup"><span data-stu-id="78cf2-102">overlappedFreeError MDA</span></span>
+<span data-ttu-id="78cf2-103">如果在重叠操作完成之前调用 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> 方法，将激活 `overlappedFreeError` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="78cf2-103">The `overlappedFreeError` managed debugging assistant (MDA) is activated when the <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> method is called before the overlapped operation has completed.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="2b857-104">症状</span><span class="sxs-lookup"><span data-stu-id="2b857-104">Symptoms</span></span>  
- <span data-ttu-id="2b857-105">访问冲突或垃圾回收堆损坏。</span><span class="sxs-lookup"><span data-stu-id="2b857-105">Access violations or corruption of the garbage-collected heap.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="78cf2-104">症状</span><span class="sxs-lookup"><span data-stu-id="78cf2-104">Symptoms</span></span>  
+ <span data-ttu-id="78cf2-105">访问冲突或垃圾回收堆损坏。</span><span class="sxs-lookup"><span data-stu-id="78cf2-105">Access violations or corruption of the garbage-collected heap.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="2b857-106">原因</span><span class="sxs-lookup"><span data-stu-id="2b857-106">Cause</span></span>  
- <span data-ttu-id="2b857-107">操作完成之前，已释放重叠结构。</span><span class="sxs-lookup"><span data-stu-id="2b857-107">An overlapped structure was freed before the operation completed.</span></span> <span data-ttu-id="2b857-108">使用重叠指针的函数可能稍后会在释放结构后写入结构。</span><span class="sxs-lookup"><span data-stu-id="2b857-108">The function that is using the overlapped pointer might write to the structure later, after it has been freed.</span></span> <span data-ttu-id="2b857-109">由于另一个对象当前可能占用该区域，这可能会导致堆损坏。</span><span class="sxs-lookup"><span data-stu-id="2b857-109">That can cause heap corruption because another object might now occupy that region.</span></span>  
+## <a name="cause"></a><span data-ttu-id="78cf2-106">原因</span><span class="sxs-lookup"><span data-stu-id="78cf2-106">Cause</span></span>  
+ <span data-ttu-id="78cf2-107">操作完成之前，已释放重叠结构。</span><span class="sxs-lookup"><span data-stu-id="78cf2-107">An overlapped structure was freed before the operation completed.</span></span> <span data-ttu-id="78cf2-108">使用重叠指针的函数可能稍后会在释放结构后写入结构。</span><span class="sxs-lookup"><span data-stu-id="78cf2-108">The function that is using the overlapped pointer might write to the structure later, after it has been freed.</span></span> <span data-ttu-id="78cf2-109">由于另一个对象当前可能占用该区域，这可能会导致堆损坏。</span><span class="sxs-lookup"><span data-stu-id="78cf2-109">That can cause heap corruption because another object might now occupy that region.</span></span>  
   
- <span data-ttu-id="2b857-110">如果重叠操作未成功开始，则此 MDA 可能不表示错误。</span><span class="sxs-lookup"><span data-stu-id="2b857-110">This MDA might not represent an error if the overlapped operation did not start successfully.</span></span>  
+ <span data-ttu-id="78cf2-110">如果重叠操作未成功开始，则此 MDA 可能不表示错误。</span><span class="sxs-lookup"><span data-stu-id="78cf2-110">This MDA might not represent an error if the overlapped operation did not start successfully.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="2b857-111">解决方法</span><span class="sxs-lookup"><span data-stu-id="2b857-111">Resolution</span></span>  
- <span data-ttu-id="2b857-112">在调用 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> 方法之前，确保已完成使用重叠结构的 I/O 操作。</span><span class="sxs-lookup"><span data-stu-id="2b857-112">Ensure that the I/O operation using the overlapped structure has completed before calling the <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> method.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="78cf2-111">解决方法</span><span class="sxs-lookup"><span data-stu-id="78cf2-111">Resolution</span></span>  
+ <span data-ttu-id="78cf2-112">在调用 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> 方法之前，确保已完成使用重叠结构的 I/O 操作。</span><span class="sxs-lookup"><span data-stu-id="78cf2-112">Ensure that the I/O operation using the overlapped structure has completed before calling the <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> method.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="2b857-113">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="2b857-113">Effect on the Runtime</span></span>  
- <span data-ttu-id="2b857-114">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="2b857-114">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="78cf2-113">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="78cf2-113">Effect on the Runtime</span></span>  
+ <span data-ttu-id="78cf2-114">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="78cf2-114">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="2b857-115">输出</span><span class="sxs-lookup"><span data-stu-id="2b857-115">Output</span></span>  
- <span data-ttu-id="2b857-116">以下是此 MDA 的示例输出。</span><span class="sxs-lookup"><span data-stu-id="2b857-116">The following is sample output for this MDA.</span></span>  
+## <a name="output"></a><span data-ttu-id="78cf2-115">输出</span><span class="sxs-lookup"><span data-stu-id="78cf2-115">Output</span></span>  
+ <span data-ttu-id="78cf2-116">以下是此 MDA 的示例输出。</span><span class="sxs-lookup"><span data-stu-id="78cf2-116">The following is sample output for this MDA.</span></span>  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlappedStructure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   
-## <a name="configuration"></a><span data-ttu-id="2b857-117">配置</span><span class="sxs-lookup"><span data-stu-id="2b857-117">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="78cf2-117">配置</span><span class="sxs-lookup"><span data-stu-id="78cf2-117">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2b857-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2b857-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="78cf2-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="78cf2-118">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="2b857-119">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="2b857-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="2b857-120">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="2b857-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="78cf2-119">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="78cf2-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="78cf2-120">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="78cf2-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

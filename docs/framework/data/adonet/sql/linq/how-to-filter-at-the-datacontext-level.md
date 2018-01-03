@@ -16,20 +16,21 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69b711802d04e005095167db7df544e0f00d0b19
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b596a16a6bf11982ba6edd4a646b46fa22d3e3b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-filter-at-the-datacontext-level"></a><span data-ttu-id="ed559-102">如何：在 DataContext 级别进行筛选</span><span class="sxs-lookup"><span data-stu-id="ed559-102">How to: Filter at the DataContext Level</span></span>
-<span data-ttu-id="ed559-103">您可以在 `EntitySets` 级别筛选 `DataContext`。</span><span class="sxs-lookup"><span data-stu-id="ed559-103">You can filter `EntitySets` at the `DataContext` level.</span></span> <span data-ttu-id="ed559-104">此类筛选器适用于用此 <xref:System.Data.Linq.DataContext> 实例执行的所有查询。</span><span class="sxs-lookup"><span data-stu-id="ed559-104">Such filters apply to all queries done with that <xref:System.Data.Linq.DataContext> instance.</span></span>  
+# <a name="how-to-filter-at-the-datacontext-level"></a><span data-ttu-id="82f8f-102">如何：在 DataContext 级别进行筛选</span><span class="sxs-lookup"><span data-stu-id="82f8f-102">How to: Filter at the DataContext Level</span></span>
+<span data-ttu-id="82f8f-103">您可以在 `EntitySets` 级别筛选 `DataContext`。</span><span class="sxs-lookup"><span data-stu-id="82f8f-103">You can filter `EntitySets` at the `DataContext` level.</span></span> <span data-ttu-id="82f8f-104">此类筛选器适用于用此 <xref:System.Data.Linq.DataContext> 实例执行的所有查询。</span><span class="sxs-lookup"><span data-stu-id="82f8f-104">Such filters apply to all queries done with that <xref:System.Data.Linq.DataContext> instance.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ed559-105">示例</span><span class="sxs-lookup"><span data-stu-id="ed559-105">Example</span></span>  
- <span data-ttu-id="ed559-106">在下面的示例中，使用 <xref:System.Data.Linq.DataLoadOptions.AssociateWith%28System.Linq.Expressions.LambdaExpression%29?displayProperty=nameWithType> 来筛选截至 `ShippedDate` 的客户的预加载订单。</span><span class="sxs-lookup"><span data-stu-id="ed559-106">In the following example, <xref:System.Data.Linq.DataLoadOptions.AssociateWith%28System.Linq.Expressions.LambdaExpression%29?displayProperty=nameWithType> is used to filter the pre-loaded orders for customers by `ShippedDate`.</span></span>  
+## <a name="example"></a><span data-ttu-id="82f8f-105">示例</span><span class="sxs-lookup"><span data-stu-id="82f8f-105">Example</span></span>  
+ <span data-ttu-id="82f8f-106">在下面的示例中，使用 <xref:System.Data.Linq.DataLoadOptions.AssociateWith%28System.Linq.Expressions.LambdaExpression%29?displayProperty=nameWithType> 来筛选截至 `ShippedDate` 的客户的预加载订单。</span><span class="sxs-lookup"><span data-stu-id="82f8f-106">In the following example, <xref:System.Data.Linq.DataLoadOptions.AssociateWith%28System.Linq.Expressions.LambdaExpression%29?displayProperty=nameWithType> is used to filter the pre-loaded orders for customers by `ShippedDate`.</span></span>  
   
  [!code-csharp[DLinqQueryConcepts#10](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#10)]
  [!code-vb[DLinqQueryConcepts#10](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#10)]  
   
-## <a name="see-also"></a><span data-ttu-id="ed559-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ed559-107">See Also</span></span>  
- [<span data-ttu-id="ed559-108">查询概念</span><span class="sxs-lookup"><span data-stu-id="ed559-108">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="82f8f-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="82f8f-107">See Also</span></span>  
+ [<span data-ttu-id="82f8f-108">查询概念</span><span class="sxs-lookup"><span data-stu-id="82f8f-108">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

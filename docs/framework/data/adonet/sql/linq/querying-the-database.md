@@ -13,45 +13,46 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 98d21c38dde3e6dc7109bd331922bacab30529f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5204ceaf99d280ae1d26a896e5a66bfbf4de96dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="querying-the-database"></a><span data-ttu-id="33ae3-102">查询数据库</span><span class="sxs-lookup"><span data-stu-id="33ae3-102">Querying the Database</span></span>
-<span data-ttu-id="33ae3-103">本组主题说明如何在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 项目中开发和执行查询。</span><span class="sxs-lookup"><span data-stu-id="33ae3-103">This group of topics describes how to develop and execute queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects.</span></span>  
+# <a name="querying-the-database"></a><span data-ttu-id="654d1-102">查询数据库</span><span class="sxs-lookup"><span data-stu-id="654d1-102">Querying the Database</span></span>
+<span data-ttu-id="654d1-103">本组主题说明如何在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 项目中开发和执行查询。</span><span class="sxs-lookup"><span data-stu-id="654d1-103">This group of topics describes how to develop and execute queries in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="33ae3-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="33ae3-104">In This Section</span></span>  
- [<span data-ttu-id="33ae3-105">如何： 查询有关的信息</span><span class="sxs-lookup"><span data-stu-id="33ae3-105">How to: Query for Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-query-for-information.md)  
- <span data-ttu-id="33ae3-106">简要说明为何 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询大体上与 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查询基本相同。</span><span class="sxs-lookup"><span data-stu-id="33ae3-106">Briefly shows how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries are basically the same as [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries generally.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="654d1-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="654d1-104">In This Section</span></span>  
+ [<span data-ttu-id="654d1-105">如何：查询信息</span><span class="sxs-lookup"><span data-stu-id="654d1-105">How to: Query for Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-query-for-information.md)  
+ <span data-ttu-id="654d1-106">简要说明为何 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询大体上与 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查询基本相同。</span><span class="sxs-lookup"><span data-stu-id="654d1-106">Briefly shows how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries are basically the same as [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] queries generally.</span></span>  
   
- [<span data-ttu-id="33ae3-107">如何： 以只读方式检索信息</span><span class="sxs-lookup"><span data-stu-id="33ae3-107">How to: Retrieve Information As Read-Only</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)  
- <span data-ttu-id="33ae3-108">说明在不打算更改数据时如何提高查询性能。</span><span class="sxs-lookup"><span data-stu-id="33ae3-108">Describes how to increase query performance when no change to the data is planned.</span></span>  
+ [<span data-ttu-id="654d1-107">如何：将信息作为只读信息检索</span><span class="sxs-lookup"><span data-stu-id="654d1-107">How to: Retrieve Information As Read-Only</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)  
+ <span data-ttu-id="654d1-108">说明在不打算更改数据时如何提高查询性能。</span><span class="sxs-lookup"><span data-stu-id="654d1-108">Describes how to increase query performance when no change to the data is planned.</span></span>  
   
- [<span data-ttu-id="33ae3-109">如何： 控制检索相关的数据量</span><span class="sxs-lookup"><span data-stu-id="33ae3-109">How to: Control How Much Related Data Is Retrieved</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)  
- <span data-ttu-id="33ae3-110">说明如何控制与主目标一起检索的相关数据。</span><span class="sxs-lookup"><span data-stu-id="33ae3-110">Describes how to control which related data is retrieved together with the main target.</span></span>  
+ [<span data-ttu-id="654d1-109">如何：控制检索的相关数据量</span><span class="sxs-lookup"><span data-stu-id="654d1-109">How to: Control How Much Related Data Is Retrieved</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)  
+ <span data-ttu-id="654d1-110">说明如何控制与主目标一起检索的相关数据。</span><span class="sxs-lookup"><span data-stu-id="654d1-110">Describes how to control which related data is retrieved together with the main target.</span></span>  
   
- [<span data-ttu-id="33ae3-111">如何： 筛选相关的数据</span><span class="sxs-lookup"><span data-stu-id="33ae3-111">How to: Filter Related Data</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-related-data.md)  
- <span data-ttu-id="33ae3-112">说明如何通过使用子查询检索相关数据。</span><span class="sxs-lookup"><span data-stu-id="33ae3-112">Describes how to retrieve related data by using a sub-query.</span></span>  
+ [<span data-ttu-id="654d1-111">如何：筛选相关数据</span><span class="sxs-lookup"><span data-stu-id="654d1-111">How to: Filter Related Data</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-related-data.md)  
+ <span data-ttu-id="654d1-112">说明如何通过使用子查询检索相关数据。</span><span class="sxs-lookup"><span data-stu-id="654d1-112">Describes how to retrieve related data by using a sub-query.</span></span>  
   
- [<span data-ttu-id="33ae3-113">如何： 关闭延迟加载</span><span class="sxs-lookup"><span data-stu-id="33ae3-113">How to: Turn Off Deferred Loading</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-turn-off-deferred-loading.md)  
- <span data-ttu-id="33ae3-114">说明如何关闭延迟加载。</span><span class="sxs-lookup"><span data-stu-id="33ae3-114">Describes how to turn off deferred loading.</span></span>  
+ [<span data-ttu-id="654d1-113">如何：禁用推迟加载</span><span class="sxs-lookup"><span data-stu-id="654d1-113">How to: Turn Off Deferred Loading</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-turn-off-deferred-loading.md)  
+ <span data-ttu-id="654d1-114">说明如何关闭延迟加载。</span><span class="sxs-lookup"><span data-stu-id="654d1-114">Describes how to turn off deferred loading.</span></span>  
   
- [<span data-ttu-id="33ae3-115">如何： 直接执行 SQL 查询</span><span class="sxs-lookup"><span data-stu-id="33ae3-115">How to: Directly Execute SQL Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)  
- <span data-ttu-id="33ae3-116">说明如何使用 SQL 语言提交查询。</span><span class="sxs-lookup"><span data-stu-id="33ae3-116">Describes how to submit queries by using SQL language.</span></span>  
+ [<span data-ttu-id="654d1-115">如何：直接执行 SQL 查询</span><span class="sxs-lookup"><span data-stu-id="654d1-115">How to: Directly Execute SQL Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)  
+ <span data-ttu-id="654d1-116">说明如何使用 SQL 语言提交查询。</span><span class="sxs-lookup"><span data-stu-id="654d1-116">Describes how to submit queries by using SQL language.</span></span>  
   
- [<span data-ttu-id="33ae3-117">如何： 存储和重复使用查询</span><span class="sxs-lookup"><span data-stu-id="33ae3-117">How to: Store and Reuse Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)  
- <span data-ttu-id="33ae3-118">说明如何编译查询一次，但将其与不同的参数一起使用多次。</span><span class="sxs-lookup"><span data-stu-id="33ae3-118">Describes how to compile a query one time but use it multiple times with different parameters.</span></span>  
+ [<span data-ttu-id="654d1-117">如何：存储和重复使用查询</span><span class="sxs-lookup"><span data-stu-id="654d1-117">How to: Store and Reuse Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)  
+ <span data-ttu-id="654d1-118">说明如何编译查询一次，但将其与不同的参数一起使用多次。</span><span class="sxs-lookup"><span data-stu-id="654d1-118">Describes how to compile a query one time but use it multiple times with different parameters.</span></span>  
   
- [<span data-ttu-id="33ae3-119">如何： 处理在查询中的复合键</span><span class="sxs-lookup"><span data-stu-id="33ae3-119">How to: Handle Composite Keys in Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-handle-composite-keys-in-queries.md)  
- <span data-ttu-id="33ae3-120">说明如何在运算符只带一个自变量的情况下在查询中包含多列。</span><span class="sxs-lookup"><span data-stu-id="33ae3-120">Describes how to include more than one column in a query where the operator takes only a single argument.</span></span>  
+ [<span data-ttu-id="654d1-119">如何：处理查询中的复合键</span><span class="sxs-lookup"><span data-stu-id="654d1-119">How to: Handle Composite Keys in Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-handle-composite-keys-in-queries.md)  
+ <span data-ttu-id="654d1-120">说明如何在运算符只带一个自变量的情况下在查询中包含多列。</span><span class="sxs-lookup"><span data-stu-id="654d1-120">Describes how to include more than one column in a query where the operator takes only a single argument.</span></span>  
   
- [<span data-ttu-id="33ae3-121">如何： 在一次检索多个对象</span><span class="sxs-lookup"><span data-stu-id="33ae3-121">How to: Retrieve Many Objects At Once</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-many-objects-at-once.md)  
- <span data-ttu-id="33ae3-122">描述如何使用 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>。</span><span class="sxs-lookup"><span data-stu-id="33ae3-122">Describes how to use <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span></span>  
+ [<span data-ttu-id="654d1-121">如何：一次检索多个对象</span><span class="sxs-lookup"><span data-stu-id="654d1-121">How to: Retrieve Many Objects At Once</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-many-objects-at-once.md)  
+ <span data-ttu-id="654d1-122">描述如何使用 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>。</span><span class="sxs-lookup"><span data-stu-id="654d1-122">Describes how to use <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span></span>  
   
- [<span data-ttu-id="33ae3-123">如何： 在 DataContext 级别的筛选器</span><span class="sxs-lookup"><span data-stu-id="33ae3-123">How to: Filter at the DataContext Level</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-at-the-datacontext-level.md)  
- <span data-ttu-id="33ae3-124">介绍 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 的另一用法。</span><span class="sxs-lookup"><span data-stu-id="33ae3-124">Describes another use of <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span></span>  
+ [<span data-ttu-id="654d1-123">如何：在 DataContext 级别进行筛选</span><span class="sxs-lookup"><span data-stu-id="654d1-123">How to: Filter at the DataContext Level</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-at-the-datacontext-level.md)  
+ <span data-ttu-id="654d1-124">介绍 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 的另一用法。</span><span class="sxs-lookup"><span data-stu-id="654d1-124">Describes another use of <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.</span></span>  
   
- [<span data-ttu-id="33ae3-125">查询示例</span><span class="sxs-lookup"><span data-stu-id="33ae3-125">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- <span data-ttu-id="33ae3-126">提供许多查询示例。</span><span class="sxs-lookup"><span data-stu-id="33ae3-126">Provides many examples of queries.</span></span>
+ [<span data-ttu-id="654d1-125">查询示例</span><span class="sxs-lookup"><span data-stu-id="654d1-125">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
+ <span data-ttu-id="654d1-126">提供许多查询示例。</span><span class="sxs-lookup"><span data-stu-id="654d1-126">Provides many examples of queries.</span></span>

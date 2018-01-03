@@ -19,14 +19,15 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f7cf48f98b60d287cea1615cc8aefef6151c805c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be6c48f240290e2571bfc605bc9c3a84f59aa8e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="synchronous-client-socket-example"></a><span data-ttu-id="efb90-102">同步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="efb90-102">Synchronous Client Socket Example</span></span>
-<span data-ttu-id="efb90-103">以下示例程序创建连接到服务器的客户端。</span><span class="sxs-lookup"><span data-stu-id="efb90-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="efb90-104">客户端使用同步套接字构建，因此，将暂停执行客户端应用程序，直到服务器返回响应。</span><span class="sxs-lookup"><span data-stu-id="efb90-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="efb90-105">应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="efb90-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="40df9-102">同步客户端套接字示例</span><span class="sxs-lookup"><span data-stu-id="40df9-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="40df9-103">以下示例程序创建连接到服务器的客户端。</span><span class="sxs-lookup"><span data-stu-id="40df9-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="40df9-104">客户端使用同步套接字构建，因此，将暂停执行客户端应用程序，直到服务器返回响应。</span><span class="sxs-lookup"><span data-stu-id="40df9-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="40df9-105">应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="40df9-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -144,7 +145,7 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="efb90-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="efb90-106">See Also</span></span>  
- [<span data-ttu-id="efb90-107">同步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="efb90-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- [<span data-ttu-id="efb90-108">使用同步客户端套接字</span><span class="sxs-lookup"><span data-stu-id="efb90-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [<span data-ttu-id="efb90-109">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="efb90-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="40df9-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="40df9-106">See Also</span></span>  
+ [<span data-ttu-id="40df9-107">同步服务器套接字示例</span><span class="sxs-lookup"><span data-stu-id="40df9-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ [<span data-ttu-id="40df9-108">使用同步客户端套接字</span><span class="sxs-lookup"><span data-stu-id="40df9-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [<span data-ttu-id="40df9-109">Socket 代码示例</span><span class="sxs-lookup"><span data-stu-id="40df9-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

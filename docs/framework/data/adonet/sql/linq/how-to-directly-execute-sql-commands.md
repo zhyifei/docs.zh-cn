@@ -16,21 +16,22 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: feffa98fa890856db579553df6624fef1897b173
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a1b3b94f00e9b8fb866a81f5076fb43fe9f22951
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-directly-execute-sql-commands"></a><span data-ttu-id="e3370-102">如何：直接执行 SQL 命令</span><span class="sxs-lookup"><span data-stu-id="e3370-102">How to: Directly Execute SQL Commands</span></span>
-<span data-ttu-id="e3370-103">采用 <xref:System.Data.Linq.DataContext> 连接时，可以使用 <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> 来执行不返回对象的 SQL 命令。</span><span class="sxs-lookup"><span data-stu-id="e3370-103">Assuming a <xref:System.Data.Linq.DataContext> connection, you can use <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> to execute SQL commands that do not return objects.</span></span>  
+# <a name="how-to-directly-execute-sql-commands"></a><span data-ttu-id="0ea92-102">如何：直接执行 SQL 命令</span><span class="sxs-lookup"><span data-stu-id="0ea92-102">How to: Directly Execute SQL Commands</span></span>
+<span data-ttu-id="0ea92-103">采用 <xref:System.Data.Linq.DataContext> 连接时，可以使用 <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> 来执行不返回对象的 SQL 命令。</span><span class="sxs-lookup"><span data-stu-id="0ea92-103">Assuming a <xref:System.Data.Linq.DataContext> connection, you can use <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> to execute SQL commands that do not return objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e3370-104">示例</span><span class="sxs-lookup"><span data-stu-id="e3370-104">Example</span></span>  
- <span data-ttu-id="e3370-105">下面的示例会导致 SQL Server 将 UnitPrice 增加 1.00。</span><span class="sxs-lookup"><span data-stu-id="e3370-105">The following example causes SQL Server to increase UnitPrice by 1.00.</span></span>  
+## <a name="example"></a><span data-ttu-id="0ea92-104">示例</span><span class="sxs-lookup"><span data-stu-id="0ea92-104">Example</span></span>  
+ <span data-ttu-id="0ea92-105">下面的示例会导致 SQL Server 将 UnitPrice 增加 1.00。</span><span class="sxs-lookup"><span data-stu-id="0ea92-105">The following example causes SQL Server to increase UnitPrice by 1.00.</span></span>  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#3)]
  [!code-vb[DLinqCommunicatingWithDatabase#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="e3370-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e3370-106">See Also</span></span>  
- [<span data-ttu-id="e3370-107">如何： 直接执行 SQL 查询</span><span class="sxs-lookup"><span data-stu-id="e3370-107">How to: Directly Execute SQL Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)  
- [<span data-ttu-id="e3370-108">与数据库通信</span><span class="sxs-lookup"><span data-stu-id="e3370-108">Communicating with the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+## <a name="see-also"></a><span data-ttu-id="0ea92-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="0ea92-106">See Also</span></span>  
+ [<span data-ttu-id="0ea92-107">如何：直接执行 SQL 查询</span><span class="sxs-lookup"><span data-stu-id="0ea92-107">How to: Directly Execute SQL Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)  
+ [<span data-ttu-id="0ea92-108">与数据库通信</span><span class="sxs-lookup"><span data-stu-id="0ea92-108">Communicating with the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)

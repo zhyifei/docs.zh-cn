@@ -16,22 +16,23 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69709fea628e6cb1d10a23f29b60911ab07e1111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8f9eac80d7a6679e7b3717446e79caf54a5fed3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="copying-dataset-contents"></a><span data-ttu-id="ba857-102">复制数据集内容</span><span class="sxs-lookup"><span data-stu-id="ba857-102">Copying DataSet Contents</span></span>
-<span data-ttu-id="ba857-103">你可以创建一份<xref:System.Data.DataSet>，以便可以处理的数据不会影响原始数据，或工作中的数据的子集**数据集**。</span><span class="sxs-lookup"><span data-stu-id="ba857-103">You can create a copy of a <xref:System.Data.DataSet> so that you can work with data without affecting the original data, or work with a subset of the data from a **DataSet**.</span></span> <span data-ttu-id="ba857-104">在复制**数据集**，你可以：</span><span class="sxs-lookup"><span data-stu-id="ba857-104">When copying a **DataSet**, you can:</span></span>  
+# <a name="copying-dataset-contents"></a><span data-ttu-id="bda7b-102">复制数据集内容</span><span class="sxs-lookup"><span data-stu-id="bda7b-102">Copying DataSet Contents</span></span>
+<span data-ttu-id="bda7b-103">你可以创建一份<xref:System.Data.DataSet>，以便可以处理的数据不会影响原始数据，或工作中的数据的子集**数据集**。</span><span class="sxs-lookup"><span data-stu-id="bda7b-103">You can create a copy of a <xref:System.Data.DataSet> so that you can work with data without affecting the original data, or work with a subset of the data from a **DataSet**.</span></span> <span data-ttu-id="bda7b-104">在复制**数据集**，你可以：</span><span class="sxs-lookup"><span data-stu-id="bda7b-104">When copying a **DataSet**, you can:</span></span>  
   
--   <span data-ttu-id="ba857-105">创建的一个精确副本**数据集**，包括架构、 数据、 行状态信息和行版本。</span><span class="sxs-lookup"><span data-stu-id="ba857-105">Create an exact copy of the **DataSet**, including the schema, data, row state information, and row versions.</span></span>  
+-   <span data-ttu-id="bda7b-105">创建的一个精确副本**数据集**，包括架构、 数据、 行状态信息和行版本。</span><span class="sxs-lookup"><span data-stu-id="bda7b-105">Create an exact copy of the **DataSet**, including the schema, data, row state information, and row versions.</span></span>  
   
--   <span data-ttu-id="ba857-106">创建**数据集**是否包含现有架构**数据集**，但已修改的行。</span><span class="sxs-lookup"><span data-stu-id="ba857-106">Create a **DataSet** that contains the schema of an existing **DataSet**, but only rows that have been modified.</span></span> <span data-ttu-id="ba857-107">可以返回已修改的所有行，也可以指定特定**DataRowState**。</span><span class="sxs-lookup"><span data-stu-id="ba857-107">You can return all rows that have been modified, or specify a specific **DataRowState**.</span></span> <span data-ttu-id="ba857-108">有关行状态的详细信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。</span><span class="sxs-lookup"><span data-stu-id="ba857-108">For more information about row states, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
+-   <span data-ttu-id="bda7b-106">创建**数据集**是否包含现有架构**数据集**，但已修改的行。</span><span class="sxs-lookup"><span data-stu-id="bda7b-106">Create a **DataSet** that contains the schema of an existing **DataSet**, but only rows that have been modified.</span></span> <span data-ttu-id="bda7b-107">可以返回已修改的所有行，也可以指定特定**DataRowState**。</span><span class="sxs-lookup"><span data-stu-id="bda7b-107">You can return all rows that have been modified, or specify a specific **DataRowState**.</span></span> <span data-ttu-id="bda7b-108">有关行状态的详细信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。</span><span class="sxs-lookup"><span data-stu-id="bda7b-108">For more information about row states, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
   
--   <span data-ttu-id="ba857-109">副本的架构，即关系结构**数据集**仅，而不复制任何行。</span><span class="sxs-lookup"><span data-stu-id="ba857-109">Copy the schema, or relational structure, of the **DataSet** only, without copying any rows.</span></span> <span data-ttu-id="ba857-110">可以使用 <xref:System.Data.DataTable> 将行导入现有 <xref:System.Data.DataTable.ImportRow%2A>。</span><span class="sxs-lookup"><span data-stu-id="ba857-110">Rows can be imported into an existing <xref:System.Data.DataTable> using <xref:System.Data.DataTable.ImportRow%2A>.</span></span>  
+-   <span data-ttu-id="bda7b-109">副本的架构，即关系结构**数据集**仅，而不复制任何行。</span><span class="sxs-lookup"><span data-stu-id="bda7b-109">Copy the schema, or relational structure, of the **DataSet** only, without copying any rows.</span></span> <span data-ttu-id="bda7b-110">可以使用 <xref:System.Data.DataTable> 将行导入现有 <xref:System.Data.DataTable.ImportRow%2A>。</span><span class="sxs-lookup"><span data-stu-id="bda7b-110">Rows can be imported into an existing <xref:System.Data.DataTable> using <xref:System.Data.DataTable.ImportRow%2A>.</span></span>  
   
- <span data-ttu-id="ba857-111">若要创建的一个精确副本**数据集**包含架构和数据的则使用<xref:System.Data.DataSet.Copy%2A>方法**数据集**。</span><span class="sxs-lookup"><span data-stu-id="ba857-111">To create an exact copy of the **DataSet** that includes both schema and data, use the <xref:System.Data.DataSet.Copy%2A> method of the **DataSet**.</span></span> <span data-ttu-id="ba857-112">下面的代码示例演示如何创建的一个精确副本**数据集**。</span><span class="sxs-lookup"><span data-stu-id="ba857-112">The following code example shows how to create an exact copy of the **DataSet**.</span></span>  
+ <span data-ttu-id="bda7b-111">若要创建的一个精确副本**数据集**包含架构和数据的则使用<xref:System.Data.DataSet.Copy%2A>方法**数据集**。</span><span class="sxs-lookup"><span data-stu-id="bda7b-111">To create an exact copy of the **DataSet** that includes both schema and data, use the <xref:System.Data.DataSet.Copy%2A> method of the **DataSet**.</span></span> <span data-ttu-id="bda7b-112">下面的代码示例演示如何创建的一个精确副本**数据集**。</span><span class="sxs-lookup"><span data-stu-id="bda7b-112">The following code example shows how to create an exact copy of the **DataSet**.</span></span>  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -41,7 +42,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- <span data-ttu-id="ba857-113">若要创建一份**数据集**，包含架构和仅数据表示**Added**，**已修改**，或**已删除**行，使用<xref:System.Data.DataSet.GetChanges%2A>方法**数据集**。</span><span class="sxs-lookup"><span data-stu-id="ba857-113">To create a copy of a **DataSet** that includes schema and only the data representing **Added**, **Modified**, or **Deleted** rows, use the <xref:System.Data.DataSet.GetChanges%2A> method of the **DataSet**.</span></span> <span data-ttu-id="ba857-114">你还可以使用**GetChanges**来仅返回行具有指定的行状态通过传递**DataRowState**值调用时**GetChanges**。</span><span class="sxs-lookup"><span data-stu-id="ba857-114">You can also use **GetChanges** to return only rows with a specified row state by passing a **DataRowState** value when calling **GetChanges**.</span></span> <span data-ttu-id="ba857-115">下面的代码示例演示如何将传递**DataRowState**调用时**GetChanges**。</span><span class="sxs-lookup"><span data-stu-id="ba857-115">The following code example shows how to pass a **DataRowState** when calling **GetChanges**.</span></span>  
+ <span data-ttu-id="bda7b-113">若要创建一份**数据集**，包含架构和仅数据表示**Added**，**已修改**，或**已删除**行，使用<xref:System.Data.DataSet.GetChanges%2A>方法**数据集**。</span><span class="sxs-lookup"><span data-stu-id="bda7b-113">To create a copy of a **DataSet** that includes schema and only the data representing **Added**, **Modified**, or **Deleted** rows, use the <xref:System.Data.DataSet.GetChanges%2A> method of the **DataSet**.</span></span> <span data-ttu-id="bda7b-114">你还可以使用**GetChanges**来仅返回行具有指定的行状态通过传递**DataRowState**值调用时**GetChanges**。</span><span class="sxs-lookup"><span data-stu-id="bda7b-114">You can also use **GetChanges** to return only rows with a specified row state by passing a **DataRowState** value when calling **GetChanges**.</span></span> <span data-ttu-id="bda7b-115">下面的代码示例演示如何将传递**DataRowState**调用时**GetChanges**。</span><span class="sxs-lookup"><span data-stu-id="bda7b-115">The following code example shows how to pass a **DataRowState** when calling **GetChanges**.</span></span>  
   
 ```vb  
 ' Copy all changes.  
@@ -58,9 +59,9 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- <span data-ttu-id="ba857-116">若要创建一份**数据集**，仅包含架构，使用<xref:System.Data.DataSet.Clone%2A>方法**数据集**。</span><span class="sxs-lookup"><span data-stu-id="ba857-116">To create a copy of a **DataSet** that only includes schema, use the <xref:System.Data.DataSet.Clone%2A> method of the **DataSet**.</span></span> <span data-ttu-id="ba857-117">此外可以将现有行添加到克隆**数据集**使用**ImportRow**方法**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="ba857-117">You can also add existing rows to the cloned **DataSet** using the **ImportRow** method of the **DataTable**.</span></span> <span data-ttu-id="ba857-118">**ImportRow**将数据、 行状态和行版本信息添加到指定的表。</span><span class="sxs-lookup"><span data-stu-id="ba857-118">**ImportRow** adds data, row state, and row version information to the specified table.</span></span> <span data-ttu-id="ba857-119">只有当列名称匹配且数据类型兼容时，才会添加列值。</span><span class="sxs-lookup"><span data-stu-id="ba857-119">Column values are added only where the column name matches and the data type is compatible.</span></span>  
+ <span data-ttu-id="bda7b-116">若要创建一份**数据集**，仅包含架构，使用<xref:System.Data.DataSet.Clone%2A>方法**数据集**。</span><span class="sxs-lookup"><span data-stu-id="bda7b-116">To create a copy of a **DataSet** that only includes schema, use the <xref:System.Data.DataSet.Clone%2A> method of the **DataSet**.</span></span> <span data-ttu-id="bda7b-117">此外可以将现有行添加到克隆**数据集**使用**ImportRow**方法**DataTable**。</span><span class="sxs-lookup"><span data-stu-id="bda7b-117">You can also add existing rows to the cloned **DataSet** using the **ImportRow** method of the **DataTable**.</span></span> <span data-ttu-id="bda7b-118">**ImportRow**将数据、 行状态和行版本信息添加到指定的表。</span><span class="sxs-lookup"><span data-stu-id="bda7b-118">**ImportRow** adds data, row state, and row version information to the specified table.</span></span> <span data-ttu-id="bda7b-119">只有当列名称匹配且数据类型兼容时，才会添加列值。</span><span class="sxs-lookup"><span data-stu-id="bda7b-119">Column values are added only where the column name matches and the data type is compatible.</span></span>  
   
- <span data-ttu-id="ba857-120">下面的代码示例创建的克隆**数据集**，然后将行添加与原始**数据集**到**客户**表中**数据集**客户的克隆其中**CountryRegion**列具有值"Germany"。</span><span class="sxs-lookup"><span data-stu-id="ba857-120">The following code example creates a clone of a **DataSet** and then adds the rows from the original **DataSet** to the **Customers** table in the **DataSet** clone for customers where the **CountryRegion** column has the value "Germany".</span></span>  
+ <span data-ttu-id="bda7b-120">下面的代码示例创建的克隆**数据集**，然后将行添加与原始**数据集**到**客户**表中**数据集**客户的克隆其中**CountryRegion**列具有值"Germany"。</span><span class="sxs-lookup"><span data-stu-id="bda7b-120">The following code example creates a clone of a **DataSet** and then adds the rows from the original **DataSet** to the **Customers** table in the **DataSet** clone for customers where the **CountryRegion** column has the value "Germany".</span></span>  
   
 ```vb  
 Dim customerDataSet As New DataSet  
@@ -104,8 +105,8 @@ foreach (DataRow copyRow in copyRows)
   customerTable.ImportRow(copyRow);  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ba857-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ba857-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bda7b-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="bda7b-121">See Also</span></span>  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  
- [<span data-ttu-id="ba857-122">数据集、数据表和数据视图</span><span class="sxs-lookup"><span data-stu-id="ba857-122">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [<span data-ttu-id="ba857-123">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="ba857-123">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="bda7b-122">数据集、数据表和数据视图</span><span class="sxs-lookup"><span data-stu-id="bda7b-122">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="bda7b-123">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="bda7b-123">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

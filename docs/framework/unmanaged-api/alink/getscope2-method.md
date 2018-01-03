@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 143d1d7cfd6f99a662fd7a79e2e2fa629f74967a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0e57ce8fbe0b8e60c9f6f6295e9331c571aedf92
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="getscope2-method"></a><span data-ttu-id="22ab3-102">GetScope2 方法</span><span class="sxs-lookup"><span data-stu-id="22ab3-102">GetScope2 Method</span></span>
-<span data-ttu-id="22ab3-103">获取导入作用域。</span><span class="sxs-lookup"><span data-stu-id="22ab3-103">Gets an import scope.</span></span>  
+# <a name="getscope2-method"></a><span data-ttu-id="b3119-102">GetScope2 方法</span><span class="sxs-lookup"><span data-stu-id="b3119-102">GetScope2 Method</span></span>
+<span data-ttu-id="b3119-103">获取导入作用域。</span><span class="sxs-lookup"><span data-stu-id="b3119-103">Gets an import scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22ab3-104">语法</span><span class="sxs-lookup"><span data-stu-id="22ab3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3119-104">语法</span><span class="sxs-lookup"><span data-stu-id="b3119-104">Syntax</span></span>  
   
 ```  
 HRESULT GetScope2(  
@@ -39,26 +40,26 @@ HRESULT GetScope2(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="22ab3-105">参数</span><span class="sxs-lookup"><span data-stu-id="22ab3-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b3119-105">参数</span><span class="sxs-lookup"><span data-stu-id="b3119-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="22ab3-106">目标程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="22ab3-106">ID of target assembly.</span></span>  
+ <span data-ttu-id="b3119-106">目标程序集的 ID。</span><span class="sxs-lookup"><span data-stu-id="b3119-106">ID of target assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="22ab3-107">要从中导入的文件 ID。</span><span class="sxs-lookup"><span data-stu-id="22ab3-107">ID of file from which to import.</span></span>  
+ <span data-ttu-id="b3119-107">要从中导入的文件 ID。</span><span class="sxs-lookup"><span data-stu-id="b3119-107">ID of file from which to import.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="22ab3-108">要导入的从零开始范围。</span><span class="sxs-lookup"><span data-stu-id="22ab3-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="b3119-108">要导入的从零开始范围。</span><span class="sxs-lookup"><span data-stu-id="b3119-108">Zero-based scope to import.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="22ab3-109">接收指向[IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)指示的范围的接口。</span><span class="sxs-lookup"><span data-stu-id="22ab3-109">Receives pointer to [IMetaDataImport2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
+ <span data-ttu-id="b3119-109">接收指向[IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)指示的范围的接口。</span><span class="sxs-lookup"><span data-stu-id="b3119-109">Receives pointer to [IMetaDataImport2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) interface for indicated scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="22ab3-110">返回值</span><span class="sxs-lookup"><span data-stu-id="22ab3-110">Return Value</span></span>  
- <span data-ttu-id="22ab3-111">如果该方法成功，则返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="22ab3-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b3119-110">返回值</span><span class="sxs-lookup"><span data-stu-id="b3119-110">Return Value</span></span>  
+ <span data-ttu-id="b3119-111">如果该方法成功，则返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="b3119-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="22ab3-112">要求</span><span class="sxs-lookup"><span data-stu-id="22ab3-112">Requirements</span></span>  
- <span data-ttu-id="22ab3-113">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="22ab3-113">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3119-112">惠?</span><span class="sxs-lookup"><span data-stu-id="b3119-112">Requirements</span></span>  
+ <span data-ttu-id="b3119-113">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="b3119-113">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22ab3-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="22ab3-114">See Also</span></span>  
- [<span data-ttu-id="22ab3-115">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="22ab3-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="22ab3-116">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="22ab3-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="22ab3-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="22ab3-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="b3119-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="b3119-114">See Also</span></span>  
+ [<span data-ttu-id="b3119-115">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="b3119-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="b3119-116">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="b3119-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="b3119-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="b3119-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

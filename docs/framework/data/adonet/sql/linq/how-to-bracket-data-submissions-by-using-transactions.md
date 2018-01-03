@@ -16,22 +16,23 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 071c0c8bc7e0bb8dca01e9fc51c66fb930ed102b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3481bcae3c67d08dc372195b6dba65c6b506b7f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-bracket-data-submissions-by-using-transactions"></a><span data-ttu-id="6df24-102">如何：通过使用事务对数据提交进行分类</span><span class="sxs-lookup"><span data-stu-id="6df24-102">How to: Bracket Data Submissions by Using Transactions</span></span>
-<span data-ttu-id="6df24-103">您可以使用 <xref:System.Transactions.TransactionScope> 来封闭您提交到数据库的数据。</span><span class="sxs-lookup"><span data-stu-id="6df24-103">You can use <xref:System.Transactions.TransactionScope> to bracket your submissions to the database.</span></span> <span data-ttu-id="6df24-104">有关详细信息，请参阅[事务支持](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)。</span><span class="sxs-lookup"><span data-stu-id="6df24-104">For more information, see [Transaction Support](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).</span></span>  
+# <a name="how-to-bracket-data-submissions-by-using-transactions"></a><span data-ttu-id="b97fb-102">如何：通过使用事务对数据提交进行分类</span><span class="sxs-lookup"><span data-stu-id="b97fb-102">How to: Bracket Data Submissions by Using Transactions</span></span>
+<span data-ttu-id="b97fb-103">您可以使用 <xref:System.Transactions.TransactionScope> 来封闭您提交到数据库的数据。</span><span class="sxs-lookup"><span data-stu-id="b97fb-103">You can use <xref:System.Transactions.TransactionScope> to bracket your submissions to the database.</span></span> <span data-ttu-id="b97fb-104">有关详细信息，请参阅[事务支持](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)。</span><span class="sxs-lookup"><span data-stu-id="b97fb-104">For more information, see [Transaction Support](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6df24-105">示例</span><span class="sxs-lookup"><span data-stu-id="6df24-105">Example</span></span>  
- <span data-ttu-id="6df24-106">下面的代码将数据库提交数据封闭在 <xref:System.Transactions.TransactionScope> 中。</span><span class="sxs-lookup"><span data-stu-id="6df24-106">The following code encloses the database submission in a <xref:System.Transactions.TransactionScope>.</span></span>  
+## <a name="example"></a><span data-ttu-id="b97fb-105">示例</span><span class="sxs-lookup"><span data-stu-id="b97fb-105">Example</span></span>  
+ <span data-ttu-id="b97fb-106">下面的代码将数据库提交数据封闭在 <xref:System.Transactions.TransactionScope> 中。</span><span class="sxs-lookup"><span data-stu-id="b97fb-106">The following code encloses the database submission in a <xref:System.Transactions.TransactionScope>.</span></span>  
   
  [!code-csharp[DLinqSubmittingChanges#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#3)]
  [!code-vb[DLinqSubmittingChanges#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="6df24-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6df24-107">See Also</span></span>  
- [<span data-ttu-id="6df24-108">下载示例数据库</span><span class="sxs-lookup"><span data-stu-id="6df24-108">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [<span data-ttu-id="6df24-109">进行和提交数据更改</span><span class="sxs-lookup"><span data-stu-id="6df24-109">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
- [<span data-ttu-id="6df24-110">事务支持</span><span class="sxs-lookup"><span data-stu-id="6df24-110">Transaction Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)
+## <a name="see-also"></a><span data-ttu-id="b97fb-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="b97fb-107">See Also</span></span>  
+ [<span data-ttu-id="b97fb-108">下载示例数据库</span><span class="sxs-lookup"><span data-stu-id="b97fb-108">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [<span data-ttu-id="b97fb-109">进行和提交数据更改</span><span class="sxs-lookup"><span data-stu-id="b97fb-109">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
+ [<span data-ttu-id="b97fb-110">事务支持</span><span class="sxs-lookup"><span data-stu-id="b97fb-110">Transaction Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)

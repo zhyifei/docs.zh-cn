@@ -20,31 +20,32 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 055ca5a85ca37401107b5cef8f6ff55237c3320b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33d1c7d91c33c194353af43deed9329b9b4ec841
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="47ff9-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="47ff9-102">raceOnRCWCleanup MDA</span></span>
-<span data-ttu-id="47ff9-103">当使用命令（如 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 方法）发出一个调用来发布[运行时可调用包装](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 时，如果公共语言运行时 (CLR) 检测到该包装正在使用中，则激活 `raceOnRCWCleanup` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="47ff9-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
+# <a name="raceonrcwcleanup-mda"></a><span data-ttu-id="4db82-102">raceOnRCWCleanup MDA</span><span class="sxs-lookup"><span data-stu-id="4db82-102">raceOnRCWCleanup MDA</span></span>
+<span data-ttu-id="4db82-103">当使用命令（如 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> 方法）发出一个调用来发布[运行时可调用包装](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 时，如果公共语言运行时 (CLR) 检测到该包装正在使用中，则激活 `raceOnRCWCleanup` 托管调试助手 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="4db82-103">The `raceOnRCWCleanup` managed debugging assistant (MDA) is activated when the common language runtime (CLR) detects that a [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) is in use when a call to release it is made using a command such as the <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> method.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="47ff9-104">症状</span><span class="sxs-lookup"><span data-stu-id="47ff9-104">Symptoms</span></span>  
- <span data-ttu-id="47ff9-105">使用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 或类似方法释放 RCW 期间或之后发生访问冲突或内存损坏。</span><span class="sxs-lookup"><span data-stu-id="47ff9-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="4db82-104">症状</span><span class="sxs-lookup"><span data-stu-id="4db82-104">Symptoms</span></span>  
+ <span data-ttu-id="4db82-105">使用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 或类似方法释放 RCW 期间或之后发生访问冲突或内存损坏。</span><span class="sxs-lookup"><span data-stu-id="4db82-105">Access violations or memory corruption during or after freeing an RCW using <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> or a similar method.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="47ff9-106">原因</span><span class="sxs-lookup"><span data-stu-id="47ff9-106">Cause</span></span>  
- <span data-ttu-id="47ff9-107">正在另一个线程中或释放线程堆栈中使用 RCW。</span><span class="sxs-lookup"><span data-stu-id="47ff9-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="47ff9-108">无法释放使用中的 RCW。</span><span class="sxs-lookup"><span data-stu-id="47ff9-108">An RCW that is in use cannot be released.</span></span>  
+## <a name="cause"></a><span data-ttu-id="4db82-106">原因</span><span class="sxs-lookup"><span data-stu-id="4db82-106">Cause</span></span>  
+ <span data-ttu-id="4db82-107">正在另一个线程中或释放线程堆栈中使用 RCW。</span><span class="sxs-lookup"><span data-stu-id="4db82-107">The RCW is in use on another thread or on the freeing thread stack.</span></span>  <span data-ttu-id="4db82-108">无法释放使用中的 RCW。</span><span class="sxs-lookup"><span data-stu-id="4db82-108">An RCW that is in use cannot be released.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="47ff9-109">解决方法</span><span class="sxs-lookup"><span data-stu-id="47ff9-109">Resolution</span></span>  
- <span data-ttu-id="47ff9-110">不要释放在当前或在其他线程中可能使用的 RCW。</span><span class="sxs-lookup"><span data-stu-id="47ff9-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="4db82-109">解决方法</span><span class="sxs-lookup"><span data-stu-id="4db82-109">Resolution</span></span>  
+ <span data-ttu-id="4db82-110">不要释放在当前或在其他线程中可能使用的 RCW。</span><span class="sxs-lookup"><span data-stu-id="4db82-110">Do not free an RCW that could be in use either in the current or in other threads.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="47ff9-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="47ff9-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="47ff9-112">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="47ff9-112">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="4db82-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="4db82-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="4db82-112">此 MDA 对 CLR 无任何影响。</span><span class="sxs-lookup"><span data-stu-id="4db82-112">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="47ff9-113">输出</span><span class="sxs-lookup"><span data-stu-id="47ff9-113">Output</span></span>  
- <span data-ttu-id="47ff9-114">描述错误的消息。</span><span class="sxs-lookup"><span data-stu-id="47ff9-114">A message describing the error.</span></span>  
+## <a name="output"></a><span data-ttu-id="4db82-113">输出</span><span class="sxs-lookup"><span data-stu-id="4db82-113">Output</span></span>  
+ <span data-ttu-id="4db82-114">描述错误的消息。</span><span class="sxs-lookup"><span data-stu-id="4db82-114">A message describing the error.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="47ff9-115">配置</span><span class="sxs-lookup"><span data-stu-id="47ff9-115">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="4db82-115">配置</span><span class="sxs-lookup"><span data-stu-id="4db82-115">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="47ff9-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="47ff9-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4db82-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="4db82-116">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="47ff9-117">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="47ff9-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="47ff9-118">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="47ff9-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="4db82-117">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="4db82-117">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="4db82-118">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="4db82-118">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

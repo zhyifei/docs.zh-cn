@@ -18,36 +18,37 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 67c80fce223d8f212fa485a8105862bcf24e161b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0fd520392ca7f6bb97ac11d868db7a0df9a32d5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="jitcompilationstart-mda"></a><span data-ttu-id="e45ee-102">jitCompilationStart MDA</span><span class="sxs-lookup"><span data-stu-id="e45ee-102">jitCompilationStart MDA</span></span>
-<span data-ttu-id="e45ee-103">激活 `jitCompilationStart` 托管调试助手 (MDA) 以报告实时 (MDA) 编译器何时开始编译函数。</span><span class="sxs-lookup"><span data-stu-id="e45ee-103">The `jitCompilationStart` managed debugging assistant (MDA) is activated to report when the just-in-time (JIT) compiler starts to compile a function.</span></span>  
+# <a name="jitcompilationstart-mda"></a><span data-ttu-id="e1487-102">jitCompilationStart MDA</span><span class="sxs-lookup"><span data-stu-id="e1487-102">jitCompilationStart MDA</span></span>
+<span data-ttu-id="e1487-103">激活 `jitCompilationStart` 托管调试助手 (MDA) 以报告实时 (MDA) 编译器何时开始编译函数。</span><span class="sxs-lookup"><span data-stu-id="e1487-103">The `jitCompilationStart` managed debugging assistant (MDA) is activated to report when the just-in-time (JIT) compiler starts to compile a function.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="e45ee-104">症状</span><span class="sxs-lookup"><span data-stu-id="e45ee-104">Symptoms</span></span>  
- <span data-ttu-id="e45ee-105">由于 mscorjit.dll 加载到此进程中，对于已采用本机映像格式的程序，工作集大小增加。</span><span class="sxs-lookup"><span data-stu-id="e45ee-105">The working set size increases for a program that is already in native image format because mscorjit.dll is loaded into the process.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="e1487-104">症状</span><span class="sxs-lookup"><span data-stu-id="e1487-104">Symptoms</span></span>  
+ <span data-ttu-id="e1487-105">由于 mscorjit.dll 加载到此进程中，对于已采用本机映像格式的程序，工作集大小增加。</span><span class="sxs-lookup"><span data-stu-id="e1487-105">The working set size increases for a program that is already in native image format because mscorjit.dll is loaded into the process.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="e45ee-106">原因</span><span class="sxs-lookup"><span data-stu-id="e45ee-106">Cause</span></span>  
- <span data-ttu-id="e45ee-107">并非程序依靠的所有程序集均已生成为本机格式，或已生成为本机格式的程序集未正确注册。</span><span class="sxs-lookup"><span data-stu-id="e45ee-107">Not all the assemblies the program depends on have been generated into native format, or those that have are not registered correctly.</span></span>  
+## <a name="cause"></a><span data-ttu-id="e1487-106">原因</span><span class="sxs-lookup"><span data-stu-id="e1487-106">Cause</span></span>  
+ <span data-ttu-id="e1487-107">并非程序依靠的所有程序集均已生成为本机格式，或已生成为本机格式的程序集未正确注册。</span><span class="sxs-lookup"><span data-stu-id="e1487-107">Not all the assemblies the program depends on have been generated into native format, or those that have are not registered correctly.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="e45ee-108">解决方法</span><span class="sxs-lookup"><span data-stu-id="e45ee-108">Resolution</span></span>  
- <span data-ttu-id="e45ee-109">通过启用此 MDA，可确定哪一个函数正在进行 JIT 编译。</span><span class="sxs-lookup"><span data-stu-id="e45ee-109">Enabling this MDA allows you to determine which function is being JIT-compiled.</span></span> <span data-ttu-id="e45ee-110">确定包含此函数的程序集是否生成为本机格式并且正确注册。</span><span class="sxs-lookup"><span data-stu-id="e45ee-110">Determine whether the assembly that contains the function is generated to native format and properly registered.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="e1487-108">解决方法</span><span class="sxs-lookup"><span data-stu-id="e1487-108">Resolution</span></span>  
+ <span data-ttu-id="e1487-109">通过启用此 MDA，可确定哪一个函数正在进行 JIT 编译。</span><span class="sxs-lookup"><span data-stu-id="e1487-109">Enabling this MDA allows you to determine which function is being JIT-compiled.</span></span> <span data-ttu-id="e1487-110">确定包含此函数的程序集是否生成为本机格式并且正确注册。</span><span class="sxs-lookup"><span data-stu-id="e1487-110">Determine whether the assembly that contains the function is generated to native format and properly registered.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="e45ee-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="e45ee-111">Effect on the Runtime</span></span>  
- <span data-ttu-id="e45ee-112">此 MDA 在方法进行 JIT 编译前记录消息，因此启用此 MDA 会对性能产生重大影响。</span><span class="sxs-lookup"><span data-stu-id="e45ee-112">This MDA logs a message just before a method is JIT-compiled, so enabling this MDA has significant impact on performance.</span></span> <span data-ttu-id="e45ee-113">请注意，如果方法是内联的，此 MDA 不会生成单独的消息。</span><span class="sxs-lookup"><span data-stu-id="e45ee-113">Note that if a method is inline, this MDA will not generate a separate message.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="e1487-111">对运行时的影响</span><span class="sxs-lookup"><span data-stu-id="e1487-111">Effect on the Runtime</span></span>  
+ <span data-ttu-id="e1487-112">此 MDA 在方法进行 JIT 编译前记录消息，因此启用此 MDA 会对性能产生重大影响。</span><span class="sxs-lookup"><span data-stu-id="e1487-112">This MDA logs a message just before a method is JIT-compiled, so enabling this MDA has significant impact on performance.</span></span> <span data-ttu-id="e1487-113">请注意，如果方法是内联的，此 MDA 不会生成单独的消息。</span><span class="sxs-lookup"><span data-stu-id="e1487-113">Note that if a method is inline, this MDA will not generate a separate message.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="e45ee-114">输出</span><span class="sxs-lookup"><span data-stu-id="e45ee-114">Output</span></span>  
- <span data-ttu-id="e45ee-115">下面的代码示例显示了示例输出。</span><span class="sxs-lookup"><span data-stu-id="e45ee-115">The following code sample shows sample output.</span></span> <span data-ttu-id="e45ee-116">在此情况下，输出显示在程序集测试中，类“ns2.CO”上的方法“m”是 JIT 编译。</span><span class="sxs-lookup"><span data-stu-id="e45ee-116">In this case the output shows that in assembly Test the method "m" on class "ns2.CO" was JIT-compiled.</span></span>  
+## <a name="output"></a><span data-ttu-id="e1487-114">输出</span><span class="sxs-lookup"><span data-stu-id="e1487-114">Output</span></span>  
+ <span data-ttu-id="e1487-115">下面的代码示例显示了示例输出。</span><span class="sxs-lookup"><span data-stu-id="e1487-115">The following code sample shows sample output.</span></span> <span data-ttu-id="e1487-116">在此情况下，输出显示在程序集测试中，类“ns2.CO”上的方法“m”是 JIT 编译。</span><span class="sxs-lookup"><span data-stu-id="e1487-116">In this case the output shows that in assembly Test the method "m" on class "ns2.CO" was JIT-compiled.</span></span>  
   
 ```  
 method name="Test!ns2.C0::m"  
 ```  
   
-## <a name="configuration"></a><span data-ttu-id="e45ee-117">配置</span><span class="sxs-lookup"><span data-stu-id="e45ee-117">Configuration</span></span>  
- <span data-ttu-id="e45ee-118">以下配置文件显示多种筛选器，可筛选出首次 JIT 编译时，报告哪些方法。</span><span class="sxs-lookup"><span data-stu-id="e45ee-118">The following configuration file shows a variety of filters that can be employed to filter out which methods are reported when they are first JIT-compiled.</span></span> <span data-ttu-id="e45ee-119">通过将名称属性的值设置为 *，可指定报告所有方法。</span><span class="sxs-lookup"><span data-stu-id="e45ee-119">You can specify that all methods be reported by setting the value of the name attribute to *.</span></span>  
+## <a name="configuration"></a><span data-ttu-id="e1487-117">配置</span><span class="sxs-lookup"><span data-stu-id="e1487-117">Configuration</span></span>  
+ <span data-ttu-id="e1487-118">以下配置文件显示多种筛选器，可筛选出首次 JIT 编译时，报告哪些方法。</span><span class="sxs-lookup"><span data-stu-id="e1487-118">The following configuration file shows a variety of filters that can be employed to filter out which methods are reported when they are first JIT-compiled.</span></span> <span data-ttu-id="e1487-119">通过将名称属性的值设置为 *，可指定报告所有方法。</span><span class="sxs-lookup"><span data-stu-id="e1487-119">You can specify that all methods be reported by setting the value of the name attribute to *.</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -67,8 +68,8 @@ method name="Test!ns2.C0::m"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e45ee-120">示例</span><span class="sxs-lookup"><span data-stu-id="e45ee-120">Example</span></span>  
- <span data-ttu-id="e45ee-121">以下示例代码用于上述配置文件。</span><span class="sxs-lookup"><span data-stu-id="e45ee-121">The following code sample is intended to be used with the preceding configuration file.</span></span>  
+## <a name="example"></a><span data-ttu-id="e1487-120">示例</span><span class="sxs-lookup"><span data-stu-id="e1487-120">Example</span></span>  
+ <span data-ttu-id="e1487-121">以下示例代码用于上述配置文件。</span><span class="sxs-lookup"><span data-stu-id="e1487-121">The following code sample is intended to be used with the preceding configuration file.</span></span>  
   
 ```  
 using System;  
@@ -165,7 +166,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e45ee-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e45ee-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e1487-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="e1487-122">See Also</span></span>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [<span data-ttu-id="e45ee-123">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="e45ee-123">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [<span data-ttu-id="e45ee-124">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="e45ee-124">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+ [<span data-ttu-id="e1487-123">使用托管调试助手诊断错误</span><span class="sxs-lookup"><span data-stu-id="e1487-123">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="e1487-124">互操作封送处理</span><span class="sxs-lookup"><span data-stu-id="e1487-124">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

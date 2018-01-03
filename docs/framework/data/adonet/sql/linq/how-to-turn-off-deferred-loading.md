@@ -16,24 +16,25 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d98b190ef4454ff29318eb6ef0f20624c85b62a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b0db2b178ba3c043ddadaeb650701ba144ed8e6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-turn-off-deferred-loading"></a><span data-ttu-id="9c451-102">如何：禁用推迟加载</span><span class="sxs-lookup"><span data-stu-id="9c451-102">How to: Turn Off Deferred Loading</span></span>
-<span data-ttu-id="9c451-103">可以通过将 <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 设置为 `false` 来关闭延迟加载。</span><span class="sxs-lookup"><span data-stu-id="9c451-103">You can turn off deferred loading by setting <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> to `false`.</span></span> <span data-ttu-id="9c451-104">有关详细信息，请参阅[延迟执行与立即加载](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。</span><span class="sxs-lookup"><span data-stu-id="9c451-104">For more information, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span></span>  
+# <a name="how-to-turn-off-deferred-loading"></a><span data-ttu-id="7f0a6-102">如何：禁用推迟加载</span><span class="sxs-lookup"><span data-stu-id="7f0a6-102">How to: Turn Off Deferred Loading</span></span>
+<span data-ttu-id="7f0a6-103">可以通过将 <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 设置为 `false` 来关闭延迟加载。</span><span class="sxs-lookup"><span data-stu-id="7f0a6-103">You can turn off deferred loading by setting <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> to `false`.</span></span> <span data-ttu-id="7f0a6-104">有关详细信息，请参阅[延迟执行与立即加载](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。</span><span class="sxs-lookup"><span data-stu-id="7f0a6-104">For more information, see [Deferred versus Immediate Loading](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9c451-105">关闭对象跟踪时，也隐式地关闭了延迟加载。</span><span class="sxs-lookup"><span data-stu-id="9c451-105">Deferred loading is turned off by implication when object tracking is turned off.</span></span> <span data-ttu-id="9c451-106">有关详细信息，请参阅[如何： 检索信息作为只读](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)。</span><span class="sxs-lookup"><span data-stu-id="9c451-106">For more information, see [How to: Retrieve Information As Read-Only](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md).</span></span>  
+>  <span data-ttu-id="7f0a6-105">关闭对象跟踪时，也隐式地关闭了延迟加载。</span><span class="sxs-lookup"><span data-stu-id="7f0a6-105">Deferred loading is turned off by implication when object tracking is turned off.</span></span> <span data-ttu-id="7f0a6-106">有关详细信息，请参阅[如何： 检索信息作为只读](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)。</span><span class="sxs-lookup"><span data-stu-id="7f0a6-106">For more information, see [How to: Retrieve Information As Read-Only](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9c451-107">示例</span><span class="sxs-lookup"><span data-stu-id="9c451-107">Example</span></span>  
- <span data-ttu-id="9c451-108">下面的示例演示如何通过将 <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 设置为 `false` 来关闭延迟加载。</span><span class="sxs-lookup"><span data-stu-id="9c451-108">The following example shows how to turn off deferred loading by setting <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> to `false`.</span></span>  
+## <a name="example"></a><span data-ttu-id="7f0a6-107">示例</span><span class="sxs-lookup"><span data-stu-id="7f0a6-107">Example</span></span>  
+ <span data-ttu-id="7f0a6-108">下面的示例演示如何通过将 <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> 设置为 `false` 来关闭延迟加载。</span><span class="sxs-lookup"><span data-stu-id="7f0a6-108">The following example shows how to turn off deferred loading by setting <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> to `false`.</span></span>  
   
  [!code-csharp[DLinqQuerying#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#3)]
  [!code-vb[DLinqQuerying#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="9c451-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9c451-109">See Also</span></span>  
- [<span data-ttu-id="9c451-110">查询概念</span><span class="sxs-lookup"><span data-stu-id="9c451-110">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [<span data-ttu-id="9c451-111">查询数据库</span><span class="sxs-lookup"><span data-stu-id="9c451-111">Querying the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a><span data-ttu-id="7f0a6-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="7f0a6-109">See Also</span></span>  
+ [<span data-ttu-id="7f0a6-110">查询概念</span><span class="sxs-lookup"><span data-stu-id="7f0a6-110">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [<span data-ttu-id="7f0a6-111">查询数据库</span><span class="sxs-lookup"><span data-stu-id="7f0a6-111">Querying the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

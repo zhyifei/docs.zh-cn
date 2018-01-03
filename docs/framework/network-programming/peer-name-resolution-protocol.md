@@ -12,63 +12,64 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba38c7e42126bb70161dcb72ffdd6965e8def044
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="peer-name-resolution-protocol"></a><span data-ttu-id="71a27-102">对等名称解析协议</span><span class="sxs-lookup"><span data-stu-id="71a27-102">Peer Name Resolution Protocol</span></span>
-<span data-ttu-id="71a27-103">在对等环境中，对等机使用特定的名称解析系统从名称或其他类型的标识符解析彼此的网络位置（地址、协议和端口）。</span><span class="sxs-lookup"><span data-stu-id="71a27-103">In peer-to-peer environments, peers use specific name resolution systems to resolve each other's network locations (addresses, protocols, and ports) from names or other types of identifiers.</span></span> <span data-ttu-id="71a27-104">过去，由于本质上的短暂性连接以及域名系统 (DNS) 内的其他缺陷，造成对等名称解析十分复杂。</span><span class="sxs-lookup"><span data-stu-id="71a27-104">In the past, peer name resolution has been complicated by the inherently transient connectivity as well as other shortcomings within the Domain Name System (DNS).</span></span>  
+# <a name="peer-name-resolution-protocol"></a><span data-ttu-id="7f91e-102">对等名称解析协议</span><span class="sxs-lookup"><span data-stu-id="7f91e-102">Peer Name Resolution Protocol</span></span>
+<span data-ttu-id="7f91e-103">在对等环境中，对等机使用特定的名称解析系统从名称或其他类型的标识符解析彼此的网络位置（地址、协议和端口）。</span><span class="sxs-lookup"><span data-stu-id="7f91e-103">In peer-to-peer environments, peers use specific name resolution systems to resolve each other's network locations (addresses, protocols, and ports) from names or other types of identifiers.</span></span> <span data-ttu-id="7f91e-104">过去，由于本质上的短暂性连接以及域名系统 (DNS) 内的其他缺陷，造成对等名称解析十分复杂。</span><span class="sxs-lookup"><span data-stu-id="7f91e-104">In the past, peer name resolution has been complicated by the inherently transient connectivity as well as other shortcomings within the Domain Name System (DNS).</span></span>  
   
- <span data-ttu-id="71a27-105">Microsoft® Windows® 对等网络平台使用对等名称解析协议 (PNRP) 解决了这个问题，该协议是一个安全、可缩放的动态名称注册和名称解析协议，最早开发用于 Windows XP，然后在 Windows Vista™ 中得到升级。</span><span class="sxs-lookup"><span data-stu-id="71a27-105">The Microsoft® Windows® Peer-to-Peer Networking platform solves this problem with the Peer Name Resolution Protocol (PNRP), a secure, scalable, and dynamic name registration and name resolution protocol first developed for Windows XP and then upgraded in Windows Vista™.</span></span> <span data-ttu-id="71a27-106">PNRP 与传统的名称解析系统相比有很大不同，为应用程序开发者带来了振奋人心的全新可能。</span><span class="sxs-lookup"><span data-stu-id="71a27-106">PNRP works very differently from traditional name resolution systems, opening up exciting new possibilities for application developers.</span></span>  
+ <span data-ttu-id="7f91e-105">Microsoft® Windows® 对等网络平台使用对等名称解析协议 (PNRP) 解决了这个问题，该协议是一个安全、可缩放的动态名称注册和名称解析协议，最早开发用于 Windows XP，然后在 Windows Vista™ 中得到升级。</span><span class="sxs-lookup"><span data-stu-id="7f91e-105">The Microsoft® Windows® Peer-to-Peer Networking platform solves this problem with the Peer Name Resolution Protocol (PNRP), a secure, scalable, and dynamic name registration and name resolution protocol first developed for Windows XP and then upgraded in Windows Vista™.</span></span> <span data-ttu-id="7f91e-106">PNRP 与传统的名称解析系统相比有很大不同，为应用程序开发者带来了振奋人心的全新可能。</span><span class="sxs-lookup"><span data-stu-id="7f91e-106">PNRP works very differently from traditional name resolution systems, opening up exciting new possibilities for application developers.</span></span>  
   
- <span data-ttu-id="71a27-107">通过 PNRP，对等名称可以应用于计算机或者计算机上单独的应用程序和服务。</span><span class="sxs-lookup"><span data-stu-id="71a27-107">With PNRP, peer names can be applied to the machine, or individual applications or services on the machine.</span></span> <span data-ttu-id="71a27-108">对等名称解析包括地址、端口，以及可能的扩展有效负载。</span><span class="sxs-lookup"><span data-stu-id="71a27-108">A peer name resolution includes an address, port, and possibly an extended payload.</span></span> <span data-ttu-id="71a27-109">此系统的优势在于容错度、无瓶颈以及绝不返回过时地址的名称解析；这使得该协议成为定位移动用户的卓越解决方案。</span><span class="sxs-lookup"><span data-stu-id="71a27-109">Benefits of this system include fault tolerance, no bottlenecks, and name resolutions that will never return stale addresses; making the protocol an excellent solution for locating mobile users.</span></span>  
+ <span data-ttu-id="7f91e-107">通过 PNRP，对等名称可以应用于计算机或者计算机上单独的应用程序和服务。</span><span class="sxs-lookup"><span data-stu-id="7f91e-107">With PNRP, peer names can be applied to the machine, or individual applications or services on the machine.</span></span> <span data-ttu-id="7f91e-108">对等名称解析包括地址、端口，以及可能的扩展有效负载。</span><span class="sxs-lookup"><span data-stu-id="7f91e-108">A peer name resolution includes an address, port, and possibly an extended payload.</span></span> <span data-ttu-id="7f91e-109">此系统的优势在于容错度、无瓶颈以及绝不返回过时地址的名称解析；这使得该协议成为定位移动用户的卓越解决方案。</span><span class="sxs-lookup"><span data-stu-id="7f91e-109">Benefits of this system include fault tolerance, no bottlenecks, and name resolutions that will never return stale addresses; making the protocol an excellent solution for locating mobile users.</span></span>  
   
- <span data-ttu-id="71a27-110">在安全性方面，对等名称可以发布为安全的（受保护的）或不安全的（不受保护的）。</span><span class="sxs-lookup"><span data-stu-id="71a27-110">In terms of security, peer names can be published as secured (protected) or unsecured (unprotected).</span></span> <span data-ttu-id="71a27-111">PNRP 使用公钥加密保护安全对等名称免遭欺骗；计算机和服务都可使用 PNRP 命名。</span><span class="sxs-lookup"><span data-stu-id="71a27-111">PNRP uses public key cryptography to protect secure peer names against spoofing; both computers and services can be named with PNRP.</span></span>  
+ <span data-ttu-id="7f91e-110">在安全性方面，对等名称可以发布为安全的（受保护的）或不安全的（不受保护的）。</span><span class="sxs-lookup"><span data-stu-id="7f91e-110">In terms of security, peer names can be published as secured (protected) or unsecured (unprotected).</span></span> <span data-ttu-id="7f91e-111">PNRP 使用公钥加密保护安全对等名称免遭欺骗；计算机和服务都可使用 PNRP 命名。</span><span class="sxs-lookup"><span data-stu-id="7f91e-111">PNRP uses public key cryptography to protect secure peer names against spoofing; both computers and services can be named with PNRP.</span></span>  
   
--   <span data-ttu-id="71a27-112">对等名称解析协议具备以下属性：</span><span class="sxs-lookup"><span data-stu-id="71a27-112">The Peer Name Resolution Protocol demonstrates the following properties:</span></span>  
+-   <span data-ttu-id="7f91e-112">对等名称解析协议具备以下属性：</span><span class="sxs-lookup"><span data-stu-id="7f91e-112">The Peer Name Resolution Protocol demonstrates the following properties:</span></span>  
   
--   <span data-ttu-id="71a27-113">分布式的，且几乎完全无服务器的。</span><span class="sxs-lookup"><span data-stu-id="71a27-113">Distributed and almost entirely serverless.</span></span> <span data-ttu-id="71a27-114">只有在启动进程时才需要服务器。</span><span class="sxs-lookup"><span data-stu-id="71a27-114">Servers are only required for the bootstrapping process.</span></span>  
+-   <span data-ttu-id="7f91e-113">分布式的，且几乎完全无服务器的。</span><span class="sxs-lookup"><span data-stu-id="7f91e-113">Distributed and almost entirely serverless.</span></span> <span data-ttu-id="7f91e-114">只有在启动进程时才需要服务器。</span><span class="sxs-lookup"><span data-stu-id="7f91e-114">Servers are only required for the bootstrapping process.</span></span>  
   
--   <span data-ttu-id="71a27-115">安全的名称发布，无需第三方介入。</span><span class="sxs-lookup"><span data-stu-id="71a27-115">Secure name publication without the involvement of third parties.</span></span> <span data-ttu-id="71a27-116">和 DNS 名称发布不同，PNRP 名称发布是即时的，且没有财务成本。</span><span class="sxs-lookup"><span data-stu-id="71a27-116">Unlike DNS name publication, PNRP name publication is instantaneous and without financial cost.</span></span>  
+-   <span data-ttu-id="7f91e-115">安全的名称发布，无需第三方介入。</span><span class="sxs-lookup"><span data-stu-id="7f91e-115">Secure name publication without the involvement of third parties.</span></span> <span data-ttu-id="7f91e-116">和 DNS 名称发布不同，PNRP 名称发布是即时的，且没有财务成本。</span><span class="sxs-lookup"><span data-stu-id="7f91e-116">Unlike DNS name publication, PNRP name publication is instantaneous and without financial cost.</span></span>  
   
--   <span data-ttu-id="71a27-117">PNRP 实时更新，以便防止解析过时地址。</span><span class="sxs-lookup"><span data-stu-id="71a27-117">PNRP updates in real-time, which prevents the resolution of stale addresses.</span></span>  
+-   <span data-ttu-id="7f91e-117">PNRP 实时更新，以便防止解析过时地址。</span><span class="sxs-lookup"><span data-stu-id="7f91e-117">PNRP updates in real-time, which prevents the resolution of stale addresses.</span></span>  
   
--   <span data-ttu-id="71a27-118">通过 PNRP 解析名称远不止适用于计算机，它还允许对服务进行名称解析。</span><span class="sxs-lookup"><span data-stu-id="71a27-118">The resolution of names via PNRP extends beyond computers by also allowing name resolution for services.</span></span>  
-  
--  
-  
-## <a name="the-systemnetpeertopeer-namespace"></a><span data-ttu-id="71a27-119">System.Net.PeerToPeer 命名空间</span><span class="sxs-lookup"><span data-stu-id="71a27-119">The System.Net.PeerToPeer Namespace</span></span>  
-  
--   <span data-ttu-id="71a27-120">PNRP 功能由 .NET Framework 版本 3.5 内的 <xref:System.Net.PeerToPeer> 命名空间定义。</span><span class="sxs-lookup"><span data-stu-id="71a27-120">PNRP functionality is defined by the <xref:System.Net.PeerToPeer> namespace within the .NET Framework version 3.5.</span></span> <span data-ttu-id="71a27-121">它提供的类型集可以用于注册可用的 PNRP 服务并解析其对等名称。</span><span class="sxs-lookup"><span data-stu-id="71a27-121">It provides a set of types that can be used to register and resolve peer names with an available PNRP service.</span></span>  
+-   <span data-ttu-id="7f91e-118">通过 PNRP 解析名称远不止适用于计算机，它还允许对服务进行名称解析。</span><span class="sxs-lookup"><span data-stu-id="7f91e-118">The resolution of names via PNRP extends beyond computers by also allowing name resolution for services.</span></span>  
   
 -  
   
--   <span data-ttu-id="71a27-122">（可以使用 <xref:System.ServiceModel.PeerResolvers> 命名空间中提供的类型创建并实例化 PNRP 和自定义对等解析程序。）</span><span class="sxs-lookup"><span data-stu-id="71a27-122">(PNRP and custom peer resolvers can be created and instantiated using the types provided in the <xref:System.ServiceModel.PeerResolvers> namespace.)</span></span>  
+## <a name="the-systemnetpeertopeer-namespace"></a><span data-ttu-id="7f91e-119">System.Net.PeerToPeer 命名空间</span><span class="sxs-lookup"><span data-stu-id="7f91e-119">The System.Net.PeerToPeer Namespace</span></span>  
+  
+-   <span data-ttu-id="7f91e-120">PNRP 功能由 .NET Framework 版本 3.5 内的 <xref:System.Net.PeerToPeer> 命名空间定义。</span><span class="sxs-lookup"><span data-stu-id="7f91e-120">PNRP functionality is defined by the <xref:System.Net.PeerToPeer> namespace within the .NET Framework version 3.5.</span></span> <span data-ttu-id="7f91e-121">它提供的类型集可以用于注册可用的 PNRP 服务并解析其对等名称。</span><span class="sxs-lookup"><span data-stu-id="7f91e-121">It provides a set of types that can be used to register and resolve peer names with an available PNRP service.</span></span>  
   
 -  
   
--   <span data-ttu-id="71a27-123">有如下基本类型可用于注册可用的 PNRP 服务并解析其名称：</span><span class="sxs-lookup"><span data-stu-id="71a27-123">The basic types used to register and resolve names with an available PNRP service are as follows:</span></span>  
+-   <span data-ttu-id="7f91e-122">（可以使用 <xref:System.ServiceModel.PeerResolvers> 命名空间中提供的类型创建并实例化 PNRP 和自定义对等解析程序。）</span><span class="sxs-lookup"><span data-stu-id="7f91e-122">(PNRP and custom peer resolvers can be created and instantiated using the types provided in the <xref:System.ServiceModel.PeerResolvers> namespace.)</span></span>  
   
 -  
   
--   <span data-ttu-id="71a27-124"><xref:System.Net.PeerToPeer.Cloud>：定义描述可用 PNRP 云的信息，包括其范围。</span><span class="sxs-lookup"><span data-stu-id="71a27-124"><xref:System.Net.PeerToPeer.Cloud>: Defines the information describing an available PNRP cloud, including its scope.</span></span>  
+-   <span data-ttu-id="7f91e-123">有如下基本类型可用于注册可用的 PNRP 服务并解析其名称：</span><span class="sxs-lookup"><span data-stu-id="7f91e-123">The basic types used to register and resolve names with an available PNRP service are as follows:</span></span>  
   
--   <span data-ttu-id="71a27-125"><xref:System.Net.PeerToPeer.PeerName>：定义可用于在云中注册并随后解析对等机的对等名称。</span><span class="sxs-lookup"><span data-stu-id="71a27-125"><xref:System.Net.PeerToPeer.PeerName>: Defines a peer name that can be used to register and subsequently resolve a peer within a cloud.</span></span>  
+-  
   
--   <span data-ttu-id="71a27-126"><xref:System.Net.PeerToPeer.PeerNameRecord>：定义 PNRP 云中包含对等机注册信息在内的记录，其中包括可联系到该对等机的网络终结点。</span><span class="sxs-lookup"><span data-stu-id="71a27-126"><xref:System.Net.PeerToPeer.PeerNameRecord>: Defines the record in PNRP cloud that contains the registration information for a peer, which includes the network endpoints at which the peer can be contacted.</span></span>  
+-   <span data-ttu-id="7f91e-124"><xref:System.Net.PeerToPeer.Cloud>：定义描述可用 PNRP 云的信息，包括其范围。</span><span class="sxs-lookup"><span data-stu-id="7f91e-124"><xref:System.Net.PeerToPeer.Cloud>: Defines the information describing an available PNRP cloud, including its scope.</span></span>  
   
--   <span data-ttu-id="71a27-127"><xref:System.Net.PeerToPeer.PeerNameRegistration>：定义对等名称的注册进程，包括开始和结束对等名称解析的方法。</span><span class="sxs-lookup"><span data-stu-id="71a27-127"><xref:System.Net.PeerToPeer.PeerNameRegistration>: Defines the registration process for a peer name, including methods to start and stop peer name registration.</span></span>  
+-   <span data-ttu-id="7f91e-125"><xref:System.Net.PeerToPeer.PeerName>：定义可用于在云中注册并随后解析对等机的对等名称。</span><span class="sxs-lookup"><span data-stu-id="7f91e-125"><xref:System.Net.PeerToPeer.PeerName>: Defines a peer name that can be used to register and subsequently resolve a peer within a cloud.</span></span>  
   
--   <span data-ttu-id="71a27-128"><xref:System.Net.PeerToPeer.PeerNameResolver>：定义将对等名称解析到其网络终结点的进程，包括解析的同步和异步方法。</span><span class="sxs-lookup"><span data-stu-id="71a27-128"><xref:System.Net.PeerToPeer.PeerNameResolver>: Defines the process for resolving a peer name to its network endpoint(s), including both synchronous and asynchronous methods for resolution.</span></span>  
+-   <span data-ttu-id="7f91e-126"><xref:System.Net.PeerToPeer.PeerNameRecord>：定义 PNRP 云中包含对等机注册信息在内的记录，其中包括可联系到该对等机的网络终结点。</span><span class="sxs-lookup"><span data-stu-id="7f91e-126"><xref:System.Net.PeerToPeer.PeerNameRecord>: Defines the record in PNRP cloud that contains the registration information for a peer, which includes the network endpoints at which the peer can be contacted.</span></span>  
+  
+-   <span data-ttu-id="7f91e-127"><xref:System.Net.PeerToPeer.PeerNameRegistration>：定义对等名称的注册进程，包括开始和结束对等名称解析的方法。</span><span class="sxs-lookup"><span data-stu-id="7f91e-127"><xref:System.Net.PeerToPeer.PeerNameRegistration>: Defines the registration process for a peer name, including methods to start and stop peer name registration.</span></span>  
+  
+-   <span data-ttu-id="7f91e-128"><xref:System.Net.PeerToPeer.PeerNameResolver>：定义将对等名称解析到其网络终结点的进程，包括解析的同步和异步方法。</span><span class="sxs-lookup"><span data-stu-id="7f91e-128"><xref:System.Net.PeerToPeer.PeerNameResolver>: Defines the process for resolving a peer name to its network endpoint(s), including both synchronous and asynchronous methods for resolution.</span></span>  
   
 -  
   
 -  
   
-## <a name="see-also"></a><span data-ttu-id="71a27-129">另请参阅</span><span class="sxs-lookup"><span data-stu-id="71a27-129">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7f91e-129">请参阅</span><span class="sxs-lookup"><span data-stu-id="7f91e-129">See Also</span></span>  
  <xref:System.ServiceModel.PeerResolvers>  
  <xref:System.Net.PeerToPeer>  
- [<span data-ttu-id="71a27-130">网络编程示例</span><span class="sxs-lookup"><span data-stu-id="71a27-130">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
- [<span data-ttu-id="71a27-131">PeerToPeer 技术示例</span><span class="sxs-lookup"><span data-stu-id="71a27-131">PeerToPeer Technology Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=179571)
+ [<span data-ttu-id="7f91e-130">网络编程示例</span><span class="sxs-lookup"><span data-stu-id="7f91e-130">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="7f91e-131">PeerToPeer 技术示例</span><span class="sxs-lookup"><span data-stu-id="7f91e-131">PeerToPeer Technology Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=179571)

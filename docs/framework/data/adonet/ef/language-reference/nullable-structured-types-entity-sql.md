@@ -13,75 +13,76 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ac7405aea459d51154ac25171bc76d637a94bf81
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3f294088e92951e964c3daa2a105b767bca1d288
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="90a5c-102">可以为 null 的结构化类型 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="90a5c-102">Nullable Structured Types (Entity SQL)</span></span>
-<span data-ttu-id="90a5c-103">结构化类型的 `null` 实例是不存在的实例。</span><span class="sxs-lookup"><span data-stu-id="90a5c-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="90a5c-104">这不同于其中所有属性都具有 `null` 值的现有实例。</span><span class="sxs-lookup"><span data-stu-id="90a5c-104">This is different from an existing instance in which all properties have `null` values.</span></span>  
+# <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="f7484-102">可以为 null 的结构化类型 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f7484-102">Nullable Structured Types (Entity SQL)</span></span>
+<span data-ttu-id="f7484-103">结构化类型的 `null` 实例是不存在的实例。</span><span class="sxs-lookup"><span data-stu-id="f7484-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="f7484-104">这不同于其中所有属性都具有 `null` 值的现有实例。</span><span class="sxs-lookup"><span data-stu-id="f7484-104">This is different from an existing instance in which all properties have `null` values.</span></span>  
   
- <span data-ttu-id="90a5c-105">本主题介绍可以为 Null 的结构化类型，包括哪些类型可以为 null 以及哪些代码模式会产生可以为 Null 的结构化类型的 `null` 实例。</span><span class="sxs-lookup"><span data-stu-id="90a5c-105">This topic describes the nullable structured types, including which types are nullable and which code patterns produce `null` instances of structured nullable types.</span></span>  
+ <span data-ttu-id="f7484-105">本主题介绍可以为 Null 的结构化类型，包括哪些类型可以为 null 以及哪些代码模式会产生可以为 Null 的结构化类型的 `null` 实例。</span><span class="sxs-lookup"><span data-stu-id="f7484-105">This topic describes the nullable structured types, including which types are nullable and which code patterns produce `null` instances of structured nullable types.</span></span>  
   
-## <a name="kinds-of-nullable-structured-types"></a><span data-ttu-id="90a5c-106">可以为 Null 的结构化类型的种类</span><span class="sxs-lookup"><span data-stu-id="90a5c-106">Kinds of Nullable Structured Types</span></span>  
- <span data-ttu-id="90a5c-107">有三种可以为 Null 的结构化类型：</span><span class="sxs-lookup"><span data-stu-id="90a5c-107">There are three kinds of nullable structure types:</span></span>  
+## <a name="kinds-of-nullable-structured-types"></a><span data-ttu-id="f7484-106">可以为 Null 的结构化类型的种类</span><span class="sxs-lookup"><span data-stu-id="f7484-106">Kinds of Nullable Structured Types</span></span>  
+ <span data-ttu-id="f7484-107">有三种可以为 Null 的结构化类型：</span><span class="sxs-lookup"><span data-stu-id="f7484-107">There are three kinds of nullable structure types:</span></span>  
   
--   <span data-ttu-id="90a5c-108">行类型。</span><span class="sxs-lookup"><span data-stu-id="90a5c-108">Row types.</span></span>  
+-   <span data-ttu-id="f7484-108">行类型。</span><span class="sxs-lookup"><span data-stu-id="f7484-108">Row types.</span></span>  
   
--   <span data-ttu-id="90a5c-109">复杂类型。</span><span class="sxs-lookup"><span data-stu-id="90a5c-109">Complex types.</span></span>  
+-   <span data-ttu-id="f7484-109">复杂类型。</span><span class="sxs-lookup"><span data-stu-id="f7484-109">Complex types.</span></span>  
   
--   <span data-ttu-id="90a5c-110">实体类型。</span><span class="sxs-lookup"><span data-stu-id="90a5c-110">Entity types.</span></span>  
+-   <span data-ttu-id="f7484-110">实体类型。</span><span class="sxs-lookup"><span data-stu-id="f7484-110">Entity types.</span></span>  
   
-## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a><span data-ttu-id="90a5c-111">能够产生结构化类型的 null 实例的代码模式</span><span class="sxs-lookup"><span data-stu-id="90a5c-111">Code Patterns that Produce Null Instances of Structured Types</span></span>  
- <span data-ttu-id="90a5c-112">以下方案会产生 `null` 实例：</span><span class="sxs-lookup"><span data-stu-id="90a5c-112">The following scenarios produce `null` instances:</span></span>  
+## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a><span data-ttu-id="f7484-111">能够产生结构化类型的 null 实例的代码模式</span><span class="sxs-lookup"><span data-stu-id="f7484-111">Code Patterns that Produce Null Instances of Structured Types</span></span>  
+ <span data-ttu-id="f7484-112">以下方案会产生 `null` 实例：</span><span class="sxs-lookup"><span data-stu-id="f7484-112">The following scenarios produce `null` instances:</span></span>  
   
--   <span data-ttu-id="90a5c-113">将 `null` 说明为结构化类型：</span><span class="sxs-lookup"><span data-stu-id="90a5c-113">Shaping `null` as a structured type:</span></span>  
+-   <span data-ttu-id="f7484-113">将 `null` 说明为结构化类型：</span><span class="sxs-lookup"><span data-stu-id="f7484-113">Shaping `null` as a structured type:</span></span>  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   <span data-ttu-id="90a5c-114">将基类型向上转换为派生类型：</span><span class="sxs-lookup"><span data-stu-id="90a5c-114">Upcasting of a base type to a derived type:</span></span>  
+-   <span data-ttu-id="f7484-114">将基类型向上转换为派生类型：</span><span class="sxs-lookup"><span data-stu-id="f7484-114">Upcasting of a base type to a derived type:</span></span>  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   <span data-ttu-id="90a5c-115">对 false 条件进行外部联接：</span><span class="sxs-lookup"><span data-stu-id="90a5c-115">Outer join on false condition:</span></span>  
+-   <span data-ttu-id="f7484-115">对 false 条件进行外部联接：</span><span class="sxs-lookup"><span data-stu-id="f7484-115">Outer join on false condition:</span></span>  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     <span data-ttu-id="90a5c-116">--或</span><span class="sxs-lookup"><span data-stu-id="90a5c-116">--or</span></span>  
+     <span data-ttu-id="f7484-116">--或</span><span class="sxs-lookup"><span data-stu-id="f7484-116">--or</span></span>  
   
     ```  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     <span data-ttu-id="90a5c-117">--或</span><span class="sxs-lookup"><span data-stu-id="90a5c-117">--or</span></span>  
+     <span data-ttu-id="f7484-117">--或</span><span class="sxs-lookup"><span data-stu-id="f7484-117">--or</span></span>  
   
     ```  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
--   <span data-ttu-id="90a5c-118">取消 `null` 引用的引用：</span><span class="sxs-lookup"><span data-stu-id="90a5c-118">Dereferencing a `null` reference:</span></span>  
+-   <span data-ttu-id="f7484-118">取消 `null` 引用的引用：</span><span class="sxs-lookup"><span data-stu-id="f7484-118">Dereferencing a `null` reference:</span></span>  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   <span data-ttu-id="90a5c-119">从空集合获取 ANYELEMENT：</span><span class="sxs-lookup"><span data-stu-id="90a5c-119">Obtaining ANYELEMENT from an empty collection:</span></span>  
+-   <span data-ttu-id="f7484-119">从空集合获取 ANYELEMENT：</span><span class="sxs-lookup"><span data-stu-id="f7484-119">Obtaining ANYELEMENT from an empty collection:</span></span>  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   <span data-ttu-id="90a5c-120">检查结构化类型实例是否为 `null`：</span><span class="sxs-lookup"><span data-stu-id="90a5c-120">Checking for `null` instances of structured types:</span></span>  
+-   <span data-ttu-id="f7484-120">检查结构化类型实例是否为 `null`：</span><span class="sxs-lookup"><span data-stu-id="f7484-120">Checking for `null` instances of structured types:</span></span>  
   
     ```csharp  
     ...  
@@ -98,5 +99,5 @@ ms.lasthandoff: 10/18/2017
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="90a5c-121">另请参阅</span><span class="sxs-lookup"><span data-stu-id="90a5c-121">See Also</span></span>  
- [<span data-ttu-id="90a5c-122">Entity SQL 概述</span><span class="sxs-lookup"><span data-stu-id="90a5c-122">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f7484-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="f7484-121">See Also</span></span>  
+ [<span data-ttu-id="f7484-122">实体 SQL 概述</span><span class="sxs-lookup"><span data-stu-id="f7484-122">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

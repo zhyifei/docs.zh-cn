@@ -13,73 +13,74 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e7d7a0a1f641603887675ed0c1faebd5c06b273
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 91ff476ed8f6060975c6adc1fe01a6db9c199969
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="query-examples"></a><span data-ttu-id="f96ff-102">查询示例</span><span class="sxs-lookup"><span data-stu-id="f96ff-102">Query Examples</span></span>
-<span data-ttu-id="f96ff-103">本节提供典型的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 查询的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 和 C# 示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-103">This section provides [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# examples of typical [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries.</span></span> <span data-ttu-id="f96ff-104">使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员可以在“示例”一节中提供的示例解决方案中找到许多其他示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-104">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can find many more examples in a sample solution available in the Samples section.</span></span> <span data-ttu-id="f96ff-105">有关详细信息，请参阅[示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。</span><span class="sxs-lookup"><span data-stu-id="f96ff-105">For more information, see [Samples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).</span></span>  
+# <a name="query-examples"></a><span data-ttu-id="d9ae8-102">查询示例</span><span class="sxs-lookup"><span data-stu-id="d9ae8-102">Query Examples</span></span>
+<span data-ttu-id="d9ae8-103">本节提供典型的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 查询的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 和 C# 示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-103">This section provides [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] and C# examples of typical [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries.</span></span> <span data-ttu-id="d9ae8-104">使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员可以在“示例”一节中提供的示例解决方案中找到许多其他示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-104">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can find many more examples in a sample solution available in the Samples section.</span></span> <span data-ttu-id="d9ae8-105">有关详细信息，请参阅[示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-105">For more information, see [Samples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="f96ff-106">*db*中的代码示例中经常会使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档。</span><span class="sxs-lookup"><span data-stu-id="f96ff-106">*db* is often used in code examples in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation.</span></span> <span data-ttu-id="f96ff-107">*db*被假定为实例*Northwind*类，该类继承自<xref:System.Data.Linq.DataContext>。</span><span class="sxs-lookup"><span data-stu-id="f96ff-107">*db* is assumed to be an instance of a *Northwind* class, which inherits from <xref:System.Data.Linq.DataContext>.</span></span>  
+>  <span data-ttu-id="d9ae8-106">*db*中的代码示例中经常会使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-106">*db* is often used in code examples in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation.</span></span> <span data-ttu-id="d9ae8-107">*db*被假定为实例*Northwind*类，该类继承自<xref:System.Data.Linq.DataContext>。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-107">*db* is assumed to be an instance of a *Northwind* class, which inherits from <xref:System.Data.Linq.DataContext>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f96ff-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="f96ff-108">In This Section</span></span>  
- [<span data-ttu-id="f96ff-109">聚合查询</span><span class="sxs-lookup"><span data-stu-id="f96ff-109">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
- <span data-ttu-id="f96ff-110">介绍如何使用 <xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Count%2A> 等。</span><span class="sxs-lookup"><span data-stu-id="f96ff-110">Describes how to use <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, and so forth.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d9ae8-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="d9ae8-108">In This Section</span></span>  
+ [<span data-ttu-id="d9ae8-109">聚合查询</span><span class="sxs-lookup"><span data-stu-id="d9ae8-109">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
+ <span data-ttu-id="d9ae8-110">介绍如何使用 <xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Count%2A> 等。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-110">Describes how to use <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, and so forth.</span></span>  
   
- [<span data-ttu-id="f96ff-111">返回序列中的第一个元素</span><span class="sxs-lookup"><span data-stu-id="f96ff-111">Return the First Element in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-first-element-in-a-sequence.md)  
- <span data-ttu-id="f96ff-112">提供使用 <xref:System.Linq.Enumerable.First%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-112">Provides examples of using <xref:System.Linq.Enumerable.First%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-111">返回序列中的第一个元素</span><span class="sxs-lookup"><span data-stu-id="d9ae8-111">Return the First Element in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-first-element-in-a-sequence.md)  
+ <span data-ttu-id="d9ae8-112">提供使用 <xref:System.Linq.Enumerable.First%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-112">Provides examples of using <xref:System.Linq.Enumerable.First%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-113">返回或跳过序列中的元素</span><span class="sxs-lookup"><span data-stu-id="f96ff-113">Return Or Skip Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- <span data-ttu-id="f96ff-114">提供使用 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-114">Provides examples of using <xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-113">返回或跳过序列中的元素</span><span class="sxs-lookup"><span data-stu-id="d9ae8-113">Return Or Skip Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
+ <span data-ttu-id="d9ae8-114">提供使用 <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-114">Provides examples of using <xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-115">序列中对元素进行排序</span><span class="sxs-lookup"><span data-stu-id="f96ff-115">Sort Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sort-elements-in-a-sequence.md)  
- <span data-ttu-id="f96ff-116">提供使用 <xref:System.Linq.Enumerable.OrderBy%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-116">Provides examples of using <xref:System.Linq.Enumerable.OrderBy%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-115">在序列中对元素进行排序</span><span class="sxs-lookup"><span data-stu-id="d9ae8-115">Sort Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sort-elements-in-a-sequence.md)  
+ <span data-ttu-id="d9ae8-116">提供使用 <xref:System.Linq.Enumerable.OrderBy%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-116">Provides examples of using <xref:System.Linq.Enumerable.OrderBy%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-117">序列中的组元素</span><span class="sxs-lookup"><span data-stu-id="f96ff-117">Group Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/group-elements-in-a-sequence.md)  
- <span data-ttu-id="f96ff-118">提供使用 <xref:System.Linq.Enumerable.GroupBy%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-118">Provides examples of using <xref:System.Linq.Enumerable.GroupBy%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-117">对序列中的元素进行分组</span><span class="sxs-lookup"><span data-stu-id="d9ae8-117">Group Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/group-elements-in-a-sequence.md)  
+ <span data-ttu-id="d9ae8-118">提供使用 <xref:System.Linq.Enumerable.GroupBy%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-118">Provides examples of using <xref:System.Linq.Enumerable.GroupBy%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-119">消除序列中的重复元素</span><span class="sxs-lookup"><span data-stu-id="f96ff-119">Eliminate Duplicate Elements from a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/eliminate-duplicate-elements-from-a-sequence.md)  
- <span data-ttu-id="f96ff-120">提供使用 <xref:System.Linq.Enumerable.Distinct%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-120">Provides examples of using <xref:System.Linq.Enumerable.Distinct%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-119">从序列中消除重复的元素</span><span class="sxs-lookup"><span data-stu-id="d9ae8-119">Eliminate Duplicate Elements from a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/eliminate-duplicate-elements-from-a-sequence.md)  
+ <span data-ttu-id="d9ae8-120">提供使用 <xref:System.Linq.Enumerable.Distinct%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-120">Provides examples of using <xref:System.Linq.Enumerable.Distinct%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-121">确定序列中的任何或所有元素是否满足条件</span><span class="sxs-lookup"><span data-stu-id="f96ff-121">Determine if Any or All Elements in a Sequence Satisfy a Condition</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
- <span data-ttu-id="f96ff-122">提供使用 <xref:System.Linq.Enumerable.All%2A> 和 <xref:System.Linq.Enumerable.Any%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-122">Provides examples of using <xref:System.Linq.Enumerable.All%2A> and <xref:System.Linq.Enumerable.Any%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-121">确定序列中任何或所有元素是否满足某一条件</span><span class="sxs-lookup"><span data-stu-id="d9ae8-121">Determine if Any or All Elements in a Sequence Satisfy a Condition</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md)  
+ <span data-ttu-id="d9ae8-122">提供使用 <xref:System.Linq.Enumerable.All%2A> 和 <xref:System.Linq.Enumerable.Any%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-122">Provides examples of using <xref:System.Linq.Enumerable.All%2A> and <xref:System.Linq.Enumerable.Any%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-123">串联两个序列</span><span class="sxs-lookup"><span data-stu-id="f96ff-123">Concatenate Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- <span data-ttu-id="f96ff-124">提供使用 <xref:System.Linq.Enumerable.Concat%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-124">Provides examples of using <xref:System.Linq.Enumerable.Concat%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-123">连接两个序列</span><span class="sxs-lookup"><span data-stu-id="d9ae8-123">Concatenate Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
+ <span data-ttu-id="d9ae8-124">提供使用 <xref:System.Linq.Enumerable.Concat%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-124">Provides examples of using <xref:System.Linq.Enumerable.Concat%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-125">返回两个序列之间的差集</span><span class="sxs-lookup"><span data-stu-id="f96ff-125">Return the Set Difference Between Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- <span data-ttu-id="f96ff-126">提供使用 <xref:System.Linq.Enumerable.Except%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-126">Provides examples of using <xref:System.Linq.Enumerable.Except%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-125">返回两个序列之间的差集</span><span class="sxs-lookup"><span data-stu-id="d9ae8-125">Return the Set Difference Between Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
+ <span data-ttu-id="d9ae8-126">提供使用 <xref:System.Linq.Enumerable.Except%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-126">Provides examples of using <xref:System.Linq.Enumerable.Except%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-127">返回两个序列的交集</span><span class="sxs-lookup"><span data-stu-id="f96ff-127">Return the Set Intersection of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- <span data-ttu-id="f96ff-128">提供使用 <xref:System.Linq.Enumerable.Intersect%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-128">Provides examples of using <xref:System.Linq.Enumerable.Intersect%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-127">返回两个序列的交集</span><span class="sxs-lookup"><span data-stu-id="d9ae8-127">Return the Set Intersection of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
+ <span data-ttu-id="d9ae8-128">提供使用 <xref:System.Linq.Enumerable.Intersect%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-128">Provides examples of using <xref:System.Linq.Enumerable.Intersect%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-129">返回的两个序列的并集</span><span class="sxs-lookup"><span data-stu-id="f96ff-129">Return the Set Union of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)  
- <span data-ttu-id="f96ff-130">提供使用 <xref:System.Linq.Enumerable.Union%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-130">Provides examples of using <xref:System.Linq.Enumerable.Union%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-129">返回两个序列的并集</span><span class="sxs-lookup"><span data-stu-id="d9ae8-129">Return the Set Union of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)  
+ <span data-ttu-id="d9ae8-130">提供使用 <xref:System.Linq.Enumerable.Union%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-130">Provides examples of using <xref:System.Linq.Enumerable.Union%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-131">将序列转换为数组</span><span class="sxs-lookup"><span data-stu-id="f96ff-131">Convert a Sequence to an Array</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-an-array.md)  
- <span data-ttu-id="f96ff-132">提供使用 <xref:System.Linq.Enumerable.ToArray%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-132">Provides examples of using <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-131">将序列转换为数组</span><span class="sxs-lookup"><span data-stu-id="d9ae8-131">Convert a Sequence to an Array</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-an-array.md)  
+ <span data-ttu-id="d9ae8-132">提供使用 <xref:System.Linq.Enumerable.ToArray%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-132">Provides examples of using <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-133">将序列转换为泛型列表</span><span class="sxs-lookup"><span data-stu-id="f96ff-133">Convert a Sequence to a Generic List</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-a-generic-list.md)  
- <span data-ttu-id="f96ff-134">提供使用 <xref:System.Linq.Enumerable.ToList%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-134">Provides examples of using <xref:System.Linq.Enumerable.ToList%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-133">将某一序列转换为泛型列表</span><span class="sxs-lookup"><span data-stu-id="d9ae8-133">Convert a Sequence to a Generic List</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-sequence-to-a-generic-list.md)  
+ <span data-ttu-id="d9ae8-134">提供使用 <xref:System.Linq.Enumerable.ToList%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-134">Provides examples of using <xref:System.Linq.Enumerable.ToList%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-135">将类型转换为泛型 IEnumerable</span><span class="sxs-lookup"><span data-stu-id="f96ff-135">Convert a Type to a Generic IEnumerable</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)  
- <span data-ttu-id="f96ff-136">提供使用 <xref:System.Linq.Enumerable.AsEnumerable%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-136">Provides examples of using <xref:System.Linq.Enumerable.AsEnumerable%2A>.</span></span>  
+ [<span data-ttu-id="d9ae8-135">将某一类型转换为泛型 IEnumerable</span><span class="sxs-lookup"><span data-stu-id="d9ae8-135">Convert a Type to a Generic IEnumerable</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)  
+ <span data-ttu-id="d9ae8-136">提供使用 <xref:System.Linq.Enumerable.AsEnumerable%2A> 的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-136">Provides examples of using <xref:System.Linq.Enumerable.AsEnumerable%2A>.</span></span>  
   
- [<span data-ttu-id="f96ff-137">构建联接和跨产品查询</span><span class="sxs-lookup"><span data-stu-id="f96ff-137">Formulate Joins and Cross-Product Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
- <span data-ttu-id="f96ff-138">提供在 `from`、`where` 和 `select` 子句中使用外键导航的示例。</span><span class="sxs-lookup"><span data-stu-id="f96ff-138">Provides examples of using foreign-key navigation in the `from`, `where`, and `select` clauses.</span></span>  
+ [<span data-ttu-id="d9ae8-137">构建联接和叉积查询</span><span class="sxs-lookup"><span data-stu-id="d9ae8-137">Formulate Joins and Cross-Product Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
+ <span data-ttu-id="d9ae8-138">提供在 `from`、`where` 和 `select` 子句中使用外键导航的示例。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-138">Provides examples of using foreign-key navigation in the `from`, `where`, and `select` clauses.</span></span>  
   
- [<span data-ttu-id="f96ff-139">构建投影</span><span class="sxs-lookup"><span data-stu-id="f96ff-139">Formulate Projections</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- <span data-ttu-id="f96ff-140">提供示例组合在一起的`select`与其他功能 (例如，*匿名类型*) 构建查询投影。</span><span class="sxs-lookup"><span data-stu-id="f96ff-140">Provides examples of combining `select` with other features (for example, *anonymous types*) to form query projections.</span></span>  
+ [<span data-ttu-id="d9ae8-139">构建投影</span><span class="sxs-lookup"><span data-stu-id="d9ae8-139">Formulate Projections</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
+ <span data-ttu-id="d9ae8-140">提供示例组合在一起的`select`与其他功能 (例如，*匿名类型*) 构建查询投影。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-140">Provides examples of combining `select` with other features (for example, *anonymous types*) to form query projections.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="f96ff-141">相关章节</span><span class="sxs-lookup"><span data-stu-id="f96ff-141">Related Sections</span></span>  
- [<span data-ttu-id="f96ff-142">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="f96ff-142">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- <span data-ttu-id="f96ff-143">解释标准查询运算符的概念。</span><span class="sxs-lookup"><span data-stu-id="f96ff-143">Explains the concept of standard query operators.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="d9ae8-141">相关章节</span><span class="sxs-lookup"><span data-stu-id="d9ae8-141">Related Sections</span></span>  
+ [<span data-ttu-id="d9ae8-142">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="d9ae8-142">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ <span data-ttu-id="d9ae8-143">解释标准查询运算符的概念。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-143">Explains the concept of standard query operators.</span></span>  
   
- [<span data-ttu-id="f96ff-144">查询概念</span><span class="sxs-lookup"><span data-stu-id="f96ff-144">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- <span data-ttu-id="f96ff-145">解释 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何使用适用于查询的概念。</span><span class="sxs-lookup"><span data-stu-id="f96ff-145">Explains how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses concepts that apply to queries.</span></span>  
+ [<span data-ttu-id="d9ae8-144">查询概念</span><span class="sxs-lookup"><span data-stu-id="d9ae8-144">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ <span data-ttu-id="d9ae8-145">解释 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何使用适用于查询的概念。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-145">Explains how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uses concepts that apply to queries.</span></span>  
   
- [<span data-ttu-id="f96ff-146">编程指南</span><span class="sxs-lookup"><span data-stu-id="f96ff-146">Programming Guide</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- <span data-ttu-id="f96ff-147">提供用于访问一些主题的门户，这些主题解释了与 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相关的编程概念。</span><span class="sxs-lookup"><span data-stu-id="f96ff-147">Provides a portal to topics that explain programming concepts related to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>
+ [<span data-ttu-id="d9ae8-146">编程指南</span><span class="sxs-lookup"><span data-stu-id="d9ae8-146">Programming Guide</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ <span data-ttu-id="d9ae8-147">提供用于访问一些主题的门户，这些主题解释了与 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相关的编程概念。</span><span class="sxs-lookup"><span data-stu-id="d9ae8-147">Provides a portal to topics that explain programming concepts related to [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>

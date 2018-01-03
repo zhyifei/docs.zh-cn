@@ -21,16 +21,17 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6ade939969069fb35221d83f8c7e4e380e903a00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 89f5b7069af0bfdfd732ed1ab4935771a565a20f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="closeenum-method"></a><span data-ttu-id="8017d-102">CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="8017d-102">CloseEnum Method</span></span>
-<span data-ttu-id="8017d-103">关闭指定的枚举并释放关联的资源。</span><span class="sxs-lookup"><span data-stu-id="8017d-103">Closes the indicated enumeration and frees associated resources.</span></span>  
+# <a name="closeenum-method"></a><span data-ttu-id="0c968-102">CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="0c968-102">CloseEnum Method</span></span>
+<span data-ttu-id="0c968-103">关闭指定的枚举并释放关联的资源。</span><span class="sxs-lookup"><span data-stu-id="0c968-103">Closes the indicated enumeration and frees associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8017d-104">语法</span><span class="sxs-lookup"><span data-stu-id="8017d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c968-104">语法</span><span class="sxs-lookup"><span data-stu-id="0c968-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseEnum(  
@@ -38,17 +39,17 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8017d-105">参数</span><span class="sxs-lookup"><span data-stu-id="8017d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0c968-105">参数</span><span class="sxs-lookup"><span data-stu-id="0c968-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="8017d-106">枚举即将关闭句柄。</span><span class="sxs-lookup"><span data-stu-id="8017d-106">Handle of enumeration to be closed.</span></span>  
+ <span data-ttu-id="0c968-106">枚举即将关闭句柄。</span><span class="sxs-lookup"><span data-stu-id="0c968-106">Handle of enumeration to be closed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8017d-107">返回值</span><span class="sxs-lookup"><span data-stu-id="8017d-107">Return Value</span></span>  
- <span data-ttu-id="8017d-108">如果该方法成功，则返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="8017d-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0c968-107">返回值</span><span class="sxs-lookup"><span data-stu-id="0c968-107">Return Value</span></span>  
+ <span data-ttu-id="0c968-108">如果该方法成功，则返回，则为 S_OK。</span><span class="sxs-lookup"><span data-stu-id="0c968-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8017d-109">要求</span><span class="sxs-lookup"><span data-stu-id="8017d-109">Requirements</span></span>  
- <span data-ttu-id="8017d-110">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="8017d-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c968-109">惠?</span><span class="sxs-lookup"><span data-stu-id="0c968-109">Requirements</span></span>  
+ <span data-ttu-id="0c968-110">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="0c968-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8017d-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8017d-111">See Also</span></span>  
- [<span data-ttu-id="8017d-112">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="8017d-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="8017d-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="8017d-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="8017d-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="8017d-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="0c968-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="0c968-111">See Also</span></span>  
+ [<span data-ttu-id="0c968-112">IALink 接口</span><span class="sxs-lookup"><span data-stu-id="0c968-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="0c968-113">IALink2 接口</span><span class="sxs-lookup"><span data-stu-id="0c968-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="0c968-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="0c968-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
