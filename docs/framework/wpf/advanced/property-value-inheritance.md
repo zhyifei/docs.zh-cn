@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 538b2e9cc1ce11dc336a8d90ec84ba504baa6f2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eac3e03cfc0ca8bbb6f61f1bc6663c67fd6303f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-value-inheritance"></a>属性值继承
 属性值继承是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的一项功能。 属性值继承使元素树中的子元素可以从父元素获取特定属性的值，并继承该值，就如同它是在最近的父元素中任意位置设置的一样。 父元素可能也已通过属性值继承获得了其值，因此系统有可能一直递归到页面根。 属性值继承不是默认属性系统行为；属性必须用特定的元数据设置来建立，以便使该属性对子元素启动属性值继承。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="inheriting-property-values-across-tree-boundaries"></a>跨树边界继承属性值  
  属性继承通过遍历元素树来工作。 此树通常与逻辑树并行。 但是，每当你包含 WPF 核心级对象中的标记，如定义元素树， <xref:System.Windows.Media.Brush>，你已创建一个不连续的逻辑树。 通过从概念上讲不扩展真正的逻辑树<xref:System.Windows.Media.Brush>，因为逻辑树是 WPF 框架级别概念。 你可以看到这反映在结果中使用的方法时<xref:System.Windows.LogicalTreeHelper>。 但是，属性值继承可以填补此间隙的逻辑树中，并且仍然可以将传递继承的值，处理程序，但前提是可继承的属性已注册为附加的属性，而且没有故意继承阻止边界 (如<xref:System.Windows.Controls.Frame>) 遇到。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
  [依赖项属性值优先级](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)

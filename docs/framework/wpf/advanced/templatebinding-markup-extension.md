@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ab8645de78a79f4bd47fa436699af002db99b9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 959cad0d53b12c3093b95b19ff56ed55eec7eb4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 标记扩展
 连接某一控件模板中的属性值，使之成为模板化控件上另一个属性的值。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
  `TemplateBinding` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 XAML 使用中的所有标记扩展`{`和`}`其属性的语法，这是 XAML 处理器识别标记扩展必须处理该特性所依据的约定中的字符。 有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Style>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  

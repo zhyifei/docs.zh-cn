@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cec4326c8ae93507ee94c0b9573e679c8584a77
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 82f176a5c4d0f3e371993c9b2273bb045fe6df1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-community-feedback"></a>WPF 社区反馈
 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 公开了多种社区资源，方便你了解、讨论和提供有关 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 的反馈，包括 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 团队成员和社区主管撰写的博客、论坛以及 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] 产品反馈中心。 每种社区资源的优点各不相同。 下面将介绍这些优点以及使用各种资源的最佳做法，确保从整个社区尤其是 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] 获取最佳响应。  

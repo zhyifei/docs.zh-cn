@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6925e9322063d68d0d7f8c8e048eed254cd14ed7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9fe22e49ee28de60bc76d7a4f543462bbcfac48c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>如何：获取只读 Freezable 的可写副本
 此示例演示如何使用<xref:System.Windows.Freezable.Clone%2A>方法创建的可写副本的只读<xref:System.Windows.Freezable>。  
@@ -38,8 +39,8 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息<xref:System.Windows.Freezable>对象，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.CloneCurrentValue%2A>  
  [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

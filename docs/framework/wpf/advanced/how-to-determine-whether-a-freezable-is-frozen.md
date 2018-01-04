@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47fb0a871c3792450386c440629ead1ee3fbecdf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5eed85f982687bfc90f53e57ab1ec3949820097e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>如何：确定 Freezable 是否处于冻结状态
 此示例演示如何确定是否<xref:System.Windows.Freezable>对象被冻结。 如果你尝试修改冻结<xref:System.Windows.Freezable>对象，它将引发<xref:System.InvalidOperationException>。 若要避免发生此异常，请使用<xref:System.Windows.Freezable.IsFrozen%2A>属性<xref:System.Windows.Freezable>对象以确定是否已被冻结。  
@@ -34,8 +35,8 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息<xref:System.Windows.Freezable>对象，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.IsFrozen%2A>  
  [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

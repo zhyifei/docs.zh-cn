@@ -17,11 +17,14 @@ caps.latest.revision: "95"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>使用可移植类库的跨平台开发
 Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速轻松地为 Microsoft 平台构建跨平台应用和库。  
@@ -37,7 +40,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
 > [!WARNING]
 >  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)包括对可移植类库模板的更新。 如果你具有较早版本的 Visual Studio 和 Visual Studio 2013 安装在同一台计算机，然后再安装 Update 2 中，对更改**目标框架**选择将应用于这两个版本的 Visual Studio。  
   
- 在本主题中：  
+ 本主题内容：  
   
  [Visual Studio 支持](#vs_support)  
  [创建可移植类库项目](#create_pcl)  
@@ -226,9 +229,9 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
 </div>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [可移植类库与 MVVM 配合使用](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
- [面向多个平台的库的应用程序资源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+## <a name="see-also"></a>请参阅  
+ [将可移植类库与 MVVM 配合使用](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+ [面向多个平台的库的应用资源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
  [.NET 可移植性分析器](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [部署](../../../docs/framework/deployment/net-framework-applications.md)

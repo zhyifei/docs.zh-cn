@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 348136a1feaf6e0a0824cf183a2eeec4e10b77fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3abcd441219e58df2e5a0d4b66447e255c6aabd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>如何：使用代码添加事件处理程序
 此示例演示如何使用代码将事件处理程序添加到元素。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  添加事件处理程序在最初分析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页是要简单得多。 在对象元素中你想要添加事件处理程序，将添加匹配你想要处理事件的名称的属性。 然后该属性的值指定为你的代码隐藏文件中定义的事件处理程序方法的名称[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页。 有关详细信息，请参阅[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)或[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)

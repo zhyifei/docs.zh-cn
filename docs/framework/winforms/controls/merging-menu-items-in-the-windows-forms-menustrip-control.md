@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8e042b3f7b0a2a2e40b8fba33fca6c147086df6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>在 Windows 窗体 MenuStrip 控件中合并菜单项
 如果你有多文档界面 (MDI) 应用程序，你可以将菜单项或从子窗体的整个菜单合并到父窗体的菜单中。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
  你可以触发自动合并通过激活<xref:System.Windows.Forms.MenuStrip>MDI 源。 在激活，源<xref:System.Windows.Forms.MenuStrip>合并到 MDI 目标。 当新的窗体变为活动状态时，合并还原最后一个窗体上，并触发新的窗体上。 你可以通过设置来控制此行为<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>属性根据需要在每个上<xref:System.Windows.Forms.ToolStripItem>，并通过设置<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>上每个属性<xref:System.Windows.Forms.MenuStrip>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStripManager>  
  <xref:System.Windows.Forms.MenuStrip>  
  [MenuStrip 控件](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  

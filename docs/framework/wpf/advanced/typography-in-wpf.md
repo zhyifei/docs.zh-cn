@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28c51c6208bfdfe068b9fb3ed2cdc58dd0350fdb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7cd424dfd936427edb855a92e54921c064c8a8fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typography-in-wpf"></a>WPF 中的版式
 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要版式功能。 这些功能包括改进的文本呈现质量和性能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版式支持、增强的国际文本、增强的字体支持和新的文本应用程序编程接口 (API)。  
@@ -176,12 +177,12 @@ FlowDocumentReader 中承载的文本
   
  有关创建自定义文本布局的详细信息，请参阅[高级文本格式设置](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.FormattedText>  
  <xref:System.Windows.Media.TextFormatting.TextFormatter>  
  [ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
  [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
  [绘制格式化文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
  [高级文本格式设置](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [“文本”](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [Microsoft 版式](http://www.microsoft.com/typography/default.mspx)

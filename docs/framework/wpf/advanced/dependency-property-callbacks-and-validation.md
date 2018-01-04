@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15ba7f3315b2ce71357bd4735e2dfca1b3de616d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>依赖项属性回调和验证
 本主题介绍如何使用与属性相关的功能（如验证确定、更改属性的有效值时调用的回调）的替代自定义实现，并重写对值确定的外部可能影响来创建依赖属性。 本主题还讨论使用这些技术扩展默认属性系统行为所适用的方案。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题假定你了解实现依赖属性的基本方案，以及如何将元数据应用于自定义依赖属性。 有关上下文，请参阅[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和[依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)。  
   
 <a name="Validation_Callbacks"></a>   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="using-coercevalue-to-cancel-value-changes"></a>使用 CoerceValue 取消值更改  
  属性系统会将任何<xref:System.Windows.CoerceValueCallback>返回值<xref:System.Windows.DependencyProperty.UnsetValue>作为一种特殊情况。 此特殊情况意味着导致属性更改<xref:System.Windows.CoerceValueCallback>属性系统，应被拒绝调用和属性系统应报告属性有任何以前的值。 该机制可用于检查异步启动的属性更改对当前对象状态是否仍然有效，如果无效，则可取消这些更改。 另一个可能的方案是：可以根据负责所报告的值的属性值确定组件，有选择地取消该值。 若要执行此操作，可以使用<xref:System.Windows.DependencyProperty>回调和属性标识符作为输入传递<xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>，，然后处理<xref:System.Windows.ValueSource>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

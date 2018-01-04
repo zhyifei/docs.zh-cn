@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26df55c9658721eb907db5837ac467a5899e84eb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 45053762a4782544531a09c92531b26f99663016
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大程度地提高 WPF 三维性能
 当你使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]生成 3D 控件并将三维场景包括在你的应用程序，务必考虑性能优化。 本主题提供 3D 类和产生性能影响你的应用程序，以及有关使用它们时优化性能的建议的属性的列表。  
@@ -68,5 +69,5 @@ ms.lasthandoff: 10/18/2017
 |浅|黑色光源是不可见，但它们会增加呈现时间;请考虑省略它们。|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|若要尽量减少大型集合中的构造时间[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，如 MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>，和<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>，预先大小之前值填充的集合。 如果可能，请将传递如数组或列表的集合的构造函数预先填充的数据结构。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [3D 图形概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

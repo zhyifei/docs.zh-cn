@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c80d975e756fab449c254b9e1d8d1bc99a25652e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f6c8500f9b9cd6d617789a2da3444519971ae81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 标记扩展
 任何提供的值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通过延迟将对定义资源的引用值的属性特性。 该资源的查找行为是类似于运行时查找。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`key`|请求的资源键。 此密钥最初分配[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)如果资源已在标记中，创建数据库或用作`key`参数调用时<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>如果资源在代码中创建的。|  
+|`key`|所请求资源的密钥。 此密钥最初分配[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)如果资源已在标记中，创建数据库或用作`key`参数调用时<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>如果资源在代码中创建的。|  
   
 ## <a name="remarks"></a>备注  
  A`DynamicResource`将创建一个临时在初始编译表达式，因此遵从资源的查找，直到实际需要来构造对象请求的资源值为止。 这可能会后[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]加载页。 资源值将根据针对从当前页范围，开始的所有活动的资源字典的键搜索找到并替换为从编译的占位符表达式。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
  `DynamicResource` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。 有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [资源和代码](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
  [x:Key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)  

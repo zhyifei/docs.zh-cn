@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbbab88a22a4350626a36f79236aab67da24a7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid 控件中的默认键盘和鼠标行为
 本主题介绍用户如何与交互<xref:System.Windows.Controls.DataGrid>通过使用键盘和鼠标的控件。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 |Ctrl+Page Up|PAGE UP 相同。|  
 |F2|如果<xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=nameWithType>属性是`false`和<xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A?displayProperty=nameWithType>属性是`false`对于当前的列中，将当前的单元格进入单元格的编辑模式。|  
 |Enter|提交对当前单元格和行所有更改并将焦点移动到当前单元格的正下方的单元格。 如果最后一行中有焦点，而无需移动焦点提交任何更改。|  
-|ESC|如果控件处于编辑模式中，取消编辑，并将恢复该控件中所做的任何更改。 如果基础数据源实现<xref:System.ComponentModel.IEditableObject>，第二次按 esc 键取消整个行的编辑模式。|  
+|Esc|如果控件处于编辑模式中，取消编辑，并将恢复该控件中所做的任何更改。 如果基础数据源实现<xref:System.ComponentModel.IEditableObject>，第二次按 esc 键取消整个行的编辑模式。|  
 |退格符|编辑单元格时，请删除光标位置前的字符。|  
 |DELETE|编辑单元格时，光标位置后删除的字符。|  
 |Ctrl+Enter|提交到当前单元格的任何更改，而无需移动焦点。|  
@@ -106,6 +107,6 @@ ms.lasthandoff: 11/21/2017
   
  CTRL + SHIFT 可结合使用来选择非相邻的范围的相邻的行。 若要执行此操作，通过使用 SHIFT 选择第一个范围 + 单击如前面所述。 选择的行的第一个范围后，使用 CTRL + 单击以选择在下一步的范围中的第一行，然后按住 CTRL + SHIFT 的同时单击下一步的范围中的最后一行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.DataGrid>  
  <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

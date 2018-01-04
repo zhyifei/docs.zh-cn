@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 716774efdf62356c2e3253c588dabb51de74470c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的双向功能概述
 与其他任何开发平台，不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有支持的双向内容快速开发的许多功能，例如，混合的左到右和向右键都处于同一文档的数据。 同时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]创建的用户的需要双向功能，如阿拉伯语和希伯来语用户了绝佳的体验。  
@@ -244,7 +245,7 @@ ms.lasthandoff: 10/22/2017
   
  首先，设置应用程序组件的`NumberSubstitution.CultureSource="Text"`。 使用此设置可以确保设置不是来自[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的文本元素"用户"作为默认值，如<xref:System.Windows.Controls.TextBlock>。  
   
- 例如:   
+ 例如:  
   
 ||  
 |-|  

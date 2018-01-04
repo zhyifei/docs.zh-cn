@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0bddac01a0d85ae985b54587619bcac6de5f966f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2a830c11e8df73b71f16c1b9dfd1007461d910f5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中实现实时数据加载的虚拟模式
 若要实现中的虚拟模式的其中一个原因<xref:System.Windows.Forms.DataGridView>控件是仅在需要时仅检索数据。 这称为*中实时数据加载*。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
  若要提高你的应用程序的滚动性能，可以增加本地存储的数据的量。 若要提高启动时间，但是，你必须避免最初加载的数据太多。 你可能想要修改`Cache`类增加可以存储的数据页的数量。 使用更多数据页可以提高滚动效率，但你需要确定理想的数据页中，具体取决于可用带宽和服务器延迟时间中的行数。 具有较小的页面，服务器将更频繁地访问，但需要更少的时间才能返回请求的数据。 如果延迟的带宽比是问题的详细信息，你可能想要使用较大的数据页。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  [Windows 窗体 DataGridView 控件中的性能调整](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  

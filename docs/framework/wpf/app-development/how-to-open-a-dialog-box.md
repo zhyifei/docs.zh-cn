@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d318f35f8f009f0f2c77210ca8b6b29bedfb7619
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2e6201b7dbcc57a15583b7d95d6b603ab50e951a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-a-dialog-box"></a>如何： 打开一个对话框
 此示例演示如何打开一个对话框。  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  调用<xref:System.Windows.Window.ShowDialog%2A>需要有权使用所有窗口和不受限制的用户输入的事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [返回对话框结果](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)

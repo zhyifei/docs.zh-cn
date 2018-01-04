@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23f49481806d386bece1ad0634dd635c9eaf51f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bac1fa1576e684a4b10f00310c08e4e7101a5df0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-application-resources"></a>如何：使用应用程序资源
 本示例演示如何使用应用程序资源。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[ResourcesApplication#ConsumingPage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/page1.xaml#consumingpage)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

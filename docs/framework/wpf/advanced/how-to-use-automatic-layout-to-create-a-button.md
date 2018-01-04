@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d55dc1330c21e7eb9f7cfd7f554234dccd6f274
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c642e6491722e9bfe35337d066e3870f5a70f38c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>如何：使用自动布局创建按钮
 本示例介绍如何使用自动布局方法在可本地化的应用程序中创建按钮。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
  ![具有不同语言的文本的同一按钮](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
 自动调整大小的按钮  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
  [使用网格进行自动布局](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

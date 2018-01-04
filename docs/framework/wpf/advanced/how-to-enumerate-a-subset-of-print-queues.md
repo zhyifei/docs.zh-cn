@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 393d1692526551b1eb9aa16f48d3c78c3cd6692f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 397ec40e2d8a0694e208296593687e9268546fc7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>如何：枚举打印队列的子集
 信息技术 (IT) 专业人员负责管理公司范围内打印机所面临的常见情况是生成具有特定特征的打印机的列表。 此功能由<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>对象和<xref:System.Printing.EnumeratedPrintQueueTypes>枚举。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
  您可以通过无扩展此示例`foreach`循环通过每个打印队列的步骤执行进一步屏蔽。 例如，你无法筛选掉不通过让循环调用支持双面打印的打印机每个打印队列<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>方法和测试的返回值的双工是否存在。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
  <xref:System.Printing.PrintServer>  
  <xref:System.Printing.LocalPrintServer>  

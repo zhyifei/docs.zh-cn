@@ -20,11 +20,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7eda2b6761a825dcb2b24ae9f11b2e1262d7e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-document-overview"></a>流文档概述
 流文档旨在优化查看和可读性。 流文档根据运行时变量（例如，窗口大小、设备分辨率和可选的用户首选项）来动态调整和重新排列内容，而不是设置为一个预定义的布局。 此外，流文档还提供一些高级文档功能，例如分页和分栏。 本主题概述了流文档及其创建方式。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 -   页面导航控件：如果文档的查看模式使用页面，则页面导航控件包括一个用于跳转到下一页（向下键）或上一页（向上键）的按钮，以及显示当前页码和总页数的指示器。 也可使用键盘上的箭头键来实现翻页操作。  
   
--   缩放：缩放控件可使用户通过单击加号或减号按钮来相应地增大或减小缩放级别。 缩放控件还包括一个用于调整缩放级别的滑块。 有关更多信息，请参见<xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>。  
+-   缩放：缩放控件可使用户通过单击加号或减号按钮来相应地增大或减小缩放级别。 缩放控件还包括一个用于调整缩放级别的滑块。 有关详细信息，请参阅<xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>。  
   
  这些功能可根据用于托管流内容的控件进行修改。 下一节介绍了各种控件。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="flow-document-types"></a>流文档类型  
  流文档内容的显示和外观依赖于用于托管流内容的对象。 有四个控件支持的流内容查看： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。 下面简要介绍了这些控件。  
   
- **注意：** <xref:System.Windows.Documents.FlowDocument>不需要直接承载流内容，因此所有这些查看控件使用<xref:System.Windows.Documents.FlowDocument>启用流内容承载。  
+ **注意：** <xref:System.Windows.Documents.FlowDocument>不需要直接承载流内容，因此所有这些查看控件使用<xref:System.Windows.Documents.FlowDocument>启用流内容承载。
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
  <xref:System.Windows.Controls.FlowDocumentReader>包括功能，使用户能够动态各种查看模式，包括单页面 （页上的每一次的） 查看模式，两个--a-次一页 （书本阅读格式） 查看模式和连续滚动 （无界限） 查看模式之间进行选择。 有关这些查看模式的详细信息，请参阅<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。 如果你不需要动态切换不同的查看模式之间的能力<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供轻量流内容查看器中使用特定查看模式修复。  
@@ -358,10 +359,10 @@ ms.lasthandoff: 11/21/2017
   
  请参阅[WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)有关版式的详细信息。  
   
-## <a name="see-also"></a>另请参阅  
- [“文本”](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+## <a name="see-also"></a>请参阅  
+ [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
  [TextElement 内容模型概述](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

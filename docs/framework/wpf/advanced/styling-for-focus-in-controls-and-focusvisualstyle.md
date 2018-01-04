@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf04af2baa037b2df9e2980cc2347460de961c39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d29fda788aa4ec79ad4278beefa16ee14208832
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>为控件中的焦点设置样式以及 FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供两种用于在控件接收键盘焦点时更改其视觉外观的并行机制。 第一种机制是使用属性的属性的 setter，如<xref:System.Windows.UIElement.IsKeyboardFocused%2A>样式或模板应用于控件中。 第二种方式是提供单独的样式的值作为<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>属性;"专注视觉样式"为基于该控件，而不是更改的可视化树的控件或其他 UI，绘制装饰器创建单独的可视化树通过将其替换的元素。 本主题讨论上述每一种机制的适用情况。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="other-focus-properties"></a>其他焦点属性  
  如果你希望所有可能的原因更改焦点的可生成 visual 行为，你应将 setter 或上触发<xref:System.Windows.UIElement.IsFocused%2A>依赖项属性，或者在<xref:System.Windows.UIElement.GotFocus>或<xref:System.Windows.UIElement.LostFocus>事件用于<xref:System.Windows.EventSetter>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)  

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63eb1b7aec0c65192f67035fc7bc624fa1d2ae81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: daea7d382d64e768c9ec681e1c2041c4c80c255e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid>控制，你可以显示和编辑数据来自许多不同来源，如从 SQL 数据库、 LINQ 查询或任何其他可绑定数据源。 有关详细信息，请参阅[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |定义单元格和行选择行为|设置 <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> 和 <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> 属性。|  
 |自定义可视外观的标头，单元格和行|应用新<xref:System.Windows.Style>到<xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>， <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>， <xref:System.Windows.Controls.DataGrid.CellStyle%2A>，或<xref:System.Windows.Controls.DataGrid.RowStyle%2A>属性。|  
 |设置的调整大小选项|设置<xref:System.Windows.FrameworkElement.Height%2A>， <xref:System.Windows.FrameworkElement.MaxHeight%2A>， <xref:System.Windows.FrameworkElement.MinHeight%2A>， <xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.MaxWidth%2A>，或<xref:System.Windows.FrameworkElement.MinWidth%2A>属性。 有关详细信息，请参阅[在 DataGrid 控件中调整选项](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)。|  
-|访问选定项|检查<xref:System.Windows.Controls.DataGrid.SelectedCells%2A>属性可获取选定的单元格和<xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A>属性来获取所选的行。 有关更多信息，请参见<xref:System.Windows.Controls.DataGrid.SelectedCells%2A>。|  
+|访问选定项|检查<xref:System.Windows.Controls.DataGrid.SelectedCells%2A>属性可获取选定的单元格和<xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A>属性来获取所选的行。 有关详细信息，请参阅<xref:System.Windows.Controls.DataGrid.SelectedCells%2A>。|  
 |自定义最终用户交互|设置<xref:System.Windows.Controls.DataGrid.CanUserAddRows%2A>， <xref:System.Windows.Controls.DataGrid.CanUserDeleteRows%2A>， <xref:System.Windows.Controls.DataGrid.CanUserReorderColumns%2A>， <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A>， <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A>，和<xref:System.Windows.Controls.DataGrid.CanUserSortColumns%2A>属性。|  
 |取消或更改自动生成的列|处理<xref:System.Windows.Controls.DataGrid.AutoGeneratingColumn>事件。|  
 |冻结列|设置<xref:System.Windows.Controls.DataGrid.FrozenColumnCount%2A>属性设置为 1 并将列移动到的最左边的位置通过设置<xref:System.Windows.Controls.DataGridColumn.DisplayIndex%2A>属性设为 0。|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 |[如何：在 DataGrid 控件中对数据进行分组、排序和筛选](../../../../docs/framework/wpf/controls/how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|描述如何查看中的数据<xref:System.Windows.Controls.DataGrid>通过分组、 排序和筛选的数据不同的方式。|  
 |[DataGrid 控件中的重设大小选项](../../../../docs/framework/wpf/controls/sizing-options-in-the-datagrid-control.md)|介绍如何控制中的绝对和自动大小调整<xref:System.Windows.Controls.DataGrid>。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.DataGrid>  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  

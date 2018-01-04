@@ -18,11 +18,12 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3b256b36affb310be3a59bbe1d058a3ff3a57b1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2ac7bb57f06f0d7021f3c060005033d25ec448b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-ink-handling"></a>高级墨迹处理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]附带<xref:System.Windows.Controls.InkCanvas>，，是您可以将其放在应用程序以立即开始收集和显示墨迹元素。 但是，如果<xref:System.Windows.Controls.InkCanvas>控件不提供足够精细的控制级别，你可以通过自定义你自己的墨迹集合和墨迹呈现类使用保留在较高级别控制<xref:System.Windows.Input.StylusPlugIns>。  

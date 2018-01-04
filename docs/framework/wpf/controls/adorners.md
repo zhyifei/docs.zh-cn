@@ -15,18 +15,19 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea9fb33be69907609152f062a8755a3a0c04cc16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2503d12453d3be230c3ff8032bcf4fa0ff321193
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adorners"></a>装饰器
 本部分提供有关装饰器的信息和[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。  
   
 ## <a name="in-this-section"></a>本节内容  
  [装饰器概述](../../../../docs/framework/wpf/controls/adorners-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

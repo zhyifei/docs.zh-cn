@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 241fe815f1a7c2e70a664068a47d511a3dbd7e0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的代码隐藏和 XAML
 <a name="introduction"></a>代码隐藏是一个术语用于描述与采用标记定义的对象联接的代码时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页进行标记编译。 本主题介绍隐藏代码的要求以及中的代码的可选内联代码机制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 -   [内联代码限制](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题假定你已阅读[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)及具有一些基本知识的[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]和面向对象的编程。  
   
 <a name="codebehind_and_the_xaml_language"></a>   
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="inline-code-limitations"></a>内联代码限制  
  你应考虑避免或限制使用内联代码。 在体系结构和编码原理，方面维护标记和代码隐藏之间的分隔保留设计器和开发人员角色得更为明显。 在更多技术级，为内联代码编写的代码可能难以编写，因为始终写入[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]生成分部类中，并且只能使用默认的 XML 命名空间映射。 因为不能添加`using`语句，您必须完全限定的许多[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]所做的调用。 默认值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]映射包括大多数而非全部[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空间中存在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]程序集; 你将需要完全限定的类型和成员的其他 CLR 命名空间中包含的调用。 你还不能定义分部类以外在内联代码中，并且你引用的所有用户代码实体必须都存在作为成员或生成的分部类中的变量。 其他语言特定编程功能，例如宏或`#ifdef`对全局变量或生成变量，也是可用。 有关详细信息，请参阅[X:code 内部 XAML 类型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [x:Code 内部 XAML 类型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
  [生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf50346cc179a5aae860a7651d28e104bac3c2ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6e5f6b3d0a185754bc0d8d8ee726ca13443ccdc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-overview"></a>TreeView 概述
 <xref:System.Windows.Controls.TreeView>控件提供了如何通过使用可折叠节点在层次结构中显示信息。 本主题介绍<xref:System.Windows.Controls.TreeView>和<xref:System.Windows.Controls.TreeViewItem>控件，并提供了其使用的简单示例。  
@@ -83,8 +84,8 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[TreeViewDataBinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.TreeView>  
  <xref:System.Windows.Controls.TreeViewItem>  
- [操作说明主题](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
  [WPF 内容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)

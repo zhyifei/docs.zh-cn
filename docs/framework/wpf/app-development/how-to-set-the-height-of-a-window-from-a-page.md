@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29de47eceae4b8927f2701ca0bbda2ecc7243919
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 002e75542c1dbbe1cfaa122898801dd5babf054f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a>如何： 从页面设置窗口的高度
 此示例演示如何设置从窗口的高度<xref:System.Windows.Controls.Page>。  

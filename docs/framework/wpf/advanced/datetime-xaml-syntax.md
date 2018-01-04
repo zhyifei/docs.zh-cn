@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55e261018e6c7b9fea9ad449c5e92a131df40807
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3010d3123e78a5e292c5ac78ef4894962fb8f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML 语法
 某些控件，如<xref:System.Windows.Controls.Calendar>和<xref:System.Windows.Controls.DatePicker>，已使用的属性<xref:System.DateTime>类型。 虽然通常会在运行时在代码隐藏中指定这些控件的初始日期或时间，但可以在 XAML 中指定初始日期或时间。 WPF XAML 分析器处理分析<xref:System.DateTime>值使用内置的 XAML 文本语法。 本主题描述的细节<xref:System.DateTime>XAML 文本语法。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
   
  指定时<xref:System.DateTime>在 XAML 中，你可以使用任何格式字符串的互换。  
   
- 还可以使用未在本主题中专门显示的格式和格式字符串。 从技术上讲，任何 XAML<xref:System.DateTime>值，然后分析 WPF XAML 分析器并指定使用对的内部调用<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>，因此您无法使用接受任意字符串<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>用于 XAML 输入。 有关更多信息，请参见<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>。  
+ 还可以使用未在本主题中专门显示的格式和格式字符串。 从技术上讲，任何 XAML<xref:System.DateTime>值，然后分析 WPF XAML 分析器并指定使用对的内部调用<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>，因此您无法使用接受任意字符串<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>用于 XAML 输入。 有关详细信息，请参阅<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>。  
   
 > [!IMPORTANT]
 >  DateTime XAML 语法始终使用`en-us`作为<xref:System.Globalization.CultureInfo>为其本机的转换。 这不受<xref:System.Windows.FrameworkElement.Language%2A>值或`xml:lang`值在 XAML 中，这是因为 XAML 特性级类型转换操作而无需该上下文。 出于区域性差异的原因，请不要尝试插入此处所示的格式字符串，例如，日期和月份的显示顺序。 此处所示的格式字符串是在分析 XAML 时（不考虑其他区域性设置）使用的确切格式字符串。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/18/2017
   
  `3/1/2010`  
   
- 有关更多信息，请参见<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>。  
+ 有关详细信息，请参阅<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>。  
   
 ### <a name="sortable-datetime-pattern-s"></a>可排序 DateTime 模式（“s”）  
  下面的示例演示可排序<xref:System.DateTime>在 XAML 中的模式：  
@@ -84,5 +85,5 @@ ms.lasthandoff: 10/18/2017
 ### <a name="other-formats-and-patterns"></a>其他格式和模式  
  如前所述，<xref:System.DateTime>在 XAML 中可以将它指定为任何字符串都是可接受的作为输入<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>。 这包括其他正式的格式 (例如<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>)，和不规范化为特定的格式<xref:System.Globalization.DateTimeFormatInfo>窗体。 例如，窗体`YYYY/mm/dd`是可接受的作为输入<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>。 本主题并没有试图介绍所有可能有效的格式，而是推荐将短日期模式作为一种标准做法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

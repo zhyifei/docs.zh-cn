@@ -14,11 +14,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6884598e6b883ab5e6369be5f2f796a194c7f930
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b112cb1e383b092c1bcc4403e04938b3b83c5ecc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控件体系结构
 <xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripItem>类提供一个灵活、 可扩展系统，用于显示工具栏、 状态和菜单项。 这些类都包含在<xref:System.Windows.Forms>命名空间和它们的所有通常命名以"ToolStrip"前缀 (如<xref:System.Windows.Forms.ToolStripOverflow>) 或"条带"后缀 (例如<xref:System.Windows.Forms.MenuStrip>)。  
@@ -274,16 +275,16 @@ ToolStripItem 对象模型
   
 |包含的项|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
-|<xref:System.Windows.Forms.ToolStripButton>|是|No|No|No|是|  
+|<xref:System.Windows.Forms.ToolStripButton>|是|No|否|否|是|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|是|是|是|No|是|  
-|<xref:System.Windows.Forms.ToolStripSplitButton>|是|No|No|是|是|  
-|<xref:System.Windows.Forms.ToolStripLabel>|是|No|No|是|是|  
+|<xref:System.Windows.Forms.ToolStripSplitButton>|是|No|否|是|是|  
+|<xref:System.Windows.Forms.ToolStripLabel>|是|No|否|是|是|  
 |<xref:System.Windows.Forms.ToolStripSeparator>|是|是|是|No|是|  
-|<xref:System.Windows.Forms.ToolStripDropDownButton>|是|No|No|是|是|  
+|<xref:System.Windows.Forms.ToolStripDropDownButton>|是|No|否|是|是|  
 |<xref:System.Windows.Forms.ToolStripTextBox>|是|是|是|No|是|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|No|是|是|No|No|  
-|<xref:System.Windows.Forms.ToolStripStatusLabel>|No|No|No|是|No|  
-|<xref:System.Windows.Forms.ToolStripProgressBar>|是|No|No|是|No|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|No|是|是|No|否|  
+|<xref:System.Windows.Forms.ToolStripStatusLabel>|否|否|否|是|No|  
+|<xref:System.Windows.Forms.ToolStripProgressBar>|是|No|否|是|No|  
 |<xref:System.Windows.Forms.ToolStripControlHost>|是|是|No|是|是|  
   
 ### <a name="toolstripbutton"></a>ToolStripButton  
@@ -341,7 +342,7 @@ ToolStripItem 对象模型
   
 -   图像处理  
   
--   对齐  
+-   对齐方式  
   
 -   文本和图像的关系  
   
@@ -361,7 +362,7 @@ ToolStripItem 对象模型
   
     -   如果<xref:System.Windows.Forms.ToolStrip.AutoSize%2A>是`false`和<xref:System.Windows.Forms.ToolStripItemImageScaling>是<xref:System.Windows.Forms.ToolStripItemImageScaling.None>，既不映像也不<xref:System.Windows.Forms.ToolStrip>会进行缩放。  
   
-#### <a name="alignment"></a>对齐  
+#### <a name="alignment"></a>对齐方式  
  值<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>属性确定的末尾<xref:System.Windows.Forms.ToolStrip>在出现的项。 <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>属性时才起作用的布局样式<xref:System.Windows.Forms.ToolStrip>设置为堆栈溢出值之一。  
   
  项将置于<xref:System.Windows.Forms.ToolStrip>项项集合中的出现顺序。 若要以编程方式更改项的布局，请使用<xref:System.Windows.Forms.ToolStripItemCollection.Insert%2A>方法可在集合中移动项。 此方法移动项，但不进行复制。  
@@ -387,7 +388,7 @@ ToolStripItem 对象模型
   
 -   <xref:System.Windows.Forms.ToolStripPanel>提供用于移动和排列空间<xref:System.Windows.Forms.ToolStrip>控件。 如果你这么选择，可以使用只有一个面板和<xref:System.Windows.Forms.ToolStripPanel>适用于 MDI 方案。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ToolStrip 控件概述](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
  [ToolStrip 技术摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)  
  [ToolStrip 控件](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  

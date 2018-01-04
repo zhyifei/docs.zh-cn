@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42f208d10b1c111f98af3c803148590466baddf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-drawn-controls"></a>用户描述的控件
 .NET Framework 可为你提供的功能能够轻松地开发你自己的控件。 你可以创建一个用户控件，它是一组由代码绑定在一起的标准控件，或可以向上设计您自己的控件从零开始。 你甚至可以使用继承创建继承自现有控件的控件并将添加到其固有的功能。 无论你使用何种方法.NET Framework 提供了用于绘制自定义图形界面为你创建的任何控件的功能。  
@@ -85,7 +86,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 > [!NOTE]
 >  使用<xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType>属性来实现非矩形控件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Control.Region%2A>  
  <xref:System.Windows.Forms.ControlStyles>  
  <xref:System.Drawing.Graphics>  

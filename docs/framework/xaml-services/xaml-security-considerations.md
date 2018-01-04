@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 59d0b835a0de3e84e2cb6e77ed368511bfe21b19
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b58719f36cd911497c5cd892610330688221e7ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-security-considerations"></a>XAML 安全注意事项
 本主题介绍在应用程序中的安全性的最佳做法，当你使用 XAML 和.NET Framework XAML 服务 API。  
@@ -46,10 +47,10 @@ ms.lasthandoff: 10/18/2017
   
 -   具有强名称由应用程序的 XAML 任何 XAML 命名空间映射中使用完全限定程序集的名称。  
   
--   限制将映射到一组固定的引用程序集，通过构造特定的程序集<xref:System.Xaml.XamlSchemaContext>XAML 读取器和 XAML 对象编写器。 请参阅<xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。  
+-   限制将映射到一组固定的引用程序集，通过构造特定的程序集<xref:System.Xaml.XamlSchemaContext>XAML 读取器和 XAML 对象编写器。 请参阅 <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>。  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>XAML 类型映射和类型系统访问  
  XAML 支持其自己的类型系统，即在许多方面与 CLR 如何实现基本的 CLR 类型系统对等。 但是，做出信任决定有关基于其类型信息的类型的类型识别的某些方面，你应延迟到 CLR 后备类型中的类型信息。 这是因为某些 XAML 类型系统的特定报表功能保持打开状态作为虚拟方法，因此，不完全受控制的原始的.NET Framework XAML 服务实现。 这些扩展点存在，因为 XAML 类型系统是可扩展的以便与 XAML 本身的扩展性与默认 CLR 支持实现与默认 XAML 架构上下文其可能备用类型映射策略相匹配。 有关详细信息，请参阅 》 上几个属性的特定注释<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xaml.Permissions.XamlAccessLevel>

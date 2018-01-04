@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9ea154bc7c7a20bcdd57e1f271a4010f50646de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 385bcb8678b11e1cb8f84ae509b1f1b6777665d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-wpf-application-performance"></a>优化 WPF 应用程序性能
 本部分旨在作为的参考[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序开发人员正在寻找方法来提高其应用程序的性能。 如果你是开发人员不熟悉[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，你应该首先熟悉这两个平台。 本部分假定知识两种方法，并为已经知道不足以获得其应用程序启动并正在运行的程序员编写。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  [应用程序启动时间](../../../../docs/framework/wpf/advanced/application-startup-time.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.RenderOptions>  
  <xref:System.Windows.Media.RenderCapability>  
  [图形呈现层](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  

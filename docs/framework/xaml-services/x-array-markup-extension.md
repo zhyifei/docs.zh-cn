@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2cefdee5ca2d1b0a6c79325365aa101d767b6926
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bc2304ba68956b705904c72e29a17bdac4536c79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xarray-markup-extension"></a>x:Array 标记扩展
 提供对 XAML 中通过标记扩展的对象数组的常规支持。 这对应于`x:ArrayExtension`[MS-XAML] 中的 XAML 类型。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  `x:Array`是的详细信息适用于常规 XAML 语言的可扩展性。 但`x:Array`也可以是适用于指定的某些属性是作为其结构化的属性内容中使支持 XAML 的集合的 XAML 值。 例如，可以指定的内容<xref:System.Collections.IEnumerable>具有属性`x:Array`使用情况。  
   
- `x:Array` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此要求更具有全局性。 `x:Array`部分是该规则的例外，因为而不是提供替代属性值处理`x:Array`提供其内部文本内容的其他处理。 此行为使现有的内容模型，来分组到一个数组和更高版本的代码隐藏文件中引用的访问已命名的数组; 可能不支持的类型你可以调用<xref:System.Array>方法来获取各个数组项。  
+ `x:Array` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 `x:Array`部分是该规则的例外，因为而不是提供替代属性值处理`x:Array`提供其内部文本内容的其他处理。 此行为使现有的内容模型，来分组到一个数组和更高版本的代码隐藏文件中引用的访问已命名的数组; 可能不支持的类型你可以调用<xref:System.Array>方法来获取各个数组项。  
   
  在 XAML 中的所有标记扩展都使用大括号 ({，}`)`在其属性语法中，该命令是 XAML 处理器识别标记扩展必须处理的属性值所依据的约定。 有关常规中的标记扩展的详细信息，请参阅[类型转换器和 XAML 的标记扩展](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。  
   
@@ -79,6 +80,6 @@ ms.lasthandoff: 11/21/2017
   
  对于用作数组元素的自定义类型，此类还必须支持在 XAML 中作为对象元素实例化的要求。 有关详细信息，请参阅[XAML 和 wpf 自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
  [从 WPF 迁移到 System.Xaml 的类型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

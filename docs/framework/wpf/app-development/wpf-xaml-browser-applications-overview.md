@@ -21,11 +21,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58ed9a97d9a1eb09ccbcf832c62bbdfb990c7838
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c894d431aa31e32b4a8cb7ff02d39d5aa5e95381
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>
@@ -196,6 +197,6 @@ ms.lasthandoff: 11/21/2017
   
  此外，改进的 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 下载序列并发最多可将启动时间缩短 10%。 当 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 下载并验证清单后，将启动应用程序下载并开始更新进度栏。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
  [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

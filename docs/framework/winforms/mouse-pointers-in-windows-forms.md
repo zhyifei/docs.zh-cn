@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fb0e193ccbced719f30ede91cb59cd51dd349a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aaca18bff265fafbb5bad26adfe2a8c490d85132
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows 窗体中的鼠标指针
 鼠标*指针*，这有时称为光标，是在用户使用鼠标的输入屏幕指定的点，焦点的位图。 本主题提供 Windows 窗体中鼠标指针的概述，并介绍了一些方法来修改和控制鼠标指针。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  若要更改鼠标指针的主要方法是通过设置<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType>或<xref:System.Windows.Forms.Control.DefaultCursor%2A>到一个新控件的属性<xref:System.Windows.Forms.Cursor>。 有关更改鼠标指针的示例，请参阅中的代码示例<xref:System.Windows.Forms.Cursor>类。 此外，<xref:System.Windows.Forms.Cursors>类公开一组<xref:System.Windows.Forms.Cursor>许多不同类型的指针，如类似于手的形状的指针的对象。 若要显示等待指针，这类似于一个沙漏，鼠标指针在控件上时，使用<xref:System.Windows.Forms.Control.UseWaitCursor%2A>属性<xref:System.Windows.Forms.Control>类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Cursor>  
  [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
  [Windows 窗体中的拖放功能](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)

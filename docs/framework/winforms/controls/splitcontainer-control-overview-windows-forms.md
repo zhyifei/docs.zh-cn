@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f18c46c85ed840b6625d9ed754d1d036a80975
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c48950e43d253679eebe16bff1b6ee18966e2cc7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个复合控件；它是由可移动条隔开的两个面板。 当鼠标指针位于条上方时，指针将改变形状以表示条可移动。  
@@ -46,7 +47,7 @@ Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个�
   
 ## <a name="commonly-used-properties-methods-and-events"></a>常用的属性、方法和事件  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 属性|确定哪个面板将保持相同大小后<xref:System.Windows.Forms.SplitContainer>调整控件的。|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性|确定是否可以使用键盘或鼠标移动拆分器。|  
@@ -57,7 +58,7 @@ Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个�
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoving>事件|当拆分器移动时发生。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoved>事件|当拆分器移动时发生。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.SplitContainer>  
  [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  [SplitContainer 控件示例](http://msdn.microsoft.com/en-us/9015fad0-7108-4d85-a83a-a72d038c4f65)

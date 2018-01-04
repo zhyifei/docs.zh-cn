@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48a28db24731f9aa248bb149c9f19a57cf76bbf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1eba92d764e73360b1cd58957ea5318c5b263b8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows 窗体中的用户输入验证
 当用户输入到你的应用程序的数据时，你可能想要验证数据有效，然后再应用程序将使用它。 你可能需要某些文本字段不为零长度、 字段将转为电话号码或其他类型的数据格式正确，或字符串不包含任何不安全的字符，无法用于危及安全的数据库。 Windows 窗体提供了几种方法来验证你的应用程序中输入。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  如果你强制执行这种方式关闭该窗体，则尚未保存的窗体的控件中的任何数据将丢失。 此外，模式的窗体被关闭时不会验证控件的内容。 您仍可以使用控件验证锁定焦点移到控件，但无需关心信息与关闭窗体关联的行为。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
  <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>  

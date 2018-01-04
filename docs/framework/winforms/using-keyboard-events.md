@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19bad48188a039baeeb6365a2cd38671f83fca4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 394ebc503338ad73001aa9859e0aa0d9c3fa42b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-keyboard-events"></a>使用键盘事件
 大多数 Windows 窗体程序通过处理键盘事件处理键盘输入。 本主题提供对键盘事件的概述，包括有关何时使用每个事件和向每个事件提供的数据的详细信息。  另请参阅[事件处理程序概述 （Windows 窗体）](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概述 （Windows 窗体）](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.Control.KeyPress>|当所按的某个键或多个键生成一个字符时，则引发此事件。 例如，用户按 SHIFT 和小写的“a”键将会生成大写字母“A”字符。|<xref:System.Windows.Forms.Control.KeyPress> 在 <xref:System.Windows.Forms.Control.KeyDown> 后引发。<br /><br /> <ul><li><xref:System.Windows.Forms.Control.KeyPress> 的处理程序接收：</li><li>一个 <xref:System.Windows.Forms.KeyPressEventArgs> 参数，它包含所按的键的字符代码。 此字符代码对每个字符键和修改键组合都是唯一的。<br /><br />     例如，“A”键将生成：<br /><br /> <ul><li>字符代码 65（如果与 SHIFT 键一起按下）</li><li>或 CAPS LOCK 键 97（如果单独按下），</li><li>以及 1（如果与 CTRL 键一起按下）。</li></ul></li></ul>|  
 |<xref:System.Windows.Forms.Control.KeyUp>|用户释放物理键时，将引发此事件。|<xref:System.Windows.Forms.Control.KeyUp> 的处理程序接收：<br /><br /> <ul><li>一个 <xref:System.Windows.Forms.KeyEventArgs> 参数：<br /><br /> <ul><li>它提供 <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> 属性（该属性指定一个物理键盘按钮）。</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> 属性（SHIFT、CTRL 或 ALT）。</li><li><xref:System.Globalization.SortKey.KeyData%2A> 属性（它结合了键代码和修饰符）。</li></ul></li></ul>|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体应用程序中的键盘输入](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
  [键盘输入工作原理](../../../docs/framework/winforms/how-keyboard-input-works.md)  
  [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

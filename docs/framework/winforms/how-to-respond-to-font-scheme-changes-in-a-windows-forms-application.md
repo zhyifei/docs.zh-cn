@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b2e53df114c491e99e13940ae47a4119bd8da46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aac8d56c87ff03b313565a3d04cd3f3cc4e85f72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>如何：在 Windows 窗体应用程序中响应字体方案更改
 在 Windows 操作系统，用户可以更改系统范围的字体设置，以使显示的默认字体放大或缩小。 更改这些字体设置为有视觉障碍并需要更大的类型来读取其屏幕上的文本的用户至关重要。 你可以调整 Windows 窗体应用程序以通过增加或减少的大小的窗体和所有包含的文本的字体方案更改时对这些更改做出响应。 如果你想窗体以动态地适应字体大小的更改，你可以将代码添加到你的窗体。  
@@ -73,6 +74,6 @@ ms.lasthandoff: 11/21/2017
   
  在此代码示例 constructer 包含调用`InitializeComponent`，这是定义当在 Visual Studio 中创建一个新的 Windows 窗体项目。 如果你在构建命令行上的应用程序，请删除此代码行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  
  [Windows 窗体中的自动缩放](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)

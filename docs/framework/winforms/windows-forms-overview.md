@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcb666c41f849ac39386c3eaf85bbaf8b19053e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-overview"></a>Windows 窗体概述
 以下概述介绍了智能客户端应用程序的优点、Windows 窗体编程的主要功能以及可以如何使用 Windows 窗体来构建可满足当今企业和最终用户需求的智能客户端。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
 |打印窗体内容|[如何：在 Windows 窗体中打印图形](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：打印 Windows 窗体中的多页文本文件](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|  
 |了解有关 Windows 窗体安全的详细信息|[Windows 窗体中的安全性概述](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体入门](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  [新建 Windows 窗体](../../../docs/framework/winforms/creating-a-new-windows-form.md)  
  [ToolStrip 控件概述](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  

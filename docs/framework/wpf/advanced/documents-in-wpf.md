@@ -21,11 +21,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 659c30105be7826aba4bbad49d68bdb94ddb0efc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02f65d68cdaad8824905c4545239f5b607c672d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文档
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供丰富的文档功能，可创建旨在比前几代 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 更易于访问和读取的高保真内容文档。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
@@ -144,7 +145,7 @@ ms.lasthandoff: 11/21/2017
   
 -   将文档直接路由到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Documents.FixedDocument>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps.Packaging.XpsDocument>  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.IO.Packaging.ZipPackagePart>  
  <xref:System.IO.Packaging.PackageRelationship>  
  <xref:System.Windows.Controls.DocumentViewer>  
- [“文本”](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [文档序列化和存储](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
