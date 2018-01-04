@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37e32bedeafd8976212940803b42b493d14f7809
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e086c4560515b85d2ea291a8fb71999f13af92eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4812---discoverymessagewithnullreplyto"></a><span data-ttu-id="aefcc-102">4812 - DiscoveryMessageWithNullReplyTo</span><span class="sxs-lookup"><span data-stu-id="aefcc-102">4812 - DiscoveryMessageWithNullReplyTo</span></span>
-## <a name="properties"></a><span data-ttu-id="aefcc-103">属性</span><span class="sxs-lookup"><span data-stu-id="aefcc-103">Properties</span></span>  
+# <a name="4812---discoverymessagewithnullreplyto"></a><span data-ttu-id="fcb60-102">4812 - DiscoveryMessageWithNullReplyTo</span><span class="sxs-lookup"><span data-stu-id="fcb60-102">4812 - DiscoveryMessageWithNullReplyTo</span></span>
+## <a name="properties"></a><span data-ttu-id="fcb60-103">属性</span><span class="sxs-lookup"><span data-stu-id="fcb60-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="aefcc-104">ID</span><span class="sxs-lookup"><span data-stu-id="aefcc-104">ID</span></span>|<span data-ttu-id="aefcc-105">4812</span><span class="sxs-lookup"><span data-stu-id="aefcc-105">4812</span></span>|  
-|<span data-ttu-id="aefcc-106">关键字</span><span class="sxs-lookup"><span data-stu-id="aefcc-106">Keywords</span></span>|<span data-ttu-id="aefcc-107">发现</span><span class="sxs-lookup"><span data-stu-id="aefcc-107">Discovery</span></span>|  
-|<span data-ttu-id="aefcc-108">级别</span><span class="sxs-lookup"><span data-stu-id="aefcc-108">Level</span></span>|<span data-ttu-id="aefcc-109">警告</span><span class="sxs-lookup"><span data-stu-id="aefcc-109">Warning</span></span>|  
-|<span data-ttu-id="aefcc-110">通道</span><span class="sxs-lookup"><span data-stu-id="aefcc-110">Channel</span></span>|<span data-ttu-id="aefcc-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="aefcc-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="fcb60-104">ID</span><span class="sxs-lookup"><span data-stu-id="fcb60-104">ID</span></span>|<span data-ttu-id="fcb60-105">4812</span><span class="sxs-lookup"><span data-stu-id="fcb60-105">4812</span></span>|  
+|<span data-ttu-id="fcb60-106">关键字</span><span class="sxs-lookup"><span data-stu-id="fcb60-106">Keywords</span></span>|<span data-ttu-id="fcb60-107">发现</span><span class="sxs-lookup"><span data-stu-id="fcb60-107">Discovery</span></span>|  
+|<span data-ttu-id="fcb60-108">级别</span><span class="sxs-lookup"><span data-stu-id="fcb60-108">Level</span></span>|<span data-ttu-id="fcb60-109">警告</span><span class="sxs-lookup"><span data-stu-id="fcb60-109">Warning</span></span>|  
+|<span data-ttu-id="fcb60-110">通道</span><span class="sxs-lookup"><span data-stu-id="fcb60-110">Channel</span></span>|<span data-ttu-id="fcb60-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="fcb60-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="aefcc-112">描述</span><span class="sxs-lookup"><span data-stu-id="aefcc-112">Description</span></span>  
- <span data-ttu-id="aefcc-113">当发现消息由于 DiscoveryClient 没有 ReplyTo 地址而被丢弃时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="aefcc-113">This event is emitted when the discovery message was dropped by the DiscoveryClient because it did not have a ReplyTo address.</span></span>  
+## <a name="description"></a><span data-ttu-id="fcb60-112">描述</span><span class="sxs-lookup"><span data-stu-id="fcb60-112">Description</span></span>  
+ <span data-ttu-id="fcb60-113">当发现消息由于 DiscoveryClient 没有 ReplyTo 地址而被丢弃时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="fcb60-113">This event is emitted when the discovery message was dropped by the DiscoveryClient because it did not have a ReplyTo address.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="aefcc-114">消息</span><span class="sxs-lookup"><span data-stu-id="aefcc-114">Message</span></span>  
- <span data-ttu-id="aefcc-115">messageId 为“%1”的发现请求消息由于没有 ReplyTo 地址而被丢弃。</span><span class="sxs-lookup"><span data-stu-id="aefcc-115">A discovery request message with messageId='%1' was dropped because it did not have a ReplyTo address.</span></span>  
+## <a name="message"></a><span data-ttu-id="fcb60-114">消息</span><span class="sxs-lookup"><span data-stu-id="fcb60-114">Message</span></span>  
+ <span data-ttu-id="fcb60-115">messageId 为“%1”的发现请求消息由于没有 ReplyTo 地址而被丢弃。</span><span class="sxs-lookup"><span data-stu-id="fcb60-115">A discovery request message with messageId='%1' was dropped because it did not have a ReplyTo address.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="aefcc-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="aefcc-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="fcb60-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="fcb60-116">Details</span></span>

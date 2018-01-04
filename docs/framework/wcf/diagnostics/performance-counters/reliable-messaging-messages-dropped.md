@@ -13,14 +13,15 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ce9f5fedf96245a7887364278854d521b378f207
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f327ce6411229767eb075e5e1d387441aacbf701
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="reliable-messaging-messages-dropped"></a><span data-ttu-id="2fadd-102">Reliable Messaging Messages Dropped（放置的可靠消息传递消息数）</span><span class="sxs-lookup"><span data-stu-id="2fadd-102">Reliable Messaging Messages Dropped</span></span>
-<span data-ttu-id="2fadd-103">计数器名称：Reliable Messaging Sessions Dropped（丢弃的可靠消息会话数）。</span><span class="sxs-lookup"><span data-stu-id="2fadd-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  
+# <a name="reliable-messaging-messages-dropped"></a><span data-ttu-id="4173a-102">Reliable Messaging Messages Dropped（放置的可靠消息传递消息数）</span><span class="sxs-lookup"><span data-stu-id="4173a-102">Reliable Messaging Messages Dropped</span></span>
+<span data-ttu-id="4173a-103">计数器名称：Reliable Messaging Sessions Dropped（丢弃的可靠消息会话数）。</span><span class="sxs-lookup"><span data-stu-id="4173a-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2fadd-104">描述</span><span class="sxs-lookup"><span data-stu-id="2fadd-104">Description</span></span>  
- <span data-ttu-id="2fadd-105">此服务中已丢弃的可靠消息会话的总数。</span><span class="sxs-lookup"><span data-stu-id="2fadd-105">Total number of reliable messaging messages that have been dropped in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="4173a-104">描述</span><span class="sxs-lookup"><span data-stu-id="4173a-104">Description</span></span>  
+ <span data-ttu-id="4173a-105">此服务中已丢弃的可靠消息会话的总数。</span><span class="sxs-lookup"><span data-stu-id="4173a-105">Total number of reliable messaging messages that have been dropped in this service.</span></span>

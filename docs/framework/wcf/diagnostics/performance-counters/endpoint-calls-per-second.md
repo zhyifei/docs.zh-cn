@@ -13,18 +13,19 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aeeedd05c0da46bc210f6f93e6806e3ea72ca862
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 480e0758df7e3062f9bd2b0b089c7a9b75e1c012
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="endpoint-calls-per-second"></a><span data-ttu-id="5129f-102">终结点：Calls Per Second（每秒调用次数）</span><span class="sxs-lookup"><span data-stu-id="5129f-102">Endpoint: Calls Per Second</span></span>
-<span data-ttu-id="5129f-103">计数器名称：Calls Per Second（每秒调用次数）</span><span class="sxs-lookup"><span data-stu-id="5129f-103">Counter Name: Calls Per Second.</span></span>  
+# <a name="endpoint-calls-per-second"></a><span data-ttu-id="bef86-102">终结点：Calls Per Second（每秒调用次数）</span><span class="sxs-lookup"><span data-stu-id="bef86-102">Endpoint: Calls Per Second</span></span>
+<span data-ttu-id="bef86-103">计数器名称：Calls Per Second（每秒调用次数）</span><span class="sxs-lookup"><span data-stu-id="bef86-103">Counter Name: Calls Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5129f-104">描述</span><span class="sxs-lookup"><span data-stu-id="5129f-104">Description</span></span>  
- <span data-ttu-id="5129f-105">一秒内对此终结点的调用次数。</span><span class="sxs-lookup"><span data-stu-id="5129f-105">Number of calls to this endpoint in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="bef86-104">描述</span><span class="sxs-lookup"><span data-stu-id="bef86-104">Description</span></span>  
+ <span data-ttu-id="bef86-105">一秒内对此终结点的调用次数。</span><span class="sxs-lookup"><span data-stu-id="bef86-105">Number of calls to this endpoint in a second.</span></span>  
   
- <span data-ttu-id="5129f-106">此计数器为性能计数器类型[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。</span><span class="sxs-lookup"><span data-stu-id="5129f-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="bef86-106">此计数器为性能计数器类型[PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)，使用以下公式计算其值。</span><span class="sxs-lookup"><span data-stu-id="bef86-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="5129f-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="5129f-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="bef86-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="bef86-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

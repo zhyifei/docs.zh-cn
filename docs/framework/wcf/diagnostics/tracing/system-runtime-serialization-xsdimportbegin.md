@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73707c7b1867aa71991d1031a30999a94dd3a2b1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8193d79a31bb9cafc7a3de69c129ecbd78619962
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemruntimeserializationxsdimportbegin"></a><span data-ttu-id="1ef4d-102">System.Runtime.Serialization.XsdImportBegin</span><span class="sxs-lookup"><span data-stu-id="1ef4d-102">System.Runtime.Serialization.XsdImportBegin</span></span>
-<span data-ttu-id="1ef4d-103">System.Runtime.Serialization.XsdImportBegin</span><span class="sxs-lookup"><span data-stu-id="1ef4d-103">System.Runtime.Serialization.XsdImportBegin</span></span>  
+# <a name="systemruntimeserializationxsdimportbegin"></a><span data-ttu-id="fb562-102">System.Runtime.Serialization.XsdImportBegin</span><span class="sxs-lookup"><span data-stu-id="fb562-102">System.Runtime.Serialization.XsdImportBegin</span></span>
+<span data-ttu-id="fb562-103">System.Runtime.Serialization.XsdImportBegin</span><span class="sxs-lookup"><span data-stu-id="fb562-103">System.Runtime.Serialization.XsdImportBegin</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1ef4d-104">描述</span><span class="sxs-lookup"><span data-stu-id="1ef4d-104">Description</span></span>  
- <span data-ttu-id="1ef4d-105">开始导入架构。</span><span class="sxs-lookup"><span data-stu-id="1ef4d-105">Starting schema import.</span></span>  
+## <a name="description"></a><span data-ttu-id="fb562-104">描述</span><span class="sxs-lookup"><span data-stu-id="fb562-104">Description</span></span>  
+ <span data-ttu-id="fb562-105">开始导入架构。</span><span class="sxs-lookup"><span data-stu-id="fb562-105">Starting schema import.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ef4d-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1ef4d-106">See Also</span></span>  
- [<span data-ttu-id="1ef4d-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="1ef4d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="1ef4d-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="1ef4d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="1ef4d-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="1ef4d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="fb562-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="fb562-106">See Also</span></span>  
+ [<span data-ttu-id="fb562-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="fb562-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="fb562-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="fb562-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="fb562-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="fb562-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

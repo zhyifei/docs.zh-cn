@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd04976e7607cd9bc0b873660f9b991094fe2839
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37d639e48c40debe3617e66d197a329bf26db1c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="57402---tracecodeeventlogverbose"></a><span data-ttu-id="005b9-102">57402 - TraceCodeEventLogVerbose</span><span class="sxs-lookup"><span data-stu-id="005b9-102">57402 - TraceCodeEventLogVerbose</span></span>
-## <a name="properties"></a><span data-ttu-id="005b9-103">属性</span><span class="sxs-lookup"><span data-stu-id="005b9-103">Properties</span></span>  
+# <a name="57402---tracecodeeventlogverbose"></a><span data-ttu-id="3ce63-102">57402 - TraceCodeEventLogVerbose</span><span class="sxs-lookup"><span data-stu-id="3ce63-102">57402 - TraceCodeEventLogVerbose</span></span>
+## <a name="properties"></a><span data-ttu-id="3ce63-103">属性</span><span class="sxs-lookup"><span data-stu-id="3ce63-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="005b9-104">ID</span><span class="sxs-lookup"><span data-stu-id="005b9-104">ID</span></span>|<span data-ttu-id="005b9-105">57402</span><span class="sxs-lookup"><span data-stu-id="005b9-105">57402</span></span>|  
-|<span data-ttu-id="005b9-106">关键字</span><span class="sxs-lookup"><span data-stu-id="005b9-106">Keywords</span></span>|<span data-ttu-id="005b9-107">基础结构</span><span class="sxs-lookup"><span data-stu-id="005b9-107">Infrastructure</span></span>|  
-|<span data-ttu-id="005b9-108">级别</span><span class="sxs-lookup"><span data-stu-id="005b9-108">Level</span></span>|<span data-ttu-id="005b9-109">详细</span><span class="sxs-lookup"><span data-stu-id="005b9-109">Verbose</span></span>|  
-|<span data-ttu-id="005b9-110">通道</span><span class="sxs-lookup"><span data-stu-id="005b9-110">Channel</span></span>|<span data-ttu-id="005b9-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="005b9-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="3ce63-104">ID</span><span class="sxs-lookup"><span data-stu-id="3ce63-104">ID</span></span>|<span data-ttu-id="3ce63-105">57402</span><span class="sxs-lookup"><span data-stu-id="3ce63-105">57402</span></span>|  
+|<span data-ttu-id="3ce63-106">关键字</span><span class="sxs-lookup"><span data-stu-id="3ce63-106">Keywords</span></span>|<span data-ttu-id="3ce63-107">基础结构</span><span class="sxs-lookup"><span data-stu-id="3ce63-107">Infrastructure</span></span>|  
+|<span data-ttu-id="3ce63-108">级别</span><span class="sxs-lookup"><span data-stu-id="3ce63-108">Level</span></span>|<span data-ttu-id="3ce63-109">详细</span><span class="sxs-lookup"><span data-stu-id="3ce63-109">Verbose</span></span>|  
+|<span data-ttu-id="3ce63-110">通道</span><span class="sxs-lookup"><span data-stu-id="3ce63-110">Channel</span></span>|<span data-ttu-id="3ce63-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="3ce63-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="005b9-112">描述</span><span class="sxs-lookup"><span data-stu-id="005b9-112">Description</span></span>  
- <span data-ttu-id="005b9-113">对于 TraceCodeEventLogVerbose 发出此事件。</span><span class="sxs-lookup"><span data-stu-id="005b9-113">This event is emitted on TraceCodeEventLogVerbose.</span></span>  
+## <a name="description"></a><span data-ttu-id="3ce63-112">描述</span><span class="sxs-lookup"><span data-stu-id="3ce63-112">Description</span></span>  
+ <span data-ttu-id="3ce63-113">对于 TraceCodeEventLogVerbose 发出此事件。</span><span class="sxs-lookup"><span data-stu-id="3ce63-113">This event is emitted on TraceCodeEventLogVerbose.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="005b9-114">消息</span><span class="sxs-lookup"><span data-stu-id="005b9-114">Message</span></span>  
- <span data-ttu-id="005b9-115">已写入到 EventLog。</span><span class="sxs-lookup"><span data-stu-id="005b9-115">Wrote to the EventLog.</span></span>  
+## <a name="message"></a><span data-ttu-id="3ce63-114">消息</span><span class="sxs-lookup"><span data-stu-id="3ce63-114">Message</span></span>  
+ <span data-ttu-id="3ce63-115">已写入到 EventLog。</span><span class="sxs-lookup"><span data-stu-id="3ce63-115">Wrote to the EventLog.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="005b9-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="005b9-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="3ce63-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="3ce63-116">Details</span></span>

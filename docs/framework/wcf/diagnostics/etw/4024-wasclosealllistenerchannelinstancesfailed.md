@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46a169931955ce6d0ed60a0f870d55245e727371
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ed2e872d41e2d7846d2a249c33e4c065cfa6777
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4024---wasclosealllistenerchannelinstancesfailed"></a><span data-ttu-id="04fb2-102">4024 - WasCloseAllListenerChannelInstancesFailed</span><span class="sxs-lookup"><span data-stu-id="04fb2-102">4024 - WasCloseAllListenerChannelInstancesFailed</span></span>
-## <a name="properties"></a><span data-ttu-id="04fb2-103">属性</span><span class="sxs-lookup"><span data-stu-id="04fb2-103">Properties</span></span>  
+# <a name="4024---wasclosealllistenerchannelinstancesfailed"></a><span data-ttu-id="b1c14-102">4024 - WasCloseAllListenerChannelInstancesFailed</span><span class="sxs-lookup"><span data-stu-id="b1c14-102">4024 - WasCloseAllListenerChannelInstancesFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="b1c14-103">属性</span><span class="sxs-lookup"><span data-stu-id="b1c14-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="04fb2-104">ID</span><span class="sxs-lookup"><span data-stu-id="04fb2-104">ID</span></span>|<span data-ttu-id="04fb2-105">4024</span><span class="sxs-lookup"><span data-stu-id="04fb2-105">4024</span></span>|  
-|<span data-ttu-id="04fb2-106">关键字</span><span class="sxs-lookup"><span data-stu-id="04fb2-106">Keywords</span></span>|<span data-ttu-id="04fb2-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="04fb2-107">ActivationServices</span></span>|  
-|<span data-ttu-id="04fb2-108">级别</span><span class="sxs-lookup"><span data-stu-id="04fb2-108">Level</span></span>|<span data-ttu-id="04fb2-109">错误</span><span class="sxs-lookup"><span data-stu-id="04fb2-109">Error</span></span>|  
-|<span data-ttu-id="04fb2-110">通道</span><span class="sxs-lookup"><span data-stu-id="04fb2-110">Channel</span></span>|<span data-ttu-id="04fb2-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="04fb2-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="b1c14-104">ID</span><span class="sxs-lookup"><span data-stu-id="b1c14-104">ID</span></span>|<span data-ttu-id="b1c14-105">4024</span><span class="sxs-lookup"><span data-stu-id="b1c14-105">4024</span></span>|  
+|<span data-ttu-id="b1c14-106">关键字</span><span class="sxs-lookup"><span data-stu-id="b1c14-106">Keywords</span></span>|<span data-ttu-id="b1c14-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="b1c14-107">ActivationServices</span></span>|  
+|<span data-ttu-id="b1c14-108">级别</span><span class="sxs-lookup"><span data-stu-id="b1c14-108">Level</span></span>|<span data-ttu-id="b1c14-109">错误</span><span class="sxs-lookup"><span data-stu-id="b1c14-109">Error</span></span>|  
+|<span data-ttu-id="b1c14-110">通道</span><span class="sxs-lookup"><span data-stu-id="b1c14-110">Channel</span></span>|<span data-ttu-id="b1c14-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="b1c14-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="04fb2-112">描述</span><span class="sxs-lookup"><span data-stu-id="04fb2-112">Description</span></span>  
- <span data-ttu-id="04fb2-113">当所有侦听器通道实例关闭失败时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="04fb2-113">This event is emitted when the closing of all listener channel instances has failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="b1c14-112">描述</span><span class="sxs-lookup"><span data-stu-id="b1c14-112">Description</span></span>  
+ <span data-ttu-id="b1c14-113">当所有侦听器通道实例关闭失败时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="b1c14-113">This event is emitted when the closing of all listener channel instances has failed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="04fb2-114">消息</span><span class="sxs-lookup"><span data-stu-id="04fb2-114">Message</span></span>  
- <span data-ttu-id="04fb2-115">错误代码：%1</span><span class="sxs-lookup"><span data-stu-id="04fb2-115">Error Code:%1</span></span>  
+## <a name="message"></a><span data-ttu-id="b1c14-114">消息</span><span class="sxs-lookup"><span data-stu-id="b1c14-114">Message</span></span>  
+ <span data-ttu-id="b1c14-115">错误代码：%1</span><span class="sxs-lookup"><span data-stu-id="b1c14-115">Error Code:%1</span></span>  
   
-## <a name="details"></a><span data-ttu-id="04fb2-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="04fb2-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="b1c14-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="b1c14-116">Details</span></span>

@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 312f211b363263604857beb79786d423dc70b30c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c748daaf4b6daa2eb27b28436c48168434d7402e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="702---servicechannelopenstop"></a><span data-ttu-id="8edce-102">702 - ServiceChannelOpenStop</span><span class="sxs-lookup"><span data-stu-id="8edce-102">702 - ServiceChannelOpenStop</span></span>
-## <a name="properties"></a><span data-ttu-id="8edce-103">属性</span><span class="sxs-lookup"><span data-stu-id="8edce-103">Properties</span></span>  
+# <a name="702---servicechannelopenstop"></a><span data-ttu-id="c4350-102">702 - ServiceChannelOpenStop</span><span class="sxs-lookup"><span data-stu-id="c4350-102">702 - ServiceChannelOpenStop</span></span>
+## <a name="properties"></a><span data-ttu-id="c4350-103">属性</span><span class="sxs-lookup"><span data-stu-id="c4350-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="8edce-104">ID</span><span class="sxs-lookup"><span data-stu-id="8edce-104">ID</span></span>|<span data-ttu-id="8edce-105">702</span><span class="sxs-lookup"><span data-stu-id="8edce-105">702</span></span>|  
-|<span data-ttu-id="8edce-106">关键字</span><span class="sxs-lookup"><span data-stu-id="8edce-106">Keywords</span></span>|<span data-ttu-id="8edce-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="8edce-107">ServiceModel</span></span>|  
-|<span data-ttu-id="8edce-108">级别</span><span class="sxs-lookup"><span data-stu-id="8edce-108">Level</span></span>|<span data-ttu-id="8edce-109">信息</span><span class="sxs-lookup"><span data-stu-id="8edce-109">Information</span></span>|  
-|<span data-ttu-id="8edce-110">通道</span><span class="sxs-lookup"><span data-stu-id="8edce-110">Channel</span></span>|<span data-ttu-id="8edce-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="8edce-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="c4350-104">ID</span><span class="sxs-lookup"><span data-stu-id="c4350-104">ID</span></span>|<span data-ttu-id="c4350-105">702</span><span class="sxs-lookup"><span data-stu-id="c4350-105">702</span></span>|  
+|<span data-ttu-id="c4350-106">关键字</span><span class="sxs-lookup"><span data-stu-id="c4350-106">Keywords</span></span>|<span data-ttu-id="c4350-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c4350-107">ServiceModel</span></span>|  
+|<span data-ttu-id="c4350-108">级别</span><span class="sxs-lookup"><span data-stu-id="c4350-108">Level</span></span>|<span data-ttu-id="c4350-109">信息</span><span class="sxs-lookup"><span data-stu-id="c4350-109">Information</span></span>|  
+|<span data-ttu-id="c4350-110">通道</span><span class="sxs-lookup"><span data-stu-id="c4350-110">Channel</span></span>|<span data-ttu-id="c4350-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="c4350-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="8edce-112">描述</span><span class="sxs-lookup"><span data-stu-id="8edce-112">Description</span></span>  
- <span data-ttu-id="8edce-113">在完成 ServiceChannelOpen 时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="8edce-113">This event is emitted when ServiceChannelOpen is completed.</span></span>  
+## <a name="description"></a><span data-ttu-id="c4350-112">描述</span><span class="sxs-lookup"><span data-stu-id="c4350-112">Description</span></span>  
+ <span data-ttu-id="c4350-113">在完成 ServiceChannelOpen 时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="c4350-113">This event is emitted when ServiceChannelOpen is completed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="8edce-114">消息</span><span class="sxs-lookup"><span data-stu-id="8edce-114">Message</span></span>  
- <span data-ttu-id="8edce-115">ServiceChannelOpen 已完成。</span><span class="sxs-lookup"><span data-stu-id="8edce-115">ServiceChannelOpen completed.</span></span>  
+## <a name="message"></a><span data-ttu-id="c4350-114">消息</span><span class="sxs-lookup"><span data-stu-id="c4350-114">Message</span></span>  
+ <span data-ttu-id="c4350-115">ServiceChannelOpen 已完成。</span><span class="sxs-lookup"><span data-stu-id="c4350-115">ServiceChannelOpen completed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="8edce-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="8edce-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c4350-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="c4350-116">Details</span></span>

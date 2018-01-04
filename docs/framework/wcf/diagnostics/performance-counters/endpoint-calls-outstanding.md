@@ -13,14 +13,15 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e415bcdd366dc0899ce50cef7cf669a3208f564b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b963ba88772f223ebdd1f4aa86832879f3010940
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="c4f97-102">终结点：未完成的调用次数</span><span class="sxs-lookup"><span data-stu-id="c4f97-102">Endpoint: Calls Outstanding</span></span>
-<span data-ttu-id="c4f97-103">计数器名称：Calls Outstanding（未完成的调用次数）</span><span class="sxs-lookup"><span data-stu-id="c4f97-103">Counter Name: Calls Outstanding</span></span>  
+# <a name="endpoint-calls-outstanding"></a><span data-ttu-id="b6884-102">终结点：未完成的调用次数</span><span class="sxs-lookup"><span data-stu-id="b6884-102">Endpoint: Calls Outstanding</span></span>
+<span data-ttu-id="b6884-103">计数器名称：Calls Outstanding（未完成的调用次数）</span><span class="sxs-lookup"><span data-stu-id="b6884-103">Counter Name: Calls Outstanding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c4f97-104">描述</span><span class="sxs-lookup"><span data-stu-id="c4f97-104">Description</span></span>  
- <span data-ttu-id="c4f97-105">对此终结点正在进行的调用数。</span><span class="sxs-lookup"><span data-stu-id="c4f97-105">Number of in-progress calls to this endpoint.</span></span>
+## <a name="description"></a><span data-ttu-id="b6884-104">描述</span><span class="sxs-lookup"><span data-stu-id="b6884-104">Description</span></span>  
+ <span data-ttu-id="b6884-105">对此终结点正在进行的调用数。</span><span class="sxs-lookup"><span data-stu-id="b6884-105">Number of in-progress calls to this endpoint.</span></span>

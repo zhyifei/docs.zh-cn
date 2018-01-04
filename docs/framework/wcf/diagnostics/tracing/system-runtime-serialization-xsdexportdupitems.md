@@ -13,19 +13,20 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0720eae4046fc6560ed6a991e787e53658d3dcee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 00ade0dc7a859a7974184eecd33dd1fe210f4841
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemruntimeserializationxsdexportdupitems"></a><span data-ttu-id="1b472-102">System.Runtime.Serialization.XsdExportDupItems</span><span class="sxs-lookup"><span data-stu-id="1b472-102">System.Runtime.Serialization.XsdExportDupItems</span></span>
-<span data-ttu-id="1b472-103">System.Runtime.Serialization.XsdExportDupItems</span><span class="sxs-lookup"><span data-stu-id="1b472-103">System.Runtime.Serialization.XsdExportDupItems</span></span>  
+# <a name="systemruntimeserializationxsdexportdupitems"></a><span data-ttu-id="cc4cf-102">System.Runtime.Serialization.XsdExportDupItems</span><span class="sxs-lookup"><span data-stu-id="cc4cf-102">System.Runtime.Serialization.XsdExportDupItems</span></span>
+<span data-ttu-id="cc4cf-103">System.Runtime.Serialization.XsdExportDupItems</span><span class="sxs-lookup"><span data-stu-id="cc4cf-103">System.Runtime.Serialization.XsdExportDupItems</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1b472-104">描述</span><span class="sxs-lookup"><span data-stu-id="1b472-104">Description</span></span>  
- <span data-ttu-id="1b472-105">在 XSD 导出期间，生成架构时遇到重复项。</span><span class="sxs-lookup"><span data-stu-id="1b472-105">Encountered duplicate items when generating schemas during XSD export.</span></span>  
+## <a name="description"></a><span data-ttu-id="cc4cf-104">描述</span><span class="sxs-lookup"><span data-stu-id="cc4cf-104">Description</span></span>  
+ <span data-ttu-id="cc4cf-105">在 XSD 导出期间，生成架构时遇到重复项。</span><span class="sxs-lookup"><span data-stu-id="cc4cf-105">Encountered duplicate items when generating schemas during XSD export.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b472-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="1b472-106">See Also</span></span>  
- [<span data-ttu-id="1b472-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="1b472-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="1b472-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="1b472-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="1b472-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="1b472-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="cc4cf-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="cc4cf-106">See Also</span></span>  
+ [<span data-ttu-id="cc4cf-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="cc4cf-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="cc4cf-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="cc4cf-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="cc4cf-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="cc4cf-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

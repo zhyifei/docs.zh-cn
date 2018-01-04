@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e7e0a8cfda1046087f8ec94f31a873eef552fb8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f01caf603f515a2bb628c81d690b539655912f97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transacted-operations-in-doubt"></a><span data-ttu-id="7522f-102">Transacted Operations In Doubt（不确定的事务处理操作次数）</span><span class="sxs-lookup"><span data-stu-id="7522f-102">Transacted Operations In Doubt</span></span>
-<span data-ttu-id="7522f-103">计数器名称：Transacted Operations In Doubt（不确定的事务处理操作次数）。</span><span class="sxs-lookup"><span data-stu-id="7522f-103">Counter Name: Transacted Operations In Doubt.</span></span>  
+# <a name="transacted-operations-in-doubt"></a><span data-ttu-id="b4eb0-102">Transacted Operations In Doubt（不确定的事务处理操作次数）</span><span class="sxs-lookup"><span data-stu-id="b4eb0-102">Transacted Operations In Doubt</span></span>
+<span data-ttu-id="b4eb0-103">计数器名称：Transacted Operations In Doubt（不确定的事务处理操作次数）。</span><span class="sxs-lookup"><span data-stu-id="b4eb0-103">Counter Name: Transacted Operations In Doubt.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7522f-104">描述</span><span class="sxs-lookup"><span data-stu-id="7522f-104">Description</span></span>  
- <span data-ttu-id="7522f-105">此服务中产生不确定结果的事务性操作的数目。</span><span class="sxs-lookup"><span data-stu-id="7522f-105">Number of transactional operations with an in-doubt outcome in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="b4eb0-104">描述</span><span class="sxs-lookup"><span data-stu-id="b4eb0-104">Description</span></span>  
+ <span data-ttu-id="b4eb0-105">此服务中产生不确定结果的事务性操作的数目。</span><span class="sxs-lookup"><span data-stu-id="b4eb0-105">Number of transactional operations with an in-doubt outcome in this service.</span></span>

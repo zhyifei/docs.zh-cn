@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55e7fce9cb01b0ab1ab265650aea96e49b2ad456
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a640bba672420827bf756d4a725338c3fc25caa8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeldiagnosticsmessagecountlimitexceeded"></a><span data-ttu-id="4b954-102">System.ServiceModel.Diagnostics.MessageCountLimitExceeded</span><span class="sxs-lookup"><span data-stu-id="4b954-102">System.ServiceModel.Diagnostics.MessageCountLimitExceeded</span></span>
-<span data-ttu-id="4b954-103">System.ServiceModel.Diagnostics.MessageCountLimitExceeded</span><span class="sxs-lookup"><span data-stu-id="4b954-103">System.ServiceModel.Diagnostics.MessageCountLimitExceeded</span></span>  
+# <a name="systemservicemodeldiagnosticsmessagecountlimitexceeded"></a><span data-ttu-id="ba32d-102">System.ServiceModel.Diagnostics.MessageCountLimitExceeded</span><span class="sxs-lookup"><span data-stu-id="ba32d-102">System.ServiceModel.Diagnostics.MessageCountLimitExceeded</span></span>
+<span data-ttu-id="ba32d-103">System.ServiceModel.Diagnostics.MessageCountLimitExceeded</span><span class="sxs-lookup"><span data-stu-id="ba32d-103">System.ServiceModel.Diagnostics.MessageCountLimitExceeded</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4b954-104">描述</span><span class="sxs-lookup"><span data-stu-id="4b954-104">Description</span></span>  
- <span data-ttu-id="4b954-105">已达到记录消息的限制数。</span><span class="sxs-lookup"><span data-stu-id="4b954-105">Reached the limit of messages to log.</span></span> <span data-ttu-id="4b954-106">停止消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="4b954-106">Message logging is stopping.</span></span>  
+## <a name="description"></a><span data-ttu-id="ba32d-104">描述</span><span class="sxs-lookup"><span data-stu-id="ba32d-104">Description</span></span>  
+ <span data-ttu-id="ba32d-105">已达到记录消息的限制数。</span><span class="sxs-lookup"><span data-stu-id="ba32d-105">Reached the limit of messages to log.</span></span> <span data-ttu-id="ba32d-106">停止消息日志记录。</span><span class="sxs-lookup"><span data-stu-id="ba32d-106">Message logging is stopping.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b954-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4b954-107">See Also</span></span>  
- [<span data-ttu-id="4b954-108">跟踪</span><span class="sxs-lookup"><span data-stu-id="4b954-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4b954-109">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="4b954-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4b954-110">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="4b954-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ba32d-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="ba32d-107">See Also</span></span>  
+ [<span data-ttu-id="ba32d-108">跟踪</span><span class="sxs-lookup"><span data-stu-id="ba32d-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ba32d-109">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="ba32d-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ba32d-110">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="ba32d-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

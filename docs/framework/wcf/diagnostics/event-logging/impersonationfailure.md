@@ -13,22 +13,23 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c5865e1d130e6c546d63f2e3a4d327c195a7ded
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a02f0f907166c911e6dfdaecc50ad5ac57bef9fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="impersonationfailure"></a><span data-ttu-id="7c78e-102">ImpersonationFailure</span><span class="sxs-lookup"><span data-stu-id="7c78e-102">ImpersonationFailure</span></span>
-<span data-ttu-id="7c78e-103">Id: 176</span><span class="sxs-lookup"><span data-stu-id="7c78e-103">Id: 176</span></span>  
+# <a name="impersonationfailure"></a><span data-ttu-id="ffce5-102">ImpersonationFailure</span><span class="sxs-lookup"><span data-stu-id="ffce5-102">ImpersonationFailure</span></span>
+<span data-ttu-id="ffce5-103">Id: 176</span><span class="sxs-lookup"><span data-stu-id="ffce5-103">Id: 176</span></span>  
   
- <span data-ttu-id="7c78e-104">严重性：错误</span><span class="sxs-lookup"><span data-stu-id="7c78e-104">Severity: Error</span></span>  
+ <span data-ttu-id="ffce5-104">严重性：错误</span><span class="sxs-lookup"><span data-stu-id="ffce5-104">Severity: Error</span></span>  
   
- <span data-ttu-id="7c78e-105">类别：SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="7c78e-105">Category: SecurityAudit</span></span>  
+ <span data-ttu-id="ffce5-105">类别：SecurityAudit</span><span class="sxs-lookup"><span data-stu-id="ffce5-105">Category: SecurityAudit</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7c78e-106">描述</span><span class="sxs-lookup"><span data-stu-id="7c78e-106">Description</span></span>  
- <span data-ttu-id="7c78e-107">此事件指示模拟已失败，并列出方法名称、客户端标识和活动 ID。</span><span class="sxs-lookup"><span data-stu-id="7c78e-107">This event indicates that impersonation has failed, listing the method name, client identity, and activity ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="ffce5-106">描述</span><span class="sxs-lookup"><span data-stu-id="ffce5-106">Description</span></span>  
+ <span data-ttu-id="ffce5-107">此事件指示模拟已失败，并列出方法名称、客户端标识和活动 ID。</span><span class="sxs-lookup"><span data-stu-id="ffce5-107">This event indicates that impersonation has failed, listing the method name, client identity, and activity ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c78e-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7c78e-108">See Also</span></span>  
- [<span data-ttu-id="7c78e-109">事件日志记录</span><span class="sxs-lookup"><span data-stu-id="7c78e-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="7c78e-110">事件常规参考</span><span class="sxs-lookup"><span data-stu-id="7c78e-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="ffce5-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="ffce5-108">See Also</span></span>  
+ [<span data-ttu-id="ffce5-109">事件日志记录</span><span class="sxs-lookup"><span data-stu-id="ffce5-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="ffce5-110">事件常规参考</span><span class="sxs-lookup"><span data-stu-id="ffce5-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

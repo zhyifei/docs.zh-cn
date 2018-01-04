@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a9f2461e558ebaa2db6bf26320e9806f3bd6b65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e031015dff164435d41f3296d07298afd7d4a68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4819---innerchannelopensucceeded"></a><span data-ttu-id="49372-102">4819 - InnerChannelOpenSucceeded</span><span class="sxs-lookup"><span data-stu-id="49372-102">4819 - InnerChannelOpenSucceeded</span></span>
-## <a name="properties"></a><span data-ttu-id="49372-103">属性</span><span class="sxs-lookup"><span data-stu-id="49372-103">Properties</span></span>  
+# <a name="4819---innerchannelopensucceeded"></a><span data-ttu-id="10362-102">4819 - InnerChannelOpenSucceeded</span><span class="sxs-lookup"><span data-stu-id="10362-102">4819 - InnerChannelOpenSucceeded</span></span>
+## <a name="properties"></a><span data-ttu-id="10362-103">属性</span><span class="sxs-lookup"><span data-stu-id="10362-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="49372-104">ID</span><span class="sxs-lookup"><span data-stu-id="49372-104">ID</span></span>|<span data-ttu-id="49372-105">4819</span><span class="sxs-lookup"><span data-stu-id="49372-105">4819</span></span>|  
-|<span data-ttu-id="49372-106">关键字</span><span class="sxs-lookup"><span data-stu-id="49372-106">Keywords</span></span>|<span data-ttu-id="49372-107">发现</span><span class="sxs-lookup"><span data-stu-id="49372-107">Discovery</span></span>|  
-|<span data-ttu-id="49372-108">级别</span><span class="sxs-lookup"><span data-stu-id="49372-108">Level</span></span>|<span data-ttu-id="49372-109">信息</span><span class="sxs-lookup"><span data-stu-id="49372-109">Information</span></span>|  
-|<span data-ttu-id="49372-110">通道</span><span class="sxs-lookup"><span data-stu-id="49372-110">Channel</span></span>|<span data-ttu-id="49372-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="49372-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="10362-104">ID</span><span class="sxs-lookup"><span data-stu-id="10362-104">ID</span></span>|<span data-ttu-id="10362-105">4819</span><span class="sxs-lookup"><span data-stu-id="10362-105">4819</span></span>|  
+|<span data-ttu-id="10362-106">关键字</span><span class="sxs-lookup"><span data-stu-id="10362-106">Keywords</span></span>|<span data-ttu-id="10362-107">发现</span><span class="sxs-lookup"><span data-stu-id="10362-107">Discovery</span></span>|  
+|<span data-ttu-id="10362-108">级别</span><span class="sxs-lookup"><span data-stu-id="10362-108">Level</span></span>|<span data-ttu-id="10362-109">信息</span><span class="sxs-lookup"><span data-stu-id="10362-109">Information</span></span>|  
+|<span data-ttu-id="10362-110">通道</span><span class="sxs-lookup"><span data-stu-id="10362-110">Channel</span></span>|<span data-ttu-id="10362-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="10362-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="49372-112">描述</span><span class="sxs-lookup"><span data-stu-id="49372-112">Description</span></span>  
- <span data-ttu-id="49372-113">当 DiscoveryClientChannel 成功地发现终结点并使用它打开通道时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="49372-113">This event is emitted when the DiscoveryClientChannel successfully discovered an endpoint and opened the channel using it.</span></span>  
+## <a name="description"></a><span data-ttu-id="10362-112">描述</span><span class="sxs-lookup"><span data-stu-id="10362-112">Description</span></span>  
+ <span data-ttu-id="10362-113">当 DiscoveryClientChannel 成功地发现终结点并使用它打开通道时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="10362-113">This event is emitted when the DiscoveryClientChannel successfully discovered an endpoint and opened the channel using it.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="49372-114">消息</span><span class="sxs-lookup"><span data-stu-id="49372-114">Message</span></span>  
- <span data-ttu-id="49372-115">DiscoveryClientChannel 成功发现了一个终结点并使用该终结点打开了通道。</span><span class="sxs-lookup"><span data-stu-id="49372-115">The DiscoveryClientChannel successfully discovered an endpoint and opened the channel using it.</span></span> <span data-ttu-id="49372-116">使用 EndpointAddress=“%1”和 Via=“%2”将客户端连接到服务。</span><span class="sxs-lookup"><span data-stu-id="49372-116">The client is connected to a service using EndpointAddress='%1' and Via='%2'.</span></span>  
+## <a name="message"></a><span data-ttu-id="10362-114">消息</span><span class="sxs-lookup"><span data-stu-id="10362-114">Message</span></span>  
+ <span data-ttu-id="10362-115">DiscoveryClientChannel 成功发现了一个终结点并使用该终结点打开了通道。</span><span class="sxs-lookup"><span data-stu-id="10362-115">The DiscoveryClientChannel successfully discovered an endpoint and opened the channel using it.</span></span> <span data-ttu-id="10362-116">使用 EndpointAddress=“%1”和 Via=“%2”将客户端连接到服务。</span><span class="sxs-lookup"><span data-stu-id="10362-116">The client is connected to a service using EndpointAddress='%1' and Via='%2'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="49372-117">详细信息</span><span class="sxs-lookup"><span data-stu-id="49372-117">Details</span></span>
+## <a name="details"></a><span data-ttu-id="10362-117">详细信息</span><span class="sxs-lookup"><span data-stu-id="10362-117">Details</span></span>

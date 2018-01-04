@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1ac7e476996418759e3a21b24ccd3aceda3bfcb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5a79888a12ea8b0975aa5ef60d2cc6098a634a97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemidentitymodelselectorsgeneralinformation"></a><span data-ttu-id="d8726-102">System.IdentityModel.Selectors.GeneralInformation</span><span class="sxs-lookup"><span data-stu-id="d8726-102">System.IdentityModel.Selectors.GeneralInformation</span></span>
-<span data-ttu-id="d8726-103">System.IdentityModel.Selectors.GeneralInformation</span><span class="sxs-lookup"><span data-stu-id="d8726-103">System.IdentityModel.Selectors.GeneralInformation</span></span>  
+# <a name="systemidentitymodelselectorsgeneralinformation"></a><span data-ttu-id="78e3e-102">System.IdentityModel.Selectors.GeneralInformation</span><span class="sxs-lookup"><span data-stu-id="78e3e-102">System.IdentityModel.Selectors.GeneralInformation</span></span>
+<span data-ttu-id="78e3e-103">System.IdentityModel.Selectors.GeneralInformation</span><span class="sxs-lookup"><span data-stu-id="78e3e-103">System.IdentityModel.Selectors.GeneralInformation</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d8726-104">描述</span><span class="sxs-lookup"><span data-stu-id="d8726-104">Description</span></span>  
- <span data-ttu-id="d8726-105">这是常规信息。</span><span class="sxs-lookup"><span data-stu-id="d8726-105">This is general information.</span></span>  
+## <a name="description"></a><span data-ttu-id="78e3e-104">描述</span><span class="sxs-lookup"><span data-stu-id="78e3e-104">Description</span></span>  
+ <span data-ttu-id="78e3e-105">这是常规信息。</span><span class="sxs-lookup"><span data-stu-id="78e3e-105">This is general information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8726-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="d8726-106">See Also</span></span>  
- [<span data-ttu-id="d8726-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="d8726-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d8726-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="d8726-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d8726-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="d8726-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="78e3e-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="78e3e-106">See Also</span></span>  
+ [<span data-ttu-id="78e3e-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="78e3e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="78e3e-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="78e3e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="78e3e-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="78e3e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
