@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54c1ffcef9946d2be174f92545cdba3181b0d8ee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>如何：创建可调用其他工作流服务的工作流服务
 有时，一个工作流服务必须从另一个工作流服务中获取信息。  本主题演示如何从一个工作流服务调用另一个工作流服务。 本主题中，我们将创建两个工作流服务：一个服务具有可反转输入字符串的方法，另一个服务在反转使用第一个服务的字符串后，将输入字符串转换为大写。  
@@ -124,7 +125,7 @@ ms.lasthandoff: 12/02/2017
   
 1.  将一个名为 Client 的新控制台应用程序项目添加到解决方案。  
   
-2.  右键单击客户端项目并选择**添加服务引用**。 在出现的窗口中，单击**发现**。 选择 StringReverserService.xamlx，并输入 ReverseService 作为命名空间。  单击“确定”。  
+2.  右键单击客户端项目并选择**添加服务引用**。 在出现的窗口中，单击**发现**。 选择 StringReverserService.xamlx，并输入 ReverseService 作为命名空间。  单击 **“确定”**。  
   
 3.  将 Program.cs 中 Main 方法替换为以下代码。  
   

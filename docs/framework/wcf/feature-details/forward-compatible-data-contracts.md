@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef25e349ca6245ff3247f3a136d9a950d03d81d5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5ffd4a09de508a2353af356863f9e4f41fc253e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="forward-compatible-data-contracts"></a>向前兼容的数据协定
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 数据协定系统的一个特征是协定能够以不间断的方式随着时间而逐步演化。 也就是说，具有旧版本数据协定的客户端可以与具有相同数据协定的新版本的服务进行通信，或者具有新版本数据协定的客户端可以与相同数据协定的旧版本进行通信。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -50,8 +51,8 @@ ms.lasthandoff: 12/02/2017
   
  通过在 `ignoreExtensionDataObject` 构造函数中将 `true` 设置为 <xref:System.Runtime.Serialization.DataContractSerializer>，或者在 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> 中将 `true` 属性设置为 <xref:System.ServiceModel.ServiceBehaviorAttribute>，可以关闭往返功能。 当该功能关闭时，反序列化程序将不填充 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 属性，序列化程序也不发出该属性的内容。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.IExtensibleDataObject>  
  <xref:System.Runtime.Serialization.ExtensionDataObject>  
- [数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
+ [数据协定版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
  [最佳做法：数据协定版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3cc7eecbef66c3e4a80759912260b973d441a8a3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 916f5b820ce9e1c30c13a9834548c83e32bc3579
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>如何：导入自定义策略断言
 策略断言说明服务终结点的功能和需求。  客户端应用程序可以在服务元数据中使用策略断言来配置客户端绑定或自定义服务终结点的服务协定。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 2.  处理策略断言。 请注意，策略系统不会标准化嵌入的策略和 `wsp:optional`。 您必须在策略导入扩展实现中处理这些结构。  
   
-3.  对支持策略断言指定的功能或要求的绑定或协定执行自定义。 断言通常指示绑定需要特定配置或特定绑定元素。 可以通过访问 <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> 属性来进行这些修改。 其他断言需要您修改协定。  可以使用 <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> 属性来访问并修改该协定。  请注意，对于同一个绑定和协定，可能会多次调用策略导入程序，但导入的是不同的替代策略（如果一个替代策略导入失败）。 您的代码应该能够处理这一行为。  
+3.  对支持策略断言指定的功能或需求的绑定或协定执行自定义。 断言通常指示绑定需要特定配置或特定绑定元素。 可以通过访问 <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> 属性来进行这些修改。 其他断言需要您修改协定。  可以使用 <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> 属性来访问并修改该协定。  请注意，对于同一个绑定和协定，可能会多次调用策略导入程序，但导入的是不同的替代策略（如果一个替代策略导入失败）。 您的代码应该能够处理这一行为。  
   
 4.  从断言集合中删除自定义策略断言。 如果不删除该断言，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将假定策略导入失败，并将不导入相关绑定。 如果您使用 <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 方法定位自定义策略断言并在一个步骤中将该断言从集合中删除，则不必执行此步骤。  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 12/02/2017
   
 1.  导入元数据之前，将导入程序添加到 <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> 属性（例如，如果您使用的是 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  

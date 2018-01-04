@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c153fc3fa44b6f84d5aa11a7f20dcce3df533c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-windows-authentication-errors"></a>调试 Windows 身份验证错误
 使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层上发生安全错误时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 会显示这些错误。 本主题提供一组问题以帮助诊断这些错误。  
@@ -154,7 +155,7 @@ ms.lasthandoff: 12/02/2017
 #### <a name="developing-and-deploying-with-different-identities"></a>使用不同的标识开发和部署  
  如果在一台计算机上开发应用程序，并在另一台计算机上部署它，然后在每台计算机上使用不同的帐户类型进行身份验证，则可能遇到不同的行为。 例如，假定使用 `SSPI Negotiated` 身份验证模式，在 Windows XP Pro 计算机上开发应用程序。 如果使用本地用户帐户进行身份验证，则会使用 NTLM 协议。 在开发应用程序后，将服务部署到使用域帐户运行它的 Windows Server 2003 计算机。 此时，客户端将无法对服务进行身份验证，因为它正在使用 Kerberos 和域控制器。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Security.WindowsClientCredential>  
  <xref:System.ServiceModel.Security.WindowsServiceCredential>  
  <xref:System.ServiceModel.Security.WindowsClientCredential>  

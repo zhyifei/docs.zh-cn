@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-addresses"></a>终结点地址
 每个终结点都具有与其关联的地址，该地址用于查找和标识终结点。 此地址主要包括指定终结点位置的统一资源标识符 (URI)。 终结点地址在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 编程模型中由 <xref:System.ServiceModel.EndpointAddress> 类表示，该类包含一个可选的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 属性（允许由与一个终结点交换消息的其他终结点对该终结点进行身份验证）和一组可选的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 属性（定义到达服务所需的任何其他 SOAP 头）。 可选头提供其他的更详细寻址信息以标识服务终结点或与之交互。 终结点的地址在网络上表示为 WS-Addressing 终结点引用 (EPR)。  
@@ -147,6 +148,6 @@ ms.lasthandoff: 12/02/2017
   
  在某些方案中，终结点接收抵达基础传输的所有消息，而不仅仅是具有相应 `To` 头的消息。 若要启用这一点，用户可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指定终结点地址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b929765580f392b5fbd825a9c14bdc6f53c1e96
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 988216447e47345b6d863de6e46d0de9a025f068
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-internet-information-services"></a>在 Internet 信息服务中承载
 若要承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，一种选择是在 Internet 信息服务 (IIS) 应用程序内部承载。 此承载模型与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET Web 服务 (ASMX) 使用的模型类似。  
@@ -65,10 +66,10 @@ ms.lasthandoff: 12/02/2017
 ## <a name="wcf-services-and-aspnet"></a>WCF 服务和 ASP.NET  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务既可以与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 并行承载，也可以在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式中承载。在该模式下，服务可以充分利用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序平台提供的功能。 有关这些功能的讨论，请参阅[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 ServiceHostFactory 扩展宿主](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)  
- [部署于 Internet 信息服务承载的 WCF 服务](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
+ [部署承载于 Internet Information Services 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)  
  [WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [Internet 信息服务承载最佳实践](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Internet Information Services 承载最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [为 Windows Communication Foundation 配置 Internet Information Services 7.0](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)  
  [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -13,14 +13,15 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e6543f1faec5d3298c9a2b825b3a016eb5e7d09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c74f95fba492b677d3b1702d090c7a055bc5f1ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-a-managed-application"></a>在托管应用程序中承载
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务可以承载于任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 应用程序中。 自承载服务是最灵活的宿主选项，因为此服务部署所需要的基础结构最少。 但是，此服务也是最不可靠的宿主选项，因为托管应用程序未提供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中其他宿主选项（如 Internet 信息服务 (IIS) 和 Windows 服务）的高级宿主和管理功能。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务可以承载于任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 应用程序中。 自承载服务是最灵活的宿主选项，因为此服务部署所需要的基础结构最少。 但是，此服务也是最不可靠的宿主选项，因为托管应用程序未提供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中其他宿主选项（如 Internet 信息服务 (IIS) 和 Windows 服务）的高级宿主和管理功能。  
   
  若要创建自承载服务，请创建并打开 <xref:System.ServiceModel.ServiceHost>的实例以启动侦听消息的服务。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 承载于托管应用程序的 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
   
@@ -34,6 +35,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="rich-client-applications"></a>胖客户端应用程序  
  自承载支持的其他常见方案是胖客户端应用程序，如基于 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 或 Windows 窗体 (WinForms) 的应用程序。 此宿主选项还使丰富客户端应用程序（如 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 和 WinForms 应用程序）与外部世界的通信变得很容易。 例如，一个将 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 用于其用户界面并作为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务主机的对等协作客户端，允许其他客户端连接到它并共享信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [托管服务](../../../../docs/framework/wcf/hosting-services.md)  
  [入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)

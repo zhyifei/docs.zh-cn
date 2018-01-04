@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8a2f0883a2d83ad5b3c1a2a3dd6c7e016583af7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc7af813f7fff422a2513c58c9e3cba6376de060
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>如何：使用 Windows Server App Fabric 承载工作流服务
 在 App Fabric 中承载工作流服务类似于在 IIS/WAS 下承载。 唯一的区别在于 App Fabric 提供的用于部署、监控和管理工作流服务的工具。 本主题使用在创建的工作流服务[创建长时间运行工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)。 本主题将指导您创建工作流服务。 本主题将介绍如何使用 App Fabric 承载工作流服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric，请参阅[Windows Server App Fabric 文档](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)。 完成以下步骤之前，请确保已安装 Windows Server App Fabric。  为此，请打开 Internet Information services (inetmgr.exe)，请单击服务器名称**连接**查看，单击站点，然后单击**Default Web Site**。 在屏幕的右侧，你应该看到名为一节**App Fabric**。 如果您看不到这一部分（它位于右侧窗格的顶部），则表示您还未安装 App Fabric。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安装 Windows Server App Fabric 请参阅[安装 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136)。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  在**服务器**部分的属性页上，选择**使用本地 IIS Web 服务器**并键入以下 URL: `http://localhost/OrderService`。  
   
-5.  单击**创建虚拟目录**按钮。 这将新建一个虚拟目录，并将项目设置为在生成项目时将所需文件复制到此虚拟目录。  或者，您也可以手动将 .xamlx、web.config 以及任何所需的 DLL 复制到此虚拟目录。  
+5.  单击**创建虚拟目录**按钮。 这将新建一个虚拟目录，并将项目设置为在生成项目时将所需文件复制到此虚拟目录。  或者，你也可以手动将 .xamlx、web.config 以及任何所需的 DLL 复制到此虚拟目录。  
   
 ### <a name="configuring-a-workflow-service-hosted-in-windows-server-app-fabric"></a>配置承载于 Windows Server App Fabric 中的工作流服务  
   
@@ -100,8 +101,8 @@ ms.lasthandoff: 12/02/2017
   
      有关 Windows Server App Fabric 功能以及如何使用它们查看[Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   
-## <a name="see-also"></a>另请参阅  
- [创建长时间运行工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+## <a name="see-also"></a>请参阅  
+ [创建长时间运行的工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
  [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=193143)  
  [安装 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136)  
  [Windows Server App Fabric 文档](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)

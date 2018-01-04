@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70c94d38a50425c702e382edcd7290cba3d61e91
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b10dd9be996369385ca323b0409145a9cde46a1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>如何：创建自定义客户端标识验证工具
 *标识*功能[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]使客户端能够预先指定服务所需的标识。 无论服务器何时向客户端验证其自身身份，都将检查该标识是否为所需的标识。 (有关标识以及它如何工作的说明，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  
@@ -91,7 +92,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
  <xref:System.ServiceModel.EndpointIdentity>  
  <xref:System.ServiceModel.Security.IdentityVerifier>  

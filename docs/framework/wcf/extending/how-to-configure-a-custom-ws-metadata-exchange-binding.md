@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 497d7242b581a61aa156741a8c2f0ea278fe2372
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7bfa4ab0696083c78578517748cfdc2e79e001d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>如何：配置自定义 WS-Metadata Exchange 绑定
 本主题将说明如何配置自定义 WS-Metadata 交换绑定。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供四种系统定义的元数据绑定，不过，您可以使用所需的任何绑定来发布元数据。 本主题将演示如何使用 `wsHttpBinding` 发布元数据。 此绑定提供了以安全方式公开元数据的选择。 本文中的代码基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -123,7 +124,7 @@ ms.lasthandoff: 12/02/2017
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [元数据发布行为](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
  [检索元数据](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
  [元数据](../../../../docs/framework/wcf/feature-details/metadata.md)  

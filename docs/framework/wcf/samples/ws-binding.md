@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef396a909b26110267b03f42728589640c7e2242
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f733aaf62d37f9c8ca853a0958e627a4f354121d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-binding"></a>WS 绑定
 本节包含演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的 Windows 服务绑定的示例。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
  [WS 可靠会话](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  演示如何使用可靠会话。  
   
- [WS 传输安全](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
+ [WS 传输安全性](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
  演示如何通过 <xref:System.ServiceModel.WSHttpBinding> 绑定来使用 SSL 传输安全。  
   
  [消息安全绑定](../../../../docs/framework/wcf/samples/message-security-binding.md)  

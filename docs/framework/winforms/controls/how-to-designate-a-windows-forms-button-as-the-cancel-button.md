@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bbdf2ec4f2353662f1077b9d95966e0a2ebd316
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f3f61828b4c8b65ae984685610d6d8609953376a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>如何：将 Windows 窗体按钮指定为“取消”按钮
 在任何 Windows 窗体中，你可以指定<xref:System.Windows.Forms.Button>控件取消按钮。 每当用户按 ESC 键时，无论哪个窗体上的其他控件具有焦点，则单击取消按钮。 通常，这样的按钮进行编程，使用户能够快速退出操作，而无须执行任何操作。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Form.CancelButton%2A>  
  [Button 控件概述](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
  [如何选择 Windows 窗体 Button 控件](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  

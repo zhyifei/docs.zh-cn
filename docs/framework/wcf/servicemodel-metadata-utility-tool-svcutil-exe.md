@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f2ef91986cb5ad31560c4a7f418218a168f1b2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 元数据实用工具 (Svcutil.exe)
 ServiceModel 元数据实用工具用于依据元数据文档生成服务模型代码，以及依据服务模型代码生成元数据文档。  
@@ -35,11 +36,11 @@ ServiceModel 元数据实用工具用于依据元数据文档生成服务模型�
   
 |任务|主题|  
 |----------|-----------|  
-|依据运行的服务或静态元数据文档生成代码。|[从服务元数据生成 WCF 客户端](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
-|从编译的代码中导出元数据文档。|[如何： 使用 Svcutil.exe 从已编译的服务代码中导出元数据](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
-|验证编译的服务代码。|[如何： 使用 Svcutil.exe 验证已编译的服务代码](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
-|从运行的服务中下载元数据文档。|[如何： 使用 Svcutil.exe 下载元数据文档](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
-|生成序列化代码。|[如何： 改善启动时间的 WCF 客户端应用程序使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
+|依据运行的服务或静态元数据文档生成代码。|[根据服务元数据生成 WCF 客户端](../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)|  
+|从编译的代码中导出元数据文档。|[如何：使用 Svcutil.exe 将元数据从已编译的服务代码中导出](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)|  
+|验证编译的服务代码。|[如何：使用 Svcutil.exe 验证已编译的服务代码](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)|  
+|从运行的服务中下载元数据文档。|[如何：使用 Svcutil.exe 下载元数据文档](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)|  
+|生成序列化代码。|[如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)|  
   
 > [!CAUTION]
 >  如果以参数形式提供的名称相同，Svcutil 将覆盖磁盘上的现有文件。 这可能包括代码文件、配置或元数据文件。 若要在生成代码和配置文件时避免这种情况，请使用 `/mergeConfig` 开关。  
@@ -80,10 +81,10 @@ ServiceModel 元数据实用工具用于依据元数据文档生成服务模型�
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |`epr`|XML 文件的路径，该文件包含支持 WS-Metadata Exchange 的服务终结点的 WS-Addressing EndpointReference。 有关更多信息，请参见“元数据下载”一节。|  
-|`metadataDocumentPath`|元数据文档（wsdl 或 xsd）的路径，该文档包含要导入代码（.wsdl、.xsd、.wspolicy 或 .wsmex）的协定。<br /><br /> 当您为元数据指定远程 URL 时，Svcutil 采用导入和包含的内容。 但是，如果要在本地文件系统上处理元数据文件，则必须在此参数中指定所有文件。 这样，您可以在不能有网络依赖项的生成环境中使用 Svcutil。 你可以使用通配符 (*.xsd， \*.wsdl) 为此参数。|  
+|`metadataDocumentPath`|元数据文档（wsdl 或 xsd）的路径，该文档包含要导入代码（.wsdl、.xsd、.wspolicy 或 .wsmex）的协定。<br /><br /> 当您为元数据指定远程 URL 时，Svcutil 采用导入和包含的内容。 但是，如果要在本地文件系统上处理元数据文件，则必须在此自变量中指定所有文件。 这样，您可以在不能有网络依赖项的生成环境中使用 Svcutil。 你可以使用通配符 (*.xsd， \*.wsdl) 为此参数。|  
 |`url`|可提供元数据的服务终结点的 URL，或是联机承载的元数据文档的 URL。 有关如何检索这些文档的更多信息，请参见“元数据下载”一节。|  
   
 |选项|描述|  
@@ -120,7 +121,7 @@ ServiceModel 元数据实用工具用于依据元数据文档生成服务模型�
   
  `svcutil.exe [/t:metadata] [/serviceName:<serviceConfigName>] [/dataContractOnly] <assemblyPath>*`  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |`assemblyPath`|指定程序集的路径，该程序集包含要导出的服务、协定或数据协定类型。 可以使用标准命令行通配符提供多个文件作为输入。|  
   
@@ -136,7 +137,7 @@ ServiceModel 元数据实用工具用于依据元数据文档生成服务模型�
   
  `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |`assemblyPath`|指定程序集的路径，该程序集包含要验证的服务类型。 程序集必须具有相关联的配置文件才能提供服务配置。 可以使用标准命令行通配符来提供多个程序集。|  
   
@@ -163,7 +164,7 @@ ServiceModel 元数据实用工具用于依据元数据文档生成服务模型�
   
  `svcutil.exe /t:metadata  <url>* | <epr>`  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |`url`|可提供元数据的服务终结点的 URL，或是联机承载的元数据文档的 URL。|  
 |`epr`|XML 文件的路径，该文件包含支持 WS-Metadata Exchange 的服务终结点的 WS-Addressing EndpointReference。|  
@@ -271,7 +272,7 @@ ServiceModel 元数据实用工具用于依据元数据文档生成服务模型�
   
  最后，您不应在应用程序的中间层中使用该工具，因为它可能会导致当前进程拒绝服务。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

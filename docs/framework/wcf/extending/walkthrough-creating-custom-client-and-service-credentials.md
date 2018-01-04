@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aeea572bea367406b8391339748a76c8bd168a61
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3a56a3fa5ed8d470216e9c96b53e1ea21762bd2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>演练：创建自定义客户端和服务凭据
 本主题演示如何实现自定义客户端和服务凭据以及如何在应用程序代码中使用自定义凭据。  
@@ -52,9 +53,9 @@ ms.lasthandoff: 12/02/2017
 ## <a name="first-in-a-series"></a>系列主题中的第一个主题  
  创建自定义凭据类只是第一步，因为自定义凭据的原因是更改有关凭据配置、安全令牌序列化或身份验证的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 行为。 本节中的其他主题说明如何创建自定义序列化程序和身份验证器。 在这一方面，创建自定义凭据类是系列主题中的第一个主题。 后续操作（创建自定义序列化程序和身份验证器）只有在创建自定义凭据后才能进行。 基于本主题的其他主题包括：  
   
--   [如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+-   [如何：创建自定义安全令牌验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
 -   [如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
@@ -190,13 +191,13 @@ ms.lasthandoff: 12/02/2017
   
  使用上面“`To create a configuration handler for custom client credentials`”和“`To register and use a custom client credentials configuration handler in the application configuration`”过程中描述的步骤添加对配置的支持。唯一的区别是使用 <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> 类代替 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 类作为配置处理程序的基类。 这样，使用系统提供的 `<serviceCredentials>` 元素的任何地方都可以使用自定义服务凭据元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.Security.SecurityCredentialsManager>  
  <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>  
- [如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+ [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [如何：创建自定义安全令牌验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

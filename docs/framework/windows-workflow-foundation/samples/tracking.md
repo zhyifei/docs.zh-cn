@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17abe368b8e1d9a5212b564d201d5d163d849e4d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ec9c423f86a0a736ed1b99d8ddf0f5a38160c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking"></a>跟踪
 本节包含用于演示 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的工作流跟踪的示例。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
  [自定义跟踪](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)  
  演示如何创建自定义跟踪参与者并将跟踪数据的内容写入到控制台。  
   
- [到 Windows 事件跟踪中跟踪事件](../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)  
+ [在 Windows 中将事件跟踪到事件跟踪](../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)  
  演示如何在工作流服务上启用 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 跟踪以及在 Windows 事件跟踪 (ETW) 中发出跟踪事件。  
   
  [SQL 跟踪](../../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  

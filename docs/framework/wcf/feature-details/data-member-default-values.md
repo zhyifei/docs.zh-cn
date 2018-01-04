@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c7d6aa8d695dd6fc79b23e6cbb69bf523ef680f1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-member-default-values"></a>数据成员默认值
 在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，类型具有的概念*默认值*。 例如，对于任何引用类型，默认值为 `null`，而整型的默认值为零。 如果某个数据成员设置为其默认值，有时会希望序列化数据中不包含该数据成员。 由于成员具有默认值，这个实际值不需要进行序列化；这样处理可以提高性能。  
@@ -66,6 +67,6 @@ ms.lasthandoff: 12/02/2017
   
  导入架构时，每当检测到前述特定于 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 的批注，`false` 属性都自动设置为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 对于 `false` 属性设置为 `nillable` 的引用类型，该属性也设置为 `false`，以支持在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务时常遇到的特定互操作性方案。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>

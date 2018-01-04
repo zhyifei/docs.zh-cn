@@ -12,20 +12,21 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6d94a2c06711e30455e1e8195f9e9c004bae78f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 99d8fba848129156d94e54d1da7d08122ccfa735
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-library"></a>活动库
 本节包含了演示 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的高级自定义活动的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [.NET Framework 4.5 中的策略活动](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- 演示 Policy4 活动如何通过使用在 WF 3.5 中提供的规则引擎，允许在 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中直接执行 <xref:System.Workflow.Activities.Rules.RuleSet> (WF 3.5) 中的现有 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 对象。  
+ 演示 Policy4 活动如何通过使用在 WF 3.5 中提供的规则引擎，允许在 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中直接执行 <xref:System.Workflow.Activities.Rules.RuleSet> (WF 3.5) 中的现有 [!INCLUDE[wf2](../../../../includes/wf2-md.md)][!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 对象。  
   
- [到上一系列值的交换机的自定义活动](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
+ [要基于一系列值进行切换的自定义活动](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
  演示如何创建扩展对 <xref:System.Activities.Statements.Switch%601> 的使用的自定义活动。  
   
  [LINQ to Objects 活动](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-objects-activity.md)  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
  [SendMail 自定义活动](../../../../docs/framework/windows-workflow-foundation/samples/sendmail-custom-activity.md)  
  演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。  
   
- [活动](../../../../docs/framework/windows-workflow-foundation/samples/for-activity.md)  
+ [For 活动](../../../../docs/framework/windows-workflow-foundation/samples/for-activity.md)  
  演示如何生成一个从 <xref:System.Activities.NativeActivity> 继承的自定义活动，以及如何在工作流中使用它来循环访问一个值范围。  
   
  [等待输入活动](../../../../docs/framework/windows-workflow-foundation/samples/wait-for-input-activity.md)  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/02/2017
  [CommentOut 活动](../../../../docs/framework/windows-workflow-foundation/samples/commentout-activity.md)  
  演示如何编写一个自定义活动，该活动从执行路径中移除其他活动，从而有效注释掉这些活动。  
   
- [.NET Framework 4.5 中的外部化的策略活动](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
+ [.NET Framework 4.5 中的外部化策略活动](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
  演示 ExternalizedPolicy4 活动如何通过使用在 WF 3.5 中提供的规则引擎，允许在 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中直接执行 <xref:System.Workflow.Activities.Rules.RuleSet> (WF 3.5) [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 对象中的现有 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
  [NoPersistScope 活动](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  

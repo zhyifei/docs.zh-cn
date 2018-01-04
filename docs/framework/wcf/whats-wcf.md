@@ -17,11 +17,12 @@ caps.latest.revision: "51"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a24f1bd921de848cb75a2c9f35fa3dd279bc741
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f5301bf3a2fed35dbdd0046e01eb2acb9083a290
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用于构建面向服务的应用程序的框架。 借助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，可以将数据作为异步消息从一个服务终结点发送至另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：  
@@ -102,7 +103,7 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[dublin](../../../includes/dublin-md.md)] 应用程序服务器是针对部署和管理使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 进行通信的应用程序专门生成的。 [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] 包括丰富的工具和配置选项，专门设计用于启用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel>  
  [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)  
  [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e716dc74946ac6f18ab82c6834518f0bd6bbea76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6ff3452a60d9cb80a71dacd5841b120b5efbf82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据格式设置
 <xref:System.Windows.Forms.DataGridView>控件提供单元格的值的父列显示的数据类型之间的自动转换。 文本框列，例如，显示的日期、 时间、 号和枚举值的字符串表示形式，并将用户输入的字符串值转换为数据存储所需的类型。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  如果用户指定值的默认分析不满足你的需求，你可以处理<xref:System.Windows.Forms.DataGridView.CellParsing>事件<xref:System.Windows.Forms.DataGridView>控件提供自定义分析。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
  [在 Windows 窗体 DataGridView 控件中显示数据](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  

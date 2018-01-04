@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7f868f02f309401c60737af8a69434d175eee1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>如何：使用 WCF REST 编程模型创建接受任意数据的服务
 有时，开发人员必须完全控制从服务操作返回数据的方式。 当服务操作必须以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持的格式返回数据时，就需要这样做。 本主题讨论如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 编程模型创建接收任意数据的服务。  
@@ -203,7 +204,7 @@ namespace ReceiveRawData
   
 -   编译该代码时，请引用 System.ServiceModel.dll 和 System.ServiceModel.Web.dll  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
  [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

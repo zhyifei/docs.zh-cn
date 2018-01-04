@@ -16,17 +16,18 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29ca4041e24a99546dfb665b0ce9e695732442d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8daadec1eef20e62747cdbfcafd1fd13cfc16093
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-and-serialization"></a>数据传输和序列化
 在已连接的系统中，服务和客户端依赖于数据交换来完成任何任务。 作为服务或客户端的开发人员，您还必须了解 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何处理数据和数据序列化以便创建可轻松维护的高效应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  描述服务中数据传输的基本概念。  
   
  [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
@@ -47,10 +48,10 @@ ms.lasthandoff: 12/02/2017
  [筛选](../../../../docs/framework/wcf/feature-details/filtering.md)  
  描述基于各种条件启用消息预处理的筛选。  
   
- [大型数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [大数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  描述如何发送大数据块，如二进制文件。  
   
- [有关数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ [数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
  描述在对数据传输和序列化进行编程时要注意的项。  
   
  [数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
@@ -70,6 +71,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="related-sections"></a>相关章节  
  [扩展编码器和序列化程序](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [最佳做法：数据协定版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  [服务版本控制](../../../../docs/framework/wcf/service-versioning.md)

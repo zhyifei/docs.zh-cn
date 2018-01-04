@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf74b38c15cf8dc68218c39246c8999c4ec44493
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e570185b7df06a47e8c7fb3319328e760079415d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>对 WCF 使用多个身份验证方案
 WCF 现在允许您对单个终结点上指定多个身份验证方案。 此外，Web 承载的服务可以直接从 IIS 继承其身份验证设置。 自承载服务可以指定可使用的身份验证方案。 有关在 IIS 中设置身份验证设置的详细信息，请参阅[IIS 身份验证](http://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -129,9 +130,9 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [终结点： 地址、 绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [配置系统提供的绑定](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)  

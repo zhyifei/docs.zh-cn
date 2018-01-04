@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da180f888031aace892efc770184be53e9341047
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b98ba10e1c865417b9e844c4d5c31334f763e1b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>开发复合 Windows 窗体控件
 可以通过组合其它 Windows 窗体控件来开发复合 Windows 窗体控件。 派生自的复合控件<xref:System.Web.UI.UserControl>称为用户控件。 基类 <xref:System.Windows.Forms.UserControl> 为子控件提供了键盘路由，从而确保子控件可以接收焦点。 用户控件的示例，请参阅<xref:System.Windows.Forms.UserControl>示例[如何： 应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [如何：创建利用设计时功能的 Windows 窗体控件](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：在 Windows 窗体控件中应用特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
  [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

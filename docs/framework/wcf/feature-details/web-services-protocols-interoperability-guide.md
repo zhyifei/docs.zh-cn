@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服务协议互操作性指南
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 实现许多 Web 服务协议。 这些协议中有许多都包含大量留给实施者来决定的选项和扩展点。 本主题介绍 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现的 Web 服务协议的列表。 本节中的其他主题介绍每个受支持的协议的实现详细信息。  
@@ -110,10 +111,10 @@ ms.lasthandoff: 12/02/2017
   
 -   [基本安全配置文件 1.0 工作草案](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>另请参阅  
- [Web 服务的系统提供的互操作性绑定支持的协议](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [邮件传输协议](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+## <a name="see-also"></a>请参阅  
+ [系统提供的互操作性绑定支持的 Web 服务协议](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [消息协议](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
+ [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  [WSDL 和策略](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
  [安全协议](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
  [可靠消息传送协议版本 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  

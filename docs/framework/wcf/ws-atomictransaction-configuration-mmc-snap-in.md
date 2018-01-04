@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 66e6114b5fca84188f69be8d16782d5fdc1588cb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 配置 MMC 管理单元
 WS-AtomicTransaction 配置 MMC 管理单元用于在本地计算机和远程计算机上配置一部分 WS-AtomicTransaction 设置。  
@@ -96,7 +97,7 @@ regasm.exe /codebase WsatUI.dll
   
  [!INCLUDE[crabout](../../../includes/crabout-md.md)]跟踪和日志记录，请参阅[管理和诊断](../../../docs/framework/wcf/diagnostics/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [配置 Ws-atomic 事务支持](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  
+## <a name="see-also"></a>请参阅  
+ [配置 WS-Atomic 事务支持](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  
  [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
  [管理和诊断](../../../docs/framework/wcf/diagnostics/index.md)

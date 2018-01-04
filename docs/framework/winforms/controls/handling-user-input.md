@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c3da2c4661acdb358c38fb871de70fd470f7991
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0102bab4fad3b224100ae054f572d9b07102fc15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="handling-user-input"></a>处理用户输入
 本主题描述由提供的主要键盘和鼠标事件<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 处理事件时，控件作者应重写受保护的 `On`*EventName* 方法，而不是向事件附加委托。 若要查看事件，请参阅[从组件引发事件](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0)。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
  有关 `FlashTrackBar` 示例的完整源代码，请参阅[如何：创建显示进度的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体控件中的事件](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
  [定义事件](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)  
  [事件](../../../../docs/standard/events/index.md)  

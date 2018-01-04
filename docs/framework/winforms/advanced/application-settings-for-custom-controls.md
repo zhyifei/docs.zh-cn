@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f8292ac459a2943376229ef62466b0a772430dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e21a49b26a7493aaec31d5a97e627ce7925f39b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-for-custom-controls"></a>自定义控件的应用程序设置
 你必须完成某些任务，以使保存应用程序设置，当第三方应用程序中承载的控件的功能的自定义控件。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
  未提供的值的控件的任何实例<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>将共享相同的设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.IPersistComponentSettings>  
  [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)

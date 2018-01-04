@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 043aa541e32077faf8141701a5ec7e8c0e711959
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e33915105ca9ff095f09bcd52431212e7c8e927
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-services"></a>工作流服务
 使用 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，您可以在 XAML 中以声明方式充分描述基于工作流的服务。 您完全可以在 XAML 中定义实现服务的工作流并描述服务所公开的终结点。 本节中的主题详细描述支持以声明方式编写服务的编程模型。  
@@ -29,19 +30,19 @@ ms.lasthandoff: 12/02/2017
  [消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
  讨论允许工作流发送和接收消息的活动。  
   
- [如何： 使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [如何：使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  说明如何使用消息传递活动创建工作流服务。  
   
- [如何： 从工作流应用程序访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
+ [如何：从工作流应用程序访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
  讨论如何从工作流应用程序调用服务。  
   
- [相关](../../../../docs/framework/wcf/feature-details/correlation.md)  
+ [关联](../../../../docs/framework/wcf/feature-details/correlation.md)  
  讨论相关性对象如何在彼此之间映射消息以及将消息映射到实例。  
   
  [无序消息处理](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
  说明如何将服务配置为接受无序消息。  
   
- [如何： 创建调用另一个工作流服务的工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
+ [如何：创建可调用其他工作流服务的工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
  描述如何从其他工作流服务中同步调用工作流服务。  
   
  [协定优先工作流服务开发](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  

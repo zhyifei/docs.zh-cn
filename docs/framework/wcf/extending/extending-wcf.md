@@ -17,17 +17,18 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3d436690108158cfd7675cf00788a564b8a1dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2c84f25dfd5d3066f9c5d0b62bc0b28bc98c283d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-wcf"></a>扩展 WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使您能够修改和扩展运行时组件，以便精确控制和扩展基于服务的应用程序。 本节中的主题深入探讨了有关扩展性体系结构的内容。 有关基本编程的详细信息，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [扩展 ServiceHost 和服务模型层](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
+ [扩展 ServiceHost 和服务模块层](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
  服务模型层负责从基础通道拉取传入的消息，将它们翻译成应用程序代码形式的方法调用，并将结果发送回调用方。  服务模型扩展将修改或实现执行或通信行为，功能包括调度程序功能、自定义行为、消息和参数侦听以及其他扩展性功能。  
   
  [扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)  

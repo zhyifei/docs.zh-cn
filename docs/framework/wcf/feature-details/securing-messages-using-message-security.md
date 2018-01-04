@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5106e066de71c8cf5be472ae831adf3cd29e300d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-messages-using-message-security"></a>使用消息安全保护消息
 本主题讨论在使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时的 <xref:System.ServiceModel.NetMsmqBinding> 消息安全。  
@@ -73,8 +74,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="using-transport-and-message-security"></a>使用传输安全和消息安全  
  在既使用传输安全又使用消息安全时，用于在传输级别和 SOAP 消息级别保护消息的证书必须相同。  
   
-## <a name="see-also"></a>另请参阅  
- [使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [通过消息队列的消息安全](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- [安全性的基础概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅  
+ [使用传输安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+ [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

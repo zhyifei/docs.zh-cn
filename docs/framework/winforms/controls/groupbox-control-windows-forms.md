@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06821673e36a80b01647f87a855e1c023e630c9f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0d2676184512ddd2f7e1e38f5c9783cdb45c0272
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="groupbox-control-windows-forms"></a>GroupBox 控件（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.GroupBox>控件用于提供其他控件可识别分组。 通常情况下，你可以使用组框函数细分窗体。 例如，你可以指定邮件的选项，如使用哪夜间运输工具订购窗体。 分组在组中的所有选项为用户提供一个逻辑的视觉提示。 <xref:System.Windows.Forms.GroupBox>控件是类似于<xref:System.Windows.Forms.Panel>控制; 但是，仅<xref:System.Windows.Forms.GroupBox>控件显示的标题，并仅<xref:System.Windows.Forms.Panel>控件可以具有滚动条。  

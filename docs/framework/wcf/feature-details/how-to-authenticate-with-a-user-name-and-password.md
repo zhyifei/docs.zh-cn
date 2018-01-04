@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31e05709465e429445a2ebdafae719c24d316c8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1554e8594a611aa75876d14ee7ad0689932372e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>如何：使用用户名和密码进行身份验证
 本主题演示如何让 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务使用 Windows 域用户名和密码来对客户端进行身份验证。 它假定您有一个正在工作的自承载 WCF 服务。 有关创建基本自承载的 WCF 服务，请参阅示例[入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 本主题假定在代码中配置服务。 如果你想要查看配置使用配置文件的类似服务的示例请参阅[消息安全用户名称](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/02/2017
     // Call the service operation using the proxy  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>  
  <xref:System.ServiceModel.WSHttpSecurity>  
  <xref:System.ServiceModel.SecurityMode>  
@@ -100,5 +101,5 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>  
  <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>  
  [使用基本身份验证的传输安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
- [分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [分布式应用程序安全](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

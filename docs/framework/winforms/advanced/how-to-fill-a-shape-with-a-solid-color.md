@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb3e160392a903083386d9942f8e2cfe31ee89a4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f016404feeac47c5f77527b8baa68d70742d4763
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>如何：用纯色填充形状
 若要使用纯色填充形状，创建<xref:System.Drawing.SolidBrush>对象，以及然后将其传递<xref:System.Drawing.SolidBrush>对象的填充方法之一的自变量作为<xref:System.Drawing.Graphics>类。 下面的示例演示如何用红色的颜色填充椭圆。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用画笔填充形状](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

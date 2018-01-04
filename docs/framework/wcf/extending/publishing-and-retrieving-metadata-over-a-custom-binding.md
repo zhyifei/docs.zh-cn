@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f66821f38e8915ee93cf5b1b77dd75e32662121
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 88495e42a57790b75c096235cda65cbedbf86a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>通过自定义绑定发布和检索元数据
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供对向服务添加元数据终结点的支持。 这些元数据终结点可以对具有的 URL 处的 HTTP GET 请求作出响应`?wsdl`查询字符串并可对 Ws-transfer GET 请求的 Ws-metadataexchange (MEX) 规范中定义。 MEX 终结点可实现 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 协定。  
@@ -37,8 +38,8 @@ ms.lasthandoff: 12/02/2017
 ## <a name="security"></a>安全性  
  通过自定义绑定发布元数据时，请确保该绑定提供您的元数据所要求的安全支持。 例如，若要防止信息泄漏，并确保客户端具有获取元数据的权限，您可以通过将 <xref:System.ServiceModel.Description.IMetadataExchange> 终结点配置为要求身份验证和加密的方式使元数据和应用程序更加安全。 示例[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)演示此方案。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保护服务](../../../../docs/framework/wcf/securing-services.md)  
- [Ws-metadataexchange 绑定](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
- [如何： 配置自定义 Ws-metadata Exchange 绑定](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
- [如何： 通过非 MEX 绑定的检索元数据](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+ [WS-MetadataExchange 绑定](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)  
+ [如何：配置自定义 WS-Metadata Exchange 绑定](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
+ [如何：通过非 MEX 绑定检索元数据](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

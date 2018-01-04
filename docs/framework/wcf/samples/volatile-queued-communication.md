@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 67fa95ffb23aee4dc3137dcab23eade8f87e9b9d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d7af5e29faf000fe3fe86463cb4eca9dc1e5c567
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="volatile-queued-communication"></a>可变排队通信
 此示例演示如何通过消息队列 (MSMQ) 传输来执行可变排队通信。 此示例使用 <xref:System.ServiceModel.NetMsmqBinding>。 此例中的服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -237,4 +238,4 @@ Stock Tick zzz9:43.3
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

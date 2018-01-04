@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 852d689ff3159818fb25ecfd9b6e5df6df84470c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f3f045fd35ef57be51c10d7948275899c1ae4f01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-extensibility"></a>扩展性介绍
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序模型设计用于解决任何分布式应用程序的大部分通信要求。 但是，总是会存在一些默认应用程序模型和系统提供的实现不支持的情况。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 扩展性模型旨在支持自定义方案，方法是通过修改各个级别的系统行为，甚至替换整个应用程序模型。 本主题概述各个扩展范围并指出关于每个范围的更多信息。  
@@ -62,5 +63,5 @@ ms.lasthandoff: 12/02/2017
   
  若要修改主机应用程序域和服务主机之间的关系，必须扩展 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 类。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][使用 ServiceHostFactory 扩展宿主](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [扩展 WCF](../../../docs/framework/wcf/extending/extending-wcf.md)

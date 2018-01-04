@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bca536ed2f3e493e8d50fe8f1a0115327f1d8720
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 905b5ecbda58d2f7edb7fc30d5505eec63a64c2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>如何：枚举已安装的字体
 <xref:System.Drawing.Text.InstalledFontCollection>类继承自<xref:System.Drawing.Text.FontCollection>抽象基类。 你可以使用<xref:System.Drawing.Text.InstalledFontCollection>对象枚举计算机上安装的字体。 <xref:System.Drawing.Text.FontCollection.Families%2A>属性<xref:System.Drawing.Text.InstalledFontCollection>对象是一个数组<xref:System.Drawing.FontFamily>对象。  
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。 此外，您应该导入<xref:System.Drawing.Text>命名空间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

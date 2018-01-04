@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 75191aa28be76da549d38403c4a6f019c6f54bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-with-metadata"></a>元数据的安全注意事项
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的元数据功能时，应该考虑发布、检索和使用服务元数据时所带来的安全隐患。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，服务元数据将被处理为 XML。 当处理 XML 文档时，应用程序应保护自己免受恶意 XML 结构的破坏。 使用`XmlDictionaryReader`与处理 XML 时适当配额，并且还设置<xref:System.Xml.XmlTextReader.DtdProcessing%2A>属性`Prohibit`。  
   
- 中的元数据系统[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]是可扩展和元数据扩展可以在应用程序配置文件中注册 (请参阅[扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md))。 元数据扩展可以运行任意代码，因此，您应利用适合的访问控制列表 (ACL) 来保护应用程序配置文件，并仅注册受信任的元数据扩展实现。  
+ 中的元数据系统[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]是可扩展和元数据扩展可以在应用程序配置文件中注册 (请参阅[扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md))。 元数据扩展可以运行任意代码，因此，你应利用适合的访问控制列表 (ACL) 来保护应用程序配置文件，并仅注册受信任的元数据扩展实现。  
   
 ## <a name="validating-generated-clients"></a>验证生成的客户端  
  通过从不受信任的源中检索到的元数据生成客户端代码时，请验证生成的客户端代码，以确保生成的客户端符合您的客户端应用程序安全策略。 你可以使用验证行为来检查客户端绑定上的设置，也可以采用可视化方式来检查工具生成的代码。 有关如何实现验证行为的客户端的示例，请参阅[客户端验证](../../../../docs/framework/wcf/samples/client-validation.md)。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="protecting-application-configuration-files"></a>保护应用程序配置文件  
  服务的应用程序配置文件可以控制是否发布元数据以及如何发布元数据。 最好利用适当的访问控制列表 (ACL) 来保护应用程序配置文件，以确保攻击者无法修改此类设置。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
+## <a name="see-also"></a>请参阅  
+ [如何：保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

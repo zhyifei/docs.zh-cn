@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd37e88c581638e5ae11d85803fa3a970b4c8409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>解释 wsatConfig.exe 返回的错误代码
 本主题列出了 WS-AtomicTransaction 配置实用工具 (wsatConfig.exe) 生成的所有错误代码，以及建议采取的操作。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/02/2017
 |39|WsatConfig.exe 在更新防火墙配置时遇到了错误。|检查错误消息中的可操作项。|  
 |40|WsatConfig.exe 无法授予 MSDTC 对证书私钥文件的读取访问权限|使用管理员用户帐户执行 WsatConfig.exe。|  
 |41|找不到安装的 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]，或者找到的版本与工具能够配置的版本不匹配。|确保正确安装了 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]，并且仅使用该版 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 附带的 WsatConfig.exe 工具来配置 WS-AT。|  
-|42|在命令行上多次指定了某个参数。|在执行 WsatConfig.exe 时只指定每个参数一次。|  
+|42|在命令行上多次指定了某个自变量。|在执行 WsatConfig.exe 时只指定每个自变量一次。|  
 |43|如果未启用 WS-AT，则 WsatConfig.exe 无法更新 WS-AT 设置。|指定 `-network:enable` 作为附加命令行参数。|  
 |44|缺少必需的修补程序，在安装该修补程序之前将无法配置 WS-AT。|有关安装必需的修补程序的说明，请参见 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 发行说明。|  
 |45|`-virtualServer` 命令行选项无效。|通过指定要在其中进行配置的群集资源的网络名称，更正 `-virtualServer` 命令行选项。|  
@@ -77,5 +78,5 @@ ms.lasthandoff: 12/02/2017
 |55|尝试启动 ETW 跟踪会话时发生错误。|请与 Microsoft 联系。|  
 |56|尝试启动 ETW 跟踪会话时发生错误。|请与 Microsoft 联系。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

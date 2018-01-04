@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9544b6af74608bd1b29db3250e887999ae3187f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-application-settings-and-user-settings"></a>使用应用程序设置和用户设置
 从.NET Framework 2.0 开始，可以创建和访问应用程序执行会话之间保留的值。 这些值称为*设置*。 设置可以表示用户首选项，或者有价值信息的应用程序需要使用。 例如，你可能会创建一系列存储应用程序的配色方案的用户首选项的设置。 或者，你可能会存储指定你的应用程序使用的数据库的连接字符串。 设置允许你同时保留对外部代码，并创建存储的单个用户的首选项的配置文件的应用程序至关重要的信息。  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/18/2017
   
  详细介绍如何使用 C# 应用程序中添加多组设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体的应用程序设置](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)

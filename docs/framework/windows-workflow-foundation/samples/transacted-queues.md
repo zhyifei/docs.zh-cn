@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11d1d0d3481fb575abd01894db631e24c50b6d56
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transacted-queues"></a>事务处理队列
 此示例演示如何在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中集成队列和事务，以创建可靠的且可伸缩的服务。 A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope`在客户端工作流中用于将消息发送到队列中事务使用<xref:System.ServiceModel.NetMsmqBinding>。 在服务器上使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，在同一个事务中从队列接受消息并更新工作流的状态。  

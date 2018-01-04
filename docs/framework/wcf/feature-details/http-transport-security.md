@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 414ae499b777be5536e64a86fa0c60f9cd2da25a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http-transport-security"></a>HTTP 传输安全
 如果使用 HTTP 作为传输，则由安全套接字层 (SSL) 实现提供安全。 SSL 广泛用于 Internet 中，以便向客户端证明服务的身份，并且随后向通道提供保密性（加密）。 本主题说明 SSL 的工作方式以及 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中是如何实现它的。  
@@ -62,6 +63,6 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用 HttpCfg.exe 工具来设置一个端口使用 X.509 证书，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [传输安全](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+## <a name="see-also"></a>请参阅  
+ [传输安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [消息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

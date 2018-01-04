@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9f05e59f0df6326fe3ba68e35d83e3eda880ee8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 854e04c53bf438c3356072d762f129b7f21b7dd5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-convoy-scope"></a>事务队列范围
 此示例演示如何创建“并行保护”消息传递活动模式与 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，以便构建一个协议，允许很多操作在同一事务下按任意顺序执行。 此示例还演示 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 如何在某个事务无法流向服务器时自动创建新的事务，以便客户端不使用任何事务。  

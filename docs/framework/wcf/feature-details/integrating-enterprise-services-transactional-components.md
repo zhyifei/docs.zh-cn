@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a236a34dd20661d62d59a3712a1800ff1f9a11ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>集成企业服务事务性组件
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]提供一种自动机制集成企业服务与 (请参阅[与 COM + 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 但是，你可能希望灵活地开发可在内部使用承载于企业服务中的事务性组件的服务。 因为[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]事务功能基于<xref:System.Transactions>基础结构、 集成企业服务与进程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]等同于指定之间的互操作性<xref:System.Transactions>和 Enterprise服务中所述[与企业服务和 COM + 事务互操作性](http://go.microsoft.com/fwlink/?LinkId=94949)。  
@@ -102,6 +103,6 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [与 COM + 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+## <a name="see-also"></a>请参阅  
+ [与 COM+ 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [与 COM 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

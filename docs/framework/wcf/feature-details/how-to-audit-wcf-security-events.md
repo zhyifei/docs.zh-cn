@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 67fca1af6a9e1fdd35051e8b289679677a0abd6b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3456eb374add7768fa6f2d01bc1b7b610c9577e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>如何：审核 Windows Communication Foundation 安全事件
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您将安全事件记录到 Windows 事件日志中，可以使用 Windows 事件查看器来查看该事件日志。 本主题说明如何设置应用程序以使其记录安全事件。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]审核，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/21/2017
   
  如果<xref:System.ServiceModel.AuditLogLocation>属性设置为<xref:System.ServiceModel.AuditLogLocation.Security>和**审核对象访问**中未设置**本地安全策略**，审核事件将不会写入安全日志。 请注意，虽然不返回任何失败记录，但审核项不会写入安全日志。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  <xref:System.ServiceModel.AuditLogLocation>  

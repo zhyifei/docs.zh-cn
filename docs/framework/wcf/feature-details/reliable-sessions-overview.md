@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b6ca4b3e254055c7142259ea6022a53f003ea25f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d2749188214f3f68ee3ed5df87fc0aa7cac604d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-sessions-overview"></a>可靠会话概述
 
@@ -76,8 +77,8 @@ ms.lasthandoff: 12/02/2017
 | 支持可靠会话通道类型和 #8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
 | `IOutputSessionChannel`                         | 是               | 是                      | 是              | 是                     |
-| `IRequestSessionChannel`                        | 是               | 是                      | No               | No                      |
-| `IDuplexSessionChannel`                         | No                | No                       | 是              | 是                     |
+| `IRequestSessionChannel`                        | 是               | 是                      | No               | 否                      |
+| `IDuplexSessionChannel`                         | 否                | 否                       | 是              | 是                     |
 
 &#8224;支持的通道类型是可用于泛型值`TChannel`参数值传递到<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29>方法。
 
@@ -86,8 +87,8 @@ ms.lasthandoff: 12/02/2017
 | 支持可靠会话通道类型和 #8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
 | `IInputSessionChannel`                          | 是             | 是                    | 是              | 是                     |
-| `IReplySessionChannel`                          | 是             | 是                    | No               | No                      |
-| `IDuplexSessionChannel`                         | No              | No                     | 是              | 是                     |
+| `IReplySessionChannel`                          | 是             | 是                    | No               | 否                      |
+| `IDuplexSessionChannel`                         | 否              | 否                     | 是              | 是                     |
 
 &#8225;支持的通道类型是可用于泛型值`TChannel`参数值传递到<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29>方法。
 

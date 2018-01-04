@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2c8b85c2920133e21e7659ca0c27e28ab4a8eae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服务终结点和队列寻址
 本主题讨论客户端如何对从队列中读取的服务进行寻址以及服务终结点如何映射到队列。 作为提示，下图演示传统 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 排队应用程序部署。  
@@ -114,5 +115,5 @@ ms.lasthandoff: 12/02/2017
   
  请注意，对于 `MsmqIntegrationBinding`，不能使用 net.msmq:// 寻址。 因为 `MsmqIntegrationBinding` 支持任意形式的 MSMQ 格式名寻址，所以您可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，该服务使用此绑定来使用 MSMQ 中的多路广播和通讯组列表功能。 一个例外是在使用 `CustomDeadLetterQueue` 时指定 `MsmqIntegrationBinding`。 它必须采用 net.msmq:// 形式，这与使用 `NetMsmqBinding` 进行指定的方式相似。  
   
-## <a name="see-also"></a>另请参阅  
- [承载排队应用程序的 web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>请参阅  
+ [承载排队应用程序的 Web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 66b5a90dd10ec10330adeae2cd859d7b307d3e69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02e417fbcdb68e114ea0fc7afad7c22f6b2fdae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>如何：设置 JPEG 压缩级别
 在将图像保存到磁盘中时，可能需要修改图像的参数，以最大限度地减小文件的大小或提高其质量。 可以通过修改 JPEG 图像的压缩级别来调整其质量。 若要保存为 JPEG 图像时，请指定压缩级别，必须创建<xref:System.Drawing.Imaging.EncoderParameters>对象，并将其传递到<xref:System.Drawing.Image.Save%2A>方法<xref:System.Drawing.Image>类。 初始化<xref:System.Drawing.Imaging.EncoderParameters>对象以使其具有一个数组，其中包含一个<xref:System.Drawing.Imaging.EncoderParameter>。 当你创建<xref:System.Drawing.Imaging.EncoderParameter>，指定<xref:System.Drawing.Imaging.Encoder.Quality>编码器选项和所需的压缩级别。  
@@ -139,7 +140,7 @@ End Function
   
 -   一个位于 **c:\\** 位置的名为 `TestPhoto.jpg` 的图像文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：确定编码器支持的参数](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
  [位图类型](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
  [在托管 GDI+ 中使用图像编码器和解码器](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

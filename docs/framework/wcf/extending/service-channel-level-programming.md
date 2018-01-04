@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 718f3c8fd2d6ed3434f7231e3ccaf8cf1a663875
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a1a6ef03b3ee0cc68809ec6ba80a7eadbc44cb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-channel-level-programming"></a>服务通道级编程
 本主题介绍如何在不使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 及其关联的对象模型的情况下编写 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 服务应用程序。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
 5.  关闭所有通道对象。  
   
 #### <a name="creating-a-binding"></a>创建绑定  
- 侦听和接收消息的第一步是创建绑定。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附几个内置或系统提供的绑定，可以通过实例化这些绑定之一来直接使用它们。 另外，您还可以创建自己的自定义绑定，方法是实例化 CustomBinding 类，这同时也是列表 1 中的代码所执行的操作。  
+ 侦听和接收消息的第一步是创建绑定。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附几个内置或系统提供的绑定，可以通过实例化这些绑定之一来直接使用它们。 另外，你还可以创建自己的自定义绑定，方法是实例化 CustomBinding 类，这同时也是列表 1 中的代码所执行的操作。  
   
  下面的代码示例创建了 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 的一个实例，并将 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 添加到其 Elements 集合（这是用于生成通道堆栈的绑定元素的集合）。 在此示例中，由于元素集合只有 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，所以生成的通道堆栈仅具有 HTTP 传输通道。  
   

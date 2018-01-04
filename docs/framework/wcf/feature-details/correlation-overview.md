@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56b6252188854374b9e0eddd7aca53daba6f6086
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 094c962e2576653fc8c9de4c0dece912fcaa07f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation-overview"></a>相关概述
 相关是指使工作流服务消息彼此相关或与应用程序实例状态相关的机制，例如，使答复与初始请求相关，或者使特定订单 ID 与订单处理工作流的保留状态相关。 本主题概述了相关。 本节中的其他主题提供了相关的各种类型的附加信息。  
@@ -35,8 +36,8 @@ ms.lasthandoff: 12/02/2017
 ## <a name="content-based-correlation"></a>基于内容的相关  
  基于内容的相关使用消息中的某些信息片段将消息与特定实例关联。 与基于协议的相关不同，基于内容的相关要求应用程序作者显式声明此数据在各相关消息中的位置。 使用基于内容相关的活动通过使用 <xref:System.ServiceModel.MessageQuerySet> 指定此消息数据。 与不使用某个上下文绑定（如 <xref:System.ServiceModel.BasicHttpContextBinding>）的服务进行通信时，基于内容的相关非常有用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]基于内容的相关性，请参阅[基于内容](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)。 有关示例代码，请参阅[基于内容的相关性](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)和[相关计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)示例。  
   
-## <a name="see-also"></a>另请参阅  
- [基于内容的相关性](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
- [相关的计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
+## <a name="see-also"></a>请参阅  
+ [基于内容的关联](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
+ [相关计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [持久双工 &#91;WF 示例 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
  [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)

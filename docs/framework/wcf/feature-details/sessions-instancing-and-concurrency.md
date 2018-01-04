@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44aebb701eb7222773c030994fbaa9c0109dce70
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-instancing-and-concurrency"></a>会话、实例化和并发
  “会话”是在两个终结点之间发送的所有消息的一种相互关系。  “实例化”是指对用户定义的服务对象以及与其相关的 <xref:System.ServiceModel.InstanceContext> 对象的生存期的控制。  “并发”一词是指对 <xref:System.ServiceModel.InstanceContext> 中同时执行的线程数量的控制。  
@@ -117,10 +118,10 @@ public class CalculatorService : ICalculatorConcurrency
 |PerSession|-会话通道的行为： 一个会话和<xref:System.ServiceModel.InstanceContext>每个通道。<br />-无会话通道的行为： 将引发异常。|-会话通道的行为： 一个会话和<xref:System.ServiceModel.InstanceContext>每个通道。<br />-无会话通道的行为：<xref:System.ServiceModel.InstanceContext>每个调用。|-会话通道的行为： 将引发异常。<br />-无会话通道的行为：<xref:System.ServiceModel.InstanceContext>每个调用。|  
 |Single|-会话通道的行为： 一个会话和一个<xref:System.ServiceModel.InstanceContext>所有调用。<br />-无会话通道的行为： 将引发异常。|-会话通道的行为： 一个会话和<xref:System.ServiceModel.InstanceContext>创建或用户指定的单一实例。<br />-无会话通道的行为：<xref:System.ServiceModel.InstanceContext>创建或用户指定的单一实例。|-会话通道的行为： 将引发异常。<br />-无会话通道的行为：<xref:System.ServiceModel.InstanceContext>的每个创建的单一实例或用户指定的单一实例。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用会话](../../../../docs/framework/wcf/using-sessions.md)  
- [如何： 创建的服务，需要使用会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
- [如何： 控制服务实例化](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
+ [如何：创建要求会话的服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
+ [如何：控制服务实例化](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  
  [并发](../../../../docs/framework/wcf/samples/concurrency.md)  
  [实例化](../../../../docs/framework/wcf/samples/instancing.md)  
  [会话](../../../../docs/framework/wcf/samples/session.md)

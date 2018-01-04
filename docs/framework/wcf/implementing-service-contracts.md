@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 688637ae54e92296d103a681715dd491ba8782ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1b4085e23120ad654121f33111eda68276259096
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-service-contracts"></a>实现服务协定
 服务是一个类，会在一个或多个终结点公开客户端可用的功能。 若要创建服务，请编写一个实现 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 协定的类。 可以通过两种方法执行此操作。 可以将协定单独定义为接口，然后创建一个实现该接口的类。 或者，可以通过将 <xref:System.ServiceModel.ServiceContractAttribute> 属性放在该类本身，将 <xref:System.ServiceModel.OperationContractAttribute> 属性放在服务的客户端可用的方法上，来直接创建类和协定。  
@@ -66,8 +67,8 @@ class MathService
   
  在实现服务协定后，必须为该服务创建一个或多个终结点。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何运行服务，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [如何： 使用约定类创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
- [如何： 使用协定接口创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  
+ [如何：使用协定类创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
+ [如何：使用协定接口创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  
  [指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

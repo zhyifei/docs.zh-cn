@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: acc7131d02f1f4e3cde0df152bdfbc591724b600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-syndication-overview"></a>WCF 联合概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支持公开来自 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的联合源。 联合是一种应用程序集成机制，在这种机制中，服务器以一种可互操作的格式（称为源）公开某些应用程序数据。 源是应用程序数据的集合，其中包括一些源级别的元数据（标题、作者、URL 和其他元数据）以及一系列源项。 在源内，源项通常是按时间的倒序顺序排序的。 源项由一组标准的项级别元数据（标题、URL、创建日期、类别和其他项级别的元数据）以及任意数量的应用程序特定数据组成。 联合源的两种最常见的类型为真正简单的整合 (RSS) 2.0 和 Atom 1.0，这两种类型都受 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="syndication-formats"></a>联合格式  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 联合平台支持 RSS 2.0 和 Atom 1.0。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

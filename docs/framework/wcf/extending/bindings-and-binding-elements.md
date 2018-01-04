@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39615c7a74d30ebd5f316988704992b49982c4a4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindings-and-binding-elements"></a>绑定和绑定元素
 绑定是特殊配置元素，调用组成的集合*绑定元素*、 其计算由服务运行时每当客户端或正在构建服务终结点。 绑定内绑定元素的类型和顺序确定了终结点的通道堆栈中协议和传输通道的选择和堆叠顺序。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="extending-bindings-and-binding-elements"></a>扩展绑定和绑定元素  
  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含系统提供的绑定，这些绑定涵盖了种类繁多的方案。 (有关详细信息，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。)但是，您有时可能需要创建和使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中未包含的绑定。 下面的方案需要创建新绑定。  
   
--   若要使用新的绑定元素（例如，新的传输协议、编码或协议绑定元素），您必须创建一个包含该绑定元素的新绑定。 例如，如果您为 UDP 传输协议添加了一个自定义 `UdpTransportBindingElement`，则需要创建一个新绑定来利用它。 有关执行此行为使用信息<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>类型，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+-   若要使用新的绑定元素（例如，新的传输协议、编码或协议绑定元素），你必须创建一个包含该绑定元素的新绑定。 例如，如果您为 UDP 传输协议添加了一个自定义 `UdpTransportBindingElement`，则需要创建一个新绑定来利用它。 有关执行此行为使用信息<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>类型，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 -   以系统提供的绑定没有在公共属性上公开的方式配置现有绑定元素。 例如，必须创建一个新绑定以更改签名和加密操作的执行顺序。 有关执行此行为的信息，请参阅[如何： 自定义系统提供绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
   

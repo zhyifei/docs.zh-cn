@@ -31,11 +31,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: af4cbcc5dacc4f9a0b5312b67838479bf6817228
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81aa68a65d09b073b117f4d96dfc06e614d68aea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>如何：创建 Windows 窗体控件的访问键
 *访问密钥*菜单、 菜单项或如按钮控件的标签的文本中带下划线的字符。 具有访问密钥，用户可以"单击"按钮通过同时按下 ALT 键和预定义的访问键。 例如，如果某个按钮可运行一个过程来打印窗体，因此其`Text`属性设置为"打印"之前的字母"P"使得字母"P"以在运行时中会带有下划线的按钮文本中添加一个与号。 用户可以运行该命令通过按 ALT + P 与按钮相关联。 不能具有不能接收焦点的控件的访问密钥。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  若要而无需创建访问键，在标题中包含 & 符，包括两个 & 号 (& &)。 一个与号显示的标题中，带下划线的任何字符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Button>  
  [如何：响应 Windows 窗体 Button 控件单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
  [如何：设置 Windows 窗体控件显示的文本](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  

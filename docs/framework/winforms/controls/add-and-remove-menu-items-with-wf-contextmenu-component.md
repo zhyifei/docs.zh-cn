@@ -27,11 +27,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf0e579d5cf377169eeb4d394c4127d53fd54540
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2f3ca6f97049e0519243915856702654b924243
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>如何：使用 Windows 窗体 ContextMenu 组件添加和移除菜单项
 说明如何添加和删除 Windows 窗体中的快捷菜单项。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     - 或 -  
+     或  
   
 2.  使用`Clear`方法`MenuItems`集合<xref:System.Windows.Forms.ContextMenu>组件从菜单中移除所有项。  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/21/2017
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ContextMenu>  
  [ContextMenu 组件](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
  [ContextMenu 组件概述](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)

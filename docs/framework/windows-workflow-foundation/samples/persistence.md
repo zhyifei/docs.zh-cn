@@ -12,17 +12,18 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47fb1a20df4217177d1742f46df16ebae0a84424
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b326c56ce96b9b0f2d2089976b530d530d9a55b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence"></a>持久性
 本节包含演示如何将工作流保存到 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的持久介质的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [保留工作流应用程序](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  
+ [持久保持工作流应用程序](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  
  演示如何运行 <xref:System.Activities.WorkflowApplication>,在其空闲时进行卸载，然后在需要继续执行时重新加载它。  
   
  [内置配置](../../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md)  

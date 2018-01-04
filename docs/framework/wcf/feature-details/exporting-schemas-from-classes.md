@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b60b31133a3721611285b5b4caa93d3c34e193f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01e841e76c4a6cf06169113422921367d671ea98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-schemas-from-classes"></a>从类导出架构
 若要从数据协定模型中使用的类生成 XML 架构定义语言 (XSD) 架构，请使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 类。 本主题描述创建架构的过程。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="the-export-process"></a>导出过程  
  架构导出过程以一个或多个类型开始，并生成一个 <xref:System.Xml.Schema.XmlSchemaSet> ，描述这些类型的 XML 投影。  
   
- `XmlSchemaSet` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的架构对象模型 (SOM) 的一部分，SOM 表示 XSD 架构文档集。 若要从 `XmlSchemaSet`创建 XSD 文档，请使用 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 类的 `XmlSchemaSet` 属性的架构集合。 然后使用 <xref:System.Xml.Schema.XmlSchema> 序列化每个 <xref:System.Xml.Serialization.XmlSerializer>对象。  
+ `XmlSchemaSet` 是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的架构对象模型 (SOM) 的一部分，SOM 表示 XSD 架构文档集。 若要从 `XmlSchemaSet`创建 XSD 文档，请使用 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 类的 `XmlSchemaSet` 属性的架构集合。 然后使用 <xref:System.Xml.Schema.XmlSchema> 序列化每个 <xref:System.Xml.Serialization.XmlSerializer>对象。  
   
 #### <a name="to-export-schemas"></a>导出架构  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/02/2017
   
  导出选项会影响所有这些方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72af16b7dcb7709dd132a3748a454eda57acc168
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec53957a61806239fdd41761de6e172681b7497b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>限制的 Windows 窗体 Timer 组件 &#39; s 间隔属性
 Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.Forms.Timer.Interval%2A>属性，用于指定一个计时器事件和下一步之间传递的毫秒数。 除非禁用该组件，计时器会继续接收<xref:System.Windows.Forms.Timer.Tick>事件的大致相等的时间间隔。  
@@ -38,7 +39,7 @@ Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.
   
 -   精度<xref:System.Windows.Forms.Timer.Interval%2A>属性是以毫秒为单位。 某些计算机提供的高分辨率的计数器，分辨率高于毫秒。 这种计数器的可用性取决于你的计算机的处理器硬件。 有关详细信息，请参阅文章 172338，"如何为使用 QueryPerformanceCounter 到时间的代码，"http://support.microsoft.com 在 Microsoft 知识库。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Timer>  
  [Timer 组件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
  [Timer 组件概述](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

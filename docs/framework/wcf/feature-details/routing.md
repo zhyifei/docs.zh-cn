@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4ea56330e4de55a7acbc6ccca737cd62b8f151d1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing"></a>路由
 本节中的主题涵盖路由服务。 路由服务是可配置的普通 SOAP 中介，使用该服务可以配置基于内容的路由、设置协议桥接、处理通信错误以及在运行时动态更新路由逻辑。  

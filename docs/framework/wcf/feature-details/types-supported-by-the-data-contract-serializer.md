@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b6d9ed91e71b7d3f3f214a862389b8ba5316760
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98eb46e0f31995efe7db177d90691a9f59288590
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>数据协定序列化程序支持的类型
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 <xref:System.Runtime.Serialization.DataContractSerializer> 作为其默认的序列化引擎以将数据转换到 XML 并将 XML 转换回数据。 <xref:System.Runtime.Serialization.DataContractSerializer> 是专为序列化数据协定  类型而设计的。 但是，它支持许多其他可视为具有隐式数据协定的类型。 以下是可以序列化的类型的完整列表：  
@@ -76,8 +77,8 @@ ms.lasthandoff: 12/02/2017
   
 -   以特殊方式处理 <xref:System.DBNull> 类型。 此类型是一个单一类型，在反序列化时，反序列化程序遵循单一约束并将所有 `DBNull` 引用指向单一实例。 因为 `DBNull` 是可序列化的类型，所以它需要 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> 权限。  
   
-## <a name="see-also"></a>另请参阅  
- [XML 和 ADO.NET 数据协定中的类型](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
+## <a name="see-also"></a>请参阅  
+ [数据协定中的 XML 和 ADO.NET 类型](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
  [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
  [数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  

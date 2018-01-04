@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 423f138ea4a9a76a105faca27956e9025dbe0c76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9c437f305b847ff7922c98b4917e86ebd39ee100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-architecture"></a>应用程序设置体系结构
 本主题介绍应用程序设置体系结构的工作原理，并探讨了体系结构的高级功能，如分组设置和设置键。  
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/21/2017
   
  你的提供程序不需要支持的属性中定义的设置所有<xref:System.Configuration?displayProperty=nameWithType>命名空间，但它必须在最小支持<xref:System.Configuration.ApplicationScopedSettingAttribute>和<xref:System.Configuration.UserScopedSettingAttribute>，此外还应支持<xref:System.Configuration.DefaultSettingValueAttribute>。 对于其不支持的特性，提供程序应直接失败，而不另行通知；提供程序不应引发异常。 如果设置类使用了无效的属性，组合但是-如应用<xref:System.Configuration.ApplicationScopedSettingAttribute>和<xref:System.Configuration.UserScopedSettingAttribute>为相同的设置-你的提供程序应引发异常，并停止操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  <xref:System.Configuration.LocalFileSettingsProvider>  

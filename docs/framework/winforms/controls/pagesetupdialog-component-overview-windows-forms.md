@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 082dbff66c8a0f06635936011f802c99b88e41df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd2162cd2b538b5c6277991fab0ce40762f6c07d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog 组件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.PageSetupDialog>组件是一个预配置的对话框，用于在基于 Windows 的应用程序中设置用于打印的页面详细信息。 用于基于 Windows 的应用程序中作为简单的解决方案的用户设置替代配置自己对话框的页首选项。 你可以使用户能够设置边框和边距调整、 页眉和页脚和纵向或横向朝方向。 利用标准的 Windows 对话框，你可以创建其基本功能可立即为用户所熟悉的应用程序。  
@@ -31,6 +32,6 @@ Windows 窗体<xref:System.Windows.Forms.PageSetupDialog>组件是一个预配�
   
  添加到窗体时<xref:System.Windows.Forms.PageSetupDialog>组件出现在 Windows 窗体设计器底部栏中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.PageSetupDialog>  
  [PageSetupDialog 组件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)

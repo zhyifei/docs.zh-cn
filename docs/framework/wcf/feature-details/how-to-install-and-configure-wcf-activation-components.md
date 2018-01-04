@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee57276efda7edcc464c300e2f1d100b6a7c9109
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>如何：安装和配置 WCF 激活组件
 本主题描述了在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上设置 Windows 进程激活服务（也称为 WAS）以承载不通过 HTTP 网络协议进行通信的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需步骤。 下面的部分略述此配置的步骤：  
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/02/2017
     > [!NOTE]
     >  此命令是单行文本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [MSMQ 激活](../../../../docs/framework/wcf/samples/msmq-activation.md)  
  [NamedPipe 激活](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  

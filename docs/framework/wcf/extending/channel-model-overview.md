@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-model-overview"></a>通道模型概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道堆栈是具有一个或多个消息处理通道的分层的通信堆栈。 堆栈底部是传输通道，它负责使通道堆栈适应基础传输（例如，TCP、HTTP、SMTP 和其他类型的传输）。 通道为消息的发送和接收提供了一个低级编程模型。 此编程模型依赖于多个接口和其他类型模型（统称为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道模型）。 本主题讨论通道形状、基本通道侦听器（在服务上）和通道工厂（在客户端上）的构造。  
@@ -81,8 +82,8 @@ ms.lasthandoff: 12/02/2017
   
 |主题|描述|  
 |-----------|-----------------|  
-|[服务： 通道侦听器和通道](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|说明用于侦听服务应用程序中传入通道的通道侦听器。|  
-|[客户端： 通道工厂和通道](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|说明用于创建通道以连接到服务应用程序的通道工厂。|  
+|[服务：通道侦听器和通道](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|说明用于侦听服务应用程序中传入通道的通道侦听器。|  
+|[客户端：通道工厂和通道](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|说明用于创建通道以连接到服务应用程序的通道工厂。|  
 |[了解状态更改](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|说明 <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> 接口如何模拟通道中的状态变化。|  
 |[选择消息交换模式](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|说明通道可以支持的六种基本消息交换模式。|  
 |[处理异常和错误](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|说明如何处理自定义通道中的错误和异常。|  

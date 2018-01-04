@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1890bd52d3d71ab7419cf1b89f582c3d0efbe9f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 540e7d2705dbdd3249a0519efb80de676428e92f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-ajax-service"></a>基本 AJAX 服务
 本示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务（通过从 Web 浏览器客户端使用 JavaScript 代码可以访问的服务）。 该服务使用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性以确保服务响应 HTTP GET 请求并被配置为对响应使用 JavaScript 对象表示法 (JSON) 数据格式。  
@@ -98,4 +99,4 @@ function onSuccess(mathResult){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\SimpleAjaxService`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

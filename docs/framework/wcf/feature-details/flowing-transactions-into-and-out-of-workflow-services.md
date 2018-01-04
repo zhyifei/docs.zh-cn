@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d097068720bb937911316fdb29a83ba0e8e67713
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>使事务流入和流出工作流服务
 工作流服务和客户端可以参与事务。  对于将成为环境事务一部分的服务操作，将 <xref:System.ServiceModel.Activities.Receive> 活动放到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动内。 由 <xref:System.ServiceModel.Activities.Send> 内的 <xref:System.ServiceModel.Activities.SendReply> 或 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动所做的任何调用也将在环境事务中进行。 工作流客户端应用程序可以通过使用 <xref:System.Activities.Statements.TransactionScope> 活动来创建环境事务，并通过使用该环境事务来调用服务操作。 本主题将指导您创建参与事务的工作流服务和工作流客户端。  
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/02/2017
   
 6.  拖放式<xref:System.ServiceModel.Activities.Receive>中的活动**请求**部分<xref:System.ServiceModel.Activities.TransactedReceiveScope>活动。 设置以下属性：  
   
-    |属性|值|  
+    |属性|“值”|  
     |--------------|-----------|  
     |CanCreateInstance|True（选中复选框）|  
     |OperationName|StartSample|  
@@ -125,7 +126,7 @@ ms.lasthandoff: 12/02/2017
   
 8.  将 <xref:System.Activities.Statements.Sequence> 活动拖放到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 的“正文”部分内。 在 <xref:System.Activities.Statements.Sequence> 活动内，拖放两个 <xref:System.Activities.Statements.WriteLine> 活动并设置 <xref:System.Activities.Statements.WriteLine.Text%2A> 属性，如下表所示。  
   
-    |Activity|值|  
+    |活动|“值”|  
     |--------------|-----------|  
     |第一个 WriteLine|"服务： 接收已完成"|  
     |第二个 WriteLine|"Service: Received = " + requestMessage|  
@@ -140,10 +141,10 @@ ms.lasthandoff: 12/02/2017
   
 10. 将 <xref:System.Activities.Statements.Assign> 活动拖放到 `PrintTransactionInfo` 活动后面，然后根据下表设置其属性。  
   
-    |属性|值|  
+    |属性|“值”|  
     |--------------|-----------|  
     |到|replyMessage|  
-    |值|"Service: Sending reply."|  
+    |“值”|"Service: Sending reply."|  
   
 11. 将 <xref:System.Activities.Statements.WriteLine> 活动拖放到 <xref:System.Activities.Statements.Assign> 活动后面，然后将它的 <xref:System.Activities.Statements.WriteLine.Text%2A> 属性设置为 "Service: Begin reply."  
   
@@ -189,7 +190,7 @@ ms.lasthandoff: 12/02/2017
   
 8.  将 <xref:System.ServiceModel.Activities.Send> 活动拖放到 <xref:System.Activities.Statements.Assign> 活动后面，并设置以下属性：  
   
-    |属性|值|  
+    |属性|“值”|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
     |OperationName|StartSample|  
@@ -322,7 +323,7 @@ ms.lasthandoff: 12/02/2017
         }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [Windows Communication Foundation 事务概述](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
  [使用 TransactedReceiveScope](../../../../docs/framework/windows-workflow-foundation/samples/use-of-transactedreceivescope.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5b2a8de0644e71a5e6ae1a5ca796f580f0c4f23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8599f2e154e05fd2d43b094041989c4a3a5dbc0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-world-transformation"></a>使用世界转换
 世界转换是的一个属性<xref:System.Drawing.Graphics>类。 指定的世界转换的数字以存储<xref:System.Drawing.Drawing2D.Matrix>对象，用于表示 3 × 3 矩阵。 <xref:System.Drawing.Drawing2D.Matrix>和<xref:System.Drawing.Graphics>类可以用多种方法用于设置数字的世界变换矩阵。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Drawing2D.Matrix>  
  [坐标系统和转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  [在托管 GDI+ 中使用转换](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

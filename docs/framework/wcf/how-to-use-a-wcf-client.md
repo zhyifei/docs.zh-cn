@@ -14,11 +14,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d9d2fb363aa753edc6d2d4002a948fbb35b75ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>如何：使用 Windows Communication Foundation 客户端
 这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的最后一项任务。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
@@ -147,12 +148,12 @@ The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)R
 Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成客户端](../../../docs/framework/wcf/building-clients.md)  
  [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  [入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [如何： 创建双工协定](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [如何： 使用双工协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [如何：创建双工协定](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [如何：使用双工协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
  [入门](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自承载](../../../docs/framework/wcf/samples/self-host.md)

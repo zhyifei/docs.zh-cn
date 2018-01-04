@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5589ad8e4193416738da98676551bbf82c128a79
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c93b91123c7622bea125bfa702c53a697b1ac84c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>如何：配置 WCF 服务以便与 WSE 3.0 客户端进行互操作
 在将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务配置为使用 WS-Addressing 规范的 2004 年 8 月版时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务与 Web Services Enhancements 3.0 for Microsoft .NET 客户端具有网络级别兼容性。  
@@ -100,5 +101,5 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+## <a name="see-also"></a>请参阅  
+ [如何：自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

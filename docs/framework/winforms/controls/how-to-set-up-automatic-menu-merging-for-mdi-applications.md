@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e99aed38ed6c3af3424c264631f0eaf27e46af7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14f9d956763685b5c03419515780ee2a6c3ede7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>如何：为 MDI 应用程序设置自动菜单合并
 以下过程提供的基本步骤用于设置中包含的多文档界面 (MDI) 应用程序的自动合并<xref:System.Windows.Forms.MenuStrip>。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
 7.  使用<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>菜单上的属性中的子窗体的项<xref:System.Windows.Forms.MenuStrip>来控制如何将它们合并到父窗体。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

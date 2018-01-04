@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f411e0280a1f663e5e001e471eb836208083160
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服务应用程序中承载
 Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于下面这样的应用程序的进程模型：必须在长时间运行的可执行程序中生存，并且不显示任何形式的用户界面。 Windows 服务应用程序的进程生存期由服务控制管理器 (SCM) 管理，您可以通过该管理器启动、停止和暂停 Windows 服务应用程序。 你可以配置 Windows 服务进程启动计算机，使其成为"始终运行的"应用程序的合适的宿主环境时自动启动。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows 服务应用程序，请参阅[Windows 服务应用程序](http://go.microsoft.com/fwlink/?LinkId=89450)。  
@@ -46,10 +47,10 @@ Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于
   
      部署和管理承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 Windows 服务应用程序的方式与不使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 Windows 服务应用程序的一样。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceProcess>  
- [演练： 在组件设计器中创建 Windows 服务应用程序](http://go.microsoft.com/fwlink/?LinkId=94875)  
- [如何： 承载 WCF 服务中托管的 Windows 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [演练：在组件设计器中创建 Windows 服务应用程序](http://go.microsoft.com/fwlink/?LinkId=94875)  
+ [如何：在托管 Windows 服务中承载 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
  [Windows 服务主机](../../../../docs/framework/wcf/samples/windows-service-host.md)  
  [服务应用程序编程体系结构](http://go.microsoft.com/fwlink/?LinkId=94876)  
  [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)

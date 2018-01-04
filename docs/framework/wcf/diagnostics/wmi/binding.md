@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9e44d161e1229db9145f4ed7e337396bbd98c68
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6553d1e1c030a30eed74ff81d3e07e28a9f25b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding"></a>绑定
 wmi Binding  
@@ -58,7 +59,7 @@ class Binding
   
  为完成关闭操作提供的时间间隔。  
   
-### <a name="name"></a>名称  
+### <a name="name"></a>name  
  数据类型：String  
   
  访问类型：只读  
@@ -100,11 +101,11 @@ class Binding
   
  为完成发送操作提供的时间间隔。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.Binding>

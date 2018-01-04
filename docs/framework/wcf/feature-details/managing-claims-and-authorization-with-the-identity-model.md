@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用标识模型管理声明和授权
 授权是确定哪些实体具有更改、查看或其他访问计算机资源权限的过程。 例如，在一个企业中，可能只有经理们才可以访问其员工的文件。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支持两种执行授权处理的机制。 第一种机制使您能够使用现有的公共语言运行库 (CLR) 构造来控制授权。 第二个是称为的基于声明的模型*标识模型*。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用标识模型创建来自传入消息的声明；可以扩展标识模型类以支持自定义授权方案的新声明类型。 本主题概述标识模型功能的主要编程概念，并提供此功能使用的最重要的类的列表。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
  以下方案演示标识模型的使用方式。  
   
 ### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>方案 1：支持标识、角色和组声明  
- 用户向 Web 服务发送消息。 Web 服务的访问控制要求使用标识、角色或组。 消息发送方映射到一个角色或组的集中。 角色或组信息用于执行访问检查。  
+ 用户向 Web 服务发送消息。 Web 服务的访问控制需求使用标识、角色或组。 消息发送方映射到一个角色或组的集中。 角色或组信息用于执行访问检查。  
   
 ### <a name="scenario-2-supporting-rich-claims"></a>方案 2：支持多信息声明  
  用户向 Web 服务发送消息。 Web 服务的访问控制要求需要比标识、角色或组更丰富的模型。 Web 服务确定给定的用户是否有权使用基于多信息声明的模型访问特定的受保护资源。 例如，某个用户也许能读取特定信息（如薪金信息），而其他用户无此权限。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/02/2017
  右  
  对于某个资源拥有的能力。 标识模型 API 定义的权限是 <xref:System.IdentityModel.Claims.Rights> 类的属性。 系统提供的权限的示例有 <xref:System.IdentityModel.Claims.Rights.Identity%2A> 和 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>。  
   
- 值  
+ “值”  
  用以声明权限的信息。  
   
 ## <a name="claims"></a>声明  
@@ -169,7 +170,7 @@ ms.lasthandoff: 12/02/2017
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|返回服务的 <xref:System.ServiceModel.ServiceAuthorizationManager>。 <xref:System.ServiceModel.ServiceAuthorizationManager> 负责做出授权决定。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|为服务指定的自定义授权策略的集合。 除了评估与传入消息中的凭据关联的策略外，还评估这些策略。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Policy.AuthorizationContext>  
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Policy.EvaluationContext>  
@@ -183,9 +184,9 @@ ms.lasthandoff: 12/02/2017
  [声明和令牌](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
  [声明和拒绝访问资源](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
  [声明创建和资源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [如何： 创建自定义声明](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [如何： 比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [如何： 创建自定义授权策略](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [如何： 创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [如何：创建自定义声明](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
+ [如何：比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [如何：创建自定义授权策略](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
+ [如何：为服务创建自定义授权管理器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

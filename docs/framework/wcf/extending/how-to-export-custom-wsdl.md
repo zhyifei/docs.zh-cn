@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ca34f04fe4ffa53bcb9bd85e5a6f3aa69b96465
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d4b34cc564dea5f189de29c9425c840ec96c80fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-custom-wsdl"></a>如何：导出自定义 WSDL
 本主题说明如何导出自定义 WSDL 信息。 为此，我们将定义一个名为 `WsdlDocumentationAttribute` 的新代码属性，该属性将把自定义信息添加到服务所生成的 WSDL 中。  
@@ -205,5 +206,5 @@ return lines;
   }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [元数据](../../../../docs/framework/wcf/feature-details/metadata.md)

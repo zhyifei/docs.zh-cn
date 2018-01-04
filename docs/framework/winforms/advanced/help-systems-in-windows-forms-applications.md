@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45d3385d008f823050f213252fdc2e1851cf422b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b2f5d067d487bbd5b91576927aee21a9a44fde0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows 窗体应用程序中的帮助系统
 一个最重要的帮助，如应用程序，开发人员可以为用户提供的功能完善的帮助系统。 这是它们将在这里打开时它们迷惑不解。 提供在基于 Windows 的应用程序中的帮助系统可通过使用轻松地完成[HelpProvider 组件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  你可以生成与 HTML Help Workshop 的 HTML 帮助 1.x 文件。 HTML 帮助的详细信息，请参阅"HTML Help Workshop"或在 MSDN 中的其他"HTML 帮助"主题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体中集成用户帮助](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
  [HelpProvider 组件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
  [ToolTip 组件](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  

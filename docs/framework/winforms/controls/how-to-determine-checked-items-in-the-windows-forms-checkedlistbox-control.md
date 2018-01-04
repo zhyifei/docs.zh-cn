@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f45006b437ad0a2fa537e6b8ea4312ab0060c882
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 63960740b2fc0cb2c96f9a853480f37857c7901b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>如何：确定 Windows 窗体 CheckedListBox 控件中的选定项
 当 Windows 窗体中呈现数据<xref:System.Windows.Forms.CheckedListBox>控件，你可以可以循环访问集合中存储<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>属性或列表使用单步调试<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法来确定选中了哪些项。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法采用项索引号作为其自变量并返回`true`或`false`。 与你所料，<xref:System.Windows.Forms.ListBox.SelectedItems%2A>和<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>属性不用于确定选中了哪些项; 它们来确定哪些项将突出显示。  
@@ -121,5 +122,5 @@ ms.lasthandoff: 10/22/2017
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

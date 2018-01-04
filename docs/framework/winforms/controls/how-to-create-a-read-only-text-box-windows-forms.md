@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9cf6064442c3b648116f98f98f169dac12e5e88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 264ef1a7c1f121f889d57dcb0e36e216610418fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>如何：创建只读文本框（Windows 窗体）
 可以将可编辑的 Windows 窗体文本框转换为只读的控件。 例如，在文本框中可能会显示一个值，通常编辑，但可能不是由于应用程序的状态的当前。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A>属性仅会影响在运行时的用户交互。 你仍可更改文本框内容以编程方式在运行时更改<xref:System.Windows.Forms.TextBox.Text%2A>的文本框中的属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TextBox>  
  [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
  [如何：在 Windows 窗体 TextBox 控件中控制插入点](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26a47e6ea0d93d81275d7b3b87c88d0d3ab595df
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d5de916aa5825625f29efe316571ad5085afb431
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>生成 Windows Communication Foundation 示例
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]可以生成示例，使用 Visual Studio 2010 或使用**msbuild**命令从命令行。 本主题介绍这两个过程。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
  Setup.exe 和 Cleanup.exe 批处理文件和脚本应在 Visual Studio 命令提示中运行。 有几个设置和清理文件将执行需要具有管理特权的任务，应使用管理特权来启动它们。  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>有关元数据终结点的重要安全信息  
- 为了防止无意中泄露潜在的敏感服务元数据，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的默认配置将禁用元数据发布。 默认情况下此行为是安全的，但也意味着您无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。 为了使示例体验更简单，几乎所有示例都公开一个不安全的元数据发布终结点。 此类终结点或许可以供未通过身份验证的匿名使用者使用，因此在部署此类终结点之前，必须谨慎以确保适合公开透露服务元数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]发布服务元数据，请参阅[元数据发布行为](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)示例。 请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例有关保护元数据终结点的示例。  
+ 为了防止无意中泄露潜在的敏感服务元数据，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的默认配置将禁用元数据发布。 默认情况下此行为是安全的，但也意味着你无法使用元数据导入工具（例如 Svcutil.exe）生成调用服务所需的客户端代码，除非在配置中显式启用服务的元数据发布行为。 为了使示例体验更简单，几乎所有示例都公开一个不安全的元数据发布终结点。 此类终结点或许可以供未通过身份验证的匿名使用者使用，因此在部署此类终结点之前，必须谨慎以确保适合公开透露服务元数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]发布服务元数据，请参阅[元数据发布行为](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)示例。 请参阅[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例有关保护元数据终结点的示例。  
   
 ## <a name="exception-handling"></a>异常处理  
  一般来说，这些示例不包括异常处理，以使代码集中处理示例的主题。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]异常处理，请参阅[预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)示例。  
@@ -90,6 +91,6 @@ ms.lasthandoff: 12/02/2017
     > [!NOTE]
     >  若要跳过生成的客户端配置将添加**/noConfig**选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

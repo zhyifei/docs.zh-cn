@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42c6390fb2bd39a0003beecbbe10cd72a38ed63d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-client-credential-values"></a>如何：指定客户端凭据值
 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]，服务可以指定客户端如何向服务进行身份验证。 例如，服务可以规定客户端使用证书进行身份验证。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/02/2017
     </client>  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.NetTcpBinding>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>  

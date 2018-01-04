@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8a838b2dd2367bed3fb3ffa3248e67c23f7917d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 41eb191a08aba0f84a677087a3771b6d8e90efcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-member-order"></a>数据成员顺序
 在一些应用程序中，有必要知道各个数据成员中数据的发送顺序或预期接收顺序（比如序列化 XML 中数据的显示顺序）。 有时，必须要更改此顺序。 本主题说明排序规则。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/02/2017
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  [数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

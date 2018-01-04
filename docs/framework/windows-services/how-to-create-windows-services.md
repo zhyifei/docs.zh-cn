@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c4d7f2f19c8d156f86513ac7138bccd59ae3b7fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-windows-services"></a>如何：创建 Windows 服务
 当你创建服务时，你可以使用 Visual Studio 项目模板中，名**Windows 服务**。 通过引用适当的类和命名空间、为服务设置来自基类的继承和替代你可能想要替代的几个方法，此模板自动为你完成了许多工作。  
@@ -76,12 +77,12 @@ ms.lasthandoff: 11/21/2017
   
 8.  安装服务。 有关更多信息，请参见 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
- [如何： 将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [如何： 记录关于服务的信息](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [如何： 启动服务](../../../docs/framework/windows-services/how-to-start-services.md)  
- [如何： 为服务指定的安全上下文](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
- [如何： 安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [演练： 在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+## <a name="see-also"></a>请参阅  
+ [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [如何：以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
+ [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [如何：记录关于服务的信息](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [如何：为服务指定安全上下文](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
+ [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

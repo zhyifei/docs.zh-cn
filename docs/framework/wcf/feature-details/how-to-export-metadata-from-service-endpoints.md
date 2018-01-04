@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 684d9bcf2e4787457a6ef3251e0202e1559561b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 14b045ef55ac0b6d76bb06e711b4134d54b3d61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>如何：从服务终结点导出元数据
 本主题介绍如何从服务终结点导出元数据。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="compiling-the-code"></a>编译代码  
  编译 Program.cs 时引用 System.ServiceModel.dll。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
  [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [终结点： 地址、 绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

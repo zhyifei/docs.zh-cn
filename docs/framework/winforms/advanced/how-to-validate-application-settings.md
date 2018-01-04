@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e12620a5079efaba4faa9101253a3a586965b7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-application-settings"></a>如何：验证应用程序设置
 本主题演示如何在保留应用程序设置前先验证它们。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  所用事件取决于需要何时验证设置，如下表所述。  
   
-|Event|发生时间和用法|  
+|事件|发生时间和用法|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|初始加载设置属性组后发生。<br /><br /> 在应用程序中使用属性组前，使用此事件验证整个属性组的初始值。|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|在更改单个设置属性的值之前发生。<br /><br /> 更改单个属性之前，使用此事件验证该属性。 它可以向用户提供有关其操作和选择的即时反馈。|  
@@ -68,11 +69,11 @@ ms.lasthandoff: 11/21/2017
         MySettings.Default   
         ```  
   
-         - 或 -  
+         或  
   
     -   如果是 Visual Basic 开发人员并使用项目设计器创建应用程序设置，则可通过使用 [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md) 对象来检索设置。  
   
-         - 或 -  
+         或  
   
     -   如果由派生自创建你的设置<xref:System.Configuration.ApplicationSettingsBase>直接，你需要手动实例化类。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  如果你是 C# 开发人员，在窗体或控件的`Load`事件，添加事件处理程序<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>事件。  
   
-     - 或 -  
+     或  
   
      如果是 Visual Basic 开发人员，则应使用 `WithEvents` 关键字声明 `Settings` 变量。  
   
@@ -170,6 +171,6 @@ ms.lasthandoff: 11/21/2017
     End Sub  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体中创建事件处理程序](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
  [如何：创建应用程序设置](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

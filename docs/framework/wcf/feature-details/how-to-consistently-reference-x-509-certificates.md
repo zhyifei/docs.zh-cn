@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e92b3b4950e0a2edecc9a1f954a9f2959595c4e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2cc313be8c3d6325630e57e0b0e845ad4902bd2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>如何：以一致的方式引用 X.509 证书
 可以采用下列多种方式来标识证书：证书哈希、颁发者和序列号或者使用者密钥标识符 (SKI)。 SKI 为证书的使用者公钥提供唯一标识，通常用于处理 XML 数字签名。 SKI 值通常为形式的 X.509 证书的一部分*X.509 证书扩展*。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]具有一个默认*引用样式*如果 SKI 扩展，则证书中缺少使用颁发者和序列号。 如果证书中包含 SKI 扩展，该默认引用样式将使用 SKI 来指向证书。 如果在应用程序开发过程中，将使用的证书从不使用 SKI 扩展的证书改换为使用 SKI 扩展的证书，则由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成的消息中所使用的引用样式也会随之发生变化。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.Security.Tokens>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

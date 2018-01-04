@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 413adbc25e2f92ae2e989290685db6dfeaf58368
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea32656db90907ae523502fc1796466442ef4a4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-formatters"></a>自定义消息格式化程序
 消息内容通常为 XML 格式，该格式通常不便于在应用程序中使用。 应用程序操作对象，并且获取和设置其属性。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]使用*数据协定*要转换<xref:System.ServiceModel.Channels.Message>到应用程序易于处理的对象的对象。 我们将这些过程称为序列化和反序列化。 请注意，这些词同样用于描述传输层对消息连网格式所进行的序列化和反序列化，这是一个不相关的过程。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
   
  若要将自定义格式化程序插入服务应用程序，请使用操作行为将 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 对象分配给 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 属性。 有关各种行为的信息，请参阅[配置和扩展的运行时带有行为](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>  
  <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>  
- [配置和扩展的运行时带有行为](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [使用行为配置和扩展运行时](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

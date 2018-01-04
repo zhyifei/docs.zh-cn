@@ -26,17 +26,18 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcb79525e557a66ed471bc38dcbdd444d75ba6b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f524bab55527bf9d3c744cb6f50d1df1fc9a2302
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>如何：使用 Modifiers 和 GenerateMember 属性
 当将一个组件放在 Windows 窗体上时，由设计环境提供两个属性：`GenerateMember`和`Modifiers`。 `GenerateMember`属性指定当 Windows 窗体设计器生成的组件的成员变量。 `Modifiers`属性是分配给该成员变量的访问修饰符。 如果值`GenerateMember`属性是`false`的值`Modifiers`属性不起作用。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>若要指定组件是否为窗体的成员  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  默认情况下，Windows 窗体设计器会分配`private`(`Friend`在 Visual Basic 中) 修饰符添加到容器控件，例如构造<xref:System.Windows.Forms.Panel>。 如果你基<xref:System.Windows.Forms.UserControl>或<xref:System.Windows.Forms.Form>具有容器的控件，它将不接受新子类别继承的控件和窗体中。 解决方案是更改该基容器控件的修饰符`protected`或`public`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Button>  
  [Windows 窗体可视化继承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
  [演练：演示可视化继承](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  

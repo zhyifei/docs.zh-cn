@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711d25c600c2144ad4b134984501f641be24ced2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="about-gdi-managed-code"></a>关于 GDI+ 托管代码
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 Windows 操作系统提供二维矢量图形、图像处理和版式的部分。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 在 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（早期的 Windows 版本包含的图形设备接口）的基础上进行了改进，添加了新功能和优化了现有功能。  

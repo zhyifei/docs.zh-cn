@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>路由方案
 尽管路由服务可高度自定义，但是，如果要从头开始创建新配置，设计高效的路由逻辑很富有挑战性。  然而，大多数路由服务配置都遵循一些常见方案。 虽然这些方案可能并不直接适用于特定配置，但是了解如何配置路由服务以处理这些方案有助于您了解路由服务。  
@@ -77,13 +78,13 @@ ms.lasthandoff: 10/18/2017
  用于配置错误处理的步骤，请参阅[How To： 错误处理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)。 实现错误处理示例，请参阅[桥接和错误处理](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md)和[高级错误处理](../../../../docs/framework/wcf/samples/advanced-error-handling.md)示例。  
   
 ### <a name="in-this-section"></a>本节内容  
- [如何： 服务版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [如何：服务版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [如何： 服务数据分区](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [如何：实现服务数据分区](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [如何： 动态更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [如何：动态更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [如何： 错误处理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [如何：错误处理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

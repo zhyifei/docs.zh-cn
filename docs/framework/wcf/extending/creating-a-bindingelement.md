@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-bindingelement"></a>创建 BindingElement
 绑定和绑定元素（分别扩展 <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 的对象）是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序模型与通道工厂和通道侦听器相关联的位置。 而无需绑定，使用自定义通道需要在通道级编程中所述[服务通道级编程](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)和[客户端通道级编程](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主题讨论以使用您的通道中支持的最低要求[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，开发<xref:System.ServiceModel.Channels.BindingElement>为你的通道，然后从应用程序的步骤 4 中所述启用使用[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
   
  `ChunkingBindingElement` 负责创建 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 它重写 <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelFactory%2A> 和 <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelListener%2A> 实现，并检查类型参数是否为 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>（在我们的示例中这是 `ChunkingChannel` 支持的唯一通道形状）以及绑定中的其他绑定元素是否支持此通道形状。  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 首先检查是否可以生成请求的通道形状，然后获取要分割的消息操作列表。 然后，它创建一个新的 `ChunkingChannelFactory`，并为其传递内部通道工厂。 （如果您要创建传输绑定元素，该元素将是绑定堆栈中的最后一个元素，因此必须创建一个通道侦听器或通道工厂。）  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 首先检查是否可以生成请求的通道形状，然后获取要分割的消息操作列表。 然后，它创建一个新的 `ChunkingChannelFactory`，并为其传递内部通道工厂。 （如果你要创建传输绑定元素，该元素将是绑定堆栈中的最后一个元素，因此必须创建一个通道侦听器或通道工厂。）  
   
  <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 有一个类似的实现，用于创建 `ChunkingChannelListener` 并为其传递内部通道侦听器。  
   
@@ -81,7 +82,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  一旦你已经创建的您的通道的绑定元素，返回到[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)主题以查看是否想要将配置文件的支持添加到你的绑定元素，如果和如何添加元数据发布支持和是否以及如何构造一个用户定义的绑定使用您的绑定元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.BindingElement>  
  [开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)  
- [传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+ [传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

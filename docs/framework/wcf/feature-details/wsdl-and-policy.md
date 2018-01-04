@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f502d24f98c9229d064be3de0e0edc081664dd03
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wsdl-and-policy"></a>WSDL 和策略
 本主题介绍 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1、WS-Policy 和 WS-PolicyAttachment 实现的详细信息，以及 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 引入的其他 WS-Policy 断言和 WSDL 1.1 扩展。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 12/02/2017
 |mssp:MustNotSendCancel|嵌套|指定一个要求，即不要将使用 Cancel 绑定 [WS-Trust、WS-SC] 的请求安全令牌 (RST) 请求消息 [WS-Trust] 发送给给定 SecurityContextToken 的颁发机构。 如果此断言存在，则不得将此类请求消息发送给颁发机构。 如果此断言不存在，则可以将此类请求消息发送给颁发机构。|  
 |mssp:RequireClientCertificate|嵌套|这一可选元素指定需要作为 TLSNEGO 协议的一部分提供的客户端证书。 如果此断言存在，则必须提供客户端证书。 如果此断言不存在，则不得提供客户端证书。 此断言不得在 mssp:SslContextToken 外部使用。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义 WSDL 发布](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [如何： 导出自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [如何： 导入自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+ [如何：导出自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [如何：导入自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

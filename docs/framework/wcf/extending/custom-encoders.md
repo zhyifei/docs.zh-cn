@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b1370adc510b26b14bff0dec45d83513a2f13b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-encoders"></a>自定义编码器
 本主题讨论如何创建自定义编码器。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/02/2017
   
  有两个示例随附[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]说明的示例代码使用此过程：[自定义消息编码器： 自定义文本编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)和[自定义消息编码器： 压缩编码器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
  <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
  <xref:System.ServiceModel.Channels.MessageEncoder>  

@@ -19,26 +19,27 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 021a4e206a5abfb3508e8e548114de7e61dd2d04
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bdfd50253c71bfc9edd737964e771546cb797b9e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-credential-and-credential-validation"></a>自定义凭据和凭据验证
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的安全性基于服务与客户端之间的凭据交换。 大多数安全方案均可使用常见的凭据类型来实现，如 Windows (Kerberos)、用户名和密码以及证书。 而本节中的主题针对需要使用新类型的凭据的情况说明如何处理和验证这些新类型。  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何： 创建使用自定义证书验证程序服务](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ [如何：创建使用自定义证书验证程序的服务](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
  介绍如何通过从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 类继承来自定义 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 验证。  
   
- [演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  演示如何扩展<xref:System.ServiceModel.Description.ClientCredentials>和<xref:System.ServiceModel.Description.ServiceCredentials>类以容纳新凭据类型。 这是介绍如何创建自定义凭据类型的系列主题中的第一个主题。  
   
- [如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
  说明如何创建安全令牌提供程序来处理新的凭据类型并返回凭据的新令牌。 这是该系列主题中的第二个主题。  
   
- [如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [如何：创建自定义安全令牌验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  说明如何创建自定义身份验证器来验证新的凭据类型。 这是该系列主题中的第三个主题。  
   
 ## <a name="reference"></a>参考  
@@ -61,9 +62,9 @@ ms.lasthandoff: 12/02/2017
 ## <a name="related-sections"></a>相关章节  
  [身份验证](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
- [联合身份验证和已颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [联合令牌与颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
   
  [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

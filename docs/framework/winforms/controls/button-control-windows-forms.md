@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dd584896dd8698dc881eb00186c6a550f36c75f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 085ef918b2828dc754f5b91e0ad61262ce7d8c60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="button-control-windows-forms"></a>Button 控件（Windows 窗体）
 Windows 窗体 `Button` 控件允许用户通过单击来执行某项操作。 `Button` 控件可以显示文本和图像。 单击该按钮时，看上去它像是被按下并释放。  
