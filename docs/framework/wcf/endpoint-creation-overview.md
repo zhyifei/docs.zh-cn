@@ -17,11 +17,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 309d19ee75f506ab781703ebe1068d6d90d9c47c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa20edd8fa43fb1e6a28f7b1ec18f83fedd96bca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoint-creation-overview"></a>终结点创建概述
 与所有通信[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]服务是通过*终结点*的服务。 终结点为客户端提供对 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务所提供的功能的访问权。 本节描述终结点的结构，并概述如何在配置和代码中定义终结点。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
   
 -   **地址**。 地址唯一标识终结点并告知潜在客户服务的所在位置。 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 对象模型中，地址由 <xref:System.ServiceModel.EndpointAddress> 地址表示，该地址包含统一资源标识符 (URI) 和地址属性，而地址属性包括标识、一些 Web 服务描述语言 (WSDL) 元素和可选标头的集合。 可选标头提供用于标识终结点或与终结点交互的其他详细寻址信息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][指定终结点地址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
   
--   **绑定**。 绑定指定如何与终结点进行通信。 绑定指定终结点如何与世界通信，包括使用哪种传输协议（例如，TCP 或 HTTP）、对消息使用何种编码（例如，文本或二进制），以及需要何种安全要求（例如，安全套接字层 [SSL] 或 SOAP 消息安全）。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
+-   **绑定**。 绑定指定如何与终结点进行通信。 绑定指定终结点如何与世界通信，包括使用哪种传输协议（例如，TCP 或 HTTP）、对消息使用何种编码（例如，文本或二进制），以及需要何种安全需求（例如，安全套接字层 [SSL] 或 SOAP 消息安全）。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
 -   **服务协定**。 服务协定概述了终结点向客户端公开的功能。 协定指定客户端可以调用的操作、消息的形式、输入参数的类型或调用操作所需的数据，以及客户端应收到的处理消息或响应消息的种类。 三种基本的协定类型与基本消息交换模式 (MEP) 相对应：数据报（单向）、请求/答复和双工（双向）。 当访问服务协定时，服务协定也可以采用数据和消息协定要求特定的数据类型和消息格式。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何定义服务协定，请参阅[设计服务协定](../../../docs/framework/wcf/designing-service-contracts.md)。 请注意，也可以要求客户端实现服务定义的协定（称为回调协定），以便在双工 MEP 下接收服务的消息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)。  
   
@@ -207,5 +208,5 @@ serviceHost.Open()
   
  如果显式提供了终结点，则仍可以添加默认终结点，方法是先在 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 上调用 <xref:System.ServiceModel.ServiceHost>，然后调用 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]默认值为终结点，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)

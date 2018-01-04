@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45945fb07f7d1807674453296f7c5e62c829a401
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d51e6e5b72deea417b7313d88a4d58610b401244
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-bindings"></a>自定义绑定
 当系统提供的某个绑定不符合服务的要求时，可使用 <xref:System.ServiceModel.Channels.CustomBinding> 类。 所有绑定都是从绑定元素的有序集构造而来的。 自定义绑定可以从一组系统提供的绑定元素生成，也可以包含用户定义的自定义绑定元素。 例如，可以使用自定义绑定元素在服务终结点使用新的传输或编码器。 有关工作示例，请参阅[自定义绑定示例](http://msdn.microsoft.com/en-us/657e8143-beb0-472d-9cfe-ed1a19c2ab08)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
@@ -74,18 +75,18 @@ ms.lasthandoff: 12/02/2017
   
 |层|选项|必需|  
 |-----------|-------------|--------------|  
-|事务|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|  
+|事务|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|否|  
 |可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|  
-|安全性|<xref:System.ServiceModel.Channels.SecurityBindingElement>|No|  
+|安全性|<xref:System.ServiceModel.Channels.SecurityBindingElement>|否|  
 |编码|文本、二进制、消息传输优化机制 (MTOM)、自定义|是|  
 |传输|TCP、HTTP、HTTPS、命名管道（也称为 IPC）、对等 (P2P)、消息队列（也称为 MSMQ）、自定义|是|  
   
  此外，可以定义自己的绑定元素，并将它们插在前面定义的任何层之间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [使用绑定配置服务和客户端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [如何： 自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
+ [如何：自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
  [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [自定义绑定](../../../../docs/framework/wcf/samples/custom-binding.md)

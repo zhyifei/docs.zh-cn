@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da0bc2ac9a4283ec9b23a1d4767f664de071ef47
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63824ae2171053bee2af204e748a6fa811f2ba82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 OperationBehaviorAttribute  
@@ -48,7 +49,7 @@ class OperationBehaviorAttribute : Behavior
   
  参数自动释放功能的状态。  
   
-### <a name="impersonation"></a>模拟  
+### <a name="impersonation"></a>Impersonation  
  数据类型：String  
   
  访问类型：只读  
@@ -76,11 +77,11 @@ class OperationBehaviorAttribute : Behavior
   
  指示操作是否需要事务处理。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.OperationBehaviorAttribute>

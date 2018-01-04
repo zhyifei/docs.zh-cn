@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b70b4b4a1529085cba8625598f56a9eece07e866
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 10e476931ef07ec694dff200e64ce2ded74c8dfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
@@ -124,12 +125,12 @@ class MsmqBindingElementBase : TransportBindingElement
   
  一个 Boolean 值，指示此绑定所处理的消息副本是否应存储在源日志队列中。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.NetMsmqBinding>  
  <xref:System.ServiceModel.MsmqBindingBase>

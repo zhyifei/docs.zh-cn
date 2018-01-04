@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abdb48822de8c08c23adc641a93ac7615bcc2eea
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>指定自定义加密算法
 WCF 允许指定在加密数据或计算数字签名时使用的自定义加密算法。 为此，请执行下列步骤：  
@@ -135,8 +136,8 @@ WSHttpBinding binding = new WSHttpBinding();
   
  有关完整的代码示例，请参阅[WCF 安全中的加密灵活性](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)示例。  
   
-## <a name="see-also"></a>另请参阅  
- [保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+## <a name="see-also"></a>请参阅  
+ [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [保护服务](../../../../docs/framework/wcf/securing-services.md)  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [安全性的基础概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+ [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)

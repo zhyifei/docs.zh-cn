@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90ec78cf105371ba7a5e32d3299f0a08931b9f63
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 662fd137b32a8799359d58936aad848687bf9594
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wsattraceevent"></a>WSAT_TraceEvent
 WSAT_TraceEvent  
@@ -33,7 +34,7 @@ class WSAT_TraceEvent : WSAT_TraceProvider
 ## <a name="methods"></a>方法  
  WSAT_TraceEvent 类继承自 WSAT_TraceProvider，但不定义其他方法或属性。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
