@@ -19,26 +19,27 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8935616159d2ea55e5616b6d7f4ebc4ff2c61e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2952c1c59e5a60cbc51d505d3a53e063ec3351d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="ec585-102">高级 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="ec585-102">Advanced (Windows Presentation Foundation)</span></span>
-<span data-ttu-id="ec585-103">本节介绍 WPF 中的部分高级区域。</span><span class="sxs-lookup"><span data-stu-id="ec585-103">This section describes some of the advanced areas in WPF.</span></span>  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="668f6-102">高级 (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="668f6-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="668f6-103">本节介绍 WPF 中的部分高级区域。</span><span class="sxs-lookup"><span data-stu-id="668f6-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ec585-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="ec585-104">In This Section</span></span>  
- [<span data-ttu-id="ec585-105">WPF 体系结构</span><span class="sxs-lookup"><span data-stu-id="ec585-105">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
- [<span data-ttu-id="ec585-106">基元素</span><span class="sxs-lookup"><span data-stu-id="ec585-106">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [<span data-ttu-id="ec585-107">元素树和序列化</span><span class="sxs-lookup"><span data-stu-id="ec585-107">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [<span data-ttu-id="ec585-108">拖放</span><span class="sxs-lookup"><span data-stu-id="ec585-108">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
- [<span data-ttu-id="ec585-109">文档</span><span class="sxs-lookup"><span data-stu-id="ec585-109">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)  
- [<span data-ttu-id="ec585-110">全球化和本地化</span><span class="sxs-lookup"><span data-stu-id="ec585-110">Globalization and Localization</span></span>](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
- [<span data-ttu-id="ec585-111">迁移和互操作性</span><span class="sxs-lookup"><span data-stu-id="ec585-111">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [<span data-ttu-id="ec585-112">性能</span><span class="sxs-lookup"><span data-stu-id="ec585-112">Performance</span></span>](../../../../docs/framework/wpf/advanced/performance.md)  
- [<span data-ttu-id="ec585-113">线程模型</span><span class="sxs-lookup"><span data-stu-id="ec585-113">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [<span data-ttu-id="ec585-114">WPF 外接程序概述</span><span class="sxs-lookup"><span data-stu-id="ec585-114">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
- [<span data-ttu-id="ec585-115">非托管 WPF API 参考</span><span class="sxs-lookup"><span data-stu-id="ec585-115">Unmanaged WPF API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
+## <a name="in-this-section"></a><span data-ttu-id="668f6-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="668f6-104">In This Section</span></span>  
+ [<span data-ttu-id="668f6-105">WPF 体系结构</span><span class="sxs-lookup"><span data-stu-id="668f6-105">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+ [<span data-ttu-id="668f6-106">基元素</span><span class="sxs-lookup"><span data-stu-id="668f6-106">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
+ [<span data-ttu-id="668f6-107">元素树和序列化</span><span class="sxs-lookup"><span data-stu-id="668f6-107">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+ [<span data-ttu-id="668f6-108">拖放</span><span class="sxs-lookup"><span data-stu-id="668f6-108">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [<span data-ttu-id="668f6-109">文档</span><span class="sxs-lookup"><span data-stu-id="668f6-109">Documents</span></span>](../../../../docs/framework/wpf/advanced/documents.md)  
+ [<span data-ttu-id="668f6-110">全球化和本地化</span><span class="sxs-lookup"><span data-stu-id="668f6-110">Globalization and Localization</span></span>](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
+ [<span data-ttu-id="668f6-111">迁移和互操作性</span><span class="sxs-lookup"><span data-stu-id="668f6-111">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [<span data-ttu-id="668f6-112">性能</span><span class="sxs-lookup"><span data-stu-id="668f6-112">Performance</span></span>](../../../../docs/framework/wpf/advanced/performance.md)  
+ [<span data-ttu-id="668f6-113">线程模型</span><span class="sxs-lookup"><span data-stu-id="668f6-113">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)  
+ [<span data-ttu-id="668f6-114">WPF 外接程序概述</span><span class="sxs-lookup"><span data-stu-id="668f6-114">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
+ [<span data-ttu-id="668f6-115">非托管 WPF API 参考</span><span class="sxs-lookup"><span data-stu-id="668f6-115">Unmanaged WPF API Reference</span></span>](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="ec585-116">相关章节</span><span class="sxs-lookup"><span data-stu-id="ec585-116">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="668f6-116">相关章节</span><span class="sxs-lookup"><span data-stu-id="668f6-116">Related Sections</span></span>

@@ -17,27 +17,28 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d0939788210819279059729e21f9827124eb13f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ba9f7b729210224571d973519c08737ac386cfa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="menu"></a><span data-ttu-id="bbb88-102">菜单</span><span class="sxs-lookup"><span data-stu-id="bbb88-102">Menu</span></span>
-<span data-ttu-id="bbb88-103">A<xref:System.Windows.Controls.Menu>是允许的命令或事件处理程序与关联的元素的分层组织的控件。</span><span class="sxs-lookup"><span data-stu-id="bbb88-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="bbb88-104">每个<xref:System.Windows.Controls.Menu>可以包含多个<xref:System.Windows.Controls.MenuItem>控件。</span><span class="sxs-lookup"><span data-stu-id="bbb88-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="bbb88-105">每个<xref:System.Windows.Controls.MenuItem>可以调用命令或调用`Click`事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="bbb88-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="bbb88-106">A<xref:System.Windows.Controls.MenuItem>还可以有多个<xref:System.Windows.Controls.MenuItem>元素作为子级，构成子菜单。</span><span class="sxs-lookup"><span data-stu-id="bbb88-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  
+# <a name="menu"></a><span data-ttu-id="1e444-102">菜单</span><span class="sxs-lookup"><span data-stu-id="1e444-102">Menu</span></span>
+<span data-ttu-id="1e444-103">A<xref:System.Windows.Controls.Menu>是允许的命令或事件处理程序与关联的元素的分层组织的控件。</span><span class="sxs-lookup"><span data-stu-id="1e444-103">A <xref:System.Windows.Controls.Menu> is a control that allows hierarchical organization of elements associated with commands or event handlers.</span></span> <span data-ttu-id="1e444-104">每个<xref:System.Windows.Controls.Menu>可以包含多个<xref:System.Windows.Controls.MenuItem>控件。</span><span class="sxs-lookup"><span data-stu-id="1e444-104">Each <xref:System.Windows.Controls.Menu> can contain multiple <xref:System.Windows.Controls.MenuItem> controls.</span></span> <span data-ttu-id="1e444-105">每个<xref:System.Windows.Controls.MenuItem>可以调用命令或调用`Click`事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="1e444-105">Each <xref:System.Windows.Controls.MenuItem> can invoke a command or invoke a `Click` event handler.</span></span> <span data-ttu-id="1e444-106">A<xref:System.Windows.Controls.MenuItem>还可以有多个<xref:System.Windows.Controls.MenuItem>元素作为子级，构成子菜单。</span><span class="sxs-lookup"><span data-stu-id="1e444-106">A <xref:System.Windows.Controls.MenuItem> can also have multiple <xref:System.Windows.Controls.MenuItem> elements as children, forming a submenu.</span></span>  
   
- <span data-ttu-id="bbb88-107">下图显示菜单控件的三个不同的状态。</span><span class="sxs-lookup"><span data-stu-id="bbb88-107">The following illustration shows the three different states of a menu control.</span></span> <span data-ttu-id="bbb88-108">没有设备如鼠标指针停留在线上时的默认状态<xref:System.Windows.Controls.Menu>。</span><span class="sxs-lookup"><span data-stu-id="bbb88-108">The default state is when no device such as a mouse pointer is resting on the <xref:System.Windows.Controls.Menu>.</span></span> <span data-ttu-id="bbb88-109">当鼠标指针悬停在焦点状态时发生<xref:System.Windows.Controls.Menu>并且通过单击鼠标按钮时发生按下的状态<xref:System.Windows.Controls.Menu>。</span><span class="sxs-lookup"><span data-stu-id="bbb88-109">The focus state occurs when the mouse pointer is hovering over the <xref:System.Windows.Controls.Menu> and pressed state occurs when a mouse button is clicked over the <xref:System.Windows.Controls.Menu>.</span></span>  
+ <span data-ttu-id="1e444-107">下图显示菜单控件的三个不同的状态。</span><span class="sxs-lookup"><span data-stu-id="1e444-107">The following illustration shows the three different states of a menu control.</span></span> <span data-ttu-id="1e444-108">没有设备如鼠标指针停留在线上时的默认状态<xref:System.Windows.Controls.Menu>。</span><span class="sxs-lookup"><span data-stu-id="1e444-108">The default state is when no device such as a mouse pointer is resting on the <xref:System.Windows.Controls.Menu>.</span></span> <span data-ttu-id="1e444-109">当鼠标指针悬停在焦点状态时发生<xref:System.Windows.Controls.Menu>并且通过单击鼠标按钮时发生按下的状态<xref:System.Windows.Controls.Menu>。</span><span class="sxs-lookup"><span data-stu-id="1e444-109">The focus state occurs when the mouse pointer is hovering over the <xref:System.Windows.Controls.Menu> and pressed state occurs when a mouse button is clicked over the <xref:System.Windows.Controls.Menu>.</span></span>  
   
- <span data-ttu-id="bbb88-110">![菜单状态](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span><span class="sxs-lookup"><span data-stu-id="bbb88-110">![Menu states](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span></span>  
-<span data-ttu-id="bbb88-111">不同状态中的菜单</span><span class="sxs-lookup"><span data-stu-id="bbb88-111">Menus in different states</span></span>  
+ <span data-ttu-id="1e444-110">![菜单状态](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span><span class="sxs-lookup"><span data-stu-id="1e444-110">![Menu states](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")</span></span>  
+<span data-ttu-id="1e444-111">不同状态中的菜单</span><span class="sxs-lookup"><span data-stu-id="1e444-111">Menus in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bbb88-112">本节内容</span><span class="sxs-lookup"><span data-stu-id="bbb88-112">In This Section</span></span>  
- [<span data-ttu-id="bbb88-113">菜单概述</span><span class="sxs-lookup"><span data-stu-id="bbb88-113">Menu Overview</span></span>](../../../../docs/framework/wpf/controls/menu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1e444-112">本节内容</span><span class="sxs-lookup"><span data-stu-id="1e444-112">In This Section</span></span>  
+ [<span data-ttu-id="1e444-113">菜单概述</span><span class="sxs-lookup"><span data-stu-id="1e444-113">Menu Overview</span></span>](../../../../docs/framework/wpf/controls/menu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="bbb88-114">参考</span><span class="sxs-lookup"><span data-stu-id="bbb88-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1e444-114">参考</span><span class="sxs-lookup"><span data-stu-id="1e444-114">Reference</span></span>  
  <xref:System.Windows.Controls.Menu>  
   <xref:System.Windows.Controls.MenuItem>  
   <xref:System.Windows.Controls.Primitives.MenuBase>  
   <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="bbb88-115">相关章节</span><span class="sxs-lookup"><span data-stu-id="bbb88-115">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="1e444-115">相关章节</span><span class="sxs-lookup"><span data-stu-id="1e444-115">Related Sections</span></span>

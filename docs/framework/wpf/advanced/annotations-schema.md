@@ -17,30 +17,31 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a68b8966e72339a6bf5929661cf89f7f8a0b07c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7989269e8076eda1deef6384b7efdb51c2d279ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="annotations-schema"></a><span data-ttu-id="0578b-102">批注架构</span><span class="sxs-lookup"><span data-stu-id="0578b-102">Annotations Schema</span></span>
-<span data-ttu-id="0578b-103">本主题介绍 Microsoft Annotations Framework 用来保存和检索用户批注数据的 XML 架构定义 (XSD)。</span><span class="sxs-lookup"><span data-stu-id="0578b-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>  
+# <a name="annotations-schema"></a><span data-ttu-id="5e36d-102">批注架构</span><span class="sxs-lookup"><span data-stu-id="5e36d-102">Annotations Schema</span></span>
+<span data-ttu-id="5e36d-103">本主题介绍 Microsoft Annotations Framework 用来保存和检索用户批注数据的 XML 架构定义 (XSD)。</span><span class="sxs-lookup"><span data-stu-id="5e36d-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>  
   
- <span data-ttu-id="0578b-104">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] 将批注数据从内部表示形式序列化为 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="0578b-104">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializes annotation data from an internal representation to an XML format.</span></span>  <span data-ttu-id="0578b-105">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD 架构描述了用于此转换的 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="0578b-105">The XML format used for this conversion is described by the [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD Schema.</span></span>  <span data-ttu-id="0578b-106">该架构定义独立于实现、可用来在应用程序之间交换批注数据的 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="0578b-106">The schema defines the implementation-independent XML format that can be used to exchange annotation data between applications.</span></span>  
+ <span data-ttu-id="5e36d-104">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] 将批注数据从内部表示形式序列化为 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="5e36d-104">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializes annotation data from an internal representation to an XML format.</span></span>  <span data-ttu-id="5e36d-105">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD 架构描述了用于此转换的 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="5e36d-105">The XML format used for this conversion is described by the [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD Schema.</span></span>  <span data-ttu-id="5e36d-106">该架构定义独立于实现、可用来在应用程序之间交换批注数据的 XML 格式。</span><span class="sxs-lookup"><span data-stu-id="5e36d-106">The schema defines the implementation-independent XML format that can be used to exchange annotation data between applications.</span></span>  
   
- <span data-ttu-id="0578b-107">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML 架构定义由两个子架构组成</span><span class="sxs-lookup"><span data-stu-id="0578b-107">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML schema definition consists of two subschemas</span></span>  
+ <span data-ttu-id="5e36d-107">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML 架构定义由两个子架构组成</span><span class="sxs-lookup"><span data-stu-id="5e36d-107">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML schema definition consists of two subschemas</span></span>  
   
--   <span data-ttu-id="0578b-108">批注 XML 核心架构（核心架构）。</span><span class="sxs-lookup"><span data-stu-id="0578b-108">The Annotations XML Core Schema (Core Schema).</span></span>  
+-   <span data-ttu-id="5e36d-108">批注 XML 核心架构（核心架构）。</span><span class="sxs-lookup"><span data-stu-id="5e36d-108">The Annotations XML Core Schema (Core Schema).</span></span>  
   
--   <span data-ttu-id="0578b-109">批注 XML 基本架构（核心架构）。</span><span class="sxs-lookup"><span data-stu-id="0578b-109">The Annotations XML Base Schema (Base Schema).</span></span>  
+-   <span data-ttu-id="5e36d-109">批注 XML 基本架构（核心架构）。</span><span class="sxs-lookup"><span data-stu-id="5e36d-109">The Annotations XML Base Schema (Base Schema).</span></span>  
   
- <span data-ttu-id="0578b-110">核心架构定义的主 XML 结构<xref:System.Windows.Annotations.Annotation>。</span><span class="sxs-lookup"><span data-stu-id="0578b-110">The Core Schema defines the primary XML structure of an <xref:System.Windows.Annotations.Annotation>.</span></span>  <span data-ttu-id="0578b-111">大部分核心架构中定义的 XML 元素中的类型对应<xref:System.Windows.Annotations>命名空间。</span><span class="sxs-lookup"><span data-stu-id="0578b-111">The majority of XML elements defined in the Core Schema correspond to types in the <xref:System.Windows.Annotations> namespace.</span></span>  <span data-ttu-id="0578b-112">核心架构公开应用程序可在其中添加自己的 XML 数据的三个扩展点。</span><span class="sxs-lookup"><span data-stu-id="0578b-112">The Core Schema exposes three extension points where applications can add their own XML data.</span></span>  <span data-ttu-id="0578b-113">这些扩展点包括<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和"内容"。</span><span class="sxs-lookup"><span data-stu-id="0578b-113">These extension points include the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and "Content".</span></span>  <span data-ttu-id="0578b-114">(内容中的形式提供了元素<xref:System.Xml.XmlElement>列表。)</span><span class="sxs-lookup"><span data-stu-id="0578b-114">(Content elements are provided in the form of an <xref:System.Xml.XmlElement> list.)</span></span>  
+ <span data-ttu-id="5e36d-110">核心架构定义的主 XML 结构<xref:System.Windows.Annotations.Annotation>。</span><span class="sxs-lookup"><span data-stu-id="5e36d-110">The Core Schema defines the primary XML structure of an <xref:System.Windows.Annotations.Annotation>.</span></span>  <span data-ttu-id="5e36d-111">大部分核心架构中定义的 XML 元素中的类型对应<xref:System.Windows.Annotations>命名空间。</span><span class="sxs-lookup"><span data-stu-id="5e36d-111">The majority of XML elements defined in the Core Schema correspond to types in the <xref:System.Windows.Annotations> namespace.</span></span>  <span data-ttu-id="5e36d-112">核心架构公开应用程序可在其中添加自己的 XML 数据的三个扩展点。</span><span class="sxs-lookup"><span data-stu-id="5e36d-112">The Core Schema exposes three extension points where applications can add their own XML data.</span></span>  <span data-ttu-id="5e36d-113">这些扩展点包括<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和"内容"。</span><span class="sxs-lookup"><span data-stu-id="5e36d-113">These extension points include the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and "Content".</span></span>  <span data-ttu-id="5e36d-114">(内容中的形式提供了元素<xref:System.Xml.XmlElement>列表。)</span><span class="sxs-lookup"><span data-stu-id="5e36d-114">(Content elements are provided in the form of an <xref:System.Xml.XmlElement> list.)</span></span>  
   
- <span data-ttu-id="0578b-115">本主题中描述的基架构定义的扩展<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和内容类型包含与初始[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]释放。</span><span class="sxs-lookup"><span data-stu-id="0578b-115">The Base Schema described in this topic defines the extensions for the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and Content types included with the initial [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] release.</span></span>  
+ <span data-ttu-id="5e36d-115">本主题中描述的基架构定义的扩展<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和内容类型包含与初始[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]释放。</span><span class="sxs-lookup"><span data-stu-id="5e36d-115">The Base Schema described in this topic defines the extensions for the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and Content types included with the initial [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] release.</span></span>  
   
 <a name="CoreSchema"></a>   
-## <a name="annotations-xml-core-schema"></a><span data-ttu-id="0578b-116">批注 XML 核心架构</span><span class="sxs-lookup"><span data-stu-id="0578b-116">Annotations XML Core Schema</span></span>  
- <span data-ttu-id="0578b-117">批注 XML 核心架构定义用于存储的 XML 结构<xref:System.Windows.Annotations.Annotation>对象。</span><span class="sxs-lookup"><span data-stu-id="0578b-117">The Annotations XML Core Schema defines the XML structure that is used to store <xref:System.Windows.Annotations.Annotation> objects.</span></span>  
+## <a name="annotations-xml-core-schema"></a><span data-ttu-id="5e36d-116">批注 XML 核心架构</span><span class="sxs-lookup"><span data-stu-id="5e36d-116">Annotations XML Core Schema</span></span>  
+ <span data-ttu-id="5e36d-117">批注 XML 核心架构定义用于存储的 XML 结构<xref:System.Windows.Annotations.Annotation>对象。</span><span class="sxs-lookup"><span data-stu-id="5e36d-117">The Annotations XML Core Schema defines the XML structure that is used to store <xref:System.Windows.Annotations.Annotation> objects.</span></span>  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -191,8 +192,8 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 <a name="BaseSchema"></a>   
-## <a name="annotations-xml-base-schema"></a><span data-ttu-id="0578b-118">批注 XML 基本架构</span><span class="sxs-lookup"><span data-stu-id="0578b-118">Annotations XML Base Schema</span></span>  
- <span data-ttu-id="0578b-119">基本架构定义了核心架构 – 中定义的三个抽象元素的 XML 结构<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>。</span><span class="sxs-lookup"><span data-stu-id="0578b-119">The Base Schema defines the XML structure for the three abstract elements defined in the Core Schema – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span></span>  
+## <a name="annotations-xml-base-schema"></a><span data-ttu-id="5e36d-118">批注 XML 基本架构</span><span class="sxs-lookup"><span data-stu-id="5e36d-118">Annotations XML Base Schema</span></span>  
+ <span data-ttu-id="5e36d-119">基本架构定义了核心架构 – 中定义的三个抽象元素的 XML 结构<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和<xref:System.Windows.Annotations.AnnotationResource.Contents%2A>。</span><span class="sxs-lookup"><span data-stu-id="5e36d-119">The Base Schema defines the XML structure for the three abstract elements defined in the Core Schema – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span></span>  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -502,8 +503,8 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 <a name="SampleXML"></a>   
-## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a><span data-ttu-id="0578b-120">批注 XmlStreamStore 所生成的示例 XML</span><span class="sxs-lookup"><span data-stu-id="0578b-120">Sample XML Produced by Annotations XmlStreamStore</span></span>  
- <span data-ttu-id="0578b-121">下面的 XML，显示的批注输出<xref:System.Windows.Annotations.Storage.XmlStreamStore>和组织的一个示例文件，包含三个批注： 突出显示、 文本的附注和墨迹便笺。</span><span class="sxs-lookup"><span data-stu-id="0578b-121">The XML that follows shows the output of an Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> and the organization of a sample file that contains three annotations - a highlight, a text sticky-note, and an ink stick-note.</span></span>  
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a><span data-ttu-id="5e36d-120">批注 XmlStreamStore 所生成的示例 XML</span><span class="sxs-lookup"><span data-stu-id="5e36d-120">Sample XML Produced by Annotations XmlStreamStore</span></span>  
+ <span data-ttu-id="5e36d-121">下面的 XML，显示的批注输出<xref:System.Windows.Annotations.Storage.XmlStreamStore>和组织的一个示例文件，包含三个批注： 突出显示、 文本的附注和墨迹便笺。</span><span class="sxs-lookup"><span data-stu-id="5e36d-121">The XML that follows shows the output of an Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> and the organization of a sample file that contains three annotations - a highlight, a text sticky-note, and an ink stick-note.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -591,10 +592,10 @@ ms.lasthandoff: 11/21/2017
 </anc:Annotations>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0578b-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0578b-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5e36d-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="5e36d-122">See Also</span></span>  
  <xref:System.Windows.Annotations>  
  <xref:System.Windows.Annotations.Storage>  
  <xref:System.Windows.Annotations.Annotation>  
  <xref:System.Windows.Annotations.Storage.AnnotationStore>  
  <xref:System.Windows.Annotations.Storage.XmlStreamStore>  
- [<span data-ttu-id="0578b-123">批注概述</span><span class="sxs-lookup"><span data-stu-id="0578b-123">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+ [<span data-ttu-id="5e36d-123">批注概述</span><span class="sxs-lookup"><span data-stu-id="5e36d-123">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)

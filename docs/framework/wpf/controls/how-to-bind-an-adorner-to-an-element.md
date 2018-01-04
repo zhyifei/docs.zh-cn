@@ -19,29 +19,30 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b1da3216ce6d3507c304ff957728d33ba1b9bd9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b3c657cde9da19f8ebc6b6d4d05077ed027781b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-bind-an-adorner-to-an-element"></a><span data-ttu-id="4d072-102">如何：将装饰器绑定到元素</span><span class="sxs-lookup"><span data-stu-id="4d072-102">How to: Bind an Adorner to an Element</span></span>
-<span data-ttu-id="4d072-103">此示例演示如何以编程方式将装饰器绑定到指定<xref:System.Windows.UIElement>。</span><span class="sxs-lookup"><span data-stu-id="4d072-103">This example shows how to programmatically bind an adorner to a specified <xref:System.Windows.UIElement>.</span></span>  
+# <a name="how-to-bind-an-adorner-to-an-element"></a><span data-ttu-id="9c205-102">如何：将装饰器绑定到元素</span><span class="sxs-lookup"><span data-stu-id="9c205-102">How to: Bind an Adorner to an Element</span></span>
+<span data-ttu-id="9c205-103">此示例演示如何以编程方式将装饰器绑定到指定<xref:System.Windows.UIElement>。</span><span class="sxs-lookup"><span data-stu-id="9c205-103">This example shows how to programmatically bind an adorner to a specified <xref:System.Windows.UIElement>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4d072-104">示例</span><span class="sxs-lookup"><span data-stu-id="4d072-104">Example</span></span>  
- <span data-ttu-id="4d072-105">若要将装饰器绑定到特定<xref:System.Windows.UIElement>，请按照下列步骤：</span><span class="sxs-lookup"><span data-stu-id="4d072-105">To bind an adorner to a particular <xref:System.Windows.UIElement>, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="9c205-104">示例</span><span class="sxs-lookup"><span data-stu-id="9c205-104">Example</span></span>  
+ <span data-ttu-id="9c205-105">若要将装饰器绑定到特定<xref:System.Windows.UIElement>，请按照下列步骤：</span><span class="sxs-lookup"><span data-stu-id="9c205-105">To bind an adorner to a particular <xref:System.Windows.UIElement>, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="4d072-106">调用`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>获取<xref:System.Windows.Documents.AdornerLayer>对象<xref:System.Windows.UIElement>装饰。</span><span class="sxs-lookup"><span data-stu-id="4d072-106">Call the `static` method <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> to get an <xref:System.Windows.Documents.AdornerLayer> object for the <xref:System.Windows.UIElement> to be adorned.</span></span> <span data-ttu-id="4d072-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>上移到可视化树，开始指定**UIElement**，并返回它找到的第一个装饰器层。</span><span class="sxs-lookup"><span data-stu-id="4d072-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> walks up the visual tree, starting at the specified **UIElement**, and returns the first adorner layer it finds.</span></span> <span data-ttu-id="4d072-108">（如果未发现装饰器层，该方法将返回 null。）</span><span class="sxs-lookup"><span data-stu-id="4d072-108">(If no adorner layers are found, the method returns null.)</span></span>  
+1.  <span data-ttu-id="9c205-106">调用`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>获取<xref:System.Windows.Documents.AdornerLayer>对象<xref:System.Windows.UIElement>装饰。</span><span class="sxs-lookup"><span data-stu-id="9c205-106">Call the `static` method <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> to get an <xref:System.Windows.Documents.AdornerLayer> object for the <xref:System.Windows.UIElement> to be adorned.</span></span> <span data-ttu-id="9c205-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>上移到可视化树，开始指定**UIElement**，并返回它找到的第一个装饰器层。</span><span class="sxs-lookup"><span data-stu-id="9c205-107"><xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> walks up the visual tree, starting at the specified **UIElement**, and returns the first adorner layer it finds.</span></span> <span data-ttu-id="9c205-108">（如果未发现装饰器层，该方法将返回 null。）</span><span class="sxs-lookup"><span data-stu-id="9c205-108">(If no adorner layers are found, the method returns null.)</span></span>  
   
-2.  <span data-ttu-id="4d072-109">调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法将装饰器绑定到目标**UIElement**。</span><span class="sxs-lookup"><span data-stu-id="4d072-109">Call the <xref:System.Windows.Documents.AdornerLayer.Add%2A> method to bind the adorner to the target **UIElement**.</span></span>  
+2.  <span data-ttu-id="9c205-109">调用<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法将装饰器绑定到目标**UIElement**。</span><span class="sxs-lookup"><span data-stu-id="9c205-109">Call the <xref:System.Windows.Documents.AdornerLayer.Add%2A> method to bind the adorner to the target **UIElement**.</span></span>  
   
- <span data-ttu-id="4d072-110">下面的示例将绑定 （上面所述） 到 SimpleCircleAdorner<xref:System.Windows.Controls.TextBox>名为*myTextBox*。</span><span class="sxs-lookup"><span data-stu-id="4d072-110">The following example binds a SimpleCircleAdorner (shown above) to a <xref:System.Windows.Controls.TextBox> named *myTextBox*.</span></span>  
+ <span data-ttu-id="9c205-110">下面的示例将绑定 （上面所述） 到 SimpleCircleAdorner<xref:System.Windows.Controls.TextBox>名为*myTextBox*。</span><span class="sxs-lookup"><span data-stu-id="9c205-110">The following example binds a SimpleCircleAdorner (shown above) to a <xref:System.Windows.Controls.TextBox> named *myTextBox*.</span></span>  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
   
 > [!NOTE]
->  <span data-ttu-id="4d072-111">目前不支持使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 将装饰器绑定到另一个元素。</span><span class="sxs-lookup"><span data-stu-id="4d072-111">Using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to bind an adorner to another element is currently not supported.</span></span>  
+>  <span data-ttu-id="9c205-111">目前不支持使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 将装饰器绑定到另一个元素。</span><span class="sxs-lookup"><span data-stu-id="9c205-111">Using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to bind an adorner to another element is currently not supported.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d072-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4d072-112">See Also</span></span>  
- [<span data-ttu-id="4d072-113">装饰器概述</span><span class="sxs-lookup"><span data-stu-id="4d072-113">Adorners Overview</span></span>](../../../../docs/framework/wpf/controls/adorners-overview.md)
+## <a name="see-also"></a><span data-ttu-id="9c205-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="9c205-112">See Also</span></span>  
+ [<span data-ttu-id="9c205-113">装饰器概述</span><span class="sxs-lookup"><span data-stu-id="9c205-113">Adorners Overview</span></span>](../../../../docs/framework/wpf/controls/adorners-overview.md)

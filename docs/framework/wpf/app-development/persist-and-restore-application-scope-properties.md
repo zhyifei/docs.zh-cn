@@ -23,17 +23,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a7a2d3f2ee1be613cf10efe913b21d4b04912c9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 815efbe0a4adcacddeb4c1a70cc3c1fef21fed05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="64c00-102">如何：跨应用程序会话保持和还原应用程序范围的属性</span><span class="sxs-lookup"><span data-stu-id="64c00-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
-<span data-ttu-id="64c00-103">此示例演示如何保留应用程序作用域属性，当应用程序关闭时和还原应用程序作用域属性当应用程序下一次启动后如何。</span><span class="sxs-lookup"><span data-stu-id="64c00-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
+# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="9d34a-102">如何：跨应用程序会话保持和还原应用程序范围的属性</span><span class="sxs-lookup"><span data-stu-id="9d34a-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
+<span data-ttu-id="9d34a-103">此示例演示如何保留应用程序作用域属性，当应用程序关闭时和还原应用程序作用域属性当应用程序下一次启动后如何。</span><span class="sxs-lookup"><span data-stu-id="9d34a-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="64c00-104">示例</span><span class="sxs-lookup"><span data-stu-id="64c00-104">Example</span></span>  
- <span data-ttu-id="64c00-105">应用程序仍然存在应用程序作用域属性，并将其还原从独立存储。</span><span class="sxs-lookup"><span data-stu-id="64c00-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="64c00-106">独立的存储是不具备文件访问权限的应用程序可以安全地使用受保护的存储区域。</span><span class="sxs-lookup"><span data-stu-id="64c00-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  
+## <a name="example"></a><span data-ttu-id="9d34a-104">示例</span><span class="sxs-lookup"><span data-stu-id="9d34a-104">Example</span></span>  
+ <span data-ttu-id="9d34a-105">应用程序仍然存在应用程序作用域属性，并将其还原从独立存储。</span><span class="sxs-lookup"><span data-stu-id="9d34a-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="9d34a-106">独立的存储是不具备文件访问权限的应用程序可以安全地使用受保护的存储区域。</span><span class="sxs-lookup"><span data-stu-id="9d34a-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  
   
  [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
 [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  

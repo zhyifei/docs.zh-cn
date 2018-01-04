@@ -18,19 +18,20 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f2d82be5dc5a5c78b19a6ac5326cbecf9918092
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c79cd6b9c4b1f4f7227a08a1a719e147e41055fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="canvas"></a><span data-ttu-id="73e61-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="73e61-102">Canvas</span></span>
-<span data-ttu-id="73e61-103"><xref:System.Windows.Controls.Canvas>是一种布局控件，使绝对定位子元素。</span><span class="sxs-lookup"><span data-stu-id="73e61-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
+# <a name="canvas"></a><span data-ttu-id="dd346-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="dd346-102">Canvas</span></span>
+<span data-ttu-id="dd346-103"><xref:System.Windows.Controls.Canvas>是一种布局控件，使绝对定位子元素。</span><span class="sxs-lookup"><span data-stu-id="dd346-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="73e61-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="73e61-104">In This Section</span></span>  
- [<span data-ttu-id="73e61-105">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="73e61-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="dd346-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="dd346-104">In This Section</span></span>  
+ [<span data-ttu-id="dd346-105">帮助主题</span><span class="sxs-lookup"><span data-stu-id="dd346-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="73e61-106">参考</span><span class="sxs-lookup"><span data-stu-id="73e61-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="dd346-106">参考</span><span class="sxs-lookup"><span data-stu-id="dd346-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -45,9 +46,9 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="73e61-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="73e61-107">Related Sections</span></span>  
- [<span data-ttu-id="73e61-108">布局</span><span class="sxs-lookup"><span data-stu-id="73e61-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="dd346-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="dd346-107">Related Sections</span></span>  
+ [<span data-ttu-id="dd346-108">布局</span><span class="sxs-lookup"><span data-stu-id="dd346-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="73e61-109">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="73e61-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="dd346-109">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="dd346-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="73e61-110">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="73e61-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="dd346-110">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="dd346-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

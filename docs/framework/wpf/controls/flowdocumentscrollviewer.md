@@ -17,19 +17,20 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0009c4397beddcc68e3c51fb5cceeb1bec99fe8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c6bc480208c94d7b531466627b70f5261e9468a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flowdocumentscrollviewer"></a><span data-ttu-id="82c3a-102">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="82c3a-102">FlowDocumentScrollViewer</span></span>
-<span data-ttu-id="82c3a-103"><xref:System.Windows.Controls.FlowDocumentScrollViewer>控件用于查看<xref:System.Windows.Documents.FlowDocument>滚动容器中的内容。</span><span class="sxs-lookup"><span data-stu-id="82c3a-103">The <xref:System.Windows.Controls.FlowDocumentScrollViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content in a scrolling container.</span></span> <span data-ttu-id="82c3a-104">与之相反<xref:System.Windows.Controls.FlowDocumentPageViewer>，该视图基于每个页的内容。</span><span class="sxs-lookup"><span data-stu-id="82c3a-104">Contrast with <xref:System.Windows.Controls.FlowDocumentPageViewer>, which views content on a per page basis.</span></span>  
+# <a name="flowdocumentscrollviewer"></a><span data-ttu-id="e3efd-102">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="e3efd-102">FlowDocumentScrollViewer</span></span>
+<span data-ttu-id="e3efd-103"><xref:System.Windows.Controls.FlowDocumentScrollViewer>控件用于查看<xref:System.Windows.Documents.FlowDocument>滚动容器中的内容。</span><span class="sxs-lookup"><span data-stu-id="e3efd-103">The <xref:System.Windows.Controls.FlowDocumentScrollViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content in a scrolling container.</span></span> <span data-ttu-id="e3efd-104">与之相反<xref:System.Windows.Controls.FlowDocumentPageViewer>，该视图基于每个页的内容。</span><span class="sxs-lookup"><span data-stu-id="e3efd-104">Contrast with <xref:System.Windows.Controls.FlowDocumentPageViewer>, which views content on a per page basis.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82c3a-105">另请参阅</span><span class="sxs-lookup"><span data-stu-id="82c3a-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e3efd-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="e3efd-105">See Also</span></span>  
  <xref:System.Windows.Controls.FlowDocumentReader>  
  <xref:System.Windows.Controls.FlowDocumentPageViewer>  
  <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
- [<span data-ttu-id="82c3a-106">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="82c3a-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="82c3a-107">流文档概述</span><span class="sxs-lookup"><span data-stu-id="82c3a-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [<span data-ttu-id="e3efd-106">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="e3efd-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="e3efd-107">流文档概述</span><span class="sxs-lookup"><span data-stu-id="e3efd-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

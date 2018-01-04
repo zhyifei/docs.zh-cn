@@ -18,18 +18,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23d0238c2c1606358a8cc2374e209a8f385c4d0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bd43baee7ed7ab75a85775a4abecf38aa41faf93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-topics"></a><span data-ttu-id="0e831-102">帮助主题</span><span class="sxs-lookup"><span data-stu-id="0e831-102">How-to Topics</span></span>
-<span data-ttu-id="0e831-103">下面的主题介绍如何创建[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]外接程序。</span><span class="sxs-lookup"><span data-stu-id="0e831-103">The following topics show how to create [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] add-ins.</span></span>  
+# <a name="how-to-topics"></a><span data-ttu-id="c2ddf-102">帮助主题</span><span class="sxs-lookup"><span data-stu-id="c2ddf-102">How-to Topics</span></span>
+<span data-ttu-id="c2ddf-103">下面的主题介绍如何创建[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]外接程序。</span><span class="sxs-lookup"><span data-stu-id="c2ddf-103">The following topics show how to create [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] add-ins.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0e831-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="0e831-104">In This Section</span></span>  
- [<span data-ttu-id="0e831-105">创建返回 UI 的外接程序</span><span class="sxs-lookup"><span data-stu-id="0e831-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [<span data-ttu-id="0e831-106">创建作为 UI 的外接程序</span><span class="sxs-lookup"><span data-stu-id="0e831-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c2ddf-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="c2ddf-104">In This Section</span></span>  
+ [<span data-ttu-id="c2ddf-105">创建返回 UI 的外接程序</span><span class="sxs-lookup"><span data-stu-id="c2ddf-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
+ [<span data-ttu-id="c2ddf-106">创建作为 UI 的外接程序</span><span class="sxs-lookup"><span data-stu-id="c2ddf-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="0e831-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="0e831-107">Related Sections</span></span>  
- [<span data-ttu-id="0e831-108">WPF 外接程序概述</span><span class="sxs-lookup"><span data-stu-id="0e831-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="c2ddf-107">相关章节</span><span class="sxs-lookup"><span data-stu-id="c2ddf-107">Related Sections</span></span>  
+ [<span data-ttu-id="c2ddf-108">WPF 外接程序概述</span><span class="sxs-lookup"><span data-stu-id="c2ddf-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

@@ -19,32 +19,33 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61e2bc470641279b594b8f77eb924a47d8a063ac
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a1b3e78bac5c388bbca4afa6354e5f9aee02c65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="properties-wpf"></a><span data-ttu-id="b2d1c-102">属性 (WPF)</span><span class="sxs-lookup"><span data-stu-id="b2d1c-102">Properties (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="b2d1c-103"> 提供一组服务，这些服务可用于扩展 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性的功能。</span><span class="sxs-lookup"><span data-stu-id="b2d1c-103"> provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="b2d1c-104">这些服务通常统称为 WPF 属性系统。</span><span class="sxs-lookup"><span data-stu-id="b2d1c-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="b2d1c-105">由 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 属性系统支持的属性称为依赖属性。</span><span class="sxs-lookup"><span data-stu-id="b2d1c-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
+# <a name="properties-wpf"></a><span data-ttu-id="cc708-102">属性 (WPF)</span><span class="sxs-lookup"><span data-stu-id="cc708-102">Properties (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="cc708-103"> 提供一组服务，这些服务可用于扩展 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性的功能。</span><span class="sxs-lookup"><span data-stu-id="cc708-103"> provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="cc708-104">这些服务通常统称为 WPF 属性系统。</span><span class="sxs-lookup"><span data-stu-id="cc708-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="cc708-105">由 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 属性系统支持的属性称为依赖属性。</span><span class="sxs-lookup"><span data-stu-id="cc708-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b2d1c-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="b2d1c-106">In This Section</span></span>  
- [<span data-ttu-id="b2d1c-107">依赖项属性概述</span><span class="sxs-lookup"><span data-stu-id="b2d1c-107">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [<span data-ttu-id="b2d1c-108">附加属性概述</span><span class="sxs-lookup"><span data-stu-id="b2d1c-108">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [<span data-ttu-id="b2d1c-109">依赖属性回调和验证</span><span class="sxs-lookup"><span data-stu-id="b2d1c-109">Dependency Property Callbacks and Validation</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
- [<span data-ttu-id="b2d1c-110">自定义依赖属性</span><span class="sxs-lookup"><span data-stu-id="b2d1c-110">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [<span data-ttu-id="b2d1c-111">依赖属性元数据</span><span class="sxs-lookup"><span data-stu-id="b2d1c-111">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [<span data-ttu-id="b2d1c-112">框架属性元数据</span><span class="sxs-lookup"><span data-stu-id="b2d1c-112">Framework Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
- [<span data-ttu-id="b2d1c-113">依赖项属性值优先级</span><span class="sxs-lookup"><span data-stu-id="b2d1c-113">Dependency Property Value Precedence</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [<span data-ttu-id="b2d1c-114">只读依赖项属性</span><span class="sxs-lookup"><span data-stu-id="b2d1c-114">Read-Only Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [<span data-ttu-id="b2d1c-115">属性值继承</span><span class="sxs-lookup"><span data-stu-id="b2d1c-115">Property Value Inheritance</span></span>](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [<span data-ttu-id="b2d1c-116">依赖属性的安全性</span><span class="sxs-lookup"><span data-stu-id="b2d1c-116">Dependency Property Security</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [<span data-ttu-id="b2d1c-117">DependencyObject 的安全构造函数模式</span><span class="sxs-lookup"><span data-stu-id="b2d1c-117">Safe Constructor Patterns for DependencyObjects</span></span>](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
- [<span data-ttu-id="b2d1c-118">集合类型依赖属性</span><span class="sxs-lookup"><span data-stu-id="b2d1c-118">Collection-Type Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [<span data-ttu-id="b2d1c-119">XAML 加载和依赖项属性</span><span class="sxs-lookup"><span data-stu-id="b2d1c-119">XAML Loading and Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [<span data-ttu-id="b2d1c-120">帮助主题</span><span class="sxs-lookup"><span data-stu-id="b2d1c-120">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cc708-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="cc708-106">In This Section</span></span>  
+ [<span data-ttu-id="cc708-107">依赖项属性概述</span><span class="sxs-lookup"><span data-stu-id="cc708-107">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="cc708-108">附加属性概述</span><span class="sxs-lookup"><span data-stu-id="cc708-108">Attached Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
+ [<span data-ttu-id="cc708-109">依赖属性回调和验证</span><span class="sxs-lookup"><span data-stu-id="cc708-109">Dependency Property Callbacks and Validation</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
+ [<span data-ttu-id="cc708-110">自定义依赖属性</span><span class="sxs-lookup"><span data-stu-id="cc708-110">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [<span data-ttu-id="cc708-111">依赖属性元数据</span><span class="sxs-lookup"><span data-stu-id="cc708-111">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [<span data-ttu-id="cc708-112">框架属性元数据</span><span class="sxs-lookup"><span data-stu-id="cc708-112">Framework Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
+ [<span data-ttu-id="cc708-113">依赖项属性值优先级</span><span class="sxs-lookup"><span data-stu-id="cc708-113">Dependency Property Value Precedence</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
+ [<span data-ttu-id="cc708-114">只读依赖项属性</span><span class="sxs-lookup"><span data-stu-id="cc708-114">Read-Only Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
+ [<span data-ttu-id="cc708-115">属性值继承</span><span class="sxs-lookup"><span data-stu-id="cc708-115">Property Value Inheritance</span></span>](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
+ [<span data-ttu-id="cc708-116">依赖属性的安全性</span><span class="sxs-lookup"><span data-stu-id="cc708-116">Dependency Property Security</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
+ [<span data-ttu-id="cc708-117">DependencyObject 的安全构造函数模式</span><span class="sxs-lookup"><span data-stu-id="cc708-117">Safe Constructor Patterns for DependencyObjects</span></span>](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
+ [<span data-ttu-id="cc708-118">集合类型依赖属性</span><span class="sxs-lookup"><span data-stu-id="cc708-118">Collection-Type Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
+ [<span data-ttu-id="cc708-119">XAML 加载和依赖项属性</span><span class="sxs-lookup"><span data-stu-id="cc708-119">XAML Loading and Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
+ [<span data-ttu-id="cc708-120">帮助主题</span><span class="sxs-lookup"><span data-stu-id="cc708-120">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="b2d1c-121">参考</span><span class="sxs-lookup"><span data-stu-id="b2d1c-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cc708-121">参考</span><span class="sxs-lookup"><span data-stu-id="cc708-121">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -53,13 +54,13 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="b2d1c-122">相关章节</span><span class="sxs-lookup"><span data-stu-id="b2d1c-122">Related Sections</span></span>  
- [<span data-ttu-id="b2d1c-123">WPF 体系结构</span><span class="sxs-lookup"><span data-stu-id="b2d1c-123">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="b2d1c-124">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="b2d1c-124">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="b2d1c-125">基元素</span><span class="sxs-lookup"><span data-stu-id="b2d1c-125">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="b2d1c-126">元素树和序列化</span><span class="sxs-lookup"><span data-stu-id="b2d1c-126">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="b2d1c-127">事件</span><span class="sxs-lookup"><span data-stu-id="b2d1c-127">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="b2d1c-128">输入</span><span class="sxs-lookup"><span data-stu-id="b2d1c-128">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="b2d1c-129">资源</span><span class="sxs-lookup"><span data-stu-id="b2d1c-129">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="b2d1c-130">WPF 内容模型</span><span class="sxs-lookup"><span data-stu-id="b2d1c-130">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [<span data-ttu-id="b2d1c-131">线程模型</span><span class="sxs-lookup"><span data-stu-id="b2d1c-131">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="cc708-122">相关章节</span><span class="sxs-lookup"><span data-stu-id="cc708-122">Related Sections</span></span>  
+ [<span data-ttu-id="cc708-123">WPF 体系结构</span><span class="sxs-lookup"><span data-stu-id="cc708-123">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+  [<span data-ttu-id="cc708-124">WPF 中的 XAML</span><span class="sxs-lookup"><span data-stu-id="cc708-124">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
+  [<span data-ttu-id="cc708-125">基元素</span><span class="sxs-lookup"><span data-stu-id="cc708-125">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
+  [<span data-ttu-id="cc708-126">元素树和序列化</span><span class="sxs-lookup"><span data-stu-id="cc708-126">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [<span data-ttu-id="cc708-127">事件</span><span class="sxs-lookup"><span data-stu-id="cc708-127">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
+  [<span data-ttu-id="cc708-128">输入</span><span class="sxs-lookup"><span data-stu-id="cc708-128">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
+  [<span data-ttu-id="cc708-129">资源</span><span class="sxs-lookup"><span data-stu-id="cc708-129">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
+  [<span data-ttu-id="cc708-130">WPF 内容模型</span><span class="sxs-lookup"><span data-stu-id="cc708-130">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
+  [<span data-ttu-id="cc708-131">线程模型</span><span class="sxs-lookup"><span data-stu-id="cc708-131">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)

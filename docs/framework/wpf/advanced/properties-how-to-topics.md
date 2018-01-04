@@ -18,20 +18,21 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa929e36128086466f9b5843b617bb2363fd7672
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2831055ea0c99aa029b8f5ce8f15460304ec3c44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="properties-how-to-topics"></a><span data-ttu-id="b9f91-102">属性帮助主题</span><span class="sxs-lookup"><span data-stu-id="b9f91-102">Properties How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="b9f91-103">本节内容</span><span class="sxs-lookup"><span data-stu-id="b9f91-103">In This Section</span></span>  
- [<span data-ttu-id="b9f91-104">实现依赖属性</span><span class="sxs-lookup"><span data-stu-id="b9f91-104">Implement a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [<span data-ttu-id="b9f91-105">添加依赖属性的所有者类型</span><span class="sxs-lookup"><span data-stu-id="b9f91-105">Add an Owner Type for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [<span data-ttu-id="b9f91-106">注册附加属性</span><span class="sxs-lookup"><span data-stu-id="b9f91-106">Register an Attached Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [<span data-ttu-id="b9f91-107">重写依赖属性的元数据</span><span class="sxs-lookup"><span data-stu-id="b9f91-107">Override Metadata for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+# <a name="properties-how-to-topics"></a><span data-ttu-id="7a316-102">属性帮助主题</span><span class="sxs-lookup"><span data-stu-id="7a316-102">Properties How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="7a316-103">本节内容</span><span class="sxs-lookup"><span data-stu-id="7a316-103">In This Section</span></span>  
+ [<span data-ttu-id="7a316-104">实现依赖属性</span><span class="sxs-lookup"><span data-stu-id="7a316-104">Implement a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
+ [<span data-ttu-id="7a316-105">添加依赖属性的所有者类型</span><span class="sxs-lookup"><span data-stu-id="7a316-105">Add an Owner Type for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [<span data-ttu-id="7a316-106">注册附加属性</span><span class="sxs-lookup"><span data-stu-id="7a316-106">Register an Attached Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
+ [<span data-ttu-id="7a316-107">重写依赖属性的元数据</span><span class="sxs-lookup"><span data-stu-id="7a316-107">Override Metadata for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="b9f91-108">参考</span><span class="sxs-lookup"><span data-stu-id="b9f91-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7a316-108">参考</span><span class="sxs-lookup"><span data-stu-id="7a316-108">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="b9f91-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="b9f91-109">Related Sections</span></span>  
- [<span data-ttu-id="b9f91-110">属性</span><span class="sxs-lookup"><span data-stu-id="b9f91-110">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="7a316-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="7a316-109">Related Sections</span></span>  
+ [<span data-ttu-id="7a316-110">属性</span><span class="sxs-lookup"><span data-stu-id="7a316-110">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)

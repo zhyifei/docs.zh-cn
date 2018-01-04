@@ -15,22 +15,23 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9f75ed7436b5a4d333d6d82f35b8c1a5601f9b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cfdd416337a10797f374be566816ec61ca4ee3cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="navigation-how-to-topics"></a><span data-ttu-id="1da38-102">导航帮助主题</span><span class="sxs-lookup"><span data-stu-id="1da38-102">Navigation How-to Topics</span></span>
-<span data-ttu-id="1da38-103">以下主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]导航。</span><span class="sxs-lookup"><span data-stu-id="1da38-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
+# <a name="navigation-how-to-topics"></a><span data-ttu-id="8413d-102">导航帮助主题</span><span class="sxs-lookup"><span data-stu-id="8413d-102">Navigation How-to Topics</span></span>
+<span data-ttu-id="8413d-103">以下主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]导航。</span><span class="sxs-lookup"><span data-stu-id="8413d-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1da38-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="1da38-104">In This Section</span></span>  
- [<span data-ttu-id="1da38-105">调用页函数</span><span class="sxs-lookup"><span data-stu-id="1da38-105">Call a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [<span data-ttu-id="1da38-106">获取页函数的返回值</span><span class="sxs-lookup"><span data-stu-id="1da38-106">Get the Return Value of a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [<span data-ttu-id="1da38-107">通过导航历史记录前进或后退</span><span class="sxs-lookup"><span data-stu-id="1da38-107">Navigate Forward or Back Through Navigation History</span></span>](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [<span data-ttu-id="1da38-108">通过页函数返回</span><span class="sxs-lookup"><span data-stu-id="1da38-108">Return from a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8413d-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="8413d-104">In This Section</span></span>  
+ [<span data-ttu-id="8413d-105">调用页函数</span><span class="sxs-lookup"><span data-stu-id="8413d-105">Call a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
+  [<span data-ttu-id="8413d-106">获取页函数的返回值</span><span class="sxs-lookup"><span data-stu-id="8413d-106">Get the Return Value of a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
+  [<span data-ttu-id="8413d-107">通过导航历史记录前进或后退</span><span class="sxs-lookup"><span data-stu-id="8413d-107">Navigate Forward or Back Through Navigation History</span></span>](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [<span data-ttu-id="8413d-108">通过页函数返回</span><span class="sxs-lookup"><span data-stu-id="8413d-108">Return from a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="1da38-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="1da38-109">Related Sections</span></span>  
- [<span data-ttu-id="1da38-110">导航概述</span><span class="sxs-lookup"><span data-stu-id="1da38-110">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="8413d-109">相关章节</span><span class="sxs-lookup"><span data-stu-id="8413d-109">Related Sections</span></span>  
+ [<span data-ttu-id="8413d-110">导航概述</span><span class="sxs-lookup"><span data-stu-id="8413d-110">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
   
- [<span data-ttu-id="1da38-111">结构化导航概述</span><span class="sxs-lookup"><span data-stu-id="1da38-111">Structured Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [<span data-ttu-id="8413d-111">结构化导航概述</span><span class="sxs-lookup"><span data-stu-id="8413d-111">Structured Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)

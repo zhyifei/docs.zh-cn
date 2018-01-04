@@ -18,27 +18,28 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8425084b2124fc6082331c9bb87c1f1f2ad9031e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 136c7b13cf5f0e824985398564fc8f17476d64f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="typography"></a><span data-ttu-id="2c9cb-102">版式</span><span class="sxs-lookup"><span data-stu-id="2c9cb-102">Typography</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="2c9cb-103">包括丰富表示的文本内容的支持。</span><span class="sxs-lookup"><span data-stu-id="2c9cb-103"> includes support for rich presentation of text content.</span></span> <span data-ttu-id="2c9cb-104">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文本通过 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技术呈现，该技术增强了文本的清晰度和可读性。</span><span class="sxs-lookup"><span data-stu-id="2c9cb-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="2c9cb-105">此外支持[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体，提供其他功能超出定义的那些[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]格式。</span><span class="sxs-lookup"><span data-stu-id="2c9cb-105"> also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
+# <a name="typography"></a><span data-ttu-id="3e5e6-102">版式</span><span class="sxs-lookup"><span data-stu-id="3e5e6-102">Typography</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="3e5e6-103">包括丰富表示的文本内容的支持。</span><span class="sxs-lookup"><span data-stu-id="3e5e6-103"> includes support for rich presentation of text content.</span></span> <span data-ttu-id="3e5e6-104">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文本通过 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技术呈现，该技术增强了文本的清晰度和可读性。</span><span class="sxs-lookup"><span data-stu-id="3e5e6-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="3e5e6-105">此外支持[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体，提供其他功能超出定义的那些[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]格式。</span><span class="sxs-lookup"><span data-stu-id="3e5e6-105"> also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2c9cb-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="2c9cb-106">In This Section</span></span>  
- [<span data-ttu-id="2c9cb-107">WPF 中的版式</span><span class="sxs-lookup"><span data-stu-id="2c9cb-107">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [<span data-ttu-id="2c9cb-108">ClearType 概述</span><span class="sxs-lookup"><span data-stu-id="2c9cb-108">ClearType Overview</span></span>](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [<span data-ttu-id="2c9cb-109">ClearType 注册表设置</span><span class="sxs-lookup"><span data-stu-id="2c9cb-109">ClearType Registry Settings</span></span>](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)  
- [<span data-ttu-id="2c9cb-110">绘制格式化文本</span><span class="sxs-lookup"><span data-stu-id="2c9cb-110">Drawing Formatted Text</span></span>](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [<span data-ttu-id="2c9cb-111">高级文本格式设置</span><span class="sxs-lookup"><span data-stu-id="2c9cb-111">Advanced Text Formatting</span></span>](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [<span data-ttu-id="2c9cb-112">字体</span><span class="sxs-lookup"><span data-stu-id="2c9cb-112">Fonts</span></span>](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
- [<span data-ttu-id="2c9cb-113">字形</span><span class="sxs-lookup"><span data-stu-id="2c9cb-113">Glyphs</span></span>](../../../../docs/framework/wpf/advanced/glyphs.md)  
- [<span data-ttu-id="2c9cb-114">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="2c9cb-114">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3e5e6-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="3e5e6-106">In This Section</span></span>  
+ [<span data-ttu-id="3e5e6-107">WPF 中的版式</span><span class="sxs-lookup"><span data-stu-id="3e5e6-107">Typography in WPF</span></span>](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [<span data-ttu-id="3e5e6-108">ClearType 概述</span><span class="sxs-lookup"><span data-stu-id="3e5e6-108">ClearType Overview</span></span>](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
+ [<span data-ttu-id="3e5e6-109">ClearType 注册表设置</span><span class="sxs-lookup"><span data-stu-id="3e5e6-109">ClearType Registry Settings</span></span>](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)  
+ [<span data-ttu-id="3e5e6-110">绘制格式化文本</span><span class="sxs-lookup"><span data-stu-id="3e5e6-110">Drawing Formatted Text</span></span>](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
+ [<span data-ttu-id="3e5e6-111">高级文本格式设置</span><span class="sxs-lookup"><span data-stu-id="3e5e6-111">Advanced Text Formatting</span></span>](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
+ [<span data-ttu-id="3e5e6-112">字体</span><span class="sxs-lookup"><span data-stu-id="3e5e6-112">Fonts</span></span>](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
+ [<span data-ttu-id="3e5e6-113">字形</span><span class="sxs-lookup"><span data-stu-id="3e5e6-113">Glyphs</span></span>](../../../../docs/framework/wpf/advanced/glyphs.md)  
+ [<span data-ttu-id="3e5e6-114">帮助主题</span><span class="sxs-lookup"><span data-stu-id="3e5e6-114">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2c9cb-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2c9cb-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3e5e6-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="3e5e6-115">See Also</span></span>  
  <xref:System.Windows.Documents.Typography>  
- [<span data-ttu-id="2c9cb-116">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="2c9cb-116">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [<span data-ttu-id="2c9cb-117">OpenType 字体功能</span><span class="sxs-lookup"><span data-stu-id="2c9cb-117">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [<span data-ttu-id="2c9cb-118">优化 WPF 应用程序性能</span><span class="sxs-lookup"><span data-stu-id="2c9cb-118">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+ [<span data-ttu-id="3e5e6-116">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="3e5e6-116">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="3e5e6-117">OpenType 字体功能</span><span class="sxs-lookup"><span data-stu-id="3e5e6-117">OpenType Font Features</span></span>](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [<span data-ttu-id="3e5e6-118">优化 WPF 应用程序性能</span><span class="sxs-lookup"><span data-stu-id="3e5e6-118">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

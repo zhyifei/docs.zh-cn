@@ -15,20 +15,21 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea9fb33be69907609152f062a8755a3a0c04cc16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2503d12453d3be230c3ff8032bcf4fa0ff321193
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="adorners"></a><span data-ttu-id="dfb04-102">装饰器</span><span class="sxs-lookup"><span data-stu-id="dfb04-102">Adorners</span></span>
-<span data-ttu-id="dfb04-103">本部分提供有关装饰器的信息和[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。</span><span class="sxs-lookup"><span data-stu-id="dfb04-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
+# <a name="adorners"></a><span data-ttu-id="d66b1-102">装饰器</span><span class="sxs-lookup"><span data-stu-id="d66b1-102">Adorners</span></span>
+<span data-ttu-id="d66b1-103">本部分提供有关装饰器的信息和[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。</span><span class="sxs-lookup"><span data-stu-id="d66b1-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="dfb04-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="dfb04-104">In This Section</span></span>  
- [<span data-ttu-id="dfb04-105">装饰器概述</span><span class="sxs-lookup"><span data-stu-id="dfb04-105">Adorners Overview</span></span>](../../../../docs/framework/wpf/controls/adorners-overview.md)  
- [<span data-ttu-id="dfb04-106">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="dfb04-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d66b1-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="d66b1-104">In This Section</span></span>  
+ [<span data-ttu-id="d66b1-105">装饰器概述</span><span class="sxs-lookup"><span data-stu-id="d66b1-105">Adorners Overview</span></span>](../../../../docs/framework/wpf/controls/adorners-overview.md)  
+ [<span data-ttu-id="d66b1-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="d66b1-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="dfb04-107">参考</span><span class="sxs-lookup"><span data-stu-id="dfb04-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d66b1-107">参考</span><span class="sxs-lookup"><span data-stu-id="d66b1-107">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -39,4 +40,4 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="dfb04-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="dfb04-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d66b1-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="d66b1-108">Related Sections</span></span>

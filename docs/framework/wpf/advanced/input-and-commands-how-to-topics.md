@@ -17,29 +17,30 @@ caps.latest.revision: "76"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dbec8435c82e795d48544a366eeced2419f6d8c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 301532e640273073a884d62d24363557b4ce1e04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="f5a4c-102">输入和命令帮助主题</span><span class="sxs-lookup"><span data-stu-id="f5a4c-102">Input and Commands How-to Topics</span></span>
-<span data-ttu-id="f5a4c-103">本部分中的主题介绍如何使用中的输入和命令基础结构[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f5a4c-103">The topics in this section describe how to use the input and commanding infrastructure in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span></span>  
+# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="ef3e2-102">输入和命令帮助主题</span><span class="sxs-lookup"><span data-stu-id="ef3e2-102">Input and Commands How-to Topics</span></span>
+<span data-ttu-id="ef3e2-103">本部分中的主题介绍如何使用中的输入和命令基础结构[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="ef3e2-103">The topics in this section describe how to use the input and commanding infrastructure in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f5a4c-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="f5a4c-104">In This Section</span></span>  
- [<span data-ttu-id="f5a4c-105">启用命令</span><span class="sxs-lookup"><span data-stu-id="f5a4c-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [<span data-ttu-id="f5a4c-106">更改光标类型</span><span class="sxs-lookup"><span data-stu-id="f5a4c-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [<span data-ttu-id="f5a4c-107">使用焦点事件更改元素的颜色</span><span class="sxs-lookup"><span data-stu-id="f5a4c-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [<span data-ttu-id="f5a4c-108">向控件应用 FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="f5a4c-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [<span data-ttu-id="f5a4c-109">检测何时按下 Enter 键</span><span class="sxs-lookup"><span data-stu-id="f5a4c-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [<span data-ttu-id="f5a4c-110">使用事件创建变换效果</span><span class="sxs-lookup"><span data-stu-id="f5a4c-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [<span data-ttu-id="f5a4c-111">让对象跟随鼠标指针移动</span><span class="sxs-lookup"><span data-stu-id="f5a4c-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [<span data-ttu-id="f5a4c-112">创建 RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="f5a4c-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [<span data-ttu-id="f5a4c-113">实现 ICommandSource</span><span class="sxs-lookup"><span data-stu-id="f5a4c-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [<span data-ttu-id="f5a4c-114">将命令挂钩到不支持命令的控件</span><span class="sxs-lookup"><span data-stu-id="f5a4c-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [<span data-ttu-id="f5a4c-115">将命令挂钩到支持命令的控件</span><span class="sxs-lookup"><span data-stu-id="f5a4c-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ef3e2-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="ef3e2-104">In This Section</span></span>  
+ [<span data-ttu-id="ef3e2-105">启用命令</span><span class="sxs-lookup"><span data-stu-id="ef3e2-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
+ [<span data-ttu-id="ef3e2-106">更改光标类型</span><span class="sxs-lookup"><span data-stu-id="ef3e2-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
+ [<span data-ttu-id="ef3e2-107">使用焦点事件更改元素的颜色</span><span class="sxs-lookup"><span data-stu-id="ef3e2-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [<span data-ttu-id="ef3e2-108">向控件应用 FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="ef3e2-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [<span data-ttu-id="ef3e2-109">检测何时按下 Enter 键</span><span class="sxs-lookup"><span data-stu-id="ef3e2-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
+ [<span data-ttu-id="ef3e2-110">使用事件创建变换效果</span><span class="sxs-lookup"><span data-stu-id="ef3e2-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
+ [<span data-ttu-id="ef3e2-111">让对象跟随鼠标指针移动</span><span class="sxs-lookup"><span data-stu-id="ef3e2-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [<span data-ttu-id="ef3e2-112">创建 RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="ef3e2-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
+ [<span data-ttu-id="ef3e2-113">实现 ICommandSource</span><span class="sxs-lookup"><span data-stu-id="ef3e2-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
+ [<span data-ttu-id="ef3e2-114">将命令挂钩到不支持命令的控件</span><span class="sxs-lookup"><span data-stu-id="ef3e2-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [<span data-ttu-id="ef3e2-115">将命令挂钩到支持命令的控件</span><span class="sxs-lookup"><span data-stu-id="ef3e2-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a><span data-ttu-id="f5a4c-116">参考</span><span class="sxs-lookup"><span data-stu-id="f5a4c-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ef3e2-116">参考</span><span class="sxs-lookup"><span data-stu-id="ef3e2-116">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -54,4 +55,4 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="f5a4c-117">相关章节</span><span class="sxs-lookup"><span data-stu-id="f5a4c-117">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="ef3e2-117">相关章节</span><span class="sxs-lookup"><span data-stu-id="ef3e2-117">Related Sections</span></span>

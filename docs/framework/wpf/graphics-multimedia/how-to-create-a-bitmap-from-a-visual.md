@@ -19,21 +19,22 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7aabb01d35e02323785b6bae0764a8d8bc636e16
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db3ad547072f1d9162ede5c45144aa30e809c50e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-create-a-bitmap-from-a-visual"></a><span data-ttu-id="3d34d-102">如何：从 Visual 创建位图</span><span class="sxs-lookup"><span data-stu-id="3d34d-102">How to: Create a Bitmap from a Visual</span></span>
-<span data-ttu-id="3d34d-103">此示例演示了如何创建从位图<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="3d34d-103">This example shows how you can create a bitmap from a <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="3d34d-104">A<xref:System.Windows.Media.DrawingVisual>呈现使用<xref:System.Windows.Media.FormattedText>。</span><span class="sxs-lookup"><span data-stu-id="3d34d-104">A <xref:System.Windows.Media.DrawingVisual> is rendered with <xref:System.Windows.Media.FormattedText>.</span></span> <span data-ttu-id="3d34d-105"><xref:System.Windows.Media.Visual>将呈现到<xref:System.Windows.Media.Imaging.RenderTargetBitmap>创建给定的文本的位图。</span><span class="sxs-lookup"><span data-stu-id="3d34d-105">The <xref:System.Windows.Media.Visual> is then rendered to the <xref:System.Windows.Media.Imaging.RenderTargetBitmap> creating a bitmap of the given text.</span></span>  
+# <a name="how-to-create-a-bitmap-from-a-visual"></a><span data-ttu-id="b4e3a-102">如何：从 Visual 创建位图</span><span class="sxs-lookup"><span data-stu-id="b4e3a-102">How to: Create a Bitmap from a Visual</span></span>
+<span data-ttu-id="b4e3a-103">此示例演示了如何创建从位图<xref:System.Windows.Media.Visual>。</span><span class="sxs-lookup"><span data-stu-id="b4e3a-103">This example shows how you can create a bitmap from a <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="b4e3a-104">A<xref:System.Windows.Media.DrawingVisual>呈现使用<xref:System.Windows.Media.FormattedText>。</span><span class="sxs-lookup"><span data-stu-id="b4e3a-104">A <xref:System.Windows.Media.DrawingVisual> is rendered with <xref:System.Windows.Media.FormattedText>.</span></span> <span data-ttu-id="b4e3a-105"><xref:System.Windows.Media.Visual>将呈现到<xref:System.Windows.Media.Imaging.RenderTargetBitmap>创建给定的文本的位图。</span><span class="sxs-lookup"><span data-stu-id="b4e3a-105">The <xref:System.Windows.Media.Visual> is then rendered to the <xref:System.Windows.Media.Imaging.RenderTargetBitmap> creating a bitmap of the given text.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3d34d-106">示例</span><span class="sxs-lookup"><span data-stu-id="3d34d-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b4e3a-106">示例</span><span class="sxs-lookup"><span data-stu-id="b4e3a-106">Example</span></span>  
  [!code-csharp[ImagingSnippetGallery_procedural_snip#CreateRTBImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample.cs#creatertbimage)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#CreateRTBImage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample.vb#creatertbimage)]  
   
-## <a name="see-also"></a><span data-ttu-id="3d34d-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3d34d-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b4e3a-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="b4e3a-107">See Also</span></span>  
  <xref:System.Windows.Media.DrawingContext>  
- [<span data-ttu-id="3d34d-108">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="3d34d-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="3d34d-109">Drawing 对象概述</span><span class="sxs-lookup"><span data-stu-id="3d34d-109">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [<span data-ttu-id="3d34d-110">使用 DrawingVisual 对象</span><span class="sxs-lookup"><span data-stu-id="3d34d-110">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+ [<span data-ttu-id="b4e3a-108">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="b4e3a-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="b4e3a-109">Drawing 对象概述</span><span class="sxs-lookup"><span data-stu-id="b4e3a-109">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="b4e3a-110">使用 DrawingVisual 对象</span><span class="sxs-lookup"><span data-stu-id="b4e3a-110">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)

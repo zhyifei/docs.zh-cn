@@ -21,14 +21,15 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77b6d75b48fd137092600a7e2316cbcf7099de76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c5d90756ee200ba091f2f9e15e9e7d5632984ba9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a><span data-ttu-id="23127-102">如何：通过 Inlines 属性操作流内容元素</span><span class="sxs-lookup"><span data-stu-id="23127-102">How to: Manipulate Flow Content Elements through the Inlines Property</span></span>
-<span data-ttu-id="23127-103">这些示例演示一些较常见可以在内联流内容元素执行的操作 (和容器的此类元素，如<xref:System.Windows.Controls.TextBlock>) 通过**内联**属性。</span><span class="sxs-lookup"><span data-stu-id="23127-103">These examples demonstrate some of the more common operations that can be performed on inline flow content elements (and containers of such elements, such as <xref:System.Windows.Controls.TextBlock>) through the **Inlines** property.</span></span> <span data-ttu-id="23127-104">此属性用于添加和移除项从<xref:System.Windows.Documents.InlineCollection>。</span><span class="sxs-lookup"><span data-stu-id="23127-104">This property is used to add and remove items from <xref:System.Windows.Documents.InlineCollection>.</span></span> <span data-ttu-id="23127-105">流内容元素，该功能**内联**属性包括：</span><span class="sxs-lookup"><span data-stu-id="23127-105">Flow content elements that feature an **Inlines** property include:</span></span>  
+# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a><span data-ttu-id="4e9e5-102">如何：通过 Inlines 属性操作流内容元素</span><span class="sxs-lookup"><span data-stu-id="4e9e5-102">How to: Manipulate Flow Content Elements through the Inlines Property</span></span>
+<span data-ttu-id="4e9e5-103">这些示例演示一些较常见可以在内联流内容元素执行的操作 (和容器的此类元素，如<xref:System.Windows.Controls.TextBlock>) 通过**内联**属性。</span><span class="sxs-lookup"><span data-stu-id="4e9e5-103">These examples demonstrate some of the more common operations that can be performed on inline flow content elements (and containers of such elements, such as <xref:System.Windows.Controls.TextBlock>) through the **Inlines** property.</span></span> <span data-ttu-id="4e9e5-104">此属性用于添加和移除项从<xref:System.Windows.Documents.InlineCollection>。</span><span class="sxs-lookup"><span data-stu-id="4e9e5-104">This property is used to add and remove items from <xref:System.Windows.Documents.InlineCollection>.</span></span> <span data-ttu-id="4e9e5-105">流内容元素，该功能**内联**属性包括：</span><span class="sxs-lookup"><span data-stu-id="4e9e5-105">Flow content elements that feature an **Inlines** property include:</span></span>  
   
 -   <xref:System.Windows.Documents.Bold>  
   
@@ -42,43 +43,43 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Documents.Underline>  
   
- <span data-ttu-id="23127-106">这些示例碰巧使用<xref:System.Windows.Documents.Span>作为流内容元素，但是，这些技术是适用于所有元素或控件承载<xref:System.Windows.Documents.InlineCollection>集合。</span><span class="sxs-lookup"><span data-stu-id="23127-106">These examples happen to use <xref:System.Windows.Documents.Span> as the flow content element, but these techniques are applicable to all elements or controls that host an <xref:System.Windows.Documents.InlineCollection> collection.</span></span>  
+ <span data-ttu-id="4e9e5-106">这些示例碰巧使用<xref:System.Windows.Documents.Span>作为流内容元素，但是，这些技术是适用于所有元素或控件承载<xref:System.Windows.Documents.InlineCollection>集合。</span><span class="sxs-lookup"><span data-stu-id="4e9e5-106">These examples happen to use <xref:System.Windows.Documents.Span> as the flow content element, but these techniques are applicable to all elements or controls that host an <xref:System.Windows.Documents.InlineCollection> collection.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="23127-107">示例</span><span class="sxs-lookup"><span data-stu-id="23127-107">Example</span></span>  
- <span data-ttu-id="23127-108">下面的示例创建一个新<xref:System.Windows.Documents.Span>对象，然后使用**添加**方法添加两个文本运行，作为内容的子级<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="23127-108">The following example creates a new <xref:System.Windows.Documents.Span> object, and then uses the **Add** method to add two text runs as content children of the <xref:System.Windows.Documents.Span>.</span></span>  
+## <a name="example"></a><span data-ttu-id="4e9e5-107">示例</span><span class="sxs-lookup"><span data-stu-id="4e9e5-107">Example</span></span>  
+ <span data-ttu-id="4e9e5-108">下面的示例创建一个新<xref:System.Windows.Documents.Span>对象，然后使用**添加**方法添加两个文本运行，作为内容的子级<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="4e9e5-108">The following example creates a new <xref:System.Windows.Documents.Span> object, and then uses the **Add** method to add two text runs as content children of the <xref:System.Windows.Documents.Span>.</span></span>  
   
  [!code-csharp[SpanSnippets#_SpanInlinesAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesadd)]
  [!code-vb[SpanSnippets#_SpanInlinesAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesadd)]  
   
-## <a name="example"></a><span data-ttu-id="23127-109">示例</span><span class="sxs-lookup"><span data-stu-id="23127-109">Example</span></span>  
- <span data-ttu-id="23127-110">下面的示例创建一个新<xref:System.Windows.Documents.Run>元素并将其插入的开始处<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="23127-110">The following example creates a new <xref:System.Windows.Documents.Run> element and inserts it at the beginning of the <xref:System.Windows.Documents.Span>.</span></span>  
+## <a name="example"></a><span data-ttu-id="4e9e5-109">示例</span><span class="sxs-lookup"><span data-stu-id="4e9e5-109">Example</span></span>  
+ <span data-ttu-id="4e9e5-110">下面的示例创建一个新<xref:System.Windows.Documents.Run>元素并将其插入的开始处<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="4e9e5-110">The following example creates a new <xref:System.Windows.Documents.Run> element and inserts it at the beginning of the <xref:System.Windows.Documents.Span>.</span></span>  
   
  [!code-csharp[SpanSnippets#_SpanInlinesInsert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesinsert)]
  [!code-vb[SpanSnippets#_SpanInlinesInsert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesinsert)]  
   
-## <a name="example"></a><span data-ttu-id="23127-111">示例</span><span class="sxs-lookup"><span data-stu-id="23127-111">Example</span></span>  
- <span data-ttu-id="23127-112">下面的示例获取的顶级数<xref:System.Windows.Documents.Inline>中所含元素<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="23127-112">The following example gets the number of top-level <xref:System.Windows.Documents.Inline> elements contained in the <xref:System.Windows.Documents.Span>.</span></span>  
+## <a name="example"></a><span data-ttu-id="4e9e5-111">示例</span><span class="sxs-lookup"><span data-stu-id="4e9e5-111">Example</span></span>  
+ <span data-ttu-id="4e9e5-112">下面的示例获取的顶级数<xref:System.Windows.Documents.Inline>中所含元素<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="4e9e5-112">The following example gets the number of top-level <xref:System.Windows.Documents.Inline> elements contained in the <xref:System.Windows.Documents.Span>.</span></span>  
   
  [!code-csharp[SpanSnippets#_SpanInlinesCount](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinescount)]
  [!code-vb[SpanSnippets#_SpanInlinesCount](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinescount)]  
   
-## <a name="example"></a><span data-ttu-id="23127-113">示例</span><span class="sxs-lookup"><span data-stu-id="23127-113">Example</span></span>  
- <span data-ttu-id="23127-114">以下示例将删除最后一个<xref:System.Windows.Documents.Inline>中的元素<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="23127-114">The following example deletes the last <xref:System.Windows.Documents.Inline> element in the <xref:System.Windows.Documents.Span>.</span></span>  
+## <a name="example"></a><span data-ttu-id="4e9e5-113">示例</span><span class="sxs-lookup"><span data-stu-id="4e9e5-113">Example</span></span>  
+ <span data-ttu-id="4e9e5-114">以下示例将删除最后一个<xref:System.Windows.Documents.Inline>中的元素<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="4e9e5-114">The following example deletes the last <xref:System.Windows.Documents.Inline> element in the <xref:System.Windows.Documents.Span>.</span></span>  
   
  [!code-csharp[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesremovelast)]
  [!code-vb[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesremovelast)]  
   
-## <a name="example"></a><span data-ttu-id="23127-115">示例</span><span class="sxs-lookup"><span data-stu-id="23127-115">Example</span></span>  
- <span data-ttu-id="23127-116">下面的示例清除的所有内容 (<xref:System.Windows.Documents.Inline>元素) 从<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="23127-116">The following example clears all of the contents (<xref:System.Windows.Documents.Inline> elements) from the <xref:System.Windows.Documents.Span>.</span></span>  
+## <a name="example"></a><span data-ttu-id="4e9e5-115">示例</span><span class="sxs-lookup"><span data-stu-id="4e9e5-115">Example</span></span>  
+ <span data-ttu-id="4e9e5-116">下面的示例清除的所有内容 (<xref:System.Windows.Documents.Inline>元素) 从<xref:System.Windows.Documents.Span>。</span><span class="sxs-lookup"><span data-stu-id="4e9e5-116">The following example clears all of the contents (<xref:System.Windows.Documents.Inline> elements) from the <xref:System.Windows.Documents.Span>.</span></span>  
   
  [!code-csharp[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
  [!code-vb[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
-## <a name="see-also"></a><span data-ttu-id="23127-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="23127-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4e9e5-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e9e5-117">See Also</span></span>  
  <xref:System.Windows.Documents.BlockCollection>  
  <xref:System.Windows.Documents.InlineCollection>  
  <xref:System.Windows.Documents.ListItemCollection>  
- [<span data-ttu-id="23127-118">流文档概述</span><span class="sxs-lookup"><span data-stu-id="23127-118">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="23127-119">通过 Blocks 属性控制 FlowDocument</span><span class="sxs-lookup"><span data-stu-id="23127-119">Manipulate a FlowDocument through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [<span data-ttu-id="23127-120">通过 Columns 属性控制表列</span><span class="sxs-lookup"><span data-stu-id="23127-120">Manipulate a Table's Columns through the Columns Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [<span data-ttu-id="23127-121">通过 RowGroups 属性操作表的行组</span><span class="sxs-lookup"><span data-stu-id="23127-121">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+ [<span data-ttu-id="4e9e5-118">流文档概述</span><span class="sxs-lookup"><span data-stu-id="4e9e5-118">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="4e9e5-119">通过 Blocks 属性控制 FlowDocument</span><span class="sxs-lookup"><span data-stu-id="4e9e5-119">Manipulate a FlowDocument through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [<span data-ttu-id="4e9e5-120">通过 Columns 属性控制表列</span><span class="sxs-lookup"><span data-stu-id="4e9e5-120">Manipulate a Table's Columns through the Columns Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [<span data-ttu-id="4e9e5-121">通过 RowGroups 属性操作表的行组</span><span class="sxs-lookup"><span data-stu-id="4e9e5-121">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
