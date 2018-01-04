@@ -8,11 +8,12 @@ ms.date: 11/06/2017
 ms.topic: article-type-from-white-list
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.openlocfilehash: 461d90aaf5beca1c0f1d1965ce0ea07411e56e79
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) 和性能计数器 （非托管 API 参考）
 
@@ -28,14 +29,14 @@ ms.lasthandoff: 11/22/2017
 | [BeginMethodEnumeration 函数](beginmethodenumeration.md) |  开始为对象提供的方法的枚举。 |
 | [BlessIWbemServices 函数](blessiwbemservices.md) | 指示用户凭据是否允许访问指定的 IWbemServices 类。 |
 | [BlessIWbemServicesObject 函数](blessiwbemservicesobject.md) | 指示用户凭据是否允许与指定的 IWbem 服务对象的访问。 |
-| [克隆函数](clone.md) | 返回是当前对象的完整克隆一个新对象。 |
+| [Clone 函数](clone.md) | 返回是当前对象的完整克隆一个新对象。 |
 | [CloneEnumWbemClassObject 函数](cloneenumwbemclassobject.md) | 生成的枚举，保留当前位置枚举中的逻辑副本。 |
 | [CompareTo 函数](compareto.md) | 比较对象和另一个 Windows 管理对象。 |
 | [ConnectServerWmi 函数](connectserverwmi.md) | 指定计算机上创建的 WMI 命名空间通过 DCOM 的连接。 |
 | [CreateClassEnumWmi 函数](createclassenumwmi.md) | 返回满足指定的选择条件的所有类的枚举数。 |
 | [CreateInstanceEnumWmi 函数](createinstanceenumwmi.md) | 返回一个枚举器返回满足指定的选择条件指定类的实例。 |
-| [删除函数](delete.md) | 从类定义和所有其限定符中删除指定的属性。 |
-| [Delete 方法函数](deletemethod.md) | 从 CIM 类定义中删除指定的方法。 |
+| [Delete 函数](delete.md) | 从类定义和所有其限定符中删除指定的属性。 |
+| [DeleteMethod 函数](deletemethod.md) | 从 CIM 类定义中删除指定的方法。 |
 | [EndEnumeration 函数](endenumeration.md) | 终止枚举序列。 | 
 | [EndMethodEnumeration 函数](endmethodenumeration.md) | 终止通过调用启动枚举序列[BeginMethodEnumeration 函数](beginmethodenumeration.md)。 |
 | [ExecNotificationQueryWmi 函数](execnotificationquerywmi.md) | 执行查询以接收事件。 |

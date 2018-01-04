@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 184673cdeb45721a76801c59ddd9fb684b7df9a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6d6c3ed6fd24044f669f93c7ecb74e727fb6e4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queue-dropped-messages"></a>Queue Dropped Messages（队列丢弃的消息数）
 计数器名称：Queued Messages Dropped（已丢弃的排队消息数）。  

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 707b97c49d6a6f5262719e91f8cb38fe7da53601
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d8fd3ab00f8a0bf26a463e30556826c09820869f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="core-communications-webhost-support"></a>核心通信：Webhost 支持
 本主题列出由 Webhost 支持生成的所有异常。  
@@ -29,5 +30,5 @@ ms.lasthandoff: 12/02/2017
 |Hosting_CompatibilityServiceNotHosted|此服务需要 ASP.NET 兼容性。 它还必须承载于 IIS 中。 将服务承载于 IIS 中，并在 Web.config 中打开 ASP.NET 兼容性，或将 AspNetCompatibilityRequirementsAttribute.AspNetCompatibilityRequirementsMode 属性设置为“Required”以外的值。|  
 |Hosting_ListenerNotFoundForActivationInRecycling|当前没有侦听指定地址的通道。 如果正在回收应用程序，则会关闭服务。|  
 |Hosting_NonHTTPInCompatibilityMode|受 ASP.NET 兼容性支持的协议只有 HTTP 和 HTTPS。 删除指定终结点或对应用程序禁用 ASP.NET 兼容性。|  
-|Hosting_ProcessNotExecutingUnderHostedContext|无法在当前宿主环境中调用指定的宿主进程。 此 API 要求调用应用程序承载于 Internet 信息服务或 Windows 进程激活服务中。|  
+|Hosting_ProcessNotExecutingUnderHostedContext|无法在当前宿主环境中调用指定的托管进程。 此 API 要求调用应用程序承载于 Internet 信息服务或 Windows 进程激活服务中。|  
 |Hosting_ServiceCompatibilityRequire|无法激活此服务，因为此服务需要 ASP.NET 兼容性。 没有对此应用程序启用 ASP.NET 兼容性。 请在 Web.config 文件中启用 ASP.NET 兼容性，或设置 AspNetCompatibilityRequirementsAttribute.AspNetCompatibility。|

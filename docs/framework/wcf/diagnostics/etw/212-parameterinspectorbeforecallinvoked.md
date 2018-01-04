@@ -13,18 +13,19 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 64dcdb3a928d2ec05cd7dac557b6db10cb4a6511
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c428c9057e1538cfadb2b02bd05e2d61b4566399
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="212---parameterinspectorbeforecallinvoked"></a>212 - ParameterInspectorBeforeCallInvoked
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|212|  
+|Id|212|  
 |关键字|疑难解答，ServiceModel|  
 |级别|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/分析|  

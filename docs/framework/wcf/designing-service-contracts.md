@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3204e4c280c6c1acd50062fa44b46344926c3908
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 293d7f8502b39eac6508ba10b2fac128c6aa4879
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-service-contracts"></a>设计服务协定
 本主题介绍什么是服务协定、如何定义服务协定、可用的操作（以及基础消息交换的含义）、使用的数据类型以及可帮助您设计能满足方案需求的操作的其他问题。  
@@ -276,12 +277,12 @@ End Interface
 ##### <a name="names-namespaces-and-obfuscation"></a>名称、命名空间和混淆处理  
  在将协定转换为 WSDL 以及创建和发送协定消息时，协定与操作的定义中的 .NET 类型的名称和命名空间意义重大。 因此，强烈建议使用所有支持协定属性 (Attribute)（如 `Name`、`Namespace`、<xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute> 和其他协定属性 (Attribute)）的 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Property) 显式设置服务协定名称和命名空间。  
   
- 这样做的一个原因在于，如果未显式设置名称和命名空间，则在程序集上使用 IL 模糊处理时会改变协定类型名称和命名空间，并产生已修改的 WSDL 以及通常会失败的网络交换。 如果未显式设置协定名称和命名空间，但确实想使用模糊处理，请使用 <xref:System.Reflection.ObfuscationAttribute> 和 <xref:System.Reflection.ObfuscateAssemblyAttribute> 属性，以防止修改协定类型名称和命名空间。  
+ 这样做的一个原因在于，如果未显式设置名称和命名空间，则在程序集上使用 IL 混淆处理时会改变协定类型名称和命名空间，并产生已修改的 WSDL 以及通常会失败的网络交换。 如果未显式设置协定名称和命名空间，但确实想使用模糊处理，请使用 <xref:System.Reflection.ObfuscationAttribute> 和 <xref:System.Reflection.ObfuscateAssemblyAttribute> 属性，以防止修改协定类型名称和命名空间。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 创建请求-答复协定](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
- [如何： 创建单向协定](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
- [如何： 创建双工协定](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+## <a name="see-also"></a>请参阅  
+ [如何：创建请求-答复协定](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)  
+ [如何：创建单向协定](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)  
+ [如何：创建双工协定](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [在服务协定中指定数据传输](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [在协定和服务中指定并处理错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
  [使用会话](../../../docs/framework/wcf/using-sessions.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9259ca71a21e36eaae06d33920adec538e36d98
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee1daab843ad0a2161d13b86bcd657b7236ddaa6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="403---suspendsignpostevent"></a>403 - SuspendSignpostEvent
 ## <a name="properties"></a>属性  
@@ -40,4 +41,4 @@ ms.lasthandoff: 12/02/2017
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
 |扩展数据|`xs:string`|活动的名称。|  
-|应用程序域|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|

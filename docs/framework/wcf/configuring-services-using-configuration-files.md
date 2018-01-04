@@ -14,11 +14,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4decb820f012d3f4b2a9855cd08701f14dcc5431
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 通过使用配置文件配置 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务，可提供在部署时而非设计时提供终结点和服务行为数据的灵活性。 本主题概述了当前可用的主要技术。  
@@ -271,7 +272,7 @@ ms.lasthandoff: 12/02/2017
   
  如果子行为集合包含一个已显示在父行为集合中的行为，则子行为将重写父行为。 因此，如果父行为集合具有`<serviceMetadata httpGetEnabled="False" />`而子行为集合具有`<serviceMetadata httpGetEnabled="True" />`，则子行为将重写行为集合中的父行为并且 httpGetEnabled 将为"true"。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [简化配置](../../../docs/framework/wcf/simplified-configuration.md)  
  [配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<服务 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  

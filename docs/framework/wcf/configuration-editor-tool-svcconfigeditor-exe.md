@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a301e23ead8e52273ed4fe7a503f1fe11e2f1348
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>配置编辑器工具 (SvcConfigEditor.exe)
 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务配置编辑器 (SvcConfigEditor.exe)，管理员和开发人员可以使用图形用户界面来创建和修改 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的配置设置。 利用此工具，您不必直接编辑 XML 配置文件就可管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 绑定、行为、服务和诊断的设置。  
@@ -118,7 +119,7 @@ ms.lasthandoff: 12/02/2017
   
 3.  在对话框中键入基址 URI。  
   
-4.  单击“确定”。  
+4.  单击 **“确定”**。  
   
 > [!NOTE]
 >  不能编辑的值[ \<Baseaddressprefixfilter >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)内此工具。 若要添加或修改此元素，您应使用文本编辑器或 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。  
@@ -346,7 +347,7 @@ ms.lasthandoff: 12/02/2017
   
 2.  输入名称和类型。  
   
-3.  单击“确定”。  
+3.  单击 **“确定”**。  
   
 4.  扩展现在出现在编辑器中的适当位置。 例如，如果添加了行为元素扩展，它将出现在可用扩展的列表中。  
   
@@ -379,7 +380,7 @@ ms.lasthandoff: 12/02/2017
   
 1.  选择**文件**菜单->**集成** -> **COM + 应用程序。** 此操作将关闭当前打开的文件。 如果当前文件中有未保存的数据，将显示“保存”对话框。 **COM + 集成向导**随即启动。  
   
-2.  在第一页中，从树中选择 COM+ 应用程序。 如果在树中找不到您的 COM+ 应用程序，请验证它是否已安装在组件服务中，并已在全局程序集缓存 (GAC) 中注册。  
+2.  在第一页中，从树中选择 COM+ 应用程序。 如果在树中找不到你的 COM+ 应用程序，请验证它是否已安装在组件服务中，并已在全局程序集缓存 (GAC) 中注册。  
   
 3.  在下一页中，选择要公开哪个（哪些）方法作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 默认情况下，COM+ 应用程序中支持的所有方法都将显示并被选中。  
   

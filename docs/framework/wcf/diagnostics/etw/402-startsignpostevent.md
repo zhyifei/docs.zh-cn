@@ -13,18 +13,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ade357acdebc6222e59bf5b15725a1edc97dc43
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 62587e6aa15ef57d5fee349795dfd60bb52812d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="402---startsignpostevent"></a>402 - StartSignpostEvent
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|402|  
+|Id|402|  
 |关键字|疑难解答|  
 |级别|信息|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/分析|  
@@ -40,4 +41,4 @@ ms.lasthandoff: 12/02/2017
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
 |扩展数据|`xs:string`|活动的名称。|  
-|应用程序域|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
+|AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。|
