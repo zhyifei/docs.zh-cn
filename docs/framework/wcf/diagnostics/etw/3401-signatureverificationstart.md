@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 944de7cb079779359a594710e895619b3a788f50
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce18b979a52b1ebde907e90d540d172e272794aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3401---signatureverificationstart"></a><span data-ttu-id="a8d70-102">3401 - SignatureVerificationStart</span><span class="sxs-lookup"><span data-stu-id="a8d70-102">3401 - SignatureVerificationStart</span></span>
-## <a name="properties"></a><span data-ttu-id="a8d70-103">属性</span><span class="sxs-lookup"><span data-stu-id="a8d70-103">Properties</span></span>  
+# <a name="3401---signatureverificationstart"></a><span data-ttu-id="b59ba-102">3401 - SignatureVerificationStart</span><span class="sxs-lookup"><span data-stu-id="b59ba-102">3401 - SignatureVerificationStart</span></span>
+## <a name="properties"></a><span data-ttu-id="b59ba-103">属性</span><span class="sxs-lookup"><span data-stu-id="b59ba-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="a8d70-104">ID</span><span class="sxs-lookup"><span data-stu-id="a8d70-104">ID</span></span>|<span data-ttu-id="a8d70-105">3401</span><span class="sxs-lookup"><span data-stu-id="a8d70-105">3401</span></span>|  
-|<span data-ttu-id="a8d70-106">关键字</span><span class="sxs-lookup"><span data-stu-id="a8d70-106">Keywords</span></span>|<span data-ttu-id="a8d70-107">安全性</span><span class="sxs-lookup"><span data-stu-id="a8d70-107">Security</span></span>|  
-|<span data-ttu-id="a8d70-108">级别</span><span class="sxs-lookup"><span data-stu-id="a8d70-108">Level</span></span>|<span data-ttu-id="a8d70-109">详细</span><span class="sxs-lookup"><span data-stu-id="a8d70-109">Verbose</span></span>|  
-|<span data-ttu-id="a8d70-110">通道</span><span class="sxs-lookup"><span data-stu-id="a8d70-110">Channel</span></span>|<span data-ttu-id="a8d70-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="a8d70-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="b59ba-104">ID</span><span class="sxs-lookup"><span data-stu-id="b59ba-104">ID</span></span>|<span data-ttu-id="b59ba-105">3401</span><span class="sxs-lookup"><span data-stu-id="b59ba-105">3401</span></span>|  
+|<span data-ttu-id="b59ba-106">关键字</span><span class="sxs-lookup"><span data-stu-id="b59ba-106">Keywords</span></span>|<span data-ttu-id="b59ba-107">安全性</span><span class="sxs-lookup"><span data-stu-id="b59ba-107">Security</span></span>|  
+|<span data-ttu-id="b59ba-108">级别</span><span class="sxs-lookup"><span data-stu-id="b59ba-108">Level</span></span>|<span data-ttu-id="b59ba-109">详细</span><span class="sxs-lookup"><span data-stu-id="b59ba-109">Verbose</span></span>|  
+|<span data-ttu-id="b59ba-110">通道</span><span class="sxs-lookup"><span data-stu-id="b59ba-110">Channel</span></span>|<span data-ttu-id="b59ba-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="b59ba-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="a8d70-112">描述</span><span class="sxs-lookup"><span data-stu-id="a8d70-112">Description</span></span>  
- <span data-ttu-id="a8d70-113">当签名验证已开始时，将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="a8d70-113">This event is emitted when the signature verification has started.</span></span>  
+## <a name="description"></a><span data-ttu-id="b59ba-112">描述</span><span class="sxs-lookup"><span data-stu-id="b59ba-112">Description</span></span>  
+ <span data-ttu-id="b59ba-113">当签名验证已开始时，将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="b59ba-113">This event is emitted when the signature verification has started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="a8d70-114">消息</span><span class="sxs-lookup"><span data-stu-id="a8d70-114">Message</span></span>  
- <span data-ttu-id="a8d70-115">签名验证已开始。</span><span class="sxs-lookup"><span data-stu-id="a8d70-115">Signature verification started.</span></span>  
+## <a name="message"></a><span data-ttu-id="b59ba-114">消息</span><span class="sxs-lookup"><span data-stu-id="b59ba-114">Message</span></span>  
+ <span data-ttu-id="b59ba-115">签名验证已开始。</span><span class="sxs-lookup"><span data-stu-id="b59ba-115">Signature verification started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="a8d70-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="a8d70-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="b59ba-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="b59ba-116">Details</span></span>

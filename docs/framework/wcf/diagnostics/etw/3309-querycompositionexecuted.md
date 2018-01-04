@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6d5ba90253e1f9c2bd7ff998acd45382318fadf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87a4c3bb61be2a2a6461b25ab4ff32e5b100ec84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3309---querycompositionexecuted"></a><span data-ttu-id="7eaa0-102">3309 - QueryCompositionExecuted</span><span class="sxs-lookup"><span data-stu-id="7eaa0-102">3309 - QueryCompositionExecuted</span></span>
-## <a name="properties"></a><span data-ttu-id="7eaa0-103">属性</span><span class="sxs-lookup"><span data-stu-id="7eaa0-103">Properties</span></span>  
+# <a name="3309---querycompositionexecuted"></a><span data-ttu-id="25eed-102">3309 - QueryCompositionExecuted</span><span class="sxs-lookup"><span data-stu-id="25eed-102">3309 - QueryCompositionExecuted</span></span>
+## <a name="properties"></a><span data-ttu-id="25eed-103">属性</span><span class="sxs-lookup"><span data-stu-id="25eed-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="7eaa0-104">ID</span><span class="sxs-lookup"><span data-stu-id="7eaa0-104">ID</span></span>|<span data-ttu-id="7eaa0-105">3309</span><span class="sxs-lookup"><span data-stu-id="7eaa0-105">3309</span></span>|  
-|<span data-ttu-id="7eaa0-106">关键字</span><span class="sxs-lookup"><span data-stu-id="7eaa0-106">Keywords</span></span>|<span data-ttu-id="7eaa0-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="7eaa0-107">ServiceModel</span></span>|  
-|<span data-ttu-id="7eaa0-108">级别</span><span class="sxs-lookup"><span data-stu-id="7eaa0-108">Level</span></span>|<span data-ttu-id="7eaa0-109">信息</span><span class="sxs-lookup"><span data-stu-id="7eaa0-109">Information</span></span>|  
-|<span data-ttu-id="7eaa0-110">通道</span><span class="sxs-lookup"><span data-stu-id="7eaa0-110">Channel</span></span>|<span data-ttu-id="7eaa0-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="7eaa0-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="25eed-104">ID</span><span class="sxs-lookup"><span data-stu-id="25eed-104">ID</span></span>|<span data-ttu-id="25eed-105">3309</span><span class="sxs-lookup"><span data-stu-id="25eed-105">3309</span></span>|  
+|<span data-ttu-id="25eed-106">关键字</span><span class="sxs-lookup"><span data-stu-id="25eed-106">Keywords</span></span>|<span data-ttu-id="25eed-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="25eed-107">ServiceModel</span></span>|  
+|<span data-ttu-id="25eed-108">级别</span><span class="sxs-lookup"><span data-stu-id="25eed-108">Level</span></span>|<span data-ttu-id="25eed-109">信息</span><span class="sxs-lookup"><span data-stu-id="25eed-109">Information</span></span>|  
+|<span data-ttu-id="25eed-110">通道</span><span class="sxs-lookup"><span data-stu-id="25eed-110">Channel</span></span>|<span data-ttu-id="25eed-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="25eed-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="7eaa0-112">描述</span><span class="sxs-lookup"><span data-stu-id="7eaa0-112">Description</span></span>  
- <span data-ttu-id="7eaa0-113">当执行查询组合时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="7eaa0-113">This event is emitted when the query composition is executed.</span></span>  
+## <a name="description"></a><span data-ttu-id="25eed-112">描述</span><span class="sxs-lookup"><span data-stu-id="25eed-112">Description</span></span>  
+ <span data-ttu-id="25eed-113">当执行查询组合时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="25eed-113">This event is emitted when the query composition is executed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="7eaa0-114">消息</span><span class="sxs-lookup"><span data-stu-id="7eaa0-114">Message</span></span>  
- <span data-ttu-id="7eaa0-115">已对请求 Uri“%2”执行了使用“%1”的查询组合。</span><span class="sxs-lookup"><span data-stu-id="7eaa0-115">Query composition using '%1' was executed on the Request Uri: '%2'.</span></span>  
+## <a name="message"></a><span data-ttu-id="25eed-114">消息</span><span class="sxs-lookup"><span data-stu-id="25eed-114">Message</span></span>  
+ <span data-ttu-id="25eed-115">已对请求 Uri“%2”执行了使用“%1”的查询组合。</span><span class="sxs-lookup"><span data-stu-id="25eed-115">Query composition using '%1' was executed on the Request Uri: '%2'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="7eaa0-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="7eaa0-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="25eed-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="25eed-116">Details</span></span>

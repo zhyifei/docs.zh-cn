@@ -21,27 +21,28 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1c799a092d97dce7fb3b182b48a71ae2bfa897c1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9c369c77706cba45ac92ddea24150628d7154d68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iassemblycacheitemabortitem-method"></a><span data-ttu-id="2c4e9-102">IAssemblyCacheItem::AbortItem 方法</span><span class="sxs-lookup"><span data-stu-id="2c4e9-102">IAssemblyCacheItem::AbortItem Method</span></span>
-<span data-ttu-id="2c4e9-103">允许在全局程序集缓存中的程序集，它将被释放之前执行清理操作。</span><span class="sxs-lookup"><span data-stu-id="2c4e9-103">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>  
+# <a name="iassemblycacheitemabortitem-method"></a><span data-ttu-id="8e167-102">IAssemblyCacheItem::AbortItem 方法</span><span class="sxs-lookup"><span data-stu-id="8e167-102">IAssemblyCacheItem::AbortItem Method</span></span>
+<span data-ttu-id="8e167-103">允许在全局程序集缓存中的程序集，它将被释放之前执行清理操作。</span><span class="sxs-lookup"><span data-stu-id="8e167-103">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2c4e9-104">语法</span><span class="sxs-lookup"><span data-stu-id="2c4e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e167-104">语法</span><span class="sxs-lookup"><span data-stu-id="8e167-104">Syntax</span></span>  
   
 ```  
 HRESULT AbortItem ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2c4e9-105">要求</span><span class="sxs-lookup"><span data-stu-id="2c4e9-105">Requirements</span></span>  
- <span data-ttu-id="2c4e9-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2c4e9-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e167-105">惠?</span><span class="sxs-lookup"><span data-stu-id="8e167-105">Requirements</span></span>  
+ <span data-ttu-id="8e167-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8e167-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2c4e9-107">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="2c4e9-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="8e167-107">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8e167-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="2c4e9-108">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c4e9-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8e167-108">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e167-108">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c4e9-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2c4e9-109">See Also</span></span>  
- [<span data-ttu-id="2c4e9-110">IAssemblyCacheItem 接口</span><span class="sxs-lookup"><span data-stu-id="2c4e9-110">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8e167-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="8e167-109">See Also</span></span>  
+ [<span data-ttu-id="8e167-110">IAssemblyCacheItem 接口</span><span class="sxs-lookup"><span data-stu-id="8e167-110">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

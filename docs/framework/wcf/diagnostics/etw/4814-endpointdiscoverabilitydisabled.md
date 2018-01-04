@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06d6f03079c986d919f1ed3173da9ad7f98b6a93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f81046665a1373ec2e3244ca7ff579b29e06cf6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="4814---endpointdiscoverabilitydisabled"></a><span data-ttu-id="53e10-102">4814 - EndpointDiscoverabilityDisabled</span><span class="sxs-lookup"><span data-stu-id="53e10-102">4814 - EndpointDiscoverabilityDisabled</span></span>
-## <a name="properties"></a><span data-ttu-id="53e10-103">属性</span><span class="sxs-lookup"><span data-stu-id="53e10-103">Properties</span></span>  
+# <a name="4814---endpointdiscoverabilitydisabled"></a><span data-ttu-id="c8b71-102">4814 - EndpointDiscoverabilityDisabled</span><span class="sxs-lookup"><span data-stu-id="c8b71-102">4814 - EndpointDiscoverabilityDisabled</span></span>
+## <a name="properties"></a><span data-ttu-id="c8b71-103">属性</span><span class="sxs-lookup"><span data-stu-id="c8b71-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="53e10-104">ID</span><span class="sxs-lookup"><span data-stu-id="53e10-104">ID</span></span>|<span data-ttu-id="53e10-105">4814</span><span class="sxs-lookup"><span data-stu-id="53e10-105">4814</span></span>|  
-|<span data-ttu-id="53e10-106">关键字</span><span class="sxs-lookup"><span data-stu-id="53e10-106">Keywords</span></span>|<span data-ttu-id="53e10-107">发现</span><span class="sxs-lookup"><span data-stu-id="53e10-107">Discovery</span></span>|  
-|<span data-ttu-id="53e10-108">级别</span><span class="sxs-lookup"><span data-stu-id="53e10-108">Level</span></span>|<span data-ttu-id="53e10-109">信息</span><span class="sxs-lookup"><span data-stu-id="53e10-109">Information</span></span>|  
-|<span data-ttu-id="53e10-110">通道</span><span class="sxs-lookup"><span data-stu-id="53e10-110">Channel</span></span>|<span data-ttu-id="53e10-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="53e10-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="c8b71-104">ID</span><span class="sxs-lookup"><span data-stu-id="c8b71-104">ID</span></span>|<span data-ttu-id="c8b71-105">4814</span><span class="sxs-lookup"><span data-stu-id="c8b71-105">4814</span></span>|  
+|<span data-ttu-id="c8b71-106">关键字</span><span class="sxs-lookup"><span data-stu-id="c8b71-106">Keywords</span></span>|<span data-ttu-id="c8b71-107">发现</span><span class="sxs-lookup"><span data-stu-id="c8b71-107">Discovery</span></span>|  
+|<span data-ttu-id="c8b71-108">级别</span><span class="sxs-lookup"><span data-stu-id="c8b71-108">Level</span></span>|<span data-ttu-id="c8b71-109">信息</span><span class="sxs-lookup"><span data-stu-id="c8b71-109">Information</span></span>|  
+|<span data-ttu-id="c8b71-110">通道</span><span class="sxs-lookup"><span data-stu-id="c8b71-110">Channel</span></span>|<span data-ttu-id="c8b71-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="c8b71-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="53e10-112">描述</span><span class="sxs-lookup"><span data-stu-id="53e10-112">Description</span></span>  
- <span data-ttu-id="53e10-113">当禁用了终结点的可发现性时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="53e10-113">This event is emitted when the discoverability of endpoint has been disabled.</span></span>  
+## <a name="description"></a><span data-ttu-id="c8b71-112">描述</span><span class="sxs-lookup"><span data-stu-id="c8b71-112">Description</span></span>  
+ <span data-ttu-id="c8b71-113">当禁用了终结点的可发现性时，发出此事件。</span><span class="sxs-lookup"><span data-stu-id="c8b71-113">This event is emitted when the discoverability of endpoint has been disabled.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="53e10-114">消息</span><span class="sxs-lookup"><span data-stu-id="53e10-114">Message</span></span>  
- <span data-ttu-id="53e10-115">已禁用 EndpointAddress 为“%1”和 ListenUri 为“%2”的终结点的可发现性。</span><span class="sxs-lookup"><span data-stu-id="53e10-115">The discoverability of endpoint with EndpointAddress='%1' and ListenUri='%2' has been disabled.</span></span>  
+## <a name="message"></a><span data-ttu-id="c8b71-114">消息</span><span class="sxs-lookup"><span data-stu-id="c8b71-114">Message</span></span>  
+ <span data-ttu-id="c8b71-115">已禁用 EndpointAddress 为“%1”和 ListenUri 为“%2”的终结点的可发现性。</span><span class="sxs-lookup"><span data-stu-id="c8b71-115">The discoverability of endpoint with EndpointAddress='%1' and ListenUri='%2' has been disabled.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="53e10-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="53e10-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c8b71-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="c8b71-116">Details</span></span>

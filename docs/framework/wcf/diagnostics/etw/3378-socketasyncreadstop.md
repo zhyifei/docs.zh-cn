@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b57d635febecb65d6bd0c3d3a5a5f63c8c738a8d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 45fd581797bee0f710da0de431e19479c850ec7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3378---socketasyncreadstop"></a><span data-ttu-id="b5410-102">3378 - SocketAsyncReadStop</span><span class="sxs-lookup"><span data-stu-id="b5410-102">3378 - SocketAsyncReadStop</span></span>
-## <a name="properties"></a><span data-ttu-id="b5410-103">属性</span><span class="sxs-lookup"><span data-stu-id="b5410-103">Properties</span></span>  
+# <a name="3378---socketasyncreadstop"></a><span data-ttu-id="c946d-102">3378 - SocketAsyncReadStop</span><span class="sxs-lookup"><span data-stu-id="c946d-102">3378 - SocketAsyncReadStop</span></span>
+## <a name="properties"></a><span data-ttu-id="c946d-103">属性</span><span class="sxs-lookup"><span data-stu-id="c946d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="b5410-104">ID</span><span class="sxs-lookup"><span data-stu-id="b5410-104">ID</span></span>|<span data-ttu-id="b5410-105">3378</span><span class="sxs-lookup"><span data-stu-id="b5410-105">3378</span></span>|  
-|<span data-ttu-id="b5410-106">关键字</span><span class="sxs-lookup"><span data-stu-id="b5410-106">Keywords</span></span>|<span data-ttu-id="b5410-107">TCP</span><span class="sxs-lookup"><span data-stu-id="b5410-107">TCP</span></span>|  
-|<span data-ttu-id="b5410-108">级别</span><span class="sxs-lookup"><span data-stu-id="b5410-108">Level</span></span>|<span data-ttu-id="b5410-109">详细</span><span class="sxs-lookup"><span data-stu-id="b5410-109">Verbose</span></span>|  
-|<span data-ttu-id="b5410-110">通道</span><span class="sxs-lookup"><span data-stu-id="b5410-110">Channel</span></span>|<span data-ttu-id="b5410-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="b5410-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="c946d-104">ID</span><span class="sxs-lookup"><span data-stu-id="c946d-104">ID</span></span>|<span data-ttu-id="c946d-105">3378</span><span class="sxs-lookup"><span data-stu-id="c946d-105">3378</span></span>|  
+|<span data-ttu-id="c946d-106">关键字</span><span class="sxs-lookup"><span data-stu-id="c946d-106">Keywords</span></span>|<span data-ttu-id="c946d-107">TCP</span><span class="sxs-lookup"><span data-stu-id="c946d-107">TCP</span></span>|  
+|<span data-ttu-id="c946d-108">级别</span><span class="sxs-lookup"><span data-stu-id="c946d-108">Level</span></span>|<span data-ttu-id="c946d-109">详细</span><span class="sxs-lookup"><span data-stu-id="c946d-109">Verbose</span></span>|  
+|<span data-ttu-id="c946d-110">通道</span><span class="sxs-lookup"><span data-stu-id="c946d-110">Channel</span></span>|<span data-ttu-id="c946d-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="c946d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="b5410-112">描述</span><span class="sxs-lookup"><span data-stu-id="b5410-112">Description</span></span>  
- <span data-ttu-id="b5410-113">在 SocketAsyncRead 停止时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="b5410-113">This event is emitted with the SocketAsyncRead stop.</span></span>  
+## <a name="description"></a><span data-ttu-id="c946d-112">描述</span><span class="sxs-lookup"><span data-stu-id="c946d-112">Description</span></span>  
+ <span data-ttu-id="c946d-113">在 SocketAsyncRead 停止时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="c946d-113">This event is emitted with the SocketAsyncRead stop.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="b5410-114">消息</span><span class="sxs-lookup"><span data-stu-id="b5410-114">Message</span></span>  
- <span data-ttu-id="b5410-115">SocketId：%1 从“%3”读取“%2”个字节。</span><span class="sxs-lookup"><span data-stu-id="b5410-115">SocketId:%1 read '%2' bytes read from '%3'.</span></span>  
+## <a name="message"></a><span data-ttu-id="c946d-114">消息</span><span class="sxs-lookup"><span data-stu-id="c946d-114">Message</span></span>  
+ <span data-ttu-id="c946d-115">SocketId：%1 从“%3”读取“%2”个字节。</span><span class="sxs-lookup"><span data-stu-id="c946d-115">SocketId:%1 read '%2' bytes read from '%3'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="b5410-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="b5410-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c946d-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="c946d-116">Details</span></span>

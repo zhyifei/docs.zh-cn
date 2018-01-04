@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17021b7a872422ce3b8873787bdca4946377a671
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b86814831cede815b985dc02754de6908b8c4ef0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3373---binarymessagedecodingstart"></a><span data-ttu-id="4a0f5-102">3373 - BinaryMessageDecodingStart</span><span class="sxs-lookup"><span data-stu-id="4a0f5-102">3373 - BinaryMessageDecodingStart</span></span>
-## <a name="properties"></a><span data-ttu-id="4a0f5-103">属性</span><span class="sxs-lookup"><span data-stu-id="4a0f5-103">Properties</span></span>  
+# <a name="3373---binarymessagedecodingstart"></a><span data-ttu-id="2f4ff-102">3373 - BinaryMessageDecodingStart</span><span class="sxs-lookup"><span data-stu-id="2f4ff-102">3373 - BinaryMessageDecodingStart</span></span>
+## <a name="properties"></a><span data-ttu-id="2f4ff-103">属性</span><span class="sxs-lookup"><span data-stu-id="2f4ff-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="4a0f5-104">ID</span><span class="sxs-lookup"><span data-stu-id="4a0f5-104">ID</span></span>|<span data-ttu-id="4a0f5-105">3373</span><span class="sxs-lookup"><span data-stu-id="4a0f5-105">3373</span></span>|  
-|<span data-ttu-id="4a0f5-106">关键字</span><span class="sxs-lookup"><span data-stu-id="4a0f5-106">Keywords</span></span>|<span data-ttu-id="4a0f5-107">通道</span><span class="sxs-lookup"><span data-stu-id="4a0f5-107">Channel</span></span>|  
-|<span data-ttu-id="4a0f5-108">级别</span><span class="sxs-lookup"><span data-stu-id="4a0f5-108">Level</span></span>|<span data-ttu-id="4a0f5-109">详细</span><span class="sxs-lookup"><span data-stu-id="4a0f5-109">Verbose</span></span>|  
-|<span data-ttu-id="4a0f5-110">通道</span><span class="sxs-lookup"><span data-stu-id="4a0f5-110">Channel</span></span>|<span data-ttu-id="4a0f5-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="4a0f5-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="2f4ff-104">ID</span><span class="sxs-lookup"><span data-stu-id="2f4ff-104">ID</span></span>|<span data-ttu-id="2f4ff-105">3373</span><span class="sxs-lookup"><span data-stu-id="2f4ff-105">3373</span></span>|  
+|<span data-ttu-id="2f4ff-106">关键字</span><span class="sxs-lookup"><span data-stu-id="2f4ff-106">Keywords</span></span>|<span data-ttu-id="2f4ff-107">通道</span><span class="sxs-lookup"><span data-stu-id="2f4ff-107">Channel</span></span>|  
+|<span data-ttu-id="2f4ff-108">级别</span><span class="sxs-lookup"><span data-stu-id="2f4ff-108">Level</span></span>|<span data-ttu-id="2f4ff-109">详细</span><span class="sxs-lookup"><span data-stu-id="2f4ff-109">Verbose</span></span>|  
+|<span data-ttu-id="2f4ff-110">通道</span><span class="sxs-lookup"><span data-stu-id="2f4ff-110">Channel</span></span>|<span data-ttu-id="2f4ff-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="2f4ff-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="4a0f5-112">描述</span><span class="sxs-lookup"><span data-stu-id="4a0f5-112">Description</span></span>  
- <span data-ttu-id="4a0f5-113">BinaryMessageEncoder 开始对消息解码时将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="4a0f5-113">This event is emitted when the BinaryMessageEncoder started decoding the message.</span></span>  
+## <a name="description"></a><span data-ttu-id="2f4ff-112">描述</span><span class="sxs-lookup"><span data-stu-id="2f4ff-112">Description</span></span>  
+ <span data-ttu-id="2f4ff-113">BinaryMessageEncoder 开始对消息解码时将发出此事件。</span><span class="sxs-lookup"><span data-stu-id="2f4ff-113">This event is emitted when the BinaryMessageEncoder started decoding the message.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="4a0f5-114">消息</span><span class="sxs-lookup"><span data-stu-id="4a0f5-114">Message</span></span>  
- <span data-ttu-id="4a0f5-115">BinaryMessageEncoder 已开始解码消息。</span><span class="sxs-lookup"><span data-stu-id="4a0f5-115">BinaryMessageEncoder started decoding the message.</span></span>  
+## <a name="message"></a><span data-ttu-id="2f4ff-114">消息</span><span class="sxs-lookup"><span data-stu-id="2f4ff-114">Message</span></span>  
+ <span data-ttu-id="2f4ff-115">BinaryMessageEncoder 已开始解码消息。</span><span class="sxs-lookup"><span data-stu-id="2f4ff-115">BinaryMessageEncoder started decoding the message.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="4a0f5-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="4a0f5-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="2f4ff-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="2f4ff-116">Details</span></span>

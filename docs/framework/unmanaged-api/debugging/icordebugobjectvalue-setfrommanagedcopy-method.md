@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a6449cba84e4e9de224632f89d2bf5182f42ce8b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e1b0a9789dc0b5082bee33835cd5eaf40d87005d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="2431d-102">ICorDebugObjectValue::SetFromManagedCopy 方法</span><span class="sxs-lookup"><span data-stu-id="2431d-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
-<span data-ttu-id="2431d-103">`SetFromManagedCopy` 已过时。</span><span class="sxs-lookup"><span data-stu-id="2431d-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="2431d-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="2431d-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a><span data-ttu-id="67def-102">ICorDebugObjectValue::SetFromManagedCopy 方法</span><span class="sxs-lookup"><span data-stu-id="67def-102">ICorDebugObjectValue::SetFromManagedCopy Method</span></span>
+<span data-ttu-id="67def-103">`SetFromManagedCopy` 已过时。</span><span class="sxs-lookup"><span data-stu-id="67def-103">`SetFromManagedCopy` is obsolete.</span></span> <span data-ttu-id="67def-104">请勿调用此方法。</span><span class="sxs-lookup"><span data-stu-id="67def-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2431d-105">语法</span><span class="sxs-lookup"><span data-stu-id="2431d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="67def-105">语法</span><span class="sxs-lookup"><span data-stu-id="67def-105">Syntax</span></span>  
   
 ```  
 HRESULT SetFromManagedCopy (  
@@ -38,9 +39,9 @@ HRESULT SetFromManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2431d-106">要求</span><span class="sxs-lookup"><span data-stu-id="2431d-106">Requirements</span></span>  
- <span data-ttu-id="2431d-107">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2431d-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="67def-106">惠?</span><span class="sxs-lookup"><span data-stu-id="67def-106">Requirements</span></span>  
+ <span data-ttu-id="67def-107">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="67def-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2431d-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2431d-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="67def-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="67def-108">See Also</span></span>  
     
  

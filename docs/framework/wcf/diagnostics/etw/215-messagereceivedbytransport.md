@@ -13,35 +13,36 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acc39fea579a66479de6686cba928915a437f864
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bf2336d1b5c9dda1dac2b38305d944a822bd253
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="215---messagereceivedbytransport"></a><span data-ttu-id="57521-102">215 - MessageReceivedByTransport</span><span class="sxs-lookup"><span data-stu-id="57521-102">215 - MessageReceivedByTransport</span></span>
-## <a name="properties"></a><span data-ttu-id="57521-103">属性</span><span class="sxs-lookup"><span data-stu-id="57521-103">Properties</span></span>  
+# <a name="215---messagereceivedbytransport"></a><span data-ttu-id="adc67-102">215 - MessageReceivedByTransport</span><span class="sxs-lookup"><span data-stu-id="adc67-102">215 - MessageReceivedByTransport</span></span>
+## <a name="properties"></a><span data-ttu-id="adc67-103">属性</span><span class="sxs-lookup"><span data-stu-id="adc67-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="57521-104">ID</span><span class="sxs-lookup"><span data-stu-id="57521-104">ID</span></span>|<span data-ttu-id="57521-105">215</span><span class="sxs-lookup"><span data-stu-id="57521-105">215</span></span>|  
-|<span data-ttu-id="57521-106">关键字</span><span class="sxs-lookup"><span data-stu-id="57521-106">Keywords</span></span>|<span data-ttu-id="57521-107">疑难解答，ServiceModel</span><span class="sxs-lookup"><span data-stu-id="57521-107">Troubleshooting, ServiceModel</span></span>|  
-|<span data-ttu-id="57521-108">级别</span><span class="sxs-lookup"><span data-stu-id="57521-108">Level</span></span>|<span data-ttu-id="57521-109">信息</span><span class="sxs-lookup"><span data-stu-id="57521-109">Information</span></span>|  
-|<span data-ttu-id="57521-110">通道</span><span class="sxs-lookup"><span data-stu-id="57521-110">Channel</span></span>|<span data-ttu-id="57521-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="57521-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="adc67-104">ID</span><span class="sxs-lookup"><span data-stu-id="adc67-104">ID</span></span>|<span data-ttu-id="adc67-105">215</span><span class="sxs-lookup"><span data-stu-id="adc67-105">215</span></span>|  
+|<span data-ttu-id="adc67-106">关键字</span><span class="sxs-lookup"><span data-stu-id="adc67-106">Keywords</span></span>|<span data-ttu-id="adc67-107">疑难解答，ServiceModel</span><span class="sxs-lookup"><span data-stu-id="adc67-107">Troubleshooting, ServiceModel</span></span>|  
+|<span data-ttu-id="adc67-108">级别</span><span class="sxs-lookup"><span data-stu-id="adc67-108">Level</span></span>|<span data-ttu-id="adc67-109">信息</span><span class="sxs-lookup"><span data-stu-id="adc67-109">Information</span></span>|  
+|<span data-ttu-id="adc67-110">通道</span><span class="sxs-lookup"><span data-stu-id="adc67-110">Channel</span></span>|<span data-ttu-id="adc67-111">Microsoft-Windows-应用程序服务器-应用程序/分析</span><span class="sxs-lookup"><span data-stu-id="adc67-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="57521-112">描述</span><span class="sxs-lookup"><span data-stu-id="57521-112">Description</span></span>  
- <span data-ttu-id="57521-113">基于 TCP 的传输接收消息时将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="57521-113">This event occurs when a TCP-based transport receives a message.</span></span> <span data-ttu-id="57521-114">请注意，在传输级别上，单个操作可在客户端和服务之间交换多条消息。</span><span class="sxs-lookup"><span data-stu-id="57521-114">Note that at the transport level, multiple messages can be exchanged between clients and services for a single operation.</span></span> <span data-ttu-id="57521-115">这可能是由于基础结构行为的特点，在此方面，安全性是一个很好的例子。</span><span class="sxs-lookup"><span data-stu-id="57521-115">This can be due to infrastructure behavior, security is a good example.</span></span> <span data-ttu-id="57521-116">因此，发出的 `MessageReceivedByTransport` 事件数目根据服务绑定及其配置而变化。</span><span class="sxs-lookup"><span data-stu-id="57521-116">Therefore, the number of `MessageReceivedByTransport` events that are emitted vary based on your service's binding and its configuration.</span></span>  
+## <a name="description"></a><span data-ttu-id="adc67-112">描述</span><span class="sxs-lookup"><span data-stu-id="adc67-112">Description</span></span>  
+ <span data-ttu-id="adc67-113">基于 TCP 的传输接收消息时将发生此事件。</span><span class="sxs-lookup"><span data-stu-id="adc67-113">This event occurs when a TCP-based transport receives a message.</span></span> <span data-ttu-id="adc67-114">请注意，在传输级别上，单个操作可在客户端和服务之间交换多条消息。</span><span class="sxs-lookup"><span data-stu-id="adc67-114">Note that at the transport level, multiple messages can be exchanged between clients and services for a single operation.</span></span> <span data-ttu-id="adc67-115">这可能是由于基础结构行为的特点，在此方面，安全性是一个很好的例子。</span><span class="sxs-lookup"><span data-stu-id="adc67-115">This can be due to infrastructure behavior, security is a good example.</span></span> <span data-ttu-id="adc67-116">因此，发出的 `MessageReceivedByTransport` 事件数目根据服务绑定及其配置而变化。</span><span class="sxs-lookup"><span data-stu-id="adc67-116">Therefore, the number of `MessageReceivedByTransport` events that are emitted vary based on your service's binding and its configuration.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="57521-117">不会为单向传输发出此事件。</span><span class="sxs-lookup"><span data-stu-id="57521-117">This event is not emitted for one-way transports.</span></span>  
+>  <span data-ttu-id="adc67-117">不会为单向传输发出此事件。</span><span class="sxs-lookup"><span data-stu-id="adc67-117">This event is not emitted for one-way transports.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="57521-118">消息</span><span class="sxs-lookup"><span data-stu-id="57521-118">Message</span></span>  
- <span data-ttu-id="57521-119">传输从“%1”收到了一条消息。</span><span class="sxs-lookup"><span data-stu-id="57521-119">The transport received a message from '%1'.</span></span>  
+## <a name="message"></a><span data-ttu-id="adc67-118">消息</span><span class="sxs-lookup"><span data-stu-id="adc67-118">Message</span></span>  
+ <span data-ttu-id="adc67-119">传输从“%1”收到了一条消息。</span><span class="sxs-lookup"><span data-stu-id="adc67-119">The transport received a message from '%1'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="57521-120">详细信息</span><span class="sxs-lookup"><span data-stu-id="57521-120">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="adc67-120">详细信息</span><span class="sxs-lookup"><span data-stu-id="adc67-120">Details</span></span>  
   
-|<span data-ttu-id="57521-121">数据项名称</span><span class="sxs-lookup"><span data-stu-id="57521-121">Data Item Name</span></span>|<span data-ttu-id="57521-122">数据项类型</span><span class="sxs-lookup"><span data-stu-id="57521-122">Data Item Type</span></span>|<span data-ttu-id="57521-123">描述</span><span class="sxs-lookup"><span data-stu-id="57521-123">Description</span></span>|  
+|<span data-ttu-id="adc67-121">数据项名称</span><span class="sxs-lookup"><span data-stu-id="adc67-121">Data Item Name</span></span>|<span data-ttu-id="adc67-122">数据项类型</span><span class="sxs-lookup"><span data-stu-id="adc67-122">Data Item Type</span></span>|<span data-ttu-id="adc67-123">描述</span><span class="sxs-lookup"><span data-stu-id="adc67-123">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="57521-124">侦听地址</span><span class="sxs-lookup"><span data-stu-id="57521-124">Listen Address</span></span>|`xs:string`|<span data-ttu-id="57521-125">接收了消息的地址。</span><span class="sxs-lookup"><span data-stu-id="57521-125">The address that received the message.</span></span>|  
-|<span data-ttu-id="57521-126">HostReference</span><span class="sxs-lookup"><span data-stu-id="57521-126">HostReference</span></span>|`xs:string`|<span data-ttu-id="57521-127">对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。</span><span class="sxs-lookup"><span data-stu-id="57521-127">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="57521-128">其格式定义为网站名称应用程序虚拟路径 &#124;服务虚拟路径 &#124;ServiceName。</span><span class="sxs-lookup"><span data-stu-id="57521-128">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="57521-129">示例: 默认网站/CalculatorApplication &#124;/CalculatorService.svc &#124;CalculatorService。</span><span class="sxs-lookup"><span data-stu-id="57521-129">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
-|<span data-ttu-id="57521-130">AppDomain</span><span class="sxs-lookup"><span data-stu-id="57521-130">AppDomain</span></span>|`xs:string`|<span data-ttu-id="57521-131">由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="57521-131">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="adc67-124">侦听地址</span><span class="sxs-lookup"><span data-stu-id="adc67-124">Listen Address</span></span>|`xs:string`|<span data-ttu-id="adc67-125">接收了消息的地址。</span><span class="sxs-lookup"><span data-stu-id="adc67-125">The address that received the message.</span></span>|  
+|<span data-ttu-id="adc67-126">HostReference</span><span class="sxs-lookup"><span data-stu-id="adc67-126">HostReference</span></span>|`xs:string`|<span data-ttu-id="adc67-127">对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。</span><span class="sxs-lookup"><span data-stu-id="adc67-127">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="adc67-128">其格式定义为网站名称应用程序虚拟路径 &#124;服务虚拟路径 &#124;ServiceName。</span><span class="sxs-lookup"><span data-stu-id="adc67-128">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="adc67-129">示例: 默认网站/CalculatorApplication &#124;/CalculatorService.svc &#124;CalculatorService。</span><span class="sxs-lookup"><span data-stu-id="adc67-129">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
+|<span data-ttu-id="adc67-130">AppDomain</span><span class="sxs-lookup"><span data-stu-id="adc67-130">AppDomain</span></span>|`xs:string`|<span data-ttu-id="adc67-131">由 AppDomain.CurrentDomain.FriendlyName 返回的字符串。</span><span class="sxs-lookup"><span data-stu-id="adc67-131">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

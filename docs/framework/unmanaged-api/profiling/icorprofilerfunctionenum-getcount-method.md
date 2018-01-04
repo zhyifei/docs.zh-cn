@@ -21,34 +21,35 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 55fff79bc68f1e2b790cf93afbce6a9f6cfd3c51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ac7e1e4c13578859c02f531dbc3b5e6f01e55cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilerfunctionenumgetcount-method"></a><span data-ttu-id="20fa9-102">ICorProfilerFunctionEnum::GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="20fa9-102">ICorProfilerFunctionEnum::GetCount Method</span></span>
-<span data-ttu-id="20fa9-103">获取应用程序加载的函数数量或探查器强制加载的函数数量。</span><span class="sxs-lookup"><span data-stu-id="20fa9-103">Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.</span></span>  
+# <a name="icorprofilerfunctionenumgetcount-method"></a><span data-ttu-id="81025-102">ICorProfilerFunctionEnum::GetCount 方法</span><span class="sxs-lookup"><span data-stu-id="81025-102">ICorProfilerFunctionEnum::GetCount Method</span></span>
+<span data-ttu-id="81025-103">获取应用程序加载的函数数量或探查器强制加载的函数数量。</span><span class="sxs-lookup"><span data-stu-id="81025-103">Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20fa9-104">语法</span><span class="sxs-lookup"><span data-stu-id="20fa9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81025-104">语法</span><span class="sxs-lookup"><span data-stu-id="81025-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="20fa9-105">参数</span><span class="sxs-lookup"><span data-stu-id="20fa9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="81025-105">参数</span><span class="sxs-lookup"><span data-stu-id="81025-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="20fa9-106">[out]已加载的函数的数目。</span><span class="sxs-lookup"><span data-stu-id="20fa9-106">[out] The number of functions that were loaded.</span></span>  
+ <span data-ttu-id="81025-106">[out]已加载的函数的数目。</span><span class="sxs-lookup"><span data-stu-id="81025-106">[out] The number of functions that were loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20fa9-107">要求</span><span class="sxs-lookup"><span data-stu-id="20fa9-107">Requirements</span></span>  
- <span data-ttu-id="20fa9-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="20fa9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81025-107">惠?</span><span class="sxs-lookup"><span data-stu-id="81025-107">Requirements</span></span>  
+ <span data-ttu-id="81025-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="81025-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20fa9-109">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="20fa9-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="81025-109">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="81025-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="20fa9-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="20fa9-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="81025-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="81025-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="20fa9-111">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20fa9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="81025-111">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81025-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20fa9-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="20fa9-112">See Also</span></span>  
- [<span data-ttu-id="20fa9-113">ICorProfilerFunctionEnum 接口</span><span class="sxs-lookup"><span data-stu-id="20fa9-113">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
- [<span data-ttu-id="20fa9-114">分析接口</span><span class="sxs-lookup"><span data-stu-id="20fa9-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="81025-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="81025-112">See Also</span></span>  
+ [<span data-ttu-id="81025-113">ICorProfilerFunctionEnum 接口</span><span class="sxs-lookup"><span data-stu-id="81025-113">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
+ [<span data-ttu-id="81025-114">Profiling 接口</span><span class="sxs-lookup"><span data-stu-id="81025-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

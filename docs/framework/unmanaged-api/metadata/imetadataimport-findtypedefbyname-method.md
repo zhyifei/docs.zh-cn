@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e4b3a5f9ff15e2b94e6d5c5e885605d8eabae711
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 036a177e807a2ab77a6afa74c7b811eeaaebfd29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imetadataimportfindtypedefbyname-method"></a><span data-ttu-id="7b65b-102">IMetaDataImport::FindTypeDefByName 方法</span><span class="sxs-lookup"><span data-stu-id="7b65b-102">IMetaDataImport::FindTypeDefByName Method</span></span>
-<span data-ttu-id="7b65b-103">获取一个指向的 TypeDef 元数据标记为<xref:System.Type>具有指定名称。</span><span class="sxs-lookup"><span data-stu-id="7b65b-103">Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.</span></span>  
+# <a name="imetadataimportfindtypedefbyname-method"></a><span data-ttu-id="c5ee3-102">IMetaDataImport::FindTypeDefByName 方法</span><span class="sxs-lookup"><span data-stu-id="c5ee3-102">IMetaDataImport::FindTypeDefByName Method</span></span>
+<span data-ttu-id="c5ee3-103">获取一个指向的 TypeDef 元数据标记为<xref:System.Type>具有指定名称。</span><span class="sxs-lookup"><span data-stu-id="c5ee3-103">Gets a pointer to the TypeDef metadata token for the <xref:System.Type> with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b65b-104">语法</span><span class="sxs-lookup"><span data-stu-id="7b65b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5ee3-104">语法</span><span class="sxs-lookup"><span data-stu-id="c5ee3-104">Syntax</span></span>  
   
 ```  
 HRESULT FindTypeDefByName  
@@ -40,25 +41,25 @@ HRESULT FindTypeDefByName
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7b65b-105">参数</span><span class="sxs-lookup"><span data-stu-id="7b65b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c5ee3-105">参数</span><span class="sxs-lookup"><span data-stu-id="c5ee3-105">Parameters</span></span>  
  `szTypeDef`  
- <span data-ttu-id="7b65b-106">[in]要为其获取 TypeDef 令牌类型的名称。</span><span class="sxs-lookup"><span data-stu-id="7b65b-106">[in] The name of the type for which to get the TypeDef token.</span></span>  
+ <span data-ttu-id="c5ee3-106">[in]要为其获取 TypeDef 令牌类型的名称。</span><span class="sxs-lookup"><span data-stu-id="c5ee3-106">[in] The name of the type for which to get the TypeDef token.</span></span>  
   
  `tkEnclosingClass`  
- <span data-ttu-id="7b65b-107">[in]表示在封闭类的 TypeDef 或 TypeRef 标记。</span><span class="sxs-lookup"><span data-stu-id="7b65b-107">[in] A TypeDef or TypeRef token representing the enclosing class.</span></span> <span data-ttu-id="7b65b-108">如果要查找的类型不是嵌套的类，则将此值设置为 NULL。</span><span class="sxs-lookup"><span data-stu-id="7b65b-108">If the type to find is not a nested class, set this value to NULL.</span></span>  
+ <span data-ttu-id="c5ee3-107">[in]表示在封闭类的 TypeDef 或 TypeRef 标记。</span><span class="sxs-lookup"><span data-stu-id="c5ee3-107">[in] A TypeDef or TypeRef token representing the enclosing class.</span></span> <span data-ttu-id="c5ee3-108">如果要查找的类型不是嵌套的类，则将此值设置为 NULL。</span><span class="sxs-lookup"><span data-stu-id="c5ee3-108">If the type to find is not a nested class, set this value to NULL.</span></span>  
   
  `ptd`  
- <span data-ttu-id="7b65b-109">[out]指向匹配的 TypeDef 标记的指针。</span><span class="sxs-lookup"><span data-stu-id="7b65b-109">[out] A pointer to the matching TypeDef token.</span></span>  
+ <span data-ttu-id="c5ee3-109">[out]指向匹配的 TypeDef 标记的指针。</span><span class="sxs-lookup"><span data-stu-id="c5ee3-109">[out] A pointer to the matching TypeDef token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7b65b-110">要求</span><span class="sxs-lookup"><span data-stu-id="7b65b-110">Requirements</span></span>  
- <span data-ttu-id="7b65b-111">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7b65b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5ee3-110">惠?</span><span class="sxs-lookup"><span data-stu-id="c5ee3-110">Requirements</span></span>  
+ <span data-ttu-id="c5ee3-111">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c5ee3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7b65b-112">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7b65b-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c5ee3-112">**标头：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c5ee3-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7b65b-113">**库：**作为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="7b65b-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c5ee3-113">**库：**作为 MsCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="c5ee3-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7b65b-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7b65b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c5ee3-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5ee3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b65b-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7b65b-115">See Also</span></span>  
- [<span data-ttu-id="7b65b-116">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="7b65b-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [<span data-ttu-id="7b65b-117">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="7b65b-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c5ee3-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="c5ee3-115">See Also</span></span>  
+ [<span data-ttu-id="c5ee3-116">IMetaDataImport 接口</span><span class="sxs-lookup"><span data-stu-id="c5ee3-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
+ [<span data-ttu-id="c5ee3-117">IMetaDataImport2 接口</span><span class="sxs-lookup"><span data-stu-id="c5ee3-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

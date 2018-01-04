@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae0bea8c7e08caf6bfccca07f13d264d35629a09
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 299da37f622442cb928fb72aab1facc173944777
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3429---websocketclosestatusreceived"></a><span data-ttu-id="c8e31-102">3429 - WebSocketCloseStatusReceived</span><span class="sxs-lookup"><span data-stu-id="c8e31-102">3429 - WebSocketCloseStatusReceived</span></span>
-## <a name="properties"></a><span data-ttu-id="c8e31-103">属性</span><span class="sxs-lookup"><span data-stu-id="c8e31-103">Properties</span></span>  
+# <a name="3429---websocketclosestatusreceived"></a><span data-ttu-id="192dc-102">3429 - WebSocketCloseStatusReceived</span><span class="sxs-lookup"><span data-stu-id="192dc-102">3429 - WebSocketCloseStatusReceived</span></span>
+## <a name="properties"></a><span data-ttu-id="192dc-103">属性</span><span class="sxs-lookup"><span data-stu-id="192dc-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="c8e31-104">ID</span><span class="sxs-lookup"><span data-stu-id="c8e31-104">ID</span></span>|<span data-ttu-id="c8e31-105">3429</span><span class="sxs-lookup"><span data-stu-id="c8e31-105">3429</span></span>|  
-|<span data-ttu-id="c8e31-106">关键字</span><span class="sxs-lookup"><span data-stu-id="c8e31-106">Keywords</span></span>|<span data-ttu-id="c8e31-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="c8e31-107">HTTP</span></span>|  
-|<span data-ttu-id="c8e31-108">级别</span><span class="sxs-lookup"><span data-stu-id="c8e31-108">Level</span></span>|<span data-ttu-id="c8e31-109">详细</span><span class="sxs-lookup"><span data-stu-id="c8e31-109">Verbose</span></span>|  
-|<span data-ttu-id="c8e31-110">通道</span><span class="sxs-lookup"><span data-stu-id="c8e31-110">Channel</span></span>|<span data-ttu-id="c8e31-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="c8e31-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="192dc-104">ID</span><span class="sxs-lookup"><span data-stu-id="192dc-104">ID</span></span>|<span data-ttu-id="192dc-105">3429</span><span class="sxs-lookup"><span data-stu-id="192dc-105">3429</span></span>|  
+|<span data-ttu-id="192dc-106">关键字</span><span class="sxs-lookup"><span data-stu-id="192dc-106">Keywords</span></span>|<span data-ttu-id="192dc-107">HTTP</span><span class="sxs-lookup"><span data-stu-id="192dc-107">HTTP</span></span>|  
+|<span data-ttu-id="192dc-108">级别</span><span class="sxs-lookup"><span data-stu-id="192dc-108">Level</span></span>|<span data-ttu-id="192dc-109">详细</span><span class="sxs-lookup"><span data-stu-id="192dc-109">Verbose</span></span>|  
+|<span data-ttu-id="192dc-110">通道</span><span class="sxs-lookup"><span data-stu-id="192dc-110">Channel</span></span>|<span data-ttu-id="192dc-111">Microsoft-Windows-应用程序服务器-应用程序/调试</span><span class="sxs-lookup"><span data-stu-id="192dc-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="c8e31-112">描述</span><span class="sxs-lookup"><span data-stu-id="c8e31-112">Description</span></span>  
- <span data-ttu-id="c8e31-113">当收到 WebSocket 关闭状态时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="c8e31-113">This event is emitted when WebSocket close status is received.</span></span>  
+## <a name="description"></a><span data-ttu-id="192dc-112">描述</span><span class="sxs-lookup"><span data-stu-id="192dc-112">Description</span></span>  
+ <span data-ttu-id="192dc-113">当收到 WebSocket 关闭状态时发出此事件。</span><span class="sxs-lookup"><span data-stu-id="192dc-113">This event is emitted when WebSocket close status is received.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="c8e31-114">消息</span><span class="sxs-lookup"><span data-stu-id="c8e31-114">Message</span></span>  
- <span data-ttu-id="c8e31-115">WebSocketId：%1 收到了连接关闭消息，状态为“%2”。</span><span class="sxs-lookup"><span data-stu-id="c8e31-115">WebSocketId:%1 connection close message received with status '%2'.</span></span>  
+## <a name="message"></a><span data-ttu-id="192dc-114">消息</span><span class="sxs-lookup"><span data-stu-id="192dc-114">Message</span></span>  
+ <span data-ttu-id="192dc-115">WebSocketId：%1 收到了连接关闭消息，状态为“%2”。</span><span class="sxs-lookup"><span data-stu-id="192dc-115">WebSocketId:%1 connection close message received with status '%2'.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="c8e31-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="c8e31-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="192dc-116">详细信息</span><span class="sxs-lookup"><span data-stu-id="192dc-116">Details</span></span>

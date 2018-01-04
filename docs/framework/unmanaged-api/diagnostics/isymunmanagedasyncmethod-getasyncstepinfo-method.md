@@ -13,24 +13,25 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ad3fb6dba7740c3c541a446205b90d6f007635a3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f999e8cfba38ff4b4b15baea7ca9fa89606cb0ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedasyncmethodgetasyncstepinfo-method"></a><span data-ttu-id="c87c0-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfo 方法</span><span class="sxs-lookup"><span data-stu-id="c87c0-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfo Method</span></span>
-<span data-ttu-id="c87c0-103">请参阅[DefineAsyncStepInfo 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)。</span><span class="sxs-lookup"><span data-stu-id="c87c0-103">See [DefineAsyncStepInfo Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span></span>  
+# <a name="isymunmanagedasyncmethodgetasyncstepinfo-method"></a><span data-ttu-id="e65d5-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfo 方法</span><span class="sxs-lookup"><span data-stu-id="e65d5-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfo Method</span></span>
+<span data-ttu-id="e65d5-103">请参阅[DefineAsyncStepInfo 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)。</span><span class="sxs-lookup"><span data-stu-id="e65d5-103">See [DefineAsyncStepInfo Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c87c0-104">语法</span><span class="sxs-lookup"><span data-stu-id="c87c0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e65d5-104">语法</span><span class="sxs-lookup"><span data-stu-id="e65d5-104">Syntax</span></span>  
   
 ```idl  
 HRESULT GetAsyncStepInfo(    [in] ULONG32 cStepInfo,    [out] ULONG32 *pcStepInfo,    [in, size_is(cStepInfo)] ULONG32 yieldOffsets[],    [in, size_is(cStepInfo)] ULONG32 breakpointOffset[],    [in, size_is(cStepInfo)] mdToken breakpointMethod[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c87c0-105">参数</span><span class="sxs-lookup"><span data-stu-id="c87c0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e65d5-105">参数</span><span class="sxs-lookup"><span data-stu-id="e65d5-105">Parameters</span></span>  
   
-|<span data-ttu-id="c87c0-106">参数</span><span class="sxs-lookup"><span data-stu-id="c87c0-106">Parameter</span></span>|<span data-ttu-id="c87c0-107">描述</span><span class="sxs-lookup"><span data-stu-id="c87c0-107">Description</span></span>|  
+|<span data-ttu-id="e65d5-106">参数</span><span class="sxs-lookup"><span data-stu-id="e65d5-106">Parameter</span></span>|<span data-ttu-id="e65d5-107">描述</span><span class="sxs-lookup"><span data-stu-id="e65d5-107">Description</span></span>|  
 |---------------|-----------------|  
 |`cStepInfo`||  
 |`pcStepInfo`||  
@@ -38,11 +39,11 @@ HRESULT GetAsyncStepInfo(    [in] ULONG32 cStepInfo,    [out] ULONG32 *pcStepInf
 |`breakpointOffset`||  
 |`breakpointMethod`||  
   
-## <a name="return-value"></a><span data-ttu-id="c87c0-108">返回值</span><span class="sxs-lookup"><span data-stu-id="c87c0-108">Return Value</span></span>  
- <span data-ttu-id="c87c0-109">返回 `HRESULT`。</span><span class="sxs-lookup"><span data-stu-id="c87c0-109">Returns `HRESULT`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e65d5-108">返回值</span><span class="sxs-lookup"><span data-stu-id="e65d5-108">Return Value</span></span>  
+ <span data-ttu-id="e65d5-109">返回 `HRESULT`。</span><span class="sxs-lookup"><span data-stu-id="e65d5-109">Returns `HRESULT`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c87c0-110">要求</span><span class="sxs-lookup"><span data-stu-id="c87c0-110">Requirements</span></span>  
- <span data-ttu-id="c87c0-111">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c87c0-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e65d5-110">惠?</span><span class="sxs-lookup"><span data-stu-id="e65d5-110">Requirements</span></span>  
+ <span data-ttu-id="e65d5-111">**标头：** CorSym.idl、 CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e65d5-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c87c0-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c87c0-112">See Also</span></span>  
- [<span data-ttu-id="c87c0-113">ISymUnmanagedAsyncMethod 接口</span><span class="sxs-lookup"><span data-stu-id="c87c0-113">ISymUnmanagedAsyncMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e65d5-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="e65d5-112">See Also</span></span>  
+ [<span data-ttu-id="e65d5-113">ISymUnmanagedAsyncMethod 接口</span><span class="sxs-lookup"><span data-stu-id="e65d5-113">ISymUnmanagedAsyncMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bb785c84436e2b0c6848c8af2540e8efada38e6f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a048255e075b01f4c3c7635038b22ab581032524
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorpublishprocessgetprocessid-method"></a><span data-ttu-id="bc203-102">ICorPublishProcess::GetProcessID 方法</span><span class="sxs-lookup"><span data-stu-id="bc203-102">ICorPublishProcess::GetProcessID Method</span></span>
-<span data-ttu-id="bc203-103">获取此进程的操作系统识别符。</span><span class="sxs-lookup"><span data-stu-id="bc203-103">Gets the operating system identifier for this process.</span></span>  
+# <a name="icorpublishprocessgetprocessid-method"></a><span data-ttu-id="40312-102">ICorPublishProcess::GetProcessID 方法</span><span class="sxs-lookup"><span data-stu-id="40312-102">ICorPublishProcess::GetProcessID Method</span></span>
+<span data-ttu-id="40312-103">获取此进程的操作系统识别符。</span><span class="sxs-lookup"><span data-stu-id="40312-103">Gets the operating system identifier for this process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc203-104">语法</span><span class="sxs-lookup"><span data-stu-id="bc203-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40312-104">语法</span><span class="sxs-lookup"><span data-stu-id="40312-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProcessID (  
@@ -38,18 +39,18 @@ HRESULT GetProcessID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bc203-105">参数</span><span class="sxs-lookup"><span data-stu-id="bc203-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="40312-105">参数</span><span class="sxs-lookup"><span data-stu-id="40312-105">Parameters</span></span>  
  `pid`  
- <span data-ttu-id="bc203-106">[out]表示此进程的标识符的指针[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="bc203-106">[out] A pointer to the identifier of the process represented by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) object.</span></span>  
+ <span data-ttu-id="40312-106">[out]表示此进程的标识符的指针[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="40312-106">[out] A pointer to the identifier of the process represented by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc203-107">要求</span><span class="sxs-lookup"><span data-stu-id="bc203-107">Requirements</span></span>  
- <span data-ttu-id="bc203-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bc203-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="40312-107">惠?</span><span class="sxs-lookup"><span data-stu-id="40312-107">Requirements</span></span>  
+ <span data-ttu-id="40312-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="40312-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc203-109">**标头：** CorPub.idl、 CorPub.h</span><span class="sxs-lookup"><span data-stu-id="bc203-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="40312-109">**标头：** CorPub.idl、 CorPub.h</span><span class="sxs-lookup"><span data-stu-id="40312-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="bc203-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc203-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="40312-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="40312-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bc203-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc203-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="40312-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40312-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc203-112">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bc203-112">See Also</span></span>  
- [<span data-ttu-id="bc203-113">ICorPublishProcess 接口</span><span class="sxs-lookup"><span data-stu-id="bc203-113">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a><span data-ttu-id="40312-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="40312-112">See Also</span></span>  
+ [<span data-ttu-id="40312-113">ICorPublishProcess 接口</span><span class="sxs-lookup"><span data-stu-id="40312-113">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

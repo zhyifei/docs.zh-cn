@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b0b2ce6facf99b44f54e8880d4436ab7fe96e50a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 19cd8881bdbd482cb420717855593d7b9583ae51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="bb2c6-102">ISymUnmanagedDocument::GetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="bb2c6-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
-<span data-ttu-id="bb2c6-103">获取校验和。</span><span class="sxs-lookup"><span data-stu-id="bb2c6-103">Gets the checksum.</span></span>  
+# <a name="isymunmanageddocumentgetchecksum-method"></a><span data-ttu-id="19c54-102">ISymUnmanagedDocument::GetCheckSum 方法</span><span class="sxs-lookup"><span data-stu-id="19c54-102">ISymUnmanagedDocument::GetCheckSum Method</span></span>
+<span data-ttu-id="19c54-103">获取校验和。</span><span class="sxs-lookup"><span data-stu-id="19c54-103">Gets the checksum.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bb2c6-104">语法</span><span class="sxs-lookup"><span data-stu-id="bb2c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19c54-104">语法</span><span class="sxs-lookup"><span data-stu-id="19c54-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCheckSum(  
@@ -39,18 +40,18 @@ HRESULT GetCheckSum(
     [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bb2c6-105">参数</span><span class="sxs-lookup"><span data-stu-id="bb2c6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="19c54-105">参数</span><span class="sxs-lookup"><span data-stu-id="19c54-105">Parameters</span></span>  
  `cData`  
- <span data-ttu-id="bb2c6-106">[in]提供的缓冲区的长度`data`参数</span><span class="sxs-lookup"><span data-stu-id="bb2c6-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
+ <span data-ttu-id="19c54-106">[in]提供的缓冲区的长度`data`参数</span><span class="sxs-lookup"><span data-stu-id="19c54-106">[in] The length of the buffer provided by the `data` parameter</span></span>  
   
  `pcData`  
- <span data-ttu-id="bb2c6-107">[out]大小和校验和，以字节为单位的长度。</span><span class="sxs-lookup"><span data-stu-id="bb2c6-107">[out] The size and length of the checksum, in bytes.</span></span>  
+ <span data-ttu-id="19c54-107">[out]大小和校验和，以字节为单位的长度。</span><span class="sxs-lookup"><span data-stu-id="19c54-107">[out] The size and length of the checksum, in bytes.</span></span>  
   
  `data`  
- <span data-ttu-id="bb2c6-108">[out]接收校验和的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="bb2c6-108">[out] The buffer that receives the checksum.</span></span>  
+ <span data-ttu-id="19c54-108">[out]接收校验和的缓冲区。</span><span class="sxs-lookup"><span data-stu-id="19c54-108">[out] The buffer that receives the checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bb2c6-109">返回值</span><span class="sxs-lookup"><span data-stu-id="bb2c6-109">Return Value</span></span>  
- <span data-ttu-id="bb2c6-110">如果该方法成功; 则为 S_OK否则为错误代码。</span><span class="sxs-lookup"><span data-stu-id="bb2c6-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="19c54-109">返回值</span><span class="sxs-lookup"><span data-stu-id="19c54-109">Return Value</span></span>  
+ <span data-ttu-id="19c54-110">如果该方法成功; 则为 S_OK否则为错误代码。</span><span class="sxs-lookup"><span data-stu-id="19c54-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb2c6-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bb2c6-111">See Also</span></span>  
- [<span data-ttu-id="bb2c6-112">ISymUnmanagedDocument 接口</span><span class="sxs-lookup"><span data-stu-id="bb2c6-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="19c54-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="19c54-111">See Also</span></span>  
+ [<span data-ttu-id="19c54-112">ISymUnmanagedDocument 接口</span><span class="sxs-lookup"><span data-stu-id="19c54-112">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

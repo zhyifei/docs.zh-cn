@@ -19,38 +19,39 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 98b41ea0062534d9e990a7fe366e8f746ae87f38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b93d87107e1a69b0a047dbf156124fe49cd95d16
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iclrcontrol-interface"></a><span data-ttu-id="43bbb-102">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-102">ICLRControl Interface</span></span>
-<span data-ttu-id="43bbb-103">提供使主机可获取对，引用和配置的公共语言运行时 (CLR) 方面的方法。</span><span class="sxs-lookup"><span data-stu-id="43bbb-103">Provides methods that allow a host to get references to, and configure aspects of, the common language runtime (CLR).</span></span>  
+# <a name="iclrcontrol-interface"></a><span data-ttu-id="4e4b3-102">ICLRControl 接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-102">ICLRControl Interface</span></span>
+<span data-ttu-id="4e4b3-103">提供使主机可获取对，引用和配置的公共语言运行时 (CLR) 方面的方法。</span><span class="sxs-lookup"><span data-stu-id="4e4b3-103">Provides methods that allow a host to get references to, and configure aspects of, the common language runtime (CLR).</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="43bbb-104">方法</span><span class="sxs-lookup"><span data-stu-id="43bbb-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4e4b3-104">方法</span><span class="sxs-lookup"><span data-stu-id="4e4b3-104">Methods</span></span>  
   
-|<span data-ttu-id="43bbb-105">方法</span><span class="sxs-lookup"><span data-stu-id="43bbb-105">Method</span></span>|<span data-ttu-id="43bbb-106">描述</span><span class="sxs-lookup"><span data-stu-id="43bbb-106">Description</span></span>|  
+|<span data-ttu-id="4e4b3-105">方法</span><span class="sxs-lookup"><span data-stu-id="4e4b3-105">Method</span></span>|<span data-ttu-id="4e4b3-106">描述</span><span class="sxs-lookup"><span data-stu-id="4e4b3-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="43bbb-107">GetCLRManager 方法</span><span class="sxs-lookup"><span data-stu-id="43bbb-107">GetCLRManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)|<span data-ttu-id="43bbb-108">到任何主机可用于配置 CLR 管理器类型的实例中获取的接口指针。</span><span class="sxs-lookup"><span data-stu-id="43bbb-108">Gets an interface pointer to an instance of any of the manager types the host can use to configure the CLR.</span></span>|  
-|[<span data-ttu-id="43bbb-109">SetAppDomainManagerType 方法</span><span class="sxs-lookup"><span data-stu-id="43bbb-109">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)|<span data-ttu-id="43bbb-110">设置其类型派生自此<xref:System.AppDomainManager>作为应用程序域管理器的类型。</span><span class="sxs-lookup"><span data-stu-id="43bbb-110">Sets a type derived from <xref:System.AppDomainManager> as the type for application domain managers.</span></span>|  
+|[<span data-ttu-id="4e4b3-107">GetCLRManager 方法</span><span class="sxs-lookup"><span data-stu-id="4e4b3-107">GetCLRManager Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md)|<span data-ttu-id="4e4b3-108">到任何主机可用于配置 CLR 管理器类型的实例中获取的接口指针。</span><span class="sxs-lookup"><span data-stu-id="4e4b3-108">Gets an interface pointer to an instance of any of the manager types the host can use to configure the CLR.</span></span>|  
+|[<span data-ttu-id="4e4b3-109">SetAppDomainManagerType 方法</span><span class="sxs-lookup"><span data-stu-id="4e4b3-109">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)|<span data-ttu-id="4e4b3-110">设置其类型派生自此<xref:System.AppDomainManager>作为应用程序域管理器的类型。</span><span class="sxs-lookup"><span data-stu-id="4e4b3-110">Sets a type derived from <xref:System.AppDomainManager> as the type for application domain managers.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="43bbb-111">要求</span><span class="sxs-lookup"><span data-stu-id="43bbb-111">Requirements</span></span>  
- <span data-ttu-id="43bbb-112">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="43bbb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4e4b3-111">惠?</span><span class="sxs-lookup"><span data-stu-id="4e4b3-111">Requirements</span></span>  
+ <span data-ttu-id="4e4b3-112">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4e4b3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="43bbb-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="43bbb-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4e4b3-113">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4e4b3-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="43bbb-114">**库：**作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="43bbb-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4e4b3-114">**库：**作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="4e4b3-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="43bbb-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43bbb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4e4b3-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e4b3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43bbb-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="43bbb-116">See Also</span></span>  
- [<span data-ttu-id="43bbb-117">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [<span data-ttu-id="43bbb-118">ICLRDebugManager 接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-118">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
- [<span data-ttu-id="43bbb-119">ICLRGCManager 接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-119">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)  
- [<span data-ttu-id="43bbb-120">ICLRHostBindingPolicyManager 接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)  
- [<span data-ttu-id="43bbb-121">ICLRHostProtectionManager 接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-121">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- [<span data-ttu-id="43bbb-122">ICLROnEventManager 接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-122">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
- [<span data-ttu-id="43bbb-123">ICLRPolicyManager 接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-123">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [<span data-ttu-id="43bbb-124">IHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-124">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)  
- [<span data-ttu-id="43bbb-125">承载接口</span><span class="sxs-lookup"><span data-stu-id="43bbb-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="4e4b3-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="4e4b3-116">See Also</span></span>  
+ [<span data-ttu-id="4e4b3-117">ICLRAssemblyIdentityManager 接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
+ [<span data-ttu-id="4e4b3-118">ICLRDebugManager 接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-118">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
+ [<span data-ttu-id="4e4b3-119">ICLRGCManager 接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-119">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)  
+ [<span data-ttu-id="4e4b3-120">ICLRHostBindingPolicyManager 接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-120">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)  
+ [<span data-ttu-id="4e4b3-121">ICLRHostProtectionManager 接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-121">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
+ [<span data-ttu-id="4e4b3-122">ICLROnEventManager 接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-122">ICLROnEventManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)  
+ [<span data-ttu-id="4e4b3-123">ICLRPolicyManager 接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-123">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
+ [<span data-ttu-id="4e4b3-124">IHostControl 接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-124">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)  
+ [<span data-ttu-id="4e4b3-125">承载接口</span><span class="sxs-lookup"><span data-stu-id="4e4b3-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

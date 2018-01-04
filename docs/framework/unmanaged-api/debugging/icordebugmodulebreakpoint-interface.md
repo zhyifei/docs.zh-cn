@@ -19,34 +19,35 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e3937c6c0baef4cc927b5c5d789826c70beebf2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cec51a7efe17c2188f12039333dd90f557b1e724
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmodulebreakpoint-interface1"></a><span data-ttu-id="b54d2-102">ICorDebugModuleBreakpoint 接口 1</span><span class="sxs-lookup"><span data-stu-id="b54d2-102">ICorDebugModuleBreakpoint Interface1</span></span>
-<span data-ttu-id="b54d2-103">提供对特定模块的访问。</span><span class="sxs-lookup"><span data-stu-id="b54d2-103">Provides access to specific modules.</span></span> <span data-ttu-id="b54d2-104">此接口是 ICorDebugBreakpoint 接口的子类。</span><span class="sxs-lookup"><span data-stu-id="b54d2-104">This interface is a subclass of the ICorDebugBreakpoint interface.</span></span>  
+# <a name="icordebugmodulebreakpoint-interface1"></a><span data-ttu-id="a1660-102">ICorDebugModuleBreakpoint 接口 1</span><span class="sxs-lookup"><span data-stu-id="a1660-102">ICorDebugModuleBreakpoint Interface1</span></span>
+<span data-ttu-id="a1660-103">提供对特定模块的访问。</span><span class="sxs-lookup"><span data-stu-id="a1660-103">Provides access to specific modules.</span></span> <span data-ttu-id="a1660-104">此接口是 ICorDebugBreakpoint 接口的子类。</span><span class="sxs-lookup"><span data-stu-id="a1660-104">This interface is a subclass of the ICorDebugBreakpoint interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b54d2-105">方法</span><span class="sxs-lookup"><span data-stu-id="b54d2-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="a1660-105">方法</span><span class="sxs-lookup"><span data-stu-id="a1660-105">Methods</span></span>  
   
-|<span data-ttu-id="b54d2-106">方法</span><span class="sxs-lookup"><span data-stu-id="b54d2-106">Method</span></span>|<span data-ttu-id="b54d2-107">描述</span><span class="sxs-lookup"><span data-stu-id="b54d2-107">Description</span></span>|  
+|<span data-ttu-id="a1660-106">方法</span><span class="sxs-lookup"><span data-stu-id="a1660-106">Method</span></span>|<span data-ttu-id="a1660-107">描述</span><span class="sxs-lookup"><span data-stu-id="a1660-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b54d2-108">GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="b54d2-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|<span data-ttu-id="b54d2-109">ICorDebugModule 引用设有此断点的模块中获取的接口指针。</span><span class="sxs-lookup"><span data-stu-id="b54d2-109">Gets an interface pointer to an ICorDebugModule that references the module where this breakpoint is set.</span></span>|  
+|[<span data-ttu-id="a1660-108">GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="a1660-108">GetModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|<span data-ttu-id="a1660-109">ICorDebugModule 引用设有此断点的模块中获取的接口指针。</span><span class="sxs-lookup"><span data-stu-id="a1660-109">Gets an interface pointer to an ICorDebugModule that references the module where this breakpoint is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b54d2-110">备注</span><span class="sxs-lookup"><span data-stu-id="b54d2-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a1660-110">备注</span><span class="sxs-lookup"><span data-stu-id="a1660-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b54d2-111">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="b54d2-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="a1660-111">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="a1660-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b54d2-112">要求</span><span class="sxs-lookup"><span data-stu-id="b54d2-112">Requirements</span></span>  
- <span data-ttu-id="b54d2-113">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b54d2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a1660-112">惠?</span><span class="sxs-lookup"><span data-stu-id="a1660-112">Requirements</span></span>  
+ <span data-ttu-id="a1660-113">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a1660-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b54d2-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b54d2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a1660-114">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a1660-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b54d2-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b54d2-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a1660-115">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a1660-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b54d2-116">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b54d2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a1660-116">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1660-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b54d2-117">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b54d2-117">See Also</span></span>  
- [<span data-ttu-id="b54d2-118">调试接口</span><span class="sxs-lookup"><span data-stu-id="b54d2-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="a1660-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="a1660-117">See Also</span></span>  
+ [<span data-ttu-id="a1660-118">调试接口</span><span class="sxs-lookup"><span data-stu-id="a1660-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

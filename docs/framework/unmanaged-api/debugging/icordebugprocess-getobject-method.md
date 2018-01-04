@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 888583e63f5163bf64129cee11eb5d715cfc026c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fa716c3b1207ed20113b33817471ca20170107da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugprocessgetobject-method"></a><span data-ttu-id="73022-102">ICorDebugProcess::GetObject 方法</span><span class="sxs-lookup"><span data-stu-id="73022-102">ICorDebugProcess::GetObject Method</span></span>
-<span data-ttu-id="73022-103">此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="73022-103">This method has not been implemented.</span></span>  
+# <a name="icordebugprocessgetobject-method"></a><span data-ttu-id="9e007-102">ICorDebugProcess::GetObject 方法</span><span class="sxs-lookup"><span data-stu-id="9e007-102">ICorDebugProcess::GetObject Method</span></span>
+<span data-ttu-id="9e007-103">此方法尚未实现。</span><span class="sxs-lookup"><span data-stu-id="9e007-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73022-104">语法</span><span class="sxs-lookup"><span data-stu-id="73022-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e007-104">语法</span><span class="sxs-lookup"><span data-stu-id="9e007-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject(  

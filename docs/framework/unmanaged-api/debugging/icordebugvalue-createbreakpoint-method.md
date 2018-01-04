@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e2104009047bbd0725d19711da476c27a2cf17ea
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8e5fe259b0096b8832727837e732c8c52f545b51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugvaluecreatebreakpoint-method"></a><span data-ttu-id="f78d0-102">ICorDebugValue::CreateBreakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="f78d0-102">ICorDebugValue::CreateBreakpoint Method</span></span>
-<span data-ttu-id="f78d0-103">`CreateBreakpoint`当前未实现方法。</span><span class="sxs-lookup"><span data-stu-id="f78d0-103">The `CreateBreakpoint` method is currently not implemented.</span></span>  
+# <a name="icordebugvaluecreatebreakpoint-method"></a><span data-ttu-id="47393-102">ICorDebugValue::CreateBreakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="47393-102">ICorDebugValue::CreateBreakpoint Method</span></span>
+<span data-ttu-id="47393-103">`CreateBreakpoint`当前未实现方法。</span><span class="sxs-lookup"><span data-stu-id="47393-103">The `CreateBreakpoint` method is currently not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f78d0-104">语法</span><span class="sxs-lookup"><span data-stu-id="f78d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="47393-104">语法</span><span class="sxs-lookup"><span data-stu-id="47393-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateBreakpoint (  
@@ -38,14 +39,14 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="f78d0-105">要求</span><span class="sxs-lookup"><span data-stu-id="f78d0-105">Requirements</span></span>  
- <span data-ttu-id="f78d0-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f78d0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="47393-105">惠?</span><span class="sxs-lookup"><span data-stu-id="47393-105">Requirements</span></span>  
+ <span data-ttu-id="47393-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="47393-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f78d0-107">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f78d0-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="47393-107">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="47393-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f78d0-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f78d0-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="47393-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="47393-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f78d0-109">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f78d0-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="47393-109">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="47393-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f78d0-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f78d0-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="47393-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="47393-110">See Also</span></span>  
  

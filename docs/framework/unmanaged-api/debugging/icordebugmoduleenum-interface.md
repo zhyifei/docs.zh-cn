@@ -19,34 +19,35 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 106c052c41962d4881ed88a9a7fa69a506119bf5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 466eada867dc6c424d4050d732eda67afd100232
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugmoduleenum-interface1"></a><span data-ttu-id="b883b-102">ICorDebugModuleEnum 接口 1</span><span class="sxs-lookup"><span data-stu-id="b883b-102">ICorDebugModuleEnum Interface1</span></span>
-<span data-ttu-id="b883b-103">实现 ICorDebugEnum 方法，并枚举 ICorDebugModule 数组。</span><span class="sxs-lookup"><span data-stu-id="b883b-103">Implements ICorDebugEnum methods, and enumerates ICorDebugModule arrays.</span></span>  
+# <a name="icordebugmoduleenum-interface1"></a><span data-ttu-id="29842-102">ICorDebugModuleEnum 接口 1</span><span class="sxs-lookup"><span data-stu-id="29842-102">ICorDebugModuleEnum Interface1</span></span>
+<span data-ttu-id="29842-103">实现 ICorDebugEnum 方法，并枚举 ICorDebugModule 数组。</span><span class="sxs-lookup"><span data-stu-id="29842-103">Implements ICorDebugEnum methods, and enumerates ICorDebugModule arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b883b-104">方法</span><span class="sxs-lookup"><span data-stu-id="b883b-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="29842-104">方法</span><span class="sxs-lookup"><span data-stu-id="29842-104">Methods</span></span>  
   
-|<span data-ttu-id="b883b-105">方法</span><span class="sxs-lookup"><span data-stu-id="b883b-105">Method</span></span>|<span data-ttu-id="b883b-106">描述</span><span class="sxs-lookup"><span data-stu-id="b883b-106">Description</span></span>|  
+|<span data-ttu-id="29842-105">方法</span><span class="sxs-lookup"><span data-stu-id="29842-105">Method</span></span>|<span data-ttu-id="29842-106">描述</span><span class="sxs-lookup"><span data-stu-id="29842-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b883b-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="b883b-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|<span data-ttu-id="b883b-108">获取指定的数目的`ICorDebugModule`枚举，从当前位置开始中的实例。</span><span class="sxs-lookup"><span data-stu-id="b883b-108">Gets the specified number of `ICorDebugModule` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="29842-107">Next 方法</span><span class="sxs-lookup"><span data-stu-id="29842-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|<span data-ttu-id="29842-108">获取指定的数目的`ICorDebugModule`枚举，从当前位置开始中的实例。</span><span class="sxs-lookup"><span data-stu-id="29842-108">Gets the specified number of `ICorDebugModule` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b883b-109">备注</span><span class="sxs-lookup"><span data-stu-id="b883b-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="29842-109">备注</span><span class="sxs-lookup"><span data-stu-id="29842-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b883b-110">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="b883b-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="29842-110">此接口不支持跨计算机或跨进程远程调用。</span><span class="sxs-lookup"><span data-stu-id="29842-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b883b-111">要求</span><span class="sxs-lookup"><span data-stu-id="b883b-111">Requirements</span></span>  
- <span data-ttu-id="b883b-112">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b883b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29842-111">惠?</span><span class="sxs-lookup"><span data-stu-id="29842-111">Requirements</span></span>  
+ <span data-ttu-id="29842-112">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="29842-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b883b-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b883b-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="29842-113">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="29842-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b883b-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b883b-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="29842-114">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="29842-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b883b-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b883b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="29842-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29842-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b883b-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b883b-116">See Also</span></span>  
- [<span data-ttu-id="b883b-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="b883b-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="29842-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="29842-116">See Also</span></span>  
+ [<span data-ttu-id="29842-117">调试接口</span><span class="sxs-lookup"><span data-stu-id="29842-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

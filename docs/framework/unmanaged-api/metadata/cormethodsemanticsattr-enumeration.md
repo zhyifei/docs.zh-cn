@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c6dca24aad06b1c07c86cb716f4be344c8458471
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 09e0c1397a94b75a812e6cbdc52e612a930edae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="c2408-102">CorMethodSemanticsAttr 枚举</span><span class="sxs-lookup"><span data-stu-id="c2408-102">CorMethodSemanticsAttr Enumeration</span></span>
-<span data-ttu-id="c2408-103">包含一些值，用于描述方法和关联属性或事件之间的关系。</span><span class="sxs-lookup"><span data-stu-id="c2408-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
+# <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="6130c-102">CorMethodSemanticsAttr 枚举</span><span class="sxs-lookup"><span data-stu-id="6130c-102">CorMethodSemanticsAttr Enumeration</span></span>
+<span data-ttu-id="6130c-103">包含一些值，用于描述方法和关联属性或事件之间的关系。</span><span class="sxs-lookup"><span data-stu-id="6130c-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2408-104">语法</span><span class="sxs-lookup"><span data-stu-id="c2408-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6130c-104">语法</span><span class="sxs-lookup"><span data-stu-id="6130c-104">Syntax</span></span>  
   
 ```  
 typedef enum CorMethodSemanticsAttr {  
@@ -43,23 +44,23 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c2408-105">成员</span><span class="sxs-lookup"><span data-stu-id="c2408-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6130c-105">成员</span><span class="sxs-lookup"><span data-stu-id="6130c-105">Members</span></span>  
   
-|<span data-ttu-id="c2408-106">成员</span><span class="sxs-lookup"><span data-stu-id="c2408-106">Member</span></span>|<span data-ttu-id="c2408-107">描述</span><span class="sxs-lookup"><span data-stu-id="c2408-107">Description</span></span>|  
+|<span data-ttu-id="6130c-106">成员</span><span class="sxs-lookup"><span data-stu-id="6130c-106">Member</span></span>|<span data-ttu-id="6130c-107">描述</span><span class="sxs-lookup"><span data-stu-id="6130c-107">Description</span></span>|  
 |------------|-----------------|  
-|`msSetter`|<span data-ttu-id="c2408-108">指定的方法是`set`属性访问器。</span><span class="sxs-lookup"><span data-stu-id="c2408-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
-|`msGetter`|<span data-ttu-id="c2408-109">指定的方法是`get`属性访问器。</span><span class="sxs-lookup"><span data-stu-id="c2408-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
-|`msOther`|<span data-ttu-id="c2408-110">指定该方法具有一个属性或事件之外此处定义的关系。</span><span class="sxs-lookup"><span data-stu-id="c2408-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
-|`msAddOn`|<span data-ttu-id="c2408-111">指定该方法将添加事件处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="c2408-111">Specifies that the method adds handler methods for an event.</span></span>|  
-|`msRemoveOn`|<span data-ttu-id="c2408-112">指定该方法中删除事件处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="c2408-112">Specifies that the method removes handler methods for an event.</span></span>|  
-|`msFire`|<span data-ttu-id="c2408-113">指定该方法将引发事件。</span><span class="sxs-lookup"><span data-stu-id="c2408-113">Specifies that the method raises an event.</span></span>|  
+|`msSetter`|<span data-ttu-id="6130c-108">指定的方法是`set`属性访问器。</span><span class="sxs-lookup"><span data-stu-id="6130c-108">Specifies that the method is a `set` accessor for a property.</span></span>|  
+|`msGetter`|<span data-ttu-id="6130c-109">指定的方法是`get`属性访问器。</span><span class="sxs-lookup"><span data-stu-id="6130c-109">Specifies that the method is a `get` accessor for a property.</span></span>|  
+|`msOther`|<span data-ttu-id="6130c-110">指定该方法具有一个属性或事件之外此处定义的关系。</span><span class="sxs-lookup"><span data-stu-id="6130c-110">Specifies that the method has a relationship to a property or an event other than those defined here.</span></span>|  
+|`msAddOn`|<span data-ttu-id="6130c-111">指定该方法将添加事件处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="6130c-111">Specifies that the method adds handler methods for an event.</span></span>|  
+|`msRemoveOn`|<span data-ttu-id="6130c-112">指定该方法中删除事件处理程序方法。</span><span class="sxs-lookup"><span data-stu-id="6130c-112">Specifies that the method removes handler methods for an event.</span></span>|  
+|`msFire`|<span data-ttu-id="6130c-113">指定该方法将引发事件。</span><span class="sxs-lookup"><span data-stu-id="6130c-113">Specifies that the method raises an event.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c2408-114">要求</span><span class="sxs-lookup"><span data-stu-id="c2408-114">Requirements</span></span>  
- <span data-ttu-id="c2408-115">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c2408-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6130c-114">惠?</span><span class="sxs-lookup"><span data-stu-id="6130c-114">Requirements</span></span>  
+ <span data-ttu-id="6130c-115">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6130c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2408-116">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="c2408-116">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="6130c-116">**标头：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="6130c-116">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="c2408-117">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2408-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6130c-117">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6130c-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2408-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c2408-118">See Also</span></span>  
- [<span data-ttu-id="c2408-119">元数据枚举</span><span class="sxs-lookup"><span data-stu-id="c2408-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="6130c-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="6130c-118">See Also</span></span>  
+ [<span data-ttu-id="6130c-119">Metadata 枚举</span><span class="sxs-lookup"><span data-stu-id="6130c-119">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

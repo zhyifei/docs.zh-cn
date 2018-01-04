@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 23c1cb74742f5ae2bc6bae22b2f94966f7dbc2f8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 59808b2a1de969f7d530a1be4cb500fc32cec33f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugfunctiongetmodule-method"></a><span data-ttu-id="1cb30-102">ICorDebugFunction::GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="1cb30-102">ICorDebugFunction::GetModule Method</span></span>
-<span data-ttu-id="1cb30-103">获取在其中定义此函数的模块。</span><span class="sxs-lookup"><span data-stu-id="1cb30-103">Gets the module in which this function is defined.</span></span>  
+# <a name="icordebugfunctiongetmodule-method"></a><span data-ttu-id="eb672-102">ICorDebugFunction::GetModule 方法</span><span class="sxs-lookup"><span data-stu-id="eb672-102">ICorDebugFunction::GetModule Method</span></span>
+<span data-ttu-id="eb672-103">获取在其中定义此函数的模块。</span><span class="sxs-lookup"><span data-stu-id="eb672-103">Gets the module in which this function is defined.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1cb30-104">语法</span><span class="sxs-lookup"><span data-stu-id="1cb30-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb672-104">语法</span><span class="sxs-lookup"><span data-stu-id="eb672-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModule (  
@@ -38,15 +39,15 @@ HRESULT GetModule (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1cb30-105">参数</span><span class="sxs-lookup"><span data-stu-id="1cb30-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="eb672-105">参数</span><span class="sxs-lookup"><span data-stu-id="eb672-105">Parameters</span></span>  
  `ppModule`  
- <span data-ttu-id="1cb30-106">[out]指向一个表示在其中定义此函数的模块的 icor 调试模块对象的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="1cb30-106">[out] A pointer to the address of an ICorDebugModule object that represents the module in which this function is defined.</span></span>  
+ <span data-ttu-id="eb672-106">[out]指向一个表示在其中定义此函数的模块的 icor 调试模块对象的地址的指针。</span><span class="sxs-lookup"><span data-stu-id="eb672-106">[out] A pointer to the address of an ICorDebugModule object that represents the module in which this function is defined.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1cb30-107">要求</span><span class="sxs-lookup"><span data-stu-id="1cb30-107">Requirements</span></span>  
- <span data-ttu-id="1cb30-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1cb30-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb672-107">惠?</span><span class="sxs-lookup"><span data-stu-id="eb672-107">Requirements</span></span>  
+ <span data-ttu-id="eb672-108">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="eb672-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1cb30-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1cb30-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="eb672-109">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eb672-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1cb30-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1cb30-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eb672-110">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb672-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1cb30-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1cb30-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="eb672-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb672-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

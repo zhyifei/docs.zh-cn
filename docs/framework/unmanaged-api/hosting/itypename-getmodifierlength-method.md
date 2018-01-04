@@ -21,16 +21,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 56ce91bd2b11561b7028ef21e7e340eb59ac227b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4dd584ae2e3e5a965fe97d546265d86d1a52e92
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="itypenamegetmodifierlength-method"></a><span data-ttu-id="349e5-102">ITypeName::GetModifierLength 方法</span><span class="sxs-lookup"><span data-stu-id="349e5-102">ITypeName::GetModifierLength Method</span></span>
-<span data-ttu-id="349e5-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="349e5-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamegetmodifierlength-method"></a><span data-ttu-id="bcb70-102">ITypeName::GetModifierLength 方法</span><span class="sxs-lookup"><span data-stu-id="bcb70-102">ITypeName::GetModifierLength Method</span></span>
+<span data-ttu-id="bcb70-103">此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。</span><span class="sxs-lookup"><span data-stu-id="bcb70-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="349e5-104">语法</span><span class="sxs-lookup"><span data-stu-id="349e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bcb70-104">语法</span><span class="sxs-lookup"><span data-stu-id="bcb70-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModifierLength (  
@@ -38,14 +39,14 @@ HRESULT GetModifierLength (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="349e5-105">要求</span><span class="sxs-lookup"><span data-stu-id="349e5-105">Requirements</span></span>  
- <span data-ttu-id="349e5-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="349e5-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bcb70-105">惠?</span><span class="sxs-lookup"><span data-stu-id="bcb70-105">Requirements</span></span>  
+ <span data-ttu-id="bcb70-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bcb70-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="349e5-107">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="349e5-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bcb70-107">**标头：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bcb70-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="349e5-108">**库：**作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="349e5-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bcb70-108">**库：**作为 MSCorEE.dll 中的资源</span><span class="sxs-lookup"><span data-stu-id="bcb70-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="349e5-109">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="349e5-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bcb70-109">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bcb70-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="349e5-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="349e5-110">See Also</span></span>  
- [<span data-ttu-id="349e5-111">承载接口</span><span class="sxs-lookup"><span data-stu-id="349e5-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="bcb70-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="bcb70-110">See Also</span></span>  
+ [<span data-ttu-id="bcb70-111">承载接口</span><span class="sxs-lookup"><span data-stu-id="bcb70-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

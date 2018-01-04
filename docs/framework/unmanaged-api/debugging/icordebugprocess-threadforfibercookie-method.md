@@ -21,16 +21,17 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 231524fa77bf939f08ef462e7dd7f23a373a103f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9ea7f852f92f66718feaaa31cc44e622b18ba16f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="5232a-102">ICorDebugProcess::ThreadForFiberCookie 方法</span><span class="sxs-lookup"><span data-stu-id="5232a-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
-<span data-ttu-id="5232a-103">未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="5232a-103">This method is not implemented.</span></span>  
+# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="f14e0-102">ICorDebugProcess::ThreadForFiberCookie 方法</span><span class="sxs-lookup"><span data-stu-id="f14e0-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
+<span data-ttu-id="f14e0-103">未实现此方法。</span><span class="sxs-lookup"><span data-stu-id="f14e0-103">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5232a-104">语法</span><span class="sxs-lookup"><span data-stu-id="5232a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f14e0-104">语法</span><span class="sxs-lookup"><span data-stu-id="f14e0-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadForFiberCookie (  
@@ -39,11 +40,11 @@ HRESULT ThreadForFiberCookie (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5232a-105">要求</span><span class="sxs-lookup"><span data-stu-id="5232a-105">Requirements</span></span>  
- <span data-ttu-id="5232a-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5232a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f14e0-105">惠?</span><span class="sxs-lookup"><span data-stu-id="f14e0-105">Requirements</span></span>  
+ <span data-ttu-id="f14e0-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f14e0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5232a-107">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5232a-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f14e0-107">**标头：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f14e0-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5232a-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5232a-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f14e0-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f14e0-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5232a-109">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5232a-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f14e0-109">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f14e0-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

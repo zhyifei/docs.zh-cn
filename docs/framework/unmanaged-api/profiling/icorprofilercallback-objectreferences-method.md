@@ -21,16 +21,17 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5cdebc1984f86d3801759f8f987df8fb89d82e3a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 30b8f6b5f424ff81ace36baa8d2ae39e0a2f1d1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilercallbackobjectreferences-method"></a><span data-ttu-id="16d58-102">ICorProfilerCallback::ObjectReferences 方法</span><span class="sxs-lookup"><span data-stu-id="16d58-102">ICorProfilerCallback::ObjectReferences Method</span></span>
-<span data-ttu-id="16d58-103">通知探查器在内存中由指定的对象引用的对象有关。</span><span class="sxs-lookup"><span data-stu-id="16d58-103">Notifies the profiler about objects in memory that are being referenced by the specified object.</span></span>  
+# <a name="icorprofilercallbackobjectreferences-method"></a><span data-ttu-id="31abf-102">ICorProfilerCallback::ObjectReferences 方法</span><span class="sxs-lookup"><span data-stu-id="31abf-102">ICorProfilerCallback::ObjectReferences Method</span></span>
+<span data-ttu-id="31abf-103">通知探查器在内存中由指定的对象引用的对象有关。</span><span class="sxs-lookup"><span data-stu-id="31abf-103">Notifies the profiler about objects in memory that are being referenced by the specified object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16d58-104">语法</span><span class="sxs-lookup"><span data-stu-id="16d58-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="31abf-104">语法</span><span class="sxs-lookup"><span data-stu-id="31abf-104">Syntax</span></span>  
   
 ```  
 HRESULT ObjectReferences(  
@@ -40,36 +41,36 @@ HRESULT ObjectReferences(
     [in, size_is(cObjectRefs)] ObjectID objectRefIds[] );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="16d58-105">参数</span><span class="sxs-lookup"><span data-stu-id="16d58-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="31abf-105">参数</span><span class="sxs-lookup"><span data-stu-id="31abf-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="16d58-106">[in]引用对象的对象 ID。</span><span class="sxs-lookup"><span data-stu-id="16d58-106">[in] The ID of the object that is referencing objects.</span></span>  
+ <span data-ttu-id="31abf-106">[in]引用对象的对象 ID。</span><span class="sxs-lookup"><span data-stu-id="31abf-106">[in] The ID of the object that is referencing objects.</span></span>  
   
  `classId`  
- <span data-ttu-id="16d58-107">[in]类的指定的对象的实例 ID。</span><span class="sxs-lookup"><span data-stu-id="16d58-107">[in] The ID of the class that the specified object is an instance of.</span></span>  
+ <span data-ttu-id="31abf-107">[in]类的指定的对象的实例 ID。</span><span class="sxs-lookup"><span data-stu-id="31abf-107">[in] The ID of the class that the specified object is an instance of.</span></span>  
   
  `cObjectRefs`  
- <span data-ttu-id="16d58-108">[in]由指定的对象引用的对象的数目 (即中的元素数`objectRefIds`数组)。</span><span class="sxs-lookup"><span data-stu-id="16d58-108">[in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).</span></span>  
+ <span data-ttu-id="31abf-108">[in]由指定的对象引用的对象的数目 (即中的元素数`objectRefIds`数组)。</span><span class="sxs-lookup"><span data-stu-id="31abf-108">[in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).</span></span>  
   
  `objectRefIds`  
- <span data-ttu-id="16d58-109">[in]被引用的对象的 Id 的数组， `objectId`。</span><span class="sxs-lookup"><span data-stu-id="16d58-109">[in] An array of IDs of objects that are being referenced by `objectId`.</span></span>  
+ <span data-ttu-id="31abf-109">[in]被引用的对象的 Id 的数组， `objectId`。</span><span class="sxs-lookup"><span data-stu-id="31abf-109">[in] An array of IDs of objects that are being referenced by `objectId`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="16d58-110">备注</span><span class="sxs-lookup"><span data-stu-id="16d58-110">Remarks</span></span>  
- <span data-ttu-id="16d58-111">`ObjectReferences`针对每个垃圾回收完成后，为堆中剩余的对象调用方法。</span><span class="sxs-lookup"><span data-stu-id="16d58-111">The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed.</span></span> <span data-ttu-id="16d58-112">如果探查器从此回调返回错误，则将停止分析服务下, 一次垃圾回收之前调用此回调。</span><span class="sxs-lookup"><span data-stu-id="16d58-112">If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="31abf-110">备注</span><span class="sxs-lookup"><span data-stu-id="31abf-110">Remarks</span></span>  
+ <span data-ttu-id="31abf-111">`ObjectReferences`针对每个垃圾回收完成后，为堆中剩余的对象调用方法。</span><span class="sxs-lookup"><span data-stu-id="31abf-111">The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed.</span></span> <span data-ttu-id="31abf-112">如果探查器从此回调返回错误，则将停止分析服务下, 一次垃圾回收之前调用此回调。</span><span class="sxs-lookup"><span data-stu-id="31abf-112">If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.</span></span>  
   
- <span data-ttu-id="16d58-113">`ObjectReferences`可结合使用回调[icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)回调来创建运行时的完整的对象引用关系图。</span><span class="sxs-lookup"><span data-stu-id="16d58-113">The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime.</span></span> <span data-ttu-id="16d58-114">公共语言运行时 (CLR) 可确保每个对象引用一次报告的`ObjectReferences`方法。</span><span class="sxs-lookup"><span data-stu-id="16d58-114">The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.</span></span>  
+ <span data-ttu-id="31abf-113">`ObjectReferences`可结合使用回调[icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)回调来创建运行时的完整的对象引用关系图。</span><span class="sxs-lookup"><span data-stu-id="31abf-113">The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime.</span></span> <span data-ttu-id="31abf-114">公共语言运行时 (CLR) 可确保每个对象引用一次报告的`ObjectReferences`方法。</span><span class="sxs-lookup"><span data-stu-id="31abf-114">The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.</span></span>  
   
- <span data-ttu-id="16d58-115">通过返回的对象 Id`ObjectReferences`不是有效在回调过程，因为垃圾回收可能正处于将对象移。</span><span class="sxs-lookup"><span data-stu-id="16d58-115">The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects.</span></span> <span data-ttu-id="16d58-116">因此，探查器必须不尝试检查对象期间`ObjectReferences`调用。</span><span class="sxs-lookup"><span data-stu-id="16d58-116">Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call.</span></span> <span data-ttu-id="16d58-117">当[icorprofilercallback2:: Garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)调用时，垃圾回收完成集合并检查，可以安全地进行。</span><span class="sxs-lookup"><span data-stu-id="16d58-117">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.</span></span>  
+ <span data-ttu-id="31abf-115">通过返回的对象 Id`ObjectReferences`不是有效在回调过程，因为垃圾回收可能正处于将对象移。</span><span class="sxs-lookup"><span data-stu-id="31abf-115">The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects.</span></span> <span data-ttu-id="31abf-116">因此，探查器必须不尝试检查对象期间`ObjectReferences`调用。</span><span class="sxs-lookup"><span data-stu-id="31abf-116">Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call.</span></span> <span data-ttu-id="31abf-117">当[icorprofilercallback2:: Garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)调用时，垃圾回收完成集合并检查，可以安全地进行。</span><span class="sxs-lookup"><span data-stu-id="31abf-117">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.</span></span>  
   
- <span data-ttu-id="16d58-118">Null`ClassId`指示`objectId`具有正在卸载的类型。</span><span class="sxs-lookup"><span data-stu-id="16d58-118">A null `ClassId` indicates that `objectId` has a type that is unloading.</span></span>  
+ <span data-ttu-id="31abf-118">Null`ClassId`指示`objectId`具有正在卸载的类型。</span><span class="sxs-lookup"><span data-stu-id="31abf-118">A null `ClassId` indicates that `objectId` has a type that is unloading.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16d58-119">要求</span><span class="sxs-lookup"><span data-stu-id="16d58-119">Requirements</span></span>  
- <span data-ttu-id="16d58-120">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="16d58-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="31abf-119">惠?</span><span class="sxs-lookup"><span data-stu-id="31abf-119">Requirements</span></span>  
+ <span data-ttu-id="31abf-120">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="31abf-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16d58-121">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="16d58-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="31abf-121">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="31abf-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="16d58-122">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16d58-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="31abf-122">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="31abf-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="16d58-123">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16d58-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="31abf-123">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="31abf-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16d58-124">另请参阅</span><span class="sxs-lookup"><span data-stu-id="16d58-124">See Also</span></span>  
- [<span data-ttu-id="16d58-125">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="16d58-125">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="31abf-124">请参阅</span><span class="sxs-lookup"><span data-stu-id="31abf-124">See Also</span></span>  
+ [<span data-ttu-id="31abf-125">ICorProfilerCallback 接口</span><span class="sxs-lookup"><span data-stu-id="31abf-125">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

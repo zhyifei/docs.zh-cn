@@ -21,16 +21,17 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8686e27e63d7363e61bf4c8f1898b71d21fda52b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de21e9b0d224ec417eeb50f8de5c33411d0dadb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="iinstallreferenceitemgetreference-method"></a><span data-ttu-id="8bae2-102">IInstallReferenceItem::GetReference 方法</span><span class="sxs-lookup"><span data-stu-id="8bae2-102">IInstallReferenceItem::GetReference Method</span></span>
-<span data-ttu-id="8bae2-103">获取一个指向[FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)结构由此[IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="8bae2-103">Gets a pointer to the [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure represented by this [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object.</span></span>  
+# <a name="iinstallreferenceitemgetreference-method"></a><span data-ttu-id="df0b3-102">IInstallReferenceItem::GetReference 方法</span><span class="sxs-lookup"><span data-stu-id="df0b3-102">IInstallReferenceItem::GetReference Method</span></span>
+<span data-ttu-id="df0b3-103">获取一个指向[FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)结构由此[IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)对象。</span><span class="sxs-lookup"><span data-stu-id="df0b3-103">Gets a pointer to the [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure represented by this [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8bae2-104">语法</span><span class="sxs-lookup"><span data-stu-id="8bae2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df0b3-104">语法</span><span class="sxs-lookup"><span data-stu-id="df0b3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReference (  
@@ -40,23 +41,23 @@ HRESULT GetReference (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8bae2-105">参数</span><span class="sxs-lookup"><span data-stu-id="8bae2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="df0b3-105">参数</span><span class="sxs-lookup"><span data-stu-id="df0b3-105">Parameters</span></span>  
  `ppRefData`  
- <span data-ttu-id="8bae2-106">[out]返回`FUSION_INSTALL_REFERENCE`指针。</span><span class="sxs-lookup"><span data-stu-id="8bae2-106">[out] The returned `FUSION_INSTALL_REFERENCE` pointer.</span></span>  
+ <span data-ttu-id="df0b3-106">[out]返回`FUSION_INSTALL_REFERENCE`指针。</span><span class="sxs-lookup"><span data-stu-id="df0b3-106">[out] The returned `FUSION_INSTALL_REFERENCE` pointer.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="8bae2-107">[in]留待将来扩展。</span><span class="sxs-lookup"><span data-stu-id="8bae2-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="8bae2-108">`dwFlags`必须为 0 （零）。</span><span class="sxs-lookup"><span data-stu-id="8bae2-108">`dwFlags` must be 0 (zero).</span></span>  
+ <span data-ttu-id="df0b3-107">[in]留待将来扩展。</span><span class="sxs-lookup"><span data-stu-id="df0b3-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="df0b3-108">`dwFlags`必须为 0 （零）。</span><span class="sxs-lookup"><span data-stu-id="df0b3-108">`dwFlags` must be 0 (zero).</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="8bae2-109">[in]留待将来扩展。</span><span class="sxs-lookup"><span data-stu-id="8bae2-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="8bae2-110">`pvReserved`必须是 null 引用。</span><span class="sxs-lookup"><span data-stu-id="8bae2-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="df0b3-109">[in]留待将来扩展。</span><span class="sxs-lookup"><span data-stu-id="df0b3-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="df0b3-110">`pvReserved`必须是 null 引用。</span><span class="sxs-lookup"><span data-stu-id="df0b3-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8bae2-111">要求</span><span class="sxs-lookup"><span data-stu-id="8bae2-111">Requirements</span></span>  
- <span data-ttu-id="8bae2-112">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8bae2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="df0b3-111">惠?</span><span class="sxs-lookup"><span data-stu-id="df0b3-111">Requirements</span></span>  
+ <span data-ttu-id="df0b3-112">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="df0b3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8bae2-113">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8bae2-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="df0b3-113">**标头：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="df0b3-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="8bae2-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bae2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="df0b3-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df0b3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8bae2-115">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8bae2-115">See Also</span></span>  
- [<span data-ttu-id="8bae2-116">IInstallReferenceItem 接口</span><span class="sxs-lookup"><span data-stu-id="8bae2-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- [<span data-ttu-id="8bae2-117">FUSION_INSTALL_REFERENCE 结构</span><span class="sxs-lookup"><span data-stu-id="8bae2-117">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a><span data-ttu-id="df0b3-115">请参阅</span><span class="sxs-lookup"><span data-stu-id="df0b3-115">See Also</span></span>  
+ [<span data-ttu-id="df0b3-116">IInstallReferenceItem 接口</span><span class="sxs-lookup"><span data-stu-id="df0b3-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
+ [<span data-ttu-id="df0b3-117">FUSION_INSTALL_REFERENCE 结构</span><span class="sxs-lookup"><span data-stu-id="df0b3-117">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

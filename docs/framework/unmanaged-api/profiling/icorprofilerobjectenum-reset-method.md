@@ -21,29 +21,30 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a5e14b8f3ef2b3bbca9eda78219d982939d68a4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 355b3753385ef28af473a1cc03f1aa67fb4d58e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorprofilerobjectenumreset-method"></a><span data-ttu-id="65ec8-102">ICorProfilerObjectEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="65ec8-102">ICorProfilerObjectEnum::Reset Method</span></span>
-<span data-ttu-id="65ec8-103">将此枚举器的光标移动到序列的起始位置。</span><span class="sxs-lookup"><span data-stu-id="65ec8-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
+# <a name="icorprofilerobjectenumreset-method"></a><span data-ttu-id="b0100-102">ICorProfilerObjectEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="b0100-102">ICorProfilerObjectEnum::Reset Method</span></span>
+<span data-ttu-id="b0100-103">将此枚举器的光标移动到序列的起始位置。</span><span class="sxs-lookup"><span data-stu-id="b0100-103">Moves this enumerator's cursor to the starting position of the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="65ec8-104">语法</span><span class="sxs-lookup"><span data-stu-id="65ec8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b0100-104">语法</span><span class="sxs-lookup"><span data-stu-id="b0100-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="65ec8-105">要求</span><span class="sxs-lookup"><span data-stu-id="65ec8-105">Requirements</span></span>  
- <span data-ttu-id="65ec8-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="65ec8-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b0100-105">惠?</span><span class="sxs-lookup"><span data-stu-id="b0100-105">Requirements</span></span>  
+ <span data-ttu-id="b0100-106">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b0100-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="65ec8-107">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="65ec8-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b0100-107">**头文件：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b0100-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="65ec8-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65ec8-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b0100-108">**库：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0100-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="65ec8-109">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65ec8-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b0100-109">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0100-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65ec8-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="65ec8-110">See Also</span></span>  
- [<span data-ttu-id="65ec8-111">ICorProfilerObjectEnum 接口</span><span class="sxs-lookup"><span data-stu-id="65ec8-111">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b0100-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="b0100-110">See Also</span></span>  
+ [<span data-ttu-id="b0100-111">ICorProfilerObjectEnum 接口</span><span class="sxs-lookup"><span data-stu-id="b0100-111">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
