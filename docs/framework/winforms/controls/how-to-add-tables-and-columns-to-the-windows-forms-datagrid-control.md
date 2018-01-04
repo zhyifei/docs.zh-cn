@@ -21,26 +21,27 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 970c2787bda50bcf0478b64df44176525f839482
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca34b5daff07b733ccf2bfb4269c11cff80c7549
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a><span data-ttu-id="a36ae-102">如何：向 Windows 窗体 DataGrid 控件添加表和列</span><span class="sxs-lookup"><span data-stu-id="a36ae-102">How to: Add Tables and Columns to the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a><span data-ttu-id="5cdcb-102">如何：向 Windows 窗体 DataGrid 控件添加表和列</span><span class="sxs-lookup"><span data-stu-id="5cdcb-102">How to: Add Tables and Columns to the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="a36ae-103"><xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。</span><span class="sxs-lookup"><span data-stu-id="a36ae-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="a36ae-104">有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="a36ae-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
+>  <span data-ttu-id="5cdcb-103"><xref:System.Windows.Forms.DataGridView> 控件取代了 <xref:System.Windows.Forms.DataGrid> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.DataGrid> 控件以实现向后兼容并供将来使用。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="5cdcb-104">有关详细信息，请参阅 [Windows 窗体 DataGridView 控件与 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <span data-ttu-id="a36ae-105">你可以在 Windows 窗体中显示数据<xref:System.Windows.Forms.DataGrid>中表和列通过创建控件**DataGridTableStyle**对象并将它们添加到**GridTableStylesCollection**对象，它是通过访问<xref:System.Windows.Forms.DataGrid>控件的**TableStyles**属性。</span><span class="sxs-lookup"><span data-stu-id="a36ae-105">You can display data in the Windows Forms <xref:System.Windows.Forms.DataGrid> control in tables and columns by creating **DataGridTableStyle** objects and adding them to the **GridTableStylesCollection** object, which is accessed through the <xref:System.Windows.Forms.DataGrid> control's **TableStyles** property.</span></span> <span data-ttu-id="a36ae-106">每个表样式显示任何数据表中指定的内容**DataGridTableStyle**对象的**MappingName**属性。</span><span class="sxs-lookup"><span data-stu-id="a36ae-106">Each table style displays the contents of whatever data table is specified in the **DataGridTableStyle** object's **MappingName** property.</span></span> <span data-ttu-id="a36ae-107">默认情况下，具有未指定的列样式的表样式将显示该数据表中的所有列。</span><span class="sxs-lookup"><span data-stu-id="a36ae-107">By default, a table style with no column styles specified will display all the columns within that data table.</span></span> <span data-ttu-id="a36ae-108">你可以限制表中的哪些列显示通过添加**DataGridColumnStyle**对象添加到**GridColumnStylesCollection**对象，可通过**GridColumnStyles**每个属性**DataGridTableStyle**对象。</span><span class="sxs-lookup"><span data-stu-id="a36ae-108">You can restrict which columns from the table appear by adding **DataGridColumnStyle** objects to the **GridColumnStylesCollection** object, which is accessed through the **GridColumnStyles** property of each **DataGridTableStyle** object.</span></span>  
+ <span data-ttu-id="5cdcb-105">你可以在 Windows 窗体中显示数据<xref:System.Windows.Forms.DataGrid>中表和列通过创建控件**DataGridTableStyle**对象并将它们添加到**GridTableStylesCollection**对象，它是通过访问<xref:System.Windows.Forms.DataGrid>控件的**TableStyles**属性。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-105">You can display data in the Windows Forms <xref:System.Windows.Forms.DataGrid> control in tables and columns by creating **DataGridTableStyle** objects and adding them to the **GridTableStylesCollection** object, which is accessed through the <xref:System.Windows.Forms.DataGrid> control's **TableStyles** property.</span></span> <span data-ttu-id="5cdcb-106">每个表样式显示任何数据表中指定的内容**DataGridTableStyle**对象的**MappingName**属性。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-106">Each table style displays the contents of whatever data table is specified in the **DataGridTableStyle** object's **MappingName** property.</span></span> <span data-ttu-id="5cdcb-107">默认情况下，具有未指定的列样式的表样式将显示该数据表中的所有列。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-107">By default, a table style with no column styles specified will display all the columns within that data table.</span></span> <span data-ttu-id="5cdcb-108">你可以限制表中的哪些列显示通过添加**DataGridColumnStyle**对象添加到**GridColumnStylesCollection**对象，可通过**GridColumnStyles**每个属性**DataGridTableStyle**对象。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-108">You can restrict which columns from the table appear by adding **DataGridColumnStyle** objects to the **GridColumnStylesCollection** object, which is accessed through the **GridColumnStyles** property of each **DataGridTableStyle** object.</span></span>  
   
-### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a><span data-ttu-id="a36ae-109">以编程方式将表和列添加到数据网格</span><span class="sxs-lookup"><span data-stu-id="a36ae-109">To add a table and column to a DataGrid programmatically</span></span>  
+### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a><span data-ttu-id="5cdcb-109">以编程方式将表和列添加到数据网格</span><span class="sxs-lookup"><span data-stu-id="5cdcb-109">To add a table and column to a DataGrid programmatically</span></span>  
   
-1.  <span data-ttu-id="a36ae-110">为了在表中显示数据，必须首先将绑定<xref:System.Windows.Forms.DataGrid>控件添加到数据集。</span><span class="sxs-lookup"><span data-stu-id="a36ae-110">In order to display data in the table, you must first bind the <xref:System.Windows.Forms.DataGrid> control to a dataset.</span></span> <span data-ttu-id="a36ae-111">有关详细信息，请参阅[如何： 将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。</span><span class="sxs-lookup"><span data-stu-id="a36ae-111">For more information, see [How to: Bind the Windows Forms DataGrid Control to a Data Source](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span></span>  
+1.  <span data-ttu-id="5cdcb-110">为了在表中显示数据，必须首先将绑定<xref:System.Windows.Forms.DataGrid>控件添加到数据集。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-110">In order to display data in the table, you must first bind the <xref:System.Windows.Forms.DataGrid> control to a dataset.</span></span> <span data-ttu-id="5cdcb-111">有关详细信息，请参阅[如何： 将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-111">For more information, see [How to: Bind the Windows Forms DataGrid Control to a Data Source](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span></span>  
   
     > [!CAUTION]
-    >  <span data-ttu-id="a36ae-112">以编程方式指定列样式，将始终创建**DataGridColumnStyle**对象，并将其添加到**GridColumnStylesCollection**之前添加的对象**DataGridTableStyle**对象添加到**GridTableStylesCollection**对象。</span><span class="sxs-lookup"><span data-stu-id="a36ae-112">When programmatically specifying column styles, always create **DataGridColumnStyle** objects and add them to the **GridColumnStylesCollection** object before adding **DataGridTableStyle** objects to the **GridTableStylesCollection** object.</span></span> <span data-ttu-id="a36ae-113">当你将添加一个空**DataGridTableStyle**对象添加到收藏， **DataGridColumnStyle**自动为你生成的对象。</span><span class="sxs-lookup"><span data-stu-id="a36ae-113">When you add an empty **DataGridTableStyle** object to the collection, **DataGridColumnStyle** objects are automatically generated for you.</span></span> <span data-ttu-id="a36ae-114">如果你尝试添加新因此，将引发异常**DataGridColumnStyle**对象具有重复**MappingName**值复制到**GridColumnStylesCollection**对象。</span><span class="sxs-lookup"><span data-stu-id="a36ae-114">Consequently, an exception will be thrown if you try to add new **DataGridColumnStyle** objects with duplicate **MappingName** values to the **GridColumnStylesCollection** object.</span></span>  
+    >  <span data-ttu-id="5cdcb-112">以编程方式指定列样式，将始终创建**DataGridColumnStyle**对象，并将其添加到**GridColumnStylesCollection**之前添加的对象**DataGridTableStyle**对象添加到**GridTableStylesCollection**对象。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-112">When programmatically specifying column styles, always create **DataGridColumnStyle** objects and add them to the **GridColumnStylesCollection** object before adding **DataGridTableStyle** objects to the **GridTableStylesCollection** object.</span></span> <span data-ttu-id="5cdcb-113">当你将添加一个空**DataGridTableStyle**对象添加到收藏， **DataGridColumnStyle**自动为你生成的对象。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-113">When you add an empty **DataGridTableStyle** object to the collection, **DataGridColumnStyle** objects are automatically generated for you.</span></span> <span data-ttu-id="5cdcb-114">如果你尝试添加新因此，将引发异常**DataGridColumnStyle**对象具有重复**MappingName**值复制到**GridColumnStylesCollection**对象。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-114">Consequently, an exception will be thrown if you try to add new **DataGridColumnStyle** objects with duplicate **MappingName** values to the **GridColumnStylesCollection** object.</span></span>  
   
-2.  <span data-ttu-id="a36ae-115">声明一个新的表样式并设置其映射名称。</span><span class="sxs-lookup"><span data-stu-id="a36ae-115">Declare a new table style and set its mapping name.</span></span>  
+2.  <span data-ttu-id="5cdcb-115">声明一个新的表样式并设置其映射名称。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-115">Declare a new table style and set its mapping name.</span></span>  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  <span data-ttu-id="a36ae-116">声明一个新列样式并设置其映射名称和其他属性。</span><span class="sxs-lookup"><span data-stu-id="a36ae-116">Declare a new column style and set its mapping name and other properties.</span></span>  
+3.  <span data-ttu-id="5cdcb-116">声明一个新列样式并设置其映射名称和其他属性。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-116">Declare a new column style and set its mapping name and other properties.</span></span>  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  <span data-ttu-id="a36ae-117">调用**添加**方法**GridColumnStylesCollection**对象向表样式添加列</span><span class="sxs-lookup"><span data-stu-id="a36ae-117">Call the **Add** method of the **GridColumnStylesCollection** object to add the column to the table style</span></span>  
+4.  <span data-ttu-id="5cdcb-117">调用**添加**方法**GridColumnStylesCollection**对象向表样式添加列</span><span class="sxs-lookup"><span data-stu-id="5cdcb-117">Call the **Add** method of the **GridColumnStylesCollection** object to add the column to the table style</span></span>  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/21/2017
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  <span data-ttu-id="a36ae-118">调用**添加**方法**GridTableStylesCollection**对象以将表样式添加到数据网格。</span><span class="sxs-lookup"><span data-stu-id="a36ae-118">Call the **Add** method of the **GridTableStylesCollection** object to add the table style to the data grid.</span></span>  
+5.  <span data-ttu-id="5cdcb-118">调用**添加**方法**GridTableStylesCollection**对象以将表样式添加到数据网格。</span><span class="sxs-lookup"><span data-stu-id="5cdcb-118">Call the **Add** method of the **GridTableStylesCollection** object to add the table style to the data grid.</span></span>  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  
@@ -105,6 +106,6 @@ ms.lasthandoff: 11/21/2017
     dataGrid1->TableStyles->Add(ts1);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a36ae-119">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a36ae-119">See Also</span></span>  
- [<span data-ttu-id="a36ae-120">DataGrid 控件</span><span class="sxs-lookup"><span data-stu-id="a36ae-120">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [<span data-ttu-id="a36ae-121">如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列</span><span class="sxs-lookup"><span data-stu-id="a36ae-121">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a><span data-ttu-id="5cdcb-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="5cdcb-119">See Also</span></span>  
+ [<span data-ttu-id="5cdcb-120">DataGrid 控件</span><span class="sxs-lookup"><span data-stu-id="5cdcb-120">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="5cdcb-121">如何：在 Windows 窗体 DataGrid 控件中删除或隐藏列</span><span class="sxs-lookup"><span data-stu-id="5cdcb-121">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

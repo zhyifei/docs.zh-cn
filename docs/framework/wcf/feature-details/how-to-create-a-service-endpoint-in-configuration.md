@@ -13,17 +13,18 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e60708ecf5ae7ed15b42e982b9ae40c00d72ecc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b96ccdb7e80faa35748a41947ed97f273cb330e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a><span data-ttu-id="d2a4f-102">如何：在配置中创建服务终结点</span><span class="sxs-lookup"><span data-stu-id="d2a4f-102">How to: Create a Service Endpoint in Configuration</span></span>
-<span data-ttu-id="d2a4f-103">终结点为客户端提供对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所提供的功能的访问权。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-103">Endpoints provide clients with access to the functionality a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service offers.</span></span> <span data-ttu-id="d2a4f-104">您可以通过使用相对和绝对终结点地址的组合来定义一个或多个终结点，或者如果您未定义任何服务终结点，则默认情况下运行时为您提供一些终结点。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-104">You can define one or more endpoints for a service by using a combination of relative and absolute endpoint addresses, or if you do not define any service endpoints, the runtime provides some by default for you.</span></span> <span data-ttu-id="d2a4f-105">本主题演示如何使用同时包含相对和绝对地址的配置文件来添加终结点。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-105">This topic shows how to add endpoints using a configuration file that contain both relative and absolute addresses.</span></span>  
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a><span data-ttu-id="2b241-102">如何：在配置中创建服务终结点</span><span class="sxs-lookup"><span data-stu-id="2b241-102">How to: Create a Service Endpoint in Configuration</span></span>
+<span data-ttu-id="2b241-103">终结点为客户端提供对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所提供的功能的访问权。</span><span class="sxs-lookup"><span data-stu-id="2b241-103">Endpoints provide clients with access to the functionality a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service offers.</span></span> <span data-ttu-id="2b241-104">您可以通过使用相对和绝对终结点地址的组合来定义一个或多个终结点，或者如果您未定义任何服务终结点，则默认情况下运行时为您提供一些终结点。</span><span class="sxs-lookup"><span data-stu-id="2b241-104">You can define one or more endpoints for a service by using a combination of relative and absolute endpoint addresses, or if you do not define any service endpoints, the runtime provides some by default for you.</span></span> <span data-ttu-id="2b241-105">本主题演示如何使用同时包含相对和绝对地址的配置文件来添加终结点。</span><span class="sxs-lookup"><span data-stu-id="2b241-105">This topic shows how to add endpoints using a configuration file that contain both relative and absolute addresses.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2a4f-106">示例</span><span class="sxs-lookup"><span data-stu-id="d2a4f-106">Example</span></span>  
- <span data-ttu-id="d2a4f-107">下列服务配置指定一个基址和五个终结点。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-107">The following service configuration specifies a base address and five endpoints.</span></span>  
+## <a name="example"></a><span data-ttu-id="2b241-106">示例</span><span class="sxs-lookup"><span data-stu-id="2b241-106">Example</span></span>  
+ <span data-ttu-id="2b241-107">下列服务配置指定一个基址和五个终结点。</span><span class="sxs-lookup"><span data-stu-id="2b241-107">The following service configuration specifies a base address and five endpoints.</span></span>  
   
 ```xml  
 <configuration>  
@@ -79,8 +80,8 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="d2a4f-108">示例</span><span class="sxs-lookup"><span data-stu-id="d2a4f-108">Example</span></span>  
- <span data-ttu-id="d2a4f-109">基址是使用 `add` 元素在 service/host/baseAddresses 下指定的，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-109">The base address is specified using the `add` element, under service/host/baseAddresses, as shown in the following sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="2b241-108">示例</span><span class="sxs-lookup"><span data-stu-id="2b241-108">Example</span></span>  
+ <span data-ttu-id="2b241-109">基址是使用 `add` 元素在 service/host/baseAddresses 下指定的，如下面的示例所示。</span><span class="sxs-lookup"><span data-stu-id="2b241-109">The base address is specified using the `add` element, under service/host/baseAddresses, as shown in the following sample.</span></span>  
   
 ```xml  
 <service   
@@ -92,8 +93,8 @@ ms.lasthandoff: 12/02/2017
   </host>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="d2a4f-110">示例</span><span class="sxs-lookup"><span data-stu-id="d2a4f-110">Example</span></span>  
- <span data-ttu-id="d2a4f-111">在以下示例中显示的第一个终结点指定一个相对地址，这意味着该终结点地址是遵循统一资源标识符 (URI) 构成规则的基址和相对地址的结合。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-111">The first endpoint definition shown in the following sample specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of Uniform Resource Identifier (URI) composition.</span></span> <span data-ttu-id="d2a4f-112">相对地址为空 ("")，因此终结点地址与基址相同。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-112">The relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="d2a4f-113">实际终结点地址为 http://localhost:8000/servicemodelsamples/service。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-113">The actual endpoint address is http://localhost:8000/servicemodelsamples/service.</span></span>  
+## <a name="example"></a><span data-ttu-id="2b241-110">示例</span><span class="sxs-lookup"><span data-stu-id="2b241-110">Example</span></span>  
+ <span data-ttu-id="2b241-111">在以下示例中显示的第一个终结点指定一个相对地址，这意味着该终结点地址是遵循统一资源标识符 (URI) 构成规则的基址和相对地址的结合。</span><span class="sxs-lookup"><span data-stu-id="2b241-111">The first endpoint definition shown in the following sample specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of Uniform Resource Identifier (URI) composition.</span></span> <span data-ttu-id="2b241-112">相对地址为空 ("")，因此终结点地址与基址相同。</span><span class="sxs-lookup"><span data-stu-id="2b241-112">The relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="2b241-113">实际终结点地址为 http://localhost:8000/servicemodelsamples/service。</span><span class="sxs-lookup"><span data-stu-id="2b241-113">The actual endpoint address is http://localhost:8000/servicemodelsamples/service.</span></span>  
   
 ```xml  
 <endpoint address=""   
@@ -101,8 +102,8 @@ ms.lasthandoff: 12/02/2017
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="d2a4f-114">示例</span><span class="sxs-lookup"><span data-stu-id="d2a4f-114">Example</span></span>  
- <span data-ttu-id="d2a4f-115">第二个终结点定义也指定一个相对地址，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-115">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span> <span data-ttu-id="d2a4f-116">将相对地址“test”追加到基址。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-116">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="d2a4f-117">实际终结点地址为 http://localhost:8000/servicemodelsamples/service/test。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-117">The actual endpoint address is http://localhost:8000/servicemodelsamples/service/test.</span></span>  
+## <a name="example"></a><span data-ttu-id="2b241-114">示例</span><span class="sxs-lookup"><span data-stu-id="2b241-114">Example</span></span>  
+ <span data-ttu-id="2b241-115">第二个终结点定义也指定一个相对地址，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="2b241-115">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span> <span data-ttu-id="2b241-116">将相对地址“test”追加到基址。</span><span class="sxs-lookup"><span data-stu-id="2b241-116">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="2b241-117">实际终结点地址为 http://localhost:8000/servicemodelsamples/service/test。</span><span class="sxs-lookup"><span data-stu-id="2b241-117">The actual endpoint address is http://localhost:8000/servicemodelsamples/service/test.</span></span>  
   
 ```xml  
 <endpoint address="/test"  
@@ -110,8 +111,8 @@ ms.lasthandoff: 12/02/2017
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="d2a4f-118">示例</span><span class="sxs-lookup"><span data-stu-id="d2a4f-118">Example</span></span>  
- <span data-ttu-id="d2a4f-119">第三个终结点定义指定一个绝对地址，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-119">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span> <span data-ttu-id="d2a4f-120">基址在地址中不起作用。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-120">The base address plays no role in the address.</span></span> <span data-ttu-id="d2a4f-121">实际终结点地址为 http://localhost:8001/hello/servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-121">The actual endpoint address is http://localhost:8001/hello/servicemodelsamples.</span></span>  
+## <a name="example"></a><span data-ttu-id="2b241-118">示例</span><span class="sxs-lookup"><span data-stu-id="2b241-118">Example</span></span>  
+ <span data-ttu-id="2b241-119">第三个终结点定义指定一个绝对地址，如下面的示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="2b241-119">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span> <span data-ttu-id="2b241-120">基址在地址中不起作用。</span><span class="sxs-lookup"><span data-stu-id="2b241-120">The base address plays no role in the address.</span></span> <span data-ttu-id="2b241-121">实际终结点地址为 http://localhost:8001/hello/servicemodelsamples。</span><span class="sxs-lookup"><span data-stu-id="2b241-121">The actual endpoint address is http://localhost:8001/hello/servicemodelsamples.</span></span>  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -119,8 +120,8 @@ ms.lasthandoff: 12/02/2017
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="d2a4f-122">示例</span><span class="sxs-lookup"><span data-stu-id="d2a4f-122">Example</span></span>  
- <span data-ttu-id="d2a4f-123">第四个终结点地址指定一个绝对地址和一个不同的传输协议 (TCP)。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-123">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="d2a4f-124">基址在地址中不起作用。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-124">The base address plays no role in the address.</span></span> <span data-ttu-id="d2a4f-125">实际终结点地址为 net.tcp://localhost:9000/servicemodelsamples/service。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-125">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
+## <a name="example"></a><span data-ttu-id="2b241-122">示例</span><span class="sxs-lookup"><span data-stu-id="2b241-122">Example</span></span>  
+ <span data-ttu-id="2b241-123">第四个终结点地址指定一个绝对地址和一个不同的传输协议 (TCP)。</span><span class="sxs-lookup"><span data-stu-id="2b241-123">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="2b241-124">基址在地址中不起作用。</span><span class="sxs-lookup"><span data-stu-id="2b241-124">The base address plays no role in the address.</span></span> <span data-ttu-id="2b241-125">实际终结点地址为 net.tcp://localhost:9000/servicemodelsamples/service。</span><span class="sxs-lookup"><span data-stu-id="2b241-125">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
   
 ```xml  
 <endpoint address="net.tcp://localhost:9000/servicemodelsamples/service"  
@@ -128,8 +129,8 @@ ms.lasthandoff: 12/02/2017
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="d2a4f-126">示例</span><span class="sxs-lookup"><span data-stu-id="d2a4f-126">Example</span></span>  
- <span data-ttu-id="d2a4f-127">若要使用运行时提供的默认终结点，请不要在代码或配置文件中指定任何服务终结点。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-127">To use the default endpoints provided by the runtime, do not specify any service endpoints in either the code or the configuration file.</span></span> <span data-ttu-id="d2a4f-128">在此示例中，运行时在打开服务时创建默认终结点。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-128">In this example, the runtime creates the default endpoints when the service is opened.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d2a4f-129">默认终结点、 绑定和行为，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="d2a4f-129"> default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="2b241-126">示例</span><span class="sxs-lookup"><span data-stu-id="2b241-126">Example</span></span>  
+ <span data-ttu-id="2b241-127">若要使用运行时提供的默认终结点，请不要在代码或配置文件中指定任何服务终结点。</span><span class="sxs-lookup"><span data-stu-id="2b241-127">To use the default endpoints provided by the runtime, do not specify any service endpoints in either the code or the configuration file.</span></span> <span data-ttu-id="2b241-128">在此示例中，运行时在打开服务时创建默认终结点。</span><span class="sxs-lookup"><span data-stu-id="2b241-128">In this example, the runtime creates the default endpoints when the service is opened.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="2b241-129">默认终结点、 绑定和行为，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="2b241-129"> default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
 ```xml  
 <configuration>  

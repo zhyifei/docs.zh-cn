@@ -13,42 +13,43 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c63478620a2b604d27f2d9d154383cb0bae6b6da
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aca9df2be74dba308d3c4e4eb1c61b3e1afaa580
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-deploy-a-com-integration-application"></a><span data-ttu-id="6e837-102">如何：部署 COM+ 集成应用程序</span><span class="sxs-lookup"><span data-stu-id="6e837-102">How to: Deploy a COM+ Integration Application</span></span>
-<span data-ttu-id="6e837-103">编写了 COM+ 集成应用程序后，您可能要将它部署在另一台计算机上。</span><span class="sxs-lookup"><span data-stu-id="6e837-103">Once you have written a COM+ integration application, you may want to deploy it on another machine.</span></span> <span data-ttu-id="6e837-104">本主题说明如何将 COM+ 集成应用程序从一台计算机移动到另一台计算机。</span><span class="sxs-lookup"><span data-stu-id="6e837-104">This topic describes how to move a COM+ integration application from one machine to another.</span></span>  
+# <a name="how-to-deploy-a-com-integration-application"></a><span data-ttu-id="4482c-102">如何：部署 COM+ 集成应用程序</span><span class="sxs-lookup"><span data-stu-id="4482c-102">How to: Deploy a COM+ Integration Application</span></span>
+<span data-ttu-id="4482c-103">编写了 COM+ 集成应用程序后，您可能要将它部署在另一台计算机上。</span><span class="sxs-lookup"><span data-stu-id="4482c-103">Once you have written a COM+ integration application, you may want to deploy it on another machine.</span></span> <span data-ttu-id="4482c-104">本主题说明如何将 COM+ 集成应用程序从一台计算机移动到另一台计算机。</span><span class="sxs-lookup"><span data-stu-id="4482c-104">This topic describes how to move a COM+ integration application from one machine to another.</span></span>  
   
-### <a name="moving-a-com-hosted-integration-app"></a><span data-ttu-id="6e837-105">移动 COM+ 承载的集成应用程序</span><span class="sxs-lookup"><span data-stu-id="6e837-105">Moving a COM+ hosted Integration App</span></span>  
+### <a name="moving-a-com-hosted-integration-app"></a><span data-ttu-id="4482c-105">移动 COM+ 承载的集成应用程序</span><span class="sxs-lookup"><span data-stu-id="4482c-105">Moving a COM+ hosted Integration App</span></span>  
   
-1.  <span data-ttu-id="6e837-106">确保两台计算机上都安装了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6e837-106">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
+1.  <span data-ttu-id="4482c-106">确保两台计算机上都安装了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4482c-106">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
   
-2.  <span data-ttu-id="6e837-107">从计算机 A 中导出应用程序。</span><span class="sxs-lookup"><span data-stu-id="6e837-107">Export the application from machine A.</span></span>  
+2.  <span data-ttu-id="4482c-107">从计算机 A 中导出应用程序。</span><span class="sxs-lookup"><span data-stu-id="4482c-107">Export the application from machine A.</span></span>  
   
-3.  <span data-ttu-id="6e837-108">在计算机 B 上导入应用程序。</span><span class="sxs-lookup"><span data-stu-id="6e837-108">Import the application on machine B.</span></span>  
+3.  <span data-ttu-id="4482c-108">在计算机 B 上导入应用程序。</span><span class="sxs-lookup"><span data-stu-id="4482c-108">Import the application on machine B.</span></span>  
   
-4.  <span data-ttu-id="6e837-109">设置应用程序根目录。</span><span class="sxs-lookup"><span data-stu-id="6e837-109">Set the Application Root Directory.</span></span> <span data-ttu-id="6e837-110">按照约定，此目录为 %PROGRAMFILES%/ComPlus Applications/{AppGUID}。</span><span class="sxs-lookup"><span data-stu-id="6e837-110">By convention, this is %PROGRAMFILES%/ComPlus Applications/{AppGUID}.</span></span>  
+4.  <span data-ttu-id="4482c-109">设置应用程序根目录。</span><span class="sxs-lookup"><span data-stu-id="4482c-109">Set the Application Root Directory.</span></span> <span data-ttu-id="4482c-110">按照约定，此目录为 %PROGRAMFILES%/ComPlus Applications/{AppGUID}。</span><span class="sxs-lookup"><span data-stu-id="4482c-110">By convention, this is %PROGRAMFILES%/ComPlus Applications/{AppGUID}.</span></span>  
   
-5.  <span data-ttu-id="6e837-111">将计算机 A 上应用程序根目录中的 Application.config 和 Application.manifest 文件复制到计算机 B 上的应用程序根目录。</span><span class="sxs-lookup"><span data-stu-id="6e837-111">Copy the Application.config and Application.manifest files from the application root directory on machine A to the application root directory on machine B.</span></span>  
+5.  <span data-ttu-id="4482c-111">将计算机 A 上应用程序根目录中的 Application.config 和 Application.manifest 文件复制到计算机 B 上的应用程序根目录。</span><span class="sxs-lookup"><span data-stu-id="4482c-111">Copy the Application.config and Application.manifest files from the application root directory on machine A to the application root directory on machine B.</span></span>  
   
-6.  <span data-ttu-id="6e837-112">在计算机 B 的 Application.config 文件中编辑服务终结点地址以标识相应计算机。</span><span class="sxs-lookup"><span data-stu-id="6e837-112">Edit the service endpoint addresses in the Application.config file on machine B to identify the appropriate machine.</span></span> <span data-ttu-id="6e837-113">例如，将 http://machineA/MyService 更改为 http://machineB/MyService。</span><span class="sxs-lookup"><span data-stu-id="6e837-113">For example, change http://machineA/MyService to http://machineB/MyService.</span></span>  
+6.  <span data-ttu-id="4482c-112">在计算机 B 的 Application.config 文件中编辑服务终结点地址以标识相应计算机。</span><span class="sxs-lookup"><span data-stu-id="4482c-112">Edit the service endpoint addresses in the Application.config file on machine B to identify the appropriate machine.</span></span> <span data-ttu-id="4482c-113">例如，将 http://machineA/MyService 更改为 http://machineB/MyService。</span><span class="sxs-lookup"><span data-stu-id="4482c-113">For example, change http://machineA/MyService to http://machineB/MyService.</span></span>  
   
-### <a name="moving-a-web-hosted-integration-application"></a><span data-ttu-id="6e837-114">移动 Web 承载的集成应用程序</span><span class="sxs-lookup"><span data-stu-id="6e837-114">Moving a Web-hosted integration application</span></span>  
+### <a name="moving-a-web-hosted-integration-application"></a><span data-ttu-id="4482c-114">移动 Web 承载的集成应用程序</span><span class="sxs-lookup"><span data-stu-id="4482c-114">Moving a Web-hosted integration application</span></span>  
   
-1.  <span data-ttu-id="6e837-115">确保两台计算机上都安装了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="6e837-115">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
+1.  <span data-ttu-id="4482c-115">确保两台计算机上都安装了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4482c-115">Ensure that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is installed on both machines.</span></span>  
   
-2.  <span data-ttu-id="6e837-116">从计算机 A 中导出应用程序。</span><span class="sxs-lookup"><span data-stu-id="6e837-116">Export the application from machine A.</span></span>  
+2.  <span data-ttu-id="4482c-116">从计算机 A 中导出应用程序。</span><span class="sxs-lookup"><span data-stu-id="4482c-116">Export the application from machine A.</span></span>  
   
-3.  <span data-ttu-id="6e837-117">在计算机 B 上导入应用程序。</span><span class="sxs-lookup"><span data-stu-id="6e837-117">Import the application on machine B.</span></span>  
+3.  <span data-ttu-id="4482c-117">在计算机 B 上导入应用程序。</span><span class="sxs-lookup"><span data-stu-id="4482c-117">Import the application on machine B.</span></span>  
   
-4.  <span data-ttu-id="6e837-118">在计算机 B 上创建 IIS 虚拟根目录。</span><span class="sxs-lookup"><span data-stu-id="6e837-118">Create an IIS vroot on machine B.</span></span>  
+4.  <span data-ttu-id="4482c-118">在计算机 B 上创建 IIS 虚拟根目录。</span><span class="sxs-lookup"><span data-stu-id="4482c-118">Create an IIS vroot on machine B.</span></span>  
   
-5.  <span data-ttu-id="6e837-119">将计算机 A 上虚拟根目录中的 .svc 文件 (componentName.svc) 和 Web.config 文件复制到计算机 B 上新创建的虚拟根目录。</span><span class="sxs-lookup"><span data-stu-id="6e837-119">Copy the .svc file (componentName.svc) and the Web.config file from the vroot on machine A to the newly created vroot on machine B.</span></span>  
+5.  <span data-ttu-id="4482c-119">将计算机 A 上虚拟根目录中的 .svc 文件 (componentName.svc) 和 Web.config 文件复制到计算机 B 上新创建的虚拟根目录。</span><span class="sxs-lookup"><span data-stu-id="4482c-119">Copy the .svc file (componentName.svc) and the Web.config file from the vroot on machine A to the newly created vroot on machine B.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e837-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6e837-120">See Also</span></span>  
- [<span data-ttu-id="6e837-121">将与 COM + 应用程序概述集成</span><span class="sxs-lookup"><span data-stu-id="6e837-121">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- [<span data-ttu-id="6e837-122">如何： 配置 COM + 服务设置</span><span class="sxs-lookup"><span data-stu-id="6e837-122">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- [<span data-ttu-id="6e837-123">如何： 使用 COM + 服务模型配置工具</span><span class="sxs-lookup"><span data-stu-id="6e837-123">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+## <a name="see-also"></a><span data-ttu-id="4482c-120">请参阅</span><span class="sxs-lookup"><span data-stu-id="4482c-120">See Also</span></span>  
+ [<span data-ttu-id="4482c-121">与 COM+ 应用程序集成的概述</span><span class="sxs-lookup"><span data-stu-id="4482c-121">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ [<span data-ttu-id="4482c-122">如何：配置 COM+ 服务设置</span><span class="sxs-lookup"><span data-stu-id="4482c-122">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [<span data-ttu-id="4482c-123">如何：使用 COM+ 服务模型配置工具</span><span class="sxs-lookup"><span data-stu-id="4482c-123">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

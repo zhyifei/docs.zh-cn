@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 74eff3a6193e6507c1049accf4c43c3ecc8d30a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f4cc5d0676ef397f67bd9d16b2b19c6f3ee2d57e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="localservicesecuritysettings"></a><span data-ttu-id="3ea79-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="3ea79-102">LocalServiceSecuritySettings</span></span>
-<span data-ttu-id="3ea79-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="3ea79-103">LocalServiceSecuritySettings</span></span>  
+# <a name="localservicesecuritysettings"></a><span data-ttu-id="7dffa-102">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="7dffa-102">LocalServiceSecuritySettings</span></span>
+<span data-ttu-id="7dffa-103">LocalServiceSecuritySettings</span><span class="sxs-lookup"><span data-stu-id="7dffa-103">LocalServiceSecuritySettings</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ea79-104">语法</span><span class="sxs-lookup"><span data-stu-id="3ea79-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7dffa-104">语法</span><span class="sxs-lookup"><span data-stu-id="7dffa-104">Syntax</span></span>  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -44,115 +45,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="3ea79-105">方法</span><span class="sxs-lookup"><span data-stu-id="3ea79-105">Methods</span></span>  
- <span data-ttu-id="3ea79-106">LocalServiceSecuritySettings 类未定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="3ea79-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="7dffa-105">方法</span><span class="sxs-lookup"><span data-stu-id="7dffa-105">Methods</span></span>  
+ <span data-ttu-id="7dffa-106">LocalServiceSecuritySettings 类未定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="7dffa-106">The LocalServiceSecuritySettings class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="3ea79-107">属性</span><span class="sxs-lookup"><span data-stu-id="3ea79-107">Properties</span></span>  
- <span data-ttu-id="3ea79-108">LocalServiceSecuritySettings 类具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="3ea79-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="7dffa-107">属性</span><span class="sxs-lookup"><span data-stu-id="7dffa-107">Properties</span></span>  
+ <span data-ttu-id="7dffa-108">LocalServiceSecuritySettings 类具有以下属性：</span><span class="sxs-lookup"><span data-stu-id="7dffa-108">The LocalServiceSecuritySettings class has the following properties:</span></span>  
   
-### <a name="detectreplays"></a><span data-ttu-id="3ea79-109">DetectReplays</span><span class="sxs-lookup"><span data-stu-id="3ea79-109">DetectReplays</span></span>  
- <span data-ttu-id="3ea79-110">数据类型：Boolean</span><span class="sxs-lookup"><span data-stu-id="3ea79-110">Data type: boolean</span></span>  
+### <a name="detectreplays"></a><span data-ttu-id="7dffa-109">DetectReplays</span><span class="sxs-lookup"><span data-stu-id="7dffa-109">DetectReplays</span></span>  
+ <span data-ttu-id="7dffa-110">数据类型：Boolean</span><span class="sxs-lookup"><span data-stu-id="7dffa-110">Data type: boolean</span></span>  
   
- <span data-ttu-id="3ea79-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-112">一个布尔值，指定是否自动检测和处理针对通道的重放攻击。</span><span class="sxs-lookup"><span data-stu-id="3ea79-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
+ <span data-ttu-id="7dffa-112">一个布尔值，指定是否自动检测和处理针对通道的重放攻击。</span><span class="sxs-lookup"><span data-stu-id="7dffa-112">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span>  
   
-### <a name="inactivitytimeout"></a><span data-ttu-id="3ea79-113">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="3ea79-113">InactivityTimeout</span></span>  
- <span data-ttu-id="3ea79-114">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="3ea79-114">Data type: datetime</span></span>  
+### <a name="inactivitytimeout"></a><span data-ttu-id="7dffa-113">InactivityTimeout</span><span class="sxs-lookup"><span data-stu-id="7dffa-113">InactivityTimeout</span></span>  
+ <span data-ttu-id="7dffa-114">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="7dffa-114">Data type: datetime</span></span>  
   
- <span data-ttu-id="3ea79-115">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-115">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-116">服务支持的最大挂起安全会话数。</span><span class="sxs-lookup"><span data-stu-id="3ea79-116">The maximum number of pending security sessions that the service supports.</span></span>  
+ <span data-ttu-id="7dffa-116">服务支持的最大挂起安全会话数。</span><span class="sxs-lookup"><span data-stu-id="7dffa-116">The maximum number of pending security sessions that the service supports.</span></span>  
   
-### <a name="issuedcookielifetime"></a><span data-ttu-id="3ea79-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="3ea79-117">IssuedCookieLifetime</span></span>  
- <span data-ttu-id="3ea79-118">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="3ea79-118">Data type: datetime</span></span>  
+### <a name="issuedcookielifetime"></a><span data-ttu-id="7dffa-117">IssuedCookieLifetime</span><span class="sxs-lookup"><span data-stu-id="7dffa-117">IssuedCookieLifetime</span></span>  
+ <span data-ttu-id="7dffa-118">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="7dffa-118">Data type: datetime</span></span>  
   
- <span data-ttu-id="3ea79-119">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-119">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-120">一个时间跨度，指定颁发给所有新的安全 Cookie 的生存期。</span><span class="sxs-lookup"><span data-stu-id="3ea79-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
+ <span data-ttu-id="7dffa-120">一个时间跨度，指定颁发给所有新的安全 Cookie 的生存期。</span><span class="sxs-lookup"><span data-stu-id="7dffa-120">A TimeSpan that specifies the lifetime issued to all new security cookies.</span></span>  
   
-### <a name="maxcachedcookies"></a><span data-ttu-id="3ea79-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="3ea79-121">MaxCachedCookies</span></span>  
- <span data-ttu-id="3ea79-122">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="3ea79-122">Data type: sint32</span></span>  
+### <a name="maxcachedcookies"></a><span data-ttu-id="7dffa-121">MaxCachedCookies</span><span class="sxs-lookup"><span data-stu-id="7dffa-121">MaxCachedCookies</span></span>  
+ <span data-ttu-id="7dffa-122">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="7dffa-122">Data type: sint32</span></span>  
   
- <span data-ttu-id="3ea79-123">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-123">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-124">可以缓存的最大 Cookie 数。</span><span class="sxs-lookup"><span data-stu-id="3ea79-124">The maximum number of cookies that can be cached.</span></span>  
+ <span data-ttu-id="7dffa-124">可以缓存的最大 Cookie 数。</span><span class="sxs-lookup"><span data-stu-id="7dffa-124">The maximum number of cookies that can be cached.</span></span>  
   
-### <a name="maxclockskew"></a><span data-ttu-id="3ea79-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="3ea79-125">MaxClockSkew</span></span>  
- <span data-ttu-id="3ea79-126">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="3ea79-126">Data type: datetime</span></span>  
+### <a name="maxclockskew"></a><span data-ttu-id="7dffa-125">MaxClockSkew</span><span class="sxs-lookup"><span data-stu-id="7dffa-125">MaxClockSkew</span></span>  
+ <span data-ttu-id="7dffa-126">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="7dffa-126">Data type: datetime</span></span>  
   
- <span data-ttu-id="3ea79-127">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-127">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-128">一个时间跨度，指定通信双方系统时钟之间的最大时间差。</span><span class="sxs-lookup"><span data-stu-id="3ea79-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
+ <span data-ttu-id="7dffa-128">一个时间跨度，指定通信双方系统时钟之间的最大时间差。</span><span class="sxs-lookup"><span data-stu-id="7dffa-128">A TimeSpan that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span>  
   
-### <a name="maxpendingsessions"></a><span data-ttu-id="3ea79-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="3ea79-129">MaxPendingSessions</span></span>  
- <span data-ttu-id="3ea79-130">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="3ea79-130">Data type: sint32</span></span>  
+### <a name="maxpendingsessions"></a><span data-ttu-id="7dffa-129">MaxPendingSessions</span><span class="sxs-lookup"><span data-stu-id="7dffa-129">MaxPendingSessions</span></span>  
+ <span data-ttu-id="7dffa-130">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="7dffa-130">Data type: sint32</span></span>  
   
- <span data-ttu-id="3ea79-131">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-131">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-132">服务上的最大挂起连接数。</span><span class="sxs-lookup"><span data-stu-id="3ea79-132">The maximum number of pending connections on the service.</span></span>  
+ <span data-ttu-id="7dffa-132">服务上的最大挂起连接数。</span><span class="sxs-lookup"><span data-stu-id="7dffa-132">The maximum number of pending connections on the service.</span></span>  
   
-### <a name="maxstatefulnegotiations"></a><span data-ttu-id="3ea79-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="3ea79-133">MaxStatefulNegotiations</span></span>  
- <span data-ttu-id="3ea79-134">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="3ea79-134">Data type: sint32</span></span>  
+### <a name="maxstatefulnegotiations"></a><span data-ttu-id="7dffa-133">MaxStatefulNegotiations</span><span class="sxs-lookup"><span data-stu-id="7dffa-133">MaxStatefulNegotiations</span></span>  
+ <span data-ttu-id="7dffa-134">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="7dffa-134">Data type: sint32</span></span>  
   
- <span data-ttu-id="3ea79-135">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-135">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-136">可以同时处于活动状态的安全协商数。</span><span class="sxs-lookup"><span data-stu-id="3ea79-136">The number of security negotiations that can be active concurrently.</span></span>  
+ <span data-ttu-id="7dffa-136">可以同时处于活动状态的安全协商数。</span><span class="sxs-lookup"><span data-stu-id="7dffa-136">The number of security negotiations that can be active concurrently.</span></span>  
   
-### <a name="negotiationtimeout"></a><span data-ttu-id="3ea79-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="3ea79-137">NegotiationTimeout</span></span>  
- <span data-ttu-id="3ea79-138">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="3ea79-138">Data type: datetime</span></span>  
+### <a name="negotiationtimeout"></a><span data-ttu-id="7dffa-137">NegotiationTimeout</span><span class="sxs-lookup"><span data-stu-id="7dffa-137">NegotiationTimeout</span></span>  
+ <span data-ttu-id="7dffa-138">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="7dffa-138">Data type: datetime</span></span>  
   
- <span data-ttu-id="3ea79-139">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-139">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-140">一个时间跨度，指定服务器和客户端之间的安全协商阶段的最大持续时间。</span><span class="sxs-lookup"><span data-stu-id="3ea79-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
+ <span data-ttu-id="7dffa-140">一个时间跨度，指定服务器和客户端之间的安全协商阶段的最大持续时间。</span><span class="sxs-lookup"><span data-stu-id="7dffa-140">A TimeSpan that specifies the maximum duration for the security negotiation phase between server and client.</span></span>  
   
-### <a name="reconnecttransportonfailure"></a><span data-ttu-id="3ea79-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="3ea79-141">ReconnectTransportOnFailure</span></span>  
- <span data-ttu-id="3ea79-142">数据类型：Boolean</span><span class="sxs-lookup"><span data-stu-id="3ea79-142">Data type: boolean</span></span>  
+### <a name="reconnecttransportonfailure"></a><span data-ttu-id="7dffa-141">ReconnectTransportOnFailure</span><span class="sxs-lookup"><span data-stu-id="7dffa-141">ReconnectTransportOnFailure</span></span>  
+ <span data-ttu-id="7dffa-142">数据类型：Boolean</span><span class="sxs-lookup"><span data-stu-id="7dffa-142">Data type: boolean</span></span>  
   
- <span data-ttu-id="3ea79-143">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-143">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-144">一个布尔值，指定使用 WS-ReliableMessaging 的连接是否将在传输失败后尝试重新连接。</span><span class="sxs-lookup"><span data-stu-id="3ea79-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
+ <span data-ttu-id="7dffa-144">一个布尔值，指定使用 WS-ReliableMessaging 的连接是否将在传输失败后尝试重新连接。</span><span class="sxs-lookup"><span data-stu-id="7dffa-144">A Boolean value that specifies whether connections using WS-Reliable messaging attempt to reconnect after transport failures.</span></span>  
   
-### <a name="replaycachesize"></a><span data-ttu-id="3ea79-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="3ea79-145">ReplayCacheSize</span></span>  
- <span data-ttu-id="3ea79-146">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="3ea79-146">Data type: sint32</span></span>  
+### <a name="replaycachesize"></a><span data-ttu-id="7dffa-145">ReplayCacheSize</span><span class="sxs-lookup"><span data-stu-id="7dffa-145">ReplayCacheSize</span></span>  
+ <span data-ttu-id="7dffa-146">数据类型：sint32</span><span class="sxs-lookup"><span data-stu-id="7dffa-146">Data type: sint32</span></span>  
   
- <span data-ttu-id="3ea79-147">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-147">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-147">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-147">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-148">用于重播检测的缓存 Nonce 的数目。</span><span class="sxs-lookup"><span data-stu-id="3ea79-148">The number of cached nonces used for replay detection.</span></span>  
+ <span data-ttu-id="7dffa-148">用于重播检测的缓存 Nonce 的数目。</span><span class="sxs-lookup"><span data-stu-id="7dffa-148">The number of cached nonces used for replay detection.</span></span>  
   
-### <a name="replaywindow"></a><span data-ttu-id="3ea79-149">ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="3ea79-149">ReplayWindow</span></span>  
- <span data-ttu-id="3ea79-150">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="3ea79-150">Data type: datetime</span></span>  
+### <a name="replaywindow"></a><span data-ttu-id="7dffa-149">ReplayWindow</span><span class="sxs-lookup"><span data-stu-id="7dffa-149">ReplayWindow</span></span>  
+ <span data-ttu-id="7dffa-150">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="7dffa-150">Data type: datetime</span></span>  
   
- <span data-ttu-id="3ea79-151">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-151">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-151">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-151">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-152">一个时间跨度，指定单个消息 Nonce 的有效持续时间。</span><span class="sxs-lookup"><span data-stu-id="3ea79-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
+ <span data-ttu-id="7dffa-152">一个时间跨度，指定单个消息 Nonce 的有效持续时间。</span><span class="sxs-lookup"><span data-stu-id="7dffa-152">A TimeSpan that specifies the duration in which individual message nonces are valid.</span></span>  
   
-### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="3ea79-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="3ea79-153">SessionKeyRenewalInterval</span></span>  
- <span data-ttu-id="3ea79-154">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="3ea79-154">Data type: datetime</span></span>  
+### <a name="sessionkeyrenewalinterval"></a><span data-ttu-id="7dffa-153">SessionKeyRenewalInterval</span><span class="sxs-lookup"><span data-stu-id="7dffa-153">SessionKeyRenewalInterval</span></span>  
+ <span data-ttu-id="7dffa-154">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="7dffa-154">Data type: datetime</span></span>  
   
- <span data-ttu-id="3ea79-155">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-155">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-155">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-155">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-156">一个时间跨度，指定一个持续时间，发起方将在此段时间之后续订安全会话的密钥。</span><span class="sxs-lookup"><span data-stu-id="3ea79-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
+ <span data-ttu-id="7dffa-156">一个时间跨度，指定一个持续时间，发起方将在此段时间之后续订安全会话的密钥。</span><span class="sxs-lookup"><span data-stu-id="7dffa-156">A TimeSpan that specifies the duration after which the initiator renews the key for the security session.</span></span>  
   
-### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="3ea79-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="3ea79-157">SessionKeyRolloverInterval</span></span>  
- <span data-ttu-id="3ea79-158">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="3ea79-158">Data type: datetime</span></span>  
+### <a name="sessionkeyrolloverinterval"></a><span data-ttu-id="7dffa-157">SessionKeyRolloverInterval</span><span class="sxs-lookup"><span data-stu-id="7dffa-157">SessionKeyRolloverInterval</span></span>  
+ <span data-ttu-id="7dffa-158">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="7dffa-158">Data type: datetime</span></span>  
   
- <span data-ttu-id="3ea79-159">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-159">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-159">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-159">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-160">一个时间跨度，指定在密钥续订期间，上一个会话密钥对于传入消息有效的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="3ea79-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
+ <span data-ttu-id="7dffa-160">一个时间跨度，指定在密钥续订期间，上一个会话密钥对于传入消息有效的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="7dffa-160">A TimeSpan that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span>  
   
-### <a name="timestampvalidityduration"></a><span data-ttu-id="3ea79-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="3ea79-161">TimestampValidityDuration</span></span>  
- <span data-ttu-id="3ea79-162">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="3ea79-162">Data type: datetime</span></span>  
+### <a name="timestampvalidityduration"></a><span data-ttu-id="7dffa-161">TimestampValidityDuration</span><span class="sxs-lookup"><span data-stu-id="7dffa-161">TimestampValidityDuration</span></span>  
+ <span data-ttu-id="7dffa-162">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="7dffa-162">Data type: datetime</span></span>  
   
- <span data-ttu-id="3ea79-163">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="3ea79-163">Access type: Read-only</span></span>  
+ <span data-ttu-id="7dffa-163">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="7dffa-163">Access type: Read-only</span></span>  
   
- <span data-ttu-id="3ea79-164">一个时间跨度，指定时间戳的有效持续时间。</span><span class="sxs-lookup"><span data-stu-id="3ea79-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
+ <span data-ttu-id="7dffa-164">一个时间跨度，指定时间戳的有效持续时间。</span><span class="sxs-lookup"><span data-stu-id="7dffa-164">A TimeSpan that specifies the duration in which a time stamp is valid.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3ea79-165">要求</span><span class="sxs-lookup"><span data-stu-id="3ea79-165">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7dffa-165">惠?</span><span class="sxs-lookup"><span data-stu-id="7dffa-165">Requirements</span></span>  
   
-|<span data-ttu-id="3ea79-166">MOF</span><span class="sxs-lookup"><span data-stu-id="3ea79-166">MOF</span></span>|<span data-ttu-id="3ea79-167">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="3ea79-167">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="7dffa-166">MOF</span><span class="sxs-lookup"><span data-stu-id="7dffa-166">MOF</span></span>|<span data-ttu-id="7dffa-167">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="7dffa-167">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="3ea79-168">命名空间</span><span class="sxs-lookup"><span data-stu-id="3ea79-168">Namespace</span></span>|<span data-ttu-id="3ea79-169">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="3ea79-169">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="7dffa-168">命名空间</span><span class="sxs-lookup"><span data-stu-id="7dffa-168">Namespace</span></span>|<span data-ttu-id="7dffa-169">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="7dffa-169">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="3ea79-170">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3ea79-170">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7dffa-170">请参阅</span><span class="sxs-lookup"><span data-stu-id="7dffa-170">See Also</span></span>  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

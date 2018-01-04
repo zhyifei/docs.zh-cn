@@ -17,25 +17,26 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e92b3b4950e0a2edecc9a1f954a9f2959595c4e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2cc313be8c3d6325630e57e0b0e845ad4902bd2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-consistently-reference-x509-certificates"></a><span data-ttu-id="bee5c-102">如何：以一致的方式引用 X.509 证书</span><span class="sxs-lookup"><span data-stu-id="bee5c-102">How to: Consistently Reference X.509 Certificates</span></span>
-<span data-ttu-id="bee5c-103">可以采用下列多种方式来标识证书：证书哈希、颁发者和序列号或者使用者密钥标识符 (SKI)。</span><span class="sxs-lookup"><span data-stu-id="bee5c-103">You can identify a certificate in several ways: by the hash of the certificate, by the issuer and serial number, or by the subject key identifier (SKI).</span></span> <span data-ttu-id="bee5c-104">SKI 为证书的使用者公钥提供唯一标识，通常用于处理 XML 数字签名。</span><span class="sxs-lookup"><span data-stu-id="bee5c-104">The SKI provides a unique identification for the certificate's subject public key and is often used when working with XML digital signing.</span></span> <span data-ttu-id="bee5c-105">SKI 值通常为形式的 X.509 证书的一部分*X.509 证书扩展*。</span><span class="sxs-lookup"><span data-stu-id="bee5c-105">The SKI value is usually part of the X.509 certificate as an *X.509 certificate extension*.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="bee5c-106">具有一个默认*引用样式*如果 SKI 扩展，则证书中缺少使用颁发者和序列号。</span><span class="sxs-lookup"><span data-stu-id="bee5c-106"> has a default *referencing style* that uses the issuer and serial number if the SKI extension is missing from the certificate.</span></span> <span data-ttu-id="bee5c-107">如果证书中包含 SKI 扩展，该默认引用样式将使用 SKI 来指向证书。</span><span class="sxs-lookup"><span data-stu-id="bee5c-107">If the certificate contains the SKI extension, the default referencing style uses the SKI to point to the certificate.</span></span> <span data-ttu-id="bee5c-108">如果在应用程序开发过程中，将使用的证书从不使用 SKI 扩展的证书改换为使用 SKI 扩展的证书，则由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成的消息中所使用的引用样式也会随之发生变化。</span><span class="sxs-lookup"><span data-stu-id="bee5c-108">If mid-way through development of an application, you switch from using certificates that do not use the SKI extension to certificates that use the SKI extension, the referencing style used in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-generated messages also changes.</span></span>  
+# <a name="how-to-consistently-reference-x509-certificates"></a><span data-ttu-id="2b9f6-102">如何：以一致的方式引用 X.509 证书</span><span class="sxs-lookup"><span data-stu-id="2b9f6-102">How to: Consistently Reference X.509 Certificates</span></span>
+<span data-ttu-id="2b9f6-103">可以采用下列多种方式来标识证书：证书哈希、颁发者和序列号或者使用者密钥标识符 (SKI)。</span><span class="sxs-lookup"><span data-stu-id="2b9f6-103">You can identify a certificate in several ways: by the hash of the certificate, by the issuer and serial number, or by the subject key identifier (SKI).</span></span> <span data-ttu-id="2b9f6-104">SKI 为证书的使用者公钥提供唯一标识，通常用于处理 XML 数字签名。</span><span class="sxs-lookup"><span data-stu-id="2b9f6-104">The SKI provides a unique identification for the certificate's subject public key and is often used when working with XML digital signing.</span></span> <span data-ttu-id="2b9f6-105">SKI 值通常为形式的 X.509 证书的一部分*X.509 证书扩展*。</span><span class="sxs-lookup"><span data-stu-id="2b9f6-105">The SKI value is usually part of the X.509 certificate as an *X.509 certificate extension*.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="2b9f6-106">具有一个默认*引用样式*如果 SKI 扩展，则证书中缺少使用颁发者和序列号。</span><span class="sxs-lookup"><span data-stu-id="2b9f6-106"> has a default *referencing style* that uses the issuer and serial number if the SKI extension is missing from the certificate.</span></span> <span data-ttu-id="2b9f6-107">如果证书中包含 SKI 扩展，该默认引用样式将使用 SKI 来指向证书。</span><span class="sxs-lookup"><span data-stu-id="2b9f6-107">If the certificate contains the SKI extension, the default referencing style uses the SKI to point to the certificate.</span></span> <span data-ttu-id="2b9f6-108">如果在应用程序开发过程中，将使用的证书从不使用 SKI 扩展的证书改换为使用 SKI 扩展的证书，则由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成的消息中所使用的引用样式也会随之发生变化。</span><span class="sxs-lookup"><span data-stu-id="2b9f6-108">If mid-way through development of an application, you switch from using certificates that do not use the SKI extension to certificates that use the SKI extension, the referencing style used in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-generated messages also changes.</span></span>  
   
- <span data-ttu-id="bee5c-109">如果无论是否存在 SKI 扩展，都需要使用一致的引用样式，则可以配置所需的引用样式，如下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="bee5c-109">If a consistent referencing style is required regardless of SKI extension presence, it is possible to configure the desired referencing style as shown in the following code.</span></span>  
+ <span data-ttu-id="2b9f6-109">如果无论是否存在 SKI 扩展，都需要使用一致的引用样式，则可以配置所需的引用样式，如下面的代码中所示。</span><span class="sxs-lookup"><span data-stu-id="2b9f6-109">If a consistent referencing style is required regardless of SKI extension presence, it is possible to configure the desired referencing style as shown in the following code.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bee5c-110">示例</span><span class="sxs-lookup"><span data-stu-id="bee5c-110">Example</span></span>  
- <span data-ttu-id="bee5c-111">下面的示例创建一个自定义安全绑定元素，该元素使用一致的引用样式：颁发者名称和序列号。</span><span class="sxs-lookup"><span data-stu-id="bee5c-111">The following example creates a custom security binding element that uses a single consistent referencing style, the issuer name and serial number.</span></span>  
+## <a name="example"></a><span data-ttu-id="2b9f6-110">示例</span><span class="sxs-lookup"><span data-stu-id="2b9f6-110">Example</span></span>  
+ <span data-ttu-id="2b9f6-111">下面的示例创建一个自定义安全绑定元素，该元素使用一致的引用样式：颁发者名称和序列号。</span><span class="sxs-lookup"><span data-stu-id="2b9f6-111">The following example creates a custom security binding element that uses a single consistent referencing style, the issuer name and serial number.</span></span>  
   
  [!code-csharp[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_referencingcertificatesconsistently/cs/source.cs#1)]
  [!code-vb[c_ReferencingCertificatesConsistently#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_referencingcertificatesconsistently/vb/source.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="bee5c-112">编译代码</span><span class="sxs-lookup"><span data-stu-id="bee5c-112">Compiling the Code</span></span>  
- <span data-ttu-id="bee5c-113">编译该代码需要以下命名空间：</span><span class="sxs-lookup"><span data-stu-id="bee5c-113">The following namespaces are required to compile the code:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2b9f6-112">编译代码</span><span class="sxs-lookup"><span data-stu-id="2b9f6-112">Compiling the Code</span></span>  
+ <span data-ttu-id="2b9f6-113">编译该代码需要以下命名空间：</span><span class="sxs-lookup"><span data-stu-id="2b9f6-113">The following namespaces are required to compile the code:</span></span>  
   
 -   <xref:System>  
   
@@ -45,5 +46,5 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.Security.Tokens>  
   
-## <a name="see-also"></a><span data-ttu-id="bee5c-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bee5c-114">See Also</span></span>  
- [<span data-ttu-id="bee5c-115">使用证书</span><span class="sxs-lookup"><span data-stu-id="bee5c-115">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a><span data-ttu-id="2b9f6-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="2b9f6-114">See Also</span></span>  
+ [<span data-ttu-id="2b9f6-115">使用证书</span><span class="sxs-lookup"><span data-stu-id="2b9f6-115">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

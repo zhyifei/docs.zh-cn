@@ -13,42 +13,43 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-host-a-non-service-workflow-in-iis"></a><span data-ttu-id="6b858-102">如何：在 IIS 中承载非服务工作流</span><span class="sxs-lookup"><span data-stu-id="6b858-102">How to: Host a non-service workflow in IIS</span></span>
-<span data-ttu-id="6b858-103">可在 IIS/WAS 下承载不属于工作流服务的工作流。</span><span class="sxs-lookup"><span data-stu-id="6b858-103">Workflows that are not workflow services can be hosted under IIS/WAS.</span></span> <span data-ttu-id="6b858-104">这在您需要承载他人编写的工作流时非常有用。</span><span class="sxs-lookup"><span data-stu-id="6b858-104">This is useful when you need to host a workflow written by somebody else.</span></span> <span data-ttu-id="6b858-105">例如，如果您重新承载工作流设计器，并允许用户创建自己的工作流。</span><span class="sxs-lookup"><span data-stu-id="6b858-105">For example, if you rehost the workflow designer and allow users to create their own workflows.</span></span>  <span data-ttu-id="6b858-106">通过在 IIS 中承载非服务工作流，可支持进程回收、空闲时关闭、进程运行状况监视和基于消息的激活等功能。</span><span class="sxs-lookup"><span data-stu-id="6b858-106">Hosting non-service workflows in IIS provides support for features like process recycling, idle shutdown, process health monitoring, and message-based activation.</span></span> <span data-ttu-id="6b858-107">承载于 IIS 的工作流服务包含 <xref:System.ServiceModel.Activities.Receive> 活动，并在 IIS 接收到消息时激活。</span><span class="sxs-lookup"><span data-stu-id="6b858-107">Workflow services hosted in IIS contain <xref:System.ServiceModel.Activities.Receive> activities and are activated when a message is received by IIS.</span></span> <span data-ttu-id="6b858-108">非服务工作流不包含消息传递活动，默认情况下无法通过发送消息激活这些工作流。</span><span class="sxs-lookup"><span data-stu-id="6b858-108">Non-service workflows do not contain messaging activities, and by default cannot be activated by sending a message.</span></span>  <span data-ttu-id="6b858-109">您必须从 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 派生一个类，并定义包含创建工作流实例的操作的服务协定。</span><span class="sxs-lookup"><span data-stu-id="6b858-109">You must derive a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> and define a service contract that contains operations to create an instance of the workflow.</span></span> <span data-ttu-id="6b858-110">本主题将指导你完成创建简单工作流、 定义客户端可用来激活工作流服务协定和派生类从<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>它使用服务协定侦听工作流创建请求。</span><span class="sxs-lookup"><span data-stu-id="6b858-110">This topic will walk you through creating a simple workflow, defining a service contract a client can use to activate the workflow, and deriving a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> which uses the service contract to listen for workflow creating requests.</span></span>  
+# <a name="how-to-host-a-non-service-workflow-in-iis"></a><span data-ttu-id="d2fa3-102">如何：在 IIS 中承载非服务工作流</span><span class="sxs-lookup"><span data-stu-id="d2fa3-102">How to: Host a non-service workflow in IIS</span></span>
+<span data-ttu-id="d2fa3-103">可在 IIS/WAS 下承载不属于工作流服务的工作流。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-103">Workflows that are not workflow services can be hosted under IIS/WAS.</span></span> <span data-ttu-id="d2fa3-104">这在您需要承载他人编写的工作流时非常有用。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-104">This is useful when you need to host a workflow written by somebody else.</span></span> <span data-ttu-id="d2fa3-105">例如，如果您重新承载工作流设计器，并允许用户创建自己的工作流。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-105">For example, if you rehost the workflow designer and allow users to create their own workflows.</span></span>  <span data-ttu-id="d2fa3-106">通过在 IIS 中承载非服务工作流，可支持进程回收、空闲时关闭、进程运行状况监视和基于消息的激活等功能。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-106">Hosting non-service workflows in IIS provides support for features like process recycling, idle shutdown, process health monitoring, and message-based activation.</span></span> <span data-ttu-id="d2fa3-107">承载于 IIS 的工作流服务包含 <xref:System.ServiceModel.Activities.Receive> 活动，并在 IIS 接收到消息时激活。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-107">Workflow services hosted in IIS contain <xref:System.ServiceModel.Activities.Receive> activities and are activated when a message is received by IIS.</span></span> <span data-ttu-id="d2fa3-108">非服务工作流不包含消息传递活动，默认情况下无法通过发送消息激活这些工作流。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-108">Non-service workflows do not contain messaging activities, and by default cannot be activated by sending a message.</span></span>  <span data-ttu-id="d2fa3-109">您必须从 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 派生一个类，并定义包含创建工作流实例的操作的服务协定。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-109">You must derive a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> and define a service contract that contains operations to create an instance of the workflow.</span></span> <span data-ttu-id="d2fa3-110">本主题将指导你完成创建简单工作流、 定义客户端可用来激活工作流服务协定和派生类从<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>它使用服务协定侦听工作流创建请求。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-110">This topic will walk you through creating a simple workflow, defining a service contract a client can use to activate the workflow, and deriving a class from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> which uses the service contract to listen for workflow creating requests.</span></span>  
   
-### <a name="create-a-simple-workflow"></a><span data-ttu-id="6b858-111">创建简单工作流</span><span class="sxs-lookup"><span data-stu-id="6b858-111">Create a simple workflow</span></span>  
+### <a name="create-a-simple-workflow"></a><span data-ttu-id="d2fa3-111">创建简单工作流</span><span class="sxs-lookup"><span data-stu-id="d2fa3-111">Create a simple workflow</span></span>  
   
-1.  <span data-ttu-id="6b858-112">新建一个名为 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 的新的空 `CreationEndpointTest` 解决方案。</span><span class="sxs-lookup"><span data-stu-id="6b858-112">Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.</span></span>  
+1.  <span data-ttu-id="d2fa3-112">新建一个名为 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 的新的空 `CreationEndpointTest` 解决方案。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-112">Create a new [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] empty solution called `CreationEndpointTest`.</span></span>  
   
-2.  <span data-ttu-id="6b858-113">向该解决方案添加一个名为 `SimpleWorkflow` 的新 WCF 工作流服务应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="6b858-113">Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution.</span></span> <span data-ttu-id="6b858-114">工作流设计器将打开。</span><span class="sxs-lookup"><span data-stu-id="6b858-114">The workflow designer will open.</span></span>  
+2.  <span data-ttu-id="d2fa3-113">向该解决方案添加一个名为 `SimpleWorkflow` 的新 WCF 工作流服务应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-113">Add a new WCF Workflow Service Application project called `SimpleWorkflow` to the solution.</span></span> <span data-ttu-id="d2fa3-114">工作流设计器将打开。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-114">The workflow designer will open.</span></span>  
   
-3.  <span data-ttu-id="6b858-115">删除 ReceiveRequest 和 SendResponse 活动。</span><span class="sxs-lookup"><span data-stu-id="6b858-115">Delete the ReceiveRequest and SendResponse activities.</span></span> <span data-ttu-id="6b858-116">这些是使工作流成为工作流服务的活动。</span><span class="sxs-lookup"><span data-stu-id="6b858-116">These activities are what makes a workflow a workflow service.</span></span> <span data-ttu-id="6b858-117">由于我们没有使用工作流服务，因此不再需要它们。</span><span class="sxs-lookup"><span data-stu-id="6b858-117">Since we are not working with a workflow service, we no longer need them.</span></span>  
+3.  <span data-ttu-id="d2fa3-115">删除 ReceiveRequest 和 SendResponse 活动。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-115">Delete the ReceiveRequest and SendResponse activities.</span></span> <span data-ttu-id="d2fa3-116">这些是使工作流成为工作流服务的活动。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-116">These activities are what makes a workflow a workflow service.</span></span> <span data-ttu-id="d2fa3-117">由于我们没有使用工作流服务，因此不再需要它们。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-117">Since we are not working with a workflow service, we no longer need them.</span></span>  
   
-4.  <span data-ttu-id="6b858-118">设置为"顺序工作流"的序列活动的 DisplayName。</span><span class="sxs-lookup"><span data-stu-id="6b858-118">Set the DisplayName for the sequence activity to "Sequential Workflow".</span></span>  
+4.  <span data-ttu-id="d2fa3-118">设置为"顺序工作流"的序列活动的 DisplayName。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-118">Set the DisplayName for the sequence activity to "Sequential Workflow".</span></span>  
   
-5.  <span data-ttu-id="6b858-119">将 Service1.xamlx 重命名为 Workflow1.xamlx。</span><span class="sxs-lookup"><span data-stu-id="6b858-119">Rename Service1.xamlx to Workflow1.xamlx.</span></span>  
+5.  <span data-ttu-id="d2fa3-119">将 Service1.xamlx 重命名为 Workflow1.xamlx。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-119">Rename Service1.xamlx to Workflow1.xamlx.</span></span>  
   
-6.  <span data-ttu-id="6b858-120">单击顺序活动外部的设计器并将设置为"Workflow1"的 Name 和 ConfigurationName 属性</span><span class="sxs-lookup"><span data-stu-id="6b858-120">Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"</span></span>  
+6.  <span data-ttu-id="d2fa3-120">单击顺序活动外部的设计器并将设置为"Workflow1"的 Name 和 ConfigurationName 属性</span><span class="sxs-lookup"><span data-stu-id="d2fa3-120">Click the designer outside of the sequence activity, and set the Name and ConfigurationName properties to "Workflow1"</span></span>  
   
-7.  <span data-ttu-id="6b858-121">将 <xref:System.Activities.Statements.WriteLine> 活动拖到 <xref:System.Activities.Statements.Sequence> 中。</span><span class="sxs-lookup"><span data-stu-id="6b858-121">Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>.</span></span> <span data-ttu-id="6b858-122"><xref:System.Activities.Statements.WriteLine>在找不到活动**基元**工具箱的部分。</span><span class="sxs-lookup"><span data-stu-id="6b858-122">The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox.</span></span> <span data-ttu-id="6b858-123">设置<xref:System.Activities.Statements.WriteLine.Text%2A>属性<xref:System.Activities.Statements.WriteLine>活动"Hello，world"。</span><span class="sxs-lookup"><span data-stu-id="6b858-123">Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".</span></span>  
+7.  <span data-ttu-id="d2fa3-121">将 <xref:System.Activities.Statements.WriteLine> 活动拖到 <xref:System.Activities.Statements.Sequence> 中。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-121">Drag a <xref:System.Activities.Statements.WriteLine> activity into the <xref:System.Activities.Statements.Sequence>.</span></span> <span data-ttu-id="d2fa3-122"><xref:System.Activities.Statements.WriteLine>在找不到活动**基元**工具箱的部分。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-122">The <xref:System.Activities.Statements.WriteLine> activity can be found in the **Primitives** section of the toolbox.</span></span> <span data-ttu-id="d2fa3-123">设置<xref:System.Activities.Statements.WriteLine.Text%2A>属性<xref:System.Activities.Statements.WriteLine>活动"Hello，world"。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-123">Set the <xref:System.Activities.Statements.WriteLine.Text%2A> property of the <xref:System.Activities.Statements.WriteLine> activity to "Hello, world".</span></span>  
   
-     <span data-ttu-id="6b858-124">现在，此工作流应该如下图所示。</span><span class="sxs-lookup"><span data-stu-id="6b858-124">The workflow should now look like the following diagram.</span></span>  
+     <span data-ttu-id="d2fa3-124">现在，此工作流应该如下图所示。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-124">The workflow should now look like the following diagram.</span></span>  
   
-     <span data-ttu-id="6b858-125">![一个简单工作流](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span><span class="sxs-lookup"><span data-stu-id="6b858-125">![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span></span>  
+     <span data-ttu-id="d2fa3-125">![一个简单工作流](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span><span class="sxs-lookup"><span data-stu-id="d2fa3-125">![A simple workflow](../../../../docs/framework/wcf/feature-details/media/simpleworkflow.png "SimpleWorkflow")</span></span>  
   
-### <a name="create-the-workflow-creation-service-contract"></a><span data-ttu-id="6b858-126">创建工作流创建服务协定</span><span class="sxs-lookup"><span data-stu-id="6b858-126">Create the workflow creation service contract</span></span>  
+### <a name="create-the-workflow-creation-service-contract"></a><span data-ttu-id="d2fa3-126">创建工作流创建服务协定</span><span class="sxs-lookup"><span data-stu-id="d2fa3-126">Create the workflow creation service contract</span></span>  
   
-1.  <span data-ttu-id="6b858-127">向 `Shared` 解决方案中添加一个名为 `CreationEndpointTest` 的新类库项目。</span><span class="sxs-lookup"><span data-stu-id="6b858-127">Add a new class library project called `Shared` to the `CreationEndpointTest` solution.</span></span>  
+1.  <span data-ttu-id="d2fa3-127">向 `Shared` 解决方案中添加一个名为 `CreationEndpointTest` 的新类库项目。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-127">Add a new class library project called `Shared` to the `CreationEndpointTest` solution.</span></span>  
   
-2.  <span data-ttu-id="6b858-128">向 `Shared` 项目中添加对 System.ServiceModel.dll、System.Configuration 和 System.ServiceModel.Activities 的引用。</span><span class="sxs-lookup"><span data-stu-id="6b858-128">Add a reference to System.ServiceModel.dll, System.Configuration, and System.ServiceModel.Activities to the `Shared` project.</span></span>  
+2.  <span data-ttu-id="d2fa3-128">向 `Shared` 项目中添加对 System.ServiceModel.dll、System.Configuration 和 System.ServiceModel.Activities 的引用。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-128">Add a reference to System.ServiceModel.dll, System.Configuration, and System.ServiceModel.Activities to the `Shared` project.</span></span>  
   
-3.  <span data-ttu-id="6b858-129">将 Class1.cs 文件重命名为 IWorkflowCreation.cs，并将以下代码添加到此文件中。</span><span class="sxs-lookup"><span data-stu-id="6b858-129">Rename the Class1.cs file to IWorkflowCreation.cs and the following code to the file.</span></span>  
+3.  <span data-ttu-id="d2fa3-129">将 Class1.cs 文件重命名为 IWorkflowCreation.cs，并将以下代码添加到此文件中。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-129">Rename the Class1.cs file to IWorkflowCreation.cs and the following code to the file.</span></span>  
   
     ```  
     using System;  
@@ -72,11 +73,11 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-     <span data-ttu-id="6b858-130">此协定定义两个操作，用于创建您刚刚创建的非服务工作流的新实例。</span><span class="sxs-lookup"><span data-stu-id="6b858-130">This contract defines two operations both create a new instance of the non-service workflow you just created.</span></span> <span data-ttu-id="6b858-131">一个操作创建具有生成的实例 ID 的新实例，另一个操作允许您为新工作流实例指定实例 ID。</span><span class="sxs-lookup"><span data-stu-id="6b858-131">One creates a new instance with a generated instance ID and the other allows you to specify the instance ID for the new workflow instance.</span></span>  <span data-ttu-id="6b858-132">两种方法都允许您向新工作流实例传入参数。</span><span class="sxs-lookup"><span data-stu-id="6b858-132">Both methods allow you to pass in parameters to the new workflow instance.</span></span> <span data-ttu-id="6b858-133">此协定将由公开<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>以允许客户端创建非服务工作流的新实例。</span><span class="sxs-lookup"><span data-stu-id="6b858-133">This contract will be exposed by the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to allow clients to create new instances of a non-service workflow.</span></span>  
+     <span data-ttu-id="d2fa3-130">此协定定义两个操作，用于创建您刚刚创建的非服务工作流的新实例。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-130">This contract defines two operations both create a new instance of the non-service workflow you just created.</span></span> <span data-ttu-id="d2fa3-131">一个操作创建具有生成的实例 ID 的新实例，另一个操作允许您为新工作流实例指定实例 ID。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-131">One creates a new instance with a generated instance ID and the other allows you to specify the instance ID for the new workflow instance.</span></span>  <span data-ttu-id="d2fa3-132">两种方法都允许您向新工作流实例传入参数。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-132">Both methods allow you to pass in parameters to the new workflow instance.</span></span> <span data-ttu-id="d2fa3-133">此协定将由公开<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>以允许客户端创建非服务工作流的新实例。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-133">This contract will be exposed by the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to allow clients to create new instances of a non-service workflow.</span></span>  
   
-### <a name="derive-a-class-from-workflowhostingendpoint"></a><span data-ttu-id="6b858-134">从 WorkflowHostingEndpoint 派生类</span><span class="sxs-lookup"><span data-stu-id="6b858-134">Derive a class from WorkflowHostingEndpoint</span></span>  
+### <a name="derive-a-class-from-workflowhostingendpoint"></a><span data-ttu-id="d2fa3-134">从 WorkflowHostingEndpoint 派生类</span><span class="sxs-lookup"><span data-stu-id="d2fa3-134">Derive a class from WorkflowHostingEndpoint</span></span>  
   
-1.  <span data-ttu-id="6b858-135">添加新的类调用`CreationEndpoint`派生自<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>到`Shared`项目。</span><span class="sxs-lookup"><span data-stu-id="6b858-135">Add a new class called `CreationEndpoint` derived from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to the `Shared` project.</span></span>  
+1.  <span data-ttu-id="d2fa3-135">添加新的类调用`CreationEndpoint`派生自<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>到`Shared`项目。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-135">Add a new class called `CreationEndpoint` derived from <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> to the `Shared` project.</span></span>  
   
     ```  
     using System;  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-2.  <span data-ttu-id="6b858-136">将名为 <xref:System.Uri> 的本地静态 `defaultBaseUri` 变量添加到 `CreationEndpoint` 类。</span><span class="sxs-lookup"><span data-stu-id="6b858-136">Add a local static <xref:System.Uri> variable called `defaultBaseUri` to the `CreationEndpoint` class.</span></span>  
+2.  <span data-ttu-id="d2fa3-136">将名为 <xref:System.Uri> 的本地静态 `defaultBaseUri` 变量添加到 `CreationEndpoint` 类。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-136">Add a local static <xref:System.Uri> variable called `defaultBaseUri` to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public class CreationEndpoint : WorkflowHostingEndpoint  
@@ -104,7 +105,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-3.  <span data-ttu-id="6b858-137">将下面的构造函数添加到 `CreationEndpoint` 类。</span><span class="sxs-lookup"><span data-stu-id="6b858-137">Add the following constructor to the `CreationEndpoint` class.</span></span> <span data-ttu-id="6b858-138">请注意，在对基构造函数的调用中指定 `IWorkflowCreation` 服务协定。</span><span class="sxs-lookup"><span data-stu-id="6b858-138">Notice we specify the `IWorkflowCreation` service contract in the call to the base constructor.</span></span>  
+3.  <span data-ttu-id="d2fa3-137">将下面的构造函数添加到 `CreationEndpoint` 类。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-137">Add the following constructor to the `CreationEndpoint` class.</span></span> <span data-ttu-id="d2fa3-138">请注意，在对基构造函数的调用中指定 `IWorkflowCreation` 服务协定。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-138">Notice we specify the `IWorkflowCreation` service contract in the call to the base constructor.</span></span>  
   
     ```  
     public CreationEndpoint(Binding binding, EndpointAddress address)  
@@ -113,7 +114,7 @@ ms.lasthandoff: 12/02/2017
        }  
     ```  
   
-4.  <span data-ttu-id="6b858-139">将下面的默认构造函数添加到 `CreationEndpoint` 类。</span><span class="sxs-lookup"><span data-stu-id="6b858-139">Add the following default constructor to the `CreationEndpoint` class.</span></span>  
+4.  <span data-ttu-id="d2fa3-139">将下面的默认构造函数添加到 `CreationEndpoint` 类。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-139">Add the following default constructor to the `CreationEndpoint` class.</span></span>  
   
     ```  
     public CreationEndpoint()  
@@ -123,7 +124,7 @@ ms.lasthandoff: 12/02/2017
        }  
     ```  
   
-5.  <span data-ttu-id="6b858-140">将静态 `DefaultBaseUri` 属性添加到 `CreationEndpoint` 类。</span><span class="sxs-lookup"><span data-stu-id="6b858-140">Add a static `DefaultBaseUri` property to the `CreationEndpoint` class.</span></span> <span data-ttu-id="6b858-141">此属性将用于保留默认的基 URL（如未提供）。</span><span class="sxs-lookup"><span data-stu-id="6b858-141">This property will be used to hold a default base URI if one is not provided.</span></span>  
+5.  <span data-ttu-id="d2fa3-140">将静态 `DefaultBaseUri` 属性添加到 `CreationEndpoint` 类。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-140">Add a static `DefaultBaseUri` property to the `CreationEndpoint` class.</span></span> <span data-ttu-id="d2fa3-141">此属性将用于保留默认的基 URL（如未提供）。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-141">This property will be used to hold a default base URI if one is not provided.</span></span>  
   
     ```  
     static Uri DefaultBaseUri  
@@ -141,7 +142,7 @@ ms.lasthandoff: 12/02/2017
      }  
     ```  
   
-6.  <span data-ttu-id="6b858-142">创建下面的方法来获取默认绑定，以供创建终结点使用。</span><span class="sxs-lookup"><span data-stu-id="6b858-142">Create the following method to get the default binding to use for the creation endpoint.</span></span>  
+6.  <span data-ttu-id="d2fa3-142">创建下面的方法来获取默认绑定，以供创建终结点使用。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-142">Create the following method to get the default binding to use for the creation endpoint.</span></span>  
   
     ```  
     //defaults to NetNamedPipeBinding  
@@ -151,7 +152,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-7.  <span data-ttu-id="6b858-143">重写 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> 方法以返回工作流实例 ID。</span><span class="sxs-lookup"><span data-stu-id="6b858-143">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> method to return the workflow instance ID.</span></span> <span data-ttu-id="6b858-144">如果`Action`标头"创建"以返回一个空 GUID，如果`Action`标头以"CreateWithInstanceId"返回 GUID 传递到方法。</span><span class="sxs-lookup"><span data-stu-id="6b858-144">If the `Action` header ends with "Create" return an empty GUID, if the `Action` header ends with "CreateWithInstanceId" return the GUID passed into the method.</span></span> <span data-ttu-id="6b858-145">否则，将引发 <xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="6b858-145">Otherwise, throw an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="6b858-146">这些 `Action` 标头与 `IWorkflowCreation` 服务协定中定义的两个操作相对应。</span><span class="sxs-lookup"><span data-stu-id="6b858-146">These `Action` headers correspond to the two operations defined in the `IWorkflowCreation` service contract.</span></span>  
+7.  <span data-ttu-id="d2fa3-143">重写 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> 方法以返回工作流实例 ID。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-143">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetInstanceId%2A> method to return the workflow instance ID.</span></span> <span data-ttu-id="d2fa3-144">如果`Action`标头"创建"以返回一个空 GUID，如果`Action`标头以"CreateWithInstanceId"返回 GUID 传递到方法。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-144">If the `Action` header ends with "Create" return an empty GUID, if the `Action` header ends with "CreateWithInstanceId" return the GUID passed into the method.</span></span> <span data-ttu-id="d2fa3-145">否则，将引发 <xref:System.InvalidOperationException>。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-145">Otherwise, throw an <xref:System.InvalidOperationException>.</span></span> <span data-ttu-id="d2fa3-146">这些 `Action` 标头与 `IWorkflowCreation` 服务协定中定义的两个操作相对应。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-146">These `Action` headers correspond to the two operations defined in the `IWorkflowCreation` service contract.</span></span>  
   
     ```  
     protected override Guid OnGetInstanceId(object[] inputs, OperationContext operationContext)  
@@ -173,7 +174,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-8.  <span data-ttu-id="6b858-147">重写 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> 方法以创建 <xref:System.ServiceModel.Activities.WorkflowCreationContext> 并为工作流添加任何参数，将实例 ID 发送到客户端，然后返回 <xref:System.ServiceModel.Activities.WorkflowCreationContext>。</span><span class="sxs-lookup"><span data-stu-id="6b858-147">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> method to create a <xref:System.ServiceModel.Activities.WorkflowCreationContext> and add any arguments for the workflow, send the instance ID to the client, and then return the <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span></span>  
+8.  <span data-ttu-id="d2fa3-147">重写 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> 方法以创建 <xref:System.ServiceModel.Activities.WorkflowCreationContext> 并为工作流添加任何参数，将实例 ID 发送到客户端，然后返回 <xref:System.ServiceModel.Activities.WorkflowCreationContext>。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-147">Override the <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint.OnGetCreationContext%2A> method to create a <xref:System.ServiceModel.Activities.WorkflowCreationContext> and add any arguments for the workflow, send the instance ID to the client, and then return the <xref:System.ServiceModel.Activities.WorkflowCreationContext>.</span></span>  
   
     ```  
     protected override WorkflowCreationContext OnGetCreationContext(object[] inputs, OperationContext operationContext, Guid instanceId, WorkflowHostingResponseContext responseContext)  
@@ -201,11 +202,11 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a><span data-ttu-id="6b858-148">创建标准终结点元素以允许您配置 WorkflowCreationEndpoint</span><span class="sxs-lookup"><span data-stu-id="6b858-148">Create a standard endpoint element to allow you to configure the WorkflowCreationEndpoint</span></span>  
+### <a name="create-a-standard-endpoint-element-to-allow-you-to-configure-the-workflowcreationendpoint"></a><span data-ttu-id="d2fa3-148">创建标准终结点元素以允许您配置 WorkflowCreationEndpoint</span><span class="sxs-lookup"><span data-stu-id="d2fa3-148">Create a standard endpoint element to allow you to configure the WorkflowCreationEndpoint</span></span>  
   
-1.  <span data-ttu-id="6b858-149">添加对 `CreationEndpoint` 项目中的 Shared 的引用。</span><span class="sxs-lookup"><span data-stu-id="6b858-149">Add a reference to Shared in the `CreationEndpoint` project</span></span>  
+1.  <span data-ttu-id="d2fa3-149">添加对 `CreationEndpoint` 项目中的 Shared 的引用。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-149">Add a reference to Shared in the `CreationEndpoint` project</span></span>  
   
-2.  <span data-ttu-id="6b858-150">向 `CreationEndpointElement` 项目中添加一个派生自 <xref:System.ServiceModel.Configuration.StandardEndpointElement> 的名为 `CreationEndpoint` 的新类。</span><span class="sxs-lookup"><span data-stu-id="6b858-150">Add a new class called `CreationEndpointElement`, derived from <xref:System.ServiceModel.Configuration.StandardEndpointElement> to the `CreationEndpoint` project.</span></span> <span data-ttu-id="6b858-151">此类将表示 web.config 文件中的 `CreationEndpoint`。</span><span class="sxs-lookup"><span data-stu-id="6b858-151">This class will represent a `CreationEndpoint` in a web.config file.</span></span>  
+2.  <span data-ttu-id="d2fa3-150">向 `CreationEndpointElement` 项目中添加一个派生自 <xref:System.ServiceModel.Configuration.StandardEndpointElement> 的名为 `CreationEndpoint` 的新类。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-150">Add a new class called `CreationEndpointElement`, derived from <xref:System.ServiceModel.Configuration.StandardEndpointElement> to the `CreationEndpoint` project.</span></span> <span data-ttu-id="d2fa3-151">此类将表示 web.config 文件中的 `CreationEndpoint`。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-151">This class will represent a `CreationEndpoint` in a web.config file.</span></span>  
   
     ```  
     using System;  
@@ -223,7 +224,7 @@ ms.lasthandoff: 12/02/2017
        }  
     ```  
   
-3.  <span data-ttu-id="6b858-152">添加名为 `EndpointType` 的属性以返回终结点的类型。</span><span class="sxs-lookup"><span data-stu-id="6b858-152">Add a property called `EndpointType` to return the type of the endpoint.</span></span>  
+3.  <span data-ttu-id="d2fa3-152">添加名为 `EndpointType` 的属性以返回终结点的类型。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-152">Add a property called `EndpointType` to return the type of the endpoint.</span></span>  
   
     ```  
     protected override Type EndpointType  
@@ -232,7 +233,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-4.  <span data-ttu-id="6b858-153">重写 <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> 方法并返回新的 `CreationEndpoint`。</span><span class="sxs-lookup"><span data-stu-id="6b858-153">Override the <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> method and return a new `CreationEndpoint`.</span></span>  
+4.  <span data-ttu-id="d2fa3-153">重写 <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> 方法并返回新的 `CreationEndpoint`。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-153">Override the <xref:System.ServiceModel.Configuration.StandardEndpointElement.CreateServiceEndpoint%2A> method and return a new `CreationEndpoint`.</span></span>  
   
     ```  
     protected override ServiceEndpoint CreateServiceEndpoint(ContractDescription contractDescription)  
@@ -241,7 +242,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-5.  <span data-ttu-id="6b858-154">重载 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>、<xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>、<xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 和 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="6b858-154">Overload the <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, and <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> methods.</span></span> <span data-ttu-id="6b858-155">只需定义这些方法，无需向其中添加任何代码。</span><span class="sxs-lookup"><span data-stu-id="6b858-155">These methods just need to be defined, you do not need to add any code to them.</span></span>  
+5.  <span data-ttu-id="d2fa3-154">重载 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>、<xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>、<xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 和 <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-154">Overload the <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnApplyConfiguration%2A>, <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A>, and <xref:System.ServiceModel.Configuration.StandardEndpointElement.OnInitializeAndValidate%2A> methods.</span></span> <span data-ttu-id="d2fa3-155">只需定义这些方法，无需向其中添加任何代码。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-155">These methods just need to be defined, you do not need to add any code to them.</span></span>  
   
     ```  
     protected override void OnApplyConfiguration(ServiceEndpoint endpoint, ChannelEndpointElement channelEndpointElement)  
@@ -261,7 +262,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-6.  <span data-ttu-id="6b858-156">将 `CreationEndpoint` 的集合类添加到 `CreationEndpoint` 项目的 CreationEndpointElement.cs 文件中。</span><span class="sxs-lookup"><span data-stu-id="6b858-156">Add the collection class for `CreationEndpoint` to the CreationEndpointElement.cs file in the `CreationEndpoint` project.</span></span> <span data-ttu-id="6b858-157">配置使用此类来保留 web.config 文件中的大量 `CreationEndpoint` 实例。</span><span class="sxs-lookup"><span data-stu-id="6b858-157">This class is used by configuration to hold a number of `CreationEndpoint` instances in a web.config file.</span></span>  
+6.  <span data-ttu-id="d2fa3-156">将 `CreationEndpoint` 的集合类添加到 `CreationEndpoint` 项目的 CreationEndpointElement.cs 文件中。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-156">Add the collection class for `CreationEndpoint` to the CreationEndpointElement.cs file in the `CreationEndpoint` project.</span></span> <span data-ttu-id="d2fa3-157">配置使用此类来保留 web.config 文件中的大量 `CreationEndpoint` 实例。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-157">This class is used by configuration to hold a number of `CreationEndpoint` instances in a web.config file.</span></span>  
   
     ```  
     public class CreationEndpointCollection : StandardEndpointCollectionElement<CreationEndpoint, CreationEndpointElement>  
@@ -269,17 +270,17 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-7.  <span data-ttu-id="6b858-158">生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="6b858-158">Build the solution.</span></span>  
+7.  <span data-ttu-id="d2fa3-158">生成解决方案。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-158">Build the solution.</span></span>  
   
-### <a name="host-the-workflow-in-iis"></a><span data-ttu-id="6b858-159">在 IIS 中承载工作流</span><span class="sxs-lookup"><span data-stu-id="6b858-159">Host the workflow in IIS</span></span>  
+### <a name="host-the-workflow-in-iis"></a><span data-ttu-id="d2fa3-159">在 IIS 中承载工作流</span><span class="sxs-lookup"><span data-stu-id="d2fa3-159">Host the workflow in IIS</span></span>  
   
-1.  <span data-ttu-id="6b858-160">在 IIS 中新建一个名为 `MyCreationEndpoint` 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="6b858-160">Create a new application called `MyCreationEndpoint` in IIS.</span></span>  
+1.  <span data-ttu-id="d2fa3-160">在 IIS 中新建一个名为 `MyCreationEndpoint` 的应用程序。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-160">Create a new application called `MyCreationEndpoint` in IIS.</span></span>  
   
-2.  <span data-ttu-id="6b858-161">将工作流设计器生成的 workflow1.xaml 文件复制到应用程序目录中，并将此文件重命名为 workflow1.xamlx。</span><span class="sxs-lookup"><span data-stu-id="6b858-161">Copy the workflow1.xaml file generated by the workflow designer to the application directory and rename it to workflow1.xamlx.</span></span>  
+2.  <span data-ttu-id="d2fa3-161">将工作流设计器生成的 workflow1.xaml 文件复制到应用程序目录中，并将此文件重命名为 workflow1.xamlx。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-161">Copy the workflow1.xaml file generated by the workflow designer to the application directory and rename it to workflow1.xamlx.</span></span>  
   
-3.  <span data-ttu-id="6b858-162">将 shared.dll 和 CreationEndpoint.dll 文件复制到应用程序的 bin 目录（如果 bin 目录不存在，则创建它）。</span><span class="sxs-lookup"><span data-stu-id="6b858-162">Copy the shared.dll and CreationEndpoint.dll files to the application’s bin directory (create the bin directory if it is not present).</span></span>  
+3.  <span data-ttu-id="d2fa3-162">将 shared.dll 和 CreationEndpoint.dll 文件复制到应用程序的 bin 目录（如果 bin 目录不存在，则创建它）。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-162">Copy the shared.dll and CreationEndpoint.dll files to the application’s bin directory (create the bin directory if it is not present).</span></span>  
   
-4.  <span data-ttu-id="6b858-163">用下面的代码替换 `CreationEndpoint` 项目中 Web.config 文件的内容。</span><span class="sxs-lookup"><span data-stu-id="6b858-163">Replace the contents of the Web.config file in the `CreationEndpoint` project with the following code.</span></span>  
+4.  <span data-ttu-id="d2fa3-163">用下面的代码替换 `CreationEndpoint` 项目中 Web.config 文件的内容。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-163">Replace the contents of the Web.config file in the `CreationEndpoint` project with the following code.</span></span>  
   
     ```xaml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -290,7 +291,7 @@ ms.lasthandoff: 12/02/2017
     </configuration>  
     ```  
   
-5.  <span data-ttu-id="6b858-164">在 `<system.web>` 元素后，通过添加下面的配置代码来注册 `CreationEndpoint`。</span><span class="sxs-lookup"><span data-stu-id="6b858-164">After the `<system.web>` element, register `CreationEndpoint` by adding the following configuration code.</span></span>  
+5.  <span data-ttu-id="d2fa3-164">在 `<system.web>` 元素后，通过添加下面的配置代码来注册 `CreationEndpoint`。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-164">After the `<system.web>` element, register `CreationEndpoint` by adding the following configuration code.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -304,9 +305,9 @@ ms.lasthandoff: 12/02/2017
     </system.serviceModel>  
     ```  
   
-     <span data-ttu-id="6b858-165">这将注册 `CreationEndpointCollection` 类，以便您可以在 web.config 文件中配置 `CreationEndpoint`。</span><span class="sxs-lookup"><span data-stu-id="6b858-165">This registers the `CreationEndpointCollection` class so you can configure a `CreationEndpoint` in a web.config file.</span></span>  
+     <span data-ttu-id="d2fa3-165">这将注册 `CreationEndpointCollection` 类，以便您可以在 web.config 文件中配置 `CreationEndpoint`。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-165">This registers the `CreationEndpointCollection` class so you can configure a `CreationEndpoint` in a web.config file.</span></span>  
   
-6.  <span data-ttu-id="6b858-166">添加`<service>`元素 (后\</extensions > 标记) 与`CreationEndpoint`终结点将侦听传入消息。</span><span class="sxs-lookup"><span data-stu-id="6b858-166">Add a `<service>` element (after the \</extensions> tag) with a `CreationEndpoint` which will listen for incoming messages.</span></span>  
+6.  <span data-ttu-id="d2fa3-166">添加`<service>`元素 (后\</extensions > 标记) 与`CreationEndpoint`终结点将侦听传入消息。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-166">Add a `<service>` element (after the \</extensions> tag) with a `CreationEndpoint` which will listen for incoming messages.</span></span>  
   
     ```xml  
     <services>  
@@ -317,7 +318,7 @@ ms.lasthandoff: 12/02/2017
         </services>  
     ```  
   
-7.  <span data-ttu-id="6b858-167">添加\<行为 > 元素 (后 \< /> 标记) 以启用服务元数据。</span><span class="sxs-lookup"><span data-stu-id="6b858-167">Add a \<behaviors> element (after the \</services> tag) to enable service metadata.</span></span>  
+7.  <span data-ttu-id="d2fa3-167">添加\<行为 > 元素 (后 \< /> 标记) 以启用服务元数据。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-167">Add a \<behaviors> element (after the \</services> tag) to enable service metadata.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -329,19 +330,19 @@ ms.lasthandoff: 12/02/2017
         </behaviors>  
     ```  
   
-8.  <span data-ttu-id="6b858-168">将 web.config 复制到你的 IIS 应用程序目录。</span><span class="sxs-lookup"><span data-stu-id="6b858-168">Copy the web.config to your IIS application directory.</span></span>  
+8.  <span data-ttu-id="d2fa3-168">将 web.config 复制到你的 IIS 应用程序目录。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-168">Copy the web.config to your IIS application directory.</span></span>  
   
-9. <span data-ttu-id="6b858-169">通过启动 Internet Explorer 并浏览到 http://localhost/MyCreationEndpoint/Workflow1.xamlx，测试创建终结点是否在工作。</span><span class="sxs-lookup"><span data-stu-id="6b858-169">Test to see if the creation endpoint is working by starting Internet Explorer and browsing to http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span></span> <span data-ttu-id="6b858-170">Internet Explorer 应显示下面的屏幕：</span><span class="sxs-lookup"><span data-stu-id="6b858-170">Internet Explorer should display the following screen:</span></span>  
+9. <span data-ttu-id="d2fa3-169">通过启动 Internet Explorer 并浏览到 http://localhost/MyCreationEndpoint/Workflow1.xamlx，测试创建终结点是否在工作。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-169">Test to see if the creation endpoint is working by starting Internet Explorer and browsing to http://localhost/MyCreationEndpoint/Workflow1.xamlx.</span></span> <span data-ttu-id="d2fa3-170">Internet Explorer 应显示下面的屏幕：</span><span class="sxs-lookup"><span data-stu-id="d2fa3-170">Internet Explorer should display the following screen:</span></span>  
   
-     <span data-ttu-id="6b858-171">![正在测试服务](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span><span class="sxs-lookup"><span data-stu-id="6b858-171">![Testing the service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span></span>  
+     <span data-ttu-id="d2fa3-171">![正在测试服务](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span><span class="sxs-lookup"><span data-stu-id="d2fa3-171">![Testing the service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")</span></span>  
   
-### <a name="create-a-client-that-will-call-the-creationendpoint"></a><span data-ttu-id="6b858-172">创建将调用 CreationEndpoint 的客户端。</span><span class="sxs-lookup"><span data-stu-id="6b858-172">Create a client that will call the CreationEndpoint.</span></span>  
+### <a name="create-a-client-that-will-call-the-creationendpoint"></a><span data-ttu-id="d2fa3-172">创建将调用 CreationEndpoint 的客户端。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-172">Create a client that will call the CreationEndpoint.</span></span>  
   
-1.  <span data-ttu-id="6b858-173">将新控制台应用程序添加到 `CreationEndpointTest` 解决方案。</span><span class="sxs-lookup"><span data-stu-id="6b858-173">Add a new Console application to the `CreationEndpointTest` solution.</span></span>  
+1.  <span data-ttu-id="d2fa3-173">将新控制台应用程序添加到 `CreationEndpointTest` 解决方案。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-173">Add a new Console application to the `CreationEndpointTest` solution.</span></span>  
   
-2.  <span data-ttu-id="6b858-174">添加对 System.ServiceModel.dll、System.ServiceModel.Activities 和 `Shared` 项目的引用。</span><span class="sxs-lookup"><span data-stu-id="6b858-174">Add references to System.ServiceModel.dll, System.ServiceModel.Activities, and the `Shared` project.</span></span>  
+2.  <span data-ttu-id="d2fa3-174">添加对 System.ServiceModel.dll、System.ServiceModel.Activities 和 `Shared` 项目的引用。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-174">Add references to System.ServiceModel.dll, System.ServiceModel.Activities, and the `Shared` project.</span></span>  
   
-3.  <span data-ttu-id="6b858-175">在`Main`方法创建<xref:System.ServiceModel.ChannelFactory%601>类型的`IWorkflowCreation`并调用<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>。</span><span class="sxs-lookup"><span data-stu-id="6b858-175">In the `Main` method create a <xref:System.ServiceModel.ChannelFactory%601> of type `IWorkflowCreation` and call <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span></span> <span data-ttu-id="6b858-176">这将返回一个代理。</span><span class="sxs-lookup"><span data-stu-id="6b858-176">This will return a proxy.</span></span> <span data-ttu-id="6b858-177">然后，您可以对此代理调用 `Create` 以创建在 IIS 下承载的工作流实例：</span><span class="sxs-lookup"><span data-stu-id="6b858-177">You can then call `Create` on that proxy to create the workflow instance hosted under IIS:</span></span>  
+3.  <span data-ttu-id="d2fa3-175">在`Main`方法创建<xref:System.ServiceModel.ChannelFactory%601>类型的`IWorkflowCreation`并调用<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-175">In the `Main` method create a <xref:System.ServiceModel.ChannelFactory%601> of type `IWorkflowCreation` and call <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A>.</span></span> <span data-ttu-id="d2fa3-176">这将返回一个代理。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-176">This will return a proxy.</span></span> <span data-ttu-id="d2fa3-177">然后，您可以对此代理调用 `Create` 以创建在 IIS 下承载的工作流实例：</span><span class="sxs-lookup"><span data-stu-id="d2fa3-177">You can then call `Create` on that proxy to create the workflow instance hosted under IIS:</span></span>  
   
     ```  
     using System.Text;  
@@ -373,17 +374,17 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-4.  <span data-ttu-id="6b858-178">运行 CreationEndpointClient。</span><span class="sxs-lookup"><span data-stu-id="6b858-178">Run the CreationEndpointClient.</span></span> <span data-ttu-id="6b858-179">输出应如下所示：</span><span class="sxs-lookup"><span data-stu-id="6b858-179">The output should look like the following:</span></span>  
+4.  <span data-ttu-id="d2fa3-178">运行 CreationEndpointClient。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-178">Run the CreationEndpointClient.</span></span> <span data-ttu-id="d2fa3-179">输出应如下所示：</span><span class="sxs-lookup"><span data-stu-id="d2fa3-179">The output should look like the following:</span></span>  
   
     ```Output  
     Workflow Instance created using CreationEndpoint added in config. Instance Id: 0875dac0-2b8b-473e-b3cc-abcb235e9693Press return to exit ...  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="6b858-180">您将看不到工作流的输出，因为它正在 IIS 下运行，而 IIS 没有控制台输出。</span><span class="sxs-lookup"><span data-stu-id="6b858-180">You will not see the output of the workflow because it is running under IIS which has no console output.</span></span>  
+    >  <span data-ttu-id="d2fa3-180">您将看不到工作流的输出，因为它正在 IIS 下运行，而 IIS 没有控制台输出。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-180">You will not see the output of the workflow because it is running under IIS which has no console output.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6b858-181">示例</span><span class="sxs-lookup"><span data-stu-id="6b858-181">Example</span></span>  
- <span data-ttu-id="6b858-182">以下是此示例的完整代码。</span><span class="sxs-lookup"><span data-stu-id="6b858-182">The following is the complete code for this sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="d2fa3-181">示例</span><span class="sxs-lookup"><span data-stu-id="d2fa3-181">Example</span></span>  
+ <span data-ttu-id="d2fa3-182">以下是此示例的完整代码。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-182">The following is the complete code for this sample.</span></span>  
   
 ```xaml  
 <!-— workflow1.xamlx -->  
@@ -680,14 +681,14 @@ namespace CreationClient
 }  
 ```  
   
- <span data-ttu-id="6b858-183">此示例可能看起来使人迷惑，因为您从未实现能实现 `IWorkflowCreation` 的服务。</span><span class="sxs-lookup"><span data-stu-id="6b858-183">This example may seem confusing because you never implement a service that implements `IWorkflowCreation`.</span></span> <span data-ttu-id="6b858-184">这是因为 `CreationEndpoint` 为您这么做了。</span><span class="sxs-lookup"><span data-stu-id="6b858-184">This is because the `CreationEndpoint` does this for you.</span></span>  
+ <span data-ttu-id="d2fa3-183">此示例可能看起来使人迷惑，因为您从未实现能实现 `IWorkflowCreation` 的服务。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-183">This example may seem confusing because you never implement a service that implements `IWorkflowCreation`.</span></span> <span data-ttu-id="d2fa3-184">这是因为 `CreationEndpoint` 为您这么做了。</span><span class="sxs-lookup"><span data-stu-id="d2fa3-184">This is because the `CreationEndpoint` does this for you.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b858-185">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6b858-185">See Also</span></span>  
- [<span data-ttu-id="6b858-186">工作流服务</span><span class="sxs-lookup"><span data-stu-id="6b858-186">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="6b858-187">在 Internet 信息服务中承载</span><span class="sxs-lookup"><span data-stu-id="6b858-187">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [<span data-ttu-id="6b858-188">Internet 信息服务承载最佳实践</span><span class="sxs-lookup"><span data-stu-id="6b858-188">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [<span data-ttu-id="6b858-189">Internet 信息服务承载说明</span><span class="sxs-lookup"><span data-stu-id="6b858-189">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [<span data-ttu-id="6b858-190">Windows Workflow 体系结构</span><span class="sxs-lookup"><span data-stu-id="6b858-190">Windows Workflow Architecture</span></span>](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
- [<span data-ttu-id="6b858-191">WorkflowHostingEndpoint 恢复书签</span><span class="sxs-lookup"><span data-stu-id="6b858-191">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
- [<span data-ttu-id="6b858-192">重新托管工作流设计器</span><span class="sxs-lookup"><span data-stu-id="6b858-192">Rehosting the Workflow Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [<span data-ttu-id="6b858-193">Windows Workflow 概述</span><span class="sxs-lookup"><span data-stu-id="6b858-193">Windows Workflow Overview</span></span>](../../../../docs/framework/windows-workflow-foundation/overview.md)
+## <a name="see-also"></a><span data-ttu-id="d2fa3-185">请参阅</span><span class="sxs-lookup"><span data-stu-id="d2fa3-185">See Also</span></span>  
+ [<span data-ttu-id="d2fa3-186">工作流服务</span><span class="sxs-lookup"><span data-stu-id="d2fa3-186">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="d2fa3-187">在 Internet Information Services 中承载</span><span class="sxs-lookup"><span data-stu-id="d2fa3-187">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [<span data-ttu-id="d2fa3-188">Internet Information Services 承载最佳做法</span><span class="sxs-lookup"><span data-stu-id="d2fa3-188">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [<span data-ttu-id="d2fa3-189">Internet 信息服务承载说明</span><span class="sxs-lookup"><span data-stu-id="d2fa3-189">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [<span data-ttu-id="d2fa3-190">Windows Workflow 体系结构</span><span class="sxs-lookup"><span data-stu-id="d2fa3-190">Windows Workflow Architecture</span></span>](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [<span data-ttu-id="d2fa3-191">WorkflowHostingEndpoint 恢复书签</span><span class="sxs-lookup"><span data-stu-id="d2fa3-191">WorkflowHostingEndpoint Resume Bookmark</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [<span data-ttu-id="d2fa3-192">重新托管工作流设计器</span><span class="sxs-lookup"><span data-stu-id="d2fa3-192">Rehosting the Workflow Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [<span data-ttu-id="d2fa3-193">Windows Workflow 概述</span><span class="sxs-lookup"><span data-stu-id="d2fa3-193">Windows Workflow Overview</span></span>](../../../../docs/framework/windows-workflow-foundation/overview.md)

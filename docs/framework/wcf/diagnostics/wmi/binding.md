@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9e44d161e1229db9145f4ed7e337396bbd98c68
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6553d1e1c030a30eed74ff81d3e07e28a9f25b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="binding"></a><span data-ttu-id="159b5-102">绑定</span><span class="sxs-lookup"><span data-stu-id="159b5-102">Binding</span></span>
-<span data-ttu-id="159b5-103">wmi Binding</span><span class="sxs-lookup"><span data-stu-id="159b5-103">wmi Binding</span></span>  
+# <a name="binding"></a><span data-ttu-id="d532c-102">绑定</span><span class="sxs-lookup"><span data-stu-id="d532c-102">Binding</span></span>
+<span data-ttu-id="d532c-103">wmi Binding</span><span class="sxs-lookup"><span data-stu-id="d532c-103">wmi Binding</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="159b5-104">语法</span><span class="sxs-lookup"><span data-stu-id="159b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d532c-104">语法</span><span class="sxs-lookup"><span data-stu-id="d532c-104">Syntax</span></span>  
   
 ```  
 class Binding  
@@ -38,73 +39,73 @@ class Binding
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="159b5-105">方法</span><span class="sxs-lookup"><span data-stu-id="159b5-105">Methods</span></span>  
- <span data-ttu-id="159b5-106">Binding 类未定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="159b5-106">The Binding class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="d532c-105">方法</span><span class="sxs-lookup"><span data-stu-id="d532c-105">Methods</span></span>  
+ <span data-ttu-id="d532c-106">Binding 类未定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="d532c-106">The Binding class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="159b5-107">属性</span><span class="sxs-lookup"><span data-stu-id="159b5-107">Properties</span></span>  
- <span data-ttu-id="159b5-108">Binding 类具有以下属性。</span><span class="sxs-lookup"><span data-stu-id="159b5-108">The Binding class has the following properties.</span></span>  
+## <a name="properties"></a><span data-ttu-id="d532c-107">属性</span><span class="sxs-lookup"><span data-stu-id="d532c-107">Properties</span></span>  
+ <span data-ttu-id="d532c-108">Binding 类具有以下属性。</span><span class="sxs-lookup"><span data-stu-id="d532c-108">The Binding class has the following properties.</span></span>  
   
-### <a name="bindingelements"></a><span data-ttu-id="159b5-109">BindingElements</span><span class="sxs-lookup"><span data-stu-id="159b5-109">BindingElements</span></span>  
- <span data-ttu-id="159b5-110">数据类型：BindingElement 数组</span><span class="sxs-lookup"><span data-stu-id="159b5-110">Data type: BindingElement array</span></span>  
+### <a name="bindingelements"></a><span data-ttu-id="d532c-109">BindingElements</span><span class="sxs-lookup"><span data-stu-id="d532c-109">BindingElements</span></span>  
+ <span data-ttu-id="d532c-110">数据类型：BindingElement 数组</span><span class="sxs-lookup"><span data-stu-id="d532c-110">Data type: BindingElement array</span></span>  
   
- <span data-ttu-id="159b5-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="159b5-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="d532c-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="d532c-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="159b5-112">由绑定实现的绑定元素的集合。</span><span class="sxs-lookup"><span data-stu-id="159b5-112">The collection of binding elements implemented by the binding.</span></span>  
+ <span data-ttu-id="d532c-112">由绑定实现的绑定元素的集合。</span><span class="sxs-lookup"><span data-stu-id="d532c-112">The collection of binding elements implemented by the binding.</span></span>  
   
-### <a name="closetimeout"></a><span data-ttu-id="159b5-113">CloseTimeout</span><span class="sxs-lookup"><span data-stu-id="159b5-113">CloseTimeout</span></span>  
- <span data-ttu-id="159b5-114">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="159b5-114">Data type: datetime</span></span>  
+### <a name="closetimeout"></a><span data-ttu-id="d532c-113">CloseTimeout</span><span class="sxs-lookup"><span data-stu-id="d532c-113">CloseTimeout</span></span>  
+ <span data-ttu-id="d532c-114">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="d532c-114">Data type: datetime</span></span>  
   
- <span data-ttu-id="159b5-115">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="159b5-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="d532c-115">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="d532c-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="159b5-116">为完成关闭操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="159b5-116">The interval of time provided for a close operation to complete.</span></span>  
+ <span data-ttu-id="d532c-116">为完成关闭操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="d532c-116">The interval of time provided for a close operation to complete.</span></span>  
   
-### <a name="name"></a><span data-ttu-id="159b5-117">名称</span><span class="sxs-lookup"><span data-stu-id="159b5-117">Name</span></span>  
- <span data-ttu-id="159b5-118">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="159b5-118">Data type: string</span></span>  
+### <a name="name"></a><span data-ttu-id="d532c-117">name</span><span class="sxs-lookup"><span data-stu-id="d532c-117">Name</span></span>  
+ <span data-ttu-id="d532c-118">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="d532c-118">Data type: string</span></span>  
   
- <span data-ttu-id="159b5-119">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="159b5-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="d532c-119">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="d532c-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="159b5-120">绑定的名称。</span><span class="sxs-lookup"><span data-stu-id="159b5-120">The name of the binding.</span></span>  
+ <span data-ttu-id="d532c-120">绑定的名称。</span><span class="sxs-lookup"><span data-stu-id="d532c-120">The name of the binding.</span></span>  
   
-### <a name="namespace"></a><span data-ttu-id="159b5-121">命名空间</span><span class="sxs-lookup"><span data-stu-id="159b5-121">Namespace</span></span>  
- <span data-ttu-id="159b5-122">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="159b5-122">Data type: string</span></span>  
+### <a name="namespace"></a><span data-ttu-id="d532c-121">命名空间</span><span class="sxs-lookup"><span data-stu-id="d532c-121">Namespace</span></span>  
+ <span data-ttu-id="d532c-122">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="d532c-122">Data type: string</span></span>  
   
- <span data-ttu-id="159b5-123">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="159b5-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="d532c-123">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="d532c-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="159b5-124">绑定的 XML 命名空间。</span><span class="sxs-lookup"><span data-stu-id="159b5-124">The XML namespace of the binding.</span></span>  
+ <span data-ttu-id="d532c-124">绑定的 XML 命名空间。</span><span class="sxs-lookup"><span data-stu-id="d532c-124">The XML namespace of the binding.</span></span>  
   
-### <a name="opentimeout"></a><span data-ttu-id="159b5-125">OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="159b5-125">OpenTimeout</span></span>  
- <span data-ttu-id="159b5-126">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="159b5-126">Data type: datetime</span></span>  
+### <a name="opentimeout"></a><span data-ttu-id="d532c-125">OpenTimeout</span><span class="sxs-lookup"><span data-stu-id="d532c-125">OpenTimeout</span></span>  
+ <span data-ttu-id="d532c-126">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="d532c-126">Data type: datetime</span></span>  
   
- <span data-ttu-id="159b5-127">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="159b5-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="d532c-127">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="d532c-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="159b5-128">为完成打开操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="159b5-128">The interval of time provided for an open operation to complete.</span></span>  
+ <span data-ttu-id="d532c-128">为完成打开操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="d532c-128">The interval of time provided for an open operation to complete.</span></span>  
   
-### <a name="receivetimeout"></a><span data-ttu-id="159b5-129">ReceiveTimeout</span><span class="sxs-lookup"><span data-stu-id="159b5-129">ReceiveTimeout</span></span>  
- <span data-ttu-id="159b5-130">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="159b5-130">Data type: datetime</span></span>  
+### <a name="receivetimeout"></a><span data-ttu-id="d532c-129">ReceiveTimeout</span><span class="sxs-lookup"><span data-stu-id="d532c-129">ReceiveTimeout</span></span>  
+ <span data-ttu-id="d532c-130">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="d532c-130">Data type: datetime</span></span>  
   
- <span data-ttu-id="159b5-131">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="159b5-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="d532c-131">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="d532c-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="159b5-132">为完成接收操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="159b5-132">The interval of time provided for a receive operation to complete.</span></span>  
+ <span data-ttu-id="d532c-132">为完成接收操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="d532c-132">The interval of time provided for a receive operation to complete.</span></span>  
   
-### <a name="scheme"></a><span data-ttu-id="159b5-133">方案</span><span class="sxs-lookup"><span data-stu-id="159b5-133">Scheme</span></span>  
- <span data-ttu-id="159b5-134">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="159b5-134">Data type: string</span></span>  
+### <a name="scheme"></a><span data-ttu-id="d532c-133">方案</span><span class="sxs-lookup"><span data-stu-id="d532c-133">Scheme</span></span>  
+ <span data-ttu-id="d532c-134">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="d532c-134">Data type: string</span></span>  
   
- <span data-ttu-id="159b5-135">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="159b5-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="d532c-135">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="d532c-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="159b5-136">绑定建立的通道和侦听器工厂所使用的 URI 传输方案。</span><span class="sxs-lookup"><span data-stu-id="159b5-136">The URI transport scheme that is used by the channel and listener factories that are built by the binding.</span></span>  
+ <span data-ttu-id="d532c-136">绑定建立的通道和侦听器工厂所使用的 URI 传输方案。</span><span class="sxs-lookup"><span data-stu-id="d532c-136">The URI transport scheme that is used by the channel and listener factories that are built by the binding.</span></span>  
   
-### <a name="sendtimeout"></a><span data-ttu-id="159b5-137">SendTimeout</span><span class="sxs-lookup"><span data-stu-id="159b5-137">SendTimeout</span></span>  
- <span data-ttu-id="159b5-138">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="159b5-138">Data type: datetime</span></span>  
+### <a name="sendtimeout"></a><span data-ttu-id="d532c-137">SendTimeout</span><span class="sxs-lookup"><span data-stu-id="d532c-137">SendTimeout</span></span>  
+ <span data-ttu-id="d532c-138">数据类型：DateTime</span><span class="sxs-lookup"><span data-stu-id="d532c-138">Data type: datetime</span></span>  
   
- <span data-ttu-id="159b5-139">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="159b5-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="d532c-139">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="d532c-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="159b5-140">为完成发送操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="159b5-140">The interval of time provided for a send operation to complete.</span></span>  
+ <span data-ttu-id="d532c-140">为完成发送操作提供的时间间隔。</span><span class="sxs-lookup"><span data-stu-id="d532c-140">The interval of time provided for a send operation to complete.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="159b5-141">要求</span><span class="sxs-lookup"><span data-stu-id="159b5-141">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d532c-141">惠?</span><span class="sxs-lookup"><span data-stu-id="d532c-141">Requirements</span></span>  
   
-|<span data-ttu-id="159b5-142">MOF</span><span class="sxs-lookup"><span data-stu-id="159b5-142">MOF</span></span>|<span data-ttu-id="159b5-143">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="159b5-143">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="d532c-142">MOF</span><span class="sxs-lookup"><span data-stu-id="d532c-142">MOF</span></span>|<span data-ttu-id="d532c-143">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="d532c-143">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="159b5-144">命名空间</span><span class="sxs-lookup"><span data-stu-id="159b5-144">Namespace</span></span>|<span data-ttu-id="159b5-145">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="159b5-145">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="d532c-144">命名空间</span><span class="sxs-lookup"><span data-stu-id="d532c-144">Namespace</span></span>|<span data-ttu-id="d532c-145">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="d532c-145">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="159b5-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="159b5-146">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d532c-146">请参阅</span><span class="sxs-lookup"><span data-stu-id="d532c-146">See Also</span></span>  
  <xref:System.ServiceModel.Channels.Binding>

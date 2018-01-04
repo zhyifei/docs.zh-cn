@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b9b72cb2ef0a7704c4f06464fc0b82d92abcb372
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9bd85a820f2c1ab1dd07387d815247a6a11c9c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityidentityhostnamenormalizationfailure"></a><span data-ttu-id="93cab-102">System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure</span><span class="sxs-lookup"><span data-stu-id="93cab-102">System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure</span></span>
-<span data-ttu-id="93cab-103">System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure</span><span class="sxs-lookup"><span data-stu-id="93cab-103">System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure</span></span>  
+# <a name="systemservicemodelsecuritysecurityidentityhostnamenormalizationfailure"></a><span data-ttu-id="54910-102">System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure</span><span class="sxs-lookup"><span data-stu-id="54910-102">System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure</span></span>
+<span data-ttu-id="54910-103">System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure</span><span class="sxs-lookup"><span data-stu-id="54910-103">System.ServiceModel.Security.SecurityIdentityHostNameNormalizationFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="93cab-104">描述</span><span class="sxs-lookup"><span data-stu-id="93cab-104">Description</span></span>  
- <span data-ttu-id="93cab-105">无法正常化终结点地址的 HostName 部分。</span><span class="sxs-lookup"><span data-stu-id="93cab-105">The HostName portion of an endpoint address cannot be normalized.</span></span>  
+## <a name="description"></a><span data-ttu-id="54910-104">描述</span><span class="sxs-lookup"><span data-stu-id="54910-104">Description</span></span>  
+ <span data-ttu-id="54910-105">无法正常化终结点地址的 HostName 部分。</span><span class="sxs-lookup"><span data-stu-id="54910-105">The HostName portion of an endpoint address cannot be normalized.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93cab-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="93cab-106">See Also</span></span>  
- [<span data-ttu-id="93cab-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="93cab-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="93cab-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="93cab-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="93cab-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="93cab-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="54910-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="54910-106">See Also</span></span>  
+ [<span data-ttu-id="54910-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="54910-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="54910-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="54910-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="54910-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="54910-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

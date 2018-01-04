@@ -13,45 +13,46 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 043aa541e32077faf8141701a5ec7e8c0e711959
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e33915105ca9ff095f09bcd52431212e7c8e927
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="workflow-services"></a><span data-ttu-id="9d5b9-102">工作流服务</span><span class="sxs-lookup"><span data-stu-id="9d5b9-102">Workflow Services</span></span>
-<span data-ttu-id="9d5b9-103">使用 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，您可以在 XAML 中以声明方式充分描述基于工作流的服务。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-103">[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] allows you to fully describe a workflow-based service declaratively in XAML.</span></span> <span data-ttu-id="9d5b9-104">您完全可以在 XAML 中定义实现服务的工作流并描述服务所公开的终结点。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-104">You can define a workflow that implements your service and describe endpoints the service exposes, all entirely in XAML.</span></span> <span data-ttu-id="9d5b9-105">本节中的主题详细描述支持以声明方式编写服务的编程模型。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-105">The topics in this section describe, in detail, the programming model that supports writing services declaratively.</span></span>  
+# <a name="workflow-services"></a><span data-ttu-id="13850-102">工作流服务</span><span class="sxs-lookup"><span data-stu-id="13850-102">Workflow Services</span></span>
+<span data-ttu-id="13850-103">使用 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，您可以在 XAML 中以声明方式充分描述基于工作流的服务。</span><span class="sxs-lookup"><span data-stu-id="13850-103">[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] allows you to fully describe a workflow-based service declaratively in XAML.</span></span> <span data-ttu-id="13850-104">您完全可以在 XAML 中定义实现服务的工作流并描述服务所公开的终结点。</span><span class="sxs-lookup"><span data-stu-id="13850-104">You can define a workflow that implements your service and describe endpoints the service exposes, all entirely in XAML.</span></span> <span data-ttu-id="13850-105">本节中的主题详细描述支持以声明方式编写服务的编程模型。</span><span class="sxs-lookup"><span data-stu-id="13850-105">The topics in this section describe, in detail, the programming model that supports writing services declaratively.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9d5b9-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="9d5b9-106">In This Section</span></span>  
- [<span data-ttu-id="9d5b9-107">工作流服务概述</span><span class="sxs-lookup"><span data-stu-id="9d5b9-107">Workflow Services Overview</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services-overview.md)  
- <span data-ttu-id="9d5b9-108">描述创建和承载工作流服务所涉及的组件。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-108">Describes the components involved in creating and hosting a workflow service.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="13850-106">本节内容</span><span class="sxs-lookup"><span data-stu-id="13850-106">In This Section</span></span>  
+ [<span data-ttu-id="13850-107">工作流服务概述</span><span class="sxs-lookup"><span data-stu-id="13850-107">Workflow Services Overview</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services-overview.md)  
+ <span data-ttu-id="13850-108">描述创建和承载工作流服务所涉及的组件。</span><span class="sxs-lookup"><span data-stu-id="13850-108">Describes the components involved in creating and hosting a workflow service.</span></span>  
   
- [<span data-ttu-id="9d5b9-109">消息传递活动</span><span class="sxs-lookup"><span data-stu-id="9d5b9-109">Messaging Activities</span></span>](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
- <span data-ttu-id="9d5b9-110">讨论允许工作流发送和接收消息的活动。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-110">Discusses activities that allow workflows to send and receive messages.</span></span>  
+ [<span data-ttu-id="13850-109">消息传递活动</span><span class="sxs-lookup"><span data-stu-id="13850-109">Messaging Activities</span></span>](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
+ <span data-ttu-id="13850-110">讨论允许工作流发送和接收消息的活动。</span><span class="sxs-lookup"><span data-stu-id="13850-110">Discusses activities that allow workflows to send and receive messages.</span></span>  
   
- [<span data-ttu-id="9d5b9-111">如何： 使用消息传递活动创建工作流服务</span><span class="sxs-lookup"><span data-stu-id="9d5b9-111">How to: Create a Workflow Service with Messaging Activities</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
- <span data-ttu-id="9d5b9-112">说明如何使用消息传递活动创建工作流服务。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-112">Describes how to use messaging activities to create a workflow service.</span></span>  
+ [<span data-ttu-id="13850-111">如何：使用消息传递活动创建工作流服务</span><span class="sxs-lookup"><span data-stu-id="13850-111">How to: Create a Workflow Service with Messaging Activities</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ <span data-ttu-id="13850-112">说明如何使用消息传递活动创建工作流服务。</span><span class="sxs-lookup"><span data-stu-id="13850-112">Describes how to use messaging activities to create a workflow service.</span></span>  
   
- [<span data-ttu-id="9d5b9-113">如何： 从工作流应用程序访问服务</span><span class="sxs-lookup"><span data-stu-id="9d5b9-113">How To: Access a Service From a Workflow Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
- <span data-ttu-id="9d5b9-114">讨论如何从工作流应用程序调用服务。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-114">Discusses how to call a service from a workflow application.</span></span>  
+ [<span data-ttu-id="13850-113">如何：从工作流应用程序访问服务</span><span class="sxs-lookup"><span data-stu-id="13850-113">How To: Access a Service From a Workflow Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
+ <span data-ttu-id="13850-114">讨论如何从工作流应用程序调用服务。</span><span class="sxs-lookup"><span data-stu-id="13850-114">Discusses how to call a service from a workflow application.</span></span>  
   
- [<span data-ttu-id="9d5b9-115">相关</span><span class="sxs-lookup"><span data-stu-id="9d5b9-115">Correlation</span></span>](../../../../docs/framework/wcf/feature-details/correlation.md)  
- <span data-ttu-id="9d5b9-116">讨论相关性对象如何在彼此之间映射消息以及将消息映射到实例。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-116">Discusses how correlation maps messages to each other and to instances.</span></span>  
+ [<span data-ttu-id="13850-115">关联</span><span class="sxs-lookup"><span data-stu-id="13850-115">Correlation</span></span>](../../../../docs/framework/wcf/feature-details/correlation.md)  
+ <span data-ttu-id="13850-116">讨论相关性对象如何在彼此之间映射消息以及将消息映射到实例。</span><span class="sxs-lookup"><span data-stu-id="13850-116">Discusses how correlation maps messages to each other and to instances.</span></span>  
   
- [<span data-ttu-id="9d5b9-117">无序消息处理</span><span class="sxs-lookup"><span data-stu-id="9d5b9-117">Out-of-Order Message Processing</span></span>](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
- <span data-ttu-id="9d5b9-118">说明如何将服务配置为接受无序消息。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-118">Describes configuring a service to accept out of order messages.</span></span>  
+ [<span data-ttu-id="13850-117">无序消息处理</span><span class="sxs-lookup"><span data-stu-id="13850-117">Out-of-Order Message Processing</span></span>](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
+ <span data-ttu-id="13850-118">说明如何将服务配置为接受无序消息。</span><span class="sxs-lookup"><span data-stu-id="13850-118">Describes configuring a service to accept out of order messages.</span></span>  
   
- [<span data-ttu-id="9d5b9-119">如何： 创建调用另一个工作流服务的工作流服务</span><span class="sxs-lookup"><span data-stu-id="9d5b9-119">How to: Create a Workflow Service That Calls Another Workflow Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
- <span data-ttu-id="9d5b9-120">描述如何从其他工作流服务中同步调用工作流服务。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-120">Describes how to synchronously call a workflow service from within another workflow service.</span></span>  
+ [<span data-ttu-id="13850-119">如何：创建可调用其他工作流服务的工作流服务</span><span class="sxs-lookup"><span data-stu-id="13850-119">How to: Create a Workflow Service That Calls Another Workflow Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
+ <span data-ttu-id="13850-120">描述如何从其他工作流服务中同步调用工作流服务。</span><span class="sxs-lookup"><span data-stu-id="13850-120">Describes how to synchronously call a workflow service from within another workflow service.</span></span>  
   
- [<span data-ttu-id="9d5b9-121">协定优先工作流服务开发</span><span class="sxs-lookup"><span data-stu-id="9d5b9-121">Contract First Workflow Service Development</span></span>](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
- <span data-ttu-id="9d5b9-122">说明如何基于现有服务协定创建工作流服务。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-122">Describes creating a workflow service based on an existing service contract.</span></span>  
+ [<span data-ttu-id="13850-121">协定优先工作流服务开发</span><span class="sxs-lookup"><span data-stu-id="13850-121">Contract First Workflow Service Development</span></span>](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
+ <span data-ttu-id="13850-122">说明如何基于现有服务协定创建工作流服务。</span><span class="sxs-lookup"><span data-stu-id="13850-122">Describes creating a workflow service based on an existing service contract.</span></span>  
   
- [<span data-ttu-id="9d5b9-123">如何：创建使用现有服务协定的工作流服务</span><span class="sxs-lookup"><span data-stu-id="9d5b9-123">How to: Create a workflow service that consumes an existing service contract</span></span>](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)  
- <span data-ttu-id="9d5b9-124">提供了一个对使用现有服务协定创建工作流服务的分步说明示例。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-124">Provides a step-by-step example of creating a workflow service using an existing service contract.</span></span>  
+ [<span data-ttu-id="13850-123">如何：创建使用现有服务协定的工作流服务</span><span class="sxs-lookup"><span data-stu-id="13850-123">How to: Create a workflow service that consumes an existing service contract</span></span>](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)  
+ <span data-ttu-id="13850-124">提供了一个对使用现有服务协定创建工作流服务的分步说明示例。</span><span class="sxs-lookup"><span data-stu-id="13850-124">Provides a step-by-step example of creating a workflow service using an existing service contract.</span></span>  
   
- [<span data-ttu-id="9d5b9-125">承载工作流服务概述</span><span class="sxs-lookup"><span data-stu-id="9d5b9-125">Hosting Workflow Services Overview</span></span>](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- <span data-ttu-id="9d5b9-126">描述承载工作流服务的不同方面。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-126">Describes the different aspects of hosting a workflow service.</span></span>  
+ [<span data-ttu-id="13850-125">承载工作流服务概述</span><span class="sxs-lookup"><span data-stu-id="13850-125">Hosting Workflow Services Overview</span></span>](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
+ <span data-ttu-id="13850-126">描述承载工作流服务的不同方面。</span><span class="sxs-lookup"><span data-stu-id="13850-126">Describes the different aspects of hosting a workflow service.</span></span>  
   
- [<span data-ttu-id="9d5b9-127">在工作流中使用协定</span><span class="sxs-lookup"><span data-stu-id="9d5b9-127">Using Contracts in Workflow</span></span>](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)  
- <span data-ttu-id="9d5b9-128">描述不同类型的协定和协定接口。</span><span class="sxs-lookup"><span data-stu-id="9d5b9-128">Describes the different types of contracts and contract inference.</span></span>
+ [<span data-ttu-id="13850-127">在工作流中使用协定</span><span class="sxs-lookup"><span data-stu-id="13850-127">Using Contracts in Workflow</span></span>](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)  
+ <span data-ttu-id="13850-128">描述不同类型的协定和协定接口。</span><span class="sxs-lookup"><span data-stu-id="13850-128">Describes the different types of contracts and contract inference.</span></span>

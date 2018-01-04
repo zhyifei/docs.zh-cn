@@ -22,18 +22,19 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28ceb5e465b8737d047c9c0e65bd9efc8cd3c8ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a447d69eb6dafbff75ddd9d161abd4f78c607cdd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a><span data-ttu-id="15136-102">如何：使用 WebBrowser 控件定位到 URL</span><span class="sxs-lookup"><span data-stu-id="15136-102">How to: Navigate to a URL with the WebBrowser Control</span></span>
-<span data-ttu-id="15136-103">下面的代码示例演示如何导航<xref:System.Windows.Forms.WebBrowser>控件添加到特定的 URL。</span><span class="sxs-lookup"><span data-stu-id="15136-103">The following code example demonstrates how to navigate the <xref:System.Windows.Forms.WebBrowser> control to a specific URL.</span></span>  
+# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a><span data-ttu-id="8c7ad-102">如何：使用 WebBrowser 控件定位到 URL</span><span class="sxs-lookup"><span data-stu-id="8c7ad-102">How to: Navigate to a URL with the WebBrowser Control</span></span>
+<span data-ttu-id="8c7ad-103">下面的代码示例演示如何导航<xref:System.Windows.Forms.WebBrowser>控件添加到特定的 URL。</span><span class="sxs-lookup"><span data-stu-id="8c7ad-103">The following code example demonstrates how to navigate the <xref:System.Windows.Forms.WebBrowser> control to a specific URL.</span></span>  
   
- <span data-ttu-id="15136-104">若要确定完全加载新文档时，处理<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>事件。</span><span class="sxs-lookup"><span data-stu-id="15136-104">To determine when the new document is fully loaded, handle the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="15136-105">此事件的演示，请参阅[如何： 使用 WebBrowser 控件打印](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)。</span><span class="sxs-lookup"><span data-stu-id="15136-105">For a demonstration of this event, see [How to: Print with a WebBrowser Control](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md).</span></span>  
+ <span data-ttu-id="8c7ad-104">若要确定完全加载新文档时，处理<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>事件。</span><span class="sxs-lookup"><span data-stu-id="8c7ad-104">To determine when the new document is fully loaded, handle the <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event.</span></span> <span data-ttu-id="8c7ad-105">此事件的演示，请参阅[如何： 使用 WebBrowser 控件打印](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)。</span><span class="sxs-lookup"><span data-stu-id="8c7ad-105">For a demonstration of this event, see [How to: Print with a WebBrowser Control](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="15136-106">示例</span><span class="sxs-lookup"><span data-stu-id="15136-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8c7ad-106">示例</span><span class="sxs-lookup"><span data-stu-id="8c7ad-106">Example</span></span>  
   
 ```vb  
 Me.webBrowser1.Navigate("http://www.microsoft.com")  
@@ -43,17 +44,17 @@ Me.webBrowser1.Navigate("http://www.microsoft.com")
 this.webBrowser1.Navigate("http://www.microsoft.com");  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="15136-107">编译代码</span><span class="sxs-lookup"><span data-stu-id="15136-107">Compiling the Code</span></span>  
- <span data-ttu-id="15136-108">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="15136-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="8c7ad-107">编译代码</span><span class="sxs-lookup"><span data-stu-id="8c7ad-107">Compiling the Code</span></span>  
+ <span data-ttu-id="8c7ad-108">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="8c7ad-108">This example requires:</span></span>  
   
--   <span data-ttu-id="15136-109">名为 `webBrowser1` 的 <xref:System.Windows.Forms.WebBrowser> 控件。</span><span class="sxs-lookup"><span data-stu-id="15136-109">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
+-   <span data-ttu-id="8c7ad-109">名为 `webBrowser1` 的 <xref:System.Windows.Forms.WebBrowser> 控件。</span><span class="sxs-lookup"><span data-stu-id="8c7ad-109">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
   
--   <span data-ttu-id="15136-110">对 `System` 和 `System.Windows.Forms` 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="15136-110">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
+-   <span data-ttu-id="8c7ad-110">对 `System` 和 `System.Windows.Forms` 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="8c7ad-110">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15136-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="15136-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8c7ad-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="8c7ad-111">See Also</span></span>  
  <xref:System.Windows.Forms.WebBrowser>  
  <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>  
- [<span data-ttu-id="15136-112">WebBrowser 控件</span><span class="sxs-lookup"><span data-stu-id="15136-112">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
- [<span data-ttu-id="15136-113">如何：使用 WebBrowser 控件进行打印</span><span class="sxs-lookup"><span data-stu-id="15136-113">How to: Print with a WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+ [<span data-ttu-id="8c7ad-112">WebBrowser 控件</span><span class="sxs-lookup"><span data-stu-id="8c7ad-112">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
+ [<span data-ttu-id="8c7ad-113">如何：使用 WebBrowser 控件进行打印</span><span class="sxs-lookup"><span data-stu-id="8c7ad-113">How to: Print with a WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)

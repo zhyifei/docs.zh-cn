@@ -16,13 +16,14 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 40973353a0057bcd23c76c03eb1ce6406c95aca6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75ae86f399c525176c41dec5265c282adfd41652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="feedback-and-community"></a><span data-ttu-id="fee9c-102">反馈和社区</span><span class="sxs-lookup"><span data-stu-id="fee9c-102">Feedback and Community</span></span>
-<span data-ttu-id="fee9c-103">感谢您对 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 或 [!INCLUDE[infocard](../../../includes/infocard-md.md)] 文档进行评论和关注。</span><span class="sxs-lookup"><span data-stu-id="fee9c-103">We appreciate your comments and concerns about the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] or [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentation.</span></span> <span data-ttu-id="fee9c-104">在 SDK 中的每个页面底部都有一句“将有关此主题的意见发送给 Microsoft”。</span><span class="sxs-lookup"><span data-stu-id="fee9c-104">On the bottom of every page in the SDK is the sentence "Send comments about this topic to Microsoft."</span></span> <span data-ttu-id="fee9c-105">点击“注释”链接可发送有关特定主题的观点或建议。</span><span class="sxs-lookup"><span data-stu-id="fee9c-105">Click the "comments" link to send your views or suggestions about the specific topic.</span></span>  
+# <a name="feedback-and-community"></a><span data-ttu-id="9993e-102">反馈和社区</span><span class="sxs-lookup"><span data-stu-id="9993e-102">Feedback and Community</span></span>
+<span data-ttu-id="9993e-103">感谢您对 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 或 [!INCLUDE[infocard](../../../includes/infocard-md.md)] 文档进行评论和关注。</span><span class="sxs-lookup"><span data-stu-id="9993e-103">We appreciate your comments and concerns about the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] or [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentation.</span></span> <span data-ttu-id="9993e-104">在 SDK 中的每个页面底部都有一句“将有关此主题的意见发送给 Microsoft”。</span><span class="sxs-lookup"><span data-stu-id="9993e-104">On the bottom of every page in the SDK is the sentence "Send comments about this topic to Microsoft."</span></span> <span data-ttu-id="9993e-105">点击“注释”链接可发送有关特定主题的观点或建议。</span><span class="sxs-lookup"><span data-stu-id="9993e-105">Click the "comments" link to send your views or suggestions about the specific topic.</span></span>  
   
- <span data-ttu-id="fee9c-106">如果你正在寻找的详细信息，或者想要与感兴趣的任何人共享使用心得[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，并重试[MSDN Windows Communication Foundation 论坛](http://go.microsoft.com/fwlink/?LinkId=186463)。</span><span class="sxs-lookup"><span data-stu-id="fee9c-106">If you are looking for more information, or want to share techniques with others who are interested in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], try the [MSDN Windows Communication Foundation forum](http://go.microsoft.com/fwlink/?LinkId=186463).</span></span>
+ <span data-ttu-id="9993e-106">如果你正在寻找的详细信息，或者想要与感兴趣的任何人共享使用心得[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，并重试[MSDN Windows Communication Foundation 论坛](http://go.microsoft.com/fwlink/?LinkId=186463)。</span><span class="sxs-lookup"><span data-stu-id="9993e-106">If you are looking for more information, or want to share techniques with others who are interested in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], try the [MSDN Windows Communication Foundation forum](http://go.microsoft.com/fwlink/?LinkId=186463).</span></span>

@@ -21,29 +21,30 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5391c48720e68a8a7e6e0fb7735252d00025adc6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 80f794be15eae33ca4e28dc0cfe04872f63230b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="76c0c-102">如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接</span><span class="sxs-lookup"><span data-stu-id="76c0c-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="76c0c-103">Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色和带下划线的 Web 链接。</span><span class="sxs-lookup"><span data-stu-id="76c0c-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="76c0c-104">你可以编写将打开一个显示时单击链接在链接文本中指定的网站的浏览器窗口的代码。</span><span class="sxs-lookup"><span data-stu-id="76c0c-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="7c86c-102">如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接</span><span class="sxs-lookup"><span data-stu-id="7c86c-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="7c86c-103">Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色和带下划线的 Web 链接。</span><span class="sxs-lookup"><span data-stu-id="7c86c-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="7c86c-104">你可以编写将打开一个显示时单击链接在链接文本中指定的网站的浏览器窗口的代码。</span><span class="sxs-lookup"><span data-stu-id="7c86c-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
   
-### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="76c0c-105">若要链接到网页上用 RichTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="76c0c-105">To link to a Web page with the RichTextBox control</span></span>  
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="7c86c-105">若要链接到网页上用 RichTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="7c86c-105">To link to a Web page with the RichTextBox control</span></span>  
   
-1.  <span data-ttu-id="76c0c-106">设置<xref:System.Windows.Forms.RichTextBox.Text%2A>为字符串，其中包含有效的 URL (例如，"http://www.microsoft.com/") 的属性。</span><span class="sxs-lookup"><span data-stu-id="76c0c-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
+1.  <span data-ttu-id="7c86c-106">设置<xref:System.Windows.Forms.RichTextBox.Text%2A>为字符串，其中包含有效的 URL (例如，"http://www.microsoft.com/") 的属性。</span><span class="sxs-lookup"><span data-stu-id="7c86c-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
   
-2.  <span data-ttu-id="76c0c-107">请确保<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>属性设置为`true`（默认值）。</span><span class="sxs-lookup"><span data-stu-id="76c0c-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
+2.  <span data-ttu-id="7c86c-107">请确保<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>属性设置为`true`（默认值）。</span><span class="sxs-lookup"><span data-stu-id="7c86c-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
   
-3.  <span data-ttu-id="76c0c-108">创建新的全局实例<xref:System.Diagnostics.Process>对象。</span><span class="sxs-lookup"><span data-stu-id="76c0c-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
+3.  <span data-ttu-id="7c86c-108">创建新的全局实例<xref:System.Diagnostics.Process>对象。</span><span class="sxs-lookup"><span data-stu-id="7c86c-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
   
-4.  <span data-ttu-id="76c0c-109">写入的事件处理程序<xref:System.Windows.Forms.RichTextBox.LinkClicked>发送所需的文本的浏览器的事件。</span><span class="sxs-lookup"><span data-stu-id="76c0c-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
+4.  <span data-ttu-id="7c86c-109">写入的事件处理程序<xref:System.Windows.Forms.RichTextBox.LinkClicked>发送所需的文本的浏览器的事件。</span><span class="sxs-lookup"><span data-stu-id="7c86c-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
   
-     <span data-ttu-id="76c0c-110">在示例中，<xref:System.Windows.Forms.RichTextBox.LinkClicked>事件将打开到中指定的 URL 的 Internet Explorer 实例<xref:System.Windows.Forms.RichTextBox.Text%2A>属性<xref:System.Windows.Forms.RichTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="76c0c-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="76c0c-111">此示例假定的窗体具有<xref:System.Windows.Forms.RichTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="76c0c-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+     <span data-ttu-id="7c86c-110">在示例中，<xref:System.Windows.Forms.RichTextBox.LinkClicked>事件将打开到中指定的 URL 的 Internet Explorer 实例<xref:System.Windows.Forms.RichTextBox.Text%2A>属性<xref:System.Windows.Forms.RichTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="7c86c-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="7c86c-111">此示例假定的窗体具有<xref:System.Windows.Forms.RichTextBox>控件。</span><span class="sxs-lookup"><span data-stu-id="7c86c-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="76c0c-112">在调用<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>方法，将会遇到<xref:System.Security.SecurityException>异常如果由于没有足够的特权在部分信任的上下文中运行代码。</span><span class="sxs-lookup"><span data-stu-id="76c0c-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="76c0c-113">有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="76c0c-113">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
+    >  <span data-ttu-id="7c86c-112">在调用<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>方法，将会遇到<xref:System.Security.SecurityException>异常如果由于没有足够的特权在部分信任的上下文中运行代码。</span><span class="sxs-lookup"><span data-stu-id="7c86c-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="7c86c-113">有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。</span><span class="sxs-lookup"><span data-stu-id="7c86c-113">For more information, see [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -84,13 +85,13 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-     <span data-ttu-id="76c0c-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 必须初始化过程`p`，则你可以通过在你的窗体的构造函数中包括以下语句：</span><span class="sxs-lookup"><span data-stu-id="76c0c-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
+     <span data-ttu-id="7c86c-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 必须初始化过程`p`，则你可以通过在你的窗体的构造函数中包括以下语句：</span><span class="sxs-lookup"><span data-stu-id="7c86c-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     <span data-ttu-id="76c0c-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)][!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="76c0c-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="7c86c-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)][!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="7c86c-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
        (this, &Form1::richTextBox1_LinkClicked);  
     ```  
   
-     <span data-ttu-id="76c0c-116">请务必立即停止你已创建完成后使用独立存储的过程。</span><span class="sxs-lookup"><span data-stu-id="76c0c-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="76c0c-117">上面显示的代码中引用，你的代码以停止进程可能如下所示：</span><span class="sxs-lookup"><span data-stu-id="76c0c-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
+     <span data-ttu-id="7c86c-116">请务必立即停止你已创建完成后使用独立存储的过程。</span><span class="sxs-lookup"><span data-stu-id="7c86c-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="7c86c-117">上面显示的代码中引用，你的代码以停止进程可能如下所示：</span><span class="sxs-lookup"><span data-stu-id="7c86c-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
   
     ```vb  
     Public Sub StopWebProcess()  
@@ -126,9 +127,9 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="76c0c-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="76c0c-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7c86c-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="7c86c-118">See Also</span></span>  
  <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>  
  <xref:System.Windows.Forms.RichTextBox.LinkClicked>  
  <xref:System.Windows.Forms.RichTextBox>  
- [<span data-ttu-id="76c0c-119">RichTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="76c0c-119">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [<span data-ttu-id="76c0c-120">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="76c0c-120">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [<span data-ttu-id="7c86c-119">RichTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="7c86c-119">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="7c86c-120">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="7c86c-120">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

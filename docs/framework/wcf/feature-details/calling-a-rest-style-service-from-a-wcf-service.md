@@ -13,17 +13,18 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efb04f36ad83755edd2e7d49c7cdec3cce77273b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b056e2c4dad46429462b377994919b46109cb9e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="26863-102">从 WCF 服务调用 REST 样式服务</span><span class="sxs-lookup"><span data-stu-id="26863-102">Calling a REST-style service from a WCF service</span></span>
-<span data-ttu-id="26863-103">当从常规（基于 SOAP）的 WCF 服务调用 REST 样式服务时，服务方法的操作上下文（包含有关传入请求的信息）将重写应由传出请求使用的上下文。</span><span class="sxs-lookup"><span data-stu-id="26863-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="26863-104">这会导致 HTTP GET 请求更改为 HTTP POST 请求。</span><span class="sxs-lookup"><span data-stu-id="26863-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="26863-105">要强制 WCF 服务使用正确的上下文来调用 REST 样式服务，请创建一个新的 <xref:System.ServiceModel.OperationContextScope>，并从操作上下文作用域内调用 REST 样式服务。</span><span class="sxs-lookup"><span data-stu-id="26863-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="26863-106">本主题将介绍如何创建一个用于说明此方法的简单示例。</span><span class="sxs-lookup"><span data-stu-id="26863-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>  
+# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="702fd-102">从 WCF 服务调用 REST 样式服务</span><span class="sxs-lookup"><span data-stu-id="702fd-102">Calling a REST-style service from a WCF service</span></span>
+<span data-ttu-id="702fd-103">当从常规（基于 SOAP）的 WCF 服务调用 REST 样式服务时，服务方法的操作上下文（包含有关传入请求的信息）将重写应由传出请求使用的上下文。</span><span class="sxs-lookup"><span data-stu-id="702fd-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="702fd-104">这会导致 HTTP GET 请求更改为 HTTP POST 请求。</span><span class="sxs-lookup"><span data-stu-id="702fd-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="702fd-105">要强制 WCF 服务使用正确的上下文来调用 REST 样式服务，请创建一个新的 <xref:System.ServiceModel.OperationContextScope>，并从操作上下文作用域内调用 REST 样式服务。</span><span class="sxs-lookup"><span data-stu-id="702fd-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="702fd-106">本主题将介绍如何创建一个用于说明此方法的简单示例。</span><span class="sxs-lookup"><span data-stu-id="702fd-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>  
   
-## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="26863-107">定义 REST 样式服务协定</span><span class="sxs-lookup"><span data-stu-id="26863-107">Define the REST-style service contract</span></span>  
- <span data-ttu-id="26863-108">定义简单的 REST 样式服务协定：</span><span class="sxs-lookup"><span data-stu-id="26863-108">Define a simple  REST-style service contract:</span></span>  
+## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="702fd-107">定义 REST 样式服务协定</span><span class="sxs-lookup"><span data-stu-id="702fd-107">Define the REST-style service contract</span></span>  
+ <span data-ttu-id="702fd-108">定义简单的 REST 样式服务协定：</span><span class="sxs-lookup"><span data-stu-id="702fd-108">Define a simple  REST-style service contract:</span></span>  
   
 ```csharp
 [ServiceContract]
@@ -37,8 +38,8 @@ public interface IRestInterface
 }
 ```
   
-## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="26863-109">实现 REST 样式服务协定</span><span class="sxs-lookup"><span data-stu-id="26863-109">Implement the REST-style service contract</span></span>  
- <span data-ttu-id="26863-110">实现 REST 样式服务协定：</span><span class="sxs-lookup"><span data-stu-id="26863-110">Implement the REST-style service contract:</span></span>  
+## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="702fd-109">实现 REST 样式服务协定</span><span class="sxs-lookup"><span data-stu-id="702fd-109">Implement the REST-style service contract</span></span>  
+ <span data-ttu-id="702fd-110">实现 REST 样式服务协定：</span><span class="sxs-lookup"><span data-stu-id="702fd-110">Implement the REST-style service contract:</span></span>  
   
 ```csharp
 public class RestService : IRestInterface
@@ -55,8 +56,8 @@ public class RestService : IRestInterface
 }
 ```
   
-## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="26863-111">定义 WCF 服务协定</span><span class="sxs-lookup"><span data-stu-id="26863-111">Define the WCF service contract</span></span>  
- <span data-ttu-id="26863-112">定义将用于调用 REST 样式服务的 WCF 服务协定：</span><span class="sxs-lookup"><span data-stu-id="26863-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>  
+## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="702fd-111">定义 WCF 服务协定</span><span class="sxs-lookup"><span data-stu-id="702fd-111">Define the WCF service contract</span></span>  
+ <span data-ttu-id="702fd-112">定义将用于调用 REST 样式服务的 WCF 服务协定：</span><span class="sxs-lookup"><span data-stu-id="702fd-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>  
   
 ```csharp
 [ServiceContract]
@@ -70,8 +71,8 @@ public interface INormalInterface
 }
 ```  
   
-## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="26863-113">实现 WCF 服务协定</span><span class="sxs-lookup"><span data-stu-id="26863-113">Implement the WCF service contract</span></span>  
- <span data-ttu-id="26863-114">实现 WCF 服务协定：</span><span class="sxs-lookup"><span data-stu-id="26863-114">Implement the WCF service contract:</span></span>  
+## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="702fd-113">实现 WCF 服务协定</span><span class="sxs-lookup"><span data-stu-id="702fd-113">Implement the WCF service contract</span></span>  
+ <span data-ttu-id="702fd-114">实现 WCF 服务协定：</span><span class="sxs-lookup"><span data-stu-id="702fd-114">Implement the WCF service contract:</span></span>  
   
 ```csharp
 public class NormalService : INormalInterface  
@@ -89,8 +90,8 @@ public class NormalService : INormalInterface
 }  
 ```  
   
-## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="26863-115">为 REST 样式服务创建客户端代理</span><span class="sxs-lookup"><span data-stu-id="26863-115">Create the client proxy for the REST-style service</span></span>  
- <span data-ttu-id="26863-116">使用<!--zz<xref:System.ServiceModel.ClientBase%60>-->`System.ServiceModel.ClientBase`实现客户端代理。</span><span class="sxs-lookup"><span data-stu-id="26863-116">Using <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` implement the client proxy.</span></span> <span data-ttu-id="26863-117">对于每个调用的方法，创建一个新的 <xref:System.ServiceModel.OperationContextScope>，并使用它来调用此操作。</span><span class="sxs-lookup"><span data-stu-id="26863-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>  
+## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="702fd-115">为 REST 样式服务创建客户端代理</span><span class="sxs-lookup"><span data-stu-id="702fd-115">Create the client proxy for the REST-style service</span></span>  
+ <span data-ttu-id="702fd-116">使用<!--zz<xref:System.ServiceModel.ClientBase%60>-->`System.ServiceModel.ClientBase`实现客户端代理。</span><span class="sxs-lookup"><span data-stu-id="702fd-116">Using <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` implement the client proxy.</span></span> <span data-ttu-id="702fd-117">对于每个调用的方法，创建一个新的 <xref:System.ServiceModel.OperationContextScope>，并使用它来调用此操作。</span><span class="sxs-lookup"><span data-stu-id="702fd-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>  
   
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
@@ -119,8 +120,8 @@ public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
 }
 ```  
   
-## <a name="host-and-call-the-services"></a><span data-ttu-id="26863-118">承载和调用服务</span><span class="sxs-lookup"><span data-stu-id="26863-118">Host and call the services</span></span>  
- <span data-ttu-id="26863-119">在控制台应用程序中承载这两项服务，并添加所需的终结点和行为。</span><span class="sxs-lookup"><span data-stu-id="26863-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="26863-120">然后，调用常规 WCF 服务：</span><span class="sxs-lookup"><span data-stu-id="26863-120">And then call the regular WCF service:</span></span>  
+## <a name="host-and-call-the-services"></a><span data-ttu-id="702fd-118">承载和调用服务</span><span class="sxs-lookup"><span data-stu-id="702fd-118">Host and call the services</span></span>  
+ <span data-ttu-id="702fd-119">在控制台应用程序中承载这两项服务，并添加所需的终结点和行为。</span><span class="sxs-lookup"><span data-stu-id="702fd-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="702fd-120">然后，调用常规 WCF 服务：</span><span class="sxs-lookup"><span data-stu-id="702fd-120">And then call the regular WCF service:</span></span>  
   
 ```csharp
 public static void Main()
@@ -143,8 +144,8 @@ public static void Main()
 }
 ```  
   
-## <a name="complete-code-listing"></a><span data-ttu-id="26863-121">完成代码清单</span><span class="sxs-lookup"><span data-stu-id="26863-121">Complete code listing</span></span>  
- <span data-ttu-id="26863-122">下面列出了本主题中实现的示例：</span><span class="sxs-lookup"><span data-stu-id="26863-122">The following is a complete listing of the sample implemented in this topic:</span></span>  
+## <a name="complete-code-listing"></a><span data-ttu-id="702fd-121">完成代码清单</span><span class="sxs-lookup"><span data-stu-id="702fd-121">Complete code listing</span></span>  
+ <span data-ttu-id="702fd-122">下面列出了本主题中实现的示例：</span><span class="sxs-lookup"><span data-stu-id="702fd-122">The following is a complete listing of the sample implemented in this topic:</span></span>  
   
 ```csharp
 public class CallingRESTSample  
@@ -243,6 +244,6 @@ public class CallingRESTSample
 }
 ```
   
-## <a name="see-also"></a><span data-ttu-id="26863-123">另请参阅</span><span class="sxs-lookup"><span data-stu-id="26863-123">See Also</span></span>  
- [<span data-ttu-id="26863-124">如何： 创建基本 WCF Web HTTP 服务</span><span class="sxs-lookup"><span data-stu-id="26863-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- [<span data-ttu-id="26863-125">WCF Web HTTP 编程对象模型</span><span class="sxs-lookup"><span data-stu-id="26863-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="702fd-123">请参阅</span><span class="sxs-lookup"><span data-stu-id="702fd-123">See Also</span></span>  
+ [<span data-ttu-id="702fd-124">如何：创建基本 WCF Web HTTP 服务</span><span class="sxs-lookup"><span data-stu-id="702fd-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ [<span data-ttu-id="702fd-125">WCF Web HTTP 编程对象模型</span><span class="sxs-lookup"><span data-stu-id="702fd-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
