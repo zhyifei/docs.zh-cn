@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c67c7ed840f7ad32358b986f20280c76283c92b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec88dde395615937268d172c0ce5b5d3640a9809
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecurityissuancetokenproviderendsecuritynegotiation"></a><span data-ttu-id="5c2e7-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="5c2e7-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>
-<span data-ttu-id="5c2e7-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="5c2e7-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>  
+# <a name="systemservicemodelsecurityissuancetokenproviderendsecuritynegotiation"></a><span data-ttu-id="f703b-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="f703b-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>
+<span data-ttu-id="f703b-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="f703b-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5c2e7-104">描述</span><span class="sxs-lookup"><span data-stu-id="5c2e7-104">Description</span></span>  
- <span data-ttu-id="5c2e7-105">IssuanceTokenProvider 已完成安全协商。</span><span class="sxs-lookup"><span data-stu-id="5c2e7-105">The IssuanceTokenProvider has completed the security negotiation.</span></span>  
+## <a name="description"></a><span data-ttu-id="f703b-104">描述</span><span class="sxs-lookup"><span data-stu-id="f703b-104">Description</span></span>  
+ <span data-ttu-id="f703b-105">IssuanceTokenProvider 已完成安全协商。</span><span class="sxs-lookup"><span data-stu-id="f703b-105">The IssuanceTokenProvider has completed the security negotiation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c2e7-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5c2e7-106">See Also</span></span>  
- [<span data-ttu-id="5c2e7-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="5c2e7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="5c2e7-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="5c2e7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="5c2e7-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="5c2e7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f703b-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="f703b-106">See Also</span></span>  
+ [<span data-ttu-id="f703b-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="f703b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f703b-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="f703b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f703b-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="f703b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

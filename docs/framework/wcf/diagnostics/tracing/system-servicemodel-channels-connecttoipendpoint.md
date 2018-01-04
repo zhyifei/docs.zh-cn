@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf3166ef8fe66b55587ffffe64b464bfcf667b83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 589315df362330029c6c6a2cb58c194ec434f59a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsconnecttoipendpoint"></a><span data-ttu-id="cee11-102">System.ServiceModel.Channels.ConnectToIPEndpoint</span><span class="sxs-lookup"><span data-stu-id="cee11-102">System.ServiceModel.Channels.ConnectToIPEndpoint</span></span>
-<span data-ttu-id="cee11-103">System.ServiceModel.Channels.ConnectToIPEndpoint</span><span class="sxs-lookup"><span data-stu-id="cee11-103">System.ServiceModel.Channels.ConnectToIPEndpoint</span></span>  
+# <a name="systemservicemodelchannelsconnecttoipendpoint"></a><span data-ttu-id="6bf1b-102">System.ServiceModel.Channels.ConnectToIPEndpoint</span><span class="sxs-lookup"><span data-stu-id="6bf1b-102">System.ServiceModel.Channels.ConnectToIPEndpoint</span></span>
+<span data-ttu-id="6bf1b-103">System.ServiceModel.Channels.ConnectToIPEndpoint</span><span class="sxs-lookup"><span data-stu-id="6bf1b-103">System.ServiceModel.Channels.ConnectToIPEndpoint</span></span>  
   
-## <a name="description"></a><span data-ttu-id="cee11-104">描述</span><span class="sxs-lookup"><span data-stu-id="cee11-104">Description</span></span>  
- <span data-ttu-id="cee11-105">连接信息。</span><span class="sxs-lookup"><span data-stu-id="cee11-105">Connection information.</span></span>  
+## <a name="description"></a><span data-ttu-id="6bf1b-104">描述</span><span class="sxs-lookup"><span data-stu-id="6bf1b-104">Description</span></span>  
+ <span data-ttu-id="6bf1b-105">连接信息。</span><span class="sxs-lookup"><span data-stu-id="6bf1b-105">Connection information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cee11-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cee11-106">See Also</span></span>  
- [<span data-ttu-id="cee11-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="cee11-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="cee11-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="cee11-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="cee11-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="cee11-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6bf1b-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="6bf1b-106">See Also</span></span>  
+ [<span data-ttu-id="6bf1b-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="6bf1b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="6bf1b-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="6bf1b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="6bf1b-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="6bf1b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

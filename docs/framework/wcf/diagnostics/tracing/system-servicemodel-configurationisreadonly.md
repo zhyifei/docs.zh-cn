@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8ca0482437840a0259934dafea4ff494d45ccac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bdebc05c67cca0d037a2b178a7ee373d3c93052
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelconfigurationisreadonly"></a><span data-ttu-id="a034f-102">System.ServiceModel.ConfigurationIsReadOnly</span><span class="sxs-lookup"><span data-stu-id="a034f-102">System.ServiceModel.ConfigurationIsReadOnly</span></span>
-<span data-ttu-id="a034f-103">System.ServiceModel.ConfigurationIsReadOnly</span><span class="sxs-lookup"><span data-stu-id="a034f-103">System.ServiceModel.ConfigurationIsReadOnly</span></span>  
+# <a name="systemservicemodelconfigurationisreadonly"></a><span data-ttu-id="5d099-102">System.ServiceModel.ConfigurationIsReadOnly</span><span class="sxs-lookup"><span data-stu-id="5d099-102">System.ServiceModel.ConfigurationIsReadOnly</span></span>
+<span data-ttu-id="5d099-103">System.ServiceModel.ConfigurationIsReadOnly</span><span class="sxs-lookup"><span data-stu-id="5d099-103">System.ServiceModel.ConfigurationIsReadOnly</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a034f-104">描述</span><span class="sxs-lookup"><span data-stu-id="a034f-104">Description</span></span>  
- <span data-ttu-id="a034f-105">配置是只读的。</span><span class="sxs-lookup"><span data-stu-id="a034f-105">The configuration is read-only.</span></span>  
+## <a name="description"></a><span data-ttu-id="5d099-104">描述</span><span class="sxs-lookup"><span data-stu-id="5d099-104">Description</span></span>  
+ <span data-ttu-id="5d099-105">配置是只读的。</span><span class="sxs-lookup"><span data-stu-id="5d099-105">The configuration is read-only.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a034f-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a034f-106">See Also</span></span>  
- [<span data-ttu-id="a034f-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="a034f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a034f-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="a034f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a034f-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="a034f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5d099-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="5d099-106">See Also</span></span>  
+ [<span data-ttu-id="5d099-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="5d099-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5d099-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="5d099-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5d099-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="5d099-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

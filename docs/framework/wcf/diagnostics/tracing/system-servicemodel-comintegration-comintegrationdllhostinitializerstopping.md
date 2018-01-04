@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74173fdd14f2258306ea044f865f47f0561c1818
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a223ec13088a7dde1ad24363453967433824777
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstopping"></a><span data-ttu-id="7442a-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span><span class="sxs-lookup"><span data-stu-id="7442a-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span></span>
-<span data-ttu-id="7442a-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span><span class="sxs-lookup"><span data-stu-id="7442a-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstopping"></a><span data-ttu-id="a0e87-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span><span class="sxs-lookup"><span data-stu-id="a0e87-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span></span>
+<span data-ttu-id="a0e87-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span><span class="sxs-lookup"><span data-stu-id="a0e87-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopping</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7442a-104">描述</span><span class="sxs-lookup"><span data-stu-id="7442a-104">Description</span></span>  
- <span data-ttu-id="7442a-105">ComPlus: 正在停止 DllHost 初始值设定项。</span><span class="sxs-lookup"><span data-stu-id="7442a-105">ComPlus: Stopping the DllHost initializer.</span></span>  
+## <a name="description"></a><span data-ttu-id="a0e87-104">描述</span><span class="sxs-lookup"><span data-stu-id="a0e87-104">Description</span></span>  
+ <span data-ttu-id="a0e87-105">ComPlus: 正在停止 DllHost 初始值设定项。</span><span class="sxs-lookup"><span data-stu-id="a0e87-105">ComPlus: Stopping the DllHost initializer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7442a-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="7442a-106">See Also</span></span>  
- [<span data-ttu-id="7442a-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="7442a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="7442a-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="7442a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="7442a-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="7442a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a0e87-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0e87-106">See Also</span></span>  
+ [<span data-ttu-id="a0e87-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="a0e87-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a0e87-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="a0e87-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a0e87-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="a0e87-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

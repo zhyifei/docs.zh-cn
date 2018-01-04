@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09b372a4e8412b7ea6608e99d69a8f9f5d94bc16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 961bfc3a862a5af96264fa0b13c86e24c16f71d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelgetconfiguredbinding"></a><span data-ttu-id="4f12b-102">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="4f12b-102">System.ServiceModel.GetConfiguredBinding</span></span>
-<span data-ttu-id="4f12b-103">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="4f12b-103">System.ServiceModel.GetConfiguredBinding</span></span>  
+# <a name="systemservicemodelgetconfiguredbinding"></a><span data-ttu-id="90229-102">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="90229-102">System.ServiceModel.GetConfiguredBinding</span></span>
+<span data-ttu-id="90229-103">System.ServiceModel.GetConfiguredBinding</span><span class="sxs-lookup"><span data-stu-id="90229-103">System.ServiceModel.GetConfiguredBinding</span></span>  
   
-## <a name="description"></a><span data-ttu-id="4f12b-104">描述</span><span class="sxs-lookup"><span data-stu-id="4f12b-104">Description</span></span>  
- <span data-ttu-id="4f12b-105">获取配置的绑定。</span><span class="sxs-lookup"><span data-stu-id="4f12b-105">Get the configured binding.</span></span>  
+## <a name="description"></a><span data-ttu-id="90229-104">描述</span><span class="sxs-lookup"><span data-stu-id="90229-104">Description</span></span>  
+ <span data-ttu-id="90229-105">获取配置的绑定。</span><span class="sxs-lookup"><span data-stu-id="90229-105">Get the configured binding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f12b-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="4f12b-106">See Also</span></span>  
- [<span data-ttu-id="4f12b-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="4f12b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="4f12b-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="4f12b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="4f12b-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="4f12b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="90229-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="90229-106">See Also</span></span>  
+ [<span data-ttu-id="90229-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="90229-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="90229-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="90229-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="90229-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="90229-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

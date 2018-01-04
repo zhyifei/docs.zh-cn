@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 65266e4567b2be1773836f27a9e3775b99be2a90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efe045198e161208fa4cd294ba74dcc0ab68add7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritytokenauthenticatoropened"></a><span data-ttu-id="cf3aa-102">System.ServiceModel.Security.SecurityTokenAuthenticatorOpened</span><span class="sxs-lookup"><span data-stu-id="cf3aa-102">System.ServiceModel.Security.SecurityTokenAuthenticatorOpened</span></span>
-<span data-ttu-id="cf3aa-103">System.ServiceModel.Security.SecurityTokenAuthenticatorOpened</span><span class="sxs-lookup"><span data-stu-id="cf3aa-103">System.ServiceModel.Security.SecurityTokenAuthenticatorOpened</span></span>  
+# <a name="systemservicemodelsecuritysecuritytokenauthenticatoropened"></a><span data-ttu-id="ae1f1-102">System.ServiceModel.Security.SecurityTokenAuthenticatorOpened</span><span class="sxs-lookup"><span data-stu-id="ae1f1-102">System.ServiceModel.Security.SecurityTokenAuthenticatorOpened</span></span>
+<span data-ttu-id="ae1f1-103">System.ServiceModel.Security.SecurityTokenAuthenticatorOpened</span><span class="sxs-lookup"><span data-stu-id="ae1f1-103">System.ServiceModel.Security.SecurityTokenAuthenticatorOpened</span></span>  
   
-## <a name="description"></a><span data-ttu-id="cf3aa-104">描述</span><span class="sxs-lookup"><span data-stu-id="cf3aa-104">Description</span></span>  
- <span data-ttu-id="cf3aa-105">安全令牌身份验证器已打开。</span><span class="sxs-lookup"><span data-stu-id="cf3aa-105">A security token authenticator was opened.</span></span>  
+## <a name="description"></a><span data-ttu-id="ae1f1-104">描述</span><span class="sxs-lookup"><span data-stu-id="ae1f1-104">Description</span></span>  
+ <span data-ttu-id="ae1f1-105">安全令牌身份验证器已打开。</span><span class="sxs-lookup"><span data-stu-id="ae1f1-105">A security token authenticator was opened.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf3aa-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="cf3aa-106">See Also</span></span>  
- [<span data-ttu-id="cf3aa-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="cf3aa-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="cf3aa-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="cf3aa-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="cf3aa-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="cf3aa-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ae1f1-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="ae1f1-106">See Also</span></span>  
+ [<span data-ttu-id="ae1f1-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="ae1f1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ae1f1-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="ae1f1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ae1f1-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="ae1f1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

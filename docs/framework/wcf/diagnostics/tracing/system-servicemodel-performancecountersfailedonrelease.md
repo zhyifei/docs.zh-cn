@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77032086a206263a0e3f8a3234e69028ef249c3f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 55348c8c9961fcd15556feb7dca2f42b471fcf12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelperformancecountersfailedonrelease"></a><span data-ttu-id="373f6-102">System.ServiceModel.PerformanceCountersFailedOnRelease</span><span class="sxs-lookup"><span data-stu-id="373f6-102">System.ServiceModel.PerformanceCountersFailedOnRelease</span></span>
-<span data-ttu-id="373f6-103">System.ServiceModel.PerformanceCountersFailedOnRelease</span><span class="sxs-lookup"><span data-stu-id="373f6-103">System.ServiceModel.PerformanceCountersFailedOnRelease</span></span>  
+# <a name="systemservicemodelperformancecountersfailedonrelease"></a><span data-ttu-id="70ab3-102">System.ServiceModel.PerformanceCountersFailedOnRelease</span><span class="sxs-lookup"><span data-stu-id="70ab3-102">System.ServiceModel.PerformanceCountersFailedOnRelease</span></span>
+<span data-ttu-id="70ab3-103">System.ServiceModel.PerformanceCountersFailedOnRelease</span><span class="sxs-lookup"><span data-stu-id="70ab3-103">System.ServiceModel.PerformanceCountersFailedOnRelease</span></span>  
   
-## <a name="description"></a><span data-ttu-id="373f6-104">描述</span><span class="sxs-lookup"><span data-stu-id="373f6-104">Description</span></span>  
- <span data-ttu-id="373f6-105">卸载性能计数器失败。</span><span class="sxs-lookup"><span data-stu-id="373f6-105">Unloading the performance counters failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="70ab3-104">描述</span><span class="sxs-lookup"><span data-stu-id="70ab3-104">Description</span></span>  
+ <span data-ttu-id="70ab3-105">卸载性能计数器失败。</span><span class="sxs-lookup"><span data-stu-id="70ab3-105">Unloading the performance counters failed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="373f6-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="373f6-106">See Also</span></span>  
- [<span data-ttu-id="373f6-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="373f6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="373f6-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="373f6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="373f6-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="373f6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="70ab3-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="70ab3-106">See Also</span></span>  
+ [<span data-ttu-id="70ab3-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="70ab3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="70ab3-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="70ab3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="70ab3-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="70ab3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

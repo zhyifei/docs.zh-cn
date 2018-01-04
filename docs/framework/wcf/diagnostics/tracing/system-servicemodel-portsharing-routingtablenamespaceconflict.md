@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d47c1d8950e1238d3ac33a44d497c1a6f8ae08a6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 43757972933fcd7e47a2b3fd51634621834c7b57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelportsharingroutingtablenamespaceconflict"></a><span data-ttu-id="c89a0-102">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span><span class="sxs-lookup"><span data-stu-id="c89a0-102">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span></span>
-<span data-ttu-id="c89a0-103">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span><span class="sxs-lookup"><span data-stu-id="c89a0-103">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span></span>  
+# <a name="systemservicemodelportsharingroutingtablenamespaceconflict"></a><span data-ttu-id="a04d1-102">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span><span class="sxs-lookup"><span data-stu-id="a04d1-102">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span></span>
+<span data-ttu-id="a04d1-103">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span><span class="sxs-lookup"><span data-stu-id="a04d1-103">System.ServiceModel.PortSharing.RoutingTableNamespaceConflict</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c89a0-104">描述</span><span class="sxs-lookup"><span data-stu-id="c89a0-104">Description</span></span>  
- <span data-ttu-id="c89a0-105">该命名空间已注册。</span><span class="sxs-lookup"><span data-stu-id="c89a0-105">The namespace was already registered.</span></span>  
+## <a name="description"></a><span data-ttu-id="a04d1-104">描述</span><span class="sxs-lookup"><span data-stu-id="a04d1-104">Description</span></span>  
+ <span data-ttu-id="a04d1-105">该命名空间已注册。</span><span class="sxs-lookup"><span data-stu-id="a04d1-105">The namespace was already registered.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c89a0-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="c89a0-106">See Also</span></span>  
- [<span data-ttu-id="c89a0-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="c89a0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="c89a0-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="c89a0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="c89a0-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="c89a0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a04d1-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="a04d1-106">See Also</span></span>  
+ [<span data-ttu-id="a04d1-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="a04d1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a04d1-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="a04d1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a04d1-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="a04d1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

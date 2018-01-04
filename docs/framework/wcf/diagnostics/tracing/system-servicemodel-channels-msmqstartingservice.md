@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f326f08689a75c7931ad87dcccb6d42c715ea65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7e15544217886c6ef13ec61c5a79033f8417617b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqstartingservice"></a><span data-ttu-id="001f0-102">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="001f0-102">System.ServiceModel.Channels.MsmqStartingService</span></span>
-<span data-ttu-id="001f0-103">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="001f0-103">System.ServiceModel.Channels.MsmqStartingService</span></span>  
+# <a name="systemservicemodelchannelsmsmqstartingservice"></a><span data-ttu-id="481be-102">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="481be-102">System.ServiceModel.Channels.MsmqStartingService</span></span>
+<span data-ttu-id="481be-103">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="481be-103">System.ServiceModel.Channels.MsmqStartingService</span></span>  
   
-## <a name="description"></a><span data-ttu-id="001f0-104">描述</span><span class="sxs-lookup"><span data-stu-id="001f0-104">Description</span></span>  
- <span data-ttu-id="001f0-105">宿主环境已启动服务。</span><span class="sxs-lookup"><span data-stu-id="001f0-105">The hosting environment started the service.</span></span>  
+## <a name="description"></a><span data-ttu-id="481be-104">描述</span><span class="sxs-lookup"><span data-stu-id="481be-104">Description</span></span>  
+ <span data-ttu-id="481be-105">宿主环境已启动服务。</span><span class="sxs-lookup"><span data-stu-id="481be-105">The hosting environment started the service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="001f0-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="001f0-106">See Also</span></span>  
- [<span data-ttu-id="001f0-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="001f0-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="001f0-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="001f0-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="001f0-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="001f0-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="481be-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="481be-106">See Also</span></span>  
+ [<span data-ttu-id="481be-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="481be-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="481be-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="481be-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="481be-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="481be-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

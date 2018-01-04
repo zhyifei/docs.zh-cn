@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6b09307be0f9ea452598f895e2507d77fca4733a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4632ddc6be277e421e6d43aee22a7745a4b4b3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcommunicationobjectfaultreason"></a><span data-ttu-id="05f9f-102">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="05f9f-102">System.ServiceModel.CommunicationObjectFaultReason</span></span>
-<span data-ttu-id="05f9f-103">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="05f9f-103">System.ServiceModel.CommunicationObjectFaultReason</span></span>  
+# <a name="systemservicemodelcommunicationobjectfaultreason"></a><span data-ttu-id="b4e5c-102">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="b4e5c-102">System.ServiceModel.CommunicationObjectFaultReason</span></span>
+<span data-ttu-id="b4e5c-103">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="b4e5c-103">System.ServiceModel.CommunicationObjectFaultReason</span></span>  
   
-## <a name="description"></a><span data-ttu-id="05f9f-104">描述</span><span class="sxs-lookup"><span data-stu-id="05f9f-104">Description</span></span>  
- <span data-ttu-id="05f9f-105">由于出现异常，通信对象出错。</span><span class="sxs-lookup"><span data-stu-id="05f9f-105">A communication object faulted due to exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="b4e5c-104">描述</span><span class="sxs-lookup"><span data-stu-id="b4e5c-104">Description</span></span>  
+ <span data-ttu-id="b4e5c-105">由于出现异常，通信对象出错。</span><span class="sxs-lookup"><span data-stu-id="b4e5c-105">A communication object faulted due to exception.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05f9f-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="05f9f-106">See Also</span></span>  
- [<span data-ttu-id="05f9f-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="05f9f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="05f9f-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="05f9f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="05f9f-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="05f9f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b4e5c-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="b4e5c-106">See Also</span></span>  
+ [<span data-ttu-id="b4e5c-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="b4e5c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b4e5c-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="b4e5c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b4e5c-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="b4e5c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

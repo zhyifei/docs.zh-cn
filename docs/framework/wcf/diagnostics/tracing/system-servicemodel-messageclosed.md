@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efd628c9b3d9bd1411363401b0dd6d6a87daa9e0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 824f26dd1b0a8deb2e9b6a4bdef65e433dde141e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelmessageclosed"></a><span data-ttu-id="32a86-102">System.ServiceModel.MessageClosed</span><span class="sxs-lookup"><span data-stu-id="32a86-102">System.ServiceModel.MessageClosed</span></span>
-<span data-ttu-id="32a86-103">System.ServiceModel.MessageClosed</span><span class="sxs-lookup"><span data-stu-id="32a86-103">System.ServiceModel.MessageClosed</span></span>  
+# <a name="systemservicemodelmessageclosed"></a><span data-ttu-id="7b5d9-102">System.ServiceModel.MessageClosed</span><span class="sxs-lookup"><span data-stu-id="7b5d9-102">System.ServiceModel.MessageClosed</span></span>
+<span data-ttu-id="7b5d9-103">System.ServiceModel.MessageClosed</span><span class="sxs-lookup"><span data-stu-id="7b5d9-103">System.ServiceModel.MessageClosed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="32a86-104">描述</span><span class="sxs-lookup"><span data-stu-id="32a86-104">Description</span></span>  
- <span data-ttu-id="32a86-105">消息已关闭。</span><span class="sxs-lookup"><span data-stu-id="32a86-105">A message was closed.</span></span>  
+## <a name="description"></a><span data-ttu-id="7b5d9-104">描述</span><span class="sxs-lookup"><span data-stu-id="7b5d9-104">Description</span></span>  
+ <span data-ttu-id="7b5d9-105">消息已关闭。</span><span class="sxs-lookup"><span data-stu-id="7b5d9-105">A message was closed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32a86-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="32a86-106">See Also</span></span>  
- [<span data-ttu-id="32a86-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="32a86-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="32a86-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="32a86-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="32a86-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="32a86-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="7b5d9-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="7b5d9-106">See Also</span></span>  
+ [<span data-ttu-id="7b5d9-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="7b5d9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="7b5d9-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="7b5d9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="7b5d9-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="7b5d9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 188d080d32a1f9463dd8d576fdd4154ad893c8ff
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c2f27c6d6f4970d8ea49af02355be95e5d66d77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeldiagnosticsmessagenotloggedquotaexceeded"></a><span data-ttu-id="ebc26-102">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="ebc26-102">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span></span>
-<span data-ttu-id="ebc26-103">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="ebc26-103">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span></span>  
+# <a name="systemservicemodeldiagnosticsmessagenotloggedquotaexceeded"></a><span data-ttu-id="ec3b8-102">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="ec3b8-102">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span></span>
+<span data-ttu-id="ec3b8-103">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span><span class="sxs-lookup"><span data-stu-id="ec3b8-103">System.ServiceModel.Diagnostics.MessageNotLoggedQuotaExceeded</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ebc26-104">描述</span><span class="sxs-lookup"><span data-stu-id="ebc26-104">Description</span></span>  
- <span data-ttu-id="ebc26-105">由于消息的大小超过了配置的配额，因而未进行记录。</span><span class="sxs-lookup"><span data-stu-id="ebc26-105">Message not logged because its size exceeds the configured quota.</span></span>  
+## <a name="description"></a><span data-ttu-id="ec3b8-104">描述</span><span class="sxs-lookup"><span data-stu-id="ec3b8-104">Description</span></span>  
+ <span data-ttu-id="ec3b8-105">由于消息的大小超过了配置的配额，因而未进行记录。</span><span class="sxs-lookup"><span data-stu-id="ec3b8-105">Message not logged because its size exceeds the configured quota.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ebc26-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ebc26-106">See Also</span></span>  
- [<span data-ttu-id="ebc26-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="ebc26-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ebc26-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="ebc26-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ebc26-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="ebc26-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ec3b8-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="ec3b8-106">See Also</span></span>  
+ [<span data-ttu-id="ec3b8-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="ec3b8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="ec3b8-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="ec3b8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="ec3b8-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="ec3b8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

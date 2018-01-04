@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f568c591d8d007de5b1383f9048af343b6f7912
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56de1120d145fe7185f6ca4b84aa4d5d70d146e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethod"></a><span data-ttu-id="8fa21-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span><span class="sxs-lookup"><span data-stu-id="8fa21-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span></span>
-<span data-ttu-id="8fa21-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span><span class="sxs-lookup"><span data-stu-id="8fa21-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethod"></a><span data-ttu-id="565e9-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span><span class="sxs-lookup"><span data-stu-id="565e9-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span></span>
+<span data-ttu-id="565e9-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span><span class="sxs-lookup"><span data-stu-id="565e9-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethod</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8fa21-104">描述</span><span class="sxs-lookup"><span data-stu-id="8fa21-104">Description</span></span>  
- <span data-ttu-id="8fa21-105">ComPlus: 正在调用方法。</span><span class="sxs-lookup"><span data-stu-id="8fa21-105">ComPlus: Invoking method.</span></span>  
+## <a name="description"></a><span data-ttu-id="565e9-104">描述</span><span class="sxs-lookup"><span data-stu-id="565e9-104">Description</span></span>  
+ <span data-ttu-id="565e9-105">ComPlus: 正在调用方法。</span><span class="sxs-lookup"><span data-stu-id="565e9-105">ComPlus: Invoking method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8fa21-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8fa21-106">See Also</span></span>  
- [<span data-ttu-id="8fa21-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="8fa21-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8fa21-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="8fa21-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8fa21-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="8fa21-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="565e9-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="565e9-106">See Also</span></span>  
+ [<span data-ttu-id="565e9-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="565e9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="565e9-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="565e9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="565e9-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="565e9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

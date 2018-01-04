@@ -13,25 +13,26 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38abf80f81a8a885f719603bc93bf1b3687e9938
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4ffca9a587bdb32afc252f9719eb35e3139dd3f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a><span data-ttu-id="8382d-102">System.ServiceModel.Channels.PeerNodeAuthenticationFailure</span><span class="sxs-lookup"><span data-stu-id="8382d-102">System.ServiceModel.Channels.PeerNodeAuthenticationFailure</span></span>
-<span data-ttu-id="8382d-103">与潜在邻居的安全握手没有成功。</span><span class="sxs-lookup"><span data-stu-id="8382d-103">The security handshake with a potential neighbor was not successful.</span></span>  
+# <a name="systemservicemodelchannelspeernodeauthenticationfailure"></a><span data-ttu-id="185c4-102">System.ServiceModel.Channels.PeerNodeAuthenticationFailure</span><span class="sxs-lookup"><span data-stu-id="185c4-102">System.ServiceModel.Channels.PeerNodeAuthenticationFailure</span></span>
+<span data-ttu-id="185c4-103">与潜在邻居的安全握手没有成功。</span><span class="sxs-lookup"><span data-stu-id="185c4-103">The security handshake with a potential neighbor was not successful.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8382d-104">描述</span><span class="sxs-lookup"><span data-stu-id="8382d-104">Description</span></span>  
- <span data-ttu-id="8382d-105">此跟踪在尝试建立安全邻居连接时发生。</span><span class="sxs-lookup"><span data-stu-id="8382d-105">This trace occurs while attempting to establish a secure neighbor connection.</span></span> <span data-ttu-id="8382d-106">凭据不充足或不正确可以导致出现此情况。</span><span class="sxs-lookup"><span data-stu-id="8382d-106">This can happen due to insufficient or incorrect credentials.</span></span>  
+## <a name="description"></a><span data-ttu-id="185c4-104">描述</span><span class="sxs-lookup"><span data-stu-id="185c4-104">Description</span></span>  
+ <span data-ttu-id="185c4-105">此跟踪在尝试建立安全邻居连接时发生。</span><span class="sxs-lookup"><span data-stu-id="185c4-105">This trace occurs while attempting to establish a secure neighbor connection.</span></span> <span data-ttu-id="185c4-106">凭据不充足或不正确可以导致出现此情况。</span><span class="sxs-lookup"><span data-stu-id="185c4-106">This can happen due to insufficient or incorrect credentials.</span></span>  
   
- <span data-ttu-id="8382d-107">对等通道只能识别一种强标识令牌类型，即 X.509 证书，X.509 证书基于可实现的身份验证和授权类型，提供强标识模型。</span><span class="sxs-lookup"><span data-stu-id="8382d-107">PeerChannel recognizes a single token type for strong identification, X.509 certificates, which provide a strong identity model based on the type of authentication and authorization that can be implemented.</span></span> <span data-ttu-id="8382d-108">对等通道还可通过使用密码为简单应用程序提供支持。</span><span class="sxs-lookup"><span data-stu-id="8382d-108">PeerChannel also provides support for simple applications through the use of passwords.</span></span> <span data-ttu-id="8382d-109">密码仅用于允许加入会话，不能用于执行消息身份验证。</span><span class="sxs-lookup"><span data-stu-id="8382d-109">Passwords can be used only to allow entry to the session; they cannot be used to perform message authentication.</span></span> <span data-ttu-id="8382d-110">这是因为对等端组共享的对称令牌难以、也不适合用于进行源身份验证。</span><span class="sxs-lookup"><span data-stu-id="8382d-110">This is because a symmetric token that a group of peers share is difficult and inappropriate to use for source authentication.</span></span>  
+ <span data-ttu-id="185c4-107">对等通道只能识别一种强标识令牌类型，即 X.509 证书，X.509 证书基于可实现的身份验证和授权类型，提供强标识模型。</span><span class="sxs-lookup"><span data-stu-id="185c4-107">PeerChannel recognizes a single token type for strong identification, X.509 certificates, which provide a strong identity model based on the type of authentication and authorization that can be implemented.</span></span> <span data-ttu-id="185c4-108">对等通道还可通过使用密码为简单应用程序提供支持。</span><span class="sxs-lookup"><span data-stu-id="185c4-108">PeerChannel also provides support for simple applications through the use of passwords.</span></span> <span data-ttu-id="185c4-109">密码仅用于允许加入会话，不能用于执行消息身份验证。</span><span class="sxs-lookup"><span data-stu-id="185c4-109">Passwords can be used only to allow entry to the session; they cannot be used to perform message authentication.</span></span> <span data-ttu-id="185c4-110">这是因为对等端组共享的对称令牌难以、也不适合用于进行源身份验证。</span><span class="sxs-lookup"><span data-stu-id="185c4-110">This is because a symmetric token that a group of peers share is difficult and inappropriate to use for source authentication.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="8382d-111">疑难解答</span><span class="sxs-lookup"><span data-stu-id="8382d-111">Troubleshooting</span></span>  
- <span data-ttu-id="8382d-112">确保所有邻居都具有适当的安全凭据。</span><span class="sxs-lookup"><span data-stu-id="8382d-112">Ensure that all neighbors have the appropriate security credentials.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="185c4-111">疑难解答</span><span class="sxs-lookup"><span data-stu-id="185c4-111">Troubleshooting</span></span>  
+ <span data-ttu-id="185c4-112">确保所有邻居都具有适当的安全凭据。</span><span class="sxs-lookup"><span data-stu-id="185c4-112">Ensure that all neighbors have the appropriate security credentials.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8382d-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8382d-113">See Also</span></span>  
- [<span data-ttu-id="8382d-114">对等通道安全性</span><span class="sxs-lookup"><span data-stu-id="8382d-114">Peer Channel Security</span></span>](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [<span data-ttu-id="8382d-115">跟踪</span><span class="sxs-lookup"><span data-stu-id="8382d-115">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8382d-116">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="8382d-116">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8382d-117">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="8382d-117">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="185c4-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="185c4-113">See Also</span></span>  
+ [<span data-ttu-id="185c4-114">对等通道安全性</span><span class="sxs-lookup"><span data-stu-id="185c4-114">Peer Channel Security</span></span>](../../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
+ [<span data-ttu-id="185c4-115">跟踪</span><span class="sxs-lookup"><span data-stu-id="185c4-115">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="185c4-116">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="185c4-116">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="185c4-117">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="185c4-117">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

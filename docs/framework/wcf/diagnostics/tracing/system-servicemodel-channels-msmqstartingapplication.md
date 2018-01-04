@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e8e3283b86cd3d9986632c258647e863bb758985
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95afe78288f10123bcecfcf42fe64e03f7df2bfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqstartingapplication"></a><span data-ttu-id="19673-102">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="19673-102">System.ServiceModel.Channels.MsmqStartingApplication</span></span>
-<span data-ttu-id="19673-103">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="19673-103">System.ServiceModel.Channels.MsmqStartingApplication</span></span>  
+# <a name="systemservicemodelchannelsmsmqstartingapplication"></a><span data-ttu-id="9edf5-102">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="9edf5-102">System.ServiceModel.Channels.MsmqStartingApplication</span></span>
+<span data-ttu-id="9edf5-103">System.ServiceModel.Channels.MsmqStartingApplication</span><span class="sxs-lookup"><span data-stu-id="9edf5-103">System.ServiceModel.Channels.MsmqStartingApplication</span></span>  
   
-## <a name="description"></a><span data-ttu-id="19673-104">描述</span><span class="sxs-lookup"><span data-stu-id="19673-104">Description</span></span>  
- <span data-ttu-id="19673-105">MSMQ 激活服务已启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="19673-105">MSMQ activation service started application.</span></span>  
+## <a name="description"></a><span data-ttu-id="9edf5-104">描述</span><span class="sxs-lookup"><span data-stu-id="9edf5-104">Description</span></span>  
+ <span data-ttu-id="9edf5-105">MSMQ 激活服务已启动应用程序。</span><span class="sxs-lookup"><span data-stu-id="9edf5-105">MSMQ activation service started application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19673-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="19673-106">See Also</span></span>  
- [<span data-ttu-id="19673-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="19673-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="19673-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="19673-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="19673-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="19673-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9edf5-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="9edf5-106">See Also</span></span>  
+ [<span data-ttu-id="9edf5-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="9edf5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9edf5-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="9edf5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9edf5-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="9edf5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

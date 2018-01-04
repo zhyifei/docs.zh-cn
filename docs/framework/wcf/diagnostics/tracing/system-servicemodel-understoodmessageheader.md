@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e293bff20880b339ce4639a2ec0bba9a4902318
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c50c89352572f64f4aad423d4453b192673ad93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelunderstoodmessageheader"></a><span data-ttu-id="e8fa5-102">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="e8fa5-102">System.ServiceModel.UnderstoodMessageHeader</span></span>
-<span data-ttu-id="e8fa5-103">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="e8fa5-103">System.ServiceModel.UnderstoodMessageHeader</span></span>  
+# <a name="systemservicemodelunderstoodmessageheader"></a><span data-ttu-id="599d6-102">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="599d6-102">System.ServiceModel.UnderstoodMessageHeader</span></span>
+<span data-ttu-id="599d6-103">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="599d6-103">System.ServiceModel.UnderstoodMessageHeader</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e8fa5-104">描述</span><span class="sxs-lookup"><span data-stu-id="e8fa5-104">Description</span></span>  
- <span data-ttu-id="e8fa5-105">已理解消息头。</span><span class="sxs-lookup"><span data-stu-id="e8fa5-105">Understood message header.</span></span>  
+## <a name="description"></a><span data-ttu-id="599d6-104">描述</span><span class="sxs-lookup"><span data-stu-id="599d6-104">Description</span></span>  
+ <span data-ttu-id="599d6-105">已理解消息头。</span><span class="sxs-lookup"><span data-stu-id="599d6-105">Understood message header.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e8fa5-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e8fa5-106">See Also</span></span>  
- [<span data-ttu-id="e8fa5-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="e8fa5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="e8fa5-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="e8fa5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="e8fa5-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="e8fa5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="599d6-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="599d6-106">See Also</span></span>  
+ [<span data-ttu-id="599d6-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="599d6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="599d6-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="599d6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="599d6-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="599d6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

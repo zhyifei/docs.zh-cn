@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00b923ff1d6ec0ec790fda0616d32eb1fd008a28
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e8c31ed9b29b339e4fc32a30de5175cb81d510df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcommunicationobjectaborted"></a><span data-ttu-id="48d1c-102">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="48d1c-102">System.ServiceModel.CommunicationObjectAborted</span></span>
-<span data-ttu-id="48d1c-103">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="48d1c-103">System.ServiceModel.CommunicationObjectAborted</span></span>  
+# <a name="systemservicemodelcommunicationobjectaborted"></a><span data-ttu-id="f97ea-102">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="f97ea-102">System.ServiceModel.CommunicationObjectAborted</span></span>
+<span data-ttu-id="f97ea-103">System.ServiceModel.CommunicationObjectAborted</span><span class="sxs-lookup"><span data-stu-id="f97ea-103">System.ServiceModel.CommunicationObjectAborted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="48d1c-104">描述</span><span class="sxs-lookup"><span data-stu-id="48d1c-104">Description</span></span>  
- <span data-ttu-id="48d1c-105">通信对象处于中止状态。</span><span class="sxs-lookup"><span data-stu-id="48d1c-105">A communication object was aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="f97ea-104">描述</span><span class="sxs-lookup"><span data-stu-id="f97ea-104">Description</span></span>  
+ <span data-ttu-id="f97ea-105">通信对象处于中止状态。</span><span class="sxs-lookup"><span data-stu-id="f97ea-105">A communication object was aborted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48d1c-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="48d1c-106">See Also</span></span>  
- [<span data-ttu-id="48d1c-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="48d1c-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="48d1c-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="48d1c-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="48d1c-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="48d1c-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f97ea-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="f97ea-106">See Also</span></span>  
+ [<span data-ttu-id="f97ea-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="f97ea-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f97ea-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="f97ea-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f97ea-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="f97ea-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

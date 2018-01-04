@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e940571bbf312e5d3a5ef35f1565af611eb54eb3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 418a0d9d4b043328097ef0d0532061c03102967d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationtlbimportfromtypelib"></a><span data-ttu-id="bb798-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromTypelib</span><span class="sxs-lookup"><span data-stu-id="bb798-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromTypelib</span></span>
-<span data-ttu-id="bb798-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromTypelib</span><span class="sxs-lookup"><span data-stu-id="bb798-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromTypelib</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationtlbimportfromtypelib"></a><span data-ttu-id="5385e-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromTypelib</span><span class="sxs-lookup"><span data-stu-id="5385e-102">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromTypelib</span></span>
+<span data-ttu-id="5385e-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromTypelib</span><span class="sxs-lookup"><span data-stu-id="5385e-103">System.ServiceModel.ComIntegration.ComIntegrationTLBImportFromTypelib</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bb798-104">描述</span><span class="sxs-lookup"><span data-stu-id="bb798-104">Description</span></span>  
- <span data-ttu-id="bb798-105">ComPlus: 类型库导入: 正在使用类型库。</span><span class="sxs-lookup"><span data-stu-id="bb798-105">ComPlus: Type library import: using type library.</span></span>  
+## <a name="description"></a><span data-ttu-id="5385e-104">描述</span><span class="sxs-lookup"><span data-stu-id="5385e-104">Description</span></span>  
+ <span data-ttu-id="5385e-105">ComPlus: 类型库导入: 正在使用类型库。</span><span class="sxs-lookup"><span data-stu-id="5385e-105">ComPlus: Type library import: using type library.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb798-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="bb798-106">See Also</span></span>  
- [<span data-ttu-id="bb798-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="bb798-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="bb798-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="bb798-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="bb798-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="bb798-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="5385e-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="5385e-106">See Also</span></span>  
+ [<span data-ttu-id="5385e-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="5385e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="5385e-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="5385e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5385e-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="5385e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17d23b865ec00c15d3c40ca9bd5959415cba9cee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e32c0c5ba6546458cb8bcd3705339ce19c2f6031
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelspeerneighbormanageronline"></a><span data-ttu-id="30d10-102">System.ServiceModel.Channels.PeerNeighborManagerOnline</span><span class="sxs-lookup"><span data-stu-id="30d10-102">System.ServiceModel.Channels.PeerNeighborManagerOnline</span></span>
-<span data-ttu-id="30d10-103">PeerNode 现在处于联机状态，指示存在一个或多个已连接的邻居。</span><span class="sxs-lookup"><span data-stu-id="30d10-103">The PeerNode is now online, indicating the presence of one or more connected neighbors.</span></span>  
+# <a name="systemservicemodelchannelspeerneighbormanageronline"></a><span data-ttu-id="776df-102">System.ServiceModel.Channels.PeerNeighborManagerOnline</span><span class="sxs-lookup"><span data-stu-id="776df-102">System.ServiceModel.Channels.PeerNeighborManagerOnline</span></span>
+<span data-ttu-id="776df-103">PeerNode 现在处于联机状态，指示存在一个或多个已连接的邻居。</span><span class="sxs-lookup"><span data-stu-id="776df-103">The PeerNode is now online, indicating the presence of one or more connected neighbors.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="30d10-104">描述</span><span class="sxs-lookup"><span data-stu-id="30d10-104">Description</span></span>  
- <span data-ttu-id="30d10-105">此跟踪在成功尝试邻居连接结束时发生。</span><span class="sxs-lookup"><span data-stu-id="30d10-105">This trace occurs at the conclusion of a successful neighbor connection attempt.</span></span>  
+## <a name="description"></a><span data-ttu-id="776df-104">描述</span><span class="sxs-lookup"><span data-stu-id="776df-104">Description</span></span>  
+ <span data-ttu-id="776df-105">此跟踪在成功尝试邻居连接结束时发生。</span><span class="sxs-lookup"><span data-stu-id="776df-105">This trace occurs at the conclusion of a successful neighbor connection attempt.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30d10-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="30d10-106">See Also</span></span>  
- [<span data-ttu-id="30d10-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="30d10-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="30d10-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="30d10-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="30d10-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="30d10-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="776df-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="776df-106">See Also</span></span>  
+ [<span data-ttu-id="776df-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="776df-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="776df-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="776df-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="776df-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="776df-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: db9c01b941da5836f022e438e1e989c7e5b26697
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24e691e2c46fdc23eb1df304ab07a23d070b7aec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelextensioncollectionisempty"></a><span data-ttu-id="8bcda-102">System.ServiceModel.ExtensionCollectionIsEmpty</span><span class="sxs-lookup"><span data-stu-id="8bcda-102">System.ServiceModel.ExtensionCollectionIsEmpty</span></span>
-<span data-ttu-id="8bcda-103">System.ServiceModel.ExtensionCollectionIsEmpty</span><span class="sxs-lookup"><span data-stu-id="8bcda-103">System.ServiceModel.ExtensionCollectionIsEmpty</span></span>  
+# <a name="systemservicemodelextensioncollectionisempty"></a><span data-ttu-id="d44be-102">System.ServiceModel.ExtensionCollectionIsEmpty</span><span class="sxs-lookup"><span data-stu-id="d44be-102">System.ServiceModel.ExtensionCollectionIsEmpty</span></span>
+<span data-ttu-id="d44be-103">System.ServiceModel.ExtensionCollectionIsEmpty</span><span class="sxs-lookup"><span data-stu-id="d44be-103">System.ServiceModel.ExtensionCollectionIsEmpty</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8bcda-104">描述</span><span class="sxs-lookup"><span data-stu-id="8bcda-104">Description</span></span>  
- <span data-ttu-id="8bcda-105">扩展集合为空。</span><span class="sxs-lookup"><span data-stu-id="8bcda-105">The extension collection is empty.</span></span>  
+## <a name="description"></a><span data-ttu-id="d44be-104">描述</span><span class="sxs-lookup"><span data-stu-id="d44be-104">Description</span></span>  
+ <span data-ttu-id="d44be-105">扩展集合为空。</span><span class="sxs-lookup"><span data-stu-id="d44be-105">The extension collection is empty.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8bcda-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8bcda-106">See Also</span></span>  
- [<span data-ttu-id="8bcda-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="8bcda-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="8bcda-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="8bcda-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="8bcda-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="8bcda-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="d44be-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="d44be-106">See Also</span></span>  
+ [<span data-ttu-id="d44be-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="d44be-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="d44be-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="d44be-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="d44be-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="d44be-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

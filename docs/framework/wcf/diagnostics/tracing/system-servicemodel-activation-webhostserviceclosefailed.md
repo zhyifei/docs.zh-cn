@@ -13,22 +13,23 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1761ef66bf2aedf2d4382558ba70bf1956af0f3e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cc2b0dc75e8e8748e25c1faf28150e0c156a20ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelactivationwebhostserviceclosefailed"></a><span data-ttu-id="de8ca-102">System.ServiceModel.Activation.WebHostServiceCloseFailed</span><span class="sxs-lookup"><span data-stu-id="de8ca-102">System.ServiceModel.Activation.WebHostServiceCloseFailed</span></span>
-<span data-ttu-id="de8ca-103">当服务无法正常关闭并中止时发生。</span><span class="sxs-lookup"><span data-stu-id="de8ca-103">Occurs when a service cannot be closed gracefully and is aborted.</span></span>  
+# <a name="systemservicemodelactivationwebhostserviceclosefailed"></a><span data-ttu-id="02af2-102">System.ServiceModel.Activation.WebHostServiceCloseFailed</span><span class="sxs-lookup"><span data-stu-id="02af2-102">System.ServiceModel.Activation.WebHostServiceCloseFailed</span></span>
+<span data-ttu-id="02af2-103">当服务无法正常关闭并中止时发生。</span><span class="sxs-lookup"><span data-stu-id="02af2-103">Occurs when a service cannot be closed gracefully and is aborted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="de8ca-104">描述</span><span class="sxs-lookup"><span data-stu-id="de8ca-104">Description</span></span>  
- <span data-ttu-id="de8ca-105">此错误代码仅出现在日志文件中。</span><span class="sxs-lookup"><span data-stu-id="de8ca-105">This error code only appears in the log file.</span></span> <span data-ttu-id="de8ca-106">它通常指示编程错误，例如，在已经调用 Abort 之后尝试关闭服务的时候。</span><span class="sxs-lookup"><span data-stu-id="de8ca-106">It usually indicates a programming error, for example, when you try to close a service after Abort has already been called.</span></span>  
+## <a name="description"></a><span data-ttu-id="02af2-104">描述</span><span class="sxs-lookup"><span data-stu-id="02af2-104">Description</span></span>  
+ <span data-ttu-id="02af2-105">此错误代码仅出现在日志文件中。</span><span class="sxs-lookup"><span data-stu-id="02af2-105">This error code only appears in the log file.</span></span> <span data-ttu-id="02af2-106">它通常指示编程错误，例如，在已经调用 Abort 之后尝试关闭服务的时候。</span><span class="sxs-lookup"><span data-stu-id="02af2-106">It usually indicates a programming error, for example, when you try to close a service after Abort has already been called.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="de8ca-107">疑难解答</span><span class="sxs-lookup"><span data-stu-id="de8ca-107">Troubleshooting</span></span>  
- <span data-ttu-id="de8ca-108">请检查应用程序源代码。</span><span class="sxs-lookup"><span data-stu-id="de8ca-108">Check the application source code.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="02af2-107">疑难解答</span><span class="sxs-lookup"><span data-stu-id="02af2-107">Troubleshooting</span></span>  
+ <span data-ttu-id="02af2-108">请检查应用程序源代码。</span><span class="sxs-lookup"><span data-stu-id="02af2-108">Check the application source code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de8ca-109">另请参阅</span><span class="sxs-lookup"><span data-stu-id="de8ca-109">See Also</span></span>  
- [<span data-ttu-id="de8ca-110">跟踪</span><span class="sxs-lookup"><span data-stu-id="de8ca-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="de8ca-111">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="de8ca-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="de8ca-112">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="de8ca-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="02af2-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="02af2-109">See Also</span></span>  
+ [<span data-ttu-id="02af2-110">跟踪</span><span class="sxs-lookup"><span data-stu-id="02af2-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="02af2-111">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="02af2-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="02af2-112">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="02af2-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

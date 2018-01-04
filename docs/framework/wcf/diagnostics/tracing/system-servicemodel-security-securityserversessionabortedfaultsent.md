@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9549579af46a7fb81f7e789d790e9f093c5fba4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4bbda7929522eda2314103fc356f885561a24f0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityserversessionabortedfaultsent"></a><span data-ttu-id="83395-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="83395-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>
-<span data-ttu-id="83395-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="83395-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>  
+# <a name="systemservicemodelsecuritysecurityserversessionabortedfaultsent"></a><span data-ttu-id="8bf29-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="8bf29-102">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>
+<span data-ttu-id="8bf29-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span><span class="sxs-lookup"><span data-stu-id="8bf29-103">System.ServiceModel.Security.SecurityServerSessionAbortedFaultSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="83395-104">描述</span><span class="sxs-lookup"><span data-stu-id="83395-104">Description</span></span>  
- <span data-ttu-id="83395-105">服务器安全会话将会话已中止错误发送给客户端。</span><span class="sxs-lookup"><span data-stu-id="83395-105">The server security session sent a session aborted fault to client.</span></span>  
+## <a name="description"></a><span data-ttu-id="8bf29-104">描述</span><span class="sxs-lookup"><span data-stu-id="8bf29-104">Description</span></span>  
+ <span data-ttu-id="8bf29-105">服务器安全会话将会话已中止错误发送给客户端。</span><span class="sxs-lookup"><span data-stu-id="8bf29-105">The server security session sent a session aborted fault to client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83395-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="83395-106">See Also</span></span>  
- [<span data-ttu-id="83395-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="83395-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="83395-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="83395-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="83395-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="83395-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="8bf29-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="8bf29-106">See Also</span></span>  
+ [<span data-ttu-id="8bf29-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="8bf29-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="8bf29-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="8bf29-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="8bf29-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="8bf29-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 945ee0ea6746dac16f25f1225e11f1b4dd28347d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4484cbe90bec778a230923a62f0e63c0b72d6f70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodeldiagnosticsthrowingexception"></a><span data-ttu-id="5097a-102">System.ServiceModel.Diagnostics.ThrowingException</span><span class="sxs-lookup"><span data-stu-id="5097a-102">System.ServiceModel.Diagnostics.ThrowingException</span></span>
-<span data-ttu-id="5097a-103">System.ServiceModel.Diagnostics.ThrowingException</span><span class="sxs-lookup"><span data-stu-id="5097a-103">System.ServiceModel.Diagnostics.ThrowingException</span></span>  
+# <a name="systemservicemodeldiagnosticsthrowingexception"></a><span data-ttu-id="f7574-102">System.ServiceModel.Diagnostics.ThrowingException</span><span class="sxs-lookup"><span data-stu-id="f7574-102">System.ServiceModel.Diagnostics.ThrowingException</span></span>
+<span data-ttu-id="f7574-103">System.ServiceModel.Diagnostics.ThrowingException</span><span class="sxs-lookup"><span data-stu-id="f7574-103">System.ServiceModel.Diagnostics.ThrowingException</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5097a-104">描述</span><span class="sxs-lookup"><span data-stu-id="5097a-104">Description</span></span>  
- <span data-ttu-id="5097a-105">正在引发异常。</span><span class="sxs-lookup"><span data-stu-id="5097a-105">Throwing an exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="f7574-104">描述</span><span class="sxs-lookup"><span data-stu-id="f7574-104">Description</span></span>  
+ <span data-ttu-id="f7574-105">正在引发异常。</span><span class="sxs-lookup"><span data-stu-id="f7574-105">Throwing an exception.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5097a-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5097a-106">See Also</span></span>  
- [<span data-ttu-id="5097a-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="5097a-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="5097a-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="5097a-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="5097a-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="5097a-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f7574-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="f7574-106">See Also</span></span>  
+ [<span data-ttu-id="f7574-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="f7574-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f7574-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="f7574-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f7574-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="f7574-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

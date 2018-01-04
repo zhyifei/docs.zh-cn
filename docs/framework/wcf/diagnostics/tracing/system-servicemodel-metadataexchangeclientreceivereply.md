@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bba6323c24eae80330b145dcfaf90674f7c6ffe1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: eecea25e683ece7650e46ee69e61ed0e9474ce26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelmetadataexchangeclientreceivereply"></a><span data-ttu-id="65b2f-102">System.ServiceModel.MetadataExchangeClientReceiveReply</span><span class="sxs-lookup"><span data-stu-id="65b2f-102">System.ServiceModel.MetadataExchangeClientReceiveReply</span></span>
-<span data-ttu-id="65b2f-103">System.ServiceModel.MetadataExchangeClientReceiveReply</span><span class="sxs-lookup"><span data-stu-id="65b2f-103">System.ServiceModel.MetadataExchangeClientReceiveReply</span></span>  
+# <a name="systemservicemodelmetadataexchangeclientreceivereply"></a><span data-ttu-id="7b78d-102">System.ServiceModel.MetadataExchangeClientReceiveReply</span><span class="sxs-lookup"><span data-stu-id="7b78d-102">System.ServiceModel.MetadataExchangeClientReceiveReply</span></span>
+<span data-ttu-id="7b78d-103">System.ServiceModel.MetadataExchangeClientReceiveReply</span><span class="sxs-lookup"><span data-stu-id="7b78d-103">System.ServiceModel.MetadataExchangeClientReceiveReply</span></span>  
   
-## <a name="description"></a><span data-ttu-id="65b2f-104">描述</span><span class="sxs-lookup"><span data-stu-id="65b2f-104">Description</span></span>  
- <span data-ttu-id="65b2f-105">MetadataExchangeClient 已收到答复。</span><span class="sxs-lookup"><span data-stu-id="65b2f-105">The MetadataExchangeClient received a reply.</span></span>  
+## <a name="description"></a><span data-ttu-id="7b78d-104">描述</span><span class="sxs-lookup"><span data-stu-id="7b78d-104">Description</span></span>  
+ <span data-ttu-id="7b78d-105">MetadataExchangeClient 已收到答复。</span><span class="sxs-lookup"><span data-stu-id="7b78d-105">The MetadataExchangeClient received a reply.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65b2f-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="65b2f-106">See Also</span></span>  
- [<span data-ttu-id="65b2f-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="65b2f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="65b2f-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="65b2f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="65b2f-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="65b2f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="7b78d-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="7b78d-106">See Also</span></span>  
+ [<span data-ttu-id="7b78d-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="7b78d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="7b78d-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="7b78d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="7b78d-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="7b78d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

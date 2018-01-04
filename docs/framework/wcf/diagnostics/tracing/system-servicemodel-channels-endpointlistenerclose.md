@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f4c3f3446a9e4cd30ea9a4ff2fb0ad6f3a2cb27
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae44095f1c30437fc638b5893654e1d5017f2d04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsendpointlistenerclose"></a><span data-ttu-id="3da2e-102">System.ServiceModel.Channels.EndpointListenerClose</span><span class="sxs-lookup"><span data-stu-id="3da2e-102">System.ServiceModel.Channels.EndpointListenerClose</span></span>
-<span data-ttu-id="3da2e-103">System.ServiceModel.Channels.EndpointListenerClose</span><span class="sxs-lookup"><span data-stu-id="3da2e-103">System.ServiceModel.Channels.EndpointListenerClose</span></span>  
+# <a name="systemservicemodelchannelsendpointlistenerclose"></a><span data-ttu-id="3d517-102">System.ServiceModel.Channels.EndpointListenerClose</span><span class="sxs-lookup"><span data-stu-id="3d517-102">System.ServiceModel.Channels.EndpointListenerClose</span></span>
+<span data-ttu-id="3d517-103">System.ServiceModel.Channels.EndpointListenerClose</span><span class="sxs-lookup"><span data-stu-id="3d517-103">System.ServiceModel.Channels.EndpointListenerClose</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3da2e-104">描述</span><span class="sxs-lookup"><span data-stu-id="3da2e-104">Description</span></span>  
- <span data-ttu-id="3da2e-105">终结点侦听器已关闭。</span><span class="sxs-lookup"><span data-stu-id="3da2e-105">Endpoint listener closed.</span></span>  
+## <a name="description"></a><span data-ttu-id="3d517-104">描述</span><span class="sxs-lookup"><span data-stu-id="3d517-104">Description</span></span>  
+ <span data-ttu-id="3d517-105">终结点侦听器已关闭。</span><span class="sxs-lookup"><span data-stu-id="3d517-105">Endpoint listener closed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3da2e-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3da2e-106">See Also</span></span>  
- [<span data-ttu-id="3da2e-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="3da2e-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="3da2e-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="3da2e-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="3da2e-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="3da2e-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3d517-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="3d517-106">See Also</span></span>  
+ [<span data-ttu-id="3d517-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="3d517-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3d517-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="3d517-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3d517-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="3d517-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

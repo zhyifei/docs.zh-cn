@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 293efd9291c803800ed411c14da3a12412e13cb0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f70cebad6c21c76b9d0c6e83a41c4d2ba95ac4ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelservicehosterroronreleaseperformancecounter"></a><span data-ttu-id="6789b-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="6789b-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>
-<span data-ttu-id="6789b-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="6789b-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>  
+# <a name="systemservicemodelservicehosterroronreleaseperformancecounter"></a><span data-ttu-id="f9c83-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="f9c83-102">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>
+<span data-ttu-id="f9c83-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span><span class="sxs-lookup"><span data-stu-id="f9c83-103">System.ServiceModel.ServiceHostErrorOnReleasePerformanceCounter</span></span>  
   
-## <a name="description"></a><span data-ttu-id="6789b-104">描述</span><span class="sxs-lookup"><span data-stu-id="6789b-104">Description</span></span>  
- <span data-ttu-id="6789b-105">调用 ReleasePerformanceCounters 时在 ServiceHost 上发生的错误。</span><span class="sxs-lookup"><span data-stu-id="6789b-105">Errors occurred on the ServiceHost when calling ReleasePerformanceCounters.</span></span> <span data-ttu-id="6789b-106">可使用此跟踪在释放性能计数器时确定错误。</span><span class="sxs-lookup"><span data-stu-id="6789b-106">This trace can be used to determine errors when releasing performance counters.</span></span>  
+## <a name="description"></a><span data-ttu-id="f9c83-104">描述</span><span class="sxs-lookup"><span data-stu-id="f9c83-104">Description</span></span>  
+ <span data-ttu-id="f9c83-105">调用 ReleasePerformanceCounters 时在 ServiceHost 上发生的错误。</span><span class="sxs-lookup"><span data-stu-id="f9c83-105">Errors occurred on the ServiceHost when calling ReleasePerformanceCounters.</span></span> <span data-ttu-id="f9c83-106">可使用此跟踪在释放性能计数器时确定错误。</span><span class="sxs-lookup"><span data-stu-id="f9c83-106">This trace can be used to determine errors when releasing performance counters.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6789b-107">另请参阅</span><span class="sxs-lookup"><span data-stu-id="6789b-107">See Also</span></span>  
- [<span data-ttu-id="6789b-108">跟踪</span><span class="sxs-lookup"><span data-stu-id="6789b-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="6789b-109">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="6789b-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="6789b-110">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="6789b-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f9c83-107">请参阅</span><span class="sxs-lookup"><span data-stu-id="f9c83-107">See Also</span></span>  
+ [<span data-ttu-id="f9c83-108">跟踪</span><span class="sxs-lookup"><span data-stu-id="f9c83-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="f9c83-109">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="f9c83-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="f9c83-110">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="f9c83-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83e96b51ef0ad8caa54f8c5cce7d06397aab31ad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b8762addac428e1e3ff848463737463321b5281
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqenteredbatch"></a><span data-ttu-id="658b7-102">System.ServiceModel.Channels.MsmqEnteredBatch</span><span class="sxs-lookup"><span data-stu-id="658b7-102">System.ServiceModel.Channels.MsmqEnteredBatch</span></span>
-<span data-ttu-id="658b7-103">System.ServiceModel.Channels.MsmqEnteredBatch</span><span class="sxs-lookup"><span data-stu-id="658b7-103">System.ServiceModel.Channels.MsmqEnteredBatch</span></span>  
+# <a name="systemservicemodelchannelsmsmqenteredbatch"></a><span data-ttu-id="b11b8-102">System.ServiceModel.Channels.MsmqEnteredBatch</span><span class="sxs-lookup"><span data-stu-id="b11b8-102">System.ServiceModel.Channels.MsmqEnteredBatch</span></span>
+<span data-ttu-id="b11b8-103">System.ServiceModel.Channels.MsmqEnteredBatch</span><span class="sxs-lookup"><span data-stu-id="b11b8-103">System.ServiceModel.Channels.MsmqEnteredBatch</span></span>  
   
-## <a name="description"></a><span data-ttu-id="658b7-104">描述</span><span class="sxs-lookup"><span data-stu-id="658b7-104">Description</span></span>  
- <span data-ttu-id="658b7-105">MSMQ 已进入批处理模式。</span><span class="sxs-lookup"><span data-stu-id="658b7-105">MSMQ has entered batching mode.</span></span>  
+## <a name="description"></a><span data-ttu-id="b11b8-104">描述</span><span class="sxs-lookup"><span data-stu-id="b11b8-104">Description</span></span>  
+ <span data-ttu-id="b11b8-105">MSMQ 已进入批处理模式。</span><span class="sxs-lookup"><span data-stu-id="b11b8-105">MSMQ has entered batching mode.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="658b7-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="658b7-106">See Also</span></span>  
- [<span data-ttu-id="658b7-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="658b7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="658b7-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="658b7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="658b7-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="658b7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b11b8-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="b11b8-106">See Also</span></span>  
+ [<span data-ttu-id="b11b8-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="b11b8-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b11b8-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="b11b8-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b11b8-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="b11b8-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

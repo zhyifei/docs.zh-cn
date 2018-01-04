@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c520874cbe267c418acbbf532f80416442869a12
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 23109551be8ac02f48c563d358a978140eef45ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstopped"></a><span data-ttu-id="ea11d-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped</span><span class="sxs-lookup"><span data-stu-id="ea11d-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped</span></span>
-<span data-ttu-id="ea11d-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped</span><span class="sxs-lookup"><span data-stu-id="ea11d-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstopped"></a><span data-ttu-id="a5736-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped</span><span class="sxs-lookup"><span data-stu-id="a5736-102">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped</span></span>
+<span data-ttu-id="a5736-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped</span><span class="sxs-lookup"><span data-stu-id="a5736-103">System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ea11d-104">描述</span><span class="sxs-lookup"><span data-stu-id="ea11d-104">Description</span></span>  
- <span data-ttu-id="ea11d-105">ServiceModelInitializer 已停止所配置的服务。</span><span class="sxs-lookup"><span data-stu-id="ea11d-105">The ServiceModelInitializer has stopped the configured services.</span></span>  
+## <a name="description"></a><span data-ttu-id="a5736-104">描述</span><span class="sxs-lookup"><span data-stu-id="a5736-104">Description</span></span>  
+ <span data-ttu-id="a5736-105">ServiceModelInitializer 已停止所配置的服务。</span><span class="sxs-lookup"><span data-stu-id="a5736-105">The ServiceModelInitializer has stopped the configured services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea11d-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ea11d-106">See Also</span></span>  
- [<span data-ttu-id="ea11d-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="ea11d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ea11d-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="ea11d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ea11d-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="ea11d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a5736-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="a5736-106">See Also</span></span>  
+ [<span data-ttu-id="a5736-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="a5736-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a5736-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="a5736-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a5736-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="a5736-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
