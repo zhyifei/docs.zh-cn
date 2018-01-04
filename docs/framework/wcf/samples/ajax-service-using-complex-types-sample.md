@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d071bf182fb231b08f397db163059fda730fca21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5af5840dde2cb72ee6b39b75ece3606e3c58b32b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>使用复杂类型的 AJAX 服务示例
 此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 来创建 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务，此服务创建复杂类型的实例并将这些实例作为 JavaScript 对象表示法 (JSON) 在服务和客户端之间发送。 可以从 Web 浏览器客户端使用 JavaScript 代码来访问 AJAX 服务。 此示例基于[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例。  
@@ -76,5 +77,5 @@ function onSuccess(mathResult){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

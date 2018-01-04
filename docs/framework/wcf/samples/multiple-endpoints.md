@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6595184219ac87ef1d490308bcd927f57fa0a3ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87846ca624b557f39bcb61d467a270779f399f6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-endpoints"></a>多终结点
 此多终结点示例演示如何在服务上配置多个终结点，以及如何从客户端与每个终结点通信。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 已经对服务配置进行了修改以定义两个支持 `ICalculator` 协定的终结点，但是这两个终结点位于使用不同绑定的不同地址。 已经对客户端配置和代码进行了修改，以便与这两个服务终结点均进行通信。  
@@ -128,4 +129,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

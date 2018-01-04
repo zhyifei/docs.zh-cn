@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c66c55cc9872871a8b29cff6e027fc5d2e410f48
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc1e17d027aece31bf6313a23799dc2d18af3ee7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iis-hosting-using-inline-code"></a>使用内联代码的 IIS 承载
 此示例演示如何实现由 Internet 信息服务 (IIS) 承载的服务，该服务的服务代码以内联方式包含在一个 .svc 文件中，并且可以按需编译。 服务代码还可以直接在源代码文件（位于应用程序的 \App_Code 目录中）中实现，也可以编译为 \bin 中所部署的程序集。 此示例不演示这些技术。  
@@ -103,5 +104,5 @@ Press <ENTER> to terminate client.
   
 4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 有关如何创建可调用此服务的客户端应用程序的示例，请参阅[如何： 创建客户端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18d133b8eb5bef9e6e9152ef856265c1cbe18b51
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f7a3c4adb1a72a31029da7f73778a5ed407b2f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 客户端中的数据绑定
 本示例演示如何在 Web 窗体应用程序中绑定由典型 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务返回的数据。  
@@ -48,4 +49,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

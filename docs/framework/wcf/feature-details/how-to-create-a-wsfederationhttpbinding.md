@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f03734babf27ac4350580e7bed03645f3049c956
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>如何：创建 WSFederationHttpBinding
 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]、<xref:System.ServiceModel.WSFederationHttpBinding>类 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)配置中) 提供了用于公开联合的服务的机制。 即，服务要求客户端使用安全令牌服务颁发的安全令牌进行身份验证。 本主题演示如何通过代码和配置来设置 <xref:System.ServiceModel.WSFederationHttpBinding>。 绑定一经创建，您就可以设置一个终结点来使用该绑定。  
@@ -114,7 +115,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_FederationBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federationbinding/cs/source.cs#2)] 
  [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
- [联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)  
- [联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [如何： 禁用安全会话在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+## <a name="see-also"></a>请参阅  
+ [联合](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [如何：在 WSFederationHttpBinding 上禁用安全会话](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

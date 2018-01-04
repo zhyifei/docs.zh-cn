@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9330173461509bed7128f461a05a6a35b26f43f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b17fa7da04cd0787577b419c1c9fa3dfc0bc733d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlserializer-faults"></a>XMLSerializer 错误
 <xref:System.Xml.Serialization.XmlSerializer> 错误协定示例演示如何使用 <xref:System.Xml.Serialization.XmlSerializer> 将错误信息从服务传达到客户端。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，使用的一些其他代码添加到服务，以将内部异常转换为错误。 客户端试图执行除数为零的运算以在服务上强制产生错误情况。  
@@ -66,6 +67,6 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\XmlSerializerFaults`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.XmlSerializerFormatAttribute>  
  <xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A>

@@ -18,11 +18,12 @@ caps.latest.revision: "42"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9a6ba021688094afcbbb176cf03fb3e4b4c10df7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindings-and-security"></a>绑定与安全
 包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的系统提供的绑定提供了一种编写 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的快捷方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  
@@ -204,10 +205,10 @@ ms.lasthandoff: 11/21/2017
 |`WSHttpBinding`|是|是|是|  
 |`WSDualHttpBinding`|No|是|No|  
 |`NetTcpBinding`|是|是|是|  
-|`NetNamedPipeBinding`|是|No|No|  
+|`NetNamedPipeBinding`|是|No|否|  
 |`NetMsmqBinding`|是|是|No|  
-|`MsmqIntegrationBinding`|是|No|No|  
-|`wsFederationHttpBinding`|No|是|是|  
+|`MsmqIntegrationBinding`|是|No|否|  
+|`wsFederationHttpBinding`|否|是|是|  
   
 ## <a name="transport-credentials-in-bindings"></a>绑定中的传输凭据  
  下表列出了在传输安全模式下使用 `BasicHttpBinding` 或 `WSHttpBinding` 时可用的客户端凭据类型。  
@@ -233,9 +234,9 @@ ms.lasthandoff: 11/21/2017
 |证书|允许服务要求使用证书对客户端进行身份验证。|  
 |IssuedToken|允许服务使用安全令牌服务来提供自定义令牌。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  

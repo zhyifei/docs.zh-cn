@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb609857dbe3aaee0014e284d80af3b93ac395e5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 007ce7eeae6022255ad1b31921e14e0518d72bee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-debug-behavior"></a>服务调试行为
 本示例演示如何配置服务调试行为设置。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，该类实现`ICalculator`服务协定。 本示例在配置文件中显式定义服务调试行为。 也可以在代码中强制完成此操作。  
@@ -69,4 +70,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

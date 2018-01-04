@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60a1c89375ac7ce9bdefaa051b51ac50be861903
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d56b6c1392c618581790f47ab978c67a6ce0187e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>如何：设置 Windows 窗体面板的背景
 Windows 窗体<xref:System.Windows.Forms.Panel>控件可以显示背景色和背景图像。 <xref:System.Windows.Forms.Control.BackColor%2A>属性设置为包含的控件，如标签和单选按钮的背景色。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>未设置属性，<xref:System.Windows.Forms.Control.BackColor%2A>选择将填充整个面板。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>属性设置，则将在包含控件的后面显示的图像。  
@@ -77,7 +78,7 @@ Windows 窗体<xref:System.Windows.Forms.Panel>控件可以显示背景色和背
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Control.BackColor%2A>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
  [Panel 控件](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  

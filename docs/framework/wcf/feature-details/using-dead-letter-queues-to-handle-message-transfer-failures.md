@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd717b24eaf161145249e175425bd5296f3ef727
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用死信队列处理消息传输故障
 排队消息可能传送失败。 这些失败的消息将记录在死信队列中。 传送失败可能是由于网络故障、队列已删除、队列已满、身份验证失败或未能准时传送等原因而引起的。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/02/2017
   
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [如何： 交换排队消息的 WCF 终结点](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+ [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [有害消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

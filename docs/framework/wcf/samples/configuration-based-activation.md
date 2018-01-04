@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc39a282cbb12b014c0749b3eb807f3248fca16e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d520a46bc3380fc5dff76f5df866ae3411d5a6a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-based-activation"></a>基于配置的激活
 此示例演示如何在不需要 .svc 文件的情况下激活 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务。  
@@ -88,5 +89,5 @@ ms.lasthandoff: 12/02/2017
   
 4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

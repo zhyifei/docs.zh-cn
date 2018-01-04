@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 261d6e41ca79ca245b104513a92306ab8833c905
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-schema-reference"></a>数据协定架构参考
 本主题介绍 <xref:System.Runtime.Serialization.DataContractSerializer> 用来描述 XML 序列化的公共语言运行库 (CLR) 类型的 XML 架构 (XSD) 的子集。  
@@ -691,7 +692,7 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  

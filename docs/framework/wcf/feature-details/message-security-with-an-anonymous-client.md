@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8c10c9d4838a2b6c9d3a021d22d2dfd4dc865da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名客户端的消息安全
 下面的方案演示通过 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息安全进行保护的客户端和服务。 设计目标是使用消息安全而非传输安全，以便将来可支持更加丰富的基于声明的模型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用丰富的声明进行授权，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
@@ -141,9 +142,9 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [分布式应用程序安全](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [匿名消息安全](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
  [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

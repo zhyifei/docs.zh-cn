@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c08d57f36d733312793ab9de1699b83a1e22ce31
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8ba5d49f357fe1cf56a45f733e91c1dbc2208736
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-activities"></a>消息传递活动
 消息传递活动使工作流能够发送和接收 WCF 消息。 通过将消息传递活动添加到工作流，您可以对任意复杂的消息交换模式 (MEP) 进行建模。  
@@ -113,6 +114,6 @@ Request = rcv
 ## <a name="messaging-activities-and-transactions"></a>消息传递活动和事务  
  调用工作流服务时，您可能希望将事务流动到服务操作中。 为此，请将 <xref:System.ServiceModel.Activities.Receive> 活动放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动中。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动包含 `Receive` 活动和主体。 流向服务的事务在执行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 的主体的整个过程中保持为环境事务。 事务在执行完主体后完成。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工作流和事务，请参阅[工作流事务](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何发送和接收工作流服务中的错误](http://go.microsoft.com/fwlink/?LinkId=189151)  
- [创建长时间运行工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
+ [创建长时间运行的工作流服务](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)

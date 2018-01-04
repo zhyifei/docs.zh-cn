@@ -25,11 +25,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0fe122f509890715c398bef728a98ff874b61817
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e892ce1ecea450e9c3bf300283492913cdb80e07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>如何：为 Windows 窗体 RichTextBox 控件设置字体特性
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件具有许多选项用于格式设置所显示的文本。 你可以将所选的字符加粗、 带下划线，或斜体，使用<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>属性。 也可以使用此属性来更改所选字符的大小和字样。 <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>属性使您能够更改所选的字符的颜色。  
@@ -63,7 +64,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件具有许多选项用
     > [!NOTE]
     >  这些属性只影响所选的文本，如果未选择文本，则只影响当前插入点位置处键入的文本。 有关以编程方式选择文本的信息，请参阅<xref:System.Windows.Forms.TextBoxBase.Select%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

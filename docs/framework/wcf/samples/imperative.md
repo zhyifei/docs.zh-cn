@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c70ee1f96804f113ab884e48ed63a695acaa6581
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf618fe26c5635277ca9274cae0232c1d2c54f67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imperative"></a>命令性
 此示例演示如何定义 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 使用代码，而不定义为服务`wsHttpBinding`中配置的绑定。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -104,4 +105,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Imperative`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

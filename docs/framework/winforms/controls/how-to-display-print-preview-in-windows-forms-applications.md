@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e705575b8c3acdcc3d92b985c59b60e7310dce7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2567a564b5769abd91d34696c1a94c21ad2913ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>如何：在 Windows 窗体应用程序中显示打印预览
 你可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控件使用户能够通常显示文档时，才要打印它。  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/21/2017
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [PrintDocument 组件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
  [PrintPreviewDialog 控件](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
  [Windows 窗体打印支持](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  

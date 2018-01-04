@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 802cc501b695f6c5cfe990bf72a4d9d2af68ba2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f2c5a16ea1f07f7688c9df14bdb6b29350f3acf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 控件的最佳做法
 <xref:System.Windows.Forms.TableLayoutPanel>控件提供了强大的布局功能，应在 Windows 窗体上使用之前应该认真考虑。  
@@ -65,6 +66,6 @@ ms.lasthandoff: 11/21/2017
 ### <a name="avoid-visual-inheritance"></a>避免 Visual 继承  
  <xref:System.Windows.Forms.TableLayoutPanel>控件不支持在 Windows 窗体设计器 visual 继承。 A<xref:System.Windows.Forms.TableLayoutPanel>为"已锁定"在设计时，将出现在派生类中的控件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  <xref:System.Windows.Forms.FlowLayoutPanel>

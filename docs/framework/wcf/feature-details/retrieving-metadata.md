@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e41a3cc65df5576c538864aa9e1fe1aacbe7e94
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bfc96c585ba55fbf63283d7cb23fae5b364b0465
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-metadata"></a>检索元数据
 元数据检索是从元数据终结点（如 WS-MetadataExchange (MEX) 元数据终结点或 HTTP/GET 元数据终结点）请求和检索元数据的过程。  
@@ -32,14 +33,14 @@ ms.lasthandoff: 12/02/2017
  默认情况下，<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 实例与单个 <xref:System.ServiceModel.ChannelFactory> 实例关联。 通过重写 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 虚拟方法，您可以更改或替换由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> 实例。 同样，通过重写 <xref:System.Net.HttpWebRequest> 虚拟方法，可以更改或替换由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> 实例以发出 HTTP/GET 请求。  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何： 使用 Svcutil.exe 下载元数据文档](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
+ [如何：使用 Svcutil.exe 下载元数据文档](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
  演示如何使用 Svcutil.exe to 下载元数据文档。  
   
- [如何： 使用 MetadataResolver 动态获取绑定元数据](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ [如何：使用 MetadataResolver 动态获取绑定元数据](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
  演示如何使用 <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> 在运行时动态获取绑定元数据。  
   
- [如何： 使用 MetadataExchangeClient 检索元数据](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
+ [如何：使用 MetadataExchangeClient 检索元数据](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
  演示如何使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 类将元数据文件下载到包含要写入到文件或用于其他用途的 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> 对象的 <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> 对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.MetadataExchangeClient>

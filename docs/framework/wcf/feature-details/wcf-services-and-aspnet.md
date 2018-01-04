@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efa21ed4781cf635c5b49ebda9b13711a032e981
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be497a1b12164fcca66314921e14d22bb96c20b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 服务和 ASP.NET
 本主题讨论如何与 ASP.NET 并行承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务以及在 ASP.NET 兼容模式中承载它们。  
@@ -110,6 +111,6 @@ ms.lasthandoff: 12/02/2017
   
  有关启用 ASP.NET 兼容模式的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务，请参阅<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode>和[ASP.NET 兼容性](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  
  [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)

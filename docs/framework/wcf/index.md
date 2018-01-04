@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 184a5b8eeafd68907c76655cfed82634de106185
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b21dc040cc464495c06e8c824354563307622ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>用 WCF 开发面向服务的应用程序
 本文档的此节提供有关 Windows Communication Foundation (WCF) 的信息，WCF 是用于构建面向服务的应用程序的统一编程模型。 借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。

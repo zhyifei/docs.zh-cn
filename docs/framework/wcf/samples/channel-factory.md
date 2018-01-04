@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4cd56f9f8f40e9eace71e99624fc2503f3a39047
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f5fb22c329bf7b27c32f05a2d8e41734723f53b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-factory"></a>通道工厂
 此示例演示客户端应用程序如何使用 <xref:System.ServiceModel.ChannelFactory> 类而不是生成的客户端创建通道。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -91,4 +92,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ChannelFactory`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08c722ad9256f16ead8947e793e64cef9763c512
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94ff7c693824e721b17c79b921f4380dba7d04e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scenario"></a>方案
 本节包含演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 方案的示例。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/02/2017
  [发现安全示例](../../../../docs/framework/wcf/samples/discovery-security-sample.md)  
  演示如何实现自定义通道，这些通道计算和验证使用精简签名格式（在 WS-Discovery 规范的 8.2 节中进行了介绍）的消息签名。  
   
- [联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)  
  演示联合安全。  
   
  [弱类型 JSON 序列化 (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)  
@@ -38,5 +39,5 @@ ms.lasthandoff: 12/02/2017
  [受信任的外观服务](../../../../docs/framework/wcf/samples/trusted-facade-service.md)  
  演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全基础结构使调用方的标识信息从一个服务流到另一个服务。  
   
- [设计模式： 基于列表的发布-订阅](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
+ [设计模式：基于列表的发布-订阅](../../../../docs/framework/wcf/samples/design-patterns-list-based-publish-subscribe.md)  
  演示作为 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 程序实现的基于列表的发布-订阅模式。

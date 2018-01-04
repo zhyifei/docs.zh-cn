@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: afc1e0def03040acaa5cffe3f67339a61cda7d5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e778b48b3ff00c3053992f8e754f674cd7705ece
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-with-a-certificate-client"></a>使用证书客户端的消息安全
 下面的方案演示使用消息安全模式保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。 使用证书对客户端和服务进行身份验证。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
@@ -153,7 +154,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  

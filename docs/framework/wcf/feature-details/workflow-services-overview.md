@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df3f52ef7b3620b67a00cf4f5eb731a4d0b98208
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-services-overview"></a>工作流服务概述
 工作流服务是使用工作流实现的基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的服务。 工作流服务是使用消息传递活动发送和接收 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息的工作流。 .NET Framework 4.5 引入了多个消息传递活动，可用于从工作流中发送和接收消息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]消息传递活动以及如何使用它们来实现不同的消息交换模式，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  

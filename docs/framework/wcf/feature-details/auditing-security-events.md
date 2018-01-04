@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 933f62e1921fe12255965567bbec0faf651e0ba2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="auditing-security-events"></a>审核安全事件
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建的应用程序可以利用审核功能来记录安全事件（成功、失败或两者）。 这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  
@@ -107,12 +108,12 @@ ms.lasthandoff: 11/21/2017
 |审核策略管理|不适用。|除配置以外，Security 日志还受到本地安全机构 (LSA) 策略的控制。 还必须启用“审核对象访问”类别。|  
 |默认用户体验|所有通过身份验证的用户都可以写入 Application 日志，因此对于应用程序进程，不需要执行其他权限步骤。|应用程序进程（上下文）必须具有 `SeAuditPrivilege`。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  <xref:System.ServiceModel.AuditLogLocation>  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [如何： 审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [如何：审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

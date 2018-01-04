@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4284f07a21a9bb176a78a8a2abefe7c7c7c6b66
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ab2e105c9055760bbeaeef5e56a8cb18c538306
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>扩展对错误处理和错误报告的控制
 此示例演示如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务中使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口对错误处理和错误报告进行扩展控制。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)使用的一些其他代码添加到服务来处理错误。 客户端强制实施若干个错误条件。 服务将截获这些错误并将其记录到某个文件中。  
@@ -59,7 +60,7 @@ public class CalculatorErrorHandler : IErrorHandler
     }  
 ```  
   
- `ErrorBehaviorAttribute` 作为一种向服务注册错误处理程序的机制存在。 此属性采取单一类型的参数。 该类型应实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，还应具有一个公用的空构造函数。 该属性随后实例化该错误处理程序类型的实例，并将其安装到该服务中。 实现此操作的方法是，实现 <xref:System.ServiceModel.Description.IServiceBehavior> 接口，然后使用 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 方法将错误处理程序的实例添加到该服务。  
+ `ErrorBehaviorAttribute` 作为一种向服务注册错误处理程序的机制存在。 此属性采取单一的类型参数。 该类型应实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，还应具有一个公用的空构造函数。 该属性随后实例化该错误处理程序类型的实例，并将其安装到该服务中。 实现此操作的方法是，实现 <xref:System.ServiceModel.Description.IServiceBehavior> 接口，然后使用 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 方法将错误处理程序的实例添加到该服务。  
   
 ```  
 // This attribute can be used to install a custom error handler for a service.  
@@ -106,7 +107,7 @@ public class ErrorBehaviorAttribute : Attribute, IServiceBehavior
 }  
 ```  
   
- 该示例实现计算器服务。 客户端通过提供具有非法值的参数，使该服务故意出现两个错误。 `CalculatorErrorHandler` 使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口将这些错误记录到某个本地文件，然后允许将这些错误报告回客户端。 客户端强制执行除以零的除法运算和参数超出范围的情况。  
+ 该示例实现计算器服务。 客户端通过提供具有非法值的参数，使该服务故意出现两个错误。 `CalculatorErrorHandler` 使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口将这些错误记录到某个本地文件，然后允许将这些错误报告回客户端。 客户端强制执行除以零的除法运算和自变量超出范围的情况。  
   
 ```  
 try  
@@ -168,4 +169,4 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

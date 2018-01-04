@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: cc6a6caca730e61e1de9f6d6e3ab141743442f9b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c8bb8d0506dd535a312bd8df8954c8143d9543ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-windows"></a>Windows 消息安全
 本示例演示如何将 <xref:System.ServiceModel.WSHttpBinding> 绑定配置为使用具有 Windows 身份验证的消息级安全性。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在此示例中，服务由 Internet 信息服务 (IIS) 承载，客户端是一个控制台应用程序 (.exe)。  
@@ -90,4 +91,4 @@ public string GetCallerIdentity()
   
 3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

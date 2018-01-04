@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad7dcaee93385d2409c2255a6f0bd950bd2f9821
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6c44bc03642eb83a28497b320a77b2f9f8c6fb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>如何：在代码中指定客户端绑定
 在本示例中，创建了一个使用计算器服务的客户端，并在代码中以强制方式指定该客户端的绑定。 该客户端访问实现了 `CalculatorService` 接口的 `ICalculator`，并且服务和客户端都使用 <xref:System.ServiceModel.BasicHttpBinding> 类。  
@@ -56,5 +57,5 @@ ms.lasthandoff: 12/02/2017
   
 5.  编译并运行客户端。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

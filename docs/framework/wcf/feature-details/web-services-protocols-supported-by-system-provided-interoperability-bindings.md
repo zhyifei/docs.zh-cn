@@ -17,11 +17,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1cc61b1b777de7149b8f12c0b2f6030b305a73c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系统提供的互操作性绑定支持的 Web 服务协议
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以与 Web 服务进行互操作，它支持一组称为 Web 服务规范的规范。 为了简化互操作性最佳做法的服务配置，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 引入三个可互操作的系统提供绑定：<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>、<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 和 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 对于与结构化信息标准促进组织 (OASIS) 标准的互操作性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括一个可互操作的系统提供绑定：<xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 对于元数据发布，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]包括两个可互操作的系统提供绑定： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主题列出系统提供的可互操作绑定支持的规范。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
 |类别|协议|规范和用法|  
 |--------------|--------------|-----------------------------|  
 |传输|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`、`WSHttpBinding` 和 `WS2007HttpBinding` 使用 HTTP 和 HTTPS 传输。|  
-|消息传送|MTOM|[MTOM](http://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`、`wsHttpBinding` 和 `ws2007HttpBinding` 支持消息传输优化机制 (MTOM)。 默认情况下不使用。 若要使用 MTOM，请将 `messageEncoding` 属性设置为 `"Mtom"`。<br /><br /> 示例:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
+|消息|MTOM|[MTOM](http://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`、`wsHttpBinding` 和 `ws2007HttpBinding` 支持消息传输优化机制 (MTOM)。 默认情况下不使用。 若要使用 MTOM，请将 `messageEncoding` 属性设置为 `"Mtom"`。<br /><br /> 示例:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
 |元数据|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 Web 服务描述语言 (WSDL) 描述服务。|  
 |元数据|WS-Policy|[WS 策略](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WS-Policy 规范和特定于域的断言描述服务要求和功能。|  
 |元数据|WS-Policy 1.5|[Ws-policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 WS-Policy 规范和特定于域的断言描述服务要求和功能。|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 |类别|协议|规范和用法|  
 |--------------|--------------|-----------------------------|  
-|消息传送|SOAP 1.1|[SOAP 1.1](http://go.microsoft.com/fwlink/?LinkId=90520)<br /><br /> `basicHttpBinding` 元素根据基本配置文件 1.1 实现 SOAP 1.1 消息协议。|  
+|消息|SOAP 1.1|[SOAP 1.1](http://go.microsoft.com/fwlink/?LinkId=90520)<br /><br /> `basicHttpBinding` 元素根据基本配置文件 1.1 实现 SOAP 1.1 消息协议。|  
 |安全性|WSS SOAP Message Security 1.0（WSS SOAP 消息安全 1.0）|[WSS SOAP 消息安全 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> `basicHttpBinding` 元素根据基本安全配置文件为用户名/密码和基于 X.509 的安全实现 Web 服务安全 (WSS) SOAP 消息安全 1.0 规范。<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
 |安全性|WSS SOAP 消息安全用户名令牌配置文件 1.0|[WSS SOAP 消息安全用户名令牌配置文件 1.0](http://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential"> <transport clientCredentialType="Basic"/> </security> </basicHttpBinding>`|  
 |安全性|WSS SOAP 消息安全 X.509 证书令牌配置文件 1.0|[WSS SOAP 消息安全 X.509 证书令牌配置文件 1.0](http://go.microsoft.com/fwlink/?LinkId=95335)<br /><br /> `<basicHttpBinding>   <security mode="Message"> <message clientCredentialType="Certificate"/> </security> </basicHttpBinding>`|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/02/2017
   
 |类别|协议|规范和用法|  
 |--------------|--------------|-----------------------------|  
-|消息传送|SOAP 1.2|[入门](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
+|消息|SOAP 1.2|[入门](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |消息|Ws-addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`、`ws2007HttpBinding` 和 `wsDualHttpBinding` 实现万维网联合会 (W3C) WS-Addressing 建议以启用异步消息传送、消息关联和非特定传输寻址机制。<br /><br /> WCF 不支持对 WS-Addressing 标头进行加密，尽管 WS-＊ 规范允许这样做。|  
 |消息传送|WS-Addressing 1.0 - 元数据|[Ws-addressing 1.0 元数据](http://www.w3.org/2007/05/addressing/metadata)通过将策略版本中 ServiceMetadata 行为的设置与 policyversion 设置为 1.2 （默认） 启用对此协议的支持，wsdl 说明是符合 Ws-addressing wsdl，使用将设置为 1.5 policyversion，wsdl 说明是符合 ws 寻址元数据。<br /><br /> WCF 不支持对 WS-Addressing 标头进行加密，尽管 WS-＊ 规范允许这样做。|  
 |安全性|WSS SOAP Message Security 1.0（WSS SOAP 消息安全 1.0）|[WSS SOAP 消息安全 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> 当 `securityMode` 属性设置为“wsSecurityOverHttp”（默认值）并使用 `wsSecurity` 子元素配置了参数时使用。<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
@@ -114,11 +115,11 @@ ms.lasthandoff: 12/02/2017
 |类别|协议|规范和用法|  
 |--------------|--------------|-----------------------------|  
 |传输|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> 启用传输安全。|  
-|消息传送|SOAP 1.2|[入门](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
+|消息|SOAP 1.2|[入门](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |消息|Ws-addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
 |元数据|WS-MetadataExchange|[Ws-metadataexchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WS-MetadataExchange 以检索 XML 架构、WSDL 和 WS-Policy。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
  [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  

@@ -13,17 +13,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 541ddbcdaefc14c3b9915186761a7842959cd91e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 867d80ed54f4ee64f87938ac9af89e3e3b198d8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web"></a>Web
 本节包含 Web 承载的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [高级的格式选择](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
+ [高级格式选择](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
  演示如何扩展 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 编程模型以支持新的传出响应格式。  
   
  [自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
  [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)  
  演示如何使用 ASP.NET 路由来承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 服务。  
   
- [条件 Get 和 Put](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
+ [有条件的 Get 和 Put](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
  演示如何将新的条件检索和更新 API 用于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 编程模型。  
   
  [SOAP 和 HTTP 终结点](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  

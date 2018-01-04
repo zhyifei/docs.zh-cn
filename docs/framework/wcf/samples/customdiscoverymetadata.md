@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b4a68204d8ae5d2a338d60498522810a557e575
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2e13fde338075d9ef16c205efcfcb452235f0af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customdiscoverymetadata"></a>CustomDiscoveryMetadata
 此示例演示如何在发现元数据中针对服务公开的可发现终结点插入自定义 XML 元数据。 示例随后演示客户端如何搜索服务和提取此自定义数据。 此示例由两个项目组成，即服务项目和客户端项目。  
@@ -45,4 +46,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DiscoveryExtensibility\CustomDiscoveryMetadata`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

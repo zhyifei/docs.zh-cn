@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 556f38ac6cbc3f4f279d238c592da2c72d84264f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0df22d32d1ccb1cf6f64a7b44c73293cefb2a2fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-binding-imperative"></a>自定义绑定命令
 本示例演示如何在不使用配置文件或 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 生成的客户端的情况下，编写命令性代码来定义和使用自定义绑定。 本示例将 HTTP 传输提供的功能与可靠会话通道结合在一起，用于创建基于 HTTP 的可靠绑定。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -90,5 +91,5 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Custom\Imperative`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义绑定](http://msdn.microsoft.com/en-us/657e8143-beb0-472d-9cfe-ed1a19c2ab08)

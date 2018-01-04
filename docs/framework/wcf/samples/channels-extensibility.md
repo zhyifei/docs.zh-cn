@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bcda7f9edc741e8f0c9c56214119255ca2777d77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 541770db6b9cc624fd08ab4db275bc63fa5deca9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channels-extensibility"></a>通道扩展性
 本节包含演示自定义通道的示例。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
  [自定义通道调度程序](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  
  演示如何通过直接实现 <xref:System.ServiceModel.ServiceHostBase> 以自定义方式生成通道堆栈，以及如何在 Web 主机环境中创建自定义通道调度程序。  
   
- [通道分块](../../../../docs/framework/wcf/samples/chunking-channel.md)  
+ [区块通道](../../../../docs/framework/wcf/samples/chunking-channel.md)  
  演示如何限制在使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发送大型消息时用于缓冲这些消息的内存占用量。  
   
  [HTTP 确认通道](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  

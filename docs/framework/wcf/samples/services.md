@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d68f1b6ecfb55a917dde97b395b4455930565409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: edfd0670d951a07526454bc380cee91c66e4e7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services"></a>服务
 本节包含演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的示例。  
@@ -32,19 +33,19 @@ ms.lasthandoff: 12/02/2017
  [行为](../../../../docs/framework/wcf/samples/behaviors.md)  
  演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务行为。  
   
- [服务安全](../../../../docs/framework/wcf/samples/service-security.md)  
+ [服务安全性](../../../../docs/framework/wcf/samples/service-security.md)  
  演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务安全。  
   
- [WCF 服务的简化的配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
+ [WCF 服务的简化配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
  演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现和配置典型服务和客户端。  
   
- [标准用法](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
+ [标准终结点的使用情况](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  演示如何在服务配置文件中使用标准终结点。  
   
  [分层配置模型](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
  演示如何实现服务配置文件的层次结构。  
   
- [扩展的保护策略](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
+ [扩展保护策略](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
  演示扩展保护，这是一种针对中间人 (MITM) 攻击而提供保护的安全计划。  
   
  [配置通道工厂](../../../../docs/framework/wcf/samples/configuration-channel-factory.md)  
@@ -59,10 +60,10 @@ ms.lasthandoff: 12/02/2017
  [多个协定](../../../../docs/framework/wcf/samples/multiple-contracts.md)  
  演示如何在一个服务上实现多个协定和如何配置终结点以便与每个实现的协定通信。  
   
- [多个终结点](../../../../docs/framework/wcf/samples/multiple-endpoints.md)  
+ [多终结点](../../../../docs/framework/wcf/samples/multiple-endpoints.md)  
  演示如何在一个服务上配置多个终结点，以及如何从客户端与每个终结点通信。  
   
- [在单个 listenuri 中承载的多个终结点](../../../../docs/framework/wcf/samples/multiple-endpoints-at-a-single-listenuri.md)  
+ [在单个 ListenUri 中承载多个终结点](../../../../docs/framework/wcf/samples/multiple-endpoints-at-a-single-listenuri.md)  
  演示一个在单个 `ListenUri` 中承载多个终结点的服务。  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  

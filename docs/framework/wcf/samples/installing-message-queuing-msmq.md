@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a7ee646c2f6b20410c493ee139f08d11fc55d54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: de9b67390d1260b5de26c146bd5afec7cfff4c42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installing-message-queuing-msmq"></a>安装“消息队列 (MSMQ)”
 以下过程介绍如何安装“消息队列 4.0”和“消息队列 3.0”。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
     -   MSMQ HTTP 支持。  
   
-4.  单击“确定”。  
+4.  单击 **“确定”**。  
   
 5.  如果系统提示您重新启动计算机时，请单击**确定**以完成安装。  
   
@@ -72,5 +73,5 @@ ms.lasthandoff: 12/02/2017
   
 6.  如果系统提示您重新启动计算机时，请单击**确定**以完成安装。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置说明](../../../../docs/framework/wcf/samples/set-up-instructions.md)
