@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0c1b3e921714d104ab2bb5018184a9517c7ad345
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 431226f8ce56300f83df64a713b477f0065e2f56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-exceptions"></a>安全异常
 本主题列出所有安全异常。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 |CannotFindNegotiationState|无法找到指定上下文的协商状态。|  
 |CannotFindSecuritySession|无法找到具有指定 ID 的安全会话。|  
 |CannotImportProtectionLevelForContract|用于导入进程的策略无法为指定协定导入绑定。 该绑定的保护要求与已经为该协定导入的绑定不兼容。 必须重新配置该绑定。|  
-|CannotImportSupportingTokensForOperationWithoutRequestAction|安全策略导入失败。 该安全策略的操作作用域中包含支持令牌要求。 协定描述没有为此操作相关联的请求消息指定操作。|  
+|CannotImportSupportingTokensForOperationWithoutRequestAction|安全策略导入失败。 该安全策略的操作作用域中包含支持令牌需求。 协定描述没有为此操作相关联的请求消息指定操作。|  
 |CannotIssueRstTokenType|无法颁发指定类型的令牌。|  
 |CannotObtainIssuedTokenKeySize|无法确定已颁发令牌的密钥大小。|  
 |CannotPerformImpersonationOnUsernameToken|不可能使用客户端令牌进行模拟。 指定协定的指定绑定将用户名安全令牌用于注册了成员资格提供程序的客户端身份验证。 对该客户端使用不同类型的安全令牌。|  
@@ -122,7 +123,7 @@ ms.lasthandoff: 10/18/2017
 |SecurityAuditFailToLoadDll|指定动态链接库 (dll) 加载失败。|  
 |SecurityAuditNotSupportedOnChannelFactory|通道工厂上不支持 SecurityAuditBehavior。|  
 |SecurityAuditPlatformNotSupported|当前平台不支持将审核消息写入安全日志。 必须将审核消息写入应用程序日志。|  
-|SecurityBindingElementCannotBeExpressedInConfig|为终结点导入安全策略。 安全策略包含 Windows Communication Foundation 配置上未描述的要求。 查找生成的配置文件中所需的 SecurityBindingElement 参数的有关注释。 使用代码创建正确的绑定元素。 配置文件中的绑定配置不安全。|  
+|SecurityBindingElementCannotBeExpressedInConfig|为终结点导入安全策略。 安全策略包含 Windows Communication Foundation 配置上未描述的需求。 查找生成的配置文件中所需的 SecurityBindingElement 参数的有关注释。 使用代码创建正确的绑定元素。 配置文件中的绑定配置不安全。|  
 |SecurityBindingSupportsOneWayOnly|指定协定的指定绑定的 SecurityBinding 仅支持 OneWay 操作。|  
 |SecurityContextDoesNotAllowImpersonation|无法启动模拟，因为具有指定操作的请求消息中 UltimateReceiver 角色的 SecurityContext 未映射到 Windows 标识。|  
 |SecurityListenerClosing|侦听器未接受新的安全对话，因为其正在关闭。|  

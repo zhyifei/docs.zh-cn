@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ced290c0644fcf89fdf3f87778e705794164b0f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-framework"></a>服务框架
 本主题列出由服务框架数据生成的所有异常。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/02/2017
 |SFxCannotImportAsParameters_DifferentWrapperNs|正在生成消息协定，因为指定消息的包装命名空间与默认值不匹配。|  
 |SFxCannotImportAsParameters_ElementIsNotNillable|正在生成消息协定，因为指定命名空间中的指定元素名称未标记为 nillable。|  
 |SFxCannotImportAsParameters_HeadersAreUnsupported|正在生成消息协定，因为指定的消息具有标头。|  
-|SFxCannotImportAsParameters_Message|正在生成消息协定，因为指定的操作将非类型化消息作为参数或返回类型。|  
+|SFxCannotImportAsParameters_Message|正在生成消息协定，因为指定的操作将非类型化消息作为自变量或返回类型。|  
 |SFxCannotImportAsParameters_MessageHasProtectionLevel|正在生成消息协定，因为指定的消息需要保护。|  
 |SFxCannotImportAsParameters_NamespaceMismatch|正在生成消息协定，因为指定的消息部分命名空间与默认值不匹配。|  
 |SFxCannotRequireBothSessionAndDatagram3|指定的一个协定指定了 SessionMode.NotAllowed，指定的另一个协定指定了 SessionMode.Required。 应更改 SessionMode 值之一，或者为每个终结点指定其他地址（或 ListenUri）。|  

@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3f9834e99fb7fa98e2f986a1ce5460aa387143f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-performance-counters"></a>WCF 性能计数器
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 包含一个大型性能计数器集合，可帮助您衡量应用程序的性能。  
@@ -83,7 +84,7 @@ config.Save();
 ## <a name="types-of-performance-counters"></a>性能计数器的类型  
  性能计数器可分为三个不同级别：服务、终结点和操作。  
   
- 可以使用 WMI 检索性能计数器实例的名称。 例如，  
+ 可以使用 WMI 检索性能计数器实例的名称。 例如，应用于对象的  
   
 -   可以通过 WMI 获取服务计数器实例名称[服务](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)实例的"CounterInstanceName"属性。  
   
@@ -147,5 +148,5 @@ ServiceName@ServiceBaseAddress
   
  有关如何以编程方式访问计数器的详细信息，请参阅[性能计数器编程体系结构](http://go.microsoft.com/fwlink/?LinkId=95179)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)

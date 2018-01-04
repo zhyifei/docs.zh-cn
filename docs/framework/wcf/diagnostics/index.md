@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d26386a0669c92b1b21559474c8f5f61862e6de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="administration-and-diagnostics"></a>管理和诊断
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了一组丰富的功能，可帮助监视应用程序生命周期的不同阶段。 例如，您可以在部署时使用配置来设置服务和客户端。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一个大型性能计数器集合，可帮助您衡量应用程序的性能。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供程序在运行时公开服务的检测数据。 当应用程序出现错误或者开始错误操作时，可使用事件日志来了解是否有重大事件发生。 此外，还可以使用消息日志记录和跟踪来从头至尾查看应用程序中发生了哪些事件。 这些功能有助于开发人员和 IT 专业人员在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序运行不正常时进行故障诊断。  
@@ -49,10 +50,10 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供了多个 GUI 和命令行工具，以使创建、部署和管理 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序更加容易。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Communication Foundation 工具](../../../../docs/framework/wcf/tools.md)。 例如，你可以使用[配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)创建和编辑[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用向导，而不直接编辑 XML 的配置设置。 你还可以使用[服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)若要查看、 分组和筛选跟踪消息，以便可以诊断、 修复和验证问题[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务。  
   
-## <a name="see-also"></a>另请参阅  
- [配置你的应用程序](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
+## <a name="see-also"></a>请参阅  
+ [配置应用程序](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)  
  [部署服务](../../../../docs/framework/wcf/diagnostics/deploying-services.md)  
- [异常参考](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
+ [关于异常的参考信息](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)  
  [事件日志记录](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  

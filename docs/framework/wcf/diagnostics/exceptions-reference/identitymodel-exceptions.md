@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f38d09ef9b1ee2e620b42082a05c6832eec7c746
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 异常
 本主题列出 IdentityModel 生成的所有异常。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 12/02/2017
 |SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper &#124;大小超出范围。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全令牌管理器无法为特定需求创建令牌身份验证器。|  
 |UnableToCreateKeyedHashAlgorithm|无法从特定签名算法的特定值创建 KeyedHashAlgorithm。|  
 |SAMLUnableToLoadAssertion|\<Saml:assertion > 元素加载失败。|  
-|X509FindValueMismatchMulti|特定的 X509FindType 要求参数 findValue 的类型为两个值之一。 而参数 findValue 为另外的类型。|  
+|X509FindValueMismatchMulti|特定的 X509FindType 要求自变量 findValue 的类型为两个值之一。 而自变量 findValue 为另外的类型。|  
 |TraceCodeSecurityIdentityDeterminationSuccess|已确定 EndpointAddress 的身份。|  
 |UndefinedUseOfPrefixAtElement|元素使用的特定前缀未定义命名空间。|  
 |TraceCodeSecuritySessionResponderOperationFailure|服务器上安全会话操作失败。|  
@@ -135,7 +136,7 @@ ms.lasthandoff: 12/02/2017
 |AESCryptGetKeyParamFailed|获取特定的密钥参数失败。|  
 |InvalidNamespaceForEmptyPrefix|空前缀的命名空间无效。|  
 |AESCipherModeNotSupported|不支持特定的密码模式。 仅支持 CBC。|  
-|ArgumentCannotBeEmptyString|参数必须为非空字符串。|  
+|ArgumentCannotBeEmptyString|自变量必须为非空字符串。|  
 |SAMLAssertionMissingMinorVersionAttributeOnRead|缺少所读取的 SamlAssertion 的 MinorVersion 或其长度为 0。|  
 |SpecifiedStringNotAvailableInDictionary|指定的字符串不是当前字典中的项。|  
 |KerberosApReqInvalidOrOutOfMemory|AP-REQ 无效或系统没有足够内存。|  
@@ -190,7 +191,7 @@ ms.lasthandoff: 12/02/2017
 |SAMLUnableToLoadUnknownElement|选定的 SamlSerializer 无法反序列化此元素。 请注册自定义 SamlSerializer 来反序列化自定义元素。|  
 |CreateSequenceRefused|RM 目标已经拒绝创建顺序请求。|  
 |TraceCodeSecuritySessionRedirectApplied|已重定向客户端安全会话。|  
-|SecurityTokenRequirementDoesNotContainProperty|令牌要求不包含指定的属性。|  
+|SecurityTokenRequirementDoesNotContainProperty|令牌需求不包含指定的属性。|  
 |SAMLAttributeValueCannotBeNull|SamlAttribute 中找到的 attributeValues 之一为 Null 值。 请确保创建 SamlAttribute 时列表不为 Null。|  
 |ValueMustBeGreaterThanZero|此参数的值必须大于 0。|  
 |TraceCodeNegotiationAuthenticatorAttached|已附加 NegotiationTokenAuthenticator。|  
@@ -204,7 +205,7 @@ ms.lasthandoff: 12/02/2017
 |SAMLSubjectRequiresNameIdentifierOrConfirmationMethodOnRead|找不到所读取的 SamlSubject 所需的“NameIdentifier”和“ConfirmationMethod”元素。|  
 |TraceCodeSecurityAuditWrittenFailure|写入安全审核日志时出现错误。|  
 |UnsupportedCryptoAlgorithm|此上下文中不支持指定的加密算法。|  
-|SigningTokenHasNoKeysSupportingTheAlgorithmSuite|签名令牌没有支持指定算法组的密钥。|  
+|SigningTokenHasNoKeysSupportingTheAlgorithmSuite|签名令牌没有支持指定算法套件的密钥。|  
 |SAMLNameIdentifierMissingIdentifierValueOnRead|缺少所读取的 SamlNameIdentifier 的“Identifier”字符串。|  
 |SAMLSubjectStatementRequiresSubject|SAML 主题语句要求指定 SAML 主题。|  
 |TraceCodeSslClientCertMissing|远程 SSL 客户端无法提供所需的证书。|  
