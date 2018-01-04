@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 75c53e750ad031ccec944625be130547404767bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2c38561a804a331df102a600d4b0b0f6312aaa6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult 枚举
 根据所指示的两个程序集标识，等同性[CompareAssemblyIdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)函数。  
@@ -64,7 +65,7 @@ typedef enum _tagAssemblyComparisonResult {
 |`ACR_NonEquivalentVersion`|指示两个程序集匹配除其版本号，这不会匹配。|  
 |`ACR_Unknown`|指示不相等性的原因未知。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
@@ -73,6 +74,6 @@ typedef enum _tagAssemblyComparisonResult {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CompareAssemblyIdentity 函数](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
  [合成枚举](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

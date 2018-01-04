@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 32eb92263685bc3be9f0c28dea88ecfa78c2b52c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b7866270d8c9234a375401dfd05b504a06ddbf4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
 提供保证在首次加载，但尚未启动的公共语言运行时 (CLR) 版本时要调用的回调函数。 此方法取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函数。  
@@ -92,7 +93,7 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
 > [!NOTE]
 >  主机应用程序不能调用`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`的范围之外`pCallbackFunction`参数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
@@ -101,6 +102,6 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRMetaHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
  [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

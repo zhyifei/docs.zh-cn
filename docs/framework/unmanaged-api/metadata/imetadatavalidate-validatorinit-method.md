@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e2a9b265b4fcc75406f5d5f1dbddb8bd74b5832d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 26f5f6626766d7341ef5c8b2ecbe5e56a17eafdd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatavalidatevalidatorinit-method"></a>IMetaDataValidate::ValidatorInit 方法
 设置一个标志，该标志指定当前元数据范围内的模块类型，并注册验证错误的指定回调方法。  
@@ -46,7 +47,7 @@ HRESULT ValidatorInit (
  `pUnk`  
  [in]一个指向 <<!--zzxref:IUnknown --> `IUnknown`> 用作验证错误回调函数的实例。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -55,5 +56,5 @@ HRESULT ValidatorInit (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IMetaDataValidate 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

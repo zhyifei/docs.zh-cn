@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5144cd3ac261647c04ec7e3e27e28618c94fb439
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 366110eca3c4621866213b2c9fc4bcf99103d0a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck 枚举
 指定用于控制将哪些引用项转换为相应定义以优化代码的标志。  
@@ -50,12 +51,12 @@ typedef enum CorRefToDefCheck {
 |`MDTypeRefToDef`|指定类型引用仅应将转换为类型定义。|  
 |`MDMemberRefToDef`|指定应将仅成员引用转换的定义。 也就是说，成员引用应转换为方法的定义或字段定义。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [元数据枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅  
+ [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

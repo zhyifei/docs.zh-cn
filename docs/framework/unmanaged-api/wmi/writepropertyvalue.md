@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 26337a13ab9840b79c253d4af2d84a10e70877c5
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 7221c9e0f1cb49ab0e27130ce69c0527ba903148
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函数
 将指定的数目的字节写入由属性句柄识别的属性。
@@ -58,7 +59,7 @@ HRESULT WritePropertyValue (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | 出现类型不匹配。 |
@@ -72,7 +73,7 @@ HRESULT WritePropertyValue (
 
 对于非字符串属性值，`lNumBytes`必须是指定的属性类型的正确的数据大小。 字符串属性值，`lNumBytes`必须是长度以字节为单位，指定的字符串和字符串本身必须为偶数长度以字节为单位，以 null 终止字符开始便遵循。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 140855ca2828ba2a8fdf811d29fc512f6ccd20e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 97c394e3084007227cf157c62a12df3f5cfac8e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended 方法
 获取一个值，该值指示指定的线程是否已挂起由于调试器停止此过程。  
@@ -50,7 +51,7 @@ HRESULT IsOSSuspended(
   
  `IsOSSuspended`方法有意义仅在非托管调试上下文中。 托管在调试期间，线程是以协作方式挂起而不是操作系统挂起。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

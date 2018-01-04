@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dd2d6ac2967b4314a57aa30bbb34ff3d354a6365
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 825917d48aaab5d9d5ce482fa600ca02efa158ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint 方法
 指定的本机映像的偏移量处设置非托管的断点。  
@@ -58,7 +59,7 @@ HRESULT SetUnmanagedBreakpoint (
 ## <a name="remarks"></a>备注  
  如果公共语言运行时 (CLR) 内的本机映像偏移量，则将忽略断点。 这样，以避免断点设置由调试器时调度带的断点，CLR。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

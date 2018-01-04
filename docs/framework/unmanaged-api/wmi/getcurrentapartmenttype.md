@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b250913b55ba59261a666760cc15466b6f9d096e
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: a42c6c3c778dbdefd4b83621e65b81741b940ebe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 函数
 检索在其中执行调用方的单元的类型。   
@@ -49,7 +50,7 @@ HRESULT GetCurrentApartmentType (
 ## <a name="return-value"></a>返回值
 
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `S_OK` | 0 | 已成功完成该函数。 |
 | `E_FAIL` | 0x80000008 | 在单元中未执行调用方。 |
@@ -58,7 +59,7 @@ HRESULT GetCurrentApartmentType (
 
 此函数包装对的调用[IComThreadingInfo::GetCurrentApartmentType](https://msdn.microsoft.com/library/windows/desktop/ms683752(v=vs.85).aspx)方法。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

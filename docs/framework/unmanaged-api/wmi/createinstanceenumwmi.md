@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 19a4102796da7a5692eb5b9b459a6a95ff7409f9
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: b796771b07dee28470d37ca3e4292c0a244e056b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 函数
 返回一个枚举器返回满足指定的选择条件指定类的实例。 
@@ -50,7 +51,7 @@ HRESULT CreateInstanceEnumWmi (
 `lFlags`   
 [in]影响此函数的行为的标志的组合。 在中定义以下值*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中： 
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 如果集，该函数检索当前连接的区域设置的本地化命名空间中存储的修正的限定符。 <br/> 如果未设置，函数将检索存储在即时命名空间限定符。 |
 | `WBEM_FLAG_DEEP` | 0 | 在枚举层次结构中包括此和所有子类。 |
@@ -88,7 +89,7 @@ HRESULT CreateInstanceEnumWmi (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | 用户没有权限查看的指定类的实例。 |
 | `WBEM_E_FAILED` | 0x80041001 | 发生未知的错误。 |
@@ -107,7 +108,7 @@ HRESULT CreateInstanceEnumWmi (
 
 如果函数调用失败，你可以通过调用来获取其他错误信息[GetErrorInfo](geterrorinfo.md)函数。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 638727dae1f0f32e5c92c0da7513719bd11ae8d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4043bdb7ea128e7ac34349dad8c51a0b247df71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-interfaces"></a>元数据接口
 本节描述非托管接口，这些接口提供对由 .NET Framework 类型、方法、字段等公开的元数据的访问。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
  [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
  提供用于动态代码编译的方法。  
   
- [IHostFilter 接口](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)  
+ [IHostFilter 方法](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)  
  提供运行时主机用于标记待处理的元数据标记的方法。  
   
  [IMapToken 接口](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)  
@@ -46,15 +47,15 @@ ms.lasthandoff: 10/18/2017
  提供将类型库映射到其元数据签名并进行相互转换的方法。  
   
  [IMetaDataDispenser 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser` 已过时。 请改用 `IMetaDataDispenserEx` 。  
+ `IMetaDataDispenser` 已过时。 请改用 `IMetaDataDispenserEx`。  
   
  [IMetaDataDispenserEx 接口](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  提供映射用于创建或修改元数据的内存区域的方法。  
   
- [IMetaDataEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
  提供创建、修改和存储与当前定义的范围中的程序集相关的元数据的方法。  
   
- [IMetaDataEmit2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
+ [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
  提供用于定义和修改方法的元数据签名和带有 <xref:System.Type?displayProperty=nameWithType> 类型的参数的构造函数的方法。  
   
  [IMetaDataError 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="related-sections"></a>相关章节  
  [元数据全局静态函数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  
   
- [元数据枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
+ [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
   
  [元数据结构](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 绑定
 绑定指定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务终结点与其他终结点进行通信的方式。 绑定最起码必须指定要使用的传输（如 HTTP 或 TCP）。 你还可以通过绑定来设置其他特征，如安全和事务支持。  
@@ -40,9 +41,9 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>相关章节  
- [终结点： 地址、 绑定和协定](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [终结点：地址、绑定和协定](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [绑定](../../../docs/framework/wcf/feature-details/bindings.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义绑定](../../../docs/framework/wcf/extending/custom-bindings.md)

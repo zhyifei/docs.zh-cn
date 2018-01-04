@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 67b5a5da0a0053536ab4331e9d134464a4330500
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8e6a9637edb4a846b4d10dd6565533a9219ad558
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains 方法
 获取包含此 ICorDebugThread 对象中的所有堆栈链的 ICorDebugChainEnum 枚举的接口指针。  
@@ -55,7 +56,7 @@ HRESULT EnumerateChains (
   
  调试器可能需要重新排列为逻辑调用堆栈的所有线程的物理调用堆栈。 这将涉及对所有线程的链通过其调用方/被调用方关系进行排序和重新分组。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

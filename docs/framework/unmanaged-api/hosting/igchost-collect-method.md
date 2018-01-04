@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d97a988db48cc9bfdf8cf1e260c28e0169eb73f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a0ffe759c6c6049baa11dcc00d4cdee8415156f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect 方法
 强制回收进行回收对给定的代，而无论当前的垃圾回收的状态。  
@@ -42,7 +43,7 @@ HRESULT Collect (
  `Generation`  
  [in]要对其执行垃圾回收生成。 值-1 指示所有代上将都进行垃圾回收。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** GCHost.idl、 GCHost.h  
@@ -51,5 +52,5 @@ HRESULT Collect (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

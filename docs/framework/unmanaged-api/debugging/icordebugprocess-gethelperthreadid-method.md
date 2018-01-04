@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 092e99cb1d5534cee56db08b5a2eedaaa2fc4724
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 03e801cb58b8f5c3f658085fcee4288278e545c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID 方法
 获取调试器的内部帮助程序线程的操作系统 (OS) 线程 ID。  
@@ -49,7 +50,7 @@ HRESULT GetHelperThreadID (
   
  将调试器的帮助程序线程的线程 ID 将正确上每个非托管[icordebugmanagedcallback:: Createthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)事件，从而允许调试器来确定其帮助程序线程的线程 ID 和隐藏用户。 在非托管过程标识为帮助程序线程的线程`ICorDebugManagedCallback::CreateThread`事件将永远不会运行托管的用户代码。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl。 CorDebug.h  

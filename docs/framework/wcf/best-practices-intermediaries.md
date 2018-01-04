@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bfedfbd0177018de4affce67f16ee5f713f7d5de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7aecdcecedcee98828b398f9172985d2e09fb9be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-intermediaries"></a>最佳做法：中介
 当调用中介时务必谨慎，以便正确地处理故障，从而确保中介上的服务端通道正确关闭。  
@@ -42,6 +43,6 @@ catch (Exception e)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF 错误处理](../../../docs/framework/wcf/wcf-error-handling.md)  
  [在协定和服务中指定并处理错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

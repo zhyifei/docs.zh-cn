@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 064f396d0a757e5b2f5f12c4a2a836b74f5e66a6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72fd6dba860906fb87d67e19148f13b70dc64136
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-your-application"></a>配置应用程序
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 .NET 配置系统并允许您在计算机和应用程序范围配置服务。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  如果编辑的配置文件[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中的 Web 服务项目[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]，右键单击该中**解决方案资源管理器**，请注意，**编辑 WCF 配置**未提供的上下文菜单项. 解决此问题，请单击**工具**菜单上，选择**WCF 服务配置编辑器**。 之后，你可以右键单击配置文件并使用**编辑 WCF 配置**上下文菜单项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [配置服务](../../../../docs/framework/wcf/configuring-services.md)  
  [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3d579390dd54e746e700c6c571998648aefba74f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2b5d28e6def34c9263d519c2eeb9cc432656bd1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 枚举
 指定接口，.NET Framework 的版本，或在其中引入了接口的 .NET Framework 的版本。  
@@ -239,7 +240,7 @@ typedef enum CorDebugInterfaceVersion {
   
 -   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]引入接口版本的混合。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 显示为 `ICorDebugThread` 接口的第三个和第四个版本。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]还引入了的第一个版本`ICorDebugStackWalk`接口和第二个版本`ICorDebugNativeFrame`接口 (`ICorDebugNativeFrame2`)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -248,5 +249,5 @@ typedef enum CorDebugInterfaceVersion {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

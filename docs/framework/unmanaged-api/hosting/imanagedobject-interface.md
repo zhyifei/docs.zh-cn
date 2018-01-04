@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ece72d00dc8a1d99daa4202989879e95dcf0a4fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ac7b41a5d42a8e2bc32077f02ad850b421efe31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject 接口
 提供用于控制托管的对象的方法。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/18/2017
 |[GetObjectIdentity 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|获取此托管对象的标识。|  
 |[GetSerializedBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|获取此托管对象的字符串表示。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

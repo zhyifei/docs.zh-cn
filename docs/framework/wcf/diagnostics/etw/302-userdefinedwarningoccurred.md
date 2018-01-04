@@ -13,18 +13,19 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61ec1e341d5220000b928409e006553c71ab379a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae455c9eec2335fcf6eb5473932bd8d9e5d2db95
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="302---userdefinedwarningoccurred"></a>302 - 出现用户定义的警告
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|ID|302|  
+|Id|302|  
 |关键字|疑难解答，HealthMonitoring，UserEvents，ServiceModel，EndToEndMonitoring|  
 |级别|警告|  
 |通道|Microsoft-Windows-应用程序服务器-应用程序/分析|  
@@ -39,6 +40,6 @@ ms.lasthandoff: 12/02/2017
   
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
-|名称|`xs:string`|事件的用户定义名称。|  
+|name|`xs:string`|事件的用户定义名称。|  
 |HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为网站名称应用程序虚拟路径 &#124;服务虚拟路径 &#124;ServiceName。 示例: 默认网站/CalculatorApplication &#124;/CalculatorService.svc &#124;CalculatorService。|  
 |Payload|`xs:string`|事件的用户定义负载。|

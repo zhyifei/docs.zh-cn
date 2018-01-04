@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 767cae15c37b8c62d47085533ea9fa3ce4957963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87dce9a2daf7067409d78a9f389695b6b01f23c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS 枚举
 指示由程序集的源[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)全局程序集缓存中。  
@@ -50,7 +51,7 @@ typedef enum {
 |`ASM_CACHE_ROOT`|指示[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函数应返回公共语言运行时 (CLR) 2.0 版的全局程序集缓存的路径。 仅在调用上下文中有意义[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
 |`ASM_CACHE_ROOT_EX`|指示[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)函数应为 CLR 版本 4 到全局程序集缓存中返回的路径。 仅在调用上下文中有意义[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
@@ -59,7 +60,7 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetCachePath 函数](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
  [IAssemblyCacheItem 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
  [合成枚举](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

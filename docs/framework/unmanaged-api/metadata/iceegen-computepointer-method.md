@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c1f5f1c0ea5672812fca387b34238ada2a109938
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b027615f7697b9ea103d44bea0ec44834fe3f04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 方法
 确定指定的代码部分的缓冲区。  
@@ -52,7 +53,7 @@ HRESULT ComputePointer (
  `lpBuffer`  
  [out]指向返回的缓冲区的指针。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -61,5 +62,5 @@ HRESULT ComputePointer (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

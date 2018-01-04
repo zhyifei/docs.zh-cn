@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7868a0c0ba5abb880af201ce73b35f5ffed6f223
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 7d8e6bb24eb471d807af2493f82b6be4f644124f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 函数
 终止通过调用开始枚举[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。  
@@ -46,7 +47,7 @@ HRESULT QualifierSet_EndEnumeration (
 
 此函数返回以下值用定义*WbemCli.h*标头文件，也可以为常量在中定义你的代码：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
   
@@ -56,7 +57,7 @@ HRESULT QualifierSet_EndEnumeration (
 
 此调用是建议，但不是要求。 它立即释放枚举与关联的资源。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 
 **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 042befa2dd96ad9f6e6dd3069ba2c4aabcd146fc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2a577e1bd8765c7359e521b007bea943de7a984
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorruntimehostcreatedomainex-method"></a>ICorRuntimeHost::CreateDomainEx 方法
 创建应用程序域。 调用方会收到类型的接口指针<xref:System._AppDomain>，到类型的实例<xref:System.AppDomain?displayProperty=nameWithType>。 此方法允许调用方传递一个 IAppDomainSetup 实例，以便配置其他功能，则返回的<xref:System._AppDomain>实例。  
@@ -66,7 +67,7 @@ HRESULT CreateDomainEx (
 ## <a name="remarks"></a>备注  
  `CreateDomainEx`扩展的功能[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)通过允许调用方传入`IAppDomainSetup`实例与用于配置应用程序域的属性值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -75,7 +76,7 @@ HRESULT CreateDomainEx (
   
  **.NET framework 版本：** 1.0、 1.1  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System._AppDomain>  
  <xref:System.AppDomain>  
  <xref:System.IAppDomainSetup?displayProperty=nameWithType>  

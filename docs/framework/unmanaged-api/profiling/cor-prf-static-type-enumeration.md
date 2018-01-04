@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 446967cc157962a1ec4a87193bbf84b1a356efa6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 76d43a620b64c771427cd30af770e70642dabe7a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE 枚举
 指示字段是否为静态的，并在字段为静态字段时指示应用于该字段的静态质量。 可以使用按位或运算以指示该字段具有多个组合这些值不同的静态质量。  
@@ -50,7 +51,7 @@ typedef enum {
 |`COR_PRF_FIELD_CONTEXT_STATIC`|该字段是上下文静态。|  
 |`COR_PRF_FIELD_RVA_STATIC`|该字段是相对虚拟地址 (RVA) 的静态。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -59,5 +60,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

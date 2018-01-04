@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 51775f52e34f35d8ef9f3a8533363be73e9bd7c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 018dc40895a79788a9eef20082d764db0b2265c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法
 修改指定的程序集绑定策略，并创建新版本的策略。  
@@ -82,7 +83,7 @@ HRESULT  ModifyApplicationPolicy (
 ## <a name="remarks"></a>备注  
  `ModifyApplicationPolicy`两次调用方法。 第一次调用应提供的 null 值`pbNewApplicationPolicy`参数。 此调用将返回包含必需的值的`pcbNewAppPolicySize`。 第二个调用应提供此值`pcbNewAppPolicySize`，并指向该大小的缓冲区`pbNewApplicationPolicy`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -91,5 +92,5 @@ HRESULT  ModifyApplicationPolicy (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRHostBindingPolicyManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

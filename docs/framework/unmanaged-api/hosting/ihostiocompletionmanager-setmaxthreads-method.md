@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 084cbf5509583a45f09bcf903e833f4890c5651e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3d2d8436d85f7be40c89693628794b007e0c6a88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>IHostIoCompletionManager::SetMaxThreads 方法
 将最大主机分配的线程数设置为服务输入/输出请求。  
@@ -57,7 +58,7 @@ HRESULT SetMaxThreads (
 ## <a name="remarks"></a>备注  
  `SetMaxThreads`CLR 提供了机会设置线程可供 I/O 端口上的服务请求的最大数目。 诸如实现、 性能或可伸缩性之类的原因，主机可能需要对的线程池大小的独有控制。 主机不为此，需要实现`SetMaxThreads`。 在这种情况下，主机应通过此方法返回 E_NOTIMPL。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -66,6 +67,6 @@ HRESULT SetMaxThreads (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
  [IHostIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

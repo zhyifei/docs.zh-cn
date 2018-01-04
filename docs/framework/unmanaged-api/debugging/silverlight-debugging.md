@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bf39d2dd12207d594c7bf5bd5b249d82c3f15d3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6869e58ca47b7b55a5b988e0f6ae4a224f0f35a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="silverlight-debugging"></a>Silverlight 调试
 本部分中的主题描述了公共语言运行时 (CLR) 提供用于支持调试在 Windows 操作系统或在 Macintosh 平台上运行的基于 Silverlight 的应用程序的环境和接口。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
  [ShutdownDbgTransportManager 函数](../../../../docs/framework/unmanaged-api/debugging/shutdowndbgtransportmanager-function.md)  
  关闭用于远程目标计算机连接的传输管理器。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试组件类](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
  [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [调试全局静态函数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  

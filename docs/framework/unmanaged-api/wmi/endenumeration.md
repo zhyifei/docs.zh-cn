@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 043fce26870e5af2850b9f2e91e7e97c7bee6c90
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: fee3137dad3f89fa8849b28e9ca38b40040f916e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 函数
 终止通过调用启动枚举序列[BeginEnumeration 函数](beginenumeration.md)。  
@@ -47,7 +48,7 @@ HRESULT EndEnumeration (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -58,7 +59,7 @@ HRESULT EndEnumeration (
 
 调用`EndEnumeration`函数不是必需的但它建议，因为它会释放枚举与关联的资源。 但是，resoruces 后被释放自动启动下一步枚举或释放的对象。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

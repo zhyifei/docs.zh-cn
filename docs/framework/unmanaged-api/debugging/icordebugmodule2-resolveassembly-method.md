@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 37ddb0e8871d9ec5f8eed4f00d81098feafb01de
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8e72d2ed69c8d189adb4980c82e07ad71892dc56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly 方法
 解析指定的元数据标记所引用的程序集。  
@@ -49,7 +50,7 @@ HRESULT ResolveAssembly (
 ## <a name="remarks"></a>备注  
  如果程序集不已加载时`ResolveAssembly`调用时，HRESULT 返回值 CORDBG_E_CANNOT_RESOLVE_ASSEMBLY。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

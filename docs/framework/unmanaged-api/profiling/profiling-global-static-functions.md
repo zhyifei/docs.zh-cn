@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4da4509a6e8b87490cee076b403f3fa525de91e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 66f22557dd6020ff5040d5aaf76cb12e9ae9965c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-global-static-functions"></a>分析全局静态函数
 本部分介绍了分析 API 使用的非托管的 API 函数。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="related-sections"></a>相关章节  
  [分析概述](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
- [分析接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
   
  [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
   

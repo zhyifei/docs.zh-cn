@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e6ed5ea00799fff70626114257efef2d06b505ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9db1b787015231b3d9053d4ed316cb70c5db96ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup 接口
 提供的属性，使该主机可配置<xref:System.AppDomain?displayProperty=nameWithType>类型之前调用[icorruntimehost:: Createdomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法来创建它。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
  `IAppDomainSetup`表示可以添加到的程序集绑定信息<xref:System.AppDomain>之前创建的实例。 例如，主机可以设置<xref:System.AppDomainSetup.ApplicationBase%2A>属性建立公共语言运行时 (CLR) 来探测程序根目录的托管程序集。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.AppDomain>  
  <xref:System.AppDomainSetup>  
  <xref:System.IAppDomainSetup>  

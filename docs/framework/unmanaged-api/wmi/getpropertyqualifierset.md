@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bd8abdb34f37273e469bdf5fc659b261bb2b9304
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 7ca2981c8833abaafd5d206b66d6e91f34e2c91d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet 函数
 检索为特定的属性设置的限定符。
@@ -54,7 +55,7 @@ HRESULT GetPropertyQualifierSet (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
@@ -73,7 +74,7 @@ HRESULT GetPropertyQualifierSet (
 
 由于系统属性具有不到限定符，该函数将返回`WBEM_E_SYSTEM_PROPERTY`如果你尝试获取[IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)系统属性的指针。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

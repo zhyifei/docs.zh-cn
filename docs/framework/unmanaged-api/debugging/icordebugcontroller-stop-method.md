@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4b92d07f8d162123d20c6861d204d73789060906
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a8699a54814b37cc03404b72330812f3eb2b2f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 方法
 在进程中运行托管的代码的所有线程上执行协作停止。  
@@ -50,7 +51,7 @@ HRESULT Stop (
   
  调试器维护停止计数器。 在计数器变为零时，控制器将继续运行。 每次调用`Stop`或每次调度的回调递增的计数器。 每次调用`ICorDebugController::Continue`递减计数器。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -59,5 +60,5 @@ HRESULT Stop (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  

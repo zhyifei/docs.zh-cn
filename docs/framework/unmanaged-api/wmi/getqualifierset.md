@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 15d384003f3a18124a07d83a8308f4b8a5c6a31b
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 127e7862d0cb0d204e91cd5ee36f2d32f1453a8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函数
 检索为的类实例或类定义设置的限定符。
@@ -50,7 +51,7 @@ HRESULT GetQualifierSet (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 指定的方法不存在。 |
@@ -64,7 +65,7 @@ HRESULT GetQualifierSet (
 
 [IWbemQualifierSet 指针](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx)允许调用方添加、 编辑或删除这些限定符。 此类添加、 编辑或删除的限定符应用于整个的实例或类定义。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

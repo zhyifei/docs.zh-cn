@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 722c6acc7e152a78ba28bc2730b2fdc7e0c45eb0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a74249cb806f332b3ae575223f237438da616972
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate 方法
 验证指定的可移植可执行 (PE) 或 Microsoft 中间语言 (MSIL) 文件。  
@@ -70,7 +71,7 @@ HRESULT Validate (
  `ulSize`  
  [in]以字节为单位，要验证的文件的大小。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** IValidator.idl、 IValidator.h  
@@ -79,5 +80,5 @@ HRESULT Validate (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  

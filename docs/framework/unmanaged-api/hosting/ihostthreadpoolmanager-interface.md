@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2773042c695320ab1e90d4c5d341e2df5f0f778f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1cd58c53deec0a895ae6f67cccf26d2c8c2530be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager 接口
 提供启用公共语言运行时 (CLR) 若要配置线程池以及排队到线程池工作项的方法。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>备注  
  主机不需要使用对的调用中指定的值配置线程池`SetMaxThreads`和`SetMinThreads`方法。 在这种情况下，主机应从这些方法返回 E_NOTIMPL 的 HRESULT 值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading>  
  <xref:System.Threading.ThreadPool>  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

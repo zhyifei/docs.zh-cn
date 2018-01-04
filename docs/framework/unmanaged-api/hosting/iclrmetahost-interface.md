@@ -19,11 +19,12 @@ caps.latest.revision: "28"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d271a69847e3bd4dc972ed8e697b8cd15f049fb9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a12635e14b694b361e2877041588d7d9f08a4102
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 接口
 提供一些方法，返回特定版本的公共语言运行时 (CLR) 基于其版本号，列表所有已安装的 Clr 中，列出在指定的进程中加载的所有运行时，发现用于编译的程序集、 退出进程的 CLR 版本使用正常的运行时关闭和查询旧的 API 绑定。  
@@ -49,7 +50,7 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
                    IID_ICLRMetaHost, (LPVOID*)&pMetaHost);  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
@@ -58,6 +59,6 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
   
  **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

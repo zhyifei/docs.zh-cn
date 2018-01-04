@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c01db47b5362d7048e2e5ecd1b63acfe03eff860
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 3daa89ec0b40bb9c08898ecd682f05f0f0ce09a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函数
 基于时间的格式转换是否将转换为指定的格式中，一个原始性能数据值或两个原始性能数据值。   
@@ -46,7 +47,7 @@ int FormatFromRawValue (
 `dwFormat`  
 [in]要转换的原始性能数据为格式。 它可以是以下值之一：
 
-|返回的常量  |值  |描述 |
+|返回的常量  |“值”  |描述 |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | 以双精度浮点值的形式返回计算的值。 | 
 | `PDH_FMT_LARGE` | 0x00000400 | 以 64 位整数的形式返回计算的值。 |
@@ -54,7 +55,7 @@ int FormatFromRawValue (
 
 其中一个以前的值可以是以下缩放标志的其中一条 or 运算：
 
-|返回的常量  |值  |描述 |
+|返回的常量  |“值”  |描述 |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | 不适用于该计数器的比例因子。 |
 | `PDH_FMT_1000` | 0x00002000 | 最终值乘以 1000。 | 
@@ -72,7 +73,7 @@ int FormatFromRawValue (
 
 此函数返回以下值：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | 函数调用是成功的。 |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 一个必需的参数已丢失或不正确。 | 
@@ -82,7 +83,7 @@ int FormatFromRawValue (
 
 此函数包装对的调用[FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx)函数。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **库：** PerfCounter.dll  

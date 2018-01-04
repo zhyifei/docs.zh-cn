@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d3bd671d90ff924bce32b6d67c33b90b4fa042f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8d48ac730f22459a71b126126a7418e73805c7e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction 方法
 获取包含与此堆栈帧关联的代码的函数。  
@@ -45,7 +46,7 @@ HRESULT GetFunction (
 ## <a name="remarks"></a>备注  
  `GetFunction`方法如果帧不是与任何特定函数可能会失败。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d40d1799a7c1572e8213fda3a163fb9a84060f92
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0ac4cc32be6914ea858d32b8699a695588f0a1e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle 方法
 获取指定的托管对象具有垃圾回收句柄引用指针。  
@@ -54,7 +55,7 @@ HRESULT GetReferenceValueFromGCHandle (
 > [!NOTE]
 >  `GetReferenceValueFromGCHandle`方法不会验证该句柄。 因此，`GetReferenceValueFromGCHandle`方法可能会损坏调试器并传递一个无效的句柄如果正在调试的代码。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

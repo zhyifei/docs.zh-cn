@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7626ce6b2b6278be7cd9989718c13f7c98e4ace3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9db30133a01877c6ae048b9152f35b066219aa22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters 结构
 将存储与事件相关联的当前异常的事件和参数的类型名称。  
@@ -46,12 +47,12 @@ typedef struct _BucketParameters {
 |`pszEventTypeName`|事件类型的名称。|  
 |`pszParams`|一个字符串数组，其中每个指定与事件关联的当前异常的参数。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.idl  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

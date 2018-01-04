@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7be93c5949966c052e77adebe8bb4d7aac9149bb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1bc7383c5b93203b144c965f06fa7365c864de27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 体系结构
 下图说明了 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 体系结构的主要层。  
@@ -55,6 +56,6 @@ ms.lasthandoff: 12/02/2017
   
  也可以是服务*托管*，或运行外部代理，如 IIS 或 Windows 激活服务 (WAS) 管理的可执行文件。 通过 WAS，可以在运行 WAS 的计算机上部署 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序时自动激活该应用程序。 还可通过可执行文件（.exe 文件）的形式来手动运行服务。 服务也可作为 Windows 服务自动运行。 COM+ 组件也可作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务承载。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)

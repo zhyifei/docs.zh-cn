@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3efdf649d0039f2eb6b39d5cb17c839b90e97508
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fd954419f46313a239ddf5a309a646e3d2f1b9bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-hosting-interfaces"></a>CLR 承载接口
 本部分描述的接口以及非托管主机可用于将公共语言运行时 (CLR) 集成到其应用程序。 信息适用于.NET Framework 2.0 版和更高版本。 这些接口使主机能够控制运行时比版本 1.0 和 1.1 中，可能更多方面，并提供 CLR 和主机的执行模型之间更紧密地集成。  
@@ -195,8 +196,8 @@ ms.lasthandoff: 10/18/2017
  提供用于验证可移植可执行 (PE) 映像和报告验证错误的方法。  
   
 ## <a name="related-sections"></a>相关章节  
- [弃用的 CLR 承载接口和组件类](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
+ [弃用的 CLR 承接接口和组件类](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
  包含描述.NET Framework 1.0 和 1.1 版中提供的托管接口的主题。  
   
- [CLR 承载接口添加在.NET Framework 4 和 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
+ [.NET Framework 4 和 4.5 中添加的 CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  包含描述中提供的托管接口的主题[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。

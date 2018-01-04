@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b1e729a17101bbe9c659be729c685909932b5456
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c3990fdf1bcf76592288aac35b47b15f42cf77bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining 方法
 通知探查器实时 (JIT) 编译器将要插入一个嵌入另一个函数。  
@@ -54,7 +55,7 @@ HRESULT JITInlining(
   
  内联插入函数不会引发事件进入或离开。 因此，探查器必须设置`pfShouldInline`到`false`以便生成准确的调用关系图。 设置`pfShouldInline`到`false`会影响性能，因为内联插入通常会提高速度并减少了单独的插入方法的 JIT 编译事件数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -63,5 +64,5 @@ HRESULT JITInlining(
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

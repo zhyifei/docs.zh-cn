@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 75329ee4ee925f4eb74d96d8ce7ef3145eb4a966
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="get-function"></a>Get 函数
 如果它存在，请检索指定的属性值。
@@ -58,7 +59,7 @@ HRESULT Get (
 
 `plFlavor`[out]如果该函数将返回成功，则接收原点顺的属性的信息。 其值可以是`null`，或定义中的以下 WBEM_FLAVOR_TYPE 常量之一*WbemCli.h*标头文件： 
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | 属性是标准系统属性。 |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 类： 从父类继承属性。 </br> 实例： 属性，继承自的父类、 时未修改的实例。  |
@@ -68,7 +69,7 @@ HRESULT Get (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 一个或多个参数不是有效的。 |
@@ -84,7 +85,7 @@ HRESULT Get (
 
 `pVal`自变量分配的正确类型和值限定符和 COM [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx)函数
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

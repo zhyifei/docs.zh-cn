@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f283beb79ec47454185800bd772904c3c696c7c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 952944e9ae9a8186a182796deb587b6fa6a0d6a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags 枚举
 包含值，用于指示应在调用中执行的验证的类型[iclrvalidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)方法。  
@@ -50,7 +51,7 @@ enum ValidatorFlags {
 |`VALIDATOR_NOCHECK_PEFORMAT`|指定不应验证可执行文件的格式。|  
 |`VALIDATOR_SHOW_SOURCE_LINES`|指定验证错误消息应包括引发验证错误的源代码行。 .NET Framework 2.0 版中，此字段值无效。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** IValidator.idl、 IValidator.h  
@@ -59,6 +60,6 @@ enum ValidatorFlags {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRErrorReportingManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
  [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53616fb8e947d2a301dcfcb4e3870a9a9dc36ec1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d341b875f9f64b9aa1fcdcf21668dafea0beac12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo 结构
 表示在远程计算机上运行的进程。  
@@ -49,7 +50,7 @@ struct  CoreClrDebugProcInfo {
 |`m_dwInternalID`|由运行在目标计算机上的远程调试代理分配的进程标识符。 此标识符的回收通常少于 OS 标识符。|  
 |`m_wszName`|进程的命令行。 此成员可能会被截断。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces.h  

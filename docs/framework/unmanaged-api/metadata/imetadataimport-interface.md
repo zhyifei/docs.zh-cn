@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6c7f1c7e99df61cc0cd33e1697de52a039d412df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1067582b506d60092bef9639dc4a96ba41306437
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 接口
 提供从可迁移可执行 (PE) 文件或其他源（如类型库或独立的运行时元数据二进制文件）导入和操作现有元数据的方法。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Get 方法专门用来返回元数据项的单值属性。 当该属性是对另一个项的引用时，将返回该项的标记。 任何指针输入类型都可为 NULL，以指示未请求特定值。 若要获取基本上由集合对象（例如，某个类实现的接口集合）构成的属性，请使用枚举方法。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -115,6 +116,6 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [元数据接口](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
  [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

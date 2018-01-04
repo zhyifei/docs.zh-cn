@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c73d12731a5c72b8c0e724f74ee0aa9ebddeee9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db5054ab9b71eb93005fc0315acba82d807487ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 函数
 获取与指定的进程句柄关联公共语言运行时 (CLR) 的版本号。  
@@ -62,11 +63,11 @@ HRESULT GetVersionFromProcess (
 |返回代码|描述|  
 |-----------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_INVALIDARG|`pVersion`为 null 和`cchBuffer`不为 null，反之亦然。<br /><br /> - 或 -<br /><br /> `hProcess`不是有效的句柄到进程。<br /><br /> - 或 -<br /><br /> CLR 不会加载。|  
+|E_INVALIDARG|`pVersion`为 null 和`cchBuffer`不为 null，反之亦然。<br /><br /> 或<br /><br /> `hProcess`不是有效的句柄到进程。<br /><br /> 或<br /><br /> CLR 不会加载。|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer`为 null 或小于版本字符串的长度。|  
 |E_NOTIMPL|此方法不是在 Microsoft Windows 95、 Microsoft Windows 98、 或 Microsoft Windows Millennium Edition 操作系统上可用的。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -75,7 +76,7 @@ HRESULT GetVersionFromProcess (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetRequestedRuntimeInfo 函数](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
  [GetRequestedRuntimeVersion 函数](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
  [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

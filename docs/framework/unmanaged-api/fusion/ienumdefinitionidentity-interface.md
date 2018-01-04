@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc1f3a46ac7da58fb2c209f833173a1bc6b32ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79e2a35a455407715a05e826d31c5d5ab05a02ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 接口
 用作的集合的枚举数`IDefinitionIdentity`对象。  
@@ -62,13 +63,13 @@ IEnumDefinitionIdentity : IUnknown {
 |`IEnumDefinitionIdentity::Reset`|将指令指针移到此开头`IEnumDefinitionIdentity`。|  
 |`IEnumDefinitionIdentity::Skip`|将指令指针向前移动指定数量的元素，从当前位置开始。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
  [IDefinitionIdentity 接口](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
