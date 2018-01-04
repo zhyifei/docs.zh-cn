@@ -12,22 +12,23 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a86cbe3d36383623c70c6a0588d3c0e8fe0bf5c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b66783ae09e15d324cc1b6ff2aa8db90e052dddf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="sql-server-persistence-database"></a><span data-ttu-id="9515b-102">SQL Server 持久性数据库</span><span class="sxs-lookup"><span data-stu-id="9515b-102">SQL Server Persistence Database</span></span>
-<span data-ttu-id="9515b-103">本节提供有关 SQL 工作流实例存储支持的公共数据库视图的详细信息，并演示如何反序列化基元实例数据属性以及如何查询非持久化实例。</span><span class="sxs-lookup"><span data-stu-id="9515b-103">This section provides details about public database views supported by the SQL Workflow Instance Store and shows how to de-serialize primitive instance data properties and how to query for non-persisted instances.</span></span>  
+# <a name="sql-server-persistence-database"></a><span data-ttu-id="d3af2-102">SQL Server 持久性数据库</span><span class="sxs-lookup"><span data-stu-id="d3af2-102">SQL Server Persistence Database</span></span>
+<span data-ttu-id="d3af2-103">本节提供有关 SQL 工作流实例存储支持的公共数据库视图的详细信息，并演示如何反序列化基元实例数据属性以及如何查询非持久化实例。</span><span class="sxs-lookup"><span data-stu-id="d3af2-103">This section provides details about public database views supported by the SQL Workflow Instance Store and shows how to de-serialize primitive instance data properties and how to query for non-persisted instances.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9515b-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="9515b-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d3af2-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="d3af2-104">In This Section</span></span>  
   
--   [<span data-ttu-id="9515b-105">暂留数据库架构</span><span class="sxs-lookup"><span data-stu-id="9515b-105">Persistence Database Schema</span></span>](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)  
+-   [<span data-ttu-id="d3af2-105">暂留数据库架构</span><span class="sxs-lookup"><span data-stu-id="d3af2-105">Persistence Database Schema</span></span>](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)  
   
--   [<span data-ttu-id="9515b-106">如何：对实例数据属性进行反序列化</span><span class="sxs-lookup"><span data-stu-id="9515b-106">How to: Deserialize Instance Data Properties</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-deserialize-instance-data-properties.md)  
+-   [<span data-ttu-id="d3af2-106">如何：对实例数据属性进行反序列化</span><span class="sxs-lookup"><span data-stu-id="d3af2-106">How to: Deserialize Instance Data Properties</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-deserialize-instance-data-properties.md)  
   
--   [<span data-ttu-id="9515b-107">如何：查询非暂留实例</span><span class="sxs-lookup"><span data-stu-id="9515b-107">How to: Query for Non-persisted Instances</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
+-   [<span data-ttu-id="d3af2-107">如何：查询非暂留实例</span><span class="sxs-lookup"><span data-stu-id="d3af2-107">How to: Query for Non-persisted Instances</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9515b-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="9515b-108">See Also</span></span>  
- [<span data-ttu-id="9515b-109">App Fabric SQL Server 持久性数据库</span><span class="sxs-lookup"><span data-stu-id="9515b-109">App Fabric SQL Server Persistence Database</span></span>](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="d3af2-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="d3af2-108">See Also</span></span>  
+ [<span data-ttu-id="d3af2-109">App Fabric SQL Server 持久性数据库</span><span class="sxs-lookup"><span data-stu-id="d3af2-109">App Fabric SQL Server Persistence Database</span></span>](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)

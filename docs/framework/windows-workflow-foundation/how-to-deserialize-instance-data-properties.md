@@ -12,30 +12,31 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 265a81d8af566a54172fa73230ac388b8f0b848e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3863812bc3c83b346f2340bcfbc609a1024c3c6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="93688-102">如何：对实例数据属性进行反序列化</span><span class="sxs-lookup"><span data-stu-id="93688-102">How to: Deserialize Instance Data Properties</span></span>
-<span data-ttu-id="93688-103">在有些情况下，用户或工作流管理员可能需要手动检查持久保存的工作流实例的状态。</span><span class="sxs-lookup"><span data-stu-id="93688-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="93688-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供一个有关 Instances 表的视图，公开以下四列：</span><span class="sxs-lookup"><span data-stu-id="93688-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
+# <a name="how-to-deserialize-instance-data-properties"></a><span data-ttu-id="5f498-102">如何：对实例数据属性进行反序列化</span><span class="sxs-lookup"><span data-stu-id="5f498-102">How to: Deserialize Instance Data Properties</span></span>
+<span data-ttu-id="5f498-103">在有些情况下，用户或工作流管理员可能需要手动检查持久保存的工作流实例的状态。</span><span class="sxs-lookup"><span data-stu-id="5f498-103">There may be situations when a user or workflow administrator may want to manually inspect the state of a persisted workflow instance.</span></span> <span data-ttu-id="5f498-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供一个有关 Instances 表的视图，公开以下四列：</span><span class="sxs-lookup"><span data-stu-id="5f498-104"><xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> provides a view on the Instances table that exposes the following four columns:</span></span>  
   
--   <span data-ttu-id="93688-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="93688-105">ReadWritePrimitiveDataProperties</span></span>  
+-   <span data-ttu-id="5f498-105">ReadWritePrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="5f498-105">ReadWritePrimitiveDataProperties</span></span>  
   
--   <span data-ttu-id="93688-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="93688-106">WriteOnlyPrimitiveDataProperties</span></span>  
+-   <span data-ttu-id="5f498-106">WriteOnlyPrimitiveDataProperties</span><span class="sxs-lookup"><span data-stu-id="5f498-106">WriteOnlyPrimitiveDataProperties</span></span>  
   
--   <span data-ttu-id="93688-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="93688-107">ReadWriteComplexDataProperties</span></span>  
+-   <span data-ttu-id="5f498-107">ReadWriteComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="5f498-107">ReadWriteComplexDataProperties</span></span>  
   
--   <span data-ttu-id="93688-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="93688-108">WriteOnlyComplexDataProperties</span></span>  
+-   <span data-ttu-id="5f498-108">WriteOnlyComplexDataProperties</span><span class="sxs-lookup"><span data-stu-id="5f498-108">WriteOnlyComplexDataProperties</span></span>  
   
- <span data-ttu-id="93688-109">基元数据属性指.NET Framework 类型被视为是"common"（例如，Int32 和 String），而复杂数据属性指的所有其他类型的属性。</span><span class="sxs-lookup"><span data-stu-id="93688-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="93688-110">在此代码示例的后面提供了基元类型的完整枚举。</span><span class="sxs-lookup"><span data-stu-id="93688-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
+ <span data-ttu-id="5f498-109">基元数据属性指.NET Framework 类型被视为是"common"（例如，Int32 和 String），而复杂数据属性指的所有其他类型的属性。</span><span class="sxs-lookup"><span data-stu-id="5f498-109">Primitive data properties refer to properties whose .NET Framework types are considered to be "common" (for example, Int32 and String), while complex data properties refer to all other types.</span></span> <span data-ttu-id="5f498-110">在此代码示例的后面提供了基元类型的完整枚举。</span><span class="sxs-lookup"><span data-stu-id="5f498-110">An exact enumeration of primitive types is found later in this code example.</span></span>  
   
- <span data-ttu-id="93688-111">Read/write 属性指的是那些在加载实例时返回到工作流运行时的属性。</span><span class="sxs-lookup"><span data-stu-id="93688-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="93688-112">WriteOnly 属性将写入到数据库，然后再也不会读取。</span><span class="sxs-lookup"><span data-stu-id="93688-112">WriteOnly properties are written to the database and then never read again.</span></span>  
+ <span data-ttu-id="5f498-111">Read/write 属性指的是那些在加载实例时返回到工作流运行时的属性。</span><span class="sxs-lookup"><span data-stu-id="5f498-111">Read/write properties refer to properties that are returned back to the Workflow Runtime when an instance is loaded.</span></span> <span data-ttu-id="5f498-112">WriteOnly 属性将写入到数据库，然后再也不会读取。</span><span class="sxs-lookup"><span data-stu-id="5f498-112">WriteOnly properties are written to the database and then never read again.</span></span>  
   
- <span data-ttu-id="93688-113">此示例提供使用户能够将基元数据属性反序列化的代码。</span><span class="sxs-lookup"><span data-stu-id="93688-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="93688-114">提供一个从 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 列读取的字节数组，此代码会将二进制大型对象 (BLOB) 转换<xref:System.Collections.Generic.Dictionary%602>类型的\<XName，对象 > 其中每个密钥值对表示一个属性名及其对应的值。</span><span class="sxs-lookup"><span data-stu-id="93688-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
+ <span data-ttu-id="5f498-113">此示例提供使用户能够将基元数据属性反序列化的代码。</span><span class="sxs-lookup"><span data-stu-id="5f498-113">This example provides code that enables a user to deserialize primitive data properties.</span></span> <span data-ttu-id="5f498-114">提供一个从 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 列读取的字节数组，此代码会将二进制大型对象 (BLOB) 转换<xref:System.Collections.Generic.Dictionary%602>类型的\<XName，对象 > 其中每个密钥值对表示一个属性名及其对应的值。</span><span class="sxs-lookup"><span data-stu-id="5f498-114">Given a byte array read from either the ReadWritePrimitiveDataProperties or WriteOnlyPrimitiveDataProperties column, this code will convert the binary large object (BLOB) into a <xref:System.Collections.Generic.Dictionary%602> of type \<XName, object> where each key value pair represents a property name and its corresponding value.</span></span>  
   
- <span data-ttu-id="93688-115">此示例没有演示如何将复杂数据属性反序列化，因为当前不支持该操作。</span><span class="sxs-lookup"><span data-stu-id="93688-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
+ <span data-ttu-id="5f498-115">此示例没有演示如何将复杂数据属性反序列化，因为当前不支持该操作。</span><span class="sxs-lookup"><span data-stu-id="5f498-115">This example does not demonstrate how to deserialize complex data properties because this is currently not a supported operation.</span></span>  
   
 ```  
 using System;  

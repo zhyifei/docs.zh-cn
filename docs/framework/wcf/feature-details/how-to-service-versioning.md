@@ -13,41 +13,42 @@ caps.latest.revision: "6"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4da80d264b05f9c7a1461a7298e521623a97f31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-service-versioning"></a><span data-ttu-id="e857c-102">如何：服务版本控制</span><span class="sxs-lookup"><span data-stu-id="e857c-102">How To: Service Versioning</span></span>
-<span data-ttu-id="e857c-103">本主题概述了创建路由配置以将消息路由到同一服务的不同版本所需采取的基本步骤。</span><span class="sxs-lookup"><span data-stu-id="e857c-103">This topic outlines the basic steps required to create a routing configuration that routes messages to different versions of the same service.</span></span> <span data-ttu-id="e857c-104">在本示例中，消息将路由到计算器服务的两个不同版本：`roundingCalc` (v1) 和 `regularCalc` (v2)。</span><span class="sxs-lookup"><span data-stu-id="e857c-104">In this example, messages are routed to two different versions of a calculator service, `roundingCalc` (v1) and `regularCalc` (v2).</span></span> <span data-ttu-id="e857c-105">这两个实现都支持相同的操作，但较早的服务 `roundingCalc` 在返回计算结果前会将所有计算结果舍入到最接近的整数值。</span><span class="sxs-lookup"><span data-stu-id="e857c-105">Both implementations support the same operations; however the older service, `roundingCalc`, rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="e857c-106">客户端应用程序必须能够指示是否使用较新的 `regularCalc` 服务。</span><span class="sxs-lookup"><span data-stu-id="e857c-106">A client application must be able to indicate whether to use the newer `regularCalc` service.</span></span>  
+# <a name="how-to-service-versioning"></a><span data-ttu-id="c1034-102">如何：服务版本控制</span><span class="sxs-lookup"><span data-stu-id="c1034-102">How To: Service Versioning</span></span>
+<span data-ttu-id="c1034-103">本主题概述了创建路由配置以将消息路由到同一服务的不同版本所需采取的基本步骤。</span><span class="sxs-lookup"><span data-stu-id="c1034-103">This topic outlines the basic steps required to create a routing configuration that routes messages to different versions of the same service.</span></span> <span data-ttu-id="c1034-104">在本示例中，消息将路由到计算器服务的两个不同版本：`roundingCalc` (v1) 和 `regularCalc` (v2)。</span><span class="sxs-lookup"><span data-stu-id="c1034-104">In this example, messages are routed to two different versions of a calculator service, `roundingCalc` (v1) and `regularCalc` (v2).</span></span> <span data-ttu-id="c1034-105">这两个实现都支持相同的操作，但较早的服务 `roundingCalc` 在返回计算结果前会将所有计算结果舍入到最接近的整数值。</span><span class="sxs-lookup"><span data-stu-id="c1034-105">Both implementations support the same operations; however the older service, `roundingCalc`, rounds all calculations to the nearest integer value before returning.</span></span> <span data-ttu-id="c1034-106">客户端应用程序必须能够指示是否使用较新的 `regularCalc` 服务。</span><span class="sxs-lookup"><span data-stu-id="c1034-106">A client application must be able to indicate whether to use the newer `regularCalc` service.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="e857c-107">为了将消息路由到特定服务版本，路由服务必须能够根据消息内容确定消息目标。</span><span class="sxs-lookup"><span data-stu-id="e857c-107">In order to route a message to a specific service version, the Routing Service must be able to determine the message destination based on the message content.</span></span> <span data-ttu-id="e857c-108">在下面演示的方法中，客户端将信息插入消息头中来指定版本。</span><span class="sxs-lookup"><span data-stu-id="e857c-108">In the method demonstrated below, the client will specify the version by inserting information into a message header.</span></span> <span data-ttu-id="e857c-109">存在几种无需客户端传递额外数据的服务版本控制方法。</span><span class="sxs-lookup"><span data-stu-id="e857c-109">There are methods of service versioning that do not require clients to pass additional data.</span></span> <span data-ttu-id="e857c-110">例如，可以将消息路由到服务的最新版本或最兼容的版本，或者路由器可以使用标准 SOAP 信封的一部分。</span><span class="sxs-lookup"><span data-stu-id="e857c-110">For example, a message could be routed to the most recent or most compatible version of a service or the router could use a part of the standard SOAP envelope.</span></span>  
+>  <span data-ttu-id="c1034-107">为了将消息路由到特定服务版本，路由服务必须能够根据消息内容确定消息目标。</span><span class="sxs-lookup"><span data-stu-id="c1034-107">In order to route a message to a specific service version, the Routing Service must be able to determine the message destination based on the message content.</span></span> <span data-ttu-id="c1034-108">在下面演示的方法中，客户端将信息插入消息头中来指定版本。</span><span class="sxs-lookup"><span data-stu-id="c1034-108">In the method demonstrated below, the client will specify the version by inserting information into a message header.</span></span> <span data-ttu-id="c1034-109">存在几种无需客户端传递额外数据的服务版本控制方法。</span><span class="sxs-lookup"><span data-stu-id="c1034-109">There are methods of service versioning that do not require clients to pass additional data.</span></span> <span data-ttu-id="c1034-110">例如，可以将消息路由到服务的最新版本或最兼容的版本，或者路由器可以使用标准 SOAP 信封的一部分。</span><span class="sxs-lookup"><span data-stu-id="c1034-110">For example, a message could be routed to the most recent or most compatible version of a service or the router could use a part of the standard SOAP envelope.</span></span>  
   
- <span data-ttu-id="e857c-111">这两个服务公开的运算包括：</span><span class="sxs-lookup"><span data-stu-id="e857c-111">The operations exposed by both services are:</span></span>  
+ <span data-ttu-id="c1034-111">这两个服务公开的运算包括：</span><span class="sxs-lookup"><span data-stu-id="c1034-111">The operations exposed by both services are:</span></span>  
   
--   <span data-ttu-id="e857c-112">添加</span><span class="sxs-lookup"><span data-stu-id="e857c-112">Add</span></span>  
+-   <span data-ttu-id="c1034-112">添加</span><span class="sxs-lookup"><span data-stu-id="c1034-112">Add</span></span>  
   
--   <span data-ttu-id="e857c-113">Subtract</span><span class="sxs-lookup"><span data-stu-id="e857c-113">Subtract</span></span>  
+-   <span data-ttu-id="c1034-113">Subtract</span><span class="sxs-lookup"><span data-stu-id="c1034-113">Subtract</span></span>  
   
--   <span data-ttu-id="e857c-114">相乘</span><span class="sxs-lookup"><span data-stu-id="e857c-114">Multiply</span></span>  
+-   <span data-ttu-id="c1034-114">相乘</span><span class="sxs-lookup"><span data-stu-id="c1034-114">Multiply</span></span>  
   
--   <span data-ttu-id="e857c-115">Divide</span><span class="sxs-lookup"><span data-stu-id="e857c-115">Divide</span></span>  
+-   <span data-ttu-id="c1034-115">除</span><span class="sxs-lookup"><span data-stu-id="c1034-115">Divide</span></span>  
   
- <span data-ttu-id="e857c-116">由于两个服务实现处理相同的运算，并且除了返回的数据之外基本相同，因此从客户端应用程序发送的消息中包含的基本数据不具备足够的独特性，无法确定如何路由请求。</span><span class="sxs-lookup"><span data-stu-id="e857c-116">Because both service implementations handle the same operations, and are essentially identical other than the data that they return, the base data contained in messages sent from client applications is not unique enough to allow you to determine how to route the request.</span></span> <span data-ttu-id="e857c-117">例如，由于两个服务的默认操作相同，因此不能使用操作筛选器。</span><span class="sxs-lookup"><span data-stu-id="e857c-117">For example, Action filters cannot be used because the default actions for both services are the same.</span></span>  
+ <span data-ttu-id="c1034-116">由于两个服务实现处理相同的运算，并且除了返回的数据之外基本相同，因此从客户端应用程序发送的消息中包含的基本数据不具备足够的独特性，无法确定如何路由请求。</span><span class="sxs-lookup"><span data-stu-id="c1034-116">Because both service implementations handle the same operations, and are essentially identical other than the data that they return, the base data contained in messages sent from client applications is not unique enough to allow you to determine how to route the request.</span></span> <span data-ttu-id="c1034-117">例如，由于两个服务的默认操作相同，因此不能使用操作筛选器。</span><span class="sxs-lookup"><span data-stu-id="c1034-117">For example, Action filters cannot be used because the default actions for both services are the same.</span></span>  
   
- <span data-ttu-id="e857c-118">可以通过多种方式解决这个问题，例如针对服务的各个版本在路由器上公开特定终结点，或者将自定义标头元素添加到消息中以指示服务版本。</span><span class="sxs-lookup"><span data-stu-id="e857c-118">This can be resolved in several ways, such as exposing a specific endpoint on the router for each version of the service or adding a custom header element to the message to indicate service version.</span></span>  <span data-ttu-id="e857c-119">这些方法均可以将传入消息唯一地路由到服务的特定版本，但利用唯一的消息内容是区分不同服务版本的请求的首选方法。</span><span class="sxs-lookup"><span data-stu-id="e857c-119">Each of these approaches allows you to uniquely route incoming messages to a specific version of the service, but utilizing unique message content is the preferred method of differentiating between requests for different service versions.</span></span>  
+ <span data-ttu-id="c1034-118">可以通过多种方式解决这个问题，例如针对服务的各个版本在路由器上公开特定终结点，或者将自定义标头元素添加到消息中以指示服务版本。</span><span class="sxs-lookup"><span data-stu-id="c1034-118">This can be resolved in several ways, such as exposing a specific endpoint on the router for each version of the service or adding a custom header element to the message to indicate service version.</span></span>  <span data-ttu-id="c1034-119">这些方法均可以将传入消息唯一地路由到服务的特定版本，但利用唯一的消息内容是区分不同服务版本的请求的首选方法。</span><span class="sxs-lookup"><span data-stu-id="c1034-119">Each of these approaches allows you to uniquely route incoming messages to a specific version of the service, but utilizing unique message content is the preferred method of differentiating between requests for different service versions.</span></span>  
   
- <span data-ttu-id="e857c-120">在本示例中，客户端应用程序将“CalcVer”自定义标头添加到请求消息中。</span><span class="sxs-lookup"><span data-stu-id="e857c-120">In this example, the client application adds the ‘CalcVer’ custom header to the request message.</span></span> <span data-ttu-id="e857c-121">此标头将包含一个值，指示应将消息路由到的服务版本。</span><span class="sxs-lookup"><span data-stu-id="e857c-121">This header will contain a value that indicates the version of the service that the message should be routed to.</span></span> <span data-ttu-id="e857c-122">值“1”指示该消息必须由 roundingCalc 服务处理，而值“2”指示必须由 regularCalc 服务处理。</span><span class="sxs-lookup"><span data-stu-id="e857c-122">A value of ‘1’ indicates that the message must be processed by the roundingCalc service, while a value of ‘2’ indicates the regularCalc service.</span></span> <span data-ttu-id="e857c-123">这样，客户端应用程序就可以直接控制将由服务的哪个版本来处理消息。</span><span class="sxs-lookup"><span data-stu-id="e857c-123">This allows the client application to directly control which version of the service will process the message.</span></span>  <span data-ttu-id="e857c-124">由于自定义标头是消息中包含的值，因此您可以使用一个终结点来接收将两个服务版本作为目标的消息。</span><span class="sxs-lookup"><span data-stu-id="e857c-124">Since the custom header is a value contained within the message, you can use one endpoint to receive messages destined for both versions of the service.</span></span> <span data-ttu-id="e857c-125">可以在客户端应用程序中使用下面的代码，将此自定义标头添加到消息中：</span><span class="sxs-lookup"><span data-stu-id="e857c-125">The following code can be used in the client application to add this custom header to the message:</span></span>  
+ <span data-ttu-id="c1034-120">在本示例中，客户端应用程序将“CalcVer”自定义标头添加到请求消息中。</span><span class="sxs-lookup"><span data-stu-id="c1034-120">In this example, the client application adds the ‘CalcVer’ custom header to the request message.</span></span> <span data-ttu-id="c1034-121">此标头将包含一个值，指示应将消息路由到的服务版本。</span><span class="sxs-lookup"><span data-stu-id="c1034-121">This header will contain a value that indicates the version of the service that the message should be routed to.</span></span> <span data-ttu-id="c1034-122">值“1”指示该消息必须由 roundingCalc 服务处理，而值“2”指示必须由 regularCalc 服务处理。</span><span class="sxs-lookup"><span data-stu-id="c1034-122">A value of ‘1’ indicates that the message must be processed by the roundingCalc service, while a value of ‘2’ indicates the regularCalc service.</span></span> <span data-ttu-id="c1034-123">这样，客户端应用程序就可以直接控制将由服务的哪个版本来处理消息。</span><span class="sxs-lookup"><span data-stu-id="c1034-123">This allows the client application to directly control which version of the service will process the message.</span></span>  <span data-ttu-id="c1034-124">由于自定义标头是消息中包含的值，因此您可以使用一个终结点来接收将两个服务版本作为目标的消息。</span><span class="sxs-lookup"><span data-stu-id="c1034-124">Since the custom header is a value contained within the message, you can use one endpoint to receive messages destined for both versions of the service.</span></span> <span data-ttu-id="c1034-125">可以在客户端应用程序中使用下面的代码，将此自定义标头添加到消息中：</span><span class="sxs-lookup"><span data-stu-id="c1034-125">The following code can be used in the client application to add this custom header to the message:</span></span>  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### <a name="implement-service-versioning"></a><span data-ttu-id="e857c-126">实现服务版本控制</span><span class="sxs-lookup"><span data-stu-id="e857c-126">Implement Service Versioning</span></span>  
+### <a name="implement-service-versioning"></a><span data-ttu-id="c1034-126">实现服务版本控制</span><span class="sxs-lookup"><span data-stu-id="c1034-126">Implement Service Versioning</span></span>  
   
-1.  <span data-ttu-id="e857c-127">通过指定由服务公开的服务终结点，创建基本的路由服务配置。</span><span class="sxs-lookup"><span data-stu-id="e857c-127">Create the basic Routing Service configuration by specifying the service endpoint exposed by the service.</span></span> <span data-ttu-id="e857c-128">下面的示例定义了一个用于接收消息的服务终结点，</span><span class="sxs-lookup"><span data-stu-id="e857c-128">The following example defines a single service endpoint, which will be used to receive messages.</span></span> <span data-ttu-id="e857c-129">还定义用于将消息发送到 `roundingCalc` (v1) 和 `regularCalc` (v2) 服务的客户端终结点。</span><span class="sxs-lookup"><span data-stu-id="e857c-129">It also defines the client endpoints which will be used to send messages to the `roundingCalc` (v1) and the `regularCalc` (v2) services.</span></span>  
+1.  <span data-ttu-id="c1034-127">通过指定由服务公开的服务终结点，创建基本的路由服务配置。</span><span class="sxs-lookup"><span data-stu-id="c1034-127">Create the basic Routing Service configuration by specifying the service endpoint exposed by the service.</span></span> <span data-ttu-id="c1034-128">下面的示例定义了一个用于接收消息的服务终结点，</span><span class="sxs-lookup"><span data-stu-id="c1034-128">The following example defines a single service endpoint, which will be used to receive messages.</span></span> <span data-ttu-id="c1034-129">还定义用于将消息发送到 `roundingCalc` (v1) 和 `regularCalc` (v2) 服务的客户端终结点。</span><span class="sxs-lookup"><span data-stu-id="c1034-129">It also defines the client endpoints which will be used to send messages to the `roundingCalc` (v1) and the `regularCalc` (v2) services.</span></span>  
   
     ```xml  
     <services>  
@@ -79,7 +80,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  <span data-ttu-id="e857c-130">定义用于将消息路由到目标终结点的筛选器。</span><span class="sxs-lookup"><span data-stu-id="e857c-130">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="e857c-131">对于此示例中，XPath 筛选器用于检测"CalcVer"自定义标头以确定应将消息路由到哪个版本的值。</span><span class="sxs-lookup"><span data-stu-id="e857c-131">For this example, the XPath filter is used to detect the value of the "CalcVer" custom header to determine which version the message should be routed to.</span></span> <span data-ttu-id="e857c-132">XPath 筛选器还用于检测到不包含"CalcVer"标头的消息。</span><span class="sxs-lookup"><span data-stu-id="e857c-132">An XPath filter is also used to detect messages that do not contain the "CalcVer" header.</span></span> <span data-ttu-id="e857c-133">下面的示例定义所需的筛选器和命名空间表。</span><span class="sxs-lookup"><span data-stu-id="e857c-133">The following example defines the required filters and namespace table.</span></span>  
+2.  <span data-ttu-id="c1034-130">定义用于将消息路由到目标终结点的筛选器。</span><span class="sxs-lookup"><span data-stu-id="c1034-130">Define the filters used to route messages to the destination endpoints.</span></span>  <span data-ttu-id="c1034-131">对于此示例中，XPath 筛选器用于检测"CalcVer"自定义标头以确定应将消息路由到哪个版本的值。</span><span class="sxs-lookup"><span data-stu-id="c1034-131">For this example, the XPath filter is used to detect the value of the "CalcVer" custom header to determine which version the message should be routed to.</span></span> <span data-ttu-id="c1034-132">XPath 筛选器还用于检测到不包含"CalcVer"标头的消息。</span><span class="sxs-lookup"><span data-stu-id="c1034-132">An XPath filter is also used to detect messages that do not contain the "CalcVer" header.</span></span> <span data-ttu-id="c1034-133">下面的示例定义所需的筛选器和命名空间表。</span><span class="sxs-lookup"><span data-stu-id="c1034-133">The following example defines the required filters and namespace table.</span></span>  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -104,11 +105,11 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="e857c-134">S12 命名空间前缀默认情况下，在命名空间表中，定义并表示命名空间"http://www.w3.org/2003/05/soap-envelope"。</span><span class="sxs-lookup"><span data-stu-id="e857c-134">The s12 namespace prefix is defined by default in the namespace table, and represents the namespace "http://www.w3.org/2003/05/soap-envelope".</span></span>  
+    >  <span data-ttu-id="c1034-134">S12 命名空间前缀默认情况下，在命名空间表中，定义并表示命名空间"http://www.w3.org/2003/05/soap-envelope"。</span><span class="sxs-lookup"><span data-stu-id="c1034-134">The s12 namespace prefix is defined by default in the namespace table, and represents the namespace "http://www.w3.org/2003/05/soap-envelope".</span></span>  
   
-3.  <span data-ttu-id="e857c-135">定义筛选器表，该表将各个筛选器与客户端终结点相关联。</span><span class="sxs-lookup"><span data-stu-id="e857c-135">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="e857c-136">如果消息中包含"CalcVer"标头值为 1，则将发送到 regularCalc 服务中。</span><span class="sxs-lookup"><span data-stu-id="e857c-136">If the message contains the "CalcVer" header with a value of 1, it will be sent to the regularCalc service.</span></span> <span data-ttu-id="e857c-137">如果标头包含值 2，则系统将该消息发送到 roundingCalc 服务。</span><span class="sxs-lookup"><span data-stu-id="e857c-137">If the header contains a value of 2, it will be sent to the roundingCalc service.</span></span> <span data-ttu-id="e857c-138">如果没有标头，则系统将该消息路由到 regularCalc。</span><span class="sxs-lookup"><span data-stu-id="e857c-138">If no header is present, the message will be routed to the regularCalc.</span></span>  
+3.  <span data-ttu-id="c1034-135">定义筛选器表，该表将各个筛选器与客户端终结点相关联。</span><span class="sxs-lookup"><span data-stu-id="c1034-135">Define the filter table, which associates each filter with a client endpoint.</span></span> <span data-ttu-id="c1034-136">如果消息中包含"CalcVer"标头值为 1，则将发送到 regularCalc 服务中。</span><span class="sxs-lookup"><span data-stu-id="c1034-136">If the message contains the "CalcVer" header with a value of 1, it will be sent to the regularCalc service.</span></span> <span data-ttu-id="c1034-137">如果标头包含值 2，则系统将该消息发送到 roundingCalc 服务。</span><span class="sxs-lookup"><span data-stu-id="c1034-137">If the header contains a value of 2, it will be sent to the roundingCalc service.</span></span> <span data-ttu-id="c1034-138">如果没有标头，则系统将该消息路由到 regularCalc。</span><span class="sxs-lookup"><span data-stu-id="c1034-138">If no header is present, the message will be routed to the regularCalc.</span></span>  
   
-     <span data-ttu-id="e857c-139">以下代码定义筛选器表并添加前面定义的筛选器。</span><span class="sxs-lookup"><span data-stu-id="e857c-139">The following defines the filter table and adds the filters defined earlier.</span></span>  
+     <span data-ttu-id="c1034-139">以下代码定义筛选器表并添加前面定义的筛选器。</span><span class="sxs-lookup"><span data-stu-id="c1034-139">The following defines the filter table and adds the filters defined earlier.</span></span>  
   
     ```xml  
     <filterTables>  
@@ -127,7 +128,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  <span data-ttu-id="e857c-140">若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。</span><span class="sxs-lookup"><span data-stu-id="e857c-140">To evaluate incoming messages against the filters contained in the filter table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span>  <span data-ttu-id="e857c-141">下面的示例演示将"filterTable1"与服务终结点：</span><span class="sxs-lookup"><span data-stu-id="e857c-141">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
+4.  <span data-ttu-id="c1034-140">若要根据筛选器表中包含的筛选器评估传入消息，必须使用路由行为将筛选器表与服务终结点关联。</span><span class="sxs-lookup"><span data-stu-id="c1034-140">To evaluate incoming messages against the filters contained in the filter table, you must associate the filter table with the service endpoints by using the routing behavior.</span></span>  <span data-ttu-id="c1034-141">下面的示例演示将"filterTable1"与服务终结点：</span><span class="sxs-lookup"><span data-stu-id="c1034-141">The following example demonstrates associating "filterTable1" with the service endpoints:</span></span>  
   
     ```xml  
     <behaviors>  
@@ -140,8 +141,8 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </behaviors>  
     ```  
   
-## <a name="example"></a><span data-ttu-id="e857c-142">示例</span><span class="sxs-lookup"><span data-stu-id="e857c-142">Example</span></span>  
- <span data-ttu-id="e857c-143">下面是配置文件的完整代码清单。</span><span class="sxs-lookup"><span data-stu-id="e857c-143">The following is a complete listing of the configuration file.</span></span>  
+## <a name="example"></a><span data-ttu-id="c1034-142">示例</span><span class="sxs-lookup"><span data-stu-id="c1034-142">Example</span></span>  
+ <span data-ttu-id="c1034-143">下面是配置文件的完整代码清单。</span><span class="sxs-lookup"><span data-stu-id="c1034-143">The following is a complete listing of the configuration file.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -223,8 +224,8 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
 </configuration>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e857c-144">示例</span><span class="sxs-lookup"><span data-stu-id="e857c-144">Example</span></span>  
- <span data-ttu-id="e857c-145">下面是客户端应用程序的完整代码清单。</span><span class="sxs-lookup"><span data-stu-id="e857c-145">The following is a complete listing of the client application.</span></span>  
+## <a name="example"></a><span data-ttu-id="c1034-144">示例</span><span class="sxs-lookup"><span data-stu-id="c1034-144">Example</span></span>  
+ <span data-ttu-id="c1034-145">下面是客户端应用程序的完整代码清单。</span><span class="sxs-lookup"><span data-stu-id="c1034-145">The following is a complete listing of the client application.</span></span>  
   
 ```csharp  
 using System;  
@@ -334,5 +335,5 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e857c-146">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e857c-146">See Also</span></span>  
- [<span data-ttu-id="e857c-147">路由服务</span><span class="sxs-lookup"><span data-stu-id="e857c-147">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a><span data-ttu-id="c1034-146">请参阅</span><span class="sxs-lookup"><span data-stu-id="c1034-146">See Also</span></span>  
+ [<span data-ttu-id="c1034-147">路由服务</span><span class="sxs-lookup"><span data-stu-id="c1034-147">Routing Services</span></span>](../../../../docs/framework/wcf/samples/routing-services.md)

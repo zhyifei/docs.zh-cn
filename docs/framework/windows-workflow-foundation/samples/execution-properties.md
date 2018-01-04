@@ -12,29 +12,30 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fed33544654e6929997567198c0f07346e715d1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 539335f86718d19f9dd2c7e8cc3cd068807ef7de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="execution-properties"></a><span data-ttu-id="e714e-102">执行属性</span><span class="sxs-lookup"><span data-stu-id="e714e-102">Execution Properties</span></span>
-<span data-ttu-id="e714e-103">此示例演示如何在自定义活动中定义并使用执行属性。</span><span class="sxs-lookup"><span data-stu-id="e714e-103">This sample shows how to define and use an execution property in a custom activity.</span></span> <span data-ttu-id="e714e-104">在此示例中，执行属性可确定控制台的前景色。</span><span class="sxs-lookup"><span data-stu-id="e714e-104">In this example, the execution property determines the console's foreground color.</span></span> <span data-ttu-id="e714e-105">示例工作流演示执行的各个逻辑路径（<xref:System.Activities.Statements.Parallel> 活动的分支）如何保留不同的控制台颜色，而不管活动的交错执行（跨 <xref:System.Activities.Statements.Parallel> 活动的分支）。</span><span class="sxs-lookup"><span data-stu-id="e714e-105">An example workflow shows how different logical paths of execution (branches of a <xref:System.Activities.Statements.Parallel> activity) can maintain different console colors despite interleaved execution of activities (across the branches of the <xref:System.Activities.Statements.Parallel> activity).</span></span>  
+# <a name="execution-properties"></a><span data-ttu-id="12445-102">执行属性</span><span class="sxs-lookup"><span data-stu-id="12445-102">Execution Properties</span></span>
+<span data-ttu-id="12445-103">此示例演示如何在自定义活动中定义并使用执行属性。</span><span class="sxs-lookup"><span data-stu-id="12445-103">This sample shows how to define and use an execution property in a custom activity.</span></span> <span data-ttu-id="12445-104">在此示例中，执行属性可确定控制台的前景色。</span><span class="sxs-lookup"><span data-stu-id="12445-104">In this example, the execution property determines the console's foreground color.</span></span> <span data-ttu-id="12445-105">示例工作流演示执行的各个逻辑路径（<xref:System.Activities.Statements.Parallel> 活动的分支）如何保留不同的控制台颜色，而不管活动的交错执行（跨 <xref:System.Activities.Statements.Parallel> 活动的分支）。</span><span class="sxs-lookup"><span data-stu-id="12445-105">An example workflow shows how different logical paths of execution (branches of a <xref:System.Activities.Statements.Parallel> activity) can maintain different console colors despite interleaved execution of activities (across the branches of the <xref:System.Activities.Statements.Parallel> activity).</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e714e-106">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="e714e-106">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="12445-106">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="12445-106">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="e714e-107">在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 ExecutionProperties.sln 示例解决方案。</span><span class="sxs-lookup"><span data-stu-id="e714e-107">Open the ExecutionProperties.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="12445-107">在 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] 中打开 ExecutionProperties.sln 示例解决方案。</span><span class="sxs-lookup"><span data-stu-id="12445-107">Open the ExecutionProperties.sln sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="e714e-108">由于必须在生成解决方案的同时生成使用的自定义活动，因此在生成解决方案前查看 ThreeColors.xaml 会显示错误。</span><span class="sxs-lookup"><span data-stu-id="e714e-108">Viewing ThreeColors.xaml before building the solution displays an error, because the custom activities used must be built at the same time as the solution.</span></span>  
+    >  <span data-ttu-id="12445-108">由于必须在生成解决方案的同时生成使用的自定义活动，因此在生成解决方案前查看 ThreeColors.xaml 会显示错误。</span><span class="sxs-lookup"><span data-stu-id="12445-108">Viewing ThreeColors.xaml before building the solution displays an error, because the custom activities used must be built at the same time as the solution.</span></span>  
   
-2.  <span data-ttu-id="e714e-109">生成和运行解决方案。</span><span class="sxs-lookup"><span data-stu-id="e714e-109">Build and run the solution.</span></span>  
+2.  <span data-ttu-id="12445-109">生成和运行解决方案。</span><span class="sxs-lookup"><span data-stu-id="12445-109">Build and run the solution.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e714e-110">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="e714e-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e714e-111">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="e714e-111">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="12445-110">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="12445-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="12445-111">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="12445-111">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e714e-112">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="e714e-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e714e-113">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="e714e-113">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="12445-112">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="12445-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="12445-113">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="12445-113">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\ExecutionProperties`

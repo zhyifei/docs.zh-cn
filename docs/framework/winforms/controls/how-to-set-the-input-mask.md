@@ -15,61 +15,62 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c136bd5bdacec04a011f728694550fb66ae6d897
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68bfe46462a374899a0782903804edea0e93f161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-set-the-input-mask"></a><span data-ttu-id="0eb24-102">如何：设置输入掩码</span><span class="sxs-lookup"><span data-stu-id="0eb24-102">How to: Set the Input Mask</span></span>
-<span data-ttu-id="0eb24-103">掩码的文本框控件为增强的文本框控件支持的声明性语法，用于接受或拒绝用户输入。</span><span class="sxs-lookup"><span data-stu-id="0eb24-103">The masked text box control is an enhanced text box control that supports a declarative syntax for accepting or rejecting user input.</span></span> <span data-ttu-id="0eb24-104">通过设置掩码属性，可以指定允许用户输入，而无需编写任何自定义验证逻辑应用程序中。</span><span class="sxs-lookup"><span data-stu-id="0eb24-104">By setting the Mask property, you can specify the allowable user input without writing any custom validation logic in your application.</span></span> <span data-ttu-id="0eb24-105">有关详细信息，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox>类。</span><span class="sxs-lookup"><span data-stu-id="0eb24-105">For more information, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox> class.</span></span>  
+# <a name="how-to-set-the-input-mask"></a><span data-ttu-id="4652d-102">如何：设置输入掩码</span><span class="sxs-lookup"><span data-stu-id="4652d-102">How to: Set the Input Mask</span></span>
+<span data-ttu-id="4652d-103">掩码的文本框控件为增强的文本框控件支持的声明性语法，用于接受或拒绝用户输入。</span><span class="sxs-lookup"><span data-stu-id="4652d-103">The masked text box control is an enhanced text box control that supports a declarative syntax for accepting or rejecting user input.</span></span> <span data-ttu-id="4652d-104">通过设置掩码属性，可以指定允许用户输入，而无需编写任何自定义验证逻辑应用程序中。</span><span class="sxs-lookup"><span data-stu-id="4652d-104">By setting the Mask property, you can specify the allowable user input without writing any custom validation logic in your application.</span></span> <span data-ttu-id="4652d-105">有关详细信息，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox>类。</span><span class="sxs-lookup"><span data-stu-id="4652d-105">For more information, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox> class.</span></span>  
   
-## <a name="setting-the-mask-property-manually"></a><span data-ttu-id="0eb24-106">手动设置掩码属性</span><span class="sxs-lookup"><span data-stu-id="0eb24-106">Setting the Mask Property Manually</span></span>  
- <span data-ttu-id="0eb24-107">如果你熟悉掩码属性支持的字符，则可以手动输入它。</span><span class="sxs-lookup"><span data-stu-id="0eb24-107">If you are familiar with the characters that the Mask property supports, you can enter it manually.</span></span> <span data-ttu-id="0eb24-108">掩码属性支持的字符的摘要，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="0eb24-108">For a summary of the characters that the Mask property supports, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
+## <a name="setting-the-mask-property-manually"></a><span data-ttu-id="4652d-106">手动设置掩码属性</span><span class="sxs-lookup"><span data-stu-id="4652d-106">Setting the Mask Property Manually</span></span>  
+ <span data-ttu-id="4652d-107">如果你熟悉掩码属性支持的字符，则可以手动输入它。</span><span class="sxs-lookup"><span data-stu-id="4652d-107">If you are familiar with the characters that the Mask property supports, you can enter it manually.</span></span> <span data-ttu-id="4652d-108">掩码属性支持的字符的摘要，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="4652d-108">For a summary of the characters that the Mask property supports, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
   
-#### <a name="to-set-the-mask-property-manually"></a><span data-ttu-id="0eb24-109">若要手动设置掩码属性</span><span class="sxs-lookup"><span data-stu-id="0eb24-109">To set the Mask property manually</span></span>  
+#### <a name="to-set-the-mask-property-manually"></a><span data-ttu-id="4652d-109">若要手动设置掩码属性</span><span class="sxs-lookup"><span data-stu-id="4652d-109">To set the Mask property manually</span></span>  
   
-1.  <span data-ttu-id="0eb24-110">在**设计**视图中，选择<xref:System.Windows.Forms.MaskedTextBox>。</span><span class="sxs-lookup"><span data-stu-id="0eb24-110">In **Design** view, select a <xref:System.Windows.Forms.MaskedTextBox>.</span></span>  
+1.  <span data-ttu-id="4652d-110">在**设计**视图中，选择<xref:System.Windows.Forms.MaskedTextBox>。</span><span class="sxs-lookup"><span data-stu-id="4652d-110">In **Design** view, select a <xref:System.Windows.Forms.MaskedTextBox>.</span></span>  
   
-2.  <span data-ttu-id="0eb24-111">在**属性**窗口中，找到<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="0eb24-111">In the **Properties** window, locate the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
+2.  <span data-ttu-id="4652d-111">在**属性**窗口中，找到<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="4652d-111">In the **Properties** window, locate the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
   
-3.  <span data-ttu-id="0eb24-112">键入所需的掩码。</span><span class="sxs-lookup"><span data-stu-id="0eb24-112">Type the mask that you want.</span></span> <span data-ttu-id="0eb24-113">例如，键入`###`。</span><span class="sxs-lookup"><span data-stu-id="0eb24-113">For example, type `###`.</span></span>  
+3.  <span data-ttu-id="4652d-112">键入所需的掩码。</span><span class="sxs-lookup"><span data-stu-id="4652d-112">Type the mask that you want.</span></span> <span data-ttu-id="4652d-113">例如，键入`###`。</span><span class="sxs-lookup"><span data-stu-id="4652d-113">For example, type `###`.</span></span>  
   
-## <a name="using-the-input-mask-dialog-box"></a><span data-ttu-id="0eb24-114">使用输入的掩码对话框</span><span class="sxs-lookup"><span data-stu-id="0eb24-114">Using the Input Mask Dialog Box</span></span>  
- <span data-ttu-id="0eb24-115">输入掩码对话框中提供了一些预定义的输入的掩码。</span><span class="sxs-lookup"><span data-stu-id="0eb24-115">The Input Mask dialog box provides some predefined input masks.</span></span> <span data-ttu-id="0eb24-116">你还可以更改预定义的掩码或手动输入自己的掩码。</span><span class="sxs-lookup"><span data-stu-id="0eb24-116">You can also change the predefined masks or enter your own mask manually.</span></span>  
+## <a name="using-the-input-mask-dialog-box"></a><span data-ttu-id="4652d-114">使用输入的掩码对话框</span><span class="sxs-lookup"><span data-stu-id="4652d-114">Using the Input Mask Dialog Box</span></span>  
+ <span data-ttu-id="4652d-115">输入掩码对话框中提供了一些预定义的输入的掩码。</span><span class="sxs-lookup"><span data-stu-id="4652d-115">The Input Mask dialog box provides some predefined input masks.</span></span> <span data-ttu-id="4652d-116">你还可以更改预定义的掩码或手动输入自己的掩码。</span><span class="sxs-lookup"><span data-stu-id="4652d-116">You can also change the predefined masks or enter your own mask manually.</span></span>  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a><span data-ttu-id="0eb24-117">若要打开输入掩码对话框</span><span class="sxs-lookup"><span data-stu-id="0eb24-117">To open the Input Mask dialog box</span></span>  
+#### <a name="to-open-the-input-mask-dialog-box"></a><span data-ttu-id="4652d-117">若要打开输入掩码对话框</span><span class="sxs-lookup"><span data-stu-id="4652d-117">To open the Input Mask dialog box</span></span>  
   
-1.  <span data-ttu-id="0eb24-118">在**设计**视图中，选择<xref:System.Windows.Forms.MaskedTextBox>。</span><span class="sxs-lookup"><span data-stu-id="0eb24-118">In **Design** view, select a <xref:System.Windows.Forms.MaskedTextBox>.</span></span>  
+1.  <span data-ttu-id="4652d-118">在**设计**视图中，选择<xref:System.Windows.Forms.MaskedTextBox>。</span><span class="sxs-lookup"><span data-stu-id="4652d-118">In **Design** view, select a <xref:System.Windows.Forms.MaskedTextBox>.</span></span>  
   
-    1.  <span data-ttu-id="0eb24-119">单击要打开的智能标记**MaskedTextBox 任务**面板。</span><span class="sxs-lookup"><span data-stu-id="0eb24-119">Click the smart tag to open the **MaskedTextBox Tasks** panel.</span></span>  
+    1.  <span data-ttu-id="4652d-119">单击要打开的智能标记**MaskedTextBox 任务**面板。</span><span class="sxs-lookup"><span data-stu-id="4652d-119">Click the smart tag to open the **MaskedTextBox Tasks** panel.</span></span>  
   
-    2.  <span data-ttu-id="0eb24-120">单击**设置掩码**。</span><span class="sxs-lookup"><span data-stu-id="0eb24-120">Click **Set Mask**.</span></span>  
+    2.  <span data-ttu-id="4652d-120">单击**设置掩码**。</span><span class="sxs-lookup"><span data-stu-id="4652d-120">Click **Set Mask**.</span></span>  
   
-     <span data-ttu-id="0eb24-121">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="0eb24-121">\- or -</span></span>  
+     <span data-ttu-id="4652d-121">\- 或 -</span><span class="sxs-lookup"><span data-stu-id="4652d-121">\- or -</span></span>  
   
-    1.  <span data-ttu-id="0eb24-122">在**属性**窗口中，选择<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="0eb24-122">In the **Properties** window, select the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
+    1.  <span data-ttu-id="4652d-122">在**属性**窗口中，选择<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="4652d-122">In the **Properties** window, select the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
   
-    2.  <span data-ttu-id="0eb24-123">单击属性值列中的省略号按钮。</span><span class="sxs-lookup"><span data-stu-id="0eb24-123">Click the ellipsis button in the property value column.</span></span>  
+    2.  <span data-ttu-id="4652d-123">单击属性值列中的省略号按钮。</span><span class="sxs-lookup"><span data-stu-id="4652d-123">Click the ellipsis button in the property value column.</span></span>  
   
-     <span data-ttu-id="0eb24-124">**输入掩码**对话框随即出现。</span><span class="sxs-lookup"><span data-stu-id="0eb24-124">The **Input Mask** dialog box appears.</span></span>  
+     <span data-ttu-id="4652d-124">**输入掩码**对话框随即出现。</span><span class="sxs-lookup"><span data-stu-id="4652d-124">The **Input Mask** dialog box appears.</span></span>  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a><span data-ttu-id="0eb24-125">若要使用的输入掩码对话框</span><span class="sxs-lookup"><span data-stu-id="0eb24-125">To use the Input Mask dialog box</span></span>  
+#### <a name="to-use-the-input-mask-dialog-box"></a><span data-ttu-id="4652d-125">若要使用的输入掩码对话框</span><span class="sxs-lookup"><span data-stu-id="4652d-125">To use the Input Mask dialog box</span></span>  
   
-1.  <span data-ttu-id="0eb24-126">（可选）单击其中一个列表中预定义的掩码。</span><span class="sxs-lookup"><span data-stu-id="0eb24-126">(Optional) Click one of the predefined masks in the list.</span></span>  
+1.  <span data-ttu-id="4652d-126">（可选）单击其中一个列表中预定义的掩码。</span><span class="sxs-lookup"><span data-stu-id="4652d-126">(Optional) Click one of the predefined masks in the list.</span></span>  
   
-2.  <span data-ttu-id="0eb24-127">（可选）编辑中的预定义的掩码**掩码**框。</span><span class="sxs-lookup"><span data-stu-id="0eb24-127">(Optional) Edit the predefined mask in the **Mask** box.</span></span>  
+2.  <span data-ttu-id="4652d-127">（可选）编辑中的预定义的掩码**掩码**框。</span><span class="sxs-lookup"><span data-stu-id="4652d-127">(Optional) Edit the predefined mask in the **Mask** box.</span></span>  
   
-3.  <span data-ttu-id="0eb24-128">（可选）输入新掩码**掩码**框。</span><span class="sxs-lookup"><span data-stu-id="0eb24-128">(Optional) Type a new mask in the **Mask** box.</span></span> <span data-ttu-id="0eb24-129">也就是说，不需要使用一个预定义的掩码。</span><span class="sxs-lookup"><span data-stu-id="0eb24-129">That is, you do not have to use one of the predefined masks.</span></span>  
+3.  <span data-ttu-id="4652d-128">（可选）输入新掩码**掩码**框。</span><span class="sxs-lookup"><span data-stu-id="4652d-128">(Optional) Type a new mask in the **Mask** box.</span></span> <span data-ttu-id="4652d-129">也就是说，不需要使用一个预定义的掩码。</span><span class="sxs-lookup"><span data-stu-id="4652d-129">That is, you do not have to use one of the predefined masks.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="0eb24-130">预览框中显示的字符，则用户将看到在<xref:System.Windows.Forms.MaskedTextBox>。</span><span class="sxs-lookup"><span data-stu-id="0eb24-130">The Preview box displays the characters that the user sees in the <xref:System.Windows.Forms.MaskedTextBox>.</span></span> <span data-ttu-id="0eb24-131">这些字符都是以帮助用户正确输入数据的指南。</span><span class="sxs-lookup"><span data-stu-id="0eb24-131">These characters are a guide to help the user enter the data correctly.</span></span>  
+    >  <span data-ttu-id="4652d-130">预览框中显示的字符，则用户将看到在<xref:System.Windows.Forms.MaskedTextBox>。</span><span class="sxs-lookup"><span data-stu-id="4652d-130">The Preview box displays the characters that the user sees in the <xref:System.Windows.Forms.MaskedTextBox>.</span></span> <span data-ttu-id="4652d-131">这些字符都是以帮助用户正确输入数据的指南。</span><span class="sxs-lookup"><span data-stu-id="4652d-131">These characters are a guide to help the user enter the data correctly.</span></span>  
   
-4.  <span data-ttu-id="0eb24-132">选中或清除**使用 ValidatingType**复选框。</span><span class="sxs-lookup"><span data-stu-id="0eb24-132">Select or clear the **Use ValidatingType** check box.</span></span> <span data-ttu-id="0eb24-133">**使用 ValidatingType**复选框指定是否数据类型用于验证数据输入用户。</span><span class="sxs-lookup"><span data-stu-id="0eb24-133">The **Use ValidatingType** check box specifies whether a data type is used to verify the data input by the user.</span></span> <span data-ttu-id="0eb24-134">有关更多信息，请参见 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="0eb24-134">For more information, see the <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property.</span></span>  
+4.  <span data-ttu-id="4652d-132">选中或清除**使用 ValidatingType**复选框。</span><span class="sxs-lookup"><span data-stu-id="4652d-132">Select or clear the **Use ValidatingType** check box.</span></span> <span data-ttu-id="4652d-133">**使用 ValidatingType**复选框指定是否数据类型用于验证数据输入用户。</span><span class="sxs-lookup"><span data-stu-id="4652d-133">The **Use ValidatingType** check box specifies whether a data type is used to verify the data input by the user.</span></span> <span data-ttu-id="4652d-134">有关更多信息，请参见 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 属性。</span><span class="sxs-lookup"><span data-stu-id="4652d-134">For more information, see the <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property.</span></span>  
   
-5.  <span data-ttu-id="0eb24-135">单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="0eb24-135">Click **OK**.</span></span>  
+5.  <span data-ttu-id="4652d-135">单击 **“确定”**。</span><span class="sxs-lookup"><span data-stu-id="4652d-135">Click **OK**.</span></span>  
   
-     <span data-ttu-id="0eb24-136">在输入掩码**掩码**中的属性**属性**窗口。</span><span class="sxs-lookup"><span data-stu-id="0eb24-136">The mask is entered in the **Mask** property in the **Properties** window.</span></span>  
+     <span data-ttu-id="4652d-136">在输入掩码**掩码**中的属性**属性**窗口。</span><span class="sxs-lookup"><span data-stu-id="4652d-136">The mask is entered in the **Mask** property in the **Properties** window.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0eb24-137">另请参阅</span><span class="sxs-lookup"><span data-stu-id="0eb24-137">See Also</span></span>  
- [<span data-ttu-id="0eb24-138">演练：使用 MaskedTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="0eb24-138">Walkthrough: Working with the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a><span data-ttu-id="4652d-137">请参阅</span><span class="sxs-lookup"><span data-stu-id="4652d-137">See Also</span></span>  
+ [<span data-ttu-id="4652d-138">演练：使用 MaskedTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="4652d-138">Walkthrough: Working with the MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

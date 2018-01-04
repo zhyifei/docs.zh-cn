@@ -19,34 +19,35 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3fb80b5baeafff53781cb1ff430ad05dd93f2ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a3b6a72a3dac2e7957f73ee466ded0282988923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="17b35-102">如何：使 Windows 窗体 DataGridView 控件中的列只读</span><span class="sxs-lookup"><span data-stu-id="17b35-102">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="17b35-103">无需对所有的数据进行编辑。</span><span class="sxs-lookup"><span data-stu-id="17b35-103">Not all data is meant for editing.</span></span> <span data-ttu-id="17b35-104">在 <xref:System.Windows.Forms.DataGridView> 控件中，列 <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> 属性值确定用户是否可在该列中编辑单元格。</span><span class="sxs-lookup"><span data-stu-id="17b35-104">In the <xref:System.Windows.Forms.DataGridView> control, the column <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> property value determines whether users can edit cells in that column.</span></span> <span data-ttu-id="17b35-105">有关如何使控件完全只读的信息，请参阅[如何： 防止添加和删除行在 Windows 窗体 DataGridView 控件中](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)。</span><span class="sxs-lookup"><span data-stu-id="17b35-105">For information about how to make the control entirely read-only, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).</span></span>  
+# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="36bc1-102">如何：使 Windows 窗体 DataGridView 控件中的列只读</span><span class="sxs-lookup"><span data-stu-id="36bc1-102">How to: Make Columns Read-Only in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="36bc1-103">无需对所有的数据进行编辑。</span><span class="sxs-lookup"><span data-stu-id="36bc1-103">Not all data is meant for editing.</span></span> <span data-ttu-id="36bc1-104">在 <xref:System.Windows.Forms.DataGridView> 控件中，列 <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> 属性值确定用户是否可在该列中编辑单元格。</span><span class="sxs-lookup"><span data-stu-id="36bc1-104">In the <xref:System.Windows.Forms.DataGridView> control, the column <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> property value determines whether users can edit cells in that column.</span></span> <span data-ttu-id="36bc1-105">有关如何使控件完全只读的信息，请参阅[如何： 防止添加和删除行在 Windows 窗体 DataGridView 控件中](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)。</span><span class="sxs-lookup"><span data-stu-id="36bc1-105">For information about how to make the control entirely read-only, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).</span></span>  
   
- <span data-ttu-id="17b35-106">Visual Studio 中对此任务提供支持。</span><span class="sxs-lookup"><span data-stu-id="17b35-106">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="17b35-107">另请参阅[如何： 在 Windows 窗体 DataGridView 控件中使用设计器使列成为只读](http://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="17b35-107">Also see [How to: Make Columns Read-Only in the Windows Forms DataGridView Control Using the Designer](http://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="36bc1-106">Visual Studio 中对此任务提供支持。</span><span class="sxs-lookup"><span data-stu-id="36bc1-106">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="36bc1-107">另请参阅[如何： 在 Windows 窗体 DataGridView 控件中使用设计器使列成为只读](http://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="36bc1-107">Also see [How to: Make Columns Read-Only in the Windows Forms DataGridView Control Using the Designer](http://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).</span></span>  
   
-### <a name="to-make-a-column-read-only-programmatically"></a><span data-ttu-id="17b35-108">以编程方式将列设置为只读</span><span class="sxs-lookup"><span data-stu-id="17b35-108">To make a column read-only programmatically</span></span>  
+### <a name="to-make-a-column-read-only-programmatically"></a><span data-ttu-id="36bc1-108">以编程方式将列设置为只读</span><span class="sxs-lookup"><span data-stu-id="36bc1-108">To make a column read-only programmatically</span></span>  
   
--   <span data-ttu-id="17b35-109">将 <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="17b35-109">Set the <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> property to `true`.</span></span>  
+-   <span data-ttu-id="36bc1-109">将 <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="36bc1-109">Set the <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType> property to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#064](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#064)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#064](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#064)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="17b35-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="17b35-110">Compiling the Code</span></span>  
- <span data-ttu-id="17b35-111">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="17b35-111">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="36bc1-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="36bc1-110">Compiling the Code</span></span>  
+ <span data-ttu-id="36bc1-111">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="36bc1-111">This example requires:</span></span>  
   
--   <span data-ttu-id="17b35-112">名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件具有名为 `CompanyName` 的列。</span><span class="sxs-lookup"><span data-stu-id="17b35-112">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` with a column named `CompanyName`.</span></span>  
+-   <span data-ttu-id="36bc1-112">名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件具有名为 `CompanyName` 的列。</span><span class="sxs-lookup"><span data-stu-id="36bc1-112">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` with a column named `CompanyName`.</span></span>  
   
--   <span data-ttu-id="17b35-113">对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="17b35-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="36bc1-113">对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="36bc1-113">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17b35-114">另请参阅</span><span class="sxs-lookup"><span data-stu-id="17b35-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="36bc1-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="36bc1-114">See Also</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="17b35-115">Windows 窗体 DataGridView 控件中的列、行和单元格基本功能</span><span class="sxs-lookup"><span data-stu-id="17b35-115">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
- [<span data-ttu-id="17b35-116">如何：防止在 Windows 窗体 DataGridView 控件中添加和删除行</span><span class="sxs-lookup"><span data-stu-id="17b35-116">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)
+ [<span data-ttu-id="36bc1-115">Windows 窗体 DataGridView 控件中的列、行和单元格基本功能</span><span class="sxs-lookup"><span data-stu-id="36bc1-115">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [<span data-ttu-id="36bc1-116">如何：防止在 Windows 窗体 DataGridView 控件中添加和删除行</span><span class="sxs-lookup"><span data-stu-id="36bc1-116">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)

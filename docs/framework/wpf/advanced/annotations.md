@@ -17,24 +17,25 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad5825c63672f0cadd30b7a57d81427407e5097e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67f0a1f4a032a5175406dedcf282ed695f58e51e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="annotations"></a><span data-ttu-id="a9b8c-102">批注</span><span class="sxs-lookup"><span data-stu-id="a9b8c-102">Annotations</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="a9b8c-103">提供的文档查看支持批注文档内容的控件。</span><span class="sxs-lookup"><span data-stu-id="a9b8c-103"> provides document viewing controls that support annotating document content.</span></span>  
+# <a name="annotations"></a><span data-ttu-id="d960b-102">批注</span><span class="sxs-lookup"><span data-stu-id="d960b-102">Annotations</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="d960b-103">提供的文档查看支持批注文档内容的控件。</span><span class="sxs-lookup"><span data-stu-id="d960b-103"> provides document viewing controls that support annotating document content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a9b8c-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="a9b8c-104">In This Section</span></span>  
- [<span data-ttu-id="a9b8c-105">批注概述</span><span class="sxs-lookup"><span data-stu-id="a9b8c-105">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
-  [<span data-ttu-id="a9b8c-106">注释架构</span><span class="sxs-lookup"><span data-stu-id="a9b8c-106">Annotations Schema</span></span>](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d960b-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="d960b-104">In This Section</span></span>  
+ [<span data-ttu-id="d960b-105">批注概述</span><span class="sxs-lookup"><span data-stu-id="d960b-105">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
+  [<span data-ttu-id="d960b-106">注释架构</span><span class="sxs-lookup"><span data-stu-id="d960b-106">Annotations Schema</span></span>](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
   
-## <a name="reference"></a><span data-ttu-id="a9b8c-107">参考</span><span class="sxs-lookup"><span data-stu-id="a9b8c-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d960b-107">参考</span><span class="sxs-lookup"><span data-stu-id="d960b-107">Reference</span></span>  
  <xref:System.Windows.Annotations.Annotation>  
   <xref:System.Windows.Annotations.AnnotationService>  
   <xref:System.Windows.Controls.DocumentViewer>  
   
-## <a name="related-sections"></a><span data-ttu-id="a9b8c-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="a9b8c-108">Related Sections</span></span>  
- [<span data-ttu-id="a9b8c-109">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="a9b8c-109">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
-  [<span data-ttu-id="a9b8c-110">流文档概述</span><span class="sxs-lookup"><span data-stu-id="a9b8c-110">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="d960b-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="d960b-108">Related Sections</span></span>  
+ [<span data-ttu-id="d960b-109">WPF 中的文档</span><span class="sxs-lookup"><span data-stu-id="d960b-109">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+  [<span data-ttu-id="d960b-110">流文档概述</span><span class="sxs-lookup"><span data-stu-id="d960b-110">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

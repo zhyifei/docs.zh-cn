@@ -19,29 +19,30 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76a0ab96f40c1b8d9db6f61d19ece82066b63eb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5bdd9ae29dcbb8397d2fe645e240572aad32a19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-draw-a-sequence-of-b233zier-splines"></a><span data-ttu-id="5d519-102">如何： 绘制一系列 B &#233; zier 样条</span><span class="sxs-lookup"><span data-stu-id="5d519-102">How to: Draw a Sequence of B&#233;zier Splines</span></span>
-<span data-ttu-id="5d519-103">你可以使用<xref:System.Drawing.Graphics.DrawBeziers%2A>方法<xref:System.Drawing.Graphics>类绘制一系列连接贝塞尔样条。</span><span class="sxs-lookup"><span data-stu-id="5d519-103">You can use the <xref:System.Drawing.Graphics.DrawBeziers%2A> method of the <xref:System.Drawing.Graphics> class to draw a sequence of connected Bézier splines.</span></span>  
+# <a name="how-to-draw-a-sequence-of-b233zier-splines"></a><span data-ttu-id="3ab9b-102">如何： 绘制一系列 B &#233; zier 样条</span><span class="sxs-lookup"><span data-stu-id="3ab9b-102">How to: Draw a Sequence of B&#233;zier Splines</span></span>
+<span data-ttu-id="3ab9b-103">你可以使用<xref:System.Drawing.Graphics.DrawBeziers%2A>方法<xref:System.Drawing.Graphics>类绘制一系列连接贝塞尔样条。</span><span class="sxs-lookup"><span data-stu-id="3ab9b-103">You can use the <xref:System.Drawing.Graphics.DrawBeziers%2A> method of the <xref:System.Drawing.Graphics> class to draw a sequence of connected Bézier splines.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5d519-104">示例</span><span class="sxs-lookup"><span data-stu-id="5d519-104">Example</span></span>  
- <span data-ttu-id="5d519-105">下面的示例绘制包含两个连接的贝塞尔样条曲线。</span><span class="sxs-lookup"><span data-stu-id="5d519-105">The following example draws a curve that consists of two connected Bézier splines.</span></span> <span data-ttu-id="5d519-106">第一个贝塞尔样条的终结点是第二个贝塞尔样条的起始点。</span><span class="sxs-lookup"><span data-stu-id="5d519-106">The endpoint of the first Bézier spline is the start point of the second Bézier spline.</span></span>  
+## <a name="example"></a><span data-ttu-id="3ab9b-104">示例</span><span class="sxs-lookup"><span data-stu-id="3ab9b-104">Example</span></span>  
+ <span data-ttu-id="3ab9b-105">下面的示例绘制包含两个连接的贝塞尔样条曲线。</span><span class="sxs-lookup"><span data-stu-id="3ab9b-105">The following example draws a curve that consists of two connected Bézier splines.</span></span> <span data-ttu-id="3ab9b-106">第一个贝塞尔样条的终结点是第二个贝塞尔样条的起始点。</span><span class="sxs-lookup"><span data-stu-id="3ab9b-106">The endpoint of the first Bézier spline is the start point of the second Bézier spline.</span></span>  
   
- <span data-ttu-id="5d519-107">下图显示以及七个点相连的样条。</span><span class="sxs-lookup"><span data-stu-id="5d519-107">The following illustration shows the connected splines along with the seven points.</span></span>  
+ <span data-ttu-id="3ab9b-107">下图显示以及七个点相连的样条。</span><span class="sxs-lookup"><span data-stu-id="3ab9b-107">The following illustration shows the connected splines along with the seven points.</span></span>  
   
- <span data-ttu-id="5d519-108">![贝塞尔样条](../../../../docs/framework/winforms/advanced/media/bezierspline2.png "BezierSpline2")</span><span class="sxs-lookup"><span data-stu-id="5d519-108">![Bezier Spline](../../../../docs/framework/winforms/advanced/media/bezierspline2.png "BezierSpline2")</span></span>  
+ <span data-ttu-id="3ab9b-108">![贝塞尔样条](../../../../docs/framework/winforms/advanced/media/bezierspline2.png "BezierSpline2")</span><span class="sxs-lookup"><span data-stu-id="3ab9b-108">![Bezier Spline](../../../../docs/framework/winforms/advanced/media/bezierspline2.png "BezierSpline2")</span></span>  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#11)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5d519-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="5d519-109">Compiling the Code</span></span>  
- <span data-ttu-id="5d519-110">前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。</span><span class="sxs-lookup"><span data-stu-id="5d519-110">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3ab9b-109">编译代码</span><span class="sxs-lookup"><span data-stu-id="3ab9b-109">Compiling the Code</span></span>  
+ <span data-ttu-id="3ab9b-110">前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。</span><span class="sxs-lookup"><span data-stu-id="3ab9b-110">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5d519-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5d519-111">See Also</span></span>  
- [<span data-ttu-id="5d519-112">Windows 窗体中的图形和绘制</span><span class="sxs-lookup"><span data-stu-id="5d519-112">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [<span data-ttu-id="5d519-113">GDI+ 中的贝塞尔自由绘制曲线</span><span class="sxs-lookup"><span data-stu-id="5d519-113">Bézier Splines in GDI+</span></span>](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
- [<span data-ttu-id="5d519-114">构造并绘制曲线</span><span class="sxs-lookup"><span data-stu-id="5d519-114">Constructing and Drawing Curves</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a><span data-ttu-id="3ab9b-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="3ab9b-111">See Also</span></span>  
+ [<span data-ttu-id="3ab9b-112">Windows 窗体中的图形和绘制</span><span class="sxs-lookup"><span data-stu-id="3ab9b-112">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="3ab9b-113">GDI+ 中的贝塞尔自由绘制曲线</span><span class="sxs-lookup"><span data-stu-id="3ab9b-113">Bézier Splines in GDI+</span></span>](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
+ [<span data-ttu-id="3ab9b-114">构造并绘制曲线</span><span class="sxs-lookup"><span data-stu-id="3ab9b-114">Constructing and Drawing Curves</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
