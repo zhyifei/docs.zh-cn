@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d553ed4f335cc58c3c857d63de9b37cc8d6033c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b06ab0e3b80fded2abf3a27d9cf08e499267902
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bookmarks"></a>书签
 此示例演示如何编写一个自定义活动，该活动创建一个书签以接收外部输入。 此示例还包含一个基本控制台应用程序，该应用程序使用工作流中的自定义活动，并演示如何发现和恢复与正在运行的工作流实例关联的书签。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]书签，请参阅[书签](../../../../docs/framework/windows-workflow-foundation/bookmarks.md)。  

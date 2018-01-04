@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd0e0542e46a17cffef629bc9b916d7b5929e878
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c36bfdd69cb4a3e7827302a7bde5139675a30429
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器更改 Windows 窗体 DataGridView 控件中列的顺序
 当你将绑定 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件添加到数据源，自动生成的列的显示顺序由数据源。 如果此顺序是不需要，你可以更改使用设计器的列的顺序。 你可能还想要将未绑定的列添加到控件和更改其显示顺序。 有关如何以编程方式更改列顺序的信息，请参阅[如何： 更改 Windows 窗体 DataGridView 控件中的列顺序](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  单击向上或向下箭头右侧**所选列**列表之前所选的列中所需的位置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  [如何：使用设计器在 Windows 窗体 DataGridView 控件中添加和删除列](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
  [如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1c6ae9c4159f8f9eafd73608e4fc3f4a646c1eaa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的基本格式设置和样式设置
 `DataGridView`控件，可以轻松定义单元格的基本外观和单元格的值的显示格式。 你可以定义外观和格式设置样式各个单元格、 行和特定列中的单元格或控件中的所有单元格通过设置的属性`DataGridViewCellStyle`通过各种访问的对象`DataGridView`控件属性。 此外，你可以修改这些动态基于通过处理的单元格的值等因素的样式`CellFormatting`事件。  
@@ -67,5 +68,5 @@ ms.lasthandoff: 10/22/2017
  [Windows 窗体 DataGridView 控件中的列、行和单元格基本功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  提供一些主题，描述了通常使用单元格、 行和列的属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

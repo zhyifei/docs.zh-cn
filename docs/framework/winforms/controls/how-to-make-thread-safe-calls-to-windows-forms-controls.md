@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ca0bab0d10f8bc8c08e441b7e92f5f938d65dac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：对 Windows 窗体控件进行线程安全调用
 如果使用多线程处理来提高 Windows 窗体应用程序的性能，则你必须确保以线程安全的方式调用控件。  
@@ -103,7 +104,7 @@ private:
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可帮助检测你是否以线程安全的方式访问控件。 在调试器中运行应用程序并且未创建控件的线程试图调用控件时，调试器会引发 <xref:System.InvalidOperationException> 消息，“从并未创建该控件的线程访问该控件 *控件名称* ”。  
   
- 在调试过程中、在某些情况下以及在运行时均极有可能发生此异常。 当你调试在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 之前用 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]编写的应用程序时可能会看到此异常。 强烈建议你在遇到此问题时修复它，但你可通过将 <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> 属性设置为 `false`来禁用它。 这使控件可像在 Visual Studio .NET 2003 和 [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)]下那样运行。  
+ 在调试过程中、在某些情况下以及在运行时均极有可能发生此异常。 当你调试在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 之前用 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 编写的应用程序时可能会看到此异常。 强烈建议你在遇到此问题时修复它，但你可通过将 <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> 属性设置为 `false`来禁用它。 这使控件可像在 Visual Studio .NET 2003 和 [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)]下那样运行。  
   
 > [!NOTE]
 >  如果你使用的是窗体上的 ActiveX 控件，则在调试器下运行时可能会收到跨线程 <xref:System.InvalidOperationException> 。 发生此情况时，ActiveX 控件不支持多线程处理。 有关在 Windows 窗体中使用 ActiveX 控件的详细信息，请参阅 [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)。 如果你使用的是 Visual Studio，则可通过禁用 Visual Studio 的宿主进程来避免此异常，请参阅 [How to: Disable the Hosting Process](/visualstudio/ide/how-to-disable-the-hosting-process)。  
@@ -1056,7 +1057,7 @@ int main()
 > [!CAUTION]
 >  使用任何种类的多线程时，都有可能会遇到非常严重且复杂的 bug。 有关详细信息，请在实现使用多线程处理的任何解决方案之前参阅[托管线程处理的最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.BackgroundWorker>  
  [如何：在后台运行操作](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  

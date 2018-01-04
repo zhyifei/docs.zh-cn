@@ -1,5 +1,5 @@
 ---
-title: "属性与。参数"
+title: "属性与。自变量"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -12,13 +12,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fcb38322d6b068095238add9334aa2d081c4a5d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b1b9083ecd147a1247209b272dfd1d7b0e3c74f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="properties-vs-arguments"></a>属性与。参数
+# <a name="properties-vs-arguments"></a>属性与。自变量
 可使用多个选项将数据传入活动中。 除使用 <xref:System.Activities.InArgument> 之外，还可以使用标准 CLR 属性或公共 <xref:System.Activities.ActivityAction> 属性开发接收数据的活动。 本主题讨论如何选择适当的方法类型。  
   
 ## <a name="using-clr-properties"></a>使用 CLR 属性  

@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c49d05a9ca09a12044c0846db381368166e105bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86d90e4129f089a77e51e6e58233a1087fe5d0f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-windows-service-applications"></a>如何：调试 Windows 服务应用程序
 必须从服务控制管理器的上下文中而不是 Visual Studio 中运行服务。 因此，调试服务不像调试其他 Visual Studio 应用程序类型一样简单。 要调试服务，必须启动该服务，然后将调试器附加到该服务正在其中运行的进程中。 然后你可以使用所有 Visual Studio 的标准调试功能来调试你的应用程序。  
@@ -121,8 +122,8 @@ ms.lasthandoff: 11/21/2017
   
  在某些情况下，你必须使用 Windows 调试器，比如当你想要调试仅在系统启动时发生的问题时。 安装[Windows 调试工具](http://msdn.microsoft.com/windows/hardware/hh852365)并查看[如何调试 Windows 服务](http://support.microsoft.com/kb/824344)。  
   
-## <a name="see-also"></a>另请参阅  
- [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何： 启动服务](../../../docs/framework/windows-services/how-to-start-services.md)  
+## <a name="see-also"></a>请参阅  
+ [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)  
  [调试服务](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)

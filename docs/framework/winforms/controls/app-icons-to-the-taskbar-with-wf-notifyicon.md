@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c31998885926e9a7372bcf3182d1c95f0b79d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d795df8e8b514345632491fd6afdd618c2f18ec2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标
 Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态通知区域中显示的一个图标。 若要在状态区域中显示多个图标，你必须有多个<xref:System.Windows.Forms.NotifyIcon>窗体上的组件。 若要设置控件显示的图标，使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>属性。 也可以编写代码<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件处理程序，使该出现当用户双击的图标。 例如，你可以制作来配置由图标表示的后台进程的用户显示一个对话框。  
@@ -80,7 +81,7 @@ Windows 窗体<xref:System.Windows.Forms.NotifyIcon>组件在任务栏的状态�
     notifyIcon1->Text = "Antivirus program";  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.NotifyIcon>  
  <xref:System.Windows.Forms.NotifyIcon.Icon%2A>  
  [如何：关联快捷菜单和 Windows 窗体 NotifyIcon 组件](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  

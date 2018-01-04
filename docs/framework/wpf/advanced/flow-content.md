@@ -17,11 +17,12 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-content"></a>流内容
 流内容元素提供构建基块创建流内容适用于在中承载<xref:System.Windows.Documents.FlowDocument>。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/22/2017
  [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [TextElement 内容模型概述](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [表概述](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Documents.FlowDocument>  

@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4777136c80f7dba368c85fac7d7dd1db9c945c5b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a4c7c9c78b821f7457f193d24bae031d49b301ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-transaction-behavior"></a>服务事务行为
 此示例演示客户端协调事务的用法，以及为了控制服务事务行为而对 ServiceBehaviorAttribute 和 OperationBehaviorAttribute 进行的设置。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，实现计算器服务，但会扩展，以维护数据库表和某一字段的计算器操作汇总了有状态中执行的操作的服务器日志。 持久写入服务器日志表依赖于客户端协调事务的结果 - 如果客户端事务未完成，Web 服务事务可以确保不会提交对数据库的更新。  
@@ -274,4 +275,4 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 28dbbf2376416a340ad7853c026b2f763f695dcb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73b16a5e5834f7279ae551d4e7efd26cc86c1d07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>如何：继续 Windows 服务 (Visual Basic)
 此示例使用<xref:System.ServiceProcess.ServiceController>要继续在本地计算机上的 IIS 管理服务组件。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
  服务信息的访问权限可能会限制通过<xref:System.Security.Permissions.PermissionState>枚举来设置权限<xref:System.Security.Permissions.SecurityPermission>类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceProcess.ServiceController>  
  <xref:System.ServiceProcess.ServiceControllerStatus>  
- [如何： 暂停 Windows 服务 (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+ [如何：暂停 Windows 服务 (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

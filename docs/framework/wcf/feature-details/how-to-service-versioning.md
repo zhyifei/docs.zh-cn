@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4da80d264b05f9c7a1461a7298e521623a97f31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-service-versioning"></a>如何：服务版本控制
 本主题概述了创建路由配置以将消息路由到同一服务的不同版本所需采取的基本步骤。 在本示例中，消息将路由到计算器服务的两个不同版本：`roundingCalc` (v1) 和 `regularCalc` (v2)。 这两个实现都支持相同的操作，但较早的服务 `roundingCalc` 在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用较新的 `regularCalc` 服务。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/18/2017
   
 -   相乘  
   
--   Divide  
+-   除  
   
  由于两个服务实现处理相同的运算，并且除了返回的数据之外基本相同，因此从客户端应用程序发送的消息中包含的基本数据不具备足够的独特性，无法确定如何路由请求。 例如，由于两个服务的默认操作相同，因此不能使用操作筛选器。  
   
@@ -334,5 +335,5 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

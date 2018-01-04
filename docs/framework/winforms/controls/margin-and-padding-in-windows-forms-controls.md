@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22d8a73963a8f9f1e3d8b80b6c16f189e0221c55
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28092704d3c7eaa4820bf6dcbc1678f806ac213e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Windows 窗体控件中的边距和填充
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空间给你提供许多布局功能来实现此目的。 其中两个最重要的功能是 <xref:System.Windows.Forms.Control.Margin%2A> 和 <xref:System.Windows.Forms.Control.Padding%2A> 属性。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  Visual Studio 中具有对此功能的设计时支持。  另请参阅[演练： 设计出 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](http://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\))。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Control.AutoSize%2A>  
  <xref:System.Windows.Forms.Control.Margin%2A>  
  <xref:System.Windows.Forms.Control.Padding%2A>  

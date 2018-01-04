@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ca18b35b90b028054e68a0a14fecc819a6c20b9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 967b4a0e883338c756aceef37d11edecfb978527
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>支持辅助功能准则的 Windows 窗体控件上的属性
 标准 Windows 窗体的工具箱上的控件都支持许多辅助功能准则，包括公开键盘焦点和公开屏幕元素。  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/22/2017
 |背景色|如果此属性设置为默认值，然后将窗体上使用用户的颜色首选项。|  
 |BackgroundImage|将此属性保留为空，以使文本更具可读性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练：创建基于 Windows 的可访问应用程序](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)

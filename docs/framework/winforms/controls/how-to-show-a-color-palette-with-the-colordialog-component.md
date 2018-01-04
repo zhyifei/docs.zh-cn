@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: af773141039d049e010742f339ec4f9363d73cc3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8abaab09d2c2e20211463bb8fc93d7efaa1b38fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>如何：使用 ColorDialog 组件显示调色板
 [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)组件显示的颜色的调色板，并返回包含用户选定的颜色的属性。  
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ColorDialog>  
  [ColorDialog 组件](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)

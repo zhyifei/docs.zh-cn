@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f089abdf4c534a5016185e5a6f52067f46693604
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f22fc7dc53f52b47be2da3313f678825d4362750
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="invoking-activity-validation"></a>调用活动验证
 活动验证提供了一种在执行任何活动配置之前标识和报告此配置中的错误的方法。 当在工作流设计器中修改工作流，并且工作流设计器中显示任何验证错误或警告时，将执行验证。 此外，当调用工作流时，如果发生任何验证错误，默认验证逻辑将引发 <xref:System.Activities.InvalidWorkflowException>，此时，也将在运行时执行验证。 工作流应用程序和工具开发人员可使用 [!INCLUDE[wf](../../../includes/wf-md.md)] 提供的 <xref:System.Activities.Validation.ActivityValidationServices> 类来显式验证活动。 本主题说明如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 执行活动验证。  
@@ -114,7 +115,7 @@ new Add
 ```  
   
 ### <a name="validating-required-arguments-on-the-root-activity"></a>验证根活动中的必需参数  
- 如果工作流的根活动含有实参，则在调用该工作流并向其传递形参之前，不会绑定这些实参。 因此，如果已调用工作流但未传入必需实参，下面的工作流将通过验证，但会引发异常，如下面的示例所示。  
+ 如果工作流的根活动含有实参，则在调用该工作流并向其传递形参之前，不会绑定这些实参。 因此，如果已调用工作流但未传入必需自变量，下面的工作流将通过验证，但会引发异常，如下面的示例所示。  
   
 ```csharp  
 Activity wf = new Add();  

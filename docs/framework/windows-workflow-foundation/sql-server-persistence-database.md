@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a86cbe3d36383623c70c6a0588d3c0e8fe0bf5c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b66783ae09e15d324cc1b6ff2aa8db90e052dddf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 持久性数据库
 本节提供有关 SQL 工作流实例存储支持的公共数据库视图的详细信息，并演示如何反序列化基元实例数据属性以及如何查询非持久化实例。  
@@ -29,5 +30,5 @@ ms.lasthandoff: 12/02/2017
   
 -   [如何：查询非暂留实例](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [App Fabric SQL Server 持久性数据库](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)

@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b72bbaef26e1c61f86e354adc7df7404469ee0d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7f21564c800dd960a96dfc024fa2cccc6b27780f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ 中的笔、直线和矩形
 若要使用绘制直线[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]你需要创建<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供实际完成绘图，方法与<xref:System.Drawing.Pen>对象存储属性，例如线条颜色、 宽度和样式。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
  A<xref:System.Drawing.Rectangle>对象具有方法和属性用于操作和收集有关该矩形的信息。 例如，<xref:System.Drawing.Rectangle.Inflate%2A>和<xref:System.Drawing.Rectangle.Offset%2A>方法更改的大小和位置的矩形。 <xref:System.Drawing.Rectangle.IntersectsWith%2A>方法告诉你该矩形是否与另一个给定矩形，和<xref:System.Drawing.Rectangle.Contains%2A>方法告诉你给定的点是否在该矩形内。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  <xref:System.Drawing.Rectangle?displayProperty=nameWithType>  

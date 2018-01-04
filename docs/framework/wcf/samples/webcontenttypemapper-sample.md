@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 27342076290ca40abefea63edcc5f5c7186c4256
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34adf191d3edbff33fe989cf036c32104a6754ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 示例
 本示例演示如何将新内容类型映射到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息正文格式。  
@@ -60,7 +61,7 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 </system.serviceModel>  
 ```  
   
- 若要验证使用 JsonContentTypeMapper 的要求，请从上面的配置文件中移除 contentTypeMapper 特性。 在尝试使用 `text/javascript` 来发送 JSON 内容时，客户端页加载将失败。  
+ 若要验证使用 JsonContentTypeMapper 的需求，请从上面的配置文件中移除 contentTypeMapper 特性。 在尝试使用 `text/javascript` 来发送 JSON 内容时，客户端页加载将失败。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -79,4 +80,4 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

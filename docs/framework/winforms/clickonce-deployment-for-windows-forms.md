@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 550ef4951cc7d5b0a9b25c5e7d038588b0a911f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f157ea4afcaccfffde548c26a440fa6686c87aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows 窗体的 ClickOnce 部署
 下面的主题描述了 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，这是一种用于将 Windows 窗体应用程序轻松部署到客户端计算机的技术。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
  [如何：将数据文件包括到 ClickOnce 应用程序中](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  演示如何标记文件以使它在 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 数据目录中可用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
  [发布 ClickOnce 应用程序](/visualstudio/deployment/publishing-clickonce-applications)  
  [从命令行生成 ClickOnce 应用程序](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  

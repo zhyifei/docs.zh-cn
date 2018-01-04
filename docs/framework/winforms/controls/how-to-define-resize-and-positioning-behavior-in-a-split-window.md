@@ -20,18 +20,19 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: db4a99c7dae7783e8ea51f43ad51fcd2214997e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed78a49119c87c52a07cc2ade030e66087d3f420
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>如何：定义拆分窗口中的大小调整和定位行为
 面板的<xref:System.Windows.Forms.SplitContainer>控制有助于使自身对其大小调整和由用户操作。 但是，将有的时候你将想要以编程方式控制拆分器-它位于，其中可以移动的程度。  
   
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>属性和其他属性上的<xref:System.Windows.Forms.SplitContainer>控件使你的用户界面以满足你需求的行为的精确控制。 下表中列出了这些属性。  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性|确定是否通过键盘或鼠标可移动拆分器。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 属性|确定以到可移动拆分条从左侧或右上边缘像素为单位的距离。|  
@@ -73,6 +74,6 @@ ms.lasthandoff: 11/21/2017
   
      略有向左或向右移动拆分器会有明显的效果;但是，当鼠标指针的两个方向的 10 个像素，拆分器将与新的位置对齐。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.SplitContainer>  
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

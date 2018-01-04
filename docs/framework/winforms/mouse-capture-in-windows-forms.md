@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8004b05ea25341a142bfcfd9ae812ee3bebd6d5b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7cc62780579c852aaa637a3ccc13ce2929423868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows 窗体中的鼠标捕获
 *鼠标捕获*指控制所采用的所有鼠标输入的命令。 当控件已捕获鼠标时，它会接收鼠标输入，指示在其边框内为指针。  
@@ -30,5 +31,5 @@ ms.lasthandoff: 10/22/2017
   
  只有前台窗口可以捕获鼠标。 当后台窗口尝试捕获鼠标时，窗口只接收的消息时发生鼠标指针位于窗口的可见部分的鼠标事件。 此外，即使前景窗口已捕获鼠标，用户仍可以单击另一个窗口，使其变为前台。 当将鼠标捕获时，键盘快捷方式执行操作无法工作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

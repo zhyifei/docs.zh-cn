@@ -13,14 +13,15 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38d1f0f6bf9245048f21bbe1cb0aa6a0b8d768dd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 270df09f709dfdfeb78b9bd72bc3744c6614bc5e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="firewall-instructions"></a>防火墙说明
-必须在防火墙中启用若干端口或程序，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例才能运行。 其中许多示例使用范围 8000-8003 中的端口和端口 9000 进行通信。 防火墙默认情况下会打开，阻止对这些端口进行访问。 若要针对这些示例启用防火墙，请完成以下过程之一，具体情况取决于您的要求和安全环境：  
+必须在防火墙中启用若干端口或程序，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例才能运行。 其中许多示例使用范围 8000-8003 中的端口和端口 9000 进行通信。 防火墙默认情况下会打开，阻止对这些端口进行访问。 若要针对这些示例启用防火墙，请完成以下过程之一，具体情况取决于您的需求和安全环境：  
   
 -   选项 1：在运行时以交互方式启用示例。 不预先更改防火墙配置，并继续开始生成和运行示例的过程。 当运行示例时， **Windows 安全警报**对话框随即出现。 然后，可以通过交互方式将所讨论的示例程序添加到取消阻止列表。 对于此过程，您可能必须随后重新启动示例。  
   

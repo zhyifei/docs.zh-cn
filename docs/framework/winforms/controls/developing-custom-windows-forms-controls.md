@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89be7e347556c8ec34296044f17fbfd4450bc127
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d2f15dc4bb3bd4a6d1163823509f0f2c2bf2c11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>使用 .NET Framework 开发自定义 Windows 窗体控件
 Windows 窗体控件是可以重用的组件，可以封装用户界面功能并用于客户端基于 Windows 的应用程序。 Windows 窗体不仅可以提供许多易用的控件，而且还可以提供用于开发你自己的控件的基础结构。 你可以组合现有的控件、扩展现有的控件或创作你自己的自定义控件。 本节介绍了背景信息和示例，有助于你开发 Windows 窗体控件。  

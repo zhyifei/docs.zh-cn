@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23919145a04bb4b3d1674b153649aca2228364eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03e663f455a348b2699331ec5bf1ea6df2e54493
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>如何：在 Windows 窗体上绘制文本
 下面的代码示例演示如何使用<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>窗体上绘制文本。 或者，可以使用<xref:System.Windows.Forms.TextRenderer>窗体上绘制文本。 有关详细信息，请参阅[如何： 用 GDI 绘制文本](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   未安装 Arial 字体。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Graphics.DrawString%2A>  
  <xref:System.Windows.Forms.TextRenderer.DrawText%2A>  
  <xref:System.Drawing.StringFormat.FormatFlags%2A>  

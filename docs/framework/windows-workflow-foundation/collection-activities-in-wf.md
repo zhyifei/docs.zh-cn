@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9d044ab9b95eb4144770a90367028b5b513a69c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 52713566419eedbb5a39153541402920479eb500
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-activities-in-wf"></a>WF 中的集合活动
 集合活动用于使用工作流中的集合对象。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]包含多个系统提供的活动，用于在集合中添加和移除项、测试集合中是否存在某个项以及清除集合。 `ExistsInCollection`和`RemoveFromCollection`具有<xref:System.Activities.OutArgument%601>类型的<xref:System.Boolean>，它指示结果。  
@@ -434,5 +435,5 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用强制性代码创建工作流、活动和表达式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

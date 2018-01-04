@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 988dbef057b5980ac3f23b88c39669706d44557e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extract-wf-data-using-tracking"></a>使用跟踪提取 WF 数据
 此示例演示如何使用工作流跟踪从活动中提取工作流变量和自变量。 它还演示如何为跟踪记录添加批注以及如何从自定义跟踪记录中提取数据负载。 此示例使用 Windows 事件跟踪 (ETW) 跟踪参与者来提取工作流中的数据。  
@@ -164,5 +165,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)

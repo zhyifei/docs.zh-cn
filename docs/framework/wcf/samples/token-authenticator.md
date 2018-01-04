@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7404087117ec45e09495897905094690c01fbaa8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d635a1d5122319e228feb4d8a362b7609129c9de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="token-authenticator"></a>令牌身份验证器
 此示例演示如何实现一个自定义令牌身份验证器。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的令牌身份验证器用于验证针对消息所使用的令牌、验证令牌是否自身一致，以及对与令牌相关联的标识进行身份验证。  
@@ -377,4 +378,4 @@ static void DisplayIdentityInformation()
   
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

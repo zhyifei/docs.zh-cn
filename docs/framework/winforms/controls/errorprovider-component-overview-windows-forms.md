@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b47e55461610d2cc4bf85c839ddb1bef937d69e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 589735156ad4d6d639c2449d6bd693e2b3a32d50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider 组件概述（Windows 窗体）
 Windows 窗体[ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)组件用来验证窗体或控件上的用户输入。 它通常是与验证窗体上的用户输入或显示在数据集中的错误结合使用。 错误提供程序是更好的选择，比在消息框中，显示一条错误消息，因为后关闭消息框，则错误消息不再可见。 <xref:System.Windows.Forms.ErrorProvider>组件显示错误图标 (![ErrorProvider 图标](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) 相关的控件，如文本框; 当用户鼠标指针悬停旁边显示错误图标，工具提示，显示错误消息字符串。  
@@ -35,7 +36,7 @@ Windows 窗体[ErrorProvider](../../../../docs/framework/winforms/controls/error
 > [!NOTE]
 >  <xref:System.Windows.Forms.ErrorProvider>组件不提供辅助功能客户端的内置支持。 若要使用此组件时，使你的应用程序可访问，必须提供其他可访问的反馈机制。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ErrorProvider>  
  [如何：使用 Windows 窗体 ErrorProvider 组件查看数据集中的错误](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
  [如何：使用 Windows 窗体 ErrorProvider 组件显示窗体验证的错误图标](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)

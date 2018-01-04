@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4abc783961177a55cdb81cefd21ed2d7aefb0620
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a1a4c9c77e1f347f95c0a5e17ab0d37e0013d6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripcontainer-control-overview"></a>ToolStripContainer 控件概述
 A<xref:System.Windows.Forms.ToolStripContainer>面板在其左侧、 右侧、 顶部和底部均带有用于定位和漂浮<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，和<xref:System.Windows.Forms.StatusStrip>控件。 如果将多个 <xref:System.Windows.Forms.ToolStrip> 控件放置在 <xref:System.Windows.Forms.ToolStripContainer> 左侧或右侧，它们会垂直堆叠。 如果将其放置在 <xref:System.Windows.Forms.ToolStripContainer> 顶部或底部，则水平堆叠。 可使用 <xref:System.Windows.Forms.ToolStripContainer> 的中央 <xref:System.Windows.Forms.ToolStripContentPanel> 将传统控件放置在窗体上。  
@@ -30,7 +31,7 @@ A<xref:System.Windows.Forms.ToolStripContainer>面板在其左侧、 右侧、 �
   
 ### <a name="important-toolstripcontainer-members"></a>重要 ToolStripContainer 成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanel%2A>|获取的底部面板<xref:System.Windows.Forms.ToolStripContainer>。|  
 |<xref:System.Windows.Forms.ToolStripContainer.BottomToolStripPanelVisible%2A>|获取或设置一个值，该值指示是否的底部面板<xref:System.Windows.Forms.ToolStripContainer>可见。|  
@@ -41,6 +42,6 @@ A<xref:System.Windows.Forms.ToolStripContainer>面板在其左侧、 右侧、 �
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanel%2A>|获取的顶部面板<xref:System.Windows.Forms.ToolStripContainer>。|  
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|获取或设置一个值，该值指示是否的顶部面板<xref:System.Windows.Forms.ToolStripContainer>可见。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStripContainer>  
  <xref:System.Windows.Forms.ToolStripContentPanel>

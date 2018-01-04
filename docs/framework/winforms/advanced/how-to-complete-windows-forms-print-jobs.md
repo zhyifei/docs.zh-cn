@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9decba052589bfcc3ecd7b2861dad51e9c51378a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 00c43ff4ca418d272dc00132907c5bcbc0c5bc8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>如何：完成 Windows 窗体打印作业
 通常情况下，文字处理器和其他应用程序涉及打印将提供的选项以向打印作业已完成的用户显示一条消息。 你可以在 Windows 窗体中提供此功能，通过处理<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件<xref:System.Drawing.Printing.PrintDocument>组件。  
@@ -90,6 +91,6 @@ ms.lasthandoff: 11/21/2017
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Printing.PrintDocument>  
  [Windows 窗体打印支持](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42a788e44fde80662748e19a7244ce77bb26118f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 23a9db5f7c5286eaab50f2499845f7294af878ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 组件概述（Windows 窗体）
 Windows 窗体[HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)组件用于将 HTML Help 1.x 帮助文件 （HTML Help Workshop 生成的.chm 文件或.htm 文件） 与 Windows 应用程序相关联。 你可以提供各种不同的方式的帮助：  
@@ -45,5 +46,5 @@ Windows 窗体[HelpProvider](../../../../docs/framework/winforms/controls/helppr
 > [!NOTE]
 >  你可能会遇到问题使用相对路径时指定的帮助文件的路径中<xref:System.Windows.Forms.Help.ShowHelp%2A>方法或<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>属性<xref:System.Windows.Forms.HelpProvider>控件。 在这种情况下，一定要使用的绝对文件路径指定的帮助文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体应用程序中的帮助系统](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)

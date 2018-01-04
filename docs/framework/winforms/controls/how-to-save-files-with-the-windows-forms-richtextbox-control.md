@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d28aeaefca6f8aa13607f1c1e6f72557ef536754
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fece6685c1ac71d6ddc152e25c22010e6d579c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>如何：在 Windows 窗体 RichTextBox 控件中保存文件
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以编写它在几种格式之一显示的信息：  
@@ -45,7 +46,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以编写它在几
   
 -   使用的 OLE 对象文本表示形式的纯文本  
   
- 若要保存文件时，调用<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法。 你还可以使用**SaveFile**方法以将数据保存到流。 有关更多信息，请参见<xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
+ 若要保存文件时，调用<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法。 你还可以使用**SaveFile**方法以将数据保存到流。 有关详细信息，请参阅<xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
   
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>将控件的内容保存到文件  
   
@@ -97,7 +98,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以编写它在几
     > [!IMPORTANT]
     >  此示例在文件尚未存在时创建新文件。 如果应用程序需要创建一个文件，该应用程序将需要的文件夹的创建访问权限。 可使用访问控制列表设置权限。 如果该文件已存在，应用程序需要只写访问权限，较弱的特权。 如果可能，它会在部署期间，创建文件和仅授予读取访问权限单个文件，而不是创建一个文件夹的访问更安全。 此外，较安全的做法是将数据写入用户文件夹，而不是根文件夹或“Program Files”文件夹。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  

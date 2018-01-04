@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 620e039dd9a53a7c09eedd3d1a4892c5c43ffd2b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-transport"></a>选择传输方式
 本主题讨论选择 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包含的三种主要传输的标准：HTTP、TCP 和命名管道。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还包括消息队列（也称为 MSMQ）传输，但本文档并不讨论消息队列。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/02/2017
 |吞吐量|吞吐量度量指定的时间内可以传送和处理的数据量。 与滞后时间类似，选择的传输方式会影响服务操作的吞吐量。 将传输的吞吐量最大化要求尽量减小传送内容的开销，并尽量缩短等待消息交换完成的时间。 TCP 和命名管道传输使消息正文增加的开销都不大，并支持减少消息答复等待时间的固有双工形状。|TCP、命名管道|  
 |工具|工具表示对用于开发、诊断、承载和其他活动的协议的第三方应用程序支持。 开发工具和软件以便与 HTTP 协议协同工作意味着巨大的投资。|HTTP|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.BasicHttpBinding>  
  <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>  
   <<!--zz <xref:System.ServiceModel.WsDualHttpBinding> --> `System.ServiceModel.WsDualHttpBinding`

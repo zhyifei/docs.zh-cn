@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7565d688c6aa177ec65918e72670a64d7eec7e1a
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: caee828d2379aaa2d6c6c80359d16c89b9b4aa42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows 窗体上使用的控件
 下面按字母顺序列出了可在 Windows 窗体上使用的控件和组件。 除本节介绍的 Windows 窗体控件外，还可向 Windows 窗体添加 ActiveX 控件和自定义控件。 如果在此处列出的控件中未找到所需控件，还可创建自己的控件。 有关详细信息，请参阅[设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。 有关选择所需控件的详细信息，请参阅[按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。  

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e9d851d083f0b3a1bd00bafe5b0805a55635158
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3ff1dee5a57b0c134c25631ce5c694b1b6b2c006
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="simplified-configuration"></a>简化配置
 配置 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务是一项非常复杂的任务。 该任务涉及多个不同选项，并且有时会很难确定需要哪些设置。 虽然配置文件提高了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的灵活性，但是它们同时也带来了许多难以发现的问题。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]解决了这些问题，并向用户提供了一种减小服务配置大小和降低复杂性的方法。  
@@ -120,7 +121,7 @@ ms.lasthandoff: 12/02/2017
 > [!IMPORTANT]
 >  此功能只与 WCF 服务配置相关，与客户端配置无关。 大多数时候，使用 svcutil.exe 之类的工具或从 Visual Studio 添加服务引用将生成 WCF 客户端配置。 如果你要手动配置 WCF 客户端将需要添加\<客户端 > 的配置元素，并指定您希望调用任何终结点。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用配置文件配置服务](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [配置服务绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [配置系统提供的绑定](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  

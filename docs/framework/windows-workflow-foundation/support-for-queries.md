@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bed850baca2d06dc0de173ab798da29fb3ec7cc5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f20e9fbcad31a3924474793d9107d6a3c4aeef27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-queries"></a>查询支持
 SQL 工作流实例存储中记录了存储区中的一组已知属性。 用户可以根据这些属性查询实例。 下面的列表包含这些已知属性的一部分：  

@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea35904fe038bdeac528254e476e799369b8b013
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 54e2b87a9e104ea61c32b06ffc604fc864283f3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自定义消息编码器：自定义文本编码器
 本示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 实现自定义文本消息编码器。  
@@ -248,4 +249,4 @@ Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection,
 </extensions>  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

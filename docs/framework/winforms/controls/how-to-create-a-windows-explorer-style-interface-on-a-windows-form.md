@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96f2ca8189d6840bc68f063ef9b97539c24b0e6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c30dd18e7303cf9fe913760da3f9dad7bca3c95
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>如何：在 Windows 窗体上创建 Windows 资源管理器样式的界面
 Windows 资源管理器因其比较熟悉的应用程序的常见用户界面选择。  
@@ -31,7 +32,7 @@ Windows 资源管理器因其比较熟悉的应用程序的常见用户界面选
  以下步骤显示如何排列 Windows 资源管理器类似的窗体中的控件。 它们不显示如何添加的 Windows 资源管理器应用程序的文件浏览功能。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>若要创建 Windows 资源管理器样式 Windows 窗体  
   
@@ -59,7 +60,7 @@ Windows 资源管理器因其比较熟悉的应用程序的常见用户界面选
     > [!NOTE]
     >  当拆分器拖动时，面板将调整大小。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.SplitContainer>  
  [如何：使用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  [如何：定义拆分窗口中的重设大小和定位行为](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  

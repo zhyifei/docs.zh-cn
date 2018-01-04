@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6222b22ea0bb38ea95304d43a6dab0deee0d2d05
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 47a70e55d0f5b6197dc7c77b9e95f2279b814737
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-path-gradient"></a>如何：创建路径渐变
 <xref:System.Drawing.Drawing2D.PathGradientBrush>类允许您自定义用渐变颜色填充形状的方式。 例如，你可以指定路径的中心的一种颜色和路径的边界的另一种颜色。 此外可以为每个几个点沿边界路径的指定单独的颜色。  
@@ -120,5 +121,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，并且它们要求<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.Control.Paint>事件处理程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用渐变画笔填充形状](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)

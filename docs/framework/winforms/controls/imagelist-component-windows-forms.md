@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee1da95a61153b3a2a8478e63bac21271120890d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 946f024ee0c0bf421a00ef2708c436003949f3b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList 组件（Windows 窗体）
 Windows 窗体 `ImageList` 组件用于存储图像，此图像之后可由控件显示。 借助图像列表，你可为图像的单个一致目录编写代码。  

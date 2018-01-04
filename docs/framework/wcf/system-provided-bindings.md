@@ -14,11 +14,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea5cd7f8510836b17a20b523dc2455611cdb2382
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-provided-bindings"></a>系统提供的绑定
 绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定包含以下元素：  
@@ -64,21 +65,21 @@ ms.lasthandoff: 12/02/2017
   
 |绑定|互操作性|安全性（默认）|会话<br /><br /> (默认)|事务|双工|编码（默认）|流式处理<br /><br /> (默认)|  
 |-------------|----------------------|--------------------------|-----------------------------|------------------|------------|--------------------------|-------------------------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1（基本配置文件 1.1）|（无）、传输、消息、混合|（无）|（无）|无|文本、(MTOM)|是<br /><br /> （缓冲式）|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|传输、（消息）、混合|（无）、可靠会话、安全会话|（无）、是|无|（文本）、MTOM|No|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|（消息）、无|（可靠会话）、安全会话|（无）、是|是|（文本）、MTOM|No|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|（消息）、混合、无|（无）、可靠会话、安全会话|（无）、是|No|（文本）、MTOM|No|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1（基本配置文件 1.1）|（无）、传输、消息、混合|（无）|（无）|不可用|文本、(MTOM)|是<br /><br /> （缓冲式）|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|传输、（消息）、混合|（无）、可靠会话、安全会话|（无）、是|不可用|（文本）、MTOM|否|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|（消息）、无|（可靠会话）、安全会话|（无）、是|是|（文本）、MTOM|否|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|（消息）、混合、无|（无）、可靠会话、安全会话|（无）、是|否|（文本）、MTOM|否|  
 |<xref:System.ServiceModel.NetHttpBinding>|.NET|（无）、传输、消息、TransportWithMessageCredential、TransportCredentialOnly|请参见下面的注释|无|请参见下面的注释|（二进制）、文本、MTOM|是（缓冲式）|  
 |<xref:System.ServiceModel.NetHttpsBinding>|.NET|（传输）、TransportWithMessageCredential|请参见下面的注释|无|请参见下面的注释|（二进制）、文本、MTOM|是（缓冲式）|  
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|（传输）、消息、无、混合|（传输）、可靠会话、安全会话|（无）、是|是|二进制|是<br /><br /> （缓冲式）|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|（传输）、无|无、（传输）|（无）、是|是|二进制|是<br /><br /> （缓冲式）|  
-|<xref:System.ServiceModel.NetMsmqBinding>|.NET|消息、（传输）、无|（无）、传输|无、（是）|No|二进制|No|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|对等|（传输）|（无）|（无）|是||No|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|（传输）|（无）|无、（是）|无|无|No|  
-|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1（基本配置文件 1.1）|（无）、传输、消息、混合|（无）|（无）|无|文本、(MTOM)|是<br /><br /> （缓冲式）|  
+|<xref:System.ServiceModel.NetMsmqBinding>|.NET|消息、（传输）、无|（无）、传输|无、（是）|否|二进制|否|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|对等|（传输）|（无）|（无）|是||否|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|（传输）|（无）|无、（是）|不可用|不可用|否|  
+|<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1（基本配置文件 1.1）|（无）、传输、消息、混合|（无）|（无）|不可用|文本、(MTOM)|是<br /><br /> （缓冲式）|  
 |<xref:System.ServiceModel.NetTcpContextBinding>|.NET|（传输）、消息、无、混合|（传输）、可靠会话、安全会话|（无）、是|是|二进制|是<br /><br /> （缓冲式）|  
-|<xref:System.ServiceModel.WSHttpContextBinding>|WS|传输、（消息）、混合|（无）、可靠会话、安全会话|（无）、是|无|文本、(MTOM)|No|  
-|<xref:System.ServiceModel.UdpBinding>|.NET**注意：**互操作性可以通过实现此绑定实现的标准-UDP 上的 SOAP 规范。|（无）|（无）|（无）|无|（文本）|No|  
+|<xref:System.ServiceModel.WSHttpContextBinding>|WS|传输、（消息）、混合|（无）、可靠会话、安全会话|（无）、是|不可用|文本、(MTOM)|否|  
+|<xref:System.ServiceModel.UdpBinding>|.NET**注意：**互操作性可以通过实现此绑定实现的标准-UDP 上的 SOAP 规范。|（无）|（无）|（无）|不可用|（文本）|否|  
   
 > [!IMPORTANT]
 >  <xref:System.ServiceModel.NetHttpBinding> 是为使用 HTTP 或 WebSocket 服务设计的绑定，默认情况下使用二进制编码。 <xref:System.ServiceModel.NetHttpBinding> 将检测它是否与请求-答复协定或双工协定结合使用，并更改其行为以进行匹配 ― 它将针对请求-答复协定使用 HTTP，并针对双工协定使用 WebSocket。 可以使用重写此行为<!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>-->`System.ServiceModel.NetHttpBinding.WebSocketTransportUsage`绑定设置： Allowed-这是默认值，行为方式如上面所述。NotAllowed-这阻止使用 Websocket。 尝试使用此设置使用双工协定将导致异常。这将强制必填字段-甚至对于请求-答复协定使用 Websocket。 NetHttpBinding HTTP 模式和 WebSocket 模式下支持可靠会话。 在 WebSocket 模式下，会话由传输来提供。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/02/2017
 |编码|指定消息的网络格式。 允许的值包括：<br /><br /> 文本： 例如 utf-8。<br />-二进制<br />消息传输优化机制 (MTOM): 用于高效编码的 SOAP 信封的上下文中二进制 XML 元素的方法。|  
 |流式处理|指定传入和传出消息是否支持流。 使用绑定上的 `TransferMode` 属性可设置值。 允许的值包括：<br /><br /> -   <xref:System.ServiceModel.TransferMode.Buffered>： 对请求和响应消息进行缓冲处理。<br />-   <xref:System.ServiceModel.TransferMode.Streamed>： 对请求和响应消息进行流式处理。<br />-   <xref:System.ServiceModel.TransferMode.StreamedRequest>： 请求消息进行流式处理，响应消息进行缓冲处理。<br />-   <xref:System.ServiceModel.TransferMode.StreamedResponse>： 请求消息进行缓冲处理，响应消息进行流式处理。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)

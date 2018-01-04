@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3e63a11ce87c95a5afc8e7f60c8e262da5c6bd1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 此示例演示了 SQL 工作流实例存储中的已提升属性的使用和配置。 SQL 工作流实例存储是基于 SQL 的实例存储实现。 利用此存储，实例可保存其状态，并将其状态加载到 SQL Server 或 SQL Server Express 数据库中以及从 SQL Server 或 SQL Server Express 数据库中加载其状态。 用户可使用存储扩展性功能来定义存储在示例存储中的属性。 这些属性显示在已提升属性视图中，用户可利用该视图查询这些属性。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工作流暂留](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

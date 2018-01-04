@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15f2d1492148a4b00a4b96844f546a4dc968eef6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0de3b8596bc06c79f391141ef85fec65ac343d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>如何：在 MenuStrip 中显示选项按钮（Windows 窗体）
 选项按钮，也称为单选按钮，很相似，只不过用户可以选择仅一次一个地选中复选框。 尽管在默认<xref:System.Windows.Forms.ToolStripMenuItem>类未提供选项按钮行为，但该类提供自定义后实现选项按钮行为中的菜单项的复选框行为<xref:System.Windows.Forms.MenuStrip>控件。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
 -   对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>  

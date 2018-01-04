@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fed33544654e6929997567198c0f07346e715d1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 539335f86718d19f9dd2c7e8cc3cd068807ef7de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execution-properties"></a>执行属性
 此示例演示如何在自定义活动中定义并使用执行属性。 在此示例中，执行属性可确定控制台的前景色。 示例工作流演示执行的各个逻辑路径（<xref:System.Activities.Statements.Parallel> 活动的分支）如何保留不同的控制台颜色，而不管活动的交错执行（跨 <xref:System.Activities.Statements.Parallel> 活动的分支）。  

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c3624290176d93519ae420a98a7e93534d910fa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dispatch-by-body-element"></a>按正文元素调度
 本示例演示如何实现用于将传入消息分配到操作的可选算法。  
@@ -188,4 +189,4 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

@@ -13,11 +13,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f7a425853c2416f390d28ca31dae3f415e23c54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9509cb2c6478cf82cebd696ab92cd69a7e5b4097
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-token"></a>自定义令牌
 本示例演示如何将自定义令牌的实现添加到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序中。 示例使用 `CreditCardToken` 将客户端的信用卡相关信息安全地传递到服务。 令牌在 WS-Security 消息头中传递，并连同消息正文和其他消息头一起使用对称安全绑定元素进行签名和加密。 当内置令牌不足时可以进行这样的操作。 本示例演示如何向服务提供自定义安全令牌而不必使用某个内置令牌。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -644,4 +645,4 @@ string GetCallerCreditCardNumber()
   
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

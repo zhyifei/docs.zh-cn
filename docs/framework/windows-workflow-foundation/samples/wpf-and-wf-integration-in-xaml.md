@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8b6b10fbd9815280f8dcbb1d061363bef544a29
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 327efb0b829e2628328d2e324c0736f8cb423b75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML 中的 WPF 和 WF 集成
 此示例演示如何创建在一个 XAML 文档中使用 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 和 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能的应用程序。 为实现此目的，示例使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 和 XAML 可扩展性。  

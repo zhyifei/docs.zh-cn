@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7cf84c30c5784de813f947d26b18816906ec6a7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 29dab29e6f2e8317d0403ab384fceb2b44b972c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 OperationContextScope 示例演示如何使用头在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 调用中发送额外的信息。 在此示例中，服务器和客户端都是控制台应用程序。  
@@ -28,7 +29,7 @@ OperationContextScope 示例演示如何使用头在 [!INCLUDE[indigo1](../../..
  此示例演示客户端如何使用 <xref:System.ServiceModel.Channels.MessageHeader> 以 <xref:System.ServiceModel.OperationContextScope> 的方式发送额外的信息。 <xref:System.ServiceModel.OperationContextScope> 对象是通过将其范围设置为通道来创建的。 必须转换为远程服务的头可以添加到 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> 集合中。 可以通过访问 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> 在服务上检索添加到此集合中的头。 它的调用是在多个通道进行的，添加到客户端的头然后将只应用于用来创建 <xref:System.ServiceModel.OperationContextScope> 的通道。  
   
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
- 这是从客户端接收消息，并尝试在 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> 集合中查找头的示例服务。 客户端传递在头中发送的 GUID，服务则检索自定义头，如果存在自定义头，则将其与客户端作为参数传递的 GUID 进行比较。  
+ 这是从客户端接收消息，并尝试在 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> 集合中查找头的示例服务。 客户端传递在头中发送的 GUID，服务则检索自定义头，如果存在自定义头，则将其与客户端作为自变量传递的 GUID 进行比较。  
   
 ```  
 public bool RetrieveHeader(string guid)  
@@ -140,4 +141,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

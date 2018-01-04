@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b3c0ee3ec82d4d8447c43b7dc9b275591ebe890
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2a46efeccf9ab343ca0da07fad07138bd72e4e44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Alpha 混合线条和填充
 在[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，一种颜色为具有各 8 位 alpha、 红色、 绿色和蓝色的 32 位值。 Alpha 值指示颜色的透明度-向其颜色与背景色混合的范围。 Alpha 值范围为 0 到 255，其中 0 表示完全透明的颜色和 255 表示完全不透明的颜色。  

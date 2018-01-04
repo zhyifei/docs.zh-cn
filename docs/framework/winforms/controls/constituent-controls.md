@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 932b90d972aaa2305743b6fdaae546b0e2542cd5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d03b69c334148313b0cd495fad1b2dfd13df833
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constituent-controls"></a>构成控件
 组成用户控件的控件（也称作“构成控件”）在自定义图形呈现方面的灵活性相对较差。 所有 Windows 窗体控件都处理其自身通过自己呈现<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 由于此方法受到保护，开发人员无法对其进行访问，因此在绘制控件时无法阻止其执行。 然而，这并不意味着不能添加影响构成控件外观的代码。 附加呈现可通过添加事件处理程序来完成。 例如，假设你编写<xref:System.Windows.Forms.UserControl>与名为按钮`MyButton`。 如果你希望将无法提供的附加呈现其<xref:System.Web.UI.WebControls.Button>，会将代码添加到你的用户控件类似于以下：  
@@ -53,7 +54,7 @@ System.Windows.Forms.PaintEventArgs e)
   
  上例创建一个每次执行 `MyButton.Paint` 事件时都会执行的方法，用于将附加的图形化表示形式添加到控件中。 请注意，这并不妨碍 `MyButton.OnPaint` 的执行，因此，除了自定义绘制外，仍会执行通常由某个按钮执行的所有绘制操作。 有关 GDI+ 技术和自定义呈现的详细信息，请参阅[用 GDI+ 创建图形图像](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)。 如果希望控件具有唯一的表示形式，则最好创建一个继承的控件，为其编写自定义呈现代码。 有关详细信息，请参阅[用户描述的控件](../../../../docs/framework/winforms/controls/user-drawn-controls.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.UserControl>  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
  [用户绘制的控件](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 680a86d453dd8ca7c78d0ca6ba60cbaa691e44f3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6256db06825a79b5235b92e2ed205608f04aac7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services-and-transactions"></a>服务和事务
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序可以从客户端中启动事务，然后在服务操作中协调该事务。 客户端可以启动事务和调用多个服务操作，并可确保服务操作作为一个单元提交或回滚。  
@@ -97,7 +98,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [System.ServiceModel 中的事务性支持](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
  [事务模型](../../../docs/framework/wcf/feature-details/transaction-models.md)  
  [WS 事务流](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

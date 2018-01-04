@@ -20,11 +20,12 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c384e9e77eeee29cf91cceca3863f54c0ad1654
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9737a006e7f3591defeaf7039236bd1768aa5361
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="glyphs"></a>标志符号
 标志符号是字符的要在屏幕上绘制的低级表示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]对于想要截获并保存在格式化后的文本的客户提供直接访问权限的标志符号。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
  [GlyphRun 对象和 Glyphs 元素简介](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
   [如何：使用 Glyphs 元素绘制文本](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.GlyphRun>  
  <xref:System.Windows.Media.DrawingContext.DrawText%2A>  
  <xref:System.Windows.Documents.Glyphs>  

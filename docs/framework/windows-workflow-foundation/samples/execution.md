@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0849f1e086a99539978e2c3c978807d2f83ae7ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30ae225ac5482bfd6955dd0e87cbfb4bbdae2b4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execution"></a>执行
 本节包含用于演示在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中执行工作流的示例。  
@@ -37,5 +38,5 @@ ms.lasthandoff: 12/02/2017
  [WorkflowHostingEndpoint 恢复书签](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
  演示如何将 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 与 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 一起使用来创建工作流实例。  
   
- [WorkflowHostingEndpoint 的书签冲突解决程序](../../../../docs/framework/windows-workflow-foundation/samples/bookmark-resolver-for-workflowhostingendpoint.md)  
+ [WorkflowHostingEndpoint 的书签解析程序](../../../../docs/framework/windows-workflow-foundation/samples/bookmark-resolver-for-workflowhostingendpoint.md)  
  演示如何将 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 与 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 一起使用，以恢复工作流实例上的自定义书签。

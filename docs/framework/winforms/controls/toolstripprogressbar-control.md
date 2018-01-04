@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bb7a1e74f1687a1549ab0780e2e2e773382f193
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 13dcd324772393e3746a6ea5c5cadca02d9a1bab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar 控件
 <xref:System.Windows.Forms.ToolStripProgressBar>将合并<xref:System.Windows.Forms.ToolStrip>呈现和漂浮功能与其典型进程跟踪功能。  
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Forms.ToolStripProgressBar>  
  提供关于 <xref:System.Windows.Forms.ToolStripProgressBar> 控件的参考文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

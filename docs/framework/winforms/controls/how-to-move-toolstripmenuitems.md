@@ -22,17 +22,18 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 342eeeb2d156488605f244da0112869a371dfa97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bfc1cb718b3738ac93b284b0b438b08d1e721349
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>如何：移动 ToolStripMenuItem
 在设计时，你可以将整个顶级菜单及其菜单项到其他位置<xref:System.Windows.Forms.MenuStrip>。 你还可以顶级菜单之间移动的单个菜单项或更改的菜单中的菜单项的位置。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a>若要将顶级菜单及其菜单项移动到另一个顶级位置  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  单击向上和向下箭头键，来移动菜单中的菜单项。  
   
-5.  单击“确定”。  
+5.  单击 **“确定”**。  
   
 ### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a>移动菜单使用键盘中的一个菜单项  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
      所选的菜单项后插入的菜单项，你将剪切。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  [MenuStrip 控件概述](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

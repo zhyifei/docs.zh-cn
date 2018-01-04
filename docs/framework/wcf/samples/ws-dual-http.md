@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c45801ba4b2d1fa2a9dafd14a5bc1b2f2221055
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57fea95db5bf1536b41b282bedab55a9deef8e8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-dual-http"></a>WS 双向 Http
 双向 Http 示例演示如何配置 `WSDualHttpBinding` 绑定。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现双工协定。 该协定由 `ICalculatorDuplex` 接口定义，该接口公开数学运算（加、减、乘和除）。 在本示例中，`ICalculatorDuplex` 接口允许客户端执行数学运算，通过会话计算运行结果。 服务在 `ICalculatorDuplexCallback` 接口上单独返回结果。 双工协定需要会话，因为必须建立上下文才能将客户端和服务之间发送的一组消息关联在一起。 `WSDualHttpBinding` 绑定支持双工通信。  
@@ -114,4 +115,4 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     </wsDualHttpBinding>  
     ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

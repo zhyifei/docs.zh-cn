@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73d12bb38e4929582a8317d8ab3d7b23a7d1f603
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a533f4cbf5000489e774ba8661c3ab03cea4948a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>如何：为 Windows 窗体 DataGridView 控件中的单个单元格添加工具提示
 默认情况下，工具提示用于显示的值<xref:System.Windows.Forms.DataGridView>太小而无法显示其完整内容的单元格。 你可以重写此行为，但是，若要设置的各个单元格的工具提示文本值。 这很有用，可以显示用户有关的其他信息单元格或者向用户提供的单元格内容的备用说明。 例如，如果你有行显示状态图标，你可能想要提供使用工具提示的文本说明。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>可靠编程  
  当绑定<xref:System.Windows.Forms.DataGridView>控件拖到外部数据源或通过实现虚拟模式提供您自己的数据源，你可能会遇到性能问题。 若要避免对性能产生负面影响，在处理大量数据时，处理<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>事件而不是设置<xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>多个单元格的属性。 当你处理此事件，获取单元格的值<xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>属性引发事件，并返回的值<xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType>属性作为指定在事件处理程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=nameWithType>  

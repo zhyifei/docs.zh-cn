@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8a2d5a13cac97063bf2a04969928c859a5954d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c020e5f7306e73ee97dff0b492b04b5a153059cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-fill-open-figures"></a>如何：填充开放图形
 你可以通过传递填写路径<xref:System.Drawing.Drawing2D.GraphicsPath>对象传递给<xref:System.Drawing.Graphics.FillPath%2A>方法。 <xref:System.Drawing.Graphics.FillPath%2A>方法填充的填充模式 （备用或绕） 根据当前设置的路径的路径。 如果路径具有任何开放图形，路径已填充，就像这些图形闭合。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]通过从其结束的点到起始点绘制一条直线闭合图形。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Drawing2D.GraphicsPath>  
  [GDI+ 中的图形路径](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)

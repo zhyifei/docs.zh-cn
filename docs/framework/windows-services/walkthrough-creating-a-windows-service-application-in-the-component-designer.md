@@ -15,11 +15,12 @@ caps.latest.revision: "57"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: fb868aa38381294333538afcd99c030162d2f235
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>演练：在组件设计器中创建 Windows 服务应用程序
 本文演示了如何在 Visual Studio 中创建向事件日志中写入消息的简单 Windows 服务应用程序。 下面是创建和使用你的服务所执行的基本步骤：  
@@ -487,8 +488,8 @@ End Sub
   
  可以在安装应用程序时使用安装程序创建事件日志，而不是在运行应用程序时创建事件日志。 此外，在卸载应用程序时，事件日志将被安装程序删除。 有关详细信息，请参阅 <xref:System.Diagnostics.EventLogInstaller> 引用页。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 服务应用程序](../../../docs/framework/windows-services/index.md)  
- [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 调试 Windows 服务应用程序](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [如何：调试 Windows 服务应用程序](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
  [服务 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac0a04c506919ef807a3f8c5ed5aa75ee998f64a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 67befd973dec38628f97a0d3153c399d48c18305
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.RadioButton>控件向用户显示一组两个或多个互相排斥的选择。 尽管单选按钮和复选框可能看起来作用类似，但还有一项重大差异： 当用户选择一个单选按钮时，不能也选择同一组中的其他单选按钮。 与此相反，可以选择任意数量的复选框。 定义单选按钮组将告诉用户:"这是一组选项，您可以从中选择一个且只有一个。"  
@@ -33,7 +34,7 @@ Windows 窗体<xref:System.Windows.Forms.RadioButton>控件向用户显示一组
   
  <xref:System.Windows.Forms.RadioButton>控件可以显示类似于命令按钮，它看起来已按下，如果选择，如果<xref:System.Windows.Forms.RadioButton.Appearance%2A>属性设置为<xref:System.Windows.Forms.Appearance.Button>。 单选按钮还可以显示使用的图像<xref:System.Windows.Forms.ButtonBase.Image%2A>和<xref:System.Windows.Forms.ButtonBase.ImageList%2A>属性。 有关详细信息，请参阅[如何： 设置 Windows 窗体控件显示的图像](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.RadioButton>  
  [Panel 控件概述](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
  [GroupBox 控件概述](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  

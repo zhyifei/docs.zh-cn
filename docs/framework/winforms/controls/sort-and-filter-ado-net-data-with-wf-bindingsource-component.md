@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46947e314394d56b5ef0439f33910bb493012db3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 310f90c7b95d74f1fab8ab2e9871d6c1a0937c52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选
 排序和筛选功能可以公开<xref:System.Windows.Forms.BindingSource>通过控制<xref:System.Windows.Forms.BindingSource.Sort%2A>和<xref:System.Windows.Forms.BindingSource.Filter%2A>属性。 你可以将简单排序的基础数据源时应用<xref:System.ComponentModel.IBindingList>，并可以应用筛选和高级排序数据源时<xref:System.ComponentModel.IBindingListView>。 <xref:System.Windows.Forms.BindingSource.Sort%2A>属性需要标准[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]语法： 表示的数据源中的数据列名称的字符串跟`ASC`或`DESC`以指示是按升序或降序对列表进行排序。 你可以设置高级排序，或用逗号分隔符分隔每个列的多个列排序。 <xref:System.Windows.Forms.BindingSource.Filter%2A>属性采用字符串表达式。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  若要运行此示例，请将代码粘贴到一个包含窗体<xref:System.Windows.Forms.BindingSource>名为`BindingSource1`和<xref:System.Windows.Forms.DataGridView>名为`dataGridView1`。 处理<xref:System.Windows.Forms.Form.Load>事件对于窗体和调用`InitializeSortedFilteredBindingSource`负载事件处理程序方法中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.BindingSource.Sort%2A>  
  <xref:System.Windows.Forms.BindingSource.Filter%2A>  
  [如何：安装示例数据库](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  

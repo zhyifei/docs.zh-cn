@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a3866274340932819a419c622c10072dd67c439
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8eeb856fabd895e171c0ad8739ae6a63b5c7065
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-thumbnail-images"></a>如何：创建缩略图像
 缩略图是映像的缩小版本。 你可以通过调用创建缩略图<xref:System.Drawing.Image.GetThumbnailImage%2A>方法<xref:System.Drawing.Image>对象。  
@@ -60,6 +61,6 @@ ms.lasthandoff: 11/21/2017
   
      窗体上显示 100 通过 100 缩略图。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

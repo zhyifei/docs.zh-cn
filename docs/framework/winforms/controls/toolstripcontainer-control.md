@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 763ce6d47b0fe40eb2d27b2e062d46cfd9e1b8a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68335627f18a65cb7922170dda6584eb383a0e66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 控件
 <xref:System.Windows.Forms.ToolStrip> 控件通过使用 <xref:System.Windows.Forms.ToolStripContainer> 而具有内置漂浮功能（停靠时在工具区域中共享水平或垂直空间）。  
@@ -51,5 +52,5 @@ ms.lasthandoff: 10/18/2017
  <xref:System.Windows.Forms.ToolStripPanel>  
  提供关于 <xref:System.Windows.Forms.ToolStripPanel> 控件的参考文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

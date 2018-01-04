@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5395797dd2ebba467448b90be139d750bbcc6b6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4641815687f2c510aa664a287a79f64dc86d769
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>数据协定中的 XML 和 ADO.NET 类型
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 数据协定模型支持某些直接表示 XML 的类型。 当这些类型序列化为 XML 时，序列化程序将写出这些类型的 XML 内容，而不再进一步进行任何处理。 支持的类型为 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的数组（但不是 `XmlNode` 类型本身）以及实现 <xref:System.Xml.Serialization.IXmlSerializable> 的类型。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 类型以及类型化数据集通常用于数据库编程。 这些类型可实现 `IXmlSerializable` 接口，因此它们在数据协定模型中可序列化。 本主题的结尾还列出了一些有关这些类型的特殊注意事项。  
@@ -212,8 +213,8 @@ ms.lasthandoff: 12/02/2017
   
  对数据协定模型中类型化数据集的支持是有限的。 类型化数据集可以序列化和反序列化，并可导出其架构。 但是，数据协定架构导入无法从该架构生成新的类型化数据集类型，因为它只能重新使用现有的类型化数据集类型。 通过对 Svcutil.exe 使用 `/r` 开关，可以指向现有类型化数据集。 如果尝试在不使用 `/r` 开关的情况下对使用类型化数据集的服务使用 Svcutil.exe，则会自动选择替代序列化程序 (XmlSerializer)。 如果必须使用 DataContractSerializer 且必须从架构生成数据集，则可使用以下过程：生成类型化数据集类型（通过将 Xsd.exe 工具与 `/d` 开关结合起来用于服务）、编译类型，然后在 Svcutil.exe 上使用 `/r` 开关来指向这些类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.IXmlSerializable>  
  [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [支持的数据协定序列化程序类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+ [数据协定序列化程序支持的类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

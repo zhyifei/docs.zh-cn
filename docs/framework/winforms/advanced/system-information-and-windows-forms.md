@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6657556ffb49c19e6ffc3ef5462de341a93112b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 685a62b885469a9cac8884cc045b67bac02bea80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="system-information-and-windows-forms"></a>系统信息和 Windows 窗体
 有时很必要收集有关你的应用程序在运行以便在你的代码做出的决策的计算机的信息。 例如，你可能必须才适用时连接到特定网络域; 函数在这种情况下，你需要一种方法来确定的域和禁用该函数，如果域不存在。  
@@ -52,6 +53,6 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
   
  一些更有用的成员<xref:System.Windows.Forms.SystemInformation>类包括<xref:System.Windows.Forms.SystemInformation.ComputerName%2A>， <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>， <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>，和<xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.SystemInformation>  
  [Windows 窗体中的电源管理](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)

@@ -12,14 +12,15 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07a39983d0e561fdad4c09e641912b0d15aa4033
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ceeb7406fdae9b4044053e12bec2aad926f26e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>将自定义活动属性绑定到设计器控件
-将文本框设计器控件与活动参数绑定非常简单；但将复杂设计器控件（如组合框）与活动参数绑定则可能非常困难。 本主题讨论如何将活动参数与自定义活动设计器上的组合框控件绑定。  
+将文本框设计器控件与活动自变量绑定非常简单；但将复杂设计器控件（如组合框）与活动自变量绑定则可能非常困难。 本主题讨论如何将活动参数与自定义活动设计器上的组合框控件绑定。  
   
 #### <a name="creating-the-combo-box-item-converter"></a>创建组合框项转换器  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c5b310fbda189cfffe74767c9d77ac86481afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 联合对象模型如何映射到 Atom 和 RSS
 开发 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 联合服务时，使用以下类创建源和项：  
@@ -407,9 +408,9 @@ ms.lasthandoff: 12/02/2017
   
  `</content>`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
  [联合体系结构](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- [如何： 创建基本 RSS 源](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
- [如何： 创建基本 Atom 馈送](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [如何： 公开源作为 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+ [如何：创建基本 RSS 源](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [如何：创建基本 Atom 源](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [如何：公开作为 Atom 和 RSS 的源](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

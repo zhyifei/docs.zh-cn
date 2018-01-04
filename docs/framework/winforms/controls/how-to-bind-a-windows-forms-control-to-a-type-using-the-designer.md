@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 215a69a47b0588e45fcc28202dce4c6210b1dfe6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a25b0dc81a6511698394eb86343f09051befc87f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>如何：使用设计器将 Windows 窗体控件绑定到类型
 在生成与数据交互的控件时，有时需要将控件绑定到类型而非对象。 当数据可能不可用，但仍然希望数据绑定控件显示类型的公共接口中的信息时，通常需要在设计时将控件绑定到类型。 以下过程演示如何创建一个新<xref:System.Windows.Forms.BindingSource>，它是绑定到一种类型，然后如何将绑定到该类型的属性之一<xref:System.Windows.Forms.TextBox.Text%2A>属性<xref:System.Windows.Forms.TextBox>。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
     -   如果要绑定到的类型位于当前项目，或者包含该类型的程序集已经作为引用添加，请展开节点以找到所需类型，然后选择它。  
   
-         - 或 -  
+         或  
   
     -   如果要绑定到的类型在另一个程序集中，当前不在引用列表中，请单击“添加引用”，然后单击“项目”选项卡。选择包含所需业务对象的项目，然后单击“确定”。 此项目将显示在程序集列表中，因此可以展开节点以查找所需类型，然后选择它。  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  在**数据源的 UI 类型编辑器**，展开的节点<xref:System.Windows.Forms.BindingSource>之前，添加并选择你想要将绑定到绑定类型的属性<xref:System.Windows.Forms.TextBox.Text%2A>属性<xref:System.Windows.Forms.TextBox>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
  [如何：将 Windows 窗体控件绑定到类型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
  [在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

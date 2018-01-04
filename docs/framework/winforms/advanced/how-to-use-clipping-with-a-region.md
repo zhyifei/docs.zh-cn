@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b57ffa91a41900e10aa921bd42509b1288134ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 281ae701bc3e5cee38952a05474360019f76a665
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>如何：对区域使用剪辑
 属性之一<xref:System.Drawing.Graphics>类是剪辑区域。 通过完成的所有绘图给定<xref:System.Drawing.Graphics>对象被限制为的剪辑区域<xref:System.Drawing.Graphics>对象。 你可以通过调用设置的剪辑区域<xref:System.Drawing.Graphics.SetClip%2A>方法。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GDI+ 中的区域](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
  [使用区域](../../../../docs/framework/winforms/advanced/using-regions.md)

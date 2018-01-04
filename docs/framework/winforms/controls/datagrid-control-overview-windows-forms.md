@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 13adfeb8a6cffb94ed4cfdc06c3932b5cc336f60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控件概述（Windows 窗体）
 > [!NOTE]
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="events"></a>事件  
  除了常见的控件事件（如 <xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.Enter> 和 <xref:System.Windows.Forms.DataGrid.Scroll>），<xref:System.Windows.Forms.DataGrid> 控件还支持在网格内进行编辑和导航。 <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> 属性用于确定选择哪个单元格。 当用户导航到新的单元格时，将引发 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 事件。 当用户通过父/子关系导航到新表时，将引发 <xref:System.Windows.Forms.DataGrid.Navigate> 事件。 当用户单击后退按钮和查看子表时，将引发 <xref:System.Windows.Forms.DataGrid.BackButtonClick> 事件；当单击“显示/隐藏父行”图标时，将引发 <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> 事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGrid 控件](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
  [如何：将 Windows 窗体 DataGrid 控件绑定到数据源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
  [如何：向 Windows 窗体 DataGrid 控件添加表和列](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  

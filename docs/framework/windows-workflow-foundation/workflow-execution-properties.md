@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6136aca5af6a5da7d7ac468e07c81047352d9be2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c541ebf83babcbdbda86c5b6f3862727d49d8679
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-execution-properties"></a>工作流执行属性
 通过线程本地存储区 (TLS)，CLR 可为每个线程维护一个执行上下文。 此执行上下文管理已知的线程属性，例如，线程标识、环境事务、当前权限集以及用户定义的线程属性（如已命名的槽）。  
@@ -173,7 +174,7 @@ End default text.
   
  工作流执行属性可由自定义活动创作者使用，并且这些属性还提供用于处理活动（如 <xref:System.ServiceModel.Activities.CorrelationScope> 和 <xref:System.Activities.Statements.TransactionScope> 活动）的管理的机制。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Activities.IExecutionProperty>  
  <xref:System.Activities.IPropertyRegistrationCallback>  
  <xref:System.Activities.RegistrationContext>

@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eebd0f36fbf1bf3bfc37b8fa836d318a9b8ac007
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c70e1a88384041a2a1d958e48c672a961752202b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的基本列、行和单元格功能
 许多基本行为`DataGridView`单元格、 行和列可以修改通过设置单个属性。 本部分中的主题介绍几个最常使用的这些功能。  
@@ -63,6 +64,6 @@ ms.lasthandoff: 11/21/2017
  [使用 Windows 窗体 DataGridView 控件中的单元格、行和列编程](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  提供一些主题，介绍如何使用单元格、行和列对象进行编程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows 窗体 DataGridView 控件中的列类型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

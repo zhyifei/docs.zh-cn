@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82e143a6c405d4f3065c18a1a118891e0e692b93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 90b0c2748960443c0d63d22b33566ebcb2b4545b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>如何：从 Windows 窗体播放资源中嵌入的声音
 你可以使用<xref:System.Media.SoundPlayer>类来从嵌入的资源播放声音。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  将“\<程序集名称>”替换为嵌入声音文件的程序集的名称。 不要包含“.dll”后缀。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Media.SoundPlayer>  
  [如何：从 Windows 窗体播放声音](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
  [如何：在 Windows 窗体上循环播放声音](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)

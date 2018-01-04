@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: efdde6367d54d4cdc8d9992d2b3f44a366227069
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 14a3f4ba9f57718e3ae4a3751f44e6257a335cfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel 控件
 <xref:System.Windows.Forms.ToolStripStatusLabel>提供中的显示区域<xref:System.Windows.Forms.StatusStrip>为文本、 图像，或两者。  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/18/2017
  <xref:System.Windows.Forms.ToolStripProgressBar>  
  提供关于 <xref:System.Windows.Forms.ToolStripProgressBar> 控件的参考文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

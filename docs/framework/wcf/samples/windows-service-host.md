@@ -16,14 +16,15 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3dd2b4880ea61f5c3236a3e15ba1c939dbc2952
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3634d5c14b0d0fcc0113296dec4843585625698d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-service-host"></a>Windows 服务主机
-此示例演示在托管 Windows 服务中承载的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务。 使用中的服务小程序控制 Windows 服务**控制面板**并且可以配置为启动系统重新启动后自动启动。 此示例包含一个客户端程序和一个 Windows 服务程序。 服务作为一个 .exe 程序实现，并包含其自己的宿主代码。 在其他承载环境（如 Windows 进程激活服务 (WAS) 或 Internet Information Services (IIS)）中，您没有必要编写承载代码。  
+此示例演示在托管 Windows 服务中承载的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务。 使用中的服务小程序控制 Windows 服务**控制面板**并且可以配置为启动系统重新启动后自动启动。 此示例包含一个客户端程序和一个 Windows 服务程序。 服务作为一个 .exe 程序实现，并包含其自己的主机代码。 在其他承载环境（如 Windows 进程激活服务 (WAS) 或 Internet Information Services (IIS)）中，你没有必要编写承载代码。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -73,5 +74,5 @@ ms.lasthandoff: 12/02/2017
   
 4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 1721417b8d1fc799e6af5d09762ee852d9fbfb03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-services-programmatically"></a>如何：以编程方式编写服务
 如果你选择不使用 Windows 服务项目模板，你可以通过设置继承和其他基础结构元素自己编写你自己的服务。 当以编程方式创建服务时，你必须执行该模板将为您处理的几个步骤：  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
     3.  滚动到**System.ServiceProcess.dll**单击**选择**。  
   
-    4.  单击“确定”。  
+    4.  单击 **“确定”**。  
   
 2.  添加类并将其配置为从继承<xref:System.ServiceProcess.ServiceBase>:  
   
@@ -79,9 +80,9 @@ ms.lasthandoff: 11/21/2017
   
 10. 安装服务。 有关更多信息，请参见 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何： 将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [如何： 记录关于服务的信息](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
- [演练： 在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+## <a name="see-also"></a>请参阅  
+ [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [如何：记录关于服务的信息](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

@@ -19,17 +19,18 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b16f87b73654a3faa7cc261c552bc48647ad2e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19868e282409180383fb6bef232082bee6b71f99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>如何：设置所有 Windows 窗体的网格选项
 像在中工作变得以前[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]开发环境中，你可以在 Windows 窗体设计器中设置所有窗体和项目，你使用的首选项。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-set-global-windows-forms-options"></a>若要设置全局 Windows 窗体选项  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
      在右窗格中，在**布局设置**标题下，你可以设置默认值为所有新窗体的网格设置。 这些设置包括的网格大小、 是否控件对齐到其中，以及它是否在默认情况下。 此外，你可以在其中选择之间**网格线对齐**和**对齐线**布局模式。 对齐线在上的详细信息，请参阅[演练： 在 Windows 窗体使用对齐线上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练：使用对齐线在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [通常，Windows 窗体设计器中，选项对话框](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  

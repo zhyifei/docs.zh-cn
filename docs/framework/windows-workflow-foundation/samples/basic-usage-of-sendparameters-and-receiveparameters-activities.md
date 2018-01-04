@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 501aead51a96d483a55602c737613e1d9066b74c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 375168f45ee0bba5df1ca723398d448ead89555c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>SendParameters 和 ReceiveParameters 活动的基本用法
 此示例演示如何使用 <xref:System.ServiceModel.Activities.SendParametersContent> 和 <xref:System.ServiceModel.Activities.ReceiveParametersContent> 活动。 此服务公开了一个操作，该操作获取一个字符串参数并将输入回显到客户端。 此示例演示如何设置这些消息传递活动的参数。  

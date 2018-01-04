@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca40e8837669424865debc70c2289d6381902cf9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6be7ff61dad214c9e4caa90682a45922f2c9c69b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printpreviewcontrol-control-windows-forms"></a>PrintPreviewControl 控件（Windows 窗体）
 Windows 窗体`PrintPreviewControl`用于显示文档打印时的样子。 此控件具有没有按钮或其他用户界面元素，因此通常仅在你想要编写自己的打印预览用户界面时才使用 `PrintPreviewControl`。 如果你想要标准的用户界面，请使用 <xref:System.Windows.Forms.PrintPreviewDialog> 控件。  

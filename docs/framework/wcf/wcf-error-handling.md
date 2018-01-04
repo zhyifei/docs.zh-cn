@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26dfea83400b5d601fabc5cfb52bc71a4d5e4f6f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 860f96ee92db6a11238942202d4e202ba912d748
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-error-handling"></a>WCF 错误处理
 WCF 应用程序遇到的错误属于下列三组中的一组：  
@@ -51,7 +52,7 @@ WCF 应用程序遇到的错误属于下列三组中的一组：
  利用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，您可以对 WCF 应用程序响应错误的方式进行更多的控制。  您可以完全控制返回到客户端的故障消息，还可以执行自定义错误处理，例如日志记录。  [!INCLUDE[crdefault](../../../includes/crabout-md.md)]<xref:System.ServiceModel.Dispatcher.IErrorHandler>和[扩展对错误处理和报告的控制](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>ServiceHost 事件  
- <xref:System.ServiceModel.ServiceHost> 类承载服务，并定义处理错误可能需要的几个事件。 例如:   
+ <xref:System.ServiceModel.ServiceHost> 类承载服务，并定义处理错误可能需要的几个事件。 例如:  
   
 1.  <!--zz <xref:System.ServiceModel.ServiceHost.Faulted>-->  `System.ServiceModel.ServiceHost.Faulted`
   

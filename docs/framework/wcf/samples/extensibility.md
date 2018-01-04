@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28e6de46098a8309a17e0c264411f865fb9b1de2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility"></a>扩展性
 本节包含处理 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的自定义扩展性和其他功能的示例。  
@@ -32,16 +33,16 @@ ms.lasthandoff: 12/02/2017
  [实例化扩展性](../../../../docs/framework/wcf/samples/instancing-extensibility.md)  
  演示自定义扩展性。  
   
- [互操作可扩展性](../../../../docs/framework/wcf/samples/interop-extensibility.md)  
+ [互操作扩展性](../../../../docs/framework/wcf/samples/interop-extensibility.md)  
  演示自定义互操作性。  
   
  [消息编码器扩展性](../../../../docs/framework/wcf/samples/message-encoder-extensibility.md)  
  演示自定义消息编码。  
   
- [元数据可扩展性](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
+ [元数据扩展性](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
  演示自定义元数据。  
   
- [安全可扩展点](../../../../docs/framework/wcf/samples/security-extensibility.md)  
+ [安全扩展性](../../../../docs/framework/wcf/samples/security-extensibility.md)  
  演示自定义安全。  
   
  [联合扩展性示例](../../../../docs/framework/wcf/samples/syndication-extensibility-samples.md)  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/02/2017
  [传输可扩展性](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
  演示自定义传输。  
   
- [Web 可扩展性](../../../../docs/framework/wcf/samples/web-extensibility.md)  
+ [Web 扩展性](../../../../docs/framework/wcf/samples/web-extensibility.md)  
  演示自定义 Web 功能。  
   
  [操作格式化程序和操作选择器](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
  [DataContract 代理项](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。  
   
- [扩展对错误处理和报告的控制](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ [扩展对错误处理和错误报告的控制](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
  演示如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务中使用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口对错误处理和错误报告进行扩展控制。  
   
  [消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)  

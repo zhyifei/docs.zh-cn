@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f19e53a2dfd2c659a3ba111a80a35cd0737fa163
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7eafe31bec86a969a12661c9f5629b2d55e3e3d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel 控件概述
 <xref:System.Windows.Forms.FlowLayoutPanel> 控件沿水平或纵排方向排列其内容。 可从一行到下一行，或从一列到下一列来进行控件内容换行。 或者，可以剪切其内容，而非进行换行。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  另请参阅[演练： 在 Windows 窗体使用 FlowLayoutPanel 上排列控件](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  [FlowLayoutPanel 控件](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)

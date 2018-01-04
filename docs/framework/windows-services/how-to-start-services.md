@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: e4f93da8a2a5be00d798d64caba0f54bfd71ceb2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-start-services"></a>如何：启动服务
 安装的服务后，必须启动。 从开始调用<xref:System.ServiceProcess.ServiceBase.OnStart%2A>服务类的方法。 通常情况下，<xref:System.ServiceProcess.ServiceBase.OnStart%2A>方法定义有用的服务将执行的工作。 服务启动后，它保持活动状态直到被手动暂停或停止。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  调用 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法以启动该服务。  
   
-## <a name="see-also"></a>另请参阅  
- [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何： 将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>请参阅  
+ [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

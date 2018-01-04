@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15de43cc83e92b781e44da703353bec98dbc2c6a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8c701b608071ebd9e8c29881000db8dcd2634f56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-queued-communication"></a>排队通信的最佳做法
 本主题对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的排队通信提供建议做法。 以下各节从方案角度讨论建议的做法。  
@@ -91,15 +92,15 @@ ms.lasthandoff: 12/02/2017
   
 -   使用 XML 序列化，您可以指定已知的类型使用`KnownTypes`属性[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)元素，然后将其用于确定如何反序列化 XML 消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [如何： 交换排队消息的 WCF 终结点](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [如何： 与 WCF 终结点交换消息和消息队列应用程序](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [分组在会话中排入队列消息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
- [对在事务中的消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
- [使用死信队列来处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Windows Vista、 Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- [使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [使用消息安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [在会话中对排队消息进行分组](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [有害消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
+ [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [使用传输安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [使用消息安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
  [排队消息处理疑难解答](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

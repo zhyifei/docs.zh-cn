@@ -25,11 +25,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb7ffb8a7f20c1e53b24a1db8bda326d73743a93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 93f49a8fbd2cc8ffae94e4dcbbc4babf7c1137cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：为 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件创建查找表
 有时，在 Windows 窗体上以用户友好格式显示数据，但存储数据时使用对程序而言更有意义的格式会很有帮助。 例如，食品订单窗体可能按列表框中的名称显示菜单项。 但是，记录订单的数据表将包含代表该食品的唯一 ID 号。 下表显示如何存储和显示食品订单窗体数据的示例。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID|名称|  
+|Id|name|  
 |--------|----------|  
 |12|Potato|  
 |13|Chicken|  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据绑定和 Windows 窗体](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
  [ListBox 控件概述](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
  [ComboBox 控件概述](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  

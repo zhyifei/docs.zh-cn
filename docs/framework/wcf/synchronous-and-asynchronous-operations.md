@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fce4129924b4f0ce4542f2d274d2cc4031928c9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 12/02/2017
 3.  IAsyncResult 异步模式  
   
 #### <a name="task-based-asynchronous-pattern"></a>基于任务的异步模式  
- 基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法只需实现您的服务操作并且指定任务的返回类型\<T >，其中 T 是逻辑运算返回的类型。 例如:   
+ 基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法只需实现您的服务操作并且指定任务的返回类型\<T >，其中 T 是逻辑运算返回的类型。 例如:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -192,6 +193,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  如果你想要接收此消息对象作为`Result`属性和使返回的值，因为该对象上的属性使用**/messageContract**命令选项。 这会生成一个签名，该签名会将响应消息作为 `Result` 对象上的 <xref:System.EventArgs> 属性返回。 然后，所有内部返回值就都是响应消息对象的属性了。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
  <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3981a0d0c82b8bc35536a9afd702e753fcf07db5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 78e787c129c0161e8730472124ee4162e2d1ba9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>扩展保护身份验证示例自述文件
 扩展的保护是一种安全计划以防止拦截中 (MITM) 攻击，攻击者 （"--拦截"） 会截获客户端的凭据，并使用它们来访问客户端的目标服务器上的安全资源。  

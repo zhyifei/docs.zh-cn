@@ -12,26 +12,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 642ba5100cca17623a07e5de613b6d6aa26bd23f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 15282ae7d1988e560877d10c249fa026510e1d64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-activities"></a>内置活动
 本节包含演示内置 [!INCLUDE[wf](../../../../includes/wf-md.md)] 活动的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在使用 TryCatch Flowchart 活动中处理的错误](../../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+ [使用 TryCatch 在 Flowchart 活动中进行错误处理](../../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
  演示如何在复杂控制流活动中使用 <xref:System.Activities.Statements.TryCatch> 活动。  
   
- [一段时间中模拟中断活动](../../../../docs/framework/windows-workflow-foundation/samples/emulating-breaking-in-a-while-activity.md)  
+ [在 While 活动中模拟中断](../../../../docs/framework/windows-workflow-foundation/samples/emulating-breaking-in-a-while-activity.md)  
  演示如何中断下列活动的循环机制：<xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.While> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  
   
  [DynamicActivity 创建](../../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)  
  演示在运行时使用 <xref:System.Activities.DynamicActivity> 活动来创建活动的两种不同方式。  
   
- [.NET Framework 3.5 Ruleset 中使用变量](../../../../docs/framework/windows-workflow-foundation/samples/using-variables-with-dotnet-ruleset.md)  
+ [将变量用于 .NET Framework 3.5 规则集](../../../../docs/framework/windows-workflow-foundation/samples/using-variables-with-dotnet-ruleset.md)  
  演示如何创建一个工作流，该工作流使用 <xref:System.Activities.Statements.Interop> 活动集成在 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中编写的使用了策略和规则的自定义活动。  
   
  [从 XAML 加载](../../../../docs/framework/windows-workflow-foundation/samples/load-from-xaml.md)  
@@ -55,8 +56,8 @@ ms.lasthandoff: 12/02/2017
  [InvokeMethod](../../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
  演示使用 <xref:System.Activities.Statements.InvokeMethod> 活动调用类的方法的不同方式。  
   
- [使用自定义类型的切换活动的使用情况](../../../../docs/framework/windows-workflow-foundation/samples/usage-of-the-switch-activity-with-custom-types.md)  
+ [带自定义类型的切换活动的用法](../../../../docs/framework/windows-workflow-foundation/samples/usage-of-the-switch-activity-with-custom-types.md)  
  介绍如何使 <xref:System.Activities.Statements.Switch%601> 活动能够在运行时计算用户定义的复杂类型。  
   
- [与 3.5 规则集的互操作](../../../../docs/framework/windows-workflow-foundation/samples/interop-with-3-5-rule-set.md)  
+ [与 3.5 规则集交互](../../../../docs/framework/windows-workflow-foundation/samples/interop-with-3-5-rule-set.md)  
  演示如何使用 <xref:System.Activities.Statements.Interop> 活动以便与 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中使用 <xref:System.Workflow.Activities.PolicyActivity> 和规则的自定义活动集成。

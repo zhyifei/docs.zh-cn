@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe6e8563b19ef18b89ad970f3ca35bf5f0782a32
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 0e4ed36740cd7e9478be3b4a7187329fb092c821
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>如何：在指定位置绘制文本
 在执行自定义绘制时，您可以在一个水平行从指定位置开始绘制文本。 可以通过使用这种方式中绘制文本<xref:System.Drawing.Graphics.DrawString%2A>重载的方法的<xref:System.Drawing.Graphics>采用类<xref:System.Drawing.Point>或<xref:System.Drawing.PointF>参数。 <xref:System.Drawing.Graphics.DrawString%2A>方法还要求<xref:System.Drawing.Brush>和<xref:System.Drawing.Font>  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/14/2017
   
 -   <xref:System.Windows.Forms.PaintEventArgs>  `e`这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：用 GDI 绘制文本](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
  [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
  [如何：构造字体系列和字体](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  

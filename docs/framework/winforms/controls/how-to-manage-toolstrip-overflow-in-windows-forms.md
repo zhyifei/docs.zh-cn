@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1ae4172dbdf82b4bd5bdd9a7f8afc1901fcfa3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 619c4832626693a56280c70af3ade5dbb9e9d4de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>如何：在 Windows 窗体中管理 ToolStrip 溢出
 当上的所有项<xref:System.Windows.Forms.ToolStrip>控件不适合在分配的空间，则可以在启用溢出功能<xref:System.Windows.Forms.ToolStrip>并确定特定的溢出行为<xref:System.Windows.Forms.ToolStripItem>s。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
     System.Windows.Forms.ToolStripItemOverflow.Never;  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripOverflowButton>  
  <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>  

@@ -12,17 +12,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f130fb875074e45144e8ff7bb4cc48e353f0428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 087b6aaf524ac2bf301d40b13ed8f3d7987d1956
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rules-samples"></a>规则示例
 本节包含演示如何使用 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中的工作流规则引擎的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [高级的策略](../../../../docs/framework/windows-workflow-foundation/samples/advanced-policy.md)  
+ [高级策略](../../../../docs/framework/windows-workflow-foundation/samples/advanced-policy.md)  
  演示如何扩展简单策略示例。 除了简单策略示例中的住户折扣和企业折扣规则外，还添加了若干新规则。  
   
  [简单策略](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)  
@@ -31,8 +32,8 @@ ms.lasthandoff: 12/02/2017
  [带规则的 IfElse](../../../../docs/framework/windows-workflow-foundation/samples/ifelse-with-rules.md)  
  演示如何将规则条件与 <xref:System.Workflow.Activities.IfElseActivity> 活动一起使用。  
   
- [条件的活动组](../../../../docs/framework/windows-workflow-foundation/samples/conditioned-activity-group.md)  
+ [有条件的活动组](../../../../docs/framework/windows-workflow-foundation/samples/conditioned-activity-group.md)  
  演示一个旅行预订应用程序。  
   
- [订单处理与策略](../../../../docs/framework/windows-workflow-foundation/samples/order-processing-with-policy.md)  
+ [使用策略处理的订单](../../../../docs/framework/windows-workflow-foundation/samples/order-processing-with-policy.md)  
  演示 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 的 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中引入的一些重要功能。

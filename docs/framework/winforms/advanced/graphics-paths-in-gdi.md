@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e027228ea1cc047f213c28ac3a4984c2f0227c5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 022a591a1d646b154c2bd59a2f2ab21b78b9dbda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+ 中的图形路径
 路径是通过组合线条、 矩形和简单曲线而形成。 回想一下，从[向量图形概述](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)以下的基本构建基块已证明绘制图片的最有用：  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
  ![路径](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
  <xref:System.Drawing.Point?displayProperty=nameWithType>  
  [直线、曲线和形状](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  

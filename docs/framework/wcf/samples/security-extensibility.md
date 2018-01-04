@@ -13,17 +13,18 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2d3a35839aaf980331b3b84181027d9c170c619d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-extensibility"></a>安全可扩展点
 本节包含演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中自定义安全的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [持久性已颁发令牌提供程序](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
+ [持久性已颁发的令牌提供程序](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
  演示如何实现一个自定义的客户端颁发的令牌提供程序。  
   
  [SAML 令牌提供程序](../../../../docs/framework/wcf/samples/saml-token-provider.md)  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
  [令牌提供程序](../../../../docs/framework/wcf/samples/token-provider.md)  
  演示如何实现一个自定义令牌提供程序。  
   
- [用户密码验证程序](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
+ [用户名密码验证程序](../../../../docs/framework/wcf/samples/user-name-password-validator.md)  
  演示如何实现一个自定义 UserNamePassword 验证程序。  
   
  [X.509 证书验证程序](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)  

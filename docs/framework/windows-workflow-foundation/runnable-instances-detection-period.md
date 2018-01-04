@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18b016cdf51ec95ab8457ded2949b980fc66fad0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 561ef96b6f043956822a1290d4a03a2e7411f6f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runnable-instances-detection-period"></a>可运行实例的检测周期
 SQL 工作流实例存储运行一个内部任务，该任务将定期唤醒并检测持久性数据库中是否有可运行或可激活的实例。 **可运行实例的检测周期**SQL 工作流实例存储的属性指定的时间段后，SQL 工作流实例存储将运行一个检测任务，以检测任何可运行或可激活的工作流在上一检测周期后持久性数据库中的实例。  

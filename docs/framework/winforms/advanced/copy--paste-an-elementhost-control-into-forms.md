@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65882925c6fbe3e9b393b139a937bc9a1f95ed04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 579bce312296d9799f9f7c739f740e2c9111ccff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-copying-and-pasting-an-elementhost-control-into-separate-windows-forms"></a>演练：将 ElementHost 控件复制并粘贴到单独的 Windows 窗体中
 本演练显示了如何将 Windows Presentation Foundation (WPF) 控件从一个 Windows 窗体复制到其他 Windows 窗体。  
@@ -34,9 +35,9 @@ ms.lasthandoff: 11/21/2017
 -   复制 WPF 控件。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。  
   
-#### <a name="to-create-the-project"></a>创建项目  
+#### <a name="to-create-the-project"></a>要创建项目  
   
 -   创建新的 Windows 窗体应用程序项目中 Visual Basic 或 Visual C# 名为`CopyElementHost`。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
      复制的控件名称也命名为 `elementHost1`，因为它是 `Form2` 类的私有字段。 `Form1` 类中不存在与 `elementHost1` 的名称冲突。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  

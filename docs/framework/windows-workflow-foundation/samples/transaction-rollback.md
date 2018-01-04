@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aaebbb7fa2e6e0420243c32cb70c64092ea86fa7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 85ae459a8e79beba9ecffb16476b37468aeb632e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transaction-rollback"></a>事务回滚
 此示例演示如何创建一个自定义 <xref:System.Activities.NativeActivity>，用于访问环境 <xref:System.Activities.RuntimeTransactionHandle> 以获取环境事务并显式回滚它。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactionRollback`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事务](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)

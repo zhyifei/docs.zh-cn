@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ffb8ec71d6a8bbbdf365b78ad13af7524cc33ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f14b69cba50839f3c4105b286af4de0523385b38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datacontract-surrogate"></a>DataContract 代理项
 本示例演示如何使用数据协定代理类自定义诸如序列化、反序列化、架构导出和架构导入之类的过程。 此示例演示如何在客户端和服务器方案中使用代理项，在这种方案中，数据在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务之间进行序列化和传输。  
@@ -279,4 +280,4 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

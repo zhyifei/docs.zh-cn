@@ -17,18 +17,19 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bed2f4cbdc2f7d2e2647e39163959aaf42ae8bab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7976e4641f5bda02d6569ab17e7f1de139c59a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel 控件概述
 A<xref:System.Windows.Forms.ToolStripPanel>单个区域提供用于定位和漂浮<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，和<xref:System.Windows.Forms.StatusStrip>控件。 多个<xref:System.Windows.Forms.ToolStrip>控件堆栈垂直或水平，具体取决于<xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A>的<xref:System.Windows.Forms.ToolStripPanel>。  
   
 ### <a name="important-toolstrippanel-members"></a>重要 ToolStripPanel 成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripPanel.Orientation%2A>|获取或设置一个值，该值的水平或垂直方向<xref:System.Windows.Forms.ToolStripPanel>。|  
 |<xref:System.Windows.Forms.ToolStripPanel.Renderer%2A>|获取或设置<xref:System.Windows.Forms.ToolStripRenderer>用于自定义的外观<xref:System.Windows.Forms.ToolStripPanel>。|  
@@ -37,7 +38,7 @@ A<xref:System.Windows.Forms.ToolStripPanel>单个区域提供用于定位和漂�
 |<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|获取<xref:System.Windows.Forms.ToolStripPanelRow>在此<xref:System.Windows.Forms.ToolStripPanel>。|  
 |<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|将添加<xref:System.Windows.Forms.ToolStrip>到<xref:System.Windows.Forms.ToolStripPanel>。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStripContainer>  
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  [ToolStrip 示例](http://msdn.microsoft.com/en-us/b7352439-184a-4a3a-b2ad-07465d3af9ed)

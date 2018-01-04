@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 839a4fd8052578e32e4d46d10e07aa52a1f23d90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 193562b5dd00950ec483da94e2ea6ea059e88805
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>在 Windows 窗体 DataGridView 控件中显示数据
 `DataGridView`控件用于显示不同的外部数据源中的数据。 或者，你可以向控件添加行和列并手动将其填充数据。  
@@ -82,6 +83,6 @@ ms.lasthandoff: 11/21/2017
  [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
  提供一些主题，介绍如何改变用户添加和修改控件中数据的方式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows 窗体 DataGridView 控件中的列类型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

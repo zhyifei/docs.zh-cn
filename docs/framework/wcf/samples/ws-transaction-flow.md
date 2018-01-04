@@ -14,11 +14,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d14f516ed32ecbada0b612cf06179e47acf18ddc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf441831a205b022899999b1bf34e1505b8fb6bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-transaction-flow"></a>WS 事务流
 本示例演示客户端协调事务和使用 WS-Atomic 事务或 OleTransactions 协议的事务流的客户端和服务器选项的用法。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务，但操作特性化，用于演示使用`TransactionFlowAttribute`与**TransactionFlowOption**若要确定何种程度事务到启用了流的枚举。 在流事务范围内，请求操作的日志将写入数据库并保存，直到客户端协调事务完成。如果客户端事务没有完成，则 Web 服务事务确保不提交对数据库的相应更新。  
@@ -197,7 +198,7 @@ Console.WriteLine("Transaction committed");
   
 -   第二个 `Subtract` 请求在用 `TransactionScopeOption.Suppress` 选项声明的新事务范围内执行。 这会禁止客户端的初始外层事务，请求不会将事务流动到服务。 此方法允许客户端显式放弃和防止将事务流动到服务（不需要流动时）。 服务的操作发生在新的未连接的事务范围内。  
   
--   `Multiply` 请求不会将事务流动到服务，因为客户端的生成的 `ICalculator` 接口定义包括设置为 <xref:System.ServiceModel.TransactionFlowAttribute><xref:System.ServiceModel.TransactionFlowOption> 的 `NotAllowed`。  
+-   `Multiply`请求不会将事务流动到服务因为客户端生成的定义`ICalculator`接口包含<xref:System.ServiceModel.TransactionFlowAttribute>设置为<xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`。  
   
 -   `Divide` 请求不会将事务流动到服务，因为客户端的 `ICalculator` 接口生成的定义再次没有包括 `TransactionFlowAttribute`。 服务的操作再次发生在另一个新的未连接的事务范围内。  
   

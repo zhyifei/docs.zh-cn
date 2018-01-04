@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e88737d50b24f524e4a33fd51ee16678c1928b1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cfbd4769d1fc974369093e3b5253f9853a9ef730
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-instructions"></a>设置说明
 该组主题描述如何设置运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的服务。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
  [Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  概述设置 IIS 所需的步骤。  
   
- [Internet 信息服务 (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
+ [Internet Information Services (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
  概述安装 IIS 的服务器证书的过程。  
   
  [虚拟目录设置说明](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41205f7f0ec21e27b97d0b12415fca89ae526552
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7d9012d1a31eeaf50560b6166d32ac58662c5aa4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overriding-the-onpaint-method"></a>重写 OnPaint 方法
 重写中定义的任何事件的基本步骤[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]相同，并且以下列表中汇总。  
@@ -96,7 +97,7 @@ public class PaintEventArgs : EventArgs {
   
  一个控件时，将调用其<xref:System.Windows.Forms.Control.OnPaint%2A>方法需要更改其可视显示时。 此方法将依次引发<xref:System.Windows.Forms.Control.Paint>事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件](../../../../docs/standard/events/index.md)  
  [呈现 Windows 窗体控件](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
  [定义事件](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)

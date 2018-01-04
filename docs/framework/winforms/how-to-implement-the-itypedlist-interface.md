@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 95888fc5c0df31529db429ead0e7d3e342f9a6e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 09eb28e865fb020dae9a8b6ffc3f05a52e6eec4a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>如何：实现 ITypedList 接口
 实现<xref:System.ComponentModel.ITypedList>界面，以启用可绑定列表的架构发现。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 -   对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.ITypedList>  
  <xref:System.ComponentModel.BindingList%601>  
  <xref:System.ComponentModel.IBindingList>  

@@ -13,11 +13,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72d6dcef2ac59fd63706d8d8c843f739575cf5cc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c06efd7450afe93eaecca1e678eb6f8bf5de7a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 通过此通道可以在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务和 ASMX 客户端或者 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和 ASMX 服务之间进行通信。  
@@ -180,4 +181,4 @@ Press <ENTER> to terminate client.
   
 4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

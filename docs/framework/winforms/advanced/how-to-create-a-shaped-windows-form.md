@@ -29,11 +29,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 981256c2447a53aef8e1ea676db38ce693d1337e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b0641adfcd7fa8e1d3367ea55d00830dd5a60706
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>如何：创建特定形状的 Windows 窗体
 此示例使窗体调整大小时处理该窗体是椭圆形状。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
  此示例替代<xref:System.Windows.Forms.Control.OnPaint%2A>方法用于更改窗体的形状。 若要使用此代码，将复制的方法声明，以及在方法内的绘制代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
  <xref:System.Drawing.Region>  
  <xref:System.Drawing>  

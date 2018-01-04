@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10a0ef4e7fd8514245a7659dd515d8f363a716ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8bbc17b8344fca496dcf8f4077a69b6db1453c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>如何：缩放时使用插值模式控制图像质量
 内插模式<xref:System.Drawing.Graphics>对象影响方式[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]刻度 （拉伸和收缩） 映像。 <xref:System.Drawing.Drawing2D.InterpolationMode>枚举定义多个内插模式，其中一些都显示在下面的列表：  
@@ -56,6 +57,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

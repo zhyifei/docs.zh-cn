@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80ec592bf83969ae57495b0df2af110b5622ea11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7a6f1d569234f7cee4b5eedc81fcc68a41fcf0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar 控件和 VScrollBar 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ScrollBar>控件用于提供较长列表项或大量信息中的轻松导航，请水平或垂直滚动内的应用程序或控件。 滚动条是一种常见元素的 Windows 界面中，因此<xref:System.Windows.Forms.ScrollBar>控件通常用于是非派生自的控件<xref:System.Windows.Forms.ScrollableControl>类。 同样，许多开发人员选择合并<xref:System.Windows.Forms.ScrollBar>控制创建其自己的用户控件时。  
@@ -45,7 +46,7 @@ Windows 窗体<xref:System.Windows.Forms.ScrollBar>控件用于提供较长列�
   
  当用户按某个箭头键或单击滚动条按钮时，之一<xref:System.Windows.Forms.ScrollBar.Value%2A>根据中设置的值的属性更改<xref:System.Windows.Forms.ScrollBar.SmallChange%2A>属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.HScrollBar>  
  <xref:System.Windows.Forms.VScrollBar>  
  [用于.NET Framework 2.0 向 Windows 窗体的添加件](http://msdn.microsoft.com/en-us/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  

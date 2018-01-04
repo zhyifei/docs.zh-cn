@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41834f0bdfe800019c1f641d5b20147b10774221
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b7632f0e89d21d3d82098b21cf17e34847ea3de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>如何：添加和删除 Windows 窗体 TreeView 控件中的节点
 Windows 窗体<xref:System.Windows.Forms.TreeView>控件将存储中的顶级节点其<xref:System.Windows.Forms.TreeView.Nodes%2A>集合。 每个<xref:System.Windows.Forms.TreeNode>还具有自己<xref:System.Windows.Forms.TreeNode.Nodes%2A>用于存储及其子节点集合。 这两个集合属性属于类型<xref:System.Windows.Forms.TreeNodeCollection>，该属性提供标准的集合成员，使您可以添加、 删除和重新排列节点层次结构的单个级别节点。  
@@ -80,7 +81,7 @@ Windows 窗体<xref:System.Windows.Forms.TreeView>控件将存储中的顶级节
     treeView1->Nodes->Clear();  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [TreeView 控件](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
  [TreeView 控件概述](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
  [如何：设置 Windows 窗体 TreeView 控件的图标](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1518f3f89a1c7e5096ab1bee3461be84a0a87777
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e28158076fcedf8c7d14d598b1c2ba0a25ff1f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation 工具
 Microsoft [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 工具可使您更为轻松地创建、部署和管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序。 本节包含有关这些工具的详细信息。 请注意，这些工具不受支持。  

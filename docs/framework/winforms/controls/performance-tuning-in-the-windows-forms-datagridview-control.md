@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 452c55d38a896ec96e0992a4b9826f08dc4caa0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da0171bf4fa056de2dd06c2f7e431ea55a8dab1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的性能优化
 在使用大量的数据，`DataGridView`控件可以使用大量的内存开销，除非谨慎使用。 上内存有限的客户端，你可以避免此开销的一些通过避免功能，具有高内存成本。 你还可以管理的部分或全部数据维护和检索任务自己使用的虚拟模式以便自定义你的方案的内存使用量。  
@@ -46,6 +47,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  提供的参考文档<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows 窗体 DataGridView 控件中的数据显示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

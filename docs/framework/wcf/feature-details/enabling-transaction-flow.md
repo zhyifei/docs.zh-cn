@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b5d0b90ed28928e734089265cb8c58839b6d0cd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-transaction-flow"></a>启用事务流
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供用于控制事务流的灵活性较高的选项。 服务事务流设置可以使用属性与配置的组合来表示。  
@@ -43,11 +44,11 @@ ms.lasthandoff: 12/02/2017
 |TransactionFlow<br /><br /> 绑定|TransactionFlow 绑定属性|TransactionFlowProtocol 绑定协议|事务流的类型|  
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
 |必需|true|WS-AT|事务必须以可以互操作的 WS-AT 格式流动。|  
-|必需|true|OleTransactions|事务必须以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式流动。|  
-|必需|false|不适用|不适用，因为这是无效的配置。|  
+|强制|true|OleTransactions|事务必须以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式流动。|  
+|强制|False|不适用|不适用，因为这是无效的配置。|  
 |Allowed|true|WS-AT|事务可以以可互操作的 WS-AT 格式流动。|  
 |Allowed|true|OleTransactions|事务可以以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] OleTransactions 格式流动。|  
-|Allowed|false|任意值|不流动事务。|  
+|Allowed|False|任意值|不流动事务。|  
 |NotAllowed|任意值|任意值|不流动事务。|  
   
  下表对消息处理结果做了总结。  
@@ -58,14 +59,14 @@ ms.lasthandoff: 12/02/2017
 |事务不与预期的协议格式匹配|强制|`MustUnderstand` 等于 `false`。|因要求一个事务而拒绝|  
 |事务不与预期的协议格式匹配|Allowed|`MustUnderstand` 等于 `false`。|因无法理解标头而拒绝|  
 |使用任何协议格式的事务|NotAllowed|`MustUnderstand` 等于 `false`。|因无法理解标头而拒绝|  
-|无事务|必需|不可用|因要求一个事务而拒绝|  
+|无事务|强制|不可用|因要求一个事务而拒绝|  
 |无事务|Allowed|不可用|进程|  
 |无事务|NotAllowed|不可用|进程|  
   
  虽然协定上的每个方法都有不同的事务流要求，但事务流协议设置的范围处于绑定级别。 这意味着，共享同一个终结点（并因此共享同一绑定）的所有方法也共享允许或要求事务流的同一个策略以及同一个事务协议（如果适用）。  
   
 ## <a name="enabling-transaction-flow-at-the-method-level"></a>在方法级别启用事务流  
- 对于服务协定中的所有方法，事务流要求并不总是相同。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供基于属性的机制以允许表示每个方法的事务流首选项。 这通过指定服务操作接受事务标头所处的级别的 <xref:System.ServiceModel.TransactionFlowAttribute> 来实现。 如果需要启用事务流，则应使用此属性标记服务协定方法。 此属性采用 <xref:System.ServiceModel.TransactionFlowOption> 枚举值之一，其中默认值为 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>。 如果指定除 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> 以外的任何值，则要求该方法不要成为单向方法。 开发人员可以使用此属性在设计时指定方法级别的事务流要求或约束。  
+ 对于服务协定中的所有方法，事务流需求并不总是相同。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还提供基于属性的机制以允许表示每个方法的事务流首选项。 这通过指定服务操作接受事务标头所处的级别的 <xref:System.ServiceModel.TransactionFlowAttribute> 来实现。 如果需要启用事务流，则应使用此属性标记服务协定方法。 此属性采用 <xref:System.ServiceModel.TransactionFlowOption> 枚举值之一，其中默认值为 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>。 如果指定除 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> 以外的任何值，则要求该方法不要成为单向方法。 开发人员可以使用此属性在设计时指定方法级别的事务流要求或约束。  
   
 ## <a name="enabling-transaction-flow-at-the-endpoint-level"></a>在终结点级别启用事务流  
  除了 <xref:System.ServiceModel.TransactionFlowAttribute> 属性提供的方法级别的事务流设置以外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也为事务流提供终结点范围的设置，以允许管理员可以在较高级别控制事务流。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/02/2017
  管理员或部署人员可以使用终结点级别的事务流在部署时使用配置文件来配置事务流需求或约束。  
   
 ## <a name="security"></a>安全性  
- 若要确保系统的安全性和完整性，您必须在应用程序之间流动事务时保护消息交换。 您不应向无资格参与某一事务的任何应用程序流动或透露该事务的详细信息。  
+ 若要确保系统的安全性和完整性，你必须在应用程序之间流动事务时保护消息交换。 你不应向无资格参与某一事务的任何应用程序流动或透露该事务的详细信息。  
   
  在使用元数据交换向未知或不受信任的 Web 服务生成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端时，对这些 Web 服务上的操作的调用应取消当前的事务（如可能）。 下面的示例演示如何执行此操作。  
   

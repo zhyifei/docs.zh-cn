@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 275e74d6a95971ceb33bf2a879b97de88c0ddbb0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7321578cb76b9f06f09086834c2826a72631e49f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieve-metadata"></a>检索元数据
 本示例演示如何实现一个客户端，它能从服务中动态检索元数据以选择用来通信的终结点。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服务进行了修改以公开两个终结点-一个终结点位于基址中使用`basicHttpBinding`绑定和安全的终结点位于 {*baseaddress*} /secure 使用`wsHttpBinding`绑定。 不必使用终结点地址和绑定配置客户端，客户端可以使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类动态检索服务的元数据，然后使用 <xref:System.ServiceModel.Description.ServiceEndpointCollection> 类以 <xref:System.ServiceModel.Description.WsdlImporter> 的形式导入元数据。  
@@ -79,4 +80,4 @@ foreach (ServiceEndpoint ep in endpoints)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\RetrieveMetadata`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a37c7b01d4ef40727c02e0782422776086b5297
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>运行 Windows Communication Foundation 示例
 可以用单机配置或跨计算机配置来运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例。 示例在提供时就可用于在单机上运行。 在跨计算机配置中，必须修改示例的配置文件设置。 下面的过程说明如何用同一计算机配置和跨计算机配置来运行示例。 请注意，Internet 信息服务 (IIS) 中承载的服务和自承载示例在步骤上有所不同。 大多数示例承载于 IIS 中，请参见示例自述文件信息以确定示例的承载方式。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 12/02/2017
   
 -   出于安全目的，如果服务承载于 IIS 中，请在示例结束后删除虚拟目录定义和在安装步骤中授予的权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  [在工作组中和跨计算机运行示例](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
  [故障排除提示](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)

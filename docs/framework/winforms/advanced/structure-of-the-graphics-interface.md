@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd1da930df151869ea3e891da7057f44ed0a4603
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43bd899a1dd53dc8cdae4f81e90b1aa74c29cb67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structure-of-the-graphics-interface"></a>图形界面的结构
 托管的类接口[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]包含大约 60 个类、 50 枚举和 8 个结构。 <xref:System.Drawing.Graphics>类的核心是[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]功能; 它是实际绘制线条、 曲线、 图形、 图像和文本的类。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]定义了几种枚举，它们是相关的常数的集合。 例如，<xref:System.Drawing.Drawing2D.LineJoin>枚举包含元素<xref:System.Drawing.Drawing2D.LineJoin.Bevel>， <xref:System.Drawing.Drawing2D.LineJoin.Miter>，和<xref:System.Drawing.Drawing2D.LineJoin.Round>，它指定可用于联接两条线的样式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [图形概述](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
  [关于 GDI+ 托管代码](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
  [使用托管图形类](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5290256f302f16f17dd50b570b470beedd00d81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用绑定配置服务和客户端
 绑定是指定连接到终结点所需的通信详细信息的对象。 更具体地说，绑定包含用于创建客户端或服务运行时的配置信息，创建方法是定义用于各个终结点或客户端通道的传输、连网格式（消息编码）和协议的具体内容。 若要创建运行的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务，服务中的每个终结点都需要一个绑定。 本主题解释什么是绑定、如何定义绑定以及如何为终结点指定特定的绑定。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [如何： 配置客户端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)提供创建客户端使用配置的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [如何：在配置中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
  [如何：在代码中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)  

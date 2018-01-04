@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ebe73e0c29a211e3319998ef7acd14e78e4eb14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a31bfc6fb3fa8a3c549a10fd0db017abde66539f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>如何：更改 Windows 窗体 DataGridView 控件中的边框和网格线的样式
 与<xref:System.Windows.Forms.DataGridView>控件，你可以自定义控件的边框和网格线以改进用户体验的外观。 你可以修改网格线颜色和除了在控件内的单元格的边框样式的控件边框样式。 你还可以应用不同的单元格普通单元格、 行标题单元格和列标题单元格的边框样式。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
 -   对 <xref:System?displayProperty=nameWithType><xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.BorderStyle>  
  <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>  

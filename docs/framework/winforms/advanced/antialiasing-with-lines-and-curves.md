@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d69d635fbdd8720937cd189826c1496b8126ddef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>用直线和曲线抗锯齿
 当你使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]绘制线条，提供的起始点和结束点的行，但不是需要在行上提供有关单个像素的任何信息。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]显示驱动程序软件，以确定哪些像素将打开以显示特定显示设备上的行与协同工作。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[LinesCurvesAndShapes#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#81)]
  [!code-vb[LinesCurvesAndShapes#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>  
  [直线、曲线和形状](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
  [如何：对文本使用抗锯齿效果](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)

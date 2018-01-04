@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 284bd30a0a42f245c6b75d916853b264c7f72e6a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 83ee8c5e0cd578a0eb821a35a27c5ff0072e5533
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>如何：访问托管 HTML 文档对象模型
 可以从两种类型的应用程序访问托管 HTML 文档对象模型 (DOM)：  
@@ -55,5 +56,5 @@ ms.lasthandoff: 10/22/2017
   
 1.  你的应用程序或 <xref:System.Windows.Forms.UserControl> 将需要完全信任，才能访问托管 HTML DOM。 如果使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 部署 Windows 窗体应用程序，则可使用“权限提升”或“受信任的应用程序部署”来请求完全信任；有关详细信息，请参阅[保护 ClickOnce 应用程序](/visualstudio/deployment/securing-clickonce-applications)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用托管 HTML 文档对象模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

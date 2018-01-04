@@ -23,17 +23,18 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bda4cb3641ff890646614af35d38ff13621cc16b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f042816b912a0de643dd1d0f66ddba6d5eff7df2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>如何：对 Windows 窗体上的对象分层
 当你创建复杂的用户界面，或使用多个文档界面 (MDI) 窗体时，你通常需要进行分层控件和子窗体上来创建更复杂的用户界面 (UI)。 若要移动并跟踪控件和 windows 组的上下文中的可操作其 z 顺序。 *Z 顺序*是沿窗体的 z 轴 （深度） 窗体上控件的可视化分层。 在 z 顺序的顶层窗口重叠所有其他窗口之上。 所有其他 windows 重叠窗口底部的 z 顺序。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-layer-controls-at-design-time"></a>在设计时排列控件  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  Windows 窗体支持*控件包含*。 控件包含涉及放置多个在包含控件中，如大量的控件<xref:System.Windows.Forms.RadioButton>内控制<xref:System.Windows.Forms.GroupBox>控件。 然后可以层包含控件内的控件。 移动组框移动，这些控件，因为它们包含其内部。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
  [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [标记各个 Windows 窗体控件并创建它们的快捷键](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  

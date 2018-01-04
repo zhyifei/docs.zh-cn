@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5894a8b5d4d0873a231927498a8d1e2c4e18afd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-control-endpoint"></a>工作流控制终结点
 开发人员可以使用工作流控制终结点调用控制操作，从而远程控制使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 承载的工作流实例。 可以利用此功能以编程方式执行控制操作，如挂起、继续和终止。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/02/2017
  活动的  
  工作流达到完成状态之前并且不处于挂起状态时的状态。 在这种状态下，工作流实例运行并处理应用程序消息。  
   
- 挂起  
+ 挂起的  
  处于此状态时，即使有尚未开始运行或已部分运行的活动，工作流实例仍不运行。  
   
  已完成  

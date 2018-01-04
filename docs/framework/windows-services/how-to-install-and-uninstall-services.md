@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d52512ef98596e1e3d5f0acb3b1bbc0eebffe867
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf767813f965b2c52a5061f74bbf2fab4572791b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-and-uninstall-services"></a>如何：安装和卸载服务
 如果你正使用 .NET Framework 开发 Windows 服务，你可以使用名为 InstallUtil.exe 的命令行实用工具快速安装服务应用程序。 如果你是一个想要发布用户可以安装和卸载的 Windows 服务的开发人员，应使用 InstallShield。 请参阅[Windows Installer 部署](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)。  
@@ -71,8 +72,8 @@ ms.lasthandoff: 11/21/2017
   
 3.  有时，服务的可执行文件被删除后，该服务可能仍然会出现在注册表中。 在这种情况下，使用命令[sc delete](http://technet.microsoft.com/library/cc742045.aspx)从注册表中删除该服务的条目。  
   
-## <a name="see-also"></a>另请参阅  
- [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何： 将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+## <a name="see-also"></a>请参阅  
+ [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
  [Installutil.exe（安装程序工具）](../../../docs/framework/tools/installutil-exe-installer-tool.md)

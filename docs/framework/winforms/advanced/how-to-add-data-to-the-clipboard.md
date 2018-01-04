@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 47858af6d4e3dc5f29632c5a74f2431a2cc200b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 452dfc5a9645e8f43ab583099deec60faa2d1b4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>如何：将数据添加到剪贴板
 <xref:System.Windows.Forms.Clipboard>类提供了可以使用与 Windows 操作系统的剪贴板功能进行交互的方法。 许多应用程序的数据作为临时存储库使用剪贴板。 例如，字处理器在剪切和粘贴操作期间使用剪贴板。 剪贴板还可用于将数据传输到另一个应用程序。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  使用<xref:System.Windows.Forms.Clipboard.SetData%2A>具有自定义格式名称方法。 此方法是仅适用于[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]。  
   
-     你还可以使用与预定义的格式名<xref:System.Windows.Forms.Clipboard.SetData%2A>方法。 有关更多信息，请参见<xref:System.Windows.Forms.DataFormats>。  
+     你还可以使用与预定义的格式名<xref:System.Windows.Forms.Clipboard.SetData%2A>方法。 有关详细信息，请参阅<xref:System.Windows.Forms.DataFormats>。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
@@ -70,6 +71,6 @@ ms.lasthandoff: 11/21/2017
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [拖放操作和剪贴板支持](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
  [如何：从剪贴板检索数据](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)

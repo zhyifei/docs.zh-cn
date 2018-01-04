@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffafaff2355e89e2127742f2fba5c005492b4580
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 827e93ad779dfeb2dd398a2fc031fcb99a77a39c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows 窗体数据绑定中的更改通知
 Windows 窗体数据绑定的最重要概念之一是*更改通知*。 若要确保你的数据源和绑定的控件始终具有最新的数据，必须添加数据绑定的更改通知。 具体而言，你想要确保对其数据源，所做的更改，会通知绑定的控件，并且数据源会通知的控件的绑定属性所做的更改。  
@@ -42,7 +43,7 @@ Windows 窗体数据绑定的最重要概念之一是*更改通知*。 若要确
 ## <a name="change-notification-for-custom-controls"></a>自定义控件的更改通知  
  最后，从控件端必须公开*PropertyName*旨在绑定到数据的每个属性的 Changed 事件。 然后，对控件属性的更改会传播到绑定的数据源。 有关详细信息，请参阅[如何： 应用 PropertyNameChanged 模式](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.ComponentModel.INotifyPropertyChanged>  
  <xref:System.ComponentModel.BindingList%601>  

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d5f7763ac7b5923f0eaec757df13d675971789
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 399520738c53e149e7a5539a62a5d4599e26a8da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据输入
 `DataGridView`控件提供了一些功能，可让你更改用户添加或修改控件中的数据的方式。 例如，你可以使数据输入更高效通过提供新行的默认值和错误发生时通知用户。  
@@ -62,6 +63,6 @@ ms.lasthandoff: 11/21/2017
  [在 Windows 窗体 DataGridView 控件中显示数据](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
  提供一些主题，介绍如何向数据控件填充手动或从外部数据源。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows 窗体 DataGridView 控件中的列类型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

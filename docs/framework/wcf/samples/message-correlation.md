@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef105626d2427f0ea6dd49f696b78ffac4834f92
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-correlation"></a>消息相关性
 此示例演示在请求/响应方案中，消息队列 (MSMQ) 应用程序如何向 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务发送 MSMQ 消息，以及如何在发送方应用程序与接收方应用程序之间将消息关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
@@ -322,6 +323,6 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [消息队列](http://go.microsoft.com/fwlink/?LinkId=94968)

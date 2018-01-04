@@ -26,11 +26,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba0e2aec42fa3656b64140134efa27fe8e940e1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 003770e5d21383973946c4ebb83d560f0fa23207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>如何：将文件加载到 Windows 窗体 RichTextBox 控件中
 Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以显示纯文本、Unicode 纯文本或 RTF 格式 (RTF) 文件。 若要显示这些文件，请调用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 还可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法从流中加载数据。 有关详细信息，请参阅 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
@@ -90,7 +91,7 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以显示纯文�
     > [!IMPORTANT]
     >  若要运行此进程，程序集可能需要 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 类授予的特权等级。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  

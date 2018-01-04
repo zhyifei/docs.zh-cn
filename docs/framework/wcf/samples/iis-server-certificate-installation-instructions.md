@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0d035e703b79eb184bf06e3e75255e2f987c170
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cfb168ae60765a57017aaec6bdedaf796491f602
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Internet Information Services (IIS) 服务器证书安装说明
 若要运行可与 Internet 信息服务 (IIS) 安全通信的示例，您必须创建和安装服务器证书。  
@@ -42,7 +43,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 4.  单击**服务器证书**按钮。 Web 服务器证书向导将启动。  
   
-5.  完成该向导。 选择用于分配证书的选项。 从显示的证书列表中选择 ServiceModelSamples-HTTPS-Server 证书。  
+5.  完成向导。 选择用于分配证书的选项。 从显示的证书列表中选择 ServiceModelSamples-HTTPS-Server 证书。  
   
      ![IIS 证书向导](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
@@ -78,7 +79,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
 6.  通过使用 HTTPS 地址 https://localhost/servicemodelsamples/service.svc，在浏览器中测试对服务的访问。  
   
 > [!NOTE]
->  由于刚刚安装的测试证书不是受信任的证书，因此，在浏览用此证书保护的本地 Web 地址时，您可能会遇到其他 Internet Explorer 安全警告。  
+>  由于刚刚安装的测试证书不是受信任的证书，因此，在浏览用此证书保护的本地 Web 地址时，你可能会遇到其他 Internet Explorer 安全警告。  
   
 ## <a name="removing-certificates"></a>移除证书  
   

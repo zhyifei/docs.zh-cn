@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae7ed7b1d01420c8e542d9ecce577995e927adc3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 一起使用的可用架构中生成类，则使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 类。 本主题描述该过程和变体。  
@@ -189,13 +190,13 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  
  <xref:System.Runtime.Serialization.ImportOptions>  
- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  [数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
  [架构导入和导出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
  [从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+ [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

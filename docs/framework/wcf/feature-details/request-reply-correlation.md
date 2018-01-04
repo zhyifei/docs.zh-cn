@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29286950cfef7d8e3e2c453bbdcc307c26e641de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 38f4fc436afbcc5922badda22e9a6e565bc19a0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="request-reply-correlation"></a>请求-答复相关
 请求-答复相关用于<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>对配合使用的工作流服务与实现双向操作<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>中调用双向操作在另一个站点中的对服务。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务中调用双向操作时，该服务可以是传统的基于命令性代码的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，也可以是工作流服务。 若要使用请求-答复相关，必须使用双向绑定，例如 <xref:System.ServiceModel.BasicHttpBinding>。 无论是调用还是实现双向操作，相关初始化步骤都非常相似，本节涵盖了这些步骤。  

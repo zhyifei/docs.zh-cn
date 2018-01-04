@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 919197d8fdb40f0e0fb7b91fecae38f4e0e061bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 控件方案（Windows 窗体）
 与<xref:System.Windows.Forms.DataGridView>控件，您可以显示来自各种数据源的表格数据。 有关简单用法，则可以手动填充<xref:System.Windows.Forms.DataGridView>和操作直接通过控件的数据。 通常情况下，但是，你将在外部数据源中存储你的数据并将控件绑定到它通过<xref:System.Windows.Forms.BindingSource>组件。  
@@ -96,6 +97,6 @@ ms.lasthandoff: 11/21/2017
   
 -   你可以实现您自己到提供的内置列类型之外的主机控件的单元格和列的类。 有关详细信息，请参阅[如何： 在 Windows 窗体 DataGridView 单元格的主机控件](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控件概述](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

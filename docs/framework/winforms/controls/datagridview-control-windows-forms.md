@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08a0cc15cff39bb936a78db95c73568aa643d0b6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 51f6765e5960ddadd27a476f7229a76fbfe985e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView 控件（Windows 窗体）
 `DataGridView` 控件提供一种以表格格式显示数据的功能强大且灵活的方法。 可以使用 `DataGridView` 控件来显示少量数据的只读视图，或者可以缩放该控件以显示大型数据集的可编辑视图。  
@@ -92,5 +93,5 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Forms.BindingSource>  
  提供关于 <xref:System.Windows.Forms.BindingSource> 组件的参考文档。 <xref:System.Windows.Forms.DataGridView> 控件和 <xref:System.Windows.Forms.BindingSource> 组件设计为需紧密协作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

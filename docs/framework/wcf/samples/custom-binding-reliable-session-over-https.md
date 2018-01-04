@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18312c3ce324e31f139ee5fb21240e2a39baadac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b68e5692122efbb79f8101079e721802c3dda42c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>基于 HTTPS 的自定义绑定可靠会话
 此示例演示对可靠会话使用 SSL 传输安全。 可靠会话实现 WS-Reliable Messaging 协议。 您可以通过在可靠会话上组合 WS-Security 来获得安全的可靠会话。 但是有时候，您可以选择对 SSL 改用 HTTP 传输安全。  
@@ -146,4 +147,4 @@ Press <ENTER> to terminate client.
   
 5.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

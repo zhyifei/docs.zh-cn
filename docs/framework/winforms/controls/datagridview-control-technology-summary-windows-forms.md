@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f172d28e5f03e1177db6ad1bd9e98f4c68267765
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e074229e4fe344633d277b77b6f7db881c154d8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 控件技术摘要（Windows 窗体）
 本主题概述了 `DataGridView` 控件及支持其使用的类的相关信息。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Forms.DataGridView>控件可在关闭结合工作<xref:System.Windows.Forms.BindingSource>组件。 此组件设计为窗体的主数据源。 它可以管理之间的交互<xref:System.Windows.Forms.DataGridView>控件和其数据源，而不考虑数据源类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件概述](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
  [DataGridView 控件体系结构](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
  [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)

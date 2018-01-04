@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bca9b56f37c815bfa9f1520467ae0ae864c14ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 852e82aff12dc39adeba6ea2dada5934ae55f951
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>如何：在 Windows 窗体中访问键控集合
 -   可通过键访问单个集合项。 此功能已添加到 Windows 窗体应用程序通常使用的许多集合类。 以下列表显示了一些具有可访问键控的集合的集合类：  
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体入门](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  [如何：使用 Windows 窗体 ImageList 组件添加或删除图像](../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

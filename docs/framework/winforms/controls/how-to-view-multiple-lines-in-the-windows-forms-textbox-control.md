@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e8f39e031835275818504151e66834f0634b7f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5dca8d0f869702dee50bf851a2099317c45aa842
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>如何：在 Windows 窗体 TextBox 控件中查看多个行
 默认情况下，Windows 窗体<xref:System.Windows.Forms.TextBox>控件显示单个文本行，并不会显示滚动条。 文本的长度超过可用空间，部分的文本可见。 你可以通过设置来更改此默认行为<xref:System.Windows.Forms.TextBox.Multiline%2A>， <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>，和<xref:System.Windows.Forms.TextBox.ScrollBars%2A>为适当的值的属性。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  将 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 属性设置为适当的值。  
   
-    |值|描述|  
+    |“值”|描述|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|使用此值，如果文本将是一个段落，几乎始终适合控件。 用户可以使用鼠标指针在控件内移动，如果文本是很长时间才能显示在一次。|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|使用此值，如果你想要显示的行，其中一些可能超过的宽度列表<xref:System.Windows.Forms.TextBox>控件。|  
@@ -51,12 +52,12 @@ ms.lasthandoff: 11/21/2017
   
 3.  将 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 属性设置为适当的值。  
   
-    |值|描述|  
+    |“值”|描述|  
     |-----------|-----------------|  
     |`false`|控件中的文本不会自动换行，所以它将向右滚动，直到到达一个分行符。 使用此值，如果你选择了<xref:System.Windows.Forms.ScrollBars.Horizontal>滚动条或<xref:System.Windows.Forms.ScrollBars.Both>上面。|  
     |`true`（默认值）|水平滚动条将不会出现。 使用此值，如果你选择了<xref:System.Windows.Forms.ScrollBars.Vertical>滚动条或<xref:System.Windows.Forms.ScrollBars.None>、 更高版本，以显示一个或多个段落。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TextBox>  
  [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
  [如何：在 Windows 窗体 TextBox 控件中控制插入点](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  

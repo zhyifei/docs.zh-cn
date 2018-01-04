@@ -19,17 +19,18 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f407f1c17c67ec99f4499b89c49932a4ba6d32c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d551a9d4ba6a66a02718f9184d962539361aa6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>如何：在 Windows 应用程序中提供帮助
 你可以使用<xref:System.Windows.Forms.HelpProvider>组件要附加到 Windows 窗体上的特定控件的帮助文件中的帮助主题。 帮助文件可以是 HTML、HTMLHelp 1.x 或更高版本的格式。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-provide-help"></a>提供帮助  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
  你还可以使用<xref:System.Windows.Forms.HelpProvider>组件以显示弹出帮助，即使你具有配置为显示 Windows 窗体上控件的帮助文件。 有关详细信息，请参阅[如何：显示弹出帮助](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：显示弹出帮助](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
  [使用工具提示的控件帮助](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
  [在 Windows 窗体中集成用户帮助](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  

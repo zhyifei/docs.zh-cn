@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb44a32e63fd7a0ff0e480c205d5459da2ce2bd3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 控件体系结构（Windows 窗体）
 <xref:System.Windows.Forms.DataGridView>控制和及其相关的类旨在作为用于显示和编辑表格数据的灵活、 可扩展系统。 这些类都包含在<xref:System.Windows.Forms?displayProperty=nameWithType>命名空间，和它们的命名为与"DataGridView"前缀。  
@@ -133,11 +134,11 @@ DataGridView 编辑控件对象模型
   
 |单元格类型|托管的控件|列类型|  
 |---------------|--------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewButtonCell>|无|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
+|<xref:System.Windows.Forms.DataGridViewButtonCell>|不可用|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|不可用|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxCell>|<xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewImageCell>|不可用|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
-|<xref:System.Windows.Forms.DataGridViewLinkCell>|无|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
+|<xref:System.Windows.Forms.DataGridViewLinkCell>|不可用|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
 ### <a name="datagridviewrow"></a>DataGridViewRow  
@@ -150,7 +151,7 @@ DataGridViewRow 对象模型
   
  如果你启用<xref:System.Windows.Forms.DataGridView>控件的<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>属性，用于添加新行的特殊行显示为最后一行。 此行属于<xref:System.Windows.Forms.DataGridView.Rows%2A>集合，但它具有特殊可能需要你关注的功能。 有关详细信息，请参阅[使用 Windows 窗体 DataGridView 控件中的新记录行](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件概述](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
  [自定义 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
  [在 Windows 窗体 DataGridView 控件中对新记录使用行](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

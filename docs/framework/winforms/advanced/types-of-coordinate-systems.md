@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be89584ee8e7a82c405bf8664bfad18ced6d989a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-coordinate-systems"></a>坐标系类型
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]使用三个坐标空间： world、 页和设备。 世界坐标是用于模型对特定图形世界的坐标，将传递到.NET Framework 中的方法的坐标。 页坐标是指由绘图图面，如窗体或控件使用的坐标系统。 设备坐标是由进行绘制，如屏幕或张纸的物理设备的坐标。 进行调用时`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，传递给点<xref:System.Drawing.Graphics.DrawLine%2A>方法-`(0, 0)`和`(160, 80)`-位于世界坐标空间。 之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以在屏幕上绘制线条、 坐标传递的转换序列。 一个转换，调用的世界变换，将世界坐标转换为的页坐标，并调用页转换，另一个转换将页坐标转换为设备坐标。  
@@ -104,6 +105,6 @@ ms.lasthandoff: 11/21/2017
 |页|（2，0.5） 到 （4、 1.5）|  
 |设备|（192，48） 到 （384，144）|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [坐标系统和转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  [转换的矩阵表示形式](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)

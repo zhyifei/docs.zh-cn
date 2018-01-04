@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e7086e52992f575781449e5dc2a83c3443f558d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64e51a8911e27a612500ba222df7e3637cd24a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>如何：向 TreeView 或 ListView 控件添加自定义信息（Windows 窗体）
 你可以在 Windows 窗体中创建派生的节点<xref:System.Windows.Forms.TreeView>控件或中的派生的项<xref:System.Windows.Forms.ListView>控件。 通过派生可添加任何所需字段，以及添加处理这些字段的自定义方法和构造函数。 此功能的用途之一是将 Customer 对象附加到每个树节点或列表项。 此处的示例适用于<xref:System.Windows.Forms.TreeView>控件，但相同的方法可以用于<xref:System.Windows.Forms.ListView>控件。  
@@ -139,6 +140,6 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [TreeView 控件](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
  [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

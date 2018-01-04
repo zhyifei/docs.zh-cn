@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5312012a74f5e11b02c0191dc00fa23fb25a73a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1e8520e34cf9bd9d31e9b877849e7c9611d6d989
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-flow-activities-in-wf"></a>WF 中的控制流活动
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供用于控制工作流中执行流的多个活动。 其中一些活动（如 `Switch` 和 `If`）实现与编程环境（如 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]）类似的流控制结构，而其他活动（如 `Pick`）建立新编程结构的模型。  

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cf83f7c9af667a9efed59ff7a1f86ace6d8821d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization-and-deserialization"></a>序列化和反序列化
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括新序列化引擎 <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 可在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行双向转换。 本主题说明序列化程序的工作原理。  
@@ -213,7 +214,7 @@ ms.lasthandoff: 12/02/2017
 >  使用分步引导的序列化可能会导致架构无效的 XML。  
   
 ## <a name="deserialization"></a>反序列化  
- 下面的信息适用于从 <xref:System.Runtime.Serialization.XmlObjectSerializer>继承的任何类，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 类。  
+ 下面的信息适用于从 <xref:System.Runtime.Serialization.XmlObjectSerializer> 继承的任何类，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 类。  
   
  对对象进行反序列化的最基本的方式是调用 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法重载之一。 该方法有三个重载，每个重载分别用于读取 <xref:System.Xml.XmlDictionaryReader>、 `XmlReader`或 `Stream`。 请注意， `Stream` 重载将创建不受任何配额保护的文本 <xref:System.Xml.XmlDictionaryReader> ，此重载仅应用于读取受信任的数据。  
   
@@ -270,9 +271,9 @@ ms.lasthandoff: 12/02/2017
   
  还请注意， `NetDataContractSerializer` 对于对象图中的每个节点不会输出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型和程序集名称。 仅在有歧义的地方才会输出上述信息。 也就是说，它是在根对象级别进行输出并且是针对任何多态情况。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.NetDataContractSerializer>  
  <xref:System.Runtime.Serialization.XmlObjectSerializer>  
  [二进制序列化](../../../../docs/standard/serialization/binary-serialization.md)  
- [支持的数据协定序列化程序类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+ [数据协定序列化程序支持的类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

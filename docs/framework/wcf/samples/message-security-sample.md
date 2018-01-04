@@ -13,11 +13,12 @@ caps.latest.revision: "33"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: eda5acd6865e463f01b59566c7c75f8efad0c329
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a26356346ca3dfea858f286dd32cb08b0e3b3591
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-sample"></a>消息安全示例
 此示例演示如何实现使用 `basicHttpBinding` 和消息安全性的应用程序。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -188,4 +189,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

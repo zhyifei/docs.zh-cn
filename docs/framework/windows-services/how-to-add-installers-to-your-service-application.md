@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 8137e41f92335849916dfc9e9ce72afeb186e73c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：将安装程序添加到服务应用程序
 Visual Studio 会安装组件，可以安装与你的服务应用程序关联的资源。 安装组件注册到它正在安装并让服务控制管理器知道存在该服务在系统上的某一项服务。 当与服务应用程序时，你可以在属性窗口，自动将适当的安装程序添加到你的项目中选择一个链接。  
@@ -38,7 +39,7 @@ Visual Studio 会安装组件，可以安装与你的服务应用程序关联的
  不需要在要使您正确安装的服务的安装程序中任何特殊编码。 但是，你有时可能需要修改安装程序的内容，如果你需要将特殊的功能添加到安装过程。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-add-installers-to-your-service-application"></a>将安装程序添加到服务应用程序  
   
@@ -54,7 +55,7 @@ Visual Studio 会安装组件，可以安装与你的服务应用程序关联的
   
 5.  若要确定你的服务将启动方式如何，请单击<xref:System.ServiceProcess.ServiceInstaller>组件，并且已设置<xref:System.ServiceProcess.ServiceInstaller.StartType%2A>为适当的值的属性。  
   
-    |值|结果|  
+    |“值”|结果|  
     |-----------|------------|  
     |<xref:System.ServiceProcess.ServiceStartMode.Manual>|安装后必须手动启动该服务。 有关详细信息，请参阅[如何： 启动服务](../../../docs/framework/windows-services/how-to-start-services.md)。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|该服务将启动时，计算机重新启动。|  
@@ -69,8 +70,8 @@ Visual Studio 会安装组件，可以安装与你的服务应用程序关联的
     > [!NOTE]
     >  对于你的项目中每个其他服务，必须添加其他<xref:System.ServiceProcess.ServiceInstaller>到项目的组件`ProjectInstaller`类。 <xref:System.ServiceProcess.ServiceProcessInstaller>组件添加在步骤 3 中适用于所有项目中的单个服务安装程序。  
   
-## <a name="see-also"></a>另请参阅  
- [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何： 启动服务](../../../docs/framework/windows-services/how-to-start-services.md)  
- [如何： 为服务指定的安全上下文](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+## <a name="see-also"></a>请参阅  
+ [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [如何：为服务指定安全上下文](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

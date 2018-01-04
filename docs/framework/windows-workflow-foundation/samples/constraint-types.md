@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd73776aebb571fad732f554d6a96c1611506e8c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 516733490dba459f452727d29320a366208b55fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constraint-types"></a>约束类型
 本实例演示将约束应用于工作流的两种不同方法：一种方法是从活动内部应用（生成），另一种方法是从活动外部应用（策略）。 在此方案中，某个活动作者（来自于第三方软件公司）想要验证两个参数之间的关系。 在此例中，成本应小于或等于价格。 这是一个常规的验证生成约束。  

@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3f827e9052260c1b836246d38c55e2cb2a9e5cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 46e4d019bbd586c0ed46794f55c65da7bcc657f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>如何：显示 Windows 窗体的对话框
 与应用程序中显示的任何其他形式相同的方式显示一个对话框。 运行应用程序时，启动窗体将自动加载。 若要使第二个窗体或应用程序中显示的对话框中，编写代码以加载并显示它。 同样，若要使窗体或对话框框中消失，编写代码以卸载或隐藏它。  

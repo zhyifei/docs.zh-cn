@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22d244fdc2c9fc3d3802e520d1fdd6f31bdc1c4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定客户端运行时行为
 与 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务相似，可以对 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 客户端进行配置以修改运行时行为，以便适合客户端应用程序的需要。 有三个属性可用于指定客户端运行时行为。 双工客户端回调对象可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性修改其运行时行为。 另一个属性 <xref:System.ServiceModel.Description.ClientViaBehavior> 可用于将逻辑目标与直接网络目标分开。 此外，双工客户端回调类型可以使用某些服务端行为。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
@@ -52,5 +53,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="using-the-clientviabehavior-behavior"></a>使用 ClientViaBehavior 行为  
  可以使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 行为指定应为其创建传输通道的统一资源标识符。 当直接网络目标不是消息的预期处理者时，可使用此行为。 当调用应用程序不需要知道最终目标时，或者当目标 `Via` 标头不是地址时，使用此行为可启用多跃点对话。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

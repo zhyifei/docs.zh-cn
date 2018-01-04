@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7353f3ab4513d8331b1d38cb01ad16c7d3cde165
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44d79fb9d6ca2712c470354999b4795408044166
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="event-handlers-overview-windows-forms"></a>事件处理程序概述（Windows 窗体）
 事件处理程序是与该事件绑定的方法。 当引发事件时，将执行在事件处理程序内的代码。 每个事件处理程序提供了两个参数，可用于正确处理该事件。 下面的示例演示的事件处理程序<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件。  
@@ -58,6 +59,6 @@ private:
   
  你可以使用相同的事件处理程序来处理不同的控件的同一事件。 例如，如果你有一组<xref:System.Windows.Forms.RadioButton>窗体上的控件，你可以创建一个事件处理程序<xref:System.Windows.Forms.Control.Click>事件并对每个控制<xref:System.Windows.Forms.Control.Click>事件绑定到单个事件处理程序。 有关详细信息，请参阅[如何： 连接到 Windows 窗体中的单个事件处理程序的多个事件](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体中创建事件处理程序](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
  [事件概述](../../../docs/framework/winforms/events-overview-windows-forms.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 509da8b697f38ea75d9509a8243f3e9e09cc661b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services"></a>保证服务的安全
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务的安全包含两项基本要求：传输安全和授权。 (第三个要求中, 所述的安全事件的审核[审核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)简言之，传输安全包括身份验证（验证服务和客户端的标识）、保密性（消息加密）和完整性（进行数字签名以检测是否存在篡改）。 授权是控制对资源的访问，例如仅允许特权用户读取文件。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的功能，可以很容易地实现这两项基本要求。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>使用 PrincipalPermissionAttribute 类进行授权  
  如果需要限制对计算机上的资源的访问，最简单的方法是使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 类。 使用此属性，可以限制对服务操作的调用，方法是要求用户必须属于指定的 Windows 组或角色，或者必须是特定用户。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何： 使用 PrincipalPermissionAttribute 类限制访问](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。  
   
-### <a name="impersonation"></a>模拟  
+### <a name="impersonation"></a>Impersonation  
  模拟是可用于控制对资源的访问的另外一种机制。 默认情况下，由 IIS 承载的服务将会在 ASPNET 帐户的标识下运行。 ASPNET 帐户仅可访问其拥有权限的资源。 然而，可以对文件夹设置 ACL 以排除 ASPNET 服务帐户，但允许某些其他标识访问该文件夹。 那么问题将变为，如果不允许 ASPNET 帐户访问该文件夹，如何允许其他用户访问该文件夹。 答案是使用模拟，由此允许服务使用客户端的凭据来访问特殊资源。 另外一个示例是当访问仅某些用户拥有权限的 SQL Server 数据库时的情况。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用模拟，请参阅[How to： 模拟客户端在服务上的](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)和[委托和模拟](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="security-on-the-internet"></a>Internet 上的安全  
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="protection-levels"></a>保护级别  
  `ProtectionLevel` 属性出现在多个特性类（如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 类）中。 保护级别是一个值，它指定了支持服务的消息（或消息部分）是进行签名、签名并加密，还是未经签名或加密即发送。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]属性，请参阅[了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)，有关编程示例，请参阅[如何： 设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 在上下文中使用 `ProtectionLevel` 来设计服务协定，请参阅 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel>  
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.ServiceContractAttribute>  

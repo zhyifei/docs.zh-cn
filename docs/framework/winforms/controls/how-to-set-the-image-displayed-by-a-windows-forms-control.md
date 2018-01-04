@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d9f4d806b39e6e1272ddbb60befdaf8c76e46b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4bf42fc90e19cbac0f165b59c0c6d3dfb7456b5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>如何：设置 Windows 窗体控件所显示的图像
 多个 Windows 窗体控件可以显示图像。 这些映像可以是阐明用途的控件，如按钮表示上的磁盘图标的图标**保存**命令。 或者，图标可以是背景图像的外观和行为所需提供的控制。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Image.FromFile%2A>  
  <xref:System.Drawing.Image>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>

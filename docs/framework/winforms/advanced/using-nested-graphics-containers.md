@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c5a1b077e4339f17093e5eb935416bb1ae3d1b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-nested-graphics-containers"></a>使用嵌套的 Graphics 容器
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供可用于临时替换或增加中的状态的一部分的容器<xref:System.Drawing.Graphics>对象。 通过调用创建容器<xref:System.Drawing.Graphics.BeginContainer%2A>方法<xref:System.Drawing.Graphics>对象。 你可以调用<xref:System.Drawing.Graphics.BeginContainer%2A>重复以形成嵌套的容器。 每次调用<xref:System.Drawing.Graphics.BeginContainer%2A>必须成对使用，通过调用<xref:System.Drawing.Graphics.EndContainer%2A>。  
@@ -66,6 +67,6 @@ ms.lasthandoff: 11/21/2017
   
  ![嵌套容器](../../../../docs/framework/winforms/advanced/media/nestedcontainers3.png "nestedcontainers3")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Graphics>  
  [管理图形对象的状态](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)

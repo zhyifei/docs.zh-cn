@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d1246a8052af19057f7aa9d6729e34203177f8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 348651784ef2b4d99679038a1875fc6650688a6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>自定义 Windows 窗体 DataGridView 控件
 `DataGridView`控件提供可用于调整的外观和其单元格、 行和列的基本行为 （外观和感觉） 的多个属性。 如果你有特殊需求，超出的能力<xref:System.Windows.Forms.DataGridViewCellStyle>类中，但是，你也可以实现所有者描述控件或通过创建自定义单元格、 列和行扩展其功能。  
@@ -63,6 +64,6 @@ ms.lasthandoff: 11/21/2017
  [Windows 窗体 DataGridView 控件中的基本格式和样式设置](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  提供一些主题，描述如何修改该控件的基本外观和单元数据的显示格式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows 窗体 DataGridView 控件中的列类型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

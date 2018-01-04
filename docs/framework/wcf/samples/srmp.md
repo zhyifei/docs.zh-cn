@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b33ecabb6796ee123e27213a92b6b0d7aefaf9a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5028ccbb2bd5b66052c5afbc617a0ea96b41ddfc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="srmp"></a>SRMP
 本示例演示如何使用 HTTP 上的消息队列 (MSMQ) 来执行事务处理排队通信。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/02/2017
   
 8.  运行客户端。 确保将终结点地址更改为指向计算机名或 IP 地址而不是 localhost。 客户端将发送消息并退出。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  若要运行此示例，服务计算机和客户端计算机上除了 MSMQ 外，还必须安装 IIS。  
   
 ## <a name="demonstrates"></a>演示  
@@ -106,4 +107,4 @@ OrderDetails
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
