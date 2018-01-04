@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 546dc21b468a8c23b799ddf1fb9361f6086af87f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7573b07b31eb647f8c51f8ad0624c07effd894d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecurityservicesecuritynegotiationcompleted"></a><span data-ttu-id="2f7bd-102">System.ServiceModel.Security.ServiceSecurityNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="2f7bd-102">System.ServiceModel.Security.ServiceSecurityNegotiationCompleted</span></span>
-<span data-ttu-id="2f7bd-103">System.ServiceModel.Security.ServiceSecurityNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="2f7bd-103">System.ServiceModel.Security.ServiceSecurityNegotiationCompleted</span></span>  
+# <a name="systemservicemodelsecurityservicesecuritynegotiationcompleted"></a><span data-ttu-id="b69ec-102">System.ServiceModel.Security.ServiceSecurityNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="b69ec-102">System.ServiceModel.Security.ServiceSecurityNegotiationCompleted</span></span>
+<span data-ttu-id="b69ec-103">System.ServiceModel.Security.ServiceSecurityNegotiationCompleted</span><span class="sxs-lookup"><span data-stu-id="b69ec-103">System.ServiceModel.Security.ServiceSecurityNegotiationCompleted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2f7bd-104">描述</span><span class="sxs-lookup"><span data-stu-id="2f7bd-104">Description</span></span>  
- <span data-ttu-id="2f7bd-105">服务安全协商已完成。</span><span class="sxs-lookup"><span data-stu-id="2f7bd-105">The service security negotiation completed.</span></span>  
+## <a name="description"></a><span data-ttu-id="b69ec-104">描述</span><span class="sxs-lookup"><span data-stu-id="b69ec-104">Description</span></span>  
+ <span data-ttu-id="b69ec-105">服务安全协商已完成。</span><span class="sxs-lookup"><span data-stu-id="b69ec-105">The service security negotiation completed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2f7bd-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="2f7bd-106">See Also</span></span>  
- [<span data-ttu-id="2f7bd-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="2f7bd-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="2f7bd-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="2f7bd-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="2f7bd-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="2f7bd-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b69ec-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="b69ec-106">See Also</span></span>  
+ [<span data-ttu-id="b69ec-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="b69ec-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b69ec-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="b69ec-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b69ec-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="b69ec-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

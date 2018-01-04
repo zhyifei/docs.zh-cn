@@ -13,16 +13,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ba1181f75f6452db102cfab5ddabcd29119f521
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 66333f48141785c8b6b7d60b6d1069e05dca6a22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="peerresolverbindingelement"></a><span data-ttu-id="83fe2-102">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="83fe2-102">PeerResolverBindingElement</span></span>
-<span data-ttu-id="83fe2-103">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="83fe2-103">PeerResolverBindingElement</span></span>  
+# <a name="peerresolverbindingelement"></a><span data-ttu-id="aa051-102">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="aa051-102">PeerResolverBindingElement</span></span>
+<span data-ttu-id="aa051-103">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="aa051-103">PeerResolverBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83fe2-104">语法</span><span class="sxs-lookup"><span data-stu-id="83fe2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa051-104">语法</span><span class="sxs-lookup"><span data-stu-id="aa051-104">Syntax</span></span>  
   
 ```  
 class PeerResolverBindingElement : BindingElement  
@@ -31,24 +32,24 @@ class PeerResolverBindingElement : BindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="83fe2-105">方法</span><span class="sxs-lookup"><span data-stu-id="83fe2-105">Methods</span></span>  
- <span data-ttu-id="83fe2-106">PeerResolverBindingElement 类未定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="83fe2-106">The PeerResolverBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="aa051-105">方法</span><span class="sxs-lookup"><span data-stu-id="aa051-105">Methods</span></span>  
+ <span data-ttu-id="aa051-106">PeerResolverBindingElement 类未定义任何方法。</span><span class="sxs-lookup"><span data-stu-id="aa051-106">The PeerResolverBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="83fe2-107">属性</span><span class="sxs-lookup"><span data-stu-id="83fe2-107">Properties</span></span>  
- <span data-ttu-id="83fe2-108">PeerResolverBindingElement 类有以下属性：</span><span class="sxs-lookup"><span data-stu-id="83fe2-108">The PeerResolverBindingElement class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="aa051-107">属性</span><span class="sxs-lookup"><span data-stu-id="aa051-107">Properties</span></span>  
+ <span data-ttu-id="aa051-108">PeerResolverBindingElement 类有以下属性：</span><span class="sxs-lookup"><span data-stu-id="aa051-108">The PeerResolverBindingElement class has the following property:</span></span>  
   
-### <a name="referralpolicy"></a><span data-ttu-id="83fe2-109">ReferralPolicy</span><span class="sxs-lookup"><span data-stu-id="83fe2-109">ReferralPolicy</span></span>  
- <span data-ttu-id="83fe2-110">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="83fe2-110">Data type: string</span></span>  
+### <a name="referralpolicy"></a><span data-ttu-id="aa051-109">ReferralPolicy</span><span class="sxs-lookup"><span data-stu-id="aa051-109">ReferralPolicy</span></span>  
+ <span data-ttu-id="aa051-110">数据类型：String</span><span class="sxs-lookup"><span data-stu-id="aa051-110">Data type: string</span></span>  
   
- <span data-ttu-id="83fe2-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="83fe2-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="aa051-111">访问类型：只读</span><span class="sxs-lookup"><span data-stu-id="aa051-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="83fe2-112">定义对等方之间如何共享引用。</span><span class="sxs-lookup"><span data-stu-id="83fe2-112">Determines how referrals are shared among peers.</span></span>  
+ <span data-ttu-id="aa051-112">定义对等方之间如何共享引用。</span><span class="sxs-lookup"><span data-stu-id="aa051-112">Determines how referrals are shared among peers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83fe2-113">要求</span><span class="sxs-lookup"><span data-stu-id="83fe2-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aa051-113">惠?</span><span class="sxs-lookup"><span data-stu-id="aa051-113">Requirements</span></span>  
   
-|<span data-ttu-id="83fe2-114">MOF</span><span class="sxs-lookup"><span data-stu-id="83fe2-114">MOF</span></span>|<span data-ttu-id="83fe2-115">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="83fe2-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="aa051-114">MOF</span><span class="sxs-lookup"><span data-stu-id="aa051-114">MOF</span></span>|<span data-ttu-id="aa051-115">已在 Servicemodel.mof 中声明。</span><span class="sxs-lookup"><span data-stu-id="aa051-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="83fe2-116">命名空间</span><span class="sxs-lookup"><span data-stu-id="83fe2-116">Namespace</span></span>|<span data-ttu-id="83fe2-117">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="83fe2-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="aa051-116">命名空间</span><span class="sxs-lookup"><span data-stu-id="aa051-116">Namespace</span></span>|<span data-ttu-id="aa051-117">已在 root\ServiceModel 中定义</span><span class="sxs-lookup"><span data-stu-id="aa051-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="83fe2-118">另请参阅</span><span class="sxs-lookup"><span data-stu-id="83fe2-118">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="aa051-118">请参阅</span><span class="sxs-lookup"><span data-stu-id="aa051-118">See Also</span></span>  
  <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>

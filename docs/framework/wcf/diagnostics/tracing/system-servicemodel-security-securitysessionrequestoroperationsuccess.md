@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 521bdbca158e4d4ac9399fd8b9fc36e091a8d217
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25652fdf41f746439c2555d89c12b6f2d0c041d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecuritysessionrequestoroperationsuccess"></a><span data-ttu-id="a8b86-102">System.ServiceModel.Security.SecuritySessionRequestorOperationSuccess</span><span class="sxs-lookup"><span data-stu-id="a8b86-102">System.ServiceModel.Security.SecuritySessionRequestorOperationSuccess</span></span>
-<span data-ttu-id="a8b86-103">System.ServiceModel.Security.SecuritySessionRequestorOperationSuccess</span><span class="sxs-lookup"><span data-stu-id="a8b86-103">System.ServiceModel.Security.SecuritySessionRequestorOperationSuccess</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionrequestoroperationsuccess"></a><span data-ttu-id="e59b3-102">System.ServiceModel.Security.SecuritySessionRequestorOperationSuccess</span><span class="sxs-lookup"><span data-stu-id="e59b3-102">System.ServiceModel.Security.SecuritySessionRequestorOperationSuccess</span></span>
+<span data-ttu-id="e59b3-103">System.ServiceModel.Security.SecuritySessionRequestorOperationSuccess</span><span class="sxs-lookup"><span data-stu-id="e59b3-103">System.ServiceModel.Security.SecuritySessionRequestorOperationSuccess</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a8b86-104">描述</span><span class="sxs-lookup"><span data-stu-id="a8b86-104">Description</span></span>  
- <span data-ttu-id="a8b86-105">客户端已成功完成安全会话操作。</span><span class="sxs-lookup"><span data-stu-id="a8b86-105">The security session operation completed successfully at the client.</span></span>  
+## <a name="description"></a><span data-ttu-id="e59b3-104">描述</span><span class="sxs-lookup"><span data-stu-id="e59b3-104">Description</span></span>  
+ <span data-ttu-id="e59b3-105">客户端已成功完成安全会话操作。</span><span class="sxs-lookup"><span data-stu-id="e59b3-105">The security session operation completed successfully at the client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8b86-106">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a8b86-106">See Also</span></span>  
- [<span data-ttu-id="a8b86-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="a8b86-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="a8b86-108">使用跟踪来排查你的应用程序</span><span class="sxs-lookup"><span data-stu-id="a8b86-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="a8b86-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="a8b86-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="e59b3-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="e59b3-106">See Also</span></span>  
+ [<span data-ttu-id="e59b3-107">跟踪</span><span class="sxs-lookup"><span data-stu-id="e59b3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="e59b3-108">使用跟踪来排除应用程序故障</span><span class="sxs-lookup"><span data-stu-id="e59b3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="e59b3-109">管理和诊断</span><span class="sxs-lookup"><span data-stu-id="e59b3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
