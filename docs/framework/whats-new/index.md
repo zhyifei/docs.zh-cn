@@ -14,11 +14,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 410b885daac00cd6da949b285721c206facb7079
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 <a name="introduction"></a>本文总结了以下版本的 .NET Framework 中的主要新功能和改进：  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 [.NET 2015 和 .NET Framework 4.6](#v46)   
 [.NET Framework 4.5.2](#v452)   
 [.NET Framework 4.5.1](#v451)   
-[.NET Framework 4.5](#core)   
+[.NET Framework 4.5](#v45)   
 
 本文不提供有关每项新增功能的完整信息，并有可能会发生更改。 有关 .NET Framework 的常规信息，请参阅[入门](../../../docs/framework/get-started/index.md)。 有关支持的平台，请参阅[系统要求](~/docs/framework/get-started/system-requirements.md)。 有关下载链接和安装说明，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。
 
@@ -399,7 +399,7 @@ End Function
 
  为解决 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 中的这一问题，已将以下三种方法添加到了 <xref:System.Security.Cryptography.ECDiffieHellman> 基类，以更清楚地表示这些 KDF 例程及其输入：
 
-|ECDiffieHellman 方法|说明|
+|ECDiffieHellman 方法|描述|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用下面的公式派生密钥材料<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 算法的计算结果。|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|使用下面的公式派生密钥材料<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> 其中 *x* 是 EC Diffie-Hellman 算法的计算结果。|
@@ -1243,7 +1243,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
  [返回页首](#introduction)
 
-<a name="core"></a> 
+<a name="v45"></a> 
 ## <a name="whats-new-in-the-net-framework-45"></a>.NET Framework 4.5 中的新增功能
 
 ### <a name="core-new-features-and-improvements"></a>核心新功能和改进

@@ -89,7 +89,7 @@ ms.lasthandoff: 12/22/2017
      WPF 设计器中打开**设计**查看，并显示 MainWindow.xaml 文件。 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]创建**我的项目**文件夹、 Application.xaml 文件和 MainWindow.xaml 文件。  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>面向.NET Framework 和添加对缓存程序集的引用  
- 默认情况下，WPF 应用程序目标[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>在 WPF 应用程序的命名空间，应用程序必须指定目标[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)](不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 并且必须包括对命名空间的引用。  
+ 默认情况下，WPF 应用程序目标[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>在 WPF 应用程序的命名空间，应用程序必须指定目标[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 并且必须包括对命名空间的引用。  
   
  因此下, 一步是以更改.NET Framework 目标并添加对的引用<xref:System.Runtime.Caching>命名空间。  
   
