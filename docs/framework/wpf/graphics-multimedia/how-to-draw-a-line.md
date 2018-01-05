@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4911aea91416fb84e9a18d54c145b494737ef9dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88d667e8654f72226dc609a14aec650effe2d5c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-line"></a>如何：绘制线条
 此示例演示如何通过使用绘制线条<xref:System.Windows.Shapes.Line>元素。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 11/21/2017
   
  此示例摘自更大的示例;有关完整的示例，请参阅[形状元素示例](http://go.microsoft.com/fwlink/?LinkID=160037)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Shapes.Line>  
  [形状元素示例](http://go.microsoft.com/fwlink/?LinkID=160037)

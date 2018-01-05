@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c2d7cfcb228c492d2adbe614d0ed88a3b02bb68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9a876a818086e0d54251f53a1e8f83cc74a574ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-and-performance"></a>异常和性能
 与异常相关的一个常见问题是，如果使用异常来进行例行失败的代码，实现的性能将无法接受。 这是一个有效的问题。 在成员引发了异常，其性能可能会极大地速度较慢。 但是，很可能来实现良好性能时严格符合禁止使用错误代码的异常指导原则。 本节中所述的两种模式建议执行此操作的方法。  
@@ -80,6 +83,6 @@ public struct DateTime {
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [异常设计准则](../../../docs/standard/design-guidelines/exceptions.md)
+ [异常的设计准则](../../../docs/standard/design-guidelines/exceptions.md)

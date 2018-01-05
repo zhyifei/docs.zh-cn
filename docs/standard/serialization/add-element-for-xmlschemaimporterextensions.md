@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd73d6dfe6659cd973054a14d0d4e5e73d3cd8d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc01f0ed6b5b1bac5131e6262db5d3a2847a65ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ltaddgt-element-for-ltxmlschemaimporterextensionsgt"></a>&lt;xmlSchemaImporterExtensions&gt; 的 &lt;add&gt; 元素
 添加将 XSD 类型映射到 .NET Framework 类型时 <xref:System.Xml.Serialization.XmlSchemaImporter> 所用的类型。 有关配置文件的详细信息，请参阅[配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)。  
@@ -43,7 +46,7 @@ ms.lasthandoff: 12/02/2017
 |特性|描述|  
 |---------------|-----------------|  
 |**name**|用于查找实例的简单名称。|  
-|**type**|必需。 指定要添加的架构扩展类。 type 特性值必须位于一行上，并且包含完全限定的类型名称。 当程序集放置在全局程序集缓存 (GAC) 中时，该特性值还必须包括已签名程序集的版本、区域性和公钥标记。|  
+|**type**|必须的。 指定要添加的架构扩展类。 type 特性值必须位于一行上，并且包含完全限定的类型名称。 当程序集放置在全局程序集缓存 (GAC) 中时，该特性值还必须包括已签名程序集的版本、区域性和公钥标记。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -69,7 +72,7 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Serialization.XmlSchemaImporter>  
  [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)  
  [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)

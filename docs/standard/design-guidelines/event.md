@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8dcd1003b3f93db733ece4f90340d1d98867d2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a07392ba805b5f2a3913b01a15dd0e1668f0ccf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-design"></a>事件设计
 事件是回调 （允许框架，以调入用户代码的构造） 的最常用的形式。 其他回调机制包括采用委托、 虚拟成员和基于接口的插件的成员。从可用性研究的数据指示的大部分开发人员更喜欢使用事件，与它们使用的其他回调机制。 事件可以很好地与 Visual Studio 和许多语言集成。  
@@ -78,6 +81,6 @@ ms.lasthandoff: 11/21/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [成员设计准则](../../../docs/standard/design-guidelines/member.md)  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)

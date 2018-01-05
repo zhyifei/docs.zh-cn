@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5dc0a0f7b579feca6150e299cd7f0ef3a6e7a5e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 965136c94b696fc182537b60dde71ee4f02afe7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 WPF 复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你有大量的投资[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的代码，它可更有效地扩展现有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]与应用程序[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是从头开始重新编写。 常见方案是在你想要嵌入一个或多个控件实现与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内你[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]应用程序。 有关自定义 WPF 控件的详细信息，请参阅[控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  本演练的任务的完整代码清单，请参阅[承载 Windows 窗体示例中的 WPF 复合控件](http://go.microsoft.com/fwlink/?LinkID=159996)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]。  
@@ -238,7 +239,7 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
 4.  添加以下<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>到窗体控件。  
   
-    |名称|文本|  
+    |name|Text|  
     |----------|----------|  
     |groupBox1|背景色|  
     |groupBox2|前景色|  
@@ -250,7 +251,7 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
 5.  添加以下<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控件添加到<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控件。  
   
-    |GroupBox|名称|文本|  
+    |GroupBox|name|Text|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|原始|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -271,7 +272,7 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
 6.  添加以下<xref:System.Windows.Forms.Label?displayProperty=nameWithType>到最后一个控制<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 这些控件显示返回的数据[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件。  
   
-    |GroupBox|名称|文本|  
+    |GroupBox|name|文本|  
     |--------------|----------|----------|  
     |groupBox7|lblName|姓名:|  
     |groupBox7|lblAddress|街道地址:|  
@@ -330,7 +331,7 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
  生成并运行应用程序。 单击不同的单选按钮来查看在 WPF 复合控件上的效果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF 设计器](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  

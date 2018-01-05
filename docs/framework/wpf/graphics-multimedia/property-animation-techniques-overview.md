@@ -20,17 +20,18 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a8c196ea15617b13abe8311f8501ab32fd320c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 132d41346e1c6dcec6ed39b3a9485f04fe8f845c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-animation-techniques-overview"></a>属性动画技术概述
 本主题介绍了处理动画属性的不同方法：情节提要、本地动画、时钟和基于帧的动画。  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要了解本主题，应熟悉[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)中描述的基本动画功能。  
   
 <a name="summary"></a>   
@@ -42,9 +43,9 @@ ms.lasthandoff: 11/21/2017
 |动画技术|方案|支持 XAML|可以交互方式控制|  
 |-------------------------|---------------|-------------------|--------------------------------|  
 |情节提要动画|每个实例<xref:System.Windows.Style>， <xref:System.Windows.Controls.ControlTemplate>，<xref:System.Windows.DataTemplate>|是|是|  
-|本地动画|基于实例|No|No|  
-|时钟动画|基于实例|No|是|  
-|基于帧的动画|基于实例|No|不可用|  
+|本地动画|基于实例|否|否|  
+|时钟动画|基于实例|否|是|  
+|基于帧的动画|基于实例|否|不可用|  
   
 <a name="storyboard_animations"></a>   
 ## <a name="storyboard-animations"></a>情节提要动画  
@@ -67,9 +68,9 @@ ms.lasthandoff: 11/21/2017
 |开始情节提要所使用的技术|基于实例|样式|控件模板|数据模板|示例|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard>和<xref:System.Windows.EventTrigger>|是|是|是|是|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>和属性<xref:System.Windows.Trigger>|No|是|是|是|[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard>和<xref:System.Windows.DataTrigger>|No|是|是|是|[如何：在数据更改时触发动画](http://msdn.microsoft.com/en-us/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|No|No|No|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>和属性<xref:System.Windows.Trigger>|否|是|是|是|[在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>和<xref:System.Windows.DataTrigger>|否|是|是|是|[如何：在数据更改时触发动画](http://msdn.microsoft.com/en-us/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法|是|No|否|否|[使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  有关详细信息<xref:System.Windows.Media.Animation.Storyboard>对象，请参阅[情节提要概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息，请参阅<xref:System.Windows.Media.CompositionTarget.Rendering>页。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
  [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  

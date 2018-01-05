@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 56838fc4c1c1e7cb8723beee3f0e6b23515d43f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 692a5803ddb538de6dc5f061c18cc0b250d0f4ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="virtual-members"></a>虚成员
 虚拟成员可以被重写，因此更改行为的子类。 它们是非常类似于在它们提供的可扩展性方面的回调，但它们可以在执行性能和内存消耗方面获得更好。 此外，虚拟成员感觉需要创建一个特殊类型的现有类型 （专用） 的方案中更自然。  
@@ -46,6 +49,6 @@ ms.lasthandoff: 11/21/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
  [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

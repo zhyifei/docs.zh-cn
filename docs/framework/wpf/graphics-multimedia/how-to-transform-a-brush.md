@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a36ba5bce60b88d662f03fcff75a6fa04cad039d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2ee517eb76877bb4e02c021061055b328597c517
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-transform-a-brush"></a>如何：变换画笔
 此示例演示如何将转换<xref:System.Windows.Media.Brush>通过使用其两个转换属性的对象：<xref:System.Windows.Media.Brush.RelativeTransform%2A>和<xref:System.Windows.Media.Brush.Transform%2A>。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整示例，请参阅[画笔示例](http://go.microsoft.com/fwlink/?LinkID=159973)。 有关画笔的详细信息，请参阅[使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [画笔转换概述](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
  [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

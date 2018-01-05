@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd4e0f65d404e70f441cf2918fd6c50e08ebec79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4992b5be4243d8d29b6075c0ad746494dc2eb168
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transforms-overview"></a>变换概述
 本主题介绍如何使用[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]<xref:System.Windows.Media.Transform>类才能旋转、 缩放、 移动 （转换），和扭曲<xref:System.Windows.FrameworkElement>对象。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/21/2017
   
  下面的示例使用<xref:System.Windows.Media.RotateTransform>旋转<xref:System.Windows.Shapes.Rectangle>元素中，一种<xref:System.Windows.FrameworkElement>，旋转 45 度围绕其默认中心，（0，0）。 下图显示了旋转效果。  
   
- ![有关旋转 45 度的 FrameworkElement &#40; 0，0 &#41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
+ ![有关旋转 45 度的 FrameworkElement & #40; 0，0 & #41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
 围绕点 (0,0) 旋转 45 度的矩形元素  
   
  [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/21/2017
   
  下一个示例还使用<xref:System.Windows.Media.RotateTransform>旋转<xref:System.Windows.Shapes.Rectangle>元素旋转 45 度; 但是，这一次<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>设置属性以便<xref:System.Windows.Media.RotateTransform>具有的中心 （25，25）。 下图显示了旋转效果。  
   
- ![有关的 45 度 &#40; 旋转的几何图形 25，25 &#41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
+ ![有关的 45 度 & #40; 旋转的几何图形 25，25 & #41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
 围绕点 (25, 25) 旋转 45 度矩形元素  
   
  [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
@@ -159,8 +160,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="freezable-features"></a>Freezable 功能  
  因为它继承自<xref:System.Windows.Freezable>类，<xref:System.Windows.Media.Transform>类提供几个特殊功能：<xref:System.Windows.Media.Transform>对象可声明为[资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 多个对象，进行只读的以提高之间共享性能，克隆，并进行线程安全。 有关不同功能提供的详细信息<xref:System.Windows.Freezable>对象，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Matrix>  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
  [2D 转换示例](http://go.microsoft.com/fwlink/?LinkID=158252)

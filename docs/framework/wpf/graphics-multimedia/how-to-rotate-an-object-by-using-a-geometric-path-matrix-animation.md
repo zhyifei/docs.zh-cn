@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c624b221c1e4c122728887a9d592a3275d8f8e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c001c0969e42c1eaadad6c029ae86009176b9eb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>如何：使用几何路径来旋转对象（矩阵动画）
 此示例演示如何使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>和<xref:System.Windows.Media.MatrixTransform>旋转 (pivot) 的对象定义的几何路径沿<xref:System.Windows.Media.PathGeometry>对象。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  上面的示例使用的代码版本<xref:System.Windows.Media.Animation.Storyboard>要进行动画处理<xref:System.Windows.Media.EllipseGeometry>，即使只有一个动画已应用。 将单个动画应用到代码中的属性的简单方法是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
  [路径动画示例](http://go.microsoft.com/fwlink/?LinkID=160028)

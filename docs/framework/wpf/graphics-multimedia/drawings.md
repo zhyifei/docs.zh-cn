@@ -23,20 +23,21 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e37c830e8f5290584db8320b041e05ac74839b78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45207de8b2e98dd1bd13879f8bbee1fdaf80aa24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawings"></a>绘图
 <xref:System.Windows.Media.Drawing>对象用于有效地绘制形状、 图像或文本。 绘图时绘制与使用<xref:System.Windows.Media.DrawingBrush>或编程与<xref:System.Windows.Media.Visual>对象。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
-  [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
+  [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Drawing>  
  [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  

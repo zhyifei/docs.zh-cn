@@ -21,11 +21,12 @@ caps.latest.revision: "78"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf731504022cb25e0cdeff5e0a557b67b987fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-overview"></a>数据绑定概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素能够以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。 <xref:System.Windows.Controls.ContentControl>如 s<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.ItemsControl>如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有内置的功能，以便实现灵活的样式设置单个数据项的集合。 可基于数据生成排序、筛选和分组视图。  
@@ -439,11 +440,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="debugging-mechanism"></a>调试机制  
  你可以设置附加的属性<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>上用于接收状态信息的特定绑定的绑定相关的对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.DataErrorValidationRule>  
  [WPF 版本 4.5 中的新增功能](../../../../docs/framework/wpf/getting-started/whats-new.md)  
  [绑定到 LINQ 查询结果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
  [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [数据绑定演示](http://go.microsoft.com/fwlink/?LinkID=163703)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [绑定到 ADO.NET 数据源](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

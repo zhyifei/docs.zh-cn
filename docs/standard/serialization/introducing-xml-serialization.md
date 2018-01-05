@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e5bd9abd37c7c70d03965698828e0adf64a8b1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f0e6091528987eb6798d3880bdb2190af337f8a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化简介
 序列化是将对象转换成易于传输的形式的过程。 例如，可以序列化对象，并使用 HTTP 通过 Internet 在客户端和服务器之间进行传输。 另一方面，反序列化在流中重新构建对象。  
@@ -177,7 +180,7 @@ public string MyToken;
   
 -   <xref:System.Xml.Serialization.XmlRootAttribute>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.IO.FileStream>  

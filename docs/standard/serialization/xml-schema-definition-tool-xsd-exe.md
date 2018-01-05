@@ -12,11 +12,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bb350d454d2fcb0f38d092240c98c1b87966be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 架构定义 (Xsd.exe) 工具从 XDR、XML 和 XSD 文件或者从运行时程序集中的类生成 XML 架构或公共语言运行时类。  
@@ -230,7 +233,7 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll    
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataSet>  
  <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [工具](../../../docs/framework/tools/index.md)      

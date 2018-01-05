@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 078d1054f9b6a4c2f6172f00aa8c4ad9077e6db2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e4963d174f889ac51087356b042bc5b06990593
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>如何：使用几何路径来旋转对象
 此示例演示如何旋转 (pivot) 沿着由定义的几何路径对对象<xref:System.Windows.Media.PathGeometry>对象。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整的示例，请参阅[路径动画示例](http://go.microsoft.com/fwlink/?LinkID=160028)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [路径动画示例](http://go.microsoft.com/fwlink/?LinkID=160028)  
  [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

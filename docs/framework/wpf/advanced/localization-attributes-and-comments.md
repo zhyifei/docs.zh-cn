@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a603c854d389076d0054a43ebeb26f19145fa8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 85584c17675167d374c595aa26288f550a033efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localization-attributes-and-comments"></a>本地化特性和注释
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释是由开发人员提供的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中的属性，用于提供本地化规则和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释包含两组信息：可本地化特性和任意形式的本地化注释。 可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用于指示哪些资源要进行本地化。 任意形式的注释是应用程序作者希望包含的任何信息。  
@@ -86,11 +87,11 @@ ms.lasthandoff: 11/21/2017
   
  有三种类型的特性：  
   
--   **Category**。 它指定是否可以从本地化工具修改值。 请参阅<xref:System.Windows.LocalizabilityAttribute.Category%2A>。  
+-   **Category**。 它指定是否可以从本地化工具修改值。 请参阅 <xref:System.Windows.LocalizabilityAttribute.Category%2A>。  
   
--   **Readability**。 它指定本地化工具是否可读取（和显示）值。 请参阅<xref:System.Windows.LocalizabilityAttribute.Readability%2A>。  
+-   **Readability**。 它指定本地化工具是否可读取（和显示）值。 请参阅 <xref:System.Windows.LocalizabilityAttribute.Readability%2A>。  
   
--   **Modifiability**。 它指定本地化工具是否允许修改值。 请参阅<xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>。  
+-   **Modifiability**。 它指定本地化工具是否允许修改值。 请参阅 <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>。  
   
  这些特性可以按照由空格分开的任何顺序进行指定。 如果指定了重复特性，则最后一个特性将替代前面的特性。 例如，Localization.Attributes = "Unmodifiable Modifiable" 会将 Modifiability 设置为 Modifiable，因为最后一个值是 Modifiable。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="localization-comments"></a>本地化注释  
  Localization.Comments 包含与目标值有关的任意形式的字符串。 应用程序开发人员可以添加一些信息，以便为本地化人员提供有关如何翻译应用程序文本的提示。 注释格式可以是由“()”括起来的任何字符串。 可以使用“\\”对字符进行转义。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
  [使用自动布局创建按钮](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
  [使用网格进行自动布局](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  

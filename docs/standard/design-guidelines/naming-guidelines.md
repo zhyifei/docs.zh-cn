@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 40da7449c88eaaba92e34374c002c7e175b2ef16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 713a11f822dd30e77e6442c0bb082a40755b1832
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="naming-guidelines"></a>命名准则
 以下一致的开发中的 framework 的命名约定集可以是框架的可用性起着主要作用。 它使框架可以广泛分隔项目上的许多开发人员使用。 窗体的一致性，超出的框架元素名称必须能轻松理解，必须传达每个元素的功能。  
@@ -37,9 +40,9 @@ ms.lasthandoff: 10/18/2017
 ## <a name="in-this-section"></a>本节内容  
  [大小写约定](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
  [通用命名约定](../../../docs/standard/design-guidelines/general-naming-conventions.md)  
- [程序集和 Dll 的名称](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
- [命名空间名称](../../../docs/standard/design-guidelines/names-of-namespaces.md)  
- [类、 结构和接口的名称](../../../docs/standard/design-guidelines/names-of-classes-structs-and-interfaces.md)  
+ [程序集和 DLL 的名称](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
+ [命名空间的名称](../../../docs/standard/design-guidelines/names-of-namespaces.md)  
+ [类、结构和接口的名称](../../../docs/standard/design-guidelines/names-of-classes-structs-and-interfaces.md)  
  [类型成员的名称](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)  
  [命名资源](../../../docs/standard/design-guidelines/naming-resources.md)  
@@ -47,5 +50,5 @@ ms.lasthandoff: 10/18/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)

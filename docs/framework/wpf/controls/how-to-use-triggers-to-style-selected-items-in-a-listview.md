@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e86c7f875376a4ab28eec7cd032a165745445441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f8965ee524d6a5cb03a54ac07d8889ff9801440
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>如何：使用触发器为 ListView 中的选定项设置样式
 此示例演示如何定义<xref:System.Windows.Style.Triggers%2A>为<xref:System.Windows.Controls.ListViewItem>控件，以便的属性值时<xref:System.Windows.Controls.ListViewItem>更改，<xref:System.Windows.Style>的<xref:System.Windows.Controls.ListViewItem>相应地发生变化。  
@@ -38,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 [!code-xaml[ListViewChkBox#MultiTrigger](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#multitrigger)]  
 [!code-xaml[ListViewChkBox#ListViewItemTriggersEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#listviewitemtriggersend)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Control>  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [操作说明主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [GridView 概述](../../../../docs/framework/wpf/controls/gridview-overview.md)

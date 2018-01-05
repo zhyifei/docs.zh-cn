@@ -17,11 +17,12 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 809f63d0057dd55d092343578d2952b2abdc0812
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 23fba12742943720f5b73db708015e798f0ac886
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-wpf"></a>数据绑定 (WPF)
 Windows Presentation Foundation (WPF) 数据绑定提供了简单的应用程序为与数据交互和呈现的一致方法。 元素可以从多个公共语言运行时 (CLR) 对象和 XML 的形式中的数据源绑定到数据。  
@@ -31,7 +32,7 @@ Windows Presentation Foundation (WPF) 数据绑定提供了简单的应用程序
  [绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
  [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)  
  [绑定声明概述](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Data>  

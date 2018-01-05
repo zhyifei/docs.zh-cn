@@ -19,11 +19,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15eeb27d493cd1138b0d3d41b55a57228a226a11
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-overview"></a>动画概述
 <a name="introduction"></a>
@@ -339,7 +340,7 @@ ms.lasthandoff: 10/22/2017
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|标题|描述|  
 |-----------|-----------------|  
 |[动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)|描述如何使用计时系统<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>类，该类允许你创建动画。|  
 |[动画提示和技巧](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)|列出用于解决与动画有关的问题（如性能）的有用提示。|  
@@ -352,7 +353,7 @@ ms.lasthandoff: 10/22/2017
 |[演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)|描述如何将演示图板与多个时间线一起使用，以创建复杂动画。|  
 |[计时行为概述](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)|描述<xref:System.Windows.Media.Animation.Timeline>类型和用于动画的属性。|  
 |[计时事件概述](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)|描述可在上找到的事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>对象用于执行在时间线、 中点的代码，如开始、 暂停、 恢复、 跳过，或停止。|  
-|[操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)|包含演示在应用程序中使用动画和时间线的代码示例。|  
+|[帮助主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)|包含演示在应用程序中使用动画和时间线的代码示例。|  
 |[时钟操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/clocks-how-to-topics.md)|包含的代码示例的使用<xref:System.Windows.Media.Animation.Clock>应用程序中的对象。|  
 |[关键帧操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)|包含在应用程序中使用关键帧动画的代码示例。|  
 |[路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)|包含在应用程序中使用路径动画的代码示例。|  

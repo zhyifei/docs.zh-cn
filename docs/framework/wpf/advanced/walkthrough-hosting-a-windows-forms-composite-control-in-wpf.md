@@ -19,11 +19,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9fc708d3fff3dfca29f46da8d345aeb243df38c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9f9a63d9fced326d20013b1f306d1fe0b7721dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>演练：在 WPF 中承载 Windows 窗体复合控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你有大量的投资[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]它可以更有效地至少重用的代码中，在该代码的一部分你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序而不是从头开始重新编写。 最常见的方案是在你有现成[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]控件。 在某些情况下，你甚至可能无法使用这些控件的源代码。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供一个简单的过程，此类中的控件承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 例如，你可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]大部分你编程，同时承载专用<xref:System.Windows.Forms.DataGridView>控件。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  本演练的任务的完整代码清单，请参阅[承载 Windows 窗体复合控件在 WPF 示例](http://go.microsoft.com/fwlink/?LinkID=159999)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]。  
@@ -247,7 +248,7 @@ using MyControls;
   
  生成并运行应用程序。 Windows 窗体复合控件中添加一些文本，然后单击**确定**。 文本将显示在标签中。 单击不同的单选按钮查看在控件上的效果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF 设计器](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  

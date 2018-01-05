@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2b960e52d8d7dca590411f1c5f096a6942e1ade9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6052e575b62994b54799cc1af88584f433b06ff8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>常见 XAML 语言基元的内置类型
 XAML 2009 引入了对多种数据类型的 XAML 语言级支持（这些数据类型是公共语言运行时 (CLR) 和其他编程语言中的常用基元）。 XAML 2009 增加了对以下基元的支持： `x:Object`、 `x:Boolean`、 `x:Char`、 `x:String`、 `x:Decimal`、 `x:Single`、 `x:Double`、 `x:Int16`、 `x:Int32`、 `x:Int64`、 `x:TimeSpan`、 `x:Uri`、 `x:Byte`和 `x:Array`  
@@ -83,7 +84,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xsingle"></a>x:Single  
  对于 CLR 支持， `x:Single` 基元对应于 <xref:System.Single>。  
   
- 除了数值之外， `x:Single` 的文本语法还允许使用标记 `Infinity`、 `-Infinity`和 `NaN`。 这些标记被视为区分大小写。  
+ 除了数值之外，`x:Single` 的文本语法还允许使用标记 `Infinity`、`-Infinity` 和 `NaN`。 这些标记被视为区分大小写。  
   
  `x:Single` 支持采用科学记数法格式的值，条件是文本语法中的第一个字符为 `e` 或 `E`。  
   
@@ -92,7 +93,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdouble"></a>x:Double  
  对于 CLR 支持， `x:Double` 基元对应于 <xref:System.Double>。  
   
- 除了数值之外， `x:Double` 的文本语法还允许使用标记 `Infinity`、 `-Infinity`和 `NaN`。 这些标记被视为区分大小写。  
+ 除了数值之外，`x:Double` 的文本语法还允许使用标记 `Infinity`、`-Infinity` 和 `NaN`。 这些标记被视为区分大小写。  
   
  `x:Double` 支持采用科学记数法格式的值。 使用字符 `e` 或 `E` 可引入指数部分。  
   

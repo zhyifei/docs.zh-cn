@@ -16,16 +16,17 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 857f6b3be1467ec54fd27c76679279c0d0960690
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04d602161a20e56395e978dfeeb7ec5e756af7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calendar"></a>Calendar
 日历使用户能够通过使用可视月历显示来选择日期。  
   
- A<xref:System.Windows.Controls.Calendar>本身，或作为下拉列表的一部分，可以使用控件<xref:System.Windows.Controls.DatePicker>控件。 有关更多信息，请参见<xref:System.Windows.Controls.DatePicker>。  
+ A<xref:System.Windows.Controls.Calendar>本身，或作为下拉列表的一部分，可以使用控件<xref:System.Windows.Controls.DatePicker>控件。 有关详细信息，请参阅<xref:System.Windows.Controls.DatePicker>。  
   
  下图显示了两个<xref:System.Windows.Controls.Calendar>控件，与中断日期，并选择一个，另一个没有。  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/21/2017
 |Ctrl+向下键|任意|切换到下一个较小<xref:System.Windows.Controls.Calendar.DisplayMode%2A>。 如果<xref:System.Windows.Controls.Calendar.DisplayMode%2A>已<xref:System.Windows.Controls.CalendarMode.Month>，任何操作。|  
 |空格键或 enter 键|<xref:System.Windows.Controls.CalendarMode.Year> 或 <xref:System.Windows.Controls.CalendarMode.Decade>|交换机<xref:System.Windows.Controls.Calendar.DisplayMode%2A>到<xref:System.Windows.Controls.CalendarMode.Month>或<xref:System.Windows.Controls.CalendarMode.Year>由已设定焦点的项表示。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../../../../docs/framework/wpf/controls/index.md)  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

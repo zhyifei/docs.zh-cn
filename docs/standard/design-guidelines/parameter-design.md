@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7d49c4263517830f46b1416684c7d9b874cda4db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parameter-design"></a>参数设计
 本部分参数的设计方案，包括有关检查的自变量的指南的各节提供全面的指南。 此外，你应参考中所述的指导原则[命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)。  
@@ -163,6 +166,6 @@ public class String {
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [成员设计准则](../../../docs/standard/design-guidelines/member.md)  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)

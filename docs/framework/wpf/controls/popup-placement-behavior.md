@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07ac582841fd6b5b6a24c63896821c65eb6687e4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d991895b7c10ee5c210b252855e5affcfcb22a9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup-placement-behavior"></a>Popup 放置行为
 A<xref:System.Windows.Controls.Primitives.Popup>控件浮动转移的应用程序的单独窗口中显示内容。 你可以指定的位置<xref:System.Windows.Controls.Primitives.Popup>相对于控件、 鼠标或通过使用屏幕<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>属性。  这些属性协同工作以使你在指定的位置的灵活地<xref:System.Windows.Controls.Primitives.Popup>。  
@@ -237,5 +238,5 @@ Placement 为 Mouse，并且 Popup 到达屏幕下边缘
 ### <a name="customizing-popup-placement"></a>自定义 Popup 放置  
  可以通过设置自定义目标原点和弹出项对齐点<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。 然后定义<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>返回一组的可能放置点和主轴 （按首选项的顺序） 的委托<xref:System.Windows.Controls.Primitives.Popup>。 显示的最大一部分的点<xref:System.Windows.Controls.Primitives.Popup>选择。  位置<xref:System.Windows.Controls.Primitives.Popup>如果自动调整<xref:System.Windows.Controls.Primitives.Popup>隐藏的屏幕边缘。 有关示例，请参阅[指定自定义 Popup 位置](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Popup 放置示例](http://go.microsoft.com/fwlink/?LinkID=160032)

@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>类型设计准则
 从 CLR 角度来看，有只有两种类型的类别 — 引用类型和值类型，但为了 framework 设计有关的讨论，我们可以将类型划分为多个逻辑组，每个都有其自己的特定设计规则。  
@@ -42,10 +45,10 @@ ms.lasthandoff: 10/18/2017
  **✓ 执行**确保每个类型定义完善的一组相关成员，而不仅仅是随机的不相关的功能集合。  
   
 ## <a name="in-this-section"></a>本节内容  
- [类和结构之间进行选择](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+ [在类和结构之间选择](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
  [抽象类设计](../../../docs/standard/design-guidelines/abstract-class.md)  
  [静态类设计](../../../docs/standard/design-guidelines/static-class.md)  
- [界面设计](../../../docs/standard/design-guidelines/interface.md)  
+ [接口设计](../../../docs/standard/design-guidelines/interface.md)  
  [结构设计](../../../docs/standard/design-guidelines/struct.md)  
  [枚举设计](../../../docs/standard/design-guidelines/enum.md)  
  [嵌套类型](../../../docs/standard/design-guidelines/nested-types.md)  
@@ -53,5 +56,5 @@ ms.lasthandoff: 10/18/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)

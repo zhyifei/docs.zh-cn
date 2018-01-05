@@ -25,11 +25,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1ee7c7b4e21d147bad1cd8e4b854c0ff4fe13aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-dependency-properties"></a>自定义依赖项属性
 本主题介绍了 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序开发者和组件作者想要创建自定义依赖属性的原因，并介绍了一些可以提高属性的性能、可用性或通用性的实现步骤以及实现选项。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题假设你作为 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类的现有依赖属性的使用者已经对依赖属性有所了解，并且已经阅读了[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)主题。 若要理解本主题中的示例，还应当了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 并知道如何编写 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。  
   
 <a name="whatis"></a>   
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="dependency-properties-and-class-constructors"></a>依赖属性和类构造函数  
  托管代码编程（通常通过FxCop 等代码分析工具强制执行）的一般原则是：类构造函数不应调用虚方法。 这是因为构造函数可以作为派生的类构造函数的基本初始化来调用，并且可能会在所构造的对象实例不完全初始化状态下通过构造函数输入虚方法。 从任何已派生自的类派生时<xref:System.Windows.DependencyObject>，应该注意属性系统本身调用和内部公开虚方法。 这些虚方法属于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 属性系统服务。 替代方法会使派生类参与值确定。 为避免运行时初始化出现潜在问题，，不应该在类的构造函数中设置依赖属性值，除非遵循特定的构造函数模式进行操作。 有关详细信息，请参阅 [DependencyObject 的安全构造函数模式](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  

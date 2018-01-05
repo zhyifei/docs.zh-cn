@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c276e9da3eaaf786038a117532848364b03e9b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45f2a141b09c52085c13803b8d338fdc9eebf135
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-method"></a>如何：绑定到方法
 下面的示例演示如何将绑定到方法使用<xref:System.Windows.Data.ObjectDataProvider>。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
   
  `InvalidationCharacterRule`是<xref:System.Windows.Controls.ValidationRule>，用于检查无效字符。 默认的错误模板，这是一个红色边框周围<xref:System.Windows.Controls.TextBox>，显示输入的值不是一个双精度值时通知用户。  
   
-## <a name="see-also"></a>另请参阅  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+## <a name="see-also"></a>请参阅  
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [绑定到枚举](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)

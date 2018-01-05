@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31f77f0921bb018317834077f70e4623c47a4f7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 784a8df792ca4dc05e36f5b7e9ec93b02e0e639f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>如何：使用 PathGeometry 创建形状
 此示例演示如何创建形状使用<xref:System.Windows.Media.PathGeometry>类。 <xref:System.Windows.Media.PathGeometry>对象包括一个或多个<xref:System.Windows.Media.PathFigure>对象; 每个<xref:System.Windows.Media.PathFigure>表示不同的"图"或形状。 每个<xref:System.Windows.Media.PathFigure>本身由一个或多个<xref:System.Windows.Media.PathSegment>对象，每个表示连接的部分图或形状。 段类型包括<xref:System.Windows.Media.LineSegment>， <xref:System.Windows.Media.ArcSegment>，和<xref:System.Windows.Media.BezierSegment>。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  此示例是更大示例的组成部分；有关完整示例，请参阅[几何图形示例](http://go.microsoft.com/fwlink/?LinkID=159989)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Shapes.Path>  
  <xref:System.Windows.Media.GeometryDrawing>  
  [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  

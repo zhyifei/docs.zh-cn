@@ -19,11 +19,12 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 906cc5575ec8fc307068e7341331ae024cf07542
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 24983386b6f34e7471626fcff50fe5106ca0c8dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-layer-programming"></a>可视化层编程
 <xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。 用户界面控件，如<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用它来保持其呈现数据。  
@@ -32,9 +33,9 @@ ms.lasthandoff: 11/21/2017
  [可视化层中的命中测试](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
  [使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
  [教程：在 Win32 应用程序中承载视觉对象](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  

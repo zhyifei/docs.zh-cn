@@ -23,11 +23,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 290682542a0accaf38408127f7358625abca14af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供了一个外接程序模型，开发人员可以用它来创建支持外接程序扩展性的应用程序。 借助此外接程序模型，可以创建与应用程序功能集成并进行扩展的外接程序。 在某些情况下，应用程序还需要显示外接程序所提供的 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。本主题演示 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 如何扩展 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 外接程序模型来实现这些方案，并演示它的体系结构、优点及局限性。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 
   
 <a name="Requirements"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  要求熟悉 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 外接程序模型。 有关详细信息，请参阅[外接程序和扩展性](../../../../docs/framework/add-ins/index.md)。  
   
 <a name="AddInsOverview"></a>   
@@ -292,10 +293,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="performance-optimization"></a>性能优化  
  默认情况下，如果使用多个应用程序域，则每个应用程序所需的各种 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程序集都会加载到该应用程序的域中。 因此，创建新应用程序域和在应用程序域中启动应用程序所需的时间可能会影响性能。 但 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供了一种减少启动时间的方法，即指示应用程序共享各应用程序域的程序集（如果已经加载）。 执行此操作通过使用<xref:System.LoaderOptimizationAttribute>属性，必须应用于入口点方法 (`Main`)。 这种情况下，只能使用代码来实现应用程序定义（请参阅[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.LoaderOptimizationAttribute>  
  [外接程序和扩展性](../../../../docs/framework/add-ins/index.md)  
  [应用程序域](../../../../docs/framework/app-domains/application-domains.md)  
  [.NET framework 远程处理概述](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [使对象可远程处理](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
- [操作说明主题](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/app-development/how-to-topics.md)

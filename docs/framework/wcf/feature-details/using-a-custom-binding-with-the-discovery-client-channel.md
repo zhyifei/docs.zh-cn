@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c18be6868c2b0d092d1924b227b444b8b679a383
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 85c88132b1fa610b2bcb63635ae553ef47bb359c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>通过 Discovery 客户端通道使用自定义绑定
 通过 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 使用自定义绑定时，必须定义创建 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 实例的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。  
@@ -55,7 +56,7 @@ customBinding.Elements.Insert(0, discoveryBindingElement);
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用 discovery 客户端通道，请参阅[使用 Discovery 客户端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)。 有关完整的代码示例，请参阅[发现绑定元素示例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
   
-## <a name="see-also"></a>另请参阅  
- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [使用 Discovery 客户端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+## <a name="see-also"></a>请参阅  
+ [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [使用发现客户端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [发现绑定元素示例](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)

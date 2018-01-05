@@ -16,17 +16,18 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac6671033a439051b062ddae70649a63bacd4979
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-behaviors-overview"></a>计时行为概述
 本主题介绍动画和其他的计时行为<xref:System.Windows.Media.Animation.Timeline>对象。  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要了解本主题，应熟悉基本动画功能。 有关详细信息，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
   
 <a name="timelinetypes"></a>   
@@ -132,9 +133,9 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>-指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>以时间线所用的减速。 有关示例，请参阅[如何： 加速或减速动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
  [计时事件概述](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
  [动画计时行为示例](http://go.microsoft.com/fwlink/?LinkID=159970)

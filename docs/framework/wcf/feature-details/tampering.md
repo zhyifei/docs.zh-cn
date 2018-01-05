@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ab38de1fb2a932fefd4e37cbfab3d9bfbea616
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6ee041de1a9e009ca68ecc8bba8bc2fa06ba6ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tampering"></a>篡改
 *篡改*是一种更改消息或在传递邮件，并为以外它的本来目的使用更改后的消息的行为。  
@@ -29,10 +30,10 @@ ms.lasthandoff: 12/02/2017
   
  为了避免这个问题，请不要将 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 属性设置为 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>，并避免使用 <xref:System.ServiceModel.Channels.MessageVersion>，如静态 <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A> 属性，它会将 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 属性设置为 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [信息泄露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [提升权限](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [重播攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

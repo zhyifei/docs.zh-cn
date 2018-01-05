@@ -24,11 +24,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b7abab8747272fcf23611539c29ab476c5bed48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>在开发时[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]独立应用程序和浏览器承载的应用程序，你必须考虑的安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]独立应用程序使用不受限制的权限执行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**权限集)、 是否使用 Windows Installer (.msi) XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是，完全信任主机应用程序可以创建部分信任<xref:System.AppDomain>使用.NET Framework 外接程序模型。 有关详细信息，请参阅[WPF 外接程序概述](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
@@ -67,12 +68,12 @@ ms.lasthandoff: 11/21/2017
 ### <a name="application-navigation-security"></a>应用程序导航安全性  
  被视为安全如果它可以使用打包的标识，应用程序导航[!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)]，它支持四种类型的内容：  
   
-|内容类型|说明|URI 示例|  
+|内容类型|描述|URI 示例|  
 |------------------|-----------------|-----------------|  
 |资源|添加到项目中的生成类型的文件**资源**。|`pack://application:,,,/MyResourceFile.xaml`|  
 |内容|添加到项目中的生成类型的文件**内容**。|`pack://application:,,,/MyContentFile.xaml`|  
 |源站点|添加到项目中的生成类型的文件**无**。|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|应用程序代码|具有已编译代码隐藏的 XAML 资源。<br /><br /> - 或 -<br /><br /> 添加到项目中的生成类型的 XAML 文件**页**。|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|应用程序代码|具有已编译代码隐藏的 XAML 资源。<br /><br /> 或<br /><br /> 添加到项目中的生成类型的 XAML 文件**页**。|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  有关应用程序数据文件和包的详细信息[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]，请参阅[WPF 应用程序资源、 内容和数据文件](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。  
@@ -281,7 +282,7 @@ ms.lasthandoff: 11/21/2017
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 部分信任安全](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
  [WPF 安全策略 - 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
  [WPF 安全策略 - 安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  

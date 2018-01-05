@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e77a0c698dae0330877c54422c15e14c82376891
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad4969d80f7bd801ec738fa40e8b2d4ab9deefad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>如何：绑定到 LINQ 查询的结果
 此示例演示如何运行 LINQ 查询，然后将绑定到结果。  
@@ -38,9 +39,9 @@ ms.lasthandoff: 11/21/2017
   
  第二个列表框中将绑定到该集合，因为其<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>值设置为`{Binding}`。 因此，它将显示返回的集合 (基于`myTaskTemplate` <xref:System.Windows.DataTemplate>)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [让数据可供 XAML 中的绑定使用](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
  [绑定到集合并根据选择的内容显示信息](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
  [WPF 版本 4.5 中的新增功能](../../../../docs/framework/wpf/getting-started/whats-new.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

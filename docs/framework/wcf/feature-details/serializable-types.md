@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e368472db3bdca73661586821106174e13d4d24
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2bf272e785968f9116cea20ad0c3f40eb786d1f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serializable-types"></a>可序列化类型
 默认情况下，<xref:System.Runtime.Serialization.DataContractSerializer> 序列化所有公共可见类型。 类型的所有公共读/写属性和字段均被序列化。  
@@ -48,9 +49,9 @@ ms.lasthandoff: 12/02/2017
 ## <a name="inheritance"></a>继承  
  未标记类型（没有 <xref:System.Runtime.Serialization.DataContractAttribute> 属性的类型）可以从具有此属性的类型继承；但是反过来则不允许：具有该属性的类型不能从未标记类型继承。 实行此规则主要是为了确保与使用旧版本 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 编写的代码向后兼容。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [支持的数据协定序列化程序类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+ [数据协定序列化程序支持的类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d734a7f17f8843ff284ac0854ac41d4a5b9f5584
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c342f0d635a9220a88a2af79c76e2c1580dee2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>如何：使数据可用于 XAML 中的绑定
 本主题讨论您可以使数据可用于在绑定的不同方式[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，取决于你的应用程序的需求。  
@@ -57,6 +58,6 @@ ms.lasthandoff: 11/21/2017
   
  你可以指定要绑定到的数据的不同方法的信息，请参阅[指定绑定源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)。 有关可以绑定到哪些类型的数据或实现你自己的方式信息[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象的绑定，请参阅[绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

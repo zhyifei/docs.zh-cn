@@ -19,11 +19,12 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a2ec81fa63b07a33f79a54b500ae3d7e62f367f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0159848e8add1f66ca7690c0fc692522102e74d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transformations-how-to-topics"></a>变换帮助主题
 本部分中的主题介绍如何将不同的转换应用于对象。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
  [转换元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
  [使用 MatrixTransform 创建自定义转换](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Transform>  
  [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
  [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  

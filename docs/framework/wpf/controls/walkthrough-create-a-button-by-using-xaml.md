@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.workload: dotnet
+ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>演练：使用 XAML 创建按钮
 本演练的目的是了解如何创建用于动画的按钮[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]应用程序。 本演练使用样式和模板来创建自定义的按钮资源允许的代码重用，并从按钮声明的按钮逻辑分离。 本演练完全在编写[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -398,7 +399,7 @@ ms.lasthandoff: 12/13/2017
   
 -   自定义以响应用户操作的按钮的行为 (如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>)，包含动画效果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 Microsoft Expression Blend 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

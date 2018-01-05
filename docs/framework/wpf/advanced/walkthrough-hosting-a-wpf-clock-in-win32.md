@@ -17,16 +17,17 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55e5aa633e3d788ac8acaa09684c92b8608e7cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload: dotnet
+ms.openlocfilehash: caf652f8a80da8e927a74ffc012d09b2389b1b09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>演练：在 Win32 中承载 WPF 时钟
 将[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序，使用<xref:System.Windows.Interop.HwndSource>，它提供了包含 HWND 你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内容。 首先创建<xref:System.Windows.Interop.HwndSource>，并向其提供类似于 CreateWindow 的参数。  然后，通知<xref:System.Windows.Interop.HwndSource>有关[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]你要在其中包含内容。  最后，获取外的 HWND <xref:System.Windows.Interop.HwndSource>。 本演练阐释了如何创建混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]重新实现操作系统的应用程序**日期和时间属性**对话框。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  请参阅[WPF 和 Win32 间的互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
   
 ## <a name="how-to-use-this-tutorial"></a>如何使用本教程  
@@ -90,7 +91,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)  
 ```  
   
- 此特性告知[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，当它初始化[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]，它应使用单线程的单元模型 (STA)，进行所需[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])。  
+ 此特性告知[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]，当它初始化[!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]，它应使用单线程的单元模型 (STA)，进行所需[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)](和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)])。  
   
 ## <a name="create-a-windows-presentation-framework-page"></a>创建 Windows Presentation Framework 页  
  接下来，创建一个 DLL，它定义[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>。 通常很容易创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Page>作为独立的应用程序，并编写并调试[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]部分通过这种方式。  完成后，该项目均可转换为 DLL，请右键单击该项目，单击**属性**，转到应用程序，并将输出类型更改为 Windows 类库。  
@@ -235,7 +236,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  若要比较的代码生成此屏幕截图中，你最终结果，请参阅[Win32 时钟间的互操作示例](http://go.microsoft.com/fwlink/?LinkID=160051)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Interop.HwndSource>  
  [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
  [Win32 时钟互操作示例](http://go.microsoft.com/fwlink/?LinkID=160051)

@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12913a9afc0003b041b260379a55e469273c5910
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-way-services"></a>单向服务
 服务操作的默认行为是请求-答复模式。 在请求-答复模式中，即使服务操作以代码形式表示为 `void` 方法，客户端也会等待答复消息。 使用单向操作时，只能传输一个消息。 接收方不发送答复消息，发送方也不需要获得答复消息。  
@@ -64,5 +65,5 @@ public interface IOneWayCalculator
   
  建议改为检查服务以及客户端上的各个控制机制，然后测试应用程序方案来确定任一端最佳配置。 例如，如果使用会话会在服务上阻止消息的处理，则可以将 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.PerCall>，使每个消息都可以通过不同的服务实例来处理，并将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 设置为 <xref:System.ServiceModel.ConcurrencyMode.Multiple>，以便允许多个线程一次调度多个消息。 另一个方法是提高服务和客户端绑定的读取配额。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [单向](../../../../docs/framework/wcf/samples/one-way.md)

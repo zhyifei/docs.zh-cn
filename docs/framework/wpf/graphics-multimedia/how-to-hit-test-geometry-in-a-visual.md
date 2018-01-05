@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab125fe4031b5408eb202f21ce0fdf4314781f1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a990a43853e375c1c97f88dc6792932ad64c8d37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>如何：对 Visual 中的几何图形进行命中测试
 此示例演示如何在一个或多个组成的视觉对象上执行命中的测试<xref:System.Windows.Media.Geometry>对象。  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  此示例并未考虑可能应用到几何图形中的任何变形或剪裁。 此外，此示例不会使用已设置样式的控件，因为这种控件没有与它直接关联的绘图。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [可视化层中的命中测试](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
  [将几何图形用作参数的命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)

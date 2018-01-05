@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1371fdc3582e2ebe052442b15ecb2d5cf0b2865a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>演练：使用 Microsoft Expression Blend 创建按钮
 本演练将引导你完成创建过程[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用 Microsoft Expression Blend 的自定义的按钮。  
@@ -257,7 +258,7 @@ ms.lasthandoff: 11/21/2017
   
 -   杂项： 创建渐变添加 BitmapEffects，使用转换，并设置的对象的基本属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 XAML 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

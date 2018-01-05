@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ee7b227d4e2ea5dfcb0b8870d77d03abf08db8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup-overview"></a>Popup 概述
 <xref:System.Windows.Controls.Primitives.Popup>控件提供了如何通过当前的应用程序窗口相对于指定的元素或屏幕坐标浮动的单独窗口中显示内容。 本主题介绍<xref:System.Windows.Controls.Primitives.Popup>控件并提供有关其使用情况信息。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Controls.Primitives.Popup>控制保留的引用其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>内容作为一个逻辑子级。 在创建新的窗口中，内容<xref:System.Windows.Controls.Primitives.Popup>成为窗口的可视子并且仍保持的逻辑子级<xref:System.Windows.Controls.Primitives.Popup>。 相反，<xref:System.Windows.Controls.Primitives.Popup>保持的逻辑父级其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>内容。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Primitives.Popup>  
  <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>  
  <xref:System.Windows.Controls.Primitives.PlacementMode>  
@@ -106,5 +107,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>  
  <xref:System.Windows.Controls.ToolTip>  
  <xref:System.Windows.Controls.ToolTipService>  
- [操作说明主题](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
- [操作说明主题](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

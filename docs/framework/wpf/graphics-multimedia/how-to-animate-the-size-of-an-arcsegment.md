@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f71f910dca651b66d02971d05fb83a8d7bbc5f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f58a4e7b23204167acb31cfcfb3a4fe27977e70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>如何：对 ArcSegment 的大小进行动画处理
 此示例演示如何进行动画处理<xref:System.Windows.Media.ArcSegment.Size%2A>属性<xref:System.Windows.Media.ArcSegment>。  
@@ -37,11 +38,11 @@ ms.lasthandoff: 11/21/2017
   
  有关其他 geometry 和动画示例，请参阅[几何图形示例](http://go.microsoft.com/fwlink/?LinkID=159989)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.ArcSegment.Size%2A>  
  <xref:System.Windows.Media.ArcSegment>  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
  [动画和计时](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

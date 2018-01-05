@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81f95ea4582230fe66c59655ab9b98a405c1e173
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 内容模型概述
 此内容模型概述介绍支持的内容<xref:System.Windows.Documents.TextElement>。 <xref:System.Windows.Documents.Paragraph>类是一种<xref:System.Windows.Documents.TextElement>。 内容模型描述哪些对象/元素可包含在其他对象/元素中。 本概述汇总了用于派生自的对象的内容模型<xref:System.Windows.Documents.TextElement>。 有关详细信息，请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="types-that-can-contain-textelement-objects"></a>可包含 TextElement 对象的类型  
  请参阅[WPF 内容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通过 Blocks 属性控制 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
  [通过 Blocks 属性控制流内容元素](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
  [通过 Blocks 属性控制 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  

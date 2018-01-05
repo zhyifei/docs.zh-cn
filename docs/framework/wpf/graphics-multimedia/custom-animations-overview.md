@@ -19,17 +19,18 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a206e0234f4e6365e76f73977beda1688c036a79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb8dcce1d72991a803d8a068f29cd0fe3430fdfc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-animations-overview"></a>自定义动画概述
 本主题介绍如何以及何时通过以下方法来扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统：创建自定义关键帧、动画类或者使用每帧回叫来绕过它。  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要了解本主题，用户应当熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的不同动画类型。 有关详细信息，请参阅 From/To/By 动画概述、[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)和[路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。  
   
  因为动画类都继承自<xref:System.Windows.Freezable>类，你应该熟悉<xref:System.Windows.Freezable>对象以及如何从继承<xref:System.Windows.Freezable>。 有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息，请参阅<xref:System.Windows.Media.CompositionTarget.Rendering>页。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Animation.AnimationTimeline>  
  <xref:System.Windows.Media.Animation.IKeyFrame>  
  [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  

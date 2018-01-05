@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f98d174fd0bd8ea28c7b72cec25b5b16f2b76c51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f23e041a1e6b283cfe5308d6aef861f1fc757a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-xml-namespaces-in-data-binding"></a>如何：在数据绑定中使用 XML 命名空间
 ## <a name="example"></a>示例  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  在此特定示例中，[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据来自 web 服务，但<xref:System.Windows.Data.XmlNamespaceMapping>元素也适用于内联[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]或[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]嵌入文件中的数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

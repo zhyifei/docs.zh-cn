@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3032f46843c6d8efc53c45a927feae7068c3eb5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157bc01e23c304531f04b0a1cc7a66bad4bb3934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-reflection"></a>如何：创建反射
 此示例演示如何使用<xref:System.Windows.Media.VisualBrush>创建反射。 因为<xref:System.Windows.Media.VisualBrush>可以显示现有的视觉对象，可以使用此功能来生成有趣的视觉效果，例如反射和放大倍数。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
   
  有关完整的示例，其中包括演示如何放大屏幕的部分以及如何创建反射的示例，请参阅[VisualBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160049)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.VisualBrush>  
  [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

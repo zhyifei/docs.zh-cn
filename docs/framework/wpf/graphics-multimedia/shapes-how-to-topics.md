@@ -19,11 +19,12 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d226040e531b8e14ff3dae9df2d6353acbbead3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7fb96bd78f2462ece3e1a7cb9f0dc8c5c0988f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shapes-how-to-topics"></a>形状帮助主题
 此部分中的主题演示如何使用<xref:System.Windows.Shapes.Shape>屏幕绘制基本形状的对象。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 11/21/2017
  [绘制矩形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
  [修改直线或线段末端的线帽](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Shapes.Shape>  
  [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)

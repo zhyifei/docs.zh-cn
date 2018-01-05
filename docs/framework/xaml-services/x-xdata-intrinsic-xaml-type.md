@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 3e448c28be6515748254e267b70f3c898b9226a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec46d0363e5b10d3bd3bd3f9c8f4d3694abc1c8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 内部 XAML 类型
 可实现的 XAML 生产中的 XML 数据岛的放置。 中的 XML 元素`x:XData`好像它们是充当默认 XAML 命名空间的一部分或任何其他 XAML 命名空间不应由 XAML 处理器处理。 `x:XData`可以包含任意格式正确的 XML。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
  从技术上讲，`x:XData`可以用作类型的任何属性的内容<xref:System.Xml.Serialization.IXmlSerializable>。 但是，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>是唯一突出的实现。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.XmlDataProvider>  
  [数据绑定概述](../../../docs/framework/wpf/data/data-binding-overview.md)  
  [绑定标记扩展](../../../docs/framework/wpf/advanced/binding-markup-extension.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5e2ad03fcb52db1ffdd01849381a392187082991
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c73cf28905e1dd0f3056ab0eed953d6f05b0a7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xkey-directive"></a>x:Key 指令
 唯一标识元素创建和引用 XAML 定义的字典中。 添加`x:Key`到 XAML 对象元素的值是标识资源字典中，例如在 WPF 中的资源的最常见方法<xref:System.Windows.ResourceDictionary>。  
@@ -120,7 +121,7 @@ keyObject
 ## <a name="silverlight-usage-notes"></a>Silverlight 用法说明  
  `x:Key`适用于 Silverlight 是分开记录。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 资源](../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [资源和代码](../../../docs/framework/wpf/advanced/resources-and-code.md)  
  [StaticResource 标记扩展](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)

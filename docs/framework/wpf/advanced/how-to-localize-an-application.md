@@ -16,11 +16,12 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df52c44ca72108ffc984bed169daae654c01aa87
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -215,6 +216,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="whats-next"></a>下一步  
  现在，你应该对如何使用 LocBaml 工具有了一个基本的了解。  你应该能够制作包含 Uid 的文件。 通过使用 LocBaml 工具，你应该能够分析文件以提取可本地化的内容，并且在内容翻译后，你应该能够生成一个合并已翻译内容的 resources.dll 文件。 本主题不包括每个可能的细节，但现在你已经掌握了使用 LocBaml 对应用程序进行本地化的必要知识。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
  [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

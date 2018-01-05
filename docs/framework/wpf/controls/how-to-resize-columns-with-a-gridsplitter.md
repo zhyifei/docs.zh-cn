@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c8299a3f4885618601c8087a61c21dc5d989813
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d68d829e5543b1c299668493c11b62ccb11d81af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>如何：使用 GridSplitter 调整列的大小
 此示例演示如何创建垂直<xref:System.Windows.Controls.GridSplitter>以便重新分发中的两列之间的空间<xref:System.Windows.Controls.Grid>而无需更改的维度<xref:System.Windows.Controls.Grid>。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 11/21/2017
  [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
 [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.GridSplitter>  
- [操作说明主题](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)

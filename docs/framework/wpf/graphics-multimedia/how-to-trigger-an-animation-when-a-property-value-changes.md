@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d722be0f0367f7e6e98ef1c8451ce58ee28fedd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0eb4542d8baf86f01417eb1925028a00471b40b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>如何：在属性值更改时触发动画
 此示例演示如何使用<xref:System.Windows.Trigger>启动<xref:System.Windows.Media.Animation.Storyboard>属性值更改时。 你可以使用<xref:System.Windows.Trigger>内<xref:System.Windows.Style>， <xref:System.Windows.Controls.ControlTemplate>，或<xref:System.Windows.DataTemplate>。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  属性应用动画<xref:System.Windows.Trigger>的对象行为比更复杂的方式<xref:System.Windows.EventTrigger>动画开始使用<xref:System.Windows.Media.Animation.Storyboard>方法。  它们"提交"时使用动画定义由其他<xref:System.Windows.Trigger>对象，但 compose 与<xref:System.Windows.EventTrigger>和方法，触发动画。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Trigger>  
  [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
  [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1894ee59b6120abfe4cb216baba086fcd1650f77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bca09510a73a74b039ec18934c0be39629c4ce39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>跟踪和消息日志记录的推荐设置
 本主题描述用于不同操作环境的跟踪和消息日志记录的推荐设置。  
@@ -122,5 +123,5 @@ logman start mytrace -pf logman.providers -o test.etl –ets
 logman stop mytrace -ets  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 Windows Management Instrumentation 进行诊断](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

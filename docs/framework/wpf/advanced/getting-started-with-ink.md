@@ -22,16 +22,17 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc8ffe9ad68060d9dfbcafe99133a736237a2bb3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-ink"></a>墨迹入门
 将数字墨迹合并到你的应用程序是比以往更容易。 墨迹已从正在实现完全集成到编程的 COM 和 Windows 窗体方法的必然结果发展[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 不需要安装单独的 Sdk 或运行时库。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要使用下面的示例，必须首先安装 Microsoft Visual Studio 2005 和[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]。 还必须了解如何编写 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的应用程序。 有关详细信息，有关如何开始使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，请参阅[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="quick-start"></a>快速入门  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
  [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数字墨迹](../../../../docs/framework/wpf/advanced/digital-ink.md)  
  [收集墨迹](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
  [手写识别](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  

@@ -34,11 +34,14 @@ caps.latest.revision: "34"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cbea6ab0fcf72937bc936510a89593861115f287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cryptographic-services"></a>加密服务
 <a name="top"></a> 公共网络（如 Internet）不提供实体之间安全通信的方式。 此类网络上的通信易被读取或甚至被未经授权的第三方修改。 加密有助于防止数据被查看，提供检测数据是否已修改的方法，并帮助提供一种跨不安全通道安全通信的方式。 例如，数据可通过使用加密算法进行加密、以加密状态进行传输并在稍后由预期方进行解密。 如果某个第三方截获了加密数据，将很难解密此数据。  

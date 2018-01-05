@@ -20,17 +20,18 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b57c5ee36c9ed9c89fc8ca1bfb7ea265c2460c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa4a533594c1e89942406e7df0a49215e3885418
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="brush-transformation-overview"></a>Brush 变换概述
 此画笔类提供两个转换属性：<xref:System.Windows.Media.Brush.Transform%2A>和<xref:System.Windows.Media.Brush.RelativeTransform%2A>。 使用这些属性，可以旋转、缩放、倾斜和转换画笔的内容。 本主题介绍这两个属性之间的区别，并提供有关它们的用法示例。  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要了解本主题，应了解要转换的画笔的功能。 有关<xref:System.Windows.Media.LinearGradientBrush>和<xref:System.Windows.Media.RadialGradientBrush>，请参阅[使用纯色和渐变概述绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。 有关<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，或<xref:System.Windows.Media.VisualBrush>，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。 还应当熟悉[转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)中所述的 2D 转换。  
   
 <a name="transformversusrelativetransform"></a>   
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/21/2017
   
  此示例摘自一个更大的示例。 有关完整示例，请参阅[画笔示例](http://go.microsoft.com/fwlink/?LinkID=159973)。 有关画笔的详细信息，请参阅 [WPF 画笔概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Brush.Transform%2A>  
  <xref:System.Windows.Media.Brush.RelativeTransform%2A>  
  <xref:System.Windows.Media.Transform>  

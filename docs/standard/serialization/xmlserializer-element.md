@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17e4fcd1b471a5197f2e6a30bad10cbdbe22f216
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 059fe3661878b51ef27facc2888286ecd1aaa97a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ltxmlserializergt-element"></a>&lt;xmlSerializer&gt; 元素
 指定是否完成 <xref:System.Xml.Serialization.XmlSerializer> 进度的额外检查。  
@@ -69,7 +72,7 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Serialization.XmlSerializer>  
  [\<system.xml.serialization> 元素](../../../docs/standard/serialization/system-xml-serialization-element.md)  
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)

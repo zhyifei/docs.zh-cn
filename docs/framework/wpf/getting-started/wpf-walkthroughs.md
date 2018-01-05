@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c4c67033711575e0e13785fd448114a6042d8e8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-walkthroughs"></a>WPF 演练
 演练提供有关常见方案的分步说明。 这使得它们成为了着手学习产品或特定功能区域的理想地点。  

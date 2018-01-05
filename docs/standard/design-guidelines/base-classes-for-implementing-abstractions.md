@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6c8cd779dba0e7ce559e29af7b16bf04b3d0dc2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 96264456ac6afc569c46caf5faed6c37ea22bc8e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>用于实现抽象的基类
 严格地说，一个类成为基类，当另一个类派生自它时。 但是，对于本部分中，基类是主要用于提供公共抽象或重复使用某些其他类的默认实现但继承的类。 继承层次结构，在层次结构的根的抽象和一些自定义实现底部之间的中间通常位于基类，这些类。  
@@ -41,6 +44,6 @@ ms.lasthandoff: 11/21/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
  [扩展性设计](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5455007e407bf4320355aebfd043bfc056d6d56
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>通过创建 ControlTemplate 自定义现有控件的外观
 <a name="introduction"></a>A<xref:System.Windows.Controls.ControlTemplate>指定可视结构和控件的可视行为。 你可以提供一个新的 it，从而自定义控件的外观<xref:System.Windows.Controls.ControlTemplate>。 当你创建<xref:System.Windows.Controls.ControlTemplate>，而无需更改其功能替换现有的控件的外观。 例如，你可以使这些按钮在你的应用程序而不是默认的正方形形状，舍入，但仍将引发按钮<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/22/2017
   
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题假设用户了解如何创建和使用[控件](../../../../docs/framework/wpf/controls/index.md)中讨论的控件和样式。 本主题中讨论的概念适用于从继承元素<xref:System.Windows.Controls.Control>类，除了<xref:System.Windows.Controls.UserControl>。 不能将应用<xref:System.Windows.Controls.ControlTemplate>到<xref:System.Windows.Controls.UserControl>。  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
@@ -271,5 +272,5 @@ ms.lasthandoff: 10/22/2017
   
  [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

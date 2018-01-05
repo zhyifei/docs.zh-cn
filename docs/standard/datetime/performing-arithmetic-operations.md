@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: def43f84186b53f9b0d2ade0a5a92e59606ee2af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: edad8fc6643b90afc8327b574e19b178270829b3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>使用日期和时间执行算术运算
 
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/18/2017
 
 <xref:System.DateTime.CompareTo%28System.DateTime%29>方法，则报告本地时间早于 (或小于) 的 UTC 时间和减法运算指示在美国 UTC 系统的本地时间之间的差异其 UTC 时间与本地时间之间的时差是 7 小时。 但由于这两个值提供的单个时间点的表现形式有所不同，因此从本例中可清楚得知，此时间间隔完全是由本地时区与 UTC 之间的时差所致。
 
-一般来说，<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>属性不会影响返回的结果<xref:System.DateTime.Kind>比较和算术方法 （如所示的两个相同时间点进行比较），尽管它可能会影响这些结果的解释。 例如：
+一般来说，<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>属性不会影响返回的结果<xref:System.DateTime.Kind>比较和算术方法 （如所示的两个相同时间点进行比较），尽管它可能会影响这些结果的解释。 例如:
 
 * 对两个日期和时间值的任何算术运算的结果执行其<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>属性都等于<xref:System.DateTimeKind>反映两个值之间的实际时间间隔。 同样，对两个日期和时间值进行比较可精确反映出时间之间的关系。
 
@@ -77,7 +80,7 @@ A<xref:System.DateTimeOffset>值不仅包括包括日期和时间，还明确定
 
 ## <a name="arithmetic-operations-with-times-in-time-zones"></a>中的时区的时间的算术运算
 
-<xref:System.TimeZoneInfo>类包括大量在它们将时间从一个时区转换到另一个时自动应用调整的转换方法。 这些要求包括：
+<xref:System.TimeZoneInfo>类包括大量在它们将时间从一个时区转换到另一个时自动应用调整的转换方法。 其中包括：
 
 * <xref:System.TimeZoneInfo.ConvertTime%2A>和<xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>任意两个时区之间转换时间的方法。
 

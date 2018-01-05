@@ -19,11 +19,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8ee68c53173f0919a9200ed5ac82fed3e27affc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework 对 Windows 应用商店应用程序和 Windows 运行时的支持情况
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支持基于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]的许多软件开发方案。 这些方案分为三类：  
@@ -94,9 +97,9 @@ ms.lasthandoff: 10/18/2017
  有关使用.NET Framework 创建[!INCLUDE[wrt](../../../includes/wrt-md.md)]组件，以及一个演练，演示如何使用此类组件，使用 JavaScript，请参阅[以 C# 和 Visual Basic 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?LinkId=238313)中Windows 开发人员中心。  
   
 ### <a name="primitive-types"></a>基元类型  
- 为了能够在托管代码中自然使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，代码中显示 .NET Framework 基元类型而非 [!INCLUDE[wrt](../../../includes/wrt-md.md)]基元类型。 在 .NET Framework 中，诸如 `Int32` 结构等基元类型具有许多有用的属性和方法，如 `Int32.TryParse` 方法。 相反，[!INCLUDE[wrt](../../../includes/wrt-md.md)]中的基元类型和结构只有字段。 在托管代码中使用基元时，它们将显示为 .NET Framework 类型，您可以如往常一样使用 .NET Framework 类型的属性和方法。 以下列表提供了一个摘要：  
+ 为了能够在托管代码中自然使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，代码中显示 .NET Framework 基元类型而非 [!INCLUDE[wrt](../../../includes/wrt-md.md)]基元类型。 在 .NET Framework 中，诸如 `Int32` 结构等基元类型具有许多有用的属性和方法，如 `Int32.TryParse` 方法。 相反，[!INCLUDE[wrt](../../../includes/wrt-md.md)]中的基元类型和结构只有字段。 在托管代码中使用基元时，它们将显示为 .NET Framework 类型，你可以如往常一样使用 .NET Framework 类型的属性和方法。 以下列表提供了一个摘要：  
   
--   对于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]基元 `Int32`，`Int64`、`Single`、`Double`、`Boolean`、`String`（Unicode 字符的不可变集合）、`Enum`、`UInt32`、`UInt64` 和 `Guid`，使用 `System` 命名空间中的同名类型。  
+-   对于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]基元 `Int32`、`Int64`、`Single`、`Double`、`Boolean`、`String`（Unicode 字符的不可变集合）、`Enum`、`UInt32`、`UInt64` 和 `Guid`，请使用 `System` 命名空间中的同名类型。  
   
 -   对于 `UInt8`，使用 `System.Byte`。  
   
@@ -158,4 +161,4 @@ ms.lasthandoff: 10/18/2017
 |[开发 Windows 应用商店应用程序 (VB / C# / c + + 和 XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|提供关键资源来帮助您开始使用 C# 或 Visual Basic 开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用，这些资源包括许多快速入门主题、教程和最佳做法。 （位于 Windows 开发中心。）|  
 |[在 C# 和 Visual Basic 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?LinkId=238313)|描述如何使用 .NET Framework 创建 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件，说明如何在使用 JavaScript 为 Windows 生成的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用该组件，并描述如何使用 Visual Studio 调试这一组合。 （位于 Windows 开发中心。）|  
 |[Windows 运行时引用](http://go.microsoft.com/fwlink/?LinkId=238319)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]的参考文档。 （位于 Windows 开发中心。）|  
-|[将 URI 传递到 Windows 运行时](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|描述将托管代码的 URI 传递给 [!INCLUDE[wrt](../../../includes/wrt-md.md)]时可能出现的问题，以及如何避免这一问题。|
+|[向 Windows 运行时传递 URI](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|描述将托管代码的 URI 传递给 [!INCLUDE[wrt](../../../includes/wrt-md.md)]时可能出现的问题，以及如何避免这一问题。|

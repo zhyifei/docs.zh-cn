@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5af705509d30f7dfd50ade0c07aca242deff4dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2b64cacea48bbc8855cdb9ce451a13d4ad729bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 3-D WPF 复合控件
 本演练演示如何创建[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件并将其在托管[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件和窗体使用<xref:System.Windows.Forms.Integration.ElementHost>控件。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  本演练的任务的完整代码清单，请参阅[承载 Windows 窗体示例中的三维 WPF 复合控件](http://go.microsoft.com/fwlink/?LinkID=160001)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  按 F5 生成并运行该应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF 设计器](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 00f605bba709f0ce5f3238ccc3c6ac6cd962f0a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb1f5986a0d9f9eb69ade0228925ec06164cee4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xarguments-directive"></a>x:Arguments 指令
 打包构造参数为非默认构造函数的对象元素声明在 XAML 中，或为工厂方法的对象声明。  
@@ -116,6 +117,6 @@ public Food TryLookupFood(string name)
 </my:Food>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [定义与 .NET Framework XAML 服务一起使用的自定义类型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)  
  [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

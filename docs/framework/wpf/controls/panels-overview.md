@@ -20,11 +20,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f89ea3308d0e6cffc3ed50809f0e87e7ba854ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d25c6d9e4e6d067ad2107df2374329d84300c015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panels-overview"></a>面板概述
 <xref:System.Windows.Controls.Panel>元素是控制元素的呈现的组件，其大小和维度、 其位置和其子内容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了许多预定义<xref:System.Windows.Controls.Panel>元素，以及能够构造自定义<xref:System.Windows.Controls.Panel>元素。  
@@ -78,10 +79,10 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Controls.DockPanel>|是|定义一个区域，可在其中使子元素相互水平或垂直排列。|  
 |<xref:System.Windows.Controls.Grid>|是|定义一个由列和行组成的灵活网格区域。 子元素的<xref:System.Windows.Controls.Grid>可以精确地使用定位<xref:System.Windows.FrameworkElement.Margin%2A>属性。|  
 |<xref:System.Windows.Controls.StackPanel>|是|将子元素排列成水平或垂直的一行。|  
-|<xref:System.Windows.Controls.Primitives.TabPanel>|No|处理选项卡中的按钮布局<xref:System.Windows.Controls.TabControl>。|  
-|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|No|排列中的内容<xref:System.Windows.Controls.ToolBar>控件。|  
-|<xref:System.Windows.Controls.Primitives.UniformGrid>|No|<xref:System.Windows.Controls.Primitives.UniformGrid>用于与所有相等的单元格大小排列在网格中的子级。|  
-|<xref:System.Windows.Controls.VirtualizingPanel>|No|为可以“虚拟化”其子级集合的面板提供基类。|  
+|<xref:System.Windows.Controls.Primitives.TabPanel>|否|处理选项卡中的按钮布局<xref:System.Windows.Controls.TabControl>。|  
+|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|否|排列中的内容<xref:System.Windows.Controls.ToolBar>控件。|  
+|<xref:System.Windows.Controls.Primitives.UniformGrid>|否|<xref:System.Windows.Controls.Primitives.UniformGrid>用于与所有相等的单元格大小排列在网格中的子级。|  
+|<xref:System.Windows.Controls.VirtualizingPanel>|否|为可以“虚拟化”其子级集合的面板提供基类。|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|是|在水平或垂直方向上将内容排列为一行并使其虚拟化。|  
 |<xref:System.Windows.Controls.WrapPanel>|是|<xref:System.Windows.Controls.WrapPanel>在从左到右，换行到下一行包含框的边缘上的内容的顺序位置定位子元素。 后续排序按照按顺序从顶部到底部或从右到左，具体取决于值<xref:System.Windows.Controls.WrapPanel.Orientation%2A>属性。|  
   
@@ -254,7 +255,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="localizationglobalization-support"></a>本地化/全球化支持  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持多种有助于创建可本地化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。  
   
- 面板的所有元素以本机方式都支持<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性，可用于动态重新流动基于用户的区域设置或语言设置的内容。 有关更多信息，请参见<xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
+ 面板的所有元素以本机方式都支持<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性，可用于动态重新流动基于用户的区域设置或语言设置的内容。 有关详细信息，请参阅<xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
  <xref:System.Windows.Window.SizeToContent%2A>属性提供一种机制，使应用程序开发人员可以预计的需要本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 使用<xref:System.Windows.SizeToContent.WidthAndHeight>此属性值，该值父<xref:System.Windows.Window>始终动态调整大小以适应内容并不受人工高度或宽度的限制。  
   
@@ -262,7 +263,7 @@ ms.lasthandoff: 11/21/2017
   
  有关创建带有可本地化 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的其他信息，请参阅[使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
  [WPF 布局库示例](http://go.microsoft.com/fwlink/?LinkID=160054)  
  [布局](../../../../docs/framework/wpf/advanced/layout.md)  

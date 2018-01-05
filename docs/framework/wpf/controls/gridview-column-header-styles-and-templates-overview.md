@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad0f7cacc8256e060bb12611bd1818b694e1e6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 996d6d5f531a866d4fc80acc3848cdf264901032
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView 列标题的样式和模板概述
 此概述介绍了优先顺序中的属性，用于自定义中的列标题的顺序<xref:System.Windows.Controls.GridView>的查看模式<xref:System.Windows.Controls.ListView>控件。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  <sup>1</sup>为**标头模板属性**，如果设置这两种模板和模板选择器属性，模板属性优先。 例如，如果同时设置<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>属性，<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>属性优先。  
   
-## <a name="see-also"></a>另请参阅  
- [操作说明主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+## <a name="see-also"></a>请参阅  
+ [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [GridView 概述](../../../../docs/framework/wpf/controls/gridview-overview.md)

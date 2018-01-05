@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 77745744c0da1e4b4425af6d8e4319faaf524908
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ed50dd2aff1702543789f06939f7c2bc4b3dd83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 指令
 修改 XAML 编译行为，以便与定义的已命名的对象引用的字段<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>而不是访问<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>默认行为。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
  默认情况下，根元素的分部类是公共的则但是，您可以通过使其非公共使用[X:classmodifier 指令](../../../docs/framework/xaml-services/x-classmodifier-directive.md)。 [X:classmodifier 指令](../../../docs/framework/xaml-services/x-classmodifier-directive.md)还会影响根元素类的实例的访问级别。 你可以同时放置`x:Name`和`x:FieldModifier`上根元素，但这只是使公共字段副本的根元素，使用真正的根元素类的访问级别仍然受[X:classmodifier 指令](../../../docs/framework/xaml-services/x-classmodifier-directive.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
  [WPF 中的代码隐藏和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
  [x:Name 指令](../../../docs/framework/xaml-services/x-name-directive.md)  

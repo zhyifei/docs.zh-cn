@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 979cc7580471f616d39056f541b8374b372e8e88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58b756c24c1ca7e3f5b6b3f13c314363daf35443
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3-d-graphics-overview"></a>三维图形概述
 <a name="introduction"></a>通过 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 功能，开发人员可以使用标记和程序代码绘制和转换 3D 图形，并对其进行动画处理。 开发人员可以合并 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 图形以创建丰富的控件、提供复杂的数据图解，或者增强用户对应用程序界面的体验。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 支持并非旨在提供功能齐全的游戏开发平台。 本主题概述了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形系统中的 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 功能。  
@@ -179,13 +180,13 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[hostingwpfusercontrolinwf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Viewport3D>  
  <xref:System.Windows.Media.Media3D.PerspectiveCamera>  
  <xref:System.Windows.Media.Media3D.DirectionalLight>  
  <xref:System.Windows.Media.Media3D.Material>  
  [3D 转换概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)  
  [最大限度地提升 WPF 3D 性能](../../../../docs/framework/wpf/graphics-multimedia/maximize-wpf-3d-performance.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)  
  [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

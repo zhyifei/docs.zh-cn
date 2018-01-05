@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd6dda1f26e44c4864d5afea1427b2580ac1ed10
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 492a3652ca7cd304b953006bb1b18a1edb3dcf51
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ltdatetimeserializationgt-element"></a>&lt;dateTimeSerialization&gt; 元素
 确定 <xref:System.DateTime> 对象的序列化模式。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 12/02/2017
   
  在 .NET Framework 2.0 及更高版本中，将此属性设置为 Roundtrip 时，系统会检查 <xref:System.DateTime> 对象以确定这些对象位于本地时区、UTC 时区还是未指定的时区中。 随后会序列化 <xref:System.DateTime> 对象并保留该信息。 这是默认行为，建议为所有不与 Framework 的较早版本通信的新应用程序使用此行为。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.DateTime>  
  <xref:System.Xml.Serialization.XmlSchemaImporter>  
  <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  

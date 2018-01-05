@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7789f9aa94db32d3dc61ccf01ef9ddfe1e777a37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 424f77b076344ad86db992614175243d1473886d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-composite-drawing"></a>如何：创建复合绘图
 此示例演示如何使用<xref:System.Windows.Media.DrawingGroup>来通过组合多个创建复杂图形<xref:System.Windows.Media.Drawing>到单个复合绘图的对象。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息<xref:System.Windows.Media.Drawing>对象，请参阅[绘制对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>  
  <xref:System.Windows.Media.DrawingGroup.Transform%2A>  
  <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>  

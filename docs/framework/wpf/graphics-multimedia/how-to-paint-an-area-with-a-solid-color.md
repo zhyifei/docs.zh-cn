@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cde7f7df5089806ffb3235393eacc855d137ee51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3a5fe948c3cc6088f238f1f8f53c26c5f1fa5b2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>如何：使用纯色绘制区域
 若要绘制带有纯色的区域，可以使用预定义的系统画笔，如<xref:System.Windows.Media.Brushes.Red%2A>或<xref:System.Windows.Media.Brushes.Blue%2A>，也可以创建一个新<xref:System.Windows.Media.SolidColorBrush>并描述其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 alpha、 红色、 绿色和蓝色值。 在 XAML 中，还可以使用十六进制表示法来利用纯色绘制区域。  
@@ -59,5 +60,5 @@ ms.lasthandoff: 10/22/2017
   
  此代码示例摘自更大的示例为提供<xref:System.Windows.Media.SolidColorBrush>类。 有关完整示例，请参阅[画笔示例](http://go.microsoft.com/fwlink/?LinkID=159973)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Brushes>

@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 806a62d57e1099bb9d7cdcca657be500c33b0df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-sources-overview"></a>绑定源概述
 在数据绑定中，绑定源对象是指用户从其获取数据的对象。 本主题讨论可用作绑定源的对象类型。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 -   不能绑定到公共字段。  
   
--   类中声明的属性类型是传递给绑定的类型。 不过，绑定最终所用的类型取决于绑定目标属性的类型，而不是绑定源属性的类型。 如果类型不同，可能需要编写一个转换器来处理自定义属性最初传递给绑定的方式。 有关更多信息，请参见<xref:System.Windows.Data.IValueConverter>。  
+-   类中声明的属性类型是传递给绑定的类型。 不过，绑定最终所用的类型取决于绑定目标属性的类型，而不是绑定源属性的类型。 如果类型不同，可能需要编写一个转换器来处理自定义属性最初传递给绑定的方式。 有关详细信息，请参阅<xref:System.Windows.Data.IValueConverter>。  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>将整个对象用作绑定源  
@@ -104,11 +105,11 @@ ms.lasthandoff: 11/21/2017
   
  有关部分信任安全的详细信息，请参阅 [WPF 部分信任安全](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.ObjectDataProvider>  
  <xref:System.Windows.Data.XmlDataProvider>  
  [指定绑定源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [使用 LINQ to XML 进行 WPF 数据绑定概述](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)  
  [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)

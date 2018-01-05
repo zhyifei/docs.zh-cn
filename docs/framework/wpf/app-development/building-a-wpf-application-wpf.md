@@ -17,11 +17,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc027381ec8a5311d53077f103be035dd6c311d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e8773b0b99e6394dcc3675b21f4a9454444b617
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序可以以 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可执行文件 (.exe)、库 (.dll) 或这两类程序集相结合的形式来生成。 本主题将介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并对生成过程中的各个关键步骤进行说明。  
@@ -175,7 +176,7 @@ End Sub
   
 -   不会重新编译任何内容（如果项目未发生任何变化）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
  [WPF MSBuild 参考](/visualstudio/msbuild/wpf-msbuild-reference)  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  

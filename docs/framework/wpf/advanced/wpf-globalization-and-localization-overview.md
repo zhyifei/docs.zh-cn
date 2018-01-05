@@ -16,11 +16,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 791b1b134717859a0e90914bf118fcf1dc3e1e4f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6f2bc9021ca376b7b27f74efed6866a907b480ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 当你将自己的产品限制为只能通过一种语言使用时，便将潜在的客户群限制为全球 65 亿人口中的一小部分。 如果想让自己的应用程序被全球用户所接受，那么对产品进行经济而有效的本地化将是赢得更多客户的最好、最经济的方法。  
@@ -179,7 +180,7 @@ ms.lasthandoff: 10/22/2017
   
  使用你喜欢的支持 Unicode 的 CSV 编辑器来编辑此文件。 筛选掉本地化类别为“None”的所有项。 应看到下面的项：  
   
-|资源键|本地化类别|值|  
+|资源键|本地化类别|“值”|  
 |-|-|-| 
 |Button_1:System.Windows.Controls.Button.$Content|Button|确定|  
 |Button_2:System.Windows.Controls.Button.$Content|Button|取消|  
@@ -191,7 +192,7 @@ ms.lasthandoff: 10/22/2017
   
  将该应用程序本地化为德语版本需要进行下面的翻译：  
   
-|资源键|本地化类别|值|  
+|资源键|本地化类别|“值”|  
 |-|-|-| 
 |Button_1:System.Windows.Controls.Button.$Content|Button|确定|  
 |Button_2:System.Windows.Controls.Button.$Content|Button|Abbrechen|  
@@ -266,9 +267,9 @@ ms.lasthandoff: 10/22/2017
   
  此注释将成为与 TextBlock_1 的内容以及在 LocBaml 工具的情况下关联 (请参阅[本地化应用程序](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md))，将可以看到它输出.csv 文件中的 TextBlock_1 行的第六个列中：  
   
-|资源键|类别|可读性|可修改性|注释|值|  
+|资源键|类别|可读性|可修改性|注释|“值”|  
 |-|-|-|-|-|-|  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|此字符用作装饰性规则。|&#124;|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|此字符用作装饰性规则。|&#124;|  
   
  使用下面的语法可以将注释放置在任何元素的内容或属性上：  
   
@@ -276,7 +277,7 @@ ms.lasthandoff: 10/22/2017
   
  **本地化特性**  
   
- 通常，开发人员或本地化经理需要控制本地化人员能够阅读和修改的内容。 例如，可能不希望本地化人员翻译你公司的名称或法律用语。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一些特性，使用这些特性可以设置元素的内容或属性（本地化工具可以使用这些内容或属性锁定、隐藏元素或对元素进行排序）的可读性、可修改性和类别。 有关更多信息，请参见<xref:System.Windows.Localization.Attributes%2A>。 此示例中 LocBaml 工具仅输出这些特性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对这些特性都使用默认值，但可以替代这些默认值。 例如，下面的示例重写的默认本地化属性`TextBlock_1`和设置对本地化人员内容可读，但不可修改。  
+ 通常，开发人员或本地化经理需要控制本地化人员能够阅读和修改的内容。 例如，可能不希望本地化人员翻译你公司的名称或法律用语。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一些特性，使用这些特性可以设置元素的内容或属性（本地化工具可以使用这些内容或属性锁定、隐藏元素或对元素进行排序）的可读性、可修改性和类别。 有关详细信息，请参阅<xref:System.Windows.Localization.Attributes%2A>。 此示例中 LocBaml 工具仅输出这些特性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件对这些特性都使用默认值，但可以替代这些默认值。 例如，下面的示例重写的默认本地化属性`TextBlock_1`和设置对本地化人员内容可读，但不可修改。  
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]  
   
@@ -284,7 +285,7 @@ ms.lasthandoff: 10/22/2017
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
- 默认本地化特性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供还可重写通过代码，因此你可以正确设置自定义控件的适当的默认值。 例如:   
+ 默认本地化特性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供还可重写通过代码，因此你可以正确设置自定义控件的适当的默认值。 例如:  
   
  `[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]`  
   

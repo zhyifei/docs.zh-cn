@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de51aa83af71027ce86909a15f3ceee58fb47814
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17b7fc68319552a7b31d5eaf7826146de5c41aa5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-filter-data-in-a-view"></a>如何：筛选视图中的数据
 此示例演示如何在视图中的数据进行筛选。  
@@ -57,9 +58,9 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.CollectionView.CanFilter%2A>  
  <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [在视图中对数据进行排序](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c51f6cc5c35200267aa84960655fd734a937a7c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e37d70fe1cb6aefb1404424c1a8f5339e0badf7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>如何：为实现 GridView 的 ListView 中的行设置样式
 此示例演示如何设置样式中的行<xref:System.Windows.Controls.ListView>实现控件<xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A>模式。  
@@ -43,9 +44,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[ListViewItemStyleSnippet#GridView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [操作说明主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

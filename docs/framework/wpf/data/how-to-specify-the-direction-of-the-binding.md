@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdcda02a61f0114bfbbe5d5c411cb397cddcf683
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9944ff214a9dfe12b21e005c4e1998c249bf72b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>如何：指定绑定的方向
 本示例演示如何指定绑定是仅更新绑定目标（目标）属性或绑定源（源）属性，还是同时更新目标属性和源属性。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  有关<xref:System.Windows.Data.BindingMode.TwoWay>或<xref:System.Windows.Data.BindingMode.OneWayToSource>绑定，你可以通过设置控制的源更新的计时<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>属性。 有关更多信息，请参见<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.Binding>  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

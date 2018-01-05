@@ -17,11 +17,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09129f2dc2bac2bb17ebacd6d6db020288b6f616
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9651b55741a607b1c99a813c0011db380dfd38f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
 所有应用程序都可能会共享一组适用于实现和管理应用程序的常见功能。 本主题提供中的功能的概述<xref:System.Windows.Application>用于创建和管理应用程序的类。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |获取和设置应用程序范围的属性|使用 <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType> 属性。|  
 |获取和保存应用程序的状态|请参阅[持久保存和还原应用程序作用域属性在应用程序会话之间](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)。|  
 |管理非代码数据文件，包括资源文件、内容文件和源站点文件。|请参阅[WPF 应用程序资源、 内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。|  
-|管理独立应用程序中的窗口|请参阅[WPF Windows 概述](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。|  
+|管理独立应用程序中的窗口|请参阅 [WPF 窗口概述](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。|  
 |跟踪和管理导航|请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。|  
   
 <a name="The_Application_Definition"></a>   
@@ -330,7 +331,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- 你可以检测的值，退出代码，并更改它，处理<xref:System.Windows.Application.Exit>事件。 <xref:System.Windows.Application.Exit>事件处理程序传递<xref:System.Windows.ExitEventArgs>它提供了访问的退出代码与<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>属性。 有关更多信息，请参见<xref:System.Windows.Application.Exit>。  
+ 你可以检测的值，退出代码，并更改它，处理<xref:System.Windows.Application.Exit>事件。 <xref:System.Windows.Application.Exit>事件处理程序传递<xref:System.Windows.ExitEventArgs>它提供了访问的退出代码与<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>属性。 有关详细信息，请参阅<xref:System.Windows.Application.Exit>。  
   
 > [!NOTE]
 >  你可以在两个独立应用程序中设置的退出代码和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 但是，退出代码值对于，将忽略[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
@@ -374,7 +375,7 @@ ms.lasthandoff: 11/21/2017
   
  ![XBAP &#45; 应用程序对象事件](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Application>  
  [WPF 窗口概述](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
  [导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)  

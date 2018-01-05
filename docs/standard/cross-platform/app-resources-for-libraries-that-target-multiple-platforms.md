@@ -22,11 +22,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 74cd3df645c2490bcf98533ca8846ddfb742f67f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7006c07d32a9f0adbafce1c83c1b29842f634a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>面向多个平台的库的应用程序资源
 你可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)项目类型以确保可以从多个平台访问类库中的资源。 此项目类型适用于 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，且面向 .NET Framework 类库的可移植子集。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]确保可从桌面应用、Silverlight 应用、Windows Phone 应用和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用访问你的库。  
@@ -109,7 +112,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Resources.ResourceManager>  
  [桌面应用中的资源](../../../docs/framework/resources/index.md)  
  [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

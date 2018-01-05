@@ -24,11 +24,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b75319b5a07ac2ee1601f30394da641eb2b781c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1af7d9dba986c3775dc3625d1e7a874f6b26c97d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commanding-overview"></a>命令概述
 <a name="introduction"></a>命令是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的一种输出机制，与设备输出相比，其提供的输出处理更侧重于语义级别。 示例命令如许多应用程序均具有的“复制”、“剪切”和“粘贴”操作。  
@@ -193,7 +194,7 @@ ms.lasthandoff: 11/21/2017
   
  有关创建自定义的示例<xref:System.Windows.Input.RoutedCommand>，请参阅[创建自定义的 RoutedCommand 示例](http://go.microsoft.com/fwlink/?LinkID=159980)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Input.RoutedCommand>  
  <xref:System.Windows.Input.CommandBinding>  
  <xref:System.Windows.Input.InputBinding>  

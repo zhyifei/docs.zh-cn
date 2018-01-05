@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 90f0d27f3bf5adffe8a9b47940451e71fda082b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 676f7f696fda26ee9d86d14f06dc7b70e2565157
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xname-directive"></a>x:Name 指令
 唯一标识 XAML 定义 XAML 名称范围中的元素。 XAML 名称范围和其唯一性模型可以应用于实例化的对象，框架提供的 Api 或实现在运行时访问 XAML 创建的对象图的行为。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="silverlight-usage-notes"></a>Silverlight 用法说明  
  `x:Name`适用于 Silverlight 是分开记录。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
  <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
  [WPF 中的树](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

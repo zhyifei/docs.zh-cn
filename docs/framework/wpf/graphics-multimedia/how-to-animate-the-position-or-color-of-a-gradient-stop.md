@@ -23,11 +23,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 968d285d8a3345da9810f0ba4797bf8b2e33d36e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9c5a72d5df9d7ff9cdd90d6e09a7dab574e2caaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>如何：对渐变停止点的位置或颜色进行动画处理
 此示例演示如何进行动画处理<xref:System.Windows.Media.GradientStop.Color%2A>和<xref:System.Windows.Media.GradientStop.Offset%2A>的<xref:System.Windows.Media.GradientStop>对象。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  有关其他示例，请参阅[画笔示例](http://go.microsoft.com/fwlink/?LinkID=159973)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.GradientStop>  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

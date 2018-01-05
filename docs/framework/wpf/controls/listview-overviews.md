@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07757f28c52705ec4d5ea7ed6356c28cc68bbe86
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6dfa0e6c772fb4623c9717c1085ab862df74ca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-overviews"></a>ListView 概述
 此部分中的主题演示如何使用<xref:System.Windows.Controls.ListView>控件。  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>相关章节  
- [操作说明主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

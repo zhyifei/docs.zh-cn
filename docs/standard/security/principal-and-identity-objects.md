@@ -22,11 +22,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce3c5ce3d79a36320eee6b7312518d2559509127
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02c8b4b9f46f051e42fb2ae85a39b6ff48ad2f1a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="principal-and-identity-objects"></a>主体和标识对象
 托管的代码可能会发现标识或通过主体角色<xref:System.Security.Principal.IPrincipal>对象，它包含对引用<xref:System.Security.Principal.IIdentity>对象。 将标识对象和主体对象同用户帐户与组帐户这样常见的概念进行比较，可能会有所帮助。 在大多数网络环境中，用户帐户表示人员或程序，而组帐户表示特定类别的用户及其拥有的权限。 同样，.NET Framework 中的标识对象表示用户，而角色表示成员资格与安全性上下文。 在 .NET Framework 中，主体对象同时封装标识对象和角色。 .NET Framework 应用程序根据主体的标识或角色成员资格（后者更常见）来向主体授予权限。  
@@ -49,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
  在不同的应用程序域之间、但在同一进程内（因此在同一台计算机上）传输 **Principal** 对象时，远程处理基础结构将与调用方上下文相关联的、对 **Principal** 对象的引用复制到被调用方的上下文中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：创建 WindowsPrincipal 对象](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
  [如何：创建 GenericPrincipal 和 GenericIdentity 对象](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
  [替换主体对象](../../../docs/standard/security/replacing-a-principal-object.md)  

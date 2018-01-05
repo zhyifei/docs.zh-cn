@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 0b35c35be7351fdf45157153ce6ca55fc763c3ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定义与 .NET Framework XAML 服务一起使用的自定义类型
 当你定义了业务对象的自定义类型或者不在特定框架具有依赖关系的类型时，有一些你可以遵循 xaml 某些最佳实践。 如果您遵循这些做法，.NET Framework XAML 服务和其 XAML 读取器和 XAML 编写器可以发现你的类型的 XAML 特征，并为其提供适当的表示形式，在 XAML 节点流中使用的 XAML 类型系统。 本主题介绍类型定义，成员定义和 CLR 特性化的类型或成员的最佳做法。  
@@ -123,6 +124,6 @@ ms.lasthandoff: 11/21/2017
   
  在 WPF XAML 术语中，*内部类型*是由同一程序集，还包括引用的 XAML 定义的类型。 这样的类型可以映射通过 XAML 命名空间的有意省略了程序集 = 一部分的映射，例如， `xmlns:local="clr-namespace:WPFApplication1"`。  如果 BAML 引用的内部类型，并且该类型具有`internal`访问级别时，这将生成`GeneratedInternalTypeHelper`程序集的类。 如果你想要避免`GeneratedInternalTypeHelper`，则必须使用`public`访问级别时，或必须相关类分解为单独的程序集，并将该程序集依赖。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义类型和库的 XAML 相关 CLR 特性](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)  
  [XAML 服务](../../../docs/framework/xaml-services/index.md)

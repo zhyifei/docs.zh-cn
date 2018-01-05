@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c39cec8aaf12b268790c19751562b16fa34cfdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7467913f867ea0990ae85b0ad933c11f2fd271b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-sort-data-in-a-view"></a>如何：在视图中对数据进行排序
 本示例介绍了如何在视图中的数据进行排序。  
@@ -46,9 +47,9 @@ ms.lasthandoff: 11/21/2017
   
  有关如何应用中的排序逻辑的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，请参阅[排序和组数据使用 XAML 中的一个视图](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>  
  [在标题获得单击时对 GridView 列进行排序](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [在视图中筛选数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

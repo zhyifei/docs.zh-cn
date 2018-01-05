@@ -26,11 +26,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bd85383cc27687974fbf3689793a60569a4f97a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-and-templating"></a>样式设置和模板化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 样式设置和模板化是指一套功能（样式、模板、触发器和情节提要），可使开发者和设计者创建极具视觉表现力的效果，并为其产品创建一致的外观。 尽管开发者和/或设计者可以逐个应用程序地广泛自定义外观，但为了实现应用程序内部和之间的外观维护和共享，需要一个强大的样式设置和模板化模型。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供该模型。  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="bindings-dynamic-resources-and-event-handlers"></a>绑定、动态资源和事件处理程序  
  请注意，可以使用 `Setter.Value` 属性指定[绑定标记扩展](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)或 [DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)。 有关详细信息，请参阅为提供的示例<xref:System.Windows.Setter.Value%2A?displayProperty=nameWithType>属性。  
   
- 到目前为止，本概述仅讨论使用资源库设置属性值。 还可以在样式中指定事件处理程序。 有关更多信息，请参见<xref:System.Windows.EventSetter>。  
+ 到目前为止，本概述仅讨论使用资源库设置属性值。 还可以在样式中指定事件处理程序。 有关详细信息，请参阅<xref:System.Windows.EventSetter>。  
   
 <a name="styling_datatemplates"></a>   
 ## <a name="data-templates"></a>数据模板  
@@ -208,7 +209,7 @@ ms.lasthandoff: 11/21/2017
   
  如果要为自定义控件创建主题，请参阅[控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)的外部控件库部分。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
  [如何：查找由 ControlTemplate 生成的元素](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
  [查找由 DataTemplate 生成的元素](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)

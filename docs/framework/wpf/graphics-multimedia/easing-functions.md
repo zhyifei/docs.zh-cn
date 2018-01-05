@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 198ec8b8cb0b27e009f01f8e60a47e8086a7dbc7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 570a065d3f28befe8db4887ff908c3bd60a639a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="easing-functions"></a>缓动函数
 缓动函数允许将自定义的数学公式应用到动画。 例如，用户可能希望某个对象逼真地弹跳或表现出像在弹簧上一样。 可使用关键帧甚至 From/To/By 动画来近似地实现这些效果，但它将需要大量工作，并且动画不如使用数学公式准确。  

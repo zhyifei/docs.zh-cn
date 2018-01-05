@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 071ca1547898b80440e86df0e4cb9c0667e462ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76584e0d22b6e651dfd851675a72d1f0cb70feb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-assemblies-and-dlls"></a>程序集和 DLL 的名称
 程序集是部署和托管的代码程序的标识的单元。 程序集可以跨一个或多个文件，尽管通常程序集进行一对一映射 DLL。 因此，本部分介绍了唯一 DLL 命名约定，然后可以映射到程序集命名约定。  
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  `<Company>.<Component>.dll`  
   
- 其中`<Component>`包含一个或多个以点分隔的子句。 例如:   
+ 其中`<Component>`包含一个或多个以点分隔的子句。 例如:  
   
  `Litware.Controls.dll`。  
   
@@ -43,6 +46,6 @@ ms.lasthandoff: 11/21/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
  [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

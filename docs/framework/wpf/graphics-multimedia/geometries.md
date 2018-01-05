@@ -19,11 +19,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ace9058a7f495a9cc2cf64398fd91338b7200f3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fbe50f6a282f93ca4f0a2e2be74dbcefa604014
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometries"></a>几何图形
 <xref:System.Windows.Media.Geometry>是一个通用的类，用于呈现[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]图形，命中测试对象，并定义剪辑区域  
@@ -31,9 +32,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="in-this-section"></a>本节内容  
  [路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
  [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
  [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  

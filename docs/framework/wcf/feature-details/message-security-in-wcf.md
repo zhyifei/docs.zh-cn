@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21cbeff554be6da77ce28e87b7f82ffdd58f542d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-in-wcf"></a>WCF 中的消息安全
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 有两个用于提供安全性的主要模式（`Transport` 和 `Message`），以及结合了这两者的第三个模式 (`TransportWithMessageCredential`)。 本主题讨论消息安全和使用它的原因。  
@@ -68,8 +69,8 @@ ms.lasthandoff: 12/02/2017
   
 -   要求实现 XML 级安全机制并支持 WS-Security 规范。 这可能影响互操作性。  
   
-## <a name="see-also"></a>另请参阅  
- [保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [传输安全](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [如何： 使用传输安全和消息凭据](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+## <a name="see-also"></a>请参阅  
+ [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [传输安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [如何：使用传输安全性和消息凭据](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [Microsoft 模式和实践，第 3 章： 实现传输和消息层安全性](http://go.microsoft.com/fwlink/?LinkId=88897)

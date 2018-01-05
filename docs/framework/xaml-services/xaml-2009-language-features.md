@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 6299a29cb79650eb59df3f198c3ea3fcd49d0076
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 447ba37330e8027d86fd24239a8aca2461dce8d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 语言功能
 XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语言规范。 XAML 2009 引入了几个新指令和结构。 其中包括[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md)、 [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md)、 [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md)、 [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md)以及共同语言元素的内置类型（例如 `x:Char`）。  
@@ -42,5 +43,5 @@ XAML 2009 是新 XAML 语言功能的简写术语，其扩展现有的 XAML 语�
 ### <a name="event-attributes"></a>事件特性  
  对于由事件支持的特性，XAML 2006 会假定涉及到了标记编译并将事件提交给标记编译。 XAML 2009 支持类似标记扩展的标记窗体，其不同于事件布线，直至运行时解析/加载 XAML。 但是，WPF 应用程序和 WPF UI 的 XAML 方案通常不使用此功能。 WPF 和其 XAML 2006 实现使用在 <xref:System.Windows.UIElement> 级别定义的路由事件的事件处理程序布线组合及其标记编译器步骤，用于其众多事件特性处理。 标记编译器还预处理生成操作声明用于标记编译器的 XAML 中找到任何事件属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

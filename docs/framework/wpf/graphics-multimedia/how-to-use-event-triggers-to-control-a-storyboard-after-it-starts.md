@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d9e096969713cc4b9c42261b238691d51cb49d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 80871d9daeec257351134e9f7a72a10b697e842a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>如何：在演示图板启动之后使用事件触发器来控制演示图板
 此示例演示如何控制<xref:System.Windows.Media.Animation.Storyboard>启动后对它。 若要启动<xref:System.Windows.Media.Animation.Storyboard>使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Media.Animation.BeginStoryboard>，这样可以将对象和属性，它们进行动画处理，然后启动情节提要的动画。 如果你向提供<xref:System.Windows.Media.Animation.BeginStoryboard>通过指定的名称及其<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>属性，你可以让它从此情节提要。 然后，你可以以交互方式控制情节提要在其开始后。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  有关其他示例，请参阅[动画示例库](http://go.microsoft.com/fwlink/?LinkID=159969)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Animation.ResumeStoryboard>  
  <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>  
  <xref:System.Windows.Media.Animation.SkipStoryboardToFill>  

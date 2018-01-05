@@ -19,18 +19,19 @@ caps.latest.revision: "83"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7acf8f9dee0301ef7326f5bd688171adc13faea2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e4f15083cb3718134a3015d801be5f3c0b71bda8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="images"></a>图像
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供对多种图像格式、高保真图像呈现以及编解码器扩展性的内置支持。  
   
 ## <a name="in-this-section"></a>本节内容  
  [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Image>  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)

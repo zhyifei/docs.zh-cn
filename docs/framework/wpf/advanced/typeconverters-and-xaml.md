@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 073730382f98a6c3d61ebdadf4f1f74411ba4e63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b7ee4b3b00a675cfafc884d41079b76656bdf49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters 和 XAML
 本主题介绍将从字符串进行的类型转换作为常规 XAML 语言功能的用途。 在.NET Framework 中，<xref:System.ComponentModel.TypeConverter>类用作可作为 XAML 属性用法中的属性值的托管自定义类实现的一部分的某种特定用途。 如果你编写的自定义的类，并且你希望你的类，若要能够用作 XAML 可设置属性值的实例，你可能需要应用<xref:System.ComponentModel.TypeConverterAttribute>到该类，编写自定义<xref:System.ComponentModel.TypeConverter>类，或两者。  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/21/2017
   
  还可以基于每个属性提供类型转换器。 而不是应用[!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)]<xref:System.ComponentModel.TypeConverterAttribute>向类定义，请将其应用于属性定义 (主定义，不`get` / `set`实现)。 属性的类型必须与自定义类型转换器处理的类型匹配。 应用此特性后，当 XAML 处理器处理该属性的值时，它可以处理输入字符串并返回对象实例。 如果选择使用来自 [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] 或某种其他库（在其中无法控制类定义并且无法应用 <xref:System.ComponentModel.TypeConverterAttribute>）的属性类型，则每属性类型转换器方法特别有用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.TypeConverter>  
  [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  

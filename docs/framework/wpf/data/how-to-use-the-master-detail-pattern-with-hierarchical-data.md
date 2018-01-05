@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb546a3429012a49ee7652a3470460935fc76d70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e392b47682d1bf53dc31073920bdf212fb7d997
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>如何：对分层数据使用主-从模式
 此示例演示如何实现主 / 从方案。  
@@ -43,9 +44,9 @@ ms.lasthandoff: 11/21/2017
   
  这种方法是略有不同，当你使用[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据。 有关示例，请参阅[对层次结构的 XML 数据使用主-详细信息模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.HierarchicalDataTemplate>  
  [绑定到集合并根据选择的内容显示信息](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

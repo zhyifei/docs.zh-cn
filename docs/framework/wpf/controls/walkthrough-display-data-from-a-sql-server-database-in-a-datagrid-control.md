@@ -19,16 +19,17 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c89ed9425920602f80a2407b7529b3eb215a2e3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>演练：在 DataGrid 控件中显示 SQL Server 数据库中的数据
 在本演练中，可以从 SQL Server 数据库中检索数据和显示中的这些数据<xref:System.Windows.Controls.DataGrid>控件。 ADO.NET 实体框架用于创建表示数据，并使用 LINQ 编写从实体类检索指定的数据的查询的实体类。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]。  
@@ -111,6 +112,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="next-steps"></a>后续步骤  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.DataGrid>  
  [如何 i： 开始使用 WPF 应用程序中的实体框架？](http://go.microsoft.com/fwlink/?LinkId=159868)

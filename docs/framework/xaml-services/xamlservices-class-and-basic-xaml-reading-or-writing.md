@@ -16,17 +16,18 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 3fcf99bf52f6870ba4c8dcbab30a86b70c32491b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 30d94534f0da0e3946d036fd8e0db59971615c0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 类和基本的 XAML 读取或写入
 <xref:System.Xaml.XamlServices> 是由 .NET Framework XAML 服务提供的一个类，可用于解决无需对 XAML 节点流的特定访问权限的 XAML 方案，或从这些节点获取的 XAML 类型系统信息。 <xref:System.Xaml.XamlServices> API 可总结如下： `Load` 或 `Parse` 用以支持 XAML 加载路径， `Save` 用以支持 XAML 保存路径，以及 `Transform` ，用以提供联接加载路径和保存的技术。 `Transform` 可用于从一个 XAML 架构更改为另一个。 本主题总结了每个 API 分类，并介绍了特定方法重载之间的差异。  
   
 <a name="load"></a>   
-## <a name="load"></a>Load  
+## <a name="load"></a>加载  
  各种 <xref:System.Xaml.XamlServices.Load%2A> 重载实现了加载路径的完整逻辑。 加载路径以某种形式使用 XAML，并输出 XAML 节点流。 其中的大部分加载路径使用一种编码的 XML 文本文件格式的 XAML。 但是，你也可以加载常规流，或者加载已包含在另一个 <xref:System.Xaml.XamlReader> 实现中的预加载 XAML 源。  
   
  适用于大多数方案的最简单的重载是 <xref:System.Xaml.XamlServices.Load%28System.String%29>。 此重载具有 `fileName` 参数，它仅是文本文件的名称，该文件包含要加载的 XAML。 这适用于应用程序方案，如具有本地计算机之前序列化的状态或数据的完全信任应用程序。 这也对框架有用，你正在其中定义应用程序模型并想要加载一个标准文件，这些标准文件定义应用程序行为、启动 UI 或其他使用 XAML 的框架定义的功能。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  对于依赖于检查 XAML 节点流中每个节点的操作，通常不使用 <xref:System.Xaml.XamlServices.Transform%2A>。 相反，你需要定义自己的加载路径-保存路径操作系列并插入自己的逻辑。 在其中一个路径，在你自己的节点循环中使用 XAML 读取器/XAML 编写器对。 例如，使用 <xref:System.Xaml.XamlXmlReader> 加载初始 XAML 并使用连续的 <xref:System.Xaml.XamlXmlReader.Read%2A> 调用单步执行节点。 在 XAML 节点流级别操作现在可以调整各个节点（类型、成员、其他节点）以应用转换，或将节点保持原样。 然后开始将节点发送到 `Write` 的相关 <xref:System.Xaml.XamlObjectWriter> API 并写出对象。 有关更多信息，请参见 [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xaml.XamlObjectWriter>  
  <xref:System.Xaml.XamlServices>  
  [XAML 服务](../../../docs/framework/xaml-services/index.md)

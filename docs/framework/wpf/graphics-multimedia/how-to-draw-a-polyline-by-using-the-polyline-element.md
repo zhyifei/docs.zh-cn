@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5fa8cafdaf7856e95129f648da1d4b4ccb2f54eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b0b027aa34b310413fa02e81149292fabb40f79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>如何：使用 Polyline 元素来绘制折线
 此示例演示如何绘制折线，这是一系列连接的直线，通过使用<xref:System.Windows.Shapes.Polyline>元素。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
  此示例摘自更大的示例;有关完整的示例，请参阅[形状元素示例](http://go.microsoft.com/fwlink/?LinkID=160037)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Shapes.Polyline>  
  <xref:System.Windows.Shapes.Polygon>  
  <xref:System.Windows.Shapes.Shape>  

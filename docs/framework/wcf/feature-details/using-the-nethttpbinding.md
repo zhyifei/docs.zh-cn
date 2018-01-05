@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba5c8a977513ebaae902e3c3d37f950003548474
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ca19446d286395a744496fa300ad1a72e504e738
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-nethttpbinding"></a>使用 NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> 是为使用 HTTP 或 WebSocket 服务设计的绑定，默认情况下使用二进制编码。 <xref:System.ServiceModel.NetHttpBinding> 将检测它是否与请求-答复协定或双工协定结合使用，并更改其行为以进行匹配 ― 它将针对请求-答复协定使用 HTTP，并针对双工协定使用 WebSocket。 可以使用重写此行为<!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> -->`WebSocketTransportUsage`设置：  
@@ -68,7 +69,7 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
         }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置服务绑定](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)  
  [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  

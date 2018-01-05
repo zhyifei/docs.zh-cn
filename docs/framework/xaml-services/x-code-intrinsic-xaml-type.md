@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: d1b21e2a654b18547c8da7da724c87946724f71f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d39249a5d1c0e230d21e6d889b92d0b57c98e2ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 内部 XAML 类型
 允许在 XAML 生产的代码的放置位置。 也可以由任何编译 XAML，也可以由运行时留在更高版本使用 如解释在 XAML 生产的 XAML 处理器实现编译此类代码。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 -   必须完全限定所有对代码的分部类的 CLR 命名空间之外的实体的引用。 如果所声明的成员的分部类可重写成员的替代，这必须使用特定于语言的重写关键字指定。 如果在声明成员`x:Code`作用域与从 XAML 创建的分部类的成员冲突，因此的方式，则编译器将报告冲突时，XAML 文件无法编译或加载。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [x:Class 指令](../../../docs/framework/xaml-services/x-class-directive.md)  
  [WPF 中的代码隐藏和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
  [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

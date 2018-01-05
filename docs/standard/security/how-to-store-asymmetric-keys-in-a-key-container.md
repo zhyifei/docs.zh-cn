@@ -25,11 +25,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 475139230c4b58bc6dcc307bd99eeafdc3e89e53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8fb1a3f752114d72f7a89b641dcaf69bd61c3264
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：将非对称密钥存储在密钥容器中
 非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关密钥容器的详细信息，请参阅[了解计算机级别和用户级别的 RSA 密钥容器](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)。  
@@ -230,7 +233,7 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
  [加密数据](../../../docs/standard/security/encrypting-data.md)  
  [解密数据](../../../docs/standard/security/decrypting-data.md)  

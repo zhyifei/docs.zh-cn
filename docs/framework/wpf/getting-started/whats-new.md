@@ -16,11 +16,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4dc6a35a0ff8586b91ab7d74abc182fa6002f88
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.workload: dotnet
+ms.openlocfilehash: 8de8725bc48f69cdd18100d90a1bc610caa7ecfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>WPF 版本 4.5 中的新增功能
 <a name="introduction"></a>本主题包含有关新的和增强功能的信息[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]版本 4.5。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/11/2017
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>同步和异步验证数据  
- <xref:System.ComponentModel.INotifyDataErrorInfo>接口使数据实体类能够实现自定义验证规则并以异步方式公开验证结果。 此接口还支持自定义错误对象、每个属性具有多个错误、跨属性错误和实体级别的错误。  有关更多信息，请参见<xref:System.ComponentModel.INotifyDataErrorInfo>。  
+ <xref:System.ComponentModel.INotifyDataErrorInfo>接口使数据实体类能够实现自定义验证规则并以异步方式公开验证结果。 此接口还支持自定义错误对象、每个属性具有多个错误、跨属性错误和实体级别的错误。  有关详细信息，请参阅<xref:System.ComponentModel.INotifyDataErrorInfo>。  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>自动更新数据绑定源  
@@ -135,5 +136,5 @@ ms.lasthandoff: 11/11/2017
 ## <a name="markup-extensions-for-events"></a>事件的标记扩展  
  WPF 4.5 支持事件的标记扩展。  虽然 WPF 未定义用于事件的标记扩展，但第三方能够创建可与事件配合使用的标记扩展。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 中的新增功能](../../../../docs/framework/whats-new/index.md)

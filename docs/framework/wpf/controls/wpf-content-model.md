@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52cb3a5391d6e24643b03a880d3695a11baceca3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7d708674682ffd7b0d13c9cbe828e28bbc26e260
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-content-model"></a>WPF 内容模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是一个演示平台，提供了许多控件和类似控件的类型，主要用于显示不同类型的内容。 若要确定所要使用的控件或要从其派生的控件，应该了解特定控件可以最佳效果显示的对象类型。  
@@ -262,5 +263,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="classes-that-format-your-text"></a>设置文本格式的类  
  <xref:System.Windows.Documents.TextElement>和及其相关的类可用于设置文本格式。 <xref:System.Windows.Documents.TextElement>对象包含和中的文本格式<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>对象。 两种主要类型的<xref:System.Windows.Documents.TextElement>对象<xref:System.Windows.Documents.Block>元素和<xref:System.Windows.Documents.Inline>元素。 A<xref:System.Windows.Documents.Block>元素表示的文本，例如一个段落或列表的块。 <xref:System.Windows.Documents.Inline>元素表示在块中的文本的一部分。 许多<xref:System.Windows.Documents.Inline>类指定向其应用的中文本的格式。 每个<xref:System.Windows.Documents.TextElement>具有其自己的内容模型。 有关详细信息，请参阅 [TextElement 内容模型概述](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [高级](../../../../docs/framework/wpf/advanced/index.md)

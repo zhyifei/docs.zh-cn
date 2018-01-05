@@ -17,20 +17,21 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ee925facb1dee797c94efc8d795150217b081b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 18e423178c12e7882ed331eece17d170c4c79d5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox"></a>RichTextBox
 <xref:System.Windows.Controls.RichTextBox>元素定义具有对剪切和粘贴、 丰富文档演示文稿和内容选择等功能的内置支持的编辑控件。  
   
 ## <a name="in-this-section"></a>本节内容  
  [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.TextBox>  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

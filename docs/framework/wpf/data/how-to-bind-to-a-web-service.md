@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d1b81949d6d91420c828564debd311af47dfdfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b035f5922722a05759ff1e13514cc760a57d668
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：绑定到 Web 服务
 此示例演示如何将绑定到 Web 服务方法调用返回的对象。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
  有关的结构信息**getContentResponse**，请参阅[内容服务文档](http://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
  [让数据可供 XAML 中的绑定使用](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

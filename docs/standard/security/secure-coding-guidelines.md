@@ -25,11 +25,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3be1a51db31f18255eabe633cdeaeb860f9c8ce7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3e75f3c74c5966ce5ce22b23f7ba179e903d37aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="secure-coding-guidelines"></a>代码安全维护指南
 基于证据的安全性和代码访问安全性提供非常强大的显式机制来实现安全。 大多数应用程序代码就可以使用由 .NET Framework 实现的基础结构。 在某些情况下，需要额外的应用程序特定的安全性，或通过扩展安全系统或通过使用全新临时方法构建。  

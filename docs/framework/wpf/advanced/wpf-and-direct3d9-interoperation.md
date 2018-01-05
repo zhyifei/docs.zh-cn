@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1bd4d7486f546a340a4c722d140c6c7f5cee707
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: abfdeb4dbf72d0173b020e201f85a30b57cfb3e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 和 Direct3D9 互操作
 你可以在 Windows Presentation Foundation (WPF) 应用程序中包含 Direct3D9 内容。 本主题介绍如何创建 Direct3D9 内容，以便它有效地与 WPF 互操作。  
@@ -156,7 +157,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  如果在软件中，完全呈现 WPF<xref:System.Windows.Interop.D3DImage>未显示，因为 WPF 没有前台缓冲区。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Interop.D3DImage>  
  [Direct3D9 和 WPF 互操作性的性能注意事项](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
  [演练：创建在 WPF 中托管的 Direct3D9 内容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  

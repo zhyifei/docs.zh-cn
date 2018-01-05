@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de5bcaeffb77f52b80c229cf0402c2c090e40d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-brushes-overview"></a>WPF 画笔概述
 在你的屏幕上可见的所有内容是可见的因为它已由画笔绘制。 例如，画笔用于描述背景的按钮、 文本、 前景和形状的填充。 本主题介绍的概念与绘制[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画笔并提供了示例。 借助画笔，可以利用任意内容（从简单的纯色到复杂的图案和图像集）绘制 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 对象。  
@@ -169,7 +170,7 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息为何<xref:System.Windows.Media.VisualBrush>对象不能为冻结，请参阅<xref:System.Windows.Media.VisualBrush>类型页。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Brushes>  
  [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
@@ -178,5 +179,5 @@ ms.lasthandoff: 11/21/2017
  [画笔示例](http://go.microsoft.com/fwlink/?LinkID=159973)  
  [ImageBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [VisualBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160049)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

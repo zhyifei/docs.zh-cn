@@ -22,11 +22,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df6659853e9c410ece3233cfa630c9066303a871
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 68a3d2c7335ff15706925f9a7986164e6d9c0c36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choosing-between-class-and-struct"></a>在类和结构之间选择
 每个框架设计器将面向的基本设计决策之一是要设计一个类型作为类 （引用类型） 或结构 （值类型）。 熟悉的引用类型和值类型的行为差异在进行此选择至关重要。  
@@ -61,6 +64,6 @@ ms.lasthandoff: 11/21/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)

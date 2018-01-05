@@ -23,18 +23,19 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 16c3184c329fa83ddf091326c97d6faf2e2c88f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用图像、图形和视觉对象进行绘制
 本主题介绍如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>对象来绘制的图像的区域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
     
   
 <a name="prereqs"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  要了解本主题，应熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供的不同画笔类型及其基本功能。 有关介绍，请参阅 [WPF 画笔概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。  
   
 <a name="image"></a>   
@@ -144,7 +145,7 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息的平铺功能的<xref:System.Windows.Media.TileBrush>对象，请参阅[TileBrush 概述](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.ImageBrush>  
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.VisualBrush>  

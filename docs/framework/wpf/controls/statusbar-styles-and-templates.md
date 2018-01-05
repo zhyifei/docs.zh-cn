@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 570edc023467fb6e95cdcba23b75ac53397797c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 370f8f9bc61ffbdd3b98743d11f61613803e6d98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="statusbar-styles-and-templates"></a>StatusBar 样式和模板
 本主题介绍的样式和模板的<xref:System.Windows.Controls.Primitives.StatusBar>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  

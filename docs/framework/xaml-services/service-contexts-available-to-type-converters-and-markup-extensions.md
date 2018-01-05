@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 229601515442b5e84f6c4278b17db7ae25945a42
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a75a5e6c6e6f627606ef5883655b6780e7519bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>可供类型转换器和标记扩展使用的服务上下文
 支持类型转换器和标记扩展用法的类型的作者通常必须拥有用法在标记或周围对象图结构中的所在位置的相关上下文信息。 为了能正确实例化所提供的对象或者对对象图中的现有对象进行对象引用，可能需要此信息。 使用.NET Framework XAML 服务时，可能需要的上下文将作为一系列服务接口公开。 类型转换器或标记扩展支持代码可使用从 <xref:System.Xaml.XamlObjectWriter> 或相关类型传递且可用的服务提供程序上下文来查询服务。 可通过一个这样的服务来直接获取 XAML 架构上下文。 本主题介绍如何从值转换器实现访问服务上下文，并且列出了通常可用的服务及其角色。  
@@ -195,7 +196,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  有关更多信息，请参见 <xref:System.Xaml.IDestinationTypeProvider>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Markup.MarkupExtension>  
  <xref:System.Xaml.XamlObjectWriter>  
  [XAML 的标记扩展概述](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  

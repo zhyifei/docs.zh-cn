@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: faa74e982fb114d041468c53dde2f978bb3faa35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0feef370e6b09d2f58a33f2142bd654e1d7e3402
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 的标记扩展概述
 标记扩展是一种用于获取既不是基元也不是特定 XAML 类型的值的 XAML 方法。 对于特性用法，标记扩展使用已知的左大括号 `{` 字符序列输入标记扩展范围，并使用右大括号 `}` 退出。 使用 .NET Framework XAML 服务时，可以使用 System.Xaml 程序集中的某些预定义 XAML 语言标记扩展。 还可以使用 <xref:System.Windows.Markup.MarkupExtension> 类（在 System.Xaml 中定义）的子类，并定义自己的标记扩展。 或者，如果已在引用特定框架，则可以使用由该框架定义的标记扩展。  
@@ -164,7 +165,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  如果在保存路径上使用 XAML 节点流，则对象图表示形式中通常没有任何内容可告知要序列化的对象最初由标记扩展用法和 `ProvideValue` 结果提供。 需要保持标记扩展用法以进行往返，同时还捕获对象图中的其他更改的方案必须设计自己的方法，来保留原始 XAML 输入中有关标记扩展用法的信息。 例如，若要还原标记扩展用法，可能需要在保存路径上使用节点流才能还原标记扩展用法，或在原始 XAML 与往返 XAML 之间执行某种类型的合并。 某些 XAML 实现框架（如 WPF）使用中间类型（表达式）来帮助表示标记扩展用法提供值的情况。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Markup.MarkupExtension>  
  [XAML 的类型转换器和标记扩展](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
  [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

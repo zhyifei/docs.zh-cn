@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 9a445d7e730ecb743d5e4086ec682b12a7bf3ff9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25aac1d4478279561cbcdda6c1cf912c3c3b2cde
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自定义类型和库的 XAML 相关 CLR 特性
 本主题介绍由.NET Framework XAML 服务定义的公共语言运行时 (CLR) 属性。 它还介绍在.NET Framework 中定义具有对程序集或类型的应用程序的与 XAML 相关方案的其他 CLR 特性。 使用这些 CLR 特性的归程序集、 类型或成员提供与你的类型的 XAML 类型系统信息。 使用.NET Framework XAML 服务，用于处理 XAML 节点流直接或通过专用的 XAML 读取器和 XAML 编写器任何 XAML 使用者提供信息。  
@@ -185,7 +186,7 @@ ms.lasthandoff: 11/21/2017
   
  **适用于：**类、 属性。  
   
- **自变量：**支持两个归属窗体以字符串形式的类型或类型用作<xref:System.Type>。 请参阅<xref:System.Windows.Markup.XamlDeferLoadAttribute>。  
+ **自变量：**支持两个归属窗体以字符串形式的类型或类型用作<xref:System.Type>。 请参阅 <xref:System.Windows.Markup.XamlDeferLoadAttribute>。  
   
  指示类或属性 （如模板行为），具有 xaml 的延迟的加载使用情况和报告类，使推迟行为和其目标中的内容类型。  
   
@@ -277,6 +278,6 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  .NET framework XAML 服务还定义了与 XAML 相关的特性<xref:System.Windows.Markup.RootNamespaceAttribute>。 此属性是用于项目系统支持一个程序集级别属性，但不与 XAML 自定义类型有关。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Attribute>  
  [定义与 .NET Framework XAML 服务一起使用的自定义类型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)

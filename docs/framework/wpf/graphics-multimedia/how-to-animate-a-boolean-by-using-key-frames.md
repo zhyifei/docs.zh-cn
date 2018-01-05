@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ac129bf133cca88a6d2f6a724d25ea2519cb72e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 910210b8360956b9e92b613fad52e7bfc7f5e49e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a>如何：使用关键帧对布尔属性值进行动画处理
 此示例演示如何进行动画处理的布尔属性值<xref:System.Windows.Controls.Button>使用关键帧的控件。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整示例，请参阅[关键帧动画示例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  
  <xref:System.Windows.UIElement.IsEnabled%2A>  
  <xref:System.Windows.Controls.Button>  

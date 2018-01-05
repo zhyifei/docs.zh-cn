@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 358b635ee74699d9d427e8fac23fabd70c6cfa98
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae3193a2f9ef01f8e7f71235f15ed070e84ec11c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>用来控制编码的 SOAP 序列化的属性 
 命名为“简单对象访问协议 (SOAP) 1.1”(Simple Object Access Protocol (SOAP) 1.1) 的万维网联合会 (www.w3.org) 文档包含一个可选章节（第 5 节），该节描述了如何编码 SOAP 参数。 要符合该规范的第 5 节，必须使用在 <xref:System.Xml.Serialization> 命名空间中找到的一组特殊属性。 将这些特性适当应用于类和类的成员，然后使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化一个或多个类的实例。  
@@ -40,7 +43,7 @@ ms.lasthandoff: 12/02/2017
 |<xref:System.Xml.Serialization.SoapIncludeAttribute>|公共的派生类声明，以及 Web 服务描述语言 (WSDL) 文档的公共方法。|生成要在序列化时识别的架构时，应该将该类型包括在内。|  
 |<xref:System.Xml.Serialization.SoapTypeAttribute>|公共类声明。|类应序列化为 XML 类型。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  [如何：将对象序列化为 SOAP 编码的 XML 流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
  [如何：重写编码的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  

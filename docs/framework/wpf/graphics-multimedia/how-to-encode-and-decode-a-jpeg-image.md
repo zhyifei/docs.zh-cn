@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb432c4609fc873014c39a95e0029584e4d44f93
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2e982c09a27789bcf4a679fd9d237bf1a2b113f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-encode-and-decode-a-jpeg-image"></a>如何：编码和解码 JPEG 图像
 下面的示例演示如何进行解码，并进行编码[!INCLUDE[TLA#tla_jpeg](../../../../includes/tlasharptla-jpeg-md.md)]映像使用特定<xref:System.Windows.Media.Imaging.JpegBitmapDecoder>和<xref:System.Windows.Media.Imaging.JpegBitmapEncoder>对象。  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

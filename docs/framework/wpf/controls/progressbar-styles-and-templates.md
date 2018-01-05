@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 475607381f16d7b42f26f12809a11d5eaf4e74bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6809ce2f51af8a1baf535afa8fe80f4e5b5f53e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="progressbar-styles-and-templates"></a>ProgressBar 样式和模板
 本主题介绍的样式和模板的<xref:System.Windows.Controls.ProgressBar>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  

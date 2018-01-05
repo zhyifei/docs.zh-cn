@@ -27,11 +27,14 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f174ef3ada619e20d375035bee82b0ed9bbc145
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b3846e1c932ed23c61d3102d19ed3a039284aa4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>使用 XML Web services 进行 XML 序列化
 XML 序列化是在 XML Web services 体系结构中使用的基础传输机制，由 <xref:System.Xml.Serialization.XmlSerializer> 类执行。 要控制由 XML Web service 生成的 XML，可以对用于创建 XML Web service (.asmx) 的文件的类、返回值、参数和字段应用 [控制 XML 序列化的特性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)和 [控制编码的 SOAP 序列化的特性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中列出的特性。 有关创建 XML Web service 的更多信息，请参阅[使用 ASP.NET 生成 XML Web service](http://msdn.microsoft.com/en-us/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c)。  
@@ -266,7 +269,7 @@ public class Order{
 </BookOrderForm>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  [用来控制编码的 SOAP 序列化的属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
  [如何：将对象序列化为 SOAP 编码的 XML 流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  

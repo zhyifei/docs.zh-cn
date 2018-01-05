@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 360b453b2a25b6822485f18cc81cb43e313949eb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e413a7ddf7e256538e56876712a54f875392b59a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>演练：对用户控件启用拖放功能
 本演练演示如何创建可在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中参与拖放数据传输的自定义用户控件。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/22/2017
   
 -   使面板能够接收用户控件中放置的数据。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   Visual Studio 2010  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/22/2017
 ## <a name="creating-the-application-project"></a>创建应用程序项目  
  在本部分中，你将创建应用程序基础结构，其中包括主页，其中两个面板和<xref:System.Windows.Controls.TextBox>。  
   
-### <a name="to-create-the-project"></a>创建项目  
+### <a name="to-create-the-project"></a>要创建项目  
   
 1.  在 Visual Basic 或 Visual C# 中创建名为 `DragDropExample` 的新 WPF 应用程序项目。 有关详细信息，请参阅[如何：创建新的 WPF 应用程序项目](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。  
   
@@ -346,5 +347,5 @@ ms.lasthandoff: 10/22/2017
   
      ![按住 Ctrl 键的同时拖动圆形](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop_PanelDrop")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [拖放概述](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

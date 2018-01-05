@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 389ba73c4509f41f6c2cf86363e59ea720eb3c9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="nested-types"></a>嵌套类型
 嵌套的类型是在另一个类型，这称为封闭类型的范围内定义的类型。 嵌套的类型有权访问其封闭类型的所有成员。 例如，它有权访问在封闭类型和保护的封闭类型的所有祖先中定义的字段定义的私有字段。  
@@ -53,6 +56,6 @@ ms.lasthandoff: 11/21/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型设计准则](../../../docs/standard/design-guidelines/type.md)  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)

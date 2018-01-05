@@ -19,11 +19,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e0886e387b6de34673cd4990ef8b61e08674b531
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62144217199a62da3e41bf381162c94c91d00e72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-overview"></a>ListView 概述
 <xref:System.Windows.Controls.ListView>控件提供的基础结构在不同的布局或视图中显示的数据项目集。 例如，用户可能需要在表格中显示数据项，并同时对表格的列进行排序。  
@@ -93,11 +94,11 @@ ms.lasthandoff: 11/21/2017
   
  有关自定义视图模式的示例，请参阅[具有多个视图的 ListView 示例](http://go.microsoft.com/fwlink/?LinkID=160013)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.GridView>  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.ListViewItem>  
  <xref:System.Windows.Data.Binding>  
  [GridView 概述](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [控件](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

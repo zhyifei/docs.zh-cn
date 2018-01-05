@@ -13,11 +13,12 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload: dotnet
+ms.openlocfilehash: 410b885daac00cd6da949b285721c206facb7079
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 <a name="introduction"></a>本文总结了以下版本的 .NET Framework 中的主要新功能和改进：  
@@ -122,7 +123,7 @@ ASP.NET 处理包括 23 个事件的预定义管道中的请求。 ASP.NET 执�
 
 **ASP.NET 窗体身份验证凭据的 SHA-2 哈希选项**
 
-在 .NET Framework 4.7 及其早期版本中，ASP.NET 允许开发者使用 MD5 或 SHA1 在配置文件中存储用户凭据和哈希密码。 从 .NET Framework 4.7.1 开始，ASP.NET 还支持新的安全 SHA-2 哈希选项（如 SHA256、SHA384 和 SHA512）。 SHA1 保留默认值，非默认哈希算法可以在 Web 配置文件中定义。 例如: 
+在 .NET Framework 4.7 及其早期版本中，ASP.NET 允许开发者使用 MD5 或 SHA1 在配置文件中存储用户凭据和哈希密码。 从 .NET Framework 4.7.1 开始，ASP.NET 还支持新的安全 SHA-2 哈希选项（如 SHA256、SHA384 和 SHA512）。 SHA1 保留默认值，非默认哈希算法可以在 Web 配置文件中定义。 例如:
 
 ```xml
 <system.web>
@@ -301,7 +302,7 @@ End Class
 
  然后可以创建一个资源文件 DataAnnotation.Localization.fr.resx，它的键为错误消息字符串，值为本地化的错误消息。 该文件必须位于 `App.LocalResources` 文件夹中。 例如，下面列出了键以及它在本地化法语 (fr) 错误消息中的值：
 
-| 名称                                 | 值                                     |
+| name                                 | “值”                                     |
 | ------------------------------------ | ----------------------------------------- |
 | 分级必须介于 1 和 10 之间。 | La note doit être comprise entre 1 et 10. |
 
@@ -406,7 +407,7 @@ End Function
 
  **对持久化密钥对称加密的支持** Windows 加密库 (CNG) 添加了对存储持久化对称密钥和使用硬件存储的对称密钥的支持，并且 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 使开发人员可以使用此功能。  因为密钥名和密钥提供程序的概念是特定于实现的，所以使用此功能要求使用具体实现类型（而不是首选出厂方法）的构造函数（例如，调用 `Aes.Create`）。
 
- 持久化密钥对称加密支持因 AES (<xref:System.Security.Cryptography.AesCng>) 和 3DES (<xref:System.Security.Cryptography.TripleDESCng>) 算法存在。 例如: 
+ 持久化密钥对称加密支持因 AES (<xref:System.Security.Cryptography.AesCng>) 和 3DES (<xref:System.Security.Cryptography.TripleDESCng>) 算法存在。 例如:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1451,7 +1452,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 ### <a name="portable-class-libraries"></a>可移植类库
  利用 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]（和更高版本）中的可移植类库项目，你可以编写和生成在多个 .NET Framework 平台上运行的托管程序集。 使用可移植类库项目，你可以选择要作为目标的平台（如 Windows Phone 和[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]）。 项目中的可用类型和成员自动限制为这些平台中的公共类型和成员。 有关详细信息，请参阅[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)   
  [.NET Framework 中辅助功能的新增功能](whats-new-in-accessibility.md)   
  [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-in-visual-studio)   

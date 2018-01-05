@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfc1de83c6c91e7a42c09b080b647aaf440e5a61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a1292dae3a6fc7e86387ecbe3bf2b1da6912cc0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>如何：在不使用演示图板的情况下对属性进行动画处理
 此示例演示一种方法向属性应用动画，而无需使用<xref:System.Windows.Media.Animation.Storyboard>。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  要进行动画处理，而无需使用其他方式<xref:System.Windows.Media.Animation.Storyboard>对象; 有关详细信息，请参阅[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Animation.AnimationTimeline>  
  <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>  
  <xref:System.Windows.Media.Animation>  
