@@ -18,20 +18,21 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a73772ddb9d9344e53bf4df71775f1f17e179342
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1a74bf246a66f54e274833c2c9f04f8da0f48a0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="panel"></a><span data-ttu-id="4c24e-102">Panel</span><span class="sxs-lookup"><span data-stu-id="4c24e-102">Panel</span></span>
-<span data-ttu-id="4c24e-103"><xref:System.Windows.Controls.Panel>是支持应用程序中的布局的所有元素的基类[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4c24e-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="panel"></a><span data-ttu-id="9e507-102">Panel</span><span class="sxs-lookup"><span data-stu-id="9e507-102">Panel</span></span>
+<span data-ttu-id="9e507-103"><xref:System.Windows.Controls.Panel>是支持应用程序中的布局的所有元素的基类[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="9e507-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4c24e-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="4c24e-104">In This Section</span></span>  
- [<span data-ttu-id="4c24e-105">面板概述</span><span class="sxs-lookup"><span data-stu-id="4c24e-105">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="4c24e-106">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="4c24e-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9e507-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="9e507-104">In This Section</span></span>  
+ [<span data-ttu-id="9e507-105">面板概述</span><span class="sxs-lookup"><span data-stu-id="9e507-105">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [<span data-ttu-id="9e507-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="9e507-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="4c24e-107">参考</span><span class="sxs-lookup"><span data-stu-id="4c24e-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9e507-107">参考</span><span class="sxs-lookup"><span data-stu-id="9e507-107">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -46,9 +47,9 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="4c24e-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="4c24e-108">Related Sections</span></span>  
- [<span data-ttu-id="4c24e-109">布局</span><span class="sxs-lookup"><span data-stu-id="4c24e-109">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="9e507-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="9e507-108">Related Sections</span></span>  
+ [<span data-ttu-id="9e507-109">布局</span><span class="sxs-lookup"><span data-stu-id="9e507-109">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="4c24e-110">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="4c24e-110">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="9e507-110">演练：我的第一个 WPF 桌面应用程序</span><span class="sxs-lookup"><span data-stu-id="9e507-110">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="4c24e-111">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="4c24e-111">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="9e507-111">ScrollViewer 概述</span><span class="sxs-lookup"><span data-stu-id="9e507-111">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

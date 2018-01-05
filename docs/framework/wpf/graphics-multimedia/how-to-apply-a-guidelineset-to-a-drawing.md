@@ -16,28 +16,29 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd8d93d128c03cb9ee482860603e5734e96c6fc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5cf689f8a7c475dbdda416297e28118d43bfdbff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-apply-a-guidelineset-to-a-drawing"></a><span data-ttu-id="a6714-102">如何：向绘图应用 GuidelineSet</span><span class="sxs-lookup"><span data-stu-id="a6714-102">How to: Apply a GuidelineSet to a Drawing</span></span>
-<span data-ttu-id="a6714-103">此示例演示如何将应用<xref:System.Windows.Media.GuidelineSet>到<xref:System.Windows.Media.DrawingGroup>。</span><span class="sxs-lookup"><span data-stu-id="a6714-103">This example shows how to apply a <xref:System.Windows.Media.GuidelineSet> to a <xref:System.Windows.Media.DrawingGroup>.</span></span>  
+# <a name="how-to-apply-a-guidelineset-to-a-drawing"></a><span data-ttu-id="ae9f7-102">如何：向绘图应用 GuidelineSet</span><span class="sxs-lookup"><span data-stu-id="ae9f7-102">How to: Apply a GuidelineSet to a Drawing</span></span>
+<span data-ttu-id="ae9f7-103">此示例演示如何将应用<xref:System.Windows.Media.GuidelineSet>到<xref:System.Windows.Media.DrawingGroup>。</span><span class="sxs-lookup"><span data-stu-id="ae9f7-103">This example shows how to apply a <xref:System.Windows.Media.GuidelineSet> to a <xref:System.Windows.Media.DrawingGroup>.</span></span>  
   
- <span data-ttu-id="a6714-104"><xref:System.Windows.Media.DrawingGroup>类是唯一的类型<xref:System.Windows.Media.Drawing>具有<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="a6714-104">The <xref:System.Windows.Media.DrawingGroup> class is the only type of <xref:System.Windows.Media.Drawing> that has a <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> property.</span></span> <span data-ttu-id="a6714-105">要应用<xref:System.Windows.Media.GuidelineSet>为另一种<xref:System.Windows.Media.Drawing>，将其添加到<xref:System.Windows.Media.DrawingGroup>，然后将应用<xref:System.Windows.Media.GuidelineSet>到你<xref:System.Windows.Media.DrawingGroup>。</span><span class="sxs-lookup"><span data-stu-id="a6714-105">To apply a <xref:System.Windows.Media.GuidelineSet> to another type of <xref:System.Windows.Media.Drawing>, add it to a <xref:System.Windows.Media.DrawingGroup> and then apply the <xref:System.Windows.Media.GuidelineSet> to your <xref:System.Windows.Media.DrawingGroup>.</span></span>  
+ <span data-ttu-id="ae9f7-104"><xref:System.Windows.Media.DrawingGroup>类是唯一的类型<xref:System.Windows.Media.Drawing>具有<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>属性。</span><span class="sxs-lookup"><span data-stu-id="ae9f7-104">The <xref:System.Windows.Media.DrawingGroup> class is the only type of <xref:System.Windows.Media.Drawing> that has a <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> property.</span></span> <span data-ttu-id="ae9f7-105">要应用<xref:System.Windows.Media.GuidelineSet>为另一种<xref:System.Windows.Media.Drawing>，将其添加到<xref:System.Windows.Media.DrawingGroup>，然后将应用<xref:System.Windows.Media.GuidelineSet>到你<xref:System.Windows.Media.DrawingGroup>。</span><span class="sxs-lookup"><span data-stu-id="ae9f7-105">To apply a <xref:System.Windows.Media.GuidelineSet> to another type of <xref:System.Windows.Media.Drawing>, add it to a <xref:System.Windows.Media.DrawingGroup> and then apply the <xref:System.Windows.Media.GuidelineSet> to your <xref:System.Windows.Media.DrawingGroup>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a6714-106">示例</span><span class="sxs-lookup"><span data-stu-id="a6714-106">Example</span></span>  
- <span data-ttu-id="a6714-107">下面的示例创建两个<xref:System.Windows.Media.DrawingGroup>对象几乎完全相同; 唯一的区别是： 第二个<xref:System.Windows.Media.DrawingGroup>具有<xref:System.Windows.Media.GuidelineSet>且第一个没有。</span><span class="sxs-lookup"><span data-stu-id="a6714-107">The following example creates two <xref:System.Windows.Media.DrawingGroup> objects that are almost identical; the only difference is: the second <xref:System.Windows.Media.DrawingGroup> has a <xref:System.Windows.Media.GuidelineSet> and the first does not.</span></span>  
+## <a name="example"></a><span data-ttu-id="ae9f7-106">示例</span><span class="sxs-lookup"><span data-stu-id="ae9f7-106">Example</span></span>  
+ <span data-ttu-id="ae9f7-107">下面的示例创建两个<xref:System.Windows.Media.DrawingGroup>对象几乎完全相同; 唯一的区别是： 第二个<xref:System.Windows.Media.DrawingGroup>具有<xref:System.Windows.Media.GuidelineSet>且第一个没有。</span><span class="sxs-lookup"><span data-stu-id="ae9f7-107">The following example creates two <xref:System.Windows.Media.DrawingGroup> objects that are almost identical; the only difference is: the second <xref:System.Windows.Media.DrawingGroup> has a <xref:System.Windows.Media.GuidelineSet> and the first does not.</span></span>  
   
- <span data-ttu-id="a6714-108">下图显示该示例的输出。</span><span class="sxs-lookup"><span data-stu-id="a6714-108">The following illustration shows the output from the example.</span></span> <span data-ttu-id="a6714-109">因为之间的两个的呈现差别<xref:System.Windows.Media.DrawingGroup>对象很小，因此放大绘图的各个部分。</span><span class="sxs-lookup"><span data-stu-id="a6714-109">Because the rendering difference between the two <xref:System.Windows.Media.DrawingGroup> objects is so subtle, portions of the drawings are enlarged.</span></span>  
+ <span data-ttu-id="ae9f7-108">下图显示该示例的输出。</span><span class="sxs-lookup"><span data-stu-id="ae9f7-108">The following illustration shows the output from the example.</span></span> <span data-ttu-id="ae9f7-109">因为之间的两个的呈现差别<xref:System.Windows.Media.DrawingGroup>对象很小，因此放大绘图的各个部分。</span><span class="sxs-lookup"><span data-stu-id="ae9f7-109">Because the rendering difference between the two <xref:System.Windows.Media.DrawingGroup> objects is so subtle, portions of the drawings are enlarged.</span></span>  
   
- <span data-ttu-id="a6714-110">![具有和没有 GuidelineSet 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span><span class="sxs-lookup"><span data-stu-id="a6714-110">![A DrawingGroup with and without a GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span></span>  
+ <span data-ttu-id="ae9f7-110">![具有和没有 GuidelineSet 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span><span class="sxs-lookup"><span data-stu-id="ae9f7-110">![A DrawingGroup with and without a GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMDrawingGroupGuidelineSetExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupGuidelineSetExample.cs#graphicsmmdrawinggroupguidelinesetexamplewholepage)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMDrawingGroupGuidelineSetExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupGuidelineSetExample.xaml#graphicsmmdrawinggroupguidelinesetexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="a6714-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a6714-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ae9f7-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="ae9f7-111">See Also</span></span>  
  <xref:System.Windows.Media.DrawingGroup>  
  <xref:System.Windows.Media.GuidelineSet>  
- [<span data-ttu-id="a6714-112">Drawing 对象概述</span><span class="sxs-lookup"><span data-stu-id="a6714-112">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+ [<span data-ttu-id="ae9f7-112">Drawing 对象概述</span><span class="sxs-lookup"><span data-stu-id="ae9f7-112">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

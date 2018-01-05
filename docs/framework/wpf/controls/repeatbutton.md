@@ -17,23 +17,24 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56edfe456dcb97b1d9de906ee3e3d1d09bfcf109
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 94f6b89b4e23f2610bdc3c834279eeb3eb9c9815
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="repeatbutton"></a><span data-ttu-id="a9488-102">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="a9488-102">RepeatButton</span></span>
-<span data-ttu-id="a9488-103"><xref:System.Windows.Controls.Primitives.RepeatButton>类似于<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="a9488-103">The <xref:System.Windows.Controls.Primitives.RepeatButton> is similar to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="a9488-104">但是，<xref:System.Windows.Controls.Primitives.RepeatButton>元素，可以控制何时以及如何<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件发生。</span><span class="sxs-lookup"><span data-stu-id="a9488-104">However, <xref:System.Windows.Controls.Primitives.RepeatButton> elements give you control over when and how the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event occurs.</span></span>  
+# <a name="repeatbutton"></a><span data-ttu-id="132b3-102">RepeatButton</span><span class="sxs-lookup"><span data-stu-id="132b3-102">RepeatButton</span></span>
+<span data-ttu-id="132b3-103"><xref:System.Windows.Controls.Primitives.RepeatButton>类似于<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="132b3-103">The <xref:System.Windows.Controls.Primitives.RepeatButton> is similar to a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="132b3-104">但是，<xref:System.Windows.Controls.Primitives.RepeatButton>元素，可以控制何时以及如何<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件发生。</span><span class="sxs-lookup"><span data-stu-id="132b3-104">However, <xref:System.Windows.Controls.Primitives.RepeatButton> elements give you control over when and how the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event occurs.</span></span>  
   
- <span data-ttu-id="a9488-105">下图显示了重复的按钮控件、 默认、 PointerFocused，和已按的三个状态的示例。</span><span class="sxs-lookup"><span data-stu-id="a9488-105">The following graphic shows an example of the three states of a repeat button control, Default, PointerFocused, and Pressed.</span></span> <span data-ttu-id="a9488-106">第一个按钮显示的默认状态<xref:System.Windows.Controls.Primitives.RepeatButton>。</span><span class="sxs-lookup"><span data-stu-id="a9488-106">The first button shows the default state of the <xref:System.Windows.Controls.Primitives.RepeatButton>.</span></span> <span data-ttu-id="a9488-107">第二部分演示如何按钮的外观更改当鼠标指针悬停于按钮上，给予它焦点。</span><span class="sxs-lookup"><span data-stu-id="a9488-107">The second shows how the appearance of the button changes when the mouse pointer hovers over the button, giving it focus.</span></span> <span data-ttu-id="a9488-108">最后一个按钮显示的外观<xref:System.Windows.Controls.Primitives.RepeatButton>当用户按鼠标按钮控件。</span><span class="sxs-lookup"><span data-stu-id="a9488-108">The last button shows the appearance of the <xref:System.Windows.Controls.Primitives.RepeatButton> when the user presses the mouse button over the control.</span></span>  
+ <span data-ttu-id="132b3-105">下图显示了重复的按钮控件、 默认、 PointerFocused，和已按的三个状态的示例。</span><span class="sxs-lookup"><span data-stu-id="132b3-105">The following graphic shows an example of the three states of a repeat button control, Default, PointerFocused, and Pressed.</span></span> <span data-ttu-id="132b3-106">第一个按钮显示的默认状态<xref:System.Windows.Controls.Primitives.RepeatButton>。</span><span class="sxs-lookup"><span data-stu-id="132b3-106">The first button shows the default state of the <xref:System.Windows.Controls.Primitives.RepeatButton>.</span></span> <span data-ttu-id="132b3-107">第二部分演示如何按钮的外观更改当鼠标指针悬停于按钮上，给予它焦点。</span><span class="sxs-lookup"><span data-stu-id="132b3-107">The second shows how the appearance of the button changes when the mouse pointer hovers over the button, giving it focus.</span></span> <span data-ttu-id="132b3-108">最后一个按钮显示的外观<xref:System.Windows.Controls.Primitives.RepeatButton>当用户按鼠标按钮控件。</span><span class="sxs-lookup"><span data-stu-id="132b3-108">The last button shows the appearance of the <xref:System.Windows.Controls.Primitives.RepeatButton> when the user presses the mouse button over the control.</span></span>  
   
- <span data-ttu-id="a9488-109">![重复按钮状态](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span><span class="sxs-lookup"><span data-stu-id="a9488-109">![Repeat button states](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span></span>  
-<span data-ttu-id="a9488-110">典型 RepeatButton</span><span class="sxs-lookup"><span data-stu-id="a9488-110">Typical RepeatButton</span></span>  
+ <span data-ttu-id="132b3-109">![重复按钮状态](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span><span class="sxs-lookup"><span data-stu-id="132b3-109">![Repeat button states](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")</span></span>  
+<span data-ttu-id="132b3-110">典型 RepeatButton</span><span class="sxs-lookup"><span data-stu-id="132b3-110">Typical RepeatButton</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a9488-111">本节内容</span><span class="sxs-lookup"><span data-stu-id="a9488-111">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="132b3-111">本节内容</span><span class="sxs-lookup"><span data-stu-id="132b3-111">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="a9488-112">参考</span><span class="sxs-lookup"><span data-stu-id="a9488-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="132b3-112">参考</span><span class="sxs-lookup"><span data-stu-id="132b3-112">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="a9488-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="a9488-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="132b3-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="132b3-113">Related Sections</span></span>

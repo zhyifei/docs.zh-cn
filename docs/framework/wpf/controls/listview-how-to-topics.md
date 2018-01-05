@@ -17,35 +17,36 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98b0d38ab78bb36337461495cc6e8e782160617a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1f937232119281f4e94dcee9013546a56a67265
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="listview-how-to-topics"></a><span data-ttu-id="62136-102">ListView 帮助主题</span><span class="sxs-lookup"><span data-stu-id="62136-102">ListView How-to Topics</span></span>
-<span data-ttu-id="62136-103">本部分中的主题介绍如何使用<xref:System.Windows.Controls.ListView>控件来显示组的数据项。</span><span class="sxs-lookup"><span data-stu-id="62136-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
+# <a name="listview-how-to-topics"></a><span data-ttu-id="a6e92-102">ListView 帮助主题</span><span class="sxs-lookup"><span data-stu-id="a6e92-102">ListView How-to Topics</span></span>
+<span data-ttu-id="a6e92-103">本部分中的主题介绍如何使用<xref:System.Windows.Controls.ListView>控件来显示组的数据项。</span><span class="sxs-lookup"><span data-stu-id="a6e92-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListView> control to display a set of data items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="62136-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="62136-104">In This Section</span></span>  
- [<span data-ttu-id="62136-105">在标题获得单击时对 GridView 列进行排序</span><span class="sxs-lookup"><span data-stu-id="62136-105">Sort a GridView Column When a Header Is Clicked</span></span>](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [<span data-ttu-id="62136-106">创建 ListView 的自定义视图模式</span><span class="sxs-lookup"><span data-stu-id="62136-106">Create a Custom View Mode for a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [<span data-ttu-id="62136-107">使用模板设置使用 GridView 的 ListView 的样式</span><span class="sxs-lookup"><span data-stu-id="62136-107">Use Templates to Style a ListView That Uses GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [<span data-ttu-id="62136-108">创建拖动的 GridView 列标题的样式</span><span class="sxs-lookup"><span data-stu-id="62136-108">Create a Style for a Dragged GridView Column Header</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [<span data-ttu-id="62136-109">使用 GridView 显示 ListView 内容</span><span class="sxs-lookup"><span data-stu-id="62136-109">Display ListView Contents by Using a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [<span data-ttu-id="62136-110">使用触发器在 ListView 中设置选定项的样式</span><span class="sxs-lookup"><span data-stu-id="62136-110">Use Triggers to Style Selected Items in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [<span data-ttu-id="62136-111">使用 CheckBox 创建 ListViewItem</span><span class="sxs-lookup"><span data-stu-id="62136-111">Create ListViewItems with a CheckBox</span></span>](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [<span data-ttu-id="62136-112">使用 GridViewRowPresenter 显示数据</span><span class="sxs-lookup"><span data-stu-id="62136-112">Display Data by Using GridViewRowPresenter</span></span>](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [<span data-ttu-id="62136-113">在实现 GridView 的 ListView 中对项进行分组</span><span class="sxs-lookup"><span data-stu-id="62136-113">Group Items in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="62136-114">在实现 GridView 的 ListView 中设置行样式</span><span class="sxs-lookup"><span data-stu-id="62136-114">Style a Row in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [<span data-ttu-id="62136-115">更改 ListView 中列的水平对齐方式</span><span class="sxs-lookup"><span data-stu-id="62136-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [<span data-ttu-id="62136-116">处理 ListView 中每一项的 MouseDoubleClick 事件</span><span class="sxs-lookup"><span data-stu-id="62136-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a6e92-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="a6e92-104">In This Section</span></span>  
+ [<span data-ttu-id="a6e92-105">在标题获得单击时对 GridView 列进行排序</span><span class="sxs-lookup"><span data-stu-id="a6e92-105">Sort a GridView Column When a Header Is Clicked</span></span>](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [<span data-ttu-id="a6e92-106">创建 ListView 的自定义视图模式</span><span class="sxs-lookup"><span data-stu-id="a6e92-106">Create a Custom View Mode for a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [<span data-ttu-id="a6e92-107">使用模板设置使用 GridView 的 ListView 的样式</span><span class="sxs-lookup"><span data-stu-id="a6e92-107">Use Templates to Style a ListView That Uses GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [<span data-ttu-id="a6e92-108">创建拖动的 GridView 列标题的样式</span><span class="sxs-lookup"><span data-stu-id="a6e92-108">Create a Style for a Dragged GridView Column Header</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [<span data-ttu-id="a6e92-109">使用 GridView 显示 ListView 内容</span><span class="sxs-lookup"><span data-stu-id="a6e92-109">Display ListView Contents by Using a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
+ [<span data-ttu-id="a6e92-110">使用触发器在 ListView 中设置选定项的样式</span><span class="sxs-lookup"><span data-stu-id="a6e92-110">Use Triggers to Style Selected Items in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [<span data-ttu-id="a6e92-111">使用 CheckBox 创建 ListViewItem</span><span class="sxs-lookup"><span data-stu-id="a6e92-111">Create ListViewItems with a CheckBox</span></span>](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
+ [<span data-ttu-id="a6e92-112">使用 GridViewRowPresenter 显示数据</span><span class="sxs-lookup"><span data-stu-id="a6e92-112">Display Data by Using GridViewRowPresenter</span></span>](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [<span data-ttu-id="a6e92-113">在实现 GridView 的 ListView 中对项进行分组</span><span class="sxs-lookup"><span data-stu-id="a6e92-113">Group Items in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="a6e92-114">在实现 GridView 的 ListView 中设置行样式</span><span class="sxs-lookup"><span data-stu-id="a6e92-114">Style a Row in a ListView That Implements a GridView</span></span>](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [<span data-ttu-id="a6e92-115">更改 ListView 中列的水平对齐方式</span><span class="sxs-lookup"><span data-stu-id="a6e92-115">Change the Horizontal Alignment of a Column in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [<span data-ttu-id="a6e92-116">处理 ListView 中每一项的 MouseDoubleClick 事件</span><span class="sxs-lookup"><span data-stu-id="a6e92-116">Handle the MouseDoubleClick Event for Each Item in a ListView</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
-## <a name="reference"></a><span data-ttu-id="62136-117">参考</span><span class="sxs-lookup"><span data-stu-id="62136-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a6e92-117">参考</span><span class="sxs-lookup"><span data-stu-id="a6e92-117">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.ListViewItem>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="62136-118">相关章节</span><span class="sxs-lookup"><span data-stu-id="62136-118">Related Sections</span></span>  
- [<span data-ttu-id="62136-119">ListView 概述</span><span class="sxs-lookup"><span data-stu-id="62136-119">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="a6e92-118">相关章节</span><span class="sxs-lookup"><span data-stu-id="a6e92-118">Related Sections</span></span>  
+ [<span data-ttu-id="a6e92-119">ListView 概述</span><span class="sxs-lookup"><span data-stu-id="a6e92-119">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)

@@ -17,20 +17,21 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41dd8700f6e6ad3ecf7343e9b1804fe5bba8e0b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 59df0c1f3ac82f4e353fe185319f5d4c00a29ff6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="textbox"></a><span data-ttu-id="059e0-102">文本框</span><span class="sxs-lookup"><span data-stu-id="059e0-102">TextBox</span></span>
-<span data-ttu-id="059e0-103"><xref:System.Windows.Controls.TextBox>控件可提供有关 WPF 应用程序中的基本的文本输入的支持。</span><span class="sxs-lookup"><span data-stu-id="059e0-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="f9deb-102">文本框</span><span class="sxs-lookup"><span data-stu-id="f9deb-102">TextBox</span></span>
+<span data-ttu-id="f9deb-103"><xref:System.Windows.Controls.TextBox>控件可提供有关 WPF 应用程序中的基本的文本输入的支持。</span><span class="sxs-lookup"><span data-stu-id="f9deb-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="059e0-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="059e0-104">In This Section</span></span>  
- [<span data-ttu-id="059e0-105">TextBox 概述</span><span class="sxs-lookup"><span data-stu-id="059e0-105">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [<span data-ttu-id="059e0-106">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="059e0-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f9deb-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="f9deb-104">In This Section</span></span>  
+ [<span data-ttu-id="f9deb-105">TextBox 概述</span><span class="sxs-lookup"><span data-stu-id="f9deb-105">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [<span data-ttu-id="f9deb-106">帮助主题</span><span class="sxs-lookup"><span data-stu-id="f9deb-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="059e0-107">参考</span><span class="sxs-lookup"><span data-stu-id="059e0-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f9deb-107">参考</span><span class="sxs-lookup"><span data-stu-id="f9deb-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="059e0-108">另请参阅</span><span class="sxs-lookup"><span data-stu-id="059e0-108">See Also</span></span>  
- [<span data-ttu-id="059e0-109">WPF 控件库示例</span><span class="sxs-lookup"><span data-stu-id="059e0-109">WPF Controls Gallery Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160053)  
- [<span data-ttu-id="059e0-110">TextBox 样式和模板</span><span class="sxs-lookup"><span data-stu-id="059e0-110">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a><span data-ttu-id="f9deb-108">请参阅</span><span class="sxs-lookup"><span data-stu-id="f9deb-108">See Also</span></span>  
+ [<span data-ttu-id="f9deb-109">WPF 控件库示例</span><span class="sxs-lookup"><span data-stu-id="f9deb-109">WPF Controls Gallery Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160053)  
+ [<span data-ttu-id="f9deb-110">TextBox 样式和模板</span><span class="sxs-lookup"><span data-stu-id="f9deb-110">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

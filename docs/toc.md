@@ -17,13 +17,13 @@
 ### [.NET 微服务：适用于容器化 .NET 应用的体系结构](standard/microservices-architecture/)
 ## [为服务器应用选择 .NET Core 或 .NET Framework](standard/choosing-core-framework-server.md)
 ## [什么是“托管代码”？](standard/managed-code.md)
-### [自动内存管理](standard/automatic-memory-management.md) 
+### [自动内存管理](standard/automatic-memory-management.md)
 ## [公共语言运行时 (CLR)](standard/clr.md)
 ## [语言独立](standard/language-independence.md)
 ### [语言独立性和与语言无关的组件](standard/language-independence-and-language-independent-components.md)
 ## [框架库](standard/framework-libraries.md)
-### [类库概述](standard/class-library-overview.md)  
-### [基类型](standard/base-types/)  
+### [类库概述](standard/class-library-overview.md)
+### [基类型](standard/base-types/)
 ## [.NET 类库](standard/class-libraries.md)
 ## [可移植性分析器](standard/portability-analyzer.md)
 ## [处理和引发异常](standard/exceptions/)
@@ -101,10 +101,15 @@
 ### [为 .NET Core 应用程序生成 Docker 映像](core/docker/building-net-docker-images.md)
 ### [Visual Studio Tools for Docker](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [单元测试](core/testing/index.md)
-### [使用 dotnet 测试和 xUnit 进行单元测试](core/testing/unit-testing-with-dotnet-test.md)
-### [使用 dotnet 测试和 MSTest 进行单元测试](core/testing/unit-testing-with-mstest.md)
-### [使用 dotnet test 和 xUnit 进行 F# 单元测试](core/testing/unit-testing-fsharp-with-dotnet-test.md)
-### [使用 dotnet test 和 MSTest 进行 F# 单元测试](core/testing/unit-testing-fsharp-with-mstest.md)
+### [使用 xUnit 进行 C# 单元测试](core/testing/unit-testing-with-dotnet-test.md)
+### [使用 NUnit 进行 C# 单元测试](core/testing/unit-testing-with-nunit.md)
+### [使用 MSTest 进行 C# 单元测试](core/testing/unit-testing-with-mstest.md)
+### [使用 xUnit 进行 F# 单元测试](core/testing/unit-testing-fsharp-with-dotnet-test.md)
+### [使用 NUnit 进行 F# 单元测试](core/testing/unit-testing-fsharp-with-nunit.md)
+### [使用 MSTest 进行 F# 单元测试](core/testing/unit-testing-fsharp-with-mstest.md)
+### [使用 xUnit 进行 VB 单元测试](core/testing/unit-testing-visual-basic-with-dotnet-test.md)
+### [使用 NUnit 进行 VB 单元测试](core/testing/unit-testing-visual-basic-with-nunit.md)
+### [使用 MSTest 进行 VB 单元测试](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [运行选择性单元测试](core/testing/selective-unit-tests.md)
 ### [对已发布的输出进行单元测试](core/testing/unit-testing-published-output.md)
 ### [使用 Visual Studio 对 .NET Core 项目进行 Live Unit Testing](/visualstudio/test/live-unit-testing-start)
@@ -204,7 +209,7 @@
 ## [C# 教程](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [C# 中的新增功能](csharp/whats-new/index.md) 
+## [C# 中的新增功能](csharp/whats-new/index.md)
 ### [C# 7.2 中的新增功能](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1 中的新增功能](csharp/whats-new/csharp-7-1.md)
 ### [C# 7 中的新增功能](csharp/whats-new/csharp-7.md)
@@ -212,8 +217,6 @@
 ### [C# 版本历史记录](csharp/whats-new/csharp-version-history.md)
 ### [语言与框架的关系](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
-<!--## [🔧 C# Interactive](csharp/interactive/)-->
-<!-- Do this section later, once master redirects are in place -->
 ## C# 概念
 ### [C# 类型系统](csharp/programming-guide/types/index.md)
 ### [命名空间](csharp/programming-guide/namespaces/index.md)
@@ -223,8 +226,7 @@
 ### [元组](csharp/tuples.md)
 ### [解构元组和其他类型](csharp/deconstruct.md)
 ### [接口](csharp/programming-guide/interfaces/index.md)
-<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
-### [方法](csharp/methods.md)
+#### [方法](csharp/methods.md)
 #### [Lambda 表达式](csharp/lambda-expressions.md)
 ### [属性](csharp/properties.md)
 ### [索引器](csharp/indexers.md)
@@ -242,9 +244,8 @@
 #### [区分委托和事件](csharp/distinguish-delegates-events.md)
 ### [语言集成查询 (LINQ)](csharp/linq/)
 ### [异步编程](csharp/async.md)
-<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [模式匹配](csharp/pattern-matching.md)
-### [具有值类型的引用语义](csharp/reference-semantics-with-value-types.md)
+### [引用语义结合值类型](csharp/reference-semantics-with-value-types.md)
 ### [表达式树](csharp/expression-trees.md)
 #### [已解释的表达式树](csharp/expression-trees-explained.md)
 #### [框架类型支持表达式树](csharp/expression-classes.md)
@@ -254,11 +255,10 @@
 #### [翻译表达式](csharp/expression-trees-translating.md)
 #### [摘要](csharp/expression-trees-summary.md)
 ### [本机互操作性](csharp/programming-guide/interop/index.md)
-<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [将代码文档化](csharp/codedoc.md)
 ### [版本控制](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
+## [.NET Compiler Platform SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 编程指南](csharp/programming-guide/)
 ## [语言参考](csharp/language-reference/)
 ## [演练](csharp/walkthroughs.md)
@@ -338,7 +338,7 @@
 ### [选项](fsharp/language-reference/options.md)
 ### [结果](fsharp/language-reference/results.md)
 ### [序列](fsharp/language-reference/sequences.md)
-### [阵列](fsharp/language-reference/arrays.md)
+### [数组](fsharp/language-reference/arrays.md)
 ### [泛型](fsharp/language-reference/generics/index.md)
 #### [自动泛化](fsharp/language-reference/generics/automatic-generalization.md)
 #### [约束](fsharp/language-reference/generics/constraints.md)
@@ -504,7 +504,7 @@
 ### [限制](visual-basic/programming-guide/program-structure/limitations.md)
 
 ## [语言功能](visual-basic/programming-guide/language-features/index.md)
-### [阵列](visual-basic/programming-guide/language-features/arrays/index.md)
+### [数组](visual-basic/programming-guide/language-features/arrays/index.md)
 ### [集合初始值设定项](visual-basic/programming-guide/language-features/collection-initializers/index.md)
 ### [常量和枚举](visual-basic/programming-guide/language-features/constants-enums/index.md)
 ### [控制流](visual-basic/programming-guide/language-features/control-flow/index.md)

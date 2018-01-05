@@ -19,25 +19,28 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34d0529c302f08287f2714e056eb6a536f3b28ec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 863c79b36cd51b2e1e747169fd15a2358a1e6fee
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="df5da-102">如何：将对象序列化为 SOAP 编码的 XML 流</span><span class="sxs-lookup"><span data-stu-id="df5da-102">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>
+# <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="045fd-102">如何：将对象序列化为 SOAP 编码的 XML 流</span><span class="sxs-lookup"><span data-stu-id="045fd-102">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>
   
- <span data-ttu-id="df5da-103">由于 SOAP 消息是使用 XML 生成的，因此 <xref:System.Xml.Serialization.XmlSerializer> 类可用于序列化类和生成编码的 SOAP 消息。</span><span class="sxs-lookup"><span data-stu-id="df5da-103">Because a SOAP message is built using XML, the <xref:System.Xml.Serialization.XmlSerializer> class can be used to serialize classes and generate encoded SOAP messages.</span></span> <span data-ttu-id="df5da-104">生成的 XML 符合[万维网联合会文档“简单对象访问协议 (SOAP) 1.1”的第 5 节](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512)。</span><span class="sxs-lookup"><span data-stu-id="df5da-104">The resulting XML conforms to [section 5 of the World Wide Web Consortium document "Simple Object Access Protocol (SOAP) 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512).</span></span> <span data-ttu-id="df5da-105">如果您要创建通过 SOAP 消息进行通信的 XML Web services，则可以将一组特殊的 SOAP 属性应用于类和类的成员来自定义 XML 流。</span><span class="sxs-lookup"><span data-stu-id="df5da-105">When you are creating an XML Web service that communicates through SOAP messages, you can customize the XML stream by applying a set of special SOAP attributes to classes and members of classes.</span></span> <span data-ttu-id="df5da-106">有关属性列表，请参阅[控制编码的 SOAP 序列化的特性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="df5da-106">For a list of attributes, see [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
+ <span data-ttu-id="045fd-103">由于 SOAP 消息是使用 XML 生成的，因此 <xref:System.Xml.Serialization.XmlSerializer> 类可用于序列化类和生成编码的 SOAP 消息。</span><span class="sxs-lookup"><span data-stu-id="045fd-103">Because a SOAP message is built using XML, the <xref:System.Xml.Serialization.XmlSerializer> class can be used to serialize classes and generate encoded SOAP messages.</span></span> <span data-ttu-id="045fd-104">生成的 XML 符合[万维网联合会文档“简单对象访问协议 (SOAP) 1.1”的第 5 节](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512)。</span><span class="sxs-lookup"><span data-stu-id="045fd-104">The resulting XML conforms to [section 5 of the World Wide Web Consortium document "Simple Object Access Protocol (SOAP) 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383512).</span></span> <span data-ttu-id="045fd-105">如果您要创建通过 SOAP 消息进行通信的 XML Web services，则可以将一组特殊的 SOAP 属性应用于类和类的成员来自定义 XML 流。</span><span class="sxs-lookup"><span data-stu-id="045fd-105">When you are creating an XML Web service that communicates through SOAP messages, you can customize the XML stream by applying a set of special SOAP attributes to classes and members of classes.</span></span> <span data-ttu-id="045fd-106">有关属性列表，请参阅[控制编码的 SOAP 序列化的特性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)。</span><span class="sxs-lookup"><span data-stu-id="045fd-106">For a list of attributes, see [Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).</span></span>  
   
-### <a name="to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="df5da-107">将对象序列化为 SOAP 编码的 XML 流</span><span class="sxs-lookup"><span data-stu-id="df5da-107">To serialize an object as a SOAP-encoded XML stream</span></span>  
+### <a name="to-serialize-an-object-as-a-soap-encoded-xml-stream"></a><span data-ttu-id="045fd-107">将对象序列化为 SOAP 编码的 XML 流</span><span class="sxs-lookup"><span data-stu-id="045fd-107">To serialize an object as a SOAP-encoded XML stream</span></span>  
   
-1.  <span data-ttu-id="df5da-108">使用 [XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) 创建类。</span><span class="sxs-lookup"><span data-stu-id="df5da-108">Create the class using the [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).</span></span>  
+1.  <span data-ttu-id="045fd-108">使用 [XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md) 创建类。</span><span class="sxs-lookup"><span data-stu-id="045fd-108">Create the class using the [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).</span></span>  
   
-2.  <span data-ttu-id="df5da-109">应用在 `System.Xml.Serialization` 中找到的一个或多个特殊属性。</span><span class="sxs-lookup"><span data-stu-id="df5da-109">Apply one or more of the special attributes found in `System.Xml.Serialization`.</span></span> <span data-ttu-id="df5da-110">请参见“用来控制编码的 SOAP 序列化的属性”中的列表。</span><span class="sxs-lookup"><span data-stu-id="df5da-110">See the list in "Attributes That Control Encoded SOAP Serialization."</span></span>  
+2.  <span data-ttu-id="045fd-109">应用在 `System.Xml.Serialization` 中找到的一个或多个特殊属性。</span><span class="sxs-lookup"><span data-stu-id="045fd-109">Apply one or more of the special attributes found in `System.Xml.Serialization`.</span></span> <span data-ttu-id="045fd-110">请参见“用来控制编码的 SOAP 序列化的属性”中的列表。</span><span class="sxs-lookup"><span data-stu-id="045fd-110">See the list in "Attributes That Control Encoded SOAP Serialization."</span></span>  
   
-3.  <span data-ttu-id="df5da-111">通过创建新的 `XmlTypeMapping`，然后用已序列化类的类型调用 `SoapReflectionImporter` 方法，来创建 `ImportTypeMapping`。</span><span class="sxs-lookup"><span data-stu-id="df5da-111">Create an `XmlTypeMapping` by creating a new `SoapReflectionImporter`, and invoking the `ImportTypeMapping` method with the type of the serialized class.</span></span>  
+3.  <span data-ttu-id="045fd-111">通过创建新的 `XmlTypeMapping`，然后用已序列化类的类型调用 `SoapReflectionImporter` 方法，来创建 `ImportTypeMapping`。</span><span class="sxs-lookup"><span data-stu-id="045fd-111">Create an `XmlTypeMapping` by creating a new `SoapReflectionImporter`, and invoking the `ImportTypeMapping` method with the type of the serialized class.</span></span>  
   
-     <span data-ttu-id="df5da-112">以下代码示例调用 `SoapReflectionImporter` 类的 `ImportTypeMapping` 方法来创建 `XmlTypeMapping`。</span><span class="sxs-lookup"><span data-stu-id="df5da-112">The following code example calls the `ImportTypeMapping` method of the `SoapReflectionImporter` class to create an `XmlTypeMapping`.</span></span>  
+     <span data-ttu-id="045fd-112">以下代码示例调用 `SoapReflectionImporter` 类的 `ImportTypeMapping` 方法来创建 `XmlTypeMapping`。</span><span class="sxs-lookup"><span data-stu-id="045fd-112">The following code example calls the `ImportTypeMapping` method of the `SoapReflectionImporter` class to create an `XmlTypeMapping`.</span></span>  
   
     ```vb  
     ' Serializes a class named Group as a SOAP message.  
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/02/2017
         new SoapReflectionImporter().ImportTypeMapping(typeof(Group));
     ```  
   
-4.  <span data-ttu-id="df5da-113">通过将 `XmlSerializer` 传递给 `XmlTypeMapping` 构造函数，来创建 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> 类的实例。</span><span class="sxs-lookup"><span data-stu-id="df5da-113">Create an instance of the `XmlSerializer` class by passing the `XmlTypeMapping` to the <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> constructor.</span></span>  
+4.  <span data-ttu-id="045fd-113">通过将 `XmlSerializer` 传递给 `XmlTypeMapping` 构造函数，来创建 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> 类的实例。</span><span class="sxs-lookup"><span data-stu-id="045fd-113">Create an instance of the `XmlSerializer` class by passing the `XmlTypeMapping` to the <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29> constructor.</span></span>  
   
     ```vb  
     Dim mySerializer As XmlSerializer = New XmlSerializer(myTypeMapping)  
@@ -61,9 +64,9 @@ ms.lasthandoff: 12/02/2017
     XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);  
     ```  
   
-5.  <span data-ttu-id="df5da-114">调用 `Serialize` 或 `Deserialize` 方法。</span><span class="sxs-lookup"><span data-stu-id="df5da-114">Call the `Serialize` or `Deserialize` method.</span></span>  
+5.  <span data-ttu-id="045fd-114">调用 `Serialize` 或 `Deserialize` 方法。</span><span class="sxs-lookup"><span data-stu-id="045fd-114">Call the `Serialize` or `Deserialize` method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="df5da-115">示例</span><span class="sxs-lookup"><span data-stu-id="df5da-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="045fd-115">示例</span><span class="sxs-lookup"><span data-stu-id="045fd-115">Example</span></span>  
   
 ```vb  
 ' Serializes a class named Group as a SOAP message.  
@@ -79,10 +82,10 @@ XmlTypeMapping myTypeMapping =
 XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="df5da-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="df5da-116">See Also</span></span>  
- [<span data-ttu-id="df5da-117">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="df5da-117">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [<span data-ttu-id="df5da-118">用来控制编码的 SOAP 序列化的属性</span><span class="sxs-lookup"><span data-stu-id="df5da-118">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
- [<span data-ttu-id="df5da-119">使用 XML Web services 进行 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="df5da-119">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
- [<span data-ttu-id="df5da-120">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="df5da-120">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="df5da-121">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="df5da-121">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [<span data-ttu-id="df5da-122">如何：重写编码的 SOAP XML 序列化</span><span class="sxs-lookup"><span data-stu-id="df5da-122">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+## <a name="see-also"></a><span data-ttu-id="045fd-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="045fd-116">See Also</span></span>  
+ [<span data-ttu-id="045fd-117">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="045fd-117">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [<span data-ttu-id="045fd-118">用来控制编码的 SOAP 序列化的属性</span><span class="sxs-lookup"><span data-stu-id="045fd-118">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [<span data-ttu-id="045fd-119">使用 XML Web services 进行 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="045fd-119">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
+ [<span data-ttu-id="045fd-120">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="045fd-120">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="045fd-121">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="045fd-121">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+ [<span data-ttu-id="045fd-122">如何：重写编码的 SOAP XML 序列化</span><span class="sxs-lookup"><span data-stu-id="045fd-122">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)

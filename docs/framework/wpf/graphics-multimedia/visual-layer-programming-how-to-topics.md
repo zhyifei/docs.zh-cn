@@ -18,26 +18,27 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4d52fab42dabeaa8ef51812308fe5807030184e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63efdae02dd14e1a2692ebb6ee00c7d56c8b04c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="40d13-102">可视化层编程帮助主题</span><span class="sxs-lookup"><span data-stu-id="40d13-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="40d13-103">此部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。</span><span class="sxs-lookup"><span data-stu-id="40d13-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="83a37-102">可视化层编程帮助主题</span><span class="sxs-lookup"><span data-stu-id="83a37-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="83a37-103">此部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。</span><span class="sxs-lookup"><span data-stu-id="83a37-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="40d13-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="40d13-104">In This Section</span></span>  
- [<span data-ttu-id="40d13-105">获取视觉对象偏移</span><span class="sxs-lookup"><span data-stu-id="40d13-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="40d13-106">枚举视觉对象的绘图内容</span><span class="sxs-lookup"><span data-stu-id="40d13-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="40d13-107">对视觉对象中的几何图形进行命中测试</span><span class="sxs-lookup"><span data-stu-id="40d13-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="40d13-108">将几何图形用作参数的命中测试</span><span class="sxs-lookup"><span data-stu-id="40d13-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="40d13-109">使用 Win32 宿主容器进行命中测试</span><span class="sxs-lookup"><span data-stu-id="40d13-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="40d13-110">使用 CompositionTarget 按每帧间隔呈现</span><span class="sxs-lookup"><span data-stu-id="40d13-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="83a37-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="83a37-104">In This Section</span></span>  
+ [<span data-ttu-id="83a37-105">获取视觉对象偏移</span><span class="sxs-lookup"><span data-stu-id="83a37-105">Get the Offset of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="83a37-106">枚举视觉对象的绘图内容</span><span class="sxs-lookup"><span data-stu-id="83a37-106">Enumerate Drawing Content of a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="83a37-107">对视觉对象中的几何图形进行命中测试</span><span class="sxs-lookup"><span data-stu-id="83a37-107">Hit Test Geometry in a Visual</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="83a37-108">将几何图形用作参数的命中测试</span><span class="sxs-lookup"><span data-stu-id="83a37-108">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="83a37-109">使用 Win32 宿主容器进行命中测试</span><span class="sxs-lookup"><span data-stu-id="83a37-109">Hit Test Using a Win32 Host Container</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="83a37-110">使用 CompositionTarget 按每帧间隔呈现</span><span class="sxs-lookup"><span data-stu-id="83a37-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="40d13-111">另请参阅</span><span class="sxs-lookup"><span data-stu-id="40d13-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="83a37-111">请参阅</span><span class="sxs-lookup"><span data-stu-id="83a37-111">See Also</span></span>  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  
- [<span data-ttu-id="40d13-112">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="40d13-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="40d13-113">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="40d13-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="83a37-112">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="83a37-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="83a37-113">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="83a37-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

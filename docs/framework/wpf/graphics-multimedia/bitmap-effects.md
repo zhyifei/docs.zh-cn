@@ -19,27 +19,28 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4beb386528829bace92be6add471b87fb434d74
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2c2776bda3cebfbe0d614666ce234c10a1ab466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="bitmap-effects"></a><span data-ttu-id="0c5c7-102">位图效果</span><span class="sxs-lookup"><span data-stu-id="0c5c7-102">Bitmap Effects</span></span>
-<span data-ttu-id="0c5c7-103">本部分中的主题介绍如何将可视化效果应用于位图图像使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="0c5c7-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="bitmap-effects"></a><span data-ttu-id="4abd5-102">位图效果</span><span class="sxs-lookup"><span data-stu-id="4abd5-102">Bitmap Effects</span></span>
+<span data-ttu-id="4abd5-103">本部分中的主题介绍如何将可视化效果应用于位图图像使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4abd5-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="0c5c7-104">在[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]或更高版本，<xref:System.Windows.Media.Effects.BitmapEffect>类已过时。</span><span class="sxs-lookup"><span data-stu-id="0c5c7-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="0c5c7-105">如果你尝试使用<xref:System.Windows.Media.Effects.BitmapEffect>类，则您将收到已过时。</span><span class="sxs-lookup"><span data-stu-id="0c5c7-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="0c5c7-106">未过时的替代项为<xref:System.Windows.Media.Effects.BitmapEffect>类是<xref:System.Windows.Media.Effects.Effect>类。</span><span class="sxs-lookup"><span data-stu-id="0c5c7-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="0c5c7-107">在大多数情况下，<xref:System.Windows.Media.Effects.Effect>类是快得多。</span><span class="sxs-lookup"><span data-stu-id="0c5c7-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
+>  <span data-ttu-id="4abd5-104">在[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]或更高版本，<xref:System.Windows.Media.Effects.BitmapEffect>类已过时。</span><span class="sxs-lookup"><span data-stu-id="4abd5-104">In the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] or later, the <xref:System.Windows.Media.Effects.BitmapEffect> class is obsolete.</span></span> <span data-ttu-id="4abd5-105">如果你尝试使用<xref:System.Windows.Media.Effects.BitmapEffect>类，则您将收到已过时。</span><span class="sxs-lookup"><span data-stu-id="4abd5-105">If you try to use the <xref:System.Windows.Media.Effects.BitmapEffect> class, you will get an obsolete exception.</span></span> <span data-ttu-id="4abd5-106">未过时的替代项为<xref:System.Windows.Media.Effects.BitmapEffect>类是<xref:System.Windows.Media.Effects.Effect>类。</span><span class="sxs-lookup"><span data-stu-id="4abd5-106">The non-obsolete alternative to the <xref:System.Windows.Media.Effects.BitmapEffect> class is the <xref:System.Windows.Media.Effects.Effect> class.</span></span> <span data-ttu-id="4abd5-107">在大多数情况下，<xref:System.Windows.Media.Effects.Effect>类是快得多。</span><span class="sxs-lookup"><span data-stu-id="4abd5-107">In most situations, the <xref:System.Windows.Media.Effects.Effect> class is significantly faster.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0c5c7-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="0c5c7-108">In This Section</span></span>  
- [<span data-ttu-id="0c5c7-109">位图效果概述</span><span class="sxs-lookup"><span data-stu-id="0c5c7-109">Bitmap Effects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4abd5-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="4abd5-108">In This Section</span></span>  
+ [<span data-ttu-id="4abd5-109">位图效果概述</span><span class="sxs-lookup"><span data-stu-id="4abd5-109">Bitmap Effects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="0c5c7-110">参考</span><span class="sxs-lookup"><span data-stu-id="0c5c7-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4abd5-110">参考</span><span class="sxs-lookup"><span data-stu-id="4abd5-110">Reference</span></span>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
   
  <xref:System.Windows.Media.Effects>  
   
-## <a name="related-sections"></a><span data-ttu-id="0c5c7-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="0c5c7-111">Related Sections</span></span>  
- [<span data-ttu-id="0c5c7-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="0c5c7-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="4abd5-111">相关章节</span><span class="sxs-lookup"><span data-stu-id="4abd5-111">Related Sections</span></span>  
+ [<span data-ttu-id="4abd5-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="4abd5-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [<span data-ttu-id="0c5c7-113">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="0c5c7-113">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [<span data-ttu-id="4abd5-113">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="4abd5-113">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

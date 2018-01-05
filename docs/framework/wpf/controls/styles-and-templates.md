@@ -17,25 +17,26 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bc4dc0721ad0fb756a5449d0af65fd2aae22381
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37f4084b5874c49ed1de8d215d53767ab5a21c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="styles-and-templates"></a><span data-ttu-id="610ad-102">样式和模板</span><span class="sxs-lookup"><span data-stu-id="610ad-102">Styles and Templates</span></span>
-<span data-ttu-id="610ad-103">Windows Presentation Foundation (WPF) 样式和模板化指套件的允许的应用程序、 文档或用户界面 (UI) 设计器来创建视觉效果更佳的应用程序的功能 （样式、 模板、 触发器和情节提要） 和标准化尤其是查找其产品。</span><span class="sxs-lookup"><span data-stu-id="610ad-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
+# <a name="styles-and-templates"></a><span data-ttu-id="53120-102">样式和模板</span><span class="sxs-lookup"><span data-stu-id="53120-102">Styles and Templates</span></span>
+<span data-ttu-id="53120-103">Windows Presentation Foundation (WPF) 样式和模板化指套件的允许的应用程序、 文档或用户界面 (UI) 设计器来创建视觉效果更佳的应用程序的功能 （样式、 模板、 触发器和情节提要） 和标准化尤其是查找其产品。</span><span class="sxs-lookup"><span data-stu-id="53120-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="610ad-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="610ad-104">In This Section</span></span>  
- [<span data-ttu-id="610ad-105">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="610ad-105">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="610ad-106">如何：查找由 ControlTemplate 生成的元素</span><span class="sxs-lookup"><span data-stu-id="610ad-106">How to: Find ControlTemplate-Generated Elements</span></span>](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+## <a name="in-this-section"></a><span data-ttu-id="53120-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="53120-104">In This Section</span></span>  
+ [<span data-ttu-id="53120-105">样式设置和模板化</span><span class="sxs-lookup"><span data-stu-id="53120-105">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [<span data-ttu-id="53120-106">如何：查找由 ControlTemplate 生成的元素</span><span class="sxs-lookup"><span data-stu-id="53120-106">How to: Find ControlTemplate-Generated Elements</span></span>](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
   
-## <a name="reference"></a><span data-ttu-id="610ad-107">参考</span><span class="sxs-lookup"><span data-stu-id="610ad-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="53120-107">参考</span><span class="sxs-lookup"><span data-stu-id="53120-107">Reference</span></span>  
  <xref:System.Windows.Style>  
   <xref:System.Windows.Controls.ControlTemplate>  
   <xref:System.Windows.DataTemplate>  
   
-## <a name="related-sections"></a><span data-ttu-id="610ad-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="610ad-108">Related Sections</span></span>  
- [<span data-ttu-id="610ad-109">高级</span><span class="sxs-lookup"><span data-stu-id="610ad-109">Advanced</span></span>](../../../../docs/framework/wpf/advanced/index.md)  
-  [<span data-ttu-id="610ad-110">控件自定义</span><span class="sxs-lookup"><span data-stu-id="610ad-110">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [<span data-ttu-id="610ad-111">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="610ad-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="53120-108">相关章节</span><span class="sxs-lookup"><span data-stu-id="53120-108">Related Sections</span></span>  
+ [<span data-ttu-id="53120-109">高级</span><span class="sxs-lookup"><span data-stu-id="53120-109">Advanced</span></span>](../../../../docs/framework/wpf/advanced/index.md)  
+  [<span data-ttu-id="53120-110">控件自定义</span><span class="sxs-lookup"><span data-stu-id="53120-110">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+  [<span data-ttu-id="53120-111">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="53120-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

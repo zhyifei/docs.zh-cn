@@ -41,6 +41,7 @@
 ### [使用 RabbitMQ 实现用于开发或测试环境的事件总线](multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md)
 ### [订阅事件](multi-container-microservice-net-applications/subscribe-events.md)
 ### [测试 ASP.NET Core 服务和 Web 应用](multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md)
+### [使用 IHostedService 在微服务中实现后台任务](multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
 ## [使用 DDD 和 CQRS 模式降低微服务中的业务复杂性](microservice-ddd-cqrs-patterns/index.md)
 ### [在微服务中应用简化后的 CQRS 和 DDD 模式](microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md)
 ### [在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法](microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md)

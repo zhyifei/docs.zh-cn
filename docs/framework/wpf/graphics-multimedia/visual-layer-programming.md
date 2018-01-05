@@ -19,24 +19,25 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 906cc5575ec8fc307068e7341331ae024cf07542
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 24983386b6f34e7471626fcff50fe5106ca0c8dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="visual-layer-programming"></a><span data-ttu-id="3df34-102">可视化层编程</span><span class="sxs-lookup"><span data-stu-id="3df34-102">Visual Layer Programming</span></span>
-<span data-ttu-id="3df34-103"><xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。</span><span class="sxs-lookup"><span data-stu-id="3df34-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="3df34-104">用户界面控件，如<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用它来保持其呈现数据。</span><span class="sxs-lookup"><span data-stu-id="3df34-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
+# <a name="visual-layer-programming"></a><span data-ttu-id="74eaa-102">可视化层编程</span><span class="sxs-lookup"><span data-stu-id="74eaa-102">Visual Layer Programming</span></span>
+<span data-ttu-id="74eaa-103"><xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。</span><span class="sxs-lookup"><span data-stu-id="74eaa-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="74eaa-104">用户界面控件，如<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用它来保持其呈现数据。</span><span class="sxs-lookup"><span data-stu-id="74eaa-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3df34-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="3df34-105">In This Section</span></span>  
- [<span data-ttu-id="3df34-106">可视化层中的命中测试</span><span class="sxs-lookup"><span data-stu-id="3df34-106">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [<span data-ttu-id="3df34-107">使用 DrawingVisual 对象</span><span class="sxs-lookup"><span data-stu-id="3df34-107">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [<span data-ttu-id="3df34-108">教程：在 Win32 应用程序中承载视觉对象</span><span class="sxs-lookup"><span data-stu-id="3df34-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [<span data-ttu-id="3df34-109">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="3df34-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="74eaa-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="74eaa-105">In This Section</span></span>  
+ [<span data-ttu-id="74eaa-106">可视化层中的命中测试</span><span class="sxs-lookup"><span data-stu-id="74eaa-106">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="74eaa-107">使用 DrawingVisual 对象</span><span class="sxs-lookup"><span data-stu-id="74eaa-107">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
+ [<span data-ttu-id="74eaa-108">教程：在 Win32 应用程序中承载视觉对象</span><span class="sxs-lookup"><span data-stu-id="74eaa-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [<span data-ttu-id="74eaa-109">帮助主题</span><span class="sxs-lookup"><span data-stu-id="74eaa-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3df34-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="3df34-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="74eaa-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="74eaa-110">See Also</span></span>  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  
- [<span data-ttu-id="3df34-111">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="3df34-111">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="3df34-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="3df34-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [<span data-ttu-id="74eaa-111">WPF 图形呈现概述</span><span class="sxs-lookup"><span data-stu-id="74eaa-111">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [<span data-ttu-id="74eaa-112">图形和多媒体</span><span class="sxs-lookup"><span data-stu-id="74eaa-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

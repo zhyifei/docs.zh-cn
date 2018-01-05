@@ -17,23 +17,24 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 809f63d0057dd55d092343578d2952b2abdc0812
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 23fba12742943720f5b73db708015e798f0ac886
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="data-binding-wpf"></a><span data-ttu-id="32f21-102">数据绑定 (WPF)</span><span class="sxs-lookup"><span data-stu-id="32f21-102">Data Binding (WPF)</span></span>
-<span data-ttu-id="32f21-103">Windows Presentation Foundation (WPF) 数据绑定提供了简单的应用程序为与数据交互和呈现的一致方法。</span><span class="sxs-lookup"><span data-stu-id="32f21-103">Windows Presentation Foundation (WPF) data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="32f21-104">元素可以从多个公共语言运行时 (CLR) 对象和 XML 的形式中的数据源绑定到数据。</span><span class="sxs-lookup"><span data-stu-id="32f21-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
+# <a name="data-binding-wpf"></a><span data-ttu-id="ee1a8-102">数据绑定 (WPF)</span><span class="sxs-lookup"><span data-stu-id="ee1a8-102">Data Binding (WPF)</span></span>
+<span data-ttu-id="ee1a8-103">Windows Presentation Foundation (WPF) 数据绑定提供了简单的应用程序为与数据交互和呈现的一致方法。</span><span class="sxs-lookup"><span data-stu-id="ee1a8-103">Windows Presentation Foundation (WPF) data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="ee1a8-104">元素可以从多个公共语言运行时 (CLR) 对象和 XML 的形式中的数据源绑定到数据。</span><span class="sxs-lookup"><span data-stu-id="ee1a8-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="32f21-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="32f21-105">In This Section</span></span>  
- [<span data-ttu-id="32f21-106">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="32f21-106">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [<span data-ttu-id="32f21-107">绑定源概述</span><span class="sxs-lookup"><span data-stu-id="32f21-107">Binding Sources Overview</span></span>](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [<span data-ttu-id="32f21-108">数据模板化概述</span><span class="sxs-lookup"><span data-stu-id="32f21-108">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [<span data-ttu-id="32f21-109">绑定声明概述</span><span class="sxs-lookup"><span data-stu-id="32f21-109">Binding Declarations Overview</span></span>](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [<span data-ttu-id="32f21-110">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="32f21-110">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ee1a8-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="ee1a8-105">In This Section</span></span>  
+ [<span data-ttu-id="ee1a8-106">数据绑定概述</span><span class="sxs-lookup"><span data-stu-id="ee1a8-106">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="ee1a8-107">绑定源概述</span><span class="sxs-lookup"><span data-stu-id="ee1a8-107">Binding Sources Overview</span></span>](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
+ [<span data-ttu-id="ee1a8-108">数据模板化概述</span><span class="sxs-lookup"><span data-stu-id="ee1a8-108">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [<span data-ttu-id="ee1a8-109">绑定声明概述</span><span class="sxs-lookup"><span data-stu-id="ee1a8-109">Binding Declarations Overview</span></span>](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
+ [<span data-ttu-id="ee1a8-110">帮助主题</span><span class="sxs-lookup"><span data-stu-id="ee1a8-110">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="32f21-111">参考</span><span class="sxs-lookup"><span data-stu-id="32f21-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ee1a8-111">参考</span><span class="sxs-lookup"><span data-stu-id="ee1a8-111">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -42,9 +43,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="32f21-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="32f21-112">Related Sections</span></span>  
- [<span data-ttu-id="32f21-113">拖放</span><span class="sxs-lookup"><span data-stu-id="32f21-113">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+## <a name="related-sections"></a><span data-ttu-id="ee1a8-112">相关章节</span><span class="sxs-lookup"><span data-stu-id="ee1a8-112">Related Sections</span></span>  
+ [<span data-ttu-id="ee1a8-113">拖放</span><span class="sxs-lookup"><span data-stu-id="ee1a8-113">Drag and Drop</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
   
- [<span data-ttu-id="32f21-114">数据绑定</span><span class="sxs-lookup"><span data-stu-id="32f21-114">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="ee1a8-114">数据绑定</span><span class="sxs-lookup"><span data-stu-id="ee1a8-114">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
   
- [<span data-ttu-id="32f21-115">演练：在 WPF 应用程序中缓存应用程序数据</span><span class="sxs-lookup"><span data-stu-id="32f21-115">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [<span data-ttu-id="ee1a8-115">演练：在 WPF 应用程序中缓存应用程序数据</span><span class="sxs-lookup"><span data-stu-id="ee1a8-115">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

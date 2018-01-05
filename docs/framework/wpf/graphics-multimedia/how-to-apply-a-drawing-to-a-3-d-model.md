@@ -16,28 +16,29 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a44607498c6870a598122f41bf2b7ddc5968c61d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7437f4c8279d80d7287565a28337a3cd647e239
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-apply-a-drawing-to-a-3-d-model"></a><span data-ttu-id="e1d43-102">如何：向三维模型应用绘图</span><span class="sxs-lookup"><span data-stu-id="e1d43-102">How to: Apply a Drawing to a 3-D Model</span></span>
-<span data-ttu-id="e1d43-103">此示例演示如何使用<xref:System.Windows.Media.DrawingBrush>作为<xref:System.Windows.Media.Media3D.Material>应用于[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]模型。</span><span class="sxs-lookup"><span data-stu-id="e1d43-103">This example shows how to use a <xref:System.Windows.Media.DrawingBrush> as the <xref:System.Windows.Media.Media3D.Material> applied to a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.</span></span>  
+# <a name="how-to-apply-a-drawing-to-a-3-d-model"></a><span data-ttu-id="c6121-102">如何：向三维模型应用绘图</span><span class="sxs-lookup"><span data-stu-id="c6121-102">How to: Apply a Drawing to a 3-D Model</span></span>
+<span data-ttu-id="c6121-103">此示例演示如何使用<xref:System.Windows.Media.DrawingBrush>作为<xref:System.Windows.Media.Media3D.Material>应用于[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]模型。</span><span class="sxs-lookup"><span data-stu-id="c6121-103">This example shows how to use a <xref:System.Windows.Media.DrawingBrush> as the <xref:System.Windows.Media.Media3D.Material> applied to a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.</span></span>  
   
- <span data-ttu-id="e1d43-104">下面的代码定义<xref:System.Windows.Media.DrawingGroup>作为内容<xref:System.Windows.Media.DrawingBrush>。</span><span class="sxs-lookup"><span data-stu-id="e1d43-104">The following code defines a <xref:System.Windows.Media.DrawingGroup> as the content of a <xref:System.Windows.Media.DrawingBrush>.</span></span>  <span data-ttu-id="e1d43-105"><xref:System.Windows.Media.DrawingBrush>被设置为<xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A>属性<xref:System.Windows.Media.Media3D.DiffuseMaterial>应用于[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]平面。</span><span class="sxs-lookup"><span data-stu-id="e1d43-105">The <xref:System.Windows.Media.DrawingBrush> is set as the <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> property of the <xref:System.Windows.Media.Media3D.DiffuseMaterial> applied to a [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] plane.</span></span>  
+ <span data-ttu-id="c6121-104">下面的代码定义<xref:System.Windows.Media.DrawingGroup>作为内容<xref:System.Windows.Media.DrawingBrush>。</span><span class="sxs-lookup"><span data-stu-id="c6121-104">The following code defines a <xref:System.Windows.Media.DrawingGroup> as the content of a <xref:System.Windows.Media.DrawingBrush>.</span></span>  <span data-ttu-id="c6121-105"><xref:System.Windows.Media.DrawingBrush>被设置为<xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A>属性<xref:System.Windows.Media.Media3D.DiffuseMaterial>应用于[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]平面。</span><span class="sxs-lookup"><span data-stu-id="c6121-105">The <xref:System.Windows.Media.DrawingBrush> is set as the <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> property of the <xref:System.Windows.Media.Media3D.DiffuseMaterial> applied to a [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] plane.</span></span>  
   
- <span data-ttu-id="e1d43-106">**注意：**通常是需要定义复杂的对象和类似如下绘图的值作为可重复使用和简化你的代码的资源。</span><span class="sxs-lookup"><span data-stu-id="e1d43-106">**Note:** It is often desirable to define complex objects and values like the drawing below as resources which can be reused and simplify your code.</span></span> <span data-ttu-id="e1d43-107">请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)有关详细信息。</span><span class="sxs-lookup"><span data-stu-id="e1d43-107">See [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) for more information.</span></span>  
+ <span data-ttu-id="c6121-106">**注意：**通常是需要定义复杂的对象和类似如下绘图的值作为可重复使用和简化你的代码的资源。</span><span class="sxs-lookup"><span data-stu-id="c6121-106">**Note:** It is often desirable to define complex objects and values like the drawing below as resources which can be reused and simplify your code.</span></span> <span data-ttu-id="c6121-107">请参阅[XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)有关详细信息。</span><span class="sxs-lookup"><span data-stu-id="c6121-107">See [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) for more information.</span></span>  
   
  [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialinline1)]  
   
-## <a name="example"></a><span data-ttu-id="e1d43-108">示例</span><span class="sxs-lookup"><span data-stu-id="e1d43-108">Example</span></span>  
- <span data-ttu-id="e1d43-109">下面的代码演示了整个示例。</span><span class="sxs-lookup"><span data-stu-id="e1d43-109">The following code shows the entire sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="c6121-108">示例</span><span class="sxs-lookup"><span data-stu-id="c6121-108">Example</span></span>  
+ <span data-ttu-id="c6121-109">下面的代码演示了整个示例。</span><span class="sxs-lookup"><span data-stu-id="c6121-109">The following code shows the entire sample.</span></span>  
   
  [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="e1d43-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="e1d43-110">See Also</span></span>  
- [<span data-ttu-id="e1d43-111">XAML 资源</span><span class="sxs-lookup"><span data-stu-id="e1d43-111">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [<span data-ttu-id="e1d43-112">创建 3D 场景</span><span class="sxs-lookup"><span data-stu-id="e1d43-112">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [<span data-ttu-id="e1d43-113">Drawing 对象概述</span><span class="sxs-lookup"><span data-stu-id="e1d43-113">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [<span data-ttu-id="e1d43-114">3D 图形概述</span><span class="sxs-lookup"><span data-stu-id="e1d43-114">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c6121-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="c6121-110">See Also</span></span>  
+ [<span data-ttu-id="c6121-111">XAML 资源</span><span class="sxs-lookup"><span data-stu-id="c6121-111">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [<span data-ttu-id="c6121-112">创建 3D 场景</span><span class="sxs-lookup"><span data-stu-id="c6121-112">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="c6121-113">Drawing 对象概述</span><span class="sxs-lookup"><span data-stu-id="c6121-113">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="c6121-114">3D 图形概述</span><span class="sxs-lookup"><span data-stu-id="c6121-114">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

@@ -17,39 +17,40 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32e7cb3a340865530b6a8d76609eb246184363b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wcf-web-http-programming-model"></a><span data-ttu-id="5bd21-102">WCF Web HTTP 编程模型</span><span class="sxs-lookup"><span data-stu-id="5bd21-102">WCF Web HTTP Programming Model</span></span>
-<span data-ttu-id="5bd21-103">开发人员使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型可以向非 SOAP 终结点公开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务操作。</span><span class="sxs-lookup"><span data-stu-id="5bd21-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model allows developers to expose [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service operations to non-SOAP endpoints.</span></span> <span data-ttu-id="5bd21-104">本节中的主题详细研究此功能。</span><span class="sxs-lookup"><span data-stu-id="5bd21-104">The topics in this section examine the feature in detail.</span></span>  
+# <a name="wcf-web-http-programming-model"></a><span data-ttu-id="a0d43-102">WCF Web HTTP 编程模型</span><span class="sxs-lookup"><span data-stu-id="a0d43-102">WCF Web HTTP Programming Model</span></span>
+<span data-ttu-id="a0d43-103">开发人员使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型可以向非 SOAP 终结点公开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务操作。</span><span class="sxs-lookup"><span data-stu-id="a0d43-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model allows developers to expose [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service operations to non-SOAP endpoints.</span></span> <span data-ttu-id="a0d43-104">本节中的主题详细研究此功能。</span><span class="sxs-lookup"><span data-stu-id="a0d43-104">The topics in this section examine the feature in detail.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5bd21-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="5bd21-105">In This Section</span></span>  
- [<span data-ttu-id="5bd21-106">WCF Web HTTP 编程模型概述</span><span class="sxs-lookup"><span data-stu-id="5bd21-106">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- <span data-ttu-id="5bd21-107">概述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型。</span><span class="sxs-lookup"><span data-stu-id="5bd21-107">Provides an overview of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a0d43-105">本节内容</span><span class="sxs-lookup"><span data-stu-id="a0d43-105">In This Section</span></span>  
+ [<span data-ttu-id="a0d43-106">WCF Web HTTP 编程模型概述</span><span class="sxs-lookup"><span data-stu-id="a0d43-106">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ <span data-ttu-id="a0d43-107">概述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型。</span><span class="sxs-lookup"><span data-stu-id="a0d43-107">Provides an overview of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model.</span></span>  
   
- [<span data-ttu-id="5bd21-108">WCF Web HTTP 编程对象模型</span><span class="sxs-lookup"><span data-stu-id="5bd21-108">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- <span data-ttu-id="5bd21-109">讨论 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型及其工作方式。</span><span class="sxs-lookup"><span data-stu-id="5bd21-109">Discusses the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model and how it works.</span></span>  
+ [<span data-ttu-id="a0d43-108">WCF Web HTTP 编程对象模型</span><span class="sxs-lookup"><span data-stu-id="a0d43-108">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
+ <span data-ttu-id="a0d43-109">讨论 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型及其工作方式。</span><span class="sxs-lookup"><span data-stu-id="a0d43-109">Discusses the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP Programming Model and how it works.</span></span>  
   
- [<span data-ttu-id="5bd21-110">如何： 创建基本 WCF Web HTTP 服务</span><span class="sxs-lookup"><span data-stu-id="5bd21-110">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- <span data-ttu-id="5bd21-111">说明如何编写公开非 SOAP 终结点的基本服务。</span><span class="sxs-lookup"><span data-stu-id="5bd21-111">Describes how to write a basic service that exposes a non-SOAP endpoint.</span></span>  
+ [<span data-ttu-id="a0d43-110">如何：创建基本 WCF Web HTTP 服务</span><span class="sxs-lookup"><span data-stu-id="a0d43-110">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ <span data-ttu-id="a0d43-111">说明如何编写公开非 SOAP 终结点的基本服务。</span><span class="sxs-lookup"><span data-stu-id="a0d43-111">Describes how to write a basic service that exposes a non-SOAP endpoint.</span></span>  
   
- [<span data-ttu-id="5bd21-112">如何： 向 SOAP 和 Web 客户端公开协定</span><span class="sxs-lookup"><span data-stu-id="5bd21-112">How to: Expose a Contract to SOAP and Web Clients</span></span>](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
- <span data-ttu-id="5bd21-113">说明如何编写向 SOAP 和非 SOAP 客户端公开同一协定的基本服务。</span><span class="sxs-lookup"><span data-stu-id="5bd21-113">Describes how to write a basic service that exposes the same contract to both SOAP and non-SOAP clients.</span></span>  
+ [<span data-ttu-id="a0d43-112">如何：向 SOAP 和 Web 客户端公开协定</span><span class="sxs-lookup"><span data-stu-id="a0d43-112">How to: Expose a Contract to SOAP and Web Clients</span></span>](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ <span data-ttu-id="a0d43-113">说明如何编写向 SOAP 和非 SOAP 客户端公开同一协定的基本服务。</span><span class="sxs-lookup"><span data-stu-id="a0d43-113">Describes how to write a basic service that exposes the same contract to both SOAP and non-SOAP clients.</span></span>  
   
- [<span data-ttu-id="5bd21-114">UriTemplate 和 UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="5bd21-114">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- <span data-ttu-id="5bd21-115">说明如何使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 控制 URI。</span><span class="sxs-lookup"><span data-stu-id="5bd21-115">Describes how to control URIs using <xref:System.UriTemplate> and <xref:System.UriTemplateTable>.</span></span>  
+ [<span data-ttu-id="a0d43-114">UriTemplate 和 UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="a0d43-114">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ <span data-ttu-id="a0d43-115">说明如何使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 控制 URI。</span><span class="sxs-lookup"><span data-stu-id="a0d43-115">Describes how to control URIs using <xref:System.UriTemplate> and <xref:System.UriTemplateTable>.</span></span>  
   
- [<span data-ttu-id="5bd21-116">WCF Web HTTP 服务缓存支持</span><span class="sxs-lookup"><span data-stu-id="5bd21-116">Caching Support for WCF Web HTTP Services</span></span>](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
- <span data-ttu-id="5bd21-117">说明如何指定 WCF Web HTTP 服务的缓存行为。</span><span class="sxs-lookup"><span data-stu-id="5bd21-117">Describes how to specify caching behavior for a WCF Web HTTP service.</span></span>  
+ [<span data-ttu-id="a0d43-116">对 WCF Web HTTP 服务的缓存支持</span><span class="sxs-lookup"><span data-stu-id="a0d43-116">Caching Support for WCF Web HTTP Services</span></span>](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
+ <span data-ttu-id="a0d43-117">说明如何指定 WCF Web HTTP 服务的缓存行为。</span><span class="sxs-lookup"><span data-stu-id="a0d43-117">Describes how to specify caching behavior for a WCF Web HTTP service.</span></span>  
   
- [<span data-ttu-id="5bd21-118">WCF Web HTTP 格式设置</span><span class="sxs-lookup"><span data-stu-id="5bd21-118">WCF Web HTTP Formatting</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
- <span data-ttu-id="5bd21-119">说明如何指定 WCF Web HTTP 服务响应的格式。</span><span class="sxs-lookup"><span data-stu-id="5bd21-119">Describes how to specify the format of the response from a WCF Web HTTP service.</span></span>  
+ [<span data-ttu-id="a0d43-118">WCF Web HTTP 格式设置</span><span class="sxs-lookup"><span data-stu-id="a0d43-118">WCF Web HTTP Formatting</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
+ <span data-ttu-id="a0d43-119">说明如何指定 WCF Web HTTP 服务响应的格式。</span><span class="sxs-lookup"><span data-stu-id="a0d43-119">Describes how to specify the format of the response from a WCF Web HTTP service.</span></span>  
   
- [<span data-ttu-id="5bd21-120">WCF Web HTTP 错误处理</span><span class="sxs-lookup"><span data-stu-id="5bd21-120">WCF Web HTTP Error Handling</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
- <span data-ttu-id="5bd21-121">说明如何将错误返回 WCF Web 客户端，包括 HTTP 状态代码和用户定义的其他错误数据。</span><span class="sxs-lookup"><span data-stu-id="5bd21-121">Describes how to return errors to WCF Web clients including HTTP status codes and additional user-defined error data.</span></span>  
+ [<span data-ttu-id="a0d43-120">WCF Web HTTP 错误处理</span><span class="sxs-lookup"><span data-stu-id="a0d43-120">WCF Web HTTP Error Handling</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
+ <span data-ttu-id="a0d43-121">说明如何将错误返回 WCF Web 客户端，包括 HTTP 状态代码和用户定义的其他错误数据。</span><span class="sxs-lookup"><span data-stu-id="a0d43-121">Describes how to return errors to WCF Web clients including HTTP status codes and additional user-defined error data.</span></span>  
   
- [<span data-ttu-id="5bd21-122">从 WCF 服务调用 REST 样式服务</span><span class="sxs-lookup"><span data-stu-id="5bd21-122">Calling a REST-style service from a WCF service</span></span>](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
- <span data-ttu-id="5bd21-123">说明如何从 WCF 服务内部来调用 REST 样式服务。</span><span class="sxs-lookup"><span data-stu-id="5bd21-123">Describes how to call a REST-style service from inside a WCF service.</span></span>
+ [<span data-ttu-id="a0d43-122">从 WCF 服务调用 REST 样式服务</span><span class="sxs-lookup"><span data-stu-id="a0d43-122">Calling a REST-style service from a WCF service</span></span>](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
+ <span data-ttu-id="a0d43-123">说明如何从 WCF 服务内部来调用 REST 样式服务。</span><span class="sxs-lookup"><span data-stu-id="a0d43-123">Describes how to call a REST-style service from inside a WCF service.</span></span>

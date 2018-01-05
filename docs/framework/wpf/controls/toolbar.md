@@ -17,29 +17,30 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6bc69beef04b41cda6baaab0f74d90bf5c5a78d8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 497687eef2d31260f9eaf8cfbf2e9eb0441fcfbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="toolbar"></a><span data-ttu-id="6a499-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="6a499-102">ToolBar</span></span>
-<span data-ttu-id="6a499-103"><xref:System.Windows.Controls.ToolBar>控件是一组命令或通常在功能上相关的控件的容器。</span><span class="sxs-lookup"><span data-stu-id="6a499-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
+# <a name="toolbar"></a><span data-ttu-id="47fda-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="47fda-102">ToolBar</span></span>
+<span data-ttu-id="47fda-103"><xref:System.Windows.Controls.ToolBar>控件是一组命令或通常在功能上相关的控件的容器。</span><span class="sxs-lookup"><span data-stu-id="47fda-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
   
- <span data-ttu-id="6a499-104">下图显示了水平和垂直<xref:System.Windows.Controls.ToolBar>控件。</span><span class="sxs-lookup"><span data-stu-id="6a499-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
+ <span data-ttu-id="47fda-104">下图显示了水平和垂直<xref:System.Windows.Controls.ToolBar>控件。</span><span class="sxs-lookup"><span data-stu-id="47fda-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
   
- <span data-ttu-id="6a499-105">![水平工具栏](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="6a499-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
-<span data-ttu-id="6a499-106">水平工具栏</span><span class="sxs-lookup"><span data-stu-id="6a499-106">Horizontal Toolbar</span></span>  
+ <span data-ttu-id="47fda-105">![水平工具栏](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="47fda-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
+<span data-ttu-id="47fda-106">水平工具栏</span><span class="sxs-lookup"><span data-stu-id="47fda-106">Horizontal Toolbar</span></span>  
   
- <span data-ttu-id="6a499-107">![垂直工具栏](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="6a499-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
-<span data-ttu-id="6a499-108">垂直工具栏</span><span class="sxs-lookup"><span data-stu-id="6a499-108">Vertical Toolbar</span></span>  
+ <span data-ttu-id="47fda-107">![垂直工具栏](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="47fda-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
+<span data-ttu-id="47fda-108">垂直工具栏</span><span class="sxs-lookup"><span data-stu-id="47fda-108">Vertical Toolbar</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6a499-109">本节内容</span><span class="sxs-lookup"><span data-stu-id="6a499-109">In This Section</span></span>  
- [<span data-ttu-id="6a499-110">ToolBar 概述</span><span class="sxs-lookup"><span data-stu-id="6a499-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [<span data-ttu-id="6a499-111">设置 ToolBar 上控件的样式</span><span class="sxs-lookup"><span data-stu-id="6a499-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="47fda-109">本节内容</span><span class="sxs-lookup"><span data-stu-id="47fda-109">In This Section</span></span>  
+ [<span data-ttu-id="47fda-110">ToolBar 概述</span><span class="sxs-lookup"><span data-stu-id="47fda-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
+  [<span data-ttu-id="47fda-111">设置 ToolBar 上控件的样式</span><span class="sxs-lookup"><span data-stu-id="47fda-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="6a499-112">参考</span><span class="sxs-lookup"><span data-stu-id="6a499-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="47fda-112">参考</span><span class="sxs-lookup"><span data-stu-id="47fda-112">Reference</span></span>  
  <xref:System.Windows.Controls.ToolBar>  
   <xref:System.Windows.Controls.ToolBarTray>  
   
-## <a name="related-sections"></a><span data-ttu-id="6a499-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="6a499-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="47fda-113">相关章节</span><span class="sxs-lookup"><span data-stu-id="47fda-113">Related Sections</span></span>

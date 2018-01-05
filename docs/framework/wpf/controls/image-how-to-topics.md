@@ -17,28 +17,29 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c34bb03e27d223c09238f658563e8a368a0c6948
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6aee3d6161d5a20a55e05e86c8479b9182d4e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="image-how-to-topics"></a><span data-ttu-id="209bc-102">图像帮助主题</span><span class="sxs-lookup"><span data-stu-id="209bc-102">Image How-to Topics</span></span>
-<span data-ttu-id="209bc-103">本部分中的主题介绍如何使用<xref:System.Windows.Controls.Image>元素。</span><span class="sxs-lookup"><span data-stu-id="209bc-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
+# <a name="image-how-to-topics"></a><span data-ttu-id="a2de3-102">图像帮助主题</span><span class="sxs-lookup"><span data-stu-id="a2de3-102">Image How-to Topics</span></span>
+<span data-ttu-id="a2de3-103">本部分中的主题介绍如何使用<xref:System.Windows.Controls.Image>元素。</span><span class="sxs-lookup"><span data-stu-id="a2de3-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="209bc-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="209bc-104">In This Section</span></span>  
- [<span data-ttu-id="209bc-105">使用 Image 元素</span><span class="sxs-lookup"><span data-stu-id="209bc-105">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
-  [<span data-ttu-id="209bc-106">将图像转换成灰度图像</span><span class="sxs-lookup"><span data-stu-id="209bc-106">Convert an Image to Greyscale</span></span>](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
-  [<span data-ttu-id="209bc-107">裁剪图像</span><span class="sxs-lookup"><span data-stu-id="209bc-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
-  [<span data-ttu-id="209bc-108">旋转图像</span><span class="sxs-lookup"><span data-stu-id="209bc-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a2de3-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="a2de3-104">In This Section</span></span>  
+ [<span data-ttu-id="a2de3-105">使用 Image 元素</span><span class="sxs-lookup"><span data-stu-id="a2de3-105">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
+  [<span data-ttu-id="a2de3-106">将图像转换成灰度图像</span><span class="sxs-lookup"><span data-stu-id="a2de3-106">Convert an Image to Greyscale</span></span>](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
+  [<span data-ttu-id="a2de3-107">裁剪图像</span><span class="sxs-lookup"><span data-stu-id="a2de3-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
+  [<span data-ttu-id="a2de3-108">旋转图像</span><span class="sxs-lookup"><span data-stu-id="a2de3-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="209bc-109">参考</span><span class="sxs-lookup"><span data-stu-id="209bc-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a2de3-109">参考</span><span class="sxs-lookup"><span data-stu-id="a2de3-109">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="209bc-110">另请参阅</span><span class="sxs-lookup"><span data-stu-id="209bc-110">See Also</span></span>  
- [<span data-ttu-id="209bc-111">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="209bc-111">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="209bc-112">操作说明主题</span><span class="sxs-lookup"><span data-stu-id="209bc-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="a2de3-110">请参阅</span><span class="sxs-lookup"><span data-stu-id="a2de3-110">See Also</span></span>  
+ [<span data-ttu-id="a2de3-111">图像处理概述</span><span class="sxs-lookup"><span data-stu-id="a2de3-111">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="a2de3-112">帮助主题</span><span class="sxs-lookup"><span data-stu-id="a2de3-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
