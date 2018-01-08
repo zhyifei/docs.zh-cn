@@ -17,11 +17,11 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 35a40d6dfb6c66183afb0f3a2980a3b7863353fa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keywords-visual-basic"></a>关键字 (Visual Basic)
 下表列出了所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言关键字。  
@@ -107,7 +107,6 @@ ms.lasthandoff: 12/02/2017
 |-----------|-----------------|  
 |[数组摘要](../../../visual-basic/language-reference/keywords/arrays-summary.md)|列出了用于创建、定义和使用数组的语言元素。|  
 |[集合对象摘要](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|列出了用于集合的语言元素。|  
-|[编译器指令摘要 (Visual Basic)](http://msdn.microsoft.com/en-us/874dad02-d4a5-4a9d-8a48-0191a0ac794a)|列出了控制编译器行为的指令。|  
 |[控件流摘要](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|列出了用于循环和控制过程流的语句。|  
 |[转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)|列出了用于转换数字、日期、时间和字符串的函数。|  
 |[数据类型摘要](../../../visual-basic/language-reference/keywords/data-types-summary.md)|列出了数据类型。 此外，还列出了用于转换和验证数据类型的函数。|  
@@ -124,5 +123,5 @@ ms.lasthandoff: 12/02/2017
 |[注册表摘要](../../../visual-basic/language-reference/keywords/registry-summary.md)|列出了用于读取、保存和删除程序设置的函数。|  
 |[字符串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|列出了用于操控字符串的函数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)
