@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: deb02217b5d2a79cdf90d511658657f642ca1fc9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 994ccb677d1376eff5b889a0a4ddfe072557bdea
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>如何：对 JSON 数据进行序列化和反序列化
 JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用于在客户端浏览器和支持 AJAX 的 Web 服务之间快速交换少量数据。  
@@ -36,23 +36,23 @@ JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用�
   
 1.  通过将 `Person` 附加到类并将 <xref:System.Runtime.Serialization.DataContractAttribute> 特性附加到要序列化的成员，为 <xref:System.Runtime.Serialization.DataMemberAttribute> 定义数据协定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]数据协定，请参阅[设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)。  
   
-    ```  
+    ```csharp  
     [DataContract]  
-        internal class Person  
-        {  
-            [DataMember]  
-            internal string name;  
+    internal class Person  
+    {  
+        [DataMember]  
+        internal string name;  
   
-            [DataMember]  
-            internal int age;  
-        }  
+        [DataMember]  
+        internal int age;  
+    }  
     ```  
   
 ### <a name="to-serialize-an-instance-of-type-person-to-json"></a>将 Person 类型的实例序列化为 JSON  
   
 1.  创建 `Person` 类型的实例。  
   
-    ```  
+    ```csharp  
     Person p = new Person();  
     p.name = "John";  
     p.age = 42;  
@@ -60,20 +60,20 @@ JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用�
   
 2.  使用 `Person` 将 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 对象序列化为内存流。  
   
-    ```  
+    ```csharp  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
 3.  使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 方法将 JSON 数据写入到流中。  
   
-    ```  
+    ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
 4.  显示 JSON 输出。  
   
-    ```  
+    ```csharp  
     stream1.Position = 0;  
     StreamReader sr = new StreamReader(stream1);  
     Console.Write("JSON form of Person object: ");  
@@ -84,23 +84,20 @@ JSON（JavaScript 对象符号）是一种高效的数据编码格式，可用�
   
 1.  通过使用 `Person` 的 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 方法，将 JSON 编码数据反序列化为一个新的 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 实例。  
   
-    ```  
+    ```csharp  
     stream1.Position = 0;  
     Person p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
 2.  显示结果。  
   
-    ```  
-    Console.Write("Deserialized back, got name=");  
-    Console.Write(p2.name);  
-    Console.Write(", age=");  
-    Console.WriteLine(p2.age);  
+    ```csharp  
+    Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  
     ```  
   
 ## <a name="example"></a>示例  
   
-```  
+```csharp  
 // Create a User object and serialize it to a JSON stream.  
 public static string WriteFromObject()  
 {  
@@ -116,7 +113,6 @@ public static string WriteFromObject()
     byte[] json = ms.ToArray();  
     ms.Close();  
     return Encoding.UTF8.GetString(json, 0, json.Length);  
-  
 }  
   
 // Deserialize a JSON stream to a User object.  
@@ -134,13 +130,14 @@ public static User ReadToObject(string json)
 > [!NOTE]
 >  对于包含多个具有相同名称的成员的数据协定，JSON 序列化程序将引发一个序列化异常，如以下示例代码中所示。  
   
-```  
+```csharp  
 [DataContract]  
 public class TestDuplicateDataBase  
 {  
     [DataMember]  
     public int field1 = 123;  
-}  
+}
+
 [DataContract]  
 public class TestDuplicateDataDerived : TestDuplicateDataBase  
 {  

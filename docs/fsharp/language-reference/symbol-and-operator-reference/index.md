@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 10/18/2017
 |`.`|[成员](../members/index.md)<br /><br />[基元类型](../primitive-types.md)|<ul><li>访问成员并分隔完全限定名称中的各个名称。<br /></li><li>指定浮点数中的小数点。<br /></li><ul/>|
 |`..`|[循环：`for...in` 表达式](../loops-for-in-expression.md)|<ul><li>指定范围。<br /></li><ul/>|
 |`.. ..`|[循环：`for...in` 表达式](../loops-for-in-expression.md)|<ul><li>指定范围和增量。<br /></li><ul/>|
-|`.[...]`|[阵列](../arrays.md)|<ul><li>访问数组元素。<br /></li><ul/>|
+|`.[...]`|[数组](../arrays.md)|<ul><li>访问数组元素。<br /></li><ul/>|
 |`/`|[算术运算符](arithmetic-operators.md)<br /><br />[度量单位](../units-of-measure.md)|<ul><li>使左侧（分子）除以右侧（分母）。<br /></li><li>用于度量单位类型。<br /></li><ul/>|
 |`/?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，使左侧除以右侧。<br /></li><ul/>|
 |`//`||<ul><li>指示单行注释的开头。<br /></li><ul/>|
@@ -92,7 +92,7 @@ ms.lasthandoff: 10/18/2017
 |`>?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算“大于”运算。<br /></li><ul/>|
 |`>>`|[函数](../functions/index.md)|<ul><li>组合两个函数（正向组合运算符）。<br /></li><ul/>|
 |`>>>`|[位运算符](bitwise-operators.md)|<ul><li>将左侧的位数向右移动右侧指定的位数。<br /></li><ul/>|
-|`>=`|[算术运算符](arithmetic-operators.md)|<ul><li>如果右侧大于或等于左侧，则返回 `true`；否则返回 `false`。<br /></li><ul/>|
+|`>=`|[算术运算符](arithmetic-operators.md)|<ul><li>返回`true`左侧是否大于或等于右侧的数字; 否则，返回`false`。<br /></li><ul/>|
 |`>=?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算“大于或等于”运算。<br /></li><ul/>|
 |`?`|[参数和自变量](../parameters-and-arguments.md)|<ul><li>指定可选自变量。<br /></li><li>用作动态方法和属性调用的运算符。 你必须提供自己的实现。<br /></li><ul/>|
 |`? ... <- ...`|无可用的详细信息。|<ul><li>用作设置动态属性的运算符。 你必须提供自己的实现。<br /></li><ul/>|
@@ -101,7 +101,7 @@ ms.lasthandoff: 10/18/2017
 |`?>=?`, `?>?`, `?<=?`, `?<?`, `?=?`, `?<>?`, `?+?`, `?-?`, `?*?`, `?/?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>如果两侧都是可以为 null 的类型，等效于周围没有问号的对应运算符。<br /></li><ul/>|
 |`@`|[列表](../lists.md)<br /><br />[字符串](../strings.md)|<ul><li>连接两个列表。<br /></li><li>当放置在字符串文本之前时，指示将逐字解释字符串，而不会解释转义符。<br /></li><ul/>|
 |`[...]`|[列表](../lists.md)|<ul><li>分隔列表中的元素。<br /></li><ul/>|
-|<code>[&#124;...&#124;]</code>|[阵列](../arrays.md)|<ul><li>分隔数组中的元素。<br /></li><ul/>|
+|<code>[&#124;...&#124;]</code>|[数组](../arrays.md)|<ul><li>分隔数组中的元素。<br /></li><ul/>|
 |`[<...>]`|[特性](../attributes.md)|<ul><li>分隔特性。<br /></li><ul/>|
 |`\`|[字符串](../strings.md)|<ul><li>对下一个字符转义，在字符和字符串文本中使用。<br /></li><ul/>|
 |`^`|[静态解析的类型参数](../generics/statically-resolved-type-parameters.md)<br /><br />[字符串](../strings.md)|<ul><li>指定在编译时（而非运行时）必须解析的类型参数。<br /></li><li>连接字符串。<br /></li><ul/>|
@@ -127,7 +127,7 @@ ms.lasthandoff: 10/18/2017
 |--------|-------------|
 |`as`|右|
 |`when`|右|
-|<code>&#124;</code>（管道）|左|
+|<code>&#124;</code>（管道）|左侧|
 |`;`|右|
 |`let`|不相关|
 |`function`, `fun`, `match`, `try`|不相关|
@@ -138,22 +138,22 @@ ms.lasthandoff: 10/18/2017
 |`or`, <code>&#124;&#124;</code>|左侧|
 |`&`, `&&`|左侧|
 |`:>`, `:?>`|右|
-|`!=`*操作*， `<`*操作*， `>`*操作*， `=`， <code>&#124;</code>*操作*， `&` *操作*，`&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左|
+|`!=`*操作*， `<`*操作*， `>`*操作*， `=`， <code>&#124;</code>*操作*， `&` *操作*，`&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左侧|
 |`^`*op*<br /><br />（包括 `^^^`）|右|
 |`::`|右|
 |`:?`|未关联|
 |`-`*op*，`+`*op*|适用于最为这些符号的中缀使用|
 |`*`*op*，`/`*op*，`%`*op*|左|
 |`**`*op*|右|
-|`f x`（函数应用程序）|左|
+|`f x`（函数应用程序）|左侧|
 |<code>&#124;</code>（模式匹配）|右|
-|前缀运算符（`+`*op*，`-`*op*，`%`，`%%`，`&`，`&&``!`*op*，`~`*op*）|左|
+|前缀运算符（`+`*op*，`-`*op*，`%`，`%%`，`&`，`&&``!`*op*，`~`*op*）|左侧|
 |`.`|左|
-|`f(x)`|左|
-|`f<`*types*`>`|左|
+|`f(x)`|左侧|
+|`f<`*types*`>`|左侧|
 F# 支持自定义运算符重载。 这意味着你可以自定义自己的运算符。 在上表中，*op* 可以是任何有效的运算符字符序列（可能为空），它既可以内嵌，也可以由用户定义。 因此，你可以使用此表来确定用于自定义运算符以实现所需优先级级别的字符顺序。 当编译器确定优先级时，会忽略前面的 `.` 字符。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](../index.md)
 
 [运算符重载](../operator-overloading.md)

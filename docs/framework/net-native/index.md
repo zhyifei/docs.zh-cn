@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 92dac407ace9a039f5e6edc16b093fea5c485f63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dec4d465b53f939f8fa711950ba6a000bd304e13
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 编译引用
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]是包含在 Visual Studio 2015 和更高版本的预编译技术用于生成和部署 Windows 应用程序。 它自动将以托管代码（C# 或 Visual Basic）编写并面向 .NET Framework 和 Windows 10 的发布版本的应用编译为本机代码。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 -   优化应用内存使用情况。  
 
 > [!IMPORTANT]
-> 对于大多数应用程序和方案，.NET 本机提供显著更快的启动时间和相比编译到 IL 或 NGEN 映像的应用时的优越性能。 但是，你的结果可能有所不同。 若要确保你的应用程序具有受益的.NET Native 的性能增强功能，您应比较其性能，与你的应用程序的非.NET 本机版本。 有关详细信息，请参阅[性能会话概述](https:/docs.microsoft.com/visualstudio/profiling/performance-session-overview)。
+> 对于大多数应用程序和方案，.NET 本机提供显著更快的启动时间和相比编译到 IL 或 NGEN 映像的应用时的优越性能。 但是，你的结果可能有所不同。 若要确保你的应用程序具有受益的.NET Native 的性能增强功能，您应比较其性能，与你的应用程序的非.NET 本机版本。 有关详细信息，请参阅[性能会话概述](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview)。
  
 但是 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 涉及的本机代码编译不止一个。 它会改变 .NET Framework 应用的创建和执行方式。 具体而言：  
   
