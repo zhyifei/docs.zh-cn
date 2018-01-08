@@ -7,79 +7,80 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 2b66198ac3e33c640abda0c96fb05944f5ea91df
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 9c8df8e457a9883b86abd0505c0c682d849bc7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="dotnet-nuget-locals"></a><span data-ttu-id="c04dc-103">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="c04dc-103">dotnet nuget locals</span></span>
+# <a name="dotnet-nuget-locals"></a><span data-ttu-id="74463-103">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="74463-103">dotnet nuget locals</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="c04dc-104">名称</span><span class="sxs-lookup"><span data-stu-id="c04dc-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="74463-104">name</span><span class="sxs-lookup"><span data-stu-id="74463-104">Name</span></span>
 
-<span data-ttu-id="c04dc-105">`dotnet nuget locals` -清除或列出本地 NuGet 资源。</span><span class="sxs-lookup"><span data-stu-id="c04dc-105">`dotnet nuget locals` - Clears or lists local NuGet resources.</span></span>
+<span data-ttu-id="74463-105">`dotnet nuget locals` -清除或列出本地 NuGet 资源。</span><span class="sxs-lookup"><span data-stu-id="74463-105">`dotnet nuget locals` - Clears or lists local NuGet resources.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="c04dc-106">摘要</span><span class="sxs-lookup"><span data-stu-id="c04dc-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="74463-106">摘要</span><span class="sxs-lookup"><span data-stu-id="74463-106">Synopsis</span></span>
 
 `dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
 
-## <a name="description"></a><span data-ttu-id="c04dc-107">描述</span><span class="sxs-lookup"><span data-stu-id="c04dc-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="74463-107">描述</span><span class="sxs-lookup"><span data-stu-id="74463-107">Description</span></span>
 
-<span data-ttu-id="c04dc-108">`dotnet nuget locals` 命令清除或列出 http 请求缓存中的本地 NuGet 资源，临时缓存或计算机范围的全局包文件夹。</span><span class="sxs-lookup"><span data-stu-id="c04dc-108">The `dotnet nuget locals` command clears or lists local NuGet resources in the http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
+<span data-ttu-id="74463-108">`dotnet nuget locals` 命令清除或列出 http 请求缓存中的本地 NuGet 资源，临时缓存或计算机范围的全局包文件夹。</span><span class="sxs-lookup"><span data-stu-id="74463-108">The `dotnet nuget locals` command clears or lists local NuGet resources in the http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="c04dc-109">参数</span><span class="sxs-lookup"><span data-stu-id="c04dc-109">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="74463-109">自变量</span><span class="sxs-lookup"><span data-stu-id="74463-109">Arguments</span></span>
 
 `CACHE_LOCATION`
 
-<span data-ttu-id="c04dc-110">以下值之一：</span><span class="sxs-lookup"><span data-stu-id="c04dc-110">One of the following values:</span></span>
+<span data-ttu-id="74463-110">以下值之一：</span><span class="sxs-lookup"><span data-stu-id="74463-110">One of the following values:</span></span>
 
-* <span data-ttu-id="c04dc-111">`all` - 表示指定的操作应用于所有缓存类型，即 http 请求缓存、全局包缓存和临时缓存。</span><span class="sxs-lookup"><span data-stu-id="c04dc-111">`all` - Indicates that the specified operation is applied to all cache types: http-request cache, global packages cache, and the temporary cache.</span></span>
-* <span data-ttu-id="c04dc-112">`http-cache` - 表示指定的操作仅应用于 http 请求缓存。</span><span class="sxs-lookup"><span data-stu-id="c04dc-112">`http-cache` - Indicates that the specified operation is applied only to the http-request cache.</span></span> <span data-ttu-id="c04dc-113">其他缓存位置不受影响。</span><span class="sxs-lookup"><span data-stu-id="c04dc-113">The other cache locations are not affected.</span></span>
-* <span data-ttu-id="c04dc-114">`global-packages` - 表示指定的操作仅应用于全局包缓存。</span><span class="sxs-lookup"><span data-stu-id="c04dc-114">`global-packages` - Indicates that the specified operation is applied only to the global packages cache.</span></span> <span data-ttu-id="c04dc-115">其他缓存位置不受影响。</span><span class="sxs-lookup"><span data-stu-id="c04dc-115">The other cache locations are not affected.</span></span>
-* <span data-ttu-id="c04dc-116">`temp` - 表示指定的操作仅应用于临时缓存。</span><span class="sxs-lookup"><span data-stu-id="c04dc-116">`temp` - Indicates that the specified operation is applied only to the temporary cache.</span></span> <span data-ttu-id="c04dc-117">其他缓存位置不受影响。</span><span class="sxs-lookup"><span data-stu-id="c04dc-117">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="74463-111">`all` - 表示指定的操作应用于所有缓存类型，即 http 请求缓存、全局包缓存和临时缓存。</span><span class="sxs-lookup"><span data-stu-id="74463-111">`all` - Indicates that the specified operation is applied to all cache types: http-request cache, global packages cache, and the temporary cache.</span></span>
+* <span data-ttu-id="74463-112">`http-cache` - 表示指定的操作仅应用于 http 请求缓存。</span><span class="sxs-lookup"><span data-stu-id="74463-112">`http-cache` - Indicates that the specified operation is applied only to the http-request cache.</span></span> <span data-ttu-id="74463-113">其他缓存位置不受影响。</span><span class="sxs-lookup"><span data-stu-id="74463-113">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="74463-114">`global-packages` - 表示指定的操作仅应用于全局包缓存。</span><span class="sxs-lookup"><span data-stu-id="74463-114">`global-packages` - Indicates that the specified operation is applied only to the global packages cache.</span></span> <span data-ttu-id="74463-115">其他缓存位置不受影响。</span><span class="sxs-lookup"><span data-stu-id="74463-115">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="74463-116">`temp` - 表示指定的操作仅应用于临时缓存。</span><span class="sxs-lookup"><span data-stu-id="74463-116">`temp` - Indicates that the specified operation is applied only to the temporary cache.</span></span> <span data-ttu-id="74463-117">其他缓存位置不受影响。</span><span class="sxs-lookup"><span data-stu-id="74463-117">The other cache locations are not affected.</span></span>
 
-## <a name="options"></a><span data-ttu-id="c04dc-118">选项</span><span class="sxs-lookup"><span data-stu-id="c04dc-118">Options</span></span>
+## <a name="options"></a><span data-ttu-id="74463-118">选项</span><span class="sxs-lookup"><span data-stu-id="74463-118">Options</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="c04dc-119">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="c04dc-119">Prints out a short help for the command.</span></span>
+<span data-ttu-id="74463-119">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="74463-119">Prints out a short help for the command.</span></span>
 
 `-c|--clear`
 
-<span data-ttu-id="c04dc-120">清除选项对指定的缓存类型执行清除操作。</span><span class="sxs-lookup"><span data-stu-id="c04dc-120">The clear option performs a clear operation on the specified cache type.</span></span> <span data-ttu-id="c04dc-121">缓存目录的内容被以递归方式删除。</span><span class="sxs-lookup"><span data-stu-id="c04dc-121">The contents of the cache directories are deleted recursively.</span></span> <span data-ttu-id="c04dc-122">正在执行的用户/组必须具有对缓存目录中的文件的相关权限。</span><span class="sxs-lookup"><span data-stu-id="c04dc-122">The executing user/group must have permission to the files in the cache directories.</span></span> <span data-ttu-id="c04dc-123">反之，则显示错误，指示未被清除的文件/文件夹。</span><span class="sxs-lookup"><span data-stu-id="c04dc-123">If not, an error is displayed indicating the files/folders which were not cleared.</span></span>
+<span data-ttu-id="74463-120">清除选项对指定的缓存类型执行清除操作。</span><span class="sxs-lookup"><span data-stu-id="74463-120">The clear option performs a clear operation on the specified cache type.</span></span> <span data-ttu-id="74463-121">缓存目录的内容被以递归方式删除。</span><span class="sxs-lookup"><span data-stu-id="74463-121">The contents of the cache directories are deleted recursively.</span></span> <span data-ttu-id="74463-122">正在执行的用户/组必须具有对缓存目录中的文件的相关权限。</span><span class="sxs-lookup"><span data-stu-id="74463-122">The executing user/group must have permission to the files in the cache directories.</span></span> <span data-ttu-id="74463-123">反之，则显示错误，指示未被清除的文件/文件夹。</span><span class="sxs-lookup"><span data-stu-id="74463-123">If not, an error is displayed indicating the files/folders which were not cleared.</span></span>
 
 `-l|--list`
 
-<span data-ttu-id="c04dc-124">列表选项用于显示指定缓存类型的位置。</span><span class="sxs-lookup"><span data-stu-id="c04dc-124">The list option is used to display the location of the specified cache type.</span></span> 
+<span data-ttu-id="74463-124">列表选项用于显示指定缓存类型的位置。</span><span class="sxs-lookup"><span data-stu-id="74463-124">The list option is used to display the location of the specified cache type.</span></span> 
 
 `--force-english-output`
 
-<span data-ttu-id="c04dc-125">强制命令行输出以英语显示。</span><span class="sxs-lookup"><span data-stu-id="c04dc-125">Forces command-line output in English.</span></span>
+<span data-ttu-id="74463-125">强制命令行输出以英语显示。</span><span class="sxs-lookup"><span data-stu-id="74463-125">Forces command-line output in English.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="c04dc-126">示例</span><span class="sxs-lookup"><span data-stu-id="c04dc-126">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="74463-126">示例</span><span class="sxs-lookup"><span data-stu-id="74463-126">Examples</span></span>
 
-<span data-ttu-id="c04dc-127">显示所有本地缓存目录的路径（http 缓存目录、全局包缓存目录和临时缓存目录）：</span><span class="sxs-lookup"><span data-stu-id="c04dc-127">Displays the paths of all the local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
+<span data-ttu-id="74463-127">显示所有本地缓存目录的路径（http 缓存目录、全局包缓存目录和临时缓存目录）：</span><span class="sxs-lookup"><span data-stu-id="74463-127">Displays the paths of all the local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
 
 `dotnet nuget locals –l all`
 
-<span data-ttu-id="c04dc-128">显示本地 http 缓存录的路径：</span><span class="sxs-lookup"><span data-stu-id="c04dc-128">Displays the path for the local http-cache directory:</span></span>
+<span data-ttu-id="74463-128">显示本地 http 缓存录的路径：</span><span class="sxs-lookup"><span data-stu-id="74463-128">Displays the path for the local http-cache directory:</span></span>
 
 `dotnet nuget locals --list http-cache`
 
-<span data-ttu-id="c04dc-129">清除所有本地缓存目录的文件（http 缓存目录、全局包缓存目录和临时缓存目录）：</span><span class="sxs-lookup"><span data-stu-id="c04dc-129">Clears all files from all local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
+<span data-ttu-id="74463-129">清除所有本地缓存目录的文件（http 缓存目录、全局包缓存目录和临时缓存目录）：</span><span class="sxs-lookup"><span data-stu-id="74463-129">Clears all files from all local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
 
 `dotnet nuget locals --clear all`
 
-<span data-ttu-id="c04dc-130">清除本地全局包缓存目录中的所有文件：</span><span class="sxs-lookup"><span data-stu-id="c04dc-130">Clears all files in local global-packages cache directory:</span></span>
+<span data-ttu-id="74463-130">清除本地全局包缓存目录中的所有文件：</span><span class="sxs-lookup"><span data-stu-id="74463-130">Clears all files in local global-packages cache directory:</span></span>
 
 `dotnet nuget locals -c global-packages`
 
-<span data-ttu-id="c04dc-131">清除本地临时缓存目录中的所有文件：</span><span class="sxs-lookup"><span data-stu-id="c04dc-131">Clears all files in local temporary cache directory:</span></span>
+<span data-ttu-id="74463-131">清除本地临时缓存目录中的所有文件：</span><span class="sxs-lookup"><span data-stu-id="74463-131">Clears all files in local temporary cache directory:</span></span>
 
 `dotnet nuget locals -c temp`
 
-## <a name="troubleshooting"></a><span data-ttu-id="c04dc-132">疑难解答</span><span class="sxs-lookup"><span data-stu-id="c04dc-132">Troubleshooting</span></span>
+## <a name="troubleshooting"></a><span data-ttu-id="74463-132">疑难解答</span><span class="sxs-lookup"><span data-stu-id="74463-132">Troubleshooting</span></span>
 
-<span data-ttu-id="c04dc-133">有关使用 `dotnet nuget locals` 命令时的常见问题和错误的信息，请参阅[管理 NuGet 缓存](/nuget/consume-packages/managing-the-nuget-cache)。</span><span class="sxs-lookup"><span data-stu-id="c04dc-133">For information on common problems and errors while using the `dotnet nuget locals` command, see [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache).</span></span>
+<span data-ttu-id="74463-133">有关使用 `dotnet nuget locals` 命令时的常见问题和错误的信息，请参阅[管理 NuGet 缓存](/nuget/consume-packages/managing-the-nuget-cache)。</span><span class="sxs-lookup"><span data-stu-id="74463-133">For information on common problems and errors while using the `dotnet nuget locals` command, see [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache).</span></span>

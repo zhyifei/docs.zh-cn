@@ -7,49 +7,50 @@ ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: b2b625729b5db22bc7b69194f20963857004e3e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 403dc2262e2aba29fc432581a4b325092cdfb25e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="dotnet-build"></a><span data-ttu-id="e87d9-103">dotnet-build</span><span class="sxs-lookup"><span data-stu-id="e87d9-103">dotnet-build</span></span>
+# <a name="dotnet-build"></a><span data-ttu-id="1783e-103">dotnet-build</span><span class="sxs-lookup"><span data-stu-id="1783e-103">dotnet-build</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="e87d9-104">名称</span><span class="sxs-lookup"><span data-stu-id="e87d9-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="1783e-104">name</span><span class="sxs-lookup"><span data-stu-id="1783e-104">Name</span></span>
 
-<span data-ttu-id="e87d9-105">`dotnet build` - 生成项目及其所有依赖项。</span><span class="sxs-lookup"><span data-stu-id="e87d9-105">`dotnet build` - Builds a project and all of its dependencies.</span></span>
+<span data-ttu-id="1783e-105">`dotnet build` - 生成项目及其所有依赖项。</span><span class="sxs-lookup"><span data-stu-id="1783e-105">`dotnet build` - Builds a project and all of its dependencies.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="e87d9-106">摘要</span><span class="sxs-lookup"><span data-stu-id="e87d9-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="1783e-106">摘要</span><span class="sxs-lookup"><span data-stu-id="1783e-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="e87d9-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="e87d9-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1783e-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1783e-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 ```
 dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="e87d9-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="e87d9-108">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1783e-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1783e-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="e87d9-109">描述</span><span class="sxs-lookup"><span data-stu-id="e87d9-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="1783e-109">描述</span><span class="sxs-lookup"><span data-stu-id="1783e-109">Description</span></span>
 
-<span data-ttu-id="e87d9-110">`dotnet build` 命令将项目及其依赖项生成为一组二进制文件。</span><span class="sxs-lookup"><span data-stu-id="e87d9-110">The `dotnet build` command builds the project and its dependencies into a set of binaries.</span></span> <span data-ttu-id="e87d9-111">二进制文件包括中间语言 (IL) 文件（带 *.dll* 扩展名）和用于调试的符号文件（带 *.pdb* 扩展名）中的项目的代码。</span><span class="sxs-lookup"><span data-stu-id="e87d9-111">The binaries include the project's code in Intermediate Language (IL) files with a *.dll* extension and symbol files used for debugging with a *.pdb* extension.</span></span> <span data-ttu-id="e87d9-112">生成依赖项 JSON 文件 (*\*.deps.json*)，该文件列出了应用程序的依赖项。</span><span class="sxs-lookup"><span data-stu-id="e87d9-112">A dependencies JSON file (*\*.deps.json*) is produced that lists the dependencies of the application.</span></span> <span data-ttu-id="e87d9-113">生成 *\*.runtimeconfig.json* 文件，该文件指定应用程序的共享运行时及其版本。</span><span class="sxs-lookup"><span data-stu-id="e87d9-113">A *\*.runtimeconfig.json* file is produced, which specifies the shared runtime and its version for the application.</span></span>
+<span data-ttu-id="1783e-110">`dotnet build` 命令将项目及其依赖项生成为一组二进制文件。</span><span class="sxs-lookup"><span data-stu-id="1783e-110">The `dotnet build` command builds the project and its dependencies into a set of binaries.</span></span> <span data-ttu-id="1783e-111">二进制文件包括中间语言 (IL) 文件（带 *.dll* 扩展名）和用于调试的符号文件（带 *.pdb* 扩展名）中的项目的代码。</span><span class="sxs-lookup"><span data-stu-id="1783e-111">The binaries include the project's code in Intermediate Language (IL) files with a *.dll* extension and symbol files used for debugging with a *.pdb* extension.</span></span> <span data-ttu-id="1783e-112">生成依赖项 JSON 文件 (*\*.deps.json*)，该文件列出了应用程序的依赖项。</span><span class="sxs-lookup"><span data-stu-id="1783e-112">A dependencies JSON file (*\*.deps.json*) is produced that lists the dependencies of the application.</span></span> <span data-ttu-id="1783e-113">生成 *\*.runtimeconfig.json* 文件，该文件指定应用程序的共享运行时及其版本。</span><span class="sxs-lookup"><span data-stu-id="1783e-113">A *\*.runtimeconfig.json* file is produced, which specifies the shared runtime and its version for the application.</span></span>
 
-<span data-ttu-id="e87d9-114">如果项目有第三方依赖项（如来自 NuGet 的库），将从 NuGet 缓存解析这些依赖项，并且它们不适用于项目的生成输出。</span><span class="sxs-lookup"><span data-stu-id="e87d9-114">If the project has third-party dependencies, such as libraries from NuGet, they're resolved from the NuGet cache and aren't available with the project's built output.</span></span> <span data-ttu-id="e87d9-115">考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。</span><span class="sxs-lookup"><span data-stu-id="e87d9-115">With that in mind, the product of `dotnet build` isn't ready to be transferred to another machine to run.</span></span> <span data-ttu-id="e87d9-116">这与 .NET Framework 的行为相反，后者在构建可执行项目（一个应用程序）时，将生成可在任何已安装 .NET Framework 的计算机上运行的输出。</span><span class="sxs-lookup"><span data-stu-id="e87d9-116">This is in contrast to the behavior of the .NET Framework in which building an executable project (an application) produces output that's runnable on any machine where the .NET Framework is installed.</span></span> <span data-ttu-id="e87d9-117">为了能够获得相似的 .NET Core 使用体验，需要使用 [dotnet publish](dotnet-publish.md) 命令。</span><span class="sxs-lookup"><span data-stu-id="e87d9-117">To have a similar experience with .NET Core, you need to use the [dotnet publish](dotnet-publish.md) command.</span></span> <span data-ttu-id="e87d9-118">有关详细信息，请参阅 [.NET 核心应用程序部署](../deploying/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e87d9-118">For more information, see [.NET Core Application Deployment](../deploying/index.md).</span></span>
+<span data-ttu-id="1783e-114">如果项目有第三方依赖项（如来自 NuGet 的库），将从 NuGet 缓存解析这些依赖项，并且它们不适用于项目的生成输出。</span><span class="sxs-lookup"><span data-stu-id="1783e-114">If the project has third-party dependencies, such as libraries from NuGet, they're resolved from the NuGet cache and aren't available with the project's built output.</span></span> <span data-ttu-id="1783e-115">考虑到这一点，`dotnet build` 的产品还未准备好转移到另一台计算机进行运行。</span><span class="sxs-lookup"><span data-stu-id="1783e-115">With that in mind, the product of `dotnet build` isn't ready to be transferred to another machine to run.</span></span> <span data-ttu-id="1783e-116">这与 .NET Framework 的行为相反，后者在构建可执行项目（一个应用程序）时，将生成可在任何已安装 .NET Framework 的计算机上运行的输出。</span><span class="sxs-lookup"><span data-stu-id="1783e-116">This is in contrast to the behavior of the .NET Framework in which building an executable project (an application) produces output that's runnable on any machine where the .NET Framework is installed.</span></span> <span data-ttu-id="1783e-117">为了能够获得相似的 .NET Core 使用体验，需要使用 [dotnet publish](dotnet-publish.md) 命令。</span><span class="sxs-lookup"><span data-stu-id="1783e-117">To have a similar experience with .NET Core, you need to use the [dotnet publish](dotnet-publish.md) command.</span></span> <span data-ttu-id="1783e-118">有关详细信息，请参阅 [.NET 核心应用程序部署](../deploying/index.md)。</span><span class="sxs-lookup"><span data-stu-id="1783e-118">For more information, see [.NET Core Application Deployment](../deploying/index.md).</span></span>
 
-<span data-ttu-id="e87d9-119">构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。</span><span class="sxs-lookup"><span data-stu-id="e87d9-119">Building requires the *project.assets.json* file, which lists the dependencies of your application.</span></span> <span data-ttu-id="e87d9-120">此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。</span><span class="sxs-lookup"><span data-stu-id="e87d9-120">The file is created when [`dotnet restore`](dotnet-restore.md) is executed.</span></span> <span data-ttu-id="e87d9-121">如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。</span><span class="sxs-lookup"><span data-stu-id="e87d9-121">Without the assets file in place, the tooling cannot resolve reference assemblies, which results in errors.</span></span> <span data-ttu-id="e87d9-122">通过 .NET Core 1.x SDK，需要在运行 `dotnet build` 之前显式运行 `dotnet restore`。</span><span class="sxs-lookup"><span data-stu-id="e87d9-122">With .NET Core 1.x SDK, you needed to explicitily run the `dotnet restore` before running `dotnet build`.</span></span> <span data-ttu-id="e87d9-123">自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。</span><span class="sxs-lookup"><span data-stu-id="e87d9-123">Starting with .NET Core 2.0 SDK, `dotnet restore` runs implicitily when you run `dotnet build`.</span></span> <span data-ttu-id="e87d9-124">若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。</span><span class="sxs-lookup"><span data-stu-id="e87d9-124">If you want to disable implicit restore when running the build command, you can pass the `--no-restore` option.</span></span>
+<span data-ttu-id="1783e-119">构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。</span><span class="sxs-lookup"><span data-stu-id="1783e-119">Building requires the *project.assets.json* file, which lists the dependencies of your application.</span></span> <span data-ttu-id="1783e-120">此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。</span><span class="sxs-lookup"><span data-stu-id="1783e-120">The file is created when [`dotnet restore`](dotnet-restore.md) is executed.</span></span> <span data-ttu-id="1783e-121">如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。</span><span class="sxs-lookup"><span data-stu-id="1783e-121">Without the assets file in place, the tooling cannot resolve reference assemblies, which results in errors.</span></span> <span data-ttu-id="1783e-122">通过 .NET Core 1.x SDK，需要在运行 `dotnet build` 之前显式运行 `dotnet restore`。</span><span class="sxs-lookup"><span data-stu-id="1783e-122">With .NET Core 1.x SDK, you needed to explicitily run the `dotnet restore` before running `dotnet build`.</span></span> <span data-ttu-id="1783e-123">自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。</span><span class="sxs-lookup"><span data-stu-id="1783e-123">Starting with .NET Core 2.0 SDK, `dotnet restore` runs implicitily when you run `dotnet build`.</span></span> <span data-ttu-id="1783e-124">若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。</span><span class="sxs-lookup"><span data-stu-id="1783e-124">If you want to disable implicit restore when running the build command, you can pass the `--no-restore` option.</span></span>
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-<span data-ttu-id="e87d9-125">`dotnet build` 使用 MSBuild 构建项目；因此，它支持并行生成和增量生成。</span><span class="sxs-lookup"><span data-stu-id="e87d9-125">`dotnet build` uses MSBuild to build the project; thus, it supports both parallel and incremental builds.</span></span> <span data-ttu-id="e87d9-126">有关详细信息，请参阅[增量生成](/visualstudio/msbuild/incremental-builds)。</span><span class="sxs-lookup"><span data-stu-id="e87d9-126">Refer to [Incremental Builds](/visualstudio/msbuild/incremental-builds) for more information.</span></span>
+<span data-ttu-id="1783e-125">`dotnet build` 使用 MSBuild 构建项目；因此，它支持并行生成和增量生成。</span><span class="sxs-lookup"><span data-stu-id="1783e-125">`dotnet build` uses MSBuild to build the project; thus, it supports both parallel and incremental builds.</span></span> <span data-ttu-id="1783e-126">有关详细信息，请参阅[增量生成](/visualstudio/msbuild/incremental-builds)。</span><span class="sxs-lookup"><span data-stu-id="1783e-126">Refer to [Incremental Builds](/visualstudio/msbuild/incremental-builds) for more information.</span></span>
 
-<span data-ttu-id="e87d9-127">除其自己的选项外，`dotnet build` 命令也接受 MSBuild 选项，如用来设置属性的 `/p` 或用来定义记录器的 `/l`。</span><span class="sxs-lookup"><span data-stu-id="e87d9-127">In addition to its options, the `dotnet build` command accepts MSBuild options, such as `/p` for setting properties or `/l` to define a logger.</span></span> <span data-ttu-id="e87d9-128">在 [MSBuild 命令行引用](/visualstudio/msbuild/msbuild-command-line-reference)中了解这些选项的详细信息。</span><span class="sxs-lookup"><span data-stu-id="e87d9-128">Learn more about these options in the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span> 
+<span data-ttu-id="1783e-127">除其自己的选项外，`dotnet build` 命令也接受 MSBuild 选项，如用来设置属性的 `/p` 或用来定义记录器的 `/l`。</span><span class="sxs-lookup"><span data-stu-id="1783e-127">In addition to its options, the `dotnet build` command accepts MSBuild options, such as `/p` for setting properties or `/l` to define a logger.</span></span> <span data-ttu-id="1783e-128">在 [MSBuild 命令行引用](/visualstudio/msbuild/msbuild-command-line-reference)中了解这些选项的详细信息。</span><span class="sxs-lookup"><span data-stu-id="1783e-128">Learn more about these options in the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference).</span></span> 
 
-<span data-ttu-id="e87d9-129">项目是否可执行由项目文件中的 `<OutputType>` 属性决定。</span><span class="sxs-lookup"><span data-stu-id="e87d9-129">Whether the project is executable or not is determined by the `<OutputType>` property in the project file.</span></span> <span data-ttu-id="e87d9-130">以下示例显示会生成可执行代码的项目：</span><span class="sxs-lookup"><span data-stu-id="e87d9-130">The following example shows a project that will produce executable code:</span></span>
+<span data-ttu-id="1783e-129">项目是否可执行由项目文件中的 `<OutputType>` 属性决定。</span><span class="sxs-lookup"><span data-stu-id="1783e-129">Whether the project is executable or not is determined by the `<OutputType>` property in the project file.</span></span> <span data-ttu-id="1783e-130">以下示例显示会生成可执行代码的项目：</span><span class="sxs-lookup"><span data-stu-id="1783e-130">The following example shows a project that will produce executable code:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -57,112 +58,112 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-<span data-ttu-id="e87d9-131">若要生成库，则省略 `<OutputType>` 属性。</span><span class="sxs-lookup"><span data-stu-id="e87d9-131">In order to produce a library, omit the `<OutputType>` property.</span></span> <span data-ttu-id="e87d9-132">生成输出中的主要区别在于，针对某个库的 IL DLL 不包含入口点，并且不能执行。</span><span class="sxs-lookup"><span data-stu-id="e87d9-132">The main difference in built output is that the IL DLL for a library doesn't contain entry points and can't be executed.</span></span> 
+<span data-ttu-id="1783e-131">若要生成库，则省略 `<OutputType>` 属性。</span><span class="sxs-lookup"><span data-stu-id="1783e-131">In order to produce a library, omit the `<OutputType>` property.</span></span> <span data-ttu-id="1783e-132">生成输出中的主要区别在于，针对某个库的 IL DLL 不包含入口点，并且不能执行。</span><span class="sxs-lookup"><span data-stu-id="1783e-132">The main difference in built output is that the IL DLL for a library doesn't contain entry points and can't be executed.</span></span> 
 
-## <a name="arguments"></a><span data-ttu-id="e87d9-133">参数</span><span class="sxs-lookup"><span data-stu-id="e87d9-133">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="1783e-133">自变量</span><span class="sxs-lookup"><span data-stu-id="1783e-133">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="e87d9-134">要生成的项目文件。</span><span class="sxs-lookup"><span data-stu-id="e87d9-134">The project file to build.</span></span> <span data-ttu-id="e87d9-135">如果未指定项目文件，MSBuild 会在当前工作目录中搜索以 *proj* 结尾的文件扩展名并使用该文件。</span><span class="sxs-lookup"><span data-stu-id="e87d9-135">If a project file is not specified, MSBuild searches the current working directory for a file that has a file extension that ends in *proj* and uses that file.</span></span>
+<span data-ttu-id="1783e-134">要生成的项目文件。</span><span class="sxs-lookup"><span data-stu-id="1783e-134">The project file to build.</span></span> <span data-ttu-id="1783e-135">如果未指定项目文件，MSBuild 会在当前工作目录中搜索以 *proj* 结尾的文件扩展名并使用该文件。</span><span class="sxs-lookup"><span data-stu-id="1783e-135">If a project file is not specified, MSBuild searches the current working directory for a file that has a file extension that ends in *proj* and uses that file.</span></span>
 
-## <a name="options"></a><span data-ttu-id="e87d9-136">选项</span><span class="sxs-lookup"><span data-stu-id="e87d9-136">Options</span></span>
+## <a name="options"></a><span data-ttu-id="1783e-136">选项</span><span class="sxs-lookup"><span data-stu-id="1783e-136">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="e87d9-137">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="e87d9-137">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1783e-137">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1783e-137">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="e87d9-138">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="e87d9-138">Defines the build configuration.</span></span> <span data-ttu-id="e87d9-139">默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="e87d9-139">The default value is `Debug`.</span></span>
+<span data-ttu-id="1783e-138">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="1783e-138">Defines the build configuration.</span></span> <span data-ttu-id="1783e-139">默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="1783e-139">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="e87d9-140">编译特定[框架](../../standard/frameworks.md)。</span><span class="sxs-lookup"><span data-stu-id="e87d9-140">Compiles for a specific [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="e87d9-141">必须在[项目文件](csproj.md)中定义该框架。</span><span class="sxs-lookup"><span data-stu-id="e87d9-141">The framework must be defined in the [project file](csproj.md).</span></span>
+<span data-ttu-id="1783e-140">编译特定[框架](../../standard/frameworks.md)。</span><span class="sxs-lookup"><span data-stu-id="1783e-140">Compiles for a specific [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="1783e-141">必须在[项目文件](csproj.md)中定义该框架。</span><span class="sxs-lookup"><span data-stu-id="1783e-141">The framework must be defined in the [project file](csproj.md).</span></span>
 
 `--force`
 
- <span data-ttu-id="e87d9-142">强制解析所有依赖项，即使上次还原已成功，也不例外。</span><span class="sxs-lookup"><span data-stu-id="e87d9-142">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="e87d9-143">这相当于删除 project.assets.json 文件。</span><span class="sxs-lookup"><span data-stu-id="e87d9-143">This is equivalent to deleting the *project.assets.json* file.</span></span>
+ <span data-ttu-id="1783e-142">强制解析所有依赖项，即使上次还原已成功，也不例外。</span><span class="sxs-lookup"><span data-stu-id="1783e-142">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="1783e-143">这相当于删除 project.assets.json 文件。</span><span class="sxs-lookup"><span data-stu-id="1783e-143">This is equivalent to deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="e87d9-144">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="e87d9-144">Prints out a short help for the command.</span></span>
+<span data-ttu-id="1783e-144">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="1783e-144">Prints out a short help for the command.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="e87d9-145">忽略项目间 (P2P) 引用，并仅生成指定要生成的根项目。</span><span class="sxs-lookup"><span data-stu-id="e87d9-145">Ignores project-to-project (P2P) references and only builds the root project specified to build.</span></span>
+<span data-ttu-id="1783e-145">忽略项目间 (P2P) 引用，并仅生成指定要生成的根项目。</span><span class="sxs-lookup"><span data-stu-id="1783e-145">Ignores project-to-project (P2P) references and only builds the root project specified to build.</span></span>
 
 `--no-incremental`
 
-<span data-ttu-id="e87d9-146">将生成标记为对增量生成不安全。</span><span class="sxs-lookup"><span data-stu-id="e87d9-146">Marks the build as unsafe for incremental build.</span></span> <span data-ttu-id="e87d9-147">这将关闭增量编译并强制完全重新生成项目依赖项关系图。</span><span class="sxs-lookup"><span data-stu-id="e87d9-147">This turns off incremental compilation and forces a clean rebuild of the project's dependency graph.</span></span>
+<span data-ttu-id="1783e-146">将生成标记为对增量生成不安全。</span><span class="sxs-lookup"><span data-stu-id="1783e-146">Marks the build as unsafe for incremental build.</span></span> <span data-ttu-id="1783e-147">这将关闭增量编译并强制完全重新生成项目依赖项关系图。</span><span class="sxs-lookup"><span data-stu-id="1783e-147">This turns off incremental compilation and forces a clean rebuild of the project's dependency graph.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="e87d9-148">在生成期间不执行隐式还原。</span><span class="sxs-lookup"><span data-stu-id="e87d9-148">Doesn't perform an implicit restore during build.</span></span>
+<span data-ttu-id="1783e-148">在生成期间不执行隐式还原。</span><span class="sxs-lookup"><span data-stu-id="1783e-148">Doesn't perform an implicit restore during build.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="e87d9-149">放置生成二进制文件的目录。</span><span class="sxs-lookup"><span data-stu-id="e87d9-149">Directory in which to place the built binaries.</span></span> <span data-ttu-id="e87d9-150">指定此选项时还需要定义 `--framework`。</span><span class="sxs-lookup"><span data-stu-id="e87d9-150">You also need to define `--framework` when you specify this option.</span></span>
+<span data-ttu-id="1783e-149">放置生成二进制文件的目录。</span><span class="sxs-lookup"><span data-stu-id="1783e-149">Directory in which to place the built binaries.</span></span> <span data-ttu-id="1783e-150">指定此选项时还需要定义 `--framework`。</span><span class="sxs-lookup"><span data-stu-id="1783e-150">You also need to define `--framework` when you specify this option.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="e87d9-151">指定目标运行时。</span><span class="sxs-lookup"><span data-stu-id="e87d9-151">Specifies the target runtime.</span></span> <span data-ttu-id="e87d9-152">有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="e87d9-152">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+<span data-ttu-id="1783e-151">指定目标运行时。</span><span class="sxs-lookup"><span data-stu-id="1783e-151">Specifies the target runtime.</span></span> <span data-ttu-id="1783e-152">有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="1783e-152">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="e87d9-153">设置命令的详细级别。</span><span class="sxs-lookup"><span data-stu-id="e87d9-153">Sets the verbosity level of the command.</span></span> <span data-ttu-id="e87d9-154">允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="e87d9-154">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="1783e-153">设置命令的详细级别。</span><span class="sxs-lookup"><span data-stu-id="1783e-153">Sets the verbosity level of the command.</span></span> <span data-ttu-id="1783e-154">允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="1783e-154">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `--version-suffix <VERSION_SUFFIX>`
 
-<span data-ttu-id="e87d9-155">在项目文件的版本字段中定义星号 (`*`) 版本后缀。</span><span class="sxs-lookup"><span data-stu-id="e87d9-155">Defines the version suffix for an asterisk (`*`) in the version field of the project file.</span></span> <span data-ttu-id="e87d9-156">格式遵循 NuGet 的版本准则。</span><span class="sxs-lookup"><span data-stu-id="e87d9-156">The format follows NuGet's version guidelines.</span></span>
+<span data-ttu-id="1783e-155">在项目文件的版本字段中定义星号 (`*`) 版本后缀。</span><span class="sxs-lookup"><span data-stu-id="1783e-155">Defines the version suffix for an asterisk (`*`) in the version field of the project file.</span></span> <span data-ttu-id="1783e-156">格式遵循 NuGet 的版本准则。</span><span class="sxs-lookup"><span data-stu-id="1783e-156">The format follows NuGet's version guidelines.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="e87d9-157">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="e87d9-157">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1783e-157">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1783e-157">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="e87d9-158">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="e87d9-158">Defines the build configuration.</span></span> <span data-ttu-id="e87d9-159">默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="e87d9-159">The default value is `Debug`.</span></span>
+<span data-ttu-id="1783e-158">定义生成配置。</span><span class="sxs-lookup"><span data-stu-id="1783e-158">Defines the build configuration.</span></span> <span data-ttu-id="1783e-159">默认值为 `Debug`。</span><span class="sxs-lookup"><span data-stu-id="1783e-159">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="e87d9-160">编译特定[框架](../../standard/frameworks.md)。</span><span class="sxs-lookup"><span data-stu-id="e87d9-160">Compiles for a specific [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="e87d9-161">必须在[项目文件](csproj.md)中定义该框架。</span><span class="sxs-lookup"><span data-stu-id="e87d9-161">The framework must be defined in the [project file](csproj.md).</span></span>
+<span data-ttu-id="1783e-160">编译特定[框架](../../standard/frameworks.md)。</span><span class="sxs-lookup"><span data-stu-id="1783e-160">Compiles for a specific [framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="1783e-161">必须在[项目文件](csproj.md)中定义该框架。</span><span class="sxs-lookup"><span data-stu-id="1783e-161">The framework must be defined in the [project file](csproj.md).</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="e87d9-162">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="e87d9-162">Prints out a short help for the command.</span></span>
+<span data-ttu-id="1783e-162">打印出有关命令的简短帮助。</span><span class="sxs-lookup"><span data-stu-id="1783e-162">Prints out a short help for the command.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="e87d9-163">忽略项目间 (P2P) 引用，并仅生成指定要生成的根项目。</span><span class="sxs-lookup"><span data-stu-id="e87d9-163">Ignores project-to-project (P2P) references and only builds the root project specified to build.</span></span>
+<span data-ttu-id="1783e-163">忽略项目间 (P2P) 引用，并仅生成指定要生成的根项目。</span><span class="sxs-lookup"><span data-stu-id="1783e-163">Ignores project-to-project (P2P) references and only builds the root project specified to build.</span></span>
 
 `--no-incremental`
 
-<span data-ttu-id="e87d9-164">将生成标记为对增量生成不安全。</span><span class="sxs-lookup"><span data-stu-id="e87d9-164">Marks the build as unsafe for incremental build.</span></span> <span data-ttu-id="e87d9-165">这将关闭增量编译并强制完全重新生成项目依赖项关系图。</span><span class="sxs-lookup"><span data-stu-id="e87d9-165">This turns off incremental compilation and forces a clean rebuild of the project's dependency graph.</span></span>
+<span data-ttu-id="1783e-164">将生成标记为对增量生成不安全。</span><span class="sxs-lookup"><span data-stu-id="1783e-164">Marks the build as unsafe for incremental build.</span></span> <span data-ttu-id="1783e-165">这将关闭增量编译并强制完全重新生成项目依赖项关系图。</span><span class="sxs-lookup"><span data-stu-id="1783e-165">This turns off incremental compilation and forces a clean rebuild of the project's dependency graph.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="e87d9-166">放置生成二进制文件的目录。</span><span class="sxs-lookup"><span data-stu-id="e87d9-166">Directory in which to place the built binaries.</span></span> <span data-ttu-id="e87d9-167">指定此选项时还需要定义 `--framework`。</span><span class="sxs-lookup"><span data-stu-id="e87d9-167">You also need to define `--framework` when you specify this option.</span></span>
+<span data-ttu-id="1783e-166">放置生成二进制文件的目录。</span><span class="sxs-lookup"><span data-stu-id="1783e-166">Directory in which to place the built binaries.</span></span> <span data-ttu-id="1783e-167">指定此选项时还需要定义 `--framework`。</span><span class="sxs-lookup"><span data-stu-id="1783e-167">You also need to define `--framework` when you specify this option.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="e87d9-168">指定目标运行时。</span><span class="sxs-lookup"><span data-stu-id="e87d9-168">Specifies the target runtime.</span></span> <span data-ttu-id="e87d9-169">有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="e87d9-169">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
+<span data-ttu-id="1783e-168">指定目标运行时。</span><span class="sxs-lookup"><span data-stu-id="1783e-168">Specifies the target runtime.</span></span> <span data-ttu-id="1783e-169">有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="1783e-169">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="e87d9-170">设置命令的详细级别。</span><span class="sxs-lookup"><span data-stu-id="e87d9-170">Sets the verbosity level of the command.</span></span> <span data-ttu-id="e87d9-171">允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="e87d9-171">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="1783e-170">设置命令的详细级别。</span><span class="sxs-lookup"><span data-stu-id="1783e-170">Sets the verbosity level of the command.</span></span> <span data-ttu-id="1783e-171">允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="1783e-171">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `--version-suffix <VERSION_SUFFIX>`
 
-<span data-ttu-id="e87d9-172">在项目文件的版本字段中定义星号 (`*`) 版本后缀。</span><span class="sxs-lookup"><span data-stu-id="e87d9-172">Defines the version suffix for an asterisk (`*`) in the version field of the project file.</span></span> <span data-ttu-id="e87d9-173">格式遵循 NuGet 的版本准则。</span><span class="sxs-lookup"><span data-stu-id="e87d9-173">The format follows NuGet's version guidelines.</span></span>
+<span data-ttu-id="1783e-172">在项目文件的版本字段中定义星号 (`*`) 版本后缀。</span><span class="sxs-lookup"><span data-stu-id="1783e-172">Defines the version suffix for an asterisk (`*`) in the version field of the project file.</span></span> <span data-ttu-id="1783e-173">格式遵循 NuGet 的版本准则。</span><span class="sxs-lookup"><span data-stu-id="1783e-173">The format follows NuGet's version guidelines.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="e87d9-174">示例</span><span class="sxs-lookup"><span data-stu-id="e87d9-174">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="1783e-174">示例</span><span class="sxs-lookup"><span data-stu-id="1783e-174">Examples</span></span>
 
-<span data-ttu-id="e87d9-175">生成项目及其依赖项：</span><span class="sxs-lookup"><span data-stu-id="e87d9-175">Build a project and its dependencies:</span></span>
+<span data-ttu-id="1783e-175">生成项目及其依赖项：</span><span class="sxs-lookup"><span data-stu-id="1783e-175">Build a project and its dependencies:</span></span>
 
 `dotnet build`
 
-<span data-ttu-id="e87d9-176">使用“发布”配置生成项目及其依赖项：</span><span class="sxs-lookup"><span data-stu-id="e87d9-176">Build a project and its dependencies using Release configuration:</span></span>
+<span data-ttu-id="1783e-176">使用“发布”配置生成项目及其依赖项：</span><span class="sxs-lookup"><span data-stu-id="1783e-176">Build a project and its dependencies using Release configuration:</span></span>
 
 `dotnet build --configuration Release`
 
-<span data-ttu-id="e87d9-177">针对特定运行时（本例中为 Ubuntu 16.04）生成项目及其依赖项：</span><span class="sxs-lookup"><span data-stu-id="e87d9-177">Build a project and its dependencies for a specific runtime (in this example, Ubuntu 16.04):</span></span>
+<span data-ttu-id="1783e-177">针对特定运行时（本例中为 Ubuntu 16.04）生成项目及其依赖项：</span><span class="sxs-lookup"><span data-stu-id="1783e-177">Build a project and its dependencies for a specific runtime (in this example, Ubuntu 16.04):</span></span>
 
 `dotnet build --runtime ubuntu.16.04-x64`
