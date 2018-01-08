@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.openlocfilehash: 0f82e82c6a11220e24c85cef19bc131e12c77bf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 655f74def4d6163959d7dbbe605f7322fb0573c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 和 csproj 属性之间的映射
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/18/2017
 
 如果 `buildOptions\outputName` 属性是在 project.json 中定义的，`<AssemblyName>` 将具有不同于 `<PackageId>` 的其他值。 有关详细信息，请参阅[其他常用生成选项](#other-common-build-options)。
 
-### <a name="version"></a>版本
+### <a name="version"></a>version
 
 ```json
 {
@@ -662,6 +663,6 @@ MSBuild 中没有 `owners` 元素的等效项。 对于 `summary`，可使用 MS
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CLI 中更改的简要概述](../tools/cli-msbuild-architecture.md)

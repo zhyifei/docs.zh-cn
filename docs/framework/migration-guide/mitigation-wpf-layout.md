@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d3ba5ac792169cc076f9621025f35444281cec6e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1dcbe970281f3d9cf3b8ffe9adb543afc120ae6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-wpf-layout"></a>缓解：WPF 布局
 WPF 控件的布局可能稍有变化。  
@@ -33,7 +34,7 @@ WPF 控件的布局可能稍有变化。
   
  默认情况下，仅对面向 .NET Framework 4.6 的应用启用此新布局。  
   
-## <a name="mitigation"></a>缓解操作  
+## <a name="mitigation"></a>缓解  
  由于这种修改往往会消除高 DPI 处 WPF 控件的右侧或底部剪辑，因此面向早期版本的 .NET framework 但在.NET Framework 4.6 上运行的应用可以通过将下面的行添加到 app.config 文件的 `<runtime>` 部分来选择加入此新行为：  
   
 ```xml  
@@ -46,5 +47,5 @@ WPF 控件的布局可能稍有变化。
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.openlocfilehash: c68e382450a763fd0521b7defdd79d8433e1acde
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f2b712f1b8b7800f2f02c9529114e92f77e32286
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 自定义模板
 
@@ -50,11 +51,11 @@ template.json 文件位于模板根目录中的 .template.config 文件夹。 �
 | 成员            | 类型          | 描述 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | template.json 文件的 JSON 架构。 如果指定架构，支持 JSON 架构的编辑器启用 JSON 编辑功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 要求此成员启用 IntelliSense。 使用值 `http://json.schemastore.org/template`。 |
-| `author`          | string        | 模板创建者。 |
+| `author`          | 字符串        | 模板创建者。 |
 | `classifications` | array(string) | 为了找到模板，用户可能会在搜索模板时使用的 0 个或多个模板特征。 如果出现在使用 <code>dotnet new -l&#124;--list</code> 命令生成的模板列表中，classifications 还会出现在“Tags”列中。 |
-| `identity`        | string        | 此模板的唯一名称。 |
-| `name`            | string        | 用户应看到的模板名称。 |
-| `shortName`       | string        | 方便用户选择模板的默认速记属性，适用于模板名称由用户指定（而不是通过 GUI 选择）的环境。 例如，通过命令提示符和 CLI 命令使用模板时，短名称非常有用。 |
+| `identity`        | 字符串        | 此模板的唯一名称。 |
+| `name`            | 字符串        | 用户应看到的模板名称。 |
+| `shortName`       | 字符串        | 方便用户选择模板的默认速记属性，适用于模板名称由用户指定（而不是通过 GUI 选择）的环境。 例如，通过命令提示符和 CLI 命令使用模板时，短名称非常有用。 |
 
 #### <a name="example"></a>示例:
 
@@ -87,11 +88,11 @@ dotnet new -l
 
 | 元素            | 类型   | 描述 |
 | ------------------ | ------ | ----------- |
-| **\<authors>**     | string | 包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。 |
-| **\<description>** | string | 用于 UI 显示的包的详细说明。 |
-| **\<id>**          | string | 不区分大小写的包标识符，在 nuget.org 或包驻留的任意库中必须是唯一的。 ID 不得包含空格或对 URL 无效的字符，通常遵循 .NET 命名空间规则。 有关指南，请参阅[选择唯一包标识符并设置版本号](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。 |
-| **\<packageType>** | string | 将此元素置于 \<metadata> 元素之间的 \<packageTypes> 元素内。 将 \<packageType> 元素的 `name` 属性设置为 `Template`。 |
-| **\<version>**     | string | 遵循 major.minor.patch 模式的包版本。 版本号可能包括预发布后缀，如[预发布版本](/nuget/create-packages/prerelease-packages#semantic-versioning)主题中所述。 |
+| **\<authors>**     | 字符串 | 包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。 |
+| **\<description>** | 字符串 | 用于 UI 显示的包的详细说明。 |
+| **\<id>**          | 字符串 | 不区分大小写的包标识符，在 nuget.org 或包驻留的任意库中必须是唯一的。 ID 不得包含空格或对 URL 无效的字符，通常遵循 .NET 命名空间规则。 有关指南，请参阅[选择唯一包标识符并设置版本号](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。 |
+| **\<packageType>** | 字符串 | 将此元素置于 \<metadata> 元素之间的 \<packageTypes> 元素内。 将 \<packageType> 元素的 `name` 属性设置为 `Template`。 |
+| **\<version>**     | 字符串 | 遵循 major.minor.patch 模式的包版本。 版本号可能包括预发布后缀，如[预发布版本](/nuget/create-packages/prerelease-packages#semantic-versioning)主题中所述。 |
 
 有关完整的 nuspec 文件架构，请参阅 [.nuspec 参考](/nuget/schema/nuspec)。 [创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)教程中展示了模板的示例 nuspec 文件。
 

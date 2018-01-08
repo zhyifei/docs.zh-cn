@@ -16,11 +16,11 @@ ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 834657f80a9f3841e8f30e457c373510dec6d17d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b306c0e32f619a3e351cd08524767a44cee8005
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>如何：使用 StreamReader 读取文件中的文本 (Visual Basic)
 `My.Computer.FileSystem` 对象提供打开 <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter> 的方法。 这些方法（`OpenTextFileWriter` 和 `OpenTextFileReader`）是高级方法，除非选择“全部”选项卡，否则它们不会出现在 IntelliSense 中。  
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/21/2017
  在应用程序中使用输入的数据之前，需验证所有的输入内容。 文件的内容可能不是预期内容，并且用来读取该文件的方法可能失败。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 若要从文件中读取，程序集需要 <xref:System.Security.Permissions.FileIOPermission> 类授予的特权等级。 如果在部分信任上下文中运行，该代码可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)。 用户还需要具有对文件的访问权限。 有关详细信息，请参阅 [ACL 技术概述](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045)。  
+ 若要从文件中读取，程序集需要 <xref:System.Security.Permissions.FileIOPermission> 类授予的特权等级。 如果在部分信任上下文中运行，该代码可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)。 用户还需要具有对文件的访问权限。 有关详细信息，请参阅 [ACL 技术概述](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  <xref:System.Windows.Forms.OpenFileDialog>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  

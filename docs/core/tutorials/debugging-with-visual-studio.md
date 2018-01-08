@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
-ms.openlocfilehash: 6fbebf69b2772b4159841d13068e7b95a39bea92
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnetcore
+ms.openlocfilehash: 3ab19566acb36cb96e0572931ba39f2ae99a3ca7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 调试 Hello World 应用程序
 
@@ -191,7 +192,7 @@ ms.lasthandoff: 10/21/2017
 
 若要生成和测试控制台应用程序的发布版本，请将工具栏上的生成配置从“调试”更改为“发布”。
 
-![Image](./media/debugging-with-visual-studio/toolbar2.png)
+![图像](./media/debugging-with-visual-studio/toolbar2.png)
 
 按 F5 或选择“生成”菜单中的“生成解决方案”后，Visual Studio 会编译控制台应用程序的发布版本。 可像测试应用程序的调试版本一样测试发布版本。
 

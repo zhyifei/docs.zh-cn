@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 668edf8cacc4d675592c776b0a24923f447d8810
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domains"></a>应用程序域
 操作系统和运行时环境通常会在应用程序间提供某种形式的隔离。 例如，Windows 使用进程来隔离应用程序。 为确保在一个应用程序中运行的代码不会对其他不相关的应用程序产生不良影响，这种隔离是必需的。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [隔离应用程序的优点](#benefits)  
   
--   [参考](#reference)  
+-   [引用](#reference)  
   
 <a name="benefits"></a>   
 ## <a name="the-benefits-of-isolating-applications"></a>隔离应用程序的优点  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/18/2017
     > [!NOTE]
     >  不能卸载单个程序集或类型。 只能卸载整个域。  
   
--   在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 **System.IO.FileNotFound** 的异常。 有关详细信息，请参阅[远程对象](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)。 确定如何跨域访问对象的机制是由该对象决定的。 有关详细信息，请参阅<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
+-   在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 **System.IO.FileNotFound** 的异常。 有关详细信息，请参阅[远程对象](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)。 确定如何跨域访问对象的机制是由该对象决定的。 有关更多信息，请参见<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
   
 -   代码行为的作用范围由它运行所在的应用程序决定。 换言之，应用程序域将提供应用程序版本策略等配置设置、它所访问的任意远程程序集的位置，以及加载到该域中的程序集的位置信息。  
   

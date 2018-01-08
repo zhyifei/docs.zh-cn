@@ -21,11 +21,12 @@ caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e303246737d52f76d893074973804710b2dc9b71
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff7036bce069aa24742f7ead7bb0735fed0f3678
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe（强名称工具）
 强名称工具 (Sn.exe) 有助于使用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)对程序集进行签名。 Sn.exe 提供了用于密钥管理、签名生成和签名验证的选项。  
@@ -127,7 +128,7 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)  

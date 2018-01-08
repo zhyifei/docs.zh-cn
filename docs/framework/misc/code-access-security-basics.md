@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 08ce62f54e70fe1650914060ade0f52357f8a736
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1fbeae8d01d9ef03c476679ea7fc59273b7a0a0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-access-security-basics"></a>代码访问安全性基础知识
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -157,7 +158,7 @@ public class MyClass {
   
  如果希望应用程序执行需要访问非托管代码的操作，则应该通过包装所需功能的受信任的托管类（如果存在这样的类）来执行此操作。 如果安全类库中已存在包装类，请不要自己创建此类。 必须向此包装类授予高级别的信任度，该包装类才能调入非托管代码，该包装类负责要求调入方具有合适权限。 如果使用包装类，你的代码只需请求并被授予包装类要求的权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Security.PermissionSet>  
  <xref:System.Security.Permissions.FileIOPermission>  
  <xref:System.Security.NamedPermissionSet>  

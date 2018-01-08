@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 492fd5e95e316d053fc36b9bb5cf521b879d7d2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls"></a>控件
 <a name="introduction"></a>
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="subscribing_to_events"></a>   
 ## <a name="subscribing-to-events"></a>订阅事件  
- 你可以通过使用订阅控件的事件[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]或代码，但你只能处理代码中的事件。  下面的示例演示如何订阅 <xref:System.Windows.Controls.Button> 的 `Click` 事件。  
+ 你可以通过使用订阅控件的事件[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]或代码，但你只能处理代码中的事件。  下面的示例演示`Click`事件<xref:System.Windows.Controls.Button>。  
   
  [!code-xaml[ControlsOverview#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#10)]  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/21/2017
   
  有关这些基类的类的详细信息，请参阅[WPF 内容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [按类别分类的控件](../../../../docs/framework/wpf/controls/controls-by-category.md)  
  [控件库](../../../../docs/framework/wpf/controls/control-library.md)  

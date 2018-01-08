@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7e61c037e85abfb362580930bbfeb7b06ba091f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d8c98f8a1f09488bb2d93c4fda531f695354059a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>如何：接收第一机会异常通知
 通过 <xref:System.AppDomain> 类的 <xref:System.AppDomain.FirstChanceException> 事件，可在公共语言运行时开始搜索异常处理程序之前，收到已引发异常的通知。  
@@ -110,5 +111,5 @@ ms.lasthandoff: 10/18/2017
   
 -   此示例是一个命令行应用程序。 若要在 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 中编译并运行此代码，请将 C# 代码 `Console.ReadLine();`（在 Visual Basic 中为 `Console.ReadLine()`）添加到 `Main()` 的末尾，阻止命令窗口在你查看输出之前关闭。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.AppDomain.FirstChanceException>

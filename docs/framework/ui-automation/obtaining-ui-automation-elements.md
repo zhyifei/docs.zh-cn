@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f657d4289e46f84246059010a2f9550d1c831d3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e3f4b1583942b4dd29ca603bd880ba2acdcfd3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obtaining-ui-automation-elements"></a>获取 UI 自动化元素
 > [!NOTE]
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  最简单的条件是 <xref:System.Windows.Automation.Condition.TrueCondition>，这是一个指定要返回搜索范围内的所有元素的预定义对象。 <xref:System.Windows.Automation.Condition.FalseCondition>是 <xref:System.Windows.Automation.Condition.TrueCondition>的对立条件，其作用不大，因为它将阻止找到任何元素。  
   
- 下面是三个其他的预定义条件，这些条件既可以单独使用，也可以与其他条件一起使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 单独使用的<xref:System.Windows.Automation.Automation.RawViewCondition>等效于 <xref:System.Windows.Automation.Condition.TrueCondition>，因为它不根据元素的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 或 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 属性来筛选元素。  
+ 下面是三个其他的预定义条件，这些条件既可以单独使用，也可以与其他条件一起使用： <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>和 <xref:System.Windows.Automation.Automation.RawViewCondition>。 单独使用的 <xref:System.Windows.Automation.Automation.RawViewCondition> 等效于 <xref:System.Windows.Automation.Condition.TrueCondition>，因为它不根据元素的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 或 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 属性来筛选元素。  
   
  其他条件是根据一个或多个 <xref:System.Windows.Automation.PropertyCondition> 对象（每个对象都指定一个属性值）建立的。 例如，个 <xref:System.Windows.Automation.PropertyCondition> 可以指定元素处于启用状态或元素支持某种控件模式。  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="from-the-focused-control"></a>从具有焦点的控件中  
  可以从静态 <xref:System.Windows.Automation.AutomationElement> 属性中检索表示焦点控件的 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> 。  
   
-## <a name="see-also"></a>另请参阅  
- [查找 UI 自动化元素基于属性条件](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [在使用 TreeWalker 的 UI 自动化元素之间导航](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+## <a name="see-also"></a>请参阅  
+ [基于属性条件查找 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [使用 TreeWalker 在 UI 自动化元素之间导航](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

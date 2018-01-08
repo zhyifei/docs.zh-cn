@@ -26,11 +26,12 @@ caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 71f0a8c8d0e5e09cb6f39e5b8b104c0848c4d8ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
@@ -53,7 +54,7 @@ caspol [options]
   
 #### <a name="parameters"></a>参数  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-af** *assembly_file*|将实现自定义安全对象（如自定义权限或自定义成员资格条件）的程序集添加到特定策略级别的完全信任程序集列表中。 *assembly_file* 参数指定要添加的程序集。 此文件必须用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)签名。 可以通过[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 使用强名称对程序集进行签名。<br /><br /> 每当将包含自定义权限的权限集添加到策略时，必须将实现该自定义权限的程序集添加到该策略级别的完全信任列表中。 对于实现用于安全策略（如计算机策略）的自定义安全对象（如自定义代码组或成员资格条件）的程序集，应该总是将其添加到完全信任程序集列表中。 **注意：**如果实现自定义安全对象的程序集引用了其他程序集，则必须首先将被引用的程序集添加到完全信任程序集列表中。 使用 Visual Basic、C++ 和 JScript 创建的自定义安全对象分别引用 Microsoft.VisualBasic.dll、Microsoft.VisualC.dll 和 Microsoft.JScript.dll。 默认情况下，完全信任程序集列表中不包含这些程序集。 在添加自定义安全对象之前，必须将相应的程序集添加到完全信任列表中。 如果不这样做，将会破坏安全系统，导致所有程序集都无法加载。 在这种情况中，Caspol.exe **-all -reset** 选项不会修复安全系统。 若要修复安全系统，必须手动编辑安全文件，移除自定义安全对象。|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> 或<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|将新的代码组添加到代码组层次结构中。 可以指定 *parent_label* 或 *parent_name*。 *parent_label* 参数指定代码组的标签（如 1.  或 1.1.），该代码组是要添加的代码组的父级。 *parent_name* 参数指定代码组的名称，该代码组是要添加的代码组的父级。 因为 *parent_label* 和 *parent_name* 可互换使用，所以 Caspol.exe 必须能够区分它们。 因此，*parent_name* 不能以数字开头。 此外，*parent_name* 只能包含 A-Z、0-9 和下划线字符。<br /><br /> *mship* 参数指定新代码组的成员资格条件。 有关详细信息，请参见参阅本节后面的 *mship* 参数表。<br /><br /> *pset_name* 参数是将与新代码组关联的权限集的名称。 还可以为新代码组设置一个或多个 *flags*。 有关详细信息，请参阅本节后面的 *flags* 参数表。|  
@@ -96,14 +97,14 @@ caspol [options]
 |**-custom**  *xmlfile*|添加自定义成员资格条件。 强制性 *xmlfile* 参数指定包含自定义成员资格条件的 XML 序列化的 .xml 文件。|  
 |**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|指定具有给定程序集哈希的代码。 若要使用哈希作为代码组成员资格条件，则必须指定哈希值或程序集文件。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.HashMembershipCondition>。|  
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定具有给定软件发行者的代码，软件发行者由证书文件、文件上的签名或 X509 证书的十六进制表示形式来指示。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.PublisherMembershipCondition>。|  
-|**-site** *website*|指定具有给定源站点的代码。 例如: <br /><br /> **-site** www.proseware.com<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.SiteMembershipCondition>。|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|指定具有特定强名称的代码，强名称由文件名、字符串形式的程序集名称和 *major*.*minor*.*build*.*revision* 格式的程序集版本指示。 例如: <br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.StrongNameMembershipCondition>。|  
+|**-site** *website*|指定具有给定源站点的代码。 例如:<br /><br /> **-site** www.proseware.com<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.SiteMembershipCondition>。|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|指定具有特定强名称的代码，强名称由文件名、字符串形式的程序集名称和 *major*.*minor*.*build*.*revision* 格式的程序集版本指示。 例如:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.StrongNameMembershipCondition>。|  
 |**-url** *URL*|指定源自给定 URL 的代码。 URL 必须包含一个协议，如 http:// 或 ftp://。 此外，可以使用通配符 (\*) 指定来自特定 URL 的多个程序集。 **注意：**由于 URL 可以用多个名称标识，使用 URL 作为成员条件不是确定代码标识的安全方式。 应尽可能使用强名称成员条件、发行者成员条件或哈希成员条件。 <br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.UrlMembershipCondition>。|  
 |**-zone** *zonename*|指定具有给定源区域的代码。 *zonename* 参数可以是下列值之一：**MyComputer**、**Intranet**、**Trusted**、**Internet** 或 **Untrusted**。 有关此成员资格条件的更多信息，请参见 <xref:System.Security.Policy.ZoneMembershipCondition> 类。|  
   
  可与 **–addgroup** 和 **–chggroup** 选项一起使用的 *flags* 参数，可使用下列参数之一指定。  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |**-description "** *description* **"**|与 **–addgroup** 选项一起使用时，指定要添加的代码组的描述。 与 **–chggroup** 选项一起使用时，指定要编辑的代码组的描述。 *description* 参数必须用双引号引起来。|  
 |**-exclusive** {**on**&#124;**off**}|设置为 **on** 时，指示当某些代码符合代码组的成员资格条件时，只考虑与正在添加或修改的代码组关联的权限集。 当此选项设置为 **off** 时，Caspol.exe 考虑策略级别中所有匹配的代码组的权限集。|  
@@ -254,6 +255,6 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
 caspol -all -resolveperm testassembly  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

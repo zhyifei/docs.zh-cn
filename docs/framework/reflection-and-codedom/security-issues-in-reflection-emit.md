@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d143798c4344b385d954cc64bd63c8f81eb48750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2319ab244b2c2a296966692342df1f4967b85729
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-issues-in-reflection-emit"></a>反射发出中的安全问题
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了三种发出 Microsoft 中间语言 (MSIL) 的方式，每种方式都有其自身的安全问题：  
@@ -161,6 +162,6 @@ ms.lasthandoff: 11/21/2017
 ### <a name="obtaining-information-on-types-and-members"></a>获取有关类型和成员的信息  
  从 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，获取有关非公共类型和成员信息不再需要任何权限。 使用反射可获取发出动态方法所需的信息。 例如，使用 <xref:System.Reflection.MethodInfo> 对象发出方法调用。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的早期版本需要带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 有关详细信息，请参阅[反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)  
  [发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

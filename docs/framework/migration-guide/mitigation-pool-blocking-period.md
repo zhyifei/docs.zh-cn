@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8749e2d7b91e611ee153c6f36708fa34a44ecccd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 42eaddeb2714a8c294f45d24eb7e6d9cf216fecc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-pool-blocking-period"></a>缓解：池阻止时间段
 与 Azure SQL 数据库的连接已删除连接池阻止时间段。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="impact"></a>影响  
  此更改允许立即重新尝试打开 Azure SQL 数据库的连接，从而改进了已启用云的应用的性能。  
   
-## <a name="mitigation"></a>缓解操作  
+## <a name="mitigation"></a>缓解  
  对于受到此更改不利影响的应用，连接池阻止时间段可通过设置新 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> 属性进行配置。  该属性的值属于 <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType> 枚举，可采用以下三个值中的任意一个：  
   
 -   `PoolBlockingPeriod.AlwaysBlock` 
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/18/2017
   
  可以通过将 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> 属性设置为 `PoolBlockingPeriod.AlwaysBlock` 来还原以前的行为。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7446c43deff85e1a15288c0c847c9e3646870b72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="redirecting-assembly-versions"></a>重定向程序集版本
 你可以将编译时绑定引用重定向到 .NET Framework 程序集、第三方程序集或你自己的应用的程序集。 你还可以重定向应用，以通过多种方式使用不同版本的程序集：通过发布服务器策略、通过应用配置文件或通过计算机配置文件。 本文讨论了程序集绑定在 .NET Framework 中的工作原理以及如何对其进行配置。  
@@ -128,7 +129,7 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>限制到特定版本的程序集绑定  
- 你可以使用**appliesTo**属性[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)将对特定版本的.NET 程序集绑定引用重定向程序应用程序配置文件中的元素Framework。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 appliesTo 特性，[\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素将适用于 .NET Framework 的所有版本。  
+ 你可以使用**appliesTo**属性[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)将对特定版本的.NET 程序集绑定引用重定向程序应用程序配置文件中的元素Framework。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 **appliesTo** 特性，[\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素将适用于 .NET Framework 的所有版本。  
   
  例如，若要重定向 .NET Framework 3.5 程序集的程序集绑定，应在你的应用配置文件中包括以下 XML 代码。  
   
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/21/2017
 </assemblyBinding>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [\<bindingRedirect > 元素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
  [程序集绑定重定向安全权限](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)  

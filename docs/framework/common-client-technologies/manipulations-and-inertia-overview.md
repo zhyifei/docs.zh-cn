@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: b9cfd81b966e2bab95aa780a4fbde26abec74b00
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d6a0b8b62b997ab0dc7ff21375e82bda7e05d3c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manipulations-and-inertia-overview"></a>操作和惯性概述
 操作使用户可借助操控器移动、旋转用户界面 (UI) 元素以及调整它的大小。 操控器是指鼠标或（在可触摸情况下）触笔或手指。  
@@ -81,5 +82,5 @@ ms.lasthandoff: 10/18/2017
   
  惯性处理和操作处理通常一同使用。 它们的界面相似，并且引发的事件（在某些情况下）相同。 通常，在完成 UI 元素的操作时开始惯性处理。 实现的方式如下：侦听 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> 事件并从此事件处理程序中启动惯性处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Input.Manipulations>

@@ -14,11 +14,12 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
-ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
+ms.workload: dotnet
+ms.openlocfilehash: cad3f3d813d6882b83a7e9db7ce212fba66e44ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
@@ -181,7 +182,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
   
 下表列出了支持的语言。  
   
-| 语言              | 区域性 |
+| 语言              | culture |
 | --------------------- | :-----: |
 | 阿拉伯语                | ar      |
 | 捷克语                 | cs      |
@@ -196,7 +197,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 | 意大利语               | it      |
 | 日语              | ja      |
 | 朝鲜语                | ko      |
-| 挪威语             | no      |
+| 挪威语             | 否      |
 | 波兰语                | pl      |
 | 葡萄牙语(巴西)   | pt-BR   |
 | 葡萄牙语（葡萄牙） | pt-PT   |
@@ -206,7 +207,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 | 瑞典语               | sv      |
 | 繁体中文   | zh-CHT  |
 | 土耳其语               | tr      |
-| 英语（美国）            | zh-CN   |
+| 英语（美国）            | en-US   |
   
 ## <a name="next-steps"></a>后续步骤  
   
@@ -222,7 +223,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
 - 请参阅 [.NET Framework 引用源](http://referencesource.microsoft.com/)以联机浏览 .NET Framework 源代码。 还可以在 [Github](https://github.com/Microsoft/referencesource) 上获取引用源。 可[下载引用源](http://referencesource.microsoft.com/download.html)以供脱机查看和在调试期间逐步执行源（包括修补程序和更新）。 有关详细信息，请参阅日志 [.NET 引用源的全新外观](http://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [面向开发人员的部署指南](~/docs/framework/deployment/deployment-guide-for-developers.md)   
 [面向管理员的部署指南](~/docs/framework/deployment/guide-for-administrators.md)   

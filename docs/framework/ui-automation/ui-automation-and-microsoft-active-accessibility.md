@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: dd3adbeebc0cc2a9e201bbe6492eb311f18a711d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 自动化和 Microsoft Active Accessibility
 > [!NOTE]
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="UI_Elements_compare"></a>   
 ## <a name="ui-elements"></a>UI 元素  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 以 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 接口或子标识符的形式呈现 `IAccessible` 元素。 很难比较两个 `IAccessible` 指针来确定它们是否引用同一元素。  
+ [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 以 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 接口或子标识符的形式呈现 `IAccessible` 元素。 很难比较两个 `IAccessible`指针来确定它们是否引用同一元素。  
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，每个元素都表示为一个 <xref:System.Windows.Automation.AutomationElement> 对象。 可通过使用相等运算符或 <xref:System.Windows.Automation.AutomationElement.Equals%2A> 方法完成比较，这两种方法比较的都是元素的唯一运行时标识符。  
   
@@ -66,11 +67,11 @@ ms.lasthandoff: 10/18/2017
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素都是支持相同基本功能的 <xref:System.Windows.Automation.AutomationElement> 对象。 （从提供程序的角度来看，它们是实现继承自 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>的接口的对象。）导航主要是分层导航：从父级到子级，以及从同级到下一个同级。 （同级之间的导航具有一个逻辑元素，因为它可能遵照的是 Tab 键顺序。）通过使用 <xref:System.Windows.Automation.TreeWalker>类，你可以使用树的任何筛选视图从任何起点进行导航。 你还可以通过使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>和 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 导航到特定的子级或继承项；例如，很容易检索对话框中支持指定控件模式的所有元素。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 中的导航比 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]中的导航更加一致。 某些元素（例如下拉列表和弹出窗口）在 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 树中出现两次，且从它们进行导航可能出现意外结果。 其实就是无法对 rebar 控件正确实现 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 能够重排根目录并进行重新布置，因此可以在树的任何位置放置元素，不必考虑窗口所有者构建的层次结构。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中的导航比 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 中的导航更加一致。 某些元素（例如下拉列表和弹出窗口）在 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 树中出现两次，且从它们进行导航可能出现意外结果。 其实就是无法对 rebar 控件正确实现 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 能够重排根目录并进行重新布置，因此可以在树的任何位置放置元素，不必考虑窗口所有者构建的层次结构。  
   
 <a name="Roles_and_Control_Types"></a>   
 ## <a name="roles-and-control-types"></a>角色和控件类型  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 使用 `accRole` 属性 (`IAccessible::get_actRole`) 来检索 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]中元素的角色说明，如 ROLE_SYSTEM_SLIDER 或 ROLE_SYSTEM_MENUITEM。 元素的角色是确定其可用功能的主要线索。 通过使用固定的方法（如 `IAccessible::accSelect` 和 `IAccessible::accDoDefaultAction`）可实现与控件的交互。 客户端应用程序和 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 之间的交互仅限于可通过 `IAccessible`完成的交互。  
+ [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 使用 `accRole` 属性 (`IAccessible::get_actRole`) 来检索 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]中元素的角色说明，如 ROLE_SYSTEM_SLIDER 或 ROLE_SYSTEM_MENUITEM。 元素的角色是确定其可用功能的主要线索。 通过使用固定的方法（如 `IAccessible::accSelect` 和 `IAccessible::accDoDefaultAction`）可实现与控件的交互。 客户端应用程序和 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]之间的交互仅限于可通过 `IAccessible` 完成的交互。  
   
  与此相反， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 很大程度上会将该元素的控件类型（由 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 属性描述）从其预期的功能分离。 功能由通过实现其特殊化接口的提供程序支持的控件模式来确定。 可以结合控件模式来描述特定 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素支持的完整功能集。 某些提供程序需要支持特定的控件模式；例如，复选框的提供程序必须支持 Toggle 控件模式。 其他提供程序需要支持一个或多个控件模式集；例如，一个按钮必须支持 Toggle 或 Invoke。 还有一些提供程序完全不支持任何控件模式；例如，不能移动、调整大小或停靠的窗格没有任何控件模式。  
   
@@ -128,7 +129,7 @@ ms.lasthandoff: 10/18/2017
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可定义更多属性，其中有些属性对应于 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]中的状态。 某些属性是所有元素共有的，但其他属性特定于控件类型和控件模式。 属性由唯一标识符进行区分，并且大多数属性都可通过使用单个方法 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 或 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>进行检索。 许多属性还可以轻松从 <xref:System.Windows.Automation.AutomationElement.Current%2A> 和 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 属性访问器进行检索。  
   
- UI 自动化提供程序不需要实现不相关的属性，而可以只返回任何其不支持的属性的 `null` 值。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心服务可以从默认窗口提供程序获取一些属性，并且这些属性与提供程序显式实现的属性相合并。  
+ UI 自动化提供程序不需要实现不相关的属性，而可以只返回任何其不支持的属性的 `null`值。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心服务可以从默认窗口提供程序获取一些属性，并且这些属性与提供程序显式实现的属性相合并。  
   
  除了支持更多属性外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 通过允许使用单一跨进程调用检索多个属性来提供更好的性能。  
   
@@ -147,7 +148,7 @@ ms.lasthandoff: 10/18/2017
   
  下表显示了哪些 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性对应于 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 状态常量。  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 状态|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|是否触发状态更改？|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]状态|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|是否触发状态更改？|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
 |STATE_SYSTEM_CHECKED|对于复选框， <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> 对于单选按钮， <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
 |STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  
@@ -175,14 +176,14 @@ ms.lasthandoff: 10/18/2017
 |STATE_SYSTEM_BUSY|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
 |STATE_SYSTEM_DEFAULT|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
 |STATE_SYSTEM_ANIMATED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
-|STATE_SYSTEM_EXTSELECTABLE|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
-|STATE_SYSTEM_MARQUEED|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
-|STATE_SYSTEM_SELFVOICING|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
+|STATE_SYSTEM_EXTSELECTABLE|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
+|STATE_SYSTEM_MARQUEED|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
+|STATE_SYSTEM_SELFVOICING|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
 |STATE_SYSTEM_TRAVERSED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
-|STATE_SYSTEM_ALERT_HIGH|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
+|STATE_SYSTEM_ALERT_HIGH|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
 |STATE_SYSTEM_ALERT_MEDIUM|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
-|STATE_SYSTEM_ALERT_LOW|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
-|STATE_SYSTEM_FLOATING|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
+|STATE_SYSTEM_ALERT_LOW|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
+|STATE_SYSTEM_FLOATING|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
 |STATE_SYSTEM_HOTTRACKED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
 |STATE_SYSTEM_PRESSED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
   
@@ -199,7 +200,7 @@ ms.lasthandoff: 10/18/2017
 |WinEvent|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件标识符|  
 |--------------|--------------------------------------------------------------------------------------------|  
 |EVENT_OBJECT_ACCELERATORCHANGE|<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty> 属性更改|  
-|EVENT_OBJECT_CONTENTSCROLLED|相关联的滚动条上的<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> 或 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 属性更改|  
+|EVENT_OBJECT_CONTENTSCROLLED|相关联的滚动条上的 <xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>或 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 属性更改|  
 |EVENT_OBJECT_CREATE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_DEFACTIONCHANGE|无等效项|  
 |EVENT_OBJECT_DESCRIPTIONCHANGE|没有确切的等效项；也许 <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> 或 <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> 属性更改|  
@@ -232,12 +233,12 @@ ms.lasthandoff: 10/18/2017
 |EVENT_SYSTEM_MENUPOPUPEND|<xref:System.Windows.Automation.AutomationElement.MenuClosedEvent>|  
 |EVENT_SYSTEM_MENUPOPUPSTART|<xref:System.Windows.Automation.AutomationElement.MenuOpenedEvent>|  
 |EVENT_SYSTEM_MENUSTART|<xref:System.Windows.Automation.AutomationElement.MenuOpenedEvent>|  
-|EVENT_SYSTEM_MINIMIZEEND|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> 属性更改|  
+|EVENT_SYSTEM_MINIMIZEEND|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>属性更改|  
 |EVENT_SYSTEM_MINIMIZESTART|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> 属性更改|  
-|EVENT_SYSTEM_MOVESIZEEND|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 属性更改|  
-|EVENT_SYSTEM_MOVESIZESTART|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 属性更改|  
+|EVENT_SYSTEM_MOVESIZEEND|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>属性更改|  
+|EVENT_SYSTEM_MOVESIZESTART|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>属性更改|  
 |EVENT_SYSTEM_SCROLLINGEND|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> 或 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 属性更改|  
-|EVENT_SYSTEM_SCROLLINGSTART|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> 或 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 属性更改|  
+|EVENT_SYSTEM_SCROLLINGSTART|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>或 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 属性更改|  
 |EVENT_SYSTEM_SOUND|无等效项|  
 |EVENT_SYSTEM_SWITCHEND|没有等效项，但 <xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent> 事件表示新的应用程序已收到焦点|  
 |EVENT_SYSTEM_SWITCHSTART|无等效项|  
@@ -249,7 +250,7 @@ ms.lasthandoff: 10/18/2017
 |无等效项|<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty> 属性更改|  
 |无等效项|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> 属性更改|  
 |无等效项|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> 属性更改|  
-|无等效项|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> 属性更改|  
+|无等效项|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>属性更改|  
 |无等效项|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> 事件|  
 |无等效项|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
@@ -259,5 +260,5 @@ ms.lasthandoff: 10/18/2017
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 模型使提供程序不再需要通过其他提供程序代码调用。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心服务将进行所有必要的聚合。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UI 自动化基础知识](../../../docs/framework/ui-automation/index.md)

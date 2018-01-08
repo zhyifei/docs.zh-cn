@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 80429810a46438cdbf7cf2993e5f3b0779d300c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f015a8323079b4c63cc217826769316c44fa986d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>.NET Framework 中用于 Windows 应用商店应用程序的反射
 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，.NET Framework 包含一系列用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用的反射类型和成员。 这些类型和成员可从完整的 .NET Framework 以及[适用于 Windows 应用商店应用的 .NET](http://go.microsoft.com/fwlink/?LinkID=225700) 中获取。 本文档介绍 .NET Framework 4 及更早版本中这些类型和成员与其对应项之间的主要差异。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [反射](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [适用于 Windows 应用商店应用的 .NET - 支持的 API](http://go.microsoft.com/fwlink/?LinkID=225700)

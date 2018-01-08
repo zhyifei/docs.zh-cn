@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c8cf38e65bbc917720b1a1c5b604d81ca536c14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 751fe96caa2be63e925b3107fa2c198b523bef72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 兼容性
 本示例演示如何在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 中启用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 兼容性模式。 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容性模式中运行的服务可完全参与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序管道并可利用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能，如文件/URL 授权、会话状态和 <xref:System.Web.HttpContext> 类。 使用 <xref:System.Web.HttpContext> 类可以访问 Cookie、会话和其他 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。  
@@ -32,8 +33,8 @@ ms.lasthandoff: 12/02/2017
 >   
 >  1.  打开“控制面板” 。  打开**管理工具**下的小程序**系统和安全**标题。 打开**Internet Information Services (IIS) Manager**小程序。  
 > 2.  展开中的树视图**连接**窗格。 选择**应用程序池**节点。  
-> 3.  若要设置要使用的默认应用程序池[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（它可能会导致与现有站点的不兼容问题），右键单击**DefaultAppPool**列表项，然后选择**基本设置...**. 设置**.Net Framework 版本**┰ α 到**.Net Framework v4.0.30128** （或更高版本）。  
-> 4.  若要创建新的应用程序池使用[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（以保持与其他应用程序兼容性），右键单击**应用程序池**节点，然后选择**添加应用程序池...**. 命名新的应用程序池，并设置**.Net Framework 版本**┰ α 到**.Net Framework v4.0.30128** （或更高版本）。 运行安装程序下面的步骤后，右键单击**ServiceModelSamples**应用程序并选择**管理应用程序**，**高级设置...**. 设置**应用程序池**到新的应用程序池。  
+> 3.  若要设置要使用的默认应用程序池[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（它可能会导致与现有站点的不兼容问题），右键单击**DefaultAppPool**列表项，然后选择**基本设置...**. 设置**.Net Framework 版本**到**.Net Framework v4.0.30128** （或更高版本）。  
+> 4.  若要创建新的应用程序池使用[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（以保持与其他应用程序兼容性），右键单击**应用程序池**节点，然后选择**添加应用程序池...**. 命名新的应用程序池，并设置**.Net Framework 版本**到**.Net Framework v4.0.30128** （或更高版本）。 运行安装程序下面的步骤后，右键单击**ServiceModelSamples**应用程序并选择**管理应用程序**，**高级设置...**. 设置**应用程序池**到新的应用程序池。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -135,5 +136,5 @@ Press <ENTER> to terminate client.
   
 4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

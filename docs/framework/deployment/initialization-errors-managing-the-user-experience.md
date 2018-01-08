@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a0b03f2b5c0c656b8800d1b2ceff9b774a5c65d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8679e930b1f12119211a6463289fb37a18692d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化错误：管理用户体验
 公共语言运行时 (CLR) 激活系统确定将用于运行托管应用程序代码的 CLR 版本。 在某些情况下，激活系统可能无法找到要加载的 CLR 版本。 如果应用程序所需的 CLR 版本无效或未安装在指定计算机上，则通常会出现这种情况。 如果找不到请求的版本，CLR 激活系统将从调用的函数或接口返回一个 HRESULT 错误代码，并且会向正在运行该应用程序的用户显示一条错误消息。 这篇文章提供 HRESULT 代码的列表，并解释如何才能防止显示错误消息。  
@@ -76,10 +77,10 @@ ms.lasthandoff: 11/21/2017
   
 |CLR 主机|描述|错误消息策略|是否可以禁用错误消息？|  
 |--------------|-----------------|--------------------------|------------------------------------|  
-|托管 EXE 主机|启动托管 EXE。|缺少 .NET Framework 版本时显示|No|  
+|托管 EXE 主机|启动托管 EXE。|缺少 .NET Framework 版本时显示|否|  
 |托管 COM 主机|将托管 COM 组件加载到进程。|缺少 .NET Framework 版本时显示|是，通过设置 SEM_FAILCRITICALERRORS 标志|  
-|ClickOnce 主机|启动 ClickOnce 应用程序。|缺少 .NET Framework 版本时显示，从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始|No|  
-|XBAP 主机|启动 WPF XBAP 应用程序。|缺少 .NET Framework 版本时显示，从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始|No|  
+|ClickOnce 主机|启动 ClickOnce 应用程序。|缺少 .NET Framework 版本时显示，从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始|否|  
+|XBAP 主机|启动 WPF XBAP 应用程序。|缺少 .NET Framework 版本时显示，从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始|否|  
   
 ## <a name="includewin8includeswin8-mdmd-behavior-and-ui"></a>[!INCLUDE[win8](../../../includes/win8-md.md)] 行为和 UI  
  CLR 激活系统在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上提供与在其他版本 Windows 操作系统上一样的行为和 UI，除非加载 CLR 2.0 时遇到问题。 [!INCLUDE[win8](../../../includes/win8-md.md)] 包括使用 CLR 4.5 的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 但是，[!INCLUDE[win8](../../../includes/win8-md.md)] 不包括 .NET Framework 2.0、3.0 或 3.5，它们都使用 CLR 2.0。 结果，依赖于 CLR 2.0 的应用程序默认情况下在 [!INCLUDE[win8](../../../includes/win8-md.md)] 上不运行。 相反，它们将显示下面的对话框，使用户能够安装 .NET Framework 3.5。 用户还可在“控制面板”中启用 .NET Framework 3.5。 这两个选项将在[在 Windows 10、Windows 8.1 和 Windows 8 上安装 .NET Framework 3.5](../../../docs/framework/install/dotnet-35-windows-10.md)一文中进行讨论。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 11/21/2017
   
  从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，CLR 激活日志记录获得了极大的改进，包括何时和为什么会显示初始化错误消息的日志条目。 有关详细信息，请参阅[如何：调试 CLR 激活问题](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [如何：将应用程序配置为支持 .NET Framework 4 或 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
  [如何：调试 CLR 激活问题](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  

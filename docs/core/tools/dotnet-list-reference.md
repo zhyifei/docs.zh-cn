@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: b3e903c15a7486faa279d47ad5e2e00c090b19af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: a4ceadb6d070d7997e75b472624bbe2c1650396d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet list reference` - 列出项目到项目引用。
 
@@ -25,11 +26,11 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet list [<PROJECT>] reference [-h|--help]`
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 使用 `dotnet list reference` 命令可方便地列出给定项目的项目引用。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT`
 

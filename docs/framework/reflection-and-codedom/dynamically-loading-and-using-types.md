@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c3e2a8eac4383433888c324a3d36a6e62314462
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0b924f1c1b46eb132070b6d582cf065f38a8a600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamically-loading-and-using-types"></a>动态加载和使用类型
 反射提供语言编译器（如 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 和 JScript）为实现隐式后期绑定所使用的基础结构。 声明与唯一指定的类型相对应，绑定是查找声明（即实现）的过程。 运行时（而非编译时）发生此进程就称为后期绑定。 使用 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 能够在代码中使用隐式后期绑定；Visual Basic 编译器会调用一种帮助程序方法，该方法使用反射来获取对象类型。 传递给帮助程序方法的参数会导致在运行时调用相应方法。 这些参数是在其上调用方法的实例（对象）、被调用方法的名称（字符串）和传递给被调用方法的参数（对象数组）。  
@@ -75,7 +76,7 @@ End Module
   
  BindToMethod 返回 <xref:System.Reflection.MethodBase> 供调用，如果不可能发生此类调用，则返回空引用（在 Visual Basic 中则返回 Nothing）。 MethodBase 返回值不必是 match 参数中包含的值之一，虽然通常情况下都是这样。  
   
- 存在 ByRef 参数时，调用方可能想将其恢复。 因此，如果 BindToMethod 已操作参数数组，联编程序允许客户端将参数数组映射回其原始形式。 为此，调用方必须确保参数顺序不变。 按名称传递参数时，联编程序会对参数数组重新排序，该顺序即调用方所见顺序。 有关详细信息，请参阅<xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>。  
+ 存在 ByRef 参数时，调用方可能想将其恢复。 因此，如果 BindToMethod 已操作参数数组，联编程序允许客户端将参数数组映射回其原始形式。 为此，调用方必须确保参数顺序不变。 按名称传递参数时，联编程序会对参数数组重新排序，该顺序即调用方所见顺序。 有关更多信息，请参见<xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>。  
   
  可用成员集是在类型或任何基类型中定义的成员。 如果指定了 <xref:System.Reflection.BindingFlags>，则会将所有可访问的成员返回到该集中。 如果未指定 BindingFlags.NonPublic，则联编程序必须强制实施可访问性规则。 指定公共或非公共绑定标志时，必须同时指定实例或静态绑定标志，否则不会返回任何成员。  
   
@@ -107,7 +108,7 @@ End Module
   
  <xref:System.Type> 类具有 Get 方法，该方法使用联编程序类型的参数来解析对特定成员的引用。 <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>、<xref:System.Type.GetMethod%2A?displayProperty=nameWithType> 和 <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> 通过提供成员的签名信息来搜索当前类型的特定成员。 回调 <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> 以选择适当方法的给定签名信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>  
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
  [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  

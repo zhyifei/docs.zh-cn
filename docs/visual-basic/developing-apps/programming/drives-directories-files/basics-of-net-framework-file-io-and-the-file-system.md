@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)
 使用 <xref:System.IO> 命名空间中的类与驱动器、文件和目录一起工作。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/09/2017
   
 -   **查找**。 可以查询和修改流中的位置。  
   
- 有关详细信息，请参阅 [Composing Streams](../../../../../docs/standard/io/composing-streams.md)。  
+ 有关详细信息，请参阅 [Composing Streams](../../../../standard/io/composing-streams.md)。  
   
 ## <a name="types-of-streams"></a>流的类型  
  在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中，流由 <xref:System.IO.Stream> 类表示，这形成了所有其他流的抽象类。 不能直接创建 <xref:System.IO.Stream> 类的实例，但必须使用它执行的一个类。  
@@ -63,15 +63,15 @@ ms.lasthandoff: 12/09/2017
   
  下表列出了通常使用流完成的任务：  
   
-|到|请参阅|
+|到|查看|
 |---|---|   
-|读取和写入数据文件|[如何：对新建的数据文件进行读取和写入](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|从文件中读取文本|[如何：从文件读取文本](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
-|将文本写入文件|[如何：向文件写入文本](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|从字符串中读取字符|[如何：从字符串中读取字符](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
-|向字符串写入字符|[如何：向字符串写入字符](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
-|加密数据|[加密数据](../../../../../docs/standard/security/encrypting-data.md)|  
-|解密数据|[解密数据](../../../../../docs/standard/security/decrypting-data.md)|  
+|读取和写入数据文件|[如何：对新建的数据文件进行读取和写入](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|从文件中读取文本|[如何：从文件读取文本](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|将文本写入文件|[如何：向文件写入文本](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|从字符串中读取字符|[如何：从字符串中读取字符](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|向字符串写入字符|[如何：向字符串写入字符](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|加密数据|[加密数据](../../../../standard/security/encrypting-data.md)|  
+|解密数据|[解密数据](../../../../standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>文件访问权限和属性  
  可以控制文件创建、打开，以及与 <xref:System.IO.FileAccess>、<xref:System.IO.FileMode>和 <xref:System.IO.FileShare> 枚举分享的方式，枚举中包含 <xref:System.IO.FileStream> 类的构造函数使用的标志。 例如，打开或新建 <xref:System.IO.FileStream> 时，<xref:System.IO.FileMode> 枚举允许指定是否打开文件供追加用、如果指定的文件不存在是否创建新文件、是否覆盖文件等。  
@@ -80,34 +80,34 @@ ms.lasthandoff: 12/09/2017
   
  下表列出涉及文件访问和文件特性的任务：  
   
-|到|请参阅|  
+|到|查看|  
 |---|---|
-|打开并追加文本到日志文件|[如何：打开并追加到日志文件](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|打开并追加文本到日志文件|[如何：打开并追加到日志文件](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |确定文件特性|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>文件权限  
- 可使用 <xref:System.Security.Permissions.FileIOPermission> 类控制对文件和目录的访问权限。 这对处理 Web 窗体的开发人员来说可能特别重要，这些窗体默认在名为 ASPNET 的特殊本地用户帐户上下文中运行，该帐户作为 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 安装的一部分创建。 此类应用程序请求对资源的访问权限时，ASPNET 用户帐户的权限有限，这可能会阻止用户执行从 Web 应用程序写入到文件等操作。 有关详细信息，请参阅[安全权限](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0)和 <xref:System.Security.Permissions.FileIOPermission>。  
+ 可使用 <xref:System.Security.Permissions.FileIOPermission> 类控制对文件和目录的访问权限。 这对处理 Web 窗体的开发人员来说可能特别重要，这些窗体默认在名为 ASPNET 的特殊本地用户帐户上下文中运行，该帐户作为 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 安装的一部分创建。 此类应用程序请求对资源的访问权限时，ASPNET 用户帐户的权限有限，这可能会阻止用户执行从 Web 应用程序写入到文件等操作。 有关更多信息，请参见<xref:System.Security.Permissions.FileIOPermission>。  
   
 ## <a name="isolated-file-storage"></a>独立的文件存储  
  独立存储是一种尝试，为解决在用户或代码可能缺少必要权限的情况下处理文件时所产生的问题。 独立存储向每个用户分配数据隔离舱，它包含一个或多个存储区。 可以按用户和程序集使存储区彼此独立。 只有创建存储区的用户和程序集才有权访问存储区。 存储区充当完整的虚拟文件系统，可以在一个存储区中创建并操作目录和文件。  
   
  下表列出了通常与独立文件存储相关联的任务。  
   
-|到|请参阅|
+|到|查看|
 |---|---|  
-|创建独立存储区|[如何：获取独立存储的存储区](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|枚举独立存储区|[如何：枚举独立存储的存储区](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|删除独立存储区|[如何：删除独立存储中的存储区](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|在独立存储中创建文件或目录|[如何：在独立存储中创建文件和目录](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|在独立存储中查找文件|[如何：在独立存储中查找现有文件和目录](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|在独立存储中从文件读取或写入文件|[如何：在独立存储中读取和写入文件](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|在独立存储中删除文件或目录|[如何：在独立存储中删除文件和目录](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|创建独立存储区|[如何：获取独立存储的存储区](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|枚举独立存储区|[如何：枚举独立存储的存储区](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|删除独立存储区|[如何：删除独立存储中的存储区](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|在独立存储中创建文件或目录|[如何：在独立存储中创建文件和目录](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|在独立存储中查找文件|[如何：在独立存储中查找现有文件和目录](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|在独立存储中从文件读取或写入文件|[如何：在独立存储中读取和写入文件](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|在独立存储中删除文件或目录|[如何：在独立存储中删除文件和目录](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>文件事件  
  <xref:System.IO.FileSystemWatcher> 组件允许监视系统上或任何你对其具有网络访问权限的计算机上的文件和目录所作的更改。 例如，如果修改了文件，可能想要向用户发送更改警报。 发生更改时，会引发一个或多个事件并将其存储在缓冲区中，然后移交给 <xref:System.IO.FileSystemWatcher> 组件进行处理。  
   
-## <a name="see-also"></a>另请参阅  
- [撰写流](../../../../../docs/standard/io/composing-streams.md)  
- [文件和流 I/O](https://msdn.microsoft.com/library/k3352a4t)  
- [异步文件 I/O](https://msdn.microsoft.com/library/kztecsys)  
+## <a name="see-also"></a>请参阅  
+ [撰写流](../../../../standard/io/composing-streams.md)  
+ [文件和流 I/O](../../../../standard/io/index.md)  
+ [异步文件 I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

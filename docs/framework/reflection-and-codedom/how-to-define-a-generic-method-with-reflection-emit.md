@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f894d032527611c036e41fff783b31920c354778
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 307347a1209a74c76e71c42a4cb9e3c3f814dee6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：用反射发出定义泛型方法
 第一个过程演示如何使用两个类型参数创建简单的泛型方法，以及如何将类约束、接口约束和特殊约束应用于类型参数。  
@@ -178,6 +179,6 @@ ms.lasthandoff: 11/21/2017
   
 -   使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Reflection.Emit.MethodBuilder>  
  [如何：使用 Reflection Emit 定义泛型类型](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

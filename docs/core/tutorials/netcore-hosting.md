@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 2f421c72e8099a328fbc255d51f77a9cd0724e58
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="hosting-net-core"></a>托管 .NET Core
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 10/18/2017
 
 本文概述了从本机代码启动 .NET Core 运行时、创建初始应用程序域 (<xref:System.AppDomain>) 以及在域中执行托管代码的必要步骤。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 由于主机是本机应用程序，所以本教程将介绍如何构造 C++ 应用程序以托管 .NET Core。 将需要一个 C++ 开发环境（例如，[Visual Studio](https://www.visualstudio.com/downloads/) 提供的环境）。
 

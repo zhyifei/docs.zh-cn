@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ba2ef68f0f984e4bd2a80b6d83dac0bd27e228c5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53a1100e40edb700d51fe907d3dc94c6216c4ebd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-tls-protocols"></a>缓解：TLS 协议
 从 .NET Framework 4.6 开始，<xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 类可以使用以下三种协议之一：Tls1.0、Tls1.1 或 Tls 1.2。 不支持 SSL3.0 协议和 RC4 密码。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/18/2017
   
 -   不能升级以支持 Tls1.0、Tls1.1 或 Tls 1.2 的任意服务器端应用。  
   
-## <a name="mitigation"></a>缓解操作  
+## <a name="mitigation"></a>缓解  
  建议的缓解操作是将服务器端应用升级到 Tls1.0、Tls1.1 或 Tls 1.2。 如果这不可行或者如果客户端应用被中断，则可以使用 <xref:System.AppContext> 类并采用如两种方式中的一种来选择退出此功能：  
   
 -   以编程方式使用如下代码段：  
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/18/2017
   
  但请注意，不建议选择退出默认行为，因为这会导致应用程序不太安全。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

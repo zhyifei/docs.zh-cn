@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d92af3e2a04588e3942dd6c8c0625c607e08f123
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ccf5a4edc9404ed13d732dc8bbf0ab1bde1e5d6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>如何：使用 CodeDOM 创建类
 以下过程说明如何创建和编译 CodeDOM 图，此图会生成包含以下各项的类：两个字段、三个属性、一个方法、一个构造函数和一个入口点。  
@@ -126,6 +127,6 @@ The object:
   
 -   需要 `FullTrust` 权限集才可成功执行此代码示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
  [从 CodeDOM 图生成和编译源代码](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

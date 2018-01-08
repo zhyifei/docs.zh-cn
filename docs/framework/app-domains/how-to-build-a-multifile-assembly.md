@@ -28,11 +28,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 68a2217ed05588b2ba6070850dfd0d61a7a0fde2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77922d08ce17f8b8659eac0dba5a46ca33a7502
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>如何：生成多文件程序集
 本文章介绍如何创建多文件程序集，并提供用于说明过程中每个步骤的代码。  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
   
      可以使用 [MSIL 反汇编程序 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 来检查程序集的内容，或者确定文件是程序集还是模块。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)  
  [如何：查看程序集内容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
  [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

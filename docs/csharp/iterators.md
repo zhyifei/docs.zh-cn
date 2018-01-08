@@ -1,5 +1,5 @@
 ---
-title: "迭代器"
+title: Iterators
 description: "了解如何使用内置 C# 迭代器以及如何创建自己的自定义迭代器方法。"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
-# <a name="iterators"></a>迭代器
+# <a name="iterators"></a>Iterators
 
 编写的几乎每个程序都需要循环访问集合。 因此需要编写代码来检查集合中的每一项。 
 
@@ -171,7 +171,7 @@ private IEnumerable<int> IteratorMethod()
 
 ## <a name="deeper-dive-into-foreach"></a>深入了解 `foreach`
 
-`foreach` 语句可扩展为使用 `IEnumable<T>` 和 `IEnumerator<T>` 接口的标准用语，以便循环访问集合中的所有元素。 还可最大限度减少开发人员因未正确管理资源所造成的错误。 
+`foreach` 语句可扩展为使用 `IEnumerable<T>` 和 `IEnumerator<T>` 接口的标准用语，以便循环访问集合中的所有元素。 还可最大限度减少开发人员因未正确管理资源所造成的错误。 
 
 编译器将第 1 个示例中显示的 `foreach` 循环转换为类似于此构造的内容：
 

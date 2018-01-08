@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f5aa4b8fa5422ae126a6027c5fe3358925873782
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2168cbcd19437c1e275da7a01aa0c75ab47600eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-assemblies"></a>创建程序集
 可以使用 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 等 IDE 或 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的编译器和工具来创建单文件或多文件程序集。 最简单的程序集是具有简单名称并加载到单个应用程序域的单个文件。 此程序集不能被应用程序目录之外的其他程序集引用，并且不执行版本检查。 若要卸载该程序集组成的应用程序，只需删除它所在的目录即可。 对许多开发者来说，拥有这些功能的程序集能够满足他们部署应用程序的所有需要。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  公共语言运行时程序集可用于非托管 COM 应用程序时，必须考虑特殊注意事项。 有关使用非托管代码的详细信息，请参阅[向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)  
  [如何：生成单文件程序集](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  

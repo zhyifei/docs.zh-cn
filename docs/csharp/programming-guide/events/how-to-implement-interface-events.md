@@ -11,11 +11,11 @@ ms.assetid: 63527447-9535-4880-8e95-35e2075827df
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 944b894e7e5f305d35d4db96d7426bf05322ca54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a53c6ba29837ad8827d97ea745be0462451eb145
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>如何：实现接口事件（C# 编程指南）
 [接口](../../../csharp/language-reference/keywords/interface.md)可以声明[事件](../../../csharp/language-reference/keywords/event.md)。 下面的示例演示如何在类中实现接口事件。 这些规则基本上都与实现任何接口方法或属性时的相同。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 -   在类中声明事件，然后在相应区域中调用它。  
   
-    ```  
+    ```csharp
     namespace ImplementInterfaceEvents  
     {  
         public interface IDrawingObject  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [事件](../../../csharp/programming-guide/events/index.md)  
  [委托](../../../csharp/programming-guide/delegates/index.md)  

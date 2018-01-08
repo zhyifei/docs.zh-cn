@@ -8,11 +8,11 @@ ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 36bb31975523055962fa9572109dab7e2ed47336
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fe9a9250e0a87ecaa02258526b7cc796de8e387
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重构为纯函数 (C#)
 
@@ -35,21 +35,21 @@ ms.lasthandoff: 11/21/2017
  下面的示例对比两个非纯函数和一个纯函数。  
   
 ### <a name="non-pure-function-that-changes-a-class-member"></a>可更改类成员的非纯函数  
- 在下面的代码中，`HypenatedConcat` 函数不是纯函数，因为它修改了类中的 `aMember` 数据成员：  
+ 在下面的代码中，`HyphenatedConcat` 函数不是纯函数，因为它修改了类中的 `aMember` 数据成员：  
   
 ```csharp  
 public class Program  
 {  
     private static string aMember = "StringOne";  
   
-    public static void HypenatedConcat(string appendStr)  
+    public static void HyphenatedConcat(string appendStr)  
     {  
         aMember += '-' + appendStr;  
     }  
   
     public static void Main()  
     {  
-        HypenatedConcat("StringTwo");  
+        HyphenatedConcat("StringTwo");  
         Console.WriteLine(aMember);  
     }  
 }  
@@ -69,7 +69,7 @@ StringOne-StringTwo
 ```csharp  
 public class Program  
 {  
-    public static void HypenatedConcat(StringBuilder sb, String appendStr)  
+    public static void HyphenatedConcat(StringBuilder sb, String appendStr)  
     {  
         sb.Append('-' + appendStr);  
     }  
@@ -77,19 +77,19 @@ public class Program
     public static void Main()  
     {  
         StringBuilder sb1 = new StringBuilder("StringOne");  
-        HypenatedConcat(sb1, "StringTwo");  
+        HyphenatedConcat(sb1, "StringTwo");  
         Console.WriteLine(sb1);  
     }  
 }  
 ```  
   
- 此版本的程序生成的输出与第一个版本相同，因为 `HypenatedConcat` 函数已通过调用 <xref:System.Text.StringBuilder.Append%2A> 成员函数而更改了其第一个参数的值（状态）。 请注意，即使 `HypenatedConcat` 实际上使用了按值调用参数传递，也会发生此更改。  
+ 此版本的程序生成的输出与第一个版本相同，因为 `HyphenatedConcat` 函数已通过调用 <xref:System.Text.StringBuilder.Append%2A> 成员函数而更改了其第一个参数的值（状态）。 请注意，即使 `HyphenatedConcat` 实际上使用了按值调用参数传递，也会发生此更改。  
   
 > [!IMPORTANT]
 >  对于引用类型，按值传递参数会得到对所传递对象的引用的副本。 此副本与原始引用一样，仍与同一个实例数据关联（除非为引用变量分配新对象）。 函数修改参数不一定需要按引用调用。  
   
 ### <a name="pure-function"></a>纯函数  
-下面版本的程序演示如何将 `HypenatedConcat` 函数作为纯函数实现。  
+下面版本的程序演示如何将 `HyphenatedConcat` 函数作为纯函数实现。  
   
 ```csharp  
 class Program  
@@ -117,6 +117,6 @@ class Program
   
  有关详细信息，请参阅[标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [纯函数转换简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [函数编程与命令式编程 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

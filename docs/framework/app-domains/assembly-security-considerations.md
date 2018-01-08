@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11c66af3a855dac649d5f09944d68fb77a0e8619
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f649c45420d111a1b94374f3025ef807eb3d8efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-security-considerations"></a>程序集安全注意事项
 <a name="top"></a>在生成程序集时，可指定该程序集运行所需的一组权限。 是否将特定的权限授予程序集是基于证据的。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
  因为强命名和使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)进行签名确保了完整性，因此可将代码访问安全策略建立在这两种形式的程序集证据的基础上。 强命名和使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)进行签名通过数字签名和证书来确保完整性。 上面提到的所有技术（哈希验证、强命名和使用 [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md) 进行签名）可协同工作，确保程序集没有做过任何方式的改动。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)  
  [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）  
  [SignTool.exe（签名工具）](../../../docs/framework/tools/signtool-exe.md)

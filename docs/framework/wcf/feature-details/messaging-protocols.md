@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fef5fc58adeac99bcd2cac0fda8a72dde2797001
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 600a1bd57015c6a64a51bf99f3ded35a375e62fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-protocols"></a>消息协议
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道堆栈采用编码和传输通道将内部消息表示形式转换成其网络传输格式，并使用特定传输进行发送。 用于 Web 服务互操作性的最常见传输是 HTTP，Web 服务使用的最常见编码是基于 XML 的 SOAP 1.1、SOAP 1.2 和消息传输优化机制 (MTOM)。  
@@ -180,7 +181,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  B3221：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点在配置为使用 WS-Addressing 2004/08 时，对引用属性和引用参数的处理是没有区别的。  
   
 ### <a name="message-exchange-patterns"></a>消息交换模式  
- Web 服务操作调用所涉及的消息序列称为*消息交换模式*。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持单向、请求-答复和双工消息交换模式。 本节根据所用的消息交换模式说明 WS-Addressing 对消息处理的要求。  
+ Web 服务操作调用所涉及的消息序列称为*消息交换模式*。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持单向、请求-答复和双工消息交换模式。 本节根据所用的消息交换模式说明 WS-Addressing 对消息处理的需求。  
   
  本节通篇都是由请求方发送第一条消息，响应方接收第一条消息。  
   

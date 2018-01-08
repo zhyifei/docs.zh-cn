@@ -9,11 +9,12 @@ ms.prod: .net-core
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 1525bd3f9d249fe39fd65b53bc8d1e8eddb09ab9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 调用 .NET Core 类库
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/18/2017
 
 1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”版本。 选择“ShowCase”按钮上的绿色箭头，编译并运行程序。
 
-   ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![图像](./media/consuming-library-with-visual-studio/toolbar.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. 打开在[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)主题中创建的 `ClassLibraryProjects` 解决方案。 在“解决方案资源管理器”中，右键单击“ClassLibraryProjects”解决方案，然后从上下文菜单依次选择“添加” > “新项目”。
 
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/18/2017
 
 1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”版本。 选择“ShowCase”按钮上的绿色箭头，编译并运行程序。
 
-   ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![图像](./media/consuming-library-with-visual-studio/toolbar.png)
 ---
 
 可以按照[使用 Visual Studio 2017 调试 Hello World 应用程序](debugging-with-visual-studio.md)和[使用 Visual Studio 2017 发布 Hello World 应用程序](publishing-with-visual-studio.md)中的步骤操作，调试并发布使用此库的应用程序。

@@ -7,17 +7,18 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 7518ec32d669e64d713e77f687d285279b012967
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 3b372b55cbdd8e0e6cc6a6b1089915e0da802489
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet add package` - 向项目文件添加包引用。
 
@@ -49,7 +50,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT`
 

@@ -20,16 +20,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 909fbaa4e7dc1d384b5085d71cec346bde44cf14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2bf073b6db0a69cfda0c69ae34df0396f5dea35c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>如何：使用客户端应用程序服务来实现用户登录
 可以通过现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务，使用客户端应用程序服务来验证用户。 有关如何设置 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 配置文件服务的信息，请参阅[将 Forms 身份验证用于 Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)。  
   
- 以下过程介绍如何在应用程序配置为使用客户端身份验证服务提供程序之一时，通过身份验证服务验证用户。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+ 以下过程介绍如何在应用程序配置为使用客户端身份验证服务提供程序之一时，通过身份验证服务验证用户。 有关详细信息，请参阅[如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
  通常，可通过 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> 方法执行所有验证。 此方法通过配置的身份验证提供程序管理与身份验证服务进行的交互。 有关详细信息，请参阅[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>可靠编程  
  本主题中的代码示例演示 Windows 客户端应用程序中的身份验证的最简单用法。 但是，对客户端应用程序服务和窗体身份验证调用 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> 方法时，代码可能会引发 <xref:System.Net.WebException>。 这指示身份验证服务不可用。 有关如何处理此异常的示例，请参阅[演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  

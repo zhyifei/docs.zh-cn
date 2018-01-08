@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1df64129a0ae15b5bad387a62ca60bb4b1b92f7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 41dc27798e9d39d391e5958b86f691e3a0062582
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-manifest"></a>程序集清单
 每一程序集，无论是静态的还是动态的，均包含描述该程序集中各元素彼此如何关联的数据集合。 程序集清单就包含这些程序集元数据。 程序集清单包含指定该程序集的版本要求和安全标识所需的所有元数据，以及定义该程序集的范围和解析对资源和类的引用所需的全部元数据。 程序集清单可以存储在具有 Microsoft 中间语言 (MSIL) 代码的 PE 文件（.exe 或 .dll）中，也可存储在只包含程序集清单信息的独立 PE 文件中。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|-----------------|  
 |程序集名称|指定程序集名称的文本字符串。|  
 |版本号|主版本号和次版本号，以及修订号和生成号。 公共语言运行时使用这些编号来强制实施版本策略。|  
-|区域性|有关该程序集支持的区域性或语言的信息。 此信息只应用于将一个程序集指定为包含特定区域性或特定语言信息的附属程序集。 （具有区域性信息的程序集被自动假定为附属程序集。）|  
+|culture|有关该程序集支持的区域性或语言的信息。 此信息只应用于将一个程序集指定为包含特定区域性或特定语言信息的附属程序集。 （具有区域性信息的程序集被自动假定为附属程序集。）|  
 |强名称信息|如果已经为程序集提供了一个强名称，则为来自发行者的公钥。|  
 |程序集中所有文件的列表|在程序集中包含的每一文件的散列及文件名。 请注意，构成程序集的所有文件所在的目录必须是包含该程序集清单的文件所在的目录。|  
 |类型引用信息|运行时用来将类型引用映射到包含其声明和实现的文件的信息。 该信息用于从程序集导出的类型。|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  通过在代码中使用程序集特性，您可以添加或更改程序集清单中的一些信息。 您可以更改版本信息和信息性特性，包括商标、版权、产品、公司和信息性版本。 有关程序集特性的完整列表，请参阅[设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序集内容](../../../docs/framework/app-domains/assembly-contents.md)  
  [程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)  
  [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
