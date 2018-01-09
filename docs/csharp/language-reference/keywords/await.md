@@ -21,7 +21,7 @@ ms.lasthandoff: 12/06/2017
 # <a name="await-c-reference"></a>await（C# 参考）
 `await` 运算符应用于异步方法中的任务，在方法的执行中插入挂起点，直到所等待的任务完成。 任务表示正在进行的工作。  
   
-`await` 仅可用于由 [async](../../../csharp/language-reference/keywords/async.md) 关键字修饰的异步方法中。 使用 `async` 修饰符定义并且通常包含一个或多个 `await` 表达式的这类方法称为异步方法。  
+`await` 仅可用于由 [async](../../../csharp/language-reference/keywords/async.md) 关键字修饰的异步方法中。 使用 `async` 修饰符定义并且通常包含一个或多个 `await` 表达式的这类方法称为异步方法。  
   
 > [!NOTE]
 >  `async` 和 `await` 关键字是在 C# 5 中引入的。 有关异步编程的说明，请参阅[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)。  
