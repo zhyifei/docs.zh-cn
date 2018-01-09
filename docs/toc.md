@@ -257,6 +257,7 @@
 ### [本机互操作性](csharp/programming-guide/interop/index.md)
 ### [将代码文档化](csharp/codedoc.md)
 ### [版本控制](csharp/versioning.md)
+## [操作指南 C# 主题](csharp/how-to/index.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 编程指南](csharp/programming-guide/)
