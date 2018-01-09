@@ -114,15 +114,15 @@ C# 5.0 版 时非常有针对性的版本的语言。 几乎所有该版本的�
 
 最新的主要版本是 C# 7.0 版。 此版本作为服务在情况下，C# 6.0 中，但不编译器会有一些演化和冷的内容。 下面是一些新功能：
 
-- [出变量](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [out变量](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [元组和析构](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [模式匹配](./csharp-7.md#pattern-matching)
 - [本地函数](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [展开的表达式正文成员](./csharp-7.md#more-expression-bodied-members)
-- [Ref 局部变量，并返回](./csharp-7.md#ref-locals-and-returns)
+- [Ref 局部变量和返回结果](./csharp-7.md#ref-locals-and-returns)
 
 所有这些功能提供了面向开发人员和机会编写比以往任何时候的代码甚至更干净的冷新功能。 突出显示紧缩若要使用的变量的声明`out`关键字，以及允许通过元组的多个返回值。
 
 但 C# 被放到曾经更广泛使用。 .NET 核心现在面向任何操作系统并具有其眼睛牢固地在云上和在可移植性。  这肯定占用语言设计器的想法和时间，除了构思新功能。
 
-_文章_ [_最初发布 NDepend 博客上_](https://blog.ndepend.com/c-versions-look-language-history/)_、。 艾力克 Dietrich 和 Patrick Smacchia。_
+_文章_ [_最初发布 NDepend 博客上_](https://blog.ndepend.com/c-versions-look-language-history/)_。 艾力克 Dietrich 和 Patrick Smacchia。_
