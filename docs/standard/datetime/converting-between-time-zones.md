@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58ed01520a9bbed53d32fc10e48a479e68f6ef7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eabe0c1511e6fd42798f1a879e9e8d526d543a29
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="converting-times-between-time-zones"></a>在各时区之间转换时间
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="converting-to-coordinated-universal-time"></a>转换为协调世界时
 
-协调世界时 (UTC) 是一项高精度的原子时标准。 世界的时区表示为相对于 UTC 的正/负偏移量。 因此，UTC 提供一种无时区或中间时区的时间。 如果日期和时间在计算机之间的可移植性非常重要，则建议使用 UTC 时间。 (有关详细信息和其他使用日期和时间的最佳实践，请参阅[编码在.NET Framework 中使用日期时间的最佳做法](http://go.microsoft.com/fwlink/?LinkId=92342)。)通过将各个时区转换为 UTC，可以简化时间的比较。
+协调世界时 (UTC) 是一项高精度的原子时标准。 世界的时区表示为相对于 UTC 的正/负偏移量。 因此，UTC 提供一种无时区或中间时区的时间。 如果日期和时间在计算机之间的可移植性非常重要，则建议使用 UTC 时间。 (有关详细信息和其他使用日期和时间的最佳实践，请参阅[编码在.NET Framework 中使用日期时间的最佳做法](https://msdn.microsoft.com/library/ms973825.aspx)。)通过将各个时区转换为 UTC，可以简化时间的比较。
 
 > [!NOTE]
 > 您还可以序列化<xref:System.DateTimeOffset>结构，以明确地表示的时间的单一点。 因为<xref:System.DateTimeOffset>对象存储以及其相对于 UTC 的偏移量的日期和时间值，它们始终为 UTC 表示的某个特定点关系中的时间。
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/23/2017
 
 若要将 UTC 转换为本地时间，请参阅"将转换 UTC 转换为本地时间"下一节。 若要将 UTC 转换为在你指定任何时区中的时间，调用<xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>方法。 该方法采用两个参数：
 
-* 要转换的 UTC。 这必须是<xref:System.DateTime>值其<xref:System.DateTime.Kind%2A>属性设置为<xref:System.DateTimeKind?displayProperty=nameWithType>或<xref:System.DateTimeKind?displayProperty=nameWithType>。
+* 要转换的 UTC。 这必须是<xref:System.DateTime>值其<xref:System.DateTime.Kind%2A>属性设置为`Unspecified`或`Utc`。
 
 * UTC 要转换的目标时区。
 

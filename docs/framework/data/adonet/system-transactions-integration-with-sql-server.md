@@ -17,18 +17,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: 7765779187156866c20374b60a4b541d36ac9a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b56d61593aed1a0cdce2fd45d902d9f4ac00cda
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 与 SQL Server 的集成
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版引入了一个可通过 <xref:System.Transactions> 命名空间访问的事务框架。 此框架公开事务的方式是完全集成在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]。  
   
  除了对编程能力的增强之外， <xref:System.Transactions> 与 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 可一起使用，在处理事务时协调优化。 可提升事务是可以根据需要自动提升为完全分布式事务的轻型（本地）事务。  
   
- 从 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 开始，当您使用 <xref:System.Data.SqlClient> 时 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]会提供对可提升事务的支持。 可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。 可提升事务是自动的，不需要开发人员参与。  
+ 从 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 开始，当您使用 <xref:System.Data.SqlClient> 时 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]会提供对可提升事务的支持。 可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。 可提升事务是自动的并且需要从开发人员无需干预。  
   
  只有一起使用 SQL Server 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序 (`SqlClient`) 和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]时，才可以使用可提升事务。  
   

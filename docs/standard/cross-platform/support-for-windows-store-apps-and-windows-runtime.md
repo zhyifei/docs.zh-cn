@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f11daa93aa4e1cbddd0fa0e9f065295f42c820d5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework 对 Windows 应用商店应用程序和 Windows 运行时的支持情况
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 支持基于 [!INCLUDE[wrt](../../../includes/wrt-md.md)]的许多软件开发方案。 这些方案分为三类：  
@@ -160,5 +160,5 @@ ms.lasthandoff: 12/23/2017
 |[使用 C# 或 Visual Basic 的 Windows 应用商店应用的路线图](http://go.microsoft.com/fwlink/p/?LinkId=242212)|提供关键资源来帮助您开始使用 C# 或 Visual Basic 开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用，这些资源包括许多快速入门主题、教程和最佳做法。 （位于 Windows 开发中心。）|  
 |[开发 Windows 应用商店应用程序 (VB / C# / c + + 和 XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|提供关键资源来帮助您开始使用 C# 或 Visual Basic 开发 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用，这些资源包括许多快速入门主题、教程和最佳做法。 （位于 Windows 开发中心。）|  
 |[在 C# 和 Visual Basic 创建 Windows 运行时组件](http://go.microsoft.com/fwlink/p/?LinkId=238313)|描述如何使用 .NET Framework 创建 [!INCLUDE[wrt](../../../includes/wrt-md.md)]组件，说明如何在使用 JavaScript 为 Windows 生成的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用该组件，并描述如何使用 Visual Studio 调试这一组合。 （位于 Windows 开发中心。）|  
-|[Windows 运行时引用](http://go.microsoft.com/fwlink/?LinkId=238319)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]的参考文档。 （位于 Windows 开发中心。）|  
+|[Windows 运行时引用](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]的参考文档。 （位于 Windows 开发中心。）|  
 |[向 Windows 运行时传递 URI](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|描述将托管代码的 URI 传递给 [!INCLUDE[wrt](../../../includes/wrt-md.md)]时可能出现的问题，以及如何避免这一问题。|
