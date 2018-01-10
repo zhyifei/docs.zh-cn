@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-services"></a>加密服务
 <a name="top"></a> 公共网络（如 Internet）不提供实体之间安全通信的方式。 此类网络上的通信易被读取或甚至被未经授权的第三方修改。 加密有助于防止数据被查看，提供检测数据是否已修改的方法，并帮助提供一种跨不安全通道安全通信的方式。 例如，数据可通过使用加密算法进行加密、以加密状态进行传输并在稍后由预期方进行解密。 如果某个第三方截获了加密数据，将很难解密此数据。  
@@ -283,7 +283,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Suite B 支持  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 支持美国国家安全局 (NSA) 发布的加密算法的 Suite B 集。 有关 Suite B 的详细信息，请参阅 [NSA Suite B 加密一览表](http://go.microsoft.com/fwlink/?LinkId=100111)。  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 支持美国国家安全局 (NSA) 发布的加密算法的 Suite B 集。 有关 Suite B 的详细信息，请参阅[NSA Suite B 加密一览表](https://www.nsa.gov/what-we-do/information-assurance/)。  
   
  包括以下算法：  
   
