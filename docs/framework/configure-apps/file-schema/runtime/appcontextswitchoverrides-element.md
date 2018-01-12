@@ -1,7 +1,7 @@
 ---
 title: "&lt;AppContextSwitchOverrides&gt;元素"
 ms.custom: 
-ms.date: 10/17/2017
+ms.date: 01/08/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9cc68f4be869a4773b8a6b932d1f6363855fe584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关运行时初始化选项的信息。|  
@@ -79,6 +79,7 @@ ms.lasthandoff: 12/22/2017
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|当设置为`false`，允许对使用 Visual Studio 的基于 XAML 的工作流项目进行调试时启用 FIPS。 否则，<xref:System.NullReferenceException>中对 System.Activities 程序集中的方法的调用引发。|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|控制是否在调试器中的工作流实例的校验和使用 MD5 或 SHA1。 | .NET Framework 4.7|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|控件是否<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>方法引发异常时<xref:System.Drawing.Icon>对象具有 PNG 帧。 有关详细信息，请参阅[缓解：图标对象中的 PNG 帧](~/docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md)。|.NET Framework 4.6|  
+|`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|控件是否的性能<xref:System.Windows.Forms.PrintPreviewDialog>针对网络打印机进行了优化。 有关详细信息，请参阅[PrintPreviewDialog 控件概述](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)。|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|控制是否异步操作不流从调用线程的上下文。 有关详细信息，请参阅[CurrentCulture 和 CurrentUICulture 穿过了任务](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks)。|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|控件是否<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType>方法尝试仅使用最后一个 DNS 条目的声明类型匹配。 有关详细信息，请参阅[缓解：X509CertificateClaimSet.FindClaims 方法](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md)。|.NET Framework 4.6.1|  
 |`Switch.System.IO.BlockLongPaths`|控件是否路径长度超过`MAX_PATH`（260 个字符） 引发<xref:System.IO.PathTooLongException>。 有关详细信息，请参阅[长路径支持](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support)。|.NET Framework 4.6.2|  

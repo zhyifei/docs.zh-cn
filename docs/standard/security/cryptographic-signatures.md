@@ -33,11 +33,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 866d31662b8ae7d5c887af7d86007cb93a57d88f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c4e460c11e0e78d56a54da1dd178b3f8e9f381b6
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-signatures"></a>加密签名
 <a name="top"></a> 加密数字签名使用公钥算法提供数据完整性。 如果使用数字签名对数据进行签名，则其他人可验证该签名，并且可证明这些数据确实是你发出的，并且在你签名之后未被更改。 有关数字签名的详细信息，请参阅 [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)。  
@@ -115,7 +115,7 @@ class Class1
 ### <a name="signing-xml-files"></a>对 XML 文件进行签名  
  .NET Framework 提供可实现 XML 签名的 <xref:System.Security.Cryptography.Xml> 命名空间。 当想要验证 XML 是否源自某个源时，对 XML 进行签名就变得非常重要。 例如，如果你正在利用使用 XML 的股票报价服务，则如果已对 XML 签名，你就可以验证该 XML 的源。  
   
- 此命名空间中的类遵循来自万维网联合会的 [XML 签名语法和处理建议](http://go.microsoft.com/fwlink/?LinkId=136777) 。  
+ 此命名空间中的类遵循[XML 签名语法和处理建议](http://www.w3.org/TR/xmldsig-core/)从 World Wide Web Consortium。  
   
  [返回页首](#top)  
   
