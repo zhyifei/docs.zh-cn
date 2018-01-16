@@ -114,7 +114,7 @@ C# 5.0 版 时非常有针对性的版本的语言。 几乎所有该版本的�
 
 最新的主要版本是 C# 7.0 版。 此版本作为服务在情况下，C# 6.0 中，但不编译器会有一些演化和冷的内容。 下面是一些新功能：
 
-- [out变量](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [Out 变量](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [元组和析构](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [模式匹配](./csharp-7.md#pattern-matching)
 - [本地函数](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
