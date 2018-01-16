@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 44ee6a3d2dd800f91b5066ea578f4b37852ff295
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 55d6050d7573b9088b361fb571b96425533bda1f
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="introduction-to-classes"></a>类简介
 
@@ -40,7 +40,7 @@ namespace classes
 
 在本快速入门课程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。  在 classes 目录中，新建名为 BankAccount.cs 的文件。 
 
-此文件包含银行帐户定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本快速入门课程中，银行帐户支持以下行为：
+此文件包含“银行帐户”定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本快速入门课程中，银行帐户支持以下行为：
 
 1. 用一个 10 位数唯一标识银行帐户。
 1. 用字符串存储一个或多个所有者名称。
