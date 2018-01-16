@@ -23,7 +23,7 @@ ms.lasthandoff: 11/21/2017
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}");
 ```  
-包含两个内插表达式，{name} 和 {小时： hh}。 等效的复合格式字符串为：
+包含两个内插表达式：{name} 和 { hour:hh}。等效的复合格式字符串为：
 
 ```csharp
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours); 
@@ -52,11 +52,11 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings4.cs#1)]  
 
-原义内插字符串使用`$`字符跟`@`字符。 有关原义字符串的详细信息，请参阅[字符串](string.md)主题。 下面的代码是的上一个使用原义内插字符串的代码段的修改版本：
+原义内插字符串使用`$`字符跟`@`字符。有关原义字符串的详细信息，请参阅[字符串](string.md)主题。下面的代码是上一个使用原义内插字符串的代码片段的修改版本：
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings5.cs#1)]  
 
-格式设置的更改是必需的因为原义字符串不遵循`\`转义序列。
+格式设置的更改是必需的，因为原义字符串不遵循`\`转义序列。
 
 > [!IMPORTANT]
 > 在原义内插字符串中，`$`令牌必须在`@`令牌之前出现。
