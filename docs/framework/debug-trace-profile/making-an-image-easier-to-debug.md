@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 46a9c11f3545e5d2b9f91572a87ee2614810e4d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86dd0c4349dce8dd9e50fdd44c38a08ec39d90bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="making-an-image-easier-to-debug"></a>令映像更易于调试
 编译非托管代码时，可以通过设置 IDE 开关或命令线选项来配置可执行映像进行调试。 例如，可以使用 Visual C++ 中的 /Zi 命令行选项，使其发出调试符号文件（文件扩展名为 .pdb）。 同样，/Od 命令行选项告知编译器禁用优化。 所产生的代码运行速度更慢，但更易于调试，这很必要。  
@@ -63,7 +64,7 @@ AllowOptimize=0
 > [!NOTE]
 >  在 .NET Framework 1.0 版本中，当指定 /clr 和 /Zi 编译器选项时，Microsoft Visual C++ 编译器将添加 DebuggableAttribute。 在 .NET Framework 1.1 版本中，必须在代码中手动添加 DebugabbleAttribute，或者使用 /ASSEMBLYDEBUG 链接器选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试、跟踪和分析](../../../docs/framework/debug-trace-profile/index.md)  
  [启用 JIT 附加调试](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
  [启用分析](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)

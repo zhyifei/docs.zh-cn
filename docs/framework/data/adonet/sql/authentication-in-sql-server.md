@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e3b597d04ee53a094d9c50dff406f57e5fd57b00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c462b7c2e888ed0f6394435e0de2131e26dbef08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 支持两种身份验证模式，即 Windows 身份验证模式和混合模式。  
@@ -88,9 +89,9 @@ ms.lasthandoff: 11/21/2017
 |--------------|-----------------|  
 |[主体](http://msdn.microsoft.com/library/bb543165.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]联机丛书|介绍了 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的登录名和其他安全主体。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 中的应用程序安全方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [连接到数据源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

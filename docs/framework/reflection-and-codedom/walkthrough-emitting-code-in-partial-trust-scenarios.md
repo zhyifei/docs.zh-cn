@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 121dfd91d797aa03860abd4404ffe20113e70f85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>演练：在部分信任应用场景中发出代码
 反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。 此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。  
@@ -219,6 +220,6 @@ ms.lasthandoff: 11/21/2017
   
 -   如果在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中生成此代码示例，必须更改类名，以便在将命名空间传递给 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法时包括该命名空间。 默认情况下，命名空间是项目的名称。 例如，如果项目是“PartialTrust”，那么类名必须为“PartialTrust.Worker”。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
  [如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

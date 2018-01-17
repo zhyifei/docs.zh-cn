@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5b1a306ba694d4bbfc4719fc728112964b1ce40f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：调用采用无符号类型的 Windows 函数 (Visual Basic)
 如果你使用的类、 模块或结构，它具有无符号的整数类型的成员，则可以访问与这些成员[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/09/2017
     ```  
   
     > [!CAUTION]
-    >  `UInteger`， `ULong`， `UShort`，和`SByte`数据类型不属于[语言独立性和独立于语言的组件](../../../../docs/standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用的组件，使用它们。  
+    >  `UInteger`， `ULong`， `UShort`，和`SByte`数据类型不属于[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用的组件，使用它们。  
   
     > [!IMPORTANT]
     >  Windows 应用程序编程接口 (API)，例如在调用非托管代码，公开将代码移植到潜在的安全风险。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/09/2017
     > [!IMPORTANT]
     >  调用 Windows API 需要非托管的代码的权限，这可能会影响在部分信任情况下其执行。 有关详细信息，请参阅<xref:System.Security.Permissions.SecurityPermission>和[代码访问权限](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [UInteger 数据类型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  

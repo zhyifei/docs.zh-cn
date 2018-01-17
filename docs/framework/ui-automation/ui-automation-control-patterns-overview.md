@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 057aed4012a884ea13806a4d1174d53dd27ab609
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e675681d1de3aa46645047da61ae8aac2ea0ba31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自动化控件模式概述
 > [!NOTE]
@@ -82,9 +83,9 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|允许客户端在不支持某个值范围的控件上获取或设置值。 例如，日期时间选择器。|  
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公开特定于窗口的信息，窗口对于 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 操作系统而言是一个基本概念。 窗口控件示例，包括顶级应用程序窗口（[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]等）、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子级窗口和对话框。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [UI 自动化客户端的控件模式映射](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [客户端的 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
  [客户端的 UI 自动化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

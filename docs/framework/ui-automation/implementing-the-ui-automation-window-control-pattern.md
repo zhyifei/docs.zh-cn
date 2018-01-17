@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9e8d83c3ef40ccc6e97ba3128cab5d88a5af5305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f1b44184f1a241943d9fa9d60a62a703dbaf0d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>实现 UI 自动化 Window 控件模式
 > [!NOTE]
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|无|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event|无|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event|无|  
-|<xref:System.Windows.Automation.WindowInteractionState>|Event|不保证为 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowInteractionState>|事件|不保证为 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>异常  
@@ -73,9 +74,9 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -如果控件不支持请求的行为。|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -如果参数不是有效的数字。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [使用在 UI 自动化中缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+ [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

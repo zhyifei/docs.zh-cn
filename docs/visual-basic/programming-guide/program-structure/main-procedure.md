@@ -16,11 +16,11 @@ ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90550ce3e62e4afbc94e2d383fa73db7178633d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 过程
 每个 Visual Basic 应用程序必须包含被调用的过程`Main`。 此过程可用作起始点并对你的应用程序总体控制。 .NET Framework 调用你`Main`过程时它已加载你的应用程序，并已准备好将控件传递给它。 除非你要创建 Windows 窗体应用程序，你必须编写`Main`运行的应用程序在其自己的过程。  
@@ -115,12 +115,11 @@ ms.lasthandoff: 11/21/2017
     End Module  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
  <xref:System.Array.Length%2A>  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>  
  [Visual Basic 程序的结构](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- [Hello，World NIB: Visual Basic 版本](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)  
  [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
  [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  

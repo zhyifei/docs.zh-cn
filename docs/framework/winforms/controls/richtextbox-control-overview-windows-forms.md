@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4278f569a789ca6e8466e0b8e71557446b63955e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6ed04ab478cc6c20d88ec97934f5e45528558c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件用于显示、 输入和操作具有格式的文本。 <xref:System.Windows.Forms.RichTextBox>控件的作用的所有内容<xref:System.Windows.Forms.TextBox>控件的作用，但它还可以显示字体、 颜色和链接; 从文件; 加载文本和嵌入的图像并查找指定的字符。 <xref:System.Windows.Forms.RichTextBox>控件通常用于文本操作，并显示类似于 Microsoft Word 等文字处理应用程序的功能。 如<xref:System.Windows.Forms.TextBox>控件，<xref:System.Windows.Forms.RichTextBox>控件可以显示滚动条; 但与<xref:System.Windows.Forms.TextBox>控件，其默认设置是显示水平和垂直滚动条，根据需要并包含其他滚动条设置。  
@@ -33,7 +34,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件用于显示、 输�
   
  可以撤消和重做中的大多数编辑操作<xref:System.Windows.Forms.RichTextBox>通过调用控件<xref:System.Windows.Forms.TextBoxBase.Undo%2A>和<xref:System.Windows.Forms.RichTextBox.Redo%2A>方法。 <xref:System.Windows.Forms.RichTextBox.CanRedo%2A>方法使您能够确定是否可以重新撤消了用户的上一个操作应用于控件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)

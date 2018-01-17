@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 127111df239cb042f8261acaa62c3798b99653ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 组件体系结构
 与<xref:System.Windows.Forms.BindingSource>组件时，普遍，你可以将所有 Windows 窗体控件都绑定到数据源。  
@@ -173,12 +174,12 @@ ms.lasthandoff: 11/21/2017
 |成员|描述|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.BindingSource.Filter%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingListView>，则获取或设置用于筛选已查看的行的表达式。|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingList>，则获取或设置用于排序的列名称并对顺序信息进行排序。<br /><br /> - 或 -<br /><br /> 如果数据源是<xref:System.ComponentModel.IBindingListView>并支持高级排序，则获取用于排序和排序顺序的多个列名称|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingList>，则获取或设置用于排序的列名称并对顺序信息进行排序。<br /><br /> 或<br /><br /> 如果数据源是<xref:System.ComponentModel.IBindingListView>并支持高级排序，则获取用于排序和排序顺序的多个列名称|  
   
 ### <a name="integration-with-bindingnavigator"></a>与 BindingNavigator 的集成  
  你可以使用<xref:System.Windows.Forms.BindingSource>组件将任何 Windows 窗体控件绑定到数据源，但<xref:System.Windows.Forms.BindingNavigator>控件专门用于处理<xref:System.Windows.Forms.BindingSource>组件。 <xref:System.Windows.Forms.BindingNavigator>控件提供用户界面，用于控制<xref:System.Windows.Forms.BindingSource>组件的当前项。 默认情况下，<xref:System.Windows.Forms.BindingNavigator>控件提供对应的导航方法的按钮<xref:System.Windows.Forms.BindingSource>组件。 有关详细信息，请参阅[如何： 使用 Windows 窗体 BindingNavigator 控件导航数据](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingNavigator>  
  [BindingSource 组件概述](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  

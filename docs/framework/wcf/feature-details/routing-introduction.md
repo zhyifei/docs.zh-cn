@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: f0205f4bc468d4a38a50fd2be36d05583ad87906
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.workload: dotnet
+ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-introduction"></a>路由简介
 路由服务提供的泛型可插入 SOAP 中介能够根据消息内容路由消息。 使用路由服务，您可以创建复杂的路由逻辑，以便实现服务聚合、服务版本管理、优先级路由和多播路由等方案。 路由服务还提供了错误处理功能，使您可以设置备份终结点的列表。如果将消息发送到主目标终结点时失败，则会发送到这些备份终结点。  
@@ -367,17 +368,17 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |模式|会话|事务|接收上下文|是否支持备份列表|备注|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |单向||||是|尝试在备份终结点上重新发送消息。 如果正在多播此消息，则仅将故障通道上的消息移至其备份目标。|  
-|单向||![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")||No|引发异常，并回滚事务。|  
+|单向||![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")||否|引发异常，并回滚事务。|  
 |单向|||![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|是|尝试在备份终结点上重新发送消息。 成功接收消息后，完成所有接收上下文。 如果任何终结点未成功接收消息，则不会完成接收上下文。<br /><br /> 如果正在多播此消息，仅当至少有一个终结点（主终结点或备份终结点）已成功接收消息时，才会完成接收上下文。 如果所有多播路径中没有任何终结点成功接收消息，则不会完成接收上下文。|  
 |单向||![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|是|中止先前事务，创建新事务，并重新发送所有消息。 遇到错误的消息将传输到备份目标。<br /><br /> 在创建已成功完成其中的所有传输的事务之后，完成接收上下文并提交该事务。|  
 |单向|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|||是|尝试在备份终结点上重新发送消息。 在多播情况下，仅向备份目标重新发送已遇到错误或其会话关闭失败的消息。|  
-|单向|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")||No|引发异常，并回滚事务。|  
+|单向|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")||否|引发异常，并回滚事务。|  
 |单向|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")||![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|是|尝试在备份终结点上重新发送消息。 在完成所有消息发送操作且未发生错误之后，会话将指示没有任何其他消息，路由服务将成功关闭所有出站会话通道，将完成所有接收上下文，并关闭入站会话通道。|  
 |单向|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|是|中止当前事务，并创建新事务。 重新发送会话中以前的所有消息。 在创建已成功发送其中的所有消息的事务，并且会话指示没有任何其他消息之后，将关闭所有出站会话通道，使用事务完成所有接收上下文，关闭入站会话通道，并提交该事务。<br /><br /> 如果会话是多播会话，无任何错误的消息将重新发送到与以前相同的目标，而遇到错误的消息将发送到备份目标。|  
 |双向||||是|发送到备份目标。  在通道返回响应消息之后，系统会将响应返回到原始客户端。|  
 |双向|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|||是|将通道中的所有消息发送到备份目标。  在通道返回响应消息之后，系统会将响应返回到原始客户端。|  
-|双向||![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")||No|引发异常，并回滚事务。|  
-|双向|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")||No|引发异常，并回滚事务。|  
+|双向||![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")||否|引发异常，并回滚事务。|  
+|双向|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")||否|引发异常，并回滚事务。|  
 |双工||||No|当前不支持非会话双工通信。|  
 |双工|![复选标记](../../../../docs/framework/wcf/feature-details/media/checkmark.gif "复选标记")|||是|发送到备份目标。|  
   
@@ -411,7 +412,7 @@ using (ServiceHost serviceHost =
   
  要将 Windows 凭据模拟用于路由服务，您需要同时配置凭据和服务。 客户端凭据对象（<xref:System.ServiceModel.Security.WindowsClientCredential>，可从 <xref:System.ServiceModel.ChannelFactory> 访问）定义了一个 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 属性，此属性必须设置为允许模拟。 最后，您需要在服务上配置 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 行为，以便将 `ImpersonateCallerForAllOperations` 设置为 `true`。 路由服务使用此标志来决定是否创建客户端，以便转发启用模拟的消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)  
  [路由协定](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  [选择筛选器](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)

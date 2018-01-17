@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98ac35edc458e370f2b7b9b116d2872d0db2da71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 270b3755901e3c5bc95352b5f3d07a338e73a90e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>在事务中将资源登记为参与者
 参与事务的每个资源都由资源管理器进行管理，而后者的操作则由事务管理器进行协调。 这一协调通过通知来执行，这些通知会提供给已通过事务管理器在事务中登记的订户。  
@@ -57,6 +58,6 @@ ms.lasthandoff: 12/02/2017
 ### <a name="optimizing-performance"></a>优化性能  
  <xref:System.Transactions.Transaction> 类还提供了 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 方法来登记可提升的单阶段登记 (PSPE)。 这使持久资源管理器 (RM) 可承载和“拥有”以后可在需要时升级为由 MSDTC 进行管理的事务。 有关这方面的详细信息，请参阅[优化使用单阶段提交和可提升单个阶段通知](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [使用单阶段提交和可提升单个阶段通知的优化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [提交单阶段和多个阶段中的事务](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)
+## <a name="see-also"></a>请参阅  
+ [使用单阶段提交和可提升的单阶段通知进行优化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [单阶段和多阶段确认事务](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

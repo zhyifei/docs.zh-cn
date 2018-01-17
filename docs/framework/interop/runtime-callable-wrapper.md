@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 980ed0a10c4e8152da20846710b21c244a341271
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 722a317a01d79f56496810b8727ce041705c8f78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-callable-wrapper"></a>运行时可调用包装
 公共语言运行时通过名为运行时可调用包装 (RCW) 的代理公开 COM 对象。 尽管 RCW 似乎是 .NET 客户端的普通对象，但它的主要功能是封送处理 .NET 客户端和 COM 对象之间的调用。  
@@ -64,7 +65,7 @@ COM 接口和运行时可调用包装
 |**IDispatchEx**|如果类实现 IDispatchEx，则 RCW 实现 IExpando。 IDispatchEx 接口是 IDispatch 接口的扩展，与 IDispatch 不同，它可枚举、添加、删除和以区分大小的方式调用成员。|  
 |**IEnumVARIANT**|使支持枚举的 COM 类型可被视为集合。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [COM 包装](../../../docs/framework/interop/com-wrappers.md)  
  [封送选定的接口](http://msdn.microsoft.com/en-us/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
  [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)  

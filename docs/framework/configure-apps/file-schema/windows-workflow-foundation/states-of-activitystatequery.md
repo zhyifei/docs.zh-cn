@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4df89af05ae341a981c3b4f34ba919bb445d724e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 26e9901ce8b8c41f2386a8fda696ed03e08154de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltstatesgt-of-ltactivitystatequerygt"></a>&lt;activityStateQuery&gt; 的 &lt;states&gt;
 一个配置元素集合，这些元素包含应为其发出跟踪记录的已订阅活动的状态。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/02/2017
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>      
  <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
  [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  

@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的继承
 
@@ -62,7 +62,7 @@ C# 和 .NET 只支持*单一继承*。 也就是说，类只能继承自一个�
 
 - [内部](../language-reference/keywords/internal.md)成员仅在与基类同属一个程序集的派生类中可见， 在与基类属于不同程序集的派生类中不可见。
 
-- [公共](../language-reference/keywords/public.md)成员都是在派生类中可见，派生的类的公共接口的一部分。 可以调用继承的公共成员，就像它们是在派生类中定义一样。 在以下示例中，类 `A` 定义 `Method1` 方法，类 `B` 继承自类 `A`。 然后，以下示例调用 `Method1`，就像它是 `B` 中的实例方法一样。
+- [公共](../language-reference/keywords/public.md)成员在派生类中可见，并且属于派生类的公共接口。 可以调用继承的公共成员，就像它们是在派生类中定义一样。 在以下示例中，类 `A` 定义 `Method1` 方法，类 `B` 继承自类 `A`。 然后，以下示例调用 `Method1`，就像它是 `B` 中的实例方法一样。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 

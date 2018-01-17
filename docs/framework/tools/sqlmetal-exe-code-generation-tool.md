@@ -20,11 +20,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54f304117c86066e18bfb40f3b3640819647ac0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c14c01c670eccbc7f13210d3c0bb7df7bec07679
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
 SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
@@ -142,7 +143,7 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 >  如果对 Northwind 示例数据库应用 **/pluralize** 选项，请注意以下行为。 如果 SqlMetal 为表创建了行类型的名称，表名将采用单数形式。 如果它为表创建了 <xref:System.Data.Linq.DataContext> 属性，则表名将采用复数形式。 巧合的是，Northwind 示例数据库中的表名已采用复数形式。 因此，你将看不到这种效果。 尽管数据库表普遍命名为单数形式，但在 .NET 中，将集合命名为复数形式也是一种常见的做法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：在 Visual Basic 或 C# 中生成对象模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
  [LINQ to SQL 中的代码生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [外部映射](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

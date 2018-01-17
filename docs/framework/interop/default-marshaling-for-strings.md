@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 34cd8194f5f36c2f9c93517403aa27f6bbbcb698
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f8de04f9674e67bf1498fb8f25f2b3c61fec438
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-marshaling-for-strings"></a>字符串的默认封送处理
 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 类均具有类似的封送处理行为。  
@@ -269,7 +270,7 @@ public class Window {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
  [方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  

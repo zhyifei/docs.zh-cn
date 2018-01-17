@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aee4c6b99572ca5fa82036ed817c95c02d447a11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d062e46ce0cb8d6ce6fa7189377735a4c480e030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel 控件
 `ToolStripPanel` 控件在工具区域内启用停靠时共享水平或垂直空间，并且当无需四个面板和 <xref:System.Windows.Forms.ToolStripContainer> 的中心面板时启用排列 <xref:System.Windows.Forms.ToolStrip> 控件。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/18/2017
  <xref:System.Windows.Forms.ToolStripPanel>  
  提供关于 <xref:System.Windows.Forms.ToolStripPanel> 控件的参考文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

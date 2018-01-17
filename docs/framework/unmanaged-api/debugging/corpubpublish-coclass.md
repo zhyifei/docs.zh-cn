@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c1565c9321e64536139e02b239fbeb4247a58a3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3dec1175715bdbddc3c975924e91e238fa6d5f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish 组件类
 提供用于发布应用程序域和进程相关信息的接口。  
@@ -53,7 +54,7 @@ coclass CorpubPublish {
 ## <a name="remarks"></a>备注  
  典型的发布方案涉及的开发人员想要调试应用程序域内的计算机运行的托管的代码。 宿主环境可能运行的进程中的多个应用程序域。 开发人员想要使用图形用户界面或某种其他方式来列出所有的计算机，运行的进程并选取一个特定的进程。 该列表应包括所有正在运行托管的代码的进程内的应用程序域。 然后，开发人员可以标识特定的应用程序域，并将调试器附加到该域。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub.idl  
@@ -62,5 +63,5 @@ coclass CorpubPublish {
   
  **.NET framework 版本：**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

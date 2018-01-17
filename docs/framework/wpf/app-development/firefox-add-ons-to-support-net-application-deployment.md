@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f16fc118ccfef6cfcb9ab0dc1356cb0c732ae229
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5734d58d0cce15c52da6b7242b28ffc8d574060
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>支持 .NET 应用程序部署的 Firefox 加载项
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]插件 Firefox 和.NET Framework 适用于助手 Firefox 启用[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、 松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，和 ClickOnce 应用程序来处理 Mozilla Firefox 浏览器。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  .NET Framework 助手对于 Firefox 是附带[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]。 有关为 Firefox 删除.NET Framework 助手的信息，请参阅[如何删除.NET Framework 助手 Firefox](http://go.microsoft.com/fwlink/?LinkId=177944)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
  [WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）  
  [检测是否安装了适用于 Firefox 的 WPF 插件](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

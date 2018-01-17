@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a8d858228630147e1fbcdfab6a52fba5a63a566
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7cd45c85f155da975ca17961ca49a5dc89800a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="varieties-of-custom-controls"></a>各种自定义控件
 使用 .NET Framework 可以开发和实现新的控件。 可以通过继承来扩展熟悉的用户控件和现有控件的功能。 还可以编写自定义控件，这些控件执行自己的绘制。  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
  使用<xref:System.ComponentModel.DesignerAttribute>以将控件与您的设计器相关联。 有关详细信息，请参阅[扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)和[如何：创建利用设计时功能的 Windows 窗体控件](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [如何：开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
  [开发复合 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  

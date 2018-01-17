@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05f77e8939b9b81a9e3861df6a44bc3585a0a504
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 23a4c180eb62dd152f1ed24c01b8103ccf1ec562
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-binding-source"></a>如何：指定绑定源
 在数据绑定中，绑定源对象是指从其获取数据的对象。 本主题描述了指定绑定源的不同方法。  
@@ -49,14 +50,14 @@ ms.lasthandoff: 11/21/2017
   
 |属性|描述|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|使用此属性将源设置为对象的实例。 如果你不需要建立中的作用域的功能的多个属性继承相同的数据上下文，则可以使用<xref:System.Windows.Data.Binding.Source%2A>属性而不是`DataContext`属性。 有关更多信息，请参见<xref:System.Windows.Data.Binding.Source%2A>。|  
-|<xref:System.Windows.Data.Binding.RelativeSource%2A>|当希望指定相对于绑定目标位置的源时，这很有用。 当想要将元素的一个属性绑定到同一元素的另一个属性时，或者如果要在样式或模板中定义绑定，则可能需要使用此属性。 有关更多信息，请参见<xref:System.Windows.Data.Binding.RelativeSource%2A>。|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|指定一个表示希望绑定到的元素的字符串。 当希望绑定到应用程序上另一个元素的属性时，这很有用。 例如，如果你想要使用<xref:System.Windows.Controls.Slider>来控制应用程序中的另一个控件的高度或如果你想要绑定<xref:System.Windows.Controls.ContentControl.Content%2A>的控件与<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>属性你<xref:System.Windows.Controls.ListBox>控件。 有关更多信息，请参见<xref:System.Windows.Data.Binding.ElementName%2A>。|  
+|<xref:System.Windows.Data.Binding.Source%2A>|使用此属性将源设置为对象的实例。 如果你不需要建立中的作用域的功能的多个属性继承相同的数据上下文，则可以使用<xref:System.Windows.Data.Binding.Source%2A>属性而不是`DataContext`属性。 有关详细信息，请参阅<xref:System.Windows.Data.Binding.Source%2A>。|  
+|<xref:System.Windows.Data.Binding.RelativeSource%2A>|当希望指定相对于绑定目标位置的源时，这很有用。 当想要将元素的一个属性绑定到同一元素的另一个属性时，或者如果要在样式或模板中定义绑定，则可能需要使用此属性。 有关详细信息，请参阅<xref:System.Windows.Data.Binding.RelativeSource%2A>。|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|指定一个表示希望绑定到的元素的字符串。 当希望绑定到应用程序上另一个元素的属性时，这很有用。 例如，如果你想要使用<xref:System.Windows.Controls.Slider>来控制应用程序中的另一个控件的高度或如果你想要绑定<xref:System.Windows.Controls.ContentControl.Content%2A>的控件与<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>属性你<xref:System.Windows.Controls.ListBox>控件。 有关详细信息，请参阅<xref:System.Windows.Data.Binding.ElementName%2A>。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>  
  <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>  
  [属性值继承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [绑定声明概述](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

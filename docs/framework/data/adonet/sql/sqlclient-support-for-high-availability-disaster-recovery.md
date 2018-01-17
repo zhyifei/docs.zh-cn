@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cf17253478def72fe4fdc24de0a67c26fcbba0bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 612f667020522d94b53c3f7e715b9a2ad1177836
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
 本主题介绍对高可用性、灾难恢复（AlwaysOn 可用性组）的 SqlClient支持（[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的新功能）。  AlwaysOn 可用性组功能已添加到 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 中。 有关 AlwaysOn 可用性组的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书。  
@@ -103,6 +104,6 @@ ms.lasthandoff: 11/21/2017
   
  只读路由可能需要比连接到主副本更长的时间，因为只读路由要先连接到主副本，然后查找最可能可用的可读辅助副本。 为此，您应增加您的登录超时值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

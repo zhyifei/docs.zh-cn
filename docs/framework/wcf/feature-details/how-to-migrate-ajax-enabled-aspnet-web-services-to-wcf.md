@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe09e2c91df0c25f070e06a39ce5e94a54062a20
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>如何：将启用了 AJAX 的 ASP.NET Web 服务迁移到 WCF
 本主题概述将基本 ASP.NET AJAX 服务迁移到等效的启用了 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的过程。 它演示了如何为 ASP.NET AJAX 服务创建在功能上等效的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 版本。 随后可以并行使用这两项服务，也可以用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务替换 ASP.NET AJAX 服务。  
@@ -222,5 +223,5 @@ d.Add("two", 2);
 |词典的表示形式|数组 KeyValuePair\<K，V >，处理不是字符串的密钥类型。|作为实际的 JSON 对象 - 但仅处理是字符串的键类型。|  
 |转义符|始终应带有转义正斜杠 (/)；切勿使用非转义的无效 JSON 字符，例如“\n”。|对于 DateTime 值，带有转义正斜杠 (/)。|  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+## <a name="see-also"></a>请参阅  
+ [如何：使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

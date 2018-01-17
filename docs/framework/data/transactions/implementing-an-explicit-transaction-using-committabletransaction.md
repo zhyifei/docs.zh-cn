@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc6f039ffbdeaef70e3bc4eb71aa5046105f4ee9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ce77ddab23063588e347073de4d4c25e5fbb5a01
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>使用 CommittableTransaction 执行显式事务
 <xref:System.Transactions.CommittableTransaction> 类为应用程序使用事务提供了一种显式方法，而不是隐式地使用 <xref:System.Transactions.TransactionScope> 类。 对于要跨多个函数调用或多个线程调用使用同一事务的应用程序，前一种类十分有用。 与 <xref:System.Transactions.TransactionScope> 类不同，应用程序编写器需要明确调用 <xref:System.Transactions.CommittableTransaction.Commit%2A> 和 <xref:System.Transactions.Transaction.Rollback%2A> 方法以提交或中止事务。  
@@ -95,6 +96,6 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [实现使用事务范围的隐式事务](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
+## <a name="see-also"></a>请参阅  
+ [使用事务范围实现隐式事务](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
  [事务处理](../../../../docs/framework/data/transactions/index.md)

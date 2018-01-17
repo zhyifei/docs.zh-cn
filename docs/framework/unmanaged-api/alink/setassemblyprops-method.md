@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0245b6b1e30174bb3496d3d6ab674ccc00fb9fee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae13daab0352ad4367c7ad6e06d6c12af23c75bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps 方法
 将分配程序集级别属性。  
@@ -55,10 +56,10 @@ HRESULT SetAssemblyProps(
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  需要 alink.h。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

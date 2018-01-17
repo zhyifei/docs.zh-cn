@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 101b8b444287102cbf8ed48891cc9d98df25283f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7353ecd6f4e2db60db1c77c7771af43d68be760
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔离
 快照隔离可增强 OLTP 应用程序的并发性。  
@@ -151,6 +152,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  如果应用程序中存在许多冲突，快照隔离也许不是最佳的选择。 只有在确实需要时，才应使用提示。 应用程序的设计不应使其操作始终依赖于锁提示。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

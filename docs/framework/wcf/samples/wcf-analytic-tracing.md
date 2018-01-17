@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c238d4c923b00a6c3387caa9bdafd69b126753c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析跟踪
 此示例演示如何将您自己的跟踪事件添加到分析跟踪流中，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将把该分析跟踪流写入 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 中的 ETW。 跟踪分析是为了便于查看服务，而不会导致较高性能损失。 此示例演示如何使用 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 来写入与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务集成的事件。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="custom-event-details"></a>自定义事件详细信息  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 ETW 事件提供程序清单定义了三个事件，这些事件设计为由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务作者在服务代码内发出。 下表显示了这三个事件的分类。  
   
-|Event|描述|事件 ID|  
+|事件|描述|事件 ID|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|服务中发生的说明内容不是一个问题时发出此事件。 例如，可以在对数据库成功进行调用后发出一个事件。|301|  
 |UserDefinedWarningOccurred|发生的问题可能导致将来出现错误时发出此事件。 例如，如果调用数据库失败，但能够通过回退到冗余数据存储区进行恢复，则可以发出一个警告事件。|302|  
@@ -127,5 +128,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)

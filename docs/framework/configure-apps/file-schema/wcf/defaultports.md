@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1886f6efdfaa8f4105e6ef16ad72093867e0f3fe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd4fba4d7d5bcb0adc5a1a638598af2746ad4cf4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdefaultportsgt"></a>&lt;d d&gt;
 一个默认端口集合，列出客户端应用程序侦听的默认通信终结点。  
@@ -57,5 +58,5 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<useRequestHeadersForMetadataAddress >](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|默认端口列表。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.DefaultPortElementCollection>

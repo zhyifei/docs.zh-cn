@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc4ef4473a200a424134a16d64655a5acf1488b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe3f0caa8f23a3b68f1017254a770af766f83f81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotations-overview"></a>批注概述
 在纸质文档上编写说明或注释毫不稀奇，我们几乎认为这是理所当然的。 这些说明或注释就是“批注”，我们将其添加到文档，用于标注信息或突出显示兴趣项以供日后参考。 虽然在打印文档上编写注释很简单也很平常，但是就算在所有电子文档上添加个人注释，功能上却通常有很多限制。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
  另一示例方案涉及通过电子邮件在文档读取器之间实现交换批注和便笺的应用程序。 凭借此功能，这些应用程序可以将读取器导航到包含要交换的批注的页面。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Controls.FlowDocumentPageViewer>  

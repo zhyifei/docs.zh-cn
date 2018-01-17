@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: a6fec422e235413bd76d86cdcb5a72a351bb3f97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38237dd1885047eed5be06aba092c261f56f6da3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-properties-overview"></a>UI 自动化属性概述
 > [!NOTE]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  本节概括了 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 属性。 下面各主题中提供了更具体的信息：  
   
--   [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+-   [客户端的 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
   
 -   [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="display-characteristics"></a>显示特征  
   
-|属性标识符|和|  
+|属性标识符|属性访问|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.CultureProperty>|无|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="element-type"></a>元素类型  
   
-|属性标识符|和|  
+|属性标识符|属性访问|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsContentElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="identification"></a>标识  
   
-|属性标识符|和|  
+|属性标识符|属性访问|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ClassNameProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ClassName%2A>|  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="interaction"></a>交互  
   
-|属性标识符|和|  
+|属性标识符|属性访问|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AcceleratorKey%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AccessKey%2A>|  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="miscellaneous"></a>杂项  
   
-|属性标识符|和|  
+|属性标识符|属性访问|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsRequiredForFormProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsRequiredForForm%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A>|  
@@ -169,10 +170,10 @@ ms.lasthandoff: 11/21/2017
   
  客户端通过订阅事件来侦听事件。 订阅事件是指创建可处理事件的委托方法，然后将方法随将在这些方法中处理的特定事件一起传递给 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。 特别是对于属性更改事件，客户端必须实现 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 UI 自动化客户端中缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [客户端的 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
  [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [查找 UI 自动化元素基于属性条件](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [基于属性条件查找 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
  [从 UI 自动化提供程序返回属性](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
  [从 UI 自动化提供程序引发事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)

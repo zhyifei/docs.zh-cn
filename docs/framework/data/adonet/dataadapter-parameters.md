@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3e2670132bc6af1c914efa17cfbb98fd6577bd1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e42f6ef0f2416822f42d2c73032631965b9bb097
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 参数
 <xref:System.Data.Common.DbDataAdapter> 具有四个用于从数据源检索数据和更新数据源中数据的属性：<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 属性返回数据源中的数据；<xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 属性用于管理数据源中的更改。 调用 `SelectCommand` 的 `Fill` 方法之前必须设置 `DataAdapter` 属性。 在调用 `InsertCommand` 的 `UpdateCommand` 方法之前必须设置 `DeleteCommand`、`Update` 或 `DataAdapter` 属性，具体取决于对 <xref:System.Data.DataTable> 中的数据做了哪些更改。 例如，如果已添加行，在调用 `InsertCommand` 之前必须设置 `Update`。 当 `Update` 正在处理已插入、已更新或已删除的行时，`DataAdapter` 将使用相应的 `Command` 属性来处理该操作。 有关已修改行的当前信息将通过 `Command` 集合传递到 `Parameters` 对象。  
@@ -63,7 +64,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|该参数使用列的原始值。|  
 |`Proposed`|该参数使用建议值。|  
   
- 下一节中的 `SqlClient` 代码示例为 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 定义了一个参数，在该示例中 `CustomerID` 列用作以下两个参数的 `SourceColumn`：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 `@CustomerID`参数用于更新**CustomerID**列中的当前值`DataRow`。 因此， `CustomerID` `SourceColumn`与`SourceVersion`的`Current`使用。 *@OldCustomerID* 参数用于标识数据源中的当前行。 由于在该行的 `Original` 版本中找到了匹配列值，所以将使用 `SourceColumn` 为 `CustomerID` 的相同 `SourceVersion` (`Original`)。  
+ 下一节中的 `SqlClient` 代码示例为 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 定义了一个参数，在该示例中 `CustomerID` 列用作以下两个参数的 `SourceColumn`：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 `@CustomerID`参数用于更新**CustomerID**列中的当前值`DataRow`。 因此， `CustomerID` `SourceColumn`与`SourceVersion`的`Current`使用。  *@OldCustomerID* 参数用于标识数据源中的当前行。 由于在该行的 `Original` 版本中找到了匹配列值，所以将使用 `SourceColumn` 为 `CustomerID` 的相同 `SourceVersion` (`Original`)。  
   
 ## <a name="working-with-sqlclient-parameters"></a>使用 SqlClient 参数  
  下面的示例演示如何创建 <xref:System.Data.SqlClient.SqlDataAdapter> 并将 <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> 设置为 <xref:System.Data.MissingSchemaAction.AddWithKey>，以便从数据库中检索其他架构信息。 <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 属性集及其相应的 <xref:System.Data.SqlClient.SqlParameter> 对象已添加到 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合。 该方法返回一个 `SqlDataAdapter` 对象。  
@@ -174,8 +175,8 @@ adapter.Fill(customers, "Customers");
 > [!NOTE]
 >  如果未为参数提供参数名称，给定参数的参数递增的默认名称*N* *，*从"Parameter1"开始。 我们建议避免使用 Parameter*N*命名约定时提供参数名称，因为你提供的名称可能与中现有的默认参数名称发生冲突`ParameterCollection`。 如果提供的名称已经存在，将引发异常。  
   
-## <a name="see-also"></a>另请参阅  
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+## <a name="see-also"></a>请参阅  
+ [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [使用存储过程修改数据](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  

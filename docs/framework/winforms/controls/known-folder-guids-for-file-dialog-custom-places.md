@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d32dfe359d4f51403c5aaaae319fe4cb52eed3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 913cccadc90eaef589f42d097a14b1472c7129fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>文件对话框自定义区域的已知文件夹 GUID
 你使用<xref:System.Guid>指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹添加到的文件夹时<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知文件夹 Guid 不区分大小写和在 KnownFolders.h 文件中定义[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]。  
@@ -296,6 +297,6 @@ ms.lasthandoff: 11/21/2017
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.FileDialogCustomPlace>  
  [如何：向文件对话框添加自定义区域](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

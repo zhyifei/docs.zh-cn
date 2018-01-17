@@ -13,13 +13,14 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6c9d5d8f2c90273b316379d3c2803835bab3faef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 36699b403241e9a5496e722e81c833be0ed63101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="-member-access-entity-sql"></a>. （成员访问）(Entity SQL)
+# <a name="-member-access-entity-sql"></a>方法。 （成员访问）(Entity SQL)
 点运算符 （.） 是[!INCLUDE[esql](../../../../../../includes/esql-md.md)]成员访问运算符。 使用成员访问运算符可生成结构化概念模型类型实例的属性或字段的值。  
   
 ## <a name="syntax"></a>语法  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
 expression.identifier  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `expression`  
  结构化概念模型类型的实例。  
   
@@ -40,5 +41,5 @@ expression.identifier
   
  `select p.Name.FirstName from LOB.Person as p`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

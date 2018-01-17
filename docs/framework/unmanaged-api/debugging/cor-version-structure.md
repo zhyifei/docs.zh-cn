@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bd4a878b51685befb39eb486097be2e2f2c1d409
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b527cb9175315af98a9ad4e9be06d459ad6e188e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corversion-structure"></a>COR_VERSION 结构
 存储由四个部分组成的公共语言运行时标准版本号。  
@@ -51,7 +52,7 @@ typedef struct _COR_VERSION {
 ## <a name="remarks"></a>备注  
  版本号是否 1.0.3705.288，1 是主版本号、 0 是次要版本号，、 3705 为内部版本号，和 288 为子内部版本号。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl  
@@ -60,6 +61,6 @@ typedef struct _COR_VERSION {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

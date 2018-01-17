@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3fd8b59cd69807928b1a441d1bfb57f82d072288
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operation-formatter-and-operation-selector"></a>操作格式化程序和操作选择器
 此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 扩展点允许不同于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所需格式的消息数据。 默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]格式化程序预期方法参数要包括在`soap:body`元素。 但是，此示例演示如何实现一个自定义操作格式化程序，用于分析 HTTP GET 查询字符串中的参数数据并使用该数据调用方法。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/02/2017
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> 设置为 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 实现。  
   
- 默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用精确匹配的地址筛选器。 传入消息中的 URI 包含一个操作名称后缀，后跟包含参数数据的查询字符串，因此终结点行为还将地址筛选器更改为前缀匹配筛选器。 它使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 实现此目的。  
+ 默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用精确匹配的地址筛选器。 传入消息中的 URI 包含一个操作名称后缀，后跟包含参数数据的查询字符串，因此终结点行为还将地址筛选器更改为前缀匹配筛选器。 它使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>为此目的。  
   
 ### <a name="installing-operation-formatters"></a>安装操作格式化程序  
  指定格式化程序的操作行为是唯一的。 默认情况下始终为每个操作实现这样一个行为，以创建必要的操作格式化程序。 但是，这些行为看起来就像另一个操作行为；它们不能通过其他任何属性进行标识。 若要安装替换行为，该实现必须查找默认情况下由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 类型加载程序安装的特定格式化程序行为，并替换该行为或者添加一个兼容的行为，以便在默认行为之后运行。  
@@ -188,4 +189,4 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 3.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

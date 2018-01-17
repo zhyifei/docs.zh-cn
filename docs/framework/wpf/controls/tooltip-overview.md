@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bd56323e90368f850ae54854e6f50b63d5f7fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-overview"></a>ToolTip 概述
 工具提示是当用户将鼠标指针暂停元素，如过度时显示一个小型弹出窗口<xref:System.Windows.Controls.Button>。 本主题介绍工具提示，并讨论如何创建和自定义工具提示内容。  
@@ -85,9 +86,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.ToolTipService>  
  <xref:System.Windows.Controls.ToolTip>  
  <xref:System.Windows.Controls.ToolTipEventArgs>  
  <xref:System.Windows.Controls.ToolTipEventHandler>  
- [操作说明主题](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

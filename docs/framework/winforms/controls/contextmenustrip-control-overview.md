@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c04e8095d84468ee7574b31f0a30fb6f2d2b03a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 11d5de760b8a03d7bc35adabb631048a70e20264
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenustrip-control-overview"></a>ContextMenuStrip 控件概述
 > [!NOTE]
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.ToolStripDropDown>|表示使用户能够从在用户单击时显示的列表中选择单个项的控件<xref:System.Windows.Forms.ToolStripDropDownButton>或更高级别的菜单项。|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|提供基本功能，为控件派生自<xref:System.Windows.Forms.ToolStripItem>显示单击时的下拉列表项。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>  

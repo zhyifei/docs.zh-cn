@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f7fdbb244663e5114880437a5a508270c80a9c79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64afd62c6eeca7bce14e331fdc65fccfa3d02bce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt;元素
 指定由性能计数器共享的全局内存的大小。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`Configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|为 ASP.NET 配置节指定根元素。|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  对于单独的共享内存大小，在注册表中的 DWORD FileMappingSize 值密钥 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<类别名称 >*引用 \Performance首先后, 跟为配置文件中的全局共享内存指定的值。 如果 FileMappingSize 值不存在，则单独的共享的内存大小设置为一个第四个 (1/4) 配置文件中的全局设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.PerformanceCounter>  
  <xref:System.Diagnostics.PerformanceCounterCategory>  
  <xref:System.Diagnostics.PerformanceCounter.InstanceLifetime%2A>  

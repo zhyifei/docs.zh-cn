@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>独立 JSON 序列化
 JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行的 JavaScript 代码而设计的一种数据格式。 它是在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中创建的 ASP.NET AJAX 服务所使用的默认数据格式。  
@@ -31,18 +32,18 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
 ## <a name="mapping-net-types-to-json-types"></a>将 .NET 类型映射到 JSON 类型  
  下表显示 .NET 类型和 JSON/JavaScript 类型在通过序列化和反序列化过程进行映射时的对应关系。  
   
-|.NET 类型|JSON/JavaScript|备注|  
+|.NET 类型|JSON/JavaScript|说明|  
 |----------------|----------------------|-----------|  
 |所有数值类型，例如 <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>|数字|不支持 `Double.NaN`、`Double.PositiveInfinity` 和 `Double.NegativeInfinity` 等特殊值，它们会导致无效的 JSON。|  
 |<xref:System.Enum>|数字|请参见本主题中后面的“枚举和 JSON”。|  
 |<xref:System.Boolean>|Boolean|--|  
-|<xref:System.String>, <xref:System.Char>|字符串|--|  
+|<xref:System.String>, <xref:System.Char>|String|--|  
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|这些类型在 JSON 与 XML 中的格式相同（基本上，TimeSpan 采用 ISO 8601 持续时间格式，GUID 采用“12345678-ABCD-ABCD-ABCD-1234567890AB”格式，URI 则采用其本来的字符串形式，例如“http://www.example.com”）。 精确的信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
-|<xref:System.Xml.XmlQualifiedName>|字符串|格式为“名称:命名空间”（第一个冒号之前的所有内容都是名称）。 可以缺少名称或命名空间。 如果没有命名空间，则也可以省略冒号。|  
+|<xref:System.Xml.XmlQualifiedName>|String|格式为“名称:命名空间”（第一个冒号之前的所有内容都是名称）。 可以缺少名称或命名空间。 如果没有命名空间，则也可以省略冒号。|  
 |<xref:System.Array> 类型的 <xref:System.Byte>|数字数组|每个数字都表示一个字节的值。|  
 |<xref:System.DateTime>|DateTime 或 String|请参见本主题中后面的“日期/时间和 JSON”。|  
 |<xref:System.DateTimeOffset>|复杂类型|请参见本主题中后面的“日期/时间和 JSON”。|  
-|XML 和 ADO.NET 类型（<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>。 <xref:System.Xml.XmlNode>、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|请参见本主题的“XML 类型和 JSON”一节。|  
+|XML 和 ADO.NET 类型（<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>。 <xref:System.Xml.XmlNode>、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>）格式模式中出现的位置生成。|String|请参见本主题的“XML 类型和 JSON”一节。|  
 |<xref:System.DBNull>|空复杂类型|--|  
 |集合、字典和数组|数组|请参见本主题的“集合、字典和数组”一节。|  
 |复杂类型（应用了 <xref:System.Runtime.Serialization.DataContractAttribute> 或 <xref:System.SerializableAttribute>）|复杂类型|数据成员变为 JavaScript 复杂类型的成员。|  
@@ -270,5 +271,5 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>有效的 JSON 键名  
  序列化程序 XML 编码的键名不是有效的 XML 名称。 例如，一个具有名为"123"数据成员都的编码的名称，如"_x0031\__x0032\__x0033\_"因为"123"是无效的 XML 元素名称 （以数字开头）。 在 XML 名称中，如果某些国际字符集无效，也会出现类似的情况。 有关 XML 的 JSON 处理这种效果的说明，请参阅[映射之间 JSON 和 XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [对 JSON 和其他数据传输格式的支持](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+## <a name="see-also"></a>请参阅  
+ [支持 JSON 和其他数据传输格式](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

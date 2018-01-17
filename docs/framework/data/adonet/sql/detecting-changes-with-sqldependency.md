@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3fe5aca218da7c862be90645e6fa73bc628b2328
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d3fd662ace71d77a185cd996c05960d026ef691
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="detecting-changes-with-sqldependency"></a>使用 SqlDependency 检测更改
 <xref:System.Data.SqlClient.SqlDependency> 对象可以与 <xref:System.Data.SqlClient.SqlCommand> 关联，以便检测查询结果何时与最初检索的结果不同。 也可以向 `OnChange` 事件分配一个委托，当关联命令的结果更改时，将会触发该委托。 在执行命令前，必须将 <xref:System.Data.SqlClient.SqlDependency> 与该命令关联。 也可以使用 `HasChanges` 的 <xref:System.Data.SqlClient.SqlDependency> 属性来确定自从首次检索数据以来查询结果是否已经更改。  
@@ -132,6 +133,6 @@ void Termination()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd78b4f47d7f48d7b4cbacdf53140758a05b7869
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c232ca2888c957bea33d06c84a62b00fdc7fd80c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-typed-datasets"></a>查询类型化数据集
 如果在应用程序设计时已知 <xref:System.Data.DataSet> 的架构，则建议在使用 <xref:System.Data.DataSet> 时使用类型化 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 类型化 <xref:System.Data.DataSet> 是从 <xref:System.Data.DataSet> 中派生的类。 因此，它继承 <xref:System.Data.DataSet> 的所有方法、事件和属性。 此外，类型化 <xref:System.Data.DataSet> 还提供强类型方法、事件和属性。 这意味着可以按名称而不使用基于集合的方法来访问表和列。 这可使查询更简单、更具可读性。 有关详细信息，请参阅[类型化数据集](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  
@@ -66,7 +67,7 @@ For Each Dim onlineOrder In query
 Next  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询数据集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [跨表查询](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
  [单表查询](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)

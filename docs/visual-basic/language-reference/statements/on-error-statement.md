@@ -29,16 +29,16 @@ ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 语句 (Visual Basic)
 启用错误处理例程，并指定过程; 中的例程的位置此外可以用于禁用错误处理例程。  
   
- 而无需`On Error`语句，则会发生任何运行时错误是致命： 显示错误消息，并且停止执行。  
+ 如果错误处理，不会发生任何运行时错误是致命： 显示错误消息，并且停止执行。  
   
  只要有可能，我们建议你使用结构化的异常处理在代码中，而不是使用非结构化的异常处理和`On Error`语句。 有关详细信息，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   
@@ -119,12 +119,12 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Number%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Description%2A>  

@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db1152e82edde34dc8dbaba09f20b9f769dffbca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用
 本主题讨论你需要考虑时写入诊断工具来分析托管代码中的 Windows 应用商店应用运行。  它还提供了一些指南，可以修改现有的开发工具，以使它们继续正常工作时针对 Windows 应用商店应用运行时。  若要了解此信息，最好是如果你熟悉公共语言运行时分析 API，已在运行 Windows 桌面应用程序，并且你针对正确现在感兴趣修改该工具的诊断工具中使用此 API若要针对 Windows 应用商店应用程序正确运行。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Intro"></a>   
 ## <a name="introduction"></a>介绍  
- 如果你进行了它过去的介绍性段落，然后你熟悉 CLR 分析 API。  您已经编写了一个诊断工具，也对托管的桌面应用程序有效。  现在你想要执行的操作，以便你工具与托管的 Windows 应用商店应用结合使用。  可能是你已尝试进行此项工作，并已发现它不是简单的任务。  事实上，有大量的可能不太明显到所有的工具开发人员的注意事项。  例如:   
+ 如果你进行了它过去的介绍性段落，然后你熟悉 CLR 分析 API。  您已经编写了一个诊断工具，也对托管的桌面应用程序有效。  现在你想要执行的操作，以便你工具与托管的 Windows 应用商店应用结合使用。  可能是你已尝试进行此项工作，并已发现它不是简单的任务。  事实上，有大量的可能不太明显到所有的工具开发人员的注意事项。  例如:  
   
 -   具有严重降低的权限的上下文中运行 Windows 应用商店应用。  
   
@@ -322,7 +323,7 @@ tempDir = appData.TemporaryFolder.Path;
  **通过事件进行通信**  
  如果你想探查器用户界面和探查器 DLL 之间的简单信号语义，可以使用 Windows 应用商店应用以及桌面应用中的事件。  
   
- 从探查器 DLL，只需调用[CreateEventEx](https://msdn.microsoft.com/library/windows/desktop/ms682400\(v=vs.85\).aspx)函数来创建的命名的事件与你喜欢的任何名称。  例如:   
+ 从探查器 DLL，只需调用[CreateEventEx](https://msdn.microsoft.com/library/windows/desktop/ms682400\(v=vs.85\).aspx)函数来创建的命名的事件与你喜欢的任何名称。  例如:  
   
 ```cpp  
 // Profiler DLL in Windows Store app (C++).  
@@ -433,5 +434,5 @@ GetAppContainerFolderPath(acSid, out acDir);
   
 -   [IPackageDebugSettings 接口](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)

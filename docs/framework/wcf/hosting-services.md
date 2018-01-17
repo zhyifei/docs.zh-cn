@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4cafff46d31ed9a5737dbb74acecab96b1f1a1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-services"></a>承载服务
 要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务设计为在支持托管代码的任意 Windows 进程中运行。  
@@ -62,19 +63,19 @@ ms.lasthandoff: 12/02/2017
   
 |宿主环境|平台可用性|支持的传输|进程和 AppDomain 回收|  
 |-------------------------|---------------------------|--------------------------|-------------------------------------|  
-|托管应用程序（“自承载”）|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|No|  
-|Windows 服务（以前称为 NT 服务）|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|No|  
+|托管应用程序（“自承载”）|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|  
+|Windows 服务（以前称为 NT 服务）|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|否|  
 |IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|是|  
 |[!INCLUDE[iis601](../../../includes/iis601-md.md)]|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|是|  
 |Windows 进程激活服务 (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP；<br /><br /> net.tcp；<br /><br /> net.pipe；<br /><br /> net.msmq|是|  
   
  值得注意的是，从不受信任的主机运行服务或任何扩展会危害安全。 另请注意，通过模拟打开 <xref:System.ServiceModel.ServiceHost> 时，应用程序必须确保未注销用户，例如通过缓存用户的 <xref:System.Security.Principal.WindowsIdentity> 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统要求](../../../docs/framework/wcf/wcf-system-requirements.md)  
  [基本编程生命周期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)  
  [如何：在 IIS 中承载 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  [如何：在 WAS 中承载 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [如何： 承载 WCF 服务中托管的 Windows 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [如何：在托管 Windows 服务中承载 WCF 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
  [如何：在托管应用程序中托管 WCF 服务](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

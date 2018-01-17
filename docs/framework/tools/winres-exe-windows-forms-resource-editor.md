@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efdb5055197611baf56fdc25fe7c0700c1a06dfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe（Windows 窗体资源编辑器）
 Windows 窗体资源编辑器 Winres.exe 是一种可视布局工具，可以帮助本地化专家对窗体使用的 Windows 窗体用户界面 (UI) 资源进行本地化。 利用可视设计环境（如 Microsoft Visual Studio），可以创建用作 Winres.exe 的输入的 .resx 或 .resources 文件。 有关在 .NET Framework 应用程序中部署资源的信息，请参阅[桌面应用中的资源](../../../docs/framework/resources/index.md)。  
@@ -116,7 +117,7 @@ winres /?
   
 2.  若要打开要本地化的窗体的默认资源，请单击“文件”菜单中的“打开”命令，然后导航到该文件打开它。  
   
-     - 或 -  
+     或  
   
      指定启动 Winres.exe 时在命令行提示符处要打开的文件。  
   
@@ -141,7 +142,7 @@ winres /?
   
 5.  选择相应的区域性和文件模式，然后单击“确定”。 该工具会使用运行时希望用于本地化资源文件的命名约定来保存文件。 例如，如果将 `TestApp.resources` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resources`。 如果将 `TestApp.resx` 本地化为德语（德国），则该工具将该文件保存为 `TestApp.de-DE.resx`。 有关资源命名约定的详细信息，请参阅[打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 有关运行时使用的预定义区域性名称的列表，请参阅 <xref:System.Globalization.CultureInfo> 类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.LocalizableAttribute>  
  <xref:System.Globalization.CultureInfo>  
  <xref:System.Resources.ResourceManager>  

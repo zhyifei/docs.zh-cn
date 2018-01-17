@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 876932c707a30d25e6ee6d9abf8e3510dcd13f65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 91f9520750ddd8f35728ae6c5afc2390b7aa8274
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calls-failed-per-second"></a>Calls Failed Per Second（每秒失败的调用次数）
 计数器名称：Calls Failed Per Second（每秒失败的调用次数）  
@@ -31,5 +32,5 @@ ms.lasthandoff: 12/02/2017
   
  该操作中每出现一个未处理的异常，此计数器就会增加。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8bc0d72ad9c11cb36803cc606b460181b44033f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 223f112ba405e29b800456adca2f83e0cef6e7b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 函数
 通知探查器当前正在执行的函数来执行对另一个函数的结尾调用。  
@@ -58,7 +59,7 @@ void __stdcall FunctionTailcall (
   
  此外，`FunctionTailcall`函数不能调用进入托管代码或以任何方式导致托管的内存分配。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
@@ -67,7 +68,7 @@ void __stdcall FunctionTailcall (
   
  **.NET framework 版本：** 1.1、 1.0  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [FunctionEnter2 函数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
  [FunctionLeave2 函数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
  [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)  

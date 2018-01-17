@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 741968e160683ab38f79effdfa0bdf56053cfb93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 443d23a3b0f73d2fd0a08112d51f745d1e1874fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltworkflowcontrolendpointgt"></a>&lt;workflowControlEndpoint&gt;
 此配置元素定义用于控制工作流实例的执行（创建、运行、挂起、终止等）的标准终结点。  
@@ -55,5 +56,5 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>

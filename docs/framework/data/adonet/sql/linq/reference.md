@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bd381706c9ceb7c1c8f80002cee3b857b695372
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81803df493d53b94a57720755f9bc351404b7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference"></a>参考
 本节提供针对 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 开发人员的参考信息。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
  [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  介绍为何公共语言运行时 (CLR) 构造只在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 已在转换引擎中显式提供转换时才具有 SQL 形式的对应表达式。  
   
- [基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  介绍用来将 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 对象模型映射到 SQL Server 数据库的基于 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 属性的方法。  
   
  [LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  

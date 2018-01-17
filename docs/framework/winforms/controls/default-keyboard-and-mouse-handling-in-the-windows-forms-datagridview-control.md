@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d0f1ec3f1fe0b078da92c93cbb928075d7d462c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的默认键盘和鼠标处理
 下表描述用户如何与交互<xref:System.Windows.Forms.DataGridView>控制通过键盘和鼠标。  
@@ -45,8 +46,8 @@ ms.lasthandoff: 11/21/2017
 |向上键|将焦点移到当前单元格上方直接的单元格。 如果第一行中有焦点，则没有任何影响。|  
 |Home|将焦点移到当前行中的第一个单元。|  
 |End|将焦点移到当前行中的最后一个单元。|  
-|Page Down|控件向下滚动完全显示的行数。 将焦点移到完全显示的最后一行中，而无需更改列。|  
-|Page Up|按照完全显示的行数向上滚动控件。 将焦点移到而无需更改列显示的第一行。|  
+|PAGE DOWN|控件向下滚动完全显示的行数。 将焦点移到完全显示的最后一行中，而无需更改列。|  
+|PAGE UP|按照完全显示的行数向上滚动控件。 将焦点移到而无需更改列显示的第一行。|  
 |Tab|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`false`，将焦点移到当前行中的下一个单元。 如果焦点的行的最后一个单元中已存在，请将焦点移到下一行中的第一个单元格。 如果焦点在控件中的最后一个单元中，将焦点移到下一个控件的父容器的 tab 键顺序。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`true`，将焦点移到下一个控件的父容器的 tab 键顺序。|  
 |Shift+Tab|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`false`，将焦点移到当前行中上一个单元格。 如果焦点的行的第一个单元中已存在，请将焦点移到前一行中的最后一个单元。 如果焦点在控件中的第一个单元中，将焦点移到上一个控件的父容器的 tab 键顺序。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`true`，将焦点移到上一个控件的父容器的 tab 键顺序。|  
 |Ctrl+Tab|如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`false`，将焦点移到下一个控件的父容器的 tab 键顺序。<br /><br /> 如果<xref:System.Windows.Forms.DataGridView.StandardTab%2A>属性值是`true`，将焦点移到当前行中的下一个单元。 如果焦点的行的最后一个单元中已存在，请将焦点移到下一行中的第一个单元格。 如果焦点在控件中的最后一个单元中，将焦点移到下一个控件的父容器的 tab 键顺序。|  
@@ -120,6 +121,6 @@ ms.lasthandoff: 11/21/2017
   
  如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>设置为`true`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>设置为<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>、 按住 SHIFT 或 CTRL 的同时单击单元格的行为相同的方式，除非该只能使用完整的行和列会受到影响。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

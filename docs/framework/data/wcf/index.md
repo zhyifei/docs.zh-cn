@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8a0ab816aa21082cf98462f5f9d7ffd20e4dcfd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9b6b9ddd27422c09f21833548634afd7945afa89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-45"></a>WCF 数据服务 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]（以前称为“ADO.NET Data Services”）是 .NET Framework 的一个组件。可以使用此组件创建一些服务，利用 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 借助 [representational state transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919)（表述性状态转移 (REST)）语义通过 Web 或 Intranet 公开和使用数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 将数据公开为可通过 URI 进行寻址的资源。 通过使用标准 HTTP 谓词 GET、PUT、POST 和 DELETE 访问和更改数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 使用[实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)的实体关系约定将资源公开为通过关联相关的实体集。  
@@ -131,5 +132,5 @@ ms.lasthandoff: 12/02/2017
  [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  说明如何使用客户端库从 .NET Framework 客户端应用程序使用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Representational State Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919)（表述性状态转移 (REST)）

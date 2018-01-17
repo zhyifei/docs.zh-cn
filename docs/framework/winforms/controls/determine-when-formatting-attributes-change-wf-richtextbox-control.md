@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0dc272e26124acf5c6bd5cf3030941c26c021c49
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1764b55232d1883516c2cc8684e3ee1b0cb5c05b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>如何：确定 Windows 窗体 RichTextBox 控件中的格式设置特性何时更改
 一种常用的 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件格式化文本属性例如字体选项或段落样式。 你的应用程序可能需要跟踪的文本格式用于显示一个工具栏，如下所示许多字处理应用程序中的任何更改。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.RichTextBox.SelectionChanged>  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  

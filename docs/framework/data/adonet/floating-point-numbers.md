@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c3e8ac8b5a97c62bb173fba57ac8aeb26a1dad42
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f041fc4e42d2b1e18ef701cd80396e92e571bff0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="floating-point-numbers"></a>浮点数
 此主题描述了开发人员在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中使用浮点数时经常遇到的一些问题。 这些问题是由计算机存储浮点数的方式所导致的，并不是特定提供程序（如 <xref:System.Data.SqlClient> 或 <xref:System.Data.OracleClient>）所特有的。  
@@ -28,6 +29,6 @@ ms.lasthandoff: 11/21/2017
   
  若要使用相等比较来解决这些问题，请考虑对您的应用程序进行编码，以便忽略最低有效位数的变化。 例如，用一个数减去另一个数，而不是通过比较，来了解两个数字是否相等。 如果差异在可接受舍入范围内，您的应用程序可以将这些数视为同一个数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [为何浮点数可能丢失精度](http://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

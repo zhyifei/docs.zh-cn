@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11edb1019b8fedde368d712ab27dd0954a2de50a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af3a9ec6ba301a27a7940bc752ffaf12f345abec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>如何：更改 Windows 窗体 ColorDialog 组件的外观
 你可以配置 Windows 窗体外观<xref:System.Windows.Forms.ColorDialog>组件与大量的其属性。 对话框中有两个部分-一个显示基本颜色和一个允许用户定义自定义颜色。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ColorDialog>  
  [ColorDialog 组件](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
  [ColorDialog 组件概述](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)

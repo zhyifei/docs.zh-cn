@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 88e248c7c8e60fbe8e55567cb642200820b25214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f4bcde15940e76e1d022658e32ff6ef8676e45e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-convert-bound-data"></a>如何：转换绑定的数据
 此示例演示如何将转换应用于在绑定中使用的数据。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  在上面的示例所引用的样式资源定义中未显示在此主题的资源节中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实现绑定验证](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

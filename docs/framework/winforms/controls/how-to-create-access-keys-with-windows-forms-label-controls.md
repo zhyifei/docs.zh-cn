@@ -28,11 +28,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad6cd99a6399adea2e69cbf844b9f134d2e592e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a856090a76f484c21c1d9982d67e9fdf21e8451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>如何：使用 Windows 窗体 Label 控件创建访问键
 Windows 窗体<xref:System.Windows.Forms.Label>控件可以用于定义其他控件的访问密钥。 当标签控件中定义的访问密钥时，用户可以按 ALT 键加你指定要将焦点移到控件的 tab 键顺序将它后面的字符。 因为标签不能接收焦点，焦点将自动移动到下一个控件的 tab 键顺序。 使用此方法将访问密钥分配到文本框、 组合框、 列表框和数据网格。  
@@ -41,7 +42,7 @@ Windows 窗体<xref:System.Windows.Forms.Label>控件可以用于定义其他控
   
 1.  首先，绘制标签，然后绘制另一个控件。  
   
-     - 或 -  
+     或  
   
      按任意顺序绘制控件，并设置<xref:System.Windows.Forms.Control.TabIndex%2A>属性为一个小于另一个控件的标签。  
   
@@ -73,7 +74,7 @@ Windows 窗体<xref:System.Windows.Forms.Label>控件可以用于定义其他控
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：重设 Windows 窗体 Label 控件大小以适应其内容](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
  [Label 控件概述](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
  [Label 控件](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

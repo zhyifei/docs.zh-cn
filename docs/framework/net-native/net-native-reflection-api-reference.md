@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6c12c583d6c2040a093fb769803b79a6d88459ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae0037377e9cf092888febb4d74f353ddd8234cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native 本机反射 API 参考
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 包含三种新的异常类型： [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)和 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)。 请注意有关所有三种异常类型的以下内容：  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="systemreflection-namespace"></a>System.Reflection 命名空间  
  <xref:System.Reflection> 命名空间包含用于 .NET Framework 中的反射的核心类型。 对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括两个新的异常类型：  
   
-|类|说明|  
+|类|描述|  
 |-----------|-----------------|  
 |[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)|当反射用于检索不存在的元数据时会引起此异常。|  
 |[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)|当一个类型或类型成员的元数据可用但其实现已遭到删除时会引发此异常。|  
@@ -48,14 +49,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices 命名空间  
  <xref:System.Runtime.CompilerServices> 命名空间包括通过语言编译器为用户设计的类型。 对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括一个新的异常类型：  
   
-|类|说明|  
+|类|描述|  
 |-----------|-----------------|  
 |[MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)|当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。|  
   
  要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Runtime.CompilerServices> 引用页面。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MissingInteropDataException 类](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
- [丢失元数据异常类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
+ [MissingMetadataException 类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
  [MissingRuntimeArtifactException 类](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
  [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)

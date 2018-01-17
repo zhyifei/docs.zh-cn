@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何创建辅助线程，并用它与主线程并行执行处理。 有关多线程处理的背景信息，请参阅 [线程](../../../standard/threading/index.md)和[线程](../../programming-guide/concepts/threading/index.md)。  
+ 下面的示例演示如何创建辅助线程，并用它与主线程并行执行处理。 有关多线程处理的背景信息，请参阅 [线程](../../../standard/threading/index.md)和[线程](../../programming-guide/concepts/threading/index.md)。  
   
  [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   

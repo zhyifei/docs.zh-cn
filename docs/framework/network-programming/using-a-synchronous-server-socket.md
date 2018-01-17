@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ce50fa5cf8664f93753312ee5f1db2b3058c3fd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03f6dc6ea517aba410430fea69113b64dccc6ff6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-synchronous-server-socket"></a>使用同步服务器套接字
 同步服务器套接字会挂起应用程序的执行，直到在套接字上收到连接请求。 同步服务器套接字不适用于在其操作中大量使用网络的应用程序，但它们可能适用于简单的网络应用程序。  
@@ -84,7 +85,7 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用异步服务器套接字](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
  [同步服务器套接字示例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
  [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac74e50eb6558c38d46714dd7bfe0cfd61133ac8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7bbae29cea265fbc4cd92213066198b3f721c01d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>如何：在 Windows 窗体的 ToolStrip 控件中启用自动完成
 以下过程将合并<xref:System.Windows.Forms.ToolStripLabel>与<xref:System.Windows.Forms.ToolStripComboBox>，拉方式显示如在最近的项，列表访问的网站。 如果用户键入的字符相匹配的其中一个列表中项的第一个字符，将立即显示项。  
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
     toolStripComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripLabel>  
  <xref:System.Windows.Forms.ToolStripComboBox>  

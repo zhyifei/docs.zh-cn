@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3aeb64513401164c9c5acb24ede48c2e9aa2b4b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae9851794d77972066fb897aa76528fec86fd6f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltusemanagedpresentationgt"></a>&lt;useManagedPresentation&gt;
 一个绑定元素，用于与支持 WS-Trust 的 CardSpace 配置文件的 CardSpace 安全令牌服务进行通信。 此元素没有属性并且以空开关形式存在。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  标识提供程序使用此元素，用以在它的策略中表明它支持 WS-Trust 的 CardSpace 配置文件这一事实。 发布这种策略断言的标识提供程序应该能够基于该 CardSpace 配置文件颁发令牌。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.UseManagedPresentationElement>  
  <xref:System.ServiceModel.Channels.UseManagedPresentationBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  

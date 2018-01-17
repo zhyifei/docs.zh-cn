@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edec8a00aff59195c6c80414eb4b950d68e488da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的单元格样式
 中的每个单元格<xref:System.Windows.Forms.DataGridView>控件可以具有其自己的样式，例如文本格式、 背景色、 前景颜色和字体。 但是，通常情况下，多个单元格将具有特定样式特征。  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  缓存存储在该单元格的值<xref:System.Windows.Forms.DataGridViewCell.Style%2A>属性是而不考虑是否设置了特定样式值非常重要。 如果您暂时替换样式设置，将其还原到"未设置"的原始状态可确保，则该单元格将返回到从较高级别继承的样式设置。 如果你需要确定无论是否继承样式的单元格有效的实际样式，使用该单元格的<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>  

@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce74cfb9c4e0eb759fb8160ab06fa6fbde60081b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4a7f6dd2f97f7d57cdaa59d1420a34409804f9dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-contracts"></a>代码协定
 代码协定提供了在代码中指定前置条件、后置条件和对象固定的方法。 前置条件是输入方法或属性时必须满足的要求。 后置条件描述在方法或属性代码退出时的预期。 对象固定描述处于良好状态的类的预期状态。  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e18115e460bf546c2fd6263e4671457a3da68f65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-overview"></a>ADO.NET 概述
 ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB 和 ODBC 公开的数据源的一致访问。 共享数据的使用方应用程序可以使用 ADO.NET 连接到这些数据源，并可以检索、处理和更新其中包含的数据。  
@@ -42,13 +43,13 @@ ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB
  [LINQ 和 ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  描述如何在 ADO.NET 中实现语言集成查询 (LINQ) 并提供指向相关主题的链接。  
   
- [.NET framework 数据提供程序](../../../../docs/framework/data/adonet/data-providers.md)  
+ [.NET Framework 数据提供程序](../../../../docs/framework/data/adonet/data-providers.md)  
  提供有关 .NET Framework 数据提供程序的设计的概述以及有关随 ADO.NET 提供的 .NET Framework 数据提供程序的概述。  
   
  [ADO.NET 数据集](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  提供有关 `DataSet` 设计和组件的概述。  
   
- [在 ADO.NET 中的并行执行](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ [ADO.NET 中的并行执行](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
  讨论 ADO.NET 各个版本之间的区别及其对并行执行和应用程序兼容性的影响。  
   
  [ADO.NET 代码示例](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
@@ -67,7 +68,7 @@ ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  说明如何连接到数据源、检索数据和修改数据。 这包括 `DataReaders` 和 `DataAdapters`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b516a3b979570c5b3cb3f6fd1edaa038167f1a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="framework-property-metadata"></a>框架属性元数据
 对于 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 体系结构中被视为 WPF 框架级的对象元素的属性，将报告框架属性元数据选项。 通常，WPF 框架级指示要求 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 演示 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可执行文件处理呈现、数据绑定和属性系统优化等功能。 这些系统对框架属性元数据进行查询，以便为特定的元素属性确定特定于功能的特征。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
  通过实现此行为<xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>，和可以对派生的元数据类中重写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.DependencyProperty.GetMetadata%2A>  
  [依赖属性元数据](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  

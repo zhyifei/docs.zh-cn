@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 52c9cfeab362a1603c1d18a9caa1601cd76711b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b3cc18f481a0e66d52f021b7bf6b76938fc5018
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>演练：仅使用存储过程 (C#)
 本演练提供了通过仅执行存储过程来访问数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 基本端对端方案。 数据库管理员经常使用此方法来限制数据存储的访问方式。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  本演练是使用 Visual C# 开发设置编写的。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本演练需要如下内容：  
   
 -   本演练使用专用文件夹（“c:\linqtest7”）来保存文件。 请在开始本演练前创建此文件夹。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  在**位置**框中，确认你要存储项目文件。  
   
-6.  单击“确定”。  
+6.  单击 **“确定”**。  
   
      Windows 窗体设计器即会打开。  
   
@@ -197,6 +198,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-steps"></a>后续步骤  
  您可以通过做一些更改来增强此项目的功能。 例如，您可以在列表框中列出可用的存储过程，供用户选择要执行哪些过程。 您还可以将报告的输出以流的方式传输到文本文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
- [存储的过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+ [存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

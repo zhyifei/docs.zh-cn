@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c20753aab569bf90b7db2f062050c7e185d638fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-and-windows-forms"></a>数据绑定和 Windows 窗体
 在 Windows 窗体中，你不仅可以绑定到传统的数据源，还可以绑定到几乎任何包含数据的结构。 可以绑定到你在运行时、从文件读取时或从其他控件的值派生时计算的一数组值。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 |大纲/细节关系|大纲/细节应用程序是查看相关数据的一种格式。 具体来说，有两个彼此间有关系的数据表 — 在经典商业示例中，“顾客”表和“订单”表之间存在联系客户和对应订单的关系。 有关使用两个 Windows 窗体中创建主/从应用程序的详细信息<xref:System.Windows.Forms.DataGridView>控件，请参阅[如何： 创建主/从窗体使用两个 Windows 窗体 DataGridView 控件](../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)|  
 |查找表|另一个常见的数据表示/操作方案是表查找。 通常情况下，作为较大数据显示的一部分，<xref:System.Windows.Forms.ComboBox> 控件用于显示和操作数据。 关键在于 <xref:System.Windows.Forms.ComboBox> 控件中显示的数据与写入数据库中的数据不同。 例如，如果你有一个显示杂货店中的物料的 <xref:System.Windows.Forms.ComboBox> 控件，你可能想要查看产品名称（面包、牛奶、鸡蛋）。 但是，为了便于在数据库中检索信息或使数据库标准化，你可能会将给定订单特定项的信息存储为物料编号（#501、#603 等等）。 因此，你窗体上的 <xref:System.Windows.Forms.ComboBox> 控件中的杂货物料“友好名称”和存在于订单中的物料编号间有着隐式联系。 这就是表查找的实质。 有关详细信息，请参阅[如何： 使用 Windows 窗体 BindingSource 组件创建查找表](../../../docs/framework/winforms/controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Binding>  
  [Windows 窗体数据绑定](../../../docs/framework/winforms/windows-forms-data-binding.md)  
  [如何：将 Windows 窗体 DataGrid 控件绑定到数据源](../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  

@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e027a5b60e066a8d38db530c37a394227f2e892
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c735d363af49688530e318680cbb4132fc747be7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控件和组件创作疑难解答
 本主题列出了开发组件和控件时遇到的常见问题。 有关详细信息，请参阅[使用组件编程](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)。  
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>组件图标未出现在工具箱中  
  当你使用<xref:System.Drawing.ToolboxBitmapAttribute>将图标与你自定义组件相关联，位图将不会出现在工具箱中自动生成组件。 若要查看位图，请使用“选择工具箱项”对话框重载控件。 有关详细信息，请参阅[如何：为控件提供工具箱位图](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  [演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
  [如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  

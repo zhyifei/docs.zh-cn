@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3be1c85a87896c176d5e81d2938418194d28b93b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c1954f02aef13599f7bd24f8e2d136f0f876256
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>将工作流和活动序列化为 XAML 和从 XAML 序列化工作流和活动
 除了可将工作流定义编译为程序集中包含的类型之外，还可将工作流定义序列化为 XAML。 这些已序列化的定义可以重新加载以供编辑或检测，可以传递给生成系统以供编译，也可以加载并调用。 本主题概述如何序列化工作流定义以及如何使用 XAML 工作流定义。  

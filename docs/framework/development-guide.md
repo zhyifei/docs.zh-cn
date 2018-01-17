@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7aaac046a6f5022e4b903faacd609748092d2809
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  

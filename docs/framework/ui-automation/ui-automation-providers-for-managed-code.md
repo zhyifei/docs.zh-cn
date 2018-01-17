@@ -18,11 +18,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 26d4bed96ca9d61ab30886322e6ca8fa25babb61
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 442817b5ab96bd992fff2e8bc85c45ac03dac81a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>托管代码的 UI 自动化提供程序
 > [!NOTE]
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="in-this-section"></a>本节内容  
  [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
  [UI 自动化提供程序概述](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [客户端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
- [操作说明主题](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)
+ [客户端 UI 自动化提供程序的实现](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
+ [帮助主题](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)

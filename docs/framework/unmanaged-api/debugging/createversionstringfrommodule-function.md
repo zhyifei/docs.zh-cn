@@ -22,11 +22,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6b8fb3cdb0bb2d7536c1c1514d4202271411d112
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9d7d545256393cfbe37216f0d6db064d5e7cb410
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 函数
 从目标进程中的公共语言运行时 (CLR) 路径创建版本字符串。  
@@ -81,7 +82,7 @@ HRESULT CreateVersionStringFromModule (
   
  应两次调用此函数。 第一次调用此函数时，为 `pBuffer` 和 `cchBuffer` 传递 null。 执行此操作时，`pBuffer` 所需的缓冲区大小将在 `pdwLength` 中返回。 然后可以第二次调用该函数，并将缓冲区传入 `pBuffer` 以及将缓冲区大小传入 `cchBuffer`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** dbgshim.h  

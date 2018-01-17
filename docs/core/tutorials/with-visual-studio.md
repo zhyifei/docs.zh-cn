@@ -10,17 +10,18 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
-ms.openlocfilehash: f6f94b06e88e5fb58a9a7af787270609077a9610
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 06fea0118d70079a34a6954eae49ace344262ea5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序
 
 本主题分步介绍了如何使用 Visual Studio 2017 生成、调试和发布简单的 C# .NET Core 控制台应用程序。 Visual Studio 2017 提供了功能全面的开发环境，可用于生成 .NET Core 应用程序。 只要应用程序没有平台专属依赖项，应用程序就可以在 .NET Core 的任何目标平台上和安装了 .NET Core 的任何系统上运行。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://www.visualstudio.com/downloads/)。 可以使用 .NET Core 1.1 或 .NET Core 2.0 开发应用程序。
 

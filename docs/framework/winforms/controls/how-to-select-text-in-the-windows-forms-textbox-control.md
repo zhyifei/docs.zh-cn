@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08ad19f3daca43fb33e845b632ac7d92b00f544c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 535ee9e7359782f24d48d895f094afbe47e1023b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>如何：在 Windows 窗体 TextBox 控件中选择文本
 你可在 Windows 窗体中以编程方式选择文本<xref:System.Windows.Forms.TextBox>控件。 例如，如果你创建搜索特定字符串文本的函数，你可以选择要以可视方式警报找到的字符串的位置的读取者的文本。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TextBox>  
  [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
  [如何：在 Windows 窗体 TextBox 控件中控制插入点](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  

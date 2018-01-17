@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ea2e878ca4894612dda77075d04c924c3db8e293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：获取 .NET Framework 4.5 安装程序的进度
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 是可再发行运行时。 如果开发基于此 .NET framework 版本的应用程序，则可以将（链）[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序作为必备组件包括在应用的安装程序中。 若要提供自定义或统一的安装体验，可能需要以无提示方式启动 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序并跟踪其进度，同时显示应用的安装进度。 若要启用无提示跟踪，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装程序（可观察）通过使用内存映射 I/O (MMIO) 段来定义协议，以便与安装程序（观察程序或链接器）进行通信。 此协议定义链接器获取进度信息、详细结果，响应消息和取消 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装的方式。  
@@ -316,6 +317,6 @@ ms.lasthandoff: 11/21/2017
   
  典型的服务器会创建随机 MMIO 文件名、创建文件（如上一个代码示例 `Server::CreateSection` 中所示），并通过使用 `CreateProcess` 和借助 `-pipe someFileSectionName` 选项传递管道名称来启动可再发行组件。 服务器应使用特定于应用程序 UI 的代码来实现 `OnProgress`、`Send` 和 `Finished` 方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [部署](../../../docs/framework/deployment/index.md)

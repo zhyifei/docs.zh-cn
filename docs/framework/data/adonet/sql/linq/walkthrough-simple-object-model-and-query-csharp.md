@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d082b7d53330bf755f9f4322ae24d8ad3dc0ac7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1c118948f0eac8a9df81432b75297511172b10f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>演练：简单对象模型和查询 (C#)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
   
  本演练是使用 Visual C# 开发设置编写的。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
   
 -   本演练使用专用文件夹（“c:\linqtest5”）来保存文件。 请在开始本演练前创建此文件夹。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/18/2017
   
 5.  在**位置**框中，确认你要存储项目文件。  
   
-6.  单击“确定”。  
+6.  单击 **“确定”**。  
   
 ## <a name="adding-linq-references-and-directives"></a>添加 LINQ 引用和指令  
  本演练用到默认情况下您的项目中可能未安装的程序集。 如果未将 System.Data.Linq 列出为你的项目中的引用 (展开**引用**中的节点**解决方案资源管理器**)，请按照以下步骤中的说明添加它。  
@@ -164,5 +165,5 @@ ms.lasthandoff: 10/18/2017
   
  如果您希望进行“跨关系查询”演练，请务必保存您刚完成演练的解决方案，这是“跨关系查询”演练的前提条件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

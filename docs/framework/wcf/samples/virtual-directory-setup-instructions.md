@@ -13,11 +13,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72487c4a6720f80119beb837fbb3b5ea25ac3b93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2684091d15a4c0796a0b8fb85952c0f902c1f545
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-directory-setup-instructions"></a>虚拟目录设置说明
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例用于共享名为 servicemodelsamples 的公共虚拟目录，该目录映射到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 文件夹。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/02/2017
   
 6.  将物理路径设置为 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。  大多数 WCF 示例在生成后都将服务可执行文件复制到此位置。  
   
-7.  单击“确定”。 现在已为 WCF 示例创建 Web 应用程序。  
+7.  单击 **“确定”**。 现在已为 WCF 示例创建 Web 应用程序。  
   
     > [!NOTE]
     >  必须仅执行此任务一次，因为所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 示例都使用相同的 servicemodelsamples Web 应用程序。  
@@ -200,5 +201,5 @@ ms.lasthandoff: 12/02/2017
   
     3.  在**组**列中，检查的值**ASPNET**是"用户。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

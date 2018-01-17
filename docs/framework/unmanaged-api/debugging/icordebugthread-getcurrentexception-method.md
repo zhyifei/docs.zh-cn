@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fb48e99aa719e564bd23842efcaeda071441023b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c18e2dfa68d425e5ec23d4573428018bc971f8b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException 方法
 获取一个表示托管代码所引发的异常的 ICorDebugValue 对象的接口指针。  
@@ -49,7 +50,7 @@ HRESULT GetCurrentException (
   
  在异常的生命周期更改可能的异常对象和类型。 例如，将引发异常的类型为 x 后，公共语言运行时 (CLR) 可能内存不足的情况并将其升级到内存不足异常。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

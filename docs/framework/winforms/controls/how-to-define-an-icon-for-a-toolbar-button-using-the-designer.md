@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1d8bdad3aa17c964871c0d35f6e33b8098f2c649
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 90e72b2516efab3bc5b5d8cc7cacb66f149f3a66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>如何：使用设计器定义工具栏按钮的图标
 > [!NOTE]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  下面的过程需要**Windows 应用程序**具有一个窗体包含项目<xref:System.Windows.Forms.ToolBar>控件和<xref:System.Windows.Forms.ImageList>组件。 有关设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>若要在设计时设置工具栏按钮的图标  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  在**属性**的右侧的窗格中显示的窗口**工具栏按钮集合编辑器**，将其设置<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>的某个值在列表中，每个工具栏按钮的属性的从添加到映像绘制<xref:System.Windows.Forms.ImageList>组件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolBar>  
  [如何：触发工具栏按钮的菜单事件](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
  [ToolBar 控件](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  

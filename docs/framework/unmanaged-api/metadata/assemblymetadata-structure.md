@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5652907abc17868414c554cb5c87b0856d2c5a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 819510c14bd67e7fcc739a19ea945f16b2a66c9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 结构
 包含有关所引用的程序集，包括其版本和其级别的支持的区域设置、 处理器和操作系统信息。  
@@ -60,7 +61,7 @@ typedef struct {
 |`rOS`|数组[OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)指定引用的程序集支持的操作系统的实例。 一个 NULL 值指示操作系统独立性。|  
 |`ulOS`|长度`rOS`数组。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -69,7 +70,7 @@ typedef struct {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [元数据结构](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
  [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
  [OSINFO 结构](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

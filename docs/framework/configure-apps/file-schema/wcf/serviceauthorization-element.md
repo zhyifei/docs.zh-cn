@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc04552b9b2ecd85a520ed16ae9a6ee0dfc98a46
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9572cea14b7c15893459133aa75e9fa62b10d4f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltserviceauthorizationgt-element"></a>&lt;serviceAuthorization&gt; 元素
 指定用于授予服务操作访问权限的设置。  
@@ -52,13 +53,13 @@ ms.lasthandoff: 12/02/2017
 |impersonateCallerForAllOperations|一个布尔值，指定是否服务中的所有操作都模拟调用方。 默认值为 `false`。<br /><br /> 当特定服务操作模拟调用方时，线程上下文会在执行指定服务前切换为调用方上下文。|  
 |principalPermissionMode|设置用于在服务器上执行操作的主体。 包括以下值：<br /><br /> -无<br />-UseWindowsGroups<br />-UseAspNetRoles<br />自定义<br /><br /> 默认值为 UseWindowsGroups。 此值的类型为 <xref:System.ServiceModel.Description.PrincipalPermissionMode>。 使用此属性的详细信息，请参阅[如何： 使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。|  
 |roleProviderName|一个字符串，指定为 Windows Communication Foundation (WCF) 应用程序提供角色信息的角色提供程序的名称。 默认值为一个空字符串。|  
-|ServiceAuthorizationManagerType|一个包含服务授权管理器的类型的字符串。 有关更多信息，请参见<xref:System.ServiceModel.ServiceAuthorizationManager>。|  
+|ServiceAuthorizationManagerType|一个包含服务授权管理器的类型的字符串。 有关详细信息，请参阅<xref:System.ServiceModel.ServiceAuthorizationManager>。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|authorizationPolicies|包含可使用 `add` 关键字添加的授权策略类型的集合。 每个授权类型都包含一个所需的 `policyType` 属性，此属性是一个字符串。 该属性指定一个授权策略，可以将一组输入声明转换为另一组声明。 可以根据该授权策略来授予或拒绝访问控制。 有关更多信息，请参见<xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>。|  
+|authorizationPolicies|包含可使用 `add` 关键字添加的授权策略类型的集合。 每个授权类型都包含一个所需的 `policyType` 属性，此属性是一个字符串。 该属性指定一个授权策略，可以将一组输入声明转换为另一组声明。 可以根据该授权策略来授予或拒绝访问控制。 有关详细信息，请参阅<xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -107,11 +108,11 @@ ms.lasthandoff: 12/02/2017
   
  使用此配置元素的详细示例，请参阅[授权服务操作访问权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)和[授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
  [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [授予对服务操作访问权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [如何： 创建自定义授权管理器服务](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [授予对服务操作的权限](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
+ [如何：为服务创建自定义授权管理器](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [如何：使用 PrincipalPermissionAttribute 类限制访问](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  [授权策略](../../../../../docs/framework/wcf/samples/authorization-policy.md)

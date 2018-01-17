@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d4ff6670c8e4d8ab735323fe13549e34c6cfd55f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05c993763bdc436b5912515e0aa83e3a29f7bb83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>如何：在 Windows 窗体内异步加载声音
 以下代码示例从 URL 异步上载了一个声音，然后在新线程中播放。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  不要根据文件的名称来判断文件的内容。 例如，文件 `Form1.vb` 可能不是 Visual Basic 源文件。 在应用程序中使用输入的数据之前，需验证所有的输入内容。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
  <xref:System.Media.SoundPlayer.LoadCompleted>  
  <xref:System.Media.SoundPlayer.Play%2A>  

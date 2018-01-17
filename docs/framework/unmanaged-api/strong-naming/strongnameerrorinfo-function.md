@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0fbe77f16ed022458a036b6627b82f80d194276c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81e6eaa83baab67f54a1b1ce46d616be7e6fdd62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 函数
 获取引发的强名称函数之一的最后一个错误代码。  
@@ -47,7 +48,7 @@ HRESULT StrongNameErrorInfo ();
 ## <a name="remarks"></a>备注  
  大多数的强名称方法返回一个简单`true`或`false`成功完成的指示。 使用`StrongNameErrorInfo`函数可检索指定生成的强名称函数的最后一个错误的 HRESULT。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** StrongName.h  
@@ -56,5 +57,5 @@ HRESULT StrongNameErrorInfo ();
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [强命名的全局静态函数](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

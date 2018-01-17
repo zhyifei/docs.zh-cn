@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd30b2d62d3ecf21027c0225490da6f31113cb07
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef174f457114003e5b2783b50040424d9a96945c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>与 ASP.NET Web 服务的互操作性
 确保使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务技术和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务技术实现的服务符合 WS-I Basic Profile 1.1 规范，便可以实现这两种 Web 服务之间的互操作性。 通过使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 系统提供的绑定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，符合 WS-I Basic Profile 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 服务可与 <xref:System.ServiceModel.BasicHttpBinding> 客户端进行互操作。  
@@ -65,5 +66,5 @@ public class Service : IEcho
 <httpModules/>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 配置 WCF 服务与 ASP.NET Web 服务客户端进行互操作](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+## <a name="see-also"></a>请参阅  
+ [如何：配置 WCF 服务以便与 ASP.NET Web 服务客户端进行互操作](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

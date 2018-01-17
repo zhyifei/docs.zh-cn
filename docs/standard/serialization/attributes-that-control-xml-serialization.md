@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de1b43b62a8c16fd4b000093977805680ba0b38d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e93912fc221d5c76dd5a462e6141fae2d0f4ca16
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attributes-that-control-xml-serialization"></a>用来控制 XML 序列化的属性
 通过将下表中的特性应用于类和类成员，可以控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或反序列化该类的实例的方式。 若要了解这些属性如何控制 XML 序列化，请参阅[使用属性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)。  
@@ -52,7 +55,7 @@ ms.lasthandoff: 12/02/2017
   
  若要控制编码的 SOAP XML 序列化，请参阅[控制编码的 SOAP 序列化的特性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  <xref:System.Xml.Serialization.XmlSerializer>  
  [使用属性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  

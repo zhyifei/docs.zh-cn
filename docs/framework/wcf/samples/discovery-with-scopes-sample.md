@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 184c4a5c31969ee060f72d937ab02af733340ca4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aa762df1dbfe92102f8cd719613099b23986ed0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-with-scopes-sample"></a>通过范围进行发现的示例
 此示例演示如何使用范围对可发现的终结点进行分类，以及如何使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 来执行终结点的异步搜索。 对于服务，此示例演示如何通过以下方法为每个终结点自定义发现：添加一个终结点发现行为并使用它将一个范围添加到该终结点，以及控制该终结点的可发现性。 对于客户端，此示例演示客户端如何创建 <xref:System.ServiceModel.Discovery.DiscoveryClient>，以及如何通过将范围添加到 <xref:System.ServiceModel.Discovery.FindCriteria> 对搜索参数进行精细调整以包含范围。 此示例还演示客户端如何通过添加终止条件来限制响应。  
@@ -47,4 +48,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

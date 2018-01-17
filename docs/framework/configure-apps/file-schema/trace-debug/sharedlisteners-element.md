@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7ab96ad43248517dca99bff176be7edfab8d3ced
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aef29e6107a2f441d8c1a6826b16f0f0c0b56973
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt;元素
 包含任何源或跟踪元素可以引用的侦听器。  上述侦听器默认情况下，不接收任何跟踪并不能在运行时检索这些侦听器。 标识为共享的侦听器可以按名称添加到源或跟踪侦听器。  
@@ -51,13 +52,13 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|将侦听器添加到 `sharedListeners` 集合中。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`Configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|为 ASP.NET 配置节指定根元素。|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
 </configuration></system.diagnostics>   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.TraceListener>  
  [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
  [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

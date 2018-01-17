@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 61e403025ad15b05f3658be7a924b28b18867688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: acc6bee115548ca1f3ba676c4d09b83d4f40e52e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>使用 UI 自动化公开表的内容
 > [!NOTE]
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 [!code-csharp[UIATableItemPattern_snip#103](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#103)]
 [!code-vb[UIATableItemPattern_snip#103](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#103)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [实现 UI 自动化 Table 控件模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  

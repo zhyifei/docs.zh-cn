@@ -22,11 +22,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711f823e418a1bbea1479b9d6a8d70d4fa506365
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54f521050025f2f9e55085ee2656a5874b62226d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>演练：演示可视化继承
 通过 Visual 继承，可以查看基本表单上的控件和添加新控件。 在本演练中，你将创建基窗体，并将其编译到类库。 将此类库导入另一个项目，并创建一个从基窗体继承的新窗体。 在本演练中，你将学会如何执行以下任务：  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  最后，本演练将显示继承的窗体上私有控件和受保护控件之间的差异。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 > [!CAUTION]
 >  并非所有控件都支持从基窗体执行 Visual 继承。 以下控件不支持本演练中描述的情景：  
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-steps"></a>后续步骤  
  用户控件的继承方式大致相同。 打开新的类库项目并添加用户控件。 在其上放置构成控件，然后编译项目。 打开另一个新的类库项目，并添加对已编译的类库的引用。 另外，尝试将继承的控件 (通过**添加新项**对话框) 到项目和使用**继承选择器**。 添加用户控件，并更改 `Inherits`（[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中的 `:`）语句。 有关详细信息，请参阅[如何： 继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
  [Windows 窗体可视化继承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
  [Windows 窗体](../../../../docs/framework/winforms/index.md)

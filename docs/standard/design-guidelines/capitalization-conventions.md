@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="capitalization-conventions"></a>大小写约定
 简单的方法来使用此章布局中的准则种情况下，当一致地应用生成标识符的类型、 成员和参数易于阅读。  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 |接口|Pascal|`public interface IEnumerable { ... }`|  
 |方法|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
 |属性|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|事件|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |字段|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |枚举值|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |参数|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
@@ -112,6 +115,6 @@ ms.lasthandoff: 11/21/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
  [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

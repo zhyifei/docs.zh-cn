@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eeda0c58e9b5e9f8b48e335849ce12f7e8d94a1b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 07882617e7625c07bade85c59116581e16f95121
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 入门
 无论是在编写适用于 Windows 10 的新 Windows 应用，还是在迁移现有的 Windows 应用商店应用，都可以按照同一套过程操作。 若要创建一个 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 应用，请按照下列步骤操作：  
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [.NET Native 应用中的运行时异常](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [NIB:.NET Native 安装和配置](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)  
  [.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md)  

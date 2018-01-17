@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: fe2e1757a3e2da5c2aa6084c0eb21164de3ece0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7fcaee557884d0c24b7bb15f2424a9e0a413439
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt;元素 （网络设置）
 指定用来验证网络请求的模块。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|向应用程序添加身份验证模块。|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|清除从应用程序的所有身份验证模块。|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.IAuthenticationModule>  
  <xref:System.Net.AuthenticationManager>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

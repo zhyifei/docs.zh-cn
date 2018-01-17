@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6cb3b38a2587105a786a16aee7ecf424a5a23294
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 455929144f771128ca070cd02e65c919ce4c741f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>如何：使用代码发布服务的元数据
 这是讨论发布 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的元数据的两个帮助主题之一。 有两种方式可以指定服务应如何发布元数据：使用配置文件和使用代码。 本主题演示如何使用代码发布服务的元数据。  
@@ -96,9 +97,9 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：在托管应用程序中托管 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
  [自承载](../../../../docs/framework/wcf/samples/self-host.md)  
  [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
  [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [如何： 使用配置文件为服务中发布元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+ [如何：使用配置文件发布服务的元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e13355078727a55c950bed795d3b01b6c7d52564
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62d43121efbc039b8fad0b78bed7ec4a655efabb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget 接口
 提供控制引用计数、 枚举进程，并释放与调试器附加到远程的 Macintosh Silverlight 目标相关联的内存的方法。  
@@ -56,14 +57,14 @@ class ICoreClrDebugTarget {
   
 |方法|描述|  
 |------------|-----------------|  
-|[Icoreclrdebugtarget:: Enumprocesses 方法](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|枚举远程计算机上运行的进程。|  
-|[Icoreclrdebugtarget:: Enumruntimes 方法](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|枚举远程计算机上指定的进程中的公共语言运行时 (Clr)。|  
-|[Icoreclrdebugtarget:: Freememory 方法](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|释放此类中的枚举方法分配的内存。|  
+|[ICoreClrDebugTarget::EnumProcesses 方法](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|枚举远程计算机上运行的进程。|  
+|[ICoreClrDebugTarget::EnumRuntimes 方法](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|枚举远程计算机上指定的进程中的公共语言运行时 (Clr)。|  
+|[ICoreClrDebugTarget::FreeMemory 方法](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|释放此类中的枚举方法分配的内存。|  
   
 ## <a name="remarks"></a>备注  
  目前，仅为调试远程 Macintosh 计算机运行的基于 Silverlight 的应用程序目标支持此功能。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces.h  
@@ -72,7 +73,7 @@ class ICoreClrDebugTarget {
   
  **.NET framework 版本：** 3.5 SP1  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorDebugRemoteTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
  [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     

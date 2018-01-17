@@ -26,17 +26,18 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be4447570f89637910506b6257c092c86f24991b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routed-events-overview"></a>路由事件概述
 本主题描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主题定义路由事件术语、描述路由事件如何通过元素树来路由、概述如何处理路由事件，并介绍如何创建你自己的自定义路由事件。
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题假定你对如下内容有基本了解：[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]、面向对象的编程以及如何将 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素之间的关系概念化为树。 若要理解本主题中的示例，你还应当了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 并知道如何编写非常基本的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序或页。 有关详细信息，请参阅[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)和[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
   
 <a name="routing"></a>   
@@ -254,7 +255,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="more-about-routed-events"></a>有关路由事件的更多信息  
  本主题主要从以下角度讨论路由事件：描述基本概念；就如何以及何时响应各种基元素和控件中已经存在的路由事件提供指南。 但是，你可以在自定义类上创建自己的路由事件以及所有必要的支持（如专用的事件数据类和委托）。 路由的事件的所有者可以是任何类，但必须由引发并由处理路由的事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>派生类才能起作用。 有关自定义事件的详细信息，请参阅[创建自定义路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.EventManager>  
  <xref:System.Windows.RoutedEvent>  
  <xref:System.Windows.RoutedEventArgs>  

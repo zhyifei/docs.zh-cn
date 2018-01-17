@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20b061418ee2dc6c3adcde5553d29e680d739582
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-stream-upgrades"></a>自定义流升级
 面向流的传输（如 TCP 和命名管道）对客户端与服务器之间的连续字节流进行操作。 该流通过 <xref:System.IO.Stream> 对象实现。 在流升级中，客户端需要向通道堆栈中添加可选的协议层，并要求通信通道的另一端也执行该操作。 流升级包括使用升级后的对象替换原始 <xref:System.IO.Stream> 对象的过程。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  每次调用 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 和 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 之后，都会升级该流。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
  <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  

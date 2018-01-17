@@ -118,4 +118,4 @@ ms.lasthandoff: 11/21/2017
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
-[以前](choose-between-traditional-web-and-single-page-apps.md) [下一步] (常见-web 的应用程序-architectures.md)
+[以前](choose-between-traditional-web-and-single-page-apps.md) [下一步] (common-web-application-architectures.md)

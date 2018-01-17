@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ddaf9965a3b3b5d6171a643b198db93309afad48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1bd25dd0444c428e000371abe494e62b258eaa63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>程序集绑定重定向安全权限
 应用程序配置文件中的显式程序集绑定重定向需要安全权限。 这适用于对 .NET Framework 程序集和来自第三方的程序集的重定向。 通过设置授予此权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。 默认情况下，托管程序集具有任何权限。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  管理员可以更改这些安全设置以支持或限制由给定计算机上的特定方案。 没有用于更改工具**可**标志设置从默认设置; 管理员必须手动编辑用户的计算机上的 Security.config 文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [发布服务器策略文件，并通过并行执行](http://msdn.microsoft.com/en-us/97a042be-4d72-40c3-91c0-76fd36bdf133)  
  [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [通过并行执行](../../../docs/framework/deployment/side-by-side-execution.md)
+ [并行执行](../../../docs/framework/deployment/side-by-side-execution.md)

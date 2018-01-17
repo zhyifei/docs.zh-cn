@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21a455c0fcb7a6b4164da6f7fdc7efaa007273ae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a4942e7e23b3cddd0f1c5bd3be8195ceeb190ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="circular-tracing"></a>循环跟踪
 此示例演示如何实现循环缓冲区跟踪侦听器。 生产服务的一个常见方案是，拥有可以长时间使用的服务，并在较低级别启用跟踪日志记录。 这些服务占用大量磁盘空间。 在对某个服务进行疑难解答时，跟踪日志中的最新数据与解决问题相关。 此示例演示如何实现一个循环缓冲区跟踪侦听器，在该侦听器中，磁盘上仅保留最新的跟踪数据，最多可以保存可配置的数据量。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)和包括自定义跟踪侦听器。  
@@ -69,5 +70,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)

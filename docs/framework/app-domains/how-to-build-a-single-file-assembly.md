@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dd4472587cabc0ebfb2cb64e0bdc15a8d4778507
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd9f2bab23fff1bbc4ebb521b167ac8031af3bc7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>如何：生成单文件程序集
 单文件程序集（最简单的程序集类型）包含类型信息和实现，以及[程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)。 可以使用命令行编译器或 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 创建单文件程序集。 默认情况下，编译器创建扩展名为 .exe 的程序集文件。  
@@ -95,7 +96,7 @@ csc /out:myCodeLibrary.dll /t:library myCode.cs
 vbc /out:myCodeLibrary.dll /t:library myCode.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)  
  [多文件程序集](../../../docs/framework/app-domains/multifile-assemblies.md)  
  [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  

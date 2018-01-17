@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa4d0881d7dcdb2c56c66c5617652ec1a2cbc374
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31c8461febf72e4345e015c10e0f731fcfbb05e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-navigate-to-a-page"></a>如何： 导航到页面
 此示例演示如何通过多种方式，在其中一个页面可以导航到从<xref:System.Windows.Navigation.NavigationWindow>。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)]可以是相对或绝对。 有关详细信息，请参阅 [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Frame>  
  <xref:System.Windows.Controls.Page>  
  <xref:System.Windows.Navigation.NavigationService>

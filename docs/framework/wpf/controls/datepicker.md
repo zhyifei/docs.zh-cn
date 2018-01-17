@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd5c7c796ee9d51a216368de3f3b04c10a5a3acd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd2a1755ae076369661b2c9a7a2b744961cdb129
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datepicker"></a>DatePicker
 <xref:System.Windows.Controls.DatePicker>控件允许用户通过中键入文本字段或使用下拉列表选择一个日期<xref:System.Windows.Controls.Calendar>控件。  
@@ -34,6 +35,6 @@ DatePicker 控件
   
  用户可以直接在文本字段，该设置字段中键入日期<xref:System.Windows.Controls.DatePicker.Text%2A>属性。 如果<xref:System.Windows.Controls.DatePicker>无法将输入的字符串转换为有效日期，<xref:System.Windows.Controls.DatePicker.DateValidationError>将引发事件。 默认情况下，这会导致异常，但的事件处理程序<xref:System.Windows.Controls.DatePicker.DateValidationError>可以设置<xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A>属性`false`和阻止引发异常。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../../../../docs/framework/wpf/controls/index.md)  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

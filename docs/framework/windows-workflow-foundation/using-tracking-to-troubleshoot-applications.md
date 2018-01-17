@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>使用跟踪对应用程序进行故障排除
 使用 [!INCLUDE[wf](../../../includes/wf-md.md)]，可以跟踪与工作流有关的信息，以提供有关执行 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 应用程序或服务的详细信息。 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 宿主能够在执行工作流实例期间捕获工作流事件。 如果您的工作流产生错误或异常，则可以使用 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 跟踪详细信息以诊断其处理故障。  
@@ -60,6 +61,6 @@ ms.lasthandoff: 12/02/2017
   
  如果使用 ETW 跟踪参与者启用跟踪，则会向 ETW 会话发出错误事件。 可以使用事件查看器查看这些事件。 这可以在节点下找到**事件查看器-> 应用程序和服务日志-> Microsoft-> Windows-> 应用程序服务器-应用程序**在分析通道。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows Server App Fabric 监视](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 监视应用程序](http://go.microsoft.com/fwlink/?LinkId=201275)

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9bd593c17d752b35919985aad37f675c62e6ce34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fb8cb1ea4d011eb25aee14ddd53d3dc882f75d8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt;元素
 指定是否强制执行以下计算机配置要求：加密算法必须符合美国联邦信息处理标准 (FIPS)。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [加密模型](../../../../../docs/standard/security/cryptography-model.md)

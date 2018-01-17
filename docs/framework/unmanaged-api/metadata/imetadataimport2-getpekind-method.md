@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9fc963f38a845db67bb5b5d377ecabf9a40c359f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e8dc31877ba3550fa8faf610b831dfd2e7b313ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataimport2getpekind-method"></a>IMetaDataImport2::GetPEKind 方法
 获取一个值，标识可移植可执行 (PE) 中的代码的性质文件，通常是 DLL 或 EXE 文件，在当前元数据范围中定义。  
@@ -49,13 +50,13 @@ HRESULT GetPEKind (
 ## <a name="remarks"></a>备注  
  由引用的值`pdwMachine`参数可以为以下项之一。  
   
-|值|计算机体系结构|  
+|“值”|计算机体系结构|  
 |-----------|--------------------------|  
 |IMAGE_FILE_MACHINE_I386<br /><br /> 0x014C|x86|  
 |IMAGE_FILE_MACHINE_IA64<br /><br /> 0x0200|Intel IPF|  
-|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|x64|  
+|IMAGE_FILE_MACHINE_AMD64<br /><br /> 0x8664|X64|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -64,7 +65,7 @@ HRESULT GetPEKind (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
  [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [CorPEKind 枚举](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)

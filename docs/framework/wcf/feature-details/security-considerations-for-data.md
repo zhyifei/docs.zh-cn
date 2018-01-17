@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 98bce70d7092a8ce9b9244479f7ff6d999bb0825
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-data"></a>数据的安全考虑事项
 当在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]中处理数据时，必须考虑许多种类的威胁。 下表列出了与数据处理相关的最重要的威胁类。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了缓解这些威胁的工具。  
@@ -264,7 +265,7 @@ ms.lasthandoff: 11/21/2017
   
 -   使用标有 <xref:System.SerializableAttribute> 属性的旧式类型时应小心。 它们中的许多都设计用于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理以便仅使用受信任的数据。 标有此属性的现有类型在设计时可能并未考虑状态安全性。  
   
--   考虑到状态安全性，不要依赖 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性 (Attribute) 的 `DataMemberAttribute` 属性 (Property) 来保证数据的存在。 数据可能总是 `null`、 `zero`或 `invalid`。  
+-   考虑到状态安全性，不要依赖 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性 (Attribute) 的 `DataMemberAttribute` 属性 (Property) 来保证数据的存在。 数据可能总是 `null`、`zero` 或 `invalid`。  
   
 -   在未首先验证的情况下，绝不要信任从不受信任的数据源反序列化的对象图。 每个单独的对象可能都处于一致状态，但对象图整体有可能处于不一致状态。 此外，即使禁用对象图保存模式，反序列化的对象图也可能具有对同一对象的多个引用或者具有循环引用。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
@@ -351,7 +352,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="a-note-on-components"></a>关于组件的说明  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 是一个灵活且可自定义的系统。 本主题中的大多数内容关注的都是最常见的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用方案。 但是，也许可以通过许多不同的方法组合 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所提供的组件。 必须了解使用每个组件的安全含义。 具体而言：  
   
--   当您必须使用 XML 读取器时，应使用 <xref:System.Xml.XmlDictionaryReader> 类所提供的读取器，而不要使用其他任何读取器。 安全读取器是使用 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>或 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 方法创建的。 不要使用 <xref:System.Xml.XmlReader.Create%2A> 方法。 应始终为读取器配置安全配额。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的序列化引擎只有在与来自 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的安全 XML 读取器一起使用时，才是安全的。  
+-   当您必须使用 XML 读取器时，应使用 <xref:System.Xml.XmlDictionaryReader> 类所提供的读取器，而不要使用其他任何读取器。 安全读取器是使用 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>或 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 方法创建的。 不要使用 <xref:System.Xml.XmlReader.Create%2A> 方法。 应始终为读取器配置安全配额。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的序列化引擎只有在与来自 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的安全 XML 读取器一起使用时，才是安全的。  
   
 -   当使用 <xref:System.Runtime.Serialization.DataContractSerializer> 来反序列化可能不受信任的数据时，应总是设置 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> 属性。  
   
@@ -363,8 +364,8 @@ ms.lasthandoff: 11/21/2017
   
 -   通常，当使用接受配额的任何组件时，都应了解它的安全含义并将它设置为一个安全值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.XmlDictionaryReader>  
  <xref:System.Xml.Serialization.XmlSerializer>  
- [数据协定已知的类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

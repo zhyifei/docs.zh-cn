@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7fdf3c141a975c37602252bd36f4d62474e1d16d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 45fdabcbd70d58d1ebb279665346ffd41ad9f204
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach 接口
 定义服务器调用调试器自动附加的接口。  
@@ -34,8 +35,8 @@ ms.lasthandoff: 10/18/2017
 |------------|-----------------|  
 |[AutoAttach 方法](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|执行服务器调用调试器自动附加。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** DbgAutoAttach.idl  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

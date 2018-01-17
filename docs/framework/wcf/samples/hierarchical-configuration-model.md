@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbcef9ebe1b4876e429da97b3e217dd32286e4d6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cf8e7b37b6430be1eed9bc037bfa06aeb825b866
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hierarchical-configuration-model"></a>分层配置模型
 此示例演示如何实现服务配置文件的层次结构。 它还演示如何从层次结构中较高的级别继承绑定、服务行为和终结点行为。  
@@ -83,5 +84,5 @@ public interface IDesc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 管理示例](http://go.microsoft.com/fwlink/?LinkId=193960)

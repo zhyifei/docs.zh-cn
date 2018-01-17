@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7dd9d70a3b93faf721b5ac3bbd5f1114bf5c1461
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: de7dc897aa435d62c04c2e6a3ca82adf3a637a2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet 信息服务承载说明
 若要运行由 Internet 信息服务 (IIS) 承载的示例，必须确保 IIS 已正确安装且正在运行。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/02/2017
   
 15. 下**Internet Information Services**目录中，展开项标记为**Microsoft.NET Framework 3.5.1**，然后选择**Windows Communication Foundation Http 激活**.  
   
-16. 单击“确定”。  
+16. 单击 **“确定”**。  
   
 ### <a name="to-install-iis-version-70-on-windows-server-2008"></a>在 Windows Server 2008 上安装 IIS 7.0 版  
   

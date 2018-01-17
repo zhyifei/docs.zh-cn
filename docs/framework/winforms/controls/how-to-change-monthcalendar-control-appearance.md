@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38cddb4222077c21d72828371a8fe025184c4f75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9c401532fa7a5f09462cf12084f32bca3f721cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何： 更改 Windows 窗体 MonthCalendar 控件 &#39; s 外观
 Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义在许多方面的日历的外观。 例如，你可以设置配色方案，并选择以显示或隐藏周数和当前日期。  
@@ -113,7 +114,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义�
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MonthCalendar 控件](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
  [如何：在 Windows 窗体 MonthCalendar 控件中选择日期范围](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
  [如何：使用 Windows 窗体 MonthCalendar 控件以粗体显示具体日期](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  

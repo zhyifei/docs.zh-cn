@@ -13,11 +13,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7832060a29ceb2dc58feac9ce2fc97f58caf70f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服务跟踪查看器工具 (SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务跟踪查看器工具可帮助您分析 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 生成的诊断跟踪。 服务跟踪查看器提供了一种方法，可以轻松地合并、查看和筛选日志中的跟踪消息，以便能够诊断、修复和验证 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务问题。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/02/2017
 |跟踪级别|描述|  
 |-----------------|-----------------|  
 |严重|-记录 Fail-fast 和事件日志条目，并跟踪相关信息。 下面是何时可使用“严重”级别的一些示例：<br />-您的 AppDomain 由于未经处理的异常而停机。<br />-您的应用程序启动失败。<br />的源自 MyApp.exe 进程失败原因消息。|  
-|错误|-记录所有异常。 在下列情况下可以使用“错误”级别：<br />-您的代码由于无效强制转换异常而崩溃。<br />-A"未能创建终结点"异常导致你的应用程序在启动时失败。|  
+|Error|-记录所有异常。 在下列情况下可以使用“错误”级别：<br />-您的代码由于无效强制转换异常而崩溃。<br />-A"未能创建终结点"异常导致你的应用程序在启动时失败。|  
 |警告|-A 条件存在随后可能会导致错误或严重故障。 在下列情况下可使用此级别：<br />-应用程序正在接收比其遏制设置允许的更多的请求。<br />-接收队列已达到其配置的容量的 98%。|  
 |信息|的生成有用监视和诊断系统状态、 测量性能，或执行分析的消息。 可以使用此类信息规划容量和管理性能。 在下列情况下可使用此级别：<br />的消息到达 AppDomain 并已反序列化后，将出现错误。<br />的创建 HTTP 绑定时出现错误。|  
 |详细|-调试-同时针对用户代码和服务级别跟踪。 在下列情况下设置此级别：<br />-你不确定哪种方法在代码中的出现错误时调用。<br />-你已配置的正确终结点，服务无法启动，因为保留存储区中的条目已被锁定。|  
@@ -287,7 +288,7 @@ ms.lasthandoff: 12/02/2017
   
 3.  至少应指定筛选器名称和 XPath 表达式。  
   
-4.  单击“确定”。  
+4.  单击 **“确定”**。  
   
 ###### <a name="applying-a-custom-filter"></a>应用自定义筛选器  
  创建了自定义筛选器后，可以通过筛选器工具栏来访问它。 选择你想要在应用的筛选器**搜索中**字段的筛选器工具栏。 对上一示例，选择“Thread ID”。  
@@ -417,7 +418,7 @@ ms.lasthandoff: 12/02/2017
 |![警告跟踪](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|“警告”跟踪：在警告级别发出的跟踪|  
 |![错误跟踪](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|“错误”跟踪：在错误级别发出的跟踪。|  
 |![活动开始跟踪：](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|“活动开端”跟踪：标记活动开头的跟踪。 它包含活动的名称。 应用程序设计人员或开发人员应为每个进程或线程的每个活动 ID 定义一个活动“开端”跟踪。<br /><br /> 如果活动 ID 在跟踪关联的跟踪源之间传播，随后将可看到同一活动 ID 有多个“开端”（每个跟踪源一个）。 如果为跟踪源启用了 ActivityTracing，则会发出“开端”跟踪。|  
-|![活动停止跟踪](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|“活动结尾”跟踪：标记活动结尾的跟踪。 。 它包含活动的名称。 应用程序设计人员或开发人员应为每个跟踪源的每个活动 ID 定义一个活动“结尾”跟踪。 在给定跟踪源发出的活动结尾之后不会显示该跟踪源中的任何跟踪，除非跟踪时间间隔不够小。 如果发生这种情况，时间相同的两个跟踪（包括“结尾”跟踪）在显示时可能会交错。 如果活动 ID 在跟踪关联的跟踪源之间传播，将可看到同一活动 ID 有多个“结尾”（每个跟踪源一个）。 如果为跟踪源启用了 ActivityTracing，则会发出“结尾”跟踪。|  
+|![活动停止跟踪](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|“活动结尾”跟踪：标记活动结尾的跟踪。 . 它包含活动的名称。 应用程序设计人员或开发人员应为每个跟踪源的每个活动 ID 定义一个活动“结尾”跟踪。 在给定跟踪源发出的活动结尾之后不会显示该跟踪源中的任何跟踪，除非跟踪时间间隔不够小。 如果发生这种情况，时间相同的两个跟踪（包括“结尾”跟踪）在显示时可能会交错。 如果活动 ID 在跟踪关联的跟踪源之间传播，将可看到同一活动 ID 有多个“结尾”（每个跟踪源一个）。 如果为跟踪源启用了 ActivityTracing，则会发出“结尾”跟踪。|  
 |![活动挂起跟踪](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|“活动挂起”跟踪：标记活动暂停时间的跟踪。 在活动继续之前，不会在挂起的活动中发出任何跟踪。 挂起的活动表示不会在该活动的跟踪源范围内进行任何处理。 “挂起”/“继续”跟踪对于进行分析十分有用。 如果为跟踪源启用了 ActivityTracing，则会发出“挂起”跟踪。|  
 |![活动继续跟踪](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|“活动继续”跟踪：标记活动在暂停后继续进行的时间的跟踪。 可以在该活动中再次发出跟踪。 “挂起”/“继续”跟踪对于进行分析十分有用。 如果为跟踪源启用了 ActivityTracing，则会发出“继续”跟踪。|  
 |![传输](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|传输：将逻辑控制流从一个活动传输到另一个活动时发出的跟踪。 作为传输来源的活动可以继续与作为传输目标的活动并行工作。 如果为跟踪源启用了 ActivityTracing，则会发出“传输”跟踪。|  
@@ -459,7 +460,7 @@ ms.lasthandoff: 12/02/2017
   
  如果打开使用阿拉伯语操作系统创建的跟踪日志，您可能会注意到时间筛选器不起作用。 例如，2005 年对应于阿拉伯日历中的 1427 年。 但是，服务跟踪查看器工具筛选器所支持的时间范围不支持早于 1752 年的日期。 这表示您不能在筛选器中选择正确的日期。 若要解决此问题，你可以创建自定义筛选器 (**视图/自定义筛选器**) 使用 XPath 表达式以便包括特定时间范围。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [配置跟踪](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [活动跟踪和传播端到端跟踪关联](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)

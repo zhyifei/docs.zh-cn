@@ -17,17 +17,18 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9549fa11b3f019dce3cc77d5f6d1d08a8485f0cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5ac840953e34ac6726bb1c240c062d0f17b8cb71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>如何：使用设计器隐藏 ToolStripMenuItem
 隐藏菜单项是一种方法来控制你的应用程序的用户界面 (UI)，并限制用户命令。 通常情况下，你将想要隐藏整个菜单的菜单项在其上的所有时不可用。 这会带来较少的用户的干扰。 此外，你可能想要同时隐藏和禁用的菜单或菜单项，如隐藏单独不会阻止用户使用的快捷键访问菜单命令。 禁用菜单项的详细信息，请参阅[如何： 禁用 ToolStripMenuItems 使用设计器](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>若要隐藏顶级菜单及其子菜单项  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
      当隐藏子菜单项时，它将一直显示在设计时窗体上，以便可以轻松地选择它进行进一步的工作。 它将实际被隐藏在运行时。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStripItem.Visible%2A>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>  

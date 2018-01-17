@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ff3f56b08aa3d6c7cb05bafd98d26f4700fa4e5a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b53673d1ddb1de7fed087b4c5cb125e50f11b918
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-assembly-binding-redirection"></a>配置程序集绑定重定向
 默认情况下，应用程序使用一组 .NET Framework 程序集，该程序集随用于编译该应用程序的运行时版本一起提供。 可以使用应用程序配置文件中 [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素上的 appliesTo 特性，将程序集绑定引用重定向到 .NET Framework 程序集的特定版本。 此可选特性用 .NET Framework 版本号来指示它应用于哪个版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本。  
@@ -65,5 +66,5 @@ ms.lasthandoff: 10/18/2017
   
  可以通过确定是否正在发生程序集绑定重定向来确定是否正在使用某个配置文件。 使用[程序集绑定日志查看器 (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) 查看正在加载哪些程序集。 若要查看所有的程序集绑定，必须在注册表中设置 ForceLog 的条目。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

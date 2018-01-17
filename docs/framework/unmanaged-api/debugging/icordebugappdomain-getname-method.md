@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 590bfb5d7d8cac8e322bddfe6258ad9bf377dad6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 62defcb4b7a2f143269c7f617b762e3419d55426
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName 方法
 获取应用程序域的名称。  
@@ -54,7 +55,7 @@ HRESULT GetName (
 ## <a name="remarks"></a>备注  
  调试器将调用`GetName`方法一次，以获取名称所需的缓冲区的大小。 调试器分配缓冲区，，然后调用该方法的第二个时间以填充的缓冲区。 要获取的大小的名称，第一个调用被称为*查询模式*。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

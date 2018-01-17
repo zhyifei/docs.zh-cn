@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9a3faa27d54f2aa67cd974bc1827d71163e411b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cfd98d401921c47bd85f8d4089e3efb437ca6b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intranet-unsecured-client-and-service"></a>不安全的 Intranet 客户端和服务
 下面的插图描述了一种简单的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，开发此服务的目的是为了向 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序提供有关安全专用网络的信息。 在以下情况下无需提供安全性：数据重要性较低、网络在本质上是安全的，或者由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构的下层提供安全性。  
@@ -122,7 +123,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.NetTcpBinding>  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

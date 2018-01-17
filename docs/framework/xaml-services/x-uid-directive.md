@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4d49e9630b481b2daf103feabd225dd5ef0c8ca2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9abd4a1851ce21a1858f51ff4ce42998c20639e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xuid-directive"></a>x:Uid 指令
 为标记元素提供的唯一标识符。 在许多情况下，由 XAML 本地化过程和工具使用此唯一标识符。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
  有关详细信息的角色有关的`x:Uid`WPF 本地化过程中和 XAML 的 BAML 形式中，请参阅[WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)或<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
  <xref:Microsoft.Build.Tasks.Windows.UidManager>  
- [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [WPF 全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

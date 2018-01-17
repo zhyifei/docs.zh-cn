@@ -18,11 +18,12 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 71600e0771c31392f568e11a7f51fc258ac5b362
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
@@ -97,7 +98,7 @@ al sources options
 
 下表列出了 Al.exe 生成的错误。
 
-| 错误 | 描述 |
+| Error | 描述 |
 | ----- | ----------- |
 |al1001|内部编译器错误<br /><br /> 尝试确定 Al.exe 是否因为无法分析意外语法而失败。 然后，请与 Microsoft 产品支持服务联系。|
 |al1002|内存不足<br /><br /> Al.exe 内存不足，已停止。 增加可用内存量。|
@@ -181,7 +182,7 @@ al sources options
 al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  
 [工具](../../../docs/framework/tools/index.md)  
 [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  

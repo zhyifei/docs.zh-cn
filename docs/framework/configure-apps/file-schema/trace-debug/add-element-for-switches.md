@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: de1acb37f3236598e9d8a74a188033d18b65ac8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4406caa4da1375bea9809843ca96774e24421d5d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;添加&gt;元素&lt;开关&gt;
 指定对跟踪开关设置的级别。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`switches`|包含跟踪开关和对该跟踪开关设置的级别。|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.Switch>  
  <xref:System.Diagnostics.TraceSwitch>  
  <xref:System.Diagnostics.BooleanSwitch>  

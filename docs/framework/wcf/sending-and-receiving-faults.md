@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5897d107fc27b56ffd1eb476dff1fa1d507f5de5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 248202e07d3b74f5d71b40155ae8f617f7ed15ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-and-receiving-faults"></a>发送和接收错误
 SOAP 错误将错误条件信息从服务传送到客户端，并且在双工情况下，将这些信息以互操作方式从客户端传送到服务。 通常情况下，服务会定义自定义错误内容并指定可以返回错误的操作。 (有关详细信息，请参阅[定义和指定错误](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)本主题讨论在出现相应的错误条件时服务或双工客户端如何发送这些错误，以及客户端或服务应用程序如何处理这些错误。 有关概述中的错误处理[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]应用程序，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -113,9 +114,9 @@ SOAP 错误将错误条件信息从服务传送到客户端，并且在双工情
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.FaultException>  
  <xref:System.ServiceModel.FaultException%601>  
  <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>  
- [预期的异常](../../../docs/framework/wcf/samples/expected-exceptions.md)  
- [避免出现与 Using 语句的问题](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+ [预期异常](../../../docs/framework/wcf/samples/expected-exceptions.md)  
+ [避免出现与 Using 语句有关的问题](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)

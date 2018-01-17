@@ -19,11 +19,12 @@ caps.latest.revision: "44"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a64ca2f0da2e10a3042b5f9c30baf3caa37534e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 457b7e76b16e42c71d1e2d1986d58b2708396e22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-rendering-tiers"></a>图形呈现层
 呈现层为运行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设备定义图形硬件功能和性能级别。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
  以下功能对呈现层 1 和呈现层 2 采用硬件加速：  
   
-|功能|备注|  
+|功能|说明|  
 |-------------|-----------|  
 |2D 呈现|支持大多数 2D 呈现。|  
 |3D 光栅化|支持大多数 3D 光栅化。|  
@@ -88,13 +89,13 @@ ms.lasthandoff: 11/21/2017
   
  以下功能仅对呈现层 2 采用硬件加速：  
   
-|功能|备注|  
+|功能|说明|  
 |-------------|-----------|  
 |3D 抗锯齿|只有支持 Windows 显示驱动程序模型 (WDDM) 的操作系统（如 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)]）才支持 3D 抗锯齿。|  
   
  以下功能**未**采用硬件加速：  
   
-|功能|备注|  
+|功能|说明|  
 |-------------|-----------|  
 |打印内容|所有打印内容都使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 软件管道呈现。|  
 |使用栅格化内容<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|通过使用呈现任何内容<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>方法<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。|  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/21/2017
  ![屏幕快照： DirectX 诊断工具](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 “DirectX 诊断工具”主窗口  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.RenderCapability>  
  <xref:System.Windows.Media.RenderOptions>  
  [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

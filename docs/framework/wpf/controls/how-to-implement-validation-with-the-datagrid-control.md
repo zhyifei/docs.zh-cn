@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c611919b5702877db34e9a02e367312678a1b27
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78846e2b6a1d73e011441b0ccb46b8aad365d5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>如何：用 DataGrid 控件实现验证
 <xref:System.Windows.Controls.DataGrid>控制，你可以执行的单元格和行级别的验证。 与单元格级别验证时用户更新的值验证绑定的数据对象的各个属性。 与行级别验证用户提交更改的行时验证整个数据对象。 也可以为验证错误，提供自定义的可视反馈，或使用默认的视觉反馈，<xref:System.Windows.Controls.DataGrid>控件提供。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[DataGrid_Validation#FullXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.DataGrid>  
  [数据网格](../../../../docs/framework/wpf/controls/datagrid.md)  
  [数据绑定](../../../../docs/framework/wpf/data/data-binding-wpf.md)  

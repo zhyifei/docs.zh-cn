@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ae94edf97e513fe4065550ea074c083fd1df5394
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc87a427a0a44f28ba7bfe4f2d71fa43768b4b76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeregistercoordinator"></a>Microsoft.Transactions.TransactionBridge.RegisterCoordinator
 为控制协议将 WS-Atomic Transaction 协议服务向其协调程序成功注册。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="description"></a>描述  
  当本地 TransactionManager 已成功向其上级 TransactionManager 注册时进行跟踪  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用跟踪来排查你的应用程序](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)

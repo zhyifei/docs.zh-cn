@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7f0fa86a9786e5440db9fec0cee76c5ed28363b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31417a3eeee2c1e61674c43558c2799705797c35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>如何：创建 GeometryDrawing
 此示例演示如何创建和显示<xref:System.Windows.Media.GeometryDrawing>。 A<xref:System.Windows.Media.GeometryDrawing>使您能够创建具有填充和边框的形状，通过将相关联<xref:System.Windows.Media.Pen>和<xref:System.Windows.Media.Brush>与<xref:System.Windows.Media.Geometry>。 <xref:System.Windows.Media.GeometryDrawing.Geometry%2A>描述形状的结构<xref:System.Windows.Media.GeometryDrawing.Brush%2A>描述形状的填充和<xref:System.Windows.Media.GeometryDrawing.Pen%2A>描述形状的轮廓。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  若要创建更复杂的绘图，你可以将多个图形对象组合到单个复合绘制使用<xref:System.Windows.Media.DrawingGroup>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.DrawingGroup>  
  [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
  [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  

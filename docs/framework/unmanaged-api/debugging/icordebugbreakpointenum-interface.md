@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b950e3b5bcfec220b1753313213fd8e9b71b4188
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f09a9d3870e2b975dc9ed952eca33147a21fce6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugbreakpointenum-interface1"></a>ICorDebugBreakpointEnum 接口 1
 实现 ICorDebugEnum 方法，并枚举 ICorDebugBreakpoint 数组。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

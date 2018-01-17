@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 821cd152ccb7a02dda5338d6a3ec44d6625c0097
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97b83feb9d19760208d9cc103290c5c6293c30c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 标记扩展
 任何提供的值[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通过查找对已定义的资源的引用的属性特性。 该资源的查找行为是类似于将查找以前已从标记当前加载的资源的加载时间查找[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页面以及其他应用程序源，并将生成此资源值在运行时对象中的属性值。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|`key`|请求的资源键。 此密钥最初分配[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)如果资源已在标记中，创建数据库或用作`key`参数调用时<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>如果资源在代码中创建的。|  
+|`key`|所请求资源的密钥。 此密钥最初分配[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)如果资源已在标记中，创建数据库或用作`key`参数调用时<xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType>如果资源在代码中创建的。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
  `StaticResource` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有标记扩展在其特性语法中都使用 { 和 } 字符，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理器通过这一约定确认标记扩展必须处理该特性。 有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  

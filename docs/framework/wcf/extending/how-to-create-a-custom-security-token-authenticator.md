@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: cd9511642789cc8b5cade502941d54c5b88f625c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eedb351e5651ffc2637c413450db40ff5a59d516
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>如何：创建自定义安全令牌身份验证器
 本主题演示如何创建自定义安全令牌身份验证器以及如何将其与自定义安全令牌管理器相集成。 安全令牌身份验证器可验证随传入消息一起提供的安全令牌的内容。 如果验证成功，身份验证器将返回 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 实例的集合，该集合经过计算后可返回一组声明。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- 前面的代码在 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法中返回授权策略的集合。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不提供此接口的公共实现。 下面的过程演示如何针对您自己的要求实现此目的。  
+ 前面的代码在 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29> 方法中返回授权策略的集合。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不提供此接口的公共实现。 下面的过程演示如何针对您自己的需求实现此目的。  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>创建自定义授权策略  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
   
- [演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)描述如何创建自定义凭据和自定义安全令牌管理器。 若要使用此处创建的自定义安全令牌身份验证器，可以修改安全令牌管理器的实现，以便从 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法返回自定义身份验证器。 当传入适当的安全令牌要求时，该方法将返回身份验证器。  
+ [演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)描述如何创建自定义凭据和自定义安全令牌管理器。 若要使用此处创建的自定义安全令牌身份验证器，可以修改安全令牌管理器的实现，以便从 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 方法返回自定义身份验证器。 当传入适当的安全令牌需求时，该方法将返回身份验证器。  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>使自定义安全令牌身份验证器与自定义安全令牌管理器相集成  
   
@@ -67,11 +68,11 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
  <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
  <xref:System.IdentityModel.Tokens.UserNameSecurityToken>  
- [演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
  [安全体系结构](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

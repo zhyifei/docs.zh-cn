@@ -4,11 +4,14 @@ description: "使用 Azure 云和 Windows 容器更新现有 .NET 应用程序�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 6c1bbbcd99c2abee43a789fddf4546e7ee8d3380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 08bf7da36714b2c18d96659814bb11df6d9b26fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="lift-and-shift-existing-apps-devops"></a>直接迁移现有应用 DevOps
 > 愿景：将现有 .NET Framework 应用程序直接迁移到云 DevOps 就绪应用程序以显著提高部署敏捷性，以加快交付速度，降低应用交付成本。

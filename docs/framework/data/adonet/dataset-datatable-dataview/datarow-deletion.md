@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f9eb89d711cbf66f3b6816e597c14359be1f3639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7f20fdebe101665e681597db0c55b7ced7853f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datarow-deletion"></a>DataRow 删除
 有两种方法可用于删除<xref:System.Data.DataRow>对象<xref:System.Data.DataTable>对象：**删除**方法<xref:System.Data.DataRowCollection>对象，与<xref:System.Data.DataRow.Delete%2A>方法**DataRow**对象。 而<xref:System.Data.DataRowCollection.Remove%2A>方法删除**DataRow**从**DataRowCollection**、<xref:System.Data.DataRow.Delete%2A>方法仅标记要删除的行。 当应用程序调用时，会发生实际移除**AcceptChanges**方法。 通过使用 <xref:System.Data.DataRow.Delete%2A>，您可以在实际删除行之前，先以编程方式来检查哪些行已标记为删除。 如果将行标记为删除，则该行的 <xref:System.Data.DataRow.RowState%2A> 属性会设置为 <xref:System.Data.DataRow.Delete%2A>。  
@@ -54,7 +55,7 @@ workRow.Delete();
 > [!NOTE]
 >  如果**RowState**的**DataRow**是**Added**，这意味着它刚添加到表中，然后将其标记为**已删除**，它是从表中删除。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataRowCollection>  
  <xref:System.Data.DataTable>  

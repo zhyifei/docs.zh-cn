@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f5cfe3a97bbbd4d5ba2d3ba089736599b6a2190
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c8681635f2f97e74893704513f57313106168e52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>MainMenu 组件概述（Windows 窗体）
 > [!IMPORTANT]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="key-properties"></a>键属性  
  菜单项可以通过设置指定为默认项<xref:System.Windows.Forms.MenuItem.DefaultItem%2A>属性`true`。 单击菜单时，默认项以粗体显示。 菜单项的<xref:System.Windows.Forms.MenuItem.Checked%2A>属性`true`或`false`，并指示是否选定菜单项。 菜单项的<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>属性自定义的选定项的外观： 如果<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>设置为`true`，如果，则一个单选按钮项; 旁边会出现<xref:System.Windows.Forms.MenuItem.RadioCheck%2A>设置为`false`，项旁边显示一个复选标记。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.MainMenu>  
  <xref:System.Windows.Forms.Menu>  
  <xref:System.Windows.Forms.MenuItem>  

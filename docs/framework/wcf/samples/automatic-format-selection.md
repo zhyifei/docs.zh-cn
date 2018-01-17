@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92934e9e9e8cbd38a7f00b1c7846d3e1b8dba583
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da09df968bffee9a07f1c03d5b771271a9d44129
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-format-selection"></a>自动格式选择
 本示例演示如何通过 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 编程模型启用自动格式选择（XML 或 JSON），以及如何在操作代码中显式设置格式。  
@@ -50,4 +51,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

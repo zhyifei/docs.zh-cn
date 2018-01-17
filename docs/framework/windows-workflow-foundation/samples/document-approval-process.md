@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 345fb44bed207d5d5e2c30bf4dd6e6ace27d7511
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b46597e16156db3d36fef97040104d8497294ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-approval-process"></a>文档审批过程
 此示例演示如何将很多 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 功能一起使用。 这些功能一起使用实现一个文档审批过程方案。 客户端应用程序既可提交等待审批的文档，也可批准文档。 有一个审批管理器应用程序，可用于促进客户端之间的通信和强制执行审批过程的规则。 审批过程是一个可执行多种类型的审批的工作流。 存在多个活动来获取个人审批过程、团体审批过程（一定百分比的审批者）和复合审批过程（由团体审批和个人审批按顺序组成）。  

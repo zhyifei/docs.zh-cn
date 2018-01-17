@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07e173fce93266950be520880ced5e0e8be3fcbd
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f0e52a2a569d9b0787b5ba31c20fac176c5f6cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog 控件（Windows 窗体）
 Windows 窗体 `PrintPreviewDialog` 控件是一个预配置的对话框，用于显示文档在打印时的显示方式。 在基于 Windows 的应用程序中，使用它作为一种替代配置自己对话框的简单解决方案。 该控件包含用于打印、放大、显示一页或多页以及关闭对话框的按钮。  

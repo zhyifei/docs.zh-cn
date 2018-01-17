@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c42d3274fcb03bc523367ba71c857144b2d78b72
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fa156c914d2a1bb2ff0601d9e06c9b87d4190754
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>缓解：跨应用程序域的对象的反序列化
 有时，当一个应用程序使用具有不同应用程序基的两个或多个应用程序域时，如果尝试跨应用程序域在逻辑调用上下文中反序列化对象，则会引发异常。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/18/2017
   
 6.  由于逻辑调用上下文中的类型不能在默认应用程序域中解析，因此将会引发异常。  
   
-## <a name="mitigation"></a>缓解操作  
+## <a name="mitigation"></a>缓解  
  若要解决此问题，请执行以下操作：  
   
 1.  当引发异常时，查找调用堆栈中对 `get_Evidence` 的调用。 这个异常可以是异常集中的任何一个大子集，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
@@ -56,5 +57,5 @@ ms.lasthandoff: 10/18/2017
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)

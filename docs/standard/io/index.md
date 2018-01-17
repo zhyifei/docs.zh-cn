@@ -20,14 +20,17 @@ caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
-文件和流 I/O（输入/输出）是指在存储媒介中传入或传出数据。 在 .NET Framework 中，[System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) 命名空间包含允许以异步方式和同步方式对数据流和文件进行读取和写入操作的类型。 这些命名空间还包含对文件执行压缩和解压缩的类型，以及通过管道和串行端口启用通信的类型。  
+文件和流 I/O（输入/输出）是指在存储媒介中传入或传出数据。 在 .NET Framework 中，`System.IO` 命名空间包含允许以异步方式和同步方式对数据流和文件进行读取和写入操作的类型。 这些命名空间还包含对文件执行压缩和解压缩的类型，以及通过管道和串行端口启用通信的类型。  
   
  文件是一个由字节组成的有序的命名集合，它具有永久存储。 在处理文件时，你将处理目录路径、磁盘存储、文件和目录名称。 相反，流是一个字节序列，可用于对后备存储进行读取和写入操作，后备存储可以是多个存储媒介之一（例如，磁盘或内存）。 正如存在除磁盘之外的多种后备存储一样，也存在除文件流之外的多种流（如网络、内存和管道流）。  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
  除了使用这些类之外，Visual Basic 用户还可以对文件 I/O 使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> 类提供的方法和属性。  
   
- 请参阅[如何：复制目录](../../../docs/standard/io/how-to-copy-directories.md)、[如何：创建目录列表](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)和[如何：枚举目录和文件](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  
+ 请参阅[如何：复制目录](../../../docs/standard/io/how-to-copy-directories.md)、[如何：创建目录列表](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)和[如何：枚举目录和文件](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  
   
 ## <a name="streams"></a>流  
  抽象基类 <xref:System.IO.Stream> 支持读取和写入字节。 所有表示流的类都继承自 <xref:System.IO.Stream> 类。 <xref:System.IO.Stream> 类及其派生类提供数据源和存储库的常见视图，使程序员不必了解操作系统和基础设备的具体细节。  
@@ -125,7 +128,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="isolated-storage"></a>独立存储  
  独立存储是一种数据存储机制，它在代码与保存的数据之间定义了标准化的关联方式，从而提供隔离性和安全性。 存储提供按用户、程序集和（可选）域隔离的虚拟文件系统。 当你的应用程序无权访问用户文件时，独立存储特别有用。 你可以通过一种由计算机的安全策略控制的方式保存应用程序的设置或文件。  
   
- 独立存储不可用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用；请改用 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空间中的应用程序数据类。 有关详细信息，请参阅 Windows 开发人员中心中的[应用程序数据](http://go.microsoft.com/fwlink/?LinkId=229175)。  
+ 独立存储不可用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用；请改用 [Windows.Storage](/uwp/api/Windows.Storage) 命名空间中的应用程序数据类。 有关详细信息，请参阅 Windows 开发人员中心中的[应用程序数据](/previous-versions/windows/apps/hh464917(v=win.10))。  
   
  在实现独立存储时，经常使用以下类：  
   
@@ -144,7 +147,7 @@ ms.lasthandoff: 10/18/2017
   
 -   专门与文件操作相关的类型（如 <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo>）未包含在[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] 中。 请改用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 的 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 命名空间中的类型，如 [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 和 [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx)。  
   
--   独立存储不可用；请改用[应用程序数据](http://go.microsoft.com/fwlink/?LinkId=229175)。  
+-   独立存储不可用；请改用[应用程序数据](/previous-versions/windows/apps/hh464917(v=win.10))。  
   
 -   使用异步方法（如 <xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>）可防止 UI 线程受阻。  
   
@@ -157,7 +160,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="io-and-security"></a>I/O 和安全性  
  在使用 <xref:System.IO?displayProperty=nameWithType> 命名空间中的类时，你必须遵循操作系统安全性要求（如访问控制列表 (ACL)）来控制对文件和目录的访问。 此要求是在所有 <xref:System.Security.Permissions.FileIOPermission> 要求之外的要求。 可以用编程方式管理 ACL。 有关详细信息，请参阅[如何：添加或移除访问控制列表项](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)。  
   
- 默认安全策略将阻止 Internet 或 Intranet 应用程序访问用户计算机上的文件。 因此，在编写将通过 Internet 或 Intranet 下载的代码时，请不要使用需要物理文件路径的 I/O 类。 请转而将[独立存储](../../../docs/standard/io/isolated-storage.md)用于传统 .NET Framework 应用程序，或将[应用程序数据](http://go.microsoft.com/fwlink/?LinkId=229175)用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。  
+ 默认安全策略将阻止 Internet 或 Intranet 应用程序访问用户计算机上的文件。 因此，在编写将通过 Internet 或 Intranet 下载的代码时，请不要使用需要物理文件路径的 I/O 类。 请转而将[独立存储](../../../docs/standard/io/isolated-storage.md)用于传统 .NET Framework 应用程序，或将[应用程序数据](/previous-versions/windows/apps/hh464917(v=win.10))用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。  
   
  仅在构造流时执行安全性检查。 因此，请不要打开流并将其传递给受信程度较低的代码或应用程序域。  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b8eafeedd03097488b1493b5654db360eab94fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 具有许多支持创建安全数据库应用程序的功能。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
  [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  说明了 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的体系结构和安全功能。  
   
- [SQL Server 中的应用程序安全方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  包含对 ADO.NET 和 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 应用程序的各种应用程序安全方案进行讨论的主题。  
   
  [SQL Server Express 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
  [SQL Server 的安全注意事项](http://go.microsoft.com/fwlink/?LinkId=98587)  
  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书安全性主题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

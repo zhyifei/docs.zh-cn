@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 054b1f57ff091b21ccb709ff8890c663f2d607fb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="built-in-configuration"></a>内置配置
 此示例演示了 SQL 工作流实例存储的使用和配置。 SQL 工作流实例存储是基于 SQL 的实例存储实现。 它允许实例将状态保存到 SQL Server 或 SQL Server Express 数据库中以及从中加载状态。  
@@ -115,5 +116,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

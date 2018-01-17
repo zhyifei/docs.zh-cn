@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4b557a9f9f462df2d1afe6d6b61871e0e9f40174
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 559926fffa52b234dda25ba2f0fd658aa2382c16
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>如何：将 TraceSource 和筛选器与跟踪侦听器一起使用
 .NET Framework 版本 2.0 的新功能之一是增强型的跟踪系统。 基本前提不变：跟踪消息通过交换机发送到侦听器，侦听器将数据报告给相关联的输出介质。 2.0 版的主要区别是，可以通过 <xref:System.Diagnostics.TraceSource> 类的实例启动跟踪。 <xref:System.Diagnostics.TraceSource> 用作增强型跟踪系统，并可用来代替较旧的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 跟踪类的静态方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类仍存在，但建议使用 <xref:System.Diagnostics.TraceSource> 类进行跟踪。  
@@ -171,10 +172,10 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.TraceSource>  
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.EventTypeFilter>  
- [如何： 创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
  [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -28,11 +28,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc8914f4bc891aefa191ba5cf2b659afda0f905b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b40a4f1ba28559ee35dff9866539476e55cbd0fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全策略 - 平台安全性
 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 不仅提供各种安全服务，而且还利用基础平台（例如，操作系统、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 和 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]）的安全功能。 这些层组合在一起旨在提供 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 强大且深层防御的安全模型，尝试避免任何单点故障，如下图所示：  
@@ -218,7 +219,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)]包含并扩展了作为持续提供安全承诺一部分的 [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] 的安全功能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [了解在 Windows XP SP2 的 Microsoft Internet Explorer 6 中的安全性](http://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)  
  [了解和使用受保护的模式 Internet 资源管理器](http://msdn.microsoft.com/library/bb250462.aspx)  
  [Windows XP Service Pack 3](http://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  

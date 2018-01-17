@@ -14,11 +14,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 407fa758c6564c3b7a5a8573acef1b6e181399d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1219f2c1a173f454827c7450e66d90a500d87e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-message-contract"></a>默认消息协定
 默认消息协定示例演示了一个服务，在该服务中，用户定义的自定义消息会在服务操作来回传递。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器接口作为类型化的服务。 而不是对各个服务操作的加法、 减法、 乘法和除法中使用[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，此示例将包含操作数和运算符，并返回自定义消息传递算术计算的结果。  
@@ -192,4 +193,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

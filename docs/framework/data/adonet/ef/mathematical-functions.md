@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8390f1e1822d7581ab0352a8c81acbc7ce545507
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea933d1e6c0245f3bc6cc2a0767b593957b0598a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mathematical-functions"></a>数学函数
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学函数，这些函数针对作为自变量提供的输入值执行计算并返回数值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。下表描述 SqlClient 数学函数。  
@@ -56,5 +57,5 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 |---------------------|---------------------|---------------------|  
 |[数学函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115913)|[数学函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115911)|[数学函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115912)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于实体框架函数的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

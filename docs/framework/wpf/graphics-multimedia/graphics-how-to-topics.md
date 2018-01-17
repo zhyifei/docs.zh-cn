@@ -18,11 +18,12 @@ caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8717e4e1e54e07109d2e00d9bbf13dbd9d8dde8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03caea0247c387c7787838080cd473ccf2b49b4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-how-to-topics"></a>图形帮助主题
 以下主题演示如何使用的图形功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [如何：通过缓存元素来提升呈现性能](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
  [如何：将缓存的元素用作画笔](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Shapes.Shape>  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  

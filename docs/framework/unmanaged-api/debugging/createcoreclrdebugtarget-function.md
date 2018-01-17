@@ -22,11 +22,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d1f52bddb5d5f11d36fcf8b833dd6fe65f9c0a4c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e5b05cc6c84f2f891691613a485d35d008ef79e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget 函数
 创建一个与运行在远程计算机上，并返回的调试器代理连接[ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)可以用于查询正在运行的进程和远程计算机上加载的运行时对象。  
@@ -57,7 +58,7 @@ HRESULT CreateCoreClrDebugTarget (
  E_FAIL（或其他 E_ 返回代码）  
  其他故障。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CoreClrRemoteDebuggingInterfaces.h  

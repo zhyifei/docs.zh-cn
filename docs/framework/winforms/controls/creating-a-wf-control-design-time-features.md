@@ -21,11 +21,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba195656363b15407aed6a4da0ab804421a3d964
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件
 自定义控件的设计时体验可增强通过创作一个关联的自定义设计器。  
@@ -73,9 +74,9 @@ ms.lasthandoff: 11/21/2017
  有关完整代码列表，请参阅[如何： 创建 Windows 窗体控件，采用利用的设计时功能](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
 -   若要能够创建和运行 Windows 窗体应用程序项目的计算机上安装了 Visual Studio 的足够权限。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建应用程序项目。 此项目将用于生成承载自定义控件的应用程序。  
   
-#### <a name="to-create-the-project"></a>创建项目  
+#### <a name="to-create-the-project"></a>要创建项目  
   
 -   创建一个名为"MarqueeControlTest。"的 Windows 窗体应用程序项目 有关详细信息，请参阅 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
@@ -467,7 +468,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#560](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#560)]  
   
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>将设计器谓词添加到你的自定义设计器  
- 设计器谓词是链接到事件处理程序的菜单命令。 在设计时将设计器谓词添加到组件的快捷菜单。 有关更多信息，请参见<xref:System.ComponentModel.Design.DesignerVerb>。  
+ 设计器谓词是链接到事件处理程序的菜单命令。 在设计时将设计器谓词添加到组件的快捷菜单。 有关详细信息，请参阅<xref:System.ComponentModel.Design.DesignerVerb>。  
   
  你将向设计器添加两个设计器谓词：**运行测试**和**停止测试**。 这些谓词将允许您查看的运行时行为`MarqueeControl`在设计时。 这些谓词将被添加到`MarqueeControlRootDesigner`。  
   
@@ -642,7 +643,7 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 -   控制如何序列化你的控件以及如何为其生成代码。 有关详细信息，请参阅[动态源代码生成和编译](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.UserControl>  
  <xref:System.Windows.Forms.Design.ParentControlDesigner>  
  <xref:System.Windows.Forms.Design.DocumentDesigner>  

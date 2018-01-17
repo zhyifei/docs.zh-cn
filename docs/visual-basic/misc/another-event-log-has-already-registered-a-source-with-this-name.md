@@ -8,11 +8,11 @@ ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8beea344d233794ddc36d7fc53db1c01be84399f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f04afd5d061a44f572d95abfb0173ad6fa2ac27
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>另一个事件日志已使用该名称注册了一个源
 已尝试向事件日志写入条目，其中指定的源使用其他事件日志进行注册。  
@@ -25,7 +25,6 @@ ms.lasthandoff: 11/21/2017
   
 2.  使用新的日志注册源。  
   
-## <a name="see-also"></a>另请参阅  
- [My.Application.Log 对象](../../visual-basic/language-reference/objects/my-application-log-object.md)  
- [如何： 删除的事件源](http://msdn.microsoft.com/en-us/bc66c900-4b8a-426a-b8e2-17031a20167e)  
- [如何： 将你的应用程序添加为事件日志条目的源](http://msdn.microsoft.com/en-us/948ff920-a739-4e66-a191-ee951512d42c)
+## <a name="see-also"></a>请参阅  
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+

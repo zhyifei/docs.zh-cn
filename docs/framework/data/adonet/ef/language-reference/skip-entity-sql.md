@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f53c84b216c847740f2c093582fd151d5ed0ef63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28f774b8d8bb232512fb975d292df4423f56a6d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
 在 ORDER BY 子句中使用 SKIP 子子句可执行物理分页。 SKIP 不能脱离 ORDER BY 子句单独使用。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/21/2017
 [ SKIP n ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `n`  
  要跳过的项数。  
   
@@ -45,8 +46,8 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 本 [示例中的](https://msdn.microsoft.com/library/bb738702\(v=vs.100\).aspx#_ESQL) 查询使用 ORDER BY 运算符与 SKIP 来指定 SELECT 语句中返回的对象所使用的排序顺序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
  [如何： 查询结果分页](http://msdn.microsoft.com/en-us/ffc0f920-e7de-42e0-9b12-ef356421d030)  
  [分页](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
- [返回页首](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+ [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

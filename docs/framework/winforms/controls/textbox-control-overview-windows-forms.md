@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e8c75392f12b87c7495b1fcdf5419f2463067161
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d7312246c43157ca9cd6c7b41d2b110586721c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox 控件概述（Windows 窗体）
 若要获取用户输入或显示文本使用 Windows 窗体的文本框。 <xref:System.Windows.Forms.TextBox>控件通常用于可编辑文本，虽然也可使其成为只读的。 文本框可以显示多个行，为该控件的大小的文本换行并添加基本格式设置。 <xref:System.Windows.Forms.TextBox>控件提供单个格式样式显示或文本框控件中输入的文本。 若要显示多种类型的格式化文本，请使用<xref:System.Windows.Forms.RichTextBox>控件。 有关详细信息，请参阅[RichTextBox 控件概述](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)。  
@@ -58,7 +59,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TextBox>  
  [如何：在 Windows 窗体 TextBox 控件中控制插入点](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
  [如何：使用 Windows 窗体 TextBox 控件创建密码文本框](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  

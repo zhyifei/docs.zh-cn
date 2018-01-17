@@ -17,17 +17,18 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 105ba4dd213542e6dd441bb774ebb76123366304
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d4955da9abe91d10af70934a24e4d2bda954b487
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-global-static-functions"></a>承载全局静态函数
 本部分介绍使用.NET Framework 托管 Api 的非托管宿主函数。  
   
 ## <a name="in-this-section"></a>本节内容  
- [.NET framework 4 承载全局静态函数](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)  
+ [.NET Framework 4 承载全局静态函数](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)  
  介绍在.NET Framework 4 中引入的函数。  
   
  [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  

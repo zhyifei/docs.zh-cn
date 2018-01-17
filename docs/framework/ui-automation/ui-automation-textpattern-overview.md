@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 56b0774db462c92c6ab0d66ab7158dcc01da0c9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自动化 TextPattern 概述
 > [!NOTE]
@@ -137,11 +138,11 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Automation.Text.TextUnit>  
  用于导航文本范围的逻辑分段的预定义文本单元（字符、单词、行或段落）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [使用在 UI 自动化中缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [UI 自动化客户端的控件模式映射](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
  [文本服务框架](http://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da80ab797078e1fe912ccbfff07d7fb2da49664e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 04003584cf12355116d32cccffdcb2b9990b1b85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttimeoutsgt"></a>&lt;超时&gt;
 表示一个配置元素，该元素指定允许服务主机打开或关闭的时间间隔。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<主机 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|一个指定服务主机设置的配置元素。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.HostElement>  
  <xref:System.ServiceModel.ServiceHost>  
  [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)

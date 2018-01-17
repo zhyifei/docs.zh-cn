@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ecb47efdd69730350cf98e1c7b1e49150ad324d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f4b42fd71dacb0071013067dc3c14add96c8aca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-coordinates"></a>Windows 窗体坐标
 Windows 窗体坐标系统基于设备坐标，并度量值时在 Windows 窗体中绘制的基本单位是设备单元 （通常情况下，像素）。 在屏幕上的点的 x 坐标和 y 坐标对所述增加到右侧和 y 坐标增加从顶部到底部的 x 坐标。 来源，相对于屏幕中，位置将有所不同具体取决于是否指定屏幕或客户端坐标。  
@@ -38,6 +39,6 @@ Windows 窗体坐标系统基于设备坐标，并度量值时在 Windows 窗体
 ## <a name="mapping-from-one-type-of-coordinate-to-another"></a>将映射到另一种类型的坐标从  
  有时，你可能需要从屏幕坐标映射到客户端坐标。 你可以轻松地实现此目的使用<xref:System.Windows.Forms.Control.PointToClient%2A>和<xref:System.Windows.Forms.Control.PointToScreen%2A>方法中提供<xref:System.Windows.Forms.Control>类。 例如，<xref:System.Windows.Forms.Control.MousePosition%2A>属性<xref:System.Windows.Forms.Control>报告在屏幕坐标中，但你可能想要将它们转换成工作区坐标。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Control.PointToClient%2A>  
  <xref:System.Windows.Forms.Control.PointToScreen%2A>

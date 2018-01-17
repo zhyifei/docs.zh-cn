@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a5b2c78ef7e675a656caf00e9d0ba0c9eb0630b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filtering"></a>筛选
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 筛选系统可以使用声明性筛选器来匹配消息以及做出操作决定。 使用筛选器，可以通过检查消息的某个部分来确定如何处理消息。 例如，查询过程可以使用 XPath 1.0 查询来检查已知标头的优先级元素，以确定是否将消息移动到队列的靠前位置。  
@@ -93,5 +94,5 @@ ms.lasthandoff: 12/02/2017
   
 -   `EndpointAddress` 中的其余终结点参数（如 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 中指定）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据传输和序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

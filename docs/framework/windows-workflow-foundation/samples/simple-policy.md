@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a2798c753e1fc526b2f95801d49108a2aba9e8a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 884a099c1334b53c904173987d2f1ccfe6dd741a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="simple-policy"></a>简单策略
 此示例演示如何在工作流中使用 <xref:System.Workflow.Activities.PolicyActivity> 活动。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\SimplePolicy`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Workflow.Activities.Rules.RuleSet>  
  <xref:System.Workflow.Activities.PolicyActivity>  
- [高级的策略](../../../../docs/framework/windows-workflow-foundation/samples/advanced-policy.md)
+ [高级策略](../../../../docs/framework/windows-workflow-foundation/samples/advanced-policy.md)

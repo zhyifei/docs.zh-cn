@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 85a980191e727ec1a20cca618504d1d9cbc2c277
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8cdd5d8a05354ad6f0df8343d546fd6cd1e8eac4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务的调试和帮助信息功能。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/02/2017
   
  可以利用可选的 `httpHelpPageBinding` 和 `httpHelpPageBinding`属性来配置用于访问服务网页的绑定。 如果未指定这两个属性，则根据情况使用相应的默认绑定（采用 HTTP 时为 `HttpTransportBindingElement`，采用 HTTPS 时为 `HttpsTransportBindingElement`）来访问服务帮助页。 请注意：不能将这些属性用于内置 WCF 绑定。 与支持 xref:System.ServiceModel.Channels.IReplyChannel 的内部绑定元素的唯一绑定 > 将支持。 此外，绑定的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 属性必须为 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
  <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
  [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  

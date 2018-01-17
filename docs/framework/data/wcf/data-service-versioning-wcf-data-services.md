@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 545096292f34566b4bb6c3c44bb20ddac426af26
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 824abc79ae8d7ddd36b907977057a659aca86f20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>数据服务版本管理（WCF 数据服务）
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可用于创建数据服务，以便客户端可以为基于数据模型的资源使用 Uri 来访问数据。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 还支持服务操作的定义。 这些数据服务在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术要求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 更改现有数据服务时，您必须考虑是否要定义您的数据服务的新版本以及如何将对现有客户端应用程序的影响降至最低。 本主题提供了有关何时以及如何创建一个新版本的数据服务的指导。 它还说明 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]如何处理客户端和数据服务之间的交换，这些数据服务支持不同版本的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议。  
@@ -83,6 +84,6 @@ ms.lasthandoff: 12/02/2017
   
  返回的元数据的 `DataServices` 元素还包含一个 `DataServiceVersion` 特性，该特性的值与响应消息中 `DataServiceVersion` 标头的值相同。 客户端应用程序，如**添加服务引用**中的对话框[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]，使用此信息来生成正常使用的版本的客户端数据服务类[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，承载数据服务。 有关详细信息，请参阅[OData： 协议版本控制](http://go.microsoft.com/fwlink/?LinkId=186071)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f36d944814adaf4a90a04715c60f2fe732cb544a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能兼容性
 在部分受信任的环境中运行时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支持一个有限的功能子集。 部分信任中支持的功能围绕 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主题中所述的一组特定的方案而设计。  
@@ -169,10 +170,10 @@ ms.lasthandoff: 12/02/2017
 ## <a name="unlisted-features"></a>未列出的功能  
  若要在部分信任环境中运行时发现不可用的信息或操作，最好的方法是尝试在 `try` 块的内部访问资源或执行操作，然后 `catch` 失败。 为了避免重复错误在跟踪文件中造成泛滥， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会在第一次安全失败之后禁用资源或操作跟踪。 对于在第一次尝试访问资源或执行操作时出现的每个失败的资源访问，将会有一个异常跟踪。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
  <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
  [支持的部署方案](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [部分信任最佳实践](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+ [部分信任最佳做法](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

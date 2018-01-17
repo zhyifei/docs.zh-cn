@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: de4f4b1ae5ba252778d9463cba43a9ccb419600a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa211005f13fca2c55ff693a12b3e37629e39ad3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-integration-security-in-sql-server"></a>SQL Server 中的 CLR 集成安全性
 Microsoft SQL Server 提供 .NET Framework 的公共语言运行时 (CLR) 组件集成。 通过 CLR 集成，您可以使用任何 .NET Framework 语言（如 Microsoft Visual Basic .NET 或 Microsoft Visual C#）编写存储过程、触发器、用户定义的类型、用户定义的函数、用户定义的聚合以及流式表值函数。  
@@ -32,8 +33,8 @@ Microsoft SQL Server 提供 .NET Framework 的公共语言运行时 (CLR) 组件
 |[代码访问安全性](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题。|  
 |[CLR 集成安全性](http://go.microsoft.com/fwlink/?LinkId=59998)|讨论在 SQL Server 内部执行的托管代码的安全模型。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 中的应用程序安全方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [SQL Server 公共语言运行时集成](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

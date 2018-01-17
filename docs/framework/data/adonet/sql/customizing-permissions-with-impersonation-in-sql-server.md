@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cde4fafaa10d7c9b495d4f98ddcd42c7f8a7524a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fbd5aa34fa9e90df972e718c28d0ba97287c3d8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模拟自定义权限
 许多应用程序都使用存储过程来访问数据，依靠所属权链接来限制对基表的访问。 您可以授予针对存储过程的 EXECUTE 权限，撤消或拒绝针对基表的权限。 如果存储过程和表具有相同的所有者，则 SQL Server 不检查调用方的权限。 但是，如果对象具有不同的所有者或使用动态 SQL，则所属权链接不起作用。  
@@ -83,12 +84,12 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 |[上下文切换](http://msdn.microsoft.com/library/ms188268.aspx)SQL Server 联机丛书中|包含说明如何使用 EXECUTE AS 子句的主题的链接。|  
 |[使用 EXECUTE AS 创建自定义权限集](http://msdn.microsoft.com/library/ms190384.aspx)和[在模块中使用 EXECUTE AS](http://msdn.microsoft.com/library/ms178106.aspx) SQL Server 联机丛书中|说明如何使用 EXECUTE AS 子句的主题。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server 中的应用程序安全方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [管理与 SQL Server 中的存储过程的权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [SQL Server 中编写安全动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [SQL Server 中的存储的过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [使用存储过程修改数据](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

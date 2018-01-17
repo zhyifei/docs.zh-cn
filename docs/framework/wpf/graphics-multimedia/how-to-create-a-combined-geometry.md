@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2be0471f27d26b145cc29847a08bf3bc3b1d51ff
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ee77da00604b7e4965cc376748606b6bd0e92ad8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-combined-geometry"></a>如何：创建组合的几何图形
 此示例演示如何组合几何图形。 若要合并两个几何图形，使用<xref:System.Windows.Media.CombinedGeometry>对象。 设置其<xref:System.Windows.Media.CombinedGeometry.Geometry1%2A>和<xref:System.Windows.Media.CombinedGeometry.Geometry2%2A>具有两个几何图形合并，并设置属性<xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A>属性，确定如何几何图形将组合在一起，到`Union`， `Intersect`， `Exclude`，或`Xor`.  

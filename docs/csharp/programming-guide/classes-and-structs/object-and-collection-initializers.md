@@ -11,11 +11,11 @@ ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
 caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7445a2919baaa477b4611c4c5ee5a0031539ca30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 628f08aaebfa209fc9cb7cfb2b506fc67d5424f9
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>对象和集合初始值设定项（C# 编程指南）
 使用对象初始值设定项，你可以在创建对象时向对象的任何可访问字段或属性分配值，而无需调用后跟赋值语句行的构造函数。 利用对象初始值设定项语法，你可为构造函数指定参数或忽略参数（以及括号语法）。  以下示例演示如何使用具有命名类型 `Cat` 的对象初始值设定项以及如何调用默认构造函数。 请注意，自动实现的属性在 `Cat` 类中的用法。 有关详细信息，请参阅[自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_2.cs)] 
  
-对象初始值设定项语法允许你创建一个实例，并在此之后它将分配新创建的对象，其分配的属性中分配, 的变量。
+对象初始值设定项语法允许你创建一个实例，然后将具有其分配属性的新建对象指定给赋值中的变量。
   
 ## <a name="object-initializers-with-anonymous-types"></a>具有匿名类型的对象初始值设定项  
  尽管对象初始值设定项可用于任何上下文中，但它们在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询表达式中特别有用。 查询表达式常使用只能通过使用对象初始值设定项进行初始化的[匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)，如下面的声明所示。  
@@ -80,10 +80,21 @@ var numbers = new Dictionary<int, string> {
 };  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="examples"></a>示例
+
+ 下例结合了对象和集合初始值设定项的概念。
+
  [!code-csharp[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]  
-  
-## <a name="see-also"></a>另请参阅  
+ 
+ 在下面的示例中，实现包含 `Add` 方法（具有多个参数）的 <xref:System.Collections.IEnumerable> 的对象允许在列表中每项具有多个元素的集合初始值设定项与 `Add` 方法的签名对应。 
+ 
+ [!code-csharp[csProgGuideLINQ#84](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_7.cs)]
+ 
+ `Add` 方法可使用 `params` 关键字来获取可变数量的自变量，如下例中所示。 此示例还演示了索引器的自定义实现，以及使用索引初始化集合。
+ 
+ [!code-csharp[csProgGuideLINQ#85](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_8.cs)]
+ 
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [匿名类型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

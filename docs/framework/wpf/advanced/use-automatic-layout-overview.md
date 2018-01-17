@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c9f5b9a6665778bc313febb039aeeeb2e484a6c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="use-automatic-layout-overview"></a>使用自动布局概述
 本主题介绍有关如何编写的开发人员准则[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]具有可本地化的应用程序[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在过去的本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]是一个耗时的过程。 每种语言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]必需的按像素调整改写。 使用适当的设计和编码标准，今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以用来构造，因此，本地化人员必须小于调整大小和重新定位的工作量。 编写的应用程序可以更轻松地调整大小和重新定位到方法调用自动布局，并可以通过使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序设计。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- 在此示例中，只需更改文本即可生成一个西班牙文按钮。 例如，  
+ 在此示例中，只需更改文本即可生成一个西班牙文按钮。 例如，应用于对象的  
   
  [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
@@ -85,7 +86,7 @@ Grid
   
  **请注意**完整的代码示例，请参阅[共享大小调整属性之间网格](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
  [使用自动布局创建按钮](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
  [使用网格进行自动布局](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

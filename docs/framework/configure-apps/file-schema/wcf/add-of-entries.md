@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b01ad9e608fca669c28124cf5a68781d86058308
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1583ec3cab3ed43556dc066c1e4753ddf9845ef5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltentriesgt"></a>&lt;entries&gt; 的 &lt;add&gt;
 表示将筛选器映射到以前定义的客户端终结点的路由项。 与此筛选器匹配的消息将发送到此目标。  
@@ -59,6 +60,6 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|一个包含路由映射项的配置节。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>      
  <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType> 

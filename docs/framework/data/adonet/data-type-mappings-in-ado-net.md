@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 65f9d8a6182c5882a173a3a3733c1c0c220efbf6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b30f4e36ffd98289bb971e04b55b0249138e0efd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET 中的数据类型映射
 .NET Framework 基于用于定义如何在运行时声明、使用和管理类型的通用类型系统。 它由值类型和引用类型组成，这两种类型均派生自 <xref:System.Object> 基类型。 使用数据源时，如果未显式指定数据类型，则从数据提供程序推断出它。 例如，<xref:System.Data.DataSet> 对象独立于任何特定的数据源。 `DataSet` 中的数据从数据源中进行检索，而更改则会使用 `DataAdapter` 持久保存回数据源。 这意味着当 `DataAdapter` 使用数据源中的值填充 <xref:System.Data.DataTable> 中的 `DataSet` 时，`DataTable` 中列的结果数据类型为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型，而不是特定于用于连接数据源的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序的类型。  
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/21/2017
  [Oracle 数据类型映射](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
  列出针对 <xref:System.Data.OracleClient> 的推断数据类型映射和数据访问器方法。  
   
- [浮点数字](../../../../docs/framework/data/adonet/floating-point-numbers.md)  
+ [浮点数](../../../../docs/framework/data/adonet/floating-point-numbers.md)  
  描述开发人员在使用浮点数时经常遇到的问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 数据类型和 ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [配置参数和参数数据类型](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  

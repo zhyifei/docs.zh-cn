@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ab9ce555406dfeb16f99601e6b88af2395c91ae0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 501488c0ac03ebf508145572ed73163d7940bfbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 枚举
 包含一些值，用于指示类型元数据。  
@@ -115,12 +116,12 @@ typedef enum CorTypeAttr {
 |`tdRTSpecialName`|指定公共语言运行时，应检查名称编码。|  
 |`tdHasSecurity`|指定该类型具有与之关联的安全。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [元数据枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅  
+ [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

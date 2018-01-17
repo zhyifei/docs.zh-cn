@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50bd1492c4e2e8941a77f344c04414a763390e89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>传输：WSE 3.0 TCP 互操作性
 WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定义 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 传输实现， 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 下列步骤演示如何生成此自定义 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 传输：  
@@ -205,4 +206,4 @@ Symbols:
   
     8.  TCP 传输测试客户端将在一个新控制台中启动。 客户端从服务请求股票报价，然后将结果显示在其控制台窗口中。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

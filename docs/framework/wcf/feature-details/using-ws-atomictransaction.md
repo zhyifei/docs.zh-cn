@@ -14,14 +14,15 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12e6e2be3e01ea920b45cce7a27814dd19c00935
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 124c5dc0f6db94ae459fe140bd7a4290aa56e04a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-ws-atomictransaction"></a>使用 WS-AtomicTransaction
-WS-AtomicTransaction (WS-AT) 是一种可互操作的事务协议。 它使您能够使用 Web 服务消息对分布式事务进行流处理并以可互操作的方式在异类事务基础结构之间进行协调。 WS-AT 使用两阶段提交协议在分布式应用程序、事务管理器和资源管理器之间驱动原子结果的生成。  
+WS-AtomicTransaction (WS-AT) 是一种可互操作的事务协议。 它使你能够使用 Web 服务消息对分布式事务进行流处理并以可互操作的方式在异类事务基础结构之间进行协调。 WS-AT 使用两阶段提交协议在分布式应用程序、事务管理器和资源管理器之间驱动原子结果的生成。  
   
  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的 WS-AT 实现包括 Microsoft 分布式事务处理协调器 (MSDTC) 事务管理器中内置的协议服务。 使用 WS-AT，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序可以使事务流动到其他应用程序，包括使用第三方技术生成的可互操作的 Web 服务。  
   
@@ -35,5 +36,5 @@ WS-AtomicTransaction (WS-AT) 是一种可互操作的事务协议。 它使您�
   
  如果服务器和客户端使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 进行写入，则不需要使用 WS-AT。 可以改为使用 `NetTcpBinding` 的默认设置并启用 `TransactionFlow` 属性，此设置将使用 `OleTransactions` 协议。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。 否则，如果你要使事务流动到使用第三方技术生成的 Web 服务，则必须使用 WS-AT。  
   
-## <a name="see-also"></a>另请参阅  
- [配置 Ws-atomic 事务支持](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+## <a name="see-also"></a>请参阅  
+ [配置 WS-Atomic 事务支持](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

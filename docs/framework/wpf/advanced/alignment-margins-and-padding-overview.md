@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c0a57018959aedc72e0fa02befa1733f66f265b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Alignment、Margin 和 Padding 概述
 <xref:System.Windows.FrameworkElement>类公开多个用于精确定位子元素的属性。 本主题讨论四个最重要的属性： <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。 了解这些属性的作用非常重要，因为这些属性是控制元素在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的位置的基础。  
@@ -151,7 +152,7 @@ ms.lasthandoff: 11/21/2017
   
  我们还提供了一些附加资源，这些资源更详细地介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 布局。 [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)主题包含更详细地介绍各种<xref:System.Windows.Controls.Panel>元素。 主题[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)引入了使用布局元素来定位组件并将其操作绑定到数据源的高级的技术。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.FrameworkElement>  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
  <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  

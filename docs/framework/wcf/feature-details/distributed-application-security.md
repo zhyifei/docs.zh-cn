@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 842ce0efefcc026ad33d9be3b2b681fcfc9c0b59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributed-application-security"></a>分布式应用程序安全
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全分为三个主要功能区域：传输安全、访问控制和审核。 传输安全提供完整性、保密性和身份验证。 传输安全由传送安全、消息安全或 `TransportWithMessageCredential` 实现。  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
   
  在消息安全模式中，通过执行传输安全，还可以与客户端交换服务凭据，作为初始协商的一部分。 若要启用协商，请将 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 属性设置为 `true`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  

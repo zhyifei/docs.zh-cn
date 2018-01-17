@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d232bfed801a17e1ee47dee7643ae0bf21d338e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 270a154c40b85ad4774bececf12685393f4d6c58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 方法
 指定元数据接口和文件名称，则会返回正确 <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> 将读取与模块关联的调试符号的接口。  
@@ -62,12 +63,12 @@ HRESULT GetReaderForFile2(
 ## <a name="return-value"></a>返回值  
  如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** CorSym.idl、 CorSym.h  
   
 ## <a name="remarks"></a>备注  
  此版本的方法可以搜索区域以外的旁边，该模块中的 PDB 文件。 搜索策略可以控制通过组合[CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)。 例如，`AllowReferencePathAccess | AllowSymbolServerAccess`寻找 PDB 的可执行文件旁边和符号服务器，但不会查询注册表或可执行文件中使用的路径。 如果`searchPath`提供参数，这些目录将始终搜索。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ISymUnmanagedBinder2 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
  [GetReaderForFile 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)

@@ -16,11 +16,11 @@ ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
 caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 32f993e4b9bcd126ebb6d70310fc0781e8b137b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: df0e8ad1990fe7a1aa495e1794c942813cffb5bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一个或多个已声明的编程元素只能在包含其声明的程序集内访问。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
  有关的比较`Friend`以及其他访问修饰符，请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 > [!NOTE]
->  你可以指定另一个程序集是友元程序集，从而使其可以访问所有类型和成员标记为`Friend`。 有关详细信息，请参阅[友元程序集](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)。  
+>  你可以指定另一个程序集是友元程序集，从而使其可以访问所有类型和成员标记为`Friend`。 有关详细信息，请参阅[友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
   
 ## <a name="example"></a>示例  
  下面的类使用`Friend`修饰符以允许访问某些成员同一程序集内的其他编程元素。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  

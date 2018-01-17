@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44574b5737873371f9a7bc9be2d851a8ae1e101b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gridview-overview"></a>GridView 概述
 <xref:System.Windows.Controls.GridView>视图模式是一种视图模式的<xref:System.Windows.Controls.ListView>控件。 <xref:System.Windows.Controls.GridView>类和支持类让你和你的用户可以查看按钮通常用作交互式列标题的表中的项的集合。 本主题介绍<xref:System.Windows.Controls.GridView>类，并概述了其使用。  
@@ -138,7 +139,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.ListViewItem>  
  <xref:System.Windows.Controls.GridViewColumn>  
@@ -148,4 +149,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.ViewBase>  
  [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)  
  [在标题获得单击时对 GridView 列进行排序](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [操作说明主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

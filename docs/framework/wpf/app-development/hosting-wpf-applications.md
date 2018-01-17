@@ -18,11 +18,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2c61c4fd5651b8915971f67addeb162aca50108
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 051f37b0a7098cad5ac43766877cd973ca86e5b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-wpf-applications"></a>承载 WPF 应用程序
 WPF XAML 浏览器应用程序 (Xbap) 是胖客户端应用程序可以部署到 Web 服务器并在浏览器中启动。 WPF 主机 (PresentationHost.exe) 注册为 shell 和 MIME XBAP 和 XAML 文件的处理程序。 因此，Internet Explorer 知道 XBAP 启动时启动 WPF 主机。 Firefox 用户可以安装到主机 Xbap 以及启用 Firefox 的 Firefox 外接程序。 XBAP 可以通过使用 wpf 的本机浏览器托管 Api 提供托管在其他浏览器或独立的应用程序。  

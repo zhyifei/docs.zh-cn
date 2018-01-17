@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2de8341be66952bd88de0a46d7c76675ab404aed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 06f4feaa5b0b44a26e3d31b65dc465b67544482f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>如何：检查或修改客户端的消息
 通过实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 并将其插入客户端运行时，可以检查或修改通过 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 客户端的传入或传出消息。 有关详细信息，请参阅[扩展客户端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服务上的等效功能为 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 有关完整的代码示例请参阅[消息检查器](../../../../docs/framework/wcf/samples/message-inspectors.md)示例。  
@@ -135,7 +136,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
- [配置和扩展的运行时带有行为](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [使用行为配置和扩展运行时](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

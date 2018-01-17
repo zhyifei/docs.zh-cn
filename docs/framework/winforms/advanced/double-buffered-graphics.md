@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89413e0958366dd39c62bfaedb7e36471123bc22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7e4445b0a729eb1f826d17340db02f0c56149b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="double-buffered-graphics"></a>双缓冲图形
 对图形进行编程时出现闪烁是一个常见问题。 需要多个复杂画图操作的图形操作可导致呈现的图像出现闪烁或具有不可接受的外观。 为解决这些问题，.NET Framework 提供了双缓冲功能。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息使用<xref:System.Drawing.BufferedGraphics>类，请参阅[手动呈现缓冲图形](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)。 有关呈现图形的详细信息，请参阅 [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.BufferedGraphics>  
  <xref:System.Drawing.BufferedGraphicsContext>  
  <xref:System.Drawing.BufferedGraphicsManager>  

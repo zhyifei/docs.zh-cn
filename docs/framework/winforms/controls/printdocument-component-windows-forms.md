@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f37fdb04d29ae713d0ca851b53fe075c04a8e6bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c65d90b39dde9adaae3a6711c978383eb92c4480
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument 组件（Windows 窗体）
 将 Windows 窗体 `PrintDocument` 组件用于设置描述打印内容的属性，然后打印基于 Windows 的应用程序中的文档。 此组件可与 <xref:System.Windows.Forms.PrintDialog> 组件一起用于命令文档打印的各方面。  

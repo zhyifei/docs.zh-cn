@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: adc55d137a5578dbe8649afa02ab8525d4913cd8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7c0766c989df7c2329aa4d36af834378b02b1301
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>如何：对区域使用命中测试
 命中测试的目的是确定光标是否位于给定的对象，例如图标或按钮。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Region>  
  [GDI+ 中的区域](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
  [如何：对区域使用剪贴薄](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)

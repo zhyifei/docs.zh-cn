@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bd2356845c76e81ce2efe87bdf247de293d6115d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltstartupgt-element"></a>&lt;启动&gt;元素
 指定公共语言运行时启动信息。  
@@ -64,12 +65,12 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
 ## <a name="remarks"></a>备注  
- **\<SupportedRuntime >**元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用 **\<requiredRuntime >**元素。  
+  **\<SupportedRuntime >**元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用 **\<requiredRuntime >**元素。  
   
  在 Microsoft Internet Explorer 中托管的应用程序的启动代码将忽略**\<启动 >**元素及其子元素。  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<PaveOver> 指定要使用的运行时版本](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)  

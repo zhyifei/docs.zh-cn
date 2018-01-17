@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 71fdc7c68ff7e672a5adf044bbe0200563772a58
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc5245be9b008f4bd8021c501860d789c60c73a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
 本节为使用计算机或应用程序配置文件中的自定义绑定元素提供支持。 通过使用 `add` 关键字，然后将元素的 `type` 属性设置为绑定元素扩展，并将 `name` 属性设置为自定义绑定元素，您可以向此集合添加自定义绑定元素。  
@@ -51,6 +52,6 @@ ms.lasthandoff: 12/02/2017
 </customBinding>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>  
  [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)

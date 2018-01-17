@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa5394e874e35b80b01796642e18d69c71e867dc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b073efc47ccc1708bf4c58153b1001a21eee25f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
@@ -44,7 +45,7 @@ class TransactionFlowBindingElement : BindingElement
   
  访问类型：只读  
   
- 指定对已颁发的安全令牌标头（来自 WS-Trust 的 IssuedTokens）的要求。  
+ 指定对已颁发的安全令牌标头（来自 WS-Trust 的 IssuedTokens）的需求。  
   
 ### <a name="transactionprotocol"></a>TransactionProtocol  
  数据类型：String  
@@ -60,11 +61,11 @@ class TransactionFlowBindingElement : BindingElement
   
  指示是否支持传入事务。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>

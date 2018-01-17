@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17fe1a073a2c8fe6b800ce353b23ca43059d3454
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f9b1d2f957c54d1e91d7d14cd35c328d4a6666e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax"></a>AJAX
 本节包含演示异步 JavaScript 和 XML 功能的示例。  
@@ -32,10 +33,10 @@ ms.lasthandoff: 12/02/2017
  [基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)  
  演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 创建基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务。  
   
- [AJAX 服务使用 HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
+ [使用 HTTP POST 的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
  演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 创建使用 HTTP POST 的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 异步 JavaScript 和 XML (AJAX) 服务。  
   
- [无需配置的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
+ [无配置的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  
  演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 创建基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务。  
   
  [使用复杂类型的 AJAX 服务](../../../../docs/framework/wcf/samples/ajax-service-using-complex-types-sample.md)  

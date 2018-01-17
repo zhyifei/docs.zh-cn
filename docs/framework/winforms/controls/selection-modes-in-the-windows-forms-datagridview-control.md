@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f6b603382382971249b08cddd482566ec6e5fa5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0d605b7ee7e48ad0ed2e693f0e71e5f1c25e022
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的选择模式
 有时你希望应用程序以根据用户中的选定内容执行操作<xref:System.Windows.Forms.DataGridView>控件。 根据操作，你可能想要限制可能会出现的各种选择。 例如，假设你的应用程序可以打印当前所选记录的报表。 在这种情况下，你可能想要配置<xref:System.Windows.Forms.DataGridView>控件，以便单击任意位置行中始终选择整行，并且可以选择一次只有一个该行。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 > [!TIP]
 >  演示如何以编程方式使用选定的单元格的示例代码可在<xref:System.Windows.Forms.DataGridView>类概述。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  

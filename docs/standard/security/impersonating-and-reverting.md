@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4d1bd053cacc677ca66fc2e2a9e14620e1d3a8b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 869b9aadfa236a39d9807062e61046922e382d13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="impersonating-and-reverting"></a>模拟与恢复
 有时可能需要获取 Windows 帐户标记来模拟 Windows 帐户。 例如，基于 ASP.NET 的应用程序可能需要在不同时间代表多个用户进行工作。 应用程序可以从 Internet 信息服务 (IIS) 接受一个表示管理员的标记，模拟该用户，执行一项操作，然后还原到以前的身份。 然后，可以从 IIS 接受一个表示拥有较少权限的用户的标记，执行某项操作，并再次还原。  
@@ -67,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  请注意，两者**Impersonate**也不**撤消**更改**主体**对象 (<xref:System.Security.Principal.IPrincipal>) 与当前调用上下文关联。 相反，模拟和还原会更改与当前操作系统进程关联的标记。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Security.Principal.WindowsIdentity>  
  <xref:System.Security.Principal.WindowsImpersonationContext>  
  [主体和标识对象](../../../docs/standard/security/principal-and-identity-objects.md)  

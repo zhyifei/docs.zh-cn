@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: db75c3288b8247f0717c4792c57bfb30bb2e4416
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54d1409b74793a8539f432ce0b43f410d578e934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certificate-selection-and-validation"></a>证书选择和验证
 <xref:System.Net> 类支持多种针对安全套接字层 (SSL) 连接选择和验证 <xref:System.Security.Cryptography.X509Certificates> 的方法。 客户端可以选择一个或多个证书对服务器自身的客户端进行身份验证。 服务器可以要求客户端证书具有一个或多个用于身份验证的特定属性。  
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/21/2017
   
  除了这些工具， <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类还提供从文件系统加载证书的方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)  
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)

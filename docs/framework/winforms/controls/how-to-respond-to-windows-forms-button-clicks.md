@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 923eb7d1b1b5b442ce897619253a958019b239a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28b0467c8b589882fe5afd7e884d0de55d8ca564
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>如何：响应 Windows 窗体按钮的单击
 Windows 窗体的最基本用法<xref:System.Windows.Forms.Button>控制是单击该按钮时运行某些代码。  
@@ -65,7 +66,7 @@ Windows 窗体的最基本用法<xref:System.Windows.Forms.Button>控制是单�
        }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Button 控件概述](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
  [如何选择 Windows 窗体 Button 控件](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
  [Button 控件](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

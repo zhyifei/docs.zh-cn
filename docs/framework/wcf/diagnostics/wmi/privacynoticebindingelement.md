@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4406253225bd851ca5472de786c30e696a9b4d78
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 60b3c3d928d47edf71db47a83683c31a3f4e0389
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="privacynoticebindingelement"></a>PrivacyNoticeBindingElement
 PrivacyNoticeBindingElement  
@@ -45,18 +46,18 @@ class PrivacyNoticeBindingElement : BindingElement
   
  隐私声明版本。  
   
-### <a name="url"></a>Url  
+### <a name="url"></a>URL  
  数据类型：String  
   
  访问类型：只读  
   
  隐私声明所在的 URL。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>

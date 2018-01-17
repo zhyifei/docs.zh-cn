@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 251bc4d5e2955a7304a9a7b08f367081a95507cb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ae15477a149b3452c7624c659be9b7e15874a652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="throttling"></a>遏制
 遏制示例演示如何使用遏制控制。 限制控件会对并发调用、实例或会话的数目施加限制以防止过度使用资源。 您可以在服务配置文件设置中指定遏制行为。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -92,4 +93,4 @@ Press any key to continue . . .
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Throttling`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0fac2e73e76ad49a5b1ce6942f3ae2b4c0584e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d0f4eb14fbb459f6844053507d1eb4f0a46cede3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>如何：访问 Windows 窗体 DataGridViewComboBoxCell 下拉列表中的对象
 如<xref:System.Windows.Forms.ComboBox>控件，<xref:System.Windows.Forms.DataGridViewComboBoxColumn>和<xref:System.Windows.Forms.DataGridViewComboBoxCell>类型使你能够将任意对象添加到他们的下拉列表。 使用此功能，可以表示下拉列表中的复杂状态，而无需在一个单独的集合中存储相应的对象。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
 -   对 System 和 System.Windows.Forms 程序集的引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
  <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>  

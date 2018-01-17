@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa8bb873ed42d5ba717359f420855b605cbe423d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a02d6dbc7c6f6583a174bd10853d8c8070ac273
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>在 .NET Framework 4 工作流中使用 Interop 活动
 通过使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 活动，可在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 工作流中使用通过 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 或 <xref:System.Activities.Statements.Interop> 创建的活动。 本主题概述如何使用 <xref:System.Activities.Statements.Interop> 活动。  

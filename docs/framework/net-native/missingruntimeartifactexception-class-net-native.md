@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e477a870107a8d4d8fbac9a3d4fb10a285158280
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e41e6c6d47d7057e2482a48e6f48c33a1325294c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>缺少运行时间项目异常类 (.NET Native)
 **适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -88,6 +89,6 @@ ms.lasthandoff: 11/21/2017
   
  `MissingRuntimeArtifactException` 类不包括独有成员；它的所有成员都是从其基类即 <xref:System.MemberAccessException> 继承的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

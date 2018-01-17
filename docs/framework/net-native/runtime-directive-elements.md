@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3143c6b78749f3339e7e7195b551b5a5c31fad12
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e2566c5ebe8c94610c8f7e258da7c77adb86a49f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-directive-elements"></a>运行时指令元素
 运行时指令 (rd.xml) 文件格式支持以下运行时指令元素。 请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)了解分层表示形式。  
@@ -76,5 +77,5 @@ ms.lasthandoff: 10/18/2017
  [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  将运行时策略应用到以传递到方法为代表的 <xref:System.Type> 参数类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [rd.xml 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c794c6e20b479ea4686caba29704f8851d108432
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63cfe130e841ce073f794db6494fa8e97364d476
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instance-stores"></a>实例存储区
 实例存储区是实例的逻辑容器。 它是实例数据和元数据的存储位置。 实例存储区不表示专用物理存储区。 实例存储区可以包含 SQL Server 数据库中的持久性信息或内存中的非持久状态信息。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]附带的 SQL 工作流实例存储是实例存储区的具体实现，它允许工作流在 SQL Server 2005 或 SQL Server 2008 数据库中持久保存实例数据和元数据。 此外，Windows Server App Fabric 还提供了实例存储区的具体实现。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server App Fabric 实例存储区、 查询和管理提供程序](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409)。  

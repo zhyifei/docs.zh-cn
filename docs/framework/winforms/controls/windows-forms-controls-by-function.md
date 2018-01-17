@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c49c42b02511fea66c88544bf689b2b05e788ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-by-function"></a>根据功能列出的 Windows 窗体控件
 Windows 窗体提供控件和执行的许多功能的组件。 下表列出的 Windows 窗体控件和组件根据常规函数。 此外，多个控件存在时，具有相同的功能，推荐的控件都列出它取代的控件有关的备注。 在随后的一个单独的表中，使用它们的建议替换项列出被取代的控件。  
@@ -43,7 +44,7 @@ Windows 窗体提供控件和执行的许多功能的组件。 下表列出的 W
 ||<xref:System.Windows.Forms.LinkLabel> 控件|为 Web 样式的链接显示文本，并触发事件时在用户单击特殊文本。 该文本通常是指向另一个窗口或网站的链接。|  
 ||<xref:System.Windows.Forms.StatusStrip> 控件|显示使用框架的区域，通常在父窗体底部的应用程序的当前状态有关的信息。|  
 ||<xref:System.Windows.Forms.ProgressBar> 控件|为用户显示的当前操作的进度。|  
-|网页上显示|<xref:System.Windows.Forms.WebBrowser> 控件|使用户能够在您的窗体中导航网页。|  
+|网页上显示|<xref:System.Windows.Forms.WebBrowser> 控件|使用户能够在你的窗体中导航网页。|  
 |从列表中选择|<xref:System.Windows.Forms.CheckedListBox> 控件|显示项，每个旁边都有一个复选框可滚动的列表。|  
 ||<xref:System.Windows.Forms.ComboBox> 控件|显示项的下拉列表。|  
 ||<xref:System.Windows.Forms.DomainUpDown> 控件|显示用户可以向上和向下按钮滚动的文本项的列表。|  
@@ -94,6 +95,6 @@ Windows 窗体提供控件和执行的许多功能的组件。 下表列出的 W
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |窗体布局|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

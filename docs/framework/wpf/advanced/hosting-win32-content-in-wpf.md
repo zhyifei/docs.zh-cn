@@ -17,14 +17,15 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e82d18cd765fc3ac4f4982a71d187a3741f4f03a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7c92e5b045b248337f1cb96c333ac38f1228dd90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-win32-content-in-wpf"></a>在 WPF 中承载 Win32 内容
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  请参阅[WPF 和 Win32 间的互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
   
 ## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>在 Windows Presentation Framework (HwndHost) 内的 Win32 一个演练  
@@ -369,5 +370,5 @@ public partial class Window1 : Window {
   
  ![WPF 应用程序屏幕快照](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

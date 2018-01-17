@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e8ba1fd0094b5c070e60ecf2d7da1799de8c194f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 881ee8486d7939e743613fb8a0261a4fcfe7499f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltparticipantsgt-of-wcf"></a>WCF 的 &lt;participants&gt;
 配置一列跟踪参与者，它们侦听直接从运行时发出的跟踪记录，并按照它们的任何方式处理这些记录。 这包括写入特定输出（例如，文件、控制台、ETW）、处理/聚合记录或可能需要的任何其他组合。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/add-of-participants.md)|包含跟踪参与者的设置。|  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
  <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
  [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  

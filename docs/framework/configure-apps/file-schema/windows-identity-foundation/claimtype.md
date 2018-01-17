@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c4ee8833578b082f25c427b13d77072d1954197f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ae572ff3a8a2335a4259bdce2af5f6922fb0596f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclaimtypegt"></a>&lt;claimType&gt;
 指定一个可选或所需的传入安全令牌声明。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|声明类型。 通常一个 URI。 必需。|  
+|类型|声明类型。 通常一个 URI。 必须的。|  
 |可选|一个布尔值，指定声明类型是否为可选。 可选。|  
   
 ### <a name="child-elements"></a>子元素  

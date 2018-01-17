@@ -34,11 +34,12 @@ caps.latest.revision: "28"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2bd01e697d6852b9eb50418e5b6f506a133cbc2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32607c853506ae7339057893c10fd9931e5823be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用配置文件配置应用
 .NET Framework 通过配置文件为开发人员和管理员提供了对应用程序运行方式的控制权和灵活性。 配置文件是可以按需要更改的 XML 文件。 管理员能够控制应用程序可以访问哪些受保护的资源，应用程序将使用哪些版本的程序集，以及远程应用程序和对象位于何处。 开发人员可以将设置置于配置文件中，从而没有必要在每次设置更改时重新编译应用程序。 本节说明可以对什么进行配置以及为什么对应用程序进行配置会有用。  
@@ -128,7 +129,7 @@ ms.lasthandoff: 11/21/2017
  [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
  描述架构的层次结构：启动、运行时、网络和其他配置设置类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
  [指定程序集的位置](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  

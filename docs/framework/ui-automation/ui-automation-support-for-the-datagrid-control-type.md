@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 942433cc4adf96e77fff723fe4eb0472849a93cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3eb60004f4ffad0b62b10cf1e3ff5f28a3bf3fef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>UI 自动化对 DataGrid 控件类型的支持
 > [!NOTE]
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
- 下表列出需要由所有数据网格控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+ 下表列出需要由所有数据网格控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|备注|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/21/2017
   
  *上面的示例显示了包含多个控件级别的 DataGrid。 Group（“Contoso”）控件包含两个 DataItem 控件（“Accounts Receivable.doc”和“Accounts Payable.doc”）。 DataGrid/GridItem 对不依赖于其他级别的对。 Group 下的 DataItem 控件还能以 ListItem 控件类型公开，使它们能够更清楚地呈现为可选择的对象，而不是简单的数据元素。 此示例不包括分组数据项的子元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Automation.ControlType.DataGrid>  
  [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

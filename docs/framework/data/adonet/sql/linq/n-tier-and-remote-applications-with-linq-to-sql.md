@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f44b6da8ecc8d036a9550856f71b2981770e9478
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 004e64584027d40368592097c76ad0830e942f07
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>使用 LINQ to SQL 的 N 层和远程应用程序
 可以创建使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 n 层或多层应用程序。 通常情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]数据上下文、 实体类和查询构造逻辑都位于中间层作为数据访问层 (DAL)。 业务逻辑和任何非持久性数据都可以在实体的分部类和分部方法中以及数据上下文中完整实现，也可以在单独的类中实现。  
@@ -31,17 +32,17 @@ ms.lasthandoff: 10/18/2017
 ## <a name="additional-resources"></a>其他资源  
  有关如何实现使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 n 层应用程序的更多信息，请参见以下主题：  
   
--   [LINQ to SQL N 层与 ASP.NET](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)  
+-   [使用 ASP.NET 的 LINQ to SQL N 层](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)  
   
--   [LINQ to SQL N 层与 Web 服务](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)  
+-   [使用 Web 服务 的 LINQ to SQL N 层](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md)  
   
--   [具有紧密耦合的客户端-服务器应用程序 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-with-tightly-coupled-client-server-applications.md)  
+-   [具有紧密耦合的客户端-服务器应用程序的 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-with-tightly-coupled-client-server-applications.md)  
   
 -   [实现 N 层业务逻辑](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)  
   
--   [数据检索和 CUD 操作在 N 层应用程序 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)  
+-   [N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)  
   
  有关使用 ADO.NET 数据集的 n 层应用程序的详细信息，请参阅[处理 n 层应用程序中的数据集](http://msdn.microsoft.com/library/f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

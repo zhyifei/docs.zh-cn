@@ -12,11 +12,11 @@ ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 29d227cf50fe23d5619bf5fb6f9a598ea78ef077
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5f358068d00c042a979216cdda51dcc7e07abbc5
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 确定如何使用自定义特性类。 `AttributeUsage` 是一个特性，可应用于自定义特性定义，以控制如何应用新特性。 在显式应用时的默认设置如下：  
@@ -73,7 +73,7 @@ End Class
   
  在本例中，`MultiUseAttr` 可重复应用，因为 `AllowMultiple` 设置为 `true`。 所显示的两种用于应用多个特性的格式均有效。  
   
- 如果 `Inherited` 设置为 `false`，那么特性不会由派生自已特性化的类的类继承。 例如:   
+ 如果 `Inherited` 设置为 `false`，那么特性不会由派生自已特性化的类的类继承。 例如:  
   
 ```vb  
 Imports System  
@@ -170,11 +170,11 @@ A3
 A2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Attribute>  
  <xref:System.Reflection>  
  [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
- [特性](../../../../../docs/standard/attributes/index.md)  
+ [特性](../../../../standard/attributes/index.md)  
  [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43a38406a3c9cc171944448fce2fa2f70c483baa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db1b7f47ef135b1a174eecef7e53b41e6996256d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全构造函数模式
 通常，类构造函数不应调用诸如虚拟方法或委托等回叫，其原因是构造函数可作为派生类的构造函数的基本初始化进行调用。 输入该虚拟的操作可能会在任何给定对象的不完全初始化状态下进行。 但是，属性系统本身在内部调用并公开回叫，作为依赖属性系统的一部分。 为简单一个操作作为设置依赖项属性值与<xref:System.Windows.DependencyObject.SetValue%2A>调用可能包括回调某个位置中决定。 因此，在构造函数体内设置依赖属性值时应保持谨慎（将类型用作基类可能会导致问题）。 没有特定的模式，用于实现<xref:System.Windows.DependencyObject>可避免依赖项属性的状态和固有的回调中，对特定问题这此处记录的构造函数。  
@@ -124,7 +125,7 @@ public MyClass : SomeBaseClass {
 #### <a name="setting-dependency-properties-with-setvalue"></a>使用 SetValue 设置依赖属性  
  如果你要设置一个属性，不包含具有为属性设置方便起见，包装并设置值，将应用相同的模式<xref:System.Windows.DependencyObject.SetValue%2A>。 对你调用<xref:System.Windows.DependencyObject.SetValue%2A>该传递构造函数参数还应调用类的默认构造函数进行初始化。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [依赖属性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 988c41bb691d27e819710bbc2cd48bc1c844e7c5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-filters"></a>高级筛选器
 此示例演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 路由服务。 路由服务是一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 组件，使用该组件可方便地在应用程序中包含基于内容的路由器。 此示例采用标准的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 计算器示例，使用路由服务进行通信。 此示例演示如何使用消息筛选器和消息筛选器表定义基于内容的路由逻辑。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="sample-details"></a>示例详细信息  
  下表显示添加到路由服务的消息筛选器表的消息筛选器。  
   
-|Filter|规则|优先级|  
+|筛选器|规则|优先级|  
 |------------|----------|--------------|  
 |是否（具有标头）|舍入|2|  
 |是否（在 Ep2 上出现）|规则|1|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
 |是否 (RoundRobin1)|规则|0|  
 |是否 (RoundRobin2)|舍入|0|  
   
- 这些消息筛选器和消息筛选器表可通过代码创建和配置，也可在应用程序配置文件中创建和配置。 对于此示例，您可找到通过 RoutingService\routing.cs 文件中的代码定义或在 RoutingService\App.config 应用程序配置文件中定义的消息筛选器和消息筛选器表。 以下各段介绍如何通过代码为此示例创建消息筛选器和消息筛选器表。  
+ 这些消息筛选器和消息筛选器表可通过代码创建和配置，也可在应用程序配置文件中创建和配置。 对于此示例，你可找到通过 RoutingService\routing.cs 文件中的代码定义或在 RoutingService\App.config 应用程序配置文件中定义的消息筛选器和消息筛选器表。 以下各段介绍如何通过代码为此示例创建消息筛选器和消息筛选器表。  
   
  首先，<xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 会查找自定义标头。 请注意，<xref:System.ServiceModel.WSHttpBinding> 会产生使用 SOAP 1.2 的信封版本，因此会 XPath 语句会定义为使用 SOAP 1.2 命名空间。 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 的默认命名空间管理器已为 SOAP 1.2 命名空间定义了一个可以使用的前缀 /s12。 但是，默认命名空间管理器没有客户端用于定义实际标头值的自定义命名空间，因此必须定义前缀。 出现时带有此标头的任何消息都与此筛选器匹配。  
   
@@ -163,5 +164,5 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
 ### <a name="real-world-scenario"></a>实际方案  
  Contoso 希望虚拟化其所有服务以仅公开一个终结点，这些服务通过该终结点可提供对多种不同类型的服务的访问。 在这种情况下，这些服务利用路由服务的基于内容的路由功能，以确定应将传入请求发送到哪个位置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

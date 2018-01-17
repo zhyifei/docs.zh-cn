@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9da2addce9c837499783664bb3b1417d30b937b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 687eba2a346b3f554c8a7618bebe2e9c04f4d5b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-http-service"></a>基本 HTTP 服务
 此示例演示如何实现基于 HTTP 的、 基于 RPC 的服务 （一般称为"POX"(Plain Old XML) 服务） 使用[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]REST 编程模型。 此示例由两个组件组成：一个自承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服务 (Service.cs) 和一个创建服务并对该服务进行调用的控制台应用程序 (Program.cs)。  
@@ -52,6 +53,6 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自动格式选择](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
  [基本资源服务](../../../../docs/framework/wcf/samples/basic-resource-service.md)

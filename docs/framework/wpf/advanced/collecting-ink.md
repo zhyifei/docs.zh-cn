@@ -24,16 +24,17 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81ed657de0c0e4d07fcb10b099cbf5e5c80a71fc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cbf55b5d84420a6aa7af06e94497a85a2b54a0c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collecting-ink"></a>收集墨迹
 [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) 平台会收集数字墨迹，这是其功能中的核心部分之一。 本主题讨论在 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 中收集墨迹的方法。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  要使用以下示例，首先必须安装 [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] 和 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]。 还必须了解如何编写 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的应用程序。 有关详细信息，有关如何开始使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，请参阅[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="using-the-inkcanvas-element"></a>使用 InkCanvas 元素  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
  请注意如何<xref:System.Windows.Controls.StackPanel>放置的顶部的按钮<xref:System.Windows.Controls.InkCanvas>。 如果您尝试对墨迹上方的按钮、<xref:System.Windows.Controls.InkCanvas>收集和呈现在按钮后的墨迹。 这是因为这些按钮是同级的<xref:System.Windows.Controls.InkCanvas>而不是子级。 此外，这些按钮的 Z 顺序较高，所以墨迹呈现在其后面。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Ink.DrawingAttributes>  
  <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>  
  <xref:System.Windows.Ink>

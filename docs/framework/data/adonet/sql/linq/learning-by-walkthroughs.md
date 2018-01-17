@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 38961451a51ae47d05d7625ee0e83da97261eb0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53ddead8bd03fd9ce5e1adf8fe41a6f4c8b06154
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="learning-by-walkthroughs"></a>通过演练学习
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了一些演练。 本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
@@ -32,10 +33,10 @@ ms.lasthandoff: 10/18/2017
   
 |目标|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|创建一个实体类并执行一个简单查询。|[演练： 简单对象模型和查询 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[演练： 简单对象模型和查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|添加第二个类并执行一个更为复杂的查询。<br /><br /> （需要完成前一个演练。）|[演练： 跨关系查询 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[演练： 跨关系查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|向数据库中添加项、更改并删除其中的项。|[演练： 操作数据 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[演练： 操作数据 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|使用存储过程。|[演练： 仅使用存储过程 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[演练： 仅使用存储过程 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|创建一个实体类并执行一个简单查询。|[演练：简单对象模型和查询 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[演练：简单对象模型和查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|添加第二个类并执行一个更为复杂的查询。<br /><br /> （需要完成前一个演练。）|[演练：跨关系查询 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[演练：跨关系查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|向数据库中添加项、更改并删除其中的项。|[演练：操作数据 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[演练：操作数据 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
+|使用存储过程。|[演练：仅使用存储过程 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[演练：仅使用存储过程 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>常规  
  以下信息大致介绍了这些演练：  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练通常需要 Northwind 示例数据库。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
--   您在演练中看到的对话框和菜单命令可能会与“帮助”中描述的有所不同，具体取决于您现用的设置或 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+-   您在演练中看到的对话框和菜单命令可能会与“帮助”中描述的有所不同，具体取决于您现用的设置或 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 -   对于介绍多层方案的演练，服务器必须位于与开发计算机不同的计算机上，并且您必须具有访问此服务器的相应权限。  
   
@@ -97,5 +98,5 @@ ms.lasthandoff: 10/18/2017
   
 3.  右键单击**SQL Server (SQLEXPRESS)**，然后单击**重新启动**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

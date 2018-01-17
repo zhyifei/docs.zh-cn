@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3e3c4a832f70fae7808bf71016cb9f6648332f01
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b0aabdc9150aea73ad9078b0e9ee92b2abd03e17
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-a-cryptographic-scheme"></a>创建加密方案
 可结合使用 .NET Framework 的加密组件来创建不同的方案，以加密和解密数据。  
@@ -39,5 +42,5 @@ ms.lasthandoff: 10/18/2017
   
  创建加密方案是一项重要任务。 有关使用加密的详细信息，请参阅 http://msdn.microsoft.com/library 处平台 SDK 文档中的加密主题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

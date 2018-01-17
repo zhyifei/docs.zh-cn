@@ -24,11 +24,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b5d54a608ae87a1b453b4fa2b4b351ac5fc9f068
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fcede920b0e57dee0449d8ff6d7c935b177dcbcd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>使用哈希代码确保数据完整性
 哈希值是用于唯一标识数据的固定长度的数字值。 哈希值以小得多的数字值表示大量数据，因此与数字签名配合使用。 对哈希值进行签名比对较大的值进行签名更为高效。 对于验证通过不安全通道发送的数据的完整性，哈希值也很有用。 当被发送出去确定数据是否已更改时，将接收数据的哈希值与数据的哈希值相比较。  
@@ -65,5 +68,5 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

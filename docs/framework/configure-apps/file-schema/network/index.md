@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ca4a0000d85c8fbac9a723beeda51f9c7886ed8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8f13b75d0558c002fd29938ce98d85f358acc9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-settings-schema"></a>网络设置架构
 网络设置指定 .NET Framework 与 Internet 的连接方式。 下表描述 [\<system.Net> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)下每个子配置元素的功能。  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/21/2017
 |[\<iriParsing> 元素（Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否对 <xref:System.Uri> 应用国际资源标识符 (IRI) 分析以及是否应该应用 IRI 分析规则。|  
 |[\<schemeSettings> 元素（Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何分析特定方案的 <xref:System.Uri>。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置 Internet 应用程序](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

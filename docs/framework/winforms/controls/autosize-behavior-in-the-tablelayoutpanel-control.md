@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d4813b7bd37c0c5bd9b04b37cb825067b35ce3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06bd0686b31b52ccb8580a545910339d2e2cd5bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel 控件中的自动调整大小行为
 ## <a name="distinct-autosize-behaviors"></a>非重复 AutoSize 行为  
@@ -44,6 +45,6 @@ ms.lasthandoff: 11/21/2017
 |`false`|<xref:System.Windows.Forms.TableLayoutPanel>控件将继续从左到右，并为列或行或按以下顺序分配空间。<br /><br /> 1.如果<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>属性设置为<xref:System.Windows.Forms.SizeType.Absolute>，由指定的像素数<xref:System.Windows.Forms.ColumnStyle.Width%2A>或<xref:System.Windows.Forms.RowStyle.Height%2A>分配。<br />2.如果<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>属性设置为<xref:System.Windows.Forms.SizeType.AutoSize>，返回的子控件的像素数<xref:System.Windows.Forms.Control.GetPreferredSize%2A>分配方法。<br />3.所有的空格后面<xref:System.Windows.Forms.SizeType.Absolute>和<xref:System.Windows.Forms.SizeType.AutoSize>列或行已分配，任何列或行与<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>设置为<xref:System.Windows.Forms.SizeType.Percent>用于按比例分配的剩余可用空间|  
 |`true`|类似于前面的交互，出现异常，<xref:System.Windows.Forms.SizeType.Percent>列或行获取自动调整大小方面。<br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>控件扩展的列或行以创建足够的可用空间，以便任何列或行<xref:System.Windows.Forms.SizeType.Percent>样式剪裁掉其内容。 <xref:System.Windows.Forms.TableLayoutPanel>控件分配根据到按比例的新空间<xref:System.Windows.Forms.ColumnStyle.Width%2A>或<xref:System.Windows.Forms.RowStyle.Height%2A>属性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  [TableLayoutPanel 控件概述](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)

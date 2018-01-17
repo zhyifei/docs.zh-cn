@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cfc6553fe9dd176d2aa557df906141c13a5f425
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7054728e8bf54a7cf7b71ea1224cab6a352176d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-ink-input-control"></a>创建墨迹输入控件
 你可以创建自定义控件的动态和静态呈现墨迹。 也就是说，呈现墨迹，为用户绘制笔画，导致墨迹以显示"流"从触笔和之后显示墨迹添加到该控件，是指通过触笔从剪贴板、 粘贴或从文件加载的方式。 若要动态呈现墨迹，控件必须使用<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 若要以静态方式呈现墨迹，必须重写触笔事件方法 (<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusMove%2A>，和<xref:System.Windows.UIElement.OnStylusUp%2A>) 来收集<xref:System.Windows.Input.StylusPoint>数据，创建描边，并将其添加到<xref:System.Windows.Controls.InkPresenter>（呈现在控件上的墨迹）。  
@@ -108,6 +109,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="conclusion"></a>结束语  
  你可以创建能够收集和呈现墨迹通过重写触笔事件方法的控件。 通过创建您自己的控件，派生你自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类，并将它们插入到<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>，可以实现数字墨迹想像几乎任何行为。 你有权<xref:System.Windows.Input.StylusPoint>作为它的数据生成，为你提供机会自定义<xref:System.Windows.Input.Stylus>输入，并根据你的应用程序屏幕上呈现其。 由于这种低级别访问<xref:System.Windows.Input.StylusPoint>数据，可以实现墨迹集合并使其以最佳性能为应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [高级墨迹处理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
  [访问和操作笔输入](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

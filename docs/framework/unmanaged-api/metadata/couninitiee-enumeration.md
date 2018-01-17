@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c849a32850b5fc9aaca7ea75fdfb30db3de5d8c9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 808320a2034011793429f1805edea82a52add23d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE 枚举
 指定使用的常量[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)初始化公共语言运行时。  
@@ -45,7 +46,7 @@ typedef enum tagCOUNINITEE
 |`COUNINITEE_DEFAULT`|指示默认未初始化模式。|  
 |`COUNINITEE_DLL`|指示用于卸载程序集的未初始化模式。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -54,5 +55,5 @@ typedef enum tagCOUNINITEE
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [元数据枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅  
+ [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

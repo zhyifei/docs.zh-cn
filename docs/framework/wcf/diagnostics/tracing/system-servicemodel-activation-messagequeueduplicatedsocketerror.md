@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 71bc4dad8f0409b30b43f496f5bfee4c3d53c8a5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 91242969ab34937f238cf8b6d57b10be6ea2f15f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelactivationmessagequeueduplicatedsocketerror"></a>System.ServiceModel.Activation.MessageQueueDuplicatedSocketError
 System.ServiceModel.Activation.MessageQueueDuplicatedSocketError  
@@ -25,7 +26,7 @@ System.ServiceModel.Activation.MessageQueueDuplicatedSocketError
 ## <a name="description"></a>描述  
  复制套接字时出错。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用跟踪来排查你的应用程序](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)

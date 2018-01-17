@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 76b747624a22212fb7b9ba1a6353956a99ed1559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework 中的网络编程
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到你的应用程序中。 你的网络应用程序可以基于可插入协议而构建，以便自动利用新的 Internet 协议，或者，它们可以使用 Windows 套接字接口的托管实现在套接字级别上使用网络。  
@@ -142,7 +143,7 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  为配置采用应用程序扩展保护的身份验证提供支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [网络编程操作说明主题](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
  [MSDN 代码库中的 .NET 联网示例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  

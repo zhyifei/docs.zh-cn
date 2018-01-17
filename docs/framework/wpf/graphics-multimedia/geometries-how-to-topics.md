@@ -15,11 +15,12 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9540de6140a9dbfdb0d7dd4ab5d9e461caec5268
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0c75871074bc7e2bae4789a9f77525b9f09c61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometries-how-to-topics"></a>几何图形帮助主题
 此部分中的主题演示如何使用<xref:System.Windows.Media.Geometry>你的应用程序中的对象。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  [使用 RectangleGeometry 定义矩形](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
  [让 RectangleGeometry 采用圆角](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
  [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  

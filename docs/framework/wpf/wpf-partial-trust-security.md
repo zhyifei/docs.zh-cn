@@ -26,11 +26,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f17ec5f48115f3e85852f33ea926657df172a2da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
 <a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和客户端脚本语言不能访问关键系统资源。 因为[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]可以从浏览器启动浏览器承载的应用程序，它们应该符合一组类似的限制。 若要强制执行这些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依赖于同时[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]和[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](请参阅[WPF 安全策略 — 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。 默认情况下，浏览器承载的应用程序请求 Internet 区域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]组权限，而不考虑是否从 Internet、 本地 intranet 或本地计算机启动的权限。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
@@ -140,20 +141,20 @@ ms.lasthandoff: 11/21/2017
   
 |权限|特性|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|访问 DNS 服务器|是|No|  
-|环境变量|读取|是|No|  
+|DNS|访问 DNS 服务器|是|否|  
+|环境变量|读取|是|否|  
 |文件对话框|打开|是|是|  
-|文件对话框|不受限制|是|No|  
-|独立存储|按用户隔离程序集|是|No|  
+|文件对话框|不受限制|是|否|  
+|独立存储|按用户隔离程序集|是|否|  
 |独立存储|未知隔离|是|是|  
-|独立存储|无限制用户配额|是|No|  
+|独立存储|无限制用户配额|是|否|  
 |媒体|安全音频、视频和图像|是|是|  
-|打印|默认打印|是|No|  
+|打印|默认打印|是|否|  
 |打印|安全打印|是|是|  
-|映像|发出|是|No|  
+|映像|发出|是|否|  
 |安全性|托管代码执行|是|是|  
-|安全性|声明授予的权限|是|No|  
-|用户界面|不受限制|是|No|  
+|安全性|声明授予的权限|是|否|  
+|用户界面|不受限制|是|否|  
 |用户界面|安全顶级窗口|是|是|  
 |用户界面|自己的剪贴板|是|是|  
 |Web 浏览器|HTML 中的安全框架导航|是|是|  
@@ -173,7 +174,7 @@ ms.lasthandoff: 11/21/2017
   
  或者，可以使用 ClickOnce 受信任部署模型从任何安全区域中进行完全信任部署。 有关详细信息，请参阅[受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)和[安全](../../../docs/framework/wpf/security-wpf.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性](../../../docs/framework/wpf/security-wpf.md)  
  [WPF 安全策略 - 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
  [WPF 安全策略 - 安全工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

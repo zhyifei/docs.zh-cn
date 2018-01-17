@@ -7,11 +7,12 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0f43f569cdb8b9e4be68b61ba7b5cc4686fdb871
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.workload: dotnetcore
+ms.openlocfilehash: 6dbbc2e95c613d468c7d8c7b0dc15c85849f79dc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令行接口 (CLI) 工具
 
@@ -136,7 +137,7 @@ dotnet /build_output/my_app.dll
 
 命令（或“谓词”）仅仅是执行操作的命令。 例如，`dotnet build` 生成代码。 `dotnet publish` 发布代码。 使用 `dotnet {verb}` 约定将命令作为控制台应用程序实现。
 
-### <a name="arguments"></a>参数
+### <a name="arguments"></a>自变量
 
 在命令行上传递的参数是被调用的命令的参数。 例如，执行 `dotnet publish my_app.csproj` 时，`my_app.csproj` 参数指示要发布的项目，并被传递到 `publish` 命令。
 

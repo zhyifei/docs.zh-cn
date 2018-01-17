@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1df931796b32b6bea49e8b69da02d39e6a4803e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5ec30d19af133b4f0734dadf8775dc8682666e22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR 枚举
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -53,7 +54,7 @@ typedef enum {
   
  从开始[!INCLUDE[net_v461](../../../../includes/net-v461-md.md)]的值`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`更改从 0 到`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`(0x00000002)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -62,7 +63,7 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
  [COR_PRF_MONITOR 枚举](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)  
  [ICorProfilerInfo5 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md)

@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bb5c79980246a9afa5a7e5024049c26815cab49d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76ea605444b5d1776c5a85891db4f3460e9df24b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="requesting-data"></a>正在请求数据...
 开发在如今 Internet 的分布式操作环境中运行的应用程序需要使用高效易用的方法从所有类型的资源中检索数据。 可以通过可插入协议开发使用单一接口从多个 Internet 协议检索数据的应用程序。  
@@ -61,7 +62,7 @@ Dim sr As StreamReader
 sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
  [如何：请求网页并以数据流的形式检索结果](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
  [如何：检索与 WebRequest 匹配的特定于协议的 WebResponse](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: dc4250ab7417c9f19babdf37c556daf7c3bd6a81
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload: dotnetcore
+ms.openlocfilehash: 52aac5ff1862397616287a77eac063582703d509
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet nuget push` - 将包推送到服务器，并将其发布。
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/28/2017
 
 `dotnet nuget push` 将包推送到服务器，并将其发布。 push 命令使用在系统的 NuGet 配置文件或配置文件链中找到的服务器和凭据详细信息。 有关配置文件的详细信息，请参阅 [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)（配置 NuGet 行为）。 通过加载 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS) 获得 NuGet 的默认配置，然后加载任意 *nuget.config* 或 *.nuget\nuget.config*，从驱动器的根目录开始，并在当前目录中结束。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `ROOT`
 
@@ -102,7 +103,3 @@ ms.lasthandoff: 11/28/2017
 将当前目录中的所有 *.nupkg* 文件推送到默认推送源（指定自定义配置文件 *./config/My.Config*）：
 
 `dotnet nuget push *.nupkg --config-file ./config/My.Config`
-
-将当前目录中的所有 *.nupkg* 文件推送到默认推送源（包含最大详细级别）：
-
-`dotnet nuget push *.nupkg --verbosity detailed`

@@ -20,11 +20,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cdb9e539d16b874ffd37b8e381757594561386e7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-known-types"></a>数据协定已知类型
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 类允许您预先指定应该在反序列化期间包括在考虑范围内的类型。 有关工作示例，请参阅 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 示例。  
@@ -177,12 +178,12 @@ ms.lasthandoff: 12/02/2017
   
  在前面的配置文件中，名为 `MyCompany.Library.Shape` 的数据协定类型被声明具有已知类型 `MyCompany.Library.Circle` 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.KnownTypeAttribute>  
  <xref:System.Collections.Hashtable>  
  <xref:System.Object>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>  
- [已知的类型](../../../../docs/framework/wcf/samples/known-types.md)  
+ [已知类型](../../../../docs/framework/wcf/samples/known-types.md)  
  [数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
  [设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)

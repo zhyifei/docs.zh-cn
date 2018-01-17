@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e76e1d814df5946d0e0f946cbc8d55507a07c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>创建具有可自定义外观的控件
 <a name="introduction"></a>
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 -   [完整的示例](#complete_example)  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题假定你知道如何创建一个新<xref:System.Windows.Controls.ControlTemplate>为现有控件，熟悉控件协定上的元素是什么，并了解中所述的概念[自定义的现有控件的外观创建 ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
 > [!NOTE]
@@ -247,6 +248,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[VSMCustomControl#ControlLogic](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
  [!code-vb[VSMCustomControl#ControlLogic](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)  
  [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)

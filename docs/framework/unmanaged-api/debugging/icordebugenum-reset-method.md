@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e6bf3bee9885c24242a03b51484e530f2dd0167
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: df84855ec385975645868559487d21ae5b3be866
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugenumreset-method"></a>ICorDebugEnum::Reset 方法
 将光标移到枚举的开头。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/18/2017
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -45,5 +46,5 @@ HRESULT Reset ();
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [ICorDebugEnum 接口 1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+## <a name="see-also"></a>请参阅  
+ [ICorDebugEnum Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

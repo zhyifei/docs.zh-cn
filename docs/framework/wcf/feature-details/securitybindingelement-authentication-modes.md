@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 329e50b8580776dac035a3160bb6b9cceb5858e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05b44d9972a393b36a97fd5afcb6581229332df9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 身份验证模式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了几种供客户端和服务互相进行身份验证的模式。 您可以通过使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上的静态方法或通过配置为这些身份验证模式创建安全绑定元素。 本主题简要说明 18 种身份验证模式。  
@@ -130,6 +131,6 @@ ms.lasthandoff: 11/21/2017
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  在此身份验证模式中，客户端使用用户名令牌进行身份验证，此证书作为经过签名的支持令牌（即签署消息签名的令牌）显示在 SOAP 层上。 在传输层，服务是用 X.509 证书进行身份验证的。 安全绑定元素是由 `TransportSecurityBindingElement` 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>。 或者，将 `authenticationMode` 属性设置为 `UserNameOverTransport`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [如何： 为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+ [如何：为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

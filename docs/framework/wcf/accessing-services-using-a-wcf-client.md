@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8698e0657de31d78699df478da5e716bf831fc4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 客户端访问服务
 创建服务之后，下一步是创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理。 客户端应用程序使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代理与服务进行通信。 客户端应用程序通常导入服务的元数据来生成可用来调用该服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端代码。  
@@ -192,13 +193,13 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
  当发生这些类型的异常时，解决问题的最佳方式是在服务端启用跟踪并确定服务端发生了何种异常。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]跟踪，请参阅[跟踪](../../../docs/framework/wcf/diagnostics/tracing/index.md)和[解决应用程序中使用跟踪](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [如何： 使用双工协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [如何： 访问服务使用单向和请求-答复协定](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [如何： 访问 WSE 3.0 服务](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [如何：使用双工协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [如何：以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [如何：使用单向和请求-答复协定访问服务](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [如何：访问 WSE 3.0 服务](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
  [了解生成的客户端代码](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- [如何： 改善启动时间的 WCF 客户端应用程序使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
+ [如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
  [指定客户端运行时行为](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
  [配置客户端行为](../../../docs/framework/wcf/configuring-client-behaviors.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: def4536fb40820372bf473d1752bb73d525db2e4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11a02fc857fa3c03b11b549013550e557933820e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client"></a>客户端
 本节包含演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端应用程序的示例。  
@@ -32,13 +33,13 @@ ms.lasthandoff: 12/02/2017
  [通道工厂](../../../../docs/framework/wcf/samples/channel-factory.md)  
  演示客户端应用程序如何使用 <xref:System.ServiceModel.ChannelFactory> 类而不是生成的客户端创建通道。  
   
- [预期的异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
+ [预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
  演示在使用类型化客户端时如何捕获预期异常。  
   
  [检索元数据](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
  演示如何实现一个客户端，它能从服务中动态检索元数据以选择用来通信的终结点。  
   
- [避免出现与 Using 语句的问题](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
+ [避免出现与 Using 语句有关的问题](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
  演示在使用类型化客户端时，不应使用 C# 的“using”语句自动清除资源。  
   
  [类型化客户端](../../../../docs/framework/wcf/samples/typed-client.md)  

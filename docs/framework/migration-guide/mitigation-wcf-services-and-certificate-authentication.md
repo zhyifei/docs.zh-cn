@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bb852719e3312b78b86621e3cb69fa8bf7267856
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b106dd7a6853e5af6aa53bcc8a66ae1d949f0f0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>缓解：WCF 服务和证书身份验证
 .NET Framework 4.6 向 WCF SSL 协议默认列表添加了 TLS 1.1 和 TLS 1.2。 客户端和服务器计算机都安装了 .NET Framework 4.6 或更高版本时，TLS 1.2 用于协商。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="impact"></a>影响  
  TLS 1.2 不支持 MD5 证书身份验证。 因此，如果客户使用的 SSL 证书对哈希算法使用 MD5，WCF 客户端就无法连接 WCF 服务。 有关详细信息，请参阅[缓解：WCF 服务和证书身份验证](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)。  
   
-## <a name="mitigation"></a>缓解操作  
+## <a name="mitigation"></a>缓解  
  可以通过执行下列任一操作来解决此问题，以便 WCF 客户端可以连接 WCF 服务器：  
   
 -   将证书更新为不使用 MD5 算法。 建议采用此解决方案。  
@@ -63,5 +64,5 @@ ms.lasthandoff: 10/18/2017
     > [!CAUTION]
     >  不建议采用此解决方法，因为使用 MD5 哈希算法的证书被视为不安全。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

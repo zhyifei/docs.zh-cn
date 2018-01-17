@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f1fd1c21fc4f156bfe7a5abf9f76bd341e2d0f10
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2835d2064f1845b55dd3a33abb086c5af0fb9e6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparison-semantics-entity-sql"></a>比较语义 (Entity SQL)
 执行下列任一 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 运算符时都涉及类型实例的比较：  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="supported-combinations"></a>支持的组合  
  下表说明了每种类型的比较运算符的所有受支持的组合：  
   
-|**类型**|**=**<br /><br /> **!=**|**分组依据**<br /><br /> **非重复**|**UNION**<br /><br /> **相交**<br /><br /> **除非**<br /><br /> **设置**<br /><br /> **重叠**|**在**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**为 NULL**<br /><br /> **不为 NULL**|  
+|**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **非重复**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**为 NULL**<br /><br /> **不为 NULL**|  
 |-|-|-|-|-|-|-|-|  
 |实体类型|Ref<sup>1</sup>|所有属性<sup>2</sup>|所有属性<sup>2</sup>|所有属性<sup>2</sup>|引发<sup>3</sup>|引发<sup>3</sup>|Ref<sup>1</sup>|  
 |复杂类型|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|引发<sup>3</sup>|  
@@ -112,5 +113,5 @@ WHERE p1 != REF(p2)
   
  <sup>5</sup>所有单个元素的引用进行比较 （包括实体集名称和实体类型的所有键属性）。  
   
-## <a name="see-also"></a>另请参阅  
- [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>请参阅  
+ [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

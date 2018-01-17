@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e2c8d3150f19b5790f2db7b93b3100a9becff4c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8d27385a08c58c61983315da41f27f4dcb29368
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>WIF 3.5 和 WIF 4.5 之间的命名空间映射
 从 .NET 4.5 开始，Windows Identity Foundation (WIF) 已完全集成到 .NET Framework 中。 这种集成引起了名称更改及 WIF 命名空间和 API 表面的某些合并。 本主题提供一些指导以及 WIF 3.5 命名空间和 WIF 4.5 命名空间之间的常规映射。 它的目的并不是提供详尽的说明，而是提供一些常规信息，说明在 WIF 4.5 中的什么位置可以找到熟悉的 WIF 3.5 类。 有关 WIF 3.5 和 WIF 4.5 之间差异的更多详细信息，请参阅 [Windows Identity Foundation 4.5 中的新增功能](../../../docs/framework/security/whats-new-in-wif.md)。 有关如何将使用 WIF 3.5 生成的应用程序迁移到 WIF 4.5 的指南，请参阅[将使用 WIF 3.5 生成的应用程序迁移到 WIF 4.5 的指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 11/21/2017
 |`Microsoft.IdentityModel.Web.Controls`|在 WIF 4.5 中未实现|`Microsoft.IdentityModel.Web.Controls` 中的类实现了联合被动登录控制，在 WIF 4.5 中不存在这种控制。|  
 |`Microsoft.IdentityModel.WindowsTokenService`|在 WIF 4.5 中未实现|-|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows Identity Foundation 4.5 中的新增功能](../../../docs/framework/security/whats-new-in-wif.md)  
  [使用 WIF 3.5 至 WIF 4.5 生成的应用程序的迁移指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)

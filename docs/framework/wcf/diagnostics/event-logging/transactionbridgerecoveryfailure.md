@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d60d6061a8b6af00b38922dfbc3c1f2e1a1dcf0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 03eed22efe7c0c81faaa24239384e84427e7996d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactionbridgerecoveryfailure"></a>TransactionBridgeRecoveryFailure
 Id: 146  
@@ -29,6 +30,6 @@ Id: 146
 ## <a name="description"></a>描述  
  此事件指示恢复期间 MSDTC TransactionBridge 失败。 这是错误状态，因此 MSDTC 服务将终止。 该事件列出了异常、进程名称和进程 ID。 .  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

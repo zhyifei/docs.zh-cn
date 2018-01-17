@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8108cd3c5ae305b6def5324385cb12c94cd42774
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a0e48ddc6f74d3c4e030bc953ac4f853660a00d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interfaces-related-to-data-binding"></a>与数据绑定相关的接口
 使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]，可以创建许多不同的数据结构，以满足应用程序和正在处理的数据的绑定需要。 你可能希望创建自己的类，以便在 Windows 窗体中提供或使用数据。 这些对象可以提供各种级别的功能和复杂性，从基本的数据绑定，到提供设计时支持、错误检查、更改通知，甚至是支持对数据本身所做更改的结构化回退。  
@@ -159,7 +160,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  继承自的类<xref:System.Windows.Forms.Control>管理绑定自动通过其<xref:System.Windows.Forms.Control.BindingContext%2A>属性，因此，你需要实现<xref:System.Windows.Forms.ICurrencyManagerProvider>都极为少见。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据绑定和 Windows 窗体](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
  [如何：在 Windows 窗体上创建简单绑定的控件](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
  [Windows 窗体数据绑定](../../../docs/framework/winforms/windows-forms-data-binding.md)

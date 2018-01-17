@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4990965e364765628174f9e8765663c7a7df70d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c78c1d90e10a45245f53f1db0b6400fa0a91d81b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmexhttpsbindinggt"></a>&lt;mexHttpsBinding&gt;
 指定用于通过 HTTPS 进行的 WS-MetadataExchange (WS-MEX) 消息交换的绑定的设置。  
@@ -65,14 +66,14 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  此绑定实质上是支持使用证书的传输级安全性的 `WSHttpBinding` 绑定。 有关配置和使用此类的元数据终结点的详细信息，请参阅[如何： 配置自定义 Ws-metadata Exchange 绑定](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)，[如何： 检索元数据通过非 MEX 绑定](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)，与示例[自定义安全元数据终结点](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A>  
  <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>  
- [如何： 使用配置文件为服务中发布元数据](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [发布和检索元数据通过自定义绑定](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
- [如何： 配置自定义 Ws-metadata Exchange 绑定](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
- [如何： 通过非 MEX 绑定的检索元数据](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)  
- [自定义安全元数据终结点](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
+ [如何：使用配置文件发布服务的元数据](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [通过自定义绑定发布和检索元数据](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
+ [如何：配置自定义 WS-Metadata Exchange 绑定](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)  
+ [如何：通过非 MEX 绑定检索元数据](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)  
+ [自定义元数据终结点](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)  
  [元数据](../../../../../docs/framework/wcf/feature-details/metadata.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  

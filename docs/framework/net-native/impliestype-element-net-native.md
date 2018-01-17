@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90e079b593ed124da79f5f87b5189d199bc4572a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 36620e8a8f6cb96b11f951ee5477e6edad9c925a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>&lt;暗示类型&gt;元素 (.NET Native)
 如果该策略已应用到该包含类型或方法，将该策略应用到一个类型。  
@@ -118,7 +119,7 @@ ms.lasthandoff: 11/21/2017
 </Type>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

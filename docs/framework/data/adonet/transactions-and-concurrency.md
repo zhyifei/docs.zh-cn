@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4e06f54ed27a555daa30f16f452cd03c8e188a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4301a232e2b38d44ecb288e76439742f7fe4d58f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-and-concurrency"></a>事务和并发性
 事务由作为包执行的单个命令或一组命令组成。 通过事务可以将多个操合并为单个工作单元。 如果在事务中的某一点发生故障，则所有更新都可以回滚到其事务前状态。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [本地事务](../../../../docs/framework/data/adonet/local-transactions.md)  
  演示如何对数据库执行事务。  
   
- [分布式的事务](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [分布式事务](../../../../docs/framework/data/adonet/distributed-transactions.md)  
  描述如何在 ADO.NET 中执行分布式事务。  
   
  [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
@@ -44,10 +45,10 @@ ms.lasthandoff: 11/21/2017
  [开放式并发](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  描述开放式并发和保守式并发，以及如何测试并发冲突。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事务基础知识](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

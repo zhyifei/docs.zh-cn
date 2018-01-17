@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad79f26a48f3f5e905b2f2ac7de9191dd8539f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-formatted-text"></a>绘制格式化文本
 本主题提供的功能的概述<xref:System.Windows.Media.FormattedText>对象。 此对象为在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中绘制文本提供低级别控制。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="win32-migration"></a>Win32 迁移  
  功能<xref:System.Windows.Media.FormattedText>绘制文本的相近的功能的[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText 函数。 对于从 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 迁移的开发人员，下表列出了 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 标志和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的近似等效项。  
   
-|DrawText 标志|WPF 等效项|备注|  
+|DrawText 标志|WPF 等效项|说明|  
 |-------------------|--------------------|-----------|  
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>属性来计算适当[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText y 位置。|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>和<xref:System.Windows.Media.FormattedText.Width%2A>属性来计算输出矩形。|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/21/2017
 |DT_WORDBREAK|无|不要求。 断字进行自动处理<xref:System.Windows.Media.FormattedText>对象。 无法禁用它。|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用<xref:System.Windows.Media.FormattedText.Trimming%2A>属性的值<xref:System.Windows.TextTrimming.WordEllipsis>。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.FormattedText>  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  

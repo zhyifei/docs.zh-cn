@@ -17,11 +17,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b241e9a2dbe84833f43dadb2e979e5ee079706a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structured-navigation-overview"></a>结构化导航概述
 可由承载的内容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 <xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>由组成可以通过包来识别的页[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和导航到超链接。 页面的结构以及导航页面的方式（通过超链接来定义）称为导航拓扑。 此类拓扑适合各种应用程序类型，尤其适合在文档之间导航的应用程序类型。 对于此类应用程序，用户可以从一个页面导航到另一个页面，并且其中任一页面都无需了解另一页面的任何信息。  
@@ -178,7 +179,7 @@ ms.lasthandoff: 11/21/2017
   
  在其他情况下，应用程序可能具有依赖于结构化导航来有效操作的复杂导航拓扑。 有关详细信息，请参阅[导航拓扑概述](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Navigation.PageFunction%601>  
  <xref:System.Windows.Navigation.NavigationService>  
  [导航拓扑概述](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b759580a93f6b0ab0e3d84295b7ab8a0c48a7bb7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a29ceb6dd90645bc34c440117bafcd8afd774422
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-samples"></a>发现（示例）
 本节包含与发现功能相关的示例。  
@@ -41,13 +42,13 @@ ms.lasthandoff: 12/02/2017
  [发现代理示例](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
  演示如何创建发现代理的实现以存储有关现有服务的信息，以及客户端如何查询该代理以获取信息。  
   
- [发现具有唯一侦听 Uri 模式示例的服务](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
+ [使用唯一侦听 Uri 模式示例发现服务](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
  演示如何发现 <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> 属性设置为 <xref:System.ServiceModel.Description.ListenUriMode.Unique> 的服务。  
   
  [通过范围进行发现](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  演示如何使用范围对可发现的终结点进行分类，以及如何使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 来执行终结点的异步搜索。  
   
- [自定义的查找条件](../../../../docs/framework/wcf/samples/custom-find-criteria.md)  
+ [自定义查找条件](../../../../docs/framework/wcf/samples/custom-find-criteria.md)  
  演示如何使用逻辑来创建自定义范围匹配以及如何实现自定义发现服务。  
   
  [工作流发现示例](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  

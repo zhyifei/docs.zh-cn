@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5fb58c01f8a8e3135878036454a1265e6b92e939
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d0b09f5c845fc9a18c2a1dd919272c2924478eaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;元素 （网络设置）
 配置超文本传输协议 (HTTP) 代理服务器。  
@@ -49,14 +50,14 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否使用 Web 代理。 默认值为 `true`。|  
 |`useDefaultCredentials`|指定是否使用此主机的默认凭据来访问 Web 代理。 默认值为 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[将 bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
 |[模块](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|向应用程序添加新的代理模块。|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含指定 .NET Framework 如何连接到网络的设置。|  
   
@@ -96,6 +97,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -35,11 +35,12 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c12d8655babeb45800f4a5c068cb2ab74faac3d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-overview"></a>输入概述
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 子系统提供了功能强大的 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，可获取鼠标、键盘、触摸和触笔等各种设备中的输入。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的服务，并说明了输入系统的体系结构。  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/21/2017
   
  发生触摸时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 将公开两种类型的事件：触摸事件和操作事件。 触摸事件提供有关触摸屏上每个手指及其移动的原始数据。 操作事件将输入解释为特定操作。 本部分将讨论这两种类型的事件。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>系统必备  
  需要以下组件才能开发响应触摸的应用程序。  
   
 -   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]。  
@@ -403,7 +404,7 @@ ms.lasthandoff: 11/21/2017
   
  也可以获取更详细说明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 框架元素和事件路由的详细资源。 有关详细信息，请参阅以下概述：[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)、[焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)、[基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)、[WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)和[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)  
  [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  

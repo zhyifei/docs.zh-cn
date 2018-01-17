@@ -19,13 +19,13 @@ ms.lasthandoff: 10/18/2017
 
 未语言怎样的在其最早的版本？ 和如何具有它改进以来？
 
-## <a name="c-version-10"></a>C# 版本 1.0
+## <a name="c-version-10"></a>C# 1.0 版
 
-当你返回去查找时，C# 版本 1.0 的样子大量 Java。 作为[ECMA 及其规定的设计目标的一部分](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)，它查找为"简单、 现代、 常规用途面向对象的语言。"  当时，看起来像 Java 意味着它来实现这些早期的设计目标。
+当你返回去查找时，C# 1.0 版 的样子大量 Java。 作为[ECMA 及其规定的设计目标的一部分](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)，它查找为"简单、 现代、 常规用途面向对象的语言。"  当时，看起来像 Java 意味着它来实现这些早期的设计目标。
 
 但如果你重新查看在 C# 1.0 上现在，你会发现自己有点 dizzy。 它不具备内置的异步功能并介绍一些围绕我们执行授予的泛型的巧妙功能。 事实上，它不具备泛型完全。  和[LINQ](../linq/index.md)？ 不可用尚未。 这会打开未来某些几年。
 
-C# 版本 1.0 看上去去除的功能，为今天比较。 你会发现自己编写一些详细的代码。 但是，必须从零开始。 C# 版本 1.0 已在 Windows 平台上的与 Java 代替。
+C# 1.0 版 看上去去除的功能，为今天比较。 你会发现自己编写一些详细的代码。 但是，必须从零开始。 C# 1.0 版 已在 Windows 平台上的与 Java 代替。
 
 ## <a name="c-version-20"></a>C# 2.0 版
 
@@ -82,9 +82,9 @@ C# 版本 4.0，则必须难居住到版本 3.0 的创新状态。 3.0 版开始
 
 这样，您可能的错误，但还语言内的能力。
 
-## <a name="c-version-50"></a>C# 版本 5.0
+## <a name="c-version-50"></a>C# 5.0 版
 
-C# 版本 5.0 时非常有针对性的版本的语言。 几乎所有该版本的工作已加入到另一个突破性语言概念。  此处是主要功能列表：
+C# 5.0 版 时非常有针对性的版本的语言。 几乎所有该版本的工作已加入到另一个突破性语言概念。  此处是主要功能列表：
 
 - [异步成员](../async.md)
 - [调用方信息特性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
@@ -110,19 +110,19 @@ C# 版本 5.0 时非常有针对性的版本的语言。 几乎所有该版本�
 
 在相同此版本中，以及一件事，但它不是本身是传统的语言功能。 当发布它们[Roslyn 作为服务编译器](https://github.com/dotnet/roslyn)。 在 C# 中，现在编写 C# 编译器，并且可以作为你的编程工作的一部分使用编译器。
 
-## <a name="c-version-70"></a>C# 版本 7.0
+## <a name="c-version-70"></a>C# 7.0 版
 
-最新的主要版本是 C# 版本 7.0。 此版本作为服务在情况下，C# 6.0 中，但不编译器会有一些演化和冷的内容。 下面是一些新功能：
+最新的主要版本是 C# 7.0 版。 此版本作为服务在情况下，C# 6.0 中，但不编译器会有一些演化和冷的内容。 下面是一些新功能：
 
-- [出变量](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [Out 变量](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [元组和析构](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [模式匹配](./csharp-7.md#pattern-matching)
 - [本地函数](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [展开的表达式正文成员](./csharp-7.md#more-expression-bodied-members)
-- [Ref 局部变量，并返回](./csharp-7.md#ref-locals-and-returns)
+- [Ref 局部变量和返回结果](./csharp-7.md#ref-locals-and-returns)
 
 所有这些功能提供了面向开发人员和机会编写比以往任何时候的代码甚至更干净的冷新功能。 突出显示紧缩若要使用的变量的声明`out`关键字，以及允许通过元组的多个返回值。
 
 但 C# 被放到曾经更广泛使用。 .NET 核心现在面向任何操作系统并具有其眼睛牢固地在云上和在可移植性。  这肯定占用语言设计器的想法和时间，除了构思新功能。
 
-_文章_ [_最初发布 NDepend 博客上_](https://blog.ndepend.com/c-versions-look-language-history/)_、。 艾力克 Dietrich 和 Patrick Smacchia。_
+_文章_ [_最初发布 NDepend 博客上_](https://blog.ndepend.com/c-versions-look-language-history/)_。 艾力克 Dietrich 和 Patrick Smacchia。_

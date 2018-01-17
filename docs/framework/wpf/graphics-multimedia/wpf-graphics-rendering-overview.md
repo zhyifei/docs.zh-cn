@@ -19,11 +19,12 @@ caps.latest.revision: "51"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: def1f6273809ad3d759f53ab225607c71d04ba4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cfb9a546ca33b848fbbcbd114951eddc5b000663
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 图形呈现疑难解答
 本主题概述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可视化层。 它注重的角色<xref:System.Windows.Media.Visual>呈现中的支持的类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
 |绘图内容类型|描述|  
 |--------------------------|-----------------|  
 |矢量图形|表示矢量图形数据，并且任何关联<xref:System.Windows.Media.Brush>和<xref:System.Windows.Media.Pen>信息。|  
-|Image|表示定义的区域中的某个图像<xref:System.Windows.Rect>。|  
+|图像|表示定义的区域中的某个图像<xref:System.Windows.Rect>。|  
 |标志符号|表示呈现绘制<xref:System.Windows.Media.GlyphRun>，即从指定的字体资源的标志符号的序列。 这是文本的表示方式。|  
 |视频|表示用于呈现视频的绘图。|  
   
@@ -267,7 +268,7 @@ WPF 呈现序列示意图
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  

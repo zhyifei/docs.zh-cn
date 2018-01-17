@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c4674acd6d097eb1cb03d5dd07b0c686404d1145
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7aba9aca61497b9b3efd1419d0565bdcfcd7ee7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting"></a>疑难解答
 下面的信息揭示您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中可能遇到的一些问题，并提供建议以避免这些问题或减少这些问题的影响。  
@@ -79,6 +80,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="oncreated-partial-method"></a>OnCreated() 分部方法  
  每次调用对象构造函数时都会调用生成的方法 `OnCreated()`，这包括以下这种情况，即 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 调用构造函数以生成原始值的副本。 如果您在自己的分部类中实现 `OnCreated()` 方法，请考虑此行为。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
  [常见问题](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

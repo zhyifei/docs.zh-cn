@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c0b13ee48ed729d89f4b4b506e3608abe7e82b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>终结点：地址、绑定和协定
 与所有通信[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服务是通过*终结点*的服务。 利用终结点，客户端可访问 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务提供的功能。  
@@ -88,15 +89,15 @@ ms.lasthandoff: 12/02/2017
  [协定](../../../../docs/framework/wcf/feature-details/contracts.md)  
  描述协定如何定义服务的方法。  
   
- [如何： 在配置中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [如何：在配置中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  描述如何在配置中创建服务终结点。  
   
- [如何： 在代码中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [如何：在代码中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  描述如何在代码中创建服务终结点。  
   
- [如何： 使用 Svcutil.exe 验证已编译的服务代码](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [如何：使用 Svcutil.exe 验证已编译的服务代码](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  描述如何检测服务实现和配置中的错误，不承载服务使用情况下[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置服务](../../../../docs/framework/wcf/configuring-services.md)  
  [扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e1d808d4daf91b5ff89b05cab8359c90090f293
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
 有时，开发人员必须完全控制从服务操作返回数据的方式。 这是这种情况，服务操作必须在不支持的格式返回数据时[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 本主题讨论使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
@@ -185,5 +186,5 @@ namespace RawImageService
   
 -   编译示例代码时，请引用 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 10e469838073b4cf1faba1704b88b47f30b8b3d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 232098a4940e223fd8553eefa4964777b1695c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="referential-integrity-constraint"></a>引用完整性约束
 A*引用完整性约束*实体数据模型 (EDM) 中是类似于关系数据库中的引用完整性约束。 与数据库表中一列 （或多） 可以引用另一个表的主键相同的方式[属性](../../../../docs/framework/data/adonet/property.md)（或属性） 的[实体类型](../../../../docs/framework/data/adonet/entity-type.md)可以引用[实体键](../../../../docs/framework/data/adonet/entity-key.md)另一个实体类型。 引用的实体类型称为*主体端*的约束。 引用主体端的实体类型称为*依赖端*的约束。  
@@ -43,6 +44,6 @@ A*引用完整性约束*实体数据模型 (EDM) 中是类似于关系数据库�
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)

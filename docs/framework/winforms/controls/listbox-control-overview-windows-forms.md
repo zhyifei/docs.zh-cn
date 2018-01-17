@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e73d76a2d9b31a87bf5a693b5ffa387d7ab5cef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0eadf9db9a952fdabe77100cb31501be1970e74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ListBox>控件将显示用户可以从中选择一个或多个项的列表。 如果项的总数目超过可以显示的数，滚动条会自动添加到<xref:System.Windows.Forms.ListBox>控件。 当<xref:System.Windows.Forms.ListBox.MultiColumn%2A>属性设置为`true`、 列表框中显示多个列中的项和水平滚动条的显示。 当<xref:System.Windows.Forms.ListBox.MultiColumn%2A>属性设置为`false`、 列表框中显示的单个列中的项和垂直滚动条的显示。 当<xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A>设置为`true`，该滚动条显示而不考虑项的数目。 <xref:System.Windows.Forms.ListBox.SelectionMode%2A>属性确定可以一次选择多少列表项。  
@@ -31,7 +32,7 @@ Windows 窗体<xref:System.Windows.Forms.ListBox>控件将显示用户可以从�
   
  若要添加或删除中的项<xref:System.Windows.Forms.ListBox>控制，请使用<xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>， <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>，<xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A>或<xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A>方法。 或者，你可以向列表添加项使用<xref:System.Windows.Forms.ListBox.Items%2A>在设计时属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ListBox>  
  [如何：在 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件中添加和删除项](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
  [如何：对 Windows 窗体 ComboBox、ListBox 或 CheckedListBox 控件的内容进行排序](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  

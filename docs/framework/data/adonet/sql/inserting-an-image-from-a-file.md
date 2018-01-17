@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a780e35d9eb5420138587102aee753e96a8eff9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb264374b3f9ff4e1f424f69565751f69ed810e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inserting-an-image-from-a-file"></a>从文件中插入图像
 可以将二进制大对象 (BLOB) 作为二进制或字符数据写入数据库，具体视数据源的字段类型而定。 BLOB 是一个表示 `text`、`ntext` 和 `image` 数据类型的通用术语，这些数据类型通常包含文档和图片。  
@@ -140,7 +141,7 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用命令修改数据](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [检索二进制数据](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  [SQL Server 二进制和大值数据](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  

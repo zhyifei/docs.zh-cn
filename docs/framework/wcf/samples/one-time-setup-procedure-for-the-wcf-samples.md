@@ -13,11 +13,12 @@ caps.latest.revision: "83"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b699a9af286287f1cdd1aa224afd3f8c41dd90d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ffc74fdbec204b798ee93a8ee2c91db992a83cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 大多数 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例均承载于 Internet 信息服务 (IIS) 中，并从公共虚拟目录中运行。 此一次性安装过程在磁盘; 上创建一个文件夹它还将虚拟目录添加到名为的 IIS **ServiceModelSamples**。  
@@ -96,4 +97,4 @@ ms.lasthandoff: 12/02/2017
   
 15. 有些示例需要使用证书。 请参阅[Internet 信息服务 (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

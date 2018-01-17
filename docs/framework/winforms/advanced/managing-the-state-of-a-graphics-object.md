@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 438243d16d8031d99e27993cadb44fd58bbec0b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a9514d845580bfe921fefa5f4a249c5a905d03d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>管理 Graphics 对象的状态
 <xref:System.Drawing.Graphics>类的核心是[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。 若要绘制任何内容，你可以获取<xref:System.Drawing.Graphics>对象、 设置其属性，并调用其方法<xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawImage%2A>， <xref:System.Drawing.Graphics.DrawString%2A>，以及类似的内容)。  
@@ -47,7 +48,7 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
   
 -   质量设置  
   
--   变换  
+-   转换  
   
 -   剪辑区域  
   
@@ -76,7 +77,7 @@ graphics.SmoothingMode = SmoothingMode.HighSpeed;
 graphics.DrawEllipse(pen, 0, 150, 200, 100);  
 ```  
   
-### <a name="transformations"></a>变换  
+### <a name="transformations"></a>转换  
  A<xref:System.Drawing.Graphics>对象维护应用于由该绘制的所有项的两种转换 （world 和页）<xref:System.Drawing.Graphics>对象。 任何仿射转换可以存储在世界变换。 仿射转换包括缩放、 旋转、 反射、 倾斜和转换。 可以使用页转换，缩放和更改单位 （例如，为英寸的像素）。 有关详细信息，请参阅[坐标系和坐标转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)。  
   
  下面的示例设置世界变换和页变换的<xref:System.Drawing.Graphics>对象。 世界转换设置为 30 度旋转。 页转换设置以便坐标传递到第二个<xref:System.Drawing.Graphics.DrawEllipse%2A>将被视为毫米等，而不是像素。 这段代码将两个相同调用<xref:System.Drawing.Graphics.DrawEllipse%2A>方法。 世界转换应用于第一个<xref:System.Drawing.Graphics.DrawEllipse%2A>调用，而且这两种转换 （world 和页） 应用到第二个<xref:System.Drawing.Graphics.DrawEllipse%2A>调用。  
@@ -160,6 +161,6 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  ![有限的剪辑区域](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [使用嵌套的图形容器](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)

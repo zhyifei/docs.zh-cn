@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f3f0c06eef7524c18e252ade9122d8c9cb3c2f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 010c5dd082c10556ed264306b7575cbe5399fda3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
 `virtualCERCall` 托管调试助手 (MDA) 作为警告被激活，指示某个受约束的执行区域 (CER) 调用关系图中的调用站点引用了虚拟目标，即对非最终虚拟方法的虚拟调用或使用接口的调用。 公共语言运行时 (CLR) 无法只凭中间语言和元数据分析预测这些调用的目标方法。 因此无法将调用树准备为 CER 关系图的一部分，且无法阻止该子树中的线程中止。 此 MDA 警告以下情况：一旦计算调用目标所需的附加信息在运行时已知，则可能需要使用对 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 方法的显式调用来扩展 CER。  
@@ -104,7 +105,7 @@ void MethodWithCer(MyClass object)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)

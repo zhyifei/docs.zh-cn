@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c6afbcde22a82e6227ce1d95d57749bee1a88c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的虚拟模式
 虚拟模式中，你可以管理之间的交互<xref:System.Windows.Forms.DataGridView>控制和自定义数据缓存。 若要实现虚拟模式，设置<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性`true`并处理一个或多个本主题中所述的事件。 通常，你需要处理至少`CellValueNeeded`事件，它使查找数据缓存中的值的控件。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  仅发生以下事件时<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性设置为`true`。  
   
-|Event|描述|  
+|事件|描述|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|由该控件用于从显示的数据缓存中检索一个单元格值。 仅对未绑定的列中的单元格的发生此事件。|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|使用控件来提交到数据缓存的单元格的用户输入。 仅对未绑定的列中的单元格的发生此事件。<br /><br /> 调用<xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A>方法时更改缓存的值之外的<xref:System.Windows.Forms.DataGridView.CellValuePushed>事件处理程序以确保，在控件中显示的当前值并应用当前有效的任何自动调整大小模式。|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="best-practices-in-virtual-mode"></a>中的虚拟模式的最佳做法  
  如果你要实现虚拟模式，若要有效地使用大量的数据，你也要确保与你也会有效地工作<xref:System.Windows.Forms.DataGridView>控件本身。 有关有效地使用的单元格样式、 自动调整大小、 选择和行共享的详细信息，请参阅[缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  [Windows 窗体 DataGridView 控件中的性能调整](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  

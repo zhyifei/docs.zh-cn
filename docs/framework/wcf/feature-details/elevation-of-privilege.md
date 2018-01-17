@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e44d0ecf6afb81928d83ea925f836f8b6927d97
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="elevation-of-privilege"></a>特权提升
 *特权提升*源于使攻击者授权权限超出最初授予的权限。 例如，具有“只读”权限特权集的攻击者以某种方式将该特权集升级为包括“读取和写入”。  
@@ -92,10 +93,10 @@ ms.lasthandoff: 12/02/2017
   
  若要缓解此问题，请以其他方式引用 X.509 证书，如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [信息泄露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [重播攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [被篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
+ [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

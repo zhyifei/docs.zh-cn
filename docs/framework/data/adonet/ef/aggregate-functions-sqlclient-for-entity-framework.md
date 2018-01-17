@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b60cffd357022454de001986a48ef06bdd1fe3f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 804acd77887c1cf05caa2004e75ef01110909490
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>聚合函数（用于实体框架的 SqlClient）
 SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 聚合函数对一组输入值执行计算并返回一个值。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。  
@@ -55,6 +56,6 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供聚合函数。 �
 |---------------------|---------------------|---------------------|  
 |[聚合函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115906)|[聚合函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkID=115903)|[聚合函数 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115907)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 SQL 语言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [聚合规范函数](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+ [聚合 Canonical 函数](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

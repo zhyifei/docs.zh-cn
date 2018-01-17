@@ -18,11 +18,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f9d0ff535d0784343b36d0b2df48b123ff3beef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-resources"></a>XAML 资源
 资源是可以在应用程序中的不同位置重复使用的对象。 资源的示例包括画笔和样式。 本概述介绍如何使用中的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 你还可以创建和使用代码，或者通过互换使用代码访问资源和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 有关详细信息，请参阅[资源和代码](../../../../docs/framework/wpf/advanced/resources-and-code.md)。  
@@ -163,7 +164,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.DataTemplate>也有一个隐式键。 隐式密钥<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>属性值。 <xref:System.Windows.DataTemplate.DataType%2A>此外可以指定为类型的名称，而不是使用显式[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 有关详细信息，请参阅[数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.ResourceDictionary>  
  [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
  [资源和代码](../../../../docs/framework/wpf/advanced/resources-and-code.md)  

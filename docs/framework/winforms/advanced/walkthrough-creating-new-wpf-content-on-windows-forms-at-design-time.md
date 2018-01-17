@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfbe9957fa8d18f839ae656ca721c4ee88475a5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba7731456cfcf35cd16b1df304fee4f4c138db84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>演练：设计时在 Windows 窗体上创建新的 WPF 内容
 本主题显示如何创建 Windows Presentation Foundation (WPF) 控件，以便在基于 Windows 窗体的应用程序中使用。  
@@ -37,9 +38,9 @@ ms.lasthandoff: 11/21/2017
 -   将新的 WPF 控件添加到 Windows 窗体。 WPF 控件承载在 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。  
   
-#### <a name="to-create-the-project"></a>创建项目  
+#### <a name="to-create-the-project"></a>要创建项目  
   
 -   创建新的 Windows 窗体应用程序项目中 Visual Basic 或 Visual C# 名为`HostingWpf`。  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/21/2017
   
 -   更改 WPF 内容的样式。 有关详细信息，请参阅[演练： 样式 WPF 内容](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  

@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 72195dbf74639d5799bb96754019dddf0f30101a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c8edc9273710a843b4e99568097646825fc52a09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next 方法
 从当前位置开始在枚举中获取指定数目的对象的相对虚拟地址 (Rva)。  
@@ -51,7 +52,7 @@ HRESULT Next (
  `pceltFetched`  
  [out]对实际返回的对象的数量的指针。 此值可能为 null 如果`celt`是之一。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -60,5 +61,5 @@ HRESULT Next (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  

@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 134f42da7e4366d4d5bb971aaf26b2a3b57a4c1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中的形状和基本图形概述
 本主题将概述如何绘制与<xref:System.Windows.Shapes.Shape>对象。 A<xref:System.Windows.Shapes.Shape>是一种<xref:System.Windows.UIElement>，使您可以向屏幕绘制形状。 因为它们是用户界面元素，<xref:System.Windows.Shapes.Shape>对象可使用内部<xref:System.Windows.Controls.Panel>元素和大多数控件。  
@@ -228,7 +229,7 @@ myPolygon.StrokeThickness = 2;
   
  在前面的示例中，对每一个形状对象应用了一次转换。 若要将多个转换应用到一个形状 （或任何其他 UI 元素），使用<xref:System.Windows.Media.TransformGroup>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  

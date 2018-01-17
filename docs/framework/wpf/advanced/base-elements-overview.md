@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 270388b8e3dda0342ba74187d8dc45616d0e769d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 52f0bb90d7eb61a199097813eb8313cd9c154f3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="base-elements-overview"></a>基元素概述
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中较高比重的类都派生自四类，它们通常在 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文档中称为基元素。 这些类是<xref:System.Windows.UIElement>， <xref:System.Windows.FrameworkElement>， <xref:System.Windows.ContentElement>，和<xref:System.Windows.FrameworkContentElement>。 <xref:System.Windows.DependencyObject>还相关类，因为它是这两者的一个公共基类<xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control"></a>控件  
  <xref:System.Windows.Controls.Control>是称为控件或组件，具体取决于技术的类型所需的基类。 一般情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件类可直接表示 UI 控件或积极参与控件组合。 主要功能，<xref:System.Windows.Controls.Control>启用是控件模板化。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Control>  
  [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  

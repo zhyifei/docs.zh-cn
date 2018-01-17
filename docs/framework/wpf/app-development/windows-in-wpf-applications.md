@@ -17,11 +17,12 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-in-wpf-applications"></a>WPF 应用程序中的窗口
 用户与通过 windows 应用程序进行交互。 窗口的基本目的是承载并显示内容。 内容，窗口承载取决于数据的类型，应用程序操作，其中包括媒体、 可扩展应用程序标记语言 (XAML) 页、 网页、 文档、 数据库表和记录和系统信息类型。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/22/2017
 ## <a name="in-this-section"></a>本节内容  
  [WPF 窗口概述](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
  [对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Window>  

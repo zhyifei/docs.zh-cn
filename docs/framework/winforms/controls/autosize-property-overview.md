@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8216880ebdede03bbd01fe53b622c14ca8c514d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34f92bdc80f62225efe5e008f0893905f49da970
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="autosize-property-overview"></a>AutoSize 属性概述
 <xref:System.Windows.Forms.Control.AutoSize%2A>属性使控件能够更改其大小，如有必要，以获得指定的值<xref:System.Windows.Forms.Control.PreferredSize%2A>属性。 通过设置调整特定的控件的大小调整行为`AutoSizeMode`属性。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  若要最大程度提高工作效率，Windows 窗体设计器阴影<xref:System.Windows.Forms.Control.AutoSize%2A>属性<xref:System.Windows.Forms.Form>类。 在设计时，窗体行为就如同<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`false`，而不考虑其实际设置。 在运行时，进行任何特殊住宿和<xref:System.Windows.Forms.Control.AutoSize%2A>应用属性所指定的属性设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Control.AutoSize%2A>  
  <xref:System.Windows.Forms.Control.PreferredSize%2A>  
  <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d373d6abc82e482a3b1df873295573f0e34eeda2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a704930f707895e7f343566fab544e2f8b32b22c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -116,11 +117,11 @@ ms.lasthandoff: 11/21/2017
     |特性|描述|必需|  
     |---------------|-----------------|--------------|  
     |`clsid`|用于指定要激活的类的标识符。|是|  
-    |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|No|  
+    |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|否|  
     |`name`|用于表示托管类的字符串。|是|  
-    |`progid`|用于后期绑定激活的标识符。|No|  
-    |`threadingModel`|COM 线程模型。 “Both”为默认值。|No|  
-    |`runtimeVersion`|指定要使用的公共语言运行时 (CLR) 版本。 如未指定此属性，并且尚未加载 CLR，将使用最近安装的早于 CLR 版本 4 的 CLR 版本加载组件。 如果指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本将自动向前滚到最近安装的早于 CLR 版本 4 的 CLR 版本（通常为 v2.0.50727）。 如果已加载其他 CLR 版本，并且可在进程内并行加载指定版本，那么将加载指定版本；否则使用已加载的 CLR。 这可能会导致加载失败。|No|  
+    |`progid`|用于后期绑定激活的标识符。|否|  
+    |`threadingModel`|COM 线程模型。 “Both”为默认值。|否|  
+    |`runtimeVersion`|指定要使用的公共语言运行时 (CLR) 版本。 如未指定此属性，并且尚未加载 CLR，将使用最近安装的早于 CLR 版本 4 的 CLR 版本加载组件。 如果指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本将自动向前滚到最近安装的早于 CLR 版本 4 的 CLR 版本（通常为 v2.0.50727）。 如果已加载其他 CLR 版本，并且可在进程内并行加载指定版本，那么将加载指定版本；否则使用已加载的 CLR。 这可能会导致加载失败。|否|  
     |`tlbid`|包含有关该类的类型信息的类型库的标识符。|No|  
   
      所有属性标记都区分大小写。 通过使用 OLE/COM ObjectViewer (Oleview.exe) 查看程序集的已导出类型库，可以获取 CLSID、ProgID、线程模型和运行时版本。  
@@ -180,7 +181,7 @@ ms.lasthandoff: 11/21/2017
   
      同样，`myresource.res` 是包含嵌入资源的资源文件的名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [免注册 COM 互操作](../../../docs/framework/interop/registration-free-com-interop.md)  
  [免注册 COM 互操作的要求](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
  [将 COM 组件配置为免注册激活](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  

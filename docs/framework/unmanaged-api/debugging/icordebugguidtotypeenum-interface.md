@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e419c61d2918a1f17c0739c9782472f25dfe8cfa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9993a5aaaef3d5b83d21e3641029af12119188da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum 接口
 提供定义一组的 Guid 和其相应的类型，由 ICorDebugType 实例之间的映射的枚举器。 此接口继承自 ICorDebugEnum 接口的方法。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>备注  
  `ICorDebugGuidToTypeEnum`接口对象可通过调用检索[icordebugappdomain3:: Getcachedwinrttypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)方法。 调试器可以调用此接口[下一步](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md)方法来检索[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)管理表示形式表示的映射的对象[!INCLUDE[wrt](../../../../includes/wrt-md.md)]中加载的类型用于对调用应用程序域[icordebugappdomain3:: Getcachedwinrttypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)方法。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**[!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

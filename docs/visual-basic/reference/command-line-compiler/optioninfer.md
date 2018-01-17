@@ -15,11 +15,11 @@ ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4400ee58214c8f9990d4b123e17ef0f6553a5a69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2df7fa743e72d12dcef1aa9be5ea43d24ef43cee
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optioninfer"></a>/optioninfer
 允许在变量声明中使用局部类型推理。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
 /optioninfer[+ | -]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |术语|定义|  
 |---|---|  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中设置 /optioninfer  
   
-1.  选择一个项目中的**解决方案资源管理器**。 在“项目”菜单上，单击“属性”。 有关详细信息，请参阅[NIB： 项目设计器用管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
+1.  选择一个项目中的**解决方案资源管理器**。 在“项目”菜单上，单击“属性”。  
   
 2.  上**编译**选项卡上，修改中的值**Option infer**框。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 vbc /optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
  [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  

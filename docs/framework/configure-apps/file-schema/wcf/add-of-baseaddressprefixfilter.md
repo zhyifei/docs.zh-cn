@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd0a0d7fc5a83c78a56df796714e70e2e2a61767
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ad6ad6f71ef015ad97a2688a7334e8a0c6e5af44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;
 表示一个指定传递筛选器的配置元素。传递筛选器提供了一种机制，使得在 IIS 中承载 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 应用程序时可选取适当的 Internet 信息服务 (IIS) 绑定。  
@@ -89,7 +90,7 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  筛选器不支持任何通配符。 此外，IIS 提供的基址可能有绑定到在 `baseAddressPrefixFilters` 列表中未列出的其他方案的地址。 不会筛选出这些地址。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  

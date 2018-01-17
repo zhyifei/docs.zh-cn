@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: d6a9333b2267e82fc25b2a0ec4bf5dd14f644078
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c9cc5e2bff9cc2591c7a12630da5422dbf73713a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xshared-attribute"></a>x:Shared 特性
 当设置为`false`，修改 WPF 资源检索行为，以便对特性化的资源的请求创建的每个请求而不是共享同一个实例的所有请求的新实例。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.ResourceDictionary>包含的项必须不嵌套在另一个<xref:System.Windows.ResourceDictionary>。 例如，不能使用`x:Shared`中的项<xref:System.Windows.ResourceDictionary>内<xref:System.Windows.Style>已<xref:System.Windows.ResourceDictionary>项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.ResourceDictionary>  
  [XAML 资源](../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [基元素](../../../docs/framework/wpf/advanced/base-elements.md)

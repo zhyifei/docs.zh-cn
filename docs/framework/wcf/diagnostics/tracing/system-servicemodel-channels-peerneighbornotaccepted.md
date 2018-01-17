@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbcf4e52c23cfc7c6d94af46218c99cdec598c13
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d957b04ff660ef633401334b7ed500479835f93d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerneighbornotaccepted"></a>System.ServiceModel.Channels.PeerNeighborNotAccepted
 未接受对等邻居。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="troubleshooting"></a>疑难解答  
  检查是否有不匹配的安全设置、是否超时、邻居是否不能接受连接或是否存在暂时性的网络问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用跟踪来排查你的应用程序](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)

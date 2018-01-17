@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 668dd3624d06f916b23ec16dd8268d2bae4ffcf7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6c28e41ad7c9e07dae150035e205e79b3d8cac84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>演练：使用 Visual C# 从 Windows 窗体控件继承 #
 使用 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] 可通过继承来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体继承功能<xref:System.Windows.Forms.Button>控制，并将公开一个名为的自定义属性`ButtonValue`。  
@@ -151,7 +152,7 @@ ms.lasthandoff: 11/21/2017
   
      `label1` 中显示数字“5”，表明继承的控件的 `ButtonValue` 属性已通过 `valueButton1_Click` 方法传递给 `label1`。 这样，`ValueButton` 控件便继承了标准 Windows 窗体按钮的所有功能，但是公开了一个附加的自定义属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用组件编程](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
  [组件创作演练](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
  [如何：在“选择工具箱项”对话框中显示控件](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  

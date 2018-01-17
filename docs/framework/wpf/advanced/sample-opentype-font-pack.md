@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bbc5caeab5a77518e160bacb9722e50ff7abbfb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7390c8c84caa17b984d5a16b7ac6b9704b8f3c6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sample-opentype-font-pack"></a>示例 OpenType 字体包
 本主题概述随 [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 一起分发的示例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体。 这些示例字体支持可供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序使用的扩展的 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 功能。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="fonts-in-the-opentype-font-pack"></a>OpenType 字体包中的字体  
  [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 提供一组可用来创建 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序的示例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体。 这些示例字体在 Ascender Corporation 的许可下提供。 它们仅实现由 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 格式所定义的全部功能的一部分。 下表列出了示例 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字体的名称。  
   
-|**Name**|**文件**|  
+|**名称**|**文件**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  
@@ -63,7 +64,7 @@ OpenType 字体包中的字体
 ## <a name="using-the-fonts"></a>使用字体  
  可以通过两种方法在应用程序中使用字体。 可以将字体作为项目内容项添加到应用程序中，这些项目内容项不会作为资源嵌入到程序集中。 此外，还可以将字体作为嵌入到应用程序程序集文件中的项目资源项添加到应用程序中。 有关详细信息，请参阅[将字体与应用程序一起打包](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Documents.Typography>  
  [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
  [将字体与应用程序一起打包](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

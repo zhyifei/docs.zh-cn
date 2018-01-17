@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing"></a>跟踪
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 可为错误监视和分析提供应用程序检测和诊断数据。 您可以使用跟踪代替调试器来了解应用程序的运行行为，或者为什么出错。 您还可以在组件之间关联错误和处理，以提供端对端体验。  
@@ -37,17 +38,17 @@ ms.lasthandoff: 12/02/2017
   
  本节说明如何使用端对端关联的活动跟踪和传播以帮助调试。  
   
- [使用跟踪来排查你的应用程序](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  本节说明如何使用跟踪来调试应用程序。  
   
- [安全问题和用于跟踪有用的提示](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [有关跟踪的安全注意事项和有用提示](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
   
  本主题说明防止敏感信息公开的方法以及使用 WebHost 时的有用提示。  
   
- [跟踪引用](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [跟踪参考](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
   
  本主题列出由 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 生成的所有跟踪。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

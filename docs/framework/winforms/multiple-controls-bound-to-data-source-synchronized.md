@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2573f342530e59fa05e7f24342f251990b2ce47d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 227ad36e87c3deceb7fefe3cd19013fc8e76c686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>如何：确保绑定到同一数据源的多个控件保持同步
 通常当使用 Windows 窗体中的数据绑定时, 多个控件将绑定到同一数据源。 在某些情况下，可能需要进行额外的步骤，以确保控件的绑定的属性保持同步与彼此和数据源。 这些步骤是在两个情况下需要：  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 -   窗体具有<xref:System.Windows.Forms.Form.Load>处理事件和调用`InitializeControlsAndDataSource`方法在示例中从窗体的<xref:System.Windows.Forms.Form.Load>事件处理程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：使用 BindingSource 组件跨窗体共享绑定数据](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
  [Windows 窗体数据绑定中的更改通知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  [与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  

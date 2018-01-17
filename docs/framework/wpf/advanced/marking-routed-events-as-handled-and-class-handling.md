@@ -28,11 +28,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ec6bd76b6254b44dfacfd7f3d29341ece0a78f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2c9a550e1423acb37da9645d09cdb4ccefcea66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>将路由事件标记为“已处理”和“类处理”
 路由事件的处理程序可以在事件数据内将事件标记为已处理。 处理事件将有效地缩短路由。 类处理是一个编程概念，受路由事件支持。 类处理程序有机会在类级别使用处理程序处理特定路由事件，在类的任何实例上存在任何实例处理程序之前调用该处理程序。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题将详细介绍[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中引入的概念。  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/21/2017
   
  第二种技术仅适用于输入事件，其中路由事件的隧道版本和冒泡版本是配对的。 对于这些路由事件，可以改为将处理程序添加到预览/隧道对等路由事件。 假如在应用程序的元素树中的某个上级元素级别附加了 Preview 处理程序，该路由事件将从根开始在路由中传递，所以按钮类处理代码不会截获到该事件。 如果使用此方法，则将任意 Preview 事件标记为已处理时一定要谨慎。 对于指定的示例<xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>正在处理在根元素中，如果你将标记为事件<xref:System.Windows.RoutedEventArgs.Handled%2A>在处理程序实现中，实际上会禁止<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 这通常不是希望的行为。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.EventManager>  
  [预览事件](../../../../docs/framework/wpf/advanced/preview-events.md)  
  [创建自定义路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  

@@ -20,11 +20,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ddfb7b343bf4eb551b5029c538d29f104698adf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da91e3456fdca863980c89f45e0cc28db19170be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>如何：使用 PrincipalPermissionAttribute 类限制访问
 控制对 Windows 域计算机上的资源的访问是一项基本的安全任务。 例如，应该只有某些用户才能查看敏感数据，例如工资单信息。 本主题解释如何通过要求用户属于某个预定义组来限制对方法的访问。 有关工作示例，请参阅[授权服务操作访问权限](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 1.  打开包含所实现的服务协定代码的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 代码文件。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]实现一个协定，请参阅[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
-2.  将 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性应用于每个必须限制到特定组的方法。 将 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 属性设置为 <xref:System.Security.Permissions.SecurityAction.Demand>，并将 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 属性设置为组名称。 例如:   
+2.  将 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性应用于每个必须限制到特定组的方法。 将 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 属性设置为 <xref:System.Security.Permissions.SecurityAction.Demand>，并将 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 属性设置为组名称。 例如:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -94,11 +95,11 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[c_PrincipalPermissionAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#3)]
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  <xref:System.Security.Permissions.SecurityAction.Demand>  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>  
- [授予对服务操作访问权限](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
+ [授予对服务操作的权限](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
  [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)

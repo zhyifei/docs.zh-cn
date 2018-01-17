@@ -13,16 +13,17 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 868e76b39156dc2fff85da2afe3501e39faf8812
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 测试客户端 (WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，使用该工具，用户可以输入测试参数、将该输入提交给服务并查看服务发回的响应。 当与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机结合时，它可以提供完美的服务测试体验。  
   
- 在以下位置可以找到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端 (WcfTestClient.exe)：C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\  
+ 通常可以找到[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端 (WcfTestClient.exe) 在以下位置： C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE-社区可能是"企业"、"专业"或"社区"之一具体取决于安装的 Visual Studio 的级别。
   
 ## <a name="scenarios-for-using-test-client"></a>使用测试客户端的方案  
  以下各节讨论了使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端简化开发流程的最常见方案。  
@@ -175,5 +176,5 @@ ms.lasthandoff: 12/02/2017
   
 -   右键单击**WCF 服务主机**在通知区域中，然后单击图标**退出。** 这将关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务自动主机和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端并停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 调试进程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

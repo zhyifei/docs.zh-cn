@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54f5b25a4391b4758e1798bce6e03f4534332db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-user-defined-bindings"></a>创建用户定义的绑定
 有多种方式可以创建系统未提供的绑定：  
@@ -127,6 +128,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>派生自标准绑定  
  也许可以扩展一个现有的系统提供的绑定，而不用创建一个全新的绑定类。 与上一个示例非常类似，必须重写 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法和 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.Binding>  
  [自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)

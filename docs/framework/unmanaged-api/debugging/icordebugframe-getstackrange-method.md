@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f1db7617d52e07489ade339b76023e21816835ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c4c9c0a531d93ca2c7c72f50bcd2f7ee98887e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange 方法
 获取此堆栈帧的绝对地址范围。  
@@ -49,7 +50,7 @@ HRESULT GetStackRange (
 ## <a name="remarks"></a>备注  
  堆栈的地址范围可用于从多个调试引擎中收集的交错的堆栈跟踪进行汇总。 数值范围提供有关内容的堆栈帧的任何信息。 它是仅对比较的堆栈帧位置有意义。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05fe983832eb3931549bbda5ee7db7c70766cd3c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 21339d071ac26f073d0495814744535bd84f3a22
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="addressing"></a>寻址
 “寻址”示例演示终结点地址的各个方面和功能。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在本示例中，服务是自承载的。 服务和客户端都是控制台应用程序。 服务使用相对和绝对终结点地址的组合来定义多个终结点。  
@@ -146,4 +147,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

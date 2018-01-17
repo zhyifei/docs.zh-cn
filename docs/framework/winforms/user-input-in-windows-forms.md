@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c65fdca99bb12cccf70273194e3294c71a2f5a7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7a9face3d38f7f64e3bda9d5dbe9ecfb7f730ee8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-in-windows-forms"></a>Windows 窗体中的用户输入
 Windows 窗体包括一种用户输入模型，该模型基于在处理相关的 Windows 消息时所引发的事件。 本节中的主题提供了有关鼠标和键盘用户输入的信息，其中包括演示如何执行特定任务的代码示例。  

@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06b8ffd2bda9597198d94c99a785c59cc7cc052e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 006dafe88c5db7cb1499d7c1902d295841bfb5ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>演练：使用 MaskedTextBox 控件
 本演练涉及以下任务：  
@@ -134,6 +135,6 @@ ms.lasthandoff: 11/21/2017
     End Sub  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.MaskedTextBox>  
  [MaskedTextBox 控件](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)

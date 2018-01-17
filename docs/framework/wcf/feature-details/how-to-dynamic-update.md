@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 70f9bb374405496c62650ee3fb715f059e91cd7c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 748286b4f6fa22b23423ff5c176c76d11fbe742d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-dynamic-update"></a>如何：动态更新
 本主题概述了创建和动态更新路由配置所需的基本步骤。 在本示例中，从配置文件中获取初始路由配置，并将所有消息路由至 regularCalc 计算器服务；不过，本示例随后以编程方式更新该路由配置，以便更改 roundingCalc 服务的目标终结点。  
@@ -306,5 +307,5 @@ namespace Microsoft.Samples.AdvancedFilters
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

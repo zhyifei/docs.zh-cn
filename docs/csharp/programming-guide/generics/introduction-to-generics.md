@@ -9,11 +9,11 @@ ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ec4fe9cc9fe7bf868fcc8afe4dc4e4234241e352
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61baf26c9f942a59e3787ca55a2ac6a824410608
+ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>泛型介绍（C# 编程指南）
 泛型类和泛型方法兼具可重用性、类型安全性和效率，这是非泛型类和非泛型方法无法实现的。 泛型通常与集合以及作用于集合的方法一起使用。 .NET Framework 2.0 版类库提供新的命名空间 <xref:System.Collections.Generic>，其中包含几个新的基于泛型的集合类。 建议面向 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 及更高版本的所有应用程序都使用新的泛型集合类，而不使用旧的非泛型集合类，例如 <xref:System.Collections.ArrayList>。 有关详细信息，请参阅 [.NET Framework 类库中的泛型](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)。  
@@ -22,9 +22,9 @@ ms.lasthandoff: 11/21/2017
   
 -   在 `AddHead` 方法中作为方法参数的类型。  
   
--   在 `Node` 嵌套类中作为公共方法 `GetNext` 和 `Data` 属性的返回类型。  
+-   在 `Node` 嵌套类中作为 `Data` 属性的返回类型。  
   
--   在嵌套类中作为私有成员数据的类型。  
+-   在嵌套类中作为私有成员 `data` 的类型。  
   
  请注意，T 可用于 `Node` 嵌套类。 如果使用具体类型实例化 `GenericList<T>`（例如，作为 `GenericList<int>`），则出现的所有 `T` 都将替换为 `int`。  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Collections.Generic>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [泛型](../../../csharp/programming-guide/generics/index.md)

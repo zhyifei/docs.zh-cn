@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c63478620a2b604d27f2d9d154383cb0bae6b6da
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aca9df2be74dba308d3c4e4eb1c61b3e1afaa580
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>如何：部署 COM+ 集成应用程序
 编写了 COM+ 集成应用程序后，您可能要将它部署在另一台计算机上。 本主题说明如何将 COM+ 集成应用程序从一台计算机移动到另一台计算机。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  将计算机 A 上虚拟根目录中的 .svc 文件 (componentName.svc) 和 Web.config 文件复制到计算机 B 上新创建的虚拟根目录。  
   
-## <a name="see-also"></a>另请参阅  
- [将与 COM + 应用程序概述集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- [如何： 配置 COM + 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- [如何： 使用 COM + 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+## <a name="see-also"></a>请参阅  
+ [与 COM+ 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ [如何：配置 COM+ 服务设置](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [如何：使用 COM+ 服务模型配置工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

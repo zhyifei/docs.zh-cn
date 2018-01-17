@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b9b6212ed6c50faf73a6d3531f001a1b7e72d33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b356ef1782ec5bba4f7288644a0802f029456bbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-rotate-an-object"></a>如何：旋转对象
 此示例演示如何旋转对象。 此示例首先创建<xref:System.Windows.Media.RotateTransform>，然后指定其<xref:System.Windows.Media.RotateTransform.Angle%2A>以度为单位。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整示例，请参阅 [2D 转换示例](http://go.microsoft.com/fwlink/?LinkID=158252)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Transform>  
  [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

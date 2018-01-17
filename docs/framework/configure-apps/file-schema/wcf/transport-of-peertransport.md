@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69b62699f5db0ab11fac3cc4d1ba4e2aa022934d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8bb0fbce0d7b45fd051db187cd6d7e920b08cab3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; 的 &lt;transport&gt;
 指定采用此绑定配置的对等方所发送的安全消息的传输类型。  
@@ -66,12 +67,12 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  仅当设置此元素的 mode 属性[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)设置为`Transport`或`TransportWithMessageCredential`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
  <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>  
  <xref:System.ServiceModel.PeerTransportSecuritySettings>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [传输安全](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [传输安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
  [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
  [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  

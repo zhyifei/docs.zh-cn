@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c674fec227e765213edfe2f2827543024cceac7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0d57bccb12bfa9b0b193967a5a2ce3830dd6ef7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown 控件（Windows 窗体）
 Windows 窗体 `NumericUpDown` 控件看起来像是一个文本框与一对箭头的组合，用户可单击箭头来调整值。 该控件会显示并设置选择列表中的单个数值。 用户可通过单击向上和向下按钮、按向上键和向下键或键入一个数字来增大和减小数字。 单击向上键时，值沿最大值方向增加；单击向下键时，则沿最小值方向移动。 说明此类控件很有用的一个示例是音乐播放器上的音量控件。 某些 Windows 控制面板应用程序中使用了数值 up-down 控件。  

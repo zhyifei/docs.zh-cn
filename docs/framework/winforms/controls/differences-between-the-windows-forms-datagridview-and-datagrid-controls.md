@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38373b8e3201ea0a6c32d972c7ac9c72888d5eae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3bc6d1fa2450d0aba52bd6a5a030c025fede0cb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别
 <xref:System.Windows.Forms.DataGridView>控件是一个新控件，替换<xref:System.Windows.Forms.DataGrid>控件。 <xref:System.Windows.Forms.DataGridView>控件提供了许多的基本和高级功能，中缺少<xref:System.Windows.Forms.DataGrid>控件。 此外的体系结构<xref:System.Windows.Forms.DataGridView>控件，可以更轻松地扩展和自定义比<xref:System.Windows.Forms.DataGrid>控件。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  因为<xref:System.Windows.Forms.DataGridView>控件具有全新的体系结构，将使你能够使用没有简单的转换路径<xref:System.Windows.Forms.DataGrid>包自定义<xref:System.Windows.Forms.DataGridView>控件。 许多<xref:System.Windows.Forms.DataGrid>自定义项都是使用不必要<xref:System.Windows.Forms.DataGridView>控制，但是，由于新控件中提供的内置功能。 如果你已创建的自定义列类型<xref:System.Windows.Forms.DataGrid>你想要使用的控件<xref:System.Windows.Forms.DataGridView>控件，你将需要实现它们再次使用新的体系结构。 有关详细信息，请参阅[自定义 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGrid>  
  <xref:System.Windows.Forms.BindingSource>  

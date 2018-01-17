@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7bd296fb8a761527e132aecfed9310208f56222
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f31f0b247c882b8ccba84930f7e21f5eea088a35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>如何：使用 Windows 窗体 NumericUpDown 控件设置和返回数值
 Windows 窗体的数字值<xref:System.Windows.Forms.NumericUpDown>控件由其<xref:System.Windows.Forms.NumericUpDown.Value%2A>属性。 你可以编写控件的值的条件测试，即可按与任何其他属性一样。 一次<xref:System.Windows.Forms.NumericUpDown.Value%2A>属性设置，你可以直接通过编写代码来执行操作，调整它也可以调用<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>和<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>方法。  
@@ -47,7 +48,7 @@ Windows 窗体的数字值<xref:System.Windows.Forms.NumericUpDown>控件由其<
     numericUpDown1->Value = 55;  
     ```  
   
-     - 或 -  
+     或  
   
 2.  调用<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>或<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>方法来增加或减少值方法中指定的量<xref:System.Windows.Forms.NumericUpDown.Increment%2A>属性。  
   
@@ -99,7 +100,7 @@ Windows 窗体的数字值<xref:System.Windows.Forms.NumericUpDown>控件由其<
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.NumericUpDown>  
  <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>  

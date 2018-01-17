@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a461b741675a18ac1e3544b17a9bbe9a8d18547
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60f662562422169bc7b234ed0136797294f0b39a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>如何：沿着路径针对对象进行动画处理（双重动画）
 此示例演示如何使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>类定义的路径沿移动对象<xref:System.Windows.Media.PathGeometry>。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 11/21/2017
   
  若要移动使用几何路径对象的另一种方法是使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>对象。 有关示例，请参阅[动画对象沿路径 （矩阵动画）](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

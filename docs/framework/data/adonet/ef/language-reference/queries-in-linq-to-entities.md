@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 220416aa4e282cb342ee6080d9040f9f4818fbf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fe20fd26b78bde19ed73e2415b1b5c283a0d1f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities 中的查询
 查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 语言集成查询 (LINQ) 为跨各种数据源和格式处理数据提供了一种更简单的、一致的模型。 在 LINQ 查询中，您始终可以使用编程对象。  
@@ -34,48 +35,48 @@ ms.lasthandoff: 11/21/2017
 ### <a name="query-expression-syntax"></a>查询表达式语法  
  查询表达式是一种声明性查询语法。 通过这一语法，开发人员可以使用类似于 Transact-SQL 的高级语言格式编写查询。 通过使用查询表达式语法，你可以用最少的代码对数据源执行复杂的筛选、排序和分组操作。 有关详细信息，[基本查询操作 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。 有关演示如何使用查询表达式语法的示例，请参见以下主题：  
   
--   [查询表达式语法示例： 投影](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
+-   [查询表达式语法示例：投影](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
   
--   [查询表达式语法示例： 筛选](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
+-   [查询表达式语法示例：筛选](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
--   [查询表达式语法示例： 排序](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
+-   [查询表达式语法示例：排序](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
   
--   [查询表达式语法示例： 聚合运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
+-   [查询表达式语法示例：聚合运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [查询表达式语法示例： 分区](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
+-   [查询表达式语法示例：分区](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
   
--   [查询表达式语法示例： 联接运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
+-   [查询表达式语法示例：联接运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
   
--   [查询表达式语法示例： 元素运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
+-   [查询表达式语法示例：元素运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
   
--   [查询表达式语法示例： 分组](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
+-   [查询表达式语法示例：分组](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
--   [查询表达式语法示例： 导航关系](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+-   [查询表达式语法示例：导航关系](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>基于方法的查询语法  
  另一种编写 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询的方法是使用基于方法的查询。 基于方法的查询语法是一系列针对 LINQ 运算符方法的直接方法调用，同时将 lambda 表达式作为参数传递。 有关详细信息，请参阅 [Lambda 表达式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。 有关演示如何使用基于方法的语法的示例，请参见以下主题：  
   
--   [基于方法的查询语法示例： 投影](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
+-   [基于方法的查询语法示例：投影](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
--   [基于方法的查询语法示例： 筛选](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
+-   [基于方法的查询语法示例：筛选](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
--   [基于方法的查询语法示例： 排序](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+-   [基于方法的查询语法示例：排序](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
   
--   [基于方法的查询语法示例： 聚合运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [基于方法的查询语法示例：聚合运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [基于方法的查询语法示例： 分区](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
+-   [基于方法的查询语法示例：分区](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
   
--   [基于方法的查询语法示例： 转换](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
+-   [基于方法的查询语法示例：转换](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
   
--   [基于方法的查询语法示例： 联接运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
+-   [基于方法的查询语法示例：联接运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
   
--   [基于方法的查询语法示例： 元素运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
+-   [基于方法的查询语法示例：元素运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
   
--   [基于方法的查询语法示例： 分组](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
+-   [基于方法的查询语法示例：分组](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
--   [基于方法的查询语法示例： 导航关系](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+-   [基于方法的查询语法示例：导航关系](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
  [C# 中的 LINQ 入门](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [Visual Basic 中的 LINQ 入门](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5720ca8adbfb4a25e6c1360ac156e950a2f1ce52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 46fd6c75ea0854f8d70bdfaceaa9b2e997422abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的代码生成
 可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令行工具生成表示数据库的代码。 在任一情况下，端到端代码生成都分成三个阶段：  
@@ -279,9 +280,9 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [如何： 生成对象模型作为外部文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
+ [如何：将对象模型作为外部文件生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
  [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

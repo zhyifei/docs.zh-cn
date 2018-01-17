@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 353ae034381ab29787aba1c1c362f4c6fc57da7e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea7214e284754b1a2f5c8a7a68f19b1b94e02a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 <a name="top"></a> 这些事件收集特定于方法的信息。 符号解析需要这些事件的负载。 此外，这些事件还提供如调用方法的次数等有用信息。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/18/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |MethodID|win:UInt64|方法的唯一标识符。 对于 JIT 帮助器方法，将设置为该方法的起始地址。|  
 |ModuleID|win:UInt64|此方法所属的模块标识符（0 表示 JIT 帮助器）。|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 10/18/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 10/18/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |MethodID|win:UInt64|方法的唯一标识符。 对于 JIT 帮助器方法，将设置为该方法的起始地址。|  
 |ModuleID|win:UInt64|此方法所属的模块标识符（0 表示 JIT 帮助器）。|  
@@ -158,7 +159,7 @@ ms.lasthandoff: 10/18/2017
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |MethodID|win:UInt64|方法的唯一标识符。|  
 |ModuleID|win:UInt64|此方法所属的模块标识符。|  
@@ -169,5 +170,5 @@ ms.lasthandoff: 10/18/2017
 |MethodSignature|win:UnicodeString|方法的签名（以逗号分隔的类型名称列表）。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

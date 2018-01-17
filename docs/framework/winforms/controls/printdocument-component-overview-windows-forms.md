@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f052283b743d5f1a7ed9d2bb6576390e5343dcae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 414a7972550558b40403b7f4cbfd9a49194666be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>PrintDocument 组件概述（Windows 窗体）
 Windows 窗体 [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) 组件用于设置属性，这些属性描述在基于 Windows 的应用程序中要打印什么内容以及打印文档的能力。 此组件可与 [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) 组件一起使用，控制文档打印的各个方面。  
@@ -35,7 +36,7 @@ Windows 窗体 [PrintDocument](../../../../docs/framework/winforms/controls/prin
   
  添加到窗体时<xref:System.Drawing.Printing.PrintDocument>组件出现在 Windows 窗体设计器底部栏中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Graphics>  
  <xref:System.Drawing.Printing.PrintDocument>  
  [Windows 窗体打印支持](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  

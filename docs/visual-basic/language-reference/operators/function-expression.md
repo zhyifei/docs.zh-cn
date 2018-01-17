@@ -14,11 +14,11 @@ ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1d9d1223b340b2172c12bd8c2f364e314e764b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb1790d363755fe9b8bd711409734f7c3a405f3e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-expression-visual-basic"></a>函数表达式 (Visual Basic)
 声明的参数和定义函数 lambda 表达式的代码。  
@@ -38,8 +38,8 @@ End Function
 |术语|定义|  
 |---|---|  
 |`parameterlist`|可选。 表示在此过程中的参数的本地变量名称的列表。 括号必须存在，即使列表为空。 请参阅[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`expression`|必需。 单个表达式。 表达式的类型是函数的返回类型。|  
-|`statements`|必需。 返回一个值，通过使用的语句列表`Return`语句。 (请参阅[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。)返回的类型是值的函数的返回类型。|  
+|`expression`|必须的。 单个表达式。 表达式的类型是函数的返回类型。|  
+|`statements`|必须的。 返回一个值，通过使用的语句列表`Return`语句。 (请参阅[Return 语句](../../../visual-basic/language-reference/statements/return-statement.md)。)返回的类型是值的函数的返回类型。|  
   
 ## <a name="remarks"></a>备注  
  A *lambda 表达式*是没有名称，用于计算并返回一个值的函数。 你可以使用 lambda 表达式任意位置可用作委托类型，除外的自变量`RemoveHandler`。 有关委托，而使用与委托的 lambda 表达式的详细信息，请参阅[委托语句](../../../visual-basic/language-reference/statements/delegate-statement.md)和[宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。  
@@ -92,9 +92,9 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- 有关查询方法的详细信息，请参阅[查询](../../../visual-basic/language-reference/queries/queries.md)。 有关标准查询运算符的详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+ 有关查询方法的详细信息，请参阅[查询](../../../visual-basic/language-reference/queries/queries.md)。 有关标准查询运算符的详细信息，请参阅[标准查询运算符概述](../../programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
  [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
  [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  

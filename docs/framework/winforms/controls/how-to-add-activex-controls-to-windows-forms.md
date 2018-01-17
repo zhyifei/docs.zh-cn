@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: afee07f2f5009abb6cf8facc94b138f4ea2a11fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9328400917208dde9f81b493fbf26c6080dc9c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>如何：向 Windows 窗体添加 ActiveX 控件
 虽然 Windows 窗体设计器已经过优化，主机 Windows 窗体控件，您还可将 Windows 窗体上的 ActiveX 控件。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  在向窗体添加 ActiveX 控件之前，必须将它们添加到工具箱中。 有关详细信息，请参阅[COM 组件、 自定义工具箱对话框](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-add-an-activex-control-to-your-windows-form"></a>若要向 Windows 窗体添加 ActiveX 控件  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  Windows 窗体 ActiveX 控件导入程序 (AxImp.exe) 创建不同类型的事件自变量比预期时 ActiveX 动态链接库中导入。 AxImp.exe 所创建的自变量是类似于以下： `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`，当`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`预期。 请注意，此不一致情况不会阻止代码工作正常。 有关详细信息，请参阅[Windows 窗体 ActiveX 控件导入程序 (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
  [不同语言和库中的控件和可编程对象的比较](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

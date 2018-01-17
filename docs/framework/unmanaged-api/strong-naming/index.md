@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 86d741a16a0293892d0d6d90f1763d744ed3675d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>强命名（非托管 API 参考）
 强命名 API 允许客户端管理的程序集强名称签名。  
@@ -116,9 +117,9 @@ ms.lasthandoff: 11/21/2017
  [强命名结构](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  描述强命名 API 用于管理强名称签名的程序集的非托管的结构...  
   
- [PublicKeyBlob 结构](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
+ [PublicKeyBlob Strong Naming](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  表示二进制格式公钥/私钥对的公钥。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
  [非托管 API 参考](../../../../docs/framework/unmanaged-api/index.md)

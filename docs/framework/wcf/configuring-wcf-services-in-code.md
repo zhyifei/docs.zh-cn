@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c05cc5947a36bbe8573c5308cdfbbe3f6c990815
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 202214a6c9279eb61db560321a8f36943ce5d635
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务
 通过 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]，开发人员可以使用配置文件或代码来配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 通过 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您还可以使用代码来配置服务。 在早期版本的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]（4.0 及更早版本）中，用代码来配置服务在自承载方案中十分方便，可以在调用 ServiceHost.Open 之前，使用 <xref:System.ServiceModel.ServiceHost> 类配置终结点和行为。 但是，在 Web 承载方案中，您不具备针对 <xref:System.ServiceModel.ServiceHost> 类的直接访问权限。 若要配置 Web 承载的服务，您需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET 4.5 起，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了一种使用代码来配置自承载服务和 Web 承载服务的更方便的方法。  
@@ -103,16 +104,16 @@ public class Service1 : IService1
 > [!IMPORTANT]
 >  请注意，<xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>忽略 <`host`> 中的设置 <`service`> 标记 <`system.serviceModel`>。 从概念上讲，<`host`> 即将主机配置不服务配置，它获取加载之前执行此配置方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用配置文件配置服务](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [配置客户端行为](../../../docs/framework/wcf/configuring-client-behaviors.md)  
  [简化配置](../../../docs/framework/wcf/simplified-configuration.md)  
  [基于配置的激活](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
  [配置](../../../docs/framework/wcf/samples/configuration-sample.md)  
- [基于配置的 IIS 和 WAS 中的激活](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
+ [IIS 和 WAS 中的基于配置的激活](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  [配置和元数据支持](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  
  [配置](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
  [如何：在配置中指定服务绑定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
- [如何： 在配置中创建服务终结点](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
- [如何： 使用配置文件为服务中发布元数据](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [如何：在配置中创建服务终结点](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [如何：使用配置文件发布服务的元数据](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  [如何：在配置中指定客户端绑定](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

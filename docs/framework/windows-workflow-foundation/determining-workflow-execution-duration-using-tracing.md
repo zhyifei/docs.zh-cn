@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c635dbd551eaba6ce338c38564480d0f5cfae553
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f2687d045db28974e99b2f2b6a3222924a520720
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>使用跟踪确定工作流执行持续时间
 本主题演示如何使用工作流跟踪来确定执行成功完成的自承载工作流所需的时间。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
   
  **WorkflowInstance Id"1bbac57b-3322-498e-9e27-8833fda3a5bf"已完成处于关闭状态。**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工作流跟踪](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
  [Windows Server App Fabric 监视](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 监视应用程序](http://go.microsoft.com/fwlink/?LinkId=201275)

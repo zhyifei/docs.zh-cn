@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aef9688d3da047645d53f6fcf113153393780c8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 713360b3cdc30ce7bca3e0df115016d66e59b0df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 枚举
 指示运行时挂起的原因。  
@@ -58,7 +59,7 @@ typedef enum {
 ## <a name="remarks"></a>备注  
  非托管代码中的所有运行时线程可以继续运行，直到它们尝试重新输入运行时，此时它们也会挂起，直到运行时恢复。 这也适用于输入运行时的新线程。 运行时中的所有线程立即挂起; 如果它们是在可中断的代码中，连接，或者需要挂起时它们到达可中断的代码。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -67,5 +68,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

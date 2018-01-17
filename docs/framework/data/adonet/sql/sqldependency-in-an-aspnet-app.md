@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69cdb468098a373f17ec25f28e43b77c650cc05f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8c63118db5333158feb596a534e01f922473cd7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 应用程序中的 SqlDependency
 本节中的示例演示如果通过利用 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 对象间接使用 <xref:System.Web.Caching.SqlCacheDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 对象使用 <xref:System.Data.SqlClient.SqlDependency> 来侦听通知和正确更新缓存。  
@@ -67,6 +68,6 @@ ms.lasthandoff: 11/21/2017
   
  现在使用 Transact-SQL UPDATE 命令更新数据库中的数据并刷新页面。 此时显示的时间指示已用数据库中的新数据刷新了缓存。 请注意，虽然已更新缓存，但页面上显示的时间在回发事件发生之前仍将保持不变。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

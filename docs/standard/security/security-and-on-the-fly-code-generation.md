@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c00c66be812f2a1cdfdf761f681d2a0561a284bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c6bb895979fb44616349505a07591f9ced9fedac
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>安全性和进行中的代码生成
 某些库的操作方式是通过生成代码并运行它执行调用方的某项操作。 基本问题是代表信任级别较低的代码生成代码，并在更高的信任级别运行它。 当调用方可影响代码生成时，问题更为恶化，因此必须确保仅生成认为安全的代码。  
@@ -33,5 +36,5 @@ ms.lasthandoff: 10/18/2017
   
  编译代码时，请注意恶意程序是否可以某种方式修改它。 在编译器读取磁盘上的源代码或代码加载 .dll 文件之前，是否存在一小段时间窗口使恶意代码可在此期间修改此源代码？ 若如此，必须适当使用文件系统中的访问控制列表保护包含这些文件的目录。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

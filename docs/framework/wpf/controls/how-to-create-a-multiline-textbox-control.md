@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 244eb38ea47bbd7376c2f8c6f5b2609fbd9c4330
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2a6885a594e5fcd747f85dedf1afbd39ec644717
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a>如何：创建多行 TextBox 控件
 此示例演示如何使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定义<xref:System.Windows.Controls.TextBox>将自动扩展以容纳多行文本的控件。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.TextWrapping>  
  [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

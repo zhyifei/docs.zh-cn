@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ef0886fe5319d2ddd8c4c4be1b61f629f2aa6f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-transfer-architectural-overview"></a>数据传输体系结构概述
 可以将[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 视为一种消息传递基础结构。 它可以接收消息，处理消息，根据用户代码调度消息以便进一步操作，或者从用户代码给定的数据构造消息并将消息发送到目标。 本主题旨在向高级开发人员说明用于处理消息和所包含数据的体系结构。 有关如何发送和接收数据的面向任务的更简单介绍，请参阅 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -88,9 +89,9 @@ ms.lasthandoff: 12/02/2017
   
 |消息类型|消息中的正文数据|写入 (OnWriteBodyContents) 实现|读取 (OnGetReaderAtBodyContents) 实现|  
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
-|传出，从非流处理编程模型创建|写入消息所需的数据（例如，序列化消息所需的对象和 <xref:System.Runtime.Serialization.DataContractSerializer> 实例）*|用于基于存储的数据写出消息的自定义逻辑（例如，在使用的序列化程序 `WriteObject` 上调用 `DataContractSerializer` ）*|调用 `OnWriteBodyContents`，缓冲结果，通过缓冲区返回 XML 读取器|  
-|传出，从流处理编程模型创建|具有要写入数据的 `Stream` *|使用 <xref:System.Xml.IStreamProvider> 机制从存储的流中写出数据*|调用 `OnWriteBodyContents`，缓冲结果，通过缓冲区返回 XML 读取器|  
-|从流通道堆栈传入|一个 `Stream` 对象，表示通过网络传入的、具有 <xref:System.Xml.XmlReader> 的数据|使用 `XmlReader` 从存储的 `WriteNode`中写出内容|返回存储的 `XmlReader`|  
+|传出，从非流处理编程模型创建|写入消息所需的数据（例如，序列化消息所需的对象和 <xref:System.Runtime.Serialization.DataContractSerializer> 实例）*|用于基于存储的数据写出消息的自定义逻辑（例如，在使用的序列化程序 `WriteObject` 上调用 `DataContractSerializer`）*|调用 `OnWriteBodyContents`，缓冲结果，通过缓冲区返回 XML 读取器|  
+|传出，从流处理编程模型创建|具有要写入数据的 `Stream`*|使用 <xref:System.Xml.IStreamProvider> 机制从存储的流中写出数据*|调用 `OnWriteBodyContents`，缓冲结果，通过缓冲区返回 XML 读取器|  
+|从流通道堆栈传入|一个 `Stream` 对象，表示通过网络传入的、具有 <xref:System.Xml.XmlReader> 的数据|使用 `XmlReader` 从存储的 `WriteNode` 中写出内容|返回存储的 `XmlReader`|  
 |从非流处理通道堆栈传入|一个缓冲区，其中包含具有 `XmlReader` 的正文数据|使用 `XmlReader` 从存储的 `WriteNode`中写出内容|返回存储的 lang|  
   
  \*这些项并不直接在实现`Message`子类，但在的子类<xref:System.ServiceModel.Channels.BodyWriter>类。 有关 <xref:System.ServiceModel.Channels.BodyWriter>的详细信息，请参阅 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
@@ -236,7 +237,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[C_DataArchitecture#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#9)]
  [!code-vb[C_DataArchitecture#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#9)]  
   
- 标记为要进行序列化（使用 <xref:System.ServiceModel.MessageBodyMemberAttribute>、 <xref:System.ServiceModel.MessageHeaderAttribute>或其他相关特性）的项必须为可序列化的，以参与消息协定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主题后面的“序列化”一节。  
+ 标记为要进行序列化（使用 <xref:System.ServiceModel.MessageBodyMemberAttribute>、 <xref:System.ServiceModel.MessageHeaderAttribute>或其他相关特性）的项必须为可序列化的，以参与消息协定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 本主题后面的“序列化”一节。  
   
 ### <a name="4-parameters"></a>4.参数  
  通常，想要说明对多段数据执行的操作的开发人员并不需要消息协定所提供的那样高的控制度。 例如，在创建新服务时，开发人员通常不需要进行空与包装决策和确定包装元素名称。 进行这些决策通常需要了解有关 Web 服务和 SOAP 的深入知识。  
@@ -281,5 +282,5 @@ ms.lasthandoff: 12/02/2017
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 是分别负责为 `DataContractSerializer` 和 `XmlSerializer`插入消息格式化程序的操作行为。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行为实际上可操作从 <xref:System.Runtime.Serialization.XmlObjectSerializer>派生的任何序列化程序，包括 <xref:System.Runtime.Serialization.NetDataContractSerializer> （在“使用独立序列化”中进行详细说明）。 此行为调用 `CreateSerializer` 虚拟方法重载之一以获取序列化程序。 若要插入其他序列化程序，请创建一个新的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 子类并重写两个 `CreateSerializer` 重载。  
   
-## <a name="see-also"></a>另请参阅  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>请参阅  
+ [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

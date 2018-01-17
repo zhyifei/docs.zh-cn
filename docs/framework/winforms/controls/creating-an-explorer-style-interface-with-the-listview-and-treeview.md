@@ -24,17 +24,18 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4a16ee1ca39ffb0eb170e206467d612cb707e5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 200c5bbb5a162c1e585fc35f9c8cb3f63eb0368e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>演练：使用设计器创建带有 ListView 和 TreeView 控件的资源管理器样式的界面
 Visual Studio 的优点之一是能够在短时间内创建具有专业水准的 Windows 窗体应用程序。 一种常见方案使用创建用户界面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>类似于 Windows 操作系统的 Windows 资源管理器功能的控件。 Windows 资源管理器显示的层次结构的文件和文件夹的用户的计算机上。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>若要创建包含 ListView 和 TreeView 控件的窗体  
   
@@ -46,7 +47,7 @@ Visual Studio 的优点之一是能够在短时间内创建具有专业水准的
   
     2.  在模板列表中，选择**Windows 窗体应用程序**。  
   
-3.  单击“确定”。 创建新的 Windows 窗体项目。  
+3.  单击 **“确定”**。 创建新的 Windows 窗体项目。  
   
 4.  添加<xref:System.Windows.Forms.SplitContainer>到窗体控件，并设置其<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性<xref:System.Windows.Forms.DockStyle.Fill>。  
   
@@ -110,7 +111,7 @@ Visual Studio 的优点之一是能够在短时间内创建具有专业水准的
   
 -   [如何：将快捷菜单附加到 TreeView 节点](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ListView>  
  <xref:System.Windows.Forms.TreeView>  
  [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  

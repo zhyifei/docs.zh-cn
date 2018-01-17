@@ -29,11 +29,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dcfa2e60a9659db6d38e0561785ece5726989ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ddb5abeee9c1cad12e40b84f2e5c81295cbed9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送类、结构和联合
 .NET Framework 中类和结构非常相似。 它们都可以具有字段、属性和事件。 并且都可以具有静态和非静态方法。 一个显著区别是结构是值类型，而类是引用类型。  
@@ -296,7 +297,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
  [平台调用数据类型](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [封送处理字符串](../../../docs/framework/interop/marshaling-strings.md)  

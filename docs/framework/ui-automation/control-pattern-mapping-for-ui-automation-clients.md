@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31beb7ab9a978f5bb379a3c1d61c90c19c26ca6b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6a5f9d115c601775cc4f5b1c61d71d739f7a405b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自动化客户端的控件模式映射
 > [!NOTE]
@@ -86,5 +87,5 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  如果控件类型没有可列出的受支持的控件模式，但具有一个或多个有条件支持的控件模式，则将始终支持这些有条件控件模式之一。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

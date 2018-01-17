@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e96eb8e48b5787db5296458af650133747687295
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3df07f8b7bf71d658e9073a8aeb3d51dee087544
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter 数据表和 DataColumn 映射
 A **DataAdapter**包含零个或多集合<xref:System.Data.Common.DataTableMapping>对象在其**TableMappings**属性。 A **DataTableMapping**提供从针对数据源，查询返回的数据之间的主映射和<xref:System.Data.DataTable>。 **DataTableMapping**名称可以代替了传递**DataTable**名称到**填充**方法**DataAdapter**。 下面的示例创建**DataTableMapping**名为**AuthorsMapping**为**作者**表。  
@@ -107,7 +108,7 @@ adapter.TableMappings.Add("Customers1", "Orders")
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+## <a name="see-also"></a>请参阅  
+ [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

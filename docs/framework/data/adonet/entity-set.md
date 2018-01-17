@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6b28be2b3bdddd9457874881e930ea978ef5c2b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9d0cef0247c36f3c7819e37f8144635ebdbf610b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-set"></a>实体集
 *实体集*是的逻辑容器的实例[实体类型](../../../../docs/framework/data/adonet/entity-type.md)和从该实体类型派生的任何类型的实例。 (有关派生类型的信息，请参阅[实体数据模型： 继承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。)实体类型与实体集之间的关系类似于关系数据库中行与表之间的关系：与行类似，实体类型描述了数据结构，而与表类似，实体集包含了给定结构的实例。 实体集不是一种数据建模构造，它没有描述数据结构。 相反，实体集提供了一种承载或存储环境构造（例如公共语言运行库或 SQL Server 数据库）来分组实体类型实例，以便可以将它们映射到某个数据存储区。  
@@ -54,6 +55,6 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)

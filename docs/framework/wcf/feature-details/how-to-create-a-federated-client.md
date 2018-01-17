@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87d29a53bc33ecd114e3315475984cbf04ce17c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-federated-client"></a>如何：创建联合客户端
 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，创建的客户端*联合服务*包括三个主要步骤：  
@@ -94,7 +95,7 @@ ms.lasthandoff: 12/02/2017
   
 2.  如果令牌缓存不是必需的设置`cacheIssuedTokens`属性 (的 <`issuedToken`> 元素) 到`false`。  
   
-3.  如果缓存令牌需要一定时间限制时，设置`maxIssuedTokenCachingTime`属性 <`issuedToken`> 为适当的值的元素。 例如:   
+3.  如果缓存令牌需要一定时间限制时，设置`maxIssuedTokenCachingTime`属性 <`issuedToken`> 为适当的值的元素。 例如:  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
 4.  如果默认值以外的值为首选，设置`issuedTokenRenewalThresholdPercentage`属性 <`issuedToken`> 元素为适当的值，例如：  
@@ -170,11 +171,11 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  作用域限定为给定的 URI 的证书的客户端想法仅适用于对服务（这些服务公开这些 URI 处的终结点）进行出站调用的应用程序。 它并不适用于已颁发的令牌，如在返回的集合中的服务器上配置签名的证书<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>的<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>类。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [如何： 禁用安全会话在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- [如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [如何： 配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [与元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [如何： 保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+## <a name="see-also"></a>请参阅  
+ [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [如何：在 WSFederationHttpBinding 上禁用安全会话](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [如何：创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [如何：配置本地证书颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [如何：保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

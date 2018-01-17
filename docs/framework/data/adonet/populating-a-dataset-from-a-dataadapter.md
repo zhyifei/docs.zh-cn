@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3648340050e5ee3a761efcbedd89f649ff8d9c91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6df0b6a06240a5f59c888ddcfb2b34764fd888fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>从 DataAdapter 填充数据集
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> 是数据的内存驻留表示形式，它提供了独立于数据源的一致关系编程模型。 `DataSet` 表示整个数据集，其中包含表、约束和表之间的关系。 由于 `DataSet` 独立于数据源，因此 `DataSet` 可以包含应用程序本地的数据，也可以包含来自多个数据源的数据。 与现有数据源的交互通过 `DataAdapter`来控制。  
@@ -133,7 +134,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 增强了对 <xref:System.Data.SqlTypes> 中的 `DataSet`的支持。 有关详细信息，请参阅 [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)。  
   
 ## <a name="ole-db-chapters"></a>OLE DB 章节  
- 分层行集或章节（OLE DB 类型 `DBTYPE_HCHAPTER`、ADO 类型 `adChapter`）可用于填充 `DataSet`的内容。 当 <xref:System.Data.OleDb.OleDbDataAdapter> 在 `Fill` 操作过程中遇到章节列时，将为章节列创建一个 `DataTable` ，并使用章节中的列和行填充该表。 为章节列创建的表使用父表名称和章节列名称来命名，其形式为“*ParentTableNameChapteredColumnName*”。 如果 `DataSet` 中已存在与章节列的名称相匹配的表，则将使用章节数据填充当前表。 如果现有表中不存在与章节中的列相匹配的列，则将添加新列。  
+ 分层行集或章节（OLE DB 类型 `DBTYPE_HCHAPTER`、ADO 类型 `adChapter`）可用于填充 `DataSet` 的内容。 当 <xref:System.Data.OleDb.OleDbDataAdapter> 在 `Fill` 操作过程中遇到章节列时，将为章节列创建一个 `DataTable` ，并使用章节中的列和行填充该表。 为章节列创建的表使用父表名称和章节列名称来命名，其形式为“*ParentTableNameChapteredColumnName*”。 如果 `DataSet` 中已存在与章节列的名称相匹配的表，则将使用章节数据填充当前表。 如果现有表中不存在与章节中的列相匹配的列，则将添加新列。  
   
  在使用章节列中的数据填充 `DataSet` 中的表之前，将创建分层行集的父表和子表之间的关系，方法是向父表和子表添加一个整数列，将父列设置为自动递增，然后使用两个表中所添加的列来创建 `DataRelation` 。 所添加的关系使用父表和章节列名称来命名，其形式为“*ParentTableNameChapterColumnName*”。  
   
@@ -191,9 +192,9 @@ adapter.Fill(customers, "Customers");
 |ANATR|10308|1|  
 |ANATR|10625|1|  
   
-## <a name="see-also"></a>另请参阅  
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+## <a name="see-also"></a>请参阅  
+ [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [使用 DbDataAdapter 修改数据](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
- [多个活动结果集 (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [多重活动结果集 (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

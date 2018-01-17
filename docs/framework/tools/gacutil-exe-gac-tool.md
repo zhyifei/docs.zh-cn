@@ -28,11 +28,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90c8a2467d48a45fe333cd07e34bca5ecfa5d727
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f802abf6ed90a60b057b01589dcf32c2aa495676
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe（全局程序集缓存工具）
 全局程序集缓存工具使你可以查看和操作全局程序集缓存和下载缓存的内容。  
@@ -157,7 +158,7 @@ gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert 
 gacutil /l  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
  [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  

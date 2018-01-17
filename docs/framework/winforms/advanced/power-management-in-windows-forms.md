@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e12f39a63a4f81e6deec4512a4e18ad2bda7e5e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7600ae42194b3333c404d217c2605a226df99e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="power-management-in-windows-forms"></a>Windows 窗体中的电源管理
 在 Windows 操作系统中，Windows 窗体应用程序可以充分利用电源管理功能。 你的应用程序可以监视计算机的电源状态，并发生状态更改时执行操作。 例如，如果便携式计算机上运行你的应用程序，你可能想要在计算机的电池电量低于特定级别时禁用你的应用程序中的某些功能。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[PowerMode#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#2)]
  [!code-vb[PowerMode#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>  
  <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>  
  <xref:System.Windows.Forms.Application.SetSuspendState%2A>  

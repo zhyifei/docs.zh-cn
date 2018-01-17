@@ -17,11 +17,12 @@ caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5c0423f9c8b01c1289e1107c0c16c59968a6e2a4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4f8c2a5ce5e1231c55f598e48d14bec896a4b5f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-interfaces"></a>分析接口
 本节描述允许对公共语言运行时 (CLR) 正在执行的程序进行分析的非托管接口。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
  [ICLRProfiling 接口](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-interface.md)  
  提供[AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)方法，使探查器附加到正在运行的进程。  
   
- [Icorprofilerassemblyreferenceprovider 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)  
+ [ICorProfilerAssemblyReferenceProvider 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)  
  探查器能够通知探查器将在中添加的程序集引用的 CLR [icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)回调。  
   
  [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  

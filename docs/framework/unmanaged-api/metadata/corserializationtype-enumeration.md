@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f6650298364f7deb60d553ee21f5028f5cbe7400
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e43151b1611f5b9b8218d30ba46a9143f463c193
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 枚举
 指定如何将对象序列化公共语言运行时。  
@@ -82,12 +83,12 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_PROPERTY`|将对象序列化为一个属性。|  
 |`SERIALIZATION_TYPE_ENUM`|将对象序列化为一个枚举。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [元数据枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅  
+ [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

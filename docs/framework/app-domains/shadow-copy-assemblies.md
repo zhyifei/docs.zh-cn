@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2eb71e1d03da16581ee25bf972be51ee2f63f585
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 611af6226e28369c30b251a23e901c140433808a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shadow-copying-assemblies"></a>卷影复制程序集
 借助卷影复制，无需卸载应用程序域就可更新用于此应用程序域的程序集。 这对必须连续可用的应用程序（如 ASP.NET 网站）特别有用。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="obsolete-methods"></a>已过时的方法  
  <xref:System.AppDomain> 类具有几种可用来控制应用程序域中卷影复制的方法（如 <xref:System.AppDomain.SetShadowCopyFiles%2A> 和 <xref:System.AppDomain.ClearShadowCopyPath%2A>），但这些方法在 .NET Framework 2.0 版本中已标记为过时。 若要配置进行卷影复制的应用程序域，推荐使用 <xref:System.AppDomainSetup> 类的属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
  <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
  <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  

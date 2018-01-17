@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 609f53431e52da3629f5107adf91994a55eca89d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数量。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  
@@ -115,7 +116,7 @@ A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数�
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持用于记录消息传递尝试次数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会在内存中维护中止计数，所以当场中的多个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务读取同一消息时，此属性包含的值可能不精确。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Windows Vista、 Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
  [在协定和服务中指定并处理错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

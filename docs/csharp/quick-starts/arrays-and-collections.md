@@ -10,24 +10,24 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-start-collections"></a>C# 快速入门：集合 #
 
-本快速入门介绍 C# 语言和的基础知识<xref:System.Collections.Generic.List%601>类。
+本快速入门教程介绍了 C# 语言和 <xref:System.Collections.Generic.List%601> 类的基础知识。
 
-本快速入门希望有一台计算机可用于开发。 .NET 主题[开始在 10 分钟后](https://www.microsoft.com/net/core)已设置你在 Mac、 PC 或 Linux 上的本地开发环境的说明。
+本快速入门教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门简介](local-environment.md)简要概述了你将用到的命令，还提供了详细信息链接。
 
-## <a name="a-basic-list-example"></a>一个基本的列表的示例。
+## <a name="a-basic-list-example"></a>基本的列表示例。
 
 创建名为 list-quickstart 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console`。
 
 > [!NOTE]
-> 如果你刚刚完成[在 10 分钟内开始使用.NET](https://www.microsoft.com/net)，你可以继续使用你刚刚创建的 myApp 应用程序。
+> 如果你刚完成 [10 分钟 .NET 入门](https://www.microsoft.com/net)，则可以继续使用刚刚创建的 myApp 应用程序。
  
 在常用编辑器中，打开 Program.cs，并将现有代码替换为以下代码：
 
@@ -55,7 +55,7 @@ namespace list_quickstart
 
 刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环读取整个列表需要用到在前面的快速入门课程中学到的概念。
 
-用于显示名称的代码使用内插字符串。  如果 `string` 前面有 `$`符号，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
+用于显示名称的代码使用内插字符串。  如果 `$` 字符前面有 `string`，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
 
 接下来将进一步探索。
     
@@ -210,7 +210,7 @@ foreach(var item in fibonacciNumbers)
 > 为了能够集中精力探究此部分，可以注释掉调用 `WorkingWithStrings();` 的代码。 只需在此调用前添加两个 `/` 字符即可，如 `// WorkingWithStrings();`。 
 
 ## <a name="challenge"></a>挑战
-看看能不能将本课程中的一些内容与前面的课程融会贯通。 使用斐波那契数列，扩展当前生成的程序。 试着编写代码，生成此序列中的前 20 个数字。
+看看能不能将本课程中的一些概念与前面的课程融会贯通。 使用斐波那契数列，扩展当前生成的程序。 试着编写代码，生成此序列中的前 20 个数字。 （作为提示，第 20 个斐波纳契数是 6765。）
 
 ## <a name="complete-challenge"></a>完成挑战
 
@@ -218,6 +218,6 @@ foreach(var item in fibonacciNumbers)
 
 在循环的每次迭代中，取此列表中的最后两个整数进行求和，并将计算出的总和值添加到列表中。 循环会一直重复运行到列表中有 20 个项为止。
 
-祝贺你，你已完成列表快速入门。 您可以使用继续[简介类](introduction-to-classes.md)开发环境中的快速入门。
+恭喜！你已完成列表快速入门教程。 可以继续在你自己的开发环境中学习[类简介](introduction-to-classes.md)快速入门教程。
 
 若要详细了解如何使用 `List` 类型，可以参阅有关[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主题。 还可以了解其他许多集合类型。

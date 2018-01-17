@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 743e8cdf1a10efb7b99d6c6dcfcff611df6fbf4e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cb8ba8145d371a8773d860e88f073bcc5b732f1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-encoder"></a>选择消息编码器
 本主题讨论选择 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包括的以下消息编码器的条件：二进制、文本和消息传输优化机制 (MTOM)。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/02/2017
   
  消息编码绑定元素位于可选协议绑定元素之下和必需的传输绑定元素之上。 在传出端，消息编码器序列化传出 <xref:System.ServiceModel.Channels.Message> 并将其传递到传输层。 在传入端，消息编码器从传输层接收已序列化的 <xref:System.ServiceModel.Channels.Message> 并将其传递到更高的协议层（如果存在），如果不存在此协议层，则传递到应用程序。  
   
- 当连接到预先存在的客户端或服务器时，因为您需要将消息以另一端预期的方式来解码，所以您不能选择使用特定消息编码。 但是，如果您正在编写一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，您可以通过多个终结点公开服务，每个终结点使用不同的消息编码。 这使客户端可以选择最佳的编码以通过最适合的终结点与您的服务通话，还使客户端可以灵活地选择最适合的编码。 使用多个终结点还使您可以将不同消息编码的优点与其他绑定元素结合起来。  
+ 当连接到预先存在的客户端或服务器时，因为您需要将消息以另一端预期的方式来解码，所以您不能选择使用特定消息编码。 但是，如果您正在编写一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，您可以通过多个终结点公开服务，每个终结点使用不同的消息编码。 这使客户端可以选择最佳的编码以通过最适合的终结点与您的服务通话，还使客户端可以灵活地选择最适合的编码。 使用多个终结点还使你可以将不同消息编码的优点与其他绑定元素结合起来。  
   
 ## <a name="system-provided-encoders"></a>系统提供的编码器  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含三种消息编码器，它们由下面的三个类表示：  
@@ -92,6 +93,6 @@ IgnoreWhitespace 设置被忽略。
 
 客户端和服务需要同意发送和接收压缩的消息并且因此必须在客户端和服务上的 binaryMessageEncoding 元素上配置 compressionFormat 属性。 如果未配置服务或客户端使用压缩，则会引发 ProtocolException；但另一方面，启用压缩时应仔细考虑。 如果网络带宽是一个瓶颈，则压缩非常有用。 如果 CPU 是瓶颈，则压缩会减小吞吐量。 必须在模拟环境中进行相应的测试，以确定这对于应用程序是否有好处  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)

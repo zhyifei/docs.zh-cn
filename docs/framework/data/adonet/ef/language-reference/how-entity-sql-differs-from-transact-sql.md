@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5d99b433cb499316872cfb09d9fca7f7da753bb5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 90c3b7d639ea6fafd570b44ee40c0567e264ea91
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 与 Transact-SQL 有何不同
 本主题介绍之间的差异[!INCLUDE[esql](../../../../../../includes/esql-md.md)]和[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/21/2017
  使用继承时，从父类型实例集合中选择子类型的实例通常是有用的。 [Oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)中的运算符[!INCLUDE[esql](../../../../../../includes/esql-md.md)](类似于`oftype`在 C# 序列中) 提供了此功能。  
   
 ## <a name="support-for-collections"></a>集合支持  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将集合视为一类实体。 例如:   
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将集合视为一类实体。 例如:  
   
 -   集合表达式在 `from` 子句中有效。  
   
@@ -160,7 +161,7 @@ select a, sum(t.b) from T as t group by t.a as a
 ```  
   
 ## <a name="order-by-clause-usage"></a>ORDER BY 子句用法  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 只允许在最顶层的 SELECT .. 从 .. WHERE 块中指定 ORDER BY 子句。 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，可以使用嵌套的 ORDER BY 表达式，并且可以将其放置在查询中的任何地方，但不会保留嵌套查询中的排序。  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 只允许在最顶层的 SELECT . 从。 WHERE 块中指定 ORDER BY 子句。 在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，可以使用嵌套的 ORDER BY 表达式，并且可以将其放置在查询中的任何地方，但不会保留嵌套查询中的排序。  
   
 ```  
 -- The following query will order the results by the last name  
@@ -221,6 +222,6 @@ Select value c from Categories as c;
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 仅支持在每个命令中使用一个由结果生成的查询语句。  
   
-## <a name="see-also"></a>另请参阅  
- [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+## <a name="see-also"></a>请参阅  
+ [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [不支持的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41031a5e3d423f0c1d7459250073634592e0291e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31830f97cff1c302ee573b8248eb1d83e696ac48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount 方法
 创建具有同步的重试次数的关键部分对象。  
@@ -61,7 +62,7 @@ HRESULT CreateCrstWithSpinCount (
 ## <a name="remarks"></a>备注  
  只能在多处理器系统上使用数值调节钮计数。 数值调节钮计数指定的执行与不可用的关键部分的信号量上等待操作之前，必须启动调用线程的次数。 如果数值调节钮操作期间，临界区变得可用，调用线程可避免等待操作。 `CreateCrstWithSpinCount`镜像 Win32`InitializeCriticalSectionAndSpinCount`函数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -70,7 +71,7 @@ HRESULT CreateCrstWithSpinCount (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRSyncManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
  [IHostSemaphore 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)  
  [IHostSyncManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

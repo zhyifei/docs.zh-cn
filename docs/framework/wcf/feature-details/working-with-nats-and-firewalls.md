@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5587300edf739eedb99084735eda81538ab61ef7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 和防火墙
 网络连接的客户端和服务器通常不具有用于进行通信的直接和开放的路径。 数据包在终结点计算机和网络中的中间计算机上进行筛选、路由、分析和转换。 网络地址转换 (NAT) 和防火墙是可以参与网络通信的中间应用程序的常见示例。  

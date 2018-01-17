@@ -9,17 +9,18 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-vb
 dev_langs: vb
-ms.openlocfilehash: 3ff4681f06da06533db5e8e2ce2498a31604bdb7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 058e8740ed523d606da0ad46e052f91f31b3b2d9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 生成 Visual Basic .NET Core Hello World 应用程序
 
 本主题分步介绍了如何使用 Visual Studio 2017 生成、调试和发布简单的 Visual Basic .NET Core 控制台应用程序。 Visual Studio 2017 提供了功能全面的开发环境，可用于生成 .NET Core 应用程序。 只要应用程序没有平台专属依赖项，应用程序就可以在 .NET Core 的任何目标平台上和安装了 .NET Core 的任何系统上运行。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 安装了“.NET Core 跨平台开发”工作负载的 [Visual Studio 2017](https://www.visualstudio.com/downloads/)。 可以使用 .NET Core 2.0 开发应用程序。
 

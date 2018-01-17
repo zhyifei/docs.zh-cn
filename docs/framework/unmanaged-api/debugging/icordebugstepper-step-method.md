@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 914773adefd2ed4c1aa98310fd27a0cbc829bf49
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f921725d6794f08530a537462208264ced1dc089
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step 方法
 导致到单步执行其包含的线程，以及 （可选） 为此 ICorDebugStepper 继续单步执行通过该线程中调用的函数。  
@@ -45,7 +46,7 @@ HRESULT Step (
 ## <a name="remarks"></a>备注  
  步骤完成时公共语言运行时执行此分档帧中的下一步的托管的指令。 如果`Step`是在分档器上调用，这不是在托管代码中，该步骤将完成时由线程执行的下一个托管的代码指令。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

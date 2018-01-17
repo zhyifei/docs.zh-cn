@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b8d353b50cf9439a9741199a52ca650e02e4d49f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-surrogates"></a>数据协定代理项
 数据协定*代理项*是基于数据协定模型而生成一个高级的功能。 在设计上，此功能用于在用户希望更改对类型进行序列化、反序列化或将其设计成元数据的方式时，进行类型自定义和替换。 在以下情况下可以使用代理项：还没有为类型指定数据协定；字段和属性 (Property) 没有用 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Attribute) 进行标记；用户希望动态创建架构变体。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="getdatacontracttype"></a>GetDataContractType  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法将一种类型映射到另一种类型。 此方法是序列化、反序列化、导入和导出所必需的。  
   
- 第一项任务是定义要将哪些类型映射到其他类型。 例如:   
+ 第一项任务是定义要将哪些类型映射到其他类型。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="getobjecttoserialize-method"></a>GetObjectToSerialize 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法用来将原始类型的实例转换为代理项类型的实例。 此方法是序列化所必需的。  
   
- 下一步是定义如何通过实现 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法来将物理数据从原始实例映射到代理项。 例如:   
+ 下一步是定义如何通过实现 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 方法来将物理数据从原始实例映射到代理项。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="getdeserializedobject-method"></a>GetDeserializedObject 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> 方法用来将代理项类型的实例转换为原始类型的实例。 它是反序列化所必需的。  
   
- 下一项任务是定义如何将物理数据从代理项实例映射到原始实例。 例如:   
+ 下一项任务是定义如何将物理数据从代理项实例映射到原始实例。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/02/2017
  上面的示例将 `InventorySurrogated` 类型的对象重新转换为其初始类型 `Inventory`。 在该例中，数据直接从 `InventorySurrogated` 传输到其在 `Inventory` 中的相应字段。 由于没有对数据执行任何操作，因此每个成员字段所包含的值与序列化之前相同。  
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport 方法  
- 在导出架构时，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是可选的。 此方法用来在所导出的架构中插入其他数据或提示。 可以在成员级别或类型级别插入其他数据。 例如:   
+ 在导出架构时，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是可选的。 此方法用来在所导出的架构中插入其他数据或提示。 可以在成员级别或类型级别插入其他数据。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -125,7 +126,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="processimportedtype-method"></a>ProcessImportedType 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> 方法对架构导入过程中创建的任何类型进行自定义。 此方法是可选的。  
   
- 在导入架构时，此方法允许对所导入的任何类型和编译信息进行自定义。 例如:   
+ 在导入架构时，此方法允许对所导入的任何类型和编译信息进行自定义。 例如:  
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   
@@ -200,7 +201,7 @@ ms.lasthandoff: 12/02/2017
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.IDataContractSurrogate>  
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  

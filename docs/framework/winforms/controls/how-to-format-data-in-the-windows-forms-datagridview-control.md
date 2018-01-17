@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49d5172b2638a7ac3a6a7bf005932ba4b3f9aba3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4be8ce245fdc17c55c03adb3d1e50f93b4e2a7e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>如何：设置 Windows 窗体 DataGridView 控件中的数据格式
 以下过程演示了使用的单元格值的基本格式设置<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>属性<xref:System.Windows.Forms.DataGridView>控件和控件中的特定列。 有关高级的数据格式设置信息，请参阅[如何： 在 Windows 窗体 DataGridView 控件中自定义数据格式](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>可靠编程  
  为了最大可伸缩性，应共享<xref:System.Windows.Forms.DataGridViewCellStyle>跨多个行、 列或使用相同样式，而不是单独设置每个元素的样式属性的单元格的对象。 有关详细信息，请参阅[缩放 Windows 窗体 DataGridView 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewCellStyle>  

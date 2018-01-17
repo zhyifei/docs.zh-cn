@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 29adc45df57c5f31c299dc28b611bcf0599d4aac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1fb340845afac0f5a13f7c4646d11ac057ebd054
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize 方法
 获取加载模块的大小（以字节为单位）。  
@@ -39,7 +40,7 @@ HRESULT GetSize(
 > [!NOTE]
 >  此方法仅适用于 .NET Native。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -48,6 +49,6 @@ HRESULT GetSize(
   
  **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorDebugLoadedModule 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)  
  [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

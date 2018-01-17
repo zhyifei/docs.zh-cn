@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdafddcb05dd50f059c9f6804573beec085a4a2a
-ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
+ms.workload: dotnet
+ms.openlocfilehash: 7c25f0039f75ba1c736cff946dbaaff9252dc93e
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt;元素 （缓存设置）
 指定的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>属性引用的配置设置的集合从一个或多个`namedCaches`配置文件的元素。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/25/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/runtime/add-element-for-namedcaches.md)|向内存缓存的 `namedCaches` 集合添加一个命名的缓存。|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)|清除内存缓存的 `namedCaches` 集合。|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 10/25/2017
       <namedCaches>  
           <add name="default"   
                cacheMemoryLimitMegabytes="0"   
-               physicalMemoryPercentage="0"  
+               physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
     </memoryCache>  
@@ -97,5 +98,5 @@ ms.lasthandoff: 10/25/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<memoryCache > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

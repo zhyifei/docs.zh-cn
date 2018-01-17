@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fe619cfdfee608777e10d4b4a7afced5208fb2fd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 35d1879309a1db350ded19865cc979ab7158f984
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface 方法
 获取指定标记所引用的接口。  
@@ -44,7 +45,7 @@ HRESULT GetIMapTokenIface (
  `pIMapToken`  
  [在中，out]要返回的接口元数据标记。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -53,5 +54,5 @@ HRESULT GetIMapTokenIface (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

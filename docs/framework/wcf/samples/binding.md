@@ -13,17 +13,18 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb39ddefb1bc22d4349ad1ced68bd471452b43b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82aa15e8a61dee8a542798f4adbd4904a7c07882
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding"></a>绑定
 本节包含演示如何使用终结点元素的绑定特性的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [字节流编码器](../../../../docs/framework/wcf/samples/bytestream-encoder.md)  
+ [ByteStream 编码器](../../../../docs/framework/wcf/samples/bytestream-encoder.md)  
  演示如何创建 `ByteStreamHttpBinding`，这是一个演示字节流编码器功能的 <xref:System.ServiceModel.Channels.Binding>。  
   
  [基本绑定](../../../../docs/framework/wcf/samples/basic-binding.md)  

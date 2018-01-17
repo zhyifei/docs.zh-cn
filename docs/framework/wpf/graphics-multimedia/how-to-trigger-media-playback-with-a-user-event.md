@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39d50fc23be4a5cdf4df90cd6fa96466acc738aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa93b757f0af38bc6b08d87ac5485e2bf0f45a1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a>如何：使用用户事件来触发媒体播放功能
 此示例演示如何将媒体播放与事件同步。  
@@ -32,10 +33,10 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[MediaGallery_snippet#SoundFromUserEventExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundFromUserEventExample.xaml#soundfromusereventexamplewholepage)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.MediaElement>  
  <xref:System.Windows.Media.MediaTimeline>  
  <xref:System.Windows.EventTrigger.RoutedEvent%2A>  
  <xref:System.Windows.Media.Animation.Storyboard>  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
  [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "3"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e4c829f4a74c3d2e84a070dfbe5d35d89b1b7ae6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ecdadc96c0fb850fef13ba978fc97eef91dadd65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 结构
 地图[!INCLUDE[wrt](../../../../includes/wrt-md.md)]到其相应的 ICorDebugType 对象的 GUID。  
@@ -45,7 +46,7 @@ typedef struct CorDebugGuidToTypeMapping {
 |`iid`|已缓存的 GUID[!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型。|  
 |`pType`|指向一个 ICorDebugType 对象，提供有关缓存类型的信息的指针。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -54,6 +55,6 @@ typedef struct CorDebugGuidToTypeMapping {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

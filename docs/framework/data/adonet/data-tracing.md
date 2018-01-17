@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a71b28a1653b72d212455e99f8aa0101bb74e7a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcd149b34282ef6ae21593e4549478bab91e0189
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的数据跟踪
 ADO.NET 具有内置数据跟踪功能，用于 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 的 .NET 数据提供程序以及 ADO.NET <xref:System.Data.DataSet> 和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 网络协议均支持此功能。  
@@ -61,7 +62,7 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 中的网络跟踪](../../../../docs/framework/network-programming/network-tracing.md)  
  [跟踪应用程序和在应用程序中插入检测点](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8ee8adfb93a3e098bb6df69ad00202118bc1731e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 393400c7a5d9d4d99431cbea4a3c3c82064218f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>IHostThreadPoolManager::GetMinThreads 方法
 在线程池中为预期的请求中获取的最小主机维护的空闲线程数。  
@@ -57,7 +58,7 @@ HRESULT GetMinThreads (
 ## <a name="remarks"></a>备注  
  主机不需要提供的实现`GetMinThreads`。 在这种情况下，它应返回 E_NOTIMPL 的 HRESULT 值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -66,7 +67,7 @@ HRESULT GetMinThreads (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.ThreadPool.GetMinThreads%2A>  
  <xref:System.Threading.ThreadPool>  
  [GetMaxThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)  

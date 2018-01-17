@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3873c3fd04e2f52e6d2a3bdc64e82f87c84aaf5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08e9f1f3b2145d94f491933639211a6eabd3c9fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;security&gt;
 定义绑定的安全设置。  
@@ -79,12 +80,12 @@ ms.lasthandoff: 11/21/2017
   
  此配置元素提供用于 `netTcpBinding` 的安全规范。 这是一种适合于跨计算机通信的安全、可靠且进行了优化的绑定。 默认情况下，它生成运行时通信堆栈，该堆栈支持用于消息传递的 TCP、消息安全性和身份验证的 Windows 安全、可靠的 WS-ReliableMessaging，以及二进制消息编码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.NetTcpSecurity>  
  <xref:System.ServiceModel.NetTcpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [保护服务和客户端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

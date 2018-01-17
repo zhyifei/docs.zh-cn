@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3621b05f1faae671d93106f50dfef1311959e48e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c1c11ca487003e57a499b3ff46178350e6aad404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>调整 Windows 窗体 DataGridView 控件中列和行的大小
 `DataGridView`控件提供许多选项用于自定义其列和行的大小调整行为。 通常情况下，`DataGridView`单元格，不要调整大小基于其内容。 相反，它们剪切任何大于单元格的显示值。 如果内容可以显示为一个字符串，该单元格在工具提示中显示它。  
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

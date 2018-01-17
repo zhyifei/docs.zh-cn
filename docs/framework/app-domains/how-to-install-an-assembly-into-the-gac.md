@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 23a1d8c638b198c31d7c83aaf3f216b465f01453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 47867a82432ec6abe2245a0421d800c242d92b2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>如何：将程序集安装到全局程序集缓存
 可通过两种方法将强名称程序集安装到全局程序集缓存 (GAC) 中：  
@@ -85,7 +86,7 @@ gacutil -i hello.dll
   
     4.  将步骤 c 中的文件拖动到“目标计算机的文件”窗格（或使用文件快捷菜单上的“复制”和“粘贴”命令）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用程序集和全局程序集缓存](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
  [如何：从全局程序集缓存中删除程序集](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  

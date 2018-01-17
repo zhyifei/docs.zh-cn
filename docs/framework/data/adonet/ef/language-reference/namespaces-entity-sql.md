@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0ea5292d20aebdb27da726b0076179fb64631e5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f97b28bce20fa71f82942fa5f123d7c2ac6616a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="namespaces-entity-sql"></a>命名空间 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 引入命名空间以避免全局标识符（如类型名称、实体集、函数等）出现名称冲突。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的命名空间支持与 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 中的命名空间支持类似。  
@@ -45,6 +46,6 @@ WHERE p IS OF (NamespaceName.Employee)
 ## <a name="adonet-usage"></a>ADO.NET 使用  
  查询是通过 ADO.NET <xref:System.Data.Common.DbCommand> 对象表示的。 可以在 <xref:System.Data.Common.DbCommand> 对象之上构建 <xref:System.Data.Common.DbConnection> 对象。 也可以将命名空间指定为 <xref:System.Data.Common.DbCommand> 和 <xref:System.Data.Common.DbConnection> 对象的一部分。 如果 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 无法在查询自身中解析标识符，则将探测外部命名空间（基于类似规则）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Entity SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+ [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f53f8396dc16f9f4538b772d376287cc1695ff47
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>如何：在服务协定中声明错误
 在托管代码中，出现错误条件时引发异常。 但是，在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序中，通过在服务协定中声明 SOAP 错误可以使服务协定指定向客户端返回哪些错误信息。 异常和错误之间的关系的概述，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -54,6 +55,6 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[FaultContractAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>  
  <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87fd7dc848e59cd8fb58131cf24cae4038ea82d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 441ec2cd07d46d44f527da7799e9df6d3bec4408
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 使通道在被包括到自定义绑定中时通过 MSMQ 传输来传送消息。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/02/2017
   
  此绑定元素是消息队列标准绑定 (`netMsmqBinding`) 所用的默认绑定元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.MsmqTransportElement>  
  <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  

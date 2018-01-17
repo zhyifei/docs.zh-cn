@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06cd4e812f4acf546dad577a2e1ddc571281ebe3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb27503fffc798b644f95fd213f8f23bdb3e228a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip 控件概述（Windows 窗体）
 菜单公开按常见的主题分组的命令到你的用户的功能。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.ToolStripDropDown>|表示允许用户从在用户单击时显示的列表中选择单个项的控件<xref:System.Windows.Forms.ToolStripDropDownButton>或更高级别的菜单项。|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|提供基本功能，为控件派生自<xref:System.Windows.Forms.ToolStripItem>显示单击时的下拉列表项。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>  

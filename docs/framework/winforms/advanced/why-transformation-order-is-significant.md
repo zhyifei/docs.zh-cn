@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b170c9247b2415c724c1306a4c21d067c823b4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="why-transformation-order-is-significant"></a>为什么转换顺序非常重要
 单个<xref:System.Drawing.Drawing2D.Matrix>对象可以存储一次转换的序列。 后者称为复合转换。 复合转换的矩阵被获取的各个变换的矩阵相乘。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
  立即上述示例的结果作为本主题中的第一个示例的结果是相同的。 这是因为我们反转方法调用的顺序和矩阵乘法的顺序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Drawing2D.Matrix>  
  [坐标系统和转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  [在托管 GDI+ 中使用转换](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

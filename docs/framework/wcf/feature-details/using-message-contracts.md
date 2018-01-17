@@ -17,11 +17,12 @@ caps.latest.revision: "46"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 14020e62e936ae6a9acad25c6c24d937feb150af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-message-contracts"></a>使用消息约定
 通常，在生成 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序时，开发人员会密切关注数据结构和序列化问题，而不必关心携带数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [指定在服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -456,6 +457,6 @@ public class OperationDetails
   
  如果要将消息对象作为 `Result` 属性来接收并要使返回的值作为该对象上的属性，请使用 `/messageContract` 命令选项。 这会生成一个签名，该签名会将响应消息作为 `Result` 对象上的 <xref:System.EventArgs> 属性返回。 然后，所有内部返回值就都是响应消息对象的属性了。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [设计和实现服务](../../../../docs/framework/wcf/designing-and-implementing-services.md)

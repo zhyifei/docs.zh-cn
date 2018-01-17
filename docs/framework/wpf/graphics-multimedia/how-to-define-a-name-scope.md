@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8d3199de53f93f07e36e7a6e0a02ed9e80b4d591
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3007088f849f40e4e9b4f1846c19c98c33e95c17
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-name-scope"></a>如何：定义名称范围
 使用进行动画处理<xref:System.Windows.Media.Animation.Storyboard>在代码中，你必须创建<xref:System.Windows.NameScope>并将注册拥有该名称范围的元素的目标对象的名称。 在下面的示例中，<xref:System.Windows.NameScope>为创建`myMainPanel`。 两个按钮，`button1`和`button2`，添加到面板中，并注册其名称。 几个动画和<xref:System.Windows.Media.Animation.Storyboard>创建。 情节提要的<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法用于启动动画。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[StoryboardBeginAnimation_procedural_snip#NameScopeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StoryboardBeginAnimation_procedural_snip/CSharp/ScopeExample.cs#namescopeexample)]
  [!code-vb[StoryboardBeginAnimation_procedural_snip#NameScopeExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StoryboardBeginAnimation_procedural_snip/visualbasic/scopeexample.vb#namescopeexample)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

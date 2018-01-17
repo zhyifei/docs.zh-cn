@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: aebabf12e6dcf12f0e1e1f24ec2ad69ea55ec86c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 766677d9eef60c811c8537bc60bb8db29dd988c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval 方法
 创建一个收集和公开此 ICorDebugThread 的功能的 ICorDebugEval 对象。  
@@ -45,7 +46,7 @@ HRESULT CreateEval (
 ## <a name="remarks"></a>备注  
  评估对象会在进行其计算之前将新链推送线程上。 则会中断当前正在执行的线程上评估完成之前计算。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a203aa20865a4180b4eb9a7b192fc3c9b73a2f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a31b407360467f37c2e60b1a3f4f4c72e80e13a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用设计器将数据绑定到 Windows 窗体的 DataGridView 控件
 你可以使用设计器连接<xref:System.Windows.Forms.DataGridView>控件添加到数据源的多个不同的类型，包括数据库、 业务对象或 Web 服务。 当将控件绑定到数据源使用设计器中时，控件将自动绑定到<xref:System.Windows.Forms.BindingSource>表示数据源的组件。 此外，会在控件中自动生成列以匹配数据源提供的架构信息。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
  下面的过程需要**Windows 应用程序**具有一个包含窗体项目<xref:System.Windows.Forms.DataGridView>控件或主/从关系的两个控件。 有关启动此类项目的信息，请参阅[如何：创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>将控件绑定到数据源  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  如果项目已有数据源，还可以使用“数据源”窗口创建数据窗体。 有关详细信息，请参阅[数据源窗口](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>  

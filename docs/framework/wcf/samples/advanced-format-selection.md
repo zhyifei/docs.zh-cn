@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b14aa97f1483b3c69bfecfa0b625e590c0c37836
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 124bf59f29ff04e643200edf686f79f573937a03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-format-selection"></a>高级格式选择
 本示例演示如何扩展 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 编程模型以支持新的传出响应格式。 此外，本示例使用 T4 模板以 HTML 页的形式返回响应，从而演示如何实现视图样式编程模型。  
@@ -56,4 +57,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AdvancedFormatSelection`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

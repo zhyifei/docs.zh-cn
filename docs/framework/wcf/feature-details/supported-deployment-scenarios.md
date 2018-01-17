@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5886b327f1ea6d2866b9fc76bb29031ee870934e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-deployment-scenarios"></a>支持的部署方案
 可在部分受信任的应用程序中使用的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 功能子集旨在满足使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的某些（而非全部）方案的要求。 在服务器上， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可满足 Internet 规模的共享宿主提供程序的要求，出于安全原因，这些提供程序在 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 中以“中等信任”权限集运行第三方应用程序。 在客户端上， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 部分信任支持旨在满足某些部署技术（例如 [ClickOnce Deployment](http://go.microsoft.com/fwlink/?LinkId=83712) （ClickOnce 部署）或 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的 XAML 浏览器应用程序技术）的要求，通过这些部署技术可以从不受信任的网站对桌面应用程序进行无缝和安全地部署。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可用于从通过 [ClickOnce Deployment](http://go.microsoft.com/fwlink/?LinkId=83712) （ClickOnce 部署）或 XBAP 技术部署的部分受信任的应用程序中与远程服务器进行通信。 Internet 区域权限集包括发起主机的 <xref:System.Net.WebPermission> ，此权限允许这些程序使用任何支持的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定（ [Partial Trust Feature Compatibility](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md)的某些（而非全部）方案的要求。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [代码访问安全性](http://go.microsoft.com/fwlink/?LinkId=83717)  
  [Windows Presentation Foundation 浏览器承载的应用程序概述](http://go.microsoft.com/fwlink/?LinkId=98397)  
  [部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)  

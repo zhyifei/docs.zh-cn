@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 25a6e333b81b337ad0c34de0c0ae097a5cff5601
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b7f5d064f49553ca64b72bec0e7c0dd4dc74d13b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-protocols"></a>安全协议
 Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所有现有企业的消息传递安全要求。 本节介绍以下 Web 服务安全协议的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 细节（在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中实现）。  
@@ -190,7 +191,7 @@ Web 服务安全协议提供 Web 服务安全机制，这些机制可满足所�
   
  安全标头布局：Strict  
   
- 算法组：Basic256  
+ 算法套件：Basic256  
   
 #### <a name="311-usernameovertransport"></a>3.1.1 UsernameOverTransport  
  在此身份验证模式下，客户端使用“用户名令牌”进行身份验证，该令牌作为签名支持令牌（总是从发起方发送到接收方）出现在 SOAP 层上。 在传输层，服务是用 X.509 证书进行身份验证的。 所用绑定为传输绑定。  

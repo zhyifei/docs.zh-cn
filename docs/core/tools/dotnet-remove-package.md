@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 4167f5465571259975572669e27f20c586b910da
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 1bc8d9cdc4db1f103b73116b43e630185a2c35de
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-remove-package"></a>dotnet remove package
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet remove package` - 从项目文件删除包引用。
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
 
 使用 `dotnet remove package` 命令可方便地从项目删除 NuGet 包引用。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT`
 

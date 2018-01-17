@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2e6b815be85576f037e0f24668c44756b95abd6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7a29b7224a3f4b692fdfb3afaf58d9744bafcc1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>演练：使用 Windows 窗体控件上的智能标记执行常规任务
 为 Windows 窗体应用程序中构造窗体和控件，如有需要反复执行的许多任务。 以下是一些常执行的任务，则会遇到：  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建项目并设置窗体。  
   
-#### <a name="to-create-the-project"></a>创建项目  
+#### <a name="to-create-the-project"></a>要创建项目  
   
 1.  创建一个名为"SmartTagsExample"的基于 Windows 的应用程序项目。 有关详细信息，请参阅[如何：创建一个 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  单击智能标记标志符号。 在出现旁边标志符号的快捷菜单，选择**水平拆分器方向**项。 注意，<xref:System.Windows.Forms.SplitContainer>控件的拆分栏现在处于水平放置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TextBox>  
  <xref:System.Windows.Forms.TabControl>  
  <xref:System.Windows.Forms.SplitContainer>  

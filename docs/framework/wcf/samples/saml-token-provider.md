@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 44455f6509778a84d39a0cba167328c4a7801fc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7afdbcde68a811dd8fb2be84c1ae298496992c9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saml-token-provider"></a>SAML 令牌提供程序
 本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的令牌提供程序用于为安全性基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附有默认凭据管理器令牌提供程序。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还附带了一个 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
@@ -409,4 +410,4 @@ ms.lasthandoff: 12/02/2017
   
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

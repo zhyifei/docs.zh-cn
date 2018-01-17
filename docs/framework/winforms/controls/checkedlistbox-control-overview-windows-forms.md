@@ -18,18 +18,19 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b2bb7251b87356361844e075831c95885879476
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c606406fb47d6297e70bfa3db5fc17631969e4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.CheckedListBox>控件扩展<xref:System.Windows.Forms.ListBox>控件。 它执行几乎所有操作都列表框不，还可以在列表中显示项旁边的复选标记。 其他两个控件之间的区别是，选中列表框仅支持<xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; 并且，选中列表框只能有一项或选择无。 请注意，所选的项将会突出显示窗体上，并且不是与选中的项相同。  
   
  检查列表框可以在设计时使用已添加项**字符串集合编辑器**或其项可以在运行时，集合中动态添加使用<xref:System.Windows.Forms.CheckedListBox.Items%2A>属性。 有关详细信息，请参阅[如何： 添加和删除项目，从 Windows 窗体 combobox 控件、 ListBox 控件或 CheckedListBox 控件](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.CheckedListBox>  
  <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>  

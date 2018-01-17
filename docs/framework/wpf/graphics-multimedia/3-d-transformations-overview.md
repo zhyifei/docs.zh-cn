@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 431f4abd55da3b8c4e348d3abbd107e2f6344d5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3-d-transformations-overview"></a>三维变换概述
 本主题描述如何向 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 图形系统中的 3D 模型应用转换。 开发人员可以借助转换功能对模型进行重定位、大小调整和重定向，而无需更改用来定义模型的基值。  
@@ -115,7 +116,7 @@ ScaleVector 示例
   
  由于照相机也是模型，因此也可以对照相机属性进行转换。  尽管确实可以通过改变照相机的位置或平面距离来改变场景的外观（实际上是变换整个场景的投影），但应注意，对于观察者来说，以这种方法实现的许多效果不如将转换应用于场景中模型的地点或位置更有“视觉意义”。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [3D 图形概述](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
  [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [2D 转换示例](http://go.microsoft.com/fwlink/?LinkID=158252)

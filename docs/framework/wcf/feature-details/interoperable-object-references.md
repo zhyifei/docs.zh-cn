@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 729abbd988050707af9ae5c2ea9e3ebb58489742
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3d74c54d29f7da085d9d87bf37cc93078726f308
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperable-object-references"></a>可互操作的对象引用
 默认情况下，<xref:System.Runtime.Serialization.DataContractSerializer> 按值序列化对象。 可以使用 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 属性指示数据协定序列化程序在序列化类型的对象时保留对象引用。  
@@ -104,7 +105,7 @@ public class SomeClass
   
  使用 `IsReference` 可确保消息往返时遵从架构要求。 如果未使用该属性，则从架构生成某个类型时，为该类型发回的 XML 不一定与架构最初设定的内容一致。 换言之，虽然 `id` 和 `ref` 属性进行了序列化，但原始架构可能禁止这些属性（或所有属性）在 XML 中出现。 在将 `IsReference` 应用于某个数据成员时，该成员在往返时会继续被识别为“可引用”。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.CollectionDataContractAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  

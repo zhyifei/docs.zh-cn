@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0d213d70d6f12cb8b574f07457c1b20317670d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af6f1bcb172543b372cbca52f54b675b6baf87d2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>演练：使用两个 Windows 窗体 DataGridView 控件创建一个主/从窗体
 使用的最常见方案之一<xref:System.Windows.Forms.DataGridView>控件是*主/从*窗体中，在其中显示两个数据库表之间的父/子关系。 在主表中选择行，则会导致要使用的相应的子数据更新的详细信息表。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
  若要将代码复制本主题中的一个单独的清单，请参阅[如何： 创建主/从窗体使用两个 Windows 窗体 DataGridView 控件](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
 -   到 Northwind SQL Server 示例数据库的服务器的访问。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
   
 -   自定义单元格的外观。 有关详细信息，请参阅[如何： 自定义 Windows 窗体 DataGridView 控件中的单元外观](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)和[如何： 设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
  [在 Windows 窗体 DataGridView 控件中显示数据](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  

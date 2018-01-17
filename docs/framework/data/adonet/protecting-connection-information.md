@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 31196697a606b3edbc0b3aa00b01e5eacb66cb03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 10fc559b5aafa5aa180d6c2203de0375cbfa8275
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="protecting-connection-information"></a>保护连接信息
 保护应用程序时，最重要的目标之一是保护对数据源的访问。 如果连接字符串未受保护，那么它就是一个潜在漏洞。 如果以纯文本形式存储连接信息或者使连接信息持续位于内存中，则可能会损害整个系统。 可以使用读取嵌入在源代码中的连接字符串[Ildasm.exe （IL 反汇编程序）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)若要查看 Microsoft 中间语言 (MSIL) 在编译的程序集。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="encrypt-configuration-files"></a>加密配置文件  
  您还可以在配置文件中存储连接字符串，从而不必将它们嵌入到应用程序的代码中。 配置文件是标准 XML 文件，.NET Framework 已为这些文件定义了一组常用的元素。 配置文件中的连接字符串通常存储在内部 **\<connectionStrings >**中的元素**app.config** Windows 应用程序，或**web.config** ASP.NET 应用程序的文件。 有关存储的基础知识的详细信息，检索和加密连接字符串从配置文件，请参阅[连接字符串和配置文件](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [使用受保护的配置加密配置信息](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
  [本机代码和 .NET Framework 代码的安全性](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  

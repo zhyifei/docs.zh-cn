@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a3950b156ede806382bbe4e013db5d94a8b20a23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ecbbaac0023ca528967abe2cb60c3d790772fb2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-security"></a>扩展安全性
 若要容纳新的声明类型和自定义令牌，您可以扩展 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的安全基础结构。 本节中的主题将向您介绍如何完成此任务。  
@@ -36,16 +37,16 @@ ms.lasthandoff: 10/18/2017
  [自定义授权](../../../../docs/framework/wcf/extending/custom-authorization.md)  
  说明如何实现自定义授权。  
   
- [重写进行身份验证服务的标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
+ [重写服务标识以便进行身份验证](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
  介绍如何重写身份验证服务的标识。  
   
- [如何： 创建自定义客户端标识验证程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ [如何：创建自定义客户端标识验证工具](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
  演示如何验证自定义终结点标识。  
   
- [如何： 使用独立的 X.509 证书进行签名和加密](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ [如何：使用独立的 X.509 证书进行签名和加密](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
  通常使用单个证书对消息进行签名和加密。 本主题说明如何按照要求使用两个证书。  
   
- [如何： 更改的加密提供程序的 X.509 证书的私钥](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ [如何：更改 X.509 证书私钥的加密提供程序](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
  说明如何更改用于提供 X.509 证书的私钥的加密提供程序以及如何将该提供程序集成到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 框架中。  
   
 ## <a name="reference"></a>参考  
@@ -66,5 +67,5 @@ ms.lasthandoff: 10/18/2017
   
  [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)

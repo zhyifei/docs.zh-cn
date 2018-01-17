@@ -11,11 +11,11 @@ ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 503d586c0515b4cb53f8ec5656e5fe765cc094a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fd6c0b1fa422dc4ab659d8c59472e5c098c729bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iterator-visual-basic"></a>迭代器 (Visual Basic)
 指定函数或`Get`访问器是迭代器。  
@@ -33,9 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  不能在事件、实例构造函数、静态构造函数或静态析构函数中使用迭代器。  
   
- 迭代器可以是一个匿名函数。 有关详细信息，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
-  
- 有关迭代器的详细信息，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 迭代器可以是一个匿名函数。 有关更多信息，请参见 [迭代器](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="usage"></a>用法  
  `Iterator` 修饰符可用于下面的上下文中：  
@@ -54,9 +52,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
- 有关其他示例，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 有关其他示例，请参阅[迭代器](../../programming-guide/concepts/iterators.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>  
- [迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
+ [迭代器](../../programming-guide/concepts/iterators.md)  
  [Yield 语句](../../../visual-basic/language-reference/statements/yield-statement.md)

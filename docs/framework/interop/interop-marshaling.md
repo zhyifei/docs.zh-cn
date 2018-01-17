@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [相关主题](#related_topics)  
   
--   [参考](#reference)  
+-   [引用](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>平台调用和 COM 互操作模型  
@@ -166,7 +167,7 @@ ms.lasthandoff: 10/18/2017
  [返回页首](#top)  
   
 <a name="reference"></a>   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [返回页首](#top)

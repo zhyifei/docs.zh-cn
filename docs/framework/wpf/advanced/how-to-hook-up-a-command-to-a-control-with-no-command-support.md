@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f38a6f900ee2b253708da4b63bdc2f474fa3ab1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 804c4ffd54a0f8cc94e8849a223b1af8b27a58b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>如何：将命令挂钩到不支持命令的控件
 下面的示例演示如何挂钩<xref:System.Windows.Input.RoutedCommand>到<xref:System.Windows.Controls.Control>其不提供内置的命令的支持。  有关将命令挂钩到多个源的完整示例，请参阅[创建自定义 RoutedCommand 示例](http://go.microsoft.com/fwlink/?LinkID=159980)示例。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [将命令挂钩到支持命令的控件](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)

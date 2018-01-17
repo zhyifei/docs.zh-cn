@@ -13,23 +13,24 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1332bf297dae4baae62d2abd731d236ad49be4ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 298ff0c6bfc5bc251483de8e90e3a394a2337369
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-guide-linq-to-dataset"></a>编程指南 (LINQ to DataSet)
 本节提供有关使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 进行编程的概念性信息和示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在 LINQ to DataSet 查询](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
+ [在 LINQ to DataSet 中查询](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
  提供有关如何编写 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询的信息。  
   
  [查询数据集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  说明如何查询 <xref:System.Data.DataSet> 对象。  
   
- [比较 Datarow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
+ [比较 DataRow](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
  说明如何使用 <xref:System.Data.DataRowComparer> 对象来比较数据行。  
   
  [从查询创建数据表](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
@@ -62,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Data.DataView>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ to ADO.NET](http://msdn.microsoft.com/en-us/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  [不在生成中： LINQ 常规编程指南](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
  [LINQ Framework](http://msdn.microsoft.com/en-us/897ea0fc-40db-4694-bbe5-7dd339d5bf94)

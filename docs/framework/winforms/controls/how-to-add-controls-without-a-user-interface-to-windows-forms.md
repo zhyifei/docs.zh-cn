@@ -24,17 +24,18 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7deea3aca390ebfa4cc1fcbf16a0e898301ae434
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1008de7e32143ae41658566f5c596f4112a88a27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：向 Windows 窗体添加无用户界面的控件
 非可视控件 （或组件） 功能提供给你的应用程序。 不同于其他控件，组件不向用户提供的用户界面并因此不需要在 Windows 窗体设计器图面上显示。 后一个组件添加到窗体中，Windows 窗体设计器将在所有组件将都显示的窗体的底部显示可调整大小的任务栏。 控件现已添加到组件栏中后，你可选择的组件，设置其属性，就像任何其他控件在窗体上。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>若要将组件添加到 Windows 窗体  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/21/2017
     > [!IMPORTANT]
     >  通过引用恶意用户控件，则可能会公开您的本地计算机通过网络安全风险。 这仅会在恶意的用户创建破坏性的自定义控件，跟你错误地将其添加到你的项目的情况下是问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
  [如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [如何：向 Windows 窗体添加 ActiveX 控件](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

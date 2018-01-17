@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 98a2069009d04a2c1ff9127006c2382bf7481e04
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自动化和屏幕缩放
 > [!NOTE]
@@ -85,5 +86,5 @@ ms.lasthandoff: 10/18/2017
   
  如果你的应用程序与非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知应用程序进行直接的跨进程通信，你可能需要通过使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`在逻辑和物理坐标之间转换。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Highlighter Sample](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)

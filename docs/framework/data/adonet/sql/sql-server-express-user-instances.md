@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f963aba983379d1474c3eedc348860751306a1bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd5dc57a9e7d164ec7ca1ebcc1e6d2cc2a5a6cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  
@@ -160,7 +161,7 @@ private static void OpenSqlConnection()
   
 -   使用 Windows 身份验证的专用 ASP.NET 宿主。 Intranet 上可以承载单个 SQL Server Express 实例。 应用程序使用 ASPNET Windows 帐户进行连接，而不是使用模拟进行连接。 用户实例不应用于第三方或共享宿主方案中，在这样的方案中，所有应用程序将共享同一用户实例，而不再保持彼此独立。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)  
  [连接到数据源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  

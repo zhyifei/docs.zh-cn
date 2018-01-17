@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>使用渐变画笔填充形状
 渐变画笔用于填充形状的渐变的颜色。 例如，水平渐变可用于填充形状的右边缘移动距左边缘的形状时逐渐改变的颜色。 设想这样一个矩形的左边缘为黑色 （0，0，0，则表示由红色、 绿色和蓝色组件） 和右边缘，即红色 （表示 255，0，0）。 如果矩形为 256 像素宽，给定像素的红色组件将一个大于其左侧像素的红色组件。 行中的最左侧像素的颜色分量为 （0，0，0），第二个像素 （1，0，0），第三个像素都有 （2，0，0），依此类推，直到你到达最右边的像素，它具有颜色组件 （255，0，0）。 这些相比内, 插的颜色值构成的颜色渐变。  

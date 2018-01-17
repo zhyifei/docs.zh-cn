@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0c8a01cbae2077838a8eef3f2f673e7d9d646717
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 471570aec43398b05b8678bdcf74a3ef2494e289
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>危险权限和策略管理
 .NET Framework 为其提供权限的多个受保护的操作可能允许绕过安全系统。 应仅对可信的代码，并且仅在必要的时候授予这些危险的权限。 如果它被授予这些权限，通常会对恶意代码没有任何防范。  
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Security.Permissions.ReflectionPermission>||  
 |<xref:System.MemberAccessException>|可以使用私有成员来攻克可访问性机制。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

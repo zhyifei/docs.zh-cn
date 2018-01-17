@@ -14,11 +14,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0952f238c34176112f6ec6a8520fb603cca4750
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d3f7ed4ebde0f607b3c86cf9879d219af85b20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-overview"></a>队列概述
 本节介绍与排队通信相关的一般概念和核心概念。 后面的各节将详细介绍如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中显示此处描述的队列概念。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="poison-message-queue-programming"></a>病毒消息队列编程  
  在将消息传送到目标队列后，服务在处理该消息时可能会反复出现故障。 例如，从事务的队列中读取消息和更新数据库的应用程序可能会发现数据库暂时已断开连接。 在这种情况下，事务将回滚，会创建一个新的事务，并从队列中重新读取消息。 第二次尝试可能成功，也可能失败。 在某些情况下，根据错误产生的原因，消息传送到应用程序时可能会反复出现故障。 在这种情况下，该消息被认为是“病毒”。 这些消息将移动到可以通过病毒处理应用程序读取的病毒队列中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [会话和队列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
@@ -91,5 +92,5 @@ ms.lasthandoff: 12/02/2017
  [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [消息队列集成绑定示例](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [消息队列到 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [通过消息队列的消息安全](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [到 Windows Communication Foundation 的消息队列](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
+ [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

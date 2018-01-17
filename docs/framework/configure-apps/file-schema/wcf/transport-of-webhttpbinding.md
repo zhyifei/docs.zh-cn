@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2d5c0d17f756c4cca84a48cf6849c4d0945cc2b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ebc9bb8b128f4b4097d4f470920dbd28d17e6f00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttransportgt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt; 的 &lt;transport&gt;
 定义配置为接收 HTTP 请求的服务终结点的传输级安全设置。  
@@ -94,12 +95,12 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|表示的安全功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.HttpTransportSecurity>  
  <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>  
  <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>  
  <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- [保护服务和客户端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

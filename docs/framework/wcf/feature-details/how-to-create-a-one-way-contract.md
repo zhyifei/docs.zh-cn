@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f93247a96501359bcda8d2956308e6570c597f93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d08fcb955c972ffbd7ef0a48625f1005ab366dd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-one-way-contract"></a>如何：创建单向协定
 本主题演示了创建使用单向协定的方法所需的基本步骤。 这些方法从客户端调用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务上的操作但不期待答复。 例如，可以使用这种类型的协定将通知发布给许多订户。 在创建双工（双向）协定（可使得客户端和服务器可以独立地相互通信，这样双方都可以启动对另一方的呼叫）时，还可以使用单向协定。 具体而言，这样做可允许服务器对客户端进行单向呼叫，而客户端可以将这些呼叫视为事件。 有关指定单向方法的详细信息，请参见 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 属性和 <xref:System.ServiceModel.OperationContractAttribute> 类。  
@@ -41,10 +42,10 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[S_Service_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  [设计和实现服务](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
  [如何：定义服务协定](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
  [会话](../../../../docs/framework/wcf/samples/session.md)  
- [如何： 创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+ [如何：创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79d78517b62e4476106ff1ed7978c770a17caf2a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63923121ae96b85bd192899a8d8ad285a3ad5b2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt; 元素
 此配置元素用于指定服务或客户端应用程序中用来接收消息的运行时行为。 它不具有任何属性或子元素。  
@@ -52,6 +53,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  使用此行为可指示通道侦听器使用同步接收，而非默认的异步接受。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 发出一个新线程，以为每个接受的通道进行抽取。 如果有许多通道，则可能出现线程溢出的情况。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  
  <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>如何：指定通道安全凭据
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务标记允许 COM 应用程序调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 大多数 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务都要求客户端指定用于身份验证和授权的凭据。 当从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，您可以在托管代码或应用程序配置文件中指定这些凭据 当从 COM 应用程序调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，您可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据。 本主题将介绍使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据的各种方法。  
@@ -147,9 +148,9 @@ ms.lasthandoff: 11/21/2017
   
      有关用于此方法的参数的更多信息，请参见 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>。  
   
-## <a name="see-also"></a>另请参阅  
- [联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)  
- [如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [如何： 创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+## <a name="see-also"></a>请参阅  
+ [联合](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [消息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

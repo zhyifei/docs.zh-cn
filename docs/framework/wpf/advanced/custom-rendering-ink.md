@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90d2ab68f76bef8d8f437a7dd6096011889303fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 481990acdf2f5b8f798144d36434569b9e2cd481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-rendering-ink"></a>自定义呈现墨迹
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>笔画属性允许你指定的外观描边，如其大小、 颜色和形状，但可能有些时候你想要自定义超出什么外观<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允许。 建议通过使用喷笔、油画和多种其他效果呈现外观，从而自定义墨迹的外观。 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]允许你自定义实现自定义呈现墨迹<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>对象。  
@@ -101,5 +102,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="conclusion"></a>结束语  
  你可以通过派生您自己自定义墨迹的外观<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>， <xref:System.Windows.Ink.Stroke>，和<xref:System.Windows.Controls.InkCanvas>类。 将这些类结合使用可以确保用户绘制笔划时和笔划被收集后的笔划外观保持一致。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [高级墨迹处理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

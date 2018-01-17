@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 23e71c4ce230221f82172a0e5429fc362379869c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4811b3273ba829882dadffe95ff8c29fb8ee7400
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>实现 UI 自动化 Value 控件模式
 > [!NOTE]
@@ -73,10 +74,10 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果无法将新值从字符串转换为格式控件可识别。|  
 |<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -当尝试操作未启用的控件。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [TextPattern 插入文本示例](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16)  
  [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [使用在 UI 自动化中缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+ [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

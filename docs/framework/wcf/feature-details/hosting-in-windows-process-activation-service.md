@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f44a6380d2bca4ad831c590920e09ab93610c4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows 进程激活服务中承载
 Windows 进程激活服务 (WAS) 管理辅助进程的激活和生存期，该辅助进程包含承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的应用程序。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这将允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务在宿主环境中同时使用 HTTP 和非 HTTP 协议（如 Net.TCP），该宿主环境支持基于消息的激活并提供在给定计算机上承载大量应用程序的能力。  
@@ -60,9 +61,9 @@ net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint
 ## <a name="the-was-runtime"></a>WAS 运行库  
  为了便于寻址和管理，可将应用程序组织到网站中。 运行时，还会将应用程序分组到应用程序池中。 一个应用程序池可以存放多个来自许多不同网站的应用程序。 一个应用程序池中的所有应用程序共享一组公共的运行时特征。 例如，它们都在公共语言运行库 (CLR) 的同一版本下运行，并都共享一个公共的进程标识。 每个应用程序池都与辅助进程 (w3wp.exe) 的某个实例相对应。 通过 CLR AppDomain，在共享应用程序池内运行的每个托管应用程序都独立于其他的应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WAS 激活体系结构](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
  [配置 WAS 以用于 WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
+ [如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
  [如何：在 WAS 中承载 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
  [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2d93a9ea8614f98c968d499c2f95dcd3962f0020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 447384ef34c1ca2c7e641f0ba0d3d3718139e579
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpersistenceprovidergt"></a>&lt;persistenceProvider&gt;
 指定要使用的持久性提供程序实现的类型以及用于持久性操作的超时值。  
@@ -57,6 +58,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  此元素指定要用于序列化 WCF 服务的状态的永久性提供程序。 它应该与 `wsHttpContextBinding` 一起使用，后者在 HTTP 头中传递状态信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.PersistenceProviderElement>  
  <xref:System.ServiceModel.Persistence.PersistenceProvider>

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03350825b3de4515a0d30e8644f34df71efa25db
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a565ec6ded0a82ed4ab3c0fd03b082d996369ddc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>常见数据类型（非托管 API 参考）
 本主题列出了由 C/C++ `typedef` 语句定义的 .NET Framework 的非托管 API 所使用的简单数据类型。 这些数据类型通常是 C/C++ 基元数据类型的别名。 通常，这些数据类型的值是不透明的；即它们由特定的函数或方法返回，以便可以将它们传递给其他函数或方法，而无需修改。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/18/2017
 |TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|标识符[ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例。|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|托管线程的标识符。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [非托管 API 参考](../../../docs/framework/unmanaged-api/index.md)

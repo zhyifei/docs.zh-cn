@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32feb70a3b7a44a5a48f57fc2ecee912de4d39ef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b5c5bb47e3f435419bcf3c472f052260adec7c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>如何：将几何图形用作参数的命中测试
 此示例演示如何在视觉对象使用上执行命中的测试<xref:System.Windows.Media.Geometry>作为命中测试参数。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <xref:System.Windows.Media.HitTestResult>交集详细信息时，不应该调用回调<xref:System.Windows.Media.IntersectionDetail.Empty>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [可视化层中的命中测试](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
  [对视觉对象中的几何图形进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)

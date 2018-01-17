@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9c0c9eb02cb95522d04765f454cd870f01a633f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3944fb6d68ed054feb8d7ddec149745b78810ee2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-adonet"></a>什么 &#39; s ADO.NET 中的新增功能
 以下是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新增功能。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="adonet-entity-framework"></a>ADO.NET 实体框架  
  当与实体框架5.0 一起使用时，[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 添加启用新方案的 API。 有关改进和功能的已添加到实体框架 5.0 的详细信息，请参阅以下主题：[新增](http://go.microsoft.com/fwlink/?LinkID=251106)和[实体框架发行和版本控制](http://go.microsoft.com/fwlink/?LinkId=234899)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  

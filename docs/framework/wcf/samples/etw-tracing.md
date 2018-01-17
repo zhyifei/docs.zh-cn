@@ -13,11 +13,12 @@ caps.latest.revision: "42"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ebffd082f5d1b07ab016c0e5e72d6ad23542147
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 39164d6334be40de86f422e2faa4debf1d4f31f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-tracing"></a>ETW 跟踪
 本示例演示如何通过使用 Windows 事件跟踪 (ETW) 和本示例提供的 `ETWTraceListener` 来实现端对端 (E2E) 跟踪。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并包括 ETW 跟踪。  
@@ -116,5 +117,5 @@ Logman stop Wcf
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35dc7ad932ea114e2751fa86ceb757dc795795f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ece2585287f6e2767e64c2ec03c75adcfe161c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-configuration"></a>客户端配置
 可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端配置来指定客户端终结点的地址 (Address)、绑定 (Binding)、行为 (Behavior) 和协定 (Contract)，即客户端终结点的“ABC”属性来连接服务终结点。 [\<客户端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)元素具有[\<终结点 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)其属性用于配置终结点的 abc 属性的元素。 这些属性将在本主题的“配置终结点”一节中讨论。  
@@ -103,6 +104,6 @@ ms.lasthandoff: 12/02/2017
 ### <a name="configuring-metadata"></a>配置元数据  
  [\<元数据 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)元素用于指定用于注册元数据的设置导入扩展。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]扩展元数据系统，请参阅[扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [终结点： 地址、 绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+## <a name="see-also"></a>请参阅  
+ [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [配置客户端行为](../../../../docs/framework/wcf/configuring-client-behaviors.md)

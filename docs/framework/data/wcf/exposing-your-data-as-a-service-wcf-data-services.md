@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c2d664166d9c0b750f6aecf9588a63b8705f0d1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 55e0bc058b92540c9b11965854d38e8d124e205c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>将数据公开为服务（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]与 Visual Studio 使你能够更轻松地定义服务以公开你的数据作为集成[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 创建数据服务公开[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源涉及以下基本步骤：  
@@ -38,6 +39,6 @@ ms.lasthandoff: 12/02/2017
   
  有关如何创建基于 Northwind 示例数据库的简单数据服务的示例，请参阅[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
  [概述](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)

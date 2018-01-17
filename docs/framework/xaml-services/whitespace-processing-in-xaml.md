@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 80b75897f54136849aa4b356c414145510d9cd3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c382be7dabca90ef201fa24cfb79472955347eef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whitespace-processing-in-xaml"></a>XAML 中的空白处理
 XAML 的语言规则规定有意义的空格必须由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 处理器实现进行处理。 本主题介绍这些 XAML 语言规则。 它还介绍了由进行序列化的 XAML 处理器和 XAML 编写器的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 实现定义的其他空格处理。  
@@ -84,7 +85,7 @@ XAML 的语言规则规定有意义的空格必须由 [!INCLUDE[TLA2#tla_xaml](.
   
  此外，隐含流文档模型中换行符的某些内联元素应有意不引入额外空格，即使是在空格的有意义集合中也是如此。 例如，<xref:System.Windows.Documents.LineBreak>元素具有相同的目的\<BR / > 标记中[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]，为了便于阅读，在标记中，通常<xref:System.Windows.Documents.LineBreak>通过编写的换行符与任何后续文本分开。 不应标准化该换行符以使它成为后续行中的前导空格。 若要启用此行为，则 <xref:System.Windows.Documents.LineBreak> 元素的类定义需应用 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，随后由 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 处理器进行解释，意味着 <xref:System.Windows.Documents.LineBreak> 周围的空格始终被裁剪。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [XML 字符实体和 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
  [XAML 中的 xml:space 处理](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

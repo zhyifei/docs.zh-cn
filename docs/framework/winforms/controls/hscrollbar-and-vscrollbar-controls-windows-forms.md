@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c730f4ea5a83efcfad15d181ac182fbd232690cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ce11db2d01f8938d0f97a3c0526c65a7c9740fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>HScrollBar 和 VScrollBar 控件（Windows 窗体）
 Windows 窗体滚动条控件用于在项的长列表或大量信息中轻松导航，方法是在应用程序或控件中水平或垂直滚动。 滚动条是 Windows 界面的一种常见元素。  

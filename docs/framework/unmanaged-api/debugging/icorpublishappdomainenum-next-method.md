@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 79b9ad5711ac1d0166a7ad328cc227f17780476c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7c9823c0e4a471a398285c5960f3ce7bfc60fb23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 方法
 获取指定的数目的当前存在的应用程序域在过程中，从当前位置开始。  
@@ -51,7 +52,7 @@ HRESULT Next (
  `pceltFetched`  
  [out]指向指针的实际返回的应用程序域的数量。 此值可能为 null 如果`celt`是之一。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub.idl、 CorPub.h  
@@ -60,5 +61,5 @@ HRESULT Next (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorPublishAppDomainEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)

@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 65050772e2f933583506b6612c32c6060f1d20df
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 68508f3000e7f4ac481f940ef4c715366c37125c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 函数
 创建一个类的新实例。    
@@ -53,7 +54,7 @@ HRESULT SpawnInstance (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`不是有效的类定义，无法生成新实例。 不完整，或者它具有不已注册到 Windows 管理中调用[PutClassWmi](putclasswmi.md)。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
@@ -71,7 +72,7 @@ HRESULT SpawnInstance (
 
 新的对象中返回`ppNewClass`自动成为当前对象的一个子类。 不能重写此行为。 不没有可以用来创建子类 （派生类） 的任何其他方法。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

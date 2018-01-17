@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2f8bb112cb4277a59296cabdc495d45f40bb7e1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49ac12bcae3fd85744961a6e3b81129178c2c323
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="apis-that-rely-on-reflection"></a>利用反射的 API
 在某些情况下，在代码中对反射的使用不是明显的，并且 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链并不保存在运行时间需要的元数据。 该主题介绍了一些常见的 API 或常见编程模式，它们不被视为是反射 API 的一部分，而依赖反射成功执行。 如果在源代码中使用了它们，可以将有关它们的信息添加到运行时指令 (.rd.xml) 文件，以便对这些 API 的调用不会在运行时内引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常或某种其他异常。  
@@ -100,6 +101,6 @@ Unfortunately, no further information is available.
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

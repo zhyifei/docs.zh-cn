@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50521591af6f77b98e52aa4a847216f63186d78b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fad26de46f3af04ae0340da6aa02bbe454e77e6f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>如何：使用“继承选择器”对话框继承窗体
 继承窗体或其他对象最简单的方法是使用“继承选择器”对话框。 通过该对话框，可以充分利用在其他解决方案中创建的代码或用户界面 (UI)。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  若要使用“继承选择器”对话框继承窗体，必须先将包含该窗体的项目生成到可执行文件或 DLL 中。 若要生成项目，请从“生成”菜单选择“生成解决方案”。  
 >   
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>通过使用继承选择器创建继承自现有窗体的 Windows 窗体  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  将继承的控件和组件与 Windows 窗体上的标准控件和组件组合到一起时，可能会与 Z 排序发生冲突。 可通过修改 z 顺序纠正冲突，方法是单击“格式”菜单，指向“排序”，然后单击“置于顶层”或“置于底层”。 若要详细了解控件的 z 顺序，请参阅[如何：对 Windows 窗体上的对象分层](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Inherits 语句](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
  [using](~/docs/csharp/language-reference/keywords/using.md)  
  [修改基窗体的外观的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  

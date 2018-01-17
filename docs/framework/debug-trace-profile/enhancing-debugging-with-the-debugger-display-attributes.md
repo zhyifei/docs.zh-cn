@@ -24,11 +24,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c396a794cd3afa394cbb6b2393257a3103c6239d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac5097326ae76a8790569c13fd8b1285b0cfeec0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用调试器显示特性增强调试
 最了解且可指定类型运行时行为的类型开发人员还可以使用调试器显示属性指定类型在调试器中的显示外观。 此外，即使不了解源代码，用户也可将提供 `Target` 属性的调试器显示属性应用于程序集级别。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 属性控制类型或成员在调试器变量窗口中的显示方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性决定是否在调试器变量窗口中显示字段或属性，若要显示，则决定其显示方式。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性指定类型的替代类型或代理，并更改类型在调试器窗口中的显示方式。 查看具有代理或替代类型的变量时，代理将代替调试器显示窗口中的原始类型。 调试器变量窗口仅显示代理类型的公共成员。 不会显示私有成员。  
@@ -109,7 +110,7 @@ class MyHashtable : Hashtable
  [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)]
  [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.DebuggerDisplayAttribute>  
  <xref:System.Diagnostics.DebuggerBrowsableAttribute>  
  <xref:System.Diagnostics.DebuggerTypeProxyAttribute>

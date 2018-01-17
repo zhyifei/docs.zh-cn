@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: d006c8d0937a454dcbe092dcc3e35c4644088e59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 标记扩展
 引用任何静态的按值代码实体中定义[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 遵守法规的方法。 引用的静态属性可用来提供 XAML 中的属性的值。  
@@ -41,8 +42,8 @@ ms.lasthandoff: 11/21/2017
 |||  
 |-|-|  
 |`prefix`|可选。 指映射、 非默认 XAML 命名空间前缀。 `prefix`所示显式使用由于很少引用来自默认 XAML 命名空间的静态属性。 请参阅“备注”。|  
-|`typeName`|必需。 定义的所需的静态成员的类型的名称。|  
-|`staticMemberName`|必需。 所需的静态值成员 （常量、 静态属性、 字段或枚举值） 的名称。|  
+|`typeName`|必须的。 定义的所需的静态成员的类型的名称。|  
+|`staticMemberName`|必须的。 所需的静态值成员 （常量、 静态属性、 字段或枚举值） 的名称。|  
   
 ## <a name="remarks"></a>备注  
  引用的代码实体必须是以下项之一：  
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
   
  有关如何为 WPF 使用前缀和 XAML 命名空间的详细信息，请参阅[XAML 命名空间和 Namespace 映射为 WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [x:Type 标记扩展](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
  [从 WPF 迁移到 System.Xaml 的类型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

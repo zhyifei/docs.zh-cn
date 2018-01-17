@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9a398bb7b951fcf2dd2449b6468a19d39a134a4a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 09617f147d1afc2d9f2ca76624b54f94e5164188
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="group-elements-in-a-sequence"></a>对序列中的元素进行分组
 <xref:System.Linq.Enumerable.GroupBy%2A> 运算符用于对序列中的元素进行分组。 下面的示例使用 Northwind 数据库。  
@@ -82,6 +83,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DLinqQueryExamples#35](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#35)]
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
  [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

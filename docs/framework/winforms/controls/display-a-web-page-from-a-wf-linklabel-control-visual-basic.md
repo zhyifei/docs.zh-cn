@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 38ef165dc655fedbf682a21220d6a76532b18f6a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba5ba3b29bab148087e0f8b80b3f1c43aa74e761
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>如何：通过 Windows 窗体 LinkLabel 控件显示网页 (Visual Basic)
 此示例在默认浏览器中显示网页，用户单击 Windows 窗体时<xref:System.Windows.Forms.LinkLabel>控件。  
@@ -55,8 +56,8 @@ End Sub
 -   有效的 Internet 连接。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 调用<xref:System.Diagnostics.Process.Start%2A>方法要求完全信任。 有关更多信息，请参见<xref:System.Security.SecurityException>。  
+ 调用<xref:System.Diagnostics.Process.Start%2A>方法要求完全信任。 有关详细信息，请参阅<xref:System.Security.SecurityException>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.LinkLabel>  
  [LinkLabel 控件](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

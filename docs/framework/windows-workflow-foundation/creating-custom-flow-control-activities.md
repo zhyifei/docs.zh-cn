@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a2a45f0b923c9f30bb8df1c59be54e00d844551
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57c347043d1bbcf239841bc57c6a406cfc9af7f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-custom-flow-control-activities"></a>创建自定义流控制活动
 .NET Framework 包含多种流控制活动，这些活动与抽象编程结构（如 <xref:System.Activities.Statements.Flowchart>）或标准编程语句（如 <xref:System.Activities.Statements.If>）的作用类似。 本主题讨论的示例项目之一的体系结构[非泛型 ForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md)。  

@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 362231bbd1f4e95c260370a99233b7e8c2617ca1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a72843547d934aeaeec062eec1241e402baf56bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>如何：使用视频绘制区域
 此示例演示如何使用媒体绘制区域。 绘制带有媒体的区域的一种方法是使用<xref:System.Windows.Controls.MediaElement>连同<xref:System.Windows.Media.VisualBrush>。 使用<xref:System.Windows.Controls.MediaElement>加载和播放媒体，并使用它来设置<xref:System.Windows.Media.VisualBrush.Visual%2A>属性<xref:System.Windows.Media.VisualBrush>。 然后，可以使用<xref:System.Windows.Media.VisualBrush>来绘制带有加载媒体的区域。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  有关如何将内容文件，如媒体文件添加到你的应用程序，请参阅[WPF 应用程序资源、 内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。 当你添加的媒体文件时，你必须将其添加为内容文件，而不是资源文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.VisualBrush>  
  [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
  [TileBrush 概述](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  

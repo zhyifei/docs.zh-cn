@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4da623c34b4c3b84dee0f02d631d032eb1c061d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f03fd8cea706e2927ed8e14b4f89a94a208e266
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-an-ellipse-or-a-circle"></a>如何：绘制椭圆或圆
 此示例演示如何使用绘制椭圆形和圆形<xref:System.Windows.Shapes.Ellipse>元素。 若要绘制一个椭圆，创建<xref:System.Windows.Shapes.Ellipse>元素并指定其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>。 使用其<xref:System.Windows.Shapes.Shape.Fill%2A>属性指定<xref:System.Windows.Media.Brush>用于绘制椭圆的内部。 使用其<xref:System.Windows.Shapes.Shape.Stroke%2A>属性指定<xref:System.Windows.Media.Brush>用于绘制椭圆的边框。 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>属性指定的椭圆的边框粗细。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  此示例摘自更大的示例;有关完整的示例，请参阅[形状元素示例](http://go.microsoft.com/fwlink/?LinkID=160037)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Shapes.Ellipse>  
  <xref:System.Windows.Shapes.Shape>  
  [形状元素示例](http://go.microsoft.com/fwlink/?LinkID=160037)

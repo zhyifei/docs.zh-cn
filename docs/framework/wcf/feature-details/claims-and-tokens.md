@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 57983e667f3cca5d8f68a0f2355182b8756e3ceb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b2e571e8526581269cedb65b83c9ea0d8a81e280
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="claims-and-tokens"></a>声明和令牌
 本主题描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 根据所支持的默认令牌创建的各种声明类型。  
@@ -73,9 +74,9 @@ ms.lasthandoff: 12/02/2017
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>标识声明和 ServiceSecurityContext.IsAnonymous  
  如果没有任何`ClaimSet`导致客户端凭据的对象包含的声明`Right`的`Identity,`则<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>属性返回`true`。 如果存在一个或多个此类声明，则 `IsAnonymous` 属性将返回 `false`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Claims.ClaimSet>  
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Claims.Rights>  
  <xref:System.IdentityModel.Claims.ClaimTypes>  
- [管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+ [使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

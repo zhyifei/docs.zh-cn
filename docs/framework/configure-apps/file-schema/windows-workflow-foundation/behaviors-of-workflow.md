@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bffe7cbf3cadf072a8bab88555b069983d262e38
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 83c1bf4beb244b72d2fe3d82d749ff6ae6723baf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a>工作流的 &lt;behaviors&gt;
 此元素包含**serviceBehaviors**集合。  集合中的每个元素定义工作流服务所使用的行为元素。 每个行为元素由其唯一标识**名称**属性。  
@@ -50,8 +51,8 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|所有工作流配置元素的根元素。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.BehaviorsSection>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [配置和扩展的运行时带有行为](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [使用行为配置和扩展运行时](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

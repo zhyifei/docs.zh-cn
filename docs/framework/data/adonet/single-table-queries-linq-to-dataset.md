@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f157bb172d173872aa7b792035b653976a9c1c0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 103c7cde61350a1efaf0784964c3f31cc7d55e4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>单表查询 (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]查询适用于实现的数据源<xref:System.Collections.Generic.IEnumerable%601>接口或<xref:System.Linq.IQueryable%601>接口。 <xref:System.Data.DataTable> 类不实现任何一个接口，所以如果要使用 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 作为<xref:System.Data.DataTable> 查询的 `From` 子句中的源，则必须调用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 方法。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  请注意，`T` 方法和 <xref:System.Data.DataRowExtensions.Field%2A> 方法的泛型参数 <xref:System.Data.DataRowExtensions.SetField%2A> 中指定的数据类型必须与基础值的类型相匹配，否则将引发 <xref:System.InvalidCastException>。 指定的列名称也必须与 <xref:System.Data.DataSet> 中的列名称相匹配，否则将引发 <xref:System.ArgumentException>。 在这两种情况下，异常都是在执行查询期间的运行时数据枚举时引发的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跨表查询](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
  [查询类型化数据集](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [泛型字段和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

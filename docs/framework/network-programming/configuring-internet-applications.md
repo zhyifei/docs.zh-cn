@@ -31,11 +31,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 05f849810d28ebe69a773bd4bd9d536146df6357
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6891f6e8081862fdbf0e9423a6b74fbea0d6e149
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-internet-applications"></a>配置 Internet 应用程序
 [\<System.Net > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)配置元素包含应用程序的网络配置信息。 使用 [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)元素，可以设置代理服务器，设置连接管理参数，包括自定义应用程序内的身份验证和请求模块。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
  [网络设置架构](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

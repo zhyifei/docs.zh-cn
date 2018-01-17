@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c602af6799da57fec904c87da7bed77c0040eff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 016a30e4b578ead199124d70cc12f240c74bf370
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>演练：处理在 Windows 窗体 DataGridView 控件中输入数据时发生的错误
 处理来自基础数据存储区的错误是为数据输入应用程序的必需的功能。 Windows 窗体<xref:System.Windows.Forms.DataGridView>控件轻松这通过公开<xref:System.Windows.Forms.DataGridView.DataError>事件，当数据存储区检测到违反了约束或违反的业务规则时引发。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  若要将代码复制本主题中的一个单独的清单，请参阅[如何： 处理错误，会出现在数据输入在 Windows 窗体 DataGridView 控件中](../../../../docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
 -   到 Northwind SQL Server 示例数据库的服务器的访问。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
   
 -   自定义单元格的外观。 有关详细信息，请参阅[如何： 自定义 Windows 窗体 DataGridView 控件中的单元外观](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)和[如何： 设置 Windows 窗体 DataGridView 控件的默认单元格样式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
  [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  

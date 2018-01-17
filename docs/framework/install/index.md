@@ -8,11 +8,12 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
-ms.openlocfilehash: 34a56b4a2d67bc808bac27863323da4d95d0cf3f
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.workload: dotnet
+ms.openlocfilehash: 722d34e7084fc46a5b3b3a97c73e2e14b1cc9d24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="installation-guide"></a>安装指南
 
@@ -34,4 +35,5 @@ ms.lasthandoff: 11/27/2017
 
 [下载 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)  
 [安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)  
-[安装面向开发者的 .NET Framework](guide-for-developers.md)
+[安装面向开发者的 .NET Framework](guide-for-developers.md)  
+[部署面向开发人员的 .NET Framework](../deployment/deployment-guide-for-developers.md)  

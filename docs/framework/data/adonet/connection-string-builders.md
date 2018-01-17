@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 836742264e44c4cb13f97a3528177080bd10c364
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a782969502509cb766e3a1d38222118a352dc3db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-string-builders"></a>连接字符串生成器
 在早期版本的[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]，编译时检查具有串联字符串值没有出现的连接字符串，以便在运行时，不正确的关键字生成<xref:System.ArgumentException>。 每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序支持的连接字符串关键字的语法不同，这使得手动构造有效连接字符串变得很困难。 为了解决这个问题，[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 为每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序引入了新的连接字符串生成器。 每个数据提供程序包括一个从 <xref:System.Data.Common.DbConnectionStringBuilder> 继承的强类型连接字符串生成器类。 下表列出了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序及其关联的连接字符串生成器类。  
@@ -89,7 +90,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)  
- [隐私和数据安全](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
+ [隐私和数据安全性](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

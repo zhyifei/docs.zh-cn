@@ -20,11 +20,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 96dd3f0a3ed27a9e09c62f3ad4f450ced5a8e644
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 93dfc62df1c1d68e09a3734402924bbac1a074cb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>如何： 将时区保存到嵌入的资源
 
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/18/2017
 
 通常情况下，序列化<xref:System.TimeZoneInfo>对象出现于时区识别应用程序。 具体取决于用来保存序列化数据存储区<xref:System.TimeZoneInfo>对象，作为 （例如，当数据存储在注册表的应用程序密钥时），安装程序或安装例程的一部分或作为运行实用程序例程的一部分，时区数据可能会进行序列化之前 （例如，当序列化的数据存储在一个.NET XML 资源 (.resx) 文件） 编译最终应用程序。
 
-除了进行编译的应用程序资源文件，多个其他数据存储可以用于时区信息。 这些要求包括：
+除了进行编译的应用程序资源文件，多个其他数据存储可以用于时区信息。 其中包括：
 
 * 注册表中。 请注意应用程序应使用其自己的应用程序项的子项来存储自定义时区数据，而不是无需使用 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time 区域的子项。
 

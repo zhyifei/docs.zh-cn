@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f7774af6c1531e48be29351299555a650548687f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-message-interceptor"></a>自定义消息拦截器
 此示例演示通道扩展模型的使用。 特别是，演示如何实现可创建通道工厂和通道侦听器的自定义绑定元素，以便在运行时堆栈的特定点截获所有传入和传出消息。 此示例还包括一个客户端和一个服务器，用于演示这些自定义工厂的使用。  
@@ -171,4 +172,4 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 5.  先运行 Service.exe，然后运行 Client.exe 并观察两个控制台窗口的输出。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>与 COM+ 应用程序集成的概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了用于创建分布式应用程序的丰富环境。 如果您使用的是 COM+ 中承载的基于组件的应用程序逻辑，则可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 来扩展现有逻辑，而不必重写它。 最常见的情形是通过 Web 服务来公开现有 COM+ 或企业服务业务逻辑。  
@@ -111,5 +112,5 @@ ms.lasthandoff: 12/02/2017
   
  COM+ 进程回收功能不能在集成应用程序上使用。 如果该应用程序配置为使用进程回收功能，并且组件正在 COM+ 承载的进程中运行，则服务将无法启动。 此需求不包括使用进程内 Web 承载模式的服务，这是因为没有应用进程回收设置。  
   
-## <a name="see-also"></a>另请参阅  
- [将与 COM 应用程序概述集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>请参阅  
+ [与 COM 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

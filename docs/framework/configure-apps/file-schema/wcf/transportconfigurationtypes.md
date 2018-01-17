@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa136f75fda4a87171a8ca3e369e7cb8621ac398
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a4f9396537446920b8976d1bd076fcd5ce5876c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttransportconfigurationtypesgt"></a>&lt;transportConfigurationTypes&gt;
 表示一个配置元素集合，这些元素标识了特定传输的类型。 这可以用于添加自定义 WAS 协议。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-transportconfigurationtype.md)|添加一个用于标识特定传输的类型的配置元素。|  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|定义服务承载环境要为特定传输实例化的类型。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  
  <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElementCollection>  

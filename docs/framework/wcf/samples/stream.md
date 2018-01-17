@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c0cbbae6ae8ba486791c525b70e8d208880661d7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab56dd7938f2c7594627b54b4cb61b4e0f6b28fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stream"></a>流
 流示例演示流传输模式通信的用法。 收发流的若干操作都由服务公开。 此示例是自承载的。 客户端和服务都是控制台程序。  
@@ -195,4 +196,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

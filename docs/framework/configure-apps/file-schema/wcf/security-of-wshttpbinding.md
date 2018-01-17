@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7dfadcbb120f55232ea2375e880a5edb17caf045
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 30f44ad6ce7219ddd874108e62111ff947d7aa0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt; 的 &lt;security&gt;
 表示的安全功能[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
@@ -81,12 +82,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>备注  
  WSHttpBinding 类专用于与实现 WS-* 规范的服务进行互操作。 此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.WSHttpSecurity>  
  <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
  <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- [保护服务和客户端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f635ecbce5095ff70ae66a78d24310bfb8249a51
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7477ef53db9c2740a747c6a021a602ea32dfe3ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkbox-control-windows-forms"></a>CheckBox 控件（Windows 窗体）
 Windows 窗体 `CheckBox` 控件指示特定条件处于打开开始关闭状态。 通常用于向用户显示 Yes/No 或 True/False 选项。 可以使用组中的复选框控件来显示用户可从中选择一个或多选的多个选项。 它类似于 <xref:System.Windows.Forms.RadioButton> 控件，但可以选择任意数量的已分组 `CheckBox` 控件。  

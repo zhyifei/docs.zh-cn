@@ -16,11 +16,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 362578e6e8066c0490e692d0cd9d637b05bb1fa0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fd36f012f614e08be131efb3791fd997d3668531
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>什么 &#39; s Windows Communication Foundation 4.5 中的新增功能
 本主题讨论 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的新增功能。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/02/2017
  人们已进行了大量工作，以便更加方便地开发和维护 WCF 4.5 应用程序。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。  
   
 ### <a name="task-based-async-support"></a>基于任务的异步支持  
- 默认情况下，“添加服务应用”会生成返回任务的异步服务操作方法。 此操作是针对同步和异步方法执行的。 通过此操作，您可以使用新的基于任务的异步编程模型来异步调用服务操作。 在您调用生成的代理方法时，WCF 会构造一个 Task 对象以表示异步操作并返回该任务。 在操作完成时，在任务完成。  当实现异步操作时你可以将它作为实现基于任务的异步操作。 有关详细信息，请参阅[同步和异步操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
+ 默认情况下，“添加服务应用”会生成返回任务的异步服务操作方法。 此操作是针对同步和异步方法执行的。 通过此操作，你可以使用新的基于任务的异步编程模型来异步调用服务操作。 在你调用生成的代理方法时，WCF 会构造一个 Task 对象以表示异步操作并返回该任务。 在操作完成时，在任务完成。  当实现异步操作时你可以将它作为实现基于任务的异步操作。 有关详细信息，请参阅[同步和异步操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
   
 ### <a name="simplified-generated-configuration-files"></a>简化了生成的配置文件  
  当您在 Visual Studio 中添加服务引用或使用 SvcUtil.exe工具时，将会生成一个客户端配置文件。 在以前版本的 WCF 中，这些配置文件包含每个绑定属性的值，即使该值是默认值。 在 WCF 4.5 中，生成的配置文件仅包含那些设置为非默认值的绑定属性。  
@@ -124,7 +125,7 @@ ms.lasthandoff: 12/02/2017
  在 WCF 项目中，在 XML 中定义的数据类型（在服务中公开的类型）可以粘贴直接到代码页中。 XML 类型将作为 CLR 类型进行粘贴。 请参阅[从 XML 生成数据类型的类](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)有关详细信息。  
   
 ## <a name="webservicehost-and-default-endpoints"></a>WebServiceHost 和默认终结点  
- 在 Visual Studio 2010 中，WebServiceHost 会自动创建默认终结点，而无论您是否显式指定了终结点。 在 Visual Studio 2012 中，WebServiceHost 只有在未显式添加终结点的情况下才会创建默认终结点。 如果客户端预期使用默认终结点，那么您可以显式添加终结点，并将客户端指向该终结点。 或者，您可以通过向应用程序的配置文件添加以下设置来告诉 WCF 恢复到上一个行为。  
+ 在 Visual Studio 2010 中，WebServiceHost 会自动创建默认终结点，而无论你是否显式指定了终结点。 在 Visual Studio 2012 中，WebServiceHost 只有在未显式添加终结点的情况下才会创建默认终结点。 如果客户端预期使用默认终结点，那么您可以显式添加终结点，并将客户端指向该终结点。 或者，您可以通过向应用程序的配置文件添加以下设置来告诉 WCF 恢复到上一个行为。  
   
 ```xml  
 <appSettings>  
@@ -133,7 +134,7 @@ ms.lasthandoff: 12/02/2017
 ```  
   
 ## <a name="ihttpcookiecontainermanager"></a>IHttpCookieContainerManager  
- 由 <xref:System.ServiceModel.Channels.IChannelFactory%601> 公开的此接口可使在客户端上使用 Cookie 变得十分容易。 在针对该绑定将 AllowCookies 设置为 true 之后，您可使用以下代码来访问 Cookie：  
+ 由 <xref:System.ServiceModel.Channels.IChannelFactory%601> 公开的此接口可使在客户端上使用 Cookie 变得十分容易。 在针对该绑定将 AllowCookies 设置为 true 之后，你可使用以下代码来访问 Cookie：  
   
 ```csharp  
 IHttpCookieContainerManager cookieManager = factory.GetProperty<IHttpCookieContainerManager>();   

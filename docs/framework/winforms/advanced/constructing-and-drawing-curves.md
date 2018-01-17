@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 801af10f7b9e5e7998fc061537977c5bced6bdb3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 62e9b9e0e1aa432578b7173cd58f88dd44957f84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constructing-and-drawing-curves"></a>构造并绘制曲线
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]支持多种类型的曲线： 省略号、 弧、 基数样条和贝塞尔样条。 椭圆定义其边界的矩形; 通过一段弧线，是椭圆的由起始角度和扫描角度定义的一部分。 由一组点和张力参数定义的基数样条-曲线平滑地通过在数组中，每个点和张力参数影响曲线弯曲的方式。 由两个终结点和通过控点、 未通过曲线的两个控制点定义的贝塞尔样条，但控点影响方向，并将弯曲，因为在曲线将从一个终结点与其他。  

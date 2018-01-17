@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6105b1b367f9f8cab1f2ba3a38b148038478c780
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>如何：设置 ProtectionLevel 属性
 通过应用相应的属性 (Attribute) 并设置该属性 (Property) 可设置保护级别。 可在服务级设置保护以影响每条消息的所有部分，或者可以从方法到消息部分逐级递增地设置保护。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]`ProtectionLevel`属性，请参阅[了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[C_ProtectionLevel#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#0)]
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  <xref:System.ServiceModel.FaultContractAttribute>  

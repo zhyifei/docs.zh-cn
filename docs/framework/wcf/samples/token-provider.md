@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 87965b8802dd770d6977154ab805889838e9c5e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 975014007ed57cc7e4b1035972923f61753c6d4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="token-provider"></a>令牌提供程序
 此示例演示如何实现自定义令牌提供程序。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的令牌提供程序用于为安全性基础结构提供凭据。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 随附有默认凭据管理器令牌提供程序。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还附带了一个 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 令牌提供程序。 自定义令牌提供程序在下列情况下有用：  
@@ -303,4 +304,4 @@ static void DisplayIdentityInformation()
   
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

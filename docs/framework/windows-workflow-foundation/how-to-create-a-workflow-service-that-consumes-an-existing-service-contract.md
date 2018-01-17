@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb58664b57261eb09886ec0e8f97fcdbe45cdd4f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a754875dc3f7968086f4f92044205b8ebceb01e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>如何：创建使用现有服务协定的工作流服务
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以协定优先工作流开发的形式实现了 Web 服务与工作流之间的更佳集成。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。  
@@ -58,15 +59,15 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="importing-the-service-contract"></a>导入服务协定  
   
-1.  右键单击中的项目**解决方案资源管理器**和选择**导入服务协定**。 下**\<当前项目 >**，打开所有子节点并选择**IBookService**。 单击“确定”。  
+1.  右键单击中的项目**解决方案资源管理器**和选择**导入服务协定**。 下**\<当前项目 >**，打开所有子节点并选择**IBookService**。 单击 **“确定”**。  
   
-2.  将会打开一个对话框，提示您该操作已成功完成，并且在生成该项目后，所生成的活动将出现在工具箱中。 单击“确定”。  
+2.  将会打开一个对话框，提示您该操作已成功完成，并且在生成该项目后，所生成的活动将出现在工具箱中。 单击 **“确定”**。  
   
 3.  通过按生成项目**Ctrl + Shift + B**，以便导入的活动将出现在工具箱。  
   
 4.  在**解决方案资源管理器**，打开 Service1.xamlx。 该工作流服务将出现在设计器中。  
   
-5.  选择**序列**活动。 在属性窗口中，单击**...** 按钮**ImplementedContract**属性。 在**类型集合编辑器**出现窗口中，单击**类型**下拉列表中，然后选择**浏览类型...** 项。 在**浏览并选择.Net 类型**对话框下**\<当前项目 >**，打开所有子节点并选择**IBookService**。 单击“确定”。 在**类型集合编辑器**对话框中，单击**确定**。  
+5.  选择**序列**活动。 在属性窗口中，单击**...** 按钮**ImplementedContract**属性。 在**类型集合编辑器**出现窗口中，单击**类型**下拉列表中，然后选择**浏览类型...** 项。 在**浏览并选择.Net 类型**对话框下**\<当前项目 >**，打开所有子节点并选择**IBookService**。 单击 **“确定”**。 在**类型集合编辑器**对话框中，单击**确定**。  
   
 6.  选择并删除**ReceiveRequest**和**SendResponse**活动。  
   

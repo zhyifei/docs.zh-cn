@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32e7cb3a340865530b6a8d76609eb246184363b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP 编程模型
 开发人员使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型可以向非 SOAP 终结点公开 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务操作。 本节中的主题详细研究此功能。  
@@ -33,16 +34,16 @@ ms.lasthandoff: 12/02/2017
  [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  讨论 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 编程模型及其工作方式。  
   
- [如何： 创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ [如何：创建基本 WCF Web HTTP 服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  说明如何编写公开非 SOAP 终结点的基本服务。  
   
- [如何： 向 SOAP 和 Web 客户端公开协定](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ [如何：向 SOAP 和 Web 客户端公开协定](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
  说明如何编写向 SOAP 和非 SOAP 客户端公开同一协定的基本服务。  
   
  [UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
  说明如何使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 控制 URI。  
   
- [WCF Web HTTP 服务缓存支持](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
+ [对 WCF Web HTTP 服务的缓存支持](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
  说明如何指定 WCF Web HTTP 服务的缓存行为。  
   
  [WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  

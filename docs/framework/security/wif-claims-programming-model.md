@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9cfc3491b18d312b80ba69991edb9930f59d47cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6d7059c5209dc95ce68f28e0f32db929e7c97271
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-claims-programming-model"></a>WIF 声明编程模型
 ASP.NET 和 Windows Communication Foundation (WCF) 开发人员通常使用 IIdentity 和 IPrincipal 接口处理用户的标识信息。 .NET 4.5 中集成了 Windows Identity Foundation (WIF)，因此对于任何主体，声明都将始终存在，如下图所示：  
@@ -66,7 +67,7 @@ ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 |-|-|-|  
 |SAML 1.1|1.System.IdentityModel.SecurityTokenService.GetOutputClaimsIdentity (System.Security.Claims.ClaimsPrincipal,System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Scope) 中的所有声明。<br />2.包含确认密钥的 XML 序列化的 `http://schemas.microsoft.com/ws/2008/06/identity/claims/confirmationkey` 声明（如果该令牌包含证明令牌）。<br />3.Issuer 元素中的 `http://schemas.microsoft.com/ws/2008/06/identity/claims/samlissuername` 声明。<br />4.AuthenticationMethod 和 AuthenticationInstant 声明（如果该令牌包含身份验证语句）。|除了“SAML 1.1”中列出的声明（不包括 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 类型的声明）外，还将添加 Windows 身份验证相关的声明，并由 WindowsClaimsIdentity 表示标识。|  
 |SAML 2.0|与“SAML 1.1”相同。|与“映射到 Windows 帐户的 SAML 1.1”相同。|  
-|X509|1.具有 X500 可分辨名称、emailName、dnsName、SimpleName、UpnName、UrlName、thumbprint、RsaKey（可以使用 RSACryptoServiceProvider.ExportParameters 方法从 X509Certificate2.PublicKey.Key 属性提取）、DsaKey（可以使用 DSACryptoServiceProvider.ExportParameters 方法从 X509Certificate2.PublicKey.Key 属性提取）和 X509 证书中 SerialNumber 属性的声明。<br />2.值为 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509` 的 AuthenticationMethod 声明。 值为证书验证时间的 AuthenticationInstant 声明，格式为 XmlSchema DateTime。|1.它使用 Windows 帐户完全限定的域名作为 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 声明值。 .<br />2.X509 证书中未映射到 Windows 的声明，以及通过将证书映射到 Windows 而获得的 Windows 帐户中的声明。|  
+|X509|1.具有 X500 可分辨名称、emailName、dnsName、SimpleName、UpnName、UrlName、thumbprint、RsaKey（可以使用 RSACryptoServiceProvider.ExportParameters 方法从 X509Certificate2.PublicKey.Key 属性提取）、DsaKey（可以使用 DSACryptoServiceProvider.ExportParameters 方法从 X509Certificate2.PublicKey.Key 属性提取）和 X509 证书中 SerialNumber 属性的声明。<br />2.值为 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509` 的 AuthenticationMethod 声明。 值为证书验证时间的 AuthenticationInstant 声明，格式为 XmlSchema DateTime。|1.它使用 Windows 帐户完全限定的域名作为 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 声明值。 方法。<br />2.X509 证书中未映射到 Windows 的声明，以及通过将证书映射到 Windows 而获得的 Windows 帐户中的声明。|  
 |UPN|1.与 Windows 身份验证部分中的声明类似的声明。<br />2.值为 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` 的 AuthenticationMethod 声明。 值为密码验证时间的 AuthenticationInstant 声明，格式为 XmlSchema DateTime。||  
 |Windows（Kerberos 或 NTLM）|1.从访问令牌生成的声明，例如：PrimarySID、DenyOnlyPrimarySID、PrimaryGroupSID、DenyOnlyPrimaryGroupSID、GroupSID、DenyOnlySID 和 Name<br />2.值为 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows` 的 AuthenticationMethod。 值为 Windows 访问令牌创建时间的 AuthenticationInstant，格式为 XMLSchema DateTime。||  
 |RSA 密钥对|1.值为 RSAKeyValue 的 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` 声明。<br />2.值为 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature` 的 AuthenticationMethod 声明。 值为 RSA 密钥验证（即签名验证）时间的 AuthenticationInstant 声明，格式为 XMLSchema DateTime。||  

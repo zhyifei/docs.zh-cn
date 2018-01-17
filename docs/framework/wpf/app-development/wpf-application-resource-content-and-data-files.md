@@ -28,11 +28,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19fd82daabd5ed12776b2deee6bc850529a6ef23
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]应用程序通常依赖于文件中包含非可执行文件数据，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，图像、 视频和音频。 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 为配置、标识和使用这些类型的数据文件（称为应用程序数据文件）提供了特殊支持。 这种支持主要针对一组特定的应用程序数据文件类型，包括：  
@@ -248,5 +249,5 @@ ms.lasthandoff: 10/22/2017
 ## <a name="rebuilding-after-changing-build-type"></a>更改生成类型后重新生成  
  在更改应用程序数据文件的生成类型后，需要重新生成整个应用程序以确保应用这些更改。 如果只生成应用程序，则不会应用更改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

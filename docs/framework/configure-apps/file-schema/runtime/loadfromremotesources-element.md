@@ -16,11 +16,12 @@ caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 959073381ef936fa7c0b248419c8529deaee969f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efb968d40e54c7552fba0a592e759f9e83c92309
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;元素
 指定是否从远程数据源的程序集应被授予完全信任。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关运行时初始化选项的信息。|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [更多隐式使用 CAS 策略： loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839)  
  [如何：运行沙盒中部分受信任的代码](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
  [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

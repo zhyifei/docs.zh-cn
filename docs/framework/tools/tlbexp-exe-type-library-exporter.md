@@ -19,11 +19,12 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6bee059891cb2e0d572d97823ec6b1f8b29a4238
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a76d85fa19fc7869ff4298867286592583e86a12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe（类型库导出程序）
 类型库导出程序生成一个类型库，该类型库描述公共语言运行时程序集中定义的类型。  
@@ -137,7 +138,7 @@ CSC Sample.cs /reference:myLib.dll /out:Sample.dll
 tlbexp Sample.dll  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
  [工具](../../../docs/framework/tools/index.md)  
  [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  

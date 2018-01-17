@@ -15,11 +15,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26385d91b4201820a5f6ba77b512e7bcfd5372c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-activity"></a>如何：创建活动
 活动是 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的核心行为单元。 活动的执行逻辑可以使用托管代码实现，也可以使用其他活动实现。 本主题演示如何创建两个活动。 第一个活动是简单活动，它使用代码来实现其执行逻辑。 第二个活动的实现是用其他活动定义的。 后续教程步骤会使用这些活动。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 12/02/2017
   
      有关说明如何使用这些活动创建工作流在本教程，请参阅下一步[如何： 创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Activities.CodeActivity>  
  <xref:System.Activities.NativeActivity%601>  
  [设计和实现自定义活动](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  

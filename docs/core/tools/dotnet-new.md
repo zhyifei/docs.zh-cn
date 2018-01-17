@@ -10,17 +10,18 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet new` - 根据指定的模板，创建新的项目、配置文件或解决方案。
 
@@ -47,7 +48,7 @@ dotnet new [-h|--help]
 
 命令调用[模板引擎](https://github.com/dotnet/templating)，以根据指定的模板和选项在磁盘上创建项目。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `TEMPLATE`
 
@@ -74,7 +75,7 @@ dotnet new [-h|--help]
 | Nuget 配置                                 | nugetconfig    |               |
 | Web 配置                                   | webconfig      |               |
 | 解决方案文件                                | sln            |               |
-| Razor 页                                   | page           |               |
+| Razor 页                                   | 页           |               |
 | MVC/ViewImports                              | viewimports    |               |
 | MVC ViewStart                                | viewstart      |               |
 

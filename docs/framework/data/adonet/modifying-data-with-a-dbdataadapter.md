@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 850e56e6d6b5e6416ff9bb99e8c458982347e860
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fc821aeb1fb7812b3a858bf901e91ccc625f142a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>使用 DbDataAdapter 修改数据
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> 对象的 <xref:System.Data.Common.DbProviderFactory> 方法为您提供 <xref:System.Data.Common.DbDataAdapter> 对象，该对象强类型化为创建工厂时指定的基础数据提供程序。 然后您可以使用 <xref:System.Data.Common.DbCommandBuilder> 创建命令，以插入、更新和删除数据源的 <xref:System.Data.DataSet> 中的数据。  
@@ -52,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 > [!IMPORTANT]
 >  出于安全原因，建议不要通过采用字符串串联的形式构造直接 SQL 语句来完全避免提供程序特定的参数。 使用字符串串联代替参数会使您的应用程序容易受到 SQL 注入攻击。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [获取 DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
- [DbConnection、 DbCommand 和 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
+ [DbConnection、DbCommand 和 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

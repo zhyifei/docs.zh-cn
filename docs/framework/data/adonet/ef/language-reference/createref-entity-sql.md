@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9fe960d5b19f5119f2337ec410738a2df31f20c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad5329e50a5bea933e8fdfdfd473b2d4b9e0b211
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
 创建对实体集中的实体的引用。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 11/21/2017
 CreateRef(entityset_identifier, row_typed_expression)  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `entityset_identifier`  
  实体集标识符，不是字符串文本。  
   
@@ -54,8 +55,8 @@ from LOB.Orders as o
   
  [!code-csharp[DP EntityServices Concepts 2#CREATEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#createref)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
- [密钥](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
+ [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
  [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f648862829301679dc4bcf3636298398d0dc0325
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bab0625bf6787522cc042b764d3714eada29eb94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a>&lt;unrecognizedPolicyAssertion&gt;
 表示用于指定策略断言的绑定元素。 此元素没有属性并且以空开关形式存在。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  

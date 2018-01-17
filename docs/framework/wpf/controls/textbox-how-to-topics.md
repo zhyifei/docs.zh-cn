@@ -17,11 +17,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e21053043a48b68dce229a7de20c4a7e38f7a62c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd716f4d9f072284b29958c79350d497442cf41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-how-to-topics"></a>TextBox 帮助主题
 本节提供演示如何完成使用的常见任务的示例<xref:System.Windows.Controls.TextBox>控件。  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 控件库示例](http://go.microsoft.com/fwlink/?LinkID=160053)  
  [TextBox 样式和模板](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22c35a683f479660a17f11e44f9a0721f9d35968
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ee18503bdd6100cbe7a62ac70d7ea0848fb124eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>如何：获取 Visual 的偏移量
 这些示例演示如何检索相对于其父级，或任何祖先或后代的视觉对象的偏移量的值。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
  偏移量将考虑在内<xref:System.Windows.FrameworkElement.Margin%2A>的所有对象的值。 在这种情况下，<xref:System.Windows.Vector.X%2A>是-4，和<xref:System.Windows.Vector.Y%2A>是-4。 偏移量的值是负值，因为父对象产生负面偏移量相对于其子对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

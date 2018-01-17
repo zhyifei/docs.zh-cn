@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cfbda764984305c141fd416baea8efa6aef4591
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="was-activation-architecture"></a>WAS 激活体系结构
 本主题详细列举和讨论了 Windows 进程激活服务（也称为 WAS）的组件。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="listener-adapters"></a>侦听器适配器  
  侦听器适配器是一些单独的 Windows 服务，这些服务可以实现用于通过其侦听的网络协议接收消息的网络通信逻辑。 下表列出了 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 协议的侦听器适配器。  
   
-|侦听器适配器服务名称|协议|备注|  
+|侦听器适配器服务名称|协议|说明|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|为 IIS 7.0 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供 HTTP 激活的公共组件。|  
 |NetTcpActivator|net.tcp|取决于 NetTcpPortSharing 服务。|  
@@ -95,6 +96,6 @@ ms.lasthandoff: 12/02/2017
 </system.web>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置 WAS 以用于 WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
  [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)

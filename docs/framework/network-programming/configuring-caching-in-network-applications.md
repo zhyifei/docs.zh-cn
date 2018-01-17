@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3c06c05f2d5102d1822aa11c81f2814090e10ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe70c8952451f5af8ac46549919ca164816819e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-caching-in-network-applications"></a>配置网络应用程序中的缓存
 若要配置缓存，需要在应用程序级别或 <xref:System.Net.WebRequest> 级别指定缓存策略。 以下主题提供代码示例，演示如何配置应用程序和请求来使用缓存。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
  也可使用应用程序或计算机配置文件配置缓存策略。 有关详细信息，请参阅 &#124; [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [缓存策略](../../../docs/framework/network-programming/cache-policy.md)  
  [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)  

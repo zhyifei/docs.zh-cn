@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 84db785d47f97fe058b8a66070bcf4757fa11517
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ae9c80a65908d6ec1514ce64845217bd7b5c7805
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess2getversion-method"></a>ICorDebugProcess2::GetVersion 方法
 获取在此进程中运行公共语言运行时 (CLR) 的版本号。  
@@ -45,7 +46,7 @@ HRESULT GetVersion (
 ## <a name="remarks"></a>备注  
  `GetVersion`方法返回错误代码，如果已在进程中不加载任何运行时。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

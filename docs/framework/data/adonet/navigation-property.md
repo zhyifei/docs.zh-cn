@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1677ab1be071eeabd72b29c7ce61d01aaf6164a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dc980a2c61be736e2c1d8e52d8f13d0ea5ed09f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-property"></a>Navigation Property — 导航属性
 A*导航属性*上是一个可选属性[实体类型](../../../../docs/framework/data/adonet/entity-type.md)它允许从一个导航[结束](../../../../docs/framework/data/adonet/association-end.md)的[关联](../../../../docs/framework/data/adonet/association-type.md)到另一端。 与其他不同[属性](../../../../docs/framework/data/adonet/property.md)，导航属性并不携带数据。  
@@ -45,6 +46,6 @@ A*导航属性*上是一个可选属性[实体类型](../../../../docs/framework
   
  请注意，XML 特性用于传达定义导航属性所需的信息：特性 `Name` 包含属性的名称，`Relationship` 包含属性要导航的关联名称，而 `FromRole` 和 `ToRole` 则包含关联各端。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)

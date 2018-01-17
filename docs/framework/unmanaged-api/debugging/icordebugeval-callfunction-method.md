@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 72713d81931b53e8d61fb39cee146fd30a59bfcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c2d5582c9ac69692546e9a2310c4d0c9cdde83e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction 方法
 设置了对指定函数的调用。  
@@ -55,7 +56,7 @@ HRESULT CallFunction (
 ## <a name="remarks"></a>备注  
  如果该函数是虚拟的`CallFunction`将执行虚拟调度。 如果函数是在不同的应用程序域中，转换将发生，只要所有参数也都是该应用程序域中。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：** WindowSee[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -64,5 +65,5 @@ HRESULT CallFunction (
   
  **.NET framework 版本：** 1.1、 1.0  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CallParameterizedFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a5996c398e4f864da4b505020974307b0e0e316
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-type-recommendations"></a>控件类型建议
 .NET Framework 使你能够开发和实现新控件。 除了已熟悉的用户控件，现在你会发现你能够编写自定义控件用于执行其自己的绘制，甚至能够通过继承扩展现有控件的功能。 决定创建哪种类型的控件可能令人困惑。 本节重点介绍可以从其继承的各类控件之间的区别，并提供要为你的项目选择的类型的相关注意事项。  
@@ -89,6 +90,6 @@ ms.lasthandoff: 11/21/2017
   
 -   [如何：创建利用设计时功能的 Windows 窗体控件](http://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
  [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

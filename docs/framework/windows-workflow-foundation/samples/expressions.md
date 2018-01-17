@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2746171c08cb5094b4ad39e753a20c595d48514e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a22cf5ae3434e0f79a4cba1b772b02316ccdb007
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expressions"></a>表达式
 此示例演示如何在工作流中使用基本表达式。 它包含一个工作流，此工作流计算虚构的公司中两名员工的基本工资统计信息。 Employee.cs 和 SalaryStats.cs 中定义了两个类，即 `Employee` 和 `SalaryStats`。 演示如何对复杂类型的变量属性执行简单算术和字符串运算的工作流中使用了这两个类。  

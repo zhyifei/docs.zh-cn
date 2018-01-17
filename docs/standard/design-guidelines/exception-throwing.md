@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b1aa0eaccc26e1bd7cc6b78953dc0a782b2f952e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2c1fc02b64a494220070a1cfed928b616e4970c0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-throwing"></a>异常引发
 在本部分中所述的异常引发准则需要正确定义的执行失败的含义。 执行失败每当某一成员不能执行其设计目的 （什么成员名称所暗示的）。 例如，如果`OpenFile`方法无法返回到调用方的一个打开的文件句柄，它将被认为执行失败。  
@@ -72,6 +75,6 @@ ms.lasthandoff: 11/21/2017
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [异常设计准则](../../../docs/standard/design-guidelines/exceptions.md)
+ [异常的设计准则](../../../docs/standard/design-guidelines/exceptions.md)

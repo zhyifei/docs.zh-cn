@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ab1213b5821233e28f36089039145d5874dd3a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9bf0f615ae338d9ad52cc8c40096e7130fb111ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fault-contract"></a>错误协定
 “错误协定”示例演示如何将错误信息从服务传达到客户端。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，使用的一些其他代码添加到服务，以将内部异常转换为错误。 客户端试图执行除数为零的运算以在服务上强制产生错误情况。  
@@ -146,4 +147,4 @@ catch (FaultException<MathFault> e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

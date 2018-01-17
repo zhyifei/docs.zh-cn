@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 66395e8011b5ea25bb3b52b25e0067dc5d8fc1ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bf60af99e9fa13cf4badcc534a7bd14805059bd1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>使用 DataAdapter 执行批处理操作
 通过 ADO.NET 中的批处理支持，<xref:System.Data.Common.DataAdapter> 可以将 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 中的 INSERT、UPDATE 和 DELETE 操作分组发向服务器，而不是每次发送一项操作。 因为减少了与服务器的往返次数，通常可以大大提高性能。 SQL Server .NET 数据提供程序 (<xref:System.Data.SqlClient>) 和 Oracle .NET 数据提供程序 (<xref:System.Data.OracleClient>) 支持批量更新。  
@@ -151,8 +152,8 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  数据提供程序和后端数据库服务器确定支持哪些 SQL 构造以执行批处理。 如果为执行提交了不支持的语句，则可能引发异常。  
   
-## <a name="see-also"></a>另请参阅  
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+## <a name="see-also"></a>请参阅  
+ [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

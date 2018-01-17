@@ -14,11 +14,12 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b3b200e26d4d615dd67c13770073b76dac78005
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -163,7 +164,7 @@ ms.lasthandoff: 12/02/2017
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Off|不可用|不可用|不发出任何跟踪。|不可用|  
 |严重|"负"事件： 表示意外的处理或错误条件的事件。||将记录包括下列各项的未经处理的异常：<br /><br /> -OutOfMemoryException<br />-ThreadAbortException （CLR 调用任何 ThreadAbortExceptionHandler）<br />-StackOverflowException （无法捕获）<br />-ConfigurationErrorsException<br />-SEHException<br />-应用程序启动错误<br />-故障快速报警事件<br />系统将挂起。<br />-病毒消息： 消息会导致应用程序失败的跟踪。|管理员<br /><br /> 应用程序开发人员|  
-|错误|"负"事件： 表示意外的处理或错误条件的事件。|已发生意外处理。 应用程序未能执行预期的任务。 然而，应用程序仍处于开启状态并在运行。|记录所有异常。|管理员<br /><br /> 应用程序开发人员|  
+|Error|"负"事件： 表示意外的处理或错误条件的事件。|已发生意外处理。 应用程序未能执行预期的任务。 然而，应用程序仍处于开启状态并在运行。|记录所有异常。|管理员<br /><br /> 应用程序开发人员|  
 |警告|"负"事件： 表示意外的处理或错误条件的事件。|可能的问题已经出现或可能出现，但是，应用程序仍在正常工作。 不过，该应用程序可能不会继续正常工作。|-应用程序正在接收比其遏制设置所允许的更多的请求。<br />-接收队列已接近其最大的配置容量上限。<br />已超过超时。<br />-凭据被拒绝。|管理员<br /><br /> 应用程序开发人员|  
 |信息|"正"事件： 成功里程碑进行标记的事件|应用程序执行的重要和成功里程碑，而不考虑该应用程序是否工作正常。|通常，生成对监视和诊断系统状态、测量性能或执行分析十分有用的消息。 可以使用此类信息规划容量和管理性能：<br /><br /> 的创建通道。<br />创建终结点侦听器。<br />消息进入/离开传输。<br />检索安全令牌。<br />读取配置设置。|管理员<br /><br /> 应用程序开发人员<br /><br /> 产品开发人员。|  
 |详细|"正"事件： 成功里程碑进行标记的事件。|发出用户代码和服务的低级别事件。|通常，可以使用此级别进行调试或应用程序优化。<br /><br /> -已理解消息头。|管理员<br /><br /> 应用程序开发人员<br /><br /> 产品开发人员。|  
@@ -189,8 +190,8 @@ ms.lasthandoff: 12/02/2017
   
  不能将 `propagateActivity` 属性与用户定义的跟踪源一起使用。 对于用户代码活动 ID 传播，请确保未设置 ServiceModel `ActivityTracing`，而同时仍将 ServiceModel `propagateActivity` 属性设置为 `true`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [如何： 创建和初始化跟踪侦听器](http://go.microsoft.com/fwlink/?LinkId=94648)  
+ [如何：创建和初始化跟踪侦听器](http://go.microsoft.com/fwlink/?LinkId=94648)  
  [创建自定义 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)

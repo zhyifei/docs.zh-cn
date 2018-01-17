@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6c2542ca7ee27bec96bb5010bcdb2fcd7416f72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b0db67e8da97f380c3bb2eb9aab951628c4b6487
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>ContextMenu 组件概述（Windows 窗体）
 > [!IMPORTANT]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  键属性的<xref:System.Windows.Forms.ContextMenu>组件是<xref:System.Windows.Forms.Menu.MenuItems%2A>属性。 您可以通过以编程方式创建添加菜单项<xref:System.Windows.Forms.MenuItem>对象并将它们添加到<xref:System.Windows.Forms.Menu.MenuItemCollection>的快捷菜单。 因为快捷菜单中的项通常取自其他菜单，你将最常将项添加到快捷菜单将其复制。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ContextMenu>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

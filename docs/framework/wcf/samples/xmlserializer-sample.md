@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e18459d985447359d6314b68e48ce1ad4b0b9d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c89194eebbfe4f25b8d8120be16a18306a92a889
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 示例
 此示例演示如何序列化和反序列化与 <xref:System.Xml.Serialization.XmlSerializer> 兼容的类型。 默认的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 格式化程序是 <xref:System.Runtime.Serialization.DataContractSerializer> 类。 当无法使用 <xref:System.Xml.Serialization.XmlSerializer> 类时，可以使用 <xref:System.Runtime.Serialization.DataContractSerializer> 类来序列化和反序列化类型。 当需要精确控制 XML 时通常会发生这种情况 - 例如，如果某个数据必须是一个 XML 属性，而不能是 XML 元素。 此外，为非 <xref:System.Xml.Serialization.XmlSerializer> 服务创建客户端时，常常会自动选择 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
@@ -144,4 +145,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

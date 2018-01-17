@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ec8b7f37dc7f04a7ddb2c6373b50e98fe41cf98
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>如何：使用双工协定访问服务
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的一个功能是可以创建使用双工消息传递模式的服务。 此模式允许服务通过回调与客户端进行通信。 本主题演示在实现回调接口的客户端类中创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的步骤。  
@@ -97,9 +98,9 @@ ms.lasthandoff: 12/02/2017
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)  
- [如何： 创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [如何：创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [如何：创建客户端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

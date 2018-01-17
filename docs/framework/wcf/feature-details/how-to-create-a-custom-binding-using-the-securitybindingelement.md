@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>如何：使用 SecurityBindingElement 创建自定义绑定
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括多个系统提供的绑定，虽然这些绑定可进行配置，但在配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的所有安全选项时仍显得不够灵活。 本主题演示如何直接从各个绑定元素创建自定义绑定，并着重说明创建这样的绑定时可以指定的一些安全设置。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建自定义绑定，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支持 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道形状，它是 TCP 传输在 <xref:System.ServiceModel.TransferMode> 设置为 <xref:System.ServiceModel.TransferMode.Buffered> 时使用的默认通道形状。 您必须将 <xref:System.ServiceModel.TransferMode> 设置为 <xref:System.ServiceModel.TransferMode.Streamed>，才能在此方案中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
 ## <a name="creating-a-custom-binding"></a>创建自定义绑定  
- 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]所有绑定的都组成*绑定元素*。 每个绑定元素都是从 <xref:System.ServiceModel.Channels.BindingElement> 类派生的。 对于系统提供的标准绑定，已为您创建和配置绑定元素，但您仍可以自定义某些属性设置。  
+ 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]所有绑定的都组成*绑定元素*。 每个绑定元素都是从 <xref:System.ServiceModel.Channels.BindingElement> 类派生的。 对于系统提供的标准绑定，已为你创建和配置绑定元素，但你仍可以自定义某些属性设置。  
   
  相比之下，若要创建自定义绑定，应创建并配置绑定元素，然后从绑定元素创建 <xref:System.ServiceModel.Channels.CustomBinding>。  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 -   协定中指定的消息交换模式 (MEP)。  
   
- 下表显示上述因素各种组合的有效绑定元素组合配置。 请注意，这些是最低要求。 您可以向绑定添加更多绑定元素，如消息编码绑定元素、事务绑定元素和其他绑定元素。  
+ 下表显示上述因素各种组合的有效绑定元素组合配置。 请注意，这些是最低需求。 你可以向绑定添加更多绑定元素，如消息编码绑定元素、事务绑定元素和其他绑定元素。  
   
 |安全模式|传输|协定消息交换模式|协定消息交换模式|协定消息交换模式|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
  <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  

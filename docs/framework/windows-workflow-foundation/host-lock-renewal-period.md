@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48a5d2e1d8c5381f322ea1b6ffc9022853683efc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b7447d11e93cf33e69bc52d2cdec239c1be55bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="host-lock-renewal-period"></a>宿主锁定续订期
 **宿主锁定续订期**SQL 工作流实例存储的属性，可以指定宿主在其间续订它对工作流实例的锁定的时间段。 锁定在宿主锁定续订期及其后 30 秒内有效。 如果宿主未能在此时间段内续订锁定（换句话说，延长租约），则锁定将过期并且持久性提供程序将解除实例锁定。 此属性的值是类型为 TimeSpan 的窗体"hh: mm:"。 允许值的最小为"00: 00:01"（1 秒）。 此属性的默认值为"00: 00:30"（30 秒）。  

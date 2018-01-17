@@ -17,11 +17,12 @@ caps.latest.revision: "60"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7684cb379f3cd24da008342c26e14bbf70c10d07
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b74eafb1189335a642df7cb267727ef7e8ee59b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-wpf"></a>入门 (WPF)
 Windows Presentation Foundation (WPF) 是一个可创建桌面客户端应用程序的 UI 框架。 WPF 开发平台支持广泛的应用程序开发功能，包括应用程序模型、资源、控件、图形、布局、数据绑定、文档和安全性。 它是 .NET Framework 的子集，因此，如果你曾经使用 ASP.NET 或 Windows 窗体通过 .NET Framework 构建应用程序，应该会熟悉此编程体验。 WPF 使用可扩展应用程序标记语言 (XAML) 为应用程序编程提供声明性模型。 本节包含 WPF 简介及入门帮助等主题。  
@@ -36,7 +37,7 @@ Windows Presentation Foundation (WPF) 是一个可创建桌面客户端应用程
 |有关 WPF 的详细信息...|[Visual Studio 2015 中的 WPF 简介](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)<br /><br /> [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)<br /><br /> [控件](../../../../docs/framework/wpf/controls/index.md)<br /><br /> [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)|  
 |是否是 Windows 窗体开发人员？|[Windows 窗体控件和等效的 WPF 控件](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF 和 Windows 窗体互操作](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类库](../../../../docs/framework/wpf/class-library-wpf.md)  
  [应用程序开发](../../../../docs/framework/wpf/app-development/index.md)  
  [.NET framework 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=187437)

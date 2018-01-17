@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2d27a881f84121f0d096eae7c693dec5b674caec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64a1bc6bbd89e3a36ac53b322bb246a7e61baa67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 函数
 创建指定的托管类型的实例。  
@@ -57,7 +58,7 @@ STDAPI ClrCreateManagedInstance (
 ## <a name="remarks"></a>备注  
  公共语言运行时应已加载到进程中。 例如，可以通过调用加载它[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函数之前`ClrCreateManagedInstance`调用函数。 如果未加载运行时，`ClrCreateManagedInstance`首次尝试加载的运行时的 v1.0.3705。 如果该操作失败，它尝试加载运行时的最新版本。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -66,6 +67,6 @@ STDAPI ClrCreateManagedInstance (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
  [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

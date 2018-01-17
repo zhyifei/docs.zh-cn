@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4e10f7136b636829f99da34388db7676810cd06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="focus-overview"></a>焦点概述
 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，有两个与焦点有关的主要概念：键盘焦点和逻辑焦点。  键盘焦点指接收键盘输入的元素，而逻辑焦点指焦点范围中具有焦点的元素。  本概述详细介绍了这些概念。  对于创建具有多个可获取焦点的区域的复杂应用程序来说，理解这些概念之间的区别非常重要。  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/21/2017
   
  与逻辑焦点相关的事件是<xref:System.Windows.UIElement.GotFocus>和<xref:System.Windows.UIElement.LostFocus>。  在中定义这些事件<xref:System.Windows.Input.FocusManager>为附加事件，但<xref:System.Windows.Input.FocusManager>未公开 CLR 事件包装器。  <xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>更方便地公开这些事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Input.FocusManager>  
  <xref:System.Windows.UIElement>  
  <xref:System.Windows.ContentElement>  

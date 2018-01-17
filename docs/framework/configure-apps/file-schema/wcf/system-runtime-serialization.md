@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8a6eb2b152f2ab11bbe0e08ff1ad22f94d45057e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ab66252ebc5b87c197b3e4ac7b6def9355e5f201
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemruntimeserializationgt"></a>&lt;system.runtime.serialization&gt;
 表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|配置的顶级元素。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization>  
  [使用数据协定](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [数据协定已知的类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+ [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

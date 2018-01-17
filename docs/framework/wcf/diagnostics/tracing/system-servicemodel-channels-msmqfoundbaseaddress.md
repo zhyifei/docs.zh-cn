@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2258a32f5eb3a0d4b01845fcba6d82c826367f04
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9cddb2209fd6958fbca8018603b7d15b36aff575
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelsmsmqfoundbaseaddress"></a>System.ServiceModel.Channels.MsmqFoundBaseAddress
 System.ServiceModel.Channels.MsmqFoundBaseAddress  
@@ -25,7 +26,7 @@ System.ServiceModel.Channels.MsmqFoundBaseAddress
 ## <a name="description"></a>描述  
  宿主环境已发现服务的基本地址。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用跟踪来排查你的应用程序](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)

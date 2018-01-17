@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="weak-event-patterns"></a>弱事件模式
 在应用程序，很可能不会被附加到事件源的处理程序破坏与附加到源的处理程序的侦听器对象结合使用。 这种情况下可能会导致内存泄漏。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]引入了一种设计模式，可以用于解决此问题，通过专用管理器类的特定事件并在该事件的侦听器上实现接口。 此设计模式中被称为*弱事件模式*。  
@@ -139,7 +140,7 @@ ms.lasthandoff: 12/14/2017
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.WeakEventManager>  
  <xref:System.Windows.IWeakEventListener>  
  [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  

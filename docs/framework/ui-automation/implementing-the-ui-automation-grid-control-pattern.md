@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 123bc1454a58391bc6503fd3f60d477fd5498306
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4667cd149940310e2422686b9e9fdf6e7e99ca9e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>实现 UI 自动化 Grid 控件模式
 > [!NOTE]
@@ -73,10 +74,10 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行坐标大于<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>或列坐标大于<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>。|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果请求的行或列坐标小于零。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [实现 UI 自动化 GridItem 控件模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
  [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [使用在 UI 自动化中缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+ [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

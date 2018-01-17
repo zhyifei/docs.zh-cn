@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0e537b955524f2721868ddf5da9fccf68f9d4efd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8e712f22156e96cfc58e9c1a835077ba21ecd184
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager 接口
 提供使主机可将一组任务标识符和友好名称与相关联的方法。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/18/2017
   
  分组的标识符和主机分配给分组的友好名称具有对公共语言运行时 (CLR) 没有意义。 CLR 仅将信息传递给该调试器。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

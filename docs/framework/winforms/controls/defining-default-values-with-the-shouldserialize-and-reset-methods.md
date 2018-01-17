@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d082b0e3db1e1c115d28446cf515cf6acf60a7d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a654fef461d92c4b93db131e303bb07a1e839d34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>使用 ShouldSerialize 和 Reset 方法定义默认值
 `ShouldSerialize`和`Reset`是为属性，可以提供的可选方法，如果相应属性不具有简单的默认值。 如果该属性具有简单的默认值，则应对应用<xref:System.ComponentModel.DefaultValueAttribute>并改为提供给特性类构造函数的默认值。 这些机制任一启用了设计器中的以下功能：  
@@ -54,7 +55,7 @@ public void ResetMyFont() {
 > [!NOTE]
 >  如果属性不具有`Reset`方法，未标记为<xref:System.ComponentModel.DefaultValueAttribute>，并且没有默认值在其声明中，提供`Reset`选项在快捷菜单的情况下禁用该属性对**属性**窗口中的 Windows 窗体设计器[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。  
   
- 设计器，如[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]使用`ShouldSerialize` *PropertyName*更改，从而允许更高效的方法来检查属性是否已从其默认值和写入到窗体仅当属性的代码代码生成。 例如:   
+ 设计器，如[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]使用`ShouldSerialize` *PropertyName*更改，从而允许更高效的方法来检查属性是否已从其默认值和写入到窗体仅当属性的代码代码生成。 例如:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -153,7 +154,7 @@ public class MyControl : Control {
   
  在此情况下，访问私有变量的值的情况下，即使`MyFont`属性是`null`，属性浏览器不会显示`null`; 相反，它显示<xref:System.Windows.Forms.Control.Font%2A>父级，如果不是属性`null`，默认值或<xref:System.Windows.Forms.Control.Font%2A>中定义值<xref:System.Windows.Forms.Control>。 因此的默认值为`MyFont`不能只需设置，和一个<xref:System.ComponentModel.DefaultValueAttribute>不能应用于此属性。 相反，`ShouldSerialize`和`Reset`方法必须为实现`MyFont`属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体控件中的属性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
  [定义属性](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
  [属性更改事件](../../../../docs/framework/winforms/controls/property-changed-events.md)

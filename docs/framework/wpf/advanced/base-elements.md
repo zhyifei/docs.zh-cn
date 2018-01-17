@@ -15,11 +15,12 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18b393ca5048d9b96c6803cd536110ea2261daae
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 89c2e2fb12a91e06b3c4347b6f65c6fa91636911
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="base-elements"></a>基元素
 四个关键类-<xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>-实现可用于 WPF 编程的常见元素功能的大部分。 这四个类在此 SDK 中称为基元素类。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/22/2017
  [基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
  [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.UIElement>  

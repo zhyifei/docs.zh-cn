@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 56fb7fcb162025ec05bc1171cb137d445c4dfee5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-token-handlers"></a>自定义令牌处理程序
 本主题讨论 WIF 中的令牌处理程序，以及如何使用它们处理令牌。 还介绍为 WIF 中默认不支持的令牌类型创建自定义令牌处理程序所需的内容。  

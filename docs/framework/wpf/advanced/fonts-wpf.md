@@ -15,11 +15,12 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc23483ee1c2b59de8c43c2a2582225d1b2c864c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b652805c921b4c1643e2c1ffcca8a361aa65541c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fonts-wpf"></a>字体 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]包含支持对文本使用丰富演示[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体。 示例包[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体是附带[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]。  
@@ -28,9 +29,9 @@ ms.lasthandoff: 11/21/2017
  [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
  [将字体与应用程序一起打包](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
  [示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.FontStyle>  
  <xref:System.Windows.SystemFonts>  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

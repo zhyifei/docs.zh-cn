@@ -21,11 +21,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 84b58e3a016431eba10710ea384338cb388404ff
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5a7ce44dcfc709b4fea1952471cf31f5f07d4d0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs 方法
 获取一个枚举器，为缓存[!INCLUDE[wrt](../../../../includes/wrt-md.md)]应用程序域中的类型基于其接口标识符。  
@@ -53,7 +54,7 @@ HRESULT GetCachedWinRTTypesForIIDs (
 ## <a name="remarks"></a>备注  
  如果该方法无法检索有关特定的接口标识符，"ICorDebugTypeEnum"集合中的相应条目将具有一种`ELEMENT_TYPE_END`数据检索问题，由于错误或`ELEMENT_TYPE_VOID`未知接口标识符。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**[!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -62,5 +63,5 @@ HRESULT GetCachedWinRTTypesForIIDs (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorDebugAppDomain3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)

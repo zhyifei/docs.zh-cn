@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7daa3c08bb15b13543a4f972d7e4c5e4929e16e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c979922bf8c7b786fd0a671c22289fb148a883c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 内部：客户端注册
 网格中的每个节点都通过 `Register` 函数，将自己的终结点信息发布到解析程序服务。 解析程序服务将此信息存储为注册记录。 此记录包含节点的唯一标识符 (RegistrationID) 和终结点信息 (PeerNodeAddress)。  
@@ -43,5 +44,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime 和 Refresh  
  节点向解析程序服务注册时，它将从该服务收到一个 <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> 对象。 此对象具有 `RegistrationLifetime` 属性，该属性告知节点，注册将在多久之后过期并被解析程序服务删除。 例如，如果 `RegistrationLifetime` 为 2 分钟，则节点需要在 2 分钟内调用 `Refresh`，以确保记录保持不过时状态，以免被删除。 解析程序服务收到 `Refresh` 请求时，它会查找记录并重置过期时间。 Refresh 返回一个具有 <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> 属性的 `RegistrationLifetime` 对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对等解析程序](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

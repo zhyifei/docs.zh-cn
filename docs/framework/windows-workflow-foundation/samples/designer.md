@@ -12,17 +12,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f544a92aa0e8df154ba5e165ce9a940b6120950
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 532dc0a0ab765a90facd2fb8eae14a221dd3fe79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designer"></a>Designer
 本节包含演示如何使用 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [删除视图状态的设计器将添加到 XAML 文件](../../../../docs/framework/windows-workflow-foundation/samples/removing-the-view-state-the-designer-adds-to-an-xaml-file.md)  
+ [删除设计器添加到 XAML 文件的视图状态](../../../../docs/framework/windows-workflow-foundation/samples/removing-the-view-state-the-designer-adds-to-an-xaml-file.md)  
  演示如何创建一个类，该类从 <xref:System.Windows.Markup.XamlWriter> 派生，并从 XAML 文件移除视图状态。  
   
  [编程模型项树](../../../../docs/framework/windows-workflow-foundation/samples/programming-model-item-tree.md)  

@@ -19,11 +19,11 @@ ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 238f64001b097b86306e0ed9630bd5df2e6a189f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 隐式数据类型将转换限制为仅扩大转换，不允许后期绑定，而不接受隐式类型化导致`Object`类型。  
@@ -48,7 +48,7 @@ Option Strict { On | Off }
   
 -   后期绑定  
   
--   隐式类型化导致`Object`类型  
+-   隐式键入会导致 `Object` 类型  
   
 > [!NOTE]
 >  在可以对设置的警告配置[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)，有三个对应于导致编译时错误的三个条件的设置。 有关如何使用这些设置的信息，请参阅[在 IDE 中设置警告配置](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions)本主题中更高版本。  
@@ -66,7 +66,7 @@ Option Strict { On | Off }
 -   它可加快执行的代码。 一个原因是，如果不指定编程元素中的数据类型，Visual Basic 编译器将其分配`Object`类型。 编译的代码可能需要将之间来回转换`Object`和其他数据类型，这会降低性能。  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>隐式收缩转换错误  
- 是收缩转换的隐式数据类型转换时，将发生隐式收缩转换错误。  
+ 隐式数据类型转换为收缩转换时，将发生隐式收缩转换错误。  
   
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可以将多种数据类型转换为其他数据类型。 一种数据类型的值转换为精度较低或容量较小的数据类型时，可能发生数据丢失。 如果这种收缩转换失败，则会发生运行时错误。 `Option Strict`可确保在编译时通知这些收缩转换，以便你可以避免它们。 有关详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)和[扩大和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
@@ -89,10 +89,10 @@ Option Strict { On | Off }
  在从中的元素的转换的编译时将隐式收缩转换错误被抑制`For Each…Next`向循环控制变量的集合。 发生这种情况即使`Option Strict`上。 有关详细信息，请参阅中的"收缩转换"一节[每个...下一条语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
   
 ## <a name="late-binding-errors"></a>后期绑定错误  
- 分配给属性或方法声明为类型的变量时就后期绑定对象`Object`。 有关详细信息，请参阅[早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
+ 如果将对象分配给声明为 `Object` 类型的变量，则该对象为晚期绑定。 有关详细信息，请参阅[早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
   
 ## <a name="implicit-object-type-errors"></a>隐式对象类型错误  
- 隐式对象类型错误发生时相应的类型不能为推断出对于声明的变量，因此一种`Object`这方面的推断。 这主要发生在你使用`Dim`语句可以声明变量，而无需使用`As`子句，和`Option Infer`处于关闭状态。 有关详细信息，请参阅[Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[Visual Basic 语言规范](../../../visual-basic/reference/language-specification/index.md)。  
+ 如果无法为已声明的变量推断出合适的类型，则会发生隐式对象类型错误，因此 `Object` 类型是推断出来的。 这主要是在未使用 `As` 子句的情况下使用 `Dim` 语句声明变量，且 `Option Infer` 为关闭时发生的。 有关详细信息，请参阅[Option Infer 语句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[Visual Basic 语言规范](../../../visual-basic/reference/language-specification/index.md)。  
   
  为方法参数`As`子句是可选的如果`Option Strict`处于关闭状态。 但是，如果任何一个参数使用`As`子句，它们都必须使用它。 如果`Option Strict`处于打开状态，`As`子句是必需的每个参数定义。  
   
@@ -116,27 +116,27 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>在 IDE 中设置 Option Strict  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。 有关详细信息，请参阅[项目设计器简介](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)。  
+1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
   
 2.  上**编译**选项卡上，设置中的值**Option Strict**框。  
   
 ###  <a name="conditions"></a>在 IDE 中设置警告配置  
- 当你使用[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`语句中，你可以生成错误的条件的其他控制。 **警告配置**部分**编译页**已设置，对应于导致编译时错误的三个条件时`Option Strict`上。 以下是这些设置：  
+ 当你使用[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`语句中，你可以生成错误的条件的其他控制。 **警告配置**部分**编译页**已设置，对应于导致编译时错误的三个条件时`Option Strict`上。 这些设置如下：  
   
--   **隐式转换**  
+-   隐式转换  
   
--   **后期绑定;调用可能在运行时失败**  
+-   晚期绑定；调用可能在运行时失败  
   
--   **隐式类型;假定的对象**  
+-   隐式类型；假定为对象  
   
- 当你将设置**Option Strict**到**上**，所有这三个警告配置设置设置为**错误**。 当你将设置**Option Strict**到**关闭**，所有三个设置设置为**无**。  
+ “Option Strict”设置为“开启”时，所有这三个警告配置设置都将被设置为“错误”。 “Option Strict”设置为“关闭”时，所有这三个设置都将被设置为“无”。  
   
- 你可以单独更改每个警告配置设置设置为**无**，**警告**，或**错误**。 如果所有三个警告配置设置设置为**错误**，`On`出现在`Option strict`框。 如果所有三个设置为**无**，`Off`此框中显示。 有关这些设置的任何其他组合**（自定义）**显示。  
+ 可单独将各个警告配置设置更改为“无”、“警告”或“错误”。 如果三个警告配置都设置为“错误”，则 `On` 会出现在 `Option strict` 框中。 如果三个都设置为“无”，则 `Off` 会出现在此框中。 对于这些配置的任何其他组合，显示“(自定义)”。  
   
 ### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>设置选项严格的默认设置为新项目  
  当你创建项目， **Option Strict**上设置**编译**选项卡设置为**Option Strict**中设置**选项**对话框。  
   
- 若要设置`Option Strict`在此对话框中，在**工具**菜单上，单击**选项**。 在**选项**对话框框中，展开**项目和解决方案**，然后单击**VB 默认值**。 中的初始默认设置**VB 默认值**是`Off`。  
+ 若要设置`Option Strict`在此对话框中，在**工具**菜单上，单击**选项**。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 中的初始默认设置**VB 默认值**是`Off`。  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>若要设置命令行上的 Option Strict  
  包括[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)中的编译器选项**vbc**命令。  
@@ -158,7 +158,7 @@ Option Strict { On | Off }
   
  [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
  [隐式转换和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [“项目设计器”->“编译”页 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  

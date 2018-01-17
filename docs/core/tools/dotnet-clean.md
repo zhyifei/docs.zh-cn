@@ -7,17 +7,18 @@ ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 4836f07ec1a8b59c343b4d0181587e602f61d45e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f56ccc485884114262cd1364cf9398e302f2c48a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-clean"></a>dotnet-clean
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet clean` - 清除项目输出。
 
@@ -39,7 +40,7 @@ dotnet clean [-h|--help]
 
 `dotnet clean` 命令可清除上一个生成的输出。 它以 [MSBuild 目标](/visualstudio/msbuild/msbuild-targets) 的形式实现，以便在运行命令时对项目进行评估。 只会清除在生成过程中创建的输出。 中间 (*obj*) 和最终输出 (*bin*) 文件夹都会被清除。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT`
 

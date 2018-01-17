@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d5586e28e784c43488245db814abf32d863232fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68a28e25cf07ec3d84cc7bb12734594ca55e7e0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>如何：通过使用代码编辑器自定义实体类
 使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来创建或自定义其实体类。  
@@ -26,44 +27,44 @@ ms.lasthandoff: 10/18/2017
   
  本节中的主题说明如何自定义对象模型。  
   
- [如何： 指定数据库名称](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
+ [如何：指定数据库名称](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-names.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>。  
   
- [如何： 表表示为类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
+ [如何：将表表示为类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-tables-as-classes.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.TableAttribute>。  
   
- [如何： 表示为类成员的列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
+ [如何：将列表示为类成员](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-class-members.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
- [如何： 表示主键](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
+ [如何：表示主键](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-primary-keys.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>。  
   
- [如何： 映射数据库关系](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
+ [如何：映射数据库关系](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
  提供使用 <xref:System.Data.Linq.Mapping.AssociationAttribute> 属性的示例。  
   
- [如何： 表示为数据库生成的列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
+ [如何：将列表示为数据库生成的](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>。  
   
- [如何： 列表示为时间戳列或版本列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ [如何：将列表示为时间戳列或版本列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>。  
   
- [如何： 指定数据库数据类型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
+ [如何：指定数据库数据类型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>。  
   
- [如何： 表示计算所得的列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
+ [如何：表示计算所得的列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>。  
   
- [如何： 指定专用存储字段](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
+ [如何：指定专用存储字段](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>。  
   
- [如何： 表示为允许 Null 值的列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
+ [如何：将列表示为允许 Null 值](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>。  
   
- [如何： 映射继承层次结构](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
+ [如何：映射继承层次结构](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  
  说明指定继承层次结构所需的映射。  
   
- [如何： 指定并发冲突检查](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
+ [如何：指定并发冲突检查](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-concurrency-conflict-checking.md)  
  描述如何使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

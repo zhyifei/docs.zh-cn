@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e3a11b67e996148089c45f10a9ef94bcc328ad97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4df4a1db71f30834a303ede230d67f75657eee0a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelsecuritysecurityimpersonationfailure"></a>System.ServiceModel.Security.SecurityImpersonationFailure
 System.ServiceModel.Security.SecurityImpersonationFailure  
@@ -25,7 +26,7 @@ System.ServiceModel.Security.SecurityImpersonationFailure
 ## <a name="description"></a>描述  
  服务器上的安全模拟失败。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用跟踪来排查你的应用程序](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)

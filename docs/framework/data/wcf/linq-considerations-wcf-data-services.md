@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b992cafbc0f8c68cfa695f244b9ec82d9d344af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4f6742294c570501b20646c89455c7856f393f7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 注意事项（WCF 数据服务）
 本主题提供有关使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端时 LINQ 查询的编写和执行方式的信息以及使用 LINQ 查询实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的数据服务的限制。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]编写和执行针对查询[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于数据服务，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
@@ -222,7 +223,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  客户端或许还可以在客户端上计算其他 CLR 函数。 对于无法在客户端上计算以及无法转换为有效请求 URI 以便在服务器上计算的任何表达式，将引发 <xref:System.NotSupportedException>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [查询投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
  [对象具体化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  

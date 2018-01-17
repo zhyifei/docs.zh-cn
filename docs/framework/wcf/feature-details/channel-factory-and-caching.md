@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b06d290760afa9a52274c30899e25f00bc18af2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b92c94c6ae15684a087af07edd5801aa4bb9f671
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-factory-and-caching"></a>通道工厂和缓存
 WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建 WCF 服务的通信通道。  创建 <xref:System.ServiceModel.ChannelFactory%601> 实例会带来一定的开销，因为这涉及以下操作：  
@@ -119,11 +120,11 @@ class Program
 public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
 ```  
   
- 在上面的示例中，`TestClient` 的所有实例将使用不同的通道工厂。 当每个终结点具有不同的安全要求并且对缓存没有意义时，这非常有用。  
+ 在上面的示例中，`TestClient` 的所有实例将使用不同的通道工厂。 当每个终结点具有不同的安全需求并且对缓存没有意义时，这非常有用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ClientBase%601>  
  [生成客户端](../../../../docs/framework/wcf/building-clients.md)  
  [客户端](../../../../docs/framework/wcf/feature-details/clients.md)  
  [使用 WCF 客户端访问服务](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

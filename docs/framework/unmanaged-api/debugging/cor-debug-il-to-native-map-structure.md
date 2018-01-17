@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: aa191a4235defc5f47d0f7b3d823605da17fb5f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 954060d790d432456585846e24b399223b513b61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 结构
 包含用于将 Microsoft 中间语言 (MSIL) 代码映射到本机代码的偏移量。  
@@ -46,7 +47,7 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 |`nativeStartOffset`|本机代码开头的偏移量。|  
 |`nativeEndOffset`|本机代码的结尾部分的偏移量。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl、 CorDebug.idl  
@@ -55,7 +56,7 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)  
  [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)  
  [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

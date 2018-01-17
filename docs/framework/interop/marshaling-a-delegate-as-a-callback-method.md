@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c8c4eca35c406b38da603dc10358920ee887b137
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6d9269261c6c0ce7573e0a8e298111971ae591c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>将委托作为回调方法进行封送
 此示例演示如何将委托传递给需要函数指针的非托管函数。 委托是可以容纳方法引用的类，等效于类型安全函数指针或回调函数。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Interop.Marshaling#38](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/callback.cs#38)]
  [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [其他封送处理示例](http://msdn.microsoft.com/en-us/a915c948-54e9-4d0f-a525-95a77fd8ed70)  
  [平台调用数据类型](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)

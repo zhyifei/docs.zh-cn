@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7cc400c2925d1a4a1810780528bad6da3ad492eb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b07dda940e35746a4d57c0cd300375692c6ab2f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-tracing"></a>工作流跟踪
 工作流跟踪提供了一种使用 .NET Framework 跟踪侦听器捕获诊断信息的方法。 如果检测到应用程序存在问题，可以启用跟踪，然后在解决问题之后再次禁用跟踪。 可以通过两种方法为工作流启用调试跟踪。 您可以使用事件跟踪查看器配置调试跟踪，也可以使用 <xref:System.Diagnostics> 向文件发送跟踪事件。  
@@ -78,6 +79,6 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows Server App Fabric 监视](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 监视应用程序](http://go.microsoft.com/fwlink/?LinkId=201275)

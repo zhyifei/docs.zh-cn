@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: efdfba94bd2d2a64b3434c97f30a035f210fda9a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4ece61330fe8e41d9afb894791f9f9e36db35f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-settings-schema"></a>Web 设置架构
 Web 设置指定 CPU 和执行级别 ASP.NET 设置，后者应用于由 ASP.NET 承载层托管的进程范围行为。 这些设置与 ASP.NET 应用程序的 Web.config 文件中指定的应用程序域类型设置不同。  
@@ -46,5 +47,5 @@ Web 设置指定 CPU 和执行级别 ASP.NET 设置，后者应用于由 ASP.NET
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|包含 ASP.NET 承载层使用的信息。|  
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|指定 CPU 和执行级别 ASP.NET 设置，后者应用于由 ASP.NET 承载层托管的进程范围行为。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

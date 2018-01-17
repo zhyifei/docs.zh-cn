@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 474ab9efe0a3b3ab4f10dd7ffc079d2415e24df3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e209318054d23e81a6739fe906a335a770cd5e7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performancecounterinitializationfailure"></a>PerformanceCounterInitializationFailure
 Id: 149  
@@ -29,6 +30,6 @@ Id: 149
 ## <a name="description"></a>描述  
  此事件指示性能计数器未能初始化。 此事件将列出计数器名称、异常、进程名及进程 ID。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

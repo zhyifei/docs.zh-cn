@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08950b2b92bfcbd28472327f12a2ee49abfd9fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f255ff38ec7ee79f02a0cd40a3f0143c36e1c58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>如何：使用关键帧对边框的粗细进行动画处理
 此示例演示如何进行动画处理<xref:System.Windows.Controls.Control.BorderThickness%2A>属性<xref:System.Windows.Controls.Border>。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整示例，请参阅[关键帧动画示例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>  
  <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>  
  <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>  

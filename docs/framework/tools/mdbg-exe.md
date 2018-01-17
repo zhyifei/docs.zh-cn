@@ -16,11 +16,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 04a96cfe492add5c0216528dc07efc5f40912412
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4c4e06a5969aa6f7555a191f9950ddf64879e98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe（.NET Framework 命令行调试程序）
 .NET Framework 命令行调试器可以帮助工具供应商和应用程序开发人员查找并修复面向 .NET Framework 公共语言运行时的程序中的 Bug。 此工具使用运行时调试 API 提供调试服务。 可以使用 MDbg.exe 来仅调试托管代码；不支持调试非托管代码。  
@@ -60,7 +61,7 @@ MDbg [ProgramName[arguments]] [options]
 |fo[reach] [OtherCommand]|对所有线程执行命令。 OtherCommand 是对一个线程执行的有效命令；foreach OtherCommand 对所有线程执行同一命令。|  
 |f[unceval] [-ad Num] functionName [args ... ]`-ad`|对当前活动线程进行函数求值，其中，要求值的函数为 functionName。 函数名必须完全限定，包括命名空间。<br /><br /> `-ad` 选项指定用于解析函数的应用程序域。 如果未指定 `-ad` 选项，则用于解析的应用程序域默认为用于函数求值的线程所在的应用程序域。<br /><br /> 如果要进行求值的函数不是静态的，则传入的第一个参数应为 `this` 指针。 在所有应用程序域中搜索函数求值所需的参数。<br /><br /> 若要请求应用程序域值，请使用模块和应用程序域名为变量添加前缀；例如 `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`。 此命令在应用程序域 `System.Object.ToString` 中对函数 `0` 进行求值。 由于 `ToString` 方法为实例函数，因此，第一个参数必须为 `this` 指针。|  
 |g[o]|使程序继续直到其遇到断点，退出程序，或事件（例如，未经处理的异常）使程序停止。|  
-|h[elp] [command]<br /><br /> - 或 -<br /><br /> **?** [command]|显示所有命令的说明或对指定命令的详细说明。|  
+|h[elp] [command]<br /><br /> 或<br /><br /> **?** [command]|显示所有命令的说明或对指定命令的详细说明。|  
 |ig[nore] [event]|让调试器仅在遇到未经处理的异常时停止。|  
 |int[ercept] FrameNumber|将调试器回滚到指定的帧号码。<br /><br /> 如果调试器遇到异常，使用此命令可以将调试器回滚到指定的帧号码。 可通过使用 set 命令来更改程序状态并通过使用 go 命令继续操作。|  
 |k[ill]|停止活动进程。|  
@@ -114,6 +115,6 @@ mdbg>
   
 ## <a name="examples"></a>示例  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

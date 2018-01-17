@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 669c6be6756d79b30266c9fda0909fedc71aeae3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异
 本主题对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 队列功能在 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 与 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 之间的差异做了总结。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remote-transactional-read"></a>远程事务性读取  
  [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支持远程事务性读取。 这允许从队列中进行读取的应用程序与该队列承载在不同的计算机上。 这样可以确保服务场能够从中心队列进行读取，从而增加系统的总体吞吐量。 另外，还可以确保在读取和处理消息时一旦出现故障，事务能够回滚并且消息保留在队列中以供以后处理。  
   
-## <a name="see-also"></a>另请参阅  
- [使用死信队列来处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+## <a name="see-also"></a>请参阅  
+ [使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [有害消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

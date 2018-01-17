@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>从开发的角度比较 ASP.NET Web 服务与 WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 具有一个 ASP.NET 兼容模式选项，用户使用此选项可以对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序进行编程和配置，使其像 ASP.NET Web 服务一样，并且还可以模仿这些服务的行为。 以下各部分基于使用这两种技术开发应用程序的要求来比较 ASP.NET Web 服务和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序开发通常也由复杂类型的定义开始。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可设为使用相同的 .NET Framework 类作为 ASP.NET Web 服务。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 可添加到 .NET Framework 类型中，用于指示此类型的实例将要序列化为 XML，以及要序列化的此类型的特定字段或属性，正如下列示例代码所示。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.Runtime.Serialization.DataContractAttribute>和<xref:System.Runtime.Serialization.DataMemberAttribute>可以添加到.NET Framework 类型，以指示该类型的实例将要序列化为 XML，以及哪些特定字段或属性的类型进行序列化，如下面的示例中所示代码。  
   
 ```  
 //Example One:   
@@ -760,5 +761,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>全球化  
  通过 ASP.NET 配置语言，您可以为这些服务单独指定区域性。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持配置设置，ASP.NET 兼容模式下除外。 若要对不使用 ASP.NET 兼容模式的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行本地化，请将服务类型编译为区域性特定的程序集，并为每个区域性特定的程序集提供独立的区域性特定终结点。  
   
-## <a name="see-also"></a>另请参阅  
- [WCF 基于目标和使用的标准比较 ASP.NET Web 服务与](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+## <a name="see-also"></a>请参阅  
+ [基于目标和使用的标准比较 ASP.NET Web 服务与 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

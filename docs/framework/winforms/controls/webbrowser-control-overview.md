@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c2dfae4cbd7f583ce69ff5591c24a573db0d4e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 控件概述
 <xref:System.Windows.Forms.WebBrowser>控件 WebBrowser ActiveX 控件提供托管的包装。 托管的包装便可以在 Windows 窗体客户端应用程序中显示网页。 你可以使用<xref:System.Windows.Forms.WebBrowser>控件重复中你的应用程序或你的 Internet Explorer Web 浏览功能可以禁用默认 Internet 资源管理器功能和控件用作简单的 HTML 文档查看器。 你可以使用控件以将基于 DHTML 的用户界面元素添加到你的窗体和隐藏它们是否承载在事实<xref:System.Windows.Forms.WebBrowser>控件。 这种方法，可以无缝组合与单个应用程序中的 Windows 窗体控件的 Web 控件。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  `Document`属性，您还可以调用 Web 页的脚本在客户端应用程序代码中的代码中实现的方法。 若要在脚本代码中访问客户端应用程序代码中，设置`ObjectForScripting`属性。 你指定的对象可以访问你的脚本代码作为`window.external`对象。  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.WebBrowser.Document%2A> 属性|获取一个对象，提供对 HTML 文档对象模型 (DOM) 的当前网页的托管的访问。|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>事件|当 Web 页面完成加载时出现。|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.WebBrowser.Stop%2A> 方法|将暂停当前导航并停止动态页元素，如声音和动画。|  
 |<xref:System.Windows.Forms.WebBrowser.Url%2A> 属性|获取或设置当前网页的 URL。 设置此属性导航到新 URL 的控件。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.WebBrowser>  
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>  

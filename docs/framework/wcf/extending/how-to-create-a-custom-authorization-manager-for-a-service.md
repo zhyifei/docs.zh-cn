@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cba64767aaac4092f3c6103f7417a9d707b9a380
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1977a26f3185ad1ef85584b0da7d63826b7f93ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>如何：为服务创建自定义授权管理器
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的标识模型基础结构支持基于声明的可扩展授权模型。 声明是从令牌中提取的，自定义授权策略将有选择地对其进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中。 授权管理器检查 <xref:System.IdentityModel.Policy.AuthorizationContext> 中的声明，从而作出授权决策。  
@@ -127,7 +128,7 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
  [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)  
  [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)

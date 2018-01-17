@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be514f435b787c770eca114d42bee5c1424a40c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 028b66fea2b35e7b36760ec7c606f81ca2301620
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线在 Windows 窗体上排列控件
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 Windows 窗体设计器为你提供许多布局工具实现此目的。 最重要之一是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建项目并设置窗体。  
   
-#### <a name="to-create-the-project"></a>创建项目  
+#### <a name="to-create-the-project"></a>要创建项目  
   
 1.  创建一个名为"SnaplineExample"的基于 Windows 的应用程序项目。 有关详细信息，请参阅[如何：创建一个 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
@@ -249,7 +250,7 @@ ms.lasthandoff: 11/21/2017
   
  有关 Windows 用户界面设计的信息，请参阅图书*Microsoft Windows 用户体验、 用户界面开发人员和设计器的官方指南*Redmond，WA: Microsoft Press，1999年。 (USBN: 0-7356-0566年-1)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Design.Behavior.SnapLine>  
  [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
  [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  

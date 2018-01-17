@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43461f23476d1c387cec06f9aee893defa634201
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 47a7d0984a5fafa7f03a589570e2a1aa2546dd8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
 一个配置元素，用于添加可定义虚拟服务激活设置（映射到 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务类型）的设置。 使用此配置元素可以在不使用 .svc 文件的情况下激活承载在 WAS/IIS 中的服务。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|添加一个指定激活服务应用程序的配置元素。|  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/02/2017
   
  基于配置的激活支持通过 http 协议和非 http 协议进行激活。 它要求在 relatativeAddress 中使用扩展名，即 .svc、.xoml 或 .xamlx。 您可以将自己的扩展名映射到已知的 buildProviders，然后就可以通过任意扩展名激活服务。 如果发生冲突，`<serviceActivations>` 节将重写 .svc 注册。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>

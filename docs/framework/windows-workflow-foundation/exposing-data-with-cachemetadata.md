@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26c68c24ad525d077d26f0b7bd917a936372e0a5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a25e658d512cf0575a4e3902a9a951099675e29a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-data-with-cachemetadata"></a>使用 CacheMetadata 公开数据
 在执行某活动之前，工作流运行时会获取所需的所有活动信息以保持活动的执行。 工作流运行时在 <xref:System.Activities.Activity.CacheMetadata%2A> 方法执行期间获取这些信息。 在执行此方法的时候，此方法的默认实现为运行时提供活动公开的所有公共参数、变量和子活动；如果活动需要向运行时提供比这更多的信息（如私有成员或将由该活动安排的活动），可以重写此方法以进行提供。  

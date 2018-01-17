@@ -17,18 +17,19 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communication Foundation 绑定
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将应用程序软件的编写方式与该软件和其他软件的通信方式分离开来。 使用绑定指定客户端与服务彼此通信所需的传输、编码和协议详细信息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用绑定来生成终结点的基础网络表示，因此，进行通信的各方必须对大多数绑定详细信息达成一致。 完成此任务的最简单方法是让服务的客户端使用该服务的终结点所使用的相同绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何执行此操作，请参阅[到配置 Windows Communication Foundation 服务和客户端使用的绑定](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  
   
  绑定由绑定元素的集合组成。 每个元素描述终结点与客户端的通信方式的某一方面。 一个绑定必须至少包括一个传输绑定元素，至少包括一个消息编码绑定元素（默认情况下，传输绑定元素可能提供该元素）以及包括任意数目的其他协议绑定元素。 使用本说明中生成运行时的进程，每个绑定元素均可为该运行时提供代码。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供包含常见绑定元素选择的绑定。 这些绑定可以与其默认设置一起使用，您也可以根据用户要求修改这些默认值。 这些系统提供的绑定具有一些属性，可以通过这些属性直接控制绑定元素及其设置。 通过为绑定的每个版本提供其自己的名称，还可以轻松地并行使用该绑定的多个版本。 有关详细信息，请参阅[Configuring System-Provided 绑定](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供包含常见绑定元素选择的绑定。 这些绑定可以与其默认设置一起使用，您也可以根据用户需求修改这些默认值。 这些系统提供的绑定具有一些属性，可以通过这些属性直接控制绑定元素及其设置。 通过为绑定的每个版本提供其自己的名称，还可以轻松地并行使用该绑定的多个版本。 有关详细信息，请参阅[Configuring System-Provided 绑定](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)。  
   
  如果需要的绑定元素集合不是由系统提供的这些绑定之一提供，则可以创建由所需绑定元素的集合组成的自定义绑定。 这些自定义绑定易于创建且不需要新类，但是，它们不提供用于控制绑定元素或其设置的属性。 你可以访问这些绑定元素并通过包含它们的集合修改其设置。 有关详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

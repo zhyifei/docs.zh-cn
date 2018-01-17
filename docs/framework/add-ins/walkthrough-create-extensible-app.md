@@ -22,11 +22,12 @@ caps.latest.revision: "32"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6609f30844421f94965fbe05114db96ed8edbb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>演练：创建可扩展的应用程序
 本演练介绍如何创建用于执行简单的计算器功能的外接程序的管道。 它并不演示实际方案;相反，它演示了管道以及如何外接程序可以提供主机服务的基本功能。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
  版本 2 的计算器外接程序提供更多的计算的可能性，并演示版本控制。 中描述的那样[演练： 启用作为主机所做的更改的向后兼容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你需要具备以下条件：  
   
 -   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。  
@@ -362,9 +363,9 @@ ms.lasthandoff: 11/21/2017
   
 4.  类型**退出**按**Enter**键关闭应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练： 启用主机更改为向后的兼容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
  [主机和外接程序之间的演练： 传递集合](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
  [管线开发要求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
  [协定、 视图和适配器](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)
+ [管道开发](../../../docs/framework/add-ins/pipeline-development.md)

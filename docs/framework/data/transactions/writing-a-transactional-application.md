@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c988f5ab5a342ad3282414634ca3bfc21f481ea5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9fab355da61ea7445e429cfc4e336a14b588e30c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-a-transactional-application"></a>编写事务应用程序
 作为事务应用程序程序员，您可以利用 <xref:System.Transactions> 命名空间所提供的两种编程模型来创建事务。 则可以通过使用利用的显式编程模型<xref:System.Transactions.Transaction>类或在其中事务自动由管理基础结构中，通过使用隐式编程模型<xref:System.Transactions.TransactionScope>类。 我们建议你使用用于开发的隐式事务模型。 你可以找到有关如何使用事务范围中的详细信息[实现使用事务范围的隐式事务](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)主题。  
@@ -28,11 +29,11 @@ ms.lasthandoff: 12/02/2017
 ### <a name="creating-a-transaction"></a>创建事务  
  <xref:System.Transactions> 命名空间提供了两种用于创建事务的模型。 下列主题对这两种模型进行了介绍。  
   
- [实现使用事务范围的隐式事务](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
+ [使用事务范围实现隐式事务](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
   
  描述 <xref:System.Transactions> 命名空间如何支持使用 <xref:System.Transactions.TransactionScope> 类创建隐式事务。  
   
- [实现使用 CommittableTransaction 的显式事务](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
+ [使用 CommittableTransaction 实现显式事务](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
   
  描述 <xref:System.Transactions> 命名空间如何支持使用 <xref:System.Transactions.CommittableTransaction> 类创建显式事务。  
   

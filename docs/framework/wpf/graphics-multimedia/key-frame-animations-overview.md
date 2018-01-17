@@ -17,17 +17,18 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c4f4179087679ff891c705cf16693fc69c808d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-frame-animations-overview"></a>关键帧动画概述
 本主题介绍关键帧动画。 通过关键帧动画，可以使用两个以上的目标值进行动画处理，并控制动画的内插方法。  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要理解本概述，用户应熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 动画和时间线。 有关动画的简介，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 它还有助于熟悉 From/To/By 动画。 有关详细信息，请参阅“From/To/By 动画概述”。  
   
 <a name="whatisakeyframeanimation"></a>   
@@ -293,7 +294,7 @@ ms.lasthandoff: 11/21/2017
   
 8.  即排序顺序的解决时间 （主键） 和声明 （辅助密钥），顺序中的关键帧，请使用一个稳定排序基于解决的关键帧<xref:System.Windows.Media.Animation.KeyTime>值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Animation.KeyTime>  
  <xref:System.Windows.Media.Animation.KeySpline>  
  <xref:System.Windows.Media.Animation.Timeline>  

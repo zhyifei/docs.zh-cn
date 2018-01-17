@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41978e7b91c50b33649bd88e23d22fce7a272c5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ea5d269c3d455a4fbe3a34dca4335e0d8999d80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 指定属性<xref:System.Windows.Data.RelativeSource>绑定源，要在中使用[绑定标记扩展](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)，或在设置时<xref:System.Windows.Data.Binding.RelativeSource%2A>属性<xref:System.Windows.Data.Binding>建立在 XAML 中的元素。  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/21/2017
   
  `RelativeSource` 是标记扩展。 当要求转义特性值应为非文本值或非处理程序名称时，通常会实现标记扩展，相对于只在某些类型或属性上放置类型转换器而言，此需求更具有全局性。 XAML 使用中的所有标记扩展`{`和`}`其属性的语法，这是 XAML 处理器识别标记扩展必须处理该特性所依据的约定中的字符。 有关详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.Binding>  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

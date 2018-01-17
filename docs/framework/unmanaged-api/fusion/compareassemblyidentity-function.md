@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9d9d7b4934d4295ee799fb13d3d749e6b977e644
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 266868a65a0db75b57d46d92a469b4b6ceaa88e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 函数
 比较两个程序集标识，以确定它们是否等效。  
@@ -78,7 +79,7 @@ STDAPI CompareAssemblyIdentity (
   
  `pResult`参数包括有关为什么两个程序集都被视为等效也不等效的特定信息。 有关详细信息，请参阅[AssemblyComparisonResult 枚举](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
@@ -87,6 +88,6 @@ STDAPI CompareAssemblyIdentity (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
  [AssemblyComparisonResult 枚举](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

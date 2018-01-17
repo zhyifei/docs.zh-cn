@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b005926f99b7c151e5916a95a9852dd8b448a928
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a5934f67387e29bfbd4f011ad2ba47f50d81b983
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>如何：引用具有强名称的程序集
 引用强名称程序集中的类型或资源的过程通常是透明的。 可在编译时（早期绑定）或在运行时进行引用。  
@@ -56,7 +57,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
      \<assembly name>, \<version number>, \<culture>, \<public key token>  
   
-     例如：  
+     例如:  
   
     ```  
     myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
@@ -78,5 +79,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  sn -tp \< assembly >  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1156608e9e1aa63a2404d5394c0c4211eea60693
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30adbc060ead6eb1805f85bd563021ba7530c36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="standard-query-operator-translation"></a>标准查询运算符转换
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将标准查询运算符转换为 SQL 命令。 数据库的查询处理器决定了 SQL 转换的执行语义。  
@@ -235,10 +236,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  [返回或跳过序列中的元素](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [串联两个序列](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
+ [连接两个序列](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
  [返回两个序列之间的差集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
  [返回两个序列的交集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [返回的两个序列的并集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+ [返回两个序列的并集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

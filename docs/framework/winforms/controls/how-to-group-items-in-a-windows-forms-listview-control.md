@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c22134513c2c6a3ff2bc621e68f546b7bcc93ba9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b12b7126e03f6a6c8363c69a607f4961f13120ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>如何：对 Windows 窗体 ListView 控件中的项进行分组
 使用的分组功能<xref:System.Windows.Forms.ListView>控件，你可以在组中显示的项的相关的集。 在屏幕上分隔这些组由包含组标题的水平组标题。 你可以使用<xref:System.Windows.Forms.ListView>组以使大型列表对项进行分组按字母顺序，按日期，或任何其他逻辑分组的导航。 下图显示一些分组的项。  
@@ -66,7 +67,7 @@ ListView 的分组项
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#23)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#23)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ListView>  
  <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.ListViewGroup>  

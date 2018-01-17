@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5a0d3b61f473b49abdb2470a9fa5381dc9929274
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ebbb7749a5ca24072e62bb482ee33abadcfb8b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsstreamsecurity 正在&gt;
 指定自定义绑定的 Windows 流安全设置。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>备注  
  使用面向流协议（如 TCP 和命名管道）的传输支持基于流的传输升级。 特别是 WCF 提供了安全升级。 此配置元素包装以及通过此传输安全配置[ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)，可以将配置并将添加到自定义绑定  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>  
  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b282a098e53666bcb17d3c619633edba8f06c248
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 [!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引入了许多新功能，包括对工作流设计器体验的多项增强。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。  

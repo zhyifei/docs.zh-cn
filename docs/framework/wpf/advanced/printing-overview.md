@@ -26,11 +26,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7234dfd3c1a80ebd2c21d3748bc3281573bb4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-overview"></a>打印概述
 通过 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]，使用 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 的应用程序开发人员可以使用一组新的功能丰富的打印和打印系统管理 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **ZIP 压缩**。 所有 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文档均使用 ZIP 压缩。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.PrintDialog>  
  <xref:System.Windows.Xps.XpsDocumentWriter>  
  <xref:System.Windows.Xps.Packaging.XpsDocument>  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Printing.PrintCapabilities>  
  <xref:System.Printing.PrintServer>  
  <xref:System.Printing.PrintQueue>  
- [操作说明主题](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [XPS](http://www.microsoft.com/xps)  
  [文档序列化和存储](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  

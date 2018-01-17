@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 803f2daab5b8f6e216effe4a9ae9f34752d24e70
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5bde1c1045849fe5507081171711d5a00e99b0b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows 窗体中的鼠标事件
 当处理鼠标输入时，通常想要知道鼠标指针的位置和鼠标按钮的状态。 本主题详细介绍如何从鼠标事件获取此信息，并说明在 Windows 窗体控件中引发的鼠标单击事件的顺序。 列表和鼠标事件的所有说明，请参阅[鼠标输入工作原理 Windows 窗体中](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)。  另请参阅[事件处理程序概述 （Windows 窗体）](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概述 （Windows 窗体）](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
@@ -151,5 +152,5 @@ ms.lasthandoff: 10/22/2017
     > [!NOTE]
     >  如果用户在鼠标按钮处于按下状态时将指针移出切换控件（例如在鼠标按下时将鼠标从 <xref:System.Windows.Forms.Button> 控件移出），那么切换控件将以引发状态进行绘制，并且只发生 <xref:System.Windows.Forms.Control.MouseUp> 事件。 在这种情况下，将不会发生 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体应用程序中的鼠标输入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

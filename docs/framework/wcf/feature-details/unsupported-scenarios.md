@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 不支持某些特定安全方案。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在该平台上不支持使用 Windows 身份验证来运行服务。 在 Windows XP Home Edition 下运行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/02/2017
  或者，在配置中，令牌启用通过创建 <`customBinding`>，然后添加 <`security`> 元素，并设置`authenticationMode`属性设为 SecureConversation 和`requireSecurityContextCancellation`属性设为`true`。  
   
 > [!NOTE]
->  上述要求是特定的。 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建一个产生 Windows 标识的绑定元素，但并不建立一个 SCT。 因此，在 `Required` 上，可以将其与 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 选项一起使用。  
+>  上述需求是特定的。 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建一个产生 Windows 标识的绑定元素，但并不建立一个 SCT。 因此，在 `Required` 上，可以将其与 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 选项一起使用。  
   
 ### <a name="possible-aspnet-conflict"></a>可能发生 ASP.NET 冲突  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 都可能启用或禁用模拟。 当 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 配置设置之间可能存在冲突。 如果发生冲突，将优先采用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 设置，除非 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption.NotAllowed>（在这种情况下，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟设置优先）。  
@@ -118,10 +119,10 @@ ms.lasthandoff: 12/02/2017
   
  解决方法是，导入完毕后直接在客户端上修改绑定。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [信息泄露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [提升权限](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [被篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [重播攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 356dd1531f093282a1a8463b7d697400f8b45862
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e5d26ab2ff3207b0905c33ba237bf71e623a103d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
 提供用于启用应用程序中的 Windows Identity Foundation (WIF) 选项的配置。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`<configuration>`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
@@ -84,5 +85,5 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

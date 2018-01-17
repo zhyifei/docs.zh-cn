@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 84b909f0c638bf0fb7c19ecc3a86c7c32bab2adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8727bc4447955b079c8cd8d3949144e904b0148e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建项目并设置窗体。  
   
-#### <a name="to-create-the-project"></a>创建项目  
+#### <a name="to-create-the-project"></a>要创建项目  
   
 1.  创建一个名为“FlowLayoutPanelExample”的基于 Windows 的应用程序项目。 有关详细信息，请参阅 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
@@ -197,7 +198,7 @@ ms.lasthandoff: 11/21/2017
   
 -   将其中一个控件的 <xref:System.Windows.Forms.Control.Visible%2A> 属性设置为 `false` ，并注意 <xref:System.Windows.Forms.FlowLayoutPanel> 作为响应是如何进行重排的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  

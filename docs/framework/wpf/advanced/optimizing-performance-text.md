@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43fe1f9fa5189a3dfd5f700660f0528592382510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f345893ca79d820ebb066d920cb49c6c46c47297
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-text"></a>优化性能：文本
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持通过使用功能丰富的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 控件实现的文本内容演示。 通常可以将文本呈现分为三层：  
@@ -170,7 +171,7 @@ MouseEnter 上显示的超链接
 ### <a name="optimal-paragraph"></a>最佳段落  
  最佳段落功能<xref:System.Windows.Documents.FlowDocument>对象布局在段落，以便尽可能均匀地分发的空白区域。 默认禁用最佳段落功能。 你可以启用此功能，通过设置对象的<xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A>属性`true`。 但是，启用此功能会影响应用程序的性能。 除非需要，否则不建议使用最佳段落功能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
  [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
  [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  

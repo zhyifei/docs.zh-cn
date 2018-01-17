@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f447df16aab29b91da6f34b8afd812dea2d109ef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14d003c36fd3733c329aad1362c01e91f108ec2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows 窗体中更加安全的文件和数据访问
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用权限帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
@@ -368,7 +369,7 @@ public void Write()
   
  由于无法在部分信任环境下访问注册表，所以可能需要寻找其他方法来存储你的数据。 存储应用程序设置时，请使用独立存储而非注册表。 独立存储也可用于存储其他特定于应用程序的文件。 由于默认授予了应用程序访问其源站点的权限，因此还可以存储有关服务器或源站点的全局应用程序信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体中更加安全的打印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
  [Windows 窗体中额外的安全注意事项](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
  [Windows 窗体中的安全性概述](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  

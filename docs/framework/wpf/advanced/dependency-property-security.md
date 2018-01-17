@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8c1dc0ea45efe32e36b649d92111fff3d5f61a7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9cd6f9d7025de9f5deb836d48a8ce9c7134973d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-security"></a>依赖项属性的安全性
 依赖属性通常应当被视为公共属性。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统在本质上无法对依赖属性值提供安全保证。  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/22/2017
 ### <a name="validation-and-security"></a>验证和安全  
  应用到一个要求<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>和应请求失败，以防止属性设置为验证失败不是足够的安全性机制。 通过强制设置值失效<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>还可禁止显示由恶意调用方，如果在应用程序域内操作这些调用方。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7c0f93a5c4e515db937945d374ee7cbe8d9b3cf8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cfe6a2137b3f3c9b5bcde6de0f0c692904bd7529
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-triggers"></a>CLR 触发器
 触发器是在语言事件执行时自动运行的一种特殊类型的存储过程。 因为 Microsoft SQL Server 与 .NET Framework 公共语言运行库 (CLR) 相集成，所以您可以使用任何 .NET Framework 语言创建 CLR 触发器。  
@@ -28,6 +29,6 @@ ms.lasthandoff: 11/21/2017
   
 1.  [CLR 触发器](http://go.microsoft.com/fwlink/?LinkId=115397)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在托管代码中创建 SQL Server 2005 对象](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

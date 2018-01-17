@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69b72a824e6f9468c9b3d86073243d506382e766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8433376c9950594b57b800b401d68d849e743d85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model"></a>实体数据模型
 实体数据模型 (EDM) 是一组描述数据结构（而不管其存储形式如何）的概念。 EDM 借自于 Peter Chen 于 1976 年所描述的实体关系模型，但它是在实体关系模型基础上构建的并扩展了其传统用途。  
@@ -31,11 +32,11 @@ ms.lasthandoff: 11/21/2017
   
  [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [实体数据模型： 命名空间](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [实体数据模型：命名空间](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [实体数据模型： 基元数据类型](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [实体数据模型：基元数据类型](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [实体数据模型： 继承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [实体数据模型：继承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
  [关联端](../../../../docs/framework/data/adonet/association-end.md)  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  [引用完整性约束](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 实体数据模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
  [.edmx 文件概述](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [CSDL 规范](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

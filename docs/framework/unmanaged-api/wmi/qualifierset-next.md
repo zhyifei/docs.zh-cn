@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6b66eeab2cba18268b602350c8bc8f489d943309
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 01a9c9d162039547849597aaa9c8a6fa38a31455
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next 函数
 检索一个枚举，通过调用启动中的下一步限定符[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。   
@@ -62,7 +63,7 @@ HRESULT QualifierSet_Next (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 调用方未调用[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)。 |
@@ -78,7 +79,7 @@ HRESULT QualifierSet_Next (
 
 在枚举过程中返回的限定符的顺序是不确定的。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

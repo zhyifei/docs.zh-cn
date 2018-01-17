@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70e38e3fe1a07613b0e5b219922c95cdc3bcda41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37125ed8211578e221b24e6aed1fc57b2fc0f518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clients"></a>客户端
 本节各主题介绍客户端体系结构、如何访问 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务、如何配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端，以及 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的一些安全注意事项。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 12/02/2017
  [保护客户端](../../../../docs/framework/wcf/securing-clients.md)  
  介绍 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的一些安全注意事项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [客户端示例](http://msdn.microsoft.com/en-us/849fc452-8718-4d4e-ba57-905eed943f63)

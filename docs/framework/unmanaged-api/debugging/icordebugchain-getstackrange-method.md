@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ce5e42bb9374f22ad29ef0e97a141a796f087a98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 37a9be7924a6d9c1f1d78bd10f9642fff22036bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange 方法
 获取此证书链的堆栈段的地址范围。  
@@ -49,7 +50,7 @@ HRESULT GetStackRange (
 ## <a name="remarks"></a>备注  
  数值范围是仅对比较的堆栈帧位置有意义。 不能进行任何假设在堆栈上实际存储的内容。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

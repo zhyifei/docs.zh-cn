@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c520a8a06a593d8937ca840602ba5bcc7b2d44b4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6c5d359e05e04a98e0c5855ba4d78e8e63c1e6a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 用户可以使用行为扩展来创建用户定义的行为元素。 这些元素可与标准的 Windows Communication Foundation (WCF) 行为元素一起使用。 `behaviorExtensions` 节定义了元素，使其可用于配置中。 下面是一个典型的行为扩展示例。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 12/02/2017
   
  有关详细信息，请参阅[运行时如何定位程序集](http://go.microsoft.com/fwlink/?LinkId=95336)和<xref:System.AppDomain.TypeResolve>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  
- [配置和扩展的运行时带有行为](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ [使用行为配置和扩展运行时](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

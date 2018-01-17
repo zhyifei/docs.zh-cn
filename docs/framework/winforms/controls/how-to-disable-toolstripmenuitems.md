@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3307da3e0810ea775c799a4b065e1f7484b5779
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0432c59979f8f595b481154f5b339e448ee66b06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>如何：禁用 ToolStripMenuItems
 你可以限制或扩大用户可通过启用和禁用菜单项以响应用户活动的命令。 当创建，但这可以通过调整时，默认情况下启用菜单项<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>属性。 在设计时使用此属性可**属性**窗口或以编程方式通过在代码中设置。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
     > [!TIP]
     >  禁用菜单中的第一个或顶级菜单项隐藏包含在该菜单中，所有菜单项，但不会禁用它们。 同样，禁用菜单项具有子菜单项隐藏这些子菜单项，但不会禁用它们。 如果给定的菜单上的所有命令都都向用户不可用，它则被视为良好编程习惯隐藏和禁用整个菜单上，这会带来全新的用户界面。 你应隐藏和禁用菜单上，禁用每个项和子菜单项在菜单中，因为仅靠隐藏不会向菜单命令的快捷键通过阻止访问。 设置<xref:System.Windows.Forms.ToolStripItem.Visible%2A>顶级菜单项的属性`false`若要隐藏整个菜单。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  [如何：隐藏 ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  

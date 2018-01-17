@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a98e57d325fc7fd9413babb45d235cbb353a0c86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 088d9f1f76e88d8be838cbf7050601835eff216a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的列排序模式
 <xref:System.Windows.Forms.DataGridView>列具有三种排序模式。 通过指定每个列的排序模式<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>属性的列，可以将设置为以下项之一<xref:System.Windows.Forms.DataGridViewColumnSortMode>枚举值。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView.SortCompare>事件不会发生时<xref:System.Windows.Forms.DataGridView.DataSource%2A>设置属性时，或者当<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>属性值是`true`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>  

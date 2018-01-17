@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 473cf67f01db8735eb3b32a7549296f827e66ef6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c026df631c2ac033594ea86887bb8440a6aa240a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>如何：确定活动的 MDI 子窗体
 有时，你将想要在当前处于活动状态的子窗体具有焦点的控件上提供的命令。 例如，假设你想要将子窗体的文本框中的选定的文本复制到剪贴板。 将创建一个过程，它将选定的文本复制到剪贴板使用<xref:System.Windows.Forms.Control.Click>标准的编辑菜单上的复制菜单项的事件。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多文档界面 (MDI) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
  [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
  [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  

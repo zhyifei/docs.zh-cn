@@ -16,11 +16,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9fb0a726a4bef5b6efa67d5f63c1899468f7e8ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 842ebbe9104463a3c75f01f41a4fe5953b95303d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 加密模型
 .NET Framework 提供了许多标准加密算法的实现。 这些算法易于使用且具有最安全的可能默认属性。 此外，对象继承、流设计和配置的 .NET Framework 加密模型完全可扩展。  
@@ -94,6 +97,6 @@ ms.lasthandoff: 11/21/2017
   
     -   <xref:System.Security.Cryptography.Rfc2898DeriveBytes>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
  

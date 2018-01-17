@@ -13,17 +13,18 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 172928af99f625de0d01d074493c39cfdcec0037
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0559920a78003fa5b77ef7e966aeed0cd553444f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-binding"></a>网络绑定
 本节包含演示如何使用终结点元素的网络绑定特性的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [网络 MSMQ 绑定](../../../../docs/framework/wcf/samples/net-msmq-binding.md)  
+ [网路 MSMQ 绑定](../../../../docs/framework/wcf/samples/net-msmq-binding.md)  
  演示如何使用终结点元素的 MSMQ 绑定特性。  
   
  [消息队列集成](../../../../docs/framework/wcf/samples/message-queueing-integration.md)  

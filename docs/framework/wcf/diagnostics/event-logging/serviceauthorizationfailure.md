@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d98dd86eb70bdbe69bb1ca912870773c34fb5cf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 691bba01e8763a6a98bbd57c0ca54af64d124f2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serviceauthorizationfailure"></a>ServiceAuthorizationFailure
 Id: 168  
@@ -29,6 +30,6 @@ Id: 168
 ## <a name="description"></a>描述  
  此事件指示服务授权失败。 此事件列出了服务、操作、客户端标识、AuthorizationContext、活动 ID 和 ServiceAuthorizationManager。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

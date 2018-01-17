@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3f5c9f80bbf124440952e35049969c7cfa4f19c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a2127c8dda26c376d7d722a24d72d2330174027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing"></a>端到端跟踪
 端到端 (e2e) 跟踪可使开发人员跟踪 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 基础结构中的代码执行，从而调查代码路径失败的原因，或者提供详细的跟踪以进行容量规划和性能分析。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供三种关联机制帮助诊断发生错误的原因：活动、传输和传播。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
   
  提供所有活动跟踪类型的摘要  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  

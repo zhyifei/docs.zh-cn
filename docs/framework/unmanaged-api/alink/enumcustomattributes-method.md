@@ -21,11 +21,12 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: febaba5155753e9d60a3708582f4f58bd7861ec7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d616babb47ac0282ef56d119ab448a94fd24c7c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes 方法
 检索程序集级别的自定义属性。  
@@ -61,10 +62,10 @@ HRESULT EnumCustomAttributes(
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  需要 alink.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

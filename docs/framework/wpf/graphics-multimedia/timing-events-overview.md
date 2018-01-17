@@ -19,16 +19,17 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>计时事件概述
 本主题介绍如何使用可在上找到的五个计时事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>对象。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要了解本主题，应了解如何创建和使用动画。 若要开始使用动画，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
   
  有多种方法中的属性进行动画处理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="public-events"></a>公共事件  
  <xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>类都提供五个计时事件。 下表列出了这些事件及其触发条件。  
   
-|Event|触发交互式操作|其他触发器|  
+|事件|触发交互式操作|其他触发器|  
 |-----------|--------------------------------------|--------------------|  
 |**Completed**|跳过以填充|时钟完成。|  
 |**CurrentGlobalSpeedInvalidated**|暂停、恢复、查找、设置速度比、跳过以填充、停止|时钟反转、加速、启动或停止。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
  当你注册<xref:System.Windows.Media.Animation.Timeline.Completed>时间线上的事件，例如，你正在实际相当于告诉系统注册<xref:System.Windows.Media.Animation.Clock.Completed>事件的时间线创建每个时钟。 在代码中，你必须注册此事件之前<xref:System.Windows.Media.Animation.Clock>创建为此时间线; 否则，你不会收到通知。 发生这种情况会自动在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 分析器自动注册为事件之前<xref:System.Windows.Media.Animation.Clock>创建。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [计时行为概述](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

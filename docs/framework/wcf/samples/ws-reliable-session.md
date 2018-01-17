@@ -14,11 +14,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f016cc075b98b03c17959280215f7aa64f44e24
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c07130715b0416e7a8603b46a1c39c2f22dd7d2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ws-reliable-session"></a>WS 可靠会话
 此示例演示可靠会话的用法。 可靠会话为可靠消息传递和会话提供支持。 可靠消息传递在失败时会重新尝试通信，并允许指定传递保证（如消息按顺序抵达）。 会话在调用之间将保持客户端的状态。 此示例实现了用来保持客户端状态的会话，并指定了按顺序传递保证。  
@@ -94,4 +95,4 @@ Press <ENTER> to terminate client.
   
 4.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

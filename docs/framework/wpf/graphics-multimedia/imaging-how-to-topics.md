@@ -17,11 +17,12 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30310b08f33d0f8c4b854635ba41565bce439c05
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3d2d3bd20a35f5d4b28f0ab4aaba02fdd19a3ee9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imaging-how-to-topics"></a>图像处理帮助主题
 此部分中的主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以显示或 alter 位图图像。  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

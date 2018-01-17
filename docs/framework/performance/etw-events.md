@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 27f3ede2967d030d0f85919e658ca6a8dd410743
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ce0b322c2601709bdb17cb6990c4b6d96480bb0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 Windows 事件跟踪 (ETW) 是 Windows 操作系统提供的高性能、低开销的可缩放跟踪系统。 它可补充 .NET Framework 所提供的分析和调试支持，可用于排除各种问题。  
@@ -34,7 +35,7 @@ Windows 事件跟踪 (ETW) 是 Windows 操作系统提供的高性能、低开�
  [公共语言运行时中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
  介绍 CLR ETW 事件如何补充公共语言运行时所提供的分析和调试支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)  
  [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
  [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

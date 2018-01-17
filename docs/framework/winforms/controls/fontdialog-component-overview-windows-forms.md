@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1e00fc074148ddd53885bafbb490a3e3868fc0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9e3018d024254adb249860f7736399e7f2da72a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog 组件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.FontDialog>组件是一个预配置的对话框，这是标准的 Windows**字体**用于公开当前系统安装的字体的对话框。 替代配置自己对话框的字体选择基于 Windows 的应用程序作为简单的解决方案中使用它。  
@@ -32,6 +33,6 @@ Windows 窗体<xref:System.Windows.Forms.FontDialog>组件是一个预配置的�
 ## <a name="key-properties"></a>键属性  
  该组件具有多个配置其外观的属性。 设置对话框中选择的属性是<xref:System.Windows.Forms.FontDialog.Font%2A>和<xref:System.Windows.Forms.FontDialog.Color%2A>。 <xref:System.Windows.Forms.FontDialog.Font%2A>属性设置字体、 样式、 大小、 脚本和效果; 例如， `Arial, 10pt, style=Italic, Strikeout`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.FontDialog>  
  [FontDialog 组件](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc58f5d91618c8b4caa97da12b7b0e20e007448c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 83e804a3ede525510b5c46b494882656c74591b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-model-item-tree"></a>编程模型项树
 此示例演示如何使用 <xref:System.Activities.Presentation.Model.ModelItem> 树视图中的声明性数据绑定导航 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 树。  
@@ -57,5 +58,5 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.IValueConverter>

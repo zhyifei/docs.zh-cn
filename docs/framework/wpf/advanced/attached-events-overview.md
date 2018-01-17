@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87df4a79ec288323fff3dda5789fbbd90c0e88e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcfe0d97b86a27859d79685e035d8f3f765a965b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attached-events-overview"></a>附加事件概述
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定义了一个语言组件和称为附加事件的事件类型。 通过附加事件的概念，你能够向任意元素（而不是实际定义或继承事件的元素）添加特定事件的处理程序。 在这种情况下，对象既不会引发事件，目标处理实例也不会定义或“拥有”事件。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题假定你已阅读[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)和 [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
   
 <a name="Syntax"></a>   
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
  但是，如果要定义基于自定义的附加的事件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型的基础上附加事件<xref:System.Windows.RoutedEvent>，你可以使用<xref:System.Windows.UIElement.RaiseEvent%2A>以引发从任何一个附加的事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>。 引发路由的事件 （不管附加） 要求先声明作为事件源中; 在元素树中的特定元素该源将报告为<xref:System.Windows.UIElement.RaiseEvent%2A>调用方。 服务负责确定将哪个元素报告为元素树中的事件源  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
  [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

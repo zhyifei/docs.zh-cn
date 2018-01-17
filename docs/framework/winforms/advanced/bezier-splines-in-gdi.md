@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52cead578ad03052b5734c5b7a5b5a897dd48732
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8cc06a81c879e6ebd50c4eb6a70590c28cc43f6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="b233zier-splines-in-gdi"></a>B &#233; zier GDI + 中样条
 贝塞尔样条是由四个点指定的曲线： 两个终结点 （p1 和 p2） 和两个控点 （c1 和 c2）。 曲线开始于 p1 和 p2 结束。 曲线不会遍历控点，但控制点的作用像磁铁一样，在某些方向上拉拽曲线和影响曲线弯曲的方式。 下图显示其终结点和控制点的贝塞尔曲线。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  ![路径](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  [直线、曲线和形状](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  

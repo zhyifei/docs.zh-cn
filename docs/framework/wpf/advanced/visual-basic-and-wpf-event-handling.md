@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca55e31060388012e6bb94e40159c2e602484911
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 和 WPF 事件处理
 有关[!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)]语言具体而言，可以使用特定于语言的`Handles`实例，而不是附加的属性的事件处理程序或使用与关联事件处理程序关键字<xref:System.Windows.UIElement.AddHandler%2A>方法。 但是，用于将处理程序附加到实例的 `Handles` 技术存在一些限制，因为 `Handles` 语法不支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统的某些特定路由事件功能。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 中，[!INCLUDE[TLA2#tla_intellisense](../../../../includes/tla2sharptla-intellisense-md.md)] 可完整显示可用于页中的 `Handles` 引用的全部元素。 但是，这可能需要执行一个编译传递，以便中间文件可以填充所有 `Friends` 引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.UIElement.AddHandler%2A>  
  [将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
  [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  

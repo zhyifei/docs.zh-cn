@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e34e9dc864ffa3960c7c4f60f84b4996bab0bb28
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63b7b704cf5d69ea2186ddef6e86f5c6d7993778
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows 窗体中的安全性概述
 在发布 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 之前，用户计算机上运行的所有代码都有相同的权利或权限来访问该计算机的用户所拥有的资源。 例如，如果允许用户访问文件系统，则会允许代码访问文件系统；如果允许用户访问数据库，则会允许代码访问数据库。 尽管这些权利或权限对用户显式安装在本地计算机上的可执行文件中的代码来说是可接受的，但对来自 Internet 或本地 Intranet 的恶意代码来说可能是不可接受的。 此代码没有权限时应不能访问用户的计算机资源。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
  以下主题介绍其他 Windows 窗体安全功能。  
   
-|主题|说明|  
+|主题|描述|  
 |-----------|-----------------|  
 |-   [Windows 窗体中更加安全的文件和数据访问](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)|介绍如何访问部分信任环境中的文件和数据。|  
 |-   [Windows 窗体中更加安全的打印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)|介绍如何访问部分信任环境中的打印功能。|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="testing-the-application"></a>测试应用程序  
  如果已使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 部署了 Windows 窗体应用程序，就可以在部分信任的环境中启用调试或在开环境中启用受限的权限集。  另请参阅[如何：使用受限权限对 ClickOnce 应用程序进行调试](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[如何：使用受限权限对 ClickOnce 应用程序进行调试](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体安全](../../../docs/framework/winforms/windows-forms-security.md)  
  [代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)  
  [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)  

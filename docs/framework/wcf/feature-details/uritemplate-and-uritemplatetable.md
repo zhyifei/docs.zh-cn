@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 和 UriTemplateTable
 Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 添加了两个新类，让开发人员控制他们的 URI。 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 构成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中基于 URI 的调度引擎的基础。 这些类还可单独使用，使开发人员能够利用模板和 URI 映射机制，而无需实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
@@ -342,7 +343,7 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 > [!NOTE]
 >  作为 URI 路径或 <xref:System.UriTemplate> 路径段文本的组成部分时，字符 á 和 Á 视为不同的字符（但字符 a 和 A 视为相同的字符）。 作为 <xref:System.UriTemplate> {variableName} 或查询字符串的组成部分时，字符 á 和 Á 被视为相同的字符（字符 a 和 A 也视为相同的字符）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  

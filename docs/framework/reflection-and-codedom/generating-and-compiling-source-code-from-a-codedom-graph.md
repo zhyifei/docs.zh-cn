@@ -37,11 +37,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 55ba7c1b9dd7e8c912903fb9827e0073a8329abb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56e2effec282900101fc0cbe489c76b523184ab2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>在 CodeDOM 图中生成和编译源代码
 <xref:System.CodeDom.Compiler> 命名空间提供了从 CodeDOM 对象图生成源代码和用受支持的编译器管理编译的接口。 代码提供程序可根据 CodeDOM 图，用某种编程语言生成源代码。 从 <xref:System.CodeDom.Compiler.CodeDomProvider> 派生的类通常可以提供一些方法，用于生成和编译提供程序支持的语言代码。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="languages-with-initial-support"></a>获得初始支持的语言  
  .NET framework 提供下列语言的代码编译器和代码生成器：C#、Visual Basic、C++ 和 JScript。 通过实现特定语言的代码生成器和代码编译器，CodeDOM 支持可以扩展到其他语言。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.CodeDom>  
  <xref:System.CodeDom.Compiler>  
  [动态源代码生成和编译](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  

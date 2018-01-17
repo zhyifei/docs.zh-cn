@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1b6e63c0db9815c7bcfc32ec962e3f85362cce4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 712daba98667381650066b7a719dbfdd5224c143
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-how-to-topics"></a>网络编程操作说明主题
 以下列表包含指向网络编程概念文档中操作说明主题的链接。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [如何：Ping 主机](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
  [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
  [MSDN 代码库中的 .NET 联网示例](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

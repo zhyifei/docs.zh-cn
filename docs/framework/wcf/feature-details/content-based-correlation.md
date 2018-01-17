@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a19c7e8dec9587816d78be8bea58fc4ca366d5e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-based-correlation"></a>基于内容的相关性
 当工作流服务与客户端和其他服务通信时，交换的消息中通常包含一些数据，用于以唯一方式使消息和特定实例相关。 基于内容的相关使用消息中的此数据（如客户编号或订单 ID）将消息路由到正确的工作流实例。 本主题说明如何在工作流中使用基于内容的相关。  

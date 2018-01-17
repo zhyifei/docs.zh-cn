@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51de367f2558abfc28be740409d8a0d394065acf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b620b7386752e531a8d5252159c5f172176890a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>如何：从 Windows 窗体中播放系统声音
 下面的代码示例在运行时播放 `Exclamation` 系统声音。 有关系统声音的详细信息，请参阅<xref:System.Media.SystemSounds>。  
@@ -53,7 +54,7 @@ public void playExclamation()
   
 -   对 <xref:System.Media?displayProperty=nameWithType> 命名空间的引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Media.SoundPlayer>  
  <xref:System.Media.SystemSounds>  
  [如何：通过 Windows 窗体播放提示音](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  

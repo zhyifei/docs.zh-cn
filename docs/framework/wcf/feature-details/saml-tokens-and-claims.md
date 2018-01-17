@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e1d797b7c86f57f4f9cf4d604e264d3534a79bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 令牌和声明
 安全断言标记语言 (SAML)*令牌*是声明的 XML 表示形式。 默认情况下，SAML 令牌[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]在联合的安全方案的用途是*颁发的令牌*。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
 4.  依赖方可通过 SAML 令牌上的签名了解到，该令牌是由安全令牌服务颁发的； 依赖方还可通过使用校验密钥创建的消息签名了解到，该令牌是颁发给客户端的。  
   
 ## <a name="from-claims-to-samlattributes"></a>从 Claim 到 SamlAttribute  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，SAML 令牌中的语句是作为 <xref:System.IdentityModel.Tokens.SamlAttribute> 对象建模的，可以直接从 <xref:System.IdentityModel.Claims.Claim> 对象填充，前提是 <xref:System.IdentityModel.Claims.Claim> 对象的 <xref:System.IdentityModel.Claims.Claim.Right%2A> 属性为 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>，并且 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 属性的类型为 <xref:System.String>。 例如:   
+ 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，SAML 令牌中的语句是作为 <xref:System.IdentityModel.Tokens.SamlAttribute> 对象建模的，可以直接从 <xref:System.IdentityModel.Claims.Claim> 对象填充，前提是 <xref:System.IdentityModel.Claims.Claim> 对象的 <xref:System.IdentityModel.Claims.Claim.Right%2A> 属性为 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>，并且 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 属性的类型为 <xref:System.String>。 例如:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
@@ -52,14 +53,14 @@ ms.lasthandoff: 12/02/2017
 ## <a name="from-samlattributes-to-claims"></a>从 SamlAttribute 到 Claim  
  在消息中接收到 SAML 令牌时，SAML 令牌中的各种语句将转换为 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 对象，并放置在 <xref:System.IdentityModel.Policy.AuthorizationContext> 中。 来自每个 SAML 语句的声明将由 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 的 <xref:System.IdentityModel.Policy.AuthorizationContext> 属性返回，并可对这些声明进行检查，以确定是否对该用户进行身份验证和授权。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Policy.AuthorizationContext>  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
  <xref:System.IdentityModel.Claims.ClaimSet>  
- [联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)  
- [如何： 创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
+ [联合](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  [声明和令牌](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
  [声明创建和资源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [如何： 创建自定义声明](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+ [如何：创建自定义声明](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

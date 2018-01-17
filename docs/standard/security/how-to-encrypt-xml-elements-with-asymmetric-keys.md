@@ -27,11 +27,14 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bd8b63ab02527f66d30251f21a63e19ce4da50ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cadd6e5af8ed95da34091bc3a9f3ac8d5af4e9cb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>如何：用非对称密钥对 XML 元素进行加密
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密是交换或存储加密的 XML 数据的一种标准方式，使用后就无需担心数据被轻易读取。  有关 XML 加密标准的详细信息，请参阅万维网联合会 (W3C) 对于 XML 加密的规范，该规范位于：http://www.w3.org/TR/xmldsig-core/。  
@@ -149,6 +152,6 @@ ms.lasthandoff: 11/21/2017
   
  当你使用加密密钥执行操作后，通过将每个字节设置为零或通过调用托管加密类的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法来将它从内存中清除。  加密密钥有时可从内存由调试器读取，或从硬盘读取（如果内存位置分页到磁盘）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Security.Cryptography.Xml>  
  [如何：使用非对称密钥解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

@@ -14,11 +14,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10213597fa65c44a56b30c37e2e6f4e732d96954
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 虽然可以将 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 项目可视化为按序列执行的一系列过程，但实际上大多数程序都是事件驱动型。也就是说，外部发生的*事件*决定了执行流。  
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/09/2017
   
  [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
   
- `RemoveHandler` 用于解除事件与事件处理程序的关联，所用语法与 `AddHandler` 一样。 例如:   
+ `RemoveHandler` 用于解除事件与事件处理程序的关联，所用语法与 `AddHandler` 一样。 例如:  
   
  [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
   
@@ -99,13 +99,13 @@ ms.lasthandoff: 12/09/2017
   
 #### <a name="to-handle-events-from-a-base-class"></a>处理继承自基类的事件的具体操作  
   
--   向事件处理程序过程的声明行添加 `Handles MyBase.` *eventname* 语句，在派生类中声明事件处理程序，其中 *eventname* 是要处理的继承自基类的事件名称。 例如:   
+-   向事件处理程序过程的声明行添加 `Handles MyBase.` *eventname* 语句，在派生类中声明事件处理程序，其中 *eventname* 是要处理的继承自基类的事件名称。 例如:  
   
      [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
   
 ## <a name="related-sections"></a>相关章节  
   
-|标题|说明|  
+|标题|描述|  
 |-----------|-----------------|  
 |[演练：声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|分步展示了如何声明和引发类事件。|  
 |[演练：处理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|展示了如何编写事件处理程序过程。|  
@@ -113,5 +113,5 @@ ms.lasthandoff: 12/09/2017
 |[如何：声明自定义事件以节省内存](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|介绍了如何定义仅在事件处理时占用内存的自定义事件。|  
 |[Visual Basic 中继承的事件处理程序疑难解答](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|列出了在继承的组件中使用事件处理程序时遇到的常见问题。|  
 |[事件](../../../../standard/events/index.md)|概述了 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的事件模型。|  
-|[在 Windows 窗体中创建事件处理程序](../../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)|介绍了如何处理与 Windows 窗体对象关联的事件。|  
+|[在 Windows 窗体中创建事件处理程序](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|介绍了如何处理与 Windows 窗体对象关联的事件。|  
 |[委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|概述了 Visual Basic 中的委托。|

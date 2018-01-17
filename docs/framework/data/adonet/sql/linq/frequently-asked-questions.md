@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: edb48bd9cb0ff00c733af2d6ff4e616655a62b26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df3af6ae9fcd0c4539998357b3ab87b11dd13494
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
@@ -209,7 +210,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 只读模式关闭了上下文跟踪更改的功能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  [疑难解答](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
- [LINQ to SQL 中的安全](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+ [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

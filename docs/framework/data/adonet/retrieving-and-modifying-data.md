@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 35de20b1cb35fdcd87a653f1ac202c01d345c317
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ea157cd52bf92dace924baaa40f5b1bba6f13a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中检索和修改数据
 任何数据库应用程序的一项主要功能是连接数据源并检索数据源中包含的数据。 ADO.NET 的.NET Framework 数据提供程序充当应用程序和数据源，二者之间的桥梁使您可以执行命令以及使用检索数据**DataReader**或**DataAdapter**. 任何数据库应用程序的一项关键功能是更新数据库中存储的数据的能力。 在 ADO.NET 中，更新数据时会使用**DataAdapter**和<xref:System.Data.DataSet>，和**命令**对象，它可能还会使用事务。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  包含说明如何创建命令和命令生成器、配置参数以及如何执行命令来检索和修改数据的主题。  
   
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  包含说明 DataReader、DataAdapter、参数、处理 DataAdapter 事件和执行批操作的主题。  
   
  [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  描述提供程序工厂模型及说明如何在 `System.Data.Common` 命名空间中使用基类。  
   
- [在 ADO.NET 中的数据跟踪](../../../../docs/framework/data/adonet/data-tracing.md)  
+ [ADO.NET 中的数据跟踪](../../../../docs/framework/data/adonet/data-tracing.md)  
  说明 ADO.NET 如何提供内置的数据跟踪功能。  
   
  [性能计数器](../../../../docs/framework/data/adonet/performance-counters.md)  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
  [SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  讨论如何编写在不将其完全加载到内存的情况下从 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 流式读取数据的应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

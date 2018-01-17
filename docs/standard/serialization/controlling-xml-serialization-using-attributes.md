@@ -25,11 +25,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f90cf4e481d8ce8f5f34c3aaab3e544e37e1481
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 36df7286bad0d26108b726d2499bbeb0b2caa198
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用属性控制 XML 序列化
 使用属性可以控制对象的 XML 序列化，还可以利用同一组类创建其他 XML 流。 有关创建其他 XML 流的详细信息，请参见[如何：指定 XML 流的替代元素名称](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。  
@@ -316,7 +319,7 @@ public class Group{
 ## <a name="preventing-serialization-with-the-xmlignoreattribute"></a>使用 XmlIgnoreAttribute 防止序列化  
  可能会出现公共属性或字段无需进行序列化的情况。 例如，字段或属性可能用于包含元数据。 在这样的情况下，可将 <xref:System.Xml.Serialization.XmlIgnoreAttribute> 应用于该字段或属性，而 <xref:System.Xml.Serialization.XmlSerializer> 将跳过它。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用来控制 XML 序列化的属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
  [用来控制编码的 SOAP 序列化的属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
  [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  

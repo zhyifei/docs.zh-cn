@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 27a46a4dbb98d5c2bdcd30c485ae1b3b047a1a13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2513f5ce139d23750c977f4f12396415cc4d913b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
 本节中的主题讨论 SQL Server 中针对使用 ADO.NET 开发数据库应用程序的功能。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
 1.  [开发 （数据库引擎）](http://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>本节内容  
- [枚举实例的 SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+ [枚举 SQL Server 的实例 (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
  描述如何枚举 SQL Server 的活动实例。  
   
  [SQL Server 的提供程序统计信息](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
@@ -50,13 +51,13 @@ ms.lasthandoff: 11/21/2017
  [SQL Server 中的快照隔离](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
  描述对快照隔离的支持，该行版本机制旨在减少事务应用程序中的阻碍。  
   
- [SqlClient 对高可用性、 灾难恢复的支持](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ [SqlClient 对高可用性和灾难恢复的支持](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  描述高可用性、灾难恢复 (AlwaysOn) 可用性组的 SqlClient 支持。  
   
  [SqlClient 对 LocalDB 的支持](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  描述 LocalDB 数据库的 SqlClient 支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 中的 SQL Server 数据操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  

@@ -20,11 +20,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 599b420dee2e1d19c85a078ac358a9249ca055ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11b796b5b2abaff00c6d0f20894056f5863942b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>加载延迟的内容（WCF 数据服务）
 默认情况下，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 会限制查询返回的数据量。 不过，如果需要，您可以从该数据服务显式加载其他数据，包括相关实体、分页响应数据以及二进制数据流。 本主题介绍如何将这种延迟的内容加载到应用程序。  
@@ -67,6 +68,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="binary-data-streams"></a>二进制数据流  
  通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 能以数据流形式访问二进制大型对象 (BLOB) 数据。 流式处理会将对二进制数据的加载推迟到需要时再加载，并且客户端可以更有效地处理此数据。 为了利用此功能，数据服务必须实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 提供程序。 有关详细信息，请参阅[流提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。 启用流式处理后，会在没有相关二进制数据的情况下返回实体类型。 在这种情况下，你必须使用<xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A>方法<xref:System.Data.Services.Client.DataServiceContext>类从服务访问二进制数据的数据流。 同样，使用 <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 方法可以作为流添加或更改实体的二进制数据。 有关详细信息，请参阅[处理二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

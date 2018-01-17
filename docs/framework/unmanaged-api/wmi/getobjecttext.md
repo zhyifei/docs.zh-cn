@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 27e25a7ab7131f5b1c995c9367de6fe5a6fae592
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 0b47dc73bb9da71b0c8593aa5758179327d7572d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 函数
 返回对象的文本呈现中的托管对象格式 (MOF) 语法。
@@ -54,7 +55,7 @@ HRESULT GetObjectText (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
@@ -74,7 +75,7 @@ HRESULT GetObjectText (
  
 `pstrObjectText`必须是指向`null`函数调用时，它必须不指向是之前调用方法有效，因为将会释放指针的字符串。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

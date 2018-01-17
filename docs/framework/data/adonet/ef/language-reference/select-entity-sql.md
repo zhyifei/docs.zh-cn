@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3123d76d5999d9f7201e1415d6bc4313f9767098
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6e8c985436649af396c4fe9dc4dbbb484618c214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 指定查询所返回的元素。  
@@ -31,7 +32,7 @@ or
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  ALL  
  指定结果集中可以出现重复项。 ALL 为默认值。  
   
@@ -110,7 +111,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [返回页首](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+ [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4de910e2e66bc480abefe228bd183fe95270fb69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-quotas"></a>传输配额
 传输配额是一种策略机制，用于决定连接何时正在占用过多资源。 配额是一种硬性限制，它在超出配额值时立即禁止使用其他资源。 传输配额可防止恶意或无意的拒绝服务攻击。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/02/2017
   
  每个配额设置都有类型、最小值和默认值。 配额的最大值由其类型限制。 由于计算机的限制，并不总是可以将配额设置为它的最大值。  
   
-|名称|类型|最小<br /><br /> 值|默认<br /><br /> 值|描述|  
+|name|类型|最小<br /><br /> 值|默认<br /><br /> 值|描述|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 个计时周期|5 秒|初始读取过程中等待连接发送前导码的最长时间。 此数据在进行身份验证前接收。 此设置通常要比 `ReceiveTimeout` 配额值小得多。|  
 |`CloseTimeout`|TimeSpan|0|1 分钟|在传输引发异常之前等待连接关闭的最长时间。|  
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>通过绑定元素控制传输配额  
  通过绑定元素设置传输配额为控制传输行为提供了最大的灵活性。 生成通道时，将从绑定中获取关闭、打开、接收和发送操作的默认超时值。  
   
-|名称|HTTP|TCP/IP|命名管道|  
+|name|HTTP|TCP/IP|命名管道|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="controlling-transport-quotas-from-the-binding"></a>通过绑定控制传输配额  
  通过绑定设置传输配额可提供一组简化的配额以供选择，同时仍然提供对最常用配额值的访问。  
   
-|名称|HTTP|TCP/IP|命名管道|  
+|name|HTTP|TCP/IP|命名管道|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  
@@ -116,7 +117,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="controlling-transport-quotas-from-configuration"></a>通过配置控制传输配额  
  应用程序配置可以设置与直接访问绑定上的属性一样的传输配额。 在配置文件中，传输配额的名称总是以小写字母开头。 例如，绑定上的 `CloseTimeout` 属性对应于配置中的 `closeTimeout` 设置，而绑定上的 `MaxConnections` 属性对应于配置中的 `maxConnections` 设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007dec81766423ea2826e98ae0b6b399a1508f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>在联合方案中混合信任协议
 联合客户端与服务进行通信时，有些服务的信任版本与安全令牌服务 (STS) 的信任版本不同。 服务 WSDL 包含的 `RequestSecurityTokenTemplate` 断言可能具有与 STS 不同版本的 WS-Trust 元素。 在这些情况下，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端会转换从 `RequestSecurityTokenTemplate` 接收的 WS-Trust 元素以匹配 STS 信任版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 只处理标准绑定的不匹配信任版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 识别的所有标准算法参数都是标准绑定的一部份。 本主题介绍 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在服务与 STS 分别具有各种信任设置时的行为。  

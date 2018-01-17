@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1cfce32a7e7099a601c76874c8ca951488335fc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>如何：导出自定义策略断言
 策略断言说明服务终结点的功能和需求。 服务应用程序可以在服务元数据中使用自定义策略断言，来将终结点、绑定或协定自定义信息传递到客户端应用程序。 您可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 根据通信的功能和要求导出终结点、操作或消息主题的 WSDL 绑定中附加的策略断言。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.IPolicyImportExtension>  
  <xref:System.ServiceModel.Description.IPolicyExportExtension>  
- [如何： 导入自定义策略断言](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+ [如何：导入自定义策略断言](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

@@ -12,16 +12,17 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c3d22c83f5fbc1144d139c9e7ba6a43137f6d144
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bdafa52219dc7a275ceb64e24e8ecd91f0ec8068
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contract-first-workflow-service-development"></a>协定优先的工作流服务开发
 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，[!INCLUDE[wf](../../../includes/wf-md.md)] 功能将 Web 服务和工作流更好地集成在第一个协定优先工作流开发的形式中。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。 本主题概述工作流服务中的活动和属性如何映射到服务协定的特性。 有关创建协定优先工作流服务的分步示例，请参阅[如何： 创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
-## <a name="in-this-topic"></a>主题内容  
+## <a name="in-this-topic"></a>在本主题中  
   
 -   [将服务协定特性映射到的工作流属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/02/2017
 |属性名|支持|描述|WF 验证|  
 |-------------------|---------------|-----------------|-------------------|  
 |操作|是|获取或设置请求消息的 WS-Addressing 操作。|Receive.Action 应当匹配。|  
-|AsyncPattern|No|指示使用 Begin 以异步方式实现某个操作\<方法名称 > 和结束\<方法名称 > 服务协定中的方法对。|(N/A)|  
+|AsyncPattern|否|指示使用 Begin 以异步方式实现某个操作\<方法名称 > 和结束\<方法名称 > 服务协定中的方法对。|(N/A)|  
 |HasProtectionLevel|是|获取一个值，该值指示是否必须对此操作的消息进行加密和/或签名。|Receive.ProtectionLevel 不应为 null。|  
 |IsInitiating|No|获取或设置一个值，该值指示方法是否实现可在服务器上启动会话（如果存在会话）的操作。|(N/A)|  
 |IsOneWay|是|获取或设置一个值，该值指示操作是否返回答复消息。|(此 Receive 无对应 SendReply 或此 Send 无对应 ReceiveReply）。|  

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9df2866251e08b8989f8550d045b587c9de8d2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b610e499ff980d2e705ad855ae98c1d54ff412e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-read-image-metadata"></a>如何：读取图像元数据
 某些图像文件包含您可以读取以确定图像的功能的元数据。 例如，数码相片可能包含您可以读取以确定的品牌和型号的照相机用于捕获映像的元数据。 与[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以读取现有的元数据，并且你还可以向图像文件写入新的元数据。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------------|-----------------|  
 |0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|映像标题<br /><br /> 设备制造商<br /><br /> 设备型号<br /><br /> ExifDTOriginal<br /><br /> Exif 暴露时间<br /><br /> 亮度表<br /><br /> 色度表|  
   
-## <a name="value"></a>值  
+## <a name="value"></a>“值”  
  值的数组。 值的格式由<xref:System.Drawing.Imaging.PropertyItem.Type%2A>属性。  
   
 ## <a name="len"></a>Len  
@@ -133,6 +134,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。 处理窗体的<xref:System.Windows.Forms.Control.Paint>事件并将此代码粘贴到 paint 事件处理程序。 必须将`FakePhoto.jpg`用的映像名称和路径对系统和导入有效`System.Drawing.Imaging`命名空间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

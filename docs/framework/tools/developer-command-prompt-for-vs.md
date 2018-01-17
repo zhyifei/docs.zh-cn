@@ -21,11 +21,12 @@ caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e93a1d116ac0480c80e259ddbadbc65fd9539389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8bd7baec77e6e776f93a2a13156d66c1199f918
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 开发人员命令提示
 Visual Studio 开发人员命令提示会自动设置环境变量，这些变量使你能够轻松使用 .NET Framework 工具。 安装完整版或社区版 Visual Studio 时会安装开发人员命令提示。 安装 Express 版 Visual Studio 时不会安装。  
@@ -94,6 +95,6 @@ Visual Studio 开发人员命令提示会自动设置环境变量，这些变量
   
  完成这些步骤后，系统会添加新的菜单项，你可以从“工具”菜单访问命令提示。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [管理外部工具](/visualstudio/ide/managing-external-tools)

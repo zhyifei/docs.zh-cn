@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 117011d0ceecf04b6c73655873985dbd08768ab6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c2c1534b161f81fa90dce52c825b0417dc8fd35d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
 在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 配置服务应用程序，请参阅 [Configuring Services](../../../docs/framework/wcf/configuring-services.md)。  
@@ -130,6 +131,6 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>。 指定服务操作接受事务标头所处的级别。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置服务](../../../docs/framework/wcf/configuring-services.md)  
- [如何： 控制服务实例化](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+ [如何：控制服务实例化](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

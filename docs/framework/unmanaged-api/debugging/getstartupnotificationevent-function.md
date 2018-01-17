@@ -22,11 +22,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 305350a9186c90af1e8646bc230536dcd2de47cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 809f34d265e0a1677d8b7fc78515b20df7353968
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent 函数
 创建或打开一个事件句柄，由在指定目标进程中加载的公共语言运行时 (CLR) 对其发出信号。  
@@ -63,7 +64,7 @@ HRESULT GetStartupNotificationEvent
   
  在发出信号通知事件的 CLR 执行任何托管代码之前，对该事件发出了信号。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** dbgshim.h  

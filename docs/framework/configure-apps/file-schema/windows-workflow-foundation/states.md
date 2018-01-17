@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5e9050a01cf58c3c103fdbe4e8b22e173efaf5c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c73ff606d9b8cdaf069b65f7faa48431a974123
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltstatesgt"></a>&lt;状态&gt;
 表示创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 12/02/2017
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
  <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
  <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       

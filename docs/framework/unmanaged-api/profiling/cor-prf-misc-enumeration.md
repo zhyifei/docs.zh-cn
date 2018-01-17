@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 75e740a6ca17135a3de2e945e205f4581b2f32e0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: da858ecf9fc002061d663e8c8f4d4036ef134d5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC 枚举
 包含指定特殊标识符的常数值。  
@@ -46,7 +47,7 @@ typedef enum {
 |`PROFILER_GLOBAL_CLASS`|不属于一个类的全局常量默认类标识符。|  
 |`PROFILER_GLOBAL_MODULE`|不属于模块的全局对象默认模块标识符。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -55,5 +56,5 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

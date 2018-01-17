@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3154080682d406598b47122c64cc856ff8cb1f15
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be460249ed877b2f67f2d153c2aea4a3cc4d2b37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-secure-sessions"></a>安全会话的安全注意事项
 您应考虑实现安全会话时影响安全的下列事项。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安全注意事项，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)和[安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  这意味着，如果希望派生自定义令牌，应该将其子句类型包装在 `SecurityTokenReference` 元素中。 有一个选项可关闭派生，但是默认为派生密钥。 如果无法封装密钥，则对派生密钥令牌进行序列化将成功，但是尝试对其进行反序列化将引发异常。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 禁用安全会话在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+## <a name="see-also"></a>请参阅  
+ [如何：在 WSFederationHttpBinding 上禁用安全会话](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

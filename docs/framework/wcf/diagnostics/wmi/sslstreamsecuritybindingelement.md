@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f795ec4aa691a90e05b94c94294c00490547a488
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4f7232e7a2e1a007b553512e43c90709213b7c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sslstreamsecuritybindingelement"></a>SslStreamSecurityBindingElement
 SslStreamSecurityBindingElement  
@@ -44,11 +45,11 @@ class SslStreamSecurityBindingElement : BindingElement
   
  指定此绑定是否需要客户端证书。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>

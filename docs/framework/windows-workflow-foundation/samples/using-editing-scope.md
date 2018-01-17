@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd0752502bdbd7da9d749ae4f71ea869a4c1ec95
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d6f20ff0577e43106886f5910b8f6a69578d1b3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-editing-scope"></a>使用编辑范围
 此示例演示如何对一组更改进行批处理，以便可以在一个原子单元中撤消它们。 默认情况下，活动设计器作者采取的操作会自动集成到撤消/重复系统中。  

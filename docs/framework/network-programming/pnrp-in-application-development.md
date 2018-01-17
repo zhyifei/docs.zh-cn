@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 752b354df897fa37bc45c1bbd1969cf93aac87ed
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d11f1b284ebb4e4a44d1dad442f727692fa26ffa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pnrp-in-application-development"></a>应用程序开发中的 PNRP
 Windows Vista 中，网络应用程序可以通过简化的 PNRP 应用程序编程接口 (API) 访问名称发布和解析函数。  
@@ -28,5 +29,5 @@ Windows Vista 中，网络应用程序可以通过简化的 PNRP 应用程序编
   
  PeerToPeer 应用程序之间传递的消息仍由基础体系结构处理，例如 PeerChannel 和 WCF [大型数据和流](http://go.microsoft.com/fwlink/?LinkID=179652)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.PeerToPeer>

@@ -17,11 +17,14 @@ caps.latest.revision: "95"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>使用可移植类库的跨平台开发
 Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速轻松地为 Microsoft 平台构建跨平台应用和库。  
@@ -37,7 +40,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
 > [!WARNING]
 >  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)包括对可移植类库模板的更新。 如果你具有较早版本的 Visual Studio 和 Visual Studio 2013 安装在同一台计算机，然后再安装 Update 2 中，对更改**目标框架**选择将应用于这两个版本的 Visual Studio。  
   
- 在本主题中：  
+ 本主题内容：  
   
  [Visual Studio 支持](#vs_support)  
  [创建可移植类库项目](#create_pcl)  
@@ -54,7 +57,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
   
 |Visual Studio SKU|对创建可移植类库的支持|  
 |-----------------------|---------------------------------------------------|  
-|Visual Studio 2010 专业版、高级专业版或旗舰版|是的当你安装[可移植库工具](http://go.microsoft.com/fwlink/?LinkId=210823)。|  
+|Visual Studio 2010 专业版、高级专业版或旗舰版|是的当你安装[可移植库工具](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2)。|  
 |Visual Studio Express 2010 版|不是。|  
 |Visual Studio 2012 专业版、高级专业版或旗舰版|可以。 电话支持安装[Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772)。|  
 |Visual Studio Express 2012 版|不是。|  
@@ -168,7 +171,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
   
  例如，只有当你针对 Windows 8.1 和 Windows Phone 8.1 时，可移植类库才会包含与 UI 相关的类型。 此外，如果针对的是在引入可移植类库之前发布的平台（如 Xbox、.NET Framework 4 和 Windows Phone 7），那么你可能会遇到一些限制。 .NET Framework 通过 NuGet 发布的程序包，可改进对某些较旧版本的可移植类库支持。 有关详细信息和 NuGet 包的列表，请参阅[.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。  
   
- 如果一个成员在可移植类库和所选的目标中受支持，它将会你的 IntelliSense 项目中出现。 此外，可移植类库图标![受可移植运行库](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon")成员表中，显示在[.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkId=211358)受支持成员旁。 例如，下面的成员表显示可移植类库支持 <xref:System.String.Chars%2A> 类中的 <xref:System.String> 属性：  
+ 如果一个成员在可移植类库和所选的目标中受支持，它将会你的 IntelliSense 项目中出现。 此外，可移植类库图标![受可移植运行库](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon")成员表中，显示在[.NET Framework 类库](https://msdn.microsoft.com/library/mt472912.aspx)受支持成员旁。 例如，下面的成员表显示可移植类库支持 <xref:System.String.Chars%2A> 类中的 <xref:System.String> 属性：  
   
  ![支持的成员图标](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 可移植类库图标  
@@ -226,9 +229,9 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
 </div>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [可移植类库与 MVVM 配合使用](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
- [面向多个平台的库的应用程序资源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+## <a name="see-also"></a>请参阅  
+ [将可移植类库与 MVVM 配合使用](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+ [面向多个平台的库的应用资源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
  [.NET 可移植性分析器](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [部署](../../../docs/framework/deployment/net-framework-applications.md)

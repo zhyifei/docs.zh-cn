@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 149b6a421100d2b6f678e89f6b3ebf6b276dc4a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c2be4bdc923b894476747c69aca15ffa6f9b2c66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>如何：实现 IListSource 接口
 实现<xref:System.ComponentModel.IListSource>接口可创建可绑定的类不实现<xref:System.Collections.IList>而是提供了另一个位置中的列表。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 -   对 System.Drawing 和 System.Windows.Forms 程序集的引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.IListSource>  
  <xref:System.ComponentModel.ITypedList>  
  <xref:System.ComponentModel.BindingList%601>  

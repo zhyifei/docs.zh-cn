@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2b2f20754c8425149f73f10af773604539125adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2b01657088c388ad09037716278dc0788de2abb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>如何：获取或设置画布定位属性
 此示例演示如何使用的定位方法<xref:System.Windows.Controls.Canvas>元素来定位子内容。 此示例使用中的内容<xref:System.Windows.Controls.ListBoxItem>来表示定位值，并将值的实例转换为<xref:System.Double>，这是用于定位一个必需的参数。 然后重新转换为字符串和文本的形式显示值<xref:System.Windows.Controls.TextBlock>元素中的使用<xref:System.Windows.Controls.Canvas.GetLeft%2A>方法。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CanvasPositioningProperties#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasPositioningProperties/CSharp/Window1.xaml.cs#2)]
  [!code-vb[CanvasPositioningProperties#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasPositioningProperties/VisualBasic/Window1.xaml.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Canvas>  
  <xref:System.Windows.Controls.ListBoxItem>  
  <xref:System.Windows.LengthConverter>  

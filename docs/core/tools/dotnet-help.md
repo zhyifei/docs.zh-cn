@@ -7,17 +7,18 @@ ms.date: 08/17/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0d43db0bb0a62bb598f7db50c3b8e37936451550
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 47b7b53b9f13935bbd2cf508c7c57d00584822d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-help-reference"></a>dotnet help 参考
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet help` - 显示指定命令更详细的在线文档。
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet help` 命令打开 docs.microsoft.com 参考页，以提供指定命令的更多详细信息。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `COMMAND_NAME`
 

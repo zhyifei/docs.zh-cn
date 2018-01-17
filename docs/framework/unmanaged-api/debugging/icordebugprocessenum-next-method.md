@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2628a6d2a93c66531acfbc20acff560f623854fd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 566d4a7eefee846f26abbc64f97e0063e847218b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next 方法
 获取指定的数量的 ICorDebugProcess 实例的枚举，从当前位置开始。  
@@ -51,7 +52,7 @@ HRESULT Next (
  `pceltFetched`  
  [out]指向数`ICorDebugProcess`实际返回的实例。 此值可能为 null 如果`celt`是之一。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

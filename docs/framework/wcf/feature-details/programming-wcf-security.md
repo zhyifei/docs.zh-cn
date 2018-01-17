@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5f61eb200c141f95b24fec1a424ce7b92d8559cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-wcf-security"></a>WCF 安全编程
 本主题描述用于创建安全的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序的基本编程任务。 本主题介绍身份验证、 保密性和完整性，统称为*传输安全*。 本主题不涉及授权 （资源或服务的访问控制）;有关授权的信息，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
@@ -110,6 +111,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)  
  [常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

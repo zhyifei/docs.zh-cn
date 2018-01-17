@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 73d98d5e2f97bd0425f11db35877f3eabca449be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3e80b5bb62cc785c220e2baeb773e6990c5fee1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
@@ -272,7 +273,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |ReturnType|String|No|Void|函数的 EDM 返回类型|  
 |聚合|Boolean|No|False|如果函数为聚合函数，则为 True。|  
 |BuiltIn|Boolean|No|True|如果函数内置于数据存储中，则返回 True|  
-|StoreFunctionName|String|No|\<名称 >|数据存储中的函数名称。  考虑了函数名称的重定向级别。|  
+|StoreFunctionName|String|否|\<名称 >|数据存储中的函数名称。  考虑了函数名称的重定向级别。|  
 |NiladicFunction|Boolean|No|False|如果函数不需要任何参数且在调用时不使用任何参数，则返回 True。|  
 |ParameterType<br /><br /> 语义|ParameterSemantics|No|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
@@ -289,5 +290,5 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ##### <a name="namespace-attribute"></a>Namespace 属性  
  每个数据存储提供程序必须为清单中定义的信息定义一个命名空间或一组命名空间。 此命名空间可在 Entity SQL 查询中用来解析函数和类型的名称。 例如，SqlServer。 此命名空间必须与规范命名空间 EDM 不同，EDM 是由实体服务为 Entity SQL 查询要支持的标准函数定义的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编写实体框架数据提供程序](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04566d96fe9031821b904df3bf9ec93244b62cfe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3921c15de59deaa68b63d7dbfbfeb18c776d31f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>如何：使用 Windows 窗体 LinkLabel 控件链接到对象或网页
 Windows 窗体<xref:System.Windows.Forms.LinkLabel>控制可以在你的窗体上创建 Web 样式的链接。 单击该链接后，你可以更改其颜色来表示访问链接。 将颜色更改的详细信息，请参阅[如何： 更改 Windows 窗体 LinkLabel 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)。  
@@ -188,7 +189,7 @@ Windows 窗体<xref:System.Windows.Forms.LinkLabel>控制可以在你的窗体�
        }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>  
  [LinkLabel 控件概述](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
  [如何：更改 Windows 窗体 LinkLabel 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  

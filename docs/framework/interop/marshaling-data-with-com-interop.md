@@ -14,11 +14,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2def27790a1727bda524b8c14a93f7b78127a569
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a2af80ddb558959171c255a61fae460729306e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-data-with-com-interop"></a>用 COM 互操作对数据进行封送处理
 COM 互操作同时对在托管代码中使用 COM 对象和向 COM 公开托管对象提供支持。 对于将数据封送到 COM 和从 COM 中封送数据的支持是广泛的，并几乎总是提供正确的封送行为。  

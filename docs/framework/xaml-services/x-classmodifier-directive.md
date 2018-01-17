@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 111c4a6ed78a908ae3b171dc9349a3c9b81750de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1a4918e23a915ee07eace388ea2cea512c2e479d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 指令
 修改 XAML 编译行为时`x:Class`还提供。 具体而言，而不是创建一个分部`class`具有`Public`访问级别 （默认值），提供`x:Class`使用创建`NotPublic`访问级别。 此行为会影响中生成的程序集的类的访问级别。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="security-notes"></a>安全说明  
  中声明的访问级别`x:ClassModifier`仍将受到由特定框架和其功能的解释。 WPF 包括功能，可加载和实例化类型其中`x:ClassModifier`是`internal`，如果从 WPF 通过包 URI 引用资源引用该类。 这种情况并且可能由其他框架实现类似的其他人，因此不依赖于以独占方式在`x:ClassModifier`若要阻止所有可能的实例化尝试。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [x:Class 指令](../../../docs/framework/xaml-services/x-class-directive.md)  
  [WPF 中的代码隐藏和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
  [x:FieldModifier 指令](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  

@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d93a18b17e0d6b8e413903fb84dc6b427d94f6af
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3581c8079132de5f1faad4a01e6b43c8e4833316
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-schema"></a>应用程序设置架构
 
@@ -53,8 +54,8 @@ ms.lasthandoff: 10/18/2017
 
 | 特性        | 描述 |
 | ---------------- | ----------- |
-| **name**         | 必需。 设置的唯一 ID。 通过 Visual Studio 创建的设置保存同名`ProjectName.Properties.Settings`。 |
-| **serializedAs** | 必需。 要用于序列化到文本值的格式。 有效值为：<br><br>- `string`. 值序列化为字符串使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`. 值是使用 XML 序列化序列化。<br>- `binary`. 值序列化为文本编码的二进制文件使用二进制序列化。<br />- `custom`. 设置提供程序具有本身并知道此设置和序列化和反序列化。 |
+| **name**         | 必须的。 设置的唯一 ID。 通过 Visual Studio 创建的设置保存同名`ProjectName.Properties.Settings`。 |
+| **serializedAs** | 必须的。 要用于序列化到文本值的格式。 有效值为：<br><br>- `string`. 值序列化为字符串使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`. 值是使用 XML 序列化序列化。<br>- `binary`. 值序列化为文本编码的二进制文件使用二进制序列化。<br />- `custom`. 设置提供程序具有本身并知道此设置和序列化和反序列化。 |
 
 ## <a name="value-element"></a>\<值 > 元素
 

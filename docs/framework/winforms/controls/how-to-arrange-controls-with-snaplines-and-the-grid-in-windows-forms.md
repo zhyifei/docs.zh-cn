@@ -18,17 +18,18 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ab199f390fa6a704ad3b3d2a17387d034cf2e57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7e3754df2930503e7e7a123ffdb4d4b787338c20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>如何：在 Windows 窗体中使用对齐线和网格排列控件
 使用的布局特性的[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，您可以精确指导控件在窗体上的放置位置。 添加到窗体或窗体上移动的控件可以自动对齐到的行和列的 Windows 窗体设计器的网格中，或可以通过使用对齐线功能对齐控件。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>若要对齐到网格的所有控件  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
      有关详细信息，请参阅[演练： 在 Windows 窗体使用对齐线上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。 你现在可以使用对齐线对齐并排列窗体上的控件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通常，Windows 窗体设计器中，选项对话框](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
  [演练：使用对齐线在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  

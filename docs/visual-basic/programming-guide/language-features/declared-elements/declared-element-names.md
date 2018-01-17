@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>已声明的元素名称 (Visual Basic)
 每个声明的元素有一个名称，也称为*标识符*，即来引用它的代码使用。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/09/2017
  `xyz$wv`  
   
 > [!CAUTION]
->  元素名称以下划线开头 (`_`) 不属于[语言独立性和独立于语言的组件](../../../../../docs/standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用定义此类名称的组件。 但是，在元素名中的任何其他位置中以下划线是符合 CLS。  
+>  元素名称以下划线开头 (`_`) 不属于[语言独立性和独立于语言的组件](../../../../standard/language-independence-and-language-independent-components.md)(CLS)，因此符合 cls 的代码不能使用定义此类名称的组件。 但是，在元素名中的任何其他位置中以下划线是符合 CLS。  
   
 ### <a name="name-length-guidelines"></a>名称长度准则  
  在实践中，你的名称应尽可能短同时在仍然能够清楚地标识的元素的性质。 这可以提高代码的可读性，并减少行长度和源文件大小。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/09/2017
 ## <a name="names-and-locales"></a>名称和区域设置  
  名称比较是独立于区域设置。 如果在一个区域设置中匹配两个名称，可确保在所有区域设置匹配。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [已声明的元素](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
  [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
  [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  

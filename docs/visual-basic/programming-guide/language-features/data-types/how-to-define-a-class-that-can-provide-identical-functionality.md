@@ -35,11 +35,11 @@ ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
 caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c81d1f795b0c27f2eaf07832f2c1276b626f5ce1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c8594a23391793e1be3d969f7eacc199cbc6caa9
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>如何：定义可对不同数据类型提供相同功能的类 (Visual Basic)
 你可以定义这样一个类：你可以通过该类创建可在不同数据类型上提供相同功能的对象。 为此，你可以在定义中指定一个或多个 *类型形参* 。 然后，该类将能够充当使用不同数据类型的对象的模板。 通过这种方式定义的类称为 *泛型类*。  
@@ -82,10 +82,10 @@ ms.lasthandoff: 12/09/2017
   
      [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [语言独立性和与语言无关的组件](../../../../../docs/standard/language-independence-and-language-independent-components.md)  
+ [语言独立性和与语言无关的组件](../../../../standard/language-independence-and-language-independent-components.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [类型列表](../../../../visual-basic/language-reference/statements/type-list.md)  
  [如何：使用泛型类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  

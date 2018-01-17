@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4363e4e4e444a2c34b79e3b3ad8d8e2f36fe8e1a
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 2b8a4a1f0dc004957b64e3adb5d106c2cd4f413a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>创建 DataView 对象 (LINQ to DataSet)
 在 <xref:System.Data.DataView> 上下文中创建 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 有两种方式。 您可以通过针对 <xref:System.Data.DataView> 的 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查询创建 <xref:System.Data.DataTable>，也可以从类型化或非类型化 <xref:System.Data.DataTable> 创建该对象。 在这两种情况下，你将创建<xref:System.Data.DataView>使用之一<xref:System.Data.DataTableExtensions.AsDataView%2A>扩展方法; 这些方法<xref:System.Data.DataView>不可直接构造中[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]上下文。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/14/2017
   
  不过，在通过查询创建 <xref:System.Data.DataView.RowFilter%2A> 之后，设置 <xref:System.Data.DataView.Sort%2A> 或 <xref:System.Data.DataView> 属性会带来性能降低，因为 <xref:System.Data.DataView> 将会构造一个索引来支持筛选和排序操作。 设置 <xref:System.Data.DataView.RowFilter%2A> 或 <xref:System.Data.DataView.Sort%2A> 属性会重新生成数据的索引，从而增加应用程序的系统开销并降低性能。 在可能的情况下，最好在第一次创建 <xref:System.Data.DataView> 时指定筛选和排序信息并避免之后对其进行修改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据绑定和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  [使用 DataView 进行筛选](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
  [使用 DataView 进行排序](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

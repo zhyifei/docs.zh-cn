@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa3aa5454629d53fd8864df6a4f204e22028208f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e95f027a8e3568365fa7957c36241b6ec2c30d28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a>如何：创建包含图像的按钮
 此示例演示如何上包含一个图像<xref:System.Windows.Controls.Button>。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[BtnColor#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml.cs#6)]
  [!code-vb[BtnColor#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BtnColor/VisualBasic/Pane1.xaml.vb#6)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../../../../docs/framework/wpf/controls/index.md)  
  [控件库](../../../../docs/framework/wpf/controls/control-library.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3738b484321a9c6a3cbcb2a59854bb91770bf8bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c7383d899af741e4a6c85b40e2316a6b759aa416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-tracking-and-tracing"></a>工作流跟踪
 Windows 工作流跟踪是专为查看工作流执行情况而设计的一个 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 功能。 它提供一个跟踪基础结构，用于跟踪工作流实例的执行。 WF 跟踪基础结构透明地检测工作流以发出反应执行期间关键事件的记录。 默认情况下，任何 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流都可以使用此功能。 不需要对 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]工作流进行任何更改即可进行跟踪。 只需确定要接收的跟踪数据量。 工作流实例开始或完成之后，会发出其处理跟踪记录。 跟踪还可以提取与工作流变量关联的相关业务数据。 例如，如果工作流表示一个订单处理系统，则可以提取 <xref:System.Activities.Tracking.TrackingRecord> 对象以及订单 ID。 一般来讲，启用 WF 跟踪便于访问工作流执行的诊断数据或业务分析数据。  
@@ -62,5 +63,5 @@ Windows 工作流跟踪是专为查看工作流执行情况而设计的一个 [!
  [使用跟踪确定工作流执行持续时间](../../../docs/framework/windows-workflow-foundation/determining-workflow-execution-duration-using-tracing.md)  
  介绍如何使用跟踪消息确定工作流执行持续时间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL 跟踪](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)

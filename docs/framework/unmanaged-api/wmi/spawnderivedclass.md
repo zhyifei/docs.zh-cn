@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 16f9a762c87e1e181202739b70cd978a80864f04
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 51a0dd0013b1bb3898bcc81ee2d64be20a5b6ecc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 函数
 从指定的对象创建新派生的类对象。    
@@ -53,7 +54,7 @@ HRESULT SpawnDerivedClass (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 已请求了无效的操作，例如从实例中，生成一个类。 |
@@ -70,7 +71,7 @@ HRESULT SpawnDerivedClass (
 
 新的对象中返回`ppNewClass`自动成为当前对象的一个子类。 不能重写此行为。 不没有可以用来创建子类 （派生类） 的任何其他方法。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

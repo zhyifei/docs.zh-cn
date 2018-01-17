@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda2581ceed854fa5121076f0c7b9df414bffe52
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 97a795930eb6965bd0ed15254969a72f45700306
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>在托管 HTML 文档对象模型中访问未公开成员
 托管 HTML 文档对象模型 (DOM) 包含一个名为类<xref:System.Windows.Forms.HtmlElement>公开属性、 方法和所有 HTML 元素都具有共同的事件。 有时，但是，你将需要访问托管的接口未直接公开的成员。 本主题检查两种方式访问未公开的成员，包括[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]和 VBScript 函数定义内网页。  
@@ -81,5 +82,5 @@ ms.lasthandoff: 10/22/2017
   
  你可以调用任何脚本函数定义在 HTML 页使用<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>方法。 如果脚本方法返回的 HTML 元素，你可以使用强制转换将转换到此返回结果<xref:System.Windows.Forms.HtmlElement>。 有关详细信息和示例代码，请参阅<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用托管 HTML 文档对象模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9753462908928eaf177e100a16186826bf4828ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13b254867200897acad2868e396d152a5f9efcbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-prioritybinding"></a>如何：实现 PriorityBinding
 <xref:System.Windows.Data.PriorityBinding>在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的工作原理是指定的绑定的列表。 绑定列表按优先级从高到最低优先级排序。 如果高优先级的绑定返回一个值成功处理时则永远不会需要处理其他列表中的绑定。 它可能是最高的优先级绑定需要很长的时间要进行求值的用例时，将使用成功返回一个值的下一步最高优先级，直到较高优先级的绑定成功返回一个值。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  请参阅<xref:System.Windows.Data.PriorityBinding>有关什么被视为一个成功的返回值从绑定信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

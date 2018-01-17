@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5868e03ee05a744be3f1c3782613e11e71352024
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-http-and-https"></a>配置 HTTP 和 HTTPS
 WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Internet Information Services (IIS) 或命令行工具可以配置 HTTP/HTTPS 设置。 当某个 WCF 服务承载于 IIS 之下时，可以在 IIS 中配置 HTTP 或 HTTPS 设置（使用 inetmgr.exe 工具）。 如果 WCF 服务是自承载的，则可使用命令行工具配置 HTTP 或 HTTPS 设置。  
@@ -99,6 +100,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP 特有的问题  
  IIS 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上不支持端口共享。 如果 IIS 正在运行并且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务尝试通过相同端口来使用某个命名空间，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务将无法启动。 IIS 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 均默认设置使用端口 80。 请更改其中一个服务的端口分配或使用 IP 侦听列表将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务分配到 IIS 未使用的网络适配器。 IIS 6.0 和更高版本已经过重新设计，可以使用 HTTP 服务器 API。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.WSDualHttpBinding>  
- [如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+ [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

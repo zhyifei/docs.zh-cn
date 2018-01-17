@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c611cc51417199aae7c595e4edd2e9a5360f0f9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0740e80732e03ac6c1e7cf974d258113a181ea9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance 函数
 创建指定的目标项的接口对象。  
@@ -53,7 +54,7 @@ HRESULT CLRDataCreateInstance (
 ## <a name="remarks"></a>备注  
  `ICLRDataTarget`对象由调试应用程序编写器实现。 实现取决于所表示的目标项的类型。 目标项可能进程、 内存转储，远程计算机和等等。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** ClrData.idl  
@@ -62,5 +63,5 @@ HRESULT CLRDataCreateInstance (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试全局静态函数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

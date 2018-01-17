@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec541a8f83990eec79226be7fb4880ef8dda639d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d9bd7d0721aae8691fdbca4d7b934f820666536
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>如何：向应用程序添加多个设置组 (C#) #
 在某些情况下，你可能想要在应用程序具有多个集的设置。 例如，如果你正在开发的应用一组特定的设置需要经常更改，它可能是明智的做法是将它们分开所有导入到单个文件，以便该文件可以替换整个，使其他设置不受影响。 Visual Studio 允许你将多组设置添加到你的项目。 可以通过 Properties.Settings 对象访问设置的其他集。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 11/21/2017
   
 4.  添加和使用此文件中的设置，就像任何其他设置文件。 你可以访问此组通过 Properties.Settings 对象的设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

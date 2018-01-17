@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 32cb95eebbc5738204b063f1cf5f8264e775791f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6e5c57927a455b5d2a253becac35b1bf9033933f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务标记
 在 COM 应用程序中使用具有类型化协定的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务标记之前，必须先向 COM 注册所需的属性化类型，然后为 COM 应用程序和标记配置所需的绑定配置。  
@@ -107,5 +108,5 @@ ms.lasthandoff: 12/02/2017
   
      这会修改导入的接口定义，以便所有方法均会返回一个 `HResult`。 其他任何返回值都将转换为 out 参数。 方法的总体执行情况保持不变。 这将允许您确定在代理上调用方法时出现异常的原因。 仅可通过 C++ 代码来使用此功能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

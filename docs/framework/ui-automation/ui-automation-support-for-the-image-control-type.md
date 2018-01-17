@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 651aef831b798a0e5436906659a9ddc9c933295d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e151c846297d7876beb6938ad865c42b2b78321
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>UI 自动化对 Image 控件类型的支持
 > [!NOTE]
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|包含信息的所有图像控件都必须公开名称属性。 以编程方式访问此信息需要提供与图形等效的文字。 如果图像控件仅仅是装饰性的，它必须仅显示在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中，且不需要名称。 UI 框架必须支持图像上的 ALT 或替代文本属性，这些属性可以从其框架内进行设置。 此属性将映射到 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名称属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|请参阅注释。|如果存在静态文本标签，则此属性必须公开对该控件的引用。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Image|此值对于所有 UI 框架均相同。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|图像|此值对于所有 UI 框架均相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“图像”|与图像控件类型相对应的已本地化字符串。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|请参阅注释。|当其包含尚未公开给最终用户的有意义信息时，图像控件必须包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|图像控件始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中。|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
- 下表列出需要由所有图像控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
+ 下表列出需要由所有图像控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|备注|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Automation.ControlType.Image>  
  [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

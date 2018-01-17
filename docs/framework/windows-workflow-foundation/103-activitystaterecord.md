@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41621ccc634fec9212b84e88c089527b9e502648
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 62916de4d5077b8031ee353ca49a7d51a51ffd8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="103---activitystaterecord"></a>103 - ActivityStateRecord
 ## <a name="properties"></a>属性  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
 |ActivityId|xs:string|发出的活动的活动 ID|  
 |ActivityInstanceId|xs:string|发出的活动的活动实例 ID|  
 |ActivityTypeName|xs:string|发出的活动的类型名称|  
-|参数|xs:string|在此事件中跟踪的参数。  这些值存储在一个 xml 元素中格式\<项 >\<项名称 ="argumentName"type ="> argumentValue\</项 > \< /i >。  如果未不跟踪任何参数，则该字符串包含\<项 / >。 ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。 如果事件大小超出 ETW 限制，则通过丢弃批注并将批注值与截断事件\<项 >... \< /i >。  以下类型以从 ToString() 返回时的值存储：string、char、bool、int、short、long、uint、ushort、ulong、System.Single、float、double、System.Guid、System.DateTimeOffset、System.DateTime。  所有其他类型使用 System.Runtime.Serialization.NetDataContractSerializer 进行序列化。|  
+|参数|xs:string|在此事件中跟踪的自变量。  这些值存储在一个 xml 元素中格式\<项 >\<项名称 ="argumentName"type ="> argumentValue\</项 > \< /i >。  如果未不跟踪任何参数，则该字符串包含\<项 / >。 ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。 如果事件大小超出 ETW 限制，则通过丢弃批注并将批注值与截断事件\<项 >... \< /i >。  以下类型以从 ToString() 返回时的值存储：string、char、bool、int、short、long、uint、ushort、ulong、System.Single、float、double、System.Guid、System.DateTimeOffset、System.DateTime。  所有其他类型使用 System.Runtime.Serialization.NetDataContractSerializer 进行序列化。|  
 |变量|xs:string|在此事件中跟踪的变量。  这些值存储在一个 xml 元素中格式\<项 >\<项名称 ="variableName"type ="> variableValue\</项 > \< /i >。  如果未不跟踪任何变量，则该字符串包含\<项 / >。 ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。 如果事件大小超出 ETW 限制，则通过丢弃批注并将变量值与截断事件\<项 >... \< /i >。  以下类型以从 ToString() 返回时的值存储：string、char、bool、int、short、long、uint、ushort、ulong、System.Single、float、double、System.Guid、System.DateTimeOffset、System.DateTime。  所有其他类型使用 System.Runtime.Serialization.NetDataContractSerializer 进行序列化。|  
 |批注|xs:string|已添加到此事件中的批注。  这些值存储在一个 xml 元素中格式\<项 >\<项名称 ="annotationName"type ="> annotationValue\</项 > \< /i >。  如果不指定任何批注，则该字符串包含\<项 / >。 ETW 事件大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制。 如果事件大小超出 ETW 限制，则通过丢弃批注并将批注值与截断事件\<项 >... \< /i >。|  
 |ProfileName|xs:string|导致发出此事件的跟踪配置文件的名称|  

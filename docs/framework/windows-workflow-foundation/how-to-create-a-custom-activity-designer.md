@@ -12,11 +12,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0b1f27af6b4ec372b9dbd63e4bc89a5c435efe6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 10fc7461c077d73fedb1e326f88156e4a816cdee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>如何：创建自定义活动设计器
 通常实现自定义活动设计器，以便其相关活动可与其他活动（这些活动的设计器可与它们一起放置到设计图面上）组合在一起。 此功能要求自定义活动设计器提供可在其中放置任意活动的"放置区"以及用于管理得到的设计图面上的元素集合的方法。 本主题介绍如何创建一个包含上述放置区的自定义活动设计器，以及如何创建一个可提供管理设计器元素集合所需的编辑功能的自定义活动设计器。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
 7.  在**解决方案**框中，接受默认值。  
   
-8.  单击“确定”。  
+8.  单击 **“确定”**。  
   
 9. 右键单击中的右击 MainWindows.xaml 文件**解决方案资源管理器**，选择**删除**并确认**确定**中**Microsoft Visual Studio**对话框。  
   
@@ -351,7 +352,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Activities.Presentation.ActivityDesigner>  
  <xref:System.Activities.Presentation.WorkflowItemPresenter>  
  <xref:System.Activities.Presentation.WorkflowItemsPresenter>  

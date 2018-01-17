@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 22c2272118c8f8a42523d9bc8ceaa2007c0b7b57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 93c3e4251943afa383002043d9259184be82d929
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 场
 使用 Windows Identity Foundation (WIF) 保护 Web 场中部署的信赖方 (RP) 应用程序的资源时，必须采取特定的步骤确保 WIF 能处理场中不同计算机上运行的信赖方应用程序实例的令牌。 处理过程包括验证会话令牌签名、加密和解密会话令牌、缓存会话令牌以及检测重播的安全令牌。  
@@ -259,7 +260,7 @@ namespace CacheLibrary
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>  
  <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
  <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  

@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f0c708c19761f6086e1b5c2fdd15904c76fe3de9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e36019cd6d010e25292fa50ed3bf795dfca15f73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 指定用于在服务操作过程中启用安全事件审核的设置。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 |auditLogLocation|指定审核日志的位置。 包括以下有效值：<br /><br /> 默认： 安全事件写入到应用程序日志在 Windows XP 中，和事件日志在 Windows Server 2003 和 Windows Vista。<br />应用程序： 审核事件写入到应用程序事件日志中。<br />安全性： 审核事件写入安全事件日志。<br /><br /> 默认值为 Default。 有关详细信息，请参阅<xref:System.ServiceModel.AuditLogLocation>。|  
 |suppressAuditFailure|一个布尔值，指定取消显示审核日志写入失败的行为。<br /><br /> 应将对审核日志的写入错误通知给应用程序。 如果应用程序并不用于处理审核错误，则应使用此属性取消显示审核日志写入失败。<br /><br /> 如果此属性为 `true`，则因尝试写入审核事件而导致的异常（OutOfMemoryException、StackOverFlowException、ThreadAbortException 和 ArgumentException 除外）将由系统进行处理并且不会传播到应用程序。 如果此属性为 `false`，则因尝试写入审核事件而导致的所有异常都将向上传递给应用程序。<br /><br /> 默认值为 `true`。|  
 |serviceAuthorizationAuditLevel|指定审核日志中记录的授权事件的类型。 包括以下有效值：<br /><br /> -None： 没有的服务授权事件执行审核。<br />-Success： 只成功的服务授权审核事件。<br />故障： 只失败服务授权审核事件。<br />-： Successandfailure 审核成功和失败服务授权事件。<br /><br /> 默认值为 None。 有关详细信息，请参阅<xref:System.ServiceModel.AuditLevel>。|  
-|messageAuthenticationAuditLevel|指定所记录的消息身份验证审核事件的类型。 包括以下有效值：<br /><br /> -None： 不生成审核事件。<br />-Success： 记录仅成功的安全 （完全验证，包括消息签名验证、 密码和令牌验证） 事件。<br />记录故障： 仅失败的事件。<br />-： Successandfailure 记录成功和失败的事件。<br /><br /> 默认值为 None。 有关更多信息，请参见<xref:System.ServiceModel.AuditLevel>。|  
+|messageAuthenticationAuditLevel|指定所记录的消息身份验证审核事件的类型。 包括以下有效值：<br /><br /> -None： 不生成审核事件。<br />-Success： 记录仅成功的安全 （完全验证，包括消息签名验证、 密码和令牌验证） 事件。<br />记录故障： 仅失败的事件。<br />-： Successandfailure 记录成功和失败的事件。<br /><br /> 默认值为 None。 有关详细信息，请参阅<xref:System.ServiceModel.AuditLevel>。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -87,10 +88,10 @@ ms.lasthandoff: 11/21/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [审核](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [如何： 审核安全事件](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [如何：审核安全事件](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [服务审核行为](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

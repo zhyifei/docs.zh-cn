@@ -12,18 +12,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d877c147a19635782b652d96031644b3be42448a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wait-for-input-activity"></a>等待输入活动
 此示例演示如何在工作流中创建命名书签。 [!INCLUDE[wf](../../../../includes/wf-md.md)] 没有提供用于创建声明性书签的活动。 因此，当您需要在工作流中创建书签时，必须编写一个创建书签的自定义活动。 此示例中定义的 `WaitForInput` 活动提供了此项功能，以便用户可以通过声明方式在工作流内创建书签。  
   
 ## <a name="projects-in-this-sample"></a>此示例中的项目  
   
-|**项目名称**|**描述**|**主要文件**|  
+|**项目名称**|**说明**|**主要文件**|  
 |-|-|-|  
 |WaitForInput|包含 `WaitForInput` 活动及其设计器|WaitForInput.cs<br /><br /> `WaitForInput` 活动定义。|  
 |||WaitForInputDesigner.xaml<br /><br /> `WaitForInput` 活动的自定义设计器。|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
   
  该活动应用了三个特性，分别用于绑定设计器、添加可更新的泛型参数功能以及将默认泛型类型设置为 string。 该活动还具有下表中列出的自变量。  
   
-|**Name**|**类型**|**描述**|  
+|**名称**|**Type**|**说明**|  
 |-|-|-|  
 |TResult|泛型参数 (TResult)|书签的类型。 这是在书签恢复时要传给书签的数据的类型。|  
 |BookmarkName|InArgument\<字符串 >|书签的名称。|  

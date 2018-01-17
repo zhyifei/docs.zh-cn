@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a10e74342141f8ef6664cc424552dc173d9b0f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometry-overview"></a>Geometry 概述
 本概述介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>类来描述形状。 本主题还形成了鲜明对比之间的差异<xref:System.Windows.Media.Geometry>对象和<xref:System.Windows.Shapes.Shape>元素。  
@@ -226,14 +227,14 @@ ms.lasthandoff: 11/21/2017
   
  请参阅<xref:System.Windows.Media.Geometry>有关其方法的完整列表的类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Geometry>  
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Shapes.Path>  
  <xref:System.Windows.Media.GeometryDrawing>  
  [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

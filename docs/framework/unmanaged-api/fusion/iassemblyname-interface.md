@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1d11889ab9db408b6e703bbaec17fd0487f142a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 902ad9f67d06306e79666f0e10d85bdb9c65c377
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName 接口
 提供用于描述和使用程序集的唯一标识的方法。  
@@ -41,13 +42,13 @@ ms.lasthandoff: 11/21/2017
 |[IsEqual 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|确定指定`IAssemblyName`对象是否等于此`IAssemblyName`、 根据指定的比较标志。|  
 |[SetProperty 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|设置指定所引用的属性的值`PropertyId`。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
  [IAssemblyEnum 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

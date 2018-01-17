@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 885c87439ebf7393380c7ff20165d8587f1b26f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84c7f870edd1c8082936b380547e181d129f529e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 类型映射
 在 LINQ to SQL 中，关系数据库的数据模型映射到用您所选择的编程语言表示的对象模型。 当应用程序运行时，LINQ to SQL 会将对象模型中的语言集成查询转换为 SQL，然后将它们发送到数据库进行执行。 当数据库返回结果时，LINQ to SQL 会将它们转换回您可以用您自己的编程语言处理的对象。  
@@ -264,8 +265,8 @@ ms.lasthandoff: 11/21/2017
   
  LINQ to SQL 不支持这些杂项类型的任何其他类型映射。  有关详细信息，请参阅[类型映射运行时行为矩阵](#BehaviorMatrix)。  
   
-## <a name="see-also"></a>另请参阅  
- [基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+## <a name="see-also"></a>请参阅  
+ [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
  [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [SQL CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+ [SQL-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

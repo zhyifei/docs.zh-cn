@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0cb01c0fc5503a5bf16e1f191d87ae90907ec816
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 73bbd04b9ef5d2d0c5457dafb794435b3a4db380
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.LinkLabel>控件，可将 Web 样式的链接添加到 Windows 窗体应用程序。 你可以使用<xref:System.Windows.Forms.LinkLabel>控件可以使用的所有操作都<xref:System.Windows.Forms.Label>控制; 也可以设置为文件、 文件夹或网页的链接的文本的一部分。  
@@ -32,7 +33,7 @@ Windows 窗体<xref:System.Windows.Forms.LinkLabel>控件，可将 Web 样式的
   
  最简单用法<xref:System.Windows.Forms.LinkLabel>控件将显示单个链接使用<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>属性，但你还可以显示多个超链接使用<xref:System.Windows.Forms.LinkLabel.Links%2A>属性。 <xref:System.Windows.Forms.LinkLabel.Links%2A>属性使您能够访问的链接集合。 你还可以指定中的数据<xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A>的每个单独的属性<xref:System.Windows.Forms.LinkLabel.Link>对象。 值<xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A>属性可以用于存储到显示的文件的位置或 Web 站点的地址。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.LinkLabel>  
  [Label 控件概述](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
  [如何：使用 Windows 窗体 LinkLabel 控件链接到对象或网页](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  

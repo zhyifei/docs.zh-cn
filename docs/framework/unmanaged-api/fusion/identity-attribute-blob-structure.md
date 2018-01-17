@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b6d732f94eaa1e6988273d947ec924acf7b2521
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 05f8f44579b8169a4a8a13ae527adcf0c2a2839a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 结构
 包含有关程序集中的单个属性的信息，并由三个`DWORD`s。 每个`DWORD`是到生成的字符缓冲区的偏移量`CurrentIntoBuffer`方法[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)接口  
@@ -236,14 +237,14 @@ Exit:
   
  版本 = 2.0.0.0  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IReferenceIdentity 接口](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
  [IEnumIDENTITY_ATTRIBUTE 接口](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
  [IDENTITY_ATTRIBUTE 结构](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  

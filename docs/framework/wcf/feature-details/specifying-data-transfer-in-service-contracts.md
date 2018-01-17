@@ -17,11 +17,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be6262714ad2753d3a6f62a2956a31529641a246
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c650a59402099e1fe71a0292dd0ccfc409d3448d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>在服务协定中指定数据传输
 可以将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 视为一种消息传递基础结构。 服务操作可以接收消息、处理消息以及发送消息。 消息是使用操作协定描述的。 例如，请考虑以下协定。  
@@ -96,7 +97,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- 偶尔，`DataContractSerializer` 不足以序列化您的类型。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持一个备选的序列化引擎 <xref:System.Xml.Serialization.XmlSerializer>，它也可以用来序列化参数。 <xref:System.Xml.Serialization.XmlSerializer> 使您可以使用诸如 `XmlAttributeAttribute` 之类的属性对得到的 XML 进行更多控制。 若要切换到对特定操作或整个服务使用 <xref:System.Xml.Serialization.XmlSerializer>，请将 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 属性应用到相应的操作或服务。 例如:   
+ 偶尔，`DataContractSerializer` 不足以序列化您的类型。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持一个备选的序列化引擎 <xref:System.Xml.Serialization.XmlSerializer>，它也可以用来序列化参数。 <xref:System.Xml.Serialization.XmlSerializer> 使您可以使用诸如 `XmlAttributeAttribute` 之类的属性对得到的 XML 进行更多控制。 若要切换到对特定操作或整个服务使用 <xref:System.Xml.Serialization.XmlSerializer>，请将 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 属性应用到相应的操作或服务。 例如:  
   
 ```csharp  
 [ServiceContract]  
@@ -583,7 +584,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]高级序列化概念，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
- [如何： 启用流式处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
- [如何： 为类或结构创建的基本数据协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+ [如何：启用流式处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
+ [如何：创建类或结构的基本数据协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

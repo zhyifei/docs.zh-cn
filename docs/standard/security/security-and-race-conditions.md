@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c092113f670c5799d98dcb13c9c713bbd1a47fb6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 73664df9c072189f11d451da46bc3019c8593ec9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-and-race-conditions"></a>安全和争用条件
 需要关注的另一个方面是争用条件被利用的安全漏洞的可能性。 有几种方法可能是在其中。 请按照下面的副主题概述了一些开发人员必须避免主要缺陷。  
@@ -111,5 +114,5 @@ void DoOtherWork()
 ## <a name="race-conditions-in-finalizers"></a>终结器中的争用条件  
  对象中引用它然后释放其终结器中的静态或非托管资源，还会出现争用条件。 如果多个对象共享的资源的操作在类的终结器中，这些对象必须同步所有对该资源的访问。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

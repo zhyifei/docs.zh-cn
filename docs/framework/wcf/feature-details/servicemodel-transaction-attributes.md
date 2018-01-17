@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08ebb19cb7fab8221ac1eb534777afffa0bad328
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 事务属性
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 在以下三个标准 <xref:System.ServiceModel> 属性 (Attribute) 上提供用于配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的事务行为的属性 (Property)：  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>，此属性指定事务完成时是否释放基础服务实例。 此属性的默认值为 `true`。 下一个入站消息会导致创建新的基础实例，放弃上一个实例可能保持的每个事务的任何状态。 释放服务实例是服务执行的内部操作，对客户端可能已经建立的任何现有连接或会话没有影响。 此功能等效于 COM+ 提供的实时激活功能。 如果此属性为 `true`，则 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 必须等于 <xref:System.ServiceModel.ConcurrencyMode.Single>。 否则，服务在启动过程中会引发无效配置验证异常。  
   
--   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>，此属性指定用于服务内事务的隔离级别；此属性采用 <xref:System.Transactions.IsolationLevel> 值之一。 如果本地隔离级别属性是 <xref:System.Transactions.IsolationLevel.Unspecified> 以外的任何值，则传入事务的隔离级别必须与此本地属性的设置相匹配。 否则会拒绝传入事务并将故障发回客户端。 如果 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 为 `true`，且没有对事务进行流处理，则此属性确定要用于本地创建的事务的 <xref:System.Transactions.IsolationLevel> 值。 如果 <xref:System.Transactions.IsolationLevel> 设置为 <xref:System.Transactions.IsolationLevel.Unspecified>，则使用 <xref:System.Transactions.IsolationLevel><xref:System.Transactions.IsolationLevel.Serializable>。  
+-   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>，此属性指定用于服务内事务的隔离级别；此属性采用 <xref:System.Transactions.IsolationLevel> 值之一。 如果本地隔离级别属性是 <xref:System.Transactions.IsolationLevel.Unspecified> 以外的任何值，则传入事务的隔离级别必须与此本地属性的设置相匹配。 否则会拒绝传入事务并将故障发回客户端。 如果 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 为 `true`，且没有对事务进行流处理，则此属性确定要用于本地创建的事务的 <xref:System.Transactions.IsolationLevel> 值。 如果<xref:System.Transactions.IsolationLevel>设置为<xref:System.Transactions.IsolationLevel.Unspecified>， <xref:System.Transactions.IsolationLevel> <xref:System.Transactions.IsolationLevel.Serializable>使用。  
   
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>，此属性指定一个时间段，在服务中创建的新事务必须在此时间段内完成。 如果达到此时间时事务没有完成，则会中止事务。 对于已将 <xref:System.TimeSpan> 设置为 <xref:System.Transactions.TransactionScope> 的任何操作以及为其创建了新事务的任何操作，<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 用作 `true` 超时。 该超时是从创建事务到完成两阶段提交协议的第 1 阶段所允许的最长时间。 使用的超时值始终是 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 属性和 `transactionTimeout` 配置设置之间的较小值。  
   

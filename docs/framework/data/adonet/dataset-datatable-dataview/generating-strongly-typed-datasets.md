@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 61836196d9e11d3c87c43d4faaaeff54125bf706
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 867c6f5fa918b0886d8d618e89c62201cd92b213
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-strongly-typed-datasets"></a>生成强类型化数据集
 如果给定符合 XML 架构定义语言 (XSD) 标准的 XML 架构，您就可以使用随 <xref:System.Data.DataSet> 提供的 XSD.exe 工具生成强类型 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]。  
@@ -104,7 +105,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataSet>  
  [类型化数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  

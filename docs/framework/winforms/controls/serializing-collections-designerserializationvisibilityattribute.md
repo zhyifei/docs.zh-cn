@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9efad2da27f4003632b643b9f5f0602be0d55480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合
 你自定义控件有时将公开为属性的集合。 本演练演示如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>类来控制在设计时序列化集合的方式。 应用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>对您集合的属性的值可确保将序列化属性。  
@@ -34,9 +35,9 @@ ms.lasthandoff: 11/21/2017
  若要将代码复制本主题中的一个单独的清单，请参阅[如何： 序列化集合的标准类型与 DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
 -   若要能够创建和运行 Windows 窗体应用程序项目的计算机上安装了 Visual Studio 的足够权限。  
@@ -147,7 +148,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
  [设计器的序列化概述](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
  [如何： 序列化与 DesignerSerializationVisibilityAttribute 标准类型的集合](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  

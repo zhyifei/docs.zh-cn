@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab9a894ad57a5324d466e0eb94e49e2cf6104a19
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 961f5e84fb46a791127a9d80c0f03d2b87fdea77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>选择消息交换模式
 编写自定义传输的第一步是确定哪个*消息交换模式*（或 Mep） 所需的正在开发的通道。 本主题说明可用的选项，并讨论各种不同的需求。 这是通道开发任务列表中所述的第一个任务[开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
@@ -102,5 +103,5 @@ ms.lasthandoff: 12/02/2017
   
 -   当在您的通道上调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 时，应立即终止会话而不必执行 I/O。 同样，这可能意味着不执行任何操作，或者可能涉及中止一个网络连接或某个其他资源。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通道模型概述](../../../../docs/framework/wcf/extending/channel-model-overview.md)

@@ -24,11 +24,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0b40e09a9a2c534d3376fa6930d8166591873a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 333e99997bad3852ae34753165aa736ef32ac004
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>生成加密和解密的密钥
 创建和管理密钥是加密过程的一个重要部分。 对称算法要求创建密钥和初始化向量 (IV)。 密钥必须对不应解密数据的任何人保密。 IV 并不是一定要保密，但应定期更改。 非对称算法要求创建公钥和私钥。 公钥可以公开给任何人，而私钥必须只有将解密用公钥加密的数据的参与方知道。 本节介绍如何生成和管理对称和非对称算法的密钥。  
@@ -95,7 +98,7 @@ RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
 RSAParameters RSAKeyInfo = RSA.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [加密数据](../../../docs/standard/security/encrypting-data.md)  
  [解密数据](../../../docs/standard/security/decrypting-data.md)  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  

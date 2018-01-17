@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 85ee852c868f26937494d5d340d2db4210224754
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5314f39c3012826f25fa6c64baf7eb8e42329f58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>如何：使用画布的附加属性来定位子元素
 此示例演示如何使用的附加的属性<xref:System.Windows.Controls.Canvas>来定位子元素。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CanvasAttachedProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]
  [!code-vb[CanvasAttachedProperties#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasAttachedProperties/VisualBasic/CanvasAttachedProps.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Canvas>  
  <xref:System.Windows.Controls.Canvas.Bottom%2A>  
  <xref:System.Windows.Controls.Canvas.Left%2A>  
@@ -44,5 +45,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.Canvas.Top%2A>  
  <xref:System.Windows.Controls.Button>  
  [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
  [附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)

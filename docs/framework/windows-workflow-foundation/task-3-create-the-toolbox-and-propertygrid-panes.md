@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfb1d09fc8bc52a03576054197488dff0aacf841
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 90083692c2415ed6c1117185474d6bbaa9d1963b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>任务 3：创建工具箱窗格和属性网格窗格
 在此任务中，你将创建**工具箱**和**属性网格**窗格并将其添加到重新承载[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。  
@@ -221,7 +222,7 @@ namespace HostingApplication
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [重新托管工作流设计器](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
  [任务 1：新建 Windows Presentation Foundation 应用程序](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
  [任务 2：托管工作流设计器](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

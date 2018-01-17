@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13d01272-bbf8-456c-a97a-560001d1a7f2
-ms.openlocfilehash: af832d04d2cba530a93710a90701ab119a66deef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: a650e971afd63171b0cc12f679d81bc222a609a5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="running-selective-unit-tests"></a>运行选择性单元测试
 
@@ -45,7 +46,7 @@ namespace MSTestNamespace
 }
 ```
 
-| Expression | 结果 |
+| 表达式 | 结果 |
 | ---------- | ------ |
 | `dotnet test --filter Method` | 运行 `FullyQualifiedName` 包含 `Method` 的测试。 在 `vstest 15.1+` 中可用。 |
 | `dotnet test --filter Name~TestMethod1` | 运行名称包含 `TestMethod1` 的测试。 |
@@ -56,7 +57,7 @@ namespace MSTestNamespace
 
 **使用条件运算符 | 和 &amp;**
 
-| Expression | 结果 |
+| 表达式 | 结果 |
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~UnitTestClass1&#124;TestCategory=CategoryA"</code> | 运行 `FullyQualifiedName` 包含 `UnitTestClass1` **或** `TestCategory` 是 `CategoryA` 的测试。 |
 | `dotnet test --filter "FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA"` | 运行 `FullyQualifiedName` 包含 `UnitTestClass1` **且** `TestCategory` 是 `CategoryA` 的测试。 |
@@ -86,7 +87,7 @@ namespace XUnitNamespace
 }
 ```
 
-| Expression | 结果 |
+| 表达式 | 结果 |
 | ---------- | ------ |
 | `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | 仅运行一个测试，即 `XUnitNamespace.TestClass1.Test1`。 |
 | `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | 运行除 `XUnitNamespace.TestClass1.Test1` 之外的其他所有测试。 |
@@ -94,14 +95,14 @@ namespace XUnitNamespace
 
 在代码示例中，包含键 `Category` 和 `Priority` 的已定义特征可用于筛选。
 
-| Expression | 结果 |
+| 表达式 | 结果 |
 | ---------- | ------ |
 | `dotnet test --filter XUnit` | 运行 `FullyQualifiedName` 包含 `XUnit` 的测试。  在 `vstest 15.1+` 中可用。 |
 | `dotnet test --filter Category=bvt` | 运行包含 `[Trait("Category", "bvt")]` 的测试。 |
 
 **使用条件运算符 | 和 &amp;**
 
-| Expression | 结果 |
+| 表达式 | 结果 |
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | 运行 `FullyQualifiedName` 包含 `TestClass1` **或** `Category`是 `Nightly` 的测试。 |
 | `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | 运行 `FullyQualifiedName` 包含 `TestClass1` **且** `Category`是 `Nightly` 的测试。 |

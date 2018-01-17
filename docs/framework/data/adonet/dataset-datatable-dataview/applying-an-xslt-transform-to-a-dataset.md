@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 17f5c8ede620a061bb80f98652497de0a165b06c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 35251c5e2a713463510b3ff8b65e9096385c6bcf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>将 XSLT 转换应用于 DataSet
 **WriteXml**方法<xref:System.Data.DataSet>使您能够写入的内容**数据集**以 XML 数据形式。 随后的一项常见任务是使用 XSL 转换 (XSLT) 将该 XML 转换为另一种格式。 但是，同步**数据集**与<xref:System.Xml.XmlDataDocument>，可以将 XSLT 样式表应用到的内容**数据集**而无需首先编写的内容**数据集**以 XML 数据**WriteXml**。  
@@ -133,6 +134,6 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据集和 XmlDataDocument 同步](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

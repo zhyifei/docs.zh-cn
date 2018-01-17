@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61c8d8451e271e756fce6f83a4f8b8fd4c8b9f77
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 689dfae90baffa3e9895258d1635c7840d8df6b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicegt"></a>&lt;服务&gt;
 `service` 元素包含 Windows Communication Foundation (WCF) 服务的设置。 它还包含公开此服务的终结点。  
@@ -79,6 +80,6 @@ ms.lasthandoff: 12/02/2017
 </service>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ServiceElement>  
  [配置服务](../../../../../docs/framework/wcf/configuring-services.md)

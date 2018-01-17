@@ -31,11 +31,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b33e710e7f57e1a84372dc556d904e32584a75ea
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-of-bitmaps"></a>位图类型
 位图的像素为单位的矩形数组中指定的每个像素的颜色的位数组。 专用于单个像素的比特数确定可以分配给该像素的颜色数。 例如，如果每个像素都由 4 位，然后给定的像素可以分配 16 种不同颜色之一 (2 ^4 = 16)。 下表显示可以指定数目的 bits 通过分配给表示像素的颜色数的几个示例。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="tag-image-file-format-tiff"></a>Tag 图像文件格式 (TIFF)  
  TIFF 是一种灵活且可扩展的格式，支持通过各种平台和图像处理应用程序。 TIFF 文件可以存储使用任意数目的每像素位数为映像，可以使用各种压缩算法。 多个映像可以存储在单个，多个页的 TIFF 文件。 与映像 （扫描仪制造商、 主机、 压缩、 方向、 每个像素，等的样本的类型） 相关的信息可以存储在文件中，并使用标签来排列。 可以扩展 TIFF 格式，根据需要由批准和添加新标签。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Image?displayProperty=nameWithType>  
  <xref:System.Drawing.Bitmap?displayProperty=nameWithType>  
  <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>  

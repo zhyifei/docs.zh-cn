@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6660cf0c7de11058aeb70c7f61cd3239dd7f0f04
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2183954363c03064d9d41480bb63e32cca58b857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView 控件（Windows 窗体）
 Windows 窗体 `TreeView` 控件显示节点的层次结构，如同文件和文件夹在 Windows 操作系统的 Windows 资源管理器功能的左窗格中的显示方式。  

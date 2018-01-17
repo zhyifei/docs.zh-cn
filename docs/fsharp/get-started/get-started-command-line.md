@@ -1,6 +1,6 @@
 ---
 title: "开始使用 F # 使用命令行工具"
-description: "了解如何使用跨平台.NET 核心 CLI 使用 F #。"
+description: "了解如何在任何操作系统 （Windows、 MacOS，Linux） 上使用 F # 使用跨平台.NET 核心 CLI。"
 keywords: "visual f#, f#, 函数编程, .NET, .NET Core"
 author: cartermp
 ms.author: phcart
@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: a23d4861ce599f20f37ecd0564a0187e7b9b739f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4820a8a306bd478429b497a8b7c70ff170c1c655
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>要开始使用 F # 使用.NET 核心 CLI
 
-本文介绍如何你可以开始使用.NET Core 上使用 F #。 它将经历生成使用由一个控制台应用程序的类库的多项目解决方案。
+本文介绍如何你可以开始在任何操作系统 （Windows、 macOS 或 Linux） 上使用.NET 核心 CLI 使用 F #。 它将经历生成使用由一个控制台应用程序的类库的多项目解决方案。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 若要开始，你必须安装[.NET Core 1.0 或更高版本的 SDK](https://dot.net/core)。 没有无需卸载以前版本的.NET 核心 SDK，因为它支持通过并行安装。
 

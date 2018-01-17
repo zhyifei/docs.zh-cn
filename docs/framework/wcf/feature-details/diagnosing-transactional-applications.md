@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15bb435269ca67e8de67e8e768e98d5832556f02
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0826881bac88f2bfa933ae71b798186dafc55303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnosing-transactional-applications"></a>诊断事务应用程序
 本主题介绍如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 管理和诊断功能来解决事务应用程序的问题。  
@@ -130,7 +131,7 @@ ms.lasthandoff: 12/02/2017
   
      这样，也会启用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 跟踪，因为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同样利用 <xref:System.Transactions> 基础结构。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理和诊断](../../../../docs/framework/wcf/diagnostics/index.md)  
  [配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

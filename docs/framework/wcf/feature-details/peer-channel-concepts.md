@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b56fe2aaf958e6a94f9562629ca320901307e0f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0802c8f92a240d04e8eb764a83cd40a8fefc0d40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-channel-concepts"></a>对等通道概念
 本节简要说明构成 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 对等通道的概念。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 12/02/2017
   
  [对等解析程序](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)： 讨论的对等名称解析协议 (PRNP) 以及其他自定义的解析程序中使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成对等通道应用程序](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

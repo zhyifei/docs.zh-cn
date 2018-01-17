@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd96404adea7fb8e7d59dcea322b2d3832f2bfe4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: df2a7a78e876ec3228491569c918ad9add2e080d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replay-attacks"></a>重播攻击
 A*重播攻击*攻击者复制双方之间的消息流并将该到一个或多个方时发生。 除非攻击得到缓解，否则，受到攻击的计算机会将该消息流作为合法消息进行处理，从而导致一系列不良后果，例如重复订购某种产品。  
@@ -35,7 +36,7 @@ A*重播攻击*攻击者复制双方之间的消息流并将该到一个或多�
   
  唯一容易遭受反射攻击的绑定是那些不使用 WS-Addressing 的绑定，即那些禁用了 WS-Addressing 的自定义绑定以及那些使用基于对称密钥的安全的绑定。 默认情况下，<xref:System.ServiceModel.BasicHttpBinding> 不使用 WS-Addressing，但是它不会以使其容易遭受反射攻击的方式使用基于对称密钥的安全。  
   
- 自定义绑定的缓解措施是不建立安全上下文或要求使用 WS-Addressing 标头。  
+ 自定义绑定的缓解是不建立安全上下文或要求使用 WS-Addressing 标头。  
   
 ## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>网络场：攻击者向多个节点重播请求  
  客户端使用在网络场中实现的服务。 攻击者将发送到网络场中某个节点的请求重播到该网络场中的其他节点。 另外，如果重新启动服务，则会刷新重播缓存，从而使攻击者可以重播请求。 （该缓存包含已使用过的、先前已见到的消息签名值并可以防止重播，因此这些签名只能使用一次。 重播缓存不在整个网络场中共享。）  
@@ -46,10 +47,10 @@ A*重播攻击*攻击者复制双方之间的消息流并将该到一个或多�
   
 -   将服务配置为使用传输级安全。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [信息泄露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [提升权限](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [被篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

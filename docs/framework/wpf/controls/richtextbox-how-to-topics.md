@@ -17,11 +17,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f11a6c42aaf1ddc0d19cc54580cb44501b9307
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 31dd8d636a64b54c914d48b4faee95f82de680fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox 帮助主题
 本节提供演示如何完成使用的常见任务的示例<xref:System.Windows.Controls.RichTextBox>控件。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
  [在 RichTextBox 中确定自定义上下文菜单的位置](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
  [如何： 替换 RichTextBox 的默认内容主机](http://msdn.microsoft.com/en-us/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.TextBox>  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

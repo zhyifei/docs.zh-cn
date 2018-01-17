@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 65fe52f07ed823b4f7518c5b1f2da1f7a61b0371
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 3c09556fe90a5c447b181bc1ac5b36f014399e4f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet nuget delete` - 从服务器删除或取消列出包。
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet nuget delete` 命令从服务器删除或取消列出包。 对于 [NuGet.org](https://www.nuget.org/)，该操作将取消列出包。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PACKAGE_NAME`
 

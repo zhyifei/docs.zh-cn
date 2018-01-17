@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9081b47284b63315d950ef791389312df32815f8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d07a17c5ed4302657671e0247e44ac0ef6e75518
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP 确认通道
 HTTP 确认通道是一个更改单向消息传递模式的分层通道示例，它允许服务确认或拒绝传入的消息，而不是在接收时自动发送确认。 HTTP 确认通道还允许服务延迟确认，直到服务可以做出将对消息进行处理的业务级别的保证。  

@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60da29b60d2b9b5b98c76a0a9c3ae73ac9142bbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6c9273102dc8e8f0fe6be3e31d0f0b6e570c7af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>如何：使用颜色矩阵对单色进行转换
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>类用于存储和操作图像。 <xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>对象 32 位数字的形式存储的每个像素的颜色： 8 位每次都红、 绿、 蓝方和字母。 每个四个组件是一个介于 0 到 255，其中 0 表示没有亮度，255 表示完整的强度。 Alpha 分量指定颜色的透明度： 0 表示完全透明，255 是完全不透明。  
@@ -73,6 +74,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，后者是 <xref:System.Windows.Forms.Control.Paint> 事件处理程序的参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对图像重新着色](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
  [坐标系统和转换](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)

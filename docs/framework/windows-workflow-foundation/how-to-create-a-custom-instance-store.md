@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e820815a7047d91065db5308cc289f063191511
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db9f09236764697aff4e57ace593827193c6e07d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>如何：创建自定义实例存储
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，它是使用 SQL Server 保存工作流数据的实例存储区。 如果您的应用程序需要将工作流数据保存到其他介质，例如不同的数据库或文件系统，则可以实现自定义实例存储区。 通过扩展抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> 类并且实现完成自定义实例存储区所需的方法，创建自定义实例存储区。 有关自定义实例存储的完整实现，请参阅[企业采购过程](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)示例。  

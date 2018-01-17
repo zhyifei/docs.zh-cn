@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a17478c350d789d320e97d6b50d6f5f9daaf6db3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d50d6a1b27cf30511fece1540f002524238a424
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>如何：从全局程序集缓存中删除程序集
 有两种方法可以从全局程序集缓存 (GAC) 中移除程序集：  
@@ -59,7 +60,7 @@ gacutil -u hello
     > [!NOTE]
     >  Windows Installer 保留了安装在 GAC 中的程序集的引用计数。 仅当程序集的引用计数为零时才可将其从 GAC 移除，计数为零时意味着它没有被任何 Windows Installer 包安装的应用程序所使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用程序集和全局程序集缓存](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
  [如何：将程序集安装到全局程序集缓存](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

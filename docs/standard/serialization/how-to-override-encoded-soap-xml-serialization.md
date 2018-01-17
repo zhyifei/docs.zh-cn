@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de551372806c62de7f4ceca08b87b0eca207e4ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 759da973662e407313dbfd1d1d8ffb18881d154c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>如何：重写编码的 SOAP XML 序列化
 [代码示例](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
@@ -287,7 +290,7 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  [用来控制编码的 SOAP 序列化的属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
  [使用 XML Web services 进行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  

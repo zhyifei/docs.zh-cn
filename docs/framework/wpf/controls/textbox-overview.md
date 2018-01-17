@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1116093ddcd95c99deac8a1e1b14fef3b0a458f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50e36192198c172843d79a4195e894b848f84c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-overview"></a>TextBox 概述
 <xref:System.Windows.Controls.TextBox>类使你能够显示或编辑无格式的文本。 一个常见用途<xref:System.Windows.Controls.TextBox>正在编辑的窗体中的未格式化的文本。 例如，一个表单要求输入用户的名称，电话号码等将使用<xref:System.Windows.Controls.TextBox>文本输入的控件。 本主题介绍<xref:System.Windows.Controls.TextBox>类，并提供如何使用中的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和[!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
 |控件|实时拼写检查|上下文菜单|格式设置等命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)|<xref:System.Windows.Documents.FlowDocument>内容，例如图像、 段落、 表等。|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.TextBox>|是|是|No|不是。|  
+|<xref:System.Windows.Controls.TextBox>|是|是|否|不是。|  
 |<xref:System.Windows.Controls.RichTextBox>|是|是|是（请参阅 [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)）|是（请参阅 [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)）|  
   
 > [!NOTE]
@@ -77,6 +78,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="detect-when-content-changes"></a>检测内容何时更改  
  通常<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>用于每当检测到事件中的文本<xref:System.Windows.Controls.TextBox>或<xref:System.Windows.Controls.RichTextBox>更改，而不是<xref:System.Windows.UIElement.KeyDown>正如所料。 有关示例，请参阅[检测 TextBox 中的文本何时更改](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [操作说明主题](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+## <a name="see-also"></a>请参阅  
+ [帮助主题](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
  [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

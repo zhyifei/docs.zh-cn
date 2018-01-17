@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 83e08124b5d532cbb217cc5ff829af06c48518a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3be73589897bf4ffeb3d80a82bf2b560e814a4a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-string-syntax"></a>连接字符串语法
 每个 .NET Framework 数据提供程序都有一个继承自 `Connection` 的 <xref:System.Data.Common.DbConnection> 对象，以及一个提供程序特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 属性。 每个提供程序的特定连接字符串语法记录在其 `ConnectionString` 属性中。 下表列出了 .NET Framework 中包含的四个数据提供程序。  
@@ -200,7 +201,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
  有关 ODBC 连接字符串语法的更多信息，请参见 <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

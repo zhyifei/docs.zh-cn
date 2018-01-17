@@ -27,11 +27,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ecd08b708b8725ae7b53bfee26b1d4d8668756cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03595539d825f26251a24fce33ede2552b79b38b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-synchronous-client-socket"></a>使用同步客户端套接字
 网络操作完成过程中，同步客户端套接字会挂起应用程序。 同步套接字不适用于在操作中大量使用网络的应用程序，但它们可以为其他应用程序启用对网络服务的简单访问。  
@@ -79,7 +80,7 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用异步客户端套接字](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
  [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [同步客户端套接字示例](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

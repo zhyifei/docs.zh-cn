@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2fde543187d1904da93be255878d6c7a99de6bbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77d6dbafc5a7c3afd9998fd8e9ae54ce60f90a45
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数据。 在 FILESTREAM 之前，存储二进制数据需要特殊处理。 非结构化的数据（例如文本文档、图像和视频）通常存储在数据库之外，从而使得难以管理此类数据。  
@@ -225,7 +226,7 @@ namespace FileStreamTest
 |[在客户端应用程序中使用 FILESTREAM 存储](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|介绍用于处理 FILESTREAM 数据的 Win32 API 函数。|  
 |[FILESTREAM 与其他 SQL Server 功能](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|提供将 FILESTREAM 数据与 SQL Server 的其他功能一起使用时的注意事项、准则和限制。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  

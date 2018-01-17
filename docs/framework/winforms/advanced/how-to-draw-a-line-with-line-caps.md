@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e2d5a5aba4a7634e0ea8480aa9744a5a7b9721d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4048757e11724aa1e175d8b18c47f48d22d807e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>如何：绘制具有线帽的线条
 可以使用一个称为线帽的多个形状绘制的开始或行尾。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]支持多种的线帽，如循环、 方形、 菱形和箭头。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
 -   创建 Windows 窗体和处理该窗体<xref:System.Windows.Forms.Control.Paint>事件。 示例将代码粘贴到<xref:System.Windows.Forms.Control.Paint>传递的事件处理程序`e`作为<xref:System.Windows.Forms.PaintEventArgs>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>  
  [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  

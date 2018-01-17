@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddcb8b5199fc46cf3e5058650168131bb457545d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: eed1bac41babb970e3d85a8ae1aa5132f44e3621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt; 元素
 指定用于对等客户端的身份验证选项。  
@@ -112,7 +113,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 </endpointBehaviors>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
  <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>  
  <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>  

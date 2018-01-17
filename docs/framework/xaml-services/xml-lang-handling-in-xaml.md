@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 47dd34db82e796418b68fcf9b28ef3e4d4eaca4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3dad1600d93f53198d7ca7842148612b7755fc10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML 中 xml:lang 的处理
 `xml:lang` 属性是 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]定义的属性，用于在 XML 中声明元素的语言和区域性信息。 此属性的相同含义在 XAML 中持续存在；但有一些其他注意事项。  
@@ -53,5 +54,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="wpf-usage-nodes"></a>WPF 使用情况节点  
  对于身为 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement>派生类的元素，可以使用等效 <xref:System.Windows.FrameworkElement.Language%2A> 依赖项属性取代 `xml:lang` 属性。 默认情况下，如果未通过属性或通过处理 <xref:System.Windows.FrameworkElement.Language%2A> 属性来另外设置 `xml:lang` 属性，则它使用“en-US”。  
   
-## <a name="see-also"></a>另请参阅  
- [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>请参阅  
+ [WPF 全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

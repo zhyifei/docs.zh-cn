@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 265a81d8af566a54172fa73230ac388b8f0b848e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3863812bc3c83b346f2340bcfbc609a1024c3c6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>如何：对实例数据属性进行反序列化
 在有些情况下，用户或工作流管理员可能需要手动检查持久保存的工作流实例的状态。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供一个有关 Instances 表的视图，公开以下四列：  

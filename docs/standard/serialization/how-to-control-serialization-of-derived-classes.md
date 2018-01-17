@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f97445be151afdf460da6610462930c564e42ccc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8f66f737b0668028fa45434fed4e6d6180ee69f8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>如何：控制派生类的序列化
 使用 XmlElementAttribute 属性更改 XML 元素的名称不是自定义对象序列化的唯一方法。 您还可以自定义 XML 流，具体方法为从现有类派生以及指示 <xref:System.Xml.Serialization.XmlSerializer> 实例如何序列化新类。  
@@ -241,7 +244,7 @@ public class Run
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.Xml.Serialization.XmlElementAttribute>  
  <xref:System.Xml.Serialization.XmlAttributes>  

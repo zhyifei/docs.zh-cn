@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f0dcad5d6287d5399dac6cea38b10984781770f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-and-design"></a>体系结构和设计
 中的 SQL 生成模块[示例提供程序](http://go.microsoft.com/fwlink/?LinkId=180616)作为表示命令目录树的表达式树访问者实现的。 通过表达式树上的单个传递来执行生成。  
@@ -62,7 +63,7 @@ internal sealed class SqlBuilder : ISqlFragment {
 ```  
   
 #### <a name="sqlselectstatement"></a>SqlSelectStatement  
- SqlSelectStatement 表示形状"SELECT...的规范 SQL SELECT 语句 从.. WHERE... 分组依据... ORDER BY"。  
+ SqlSelectStatement 表示形状"SELECT...的规范 SQL SELECT 语句 从。 WHERE... 分组依据... ORDER BY"。  
   
  每个 SQL 子句均由一个 StringBuilder 表示。 此外，它跟踪是否已指定 Distinct 以及语句是否位于最顶层。 如果语句未位于最顶层，则除非语句也具有 TOP 子句，否则将忽略 ORDER BY 子句。  
   
@@ -424,5 +425,5 @@ IsEmpty(inut) = Not Exists(input)
   
  若要同时为范围别名和列生成唯一名称，请使用 <existing_name>_n，其中 n 是尚未使用的最小别名。 所有别名的全局列表加大了对层叠重命名的需要。  
   
-## <a name="see-also"></a>另请参阅  
- [该示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>请参阅  
+ [示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

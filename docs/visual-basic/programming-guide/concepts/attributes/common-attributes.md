@@ -12,11 +12,11 @@ ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f536d4c420f24241a4b5f36094dad2f6c335f1d6
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 9528b7dcfa52c30954929d714bd098eb51886ebd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-attributes-visual-basic"></a>公共特性 (Visual Basic)
 本主题介绍在 Visual Basic 程序中最常使用的属性。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/09/2017
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定义程序集清单的友好默认别名|  
   
 ##  <a name="Obsolete"></a> Obsolete 特性  
- `Obsolete` 特性将程序实体标记为不再推荐使用。 每次使用标记为过时的实体后，将生成警告或错误，具体取决于该特性的配置方式。 例如：  
+ `Obsolete` 特性将程序实体标记为不再推荐使用。 每次使用标记为过时的实体后，将生成警告或错误，具体取决于该特性的配置方式。 例如:  
   
 ```vb  
 <System.Obsolete("use class B")>   
@@ -234,7 +234,7 @@ End Class
 ##  <a name="VB"></a>Visual Basic 属性  
  下表列出了特定于 Visual Basic 的特性。  
   
-|特性|用途|  
+|特性|目标|  
 |---------------|-------------|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute>|向编译器指示应将类公开为 COM 对象。|  
 |<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|允许使用仅该模块所需的资格访问模块成员。|  
@@ -263,10 +263,10 @@ End Structure
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
  使用`VBFixedArrayAttribute`声明固定大小的数组。 Visual Basic 字符串，如数组是默认情况下的可变长度。 此属性是序列化或数据写入文件时非常有用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
- [特性](../../../../../docs/standard/attributes/index.md)  
+ [特性](../../../../standard/attributes/index.md)  
  [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

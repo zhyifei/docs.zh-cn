@@ -17,17 +17,18 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1d4a49f36ac294199871075a04b7e682bd5613b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4582a4bcec1d82651c39be179cbefa2dfc34fa2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>如何：使用设计器用 Windows 窗体面板控件对控件进行分组
 Windows 窗体<xref:System.Windows.Forms.Panel>控制用于其他控件进行分组。 有三个原因与组控件。 有 visual 清除用户接口; 相关的窗体元素的分组另一种是以编程方式分组的单选按钮例如;最后一个是用于在设计时将控件移作为一个单元。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-create-a-group-of-controls"></a>若要创建一组控件  
   
@@ -39,7 +40,7 @@ Windows 窗体<xref:System.Windows.Forms.Panel>控制用于其他控件进行分
   
 3.  （可选）如果你想要将边框添加到面板，设置其<xref:System.Windows.Forms.BorderStyle>属性。 有三个选择： <xref:System.Windows.Forms.BorderStyle.Fixed3D>， <xref:System.Windows.Forms.BorderStyle.FixedSingle>，和<xref:System.Windows.Forms.BorderStyle.None>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Panel 控件](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
  [Panel 控件概述](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
  [如何：设置 Panel 控件的背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)

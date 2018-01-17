@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a956e0c4521e4a1079b331868e811e68af2e710d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 327ef282c23fc02791eb7c531fd1ae25c6700fd4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-versioning"></a>程序集版本控制
 使用公共语言运行时的程序集的所有版本控制都在程序集级别上进行。 一个程序集的特定版本和依赖程序集的版本在该程序集的清单中记录下来。 除非被配置文件（应用程序配置文件、发行者策略文件和计算机的管理员配置文件）中的显式版本策略重写，否则运行时的默认版本策略是，应用程序只与它们生成和测试时所用的程序集版本一起运行。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
  信息性版本用自定义特性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 有关信息性版本特性的更多信息，请参阅[设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [配置应用程序](../../../docs/framework/configure-apps/index.md)  
  [设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)  

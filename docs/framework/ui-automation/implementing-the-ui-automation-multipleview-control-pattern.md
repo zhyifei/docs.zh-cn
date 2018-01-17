@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 899f260dfef1d1e28a5a3605de772cdb7d358b64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5ff185ddb145d51fe8bc32ac10f3a45b57ec954c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>实现 UI 自动化 MultipleView 控件模式
 > [!NOTE]
@@ -66,9 +67,9 @@ ms.lasthandoff: 11/21/2017
 |--------------------|---------------|  
 |<xref:System.ArgumentException>|当 <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> 或 <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> 与不是受支持视图集合成员的参数一同被调用时。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
  [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [使用在 UI 自动化中缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+ [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

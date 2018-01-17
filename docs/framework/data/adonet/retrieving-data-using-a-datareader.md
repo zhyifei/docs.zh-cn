@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0b66ca2fbcc760598b771b4c02a46acc3c9c1d4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b36f76516d4ddf94e177a5ecbb705e1d729318b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-data-using-a-datareader"></a>使用 DataReader 检索 ADO 数据
 检索数据使用**DataReader**涉及到创建的实例**命令**对象，然后创建**DataReader**通过调用**Command.ExecuteReader**从数据源中检索行。 下面的示例演示如何使用**DataReader**其中`reader`表示有效的 DataReader 和`command`表示有效的命令对象。  
@@ -258,9 +259,9 @@ adapter.TableMappings.Add("Table1", "Departments");
 adapter.Fill(ds);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 Datareader](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [Dataadapter 和 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

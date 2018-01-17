@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2dff90e499ce421f372137903daf34c09c21d5c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c00e61001d9c8877b1fcaa0e938c92249c7915e8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>如何：在应用程序会话之间更改设置值
 有时，你可能想要更改设置编译应用程序并将其部署之后的应用程序会话之间的值。 例如，你可能想要更改连接字符串以指向正确的数据库的位置。 由于编译应用程序并将其部署之后，设计时工具不可用，则必须更改在该文件中手动设置值。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
   
 3.  键入你的设置的新值并保存文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)

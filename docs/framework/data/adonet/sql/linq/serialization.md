@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 844f206219fed527b73b5125ab82f1c044c59b5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60f73644a047230a590e75f095575cf85140f3a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="serialization"></a>序列化
 本主题介绍[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能。 下面几段提供了有关在设计时如何在代码生成期间添加序列化以及 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 类的运行时序列化行为的信息。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
- [如何： 使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+ [如何：使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

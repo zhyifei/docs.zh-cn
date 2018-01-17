@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d2f387ddc6671c640ce47759050f27dbdaf7146
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f28c0c4956c5e32dac204a99967ddd4b6352484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="state-machine-workflows"></a>状态机工作流
 状态机是用于开发程序的已知范例。 <xref:System.Activities.Statements.StateMachine> 活动与 <xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> 以及其他活动一起可用于生成状态机工作流程序。 本主题概述如何创建状态机工作流。  
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/02/2017
  最终状态  
  表示状态机完成的一种状态。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：创建状态机工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
  [StateMachine 活动设计器](/visualstudio/workflow-designer/statemachine-activity-designer)  
  [State 活动设计器](/visualstudio/workflow-designer/state-activity-designer)  

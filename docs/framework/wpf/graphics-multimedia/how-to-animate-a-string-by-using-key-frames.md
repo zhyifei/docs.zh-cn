@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f8947669178de1252c10b6a8b2c01a6b55baa424
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1692777a97754fb7f6481b2d9cb8942dcb62df77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>如何：使用关键帧对字符串进行动画处理
 此示例演示如何进行动画处理的字符串，它在此示例中为<xref:System.Windows.Controls.ContentControl.Content%2A>属性<xref:System.Windows.Controls.Button>控件，通过使用关键帧。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整示例，请参阅[关键帧动画示例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>  
  <xref:System.Windows.Controls.ContentControl.Content%2A>  
  <xref:System.Windows.Controls.Button>  

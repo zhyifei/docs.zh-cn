@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: db507bf4f90d875960408857c7e6b1e3aa145730
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebbe1addf47bc76903e362cfb353ade359a1c8ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-a-dataset-from-xml"></a>从 XML 加载数据集
 ADO.NET <xref:System.Data.DataSet> 的内容可以从 XML 流或文档创建。 此外，利用 .NET Framework，您可以相当灵活地控制从 XML 中加载哪些信息以及如何创建 <xref:System.Data.DataSet> 的架构（即关系结构）。  
@@ -110,7 +111,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
->  如果的 XSD 架构你<xref:System.Data.DataSet>包括**targetNamespace**，不能读取数据，且调用时，你可能会发生异常， **ReadXml**加载<xref:System.Data.DataSet>与包含的 XML与非限定命名空间的元素。 若要读取未限定的元素在这种情况下，设置**elementFormDefault**等于"qualified"中的 XSD 架构。 例如:   
+>  如果的 XSD 架构你<xref:System.Data.DataSet>包括**targetNamespace**，不能读取数据，且调用时，你可能会发生异常， **ReadXml**加载<xref:System.Data.DataSet>与包含的 XML与非限定命名空间的元素。 若要读取未限定的元素在这种情况下，设置**elementFormDefault**等于"qualified"中的 XSD 架构。 例如:  
   
 ```xml  
 <xsd:schema id="customDataSet"   
@@ -125,12 +126,12 @@ foreach (DataTable dataTable in dataSet.Tables)
 ## <a name="merging-data-from-xml"></a>合并 XML 中的数据  
  如果 <xref:System.Data.DataSet> 已经包含数据，则会向已存在于 <xref:System.Data.DataSet> 中的数据添加 XML 中的新数据。 **ReadXml**不会合并从 XML 向<xref:System.Data.DataSet>任何具有匹配的主键行信息。 若要使用 XML 的新信息覆盖现有行信息，请使用**ReadXml**创建新<xref:System.Data.DataSet>，，然后<xref:System.Data.DataSet.Merge%2A>新<xref:System.Data.DataSet>到现有<xref:System.Data.DataSet>。 请注意，加载 DiffGram 使用**ReadXML**与**XmlReadMode**的**DiffGram**将合并具有相同的唯一标识符的行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>  
  [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
- [从 XML 架构 (XSD) 派生数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
+ [从 XML 架构派生数据集关系结构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  [从 XML 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [从 XML 加载数据集架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [从 XML 加载数据集构架信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

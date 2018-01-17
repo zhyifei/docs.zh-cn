@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b18afdeb63badb22e1447372961d2eff7735243b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 86765489f6d76fa17e6c1eeb36fa45cae67b9bfa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 指定一个绑定，该绑定为将通过启用 HTTP Cookie 作为交换机制来进行交换的 <xref:System.ServiceModel.BasicHttpBinding> 提供上下文。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  此绑定元素提供一个保护级别和一种交换机制，作为 `BasicHttpBinding` 的上下文的一部分。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.BasicHttpBinding>  
  <xref:System.ServiceModel.BasicHttpContextBinding>  
  <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>  

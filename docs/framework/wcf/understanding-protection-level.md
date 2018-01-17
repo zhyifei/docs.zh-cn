@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f107e4d1a9779c04a33060af34ee1fc873305eab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-protection-level"></a>了解保护级别
 在许多不同的类中可以找到 `ProtectionLevel` 属性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 类。 此属性控制部分（或整个）消息的保护方式。 本主题说明 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 功能及其原理。  
@@ -104,7 +105,7 @@ ms.lasthandoff: 12/02/2017
   
  当客户端调用 `Price` 方法时，它在接收到服务的答复时引发异常。 发生这种情况是因为客户端未指定 `ProtectionLevel` 的 `ServiceContractAttribute`，所以客户端为所有方法使用默认值 (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>)，包括 `Price` 方法。 但是，服务返回该值时使用 <xref:System.Net.Security.ProtectionLevel.Sign> 级别，因为服务协定定义了一个单一的方法，此方法将其保护级别设置为 <xref:System.Net.Security.ProtectionLevel.Sign>。 在这种情况下，客户端在验证服务的响应时将引发错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  <xref:System.ServiceModel.FaultContractAttribute>  

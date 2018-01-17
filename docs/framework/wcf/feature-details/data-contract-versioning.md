@@ -20,11 +20,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 68d9d153127f3f34c6546cef9f2b3ab5fc668899
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-versioning"></a>数据协定版本管理
 随着应用程序的发展，您也可能不得不更改服务使用的数据协定。 本主题说明如何管理数据协定的版本。 本主题介绍数据协定版本管理机制。 有关完整概述和版本管理指南，请参阅[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -125,7 +126,7 @@ ms.lasthandoff: 12/02/2017
  大多数集合更改是非重大更改，这是因为在数据协定模型中，大多数集合类型可以彼此互换。 但是，将非自定义集合更改为自定义集合是重大更改，反之亦然。 此外，更改集合的自定义设置（即，更改其数据协定名称和命名空间、重复元素名称、键元素名称以及值元素名称）也是重大更改。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]集合自定义项，请参阅[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
 更改集合内容的数据协定（例如，从整数列表更改为字符串列表）自然也是重大更改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  

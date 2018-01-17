@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ceadd193784a2c1936b0dcc2d634ae87b513e57e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8807564cb9acf8c50aed43ee11441ebdfbbcea78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grouppartition-entity-sql"></a>GROUPPARTITION (Entity SQL)
 返回从聚合与之相关的当前组分区提取的参数值集合。 `GroupPartition` 聚合是基于组的聚合，没有基于集合的形式。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/18/2017
 GROUPPARTITION( [ALL|DISTINCT] expression )  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `expression`  
  任何 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 表达式。  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4dd96f444d6405022a0a812a55a92cec1052fbb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>对 WCF Web HTTP 服务的缓存支持
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]可以使用 WCF Web HTTP 服务在 ASP.NET 中已提供的声明性缓存机制。 这样，你可以缓存来自 WCF Web HTTP 服务操作的响应。 如果用户向配置为进行缓存的服务发送了 HTTP GET，ASP.NET 将发送回已缓存的响应且不会调用服务方法。 在缓存过期后，下次用户发送 HTTP GET 时，将会调用服务方法且再次缓存响应。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET 缓存，请参阅[ASP.NET 缓存概述](http://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -28,7 +29,8 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中引入了称为 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 的新特性，您可以使用该特性指定缓存配置文件名称。 此特性适用于服务操作。 下面的示例将 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 应用到服务以启用 ASP.NET 兼容性，并配置 `GetCustomer` 操作以进行缓存。 <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute`特性指定包含要使用的缓存设置的缓存配置文件。  
   
 ```csharp
-[ServiceContract] AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]
+[ServiceContract] 
+[AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]
 public class Service
 {
     [WebGet(UriTemplate = "{id}")]

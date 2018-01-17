@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc644648ad244eb642f96fdc93213fbd38152f48
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a6a0cc78cad2ccbc8dca6097227ef22f45dbc63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; 的 &lt;add&gt; 元素
 指定希望出现在联合凭据中的必选和可选的声明类型。 例如，服务规定有关传入凭据的要求，传入凭据必须具有某组声明类型。  
@@ -84,7 +85,7 @@ optional="true" />
 </bindings>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>  
  <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
  <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>  

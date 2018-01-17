@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5391c48720e68a8a7e6e0fb7735252d00025adc6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 80f794be15eae33ca4e28dc0cfe04872f63230b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色和带下划线的 Web 链接。 你可以编写将打开一个显示时单击链接在链接文本中指定的网站的浏览器窗口的代码。  
@@ -126,7 +127,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>  
  <xref:System.Windows.Forms.RichTextBox.LinkClicked>  
  <xref:System.Windows.Forms.RichTextBox>  

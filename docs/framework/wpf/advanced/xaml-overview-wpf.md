@@ -30,11 +30,12 @@ caps.latest.revision: "57"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a03ec6feef26c8c3666ba5e4ff946ba237c177f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概述 (WPF)
 本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。 本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。 XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。  
@@ -337,7 +338,7 @@ ms.lasthandoff: 11/21/2017
   
  [依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)详细介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中属性的多样性，并介绍依赖属性的概念。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
  [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
  [XAML 命名空间 (x:) 语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  

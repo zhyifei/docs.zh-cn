@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 303cb9c1c5b6521839987a56cdc008eac0559cf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43a08faf27186bde85dd12f027034f759378debf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-clone-a-printer"></a>如何：克隆打印机
 大多数的企业在某些时候，将购买的同一模型的多个打印机。 通常情况下，这些进行所有安装使用几乎相同的配置设置。 安装每个打印机会很耗时，而且容易出错。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空间和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都通过公开的类[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]便可以立即安装任意数目的其他已克隆的打印队列，从现有的打印队列。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
  [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Printing.IndexedProperties>  
  <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>  
  <xref:System.Printing.LocalPrintServer>  

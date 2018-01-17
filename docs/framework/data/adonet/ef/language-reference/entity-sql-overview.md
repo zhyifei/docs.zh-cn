@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 301a934cad59b14d1a65a1e98247490d578e6866
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77e3a5d0073cb13d1904f802c4d6760fc52caa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-sql-overview"></a>Entity SQL 概述
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一种类似于 SQL 的语言，用于在[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]中查询概念模型。 概念模型表示为实体和关系，数据和[!INCLUDE[esql](../../../../../../includes/esql-md.md)]允许您查询这些实体和关系可为已使用 SQL 的人熟悉的格式。  
@@ -29,9 +30,9 @@ ms.lasthandoff: 11/21/2017
  本节提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的概念信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Entity SQL 与 TRANSACT-SQL 的区别](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
+ [实体 SQL 与 Transact-SQL 的区别](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
   
- [Entity SQL 快速参考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-quick-reference.md)  
+ [实体 SQL 快速参考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-quick-reference.md)  
   
  [类型系统](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)  
   
@@ -53,9 +54,9 @@ ms.lasthandoff: 11/21/2017
   
  [文本](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md)  
   
- [Null 文本和类型推理](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)  
+ [NULL 文本和类型推理](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)  
   
- [输入的字符集](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)  
+ [输入字符集](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)  
   
  [查询表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
   
@@ -67,11 +68,11 @@ ms.lasthandoff: 11/21/2017
   
  [比较语义](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-semantics-entity-sql.md)  
   
- [撰写嵌套的 Entity SQL 查询](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
+ [撰写嵌套的实体 SQL 查询](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
   
- [可以为 null 的结构化的类型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
+ [可以为 NULL 的结构化类型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [实体 SQL 语言](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
  [CSDL、SSDL 和 MSL 规范](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

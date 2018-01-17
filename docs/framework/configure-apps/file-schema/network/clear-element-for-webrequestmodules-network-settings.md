@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c88792663b07ace7250b6ee4065e60d6cfb90afd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 34a814c14cc482bdf5deafceebae253da921736b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;清除&gt;webRequestModules （网络设置） 的元素
 从应用程序中删除所有已注册的 Web 请求模块。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|指定要用于从网络主机请求信息的模块。|  
   
@@ -79,6 +80,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.WebRequest>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

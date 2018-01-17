@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2db5b8c2425637e24086f54e8ef69b0e5aac3633
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f475877bcb7a794d1a58ef9202735e016363678b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperating-with-unmanaged-code"></a>与非托管代码交互操作
 .NET Framework 提升与 COM 组件、COM+ 服务、外部类型库和许多操作系统服务的交互。 托管和非托管对象模型之间的数据类型、方法签名和错误处理机制有所不同。 要简化 .NET Framework 组件和非托管代码之间的互操作并简化迁移路径，公共语言运行时需对客户端和服务器隐藏这些对象模型中的差异。  

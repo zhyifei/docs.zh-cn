@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cf8a054b832b1accdfa8e1d63b2d971a10f244b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50335994fab424b3100c91a202a7ea53643db551
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>客户端 UI 自动化提供程序的实现
 > [!NOTE]
@@ -59,6 +60,6 @@ ms.lasthandoff: 11/21/2017
   
  最后两个参数为可选。 当客户端需要为不同的应用程序使用不同的提供程序时，它可能会指定目标应用程序的映像名称。 例如，客户端可能会为支持“多视图”模式的已知应用程序中的 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 列表视图控件使用一个提供程序，为不支持“多视图”模式的另一个已知应用程序中的类似控件使用另一个提供程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建客户端 UI 自动化提供程序](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
  [在客户端应用程序中实现 UI 自动化提供程序](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

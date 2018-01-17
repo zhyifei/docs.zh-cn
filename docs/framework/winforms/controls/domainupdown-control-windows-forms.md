@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37cec82876edadfed5cda338ca12775ad19ae732
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 485640dc320809e9be5550d380b4fc9a2326e027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown 控件（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.DomainUpDown>如下所示的成对的按钮和文本框中的组合的控件的向上或向下滚动到列表。 该控件显示，并设置从选项列表中的文本字符串。 用户可以选择字符串，通过单击向上和向下按钮来浏览列表，按向上和向下箭头键，或通过键入与列表中的项匹配的字符串。 对于此控件的可能用途之一是用于从名称按字母顺序排序列表中选择项。 (若要对列表进行排序，将设置<xref:System.Windows.Forms.DomainUpDown.Sorted%2A>属性`true`。)此控件的功能是非常类似于列表框或组合框中，但其占用很少的空间。  

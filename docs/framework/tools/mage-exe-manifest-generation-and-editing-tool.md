@@ -16,11 +16,12 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bb802df171990eca411dda37fc4743de15fc169
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 405503ac824ccf443d8ada7387d65e55876cb3e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe（清单生成和编辑工具）
 清单生成和编辑工具 (Mage.exe) 是一种命令行工具，可以支持创建和编辑应用程序和部署清单。 作为命令行工具，Mage.exe 可以从批处理脚本和其他基于 Windows 的应用程序（包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序）运行。  
@@ -42,7 +43,7 @@ Mage [commands] [commandOptions]
 #### <a name="parameters"></a>参数  
  下表显示了 Mage.exe 所支持的命令。 有关这些命令所支持的选项的更多信息，请参见 [新建和更新命令选项](#NewUpdate) 以及 [签名命令选项](#Sign)。  
   
-|命令|说明|  
+|命令|描述|  
 |-------------|-----------------|  
 |**-cc, ClearApplicationCache**|清除所有仅联机应用程序的已下载应用程序缓存。|  
 |**-n, -New** *fileType [newOptions]*|创建给定类型的新文件。 有效类型是：<br /><br /> -   `Deployment`：创建新的部署清单。<br />-   `Application`：创建新的应用程序清单。<br /><br /> 如果不使用此命令指定任何其他参数，此命令将使用合适的默认标记和特性值创建合适的类型的文件。<br /><br /> 使用 **-ToFile** 选项（如下表所示）可指定新文件的文件名和路径。<br /><br /> 使用 **-FromDirectory** 选项（如下表所示）可创建一个应用程序清单，应用程序的所有程序集都添加到该清单的 \<dependency> 部分。|  
@@ -54,7 +55,7 @@ Mage [commands] [commandOptions]
 ## <a name="new-and-update-command-options"></a>新建和更新命令选项  
  下表显示了 `-New` 和 `-Update` 命令支持的选项。  
   
-|选项|默认值|适用于|说明|  
+|选项|默认值|适用于|描述|  
 |-------------|-------------------|----------------|-----------------|  
 |**-a, -Algorithm**|sha1RSA|应用程序清单。<br /><br /> 部署清单。|指定用来生成依赖项摘要的算法。 值必须为“sha256RSA”或“sha1RSA。<br /><br /> 与“-Update”选项一起使用。 在使用“-Sign”选项卡时，此选项将被忽略。|  
 |**-appc, -AppCodeBase** `manifestReference`||部署清单。|插入对应用程序清单文件的 URL 或文件路径引用。 此值必须是应用程序清单的完整路径。|  
@@ -83,7 +84,7 @@ Mage [commands] [commandOptions]
 ## <a name="sign-command-options"></a>签名命令选项  
  下表显示了 `-Sign` 命令支持的选项。该命令适用于所有类型的文件。  
   
-|选项|说明|  
+|选项|描述|  
 |-------------|-----------------|  
 |**-cf, -CertFile** `filePath`|指定用于对清单进行签名的数字证书的位置。 此选项可以与 **-Password** 选项结合使用。|  
 |**-ch, -CertHash** `hashSignature`|存储在客户端计算机的个人证书存储中的数字证书的哈希。 此哈希对应于在 Windows 证书控制台中查看的数字证书的指纹属性。<br /><br /> `hashSignature` 可以大写或小写，可以作为单个字符串提供，或者与指纹的每个八进制数一起提供（指纹的每个八进制数用空格分隔，并且整个指纹用引号引起来）。|  
@@ -202,7 +203,7 @@ mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)  
  [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  [受信任的应用程序部署概述](/visualstudio/deployment/trusted-application-deployment-overview)  

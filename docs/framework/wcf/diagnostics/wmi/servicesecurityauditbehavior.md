@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 1ce712bbdb258c477a2ee56f47281b1a1d09ec54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ea9c04c201ff022fcea54b81a998b7020fb2a836
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicesecurityauditbehavior"></a>ServiceSecurityAuditBehavior
 ServiceSecurityAuditBehavior  
@@ -68,11 +69,11 @@ class ServiceSecurityAuditBehavior : Behavior
   
  一个 boolean 值，指定取消显示审核日志写入失败的行为。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>

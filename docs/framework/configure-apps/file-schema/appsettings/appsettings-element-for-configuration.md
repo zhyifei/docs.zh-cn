@@ -12,11 +12,12 @@ ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cb59120d88816ea193bd8588b152d6b848b682d2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cebb9ba7ebeb483233276324289a4ddc5a0bc381
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > 元素\<配置 >
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="remarks"></a>备注
 
-**\<AppSettings >**元素存储自定义应用程序配置信息，如数据库连接字符串、 文件路径、 XML Web 服务 Url 或任何其他自定义配置信息应用程序。 中指定的键/值对 **\<appSettings >**元素访问在代码中使用<xref:System.Configuration.ConfigurationSettings>类。
+ **\<AppSettings >**元素存储自定义应用程序配置信息，如数据库连接字符串、 文件路径、 XML Web 服务 Url 或任何其他自定义配置信息应用程序。 中指定的键/值对 **\<appSettings >**元素访问在代码中使用<xref:System.Configuration.ConfigurationSettings>类。
 
 你可以使用**文件**属性中 **\<appSettings >**元素*Web.config*和应用程序配置文件。 此属性指定的配置文件来提供额外的设置或重写中指定的设置 **\<appSettings >**元素。 **文件**属性可以在源代码管理团队开发方案，例如当用户希望重写应用程序配置文件中指定的项目设置中使用。
 

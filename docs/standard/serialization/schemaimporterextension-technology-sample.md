@@ -12,11 +12,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 862bea7fa17638b6f3c5ca8afb43a76dc7ed85b3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5001b31e11432c36c08f43bfa06b95483b247115
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension 技术示例
 [下载示例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -48,7 +51,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  有关二进制创建和注册步骤示例的更多信息，请参见源代码中的注释以及 build.proj 文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.CodeDom.CodeCompileUnit>  
  <xref:System.CodeDom.CodeNamespace>  
  <xref:System.CodeDom.CodeNamespaceImport>  

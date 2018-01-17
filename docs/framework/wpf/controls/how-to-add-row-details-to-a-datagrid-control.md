@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 036e06d110df8900ab46f0d501f30b4a163c8eb9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f65eb9e916fad83deb1476c1d8f0def4981d08d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>如何：向 DataGrid 控件中添加行详细信息
 使用时<xref:System.Windows.Controls.DataGrid>控件，你可以自定义数据表示通过添加行详细信息部分。 添加行详细信息部分，可根据需要可见还是折叠的模板中的某些数据进行分组。 例如，你可以添加行详细信息，以便<xref:System.Windows.Controls.DataGrid>这将显示仅用于中的每一行的数据的摘要<xref:System.Windows.Controls.DataGrid>，但当用户选择某一行显示更多数据字段。 定义行详细信息部分中的模板<xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>属性。 下图显示行详细信息部分的示例。  

@@ -26,11 +26,11 @@ ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 281b18322f5be4e7dadcb9533680b25016a44c96
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00753eddb641c07ef9c6e6282fe00c5e8d00547a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-compare-statement"></a>Option Compare 语句
 声明比较字符串数据时要使用的默认比较方法。  
@@ -72,13 +72,13 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>若要在 IDE 中设置 Option Compare  
   
-1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。 有关详细信息，请参阅[NIB： 项目设计器用管理项目属性](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)。  
+1.  在“解决方案资源管理器”中，选择一个项目。 在“项目”菜单上，单击“属性”。  
   
 2.  单击“编译”选项卡。  
   
 3.  设置中的值**Option Compare**框。  
   
- 当你创建项目， **Option Compare**上设置**编译**选项卡设置为**Option Compare**中设置**选项**对话框。 若要更改此设置，请在**工具**菜单上，单击**选项**。 在**选项**对话框框中，展开**项目和解决方案**，然后单击**VB 默认值**。 中的初始默认设置**VB 默认值**是**二进制**。  
+ 当你创建项目， **Option Compare**上设置**编译**选项卡设置为**Option Compare**中设置**选项**对话框。 若要更改此设置，请在**工具**菜单上，单击**选项**。 在“选项”对话框中，展开“项目和解决方案”，然后单击“VB 默认值”。 中的初始默认设置**VB 默认值**是**二进制**。  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>若要设置命令行上的 Option Compare  
   
@@ -94,7 +94,7 @@ Option Compare { Binary | Text }
   
  [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
  <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>  
  <xref:Microsoft.VisualBasic.Strings.Replace%2A>  

@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5b52f9f06e2a4adf401367e337be81684f661e1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a8f0a35b569b38e0d7ca79129f720034420ecd23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建可访问的基于 Windows 的应用程序
 创建具有辅助功能的应用程序具有重要的商业意义。 很多政府都有针对软件购买的辅助功能法规。 Certified for Windows 徽标包括辅助功能需求。 据估计，仅美国就有 3 千万居民（其中很多为潜在客户）受到软件辅助功能的影响。  

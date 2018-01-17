@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 441b3a72d5b0a9e63d6093bc130335801503489e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad5e459e7dc070b9412de860048c840f677421f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 下节列出了在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建安全应用程序时应考虑的最佳做法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安全，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[与元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
  有关转发攻击的 NTLM 的概述，请转到[http://msdn.microsoft.com/msdnmag/issues/06/09/SecureByDesign/default.aspx](http://go.microsoft.com/fwlink/?LinkId=109571)。  
   
 ## <a name="always-revert-after-impersonation"></a>始终在模拟后还原  
- 在使用启用客户端模拟的 API 时，应确保还原为原始标识。 例如，在使用 <xref:System.Security.Principal.WindowsIdentity> 和 <xref:System.Security.Principal.WindowsImpersonationContext> 时使用 C# `using` 语句或 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` 语句，如以下代码中所示。 <xref:System.Security.Principal.WindowsImpersonationContext> 类实现 <xref:System.IDisposable> 接口，因此，一旦代码离开 `using` 块，公共语言运行库 (CLR) 就会自动还原到原始标识。  
+ 在使用启用客户端模拟的 API 时，应确保还原为原始标识。 例如，在使用<xref:System.Security.Principal.WindowsIdentity>和<xref:System.Security.Principal.WindowsImpersonationContext>，使用 C#`using`语句或[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using`语句，如下面的代码中所示。 <xref:System.Security.Principal.WindowsImpersonationContext> 类实现 <xref:System.IDisposable> 接口，因此，一旦代码离开 `using` 块，公共语言运行库 (CLR) 就会自动还原到原始标识。  
   
  [!code-csharp[c_SecurityBestPractices#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securitybestpractices/cs/source.cs#1)]
  [!code-vb[c_SecurityBestPractices#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securitybestpractices/vb/source.vb#1)]  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>将自定义绑定上的 SecurityBindingElement.IncludeTimestamp 设置为 True  
  创建自定义绑定时，必须将 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 设置为 `true`。 否则如果将 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 设置为 `false`，并且客户端使用基于非对称密钥的令牌（例如 X509 证书），则不会对消息进行签名。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [有关数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
- [与元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+ [数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

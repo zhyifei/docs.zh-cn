@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 85ee55c0d4ec0d3fb8c18dff570afefeb2eaf25e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e82eb50e4850ffbb4d5fc67d9603a3128cf8bcf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 枚举
 包含一些值，用于描述方法实现功能。  
@@ -77,12 +78,12 @@ typedef enum CorMethodImpl {
 |`miNoOptimization`|指定该方法不应优化。|  
 |`miMaxMethodImplVal`|最大有效值`CorMethodImpl`。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [元数据枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅  
+ [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

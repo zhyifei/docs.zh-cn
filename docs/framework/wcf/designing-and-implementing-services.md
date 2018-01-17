@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3429a9145695a957089941d8c814d441da498c93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6d5a2dfb4db1d57f60e4c7f8cf3300b766402e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designing-and-implementing-services"></a>设计和实现服务
 本部分演示如何定义和实现[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]协定。 服务协定指定终结点与外界通信的内容。 更具体地说，它是有关一组特定消息的声明，这些消息被组织成基本消息交换模式 (MEP)，如请求/答复、单向和双工。 如果说服务协定是一组在逻辑上相关的消息交换，那么服务操作就是单个消息交换。 例如，`Hello` 操作显然必须接受一条消息（以便调用方能够发出问候），并可能返回也可能不返回一条消息（具体取决于操作的礼节性）。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/02/2017
  有关设计协定的详细信息，请参阅[设计服务协定](../../../docs/framework/wcf/designing-service-contracts.md)。 有关实现协定的详细信息，请参阅[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
 ### <a name="messages-up-front-and-center"></a>面向消息  
- 如果您习惯于远程过程调用 (RPC) 样式的方法签名（其请求功能的标准形式为向某一方法传递参数，然后从对象或其他类型的代码接收返回值），则使用托管接口、类和方法模拟服务操作简单而直观。 例如，使用托管语言（如 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 C++ COM）的程序员可以运用 RPC 样式方法（不管是使用对象还是接口）方面的知识来创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务协定，而不会遇到 RPC 样式分布式对象系统中固有的问题。 面向服务的优势是可以实现松耦合、面向消息的编程，同时保持轻松熟悉的 RPC 编程体验。  
+ 如果你习惯于远程过程调用 (RPC) 样式的方法签名（其请求功能的标准形式为向某一方法传递参数，然后从对象或其他类型的代码接收返回值），则使用托管接口、类和方法模拟服务操作简单而直观。 例如，使用托管语言（如 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 C++ COM）的程序员可以运用 RPC 样式方法（不管是使用对象还是接口）方面的知识来创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务协定，而不会遇到 RPC 样式分布式对象系统中固有的问题。 面向服务的优势是可以实现松耦合、面向消息的编程，同时保持轻松熟悉的 RPC 编程体验。  
   
  许多程序员感觉使用面向消息的应用程序编程接口更舒服，例如，像 Microsoft MSMQ 这样的消息队列、.NET Framework 中的 <xref:System.Messaging> 命名空间或在 HTTP 请求中发送非结构化 XML。 有关在消息级别进行编程的详细信息，请参阅[使用消息协定](../../../docs/framework/wcf/feature-details/using-message-contracts.md)，[服务通道级编程](../../../docs/framework/wcf/extending/service-channel-level-programming.md)，和[与 POX 应用程序互操作性](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   
@@ -73,8 +74,8 @@ ms.lasthandoff: 12/02/2017
   
  请注意协定为添加行为而对服务协定实现和运行时配置提出特定要求的方式。 为了公开某一服务以供使用而必须满足的这组要求建立于前一组要求之上。 如果协定对实现提出要求，那么实现可能会对配置和绑定提出更多的要求，以便使服务能够运行。 最后，主机应用程序还必须支持服务配置和绑定所添加的任何要求。  
   
- 在设计、实现、配置和承载 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务应用程序时必须要记住这一添加要求的过程。 例如，协定可能会指定需要支持某一会话。 如果是这样，您必须配置绑定以支持该协定性要求，否则服务实现将无法正常工作。 或者，如果你的服务要求 Windows 集成身份验证并寄宿在 Internet 信息服务 (IIS) 中，则服务所在的 Web 应用程序必须打开 Windows 集成身份验证并关闭匿名支持。 有关功能和不同的服务主机应用程序类型的影响的详细信息，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
+ 在设计、实现、配置和承载 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务应用程序时必须要记住这一添加要求的过程。 例如，协定可能会指定需要支持某一会话。 如果是这样，您必须配置绑定以支持该协定性需求，否则服务实现将无法正常工作。 或者，如果你的服务要求 Windows 集成身份验证并寄宿在 Internet 信息服务 (IIS) 中，则服务所在的 Web 应用程序必须打开 Windows 集成身份验证并关闭匿名支持。 有关功能和不同的服务主机应用程序类型的影响的详细信息，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设计服务协定](../../../docs/framework/wcf/designing-service-contracts.md)  
  [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)

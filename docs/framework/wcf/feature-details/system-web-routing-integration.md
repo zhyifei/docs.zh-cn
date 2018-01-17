@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73ec25ab5376841b2970fedf17ad1de176923f16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f74a0f9d7a39d7d5ccb97d7f4ef022b32bbf4fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 集成
 在 Internet 信息服务 (IIS) 中承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 时，需要将一个 .svc 文件放在虚拟目录中。 此 .svc 文件指定所用的服务主机工厂以及实现服务的类。 对服务发出请求时，在 URI 中指定 .svc 文件，例如 http://contoso.com/EmployeeServce.svc。 对于编写 REST 服务的程序员，此类型的 URI 并非最佳选择。 REST 服务的 URI 指定了特定资源，通常没有任何扩展。 <xref:System.Web.Routing> 集成功能可用于承载响应无扩展的 URI 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 服务。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]路由，请参阅[ASP.NET 路由](http://go.microsoft.com/fwlink/?LinkId=184660)和[AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)示例。  
@@ -79,6 +80,6 @@ ms.lasthandoff: 12/02/2017
     }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [ASP.NET 路由](http://go.microsoft.com/fwlink/?LinkId=184660)

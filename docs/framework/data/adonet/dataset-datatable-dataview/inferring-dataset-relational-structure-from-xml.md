@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5a846bc321aab19cb1d04ba55ca4cca4b7188bcd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c58dbd35c2c203450960118b58da49518098ed7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>从 XML 推断数据集关系结构
 <xref:System.Data.DataSet> 的关系结构（即架构）由表、列、约束和关系组成。 当从 XML 中加载 <xref:System.Data.DataSet> 时，可以预定义架构，也可以从所加载的 XML 显式（或通过推断）创建架构。 有关加载的架构和内容的详细信息<xref:System.Data.DataSet>从 XML，请参阅[从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)和[从 XML 中加载数据集架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
  并非所有出现在 XML 文档中的属性都应包含在推断过程中。 由命名空间限定的属性可以包含对 XML 文档重要但对 <xref:System.Data.DataSet> 架构不重要的元数据。 使用 <xref:System.Data.DataSet.InferXmlSchema%2A>，您可以指定要在推断过程中忽略的命名空间。 有关详细信息，请参阅[从 XML 中加载数据集架构信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [数据集架构推断过程的摘要](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
+ [数据集架构推断过程摘要](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
  提供从 XML 推断 <xref:System.Data.DataSet> 架构的规则的简要概述。  
   
  [推断表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
@@ -51,11 +52,11 @@ ms.lasthandoff: 10/18/2017
  [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  描述 <xref:System.Data.DataSet> 对象如何与 XML 数据进行交互。  
   
- [从 XML 架构 (XSD) 派生数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [从 XML 架构派生数据集关系结构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  描述从 XML 架构定义语言 (XSD) 架构创建的 <xref:System.Data.DataSet> 的关系结构（即架构）。  
   
  [ADO.NET 概述](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  描述 ADO.NET 结构和组件，并说明如何用来访问现有的数据源和管理应用程序数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

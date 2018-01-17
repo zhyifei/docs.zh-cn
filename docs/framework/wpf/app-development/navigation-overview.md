@@ -35,11 +35,12 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73bb3a2f43c5bd91d7a107a0a053381ca7bc0559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-overview"></a>导航概述
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]支持两种类型的应用程序中的可用的浏览器样式导航： 独立应用程序和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 以导航窗格中的包内容[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>类。 你可以从一个导航<xref:System.Windows.Controls.Page>到另一个以声明方式，通过使用<xref:System.Windows.Documents.Hyperlink>，或以编程方式使用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日志记住从其导航和导航回它们的页。  
@@ -739,12 +740,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="security"></a>安全性  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]导航支持允许[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]以导航到跨 Internet，而且它允许应用程序来承载第三方内容。 若要防止有害行为，应用程序和用户[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了各种各样的安全功能中所述[安全](../../../../docs/framework/wpf/security-wpf.md)和[WPF 部分信任安全](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Application.SetCookie%2A>  
  <xref:System.Windows.Application.GetCookie%2A>  
  [应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
  [结构化导航概述](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)  
  [导航拓扑概述](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)  
  [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

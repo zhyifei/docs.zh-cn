@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 014604262952d3aef3676318042ae3c96dc07c89
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b1298f150709b48f18de654be2ab17adfdcbf42a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="durable-duplex"></a>持久双工
 此示例演示如何使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的消息传递活动来设置和配置持久双工消息交换。 持久双工消息交换是一类持续时间较长的双向消息交换。 消息交换的生存期可能比通信通道的生存期和服务实例的内存生存期要长一些。  

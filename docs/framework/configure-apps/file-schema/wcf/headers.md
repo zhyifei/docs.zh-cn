@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d5e0a56055df588e9e42c4e1855c352c3f0d1b2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f7fdd869553a672045c94a256b00638c9d0c4c24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltheadersgt"></a>&lt;标头&gt;
 除了其基本 URI 外，终结点可以按一个或多个 SOAP 标头寻址。 这一点在其中很有用的一组方案是一组 SOAP 媒介方案，其中终结点要求该终结点的客户端包括以媒介为目标的 SOAP 头。 此配置元素可用于定义此类自定义地址标头。 终结点标头集合中的项是用户定义的 XML 元素。 每个元素必须是格式良好的 XML。  
@@ -57,9 +58,9 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  可选标头提供用于标识终结点或与终结点交互的更多详细寻址信息。 例如，标头可指示如何处理传入消息，终结点应发送答复消息的位置，或在多个实例可用时应使用哪个服务实例处理来自特定用户的传入消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.IdentityElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Headers%2A>  
  <xref:System.ServiceModel.Channels.AddressHeaderCollection>  
- [终结点： 地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+ [终结点：地址、绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

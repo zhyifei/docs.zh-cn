@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73a8d570456826a183436066a9198861a7f0c87b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a781963205f260c82d3db316680c9e8c33045434
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-way"></a>单向
 此示例演示具有单向服务操作的服务协定。 客户端不会像在双向服务操作中那样等待服务操作完成。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并使用`wsHttpBinding`绑定。 此示例中的服务是自承载控制台应用程序，通过它可以观察接收和处理请求的服务。 客户端也是一个控制台应用程序。  
@@ -116,4 +117,4 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

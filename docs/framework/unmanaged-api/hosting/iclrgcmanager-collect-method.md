@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 96f99855654a3a86873ca4623d8617f74030938b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2fdb66008a6bbe315f39a0d3fae293219d6b6c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect 方法
 强制指定代的垃圾回收。  
@@ -56,7 +57,7 @@ HRESULT Collect (
 ## <a name="remarks"></a>备注  
  `Collect`方法强制 CLR 垃圾回收器执行而不考虑其当前状态的集合。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -65,11 +66,11 @@ HRESULT Collect (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自动内存管理](../../../../docs/standard/automatic-memory-management.md)  
  [垃圾回收](../../../../docs/standard/garbage-collection/index.md)  
  [ICLRControl 接口](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
  [ICLRGCManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)  
- [CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
+ [CLR Hosting 接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab9a72607f5201164f31d9e4cfdf058e9af804ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cb66908c28a54d4dc24cb77bd82c59862a7fd789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-marshaling-for-arrays"></a>数组的默认封送处理
 在完全由托管代码组成的应用程序中，公共语言运行时将数组类型作为 In/Out 参数传递。 而互操作封送拆收器默认将数组作为 In 参数传递。  
@@ -139,7 +140,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- 虽然可将 size_is 或 length_is 属性应用于接口定义语言 (IDL) 源中的数组，以便将大小传达给客户端，但是 Microsoft 接口定义语言 (MIDL) 编译器不会将该信息传送到类型库。 如果不知道大小，互操作封送处理服务就无法封送数组元素。 因此，将变长数组作为引用参数导入。 例如:   
+ 虽然可将 size_is 或 length_is 属性应用于接口定义语言 (IDL) 源中的数组，以便将大小传达给客户端，但是 Microsoft 接口定义语言 (MIDL) 编译器不会将该信息传送到类型库。 如果不知道大小，互操作封送处理服务就无法封送数组元素。 因此，将变长数组作为引用参数导入。 例如:  
   
  非托管的签名  
   
@@ -179,7 +180,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   将数组大小定义为常数。 例如:   
+-   将数组大小定义为常数。 例如:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -211,7 +212,7 @@ void New3(ref String ar);
  在与含有 LPSTR 或 LPWSTR 的结构数组相关的 OLE 自动化中，存在一项限制。  因此，必须将 String 字段作为 UnmanagedType.BSTR 封送。 否则，将引发异常。  
   
 ### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
- 将包含 ELEMENT_TYPE_SZARRAY 参数（一维数组）的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 同样的转换规则也适用于数组元素类型。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如:   
+ 将包含 ELEMENT_TYPE_SZARRAY 参数（一维数组）的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 同样的转换规则也适用于数组元素类型。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如:  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -269,7 +270,7 @@ HRESULT New(LPStr ar[]);
  虽然封送拆收器具有封送数组所需的长度信息，但通常会将数组长度作为单独的参数传递，以便将长度传达给被调用方。  
   
 ### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
- 将包含 ELEMENT_TYPE_ARRAY 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如:   
+ 将包含 ELEMENT_TYPE_ARRAY 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如:  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -380,7 +381,7 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
  [方向特性](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  

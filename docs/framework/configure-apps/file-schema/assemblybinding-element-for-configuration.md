@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2753e290af60d0dcf4efaa79ff3ffffbd7305c27
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8d670c56a885a5fdae059a87f63fba9ab32f020c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 元素\<配置 >
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/18/2017
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)元素中的配置文件允许应用程序配置文件包含程序集，从而简化组件程序集的管理已知位置，而不是复制的程序集配置设置。
 
 > [!NOTE]
-> **\<LinkedConfiguration >**与 Windows 并排显示清单的应用程序中不支持元素。
+>  **\<LinkedConfiguration >**与 Windows 并排显示清单的应用程序中不支持元素。
 
 ## <a name="example"></a>示例
 

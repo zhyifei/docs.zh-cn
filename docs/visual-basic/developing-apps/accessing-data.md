@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: ae0611fdadabd6ab684f3f97995f3be3e348e648
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 应用程序中访问数据
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 包括多种新功能，以帮助开发访问数据的应用程序。 通过将项从[“数据源”窗口](/visualstudio/data-tools/add-new-data-sources)拖到窗体上来创建 Windows 应用程序的数据绑定窗体。 通过将项从“数据源窗口”拖动到现有控件上来将控件绑定到数据。  
@@ -30,11 +30,11 @@ ms.lasthandoff: 12/09/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  提供介绍如何在 Visual Basic 中使用 LINQ 的主题的链接。  
   
- [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
  提供有关 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 的信息。 包括编程示例。  
   
  [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- 提供介绍如何在应用程序中创建 [LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/index.md) 对象模型的主题的链接。  
+ 提供介绍如何在应用程序中创建 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) 对象模型的主题的链接。  
   
  [在 N 层应用程序中使用数据集](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  提供介绍如何创建多层数据应用程序的主题的链接。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/09/2017
  [将数据保存回数据库](/visualstudio/data-tools/save-data-back-to-the-database)  
  提供说明如何将更新后的数据从应用程序发送到数据库的页面的链接。  
   
- [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
+ [ADO.NET](../../framework/data/adonet/index.md)  
  描述 ADO.NET 类，该类向 .NET Framework 程序员公开数据访问服务。
 
  [Office 解决方案中的数据](https://msdn.microsoft.com/library/xx069ybh)  

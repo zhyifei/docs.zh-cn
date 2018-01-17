@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 321489a2b32bafe4a73f56e0a5dba20f5661bdc2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
 本主题介绍如何才能在 <xref:System.Transactions> 应用程序中成功使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 12/02/2017
   
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [compilation 的 assemblies 的 add 元素（ASP.NET 设置架构）](http://msdn.microsoft.com/en-us/602197e8-108d-4249-b752-ba2a318f75e4)，否则该程序集只能在应用程序域中使用事务（在这种情况下，只有系统内存才是受保护的资源）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ASP.NET 信任级别和策略文件](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
  [securityPolicy 元素 （ASP.NET 设置架构）](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
  [事务管理升级](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

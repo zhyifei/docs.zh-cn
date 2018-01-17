@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de37cc2a366d4a69130c68b09de78caa58cf67fc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-activity-delegates"></a>使用活动委托
 通过活动委托，活动作者可以公开具有特定签名的回调，活动的用户可为其提供基于活动的处理程序。 可以使用两种类型的活动委托：<xref:System.Activities.ActivityAction%601> 用于定义没有返回值的活动委托，<xref:System.Activities.ActivityFunc%601> 用于定义有返回值的活动委托。  
@@ -65,5 +66,5 @@ ms.lasthandoff: 12/02/2017
   
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [公开和调用 ActivityActions](../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)

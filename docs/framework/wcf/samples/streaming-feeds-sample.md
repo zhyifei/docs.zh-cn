@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f2789c6756d8e22dae9eb3189dfb616d162ad906
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e3d2de4dd5510b212e030ea537cea0be3dce24f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-feeds-sample"></a>流处理源示例
 此示例演示如何管理包含大量项的联合源。 在服务器上，此示例演示如何延迟在源中创建各个 <xref:System.ServiceModel.Syndication.SyndicationItem> 对象，一直到项就要被写入网络流之前。  
@@ -128,5 +129,5 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [独立诊断源](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

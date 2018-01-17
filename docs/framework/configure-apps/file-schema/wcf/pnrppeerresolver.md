@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 223a66dd21305a4cbb6bb434f553e821037e7cb0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0152dfaa498b84b6e8cfa277abe858cc24ad34cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 指定要将 PNRP（对等名称解析协议）解析程序用作解析程序。 此元素是可选的，因为 PNRP 是默认解析程序。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/02/2017
 <pnrpResolver resolverType="" />  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>  
  <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  

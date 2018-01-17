@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ff5fbf570c826f5c430109d9f79b3d5f39382f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-message-transfer"></a>流消息传输
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 传输机制支持两种消息传输模式：  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/02/2017
   
 -   流传输以流的形式公开消息。 接收方在消息完整传递之前即可开始处理消息。  
   
--   流传输消除了对大型内存缓冲区的要求，从而提高了服务的可伸缩性。 更改传输模式是否能够提高可伸缩性取决于所传输的消息大小。 消息大小越大，使用流传输越有利。  
+-   流传输消除了对大型内存缓冲区的需求，从而提高了服务的可伸缩性。 更改传输模式是否能够提高可伸缩性取决于所传输的消息大小。 消息大小越大，使用流传输越有利。  
   
  默认情况下，HTTP、TCP/IP 和命名管道传输协议使用缓冲传输。 本文档介绍如何将这些传输协议从缓冲传输模式切换到流传输模式以及这样做的结果。  
   
@@ -56,5 +57,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>缓冲传输和流传输之间的差异  
  将传输模式从缓冲模式更改为流模式还会更改 TCP 和命名管道传输协议的本机通道形状。 对于缓冲传输模式，本机通道形状为 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>。 对于流传输模式，本机通道为 <xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>。 在直接（即，不是通过服务协定）使用这些传输协议的现有应用程序中更改传输模式需要更改通道工厂和侦听器的预期通道形状。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 启用流式处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>请参阅  
+ [如何：启用流式处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

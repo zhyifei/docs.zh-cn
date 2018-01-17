@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f65ecaf9c6ef34176967e1ebf9134ceee195036b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7dfb5f0f442b18159c18a6e5345f6757674fbb90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>如何：打开放置在 RichTextBox 控件上的文件
 在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、 <xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Documents.FlowDocument>控件所有具有内置拖放功能。 内置功能，可拖放文本内部或之间控件。 但是，它不支持通过删除该控件上的文件打开的文件。 这些控件还会将拖放事件标记为已处理。 因此，默认情况下，无法添加你自己的事件处理程序来提供功能以打开拖放的文件。  

@@ -14,11 +14,11 @@ ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1657febf935560ff4c8dd2f54b10fdcb2254891f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7339afdc35341739b592b2a327094754031c346c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>使用 My.Resources 和 My.Settings 快速开发应用程序 (Visual Basic)
 `My.Resources`对象提供对应用程序的资源的访问，并允许你动态检索应用程序资源。  
@@ -28,11 +28,11 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/rapid-application-development-with-my-resources-and-my-settings_1.vb)]  
   
- `My.Resources`对象公开仅全局资源。 它不提供对与窗体关联的资源文件的访问。 必须从窗体来访问窗体资源。 有关详细信息，请参阅[演练：本地化 Windows 窗体](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)。  
+ `My.Resources`对象公开仅全局资源。 它不提供对与窗体关联的资源文件的访问。 必须从窗体来访问窗体资源。  
   
  同样，`My.Settings`对象提供对应用程序的设置访问权限和可以动态存储和检索属性设置以及你的应用程序的其他信息。 有关详细信息，请参阅[My.Resources 对象](../../../visual-basic/language-reference/objects/my-resources-object.md)和[My.Settings 对象](../../../visual-basic/language-reference/objects/my-settings-object.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [My.Resources 对象](../../../visual-basic/language-reference/objects/my-resources-object.md)  
  [My.Settings 对象](../../../visual-basic/language-reference/objects/my-settings-object.md)  
  [访问应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)

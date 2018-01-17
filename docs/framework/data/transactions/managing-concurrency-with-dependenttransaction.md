@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6512fa09bf83b03b1a294caffdfbbdf778ee0bb6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ffda721459ef81d148d55359362fe1aeaf9e699e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>使用 DependentTransaction 管理并发
 <xref:System.Transactions.Transaction> 对象是使用 <xref:System.Transactions.Transaction.DependentClone%2A> 方法创建的。 该对象的唯一目的是保证当某他一些代码段（如辅助线程）还在事务上工作时，不能提交事务。 当在克隆的事务中执行的工作最终完成并可以提交时，该对象可以使用 <xref:System.Transactions.DependentTransaction.Complete%2A> 方法通知事务的创建者。 因而您就可以保持数据的一致性和正确性。  
@@ -90,5 +91,5 @@ using(TransactionScope scope = new TransactionScope())
   
 -   如果辅助线程生成新的辅助线程，请确保利用现有的依赖克隆中再创建一个依赖的克隆，然后将后者传递给该新线程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Transactions.DependentTransaction>

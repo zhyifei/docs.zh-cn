@@ -12,17 +12,18 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 669e94dbc7434074d705fd05de0ece6729c31c5b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b32ab84a3585fc7c1a4638851f5f78eebd41358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensation-samples"></a>补偿（示例）
 本节包含与 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的补偿相关的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [可补偿的活动](../../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)  
+ [可补偿活动](../../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)  
  演示如何使用 <xref:System.Activities.Statements.CompensableActivity> 活动来定义在正常执行过程中要为某个给定操作完成的工作，以及为补偿该操作而需完成的工作（如果稍后需要这样做）。  
   
  [自定义补偿](../../../../docs/framework/windows-workflow-foundation/samples/custom-compensation-sample.md)  

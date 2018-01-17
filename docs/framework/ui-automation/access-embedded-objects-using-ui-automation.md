@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0f417acd3440c224db06ca4034c23a1cd6eb395e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 37110708efa49912d0ed9c81746d125167e17985
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>使用 UI 自动化访问嵌入式对象
 > [!NOTE]
@@ -62,9 +63,9 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UI 自动化 TextPattern 概述](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
  [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [将内容添加到文本框中使用 UI 自动化](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [查找并突出显示文本使用 UI 自动化](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+ [使用 UI 自动化向文本框添加内容](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
+ [使用 UI 自动化查找和突出显示文本](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c60927451ad4350ef507f2e2a661bcfaab4ea788
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0ad5ba4bdd283e411c746906adfed53282c55b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid 控件（Windows 窗体）
 > [!NOTE]
@@ -87,6 +88,6 @@ ms.lasthandoff: 11/21/2017
  [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  提供有关 Windows 窗体中数据绑定的主题的链接。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows 窗体 DataGridView 控件和 DataGrid 控件之间的区别](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

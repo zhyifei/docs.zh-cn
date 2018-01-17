@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46c00bc73e586c7bcfaca95d3998cbe100c6f3c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-resx-files-programmatically"></a>以编程方式使用 .resx 文件
 由于 XML 资源 (.resx) 文件必须由定义完善的 XML 组成，这些 XML 的标头必须遵循特定架构（后跟名称/值对的数据），因此你会发现手动创建这些文件很容易出错。 作为一种替代方法，可以使用 .NET Framework 类库中的类型和成员以编程方式创建 .resx 文件。 你还可以使用 .NET Framework 类库来检索存储在 .resx 文件中的资源。 本主题说明如何使用 <xref:System.Resources> 命名空间的类型和成员来操作 .resx 文件。  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
  **al** *resourcesFilename* **/out:** *assemblyFilename*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
  [Resgen.exe（资源文件生成器）](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
  [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6b93335d0d5d1524c9a0b955d1ea279be8c0f243
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd2663bbd5ca93341455b7bd036469d25d91f4a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlibrarygt-element-net-native"></a>&lt;Library&gt; 元素 (.NET Native)
 定义包含元数据在运行时间可以用于反射的类型和类型成员的程序集。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 </Directives>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<应用程序 > 元素](../../../docs/framework/net-native/application-element-net-native.md)  
  [\<指令 > 元素](../../../docs/framework/net-native/directives-element-net-native.md)  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  

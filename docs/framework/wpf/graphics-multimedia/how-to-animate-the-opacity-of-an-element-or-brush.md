@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 808d29292e176af8d3af1fc0f4a02c48ee05ea35
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c3b750e6ee21c8347d3896ec290f0ff564cc0a2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>如何：对元素或画笔的不透明度进行动画处理
 若要使淡入淡出的视图内外的框架元素，可以动态显示其<xref:System.Windows.UIElement.Opacity%2A>属性也可以进行动画处理<xref:System.Windows.Media.Brush.Opacity%2A>属性<xref:System.Windows.Media.Brush>（或画笔） 用来绘制它。 对进行动画处理的元素的不透明度能并其子淡入和移出视图中，但对进行动画处理的画笔用于绘制元素使您可以更选择性有关元素的哪些部分淡。 例如，您可以创建动画用于绘制按钮的背景的画笔的不透明度。 这将导致该按钮的背景以淡入淡出视图，同时使其文本完全不透明。  

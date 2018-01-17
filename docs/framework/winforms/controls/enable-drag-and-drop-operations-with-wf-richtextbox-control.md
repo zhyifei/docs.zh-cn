@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91739643aaa2d7fe3ea302d0d35edabbae0ab14f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8497f0c13fece9c6a2b3ca2d1d2df0d427c605e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>如何：在 Windows 窗体 RichTextBox 控件中启用拖放操作
 通过处理 <xref:System.Windows.Forms.RichTextBox> 和 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件，在 Windows 窗体 <xref:System.Windows.Forms.RichTextBox.DragDrop> 控件中进行拖放操作。 因此，在 <xref:System.Windows.Forms.RichTextBox> 控件中进行拖放操作是非常简单的。  
@@ -174,7 +175,7 @@ ms.lasthandoff: 11/21/2017
   
      释放鼠标按钮，所选文本将放开（也就是引发 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件）并插入到 <xref:System.Windows.Forms.RichTextBox> 控件中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.RichTextBox>  
  [如何：在应用程序之间执行拖放操作](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
  [RichTextBox 控件](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  

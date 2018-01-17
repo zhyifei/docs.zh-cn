@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a4f58c5124e229f1692dabbb0abded0e21a346f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-service"></a>路由服务
 路由服务是充当消息路由器的泛型 SOAP 中介。 路由服务的核心功能是基于消息内容来路由消息，通过该功能，可基于消息本身（标头或消息正文）中的值将消息转发到客户端终结点。  
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 -   动态配置  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
  [路由协定](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  [消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)

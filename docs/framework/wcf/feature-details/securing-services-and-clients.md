@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ed37992b5488d33b9292bdd54eef47f9eb12f225
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 52e07a83f5a1b84abc46f00e6fd6e80e4b9a2622
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services-and-clients"></a>保护服务和客户端的安全
 本节中的信息主要针对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的编程安全。 通常，这包括选择系统提供的相应绑定、设置安全元素的属性，然后设置服务行为的属性（控制检索凭据以供服务或客户端使用的方式）。 这些技术涵盖大多数情况下，大多数用户的安全要求中所示[常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 如果你的方案需要更多的功能，请首先参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); 如果解决方案不明显，请参阅[扩展安全](../../../../docs/framework/wcf/extending/extending-security.md)。 如果要创建 （或与互操作性） 的系统使用丰富的声明，请参阅中的主题[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
@@ -27,10 +28,10 @@ ms.lasthandoff: 11/21/2017
  [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  用于保护消息安全的编程模型概述。  
   
- [传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [传输安全性概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  如何通过传输层保护消息安全概述。  
   
- [消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [消息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  总结在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用消息级安全的原因。  
   
  [安全会话](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>相关章节  
- [安全性的基础概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
  [扩展安全性](../../../../docs/framework/wcf/extending/extending-security.md)  
   
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/21/2017
   
  [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)  
  [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

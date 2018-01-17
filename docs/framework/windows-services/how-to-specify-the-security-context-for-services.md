@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 50a9c6ff7f02cda4475aa5390181fa5d410af161
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ce65358f6d63414dbe6798d3cc2464ee2741980
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>如何：为服务指定安全上下文
 默认情况下，服务以外的登录的用户的不同的安全上下文中运行。 默认的系统帐户的上下文中运行的服务调用`LocalSystem`，这将给予他们不同的访问权限到用户以外的系统资源。 你可以更改此行为，以指定应在其下运行你的服务的不同用户帐户。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  在**属性**窗口中，设置<xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>为适当的值。  
   
-## <a name="see-also"></a>另请参阅  
- [Windows 服务应用程序简介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何： 将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [如何： 创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>请参阅  
+ [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)

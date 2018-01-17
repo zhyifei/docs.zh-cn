@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: de808e333506858d6591dab6c7c06e6a3e9ddabd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fdf3f12b325282b048420f57befa752f3f3f6803
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>示例：故障诊断动态编程
 > [!NOTE]
@@ -68,6 +69,6 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="could-the-code-be-rewritten"></a>代码能够重写吗？  
  如果该应用过去使用的是 `typeof(LayoutApplicationVM)` 而不是 `Type.GetType("LayoutApplicationVM")`，工具链可能已经保存了 `browse` 元数据。  然而，它也可能没有创建 `invoke` 元数据，这在实例化该类型时可能会导致 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常。 要阻止这一异常，你仍然必须为命名空间添加一个运行时指令或指定 `dynamic` 策略的类型。 有关运行时指令的信息，请参阅 [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [示例：处理绑定数据时出现的异常](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ed0372349a08687fd83b0fc989cc4cb88c29d96c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xtype-markup-extension"></a>x:Type 标记扩展
 提供 CLR<xref:System.Type>是指定的 XAML 类型的基础类型的对象。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 |||  
 |-|-|  
 |`prefix`|可选。 将非默认 XAML 命名空间映射前缀。 指定前缀通常是不必要。 请参阅“备注”。|  
-|`typeNameValue`|必需。 类型名称解析为当前的默认 XAML 命名空间;或指定的映射前缀如果`prefix`提供。|  
+|`typeNameValue`|必须的。 类型名称解析为当前的默认 XAML 命名空间;或指定的映射前缀如果`prefix`提供。|  
   
 ## <a name="remarks"></a>备注  
  `x:Type`标记扩展有相似的职能到`typeof()`中的运算符[!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]或`GetType`中的运算符[!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
   
  在 WPF 中，可以使用 XAML 2009 功能但仅针对宽松型 XAML (未标记编译的 XAML) 中。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Style>  
  [样式设置和模板化](../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

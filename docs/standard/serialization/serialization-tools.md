@@ -12,11 +12,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ea06f1ce1d49b731a37d28a43626b05380a3718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33da3336cc78763de080eb21e3b84fd4cfdc7716
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-tools"></a>序列化工具
 本节包含有关序列化工具的详细信息。 您可以从命令行中运行所有工具。  
@@ -31,5 +34,5 @@ ms.lasthandoff: 12/02/2017
 |[XML 序列化程序生成器工具 (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|为指定程序集中的类型创建一个 XML 序列化程序集，以改进 <xref:System.Xml.Serialization.XmlSerializer> 的运行时性能。|  
 |[XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)|生成的 XML 架构应遵从万维网联合会 (W3C) 提出的 XSD 语言。 此工具利用 XSD 架构文件生成公共语言运行库类和 <xref:System.Data.DataSet> 类。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)

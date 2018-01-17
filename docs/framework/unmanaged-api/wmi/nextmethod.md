@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d9b14424bb914be3ba127670e1b6490f79854d6e
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 6b886b3ecbd1d5b5b8d212846b2bd8291fa43909
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nextmethod-function"></a>NextMethod 函数
 检索到的调用开始枚举中的下一步方法[BeginMethodEnumeration](beginmethodenumeration.md)。  
@@ -62,7 +63,7 @@ HRESULT NextMethod (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_UNEXPECTED` | 0x8004101d | 没有不需要调用[ `BeginEnumeration` ](beginenumeration.md)函数。 |
 | `WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -78,7 +79,7 @@ HRESULT NextMethod (
 
 有关 c + + 示例，请参阅[IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx)方法。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

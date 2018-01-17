@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0c8fd5a9a5c4d6007ff0f67132b97b0aa5d98256
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 15c2561487eecb44cf3542768de0a77d1dd6713d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
 从标记处理程序集合中移除指定的安全令牌处理程序。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|要删除的令牌处理程序的 CLR 类型名称。 有关如何指定详细信息`type`属性，请参阅[自定义类型引用](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24)。 必需。|  
+|类型|要删除的令牌处理程序的 CLR 类型名称。 有关如何指定详细信息`type`属性，请参阅[自定义类型引用](http://msdn.microsoft.com/en-us/7286d2e3-c63d-49fd-abdc-ce2705f22c24)。 必须的。|  
   
 ### <a name="child-elements"></a>子元素  
  无  

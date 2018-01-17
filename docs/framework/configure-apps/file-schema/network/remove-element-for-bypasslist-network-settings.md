@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a87632ec9725aa24d085ca6c1bf1e54545b324fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a385401217c10a316268f48757e46e3d0cfea09c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;删除&gt;将 bypasslist （网络设置） 的元素
 从代理绕过列表中删除 IP 地址或 DNS 名称。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`address`|正则表达式描述的 IP 地址或 DNS 名称。|  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[将 bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
   
@@ -88,6 +89,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bc2f081411577094ea1b95c25478822a6c1747c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f25058071e041ac1e14de2c223750013c8ef1d30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-tutorial"></a>入门教程
 本节包含一组介绍 [!INCLUDE[wf](../../../includes/wf-md.md)] 应用程序编程的演练主题。 按照这些主题中的过程操作，将生成一个猜数游戏应用程序。 本教程中的第一个主题将逐步引导您创建工作流所需的自定义活动。 在第二个主题中，将这些活动与内置的工作流活动组合成一个流程图工作流。 在第三个主题中，配置宿主应用程序以运行工作流，并在最后的主题中介绍持久性。 此过程的每一步骤都依赖于前面的步骤，因此建议您按顺序完成这些步骤。  
@@ -46,5 +47,5 @@ ms.lasthandoff: 12/02/2017
  [如何：更新正在运行的工作流实例的定义](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)  
  介绍如何使用动态更新来修改运行的工作流实例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows Workflow Foundation 编程](../../../docs/framework/windows-workflow-foundation/programming.md)

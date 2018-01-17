@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f33e6ada38e3e1cb5b7b564f75ca43aa07ee1882
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="transaction-fundamentals"></a>事务基础知识
 事务将多个任务绑定在一起。 例如，假设应用程序执行两个任务。 首先，它在数据库中创建一个新表。 然后，它调用一个专用对象，来收集数据、设置数据格式以及将数据插入新表中。 这两个任务是相关的，甚至是相互依赖的，以便只有在可以用数据填充表时才创建新表。 在单个事务范围内执行这两个任务时，会在它们之间强制建立连接。 如果第二个任务失败，则第一个任务会回滚到创建新表之前的点。  
@@ -29,9 +30,9 @@ ms.lasthandoff: 12/02/2017
   
  在使用 <xref:System.Transactions> 所提供的类开发事务应用程序时，不必考虑需要使用哪种事务，也不必考虑所涉及的事务管理器。 <xref:System.Transactions> 基础结构会为您自动管理这些事宜。  
   
- 在创建事务时，可以指定应用于该事务的隔离级别。 隔离级别由 <xref:System.Transactions.IsolationLevel> 类定义，该类确定其他事务对受事务影响的数据必须具有的访问级别。  
+ 在创建事务时，可以指定应用于该事务的隔离级别。 通过定义的隔离级别<xref:System.Transactions.IsolationLevel>枚举，确定何种级别的其他事务都具有对数据受事务的访问。  
   
  你可以创建使用 ADO.NET，事务<xref:System.EnterpriseServices>，或通过提供的事务编程模型<xref:System.Transactions>命名空间。 [功能由 System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)主题讨论可用于编写事务应用程序使用的功能<xref:System.Transactions>命名空间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [由 System.Transactions 提供的功能](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

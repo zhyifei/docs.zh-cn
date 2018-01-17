@@ -14,11 +14,12 @@ caps.latest.revision: "52"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 561e451656cd725a732ea727badeb47087252b9b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 769869fb00c5cc8352ebe8c3952b3d7a9aa75abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-anonymous"></a>匿名消息安全
 “匿名消息安全”示例演示如何实现 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序，该应用程序使用不带客户端身份验证的消息级安全性，但需要使用服务器的 X.509 证书进行服务器身份验证。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -249,4 +250,4 @@ Press <ENTER> to terminate client.
 > [!NOTE]
 >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

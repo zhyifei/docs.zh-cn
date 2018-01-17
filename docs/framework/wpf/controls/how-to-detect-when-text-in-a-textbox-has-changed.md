@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92fc8995ab75cc25bac3bb21b1646052822c3721
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2ef1da879026d8cbefd6ef1baeb6c315e0ea1c02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>如何：检测 TextBox 中的文本何时更改
 此示例演示使用一种方法<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>事件来执行方法时中的文本<xref:System.Windows.Controls.TextBox>控制已更改。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
  注释  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.TextChangedEventArgs>  
  [TextBox 概述](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

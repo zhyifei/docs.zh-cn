@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11be45743bd215315139fb77f016e85bc9b592c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a86604febb7641eef147608e564a27883fdc4bec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 结构
 包含有关要进行垃圾回收的对象的信息。  
@@ -65,7 +66,7 @@ typedef struct _COR_GC_REFERENCE {
   
 -   `Size`。 如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，此字段是垃圾回收器为其计算对象根的对象树的最后一个大小。 请注意，此计算不一定最新。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -74,6 +75,6 @@ typedef struct _COR_GC_REFERENCE {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

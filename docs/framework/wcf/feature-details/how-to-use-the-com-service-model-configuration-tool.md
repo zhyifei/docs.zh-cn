@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ac7410f919ceef50827b9c98adf3ad6312122ec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd89a3333ab68b7d580c813a4b7741686b46c5b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>如何：使用 COM+ 服务模型配置工具
 在选择了适当的宿主模式之后，就可使用 COM+ 服务模型配置命令行工具 (ComSvcConfig.exe) 来配置将作为 Web 服务公开的应用程序接口。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/02/2017
   
      此命令将 `IFinances` 组件（它属于 OnlineStore COM+ 应用程序）的 `ItemOrders.IFinancial` 接口添加到将作为 Web 服务公开的接口集。 此服务使用 COM+ 宿主模式，因此要求显式激活应用程序。  
   
-     虽然可以将通配符星号 (*) 字符用于组件和接口，但应避免使用它，因为您可能希望仅将选定的功能作为 Web 服务公开。 如果对此组件的将来版本运行命令，则使用通配符可能意外地公开在确定配置语法时尚不存在的接口。  
+     虽然可以将通配符星号 (*) 字符用于组件和接口，但应避免使用它，因为你可能希望仅将选定的功能作为 Web 服务公开。 如果对此组件的将来版本运行命令，则使用通配符可能意外地公开在确定配置语法时尚不存在的接口。  
   
      /verbose 选项指示该工具除显示所有错误以外，还要显示警告。  
   
@@ -118,5 +119,5 @@ ms.lasthandoff: 12/02/2017
     ComSvcConfig.exe /?  
     ```  
   
-## <a name="see-also"></a>另请参阅  
- [将与 COM + 应用程序概述集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+## <a name="see-also"></a>请参阅  
+ [与 COM+ 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

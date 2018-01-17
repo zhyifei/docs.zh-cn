@@ -17,41 +17,42 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05a110318bbe92f18d0bc6becb453a5d7851821c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 017d3e51022ad9980dc8f058415697c80a2a6b35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation-and-issued-tokens"></a>联合令牌与颁发的令牌
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以创建能够与实现 WS-Federation 和 WS-Trust 规范的服务进行安全通信的客户端。 这些规范使用 XML、SOAP 和 Web 服务描述语言 (WSDL) 来提供用来跨不同的信任领域进行身份验证和授权的机制。  
   
 ## <a name="in-this-section"></a>本节内容  
- [联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [联合](../../../../docs/framework/wcf/feature-details/federation.md)  
  提供对联合的概述。  
   
- [联合身份验证和信任](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
+ [联合与信任](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
  列出在创建联合服务或客户端时应注意的设计问题。  
   
- [如何： 创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  描述使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 创建联合客户端的基本知识。  
   
- [如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  描述创建联合服务的步骤。  
   
- [如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [如何：创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  描述如何配置使用 `WSFederationHttpBinding` 的客户端和服务。  
   
- [如何： 创建安全令牌服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [如何：创建安全令牌服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
  描述创建安全令牌服务的步骤。  
   
  [安全断言标记语言 (SAML) 令牌和声明](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
  描述可扩展并能够用来创建丰富的声明类型的安全断言标记语言 (SAML) 令牌。  
   
- [如何： 配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [如何：配置本地证书颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  描述如何创建安全令牌的本地颁发机构。  
   
- [如何： 禁用安全会话在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [如何：在 WSFederationHttpBinding 上禁用安全会话](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  描述如何在 `WSFederationHttpBinding` 上禁用安全会话。 在创建要求每个客户端都有一个会话的网络场时，有必要禁用安全会话。  
   
 ## <a name="reference"></a>参考  
@@ -71,7 +72,7 @@ ms.lasthandoff: 12/02/2017
   
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [自定义令牌](../../../../docs/framework/wcf/extending/custom-tokens.md)  
  [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

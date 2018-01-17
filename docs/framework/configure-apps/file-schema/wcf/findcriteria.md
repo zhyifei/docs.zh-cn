@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8643c4f0affb9f693b42cd7631696200bb279489
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f804cdb57355b62db25a559dc3c5db7d4d69369e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
 一个配置元素，提供客户端应用程序用于搜索发现服务的一组条件。 条件可以划分为搜索条件 （指定要查找的服务） 和查找终止条件 （搜索应持续的时长）。  
@@ -74,6 +75,6 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|包含应用程序以客户端形式参与服务发现过程所需的设置。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Discovery.FindCriteria>  
  <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>

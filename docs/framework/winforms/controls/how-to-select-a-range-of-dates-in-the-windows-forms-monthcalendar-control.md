@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d6a8d156e6e9a8c5331bd3db1c8e584be5ac154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32555097c25a23ca1de6e20308a420d3ec70caf9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>如何：在 Windows 窗体 MonthCalendar 控件中选择日期范围
 Windows 窗体的一个重要特征<xref:System.Windows.Forms.MonthCalendar>控件是用户可以选择的日期范围。 此功能是对的日期选择功能的改进<xref:System.Windows.Forms.DateTimePicker>控件，后者只允许用户选择的单个日期/时间值。 您可以设置的日期范围或获取由用户通过使用属性的设置选择范围<xref:System.Windows.Forms.MonthCalendar>控件。 下面的代码示例演示如何设置选择范围。  
@@ -84,7 +85,7 @@ Windows 窗体的一个重要特征<xref:System.Windows.Forms.MonthCalendar>控�
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MonthCalendar 控件](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
  [如何：更改 Windows 窗体 MonthCalendar 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
  [如何：使用 Windows 窗体 MonthCalendar 控件以粗体显示具体日期](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  

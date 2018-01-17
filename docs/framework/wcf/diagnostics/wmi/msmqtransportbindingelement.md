@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 572a19723583a6bc717a71b3b46040148f29e1cd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4cfa3d58127fa560f39ce0dcfe51b97ded6223a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msmqtransportbindingelement"></a>MsmqTransportBindingElement
 MsmqTransportBindingElement  
@@ -60,11 +61,11 @@ class MsmqTransportBindingElement : MsmqBindingElementBase
   
  返回一个布尔值，该值指示是否应该使用 Active Directory 来转换队列地址。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>

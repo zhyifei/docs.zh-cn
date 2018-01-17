@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c136bd5bdacec04a011f728694550fb66ae6d897
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68bfe46462a374899a0782903804edea0e93f161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-input-mask"></a>如何：设置输入掩码
 掩码的文本框控件为增强的文本框控件支持的声明性语法，用于接受或拒绝用户输入。 通过设置掩码属性，可以指定允许用户输入，而无需编写任何自定义验证逻辑应用程序中。 有关详细信息，请参阅备注部分的<xref:System.Windows.Forms.MaskedTextBox>类。  
@@ -67,9 +68,9 @@ ms.lasthandoff: 10/18/2017
   
 4.  选中或清除**使用 ValidatingType**复选框。 **使用 ValidatingType**复选框指定是否数据类型用于验证数据输入用户。 有关更多信息，请参见 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 属性。  
   
-5.  单击“确定”。  
+5.  单击 **“确定”**。  
   
      在输入掩码**掩码**中的属性**属性**窗口。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练：使用 MaskedTextBox 控件](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

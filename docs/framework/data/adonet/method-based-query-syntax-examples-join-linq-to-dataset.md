@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b1f32c5fcedf9bd11e44cb9c8d6e6dddf205b865
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4f5e5d975627377c8d2098e42637076a5e04db5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>基于方法的查询语法示例：联接 (LINQ to DataSet)
 联接是面向相互之间没有可导航关系的数据源（如关系数据库表）的查询中的一项重要操作。 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。 有关详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
@@ -52,8 +53,8 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DP LINQ to DataSet Examples#JoinWithGroupedResults_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#joinwithgroupedresults_mq)]
  [!code-vb[DP LINQ to DataSet Examples#JoinWithGroupedResults_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#joinwithgroupedresults_mq)]  
   
-## <a name="see-also"></a>另请参阅  
- [数据加载到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+## <a name="see-also"></a>请参阅  
+ [将数据加载到数据集中](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
  [标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
  [加入示例](http://go.microsoft.com/fwlink/?LinkId=187357)  

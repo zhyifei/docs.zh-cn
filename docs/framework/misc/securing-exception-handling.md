@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a028fcdfb6c85e456c8722decdb1bca8fd907a9f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 548606a0196012fdd21bf5512e8ea7b089c723ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-exception-handling"></a>保护异常处理
 在 Visual c + + 和 Visual Basic 中，在堆栈中向上进一步的筛选器表达式运行任何之前**最后**语句。 **捕获**块与该筛选器之后运行**最后**语句。 有关详细信息，请参阅[使用用户筛选异常](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。 本节讨论此顺序的安全隐患。 考虑下面的伪代码示例，说明了哪些筛选器语句的顺序和**最后**运行的语句。  
@@ -67,7 +68,7 @@ Finally
 Catch  
 ```  
   
- 筛选器之前运行**最后**语句，以便可以由任何使状态进行了更改的其他代码执行无法其中利用引入安全问题。 例如:   
+ 筛选器之前运行**最后**语句，以便可以由任何使状态进行了更改的其他代码执行无法其中利用引入安全问题。 例如:  
   
 ```cpp  
 try   
@@ -167,5 +168,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

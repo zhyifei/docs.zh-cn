@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc42aa130ce5da05739af43d287441d1644d55c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-architecture-overview"></a>元数据体系结构概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了丰富的基础结构，用于导出、发布、检索和导入服务元数据。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用元数据来描述如何与服务的终结点进行交互，以便工具（如 Svcutil.exe）可以自动生成客户端代码来访问服务。  
@@ -96,12 +97,12 @@ ms.lasthandoff: 12/02/2017
 ## <a name="dynamic-bindings"></a>动态绑定  
  如果终结点的绑定更改，或者希望为使用相同协定但具有不同绑定的终结点创建一个通道，则可以动态更新用来为服务终结点创建通道的绑定。 可以使用 <xref:System.ServiceModel.Description.MetadataResolver> 静态类在运行时为实现特定协定的服务终结点检索和导入元数据。 然后可以使用导入的 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 对象为所需终结点创建客户端或通道工厂。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description>  
  [元数据格式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
  [导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
  [发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
  [检索元数据](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [与元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  [扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

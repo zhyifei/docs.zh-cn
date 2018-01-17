@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21f39aa1f85e06f1967d278e07731b73dcf7cb10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13aad22dca249147e3037bcef6da755c264021db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows 窗体控件中的特性
 .NET Framework 提供了多种可应用于自定义控件和组件的成员的特性。 其中的一些特性会影响类的运行时行为，另一些会影响设计时行为。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.ComponentModel.ToolboxItemAttribute>|表示工具箱项的特性。|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|指定要用于工具箱项的筛选器字符串和筛选器类型。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Attribute>  
  [如何：在 Windows 窗体控件中应用特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
  [扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  

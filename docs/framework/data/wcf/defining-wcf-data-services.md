@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e66c26c12f3f62ee61e02e16318e747793ff927
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61b04be25f54ef22511f45b5752c3ccfa90d94ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-wcf-data-services"></a>定义 WCF 数据服务
 本部分介绍如何创建和配置[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]来公开数据作为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建数据服务时，所需的基本步骤，请参阅[公开数据作为一种服务恢复](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)。  
@@ -33,16 +34,16 @@ ms.lasthandoff: 12/02/2017
  [服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
  描述如何定义在服务器上公开方法的服务操作。  
   
- [源自的定义](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)  
+ [源自定义](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)  
  描述如何在数据服务提供程序定义的数据模型中的实体与数据源中的元素之间创建映射。  
   
- [拦截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
+ [侦听器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
  描述如何定义侦听器方法用于对数据服务请求执行自定义业务逻辑。  
   
  [开发和部署 WCF 数据服务](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
  描述如何使用 Visual Studio 开发和部署数据服务。  
   
- [保护 WCF 数据服务](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
+ [确保 WCF Data Services 的安全](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
  描述数据服务的身份验证和授权以及其他安全注意事项。  
   
  [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/02/2017
  [WCF 数据服务协议实现详细信息](../../../../docs/framework/data/wcf/wcf-data-services-protocol-implementation-details.md)  
  描述 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 协议中 WCF 数据服务当前尚未实现的可选功能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [访问数据服务资源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
  [入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

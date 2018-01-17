@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 968dd4210e13e301ba2f0ca24617df23706cefc0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3726ccdebf310d831fb0d7ea21fab011293f6d99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>如何：在托管 HTML 文档对象模型中更改元素的样式
 你可以使用 HTML 中的样式来控制文档及其元素的外观。 <xref:System.Windows.Forms.HtmlDocument>和<xref:System.Windows.Forms.HtmlElement>支持<xref:System.Windows.Forms.HtmlElement.Style%2A>采用以下格式的样式字符串的属性：  
@@ -84,5 +85,5 @@ ms.lasthandoff: 10/22/2017
  [!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
  [!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.HtmlElement>

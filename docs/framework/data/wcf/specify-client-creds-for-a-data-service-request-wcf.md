@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ee3fb9547ff0a4e949d9e3a7b251cdbc01d6001
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 09575a5f4790bc481b817412df2017e53ee18268
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>如何：为数据服务请求（WCF 数据服务）指定客户端凭据
 默认情况下，客户端库在向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务发送请求时不提供凭据。 但是，可以通过为 <xref:System.Net.NetworkCredential> 的 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 属性提供 <xref:System.Data.Services.Client.DataServiceContext> 以指定发送凭据，对发送到数据服务的请求进行身份验证。 有关更多信息，请参见 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。 本主题中的示例演示如何显式提供 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端从数据服务请求数据时使用的凭据。  
@@ -61,6 +62,6 @@ ms.lasthandoff: 12/02/2017
   
  有关更多信息，请参见 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [保护 WCF 数据服务](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
+## <a name="see-also"></a>请参阅  
+ [确保 WCF Data Services 的安全](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
  [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48644ce8449c8d8eea7306eff1e43539659370c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c6c7fb4d8c6bd93481935a9f2ef7dd4b34af7e71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-text-with-gdi"></a>如何：用 GDI 绘制文本
 与<xref:System.Windows.Forms.TextRenderer.DrawText%2A>中的方法<xref:System.Windows.Forms.TextRenderer>类，可以访问[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]在窗体或控件上绘制文本的功能。 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]文本呈现通常提供更好的性能和更准确的文本比测量[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的代码示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TextRenderer>  
  <xref:System.Drawing.Font>  
  <xref:System.Drawing.Color>  

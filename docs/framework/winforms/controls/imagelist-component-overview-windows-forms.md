@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02fb14b84341d594f35885be220027631999d202
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a913de1a6808c7e600a4f28ed58dedf93506466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 组件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.ImageList> 组件用于存储图像，此图像之后可由控件显示。 借助图像列表，你可为图像的单个一致目录编写代码。 例如，只需更改按钮的 <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> 或 <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> 属性，即可旋转 <xref:System.Windows.Forms.Button> 控件显示的图像。 还可将相同图像列表与多个控件关联。 例如，如果同时使用 <xref:System.Windows.Forms.ListView> 控件和 <xref:System.Windows.Forms.TreeView> 控件来显示相同的文件列表，更改文件在图像列表中的图标将导致新图标显示在这两个视图中。  
@@ -35,6 +36,6 @@ Windows 窗体 <xref:System.Windows.Forms.ImageList> 组件用于存储图像，
   
  如果正在使用 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，则有权访问可在应用程序中使用的大型标准图像库。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ImageList>  
  [如何：使用 Windows 窗体 ImageList 组件添加或删除图像](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

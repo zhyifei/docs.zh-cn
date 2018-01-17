@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e28b4dec851cc4115c2688540ebee151c91e4cd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6923703230d6792d8938de149f64c41a3bf95699
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>如何：保护元数据终结点
 服务的元数据中可能包含恶意用户可以利用的关于您的应用程序的敏感信息。 服务使用者可能还要求一种用于获取关于服务的元数据的安全机制。 因此，有时需要使用安全终结点来发布元数据。  
@@ -102,11 +103,11 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [与元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
+ [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

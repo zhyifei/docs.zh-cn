@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a993ec836417906229e47b7f415f4aee8b1a9eb1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="propagation"></a>传播
 本主题描述 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 跟踪模型中的活动传播。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="synchronization"></a>同步  
  为了同步不同计算机上运行的各终结点之间的事件，向在消息中传播的 ActivityId 标头中添加了一个 CorrelationId。 工具可使用此 ID 来同步计算机之间具有时钟差的事件。 具体地说，服务跟踪查看器工具可使用此 ID 显示终结点之间的消息流。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  

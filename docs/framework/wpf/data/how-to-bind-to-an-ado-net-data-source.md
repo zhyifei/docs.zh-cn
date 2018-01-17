@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0eb555bb9f21385d2d0b66fe0dd39112c8350dec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 760b59bfa0d556974109ccc0211c021ee76df5dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-an-adonet-data-source"></a>如何：绑定到 ADO.NET 数据源
 此示例演示如何将绑定[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Controls.ListBox>控制转移到[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] `DataSet`。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  `IntColorConverter` 将 `int` 转换为颜色。 此转换器，使用<xref:System.Windows.Controls.TextBlock.Background%2A>颜色的第三个<xref:System.Windows.Controls.TextBlock>会显示为绿色如果的值`NumPages`否则是小于 350 和红色。 此处未显示此转换器的实现。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.BindingListCollectionView>  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

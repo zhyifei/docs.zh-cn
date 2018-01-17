@@ -13,14 +13,15 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a771cbc22febf966fec2cf608a9b59204fc6e51a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-logging"></a>消息日志记录
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了记录传入和传出消息以便脱机使用的功能。 使用消息日志记录功能，可以查看消息和消息正文是怎样的。 如果希望了解传入了哪些参数以及接收终结点如何发现以 XML 形式表示的参数，这种类型的日志记录会特别有用。 此外，通过在接收到消息时记录该消息，您可以诊断格式不正确的消息以及查看消息的到达方式。 您还可以检查所使用的安全令牌、经过加密和签名的部分以及保持不变的部分。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了记录传入和传出消息以便脱机使用的功能。 使用消息日志记录功能，可以查看消息和消息正文是怎样的。 如果希望了解传入了哪些自变量以及接收终结点如何发现以 XML 形式表示的自变量，这种类型的日志记录会特别有用。 此外，通过在接收到消息时记录该消息，您可以诊断格式不正确的消息以及查看消息的到达方式。 您还可以检查所使用的安全令牌、经过加密和签名的部分以及保持不变的部分。  
   
 ## <a name="in-this-section"></a>本节内容  
  [消息流概述](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
@@ -39,5 +40,5 @@ ms.lasthandoff: 12/02/2017
   
  本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理和诊断](../../../../docs/framework/wcf/diagnostics/index.md)

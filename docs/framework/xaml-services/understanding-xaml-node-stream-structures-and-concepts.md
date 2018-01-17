@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ae5cfd6cdb557aff4910f38ea0fb7f4b54afbbb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>了解 XAML 节点流结构和概念
 .NET Framework XAML 服务中实现的 XAML 读取器和 XAML 编写器基于 XAML 节点流的设计概念。 将一组 XAML 节点概念化就生成 XAML 节点流。 在此概念化中，XAML 处理器逐一浏览 XAML 中节点关系的结构。 一个打开的 XAML 节点流中始终只存在一个当前记录或当前位置，并且 API 的很多方面只报告此位置提供的信息。 XAML 节点流中的当前节点可描述为对象、成员或值。 通过将 XAML 视为 XAML 节点流，XAML 读取器可与 XAML 编写器通信；并且在涉及 XAML 的加载路径或保存路径操作过程中可启用程序查看、更改 XAML 节点流的内容或与它交互。 XAML 读取器和编写器 API 设计以及 XAML 节点流概念都类似于上一个相关的读取器和编写器设计和概念，如： [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] 以及 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 类。 本主题阐述 XAML 节点流概念，并介绍如何编写在 XAML 节点级别上与 XAML 表示形式进行交互的例程。  
@@ -208,7 +209,7 @@ public class GameBoard {
   
 -   **标记扩展的位置参数：** 此成员节点的名称是 `_PositionalParameters`，并且它在 XAML 语言 XAML 命名空间中进行定义。 它始终包含对象的泛型列表，其中每个对象都是通过以输入 XAML 提供的 `,` 分隔符拆分而预先分隔的位置参数。 可从 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>中获取位置参数指令的静态实体。  
   
--   **未知内容：** 此成员节点的名称是 `_UnknownContent`。 严格地说，它是 <xref:System.Xaml.XamlDirective>，并且在 XAML 语言 XAML 命名空间中定义。 在 XAML 对象元素包含源 XAML 中的内容但当前可用的 XAML 架构上下文中无法确认任何内容属性的情况下，此指令用作 sentinel。 可通过检查名为 `_UnknownContent`的成员，在 XAML 节点流中检测此类情况。 如果加载路径 XAML 节点流中未执行其他操作，在遇到任何对象的 <xref:System.Xaml.XamlObjectWriter> 成员时将在尝试的 `WriteEndObject` 上引发默认 `_UnknownContent` 。 默认 <xref:System.Xaml.XamlXmlWriter> 不会引发，并将成员视为隐式。 可以从 `_UnknownContent` 中获取 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的静态实体。  
+-   **未知内容：** 此成员节点的名称是 `_UnknownContent`。 严格地说，它是 <xref:System.Xaml.XamlDirective>，并且在 XAML 语言 XAML 命名空间中定义。 在 XAML 对象元素包含源 XAML 中的内容但当前可用的 XAML 架构上下文中无法确认任何内容属性的情况下，此指令用作 sentinel。 可通过检查名为 `_UnknownContent` 的成员，在 XAML 节点流中检测此类情况。 如果加载路径 XAML 节点流中未执行其他操作，在遇到任何对象的 <xref:System.Xaml.XamlObjectWriter> 成员时将在尝试的 `WriteEndObject` 上引发默认 `_UnknownContent` 。 默认 <xref:System.Xaml.XamlXmlWriter> 不会引发，并将成员视为隐式。 可以从 `_UnknownContent` 中获取 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的静态实体。  
   
 -   **集合的集合属性：**虽然用于 XAML 的集合类的后备 CLR 类型通常包含具有集合项的专用命名属性，但后备类型解决方案之前的 XAML 类型系统不具有此属性。 相反，XAML 节点流引入 `Items` 占位符作为集合 XAML 类型的成员。 在 .NET Framework XAML 服务实现中，节点流中此指令/成员的名称为 `_Items`。 可以从 <xref:System.Xaml.XamlLanguage.Items%2A>中获取此指令的常量。  
   
@@ -227,7 +228,7 @@ public class GameBoard {
 ### <a name="getobject"></a>GetObject  
  `GetObject` 表示 XAML 节点，其中 XAML 对象编写器应转而获取对象的包含属性的值，而不是构造新对象。 当包含属性在后备类型的对象模型中不是故意为只读时，在 XAML 节点流中遇到 `GetObject` 节点的一种典型情况是针对集合对象或字典对象。 在此情况中，通常由拥有类型的初始化逻辑创建和初始化（通常为空）集合或字典。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xaml.XamlObjectReader>  
  [XAML 服务](../../../docs/framework/xaml-services/index.md)  
  [XAML 命名空间](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)

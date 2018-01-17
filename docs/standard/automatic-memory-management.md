@@ -1,5 +1,5 @@
 ---
-title: Automatic Memory Management
+title: 自动内存管理
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -28,9 +28,9 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="automatic-memory-management"></a>Automatic Memory Management
-自动内存管理是公共语言运行时在[托管执行](../../docs/standard/managed-execution-process.md)过程中提供的服务之一。 公共语言运行时的垃圾回收器为应用程序管理内存的分配和释放。 对开发人员而言，这就意味着在开发托管应用程序时不必编写执行内存管理任务的代码。 自动内存管理可解决常见问题，例如，忘记释放对象并导致内存泄漏，或尝试访问已释放对象的内存。 本节描述垃圾回收器如何分配和释放内存。  
-  
+# <a name="automatic-memory-management"></a>自动内存管理
+自动内存管理是公共语言运行时在[托管执行](../../docs/standard/managed-execution-process.md)过程中提供的服务之一。 公共语言运行时的垃圾回收器为应用程序管理内存的分配和释放。 对开发人员而言，这就意味着在开发托管应用程序时不必编写执行内存管理任务的代码。 自动内存管理可解决常见问题，例如，忘记释放对象并导致内存泄漏，或尝试访问已释放对象的内存。 本节描述垃圾回收器如何分配和释放内存。  
+  
 ## <a name="allocating-memory"></a>分配内存  
  初始化新进程时，运行时会为进程保留一个连续的地址空间区域。 这个保留的地址空间被称为托管堆。 托管堆维护着一个指针，用它指向将在堆中分配的下一个对象的地址。 最初，该指针设置为指向托管堆的基址。 托管堆上包含了所有[引用类型](../../docs/standard/base-types/common-type-system.md)。 应用程序创建第一个引用类型时，将为托管堆的基址中的类型分配内存。 应用程序创建下一个对象时，垃圾回收器在紧接第一个对象后面的地址空间内为它分配内存。 只要地址空间可用，垃圾回收器就会继续以这种方式为新对象分配空间。  
   

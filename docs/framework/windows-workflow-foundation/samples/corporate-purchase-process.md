@@ -12,18 +12,19 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61a5ecdf05fed6c171a84c4f30f50e9a468a414d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bbbed0209eec95ec452385b6c78b1beb2ddfcd75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。  
   
  此示例包含一个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 客户端应用程序，此应用程序允许以不同的参与者身份（如原始请求方或特定的供应商）与该过程进行交互。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 -   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
   

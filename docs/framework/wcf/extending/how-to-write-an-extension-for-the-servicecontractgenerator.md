@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e40ea594c7743dfec06876515a1165da1a16d4e5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c62aa9ac582e93bb86399472e47c41fdb6fad2d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>如何：编写 ServiceContractGenerator 的扩展
 本主题描述如何编写 <xref:System.ServiceModel.Description.ServiceContractGenerator> 的扩展。 这可以通过对操作行为实现 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> 接口或者对协定行为实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 接口来完成。 本主题演示如何对协定行为实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 接口。  
@@ -108,6 +109,6 @@ ms.lasthandoff: 12/02/2017
   
 7.  会为实现 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 的给定协定上的每个协定行为自动调用 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>。 然后，此方法可以修改传入的 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>。 在此示例中，添加了注释。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [元数据](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [如何： 导入自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+ [如何：导入自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

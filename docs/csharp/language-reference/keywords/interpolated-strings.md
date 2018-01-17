@@ -23,7 +23,7 @@ ms.lasthandoff: 11/21/2017
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}");
 ```  
-包含两个相比内, 插的表达式，{name} 和 {小时： hh}。 等效复合格式字符串为：
+包含两个内插表达式：{name} 和 { hour:hh}。等效的复合格式字符串为：
 
 ```csharp
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours); 
@@ -42,7 +42,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 - “格式字符串”是适合正在设置格式的对象类型的格式字符串。 例如，对于 <xref:System.DateTime> 值，它可能是标准的日期和时间格式字符串，例如“D”或“d”。
 
 > [!IMPORTANT]
-> 不能具有之间的所有空白`$`和`"`开头的字符串。 这样做会导致编译时错误。
+> 该字符串开头的`$`和`"`之间不能有任何空白，否则会导致编译时错误。 这样做会导致编译时错误。
 
  可以在可使用字符串的任何位置使用内插字符串。  每次执行带内插字符串的代码时，都会计算内插字符串。 这有助于分隔内插字符串的定义和计算结果。  
   
@@ -52,14 +52,14 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings4.cs#1)]  
 
-按原义内插字符串使用`$`字符跟`@`字符。 有关原义字符串的详细信息，请参阅[字符串](string.md)主题。 下面的代码是使用原义相比内, 插的字符串的上一个代码段的修改的版本：
+原义内插字符串使用`$`字符跟`@`字符。有关原义字符串的详细信息，请参阅[字符串](string.md)主题。下面的代码是上一个使用原义内插字符串的代码片段的修改版本：
 
 [!code-csharp[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings5.cs#1)]  
 
-格式设置的更改是必需的因为不遵循原义字符串`\`转义序列。
+格式设置的更改是必需的，因为原义字符串不遵循`\`转义序列。
 
 > [!IMPORTANT]
-> `$`令牌必须之前出现`@`令牌原义相比内, 插字符串中。
+> 在原义内插字符串中，`$`令牌必须在`@`令牌之前出现。
 
 
 ## <a name="implicit-conversions"></a>隐式转换  

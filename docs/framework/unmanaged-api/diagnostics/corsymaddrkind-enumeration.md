@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 56bb55d9c9f85ae8f8112f16dcf552295699826d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 300913f9ea89044e425f9f05856d13fa15cdc015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 枚举
 指示内存地址的类型。  
@@ -61,8 +62,8 @@ typedef enum CorSymAddrKind
 |`ADDR_BITFIELD`|表示的第一个地址是字段的开始，第二个地址是字段长度。|  
 |`ADDR_NATIVE_ISECTOFFSET`|指示第一个地址是部分和第二个地址是的偏移量。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** CorSym.idl、 CorSym.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [诊断符号存储区枚举](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

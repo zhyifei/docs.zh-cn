@@ -19,24 +19,25 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1fba7b26167ea6bb02bf583f3c01ce8df5766859
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 37a00bd6c4db753be7645e75cfd7cded19a4c79c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scrollviewer"></a>ScrollViewer
 <xref:System.Windows.Controls.ScrollViewer>控件创建其中可以水平或垂直滚动内容的可滚动区域。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ScrollViewer 概述](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [布局](../../../../docs/framework/wpf/advanced/layout.md)

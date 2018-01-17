@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1d4746e2303949ddeabee36e4875e7480467f33e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 868ab986a0f7343e2efd2d4b5f7016d0554084cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>版本 3.5 中的套接字性能增强
 版本 3.5 中增强了 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 类，以供使用异步网络 I/O 实现最高性能的应用程序使用。 已添加了一系列新类，作为 <xref:System.Net.Sockets.Socket> 类的一组增强功能的一部分，这些增强功能提供了一种可供专用高性能套接字应用程序使用的替代异步模式。 这些增强功能专为需要高性能的网络服务器应用程序而设计。 应用程序可以独占方式使用增强型异步模式，或仅在其应用程序的目标热区域（例如，接收大量数据时）使用。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  新的异步套接字操作上下文对象的生存期由应用程序代码中的引用和异步 I/O 引用确定。 作为参数提交给异步套接字操作方法之一后，应用程序不必保留对异步套接字操作上下文对象的引用。 完成回调返回之前，应用程序会继续引用它。 然而，应用程序保留对上下文对象的引用是有利的，这样可将其重新用于将来的异步套接字操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  

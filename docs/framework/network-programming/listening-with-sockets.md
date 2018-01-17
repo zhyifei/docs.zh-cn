@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 6f96463b4f9cb7e61c403cfd77f747c8aefd99a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b799f57644420653b371ac0e65b414c807008b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listening-with-sockets"></a>使用套接字侦听
 侦听器或服务器套接字打开网络上的端口，然后等待客户端连接到该端口。 虽然存在其他网络地址系列和协议，但本示例演示如何创建 TCP/IP 网络的远程服务。  
@@ -68,7 +69,7 @@ listener.Listen(100);
   
  Listen 方法使用一个参数，该参数指定在服务器忙错误返回到连接客户端之前，允许的挂起套接字连接的数目。 在这种情况下，在服务器忙响应返回到客户端编号 101 前，最多 100 个客户端置于连接队列中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用同步服务器套接字](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
  [使用异步服务器套接字](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
  [使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md)  

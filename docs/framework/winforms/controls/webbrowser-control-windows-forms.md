@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0a87c1cd87b21b10404ae4a19ee931cc5f69ece
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 65c92a64619ae993671f7669117e852994072047
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 控件（Windows 窗体）
 Windows 窗体`WebBrowser`的控件承载网页并提供 Web 浏览到你的应用程序的功能。  
@@ -88,5 +89,5 @@ Windows 窗体`WebBrowser`的控件承载网页并提供 Web 浏览到你的应�
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  介绍此枚举，其所有值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

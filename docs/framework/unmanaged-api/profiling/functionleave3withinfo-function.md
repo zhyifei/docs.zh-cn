@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e42614531afb11a811e8862abad0caddf8873483
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f787b5bd78a575d862c198daeee99a0704734276
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo 函数
 通知探查器控件，未返回从函数，并提供一个句柄，可以传递给[icorprofilerinfo3:: Getfunctionleave3info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)检索的堆栈帧和返回值。  
@@ -58,7 +59,7 @@ void __stdcall FunctionLeave3WithInfo(
   
  `FunctionLeave3WithInfo`函数不得调入托管代码或以任何方式导致托管的内存分配。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
@@ -67,7 +68,7 @@ void __stdcall FunctionLeave3WithInfo(
   
  **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)  
  [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
  [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  

@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: af16d1e2c3ef683a6e3da4197a30af58d7758a0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 716de57574beef55d066a3bb121a6fc19a4959d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>如何：使用 Windows 窗体计时器组件以设置的间隔运行过程
 有时可能需要创建一个在循环完成之前以特定时间间隔运行或者在设定时间间隔之后运行的过程。 <xref:System.Windows.Forms.Timer> 组件可实现此过程。  
@@ -252,7 +253,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Timer>  
  [Timer 组件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
  [Timer 组件概述](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

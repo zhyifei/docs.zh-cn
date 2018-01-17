@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df6a089f66ddd6f8f9a2d5677dd8dd6917fcb719
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 270150bb674ee7f9a71cf28008c663e3b833600d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clone-function"></a>克隆函数
 返回是当前对象的完整克隆一个新对象。   
@@ -50,7 +51,7 @@ HRESULT Clone (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 发生了常规错误。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`已指定为参数，且它不是合法在这种用法。 |
@@ -63,7 +64,7 @@ HRESULT Clone (
 
 克隆的对象是 COM 对象的引用计数为 1。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

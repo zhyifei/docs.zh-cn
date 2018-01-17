@@ -17,11 +17,12 @@ caps.latest.revision: "81"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01966709941d9aa1f4d430e8eac4a5c6787e315b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5980673372e52255808bb1d04c804e86f2116100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-how-to-topics"></a>数据绑定帮助主题
 本部分中的主题介绍如何使用数据绑定来从各种数据源在公共语言运行时 (CLR) 对象和 XML 的形式将元素绑定到数据。  

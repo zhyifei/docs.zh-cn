@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7455f2b45e47a6d72118055bd891f7c297b56483
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1c4e51f65df010f466f43c2018d9b1eec6e4ca58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>服务内的 TransactionScope 嵌套
 此示例包含两个演示如何在一个服务中处理 <xref:System.Activities.Statements.TransactionScope> 活动实例的方案。 首先使用 <xref:System.Activities.Statements.TransactionScope> 活动发起事务，以在客户端上创建一个新的事务和要接收的 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，并确定事务在服务器上的生存期范围。 该服务内的第一个方案运行一个辅助 <xref:System.Activities.Statements.TransactionScope> 活动，以演示服务中的 <xref:System.Activities.Statements.TransactionScope> 活动的嵌套。 第二个方案演示如何在嵌套的 <xref:System.Activities.Statements.TransactionScope> 活动中遵循超时限制。  

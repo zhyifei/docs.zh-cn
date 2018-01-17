@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c8b1f3c5b206b2e6a108e784a206d597b69fd662
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c746d0f7a6be96f95f1a051e22de0ad1bd2d2269
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 方法
 通知探查器在实时 (JIT) 编译器遇到重新编译过程中的错误。  
@@ -67,7 +68,7 @@ HRESULT ReJITError(
 |E_OUTOFMEMORY|尝试将标记为 JIT 重新编译指定的方法时，CLR 耗尽了内存。|  
 |其他|操作系统返回了 CLR 控件范围之外的失败。 例如，如果要更改一个内存页的访问权限保护的系统调用失败，将显示操作系统错误。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -76,6 +77,6 @@ HRESULT ReJITError(
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
  [ICorProfilerCallback4 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fb8454d3e1e679154bc016e37b83c3ac4ff6768
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自定义活动
 本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 该自定义活动使用 <xref:System.Net.Mail.SmtpClient> 的功能异步发送电子邮件以及发送经过身份验证的邮件。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/02/2017
 |UserName|String|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的用户名。|  
 |密码|String|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的密码。|  
 |Subject|<xref:System.Activities.InArgument%601>\<字符串 >|邮件主题。|  
-|Body|<xref:System.Activities.InArgument%601>\<字符串 >|邮件正文。|  
+|正文|<xref:System.Activities.InArgument%601>\<字符串 >|邮件正文。|  
 |附件|<xref:System.Activities.InArgument%601>\<字符串 >|用于存储附加到此电子邮件的数据的附件集合。|  
 |From|<xref:System.Net.Mail.MailAddress>|此电子邮件的发件人地址。|  
 |到|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的收件人的地址集合。|  

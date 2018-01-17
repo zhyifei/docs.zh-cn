@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b42167491de72eff5f17dfd8f25ad862c118c23f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1b5603ad7402e46f8b977fe21b0ad1d43c4bfbf8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;clientCertificate&gt; 元素
 定义用于针对服务进行客户端身份验证的 X.509 证书。  
@@ -63,7 +64,7 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 ## <a name="remarks"></a>备注  
  此配置元素指定用于对具有此元素的客户端进行身份验证的证书。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][如何： 指定客户端凭据值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
@@ -74,4 +75,4 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  [如何：指定客户端凭据值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
  [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
  [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [保护服务和客户端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

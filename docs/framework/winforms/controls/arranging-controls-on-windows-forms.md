@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b5709f07edc90b9094561870d31fbe28697974ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6f590080d1a3898e84df30f0fb690c3d18905f8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="arranging-controls-on-windows-forms"></a>排列 Windows 窗体上的控件
 通过在窗体上以各种方式放置和操作控件，可以为用户创建直观且实用的用户界面。  

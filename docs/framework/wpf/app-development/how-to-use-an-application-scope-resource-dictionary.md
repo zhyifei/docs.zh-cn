@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 417fea4dcbb5a8d0a27f9605be19de5921aaf0ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ece6a5d2123bb118f11940081e3c1d939815a8ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>如何：使用应用程序范围的资源字典
 本示例显示如何定义和使用应用程序范围的自定义资源字典。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
  使用时要注意两点<xref:System.Windows.Application.Resources%2A>。 首先，字典*密钥*是一个对象，因此你必须使用完全相同的对象实例时设置和获取属性值。 （请注意，使用字符串时键区分大小写。）其次，字典*值*是一个对象，因此你将需要获取的属性值时，将的值转换为所需的类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.ResourceDictionary>  
  <xref:System.Windows.Application.Resources%2A>  
  [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e1b26ec97f4b379e6b2d75a407408b8382bca52
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f43e8982dc9caaa57ffb6865bf9988243f42fa8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>用于列出选项的 Windows 窗体控件
 如果你想要为用户提供的选项可供选择的列表，你可以将各种控件添加到 Windows 窗体。 具体取决于多少你想要限制用户的输入，你可以添加<xref:System.Windows.Forms.ListBox>控件，<xref:System.Windows.Forms.ComboBox>控件，或<xref:System.Windows.Forms.CheckedListBox>控件。 使用以下链接来确定哪种控件最适合你的需求。  

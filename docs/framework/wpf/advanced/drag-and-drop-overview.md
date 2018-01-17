@@ -23,11 +23,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb803d8cf1a51acf76fb1ef264e0fe63b8a21073
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-overview"></a>拖放概述
 本主题概述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的拖放支持。 拖放通常指一种数据传输方法：使用鼠标（或一些其他指针设备）选择一个或多个对象，将其拖至 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中的某些所需拖放目标之上并放置。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.DragDrop.PreviewDragOver>|<xref:System.Windows.DragDrop.DragOver> 的隧道版本。|  
 |<xref:System.Windows.DragDrop.PreviewDrop>|<xref:System.Windows.DragDrop.Drop> 的隧道版本。|  
   
- 若要处理对象实例的拖放事件，请为上表中所列的事件添加处理程序。 若要处理类级别的拖放事件，请替代相应的虚拟 On*Event 和 On\*PreviewEvent 方法。 有关详细信息，请参阅[按控件基类进行的路由事件类处理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events)。  
+ 若要处理对象实例的拖放事件，请为上表中所列的事件添加处理程序。 若要处理类级别的拖放事件，请替代相应的虚拟 On*Event 和 On*PreviewEvent 方法。 有关详细信息，请参阅[按控件基类进行的路由事件类处理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events)。  
   
 <a name="Implementing_Drag_And_Drop"></a>   
 ## <a name="implementing-drag-and-drop"></a>实现拖放  
@@ -202,21 +203,21 @@ ms.lasthandoff: 11/21/2017
   
  将数据拖到拖放目标的边界中时发生 <xref:System.Windows.DragDrop.DragEnter> 事件。 通常，如果适用于你的应用程序，可处理此事件，以便提供拖放操作效果预览。 请勿设置 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 事件中的 <xref:System.Windows.DragDrop.DragEnter> 属性，因为在 <xref:System.Windows.DragDrop.DragOver> 事件中该属性将被覆盖。  
   
- 下面的示例演示 <xref:System.Windows.DragDrop.DragEnter> 元素的 <xref:System.Windows.Shapes.Ellipse> 事件处理程序。 此代码通过保存当前的 <xref:System.Windows.Shapes.Shape.Fill%2A> 画笔预览拖放操作的效果。 然后，它使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法来检查是否已将 <xref:System.Windows.DataObject> 拖动到包含可以转换为 <xref:System.Windows.Media.Brush> 的字符串数据的椭圆上方。 如果是，则使用 <xref:System.Windows.DataObject.GetData%2A> 方法提取数据。 然后将其转换为 <xref:System.Windows.Media.Brush> 并应用于椭圆。 在 <xref:System.Windows.DragDrop.DragLeave> 事件处理程序中还原更改。 如果数据无法转换为 <xref:System.Windows.Media.Brush>，则不执行任何操作。  
+ 下面的示例演示 <xref:System.Windows.Shapes.Ellipse> 元素的 <xref:System.Windows.DragDrop.DragEnter> 事件处理程序。 此代码通过保存当前的 <xref:System.Windows.Shapes.Shape.Fill%2A> 画笔预览拖放操作的效果。 然后，它使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法来检查是否已将 <xref:System.Windows.DataObject> 拖动到包含可以转换为 <xref:System.Windows.Media.Brush> 的字符串数据的椭圆上方。 如果是，则使用 <xref:System.Windows.DataObject.GetData%2A> 方法提取数据。 然后将其转换为 <xref:System.Windows.Media.Brush> 并应用于椭圆。 在 <xref:System.Windows.DragDrop.DragLeave> 事件处理程序中还原更改。 如果数据无法转换为 <xref:System.Windows.Media.Brush>，则不执行任何操作。  
   
  [!code-csharp[DragDropSnippets#DragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
  [!code-vb[DragDropSnippets#DragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  将数据拖动到拖放目标上方时持续发生 <xref:System.Windows.DragDrop.DragOver> 事件。 此事件和拖动源上的 <xref:System.Windows.DragDrop.GiveFeedback> 事件成对出现。 在 <xref:System.Windows.DragDrop.DragOver> 事件处理程序中，通常使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 和 <xref:System.Windows.DataObject.GetData%2A> 方法来检查传输的数据是否是拖放目标可以处理的格式。 还可以检查是否已按下修改键，这通常指示用户想进行移动操作还是复制操作。 执行这些检查后，设置 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 属性以通知拖动源放置数据将产生的效果。 拖动源收到 <xref:System.Windows.DragDrop.GiveFeedback> 事件参数中的此信息，并且可以设置相应的光标以向用户提供反馈。  
   
- 下面的示例演示 <xref:System.Windows.DragDrop.DragOver> 元素的 <xref:System.Windows.Shapes.Ellipse> 事件处理程序。 此代码检查是否已将 <xref:System.Windows.DataObject> 拖动到包含可以转换为 <xref:System.Windows.Media.Brush> 的字符串数据的椭圆上方。 如果是，它会将 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 属性设置为 <xref:System.Windows.DragDropEffects.Copy>。 这将向拖动源指示可以将数据复制到椭圆。 如果数据无法转换为 <xref:System.Windows.Media.Brush>，则将 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 属性设置为 <xref:System.Windows.DragDropEffects.None>。 这将向拖动源指示椭圆不是数据的有效拖放目标。  
+ 下面的示例演示 <xref:System.Windows.Shapes.Ellipse> 元素的 <xref:System.Windows.DragDrop.DragOver> 事件处理程序。 此代码检查是否已将 <xref:System.Windows.DataObject> 拖动到包含可以转换为 <xref:System.Windows.Media.Brush> 的字符串数据的椭圆上方。 如果是，它会将 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 属性设置为 <xref:System.Windows.DragDropEffects.Copy>。 这将向拖动源指示可以将数据复制到椭圆。 如果数据无法转换为 <xref:System.Windows.Media.Brush>，则将 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 属性设置为 <xref:System.Windows.DragDropEffects.None>。 这将向拖动源指示椭圆不是数据的有效拖放目标。  
   
  [!code-csharp[DragDropSnippets#DragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
  [!code-vb[DragDropSnippets#DragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  将数据拖出目标边界而未放置时，发生 <xref:System.Windows.DragDrop.DragLeave> 事件。 可以处理此事件，以便撤销在 <xref:System.Windows.DragDrop.DragEnter> 事件处理程序中进行的一切操作。  
   
- 下面的示例演示 <xref:System.Windows.DragDrop.DragLeave> 元素的 <xref:System.Windows.Shapes.Ellipse> 事件处理程序。 此代码通过将保存的 <xref:System.Windows.Media.Brush> 应用到椭圆来撤销 <xref:System.Windows.DragDrop.DragEnter> 事件处理程序中执行的预览。  
+ 下面的示例演示 <xref:System.Windows.Shapes.Ellipse> 元素的 <xref:System.Windows.DragDrop.DragLeave> 事件处理程序。 此代码通过将保存的 <xref:System.Windows.Media.Brush> 应用到椭圆来撤销 <xref:System.Windows.DragDrop.DragEnter> 事件处理程序中执行的预览。  
   
  [!code-csharp[DragDropSnippets#DragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
  [!code-vb[DragDropSnippets#DragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
@@ -228,8 +229,8 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Clipboard>  
  [演练：在用户控件上启用拖放功能](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
  [拖放](../../../../docs/framework/wpf/advanced/drag-and-drop.md)

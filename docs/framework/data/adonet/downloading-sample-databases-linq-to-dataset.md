@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6450e683f51abe0bdd4eb7f45089f04d11660d5d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b984fdef7f7f43e266ec4ba42b04990aced159c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>下载示例数据库 (LINQ to DataSet)
 示例和演练[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文档使用 AdventureWorks 示例数据库。 您可以从 Microsoft 下载站点免费下载此产品。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文档中的示例和演练使用 SQL Server 作为数据存储区。 免费提供的 SQL Server Express Edition 也可代替 SQL Server 用作数据存储区。  
@@ -83,5 +84,5 @@ ms.lasthandoff: 10/18/2017
   
 3.  按照网站上的安装说明操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

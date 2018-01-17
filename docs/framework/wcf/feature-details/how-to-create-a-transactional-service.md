@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 647b551e9b78d89cee3ddaf8f47ba8174a23fc5a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fd0812125c63a5a89cf8a87f0ca72cf9a9f168d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-transactional-service"></a>如何：创建事务性服务
 本示例演示创建事务性服务和使用客户端启动的事务协调服务操作的各个方面。  
@@ -192,7 +193,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>控制事务性服务实例的生存期  
   
-1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性指定事务完成时是否释放基础服务实例。 由于此属性值默认为 `true`（除非配置了其他值），因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 具有高效且可预见的“实时”激活行为。 在后续事务上调用服务可确保新服务实例不会保留前一个事务的状态。 虽然此行为通常很有用，但有时您可能希望服务实例在事务完成后仍然保持状态。 例如，所需的状态或资源句柄成本昂贵，难以检索或重建时就属于这种情况。 通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性设置为 `false`，可以实现此目的。 使用该设置时，实例和任何关联状态将可用于后续调用。 使用此设置时，应仔细考虑状态和事务何时清除和完成以及如何清除和完成。 下面的示例演示如何通过对 `runningTotal` 变量保持实例来实现这一目的。  
+1.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性指定事务完成时是否释放基础服务实例。 由于此属性值默认为 `true`（除非配置了其他值），因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 具有高效且可预见的“实时”激活行为。 在后续事务上调用服务可确保新服务实例不会保留前一个事务的状态。 虽然此行为通常很有用，但有时你可能希望服务实例在事务完成后仍然保持状态。 例如，所需的状态或资源句柄成本昂贵，难以检索或重建时就属于这种情况。 通过将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> 属性设置为 `false`，可以实现此目的。 使用该设置时，实例和任何关联状态将可用于后续调用。 使用此设置时，应仔细考虑状态和事务何时清除和完成以及如何清除和完成。 下面的示例演示如何通过对 `runningTotal` 变量保持实例来实现这一目的。  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

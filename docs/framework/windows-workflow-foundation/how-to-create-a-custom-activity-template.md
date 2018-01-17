@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ae81b96a348712af58c5e8527f0f04a59689368
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>如何：创建自定义活动模板
 可使用自定义活动模板来自定义活动（包括自定义复合活动）的配置，使用户无需单独创建每个活动并手动配置其属性和其他设置。 这些自定义模板可以使其可在**工具箱**上[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]或从重新承载设计器中，从该用户可以将它们拖到预配置的设计图面。 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]附带了很好此类模板的示例： [SendAndReceiveReply 模板设计器](/visualstudio/workflow-designer/sendandreceivereply-template-designer)和[ReceiveAndSendReply 模板设计器](/visualstudio/workflow-designer/receiveandsendreply-template-designer)中[消息传递活动设计器](/visualstudio/workflow-designer/messaging-activity-designers)类别。  
@@ -132,6 +133,6 @@ namespace DelayActivityTemplate
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Activities.Presentation.IActivityTemplateFactory>  
  [自定义工作流设计体验](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

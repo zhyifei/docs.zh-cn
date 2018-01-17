@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2d6685bc3dc17294f786a572e6f11165ee011b83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92f2aa2aea721c424ba59af913b868907be36317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-states-and-change-tracking"></a>对象状态和更改跟踪
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象始终处于某种*状态*。 例如，当 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 创建一个新对象时，该对象就处于 `Unchanged` 状态。 您自己创建的新对象对于 <xref:System.Data.Linq.DataContext> 而言是未知的，因而处于 `Untracked` 状态。 在成功执行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 后，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 已知的所有对象均处于 `Unchanged` 状态。 （唯一的例外是已从数据库中成功删除的那些对象，它们处于 `Deleted` 状态，并且在该 <xref:System.Data.Linq.DataContext> 实例中无法使用。）  
@@ -72,6 +73,6 @@ ms.lasthandoff: 11/21/2017
   
  如果您既更新所需的引用，又更新对应的外键，则必须确保它们一致。 如果在您调用 <xref:System.InvalidOperationException> 时这两者不同步，则会引发 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 异常。 尽管外键值的更改足以影响基础行的更新，但您应更改相应的引用以维护对象图的连接性和关系的双向一致性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [插入、 更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+ [插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

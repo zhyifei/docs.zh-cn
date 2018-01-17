@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0241745396ab01a777eef6e3b88e4c12bdd8b429
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f069d09f25575c39db097024384ad1bf14eaaf02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函数
 加载类型库中并使用所提供[ITypeLibResolver 接口](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)若要解决任何内部引用的类型库。  
@@ -86,7 +87,7 @@ HRESULT LoadTypeLibWithResolver(
   
  如果调用`LoadTypeLibWithResolver`直接，则必须提供你自己[ITypeLibResolver 接口](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)实现。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** TlbRef.h  
@@ -95,6 +96,6 @@ HRESULT LoadTypeLibWithResolver(
   
  **.NET framework 版本：** 3.5、 3.0、 2.0  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Tlbexp Helper 函数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  [LoadTypeLibEx 函数](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)

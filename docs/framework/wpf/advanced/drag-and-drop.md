@@ -18,11 +18,12 @@ caps.latest.revision: "85"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d02a32eb2d27d6e8ace4e81703bfadbb3a1b1ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a051002fb0dda77ee2e8a5d8ef95ae3ebf24cc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop"></a>拖放
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供高度灵活拖放基础结构支持拖放数据内均[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序以及其他[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]应用程序。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  [拖放概述](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
  [数据和数据对象](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
  [演练：在用户控件上启用拖放功能](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.DataFormat>  

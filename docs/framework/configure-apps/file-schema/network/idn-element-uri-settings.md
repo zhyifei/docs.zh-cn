@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1f631f41c256e74e9b7bf7dc2d771ee156538820
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44e2db95ec354fff4356a3619fa8230faf67544d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;元素 （Uri 设置）
 指定是否国际化域名 (IDN) 分析将应用于域的名称。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否国际化域名 (IDN) 分析应用到一个域名称的默认值为 none。|  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

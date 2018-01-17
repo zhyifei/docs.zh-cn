@@ -8,11 +8,11 @@ ms.assetid: bbde8390-05cf-4ca4-9c24-073f656bd935
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de5c14e108099c3640aa02e70e0b382ae1c6c0d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3ce304cde3f7d133abc0e67c5a738e9a6ef8161e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-file-is-already-open"></a>此文件已打开
 尝试打开已打开的文件。  
@@ -25,6 +25,6 @@ ms.lasthandoff: 11/21/2017
   
 -   从代码中删除多余的 `FileOpen` 语句。  
   
-## <a name="see-also"></a>另请参阅  
- [不在生成中： FileOpen 函数](http://msdn.microsoft.com/en-us/0f07e1df-d4ea-44a9-a21c-76aa2e242f81)  
- [My.Computer.FileSystem 对象](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+## <a name="see-also"></a>请参阅  
+   
+ [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

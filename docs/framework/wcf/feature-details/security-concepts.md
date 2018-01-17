@@ -13,20 +13,21 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3d589b5411da147b3ae8f17ab862d00026867822
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1ac16afc6ee22665188d5df5e79288341072026e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-concepts"></a>安全性概念
 本节简要说明与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性相关联的概念。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在 WCF 中使用的安全概念](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
+ [WCF 中使用的安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  对安全性实现中使用的概念的高度概括。  
   
- [分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [分布式应用程序安全](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  有关 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在分布式应用程序拓扑中如何提供安全性的概述。  
   
  [安全术语](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="related-sections"></a>相关章节  
  [扩展安全性](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

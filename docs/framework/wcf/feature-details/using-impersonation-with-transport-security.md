@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906d45ccba7185e82aed82626a13034f2e97422d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-impersonation-with-transport-security"></a>将模拟用于传输安全
 *模拟*是客户端的标识对其执行的服务器应用程序的功能。 服务在验证对资源的访问时常常使用模拟。 服务器应用程序使用服务帐户运行，但当服务器接受客户端连接时，它模拟客户端，以便使用客户端凭据执行访问检查。 传输安全是一种传递凭据和使用这些凭据确保通信安全的机制。 本主题介绍如何将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全性与模拟功能结合使用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]模拟使用消息安全，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]HTTP 传输，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [如何：在服务上模拟客户端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  

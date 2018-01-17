@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: de490bac737520ffef5899c8515322c72b2a1144
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ca9848d4640fe9d941b3bfc15a7762135871861
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compiled-queries--linq-to-entities"></a>已编译的查询 (LINQ to Entities)
 如果应用程序需要在实体框架中多次执行结构类似的查询，通常可以通过仅编译查询一次并在每次执行时使用不同参数的方法来提高性能。 例如，某应用程序要检索特定城市的所有客户，而该城市是运行时由用户在窗体中指定的。 LINQ to Entities 支持将已编译的查询用于此目的。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)  
  [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
  [实体框架合并选项和已编译的查询](http://go.microsoft.com/fwlink/?LinkId=199591)

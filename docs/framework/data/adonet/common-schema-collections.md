@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 19a95cf5d8d9b5fc5f805574b6de15c90fb38efd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-schema-collections"></a>公共架构集合
 通用架构集合是每个 .NET Framework 托管提供程序均实现的架构集合。 您可以查询由.NET Framework 托管提供程序以确定支持的架构集合列表，通过调用**GetSchema**不带任何参数，或包含架构集合名称"MetaDataCollections"的方法。 此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。 这些集合描述所有必需的列。 提供程序可以根据需要随意添加其他列。 例如，`SqlClient` 和 `OracleClient` 向限制集合中添加 ParameterName。  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
 |----------------|--------------|-----------------|  
 |ReservedWord|string|提供程序特定的保留的字。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [GetSchema 和架构集合](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

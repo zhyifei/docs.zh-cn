@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f48027e413f9573158cfa2c3748fc93408b3f83
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67f72847e5dca20acd623c566a882e0094e94f68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="images-bitmaps-and-metafiles"></a>图像、位图和图元文件
 `Image` 类是一个抽象基类，提供用于处理光栅图像（位图）和矢量图像（图元文件）的方法。 `Bitmap` 类和 <xref:System.Drawing.Imaging.Metafile> 类从 `Image` 类继承。 `Bitmap` 类通过提供用于加载、保存和操作光栅图像的附加方法，在 `Image` 类的功能上进行扩展。 <xref:System.Drawing.Imaging.Metafile> 类通过提供用于记录和检查矢量图像的附加方法，在 `Image` 类的功能上进行扩展。  

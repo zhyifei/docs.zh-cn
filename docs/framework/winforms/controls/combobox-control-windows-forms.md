@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c0d8ee3a2c51cf05f0669573170c5e15d4e9346e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox 控件（Windows 窗体）
 Windows 窗体`ComboBox`控件用于在下拉组合框中显示数据。 默认情况下，`ComboBox`控件出现在两个部分： 顶部是文本框中，用户可以键入列表项。 第二部分是显示的项，用户可以从中选择一个列表的列表框。  
@@ -45,5 +46,5 @@ Windows 窗体`ComboBox`控件用于在下拉组合框中显示数据。 默认�
  [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
  提供你可以使用列表框、 组合框和选中的列表框中执行操作的列表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9208a73f6a35e4c05ab9be612491f3f7db792a5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>导入 WCF 扩展的自定义元数据
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，元数据导入是从服务的元数据生成服务或其组成部分的抽象表示的过程。 例如，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以从服务的 WSDL 文档导入 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例、<xref:System.ServiceModel.Channels.Binding> 实例或 <xref:System.ServiceModel.Description.ContractDescription> 实例。 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中导入服务元数据，请使用 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 抽象类的实现。 派生自 <xref:System.ServiceModel.Description.MetadataImporter> 类的类型实现对导入元数据格式的支持，这些元数据格式利用了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 WS-Policy 导入逻辑。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/02/2017
 > [!IMPORTANT]
 >  可能将无效或不正确的元数据传递给导入程序。 请确保自定义导入程序对所有形式的 XML 都能保持可靠性。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 导入自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
- [如何： 导入自定义策略断言](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
- [如何： 编写 servicecontractgenerator 的扩展](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+## <a name="see-also"></a>请参阅  
+ [如何：导入自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
+ [如何：导入自定义策略断言](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
+ [如何：编写 ServiceContractGenerator 的扩展](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

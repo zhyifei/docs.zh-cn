@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56fcba73e9b3dac40f4723e9aeb8c8f6169a9b2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd76921059222c9c5b8958ce8e1761a3f04cb037
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-how-to-topics"></a>打印帮助主题
 此部分中的主题演示如何使用打印和打印系统管理功能附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]打印路径。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  [验证和合并 PrintTicket](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  有关签入的打印票证无效，并且，它不会请求打印机不支持的任何内容的说明。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Printing>  
  <xref:System.Printing.IndexedProperties>  
  <xref:System.Printing.Interop>  

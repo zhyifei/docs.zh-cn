@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fed03374a21406866b19d0028ee24edfc7edb707
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0ffac399e3f7cb3f860128b072251131ac356a2a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>如何：从工作流应用程序访问服务
 本主题说明如何从工作流控制台应用程序调用工作流服务。 它依赖于完成[如何： 使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主题。 尽管本主题说明如何从工作流应用程序调用工作流服务，但是，当从工作流应用程序调用任何 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务时，同样可以使用相同方法。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/02/2017
   
 12. 按 Ctrl+F5 启动服务和客户端。 ASP.NET Development Server 承载服务，Internet Explorer 显示 WCF 帮助页中，和客户端工作流应用程序将在控制台窗口中启动并显示从服务 （"Hello，world"） 返回的字符串。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [如何： 使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [如何：使用消息传递活动创建工作流服务](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  [使用工作流中的 Web 项目的 WCF 服务](http://go.microsoft.com/fwlink/?LinkId=207725)

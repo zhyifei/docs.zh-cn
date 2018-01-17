@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 911a770fb4dc6d11f17c1f287a53ddb6552c690a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 47799c5eb10a3274b8b5f10d4ccec96a575da949
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transports"></a>传输
 传输层是通道堆栈的最低层。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 中使用的主要传输有 HTTP、HTTPS、TCP 和命名管道。 本节列出了可用以配置不同类型的传输的所有配置元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.TransportElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  

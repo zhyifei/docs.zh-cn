@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c407a2fcccfbda29ba23f63ba6ae71302c734d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa6d3f7109e8258dff0a07556bc8572f6071c961
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>如何：使 Freezable 成为只读
 此示例演示如何使<xref:System.Windows.Freezable>只读通过调用其<xref:System.Windows.Freezable.Freeze%2A>方法。  
@@ -44,9 +45,9 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息<xref:System.Windows.Freezable>对象，请参阅[可冻结对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.CanFreeze%2A>  
  <xref:System.Windows.Freezable.Freeze%2A>  
  [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

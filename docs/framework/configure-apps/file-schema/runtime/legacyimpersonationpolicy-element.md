@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8f6bed837ab7b0c6a4aebe6116c5ab28bbc62175
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: caeede11d8128af00beb5b1b3426e8c4a5406520
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt;元素
 指定 Windows 标识不流经异步点，而不考虑当前线程上执行上下文的流设置。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
@@ -123,7 +124,7 @@ configuration>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<alwaysFlowImpersonationPolicy > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c38c7af4988e6e47ee307f5cd7a8b6733b043a7c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1718ea9c6ea1e029b66955e88fd54e20db1a3527
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 集成示例
 此示例演示 <xref:System.Web.Routing> 命名空间中承载层与类的集成。 通过 <xref:System.Web.Routing> 命名空间中的类，应用程序可以使用不直接与物理资源对应的 URL。 开发人员使用 Web 路由可以为随后映射回实际 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 HTTP 创建虚拟地址。 如果必须以不使用物理文件或资源的方式承载 WCF 服务，或者必须使用不包含 .html 或 .aspx 这类文件的 URL 访问服务时，这会十分有用。 此示例演示如何利用 <xref:System.Web.Routing.RouteTable> 类创建映射到 global.asax 中定义的运行服务的虚拟 URI。 在此示例中，有两个用 WCF 创建的两个 RSS 源：一个 `movies` 源和一个 `channels` 源。 用于激活服务的 Url 不包含扩展，并在中注册`Application_Start`方法`Global`类派生自<xref:System.Web.HttpApplication.Application_Start>类。  
@@ -90,5 +91,5 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  如果默认应用程序池版本设置为版本 2，请将该版本更新为 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

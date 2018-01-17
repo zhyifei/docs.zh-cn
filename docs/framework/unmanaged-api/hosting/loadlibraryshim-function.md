@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c56f5a3576c505fd7b7d514e3f2d038e7f8f3ecc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5b8fe8413d0eff332e60508a083f03574e58d7bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函数
 加载的 dll 的.NET Framework 可再发行组件包中包含的指定的版本。  
@@ -70,12 +71,12 @@ HRESULT LoadLibraryShim (
 > [!NOTE]
 >  从.NET Framework 2.0 版开始，将加载为 Fusion.dll 导致要加载的 CLR。 这是因为在为 Fusion.dll 函数现在是由运行时提供其实现的包装器。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

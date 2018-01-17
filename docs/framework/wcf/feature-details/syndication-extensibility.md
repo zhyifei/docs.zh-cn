@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87121270d45637834b9499228075f49710073d21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syndication-extensibility"></a>联合扩展性
 联合 API 是专为提供不限制格式的编程模型而设计的，该编程模型允许将联合内容以各种格式写入到网络中。 抽象数据模型由以下类组成：  
@@ -54,6 +55,6 @@ ms.lasthandoff: 12/02/2017
   
 -   重写 MyExtensionFeed 类中的 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem>，以便实例化 MyExtensionItem 而非默认的 <xref:System.ServiceModel.Syndication.SyndicationItem>。 在可以创建 <xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem> 和 <xref:System.ServiceModel.Syndication.SyndicationLink> 对象（例如，<xref:System.ServiceModel.Syndication.SyndicationCategory>、<xref:System.ServiceModel.Syndication.SyndicationPerson> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>）的 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson> 中定义了一系列方法。 所有这些方法都可以重写以创建自定义派生类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
  [联合体系结构](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

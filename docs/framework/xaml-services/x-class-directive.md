@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclass-directive"></a>x:Class 指令
 配置 XAML 标记编译标记和代码隐藏之间联接分部类。 代码的分部类定义在单独的代码文件中[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]语言中，而在 XAML 编译过程的代码生成由通常创建标记分部类。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |||  
 |-|-|  
 |`namespace`|可选。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]命名空间包含由标识的分部类`classname`。 如果`namespace`一个点 （.） 分隔的指定`namespace`和`classname`。 请参阅“备注”。|  
-|`classname`|必需。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]连接加载的 XAML 和代码隐藏该 xaml 的分部类的名称。|  
+|`classname`|必须的。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]连接加载的 XAML 和代码隐藏该 xaml 的分部类的名称。|  
   
 ## <a name="dependencies"></a>依赖项  
  `x:Class`仅可以在 XAML 生产的根元素上指定。 `x:Class`在任何具有在 XAML 生产环境中的父对象上无效。 有关详细信息，请参阅[ \[MS-XAML\]部分 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="silverlight-usage-notes"></a>Silverlight 用法说明  
  `x:Class`适用于 Silverlight 是分开记录。 有关详细信息，请参阅[XAML Namespace （x:）语言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [x:Subclass 指令](../../../docs/framework/xaml-services/x-subclass-directive.md)  
  [XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
  [x:ClassModifier 指令](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  

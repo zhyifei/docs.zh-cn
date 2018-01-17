@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ae2e9a7dd9e08344c254b52c7139c6d1dd2776a3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d86d054d3a5a4e10b8efcc3292f3a18ea37f9b87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-and-public-read-only-array-fields"></a>安全和公共只读数组字段
 切勿使用托管库的公共的只读数组字段来定义的边界行为或应用程序的安全，因为可以修改只读公共数组字段。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/18/2017
   
  请注意，.NET Framework 类型并不使用公共字段内部定义边界类型。  相反，.NET Framework 使用单独的私有字段。  更改这些公共字段的值不会更改.NET Framework 类型的行为。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

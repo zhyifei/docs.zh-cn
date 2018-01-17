@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7df149ab75d2e3f1e9167f66ef8ec3c40b73c827
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>在协定和服务中指定和处理错误
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序通过以下方式来处理错误情况：将托管异常对象映射到 SOAP 错误对象，并将 SOAP 错误对象映射到托管异常对象。 本节中的主题讨论如何设计协定以将错误条件作为自定义 SOAP 错误公开、如何作为服务实现的一部分返回这些错误，以及客户端如何捕捉这些错误。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="fault-serialization-issues"></a>错误的序列化问题  
  在反序列化错误协定时，WCF 首先尝试将 SOAP 消息中的错误协定名称与错误协定类型相匹配。 如果找不到精确匹配项，它将按字母顺序在可用错误协定列表中搜索兼容类型。 如果两个错误协定是兼容类型（例如，一个是另一个的子类），则可能会使用错误类型对错误进行反序列化。 仅当错误协定未指定名称、命名空间和操作时，才会发生此状况。 若要防止此问题发生，则通过指定名称、命名空间和操作特性来始终完全限定错误协定。 此外，如果您定义了许多派生自共享基类的相关错误协定，请确保使用 `[DataMember(IsRequired=true)]` 标记所有新成员。 有关此 `IsRequired` 特性的更多信息，请参见 <xref:System.Runtime.Serialization.DataMemberAttribute>。 这将防止基类成为兼容类型，并强制将错误反序列化为正确的派生类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.FaultException>  
  <xref:System.ServiceModel.FaultContractAttribute>  
  <xref:System.ServiceModel.FaultException>  

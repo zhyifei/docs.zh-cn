@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 974c053c3d5aae517e6acbd0e61e1bb96340ee65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="buffered-receive"></a>缓冲接收
 此示例演示如何在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中设置和配置缓冲接收功能。 利用缓冲接收功能，工作流作者可创建工作流，而无需担心接收消息的顺序。 当工作流准备接收消息时，缓冲接收功能将本地缓冲并传递这些消息。  

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a039f6ed985997c5557659abd299fe0fc7699a1b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25c5e4fe37d2895bcd891bb2ebf2f80ae8f10a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltmodulegt-element-network-settings"></a>&lt;模块&gt;元素 （网络设置）
 向应用程序添加新的代理模块。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`type`|完全限定的类型名称 (由<xref:System.Type.FullName%2A>属性) 和程序集名称 (由<xref:System.Reflection.Assembly.FullName%2A>属性)，用逗号、 来实现该代理分隔。|  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
   
@@ -82,6 +83,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

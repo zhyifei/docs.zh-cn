@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ab3df6d2233059de76036da7ff27f5cc1808aaf
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 3af852fb4b9899a7937f288ffb65d8ca84e4aef1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 函数
 返回一个唯一的句柄，标识属性。
@@ -58,7 +59,7 @@ HRESULT GetPropertyHandle (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的属性名称。 |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 参数不是有效的。 |
@@ -73,7 +74,7 @@ HRESULT GetPropertyHandle (
 
 句柄可以检索的属性的所有数据类型以外`CIM_OBJECT`和`CIM_ARRAY`。 返回在类的所有实例的句柄的工作。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

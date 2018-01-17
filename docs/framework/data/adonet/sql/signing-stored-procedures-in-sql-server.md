@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 86c2a6c3f2c84c931df15e4809980a76cb6d826c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3d90579e28fde40d461bdb511d797e5d7f6f179
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中对存储过程签名
 您可以使用证书或非对称密钥为存储过程签名。 此设计适用于无法通过所属权链继承权限或所属权链中断的方案，如动态 SQL。 然后您可以创建一个映射到该证书的用户，对存储过程需要访问的对象授予证书用户权限。  
@@ -53,12 +54,12 @@ ms.lasthandoff: 11/21/2017
 |[模块签名](http://go.microsoft.com/fwlink/?LinkId=98590)SQL Server 联机丛书中|说明模块签名，提供示例方案和到相关 Transact-SQL 主题的链接。|  
 |[使用证书为存储的过程签名](http://msdn.microsoft.com/library/bb283630.aspx)SQL Server 联机丛书中|提供有关使用证书为存储过程签名的教程。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server 中的应用程序安全方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [管理与 SQL Server 中的存储过程的权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
- [SQL Server 中编写安全动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [自定义 SQL Server 中的模拟的权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [在 SQL Server 中使用存储过程管理权限](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [使用存储过程修改数据](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

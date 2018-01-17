@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3d349f14535de806e0b130ef64b58333e63f1b86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 20e3676e69357dc73433876275cb2737ee235552
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbypasslistgt-element-network-settings"></a>&lt;将 bypasslist&gt;元素 （网络设置）
 提供一组描述不使用代理的地址的正则表达式。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|将 IP 地址或 DNS 名称添加到代理绕过列表。|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|清除跳过列表。|  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|配置超文本传输协议 (HTTP) 代理服务器。|  
   
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

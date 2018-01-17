@@ -16,17 +16,18 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 484aa47744de95c849b237112f1a383c2c2cb0b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87e3b1b63c8582a322f74659f03803d1dbb19621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-and-timing-system-overview"></a>动画和计时系统概述
 本主题介绍如何计时系统使用动画， <xref:System.Windows.Media.Animation.Timeline>，和<xref:System.Windows.Media.Animation.Clock>类属性进行动画处理。  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  为了了解本主题，应该能够使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画来对属性进行动画处理，如[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)中所述。 本主题还有助于熟悉依赖属性；有关详细信息，请参阅[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
   
 <a name="timelinesandclocks"></a>   
@@ -92,7 +93,7 @@ ClockGroup
   
  当你对属性进行动画处理<xref:System.Windows.Media.Animation.AnimationClock>设置该属性的*当前*值。 检索通过其 CLR 访问器的属性的值或<xref:System.Windows.DependencyObject.GetValue%2A>方法返回的输出<xref:System.Windows.Media.Animation.AnimationClock>时<xref:System.Windows.Media.Animation.AnimationClock>是<xref:System.Windows.Media.Animation.ClockState.Active>或<xref:System.Windows.Media.Animation.ClockState.Filling>。 你可以使用来检索属性的基值<xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A>方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [计时事件概述](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
  [计时行为概述](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

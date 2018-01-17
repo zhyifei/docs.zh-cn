@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92fc3886f81ee401cbd3de2fb6ef251e4c340394
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>为 Windows Communication Foundation 服务配置绑定
 创建应用程序时，您经常需要将一些决策交给管理员在部署应用程序后制定。 例如，通常没有办法提前知道服务地址或统一资源标识符 (URI)。 最好允许管理员在创建服务后指定地址，而不是对地址进行硬编码。 这种灵活性是通过配置实现的。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
   
  例如，指定[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)元素指示要使用 HTTP 作为传输协议的终结点。 这用于在使用此终结点的服务打开时在运行时连接终结点。  
   
- 有两种绑定：预定义绑定和自定义绑定。 预定义绑定包含在常见方案中使用的元素的有用组合。 预定义绑定的列表类型的[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]提供，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 如果没有任何预定义绑定集合具有服务应用程序所需的功能的正确组合，那么您可以构造自定义绑定来满足应用程序的需求。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]自定义绑定，请参阅[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+ 有两种绑定：预定义绑定和自定义绑定。 预定义绑定包含在常见方案中使用的元素的有用组合。 预定义绑定的列表类型的[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]提供，请参阅[系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)。 如果没有任何预定义绑定集合具有服务应用程序所需的功能的正确组合，那么你可以构造自定义绑定来满足应用程序的需求。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]自定义绑定，请参阅[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
  下面四个示例说明了用于设置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的最常见绑定配置。  
   
@@ -63,8 +64,7 @@ ms.lasthandoff: 12/02/2017
   <endpoint   
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-      binding="basicHttpBinding" />  
-  </endpoint>  
+      binding="basicHttpBinding" />
 </service>  
 ```  
   
@@ -89,8 +89,7 @@ ms.lasthandoff: 12/02/2017
   <endpoint   
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-      binding="basicHttpBinding" />  
-  </endpoint>  
+      binding="basicHttpBinding" />
 </service>  
 <bindings>  
     <basicHttpBinding   
@@ -113,12 +112,11 @@ ms.lasthandoff: 12/02/2017
 </behaviors>  
 <services>  
     <service   
-       name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
+       name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
        <endpoint   
           address="http://computer:8080/Hello"  
           contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
-          binding="basicHttpBinding" />  
-       </endpoint>  
+          binding="basicHttpBinding" />
     </service>  
 </services>  
 ```  
@@ -136,14 +134,12 @@ ms.lasthandoff: 12/02/2017
         address="http://computer:8080/Hello1"  
         contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
         binding="basicHttpBinding"  
-        bindingConfiguration="shortTimeout"  
-    </endpoint>  
+        bindingConfiguration="shortTimeout" />
     <endpoint  
         address="http://computer:8080/Hello2"  
         contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
         binding="basicHttpBinding"  
-        bindingConfiguration="Secure"  
-     </endpoint>  
+        bindingConfiguration="Secure" />
 </service>  
 <bindings>  
     <basicHttpBinding   
@@ -151,8 +147,9 @@ ms.lasthandoff: 12/02/2017
         timeout="00:00:00:01"   
      />  
      <basicHttpBinding   
-        name="Secure" />  
+        name="Secure">  
         <Security mode="Transport" />  
+     </basicHttpBinding>
 </bindings>  
 ```  
   
@@ -174,7 +171,7 @@ ms.lasthandoff: 12/02/2017
 </bindings>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [简化配置](../../../docs/framework/wcf/simplified-configuration.md)  
  [系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)  
  [终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)  

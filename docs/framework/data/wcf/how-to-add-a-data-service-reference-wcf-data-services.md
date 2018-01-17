@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 702eda2d4641dc2efdac40f9d730228063e306a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fa20e9ed0cefbe587bba90ad25d5460592e3ecf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>如何：添加数据服务引用（WCF 数据服务）
 你可以使用**添加服务引用**对话框在 Visual Studio 中添加对引用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]。 这使您可以更轻松地在使用 Visual Studio 开发的客户端应用程序中访问数据服务。 完成此过程后，会基于从数据服务获取的元数据生成数据类。 有关详细信息，请参阅[生成数据服务客户端库](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)。  
@@ -31,13 +32,13 @@ ms.lasthandoff: 12/02/2017
   
 3.  如果数据服务当前解决方案的一部分，请单击**发现**。  
   
-     - 或 -  
+     或  
   
      在**地址**文本框中，键入数据服务的基 URL 如`http://localhost:1234/Northwind.svc`，然后单击**转**。  
   
-4.  单击“确定”。  
+4.  单击 **“确定”**。  
   
      这样会添加一个新的代码文件，该文件包含用于访问作为对象的数据服务资源并与其交互的数据类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

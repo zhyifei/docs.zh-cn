@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c46886879d19d612827b94821e0105c68c437c56
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9b048b5c57d174ac921793ee8677622b88a0595
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>如何：自定义系统提供的绑定
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含若干个系统提供的绑定，这些绑定允许您配置基础绑定元素的某些属性，但不是全部的属性。 本主题演示如何设置绑定元素上的属性以创建自定义绑定。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#3)]
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.BasicHttpBinding>  
  <xref:System.ServiceModel.Channels.CustomBinding>  

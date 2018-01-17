@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb5fd3575a0caa692e4a4013452e3069210c9a4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44ebb89c25fc37292f82533c929aae44854db5c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-play-media-with-animations"></a>如何：播放带有动画的媒体
 此示例演示如何在同一时间播放媒体和动画，通过使用<xref:System.Windows.Media.MediaTimeline>和<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>中相同的类<xref:System.Windows.Media.Animation.Storyboard>。  
@@ -34,12 +35,12 @@ ms.lasthandoff: 11/21/2017
   
  [!code-xaml[MediaGallery_snippet#MediaTimelinePlusAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/MediaTimelinePlusAnimationExample.xaml#mediatimelineplusanimationexamplewholepage)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.MediaTimeline>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
  <xref:System.Windows.Media.Animation.Storyboard>  
  <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
  [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
  [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
  [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

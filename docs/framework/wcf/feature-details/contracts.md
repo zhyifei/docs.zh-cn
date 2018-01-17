@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc7f90ed679abc55a62ca5ab6028af4c86bd52a2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a45fc606ac962b4dc7aac8b49ed9a3c6c421ccd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contracts"></a>协定
 本节向您演示如何定义和实现 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 协定。 服务协定指定终结点与外界通信的内容。 更具体地说，它是有关一组特定消息的声明，这些消息被组织成基本消息交换模式 (MEP)，如请求/答复、单向和双工。 如果说服务协定是一组在逻辑上相关的消息交换，那么服务操作就是单个消息交换。 例如，`Hello` 操作显然必须接受一条消息（以便调用方能够发出问候），并可能返回也可能不返回一条消息（具体取决于操作的礼节性）。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
   
  在设计、实现、配置和承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务应用程序时，牢记这一累积性要求过程是很重要的。 例如，协定可能会指定需要支持某一会话。 如果是这样，您必须配置绑定以支持该协定性要求，否则服务实现将无法正常工作。 或者，如果你的服务要求集成 Windows 身份验证并在 Internet Information Services (IIS) 中承载，则服务所在的 Web 应用程序必须启用集成 Windows 身份验证并禁用匿名支持。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]功能和影响不同的服务主机应用程序类型，请参阅[宿主](../../../../docs/framework/wcf/feature-details/hosting.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [终结点： 地址、 绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+## <a name="see-also"></a>请参阅  
+ [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)  
  [实现服务协定](../../../../docs/framework/wcf/implementing-service-contracts.md)

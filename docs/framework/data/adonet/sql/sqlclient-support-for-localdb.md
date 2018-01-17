@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: abe9487f9c2ebbb93c2e712959237f722ee707b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 99845420549393829582ade11f38b75e3ebff484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient 对 LocalDB 的支持
 从 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] （代号 Denali）开始，提供轻量版本 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]（称为 LocalDB）。 本主题讨论如何连接到 LocalDB 数据库。  
@@ -68,6 +69,6 @@ ms.lasthandoff: 11/21/2017
   
 -   使用 `AttachDBFilename` 连接字符串关键字来指定 .MDF 文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

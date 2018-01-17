@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5bd657c73dfaf7643405b4b657edeffa6e33cd68
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 62ebdb178ef7aaa16bcc163e42662e1d69f1f6f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 方法
 返回一个 HRESULT，指示是否可以在当前的计算机和运行时配置的上下文中启动新的进程或附加到指定的现有进程。  
@@ -62,7 +63,7 @@ HRESULT CanLaunchOrAttach (
   
  如果你打算使用 Win32 调试启用启动或使用 Win32 调试启用附加，则传递`true`为`win32DebuggingEnabled`。 通过返回的 HRESULT`CanLaunchOrAttach`可能会与不同，如果使用此选项。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -71,5 +72,5 @@ HRESULT CanLaunchOrAttach (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

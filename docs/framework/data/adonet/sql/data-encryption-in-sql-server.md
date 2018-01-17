@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4428cf8fbfcaa853ca2c877a8cc4902f585b6754
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ea062a65f250a3532249783b0c7b147ed460317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server 中的数据加密
 SQL Server 提供了使用证书、非对称密钥或对称密钥对数据进行加密和解密的功能。 它在一个内部证书存储中管理所有这些证书或密钥。 该存储使用加密层次结构，可在层次结构中的上一层级别保护证书和密钥。 SQL Server 的此功能区域称为“机密存储”。  
@@ -39,11 +40,11 @@ SQL Server 提供了使用证书、非对称密钥或对称密钥对数据进行
 |[SQL Server 加密](http://msdn.microsoft.com/library/bb510663.aspx)SQL Server 联机丛书中|概述了 SQL Server 中的加密。 此主题包括到其他主题和帮助主题的链接。|  
 |[加密层次结构](http://msdn.microsoft.com/library/ms189586.aspx)和[加密操作指南主题](http://msdn.microsoft.com/library/aa337557.aspx)SQL Server 联机丛书中|概述了 SQL Server 中的加密。 此主题提供到其他主题和帮助主题的链接。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 中的应用程序安全方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [SQL Server 中的身份验证](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [服务器和 SQL Server 中的数据库角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- [所有权和 SQL Server 中的用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [授权和 SQL Server 中的权限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
+ [SQL Server 中的服务器和数据库角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [SQL Server 中的所有权和用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [SQL Server 中的授权和权限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

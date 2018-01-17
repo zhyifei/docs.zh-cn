@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a97eecc43614c84867e9dbdd527dbebd7dfd426e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0db5e532a2688d7f213fd42772234b9600192390
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.DateTimePicker>控件允许用户从日期或时间的列表中选择单个项。 当用于表示的日期，它将显示在两个部分： 文本，并单击列表旁的向下箭头时出现的网格中所表示日期的下拉列表。 网格如下所示<xref:System.Windows.Forms.MonthCalendar>控件，可用于选择多个日期。 有关详细信息<xref:System.Windows.Forms.MonthCalendar>控制，请参阅[MonthCalendar 控件概述](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md)。  
@@ -33,6 +34,6 @@ Windows 窗体<xref:System.Windows.Forms.DateTimePicker>控件允许用户从日
   
  控件的<xref:System.Windows.Forms.DateTimePicker.MaxDate%2A>和<xref:System.Windows.Forms.DateTimePicker.MinDate%2A>属性确定日期和时间的范围。 <xref:System.Windows.Forms.DateTimePicker.Value%2A>属性包含的当前日期和时间控件设置为。 有关详细信息，请参阅[如何： 设置和使用 Windows 窗体 DateTimePicker 控件返回日期](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)。 值可以显示在四种格式，通过设置<xref:System.Windows.Forms.DateTimePicker.Format%2A>属性： <xref:System.Windows.Forms.DateTimePickerFormat.Long>， <xref:System.Windows.Forms.DateTimePickerFormat.Short>， <xref:System.Windows.Forms.DateTimePickerFormat.Time>，或<xref:System.Windows.Forms.DateTimePickerFormat.Custom>。 如果选择自定义格式，则必须设置<xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>为适当的字符串的属性。 有关详细信息，请参阅[如何： 使用 Windows 窗体 DateTimePicker 控件以自定义格式显示日期](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：使用 Windows 窗体 DateTimePicker 控件显示自定义格式的日期](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
  [如何：使用 Windows 窗体 DateTimePicker 控件设置和返回日期](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

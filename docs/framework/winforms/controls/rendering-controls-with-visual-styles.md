@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e463e1571b33e8ed877bd79d980e2f24d336a7df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用视觉样式呈现控件
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 使用操作系统中受支持的视觉样式为呈现控件和其他 Windows 用户界面 (UI) 元素提供支持。 本主题讨论 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中对使用操作系统当前视觉样式的呈现控件和其他 UI 元素提供的多种级别的支持。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/22/2017
 ## <a name="checking-for-visual-styles-support"></a>检查视觉样式支持  
  <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 类的 <xref:System.Windows.Forms.Application> 属性指示当前应用程序是否正在使用视觉样式绘制控件。 绘制自定义控件时，可以检查 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 的值来确定是否应使用视觉样式呈现控件。 下表列出了 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 返回 `true`必须存在的四个条件。  
   
-|条件|备注|  
+|条件|说明|  
 |---------------|-----------|  
 |操作系统支持视觉样式。|若要单独验证这种情况，请使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> 类的 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> 属性。|  
 |用户已在操作系统中启用视觉样式。|若要单独验证这种情况，请使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> 类的 <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> 属性。|  
@@ -88,5 +89,5 @@ ms.lasthandoff: 10/22/2017
 > [!IMPORTANT]
 >  如果想要在用户启用或切换视觉样式时使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 来呈现控件或 UI 元素，请确保在处理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件而非 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件时这样做。 处理 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 时如果使用 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>类，则会引发异常。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自定义控件的绘制和呈现](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 943a56095707efdba0e20c40b2c96e24e8fd4ea3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6ac67f79a5fb527acd793778111dad6970922d71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-binding-security"></a>自定义绑定安全性
 本示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。  
@@ -196,4 +197,4 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

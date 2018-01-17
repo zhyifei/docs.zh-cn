@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf46a3d5207f3414bc8abd5fd7bdb904e91f07d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 291ceb32d7128a63ba9a251ce916c18adb100100
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 组件概述
 <xref:System.Windows.Forms.BindingSource> 组件旨在简化将控件绑定到基础数据源的过程。 <xref:System.Windows.Forms.BindingSource> 组件同时充当管道和其他控件可以绑定的数据源。 将命令传递到基础数据列表时，它提供窗体数据连接的抽象。 此外，可以直接向其添加数据，以便组件本身可用作数据源。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.BindingSource.Sort%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingList>，则获取或设置用于排序的列名称并对顺序信息进行排序。 如果数据源是 <xref:System.ComponentModel.IBindingListView> 并支持高级排序，则获取用于排序的多个列名称并对顺序信息进行排序|  
 |<xref:System.Windows.Forms.BindingSource.Filter%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingListView>，则获取或设置用于筛选已查看的行的表达式。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingNavigator>  
  [BindingSource 组件体系结构](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  

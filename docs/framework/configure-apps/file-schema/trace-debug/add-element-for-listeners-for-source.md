@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 69a5f855251f1f2c9c94ae3b571b8b78881631fb
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;添加&gt;元素&lt;侦听器&gt;为&lt;源&gt;
 将侦听器添加到跟踪源的 `Listeners` 集合中。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/23/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`system.diagnostics`|指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。|  
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/23/2017
 </configuration>   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.TraceSource>  
  <xref:System.Diagnostics.TraceListener>  
  [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  

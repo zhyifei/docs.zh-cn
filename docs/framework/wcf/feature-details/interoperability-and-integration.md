@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d910ad667a197c42c843c352429afeadbc0e81d0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 58bb7f0b5d6e43f4e157bda2f7dff5ad7c57a6c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperability-and-integration"></a>互操作性和集成
 本节介绍与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的互操作性和集成。  
@@ -26,22 +27,22 @@ ms.lasthandoff: 12/02/2017
  [Web 服务协议互操作性指南](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用于与支持名为 Web 服务规范的一组规范的 Web 服务进行互操作。 本主题列出了受支持的规范和支持这些规范的绑定。  
   
- [与 COM + 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [与 COM+ 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  讨论 COM+ 应用程序如何作为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行公开。  
   
  [与 COM 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)  
  讨论应用程序调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的各种 COM 方法。  
   
- [.NET 远程处理应用程序迁移到 WCF](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
+ [将 .NET 远程处理应用程序迁移到 WCF](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
  说明如何将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理。  
   
- [互操作性与 Web Services Enhancements 3.0](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
+ [与 Web Services Enhancements 3.0 的互操作性](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
  说明如何将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用于通过 Web Services Enhancements (WSE) 3.0 实现的 Web 服务。  
   
  [将 WSE 3.0 Web 服务迁移到 WCF](../../../../docs/framework/wcf/feature-details/migrating-wse-3-0-web-services-to-wcf.md)  
  说明如何将 WSE 3.0 Web 服务迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
   
- [与 ASP.NET Web 服务互操作性](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
+ [与 ASP.NET Web 服务的互操作性](../../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)  
  说明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何与 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务互操作。  
   
  [将 ASP.NET Web 服务迁移到 WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/02/2017
  [将 ASP.NET Web 服务迁移到 WCF](../../../../docs/framework/wcf/feature-details/migrating-aspnet-web-services-to-wcf.md)  
  说明如何将 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
   
- [与 POX 应用程序互操作性](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
+ [与 POX 应用程序的互操作性](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)  
  说明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何提供使用“Plain Old XML”(POX) 消息的服务和客户端。  
   
 ## <a name="reference"></a>参考  

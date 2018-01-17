@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 787f47f6ca8f25e6df4cc74024febf494f18bf9d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c70b7df47cb3f367318fb388ceda2163f538cb32
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>如何：使用 WCF 客户端访问 WSE 3.0 服务
 当 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端配置为使用 2004 年 8 月版的 WS-Addressing 规范时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端在网络级别与 Web Services Enhancements (WSE) 3.0 for Microsoft .NET 服务兼容。 但是，WSE 3.0 服务不支持元数据交换 (MEX) 协议，因此当你使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)创建[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端类的安全设置不适用于生成[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]客户端。 因此，在生成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后，必须指定 WSE 3.0 服务要求的安全设置。  
@@ -72,6 +73,6 @@ ms.lasthandoff: 12/02/2017
   
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.Binding>  
  [与 WSE 互操作性](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)

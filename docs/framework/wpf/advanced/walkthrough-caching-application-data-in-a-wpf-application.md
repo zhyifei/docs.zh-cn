@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c04a2860b46460065a09de3dafedc7010753d36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中缓存应用程序数据
 缓存可以将数据存储在内存中以便快速访问。 当再次访问数据时，应用程序可以从改为从原始源检索该缓存获取数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 -   监视缓存的文件的路径和有关通知的缓存实例更改为受监视的项目。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
 -   Microsoft [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]。  
@@ -83,12 +84,12 @@ ms.lasthandoff: 11/21/2017
   
 6.  选择**创建解决方案的目录**复选框。  
   
-7.  单击“确定”。  
+7.  单击 **“确定”**。  
   
      WPF 设计器中打开**设计**查看，并显示 MainWindow.xaml 文件。 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]创建**我的项目**文件夹、 Application.xaml 文件和 MainWindow.xaml 文件。  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>面向.NET Framework 和添加对缓存程序集的引用  
- 默认情况下，WPF 应用程序目标[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>在 WPF 应用程序的命名空间，应用程序必须指定目标[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)](不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 并且必须包括对命名空间的引用。  
+ 默认情况下，WPF 应用程序目标[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>在 WPF 应用程序的命名空间，应用程序必须指定目标[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 并且必须包括对命名空间的引用。  
   
  因此下, 一步是以更改.NET Framework 目标并添加对的引用<xref:System.Runtime.Caching>命名空间。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  在**目标 framework （所有配置）**列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。)  
   
-5.  单击“确定”。  
+5.  单击 **“确定”**。  
   
      **目标 Framework 更改**对话框随即显示。  
   
@@ -335,7 +336,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[CachingWPFApplications#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Caching.MemoryCache>  
  <xref:System.Runtime.Caching.ObjectCache>  
  <xref:System.Runtime.Caching>  

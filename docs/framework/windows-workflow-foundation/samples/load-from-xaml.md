@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 54acfb1a130c8a790411a05958518665ef790e53
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 28f5f4a57f8fd6ee8b739b38735d41a118abc0cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="load-from-xaml"></a>从 XAML 加载
 此示例演示如何在不运行 XamlBuildTask 工具的情况下动态加载 XAML 工作流。 此示例改为调用 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 方法。 此示例是一个 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 客户端应用程序，它使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 类加载 XAML 工作流，然后执行这些工作流。 在使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 类加载完这些工作流后，将返回一个可执行的 <xref:System.Activities.DynamicActivity%601>。  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 857cc04af6c619035fa2bf0a548053f57292f7bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eac54e18f397cf455ffd5fa33c2e000d87b917a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar 控件概述（Windows 窗体）
 > [!NOTE]
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
   
  <xref:System.Windows.Forms.ToolBar>控件允许你通过添加创建工具栏<xref:System.Windows.Forms.Button>对象添加到<xref:System.Windows.Forms.ToolBar.Buttons%2A>集合。 你可以使用集合编辑器将按钮添加到<xref:System.Windows.Forms.ToolBar>控件; 每个<xref:System.Windows.Forms.Button>对象应具有文本或图像分配，尽管你可以同时指定。 图像由关联的 [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 组件提供。 在运行时，你可以添加或删除从按钮<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection>使用<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A>和<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A>方法。 进行编程的按钮<xref:System.Windows.Forms.ToolBar>，将代码添加到<xref:System.Windows.Forms.ToolBar.ButtonClick>的事件<xref:System.Windows.Forms.ToolBar>，使用<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>属性<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>类以确定被单击的按钮。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ToolBar>  
  [ToolBar 控件](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
  [如何：向 ToolBar 控件添加按钮](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  

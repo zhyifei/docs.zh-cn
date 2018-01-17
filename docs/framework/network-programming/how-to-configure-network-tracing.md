@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 12f328d58ef568c78d1e2c8a8ff564839cba9f3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a6b277b2676409bebc059637daca5681b853f03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-network-tracing"></a>如何：配置网络跟踪
 应用程序或计算机配置文件可保存用于确定网络跟踪的格式和内容的设置。 在执行此过程之前，请确保启用跟踪。 有关如何启用跟踪的信息，请参阅[启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
 |`maxdatasize`|可选的 <xref:System.Int32> 特性。 设置每行跟踪中包含的最大网络数据字节数。 默认值为 1024。<br /><br /> 如此示例所示，此特性必须在 \<source> 元素上进行设置。 如果此特性是在 \<switches> 元素下的一个元素上设置的，则会引发异常。|  
 |`Tracemode`|可选的 <xref:System.String> 特性。 设置为 `includehex` 将会以十六进制和文本格式显示协议跟踪。 设置为 `protocolonly` 将会仅显示文本。 默认值为 `includehex`。<br /><br /> 如此示例所示，此特性必须在 \<switches> 元素上进行设置。 如果此特性是在 \<source> 元素下的一个元素上设置的，则会引发异常。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)  
  [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)  

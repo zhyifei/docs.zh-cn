@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 26fa9471b46a7a963d66ebf0d5b3c6a0286ae640
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5583a9b81d81acfca80368ca54d5f97899daa1d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-unmanaged-api-reference"></a>分析（非托管 API 参考）
 分析 API 允许探查器公共语言运行时 (CLR) 监视程序的执行。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
  [分析概述](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
  描述的服务和 CLR 提供以在.NET Framework 环境中支持性能分析的接口。  
   
- [分析接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  描述分析 API 使用的非托管接口。  
   
  [设置分析环境](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  

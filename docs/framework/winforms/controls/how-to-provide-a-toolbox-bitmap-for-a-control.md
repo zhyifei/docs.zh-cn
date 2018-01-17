@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2d1ab49b6596c6feaa2ead5bbb92525f0ddb356d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 947ac4f8783b388135cf9e8147bb48eda93cfa08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>如何：为控件提供工具箱位图
 如果你想要为您的控件的特殊图标将出现在**工具箱**，你可以通过使用指定的特定映像<xref:System.Drawing.ToolboxBitmapAttribute>。 此类是一个特性，是一种可以附加到其他类上的特殊类。 有关特性的详细信息，对于 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]，请参阅[不在生成中：Visual Basic 中的特性概述](http://msdn.microsoft.com/en-us/0d0cff64-892d-4f57-83bd-bef388553d4f)，对于 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]，请参阅[特性](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  对于自动生成的控件和组件，位图不会出现在工具箱中。 若要查看位图，请使用“选择工具箱项”对话框重载控件。 有关详细信息，请参阅[演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.ToolboxBitmapAttribute>  
  [演练：使用自定义组件自动填充工具箱](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
  [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  

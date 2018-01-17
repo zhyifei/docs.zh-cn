@@ -19,11 +19,14 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 97f0c63857b7af408613e1ffdfecb157d1e2c704
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dispose-pattern"></a>释放模式
 所有程序执行过程中都获取一个或多个系统资源，如内存、 系统句柄或数据库连接。 开发人员必须是时使用此类系统资源，请小心，因为它们必须在已获取并使用后释放。  
@@ -286,9 +289,9 @@ public class ComplexResourceHolder : IDisposable {
   
  *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>  
  <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
- [常见设计模式](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [常用设计模型](../../../docs/standard/design-guidelines/common-design-patterns.md)  
  [垃圾回收](../../../docs/standard/garbage-collection/index.md)

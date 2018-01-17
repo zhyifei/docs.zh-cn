@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4732eef9a47f9ea1e919bd9d855afbec18974454
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9e00d7ae1b110fc9f1e1d41d8c3ddb9427b3d44a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 方法
 获取部分块的基本代码。  
@@ -59,7 +60,7 @@ HRESULT GetSectionBlock (
 ## <a name="remarks"></a>备注  
  调用`GetSectionBlock`仅当你有特殊的段中要求未由其他方法。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -68,5 +69,5 @@ HRESULT GetSectionBlock (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

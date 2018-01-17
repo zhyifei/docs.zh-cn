@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5ed85fde0b7c031a95ce3fee577cb07380a05eb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 038cf7ad9f6004f785fe35eccf38185272b0ed37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-considerations-entity-framework"></a>迁移注意事项（实体框架）
 现有的应用程序可以从多方面受益于 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 实体框架。 其中最重要的益处之一在于能够使用概念模型将应用程序使用的数据结构与数据源中的架构分离。 这样，日后便可轻松地对存储模型或数据源本身进行更改，而无需对应用程序进行补偿更改。 有关优势的详细信息，使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)和[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -105,6 +106,6 @@ ms.lasthandoff: 11/21/2017
  维护状态的应用程序。  
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web 应用程序需要经常维护网页或用户会话的状态。 中的对象<xref:System.Data.Objects.ObjectContext>可以存储在客户端视图状态或在服务器上，会话状态中实例，并稍后能检索并重新附加到新的对象上下文。 有关详细信息，请参阅[附加和分离对象](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [实体框架术语](../../../../../docs/framework/data/adonet/ef/terminology.md)

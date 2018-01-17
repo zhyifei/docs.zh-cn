@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4257876abeeccf762a7caa87f667468a16bba70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 对 Windows 应用商店中或开发者的计算机上的应用进行静态编译。 这不同于及时生成 (JIT) 编译器或 [本地映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 在该设备上为 Windows 应用商店应用执行的动态编译。 尽管存在不同， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 尝试保持与 [.NET for Windows 应用商店应用](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)的兼容。 通常，在 Windows 应用商店应用的 .NET 上可以运行的程序在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]上也可以运行。  然而，在某些情况下，你可能会遇到行为变更。 本文档从以下方面讨论了 Windows 应用商店应用的标准 .NET 和 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 之间的差异：  
@@ -37,13 +38,13 @@ ms.lasthandoff: 11/21/2017
   
 -   当一个应用在公共语言运行时 (CLR) 上运行时，由 JIT 编译器引起的 <xref:System.TypeLoadException>等异常在受到 [!INCLUDE[net_native](../../../includes/net-native-md.md)]处理时通常会产生编译时间错误。  
   
--   请勿从一个应用的 UI 线程调用 <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法。 这可能会导致 [!INCLUDE[net_native](../../../includes/net-native-md.md)]发生死锁。  
+-   请勿从一个应用的 UI 线程调用 <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 方法。 这可能会导致 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 发生死锁。  
   
 -   请勿依赖静态类构造函数调用排序。 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中，调用排序与标准运行时的排序不同。 （即使可以使用标准运行时，你也不应依赖静态类构造函数的执行顺序。）  
   
 -   不在任何线程上执行调用（例如， `while(true);`）的无线循环可能会使应用异常终止。 同样，长期或无限等待也可能使应用异常终止。  
   
--   某些泛型初始化循环不会引起 [!INCLUDE[net_native](../../../includes/net-native-md.md)]的异常。 例如，以下代码导致标准 CLR 上 <xref:System.TypeLoadException> 发生了一个异常。 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中，不会出现此问题。  
+-   某些泛型初始化循环不会引起 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 的异常。 例如，以下代码导致标准 CLR 上 <xref:System.TypeLoadException> 发生了一个异常。 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中，不会出现此问题。  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="other-reflection-related-differences"></a>其他与反射相关的差异  
  Windows 应用商店应用的 .NET 和 [!INCLUDE[net_native](../../../includes/net-native-md.md)]的行为上存在许多其他单独的与反射有关的差异。  
   
- 在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]中：  
+ 在[!INCLUDE[net_native](../../../includes/net-native-md.md)]中：  
   
 -   反射到 .NET Framework 类库中的类型和成员的私有反射不受支持。 然而，你可以反射到自己的私有类型和成员以及第三方库的类型和成员。  
   
@@ -682,7 +683,7 @@ ms.lasthandoff: 11/21/2017
   
  不支持启用 Windows 应用商店应用项目的单元测试库上的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] ，因为这会导致项目无法构建。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [.NET for Windows Store 应用概述](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  

@@ -23,11 +23,12 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9bd09d0da70869ba193b414d8a2ce6c25cbb6b38
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-ins-and-extensibility"></a>外接程序和扩展性
 <a name="top"></a> 外接程序为主机应用程序提供扩展功能或服务。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一个编程模型，开发人员可利用此模型来开发外接程序并在其主机应用程序中激活。 该模型通过在主机与外接程序之间构造通信管道来实现此功能。 该模型通过使用 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>和 <xref:System.AddIn.Contract> 命名空间中的类实现。  
@@ -119,7 +120,7 @@ ms.lasthandoff: 10/21/2017
  [返回页首](#top)  
   
 <a name="reference"></a>   
-## <a name="reference"></a>引用  
+## <a name="reference"></a>参考  
  <xref:System.AddIn?displayProperty=nameWithType>  
   
  <xref:System.AddIn.Contract?displayProperty=nameWithType>  

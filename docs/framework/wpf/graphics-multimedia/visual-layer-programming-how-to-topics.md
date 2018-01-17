@@ -18,11 +18,12 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4d52fab42dabeaa8ef51812308fe5807030184e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63efdae02dd14e1a2692ebb6ee00c7d56c8b04c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>可视化层编程帮助主题
 此部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  [使用 Win32 宿主容器进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
  [使用 CompositionTarget 按每帧间隔呈现](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  

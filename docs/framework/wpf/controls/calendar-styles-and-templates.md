@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b27049c63faa9bf84dc5febd210a29a530f175a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3d99156868b3be8a1eb33788930f77a20063854
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="calendar-styles-and-templates"></a>Calendar 样式和模板
 本主题介绍的样式和模板的<xref:System.Windows.Controls.Calendar>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
 |CalendarButtonUnfocused|CalendarButtonFocusStates|按钮有焦点。|  
 |已设定焦点|FocusStates|按钮有焦点。|  
 |失去焦点|FocusStates|按钮有焦点。|  
-|活动|ActiveStates|按钮处于活动状态。|  
+|活动的|ActiveStates|按钮处于活动状态。|  
 |非活动状态|ActiveStates|按钮处于非活动状态。|  
 |RegularDay|DayStates|按钮不表示<xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
 |今天|DayStates|此按钮表示<xref:System.DateTime.Today%2A?displayProperty=nameWithType>。|  
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/21/2017
 |CalendarButtonUnfocused|CalendarButtonFocusStates|按钮有焦点。|  
 |已设定焦点|FocusStates|按钮有焦点。|  
 |失去焦点|FocusStates|按钮有焦点。|  
-|活动|ActiveStates|按钮处于活动状态。|  
+|活动的|ActiveStates|按钮处于活动状态。|  
 |非活动状态|ActiveStates|按钮处于非活动状态。|  
 |有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`已在控件有焦点。|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  

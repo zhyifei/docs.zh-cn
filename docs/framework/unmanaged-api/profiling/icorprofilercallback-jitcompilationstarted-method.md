@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a12ae3e33d5553ed99a5a26b8fc872f0d07de81e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 12a25f452ccb121ef7ebcae05048eb7116b4ac48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted 方法
 通知探查器已开始在实时 (JIT) 编译器将函数编译。  
@@ -52,7 +53,7 @@ HRESULT JITCompilationStarted(
   
  在两个线程同时执行回调的情况下，探查器必须支持 JIT 回调的序列。 例如，调用线程 A `JITCompilationStarted`。 但是，在线程的调用之前`JITCompilationFinished`，线程 B 调用[icorprofilercallback:: Exceptionsearchfunctionenter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)从线程 A 的函数 id`JITCompilationStarted`回调。 它可能会出现，函数 ID 尚未有效期不应由于调用`JITCompilationFinished`具有尚未收到探查器。 但是，在与此类似情况下，该函数 ID 是有效的。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **头文件：** CorProf.idl、CorProf.h  
@@ -61,6 +62,6 @@ HRESULT JITCompilationStarted(
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
  [JITCompilationFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)

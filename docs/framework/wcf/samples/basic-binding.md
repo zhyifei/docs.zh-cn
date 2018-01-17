@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f001f4f8fac2e0366aa705d1998fe33d6dc4438
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 89fb080a890ee866ab16882065bd35495fadfddb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-binding"></a>基本绑定
 本节包含演示如何使用终结点元素的绑定特性的基本示例。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/02/2017
  [消息安全示例](../../../../docs/framework/wcf/samples/message-security-sample.md)  
  演示如何实现使用 `basicHttpBinding` 和消息安全的应用程序。  
   
- [传输安全的 BasicBinding](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
+ [使用传输安全性的 BasicBinding](../../../../docs/framework/wcf/samples/basicbinding-with-transport-security.md)  
  演示如何将 SSL 传输安全用于基本绑定。  
   
  [BasicBinding](../../../../docs/framework/wcf/samples/basicbinding.md)  

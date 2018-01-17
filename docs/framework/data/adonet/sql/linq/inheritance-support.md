@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b6ee6779814adeab73e21477137db1ed71a23a88
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c898d8448b39fc5da63e5eda2046d0747837509b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inheritance-support"></a>层次结构支持
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持*单表映射*。 换言之，整个继承层次结构存储在单个数据库表中。 该表包含整个层次结构的所有可能数据列的平展联合。 （联合是将两个表组合成一个表的结果，组合后的表包含任一原始表中存在的行。）每行中不适用于该行所表示的实例类型的列为 null。  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/18/2017
   
  使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员还可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来映射继承层次结构。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 466e3faed9b2877671ca265afdb613607b12f0de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7de0deafa8eea5aa69d368a740b245e84470e137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>使用 IPv6 和 Teredo 的 NAT 遍历
 增强了功能：为网络地址转换 (NAT) 遍历提供支持。 这些更改旨在用于 IPv6 和 Teredo，但也同样适用于其他 IP 隧道技术。 这些增强功能会影响 <xref:System.Net> 和相关命名空间中的类。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  对于使用 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 和相关类的应用程序，可将 <xref:System.Net.Sockets.Socket.GetSocketOption%2A> 和 <xref:System.Net.Sockets.Socket.SetSocketOption%2A> 方法与 <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> 套接字选项一起使用，用于查询、启用或禁用 NAT 遍历。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>  
  <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>  
  <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=nameWithType>  

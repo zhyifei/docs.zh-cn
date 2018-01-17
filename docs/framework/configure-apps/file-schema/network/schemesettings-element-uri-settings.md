@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 4cf1d2013a51985f9d7772ac0ef86e5dbb120be9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19bcb64beb7b022d20bbde1210ae6d844690d891
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt;元素 （Uri 设置）
 指定如何分析特定方案的 <xref:System.Uri>。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|添加方案名称方案设置。|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|清除所有现有的方案设置。|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
 |验证文件||  
 |可以为空||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
  <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection?displayProperty=nameWithType>  

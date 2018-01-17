@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 932fef22681aeb2a68d7852884127155757e4099
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 20eea5ed6f69c17466aeb33617f418ac71a3e1b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing-and-instrumenting-applications"></a>跟踪应用程序和在应用程序中插入检测点
 跟踪是指应用程序正在运行时监视其执行情况的方式。 可在开发 .NET Framework 应用程序时向其添加跟踪和调试检测，也可在开发应用程序时或在部署此应用程序之后使用此检测。 可使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 类将错误和应用程序执行的相关信息记录在日志、文本文件或其他设备中，以供将来分析。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类提供了在开发期间或部署之后监视和检查应用程序性能的方法。 例如，您可以使用 <xref:System.Diagnostics.Trace> 类跟踪在已部署的应用程序中发生的特定类型的操作（例如新建数据库连接），因而可以监视该应用程序的效率。  
   
 ## <a name="code-tracing-and-debugging"></a>代码跟踪和调试  
- 在开发过程中，使用 <xref:System.Diagnostics.Debug> 类的输出方法，可以在 Visual Studio 集成开发环境 (IDE) 的“输出”窗口中显示消息。 例如:   
+ 在开发过程中，使用 <xref:System.Diagnostics.Debug> 类的输出方法，可以在 Visual Studio 集成开发环境 (IDE) 的“输出”窗口中显示消息。 例如:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -149,15 +150,15 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ## <a name="security-concerns"></a>安全问题  
  如果在部署 ASP.NET 应用程序之前未禁用跟踪和调试，你的应用程序可能会泄漏自身的相关信息，从而被恶意程序利用。 有关详细信息，请参阅[如何：使用跟踪和调试进行条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)、[编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)和[如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。 也可通过 Internet 信息服务 (IIS) 配置调试。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.TraceSource>  
  [代码协定](../../../docs/framework/debug-trace-profile/code-contracts.md)  
  [C#, F#, and Visual Basic Project Types](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)（C#、F# 和 Visual Basic 项目类型）  
- [如何： 向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [如何： 使用跟踪和调试进行条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
- [如何： 创建、 初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
- [如何： 创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
- [如何： 将 TraceSource 和筛选器与跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
+ [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [如何：使用跟踪和调试进行条件编译](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [如何：将 TraceSource 和筛选器与跟踪侦听器一起使用](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
  [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
  [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79b35fc63fa34bf6de462bad3c18d857215cbfa1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-hosting-a-queued-application"></a>承载排队应用程序的 Web
 Windows 进程激活服务 (WAS) 管理辅助进程的激活和生存期，该辅助进程包含承载 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务的应用程序。 WAS 进程模型通过移除对 HTTP 的依赖性使 HTTP 服务器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 进程模型通用化。 这就使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可以在宿主环境中同时使用 HTTP 和非 HTTP 协议（如 net.msmq 和 msmq.formatname），该宿主环境支持基于消息的激活以及在给定计算机上提供承载大量应用程序的能力。  
@@ -51,6 +52,6 @@ Windows 进程激活服务 (WAS) 管理辅助进程的激活和生存期，该�
 ### <a name="subqueue-and-system-queue-caveat"></a>子队列和系统队列注意事项  
  不能基于系统队列（如系统级死信队列）或子队列（如病毒子队列）中的消息激活 WAS 承载的应用程序。 这是此版本产品的一个限制。  
   
-## <a name="see-also"></a>另请参阅  
- [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
+## <a name="see-also"></a>请参阅  
+ [有害消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
  [服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

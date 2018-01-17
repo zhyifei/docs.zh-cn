@@ -15,11 +15,12 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5c38dc87d6015f0c814ea319c9353ea757478b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;元素
 指定应用程序支持的公共语言运行时版本。 此元素应由用 .NET Framework 1.1 版或更高版本生成的所有应用程序使用。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>备注  
 如果 **\<supportedRuntime >**元素不存在应用程序配置文件中，使用用于生成应用程序的运行时的版本。  
 
-**\<SupportedRuntime >**元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)元素。  
+ **\<SupportedRuntime >**元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)元素。  
   
 > [!NOTE]
 >  如果你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数来指定配置文件，必须使用`<requiredRuntime>`所有的运行时版本的元素。 `<supportedRuntime>`元素将被忽略，当你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="configuration-file"></a>配置文件  
  此元素可用于应用程序配置文件中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [进程内并行执行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

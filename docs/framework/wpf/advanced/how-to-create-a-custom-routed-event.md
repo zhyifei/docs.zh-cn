@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e901242b265e0012f9ad65d9eaab89b1b63b40ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ecd335cb08056cb8b7c696555d666f54cad81b87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>如何：创建自定义路由事件
 若要支持事件路由你自定义事件，你需要注册<xref:System.Windows.RoutedEvent>使用<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>方法。 本示例演示了创建自定义路由事件的基本原理。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
  若要查看浮升事件的工作原理示例，请参阅[处理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

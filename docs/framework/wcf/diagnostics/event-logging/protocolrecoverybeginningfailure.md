@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0eee340eb1134fc9e8e0a4b1e1d4885fbea9ad54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 06a622cd602738b5a2bcf1332e1abd41a1097b49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="protocolrecoverybeginningfailure"></a>ProtocolRecoveryBeginningFailure
 Id: 144  
@@ -29,6 +30,6 @@ Id: 144
 ## <a name="description"></a>描述  
  此事件指示 MSDTC WS-AtomicTransaction 协议在恢复过程开始时即已失败。 因此，禁用 WS-AtomicTransaction 功能。 此事件将列出协议 ID、协议名称、异常、进程名称和进程 ID。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

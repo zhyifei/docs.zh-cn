@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f7cf48f98b60d287cea1615cc8aefef6151c805c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be6c48f240290e2571bfc605bc9c3a84f59aa8e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="synchronous-client-socket-example"></a>同步客户端套接字示例
 以下示例程序创建连接到服务器的客户端。 客户端使用同步套接字构建，因此，将暂停执行客户端应用程序，直到服务器返回响应。 应用程序向服务器发送一个字符串，然后控制台上显示服务器返回的字符串。  
@@ -144,7 +145,7 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [同步服务器套接字示例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
  [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
  [Socket 代码示例](../../../docs/framework/network-programming/socket-code-examples.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ab9baca1103adf8de96204bdb1b3353a5456b94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae10153f31b79a220b84cae7a6525eca0ce0bd9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>如何：指定自定义 Popup 位置
 此示例演示如何指定一个自定义职位<xref:System.Windows.Controls.Primitives.Popup>控制<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>属性设置为<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  有关完整的示例，请参阅[弹出窗口放置示例](http://go.microsoft.com/fwlink/?LinkID=160032)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Primitives.Popup>  
  [Popup 概述](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

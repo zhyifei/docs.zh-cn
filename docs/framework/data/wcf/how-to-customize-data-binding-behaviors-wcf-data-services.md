@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9aa93e5c0971d1af1f1962bfe4f61a0f56f66b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e94ccb04028db3530705432309a808f17054d970
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>如何：自定义数据绑定行为（WCF 数据服务）
 通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以提供当向绑定集合中添加对象或从中移除对象时或检测到属性更改时由 <xref:System.Data.Services.Client.DataServiceCollection%601> 调用的自定义逻辑。 此自定义逻辑作为方法，作为引用提供<xref:System.Func%602>委托，返回的值`false`时的默认行为仍应执行的自定义方法完成时和`true`时后续处理应停止事件。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 12/02/2017
   
  [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

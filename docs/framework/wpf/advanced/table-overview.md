@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bb9edf0439c985af015d6badd11c026449a82f57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 922faa06456a1aa86ffd0c805ab33577280ccf4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="table-overview"></a>表概述
 <xref:System.Windows.Documents.Table>是支持的流文档内容的基于网格的演示文稿的块级别元素。 此元素极具灵活性，因此很有用，但也因此显得更加复杂，从而不容易理解和正确使用。  
@@ -185,7 +186,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [使用 XAML 定义表](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM 应用程序集成概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 为托管代码开发人员提供一个丰富环境，用于创建相互连接的应用程序。 但如果您对基于 COM 的非托管代码已经具有相当规模的投资且不想进行迁移，则仍可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务标记直接将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 服务集成到现有代码中。 服务标记可以在众多基于 COM 的开发环境（如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0）中使用。  
@@ -74,5 +75,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `</configuration>`  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 注册并配置服务标记](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>请参阅  
+ [如何：注册和配置服务名字对象](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

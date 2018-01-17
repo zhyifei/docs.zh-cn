@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0fa9e40a0a32d0bc9484a86da0f94d62f5c25aa7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75dee4b230c790e5f1abf6bf7e77af106da0e7f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>演练：设计时在 Windows 窗体上分配 WPF 内容
 本演练展示了如何选择要在窗体上显示的 Windows Presentation Foundation (WPF) 控件类型。 可选择项目中包含的任何 WPF 控件类型。  
@@ -37,9 +38,9 @@ ms.lasthandoff: 11/21/2017
 -   选择 WPF 控件。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  承载 WPF 内容时，仅支持 C# 和 Visual Basic 项目。  
   
-#### <a name="to-create-the-project"></a>创建项目  
+#### <a name="to-create-the-project"></a>要创建项目  
   
 -   创建新的 Windows 窗体应用程序项目中 Visual Basic 或 Visual C# 名为`SelectingWpfContent`。  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
   
 9. `elementHost2` 控件现承载 `UserControl1` 类型的实例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  

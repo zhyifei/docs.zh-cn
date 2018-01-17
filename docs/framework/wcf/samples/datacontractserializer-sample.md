@@ -14,11 +14,12 @@ caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17b0d3166b742aacfb935b8ab8ba4864bf1f7188
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 99ef79ee9e17074989bcf5a2d4e586dc790373c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer 示例
 DataContractSerializer 示例演示为数据协定类执行常规序列化和反序列化服务的 <xref:System.Runtime.Serialization.DataContractSerializer>。 此示例创建`Record`对象、 将其序列化到内存流和反序列化到另一个内存流`Record`对象，以演示了利用<xref:System.Runtime.Serialization.DataContractSerializer>。 然后示例使用二进制编写器序列化 `Record` 对象以演示编写器如何影响序列化。  
@@ -151,4 +152,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

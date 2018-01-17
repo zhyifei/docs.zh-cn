@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 595999bfa7d3472fc31274a0c9652af5416d2da5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84fa0e6b20f3d2b75d3182f64ddc9c70ef661f10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-security-mode"></a>如何：设置安全模式
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 安全有三个常用安全模式：传输、消息和“使用消息凭据的传输”，这三种模式存在于大多数预定义绑定中。 另外，还有两种特定于两个绑定的模式：<xref:System.ServiceModel.BasicHttpBinding> 上的“transport-credential only”模式和 <xref:System.ServiceModel.NetMsmqBinding> 上的“Both”模式。 不过，本主题主要讨论三种常见安全模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 和 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
@@ -123,11 +124,11 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何： 使用传输安全和消息凭据](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 使用 SSL 证书配置端口](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [如何： 使用传输安全和消息凭据](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [传输安全](../../../docs/framework/wcf/feature-details/transport-security.md)  
- [消息安全](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+## <a name="see-also"></a>请参阅  
+ [如何：使用 SSL 证书配置端口](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [如何：使用传输安全性和消息凭据](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [传输安全性](../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [消息安全性](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)  
  [\<安全 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  

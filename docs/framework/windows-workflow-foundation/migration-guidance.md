@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0089d08604f5d738e04461f4ed5f8efcb1140420
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96a8b8321239e3f01b30bcbe0400930a292a8f41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-guidance"></a>迁移指南
 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，Microsoft 将发布 [!INCLUDE[wf](../../../includes/wf-md.md)] 的第二个主要版本。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 发布在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中（包含 System.Workflow.* 命名空间中的类型；目前称之为 WF3）并在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中得到增强。 WF3 也是属于[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但伴随新工作流技术 (System.Activities。 中的类型\*命名空间; 称之为 WF4)。 考虑何时采用 WF4 时，重要的是首先要认识到您来控制时间安排。  
@@ -64,5 +65,5 @@ ms.lasthandoff: 12/02/2017
  [WF 指南： 工作流服务](http://go.microsoft.com/fwlink/?LinkId=275564)  
  提供面向示例的分步说明，针对现成活动的一般方案，将在 WF3 中创建、实现 Windows Communication Foundation (WCF) Web 服务（通常称为工作流服务）的工作流重新设计为使用 WF4。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Activities.Statements.Interop>

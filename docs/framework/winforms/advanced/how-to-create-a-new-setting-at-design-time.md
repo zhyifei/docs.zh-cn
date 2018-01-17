@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8a05b6f37f7686f18a6200e009aabe7eed5537
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04b86579f45c5a357f8759bf36ae41f7a5c6e98b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>如何：在设计时创建新设置
 通过使用设置设计器，可以在设计时创建的新的设置。 设置设计器是一个网格样式接口，允许你创建新的设置，并指定这些设置的属性。 必须指定名称、 值、 类型和作用域为新设置。 创建一个设置后，可在代码中访问。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  在设置设计器中，设置名称、 值、 类型和为你设置的作用域。 每一行表示单个设置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
  [如何：在设计时更改现有设置的值](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)

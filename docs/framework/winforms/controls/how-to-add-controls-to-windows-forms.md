@@ -20,17 +20,18 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1f5f739afa914a69017dbba2a9a4afb990f6e43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d9075c93181b68828a307924259a9170c046baa6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>如何：向 Windows 窗体添加控件
 大多数窗体旨在通过将控件添加到窗体表面，以定义用户界面 (UI) 中。 A*控件*是用于显示信息或接受用户输入的窗体上的组件。 有关控件的详细信息，请参阅[Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-draw-a-control-on-a-form"></a>若要绘制窗体上控件  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
     > [!IMPORTANT]
     >  通过引用了恶意，您可能会公开您的本地计算机通过网络安全风险`UserControl`。 这仅会在恶意的用户创建破坏性的自定义控件，跟你错误地将其添加到你的项目的情况下是问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
  [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [如何：重设 Windows 窗体上控件的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  

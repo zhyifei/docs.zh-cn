@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff0a4432f6de8458e89132bbf46bab7568a04b60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9f0623ed4c84247cc1759a203e3b95dd895cee2e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expander-overview"></a>Expander 概述
 <xref:System.Windows.Controls.Expander>控件提供一种方法提供一个可展开的区域，它类似于一个窗口，并包含标头中的内容。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="using-the-alignment-properties"></a>使用对齐属性  
  你可以通过设置对齐内容<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>和<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>属性<xref:System.Windows.Controls.Expander>控件。 当设置这些属性时，对齐将同时应用于标头和展开的内容。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.Expander>  
  <xref:System.Windows.Controls.ExpandDirection>  
- [操作说明主题](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

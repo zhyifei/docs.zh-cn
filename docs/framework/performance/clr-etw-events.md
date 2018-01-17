@@ -17,11 +17,12 @@ caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1d0619388b429bd1824a62bc29ccb222eea1ffde
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17701ee1ddbb1056c9b06b2467c4ce10b91271ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
 本部分的主题介绍 Windows (ETW) 事件的事件跟踪。 每个事件都有关联的关键字和级别，详见 [CLR ETW 关键字和级别](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)主题。 CLR 有两个事件提供程序：  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
  [堆栈事件](../../../docs/framework/performance/stack-etw-event.md)  
  捕获可用于其他事件以在引发事件后生成堆栈跟踪的信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [改善调试和性能优化与 ETW](http://go.microsoft.com/fwlink/?LinkId=179696)  
  [Windows 性能博客](http://go.microsoft.com/fwlink/?LinkId=179509)  
  [控制 .NET Framework 日志记录](../../../docs/framework/performance/controlling-logging.md)  

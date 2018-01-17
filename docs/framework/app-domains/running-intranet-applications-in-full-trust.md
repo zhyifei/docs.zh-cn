@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58eeda82c66ecda6ffd714e808b006634ccba804
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 51a9b9ee938d6a03330d53c25fdf0468781e02a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>在完全信任环境中运行 Intranet 应用程序
 从 .NET Framework 3.5 版 Service Pack 1 (SP1) 开始，应用程序及其库程序集可在网络共享中作为完全信任的程序集运行。 <xref:System.Security.SecurityZone.MyComputer> 区域证据自动添加到从 Intranet 上的共享加载的程序集。 此证据为这些程序集提供与计算机上程序集所具有的相同授予集（通常为完全信任）。 此功能不适用于 ClickOnce 应用程序或用于在主机上运行的应用程序。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/18/2017
   
 -   对于 64 位计算机，在系统注册表中的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 项下创建子项。 使用项名称 LegacyMyComputerZone，DWORD 值为 1。 在 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 项下创建相同的子项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)

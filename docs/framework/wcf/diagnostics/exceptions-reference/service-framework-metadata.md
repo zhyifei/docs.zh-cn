@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5886796b7bca4d57b34d33dd35253880ca8b4e37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5cab33ec4a3f3e42c4ec373073e171a7dcfeace2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-framework-metadata"></a>服务框架元数据
 本主题列出由服务框架元数据生成的所有异常。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
 |DuplicateBehavior1|该值无法添加到集合中， 因为该集合已经包含一个具有相同指定类型的项。 此集合仅支持每种类型的一个实例。|  
 |InAContractInheritanceHierarchyIfParentHasCallbackChildMustToo|因为指定的基本服务协定具有指定的回调协定，所以指定的派生服务协定还必须将指定类型或派生类型指定为其回调协定。|  
 |InvalidAsyncBeginMethodSignatureForMethod2|指定 ServiceContract 类型中指定方法的异步 Begin 方法签名无效。 Begin 方法必须采用 AsyncCallback 和一个对象作为最后两个参数并返回 IAsyncResult。|  
-|InvalidAsyncEndMethodSignatureForMethod2|指定 ServiceContract 类型中指定方法的异步 End 方法签名无效。 End 方法必须采用 IAsyncResult 作为最后一个参数。|  
+|InvalidAsyncEndMethodSignatureForMethod2|指定 ServiceContract 类型中指定方法的异步 End 方法签名无效。 End 方法必须采用 IAsyncResult 作为最后一个自变量。|  
 |MessagePropertiesArraySize0|传递的数组没有足够空间容纳此集合包含的全部属性。|  
 |OneWayAndFaultsIncompatible2|将指定类型中的指定方法标记为 IsOneWay=true 并且声明了一个或多个 FaultContractAttributes。 单向方法不能声明 FaultContractAttributes。 若要修复此问题，请将 IsOneWay 更改为 false 或者移除 FaultContractAttributes。|  
 |UnsupportedWSDLOnlyOneMessage|不支持 WSDL， 仅支持错误消息的一个消息部分。 此错误消息引用了多个消息部分。 如果您具有对 WSDL 文件进行编辑的访问权限，则可以通过删除额外的消息部分解决该问题，以使错误消息仅引用一个部分。|  

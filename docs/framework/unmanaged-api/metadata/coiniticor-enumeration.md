@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: dba35669f7679b224e43d5a23eb6d6a676341b87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53b02f709bca1edbdad82e0c0efd1c1959e4ebe1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR 枚举
 指定使用的常量[CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md)它时初始化公共语言运行时。  
@@ -43,7 +44,7 @@ typedef enum tagCOINITCOR
 |------------|-----------------|  
 |`COINITCOR`|指示的默认初始化模式。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -52,5 +53,5 @@ typedef enum tagCOINITCOR
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [元数据枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅  
+ [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "51"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 0587883a7f354ec03e3fd47ea362b93f006028ba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d21bda439e40880a389ccbb9bb28a45a16735805
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-certificate"></a>消息安全证书
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS 安全性和 X.509 v3 证书身份验证，并要求使用服务器的 X.509 v3 证书进行服务器身份验证。 此示例使用默认设置，以便客户端和服务器之间的所有应用程序消息都经过签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)和客户端控制台程序和由 Internet 信息服务 (IIS) 承载的服务库组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -343,4 +344,4 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

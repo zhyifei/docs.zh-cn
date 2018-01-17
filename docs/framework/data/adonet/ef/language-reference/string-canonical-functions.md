@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 55d139fe4a1448f1f9f4739421a90b4dc8729489
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 89e1d99b5573f36fab4f2cfe675ab95e57a8fd2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="string-canonical-functions"></a>字符串规范函数
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含字符串规范函数。  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/18/2017
   
  Microsoft SQL 客户端托管提供程序中提供了等效功能。 有关详细信息，请参阅[用于实体框架函数的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

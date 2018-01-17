@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5981e68ebe2870870fff5e92e87d7582ac2c42b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 582eaef518e10acb4c4c356226ce0be24d1b4c35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>如何：使用 MMC 管理单元查看证书
 凭据的一种常见类型是 X.509 证书。 在创建安全服务或客户端时，可以通过使用如 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 这样的方法来指定使用证书作为客户端或服务凭据。 该方法需要多个参数，如存储证书的存储位置和搜索证书时使用的值。 下面的过程演示如何检查计算机上的存储以查找相应的证书。 查找证书指纹的示例，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  若要查看的任何证书的详细信息，选择的证书，单击**视图**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [如何： 创建开发期间使用的临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
- [如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+ [如何：创建开发期间使用的临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
+ [如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

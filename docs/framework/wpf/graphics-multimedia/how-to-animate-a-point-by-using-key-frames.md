@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f574f85a5840e8bbe2d6c026d57a4cc28bd8a797
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4c115d31c6ace26f8fd9dd6cff3fdeead89eea33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>如何：使用关键帧对点进行动画处理
 此示例演示如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>类进行动画处理<xref:System.Windows.Point>。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  与其他动画示例保持一致，对于此示例的代码版本使用<xref:System.Windows.Media.Animation.Storyboard>要应用对象<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>。 但是，当应用单个动画在代码中的，这是使用简单得多<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法而不是使用<xref:System.Windows.Media.Animation.Storyboard>。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>  
  <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Media.EllipseGeometry>  

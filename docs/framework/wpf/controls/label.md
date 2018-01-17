@@ -1,5 +1,5 @@
 ---
-title: "标签"
+title: Label
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,13 +17,14 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c271d1c90d36832e36d042a83a0fdbcc6c79a14
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1ffb1a826bb37bddeefae9862e34f59096826685
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="label"></a>标签
+# <a name="label"></a>Label
 <xref:System.Windows.Controls.Label>控件通常提供中的信息[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  从历史上看，<xref:System.Windows.Controls.Label>具有包含纯文本，但是，由于<xref:System.Windows.Controls.Label>附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Controls.ContentControl>，它可以包含文本或<xref:System.Windows.UIElement>。  
   
  A<xref:System.Windows.Controls.Label>提供访问密钥的功能和视觉支持。 它经常用于启用对控件进行快速的键盘访问，例如<xref:System.Windows.Controls.TextBox>。 若要将分配<xref:System.Windows.Controls.Label>到<xref:System.Windows.Controls.Control>，将其设置<xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType>到应在用户按下访问键时获得焦点的控件的属性。  

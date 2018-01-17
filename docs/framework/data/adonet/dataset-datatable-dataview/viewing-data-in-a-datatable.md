@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 147d6fb4509913de1f0331ce2ff6c580c6e41ef3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ab7a60b4195f3d8976a61e3909682b3748e30341
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewing-data-in-a-datatable"></a>查看数据表中的数据
 你可以访问的内容<xref:System.Data.DataTable>使用**行**和**列**的集合**DataTable**。 你还可以使用<xref:System.Data.DataTable.Select%2A>方法以返回中的数据的子集**DataTable**根据包括搜索条件的条件，排序顺序和行状态。 此外，你可以使用<xref:System.Data.DataRowCollection.Find%2A>方法**DataRowCollection**搜索使用的主键值的特定行时。  
@@ -96,7 +97,7 @@ else
 }  
 ```  
   
- **选择**方法可以用于返回具有不同的行**RowState**值或字段值。 下面的示例返回**DataRow**引用已删除，并返回另一个的所有行的数组**DataRow**按排序数组，它都引用的所有行， **CustLName**，其中**CustID**列大于 5。 有关如何查看**已删除**行中的信息，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
+ **选择**方法可以用于返回具有不同的行**RowState**值或字段值。 下面的示例返回**DataRow**引用已删除，并返回另一个的所有行的数组**DataRow**按排序数组，它都引用的所有行， **CustLName**，其中**CustID**列大于 5。 浪中的信息**已删除**行中，请参阅[行状态和行版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
 ```vb  
 ' Retrieve all deleted rows.  
@@ -116,7 +117,7 @@ DataRow[] deletedRows = workTable.Select(
 DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  

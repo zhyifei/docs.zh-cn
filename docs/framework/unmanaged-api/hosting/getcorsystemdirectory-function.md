@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 802e9a7bd4e6caedd657a8e8cf0132d75b4cbc2e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 02b695ac7f75dd38da8cd06e1444af4ae425ebd2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 函数
 返回加载到进程公共语言运行时 (CLR) 的安装目录。 安装目录是完全限定，例如，"c:\windows\microsoft.net\framework\v1.0.3705"。  
@@ -57,7 +58,7 @@ HRESULT GetCORSystemDirectory (
 > [!CAUTION]
 >  不要在运行版本 4 的 CLR 的进程中使用此函数。 如果在计算机上安装的 CLR 早期版本，此函数将返回该版本的安装目录。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -66,5 +67,5 @@ HRESULT GetCORSystemDirectory (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

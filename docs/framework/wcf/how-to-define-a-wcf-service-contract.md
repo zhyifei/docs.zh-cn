@@ -14,11 +14,12 @@ caps.latest.revision: "58"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 062167742a70307949624066b8607a37d5c7ed71
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c69f79d8629acee80a2e59346032e7733ec37dea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>如何：定义 Windows Communication Foundation 服务协定
 这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的第一项任务。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 12/02/2017
     > [!NOTE]
     >  使用特性给接口、成员或类进行批注时，可以从特性名称中去掉“Attribute”部分。 因此 <xref:System.ServiceModel.ServiceContractAttribute> 在 C# 中为 `[ServiceContract]`，在 Visual Basic 中为 `<ServiceContract>`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  [如何：实现服务协定](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  

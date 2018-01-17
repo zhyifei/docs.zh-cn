@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abe0bd7b08d254e97eef74ad1a99b1bcf6dd997e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>导出 WCF 扩展的自定义元数据
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，元数据导出是一个过程，用于描述服务终结点并将服务终结点映射到并行的标准化表示形式，客户端通过这种表示形式，可以理解如何使用服务。 自定义元数据包含系统提供的元数据导出程序无法导出的 XML 元素。 通常，这包括自定义 WSDL 元素（用于用户定义的行为）、绑定元素和策略断言（与绑定和协定的功能和要求有关）。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/02/2017
   
  有关详细信息，请参阅[如何： 导出自定义策略断言](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 导出自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [如何： 导出自定义策略断言](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
- [WCF 扩展的导入自定义的元数据](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+## <a name="see-also"></a>请参阅  
+ [如何：导出自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [如何：导出自定义策略断言](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
+ [导入 WCF 扩展的自定义元数据](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

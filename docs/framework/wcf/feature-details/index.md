@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-feature-details"></a>WCF 功能详细信息
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，可对应用程序的消息传递功能进行充分的控制。 本节中的主题详细介绍了可用的功能。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]基本编程，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -30,13 +31,13 @@ ms.lasthandoff: 12/02/2017
  [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  介绍如何创建和配置工作流服务。  
   
- [终结点： 地址、 绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  介绍如何控制服务的多个方面。  
   
  [数据传输和序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
  介绍如何针对互操作或将来的兼容性对数据的序列化进行调整。  
   
- [会话，实例化和并发](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
+ [会话、实例化和并发](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
  介绍 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的实例和会话模式以及如何为应用程序选择正确的模式。  
   
  [传输](../../../../docs/framework/wcf/feature-details/transports.md)  
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/02/2017
  [AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
  介绍对 ASP.NET 异步 JavaScript 和 XML (AJAX) 以及 JavaScript 对象表示法 (JSON) 数据格式的支持，这些支持使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可以向 AJAX 客户端公开操作。  
   
- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [WCF 发现](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  介绍对可以使用 WS-Discovery 协议以互操作方式在运行时发现服务的支持。  
   
  [路由](../../../../docs/framework/wcf/feature-details/routing.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a3cad92c204fa10f72d7a9a61460f1234206cb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 46208d6db716f7e1e7a443d958c059b22f74c46f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-interfaces"></a>承载接口
 本部分描述的接口以及非托管主机可用于将公共语言运行时 (CLR) 集成到其应用程序。  
@@ -33,13 +34,13 @@ ms.lasthandoff: 10/18/2017
  [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]承载接口取代.NET Framework 2.0 接口。
   
 ## <a name="in-this-section"></a>本节内容  
- [弃用的 CLR 承载接口和组件类](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
+ [弃用的 CLR 承接接口和组件类](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
  描述.NET framework 1.0 和 1.1 版中引入的托管接口。  
   
- [CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
+ [CLR Hosting 接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
  描述.NET Framework 2.0 版中引入的托管接口。  
   
- [CLR 承载接口添加在.NET Framework 4 和 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
+ [.NET Framework 4 和 4.5 中添加的 CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  描述中引入的托管接口[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="related-sections"></a>相关章节  

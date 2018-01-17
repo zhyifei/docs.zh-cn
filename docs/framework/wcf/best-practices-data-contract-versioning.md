@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a84b671725ab41bc3287f184406ebec381f0a554
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：数据协定版本管理
 本主题列出了创建容易随时间而改变的数据协定的最佳做法。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]数据协定，请参阅中的主题[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 12/02/2017
   
  在某些特殊的情况中，可以安全地忽略此处列出的某些准则。 确保在背离这些准则之前，已充分理解所涉及的序列化、反序列化和架构机制。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
@@ -111,7 +112,7 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.ExtensionDataObject>  
  <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
  [使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [数据协定版本管理](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
+ [数据协定版本控制](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
  [数据协定名称](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
  [向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
  [版本容错序列化回调](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

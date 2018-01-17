@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d303bcbee0b0c769fe2bc45663356b759fc91669
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53a999028f2677599598caf55e62f10721f61fe3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 结构
 提供有关的详细信息`Event_MDAFired`触发的托管调试助手 (MDA) 创建的事件。  
@@ -55,7 +56,7 @@ typedef struct _MDAInfo {
   
  若要激活 Mda，并激活 MDA 时接收通知，可以选择主机。 这样，主机有机会将重写默认行为以及中止引发事件，以防止损坏的处理状态的托管的线程。 有关使用 Mda 的详细信息，请参阅[使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.idl  
@@ -64,6 +65,6 @@ typedef struct _MDAInfo {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
  [使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

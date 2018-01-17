@@ -35,11 +35,11 @@ ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 667ab7ceb54e1f339fd645883ca2686c0cbb72b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-statement-visual-basic"></a>Function 语句 (Visual Basic)
 声明名称、 参数和定义的代码`Function`过程。  
@@ -113,7 +113,7 @@ End Function
   
 -   `name`  
   
-     必需。 过程的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+     必须的。 过程的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 -   `typeparamlist`  
   
@@ -143,8 +143,8 @@ End Function
   
     |部件|描述|  
     |---|---|  
-    |`interface`|必需。 此过程所实现的接口的名称包含的类或结构。|  
-    |`definedname`|必需。 在 `interface` 中用于定义过程的名称。|  
+    |`interface`|必须的。 此过程所实现的接口的名称包含的类或结构。|  
+    |`definedname`|必须的。 在 `interface` 中用于定义过程的名称。|  
   
 -   `Handles`  
   
@@ -162,8 +162,8 @@ End Function
   
     |部件|描述|  
     |---|---|  
-    |`eventvariable`|必需。 声明的类或结构，它引发事件的数据类型的对象变量。|  
-    |`event`|必需。 此过程可处理的事件名称。|  
+    |`eventvariable`|必须的。 声明的类或结构，它引发事件的数据类型的对象变量。|  
+    |`event`|必须的。 此过程可处理的事件名称。|  
   
 -   `statements`  
   
@@ -239,7 +239,7 @@ End Function
   
  迭代器函数的返回类型可以是<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>， <xref:System.Collections.IEnumerator>，或<xref:System.Collections.Generic.IEnumerator%601>。  
   
- 有关详细信息，请参阅[迭代器](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)。  
+ 有关更多信息，请参见 [迭代器](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Function`语句来声明名称、 参数和窗体的主体的代码`Function`过程。 `ParamArray`修饰符将启用要接受数目可变的参数的函数。  
@@ -258,7 +258,7 @@ End Function
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Sub 语句](sub-statement.md)  
  [Function 过程](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
  [参数列表](parameter-list.md)  

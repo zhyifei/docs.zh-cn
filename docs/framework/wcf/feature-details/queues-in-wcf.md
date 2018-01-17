@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d00f8847e64e30b42490f319ea3e1df5e5a1850d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c87e384b3186a1dd4b53ba6c21d92bf4d0e6a8c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的队列
 本节中的主题讨论 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 队列支持。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通过利用 Microsoft 消息队列（以前称为 MSMQ）作为传输机制来提供队列支持，并支持以下方案：  
@@ -40,38 +41,38 @@ ms.lasthandoff: 12/02/2017
  [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 队列支持概述。  
   
- [如何： 交换排队消息的 WCF 终结点](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  说明如何使用 <xref:System.ServiceModel.NetMsmqBinding> 类在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务之间进行通信。  
   
- [如何： 与 WCF 终结点交换消息和消息队列应用程序](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  说明如何使用 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和消息队列应用程序之间进行通信。  
   
- [分组在会话中排入队列消息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [在会话中对排队消息进行分组](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  说明如何对队列中的消息分组，以便单个接收应用程序加速处理相关消息。  
   
- [对在事务中的消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
  说明如何在事务中对消息进行批处理。  
   
- [使用死信队列来处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  说明如何使用死信队列来处理消息传输和传送故障，以及如何处理死信队列中的消息。  
   
- [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
+ [有害消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
  说明如何处理病毒消息（向接收应用程序尝试传送的次数超出最大次数的消息）。  
   
- [Windows Vista、 Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
  总结 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 队列功能在 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 之间的区别。  
   
- [使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [使用传输安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  介绍如何使用传输安全来保护排队消息。  
   
- [使用消息安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ [使用消息安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
  介绍如何使用消息安全来保护排队消息。  
   
  [排队消息处理疑难解答](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
  说明如何解决常见队列问题。  
   
- [排队通信的最佳实践](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
+ [排队通信的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  说明使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 排队通信的最佳做法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息队列](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)

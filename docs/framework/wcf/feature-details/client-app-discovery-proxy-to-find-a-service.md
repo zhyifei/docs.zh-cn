@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc6b3a056aaa7aa6cb0a57c72b9591393ca0aff2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 920f2f85333f23d1b07b6a8ddf2a05279ee477ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>如何：实现使用发现代理查找服务的客户端应用程序
 本主题是讨论如何实现发现代理的三个主题中的第三个。 在前面的主题中，[如何： 实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)，你实现[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]向发现代理注册自身的服务。 在本主题中，您将创建一个使用发现代理查找 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端。  
@@ -291,7 +292,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [如何： 实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [如何： 实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a>请参阅  
+ [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [如何：实现向发现代理注册的可检测服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c6959ec7f2226f0d6554e9210b3ee1311871cdcf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24336c180ad8d10a60567ebfeb0f0899f972e2c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>如何：指定客户端凭据类型
 设置安全模式（传输或消息）后，您可以设置客户端凭据类型。 此属性指定客户端必须向服务提供以进行身份验证的凭据类型。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]设置安全模式 （一项必要步骤之前设置客户端凭据类型），请参阅[如何： 将安全模式设置](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
@@ -67,6 +68,6 @@ ms.lasthandoff: 12/02/2017
     </system.serviceModel>  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保护服务](../../../docs/framework/wcf/securing-services.md)  
  [如何：设置安全模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

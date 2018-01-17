@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76da7be50f9e12454e16e08ec4db494585fae613
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56feadd3bb5300376a16cc1d06d9af73ad77b565
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>如何：在 Windows 窗体上绘制垂直文本
 下面的代码示例演示如何使用窗体上绘制垂直文本<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 -   未安装 Arial 字体。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Graphics.DrawString%2A>  
  <xref:System.Drawing.StringFormat.FormatFlags%2A>  
  <xref:System.Drawing.StringFormatFlags>  

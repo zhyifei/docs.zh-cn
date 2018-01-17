@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6a02a69329958593aec546ca9c60e3d201ce2a92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da84f4da9e7f7bcee48c0d6bc432ca75a001ece3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask 方法
 请求公共语言运行时 (CLR) 将留出放任务的当前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)实例表示，并将的处理器时间提供给其他任务。  
@@ -50,7 +51,7 @@ HRESULT YieldTask ();
 ## <a name="remarks"></a>备注  
  主机可调用`YieldTask`对请求对其他任务或进程的处理器资源。 此方法主要是为了允许长时间运行的代码会放弃 CPU 时间。 在运行时尝试将此任务放置，当前`ICLRTask`实例表示在其中可以生成处理时间，但不能保证是否成功的状态。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -59,7 +60,7 @@ HRESULT YieldTask ();
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
  [ICLRTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
  [IHostTask 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  

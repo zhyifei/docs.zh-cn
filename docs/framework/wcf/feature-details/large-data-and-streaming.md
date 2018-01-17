@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23daee4b8e7cd1fcf7ec7f085fb40d788aa5e556
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="large-data-and-streaming"></a>大型数据和流
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是基于 XML 的通信基础结构。 因为 XML 数据通常编码中定义的标准文本格式[XML 1.0 规范](http://go.microsoft.com/fwlink/?LinkId=94838)的连接系统开发人员和架构师通常关心发送的消息的网络占用内存的情况 （或大小） 跨网络和基于文本的编码的 XML 又高效传输的二进制数据带来了特殊的挑战。  
@@ -248,5 +249,5 @@ public class UploadStreamMessage
 > [!NOTE]
 >  使用缓冲传输还是流传输是在终结点本地决定的。 对于 HTTP 传输，传输模式不会通过连接传播，也不会传播到代理服务器和其他中间方。 设置传输模式不会反映在服务接口的说明中。 在对服务生成一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后，必须为旨在与流传输一起使用的服务编辑配置文件，以设置此模式。 对于 TCP 和命名管道传输协议，该传输模式将作为策略断言传播。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 启用流式处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>请参阅  
+ [如何：启用流式处理](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

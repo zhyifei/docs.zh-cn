@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0824fb70fa67628326af38ff7fb5e6c097a0378c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de41d5664c2481032dffe213a52779834338ca2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>如何：使用 Windows 窗体 FolderBrowserDialog 组件选择文件夹
 通常，在创建的 Windows 应用程序内，需要提示用户选择文件夹，最常用于保存一组文件。 Windows 窗体<xref:System.Windows.Forms.FolderBrowserDialog>组件允许你轻松地完成此任务。  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
  有关如何保存文件的信息，请参阅[如何：使用 SaveFileDialog 组件保存文件](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
  [FolderBrowserDialog 组件概述（Windows 窗体）](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
  [FolderBrowserDialog 组件](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)

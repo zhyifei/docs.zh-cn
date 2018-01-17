@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f1a4fd55688f03cbd9de2ceb815c49423aff5fad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 若要成功部署 .NET Framework 应用程序，必须了解公共语言运行时如何查找和绑定到构成应用程序的程序集。 默认情况下，运行时尝试与生成应用程序的程序集的准确版本绑定。 可通过配置文件设置重写此默认行为。  
@@ -255,6 +256,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  例如，如果 Assembly1 引用 Assembly2 且 Assembly1 是从 http://www.code.microsoft.com/utils 下载的，则此位置被视为可提示 Assembly2.dll 的位置。 然后，运行时在 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中探测程序集。 如果在这两个位置中均未找到 Assembly2，则运行时将查询 Windows Installer。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  [部署](../../../docs/framework/deployment/index.md)

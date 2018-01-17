@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe6ccd07f0349b4b2a49df9498a9bd80c60fd6e3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11b4bf28085905f6ff17282bc6d00e0722e86322
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fatalunexpectedstatemachineevent"></a>FatalUnexpectedStateMachineEvent
 Id: 137  
@@ -29,6 +30,6 @@ Id: 137
 ## <a name="description"></a>描述  
  此事件指示状态机尝试处理意外事件。 此事件被认为是致命的。 此事件将列出事务 ID、状态机、当前状态、历史记录、事件名称、事件详细信息、进程名称和进程 ID。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

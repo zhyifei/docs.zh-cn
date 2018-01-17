@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: eb8490241d4ec8a34a76aa6087c1f4d27d5cebb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 077a6f3cb7020d501978fa112a0c318efee27e27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;删除&gt;authenticationModules （网络设置） 的元素
 从应用程序中移除一个身份验证模块。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |**type**|要删除的身份验证模块的名称。|  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用来验证网络请求的模块。|  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.IAuthenticationModule>  
  <xref:System.Net.AuthenticationManager>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

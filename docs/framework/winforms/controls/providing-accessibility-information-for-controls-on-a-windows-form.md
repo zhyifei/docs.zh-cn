@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d7afc8cc67dc3a428e4995230345938075fbcc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b7c0d570dbb6389ef22dba635bbbc2885c5f3a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>为 Windows 窗体上的控件提供辅助功能信息
 辅助工具是专用的程序和设备，用于帮助残障人士更加有效地使用计算机。 示例包括适用于盲人的屏幕阅读器，还有声音输入实用功能，方便人们发出声音命令，而不使用鼠标或键盘。 这些辅助工具与由 Windows 窗体控件公开的辅助功能属性相交互。 这些属性为：  
@@ -98,7 +99,7 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.AccessibleObject>  
  <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  

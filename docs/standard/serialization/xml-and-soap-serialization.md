@@ -19,11 +19,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d5b89392801e7cf85fcda121a86d0bda4e7ac18
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 006727e70c58834a4e628f584a28302a62363844
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-and-soap-serialization"></a>XML 和 SOAP 序列化
 XML 序列化将对象的公共字段和属性或者方法的参数及返回值转换（序列化）为符合特定 XML 架构定义语言 (XSD) 文档的 XML 流。 XML 序列化会生成强类型类，同时将公共属性和字段转换为序列格式（在此情况下为 XML），以便存储或传输。  
@@ -96,5 +99,5 @@ XML 序列化将对象的公共字段和属性或者方法的参数及返回值�
  [使用 ASP.NET 创建的 XML Web service 以及 XML Web Service 客户端](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
  提供一些主题，描述并说明如何使用 ASP.NET 对 XML Web services 进行编程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [二进制序列化](../../../docs/standard/serialization/binary-serialization.md)

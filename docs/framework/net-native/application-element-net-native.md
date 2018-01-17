@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f4e4eebce1779f1b32a74819fea19fb23204b80c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c486faf43a1109b0391f40072ab267b72e1d07d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltapplicationgt-element-net-native"></a>&lt;应用程序&gt;元素 (.NET Native)
 作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务，并将运行时反射策略应用到一个应用的所有程序元素。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 11/21/2017
   
 -   作为为反射、序列化和互操作设置应用程序范围的策略的元素。 `<Application>` 元素的特性定义应用程序范围的策略，它可能会遭到 `<Application>` 或 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素定义的子元素的改写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<库 > 元素](../../../docs/framework/net-native/library-element-net-native.md)  
  [\<指令 > 元素](../../../docs/framework/net-native/directives-element-net-native.md)  
  [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  

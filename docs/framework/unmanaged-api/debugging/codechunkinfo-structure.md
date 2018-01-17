@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 17727c8927f9db3de3ab26d2504dfae5215a1495
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d7b3b858d645f01f58ba0b67465b22dd05282656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="codechunkinfo-structure1"></a>CodeChunkInfo 结构 1
 表示内存中的单一代码块。  
@@ -47,7 +48,7 @@ typedef struct _CodeChunkInfo {
 ## <a name="remarks"></a>备注  
  的单一代码块是属于一个代码对象，如函数的本机代码的区域。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl  
@@ -56,7 +57,7 @@ typedef struct _CodeChunkInfo {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
  [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

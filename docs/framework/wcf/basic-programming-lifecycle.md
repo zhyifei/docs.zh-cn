@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 78ad1159232ecfb75745dd72b7da1e3153a79574
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4f5c45cad0b1e4ae1aa6b1963e9acdab47cd9203
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-programming-lifecycle"></a>基本编程生命周期
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 可让应用程序通报它们是在同一台计算机上、分布在 Internet 上还是在不同的应用程序平台上。 本主题概述了生成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序所需的任务。 有关工作示例应用程序，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。  
@@ -40,5 +41,5 @@ ms.lasthandoff: 12/02/2017
   
  一旦你熟悉开发服务协定，您还可以阅读[扩展性介绍](../../../docs/framework/wcf/introduction-to-extensibility.md)。 如果存在与您的服务的问题，请检查[WCF 疑难解答快速入门](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)以查看是否其他具有相同或类似问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -12,11 +12,12 @@ ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0c1f9ffd1df3861c2e9b000faccae381b04295dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae193819b191e6a3a09f0556ff221960c1aeb7b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>.NET Framework 4.7、4.6 和 4.5 的迁移指南 
 如果使用之前版本的 .NET Framework 创建了应用，通常可以轻松地将它升级为 .NET Framework 4.5 及其子版本（4.5.1 和 4.5.2）、.NET Framework 4.6 及其子版本（4.6.1 和 4.6.2）或者 .NET Framework 4.7 及其子版本 .NET Framework 4.7.1。 在 Visual Studio 中打开项目。 如果项目是在之前版本的 Visual Studio 中创建的，则会自动打开“项目兼容性”对话框。 有关在 Visual Studio 中升级项目的详细信息，请参阅[移植、迁移和升级 Visual Studio 项目](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)和 [Visual Studio 2017 平台目标以及兼容性](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs)。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 -   查看[新增功能](../../../docs/framework/whats-new/index.md)以了解可能需要向应用添加的新功能的说明。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)  
  [从 .NET Framework 1.1 迁移](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
  [版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)  

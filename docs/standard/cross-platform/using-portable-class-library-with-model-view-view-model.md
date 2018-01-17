@@ -19,11 +19,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e39a8df5c8aee05414e778f15a29bbeda8dba930
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc12a90025a1862fc6c588fe4425f3f8341da313
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>将可移植类库与模型-视图-视图模型配合使用
 你可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)实现模型-视图-视图模型 (MVVM) 模式并在多个平台之间共享程序集。  
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/18/2017
   
  ![可移植的 MVVM 关系图](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
   
- 本主题不提供有关 MVVM 模式的一般信息。 它仅提供有关如何使用信息[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]实现 MVVM。 MVVM 有关的详细信息，请参阅[MVVM 快速入门](http://go.microsoft.com/fwlink/?LinkId=234934)。  
+ 本主题不提供有关 MVVM 模式的一般信息。 它仅提供有关如何使用信息[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]实现 MVVM。 MVVM 有关的详细信息，请参阅[MVVM 快速入门](https://msdn.microsoft.com/library/gg430869(v=PandP.40).aspx)。  
   
 ## <a name="classes-that-support-mvvm"></a>支持 MVVM 类  
  当针对[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]， [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，Silverlight 或为 Windows Phone 7.5 你[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目中，下面的类是可用于实现 MVVM 模式：  
@@ -96,5 +99,5 @@ ms.lasthandoff: 10/18/2017
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

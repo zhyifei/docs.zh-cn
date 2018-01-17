@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0913dc2745e1b244e4b03c0e6b946441a401c5b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 35f43316e2535aae6622ccf7952f649cdb92fc81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>使用钢笔绘制线条和形状
 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]`Pen`对象绘制直线线段、 曲线和形状的轮廓。 在本部分中，*行*指任一这些，除非另行指定，表示仅一条直线段。 设置钢笔若要控制颜色、 宽度、 对齐方式，以及使用该钢笔绘制的直线的样式的属性。  

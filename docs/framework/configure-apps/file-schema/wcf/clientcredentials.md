@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 834853d8a922148d2810cd391a64a281f2f9ae3c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: eaf46953d7b2c3f89e1f5b107dc9ddf5d1597875
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltclientcredentialsgt"></a>&lt;clientCredentials&gt;
 指定用于向服务验证客户端身份的凭据。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  在要求相互进行身份验证的情况下，需要使用客户端凭据使客户端通过服务的身份验证。 当客户端必须使用服务的证书来保护发送到服务的消息时，还可以使用该配置节来指定服务证书。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
  [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  

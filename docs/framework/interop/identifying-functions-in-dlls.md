@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b5aa725d30e280d672724c7b7f4fd11a848a3ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d182ec26d6d15ad3e4c93e9bfa8287ba028e424
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identifying-functions-in-dlls"></a>标识 DLL 中的函数
 DLL 函数的标识由以下元素组成：  
@@ -53,7 +54,7 @@ DLL 函数的标识由以下元素组成：
   
  有关 Win32 API 的完整文档，请参阅平台 SDK。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
  [指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  

@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f246b7ab5eae52b745849daf2bedadb7431d7d34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d995e9a3a50e733a87a203f94b97a937560a0141
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>如何：通过 Blocks 属性操作流内容元素
 这些示例演示一些较常见的操作，可以通过流内容元素对执行**块**属性。 此属性用于添加和移除项从<xref:System.Windows.Documents.BlockCollection>。 流内容元素，该功能**块**属性包括：  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksclear)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Documents.BlockCollection>  
  <xref:System.Windows.Documents.InlineCollection>  
  <xref:System.Windows.Documents.ListItemCollection>  

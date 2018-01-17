@@ -16,16 +16,17 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0e551a09ef6dc778f5dfab9ba8cf263f803556f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0eb38eb764faa51524565e57826db17311fc5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-events"></a>连接事件
 所有.NET Framework 数据提供程序具有**连接**有从数据源中检索信息性消息，或以确定是否可以使用的两个事件的对象的状态**连接**具有更改。 下表说明的事件**连接**对象。  
   
-|Event|描述|  
+|事件|描述|  
 |-----------|-----------------|  
 |**InfoMessage**|当从数据源中返回信息性消息时发生。 信息性消息是数据源中不会引发异常的消息。|  
 |**StateChange**|发生时的状态**连接**更改。|  
@@ -115,6 +116,6 @@ protected static void OnStateChange(object sender,
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

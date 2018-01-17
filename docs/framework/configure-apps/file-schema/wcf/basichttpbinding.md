@@ -14,11 +14,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7842efe074d5487a5917e7ee669027a420d9d713
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 44bc7a3ef40b08d7cee4e515e6628aef9987c0c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 表示一个绑定，[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务可以使用此绑定配置和公开这样的终结点：这些终结点能够与基于 ASMX 的 Web 服务和客户端以及符合 WS-I Basic Profile 1.1 标准的其他服务进行通信。  
@@ -186,7 +187,7 @@ ms.lasthandoff: 12/02/2017
   
  有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.BasicHttpBinding>  

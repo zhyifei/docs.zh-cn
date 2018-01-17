@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: dc9f8f4e958d1988cecd769431e99d70ff2a4cfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 970b428343f4e2dec73e7eceec20414cd8bdfbac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>如何：重写全局代理选择
 此示例将 WebRequest 发送到 www.contoso.com，其在端口 80 上使用名为 `alternateproxy` 的代理服务器替代全局代理选择。  
@@ -41,6 +42,6 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
   
 -   引用 System.Net 命名空间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)  
  [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)

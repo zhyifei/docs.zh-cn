@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b72a24f349237aa35ccae295e9e552facc21ddd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6615abdf621217baa7ced4211bfa19abac944be9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>如何：注册主互操作程序集
 类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关使用选择的接口重写类接口的信息，请参阅 [COM可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 regasm CompanyA.UtilLib.dll  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用主互操作程序集编程](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)  
  [定位主互操作程序集](http://msdn.microsoft.com/en-us/d6768e4b-cd80-414d-a4f8-05d979eb393b)  
  [重新分发主互操作程序集](http://msdn.microsoft.com/en-us/e76384f0-d631-474c-bdbd-13884cba0265)

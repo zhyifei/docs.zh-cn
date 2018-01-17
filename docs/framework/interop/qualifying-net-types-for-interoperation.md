@@ -15,11 +15,12 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 165536656f0de6b53680565bee93f0bb8d607d48
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b0a6d6a2a8139127b46484f972eb797642b4ee53
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>为互操作限定 .NET 类型
 若要向 COM 应用程序公开程序集中的类型，请考虑 COM 互操作在设计时的需求。 如果符合以下准则，托管类型（类、接口、结构和枚举）将与 COM 类型无缝集成：  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/02/2017
   
  导出到 COM 后，托管类型的继承层次结构将被展平。 托管和非托管环境之间的版本控制也会有所不同。 向 COM 公开的类型不具有其他托管类型相同的版本控制特性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [类接口简介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  

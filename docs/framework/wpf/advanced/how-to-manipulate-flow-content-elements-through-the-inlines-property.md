@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77b6d75b48fd137092600a7e2316cbcf7099de76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c5d90756ee200ba091f2f9e15e9e7d5632984ba9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>如何：通过 Inlines 属性操作流内容元素
 这些示例演示一些较常见可以在内联流内容元素执行的操作 (和容器的此类元素，如<xref:System.Windows.Controls.TextBlock>) 通过**内联**属性。 此属性用于添加和移除项从<xref:System.Windows.Documents.InlineCollection>。 流内容元素，该功能**内联**属性包括：  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
  [!code-vb[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Documents.BlockCollection>  
  <xref:System.Windows.Documents.InlineCollection>  
  <xref:System.Windows.Documents.ListItemCollection>  

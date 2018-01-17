@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebba6df29b814315180e9c8e936e5e1ad175ecf8
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 2430358e5ea21468c2e975c2a26f20fe801ee546
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 函数
 指示用户凭据是否允许访问指定[IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx)对象。   
@@ -59,7 +60,7 @@ HRESULT BlessIWbemServicesObject (
 
 此函数返回以下值中定义*WinError.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 一个或多个自变量均无效。 |
 | `E_POINTER` | 0x80004003 | `pIWbemServices` 为 `null`。 | 
@@ -67,7 +68,7 @@ HRESULT BlessIWbemServicesObject (
 | `E_OUTOFMEMORY` | 0x80000002 | 内存不足是可用于执行该操作。 | 
 | `S_OK` | 0 | 函数调用成功。 | 
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

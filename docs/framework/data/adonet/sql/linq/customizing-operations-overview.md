@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7653ca137c93da5174e0ddcd1ced8bdfceaa9edc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9776daa28b0a7ffcd3b721f004f5b9a44dd09f48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-operations-overview"></a>自定义操作：概述
 默认情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会根据映射生成动态 SQL 来执行插入、更新和删除操作。 但在实践中，您通常需要添加您自己的业务逻辑来提供安全、验证等。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="stored-procedures-and-user-defined-functions"></a>存储过程和用户定义的函数  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持使用存储过程和用户定义的函数。 存储过程经常用来自定义操作。 有关详细信息，请参阅[存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [自定义插入、 更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+## <a name="see-also"></a>请参阅  
+ [自定义插入、更新和删除操作](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

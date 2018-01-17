@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf0ed4e1c06bc464b8ebeffbf3be10de3064f479
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82d9bb27ef20aa4e425e232a23c785af3b7e6e5a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax-service-without-configuration"></a>无配置的 AJAX 服务
 本示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建一个基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务（可通过从 Web 浏览器客户端使用 JavaScript 代码访问的服务）而不使用任何配置设置。 该服务在 .svc 文件中使用特殊语法来自动启用 AJAX 终结点。  
@@ -60,5 +61,5 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  运行此示例时，请确保不要对 IIS 中的 ServiceModelSamples 文件夹同时启用匿名身份验证和 Windows 身份验证。 如果同时启用了这两种身份验证，请禁用 Windows 身份验证。 运行了该示例后，请启用 Windows 身份验证并运行“iisreset”。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

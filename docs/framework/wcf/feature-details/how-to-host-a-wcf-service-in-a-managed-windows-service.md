@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8572541e0bf9ddcfb93939c177b5cb8c440b41
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>如何：在托管 Windows 服务中承载 WCF 服务
 本主题概述了创建由 Windows 服务承载的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的基本步骤。 此方案可通过托管 Windows 服务承载选项启用，此选项是在没有消息激活的安全环境中在 Internet 信息服务 (IIS) 外部承载的、长时间运行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  
@@ -142,9 +143,9 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_HowTo_HostInNTService#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#8)]
  [!code-vb[c_HowTo_HostInNTService#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#8)]  
   
- 与“自承载”选项一样，Windows 服务主机环境要求写入一些宿主代码作为应用程序的一部分。 该服务作为控制台应用程序实现，且包含其自己的宿主代码。 在其他宿主环境（如 Internet 信息服务 (IIS) 中的 Windows 进程激活服务 (WAS) 宿主）中，开发人员没有必要编写宿主代码。  
+ 与“自承载”选项一样，Windows 服务主机环境要求写入一些主机代码作为应用程序的一部分。 该服务作为控制台应用程序实现，且包含其自己的宿主代码。 在其他宿主环境（如 Internet 信息服务 (IIS) 中的 Windows 进程激活服务 (WAS) 宿主）中，开发人员没有必要编写宿主代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [简化配置](../../../../docs/framework/wcf/simplified-configuration.md)  
  [在托管应用程序中承载](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
  [托管服务](../../../../docs/framework/wcf/hosting-services.md)  

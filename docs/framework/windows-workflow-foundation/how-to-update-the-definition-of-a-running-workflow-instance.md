@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7cb2191482771647bcc2cd1003229e445c320e1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 86a6e8d22d1e46407082af5d71cd83c179825bb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>如何：更新正在运行的工作流实例的定义
 动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。 所需的更改可以实施 Bug 修复、新的需求以适应意外变化。 此步骤在本教程演示如何使用动态更新来修改的持久化的实例`v1`数字猜测工作流以匹配在中引入的新功能[How to： 主机的工作流的并行安装多个版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  若要下载完整的版本或观看教程视频演练，请参阅[Windows Workflow Foundation (WF45)-入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
   
-## <a name="in-this-topic"></a>主题内容  
+## <a name="in-this-topic"></a>在本主题中  
   
 -   [创建 CreateUpdateMaps 项目](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 965e2061d6457084e4f316d27e29865109f62e34
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 49bc3ac8c57e95e597d6b9aa505a931a6204b3f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-margins-of-elements-and-controls"></a>如何：设置元素和控件的边距
 本示例介绍了如何设置<xref:System.Windows.FrameworkElement.Margin%2A>属性，通过更改的代码隐藏文件中的边距任何现有属性值。 <xref:System.Windows.FrameworkElement.Margin%2A>属性是属性的<xref:System.Windows.FrameworkElement>基元素，并因此由各种控件和其他元素继承。  

@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d7918a369b5a5656fa2e059bdaaf6c211bd022c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-overview"></a>分析概述
 <a name="top"></a>探查器是一种工具，监视另一个应用程序的执行。 公共语言运行时 (CLR) 探查器是一个动态链接库 (DLL)，具有使用分析 API 从 CLR 中接收消息以及向 CLR 发送消息的功能。 CLR 在运行时加载探查器 DLL。  
@@ -238,7 +239,7 @@ ms.lasthandoff: 10/18/2017
 |标题|描述|  
 |-----------|-----------------|  
 |[设置分析环境](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|说明如何初始化探查器、设置事件通知和分析 Windows 服务。|  
-|[分析接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|描述分析 API 使用的非托管接口。|  
+|[Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|描述分析 API 使用的非托管接口。|  
 |[分析全局静态函数](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|描述分析 API 使用的非托管全局静态函数。|  
 |[分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|描述分析 API 使用的非托管枚举。|  
 |[分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|描述分析 API 使用的非托管结构。|

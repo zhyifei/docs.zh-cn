@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e22763f78d8a40ced4350a93a1f1833e19aac17f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
@@ -358,7 +359,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   列表集合数据协定的默认名称如果未使用 Name 重写，则是“ArrayOf”字符串与集合中包含类型的数据协定名称的组合。 例如，某个整数泛型列表的数据协定名称是“ArrayOfint”。 请记住， `Object` 的数据协定名称是“anyType”，因此诸如 <xref:System.Collections.ArrayList> 这样的非泛型列表的数据协定名称是“ArrayOfanyType”。  
   
- 字典集合数据协定的默认名称如果未使用 `Name`重写，则是“ArrayOfKeyValueOf”字符串与键类型的数据协定名称以及值类型的数据协定名称（按此顺序）的组合。 例如，String 和 Integer 的泛型字典的数据协定名称是“ArrayOfKeyValueOfstringint”。 此外，如果键或值类型不是基元类型，则键和值类型的数据协定命名空间的命名空间哈希将会追加到名称的末尾。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 哈希值命名空间，请参阅 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ 字典集合数据协定的默认名称如果未使用 `Name` 重写，则是“ArrayOfKeyValueOf”字符串与键类型的数据协定名称以及值类型的数据协定名称（按此顺序）的组合。 例如，String 和 Integer 的泛型字典的数据协定名称是“ArrayOfKeyValueOfstringint”。 此外，如果键或值类型不是基元类型，则键和值类型的数据协定命名空间的命名空间哈希将会追加到名称的末尾。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 哈希值命名空间，请参阅 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  每个字典集合数据协定都有一个表示字典中的一项的伴随数据协定。 除“ArrayOf”前缀外，它的名称与字典数据协定相同，并且命名空间也与字典数据协定相同。 例如，对于“ArrayOfKeyValueOfstringint”字典数据协定，“KeyValueofstringint”数据协定表示字典中的一项。 您可以使用 `ItemName` 属性来自定义该数据协定的名称，具体说明请见下一部分。  
   
@@ -405,5 +406,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collections-and-object-reference-preservation"></a>集合和对象引用保存  
  当序列化程序在保存对象引用的模式下工作时，对象引用保存也适用于集合。 具体而言，会为整个集合以及集合中包含的各个项保存对象标识。 对于字典，会为键/值对对象以及各个键和值对象保存对象标识。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

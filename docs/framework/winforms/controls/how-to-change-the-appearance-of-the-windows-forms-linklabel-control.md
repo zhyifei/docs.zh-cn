@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42aaef183178e7170d3046b4c5daefc8647f7cc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7dc3963ab1b242ce8dce53d9bba996f52347679b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>如何：更改 Windows 窗体 LinkLabel 控件的外观
 你可以更改显示的文本<xref:System.Windows.Forms.LinkLabel>控件以满足多种用途。 例如，它是常见的做法，以指示用户后，可以设置要显示在特定颜色带下划线的文本单击文本。 在用户单击文本后的颜色更改为不同的颜色。 若要控制此行为，可以设置五个不同的属性： <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>， <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>， <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>， <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>，和<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>属性。  
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>  
  <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>  
  <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>  

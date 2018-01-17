@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 492a3cb4b11706bfabc42976fb1adfad24a2279a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 54566bc452baa2e02cef7d8d13d29fcd5864c95c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operation-class"></a>Operation 类
 操作  
@@ -104,7 +105,7 @@ class Operation
   
  操作的方法签名。  
   
-### <a name="name"></a>名称  
+### <a name="name"></a>name  
  数据类型：String  
   
  访问类型：只读  
@@ -132,11 +133,11 @@ class Operation
   
  操作的返回类型。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |MOF|已在 Servicemodel.mof 中声明。|  
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Description.OperationDescription>

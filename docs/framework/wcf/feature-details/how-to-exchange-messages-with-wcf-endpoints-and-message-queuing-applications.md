@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>如何：与 WCF 终结点和消息队列应用程序交换消息
 通过使用 MSMQ 集成绑定，可以将现有消息队列 (MSMQ) 应用程序与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序进行集成，从而在 MSMQ 消息与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 消息之间进行转换。 利用这一功能，可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端调用 MSMQ 接收方应用程序，也可以在 MSMQ 发送方应用程序中调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
@@ -72,10 +73,10 @@ ms.lasthandoff: 12/02/2017
   
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [如何： 交换排队消息的 WCF 终结点](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  [Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [消息队列到 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [通过消息队列的消息安全](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [到 Windows Communication Foundation 的消息队列](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
+ [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 08f125d7fc388a9b2d31c9cc1cebf2605ffa7e23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 017a2f018569b17c0b0011638e16f1921b6c9801
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomain3-interface"></a>ICorDebugAppDomain3 接口
 提供用于检索有关托管表示形式的信息方法[!INCLUDE[wrt](../../../../includes/wrt-md.md)]当前加载的应用程序域中的类型。 此接口是 ICorDebugAppDomain 和 ICorDebugAppDomain2 接口的扩展。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  此接口不支持跨计算机或跨进程远程调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**[!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/18/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

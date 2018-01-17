@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0086dc0c82fefad3cb1e5a73ddd9ced909f05453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>如何：创建自定义授权策略
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的标识模型基础结构支持基于声明的授权模型。 声明从令牌中提取，并可以选择由自定义授权策略进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中，之后进行检查以做出授权决定。 可以使用自定义策略将声明从传入令牌转换成应用程序需要的声明。 这样，可以将应用程序层从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的不同令牌类型所提供的不同声明的详细信息中隔离出来。 本主题演示如何实现自定义授权策略和如何将该策略添加到服务所使用的策略集中。  
@@ -85,8 +86,8 @@ ms.lasthandoff: 12/02/2017
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [如何： 比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [如何： 创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [如何：比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
+ [如何：为服务创建自定义授权管理器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)

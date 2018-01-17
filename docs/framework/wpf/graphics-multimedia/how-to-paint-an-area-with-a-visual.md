@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4cd1bafb528613f15ec5eb597179bc0dd05ace0f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 183117472cc74c958bdd7f807236eded97610b1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>如何：使用 Visual 绘制区域
 此示例演示如何使用<xref:System.Windows.Media.VisualBrush>类来绘制带有区域<xref:System.Windows.Media.Visual>。  
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/22/2017
   
  此代码示例摘自更大的示例为提供<xref:System.Windows.Media.VisualBrush>类。 有关完整的示例，请参阅[VisualBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160049)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

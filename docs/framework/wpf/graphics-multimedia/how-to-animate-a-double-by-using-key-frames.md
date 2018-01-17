@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c4ec6554ee024450e397ee7757649be7537eaae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e87717f6e2691142efa54a7e363f1038f8b74c1b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>如何：使用关键帧对双精度属性值进行动画处理
 此示例演示如何采用的属性值进行动画处理<xref:System.Double>使用关键帧。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  与其他动画示例保持一致，对于此示例的代码版本使用<xref:System.Windows.Media.Animation.Storyboard>要应用对象<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>。 或者，应用单个动画时在代码中，它是使用简单得多<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法而不是使用<xref:System.Windows.Media.Animation.Storyboard>。 有关示例，请参阅[在不使用情节提要的情况下对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
  <xref:System.Windows.Shapes.Rectangle>  
  <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>  

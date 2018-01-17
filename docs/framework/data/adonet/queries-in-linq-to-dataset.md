@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 31923631d5b93368f8b71ff38d1244d726341fdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f41a55cce6834b58526c84d9a82fb38e10f46b42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queries-in-linq-to-dataset"></a>在 LINQ to DataSet 中查询
 查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一种较为简单的一致模型，适用于各种数据源和格式的数据。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询中，您始终使用编程对象。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
  [查询数据集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [C# 中的 LINQ 入门](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  

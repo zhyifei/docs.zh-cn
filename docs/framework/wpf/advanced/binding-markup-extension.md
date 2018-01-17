@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d2bbca799e1eda1abae3d199dd71e004b17c4c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-markup-extension"></a>绑定标记扩展
 将遵从输入属性值，将数据绑定值，创建一个中间表达式对象，并解释适用于元素以及运行时在其绑定的数据上下文。  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>： 可以将设置为`bindProp` = `value`字符串表达式，但这是依赖于所传递的参数的类型。 如果传递引用类型的值，需要对象引用，如嵌套[否则标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)。  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*值*是中的常量名<xref:System.Windows.Data.UpdateSourceTrigger>枚举。 例如 `{Binding UpdateSourceTrigger=LostFocus}`。 特定控件可能具有不同的默认值为此绑定属性。 请参阅<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
+-   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*值*是中的常量名<xref:System.Windows.Data.UpdateSourceTrigger>枚举。 例如 `{Binding UpdateSourceTrigger=LostFocus}`。 特定控件可能具有不同的默认值为此绑定属性。 请参阅 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
   
 -   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>： 布尔值，可以是`true`或`false`。 默认值为 `false`。 请参阅“备注”。  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
  `Binding`是中的异常的标记扩展<xref:System.Windows.Data.Binding>实现 WPF 的 XAML 实现的扩展功能的类还实现多种其他方法和不与 XAML 相关的属性。 其他成员旨在让<xref:System.Windows.Data.Binding>可以解决除了充当 XAML 标记扩展的许多数据绑定方案的更多且独立的类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.Binding>  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

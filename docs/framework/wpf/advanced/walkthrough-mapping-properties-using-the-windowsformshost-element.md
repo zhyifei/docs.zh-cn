@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f566d41ff1ffa07a2f52641ba05e48dfa604cfc9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 612d4a78f2f18824e5859604dc40e66b99e68586
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>演练：使用 WindowsFormsHost 元素映射属性
 本演练演示如何使用<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>属性映射[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]到上一个承载的相应属性的属性[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  完成后，你将能够映射[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]到上一个承载的相应属性的属性[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]。  
@@ -157,7 +158,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  按 F5 生成并运行该应用程序。 单击复选框，以查看的效果<xref:System.Windows.FrameworkElement.FlowDirection%2A>映射。 单击复选框时，布局会反转其左右方向。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  

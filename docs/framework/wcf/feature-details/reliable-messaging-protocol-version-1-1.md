@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 586e26825bd01947706bb26061ef1b8879fecb4c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 67df8b539109d7e4dafcbc42ad7679643767021a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>可靠消息传送协议版本 1.1
 本主题介绍使用 HTTP 传输进行互操作所需的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WS-ReliableMessaging 2007 年 2 月（版本 1.1）协议的实现细节。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 遵循 WS ReliableMessaging 规范以及本主题中解释的约束和声明。 请注意，Ws-reliablemessaging 版本 1.1 协议实现开头[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]。  
@@ -36,14 +37,14 @@ ms.lasthandoff: 12/02/2017
 |-|-|  
 |wsrm|http://docs.oasis-open.org/ws-rx/wsrm/200702|  
 |netrm|http://schemas.microsoft.com/ws/2006/05/rm|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
+|秒|http://www.w3.org/2003/05/soap-envelope|  
 |wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
 |wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
 |wsrmp|http://docs.oasis-open.org/ws-rx/wsrmp/200702|  
 |netrmp|http://schemas.microsoft.com/ws-rx/wsrmp/200702|  
 |wsp|（WS-Policy 1.2 或 WS-Policy 1.5）|  
   
-## <a name="messaging"></a>消息传送  
+## <a name="messaging"></a>消息  
   
 ### <a name="sequence-creation"></a>序列创建  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 `CreateSequence` 和 `CreateSequenceResponse` 消息以建立可靠消息序列。 适用以下约束：  
@@ -381,7 +382,7 @@ Example TerminateSequenceResponse message:
   
 -   B3006：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 始终指定 `wsrmp:ExactlyOnce` 传递确定性。  
   
--   B3007：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成并读取 WS-ReliableMessaging 断言的以下属性，以及在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableSessionBindingElement` 上提供对它们的控制：  
+-   B3007:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]生成并读取 Ws-reliablemessaging 断言的以下属性并提供有关对其进行控制[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableSessionBindingElement`:  
   
     -   `netrmp:InactivityTimeout`  
   

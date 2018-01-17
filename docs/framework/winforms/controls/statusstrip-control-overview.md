@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5f06d155972846b3c04a60d448b300d8cdc5d1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6d1eb698dbb9168bf5de6d3982e19e69d170ac0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip 控件概述
 <xref:System.Windows.Forms.StatusStrip> 控件将显示有关在 <xref:System.Windows.Forms.Form> 上查看的对象、对象组件的信息或应用程序内与该对象操作相关的上下文信息。 通常，<xref:System.Windows.Forms.StatusStrip> 控件由 <xref:System.Windows.Forms.ToolStripStatusLabel> 对象组成，每个对象将显示文本、图标或两者都有。 <xref:System.Windows.Forms.StatusStrip> 也可以包括 <xref:System.Windows.Forms.ToolStripDropDownButton>、<xref:System.Windows.Forms.ToolStripSplitButton> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控件。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Forms.ToolStripSplitButton>|表示一个两部分的控件，其中包括一个标准按钮和一个下拉菜单。|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|显示进程的完成状态。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.StatusStrip>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
  <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>

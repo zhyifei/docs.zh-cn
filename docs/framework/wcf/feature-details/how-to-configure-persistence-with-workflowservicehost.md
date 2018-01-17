@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43228b1c08f5801d304d517ee4230dfd6c02054c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 41211eb1d104e0e540e257cffd4647c6fff9fb25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>如何：使用 WorkflowServiceHost 配置永久性
 本主题介绍如何使用配置文件配置 SQL 工作流实例存储功能，以便对 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载的工作流启用永久性。 使用 SQL 工作流实例存储功能之前，必须创建用于保存工作流实例的 SQL 数据库。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 启用对工作流和工作流服务的 SQL 暂留](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 12/02/2017
   
      有关如何以编程方式配置暂留的示例，请参阅[如何： 对工作流和工作流服务启用持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [工作流暂留](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [Windows Server App Fabric 持久性](http://go.microsoft.com/fwlink/?LinkId=193121)

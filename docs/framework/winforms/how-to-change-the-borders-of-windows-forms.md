@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94c95d1d938ff8038f1057ac7648082819562b98
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e977617f16ef882ad0dcfe1a96a6e8af73d2ae48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>如何：更改 Windows 窗体的边框
 当确定 Windows 窗体的外观和行为时，有几种边框样式可供选择。 通过更改 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 属性，可控制窗体调整大小的行为。 此外，设置 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 会影响标题栏的显示方式以及其上出现的按钮布局。 有关详细信息，请参阅<xref:System.Windows.Forms.FormBorderStyle>。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      此外，如果你已选择提供可选的窗体的边框样式**最小化**和**最大化**按钮，你可以指定是否希望任一或所有这些按钮正常工作。 当想要密切控制用户体验时，这些按钮会非常有用。 **最小化**和**最大化**按钮处于启用状态默认情况下，而且其功能操作通过**属性**窗口。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.FormBorderStyle>  
  <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>  
  [Windows 窗体入门](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

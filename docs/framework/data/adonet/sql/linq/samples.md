@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 95bf64ce56b9e70317b2a51e3abf77ea6dbd7bc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9bd06e056a70e3cb97967a03604baf5dc9b4ff5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="samples"></a>示例
 本主题提供指向包含 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 示例代码的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 和 C# 解决方案的链接。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 11/21/2017
   
 -   学习详细介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 和 C# 代码示例的白皮书。 有关详细信息，请参阅[LINQ to SQL： 关系数据的.net 语言集成查询](http://go.microsoft.com/fwlink/?LinkId=93205)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [LINQ to SQL 演练](http://msdn.microsoft.com/en-us/308e66ac-f704-4e00-9b4e-7af0045a2374)

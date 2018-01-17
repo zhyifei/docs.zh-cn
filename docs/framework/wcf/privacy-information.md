@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 93b03a2fb49774c425882183bf7fcda8b6e5c3de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]（版本 3.0）生成应用程序时，应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不会从您的应用程序将任何信息发送给 Microsoft，除非您或最终用户选择将信息发送给我们。  
@@ -411,6 +412,6 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  Web 服务描述语言 (WSDL) 包含端口的定义。 每个端口都具有一个终结点地址和一个表示应用程序所使用的服务的绑定。 可以使用配置禁用公开 WSDL。 计算机上不会保留任何信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [安全性](../../../docs/framework/wcf/feature-details/security.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6243657e0a1fe9222a03ef113261339a18298
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84b2a869b8a10a45c195cb64e95b82492e2d18c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-in-wcf"></a>WCF 中的事务
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 事务功能允许多个组件同时参与数据操作。 本节中的主题详细研究此功能。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/02/2017
  [事务模型](../../../../docs/framework/wcf/feature-details/transaction-models.md)  
  比较 Microsoft 提供的各种事务编程模型。  
   
- [使用 Ws-atomictransaction](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
+ [使用 WS-AtomicTransaction](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
  说明 WS-AtomicTransaction (WS-AT)，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中实现的一种可互操作的事务传播协议。  
   
  [System.ServiceModel 中的事务性支持](../../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
@@ -43,5 +44,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="related-sections"></a>相关章节  
  [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [可靠会话概述](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

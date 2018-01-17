@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>如何：在 IIS 中承载非服务工作流
 可在 IIS/WAS 下承载不属于工作流服务的工作流。 这在您需要承载他人编写的工作流时非常有用。 例如，如果您重新承载工作流设计器，并允许用户创建自己的工作流。  通过在 IIS 中承载非服务工作流，可支持进程回收、空闲时关闭、进程运行状况监视和基于消息的激活等功能。 承载于 IIS 的工作流服务包含 <xref:System.ServiceModel.Activities.Receive> 活动，并在 IIS 接收到消息时激活。 非服务工作流不包含消息传递活动，默认情况下无法通过发送消息激活这些工作流。  您必须从 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 派生一个类，并定义包含创建工作流实例的操作的服务协定。 本主题将指导你完成创建简单工作流、 定义客户端可用来激活工作流服务协定和派生类从<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>它使用服务协定侦听工作流创建请求。  
@@ -682,10 +683,10 @@ namespace CreationClient
   
  此示例可能看起来使人迷惑，因为您从未实现能实现 `IWorkflowCreation` 的服务。 这是因为 `CreationEndpoint` 为您这么做了。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Internet 信息服务承载最佳实践](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [在 Internet Information Services 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Internet Information Services 承载最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  [Windows Workflow 体系结构](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
  [WorkflowHostingEndpoint 恢复书签](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  

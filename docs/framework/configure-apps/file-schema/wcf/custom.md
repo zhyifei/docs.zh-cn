@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e4b96e1274ad59ae5e63e7935d7408afd069a8c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9bcab1e8361448abfe14db8ac38a924c656b9065
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcustomgt"></a>&lt;自定义&gt;
 指定自定义对等解析程序服务的设置。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="remarks"></a>备注  
  此元素可定义自定义对等解析程序服务的基本设置，其中包括执行服务的对等解析程序的终结点地址和所有特定绑定设置。 有关创建自定义解析程序的详细信息，请参阅[向对等通道应用程序添加自定义解析程序](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
  <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 632b25408db8556dd9604f653f975bccbea75e2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7808f2e60902eeb2fce0ac53010e329e4252a24e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中创建应用程序角色
 应用程序角色可提供对应用程序（而不是数据库角色或用户）分配权限的方法。 用户可以连接到数据库、激活应用程序角色以及采用授予应用程序的权限。 授予应用程序角色的权限在连接期间有效。  
@@ -68,8 +69,8 @@ ms.lasthandoff: 11/21/2017
 |--------------|-----------------|  
 |[应用程序角色](http://msdn.microsoft.com/library/ms190998.aspx)SQL Server 联机丛书中|描述如何在 SQL Server 2008 中创建和使用应用程序角色。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server 中的应用程序安全方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

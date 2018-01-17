@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5374c5a7954a8a31736e62c7f954e3fc5a1b937b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 27986236c6b693b2c89157229cd79f0de64266e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-dynamically-create-a-database"></a>如何：动态创建数据库
 在 LINQ to SQL 中，对象模型映射到关系数据库。 通过使用基于属性的映射或外部映射文件启用映射，以描述关系数据库的结构。 在两种方案中，存在足够的有关使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法创建新的数据库实例的关系数据库的信息。  
@@ -58,9 +59,9 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[DLinqSubmittingChanges#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#7)]
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
-## <a name="see-also"></a>另请参阅  
- [基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+## <a name="see-also"></a>请参阅  
+ [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [SQL CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
  [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

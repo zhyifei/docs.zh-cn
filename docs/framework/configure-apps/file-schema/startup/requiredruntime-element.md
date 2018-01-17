@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 633769573253d7516bc50f0210c30376e6aa230a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 12be2350cb123407b2f71d1f5f07e836ccddb9c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt;元素
 指定应用程序仅支持 1.0 版本的公共语言运行时。 此元素已弃用，并应不再使用。 [ `supportedRuntime` ](supportedruntime-element.md)元素应改为使用。
@@ -63,7 +64,7 @@ safemode="true|false"/>
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`startup`|包含`<requiredRuntime>`元素。|  
@@ -90,7 +91,7 @@ safemode="true|false"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<PaveOver> 指定要使用的运行时版本](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)

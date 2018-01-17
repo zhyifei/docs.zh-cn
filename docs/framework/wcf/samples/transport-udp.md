@@ -13,11 +13,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc30a755278251ac9e06f2ddd56e2c369b950af4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-udp"></a>传输：UDP
 “UDP 传输”示例演示如何将 UDP 单播和多播作为自定义 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 传输来实现。 此示例介绍了使用通道框架并遵循 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 最佳做法在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中创建自定义传输的推荐过程。 创建自定义传输的步骤如下：  

@@ -14,14 +14,14 @@ ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9f7121d4787ce36feb6de5f08ca60a4419877f98
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: bc82714d25efbe9d379fff36f92261cf25a78862
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>类型的成员 &#39;&lt;membername&gt;&#39; 不是符合 CLS
-为此成员不是指定的数据类型的一部分[语言独立性和独立于语言的组件](../../../../docs/standard/language-independence-and-language-independent-components.md)(CLS)。 这不是在您的组件，一个错误，因为[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]支持此数据类型。 但是，在严格符合 cls 的代码中编写的另一个组件可能不支持此数据类型。 此类组件可能不能成功与你的组件进行交互。  
+为此成员不是指定的数据类型的一部分[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)。 这不是在您的组件，一个错误，因为[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]支持此数据类型。 但是，在严格符合 cls 的代码中编写的另一个组件可能不支持此数据类型。 此类组件可能不能成功与你的组件进行交互。  
   
  以下 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 数据类型不符合 CLS：  
   
@@ -47,6 +47,6 @@ ms.lasthandoff: 12/09/2017
   
 -   如果在与自动化或 COM 对象对接，请记住，某些类型具有与 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中不同的数据宽度。 例如，`uint` 在其他环境中通常为 16 位。 如果你的 16 位自变量传递给此类组件，将其声明为`UShort`而不是`UInteger`在托管[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [反射](../../../framework/reflection-and-codedom/reflection.md)  
- [\<PAVE 通过 > 编写符合 Cls 的代码](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+ 

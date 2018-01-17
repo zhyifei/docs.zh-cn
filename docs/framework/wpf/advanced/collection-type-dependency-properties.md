@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11927efee2b8375550767d119e6b4a95b3ef7bd8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e572bf7d404d0d824d3127789190ce81d4c98998
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-type-dependency-properties"></a>集合类型依赖项属性
 本主题就如何实现属性类型为集合类型的依赖属性提供相应指导和建议模式。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
  若要启用依赖项对象集合中的子属性绑定，创建作为类型的集合属性<xref:System.Windows.FreezableCollection%601>，到任何该集合的类型约束<xref:System.Windows.DependencyObject>派生类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.FreezableCollection%601>  
  [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  

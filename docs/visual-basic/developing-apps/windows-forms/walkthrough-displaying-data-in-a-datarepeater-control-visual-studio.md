@@ -13,11 +13,11 @@ ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6f0cf690b816d57dc4a2646eb82d649727d033a9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>演练：在 DataRepeater 控件中显示数据 (Visual Studio)
 本演练提供了在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件中显示绑定数据的完整基本方案。  
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/09/2017
 ## <a name="prerequisite"></a>必备组件  
  本演练需要 Northwind 示例数据库。  
   
- 如果你的开发计算机上没有此数据库，可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=98088)进行下载。 有关说明，请参阅[下载示例数据库](../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ 如果你的开发计算机上没有此数据库，可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=98088)进行下载。 有关说明，请参阅[下载示例数据库](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
 ## <a name="overview"></a>概述  
  本演练的第一部分主要有以下四个任务：  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/09/2017
   
 4.  在“名称”框中键入 `DataRepeaterApp`。  
   
-5.  单击“确定”。  
+5.  单击 **“确定”**。  
   
      Windows 窗体设计器即会打开。  
   
@@ -91,9 +91,9 @@ ms.lasthandoff: 12/09/2017
   
     -   如果下拉列表中包含到 Northwind 示例数据库的数据连接，请单击该连接。  
   
-         - 或 -  
+         或  
   
-    -   单击**新连接**来配置新的数据连接。 有关详细信息，请参阅 [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/en-us/360c340d-e5a6-4a7e-a569-e95d500be43d)。  
+    -   单击**新连接**来配置新的数据连接。 有关详细信息，请参阅[添加新连接](/visualstudio/data-tools/add-new-connections)。  
   
 5.  如果数据库需要密码，请选择该选项以包括敏感数据，然后单击 **“下一步”**。  
   
@@ -236,7 +236,7 @@ ms.lasthandoff: 12/09/2017
   
 7.  按 F5 运行该应用程序。 当你在第一个 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件中选择每个客户时，该客户的订单会显示在第二个 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控件中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DataRepeater 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
  [如何：在 DataRepeater 控件中显示绑定数据](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
  [如何：在 DataRepeater 控件中显示未绑定的控件](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  

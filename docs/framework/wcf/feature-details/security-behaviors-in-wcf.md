@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f338eff156646a2df063da84eead274a34a39159
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19d67d99ddf6bab69aa1e5f993917142a4378105
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全行为
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的行为在服务级别或终结点级别修改运行时行为。 ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]行为一般情况下，请参阅[指定服务运行时行为](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全行为*允许控制凭据、 身份验证、 授权和审核日志。 可以通过编程或通过配置来使用行为。 本主题重点讨论如何配置下列与安全功能相关的行为：  
@@ -227,6 +228,6 @@ ms.lasthandoff: 11/21/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

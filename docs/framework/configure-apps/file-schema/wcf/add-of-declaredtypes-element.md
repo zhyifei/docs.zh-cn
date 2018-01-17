@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 71f9c2b45f631eb2d9021254d2866f0092ebb079
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 908982437197964489d27e4d7d77b0fffdbebb6e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a>&lt;declaredTypes&gt; 的 &lt;add&gt; 元素
 添加在反序列化过程中由 <xref:System.Runtime.Serialization.DataContractSerializer> 使用的类型。 每个声明类型都包含一些将作为声明类型的字段或属性返回的已知类型。  
@@ -85,8 +86,8 @@ ms.lasthandoff: 12/02/2017
 </add>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
- [数据协定已知的类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
  [\<添加 > 的\<d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

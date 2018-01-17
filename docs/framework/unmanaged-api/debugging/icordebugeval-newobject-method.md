@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e478f057b3c319d099b0156188f3d1e23bb82e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 98c885e7ffd4b35bcc3af34757509910c78c0c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject 方法
 分配新的对象实例并调用的指定构造函数方法。  
@@ -52,7 +53,7 @@ HRESULT NewObject (
  `ppArgs`  
  [in]ICorDebugValue 对象数组，其中每个表示一个自变量传递给构造函数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -61,5 +62,5 @@ HRESULT NewObject (
   
  **.NET framework 版本：** 1.1、 1.0  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [NewParameterizedObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

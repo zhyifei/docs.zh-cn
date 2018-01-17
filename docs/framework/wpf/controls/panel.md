@@ -18,18 +18,19 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a73772ddb9d9344e53bf4df71775f1f17e179342
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1a74bf246a66f54e274833c2c9f04f8da0f48a0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel"></a>Panel
 <xref:System.Windows.Controls.Panel>是支持应用程序中的布局的所有元素的基类[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
  [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Panel>  

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 973a70fdb655ab069d6ecdafd0e017324720e57a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-a-filter"></a>选择筛选器
 配置路由服务时，选择正确的消息筛选器并将它们配置为允许您针对接收的消息进行完全匹配非常重要。 如果所选筛选器筛选出的匹配项太广或者配置不当，则消息会错误地进行路由。 如果筛选器的筛选范围太窄，则某些消息可能没有任何可用的有效路由。  
@@ -145,6 +146,6 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]设计 XPath 查询，请参阅[XPath 语法](http://go.microsoft.com/fwlink/?LinkId=164592)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [如何： 使用筛选器](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+ [如何：使用筛选器](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 57e5efc604568aea0a6edef5cc57f83fb99eb561
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0501e104b2ed74656de125e668b7234efcbc9997
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime 方法
 提供基于宿主策略、托管程序集、版本字符串和配置流的公共语言运行时 (CLR) 的首选版本的接口。 此方法不实际上不会加载或激活 CLR，而只是返回[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)表示策略结果的接口。 此方法取代[GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)， [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)， [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)， [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)，和[GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md)方法。  
@@ -48,7 +49,7 @@ HRESULT GetRequestedRuntime(
   
 #### <a name="parameters"></a>参数  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |`dwPolicyFlags`|[in] 必需。 指定的成员[METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)枚举，表示某个绑定策略，以及任何数量的修饰符。 当前可用的策略只有[METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)。<br /><br /> 修饰符包括[METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)， [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)， [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)， [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)，和[METAHOST_POLICY_ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)。|  
 |`pwzBinary`|[in] 可选。 指定程序集文件路径。|  
@@ -78,12 +79,12 @@ HRESULT GetRequestedRuntime(
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_POINTER|`pwzVersion` 不为 null 且 `pcchVersion` 为 null。<br /><br /> - 或 -<br /><br /> `pwzImageVersion` 不为 null 且 `pcchImageVersion` 为 null。|  
+|E_POINTER|`pwzVersion` 不为 null 且 `pcchVersion` 为 null。<br /><br /> 或<br /><br /> `pwzImageVersion` 不为 null 且 `pcchImageVersion` 为 null。|  
 |E_INVALIDARG|`dwPolicyFlags` 未指定 `METAHOST_POLICY_HIGHCOMPAT`。|  
-|ERROR_INSUFFICIENT_BUFFER|分配给 `pwzVerison` 的内存不足。<br /><br /> - 或 -<br /><br /> 分配给 `pwzImageVerison` 的内存不足。|  
+|ERROR_INSUFFICIENT_BUFFER|分配给 `pwzVerison` 的内存不足。<br /><br /> 或<br /><br /> 分配给 `pwzImageVerison` 的内存不足。|  
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` 包括 METAHOST_POLICY_APPLY_UPGRADE_POLICY，并且 `pwzVersion` 和 `pcchVersion` 均为 null。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
@@ -92,8 +93,8 @@ HRESULT GetRequestedRuntime(
   
  **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRMetaHostPolicy 接口](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)  
- [CLR 承载接口添加在.NET Framework 4 和 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
+ [.NET Framework 4 和 4.5 中添加的 CLR 承载接口](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

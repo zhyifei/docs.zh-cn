@@ -17,11 +17,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eed0485fd823caea1f332262edd9bcd8817bc31a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cc7e81e3735baff267b09ae59b80f53f80170354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tabcontrol"></a>TabControl
 <xref:System.Windows.Controls.TabControl>元素选择相应的选项卡，即可访问的不同页面上显示的内容。每个选项卡包含<xref:System.Windows.Controls.TabItem>。  

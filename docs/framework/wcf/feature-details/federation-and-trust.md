@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a5228ffaab43e24849d461080cdf3ef09b2fa6c0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98b1274866dec2a4ca923d390f33df68449cf286
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation-and-trust"></a>联合与信任
 本主题介绍与联合应用程序、信任边界和配置，以及颁发的令牌在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的用法相关的各个方面。  
@@ -46,8 +47,8 @@ ms.lasthandoff: 12/02/2017
 ## <a name="issued-tokens-and-inclusionmode"></a>颁发的令牌和 InclusionMode  
  在从客户端发送到联合终结点的消息中，是否对颁发的令牌进行序列化，是由 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> 类的 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 属性的设置控制的。 此属性可以设置为 <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> 枚举值之一，但它在大多数联合方案中并无用处。 如果是 `SecurityTokenInclusionMode.Never` 和 `SecurityTokenInclusionMode.AlwaysToInitiator` 值，客户端会向安全令牌服务颁发给依赖方的令牌发送一个引用。 除非依赖方拥有颁发的令牌的副本，否则会因令牌引用不可解析而导致身份验证失败。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将 `SecurityTokenInclusionMode.Once` 视为等效于  `SecurityTokenInclusionMode.AlwaysToRecipient`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>  
- [如何： 创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+ [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [如何：创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

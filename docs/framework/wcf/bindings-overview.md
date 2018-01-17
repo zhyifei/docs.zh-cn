@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 绑定概述
 绑定是用于指定连接到 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务终结点所必需的通信详细信息的对象。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务中的每个终结点都要求正确指定绑定。 本主题概述了绑定所定义的通信详细信息类型、绑定的元素、[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中包含哪些绑定以及如何为终结点指定绑定。  
@@ -64,5 +65,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="code-and-configuration"></a>代码和配置  
  可以通过两种方式来定义绑定：通过代码或通过配置。 这两种方法与您使用的是系统提供的绑定还是自定义绑定无关。 通常，使用代码可以使您在设计时对绑定的定义拥有完全的控制。 另一方面，使用配置则使系统管理员或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务或客户端的用户可以更改绑定的参数，而不必重新编译服务应用程序。 由于无法预测用于部署 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序的特定计算机要求，因而通常需要这种灵活性。 通过将绑定（和寻址）信息保持在代码外部，人们可以更改这些信息，而不必重新编译或重新部署应用程序。 请注意，代码中定义的绑定是在配置中指定的绑定之后创建的，这使得代码定义的绑定可以覆盖配置中定义的任何绑定。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

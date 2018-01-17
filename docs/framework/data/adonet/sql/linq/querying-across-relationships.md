@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a347818818fe7c6e15535fd0c2c24548c52e57d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 03c2da9f65964a9ed43d1e82abf779b43be733ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-across-relationships"></a>跨关系查询
 您的类定义中对其他对象或其他对象的集合的直接引用相当于数据库中的外键关系。 您可以通过使用点表示法在查询时利用这些关系来访问关系属性以及从一个对象定位到另一个对象。 这些访问操作会转换成用等效的 SQL 表示的更为复杂的联接或关联子查询。  
@@ -62,5 +63,5 @@ WHERE  (t0.City = @p0)
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

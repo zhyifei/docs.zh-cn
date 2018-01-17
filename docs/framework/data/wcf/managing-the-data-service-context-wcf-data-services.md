@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d523fdd0498aef7e662af5f4dc41b2394dcf42
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>管理数据服务上下文（WCF 数据服务）
 <xref:System.Data.Services.Client.DataServiceContext> 类封装针对指定数据服务支持的操作。 尽管 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务是无状态的，但上下文不是。 因此，你可以使用<xref:System.Data.Services.Client.DataServiceContext>类保持与数据服务中，以便支持各种交互之间客户端的状态功能诸如更改管理。 该类还对更改的标识和跟踪进行管理。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
 ### <a name="post-tunneling"></a>POST 隧道  
  默认情况下，客户端库通过使用 POST、GET、PUT/MERGE/PATCH 和 DELETE 等 HTTP 方法相应地向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务发送创建、读取、更新和删除请求。 这保持了具象状态传输 (REST) 的基本原则。 不过，不是每个 Web 服务器实现都支持完整的 HTTP 方法集。 在某些情况下，支持的方法可能仅限 GET 和 POST。 在中介（如防火墙）用某些方法阻止请求时，可能会发生这种情况。 因为 GET 和 POST 方法是支持最多的方法，所以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 指定了一种方法，通过使用 POST 请求执行任何不受支持的 HTTP方法。 名为*方法隧道*或*POST 隧道*，这允许客户端使用自定义中指定的实际方法发送 POST 请求`X-HTTP-Method`标头。 要为请求启用 POST 隧道，请将 <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> 实例上的 <xref:System.Data.Services.Client.DataServiceContext> 属性设置为 `true`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
  [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  

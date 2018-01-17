@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a2d856aad069a5e532ba893185b6222ee1db0f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4028772caef8e5c0301ab3a6a0bde2f180d821ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="event-logging-in-wcf"></a>WCF 中的事件日志记录
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 在 Windows 事件日志中跟踪内部事件。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 12/02/2017
   
  当你单击"详细信息"事件查看器中查看事件，事件查看器可能会通过 Internet 发送信息。 有关更多信息，请参见事件查看器帮助。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)  
  [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

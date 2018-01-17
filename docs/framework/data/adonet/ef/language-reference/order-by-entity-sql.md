@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b805d4437ffd8d3d56a7cdc599bdda797a763d13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e4ef6edfc56fe73cd509d466fcc26cdb24069c9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 指定用于 SELECT 语句所返回的对象的排序顺序。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 ]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `order_by_expression`  
  指定作为排序依据的属性的任何有效查询表达式。 可以指定多个排序表达式。 ORDER BY 子句中排序表达式的顺序将决定排序后结果集的结构。  
   
@@ -134,9 +135,9 @@ SELECT C2.FirstName, C2.LastName
   
  [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [跳过](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)  
- [限制](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)  
- [返回页首](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+ [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)  
+ [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)  
+ [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

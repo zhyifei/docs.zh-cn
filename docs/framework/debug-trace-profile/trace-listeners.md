@@ -25,11 +25,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 56cbde16eff89d25960e510e7eec2424f15e51b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 042b8a6f7c25c34fc06d5d0bfd4ebce6417b920f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-listeners"></a>跟踪侦听器
 使用 Trace、Debug 和 <xref:System.Diagnostics.TraceSource> 时，必须具有用于收集和记录发送的消息的机制。 跟踪消息可由侦听器接收。 侦听器的用途是收集、存储和路由跟踪消息。 侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  
@@ -84,7 +85,7 @@ System.Diagnostics.Trace.Listeners.Add(
 ## <a name="developer-defined-listeners"></a>开发人员定义的侦听器  
  可以通过从 TraceListener 基类继承并用自定义方法重写其方法来定义侦听器。 有关创建开发人员定义的侦听器的详细信息，请参阅 .NET Framework 参考中的 <xref:System.Diagnostics.TraceListener>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.EventLogTraceListener>  
  <xref:System.Diagnostics.DefaultTraceListener>  

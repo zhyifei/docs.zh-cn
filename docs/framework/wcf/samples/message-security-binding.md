@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ca1ce99fae09ef7d3c9ad3ea47984b671cadb27c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f0c8b125d3fc313dca4140b871ccea8165329fda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-binding"></a>消息安全绑定
 本节包含演示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 Windows 服务中消息安全绑定的示例。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/18/2017
  [消息安全证书](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
  此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS 安全性和 X.509 v3 证书身份验证，并要求使用服务器的 X.509 v3 证书进行服务器身份验证。  
   
- [消息安全用户名称](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+ [用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
  本示例演示如何实现一个应用程序，该应用程序对客户端使用具有用户名身份验证的 WS-Security，并要求使用服务器的 X.509v3 证书对服务器进行身份验证。  
   
  [Windows 消息安全](../../../../docs/framework/wcf/samples/message-security-windows.md)  

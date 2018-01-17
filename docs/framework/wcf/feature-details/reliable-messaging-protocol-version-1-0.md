@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5657b48a648603f24e89c0eebd1285ed9a505e54
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a32c16067446459817e9943c2d729a67373a0333
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>可靠消息传送协议版本 1.0
 本主题介绍使用 HTTP 传输进行互操作所需的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WS-Reliable Messaging 2005 年 2 月（版本 1.0）协议的实现细节。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 遵循 WS-Reliable Messaging 规范以及本主题中解释的约束和声明。 请注意，WS-ReliableMessaging 版本 1.0 协议是从 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 开始实现的。  
@@ -36,18 +37,18 @@ ms.lasthandoff: 12/02/2017
 |------------|---------------|  
 |wsrm|http://schemas.xmlsoap.org/ws/2005/02/rm|  
 |netrm|http://schemas.microsoft.com/ws/2006/05/rm|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
+|秒|http://www.w3.org/2003/05/soap-envelope|  
 |wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
 |wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
   
-## <a name="messaging"></a>消息传送  
+## <a name="messaging"></a>消息  
   
 ### <a name="sequence-establishment-messages"></a>序列建立消息  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 `CreateSequence` 和 `CreateSequenceResponse` 消息以建立可靠的消息序列。 适用以下约束：  
   
 -   B1101：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 发起方在 `CreateSequence` 消息中或者在 `CreateSequence` 消息包含 `Offer` 元素（`Expires` 元素中的可选 `Offer` 元素）的情况下，不会生成可选的 Expires 元素。  
   
--   B1102：当访问 `CreateSequence` 消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`Responder` 将发送和接收两个 `Expires` 元素（若存在），但不使用这两个元素的值。  
+-   B1102： 当访问`CreateSequence`消息， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `Responder`发送和接收同时`Expires`如果它们存在，但不使用其值的元素。  
   
  WS-Reliable Messaging 引入了 `Offer` 机制来建立两个形成会话的反向相关的序列。  
   
@@ -284,7 +285,7 @@ ms.lasthandoff: 12/02/2017
   
 -   B3001：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将 `wsrm:RMAssertion` WS-Policy 断言附加到 `wsdl:binding` 元素。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同时支持附加到 `wsdl:binding` 和 `wsdl:port` 元素。  
   
--   B3002：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持 WS-Reliable Messaging 断言的以下可选属性，并在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]`ReliableMessagingBindingElement` 上提供对这些属性的控制：  
+-   B3002:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支持 Ws-reliable Messaging 断言的以下可选属性，并提供对其进行控制上[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] `ReliableMessagingBindingElement`:  
   
     -   `wsrm:InactivityTimeout`  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 16c675491a378d72d82a252d79a73379f494893c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fd3982cf8eeeb88a162e77a3ef4b9d6e75e19fc6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 数据类型和 ADO.NET
 SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在的数据丢失。 为了保持数据的完整性，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 提供了用于处理 SQL Server 数据的类型化访问器方法。 可以使用 <xref:System.Data.SqlDbType> 类中的枚举来指定 <xref:System.Data.SqlClient.SqlParameter> 数据类型。  
@@ -36,7 +37,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
  [SqlTypes 和数据集](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  说明对 `SqlTypes` 中 `DataSet` 的类型支持。  
   
- [处理 Null 值](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
+ [处理 NULL 值](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
  演示如何使用空值和三值逻辑。  
   
  [比较 GUID 和 uniqueidentifier 值](../../../../../docs/framework/data/adonet/sql/comparing-guid-and-uniqueidentifier-values.md)  
@@ -45,7 +46,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
  [日期和时间数据](../../../../../docs/framework/data/adonet/sql/date-and-time-data.md)  
  说明如何使用在 SQL Server 2008 中引入的新的日期和时间数据类型。  
   
- [大型 Udt](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
+ [大型 UDT](../../../../../docs/framework/data/adonet/sql/large-udts.md)  
  演示如何从在 SQL Server 2008 中引入的大值 UDT 检索数据。  
   
  [SQL Server 中的 XML 数据](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
@@ -64,7 +65,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统，这可导致潜在�
  <xref:System.Data.DbType>  
  说明 `DbType` 枚举及其所有成员。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [表值参数](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  

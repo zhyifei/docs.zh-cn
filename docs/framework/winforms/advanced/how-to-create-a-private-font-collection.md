@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3016fb9a1b1d8466137bcaddb0b885c02c399baf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8c0107b1ef1d5259835c6fb1666519d3fc06f4e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-private-font-collection"></a>如何：创建专用的字体集合
 <xref:System.Drawing.Text.PrivateFontCollection>类继承自<xref:System.Drawing.Text.FontCollection>抽象基类。 你可以使用<xref:System.Drawing.Text.PrivateFontCollection>要维护一组专门为你的应用程序的字体的对象。 专用字体集合可以包含已安装的系统字体，以及在计算机尚未安装的字体。 若要将字体文件添加到专用字体集合中，调用<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>方法<xref:System.Drawing.Text.PrivateFontCollection>对象。  
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  前面的示例专用于 Windows 窗体，它需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，这是 <xref:System.Windows.Forms.PaintEventHandler> 的参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Text.PrivateFontCollection>  
  [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

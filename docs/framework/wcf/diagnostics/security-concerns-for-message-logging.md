@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 1f3d62e8b6771666dd3a55855ca0c5e41853f439
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-concerns-for-message-logging"></a>消息日志记录的安全问题
 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  
@@ -119,6 +120,6 @@ ms.lasthandoff: 11/21/2017
   
  可以在 Windows 附带的事件查看器工具中查看这些事件。 有关这方面的详细信息，请参阅[事件日志记录](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [安全问题和用于跟踪有用的提示](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+ [有关跟踪的安全注意事项和有用提示](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

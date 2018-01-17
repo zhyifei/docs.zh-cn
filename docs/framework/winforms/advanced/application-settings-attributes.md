@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1879ac6704619092c4c0d9cd6fab0356ea07a13d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4255356d4e50f3e8be28024f29701e0e9c010473
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-attributes"></a>应用程序设置特性
 应用程序设置体系结构提供了许多特性，它们可以应用于应用程序设置包装类或其各个属性。 这些属性是在运行时通过检查应用程序设置基础结构通常专门设置提供程序，以便定制的自定义包装规定的需求的功能。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  *类*指示该属性，可以应用到应用程序设置包装类。 *属性*指示该属性可以是应用到仅设置属性。 *同时*指示该属性可以应用到任何一级。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  

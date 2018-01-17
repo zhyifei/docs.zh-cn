@@ -9,18 +9,15 @@ ms.assetid: eddb087d-b2e9-4bc7-a567-0bb6c45e0d42
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3153d3fd249abaea3492c98328965e0ae9234dfe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8614adab3f95b3a887d698924ed8e90d07b9e8a7
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cannot-rename-with-different-drive"></a>无法用不同的驱动器重命名
 `Rename` 语句不能指定文件路径中的驱动器号。  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   从文件路径中删除驱动器号。  
-  
-## <a name="see-also"></a>另请参阅  
- [不在生成中：Rename 函数](http://msdn.microsoft.com/en-us/464062d8-2320-4305-8a8c-1f43e96c94df)
+-   从文件路径中删除驱动器号。

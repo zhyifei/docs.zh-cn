@@ -17,11 +17,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 31cd858cd6a753b1fddd7b4be6805390142be833
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 69ef9c378aae18767d41990094e52ac2be3cbd1f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>托管代码的 UI 自动化客户端帮助主题
 > [!NOTE]
@@ -30,11 +31,11 @@ ms.lasthandoff: 10/18/2017
  本部分提供有关实现的功能的详细的信息[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]在客户端应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
- [查找 UI 自动化元素基于属性条件](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [在使用 TreeWalker 的 UI 自动化元素之间导航](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
+ [基于属性条件查找 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
+ [使用 TreeWalker 在 UI 自动化元素之间导航](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [查找列表项的 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-for-a-list-item.md)  
  [获取 UI 自动化元素的属性](../../../docs/framework/ui-automation/get-ui-automation-element-properties.md)  
- [使用在 UI 自动化中缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [订阅 UI 自动化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)  
  [注册客户端提供程序程序集](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
  [使用 AutomationID 属性](../../../docs/framework/ui-automation/use-the-automationid-property.md)

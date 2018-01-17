@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d41d2f8419644d5ddcb15f49bbe895b0a3f1f2d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-clients"></a>保证客户端的安全
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中，由服务规定客户端的安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]创建安全的服务，请参阅[服务的安全](../../../docs/framework/wcf/securing-services.md)。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  但是，如果您选择从一个知之甚少的源下载客户端和元数据，请务必验证代码所使用的安全措施。 例如，一定不要简单地创建一个向服务发送个人或财务信息的客户端，除非该服务要求保密性和完整性（这是最基本的要求）。 您对服务所有者的信任应达到您愿意向其公开这些信息的程度，因为他或她将能够看到这些信息。  
   
- 因此，请记住如下规则：在使用来自不受信任的源的代码和元数据时，应检查这些代码和元数据，以确保它们满足您所要求的安全级别。  
+ 因此，请记住如下规则：在使用来自不受信任的源的代码和元数据时，应检查这些代码和元数据，以确保它们满足你所要求的安全级别。  
   
 ## <a name="setting-a-client-credential"></a>设置客户端凭据  
  在客户端上设置客户端凭据的过程包含两个步骤：  
@@ -161,7 +162,7 @@ ms.lasthandoff: 11/21/2017
 </wsHttpBinding>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
  <xref:System.ServiceModel.ClientBase%601>  
  <xref:System.ServiceModel.Description.ClientCredentials>  

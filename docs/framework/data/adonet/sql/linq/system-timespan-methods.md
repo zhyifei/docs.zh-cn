@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a32b57488b49e9fd2f4e6342391690b27d7ad825
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 257fff19d10c4b803ec6fc539087cc558bd07a0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan 方法
 对 <xref:System.TimeSpan?displayProperty=nameWithType> 的成员支持在很大程度上取决于您正在使用的 .NET Framework 和 Microsoft SQL Server 的版本。  
@@ -45,8 +46,8 @@ ms.lasthandoff: 11/21/2017
 ### <a name="addition-and-subtraction"></a>加法和减法  
  尽管 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 类型支持加减运算，但 SQL `TIME` 类型不支持。 因此，将 LINQ to SQL 查询映射到 SQL `TIME` 类型后，如果这些查询尝试执行加减运算，则将生成错误。 你可以找到有关使用中的 SQL 日期和时间类型的其他注意事项[SQL CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  [创建对象模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [SQL CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
  [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

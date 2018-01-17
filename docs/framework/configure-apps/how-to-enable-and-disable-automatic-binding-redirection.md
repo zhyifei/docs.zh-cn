@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 83b004934c303c95bdc4e6edb6031a86e2b1a6ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6887706aeef3855c1e02c8b1379856022cdac04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>如何：启用和禁用自动绑定重定向
 从 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 开始，当你编译面向 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 的应用程序时，绑定重定向可能会自动添加到应用配置文件，以便重写程序集统一。 如果你的应用或其组件引用同一程序集的多个版本，就会添加绑定重定向，即使你在应用的配置文件中手动指定绑定重定向。 自动绑定重定向功能会影响面向 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 的传统桌面应用和 Web 应用，但对于 Web 应用来说，行为略有不同。 如果你有面向较早版本 .NET Framework 的现有应用，则可以启用自动绑定重定向，如果要保留手动编写的绑定重定向，你可以将此功能禁用。  
@@ -89,6 +90,6 @@ ms.lasthandoff: 11/21/2017
   
      ![绑定重定向权限对话框](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<bindingRedirect > 元素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
  [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

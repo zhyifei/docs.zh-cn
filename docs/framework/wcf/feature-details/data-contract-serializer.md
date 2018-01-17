@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c8243524b2de57c58143b7dfb74050a116c5186
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8591a2b42f375f0b0e275fa9f6e34e69e7c054ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-serializer"></a>数据协定序列化程序
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基础结构使用 <xref:System.Runtime.Serialization.DataContractSerializer> 类作为默认序列化程序。 本节中的主题提供将该类用作独立序列化程序的更多详细信息。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 12/02/2017
   
  [数据传输和序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
-## <a name="see-also"></a>另请参阅  
- [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>请参阅  
+ [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

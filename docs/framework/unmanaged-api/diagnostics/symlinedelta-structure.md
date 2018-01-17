@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cbd83560516e946c03a0ea71cf79fe6d3396bacb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 677b7c2858e4f3248e0d46e460b9eef09de724f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA 结构
 提供有关方法的结果编辑已移动到符号处理程序信息。  
@@ -45,8 +46,8 @@ typedef struct _SYMLINEDELTA
 |`mdMethod`|方法的元数据标记。|  
 |`delta`|该方法已移动的行数。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** CorSym.idl  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [诊断符号存储区结构](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

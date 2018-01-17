@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a85e09e92ebea4cdc0c1de93f4e9a4a21ff4d7e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: baa8846d339e87c121ece2678157c132035db07f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation 配置架构
 使用 [!INCLUDE[wf](../../../../../includes/wf-md.md)] 配置元素可以配置工作流应用程序。 对于工作流应用程序，除配置其他内容外，还可以配置跟踪。 有关跟踪的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 对于工作流服务，还可以使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 配置元素。 有关 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 的详细信息，请参阅 [WCF 配置架构](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  

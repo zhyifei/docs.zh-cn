@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9a42d644d4d51332c89764a4e6516c7d15e828d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 20d192aed423aa6cda2ead2c214ddf4374028699
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>如何： 更改加密提供程序的 X.509 证书 （&） #39; s 私钥
 本主题说明如何更改用于提供 X.509 证书私钥的加密提供程序以及如何将该提供程序集成到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全框架中。 有关使用证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
@@ -86,15 +87,15 @@ ms.lasthandoff: 12/02/2017
      [!code-csharp[c_CustomX509Token#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#7)]
      [!code-vb[c_CustomX509Token#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#7)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey>  
  <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey>  
  <xref:System.IdentityModel.Tokens.SecurityKey>  
  <xref:System.Security.Cryptography.AsymmetricAlgorithm>  
  <xref:System.Security.Cryptography.HashAlgorithm>  
  <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>  
- [演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [如何： 创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [如何： 创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [如何： 创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
+ [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [如何：创建自定义安全令牌验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [如何：创建自定义安全令牌提供程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [如何：创建自定义令牌](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
  [安全体系结构](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

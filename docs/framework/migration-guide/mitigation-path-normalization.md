@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e30099e315f88bd051dca2e1f6c83d1bccc49569
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: edae357dad95a363926afbacc8e52355a1bcbd65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-path-normalization"></a>缓解：路径规范化
 自定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 的应用程序起，.NET Framework 中的路径规范化已更改。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/18/2017
   
  定位 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 及更低版本但在 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本控制下运行的应用程序不会受此更改影响。  
   
-## <a name="mitigation"></a>缓解操作  
+## <a name="mitigation"></a>缓解  
  对于定位 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 或更高版本的应用程序，可以在应用程序配置文件的 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 部分中添加下面的代码行，从而选择禁用此更改并使用旧版路径规范化：  
   
 ```xml  
@@ -70,5 +71,5 @@ ms.lasthandoff: 10/18/2017
 </runtime>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

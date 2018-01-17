@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 143447020f41368a3553a0c8cda78e80806b75ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0424a92f2308c21404cf35cd59c797498e6af992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-adonet-applications"></a>保证 ADO.NET 应用程序的安全
 编写安全 ADO.NET 应用程序不仅仅是避免常见的编码缺陷（如不验证用户输入）。 访问数据的应用程序具有许多潜在的故障点，攻击者可以利用这些故障点来检索、操作或损坏敏感数据。 因此，了解安全性的各个方面（从应用程序设计阶段期间的威胁建模过程到应用程序的最终部署和不断的维护）非常重要。  
@@ -33,13 +34,13 @@ ms.lasthandoff: 11/21/2017
  [安全数据访问](../../../../docs/framework/data/adonet/secure-data-access.md)  
  描述如何使用受保护数据源中的数据。  
   
- [保护客户端应用程序](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [保证客户端应用程序的安全](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  描述客户端应用程序的安全注意事项。  
   
  [代码访问安全性和 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
  描述 CAS 如何帮助保护 ADO.NET 代码， 还讨论如何使用部分信任。  
   
- [隐私和数据安全](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
+ [隐私和数据安全性](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
  描述 ADO.NET 应用程序的加密选项。  
   
 ## <a name="related-sections"></a>相关章节  
@@ -61,6 +62,6 @@ ms.lasthandoff: 11/21/2017
  [安全性参考书目](/visualstudio/ide/security-bibliography)  
  提供联机和印刷资料中提供的外部资源的链接。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

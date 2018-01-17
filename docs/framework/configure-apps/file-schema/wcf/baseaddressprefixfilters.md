@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 39ceaf3377f1da7f3f953024e1207618df84bf1d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a1c2e5e887ceaadf3db6f51991d53c3db8fb6ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;Baseaddressprefixfilter&gt;
 表示一个用于指定传递筛选器的配置元素的集合。传递筛选器提供了一种机制，使得在 IIS 中承载 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 应用程序时可选取适当的 Internet Information Services (IIS) 绑定。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 12/02/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddressprefixfilter.md)|添加一个配置元素，用于指定服务主机所使用的基址的前缀筛选器。|  
   
@@ -90,7 +91,7 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  筛选器不支持任何通配符。 此外，IIS 提供的基址可能有绑定到在 `baseAddressPrefixFilters` 列表中未列出的其他方案的地址。 不会筛选出这些地址。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 577d5c3bc4b4afef845cd51b62b7d48fcc9d4a7e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 26f2ab0247c9d13a90560337c103a970afc8996c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>如何：为 Windows 窗体 DataGridView 控件中的新行指定默认值
 当应用程序在默认填充新添加的行的值时，可以使数据输入更方便。 与<xref:System.Windows.Forms.DataGridView>类，你可以填充默认值与<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。 当用户输入新记录的行时，引发此事件。 当你的代码处理此事件时，你可以填充具有你选择的值的所需单元格。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
  [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7616a418b9f2f6b175b925e4385322c42546e9bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>如何：使用 CompositionTarget 以每帧间隔呈现
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画引擎提供了许多用于创建基于帧的动画的功能。 但是，在某些应用程序方案中，需要基于每个帧以更细的粒度控制呈现。 <xref:System.Windows.Media.CompositionTarget>对象提供创建基于每帧回调的自定义动画的功能。  
@@ -50,6 +51,6 @@ ms.lasthandoff: 11/21/2017
   
  添加或删除呈现<xref:System.EventHandler>时触发事件的委托将会延迟，直至完成事件后激发。 这是如何与一致<xref:System.MulticastDelegate>-基于的事件处理在公共语言运行时 (CLR)。 另请注意，无法保证按照任何特定顺序来调用呈现事件。 如果你有多个<xref:System.EventHandler>委托依赖于特定的顺序，因此你应该注册一个<xref:System.Windows.Media.CompositionTarget.Rendering>委托按正确顺序自己的事件和多路复用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.CompositionTarget>  
  [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

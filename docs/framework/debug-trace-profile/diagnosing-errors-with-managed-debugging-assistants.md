@@ -39,11 +39,12 @@ caps.latest.revision: "63"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e23de3ea6e9693c05aa81da056ac7763bced8e9a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 12a96068412f05d48b8b006385c66f3efbbf9870
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>使用托管调试助手诊断错误
 托管调试助手 (MDA) 是调试辅助程序，它与公共语言运行时 (CLR) 一起工作以提供关于运行时状态的信息。 这些助手可生成关于你无法通过其他方式捕获的运行时事件的信息性消息。 可以使用 MDA 隔离在托管代码和非托管代码之间转换时发生的、难以发现的应用程序 Bug。 可通过向 Windows 注册表添加注册表项或设置环境变量，启用或禁用所有的 MDA。 可使用应用程序配置设置来启用特定的 MDA。 可以在应用程序的配置文件中为某些单独的 MDA 设置其他配置设置。 由于将在加载运行时后分析这些配置文件，因此必须在托管应用程序启动之前启用 MDA。 不能为已经启动的应用程序启用 MDA。  
@@ -188,5 +189,5 @@ Windows Registry Editor Version 5.00
   
  `A call to PInvoke function 'MDATest!MDATest.Program::StdCall' has unbalanced the stack. This is likely because the managed PInvoke signature does not match the unmanaged target signature. Check that the calling convention and parameters of the PInvoke signature match the target unmanaged signature.`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试、跟踪和分析](../../../docs/framework/debug-trace-profile/index.md)

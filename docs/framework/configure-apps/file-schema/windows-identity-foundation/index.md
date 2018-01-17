@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: b2ac7e97627eba85013e1effdc4f856f3df79089
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2000ae86f38ff2fd06dbe7424cbfdd74781c6c3c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation 配置架构
 本节中的主题介绍了 Windows Identity Foundation (WIF) 配置架构。 还可以将应用程序配置为通过由框架公开的类使用 WIF。 在处理架构中相关元素的几节中提到了这些类。 以下显示由 WIF 配置架构公开的基本 XML 标记结构。 系统会省略属性。 突出显示的注释描述架构的主要组件。  

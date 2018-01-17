@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e339066311adf10791c1b6759cc7be6b419320b7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 315420a6561d68ff714cefedf5161892342b3ff1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 表示 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务可用于配置和公开能够通过 HTTPS 进行通信的终结点的绑定。 如果用于双工协定，将使用 Web Sockets，否则将使用 HTTPS。  
@@ -184,7 +185,7 @@ ms.lasthandoff: 12/02/2017
   
  有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.BasicHttpBinding>  

@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: af9bacb4ba64fb4e51b6e05b3636226274c28703
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ecf0a4544b5417a548c7cc212e26c98bd1891c00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-net-framework-applications"></a>部署 .NET Framework 应用程序
 本部分 .NET Framework 文档提供了用于部署 .NET Framework 应用程序的基本信息，其中包括用于加载程序集、解析程序集引用和通过本机映像生成改善应用程序性能的指导原则。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/18/2017
  [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开发指南](../../../docs/framework/development-guide.md)

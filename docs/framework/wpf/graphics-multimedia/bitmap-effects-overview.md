@@ -14,11 +14,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 76b767fd210deed536b4452dc6d7bb505f5bd3e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f642c699a0ecf3e3cce328363f90110766002e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bitmap-effects-overview"></a>位图效果概述
 位图效果使设计者和开发者可以将视觉效果应用到呈现的 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 内容上。 例如，位图效果，可以轻松地将应用<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>效果还是模糊效果为图像或按钮。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="creating-custom-effects"></a>创建自定义效果  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还提供非托管接口，用于创建可在托管 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序中使用的自定义效果。 有关创建自定义位图效果的其他参考资料，请参阅[非托管 WPF 位图效果](https://msdn.microsoft.com/library/ms735092.aspx)文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Effects.BitmapEffectGroup>  
  <xref:System.Windows.Media.Effects.BitmapEffectInput>  
  <xref:System.Windows.Media.Effects.BitmapEffectCollection>  

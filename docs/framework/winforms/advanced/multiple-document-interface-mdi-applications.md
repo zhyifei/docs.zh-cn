@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c122931b0a00f487ddab07550913988462cfd50e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 74735afcb1d6be319ad5d497615a3b725a4d5574
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>多文档界面 (MDI) 应用程序
 多文档界面 (MDI) 应用程序，可以在同一时间，每个文档显示在自己的窗口中显示多个文档。 MDI 应用程序通常具有窗口菜单项具有子菜单窗口或文档之间切换。  

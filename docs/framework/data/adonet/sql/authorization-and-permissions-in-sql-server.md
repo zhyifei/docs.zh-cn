@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0916ca83cae40d1deda2e1126fd7b7ebab46a23c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d476b3fc3cce1bcb283f740f734ae285e55e192
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授权和权限
 在创建数据库对象时，必须显式授予权限以使用户可以访问它们。 每个可保护对象都具有可使用权限语句授予主体的权限。  
@@ -68,10 +69,10 @@ ms.lasthandoff: 11/21/2017
 |--------------|-----------------|  
 |[权限](http://msdn.microsoft.com/library/ms191291.aspx)SQL Server 联机丛书中|包含说明权限层次结构、目录视图以及固定服务器角色权限和数据库角色权限的主题。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 中的应用程序安全方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [SQL Server 中的身份验证](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [服务器和 SQL Server 中的数据库角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- [所有权和 SQL Server 中的用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [SQL Server 中的服务器和数据库角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [SQL Server 中的所有权和用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

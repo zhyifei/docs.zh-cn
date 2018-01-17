@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 1a3825eb8482b933a5afebab453290a455d9d104
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 016b3d4b826d3f30e63c6acc08a6ed0343cdd98f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securitynegotiationfailure"></a>SecurityNegotiationFailure
 Id: 172  
@@ -29,6 +30,6 @@ Id: 172
 ## <a name="description"></a>描述  
  此事件指示安全协商失败。 事件将列出服务、操作、客户端标识、活动 ID 和协商。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

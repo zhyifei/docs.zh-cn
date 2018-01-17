@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d464042411b2d06368bb596e6d8d1dc0976808e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 37b8ff108cb9ddb0df8ff4cb365ae543959546cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑难解答快速入门
 本主题列出了一些客户开发 WCF 客户端和服务时所遇到的已知问题。 如果您遇到的问题不在此列表中，我们建议您为您的服务配置跟踪。 这将生成一个跟踪文件，您可以使用跟踪文件查看器查看它并获取有关服务中可能发生的异常的详细信息。 有关配置跟踪的详细信息，请参阅： [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 有关跟踪文件查看器的详细信息，请参阅： [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -247,7 +248,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>从 WCF SOAP 应用程序调用 WCF Web HTTP 应用程序时，服务返回以下错误：405 不允许的方法  
- 调用 WCF Web HTTP 应用程序 (使用的服务<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>) 从 WCF 服务可能生成以下异常： `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 远程服务器返回了意外的响应: (405) 不方法允许。 则会发生此异常，因为 WCF 覆盖传出<xref:System.ServiceModel.OperationContext>以传入<xref:System.ServiceModel.OperationContext>。 若要解决此问题，请在 WCF Web HTTP 服务操作内创建 <xref:System.ServiceModel.OperationContextScope> 。 例如:   
+ 调用 WCF Web HTTP 应用程序 (使用的服务<xref:System.ServiceModel.WebHttpBinding>和<xref:System.ServiceModel.Description.WebHttpBehavior>) 从 WCF 服务可能生成以下异常： `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: 远程服务器返回了意外的响应: (405) 不方法允许。 则会发生此异常，因为 WCF 覆盖传出<xref:System.ServiceModel.OperationContext>以传入<xref:System.ServiceModel.OperationContext>。 若要解决此问题，请在 WCF Web HTTP 服务操作内创建 <xref:System.ServiceModel.OperationContextScope> 。 例如:  
   
 ```csharp
 public string Echo(string input)  
@@ -259,5 +260,5 @@ public string Echo(string input)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试 Windows 身份验证错误](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d620b59208b9dc852abee3dd2e4d6c58b223d70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 指令
 修改 XAML 标记编译行为时`x:Class`还提供。 而不是创建分部类，其中基于`x:Class`，提供`x:Class`作为中间类，创建然后预计提供的派生的类基于`x:Class`。  
@@ -43,9 +44,9 @@ ms.lasthandoff: 11/21/2017
 |||  
 |-|-|  
 |`namespace`|可选。 指定一个包含的 CLR 命名空间`classname`。 如果`namespace`一个点 （.） 分隔的指定`namespace`和`classname`。|  
-|`classname`|必需。 指定连接加载的 XAML 和代码隐藏该 xaml 的分部类的 CLR 名称。 请参阅“备注”。|  
+|`classname`|必须的。 指定连接加载的 XAML 和代码隐藏该 xaml 的分部类的 CLR 名称。 请参阅“备注”。|  
 |`subclassNamespace`|可选。 可以不同于`namespace`如果每个命名空间可以解决其他。 指定一个包含的 CLR 命名空间`subclassName`。 如果`subclassName`一个点 （.） 分隔的指定`subclassNamespace`和`subclassName`。|  
-|`subclassName`|必需。 指定子类的 CLR 的名称。|  
+|`subclassName`|必须的。 指定子类的 CLR 的名称。|  
   
 ## <a name="dependencies"></a>依赖项  
  [X:class 指令](../../../docs/framework/xaml-services/x-class-directive.md)还必须提供对同一对象，该对象必须是 XAML 生产的根元素。  
@@ -66,6 +67,6 @@ ms.lasthandoff: 11/21/2017
   
  当你同时定义`x:Class`和`x:Subclass`，不需要提供的类的引用的任何实现`x:Class`。 只需为其命名，通过`x:Class`属性，以便编译器具有它在 （编译器不会选择默认名称在这种情况下） 的中间文件中创建的类的一些指导。 你可以为提供`x:Class`类实现; 但是，这不是同时使用的典型方案`x:Class`和`x:Subclass`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [x:Class 指令](../../../docs/framework/xaml-services/x-class-directive.md)  
  [XAML 及 WPF 的自定义类](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

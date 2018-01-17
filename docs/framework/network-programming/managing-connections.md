@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f3a8900aca9ebfa14fbf49d4d3634bc486793c0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4d0ca3b6aed1213405dc24f322b53a21dbd4fbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-connections"></a>管理连接
 使用 HTTP 连接到数据资源的应用程序可使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 类管理与 Internet 的连接并有助于实现最优规模和最佳性能。  
@@ -73,6 +74,6 @@ Dim sp As ServicePoint = ServicePointManager.FindServicePoint(uri)
 sp.ConnectionLimit = newLimit  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接分组](../../../docs/framework/network-programming/connection-grouping.md)  
  [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)

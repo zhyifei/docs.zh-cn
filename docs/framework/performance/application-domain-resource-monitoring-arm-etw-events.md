@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a93e8cc1ab0b7488f920b556d2073d2813c3b7a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6384700c7039cb705f2db759ebd3d733bf8954ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>应用程序域资源监视 (ARM) ETW 事件
 <a name="top"></a> 这些事件提供有关应用程序域的状态的详细诊断信息。 你可以使用这些事件，或使用应用程序域资源监视 (ARM) 功能来获取相同的信息。  
@@ -164,5 +165,5 @@ ms.lasthandoff: 10/18/2017
 |AppDomainID|win:UInt64|应用程序域标识符。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

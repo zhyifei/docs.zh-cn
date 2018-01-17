@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92f7d19d84f8146a5c7933119874f4223dc20b6b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1ce7baf12c1826ddd14edad5e7dec328278c40e3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-serialize-an-object"></a>如何：序列化对象
 要序列化对象，首先应创建要序列化的对象，然后设置其公共属性和字段。 为此，必须确定 XML 流的传输格式，即它是作为流还是作为文件进行存储。 例如，如果 XML 流必须以永久形式保存，则应创建 <xref:System.IO.FileStream> 对象。  
@@ -59,6 +62,6 @@ ms.lasthandoff: 12/02/2017
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

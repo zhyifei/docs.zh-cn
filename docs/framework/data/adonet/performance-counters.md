@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 18403ac8237b1e129ec07e0271ff75194d944855
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe3005b3dbfa1a2f0018dd7b6049ab65d68b8e40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的性能计数器
 ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支持。 在早期版本的 ADO.NET 中提供的 <xref:System.Data.SqlClient> 性能计数器已被否决，并已替换为本主题讨论的新性能计数器。 可以使用 ADO.NET 性能计数器来监视应用程序的状态和应用程序所使用的连接资源。 可以使用 Windows 性能监视器来监视性能计数器，或使用 <xref:System.Diagnostics.PerformanceCounter> 命名空间中的 <xref:System.Diagnostics> 类以编程方式访问性能计数器。  
@@ -404,9 +405,9 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [OLE DB、 ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ [OLE DB、ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
  [ASP.NET 性能计数器](http://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
  [运行时分析](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)  
  [监视性能阈值简介](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  

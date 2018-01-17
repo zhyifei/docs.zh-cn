@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f220ffdf04102a110124e7331a53ae5ee70316a3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fffceba415bbdfdb15647ab67b01031b99e48b2b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="c-expressions"></a>C# 表达式
 自 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 起，[!INCLUDE[wf](../../../includes/wf-md.md)] 开始支持 C# 表达式。 在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中面向 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 新建的 C# 工作流项目使用 C# 表达式，而 Visual Basic 工作流项目则使用 Visual Basic 表达式。 现有使用 Visual Basic 表达式的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流项目可以不受项目语言限制而迁移到 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]，并得到支持。 本主题概述了 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 表达式。  

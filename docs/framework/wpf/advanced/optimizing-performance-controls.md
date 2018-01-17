@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-controls"></a>优化性能：控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含大多数 Windows 应用程序中使用的许多常见用户界面 (UI) 组件。 本主题包含提高 UI 性能的技术。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   设置<xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A>到`false`。  
   
--   设置<!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>-->`IsVirtualizing`到`false`。    
+-   设置<!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>-->`IsVirtualizing`到`false`。  
   
  虚拟化项容器时需要考虑到一个重要因素，即是否具有与属于项的项容器相关联的其他状态信息。 这种情况下，必须保存其他状态。 例如，你可能必须包含中的某项<xref:System.Windows.Controls.Expander>控件和<xref:System.Windows.Controls.Expander.IsExpanded%2A>状态绑定到该项的容器，而不适用于针对项本身。 当容器将重复使用的新项目的当前值<xref:System.Windows.Controls.Expander.IsExpanded%2A>新项的使用。 此外，旧项目将失去正确<xref:System.Windows.Controls.Expander.IsExpanded%2A>值。  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  有关如何启用虚拟化和回收对的容器的示例<xref:System.Windows.Controls.TreeView>，请参阅[提高的性能 TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [布局](../../../../docs/framework/wpf/advanced/layout.md)  
  [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
  [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 17c8f798b3c9d6c135bff11cd909fd74d8c9a697
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6fcce85e56abae561b05364a925fdb6b55825669
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrtask-interface"></a>ICLRTask 接口
 提供允许宿主发出请求的公共语言运行时 (CLR)，或者向 CLR 有关关联的任务提供通知的方法。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  任务通常在执行代码的末尾终止。 此时，主机将调用`ICLRTask::ExitTask`销毁关联`ICLRTask`。 但是，任务还都可以通过调用回收`ICLRTask::Reset`，这样，`ICLRTask`要再次使用实例。 此方法可避免重复创建和销毁实例的开销。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
  [IHostTask 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
  [IHostTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  

@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9686e8e2c4e8276e725852cb58fac7ed1973778b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7585f6adbca97b252fdad90276b0cd422d32c04a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 方法
 获取当前范围内的程序集和其元数据的估计二进制大小。  
@@ -59,7 +60,7 @@ HRESULT GetSaveSize (
   
  如果执行优化，则第一次传递只需进行排序的元数据结构调整导入时搜索的性能。 此步骤通常会导致移动解决问题，并且保留供将来参考工具的令牌将会失效其副作用的记录。 元数据不会通知这些令牌更改之前的调用方后的第二个过程，但是。 第二个阶段中，在各种优化来执行旨在减少将元数据，如优化去除 （早期绑定） 的总体大小`mdTypeRef`和`mdMemberRef`令牌时则引用为的类型或声明中的成员当前的元数据范围。 在此阶段中，会发生令牌映射的另一轮。 在后此阶段中，元数据引擎通知调用方，通过其`IMapToken`接口的任何更改令牌值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
@@ -68,6 +69,6 @@ HRESULT GetSaveSize (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
- [IMetaDataEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅  
+ [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

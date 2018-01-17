@@ -16,25 +16,26 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5262d778151cfe0a0d7ed1750e0b71d4c9214a64
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-information-etw-events"></a>运行时信息 ETW 事件
 这些 ETW 事件记录有关运行时的信息，包括 SKU、版本号、激活运行时的方式、启动运行时所使用的命令行参数、GUID（如果适用）以及其他相关信息。 如果多个运行时在一个进程内执行，这些事件 (ClrInstanceID) 提供的信息可帮助消除不同运行时的歧义。  
   
  下表显示了两个运行时信息事件。 这两个事件可在任意关键字或掩码下引发。 （有关详细信息，请参阅 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)。）  
   
-|Event|事件 ID|提供程序|描述|  
+|事件|事件 ID|提供程序|描述|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|加载运行时时引发。|  
 |`RuntimeInformationDCStart`|187|CLRRundown|枚举加载的运行时。|  
   
  下表显示了事件数据。  
   
-|字段名|数据类型|描述|  
+|字段名|数据类型|说明|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
 |Sku|win:UInt16|1 – 桌面 CLR。<br /><br /> 2 – CoreCLR。|  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/18/2017
 |ComObjectGUID|win:GUID|仅在 StartupMode=0x08 时为非 NULL。|  
 |RuntimeDLLPath|win:UnicodeString|已加载到进程的 CLR.dll 文件的路径。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

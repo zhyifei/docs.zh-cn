@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 216a7221550cb6345b29b5ed9e45b13ce40eadf4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: aa077ce13031772ec2ea20708c1dbd29da02d32a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 函数
 获取一个值，该值指示指定的程序集是否为托管对象。  
@@ -59,8 +60,8 @@ HRESULT IsFrameworkAssembly (
   
  如果指定的程序集不属于.NET Framework 中，或如果`pwzAssemblyReference`参数没有命名一个程序集，`pbIsFrameworkAssembly`将包含布尔值的`false`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

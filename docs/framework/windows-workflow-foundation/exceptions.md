@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 545049900ec632aaaf3955656bcd93e845b094de
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions"></a>异常
 工作流可以使用 <xref:System.Activities.Statements.TryCatch> 活动处理工作流执行期间引发的异常。 可以对这些异常进行处理，或者使用 <xref:System.Activities.Statements.Rethrow> 活动重新引发异常。 <xref:System.Activities.Statements.TryCatch.Finally%2A> 节中的活动在 <xref:System.Activities.Statements.TryCatch.Try%2A> 节或 <xref:System.Activities.Statements.TryCatch.Catches%2A> 节完成时执行。 由工作流承载<xref:System.Activities.WorkflowApplication>实例还可以使用<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>事件处理程序来处理未由处理的异常<xref:System.Activities.Statements.TryCatch>活动。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="exception-handling-versus-compensation"></a>异常处理与补偿  
  异常处理与补偿的不同之处在于：异常处理是在活动的执行期间发生的， 而补偿在活动成功完成后发生。 通过异常处理，可以在活动引发异常之后进行清理，而补偿提供了一种机制，可用于撤消以前完成的活动中所成功完成的工作。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][补偿](../../../docs/framework/windows-workflow-foundation/compensation.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Activities.Statements.TryCatch>  
  <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>  
  <xref:System.Activities.Statements.CompensableActivity>

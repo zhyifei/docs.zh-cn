@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53dc25d6a23c5cdbba1c640905eadbdc6b1acb71
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 29c8a4ef0a495d63c0263262857002f09d8c885a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>使用图像、位图、图标和图元文件
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供用于处理光栅图像的 `Bitmap` 类以及用于处理矢量图像的 `Metafile` 类。 `Bitmap` 和 `Metafile` 类都继承自 `Image` 类。  

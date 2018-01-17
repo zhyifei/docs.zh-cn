@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6e5363da872d3902c12713bd19f5820370428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8dbb50af9d5655a76abb3827cd2f512eab0fd662
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>预期采用 Windows Communication Foundation：便于以后集成
 如果您现在使用 ASP.NET，并预期在以后使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，则本主题所提供的指导可确保新的 ASP.NET Web 服务可与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序一起正常工作。  
@@ -53,5 +54,5 @@ public interface IEcho
 ## <a name="security"></a>安全性  
  避免使用 Internet Information Services (IIS) 提供的身份验证选项。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端不支持这些选项。 如果必须保护某一服务，请使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的选项，因为这些选项更丰富，并且基于标准协议。  
   
-## <a name="see-also"></a>另请参阅  
- [Windows Communication Foundation 使用展望： 使未来迁移轻而易举](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+## <a name="see-also"></a>请参阅  
+ [预期采用 Windows Communication Foundation：便于以后迁移](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

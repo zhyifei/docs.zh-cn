@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 844648cd2cfafc561e27bea870703ee3a55fb404
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b115b8d52f904fef41a2e85c1192a18e5c3d3e08
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 接口
 提供使主机能够启动和停止公共语言运行时 (CLR) 显式创建和配置应用程序域，以访问默认域，以及枚举进程中运行的所有域的方法。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 |[SwitchOutLogicalThreadState 方法](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchoutlogicalthreadstate-method.md)|请勿使用。|  
 |[UnloadDomain 方法](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|卸载指定的应用程序域中从当前进程。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -63,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：** 1.0、 1.1  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.AppDomain>  
  [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)  
  [ICLRRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  

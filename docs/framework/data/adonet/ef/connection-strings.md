@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b141f7bb31374c403f8d802a5df2ff1329b1e079
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64f2d0fbc54900443046bd2c71215cc0928c8658
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings"></a>连接字符串
 连接字符串包含作为参数从数据提供程序传递到数据源的初始化信息。 其语法取决于数据提供程序，并且会在试图打开连接的过程中对连接字符串进行分析。 实体框架使用的连接字符串包含用于连接到支持实体框架的基础 ADO.NET 数据提供程序的信息。 它们还包含有关所需的模型和映射文件的信息。  
@@ -117,7 +118,7 @@ Metadata=.\
   
  对 `DataDirectory` 替代字符串和 ~ 运算符的解析不是递归进行的。 例如，如果 `DataDirectory` 包含 `~` 字符，则引发异常。 这样可以避免无穷递归。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用数据提供程序](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [管理连接和事务](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  

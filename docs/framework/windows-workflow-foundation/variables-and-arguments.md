@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f231a4e43723ce3ea73831086ed54e9ee08c1a0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d01c31cce9aa6ae6d87773fc8e616e0e08bbd8c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="variables-and-arguments"></a>变量和自变量
 在 [!INCLUDE[wf](../../../includes/wf-md.md)] 中，变量表示数据的存储区，参数表示流入和流出活动的数据。 活动拥有一组参数，这些参数构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  

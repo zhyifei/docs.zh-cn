@@ -21,11 +21,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 42409a333623bd4d691084a0bdd2e57f2c3db4f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3665ce281fd6426e235aef58448b2cfe46299bd7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="encrypting-data"></a>加密数据
 对称加密和非对称加密是使用不同的进程执行的。 对称加密是对流执行的，因此适用于加密大量数据。 非对称加密是对少数字节执行的，因此仅适用于加密少量数据。  
@@ -269,7 +272,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成加密和解密密钥](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
  [解密数据](../../../docs/standard/security/decrypting-data.md)  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

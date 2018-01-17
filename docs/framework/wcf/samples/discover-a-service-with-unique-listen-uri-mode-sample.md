@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82f47fb0b789e41c332ebae2cfeaeb350ff0fddd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 017a14794dfb2cb2c49cc32df038600a984acf3f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discover-a-service-with-unique-listen-uri-mode-sample"></a>使用唯一侦听 Uri 模式示例发现服务
 此示例演示如何发现 <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> 属性设置为 <xref:System.ServiceModel.Description.ListenUriMode.Unique> 的服务。 当 <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> 属性设置为 <xref:System.ServiceModel.Description.ListenUriMode.Unique> 时，通过将端口设置为唯一或追加 GUID 使其对路径唯一来确保 ListenUri 唯一。  
@@ -49,4 +50,4 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\UniqueListenUriMode`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

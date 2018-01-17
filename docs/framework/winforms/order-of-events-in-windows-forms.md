@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f822133b44f0f32224402463b4332811f8cd52b5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 03d2661752e5c0acb36fe76a8fa72b0638b4ad54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows 窗体中的事件顺序
 对于依次处理其中每个事件的开发人员，Windows 窗体应用程序中引发事件的顺序非常具有吸引力。 当出现需要谨慎处理事件的情况时（例如，在重绘窗体的某些部件时），有必要了解运行时引发事件的确切顺序。 本主题提供了应用程序和控件的生存期中几个重要阶段中的事件顺序的详细信息。 有关鼠标输入事件的顺序的特定详细信息，请参阅[Windows 窗体中的鼠标事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。 Windows 窗体中的事件的概述，请参阅[事件概述](../../../docs/framework/winforms/events-overview-windows-forms.md)。 有关事件处理程序的构成的详细信息，请参阅[事件处理程序概述](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
@@ -90,5 +91,5 @@ ms.lasthandoff: 10/22/2017
   
 -   <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Windows 窗体中创建事件处理程序](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

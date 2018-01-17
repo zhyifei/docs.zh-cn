@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 685651f4291a11b857da82a63068e4bd2333275c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1ef47e6b4f584e0a49482d9eb2ed7bf14602a03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员使用 Visual Basic 或 Visual C# 根据实体框架概念模型编写查询。 针对实体框架的查询由针对对象上下文执行的命令目录树查询表示。 LINQ to Entities 将语言集成查询 (LINQ) 查询转换为命令目录树查询，针对实体框架执行这些查询，并返回可同时由实体框架和 LINQ 使用的对象。 以下是创建和执行 LINQ to Entities 查询的过程：  
@@ -78,13 +79,13 @@ LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员�
  有关详细信息，请参阅[查询结果](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在 LINQ to Entities 查询](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
+ [LINQ to Entities 中的查询](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
   
  [LINQ to Entities 查询中的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)  
   
  [在 LINQ to Entities 查询中调用函数](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
   
- [已编译的查询 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
+ [编译的查询 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
   
  [查询执行](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
   
@@ -92,14 +93,14 @@ LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员�
   
  [LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
- [CLR 方法至规范函数映射](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
+ [CLR 方法至 Canonical 函数映射](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
   
  [支持和不支持的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
   
- [已知的问题和在 LINQ to Entities 的注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
+ [LINQ to Entities 中的已知问题和注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
-## <a name="see-also"></a>另请参阅  
- [已知的问题和在 LINQ to Entities 的注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
+## <a name="see-also"></a>请参阅  
+ [LINQ to Entities 中的已知问题和注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
  [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ 和 ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)

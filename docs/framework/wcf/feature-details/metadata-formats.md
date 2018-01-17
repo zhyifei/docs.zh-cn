@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ee7376f87fd0e4ce15d192dd53f872e84187acc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0b7812023fbe2159daba205727e20e1b69b84686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="metadata-formats"></a>元数据格式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支持下表中的元数据格式。  
@@ -33,6 +34,6 @@ ms.lasthandoff: 12/02/2017
 |WS 元数据交换|[Web 服务元数据交换 (Ws-metadataexchange) 1.1 版](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WS-MetadataExchange 以检索 XML 架构、WSDL 和 WS-Policy。|  
 |WSDL 的 WS 寻址绑定|[Web 服务寻址 1.0-WSDL 绑定](http://go.microsoft.com/fwlink/?LinkId=94869)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WSDL 的 WS-Addressing 绑定以在 WSDL 中附加寻址信息。|  
   
-## <a name="see-also"></a>另请参阅  
- [Web 服务的系统提供的互操作性绑定支持的协议](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+## <a name="see-also"></a>请参阅  
+ [系统提供的互操作性绑定支持的 Web 服务协议](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [WSDL 和策略](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)

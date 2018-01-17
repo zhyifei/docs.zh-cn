@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c86a3d420b85c1287597cda738c6d72f0433d0f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c31e76e9f190990f0a3dddab359ef9523783d955
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>演练：使用 Visual Basic 创作复合控件
 复合控件提供了一种创建和重用自定义图形界面的方法。 复合控件本质上是具有可视化表示形式的组件。 因此，它可能包含一个或多个 Windows 窗体控件、组件或代码块，它们能够通过验证用户输入、修改显示属性或执行作者所需的其他任务来扩展功能。 可以按照与其他控件相同的方式将复合控件置于 Windows 窗体中。 在本演练的第一部分，将创建一个名为 `ctlClock` 的简单复合控件。 在本演练的第二部分，将通过继承扩展 `ctlClock` 的功能。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
     |属性|更改为|  
     |--------------|---------------|  
-    |**Name**|`lblDisplay`|  
+    |**名称**|`lblDisplay`|  
     |**文本**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
@@ -254,7 +255,7 @@ ms.lasthandoff: 11/21/2017
   
     |属性|设置|  
     |--------------|-------------|  
-    |**Name**|`lblAlarm`|  
+    |**名称**|`lblAlarm`|  
     |**文本**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**可见**|`False`|  
@@ -366,11 +367,11 @@ ms.lasthandoff: 11/21/2017
   
 11. 按下述方法设置这些控件的属性。  
   
-    |控件|属性|值|  
+    |控件|属性|“值”|  
     |-------------|--------------|-----------|  
     |`label1`|**文本**|`(blank space)`|  
-    ||**Name**|`lblTest`|  
-    |`dateTimePicker1`|**Name**|`dtpTest`|  
+    ||**名称**|`lblTest`|  
+    |`dateTimePicker1`|**名称**|`dtpTest`|  
     ||**格式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. 在设计器中，双击“dtpTest”。  
@@ -405,7 +406,7 @@ ms.lasthandoff: 11/21/2017
   
      本演练涵盖了多个关键概念。 现已应了解如何通过将控件和组件组合到复合控件容器中来创建复合控件。 还应了解图和将属性添加到控件，以及如何编写代码以实现自定义功能。 在最后一节中，应了解到如何通过继承来扩展给定复合控件的功能，以及如何通过重写承载方法来改变这些方法的功能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [如何：创作复合控件](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [如何：在“选择工具箱项”对话框中显示控件](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  

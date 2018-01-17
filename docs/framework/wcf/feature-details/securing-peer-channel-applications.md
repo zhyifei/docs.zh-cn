@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 377c2425ff1647c43687aa0a5d9584930cb6b1c2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7358852ffc50576f892c70fa2b212a8102d8ab85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-peer-channel-applications"></a>保护对等通道应用程序
 像 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 下的其他绑定一样，`NetPeerTcpBinding` 默认情况下启用了安全，并提供基于传输的安全或基于消息的安全（或二者皆提供）。 本主题讨论这两种类型的安全。 安全类型由绑定规范中的安全模式标记指定 (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)。  
@@ -51,6 +52,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="peer-channel-code-examples"></a>对等通道代码示例  
  [对等通道方案](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对等通道安全性](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
  [生成对等通道应用程序](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc7fd3d3012053d8c40edf5fdce8af45c62c98c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92b66d27683fad4adf0ed2179a5bb29ef6220e3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据显示模式
 <xref:System.Windows.Forms.DataGridView>控件可以在三种不同模式中显示数据： 绑定、 未绑定，和虚拟。 选择最合适的模式，基于你的要求。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
  有关虚拟模式的详细信息，请参阅[Windows 窗体 DataGridView 控件中的虚拟模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)。 有关演示如何使用虚拟模式事件示例，请参阅[演练： 在 Windows 窗体 DataGridView 控件中实现虚拟模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>  

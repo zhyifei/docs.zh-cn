@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 149f293616cfc2aa7b68377964c14a7cfa9e3edf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的类型转换器和标记扩展
 类型转换器和标记扩展是 XAML 类型系统和 XAML 编写器用来生成对象图组件的两种技术。 尽管类型转换器和标记扩展共享一些特征，但它们在 XAML 节点流中以不同的方式表示。 在本文档集中，类型转换器、标记扩展和类似的构造有时统称为值转换器。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="service-context-for-a-value-converter"></a>值转换器的服务上下文  
  当实现值转换器时，你经常需要访问在其中应用了值转换器的上下文。 此上下文称为服务上下文。 服务上下文可能包括如下信息：活动的 XAML 架构上下文、对 XAML 架构上下文和 XAML 对象编写器提供的类型映射系统的访问权限等等。 有关可用于值转换器的服务上下文和如何访问服务上下文可能会提供的服务的详细信息，请参阅 [Service Contexts Available to Type Converters and Markup Extensions](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Markup.MarkupExtension>  
  <xref:System.Xaml.XamlObjectWriter>  
  [XAML 的标记扩展概述](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  

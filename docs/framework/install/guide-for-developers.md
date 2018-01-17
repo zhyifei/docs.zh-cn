@@ -14,17 +14,18 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46e79e67b5d6f088eb2a0fb39e6f4f10c6ed8549
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.workload: dotnet
+ms.openlocfilehash: cad3f3d813d6882b83a7e9db7ce212fba66e44ea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>安装面向开发人员的 .NET Framework
 
 .NET 是在 Windows 上运行的多个应用不可缺少的一部分，并且对这些应用运行发挥着同样的功能。 对开发人员而言，.NET Framework 为生成具有视觉冲击力的用户体验和无缝安全通信的应用提供了一个全面且一致的编程模型。  
 
-本文提供了在计算机上安装所有版本的 .NET Framework（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]）的链接。 如果你是开发人员，你也可以使用这些链接来下载 .NET Framework 并将其与你的应用程序一起重新分发。
+本文提供了在计算机上安装所有版本的 .NET Framework（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)]）的链接。 如果你是开发人员，你也可以使用这些链接来下载 .NET Framework 并将其与你的应用程序一起重新分发。 有关使用你的应用部署 .NET Framework 版本的信息，请参阅[针对开发人员的 .NET Framework 部署指南](../deployment/deployment-guide-for-developers.md)。
 
 > [!NOTE]
 > 本主题面向希望在自己的系统上安装 .NET Framework 或与其应用程序一起安装 .NET Framework 的开发者。 如果用户对安装 .NET Framework 感兴趣，请参阅单独介绍如何在特定操作系统上安装 .NET Framework 的主题，例如[在 Windows 10 和 Windows Server 2016 上安装 .NET Framework](on-windows-10.md)。  
@@ -181,7 +182,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
   
 下表列出了支持的语言。  
   
-| 语言              | 区域性 |
+| 语言              | culture |
 | --------------------- | :-----: |
 | 阿拉伯语                | ar      |
 | 捷克语                 | cs      |
@@ -196,7 +197,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 | 意大利语               | it      |
 | 日语              | ja      |
 | 朝鲜语                | ko      |
-| 挪威语             | no      |
+| 挪威语             | 否      |
 | 波兰语                | pl      |
 | 葡萄牙语(巴西)   | pt-BR   |
 | 葡萄牙语（葡萄牙） | pt-PT   |
@@ -206,7 +207,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 | 瑞典语               | sv      |
 | 繁体中文   | zh-CHT  |
 | 土耳其语               | tr      |
-| 英语（美国）            | zh-CN   |
+| 英语（美国）            | en-US   |
   
 ## <a name="next-steps"></a>后续步骤  
   
@@ -222,7 +223,7 @@ Web 和脱机安装程序均针对基于 x86 和 x64 的计算机而设计（请
 
 - 请参阅 [.NET Framework 引用源](http://referencesource.microsoft.com/)以联机浏览 .NET Framework 源代码。 还可以在 [Github](https://github.com/Microsoft/referencesource) 上获取引用源。 可[下载引用源](http://referencesource.microsoft.com/download.html)以供脱机查看和在调试期间逐步执行源（包括修补程序和更新）。 有关详细信息，请参阅日志 [.NET 引用源的全新外观](http://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [面向开发人员的部署指南](~/docs/framework/deployment/deployment-guide-for-developers.md)   
 [面向管理员的部署指南](~/docs/framework/deployment/guide-for-administrators.md)   

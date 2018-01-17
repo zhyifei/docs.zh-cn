@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b460afb393c1b88b34281a8db1b61203e5c5962
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2ede616b311119d174534e53cb3aaf9e366c7c4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>演练：验证 Windows 窗体 DataGridView 控件中的数据
 时向用户显示数据条目功能，你经常需要验证你的窗体中输入的数据。 <xref:System.Windows.Forms.DataGridView>类提供了一种简便方式提交到数据存储区数据之前执行验证。 你可以通过处理在验证数据<xref:System.Windows.Forms.DataGridView.CellValidating>事件，由引发<xref:System.Windows.Forms.DataGridView>当前单元格的更改时。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  若要将代码复制本主题中的一个单独的清单，请参阅[如何： 在 Windows 窗体 DataGridView 控件中验证数据](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
 -   到 Northwind SQL Server 示例数据库的服务器的访问。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
   
 -   自定义单元格的外观。 有关详细信息，请参阅[如何： 自定义 Windows 窗体 DataGridView 控件中的单元外观](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)和[如何： 设置字体和颜色样式在 Windows 窗体 DataGridView 控件中](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
  [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  

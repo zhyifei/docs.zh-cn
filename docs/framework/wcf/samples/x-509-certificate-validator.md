@@ -13,14 +13,15 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e2d177045f82f9df5318a38c67a23d6b9fa2d268
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0717aae2c13c9fa5fcbf0ea47d344cac5675fbea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="x509-certificate-validator"></a>X.509 证书验证程序
-此示例演示如何实现自定义 X.509 证书验证程序。 当内置的 X.509 证书验证模式都不能满足应用程序的要求时，实现自定义证书验证程序很有用。 此示例演示了具有自定义验证程序的服务，该验证程序接受自行颁发的证书。 客户端使用此类证书对服务进行身份验证。  
+此示例演示如何实现自定义 X.509 证书验证程序。 当内置的 X.509 证书验证模式都不能满足应用程序的需求时，实现自定义证书验证程序很有用。 此示例演示了具有自定义验证程序的服务，该验证程序接受自行颁发的证书。 客户端使用此类证书对服务进行身份验证。  
   
  注意：因为任何人都可以构造自行颁发的证书，所以服务使用的自定义验证程序的安全性低于 ChainTrust X509CertificateValidationMode 提供的默认行为。 在成品代码中使用此验证逻辑之前，应慎重考虑这样做的安全隐患。  
   
@@ -366,4 +367,4 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 > [!NOTE]
 >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

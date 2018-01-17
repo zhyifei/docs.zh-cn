@@ -8,17 +8,18 @@ ms.date: 11/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 887f562803226d99901a6ee13175c1a43956b0cd
-ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
+ms.workload: dotnetcore
+ms.openlocfilehash: dc93e0554d422ddf42ac54dd94223f0285451e85
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-restore"></a>dotnet 还原
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet restore` - 恢复项目的依赖项和工具。
 
@@ -69,7 +70,7 @@ dotnet restore [-h|--help]
 
 在某些情况下，隐式运行 `dotnet restore` 很不方便。 例如，某些自动化系统（如生成系统）需要显式调用 `dotnet restore`，以控制还原发生的时间，以便可以控制网络使用量。 要防止隐式运行 `dotnet restore`，可以通过上述任意命令使用 `--no-restore` 开关，禁用隐式还原。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `ROOT`
 

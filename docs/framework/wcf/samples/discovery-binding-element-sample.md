@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b658cc481d3ca5e87b5b9e2aab6b7561be2c65b1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-binding-element-sample"></a>发现绑定元素示例
 本示例演示如何使用发现客户端绑定元素发现服务。 开发人员使用此功能可以向其现有客户端通道堆栈添加发现客户端通道，从而使编程模型非常直观。 当关联通道打开时，会使用发现解析服务地址。 本示例包含以下项目：  
@@ -130,4 +131,4 @@ CalculatorServiceClient client = new CalculatorServiceClient(CreateCustomBinding
   
 4.  观察客户端是否能够在不知道服务地址的情况下找到服务。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

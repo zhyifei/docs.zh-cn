@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f36351c04b3849b5364e00cec55769628d89af11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d40dc1540e4270fc0f80178207edf7b8277d7a73
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-messages-using-transport-security"></a>使用传输安全保护消息
 本节讨论消息队列 (MSMQ) 传输安全，您可将其用于保护发送到队列的消息。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/21/2017
   
  支持的算法包括 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 默认值为 `SHA1`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息队列](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)  
- [安全性的基础概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

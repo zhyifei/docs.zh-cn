@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf852c67bec8abb2af3593d537010e5cc2718176
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 450d47a9cdff709657458ed3fcc4b5948ccb960c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="concurrencymode-reentrant"></a>可重入的 ConcurrencyMode
 本示例演示对服务实现使用 ConcurrencyMode.Reentrant 的必要性和含义。 ConcurrencyMode.Reentrant 暗示服务（或回调）只在给定时间处理一个消息（类似于 `ConcurencyMode.Single`）。 为保证线程的安全，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将锁定 `InstanceContext` 处理消息，以便不再处理其他消息。 在处于可重入模式的情况下，`InstanceContext` 将仅在服务进行传出调用之前解除锁定，从而允许后续调用（可按示例中的演示重入），并在下次进入服务时被锁定。 为了演示此行为，示例演示了客户端和服务如何使用双工协定相互发送消息。  
@@ -92,4 +93,4 @@ Pong: Ticks = 1
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

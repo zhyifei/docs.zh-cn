@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7db69de994770e122dd4a4233b9a44d572c32344
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1af6fc1b7802fe69f0585011322e2485695a030c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>如何：为 WCF Web 服务应用程序启用 WIF
 ## <a name="applies-to"></a>适用于  
@@ -153,7 +154,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  右键单击“客户端”项目下的“引用”，然后单击“添加服务引用”。  
   
-4.  在“添加服务引用”窗口中，单击“发现”按钮上的下拉箭头，然后单击“解决方案中的服务”。 “地址”将自动填充之前创建的 WCF 服务，而“命名空间”将设置为“ServiceReference1”。 单击“确定”。  
+4.  在“添加服务引用”窗口中，单击“发现”按钮上的下拉箭头，然后单击“解决方案中的服务”。 “地址”将自动填充之前创建的 WCF 服务，而“命名空间”将设置为“ServiceReference1”。 单击 **“确定”**。  
   
     > [!IMPORTANT]
     >  向客户端添加服务引用时，TestService 和 LocalSTS 都必须处于运行状态。  

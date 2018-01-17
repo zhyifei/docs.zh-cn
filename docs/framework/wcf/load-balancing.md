@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 699a770e1ff1ec8cebf904a72338f400236b737a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="load-balancing"></a>负载平衡
 提高 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序功能的方法之一是通过将它们部署到负载平衡的服务器场来扩展它们。 使用标准的负载平衡技术，包括诸如 Windows 网络负载平衡这样的软件负载平衡器以及基于硬件的负载平衡设备，可以使 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序实现负载平衡。  
@@ -100,5 +101,5 @@ ms.lasthandoff: 12/02/2017
   
  若要在负载平衡方案中获得最佳性能，请考虑使用 <xref:System.ServiceModel.NetTcpSecurity>（<xref:System.ServiceModel.SecurityMode.Transport> 或 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>）。  
   
-## <a name="see-also"></a>另请参阅  
- [Internet 信息服务承载最佳实践](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+## <a name="see-also"></a>请参阅  
+ [Internet Information Services 承载最佳做法](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

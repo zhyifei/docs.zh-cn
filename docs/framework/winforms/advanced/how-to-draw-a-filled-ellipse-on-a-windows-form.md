@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad3297d1db29ec7310922dddf1caf57558a1505a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 12b17f92fc90cde1e0c1841fc7f9d63728d50294
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>如何：在 Windows 窗体上绘制实心椭圆
 此示例窗体上绘制实心的椭圆。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>可靠编程  
  始终应调用<xref:System.IDisposable.Dispose%2A>对任何对象所消耗的系统资源，如<xref:System.Drawing.Brush>和<xref:System.Drawing.Graphics>对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [图形编程入门](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
  [alpha 值混合处理直线和填充](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  

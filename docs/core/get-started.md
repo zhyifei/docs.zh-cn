@@ -1,7 +1,7 @@
 ---
 title: ".NET Core 入门"
 description: "查找相关资源，了解如何在 Windows、Linux 和 macOS 上生成 .NET Core 应用程序。"
-keywords: ".NET、.NET Core"
+keywords: .NET, .NET Core
 author: johalex
 ms.author: johalex
 ms.date: 09/14/2017
@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: a38c2e5ff5e11cecaa75b8cd678c362a857d7ebc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 入门
 
@@ -37,14 +38,14 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="linux"></a>Linux
 
-在上安装.NET 核心[Linux](https://www.microsoft.com/net/core#linuxredhat)。
+在 [Linux](https://www.microsoft.com/net/core#linuxredhat) 上安装 .NET Core。
 
 可以通过以下分步教程着手开发 .NET Core 应用。
 
 * [使用命令行开始 .NET Core](tutorials/using-with-xplat-cli.md) - 可以结合使用任何代码编辑器和 [.NET Core 跨平台命令行接口 (CLI)](tools/index.md)。
 * [在 Ubuntu 上使用 Visual Studio Code 创建 C# .NET Core 应用入门](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) - 此 [Channel9](https://channel9.msdn.com) 视频展示了如何安装并使用 Microsoft 轻型跨平台代码编辑器 [Visual Studio Code](https://code.visualstudio.com/)，在 Ubuntu 14.04 上创建首个 .NET Core 控制台应用。
 
-请参阅[先决条件适用于 Linux 开发](linux-prerequisites.md)有关受支持的 Linux 发行版和版本的列表的主题。
+有关支持的 Linux 发行版和版本列表，请参阅 [Linux 开发的先决条件](linux-prerequisites.md)主题。
 
 ## <a name="os-x--macos"></a>OS X/macOS
 

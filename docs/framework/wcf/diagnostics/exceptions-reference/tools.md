@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 174459c23bd6ecd336394146b6d91e265cb820d3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tools"></a>工具
 本主题列出由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 工具生成的所有异常。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
 |HelpImportXmlType|配置 DataContract 序列化程序，以便将非 DataContract 类型作为 IXmlSerializable 类型导入。|  
 |ErrExclusiveOptionsSpecified|当已指定了其他指定选项时，将不能使用此指定选项。|  
 |WrnHttpGetFailed|指定的 URI 发生了 HTTP GET 错误。|  
-|ErrInputFileNotAssemblyOrMetadata|通过指定输入参数读取的位于指定位置的文件似乎不是 XML 元数据文件或有效程序集。|  
+|ErrInputFileNotAssemblyOrMetadata|通过指定输入自变量读取的位于指定位置的文件似乎不是 XML 元数据文件或有效程序集。|  
 |WrnUnknownMetadataFound|不能保存指定类型的无法识别的元数据文档。|  
 |ErrDirectoryContainsInvalidCharacters|向指定选项传递了指定的无效值。 路径中不允许出现该指定字符。|  
 |WrnCannotResolveServiceForValidation|无法加载具有指定 configName 的服务。 若要验证服务，请同时提供包含该服务类型的程序集和具有此服务的配置的可执行文件。|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/02/2017
 |WrnNoServiceContractTypes|无法为指定程序集生成 XmlSerializer 类型。 未发现服务协定类型。|  
 |WrnCouldNotLoadTypesFromReferenceAssemblyAt|加载从指定位置加载的程序集中的类型时出错。 程序集中的某些类型无法加载，工具无法使用这些类型。|  
 |ErrDirectoryPointsToAFile|向指定选项传递了指定的无效值。 指定的值是文件的路径。|  
-|错误|错误：|  
+|Error|错误：|  
 |ErrDuplicateReferenceValues|使用指定的选项对指定的程序集加载了两次。 程序集只可以引用一次。|  
 |WrnNoXmlSerializerOperationBehavior|无法为指定程序集生成 XmlSerializer。 程序集中没有任何服务协定使用具有 XmlSerializerOperationBehavior 的操作。|  
 |ErrCannotCreateDirectory|无法创建指定的目录。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 12/02/2017
 |ErrDuplicateValuePassedToTypeArg|多次向指定的选项传递了指定的值。 每个类型仅可以指定一次。|  
 |ErrInputEPRFileParseError|无法从指定位置读取终结点引用。 请验证 XML 是否格式正确且有效。|  
 |ErrCouldNotCreateCodeProvider|无法为传递给 /{1} 参数的指定值创建代码提供程序。 请验证是否正确安装并配置了代码提供程序。|  
-|ErrPathTooLongDirOnly|产生的指定路径过长。 请检查指定的参数。|  
+|ErrPathTooLongDirOnly|产生的指定路径过长。 请检查指定的自变量。|  
 |HelpDataContractSerializer|生成使用 DataContract 序列化程序进行序列化和反序列化的数据类型。|  
 |ErrUnableToExportEndpoint|导出在为程序集加载的配置文件中找到的指定服务类型的指定命名空间中的指定终结点名称时出错。|  
 |HelpUsage1|显示帮助用法。|  
@@ -120,13 +121,13 @@ ms.lasthandoff: 12/02/2017
 |ErrCannotDisambiguateSpecifiedTypes|在被引用程序集的集合中存在多个具有相同名称的类型。 请使用程序集限定的名称来区分指定选项的指定类型。|  
 |RetreivingMetadataWithMexOnly|尝试使用 WS-Metadata Exchange 从指定位置下载元数据。 此 URL 不支持 DISCO。|  
 |ErrInvalidTarget|当使用指定的选项指定时，指定的目标无效。 已指定受支持的目标。|  
-|ErrPathTooLong|产生的路径过长。 请检查指定的参数。|  
+|ErrPathTooLong|产生的路径过长。 请检查指定的自变量。|  
 |HelpCommonOptionsCategory|-= 常用选项 =-|  
 |ParametersServiceName|\<serviceConfigName >|  
 |ErrNoValidInputFilesSpecified|没有指定有效的输入文件。 请指定元数据文档或程序集文件。|  
 |ParametersLanguage|\<语言 >|  
 |ErrUnableToLoadMetadataDocument|从加载的文档之一读取元数据时出错。 已指定文档标识符。|  
-|ErrConflictingInputs|指定的输入参数与指定内容冲突，因为它们指示了不同的工具操作模式。|  
+|ErrConflictingInputs|指定的输入自变量与指定内容冲突，因为它们指示了不同的工具操作模式。|  
 |WrnUnableToLoadContractForValidation|加载协定类型时出错。 已指定类型和详细信息。|  
 |WrnAttributeReflectionErrors|从指定位置加载的程序集中的某些类型的属性反射失败。 请验证此程序集是否可以从此位置使用正确的安全特权加载。|  
 |HelpMetadataExportCategory|-= 元数据导出 =-|  
@@ -138,7 +139,7 @@ ms.lasthandoff: 12/02/2017
 |ParametersOut|\<文件 >|  
 |NoCodeWasGeneratedSuggestDCOnly|若要从架构生成协定，请使用指定选项。|  
 |ErrUnableToLoadInputConfig|无法加载指定的配置文件。|  
-|ErrUnexpectedDelimiter|无效的参数分隔符（“:”或“=”）无法启动选项。|  
+|ErrUnexpectedDelimiter|无效的自变量分隔符（“:”或“=”）无法启动选项。|  
 |ErrMergeConfigUsedWithoutConfig|无法在未指定其他指定选项的情况下使用该指定选项。|  
 |ErrUnableToExportContract|导出从指定类型加载的协定时出错。|  
 |GeneratingMetadata|正在生成元数据文件...|  

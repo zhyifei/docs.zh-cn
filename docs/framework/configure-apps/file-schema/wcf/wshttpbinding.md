@@ -14,11 +14,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53e189b761ccd1c3cee75d4afa81291e02082684
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f4b453392e21079fe1042f3f07bd895bbcdad888
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 定义一个适合于非双工服务约定的安全、可靠且可互操作的绑定。 该绑定为保证可靠性实现 WS-ReliableMessaging 规范，为保证消息安全性和进行身份验证实现 WS-Security 规范。 传输协议是 HTTP，消息编码方式是 Text/XML 编码。  
@@ -144,7 +145,7 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.WSHttpBinding>  
  <xref:System.ServiceModel.Configuration.WSHttpBindingElement>  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  

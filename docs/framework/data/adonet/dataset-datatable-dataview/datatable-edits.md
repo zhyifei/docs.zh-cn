@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d33bd8900c48222142a46ed2c5bd64412d2eaab5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3d06fc3a82457972db94f82964942f446bb761be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datatable-edits"></a>数据表编辑
 当您在 <xref:System.Data.DataRow> 中更改列值时，所做更改会立即置于行的当前状态中。 <xref:System.Data.DataRowState>然后将设置为**已修改**，并接受或拒绝使用更改<xref:System.Data.DataRow.AcceptChanges%2A>或<xref:System.Data.DataRow.RejectChanges%2A>方法**DataRow**。 **DataRow**还提供了可用于进行编辑时挂起的行状态的三种方法。 这三个方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
@@ -96,7 +97,7 @@ protected static void OnColumnChanged(
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataRowVersion>  

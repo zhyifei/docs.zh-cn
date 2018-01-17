@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4a696b69cf08d15ecd39a87920ecaa1934c00578
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 27b1b7b26ea788683f9b322306c55a4b3945f342
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE 结构
 包含代码区域的偏离量信息。  
@@ -46,7 +47,7 @@ typedef struct {
 |`startOffset`|范围的开始处的偏移量。|  
 |`endOffset`|偏移量范围的末尾。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl  
@@ -55,7 +56,7 @@ typedef struct {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [StepRange 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)  
  [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

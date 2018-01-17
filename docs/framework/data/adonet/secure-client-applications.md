@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b42c06b9507894568a4299f23b62010e44076194
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1218cda46a6a901c3dbf9fb11333b04d0133df42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-client-applications"></a>保证客户端应用程序的安全
 应用程序通常由多个部件组成，所有这些部件均不能包含漏洞，否则可能导致数据丢失或以其他方式危害系统。 在攻击者可访问数据或系统资源之前将其阻止，以此可创建安全的用户界面来防止出现许多问题。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 |[远程处理中的安全](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add)|描述身份验证和加密以及与远程处理相关的其他安全主题。|  
 |[安全和远程处理注意事项](../../../../docs/framework/misc/security-and-remoting-considerations.md)|描述与受保护对象和应用程序域交叉相关的安全问题。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [数据访问策略的建议](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [保护应用程序](/visualstudio/ide/securing-applications)  

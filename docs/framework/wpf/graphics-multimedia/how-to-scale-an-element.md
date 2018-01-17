@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23b3086452526e804bfdbe50bb0c134f33158f5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2bff810dc9b44b25db93c8565da27acc4f0ccc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-scale-an-element"></a>如何：缩放元素
 此示例演示如何使用<xref:System.Windows.Media.ScaleTransform>来缩放元素。  
@@ -47,8 +48,8 @@ ms.lasthandoff: 11/21/2017
   
  有关完整示例，请参阅 [2D 转换示例](http://go.microsoft.com/fwlink/?LinkID=158252)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.ScaleTransform>  
  [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e4779baa24e172affad2ed5e04451ad791d7cdf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7fd4e12d77380942204d37b59644c46aed3a0148
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 提供有关配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM)。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
 |persistentCookiesOnPassiveRedirects|指定是否在身份验证颁发了永久 cookie。 可选。 默认值为"false"，不发送 cookie。|  
 |passiveRedirectEnabled|指定是否启用 WSFAM 自动将未经授权的请求重定向到 STS。 可选。 默认值为"true"，未经授权的请求自动重定向。|  
 |策略|指定的位置相关的策略用于登录请求的 URL。 默认值为一个空字符串。 设置的 WS 联合身份验证登录请求 wp 参数。 可选。 默认值为空字符串，它指定 wp 参数未包含在请求中。|  
-|realm|请求的领域的 URI。 (一个 URI，为安全令牌服务 (STS) 中标识信赖方 (RP)。)设置请求 wtrealm WS 联合身份验证登录请求参数。 必需。|  
+|realm|请求的领域的 URI。 (一个 URI，为安全令牌服务 (STS) 中标识信赖方 (RP)。)设置请求 wtrealm WS 联合身份验证登录请求参数。 必须的。|  
 |答复|标识从该处信赖方 (RP) 应用程序希望接收安全令牌服务 (STS) 从的答复地址 URL。 设置的 WS 联合身份验证登录请求 wreply 参数。 可选。 默认值为空字符串，它指定 wreply 参数未包含在请求中。|  
 |请求|令牌颁发请求。 设置的 WS 联合身份验证登录请求 wreq 参数。 可选。 默认值为空字符串，它指定 wreq 参数未包含在请求中。 不在请求中包括 wreq 或 wreqptr 参数意味着 STS，了解哪种类型的令牌颁发。|  
 |requestPtr|指定令牌颁发请求的位置的 URL。 设置请求 wreqptr 参数。 可选。 默认值为空字符串，它指定 wreqptr 参数未包含在请求中。 不在请求中包括 wreq 或 wreqptr 参数意味着 STS，了解哪种类型的令牌颁发。|  
@@ -107,6 +108,6 @@ ms.lasthandoff: 11/21/2017
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
  <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

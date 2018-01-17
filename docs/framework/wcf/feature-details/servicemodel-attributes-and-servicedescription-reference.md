@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8dbaa6f3df2bd4dcbde199f867686b3e05ae235f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 属性和 ServiceDescription 引用
 *说明树*是类型的层次结构 (从开始<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>类)，一起描述服务的每个方面。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用说明树形来生成有效的服务运行时，发布 Web 服务描述语言 (WSDL)、XML 架构定义语言 (XSD) 和有关服务的策略断言（元数据）（客户端可用来连接和使用服务），并生成各种代码和说明树值的配置文件表示形式。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/02/2017
   
 |ServiceBehaviorAttribute 属性|受影响的说明树值|  
 |---------------------------------------|-------------------------------------|  
-|名称|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.ServiceDescription.Name%2A>|  
 |命名空间|<xref:System.ServiceModel.Description.ServiceDescription.Namespace%2A>|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ServiceDescription.ConfigurationName%2A>|  
 |IgnoreExtensionDataObject|设置所有操作的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.IgnoreExtensionDataObject%2A> 属性。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/02/2017
 |IsOneWay|映射到 <xref:System.ServiceModel.Description.MessageDescription> 中的单个 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
-|名称|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 和可能的子保护级别。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]保护级别的层次结构，请参阅[了解保护级别](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
 |ReplyAction|用于输出消息或输入消息的 <xref:System.ServiceModel.Description.MessageDescription.Action%2A>，具体取决于协定/回调协定。|  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/02/2017
 |----------------------------------|-------------------------------------|  
 |操作|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>，它取决于协定/回调协定。|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
-|名称|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |命名空间|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.FaultDescription.ProtectionLevel%2A>|  
   
@@ -92,36 +93,36 @@ ms.lasthandoff: 12/02/2017
 |----------------------------------|-------------------------------------|  
 |Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |命名空间|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>中的相应标头<xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute 值|受影响的说明树值|  
 |--------------------------------------|-------------------------------------|  
-|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |命名空间|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|Order|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|订单|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |MessageHeaderArrayAttribute 值|受影响的说明树值|  
 |---------------------------------------|-------------------------------------|  
 |Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
-|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
 |命名空间|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
 |Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
   
 |MessagePropertyAttribute 值|受影响的说明树值|  
 |------------------------------------|-------------------------------------|  
-|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
   
 |MessageParameterAttribute 值|受影响的说明树值|  
 |-------------------------------------|-------------------------------------|  
-|名称|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|name|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>中的相应部分<xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何说明树值将转换为元数据，请参阅[ServiceDescription 和 WSDL 引用](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ServiceDescription 和 WSDL 引用](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

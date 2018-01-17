@@ -26,23 +26,24 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19c47c21526ca6e7aa4046a1853f3d1743438d17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 53f9c46b282de795d6212f962f7296f76385aed2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>如何：使用设计器为 Windows 窗体控件创建访问键
 *访问密钥*菜单、 菜单项或如按钮控件的标签的文本中带下划线的字符。 它使用户能够通过同时按下 ALT 键和预定义的访问键"单击"按钮。 例如，如果某个按钮可运行一个过程来打印窗体，因此其`Text`"P"使得字母"P"以显示为带有下划线的按钮文本中在运行时的字母前到"打印，"添加一个与号 (&) 设置属性。 用户可以运行该命令通过按 ALT + P 与按钮相关联。 不能具有不能接收焦点的控件的访问密钥。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>若要创建的控件的访问密钥  
   
 1.  在**属性**窗口中，设置`Text`属性将成为访问键的字母前为一个字符串，包含一个 & 号 (&)。 例如，若要设置为访问键的字母"P"，键入**和打印**到网格。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.Button>  
  [如何：响应 Windows 窗体 Button 控件单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
  [如何：设置 Windows 窗体控件显示的文本](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  

@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 248af9c669687d0ab4d41f0ac93985d0d9a17678
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7dd56b41b7b661b58446219d426be1a19edba059
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensation"></a>补偿
 [!INCLUDE[wf](../../../includes/wf-md.md)] 中的补偿是一种机制，发生后续失败时，可以使用补偿（按照应用程序定义的逻辑）来撤消或补偿先前完成的工作。 本节介绍如何在工作流中使用补偿。  
@@ -331,9 +332,9 @@ Activity wf = new Sequence()
 ## <a name="nesting-compensation-activities"></a>嵌套补偿活动  
  可以将 <xref:System.Activities.Statements.CompensableActivity> 放置到另一个 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 的 <xref:System.Activities.Statements.CompensableActivity> 部分中。 <xref:System.Activities.Statements.CompensableActivity> 不能放置于另一个 <xref:System.Activities.Statements.CompensableActivity> 的处理程序中。 在父级完成取消、确认或补偿操作前，确保在 <xref:System.Activities.Statements.CompensableActivity> 父级取消、确认或补偿时，所有已成功完成的和尚未得到确认或补偿的子级可补偿活动必须得到确认和补偿是该父级的责任。 如果不对此进行显式建模，在该父级接收到取消或补偿信号时，<xref:System.Activities.Statements.CompensableActivity> 将隐式补偿可补偿的子级活动。 如果父级收到了确认信号，则该父级将隐式确认可补偿的子级活动。 如果用于处理取消、确认或补偿的逻辑在父 <xref:System.Activities.Statements.CompensableActivity> 的处理程序中被显式建模，则未显式处理的所有子级都将被隐式确定。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Activities.Statements.CompensableActivity>  
  <xref:System.Activities.Statements.Compensate>  
  <xref:System.Activities.Statements.Confirm>  
  <xref:System.Activities.Statements.CompensationToken>  
- [可补偿的活动](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)
+ [可补偿活动](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)

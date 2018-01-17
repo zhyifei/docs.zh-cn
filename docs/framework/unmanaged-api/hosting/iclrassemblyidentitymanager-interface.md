@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8d7fe632941c4cf0c20841ece390d2f41f28337d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 168c67eb701d7dfc461553cfe32ed43dcea5e844
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrassemblyidentitymanager-interface"></a>ICLRAssemblyIdentityManager 接口
 提供用于支持在主机和公共语言运行时 (CLR) 有关程序集之间的通信方法。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>备注  
  使用`ICLRAssemblyIdentityManager`来获取的实例`ICLRAssemblyReferenceList`以及枚举程序集标识。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRAssemblyReferenceList 接口](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
  [ICLRProbingAssemblyEnum 接口](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

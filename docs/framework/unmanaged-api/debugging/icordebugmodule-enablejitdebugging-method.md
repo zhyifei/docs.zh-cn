@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 31fc3b7c2b977dbfd6f10cc767f81748243dfce4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a699f32d8ec4b2418c6af815c22f35470bede3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging 方法
 控制是否在实时 (JIT) 编译器会保留为此模块中的方法的调试信息。  
@@ -49,7 +50,7 @@ HRESULT EnableJITDebugging(
 ## <a name="remarks"></a>备注  
  默认情况下，调试器处于活动状态时加载的所有模块的情况下，启用 JIT 调试。 以编程方式启用或禁用设置重写全局设置。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d40fe3601cb8ad7c4f77cf50825da1deace5644e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ebbd6e77c2c47754054a81f4b07d3d845cdcac00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在运行时创建活动
 <xref:System.Activities.DynamicActivity> 是一个带有公共构造函数的具体的密封类。 通过使用活动 DOM，<xref:System.Activities.DynamicActivity> 可用于在运行时组合活动功能。  
@@ -105,6 +106,6 @@ ms.lasthandoff: 12/02/2017
   
 8.  右击 Workflow1.xaml 文件中的**解决方案资源管理器**和选择**查看代码**。 请注意，活动类使用 `x:Class` 创建，属性使用 `x:Property` 创建。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用强制性代码创建工作流、活动和表达式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
  [DynamicActivity 创建](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)

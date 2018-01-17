@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="executing-expression-trees"></a>执行表达式树
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 10/18/2017
 
 在大多数情况下，这将在表达式和其对应的委托之间创建简单映射。 例如，由 `Expression<Func<int>>` 表示的表达式树将被转换为 `Func<int>` 类型的委托。 对于具有任何返回类型和参数列表的 lambda 表达式，存在这样的委托类型：该类型是由该 lamdba 表达式表示的可执行代码的目标类型。
 
-`LamdbaExpression` 类型包含用于将表达式树转换为可执行代码的 `Compile` 和 `CompileToMethod` 成员。 `Compile` 方法创建委托。 `ConmpileToMethod` 方法通过表示表达式树的已编译输出的 IL 更新 `MethodBuilder` 对象。 请注意，`CompileToMethod` 仅在完整的桌面框架上可用，不能用于 .NET Core 框架。
+`LamdbaExpression` 类型包含用于将表达式树转换为可执行代码的 `Compile` 和 `CompileToMethod` 成员。 `Compile` 方法创建委托。 `CompileToMethod` 方法通过表示表达式树的已编译输出的 IL 更新 `MethodBuilder` 对象。 请注意，`CompileToMethod` 仅在完整的桌面框架上可用，不能用于 .NET Core 框架。
 
 还可以选择性地提供 `DebugInfoGenerator`，它将接收生成的委托对象的符号调试信息。 这让你可以将表达式树转换为委托对象，并拥有生成的委托的完整调试信息。
 

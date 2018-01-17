@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 255cd8518bd9c6c6c199c75aa32ca086c801d23f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6a254b8a4de8f66cb0d051d246be2d07e905615a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;protocolMapping&gt; 的 &lt;add&gt;
 表示传输协议方案 （例如，http、 net.tcp、 net.pipe 等） 之间的默认协议映射和[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]绑定。 当在运行时创建默认终结点时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 将查看已配置的映射，并确定要用于基于特定内容的地址的绑定。  
@@ -64,6 +65,6 @@ ms.lasthandoff: 12/02/2017
 </protocolMapping>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>      
  <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    

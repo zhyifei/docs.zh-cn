@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e03a38e2a93dd866bc3da65527d5410b09009e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b95ee7c28c67ff861dc401d1405306c78b9663de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>如何：使 X.509 证书可由 WCF 访问
 若要使 X.509 证书可由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 访问，应用程序代码必须指定证书存储区的名称和位置。 在某些情况下，进程标识必须具有对包含私钥的文件的访问权限，此私钥与 X.509 证书相关联。 若要获取与证书存储区中的 X.509 证书关联的私钥，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 必须有权这样做。 默认情况下，只有所有者和“系统”帐户才可以访问证书的私钥。  
@@ -40,8 +41,8 @@ ms.lasthandoff: 12/02/2017
         |X.509 证书用途|私钥|  
         |---------------------------|-----------------|  
         |对出站 SOAP 消息进行数字签名。|是|  
-        |验证入站 SOAP 消息的签名。|No|  
-        |对出站 SOAP 消息进行加密。|No|  
+        |验证入站 SOAP 消息的签名。|否|  
+        |对出站 SOAP 消息进行加密。|否|  
         |对入站 SOAP 消息进行解密。|是|  
   
     2.  确定在其中存储证书的存储区的位置和名称。  
@@ -80,7 +81,7 @@ ms.lasthandoff: 12/02/2017
         cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /E /G "NETWORK SERVICE":R  
         ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)  
- [如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
+ [如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
  [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

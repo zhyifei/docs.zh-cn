@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51f11beb474758f16c6de0c47444e0467cac8bec
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e551a2a5253232ca7e504ea484601fb935901da4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>在 .NET Framework 4 中将 .NET Framework 3.0 WF 活动与 Interop 活动一起使用
 <xref:System.Activities.Statements.Interop> 活动是一个 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) 活动，该活动将一个 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) 活动包装在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流中。 WF 3 活动可以是单叶活动，也可以是整个活动树。 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活动的执行（包括取消和异常处理）和持久化在执行的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流实例的上下文中进行。  
@@ -63,5 +64,5 @@ ms.lasthandoff: 12/02/2017
   
 4.  WF 3 自定义活动可以在互操作环境中使用工作流队列访问数据，其访问方式与在 WF 3 工作流运行时中完全相同。 不需要更改任何自定义活动代码。 在宿主上，通过恢复 <xref:System.Activities.Bookmark> 可将数据排入 WF 3 工作流队列。 书签的名称是字符串形式的 <xref:System.IComparable> 工作流队列名称。  
   
-## <a name="see-also"></a>另请参阅  
- [在.NET Framework 4.5 工作流中使用.NET Framework 3.0 或.NET Framework 3.5 活动](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+## <a name="see-also"></a>请参阅  
+ [在 .NET Framework 4.5 工作流中使用 .NET Framework 3.0 或 .NET Framework 3.5 活动](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)

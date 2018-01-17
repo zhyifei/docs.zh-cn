@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3ba716a36280d2ac08dae907abbdbe05e563dfc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bbff4023a51687539472ac3e040b125f2f92fc28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>在 GDI+ 中绘制、定位和克隆图像
 你可以使用<xref:System.Drawing.Bitmap>类来加载和显示光栅图像，并且你可以使用<xref:System.Drawing.Imaging.Metafile>类来加载和显示矢量图像。 <xref:System.Drawing.Bitmap>和<xref:System.Drawing.Imaging.Metafile>类都继承自<xref:System.Drawing.Image>类。 若要显示矢量图像，你需要的实例<xref:System.Drawing.Graphics>类和一个<xref:System.Drawing.Imaging.Metafile>。 若要显示为光栅图像，你需要的实例<xref:System.Drawing.Graphics>类和一个<xref:System.Drawing.Bitmap>。 实例<xref:System.Drawing.Graphics>类提供<xref:System.Drawing.Graphics.DrawImage%2A>方法，用于接收<xref:System.Drawing.Imaging.Metafile>或<xref:System.Drawing.Bitmap>作为自变量。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
  ![裁剪](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [图像、位图和图元文件](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [如何：创建用于绘制的图形对象](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
  [使用图像、位图、图标和图元文件](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 555ef705dc485462dc209b090e5cdbee98983681
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>创建桌面应用程序的资源文件
 可以将字符串、图像或对象数据等资源包含在资源文件中，方便应用程序使用。 .NET Framework 提供了五种创建资源文件的方法：  
@@ -66,7 +67,7 @@ name2=value2
   
  .txt 和 .restext 文件的资源文件格式是相同的。 .restext 文件扩展名仅用于明确区分文本文件和基于文本的资源文件。  
   
- 字符串资源显示为名称/值对，其中名称是标识资源的字符串，值是在将名称传递给资源检索方法（例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>）时返回的资源字符串。 名称和值必须用等号 (=) 分隔开。 例如：  
+ 字符串资源显示为名称/值对，其中名称是标识资源的字符串，值是在将名称传递给资源检索方法（例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>）时返回的资源字符串。 名称和值必须用等号 (=) 分隔开。 例如:  
   
 ```  
 FileMenuName=File  
@@ -78,7 +79,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  请勿使用资源文件存储密码、 安全敏感信息或私人数据。  
   
- 在文本文件中，允许存在空字符串（即值为 <xref:System.String.Empty?displayProperty=nameWithType> 的资源）。 例如：  
+ 在文本文件中，允许存在空字符串（即值为 <xref:System.String.Empty?displayProperty=nameWithType> 的资源）。 例如:  
   
 ```  
 EmptyString=  
@@ -202,7 +203,7 @@ greeting=Hello, {0}!
   
  编译时，Visual Studio 首先将项目中的 .resx 文件转换为二进制资源 (.resources) 文件，并将其存储在项目 obj 目录的子目录中。 Visual Studio 会将不包含本地化资源的所有资源文件嵌入项目生成的主程序集中。 如果资源文件包含本地化资源，Visual Studio 会将其嵌入用于每个本地化区域性的单独的附属程序集中。 然后将每个附属程序集存储到名称与本地化区域性相对应的目录中。 例如，本地化的英语（美国）资源存储在 en-US 子目录的附属程序集中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Resources>  
  [桌面应用中的资源](../../../docs/framework/resources/index.md)  
  [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

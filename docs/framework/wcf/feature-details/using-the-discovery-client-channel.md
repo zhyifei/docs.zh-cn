@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f012cc43d7160b737e5a9a5d4ceb5e50e91d07a1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11d693e35017d7290e1cf1209dc3d6423afc38b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-discovery-client-channel"></a>使用 Discovery 客户端通道
 编写 WCF 客户端应用程序时，需要了解所调用服务的终结点地址。 在许多情况下，事先并不知晓服务的终结点地址，或者服务地址会随时间变化。 Discovery 客户端通道可用于编写 WCF 客户端应用程序，描述您要调用的服务，并且自动发送探测请求。 如果有服务做出响应，Discovery 客户端通道会从探测响应中检索该服务的终结点地址，并使用该地址调用服务。  

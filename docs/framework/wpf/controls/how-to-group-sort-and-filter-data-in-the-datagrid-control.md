@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3c8afacfafbe14794bf17a4e9a4df7c175a3668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e648b5a4a45c3583d496ac0ea6036d268d6d33a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>如何：在 DataGrid 控件中对数据进行分组、排序和筛选
 通常很有用数据在<xref:System.Windows.Controls.DataGrid>通过分组、 排序和筛选的数据不同的方式。 若要进行分组、 排序和筛选数据中的<xref:System.Windows.Controls.DataGrid>，你将其绑定到<xref:System.Windows.Data.CollectionView>支持这些功能。 你可以然后使用中的数据<xref:System.Windows.Data.CollectionView>而不会影响基础数据源。 集合视图中的更改会反映在<xref:System.Windows.Controls.DataGrid>用户界面 (UI)。  
@@ -161,7 +162,7 @@ DataGrid 中的分组的数据
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [创建和绑定到 ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
  [在视图中筛选数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  

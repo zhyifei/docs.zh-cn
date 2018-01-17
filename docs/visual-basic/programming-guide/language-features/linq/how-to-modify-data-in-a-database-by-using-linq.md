@@ -21,18 +21,18 @@ ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 69e2fc7a6860ad2ff43742d37cd35671ebe35acf
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 66f21b2a47d3890875062bbdf45e1c4507e1d603
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>如何：使用 LINQ 修改数据库中的数据 (Visual Basic)
 语言集成查询 (LINQ) 查询，可以方便地访问数据库信息和修改数据库中的值。  
   
  下面的示例演示如何创建新的应用程序检索和更新信息的 SQL Server 数据库中。  
   
- 本主题中的示例使用 Northwind 示例数据库。 如果你的开发计算机上没有 Northwind 示例数据库，您可以下载它从[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web 站点。 有关说明，请参阅[下载示例数据库](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ 本主题中的示例使用 Northwind 示例数据库。 如果你的开发计算机上没有 Northwind 示例数据库，您可以下载它从[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web 站点。 有关说明，请参阅[下载示例数据库](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
 ### <a name="to-create-a-connection-to-a-database"></a>若要创建与数据库的连接  
   
@@ -165,9 +165,9 @@ ms.lasthandoff: 12/09/2017
   
 7.  按 F5 运行项目。 单击**添加**添加一条新记录。 单击**更新**修改新的记录。 单击**删除**删除新的记录。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [查询](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [DataContext 方法 （O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
  [如何： 分配存储的过程以便执行更新、 插入和删除操作 （O/R 设计器）](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

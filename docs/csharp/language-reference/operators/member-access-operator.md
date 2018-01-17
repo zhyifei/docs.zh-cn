@@ -1,5 +1,5 @@
 ---
-title: "。 运算符（C# 参考）"
+title: ". 运算符（C# 参考）"
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology: devlang-csharp
@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="-operator-c-reference"></a>。 运算符（C# 参考）
+# <a name="-operator-c-reference"></a>. 运算符（C# 参考）
 点运算符 (`.`) 用于成员访问。 点运算符指定类型或命名空间的成员。 例如，点运算符用于访问 .NET Framework 类库中的特定方法：  
   
  [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  

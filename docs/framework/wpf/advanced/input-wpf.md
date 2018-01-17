@@ -17,11 +17,12 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-wpf"></a>输入 (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]包括多种类型的输入的支持。 此输入包含文本、 触摸、 鼠标、 命令、 焦点、 触摸、 拖放和数字墨迹。 本部分介绍相关输入在 WPF 中的主题。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/22/2017
  [焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)  
  [为控件中的焦点设置样式以及 FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
  [演练：创建第一个触控应用程序](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [操作说明主题](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
  [数字墨迹](../../../../docs/framework/wpf/advanced/digital-ink.md)  
   
 ## <a name="reference"></a>参考  

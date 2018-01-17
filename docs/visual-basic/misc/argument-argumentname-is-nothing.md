@@ -9,11 +9,11 @@ ms.assetid: abbde904-c191-4911-8822-c9dd2f81d616
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4f24851e059046f973a65ccc727a65f404d6a42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6dcf65ad22882aea6d0239542c81e1b98395cac
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39ltargumentnamegt39-is-nothing"></a>自变量 &#39;&lt;argumentname&gt;&#39; 为 Nothing
 表达式包含 null 参数。  
@@ -24,6 +24,6 @@ ms.lasthandoff: 11/21/2017
   
 2.  检查之前对表达式中的变量进行的操作，尤其是那些从其他过程作为参数传递给该过程的操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按值和按引用传递自变量](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [参数传递为 Visual Basic 6.0 用户的机制](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+

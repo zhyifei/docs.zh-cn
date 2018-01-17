@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5901113021deffd601b5325ff9a1b8912e74329d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7b6574e452faf4f0396f7633ba7f21519948262
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Windows 窗体和控件中的国际字体
 国际应用程序中选择字体的推荐的方法是使用字体回退，只要有可能。 在系统确定哪一脚本字符的字体后备意味着属于。  
@@ -89,6 +90,6 @@ TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
 textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全球化 Windows 窗体](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)  
  [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

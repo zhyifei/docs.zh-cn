@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 481239b472ced5ef6251b665dad16e83a170607d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d0ede88d8f9b4c15cd3e0f141870b9a5e747aa9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-application-settings"></a>如何：创建应用程序设置
 使用托管代码时，你可以创建新的应用程序设置并将其绑定窗体或窗体控件的属性上，以便在运行时自动加载和保存这些设置。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  默认的设置提供程序 <xref:System.Configuration.LocalFileSettingsProvider> 会将配置文件的信息视为纯文本处理。 这将限制由当前用户由的操作系统提供的文件访问安全性的安全。 因此，必须谨慎处理配置文件中存储的信息。 例如，应用程序设置一种常见的用法就是，存储指向应用程序数据存储的连接字符串。 但是，出于安全考虑，此类字符串不应包括密码。 有关连接字符串的详细信息，请参阅 <xref:System.Configuration.SpecialSetting>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Configuration.SpecialSettingAttribute>  
  <xref:System.Configuration.LocalFileSettingsProvider>  
  [应用程序设置概述](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  

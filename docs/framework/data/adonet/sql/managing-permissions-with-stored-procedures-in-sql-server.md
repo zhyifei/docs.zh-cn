@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 806cd23060dde3f7b466df0d4ce39162353380e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58129cf690d4d46cda1e59671ae1423b8a64163f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>在 SQL Server 中使用存储过程管理权限
 为数据库创建多道防线的一个方法是使用存储过程或用户定义的函数实现所有数据访问。 撤消或拒绝对基础对象（如表）的所有权限，并授予对存储过程的 EXECUTE 权限。 这会为数据和数据库对象有效创建安全外围防线。  
@@ -66,12 +67,12 @@ ms.lasthandoff: 11/21/2017
 |--------------|-----------------|  
 |[存储过程](http://msdn.microsoft.com/library/ms190782.aspx)和[SQL 注入](http://go.microsoft.com/fwlink/?LinkId=98234)SQL Server 联机丛书中|说明如何创建存储过程和 SQL 注入工作原理的主题。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概述](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- [SQL Server 中的应用程序安全方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [SQL Server 中编写安全动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [SQL Server 中的存储的过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
- [自定义 SQL Server 中的模拟的权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [在 SQL Server 中编写安全的动态 SQL](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [在 SQL Server 中对存储过程签名](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
+ [在 SQL Server 中使用模拟自定义权限](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [使用存储过程修改数据](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

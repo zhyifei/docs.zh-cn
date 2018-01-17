@@ -17,11 +17,11 @@ ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d30ad7f0db2760427493610c630f3fff8dcfac31
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e78d93895a86ad9b2456e5ac7c05db83ebf0379d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>演练：用 Visual Basic 编写查询
 本演练演示如何使用 Visual Basic 语言功能来编写[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查询表达式。 本演练说明如何在列表中的学生对象创建查询、 如何运行查询，以及如何对其进行修改。 查询将包括对象初始值设定项、 本地类型推断、 和匿名类型的多个功能合并。  
@@ -145,13 +145,13 @@ ms.lasthandoff: 12/09/2017
   
  [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [语言集成查询 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [Visual Basic 中的 LINQ 入门](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [局部类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  

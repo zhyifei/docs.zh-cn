@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf05e3327d7c99d333ab4be045e3f72e6f2a8a3f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8cb7e209397e593ae1fd81c2bc2552e54a32adf0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interoperability-with-pox-applications"></a>与 POX 应用程序的互操作性
 "Plain Old XML"(POX) 应用程序通过交换原始 HTTP 消息包含仅 XML 应用程序数据未封入 SOAP 信封内进行通信。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以同时提供使用 POX 消息的服务和客户端。 就服务而言，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现向客户端（例如，发送和接收 POX 消息的 Web 浏览器和脚本语言）公开终结点的服务。 就客户端而言，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 编程模型实现与基于 POX 的服务进行通信的客户端。  

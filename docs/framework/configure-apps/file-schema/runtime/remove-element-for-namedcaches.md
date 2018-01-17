@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 6170b59e87948225708c9e697cba1542d756d2f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4b360b206586b263627ab6f6b7e0309f3055f38a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;删除&gt;元素&lt;namedCaches&gt;
 从内存缓存的 `namedCaches` 集合中删除一个命名的缓存条目。  
@@ -60,5 +61,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="remarks"></a>备注  
  `remove`元素中删除`namedCache`内存缓存的命名的缓存集合中的条目。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

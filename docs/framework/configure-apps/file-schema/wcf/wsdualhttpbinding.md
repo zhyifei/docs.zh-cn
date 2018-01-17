@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d7a6cd2d1a5028463d6d9b4b492c88707f08145
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 33c94271dee0fa9fbcdd48b44b983f650f87a6bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 定义一个安全可靠且可互操作的绑定，该绑定适合于双工服务协定或通过 SOAP 中介进行的通信。  
@@ -137,7 +138,7 @@ textEncoding="Unicode/BigEndianUnicode/UTF8"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.WSDualHttpBinding>  
  <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  

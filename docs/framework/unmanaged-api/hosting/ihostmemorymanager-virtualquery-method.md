@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 82c76ce908dd73fba0a2a0039894f51790b46583
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4fd893cd92f7e7621aefe59595cfd9905bc77afd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery 方法
 用作相应的 Win32 函数的逻辑包装。 Win32 实现`VirtualQuery`检索有关调用进程虚拟地址空间中的页面范围的信息。  
@@ -71,7 +72,7 @@ HRESULT VirtualQuery (
 > [!IMPORTANT]
 >  操作系统的实现`VirtualQuery`不会产生死锁，并可以与在用户代码中挂起的随机线程运行到完成。 实现此方法的托管的版本时，请使用非常小心地。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -80,5 +81,5 @@ HRESULT VirtualQuery (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

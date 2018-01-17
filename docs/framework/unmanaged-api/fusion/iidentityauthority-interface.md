@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c3f38d932fa0376186e2c22232d21857d5fa128f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 322b15252271472b5bee1dfc6a843079cebbe0b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iidentityauthority-interface"></a>IIdentityAuthority 接口
 管理代码对象的标识键。  
@@ -51,12 +52,12 @@ ms.lasthandoff: 10/18/2017
 |`IIdentityAuthority::TextToDefinition`|获取到的接口指针`IDefinitionIdentity`实例生成从指定格式字符串。|  
 |`IIdentityAuthority::TextToReference`|获取到的接口指针`IReferenceIdentity`实例生成从指定格式字符串。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

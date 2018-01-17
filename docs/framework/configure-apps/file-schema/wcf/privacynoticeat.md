@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63501539db4dc01d86eb675c28001dc960f1bf7f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30b3f0bdd1aa02473470c354a730bcfa450f0264
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltprivacynoticeatgt"></a>&lt;privacyNoticeAt&gt;
 表示一个配置元素，该元素指定 `wsFederationHttp` 绑定中使用的隐私声明。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>  
  <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  

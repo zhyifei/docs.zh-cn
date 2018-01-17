@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9bf1298a5e3fbac82a931abcfb0919238d81bfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-primitive-data-types"></a>实体数据模型：基元数据类型
 实体数据模型 (EDM) 支持 （如字符串、 布尔值，Int32，等等） 的抽象基元数据类型，用于定义一组[属性](../../../../docs/framework/data/adonet/property.md)概念模型中。 这些基元数据类型是存储或承载环境（例如 SQL Server 数据库或公共语言运行库 (CLR)）中所支持的实际基元数据类型的代理。 EDM 没有定义基元数据类型的操作或转换语义；这些语义由存储或承载环境定义。 通常，EDM 中的基元数据类型将映射至存储或承载环境中的对应基元数据类型。 有关实体框架如何映射到 SQL Server 数据类型的 EDM 中的基元类型的信息，请参阅[实体 FrameworkTypes 的 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 11/21/2017
 |String|包含字符数据。|Unicode、FixedLength、MaxLength、Collation、Precision、Nullable、Default|  
 |时间|包含当天的时间。|Precision、Nullable、Default|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)

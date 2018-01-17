@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45f57fd90eb787099e37b012eb528a2072f175c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e0359e3094b86e3433cebee7c835c7eecec16fe0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="known-types"></a>已知类型
 此示例演示如何在数据协定中指定有关派生类型的信息。 数据协定允许您在服务中传入和传出结构化数据。 在面向对象的编程中，可以用从另一个类型继承的类型来代替原始类型。 在面向服务的编程中，传递的是架构（而不是类型），因此，类型之间的关系将不保留。 <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性允许在数据协定中包括有关派生类型的信息。 如果不使用此机制，则不能在应当使用基类型的情况下发送或接收派生类型。  
@@ -181,4 +182,4 @@ No magnitude was sent from the service
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

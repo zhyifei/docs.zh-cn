@@ -16,11 +16,11 @@ ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cfdae490a7d78e44f230e22f8431d5ee91461c22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4fbbe0ec007911460dc2bda8c681775da9a6cb91
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>如何：在 Visual Basic 中向文件内写入文本
 可使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法向文件写入文本。 如果指定的文件不存在，则会创建一个。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
   
--   路径由于以下原因之一无效：是零长度字符串；仅包含空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
+-   路径由于以下原因之一而无效：是零长度字符串；仅为空白；包含无效字符；是一个设备路径（开头字符为 \\\\.\\）(<xref:System.ArgumentException>)。  
   
 -   路径无效，因为它是 `Nothing` (<xref:System.ArgumentNullException>)。  
   
@@ -60,9 +60,9 @@ ms.lasthandoff: 11/21/2017
   
 -   磁盘已满，且对 `WriteAllText` 的调用失败 (<xref:System.IO.IOException>)。  
   
- 如果在部分信任上下文中运行，该代码可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](https://msdn.microsoft.com/library/33tceax8)。  
+ 如果在部分信任上下文中运行，该代码可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
  [如何：读取文本文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

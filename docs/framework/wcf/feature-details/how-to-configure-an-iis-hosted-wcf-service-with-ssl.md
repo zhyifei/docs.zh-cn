@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e43aca439ee354557cac42ba88599b6ea105b097
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b16ca5b4cfe615eedd9e532b12f61394806829bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>如何：使用 SSL 配置承载 IIS 的 WCF 服务
 本主题介绍如何设置 IIS 承载的 WCF 服务以使用 HTTP 传输安全性。 HTTP 传输安全性要求 SSL 证书以便向 IIS 注册。 如果您没有 SSL 证书，则可以使用 IIS 生成测试证书。 接下来，您必须将一个 SSL 绑定添加到网站，并且配置该网站的身份验证属性。 最后，您需要配置 WCF 服务以使用 HTTPS。  
@@ -154,8 +155,8 @@ ms.lasthandoff: 12/02/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+## <a name="see-also"></a>请参阅  
+ [在 Internet Information Services 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  [Internet 信息服务承载说明](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Internet 信息服务承载最佳实践](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Internet Information Services 承载最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [使用内联代码的 IIS 承载](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

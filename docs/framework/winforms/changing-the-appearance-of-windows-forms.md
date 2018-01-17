@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ceeedf3d6b73d08ce8aeade74288dc797d462123
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 47410b2a0259e81e7009d547b0c2d6c742b15f25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>更改 Windows 窗体外观
 可以按多种不同的方式自定义 Windows 窗体应用程序的外观，例如，更改 Windows 窗体应用程序的边框、不透明度、形状、样式，或设置它的背景图像。  

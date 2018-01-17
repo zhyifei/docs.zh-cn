@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42b5621275b9d27983619d18990e3d8e22c4e9db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1b9bba3c589ca0232171bab58c26b19c7312a313
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>如何：使用 WorkflowServiceHost 配置跟踪
 本主题说明如何为 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 中承载的 <xref:System.ServiceModel.Activities.WorkflowServiceHost>工作流配置跟踪。 可以通过指定服务行为使用 Web.config 文件进行配置。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/02/2017
   
      [!INCLUDE[crabout](../../../../includes/crabout-md.md)]跟踪一般情况下，请参阅[工作流跟踪](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 有关配置跟踪以编程方式的示例请参阅[工作流配置跟踪](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [WCF 服务的简化的配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
+## <a name="see-also"></a>请参阅  
+ [WCF 服务的简化配置](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
  [工作流服务](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [跟踪配置文件](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

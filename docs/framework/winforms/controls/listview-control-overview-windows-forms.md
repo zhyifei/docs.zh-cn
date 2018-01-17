@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bda009beb429345d05aeba4e04f2ce1f07e627da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9bc0f887743e9e129319ca9241203905670334cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项列表。 你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。 在控件有四种视图模式： 视图、 SmallIcon、 列表和详细信息。  
@@ -56,7 +57,7 @@ Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项�
   
  <xref:System.Windows.Forms.ListView>控件还支持视觉样式和提供的其他功能在 Windows XP 平台上，包括分组、 磁贴视图，以及插入标记。 有关详细信息，请参阅[Windows XP 功能和 Windows 窗体控件](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ListView>  
  [ListView 控件](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
  [如何：使用 Windows 窗体 ListView 控件添加和删除项](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  

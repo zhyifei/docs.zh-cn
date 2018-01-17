@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9e91889947a17f8cba66d822b857e1c8bc875cab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 18f575e9bae37b66526d7b61a641374266ba627b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>如何：使用未注册的 Windows Communication Foundation 服务标记
 若要连接到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务并与其通信，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端应用程序必须拥有服务地址、绑定配置和服务协定的详细信息。  
@@ -66,5 +67,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 > [!NOTE]
 >  如果标记格式不正确或者服务不可用，则对 `GetObject` 的调用将返回一个错误，指示“语法无效”。 如果您收到此错误，请确保所使用的标记正确无误且服务可用。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 注册并配置服务标记](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>请参阅  
+ [如何：注册和配置服务名字对象](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

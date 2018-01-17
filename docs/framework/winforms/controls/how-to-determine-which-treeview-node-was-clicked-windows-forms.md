@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c59b09f6df7fdc6a7bb237ff6eafcad99329256
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2671d2790b3c5e476513cd5932d4684838aeceb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>如何：确定被单击的 TreeView 节点（Windows 窗体）
 使用 Windows 窗体时<xref:System.Windows.Forms.TreeView>控件，一项常见任务是确定哪个节点被单击，并做出相应响应。  
@@ -67,5 +68,5 @@ ms.lasthandoff: 10/22/2017
     > [!NOTE]
     >  作为替代方法，你可以使用<xref:System.Windows.Forms.MouseEventArgs>的<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.MouseUp>要获取事件<xref:System.Drawing.Point.X%2A>和<xref:System.Drawing.Point.Y%2A>坐标值的<xref:System.Drawing.Point>单击发生处。 然后，使用<xref:System.Windows.Forms.TreeView>控件的<xref:System.Windows.Forms.TreeView.GetNodeAt%2A>方法来确定被单击的节点。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [TreeView 控件](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)

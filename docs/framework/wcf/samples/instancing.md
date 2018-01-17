@@ -16,11 +16,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ef9a87d8cfbf4070fd0b5108e093c6b9a4e9daa5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ed514f06d7aa275122c37fd34e1f138af0f5705f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instancing"></a>实例化
 “实例化”示例演示实例化行为设置，此设置控制如何响应客户端请求来创建服务类的实例。 示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)，该类实现`ICalculator`服务协定。 本示例定义从 `ICalculatorInstance` 继承的新协定 `ICalculator`。 用 `ICalculatorInstance` 指定的协定提供了三个附加操作，用于检查服务实例的状态。 通过更改实例化设置，运行客户端时可以观察到行为中的更改。  
@@ -149,4 +150,4 @@ static void Main()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

@@ -14,11 +14,11 @@ ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 04a1b16a10d2a3945d1efbe3a2bd0850f1da39fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ca2454f5c306b3defd1c885dfd59ee130f3e828
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>需要对程序集 &#39; 的引用&lt;assemblyidentity&gt;&#39; 包含类型 &#39;&lt;typename&gt;&#39;，但由于语意不明确之间项目 &#39; 找不到合适的引用&lt;projectname1&gt;&#39; 和 &#39;&lt;项目名称 2>&gt;&#39;
 表达式使用在项目外部定义的类型，如类、结构、接口、枚举或委托。 但是，你具有对定义该类型的多个程序集的项目引用。  
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/21/2017
   
 2.  在项目属性中，添加对包含某程序集的文件的引用，该程序集定义正在使用的类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)  
  [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [NIB 如何：使用“添加引用”对话框添加或删除引用](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+   
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  
  [有关无效的引用的疑难解答](/visualstudio/ide/troubleshooting-broken-references)

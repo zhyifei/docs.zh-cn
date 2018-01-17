@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b8f8e5ef6aa90b1d31c589a82891f0ca1bfa5469
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 646c7fc6a8ebbb68f210637086db0e968e3533c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-com-wrappers"></a>如何：创建 COM 包装
 可以通过使用 [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 创建组件对象模型 (COM) 包装器。 这两种方法都会生成两种类型的 COM 包装器：  
@@ -80,6 +81,6 @@ ms.lasthandoff: 11/21/2017
   
  可以在任何目录中的程序集上运行 Regasm.exe，然后运行 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)以将其移动到全局程序集缓存中。 移动此程序集不会使位置注册表项失效，因为如果未在其他位置找到此程序集，则会始终对全局程序集缓存进行检查。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)  
  [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)

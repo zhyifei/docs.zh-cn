@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2af5d75145b9fdd2d370b76f798c5e350d8bec50
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45fa4afebda00cb2549a5c18ba81c6bb4e8210e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName 方法
 返回远程调试目标计算机的完全限定域名或 IPv4 地址。 此时不支持 IPV6。  
@@ -60,7 +61,7 @@ HRESULT GetHostName (
 ## <a name="remarks"></a>备注  
  此方法由调试器编写器实现。 它必须遵循多次调用范例：第一次调用时，调用方将 null 传递到 `cchHostName` 和 `szHostName`，并且 `pcchHostName` 返回所需缓冲区的大小。 第二次调用时，先前返回的大小在 `cchHostName` 中传递，相应大小的缓冲区在 `szHostName` 中传递。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl  
@@ -69,6 +70,6 @@ HRESULT GetHostName (
   
  **.NET framework 版本：** 3.5 SP1  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorDebugRemoteTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
  [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

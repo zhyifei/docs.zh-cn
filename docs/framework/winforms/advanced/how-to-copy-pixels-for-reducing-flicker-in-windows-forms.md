@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ed463b41d3c2a51b0f9be3d4ddabfd2d54a3c07
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17253e21739911d4aa0541fde9ae205b0be1c5a2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>如何：在 Windows 窗体中复制像素以减少闪烁
 当你进行动画处理的简单图形时，用户可以有时会出现闪烁或其他不良的视觉效果。 限制此问题的一种方法是使用在图形上的"bitblt"过程。 Bitblt 是"位块传输"颜色数据从像素组成的源矩形向目标矩形的像素为单位。  
@@ -72,7 +73,7 @@ private void Form1_Paint(System.Object sender,
 ## <a name="compiling-the-code"></a>编译代码  
  在窗体的中运行上面的代码<xref:System.Windows.Forms.Control.Paint>事件处理程序，以便在重绘窗体时，持久保存图形。 在这种情况下，不要调用与图形相关的方法<xref:System.Windows.Forms.Form.Load>事件处理程序，因为所绘制的内容将不会重绘如果窗体调整大小或另一种形式被遮盖。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.CopyPixelOperation>  
  <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>  

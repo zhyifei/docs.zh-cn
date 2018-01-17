@@ -17,11 +17,12 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3619f26e8c447340e005c0d44be9018f2746f10
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4f1f042894f96cafc36944be7b18d5777e5f3c10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-how-to-topics"></a>TreeView 帮助主题
 本部分中的主题介绍如何使用<xref:System.Windows.Controls.TreeView>控件来显示层次结构中的信息。  

@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bc4dc0721ad0fb756a5449d0af65fd2aae22381
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37f4084b5874c49ed1de8d215d53767ab5a21c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styles-and-templates"></a>样式和模板
 Windows Presentation Foundation (WPF) 样式和模板化指套件的允许的应用程序、 文档或用户界面 (UI) 设计器来创建视觉效果更佳的应用程序的功能 （样式、 模板、 触发器和情节提要） 和标准化尤其是查找其产品。  

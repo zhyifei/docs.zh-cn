@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: e29ae3a0374f6ee027180835629eacceaa928d2f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>如何：使用传输安全和消息凭据
 同时使用传输凭据和消息凭据来保护服务，可以发挥 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全模式和消息安全模式的优点。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]设置安全模式，请参阅[如何： 将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
@@ -169,7 +170,7 @@ ms.lasthandoff: 11/21/2017
     </bindings>  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：设置安全模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
  [保护服务](../../../../docs/framework/wcf/securing-services.md)  
- [保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

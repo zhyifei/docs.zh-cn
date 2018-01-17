@@ -20,11 +20,12 @@ caps.latest.revision: "70"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c4c64de42f82590e1e8dc24afa46f66c3efb35b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 547e6a5b800f1adf5ba9835470d2dd405ce97b14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltruntimegt-element"></a>&lt;运行时&gt;元素
 提供公共语言运行时用于配置应用程序的信息。  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
   
@@ -99,6 +100,6 @@ ms.lasthandoff: 11/21/2017
   
  中的元素[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)部分由公共语言运行时在应用程序启动时自动进行读取。 你还可以定义一个非默认应用程序域的配置文件提供到其名称<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>属性; 其将读取设置自动时，应用程序域将加载。 你应极少数情况下，如果有，具有需要直接读取中的设置[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)你的应用程序配置文件中的部分。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

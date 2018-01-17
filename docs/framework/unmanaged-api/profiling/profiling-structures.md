@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 42762812c9d27073fac34b20df5011b386f05740
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b29c63ea9dfbd69863aad1afa712444405be763e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-structures"></a>分析结构
 本节描述分析 API 使用的非托管结构。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/18/2017
   
  [分析概述](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
- [分析接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
   
  [分析全局静态函数](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9479308dd29c6d65599ffa1bfcc88f6baefae16
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sessions-and-queues"></a>会话和队列
 此示例演示如何通过消息队列 (MSMQ) 传输来发送和接收排队通信中的一组相关消息。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -279,4 +280,4 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
     > [!NOTE]
     >  将安全模式设置为 `None` 等效于将 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全设置为 `None`。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

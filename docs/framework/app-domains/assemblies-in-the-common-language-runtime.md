@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4123ea28b317d432f9a36ea0c084d7fdacc7ffe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>公共语言运行时中的程序集
 程序集是 .NET Framework 应用程序的构造块；它们形成了部署、版本控制、重复使用、激活范围和安全权限的基本单元。 程序集是为协同工作而生成的类型和资源的集合，这些类型和资源构成了一个逻辑功能单元。 程序集向公共语言运行时提供了解类型实现所需要的信息。 对于运行时，类型不存在于程序集上下文之外。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|标题|描述|  
 |-----------|-----------------|  
 |[程序集内容](../../../docs/framework/app-domains/assembly-contents.md)|描述组成程序集的各元素。|  
 |[程序集清单](../../../docs/framework/app-domains/assembly-manifest.md)|描述程序集清单中的数据，以及它如何存储在程序集中。|  

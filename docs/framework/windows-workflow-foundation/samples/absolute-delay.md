@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94eb9f401786ef05beaa51077ff4ddc170595752
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="absolute-delay"></a>绝对延迟
 此示例的主要方案是，通过在工作流应用程序中使用持久性计时器延迟到指定的 <xref:System.DateTime>。 这不同于使用内置 <xref:System.Activities.Statements.Delay> 活动，因为后者只允许延迟一段给定的 <xref:System.TimeSpan>（或分钟数/秒数）。  

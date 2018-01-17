@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: aedeec76f4fabb2f6bd32d7d06eb5a1a5734534e
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 0dce964829399e6761152a8ff424671b47cc6eb3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 函数
 确定当前类或实例派生自指定的父类别。
@@ -50,7 +51,7 @@ HRESULT InheritsFrom (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | 当前对象继承自`wszAncestor`。  |
 | `WBEM_S_FALSE` | 1 | 当前对象不是继承自`wszAncestor`。 |
@@ -60,7 +61,7 @@ HRESULT InheritsFrom (
 
 此函数包装对的调用[IWbemClassObject::InheritsFrom](https://msdn.microsoft.com/library/aa391452(v=vs.85).aspx)方法。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

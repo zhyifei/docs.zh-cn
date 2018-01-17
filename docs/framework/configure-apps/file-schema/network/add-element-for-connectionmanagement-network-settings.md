@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: aec29ed6836671831130226a601358d5f6a1d3dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 654ada55d30ad95937fa05475ebcbf23ca86652d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;添加&gt;connectionManagement （网络设置） 的元素
 将 IP 地址或 DNS 名称添加到连接管理列表。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="attributes"></a>特性  
   
-|**特性**|**描述**|  
+|**特性**|**说明**|  
 |-------------------|---------------------|  
 |`address`|描述 IP 地址或 DNS 名称的字符串。|  
 |`maxconnection`|允许连接至服务器的最大连接数。 如果未提供，则默认为 2。|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|**元素**|**描述**|  
+|**元素**|**说明**|  
 |-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定到网络主机的最大连接数。|  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

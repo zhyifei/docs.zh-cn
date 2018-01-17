@@ -17,11 +17,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 806a62d57e1099bb9d7cdcca657be500c33b0df1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="binding-sources-overview"></a>绑定源概述
 在数据绑定中，绑定源对象是指用户从其获取数据的对象。 本主题讨论可用作绑定源的对象类型。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 |动态对象|可以将绑定到可用的属性和索引器的实现的对象<xref:System.Dynamic.IDynamicMetaObjectProvider>接口。 如果可以访问代码中的成员，则可以绑定到该成员。 例如，如果动态对象使用户可以通过 `someObjet.AProperty` 访问代码中的成员，则可以通过将绑定路径设置为 `AProperty` 来绑定到该成员。|  
 |[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 对象|可以将绑定到[!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)]对象，如<xref:System.Data.DataTable>。 [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView>实现<xref:System.ComponentModel.IBindingList>接口，从而提供绑定引擎侦听的更改通知。|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 对象|你可以将绑定到并运行`XPath`查询上<xref:System.Xml.XmlNode>， <xref:System.Xml.XmlDocument>，或<xref:System.Xml.XmlElement>。 一种简便方式访问[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]是在标记中的绑定源的数据是使用<xref:System.Windows.Data.XmlDataProvider>对象。 有关详细信息，请参阅[使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。<br /><br /> 此外可以绑定到<xref:System.Xml.Linq.XElement>或<xref:System.Xml.Linq.XDocument>，或绑定到在这些类型的对象上运行通过使用 LINQ to XML 的查询的结果。 使用 LINQ to XML 对访问 XML 数据中标记的绑定源的一种简便方式是使用<xref:System.Windows.Data.ObjectDataProvider>对象。 有关详细信息，请参阅[绑定到 XDocument、XElement 或 LINQ for XML 查询结果](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)。|  
-|<xref:System.Windows.DependencyObject> 对象|你可以将绑定到依赖项属性任何<xref:System.Windows.DependencyObject>。 有关示例，请参阅[绑定两个控件的属性](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)。|  
+|<xref:System.Windows.DependencyObject> 对象|可以绑定到的任何依赖项属性<xref:System.Windows.DependencyObject>。 有关示例，请参阅[绑定两个控件的属性](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)。|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>为绑定源实现类  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
 -   不能绑定到公共字段。  
   
--   类中声明的属性类型是传递给绑定的类型。 不过，绑定最终所用的类型取决于绑定目标属性的类型，而不是绑定源属性的类型。 如果类型不同，可能需要编写一个转换器来处理自定义属性最初传递给绑定的方式。 有关更多信息，请参见<xref:System.Windows.Data.IValueConverter>。  
+-   类中声明的属性类型是传递给绑定的类型。 不过，绑定最终所用的类型取决于绑定目标属性的类型，而不是绑定源属性的类型。 如果类型不同，可能需要编写一个转换器来处理自定义属性最初传递给绑定的方式。 有关详细信息，请参阅<xref:System.Windows.Data.IValueConverter>。  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>将整个对象用作绑定源  
@@ -104,11 +105,11 @@ ms.lasthandoff: 11/21/2017
   
  有关部分信任安全的详细信息，请参阅 [WPF 部分信任安全](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Data.ObjectDataProvider>  
  <xref:System.Windows.Data.XmlDataProvider>  
  [指定绑定源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [使用 LINQ to XML 进行 WPF 数据绑定概述](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)  
  [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)

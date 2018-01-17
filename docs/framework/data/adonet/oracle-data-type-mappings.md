@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 746013a11d10162a78116ff41d0b09d942f7651b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6ec4bc061ea7a2b7875c9c5521d73dfd2e96954a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-data-type-mappings"></a>Oracle 数据类型映射
 下表列出 Oracle 数据类型及其与 <xref:System.Data.OracleClient.OracleDataReader> 的映射。  
@@ -78,6 +79,6 @@ ms.lasthandoff: 11/21/2017
   
  **InputOutput**，**输出**，和**ReturnValue** **ParameterDirection**使用的值<xref:System.Data.OracleClient.OracleParameter.Value%2A>属性<xref:System.Data.OracleClient.OracleParameter>对象是.NET Framework 数据类型，除非输入的值不是 Oracle 数据类型 (例如，<xref:System.Data.OracleClient.OracleNumber>或<xref:System.Data.OracleClient.OracleString>)。 这不适用于**REF CURSOR**， **BFILE**，或**LOB**数据类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

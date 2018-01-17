@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54ce56cccffa350479d0dd4dcec130ddd004764
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 端口共享
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了一种新的用于高性能通信的、基于 TCP 的网络协议 (net.tcp://)。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还引入了一个新的系统组件 Net.TCP Port Sharing Service，该组件使得 net.tcp 端口可以在多个用户进程之间共享。  
@@ -58,8 +59,8 @@ ms.lasthandoff: 12/02/2017
 ## <a name="security-implications-of-port-sharing"></a>端口共享的安全性影响  
  虽然 Net.TCP Port Sharing Service 在应用程序和网络之间提供了一个处理层，但是仍应对使用端口共享的应用程序进行保护，就好像这些应用程序直接在网络上进行侦听一样。 具体来说，使用端口共享的应用程序应评估运行它们所依据的进程特权。 请考虑使用内置网络服务帐户运行应用程序，该内置服务帐户将以网络通信要求的最小进程特权集运行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
  [承载](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [如何： 配置 WCF 服务以使用端口共享](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
- [如何： 启用 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+ [如何：配置 WCF 服务以使用端口共享](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
+ [如何：启用 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

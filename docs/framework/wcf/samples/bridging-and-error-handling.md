@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc809b75a965107594f7b2aa8a78d412bf284d8e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84a7d3385d89d4308e6a75d303a567fb4d7b22d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bridging-and-error-handling"></a>桥接和错误处理
 此示例演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 路由服务如何用于在使用不同绑定的客户端和服务之间桥接通信。 此示例还演示如何将备份服务用于故障转移方案。 路由服务是一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 组件，使用该组件可方便地在应用程序中包含基于内容的路由器。 此示例采用标准的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 计算器示例，用于使用路由服务进行通信。  
@@ -79,5 +80,5 @@ ms.lasthandoff: 12/02/2017
 ### <a name="real-world-scenario"></a>实际方案  
  Contoso 希望在内部优化性能的同时，向外界提供一个可互操作的服务终结点。 因此，它通过一个使用 BasicHttpBinding 的终结点向外界公开其服务，而在内部使用路由服务将该连接桥接到使用 NetTcpBinding（由其服务使用）的终结点。 而且，Contoso 还希望其提供的服务能够容许他们的任何一个生产服务发生暂时中断，从而通过使用错误处理功能来虚拟化路由器服务后面的多个终结点，以便在必要时自动故障转移到备份终结点。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

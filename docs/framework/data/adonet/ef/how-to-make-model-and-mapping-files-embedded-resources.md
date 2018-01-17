@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 98fb3ada369279a34ed08110644aabcbbe72a501
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b8439e81c9a77f15556c21c5e96add86265c4ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>如何：制作模型和映射文件嵌入资源
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使你能够为应用程序的嵌入资源部署模型和映射文件。 包含嵌入模型和映射文件的程序集必须加载到实体连接所在的应用程序域中。 有关详细信息，请参阅[连接字符串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。 默认情况下，[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]工具嵌入模型和映射文件。 手动定义模型和映射文件时，请使用下面的过程以确保文件作为嵌入资源与[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序一起部署。  
@@ -48,8 +49,8 @@ ms.lasthandoff: 11/21/2017
   
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [建模和映射](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
- [如何： 定义连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
- [如何： 生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [如何：定义连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
+ [如何：生成 EntityConnection 连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
  [ADO.NET 实体数据模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

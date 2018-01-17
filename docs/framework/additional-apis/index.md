@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e3bb7a7c53cbca8bbd4026b46ce59589cef22382
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c22de3ed401e0be10b155649395da43cedb35e6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他类库和 API
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="platform-specific-libraries"></a>特定于平台的库
   
-| Project | 描述 |  
+| 项目 | 描述 |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | 扩展<xref:System.Text.EncodingProvider>要提供给面向通用 Windows 平台的应用代码页编码的类。 |  
   

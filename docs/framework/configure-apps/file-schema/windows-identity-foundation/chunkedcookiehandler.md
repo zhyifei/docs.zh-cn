@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 906a9e7cafca14dc4ee13dcb9eb9e59736464fd9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c5d526ccd48ea5e822d5d29fb38dacd895c2556c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltchunkedcookiehandlergt"></a>&lt;chunkedCookieHandler&gt;
 配置<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 此元素仅可呈现如果`mode`属性`<cookieHandler>`元素是"默认"块"。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 |特性|描述|  
 |---------------|-----------------|  
-|chunkSize|最大大小，以字符为单位的任何一个的 HTTP cookie 的 HTTP cookie 数据。 你必须调整块区大小时请小心。 Web 浏览器 cookie 和号允许每个域的大小具有不同的限制。 例如，原始的 Netscape 规范规定这些限制： 总 300 cookie，每个 cookie 标头 （包括元数据，而不仅仅是 cookie 值），4096 个字节和每个域的 20 cookie。 默认值为 2000年。 必需。|  
+|chunkSize|最大大小，以字符为单位的任何一个的 HTTP cookie 的 HTTP cookie 数据。 你必须调整块区大小时请小心。 Web 浏览器 cookie 和号允许每个域的大小具有不同的限制。 例如，原始的 Netscape 规范规定这些限制： 总 300 cookie，每个 cookie 标头 （包括元数据，而不仅仅是 cookie 值），4096 个字节和每个域的 20 cookie。 默认值为 2000年。 必须的。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -72,5 +73,5 @@ ms.lasthandoff: 10/18/2017
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IdentityModel.Services.ChunkedCookieHandler>

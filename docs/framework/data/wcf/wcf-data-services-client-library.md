@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65b02945aa81fdf18ad328a833f8f85744035871
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-client-library"></a>WCF 数据服务客户端库
 如果任一应用程序可发送 HTTP 请求并处理数据服务返回的 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 源，则该应用程序可与基于[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的数据服务进行交互。 通过这种互操作性，您可以从启用 Web 的诸多应用程序访问基于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的服务。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]包括客户端库会提供更丰富的编程体验，使用时[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送从.NET Framework 或基于 Silverlight 的应用程序。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/02/2017
  [批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
  介绍如何使用客户端库在一个批处理中向数据服务发送多个请求。  
   
- [数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ [将数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  描述如何将控件绑定到[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]数据服务返回的源。  
   
  [调用服务操作](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
@@ -61,6 +62,6 @@ ms.lasthandoff: 12/02/2017
  [处理二进制数据](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  介绍如何访问和更改数据服务作为数据流返回的二进制数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

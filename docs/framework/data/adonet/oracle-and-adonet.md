@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c615c985f885734800b471ee31451cfb8a4c8500
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77d5c98c96bd4b6085c30b6d1dd713bd324fbad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
@@ -50,13 +51,13 @@ csc /r:System.Data.OracleClient.dll
  [系统要求](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  说明使用适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序时的要求，并说明使用时应注意的若干问题。  
   
- [Oracle Bfile](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
+ [Oracle BFILEs](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  描述用于使用 Oracle BFILE 数据类型的 <xref:System.Data.OracleClient.OracleBFile> 类。  
   
- [Oracle Lob](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ [Oracle LOBs](../../../../docs/framework/data/adonet/oracle-lobs.md)  
  描述用于使用 Oracle LOB 数据类型的 <xref:System.Data.OracleClient.OracleLob> 类。  
   
- [Oracle REF Cursor](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Oracle REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
  描述对 Oracle REF CURSOR 数据类型的支持。  
   
  [OracleTypes](../../../../docs/framework/data/adonet/oracletypes.md)  
@@ -87,6 +88,6 @@ csc /r:System.Data.OracleClient.dll
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  说明允许在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中编写独立于提供程序的代码的泛型类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

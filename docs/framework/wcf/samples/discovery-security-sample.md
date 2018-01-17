@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2b21017be0927f0d5189744111437c5afa6dd623
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f50334c8477b8823ef1dfb6abcae640e439d5ddd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-security-sample"></a>发现安全示例
 Discovery 规范不要求参与发现过程的终结点是安全的。 增强发现消息的安全性可缓解各种类型的攻击（消息更改、拒绝服务、重播、欺骗）。 本示例实现自定义通道，这些通道计算和验证使用精简签名格式（在 WS-Discovery 规范的第 8.2 节中进行了介绍）的消息签名。 本示例支持[2005 Discovery 规范](http://go.microsoft.com/fwlink/?LinkId=177912)和[1.1 版](http://go.microsoft.com/fwlink/?LinkId=179677)。  
@@ -85,4 +86,4 @@ Discovery 规范不要求参与发现过程的终结点是安全的。 增强发
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

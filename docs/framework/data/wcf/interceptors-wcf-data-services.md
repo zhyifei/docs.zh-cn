@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9718876e43c56c81f0a772670f187f6dd95f139
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8c72d4ba56859e0afec4b26d7ce81668b443a4ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interceptors-wcf-data-services"></a>拦截器（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]可让应用程序，以便您可以给某项操作添加自定义逻辑截获请求消息。 你可以使用此自定义逻辑来验证传入消息中的数据。 还可以使用它进一步限制查询请求的范围，以便基于每个请求插入自定义授权策略。  
@@ -58,5 +59,5 @@ ms.lasthandoff: 12/02/2017
   
  有关详细信息，请参阅[如何： 截获数据服务消息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

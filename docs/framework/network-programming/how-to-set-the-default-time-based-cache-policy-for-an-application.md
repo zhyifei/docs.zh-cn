@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ae864b5f22f469d9a60b9faba90a5a66c65e8172
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d5166090a0682b71f74565e666c96ddadb7c6c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>如何：为应用程序设置默认基于时间的缓存策略
 默认基于时间的缓存策略允许应用程序将标头定义的缓存行为与缓存资源和 RFC 2616 的第 13 和 14 节（可在 [http://www.ietf.org](http://www.ietf.org/) 中找到）中定义的缓存行为一起发送。这是适用于大多数应用程序的缓存行为。  
@@ -71,7 +72,7 @@ Public Shared Sub SetDefaultTimeBasedPolicy2()
 End Sub  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [缓存策略](../../../docs/framework/network-programming/cache-policy.md)  
  [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)  

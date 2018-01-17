@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3151ec3511bca598e5aaabc72b821bdd3aed0b7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: de19fffdeae801163ec991ecf08d00b1286781d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
 指定与终结点注册的安全令牌处理程序的集合。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|向令牌处理程序集合中添加的安全令牌处理程序。|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|清除所有安全令牌处理程序从标记处理程序集合。|  

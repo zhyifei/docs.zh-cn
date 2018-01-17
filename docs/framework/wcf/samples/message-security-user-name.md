@@ -14,11 +14,12 @@ caps.latest.revision: "57"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: acf01818a697f2267307bdf7b9e469fec5741511
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4df9b3d5c1f073b1b2348220ac1a77efbe797311
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-user-name"></a>用户名消息安全
 本示例演示如何实现一个应用程序，该应用程序对客户端使用具有用户名身份验证的 WS-Security，并要求使用服务器的 X.509v3 证书对服务器进行身份验证。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 默认情况下，使用客户端提供的用户名和密码登录有效的 Windows 帐户。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)。 本示例由客户端控制台程序 (Client.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (Service.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -231,7 +232,7 @@ Press <ENTER> to terminate client.
   
 5.  在服务器上，在使用管理员特权打开的 Visual Studio 命令提示中运行 `setup.bat service`。 运行`setup.bat`与`service`自变量的计算机的完全限定域名创建一个服务证书，并将服务证书导出到名为 Service.cer 的文件。  
   
-6.  编辑 Web.config 以反映新的证书名称（在 serviceCertificate 元素的 findValue 属性中），该名称与计算机的完全限定域名相同`.`。  
+6.  编辑 Web.config 以反映新的证书名称（在 serviceCertificate 元素的 findValue 属性中），该名称与计算机的完全限定域名相同。  
   
 7.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
@@ -248,4 +249,4 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

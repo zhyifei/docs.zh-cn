@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3edbe30347580bb4f9677d7fb98d3b4fd8b92cff
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 90e346990696301d27ea329ea4255258562b353c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>如何：使用图像绘制区域
 此示例演示如何使用<xref:System.Windows.Media.ImageBrush>类来绘制图像的区域。 <xref:System.Windows.Media.ImageBrush>显示一幅图像，通过指定其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>属性。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/22/2017
   
  此代码示例是一个更大的示例为提供的一部分<xref:System.Windows.Media.ImageBrush>类。 有关完整的示例，请参阅[ImageBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160005)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

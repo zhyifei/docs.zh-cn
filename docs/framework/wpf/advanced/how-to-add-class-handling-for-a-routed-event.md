@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abbbdce0ca12c4d8bdd12f616bf49c3d6f66f441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f0315bbd1d1a5ab2ae08d8bc1810e240cb6a5a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>如何：为路由事件添加类处理
 通过类处理程序或路线中的任何给定节点上的实例处理程序，可以处理路由的事件。 首先，调用和类的实现可以使用取消实例处理的事件，或引入其他事件所拥有的基类的事件的特定行为的类处理。 此示例阐释用来实现类处理程序的两个密切相关的技术。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClassHandling/CSharp/SDKSampleLibrary/class1.cs#staticandregisterclasshandler)]
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.EventManager>  
  [将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
  [处理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 229ca90aef5b91bfcd585221b6ad5c91ec91c0b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a4d6a80f51de36fe577dfc0d36a247f1747334e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-workflows"></a>承载工作流
 本节中的主题介绍承载工作流。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/02/2017
  [使用 WorkflowIdentity 和版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)  
  介绍如何使用 `WorkflowIdentity` 并行承载工作流的多个版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows Workflow Foundation 编程](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [设计工作流](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  [Windows Workflow Foundation 数据模型](../../../docs/framework/windows-workflow-foundation/data-model.md)

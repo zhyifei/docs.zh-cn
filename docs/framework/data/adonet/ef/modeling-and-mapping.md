@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2004b950f1096f574734259ba02944577dd9adc9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a219e4e3a58e3bd3e71bab3d3c41c87c393b20da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modeling-and-mapping"></a>建模和映射
 在[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]中，可以采用最适合您应用程序的方式定义概念模型、存储模型以及这两种模型之间的映射。 中的实体数据模型工具[!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)]允许你创建。[edmx 文件](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)从数据库或图形模型，然后更新该文件时的数据库或模型发生更改。  

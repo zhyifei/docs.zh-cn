@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4b29ed1c3659b1705640888ded5fe21432dc6ada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28203dc428db6a2dd06e9c1e85b64ef80e81ffbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>类型等效性和嵌入的互操作类型
 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，公共语言运行时支持将 COM 类型的类型信息直接嵌入到托管程序集中，而不要求托管程序集从 Interop 程序集中获取 COM 类型的类型信息。 由于嵌入式类型信息仅包含托管程序集实际使用的类型和成员，因此两个托管程序集可能具有相同 COM 类型的不同视图。 每个托管程序集都有不同的 <xref:System.Type> 对象来表示其 COM 类型视图。 公共语言运行时支持接口、结构、枚举和委托等不同视图之间的类型等效性。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 -   将该类型设为 COM 导入类型。 若接口有 <xref:System.Runtime.InteropServices.ComImportAttribute> 属性，则它是 COM 导入类型。 如果定义了其程序集具有 <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> 属性，则接口、结构、枚举或委托是 COM 导入类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Type.IsEquivalentTo%2A>  
  [在托管代码中使用 COM 类型](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [将类型库作为程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

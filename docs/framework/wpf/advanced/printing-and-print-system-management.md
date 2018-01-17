@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5be4840f059467556e131e41dfa9ae9aac3bea34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 077b98eb63559a0a4bb691b4b35949aa98d0592c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printing-and-print-system-management"></a>打印和打印系统管理
 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]和[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]引入新的打印路径-一种替代方法[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]打印-和大大扩展的组打印系统管理[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
@@ -29,10 +30,10 @@ ms.lasthandoff: 11/21/2017
  [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  新的打印路径的讨论和[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
   
- [操作说明主题](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
  一组用于演示如何使用新的打印路径的文章和[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Printing>  
  <xref:System.Printing.IndexedProperties>  
  <xref:System.Printing.Interop>  

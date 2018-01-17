@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d47add27fb1170ae1bc14b99342ea0222be3549
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 类
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用两种不同的序列化技术将应用程序中的数据转换为在客户端和服务之间进行传输的 XML，此过程称为序列化。  
@@ -214,11 +215,11 @@ ms.lasthandoff: 12/02/2017
 > [!NOTE]
 >  `<xmlSerializer useLegacySerializerGeneration="true"/>`交换机仅适用于运行.NET Framework 4.5 或更高版本的计算机。 上述`appSettings`方法适用于所有.NET Framework 版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.DataContractFormatAttribute>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [如何： 改善启动时间的 WCF 客户端应用程序使用 XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+ [如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

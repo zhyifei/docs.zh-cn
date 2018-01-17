@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 5b3d08c0a6293b6621d9b6debfa4d63c8abaf3d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fadeb1cff4956b6be8ae01c8a9ffa911772514cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="traverse-text-using-ui-automation"></a>使用 UI 自动化遍历文本
 > [!NOTE]
@@ -47,9 +48,9 @@ ms.lasthandoff: 11/21/2017
   
  如果控件不支持给定的 <xref:System.Windows.Automation.Text.TextUnit> ，则使用 <xref:System.Windows.Automation.Text.TextUnit> 的所有方法都将推迟到下一个支持的最大 <xref:System.Windows.Automation.Text.TextUnit> 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [UI 自动化 TextPattern 概述](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [将内容添加到文本框中使用 UI 自动化](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [查找并突出显示文本使用 UI 自动化](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
+ [使用 UI 自动化向文本框添加内容](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
+ [使用 UI 自动化查找和突出显示文本](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
  [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [客户端的 UI 自动化控件模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

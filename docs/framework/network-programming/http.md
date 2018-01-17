@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 701ff252380ef93dbe3668c8aca73f08a8425d6b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f72a77e19d04c0dd55887628033f7c975ac3ff25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http"></a>HTTP
 .NET Framework 提供全面的支持对 HTTP 协议，可使所有 Internet 流量，大多数与<xref:System.Net.HttpWebRequest>和<xref:System.Net.HttpWebResponse>类。 这些类派生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，默认情况下将被返回，无论静态方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 遇到以“http”还是“https”开头的 URI。 大多数情况下，WebRequest 和 WebResponse 类提供发出请求的所有必需项，但如果需要访问作为属性公开的特定于 HTTP 的功能，可以将这些类转换为 HttpWebRequest 或 HttpWebResponse 类型。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  应用程序通过捕获 <xref:System.Net.WebException>（其中 <xref:System.Net.WebException.Status%2A> 设置为 <xref:System.Net.WebExceptionStatus>）来接收 HTTP 协议错误。 <xref:System.Net.WebException.Response%2A> 属性包含由服务器发送的 WebResponse，并指示遇到的实际 HTTP 错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)  
  [如何：访问 HTTP 特定的属性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb32d1c9c0c0922dae27b2933259df9470cceeba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP 编程模型提供使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成 WEB HTTP 服务所需的基本元素。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务旨在提供给最大范围的可能客户端（包括 Web 浏览器）访问，并且具有以下独特要求：  
@@ -153,7 +154,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 编程模型疑难解答  
  当使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 调用 WCF WEB HTTP 服务以创建通道时，即使将其他 <xref:System.ServiceModel.Description.WebHttpBehavior> 传递给 <xref:System.ServiceModel.EndpointAddress>，<xref:System.ServiceModel.EndpointAddress> 也会使用配置文件中设置的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF 联合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

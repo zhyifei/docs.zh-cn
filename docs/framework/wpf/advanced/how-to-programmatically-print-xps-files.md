@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 949d92e8599ee083593cbd7f970a9b37d31970ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 402568a78ccb2f56c6adb108536edfb121440642
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>如何：以编程方式打印 XPS 文件
 你可以使用的一个重载<xref:System.Printing.PrintQueue.AddJob%2A>方法打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件而无需打开<xref:System.Windows.Controls.PrintDialog>或原则上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]根本。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  **请注意**为简单起见，以上示例通过测试是否存在 *.xps 扩展名来确定文件是否为 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。 但是，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件不需要具有此扩展名。 [isXPS.exe（isXPS 合规性工具）](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)是一种测试文件是否具有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Printing.PrintQueue>  
  <xref:System.Printing.PrintQueue.AddJob%2A>  
  <xref:System.Threading.ApartmentState>  

@@ -21,11 +21,14 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 63f0e001280773c55f18f0604ca93986acbb9674
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>对 .NET Framework 应用程序进行全球化和本地化
 开发[全球通用的应用程序](http://msdn.microsoft.com/goglobal/bb978433.aspx)（包括可本地化为一种或多种语言的应用程序）分为三步：全球化、可本地化性审核和本地化。  
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/18/2017
   
  .NET Framework 为开发全球通用和本地化的应用程序提供了广泛支持。 特别是，.NET Framework 类库中许多类成员通过返回可反映当前用户区域性或指定区域性约定的值来帮助全球化。 此外，.NET Framework 支持附属程序集，这可推动本地化应用程序的过程。  
   
- 有关详细信息，请访问 [Go Global 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=235015)。  
+ 有关其他信息，请参见[全球化文档](/globalization/)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [全球化](../../../docs/standard/globalization-localization/globalization.md)  

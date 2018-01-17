@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91994fc31e4b0f30d575cd43ad44e66dcdb0a7f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e77cf5cc271e86c02e8355dde6f721fe7751416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-system-provided-bindings"></a>配置系统提供的绑定
 绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定由一些元素组成，这些元素指定如何对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道进行分层以提供所需的通信功能。 绑定包含三种类型的元素：  
@@ -63,17 +64,17 @@ ms.lasthandoff: 12/02/2017
   
 |绑定|互操作性|安全模式（默认）|会话<br /><br /> (默认)|事务|双工|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1（基本配置文件 1.1）|（无）、传输、消息、混合|无、（无）|（无）|无|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|无、传输、（消息）、混合|（无）、传输、可靠会话|（无）、是|无|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security、WS-Trust、WS-SecureConversation、WS-SecurityPolicy|无、传输、（消息）、混合|（无）、传输、可靠会话|（无）、是|无|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1（基本配置文件 1.1）|（无）、传输、消息、混合|无、（无）|（无）|不可用|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|无、传输、（消息）、混合|（无）、传输、可靠会话|（无）、是|不可用|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security、WS-Trust、WS-SecureConversation、WS-SecurityPolicy|无、传输、（消息）、混合|（无）、传输、可靠会话|（无）、是|不可用|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|无、（消息）|（可靠会话）|（无）、是|是|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|无、（消息）、混合|（无）、可靠会话|（无）、是|No|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|无、（消息）、混合|（无）、可靠会话|（无）、是|No|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|无、（消息）、混合|（无）、可靠会话|（无）、是|否|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|无、（消息）、混合|（无）、可靠会话|（无）、是|否|  
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|无、（传输）、消息、<br /><br /> 混合|可靠对话、（传输）|（无）、是|是|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|无、<br /><br /> （传输）|无、（传输）|（无）、是|是|  
-|<xref:System.ServiceModel.NetMsmqBinding>|.NET|无、消息、（传输）、两者|（无）|（无）、是|No|  
+|<xref:System.ServiceModel.NetMsmqBinding>|.NET|无、消息、（传输）、两者|（无）|（无）、是|否|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|对等|无、消息、（传输）、混合|（无）|（无）|是|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|无、（传输）|（无）|（无）、是|无|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|无、（传输）|（无）|（无）、是|不可用|  
   
  下表解释上一个表中的功能。  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 12/02/2017
 |双工|指定是否支持双工协定。 注意，此功能要求在绑定中支持会话。|  
 |流式处理|指定是否支持消息流处理。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [使用绑定配置服务和客户端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)

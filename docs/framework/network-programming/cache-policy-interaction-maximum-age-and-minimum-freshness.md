@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 75729fc92c6a4bfa0f5ad73b8bbd4b28456f21e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 689b8b2d921731ecab2be2a1aa3dee5d1928e8cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>缓存策略交互 — 最长使用期限和最低新鲜度
 为了帮助确保将最新鲜的内容返回给客户端应用程序，客户端缓存策略和服务器重新验证要求的交互始终会造成最保守的缓存策略。 本主题中的所有示例阐明针对在 1 月 1 日缓存、1 月 4 日过期的资源的缓存策略。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 -   如果缓存策略设置 `maxAge` = 2 天，`minFresh` = 2 天，根据 `maxAge`，此内容在 1 月 3 日前是新鲜的。 根据 `minFresh`，此内容在 1 月 2 日前也是新鲜的。 因此，必须在 1 月 2 日重新验证此内容。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [缓存策略](../../../docs/framework/network-programming/cache-policy.md)  
  [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)  

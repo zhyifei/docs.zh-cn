@@ -30,11 +30,11 @@ ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
 caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 76383ae886a5e965c0daefc281c4842a4e563ec7
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 168e5c7f7d144d5c20513d62f4e3458bc6f87235
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>如何：使用泛型类 (Visual Basic)
 采用 *类型参数* 的类称为 *泛型类*。 如果使用一个泛型类，则可以通过为每个形参提供 *类型实参* ，从该类生成 *构造类* 。 随后可以声明构造类类型的一个变量，可以创建构造类的实例并将它分配给该变量。  
@@ -53,10 +53,10 @@ ms.lasthandoff: 12/09/2017
   
      [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [语言独立性和与语言无关的组件](../../../../../docs/standard/language-independence-and-language-independent-components.md)  
+ [语言独立性和与语言无关的组件](../../../../standard/language-independence-and-language-independent-components.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
  [如何：定义可对不同数据类型提供相同功能的类](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  

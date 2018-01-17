@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b05d77df28b560b9236e467a914229c0fa9ae7e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68e1d66b615db7369d71f56b402c13ce41ad5e54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="blittable-and-non-blittable-types"></a>可直接复制到本机结构中的类型和非直接复制到本机结构中的类型
 大多数数据类型在托管和非托管内存中具有共同的表示形式，而且不需要互操作封送处理程序进行特殊处理。 这些类型称为 blittable 类型，因为它们在托管和非托管代码之间传递时不需要进行转换。  
@@ -81,5 +82,5 @@ ms.lasthandoff: 10/18/2017
   
  类和对象类型仅受 COM 互操作支持。 有关 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的相应类型的信息，请参阅[类库概述](../../../docs/standard/class-library-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)

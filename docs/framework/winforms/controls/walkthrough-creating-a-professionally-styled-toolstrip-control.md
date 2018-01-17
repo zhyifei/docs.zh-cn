@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0fbc03ad16bcc0d63a75df5478f7da8abbf19193
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>演练：创建具有专业样式的 ToolStrip 控件
 可让你的应用程序<xref:System.Windows.Forms.ToolStrip>控制专业的外观和行为，通过编写您自己的类派生自<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类型。  
@@ -43,9 +44,9 @@ ms.lasthandoff: 11/21/2017
  若要将代码复制本主题中的一个单独的清单，请参阅[如何： 创建具有专业样式的 ToolStrip 控件](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
 -   若要能够创建和运行的计算机上的 Windows 窗体应用程序项目的足够权限其中[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]安装。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
     |属性|值|  
     |--------------|-----------|  
-    |名称|`stackStrip`|  
+    |name|`stackStrip`|  
     |CanOverflow|`false`|  
     |停靠|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |字体|`Tahoma, 10pt, style=Bold`|  
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
   
     |属性|值|  
     |--------------|-----------|  
-    |名称|`mailStackButton`|  
+    |name|`mailStackButton`|  
     |CheckOnClick|true|  
     |复选|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/21/2017
   
 -   使用停靠创建多文档界面 (MDI) 窗体<xref:System.Windows.Forms.ToolStrip>控件。 有关详细信息，请参阅[如何： 创建具有菜单合并和 ToolStrip 控件的 MDI 窗体](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.StatusStrip>  

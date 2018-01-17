@@ -18,18 +18,19 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b52b809b732f3859a7ce02a4433b2387e797932
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d95cd0545fa4800f159f4e5e0f661cf7bddc6548
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-value-precedence"></a>依赖项属性值优先级
 <a name="introduction"></a> 本主题说明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统的工作机制如何影响依赖属性的值，并介绍应用于属性有效值的属性系统的各方面所依据的优先级。  
     
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题假定你从 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类的现有依赖属性的使用者角度了解依赖属性，并且已阅读[依赖属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。 若要采用本主题中的示例，还应当了解[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 并知道如何编写 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序。  
   
 <a name="intro"></a>   
@@ -136,7 +137,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue 和值优先级  
  <xref:System.Windows.DependencyObject.ClearValue%2A>方法提供一个有利的途径以清除任何本地应用，从一个元素设置的依赖项属性值。 但是，调用<xref:System.Windows.DependencyObject.ClearValue%2A>并不保证数据的默认值为在注册过程在元数据中建立，是的新生效值。 值优先级中的所有其他参与者仍然有效。 只有在本地设置的值才会从优先级序列中删除。 例如，如果你调用<xref:System.Windows.DependencyObject.ClearValue%2A>上的属性，其中该属性也设置由主题样式，则为新值，而不是基于元数据的默认应用的主题值。 如果你想要采用进程外的所有属性值参与者并将值设置为已注册的元数据的默认值，你可以获取明确通过查询依赖属性元数据，然后你的默认值，可以本地使用的默认值将通过调用属性设置<xref:System.Windows.DependencyObject.SetValue%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.DependencyObject>  
  <xref:System.Windows.DependencyProperty>  
  [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  

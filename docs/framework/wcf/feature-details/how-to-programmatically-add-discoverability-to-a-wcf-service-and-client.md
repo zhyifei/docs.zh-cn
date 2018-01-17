@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11d5b00113f9b44d1d77d00dd541bc602afcb405
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a0a59788544a32b78e75ac25e787dcbae478451e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>如何：以编程方式向 WCF 服务和客户端添加可检测性
 本主题说明如何检测到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务。 它基于[自承载](http://go.microsoft.com/fwlink/?LinkId=145523)示例。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 12/02/2017
     }  
     ```  
   
-     此代码指示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Discovery.DiscoveryClient> 类应使用标准 UDP 发现终结点来发送和接收发现消息。  
+     此代码指示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.Discovery.DiscoveryClient> 类应使用标准 UDP 发现终结点来发送和接收发现消息。  
   
 8.  在下一行，调用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法并指定包含要搜索的服务协定的 <xref:System.ServiceModel.Discovery.FindCriteria> 实例。 在本示例中，指定的是 `ICalculator`。  
   
@@ -350,6 +351,6 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>另请参阅  
- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [WCF Discovery 对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+## <a name="see-also"></a>请参阅  
+ [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [WCF 发现对象模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

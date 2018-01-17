@@ -17,11 +17,11 @@ ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 694bd74e2b5ae374269accd845fe9178958bf56c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a8ac167b40688b1d1116f148d0d5fd6afdcaada8
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>如何：从 Visual Basic 中引用 COM 对象
 在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，添加对具有类型库的 COM 对象的引用的 COM 库需要创建互操作程序集。 对 COM 对象的成员的引用将路由到互操作程序集，然后转发到实际的 COM 对象。 从 COM 对象的响应路由到互操作程序集，并将其转发到你[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。  
@@ -60,9 +60,9 @@ ms.lasthandoff: 11/21/2017
   
      可以使用 Tlbimp 创建互操作程序集的类型库，甚至对于未注册的 COM 对象。 但是，由互操作程序集引用的 COM 对象必须正确注册它们将被用于在计算机上。 可以使用 Regsvr32 实用工具随附 Windows 操作系统的系统来注册 COM 对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tlbimp.exe（类型库导入程序）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ [Tlbimp.exe（类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe（类型库导出程序）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  [互操作性疑难解答](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  

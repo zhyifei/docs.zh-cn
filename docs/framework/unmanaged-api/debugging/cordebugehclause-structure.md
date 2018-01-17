@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 154bbe14a14d34c0d998e3192a70a96b9922f32c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97428837d78c246915381b51fb5005a68518b7bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 结构
 [仅在 .NET Framework 4.5.2 及更高版本中受支持]  
@@ -70,7 +71,7 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|`finally` 子句。|  
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Fault 子句（仅当引发异常时才调用的 `finally` 子句）。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -79,6 +80,6 @@ typedef struct _CorDebugEHClause {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetEHClauses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
  [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

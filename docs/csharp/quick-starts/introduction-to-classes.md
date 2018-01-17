@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: ad6e83d427b55482f9615e0083682bdca6c56704
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: 55d6050d7573b9088b361fb571b96425533bda1f
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="introduction-to-classes"></a>类简介
 
-若要更好地学习本课程，需要已安装 [.NET Core SDK](http://dot.net/core) 和选定编辑器。 如果尚未安装，请尝试在 Mac 或 Windows 上使用 [Visual Studio Code](https://code.visualstudio.com/) 或 [Visual Studio](https://www.visualstudio.com/)。
+本快速入门教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门简介](local-environment.md)简要概述了你将用到的命令，还提供了详细信息链接。
 
 ## <a name="create-your-application"></a>创建应用程序
 
@@ -40,7 +40,7 @@ namespace classes
 
 在本快速入门课程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。  在 classes 目录中，新建名为 BankAccount.cs 的文件。 
 
-此文件包含银行帐户定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本快速入门课程中，银行帐户支持以下行为：
+此文件包含“银行帐户”定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本快速入门课程中，银行帐户支持以下行为：
 
 1. 用一个 10 位数唯一标识银行帐户。
 1. 用字符串存储一个或多个所有者名称。
@@ -69,7 +69,7 @@ namespace classes
         {
         }
 
-        public void MakeWithdrawal(decimal amount, DateTime date, string payee, string note)
+        public void MakeWithdrawal(decimal amount, DateTime date, string note)
         {
         }
     }
@@ -97,7 +97,7 @@ public BankAccount(string name, decimal initialBalance)
 构造函数是在使用 [`new`](../language-reference/keywords/new.md) 创建对象时进行调用。 将 program.cs 中的代码行 `Console.WriteLine("Hello World!");` 替换为以下代码行（将 `<name>` 替换为自己的名称）：
 
 ```csharp
-var account = new BankAccount("<name", 1000);
+var account = new BankAccount("<name>", 1000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
 ```
 
@@ -169,9 +169,11 @@ Console.WriteLine(account.Balance);
 
 ```csharp
 // Test that the initial balances must be positive:
-try {
+try
+{
     var invalidAccount = new BankAccount("invalid", -55);
-} catch (ArgumentOutOfRangeException e)
+}
+catch (ArgumentOutOfRangeException e)
 {
     Console.WriteLine("Exception caught creating account with negative balance");
     Console.WriteLine(e.ToString());
@@ -182,9 +184,11 @@ try {
 
 ```csharp
 // Test for a negative balance
-try {
+try
+{
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
-} catch (InvalidOperationException e)
+}
+catch (InvalidOperationException e)
 {
     Console.WriteLine("Exception caught trying to overdraw");
     Console.WriteLine(e.ToString());

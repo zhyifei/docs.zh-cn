@@ -20,11 +20,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05e13b8fc899b5cc6addb6d41db826f39b7528f0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3143bcc05d88cde43e844ec21b95963e672bbc52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 在[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]，[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]用于标识和加载在许多方面，包括以下文件：  
@@ -285,7 +286,7 @@ ms.lasthandoff: 10/22/2017
   
 <a name="Using_Pack_URIs_in_Markup"></a>   
 ### <a name="using-pack-uris-in-markup"></a>在标记中使用 Pack URI  
- 包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]通过设置具有包的属性元素标记中指定[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。 例如:   
+ 包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]通过设置具有包的属性元素标记中指定[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。 例如:  
   
  `<element attribute="pack://application:,,,/File.xaml" />`  
   
@@ -411,7 +412,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  [!code-xaml[WindowIconSnippets#WindowIconSetXAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]  
   
- 有关更多信息，请参见<xref:System.Windows.Window.Icon%2A>。  
+ 有关详细信息，请参阅<xref:System.Windows.Window.Icon%2A>。  
   
 <a name="Loading_Image__Audio__and_Video_Files"></a>   
 #### <a name="loading-image-audio-and-video-files"></a>加载图像、音频和视频文件  
@@ -433,5 +434,5 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  有关中的主题概述[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a60d74bdf3343d02eaf912ac7700f36a649f659c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5b10d759a4f79eabe973a0fcd60736428e46f659
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xnull-markup-extension"></a>x:Null 标记扩展
 指定`null`作为 XAML 成员的值。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
  请注意，`null`不一定是引用类型依赖项属性的初始未设置的值。 初始默认值可以为每个依赖项属性而异，并且可以基于特定属性的元数据。 不接受许多依赖项属性`null`作为值，通过标记或由于其验证回调实现的代码。 有关依赖项属性的详细信息，请参阅[依赖项属性概述](../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.DependencyProperty.UnsetValue>  
  [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6994069ca57a078e3d8236739ecf091d9e179455
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4c7585cfa85d805a3d1454b0c16e38eee297280a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdnsgt"></a>&lt;dns&gt;
 指定服务器的所需标识。 如果服务器的证书包含具有相同值的 DNS，则此标识对于 X509 证书身份验证模式有效。 如果 SPN 具有相同值，则它对于 Windows 身份验证模式同样有效。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/02/2017
 </identity>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.IdentityElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.EndpointAddress.Identity%2A>  

@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3f259a28009ed12583bc8f7baa63e2ca17e4a21e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2d79046db904de68e5b24b2f96206bb1de2de470
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start 方法
 启动公共语言运行时 (CLR)。  
@@ -48,7 +49,7 @@ HRESULT Start ();
 ## <a name="remarks"></a>备注  
  它通常是不需要调用`Start`方法，因为 CLR 将运行托管的代码在第一个请求时自动启动。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -57,5 +58,5 @@ HRESULT Start ();
   
  **.NET framework 版本：** 1.0、 1.1  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICorRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

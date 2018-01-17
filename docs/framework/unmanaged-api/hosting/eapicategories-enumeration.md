@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eaff0133020fe84e58f8a130bffc8ddc2a55a19d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 630a3048072ed7b19b3250e75aca3b31e4dd7df7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 枚举
 描述了主机可以阻止其运行部分受信任代码中的功能的类别。  
@@ -67,7 +68,7 @@ typedef enum {
   
  `EApiCategories`枚举和`SetProtectedCategories`方法直接相关于托管<xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>类。 托管的类用于<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>枚举，其值直接对应`EApiCategories`值，来标记托管的类型和公开对应于所描述的类别的功能的成员`EApiCategories`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -76,6 +77,6 @@ typedef enum {
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICLRHostProtectionManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
  [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

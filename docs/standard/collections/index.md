@@ -16,11 +16,14 @@ caps.latest.revision: "36"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8ab02ada92e06333cc7ec2ea3ae832c48d3e16ec
-ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7760f30e8053b55c2f846c08ccb6a3d026089afb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="collections-and-data-structures"></a>集合和数据结构
 类似的数据在作为集合而存储和操作时通常可以得到更高效地处理。 可使用 <xref:System.Array?displayProperty=nameWithType> 类或 <xref:System.Collections>、<xref:System.Collections.Generic>、 <xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命令空间中的类来添加、移除和修改集合中的单个元素或一系列元素。  

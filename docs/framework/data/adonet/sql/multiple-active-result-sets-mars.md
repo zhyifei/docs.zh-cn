@@ -13,17 +13,18 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 545717c1aa620644203bf6adaa866cec3e8e7fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d44e6375209f6ad9c733d1c4412ee605b439d992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-active-result-sets-mars"></a>多个活动结果集 (MARS)
 多活动结果集 (MARS) 是一项允许对单个连接执行多个批处理的功能。 在以前的版本中，在单个连接上一次只能执行一个批处理。 使用 MARS 执行多个批处理并不意味着同时执行操作。  
   
 ## <a name="in-this-section"></a>本节内容  
- [启用多个活动结果集](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
+ [启用多重活动结果集](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
  讨论如何在 SQL Server 中使用 MARS。  
   
  [操作数据](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
@@ -33,6 +34,6 @@ ms.lasthandoff: 11/21/2017
  [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  提供有关在 ADO.NET 中使用新的异步功能的详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

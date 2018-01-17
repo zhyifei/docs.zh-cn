@@ -29,11 +29,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: a72635cb77f23e2b87abb54f3f6a4438a3019f22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ca66a65c05da3d515358c0fdb26682fa4ec1438
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-and-digest-authentication"></a>基本和摘要式身份验证
 基本身份验证和摘要式身份验证的 <xref:System.Net> 实现符合 RFC2617 – HTTP 身份验证：基本身份验证和摘要式身份验证（适用于万维网联合会 Web 网站 (www.w3.org)）。  
@@ -55,6 +56,6 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 > [!CAUTION]
 >  使用基本和摘要式身份验证发送的数据不会加密，因此攻击者会看到数据。 此外，基本身份验证凭据（用户名和密码）是以明文形式发送的，会被截取。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [NTLM 和 Kerberos 身份验证](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
  [Internet 身份验证](../../../docs/framework/network-programming/internet-authentication.md)

@@ -21,14 +21,15 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a4141a27a3b195dbb747a827d2bd9426a948f83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 267a69b9470040dfc60f3c0b280b71e3f52dbc88
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：在字符串中放置引号（Windows 窗体）
-有时可能需要将引号（“”）放入文本字符串中。 例如：  
+有时可能需要将引号（“”）放入文本字符串中。 例如:  
   
  她说：“该好好款待你了！”  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-     - 或 -  
+     或  
   
 2.  插入 ASCII 字符或 Unicode 字符表示引号。 在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中，使用 ASCII 字符 (34)。 在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中，使用 Unicode 字符 (\u0022)。  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  在本示例中，不能使用 \u0022，因为不能使用指定基本字符集中字符的通用字符名。 否则，将产生 C3851。 有关详细信息，请参阅[编译器错误 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)。  
   
-     - 或 -  
+     或  
   
 3.  还可以为该字符定义一个常数，然后在需要时使用。  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/21/2017
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TextBox>  
  <xref:Microsoft.VisualBasic.ControlChars.Quote>  
  [TextBox 控件概述](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b367b5133cd765fe7e160cd2706589c1773eeb59
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-find-and-findcriteria"></a>Discovery Find 和 FindCriteria
 发现查找操作是发现功能中的主要操作之一，它由客户端启动，用于发现一个或多个服务。 执行查找时将通过网络发送一条 WS-Discovery Probe 消息。 与指定条件匹配的服务通过 WS-Discovery ProbeMatch 消息进行答复。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]发现消息，请参阅[Ws-discovery 规范](http://go.microsoft.com/fwlink/?LinkID=122347)。  
@@ -74,9 +75,9 @@ FindResponse findResponse = discoveryClient.Find(findCriteria);
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [WCF Discovery 概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [使用 Discovery 客户端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+## <a name="see-also"></a>请参阅  
+ [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [使用发现客户端通道](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [通过范围进行发现](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  [异步查找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [基本](../../../../docs/framework/wcf/samples/basic-sample.md)

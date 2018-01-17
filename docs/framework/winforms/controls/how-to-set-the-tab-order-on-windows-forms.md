@@ -21,17 +21,18 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7acca633a5a2b98d7c4b6dd64355996e763d6df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d514b20381b44102076c776d12181df3838e4eaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>如何：设置 Windows 窗体上的 Tab 键顺序
 Tab 键顺序是在其中用户焦点从一个控件移到另一个通过按 TAB 键顺序。 每个窗体具有其自己的 tab 键顺序。 默认情况下，tab 键顺序是创建控件的顺序相同。 Tab 键顺序编号从 0 开始。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-set-the-tab-order-of-a-control"></a>若要设置控件的 tab 键次序  
   
@@ -64,7 +65,7 @@ Tab 键顺序是在其中用户焦点从一个控件移到另一个通过按 TAB
     > [!NOTE]
     >  单选按钮组具有一个制表位运行时。 所选的按钮 (即，具有的按钮其<xref:System.Windows.Forms.RadioButton.Checked%2A>属性设置为`true`) 具有其<xref:System.Windows.Forms.Control.TabStop%2A>属性自动设置为`true`，而其他按钮拥有其<xref:System.Windows.Forms.Control.TabStop%2A>属性设置为`false`。 有关更多信息分组<xref:System.Windows.Forms.RadioButton>控件，请参阅[分组用作一组 Windows 窗体 RadioButton 控件](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
  [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 979a410020ab6e3a1f2c15dcee52b062eb00c1ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 801ebb97c6ee52ce52bbb8f96a07d55e68ca6f1d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox-control-overview-windows-forms"></a>ComboBox 控件概述（Windows 窗体）
 Windows 窗体<xref:System.Windows.Forms.ComboBox>控件用于在下拉组合框中显示数据。 默认情况下，<xref:System.Windows.Forms.ComboBox>控件出现在两个部分： 顶部是文本框中，用户可以键入列表项。 第二部分是显示的项，用户可以从中选择一个列表的列表框。 有关其他样式组合框的详细信息，请参阅[何时使用 Windows 窗体 ComboBox Instead of ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)。  
@@ -32,7 +33,7 @@ Windows 窗体<xref:System.Windows.Forms.ComboBox>控件用于在下拉组合框
   
  若要添加或删除中的项<xref:System.Windows.Forms.ComboBox>控制，请使用<xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>， <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>，<xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A>或<xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A>方法。 或者，你可以向列表添加项使用<xref:System.Windows.Forms.ComboBox.Items%2A>设计器中的属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ComboBox>  
  [ListBox 控件概述](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
  [何时使用 Windows 窗体 ComboBox 而非 ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 06fc335e4b8011afd92e698b20e4b84572b153c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 133d48baa9613ea698b6d6a21f0dfe88a798859c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="garbage-collection-etw-events"></a>垃圾回收 ETW 事件
 <a name="top"></a> 这些事件可收集有关垃圾回收的信息。 它们可帮助进行诊断和调试，包括确定垃圾回收执行的次数、垃圾回收期间释放的内存量等。  
@@ -116,7 +117,7 @@ ms.lasthandoff: 10/18/2017
   
  下表显示了事件信息。  
   
-|Event|事件 ID|描述|  
+|Event|事件 ID|说明|  
 |-----------|--------------|-----------------|  
 |`GCHeapStats_V1`|4|在每次垃圾回收结束时显示堆统计信息。|  
   
@@ -374,5 +375,5 @@ ms.lasthandoff: 10/18/2017
   
  无事件数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

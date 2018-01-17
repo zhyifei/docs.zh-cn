@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc04f0ce1d303a32cbf2232c76bfc4ef1143c9ea
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transacted-batching"></a>事务处理批处理
 本示例演示如何通过使用消息队列 (MSMQ) 来批处理事务处理读取。 事务处理批处理是排队通信中事务处理读取的一种性能优化功能。  
@@ -113,7 +114,7 @@ ms.lasthandoff: 12/02/2017
   
 4.  若要在远程计算机上运行数据库，请更改连接字符串，使其指向数据库所在的计算机。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  若要运行此示例，必须安装 MSMQ 并需要使用 SQL 或 SQL Express。  
   
 ## <a name="demonstrates"></a>演示  
@@ -384,4 +385,4 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b9b19e111e11097cbb4b4af60ae0b28956a4a381
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 869e3b81e94e6efaa8d6cd9f4f021b52b6b43f48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 开发和部署承载于 Internet 信息服务 (IIS) 中的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务包括以下任务：  
@@ -112,7 +113,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
   
  例如，配置为使用 HTTP 摘要式身份验证的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点必须驻留在也配置为允许 HTTP 摘要式身份验证的 IIS 虚拟目录中。 IIS 设置和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点设置的不匹配组合会导致服务激活期间出错。  
   
-## <a name="see-also"></a>另请参阅  
- [在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Internet 信息服务承载最佳实践](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+## <a name="see-also"></a>请参阅  
+ [在 Internet Information Services 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [Internet Information Services 承载最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [Windows Server App Fabric 承载功能](http://go.microsoft.com/fwlink/?LinkId=201276)

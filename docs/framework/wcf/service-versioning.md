@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 679a6a30e72e18547a04007c58c82d5f121893d0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-versioning"></a>服务版本控制
 服务（及其公开的终结点）在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 每次更改都会引入服务的一个新版本。 本主题说明如何考虑 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的版本管理。  
@@ -185,7 +186,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  该服务协定将更新为包含按照 `PurchaseOrderV2` 编写的新操作。 按照 `IPurchaseOrderV1` 编写的现有业务逻辑对于 `PurchaseOrderV2` 仍然可用，并且需要 `OrderDate` 属性的新业务逻辑将按照 `IPurchaseOrderV2` 编写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  

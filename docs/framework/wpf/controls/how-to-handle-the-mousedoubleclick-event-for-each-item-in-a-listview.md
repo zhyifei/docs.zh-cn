@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 53c40e9e3b02bdf33a073a93d28b619e399e375f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3fef9655ab95328e027a303df57c3359a7676eac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>如何：处理 ListView 中每一项的 MouseDoubleClick 事件
 若要处理的事件中的项<xref:System.Windows.Controls.ListView>，你需要将事件处理程序添加到每<xref:System.Windows.Controls.ListViewItem>。 当<xref:System.Windows.Controls.ListView>绑定到数据源，你无需显式创建<xref:System.Windows.Controls.ListViewItem>，但你可以通过添加处理每个项的事件<xref:System.Windows.EventSetter>为的样式<xref:System.Windows.Controls.ListViewItem>。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  尽管它是最常见绑定<xref:System.Windows.Controls.ListView>到数据源，可以使用一种样式，将事件处理程序添加到每个<xref:System.Windows.Controls.ListViewItem>中非-数据绑定<xref:System.Windows.Controls.ListView>无论是否显式创建<xref:System.Windows.Controls.ListViewItem>。  有关详细信息创建显式和隐式<xref:System.Windows.Controls.ListViewItem>控件，请参阅<xref:System.Windows.Controls.ItemsControl>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.XmlElement>  
  [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  

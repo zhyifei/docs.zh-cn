@@ -19,11 +19,12 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9818231a68f5c2ac2a6852f27e4876baa9728e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>演练： 我第一个 WPF 桌面应用程序
 本演练中提供的开发的简介[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]包括元素所共有的大多数的应用程序[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序：[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]标记、 代码隐藏、 应用程序定义、 控件、 布局、数据绑定和样式。 
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  用于生成本演练的示例代码已适用于[!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]和[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]在[生成 WPF 应用程序简介](http://go.microsoft.com/fwlink/?LinkID=160008)。 
 
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
 
 - [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)] 或更高版本
 

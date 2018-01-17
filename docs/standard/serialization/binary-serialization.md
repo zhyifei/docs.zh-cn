@@ -1,6 +1,6 @@
 ---
 title: "二进制序列化"
-ms.date: 11/20/2017
+ms.date: 01/02/2018
 ms.prod: .net
 ms.topic: article
 helpviewer_keywords:
@@ -14,11 +14,14 @@ ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 caps.latest.revision: "5"
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: b29435b3e9918caf130bb9a0a3a81707a069b4c7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5547322759dcafb25e9f1c8541fa67876d0cd401
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="binary-serialization"></a>二进制序列化
 
@@ -183,6 +186,7 @@ ms.lasthandoff: 11/28/2017
 - <xref:System.DuplicateWaitObjectException?displayProperty=nameWithType>（适用于.NET 核心 2.0.4 和更高版本）
 - <xref:System.EntryPointNotFoundException?displayProperty=nameWithType>（适用于.NET 核心 2.0.4 和更高版本）
 - <xref:System.Enum?displayProperty=nameWithType>   
+- <xref:System.EventArgs?displayProperty=nameWithType>（适用于.NET 核心 2.0.6 和更高版本）
 - <xref:System.Exception?displayProperty=nameWithType>   
 - <xref:System.ExecutionEngineException?displayProperty=nameWithType>（适用于.NET 核心 2.0.4 和更高版本）
 - <xref:System.FieldAccessException?displayProperty=nameWithType>（适用于.NET 核心 2.0.4 和更高版本）

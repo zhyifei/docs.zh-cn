@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 046907af6a8f88760f2be12c3c5608b16a24b28a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7771b9a4d5a6c0fb4349894afd348e9dece27fd9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-error-handling"></a>高级错误处理
 此示例演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 路由服务。 路由服务是一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 组件，使用该组件可方便地在应用程序中包含基于内容的路由器。 此示例使用事务和其他更加复杂的消息传递概念（如多播）演示如何智能地将路由服务从错误中恢复过来。  
@@ -105,5 +106,5 @@ ms.lasthandoff: 12/02/2017
 ### <a name="real-world-scenario"></a>实际方案  
  Contoso 希望通过路由服务利用事务性接收，以确保即使在出现错误的情况下，所有必要服务也可接收信息。 此外，还希望在无法传递消息时，即使利用错误处理逻辑，也可自动地正确处理错误并报告失败。 为此，将路由服务配置为按预期方式故障转移到特定终结点，并且路由服务处理错误情况，具体包括根据需要创建、完成和回滚/中止事务/接收上下文。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

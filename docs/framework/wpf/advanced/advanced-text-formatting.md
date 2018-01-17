@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1828b6ffe2d24c2bfb98b4668a9540adf5978e5f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9bb2664b267301fdf1e3a67e385595a5d28212bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-text-formatting"></a>高级文本格式设置
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供一组可靠的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]在你的应用程序中包含文本。 布局和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Controls.TextBlock>、 提供最常见和常规使用元素的文本表示形式。 绘制[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，提供一种在绘图中包括格式化的文本。 在最高级别，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供一个可扩展的文本格式引擎，用于控制文本呈现，例如文本存储管理、 运行的文本格式设置管理和嵌入的对象管理的各个方面。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 
   
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  本主题假定你熟悉更高级别的[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]用于呈现文本。 大多数用户方案都不需要进行高级的文本格式[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]本主题中讨论。 有关不同的文本的简介[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，请参阅[WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
   
 <a name="section1"></a>   
@@ -104,6 +105,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="specifying-formatting-properties"></a>指定格式设置属性  
  <xref:System.Windows.Media.TextFormatting.TextRun>对象设置格式的使用提供的文本存储属性。 这些属性包括分为两种类型，<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties>处理涉及段落的属性，如<xref:System.Windows.TextAlignment>和<xref:System.Windows.FlowDirection>。 <xref:System.Windows.Media.TextFormatting.TextRunProperties>是可以为每个文本域中的段落，如前景画笔，不同的属性<xref:System.Windows.Media.Typeface>，和字体大小。 若要实现自定义的段落，然后运行属性类型的自定义文本，你的应用程序必须创建派生自的类<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>分别。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

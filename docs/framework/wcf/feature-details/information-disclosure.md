@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1bf20f11e7077c981e73aa087c654b9cf0c87bcb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf47ce71c70ab9054b1417bab7ae05d9c029188
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="information-disclosure"></a>信息泄露
 信息泄露会使攻击者获得有价值的系统相关信息。 因此，应始终考虑到您正在泄露何种信息以及恶意用户是否可能使用这些信息。 下面列出了可能的信息泄露攻击并针对每种攻击提供了缓解措施。  
@@ -66,10 +67,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  如果指定了域，但使用终结点标识功能指定了无效的服务主体名称，则会使用 NTLM。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何指定终结点标识，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [提升权限](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [被篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
+ [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
  [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [重播攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

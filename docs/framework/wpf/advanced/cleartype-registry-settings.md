@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc4411c8141579150cde1bda2e46d7d2abe42e9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d915af4ee436bb6c661a7b412b0e36702191339a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 注册表设置
 本主题提供的概述[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]所使用的注册表设置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
@@ -91,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="pixel-structure"></a>像素结构  
  像素结构描述构成显示设备的像素的类型。 像素结构定义为三种类型之一：  
   
-|类型|值|说明|  
+|类型|“值”|描述|  
 |----------|-----------|-----------------|  
 |平面|0|显示设备没有像素结构。 这意味着每种颜色的光源均匀分布在像素区域上，称为灰度呈现。 这是标准显示设备的工作方式。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 从不应用于呈现的文本。|  
 |RGB|1|显示设备的像素由三种色条按以下顺序构成：红色、绿色和蓝色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 应用于呈现的文本。|  
@@ -124,6 +125,6 @@ ms.lasthandoff: 11/21/2017
   
  ![注册表编辑器中的 ClearType 设置](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
  [ClearType 抗锯齿](https://msdn.microsoft.com/library/dd183433(v=vs.85).aspx)

@@ -16,18 +16,18 @@ ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 943bf4c80d88633cad857896381efcbef69683cc
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 8bb7b970d42a44ad925883b7a935aae386b1f1d5
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>如何：使用 LINQ 调用存储过程 (Visual Basic)
 语言集成查询 (LINQ)，可以轻松地访问数据库信息，包括数据库对象，如存储过程。  
   
  下面的示例演示如何创建的应用程序在 SQL Server 数据库中调用的存储的过程。 此示例演示如何调用数据库中的两个不同的存储的过程。 每个过程会返回查询的结果。 一个过程采用输入的参数或其他过程不采用参数。  
   
- 本主题中的示例使用 Northwind 示例数据库。 如果你的开发计算机上没有 Northwind 示例数据库，您可以下载它从[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web 站点。 有关说明，请参阅[下载示例数据库](../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+ 本主题中的示例使用 Northwind 示例数据库。 如果你的开发计算机上没有 Northwind 示例数据库，您可以下载它从[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web 站点。 有关说明，请参阅[下载示例数据库](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -76,9 +76,9 @@ ms.lasthandoff: 12/09/2017
   
 4.  按 F5 运行项目，并查看结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [查询](../../../../visual-basic/language-reference/queries/queries.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [DataContext 方法 （O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
  [如何： 分配存储的过程以便执行更新、 插入和删除操作 （O/R 设计器）](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

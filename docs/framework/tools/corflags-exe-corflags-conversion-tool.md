@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca3e9dbe5578623ccc67898c6f08213c31ad8e23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 111c697d4d62cd52cd7913039e3c17e8a25ab50d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe（CorFlags 转换工具）
 利用 CorFlags 转换工具，你配置可移植可执行映像标头的 CorFlags 部分。  
@@ -60,7 +61,7 @@ CorFlags.exe assembly [options]
 ## <a name="remarks"></a>备注  
  如果未指定任何选项，则 CorFlags 转换工具将显示指定程序集的标志。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [64 位应用程序](../../../docs/framework/64-bit-apps.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

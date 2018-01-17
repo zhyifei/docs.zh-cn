@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b3b097f9bca790d1f19da9d75f834c6277507d8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: efaa9f3e72af6f5ed948b974920564188ae42b44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>数据绑定和 LINQ to DataSet
 *数据绑定*是在应用程序 UI 和业务逻辑之间建立连接的过程。 如果绑定具有正确的设置，并且数据提供适当的通知，则在数据更改其值时，绑定到该数据的元素会自动反映更改。 <xref:System.Data.DataSet> 是数据驻留在内存中的表示形式，不管包含的数据来自什么数据源，它都可以提供一致的关系编程模型。 使用 ADO.NET 2.0 <xref:System.Data.DataView> 可以对存储在 <xref:System.Data.DataTable> 中的数据进行排序和筛选。 数据绑定应用程序中经常会使用此功能。 通过使用 <xref:System.Data.DataView>，您可以使用不同的排序顺序公开表中的数据，并且可以按行状态或基于筛选器表达式来筛选数据。 有关详细信息<xref:System.Data.DataView>对象，请参阅[Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)。  
@@ -36,14 +37,14 @@ ms.lasthandoff: 10/18/2017
  [使用 DataView 进行排序](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
  说明如何使用 <xref:System.Data.DataView> 进行排序。  
   
- [查询在 DataView 中的 DataRowView 集合](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
+ [在 DataView 中查询 DataRowView 集合](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
  提供有关查询由 <xref:System.Data.DataRowView> 公开的 <xref:System.Data.DataView> 集合的信息。  
   
  [DataView 性能](../../../../docs/framework/data/adonet/dataview-performance.md)  
  提供有关 <xref:System.Data.DataView> 和性能的信息。  
   
- [如何： 将 DataView 对象绑定到 Windows 窗体 DataGridView 控件](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ [如何：将 DataView 对象绑定到 Windows 窗体 DataGridView 控件](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  说明如何将 <xref:System.Data.DataView> 对象绑定到 <xref:System.Windows.Forms.DataGridView>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

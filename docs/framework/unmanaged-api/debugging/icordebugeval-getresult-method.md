@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7379237c73d79d9e8c66112a101edadca357cb10
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7f3d17e28686d1697417dd380782b1f037e0b5a4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult 方法
 获取此评估的结果。  
@@ -47,7 +48,7 @@ HRESULT GetResult (
   
  如果计算通常情况下，完成`ppResult`指定结果。 如果它终止的异常，则结果将是引发的异常。 如果计算一个新对象，则结果是对新对象的引用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

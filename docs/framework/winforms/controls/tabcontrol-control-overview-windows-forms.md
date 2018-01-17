@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 707fb08e487acc8a585e9fe9a246e7485d5e2749
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04407ca8ddb51658ffd9cc4078d8f545c08e9312
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.TabControl> 显示多个选项卡，就像笔记本中的分隔线或档案柜中一组文件夹的标签。 选项卡可以包含图片和其他控件。 你可以使用选项卡控件生成出现 Windows 操作系统，如控件面板显示属性中的许多位置多页对话框中的类型。 此外，<xref:System.Windows.Forms.TabControl>可用来创建用于设置一组相关属性的属性页。  
@@ -31,7 +32,7 @@ Windows 窗体 <xref:System.Windows.Forms.TabControl> 显示多个选项卡，�
 ## <a name="working-with-tabcontrol"></a>使用 TabControl  
  最重要属性<xref:System.Windows.Forms.TabControl>是<xref:System.Windows.Forms.TabControl.TabPages%2A>，其中包含的各个选项卡。 每个单独的选项卡<xref:System.Windows.Forms.TabPage>对象。 单击选项卡时，它会发出<xref:System.Windows.Forms.Control.Click>事件，<xref:System.Windows.Forms.TabPage>对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.TabControl>  
  [TabControl 控件](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
  [如何：更改 Windows 窗体 TabControl 控件的外观](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  

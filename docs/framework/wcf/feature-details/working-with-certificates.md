@@ -17,11 +17,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63f9d22c571a007653fc794dc7638c8221a676aa
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和证书来完成常见任务。  
@@ -179,9 +180,9 @@ ms.lasthandoff: 12/02/2017
   
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 第一版中，执行映射无需考虑域策略。 因此，如果启用了映射，而 X.509 证书不满足域策略，则在第一版下运行正常的早期应用程序，可能会失败。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels>  
  <xref:System.ServiceModel.Security>  
  <xref:System.ServiceModel>  
  <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

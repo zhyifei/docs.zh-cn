@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b93b442d21d34eea5031cea565bdcf62139abc81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 786620b0daf1cd22a95f9d0c94b7fc3d17c1a2c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a>&lt;backupList&gt; 的 &lt;add&gt;
 表示定义备份终结点元素的配置元素。  
@@ -55,5 +56,5 @@ ms.lasthandoff: 12/02/2017
 |-------------|-----------------|  
 |[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含你想要用于在的情况下无法访问主终结点的路由服务的终结点的列表。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType> 

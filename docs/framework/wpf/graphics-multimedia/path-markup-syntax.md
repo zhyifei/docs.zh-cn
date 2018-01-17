@@ -18,17 +18,18 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f2b04dfa51f578ba80e2b766f455719afbb86b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-markup-syntax"></a>路径标记语法
 路径中讨论了[形状和 WPF 概述中的基本绘图](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)和[几何图形概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)，但是，本主题详细地介绍了功能强大且复杂的最小化语言，可用于指定路径几何图形更简洁使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要了解本主题，你应该熟悉的基本功能<xref:System.Windows.Media.Geometry>对象。 有关详细信息，请参阅[几何图形概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
   
 <a name="abouthisdocument"></a>   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------------------------------------|  
 |`<`*对象**属性* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
   
-|术语|说明|  
+|术语|描述|  
 |----------|-----------------|  
 |*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 指定是否<xref:System.Windows.Media.StreamGeometry>使用<xref:System.Windows.Media.FillRule.EvenOdd>或<xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>。<br /><br /> -   `F0`指定<xref:System.Windows.Media.FillRule.EvenOdd>填充规则。<br />-   `F1`指定<xref:System.Windows.Media.FillRule.Nonzero>填充规则。<br /><br /> 如果省略此命令，则子路径使用默认行为，即<xref:System.Windows.Media.FillRule.EvenOdd>。 如果指定该命令，须先设置命令。|  
 |*figureDescription*|图形由一个移动命令，绘制命令和一个可选的关闭命令组成。<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`H`  *x*<br /><br /> - 或 -<br /><br /> `h`  *x*|  
   
-|术语|说明|  
+|术语|描述|  
 |----------|-----------------|  
 |*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> 线条终点的 x 坐标。|  
   
@@ -166,7 +167,7 @@ ms.lasthandoff: 11/21/2017
 |------------|  
 |`S` `controlPoint`2`endPoint`<br /><br /> - 或 -<br /><br /> `s` `controlPoint`2`endPoint`|  
   
-|术语|说明|  
+|术语|描述|  
 |----------|-----------------|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 曲线的控制点，它决定曲线的结束切线。|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 绘制曲线将通过的点。|  
@@ -234,11 +235,11 @@ ms.lasthandoff: 11/21/2017
   
  也可使用科学计数法。 例如，`+1.e17`是有效的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Shapes.Path>  
  <xref:System.Windows.Media.StreamGeometry>  
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Media.PathFigureCollection>  
  [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

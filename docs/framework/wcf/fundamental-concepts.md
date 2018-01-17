@@ -18,11 +18,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e44ded58e7c48fae281030b5757d0d891d5600e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 基础概念
 本文档高度概括了 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 体系结构。 本文档旨在解释关键概念以及这些概念之间的关系。 有关创建的最简单的版本的教程[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务和客户端，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]编程，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
@@ -117,7 +118,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  数据协定  
  服务使用的数据类型必须在元数据中进行描述， 以使其他各方可以与该服务进行交互操作。 数据类型可以在消息的任何部分使用（例如，作为参数或返回类型）。 如果服务仅使用简单类型，则无需显式使用数据协定。  
   
- Hosting — 承载  
+ 承载  
  服务必须承载于某个进程中。 A*主机*是控制服务的生存期的应用。 服务可以是自承载的，也可以由现有的托管进程进行管理。  
   
  自我承载的服务  
@@ -127,7 +128,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  宿主进程是专为承载服务而设计的应用程序。 这些宿主进程包括 Internet 信息服务 (IIS)、Windows 激活服务 (WAS) 和 Windows 服务。 在这些宿主方案中，由宿主控制服务的生存期。 例如，使用 IIS 可以设置包含服务程序集和配置文件的虚拟目录。 在收到消息时，IIS 将启动服务并控制服务的生存期。  
   
  实例化  
- 每个服务都具有一个实例化模型。 有三种实例化模型：“单个”，在这种模型中，由单个 CLR 对象为所有客户端提供服务；“每个调用”，在这种模型中，将创建一个新的 CLR 对象来处理每个客户端调用；“每个会话”，在这种模型中，将创建一组 CLR 对象，并且为每个独立的会话使用一个对象。 实例化模型的选择取决于应用程序要求和服务的预期使用模式。  
+ 每个服务都具有一个实例化模型。 有三种实例化模型：“单个”，在这种模型中，由单个 CLR 对象为所有客户端提供服务；“每个调用”，在这种模型中，将创建一个新的 CLR 对象来处理每个客户端调用；“每个会话”，在这种模型中，将创建一组 CLR 对象，并且为每个独立的会话使用一个对象。 实例化模型的选择取决于应用程序需求和服务的预期使用模式。  
   
  client application（客户端应用程序）  
  客户端应用程序是与一个或多个终结点交换消息的程序。 客户端应用程序通过创建一个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端实例并调用该 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端的方法来开始工作。 需要注意的是，单个应用程序既可以充当客户端，也可以充当服务。  
@@ -162,7 +163,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  一组不断增加的、在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中予以实现的 Web 服务 (WS) 规范（如 WS-Security、WS-ReliableMessaging 等）的简写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)  
  [安全体系结构](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

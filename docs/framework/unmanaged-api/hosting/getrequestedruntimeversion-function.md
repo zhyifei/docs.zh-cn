@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bfac4e32841b8a8332a1f4124c1326f1ef7da1f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13309a7362f468d3711176db2adc7a82e3b949d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 函数
 获取公共语言运行时 (CLR) 请求指定的应用程序的版本号。 如果未安装该版本，获取在请求的版本之前安装了最新版本。  
@@ -65,7 +66,7 @@ HRESULT GetRequestedRuntimeVersion (
 |ERROR_INSUFFICIENT_BUFFER|在版本缓冲区未足以存储的版本字符串。|  
 |E_POINTER|`pdwLength` 为 null。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
@@ -74,7 +75,7 @@ HRESULT GetRequestedRuntimeVersion (
   
  **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [GetRequestedRuntimeInfo 函数](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
  [GetVersionFromProcess 函数](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
  [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 87ce3d50d6da6a7c23b13fa10123033efbb6c52c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 756c1d4129aebedea46443613d286a51562a3896
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 结构
 提供可用于代替完整的 `CONTEXT` 结构的简单上下文。  
@@ -52,13 +53,13 @@ struct StackTrace_SimpleContext
 ## <a name="remarks"></a>备注  
  因为堆栈跟踪函数通常需要返回地址、 帧偏移量和堆栈地址，你可以选择使用`SimpleContext`而不是较大的结构`CONTEXT`结构。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

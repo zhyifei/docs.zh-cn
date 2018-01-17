@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 6e05e8cb0c7de638e0c4efe74ffd27ab0dc45508
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 91aa84b0a3d381512faf74f350dc4b43e9a3c598
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-data-to-a-datatable"></a>将数据添加到数据表中
 在创建 <xref:System.Data.DataTable> 并使用列和约束定义其结构之后，您可以将新的数据行添加到表中。 要添加新行，可将一个新变量声明为 <xref:System.Data.DataRow> 类型。 一个新**DataRow**在调用时返回对象<xref:System.Data.DataTable.NewRow%2A>方法。 **DataTable**然后创建**DataRow**对象基于在表中，该结构，由定义<xref:System.Data.DataColumnCollection>。  
@@ -95,7 +96,7 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataRow>  
  <xref:System.Data.DataRowCollection>  

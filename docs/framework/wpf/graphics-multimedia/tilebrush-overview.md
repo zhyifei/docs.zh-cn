@@ -19,18 +19,19 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f759a56233e8cf2b1c1d39862706be518fefe43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7d5e9fa36ddeda0c724eeb0bb46a64d0ba36c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tilebrush-overview"></a>TileBrush 概述
 <xref:System.Windows.Media.TileBrush>对象也为你带来大量的控制如何使用图像、 绘制区域提供<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。 本主题介绍如何使用<xref:System.Windows.Media.TileBrush>功能以获取更好地控制如何<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，或<xref:System.Windows.Media.VisualBrush>绘制区域。  
   
   
 <a name="prerequisite"></a>   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要了解本主题，最好先了解如何使用的基本功能的<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，或<xref:System.Windows.Media.VisualBrush>类。 有关这些类型的简介，请参阅[使用图像、 图形和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
 <a name="tilebrush"></a>   
@@ -131,13 +132,13 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Media.ImageBrush>  
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.VisualBrush>  
  <xref:System.Windows.Media.TileBrush>  
  [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [ImageBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [VisualBrush 示例](http://go.microsoft.com/fwlink/?LinkID=160049)

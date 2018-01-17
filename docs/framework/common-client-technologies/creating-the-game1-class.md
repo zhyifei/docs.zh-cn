@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1e4fd15013f10667b397e010fff56b7bc6a0f641
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7453c4f650e2dcadd3b8fac27b66f4db97fa0136
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-game1-class"></a>创建 Game1 类
 在所有的 Microsoft XNA 项目中，Game1 类都派生自 [Microsoft.Xna.Framework.Game](http://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx) 类，后者提供了 XNA 游戏的基本图形设备初始化、游戏逻辑和呈现代码。 Game1 类相对简单，因为大部分工作是在 GamePiece 和 GamePieceCollection 类中完成的。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[ManipulationXNA#_Game1_DrawGame](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1_drawgame)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控制和惯性](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
  [在 XNA 应用程序中使用控制和惯性](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
  [创建 GamePiece 类](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  

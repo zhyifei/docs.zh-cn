@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 31ae48d62221d45a8457c304a1929886738190c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cab889761c204204e7eda46fde0df42f31b89fbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID 方法
 获取此 ICorDebugThread 的活动部分的当前操作系统标识符。  
@@ -45,7 +46,7 @@ HRESULT GetID (
 ## <a name="remarks"></a>备注  
  操作系统标识符可能发生更改的过程中，执行过程，并且可以的线程的不同部分的值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

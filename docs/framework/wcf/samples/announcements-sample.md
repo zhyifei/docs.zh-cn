@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 045807df433d519b00969812afb0ae2feac94b75
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 485a5f98ead246b02aab4ffc5abebd5c88ea92dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="announcements-sample"></a>公告示例
 此示例显示如何使用发现功能的公告功能。 服务使用公告可以发出包含有关服务的元数据的公告消息。 默认情况下，服务启动时会发送 Hello 公告，服务关闭时会发送 Bye 公告。 这些公告可以进行多播，也可点到点发送。 此示例由两个项目组成，即服务项目和客户端项目。  
@@ -97,4 +98,4 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

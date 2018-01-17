@@ -23,11 +23,14 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e85ee15223bc135384d698a175d57b4fd543747
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5718f19318121c2025b9d92a5947574289c1f4d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-serialization"></a>自定义序列化
 自定义序列化是控制类型的序列化和反序列化的过程。 通过控制序列化，可以确保序列化兼容性。换而言之，在不中断类型核心功能的情况下，可在类型的不同版本之间序列化和反序列化。 例如，在类型的第一个版本中，可能只有两个字段。 在类型的下一个版本中，添加了其他几个字段。 但是，第二个版本的应用程序必须可对这两种类型进行序列化和反序列化。 以下各节说明如何控制序列化。

@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06fb93e30467ce890be11826329f678e1d720b39
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1fa1fb42ba09b1c4e855e3c05e80418d7e278614
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="management"></a>管理
 本节包含演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 管理的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
- [WCF 服务和 Windows 事件跟踪](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
+ [WCF Services and Event Tracing for Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
  演示如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的分析跟踪在 Windows 事件跟踪 (ETW) 中发出事件。  
   
  [WCF 分析跟踪](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
@@ -44,10 +45,10 @@ ms.lasthandoff: 12/02/2017
  [使用性能计数器](../../../../docs/framework/wcf/samples/using-performance-counters.md)  
  演示如何访问 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 性能计数器以及如何创建用户定义的性能计数器。  
   
- [跟踪和消息日志记录](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)  
+ [跟踪和消息日志](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)  
  演示如何启用跟踪和消息日志记录。  
   
- [安全验证](../../../../docs/framework/wcf/samples/security-validation.md)  
+ [安全性验证](../../../../docs/framework/wcf/samples/security-validation.md)  
  演示如何使用自定义行为来验证计算机上的服务，以确保服务符合特定条件。  
   
  [WMI 提供程序](../../../../docs/framework/wcf/samples/wmi-provider.md)  

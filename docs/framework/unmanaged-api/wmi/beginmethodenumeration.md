@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e44c432f9503f96ad4dab9e25b78e6dd148f94c
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 7d843c40a8ab0dd1c48a08126b8c7472505a1732
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函数
 开始为对象提供的方法的枚举。  
@@ -46,7 +47,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 [in]零 (0) 的所有方法，或用于指定枚举的作用域的标志。 在中定义的以下标志*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-返回的常量  |值  |描述  |
+返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制到的类本身中定义的方法枚举。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制从基类继承的属性对枚举。 |
@@ -55,7 +56,7 @@ HRESULT BeginMethodEnumeration (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，或者你可以定义它们常量作为在代码中：
 
-|返回的常量  |值  |描述  |
+|返回的常量  |“值”  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`为非零，并且不是一个指定的标志。 |
 |`WBEM_S_NO_ERROR` | 0 | 函数调用成功。  |
@@ -66,7 +67,7 @@ HRESULT BeginMethodEnumeration (
 
 如果当前对象的类定义，则仅支持此方法调用。 方法操作不能从[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)指向实例的指针。 确保在其中枚举方法的顺序是固定的给定实例[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)。
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  

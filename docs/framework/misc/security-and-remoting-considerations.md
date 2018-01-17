@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94942360aaa91a39c8f46414807490bcb6e0b093
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 38b4f61b334a41cedf812a900265af95f1f52e61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-and-remoting-considerations"></a>安全性和远程处理注意事项
 利用远程处理，你可以在应用程序域、进程或计算机之间设置透明的调用。 但是，代码访问安全堆栈审核不能跨越进程边界或计算机边界（它确实应用于同一进程的不同应用程序域之间）。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/18/2017
   
  通常，默认的应用程序域将创建子应用程序域，每一个子域中带有一个控件对象。 控件对象管理新的应用程序域，它有时从默认应用程序域接受命令，但实际上它不能直接与该域联系。 有时，默认的应用程序域将针对控件对象调用其代理。 但是，有时候控件对象可能需要回调到默认的应用程序域。 在这些情况下，默认的应用程序域向控件对象的构造函数传递一个引用封送回调对象。 控件对象负责保护此代理。 如果控件对象要在公共类的公共静态字段上放置此代理，或者以其他方式公开此代理，则会形成一种危险情形：其他代码将回调到默认的应用程序域。 因此，为使代理保持为私有的，总是隐式信任控件对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

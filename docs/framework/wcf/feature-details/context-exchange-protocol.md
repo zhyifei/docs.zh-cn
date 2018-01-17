@@ -13,14 +13,15 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ef5406831e1bfaa9c1c4f959363bc8b26cd3820
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f19b228eadcf8dabfaba2fc31f4f49f1b4d149b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="context-exchange-protocol"></a>上下文交换协议
-本节介绍 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 发行版中引入的上下文交换协议。 此协议允许客户端通道接受某个服务提供的上下文，并将其应用于通过相同客户端通道实例发送的针对该服务的所有后续请求。 上下文交换协议的实现可以使用以下两个机制之一在服务器和客户端之间传播上下文：HTTP Cookie 或 SOAP 标头。  
+本部分介绍在中引入的上下文交换协议[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)][!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]释放。 此协议允许客户端通道接受某个服务提供的上下文，并将其应用于通过相同客户端通道实例发送的针对该服务的所有后续请求。 上下文交换协议的实现可以使用以下两个机制之一在服务器和客户端之间传播上下文：HTTP Cookie 或 SOAP 标头。  
   
  上下文交换协议是在自定义通道层中实现的。 通道使用 <xref:System.ServiceModel.Channels.ContextMessageProperty> 属性在应用程序层之间来回传递上下文。 对于终结点之间的传输，上下文的值或者在通道层序列化为 SOAP 标头，或者在表示 HTTP 请求和响应的消息属性之间来回转换。 在后一种情况下，应有一个基础通道层将 HTTP 请求和响应消息属性分别与 HTTP Cookie 来回进行转换。 可通过使用 <xref:System.ServiceModel.Channels.ContextExchangeMechanism> 上的 <xref:System.ServiceModel.Channels.ContextBindingElement> 属性来选择用于交换上下文的机制。 有效值为 `HttpCookie` 或 `SoapHeader`。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/02/2017
   
  在传输过程中必须保护上下文的值，使之不会被修改，其原因与保护 WS-Addressing 标头的原因相同（标头可用于确定在将请求调度到服务上的何处）。 因此，当绑定提供消息保护功能时，需要在 SOAP 或传输级对 `wsc:Context` 标头进行数字签名或进行签名并加密。 当使用 HTTP Cookie 来传播上下文时，应使用传输安全来保护 HTTP Cookie。  
   
- 要求支持上下文交换协议的服务终结点可以在其发布的策略中明确此要求。 已经引入了两个新的策略断言来表示要求客户端在 SOAP 级支持上下文交换协议或启用 HTTP Cookie 支持。 由 <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> 属性控制如何将这些断言生成到服务策略中，如下所示：  
+ 要求支持上下文交换协议的服务终结点可以在其发布的策略中明确此要求。 已经引入了两个新的策略断言来表示需求客户端在 SOAP 级支持上下文交换协议或启用 HTTP Cookie 支持。 由 <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> 属性控制如何将这些断言生成到服务策略中，如下所示：  
   
 -   对于 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>，将生成以下断言：  
   
@@ -77,5 +78,5 @@ ms.lasthandoff: 12/02/2017
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Web 服务协议互操作性指南](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

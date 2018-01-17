@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00f1b1f93836f3890a4c3f3797b583a15aeb599f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bfc971cae9c09a75c43f568ccbf1b4608704be30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcertificategt-element"></a>&lt;certificate&gt; 元素
 指定要用于为对等客户端的消息进行签名和加密的 X.509 证书。  
@@ -85,7 +86,7 @@ storeLocation="LocalMachine/CurrentUser"
 </endpointBehaviors>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>  
  <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>  

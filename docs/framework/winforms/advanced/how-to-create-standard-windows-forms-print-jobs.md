@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c2b0ce30f76fe7f8cbdc156c4a8ff5abffafae10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 69499cdee7803de504e960b08754df33602cfcf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>如何：创建标准的 Windows 窗体打印作业
 在 Windows 窗体中打印的基础是<xref:System.Drawing.Printing.PrintDocument>组件-更具体地说，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件。 通过编写代码来处理<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件，你可以指定要打印的内容以及如何将其打印。  
@@ -86,6 +87,6 @@ ms.lasthandoff: 11/21/2017
   
      有关详细信息的 Windows 窗体的详细信息包括如何以编程方式，创建打印作业的打印作业，请参阅<xref:System.Drawing.Printing.PrintPageEventArgs>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Drawing.Printing.PrintDocument>  
  [Windows 窗体打印支持](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

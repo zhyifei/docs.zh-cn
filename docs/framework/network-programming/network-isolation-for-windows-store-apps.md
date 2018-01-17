@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b6c0665a379f02a74bd0f3631aa26b41dd6ece5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba7e480f50d3a339648229f17152eb28b28ec159
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows 应用商店应用的网络隔离
 <xref:System.Net>、<xref:System.Net.Http> 和 <xref:System.Net.Http.Headers> 命名空间中的类可用于开发 Windows 应用商店应用或桌面应用。 在 Windows 应用商店应用中使用时，这些命名空间中的类会受到网络隔离（[!INCLUDE[win8](../../../includes/win8-md.md)] 使用的应用程序安全模型的一部分）的影响。 必须在应用清单中为 Windows 应用商店应用启用适当的网络功能，以便系统允许网络访问。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
  有关如何配置用于排除网络隔离的网络功能和隔离工具的详细信息，请参阅 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 开发人员文档中的[如何配置网络隔离功能](http://go.microsoft.com/fwlink/?LinkID=228265)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接到 web 服务](http://go.microsoft.com/fwlink/?LinkID=245696)  
  [指南和网络隔离的核对清单](http://go.microsoft.com/fwlink/?LinkID=228265)  
  [快速入门： 使用 HttpClient 进行连接](http://go.microsoft.com/fwlink/?LinkId=245697)  

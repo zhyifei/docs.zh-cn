@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ba541b367e56a809fa444528dccd69860c4de46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8831566daca6ca36b40fbaaedbec9ff3ca8aaa99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>如何：调用打印对话框
 若要使你能够从你应用程序打印，可以只需创建并打开<xref:System.Windows.Controls.PrintDialog>对象。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  严格地说，你可以使用<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>方法，而不断打开此对话框。 在这种意义上，控件可以用作不可见的打印组件。 但出于性能原因，它会更好的做法可以使用两种<xref:System.Printing.PrintQueue.AddJob%2A>方法或一个多<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>和<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>。 有关详细信息，请参阅[以编程方式打印 XPS 文件](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)和。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Controls.PrintDialog>  
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)  

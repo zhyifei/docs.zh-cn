@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 22a2eb72dc06a644171c143a61698e661d2c66c6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
 .NET Framework 提供了一组全面而集成的类，可用来方便地生成可以识别 XML 的应用程序。 通过以下命名空间中的类，可以分析和编写 XML，编辑内存中的 XML 数据，进行数据验证以及 XSLT 转换。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 10/18/2017
   
  有关完整列表，请参阅 [System.Xml 命名空间](http://msdn.microsoft.com/library/gg145036.aspx)网页。  
   
- 这些命名空间中的类支持万维网联合会 (W3C) 建议。 例如:   
+ 这些命名空间中的类支持万维网联合会 (W3C) 建议。 例如:  
   
 -   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 类可实现 [W3C 文档对象模型 (DOM) 级别 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 级别 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)建议。  
   

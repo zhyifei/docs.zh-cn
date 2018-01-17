@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f8a7892900149380c979f0bee1a4229407af8c9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53eaa411dc405142461de99bc787eba7a5d52db6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugreferencevalueisnull-method"></a>ICorDebugReferenceValue::IsNull 方法
 获取一个值，该值指示此 ICorDebugReferenceValue 是否为空值，在这种情况下`ICorDebugReferenceValue`不指向的对象。  
@@ -42,7 +43,7 @@ HRESULT IsNull (
  `pbNull`  
  [out]一个布尔值，是一个指向`true`如果此`ICorDebugReferenceValue`对象为空; 否则为`pbNull`是`false`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  

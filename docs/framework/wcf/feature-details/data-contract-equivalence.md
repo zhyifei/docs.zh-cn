@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7367cabecc18f32860e0a391ce5cf48d54503dc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4059fa401d082f4408080cf5fd13f1331314a2d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-equivalence"></a>数据协定等效性
 对于客户端要将某种类型的数据成功发送到服务，或者服务要将数据成功发送到客户端的情况，接收端上并不一定必须存在此发送数据类型。 唯一的需求是两种类型的数据协定应该等效。 (有时，严格等效性不是必需的如中所述[数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。)  
@@ -69,9 +70,9 @@ ms.lasthandoff: 12/02/2017
   
  在应用程序之间传递参数和返回值时，如果所需类型为接口，则等效于所需类型为 <xref:System.Object> 类型。 由于每种类型最终都派生自 <xref:System.Object>，因此所有数据协定最终都派生自 <xref:System.Object> 的数据协定。 这样，在要求使用接口时，就可以传递任何数据协定类型。 需要其他步骤来成功处理的接口;有关详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  [数据成员顺序](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [数据协定已知的类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e7242e98a69083ca8d5a6d8d54e9b25279abb7bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64d55a951795cc5efc1bfc624dbe07575be153aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 方法
 其初始值为零或 null 创建指定类型的值。  
@@ -59,7 +60,7 @@ HRESULT CreateValue (
   
  如果值`elementType`是 ELEMENT_TYPE_CLASS，获取"ICorDebugReferenceValue"(在返回`ppValue`) 表示空对象引用。 此对象可用于向函数求值的对象引用参数传递 null。 无法设置`ICorDebugValue`任何内容; 它始终仍是 null。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
@@ -68,7 +69,7 @@ HRESULT CreateValue (
   
  **.NET framework 版本：** 1.1、 1.0  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
     
  [CreateValueForType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)  
  ICorDebugValue

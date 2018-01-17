@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 33cf6631e34a36a6a751993385f942d7cfde8e23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 329f66dadc344cf90fd690cb21b45bc7b9cecef9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>UI 自动化对 Separator 控件类型的支持
 > [!NOTE]
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参见备注|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|""|Separator 控件不需要 NameProperty。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`null`|Separator 控件没有静态标签。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Separator|此值对于所有 UI 框架均相同。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|分隔符|此值对于所有 UI 框架均相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“分隔符”|与 Separator 控件类型相对应的已本地化字符串。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|Separator 控件不包含内容。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|Separator 控件必须始终是一个控件。|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必需|无|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Automation.ControlType.Separator>  
  [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

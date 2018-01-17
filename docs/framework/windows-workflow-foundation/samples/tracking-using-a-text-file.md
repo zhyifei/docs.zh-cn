@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abb29dc584bbede14adcb396df8cd37a894b6f2f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f1d4b3f319d86dd463dabc8b71be7c76c7fef41f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking-using-a-text-file"></a>使用文本文件跟踪
 此示例演示如何通过创建自定义跟踪参与者来扩展 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的跟踪。 跟踪参与者是一些 .NET Framework 类，这些类将接收从运行时发出的跟踪记录。 可以创建一个跟踪参与者以将跟踪事件传输给方案所需的任何目标。 例如，ETW（Windows 事件跟踪）跟踪参与者将作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的一部分提供。 此示例中的跟踪参与者以 XML 格式将记录写入文本文件。  
@@ -100,5 +101,5 @@ ms.lasthandoff: 12/02/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)

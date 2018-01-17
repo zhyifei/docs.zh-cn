@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f88e400556421e0908e0a0b115f66ec3221124c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fc77f2106f5063b8db25f375c354a15f9f936e78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumidentityattribute-interface"></a>IEnumIDENTITY_ATTRIBUTE 接口
 用作当前范围中的代码对象的属性的枚举数。  
@@ -38,12 +39,12 @@ ms.lasthandoff: 10/18/2017
 |`IEnumIDENTITY_ATTRIBUTE::Reset`|将指令指针移到此开头`IEnumIDENTITY_ATTRIBUTE`。|  
 |`IEnumIDENTITY_ATTRIBUTE::Skip`|将指令指针向前移动指定数量的元素，从当前位置开始。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

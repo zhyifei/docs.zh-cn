@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 082d84fe0ac4193f3da5ac9be52789432bde76aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4df092afd4d60811683b4187df78f27ad971cf89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-switches"></a>跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。 它们是代码中存在并可通过 .config 文件在外部配置的对象。 .NET Framework 中提供三种跟踪开关类型： <xref:System.Diagnostics.BooleanSwitch> 类、 <xref:System.Diagnostics.TraceSwitch> 类和 <xref:System.Diagnostics.SourceSwitch> 类。 <xref:System.Diagnostics.BooleanSwitch> 类充当切换开关，可启用或禁用各种跟踪语句。 使用 <xref:System.Diagnostics.TraceSwitch> 和 <xref:System.Diagnostics.SourceSwitch> 类，可以启用特定跟踪级别的跟踪开关，以确保出现为该级别以及其下所有级别指定的 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.TraceSource> 消息。 如果禁用此开关，则不会出现跟踪消息。 所有这些类均派生自抽象 (MustInherit**T:System.Diagnostics.Switch**) 类 **Switch**，用户开发的任何开关也应如此。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
  TraceSwitch **T:System.Diagnostics.Switch** 属性指示开关的最大跟踪级别。 也就是说，将在指定的级别以及其下的所有级别写入跟踪信息。 例如，如果 TraceInfo **T:System.Diagnostics.Switch** 为 **true**，则 **TraceError** 和 **TraceWarning** 也为 **true** ，但 **TraceVerbose** 可能为 **false**。  
   
- 这些属性是只读的。 当设置了 **TraceLevel** 属性时，TraceSwitch **T:System.Diagnostics.Switch** 对象会自动对这些属性进行设置。 例如：  
+ 这些属性是只读的。 当设置了 **TraceLevel** 属性时，TraceSwitch **T:System.Diagnostics.Switch** 对象会自动对这些属性进行设置。 例如:  
   
 ```vb  
 Dim myTraceSwitch As New TraceSwitch("SwitchOne", "The first switch")  
@@ -91,7 +92,7 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ## <a name="developer-defined-switches"></a>开发人员定义的开关  
  除了提供 BooleanSwitch **T:System.Diagnostics.Switch** 和 **TraceSwitch**之外，可以通过从 **Switch** 类继承以及将基类方法重写为自定义的方法定义自己的开关。 有关创建开发人员定义的开关的详细信息，请参阅 .NET Framework 引用中的 <xref:System.Diagnostics.Switch> 类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [如何： 向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
  [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

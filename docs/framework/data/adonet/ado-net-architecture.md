@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 227bef975a54676ceda5f922ed02f98c27fc8759
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2916321ff51f335b40a2cc4eef90cdccdfc25bda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-architecture"></a>ADO.NET 体系结构
 以前，数据处理主要依赖于基于连接的双层模型。 随着数据处理越来越多地使用多层体系结构，程序员正在向断开方法转换，以便为他们的应用程序提供更好的可伸缩性。  
@@ -66,6 +67,6 @@ ADO.NET 体系结构
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的 XML 类集中于 `DataSet` 对象中。 无论 XML 源是文件还是 XML 流，都可以用其中的数据来填充 `DataSet`。 无论 `DataSet` 中数据的源是什么，都可以将 `DataSet` 作为符合万维网联合会 (W3C) 的 XML 进行编写，其架构作为 XML 架构定义语言 (XSD) 架构。 由于 `DataSet` 的本机序列化格式为 XML，因此它是用于在层间移动数据的绝佳媒介，这使 `DataSet` 成为了与 XML Web 服务之间远程处理数据和架构上下文的最佳选择。 有关详细信息，请参阅 [XML 文档和数据](../../../../docs/standard/data/xml/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

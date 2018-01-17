@@ -20,11 +20,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a4819f0c4596c34312bf689d57cca687641d6a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6cefca8e6856680d509d6166eec4d97855f1babc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的大小调整选项
 <xref:System.Windows.Forms.DataGridView>行、 列和标头可以更改由于许多不同的匹配项的大小。 下表显示了这些情况。  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="content-based-sizing-options"></a>基于内容的大小调整选项  
  使用大小调整属性和方法的枚举具有相似基于内容调整大小的值。 使用这些值，你可以限制哪些单元格用于计算的首选的大小。 对于所有大小调整枚举，其名称引用显示的单元格的值限制其计算中显示的行的单元格。 不包括行可用于在你使用了大量的行时避免对性能产生负面影响。 你也可以限制到单元格标头或非标头单元格中的值的计算。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>  

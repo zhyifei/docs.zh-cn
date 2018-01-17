@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b729141055f67f1d37cadfa4422417fe2d73139e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3d89fc465c1e82fab638b57dbf712f1396385f80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltbindingsgt"></a>&lt;绑定&gt;
 此节包含标准绑定和自定义绑定的集合。 每一项都是一个可由其唯一 `binding` 进行标识的 `name` 元素。 服务通过用 `name` 与绑定进行链接来使用绑定。 从 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 开始，不要求绑定和行为具有名称。 有关默认配置和无名称的绑定和行为的详细信息，请参阅[简化配置](../../../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 12/02/2017
   
  自定义绑定由其 `name` 特性来标识。 有关自定义绑定的详细信息，请参阅[自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  

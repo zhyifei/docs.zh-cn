@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a231f5eae92bff8e3d525579dae865aaa0d7e496
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 696a9e2d92b9c44e4aedbcc200b41e5548cd7411
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>如何：在 TreeView 中查找 TreeViewItem
 <xref:System.Windows.Controls.TreeView>控件提供一种简便方式显示分层数据。 如果你<xref:System.Windows.Controls.TreeView>绑定到数据源，<xref:System.Windows.Controls.TreeView.SelectedItem%2A>属性提供便利的方法，让你快速检索所选的数据对象。 通常，最好使用基础数据对象，但有时你可能需要以编程方式操作数据的包含<xref:System.Windows.Controls.TreeViewItem>。 例如，你可能需要以编程方式展开<xref:System.Windows.Controls.TreeViewItem>，或选择不同的项在<xref:System.Windows.Controls.TreeView>。  
@@ -51,5 +52,5 @@ ms.lasthandoff: 10/22/2017
   
  [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [提升 TreeView 的性能](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)

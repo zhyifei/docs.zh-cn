@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97a3c9c618fc7d6c96deba0b72e25ef36c5785e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>匿名客户端的传输安全
 此 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 方案使用传输安全 (HTTPS) 确保保密性和完整性。 必须使用安全套接字层 (SSL) 证书对服务器进行身份验证，并且客户端必须信任服务器的证书。 客户端不通过任何机制进行身份验证，因此是匿名的。  
@@ -124,8 +125,8 @@ ms.lasthandoff: 11/21/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [WS 传输安全](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
- [传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [WS 传输安全性](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
+ [传输安全性概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  [Windows Server App Fabric 的安全模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

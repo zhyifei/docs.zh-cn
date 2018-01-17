@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f23a99418d585f43348cd155bc65a3c3e73742b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ea1f2edf4677e3a04e6dd007dcf0fef9137180fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>如何：使用后台线程搜索文件
 <xref:System.ComponentModel.BackgroundWorker>组件替换，并添加了功能<xref:System.Threading>命名空间; 但是，<xref:System.Threading>命名空间将保留向后兼容性和将来使用，如果你选择。 有关详细信息，请参阅[BackgroundWorker 组件概述](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
@@ -772,7 +773,7 @@ namespace SampleUsage
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.BackgroundWorker>  
  [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [基于事件的异步模式概述](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

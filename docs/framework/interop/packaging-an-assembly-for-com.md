@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 149d0c2595844c5b71767e2ea3ee5b0c6002c080
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="packaging-an-assembly-for-com"></a>将 COM 的程序集打包
 COM 开发人员可从其计划纳入应用程序的托管类型相关信息中受益：  
@@ -88,7 +89,7 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
 ## <a name="net-services-installation-tool"></a>.NET 服务安装工具  
  [.NET 服务安装工具 (Regsvcs.exe)](../../../docs/framework/tools/regsvcs-exe-net-services-installation-tool.md) 将托管类添加到 Windows 2000 组件服务，并在单个工具中组合多个任务。 除加载和注册程序集外，Regsvcs.exe 还可将类型库生成、注册和安装到现有 COM+ 1.0 应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  

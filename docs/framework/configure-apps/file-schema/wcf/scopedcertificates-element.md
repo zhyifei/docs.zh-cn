@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cb1d536d25186dd2d75cec962143b16cdd45260
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 719a52fb1a0f558bda2b337e1402f8aecafc6b8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 元素
 表示特定服务为身份验证提供的 X.509（作用域）证书的集合。 此集合通常用于指定联合方案中安全令牌服务的服务证书。  
@@ -51,7 +52,7 @@ endpointBehaviors 部分
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)|向作用域证书集合添加 X.509 证书。|  
   
@@ -81,14 +82,14 @@ endpointBehaviors 部分
 </serviceCertificate>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
  <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
  <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
  [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [如何： 创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)  
  [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
- [保护服务和客户端](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+ [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

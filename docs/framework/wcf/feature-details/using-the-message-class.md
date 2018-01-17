@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 999b0105bf6ab97eb3ab38423efbc31f9b322254
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-message-class"></a>使用 Message 类
 <xref:System.ServiceModel.Channels.Message> 类是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的基本类。 客户端与服务之间的所有通信最终都会产生要进行发送和接收的 <xref:System.ServiceModel.Channels.Message> 实例。  

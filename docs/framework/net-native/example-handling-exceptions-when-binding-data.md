@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 18f2d06d3a6974b913af663a38a6155b38422232
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2714d53426bfee22b3d83d76b766816d9bc9d60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>实例：处理绑定数据时出现的异常
 > [!NOTE]
@@ -67,6 +68,6 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
  然而，有几种方法可以指定 `ViewModel` 到 XAML 页面，从而让工具链在汇编时间可以将属性绑定与正确的类型关联起来并保存元数据，而不必使用运行时指令。  例如，用户可应用属性上的 [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) 特性。 这会使得 XAML 编译器生成所需的查找信息并避免在 Default.rd.xml 文件中要求一个运行时指令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [示例：故障诊断动态编程](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

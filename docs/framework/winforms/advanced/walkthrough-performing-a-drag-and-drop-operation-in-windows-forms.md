@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe2b54123e117f21f3bda7bc78bc9c5b45fc9ae3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 173af57f1ec5d9ed14afc0ef5d6ddd391e15d534
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>演练：在 Windows 窗体中执行拖放操作
 若要执行拖放操作中基于 Windows 的应用程序必须处理一系列事件，最值得注意的是<xref:System.Windows.Forms.Control.DragEnter>， <xref:System.Windows.Forms.Control.DragLeave>，和<xref:System.Windows.Forms.Control.DragDrop>事件。 通过使用这些事件的事件参数中的可用信息，可以轻松地实现拖放操作。  
@@ -93,9 +94,9 @@ ms.lasthandoff: 11/21/2017
     ```  
   
     > [!NOTE]
-    >  你可以定义自己<xref:System.Windows.Forms.DataFormats>通过指定您自己的对象作为<xref:System.Object>参数<xref:System.Windows.Forms.DataObject.SetData%2A>方法。 在进行该操作时，请确保指定的对象可序列化。 有关更多信息，请参见<xref:System.Runtime.Serialization.ISerializable>。  
+    >  你可以定义自己<xref:System.Windows.Forms.DataFormats>通过指定您自己的对象作为<xref:System.Object>参数<xref:System.Windows.Forms.DataObject.SetData%2A>方法。 在进行该操作时，请确保指定的对象可序列化。 有关详细信息，请参阅<xref:System.Runtime.Serialization.ISerializable>。  
   
-3.  在<xref:System.Windows.Forms.Control.DragDrop>控件将在其中放置发生，使用事件<xref:System.Windows.Forms.DataObject.GetData%2A>方法来检索要拖动的数据。 有关更多信息，请参见<xref:System.Security.Cryptography.Xml.DataObject.Data%2A>。  
+3.  在<xref:System.Windows.Forms.Control.DragDrop>控件将在其中放置发生，使用事件<xref:System.Windows.Forms.DataObject.GetData%2A>方法来检索要拖动的数据。 有关详细信息，请参阅<xref:System.Security.Cryptography.Xml.DataObject.Data%2A>。  
   
      在示例中，<xref:System.Windows.Forms.TextBox>控件是正在拖动到 （将在其中放置发生） 的控件。 该代码设置<xref:System.Windows.Forms.Control.Text%2A>属性<xref:System.Windows.Forms.TextBox>控制等于要拖动的数据。  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  此外，你可以使用<xref:System.Windows.Forms.DragEventArgs.KeyState%2A>属性，以便根据键按下在拖放操作时，某些效果发生 （例如，它位于标准版，以将拖动的数据复制时按下 CTRL 键）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：将数据添加到剪贴板](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
  [如何：从剪贴板检索数据](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
  [拖放操作和剪贴板支持](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)

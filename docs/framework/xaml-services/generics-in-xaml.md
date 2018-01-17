@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 05eaab4497949231d32ceab0ba696b9f252d67ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c0e5bfb4f327028f09e8c898cf07e5fec9a5f789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generics-in-xaml"></a>XAML 中的泛型
 .NET Framework XAML 服务在 System.Xaml 中实现提供对使用泛型的 CLR 类型的支持。 这种支持包括作为类型参数指定的泛型约束和通过调用适当强制约束`Add`泛型集合用例的方法。 本主题描述使用和引用 XAML 中的泛型类型的方面。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
  中的自定义工作流[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]为[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]不支持泛型 XAML 用法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [x:TypeArguments 指令](../../../docs/framework/xaml-services/x-typearguments-directive.md)  
  [x:Class 指令](../../../docs/framework/xaml-services/x-class-directive.md)  
  [常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)

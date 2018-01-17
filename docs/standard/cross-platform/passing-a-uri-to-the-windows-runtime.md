@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4ef77fb9e196abf046e0d4648a49b5d4d3fad47e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 78ba02fa227bd5c10337da0ef8b65ceab476c1ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>向 Windows 运行时传递 URI
 Windows 运行时方法只接受绝对 URI。 如果将一个相对 URI 传递给 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 方法，则将会引发 <xref:System.ArgumentException> 异常。 原因是： 当你使用[!INCLUDE[wrt](../../../includes/wrt-md.md)]在.NET Framework 代码中， [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)类显示为<xref:System.Uri?displayProperty=nameWithType>Intellisense 中。 <xref:System.Uri?displayProperty=nameWithType>类允许相对 Uri，但[Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)类却没有。 这也适用于 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件中公开的方法。 如果组件公开接收 URI 的方法，则代码中的签名包含 <xref:System.Uri?displayProperty=nameWithType>。 但是，你的组件的用户，签名包括[Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)。 传递给组件的 URI 必须是绝对 URI。  
@@ -44,5 +47,5 @@ Windows 运行时方法只接受绝对 URI。 如果将一个相对 URI 传递�
   
  有关这些方案的详细信息，请参阅[URI 方案](http://msdn.microsoft.com/library/windows/apps/jj655406.aspx)Windows 开发人员中心中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

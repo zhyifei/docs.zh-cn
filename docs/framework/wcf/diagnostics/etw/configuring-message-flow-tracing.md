@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfac12fc0c5fbaabf612bbd8cc950f93a59a54c8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-message-flow-tracing"></a>配置消息流跟踪
 启用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 活动跟踪后，系统会将端对端活动 ID 分配到整个 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 堆栈中的逻辑活动。 在 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 中，此功能现在具备性能更高的版本。它与 Windows 事件跟踪 (ETW) 一起使用，称为消息流跟踪。 启用此功能时，端对端活动 ID 取自（如果为空，则分配到）传入消息，并传播到在通道解码消息之后发出的所有跟踪事件。 客户通过此功能，可以在解码来自不同服务的跟踪日志后重新构造消息流。  

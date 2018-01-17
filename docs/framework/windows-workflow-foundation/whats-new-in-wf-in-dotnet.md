@@ -12,11 +12,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 92cc99a80c718811d0184a557efd38dd93fcc949
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f65d5d2f9bfee144f59d9ecf11cd26ab15113139
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什么 &#39; s.NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 [!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引入了许多新功能，如新的活动、设计器功能和工作流开发模型。 重新承载的工作流设计器支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的许多（但不是全部）新工作流功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]新功能支持，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的新工作流功能。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 12/02/2017
   
 5.  这些类型不会使用 <xref:System.Runtime.Serialization.ISerializable> 或 <xref:System.SerializableAttribute> 来进行序列化；要进行序列化的类型必须支持 <xref:System.Runtime.Serialization.DataContractSerializer>。  
   
-6.  使用 <xref:System.Activities.Expressions.LambdaValue%601> 的表达式需要 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>，因此不能在部分信任下使用。 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的工作流应将这些表达式替换为派生自 <xref:System.Activities.CodeActivity%601> 的活动。 。  
+6.  使用 <xref:System.Activities.Expressions.LambdaValue%601> 的表达式需要 <xref:System.Security.Permissions.ReflectionPermissionAttribute.RestrictedMemberAccess%2A>，因此不能在部分信任下使用。 使用 <xref:System.Activities.Expressions.LambdaValue%601> 的工作流应将这些表达式替换为派生自 <xref:System.Activities.CodeActivity%601> 的活动。 .  
   
 7.  在部分信任下，不能使用 <xref:System.Activities.XamlIntegration.TextExpressionCompiler> 或 Visual Basic 承载的编译器来编译表达式，但是可以运行以前编译的表达式。  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4bc4f53c404e3767b9f98ca5ab46b19db31f9c6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2dd45b33fb1f99c280e126b9e601692a85da5dba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：向 Windows 窗体 BindingNavigator 控件添加“加载”、“保存”和“取消”按钮
 <xref:System.Windows.Forms.BindingNavigator>控件是特殊用途<xref:System.Windows.Forms.ToolStrip>旨在用于导航和操作窗体上的控件绑定到数据的控件。  
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/21/2017
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>方法作用于数据的行。 保存在导航到下一条记录之前查看该单个记录时所做的任何更改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.ToolStrip>  
