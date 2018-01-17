@@ -21,12 +21,16 @@ ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>为 .NET Core 应用程序生成 Docker 映像
 
- 本教程重点介绍了如何在 Docker 上使用 .NET Core。 首先介绍了由 Microsoft 提供和维护的不同 Docker 映像，以及相关用例。 然后讲解了如何生成和 Docker 化 ASP.NET Core 应用。
+ 本教程重点介绍了如何在 Docker 上使用 .NET Core。 首先，我们探讨 Microsoft 维护和提供的各种不同的 Docker 映像，及其使用情况。
+ 然后讲解了如何生成和 Docker 化 ASP.NET Core 应用。
 
-在本教程中，可了解以下内容：
+在本教程中可学习：
+
 > [!div class="checklist"]
-> * 了解有关生成 Microsoft .NET Core Docker 映像的信息 
-> * 获取要 Docker 化的 ASP.NET Core 示例应用
+> * 了解 Microsoft.NET 核心 Docker 映像
+ 
+> * 获取用于 dockerize 的 ASP.NET Core 示例应用程序
+
 > * 在本地运行 ASP.NET 示例应用
 > * 使用 Docker for Linux 容器生成和运行示例
 > * 使用 Docker for Windows 容器生成和运行示例
