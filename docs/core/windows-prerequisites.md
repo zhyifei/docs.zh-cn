@@ -6,11 +6,12 @@ ms.author: johalex
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 16a72edde39e4857dbdfb400f195deb9975f993c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: fdbba188cf939ce3eb969a1f780e086fcf17da13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="net-core-dependencies"></a>.NET Core 依赖项
 
-在运行的 Windows 版本早于 Windows 10 和 Windows Server 2016 时，.NET 核心 1.1 和更早版本需要 Visual c + + 可再发行组件。 .NET Core 安装程序自动安装此依赖项。
+在早于 Windows 10 和 Windows Server 2016 的 Windows 版本上运行 .NET Core 1.1 及更低版本时，需要 Visual C++ Redistributable。 .NET Core 安装程序自动安装此依赖项。
 
 如果出现以下情况，必须手动安装 [Microsoft Visual C++ 2015 Redistributable 更新 3](https://www.microsoft.com/download/details.aspx?id=52685)：
 

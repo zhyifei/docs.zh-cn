@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 04fdf26e150e6d489c0641588563f69f24835615
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
@@ -62,33 +63,33 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="linux-distribution-dependencies"></a>Linux 发行版本依赖项
 
-以下打算用作示例。 确切的版本和名称可能选择的 Linux 分发上略有不同。
+以下各项用作示例。 确切的版本和名称可能因所选 Linux 发行版本略有不同。
 
 ### <a name="ubuntu"></a>Ubuntu
 
 Ubuntu 发行版本需要安装以下库：
 
 * libunwind8
-* liblttng ust0
+* liblttng-ust0
 * libcurl3
 * libssl1.0.0
 * libuuid1
 * libkrb5
 * zlib1g
-* （对于 14.X) libicu52
-* （对于 16.X) libicu55
-* （对于 17.X) libicu57
+* libicu52（对于 14.X）
+* libicu55（对于 16.X）
+* libicu57（对于 17.X）
 
 ### <a name="centos"></a>CentOS
 
 CentOS 发行版本需要安装以下库：
 
 * libunwind
-* lttng 必须
+* lttng-ust
 * libcurl
-* openssl 库
+* openssl-libs
 * libuuid
-* krb5 libs
+* krb5-libs
 * libicu
 * zlib
 
@@ -105,7 +106,7 @@ CentOS 发行版本需要安装以下库：
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>使用 .NET Core 安装程序脚本编写安装脚本
 
-`dotnet-install` 脚本用于执行 CLI 工具链和共享运行时的非管理员安装。 你可以下载中的脚本： https://dot.net/v1/dotnet-install.sh
+`dotnet-install` 脚本用于执行 CLI 工具链和共享运行时的非管理员安装。 可从以下位置下载脚本：https://dot.net/v1/dotnet-install.sh
 
 安装程序 bash 脚本用于自动化方案和非管理员安装。 此脚本也读取 PowerShell 开关，因此可以与 Linux/OS X 系统上的脚本结合使用。
 
@@ -211,6 +212,12 @@ CentOS 发行版本需要安装以下库：
 
 3. 设置所需的版本宿主包源。
 
+   **Ubuntu 17.10**
+
+   ```bash
+   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
+   sudo apt-get update
+   ```
    **Ubuntu 17.04**
 
    ```bash
@@ -235,7 +242,7 @@ CentOS 发行版本需要安装以下库：
 4. 安装 .NET Core。
 
    ```bash
-   sudo apt-get install dotnet-sdk-2.0.0
+   sudo apt-get install dotnet-sdk-2.1.3
    ```
 
 4. 运行 `dotnet --version` 命令，以证明安装成功。

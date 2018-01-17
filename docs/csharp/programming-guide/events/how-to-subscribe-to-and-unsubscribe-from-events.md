@@ -12,11 +12,11 @@ ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: deeed6f6b572e04780f0eda1e7e42f1dd6233567
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5555cc8913bff953601c54aa7430143dc22173c0
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何：订阅和取消订阅事件（C# 编程指南）
 如果想编写引发事件时调用的自定义代码，则可以订阅由其他类发布的事件。 例如，可以订阅某个按钮的 `click` 事件，以使应用程序在用户单击该按钮时执行一些有用的操作。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
      还会在项目的 Form1.Designer.cs 文件的 `InitializeComponent` 方法中自动生成订阅该事件所需的代码行。 该代码行类似于：  
   
-    ```  
+    ```csharp
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  定义一个事件处理程序方法，其签名与该事件的委托签名匹配。 例如，如果事件基于 <xref:System.EventHandler> 委托类型，则下面的代码表示方法存根：  
   
-    ```  
+    ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
     {  
        // Do something useful here.  
@@ -52,19 +52,19 @@ ms.lasthandoff: 11/21/2017
   
 2.  使用加法赋值运算符 (`+=`) 来为事件附加事件处理程序。 在下面的示例中，假设名为 `publisher` 的对象拥有一个名为 `RaiseCustomEvent` 的事件。 请注意，订户类需要引用发行者类才能订阅其事件。  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
     ```  
   
      请注意，前面的语法是 C# 2.0 中的新语法。 此语法完全等效于必须使用 `new` 关键字显式创建封装委托的 C# 1.0 语法：  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
      还可以通过使用 lambda 表达式添加事件处理程序：  
   
-    ```  
+    ```csharp
     public Form1()  
     {  
         InitializeComponent();  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
 -   如果以后不必取消订阅某个事件，则可以使用加法赋值运算符 (`+=`) 将匿名方法附加到此事件。 在下面的示例中，假设名为 `publisher` 的对象拥有一个名为 `RaiseCustomEvent` 的事件，并且还定义了一个 `CustomEventArgs` 类以承载某些类型的专用事件信息。 请注意，订户类需要引用 `publisher` 才能订阅其事件。  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
     {  
       string s = o.ToString() + " " + e.ToString();  
@@ -97,15 +97,15 @@ ms.lasthandoff: 11/21/2017
   
 -   使用减法赋值运算符 (`-=`) 取消订阅事件：  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  
     ```  
   
      所有订户都取消订阅事件后，发行者类中的事件实例将设置为 `null`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件](../../../csharp/programming-guide/events/index.md)  
  [事件](../../../csharp/language-reference/keywords/event.md)  
  [如何：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
- [-= 运算符 （C# 参考）](../../language-reference/operators/subtraction-assignment-operator.md)  
+ [-= 运算符（C# 参考）](../../language-reference/operators/subtraction-assignment-operator.md)  
  [+= 运算符](../../../csharp/language-reference/operators/addition-assignment-operator.md)

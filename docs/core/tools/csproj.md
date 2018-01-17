@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.openlocfilehash: 288012e5f1f48ed60a388790ca42371496df92c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 329a74cf083819896aafd7fc7993fa0e8ac8f8c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core 的 csproj 格式的新增内容
 
@@ -37,11 +38,11 @@ ms.lasthandoff: 10/18/2017
 ### <a name="recommendations"></a>建议
 由于隐式引用了 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包，以下是建议的最佳做法：
 
-* 如果目标.NET 核心或标准.NET，绝对不会有对的显式引用`Microsoft.NETCore.App`或`NetStandard.Library`通过 metapackages`<PackageReference>`项目文件中的项。
-* 如果面向.NET 核心时，你需要运行时的特定版本，则应使用`<RuntimeFrameworkVersion>`项目中的属性 (例如， `1.0.4`) 而不是引用 metapackage。
+* 面向 .NET Core 或 .NET Standard 时，绝不通过项目文件中的 `<PackageReference>` 项，对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包进行显式引用。
+* 面向 .NET Core 时，如果需要特定版本的运行时，应使用项目中的 `<RuntimeFrameworkVersion>` 属性（例如，`1.0.4`），而不是引用元包。
     * 例如，如果使用[独立部署](../deploying/index.md#self-contained-deployments-scd)且需要 1.0.0 LTS 运行时的特定修补程序版本，可能会发生这种情况。
-* 如果你需要的特定版本`NetStandard.Library`metapackage 面向.NET 标准时，你可以使用`<NetStandardImplicitPackageVersion>`属性并设置版本需要。
-* 不要显式添加或更新为引用`Microsoft.NETCore.App`或`NetStandard.Library`metapackage 在.NET Framework 项目。 如果任何版本的`NetStandard.Library`时自动使用基于.NET 标准的 NuGet 包，NuGet 安装该版本需要。
+* 面向 .NET Standard 时，如果需要特定版本的 `NetStandard.Library` 元包，可以使用 `<NetStandardImplicitPackageVersion>` 属性并设置所需版本。
+* 请勿在 .NET Framework 项目中显式添加或更新对 `Microsoft.NETCore.App` 或 `NetStandard.Library` 元包的引用。 使用基于 .NET Standard 的 NuGet 包时，如果需要任意版本的 `NetStandard.Library`，NuGet 可自动安装该版本。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 项目中默认包含的编译项
 已通过移动到最新 SDK 版本中的 *csproj* 格式，将默认的编译项和嵌入资源的包含项和排除项移至 SDK 属性文件。 这意味着不需要再在项目文件中指定这些项。 
@@ -71,9 +72,9 @@ ms.lasthandoff: 10/18/2017
 
 此更改不会修改其他包含项的主要机制。 但是，如果要指定（例如，指定某些文件通过应用发布），仍可以使用 *csproj* 中相应的已知机制来实现（例如，`<Content>` 元素）。
 
-`<EnableDefaultCompileItems>`仅禁用`Compile`globs 但不会影响其他 globs，如的隐式`None`glob，也适用于\*.cs 项。 正因如此，**解决方案资源管理器**将继续显示\*.cs 项作为项目的一部分，作为包括`None`项。 在类似的方式，你可以使用`<EnableDefaultNoneItems>`若要禁用的隐式`None`glob。
+`<EnableDefaultCompileItems>` 仅禁用 `Compile` glob，但不会影响其他 glob（如隐式 `None` glob），这也适用于 \*.cs 项。 因此，解决方案资源管理器继续显示在项目中作为 `None` 项的 \*.cs 项。 可按照类似的方式使用 `<EnableDefaultNoneItems>` 禁用隐式 `None` glob。
 
-若要禁用**所有隐式 globs**，你可以设置`<EnableDefaultItems>`属性`false`如以下示例所示：
+要禁用所有隐式 glob，可将 `<EnableDefaultItems>` 属性设置为 `false`，如以下示例所示：
 ```xml
 <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>

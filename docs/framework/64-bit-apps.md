@@ -17,11 +17,12 @@ caps.latest.revision: "53"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ee85512cde0ce50e6a5c34cc5f6acc531c24bc0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e968d64d02780eb8f8d404e533443c7663d3d60f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="64-bit-applications"></a>64 位应用程序
 编译应用程序时，您可以将其指定为在 Windows 64 位操作系统上作为本机应用程序或在 WOW64（Windows 64 位下的 Windows 32 位）下运行。 WOW64 是一种兼容性环境，它使 32 位应用能够在 64 位系统上运行。 WOW64 包括在所有 64 位版本的 Windows 操作系统中。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/18/2017
   
 -   将 `IntPtr` 转换到 `Int32` 的代码。  
   
- 有关如何移植 32 位应用程序在 64 位 CLR 上运行的详细信息，请参阅[迁移 32 位托管代码迁移至 64 位](https://msdn.microsoft.com/library/ms973190.aspx)。  
+ 有关如何移植 32 位应用程序以使其在 64 位 CLR 上运行的详细信息，请参阅[将 32 位托管代码迁移至 64 位](https://msdn.microsoft.com/library/ms973190.aspx)。  
   
 ## <a name="general-64-bit-programming-information"></a>常规 64 位编程信息  
  有关 64 位编程的常规信息，请参阅以下文档：  

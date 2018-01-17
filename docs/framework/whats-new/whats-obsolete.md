@@ -13,11 +13,12 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 类库中过时的内容
 .NET Framework 随时间推移而变化。 每个新版本都添加了提供新功能的新类型和类型成员。 现有类型和成员也会随着时间推移而变化。 例如，某些类型变得不太重要，因为它们支持的技术由新技术所替代，而某些方法由更方便或功能更全面的方法所取代。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/18/2017
   
 -   通过删除该类型或成员的使用（如果可能）来更改代码。  
   
-     - 或 -  
+     或  
   
 -   查看有关此技术领域的文档，以确定如何响应弃用情况。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/18/2017
   
 |.NET Framework 版本|`version` 字符串|
 |-|-|  
-|4.7 （包括 4.7.1）|v4.0|  
+|4.7（包括 4.7.1）|v4.0|  
 |4.6（包括 4.6.1 和 4.6.2）|v4.0|  
 |4.5（包括 4.5.1 和 4.5.2）|v4.0|  
 |4|v4.0|  
@@ -84,5 +85,5 @@ ms.lasthandoff: 10/18/2017
   
  [.NET Framework 2.0 过时列表](http://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

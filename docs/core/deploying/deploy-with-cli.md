@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
-ms.openlocfilehash: fc7a40667c9b0a623bb0ebdf4ad60783fa58e6c5
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.workload: dotnetcore
+ms.openlocfilehash: 302383ec44afd91d1df7f6c717b268d5f965c8c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令行接口 (CLI) 工具部署 .NET Core 应用
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/18/2017
 
 1. 更新项目的依赖项和工具。
  
-   运行[dotnet 还原](../tools/dotnet-restore.md)([请参阅备注](#dotnet-restore-note)) 命令来还原你的项目中指定的依赖关系。
+   运行 [dotnet restore](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)）命令，还原项目中指定的依赖项。
 
 1. 创建应用的调试版本。
 
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/18/2017
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>包含第三方依赖项的依赖框架的部署
 
-要使用一个或多个第三方依赖项来部署依赖框架的部署，需要这些依赖项都可供项目使用。 两个附加步骤是必需的然后才能运行`dotnet restore`([请参阅备注](#dotnet-restore-note)) 命令：
+要使用一个或多个第三方依赖项来部署依赖框架的部署，需要这些依赖项都可供项目使用。 在运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令之前，还需执行额外两个步骤：
 
 1. 向 csproj 文件的 `<ItemGroup>` 部分添加对所需第三方库的引用。 以下 `<ItemGroup>` 部分包含 [Json.NET](http://www.newtonsoft.com/json) 的依赖项（作为第三方库）：
 
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/18/2017
       </ItemGroup>
       ```
 
-1. 如果尚未安装，请下载包含第三方依赖项的 NuGet 包。 若要下载程序包，请执行`dotnet restore`([请参阅备注](#dotnet-restore-note)) 添加依赖项后命令。 因为依赖项在发布时已从本地 NuGet 缓存解析出来，因此它一定适用于你的系统。
+1. 如果尚未安装，请下载包含第三方依赖项的 NuGet 包。 若要下载该包，请在添加依赖项后执行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令。 因为依赖项在发布时已从本地 NuGet 缓存解析出来，因此它一定适用于你的系统。
 
 请注意，如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。 例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。 当第三方依赖项本身取决于本机代码时，也可能发生此情况。 [Kestrel 服务器](/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。 当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md) 包含一个文件夹。
 
@@ -119,7 +120,7 @@ ms.lasthandoff: 11/18/2017
 
 1. 更新项目的依赖项和工具。
 
-   运行[dotnet 还原](../tools/dotnet-restore.md)([请参阅备注](#dotnet-restore-note)) 命令来还原你的项目中指定的依赖关系。
+   运行 [dotnet restore](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)）命令，还原项目中指定的依赖项。
 
 1. 创建应用的调试版本。
 
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/18/2017
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>包含第三方依赖项的独立部署
 
-部署包含一个或多个第三方依赖项的独立部署包括添加依赖项。 两个附加步骤是必需的然后才能运行`dotnet restore`([请参阅备注](#dotnet-restore-note)) 命令：
+部署包含一个或多个第三方依赖项的独立部署包括添加依赖项。 在运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令之前，还需执行额外两个步骤：
 
 1. 将对任何第三方库的引用添加到 csproj 文件的 `<ItemGroup>` 部分。 以下 `<ItemGroup>` 部分使用 Json.NET 作为第三方库。
 
@@ -164,7 +165,7 @@ ms.lasthandoff: 11/18/2017
       </ItemGroup>
     ```
 
-1. 如果尚未安装，请将包含第三方依赖项的 NuGet 包下载到系统。 若要将提供给你的应用程序的依赖项，执行`dotnet restore`([请参阅备注](#dotnet-restore-note)) 添加依赖项后命令。 因为依赖项在发布时已从本地 NuGet 缓存解析出来，因此它一定适用于你的系统。
+1. 如果尚未安装，请将包含第三方依赖项的 NuGet 包下载到系统。 若要使依赖项对应用适用，请在添加依赖项后执行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令。 因为依赖项在发布时已从本地 NuGet 缓存解析出来，因此它一定适用于你的系统。
 
 下面是此项目的完整 csproj 文件：
 

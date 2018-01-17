@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: c5a7ee0ba306cea641b0ff34f0b521c92bd03719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f2ad875430b2dc7f0ffbadfb9a39dd83854557cb
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet-vstest` - 从指定文件运行测试。
 
@@ -25,11 +26,11 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]`
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 `dotnet-vstest` 命令运行 `VSTest.Console` 命令行应用程序以运行自动化单元测试和编码的 UI 应用程序测试。
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `TEST_FILE_NAMES`
 
@@ -117,6 +118,10 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet vstest mytestproject.dll`
 
+在 `mytestproject.dll` 中运行测试，并使用自定义名称导出到自定义文件夹：
+
+`dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path`
+
 在 `mytestproject.dll` 和 `myothertestproject.exe` 中运行测试：
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
@@ -128,3 +133,4 @@ ms.lasthandoff: 10/18/2017
 运行 `TestMethod1` 和 `TestMethod2` 测试：
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
+

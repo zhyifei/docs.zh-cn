@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fa65be2eee481e20231bacb5d0861fa3d2c03f92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 023a8db1e34498c4c2cbe741225d218280c04e41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
@@ -48,8 +49,8 @@ ms.lasthandoff: 11/21/2017
   
     |.NET Framework 版本|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|不适用|No|是|  
-    |2.0 - 3.5|No|不适用|是|  
+    |1.1|不适用|否|是|  
+    |2.0 - 3.5|否|不适用|是|  
     |4|是|是|不适用|  
   
 > [!NOTE]
@@ -181,6 +182,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [\<启动 > 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+## <a name="see-also"></a>请参阅  
+ [\<startup> 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
  [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

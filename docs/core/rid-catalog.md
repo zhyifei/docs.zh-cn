@@ -6,11 +6,12 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 目录
 
@@ -85,7 +86,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
 若要使用 RID，必须知道有哪些 RID。 新值将定期添加到该平台。
 若要获取最新的完整版，请参阅 CoreFX 存储库上的 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 文件。
 
-.NET Core 2.0 SDK 引入了可移植 RID 的概念。 它们是添加到 RID 图表的新值，并且未与特定版本或 OS 发行版本关联。 处理多个 Linux 发行版时，它们是特别有用。
+.NET Core 2.0 SDK 引入了可移植 RID 的概念。 它们是添加到 RID 图表的新值，并且未与特定版本或 OS 发行版本关联。 处理多个 Linux 发行版本时，它们非常有用。
 
 以下列表显示了用于每个 OS 的最常见 RID。 其中不包含 `arm` 或 `corert` 值。
 
@@ -111,7 +112,7 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
   - `win10-arm`
   - `win10-arm64`
 
-请参阅[.NET 核心 Windows 上的先决条件](windows-prerequisites.md)有关详细信息。
+有关详细信息，请参阅 [Windows 上 .NET Core 的先决条件](windows-prerequisites.md)。
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -165,19 +166,19 @@ NuGet 还原包时，它将尝试找到指定运行时的完全匹配项。
   - `linuxmint.18-x64`
   - `linuxmint.18.1-x64`（.NET Core 2.0 或更高版本）
 
-请参阅[在 Linux 上的.NET 核心的先决条件](linux-prerequisites.md)有关详细信息。
+有关详细信息，请参阅 [Linux 上 .NET Core 的先决条件](linux-prerequisites.md)。
 
-## <a name="macos-rids"></a>macOS Rid
+## <a name="macos-rids"></a>macOS RID
 
-macOS Rid 使用较旧的"OSX"品牌。
+macOS RID 使用较早的“OSX”品牌。
 
-- `osx-x64`(.NET 核心 2.0 或更高版本，最低版本是`osx.10.12-x64`)
+- `osx-x64`（NET Core 2.0 或更高版本，最低版本为 `osx.10.12-x64`）
 - `osx.10.10-x64`
 - `osx.10.11-x64`
 - `osx.10.12-x64`（.NET Core 1.1 或更高版本）
 - `osx.10.13-x64`
 
-请参阅[在 macOS 上的.NET 核心的先决条件](macos-prerequisites.md)有关详细信息。
+有关详细信息，请参阅 [macOS 上 .NET Core 的先决条件](macos-prerequisites.md)。
 
 ## <a name="android-rids-net-core-20-or-later-versions"></a>Android RID（.NET Core 2.0 或更高版本）
 

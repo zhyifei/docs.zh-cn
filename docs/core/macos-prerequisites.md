@@ -9,13 +9,14 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.openlocfilehash: 16f3cfd482bddfff1b9ad56e7ffe58ae2aed4980
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 5aac7566f532312c890bad07c901929ae826ece3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="prerequisites-for-net-core-on-macos"></a>在 macOS 上为.NET 核心的系统必备组件
+# <a name="prerequisites-for-net-core-on-macos"></a>macOS 上 .NET Core 的先决条件
 
 本文介绍了在 macOS 计算机上开发、部署和运行 .NET Core 应用程序所需的受支持的 macOS 版本和 .NET Core 依赖项。 支持的操作系统版本和随附的依赖项适用于在 Mac 上开发 .NET Core 应用的三种方法：[结合使用常用编辑器和命令行](tutorials/using-with-xplat-cli.md)、[Visual Studio Code](https://code.visualstudio.com/) 和 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)。
 
@@ -23,15 +24,15 @@ ms.lasthandoff: 10/27/2017
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-.NET 核心 2.x 支持以下版本的 macOS:
+以下 macOS 版本支持 .NET Core 2.x：
 
-* macOS 10.12"Sierra"及更高版本
+* macOS 10.12“Sierra”及更高版本
 
 有关支持 .NET Core 2.x 的操作系统、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.x - 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-.NET 核心 1.x 支持以下版本的 macOS:
+以下 macOS 版本支持 .NET Core 1.x：
 
 * macOS 10.12“Sierra”
 * macOS 10.11“El Capitan”
@@ -64,13 +65,13 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit"></a>增加最大打开文件限制
+## <a name="increase-the-maximum-open-file-limit"></a>增大最大打开文件限制
 
-在 macOS 上的默认打开的文件限制不可能足以用于某些.NET 核心工作负荷，如还原项目或运行单元测试。
+macOS 上的默认打开文件限制可能不足以满足某些 .NET Core 工作负荷，如还原项目或运行单元测试。
 
-可以通过执行以下步骤来提高此限制：
+可通过执行以下步骤来增大此限制：
 
-1. 使用文本编辑器中，创建一个新文件_/Library/LaunchDaemons/limit.maxfiles.plist_，并保存该文件使用以下内容：
+1. 使用文本编辑器创建新文件 _/Library/LaunchDaemons/limit.maxfiles.plist_，并在文件中保存以下内容：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -96,13 +97,13 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 </plist>
 ```
 
-2. 在终端窗口中，运行以下命令：
+2. 在终端窗口中运行以下命令：
 
 ```console
 echo 'ulimit -n 2048' | sudo tee -a /etc/profile
 ```
 
-3. 重新启动你的 Mac，才能应用这些设置。
+3. 需要重启 Mac 才能应用这些设置。
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio for Mac
 

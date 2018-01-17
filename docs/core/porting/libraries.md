@@ -9,22 +9,23 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.openlocfilehash: 390d08332113a50b363bdbb71921bafd7e33e87d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="porting-to-net-core---libraries"></a>移植到 .NET Core - 库
 
 本文介绍了将库代码移植到 .NET Core 以使其跨平台运行的信息。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 本文假定你：
 
 - 正在使用 Visual Studio 2017 或更高版本。
-  - .NET core 不支持在早期版本的 Visual Studio
+  - Visual Studio 的早期版本不支持 .NET Core
 - 了解[推荐的移植过程](index.md)。
 - 已解决与[第三方依赖项](third-party-deps.md)有关的任何问题。
 

@@ -7,17 +7,18 @@ ms.date: 09/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 9c6b0f434a9d6b1431e375ec6a437497aaddfc61
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 9a79468168979a7c89efe48e11175f926e39cf4f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet add reference` - 添加项目到项目 (P2P) 引用。
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 </ItemGroup>
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT`
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/18/2017
 
 `dotnet add app/app.csproj reference lib/lib.csproj`
 
-在当前目录中添加对项目的多个项目引用：
+向当前目录中的项目添加多个项目引用：
 
 `dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
 

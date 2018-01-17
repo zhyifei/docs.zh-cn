@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c91195c4e70366a3feb7a96f80e4e44dda89239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>打包和部署桌面应用程序中的资源
 应用程序依靠 .NET Framework Resource Manager（由 <xref:System.Resources.ResourceManager> 类表示）来检索已本地化的资源。 Resource Manager 假定使用中枢轮辐式模型来打包和部署资源。 中枢即主程序集，包含不可本地化的可执行代码和单个区域性（称作非特定区域性或默认区域性）的资源。 默认区域性是应用程序的回退区域性；如果找不到已本地化的资源，则使用默认区域性的资源。 每条轮辐均连接到一个附属程序集，该附属程序集包含单个区域性的资源，但不包含任何代码。  
@@ -191,7 +192,7 @@ Bon jour!
 ## <a name="suggested-packaging-alternative"></a>建议的打包替代项  
  由于时间或预算约束，可能无法为应用程序支持的每个子区域性均创建一组资源。 但可以为所有相关子区域性可用的父区域性创建单个附属程序集。 例如，可以提供单个英语附属程序集 (en)，请求特定于区域的英语资源的用户将检索该程序集，并且为请求特定于区域的德语资源的用户创建单个德语附属程序集 (de)。 例如，对德国德语 (de-DE)、奥地利德语 (de-AT) 和瑞士德语 (de-CH) 的请求均会回退到德语附属程序集 (de)。 默认资源是最终回退资源，因而应是大多数应用程序用户将请求的资源，因此应仔细选择这些资源。 此方法可部署区域性特定性较低，但可显著减少应用程序本地化成本的资源。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [桌面应用中的资源](../../../docs/framework/resources/index.md)  
  [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
  [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

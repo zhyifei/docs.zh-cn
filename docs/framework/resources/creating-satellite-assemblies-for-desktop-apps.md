@@ -34,11 +34,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>创建桌面应用程序的附属程序集
 资源文件在本地化的应用程序中具有核心作用。 通过资源文件，应用程序可以使用用户自己的语言和区域性显示字符串、图像及其他数据，并且在用户自己的语言或区域性资源不可用时，提供备用数据。 .NET Framework 使用中心辐射型模型来查找和检索已本地化的资源。 中心即主程序集，包含不可本地化的可执行代码和单个区域性（称作非特定区域性或默认区域性）的资源。 默认区域性是应用程序的回退区域性；没有任何已本地化的资源可用时，则使用默认区域性。 使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性来指定应用程序默认区域性的区域性。 每条轮辐均连接到一个附属程序集，该附属程序集包含单个本地化区域性的资源，但不包含任何代码。 因为附属程序集不是主程序集的一部分，所以不必替换该应用程序的主程序集即可轻松更新或替换与特定区域性相对应的资源。  
@@ -250,7 +251,7 @@ gacutil /i:StringLibrary.resources.dll
 7.  将以下 StringLibrary.vb 或 StringLibrary.cs 的源代码连同默认区域性的资源编译到名为 StringLibrary.dll 的延迟签名库程序集中：  
   
     > [!IMPORTANT]
-    >  如果你使用命令行而不是 Visual Studio 来创建该示例，则应修改调用<xref:System.Resources.ResourceManager>类构造函数`ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`。  
+    >  如果使用命令行而不是 Visual Studio 来创建此示例，则将对 <xref:System.Resources.ResourceManager> 类构造函数的调用修改为 `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`。  
   
      [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
      [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]  
@@ -316,7 +317,7 @@ gacutil /i:StringLibrary.resources.dll
   
 14. 运行 Example.exe。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
  [延迟签发程序集](../../../docs/framework/app-domains/delay-sign-assembly.md)  
  [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  

@@ -9,11 +9,11 @@ ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 453d341961207dd851136aa47a52759b0841424d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17c9b7440d60c38ba30d230f8412c3ca1a21830a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>创建和使用组件 (Visual Basic)
 组件是一个类，该类实现 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 接口或直接/间接派生自实现 <xref:System.ComponentModel.IComponent> 的类。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 组件是可重复使用的对象，可以和其他对象进行交互，并提供对外部资源和设计时支持的控制。  
@@ -32,8 +32,6 @@ ms.lasthandoff: 11/21/2017
 -   如果组件需要由值封送，请从 <xref:System.ComponentModel.MarshalByValueComponent> 派生。  
   
 -   如果因单一继承导致无法从其中一个基实现派生组件，则请实现 <xref:System.ComponentModel.IComponent>。  
-  
- 有关设计时支持的详细信息，请参阅[组件的设计时特性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)和[扩展设计时支持](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)。  
   
 ## <a name="component-classes"></a>组件类  
  <xref:System.ComponentModel> 命名空间提供用于实现组件和控件的运行时和设计时行为的类。 此命名空间包括用于特性和类型转换器的实现、数据源绑定和组件授权的基类和接口。  
@@ -65,22 +63,9 @@ ms.lasthandoff: 11/21/2017
 -   <xref:System.ComponentModel.PropertyDescriptor>。 提供有关属性的信息。  
   
 ## <a name="related-sections"></a>相关章节  
- [类、组件和控件](http://msdn.microsoft.com/library/db8b842e-44d9-40cc-a0f8-70fd189632c3)  
- 定义组件和控件，并讨论二者与类之间的区别。  
-  
- [组件创作](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
- 组件入门路线图。  
-  
- [组件创作演练](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- 链接到提供组件编程的分步说明的主题。  
-  
- [组件类](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
- 描述什么使类成为组件、公开组件功能的方法、控制对组件的访问以及控制如何创建组件实例。  
-  
  [控件和组件创作疑难解答](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  解释如何解决常见问题。  
   
-## <a name="see-also"></a>另请参阅  
- [如何： 访问 Windows 窗体中的设计时支持](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)  
- [如何： 扩展的外观和行为的控件在设计模式下](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)  
- [如何：在设计模式下执行控件的自定义初始化](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+## <a name="see-also"></a>请参阅  
+ [如何：在 Windows 窗体中访问设计时支持](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ 

@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b62a737a5106c64d08a342365867c460075011b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78de2016e02c242fcf6ec454a56a4beff41c2d12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-language-runtime-overview"></a>动态语言运行时概述
 动态语言运行时 (DLR) 是一种运行时环境，可以将一组动态语言服务添加到公共语言运行时 (CLR)。 使用 DLR 可以轻松开发在 .NET Framework 上运行的动态语言，并为静态类型语言添加动态特征。  
@@ -99,7 +100,7 @@ DLR 体系结构
 ## <a name="dlr-documentation"></a>DLR 文档  
  如需深入了解如何使用 DLR 开源版本向语言添加动态行为，以及如何在 .NET Framework 中使用动态语言，请参阅 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 网站上的文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Dynamic.ExpandoObject>  
  <xref:System.Dynamic.DynamicObject>  
  [公共语言运行时](../../../docs/standard/clr.md)  

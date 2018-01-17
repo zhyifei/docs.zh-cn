@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e87568cc6ac86e7bdc24fd7e31f5b8c3ed260c88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a9774a9811d5c53d44d66fba452098367846bf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe（类型库导入程序）
 类型库导入程序将 COM 类型库中的类型定义转换为公共语言运行时程序集中的等效定义。 Tlbimp.exe 的输出是一个二进制文件（程序集），其中包含在原始类型库中定义的类型的运行时元数据。 可以使用 [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 这样的工具检查此文件。  
@@ -133,7 +134,7 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [Tlbexp.exe（类型库导出程序）](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [将类型库作为程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
@@ -141,5 +142,5 @@ void SomeMethod(out bool x);
  [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
  [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [将类型库导入到互操作程序集的属性](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
+ [用于向互操作程序集导入类型库的特性](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

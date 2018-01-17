@@ -24,11 +24,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f90cbac0e7f78d8965a75df281c0db6b213d9e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 开发客户端应用程序
 利用在用户的计算机或设备本地运行的 .NET Framework，有多种方法开发基于 Windows 的应用程序。 本节包含的主题价始了如何使用 Windows Presentation Foundation (WPF) 或 Windows 窗体创建基于 Windows 的应用程序。 不过，也可以利用 .NET Framework 创建 Web 应用程序，以及通过 Windows 应用商店或 Windows Phone 应用商店发布的面向计算机或设备的客户端应用程序。  
@@ -59,9 +60,9 @@ ms.lasthandoff: 11/21/2017
  [ASP.NET 网站入门](http://www.asp.net/get-started/websites)  
  介绍使用 ASP.NET 开发 Web 应用的方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [可移植类库](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
  [概述](../../docs/framework/get-started/overview.md)  
  [开发指南](../../docs/framework/development-guide.md)  
- [如何： 创建 Windows 桌面应用程序](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
+ [如何：创建 Windows 桌面应用程序](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
  [Windows 服务应用程序](../../docs/framework/windows-services/index.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c720da81c63b612201ede5f648f6861470b25bee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5a8363b0ec059c1ae94b7ab53e5c3064a06541f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe（软件发行者证书测试工具）
 软件发行者证书测试工具从一个或多个 X.509 证书创建软件发行者证书 (SPC)。 Cert2spc.exe 仅用于测试目的。 可以从证书颁发机构（如 VeriSign 或 Thawte）获得有效 SPC。 有关创建 X.509 证书的详细信息，请参阅 [Makecert.exe（证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)。  
@@ -63,7 +64,7 @@ cert2spc myCertificate.cer mySPCFile.spc
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
- [Makecert.exe （证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe（证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

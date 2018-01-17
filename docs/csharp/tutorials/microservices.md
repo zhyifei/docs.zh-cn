@@ -10,15 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker 中托管的微服务
-
-## <a name="introduction"></a>介绍
 
 此教程将详细介绍在 Docker 容器中生成和部署 ASP.NET Core 微服务时必须完成的任务。 在此教程中，你将了解：
 
@@ -43,7 +41,7 @@ ms.lasthandoff: 10/18/2017
 此教程中的所有代码适用于任何 .NET Core 环境。
 附加 Docker 安装任务适用于 ASP.NET Core 应用程序。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。
 可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
@@ -279,7 +277,7 @@ obj/*
 out/*
 ```
 
-使用 Docker 生成命令生成映像。 从包含代码的目录运行以下命令。
+使用 `docker build` 命令生成映像。 从包含代码的目录运行以下命令。
 
 ```console
 docker build -t weather-microservice .

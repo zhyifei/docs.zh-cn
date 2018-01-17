@@ -12,11 +12,12 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.openlocfilehash: ce02033a7994d48494b4e627f1ed8f1dea4caadb
-ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
+ms.workload: dotnetcore
+ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
@@ -103,7 +104,7 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 **.NET Framework 4.7**
 
-[[dotnet-framework:4.7 示例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7)演示 [.NET Framework 4.7](../../framework/whats-new/index.md#v47) 的基本“hello world”用法。 它演示如何生成并部署依赖于 [.NET Framework 4.7 docker 映像](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile)的应用程序。
+[dotnet-framework:4.7 示例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7)演示 [.NET Framework 4.7](../../framework/whats-new/index.md#v47) 的基本“hello world”用法。 它演示如何生成并部署依赖于 [.NET Framework 4.7 docker 映像](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile)的应用程序。
 
 **.NET Framework 4.6.2**
 
@@ -204,4 +205,3 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 * [了解使用 .NET Core 的 Docker 的基本信息](docker-basics-dotnet-core.md)
 * [生成 .NET Core Docker 映像](building-net-docker-images.md)
-\

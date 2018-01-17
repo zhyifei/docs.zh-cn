@@ -9,11 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.openlocfilehash: b172e5fc4fcf9dd5c1e6f268f3c046e77592ebd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上入门 .NET Core
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 > 本文在 macOS 上使用 [Visual Studio Code](http://code.visualstudio.com)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 获取 [.NET Core SDK](https://www.microsoft.com/net/core)。 .NET Core SDK 包括最新版本的 .NET Core 框架和运行时。
 
@@ -80,7 +81,7 @@ dotnet add library package Newtonsoft.Json
 </ItemGroup>
 ```
 
-执行[ `dotnet restore` ](../tools/dotnet-restore.md)，([请参阅备注](#dotnet-restore-note)) 还原依赖关系以及创建*obj*内的文件夹*库*有三个文件中，包括*project.assets.json*文件：
+执行 [`dotnet restore`](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)），这将还原依赖项，并在库中创建 obj 文件夹，该文件夹中包含三个文件，其中一个是 project.assets.json 文件：
 
 ```console
 dotnet restore
@@ -194,7 +195,7 @@ dotnet sln add app/app.csproj
 dotnet add app/app.csproj reference library/library.csproj
 ```
 
-运行`dotnet restore`([请参阅备注](#dotnet-restore-note)) 若要还原的解决方案中的三个项目的依赖关系。 打开 program.cs，并使用下列行替换 `Main` 方法中的内容：
+运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)），在解决方案中还原三个项目的依赖项。 打开 program.cs，并使用下列行替换 `Main` 方法中的内容：
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");

@@ -1,5 +1,5 @@
 ---
-title: "要开始使用 C# 和 Visual Studio 代码-C# 指南"
+title: "C# 和 Visual Studio Code 入门 - C# 指南"
 description: "了解如何使用 Visual Studio Code 创建和调试首个 C# .NET Core 应用。"
 keywords: "C#, 入门, 获取, 安装, Visual Studio Code, 跨平台"
 author: kendrahavens
@@ -10,17 +10,18 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.openlocfilehash: 3a9de689946507e4b6d89f684461d65049b3375a
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnetcore
+ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
 .NET Core 提供了快速运行的模块化平台，用于创建在 Windows、Linux 和 macOS 上运行的应用程序。 带 C# 扩展的 Visual Studio Code 提供功能强大的编辑体验，完全支持 C# IntelliSense（智能代码填充）和调试。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 1. 安装 [Visual Studio Code](https://code.visualstudio.com/)。
 2. 获取 [.NET Core SDK](https://www.microsoft.com/net/download/core)。
@@ -34,20 +35,20 @@ ms.lasthandoff: 11/15/2017
 
     * 打开 Visual Studio Code。
     * 依次单击左侧菜单上的“资源管理器”图标和**“打开文件夹”**。
-    * 选择**文件** > **打开文件夹**想从主菜单打开文件夹 C# 项目中并单击**选择文件夹**。 对于我们的示例，我们要为我们名为的项目中创建一个文件夹*HelloWorld*。
+    * 从主菜单中选择“文件” > “打开文件夹”，打开要在其中放置 C# 项目的文件夹，然后单击“选择文件夹”。 在我们的示例中，为项目创建名为“HelloWorld”的文件夹。
 
       ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
 
 2. 初始化 C# 项目：
-    * 通过选择从 Visual Studio Code 打开集成终端**视图** > **集成终端**从主菜单。
+    * 通过从主菜单中选择“视图” > “集成终端”，从 Visual Studio Code 中打开集成终端。
     * 在终端窗口中，键入“`dotnet new console`”。
-    * 此命令创建`Program.cs`在文件夹中，已写入，以及名为的 C# 项目文件的简单"Hello World"程序文件`HelloWorld.csproj`。
+    * 此命令在已编写“Hello World”简单程序的文件夹中创建 `Program.cs` 文件，以及 `HelloWorld.csproj` C# 项目文件。
 
       ![dotnet new 命令](media/with-visual-studio-code/dotnetnew.png)
 
 3. 解析生成资产：
 
-    * 有关**.NET 核心 1.x**，类型`dotnet restore`。 运行 `dotnet restore` 后，便有权访问生成项目所需的 .NET Core 包。
+    * 对于 .NET Core 1.x，键入 `dotnet restore`。 运行 `dotnet restore` 后，便有权访问生成项目所需的 .NET Core 包。
 
       ![dotnet restore 命令](media/with-visual-studio-code/dotnetrestore.png)
 
@@ -63,11 +64,11 @@ ms.lasthandoff: 11/15/2017
 
 ## <a name="debug"></a>调试
 
-1. 单击打开 *Program.cs*。 在 Visual Studio 代码，请打开一个 C# 文件的第一个时间[OmniSharp](http://www.omnisharp.net/)在编辑器中加载。
+1. 单击打开 *Program.cs*。 在 Visual Studio Code 中首次打开 C# 文件时，会在编辑器中加载 [OmniSharp](http://www.omnisharp.net/)。
 
     ![打开 Program.cs 文件](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code 应提示你添加缺少的资产，以生成和调试你的应用程序。 选择**“是”**。 
+2. Visual Studio Code 会提示添加缺少的资产，以生成和调试应用。 选择**“是”**。 
 
     ![提示添加缺少的资产](media/with-visual-studio-code/missing-assets.png)
 
@@ -79,12 +80,12 @@ ms.lasthandoff: 11/15/2017
 
     ![选择 .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. 将断点添加到你的项目中，通过单击**编辑器边距**，它是在编辑器中，第 9 行旁边的行号左侧空格。
+5. 单击第 9 行旁边的编辑器边距（编辑器中行号左侧的空间），为项目添加断点。
 
     ![设置断点](media/with-visual-studio-code/setbreakpoint.png)
 
-6. 若要开始调试时，选择<kbd>F5</kbd>或绿色箭头。 在到达你在上一步中设置的断点时，调试器会停止执行程序。
-    * 调试时，你可以在左窗格的顶部中查看你的本地变量，或使用调试控制台。
+6. 要开始调试，请选择 <kbd>F5</kbd> 或绿色箭头。 在到达你在上一步中设置的断点时，调试器会停止执行程序。
+    * 调试时，可以在左上角的窗格中查看局部变量，也可以使用调试控制台进行查看。
 
     ![运行和调试](media/with-visual-studio-code/rundebug.png)
 

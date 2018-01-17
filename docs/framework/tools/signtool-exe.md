@@ -16,11 +16,12 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 326b952b742dc3400b7a84ba35594b61aeaabb6c
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
@@ -178,7 +179,7 @@ signtool sign /f MyCert.pfx /p MyPassword MyFile.exe
  以下命令对文件进行数字签名并加盖时间戳。 用于对文件进行签名的证书存储在 PFX 文件中。  
   
 ```  
-signtool sign /f MyCert.pfx /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool sign /f MyCert.pfx /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
  以下命令通过使用位于 `My` 存储中的证书对文件进行签名，该证书的主题名为 `My Company Certificate`。  
@@ -196,7 +197,7 @@ Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl
  以下命令对已进行数字签名的文件加盖时间戳。  
   
 ```  
-signtool timestamp /t  HYPERLINK "http://timestamp.verisign.com/scripts/timstamp.dll" http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+signtool timestamp /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
 ```  
   
  以下命令确认文件已签名。  
@@ -217,6 +218,6 @@ signtool verify /a SystemFile.dll
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

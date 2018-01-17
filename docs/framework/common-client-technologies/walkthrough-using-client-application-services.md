@@ -19,11 +19,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>演练：使用客户端应用程序服务
 本主题介绍如何创建使用客户端应用程序服务对用户进行身份验证并检索用户角色和设置的 Windows 应用程序。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
 -   启用脱机模式。 提供一个复选框，以便用户可以指定其连接状态。 随后使用此值指定客户端应用程序服务提供程序是否使用本地缓存的数据而不是访问其 Web 服务。 最后，在应用程序返回联机模式时对当前用户重新进行身份验证。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]。  
@@ -374,7 +375,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  在 **“属性”** 窗口中，为该按钮设置以下属性。  
   
-  	|属性|值|  
+  	|属性|“值”|  
   	|--------------|-----------|  
   	|**“(名称)”**|managerOnlyButton|  
   	|**“文本”**|&Manager task|  
@@ -394,7 +395,7 @@ ms.lasthandoff: 11/21/2017
      如果用户采用“manager”角色，则 `DisplayButtonForManagerRole` 方法会将 <xref:System.Windows.Forms.Control.Visible%2A> 的 `managerOnlyButton` 属性设置为 `true`。 如果引发了 <xref:System.Net.WebException> （它表示角色服务不可用），则此方法还会显示一条错误消息。  
   
     > [!NOTE]
-    >  如果用户登录名已过期，则 <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法会始终返回 `false` 。 如果应用程序在身份验证之后很快调用 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法一次（在本演练的代码示例中所示），则不会发生这种情况。 如果应用程序必须在其他时间检索用户角色，则可能要添加代码以重新验证登录名已过期的用户。 如果所有有效用户都分配给角色，则可以通过调用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> 方法来确定登录名是否已过期。 如果不返回任何角色，则登录名已过期。 有关此功能的示例，请参阅 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 仅当在应用程序配置中选择了 **“每次服务器 Cookie 到期时要求用户重新登录”** 时，此功能才是必需的。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+    >  如果用户登录名已过期，则 <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 方法会始终返回 `false` 。 如果应用程序在身份验证之后很快调用 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 方法一次（在本演练的代码示例中所示），则不会发生这种情况。 如果应用程序必须在其他时间检索用户角色，则可能要添加代码以重新验证登录名已过期的用户。 如果所有有效用户都分配给角色，则可以通过调用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=nameWithType> 方法来确定登录名是否已过期。 如果不返回任何角色，则登录名已过期。 有关此功能的示例，请参阅 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 方法。 仅当在应用程序配置中选择了 **“每次服务器 Cookie 到期时要求用户重新登录”** 时，此功能才是必需的。 有关详细信息，请参阅[如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
      [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
@@ -456,7 +457,7 @@ ms.lasthandoff: 11/21/2017
   
      <xref:System.Windows.Forms.Form.FormClosing> 事件处理程序会调用 `SaveSettings` 方法，将在下一部分中添加的注销功能也使用该方法。 `SaveSettings` 方法首先确认用户尚未注销。可通过当前主体返回的 <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> 的 <xref:System.Security.Principal.IIdentity> 属性来实现此目的。 可通过 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> 属性检索当前主体。 如果用户针对客户端应用程序服务进行了身份验证，则身份验证类型将是“ClientForms”。 `SaveSettings` 方法不能只检查 <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=nameWithType> 属性，因为用户在注销之后可能具有有效的 Windows 标识。  
   
-     如果用户尚未注销，则 `SaveSettings` 方法调用在此过程前面生成的 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 类的 `Settings` 方法。 如果身份验证 Cookie 已过期，则此方法可能会引发 <xref:System.Net.WebException> 。 仅当在应用程序配置中选择了 **“每次服务器 Cookie 到期时要求用户重新登录”** 时，才会发生这种情况。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 `SaveSettings` 方法通过调用 <xref:System.Web.Security.Membership.ValidateUser%2A> 以显示登录对话框，来处理 Cookie 过期。 如果用户成功登录，则 `SaveSettings` 方法尝试通过调用自身来再次保存设置。  
+     如果用户尚未注销，则 `SaveSettings` 方法调用在此过程前面生成的 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 类的 `Settings` 方法。 如果身份验证 Cookie 已过期，则此方法可能会引发 <xref:System.Net.WebException> 。 仅当在应用程序配置中选择了 **“每次服务器 Cookie 到期时要求用户重新登录”** 时，才会发生这种情况。 有关详细信息，请参阅[如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 `SaveSettings` 方法通过调用 <xref:System.Web.Security.Membership.ValidateUser%2A> 以显示登录对话框，来处理 Cookie 过期。 如果用户成功登录，则 `SaveSettings` 方法尝试通过调用自身来再次保存设置。  
   
      与前面的代码一样，如果远程服务不可用，则 `SaveSettings` 方法会显示一条错误消息。 如果设置提供程序无法访问远程服务，则设置仍会保存到本地缓存，并在应用程序重新启动时重载。  
   
@@ -544,10 +545,10 @@ ms.lasthandoff: 11/21/2017
   
  若要提高应用程序的安全性，请确保在部署之前全面测试应用程序和服务器。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [ASP.NET 网站管理工具](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
  [为 SQL Server 创建和配置应用程序服务数据库](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [演练：使用 ASP.NET 应用程序服务](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

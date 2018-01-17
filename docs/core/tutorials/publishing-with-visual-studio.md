@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
-ms.openlocfilehash: a3e5bda5c99144c9ab5bbaf5e2f5566261af4813
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 40479d85f9b31fcc80e3d12537126941878a09a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 发布 Hello World 应用程序
 
@@ -39,19 +40,19 @@ ms.lasthandoff: 10/18/2017
 
       * HelloWorld.deps.json
 
-         应用程序的运行时依赖项文件。 它定义.NET 核心组件和运行你的应用程序所需的库 （包括包含你的应用程序的动态链接库）。 有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
+         应用程序的运行时依赖项文件。 它定义了运行应用程序所需的 .NET Core 组件和库（包括包含该应用程序的动态链接库）。 有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
  
       * HelloWorld.dll
 
-         包含你的应用程序的文件。 它是一个动态链接库，可以通过输入执行`dotnet HelloWorld.dll`命令在控制台窗口中。 
+         包含应用程序的文件。 它是一个动态链接库，可通过在控制台窗口中输入 `dotnet HelloWorld.dll` 命令来执行。 
 
       * HelloWorld.pdb（对于部署是可选的）
 
-         包含调试符号文件。 尽管应在需要调试应用程序的已发布版本时保存此文件，但无需将此文件与应用程序一起部署。
+         包含调试符号的文件。 尽管应在需要调试应用程序的已发布版本时保存此文件，但无需将此文件与应用程序一起部署。
 
       * HelloWorld.runtimeconfig.json
 
-         应用程序的运行时配置文件。 它标识你的应用程序生成上运行的.NET 核心的版本。 有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。  
+         应用程序的运行时配置文件。 它标识用于运行应用程序的 .NET Core 版本。 有关详细信息，请参阅[运行时配置文件](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。  
 
    ![显示已发布文件的控制台窗口](media/publishing-with-visual-studio/publishedfiles.png)
 

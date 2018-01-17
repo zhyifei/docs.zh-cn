@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1785c222238a58893edf71352839b40ea8db29f7
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload: dotnet
+ms.openlocfilehash: c79326634a24ddcc9aed71fca018c69c36c94db0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 和带外版本
 .NET Framework 不断适应不同的平台（例如 Windows Phone 和 Windows 应用商店应用以及传统桌面和 Web 应用）以最大化代码的重复使用。 除了 .NET Framework 定期发布之外，我们还会发布处于预发布阶段 (OOB) 的新功能以改善跨平台开发或引入新功能。 本主题讨论 .NET Framework 及其 OOB 版本的未来方向。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/21/2017
  如果你在应用程序中使用了 OOB 功能，你的用户不必安装最新版 .NET Framework 即可运行你的应用程序，因为 OOB 程序集是与你的应用程序包一起部署的。  
   
 ## <a name="how-oob-packages-are-distributed"></a>OOB 包是如何存储的  
-核心公共语言运行时 (CLR) 组件的 OOB 版本通过传递[NuGet](https://www.nuget.org/)，这是用于.NET 的包管理器。 NuGet 让你可以轻松地通过 Visual Studio 中的解决方案资源管理器浏览并将库添加至你的 .NET Framework 项目。 从 Visual Studio 2012 开始，NuGet 随附于 Visual Studio 的所有版本。 若要确定 NuGet 是否已安装，请在 Visual Studio“工具”菜单上查找“库包管理器”。 如果尚未安装：  
+核心公共语言运行时 (CLR) 组件的 OOB 版本通过 [NuGet ](https://www.nuget.org/)（.NET 的包管理器）提供。 NuGet 让你可以轻松地通过 Visual Studio 中的解决方案资源管理器浏览并将库添加至你的 .NET Framework 项目。 从 Visual Studio 2012 开始，NuGet 随附于 Visual Studio 的所有版本。 若要确定 NuGet 是否已安装，请在 Visual Studio“工具”菜单上查找“库包管理器”。 如果尚未安装：  
   
 1.  在 Visual Studio 菜单栏中，依次选择“工具”和“扩展和更新”（在 Visual Studio 2010 中，选择“扩展管理器”）。  
   
@@ -62,5 +63,5 @@ ms.lasthandoff: 10/21/2017
   
  如果要接收稳定版包的通知，请订阅 [.NET Framework 源](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../docs/framework/get-started/index.md)

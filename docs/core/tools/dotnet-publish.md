@@ -7,17 +7,18 @@ ms.date: 09/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: d59ba8cf74a63c7d4a2234989477b5778fa0148f
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.workload: dotnetcore
+ms.openlocfilehash: 46e2f6d485f360660424accbddc2278eaa497a8d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-publish"></a>dotnet 发布
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet publish` - 将应用程序及其依赖项打包到文件夹以部署到托管系统。
 
@@ -48,7 +49,7 @@ dotnet publish [-h|--help]
 * .runtime.config.json 文件，其中指定了应用程序所需的共享运行时，以及运行时的其他配置选项（例如，垃圾回收类型）。
 * 应用程序的依赖项。 将这些依赖项从 NuGet 缓存复制到输出文件夹。
 
-`dotnet publish` 命令的输出已准备好部署到托管系统（例如，服务器、电脑、Mac 和笔记本电脑）以供执行，它还是准备应用程序以供部署的唯一受官方支持的方法。 根据项目指定的部署的类型，托管系统不一定已在其上安装 .NET Core 共享运行时。 有关详细信息，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。 有关已发布应用程序的目录结构，请参阅[目录结构](/aspnet/core/hosting/directory-structure)。
+`dotnet publish` 命令的输出已准备好部署到托管系统（例如，服务器、电脑、Mac 和笔记本电脑）以供执行，它还是准备应用程序以供部署的唯一受官方支持的方法。 根据项目指定的部署的类型，托管系统不一定已在其上安装 .NET Core 共享运行时。 有关详细信息，请参阅 [.NET 核心应用程序部署](../deploying/index.md)。 有关已发布应用程序的目录结构，请参阅[目录结构](/aspnet/core/hosting/directory-structure)。
 
 ## <a name="arguments"></a>参数
 
@@ -91,11 +92,11 @@ dotnet publish [-h|--help]
 `-o|--output <OUTPUT_DIRECTORY>`
 
 指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 *./bin/[configuration]/[framework]/* 或对于独立部署，将默认为 *./bin/[configuration]/[framework]/[runtime]*。
-如果提供的相对路径，则生成的输出目录是相对于项目文件位置，不适用于当前工作目录。
+如果提供了相对路径，则生成的输出目录与项目文件位置相关，而与当前工作目录不相关。
 
 `--self-contained`
 
-与应用程序一同发布 .NET Core 运行时，因此无需在目标计算机上安装运行时。 如果指定了运行时标识符，默认值为 `true`。 有关不同的部署类型的详细信息，请参阅[.NET 核心应用程序部署](../deploying/index.md)。
+与应用程序一同发布 .NET Core 运行时，因此无需在目标计算机上安装运行时。 如果指定了运行时标识符，默认值为 `true`。 若要详细了解不同的部署类型，请参阅 [.NET Core 应用程序部署](../deploying/index.md)。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -130,7 +131,7 @@ dotnet publish [-h|--help]
 `-o|--output <OUTPUT_DIRECTORY>`
 
 指定输出目录的路径。 如未指定，对于依赖于框架的部署，将默认为 *./bin/[configuration]/[framework]/* 或对于独立部署，将默认为 *./bin/[configuration]/[framework]/[runtime]*。
-如果提供的相对路径，则生成的输出目录是相对于项目文件位置，不适用于当前工作目录。
+如果提供了相对路径，则生成的输出目录与项目文件位置相关，而与当前工作目录不相关。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

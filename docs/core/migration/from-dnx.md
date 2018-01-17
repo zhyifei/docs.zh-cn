@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-ms.openlocfilehash: 1e2ab018fc690b31b59a04bf8c0c0990225c293b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: dba38de28dc15147e5bcc5bf4cede9f4dd5fca62
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>从 DNX 迁移到 .NET Core CLI (project.json)
 
@@ -60,7 +61,7 @@ DNVM 现已停用，因为其功能集可能由于 .NET Core CLI 即将推出的
 | dnu 包                          | dotnet 包       | 打包代码的 NuGet 包。                                                                          |
 | dnx \[command]（例如，“dnx web”）   | 不适用\*             | 在 DNX 领域中，按照 project.json 中的定义运行命令。                                                       |
 | dnu 安装                       | 不适用\*             | 在 DNX 领域中，将包安装为一个依赖项。                                                              |
-| dnu 还原                       | dotnet 还原    | 还原 project.json 中指定的依赖项。 ([请参阅备注](#dotnet-restore-note))                                                               |
+| dnu 还原                       | dotnet 还原    | 还原 project.json 中指定的依赖项。 （[请参阅注释](#dotnet-restore-note)）                                                               |
 | dnu 发布                       | dotnet 发布    | 使用三种形式（可移植、本机可移植和独立形式）之一发布应用程序以进行部署。    |
 | dnu 包装                          | 不适用\*             | 在 DNX 领域中，包装 csproj 中的 project.json。                                                                      |
 | dnu 命令                      | 不适用\*             | 在 DNX 领域中，管理全局安装的命令。                                                             |
@@ -76,7 +77,7 @@ DNU 附带称为“全局命令”的概念。 从本质上来说，这些都是
 CLI 不支持此概念。 但是，它确实支持添加所有项目命令的这一概念，这些命令可以使用熟悉的 `dotnet <command>` 语法调用。
 
 ### <a name="installing-dependencies"></a>安装依赖项
-自 v1 起，.NET Core CLI 工具就没有用于安装依赖项的 `install` 命令。 若要从 NuGet 安装包，你将需要将其添加为对的依赖性你`project.json`文件，然后运行`dotnet restore`([请参阅备注](#dotnet-restore-note))。 
+自 v1 起，.NET Core CLI 工具就没有用于安装依赖项的 `install` 命令。 为了从 NuGet 安装包，需要将其作为依赖项添加到 `project.json` 文件，然后运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）。 
 
 ### <a name="running-your-code"></a>运行代码
 运行代码主要有两种方法。 一种是从源中使用 `dotnet run` 运行。 与 `dnx run` 不同，这种方法不能执行任何内存中编译。 实际上，它将调用 `dotnet build` 生成代码，然后运行生成的二进制文件。 
@@ -129,7 +130,7 @@ CLI 和 DNX 都使用基于 `project.json` 文件的相同基本项目系统。 
 
 `project.json` 现已差不多准备就绪。 需要浏览依赖项列表并将依赖项更新至最新版本，尤其在使用 ASP.NET Core 依赖项时。 如果使用的是 BCL API 的单独包，可使用运行时包，如[应用程序可移植性类型](../deploying/index.md)文档中所述。 
 
-一旦你准备就绪后，你可以尝试使用还原`dotnet restore`([请参阅备注](#dotnet-restore-note))。 具体取决于依赖项版本，如果 NuGet 无法解析上述目标框架的依赖项，可能会遇到错误。 这是一个“时间点”问题；随着时间的推移，支持这些框架的包会越来越多。 目前，如果遇到此类问题，可以使用 `framework` 节点内的 `imports` 语句指定到 NuGet，还原“imports”语句内面向该框架的包。 此种情况下遇到的还原错误可提供足够的信息，告知需要导入的框架类型。 一般而言，如果对此感到迷惑或不熟悉，在 `imports` 语句中指定 `dnxcore50` 和 `portable-net45+win8` 应该有效。 下面的 JSON 代码段显示了这种情况是怎样的：
+准备就绪后，就可以尝试使用 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）进行还原。 具体取决于依赖项版本，如果 NuGet 无法解析上述目标框架的依赖项，可能会遇到错误。 这是一个“时间点”问题；随着时间的推移，支持这些框架的包会越来越多。 目前，如果遇到此类问题，可以使用 `framework` 节点内的 `imports` 语句指定到 NuGet，还原“imports”语句内面向该框架的包。 此种情况下遇到的还原错误可提供足够的信息，告知需要导入的框架类型。 一般而言，如果对此感到迷惑或不熟悉，在 `imports` 语句中指定 `dnxcore50` 和 `portable-net45+win8` 应该有效。 下面的 JSON 代码段显示了这种情况是怎样的：
 
 ```json
     "frameworks": {

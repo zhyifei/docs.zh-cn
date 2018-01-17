@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.openlocfilehash: c3955951c0367e1933342172c1bc1888fb58f60c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>创建 dotnet new 自定义模板
 
@@ -32,14 +33,14 @@ ms.lasthandoff: 10/18/2017
 - 删除空的 content 文件夹。
 - 删除 nuspec 文件。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 - 安装 [.NET Core 2.0 SDK](https://www.microsoft.com/net/core) 或更高版本。
 - 阅读参考主题 [dotnet new 自定义模板](../tools/custom-templates.md)。
 
 ## <a name="create-a-template-from-a-project"></a>通过项目创建模板
 
-使用已确认的现有项目编译和运行时，或在您的硬盘上的文件夹中创建一个新的控制台应用程序项目。 本教程假定项目文件夹名为 GarciaSoftware.ConsoleTemplate.CSharp，并存储在用户配置文件中的 Documents/Templates。 本教程的项目模板名称采用格式“\<公司名称>.\<模板类型>.\<编程语言>”，但也可以根据自己的意愿随意命名项目和模板。
+使用已确认可以编译和运行的现有项目，或在硬盘上的文件夹中新建一个控制台应用项目。 本教程假定项目文件夹名为 GarciaSoftware.ConsoleTemplate.CSharp，并存储在用户配置文件中的 Documents/Templates。 本教程的项目模板名称采用格式“\<公司名称>.\<模板类型>.\<编程语言>”，但也可以根据自己的意愿随意命名项目和模板。
 
 1. 向 .template.config 项目根添加文件夹。
 1. 在 .template.config 文件夹中，创建 template.json 文件来配置模板。 有关 template.json 文件的详细信息和成员定义，请参阅 [dotnet new 自定义模板](../tools/custom-templates.md#templatejson)主题和 [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)。
@@ -74,11 +75,11 @@ ms.lasthandoff: 10/18/2017
 
    | 元素            | 类型   | 描述 |
    | ------------------ | ------ | ----------- |
-   | **\<authors>**     | string | 包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。 |
-   | **\<description>** | string | 用于 UI 显示的包的详细说明。 |
-   | **\<id>**          | string | 不区分大小写的包标识符，在 nuget.org 或包驻留的任意库中必须是唯一的。 ID 不得包含空格或对 URL 无效的字符，通常遵循 .NET 命名空间规则。 有关指南，请参阅[选择唯一包标识符并设置版本号](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。 |
-   | **\<packageType>** | string | 将此元素置于 \<metadata> 元素之间的 \<packageTypes> 元素内。 将 \<packageType> 元素的 `name` 属性设置为 `Template`。 |
-   | **\<version>**     | string | 遵循 major.minor.patch 模式的包版本。 版本号可能包括预发布后缀，如[预发布版本](/nuget/create-packages/prerelease-packages#semantic-versioning)中所述。 |
+   | **\<authors>**     | 字符串 | 包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。 |
+   | **\<description>** | 字符串 | 用于 UI 显示的包的详细说明。 |
+   | **\<id>**          | 字符串 | 不区分大小写的包标识符，在 nuget.org 或包驻留的任意库中必须是唯一的。 ID 不得包含空格或对 URL 无效的字符，通常遵循 .NET 命名空间规则。 有关指南，请参阅[选择唯一包标识符并设置版本号](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。 |
+   | **\<packageType>** | 字符串 | 将此元素置于 \<metadata> 元素之间的 \<packageTypes> 元素内。 将 \<packageType> 元素的 `name` 属性设置为 `Template`。 |
+   | **\<version>**     | 字符串 | 遵循 major.minor.patch 模式的包版本。 版本号可能包括预发布后缀，如[预发布版本](/nuget/create-packages/prerelease-packages#semantic-versioning)中所述。 |
 
    有关完整的 nuspec 文件架构，请参阅 [.nuspec 参考](/nuget/schema/nuspec)。
 

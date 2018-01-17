@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5719cf7cfb5ec99f1bfbf952048e98c9465e1fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-application-services-overview"></a>客户端应用程序服务概述
 使用客户端应用程序服务，可简便地从 Windows 窗体和 Windows Presentation Foundation (WPF) 应用程序访问 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登录、角色和配置文件服务。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务包含在 Microsoft ASP.NET 2.0 AJAX Extensions 中，而它又包含在 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 中。 这些服务使多个基于 Web 和 Windows 的应用程序共享来自单个服务器的用户信息和用户管理功能。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  利用 Forms 身份验证，<xref:System.Web.Security.Membership.ValidateUser%2A> 方法将返回一个值，该值指示远程服务是否已经对用户进行身份验证。 如果验证成功，将本地硬盘上存储身份验证 cookie。 访问角色和设置服务时，此 cookie 将用于确认验证。  
   
- 使用 Forms 身份验证时，可以将用户名和密码传递到 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法。 你还可以传递空字符串或 `null`，以作为使用凭据提供程序的参数。 凭据提供程序是在你的应用程序配置中提供并指定的类。 凭据提供程序类必须实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 接口，该接口具有一个名为 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的方法 。 使用凭据提供程序，让你可以在多个应用程序间共享单点登录对话框。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+ 使用 Forms 身份验证时，可以将用户名和密码传递到 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法。 你还可以传递空字符串或 `null`，以作为使用凭据提供程序的参数。 凭据提供程序是在你的应用程序配置中提供并指定的类。 凭据提供程序类必须实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 接口，该接口具有一个名为 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的方法 。 使用凭据提供程序，让你可以在多个应用程序间共享单点登录对话框。 有关详细信息，请参阅[如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
  配置应用程序以将凭据提供程序与 Forms 身份验证一起使用时，必须传递空字符串或 `null`，以作为 <xref:System.Web.Security.Membership.ValidateUser%2A> 方法的参数。 服务提供程序将调用 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType> 方法实现。 通常情况下，您将实现此方法以显示对话框并返回填充的 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 对象。  
   
@@ -80,13 +81,13 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials>|此类表示用户凭据。<br /><br /> 实现 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 接口时，你只能将此类用作 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 方法的返回值类型。|  
 |<xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider>|此类管理 Forms 身份验证的远程身份验证服务的访问。<br /><br /> 直接访问此类的主要目的是使用他的 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> 和 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.UserValidated> 成员，它们未能由基类 <xref:System.Web.Security.MembershipProvider> 实现。 你还可以使用 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.ServiceUri%2A> 属性，以编程方式设置服务位置。<br /><br /> 你可以通过 `static` <xref:System.Web.Security.Membership.Provider%2A?displayProperty=nameWithType> 属性检索此类的实例。|  
 |<xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider>|此类管理 Windows 身份验证。<br /><br /> 直接访问此类的主要目的是调用他的 <xref:System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider.Logout%2A> 方法。 注销后，Windows 仍将保留对用户的身份验证，但将不能访问远程应用程序服务。<br /><br /> 你可以通过 `static` <xref:System.Web.Security.Membership.Provider%2A?displayProperty=nameWithType> 属性检索此类的实例。|  
-|<xref:System.Web.ClientServices.Providers.ClientRoleProvider>|此类管理远程角色服务访问。<br /><br /> 访问此类的主要目的是调用他的 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> 方法。 如果你的应用程序配置为使用非零角色服务缓存超时值，则这样做很有用。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 你还可以使用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ServiceUri%2A> 属性，以编程方式设置服务位置。<br /><br /> 你可以通过 `static` <xref:System.Web.Security.Roles.Provider%2A?displayProperty=nameWithType> 属性检索此类的实例。|  
+|<xref:System.Web.ClientServices.Providers.ClientRoleProvider>|此类管理远程角色服务访问。<br /><br /> 访问此类的主要目的是调用他的 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ResetCache%2A> 方法。 如果你的应用程序配置为使用非零角色服务缓存超时值，则这样做很有用。 有关详细信息，请参阅[如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。 你还可以使用 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.ServiceUri%2A> 属性，以编程方式设置服务位置。<br /><br /> 你可以通过 `static` <xref:System.Web.Security.Roles.Provider%2A?displayProperty=nameWithType> 属性检索此类的实例。|  
 |<xref:System.Web.ClientServices.Providers.ClientSettingsProvider>|此类管理远程 Web 设置服务访问。<br /><br /> 访问此类的主要目的是处理 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> 事件。 你还可以使用 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.ServiceUri%2A> 属性，以编程方式设置服务位置。|  
-|<xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>|此接口为你的应用程序提供了一个间接获取用于验证的用户凭据的方法，如本主题的身份验证部分前面的说明所述。 有关更多信息，请参见 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。|  
+|<xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>|此接口为你的应用程序提供了一个间接获取用于验证的用户凭据的方法，如本主题的身份验证部分前面的说明所述。 有关详细信息，请参阅[如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。|  
 |<xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs>|此类提供在 <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=nameWithType> 事件处理程序中使用的 <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs.FailedSettingsList%2A> 属性。|  
 |<xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>|此类提供在 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.UserValidated> 事件处理程序中使用的 <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs.UserName%2A> 属性。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [如何：配置客户端应用程序服务](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  [如何：使用客户端应用程序服务来实现用户登录](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
@@ -94,8 +95,8 @@ ms.lasthandoff: 11/21/2017
  [应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
  [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
  [将 Forms 身份验证用于 Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [使用 Microsoft Ajax 角色信息](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [使用 Microsoft Ajax 的配置文件信息](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [将角色信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [将配置文件信息用于 Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
  [ASP.NET 身份验证](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
  [使用角色管理授权](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
  [为 SQL Server 创建和配置应用程序服务数据库](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

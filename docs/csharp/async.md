@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: dc9b45e21f15ad92304685a1aff6760f3406cee2
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 35038b3dae80958071a9615f7f131fca73513077
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -167,13 +167,13 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     DotNetCountLabel.Text = $"Number of .NETs on dotnetfoundation.org: {count}";
 
     NetworkProgressBar.IsEnabled = false;
-    NetworkProgressBar.Visbility = Visibility.Collapsed;
+    NetworkProgressBar.Visibility = Visibility.Collapsed;
 }
 ```
 
 ### <a name="waiting-for-multiple-tasks-to-complete"></a>等待多个任务完成
 
-你可能发现自己处于需要并行检索多个数据部分的情况。  `Task` API 包含两个方法，`Task.WhenAll`和`Task.WhenAny`这使您可以编写异步代码用于执行非阻止等待多个后台作业。
+你可能发现自己处于需要并行检索多个数据部分的情况。  `Task` API 包含两种方法（即 `Task.WhenAll` 和 `Task.WhenAny`），这些方法允许你编写在多个后台作业中执行非阻止等待的异步代码。
 
 此示例演示如何为一组 `User` 捕捉 `userId` 数据。
 

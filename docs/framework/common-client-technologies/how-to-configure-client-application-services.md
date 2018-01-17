@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f4f518b1676e998cf8a3fd93f893398342cba6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：配置客户端应用程序服务
 本主题介绍如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的“项目设计器”启用并配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
@@ -149,7 +150,7 @@ ms.lasthandoff: 11/21/2017
     <roleManager enabled="true" defaultProvider="MyCustomRoleProvider">  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [客户端应用程序服务](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [“项目设计器”->“服务”页](https://msdn.microsoft.com/library/bb398109)  

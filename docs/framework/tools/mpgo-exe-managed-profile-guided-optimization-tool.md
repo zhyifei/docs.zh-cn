@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b6c95613cdc7ac656e8beafcf9a685e51eddf5a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49d2154b1af4350c3145f2cb9be30505e0967a4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe（按托管配置文件优化工具）
 托管配置文件引导式优化工具 (Mpgo.exe) 是一种命令行工具，使用常见的最终用户方案优化由[本机映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 创建的本机映像程序集。 利用此工具，你可运行生成配置文件数据的培训方案。 [本机映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 使用此数据优化其生成的本机映像应用程序程序集。 培训方案是应用程序预期用法的一种试运行。 Mpgo.exe 适用于 Visual Studio Ultimate 2012 及更高版本。 从 [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] 开始，你还可以使用 Mpgo.exe 优化 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。  
@@ -56,7 +57,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 |必选参数|描述|  
 |------------------------|-----------------|  
-|`-Scenario` \<command><br /><br /> - 或 -<br /><br /> `-Scenario` \<packageName><br /><br /> - 或 -<br /><br /> `-Import` \<directory>|对于桌面应用，使用 `–Scenario` 指定命令来运行你要优化的应用程序，包括任何命令行参数。 如果 command 指定的路径包含空格，则应使用三组双引号将其引起来。例如：`mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`。 请勿使用双引号；如果 command 包含空格，使用双引号将不能正确发挥作用。<br /><br /> - 或 -<br /><br /> 对于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用，使用 `–Scenario` 指定你要为其生成配置文件信息的包。 如果指定包显示名称或包系列名称而不是完整的包名称，则 Mpgo.exe 将选择与你提供的名称匹配的包（如果只有一个匹配项）。 如果多个包与指定的名称匹配，则 Mpgo.exe 将提示你选择一个包。<br /><br /> - 或 -<br /><br /> 使用 `-Import` 指定应使用之前优化的程序集中的优化数据来优化 `-AssemblyList` 中的程序集。 directory 指定包含之前优化的文件的目录。 在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的程序集是要使用导入文件中的数据进行优化的程序集的新版本。 通过使用早期版本的程序集中的优化数据，你可以优化较新版本的程序集，而无需重新运行该方案。  但是，如果导入的程序集和目标程序集包含明显不同的代码，则优化数据将无效。 在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的程序集名称必须存在于 `–Import` directory 指定的目录中。 如果 directory 指定的路径包含空格，则应使用三组双引号将其引起来。<br /><br /> 你必须指定 `–Scenario` 或 `–Import`，但是不能同时指定这两个参数。|  
+|`-Scenario` \<command><br /><br /> - 或 -<br /><br /> `-Scenario` \<packageName><br /><br /> 或<br /><br /> `-Import` \<directory>|对于桌面应用，使用 `–Scenario` 指定命令来运行你要优化的应用程序，包括任何命令行参数。 如果 command 指定的路径包含空格，则应使用三组双引号将其引起来。例如：`mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`。 请勿使用双引号；如果 command 包含空格，使用双引号将不能正确发挥作用。<br /><br /> 或<br /><br /> 对于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用，使用 `–Scenario` 指定你要为其生成配置文件信息的包。 如果指定包显示名称或包系列名称而不是完整的包名称，则 Mpgo.exe 将选择与你提供的名称匹配的包（如果只有一个匹配项）。 如果多个包与指定的名称匹配，则 Mpgo.exe 将提示你选择一个包。<br /><br /> - 或 -<br /><br /> 使用 `-Import` 指定应使用之前优化的程序集中的优化数据来优化 `-AssemblyList` 中的程序集。 directory 指定包含之前优化的文件的目录。 在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的程序集是要使用导入文件中的数据进行优化的程序集的新版本。 通过使用早期版本的程序集中的优化数据，你可以优化较新版本的程序集，而无需重新运行该方案。  但是，如果导入的程序集和目标程序集包含明显不同的代码，则优化数据将无效。 在 `–AssemblyList` 或 `–AssemblyListFile` 中指定的程序集名称必须存在于 `–Import` directory 指定的目录中。 如果 directory 指定的路径包含空格，则应使用三组双引号将其引起来。<br /><br /> 你必须指定 `–Scenario` 或 `–Import`，但是不能同时指定这两个参数。|  
 |`-OutDir` \<directory>|用于放置优化过的程序集的目录。 如果某个程序集已经位于输出目录文件夹中，则将创建新副本并且向其名称追加索引号；例如：assemblyname-1.exe。 如果 directory 指定的路径包含空格，则使用双引号将其引起来。|  
 |`-AssemblyList` \<assembly1 assembly2 ...><br /><br /> - 或 -<br /><br /> `-AssemblyListFile` \<file>|你希望收集与其有关的配置文件信息的程序集（包括 .exe 和 .dll 文件）的列表，各程序集之用空格隔开。 你可以指定 `C:\Dir\*.dll` 或 `*.dll` 来选择指定工作目录或当前工作目录中的所有程序集。 有关详细信息，请参阅备注部分。<br /><br /> - 或 -<br /><br /> 一个文本文件，其中包含你希望收集与其有关的配置文件信息的程序集的列表，每个程序集在单独的行上列出。 如果程序集名称以连字符 (-) 开始，则使用程序集文件列表或重命名程序集。|  
 |`-AppID`\<appId>|指定包中的应用程序的 ID。 如果使用通配符 (\*)，则 Mpgo.exe 将尝试枚举包中的 AppID，如果失败，则将回退到 \<package_family_name>!App。 如果指定前缀为感叹号 (!) 的字符串，则 Mpgo.exe 会将包系列名称与提供的自变量连接。|  
@@ -133,8 +134,8 @@ mpgo –scenario "C:\MyApp\wav2wma.exe –input song1.wav –output song1.wma" �
 mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyTaxUtil2011.dll" -outdir C:\ReOptimized  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [提高你的桌面应用程序的启动性能](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
+ [Improving Launch Performance for your Desktop Applications](http://go.microsoft.com/fwlink/p/?LinkId=248943)（提高桌面应用程序的启动性能）  
  [.NET 4.5 中的性能改进概述](http://go.microsoft.com/fwlink/p/?LinkId=249131)

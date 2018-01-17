@@ -9,17 +9,18 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
-ms.openlocfilehash: 694201c1a2a2c373f62b0e0d8e3c1d8aa7e6e881
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: e922a2c91fab5c513f5c560920d37d77da2d6f84
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>在 Windows 上，使用 Visual Studio 2017 生成完整的 .NET Core 解决方案
 
 Visual Studio 2017 提供用于开发 .NET Core 应用程序的功能全面的开发环境。 本文档中的过程介绍了构建典型的 .NET Core 解决方案所需的步骤，包含可重用库、测试以及使用第三方库。 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 请按照[先决条件页](../windows-prerequisites.md)上的说明更新环境。
 
@@ -27,9 +28,9 @@ Visual Studio 2017 提供用于开发 .NET Core 应用程序的功能全面的�
 
 ### <a name="writing-the-library"></a>编写库
 
-1. 在 Visual Studio 中，依次选择“文件”、“新建”、“项目”。 在**新项目**对话框中，展开**Visual C#**节点，然后选择**.NET 标准**节点，然后选择**类库 (.NET Standard)**. 
+1. 在 Visual Studio 中，依次选择 **“文件”**、 **“新建”**、 **“项目”**。 在“新建项目”对话框中，展开“Visual C#”节点并选择“.NET Standard”节点，然后选择“类库(.NET Standard)”。 
 
-2. 将项目命名为“Library”，将解决方案命名为“Golden”。 保持选中“为解决方案创建目录”。 单击“确定”。
+2. 将项目命名为“Library”，将解决方案命名为“Golden”。 保持选中“为解决方案创建目录”。 单击 **“确定”**。
 
 3. 在“解决方案资源管理器”中，打开“依赖项”节点的上下文菜单，并选择“管理 NuGet 包”。
 

@@ -13,11 +13,11 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d03e12ae60b9a0145dcb58765ae00f756f84ca56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="platform-c-compiler-options"></a>/platform（C# 编译器选项）
 指定公共语言运行时 (CLR) 的哪个版本可以运行程序集。  
@@ -40,11 +40,11 @@ ms.lasthandoff: 11/21/2017
   
 -   ARM 将程序集编译成可以在具有高级 RISC 计算机 (ARM) 处理器的计算机上运行。  
   
--   x64 将程序集编译成可由 64 位公共语言运行库在支持 AMD64 或 EM64T 指令集的计算机上运行。  
+-   x64 将程序集编译成可由支持 AMD64 或 EM64T 指令集的计算机上的 64 位 CLR 运行。  
   
--   x86 将程序集编译成可由 32 位、x86 兼容的公共语言运行时运行。  
+-   x86 将程序集编译成可由 32 位、x86 可兼容 CLR 运行。  
   
--   Itanium 将程序集编译成可由 64 位公共语言运行时在采用 Itanium 处理器的计算机上运行。  
+-   Itanium 将程序集编译成可由配有 Itanium 处理器的计算机上的 64 位 CLR 运行。  
   
  在 64 位 Windows 操作系统上：  
   
@@ -79,6 +79,6 @@ ms.lasthandoff: 11/21/2017
 csc /platform:anycpu filename.cs  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

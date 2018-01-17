@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 855a1122eb4507912adca80878f78258b37d202d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f5d9adcfe701b5897c434dc1479b9692448d8b98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe（PEVerify 工具）
 PEVerify 工具有助于生成 Microsoft 中间语言 (MSIL) 的开发人员（如编译器编写者、脚本引擎开发人员等）确定其 MSIL 代码及关联的元数据是否满足类型安全要求。 某些编译器仅当你避免使用某些语言构造时才生成可验证的类型安全代码。 如果你作为开发人员正在使用此类编译器，则可能需要确认你未危害代码的类型安全性。 在这种情况下，你可以对文件运行 PEVerify 工具来检查 MSIL 和元数据。  
@@ -128,8 +129,8 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
- [NIB： 编写可验证类型安全代码](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)  
+ [NIB：编写可验证类型安全代码](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)  
  [类型安全和安全性](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9612603642a38083aba30c1c6dc931031d1d04e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c303a9d91d12305bd8be4e111aaa8d6ac13eb77
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |--------------|-----------------|  
 |*sourceStorename*|包含要添加、删除、保存或显示的现有证书、CTL 或 CRL 的证书存储。 这可以是一个存储文件，也可以是一个系统存储。|  
 |*destinationStorename*|输出证书存储或文件。|  
@@ -145,7 +146,7 @@ certmgr /del /all /ctl /s my newStore.str
 certmgr /put /c /s my newFile  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
- [Makecert.exe （证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe（证书创建工具）](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

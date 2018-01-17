@@ -29,11 +29,12 @@ caps.latest.revision: "57"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: af79c4309dfd048562b2ee14a71c6da791040397
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b13da21709bb85ddf376f84df4fe2c7ae9f1a513
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe（本机映像生成器）
 本机映像生成器 (Ngen.exe) 是一种提高托管应用程序性能的工具。 Ngen.exe 创建本机映像（包含经编译的特定于处理器的机器代码的文件），并将它们安装到本地计算机上的本机映像缓存中。 运行时可从缓存中使用本机映像，而不必使用实时 (JIT) 编译器编译原始程序集。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
  在 Windows 8 中，请参阅[本机映像任务](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)。  
   
- 有关使用 Ngen.exe 和本机映像服务的其他信息，请参阅[本机映像服务](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)。  
+ 有关使用 Ngen.exe 和本机映像服务的其他信息，请参阅[本机映像服务][Native Image Service]。  
   
 > [!NOTE]
 >  在[本机映像生成器 (Ngen.exe) 旧式语法](http://msdn.microsoft.com/en-us/5a69fc7a-103f-4afc-8ab4-606adcb46324)中可以找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 语法。  
@@ -86,11 +87,11 @@ ngen /? | /help
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|从本机映像缓存中删除程序集及其依赖项的本机映像。<br /><br /> 若要卸载单个映像及其依赖项，可使用与安装此映像时相同的命令行自变量。 **注意：**从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，不再支持操作 `uninstall` *。|  
 |`update` [`/queue`]|更新已无效的本机映像。<br /><br /> 如果指定了 `/queue`，则更新将排队等待本机映像服务。 更新的优先级总是设定为 3，因此它们在计算机空闲时运行。|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|显示程序集及其依赖项的本机映像的状态。<br /><br /> 如果未提供自变量，则显示本机映像缓存中的所有内容。|  
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - 或 -<br /><br /> `eqi` [1&#124;2&#124;3]|执行排队的编译作业。<br /><br /> 如果指定了优先级，则执行具有较高或同等优先级的编译作业。 如果未指定优先级，则执行所有排队的编译作业。|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> 或<br /><br /> `eqi` [1&#124;2&#124;3]|执行排队的编译作业。<br /><br /> 如果指定了优先级，则执行具有较高或同等优先级的编译作业。 如果未指定优先级，则执行所有排队的编译作业。|  
 |`queue` {`pause` &#124; `continue` &#124; `status`}|暂停本机映像服务，允许暂停的服务继续，或查询服务状态。|  
   
 <a name="ArgumentTable"></a>   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |参数|描述|  
 |--------------|-----------------|  
@@ -104,7 +105,7 @@ ngen /? | /help
 |--------------|-----------------|  
 |`1`|生成本机映像，并立即进行安装，而无需等待空闲时间。|  
 |`2`|生成本机映像，并立即进行安装，而无需等待空闲时间，但是在所有优先级为 1 的操作（及其依赖项）完成后。|  
-|`3`|在本机映像服务检测到计算机处于空闲状态时，安装本机映像。 请参阅[本机映像服务](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)。|  
+|`3`|在本机映像服务检测到计算机处于空闲状态时，安装本机映像。 请参阅[本机映像服务][Native Image Service]。|  
   
 <a name="ScenarioTable"></a>   
 ## <a name="scenarios"></a>方案  
@@ -126,7 +127,7 @@ ngen /? | /help
 <a name="OptionTable"></a>   
 ## <a name="options"></a>选项  
   
-|选项|说明|  
+|选项|描述|  
 |------------|-----------------|  
 |`/nologo`|禁止显示 Microsoft 启动版权标志。|  
 |`/silent`|禁止显示成功消息。|  
@@ -148,7 +149,7 @@ ngen /? | /help
   
  Ngen.exe 维护一个与依赖项有关的计数。 例如，假设本机映像缓存中同时安装了 `MyAssembly.exe` 和 `YourAssembly.exe`，而且它们都具有对 `OurDependency.dll` 的引用。 如果卸载了 `MyAssembly.exe`，则不会卸载 `OurDependency.dll`。 只有当 `YourAssembly.exe` 也被卸载时才会将其移除。  
   
- 如果为全局程序集缓存中的程序集生成本机映像，请指定其显示名称。 请参阅<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>。  
+ 如果为全局程序集缓存中的程序集生成本机映像，请指定其显示名称。 请参阅 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>。  
   
  Ngen.exe 生成的本机映像可以在应用程序域之间共享。 这意味着，在要求在应用程序域之间共享程序集的应用程序方案中，可以使用 Ngen.exe。 若要指定域非特定性，请执行以下操作：  
   
@@ -321,7 +322,7 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="Deferred"></a>   
 ## <a name="deferred-processing"></a>推迟处理  
- 超大型应用程序的本机映像生成过程可能需要相当长的时间。 同样，更改共享组件或更改计算机设置可能需要更新很多本机映像。 `install` 和 `update` 操作有一个 `/queue` 选项，该选项将该操作排入队列，以便由本机映像服务推迟执行。 此外，Ngen.exe 具有 `queue` 和 `executeQueuedItems` 操作，这些操作提供了对本机映像服务的某些控制。 有关详细信息，请参阅[本机映像服务](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)。  
+ 超大型应用程序的本机映像生成过程可能需要相当长的时间。 同样，更改共享组件或更改计算机设置可能需要更新很多本机映像。 `install` 和 `update` 操作有一个 `/queue` 选项，该选项将该操作排入队列，以便由本机映像服务推迟执行。 此外，Ngen.exe 具有 `queue` 和 `executeQueuedItems` 操作，这些操作提供了对本机映像服务的某些控制。 有关详细信息，请参阅[本机映像服务][Native Image Service]。  
   
 <a name="JITCompilation"></a>   
 ## <a name="native-images-and-jit-compilation"></a>本机映像和 JIT 编译  
@@ -427,7 +428,7 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe  
 ```  
   
- 若要在全局程序集缓存中为程序集创建本机映像，请使用该程序集的显示名称。 例如：  
+ 若要在全局程序集缓存中为程序集创建本机映像，请使用该程序集的显示名称。 例如:  
   
 ```  
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,   
@@ -478,7 +479,7 @@ ngen display "myAssembly, version=1.0.0.0"
 ngen update  
 ```  
   
- 更新所有映像可能会耗费很长时间。 使用 `/queue` 选项可对更新操作进行排队以等候本机映像服务执行。 有关 `/queue` 选项和安装优先级的详细信息，请参阅[本机映像服务](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)。  
+ 更新所有映像可能会耗费很长时间。 使用 `/queue` 选项可对更新操作进行排队以等候本机映像服务执行。 有关 `/queue` 选项和安装优先级的详细信息，请参阅[本机映像服务][Native Image Service]。  
   
 ```  
 ngen update /queue  
@@ -519,7 +520,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   
  与 `install` 操作一样，如果提供了扩展名，则需要从包含该程序集的目录执行 Ngen.exe，或者指定完整路径。  
   
- 有关本机映像服务的相关示例，请参阅[本机映像服务](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)。  
+ 有关本机映像服务的相关示例，请参阅[本机映像服务][Native Image Service]。  
   
 ## <a name="native-image-task"></a>本机映像任务  
  本机映像任务是生成和维护本机映像的 Windows 任务。 本机映像任务为支持方案自动生成并回收本机映像。 （请参阅[创建本机映像](http://msdn.microsoft.com/en-us/2bc8b678-dd8d-4742-ad82-319e9bf52418)。）它还使安装程序能使用 [Ngen.exe（本机映像生成器）](../../../docs/framework/tools/ngen-exe-native-image-generator.md)来创建和更新在延迟时间的本机映像。  
@@ -529,9 +530,9 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |任务名称|32 位计算机|64 位计算机|  
 |---------------|----------------------|----------------------|  
 |NET Framework NGEN v4.0.30319|是|是|  
-|NET Framework NGEN v4.0.30319 64|No|是|  
+|NET Framework NGEN v4.0.30319 64|否|是|  
   
- 在运行 Windows 8 或更高版本时，本机映像任务在 .NET Framework 4.5 和更高版本中可用。 在 Windows 早期版本中，.NET Framework 使用 [本机映像服务](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)。  
+ 在运行 Windows 8 或更高版本时，本机映像任务在 .NET Framework 4.5 和更高版本中可用。 在 Windows 早期版本中，.NET Framework 使用 [本机映像服务][Native Image Service]。  
   
 ### <a name="task-lifetime"></a>任务生存期  
  一般情况下，计算机处于空闲状态时，Windows 任务计划程序将每晚启动本机映像任务。 该任务检查由应用程序安装程序排列的任何延时工作、任何延时本机映像更新请求和任何自动化映像创建。 任务完成未完成的工作项，然后关闭。 如果计算机在任务运行时停止空闲状态，该任务将停止。  
@@ -592,10 +593,10 @@ ngen executeQueuedItems
 ### <a name="service-interaction-with-clients"></a>与客户端进行服务交互  
  在.NET Framework 2.0 版中，与本机映像服务的唯一交互是通过命令行工具 Ngen.exe 进行的。 使用安装脚本中的命令行工具对本机映像服务的操作进行排队，并与服务交互。  
   
-## <a name="see-also"></a>另请参阅  
- [本机映像服务](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)  
- [本机映像任务](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)  
+## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [托管执行过程](../../../docs/standard/managed-execution-process.md)  
  [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+[Native Image Service]: #native-image-service

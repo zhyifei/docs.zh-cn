@@ -8,11 +8,11 @@ ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: cc861f186bea681bb32a2f8041a7155026679987
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 9e7fefde6763dbd5c73c01e45e5652d9f207c213
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 中的新增功能
 
@@ -53,13 +53,13 @@ C# 7.2 使用[语言版本选择](csharp-7-1.md#language-version-selection)配�
 
 C# 7.0 中实现了对数字分隔符的支持，但这不允许文字值的第一个字符是 `_`。 十六进制文本和二进制文件现可以 `_` 开头。 
 
-例如：
+例如:
 
 ```csharp
 int binaryValue = 0b_0101_0101;
 ```
 
-## `private protected`
+## <a name="private-protected-access-modifier"></a>_private protected_ 访问修饰符
 
 最后，新的复合访问修饰符 `private protected` 指示可通过包含同一程序集中声明的类或派生类来访问成员。 虽然 `protected internal` 允许通过同一程序集中的类或派生类进行访问，但 `private protected` 限制对同一程序集中声明的派生类的访问。
 

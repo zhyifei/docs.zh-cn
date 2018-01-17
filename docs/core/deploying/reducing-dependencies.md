@@ -9,11 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.openlocfilehash: e09b6f9124ec7614ab2e847d686435d74b00b336
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: 858fc77d9652bfa59ed0bb3159260f40c76156a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>使用 project.json 减少包依赖项
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/18/2017
 当前，没有任何可修剪包引用的正式 `dotnet` 命令。  相反，需要手动进行此操作。  一般过程如下所示：
 
 1. 在 `project.json` 的 `dependencies` 部分中引用 `NETStandard.Library` 版本 `1.6.0`。
-2. 还原具有包`dotnet restore`([请参阅备注](#dotnet-restore-note)) 从命令行。
+2. 使用 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）从命令行中还原包。
 3. 检查 `project.lock.json` 文件并找到 `NETSTandard.Library` 部分。  它在文件的开头附近。
 4. 复制 `dependencies` 下所有列出的包。
 5. 删除 `.NETStandard.Library` 引用并将其替换为复制的包。
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/18/2017
 }
 ```
 
-接下来，还原的包`dotnet restore`([请参阅备注](#dotnet-restore-note))，检查`project.lock.json`文件中，并查找有关还原的所有程序包`NETSTandard.Library`。
+接着，使用 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）还原包，检查 `project.lock.json` 文件，并查找为 `NETSTandard.Library` 还原的所有包。
 
 以下是以 `netstandard1.0` 为目标时，`project.lock.json` 文件中相关部分的内容：
 

@@ -7,17 +7,18 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 9eb5be38549711717c11767332bfc84920ea927a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnetcore
+ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名称
+## <a name="name"></a>name
 
 `dotnet test` - 用于执行单元测试的 .NET 测试驱动程序。
 
@@ -47,7 +48,7 @@ dotnet test [-h|--help]
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 `PROJECT`
 
@@ -189,7 +190,7 @@ dotnet test [-h|--help]
 
 | 测试框架 | 支持的属性                                                                                      |
 | :------------: | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>名称</li><li>ClassName</li><li>优先级</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>name</li><li>ClassName</li><li>优先级</li><li>TestCategory</li></ul> |
 | Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特征</li></ul>                                   |
 
 `<operator>` 说明了属性和值之间的关系：
@@ -211,7 +212,7 @@ dotnet test [-h|--help]
 | <code>&#124;</code>      | 或       |
 | `&`      | AND      |
 
-可以将表达式括在括号中，使用条件运算符时 (例如， `(Name~TestMethod1) | (Name~TestMethod2)`)。
+使用条件运算符时，可以用括号将表达式括起来（例如，`(Name~TestMethod1) | (Name~TestMethod2)`）。
 
 有关如何使用选择性单元测试筛选的其他信息和示例，请参阅[运行选择性单元测试](../testing/selective-unit-tests.md)。
 
