@@ -48,7 +48,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  使用虚方法通过对基类方法的单个调用来调用任何派生类上的相应方法。  
   
- 首先，创建一个名为 `Shape` 的基类，并创建一些派生类，例如 `Rectangle` 、 `Circle` 和 `Triangle`。 为 `Shape` 类提供一个名为 `Draw` 的虚方法，并在每个派生类中重写该方法以绘制该类表示的特定形状。 创建一个 `List<Shape>` 对象，并向该对象添加 Circle、Triangle 和 Rectangle。 若要更新绘图图面，请使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 循环对该列表进行循环访问，并对其中的每个 `Shape` 对象调用 `Draw` 方法。 虽然列表中的每个对象都具有声明类型 `Shape`，但调用的将是运行时类型（该方法在每个派生类中的重写版本）。  
+ 首先，创建一个名为 `Shape` 的基类，并创建一些派生类，例如 `Rectangle`、`Circle` 和 `Triangle`。为 `Shape` 类提供一个名为 `Draw` 的虚拟方法，并在每个派生类中重写该方法以绘制该类表示的特定形状。创建一个 `List<Shape>` 对象，并向该对象添加 Circle、Triangle 和 Rectangle。 若要更新绘图图面，请使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 循环对该列表进行循环访问，并对其中的每个 `Shape` 对象调用 `Draw` 方法。虽然列表中的每个对象都具有声明类型 `Shape`，但调用的将是运行时类型（该方法在每个派生类中的重写版本）。 
   
  [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
   
