@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 58f30c4c2c220660b62b03ea4eb052bd2cf015eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-sql-reference"></a>Entity SQL 引用
 本节包含 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 参考主题。 本主题总结并组[!INCLUDE[esql](../../../../../../includes/esql-md.md)]按类别的运算符。  
@@ -60,9 +60,9 @@ ms.lasthandoff: 12/22/2017
 |[是 （& A) #91;不 &#93;NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|确定查询表达式是否为 null。|  
 |[<（小于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于右侧表达式的值。|  
 |[<=（小于或等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于或等于右侧表达式的值。|  
-|[&#91;不 &#93;之间](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|确定表达式的结果值是否在指定范围内。|  
+|[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|确定表达式的结果值是否在指定范围内。|  
 |[!=（不等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式是否不等于右侧表达式。|  
-|[&#91;不 &#93;类似于](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|确定特定字符串是否与指定模式相匹配。|  
+|[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|确定特定字符串是否与指定模式相匹配。|  
   
 ## <a name="logical-and-case-expression-operators"></a>逻辑和 Case 表达式运算符  
  逻辑运算符测试条件的真实性。 CASE 表达式计算一组布尔表达式的值以确定结果。 下表列出了逻辑和 Case 表达式运算符。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/22/2017
 |--------------|-----------------|  
 |[& & （逻辑与）](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|逻辑“与”。|  
 |[!（逻辑非）](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|逻辑非。|  
-|[&#124; &#124;（逻辑或）](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|逻辑“或”。|  
+|[&#124;&#124; (Logical OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|逻辑“或”。|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|求出一组布尔表达式的值以确定结果。|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|结果[时](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998)when 子句取值为 true。|  
   
@@ -109,9 +109,9 @@ ms.lasthandoff: 12/22/2017
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|从多值集合中提取元素。|  
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|返回由 EXCEPT 操作数左侧的查询表达式返回而不由 EXCEPT 操作数右侧的查询表达式返回的任何非重复值的集合。|  
-|[&#91;不 &#93;存在](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|确定集合是否为空。|  
+|[&#91;NOT&#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|确定集合是否为空。|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|将一个由多个集合组成的集合转换为一个平展集合。|  
-|[&#91;不 &#93;在](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|确定某个值是否与某个集合中的任何值匹配。|  
+|[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|确定某个值是否与某个集合中的任何值匹配。|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|返回 INTERSECT 操作数左右两边的两个查询表达式均返回的所有非重复值的集合。|  
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|确定两个集合是否具有公共元素。|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|用于通过生成一个新集合（其中移除了所有重复元素）将对象集合转换为一个集。|  
@@ -124,7 +124,7 @@ ms.lasthandoff: 12/22/2017
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|将一种数据类型的表达式转换为另一种数据类型的表达式。|  
 |[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|在中使用[函数](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)操作以声明实体类型或复杂类型的集合。|  
-|[是 （& A) #91;不 &#93;的](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|确定表达式的类型是否为指定类型或指定类型的某个子类型。|  
+|[IS &#91;NOT&#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|确定表达式的类型是否为指定类型或指定类型的某个子类型。|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|从查询表达式返回特定类型的对象集合。|  
 |[命名类型构造函数](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|用于创建实体类型或复杂类型的实例。|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|根据值列表创建多集的实例。|  

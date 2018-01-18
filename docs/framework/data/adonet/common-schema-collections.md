@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="common-schema-collections"></a>公共架构集合
 通用架构集合是每个 .NET Framework 托管提供程序均实现的架构集合。 您可以查询由.NET Framework 托管提供程序以确定支持的架构集合列表，通过调用**GetSchema**不带任何参数，或包含架构集合名称"MetaDataCollections"的方法。 此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。 这些集合描述所有必需的列。 提供程序可以根据需要随意添加其他列。 例如，`SqlClient` 和 `OracleClient` 向限制集合中添加 ParameterName。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
 |列名|数据类型|描述|  
 |----------------|--------------|-----------------|  
-|CollectionName|string|要传递到集合的名称**GetSchema**方法返回集合。|  
+|CollectionName|字符串|要传递到集合的名称**GetSchema**方法返回集合。|  
 |NumberOfRestrictions|int|可以为集合指定的限制数。|  
 |NumberOfIdentifierParts|int|复合标识符/数据库对象名称中的部分数。 例如，在 SQL Server 中，表为 3，列为 4。 在 Oracle 中，表为 2，列为 3。|  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/22/2017
 |IsConcurrencyType|bool|true – 每次行更改并且列值与所有以前的值不同时，由数据库更新数据类型。<br /><br /> false – 每次行更改时，数据库不更新数据类型。<br /><br /> DBNull.Value – 数据库不支持此数据类型的类型。|  
 |IsLiteralSupported|bool|true – 数据类型可以以文本形式表示。<br /><br /> false – 数据类型不能以文本形式表示。|  
 |LiteralPrefix|string|应用于给定文本的前缀。|  
-|LiteralSuffix|string|应用于给定文本的后缀。|  
+|LiteralSuffix|字符串|应用于给定文本的后缀。|  
 |NativeDataType|String|NativeDataType 是 OLE DB 特定的列，用于公开数据类型的 OLE DB 类型。|  
   
 ## <a name="restrictions"></a>限制  
@@ -103,7 +103,7 @@ ms.lasthandoff: 12/22/2017
   
 |列名|数据类型|描述|  
 |----------------|--------------|-----------------|  
-|ReservedWord|string|提供程序特定的保留的字。|  
+|ReservedWord|字符串|提供程序特定的保留的字。|  
   
 ## <a name="see-also"></a>请参阅  
  [检索数据库架构信息](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  

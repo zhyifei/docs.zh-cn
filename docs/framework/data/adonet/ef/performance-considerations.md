@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0b12703343480c58024d91ee87f001373552f66a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f03a82c2164eac489a568ff4c0f3f9c55cf4326
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="performance-considerations-entity-framework"></a>性能注意事项（实体框架）
 本主题介绍 ADO.NET 实体框架的性能特征，并提供一些注意事项帮助改善实体框架应用程序的性能。  
@@ -29,13 +29,13 @@ ms.lasthandoff: 12/22/2017
 |操作|相对成本|频率|注释|  
 |---------------|-------------------|---------------|--------------|  
 |加载元数据|中等|在每个应用程序域中一次。|实体框架使用的模型和映射元数据加载到 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 中。 此元数据全局缓存，并可用于同一个应用程序域中的其他 <xref:System.Data.Objects.ObjectContext> 实例。|  
-|打开数据库连接|中等<sup>1</sup>|根据需要。|与数据库的开放连接会占用宝贵的资源，因为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]打开和关闭数据库连接，仅在需要时。 还可以显式打开连接。 有关详细信息，请参阅[管理连接和事务](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。|  
+|打开数据库连接|Moderate<sup>1</sup>|根据需要。|与数据库的开放连接会占用宝贵的资源，因为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]打开和关闭数据库连接，仅在需要时。 还可以显式打开连接。 有关详细信息，请参阅[管理连接和事务](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。|  
 |生成视图|高|在每个应用程序域中一次。 （可以预生成。）|在实体框架可以针对概念模型执行查询或将更改保存到数据源之前，它必须生成一组本地查询视图才能访问数据库。 由于生成这些视图会产生很高的成本，因此，您可以在设计时预生成视图并将它们添加到项目。 有关详细信息，请参阅[How to： 提高查询性能的 Pre-Generate 视图](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579)。|  
-|准备查询|中等<sup>2</sup>|每个唯一查询一次。|包括编写查询命令、基于模型和映射元数据生成命令树和定义所返回数据的形状的成本。 因为实体 SQL查询命令和 LINQ 查询现已缓存，所以，以后执行相同查询所需的时间较少。 您仍可以使用已编译的 LINQ 查询来降低后续执行中的这一开销，编译的查询比自动缓存的 LINQ 查询效率更高。 有关详细信息，请参阅[已编译的查询 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。 有关 LINQ 查询执行的常规信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。 **注意：** LINQ to Entities 查询应用`Enumerable.Contains`不自动缓存到内存中集合的运算符。 此外，不允许在已编译的 LINQ 查询中参数化内存中的集合。|  
-|执行查询|低<sup>2</sup>|每个查询一次。|使用 ADO.NET 数据提供程序对数据源执行命令的成本。 因为大多数数据源缓存查询计划，所以，以后执行相同查询所需的时间可能较少。|  
-|加载和验证类型|低<sup>3</sup>|每个 <xref:System.Data.Objects.ObjectContext> 实例一次。|将加载类型，并针对概念模型定义的类型对其进行验证。|  
-|跟踪|低<sup>3</sup>|对于查询返回的每个对象执行一次。 <sup>4</sup>|如果查询使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合并选项，则此阶段不影响性能。<br /><br /> 如果查询使用 <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 合并选项，则将在 <xref:System.Data.Objects.ObjectStateManager> 中跟踪查询结果。 将为查询返回的每个跟踪对象生成一个 <xref:System.Data.EntityKey>，并用于在 <xref:System.Data.Objects.ObjectStateEntry> 中创建 <xref:System.Data.Objects.ObjectStateManager>。 如果对于 <xref:System.Data.Objects.ObjectStateEntry> 可以找到现有 <xref:System.Data.EntityKey>，则返回现有对象。 如果使用 <xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 选项，则首先更新对象，然后返回此对象。<br /><br /> 有关详细信息，请参阅[标识解析、 状态管理和更改跟踪](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
-|使对象具体化|中等<sup>3</sup>|对于查询返回的每个对象执行一次。 <sup>4</sup>|读取返回的 <xref:System.Data.Common.DbDataReader> 对象、创建对象以及设置属性值（这些值基于 <xref:System.Data.Common.DbDataRecord> 类的每个实例中的值）的过程。 如果对象已存在于 <xref:System.Data.Objects.ObjectContext> 中且查询使用 <xref:System.Data.Objects.MergeOption.AppendOnly> 或 <xref:System.Data.Objects.MergeOption.PreserveChanges> 合并选项，则此阶段不影响性能。 有关详细信息，请参阅[标识解析、 状态管理和更改跟踪](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
+|准备查询|Moderate<sup>2</sup>|每个唯一查询一次。|包括编写查询命令、基于模型和映射元数据生成命令树和定义所返回数据的形状的成本。 因为实体 SQL查询命令和 LINQ 查询现已缓存，所以，以后执行相同查询所需的时间较少。 您仍可以使用已编译的 LINQ 查询来降低后续执行中的这一开销，编译的查询比自动缓存的 LINQ 查询效率更高。 有关详细信息，请参阅[已编译的查询 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。 有关 LINQ 查询执行的常规信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。 **注意：** LINQ to Entities 查询应用`Enumerable.Contains`不自动缓存到内存中集合的运算符。 此外，不允许在已编译的 LINQ 查询中参数化内存中的集合。|  
+|执行查询|Low<sup>2</sup>|每个查询一次。|使用 ADO.NET 数据提供程序对数据源执行命令的成本。 因为大多数数据源缓存查询计划，所以，以后执行相同查询所需的时间可能较少。|  
+|加载和验证类型|Low<sup>3</sup>|每个 <xref:System.Data.Objects.ObjectContext> 实例一次。|将加载类型，并针对概念模型定义的类型对其进行验证。|  
+|跟踪|Low<sup>3</sup>|对于查询返回的每个对象执行一次。 <sup>4</sup>|如果查询使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合并选项，则此阶段不影响性能。<br /><br /> 如果查询使用 <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 合并选项，则将在 <xref:System.Data.Objects.ObjectStateManager> 中跟踪查询结果。 将为查询返回的每个跟踪对象生成一个 <xref:System.Data.EntityKey>，并用于在 <xref:System.Data.Objects.ObjectStateEntry> 中创建 <xref:System.Data.Objects.ObjectStateManager>。 如果对于 <xref:System.Data.Objects.ObjectStateEntry> 可以找到现有 <xref:System.Data.EntityKey>，则返回现有对象。 如果使用 <xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 选项，则首先更新对象，然后返回此对象。<br /><br /> 有关详细信息，请参阅[标识解析、 状态管理和更改跟踪](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
+|使对象具体化|Moderate<sup>3</sup>|对于查询返回的每个对象执行一次。 <sup>4</sup>|读取返回的 <xref:System.Data.Common.DbDataReader> 对象、创建对象以及设置属性值（这些值基于 <xref:System.Data.Common.DbDataRecord> 类的每个实例中的值）的过程。 如果对象已存在于 <xref:System.Data.Objects.ObjectContext> 中且查询使用 <xref:System.Data.Objects.MergeOption.AppendOnly> 或 <xref:System.Data.Objects.MergeOption.PreserveChanges> 合并选项，则此阶段不影响性能。 有关详细信息，请参阅[标识解析、 状态管理和更改跟踪](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
   
  <sup>1</sup>当数据源提供程序实现连接池时，跨整个池分布打开连接的成本。 SQL Server 的 .NET 提供程序支持连接池。  
   

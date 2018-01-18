@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 63e2ee9dffb041ede094afd43428660af4b9f450
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c8ec97e0d083ccdd17a97db571d58aae9afbeea8
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>如何：使用表值用户定义的函数
 表值函数返回单个行集（与存储过程不同，存储过程可返回多个结果形状）。 由于表值函数的返回类型为 `Table`，因此在 SQL 中可以使用表的任何地方均可以使用表值函数。 此外，您还可以完全像处理表那样来处理表值函数。  
@@ -45,7 +45,7 @@ RETURN
  [!code-vb[DLinqUDFS#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#1)]  
   
 ## <a name="example"></a>示例  
- 下面的 SQL 代码说明您可以对此函数返回的表执行联接，以及像处理任何其他表一样处理它：  
+ 下面的 SQL 代码说明你可以对此函数返回的表执行联接，以及像处理任何其他表一样处理它：  
   
 ```  
 SELECT p2.ProductName, p1.UnitPrice  

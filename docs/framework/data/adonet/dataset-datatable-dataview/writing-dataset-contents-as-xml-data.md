@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8c28dee75d5371da50dec1d3b73ec6c305176582
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b1250d616ad5835fccd1a3acbf0b8a759c34181
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>写入数据集内容作为 XML 数据
 在 ADO.NET 中可以编写 <xref:System.Data.DataSet> 的 XML 表示形式（包含或不包含其架构）。 如果架构信息以内联形式包含在 XML 表示形式中，则使用 XML 架构定义语言 (XSD) 来编写。 架构包含 <xref:System.Data.DataSet> 的表定义以及关系和约束定义。  
@@ -82,7 +82,7 @@ xmlSW.Close();
 |**元素**|这是默认设置。 列以元素名称为 ColumnName 的 XML 元素形式编写，列的内容以元素文本形式编写。 例如:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**特性**|对于属性名称为 ColumnName 的当前行，列以 XML 元素的 XML 属性形式编写，列的内容以属性值形式编写。 例如:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|列的内容以 XML 元素中当前行文本的形式编写。 例如:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> 请注意， **SimpleContent**具有的表的列不能设置**元素**列或嵌套的关系。|  
-|**隐藏**|不在 XML 输出中编写该列。|  
+|**Hidden**|不在 XML 输出中编写该列。|  
   
 ## <a name="see-also"></a>请参阅  
  [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  

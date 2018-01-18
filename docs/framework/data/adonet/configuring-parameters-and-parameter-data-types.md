@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>配置参数和参数数据类型
 通过提供类型检查和验证，命令对象可使用参数来将值传递给 SQL 语句或存储过程。 与命令文本不同，参数输入被视为文本值，而不是可执行代码。 这样可帮助抵御“SQL 注入”攻击，这种攻击的攻击者会将命令插入 SQL 语句，从而危及服务器的安全。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="supplying-the-parameterdirection-property"></a>提供 ParameterDirection 属性  
  在添加参数时，您必须为输入参数以外的参数提供一个 <xref:System.Data.ParameterDirection> 属性。 下表显示了可用于 `ParameterDirection` 枚举的 <xref:System.Data.ParameterDirection> 值。  
   
-|成员名称|说明|  
+|成员名称|描述|  
 |-----------------|-----------------|  
 |<xref:System.Data.ParameterDirection.Input>|该参数为输入参数。 这是默认设置。|  
 |<xref:System.Data.ParameterDirection.InputOutput>|该参数可执行输入和输出。|  

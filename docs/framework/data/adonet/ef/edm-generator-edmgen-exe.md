@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee356fc3e7d6e1279e0cba8014d6d285620add3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 生成器 (EdmGen.exe)
 EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]模型和映射文件的命令行工具。 使用 EdmGen.exe 工具可以执行以下任务：  
@@ -54,26 +54,26 @@ EdmGen /mode:choice [options]
   
 |选项|描述|  
 |------------|-----------------|  
-|`/p[roject]:`\<字符串 >|指定要使用的项目名称。 该项目名称用作命名空间设置、模型和映射文件的名称、对象源文件的名称以及视图生成源文件的名称的默认值。 实体容器名称设置为\<项目 > 上下文。|  
-|`/prov[ider]:`\<字符串 >|生成存储模型 (.ssdl) 文件要使用的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 数据提供程序的名称。 默认的提供程序[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]SQL Server 数据提供程序 (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|  
+|`/p[roject]:`\<string>|指定要使用的项目名称。 该项目名称用作命名空间设置、模型和映射文件的名称、对象源文件的名称以及视图生成源文件的名称的默认值。 实体容器名称设置为\<项目 > 上下文。|  
+|`/prov[ider]:`\<string>|生成存储模型 (.ssdl) 文件要使用的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 数据提供程序的名称。 默认的提供程序[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]SQL Server 数据提供程序 (<xref:System.Data.SqlClient?displayProperty=nameWithType>)。|  
 |`/c[onnectionstring]:`\<连接字符串 >|指定用于连接数据源的字符串。|  
-|`/incsdl:`\<文件 >|指定 .csdl 文件或 .csdl 文件所在的目录。 此参数可多次指定，这样可以指定多个目录或 .csdl 文件。 当概念模型跨多个文件拆分时，对于生成类 (`/mode:EntityClassGeneration`) 或视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。 如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。|  
-|`/refcsdl:`\<文件 >|指定用于解析源 .csdl 文件中的任何引用的其他 .csdl 文件。 （源 .csdl 文件是 `/incsdl` 选项指定的文件）。 `/refcsdl` 文件包含源 .csdl 文件所依赖的类型。 此自变量可多次指定。|  
-|`/inmsl:`\<文件 >|指定 .msl 文件或 .msl 文件所在的目录。 此参数可多次指定，这样可以指定多个目录或 .msl 文件。 当概念模型跨多个文件拆分时，对于生成视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。 如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。|  
-|`/inssdl:`\<文件 >|指定 .ssdl 文件或 .ssdl 文件所在的目录。 此参数可多次指定，这样可以指定多个目录或 .ssdl 文件。 如果希望验证多个模型 (`(/mode:ValidateArtifacts)`)，这样做很有用。|  
-|`/outcsdl:`\<文件 >|指定将创建的 .csdl 文件的名称。|  
-|`/outmsl:`\<文件 >|指定将创建的 .msl 文件的名称。|  
-|`/outssdl:`\<文件 >|指定将创建的 .ssdl 文件的名称。|  
-|`/outobjectlayer:`\<文件 >|指定包含根据 .csdl 文件生成的对象的源代码文件的名称。|  
-|`/outviews:`\<文件 >|指定包含所生成的视图的源代码文件的名称。|  
-|`/language:`[VB &#124;CSharp]|指定生成的源代码文件的语言。 默认语言为 C#。|  
-|`/namespace:`\<字符串 >|指定要使用的模型命名空间。 命名空间是在运行 `/mode:FullGeneration` 或 `/mode:FromSSDLGeneration` 时在 .csdl 文件中设置的。 在运行 `/mode:EntityClassGeneration` 时不使用该命名空间。|  
-|`/entitycontainer:`\<字符串 >|指定要应用于生成的模型和映射文件中 `<EntityContainer>` 元素的名称。|  
+|`/incsdl:`\<file>|指定 .csdl 文件或 .csdl 文件所在的目录。 此参数可多次指定，这样可以指定多个目录或 .csdl 文件。 当概念模型跨多个文件拆分时，对于生成类 (`/mode:EntityClassGeneration`) 或视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。 如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。|  
+|`/refcsdl:`\<file>|指定用于解析源 .csdl 文件中的任何引用的其他 .csdl 文件。 （源 .csdl 文件是 `/incsdl` 选项指定的文件）。 `/refcsdl` 文件包含源 .csdl 文件所依赖的类型。 此自变量可多次指定。|  
+|`/inmsl:`\<file>|指定 .msl 文件或 .msl 文件所在的目录。 此参数可多次指定，这样可以指定多个目录或 .msl 文件。 当概念模型跨多个文件拆分时，对于生成视图 (`/mode:ViewGeneration`)，指定多个目录十分有用。 如果希望验证多个模型 (`/mode:ValidateArtifacts`)，这样做也很有用。|  
+|`/inssdl:`\<file>|指定 .ssdl 文件或 .ssdl 文件所在的目录。 此参数可多次指定，这样可以指定多个目录或 .ssdl 文件。 如果希望验证多个模型 (`(/mode:ValidateArtifacts)`)，这样做很有用。|  
+|`/outcsdl:`\<file>|指定将创建的 .csdl 文件的名称。|  
+|`/outmsl:`\<file>|指定将创建的 .msl 文件的名称。|  
+|`/outssdl:`\<file>|指定将创建的 .ssdl 文件的名称。|  
+|`/outobjectlayer:`\<file>|指定包含根据 .csdl 文件生成的对象的源代码文件的名称。|  
+|`/outviews:`\<file>|指定包含所生成的视图的源代码文件的名称。|  
+|`/language:`[VB&#124;CSharp]|指定生成的源代码文件的语言。 默认语言为 C#。|  
+|`/namespace:`\<string>|指定要使用的模型命名空间。 命名空间是在运行 `/mode:FullGeneration` 或 `/mode:FromSSDLGeneration` 时在 .csdl 文件中设置的。 在运行 `/mode:EntityClassGeneration` 时不使用该命名空间。|  
+|`/entitycontainer:`\<string>|指定要应用于生成的模型和映射文件中 `<EntityContainer>` 元素的名称。|  
 |`/pl[uralize]`|对概念模型中 `Entity`、`EntitySet` 和 `NavigationProperty` 名称的单复数形式应用英语语言规则。 此选项将执行以下操作：<br /><br /> -使所有`EntityType`名称采用单数形式。<br />-使所有`EntitySet`名称采用复数形式。<br />-对于每个`NavigationProperty`返回最多一个实体，使名称采用单数形式。<br />-对于每个`NavigationProperty`返回多个实体，使名称采用复数形式。|  
 |`/SupressForeignKeyProperties or /nofk`|防止外键列公开为概念模型中实体类型上的标量属性。|  
 |`/help` 或 `?`|显示该工具的命令语法和选项。|  
 |`/nologo`|禁止显示版权信息。|  
-|`/targetversion:`\<字符串 >|将用于编译生成的代码的 .NET Framework 版本。 支持的版本是 4 和 4.5。 默认值为 4。|  
+|`/targetversion:` \<string>|将用于编译生成的代码的 .NET Framework 版本。 支持的版本是 4 和 4.5。 默认值为 4。|  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：使用 EdmGen.exe 生成模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  

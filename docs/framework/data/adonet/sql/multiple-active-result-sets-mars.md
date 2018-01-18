@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d44e6375209f6ad9c733d1c4412ee605b439d992
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 82b6cd24dec3b2f27454aa579bcac3d42cf65ffb
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="multiple-active-result-sets-mars"></a>多个活动结果集 (MARS)
 多活动结果集 (MARS) 是一项允许对单个连接执行多个批处理的功能。 在以前的版本中，在单个连接上一次只能执行一个批处理。 使用 MARS 执行多个批处理并不意味着同时执行操作。  

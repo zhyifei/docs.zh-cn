@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ba49a4394d2a52b199edab88b977d2322bff945f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3aedef610d8ad3f743b346a46059b15d917cf7ca
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>使用 LINQ to SQL 的典型步骤
 若要实现 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序，请按照本主题后面部分说明的步骤操作。 请注意，很多步骤是可选的。 您可以以对象模型的默认状态使用它，这种可能性很高。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   代码编辑器  
   
-     您可以通过使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]代码编辑器或其他编辑器编写自己的代码。 我们建议，在您具有现有数据库且可以使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]或 SQLMetal 工具时不要使用这种方法，因为这种方法容易出错。 但是，代码编辑器在改进或修改您已通过使用其他工具生成的代码方面非常有用。 有关详细信息，请参阅[如何： 使用代码编辑器自定义实体类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)。  
+     您可以通过使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]代码编辑器或其他编辑器编写自己的代码。 我们建议，在您具有现有数据库且可以使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]或 SQLMetal 工具时不要使用这种方法，因为这种方法容易出错。 但是，代码编辑器在改进或修改你已通过使用其他工具生成的代码方面非常有用。 有关详细信息，请参阅[如何： 使用代码编辑器自定义实体类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)。  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2.选择您要生成的代码类型。  
   

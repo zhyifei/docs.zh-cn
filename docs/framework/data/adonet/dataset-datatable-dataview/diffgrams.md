@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6166cae86d2956ae3eec28b98fe0af864f6b708b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81cf30367808a3f198514c0d72fa86a617a5ff13
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <xref:System.Data.DataSet> 使用 DiffGram 格式来加载和保持其内容，并将其内容序列化，以便通过网络连接来进行传输。 当<xref:System.Data.DataSet>编写为 DiffGram，则它会为 DiffGram 所有必要的信息来精确地重新创建内容，但不架构的填充<xref:System.Data.DataSet>，包括从这两个列值**原始**和**当前**行版本、 行错误信息以及行顺序。  
@@ -81,10 +81,10 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
  **\<**  ***DataInstance***  **>**  
  此元素的名称***DataInstance***，用于说明目的，本文档中。 A ***DataInstance***元素表示<xref:System.Data.DataSet>或行的<xref:System.Data.DataTable>。 而不是*DataInstance*，该元素所包含的名称<xref:System.Data.DataSet>或<xref:System.Data.DataTable>。 此 DiffGram 格式块包含当前数据（无论是否经过修改）。 用标识的元素或已修改行**diffgr:hasChanges**批注。  
   
- **\<diffgr： 之前 >**  
+ **\<diffgr:before>**  
  此 DiffGram 格式块包含行的原始版本。 此块中的元素的中的元素进行匹配***DataInstance***阻止使用**diffgr: id**批注。  
   
- **\<diffgr:errors >**  
+ **\<diffgr:errors>**  
  此 DiffGram 格式块包含中的特定行的错误信息***DataInstance***块。 此块中的元素的中的元素进行匹配***DataInstance***阻止使用**diffgr: id**批注。  
   
 ## <a name="diffgram-annotations"></a>DiffGram 批注  
@@ -96,7 +96,7 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
 |----------------|-----------------|  
 |**id**|用于中的元素配对 **\<diffgr： 之前 >**和 **\<diffgr:errors >**块中的元素 **\<** ***DataInstance***  **>** 块。 值与**diffgr: id**批注采用格式*[TableName] [RowIdentifier]*。 例如：`<Customers diffgr:id="Customers1">`。|  
 |**parentId**|标识中的哪个元素 **\<**  ***DataInstance***  **>** 块是当前元素的父元素。 值与**diffgr: parentid**批注采用格式*[TableName] [RowIdentifier]*。 例如：`<Orders diffgr:parentId="Customers1">`。|  
-|**hasChanges**|中的行标识 **\<**  ***DataInstance***  **>** 阻止为已修改。 **HasChanges**批注可以具有以下两个值之一：<br /><br /> **插入**<br /> 标识**Added**行。<br /><br /> **修改**<br /> 标识**已修改**包含行**原始**中的行版本 **\<diffgr： 之前 >**块。 请注意，**已删除**行将包含**原始**中的行版本 **\<diffgr： 之前 >**块，但将存在没有批注的元素**\<**  ***DataInstance***  **>** 块。|  
+|**hasChanges**|中的行标识 **\<**  ***DataInstance***  **>** 阻止为已修改。 **HasChanges**批注可以具有以下两个值之一：<br /><br /> **inserted**<br /> 标识**Added**行。<br /><br /> **modified**<br /> 标识**已修改**包含行**原始**中的行版本 **\<diffgr： 之前 >**块。 请注意，**已删除**行将包含**原始**中的行版本 **\<diffgr： 之前 >**块，但将存在没有批注的元素**\<**  ***DataInstance***  **>** 块。|  
 |**hasErrors**|中的行标识 **\<**  ***DataInstance***  **>** 块**RowError**。 错误元素放置在 **\<diffgr:errors >**块。|  
 |**错误**|包含文本的**RowError**中特定元素 **\<diffgr:errors >**块。|  
   
@@ -105,7 +105,7 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
 |批注|描述|  
 |----------------|-----------------|  
 |**RowOrder**|保留原始数据的行顺序并标识特定 <xref:System.Data.DataTable> 中行的索引。|  
-|**隐藏**|标识为具有列**ColumnMapping**属性设置为**MappingType.Hidden**。 该属性格式编写**msdata： 隐藏** *[ColumnName]*="*值*"。 例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> 请注意，只有当隐藏列包含数据时才以 DiffGram 属性的形式来编写隐藏列。 否则将忽略隐藏列。|  
+|**Hidden**|标识为具有列**ColumnMapping**属性设置为**MappingType.Hidden**。 该属性格式编写**msdata： 隐藏** *[ColumnName]*="*值*"。 例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> 请注意，只有当隐藏列包含数据时才以 DiffGram 属性的形式来编写隐藏列。 否则将忽略隐藏列。|  
   
 ## <a name="sample-diffgram"></a>DiffGram 示例  
  下面是 DiffGram 格式的示例。 该示例显示对表行的更新在提交更改之前的结果。 CustomerID 为“ALFKI”的行已被修改，但尚未更新。 因此，没有**当前**行**diffgr: id**中的"Customers1"的 **\<**  ***DataInstance***  **>** 块，和**原始**行**diffgr: id**中的"Customers1"的 **\<diffgr： 之前 >**块。 Customerid 为"ANATR"的行包含**RowError**，因此它已使用批注过`diffgr:hasErrors="true"`并且没有中的相关的元素 **\<diffgr:errors >**块。  

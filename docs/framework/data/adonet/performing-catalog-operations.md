@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 841f4e126a475799e7cc66f6f7afbcc9318a1096
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5ac8d5522b599eb1d426314eda1d7d9e406da90
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="performing-catalog-operations"></a>执行目录操作
 若要执行命令来修改数据库或目录，如 CREATE TABLE 或 CREATE PROCEDURE 语句中，创建**命令**对象使用相应的 SQL 语句和**连接**对象。 执行该命令与**ExecuteNonQuery**方法**命令**对象。  
