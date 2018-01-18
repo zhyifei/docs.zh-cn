@@ -13,39 +13,39 @@ dev_langs:
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 7797d3cacc38954b419efec34e1f811a265083df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f7136233989210f341e0f2b5065b40fd753aab6d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="method-based-query-syntax-examples-ordering"></a><span data-ttu-id="ef295-102">基于方法的查询语法示例：排序</span><span class="sxs-lookup"><span data-stu-id="ef295-102">Method-Based Query Syntax Examples: Ordering</span></span>
-<span data-ttu-id="ef295-103">本主题中的示例演示如何使用<xref:System.Linq.Enumerable.ThenBy%2A>方法来查询[AdventureWorks 销售模型](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832)使用基于方法的查询语法。</span><span class="sxs-lookup"><span data-stu-id="ef295-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.ThenBy%2A> method to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="ef295-104">这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。</span><span class="sxs-lookup"><span data-stu-id="ef295-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="method-based-query-syntax-examples-ordering"></a><span data-ttu-id="b5c46-102">基于方法的查询语法示例：排序</span><span class="sxs-lookup"><span data-stu-id="b5c46-102">Method-Based Query Syntax Examples: Ordering</span></span>
+<span data-ttu-id="b5c46-103">本主题中的示例演示如何使用<xref:System.Linq.Enumerable.ThenBy%2A>方法来查询[AdventureWorks 销售模型](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832)使用基于方法的查询语法。</span><span class="sxs-lookup"><span data-stu-id="b5c46-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.ThenBy%2A> method to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="b5c46-104">这些示例中使用的 AdventureWorks 销售模型从 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 等表生成。</span><span class="sxs-lookup"><span data-stu-id="b5c46-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="ef295-105">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="ef295-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="b5c46-105">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="b5c46-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="thenby"></a><span data-ttu-id="ef295-106">ThenBy</span><span class="sxs-lookup"><span data-stu-id="ef295-106">ThenBy</span></span>  
+## <a name="thenby"></a><span data-ttu-id="b5c46-106">ThenBy</span><span class="sxs-lookup"><span data-stu-id="b5c46-106">ThenBy</span></span>  
   
-### <a name="example"></a><span data-ttu-id="ef295-107">示例</span><span class="sxs-lookup"><span data-stu-id="ef295-107">Example</span></span>  
- <span data-ttu-id="ef295-108">采用基于方法的查询语法的以下示例使用 <xref:System.Linq.Queryable.OrderBy%2A> 和 <xref:System.Linq.Queryable.ThenBy%2A> 以返回先按姓氏后按名字排序的联系人列表。</span><span class="sxs-lookup"><span data-stu-id="ef295-108">The following example in method-based query syntax uses <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenBy%2A> to return a list of contacts ordered by last name and then by first name.</span></span>  
+### <a name="example"></a><span data-ttu-id="b5c46-107">示例</span><span class="sxs-lookup"><span data-stu-id="b5c46-107">Example</span></span>  
+ <span data-ttu-id="b5c46-108">采用基于方法的查询语法的以下示例使用 <xref:System.Linq.Queryable.OrderBy%2A> 和 <xref:System.Linq.Queryable.ThenBy%2A> 以返回先按姓氏后按名字排序的联系人列表。</span><span class="sxs-lookup"><span data-stu-id="b5c46-108">The following example in method-based query syntax uses <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenBy%2A> to return a list of contacts ordered by last name and then by first name.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderByThenBy_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbythenby_mq)]
  [!code-vb[DP L2E Examples#OrderByThenBy_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbythenby_mq)]  
   
-## <a name="thenbydescending"></a><span data-ttu-id="ef295-109">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="ef295-109">ThenByDescending</span></span>  
+## <a name="thenbydescending"></a><span data-ttu-id="b5c46-109">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="b5c46-109">ThenByDescending</span></span>  
   
-### <a name="example"></a><span data-ttu-id="ef295-110">示例</span><span class="sxs-lookup"><span data-stu-id="ef295-110">Example</span></span>  
- <span data-ttu-id="ef295-111">以下示例使用 <xref:System.Linq.Queryable.OrderBy%2A> 和 <xref:System.Linq.Queryable.ThenByDescending%2A> 方法以首先按标价排序，然后执行产品名称的降序排序。</span><span class="sxs-lookup"><span data-stu-id="ef295-111">The following example uses the <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenByDescending%2A> methods to first sort by list price, and then perform a descending sort of the product names.</span></span>  
+### <a name="example"></a><span data-ttu-id="b5c46-110">示例</span><span class="sxs-lookup"><span data-stu-id="b5c46-110">Example</span></span>  
+ <span data-ttu-id="b5c46-111">以下示例使用 <xref:System.Linq.Queryable.OrderBy%2A> 和 <xref:System.Linq.Queryable.ThenByDescending%2A> 方法以首先按标价排序，然后执行产品名称的降序排序。</span><span class="sxs-lookup"><span data-stu-id="b5c46-111">The following example uses the <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenByDescending%2A> methods to first sort by list price, and then perform a descending sort of the product names.</span></span>  
   
  [!code-csharp[DP L2E Examples#ThenByDescending_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#thenbydescending_mq)]
  [!code-vb[DP L2E Examples#ThenByDescending_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescending_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="ef295-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="ef295-112">See Also</span></span>  
- [<span data-ttu-id="ef295-113">LINQ to Entities 中的查询</span><span class="sxs-lookup"><span data-stu-id="ef295-113">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="b5c46-112">请参阅</span><span class="sxs-lookup"><span data-stu-id="b5c46-112">See Also</span></span>  
+ [<span data-ttu-id="b5c46-113">LINQ to Entities 中的查询</span><span class="sxs-lookup"><span data-stu-id="b5c46-113">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

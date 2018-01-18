@@ -13,20 +13,20 @@ dev_langs:
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 85c603d20e8b2e1936ac33773ad0b53a5a958e8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b363105f0dd6978d4e59678fb7cd1b3f1d721df
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="working-with-data-definition-language"></a><span data-ttu-id="c4411-102">使用数据定义语言</span><span class="sxs-lookup"><span data-stu-id="c4411-102">Working with Data Definition Language</span></span>
-<span data-ttu-id="c4411-103">从开始[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]版本 4，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持数据定义语言 (DDL)。</span><span class="sxs-lookup"><span data-stu-id="c4411-103">Starting with the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 4, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports data definition language (DDL).</span></span> <span data-ttu-id="c4411-104">这样，您将能够基于连接字符串和存储元数据 (SSDL) 模型创建或删除数据库实例。</span><span class="sxs-lookup"><span data-stu-id="c4411-104">This allows you to create or delete a database instance based on the connection string and the metadata of the storage (SSDL) model.</span></span>  
+# <a name="working-with-data-definition-language"></a><span data-ttu-id="af8e4-102">使用数据定义语言</span><span class="sxs-lookup"><span data-stu-id="af8e4-102">Working with Data Definition Language</span></span>
+<span data-ttu-id="af8e4-103">从开始[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]版本 4，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持数据定义语言 (DDL)。</span><span class="sxs-lookup"><span data-stu-id="af8e4-103">Starting with the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 4, the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supports data definition language (DDL).</span></span> <span data-ttu-id="af8e4-104">这样，您将能够基于连接字符串和存储元数据 (SSDL) 模型创建或删除数据库实例。</span><span class="sxs-lookup"><span data-stu-id="af8e4-104">This allows you to create or delete a database instance based on the connection string and the metadata of the storage (SSDL) model.</span></span>  
   
- <span data-ttu-id="c4411-105"><xref:System.Data.Objects.ObjectContext> 的以下方法使用连接字符串和 SSDL 内容来完成以下操作：创建或删除数据库，检查数据库是否存在，以及查看生成的 DDL 脚本：</span><span class="sxs-lookup"><span data-stu-id="c4411-105">The following methods on the <xref:System.Data.Objects.ObjectContext> use the connection string and the SSDL content to accomplish the following: create or delete the database, check whether the database exists, and view the generated DDL script:</span></span>  
+ <span data-ttu-id="af8e4-105"><xref:System.Data.Objects.ObjectContext> 的以下方法使用连接字符串和 SSDL 内容来完成以下操作：创建或删除数据库，检查数据库是否存在，以及查看生成的 DDL 脚本：</span><span class="sxs-lookup"><span data-stu-id="af8e4-105">The following methods on the <xref:System.Data.Objects.ObjectContext> use the connection string and the SSDL content to accomplish the following: create or delete the database, check whether the database exists, and view the generated DDL script:</span></span>  
   
 -   <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A>  
   
@@ -37,29 +37,29 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
   
 > [!NOTE]
->  <span data-ttu-id="c4411-106">假定有足够的权限可执行 DDL 命令。</span><span class="sxs-lookup"><span data-stu-id="c4411-106">Executing the DDL commands assumes sufficient permissions.</span></span>  
+>  <span data-ttu-id="af8e4-106">假定有足够的权限可执行 DDL 命令。</span><span class="sxs-lookup"><span data-stu-id="af8e4-106">Executing the DDL commands assumes sufficient permissions.</span></span>  
   
- <span data-ttu-id="c4411-107">以上列出的方法将大部分工作都委托给基础 ADO.NET 数据提供程序。</span><span class="sxs-lookup"><span data-stu-id="c4411-107">The methods previously listed delegate most of the work to the underlying ADO.NET data provider.</span></span> <span data-ttu-id="c4411-108">该提供程序负责确保用于生成数据库对象的命名约定与用于查询和更新的约定保持一致。</span><span class="sxs-lookup"><span data-stu-id="c4411-108">It is the provider’s responsibility to ensure that the naming convention used to generate database objects is consistent with conventions used for querying and updates.</span></span>  
+ <span data-ttu-id="af8e4-107">以上列出的方法将大部分工作都委托给基础 ADO.NET 数据提供程序。</span><span class="sxs-lookup"><span data-stu-id="af8e4-107">The methods previously listed delegate most of the work to the underlying ADO.NET data provider.</span></span> <span data-ttu-id="af8e4-108">该提供程序负责确保用于生成数据库对象的命名约定与用于查询和更新的约定保持一致。</span><span class="sxs-lookup"><span data-stu-id="af8e4-108">It is the provider’s responsibility to ensure that the naming convention used to generate database objects is consistent with conventions used for querying and updates.</span></span>  
   
- <span data-ttu-id="c4411-109">下面的示例演示如何基于现有模型生成数据库。</span><span class="sxs-lookup"><span data-stu-id="c4411-109">The following example shows you how to generate the database based on the existing model.</span></span> <span data-ttu-id="c4411-110">它还将新的实体对象添加到对象上下文中，然后将该对象保存到数据库中。</span><span class="sxs-lookup"><span data-stu-id="c4411-110">It also adds a new entity object to the object context and then saves it to the database.</span></span>  
+ <span data-ttu-id="af8e4-109">下面的示例演示如何基于现有模型生成数据库。</span><span class="sxs-lookup"><span data-stu-id="af8e4-109">The following example shows you how to generate the database based on the existing model.</span></span> <span data-ttu-id="af8e4-110">它还将新的实体对象添加到对象上下文中，然后将该对象保存到数据库中。</span><span class="sxs-lookup"><span data-stu-id="af8e4-110">It also adds a new entity object to the object context and then saves it to the database.</span></span>  
   
-## <a name="procedures"></a><span data-ttu-id="c4411-111">过程</span><span class="sxs-lookup"><span data-stu-id="c4411-111">Procedures</span></span>  
+## <a name="procedures"></a><span data-ttu-id="af8e4-111">过程</span><span class="sxs-lookup"><span data-stu-id="af8e4-111">Procedures</span></span>  
   
-#### <a name="to-define-a-database-based-on-the-existing-model"></a><span data-ttu-id="c4411-112">基于现有模型定义数据库</span><span class="sxs-lookup"><span data-stu-id="c4411-112">To define a database based on the existing model</span></span>  
+#### <a name="to-define-a-database-based-on-the-existing-model"></a><span data-ttu-id="af8e4-112">基于现有模型定义数据库</span><span class="sxs-lookup"><span data-stu-id="af8e4-112">To define a database based on the existing model</span></span>  
   
-1.  <span data-ttu-id="c4411-113">创建控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="c4411-113">Create a console application.</span></span>  
+1.  <span data-ttu-id="af8e4-113">创建控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="af8e4-113">Create a console application.</span></span>  
   
-2.  <span data-ttu-id="c4411-114">向应用程序中添加现有模型。</span><span class="sxs-lookup"><span data-stu-id="c4411-114">Add an existing model to your application.</span></span>  
+2.  <span data-ttu-id="af8e4-114">向应用程序中添加现有模型。</span><span class="sxs-lookup"><span data-stu-id="af8e4-114">Add an existing model to your application.</span></span>  
   
-    1.  <span data-ttu-id="c4411-115">添加名为一个空模型`SchoolModel`。</span><span class="sxs-lookup"><span data-stu-id="c4411-115">Add an empty model named `SchoolModel`.</span></span> <span data-ttu-id="c4411-116">若要创建空模型，请参阅[如何： 创建新的.edmx 文件](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2)主题。</span><span class="sxs-lookup"><span data-stu-id="c4411-116">To create an empty model, see the [How to: Create a New .edmx File](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2) topic.</span></span>  
+    1.  <span data-ttu-id="af8e4-115">添加名为一个空模型`SchoolModel`。</span><span class="sxs-lookup"><span data-stu-id="af8e4-115">Add an empty model named `SchoolModel`.</span></span> <span data-ttu-id="af8e4-116">若要创建空模型，请参阅[如何： 创建新的.edmx 文件](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2)主题。</span><span class="sxs-lookup"><span data-stu-id="af8e4-116">To create an empty model, see the [How to: Create a New .edmx File](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2) topic.</span></span>  
   
-     <span data-ttu-id="c4411-117">将 SchoolModel.edmx 文件添加到您的项目中。</span><span class="sxs-lookup"><span data-stu-id="c4411-117">The SchoolModel.edmx file is added to your project.</span></span>  
+     <span data-ttu-id="af8e4-117">将 SchoolModel.edmx 文件添加到您的项目中。</span><span class="sxs-lookup"><span data-stu-id="af8e4-117">The SchoolModel.edmx file is added to your project.</span></span>  
   
-    1.  <span data-ttu-id="c4411-118">将复制的概念，存储，并将映射从的 School 模型内容[School 模型](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac)主题。</span><span class="sxs-lookup"><span data-stu-id="c4411-118">Copy the conceptual, storage, and mapping content for the School model from the [School Model](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) topic.</span></span>  
+    1.  <span data-ttu-id="af8e4-118">将复制的概念，存储，并将映射从的 School 模型内容[School 模型](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac)主题。</span><span class="sxs-lookup"><span data-stu-id="af8e4-118">Copy the conceptual, storage, and mapping content for the School model from the [School Model](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) topic.</span></span>  
   
-    2.  <span data-ttu-id="c4411-119">打开 SchoolModel.edmx 文件并将内容粘贴在 `edmx:Runtime` 标记中。</span><span class="sxs-lookup"><span data-stu-id="c4411-119">Open the SchoolModel.edmx file and paste the content within the `edmx:Runtime` tags.</span></span>  
+    2.  <span data-ttu-id="af8e4-119">打开 SchoolModel.edmx 文件并将内容粘贴在 `edmx:Runtime` 标记中。</span><span class="sxs-lookup"><span data-stu-id="af8e4-119">Open the SchoolModel.edmx file and paste the content within the `edmx:Runtime` tags.</span></span>  
   
-3.  <span data-ttu-id="c4411-120">将以下代码添加到主函数中。</span><span class="sxs-lookup"><span data-stu-id="c4411-120">Add the following code to your main function.</span></span> <span data-ttu-id="c4411-121">此类代码将连接字符串初始化为数据库服务器，查看 DDL 脚本，创建数据库，将新实体添加到上下文，并将更改保存到数据库。</span><span class="sxs-lookup"><span data-stu-id="c4411-121">The code initializes the connection string to your database server, views the DDL script, creates the database, adds a new entity to the context, and saves the changes to the database.</span></span>  
+3.  <span data-ttu-id="af8e4-120">将以下代码添加到主函数中。</span><span class="sxs-lookup"><span data-stu-id="af8e4-120">Add the following code to your main function.</span></span> <span data-ttu-id="af8e4-121">此类代码将连接字符串初始化为数据库服务器，查看 DDL 脚本，创建数据库，将新实体添加到上下文，并将更改保存到数据库。</span><span class="sxs-lookup"><span data-stu-id="af8e4-121">The code initializes the connection string to your database server, views the DDL script, creates the database, adds a new entity to the context, and saves the changes to the database.</span></span>  
   
      [!code-csharp[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#ddl)]
      [!code-vb[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#ddl)]

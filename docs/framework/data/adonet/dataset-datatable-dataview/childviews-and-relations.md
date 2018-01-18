@@ -13,18 +13,18 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3730c0ca81506b2fbd1e827d34969a12d2bd065c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b42cd2e825e6d5ab9470bc0cc264b7cd98a1f1ce
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="f5ed6-102">ChildView 和关系</span><span class="sxs-lookup"><span data-stu-id="f5ed6-102">ChildViews and Relations</span></span>
-<span data-ttu-id="f5ed6-103">如果 <xref:System.Data.DataSet> 中的表之间存在关系，则可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法为父表中的行创建一个 <xref:System.Data.DataRowView>，包含相关子表中的行。</span><span class="sxs-lookup"><span data-stu-id="f5ed6-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="f5ed6-104">例如，下面的代码显示**类别**及其相关**产品**的字母顺序排序的**CategoryName**和**ProductName**.</span><span class="sxs-lookup"><span data-stu-id="f5ed6-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="bb07e-102">ChildView 和关系</span><span class="sxs-lookup"><span data-stu-id="bb07e-102">ChildViews and Relations</span></span>
+<span data-ttu-id="bb07e-103">如果 <xref:System.Data.DataSet> 中的表之间存在关系，则可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法为父表中的行创建一个 <xref:System.Data.DataRowView>，包含相关子表中的行。</span><span class="sxs-lookup"><span data-stu-id="bb07e-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="bb07e-104">例如，下面的代码显示**类别**及其相关**产品**的字母顺序排序的**CategoryName**和**ProductName**.</span><span class="sxs-lookup"><span data-stu-id="bb07e-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -84,9 +84,9 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f5ed6-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="f5ed6-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bb07e-105">请参阅</span><span class="sxs-lookup"><span data-stu-id="bb07e-105">See Also</span></span>  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
- [<span data-ttu-id="f5ed6-106">数据视图</span><span class="sxs-lookup"><span data-stu-id="f5ed6-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [<span data-ttu-id="f5ed6-107">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="f5ed6-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="bb07e-106">数据视图</span><span class="sxs-lookup"><span data-stu-id="bb07e-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="bb07e-107">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="bb07e-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

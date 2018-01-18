@@ -10,40 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 508ce246-4e86-47dd-a605-4af4bebb9891
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e2dca4be3d23d6cf9171eec960335ef57de1156c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c7e2bcf15ab8d0cf24fdc6cb7e9db025784bd435
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="-multiply-entity-sql"></a><span data-ttu-id="6636a-102">*（乘）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="6636a-102">* (Multiply) (Entity SQL)</span></span>
-<span data-ttu-id="6636a-103">将两个表达式相乘。</span><span class="sxs-lookup"><span data-stu-id="6636a-103">Multiplies two expressions.</span></span>  
+# <a name="-multiply-entity-sql"></a><span data-ttu-id="cdd1c-102">\*（乘）(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="cdd1c-102">\* (Multiply) (Entity SQL)</span></span>
+<span data-ttu-id="cdd1c-103">将两个表达式相乘。</span><span class="sxs-lookup"><span data-stu-id="cdd1c-103">Multiplies two expressions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6636a-104">语法</span><span class="sxs-lookup"><span data-stu-id="6636a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cdd1c-104">语法</span><span class="sxs-lookup"><span data-stu-id="cdd1c-104">Syntax</span></span>  
   
 ```  
 expression * expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6636a-105">自变量</span><span class="sxs-lookup"><span data-stu-id="6636a-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="cdd1c-105">自变量</span><span class="sxs-lookup"><span data-stu-id="cdd1c-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="6636a-106">任何一种数值数据类型的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="6636a-106">Any valid expression of any one of the numeric data types.</span></span>  
+ <span data-ttu-id="cdd1c-106">任何一种数值数据类型的任何有效表达式。</span><span class="sxs-lookup"><span data-stu-id="cdd1c-106">Any valid expression of any one of the numeric data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="6636a-107">结果类型</span><span class="sxs-lookup"><span data-stu-id="6636a-107">Result Types</span></span>  
- <span data-ttu-id="6636a-108">对这两个参数进行隐式类型提升而产生的数据类型。</span><span class="sxs-lookup"><span data-stu-id="6636a-108">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="6636a-109">有关隐式类型提升的详细信息，请参阅[类型系统](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="6636a-109">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
+## <a name="result-types"></a><span data-ttu-id="cdd1c-107">结果类型</span><span class="sxs-lookup"><span data-stu-id="cdd1c-107">Result Types</span></span>  
+ <span data-ttu-id="cdd1c-108">对这两个参数进行隐式类型提升而产生的数据类型。</span><span class="sxs-lookup"><span data-stu-id="cdd1c-108">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="cdd1c-109">有关隐式类型提升的详细信息，请参阅[类型系统](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="cdd1c-109">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6636a-110">示例</span><span class="sxs-lookup"><span data-stu-id="6636a-110">Example</span></span>  
- <span data-ttu-id="6636a-111">以下 Entity SQL 查询使用 * 算术运算符将两个数字相乘。</span><span class="sxs-lookup"><span data-stu-id="6636a-111">The following Entity SQL query uses the * arithmetic operator to multiply two numbers.</span></span> <span data-ttu-id="6636a-112">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="6636a-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="6636a-113">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="6636a-113">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="cdd1c-110">示例</span><span class="sxs-lookup"><span data-stu-id="cdd1c-110">Example</span></span>  
+ <span data-ttu-id="cdd1c-111">以下 Entity SQL 查询使用 \* 算术运算符将两个数字相乘。</span><span class="sxs-lookup"><span data-stu-id="cdd1c-111">The following Entity SQL query uses the \* arithmetic operator to multiply two numbers.</span></span> <span data-ttu-id="cdd1c-112">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="cdd1c-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="cdd1c-113">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="cdd1c-113">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="6636a-114">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="6636a-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="cdd1c-114">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="cdd1c-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="6636a-115">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="6636a-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="cdd1c-115">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="cdd1c-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#MULTIPLY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiply)]  
   
-## <a name="see-also"></a><span data-ttu-id="6636a-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="6636a-116">See Also</span></span>  
- [<span data-ttu-id="6636a-117">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="6636a-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="cdd1c-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="cdd1c-116">See Also</span></span>  
+ [<span data-ttu-id="cdd1c-117">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="cdd1c-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

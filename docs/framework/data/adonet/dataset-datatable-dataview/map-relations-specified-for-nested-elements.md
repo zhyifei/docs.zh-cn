@@ -10,20 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 221e204c9eef5a861fbd6b85c1e23a0674c6aa4c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c23e951ee2fd6f5956ab41d4425c9e8af8f12b95
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="37b63-102">映射为嵌套元素指定的关系</span><span class="sxs-lookup"><span data-stu-id="37b63-102">Map Relations Specified for Nested Elements</span></span>
-<span data-ttu-id="37b63-103">架构可以包含**msdata: relationship**批注来显式指定架构中任何两个元素之间的映射。</span><span class="sxs-lookup"><span data-stu-id="37b63-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="37b63-104">中指定的两个元素**msdata: relationship**可以嵌套在架构中，但不是一定要。</span><span class="sxs-lookup"><span data-stu-id="37b63-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="37b63-105">映射进程使用**msdata: relationship**架构以生成两个列之间主键/外的键关系中。</span><span class="sxs-lookup"><span data-stu-id="37b63-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  
+# <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="244d4-102">映射为嵌套元素指定的关系</span><span class="sxs-lookup"><span data-stu-id="244d4-102">Map Relations Specified for Nested Elements</span></span>
+<span data-ttu-id="244d4-103">架构可以包含**msdata: relationship**批注来显式指定架构中任何两个元素之间的映射。</span><span class="sxs-lookup"><span data-stu-id="244d4-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="244d4-104">中指定的两个元素**msdata: relationship**可以嵌套在架构中，但不是一定要。</span><span class="sxs-lookup"><span data-stu-id="244d4-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="244d4-105">映射进程使用**msdata: relationship**架构以生成两个列之间主键/外的键关系中。</span><span class="sxs-lookup"><span data-stu-id="244d4-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  
   
- <span data-ttu-id="37b63-106">下面的示例显示一个 XML 架构，在其中**OrderDetail**元素是子元素的**顺序**。</span><span class="sxs-lookup"><span data-stu-id="37b63-106">The following example shows an XML Schema in which the **OrderDetail** element is a child element of **Order**.</span></span> <span data-ttu-id="37b63-107">**Msdata: relationship**标识此父-子关系，并指定**OrderNumber**列与所生成**顺序**与相关表**OrderNo**列与所生成**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="37b63-107">The **msdata:Relationship** identifies this parent-child relationship and specifies that the **OrderNumber** column of the resulting **Order** table is related to the **OrderNo** column of the resulting **OrderDetail** table.</span></span>  
+ <span data-ttu-id="244d4-106">下面的示例显示一个 XML 架构，在其中**OrderDetail**元素是子元素的**顺序**。</span><span class="sxs-lookup"><span data-stu-id="244d4-106">The following example shows an XML Schema in which the **OrderDetail** element is a child element of **Order**.</span></span> <span data-ttu-id="244d4-107">**Msdata: relationship**标识此父-子关系，并指定**OrderNumber**列与所生成**顺序**与相关表**OrderNo**列与所生成**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="244d4-107">The **msdata:Relationship** identifies this parent-child relationship and specifies that the **OrderNumber** column of the resulting **Order** table is related to the **OrderNo** column of the resulting **OrderDetail** table.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -63,16 +63,16 @@ ms.lasthandoff: 12/22/2017
 </xs:schema>  
 ```  
   
- <span data-ttu-id="37b63-108">XML 架构映射过程在 <xref:System.Data.DataSet> 中创建以下内容：</span><span class="sxs-lookup"><span data-stu-id="37b63-108">The XML Schema mapping process creates the following in the <xref:System.Data.DataSet>:</span></span>  
+ <span data-ttu-id="244d4-108">XML 架构映射过程在 <xref:System.Data.DataSet> 中创建以下内容：</span><span class="sxs-lookup"><span data-stu-id="244d4-108">The XML Schema mapping process creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   <span data-ttu-id="37b63-109">**顺序**和**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="37b63-109">An **Order** and an **OrderDetail** table.</span></span>  
+-   <span data-ttu-id="244d4-109">**顺序**和**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="244d4-109">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
--   <span data-ttu-id="37b63-110">之间的关系**顺序**和**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="37b63-110">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="37b63-111">**嵌套**为此关系的属性设置为**True**因为**顺序**和**OrderDetail**元素嵌套在架构.</span><span class="sxs-lookup"><span data-stu-id="37b63-111">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+-   <span data-ttu-id="244d4-110">之间的关系**顺序**和**OrderDetail**表。</span><span class="sxs-lookup"><span data-stu-id="244d4-110">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="244d4-111">**嵌套**为此关系的属性设置为**True**因为**顺序**和**OrderDetail**元素嵌套在架构.</span><span class="sxs-lookup"><span data-stu-id="244d4-111">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -83,9 +83,9 @@ ms.lasthandoff: 12/22/2017
     Nested: True  
     ```  
   
- <span data-ttu-id="37b63-112">映射过程不创建任何约束。</span><span class="sxs-lookup"><span data-stu-id="37b63-112">The mapping process does not create any constraints.</span></span>  
+ <span data-ttu-id="244d4-112">映射过程不创建任何约束。</span><span class="sxs-lookup"><span data-stu-id="244d4-112">The mapping process does not create any constraints.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37b63-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="37b63-113">See Also</span></span>  
- [<span data-ttu-id="37b63-114">从 XML 架构生成数据集关系 (XSD)</span><span class="sxs-lookup"><span data-stu-id="37b63-114">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [<span data-ttu-id="37b63-115">将 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="37b63-115">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [<span data-ttu-id="37b63-116">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="37b63-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="244d4-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="244d4-113">See Also</span></span>  
+ [<span data-ttu-id="244d4-114">从 XML 架构生成数据集关系 (XSD)</span><span class="sxs-lookup"><span data-stu-id="244d4-114">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="244d4-115">将 XML 架构 (XSD) 约束映射到数据集约束</span><span class="sxs-lookup"><span data-stu-id="244d4-115">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="244d4-116">ADO.NET 托管提供程序和数据集开发人员中心</span><span class="sxs-lookup"><span data-stu-id="244d4-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

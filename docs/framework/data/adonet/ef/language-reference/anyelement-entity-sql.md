@@ -10,48 +10,48 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 475a9ad6-8c8d-4f49-9970-af273e5360f1
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: de08e590bcc7b2380f2edda0ebc918d7ce328f4c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6e74fbac9c2c57c653f55f76bf165d7eaebd9cee
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="anyelement-entity-sql"></a><span data-ttu-id="f42b4-102">ANYELEMENT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f42b4-102">ANYELEMENT (Entity SQL)</span></span>
-<span data-ttu-id="f42b4-103">从多值集合中提取元素。</span><span class="sxs-lookup"><span data-stu-id="f42b4-103">Extracts an element from a multivalued collection.</span></span>  
+# <a name="anyelement-entity-sql"></a><span data-ttu-id="be58d-102">ANYELEMENT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="be58d-102">ANYELEMENT (Entity SQL)</span></span>
+<span data-ttu-id="be58d-103">从多值集合中提取元素。</span><span class="sxs-lookup"><span data-stu-id="be58d-103">Extracts an element from a multivalued collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f42b4-104">语法</span><span class="sxs-lookup"><span data-stu-id="f42b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be58d-104">语法</span><span class="sxs-lookup"><span data-stu-id="be58d-104">Syntax</span></span>  
   
 ```  
 ANYELEMENT ( expression )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="f42b4-105">自变量</span><span class="sxs-lookup"><span data-stu-id="f42b4-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="be58d-105">自变量</span><span class="sxs-lookup"><span data-stu-id="be58d-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="f42b4-106">返回要从中提取元素的集合的任何有效查询表达式。</span><span class="sxs-lookup"><span data-stu-id="f42b4-106">Any valid query expression that returns a collection to extract an element from.</span></span>  
+ <span data-ttu-id="be58d-106">返回要从中提取元素的集合的任何有效查询表达式。</span><span class="sxs-lookup"><span data-stu-id="be58d-106">Any valid query expression that returns a collection to extract an element from.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f42b4-107">返回值</span><span class="sxs-lookup"><span data-stu-id="f42b4-107">Return Value</span></span>  
- <span data-ttu-id="f42b4-108">集合中的一个元素，或者任意元素（如果集合具有多个元素）；如果集合为空，则返回 `null`。</span><span class="sxs-lookup"><span data-stu-id="f42b4-108">A single element in the collection or an arbitrary element if the collection has more than one; if the collection is empty, returns `null`.</span></span> <span data-ttu-id="f42b4-109">如果`collection`是类型的集合`Collection<T>`，然后`ANYELEMENT(collection)`是一个产生类型的实例的有效表达式`T`。</span><span class="sxs-lookup"><span data-stu-id="f42b4-109">If `collection` is a collection of type `Collection<T>`, then `ANYELEMENT(collection)` is a valid expression that yields an instance of type `T`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="be58d-107">返回值</span><span class="sxs-lookup"><span data-stu-id="be58d-107">Return Value</span></span>  
+ <span data-ttu-id="be58d-108">集合中的一个元素，或者任意元素（如果集合具有多个元素）；如果集合为空，则返回 `null`。</span><span class="sxs-lookup"><span data-stu-id="be58d-108">A single element in the collection or an arbitrary element if the collection has more than one; if the collection is empty, returns `null`.</span></span> <span data-ttu-id="be58d-109">如果`collection`是类型的集合`Collection<T>`，然后`ANYELEMENT(collection)`是一个产生类型的实例的有效表达式`T`。</span><span class="sxs-lookup"><span data-stu-id="be58d-109">If `collection` is a collection of type `Collection<T>`, then `ANYELEMENT(collection)` is a valid expression that yields an instance of type `T`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f42b4-110">备注</span><span class="sxs-lookup"><span data-stu-id="f42b4-110">Remarks</span></span>  
- <span data-ttu-id="f42b4-111">ANYELEMENT 从多值集合中提取任意元素。</span><span class="sxs-lookup"><span data-stu-id="f42b4-111">ANYELEMENT extracts an arbitrary element from a multivalued collection.</span></span> <span data-ttu-id="f42b4-112">例如，以下示例尝试从 `Customers`集中提取单一实例元素。</span><span class="sxs-lookup"><span data-stu-id="f42b4-112">For example, the following example attempts to extract a singleton element from the set `Customers`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be58d-110">备注</span><span class="sxs-lookup"><span data-stu-id="be58d-110">Remarks</span></span>  
+ <span data-ttu-id="be58d-111">ANYELEMENT 从多值集合中提取任意元素。</span><span class="sxs-lookup"><span data-stu-id="be58d-111">ANYELEMENT extracts an arbitrary element from a multivalued collection.</span></span> <span data-ttu-id="be58d-112">例如，以下示例尝试从 `Customers`集中提取单一实例元素。</span><span class="sxs-lookup"><span data-stu-id="be58d-112">For example, the following example attempts to extract a singleton element from the set `Customers`.</span></span>  
   
 ```  
 ANYELEMENT(Customers)  
 ```  
   
-## <a name="example"></a><span data-ttu-id="f42b4-113">示例</span><span class="sxs-lookup"><span data-stu-id="f42b4-113">Example</span></span>  
- <span data-ttu-id="f42b4-114">以下 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 ANYELEMENT 运算符以从多值集合中提取元素。</span><span class="sxs-lookup"><span data-stu-id="f42b4-114">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the ANYELEMENT operator to extract an element from a multivalued collection.</span></span> <span data-ttu-id="f42b4-115">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="f42b4-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="f42b4-116">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="f42b4-116">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="be58d-113">示例</span><span class="sxs-lookup"><span data-stu-id="be58d-113">Example</span></span>  
+ <span data-ttu-id="be58d-114">以下 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询使用 ANYELEMENT 运算符以从多值集合中提取元素。</span><span class="sxs-lookup"><span data-stu-id="be58d-114">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the ANYELEMENT operator to extract an element from a multivalued collection.</span></span> <span data-ttu-id="be58d-115">此查询基于 AdventureWorks 销售模型。</span><span class="sxs-lookup"><span data-stu-id="be58d-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="be58d-116">若要编译并运行此查询，请执行下列步骤：</span><span class="sxs-lookup"><span data-stu-id="be58d-116">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="f42b4-117">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="f42b4-117">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="be58d-117">执行 [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)中的过程。</span><span class="sxs-lookup"><span data-stu-id="be58d-117">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="f42b4-118">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="f42b4-118">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="be58d-118">将以下查询作为参数传递给 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="be58d-118">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#ANYELEMENT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#anyelement)]  
   
-## <a name="see-also"></a><span data-ttu-id="f42b4-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="f42b4-119">See Also</span></span>  
- [<span data-ttu-id="f42b4-120">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="f42b4-120">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [<span data-ttu-id="f42b4-121">可以为 NULL 的结构化类型</span><span class="sxs-lookup"><span data-stu-id="f42b4-121">Nullable Structured Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="be58d-119">请参阅</span><span class="sxs-lookup"><span data-stu-id="be58d-119">See Also</span></span>  
+ [<span data-ttu-id="be58d-120">实体 SQL 引用</span><span class="sxs-lookup"><span data-stu-id="be58d-120">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="be58d-121">可以为 NULL 的结构化类型</span><span class="sxs-lookup"><span data-stu-id="be58d-121">Nullable Structured Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

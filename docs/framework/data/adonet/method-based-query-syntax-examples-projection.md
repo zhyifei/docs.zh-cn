@@ -13,53 +13,53 @@ dev_langs:
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 130da96682b3516b9de46d5e5ab1e5bf6d898f17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 879754e0604b9dfa6a6ffc7b7777094cc156befb
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a><span data-ttu-id="86bb9-102">基于方法的查询语法示例：投影 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="86bb9-102">Method-Based Query Syntax Examples: Projection (LINQ to DataSet)</span></span>
-<span data-ttu-id="86bb9-103">本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Select%2A> 和 <xref:System.Linq.Enumerable.SelectMany%2A> 方法以便使用基于方法的查询语法来查询 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="86bb9-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Select%2A> and <xref:System.Linq.Enumerable.SelectMany%2A> methods to query a <xref:System.Data.DataSet> using the method-based query syntax.</span></span>  
+# <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a><span data-ttu-id="4efbe-102">基于方法的查询语法示例：投影 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="4efbe-102">Method-Based Query Syntax Examples: Projection (LINQ to DataSet)</span></span>
+<span data-ttu-id="4efbe-103">本主题中的示例演示如何使用 <xref:System.Linq.Enumerable.Select%2A> 和 <xref:System.Linq.Enumerable.SelectMany%2A> 方法以便使用基于方法的查询语法来查询 <xref:System.Data.DataSet>。</span><span class="sxs-lookup"><span data-stu-id="4efbe-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Select%2A> and <xref:System.Linq.Enumerable.SelectMany%2A> methods to query a <xref:System.Data.DataSet> using the method-based query syntax.</span></span>  
   
- <span data-ttu-id="86bb9-104">`FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="86bb9-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="4efbe-104">`FillDataSet`中指定这些示例中使用的方法[加载数据到数据集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="4efbe-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="86bb9-105">本主题中的示例使用 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 表。</span><span class="sxs-lookup"><span data-stu-id="86bb9-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="4efbe-105">本主题中的示例使用 AdventureWorks 示例数据库中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 表。</span><span class="sxs-lookup"><span data-stu-id="4efbe-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="86bb9-106">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="86bb9-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="4efbe-106">本主题中的示例使用以下`using` / `Imports`语句：</span><span class="sxs-lookup"><span data-stu-id="4efbe-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="86bb9-107">有关详细信息，请参阅[如何： 创建 LINQ to DataSet 项目在 Visual Studio 中](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="86bb9-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="4efbe-107">有关详细信息，请参阅[如何： 创建 LINQ to DataSet 项目在 Visual Studio 中](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="4efbe-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="select"></a><span data-ttu-id="86bb9-108">选择</span><span class="sxs-lookup"><span data-stu-id="86bb9-108">Select</span></span>  
+## <a name="select"></a><span data-ttu-id="4efbe-108">选择</span><span class="sxs-lookup"><span data-stu-id="4efbe-108">Select</span></span>  
   
-### <a name="example"></a><span data-ttu-id="86bb9-109">示例</span><span class="sxs-lookup"><span data-stu-id="86bb9-109">Example</span></span>  
- <span data-ttu-id="86bb9-110">此示例使用 <xref:System.Linq.Enumerable.Select%2A> 方法将 `Name`、`ProductNumber` 和 `ListPrice` 属性投影到一系列匿名类型。</span><span class="sxs-lookup"><span data-stu-id="86bb9-110">This example uses the <xref:System.Linq.Enumerable.Select%2A> method to project the `Name`, `ProductNumber`, and `ListPrice` properties to a sequence of anonymous types.</span></span>  <span data-ttu-id="86bb9-111">在生成的类型中，还将 `ListPrice` 属性重命名为 `Price`。</span><span class="sxs-lookup"><span data-stu-id="86bb9-111">The `ListPrice` property is also renamed to `Price` in the resulting type.</span></span>  
+### <a name="example"></a><span data-ttu-id="4efbe-109">示例</span><span class="sxs-lookup"><span data-stu-id="4efbe-109">Example</span></span>  
+ <span data-ttu-id="4efbe-110">此示例使用 <xref:System.Linq.Enumerable.Select%2A> 方法将 `Name`、`ProductNumber` 和 `ListPrice` 属性投影到一系列匿名类型。</span><span class="sxs-lookup"><span data-stu-id="4efbe-110">This example uses the <xref:System.Linq.Enumerable.Select%2A> method to project the `Name`, `ProductNumber`, and `ListPrice` properties to a sequence of anonymous types.</span></span>  <span data-ttu-id="4efbe-111">在生成的类型中，还将 `ListPrice` 属性重命名为 `Price`。</span><span class="sxs-lookup"><span data-stu-id="4efbe-111">The `ListPrice` property is also renamed to `Price` in the resulting type.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SelectAnonymousTypes_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#selectanonymoustypes_mq)]
  [!code-vb[DP LINQ to DataSet Examples#SelectAnonymousTypes_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectanonymoustypes_mq)]  
   
-## <a name="selectmany"></a><span data-ttu-id="86bb9-112">SelectMany</span><span class="sxs-lookup"><span data-stu-id="86bb9-112">SelectMany</span></span>  
+## <a name="selectmany"></a><span data-ttu-id="4efbe-112">SelectMany</span><span class="sxs-lookup"><span data-stu-id="4efbe-112">SelectMany</span></span>  
   
-### <a name="example"></a><span data-ttu-id="86bb9-113">示例</span><span class="sxs-lookup"><span data-stu-id="86bb9-113">Example</span></span>  
- <span data-ttu-id="86bb9-114">此示例使用 <xref:System.Linq.Enumerable.SelectMany%2A> 方法来选择 `TotalDue` 小于 500.00 的所有订单。</span><span class="sxs-lookup"><span data-stu-id="86bb9-114">This example uses the <xref:System.Linq.Enumerable.SelectMany%2A> method to select all orders where `TotalDue` is less than 500.00.</span></span>  
+### <a name="example"></a><span data-ttu-id="4efbe-113">示例</span><span class="sxs-lookup"><span data-stu-id="4efbe-113">Example</span></span>  
+ <span data-ttu-id="4efbe-114">此示例使用 <xref:System.Linq.Enumerable.SelectMany%2A> 方法来选择 `TotalDue` 小于 500.00 的所有订单。</span><span class="sxs-lookup"><span data-stu-id="4efbe-114">This example uses the <xref:System.Linq.Enumerable.SelectMany%2A> method to select all orders where `TotalDue` is less than 500.00.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SelectManyCompoundFrom_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#selectmanycompoundfrom_mq)]
  [!code-vb[DP LINQ to DataSet Examples#SelectManyCompoundFrom_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectmanycompoundfrom_mq)]  
   
-### <a name="example"></a><span data-ttu-id="86bb9-115">示例</span><span class="sxs-lookup"><span data-stu-id="86bb9-115">Example</span></span>  
- <span data-ttu-id="86bb9-116">此示例使用 <xref:System.Linq.Enumerable.SelectMany%2A> 方法来选择于 2002 年 10 月 1 日或之后达成的所有订单。</span><span class="sxs-lookup"><span data-stu-id="86bb9-116">This example uses the <xref:System.Linq.Enumerable.SelectMany%2A> method to select all orders where the order was made on October 1, 2002 or later.</span></span>  
+### <a name="example"></a><span data-ttu-id="4efbe-115">示例</span><span class="sxs-lookup"><span data-stu-id="4efbe-115">Example</span></span>  
+ <span data-ttu-id="4efbe-116">此示例使用 <xref:System.Linq.Enumerable.SelectMany%2A> 方法来选择于 2002 年 10 月 1 日或之后达成的所有订单。</span><span class="sxs-lookup"><span data-stu-id="4efbe-116">This example uses the <xref:System.Linq.Enumerable.SelectMany%2A> method to select all orders where the order was made on October 1, 2002 or later.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#SelectManyCompoundFrom2_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#selectmanycompoundfrom2_mq)]
  [!code-vb[DP LINQ to DataSet Examples#SelectManyCompoundFrom2_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectmanycompoundfrom2_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="86bb9-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="86bb9-117">See Also</span></span>  
- [<span data-ttu-id="86bb9-118">将数据加载到数据集中</span><span class="sxs-lookup"><span data-stu-id="86bb9-118">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="86bb9-119">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="86bb9-119">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [<span data-ttu-id="86bb9-120">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="86bb9-120">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+## <a name="see-also"></a><span data-ttu-id="4efbe-117">请参阅</span><span class="sxs-lookup"><span data-stu-id="4efbe-117">See Also</span></span>  
+ [<span data-ttu-id="4efbe-118">将数据加载到数据集中</span><span class="sxs-lookup"><span data-stu-id="4efbe-118">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [<span data-ttu-id="4efbe-119">LINQ to DataSet 示例</span><span class="sxs-lookup"><span data-stu-id="4efbe-119">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
+ [<span data-ttu-id="4efbe-120">标准查询运算符概述</span><span class="sxs-lookup"><span data-stu-id="4efbe-120">Standard Query Operators Overview</span></span>](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

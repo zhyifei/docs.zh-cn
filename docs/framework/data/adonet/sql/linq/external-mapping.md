@@ -10,43 +10,43 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b5389f4ea65af9160fe5cf077b62fd075fb89b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae67c80e4637281a26b15d7faa2dbdbe7171ba1c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="external-mapping"></a><span data-ttu-id="e5f39-102">外部映射</span><span class="sxs-lookup"><span data-stu-id="e5f39-102">External Mapping</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="e5f39-103">支持*外部映射*，依据你使用单独的 XML 文件指定数据库的数据模型和对象模型之间的映射的进程。</span><span class="sxs-lookup"><span data-stu-id="e5f39-103"> supports *external mapping*, a process by which you use a separate XML file to specify mapping between the data model of the database and your object model.</span></span> <span data-ttu-id="e5f39-104">使用外部映射文件具有以下优点：</span><span class="sxs-lookup"><span data-stu-id="e5f39-104">Advantages of using an external mapping file include the following:</span></span>  
+# <a name="external-mapping"></a><span data-ttu-id="1afc8-102">外部映射</span><span class="sxs-lookup"><span data-stu-id="1afc8-102">External Mapping</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="1afc8-103">支持*外部映射*，依据你使用单独的 XML 文件指定数据库的数据模型和对象模型之间的映射的进程。</span><span class="sxs-lookup"><span data-stu-id="1afc8-103"> supports *external mapping*, a process by which you use a separate XML file to specify mapping between the data model of the database and your object model.</span></span> <span data-ttu-id="1afc8-104">使用外部映射文件具有以下优点：</span><span class="sxs-lookup"><span data-stu-id="1afc8-104">Advantages of using an external mapping file include the following:</span></span>  
   
--   <span data-ttu-id="e5f39-105">可以将映射代码放在应用程序代码外部。</span><span class="sxs-lookup"><span data-stu-id="e5f39-105">You can keep your mapping code out of your application code.</span></span> <span data-ttu-id="e5f39-106">此方法可以降低应用程序代码的混乱程度。</span><span class="sxs-lookup"><span data-stu-id="e5f39-106">This approach reduces clutter in your application code.</span></span>  
+-   <span data-ttu-id="1afc8-105">可以将映射代码放在应用程序代码外部。</span><span class="sxs-lookup"><span data-stu-id="1afc8-105">You can keep your mapping code out of your application code.</span></span> <span data-ttu-id="1afc8-106">此方法可以降低应用程序代码的混乱程度。</span><span class="sxs-lookup"><span data-stu-id="1afc8-106">This approach reduces clutter in your application code.</span></span>  
   
--   <span data-ttu-id="e5f39-107">可以将外部映射文件视为类似于配置文件的某种东西。</span><span class="sxs-lookup"><span data-stu-id="e5f39-107">You can treat an external mapping file something like a configuration file.</span></span> <span data-ttu-id="e5f39-108">例如，在发布二进制文件后，只需交换出外部映射文件，就可以更新应用程序的工作方式。</span><span class="sxs-lookup"><span data-stu-id="e5f39-108">For example, you can update how your application behaves after shipping the binaries by just swapping out the external mapping file.</span></span>  
+-   <span data-ttu-id="1afc8-107">可以将外部映射文件视为类似于配置文件的某种东西。</span><span class="sxs-lookup"><span data-stu-id="1afc8-107">You can treat an external mapping file something like a configuration file.</span></span> <span data-ttu-id="1afc8-108">例如，在发布二进制文件后，只需交换出外部映射文件，就可以更新应用程序的工作方式。</span><span class="sxs-lookup"><span data-stu-id="1afc8-108">For example, you can update how your application behaves after shipping the binaries by just swapping out the external mapping file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5f39-109">惠?</span><span class="sxs-lookup"><span data-stu-id="e5f39-109">Requirements</span></span>  
- <span data-ttu-id="e5f39-110">映射文件必须为 XML 文件，并且该文件必须能够通过 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 架构定义 (.xsd) 文件的验证。</span><span class="sxs-lookup"><span data-stu-id="e5f39-110">The mapping file must be an XML file, and the file must validate against a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] schema definition (.xsd) file.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1afc8-109">惠?</span><span class="sxs-lookup"><span data-stu-id="1afc8-109">Requirements</span></span>  
+ <span data-ttu-id="1afc8-110">映射文件必须为 XML 文件，并且该文件必须能够通过 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 架构定义 (.xsd) 文件的验证。</span><span class="sxs-lookup"><span data-stu-id="1afc8-110">The mapping file must be an XML file, and the file must validate against a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] schema definition (.xsd) file.</span></span>  
   
- <span data-ttu-id="e5f39-111">适用以下规则：</span><span class="sxs-lookup"><span data-stu-id="e5f39-111">The following rules apply:</span></span>  
+ <span data-ttu-id="1afc8-111">适用以下规则：</span><span class="sxs-lookup"><span data-stu-id="1afc8-111">The following rules apply:</span></span>  
   
--   <span data-ttu-id="e5f39-112">映射文件必须为 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="e5f39-112">The mapping file must be an XML file.</span></span>  
+-   <span data-ttu-id="1afc8-112">映射文件必须为 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="1afc8-112">The mapping file must be an XML file.</span></span>  
   
--   <span data-ttu-id="e5f39-113">XML 映射文件必须能够通过 XML 架构定义文件的验证。</span><span class="sxs-lookup"><span data-stu-id="e5f39-113">The XML mapping file must be valid against the XML schema definition file.</span></span> <span data-ttu-id="e5f39-114">有关详细信息，请参阅[如何： 验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="e5f39-114">For more information, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
+-   <span data-ttu-id="1afc8-113">XML 映射文件必须能够通过 XML 架构定义文件的验证。</span><span class="sxs-lookup"><span data-stu-id="1afc8-113">The XML mapping file must be valid against the XML schema definition file.</span></span> <span data-ttu-id="1afc8-114">有关详细信息，请参阅[如何： 验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="1afc8-114">For more information, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
--   <span data-ttu-id="e5f39-115">外部映射会重写基于属性的映射。</span><span class="sxs-lookup"><span data-stu-id="e5f39-115">External mapping overrides attribute-based mapping.</span></span> <span data-ttu-id="e5f39-116">换句话说，在使用外部映射源创建 <xref:System.Data.Linq.DataContext> 时，<xref:System.Data.Linq.DataContext> 会忽略已在类上创建的所有映射属性。</span><span class="sxs-lookup"><span data-stu-id="e5f39-116">In other words, when you use an external mapping source to create a <xref:System.Data.Linq.DataContext>, the <xref:System.Data.Linq.DataContext> ignores all mapping attributes you have created on classes.</span></span> <span data-ttu-id="e5f39-117">无论类是否包含在外部映射文件中，都会发生这种情况。</span><span class="sxs-lookup"><span data-stu-id="e5f39-117">This behavior is true whether the class is included in the external mapping file.</span></span>  
+-   <span data-ttu-id="1afc8-115">外部映射会重写基于属性的映射。</span><span class="sxs-lookup"><span data-stu-id="1afc8-115">External mapping overrides attribute-based mapping.</span></span> <span data-ttu-id="1afc8-116">换句话说，在使用外部映射源创建 <xref:System.Data.Linq.DataContext> 时，<xref:System.Data.Linq.DataContext> 会忽略已在类上创建的所有映射属性。</span><span class="sxs-lookup"><span data-stu-id="1afc8-116">In other words, when you use an external mapping source to create a <xref:System.Data.Linq.DataContext>, the <xref:System.Data.Linq.DataContext> ignores all mapping attributes you have created on classes.</span></span> <span data-ttu-id="1afc8-117">无论类是否包含在外部映射文件中，都会发生这种情况。</span><span class="sxs-lookup"><span data-stu-id="1afc8-117">This behavior is true whether the class is included in the external mapping file.</span></span>  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="e5f39-118"> 不支持混合使用两种映射方式（基于属性的映射和外部映射）。</span><span class="sxs-lookup"><span data-stu-id="e5f39-118"> does not support the hybrid use of the two mapping approaches (attribute-based and external).</span></span>  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="1afc8-118"> 不支持混合使用两种映射方式（基于属性的映射和外部映射）。</span><span class="sxs-lookup"><span data-stu-id="1afc8-118"> does not support the hybrid use of the two mapping approaches (attribute-based and external).</span></span>  
   
-## <a name="xml-schema-definition-file"></a><span data-ttu-id="e5f39-119">XML 架构定义文件</span><span class="sxs-lookup"><span data-stu-id="e5f39-119">XML Schema Definition File</span></span>  
- <span data-ttu-id="e5f39-120">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的外部映射必须能够通过以下 XML 架构定义的验证。</span><span class="sxs-lookup"><span data-stu-id="e5f39-120">External mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] must be valid against the following XML schema definition.</span></span>  
+## <a name="xml-schema-definition-file"></a><span data-ttu-id="1afc8-119">XML 架构定义文件</span><span class="sxs-lookup"><span data-stu-id="1afc8-119">XML Schema Definition File</span></span>  
+ <span data-ttu-id="1afc8-120">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的外部映射必须能够通过以下 XML 架构定义的验证。</span><span class="sxs-lookup"><span data-stu-id="1afc8-120">External mapping in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] must be valid against the following XML schema definition.</span></span>  
   
- <span data-ttu-id="e5f39-121">请将此架构定义文件与用于验证 DBML 文件的架构定义文件区分开来。</span><span class="sxs-lookup"><span data-stu-id="e5f39-121">Distinguish this schema definition file from the schema definition file that is used to validate a DBML file.</span></span> <span data-ttu-id="e5f39-122">有关详细信息，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md))。</span><span class="sxs-lookup"><span data-stu-id="e5f39-122">For more information, see [Code Generation in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).</span></span>  
+ <span data-ttu-id="1afc8-121">请将此架构定义文件与用于验证 DBML 文件的架构定义文件区分开来。</span><span class="sxs-lookup"><span data-stu-id="1afc8-121">Distinguish this schema definition file from the schema definition file that is used to validate a DBML file.</span></span> <span data-ttu-id="1afc8-122">有关详细信息，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md))。</span><span class="sxs-lookup"><span data-stu-id="1afc8-122">For more information, see [Code Generation in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]<span data-ttu-id="e5f39-123"> 用户还会发现此 XSD 文件在“XML 架构”对话框中名为“LinqToSqlMapping.xsd”。</span><span class="sxs-lookup"><span data-stu-id="e5f39-123"> users will also find this XSD file in the XML Schemas dialog box as "LinqToSqlMapping.xsd".</span></span> <span data-ttu-id="e5f39-124">若要正确使用此文件，用于验证外部映射文件，请参阅[如何： 验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="e5f39-124">To use this file correctly for validating an external mapping file, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
+>  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]<span data-ttu-id="1afc8-123"> 用户还会发现此 XSD 文件在“XML 架构”对话框中名为“LinqToSqlMapping.xsd”。</span><span class="sxs-lookup"><span data-stu-id="1afc8-123"> users will also find this XSD file in the XML Schemas dialog box as "LinqToSqlMapping.xsd".</span></span> <span data-ttu-id="1afc8-124">若要正确使用此文件，用于验证外部映射文件，请参阅[如何： 验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="1afc8-124">To use this file correctly for validating an external mapping file, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -152,7 +152,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e5f39-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5f39-125">See Also</span></span>  
- [<span data-ttu-id="e5f39-126">LINQ to SQL 中的代码生成</span><span class="sxs-lookup"><span data-stu-id="e5f39-126">Code Generation in LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [<span data-ttu-id="e5f39-127">参考</span><span class="sxs-lookup"><span data-stu-id="e5f39-127">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [<span data-ttu-id="e5f39-128">如何：将对象模型作为外部文件生成</span><span class="sxs-lookup"><span data-stu-id="e5f39-128">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+## <a name="see-also"></a><span data-ttu-id="1afc8-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="1afc8-125">See Also</span></span>  
+ [<span data-ttu-id="1afc8-126">LINQ to SQL 中的代码生成</span><span class="sxs-lookup"><span data-stu-id="1afc8-126">Code Generation in LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [<span data-ttu-id="1afc8-127">参考</span><span class="sxs-lookup"><span data-stu-id="1afc8-127">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [<span data-ttu-id="1afc8-128">如何：将对象模型作为外部文件生成</span><span class="sxs-lookup"><span data-stu-id="1afc8-128">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

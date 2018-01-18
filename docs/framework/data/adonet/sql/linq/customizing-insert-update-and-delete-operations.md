@@ -10,33 +10,33 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 99a87a3d0dfabb053ca05644e0b3e53361821b9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa12b26723c3c97e45f75ae951a7496025fde5a9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="customizing-insert-update-and-delete-operations"></a><span data-ttu-id="6e104-102">自定义插入、更新和删除操作</span><span class="sxs-lookup"><span data-stu-id="6e104-102">Customizing Insert, Update, and Delete Operations</span></span>
-<span data-ttu-id="6e104-103">默认情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会生成动态 SQL 来实现插入、读取、更新和删除操作。</span><span class="sxs-lookup"><span data-stu-id="6e104-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL to implement insert, read, update, and delete operations.</span></span> <span data-ttu-id="6e104-104">但实际上，您通常要自定义应用程序以满足您的业务需要。</span><span class="sxs-lookup"><span data-stu-id="6e104-104">In practice, however, you typically customize your application to suit your business needs.</span></span>  
+# <a name="customizing-insert-update-and-delete-operations"></a><span data-ttu-id="74660-102">自定义插入、更新和删除操作</span><span class="sxs-lookup"><span data-stu-id="74660-102">Customizing Insert, Update, and Delete Operations</span></span>
+<span data-ttu-id="74660-103">默认情况下，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会生成动态 SQL 来实现插入、读取、更新和删除操作。</span><span class="sxs-lookup"><span data-stu-id="74660-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL to implement insert, read, update, and delete operations.</span></span> <span data-ttu-id="74660-104">但实际上，您通常要自定义应用程序以满足您的业务需要。</span><span class="sxs-lookup"><span data-stu-id="74660-104">In practice, however, you typically customize your application to suit your business needs.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6e104-105">如果正在使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，则可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来自定义插入、更新和删除操作。</span><span class="sxs-lookup"><span data-stu-id="6e104-105">If you are using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to customize insert, update, and delete actions.</span></span>  
+>  <span data-ttu-id="74660-105">如果正在使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，则可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来自定义插入、更新和删除操作。</span><span class="sxs-lookup"><span data-stu-id="74660-105">If you are using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to customize insert, update, and delete actions.</span></span>  
   
- <span data-ttu-id="6e104-106">本节中的主题介绍了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供的用于在应用程序中自定义插入、读取、更新和删除操作的技术。</span><span class="sxs-lookup"><span data-stu-id="6e104-106">This section of topics describes the techniques that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations in your application.</span></span>  
+ <span data-ttu-id="74660-106">本节中的主题介绍了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供的用于在应用程序中自定义插入、读取、更新和删除操作的技术。</span><span class="sxs-lookup"><span data-stu-id="74660-106">This section of topics describes the techniques that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations in your application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6e104-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="6e104-107">In This Section</span></span>  
- [<span data-ttu-id="6e104-108">自定义操作：概述</span><span class="sxs-lookup"><span data-stu-id="6e104-108">Customizing Operations: Overview</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
- <span data-ttu-id="6e104-109">介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供的用于自定义插入、读取、更新和删除操作的各种技术。</span><span class="sxs-lookup"><span data-stu-id="6e104-109">Describes the various techniques [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="74660-107">本节内容</span><span class="sxs-lookup"><span data-stu-id="74660-107">In This Section</span></span>  
+ [<span data-ttu-id="74660-108">自定义操作：概述</span><span class="sxs-lookup"><span data-stu-id="74660-108">Customizing Operations: Overview</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
+ <span data-ttu-id="74660-109">介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供的用于自定义插入、读取、更新和删除操作的各种技术。</span><span class="sxs-lookup"><span data-stu-id="74660-109">Describes the various techniques [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations.</span></span>  
   
- [<span data-ttu-id="6e104-110">插入、更新和删除操作</span><span class="sxs-lookup"><span data-stu-id="6e104-110">Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  
- <span data-ttu-id="6e104-111">介绍用于操作数据库数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 默认过程。</span><span class="sxs-lookup"><span data-stu-id="6e104-111">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default processes for manipulating database data.</span></span>  
+ [<span data-ttu-id="74660-110">插入、更新和删除操作</span><span class="sxs-lookup"><span data-stu-id="74660-110">Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  
+ <span data-ttu-id="74660-111">介绍用于操作数据库数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 默认过程。</span><span class="sxs-lookup"><span data-stu-id="74660-111">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default processes for manipulating database data.</span></span>  
   
- [<span data-ttu-id="6e104-112">开发人员在重写默认行为中的责任</span><span class="sxs-lookup"><span data-stu-id="6e104-112">Responsibilities of the Developer In Overriding Default Behavior</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)  
- <span data-ttu-id="6e104-113">介绍开发人员在实现非 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 强制需求方面的责任。</span><span class="sxs-lookup"><span data-stu-id="6e104-113">Describes the role of the developer in implementing requirements not enforced by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
+ [<span data-ttu-id="74660-112">开发人员在重写默认行为中的责任</span><span class="sxs-lookup"><span data-stu-id="74660-112">Responsibilities of the Developer In Overriding Default Behavior</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)  
+ <span data-ttu-id="74660-113">介绍开发人员在实现非 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 强制需求方面的责任。</span><span class="sxs-lookup"><span data-stu-id="74660-113">Describes the role of the developer in implementing requirements not enforced by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [<span data-ttu-id="6e104-114">通过使用分部方法添加业务逻辑</span><span class="sxs-lookup"><span data-stu-id="6e104-114">Adding Business Logic By Using Partial Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)  
- <span data-ttu-id="6e104-115">介绍如何使用分部方法重写自动生成的方法。</span><span class="sxs-lookup"><span data-stu-id="6e104-115">Describes how to use partial methods to override autogenerated methods.</span></span>
+ [<span data-ttu-id="74660-114">通过使用分部方法添加业务逻辑</span><span class="sxs-lookup"><span data-stu-id="74660-114">Adding Business Logic By Using Partial Methods</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)  
+ <span data-ttu-id="74660-115">介绍如何使用分部方法重写自动生成的方法。</span><span class="sxs-lookup"><span data-stu-id="74660-115">Describes how to use partial methods to override autogenerated methods.</span></span>

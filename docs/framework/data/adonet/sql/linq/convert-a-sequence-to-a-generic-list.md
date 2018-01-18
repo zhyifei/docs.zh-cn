@@ -13,24 +13,24 @@ dev_langs:
 - vb
 ms.assetid: 7ab76d93-6898-4e75-b76f-290a66ecead8
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4b1fa6895e015ab7123bf454aac435812e4a23da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 066ea4d3c4232137fa6dbd758c8a3be1feec9e61
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="convert-a-sequence-to-a-generic-list"></a><span data-ttu-id="94695-102">将某一序列转换为泛型列表</span><span class="sxs-lookup"><span data-stu-id="94695-102">Convert a Sequence to a Generic List</span></span>
-<span data-ttu-id="94695-103">使用 <xref:System.Linq.Enumerable.ToList%2A> 可从序列创建泛型列表。</span><span class="sxs-lookup"><span data-stu-id="94695-103">Use <xref:System.Linq.Enumerable.ToList%2A> to create a generic List from a sequence.</span></span>  
+# <a name="convert-a-sequence-to-a-generic-list"></a><span data-ttu-id="a0793-102">将某一序列转换为泛型列表</span><span class="sxs-lookup"><span data-stu-id="a0793-102">Convert a Sequence to a Generic List</span></span>
+<span data-ttu-id="a0793-103">使用 <xref:System.Linq.Enumerable.ToList%2A> 可从序列创建泛型列表。</span><span class="sxs-lookup"><span data-stu-id="a0793-103">Use <xref:System.Linq.Enumerable.ToList%2A> to create a generic List from a sequence.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="94695-104">示例</span><span class="sxs-lookup"><span data-stu-id="94695-104">Example</span></span>  
- <span data-ttu-id="94695-105">下面的示例使用 <xref:System.Linq.Enumerable.ToList%2A> 直接将查询的计算结果放入泛型 <xref:System.Collections.Generic.List%601>。</span><span class="sxs-lookup"><span data-stu-id="94695-105">The following sample uses <xref:System.Linq.Enumerable.ToList%2A> to immediately evaluate a query into a generic <xref:System.Collections.Generic.List%601>.</span></span>  
+## <a name="example"></a><span data-ttu-id="a0793-104">示例</span><span class="sxs-lookup"><span data-stu-id="a0793-104">Example</span></span>  
+ <span data-ttu-id="a0793-105">下面的示例使用 <xref:System.Linq.Enumerable.ToList%2A> 直接将查询的计算结果放入泛型 <xref:System.Collections.Generic.List%601>。</span><span class="sxs-lookup"><span data-stu-id="a0793-105">The following sample uses <xref:System.Linq.Enumerable.ToList%2A> to immediately evaluate a query into a generic <xref:System.Collections.Generic.List%601>.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#45](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#45)]
  [!code-vb[DLinqQueryExamples#45](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#45)]  
   
-## <a name="see-also"></a><span data-ttu-id="94695-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="94695-106">See Also</span></span>  
- [<span data-ttu-id="94695-107">查询示例</span><span class="sxs-lookup"><span data-stu-id="94695-107">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="a0793-106">请参阅</span><span class="sxs-lookup"><span data-stu-id="a0793-106">See Also</span></span>  
+ [<span data-ttu-id="a0793-107">查询示例</span><span class="sxs-lookup"><span data-stu-id="a0793-107">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

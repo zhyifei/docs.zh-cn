@@ -10,21 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6aab21c4b22e731f3d85a2f444e82bc04906c320
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1946f2b4a2cef8946eb05f995150fafada954d09
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="40712-102">撰写嵌套的 Entity SQL 查询</span><span class="sxs-lookup"><span data-stu-id="40712-102">Composing Nested Entity SQL Queries</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="40712-103"> 是一种功能丰富的语言。</span><span class="sxs-lookup"><span data-stu-id="40712-103"> is a rich functional language.</span></span> <span data-ttu-id="40712-104">构建基块[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是一个表达式。</span><span class="sxs-lookup"><span data-stu-id="40712-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="40712-105">与传统的 SQL 不同[!INCLUDE[esql](../../../../../../includes/esql-md.md)]并不仅限于表格结果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持编写可以具有文本、 参数或嵌套的表达式的复杂表达式。</span><span class="sxs-lookup"><span data-stu-id="40712-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="40712-106">表达式中的值可以参数化，或由其他表达式构成。</span><span class="sxs-lookup"><span data-stu-id="40712-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
+# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="fcbad-102">撰写嵌套的 Entity SQL 查询</span><span class="sxs-lookup"><span data-stu-id="fcbad-102">Composing Nested Entity SQL Queries</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="fcbad-103"> 是一种功能丰富的语言。</span><span class="sxs-lookup"><span data-stu-id="fcbad-103"> is a rich functional language.</span></span> <span data-ttu-id="fcbad-104">构建基块[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是一个表达式。</span><span class="sxs-lookup"><span data-stu-id="fcbad-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="fcbad-105">与传统的 SQL 不同[!INCLUDE[esql](../../../../../../includes/esql-md.md)]并不仅限于表格结果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持编写可以具有文本、 参数或嵌套的表达式的复杂表达式。</span><span class="sxs-lookup"><span data-stu-id="fcbad-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="fcbad-106">表达式中的值可以参数化，或由其他表达式构成。</span><span class="sxs-lookup"><span data-stu-id="fcbad-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
   
-## <a name="nested-expressions"></a><span data-ttu-id="40712-107">嵌套表达式</span><span class="sxs-lookup"><span data-stu-id="40712-107">Nested Expressions</span></span>  
- <span data-ttu-id="40712-108">嵌套表达式可以放置在任何可接受其返回类型值的位置。</span><span class="sxs-lookup"><span data-stu-id="40712-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="40712-109">例如：</span><span class="sxs-lookup"><span data-stu-id="40712-109">For example:</span></span>  
+## <a name="nested-expressions"></a><span data-ttu-id="fcbad-107">嵌套表达式</span><span class="sxs-lookup"><span data-stu-id="fcbad-107">Nested Expressions</span></span>  
+ <span data-ttu-id="fcbad-108">嵌套表达式可以放置在任何可接受其返回类型值的位置。</span><span class="sxs-lookup"><span data-stu-id="fcbad-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="fcbad-109">例如：</span><span class="sxs-lookup"><span data-stu-id="fcbad-109">For example:</span></span>  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -36,7 +36,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- <span data-ttu-id="40712-110">嵌套查询可以放在投影子句中。</span><span class="sxs-lookup"><span data-stu-id="40712-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="40712-111">例如：</span><span class="sxs-lookup"><span data-stu-id="40712-111">For example:</span></span>  
+ <span data-ttu-id="fcbad-110">嵌套查询可以放在投影子句中。</span><span class="sxs-lookup"><span data-stu-id="fcbad-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="fcbad-111">例如：</span><span class="sxs-lookup"><span data-stu-id="fcbad-111">For example:</span></span>  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -46,7 +46,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- <span data-ttu-id="40712-112">在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，嵌套查询必须括在括号中：</span><span class="sxs-lookup"><span data-stu-id="40712-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
+ <span data-ttu-id="fcbad-112">在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，嵌套查询必须括在括号中：</span><span class="sxs-lookup"><span data-stu-id="fcbad-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -57,19 +57,19 @@ UNION ALL
 FROM … );  
 ```  
   
- <span data-ttu-id="40712-113">下面的示例演示如何正确嵌套中的表达式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to： 排序联合的两个查询](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313)。</span><span class="sxs-lookup"><span data-stu-id="40712-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313).</span></span>  
+ <span data-ttu-id="fcbad-113">下面的示例演示如何正确嵌套中的表达式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to： 排序联合的两个查询](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313)。</span><span class="sxs-lookup"><span data-stu-id="fcbad-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313).</span></span>  
   
-## <a name="nested-queries-in-projection"></a><span data-ttu-id="40712-114">投影中的嵌套查询</span><span class="sxs-lookup"><span data-stu-id="40712-114">Nested Queries in Projection</span></span>  
- <span data-ttu-id="40712-115">投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。</span><span class="sxs-lookup"><span data-stu-id="40712-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="40712-116">在某些后端服务器（包括 SLQ Server）中，这会导致 TempDB 表变得过大，对服务器性能产生负面影响。</span><span class="sxs-lookup"><span data-stu-id="40712-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
+## <a name="nested-queries-in-projection"></a><span data-ttu-id="fcbad-114">投影中的嵌套查询</span><span class="sxs-lookup"><span data-stu-id="fcbad-114">Nested Queries in Projection</span></span>  
+ <span data-ttu-id="fcbad-115">投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。</span><span class="sxs-lookup"><span data-stu-id="fcbad-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="fcbad-116">在某些后端服务器（包括 SLQ Server）中，这会导致 TempDB 表变得过大，对服务器性能产生负面影响。</span><span class="sxs-lookup"><span data-stu-id="fcbad-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
   
- <span data-ttu-id="40712-117">以下是这种查询的一个示例：</span><span class="sxs-lookup"><span data-stu-id="40712-117">The following is an example of such a query:</span></span>  
+ <span data-ttu-id="fcbad-117">以下是这种查询的一个示例：</span><span class="sxs-lookup"><span data-stu-id="fcbad-117">The following is an example of such a query:</span></span>  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a><span data-ttu-id="40712-118">嵌套查询排序</span><span class="sxs-lookup"><span data-stu-id="40712-118">Ordering Nested Queries</span></span>  
- <span data-ttu-id="40712-119">在实体框架中，嵌套表达式可置于查询中的任何位置。</span><span class="sxs-lookup"><span data-stu-id="40712-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="40712-120">Entity SQL 为编写查询提供了非常大的灵活性，可以在编写的查询中包含对嵌套查询的排序。</span><span class="sxs-lookup"><span data-stu-id="40712-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="40712-121">但是，将不保留嵌套查询的顺序。</span><span class="sxs-lookup"><span data-stu-id="40712-121">However, the order of a nested query is not preserved.</span></span>  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="fcbad-118">嵌套查询排序</span><span class="sxs-lookup"><span data-stu-id="fcbad-118">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="fcbad-119">在实体框架中，嵌套表达式可置于查询中的任何位置。</span><span class="sxs-lookup"><span data-stu-id="fcbad-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="fcbad-120">Entity SQL 为编写查询提供了非常大的灵活性，可以在编写的查询中包含对嵌套查询的排序。</span><span class="sxs-lookup"><span data-stu-id="fcbad-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="fcbad-121">但是，将不保留嵌套查询的顺序。</span><span class="sxs-lookup"><span data-stu-id="fcbad-121">However, the order of a nested query is not preserved.</span></span>  
   
 ```  
 -- The following query will order the results by last name.  
@@ -86,5 +86,5 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="40712-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="40712-122">See Also</span></span>  
- [<span data-ttu-id="40712-123">实体 SQL 概述</span><span class="sxs-lookup"><span data-stu-id="40712-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="fcbad-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="fcbad-122">See Also</span></span>  
+ [<span data-ttu-id="fcbad-123">实体 SQL 概述</span><span class="sxs-lookup"><span data-stu-id="fcbad-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
