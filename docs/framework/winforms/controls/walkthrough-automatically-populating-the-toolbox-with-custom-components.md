@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 08cb39215ea1d9aff1cd7ecc125bd731f14a4d7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b60d4ee7908a5ed9dcb3393132ba7d0bd0a6cb5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>演练：使用自定义组件自动填充工具箱
-如果你的组件定义的那样当前打开的解决方案中的项目中，它们将会自动出现在**工具箱**，而需要你执行任何操作。 你可以手动填充**工具箱**与通过使用你自定义组件[选择工具箱项对话框 (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)，但**工具箱**采用帐户你的解决方案中的项的生成包含所有以下特征的输出结果：  
+如果你的组件定义的那样当前打开的解决方案中的项目中，它们将会自动出现在**工具箱**，而需要你执行任何操作。 你可以手动填充**工具箱**与通过使用你自定义组件[选择工具箱项对话框 (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)，但**工具箱**采用帐户你的解决方案中的项的生成包含所有以下特征的输出结果：  
   
 -   实现<xref:System.ComponentModel.IComponent>;  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  完成后，你将看到**工具箱**填充了你创建的组件。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建项目并设置窗体。  
@@ -58,11 +58,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  创建一个名为 `ToolboxExample` 的基于 Windows 的应用程序项目。  
   
-     有关详细信息，请参阅 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+     有关详细信息，请参阅[如何：创建 Windows 应用程序项目](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 2.  向项目添加新的组件。 调用它`DemoComponent`。  
   
-     有关详细信息，请参阅[NIB： 如何： 添加新项目项](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。  
+     有关详细信息，请参阅[NIB： 如何： 添加新项目项](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。  
   
 3.  生成项目。  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  卸载项目从解决方案。  
   
-     有关卸载的项目的详细信息，请参阅[NIB： 如何： 卸载并重新加载项目](http://msdn.microsoft.com/en-us/abc0155b-8fcb-4ffc-95b6-698518a7100b)。 如果系统提示您保存时，选择**是**。  
+     有关卸载的项目的详细信息，请参阅[NIB： 如何： 卸载并重新加载项目](http://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b)。 如果系统提示您保存时，选择**是**。  
   
 2.  添加新**Windows 应用程序**到解决方案的项目。 打开的窗体中**设计器**。  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 12/22/2017
  本演练演示**工具箱**会考虑项目的组件，但**工具箱**同时也会考虑控件。 通过添加和删除控件项目，从你的解决方案来测试你自己的自定义控件。  
   
 ## <a name="see-also"></a>请参阅  
- [通常，Windows 窗体设计器中，选项对话框](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
- [如何：操作工具箱选项卡](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [“选择工具箱项”对话框 (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
+ [通常，Windows 窗体设计器中，选项对话框](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [如何：操作工具箱选项卡](http://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
+ [“选择工具箱项”对话框 (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
  [将控件置于 Windows 窗体上](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

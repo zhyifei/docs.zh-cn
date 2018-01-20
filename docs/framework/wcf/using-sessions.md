@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-sessions"></a>使用会话
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序中，“会话”  将一组消息相互关联，从而形成对话。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 会话与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序中提供的会话对象不同，它们支持不同的行为，并且可通过不同的方式进行控制。 本主题描述了会话在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序中启用的功能以及如何使用这些功能。  
@@ -147,7 +147,7 @@ ms.lasthandoff: 12/22/2017
  协定中的 <xref:System.ServiceModel.SessionMode> 枚举与 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性之间存在交互，该属性可控制通道和特定服务对象之间的关联。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][会话，实例化和并发](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)。  
   
 ### <a name="sharing-instancecontext-objects"></a>共享 InstanceContext 对象  
- 通过自己执行关联，您还可以控制将哪个基于会话的通道或调用与哪个 <xref:System.ServiceModel.InstanceContext> 对象相关联。 有关完整示例，请参见 [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)。  
+ 通过自己执行关联，您还可以控制将哪个基于会话的通道或调用与哪个 <xref:System.ServiceModel.InstanceContext> 对象相关联。 有关完整示例，请参阅[InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)。  
   
 ## <a name="sessions-and-streaming"></a>会话和流  
  当您有大量的数据要传输时， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的流传输模式是整个在内存中缓冲和处理消息的默认行为的一个可行的替代方法。 在流与基于会话的绑定一起调用时可能会产生意外行为。 可通过单一通道（数据报通道）执行所有流调用，该通道不支持会话，即使将正在使用的绑定配置为使用会话也是如此。 如果多个客户端通过基于会话的绑定对相同的服务对象进行流调用，并且将服务对象的并发模式设置为 single，同时将其实例上下文模式设置为 `PerSession`，则所用的调用必须经过数据报通道，因此一次只处理一个调用。 一个或多个客户端因此可能会超时。通过将服务对象的 `InstanceContextMode` 设置为 `PerCall` 或者将 Concurrency 设置为 multiple，可以解决此问题。  

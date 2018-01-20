@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 8d310786a12aa538a8a820c1c05788f30fe28c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 生成器 (EdmGen.exe)
 EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]模型和映射文件的命令行工具。 使用 EdmGen.exe 工具可以执行以下任务：  
@@ -29,7 +29,7 @@ EdmGen.exe 是用于处理[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef
   
 -   生成包含从概念模型 (.csdl) 文件生成的对象类的 C# 或 Visual Basic 代码文件。 有关详细信息，请参阅[如何： 使用 EdmGen.exe 生成对象层代码到](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)。  
   
--   生成包含现有模型的预生成视图的 C# 或 Visual Basic 代码文件。 有关详细信息， [How to： 提高查询性能的 Pre-Generate 视图](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
+-   生成包含现有模型的预生成视图的 C# 或 Visual Basic 代码文件。 有关详细信息， [How to： 提高查询性能的 Pre-Generate 视图](http://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。  
   
  EdmGen.exe 工具安装在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 目录中。 多数情况下，它位于 C:\windows\Microsoft.NET\Framework\v4.0 中。 对于 64 位系统，它位于 C:\windows\Microsoft.NET\Framework64\v4.0 中。 此外可以从 Visual Studio 命令提示符处访问 EdmGen.exe 工具 (单击**启动**，指向**所有程序**，指向**Microsoft Visual Studio 2010**，指向**Visual Studio Tools**，然后单击**Visual Studio 2010 命令提示**)。  
   
@@ -83,6 +83,6 @@ EdmGen /mode:choice [options]
  [如何：使用 EdmGen.exe 验证模型和映射文件](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
 ## <a name="see-also"></a>请参阅  
- [ADO.NET 实体数据模型工具](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
+ [ADO.NET 实体数据模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
  [实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)  
  [CSDL、SSDL 和 MSL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

@@ -14,20 +14,20 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: 08e9f1f3b2145d94f491933639211a6eabd3c9fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bf42da647e598ad698bc36e6abff0d31350f3d96
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;security&gt;
 定义绑定的安全设置。  
   
- \<系统。ServiceModel >  
-\<绑定 >  
-\<netTcpBinding >  
-\<绑定 >  
-\<安全 >  
+ \<system.ServiceModel>  
+\<bindings>  
+\<netTcpBinding>  
+\<binding>  
+\<security>  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,8 +64,8 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<传输 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|定义传输的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>。|  
-|[\<消息 >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|定义消息的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>。|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|定义传输的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>。|  
+|[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|定义消息的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 |绑定|绑定元素[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。|  
   
 ## <a name="remarks"></a>备注  
- 每个标准绑定都提供用于控制传输安全性要求的参数。 这些参数通常包括指定是使用消息级安全性还是使用传输级安全性的安全模式，还包括客户端凭据类型的选项。 基于这些参数提供的可供选择的选项，构建一个具有适当安全性的信道堆栈。  
+ 每个标准绑定都提供用于控制传输安全性需求的参数。 这些参数通常包括指定是使用消息级安全性还是使用传输级安全性的安全模式，还包括客户端凭据类型的选项。 基于这些参数提供的可供选择的选项，构建一个具有适当安全性的信道堆栈。  
   
  由 Windows Communication Foundation (WCF) 提供的系统提供的绑定是一组旨在满足一些最常见的方案要求的绑定。 所有这些绑定都允许为某些特定的目标方案指定安全要求。  
   
@@ -88,5 +88,5 @@ ms.lasthandoff: 12/22/2017
  [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+ [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7e4d336992be216178b1237c9f43bffb3de61fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="add-ins-and-extensibility"></a>外接程序和扩展性
 <a name="top"></a> 外接程序为主机应用程序提供扩展功能或服务。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一个编程模型，开发人员可利用此模型来开发外接程序并在其主机应用程序中激活。 该模型通过在主机与外接程序之间构造通信管道来实现此功能。 该模型通过使用 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>和 <xref:System.AddIn.Contract> 命名空间中的类实现。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="discovery-and-activation"></a>发现和激活  
  可以使用表示从信息存储中找到的外接程序的集合中的令牌激活外接程序。 通过搜索定义主机的外接程序视图的类型找到外接程序。 还可以按定义外接程序的类型来查找特定的外接程序。 信息存储区包括两个缓存文件：管道存储区和外接程序存储区。  
   
- 有关更新和重新生成信息存储区的信息，请参阅 [外接程序发现](http://msdn.microsoft.com/en-us/5d268dde-11df-4c4d-a022-f58d88bbc421)。 有关激活外接程序的信息，请参阅 [外接程序激活](http://msdn.microsoft.com/en-us/bedcbcdf-5964-4215-b5f3-3299798b2b3f) 和 [如何：使用不同的隔离和安全性激活外接程序](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
+ 有关更新和重新生成信息存储的信息，请参阅[外接程序中发现](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421)。 有关激活外接程序的信息，请参阅[外接程序中激活](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f)和[How to： 激活外接程序具有不同的隔离和安全性](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
   
 ### <a name="isolation-levels-and-external-processes"></a>隔离级别和外部进程  
  外接程序模型在外接程序与其主机之间或者两个外接程序之间支持几个隔离级别。这些隔离级别如下所示（从低到高顺序）：  
@@ -96,10 +96,10 @@ ms.lasthandoff: 12/22/2017
   
 -   每个外接程序在外部进程中以独占方式加载到自己的应用程序域。 这是最高级别的隔离方案。  
   
- 有关使用外部进程的详细信息，请参阅 [如何：使用不同的隔离和安全性激活外接程序](http://msdn.microsoft.com/en-us/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
+ 有关使用外部进程的详细信息，请参阅[How to： 激活外接程序具有不同的隔离和安全性](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5)。  
   
 ### <a name="lifetime-management"></a>生存期管理  
- 由于外接程序模型跨应用程序域和进程边界，因此自身的垃圾回收不足以释放和回收对象。 外接程序模型提供一种生存期管理机制，该机制使用令牌和引用计数，并且通常不需要额外的编程。 有关详细信息，请参阅 [生存期管理](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
+ 由于外接程序模型跨应用程序域和进程边界，因此自身的垃圾回收不足以释放和回收对象。 外接程序模型提供一种生存期管理机制，该机制使用令牌和引用计数，并且通常不需要额外的编程。 有关详细信息，请参阅[生命期管理](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
   
  [返回页首](#top)  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/22/2017
 |标题|描述|  
 |-----------|-----------------|  
 |[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|描述从主机应用程序到外接程序之间的段的通信管道。 提供描述如何构造管道以及如何在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中将段部署到管道的演练主题中的代码示例。|  
-|[应用程序域和程序集](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)|描述（为安全性、可靠性和版本控制提供隔离边界的）应用程序域与程序集之间的关系。|  
+|[应用程序域和程序集](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|描述（为安全性、可靠性和版本控制提供隔离边界的）应用程序域与程序集之间的关系。|  
   
  [返回页首](#top)  
   

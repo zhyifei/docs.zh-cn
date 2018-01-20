@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5406a7a2912554552697c11fd7aa7a2c0e643fa0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f75a9b532e91966d6b0be9ac6602080eac896ed8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 接口
 定义允许主机以获取有关请求的任务的信息并在其同步实现检测死锁的方法。  
@@ -50,5 +50,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Thread>  
  [IHostSyncManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [托管和非托管线程处理](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)  
+ [托管和非托管线程处理](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
  [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

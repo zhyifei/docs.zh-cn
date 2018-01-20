@@ -14,11 +14,11 @@ author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload: wiwagn
-ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  你应该为应用中的关键客户体验或方案设定性能目标，并编写测试来测量性能。  应用科学的方法调查失败的测试：使用配置文件来指导你、假设有可能是什么问题，并用利用试验或代码更改来测试你的假设。  使用定期测试建立一段时间内的基线性能测量，以便你可以隔离导致性能衰退的更改。  通过以严格的方式处理性能工作，你可以避免将时间浪费在不需要的代码更新上。  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事实 3：好的工具将使一切大不相同  
- 好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。  Microsoft 提供多种性能工具，如 [Visual Studio 探查器](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](http://msdn.microsoft.com/en-us/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](http://www.microsoft.com/download/details.aspx?id=28567)。  
+ 好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。  Microsoft 提供多种性能工具，如 [Visual Studio 探查器](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](http://www.microsoft.com/download/details.aspx?id=28567)。  
   
  PerfView 是一个免费且功能极为强大的工具，它可以帮助你专注于深层问题，如磁盘 I/O、GC 事件和内存。  可以捕获与性能相关的 [Windows 事件跟踪](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，并很轻松地查看每个应用、每个进程、每个堆栈和每个线程信息。  PerfView 向你显示应用分配了多少内存以及分配了何种内存，并显示哪些函数或调用堆栈提供了内存分配以及他们提供了多少。 有关详细信息，请参见丰富的帮助主题、演示以及工具随附的视频（如第 9 频道上的 [PerfView 教程](http://channel9.msdn.com/Series/PerfView-Tutorial)）。  
   
@@ -286,7 +286,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  这个简单的缓存策略符合良好的缓存设计要求，因为它具有大小上限。  然而，现在存在比原来更多的代码，这意味着更多的维护成本。  仅当你发现了性能问题时，并且 PerfView 已显示 <xref:System.Text.StringBuilder> 分配是一个重要的参与者，才应采用该缓存策略。  
   
 ### <a name="linq-and-lambdas"></a>LINQ 和 lambda  
- 使用语言集成查询 (LINQ) 和 lambda 表达式是一个使用高效率功能的出色示例，如果代码对性能有显著的影响，你以后可能会发现需要重写这些功能。  
+ 使用语言集成查询 (LINQ) 和 Lambda 表达式是一个使用高效率功能的出色示例，如果代码对性能有显著的影响，你以后可能会发现需要重写这些功能。  
   
  **示例 5：Lambda、List\<T> 和 IEnumerable\<T>**  
   

@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a2af80ddb558959171c255a61fae460729306e0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 649936abfe149371445c77802bda2e72f558a41d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="marshaling-data-with-com-interop"></a>用 COM 互操作对数据进行封送处理
 COM 互操作同时对在托管代码中使用 COM 对象和向 COM 公开托管对象提供支持。 对于将数据封送到 COM 和从 COM 中封送数据的支持是广泛的，并几乎总是提供正确的封送行为。  
@@ -40,23 +40,23 @@ COM 互操作同时对在托管代码中使用 COM 对象和向 COM 公开托管
  描述如何将托管的 DCOM 代码迁移到 WCF，最安全的解决方案。  
   
 ## <a name="related-sections"></a>相关章节  
- [COM 数据类型](https://msdn.microsoft.com/en-us/library/sak564ww(v=vs.100).aspx)  
+ [COM 数据类型](https://msdn.microsoft.com/library/sak564ww(v=vs.100).aspx)  
  提供相应的托管和非托管数据类型。  
   
- [自定义 COM 可调用包装器](https://msdn.microsoft.com/en-us/library/3bwc828w(v=vs.100).aspx)  
+ [自定义 COM 可调用包装器](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
  描述如何显式封送数据类型使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>在设计时属性。  
   
- [自定义运行时可调用包装器](https://msdn.microsoft.com/en-us/library/e753eftz(v=vs.100).aspx)  
+ [自定义运行时可调用包装器](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
  描述如何调整互操作程序集中类型的封送行为以及如何以手动方式定义 COM 类型。  
   
- [高级 COM 互操作性](https://msdn.microsoft.com/en-us/library/bd9cdfyx(v=vs.100).aspx)  
+ [高级 COM 互操作性](https://msdn.microsoft.com/library/bd9cdfyx(v=vs.100).aspx)  
  提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的详细信息。  
   
- [有关从程序集转换到类型库的摘要](https://msdn.microsoft.com/en-us/library/xk1120c3(v=vs.100).aspx)  
+ [有关从程序集转换到类型库的摘要](https://msdn.microsoft.com/library/xk1120c3(v=vs.100).aspx)  
  描述从程序集到类型库的导出转换过程。  
   
- [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/en-us/library/k83zzh38(v=vs.100).aspx)  
+ [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/k83zzh38(v=vs.100).aspx)  
  描述从类型库到程序集的导入转换过程。  
   
- [使用泛型类型进行交互操作](https://msdn.microsoft.com/en-us/library/ms229590(v=vs.100).aspx)  
+ [使用泛型类型进行交互操作](https://msdn.microsoft.com/library/ms229590(v=vs.100).aspx)  
  描述在使用用于 COM 互操作性的泛型类型时，哪些操作受支持。

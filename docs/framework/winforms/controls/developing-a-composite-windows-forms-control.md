@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b98ba10e1c865417b9e844c4d5c31334f763e1b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 06ad98fef8c51cb995644c3b29236a9b0f8cfe29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>开发复合 Windows 窗体控件
 可以通过组合其它 Windows 窗体控件来开发复合 Windows 窗体控件。 派生自的复合控件<xref:System.Web.UI.UserControl>称为用户控件。 基类 <xref:System.Windows.Forms.UserControl> 为子控件提供了键盘路由，从而确保子控件可以接收焦点。 用户控件的示例，请参阅<xref:System.Windows.Forms.UserControl>示例[如何： 应用 Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [演练：使用 Visual C# 从 Windows 窗体控件继承](http://msdn.microsoft.com/en-us/09476da0-8d4c-4a4c-b969-649519dfb438)  
+-   [演练：使用 Visual C# 从 Windows 窗体控件继承](http://msdn.microsoft.com/library/09476da0-8d4c-4a4c-b969-649519dfb438)  
   
 -   [如何：为控件提供工具箱位图](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [演练：使用 Visual Basic 创作复合控件](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [演练：使用 Visual C# 创作复合控件](http://msdn.microsoft.com/en-us/f88481a8-c746-4a36-9479-374ce5f2e91f)）  
+-   [演练：使用 Visual C# 创作复合控件](http://msdn.microsoft.com/library/f88481a8-c746-4a36-9479-374ce5f2e91f)）  
   
 -   [演练：使用 Visual Basic 从 Windows 窗体控件继承](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

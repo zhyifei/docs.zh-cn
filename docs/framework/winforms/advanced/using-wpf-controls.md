@@ -17,18 +17,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c14da85b377b3ef80d6accbc8b0319959a75bcd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e616019d53648058d51a3d0df457b1380aaf3b1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-wpf-controls"></a>使用 WPF 控件
 在基于 Windows 窗体的应用程序，可以使用 Windows Presentation Foundation (WPF) 控件。 尽管这些是两个不同的视图技术，则它们顺利互操作。  
   
  Windows 窗体设计器提供用于承载 Windows Presentation Foundation 控件的可视设计环境。 由名为的特殊 Windows 窗体控件承载 WPF 控件<xref:System.Windows.Forms.Integration.ElementHost>。 此控件启用 WPF 控件将参与窗体的布局以及接收键盘和鼠标的消息。 在设计时，可以排列<xref:System.Windows.Forms.Integration.ElementHost>控制就像任何 Windows 窗体控件。  
   
- 此外可以基于 WPF 的应用程序中使用 Windows 窗体控件。 有关详细信息，请参阅[WPF 设计器](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)。  
+ 此外可以基于 WPF 的应用程序中使用 Windows 窗体控件。 有关详细信息，请参阅[WPF 设计器](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：在设计时复制并粘贴 ElementHost 控件](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
@@ -63,5 +63,5 @@ ms.lasthandoff: 12/22/2017
  [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  介绍 Windows Presentation Foundation 和 Windows 窗体技术之间的互操作。  
   
- [WPF 设计器](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [WPF 设计器](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  描述如何设计中的 Windows Presentation Foundation 控件[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。

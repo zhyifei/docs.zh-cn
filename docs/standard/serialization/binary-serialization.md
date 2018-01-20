@@ -17,11 +17,11 @@ ms.author: mairaw
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5547322759dcafb25e9f1c8541fa67876d0cd401
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7d67bacab3f8f8f4c21c5048d3ffb332ae6e8d77
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="binary-serialization"></a>二进制序列化
 
@@ -375,8 +375,8 @@ ms.lasthandoff: 01/09/2018
  [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)  
  描述写入执行序列化的代码时需要遵循的安全编码原则。  
   
- [远程对象](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [远程对象](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  描述 .NET Framework 中为远程通信提供的多种通信方法。  
   
- [使用 ASP.NET 创建的 XML Web service 以及 XML Web Service 客户端](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [使用 ASP.NET 创建的 XML Web service 以及 XML Web Service 客户端](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  提供一些主题，描述并解释如何对使用 ASP.NET 创建的 XML Web services 进行编程。

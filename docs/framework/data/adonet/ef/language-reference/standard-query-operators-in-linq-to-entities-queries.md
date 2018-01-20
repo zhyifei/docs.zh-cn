@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d61dbe2051109273a8616336e0efb46f7bd20864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 94a024081acfcf4b1926f485c6dbfc2f394b418c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 查询中的标准查询运算符
 在查询中，您可以指定要从数据源检索哪些信息。 查询也可以指定返回信息之前信息的排序、分组和表现方式。 LINQ 提供了一组可在查询中使用的标准查询方法。 这些方法的大多数作用于序列;在此上下文中，序列是其类型实现的对象<xref:System.Collections.Generic.IEnumerable%601>接口或<xref:System.Linq.IQueryable%601>接口。 标准查询运算符查询功能包括筛选、投影、聚合、排序、分组和分页等。 一些更为频繁使用的标准查询运算符包含专用关键字语法，以便可通过查询表达式语法调用。 查询表达式是另一种比基于方法的等式更具可读性的查询表达方法。 查询表达式子句在编译时被转换为对查询方法的调用。 具有等效的查询表达式子句的标准查询运算符的列表，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/17/2018
 |`Sum`|返回 Null。|返回 Null。|返回序列中非 null 值的和。|计算数值序列的和。|  
   
 ## <a name="type-methods"></a>类型方法  
- 在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 上下文中支持处理类型转换和测试的两个 LINQ 方法。 这就意味着仅支持映射到相应 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 类型的类型。 有关这些类型的列表，请参阅[概念模型类型 (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4)。 类型方法有 `Convert` 和 `OfType`。  
+ 在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 上下文中支持处理类型转换和测试的两个 LINQ 方法。 这就意味着仅支持映射到相应 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 类型的类型。 有关这些类型的列表，请参阅[概念模型类型 (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。 类型方法有 `Convert` 和 `OfType`。  
   
  对于实体类型支持 `OfType`。 对概念模型基元类型支持 `Convert`。  还支持 C# 的 `is` 和 `as` 方法。  
   

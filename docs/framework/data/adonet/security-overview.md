@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70f8b00ca0f57d4d6bf9fc49ab12443f0a8c9b83
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-overview"></a>安全性概述
 保护应用程序的安全是一个持续的过程。 因为不可能预知将来会出现哪种新的攻击技术，所以开发人员永远都不能保证某一应用程序可以免受所有的攻击。 仅因为还没有人发现（或发布）系统中的安全性缺陷，也不意味着不存在或可能不存在安全性缺陷。 在项目的设计阶段，您需要对安全性进行规划，并规划如何在应用程序生存期内维护其安全。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 01/17/2018
 |资源|描述|  
 |--------------|-----------------|  
 |[代码访问安全性和 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|从 ADO.NET 应用程序角度描述代码访问安全性、基于角色安全性以及部分受信任环境之间的交互。|  
-|[代码访问安全性](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题的链接。|  
+|[代码访问安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|包含描述 .NET Framework 中 CAS 的主题的链接。|  
   
 ## <a name="database-security"></a>数据库安全性  
  最小特权原则也适用于数据源。 数据库安全性一般准则包括：  
@@ -100,7 +100,7 @@ ms.lasthandoff: 01/17/2018
 |资源|描述|  
 |--------------|-----------------|  
 |[SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|提供 SQL Server 安全性和应用方案的概述，这些应用方案提供用于创建针对 SQL Server 的安全 ADO.NET 应用程序的指南。|  
-|[数据访问策略的建议](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
+|[数据访问策略的建议](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
   
 ## <a name="security-policy-and-administration"></a>安全策略和管理  
  不正确管理代码访问安全性 (CAS) 策略可能会导致安全漏洞。 应用程序一旦部署，就应使用监视安全性的技术，因为将出现评估为新威胁的风险。  
@@ -109,11 +109,11 @@ ms.lasthandoff: 01/17/2018
   
 |资源|描述|  
 |--------------|-----------------|  
-|[NIB： 安全策略管理](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供有关创建和管理安全策略的信息。|  
-|[NIB： 安全策略最佳实践](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供描述如何管理安全策略的链接。|  
+|[NIB： 安全策略管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供有关创建和管理安全策略的信息。|  
+|[NIB： 安全策略最佳实践](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供描述如何管理安全策略的链接。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [本机代码和 .NET Framework 代码的安全性](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [本机代码和 .NET Framework 代码的安全性](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

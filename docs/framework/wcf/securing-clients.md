@@ -15,11 +15,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-clients"></a>保证客户端的安全
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中，由服务规定客户端的安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]创建安全的服务，请参阅[服务的安全](../../../docs/framework/wcf/securing-services.md)。  
@@ -117,7 +117,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- 若要在配置中设置客户端凭据，添加[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)到配置文件的元素。 此外，必须已添加的行为元素链接到服务的终结点使用`behaviorConfiguration`属性[\<终结点 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如以下示例所示。 `behaviorConfiguration` 属性的值必须与行为 `name` 属性的值相匹配。  
+ 若要在配置中设置客户端凭据，添加[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)到配置文件的元素。 此外，必须已添加的行为元素链接到服务的终结点使用`behaviorConfiguration`属性[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如以下示例所示。 `behaviorConfiguration` 属性的值必须与行为 `name` 属性的值相匹配。  
   
  `<configuration>`  
   
@@ -168,7 +168,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [配置编辑器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [保护服务](../../../docs/framework/wcf/securing-services.md)  
  [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

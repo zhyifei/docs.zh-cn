@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-walkthroughs"></a>WPF 演练
 演练提供有关常见方案的分步说明。 这使得它们成为了着手学习产品或特定功能区域的理想地点。  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/22/2017
   
 |标题|描述|  
 |-----------|-----------------|  
-|[演练： 生成简单的 WPF 应用程序与 WPF 设计器](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|演示如何生成一个简单的 WPF 应用程序，与[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。|  
-|[演练： 构造动态布局](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|演示如何通过使用创建动态布局<xref:System.Windows.Controls.Grid>面板控件。|  
-|[演练： 使用 WPF 设计器创建可调整大小的应用程序](http://msdn.microsoft.com/en-us/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|演示如何创建在运行时是可由用户调整大小的窗口布局。|  
-|[演练： 创建数据绑定通过使用 WPF 设计器](http://msdn.microsoft.com/en-us/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|演示如何使用[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]来创建连接到控件的数据的数据绑定。|  
-|[演练： 使用 DesignInstance 将绑定到设计器中的数据](http://msdn.microsoft.com/en-us/a4d3747a-bd43-42bc-b66d-477856a6769c)|演示如何使用[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]在设计时为在运行时分配的数据上下文创建数据绑定。|  
+|[演练： 生成简单的 WPF 应用程序与 WPF 设计器](http://msdn.microsoft.com/library/2d412231-dbdf-4e69-b060-4f2b246c2027)|演示如何生成一个简单的 WPF 应用程序，与[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。|  
+|[演练： 构造动态布局](http://msdn.microsoft.com/library/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|演示如何通过使用创建动态布局<xref:System.Windows.Controls.Grid>面板控件。|  
+|[演练： 使用 WPF 设计器创建可调整大小的应用程序](http://msdn.microsoft.com/library/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|演示如何创建在运行时是可由用户调整大小的窗口布局。|  
+|[演练： 创建数据绑定通过使用 WPF 设计器](http://msdn.microsoft.com/library/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|演示如何使用[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]来创建连接到控件的数据的数据绑定。|  
+|[演练： 使用 DesignInstance 将绑定到设计器中的数据](http://msdn.microsoft.com/library/a4d3747a-bd43-42bc-b66d-477856a6769c)|演示如何使用[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]在设计时为在运行时分配的数据上下文创建数据绑定。|  
   
 ## <a name="wpf-walkthroughs"></a>WPF 演练  
   
@@ -61,4 +61,4 @@ ms.lasthandoff: 12/22/2017
   
 |标题|描述|  
 |-----------|-----------------|  
-|[Visual Studio 演练](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|将授予的所有区域的 Visual Studio 中的编程演练的相关的列表。|
+|[Visual Studio 演练](http://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)|将授予的所有区域的 Visual Studio 中的编程演练的相关的列表。|

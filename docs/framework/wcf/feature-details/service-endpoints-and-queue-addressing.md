@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服务终结点和队列寻址
 本主题讨论客户端如何对从队列中读取的服务进行寻址以及服务终结点如何映射到队列。 作为提示，下图演示传统 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 排队应用程序部署。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  队列地址用作侦听器从中读取消息的侦听 URI。 换言之，队列地址等效于 TCP 套接字的侦听端口。  
   
- 从队列中读取消息的终结点必须使用以前在打开 ServiceHost 时指定的同一方案指定队列地址。 有关示例，请参阅[Net MSMQ 绑定](../../../../docs/framework/wcf/samples/net-msmq-binding.md)和[消息队列的集成绑定示例](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)。  
+ 从队列中读取消息的终结点必须使用以前在打开 ServiceHost 时指定的同一方案指定队列地址。 有关示例，请参阅[Net MSMQ 绑定](../../../../docs/framework/wcf/samples/net-msmq-binding.md)和[消息队列的集成绑定示例](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)。  
   
 ### <a name="multiple-contracts-in-a-queue"></a>队列中存在多个协定  
  队列中的消息可以实现不同的协定。 在这种情况下，下列条件中必须有一个成立才能成功读取并处理所有消息：  
@@ -83,9 +83,9 @@ ms.lasthandoff: 12/22/2017
   
 |基于 WCF URI 的队列地址|使用 Active Directory 属性|队列传输协议属性|得到的 MSMQ 格式名|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<计算机名 >/专用/abc|False（默认值）|Native（默认值）|DIRECT=OS:计算机名\private$\abc|  
-|Net.msmq://\<计算机名 >/专用/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
-|Net.msmq://\<计算机名 >/专用/abc|True|Native|PUBLIC=some-guid（队列的 GUID）|  
+|Net.msmq://\<machine-name>/private/abc|False（默认值）|Native（默认值）|DIRECT=OS:计算机名\private$\abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|True|Native|PUBLIC=some-guid（队列的 GUID）|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>从死信队列或病毒消息队列读取消息  
  若要从作为目标队列子队列的病毒消息队列中读取消息，请打开具有子队列地址的 `ServiceHost`。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 和服务寻址  
  `MsmqIntegrationBinding` 用于与传统 MSMQ 应用程序进行通信。 为了便于与现有 MSMQ 应用程序进行互操作，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 仅支持格式名寻址。 因此，使用此绑定发送的消息必须符合 URI 方案。  
   
- msmq.formatname:\<*MSMQ 格式名*>>  
+ msmq.formatname:\<*MSMQ-format-name*>>  
   
  指定由 MSMQ 中的窗体的 MSMQ 格式名是[有关消息队列](http://go.microsoft.com/fwlink/?LinkId=94837)。  
   

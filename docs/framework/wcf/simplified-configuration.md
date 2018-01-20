@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3ff1dee5a57b0c134c25631ce5c694b1b6b2c006
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="simplified-configuration"></a>简化配置
 配置 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务是一项非常复杂的任务。 该任务涉及多个不同选项，并且有时会很难确定需要哪些设置。 虽然配置文件提高了 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的灵活性，但是它们同时也带来了许多难以发现的问题。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]解决了这些问题，并向用户提供了一种减小服务配置大小和降低复杂性的方法。  
@@ -126,5 +126,5 @@ ms.lasthandoff: 12/22/2017
  [配置服务绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [配置系统提供的绑定](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [配置服务](../../../docs/framework/wcf/configuring-services.md)  
- [配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [在代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

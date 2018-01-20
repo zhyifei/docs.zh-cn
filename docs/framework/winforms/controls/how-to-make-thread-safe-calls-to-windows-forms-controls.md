@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: db68fba51cd7ef9bad9ba6f7c4ba8d05a31c4371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7cca363be57e5c5022c70c62d876f62cebc6e9c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：对 Windows 窗体控件进行线程安全调用
 如果使用多线程处理来提高 Windows 窗体应用程序的性能，则你必须确保以线程安全的方式调用控件。  
@@ -415,7 +415,7 @@ private:
  以下代码示例是一个完整的 Windows 窗体应用程序，由带有三个按钮和一个文本框的窗体组成。 第一个按钮演示了不安全的跨线程访问，第二个按钮使用 <xref:System.Windows.Forms.Control.Invoke%2A>演示了安全的访问，第三个按钮通过使用 <xref:System.ComponentModel.BackgroundWorker>演示了安全的访问。  
   
 > [!NOTE]
->  有关如何运行此示例的说明，请参阅 [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/en-us/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 该示例需引用 System.Drawing 和 System.Windows.Forms 程序集。  
+>  有关如何运行该示例的说明，请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416)。 该示例需引用 System.Drawing 和 System.Windows.Forms 程序集。  
   
 ```csharp  
 using System;  

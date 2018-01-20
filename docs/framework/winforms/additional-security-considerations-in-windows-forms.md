@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 874bd286ec7dbafb95df1726fdc902b0ab7716e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c86374066cea2926b0ac4510afbc17749182fea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows 窗体中额外的安全注意事项
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全设置可能导致应用程序在部分信任环境中运行与在本地计算机上运行有所不同。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 限制对关键本地资源的访问，如文件系统、网络和非托管 API 等。 安全设置会影响对安全系统无法验证的 Microsoft Win32 API 或其他 API 进行调用的能力。 安全性还会影响应用程序的其他方面，包括文件和数据访问以及打印。 有关在部分信任环境中访问文件和数据的详细信息，请参阅 [Windows 窗体中更加安全的文件和数据访问](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)。 有关在部分信任环境中进行打印的详细信息，请参阅 [Windows 窗体中更加安全的打印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|使用剪贴板时有某些限制。 将数据放置到剪贴板中的能力（“复制”或“剪切”命令操作）是不受限制的。 接受粘贴的固有控件（例如文本框）可接受剪贴板数据，但用户控件无法以编程方式从剪贴板读取数据。|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.NoClipboard>|不能使用剪贴板。|  
   
- 默认情况下，本地 Intranet 区域接收<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>访问和 Internet 区域接收<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>访问。 这意味着，应用程序可以将数据复制到剪贴板，但无法通过编程方式进行粘贴或从剪贴板进行读取。 这些限制可以防止不完全受信任的程序读取另一应用程序复制到剪贴板的内容。 如果应用程序需要完全的剪贴板访问权限，但你又不具有这些权限，则必须提升应用程序的权限。 有关提升权限的详细信息，请参阅[常规安全策略管理](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)。  
+ 默认情况下，本地 Intranet 区域接收<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>访问和 Internet 区域接收<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>访问。 这意味着，应用程序可以将数据复制到剪贴板，但无法通过编程方式进行粘贴或从剪贴板进行读取。 这些限制可以防止不完全受信任的程序读取另一应用程序复制到剪贴板的内容。 如果应用程序需要完全的剪贴板访问权限，但你又不具有这些权限，则必须提升应用程序的权限。 有关提升权限的详细信息，请参阅[常规安全策略管理](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)。  
   
 ## <a name="window-manipulation"></a>窗口操作  
  <xref:System.Security.Permissions.UIPermission>类还控制权限以执行窗口操作和其他与 UI 相关的操作，和关联<xref:System.Security.Permissions.UIPermissionWindow>枚举值指示的访问级别。 下表显示可能的权限级别。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
  如果你的应用程序有权调用非托管的代码，你的应用程序必须请求<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>权限，或者你必须考虑备选方法实现功能; 在许多情况下，Windows 窗体提供了 Win32 API 的托管替代方法函数。 如果不存在任何备选方法并且应用程序必须访问非托管代码，则必须提升应用程序的权限。  
   
- 调用非托管代码的权限使应用程序几乎可以执行任何操作。 因此，应该只向来自于受信任源的应用程序授予调用非托管代码的权限。 另外，根据应用程序的不同，调用非托管代码的应用程序功能块可以是可选的，或者只在完全受信任的环境中启用。 有关危险权限的详细信息，请参阅[危险权限和策略管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)。 有关提升权限的详细信息，请参阅 [NIB：通用安全策略管理](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)。  
+ 调用非托管代码的权限使应用程序几乎可以执行任何操作。 因此，应该只向来自于受信任源的应用程序授予调用非托管代码的权限。 另外，根据应用程序的不同，调用非托管代码的应用程序功能块可以是可选的，或者只在完全受信任的环境中启用。 有关危险权限的详细信息，请参阅[危险权限和策略管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)。 有关提升权限的详细信息，请参阅 [NIB：通用安全策略管理](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)。  
   
 ## <a name="see-also"></a>请参阅  
  [在 Windows 窗体中提高文件和数据访问的安全性](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  

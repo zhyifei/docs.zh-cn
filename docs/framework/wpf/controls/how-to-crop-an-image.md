@@ -20,16 +20,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 084e3dc7fad2bcb3b7ab787302f55c824ff3739d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11f5b280635d2fe7b83d8c4496606ed02bc44149
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-crop-an-image"></a>如何：裁剪图像
 此示例演示如何裁剪图像使用<xref:System.Windows.Media.Imaging.CroppedBitmap>。  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap>主要用于编码图像的裁剪的版本时出保存到文件。 若要裁剪有关显示目的，请参阅映像[创建剪辑区域](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376)主题。  
+ <xref:System.Windows.Media.Imaging.CroppedBitmap>主要用于编码图像的裁剪的版本时出保存到文件。 若要裁剪有关显示目的，请参阅映像[创建剪辑区域](http://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376)主题。  
   
 ## <a name="example"></a>示例  
  以下[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定义下面的示例中使用的资源。  
@@ -51,4 +51,4 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[imageelementexample#CroppedCSharp2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
 ## <a name="see-also"></a>请参阅  
- [创建剪辑区域](http://msdn.microsoft.com/en-us/56e4bed6-78d7-4292-b917-d72d0b3e4376)
+ [创建剪辑区域](http://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376)

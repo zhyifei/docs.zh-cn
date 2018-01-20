@@ -21,17 +21,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ece6a5d2123bb118f11940081e3c1d939815a8ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 04dbcfb0fa16ceb4d6778ef611e926894d7840e9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>如何：使用应用程序范围的资源字典
 本示例显示如何定义和使用应用程序范围的自定义资源字典。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.Application>公开共享资源的应用程序作用域存储： <xref:System.Windows.Application.Resources%2A>。 默认情况下，<xref:System.Windows.Application.Resources%2A>属性初始化时使用的实例<xref:System.Windows.ResourceDictionary>类型。 获取和设置使用的应用程序作用域属性时使用此实例<xref:System.Windows.Application.Resources%2A>。 有关详细信息，请参阅[如何： 获取和设置应用程序作用域资源](http://msdn.microsoft.com/en-us/39e0420c-c9fc-47dc-8956-fdd95b214095)。
+ <xref:System.Windows.Application>公开共享资源的应用程序作用域存储： <xref:System.Windows.Application.Resources%2A>。 默认情况下，<xref:System.Windows.Application.Resources%2A>属性初始化时使用的实例<xref:System.Windows.ResourceDictionary>类型。 获取和设置使用的应用程序作用域属性时使用此实例<xref:System.Windows.Application.Resources%2A>。 有关详细信息，请参阅[如何： 获取和设置应用程序作用域资源](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095)。
   
  如果你有使用设置的多个资源<xref:System.Windows.Application.Resources%2A>，则可以使用自定义资源字典来存储这些资源和设置<xref:System.Windows.Application.Resources%2A>与之相反。 下图显示如何声明使用 XAML 的自定义资源字典。
   

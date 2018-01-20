@@ -29,11 +29,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9a85da0d1714c263b446c88b7c18e934817aea94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在托管代码中创建原型
 本主题介绍了如何访问非托管函数，并介绍了在托管代码中批注方法定义的若干属性字段。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
@@ -107,7 +107,7 @@ using namespace System::Runtime::InteropServices;
 ### <a name="platform-invoke-examples"></a>平台调用示例  
  本节中的平台调用示例阐明了如何将 `RegistryPermission` 属性和堆栈审核修饰符一起使用。  
   
- 在以下代码示例中，将忽略 <xref:System.Security.Permissions.SecurityAction>`Assert`、`Deny` 和 `PermitOnly` 修饰符。  
+ 在下面的代码示例中， <xref:System.Security.Permissions.SecurityAction> `Assert`， `Deny`，和`PermitOnly`修饰符将被忽略。  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -235,7 +235,7 @@ interface IDemandStubsItf
  [指定入口点](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [指定字符集](../../../docs/framework/interop/specifying-a-character-set.md)  
  [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)  
- [平台调用安全注意事项](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
+ [平台调用安全注意事项](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
  [标识 DLL 中的函数](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
  [创建用于容纳 DLL 函数的类](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)

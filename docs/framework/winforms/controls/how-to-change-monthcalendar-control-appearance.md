@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b9c401532fa7a5f09462cf12084f32bca3f721cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 89aa2d57e7990bb2b0016fa4936cf1487578db01
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何： 更改 Windows 窗体 MonthCalendar 控件 &#39; s 外观
 Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义在许多方面的日历的外观。 例如，你可以设置配色方案，并选择以显示或隐藏周数和当前日期。  
@@ -53,7 +53,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义�
     ```  
   
     > [!NOTE]
-    >  启动与 Windows Vista 和具体取决于主题，设置某些属性可能不更改的外观的日历。 例如，如果 Windows 设置为使用 Aero 主题，设置<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>，或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性不起作用。 这是因为日历的更新的版本呈现在运行时派生自当前的操作系统主题的外观。 如果你想要使用这些属性和启用日历的早期版本，你可以为你的应用程序禁用视觉样式。 禁用视觉样式可能会影响的外观和应用程序中其他控件的行为。 若要禁用在 Visual Basic 中的视觉样式，打开项目设计器，并取消选中**启用 XP 视觉样式**复选框。 若要禁用在 C# 中的视觉样式，打开 Program.cs，并注释掉`Application.EnableVisualStyles();`。 关于视觉样式的详细信息，请参阅[如何： 启用 Windows XP 视觉样式](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)。  
+    >  启动与 Windows Vista 和具体取决于主题，设置某些属性可能不更改的外观的日历。 例如，如果 Windows 设置为使用 Aero 主题，设置<xref:System.Windows.Forms.MonthCalendar.BackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>， <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>，或<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>属性不起作用。 这是因为日历的更新的版本呈现在运行时派生自当前的操作系统主题的外观。 如果你想要使用这些属性和启用日历的早期版本，你可以为你的应用程序禁用视觉样式。 禁用视觉样式可能会影响的外观和应用程序中其他控件的行为。 若要禁用在 Visual Basic 中的视觉样式，打开项目设计器，并取消选中**启用 XP 视觉样式**复选框。 若要禁用在 C# 中的视觉样式，打开 Program.cs，并注释掉`Application.EnableVisualStyles();`。 关于视觉样式的详细信息，请参阅[如何： 启用 Windows XP 视觉样式](http://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f)。  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>若要在控件底部显示当前日期  
   

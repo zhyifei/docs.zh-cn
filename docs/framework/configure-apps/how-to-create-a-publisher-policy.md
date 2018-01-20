@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
 程序集的供应商可以状态应用程序应使用通过包括发布服务器策略文件与已升级的程序集的程序集的较新版本。 发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。 发布服务器策略文件编译成程序集和放入全局程序集缓存。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
     -   *PublisherPolicyAssemblyFile*参数是导致此命令的发行者策略程序集的名称。 程序集文件名称必须遵循格式：  
   
-         **策略。** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName* **.dll**  
+         **策略。** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   *KeyPairFile*参数是包含密钥对的文件的名称。 你必须签名的程序集和具有相同的密钥对的发行者策略程序集。  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  在命令提示符下键入以下命令：  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      以下命令将添加`policy.1.0.myAssembly.dll`到全局程序集缓存。  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/22/2017
  [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [配置应用程序](../../../docs/framework/configure-apps/index.md)  
- [配置.NET Framework 应用](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [配置.NET Framework 应用](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
  [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

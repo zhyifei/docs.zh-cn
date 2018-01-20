@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transport-udp"></a>传输：UDP
 “UDP 传输”示例演示如何将 UDP 单播和多播作为自定义 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 传输来实现。 此示例介绍了使用通道框架并遵循 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 最佳做法在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中创建自定义传输的推荐过程。 创建自定义传输的步骤如下：  
@@ -405,7 +405,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP 测试服务和客户端  
- 用于使用此示例传输的测试代码位于 UdpTestService 和 UdpTestClient 目录中。 服务代码包含两个测试 - 一个测试从代码中设置绑定和终结点，另一个测试通过配置完成这些操作。 这两个测试都使用两个终结点。 一个终结点使用`SampleUdpProfileBinding`与[ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`true`。 另一个终结点使用具有 `UdpTransportBindingElement` 的自定义绑定。 这相当于使用`SampleUdpProfileBinding`与[ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`false`。 这两个测试都创建一个服务，为每个绑定添加一个终结点，打开该服务，然后等待用户按 Enter 后再关闭该服务。  
+ 用于使用此示例传输的测试代码位于 UdpTestService 和 UdpTestClient 目录中。 服务代码包含两个测试 - 一个测试从代码中设置绑定和终结点，另一个测试通过配置完成这些操作。 这两个测试都使用两个终结点。 一个终结点使用`SampleUdpProfileBinding`与[ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`true`。 另一个终结点使用具有 `UdpTransportBindingElement` 的自定义绑定。 这相当于使用`SampleUdpProfileBinding`与[ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`false`。 这两个测试都创建一个服务，为每个绑定添加一个终结点，打开该服务，然后等待用户按 Enter 后再关闭该服务。  
   
  当您启动服务测试应用程序时，应看到如下输出。  
   

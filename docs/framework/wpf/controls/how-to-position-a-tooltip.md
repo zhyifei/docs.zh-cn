@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 62e86f2adfbe8f8aac000d653e955555c7def750
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc81fa247f21448a4ccbd62baccb72c0ec14bb31
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-position-a-tooltip"></a>如何：定位 ToolTip
 此示例演示如何在屏幕上指定的工具提示的位置。  
@@ -74,4 +74,4 @@ ToolTip 定位使用放置属性
  <xref:System.Windows.Controls.ToolTipService>  
  [帮助主题](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
  [ToolTip 概述](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
- [使用 ContextMenuService 和 ToolTipService](http://msdn.microsoft.com/en-us/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
+ [使用 ContextMenuService 和 ToolTipService](http://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)

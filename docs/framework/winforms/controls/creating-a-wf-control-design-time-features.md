@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>演练：创建一个利用 Visual Studio 设计时功能的 Windows 窗体控件
 自定义控件的设计时体验可增强通过创作一个关联的自定义设计器。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  有关完整代码列表，请参阅[如何： 创建 Windows 窗体控件，采用利用的设计时功能](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
--   创建一个名为"MarqueeControlTest。"的 Windows 窗体应用程序项目 有关详细信息，请参阅 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+-   创建一个名为"MarqueeControlTest。"的 Windows 窗体应用程序项目 有关详细信息，请参阅[如何：创建 Windows 应用程序项目](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 ## <a name="creating-a-control-library-project"></a>创建控件库项目  
  下一步是创建控件库项目。 你将创建一个新的自定义控件和其相应的自定义设计器。  
@@ -95,11 +95,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  将 Windows 窗体控件库项目添加到解决方案。 将项目"MarqueeControlLibrary。"  
   
-2.  使用**解决方案资源管理器**，通过删除名为了"UserControl1.cs"或"UserControl1.vb"，具体取决于所用语言的源文件来删除项目的默认控件。 有关详细信息，请参阅[NIB： 如何： 删除、 删除和排除项](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+2.  使用**解决方案资源管理器**，通过删除名为了"UserControl1.cs"或"UserControl1.vb"，具体取决于所用语言的源文件来删除项目的默认控件。 有关详细信息，请参阅[NIB： 如何： 删除、 删除和排除项](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
   
 3.  添加新<xref:System.Windows.Forms.UserControl>项以`MarqueeControlLibrary`项目。 为新的源文件提供基本名称为"MarqueeControl。"  
   
-4.  使用**解决方案资源管理器**中, 创建一个新文件夹`MarqueeControlLibrary`项目。 有关详细信息，请参阅[NIB： 如何： 添加新项目项](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 将新文件夹命名为"设计"。  
+4.  使用**解决方案资源管理器**中, 创建一个新文件夹`MarqueeControlLibrary`项目。 有关详细信息，请参阅[NIB： 如何： 添加新项目项](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 将新文件夹命名为"设计"。  
   
 5.  右键单击**设计**文件夹并添加新类。 为源文件提供基本名称为"MarqueeControlRootDesigner。"  
   

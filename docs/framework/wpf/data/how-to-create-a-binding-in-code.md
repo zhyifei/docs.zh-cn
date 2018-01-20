@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f98190b2d0f48e931129dcf95f63b2ff6b616ccc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2ad9f855f1051ad6c0afac6bc813eecf87f7d36
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-binding-in-code"></a>如何：在代码中创建绑定
 此示例演示如何创建和设置<xref:System.Windows.Data.Binding>在代码中。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- 有关完整的代码示例，请参阅[仅限代码的绑定的示例](http://msdn.microsoft.com/en-us/764aaf0b-2216-4941-9548-9c98da18d1a6)。  
+ 有关完整的代码示例，请参阅[仅限代码的绑定的示例](http://msdn.microsoft.com/library/764aaf0b-2216-4941-9548-9c98da18d1a6)。  
   
  而不是调用<xref:System.Windows.FrameworkElement.SetBinding%2A>，你可以使用<xref:System.Windows.Data.BindingOperations.SetBinding%2A>静态方法<xref:System.Windows.Data.BindingOperations>类。 下面的示例，调用<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>而不是<xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType>绑定`myText`到`myDataProperty`。  
   

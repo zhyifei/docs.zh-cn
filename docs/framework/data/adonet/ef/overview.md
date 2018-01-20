@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d8d47b578d60d2c53aaa4b1f47e86430d3495ed1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]是 ADO.NET 中的一套支持开发面向数据的软件应用程序的技术。 面向数据的应用程序的架构师和开发人员曾为实现两个迥然不同的目标费尽心机： 他们必须为要解决的业务问题的实体、关系和逻辑构建模型，还必须处理用于存储和检索数据的数据引擎。 数据可能跨多个各有不同协议的存储系统；甚至使用单个存储系统的应用程序也必须在存储系统的需求与编写高效且容易维护的应用程序代码之间取得平衡。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/17/2018
  通过以下主题可以了解有关 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的更多信息：  
   
  [入门](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- 提供有关如何启动信息和运行使用快速[快速入门](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675)，其中说明了如何创建一个简单[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序。  
+ 提供有关如何启动信息和运行使用快速[快速入门](http://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675)，其中说明了如何创建一个简单[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序。  
   
  [实体框架术语](../../../../../docs/framework/data/adonet/ef/terminology.md)  
  定义由实体数据模型和[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]引入以及在[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文档中使用的许多术语。  

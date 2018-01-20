@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d2a444440af9dfaa2b084a55db9348fa48df7b54
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
 本主题介绍对高可用性、灾难恢复（AlwaysOn 可用性组）的 SqlClient支持（[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的新功能）。  AlwaysOn 可用性组功能已添加到 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 中。 有关 AlwaysOn 可用性组的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书。  
@@ -41,6 +41,9 @@ ms.lasthandoff: 01/17/2018
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+
+> [!NOTE]
+>  设置`MultiSubnetFailover`到`true`无需与[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) 或更高版本。
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 连接  
  连接到 `MultiSubnetFailover=True` 2012 可用性组侦听器或 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 故障转移群集实例时， 始终指定 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。 对于单子网和多子网 AlwaysOn 拓扑，`MultiSubnetFailover` 可使 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 中的所有可用性组或故障转移群集实例故障转移速度变快，大大缩短故障转移时间。 在多子网故障转移期间，客户端将尝试并行连接。 在子网故障转移期间，将积极重试 TCP 连接。  

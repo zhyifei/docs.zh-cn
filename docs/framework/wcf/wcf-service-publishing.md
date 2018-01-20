@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 服务发布
 从基于 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务主机和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端提供的早期开发环境进行处理，到实际将应用程序部署到生产环境中以进行测试，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布都对您有所帮助。 在提交最终部署计划之前，可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务发布来验证您的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务是否正常运行以及是否可以发布。 也可以选择将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库部署到多个不同的目标位置，以进行测试。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 -   联合服务库。  
   
- 你可以通过选择找到这些服务模板**文件** -> **新项目** -> **Visual Basic**或**Visual C#**  ->  **WCF**。 在此位置 （包括 WCF 工作流服务应用程序和 WCF 服务应用程序） 的其他 WCF 模板可以发布使用[一键式发布为 web 应用程序](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx)。  
+ 你可以通过选择找到这些服务模板**文件** -> **新项目** -> **Visual Basic**或**Visual C#**  ->  **WCF**。 在此位置 （包括 WCF 工作流服务应用程序和 WCF 服务应用程序） 的其他 WCF 模板可以发布使用[一键式发布为 web 应用程序](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx)。  
   
  可以将服务发布到以下目标位置。  
   

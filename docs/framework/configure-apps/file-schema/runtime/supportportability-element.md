@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9776e900015dad8bce8c16991b8ce0aeb6067812
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 52ef9cce9ee28c6329f688bb9ac751f0f9016657
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt;元素
 通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。  
@@ -52,14 +52,14 @@ ms.lasthandoff: 12/22/2017
 |值|描述|  
 |-----------|-----------------|  
 |true|启用对指定的.NET Framework 程序集的实现之间的可移植性支持。 这是默认设置。|  
-|false|禁用指定的.NET Framework 程序集的实现之间的可移植性的支持。 这使应用程序具有对指定的程序集的多个实现的引用。|  
+|False|禁用指定的.NET Framework 程序集的实现之间的可移植性的支持。 这使应用程序具有对指定的程序集的多个实现的引用。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
@@ -89,4 +89,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>请参阅  
  [/appconfig （C# 编译器选项）](http://msdn.microsoft.com/library/ee523958.aspx)  
- [.NET framework 程序集统一概述](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+ [.NET framework 程序集统一概述](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

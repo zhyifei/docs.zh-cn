@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="pipeline-development"></a>管线开发
 外接程序管线是主机应用程序和其外接程序必须使用才能相互之间进行通信的管道段的路径。  
@@ -41,14 +41,14 @@ ms.lasthandoff: 12/22/2017
   
  如果将主机和外接程序加载到单独的应用程序域中，则必须分隔主机应用程序从范围的外接程序的作用域的隔离边界。 协定是在主机和外接程序应用程序域中加载的唯一程序集。 主机和外接程序每个仅引用其视图协定方法。 因此，它们被隔开的从协定的抽象层。  
   
- 若要开发管道段，必须创建将包含它们的目录结构。 有关开发要求和作用域准则的详细信息，请参阅[管线开发要求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+ 若要开发管道段，必须创建将包含它们的目录结构。 有关开发要求和作用域准则的详细信息，请参阅[管线开发要求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
  下图显示构成的管道段的类型。 在图中所示的类型的名称是任意的但主机和主机除外的所有类型都视图之外的外接程序中需要特性使构造信息存储的方法可以发现它们。  
   
  ![添加 &#45; 在模型中具有必需特性的类型。] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 类型与外接程序管线  
   
- 下表描述了有关激活外接程序中的管道段。 有关这些段的详细信息，请参阅[协定、 视图和适配器](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)。  
+ 下表描述了有关激活外接程序中的管道段。 有关这些段的详细信息，请参阅[协定、 视图和适配器](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)。  
   
 |管道段|描述|  
 |----------------------|-----------------|  
@@ -89,14 +89,14 @@ ms.lasthandoff: 12/22/2017
   
      描述一个计算器外接程序，执行加法、 减法、 乘法和除法计算的主机。  
   
--   [演练： 启用主机更改为向后的兼容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [演练： 启用主机更改为向后的兼容性](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      描述一个计算器外接程序使用增强的计算功能，以及如何维护与第一个计算器外接程序的兼容性。  
   
--   [主机和外接程序之间的演练： 传递集合](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [主机和外接程序之间的演练： 传递集合](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      描述如何通过使用书店方案管道传递数据集合。  
   
 ## <a name="see-also"></a>请参阅  
- [外接程序管线方案](http://msdn.microsoft.com/en-us/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [外接程序管线方案](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [外接程序和扩展性](../../../docs/framework/add-ins/index.md)

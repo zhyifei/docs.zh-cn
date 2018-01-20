@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1946f2b4a2cef8946eb05f995150fafada954d09
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 29f1f4f22a48aed1020b8e7ea42fe5ffd5b9f566
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="composing-nested-entity-sql-queries"></a>撰写嵌套的 Entity SQL 查询
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是一种功能丰富的语言。 构建基块[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是一个表达式。 与传统的 SQL 不同[!INCLUDE[esql](../../../../../../includes/esql-md.md)]并不仅限于表格结果集：[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持编写可以具有文本、 参数或嵌套的表达式的复杂表达式。 表达式中的值可以参数化，或由其他表达式构成。  
@@ -57,7 +57,7 @@ UNION ALL
 FROM … );  
 ```  
   
- 下面的示例演示如何正确嵌套中的表达式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to： 排序联合的两个查询](http://msdn.microsoft.com/en-us/853c583a-eaba-4400-830d-be974e735313)。  
+ 下面的示例演示如何正确嵌套中的表达式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to： 排序联合的两个查询](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)。  
   
 ## <a name="nested-queries-in-projection"></a>投影中的嵌套查询  
  投影子句中的嵌套查询可在服务器上转换为笛卡尔积查询。 在某些后端服务器（包括 SLQ Server）中，这会导致 TempDB 表变得过大，对服务器性能产生负面影响。  

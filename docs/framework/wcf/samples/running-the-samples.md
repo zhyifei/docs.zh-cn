@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>运行 Windows Communication Foundation 示例
 可以用单机配置或跨计算机配置来运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例。 示例在提供时就可用于在单机上运行。 在跨计算机配置中，必须修改示例的配置文件设置。 下面的过程说明如何用同一计算机配置和跨计算机配置来运行示例。 请注意，Internet 信息服务 (IIS) 中承载的服务和自承载示例在步骤上有所不同。 大多数示例承载于 IIS 中，请参见示例自述文件信息以确定示例的承载方式。  
@@ -30,13 +30,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1.  如果服务由 IIS 承载，请确保您可以通过输入以下地址使用浏览器访问服务：http://localhost/servicemodelsamples/service.svc。 在响应中应显示确认页。 如果未显示确认页，请参阅[疑难解答提示](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+1.  如果服务由 IIS 承载，请确保您可以通过输入以下地址使用浏览器访问服务：http://localhost/servicemodelsamples/service.svc。 在响应中应显示确认页。 如果未显示确认页，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 2.  如果服务是自承载的，请从 \service\bin（在语言特定文件夹内）中运行 Service.exe。 服务活动显示在服务控制台窗口上。  
   
 3.  从 \client\bin 运行 Client.exe\\，在语言特定文件夹。 客户端活动将显示在客户端控制台窗口上。  
   
-4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务不能够进行通信，请参阅[疑难解答提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 ### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
@@ -92,5 +92,5 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>请参阅  
  [生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [在工作组中和跨计算机运行示例](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
- [故障排除提示](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)
+ [在工作组中和跨计算机运行示例](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
+ [故障排除提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

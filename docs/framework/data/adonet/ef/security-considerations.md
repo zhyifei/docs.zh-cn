@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1c68fc09ca1ca50ec544e79ec6fb8bf00a1b09ee
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 除此之外，您还应遵循有关创建安全的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序的建议。 有关详细信息，请参阅[安全概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/17/2018
   
      SQL 注入式攻击在 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中的实施方法是向查询谓词和参数名称中使用的值提供恶意输入。 若要避免 SQL 注入风险，切勿组合用户输入与 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令文本。  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询可在任何接受文本的位置接受参数。 应使用参数化查询，而不是将来自外部代理的文本直接注入查询。 你还应考虑使用查询生成器方法安全地构造[Entity SQL](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0)。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查询可在任何接受文本的位置接受参数。 应使用参数化查询，而不是将来自外部代理的文本直接注入查询。 你还应考虑使用查询生成器方法安全地构造[Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0)。  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 注入式攻击：  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 01/17/2018
  生成和处理实体类型时应考虑下列安全注意事项。  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>不要在应用程序域之间共享 ObjectContext。  
- 在多个应用程序域之间共享 <xref:System.Data.Objects.ObjectContext> 可能会公开连接字符串中的信息。 正确的做法是将序列化的对象或对象图传递给其他应用程序域，并将这些对象附加到该应用程序域中的 <xref:System.Data.Objects.ObjectContext>。 有关详细信息，请参阅[序列化对象](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
+ 在多个应用程序域之间共享 <xref:System.Data.Objects.ObjectContext> 可能会公开连接字符串中的信息。 正确的做法是将序列化的对象或对象图传递给其他应用程序域，并将这些对象附加到该应用程序域中的 <xref:System.Data.Objects.ObjectContext>。 有关详细信息，请参阅[序列化对象](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99)。  
   
 #### <a name="prevent-type-safety-violations"></a>避免类型安全冲突。  
  如果类型安全发生冲突，则[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]无法保证对象中数据的完整性。 如果使用完全信任代码访问安全性运行不可信的应用程序，可能导致类型安全冲突。  

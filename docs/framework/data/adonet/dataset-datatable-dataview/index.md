@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fb8cf2c9f763ea32bb7c7907111fea80e542a7f7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5fe09601be7173fd1a9228dc090732ded7afdd90
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="datasets-datatables-and-dataviews"></a>数据集、数据表和数据视图
 ADO.NET <xref:System.Data.DataSet> 是数据的一种内存驻留表示形式，无论它包含的数据来自什么数据源，都会提供一致的关系编程模型。 <xref:System.Data.DataSet> 表示整个数据集，其中包含对数据进行包含、排序和约束的表以及表间的关系。  
@@ -31,7 +31,7 @@ ADO.NET <xref:System.Data.DataSet> 是数据的一种内存驻留表示形式，
   
 -   使用 XML 加载和保持 <xref:System.Data.DataSet> 内容。 有关详细信息，请参阅[在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)。  
   
- 强类型化的 <xref:System.Data.DataSet> 也可以使用 XML Web services 来进行传输。 <xref:System.Data.DataSet> 的设计使其成为使用 XML Web services 传输数据的理想选择。 有关 XML Web service 的概述，请参阅 [XML Web service 概述](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)。 有关通过 XML Web service 使用 <xref:System.Data.DataSet> 的示例，请参阅[通过 XML Web service 使用数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)。  
+ 强类型化的 <xref:System.Data.DataSet> 也可以使用 XML Web services 来进行传输。 <xref:System.Data.DataSet> 的设计使其成为使用 XML Web services 传输数据的理想选择。 有关 XML Web service 的概述，请参阅 [XML Web service 概述](http://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)。 有关通过 XML Web service 使用 <xref:System.Data.DataSet> 的示例，请参阅[通过 XML Web service 使用数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [创建数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset.md)  

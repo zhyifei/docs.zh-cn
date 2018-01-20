@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 969ab4f3c63571488c66c8a505df3969fcd788e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-automationid-property"></a>使用 AutomationID 属性
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>使用持久的路径返回到之前标识的 AutomationElement  
   
--   客户端应用程序（从简单的测试脚本到强大的录制和播放实用程序）可能需要访问当前未实例化并因此不存在于 UI 自动化树中的元素（如打开文件对话框或菜单项）。 只能使用 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 属性（例如 AutomationID）控件模式和事件侦听器，通过重现（或“播放”）特定的一系列 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 操作来实例化这些元素。 有关使用 [TLA#tla_uiautomation](http://msdn.microsoft.com/en-us/028467fd-2980-4691-9522-0131dcef23a0) 基于用户与 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 的交互生成测试脚本的示例，请参阅 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]。  
+-   客户端应用程序（从简单的测试脚本到强大的录制和播放实用程序）可能需要访问当前未实例化并因此不存在于 UI 自动化树中的元素（如打开文件对话框或菜单项）。 只能使用 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 属性（例如 AutomationID）控件模式和事件侦听器，通过重现（或“播放”）特定的一系列 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 操作来实例化这些元素。 请参阅[测试脚本生成器示例](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0)有关的示例，使用[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]生成基于与用户交互的测试脚本[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]。  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

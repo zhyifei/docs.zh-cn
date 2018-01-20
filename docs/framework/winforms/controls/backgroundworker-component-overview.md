@@ -28,11 +28,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a2e49c9c3a8f2b133337ee3c153841a7daeff178
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96fc5e1929589321872ba30d8c3821b4fd47ca8b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 组件概述
 许多经常执行的操作可能需要很长的执行时间。 例如：  
@@ -71,5 +71,5 @@ ms.lasthandoff: 12/22/2017
  有关详细信息使用<xref:System.ComponentModel.BackgroundWorker>类，请参阅[如何： 在后台运行操作](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [不在生成中： Visual Basic 中的多线程处理](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [不在生成中： Visual Basic 中的多线程处理](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [如何：实现使用后台操作的窗体](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)

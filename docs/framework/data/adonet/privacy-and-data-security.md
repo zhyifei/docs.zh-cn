@@ -14,17 +14,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5c645b493a1ffb99f4d60f8011bc05f275b5d10f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 002d4411e4fee10044ea5dc1d04d7a29cdcd6584
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="privacy-and-data-security"></a>隐私和数据安全性
 保护和管理 ADO.NET 应用程序中的敏感信息依赖于用于创建这些信息的基础产品和技术。 ADO.NET 不直接提供用于保护或加密数据的服务。  
   
 ## <a name="cryptography-and-hash-codes"></a>加密和哈希代码  
- 可从 ADO.NET 应用程序使用 .NET Framework <xref:System.Security.Cryptography> 命名空间中的类，以防止未经授权的第三方读取或修改数据。 某些类是非托管 Microsoft CryptoAPI 的包装，而其他一些类则是托管实现。 [加密服务](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781)主题提供的.NET Framework 中的加密技术概述，描述如何实现 cryptograph，以及如何执行特定的加密任务。  
+ 可从 ADO.NET 应用程序使用 .NET Framework <xref:System.Security.Cryptography> 命名空间中的类，以防止未经授权的第三方读取或修改数据。 某些类是非托管 Microsoft CryptoAPI 的包装，而其他一些类则是托管实现。 [加密服务](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781)主题提供的.NET Framework 中的加密技术概述，描述如何实现 cryptograph，以及如何执行特定的加密任务。  
   
  与加密（允许对数据进行加密然后解密）不同，散列数据是一个单向过程。 如果要通过检查数据是否已更改来避免数据被篡改，哈希数据非常有用：如果输入字符串相同，哈希算法总是生成相同的短输出值，很容易进行比较。 [使用哈希代码确保数据完整性](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md)介绍如何生成和验证哈希值。  
   

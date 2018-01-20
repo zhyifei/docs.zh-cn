@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc0f887743e9e129319ca9241203905670334cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项列表。 你可以使用列表视图创建类似 Windows 资源管理器右窗格的用户界面。 在控件有四种视图模式： 视图、 SmallIcon、 列表和详细信息。  
@@ -55,7 +55,7 @@ Windows 窗体 <xref:System.Windows.Forms.ListView> 控件显示带图标的项�
   
  <xref:System.Windows.Forms.ListView.Activation%2A>属性确定用户要激活列表中的某个项而必须执行的操作类型： 的选项为<xref:System.Windows.Forms.ItemActivation.Standard>， <xref:System.Windows.Forms.ItemActivation.OneClick>，和<xref:System.Windows.Forms.ItemActivation.TwoClick>。 <xref:System.Windows.Forms.ItemActivation.OneClick>激活要求通过单击来激活选项。 <xref:System.Windows.Forms.ItemActivation.TwoClick>激活时，要求用户通过双击来激活项;单击一次更改的项文本的颜色。 <xref:System.Windows.Forms.ItemActivation.Standard>激活要求用户双击以激活某个项但该项不会更改外观。  
   
- <xref:System.Windows.Forms.ListView>控件还支持视觉样式和提供的其他功能在 Windows XP 平台上，包括分组、 磁贴视图，以及插入标记。 有关详细信息，请参阅[Windows XP 功能和 Windows 窗体控件](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
+ <xref:System.Windows.Forms.ListView>控件还支持视觉样式和提供的其他功能在 Windows XP 平台上，包括分组、 磁贴视图，以及插入标记。 有关详细信息，请参阅[Windows XP 功能和 Windows 窗体控件](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ListView>  

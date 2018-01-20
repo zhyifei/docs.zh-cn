@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>演练： 我第一个 WPF 桌面应用程序
 本演练中提供的开发的简介[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]包括元素所共有的大多数的应用程序[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序：[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]标记、 代码隐藏、 应用程序定义、 控件、 布局、数据绑定和样式。 
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="creating-the-application-project"></a>创建应用程序项目  
  在本部分中，将创建包含应用程序定义、两个页面以及图像的应用程序基础结构。 
   
-1. 在 Visual Basic 或 Visual C# 中创建名为 `ExpenseIt` 的新 WPF 应用程序项目。 有关详细信息，请参阅[如何：创建新的 WPF 应用程序项目](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。 
+1. 在 Visual Basic 或 Visual C# 中创建名为 `ExpenseIt` 的新 WPF 应用程序项目。 有关详细信息，请参阅[如何：创建新的 WPF 应用程序项目](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。 
   
     > [!NOTE]
     >  本演练使用<xref:System.Windows.Controls.DataGrid>是在.NET Framework 4 中可用的控件。 为确保你的项目面向.NET Framework 4 或更高版本。 有关详细信息，请参阅[如何： 面向.NET Framework 版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。 
@@ -115,7 +115,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="adding-files-to-the-application"></a>将文件添加到应用程序  
  在本部分中，将向应用程序添加两个页面和一个图像。 
   
-1. 将新的页 (WPF) 添加到名为的项目`ExpenseItHome.xaml`。 有关详细信息，请参阅[如何： 将新项添加到 WPF 项目](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad)。 
+1. 将新的页 (WPF) 添加到名为的项目`ExpenseItHome.xaml`。 有关详细信息，请参阅[如何： 将新项添加到 WPF 项目](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad)。 
   
      此页是应用程序启动时显示的第一个页面。 它将显示一个人员列表，用户可从中选择某个人员以显示其费用报表。 
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 12/22/2017
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. 将名为 watermark.png 的图像添加至项目。 可以创建自己的图像，也可以从示例代码中复制文件。 有关详细信息，请参阅[NIB： 如何： 将现有项目添加到项目](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。 
+10. 将名为 watermark.png 的图像添加至项目。 可以创建自己的图像，也可以从示例代码中复制文件。 有关详细信息，请参阅[NIB： 如何： 将现有项目添加到项目](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。 
 
 ## <a name="building-and-running-the-application"></a>生成并运行应用程序  
  在本部分中，将生成和运行应用程序。 
@@ -280,7 +280,7 @@ ms.lasthandoff: 12/22/2017
   
 1. 打开 ExpenseItHome.xaml。 
   
-2. 添加<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序<xref:System.Windows.Controls.Button>元素。 有关详细信息，请参阅[如何： 创建一个简单的事件处理程序](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480)。 
+2. 添加<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序<xref:System.Windows.Controls.Button>元素。 有关详细信息，请参阅[如何： 创建一个简单的事件处理程序](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   

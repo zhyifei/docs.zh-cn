@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d86cf65dfb3637dbacfeff0cf2b5f48b12c49212
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unmanaged-api-reference"></a>非托管 API 参考
 本节包括有关可由与托管代码相关的应用程序（例如运行时主机、编译器、反汇编程序、模糊处理程序、调试器和探查器）使用的非托管 API 的信息。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  [常量](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  描述在 CorSym.idl 中定义的常量。  
   
- [自定义接口特性](http://msdn.microsoft.com/en-us/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [自定义接口特性](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  描述组件对象模型 (COM) 的自定义接口特性。  
   
  [调试](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -73,4 +73,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-sections"></a>相关章节  
  [开发指南](../../../docs/framework/development-guide.md)  
   
- [.NET Framework 高级读物](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [.NET Framework 高级读物](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

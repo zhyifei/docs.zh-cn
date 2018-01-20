@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c8984016f1f8ad77ab41aa49f8bcc2583406a465
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3ed2fa4439edd157fa7f009b63f20b21e2bb6fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-contracts"></a>服务协定
 本节包含演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的服务协定的示例。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  [流](../../../../docs/framework/wcf/samples/stream.md)  
  演示流传输模式通信的用法。  
   
- [异步](http://msdn.microsoft.com/en-us/833db946-f511-4f64-a26f-2759a11217c7)  
+ [异步](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)  
  演示客户端如何以异步方式访问服务操作，以及服务如何以异步方式实现其操作。  
   
  [XmlSerializer 错误](../../../../docs/framework/wcf/samples/xmlserializer-faults.md)  

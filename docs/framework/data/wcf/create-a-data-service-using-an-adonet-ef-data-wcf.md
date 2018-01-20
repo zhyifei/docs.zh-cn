@@ -17,14 +17,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 将实体数据作为数据服务公开。 如果数据源为关系数据库，则此实体数据是由 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供的。 本主题介绍如何在基于现有数据库的 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Web 应用程序中创建基于[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]的数据模型，以及如何使用此数据模型创建新的数据服务。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 将实体数据作为数据服务公开。 此实体数据由[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]时数据源是一个关系数据库。 本主题介绍如何在基于现有数据库的 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Web 应用程序中创建基于[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]的数据模型，以及如何使用此数据模型创建新的数据服务。  
   
  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]还提供了一个可以在 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 项目外部生成[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]模型的命令行工具。 有关详细信息，请参阅[如何： 使用 EdmGen.exe 生成模型和映射文件](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 9. 单击**完成**以完成向导。  
   
-     这将基于特定数据库创建默认数据模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]允许对数据模型进行自定义。 有关详细信息，请参阅[任务](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb)。  
+     这将基于特定数据库创建默认数据模型。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]允许对数据模型进行自定义。 有关详细信息，请参阅[任务](http://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb)。  
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>使用新数据模型创建数据服务  
   

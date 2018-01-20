@@ -19,11 +19,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 0b08bb2b4d9cdb5e90582fbce280a03f6fc04d13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 和嵌入式对象概述
 > [!NOTE]
@@ -157,7 +157,7 @@ ms.lasthandoff: 12/22/2017
 |调用方法|结果|  
 |-------------------|------------|  
 |具有参数 (1,1) 的<xref:System.Windows.Automation.GridPattern.GetItem%2A> 。|返回表示表格单元格内容的 <xref:System.Windows.Automation.AutomationElement>。在本例中，该元素是文本控件。|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>，其中 <xref:System.Windows.Automation.AutomationElement> 是由上一个 `GetItem` 方法返回的对象。|返回“Y”。|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是由上一个 `GetItem` 方法返回的对象。|返回“Y”。|  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Automation.TextPattern>  
@@ -167,4 +167,4 @@ ms.lasthandoff: 12/22/2017
  [使用 UI 自动化访问嵌入式对象](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [使用 UI 自动化公开表的内容](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [使用 UI 自动化遍历文本](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern 搜索和选择示例](http://msdn.microsoft.com/en-us/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [TextPattern 搜索和选择示例](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

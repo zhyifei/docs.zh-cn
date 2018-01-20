@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 70119b3067342dc9bc93e0fb8a43a3242f2dacc8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt;元素 （Web 设置）
 指定 ASP.NET 用于 ASP.NET 应用程序在中集成模式下运行时管理进程范围的行为的配置设置[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更高版本。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
  有关`maxConcurrentRequestsPerCPU`设置，"5000"的默认设置[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]有效地将关闭请求限制，它受 ASP.NET，除非您实际上有 5000 或更多的请求，每个 CPU。 默认设置改为依赖于 CLR 线程池来自动管理每个 CPU 的并发。 在构成广泛使用的异步请求处理负载，或已在网络 I/O 上受阻的多长时间运行请求的应用程序将受益于中的增大的默认限制[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。 设置`maxConcurrentRequestsPerCPU`到用于处理 ASP.NET 请求零将关闭的托管线程使用。 应用程序运行时在 IIS 应用程序池中，请求将停留在 IIS I/O 线程和 IIS 线程设置因此限制并发。  
   
- `requestQueueLimit`设置相同的工作方式为`requestQueueLimit`属性[processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)元素，它在 ASP.NET 应用程序的 Web.config 文件中设置。 但是， `requestQueueLimit` aspnet.config 文件中的设置将重写`requestQueueLimit`在 Web.config 文件中设置。 换而言之，如果未设置这两个属性 （默认情况下，此为 true）， `requestQueueLimit` aspnet.config 文件中的设置将优先。  
+ `requestQueueLimit`设置相同的工作方式为`requestQueueLimit`属性[processModel](http://msdn.microsoft.com/library/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d)元素，它在 ASP.NET 应用程序的 Web.config 文件中设置。 但是， `requestQueueLimit` aspnet.config 文件中的设置将重写`requestQueueLimit`在 Web.config 文件中设置。 换而言之，如果未设置这两个属性 （默认情况下，此为 true）， `requestQueueLimit` aspnet.config 文件中的设置将优先。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何在以下情况下的 aspnet.config 文件中配置 ASP.NET 进程范围的行为：  

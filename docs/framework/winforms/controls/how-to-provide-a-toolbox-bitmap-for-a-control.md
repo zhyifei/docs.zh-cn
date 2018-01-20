@@ -21,14 +21,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 947ac4f8783b388135cf9e8147bb48eda93cfa08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 446e0f830e916e7f4118a7374c66f238a60fda02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>如何：为控件提供工具箱位图
-如果你想要为您的控件的特殊图标将出现在**工具箱**，你可以通过使用指定的特定映像<xref:System.Drawing.ToolboxBitmapAttribute>。 此类是一个特性，是一种可以附加到其他类上的特殊类。 有关特性的详细信息，对于 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]，请参阅[不在生成中：Visual Basic 中的特性概述](http://msdn.microsoft.com/en-us/0d0cff64-892d-4f57-83bd-bef388553d4f)，对于 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]，请参阅[特性](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)。  
+如果你想要为您的控件的特殊图标将出现在**工具箱**，你可以通过使用指定的特定映像<xref:System.Drawing.ToolboxBitmapAttribute>。 此类是一个特性，是一种可以附加到其他类上的特殊类。 有关特性的详细信息，对于 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]，请参阅[不在生成中：Visual Basic 中的特性概述](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f)，对于 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]，请参阅[特性](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)。  
   
  使用<xref:System.Drawing.ToolboxBitmapAttribute>，你可以指定一个字符串，指示 16 x 16 像素位图的路径和文件名称。 添加到“工具箱”后，此位图显示在对应的控件旁边。 你还可以指定<xref:System.Type>，在这种情况下加载与该类型相关联的位图。 如果同时指定了<xref:System.Type>和一个字符串，该控件搜索图像资源中包含由指定的类型的程序集的字符串参数指定的名称与<xref:System.Type>参数。  
   

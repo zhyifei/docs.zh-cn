@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-security"></a>Windows 窗体安全
 Windows 窗体功能是基于代码的 （安全级别设置为代码，无论运行代码的用户） 的安全模型。 这是除了可能已在您的计算机系统中的任何安全架构。 其中可能包括浏览器 （如基于区域的安全在 Internet Explorer 中可用） 或操作系统 （例如 Windows NT 的凭据基于安全性） 中。  
@@ -44,10 +44,10 @@ Windows 窗体功能是基于代码的 （安全级别设置为代码，无论�
  描述执行窗口操作、 使用剪贴板，以及调用到非托管代码在不完全受信任的环境中。  
   
 ## <a name="related-sections"></a>相关章节  
- [NIB： 默认安全策略](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [NIB： 默认安全策略](http://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
  列出授予完全信任、 本地 Intranet 和 Internet 权限集的默认权限。  
   
- [NIB： 常规安全策略管理](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [NIB： 常规安全策略管理](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
  提供有关管理.NET Framework 安全策略和提升权限的信息。  
   
  [危险权限和策略管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -56,7 +56,7 @@ Windows 窗体功能是基于代码的 （安全级别设置为代码，无论�
  [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)  
  这些主题介绍安全地编写针对.NET Framework 的代码的最佳做法的链接。  
   
- [NIB： 请求权限](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [NIB： 请求权限](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
  讨论特性，以便知道你的代码需要运行哪些权限的运行时的使用。  
   
  [安全性的基础概念](../../../docs/standard/security/key-security-concepts.md)  
@@ -65,8 +65,8 @@ Windows 窗体功能是基于代码的 （安全级别设置为代码，无论�
  [代码访问安全性基础知识](../../../docs/framework/misc/code-access-security-basics.md)  
  讨论使用运行时的安全策略的.NET Framework 的基础知识。  
   
- [NIB： 确定何时修改安全策略](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ [NIB： 确定何时修改安全策略](http://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
  说明如何确定你的应用程序需要以偏离默认安全策略时。  
   
- [NIB： 部署安全策略](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [NIB： 部署安全策略](http://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
  讨论将安全策略更改部署的最佳方式。

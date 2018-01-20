@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 13b254867200897acad2868e396d152a5f9efcbd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0e6ab8826f2298a8660a85d739fbe3456374b476
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-prioritybinding"></a>如何：实现 PriorityBinding
 <xref:System.Windows.Data.PriorityBinding>在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的工作原理是指定的绑定的列表。 绑定列表按优先级从高到最低优先级排序。 如果高优先级的绑定返回一个值成功处理时则永远不会需要处理其他列表中的绑定。 它可能是最高的优先级绑定需要很长的时间要进行求值的用例时，将使用成功返回一个值的下一步最高优先级，直到较高优先级的绑定成功返回一个值。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  Get 访问器`SlowestDP`等待 5 秒，然后返回的值`_slowestDP`数据成员。  
   
 > [!NOTE]
->  此示例是仅用于演示目的。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]准则建议您定义个数量级慢于字段集的属性。 有关详细信息，请参阅[NIB： 选择之间属性和方法](http://msdn.microsoft.com/en-us/55825e8f-7e2e-448a-9505-7217cc91b1af)。  
+>  此示例是仅用于演示目的。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]准则建议您定义个数量级慢于字段集的属性。 有关详细信息，请参阅[NIB： 选择之间属性和方法](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)。  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

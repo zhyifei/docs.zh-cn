@@ -22,17 +22,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 2ef50301a5188193cc13cd0e657f53593ef0d93e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c08e324066b872abb8df8b8b780ab3e4644a7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcompilergt-element"></a>&lt;编译器&gt;元素
 指定语言提供程序的编译器配置属性。  
   
  \<配置元素 >  
-\<system.codedom 元素 >  
+\<system.codedom Element>  
 \<编译器元素 >  
 \<编译器 > 元素  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/22/2017
 |元素|描述|  
 |-------------|-----------------|  
 |[\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
-|[\<system.codedom > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用语言提供程序的编译器配置设置。|  
 |[\<编译器 > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|编译器配置元素，则容器包含零个或多`<compiler>`元素。|  
   
 ## <a name="remarks"></a>备注  
@@ -112,4 +112,4 @@ ms.lasthandoff: 12/22/2017
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<编译器 > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [编译器进行编译 （ASP.NET 设置架构） 使用的编译器元素](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [编译器进行编译 （ASP.NET 设置架构） 使用的编译器元素](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

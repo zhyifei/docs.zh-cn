@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows 窗体支持的数据源
 传统上，数据绑定具有内使用应用程序以利用在数据库中存储的数据。 使用 Windows 窗体数据绑定，你可以在访问数据时从数据库以及其他结构，如数组和集合中的数据处理程序，但前提是已满足某些最低要求。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/22/2017
  Windows 窗体支持数据绑定控件属性绑定到公共属性的对象使用的实例上<xref:System.Windows.Forms.Binding>类型。 Windows 窗体还支持绑定基于列表的控件，如<xref:System.Windows.Forms.ListControl>到对象实例时<xref:System.Windows.Forms.BindingSource>使用。  
   
  数组或集合  
- 若要充当数据源，列表必须实现<xref:System.Collections.IList>接口; 一个示例将数组的实例<xref:System.Array>类。 在阵列上的详细信息，请参阅[如何： 创建数组的对象 (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3)。  
+ 若要充当数据源，列表必须实现<xref:System.Collections.IList>接口; 一个示例将数组的实例<xref:System.Array>类。 在阵列上的详细信息，请参阅[如何： 创建数组的对象 (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)。  
   
  一般情况下，应使用<xref:System.ComponentModel.BindingList%601>当你创建的数据绑定的对象的列表。 <xref:System.ComponentModel.BindingList%601>是一个泛型版本<xref:System.ComponentModel.IBindingList>接口。 <xref:System.ComponentModel.IBindingList>接口扩展<xref:System.Collections.IList>通过添加属性、 方法和事件所需双向数据绑定接口。  
   

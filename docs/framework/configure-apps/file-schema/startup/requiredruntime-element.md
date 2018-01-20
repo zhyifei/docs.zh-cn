@@ -21,18 +21,18 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 12be2350cb123407b2f71d1f5f07e836ccddb9c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e864eec2ddf51d5cc88110654f6c23f146938d5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt;元素
 指定应用程序仅支持 1.0 版本的公共语言运行时。 此元素已弃用，并应不再使用。 [ `supportedRuntime` ](supportedruntime-element.md)元素应改为使用。
   
  \<configuration>  
-\<启动 >  
-\<requiredRuntime >  
+\<startup>  
+\<requiredRuntime>  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ safemode="true|false"/>
   
 ## <a name="safemode-attribute"></a>安全模式属性  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`false`|在注册表中查找运行时启动代码。 这是默认值。|  
 |`true`|运行时启动代码不会在注册表中查找。|  
@@ -64,7 +64,7 @@ safemode="true|false"/>
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`startup`|包含`<requiredRuntime>`元素。|  
@@ -94,4 +94,4 @@ safemode="true|false"/>
 ## <a name="see-also"></a>请参阅  
  [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> 指定要使用的运行时版本](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> 指定要使用的运行时版本](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

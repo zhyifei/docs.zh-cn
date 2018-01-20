@@ -18,14 +18,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 977bc032d62856673994e07a71b77d3b668ce7af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 494869985f14dc9562b8d98a7d68cd9639cca97b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communication Foundation 绑定
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将应用程序软件的编写方式与该软件和其他软件的通信方式分离开来。 使用绑定指定客户端与服务彼此通信所需的传输、编码和协议详细信息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用绑定来生成终结点的基础网络表示，因此，进行通信的各方必须对大多数绑定详细信息达成一致。 完成此任务的最简单方法是让服务的客户端使用该服务的终结点所使用的相同绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何执行此操作，请参阅[到配置 Windows Communication Foundation 服务和客户端使用的绑定](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 将应用程序软件的编写方式与该软件和其他软件的通信方式分离开来。 使用绑定指定客户端与服务彼此通信所需的传输、编码和协议详细信息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用绑定来生成终结点的基础网络表示，因此，进行通信的各方必须对大多数绑定详细信息达成一致。 完成此任务的最简单方法是让服务的客户端使用该服务的终结点所使用的相同绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何执行此操作，请参阅[到配置 Windows Communication Foundation 服务和客户端使用的绑定](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  
   
  绑定由绑定元素的集合组成。 每个元素描述终结点与客户端的通信方式的某一方面。 一个绑定必须至少包括一个传输绑定元素，至少包括一个消息编码绑定元素（默认情况下，传输绑定元素可能提供该元素）以及包括任意数目的其他协议绑定元素。 使用本说明中生成运行时的进程，每个绑定元素均可为该运行时提供代码。  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  [配置系统提供的绑定](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  描述如何使用和修改 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的绑定来支持常用方案。  
   
- [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [使用绑定来配置 Windows Communication Foundation 服务和客户端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  描述如何在代码中以强制方式和使用配置以声明方式来定义服务和客户端的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 绑定。  
   
  [自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)  

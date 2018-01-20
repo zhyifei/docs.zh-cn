@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="drawing-formatted-text"></a>绘制格式化文本
 本主题提供的功能的概述<xref:System.Windows.Media.FormattedText>对象。 此对象为在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中绘制文本提供低级别控制。  
@@ -96,7 +96,7 @@ ms.lasthandoff: 12/22/2017
  ![沿着文本路径几何图形运动球](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 沿着文本路径几何图形运动的球  
   
- 有关详细信息，请参阅[如何：为文本创建 PathGeometry 动画](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)。  
+ 有关详细信息，请参阅[如何：为文本创建 PathGeometry 动画](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)。  
   
  已转换为后，你可以创建其他有趣用于格式化文本<xref:System.Windows.Media.PathGeometry>对象。 例如，可剪辑视频，以便在格式化文本中显示。  
   
@@ -139,4 +139,4 @@ ms.lasthandoff: 12/22/2017
  [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [创建空心文本](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [如何：为文本创建 PathGeometry 动画](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)
+ [如何：为文本创建 PathGeometry 动画](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

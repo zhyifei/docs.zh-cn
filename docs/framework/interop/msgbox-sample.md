@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d5dcabfadae35cad980d210806c47dab3f5a0082
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b14ee9c435d36e8d6a49cbfb29a57365bcd42d6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="msgbox-sample"></a>MsgBox 示例
 此示例演示如何通过值将字符串类型作为 In 参数传递，以及何时使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 和 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> 字段。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>请参阅  
  [封送处理字符串](../../../docs/framework/interop/marshaling-strings.md)  
- [平台调用数据类型](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [平台调用数据类型](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [字符串的默认封送处理](../../../docs/framework/interop/default-marshaling-for-strings.md)  
  [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
  [指定字符集](../../../docs/framework/interop/specifying-a-character-set.md)

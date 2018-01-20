@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1eab181ec63da5f0494ce5c4acabe6c6f868be15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4e34049ef54cd6d161e381bf92818b5f3531c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 本示例演示在同一台计算机上提供跨进程通信的 `netNamedPipeBinding` 绑定。 命名管道不能跨计算机工作。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)计算器服务。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 绑定是在客户端和服务的配置文件中指定的。 中指定的绑定类型`binding`属性[\<终结点 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如下面的示例配置所示：  
+ 绑定是在客户端和服务的配置文件中指定的。 中指定的绑定类型`binding`属性[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如下面的示例配置所示：  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

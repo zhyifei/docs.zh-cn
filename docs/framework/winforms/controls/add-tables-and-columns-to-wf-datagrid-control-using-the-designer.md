@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 48471427baccfa9fb8e7c3aedbb9576ab0d34243
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc310303c7edb968b43f4d529782979024e8e73
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用设计器向 Windows 窗体 DataGrid 控件添加表和列
 > [!NOTE]
@@ -30,10 +30,10 @@ ms.lasthandoff: 12/22/2017
   
  你可以在 Windows 窗体中显示数据<xref:System.Windows.Forms.DataGrid>中表和列通过创建控件<xref:System.Windows.Forms.DataGridTableStyle>对象并将它们添加到<xref:System.Windows.Forms.GridTableStylesCollection>对象，可通过<xref:System.Windows.Forms.DataGrid>控件的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>属性。 每个表样式显示任何数据表中指定的内容<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>属性<xref:System.Windows.Forms.DataGridTableStyle>。 默认情况下，但未列样式指定了表样式将显示该数据表中的所有列。 你可以限制表中的哪些列显示通过添加<xref:System.Windows.Forms.DataGridColumnStyle>对象添加到<xref:System.Windows.Forms.GridColumnStylesCollection>，通过访问的哪一<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>每个属性<xref:System.Windows.Forms.DataGridTableStyle>。  
   
- 下面的过程要求**Windows 应用程序**具有一个包含窗体项目<xref:System.Windows.Forms.DataGrid>控件。 有关如何设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在默认情况下[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、<xref:System.Windows.Forms.DataGrid>控件将不处于**工具箱**。 有关将其添加的信息，请参阅[如何： 将项添加到工具箱](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0)。  
+ 下面的过程要求**Windows 应用程序**具有一个包含窗体项目<xref:System.Windows.Forms.DataGrid>控件。 有关如何设置此类项目的信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)和[如何： 向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。 在默认情况下[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]、<xref:System.Windows.Forms.DataGrid>控件将不处于**工具箱**。 有关将其添加的信息，请参阅[如何： 将项添加到工具箱](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>若要将表添加到设计器中的 DataGrid 控件  
   

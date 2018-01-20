@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cfbd4769d1fc974369093e3b5253f9853a9ef730
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14163ecca60e516f7e88d4e453e8f4addd960340
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-up-instructions"></a>设置说明
 该组主题描述如何设置运行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的服务。  
@@ -55,4 +55,4 @@ ms.lasthandoff: 12/22/2017
  概述安装消息队列的步骤。  
   
 ## <a name="related-sections"></a>相关章节  
- [故障排除提示](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)
+ [故障排除提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

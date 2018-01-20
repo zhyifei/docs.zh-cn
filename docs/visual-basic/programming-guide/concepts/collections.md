@@ -11,11 +11,11 @@ ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aac9ed655982ff4618e0bdb7fd2af16aaa546719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0ea3b45803bc37f35d516260a57db422827f1e1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  本主题中的示例，包括[导入](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)语句`System.Collections.Generic`和`System.Linq`命名空间。  
   
- **主题内容**  
+ **在本主题中**  
   
 -   [使用简单集合](#BKMK_SimpleCollection)  
   
@@ -199,7 +199,7 @@ End Class
   
  下表列出了 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一些常用类：  
   
-|类|说明|  
+|类|描述|  
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|表示基于键进行组织的键/值对的集合。|  
 |<xref:System.Collections.Generic.List%601>|表示可按索引访问的对象的列表。 提供用于对列表进行搜索、排序和修改的方法。|  
@@ -225,7 +225,7 @@ End Class
   
  下表列出了 `System.Collections` 命名空间中的一些常用类：  
   
-|类|说明|  
+|类|描述|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|表示对象的数组，这些对象的大小会根据需要动态增加。|  
 |<xref:System.Collections.Hashtable>|表示根据键的哈希代码进行组织的键/值对的集合。|  
@@ -470,7 +470,7 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>定义自定义集合  
- 可以通过实现 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 接口来定义集合。 有关其他信息，请参阅[对集合进行枚举](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f)。  
+ 可以通过实现 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 接口来定义集合。 有关其他信息，请参阅[对集合进行枚举](http://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f)。  
   
  尽管可以定义自定义集合，但通常最好使用包含在 .NET Framework 中的集合，这在本主题前面的[集合类型](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)中进行了介绍。  
   
@@ -547,7 +547,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>迭代器  
+##  <a name="iterators"></a>Iterators  
  迭代器用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用[产生](../../../visual-basic/language-reference/statements/yield-statement.md)语句以返回一次的集合的每个元素。  
   
  通过调用迭代器[每个...下一步](../../../visual-basic/language-reference/statements/for-each-next-statement.md)语句。 `For Each` 循环的每次迭代都会调用迭代器。 迭代器中到达 `Yield` 语句时，会返回一个表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  
@@ -578,14 +578,14 @@ As IEnumerable(Of Integer)
 End Function  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
  [编程概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
  [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [集合和数据结构](../../../standard/collections/index.md)  
- [创建和操作集合](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [创建和操作集合](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [选择集合类](../../../standard/collections/selecting-a-collection-class.md)  
  [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)

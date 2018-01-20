@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b68bce0e3f1139b48446200decca5beb0a1a1a71
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e6eea471aa421cf5a154e6873c7ea64b71733bfd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="type-system-entity-sql"></a>类型系统 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持多种类型：  
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/17/2018
   
 -   架构中未显式定义的匿名类型：<xref:System.Data.Metadata.Edm.CollectionType>、<xref:System.Data.Metadata.Edm.RowType> 和 <xref:System.Data.Metadata.Edm.RefType>。  
   
- 本节讨论在架构中未显式定义但受 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持的匿名类型。 基元和名义类型的信息，请参阅[概念模型类型 (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4)。  
+ 本节讨论在架构中未显式定义但受 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持的匿名类型。 基元和名义类型的信息，请参阅[概念模型类型 (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。  
   
 ## <a name="rows"></a>行  
  行的结构取决于该行所包含的类型化以命名成员的序列。 行类型没有标识，不能被继承。 如果同一行类型的实例的成员分别等效，则这些实例是等效的。 行不具有超出其结构等效项的行为，在公共语言运行库中没有等效项。 查询可产生包含行或行的集合的结构。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询和主机语言之间的 API 绑定定义行在产生结果的查询中的实现方式。 有关如何构造行实例的信息，请参阅[构造类型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)。  

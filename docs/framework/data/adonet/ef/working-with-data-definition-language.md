@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8b363105f0dd6978d4e59678fb7cd1b3f1d721df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dc2642df7cfe0f0a4b56537d0b2ebeae34304145
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="working-with-data-definition-language"></a>使用数据定义语言
 从开始[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]版本 4，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持数据定义语言 (DDL)。 这样，您将能够基于连接字符串和存储元数据 (SSDL) 模型创建或删除数据库实例。  
@@ -51,11 +51,11 @@ ms.lasthandoff: 01/17/2018
   
 2.  向应用程序中添加现有模型。  
   
-    1.  添加名为一个空模型`SchoolModel`。 若要创建空模型，请参阅[如何： 创建新的.edmx 文件](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2)主题。  
+    1.  添加名为一个空模型`SchoolModel`。 若要创建空模型，请参阅[如何： 创建新的.edmx 文件](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2)主题。  
   
      将 SchoolModel.edmx 文件添加到您的项目中。  
   
-    1.  将复制的概念，存储，并将映射从的 School 模型内容[School 模型](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac)主题。  
+    1.  将复制的概念，存储，并将映射从的 School 模型内容[School 模型](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)主题。  
   
     2.  打开 SchoolModel.edmx 文件并将内容粘贴在 `edmx:Runtime` 标记中。  
   

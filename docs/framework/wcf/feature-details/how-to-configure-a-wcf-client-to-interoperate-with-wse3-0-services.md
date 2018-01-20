@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 214e0de13ba362bf4f101a665e943a424c56363c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea71737e1e214aa1a035739901bf79f8ef4a9c7a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>如何：配置 WCF 客户端以与 WSE 3.0 服务进行互操作
 当 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端配置为使用 2004 年 8 月版的 WS-Addressing 规范时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端在网络级与 Web Services Enhancements 3.0 for Microsoft .NET (WSE) 服务兼容。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  创建一个类，表示可与 WSE 3.0 Web 服务进行通信的绑定。  
   
-     下面的类是的一部分[与 WSE 互操作性](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)示例。  
+     下面的类是的一部分[与 WSE 互操作性](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)示例。  
   
     1.  创建一个从 <xref:System.ServiceModel.Channels.Binding> 类派生的类。  
   
@@ -75,4 +75,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels.Binding>  
- [与 WSE 互操作性](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [与 WSE 互操作性](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1af7d9dba986c3775dc3625d1e7a874f6b26c97d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3eb7d05cdf5f6a80a0a247a5f429052cc9a8368b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="commanding-overview"></a>命令概述
 <a name="introduction"></a>命令是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的一种输出机制，与设备输出相比，其提供的输出处理更侧重于语义级别。 示例命令如许多应用程序均具有的“复制”、“剪切”和“粘贴”操作。  
@@ -202,5 +202,5 @@ ms.lasthandoff: 12/22/2017
  [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [实现 ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [如何：将命令添加到菜单项](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)  
+ [如何：将命令添加到菜单项](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
  [创建自定义 RoutedCommand 示例](http://go.microsoft.com/fwlink/?LinkID=159980)

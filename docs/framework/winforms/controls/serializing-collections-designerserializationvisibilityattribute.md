@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0267020f7e7a52e92b05a0bda0ee397e5c3393fc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合
 你自定义控件有时将公开为属性的集合。 本演练演示如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>类来控制在设计时序列化集合的方式。 应用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>对您集合的属性的值可确保将序列化属性。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  若要将代码复制本主题中的一个单独的清单，请参阅[如何： 序列化集合的标准类型与 DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
@@ -47,9 +47,9 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>若要创建与可序列化集合的控件  
   
-1.  创建一个名为的 Windows 控件库项目`SerializationDemoControlLib`。 有关详细信息，请参阅[Windows 控件库模板](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4)。  
+1.  创建一个名为的 Windows 控件库项目`SerializationDemoControlLib`。 有关详细信息，请参阅[Windows 控件库模板](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4)。  
   
-2.  重命名`UserControl1`到`SerializationDemoControl`。 有关详细信息，请参阅[如何： 重命名标识符](http://msdn.microsoft.com/en-us/2430f732-2b70-4516-8cf6-a7bb71cc9724)。  
+2.  重命名`UserControl1`到`SerializationDemoControl`。 有关详细信息，请参阅[如何： 重命名标识符](http://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724)。  
   
 3.  在**属性**窗口中，设置的值<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>属性`10`。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
     |属性|更改为|  
     |--------------|---------------|  
     |**多行**|`true`|  
-    |**停靠**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
     |**滚动条**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   

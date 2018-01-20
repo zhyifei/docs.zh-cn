@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]（版本 3.0）生成应用程序时，应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不会从您的应用程序将任何信息发送给 Microsoft，除非您或最终用户选择将信息发送给我们。  
@@ -138,7 +138,7 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  被删除的密钥：  
   
- \-对于 xmlns: wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns: wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
@@ -174,13 +174,13 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  >  
   
- \<条件 NotBefore ="[dateTime]"NotOnOrAfter ="[dateTime]">  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<受众 > [uri]\</Audience > +  
+ \<Audience>[uri]\</Audience>+  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<DoNotCacheCondition / > *  
   
@@ -194,9 +194,9 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  \<建议 >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<断言 > [断言]\</Assertion > *  
+ \<Assertion>[assertion]\</Assertion>*  
   
  [any]*  
   
@@ -206,9 +206,9 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  \<语句 / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
- \<使用者 >  
+ \<Subject>  
   
  `<NameIdentifier`  
   
@@ -222,19 +222,19 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
- \<SubjectConfirmationData > [any]\</SubjectConfirmationData >？  
+ \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds:KeyInfo >...\</ds:KeyInfo >？  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation >？  
+ \</SubjectConfirmation>?  
   
- \</ 主题 >  
+ \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -266,9 +266,9 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Subject]  
   
@@ -282,33 +282,33 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</ 属性 > +  
+ \</Attribute>+  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
  Resource="[uri]"  
   
- 决策 ="[允许 &#124; 拒绝 &#124; 不确定]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  [Subject]  
   
- \<操作 Namespace ="[uri]"> [字符串]\</Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
  \<证据 >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<断言 > [断言]\</Assertion > +  
+ \<Assertion>[assertion]\</Assertion>+  
   
  \</ 证据 >？  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</ 断言 >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>在记录解密/未加密消息时从消息正文中删除的信息  
  如前所述，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 会从所记录的解密/未加密消息的消息头中删除密钥和已知的潜在个人信息。 此外，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还会从以下列表中的正文元素和操作（它们描述了密钥交换过程中涉及的安全消息）的消息正文中删除密钥和已知的潜在个人信息。  
@@ -413,5 +413,5 @@ Microsoft 承诺保护最终用户的隐私。 当您使用 [!INCLUDE[indigo1](.
  Web 服务描述语言 (WSDL) 包含端口的定义。 每个端口都具有一个终结点地址和一个表示应用程序所使用的服务的绑定。 可以使用配置禁用公开 WSDL。 计算机上不会保留任何信息。  
   
 ## <a name="see-also"></a>请参阅  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [安全性](../../../docs/framework/wcf/feature-details/security.md)

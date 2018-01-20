@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38c344e4f4ede58fcb39dd638f6aa8e896e63da0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c48b3cbaae4155a894ba77263505b2ca85238427
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="framework-design-guidelines"></a>框架设计准则
 本部分提供有关设计的库扩展且使用.NET Framework 进行交互的准则。 目的是帮助确保通过提供用于开发的编程语言无关的统一编程模型的 API 一致性和易于使用的库设计器。 我们建议你遵循这些设计准则，开发的类和扩展.NET Framework 的组件时。 不一致的库设计产生负面影响开发人员工作效率，并且不鼓励采用。  
@@ -61,5 +61,5 @@ ms.lasthandoff: 12/23/2017
   
 ## <a name="see-also"></a>请参阅  
  [概述](../../../docs/framework/get-started/overview.md)  
- [.NET Framework 的路线图](http://msdn.microsoft.com/en-us/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+ [.NET Framework 的路线图](http://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
  [开发指南](../../../docs/framework/development-guide.md)

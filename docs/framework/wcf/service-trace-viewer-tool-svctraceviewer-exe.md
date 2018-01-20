@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服务跟踪查看器工具 (SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务跟踪查看器工具可帮助您分析 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 生成的诊断跟踪。 服务跟踪查看器提供了一种方法，可以轻松地合并、查看和筛选日志中的跟踪消息，以便能够诊断、修复和验证 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务问题。  
@@ -421,7 +421,7 @@ ms.lasthandoff: 12/22/2017
 |![活动停止跟踪](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|“活动结尾”跟踪：标记活动结尾的跟踪。 . 它包含活动的名称。 应用程序设计人员或开发人员应为每个跟踪源的每个活动 ID 定义一个活动“结尾”跟踪。 在给定跟踪源发出的活动结尾之后不会显示该跟踪源中的任何跟踪，除非跟踪时间间隔不够小。 如果发生这种情况，时间相同的两个跟踪（包括“结尾”跟踪）在显示时可能会交错。 如果活动 ID 在跟踪关联的跟踪源之间传播，将可看到同一活动 ID 有多个“结尾”（每个跟踪源一个）。 如果为跟踪源启用了 ActivityTracing，则会发出“结尾”跟踪。|  
 |![活动挂起跟踪](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|“活动挂起”跟踪：标记活动暂停时间的跟踪。 在活动继续之前，不会在挂起的活动中发出任何跟踪。 挂起的活动表示不会在该活动的跟踪源范围内进行任何处理。 “挂起”/“继续”跟踪对于进行分析十分有用。 如果为跟踪源启用了 ActivityTracing，则会发出“挂起”跟踪。|  
 |![活动继续跟踪](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|“活动继续”跟踪：标记活动在暂停后继续进行的时间的跟踪。 可以在该活动中再次发出跟踪。 “挂起”/“继续”跟踪对于进行分析十分有用。 如果为跟踪源启用了 ActivityTracing，则会发出“继续”跟踪。|  
-|![传输](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|传输：将逻辑控制流从一个活动传输到另一个活动时发出的跟踪。 作为传输来源的活动可以继续与作为传输目标的活动并行工作。 如果为跟踪源启用了 ActivityTracing，则会发出“传输”跟踪。|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|传输：将逻辑控制流从一个活动传输到另一个活动时发出的跟踪。 作为传输来源的活动可以继续与作为传输目标的活动并行工作。 如果为跟踪源启用了 ActivityTracing，则会发出“传输”跟踪。|  
 |![从传输](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|传输自：定义从另一个活动到当前活动的传输的跟踪。|  
 |![将传输到](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|传输至：定义从当前活动到另一个活动的逻辑控制流传输的跟踪。|  
   
@@ -437,7 +437,7 @@ ms.lasthandoff: 12/22/2017
   
 |图标|描述|  
 |----------|-----------------|  
-|![活动](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|活动：指示当前活动为一般活动。|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|活动：指示当前活动为一般活动。|  
 |![根活动](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|根活动：指示进程的根活动。|  
   
 ### <a name="wcf-activities"></a>WCF 活动  
@@ -463,4 +463,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>请参阅  
  [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [配置跟踪](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [活动跟踪和传播端到端跟踪关联](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)
+ [活动跟踪和传播端到端跟踪关联](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

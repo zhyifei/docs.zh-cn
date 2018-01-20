@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfdc102a5aeb2e3eaccde28a8ce57a1878141e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>演练：设计时调试自定义 Windows 窗体控件
 当你创建自定义控件时，你通常会发现它需调试其设计时行为。 这是如果自定义设计器创作的自定义控件尤其如此。 有关详细信息，请参阅[演练： 创建 Windows 窗体控件，采用利用的 Visual Studio 设计时功能](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)。  
@@ -55,14 +55,14 @@ ms.lasthandoff: 12/22/2017
  完成后，你将会了解的调试自定义控件的设计时行为所需的任务。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建应用程序项目。 此项目将用于生成承载自定义控件的应用程序。  
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
--   创建一个名为"DebuggingExample"的 Windows 应用程序项目。 有关详细信息，请参阅[如何：创建一个 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+-   创建一个名为"DebuggingExample"的 Windows 应用程序项目。 有关详细信息，请参阅[如何：创建一个 Windows 应用程序项目](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 ## <a name="creating-a-control-library-project"></a>创建控件库项目  
  下一步是创建控件库项目并设置自定义控件。  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/22/2017
   
 1.  添加**Windows 控件库**到解决方案的项目。  
   
-2.  添加新**UserControl**到 DebugControlLibrary 项目项。 有关详细信息，请参阅[NIB： 如何： 添加新项目项](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 为新的源文件提供一个"DebugControl"的基本名称。  
+2.  添加新**UserControl**到 DebugControlLibrary 项目项。 有关详细信息，请参阅[NIB： 如何： 添加新项目项](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。 为新的源文件提供一个"DebugControl"的基本名称。  
   
-3.  使用**解决方案资源管理器**，通过删除具有的基名称的代码文件中删除项目的默认控件"`UserControl1`"。 有关详细信息，请参阅[NIB： 如何： 删除、 删除和排除项](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
+3.  使用**解决方案资源管理器**，通过删除具有的基名称的代码文件中删除项目的默认控件"`UserControl1`"。 有关详细信息，请参阅[NIB： 如何： 删除、 删除和排除项](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73)。  
   
 4.  生成解决方案。  
   
@@ -186,4 +186,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>请参阅  
  [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  [如何： 访问设计时服务](http://msdn.microsoft.com/library/c186c4b6-076c-438d-9ed3-f13da29c8c1f)  
- [如何： 访问 Windows 窗体中的设计时支持](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)
+ [如何：在 Windows 窗体中访问设计时支持](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)

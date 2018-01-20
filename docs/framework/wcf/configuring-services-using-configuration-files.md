@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 通过使用配置文件配置 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务，可提供在部署时而非设计时提供终结点和服务行为数据的灵活性。 本主题概述了当前可用的主要技术。  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="the-services-element"></a>\<服务 > 元素  
  `services` 元素包含应用程序承载的所有服务的规范。 从 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]中的简化配置模型开始，此部分是可选的。  
   
- [\<服务 >](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
 ### <a name="the-service-element"></a>\<服务 > 元素  
  每个服务都具有以下属性：  
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `behaviorConfiguration`。 指定一个在 `behavior` 元素中找到的 `behaviors` 元素的名称。 指定的行为控制操作，例如服务是否允许模拟。 如果它的值是空的，或者未提供任何 `behaviorConfiguration` ，则向服务中添加默认服务行为集。  
   
--   [\<服务 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+-   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<终结点 > 元素  
  每个终结点都需要以下属性表示的地址、绑定和协定：  
@@ -101,29 +101,29 @@ ms.lasthandoff: 12/22/2017
   
 -   `contract`。 指定定义协定的接口。 这是在由 `name` 元素的 `service` 属性指定的公共语言运行库 (CLR) 类型中实现的接口。  
   
--   [\<终结点 > 元素引用](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<终结点 > 元素引用](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>\<绑定 > 元素  
  `bindings` 元素包含可由任何服务中定义的任何终结点使用的所有绑定的规范。  
   
- [\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>\<绑定 > 元素  
  在 `binding` 元素中包含的 `bindings` 元素可以是系统提供的绑定之一（请参阅 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)），也可以是自定义绑定（请参阅 [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)）。 `binding` 元素具有 `name` 属性，此属性将绑定与 `bindingConfiguration` 元素的 `endpoint` 属性中指定的终结点相关联。 如果未指定任何名称，则该绑定对应于该绑定类型的默认值。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 配置服务和客户端，请参阅 [Configuring Windows Communication Foundation Applications](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]配置服务和客户端，请参阅[配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
- [\<绑定 >](../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>\<行为 > 元素  
  这是定义服务行为的 `behavior` 元素的容器元素。  
   
- [\<行为 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>\<行为 > 元素  
  每个 `behavior` 元素均由 `name` 属性进行标识，并提供系统提供的行为（例如 <`throttling`>）或自定义行为。 如果未提供任何名称，则该行为元素对应于默认服务或终结点行为。  
   
- [\<行为 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>如何使用绑定和行为配置  
  在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，通过在配置中使用引用系统，可以很方便地在终结点之间共享配置。 与绑定相关的配置值在 `bindingConfiguration` 部分的 `<binding>` 元素中进行分组，而不是直接将配置值分配到终结点。 绑定配置是一组命名的绑定设置。 然后，终结点可以通过名称来引用 `bindingConfiguration` 。  
@@ -274,6 +274,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>请参阅  
  [简化配置](../../../docs/framework/wcf/simplified-configuration.md)  
- [配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<服务 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<绑定 >](../../../docs/framework/misc/binding.md)
+ [配置 Windows Communication Foundation 应用程序](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)

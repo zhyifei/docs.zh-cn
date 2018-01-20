@@ -12,11 +12,11 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 42ed9866f168c06e8641ace712da58e953951676
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 一个重要部分[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是创建 Windows 窗体应用程序在用户的计算机上本地运行的能力。 Visual Studio 可用于创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于从类<xref:System.Windows.Forms>命名空间。  
@@ -50,9 +50,9 @@ ms.lasthandoff: 12/21/2017
   
  有关使用这些功能的分步信息，请参阅下列帮助主题。  
   
-|到|请参阅|  
+|到|查看|  
 |--------|---------|  
-|创建与新的 Windows 窗体应用程序[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[演练： 创建简单的 Windows 窗体](http://msdn.microsoft.com/en-us/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|创建与新的 Windows 窗体应用程序[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[演练： 创建简单的 Windows 窗体](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |使用窗体上控件|[如何：向 Windows 窗体添加控件](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |创建与图形<xref:System.Drawing>|[图形编程入门](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |创建自定义控件|[如何：从 UserControl 类继承](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  有关使用这些功能的分步信息，请参阅下列帮助主题。  
   
-|到|请参阅|  
+|到|查看|  
 |--------|---------|  
 |使用<xref:System.Windows.Forms.BindingSource>组件|[如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据源|[如何：使用 Windows 窗体 BindingSource 组件对 ADO.NET 数据进行排序和筛选](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/21/2017
   
  有关 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 的完整介绍，请参阅 [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 有关使用这些功能的分步信息，请参阅下列帮助主题：  
   
-|到|请参阅|  
+|到|查看|  
 |--------|---------|  
 |部署的应用程序[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |更新[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]部署|[如何：管理 ClickOnce 应用程序的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  有关使用这些功能的分步信息，请参阅下列帮助主题：  
   
-|到|请参阅|  
+|到|查看|  
 |--------|---------|  
 |打印窗体的内容|[如何：在 Windows 窗体中打印图形](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：打印 Windows 窗体中的多页文本文件](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |了解有关 Windows 窗体安全的详细信息|[Windows 窗体中的安全性概述](../../../framework/winforms/security-in-windows-forms-overview.md)|  

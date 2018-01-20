@@ -28,11 +28,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c0d8ff3d6f66ad3abf23cd371f86bb74edf78e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>将 COM 的程序集打包
 COM 开发人员可从其计划纳入应用程序的托管类型相关信息中受益：  
@@ -47,7 +47,7 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
   
      实现类接口（COM 互操作生成的接口）的托管类受版本控制限制。  
   
-     有关如何使用类接口的指南，请参阅[类接口简介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)。  
+     有关如何使用类接口的指南，请参阅[类接口简介](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)。  
   
 -   部署说明  
   
@@ -69,7 +69,7 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
   
      无论选择的机制如何，生成的类型库中仅包含所提供程序集中定义的公共类型。  
   
-     可将类型库打包为单独文件，或将其作为 Win32 资源文件嵌入基于 .NET 的应用程序。 Microsoft Visual Basic 6.0 自动执行此任务；但若 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]，必须手动嵌入类型库。 有关说明，请参阅[如何：将类型库作为 Win32 资源嵌入基于 .NET 的应用程序](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)。  
+     可将类型库打包为单独文件，或将其作为 Win32 资源文件嵌入基于 .NET 的应用程序。 Microsoft Visual Basic 6.0 自动执行此任务；但若 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]，必须手动嵌入类型库。 有关说明，请参阅[如何：将类型库作为 Win32 资源嵌入基于 .NET 的应用程序](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)。  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>类型库导出程序  
@@ -94,8 +94,8 @@ COM 开发人员可从其计划纳入应用程序的托管类型相关信息中�
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [为互操作限定 .NET 类型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [类接口简介](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [类接口简介](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [程序集安全注意事项](../../../docs/framework/app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe（类型库导出程序）](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [向 COM 注册程序集](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [如何：将类型库作为 Win32 资源嵌入应用程序](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
+ [如何：将类型库作为 Win32 资源嵌入应用程序](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)

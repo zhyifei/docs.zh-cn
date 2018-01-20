@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ab311974b1fe8cbc2707ee0818806d6264a1573
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee22feab20e2c96f3e708a277f9048f739213520
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="context-exchange-correlation"></a>上下文交换相关
 上下文相关基于中所述的上下文交换机制[.NET 上下文交换协议规范](http://go.microsoft.com/fwlink/?LinkId=166059)。 上下文相关使用已知的上下文头或 cookie 将消息与正确的实例相关。 若要使用上下文相关，必须在提供给 <xref:System.ServiceModel.BasicHttpContextBinding> 的终结点上使用诸如 <xref:System.ServiceModel.WSHttpContextBinding>、<xref:System.ServiceModel.NetTcpContextBinding> 或 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 之类的基于上下文的绑定。 此主题说明如何在工作流服务中将上下文相关用于消息传送活动。  
@@ -109,6 +109,6 @@ Send request2 = new Send
 };  
 ```  
   
- 请注意，在上面这些示例中，已显式配置上下文相关。 如果客户端工作流也未在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载，除非活动都包含在一个 <xref:System.ServiceModel.Activities.CorrelationScope> 活动中，否则必须显式配置相关。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]上下文相关，请参阅[NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)示例。  
+ 请注意，在上面这些示例中，已显式配置上下文相关。 如果客户端工作流也未在 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中承载，除非活动都包含在一个 <xref:System.ServiceModel.Activities.CorrelationScope> 活动中，否则必须显式配置相关。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]上下文相关，请参阅[NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)示例。  
   
  如果调用工作流服务的客户端不是工作流，则只要客户端将首次调用工作流服务时返回的上下文显式传递回去，它仍然可以进行重复调用。 默认情况下，通过添加服务而生成的代理在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 存储中引用此上下文，并传递此上下文。

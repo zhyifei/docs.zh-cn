@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: abdc98a6fbf48a30f2f5702e7c2d78396381de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="drawing-objects-overview"></a>Drawing 对象概述
 本主题介绍<xref:System.Windows.Media.Drawing>对象，并说明如何使用它们来有效地绘制形状、 位图、 文本和媒体。 使用<xref:System.Windows.Media.Drawing>对象时创建剪贴画，绘制与<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>对象。  
@@ -191,12 +191,12 @@ DrawingGroup 操作的顺序
   
 |属性|描述|图示|  
 |--------------|-----------------|------------------|  
-|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|更改的所选部分的不透明度<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参阅[如何：控制绘图的不透明度](http://msdn.microsoft.com/en-us/68580652-7d32-4d27-93cc-a5148cf4d5ee)。|![具有不透明蒙版的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
-|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|统一更改的不透明度<xref:System.Windows.Media.DrawingGroup>内容。 使用此属性可以使<xref:System.Windows.Media.Drawing>透明或部分透明。 有关示例，请参阅[如何：向绘图应用不透明蒙板](http://msdn.microsoft.com/en-us/d77b420b-9be2-479c-a45e-82f4da30eb9f)。|![具有不同不透明度设置的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
-|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|适用<xref:System.Windows.Media.Effects.BitmapEffect>到<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参阅[如何：向绘图应用 BitmapEffect](http://msdn.microsoft.com/en-us/c5b1de83-8d09-47fb-96db-5f174471f4b5)。|![具有 BlurBitmapEffect 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
-|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|剪辑<xref:System.Windows.Media.DrawingGroup>到区域的内容，你描述使用<xref:System.Windows.Media.Geometry>。 有关示例，请参阅[如何：剪裁绘图](http://msdn.microsoft.com/en-us/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)。|![具有定义的剪裁区域的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
+|<xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>|更改的所选部分的不透明度<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参阅[如何：控制绘图的不透明度](http://msdn.microsoft.com/library/68580652-7d32-4d27-93cc-a5148cf4d5ee)。|![具有不透明蒙版的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opmask.png "graphicsmm_opmask")|  
+|<xref:System.Windows.Media.DrawingGroup.Opacity%2A>|统一更改的不透明度<xref:System.Windows.Media.DrawingGroup>内容。 使用此属性可以使<xref:System.Windows.Media.Drawing>透明或部分透明。 有关示例，请参阅[如何：向绘图应用不透明蒙板](http://msdn.microsoft.com/library/d77b420b-9be2-479c-a45e-82f4da30eb9f)。|![具有不同不透明度设置的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-opacity.png "graphicsmm_opacity")|  
+|<xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>|适用<xref:System.Windows.Media.Effects.BitmapEffect>到<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参阅[如何：向绘图应用 BitmapEffect](http://msdn.microsoft.com/library/c5b1de83-8d09-47fb-96db-5f174471f4b5)。|![具有 BlurBitmapEffect 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-bitmap.png "graphicsmm_bitmap")|  
+|<xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>|剪辑<xref:System.Windows.Media.DrawingGroup>到区域的内容，你描述使用<xref:System.Windows.Media.Geometry>。 有关示例，请参阅[如何：剪裁绘图](http://msdn.microsoft.com/library/1f7d8a2c-c3c2-42cb-a542-e6796f9fb058)。|![具有定义的剪裁区域的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clipgeom.png "graphicsmm_clipgeom")|  
 |<xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>|根据指定的基准将与设备无关的像素与设备像素对齐。 此属性对于确保细节丰富的图形在低 DPI 屏幕上清晰地呈现很有用。 有关示例，请参阅[向绘图应用 GuidelineSet](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)。|![具有和没有 GuidelineSet 的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawinggroup-guidelineset.png "graphicsmm_drawinggroup_guidelineset")|  
-|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|转换<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参阅[如何：向绘图应用转换](http://msdn.microsoft.com/en-us/0d525f2b-682d-4d67-9660-cf46929fbabd)。|![旋转后的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
+|<xref:System.Windows.Media.DrawingGroup.Transform%2A>|转换<xref:System.Windows.Media.DrawingGroup>内容。 有关示例，请参阅[如何：向绘图应用转换](http://msdn.microsoft.com/library/0d525f2b-682d-4d67-9660-cf46929fbabd)。|![旋转后的 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rotate.png "graphicsmm_rotate")|  
   
 <a name="usingimagedrawing"></a>   
 ## <a name="display-a-drawing-as-an-image"></a>将绘图显示为图像  

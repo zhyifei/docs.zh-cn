@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d55185153e3d03ddb2b1726ed25566d6b5f396ae
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b020b3df627fcb220f4227d76fdf8eb3d60e80e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
 今天，很多业务开发人员必须使用两种或更多种编程语言：对于业务逻辑和表示层使用高级语言（如 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 或 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]），而使用查询语言与数据库交互（如 [!INCLUDE[tsql](../../../../includes/tsql-md.md)]）。 这要求开发人员精通多种语言才能奏效，同时也导致在开发环境中语言不匹配。 例如，使用数据访问 API 对数据库执行查询的应用程序会将查询指定为用引号括起的字符串。 编译器不能读取此查询字符串，因此不会检查是否有错误，如语法无效或引用的列或行是否实际存在。 不会检查查询参数的类型，也不支持 `IntelliSense`。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/17/2018
   
  ![LINQ to ADO.NET 概述](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
   
- 有关 LINQ 语言功能的常规信息，请参阅[LINQ 简介](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)。 有关在你的应用程序中使用 LINQ 的信息，请参阅[不在生成中： LINQ 常规编程指南](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049)，其中包含有关如何使用 LINQ 技术详情。  
+ 有关 LINQ 语言功能的常规信息，请参阅[LINQ 简介](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)。 有关在你的应用程序中使用 LINQ 的信息，请参阅[不在生成中： LINQ 常规编程指南](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)，其中包含有关如何使用 LINQ 技术详情。  
   
  下面各节提供有关 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] 的更多信息。  
   

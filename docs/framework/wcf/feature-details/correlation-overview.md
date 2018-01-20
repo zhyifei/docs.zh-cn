@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 094c962e2576653fc8c9de4c0dece912fcaa07f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a29f761b4a3718293c1786d23d425265603f8c84
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="correlation-overview"></a>相关概述
 相关是指使工作流服务消息彼此相关或与应用程序实例状态相关的机制，例如，使答复与初始请求相关，或者使特定订单 ID 与订单处理工作流的保留状态相关。 本主题概述了相关。 本节中的其他主题提供了相关的各种类型的附加信息。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="protocol-based-correlation"></a>基于协议的相关  
  基于协议的相关使用传输机制使消息彼此相关或与相应实例相关。 系统提供的一些协议相关包括请求-答复相关和基于上下文的相关。 请求-答复相关用于将一对消息传递活动相关以形成双向操作，如 <xref:System.ServiceModel.Activities.Send> 与 <xref:System.ServiceModel.Activities.ReceiveReply> 成对，或 <xref:System.ServiceModel.Activities.Receive> 与 <xref:System.ServiceModel.Activities.SendReply> 成对。 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 工作流设计器还提供了一组活动模板，用于快速实现此模式。 基于上下文的相关基于中所述的上下文交换机制[.NET 上下文交换协议规范](http://go.microsoft.com/fwlink/?LinkID=166059)。 若要使用基于上下文的相关，必须在终结点上使用诸如 <xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding> 或 <xref:System.ServiceModel.NetTcpContextBinding> 之类的基于上下文的绑定。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]协议关联，请参阅[上下文交换](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)，[持久双工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)，和[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]工作流设计器活动模板，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 有关示例代码，请参阅[持久双工 &#91;WF 示例 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)和[NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)示例。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]协议关联，请参阅[上下文交换](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)，[持久双工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)，和[请求-答复](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]工作流设计器活动模板，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。 有关示例代码，请参阅[持久双工 &#91;WF 示例 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)和[NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)示例。  
   
 ## <a name="content-based-correlation"></a>基于内容的相关  
  基于内容的相关使用消息中的某些信息片段将消息与特定实例关联。 与基于协议的相关不同，基于内容的相关要求应用程序作者显式声明此数据在各相关消息中的位置。 使用基于内容相关的活动通过使用 <xref:System.ServiceModel.MessageQuerySet> 指定此消息数据。 与不使用某个上下文绑定（如 <xref:System.ServiceModel.BasicHttpContextBinding>）的服务进行通信时，基于内容的相关非常有用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]基于内容的相关性，请参阅[基于内容](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)。 有关示例代码，请参阅[基于内容的相关性](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)和[相关计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)示例。  
@@ -40,4 +40,4 @@ ms.lasthandoff: 12/22/2017
  [基于内容的关联](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
  [相关计算器](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [持久双工 &#91;WF 示例 &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
- [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)
+ [NetContextExchangeCorrelation](http://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)

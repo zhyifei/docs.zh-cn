@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  将 C# 客户端的线程设置为 STA 后，对 MTA COM 组件的调用将需要跨单元封送。  
   
- 有关显式选择单元模型的说明， 请参阅 [托管和非托管线程处理](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5)。  
+ 有关显式选择单元模型的说明， 请参阅 [托管和非托管线程处理](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)。  
   
  [返回页首](#top)  
   
@@ -145,7 +145,7 @@ ms.lasthandoff: 12/22/2017
  ![SOAP 或 TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
 跨使用 SOAP 或 TcpChannel 类的防火墙的远程调用  
   
- 某些非托管调用可以通过 SOAP 传递， 如 [服务组件](http://msdn.microsoft.com/en-us/f109ee24-81ad-4d99-9892-51ac6f34978c) 和 COM 之间的调用。  
+ 某些非托管调用可以通过 SOAP 传递， 如 [服务组件](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) 和 COM 之间的调用。  
   
  [返回页首](#top)  
   
@@ -159,10 +159,10 @@ ms.lasthandoff: 12/22/2017
 |[用 COM 互操作对数据进行封送处理](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|描述如何自定义 COM 包装器以更改封送行为。|  
 |[如何：将托管代码 DCOM 迁移到 WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何从 DCOM 迁移到 WCF。|  
 |[如何：映射 HRESULT 和异常](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|描述如何将自定义异常映射到 HRESULT，并提供从每个 HRESULT 到其在 .NET Framework 中的相似异常类的完整映射。|  
-|[使用泛型类型进行交互操作](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|描述在使用用于 COM 互操作性的泛型类型时，哪些操作受支持。|  
+|[使用泛型类型进行交互操作](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|描述在使用用于 COM 互操作性的泛型类型时，哪些操作受支持。|  
 |[与非托管代码交互操作](../../../docs/framework/interop/index.md)|描述由公共语言运行时提供的互操作性服务。|  
-|[高级 COM 互操作性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的详细信息。|  
-|[互操作的设计注意事项](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|提供有关编写集成 COM 组件的提示。|  
+|[高级 COM 互操作性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的详细信息。|  
+|[互操作的设计注意事项](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|提供有关编写集成 COM 组件的提示。|  
   
  [返回页首](#top)  
   

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27068808dcf45a2a210258d45faa894524bd883f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9636585fe9671b8822a6510d405eef5e6f23527e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Windows.Forms.TableLayoutPanel>排列其内容在网格中，提供的功能类似的 html\<表 > 元素。 <xref:System.Windows.Forms.TableLayoutPanel>控件允许你将控件放置在网格布局中，而无需精确指定每个控件的位置。 其单元格排列为行和列，并且这些行和列可具有不同的大小。 中的行和列，可以合并单元格。 单元格可以包含任何内容可以包含窗体，并在大多数其他方面与容器中的行为。  
   
- <xref:System.Windows.Forms.TableLayoutPanel>控件还提供了成比例调整大小功能在运行时，以便调整窗体的大小时，你的布局可以顺利地更改。 这使得<xref:System.Windows.Forms.TableLayoutPanel>控件非常适合用于用途，如数据输入窗体和本地化应用程序。 有关详细信息，请参阅[演练： 创建用于数据输入的 Windows 窗体可调整大小](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab)和[演练： 创建可本地化的 Windows 窗体](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
+ <xref:System.Windows.Forms.TableLayoutPanel>控件还提供了成比例调整大小功能在运行时，以便调整窗体的大小时，你的布局可以顺利地更改。 这使得<xref:System.Windows.Forms.TableLayoutPanel>控件非常适合用于用途，如数据输入窗体和本地化应用程序。 有关详细信息，请参阅[演练： 创建用于数据输入的 Windows 窗体可调整大小](http://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)和[演练： 创建可本地化的 Windows 窗体](http://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)。  
   
  一般情况下，不应使用<xref:System.Windows.Forms.TableLayoutPanel>作为整个布局的容器的控件。 使用<xref:System.Windows.Forms.TableLayoutPanel>控件能够按比例调整大小的功能部分的布局。  
   
@@ -58,14 +58,14 @@ ms.lasthandoff: 12/22/2017
  完成上述操作后，你将会了解这些重要布局功能所发挥的作用。  
   
 > [!NOTE]
->  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建项目并设置窗体。  
   
 #### <a name="to-create-the-project"></a>要创建项目  
   
-1.  创建一个名为"TableLayoutPanelExample"的 Windows 应用程序项目。 有关详细信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
+1.  创建一个名为"TableLayoutPanelExample"的 Windows 应用程序项目。 有关详细信息，请参阅[如何： 创建 Windows 应用程序项目](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)。  
   
 2.  选择的窗体中**Windows** **窗体设计器**。  
   
@@ -195,8 +195,8 @@ ms.lasthandoff: 12/22/2017
  [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
  [演练：使用对齐线在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Microsoft Windows 用户体验，用户界面开发人员和设计人员的官方指南。Redmond, WA: Microsoft Press, 1999.(USBN: 0-7356-0566-1)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
- [演练：创建可根据数据输入需要调整大小的 Windows 窗体](http://msdn.microsoft.com/en-us/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
- [演练： 创建可本地化 Windows 窗体](http://msdn.microsoft.com/en-us/c5240b6e-aaca-4286-9bae-778a416edb9c)  
+ [演练：创建可根据数据输入需要调整大小的 Windows 窗体](http://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)  
+ [演练： 创建可本地化 Windows 窗体](http://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)  
  [有关 TableLayoutPanel 控件的最佳做法](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
  [AutoSize 属性概述](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
  [如何：在 Windows 窗体上停靠控件](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  

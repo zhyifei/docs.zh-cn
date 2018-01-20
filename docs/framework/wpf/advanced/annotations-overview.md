@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fe3f0caa8f23a3b68f1017254a770af766f83f81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7cc7b09211bc9168bbab85105a0574dc142542ba
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="annotations-overview"></a>批注概述
 在纸质文档上编写说明或注释毫不稀奇，我们几乎认为这是理所当然的。 这些说明或注释就是“批注”，我们将其添加到文档，用于标注信息或突出显示兴趣项以供日后参考。 虽然在打印文档上编写注释很简单也很平常，但是就算在所有电子文档上添加个人注释，功能上却通常有很多限制。  
@@ -86,4 +86,4 @@ ms.lasthandoff: 12/22/2017
  [ContextMenu 概述](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [如何：将命令添加到菜单项](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)
+ [如何：将命令添加到菜单项](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 978cb7dcfd132ea253fcb5f13174e14c7341f11a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6dc6ad423010cf881c62e2c22570c080cad6a1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="guidelines-and-best-practices"></a>指南与最佳做法
 本节包含多个主题，这些主题提供了有关创建 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序的准则。  
@@ -57,6 +57,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>请参阅  
  [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation 示例](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation 示例](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [概念性概述](../../../docs/framework/wcf/conceptual-overview.md)  
  [生成客户端](../../../docs/framework/wcf/building-clients.md)

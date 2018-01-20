@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caa0f8cc5b98ae50e1c9d2da716dd03eb5cb4565
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c94cd0a6cdddc4b49a59d6420d2ec28864285aa8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>在 ASP.NET 中使用 System.Transactions
 本主题介绍如何才能在 <xref:System.Transactions> 应用程序中成功使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 </PermissionSet>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 安全策略，请参阅 [securityPolicy 元素（ASP.NET 设置架构）](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)，否则该程序集只能在应用程序域中使用事务（在这种情况下，只有系统内存才是受保护的资源）。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]安全策略，请参阅[securityPolicy 元素 （ASP.NET 设置架构）](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)。  
   
 ## <a name="dynamic-compilation"></a>动态编译  
  如果要在访问时动态编译的 <xref:System.Transactions> 应用程序中导入和使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ，则应将对该 <xref:System.Transactions> 程序集的引用放入配置文件中。 具体来说，应将该引用添加到默认根 **Web.config**/**compilation** / **assemblies** 节之下。 下面的示例演示这一操作。  
@@ -67,9 +67,9 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [compilation 的 assemblies 的 add 元素（ASP.NET 设置架构）](http://msdn.microsoft.com/en-us/602197e8-108d-4249-b752-ba2a318f75e4)，否则该程序集只能在应用程序域中使用事务（在这种情况下，只有系统内存才是受保护的资源）。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][编译 （ASP.NET 设置架构） 的程序集添加元素](http://msdn.microsoft.com/library/602197e8-108d-4249-b752-ba2a318f75e4)。  
   
 ## <a name="see-also"></a>请参阅  
  [ASP.NET 信任级别和策略文件](http://msdn.microsoft.com/library/f897c794-10d3-414c-86b7-59b66564bbf1)  
- [securityPolicy 元素 （ASP.NET 设置架构）](http://msdn.microsoft.com/en-us/469d8d22-d263-46bb-8400-40d8d027faba)  
+ [securityPolicy 元素 （ASP.NET 设置架构）](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba)  
  [事务管理升级](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

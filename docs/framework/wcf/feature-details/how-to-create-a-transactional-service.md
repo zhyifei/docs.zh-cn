@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fd0812125c63a5a89cf8a87f0ca72cf9a9f168d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>如何：创建事务性服务
 本示例演示创建事务性服务和使用客户端启动的事务协调服务操作的各个方面。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-3.  在配置文件中配置绑定，指定事务上下文应进行流处理，并指定要使用的协议执行此操作。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel 事务配置](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)。 具体地说，绑定类型是在终结点元素的 `binding` 属性中指定的。 [\<终结点 >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素包含`bindingConfiguration`引用一个名为的绑定配置的属性`transactionalOleTransactionsTcpBinding`，下面的示例配置中所示。  
+3.  在配置文件中配置绑定，指定事务上下文应进行流处理，并指定要使用的协议执行此操作。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel 事务配置](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)。 具体地说，绑定类型是在终结点元素的 `binding` 属性中指定的。 [\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素包含`bindingConfiguration`引用一个名为的绑定配置的属性`transactionalOleTransactionsTcpBinding`，下面的示例配置中所示。  
   
     ```xml  
     <service name="CalculatorService">  

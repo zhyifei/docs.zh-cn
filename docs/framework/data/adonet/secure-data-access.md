@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 428dd4cfb9533dbf57b984c8bc1c557f37bb7d15
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c26854af585fc026ba9abee77bc3b8a95bcaba79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="secure-data-access"></a>安全数据访问
 要编写安全的 ADO.NET 代码，必须了解基础数据存储（即数据库）中提供的安全机制。 您还需要考虑应用程序可能包含的其他功能或组件对安全性的影响。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/17/2018
 |资源|描述|  
 |--------------|-----------------|  
 |[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述用于保护连接信息的最佳安全做法和技术，例如使用受保护配置来加密连接字符串。|  
-|[数据访问策略的建议](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
+|[数据访问策略的建议](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
 |[连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)|描述如何在运行时根据用户输入生成连接字符串。|  
 |[SQL Server 安全性概述](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|描述 SQL Server 安全架构。|  
   
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/17/2018
   
 |资源|描述|  
 |--------------|-----------------|  
-|[COM + 基于角色的安全性和.NET Framework](http://msdn.microsoft.com/en-us/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|讨论如何集成托管代码与 COM+ 安全服务。|  
+|[COM + 基于角色的安全性和.NET Framework](http://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|讨论如何集成托管代码与 COM+ 安全服务。|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>与非托管代码交互操作  
  .NET Framework 提供与非托管代码（包括 COM 组件、COM+ 服务、外部类型库及许多操作系统服务）的交互。 使用非托管代码时会超出托管代码的安全边界。 您的代码和调用它的任何代码都必须具有非托管代码权限（指定了 <xref:System.Security.Permissions.SecurityPermission> 标志的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>）。 非托管代码会无意中将安全漏洞引入您的应用程序中。 因此，除非绝对必要，否则应避免与非托管代码进行交互。  
@@ -99,12 +99,12 @@ ms.lasthandoff: 01/17/2018
 |资源|描述|  
 |--------------|-----------------|  
 |[与非托管代码交互操作](../../../../docs/framework/interop/index.md)|包含描述如何向 .NET Framework 公开 COM 组件以及如何向 COM 公开 .NET Framework 组件的主题。|  
-|[高级 COM 互操作性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|包含高级主题，如主互操作程序集、线程和自定义封送处理。|  
+|[高级 COM 互操作性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|包含高级主题，如主互操作程序集、线程和自定义封送处理。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [数据访问策略的建议](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [数据访问策略的建议](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [连接字符串生成器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 外接程序概述
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供了一个外接程序模型，开发人员可以用它来创建支持外接程序扩展性的应用程序。 借助此外接程序模型，可以创建与应用程序功能集成并进行扩展的外接程序。 在某些情况下，应用程序还需要显示外接程序所提供的 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]。本主题演示 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 如何扩展 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 外接程序模型来实现这些方案，并演示它的体系结构、优点及局限性。  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   具有<xref:System.SerializableAttribute>应用的属性。  
   
 > [!NOTE]
->  有关创建可远程处理的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象的详细信息，请参阅[使对象可远程处理](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)。  
+>  有关创建可远程处理的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象的详细信息，请参阅[使对象可远程处理](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 类型不可远程处理。 为解决此问题，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 扩展了 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 外接程序模型，允许从主机应用程序显示外接程序所创建的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 通过提供此支持[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]通过两种类型：<xref:System.AddIn.Contract.INativeHandleContract>接口和实现的两个静态方法<xref:System.AddIn.Pipeline.FrameworkElementAdapters>类：<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 从较高层面来看，这些类型和方法按以下方式使用：  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [外接程序和扩展性](../../../../docs/framework/add-ins/index.md)  
  [应用程序域](../../../../docs/framework/app-domains/application-domains.md)  
- [.NET framework 远程处理概述](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [使对象可远程处理](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [.NET framework 远程处理概述](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [使对象可远程处理](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [帮助主题](../../../../docs/framework/wpf/app-development/how-to-topics.md)

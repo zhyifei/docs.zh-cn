@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>强命名（非托管 API 参考）
 强命名 API 允许客户端管理的程序集强名称签名。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  使用强名称对程序集进行签名将向包含程序集清单的文件添加公钥加密。 强名称签名帮助验证名称的唯一性，避免名称欺骗，并解析引用时将调用方提供的唯一标识。 但是，没有的信任级别都具有强名称相关联。  
   
 ## <a name="in-this-section"></a>本节内容  
- [强命名的全局静态函数](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [强命名的全局静态函数](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  描述强命名 API 使用的非托管全局静态函数。  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [StrongNameTokenFromPublicKey 函数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  获取表示公钥的标记。 从开始弃用的[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。  
   
- [强命名结构](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [强命名结构](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  描述强命名 API 用于管理强名称签名的程序集的非托管的结构...  
   
  [PublicKeyBlob Strong Naming](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

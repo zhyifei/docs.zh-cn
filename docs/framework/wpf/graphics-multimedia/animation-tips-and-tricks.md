@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4fceebbd3da7a0643e744d80a55cb1c953eba3bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 210f8ff8840f579d352cc579f80f38488b998c5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-tips-and-tricks"></a>动画提示和技巧
 在处理中的动画时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，有大量的提示和技巧，可使动画更好地执行，并避免出现挫折。  
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/22/2017
   
  删除动画有多种不同的方法。 可以使用以下方法来移除属于的动画<xref:System.Windows.Media.Animation.Storyboard>。  
   
--   若要删除<xref:System.Windows.Media.Animation.Storyboard>入门事件的触发器，请参阅[如何： 删除情节提要](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee)。  
+-   若要删除<xref:System.Windows.Media.Animation.Storyboard>入门事件的触发器，请参阅[如何： 删除情节提要](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)。  
   
 -   若要使用代码以删除<xref:System.Windows.Media.Animation.Storyboard>，请参阅<xref:System.Windows.Media.Animation.Storyboard.Remove%2A>方法。  
   

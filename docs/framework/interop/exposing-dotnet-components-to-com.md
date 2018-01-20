@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 61e1dbdcf919ee6aa2150e6a57cb88a8aa859efe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3d34c60a5c2cae5abaa6763b935f6d11a29a39e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="exposing-net-framework-components-to-com"></a>向 COM 公开 .NET Framework 组件
 对开发人员而言，编写 .NET 类型以及从非托管代码使用该类型是不同的活动。 本部分介绍编写与 COM 客户端互操作的托管代码的几个提示：  
@@ -51,11 +51,11 @@ ms.lasthandoff: 12/22/2017
   
      COM 开发人员可使用当前使用的相同工具和技术引用程序集中的类型。  
   
-3.  [调用 .NET 对象](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)。  
+3.  [调用 .NET 对象](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)。  
   
      COM 开发人员可采用在任何非托管类型上调用方法的方式在 .NET 对象上调用方法。 例如，COM CoCreateInstance API 激活 .NET 对象。  
   
-4.  [为 COM 访问部署应用程序](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)。  
+4.  [为 COM 访问部署应用程序](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)。  
   
      具有强名称的程序集可安装在全局程序集缓存中，并向其发布者请求签名。 不具有强名称的程序集必须安装在客户端的应用程序目录中。  
   

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 906e92e0e440c7f4d9fb5d385cb36a341b45df17
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7e07da38f7a75226d48ef84cc8d2dafd48f6e795
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="queries-in-linq-to-dataset"></a>在 LINQ to DataSet 中查询
 查询是一种从数据源检索数据的表达式。 查询通常用专用查询语言表示，如用于关系数据库的 SQL 和用于 XML 的 XQuery。 因此，开发人员对于他们查询的每种类型的数据源或数据格式，都不得不学习一种新的查询语言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一种较为简单的一致模型，适用于各种数据源和格式的数据。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查询中，您始终使用编程对象。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/17/2018
   
  在返回一系列值的查询中，查询变量本身从不保存查询结果，它只存储查询命令。 查询的执行将推迟到在 `foreach` 或 `For Each` 循环中循环访问查询变量之后进行。 这称为*延迟执行*; 也就是说，查询执行发生一段时间后查询构造。 这意味着您可以根据需要频繁地执行查询。 例如，当您的数据库由其他应用程序不断更新时，此功能将会很有用。 在您的应用程序中，您可以创建查询以检索最新信息并重复执行查询，每次返回更新的信息。  
   
- 与返回一系列值的延迟查询相反，返回单一实例值的查询将立即执行。 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Average%2A> 和 <xref:System.Linq.Enumerable.First%2A> 是单一实例查询的一些示例。 因为需要查询结果来计算单一实例结果，因此这些查询将会立即执行。 例如，若要计算查询结果的平均值，则必须执行查询，以便求平均值函数具有要使用的输入数据。 您也可以对查询使用 <xref:System.Linq.Enumerable.ToList%2A> 或 <xref:System.Linq.Enumerable.ToArray%2A> 方法以强制立即执行不生成单一实例值的查询。 当想要缓存查询结果时，这些强制立即执行的技术可能会很有用。 有关延迟和立即执行查询的详细信息，请参阅[LINQ 入门](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)。  
+ 与返回一系列值的延迟查询相反，返回单一实例值的查询将立即执行。 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Average%2A> 和 <xref:System.Linq.Enumerable.First%2A> 是单一实例查询的一些示例。 因为需要查询结果来计算单一实例结果，因此这些查询将会立即执行。 例如，若要计算查询结果的平均值，则必须执行查询，以便求平均值函数具有要使用的输入数据。 您也可以对查询使用 <xref:System.Linq.Enumerable.ToList%2A> 或 <xref:System.Linq.Enumerable.ToArray%2A> 方法以强制立即执行不生成单一实例值的查询。 当想要缓存查询结果时，这些强制立即执行的技术可能会很有用。 有关延迟和立即执行查询的详细信息，请参阅[LINQ 入门](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)。  
   
 ## <a name="queries"></a>查询  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查询可以在两个不同的语法进行表述： 查询表达式语法和基于方法的查询语法。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 ### <a name="query-expression-syntax"></a>查询表达式语法  
  查询表达式是一种声明性查询语法。 此语法使开发人员能够以类似于 SQL 的格式用 C# 或 Visual Basic 编写查询。 通过使用查询表达式语法，你可以用最少的代码对数据源执行复杂的筛选、排序和分组操作。 有关详细信息，请参阅[LINQ 查询表达式](http://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4)和[基本查询操作 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
   
- 查询表达式语法是 C# 3.0 和 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] 中的新功能。 不过，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 公共语言运行库 (CLR) 无法读取查询表达式语法本身。 因此，在编译时，查询表达式将转换为 CLR 能理解的形式，即方法调用。 这些方法被称为*标准查询运算符*。 作为开发人员，您可以选择使用方法语法而不使用查询语法直接调用这些方法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。 有关如何使用标准查询运算符的详细信息，请参阅[不在生成中： LINQ 常规编程指南](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049)。  
+ 查询表达式语法是 C# 3.0 和 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] 中的新功能。 不过，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 公共语言运行库 (CLR) 无法读取查询表达式语法本身。 因此，在编译时，查询表达式将转换为 CLR 能理解的形式，即方法调用。 这些方法被称为*标准查询运算符*。 作为开发人员，您可以选择使用方法语法而不使用查询语法直接调用这些方法。 有关详细信息，请参阅 [LINQ 中的查询语法和方法语法](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。 有关如何使用标准查询运算符的详细信息，请参阅[不在生成中： LINQ 常规编程指南](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)。  
   
  下面的示例使用 <xref:System.Linq.Enumerable.Select%2A> 返回 `Product` 表中的所有行并显示产品名称。  
   

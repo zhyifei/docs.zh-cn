@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a126d3b21ddd4bd31e168726c3538de21fb7d956
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-type-recommendations"></a>控件类型建议
 .NET Framework 使你能够开发和实现新控件。 除了已熟悉的用户控件，现在你会发现你能够编写自定义控件用于执行其自己的绘制，甚至能够通过继承扩展现有控件的功能。 决定创建哪种类型的控件可能令人困惑。 本节重点介绍可以从其继承的各类控件之间的区别，并提供要为你的项目选择的类型的相关注意事项。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [演练：使用 Visual C# 从 Windows 窗体控件继承](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+-   [演练：使用 Visual C# 从 Windows 窗体控件继承](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
 -   [如何：为控件提供工具箱位图](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [演练：使用 Visual Basic 创作复合控件](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [演练：使用 Visual C# 创作复合控件](http://msdn.microsoft.com/en-us/library/a6h7e207\(v=vs.110\))  
+-   [演练：使用 Visual C# 创作复合控件](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
 -   [演练：使用 Visual Basic 从 Windows 窗体控件继承](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

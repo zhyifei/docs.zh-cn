@@ -18,23 +18,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ffb1a826bb37bddeefae9862e34f59096826685
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f8e38dc9560e2e5a35c709572333d0f84f38cda
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="label"></a>Label
 <xref:System.Windows.Controls.Label>控件通常提供中的信息[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。  从历史上看，<xref:System.Windows.Controls.Label>具有包含纯文本，但是，由于<xref:System.Windows.Controls.Label>附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]是<xref:System.Windows.Controls.ContentControl>，它可以包含文本或<xref:System.Windows.UIElement>。  
   
  A<xref:System.Windows.Controls.Label>提供访问密钥的功能和视觉支持。 它经常用于启用对控件进行快速的键盘访问，例如<xref:System.Windows.Controls.TextBox>。 若要将分配<xref:System.Windows.Controls.Label>到<xref:System.Windows.Controls.Control>，将其设置<xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType>到应在用户按下访问键时获得焦点的控件的属性。  
   
- 下图显示<xref:System.Windows.Controls.Label>"主题"面向<xref:System.Windows.Controls.ComboBox>。  当用户按下时，<xref:System.Windows.Controls.ComboBox>接收焦点。  有关详细信息，请参阅[如何： 设置标签的目标属性](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)。  
+ 下图显示<xref:System.Windows.Controls.Label>"主题"面向<xref:System.Windows.Controls.ComboBox>。  当用户按下时，<xref:System.Windows.Controls.ComboBox>接收焦点。  有关详细信息，请参阅[如何： 设置标签的目标属性](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)。  
   
  ![显示属性显示按用法标记](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何：设置 Label 的目标属性](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [如何：设置 Label 的目标属性](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Label>

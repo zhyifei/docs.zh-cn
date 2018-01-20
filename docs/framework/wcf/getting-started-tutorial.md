@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>入门教程
 本节中包含的主题旨在帮助您快速了解 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 编程体验。 这些主题要根据本主题底部的列表中的顺序完成。 通过学习本教程，您可以初步了解创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务和客户端应用程序所需的步骤。 服务公开一个或多个终结点，其中每个终结点都公开一项或多项服务操作。 *终结点*服务的指定的地址，其中可以找到服务，一个绑定，它包含描述客户端必须如何与该服务，并定义的功能的协定进行通信的信息向其客户端提供服务。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  如果你正在运行[!INCLUDE[wv](../../../includes/wv-md.md)]或更高版本的 Windows 操作系统中，你必须启动[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]通过转到开始菜单和右键单击 Visual Studio 2011 并选择**以管理员身份运行**。 若要始终以管理员身份可以创建一个快捷方式、 右键单击该快捷方式，选择属性，选择启动 Visual Studio 2011**兼容性**选项卡，然后选中**管理员身份运行此程序**复选框。 在使用此快捷方式启动 Visual Studio 2011 时，会总是以管理员身份运行。  
   
- 有关示例应用程序可以下载到您的硬盘和运行，请参阅中的主题[Windows Communication Foundation 示例](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)。 本主题，请参阅，特别是，[入门](../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+ 有关示例应用程序可以下载到您的硬盘和运行，请参阅中的主题[Windows Communication Foundation 示例](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)。 本主题，请参阅，特别是，[入门](../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
  有关创建服务和客户端的更多详细信息，请参阅[基本 WCF 编程](../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>相关章节  
- [Windows Communication Foundation 示例](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation 示例](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [基本编程生命周期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

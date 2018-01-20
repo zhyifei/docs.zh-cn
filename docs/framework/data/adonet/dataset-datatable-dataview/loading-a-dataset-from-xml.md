@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1d0c98224b8b508fec5fe584388872757a9dfdf3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>从 XML 加载数据集
 ADO.NET <xref:System.Data.DataSet> 的内容可以从 XML 流或文档创建。 此外，利用 .NET Framework，您可以相当灵活地控制从 XML 中加载哪些信息以及如何创建 <xref:System.Data.DataSet> 的架构（即关系结构）。  
   
- 若要填充<xref:System.Data.DataSet>与 XML 中的数据，使用**ReadXml**方法<xref:System.Data.DataSet>对象。 **ReadXml**方法从文件、 流，读取或**XmlReader**，并将作为自变量的 XML 以及可选的源**XmlReadMode**自变量。 (有关详细信息**XmlReader**，请参阅[NIB： 读取 XML 数据与 XmlTextReader](http://msdn.microsoft.com/en-us/762c069b-b50c-41b8-936e-39eacfb0d540)。)**ReadXml**方法读取 XML 流或文档和加载的内容<xref:System.Data.DataSet>使用数据。 它还将创建的关系架构<xref:System.Data.DataSet>具体取决于**XmlReadMode**指定，并且是否关系架构已存在。  
+ 若要填充<xref:System.Data.DataSet>与 XML 中的数据，使用**ReadXml**方法<xref:System.Data.DataSet>对象。 **ReadXml**方法从文件、 流，读取或**XmlReader**，并将作为自变量的 XML 以及可选的源**XmlReadMode**自变量。 (有关详细信息**XmlReader**，请参阅[NIB： 读取 XML 数据与 XmlTextReader](http://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540)。)**ReadXml**方法读取 XML 流或文档和加载的内容<xref:System.Data.DataSet>使用数据。 它还将创建的关系架构<xref:System.Data.DataSet>具体取决于**XmlReadMode**指定，并且是否关系架构已存在。  
   
  下表描述的选项**XmlReadMode**自变量。  
   

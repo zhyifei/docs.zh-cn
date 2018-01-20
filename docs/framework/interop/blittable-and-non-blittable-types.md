@@ -17,11 +17,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 68e1d66b615db7369d71f56b402c13ce41ad5e54
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 10e9f4be3d02ac24c70c4a370ed96ff0dada130a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="blittable-and-non-blittable-types"></a>可直接复制到本机结构中的类型和非直接复制到本机结构中的类型
 大多数数据类型在托管和非托管内存中具有共同的表示形式，而且不需要互操作封送处理程序进行特殊处理。 这些类型称为 blittable 类型，因为它们在托管和非托管代码之间传递时不需要进行转换。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 -   所有 blittable 类型的一维数组，如整数数组。 但是，包含 blittable 类型变量数组的类型本身不是 blittable 类型。  
   
--   所有只包含 blittable 类型（和作为格式化类型进行封送的类）的格式化的值类型。 有关格式化的值类型的详细信息，请参阅[值类型的默认封送处理](http://msdn.microsoft.com/en-us/4d9a876c-e05a-40ba-bd85-bd22877f984a)。  
+-   所有只包含 blittable 类型（和作为格式化类型进行封送的类）的格式化的值类型。 有关格式化的值类型的详细信息，请参阅[值类型的默认封送处理](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a)。  
   
  对象引用不是 blittable 类型。 这包括本身是 blittable 的对象的引用数组。 例如，可以定义一个属于 blittable 类型的结构，但不能定义包含这些结构的引用数组的 blittable 类型。  
   
@@ -66,18 +66,18 @@ ms.lasthandoff: 12/22/2017
   
  在非托管环境中，某些托管数据类型要求具有不同的表示形式。 必须将这些 non-blittable 数据类型转换为可以封送的形式。 例如，托管字符串就是 non-blittable 类型，因为这些字符串必须转换为字符串对象后才能进行封送。  
   
- 下表列出了 <xref:System> 命名空间中的 non-blittable 类型。 [委托](http://msdn.microsoft.com/en-us/d176ee76-f982-494b-b03d-92e4118896e2)是引用静态方法或类实例的数据结构，也是 non-blittable 类型。  
+ 下表列出了 <xref:System> 命名空间中的 non-blittable 类型。 [委托](http://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2)是引用静态方法或类实例的数据结构，也是 non-blittable 类型。  
   
 |Non-blittable 类型|描述|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
-|[System.Boolean](http://msdn.microsoft.com/en-us/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|转换为 1、2 或 4 字节的值，`true` 表示 1 或 -1。|  
-|[System.Char](http://msdn.microsoft.com/en-us/cecc87c1-075e-4cde-aa56-33d189f66feb)|转换为 Unicode 或 ANSI 字符。|  
-|[System.Class](http://msdn.microsoft.com/en-us/fe334af5-0123-43d8-be84-26f6f023ddb6)|转换为类接口。|  
+|[System.Boolean](http://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|转换为 1、2 或 4 字节的值，`true` 表示 1 或 -1。|  
+|[System.Char](http://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb)|转换为 Unicode 或 ANSI 字符。|  
+|[System.Class](http://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6)|转换为类接口。|  
 |[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|转换为变量或接口。|  
 |[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
 |[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|转换为空引用中的终止字符串或转换为 BSTR。|  
-|[System.Valuetype](http://msdn.microsoft.com/en-us/4d9a876c-e05a-40ba-bd85-bd22877f984a)|转换为具有固定内存布局的结构。|  
+|[System.Valuetype](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a)|转换为具有固定内存布局的结构。|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
   
  类和对象类型仅受 COM 互操作支持。 有关 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的相应类型的信息，请参阅[类库概述](../../../docs/standard/class-library-overview.md)。  

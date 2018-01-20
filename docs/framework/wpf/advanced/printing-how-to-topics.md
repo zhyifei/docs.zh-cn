@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd76921059222c9c5b8958ce8e1761a3f04cb037
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="printing-how-to-topics"></a>打印帮助主题
 此部分中的主题演示如何使用打印和打印系统管理功能附带[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]打印路径。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  [枚举一部分打印队列](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  有关生成的具有某些特征的打印机列表的说明。  
   
- [NOTINBUILD： 如何： 扩展打印架构并创建新的打印系统类](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD： 如何： 扩展打印架构并创建新的打印系统类](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  扩展的讨论了如何将托管的代码的程序员可以扩展到专业打印设备或添加新的或不常见功能的打印机打印架构。  
   
  [在不使用反射的情况下获取打印系统对象属性](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  

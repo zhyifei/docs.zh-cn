@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c945d23def3bbf6284e7e0db95d391066256df6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tooltip-overview"></a>ToolTip 概述
 工具提示是当用户将鼠标指针暂停元素，如过度时显示一个小型弹出窗口<xref:System.Windows.Controls.Button>。 本主题介绍工具提示，并讨论如何创建和自定义工具提示内容。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>使用 ToolTipService 的 Time Interval 属性  
  <xref:System.Windows.Controls.ToolTipService>类提供了以下属性，你才能设置工具提示显示时间： <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>， <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>，和<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>。  
   
- 使用<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>和<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>属性指定的延迟通常很短，之前<xref:System.Windows.Controls.ToolTip>显示并且还可指定多长时间<xref:System.Windows.Controls.ToolTip>保持可见。 有关详细信息，请参阅[如何：延迟 ToolTip 的显示](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7)。  
+ 使用<xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>和<xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>属性指定的延迟通常很短，之前<xref:System.Windows.Controls.ToolTip>显示并且还可指定多长时间<xref:System.Windows.Controls.ToolTip>保持可见。 有关详细信息，请参阅[如何：延迟 ToolTip 的显示](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7)。  
   
  <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>属性确定是否为不同的控件的工具提示不经历初始延迟时显示你将鼠标指针移动快速它们之间。 有关详细信息<xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>属性，请参阅[使用 BetweenShowDelay 属性](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)。  
   

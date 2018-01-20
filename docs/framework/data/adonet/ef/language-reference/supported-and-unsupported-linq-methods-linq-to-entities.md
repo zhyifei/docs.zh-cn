@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 17fc714acd85b065dbbfa6812d3b55970d5523a2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 58fa10c62819979bfad15e4cae49118d25ed8670
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支持和不支持的 LINQ 方法 (LINQ to Entities)
 本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持和不支持的语言集成查询 (LINQ) 标准查询运算符的信息。 许多 LINQ 标准查询运算符都有可接受整数自变量的重载版本。 该整数参数对应于正在操作的序列中从零开始的索引，<xref:System.Collections.Generic.IEqualityComparer%601> 或 <xref:System.Collections.Generic.IComparer%601>。 除非专门指定，否则这些 LINQ 标准查询运算符的重载版本并不受支持，尝试使用它们将引发异常。  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/17/2018
 |<xref:System.Linq.Queryable.Sum%2A>|不支持|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>类型方法  
- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中支持用于处理 CLR 类型转换和测试的 LINQ 标准查询运算符。 LINQ to Entities 中仅支持映射到概念模型类型的 CLR 类型。 有关概念模型类型的列表，请参阅[概念模型类型 (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4)。 下表列出了支持的和不支持的类型方法。  
+ [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中支持用于处理 CLR 类型转换和测试的 LINQ 标准查询运算符。 LINQ to Entities 中仅支持映射到概念模型类型的 CLR 类型。 有关概念模型类型的列表，请参阅[概念模型类型 (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。 下表列出了支持的和不支持的类型方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  

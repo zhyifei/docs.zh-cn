@@ -17,21 +17,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: efb968d40e54c7552fba0a592e759f9e83c92309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13b42405a0faf721c46476aadaa0cff8163883c1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;元素
 指定是否从远程数据源的程序集应被授予完全信任。  
   
 > [!NOTE]
->  如果你已由于采用 Visual Studio 项目错误列表或生成错误的错误消息定向到本主题，请参阅[如何： 使用 Visual Studio 中的来自 Web 的程序集](http://msdn.microsoft.com/en-us/d8635b63-89a0-41aa-90f4-f351b2111070)。  
+>  如果你已由于采用 Visual Studio 项目错误列表或生成错误的错误消息定向到本主题，请参阅[如何： 使用 Visual Studio 中的来自 Web 的程序集](http://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)。  
   
  \<configuration>  
-\<运行时 >  
-\<loadFromRemoteSources >  
+\<runtime>  
+\<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关运行时初始化选项的信息。|  

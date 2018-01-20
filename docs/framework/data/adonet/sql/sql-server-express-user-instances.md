@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 55f3393c84ec08d3c3944552ac2bed7d15dd025f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 用户实例
 Microsoft SQL Server 学习版 (SQL Server Express) 支持用户实例功能，只有在使用用于 SQL Server 的 .NET Framework 数据提供程序 (`SqlClient`) 时该功能才可用。 用户实例是 SQL Server Express 数据库引擎的单独实例，该单独实例由父实例生成。 不是其本地计算机的管理员的用户可以将用户实例附加和连接到 SQL Server Express 数据库。 在每个用户一个实例的基础上，每个实例在单个用户的安全上下文中运行。  
@@ -157,7 +157,7 @@ private static void OpenSqlConnection()
   
 -   不需要共享数据的任何单用户应用程序。  
   
--   ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息，请参阅[ClickOnce 部署的 Windows 窗体应用程序](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df)。  
+-   ClickOnce 部署。 如果 .NET Framework 2.0（或更高版本）和 SQL Server Express 已安装在目标计算机上，则可以由非管理员用户安装并使用通过 ClickOnce 操作而下载的安装程序包。 请注意，如果 SQL Server Express 为安装程序的一部分，则管理员必须安装 SQL Server Express。 有关详细信息，请参阅[ClickOnce 部署的 Windows 窗体应用程序](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)。  
   
 -   使用 Windows 身份验证的专用 ASP.NET 宿主。 Intranet 上可以承载单个 SQL Server Express 实例。 应用程序使用 ASPNET Windows 帐户进行连接，而不是使用模拟进行连接。 用户实例不应用于第三方或共享宿主方案中，在这样的方案中，所有应用程序将共享同一用户实例，而不再保持彼此独立。  
   

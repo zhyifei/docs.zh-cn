@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfeacc0d4fb736c523538896246b0f406f995fa7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework 中的数据和建模
 本节提供有关如何使用 ADO.NET、语言集成查询 (LINQ)、WCF 数据服务和 XML 访问数据的信息。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  描述 ADO.NET 结构，并介绍如何使用 ADO.NET 类管理应用程序数据和与数据源（包括 Microsoft SQL Server、OLE DB 数据源和 XML）进行交互。  
   
- [LINQ 门户网站](http://msdn.microsoft.com/en-us/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [LINQ 门户网站](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  提供指向语言集成查询 (LINQ) 的相关文档的链接。  
   
  [事务处理](../../../docs/framework/data/transactions/index.md)  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  [XML 文档和数据](../../../docs/standard/data/xml/index.md)  
  概述了对 .NET Framework 中的 XML 文档和数据有用的一组全面、集成的类。  
   
- [XML 标准参考](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
+ [XML 标准参考](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  提供有关 Microsoft 支持的 XML 标准的参考信息。  
   
 ## <a name="related-sections"></a>相关章节  

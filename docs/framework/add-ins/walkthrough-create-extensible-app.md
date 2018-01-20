@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>演练：创建可扩展的应用程序
 本演练介绍如何创建用于执行简单的计算器功能的外接程序的管道。 它并不演示实际方案;相反，它演示了管道以及如何外接程序可以提供主机服务的基本功能。  
@@ -52,11 +52,11 @@ ms.lasthandoff: 12/22/2017
   
 -   运行主机应用程序。  
   
- 此管道传递仅可序列化的类型 (<xref:System.Double>和<xref:System.String>)、 主机和外接程序之间。 有关示例，演示如何将传递复杂数据类型的集合，请参阅[演练： 将集合传递之间主机和外接程序](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)。  
+ 此管道传递仅可序列化的类型 (<xref:System.Double>和<xref:System.String>)、 主机和外接程序之间。 有关示例，演示如何将传递复杂数据类型的集合，请参阅[演练： 将集合传递之间主机和外接程序](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)。  
   
  此管道协定定义四个算术运算的对象模型： 添加、 减、 乘和除。 主机外接程序提供的公式来计算，如 2 + 2，和外接程序将结果返回给主机。  
   
- 版本 2 的计算器外接程序提供更多的计算的可能性，并演示版本控制。 中描述的那样[演练： 启用作为主机所做的更改的向后兼容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
+ 版本 2 的计算器外接程序提供更多的计算的可能性，并演示版本控制。 中描述的那样[演练： 启用作为主机所做的更改的向后兼容性](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
   
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你需要具备以下条件：  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 2.  将解决方案命名`CalculatorV1`。  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>创建管线目录结构  
- 外接程序模型需要置于指定的目录结构中的管道段程序集。 有关管道结构的详细信息，请参阅[管线开发要求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+ 外接程序模型需要置于指定的目录结构中的管道段程序集。 有关管道结构的详细信息，请参阅[管线开发要求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
 #### <a name="to-create-the-pipeline-directory-structure"></a>若要创建管线目录结构  
   
@@ -92,10 +92,10 @@ ms.lasthandoff: 12/22/2017
       HostSideAdapters  
     ```  
   
-     不需要将管道文件夹结构放在应用程序文件夹中;它仅为方便起见在此处完成。 在相应的步骤，本演练说明如何更改代码，如果管道文件夹结构是在不同的位置。 请参阅中的管道 directory 要求讨论[管线开发要求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+     不需要将管道文件夹结构放在应用程序文件夹中;它仅为方便起见在此处完成。 在相应的步骤，本演练说明如何更改代码，如果管道文件夹结构是在不同的位置。 请参阅中的管道 directory 要求讨论[管线开发要求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
     > [!NOTE]
-    >  `CalcV2`文件夹不会使用在本演练中; 它是一个占位符，供[演练： 启用作为主机所做的更改的向后兼容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
+    >  `CalcV2`文件夹不会使用在本演练中; 它是一个占位符，供[演练： 启用作为主机所做的更改的向后兼容性](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)。  
   
 ## <a name="creating-the-contract-and-views"></a>正在创建协定和视图  
  此管道的合约段定义`ICalc1Contract`接口，定义四个方法： `add`， `subtract`， `multiply`，和`divide`。  
@@ -204,7 +204,7 @@ ms.lasthandoff: 12/22/2017
   
  此管道中外接程序提供服务对主机和类型流从外接程序到主机。 由于没有类型流向从主机到外接程序，你无需包括视图协定适配器。  
   
- 若要实现生存期管理，使用<xref:System.AddIn.Pipeline.ContractHandle>对象以将生存期令牌附加到的协定。 按顺序生存期管理工作，必须保持对此句柄的引用。 应用令牌后，无需任何其他编程是必需的因为外接程序系统可以的对象时释放它们不再使用，并使它们可供垃圾回收。 有关详细信息，请参阅 [生存期管理](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
+ 若要实现生存期管理，使用<xref:System.AddIn.Pipeline.ContractHandle>对象以将生存期令牌附加到的协定。 按顺序生存期管理工作，必须保持对此句柄的引用。 应用令牌后，无需任何其他编程是必需的因为外接程序系统可以的对象时释放它们不再使用，并使它们可供垃圾回收。 有关详细信息，请参阅[生命期管理](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5)。  
   
 #### <a name="to-create-the-host-side-adapter"></a>若要创建的主机端适配器  
   
@@ -328,7 +328,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  对于每个项目解决方案中，使用**生成**选项卡**项目属性**(**编译**在 Visual Basic 中的选项卡) 若要设置的值**输出路径** (**生成输出路径**在 Visual Basic 中)。 如果名为应用程序文件夹`MyApp`，例如，你的项目将生成到以下文件夹：  
   
-    |Project|路径|  
+    |项目|路径|  
     |-------------|----------|  
     |AddInCalcV1|MyApp\Pipeline\AddIns\CalcV1|  
     |Calc1AddInSideAdapter|MyApp\Pipeline\AddInSideAdapters|  
@@ -339,7 +339,7 @@ ms.lasthandoff: 12/22/2017
     |Calc1HVA|MyApp|  
   
     > [!NOTE]
-    >  如果你决定将管道文件夹结构放在应用程序文件夹以外的位置，则必须修改相应的表所示的路径。 请参阅中的管道 directory 要求讨论[管线开发要求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+    >  如果你决定将管道文件夹结构放在应用程序文件夹以外的位置，则必须修改相应的表所示的路径。 请参阅中的管道 directory 要求讨论[管线开发要求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
 2.  生成 Visual Studio 解决方案。  
   
@@ -348,7 +348,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  如果你并未更改**Copy Local**到**False**为`Calc1AddInView`项目中的引用`AddInCalcV1`项目中，加载程序上下文问题将阻止外接程序位于。  
   
-     有关将部署到管道的信息，请参阅[管线开发要求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
+     有关将部署到管道的信息，请参阅[管线开发要求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)。  
   
 ## <a name="running-the-host-application"></a>运行主机应用程序  
  现在你就可以运行主机并与外接程序进行交互。  
@@ -364,8 +364,8 @@ ms.lasthandoff: 12/22/2017
 4.  类型**退出**按**Enter**键关闭应用程序。  
   
 ## <a name="see-also"></a>请参阅  
- [演练： 启用主机更改为向后的兼容性](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [主机和外接程序之间的演练： 传递集合](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [管线开发要求](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [协定、 视图和适配器](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [演练： 启用主机更改为向后的兼容性](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [主机和外接程序之间的演练： 传递集合](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+ [管线开发要求](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+ [协定、 视图和适配器](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [管道开发](../../../docs/framework/add-ins/pipeline-development.md)
