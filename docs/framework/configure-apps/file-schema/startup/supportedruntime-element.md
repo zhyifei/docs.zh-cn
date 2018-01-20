@@ -16,38 +16,38 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;元素
+
 指定应用程序支持的公共语言运行时版本。 此元素应由用 .NET Framework 1.1 版或更高版本生成的所有应用程序使用。  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
-
-[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
-**\<supportedRuntime>**  
-  
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>语法
   
 ```xml  
 <supportedRuntime version="runtime version" sku="sku id"/>  
 ```  
   
-## <a name="attributes"></a>特性  
+## <a name="attributes"></a>特性
   
 |特性|描述|  
 |---------------|-----------------|  
 |**version**|可选特性。<br /><br /> 一个字符串值，它指定此应用程序支持的公共语言运行时 (CLR) 版本。 有关有效值的`version`属性，请参阅["运行时版本"值](#version)部分。 **注意：**通过.NET Framework 3.5，"*运行时版本*"值的形式*主要*。*次要*。*生成*。 从 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 开始，仅主版本号和次版本号是必需的（即“v4.0”而不是“v4.0.30319”）。 建议使用较短字符串。|  
 |**sku**|可选特性。<br /><br /> 一个字符串值，该值指定库存单位 (SKU)，库存单位则指定此应用程序支持的 .NET Framework 版本。<br /><br /> 从.NET Framework 4.0、 使用`sku`建议属性。  若存在该特性，则它指示应用面向的 .NET Framework 版本。<br /><br /> 有关有效的 sku 属性的值，请参阅["sku id"值](#sku)部分。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>备注
+
 如果 **\<supportedRuntime >**元素不存在应用程序配置文件中，使用用于生成应用程序的运行时的版本。  
 
- **\<SupportedRuntime >**元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)元素。  
+**\<SupportedRuntime >**元素应由使用版本 1.1 或更高版本的运行时生成的所有应用程序。 为支持仅运行时 1.0 版而生成的应用程序必须使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)元素。  
   
 > [!NOTE]
 >  如果你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函数来指定配置文件，必须使用`<requiredRuntime>`所有的运行时版本的元素。 `<supportedRuntime>`元素将被忽略，当你使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
@@ -72,9 +72,9 @@ ms.lasthandoff: 12/22/2017
 |3.5|"v2.0.50727"|  
 |4.0-4.7.1|"v4.0"|  
 
-  
 <a name="sku"></a>   
-## <a name="sku-id-values"></a>“SKU ID”值  
+## <a name="sku-id-values"></a>“SKU ID”值
+
 `sku`属性使用目标框架名字对象 (TFM) 以指示应用面向的且运行所需的.NET framework 的版本。 下表列出了支持的有效值`sku`属性，从.NET Framework 4 开始。
   
 |.NET Framework 版本|`sku` 特性|  
@@ -92,9 +92,9 @@ ms.lasthandoff: 12/22/2017
 |4.5.2|".NETFramework,Version=v4.5"|  
 |4.6|".NETFramework,Version=v4.5"|  
 |4.6.1|".NETFramework,Version=v4.5"|  
-|4.6.2|".NETFramework，Version = v4.6.2"|  
-|4.7|".NETFramework，Version = v4.7"|
-|4.7.1|".NETFramework，Version = 4.7.1"|
+|4.6.2|".NETFramework,Version=v4.6.2"|  
+|4.7|".NETFramework,Version=v4.7"|
+|4.7.1|".NETFramework,Version=v4.7.1"|
 
 ## <a name="example"></a>示例  
  下面的示例演示如何在配置文件中指定支持的运行时版本。 该配置文件指示应用面向.NET Framework 4.7。  
@@ -107,10 +107,12 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="configuration-file"></a>配置文件  
- 此元素可用于应用程序配置文件中。  
-  
-## <a name="see-also"></a>请参阅  
+## <a name="configuration-file"></a>配置文件
+
+此元素可用于应用程序配置文件中。
+
+## <a name="see-also"></a>请参阅
+
  [启动设置架构](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [进程内并行执行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+ [进程内并行执行](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
