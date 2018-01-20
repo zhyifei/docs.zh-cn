@@ -1,5 +1,5 @@
 ---
-title: "&lt;自定义&gt;"
+title: '&lt;custom&gt;'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,23 +14,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bcab1e8361448abfe14db8ac38a924c656b9065
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ba9c8f6fa5bf574bdcaa9cb46b6c666e7117a9a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltcustomgt"></a><span data-ttu-id="d4b82-102">&lt;自定义&gt;</span><span class="sxs-lookup"><span data-stu-id="d4b82-102">&lt;custom&gt;</span></span>
-<span data-ttu-id="d4b82-103">指定自定义对等解析程序服务的设置。</span><span class="sxs-lookup"><span data-stu-id="d4b82-103">Specifies settings for a custom peer resolver service.</span></span>  
+# <a name="ltcustomgt"></a><span data-ttu-id="4a749-102">&lt;custom&gt;</span><span class="sxs-lookup"><span data-stu-id="4a749-102">&lt;custom&gt;</span></span>
+<span data-ttu-id="4a749-103">指定自定义对等解析程序服务的设置。</span><span class="sxs-lookup"><span data-stu-id="4a749-103">Specifies settings for a custom peer resolver service.</span></span>  
   
-<span data-ttu-id="d4b82-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="d4b82-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="d4b82-105">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="d4b82-105">\<bindings></span></span>  
-<span data-ttu-id="d4b82-106">\<netPeerBinding ></span><span class="sxs-lookup"><span data-stu-id="d4b82-106">\<netPeerBinding></span></span>  
-<span data-ttu-id="d4b82-107">\<绑定 ></span><span class="sxs-lookup"><span data-stu-id="d4b82-107">\<binding></span></span>  
-<span data-ttu-id="d4b82-108">\<冲突解决程序 ></span><span class="sxs-lookup"><span data-stu-id="d4b82-108">\<resolver></span></span>  
-<span data-ttu-id="d4b82-109">\<自定义 ></span><span class="sxs-lookup"><span data-stu-id="d4b82-109">\<custom></span></span>  
+<span data-ttu-id="4a749-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="4a749-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="4a749-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="4a749-105">\<bindings></span></span>  
+<span data-ttu-id="4a749-106">\<netPeerBinding></span><span class="sxs-lookup"><span data-stu-id="4a749-106">\<netPeerBinding></span></span>  
+<span data-ttu-id="4a749-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="4a749-107">\<binding></span></span>  
+<span data-ttu-id="4a749-108">\<resolver></span><span class="sxs-lookup"><span data-stu-id="4a749-108">\<resolver></span></span>  
+<span data-ttu-id="4a749-109">\<custom></span><span class="sxs-lookup"><span data-stu-id="4a749-109">\<custom></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4b82-110">语法</span><span class="sxs-lookup"><span data-stu-id="d4b82-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a749-110">语法</span><span class="sxs-lookup"><span data-stu-id="4a749-110">Syntax</span></span>  
   
 ```xml
 <custom address="Uri" 
@@ -40,36 +40,36 @@ ms.lasthandoff: 12/22/2017
 </custom>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d4b82-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="d4b82-111">Attributes and Elements</span></span>  
- <span data-ttu-id="d4b82-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="d4b82-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4a749-111">特性和元素</span><span class="sxs-lookup"><span data-stu-id="4a749-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="4a749-112">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="4a749-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d4b82-113">特性</span><span class="sxs-lookup"><span data-stu-id="d4b82-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4a749-113">特性</span><span class="sxs-lookup"><span data-stu-id="4a749-113">Attributes</span></span>  
   
-|<span data-ttu-id="d4b82-114">特性</span><span class="sxs-lookup"><span data-stu-id="d4b82-114">Attribute</span></span>|<span data-ttu-id="d4b82-115">描述</span><span class="sxs-lookup"><span data-stu-id="d4b82-115">Description</span></span>|  
+|<span data-ttu-id="4a749-114">特性</span><span class="sxs-lookup"><span data-stu-id="4a749-114">Attribute</span></span>|<span data-ttu-id="4a749-115">描述</span><span class="sxs-lookup"><span data-stu-id="4a749-115">Description</span></span>|  
 |---------------|-----------------|  
-|`address`|<span data-ttu-id="d4b82-116">一个 URI，指定承载自定义对等解析程序服务的对等节点的终结点地址。</span><span class="sxs-lookup"><span data-stu-id="d4b82-116">A URI that specifies the endpoint address of the peer node that hosts the custom peer resolver service.</span></span>|  
-|`resolverType`|<span data-ttu-id="d4b82-117">一个字符串值，指定自定义对等解析程序服务的类型。</span><span class="sxs-lookup"><span data-stu-id="d4b82-117">A string that specifies the type of the custom peer resolver service.</span></span>|  
+|`address`|<span data-ttu-id="4a749-116">一个 URI，指定承载自定义对等解析程序服务的对等节点的终结点地址。</span><span class="sxs-lookup"><span data-stu-id="4a749-116">A URI that specifies the endpoint address of the peer node that hosts the custom peer resolver service.</span></span>|  
+|`resolverType`|<span data-ttu-id="4a749-117">一个字符串值，指定自定义对等解析程序服务的类型。</span><span class="sxs-lookup"><span data-stu-id="4a749-117">A string that specifies the type of the custom peer resolver service.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d4b82-118">子元素</span><span class="sxs-lookup"><span data-stu-id="d4b82-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4a749-118">子元素</span><span class="sxs-lookup"><span data-stu-id="4a749-118">Child Elements</span></span>  
   
-|<span data-ttu-id="d4b82-119">元素</span><span class="sxs-lookup"><span data-stu-id="d4b82-119">Element</span></span>|<span data-ttu-id="d4b82-120">描述</span><span class="sxs-lookup"><span data-stu-id="d4b82-120">Description</span></span>|  
+|<span data-ttu-id="4a749-119">元素</span><span class="sxs-lookup"><span data-stu-id="4a749-119">Element</span></span>|<span data-ttu-id="4a749-120">描述</span><span class="sxs-lookup"><span data-stu-id="4a749-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d4b82-121">\<标识 ></span><span class="sxs-lookup"><span data-stu-id="d4b82-121">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="d4b82-122">指定配置了此元素的自定义对等解析程序的标识。</span><span class="sxs-lookup"><span data-stu-id="d4b82-122">Specifies the identity for custom peer resolvers configured with this element.</span></span> <span data-ttu-id="d4b82-123">此元素的类型为 <xref:System.ServiceModel.Configuration.IdentityElement>。</span><span class="sxs-lookup"><span data-stu-id="d4b82-123">This element is of type <xref:System.ServiceModel.Configuration.IdentityElement>.</span></span>|  
-|[<span data-ttu-id="d4b82-124">\<标头 ></span><span class="sxs-lookup"><span data-stu-id="d4b82-124">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="d4b82-125">一个地址标头集合，可用于由自定义对等解析程序处理的 SOAP 消息。</span><span class="sxs-lookup"><span data-stu-id="d4b82-125">A collection of address header used for SOAP messages handled by the custom peer resolver.</span></span>|  
+|[<span data-ttu-id="4a749-121">\<identity></span><span class="sxs-lookup"><span data-stu-id="4a749-121">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="4a749-122">指定配置了此元素的自定义对等解析程序的标识。</span><span class="sxs-lookup"><span data-stu-id="4a749-122">Specifies the identity for custom peer resolvers configured with this element.</span></span> <span data-ttu-id="4a749-123">此元素的类型为 <xref:System.ServiceModel.Configuration.IdentityElement>。</span><span class="sxs-lookup"><span data-stu-id="4a749-123">This element is of type <xref:System.ServiceModel.Configuration.IdentityElement>.</span></span>|  
+|[<span data-ttu-id="4a749-124">\<headers></span><span class="sxs-lookup"><span data-stu-id="4a749-124">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="4a749-125">一个地址标头集合，可用于由自定义对等解析程序处理的 SOAP 消息。</span><span class="sxs-lookup"><span data-stu-id="4a749-125">A collection of address header used for SOAP messages handled by the custom peer resolver.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="d4b82-126">父元素</span><span class="sxs-lookup"><span data-stu-id="d4b82-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4a749-126">父元素</span><span class="sxs-lookup"><span data-stu-id="4a749-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="d4b82-127">元素</span><span class="sxs-lookup"><span data-stu-id="d4b82-127">Element</span></span>|<span data-ttu-id="d4b82-128">描述</span><span class="sxs-lookup"><span data-stu-id="d4b82-128">Description</span></span>|  
+|<span data-ttu-id="4a749-127">元素</span><span class="sxs-lookup"><span data-stu-id="4a749-127">Element</span></span>|<span data-ttu-id="4a749-128">描述</span><span class="sxs-lookup"><span data-stu-id="4a749-128">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d4b82-129">\<冲突解决程序 ></span><span class="sxs-lookup"><span data-stu-id="d4b82-129">\<resolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|<span data-ttu-id="d4b82-130">一个对等解析程序，可用于将对等网格 ID 解析为一组对等节点地址，这些地址表示参与网格的若干节点。</span><span class="sxs-lookup"><span data-stu-id="d4b82-130">A peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>|  
+|[<span data-ttu-id="4a749-129">\<resolver></span><span class="sxs-lookup"><span data-stu-id="4a749-129">\<resolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|<span data-ttu-id="4a749-130">一个对等解析程序，可用于将对等网格 ID 解析为一组对等节点地址，这些地址表示参与网格的若干节点。</span><span class="sxs-lookup"><span data-stu-id="4a749-130">A peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d4b82-131">备注</span><span class="sxs-lookup"><span data-stu-id="d4b82-131">Remarks</span></span>  
- <span data-ttu-id="d4b82-132">此元素可定义自定义对等解析程序服务的基本设置，其中包括执行服务的对等解析程序的终结点地址和所有特定绑定设置。</span><span class="sxs-lookup"><span data-stu-id="d4b82-132">This element defines the basic settings for a custom peer resolver service, including the endpoint address of the peer hosting the service and any specific binding settings.</span></span> <span data-ttu-id="d4b82-133">有关创建自定义解析程序的详细信息，请参阅[向对等通道应用程序添加自定义解析程序](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)。</span><span class="sxs-lookup"><span data-stu-id="d4b82-133">For more information on creating a custom resolver, see [Adding a Custom Resolver to a PeerChannel Application](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4a749-131">备注</span><span class="sxs-lookup"><span data-stu-id="4a749-131">Remarks</span></span>  
+ <span data-ttu-id="4a749-132">此元素可定义自定义对等解析程序服务的基本设置，其中包括执行服务的对等解析程序的终结点地址和所有特定绑定设置。</span><span class="sxs-lookup"><span data-stu-id="4a749-132">This element defines the basic settings for a custom peer resolver service, including the endpoint address of the peer hosting the service and any specific binding settings.</span></span> <span data-ttu-id="4a749-133">有关创建自定义解析程序的详细信息，请参阅[向对等通道应用程序添加自定义解析程序](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)。</span><span class="sxs-lookup"><span data-stu-id="4a749-133">For more information on creating a custom resolver, see [Adding a Custom Resolver to a PeerChannel Application](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4b82-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="d4b82-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4a749-134">请参阅</span><span class="sxs-lookup"><span data-stu-id="4a749-134">See Also</span></span>  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
  <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
- [<span data-ttu-id="d4b82-135">对等解析程序</span><span class="sxs-lookup"><span data-stu-id="d4b82-135">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [<span data-ttu-id="d4b82-136">将自定义解析程序添加到对等通道应用程序</span><span class="sxs-lookup"><span data-stu-id="d4b82-136">Adding a Custom Resolver to a PeerChannel Application</span></span>](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)
+ [<span data-ttu-id="4a749-135">对等解析程序</span><span class="sxs-lookup"><span data-stu-id="4a749-135">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
+ [<span data-ttu-id="4a749-136">将自定义解析程序添加到对等通道应用程序</span><span class="sxs-lookup"><span data-stu-id="4a749-136">Adding a Custom Resolver to a PeerChannel Application</span></span>](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

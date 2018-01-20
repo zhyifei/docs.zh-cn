@@ -19,46 +19,46 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ed9669479a3854c843716a1aeb37f7701ea7d7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 121cbc1c07ea8f6458df81d861aea3f8e1f91086
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="086ae-102">如何：将初始屏幕添加到 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="086ae-102">How to: Add a Splash Screen to a WPF Application</span></span>
-<span data-ttu-id="086ae-103">本主题演示如何将添加一个启动窗口中，或*初始屏幕*，到 Windows Presentation Foundation (WPF) 应用程序。</span><span class="sxs-lookup"><span data-stu-id="086ae-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>  
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="83aa3-102">如何：将初始屏幕添加到 WPF 应用程序</span><span class="sxs-lookup"><span data-stu-id="83aa3-102">How to: Add a Splash Screen to a WPF Application</span></span>
+<span data-ttu-id="83aa3-103">本主题演示如何将添加一个启动窗口中，或*初始屏幕*，到 Windows Presentation Foundation (WPF) 应用程序。</span><span class="sxs-lookup"><span data-stu-id="83aa3-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>  
   
-### <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="086ae-104">若要将现有映像添加为初始屏幕</span><span class="sxs-lookup"><span data-stu-id="086ae-104">To add an existing image as a splash screen</span></span>  
+### <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="83aa3-104">若要将现有映像添加为初始屏幕</span><span class="sxs-lookup"><span data-stu-id="83aa3-104">To add an existing image as a splash screen</span></span>  
   
-1.  <span data-ttu-id="086ae-105">创建或查找你想要用于初始屏幕的映像。</span><span class="sxs-lookup"><span data-stu-id="086ae-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="086ae-106">你可以使用任何图像格式受支持的 Windows 映像组件 (WIC)。</span><span class="sxs-lookup"><span data-stu-id="086ae-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="086ae-107">例如，你可以使用 BMP、 GIF、 JPEG、 PNG 或 TIFF 格式。</span><span class="sxs-lookup"><span data-stu-id="086ae-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>  
+1.  <span data-ttu-id="83aa3-105">创建或查找你想要用于初始屏幕的映像。</span><span class="sxs-lookup"><span data-stu-id="83aa3-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="83aa3-106">你可以使用任何图像格式受支持的 Windows 映像组件 (WIC)。</span><span class="sxs-lookup"><span data-stu-id="83aa3-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="83aa3-107">例如，你可以使用 BMP、 GIF、 JPEG、 PNG 或 TIFF 格式。</span><span class="sxs-lookup"><span data-stu-id="83aa3-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>  
   
-2.  <span data-ttu-id="086ae-108">将图像文件添加到 WPF 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="086ae-108">Add the image file to the WPF Application project.</span></span> <span data-ttu-id="086ae-109">有关详细信息，请参阅[NIB： 如何： 将现有项目添加到项目](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。</span><span class="sxs-lookup"><span data-stu-id="086ae-109">For more information, see [NIB:How to: Add Existing Items to a Project](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).</span></span>  
+2.  <span data-ttu-id="83aa3-108">将图像文件添加到 WPF 应用程序项目。</span><span class="sxs-lookup"><span data-stu-id="83aa3-108">Add the image file to the WPF Application project.</span></span> <span data-ttu-id="83aa3-109">有关详细信息，请参阅[NIB： 如何： 将现有项目添加到项目](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。</span><span class="sxs-lookup"><span data-stu-id="83aa3-109">For more information, see [NIB:How to: Add Existing Items to a Project](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).</span></span>  
   
-3.  <span data-ttu-id="086ae-110">在解决方案资源管理器，选择映像。</span><span class="sxs-lookup"><span data-stu-id="086ae-110">In Solution Explorer, select the image.</span></span>  
+3.  <span data-ttu-id="83aa3-110">在解决方案资源管理器，选择映像。</span><span class="sxs-lookup"><span data-stu-id="83aa3-110">In Solution Explorer, select the image.</span></span>  
   
-4.  <span data-ttu-id="086ae-111">在属性窗口中，单击下拉箭头**生成操作**属性。</span><span class="sxs-lookup"><span data-stu-id="086ae-111">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>  
+4.  <span data-ttu-id="83aa3-111">在属性窗口中，单击下拉箭头**生成操作**属性。</span><span class="sxs-lookup"><span data-stu-id="83aa3-111">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>  
   
-5.  <span data-ttu-id="086ae-112">选择**初始屏幕**从下拉列表。</span><span class="sxs-lookup"><span data-stu-id="086ae-112">Select **SplashScreen** from the drop-down list.</span></span>  
+5.  <span data-ttu-id="83aa3-112">选择**初始屏幕**从下拉列表。</span><span class="sxs-lookup"><span data-stu-id="83aa3-112">Select **SplashScreen** from the drop-down list.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="086ae-113">如果看不到**初始屏幕**选项，请务必检查你正在使用[!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]SP1 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="086ae-113">If you do not see the **SplashScreen** option, be sure to check that you are using [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] SP1 or later.</span></span>  
+    >  <span data-ttu-id="83aa3-113">如果看不到**初始屏幕**选项，请务必检查你正在使用[!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]SP1 或更高版本。</span><span class="sxs-lookup"><span data-stu-id="83aa3-113">If you do not see the **SplashScreen** option, be sure to check that you are using [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] SP1 or later.</span></span>  
   
-6.  <span data-ttu-id="086ae-114">按 F5 生成并运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="086ae-114">Press F5 to build and run the application.</span></span>  
+6.  <span data-ttu-id="83aa3-114">按 F5 生成并运行该应用程序。</span><span class="sxs-lookup"><span data-stu-id="83aa3-114">Press F5 to build and run the application.</span></span>  
   
-     <span data-ttu-id="086ae-115">初始屏幕图像出现在该屏幕的中心，然后淡主应用程序窗口出现时。</span><span class="sxs-lookup"><span data-stu-id="086ae-115">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>  
+     <span data-ttu-id="83aa3-115">初始屏幕图像出现在该屏幕的中心，然后淡主应用程序窗口出现时。</span><span class="sxs-lookup"><span data-stu-id="83aa3-115">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>  
   
-### <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="086ae-116">若要删除从应用程序的初始屏幕</span><span class="sxs-lookup"><span data-stu-id="086ae-116">To remove the splash screen from an application</span></span>  
+### <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="83aa3-116">若要删除从应用程序的初始屏幕</span><span class="sxs-lookup"><span data-stu-id="83aa3-116">To remove the splash screen from an application</span></span>  
   
-1.  <span data-ttu-id="086ae-117">在解决方案资源管理器，选择初始屏幕图像。</span><span class="sxs-lookup"><span data-stu-id="086ae-117">In Solution Explorer, select the splash screen image.</span></span>  
+1.  <span data-ttu-id="83aa3-117">在解决方案资源管理器，选择初始屏幕图像。</span><span class="sxs-lookup"><span data-stu-id="83aa3-117">In Solution Explorer, select the splash screen image.</span></span>  
   
-2.  <span data-ttu-id="086ae-118">在属性窗口中，设置**生成操作**到**无**。</span><span class="sxs-lookup"><span data-stu-id="086ae-118">In the Properties window, set the **Build Action** to **None**.</span></span>  
+2.  <span data-ttu-id="83aa3-118">在属性窗口中，设置**生成操作**到**无**。</span><span class="sxs-lookup"><span data-stu-id="83aa3-118">In the Properties window, set the **Build Action** to **None**.</span></span>  
   
-### <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="086ae-119">若要删除从应用程序的初始屏幕</span><span class="sxs-lookup"><span data-stu-id="086ae-119">To remove the splash screen from an application</span></span>  
+### <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="83aa3-119">若要删除从应用程序的初始屏幕</span><span class="sxs-lookup"><span data-stu-id="83aa3-119">To remove the splash screen from an application</span></span>  
   
--   <span data-ttu-id="086ae-120">在解决方案资源管理器，删除初始屏幕图像。</span><span class="sxs-lookup"><span data-stu-id="086ae-120">In Solution Explorer, delete the splash screen image.</span></span>  
+-   <span data-ttu-id="83aa3-120">在解决方案资源管理器，删除初始屏幕图像。</span><span class="sxs-lookup"><span data-stu-id="83aa3-120">In Solution Explorer, delete the splash screen image.</span></span>  
   
--   <span data-ttu-id="086ae-121">从项目中排除初始屏幕图像。</span><span class="sxs-lookup"><span data-stu-id="086ae-121">Exclude the splash screen image from the project.</span></span>  
+-   <span data-ttu-id="83aa3-121">从项目中排除初始屏幕图像。</span><span class="sxs-lookup"><span data-stu-id="83aa3-121">Exclude the splash screen image from the project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="086ae-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="086ae-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="83aa3-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="83aa3-122">See Also</span></span>  
  <xref:System.Windows.SplashScreen>  
- [<span data-ttu-id="086ae-123">NIB： 如何： 将现有项添加到项目</span><span class="sxs-lookup"><span data-stu-id="086ae-123">NIB:How to: Add Existing Items to a Project</span></span>](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+ [<span data-ttu-id="83aa3-123">NIB： 如何： 将现有项添加到项目</span><span class="sxs-lookup"><span data-stu-id="83aa3-123">NIB:How to: Add Existing Items to a Project</span></span>](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)

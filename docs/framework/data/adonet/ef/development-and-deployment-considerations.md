@@ -14,26 +14,26 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e6c494354532ffdeffdc714f748c5b009511443a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6d0d1a4a604549f18e48d690753451be4c98f280
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="development-and-deployment-considerations"></a><span data-ttu-id="7853e-102">开发和部署注意事项</span><span class="sxs-lookup"><span data-stu-id="7853e-102">Development and Deployment Considerations</span></span>
-<span data-ttu-id="7853e-103">本节中的主题介绍在开发或部署基于 ADO.NET 实体框架的应用程序时要注意的问题。</span><span class="sxs-lookup"><span data-stu-id="7853e-103">Topics in this section address issues to consider when developing or deploying an application that is based on the ADO.NET Entity Framework.</span></span>  
+# <a name="development-and-deployment-considerations"></a><span data-ttu-id="12617-102">开发和部署注意事项</span><span class="sxs-lookup"><span data-stu-id="12617-102">Development and Deployment Considerations</span></span>
+<span data-ttu-id="12617-103">本节中的主题介绍在开发或部署基于 ADO.NET 实体框架的应用程序时要注意的问题。</span><span class="sxs-lookup"><span data-stu-id="12617-103">Topics in this section address issues to consider when developing or deploying an application that is based on the ADO.NET Entity Framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7853e-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="7853e-104">In This Section</span></span>  
- [<span data-ttu-id="7853e-105">安全注意事项</span><span class="sxs-lookup"><span data-stu-id="7853e-105">Security Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+## <a name="in-this-section"></a><span data-ttu-id="12617-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="12617-104">In This Section</span></span>  
+ [<span data-ttu-id="12617-105">安全注意事项</span><span class="sxs-lookup"><span data-stu-id="12617-105">Security Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
   
- [<span data-ttu-id="7853e-106">性能注意事项</span><span class="sxs-lookup"><span data-stu-id="7853e-106">Performance Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
+ [<span data-ttu-id="12617-106">性能注意事项</span><span class="sxs-lookup"><span data-stu-id="12617-106">Performance Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
   
- [<span data-ttu-id="7853e-107">迁移注意事项</span><span class="sxs-lookup"><span data-stu-id="7853e-107">Migration Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
+ [<span data-ttu-id="12617-107">迁移注意事项</span><span class="sxs-lookup"><span data-stu-id="12617-107">Migration Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
   
- [<span data-ttu-id="7853e-108">部署注意事项</span><span class="sxs-lookup"><span data-stu-id="7853e-108">Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [<span data-ttu-id="12617-108">部署注意事项</span><span class="sxs-lookup"><span data-stu-id="12617-108">Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7853e-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="7853e-109">See Also</span></span>  
- [<span data-ttu-id="7853e-110">ADO.NET 实体框架</span><span class="sxs-lookup"><span data-stu-id="7853e-110">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
- [<span data-ttu-id="7853e-111">实体框架概述</span><span class="sxs-lookup"><span data-stu-id="7853e-111">Entity Framework Overview</span></span>](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [<span data-ttu-id="7853e-112">入门</span><span class="sxs-lookup"><span data-stu-id="7853e-112">Getting Started</span></span>](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [<span data-ttu-id="7853e-113">ADO.NET 实体数据模型工具</span><span class="sxs-lookup"><span data-stu-id="7853e-113">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a><span data-ttu-id="12617-109">请参阅</span><span class="sxs-lookup"><span data-stu-id="12617-109">See Also</span></span>  
+ [<span data-ttu-id="12617-110">ADO.NET 实体框架</span><span class="sxs-lookup"><span data-stu-id="12617-110">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="12617-111">实体框架概述</span><span class="sxs-lookup"><span data-stu-id="12617-111">Entity Framework Overview</span></span>](../../../../../docs/framework/data/adonet/ef/overview.md)  
+ [<span data-ttu-id="12617-112">入门</span><span class="sxs-lookup"><span data-stu-id="12617-112">Getting Started</span></span>](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ [<span data-ttu-id="12617-113">ADO.NET 实体数据模型工具</span><span class="sxs-lookup"><span data-stu-id="12617-113">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

@@ -21,21 +21,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7da2e1ac5c16f6e481c974794efceb12f102b1a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7dd24ae9e5659deff7ddbe4183c70d5b442542cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="ltqualifyassemblygt-element"></a><span data-ttu-id="51400-102">&lt;qualifyAssembly&gt;元素</span><span class="sxs-lookup"><span data-stu-id="51400-102">&lt;qualifyAssembly&gt; Element</span></span>
-<span data-ttu-id="51400-103">指定使用部分名称时应动态加载的程序集全名。</span><span class="sxs-lookup"><span data-stu-id="51400-103">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>  
+# <a name="ltqualifyassemblygt-element"></a><span data-ttu-id="e5cf9-102">&lt;qualifyAssembly&gt;元素</span><span class="sxs-lookup"><span data-stu-id="e5cf9-102">&lt;qualifyAssembly&gt; Element</span></span>
+<span data-ttu-id="e5cf9-103">指定使用部分名称时应动态加载的程序集全名。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-103">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>  
   
- <span data-ttu-id="51400-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="51400-104">\<configuration></span></span>  
-<span data-ttu-id="51400-105">\<运行时 ></span><span class="sxs-lookup"><span data-stu-id="51400-105">\<runtime></span></span>  
-<span data-ttu-id="51400-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="51400-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="51400-107">\<qualifyAssembly ></span><span class="sxs-lookup"><span data-stu-id="51400-107">\<qualifyAssembly></span></span>  
+ <span data-ttu-id="e5cf9-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e5cf9-104">\<configuration></span></span>  
+<span data-ttu-id="e5cf9-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="e5cf9-105">\<runtime></span></span>  
+<span data-ttu-id="e5cf9-106">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="e5cf9-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="e5cf9-107">\<qualifyAssembly></span><span class="sxs-lookup"><span data-stu-id="e5cf9-107">\<qualifyAssembly></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51400-108">语法</span><span class="sxs-lookup"><span data-stu-id="51400-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5cf9-108">语法</span><span class="sxs-lookup"><span data-stu-id="e5cf9-108">Syntax</span></span>  
   
 ```xml  
       <qualifyAssembly partialName=  
@@ -43,34 +43,34 @@ ms.lasthandoff: 12/22/2017
                  fullName="FullAssemblyName"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="51400-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="51400-109">Attributes and Elements</span></span>  
- <span data-ttu-id="51400-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="51400-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e5cf9-109">特性和元素</span><span class="sxs-lookup"><span data-stu-id="e5cf9-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="e5cf9-110">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="51400-111">特性</span><span class="sxs-lookup"><span data-stu-id="51400-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e5cf9-111">特性</span><span class="sxs-lookup"><span data-stu-id="e5cf9-111">Attributes</span></span>  
   
-|<span data-ttu-id="51400-112">特性</span><span class="sxs-lookup"><span data-stu-id="51400-112">Attribute</span></span>|<span data-ttu-id="51400-113">描述</span><span class="sxs-lookup"><span data-stu-id="51400-113">Description</span></span>|  
+|<span data-ttu-id="e5cf9-112">特性</span><span class="sxs-lookup"><span data-stu-id="e5cf9-112">Attribute</span></span>|<span data-ttu-id="e5cf9-113">描述</span><span class="sxs-lookup"><span data-stu-id="e5cf9-113">Description</span></span>|  
 |---------------|-----------------|  
-|`partialName`|<span data-ttu-id="51400-114">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="51400-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="51400-115">指定程序集的部分名称，在代码中所示。</span><span class="sxs-lookup"><span data-stu-id="51400-115">Specifies the partial name of the assembly as it appears in the code.</span></span>|  
-|`fullName`|<span data-ttu-id="51400-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="51400-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="51400-117">指定的程序集的完整名称，在全局程序集缓存中所示。</span><span class="sxs-lookup"><span data-stu-id="51400-117">Specifies the full name of the assembly as it appears in the global assembly cache.</span></span>|  
+|`partialName`|<span data-ttu-id="e5cf9-114">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="e5cf9-115">指定程序集的部分名称，在代码中所示。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-115">Specifies the partial name of the assembly as it appears in the code.</span></span>|  
+|`fullName`|<span data-ttu-id="e5cf9-116">必需的特性。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="e5cf9-117">指定的程序集的完整名称，在全局程序集缓存中所示。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-117">Specifies the full name of the assembly as it appears in the global assembly cache.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="51400-118">子元素</span><span class="sxs-lookup"><span data-stu-id="51400-118">Child Elements</span></span>  
- <span data-ttu-id="51400-119">无。</span><span class="sxs-lookup"><span data-stu-id="51400-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e5cf9-118">子元素</span><span class="sxs-lookup"><span data-stu-id="e5cf9-118">Child Elements</span></span>  
+ <span data-ttu-id="e5cf9-119">无。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="51400-120">父元素</span><span class="sxs-lookup"><span data-stu-id="51400-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e5cf9-120">父元素</span><span class="sxs-lookup"><span data-stu-id="e5cf9-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="51400-121">元素</span><span class="sxs-lookup"><span data-stu-id="51400-121">Element</span></span>|<span data-ttu-id="51400-122">描述</span><span class="sxs-lookup"><span data-stu-id="51400-122">Description</span></span>|  
+|<span data-ttu-id="e5cf9-121">元素</span><span class="sxs-lookup"><span data-stu-id="e5cf9-121">Element</span></span>|<span data-ttu-id="e5cf9-122">描述</span><span class="sxs-lookup"><span data-stu-id="e5cf9-122">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="51400-123">包含有关程序集版本重定向和程序集位置的信息。</span><span class="sxs-lookup"><span data-stu-id="51400-123">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="51400-124">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="51400-124">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="51400-125">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="51400-125">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="e5cf9-123">包含有关程序集版本重定向和程序集位置的信息。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-123">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="e5cf9-124">公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-124">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="e5cf9-125">包含有关程序集绑定和垃圾回收的信息。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-125">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="51400-126">备注</span><span class="sxs-lookup"><span data-stu-id="51400-126">Remarks</span></span>  
- <span data-ttu-id="51400-127">调用<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用部分程序集名称的方法使公共语言运行时查找仅在应用程序基目录中的程序集。</span><span class="sxs-lookup"><span data-stu-id="51400-127">Calling the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method using partial assembly names causes the common language runtime to look for the assembly only in the application base directory.</span></span> <span data-ttu-id="51400-128">使用 **\<qualifyAssembly >**中应用程序配置文件可提供完整的程序集信息 （名称、 版本、 公钥标记和区域性） 并且使公共语言运行时，要搜索的元素全局程序集缓存中程序集。</span><span class="sxs-lookup"><span data-stu-id="51400-128">Use the **\<qualifyAssembly>** element in your application configuration file to provide the full assembly information (name, version, public key token, and culture) and cause the common language runtime to search for the assembly in the global assembly cache.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e5cf9-126">备注</span><span class="sxs-lookup"><span data-stu-id="e5cf9-126">Remarks</span></span>  
+ <span data-ttu-id="e5cf9-127">调用<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用部分程序集名称的方法使公共语言运行时查找仅在应用程序基目录中的程序集。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-127">Calling the <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> method using partial assembly names causes the common language runtime to look for the assembly only in the application base directory.</span></span> <span data-ttu-id="e5cf9-128">使用 **\<qualifyAssembly >**中应用程序配置文件可提供完整的程序集信息 （名称、 版本、 公钥标记和区域性） 并且使公共语言运行时，要搜索的元素全局程序集缓存中程序集。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-128">Use the **\<qualifyAssembly>** element in your application configuration file to provide the full assembly information (name, version, public key token, and culture) and cause the common language runtime to search for the assembly in the global assembly cache.</span></span>  
   
- <span data-ttu-id="51400-129">**FullName**属性必须包含程序集标识的四个字段： 名称、 版本、 公钥标记和区域性。</span><span class="sxs-lookup"><span data-stu-id="51400-129">The **fullName** attribute must include the four fields of assembly identity: name, version, public key token, and culture.</span></span> <span data-ttu-id="51400-130">**PartialName**属性部分必须引用的程序集。</span><span class="sxs-lookup"><span data-stu-id="51400-130">The **partialName** attribute must partially reference an assembly.</span></span> <span data-ttu-id="51400-131">你必须至少指定程序集的文本名称 （最常见的情况），但你也可以包括版本、 公钥标记或区域性 （或四个，但并非所有四个的任意组合）。</span><span class="sxs-lookup"><span data-stu-id="51400-131">You must specify at least the assembly's text name (the most common case), but you can also include version, public key token, or culture (or any combination of the four, but not all four).</span></span> <span data-ttu-id="51400-132">**PartialName**必须匹配你调用中指定的名称。</span><span class="sxs-lookup"><span data-stu-id="51400-132">The **partialName** must match the name specified in your call.</span></span> <span data-ttu-id="51400-133">例如，不能指定`"math"`作为**partialName**中你的配置文件和调用属性`Assembly.Load("math, Version=3.3.3.3")`在代码中。</span><span class="sxs-lookup"><span data-stu-id="51400-133">For example, you cannot specify `"math"` as the **partialName** attribute in your configuration file and call `Assembly.Load("math, Version=3.3.3.3")` in your code.</span></span>  
+ <span data-ttu-id="e5cf9-129">**FullName**属性必须包含程序集标识的四个字段： 名称、 版本、 公钥标记和区域性。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-129">The **fullName** attribute must include the four fields of assembly identity: name, version, public key token, and culture.</span></span> <span data-ttu-id="e5cf9-130">**PartialName**属性部分必须引用的程序集。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-130">The **partialName** attribute must partially reference an assembly.</span></span> <span data-ttu-id="e5cf9-131">你必须至少指定程序集的文本名称 （最常见的情况），但你也可以包括版本、 公钥标记或区域性 （或四个，但并非所有四个的任意组合）。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-131">You must specify at least the assembly's text name (the most common case), but you can also include version, public key token, or culture (or any combination of the four, but not all four).</span></span> <span data-ttu-id="e5cf9-132">**PartialName**必须匹配你调用中指定的名称。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-132">The **partialName** must match the name specified in your call.</span></span> <span data-ttu-id="e5cf9-133">例如，不能指定`"math"`作为**partialName**中你的配置文件和调用属性`Assembly.Load("math, Version=3.3.3.3")`在代码中。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-133">For example, you cannot specify `"math"` as the **partialName** attribute in your configuration file and call `Assembly.Load("math, Version=3.3.3.3")` in your code.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="51400-134">示例</span><span class="sxs-lookup"><span data-stu-id="51400-134">Example</span></span>  
- <span data-ttu-id="51400-135">下面的示例以逻辑方式调用变成`Assembly.Load("math")`到`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`。</span><span class="sxs-lookup"><span data-stu-id="51400-135">The following example logically turns the call `Assembly.Load("math")` into `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span></span>  
+## <a name="example"></a><span data-ttu-id="e5cf9-134">示例</span><span class="sxs-lookup"><span data-stu-id="e5cf9-134">Example</span></span>  
+ <span data-ttu-id="e5cf9-135">下面的示例以逻辑方式调用变成`Assembly.Load("math")`到`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`。</span><span class="sxs-lookup"><span data-stu-id="e5cf9-135">The following example logically turns the call `Assembly.Load("math")` into `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="51400-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="51400-136">See Also</span></span>  
- [<span data-ttu-id="51400-137">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="51400-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="51400-138">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="51400-138">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [<span data-ttu-id="51400-139">NIB： 部分程序集引用</span><span class="sxs-lookup"><span data-stu-id="51400-139">NIB: Partial Assembly References</span></span>](http://msdn.microsoft.com/en-us/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+## <a name="see-also"></a><span data-ttu-id="e5cf9-136">请参阅</span><span class="sxs-lookup"><span data-stu-id="e5cf9-136">See Also</span></span>  
+ [<span data-ttu-id="e5cf9-137">运行时设置架构</span><span class="sxs-lookup"><span data-stu-id="e5cf9-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="e5cf9-138">运行时如何定位程序集</span><span class="sxs-lookup"><span data-stu-id="e5cf9-138">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="e5cf9-139">NIB： 部分程序集引用</span><span class="sxs-lookup"><span data-stu-id="e5cf9-139">NIB: Partial Assembly References</span></span>](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
