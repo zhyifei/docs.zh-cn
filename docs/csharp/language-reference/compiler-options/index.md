@@ -15,16 +15,16 @@ ms.assetid: d3403556-1816-4546-a782-e8223a772e44
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28878fca5bccf23f906395298c8b2b5b7499fd40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 59000f60acdc8ada11bc5abb9e91b5f53d42b9ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-compiler-options"></a>C# 编译器选项
 编译器生成可执行 (.exe) 文件、动态链接库 (.dll) 或者代码模块 (.netmodule)。  
   
- 每个编译器选项均有两种形式：**-option** 和 **/option**。 此文档仅介绍 **/option** 形式。  
+ 每个编译器选项均有两种形式：**-option** 和 **/option**。 此文档仅介绍 **-option** 形式。  
   
  在 Visual Studio 中，可在 Web.config 文件中设置编译器选项。 有关详细信息，请参阅 [\<compiler> 元素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)。  
   
