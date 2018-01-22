@@ -137,7 +137,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 受保护 <xref:System.Object.Finalize%2A> 方法：用于在垃圾回收器回收对象的内存之前释放非托管资源。
 
-- 受保护 <xref:System.Object.MemberwiseClone%2A> 方法：创建当前对象的浅表克隆。
+- 受保护 <xref:System.Object.MemberwiseClone%2A> 方法：创建当前对象的浅表复制。
 
 由于是隐式继承，因此我们可以调用 `SimpleClass` 对象中任何继承的成员，就像它实际上是 `SimpleClass` 类中定义的成员一样。 例如，下面的示例调用 `SimpleClass` 从 <xref:System.Object> 继承而来的 `SimpleClass.ToString` 方法。
 
