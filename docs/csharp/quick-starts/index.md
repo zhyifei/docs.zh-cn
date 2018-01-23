@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 7847d21e3529de1a84ef17486710d10256003ce9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="c-quick-starts"></a>C# 快速入门 #
 
@@ -39,6 +39,12 @@ ms.lasthandoff: 12/12/2017
 [分支和循环](branches-and-loops.yml)快速入门教程将介绍根据变量中存储的值选择不同代码执行路径的基础知识。 读者将学习控制流的基础知识，这是程序决定选择不同操作的基本依据。 本快速入门教程也可[下载到计算机本地进行学习](branches-and-loops-local.md)。
 
 若要更好地学习本入门课程，需要已完成 [Hello World](hello-world.yml) 和 [C# 中的数字](numbers-in-csharp.yml)课程。
+
+## <a name="interpolated-stringsinterpolated-stringsyml"></a>[内插字符串](interpolated-strings.yml)
+
+[内插字符串](interpolated-strings.yml)快速入门介绍了如何将表达式插入更大的字符串。 你将了解如何定义内插表达式，如何从包含一个或多个内插表达式的内插字符串创建结果字符串，以及如何控制结果字符串所包含的表达式的格式、列宽和对齐方式。 
+
+若要更好地学习本入门课程，需要先完成 [Hello World](hello-world.yml)、[C# 中的数字](numbers-in-csharp.yml)和[分支和循环](branches-and-loops.yml)课程。
 
 ## <a name="list-collectionlist-collectionyml"></a>[列表集合](list-collection.yml)
 

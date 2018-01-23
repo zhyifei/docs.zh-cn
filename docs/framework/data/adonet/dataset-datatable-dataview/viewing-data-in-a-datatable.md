@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ab7a60b4195f3d8976a61e3909682b3748e30341
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2576c95ad7739d28e2ca822fd13fb6f176900814
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="viewing-data-in-a-datatable"></a>查看数据表中的数据
 你可以访问的内容<xref:System.Data.DataTable>使用**行**和**列**的集合**DataTable**。 你还可以使用<xref:System.Data.DataTable.Select%2A>方法以返回中的数据的子集**DataTable**根据包括搜索条件的条件，排序顺序和行状态。 此外，你可以使用<xref:System.Data.DataRowCollection.Find%2A>方法**DataRowCollection**搜索使用的主键值的特定行时。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 |DataViewRowState 值|描述|  
 |----------------------------|-----------------|  
-|**当前行**|当前行，包括未更改的行、已添加的行和已修改的行。|  
+|**CurrentRows**|当前行，包括未更改的行、已添加的行和已修改的行。|  
 |**删除**|已删除的行。|  
 |**ModifiedCurrent**|当前版本，它是原始数据的修改版本。 (请参阅**ModifiedOriginal**。)|  
 |**ModifiedOriginal**|所有已修改行的原始版本。 当前版本是可通过**ModifiedCurrent**。|  
