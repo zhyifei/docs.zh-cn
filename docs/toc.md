@@ -258,6 +258,7 @@
 ### [将代码文档化](csharp/codedoc.md)
 ### [版本控制](csharp/versioning.md)
 ## [操作指南 C# 主题](csharp/how-to/index.md)
+### [如何使用 `String.Split` 解析字符串](csharp/how-to/parse-strings-using-split.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 编程指南](csharp/programming-guide/)
