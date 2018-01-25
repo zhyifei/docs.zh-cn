@@ -12,104 +12,104 @@ ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 caps.latest.revision: "34"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a453699591397224435fba1e602c305f18e84a11
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: fc3c0f6910238ba20582280426b4a40e68b95dd8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a><span data-ttu-id="f3e15-102">如何：在 Office 编程中使用命名自变量和可选自变量（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="f3e15-102">How to: Use Named and Optional Arguments in Office Programming (C# Programming Guide)</span></span>
-<span data-ttu-id="f3e15-103">在 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中引入的命名参数和可选参数增强了 C# 编程中的便利性、灵活性和可读性。</span><span class="sxs-lookup"><span data-stu-id="f3e15-103">Named arguments and optional arguments, introduced in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], enhance convenience, flexibility, and readability in C# programming.</span></span> <span data-ttu-id="f3e15-104">另外，这些功能显著方便了对 COM 接口（如 Microsoft Office 自动化 API）的访问。</span><span class="sxs-lookup"><span data-stu-id="f3e15-104">In addition, these features greatly facilitate access to COM interfaces such as the Microsoft Office automation APIs.</span></span>  
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a><span data-ttu-id="092d9-102">如何：在 Office 编程中使用命名自变量和可选自变量（C# 编程指南）</span><span class="sxs-lookup"><span data-stu-id="092d9-102">How to: Use Named and Optional Arguments in Office Programming (C# Programming Guide)</span></span>
+<span data-ttu-id="092d9-103">在 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中引入的命名参数和可选参数增强了 C# 编程中的便利性、灵活性和可读性。</span><span class="sxs-lookup"><span data-stu-id="092d9-103">Named arguments and optional arguments, introduced in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], enhance convenience, flexibility, and readability in C# programming.</span></span> <span data-ttu-id="092d9-104">另外，这些功能显著方便了对 COM 接口（如 Microsoft Office 自动化 API）的访问。</span><span class="sxs-lookup"><span data-stu-id="092d9-104">In addition, these features greatly facilitate access to COM interfaces such as the Microsoft Office automation APIs.</span></span>  
   
- <span data-ttu-id="f3e15-105">在下面的示例中，方法 [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) 具有十六个参数，用于表示表的各种特性，例如列数和行数、格式设置、边框、字体以及颜色。</span><span class="sxs-lookup"><span data-stu-id="f3e15-105">In the following example, method [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) has sixteen parameters that represent characteristics of a table, such as number of columns and rows, formatting, borders, fonts, and colors.</span></span> <span data-ttu-id="f3e15-106">由于大多数时候都不需要为所有十六个参数指定特定值，因此所有这些参数都是可选的。</span><span class="sxs-lookup"><span data-stu-id="f3e15-106">All sixteen parameters are optional, because most of the time you do not want to specify particular values for all of them.</span></span> <span data-ttu-id="f3e15-107">但是，如果没有命名实参和可选实参，则必须为每个形参提供值或占位符值。</span><span class="sxs-lookup"><span data-stu-id="f3e15-107">However, without named and optional arguments, a value or a placeholder value has to be provided for each parameter.</span></span> <span data-ttu-id="f3e15-108">有了命名实参和可选实参，则只需为项目所需的形参指定值。</span><span class="sxs-lookup"><span data-stu-id="f3e15-108">With named and optional arguments, you specify values only for the parameters that are required for your project.</span></span>  
+ <span data-ttu-id="092d9-105">在下面的示例中，方法 [ConvertToTable](https://msdn.microsoft.com/library/bb216993.aspx) 具有十六个参数，用于表示表的各种特性，例如列数和行数、格式设置、边框、字体以及颜色。</span><span class="sxs-lookup"><span data-stu-id="092d9-105">In the following example, method [ConvertToTable](https://msdn.microsoft.com/library/bb216993.aspx) has sixteen parameters that represent characteristics of a table, such as number of columns and rows, formatting, borders, fonts, and colors.</span></span> <span data-ttu-id="092d9-106">由于大多数时候都不需要为所有十六个参数指定特定值，因此所有这些参数都是可选的。</span><span class="sxs-lookup"><span data-stu-id="092d9-106">All sixteen parameters are optional, because most of the time you do not want to specify particular values for all of them.</span></span> <span data-ttu-id="092d9-107">但是，如果没有命名实参和可选实参，则必须为每个形参提供值或占位符值。</span><span class="sxs-lookup"><span data-stu-id="092d9-107">However, without named and optional arguments, a value or a placeholder value has to be provided for each parameter.</span></span> <span data-ttu-id="092d9-108">有了命名实参和可选实参，则只需为项目所需的形参指定值。</span><span class="sxs-lookup"><span data-stu-id="092d9-108">With named and optional arguments, you specify values only for the parameters that are required for your project.</span></span>  
   
- <span data-ttu-id="f3e15-109">必须在计算机上安装 Microsoft Office Word 才能完成这些过程。</span><span class="sxs-lookup"><span data-stu-id="f3e15-109">You must have Microsoft Office Word installed on your computer to complete these procedures.</span></span>  
+ <span data-ttu-id="092d9-109">必须在计算机上安装 Microsoft Office Word 才能完成这些过程。</span><span class="sxs-lookup"><span data-stu-id="092d9-109">You must have Microsoft Office Word installed on your computer to complete these procedures.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-new-console-application"></a><span data-ttu-id="f3e15-110">创建新的控制台应用程序</span><span class="sxs-lookup"><span data-stu-id="f3e15-110">To create a new console application</span></span>  
+### <a name="to-create-a-new-console-application"></a><span data-ttu-id="092d9-110">创建新的控制台应用程序</span><span class="sxs-lookup"><span data-stu-id="092d9-110">To create a new console application</span></span>  
   
-1.  <span data-ttu-id="f3e15-111">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f3e15-111">Start Visual Studio.</span></span>  
+1.  <span data-ttu-id="092d9-111">启动 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="092d9-111">Start Visual Studio.</span></span>  
   
-2.  <span data-ttu-id="f3e15-112">在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。</span><span class="sxs-lookup"><span data-stu-id="f3e15-112">On the **File** menu, point to **New**, and then click **Project**.</span></span>  
+2.  <span data-ttu-id="092d9-112">在 **“文件”** 菜单上，指向 **“新建”**，然后单击 **“项目”**。</span><span class="sxs-lookup"><span data-stu-id="092d9-112">On the **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-3.  <span data-ttu-id="f3e15-113">在“模板类别”窗格中，展开“Visual C#”，然后单击“Windows”。</span><span class="sxs-lookup"><span data-stu-id="f3e15-113">In the **Templates Categories** pane, expand **Visual C#**, and then click **Windows**.</span></span>  
+3.  <span data-ttu-id="092d9-113">在“模板类别”窗格中，展开“Visual C#”，然后单击“Windows”。</span><span class="sxs-lookup"><span data-stu-id="092d9-113">In the **Templates Categories** pane, expand **Visual C#**, and then click **Windows**.</span></span>  
   
-4.  <span data-ttu-id="f3e15-114">查看“模板”窗格的顶部，确保“.NET Framework 4”出现在“目标框架”框中。</span><span class="sxs-lookup"><span data-stu-id="f3e15-114">Look in the top of the **Templates** pane to make sure that **.NET Framework 4** appears in the **Target Framework** box.</span></span>  
+4.  <span data-ttu-id="092d9-114">查看“模板”窗格的顶部，确保“.NET Framework 4”出现在“目标框架”框中。</span><span class="sxs-lookup"><span data-stu-id="092d9-114">Look in the top of the **Templates** pane to make sure that **.NET Framework 4** appears in the **Target Framework** box.</span></span>  
   
-5.  <span data-ttu-id="f3e15-115">在“模板”窗格中，单击“控制台应用程序”。</span><span class="sxs-lookup"><span data-stu-id="f3e15-115">In the **Templates** pane, click **Console Application**.</span></span>  
+5.  <span data-ttu-id="092d9-115">在“模板”窗格中，单击“控制台应用程序”。</span><span class="sxs-lookup"><span data-stu-id="092d9-115">In the **Templates** pane, click **Console Application**.</span></span>  
   
-6.  <span data-ttu-id="f3e15-116">在“名称”字段中键入项目的名称。</span><span class="sxs-lookup"><span data-stu-id="f3e15-116">Type a name for your project in the **Name** field.</span></span>  
+6.  <span data-ttu-id="092d9-116">在“名称”字段中键入项目的名称。</span><span class="sxs-lookup"><span data-stu-id="092d9-116">Type a name for your project in the **Name** field.</span></span>  
   
-7.  <span data-ttu-id="f3e15-117">单击 **“确定”**。</span><span class="sxs-lookup"><span data-stu-id="f3e15-117">Click **OK**.</span></span>  
+7.  <span data-ttu-id="092d9-117">单击 **“确定”**。</span><span class="sxs-lookup"><span data-stu-id="092d9-117">Click **OK**.</span></span>  
   
-     <span data-ttu-id="f3e15-118">新项目将出现在“解决方案资源管理器”中。</span><span class="sxs-lookup"><span data-stu-id="f3e15-118">The new project appears in **Solution Explorer**.</span></span>  
+     <span data-ttu-id="092d9-118">新项目将出现在“解决方案资源管理器”中。</span><span class="sxs-lookup"><span data-stu-id="092d9-118">The new project appears in **Solution Explorer**.</span></span>  
   
-### <a name="to-add-a-reference"></a><span data-ttu-id="f3e15-119">添加引用</span><span class="sxs-lookup"><span data-stu-id="f3e15-119">To add a reference</span></span>  
+### <a name="to-add-a-reference"></a><span data-ttu-id="092d9-119">添加引用</span><span class="sxs-lookup"><span data-stu-id="092d9-119">To add a reference</span></span>  
   
-1.  <span data-ttu-id="f3e15-120">在“解决方案资源管理器”中，右键单击你的项目名称，然后单击“添加引用”。</span><span class="sxs-lookup"><span data-stu-id="f3e15-120">In **Solution Explorer**, right-click your project's name and then click **Add Reference**.</span></span> <span data-ttu-id="f3e15-121">此时会显示“添加引用”对话框。</span><span class="sxs-lookup"><span data-stu-id="f3e15-121">The **Add Reference** dialog box appears.</span></span>  
+1.  <span data-ttu-id="092d9-120">在“解决方案资源管理器”中，右键单击你的项目名称，然后单击“添加引用”。</span><span class="sxs-lookup"><span data-stu-id="092d9-120">In **Solution Explorer**, right-click your project's name and then click **Add Reference**.</span></span> <span data-ttu-id="092d9-121">此时会显示“添加引用”对话框。</span><span class="sxs-lookup"><span data-stu-id="092d9-121">The **Add Reference** dialog box appears.</span></span>  
   
-2.  <span data-ttu-id="f3e15-122">在“.NET”页上的“组件名称”列表中，选择“Microsoft.Office.Interop.Word”。</span><span class="sxs-lookup"><span data-stu-id="f3e15-122">On the **.NET** page, select **Microsoft.Office.Interop.Word** in the **Component Name** list.</span></span>  
+2.  <span data-ttu-id="092d9-122">在“.NET”页上的“组件名称”列表中，选择“Microsoft.Office.Interop.Word”。</span><span class="sxs-lookup"><span data-stu-id="092d9-122">On the **.NET** page, select **Microsoft.Office.Interop.Word** in the **Component Name** list.</span></span>  
   
-3.  <span data-ttu-id="f3e15-123">单击“确定”。</span><span class="sxs-lookup"><span data-stu-id="f3e15-123">Click **OK**.</span></span>  
+3.  <span data-ttu-id="092d9-123">单击 **“确定”**。</span><span class="sxs-lookup"><span data-stu-id="092d9-123">Click **OK**.</span></span>  
   
-### <a name="to-add-necessary-using-directives"></a><span data-ttu-id="f3e15-124">添加必要的 using 指令</span><span class="sxs-lookup"><span data-stu-id="f3e15-124">To add necessary using directives</span></span>  
+### <a name="to-add-necessary-using-directives"></a><span data-ttu-id="092d9-124">添加必要的 using 指令</span><span class="sxs-lookup"><span data-stu-id="092d9-124">To add necessary using directives</span></span>  
   
-1.  <span data-ttu-id="f3e15-125">在“解决方案资源管理器”中，右键单击“Program.cs”文件，然后单击“查看代码”。</span><span class="sxs-lookup"><span data-stu-id="f3e15-125">In **Solution Explorer**, right-click the **Program.cs** file and then click **View Code**.</span></span>  
+1.  <span data-ttu-id="092d9-125">在“解决方案资源管理器”中，右键单击“Program.cs”文件，然后单击“查看代码”。</span><span class="sxs-lookup"><span data-stu-id="092d9-125">In **Solution Explorer**, right-click the **Program.cs** file and then click **View Code**.</span></span>  
   
-2.  <span data-ttu-id="f3e15-126">将以下 `using` 指令添加到代码文件的顶部。</span><span class="sxs-lookup"><span data-stu-id="f3e15-126">Add the following `using` directives to the top of the code file.</span></span>  
+2.  <span data-ttu-id="092d9-126">将以下 `using` 指令添加到代码文件的顶部。</span><span class="sxs-lookup"><span data-stu-id="092d9-126">Add the following `using` directives to the top of the code file.</span></span>  
   
      [!code-csharp[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_1.cs)]  
   
-### <a name="to-display-text-in-a-word-document"></a><span data-ttu-id="f3e15-127">在 Word 文档中显示文本</span><span class="sxs-lookup"><span data-stu-id="f3e15-127">To display text in a Word document</span></span>  
+### <a name="to-display-text-in-a-word-document"></a><span data-ttu-id="092d9-127">在 Word 文档中显示文本</span><span class="sxs-lookup"><span data-stu-id="092d9-127">To display text in a Word document</span></span>  
   
-1.  <span data-ttu-id="f3e15-128">在 Program.cs 的 `Program` 类中，添加以下方法以创建 Word 应用程序和 Word 文档。</span><span class="sxs-lookup"><span data-stu-id="f3e15-128">In the `Program` class in Program.cs, add the following method to create a Word application and a Word document.</span></span> <span data-ttu-id="f3e15-129">[Add](http://go.microsoft.com/fwlink/?LinkId=145381) 方法具有四个可选参数。</span><span class="sxs-lookup"><span data-stu-id="f3e15-129">The [Add](http://go.microsoft.com/fwlink/?LinkId=145381) method has four optional parameters.</span></span> <span data-ttu-id="f3e15-130">此示例使用这些参数的默认值。</span><span class="sxs-lookup"><span data-stu-id="f3e15-130">This example uses their default values.</span></span> <span data-ttu-id="f3e15-131">因此，调用语句中不必有参数。</span><span class="sxs-lookup"><span data-stu-id="f3e15-131">Therefore, no arguments are necessary in the calling statement.</span></span>  
+1.  <span data-ttu-id="092d9-128">在 Program.cs 的 `Program` 类中，添加以下方法以创建 Word 应用程序和 Word 文档。</span><span class="sxs-lookup"><span data-stu-id="092d9-128">In the `Program` class in Program.cs, add the following method to create a Word application and a Word document.</span></span> <span data-ttu-id="092d9-129">[Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) 方法具有四个可选参数。</span><span class="sxs-lookup"><span data-stu-id="092d9-129">The [Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) method has four optional parameters.</span></span> <span data-ttu-id="092d9-130">此示例使用这些参数的默认值。</span><span class="sxs-lookup"><span data-stu-id="092d9-130">This example uses their default values.</span></span> <span data-ttu-id="092d9-131">因此，调用语句中不必有参数。</span><span class="sxs-lookup"><span data-stu-id="092d9-131">Therefore, no arguments are necessary in the calling statement.</span></span>  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
-2.  <span data-ttu-id="f3e15-132">将以下代码添加到方法的末尾，以定义要在文档何处显示文本，以及要显示什么文本。</span><span class="sxs-lookup"><span data-stu-id="f3e15-132">Add the following code at the end of the method to define where to display text in the document, and what text to display.</span></span>  
+2.  <span data-ttu-id="092d9-132">将以下代码添加到方法的末尾，以定义要在文档何处显示文本，以及要显示什么文本。</span><span class="sxs-lookup"><span data-stu-id="092d9-132">Add the following code at the end of the method to define where to display text in the document, and what text to display.</span></span>  
   
      [!code-csharp[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_3.cs)]  
   
-### <a name="to-run-the-application"></a><span data-ttu-id="f3e15-133">要运行应用程序</span><span class="sxs-lookup"><span data-stu-id="f3e15-133">To run the application</span></span>  
+### <a name="to-run-the-application"></a><span data-ttu-id="092d9-133">要运行应用程序</span><span class="sxs-lookup"><span data-stu-id="092d9-133">To run the application</span></span>  
   
-1.  <span data-ttu-id="f3e15-134">将以下语句添加到 Main。</span><span class="sxs-lookup"><span data-stu-id="f3e15-134">Add the following statement to Main.</span></span>  
+1.  <span data-ttu-id="092d9-134">将以下语句添加到 Main。</span><span class="sxs-lookup"><span data-stu-id="092d9-134">Add the following statement to Main.</span></span>  
   
      [!code-csharp[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_4.cs)]  
   
-2.  <span data-ttu-id="f3e15-135">按 Ctrl+F5 运行项目。</span><span class="sxs-lookup"><span data-stu-id="f3e15-135">Press CTRL+F5 to run the project.</span></span> <span data-ttu-id="f3e15-136">此时会出现一个 Word 文档，其中包含指定的文本。</span><span class="sxs-lookup"><span data-stu-id="f3e15-136">A Word document appears that contains the specified text.</span></span>  
+2.  <span data-ttu-id="092d9-135">按 Ctrl+F5 运行项目。</span><span class="sxs-lookup"><span data-stu-id="092d9-135">Press CTRL+F5 to run the project.</span></span> <span data-ttu-id="092d9-136">此时会出现一个 Word 文档，其中包含指定的文本。</span><span class="sxs-lookup"><span data-stu-id="092d9-136">A Word document appears that contains the specified text.</span></span>  
   
-### <a name="to-change-the-text-to-a-table"></a><span data-ttu-id="f3e15-137">将文本更改为表</span><span class="sxs-lookup"><span data-stu-id="f3e15-137">To change the text to a table</span></span>  
+### <a name="to-change-the-text-to-a-table"></a><span data-ttu-id="092d9-137">将文本更改为表</span><span class="sxs-lookup"><span data-stu-id="092d9-137">To change the text to a table</span></span>  
   
-1.  <span data-ttu-id="f3e15-138">使用 `ConvertToTable` 方法将文本放入表中。</span><span class="sxs-lookup"><span data-stu-id="f3e15-138">Use the `ConvertToTable` method to enclose the text in a table.</span></span> <span data-ttu-id="f3e15-139">该方法具有十六个可选参数。</span><span class="sxs-lookup"><span data-stu-id="f3e15-139">The method has sixteen optional parameters.</span></span> <span data-ttu-id="f3e15-140">IntelliSense 将可选参数放入括号中，如下图所示。</span><span class="sxs-lookup"><span data-stu-id="f3e15-140">IntelliSense encloses optional parameters in brackets, as shown in the following illustration.</span></span>  
+1.  <span data-ttu-id="092d9-138">使用 `ConvertToTable` 方法将文本放入表中。</span><span class="sxs-lookup"><span data-stu-id="092d9-138">Use the `ConvertToTable` method to enclose the text in a table.</span></span> <span data-ttu-id="092d9-139">该方法具有十六个可选参数。</span><span class="sxs-lookup"><span data-stu-id="092d9-139">The method has sixteen optional parameters.</span></span> <span data-ttu-id="092d9-140">IntelliSense 将可选参数放入括号中，如下图所示。</span><span class="sxs-lookup"><span data-stu-id="092d9-140">IntelliSense encloses optional parameters in brackets, as shown in the following illustration.</span></span>  
   
-     <span data-ttu-id="f3e15-141">![ConvertToTable 方法的参数列表。](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")</span><span class="sxs-lookup"><span data-stu-id="f3e15-141">![List of parameters for ConvertToTable method.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")</span></span>  
-<span data-ttu-id="f3e15-142">ConvertToTable 参数</span><span class="sxs-lookup"><span data-stu-id="f3e15-142">ConvertToTable parameters</span></span>  
+     <span data-ttu-id="092d9-141">![ConvertToTable 方法的参数列表。](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")</span><span class="sxs-lookup"><span data-stu-id="092d9-141">![List of parameters for ConvertToTable method.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")</span></span>  
+<span data-ttu-id="092d9-142">ConvertToTable 参数</span><span class="sxs-lookup"><span data-stu-id="092d9-142">ConvertToTable parameters</span></span>  
   
-     <span data-ttu-id="f3e15-143">通过使用命名实参和可选实参，可以只对要更改的形参指定值。</span><span class="sxs-lookup"><span data-stu-id="f3e15-143">Named and optional arguments enable you to specify values for only the parameters that you want to change.</span></span> <span data-ttu-id="f3e15-144">将以下代码添加到方法 `DisplayInWord` 的末尾以创建一个简单的表。</span><span class="sxs-lookup"><span data-stu-id="f3e15-144">Add the following code to the end of method `DisplayInWord` to create a simple table.</span></span> <span data-ttu-id="f3e15-145">此参数指定 `range` 中文本字符串内的逗号分隔表的各个单元格。</span><span class="sxs-lookup"><span data-stu-id="f3e15-145">The argument specifies that the commas in the text string in `range` separate the cells of the table.</span></span>  
+     <span data-ttu-id="092d9-143">通过使用命名实参和可选实参，可以只对要更改的形参指定值。</span><span class="sxs-lookup"><span data-stu-id="092d9-143">Named and optional arguments enable you to specify values for only the parameters that you want to change.</span></span> <span data-ttu-id="092d9-144">将以下代码添加到方法 `DisplayInWord` 的末尾以创建一个简单的表。</span><span class="sxs-lookup"><span data-stu-id="092d9-144">Add the following code to the end of method `DisplayInWord` to create a simple table.</span></span> <span data-ttu-id="092d9-145">此参数指定 `range` 中文本字符串内的逗号分隔表的各个单元格。</span><span class="sxs-lookup"><span data-stu-id="092d9-145">The argument specifies that the commas in the text string in `range` separate the cells of the table.</span></span>  
   
      [!code-csharp[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_5.cs)]  
   
-     <span data-ttu-id="f3e15-146">在 C# 早期版本中，对 `ConvertToTable` 的调用需要对每个形参使用引用实参，如以下代码所示。</span><span class="sxs-lookup"><span data-stu-id="f3e15-146">In earlier versions of C#, the call to `ConvertToTable` requires a reference argument for each parameter, as shown in the following code.</span></span>  
+     <span data-ttu-id="092d9-146">在 C# 早期版本中，对 `ConvertToTable` 的调用需要对每个形参使用引用实参，如以下代码所示。</span><span class="sxs-lookup"><span data-stu-id="092d9-146">In earlier versions of C#, the call to `ConvertToTable` requires a reference argument for each parameter, as shown in the following code.</span></span>  
   
      [!code-csharp[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_6.cs)]  
   
-2.  <span data-ttu-id="f3e15-147">按 Ctrl+F5 运行项目。</span><span class="sxs-lookup"><span data-stu-id="f3e15-147">Press CTRL+F5 to run the project.</span></span>  
+2.  <span data-ttu-id="092d9-147">按 Ctrl+F5 运行项目。</span><span class="sxs-lookup"><span data-stu-id="092d9-147">Press CTRL+F5 to run the project.</span></span>  
   
-### <a name="to-experiment-with-other-parameters"></a><span data-ttu-id="f3e15-148">试验其他参数</span><span class="sxs-lookup"><span data-stu-id="f3e15-148">To experiment with other parameters</span></span>  
+### <a name="to-experiment-with-other-parameters"></a><span data-ttu-id="092d9-148">试验其他参数</span><span class="sxs-lookup"><span data-stu-id="092d9-148">To experiment with other parameters</span></span>  
   
-1.  <span data-ttu-id="f3e15-149">若要更改表以使其具有一列三行，请将 `DisplayInWord` 中的最后一行替换为以下语句，然后按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="f3e15-149">To change the table so that it has one column and three rows, replace the last line in `DisplayInWord` with the following statement and then type CTRL+F5.</span></span>  
+1.  <span data-ttu-id="092d9-149">若要更改表以使其具有一列三行，请将 `DisplayInWord` 中的最后一行替换为以下语句，然后按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="092d9-149">To change the table so that it has one column and three rows, replace the last line in `DisplayInWord` with the following statement and then type CTRL+F5.</span></span>  
   
      [!code-csharp[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
-2.  <span data-ttu-id="f3e15-150">若要为表指定预定义的格式，请将 `DisplayInWord` 中的最后一行替换为以下语句，然后按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="f3e15-150">To specify a predefined format for the table, replace the last line in `DisplayInWord` with the following statement and then type CTRL+F5.</span></span> <span data-ttu-id="f3e15-151">格式可以为任何 [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382) 常量。</span><span class="sxs-lookup"><span data-stu-id="f3e15-151">The format can be any of the [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382) constants.</span></span>  
+2.  <span data-ttu-id="092d9-150">若要为表指定预定义的格式，请将 `DisplayInWord` 中的最后一行替换为以下语句，然后按 Ctrl+F5。</span><span class="sxs-lookup"><span data-stu-id="092d9-150">To specify a predefined format for the table, replace the last line in `DisplayInWord` with the following statement and then type CTRL+F5.</span></span> <span data-ttu-id="092d9-151">格式可以为任何 [WdTableFormat](https://msdn.microsoft.com/library/microsoft.office.interop.word.wdtableformat.aspx) 常量。</span><span class="sxs-lookup"><span data-stu-id="092d9-151">The format can be any of the [WdTableFormat](https://msdn.microsoft.com/library/microsoft.office.interop.word.wdtableformat.aspx) constants.</span></span>  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   
-## <a name="example"></a><span data-ttu-id="f3e15-152">示例</span><span class="sxs-lookup"><span data-stu-id="f3e15-152">Example</span></span>  
- <span data-ttu-id="f3e15-153">下面的代码包括完整的示例。</span><span class="sxs-lookup"><span data-stu-id="f3e15-153">The following code includes the full example.</span></span>  
+## <a name="example"></a><span data-ttu-id="092d9-152">示例</span><span class="sxs-lookup"><span data-stu-id="092d9-152">Example</span></span>  
+ <span data-ttu-id="092d9-153">下面的代码包括完整的示例。</span><span class="sxs-lookup"><span data-stu-id="092d9-153">The following code includes the full example.</span></span>  
   
  [!code-csharp[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="f3e15-154">另请参阅</span><span class="sxs-lookup"><span data-stu-id="f3e15-154">See Also</span></span>  
- [<span data-ttu-id="f3e15-155">命名参数和可选参数</span><span class="sxs-lookup"><span data-stu-id="f3e15-155">Named and Optional Arguments</span></span>](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+## <a name="see-also"></a><span data-ttu-id="092d9-154">请参阅</span><span class="sxs-lookup"><span data-stu-id="092d9-154">See Also</span></span>  
+ [<span data-ttu-id="092d9-155">命名参数和可选参数</span><span class="sxs-lookup"><span data-stu-id="092d9-155">Named and Optional Arguments</span></span>](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
