@@ -1,12 +1,8 @@
 ---
 title: "动态语言运行时概述 | Microsoft Docs"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dynamic language runtime
@@ -19,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 78de2016e02c242fcf6ec454a56a4beff41c2d12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54ea1f9f071d749058450487d25bdff13ca04549
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dynamic-language-runtime-overview"></a>动态语言运行时概述
 动态语言运行时 (DLR) 是一种运行时环境，可以将一组动态语言服务添加到公共语言运行时 (CLR)。 使用 DLR 可以轻松开发在 .NET Framework 上运行的动态语言，并为静态类型语言添加动态特征。  
@@ -52,10 +48,10 @@ ms.lasthandoff: 12/22/2017
   
  `scriptobj.Count += 1;`  
   
- DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual Studio 安装包提供。 还可以从 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 网站下载 DLR 的开源版本。  
+ DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual Studio 安装包提供。 还可以从 GitHub 上的 [IronLanguages/dlr](https://github.com/IronLanguages/dlr) 存储库下载 DLR 的开源版本。  
   
 > [!NOTE]
->  DLR 开源版本具有 Visual Studio 和 .NET Framework 中包含的 DLR 所具有的所有功能。 它还为语言实现者提供额外支持。 有关详细信息，请参阅 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 网站上的文档。  
+>  DLR 开源版本具有 Visual Studio 和 .NET Framework 中包含的 DLR 所具有的所有功能。 它还为语言实现者提供额外支持。 有关详细信息，请参阅位于 GitHub 上 [IronLanguages/dlr](https://github.com/IronLanguages/dlr) 存储库上的文档。 
   
  举例来说，使用 DLR 开发的语言包括以下语言：  
   
@@ -98,7 +94,7 @@ DLR 体系结构
  DLR 在调用站点中使用联编程序不仅与 .NET Framework 进行通信，还与 Silverlight 和 COM 等其他基础结构和服务进行通信。 联编程序封装语言的语义，并指定如何使用表达式树在调用站点中执行操作。 这样使用 DLR 的动态和静态类型语言便可共享库，并访问 DLR 支持的所有技术。  
   
 ## <a name="dlr-documentation"></a>DLR 文档  
- 如需深入了解如何使用 DLR 开源版本向语言添加动态行为，以及如何在 .NET Framework 中使用动态语言，请参阅 [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) 网站上的文档。  
+ 如需深入了解如何使用 DLR 开源版本向语言添加动态行为，以及如何在 .NET Framework 中使用动态语言，请参阅 GitHub 上 [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) 存储库上的文档。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Dynamic.ExpandoObject>  

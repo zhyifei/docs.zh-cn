@@ -4,7 +4,7 @@ description: "了解 C# 和 .NET 的基础知识。 概述了 C# 语言和 .NET 
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology: devlang-csharp
-ms.topic: article
+ms.topic: get-started-article
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
@@ -12,11 +12,11 @@ ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2bc7dfbca102a5d2e891b48b676347822eae56f7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b2ffb641f436a41c97a94a6ec117f6087851d482
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 语言和 .NET Framework 介绍
 C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上运行的各种安全可靠的应用程序。 C# 可用于创建 Windows 客户端应用程序、XML Web service、分布式组件、客户端服务器应用程序、数据库应用程序等。 Visual C# 提供高级代码编辑器、方便使用的用户界面设计器、集成调试器和其他许多工具，以便你可以更轻松地开发基于 C# 语言和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的应用程序。  
@@ -68,5 +68,5 @@ C# 是类型安全的面向对象的精妙语言，可帮助开发者生成在 [
   
  有关 .NET Framework 的详细信息，请参阅 [Microsoft.NET Framework 概述](../../framework/get-started/overview.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C#](../../csharp/index.md) [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

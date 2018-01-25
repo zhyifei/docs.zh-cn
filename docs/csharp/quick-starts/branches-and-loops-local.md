@@ -4,16 +4,16 @@ description: "在这个有关分支和循环的快速入门中，编写了 C# �
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="branches-and-loops"></a>分支和循环
 
@@ -254,7 +254,7 @@ for(int index = 0; index < 10; index++)
 
 已完成“分支和循环”快速入门教程。
 
-可以继续在你自己的开发环境中学习[数组和集合](arrays-and-collections.md)快速入门教程。
+可以继续在你自己的开发环境中学习[内插字符串](interpolated-strings-local.md)快速入门教程。
 
 若要详细了解这些概念，请参阅下列主题：
 

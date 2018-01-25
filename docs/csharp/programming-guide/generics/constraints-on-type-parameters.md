@@ -13,23 +13,23 @@ ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 定义泛型类时，可以对客户端代码能够在实例化类时用于类型参数的几种类型施加限制。 如果客户端代码尝试使用约束所不允许的类型来实例化类，则会产生编译时错误。 这些限制称为约束。 通过使用 `where` 上下文关键字指定约束。 下表列出了六种类型的约束：  
   
 |约束|描述|  
 |----------------|-----------------|  
-|where T：结构|类型参数必须是值类型。 可以指定除 <xref:System.Nullable> 以外的任何值类型。 有关详细信息，请参阅[使用可以为 null 的类型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)。|  
-|where T：类|类型参数必须是引用类型；这同样适用于所有类、接口、委托或数组类型。|  
-|where T：new()|类型参数必须具有公共无参数构造函数。 与其他约束一起使用时，`new()` 约束必须最后指定。|  
-|where T：\<基类名称>|类型参数必须是指定的基类或派生自指定的基类。|  
-|where T：\<接口名称>|类型参数必须是指定的接口或实现指定的接口。 可指定多个接口约束。 约束接口也可以是泛型。|  
-|where T：U|为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数。|  
+|`where T: struct`|类型参数必须是值类型。 可以指定除 <xref:System.Nullable> 以外的任何值类型。 有关详细信息，请参阅[使用可以为 null 的类型](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)。|  
+|`where T : class`|类型参数必须是引用类型；这同样适用于所有类、接口、委托或数组类型。|  
+|`where T : new()`|类型参数必须具有公共无参数构造函数。 与其他约束一起使用时，`new()` 约束必须最后指定。|  
+|`where T : `*\<基类名>*|类型参数必须是指定的基类或派生自指定的基类。|  
+|`where T : `*\<接口名称>*|类型参数必须是指定的接口或实现指定的接口。 可指定多个接口约束。 约束接口也可以是泛型。|  
+|`where T : U`|为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数。|  
   
 ## <a name="why-use-constraints"></a>使用约束的原因  
  如果要检查泛型列表中的某个项，确定它是否有效，或者将它与其他某个项进行比较，则编译器必须保证它需要调用的运算符或方法将受到客户端代码可能指定的任何类型参数的支持。 通过对泛型类定义应用一个或多个约束获得这种保证。 例如，基类约束告诉编译器，仅此类型的对象或派生自此类型的对象可用作类型参数。 编译器有了此保证后，就能够允许在泛型类中调用该类型的方法。 通过使用 `where` 上下文关键字应用约束。 以下代码示例演示可通过应用基类约束添加到（[泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)中的）`GenericList<T>` 类的功能。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
  类型参数作为泛型类的约束的作用非常有限，因为编译器除了假设类型参数派生自 `System.Object` 以外，不会做其他任何假设。 如果要在两个类型参数之间强制继承关系，可以将类型参数用作泛型类的约束。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Collections.Generic>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  

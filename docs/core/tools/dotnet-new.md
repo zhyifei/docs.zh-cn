@@ -11,11 +11,11 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload: dotnetcore
-ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,43 +58,43 @@ dotnet new [-h|--help]
 
 此命令包含默认的模板列表。 使用 `dotnet new -l` 获取可用模板的列表。 下表列出了与 .NET Core 2.0 SDK 一起预安装的模板。 模板的默认语言显示在括号内。
 
-|模板描述                          | 模板名称  | 语言     |
-|----------------------------------------------|----------------|---------------|
-| 控制台应用程序                          | 控制台        | [C#]、F#、VB  |
-| 类库                                | classlib       | [C#]、F#、VB  |
-| 单元测试项目                            | mstest         | [C#]、F#、VB  |
-| xUnit 测试项目                           | xunit          | [C#]、F#、VB  |
-| ASP.NET Core 空                           | Web            | [C#]，F#      |
-| ASP.NET Core Web 应用程序 (Model-View-Controller) | mvc            | [C#]，F#      |
-| ASP.NET Core Web 应用程序                         | razor          | [C#]          |
-| 含 Angular 的 ASP.NET Core                    | angular        | [C#]          |
-| 含 React.js 的 ASP.NET Core                   | react          | [C#]          |
-| 含 React.js 和 Redux 的 ASP.NET Core         | reactredux     | [C#]          |
-| ASP.NET Core Web API                         | webapi         | [C#]，F#      |
-| global.json 文件                             | globaljson     |               |
-| Nuget 配置                                 | nugetconfig    |               |
-| Web 配置                                   | webconfig      |               |
-| 解决方案文件                                | sln            |               |
-| Razor 页                                   | 页           |               |
-| MVC/ViewImports                              | viewimports    |               |
-| MVC ViewStart                                | viewstart      |               |
+|模板描述                          | 模板名称 | 语言     |
+|----------------------------------------------|---------------|---------------|
+| 控制台应用程序                          | `console`     | [C#]、F#、VB  |
+| 类库                                | `classlib`    | [C#]、F#、VB  |
+| 单元测试项目                            | `mstest`      | [C#]、F#、VB  |
+| xUnit 测试项目                           | `xunit`       | [C#]、F#、VB  |
+| ASP.NET Core 空                           | `web`         | [C#]，F#      |
+| ASP.NET Core Web 应用程序 (Model-View-Controller) | `mvc`         | [C#]，F#      |
+| ASP.NET Core Web 应用程序                         | `razor`       | [C#]          |
+| 含 Angular 的 ASP.NET Core                    | `angular`     | [C#]          |
+| 含 React.js 的 ASP.NET Core                   | `react`       | [C#]          |
+| 含 React.js 和 Redux 的 ASP.NET Core         | `reactredux`  | [C#]          |
+| ASP.NET Core Web API                         | `webapi`      | [C#]，F#      |
+| global.json 文件                             | `globaljson`  |               |
+| Nuget 配置                                 | `nugetconfig` |               |
+| Web 配置                                   | `webconfig`   |               |
+| 解决方案文件                                | `sln`         |               |
+| Razor 页                                   | `page`        |               |
+| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 此命令包含默认的模板列表。 使用 `dotnet new -all` 获取可用模板的列表。 下表列出了与 .NET Core 1.x SDK 一起预安装的模板。 模板的默认语言显示在括号内。
 
-|模板描述  | 模板名称  | 语言 |
-|----------------------|----------------|-----------|
-| 控制台应用程序  | 控制台        | [C#]，F#  |
-| 类库        | classlib       | [C#]，F#  |
-| 单元测试项目    | mstest         | [C#]，F#  |
-| xUnit 测试项目   | xunit          | [C#]，F#  |
-| ASP.NET Core 空   | Web            | [C#]      |
-| ASP.NET Core Web 应用程序 | mvc            | [C#]，F#  |
-| ASP.NET Core Web API | webapi         | [C#]      |
-| Nuget 配置         | nugetconfig    |           |
-| Web 配置           | webconfig      |           |
-| 解决方案文件        | sln            |           |
+|模板描述  | 模板名称 | 语言 |
+|----------------------|---------------|-----------|
+| 控制台应用程序  | `console`     | [C#]，F#  |
+| 类库        | `classlib`    | [C#]，F#  |
+| 单元测试项目    | `mstest`      | [C#]，F#  |
+| xUnit 测试项目   | `xunit`       | [C#]，F#  |
+| ASP.NET Core 空   | `web`         | [C#]      |
+| ASP.NET Core Web 应用程序 | `mvc`         | [C#]，F#  |
+| ASP.NET Core Web API | `webapi`      | [C#]      |
+| Nuget 配置         | `nugetconfig` |           |
+| Web 配置           | `webconfig`   |           |
+| 解决方案文件        | `sln`         |           |
 
 ---
 

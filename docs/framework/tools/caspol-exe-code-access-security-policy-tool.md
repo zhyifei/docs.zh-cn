@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
@@ -114,7 +114,7 @@ caspol [options]
 ## <a name="remarks"></a>备注  
  安全策略使用三个策略级别来表示：计算机策略、用户策略和企业策略。 程序集收到的权限集由这三个策略级别允许的权限集的交集确定。 每个策略级别都用代码组的分层结构表示。 每个代码组都有一个确定哪个代码是该组成员的成员资格条件。 命名权限集也与每个代码组关联。 此权限集指定运行时允许满足成员资格条件的代码拥有的权限。 代码组层次结构连同其关联的命名权限集一起定义并维护每个安全策略级别。 可以使用 **–user**、**-customuser**、**–machine** 和 **-enterprise** 选项设置安全策略级别。  
   
- 有关安全策略以及运行时如何确定授予代码何种权限的更多信息，请参见[安全策略管理](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
+ 有关安全策略以及运行时如何确定授予代码何种权限的更多信息，请参见[安全策略管理](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)。  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>引用代码组和权限集  
  为使在层次结构中引用代码组更容易，**-list** 选项显示了代码组的缩进式列表及其数字标签（1、1.1、1.1.1 依此类推）。 其他以代码组为目标的命令行操作也使用数字标签来引用特定的代码组。  
