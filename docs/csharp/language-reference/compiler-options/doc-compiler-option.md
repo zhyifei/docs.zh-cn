@@ -18,19 +18,19 @@ ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ae3d6e1ffdaaa3245a51005070b16041c16dadae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c668c79ca2c68d1a497521581857085e57c71f5c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="doc-c-compiler-options"></a>/doc（C# 编译器选项）
-**/doc** 选项可让你在 XML 文件中放置文档注释。  
+# <a name="-doc-c-compiler-options"></a>-doc（C# 编译器选项）
+-doc 选项可让你在 XML 文件中放置文档注释。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/doc:file  
+-doc:file  
 ```  
   
 ## <a name="arguments"></a>自变量  
@@ -48,10 +48,10 @@ ms.lasthandoff: 11/21/2017
   
  若要将生成的 xml 文件与 [IntelliSense](/visualstudio/ide/using-intellisense) 功能配合使用，请将 .xml 文件的文件名设为与要支持的程序集相同的名称，然后确保 .xml 文件与程序集位于同一目录中。 这样，在 Visual Studio 项目中引用程序集时，也会找到 .xml 文件。 有关详细信息，请参阅[提供代码注释](/visualstudio/ide/supplying-xml-code-comments)。  
   
- 除非用 [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 进行编译，否则 `file` 将包含 \<assembly>\</assembly> 标记，以指定包含编译输出文件的程序集清单的文件名。  
+ 除非用 [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 进行编译，否则 `file` 将包含 \<assembly>\</assembly> 标记，以指定包含编译输出文件的程序集清单的文件名。  
   
 > [!NOTE]
->  /doc 选项适用于所有输入文件；或者，如果在项目设置中进行设置，则适用于项目中的所有文件。 若要禁用与特定文件或一段代码的文档注释相关的警告，请使用 [#pragma 警告](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)。  
+>  -doc 选项适用于所有输入文件；或者，如果在项目设置中进行设置，则适用于项目中的所有文件。 若要禁用与特定文件或一段代码的文档注释相关的警告，请使用 [#pragma 警告](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)。  
   
  有关从代码中的注释生成文档的方法，请参阅[建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)。  
   
@@ -65,6 +65,6 @@ ms.lasthandoff: 11/21/2017
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

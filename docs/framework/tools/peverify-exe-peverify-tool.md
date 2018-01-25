@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f5d9adcfe701b5897c434dc1479b9692448d8b98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5acb6da7c68f899daa4144e897e9ec31fcfa868a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe（PEVerify 工具）
 PEVerify 工具有助于生成 Microsoft 中间语言 (MSIL) 的开发人员（如编译器编写者、脚本引擎开发人员等）确定其 MSIL 代码及关联的元数据是否满足类型安全要求。 某些编译器仅当你避免使用某些语言构造时才生成可验证的类型安全代码。 如果你作为开发人员正在使用此类编译器，则可能需要确认你未危害代码的类型安全性。 在这种情况下，你可以对文件运行 PEVerify 工具来检查 MSIL 和元数据。  
@@ -66,7 +66,7 @@ peverify filename [options]
 |**/?**|显示该工具的命令语法和选项。|  
   
 ## <a name="remarks"></a>备注  
- 公共语言运行时依赖应用程序代码的类型安全执行，以帮助强制实施安全性和隔离机制。 通常情况下，虽然可以设置安全策略以允许执行受信任但不可验证的代码，但无法运行不是[可验证类型安全](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)的代码。  
+ 公共语言运行时依赖应用程序代码的类型安全执行，以帮助强制实施安全性和隔离机制。 通常情况下，虽然可以设置安全策略以允许执行受信任但不可验证的代码，但无法运行不是[可验证类型安全](http://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)的代码。  
   
  如果既未指定 /md 选项也未指定 /il 选项，则 Peverify.exe 将执行两种类型的检查。 Peverify.exe 首先执行 /md 检查。 如果没有错误，则执行 /il 检查。 如果同时指定了 /md 和 /il，则即使元数据中存在错误，也执行 /il 检查。 因此，如果没有元数据错误，则 peverify filename 等效于 peverify filename /md /il。  
   
@@ -131,6 +131,6 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>请参阅  
  [工具](../../../docs/framework/tools/index.md)  
- [NIB：编写可验证类型安全代码](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)  
- [类型安全和安全性](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
+ [NIB：编写可验证类型安全代码](http://msdn.microsoft.com/library/d18f10ef-3b48-4f47-8726-96714021547b)  
+ [类型安全和安全性](http://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

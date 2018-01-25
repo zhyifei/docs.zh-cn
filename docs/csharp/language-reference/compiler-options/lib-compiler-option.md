@@ -13,22 +13,22 @@ ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 476bc43987b5ac8fa222b767b068a9ca14537bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58203570119676e0737b0142b7a7a5fbf23f1ae2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="lib-c-compiler-options"></a>/lib（C# 编译器选项）
-/Lib 选项指定通过 [/reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)选项引用的程序集的位置。  
+# <a name="-lib-c-compiler-options"></a>-lib（C# 编译器选项）
+-lib 选项指定通过 [-reference（C# 编译器选项）](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)选项引用的程序集的位置。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/lib:dir1[,dir2]  
+-lib:dir1[,dir2]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `dir1`  
  在当前工作目录（调用编译器的目录）或公共语言运行时的系统目录中未找到引用的程序集时，编译器将在其中进行查找的目录。  
   
@@ -42,15 +42,15 @@ ms.lasthandoff: 11/21/2017
   
 2.  公共语言运行时系统目录。  
   
-3.  由 /lib 指定的目录。  
+3.  由 -lib 指定的目录。  
   
 4.  由 LIB 环境变量指定的目录。  
   
- 使用 /reference 指定程序集引用。  
+ 使用 -reference 指定程序集引用。  
   
- /lib 是累加的；每一次指定的值都追加到以前的值中。  
+ -lib 是累加的；每一次指定的值都追加到以前的值中。  
   
- 另一种使用 /lib 的方法是，将任何所需的程序集复制到工作目录中；这样可以仅将程序集名称传递给 /reference。 然后可以从工作目录中删除这些程序集。 由于程序集清单中未指定依赖程序集的路径，因此应用程序可以在目标计算机上启动，然后查找并使用全局程序集缓存中的程序集。  
+ 另一种使用 -lib 的方法是，将任何所需的程序集复制到工作目录中；这样可以仅将程序集名称传递给 -reference。 然后可以从工作目录中删除这些程序集。 由于程序集清单中未指定依赖程序集的路径，因此应用程序可以在目标计算机上启动，然后查找并使用全局程序集缓存中的程序集。  
   
  编译器可以引用程序集并不表示公共语言运行时可以在运行时找到并加载程序集。 有关运行时如何搜索引用的程序集的详细信息，请参阅[运行时如何定位程序集](../../../framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
@@ -68,9 +68,9 @@ ms.lasthandoff: 11/21/2017
  编译 t2.cs 以创建 .exe 文件。 编译器将在工作目录和 C 驱动器的根目录中查找程序集引用。  
   
 ```console  
-csc /lib:c:\ /reference:t2.dll t2.cs  
+csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

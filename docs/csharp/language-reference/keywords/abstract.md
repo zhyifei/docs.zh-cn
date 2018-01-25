@@ -12,11 +12,11 @@ ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 785c23294abdbfa0684560a38fbd0279200a7d02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd26583c42302d8ce9ba4dd22119713548111236
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="abstract-c-reference"></a>abstract（C# 参考）
 `abstract` 修饰符指示被修改内容的实现已丢失或不完整。 abstract 修饰符可用于类、方法、属性、索引和事件。 在类声明中使用 `abstract` 修饰符以指示某个类仅旨在作为其他类的基类。 标记为 abstract 的成员，或包含在抽象类中的成员，都必须由派生自抽象类的类来实现。  
@@ -44,9 +44,9 @@ ms.lasthandoff: 11/21/2017
   
 -   只有抽象类中才允许抽象方法声明。  
   
--   由于抽象方法声明不提供实际的实现，因此没有方法主体；方法声明仅以分号结尾，且签名后没有大括号 ({ })。 例如:   
+-   由于抽象方法声明不提供实际的实现，因此没有方法主体；方法声明仅以分号结尾，且签名后没有大括号 ({ })。 例如:  
   
-    ```  
+    ```csharp  
     public abstract void MyMethod();  
     ```  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
  抽象类必须为所有接口成员提供实现。  
   
- 实现接口的抽象类有可能将接口方法映射到抽象方法上。 例如:   
+ 实现接口的抽象类有可能将接口方法映射到抽象方法上。 例如:  
   
  [!code-csharp[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
@@ -75,16 +75,16 @@ ms.lasthandoff: 11/21/2017
   
  在前面的示例中，如果你尝试通过使用如下语句来实例化抽象类：  
   
-```  
+```csharp
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- 将遇到一个错误，告知编译器无法创建抽象类“BaseClass”的实例。  
+将遇到一个错误，告知编译器无法创建抽象类“BaseClass”的实例。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  

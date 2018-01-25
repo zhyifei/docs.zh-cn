@@ -13,29 +13,29 @@ ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 356502b8528e22a5b5ff9a28a3f82d5f9c0a72f9
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 2ec19bacb975732f2ae04b8cefbfaeaa518b6f15
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="win32icon-c-compiler-options"></a>/win32icon (C# 编译器选项)
-/win32icon 选项在输出文件中插入 .ico 文件，为输出文件赋予其在文件资源管理器中所需的外观。  
+# <a name="-win32icon-c-compiler-options"></a>-win32icon（C# 编译器选项）
+-win32icon 选项在输出文件中插入 .ico 文件，为输出文件赋予其在文件资源管理器中所需的外观。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/win32icon:filename  
+-win32icon:filename  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `filename`  
  想向输出文件添加的 .ico 文件。  
   
 ## <a name="remarks"></a>备注  
  可以使用[资源编译器](https://msdn.microsoft.com/library/aa381042.aspx)创建的 .ico 文件。 在编译 Visual C++ 程序时会调用资源编译器；.ico 文件是从 .rc 文件创建的。  
   
- 请参阅 [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)（引用）或 [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)（附加） .NET Framework 资源文件。 请参阅 [/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 导入 .res 文件。  
+ 请参阅 [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)（引用）或 [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)（附加）.NET Framework 资源文件。 请参阅 [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 导入 .res 文件。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -51,9 +51,9 @@ ms.lasthandoff: 12/06/2017
  编译 `in.cs` 并附加 .ico 文件 `rf.ico` 以生成 `in.exe`：  
   
 ```console  
-csc /win32icon:rf.ico in.cs  
+csc -win32icon:rf.ico in.cs  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

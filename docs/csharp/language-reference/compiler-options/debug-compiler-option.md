@@ -13,36 +13,36 @@ ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4705fc6fc3e3fa41f46b8617aa23ab507afa0cd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: be1b6379080b2af799990c43e5339a9a548eb067
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="debug-c-compiler-options"></a>/debug (C# 编译器选项)
-/debug 选项将使编译器生成调试信息，并将此信息放置在输出文件或文件中。  
+# <a name="-debug-c-compiler-options"></a>-debug（C# 编译器选项）
+-debug 选项将使编译器生成调试信息，并将此信息放置在输出文件或文件中。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/debug[+ | -]  
-/debug:{full | pdbonly}  
+-debug[+ | -]  
+-debug:{full | pdbonly}  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `+` &#124; `-`  
- 指定 `+` 或仅 /debug 将导致编译器生成调试信息并将此信息放在程序数据库（.pdb 文件）中。 指定 `-`（在不指定 /debug 时生效）将导致不创建任何调试信息。  
+ 指定 `+` 或仅 -debug 将导致编译器生成调试信息并将此信息放在程序数据库（.pdb 文件）中。 指定 `-`（在不指定 -debug 时生效）将导致不创建任何调试信息。  
   
  `full` &#124; `pdbonly`  
- 指定编译器生成的调试信息的类型。 完整参数（在不指定 /debug:pdbonly 时生效）允许将调试器附加到正在运行的程序。 指定 pdbonly 允许在调试器中启动程序时进行源代码调试，但仅在正在运行的程序附加到调试器时才显示汇编程序。  
+ 指定编译器生成的调试信息的类型。 完整参数（在不指定 -debug:pdbonly 时生效）允许将调试器附加到正在运行的程序。 指定 pdbonly 允许在调试器中启动程序时进行源代码调试，但仅在正在运行的程序附加到调试器时才显示汇编程序。  
   
 ## <a name="remarks"></a>备注  
- 使用此选项创建调试版本。 如果未指定 /debug、/debug+ 或 /debug:full，则无法调试程序的输出文件。  
+ 使用此选项创建调试版本。 如果未指定 -debug、-debug+ 或 -debug:full，则无法调试程序的输出文件。  
   
- 如果使用 /debug:full，请注意，对经过优化的 JIT 代码的速度和大小会存在一定影响，且对包含 /debug:full 的代码质量也有一定影响。 建议使用 /debug:pdbonly 或不使用 PDB 生成发布代码。  
+ 如果使用 -debug:full，请注意，对经过优化的 JIT 代码的速度和大小会存在一定影响，且对包含 -debug:full 的代码质量也有一定影响。 建议使用 -debug:pdbonly 或不使用 PDB 生成发布代码。  
   
 > [!NOTE]
->  /debug:pdbonly 和 /debug:full 之间的一个区别在于，使用 /debug:full，编译器将发出 <xref:System.Diagnostics.DebuggableAttribute>，用于告知 JIT 编译器有可用调试信息。 因此，在使用 /debug:full 时，如果代码包含设置为 false 的 <xref:System.Diagnostics.DebuggableAttribute>，则将出现错误。  
+>  -debug:pdbonly 和 -debug:full 之间的一个区别在于，使用 -debug:full，编译器将发出 <xref:System.Diagnostics.DebuggableAttribute>，用于告知 JIT 编译器有可用调试信息。 因此，在使用 -debug:full 时，如果代码包含设置为 false 的 <xref:System.Diagnostics.DebuggableAttribute>，则将出现错误。  
   
  有关如何配置应用程序的调试性能的详细信息，请参阅[令映像更易于调试](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  单击“生成”属性页。  
   
-3.  单击 **“高级”** 按钮。  
+3.  单击“高级”按钮。  
   
 4.  修改“调试信息”属性。  
   
@@ -64,9 +64,9 @@ ms.lasthandoff: 11/21/2017
  将调试信息放在输出文件 `app.pdb`：  
   
 ```console  
-csc /debug /pdb:app.pdb test.cs  
+csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

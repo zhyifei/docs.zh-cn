@@ -16,19 +16,19 @@ ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d4c7e4e646e6796cff6bbfbe05038ff361fa80c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 273437a4250a393274fa20ad4c02b61dce35ed34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="define-c-compiler-options"></a>/define（C# 编译器选项）
-“/define”选项将 `name` 定义为程序中所有源代码文件的符号。  
+# <a name="-define-c-compiler-options"></a>-define（C# 编译器选项）
+-define 选项将 `name` 定义为程序中所有源代码文件的符号。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/define:name[;name2]  
+-define:name[;name2]  
 ```  
   
 ## <a name="arguments"></a>自变量  
@@ -36,16 +36,16 @@ ms.lasthandoff: 11/21/2017
  一个或多个要定义的符号的名称。  
   
 ## <a name="remarks"></a>备注  
- “/define”选项具有与使用 [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 预处理器指令相同的效果，但编译器选项对项目中的所有文件都有效。 符号在源文件中保持已定义状态，直到源文件中的 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 指令删除该定义。 使用 /define 选项时，一个文件中的 `#undef` 指令不影响项目中其他的源代码文件。  
+ -define 选项具有与使用 [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) 预处理器指令相同的效果，但编译器选项对项目中的所有文件都有效。 符号在源文件中保持已定义状态，直到源文件中的 [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) 指令删除该定义。 使用 -define 选项时，一个文件中的 `#undef` 指令不影响项目中其他的源代码文件。  
   
  可以将由此选项创建的符号同 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)、[#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)、[#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) 和 [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) 一起使用，对源文件进行条件编译。  
   
- “/d”是“/define”的缩写形式。  
+ -d 是 -define 的缩写形式。  
   
- 通过使用分号或逗号分隔符号名称，可以用“/define”定义多个符号。 例如:   
+ 通过使用分号或逗号分隔符号名称，可用 -define 定义多个符号。 例如:  
   
 ```console  
-/define:DEBUG;TUESDAY  
+-define:DEBUG;TUESDAY  
 ```  
   
  C# 编译器本身不定义源代码中使用的符号或宏；所有符号定义必须都是用户定义的。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 ```csharp  
 // preprocessor_define.cs  
-// compile with: /define:xx  
+// compile with: -define:xx  
 // or uncomment the next line  
 // #define xx  
 using System;  
@@ -82,6 +82,6 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

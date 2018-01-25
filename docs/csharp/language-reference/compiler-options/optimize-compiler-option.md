@@ -17,31 +17,31 @@ ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d74a338336d5878cb8d6f212076bb9f1eb7ef768
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2cf6919ee2d4f0a4031e18d46b9e5ebaf816b120
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="optimize-c-compiler-options"></a>/optimize（C# 编译器选项）
-/optimize 选项启用或禁用编译器执行的优化，使输出文件更小、更快、更有效。  
+# <a name="-optimize-c-compiler-options"></a>-optimize（C# 编译器选项）
+-optimize 选项启用或禁用编译器执行的优化，使输出文件更小、更快、更有效。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/optimize[+ | -]  
+-optimize[+ | -]  
 ```  
   
 ## <a name="remarks"></a>备注  
- /optimize 还指示公共语言运行时在运行时优化代码。  
+ -optimize 还指示公共语言运行时在运行时优化代码。  
   
- 默认情况下，禁用优化。 指定 /optimize+ 可启用优化。  
+ 默认情况下，禁用优化。 指定 -optimize+ 可启用优化。  
   
- 生成程序集使用的模块时，请使用与程序集相同的 /optimize 设置。  
+ 生成程序集使用的模块时，请使用与程序集相同的 -optimize 设置。  
   
- /o 是 /optimize 的缩写形式。  
+ -o 是 -optimize 的缩写形式。  
   
- 可以将 /optimize 和 [/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) 选项组合使用。  
+ 可以将 -optimize 和 [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) 选项组合使用。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -57,9 +57,9 @@ ms.lasthandoff: 11/21/2017
  编译 `t2.cs` 并启用编译器优化：  
   
 ```console  
-csc t2.cs /optimize  
+csc t2.cs -optimize  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -14,11 +14,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b24a367eaf78ef520cc2dd54db6ad58b215179ad
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7e4bc1814ed5c86660b4333542a3dc4eb7462e89
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -62,10 +62,10 @@ ms.lasthandoff: 12/09/2017
   
  有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)和 [COM 类示例](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Improving Interop Performance](http://go.microsoft.com/fwlink/?LinkId=99564)（提高互操作性能）  
  [COM 互操作介绍](http://go.microsoft.com/fwlink/?LinkId=112406)  
  [托管代码与非托管代码之间的封送处理](http://go.microsoft.com/fwlink/?LinkId=112398)  
  [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
- [高级 COM 互操作性](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [高级 COM 互操作性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)

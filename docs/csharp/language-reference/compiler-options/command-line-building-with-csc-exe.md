@@ -11,11 +11,11 @@ ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 实现命令行生成
 通过在命令提示符处键入 C# 编译器的可执行文件名称 (csc.exe)，可调用该编译器。
@@ -33,7 +33,7 @@ csc.exe 可执行文件通常位于 Windows 目录下的 Microsoft.NET\Framework
 > [!TIP]
 >  使用 Visual Studio IDE 生成项目时，可以在**“输出”**窗口显示**“csc”**命令以及与之关联的编译器选项。 若要显示此信息，请按照[如何：查看、保存和配置生成日志文件](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)中的说明将日志数据的详细级别更改为**“常规”**或**“详细”**。 重新生成项目之后，在**“输出”**窗口中搜索**“csc”**即可找到所调用的 C# 编译器。
 
- **主题内容**
+ **在本主题中**
 
 - [命令行语法规则](#-rules-for-command-line-syntax-for-the-c-compiler)
 
@@ -70,31 +70,31 @@ csc File.cs
 - 编译生成 File.dll 的 File.cs：
 
 ```console
-csc /target:library File.cs
+csc -target:library File.cs
 ```
 
 - 编译 File.cs 并创建 My.exe：
 
 ```console
-csc /out:My.exe File.cs
+csc -out:My.exe File.cs
 ```
 
 - 编译当前目录中的所有 C# 文件，对其进行优化并定义 DEBUG 符号。 输出为 File2.exe：
 
 ```console
-csc /define:DEBUG /optimize /out:File2.exe *.cs
+csc -define:DEBUG -optimize -out:File2.exe *.cs
 ```
 
 - 编译当前目录中的所有 C# 文件，生成 File2.dll 的调试版本。 不显示徽标和警告：
 
 ```console
-csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
+csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
 ```
 
 - 将当前目录中的所有 C# 文件编译为 Something.xyz (DLL)：
 
 ```console
-csc /target:library /out:Something.xyz *.cs
+csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# 编译器和 C++ 编译器输出之间的差异
@@ -106,6 +106,6 @@ csc /target:library /out:Something.xyz *.cs
  [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
  [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [命令行参数](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
- [如何： 显示命令行自变量](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
  [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
  [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

@@ -13,31 +13,31 @@ ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e155c64689f34c89443c7ff0a3dee38d6c190fcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b13af4e665a2bf5a75472bc8f4a501e90c59281a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetwinexe-c-compiler-options"></a>/target:winexe（C# 编译器选项）
-**/target:winexe** 选项将使编译器创建可执行文件 (EXE) 和 Windows 程序。  
+# <a name="-targetwinexe-c-compiler-options"></a>-target:winexe（C# 编译器选项）
+-target:winexe 选项使编译器创建可执行文件 (EXE) 和 Windows 程序。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/target:winexe  
+-target:winexe  
 ```  
   
 ## <a name="remarks"></a>备注  
  将创建扩展名为 .exe 的可执行文件。 Windows 程序从 .NET Framework 库或使用 Win32 API 提供用户界面。  
   
- 使用 [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) 创建控制台应用程序。  
+ 使用 [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) 创建控制台应用程序。  
   
- 除非使用 [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 选项进行指定，否则输出文件名采用包含 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法的输入文件的名称。  
+ 除非使用 [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 选项进行指定，否则输出文件名采用包含 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法的输入文件的名称。  
   
- 在命令行中进行指定时，直到下一个 **/out** 或 [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 选项为止的所有文件均用于创建 Windows 程序。  
+ 在命令行中进行指定时，直到下一个 -out 或 [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 选项为止的所有文件均用于创建 Windows 程序。  
   
- 编译为 .exe 文件的源代码文件中只需要一个 **Main** 方法。 如果代码具有多个附带 **Main** 方法的类，则可使用 [/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) 选项指定包含 **Main** 方法的类。  
+ 编译为 .exe 文件的源代码文件中只需要一个 **Main** 方法。 如果代码具有多个附带 Main 方法的类，则可使用 [-main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) 选项指定包含 Main 方法的类。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -53,9 +53,9 @@ ms.lasthandoff: 11/21/2017
  将 `in.cs` 编译为 Windows 程序：  
   
 ```console  
-csc /target:winexe in.cs  
+csc -target:winexe in.cs  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [/target （C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+## <a name="see-also"></a>请参阅  
+ [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

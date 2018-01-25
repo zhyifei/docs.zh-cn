@@ -13,19 +13,19 @@ ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a6dca6e62dbf69783babf2e16dc4e7c36c6705c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f1d06bf408f13a78df503ab10fe3c57b4ff68a3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="main-c-compiler-options"></a>/main（C# 编译器选项）
+# <a name="-main-c-compiler-options"></a>-main（C# 编译器选项）
 如果多个类包含 **Main** 方法，此选项将指定包含程序入口点的类。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/main:class  
+-main:class  
 ```  
   
 ## <a name="arguments"></a>自变量  
@@ -51,9 +51,9 @@ ms.lasthandoff: 11/21/2017
  编译 `t2.cs` 和 `t3.cs`，指出 **Main** 方法可在 `Test2` 中找到：  
   
 ```console  
-csc t2.cs t3.cs /main:Test2  
+csc t2.cs t3.cs -main:Test2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

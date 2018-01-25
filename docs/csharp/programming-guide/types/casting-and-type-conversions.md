@@ -15,11 +15,11 @@ ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8729677b0c7bee60f0ebeb07439b1c0e71508aa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1361a7f115e2bae4b2d1f6271fa9020706581691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>强制转换和类型转换（C# 编程指南）
 由于 C# 是在编译时静态类型化的，因此变量在声明后就无法再次声明，或者无法用于存储其他类型的值，除非该类型可以转换为变量的类型。 例如，不存在从整数到任意字符串的转换。 因此，在将 `i` 声明为整数后，无法将字符串“Hello”赋予它，如下面的代码中所示。  
@@ -88,13 +88,13 @@ Giraffe g2 = (Giraffe) a;
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [类型](../../../csharp/programming-guide/types/index.md)  
  [() 运算符](../../../csharp/language-reference/operators/invocation-operator.md)  
  [explicit](../../../csharp/language-reference/keywords/explicit.md)  
  [implicit](../../../csharp/language-reference/keywords/implicit.md)  
  [转换运算符](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
- [通用的类型转换](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
- [导出的类型转换](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+ [通用类型转换](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
+ [导出类型转换](http://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
  [如何：将字符串转换为数字](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

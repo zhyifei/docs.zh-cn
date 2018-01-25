@@ -8,27 +8,27 @@ ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9ab407f14483bbb5abaf3dc23b0cf204091b74ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e49047ee5a639189331b89f3c5e16f6a1f1d4cd5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetappcontainerexe-c-compiler-options"></a>/target:appcontainerexe（C# 编译器选项）
-如果使用 **/target:appcontainerexe** 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行。 此选项与 [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) 等效，但专门用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用。  
+# <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe（C# 编译器选项）
+如果使用 -target:appcontainerexe 编译器选项，则编译器会创建一个 Windows 可执行 (.exe) 文件，该文件必须在应用容器中运行。 此选项与 [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) 等效，但专门用于 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 应用。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/target:appcontainerexe  
+-target:appcontainerexe  
 ```  
   
 ## <a name="remarks"></a>备注  
  为了要求应用在应用容器中运行，此选项在[可移植可执行](http://go.microsoft.com/fwlink/p/?LinkId=236960) (PE) 文件中设置了一个位。 设置该位时，如果 CreateProcess 方法尝试在应用容器外启动该可执行文件，就会发生错误。  
   
- 除非使用 [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 选项，否则输出文件名采用包含 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法的输入文件的名称。  
+ 除非使用 [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) 选项，否则输出文件名采用包含 [Main](../../../csharp/programming-guide/main-and-command-args/index.md) 方法的输入文件的名称。  
   
- 如果在命令提示符处指定此选项，则在下一个 **/out** 或 **/target** 选项之前，会使用所有文件来创建可执行文件。  
+ 如果在命令提示符处指定此选项，则在下一个 -out 或 -target 选项之前，会使用所有文件来创建可执行文件。  
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>在 IDE 中设置此编译器选项  
   
@@ -44,10 +44,10 @@ ms.lasthandoff: 11/21/2017
  以下命令将 `filename.cs` 编译为一个只能在应用容器中运行的 Windows 可执行文件。  
   
 ```console  
-csc /target:appcontainerexe filename.cs  
+csc -target:appcontainerexe filename.cs  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [/target （C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [/target: winexe （C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
+## <a name="see-also"></a>请参阅  
+ [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target:winexe（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

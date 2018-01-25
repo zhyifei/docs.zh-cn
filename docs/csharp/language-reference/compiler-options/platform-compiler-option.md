@@ -13,19 +13,19 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7a505f955f1faf73198b3670754dbb492ff638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="platform-c-compiler-options"></a>/platform（C# 编译器选项）
+# <a name="-platform-c-compiler-options"></a>-platform（C# 编译器选项）
 指定公共语言运行时 (CLR) 的哪个版本可以运行程序集。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/platform:string  
+-platform:string  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -48,13 +48,13 @@ ms.lasthandoff: 12/23/2017
   
  在 64 位 Windows 操作系统上：  
   
--   用 /platform:x86 编译的程序集将在 WOW64 下运行的 32 位 CLR 上执行。  
+-   用 -platform:x86 编译的程序集将在 WOW64 下运行的 32 位 CLR 上执行。  
   
--   用 /platform:anycpu 编译的 DLL 将在加载它的进程所在的同一 CLR 上执行。  
+-   用 -platform:anycpu 编译的 DLL 将在加载它的进程所在的同一 CLR 上执行。  
   
--   用 /platform:anycpu 编译的可执行文件将在 64 位 CLR 上执行。  
+-   用 -platform:anycpu 编译的可执行文件将在 64 位 CLR 上执行。  
   
--   用 /platform:anycpu32bitpreferred 编译的可执行文件将在 32 位 CLR 上执行。  
+-   用 -platform:anycpu32bitpreferred 编译的可执行文件将在 32 位 CLR 上执行。  
   
  anycpu32bitpreferred 设置只对可执行 (.exe) 文件有效，并且需要 .NET Framework 4.5。  
   
@@ -68,15 +68,15 @@ ms.lasthandoff: 12/23/2017
   
 3.  修改“目标平台”属性，对于针对 .NET Framework 4.5 的项目，选择或清除“首选 32 位”复选框。  
   
- 请注意，/platform 在 Visual C# Express 的开发环境中不可用。  
+ 请注意，-platform 在 Visual C# Express 的开发环境中不可用。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 /platform 选项来指定只有 64 位 Windows 操作系统上的 64 位 CLR 才能运行应用程序。  
+ 下面的示例演示如何使用 -platform 选项来指定只有 64 位 Windows 操作系统上的 64 位 CLR 才能运行应用程序。  
   
 ```console  
-csc /platform:anycpu filename.cs  
+csc -platform:anycpu filename.cs  
 ```  
   
 ## <a name="see-also"></a>请参阅  

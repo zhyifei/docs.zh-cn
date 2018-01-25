@@ -8,22 +8,23 @@ f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
+- refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25b0f6e024e194dff641fd5069755d0ea112a50b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refonly-c-compiler-options"></a>/refonly（C# 编译器选项）
+# <a name="-refonly-c-compiler-options"></a>-refonly（C# 编译器选项）
 
-**/Refonly**选项指示引用程序集应而不是一个实现的程序集，作为主输出的输出。 `/refonly` 参数以无提示方式禁用输出 PDB，因为无法执行引用程序集。
+-refonly 选项表示应输出引用程序集（而不是实现程序集）作为主输出。 `-refonly` 参数以无提示方式禁用输出 PDB，因为无法执行引用程序集。
 
 ## <a name="syntax"></a>语法
 
 ```console
-/refonly
+-refonly
 ```
 
 ## <a name="remarks"></a>备注
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 - 保留所有虚拟方法。 保留显式接口实现。 保留显式实现的属性和事件，因为它们的访问器是虚拟的（因此予以保留）。
 - 保留结构的所有字段。 （这是 post-C#-7.1 优化候选项）
 
-`/refonly` 和 [`/refout`](refout-compiler-option.md) 选项互斥。
+`-refonly` 和 [`-refout`](refout-compiler-option.md) 选项互斥。
 
 ## <a name="see-also"></a>请参阅
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  

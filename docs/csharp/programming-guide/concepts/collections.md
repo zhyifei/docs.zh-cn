@@ -8,11 +8,11 @@ ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 caps.latest.revision: "6"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4955b3d7048b4dfee23fbcf6eeaed995ebf4f1be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 271939b869433742f8b5720ba05955169ea5c410
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-c"></a>集合 (C#)
 对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  在本主题的示例中，针对 `System.Collections.Generic` 和 `System.Linq` 命名空间包括 [using](../../../csharp/language-reference/keywords/using-directive.md) 指令。  
   
- **主题内容**  
+ **在本主题中**  
   
 -   [使用简单集合](#BKMK_SimpleCollection)  
   
@@ -198,7 +198,7 @@ public class Galaxy
   
  下表列出了 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的一些常用类：  
 
-|类|说明| 
+|类|描述| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|表示基于键进行组织的键/值对的集合。|  
 |<xref:System.Collections.Generic.List%601>|表示可按索引访问的对象的列表。 提供用于对列表进行搜索、排序和修改的方法。|  
@@ -224,7 +224,7 @@ public class Galaxy
   
  下表列出了 `System.Collections` 命名空间中的一些常用类：  
   
-|类|说明|  
+|类|描述|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|表示对象的数组，这些对象的大小会根据需要动态增加。|  
 |<xref:System.Collections.Hashtable>|表示根据键的哈希代码进行组织的键/值对的集合。|  
@@ -546,7 +546,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>迭代器  
+##  <a name="iterators"></a>Iterators  
  迭代器用于对集合执行自定义迭代。 迭代器可以是一种方法，或是一个 `get` 访问器。 迭代器使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句返回集合的每一个元素，每次返回一个元素。  
   
  通过使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句调用迭代器。 `foreach` 循环的每次迭代都会调用迭代器。 迭代器中到达 `yield return` 语句时，会返回一个表达式，并保留当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  
@@ -580,14 +580,14 @@ private static IEnumerable<int> EvenSequence(
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
  [编程概念 (C#)](../../../csharp/programming-guide/concepts/index.md)  
  [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
  [并行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [集合和数据结构](../../../standard/collections/index.md)  
- [创建和操作集合](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [创建和操作集合](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [选择集合类](../../../standard/collections/selecting-a-collection-class.md)  
  [集合内的比较和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  

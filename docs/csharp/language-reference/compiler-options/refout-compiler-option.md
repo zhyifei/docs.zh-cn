@@ -11,23 +11,23 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refout-c-compiler-options"></a>/refout（C# 编译器选项）
+# <a name="-refout-c-compiler-options"></a>-refout（C# 编译器选项）
 
-/refout 选项指定应输出引用程序集的文件路径。 这在 Emit API 中转换为 `metadataPeStream`。
+-refout 选项指定应输出引用程序集的文件路径。 这在 Emit API 中转换为 `metadataPeStream`。
 
 ## <a name="syntax"></a>语法
 
 ```console
-/refout:filepath
+-refout:filepath
 ```
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
  `filepath` - 引用程序集的文件路径。 通常情况下，应与主程序集的路径匹配。 推荐约定（MSBuild 采用）是，将引用程序集放入与主程序集相关的“ref/”子文件夹中。
 
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/21/2017
 - 保留所有虚拟方法。 保留显式接口实现。 保留显式实现的属性和事件，因为它们的访问器是虚拟的（因此予以保留）。
 - 保留结构的所有字段。 （这是 post-C#-7.1 优化候选项）
 
-`/refout` 和 [`/refonly`](refonly-compiler-option.md) 选项互斥。
+`-refout` 和 [`-refonly`](refonly-compiler-option.md) 选项互斥。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

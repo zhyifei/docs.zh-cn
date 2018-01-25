@@ -13,33 +13,33 @@ ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0292ff38b1d03f5960a20858fbb9c42a6aff1f43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 944a9b4dbbed76f388642d67be9518343f750de5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="keycontainer-c-compiler-options"></a>/keycontainer（C# 编译器选项）
+# <a name="-keycontainer-c-compiler-options"></a>-keycontainer（C# 编译器选项）
 指定加密密钥容器的名称。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/keycontainer:string  
+-keycontainer:string  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `string`  
  强名称密钥容器的名称。  
   
 ## <a name="remarks"></a>备注  
- 使用“/keycontainer”选项时，通过将来自所指定容器的公钥插入到程序集清单并且用私钥签名最终程序集，编译器可创建可共享的组件。 若要生成密钥文件，请在命令行键入 sn-k `file`。 sn-i 将密钥对安装到容器中。  
+ 使用 -keycontainer 选项时，通过将来自所指定容器的公钥插入到程序集清单并且用私钥签名最终程序集，编译器可创建可共享的组件。 若要生成密钥文件，请在命令行键入 sn-k `file`。 sn-i 将密钥对安装到容器中。  
   
- 如果使用 [/target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 进行编译，当使用 [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 将此模块编译到程序集时，密钥文件的名称将保存在模块中，且会并入程序集。  
+ 如果使用 [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 进行编译，当使用 [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 将此模块编译到程序集时，密钥文件的名称将保存在模块中，且会并入程序集。  
   
  还可以将此选项指定为任何 Microsoft 中间语言 (MSIL) 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=nameWithType>)。  
   
- 此外，可使用 [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) 将加密信息传递给编译器。 如果希望将公钥添加到程序集清单，但希望测试完程序集后再对其签名，请使用 [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)。  
+ 此外，可使用 [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) 将加密信息传递给编译器。 如果希望将公钥添加到程序集清单，但希望测试完程序集后再对其签名，请使用 [-delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)。  
   
  有关详细信息，请参阅[创建和使用具有强名称的程序集](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)和[延迟为程序集签名](../../../framework/app-domains/delay-sign-assembly.md)。  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 11/21/2017
   
  可通过 <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A> 以编程方式访问此编译器选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

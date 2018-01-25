@@ -14,11 +14,11 @@ ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c17dcce921f3a6ff1a9c547c5ff5d34c3dbbf28d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b6511394e69edd344c4f4a1bbc9da549a1a2a17
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 您的第一个程序（C# 编程指南）
 以下过程创建传统“Hello World!”程序的 C# 版本。 该程序显示字符串 `Hello World!`  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
-     - 或 -  
+     或  
   
      [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
@@ -131,11 +131,11 @@ ms.lasthandoff: 11/21/2017
   
  有关 C# 编译器及其选项的详细信息，请参阅 [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)。
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)  
  [字符串](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover>C# 示例应用程序](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [\<paveover>C# 示例应用程序](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

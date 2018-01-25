@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# 中的字符串内插 #
 
@@ -30,7 +30,7 @@ echo "My name is $name.";
 
 在 C# 6 中，我们最终实现了这种样式的字符串内插。 可以在字符串前面使用 `$`，以指明应使用变量/表达式替换相应的值。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 必须将计算机设置为运行 .Net Core。 有关安装说明，请访问 [.NET Core](https://www.microsoft.com/net/core) 页。
 可以在 Windows、Ubuntu Linux、macOS 或 Docker 容器中运行此应用程序。 必须安装常用的代码编辑器。 在以下说明中，我们使用的是开放源代码跨平台编辑器 [Visual Studio Code](https://code.visualstudio.com/)。 不过，你可以使用习惯使用的任意工具。
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>字符串内插的工作方式
 
-在后台，编译器将此类字符串内插语法转换成 String.Format。 因此，可以执行[之前使用 String.Format 执行的相同操作](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx)。
+在后台，编译器将此类字符串内插语法转换成 String.Format。 因此，可以执行[之前使用 String.Format 执行的相同操作](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx)。
 
 例如，可以添加填充和数值格式：
 

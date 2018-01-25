@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 703b7b13a2175fb9c40ff707f333a1bf1530df8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ff36438ab02ae6822d7df8425a615aef2ddbf2f2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="standard-net-event-patterns"></a>标准 .NET 事件模式
 
-[上一页](events-overview.md)
+[上一篇](events-overview.md)
 
 .NET 事件通常遵循几种已知模式。 标准化这些模式意味着开发人员可利用这些标准模式的相关知识，将其应用于任何 .NET 事件程序。
 
@@ -91,7 +91,7 @@ public event EventHandler<FileFoundArgs> FileFound;
 ```csharp
 EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
     Console.WriteLine(eventArgs.FoundFile);
-lister.FileFound += onFIleFound;
+lister.FileFound += onFileFound;
 ```
 
 和删除处理程序：
@@ -259,4 +259,4 @@ lister.DirectoryChanged += (sender, eventArgs) =>
 
 接下来，将了解在 .NET 的最新版本中关于这些模式的一些更改。
 
-[下一部分](modern-events.md)
+[下一篇](modern-events.md)

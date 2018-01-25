@@ -13,22 +13,22 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion（C# 编译器选项）
+# <a name="-langversion-c-compiler-options"></a>-langversion（C# 编译器选项）
 使编译器仅接受包含在所选 C# 语言规范中的语法。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/langversion:option  
+-langversion:option  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `option`  
  以下为有效值：  
   
@@ -52,13 +52,13 @@ ms.lasthandoff: 12/06/2017
 
   
 ## <a name="remarks"></a>备注  
- C# 应用程序引用的元数据不受“/langversion”编译器选项约束。  
+ C# 应用程序引用的元数据不受 -langversion 编译器选项约束。  
   
- 每个版本的 C# 编译器都包含语言规范的扩展，因此 /langversion 不提供早期版本编译器的同等功能。  
+ 每个版本的 C# 编译器都包含语言规范的扩展，因此 -langversion 不提供早期版本编译器的同等功能。  
  
  此外，虽然 C# 版本更新通常与主要的 .Net Framework 版本一致，但新的语法和功能不一定绑定到该特定的 Framework 版本。 虽然新功能肯定会需要与 C# 修订版一起发布的新编译器更新，但每项具体功能都有自己的最小 .Net API 或公共语言运行时要求，这些要求通过包括 NuGet 包或其他库允许功能本身在下层框架上运行。
   
- 无论使用哪一项“/langversion”设置，都将使用当前版本的公共语言运行时来创建 .exe 或 .dll。 友元程序集和 [/moduleassemblyname（C# 编译器选项）](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)是一个例外，它们在“/langversion:ISO-1”下工作。  
+ 无论使用哪一项 -langversion 设置，都将使用当前版本的公共语言运行时来创建 .exe 或 .dll。 友元程序集和 [-moduleassemblyname（C# 编译器选项）](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)是一个例外，它们在 -langversion:ISO-1 下工作。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -66,13 +66,13 @@ ms.lasthandoff: 12/06/2017
   
 2.  单击“生成”属性页。  
   
-3.  单击 **“高级”** 按钮。  
+3.  单击“高级”按钮。  
   
 4.  修改“语言版本”属性。  
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>。  
     
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  
  

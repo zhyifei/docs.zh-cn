@@ -13,27 +13,27 @@ ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8ca85293086f8747cc4aaff02e7d9b5628b1e88a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="out-c-compiler-options"></a>/out（C# 编译器选项）
-“/out”选项指定输出文件的名称。  
+# <a name="-out-c-compiler-options"></a>-out（C# 编译器选项）
+-out 选项指定输出文件的名称。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/out:filename  
+-out:filename  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `filename`  
  编译器创建的输出文件的名称。  
   
 ## <a name="remarks"></a>备注  
- 在命令行中，可以为编译指定多个输出文件。 编译器应该在“/out”选项下查找一个或多个源代码文件。 然后，所有源代码文件都将编译为“/out”选项指定的输出文件。  
+ 在命令行中，可以为编译指定多个输出文件。 编译器应在 -out 选项下查找一个或多个源代码文件。 然后，所有源代码文件都将编译为 -out 选项指定的输出文件。  
   
  指定想要创建的文件的完整名称和扩展名。  
   
@@ -45,11 +45,11 @@ ms.lasthandoff: 11/21/2017
   
  用于编译一个输出文件的源代码文件不能同样用于编译另一输出文件。  
   
- 如果在命令行编译中生成多个输出文件，请记住，仅其中一个输出文件可以是程序集，且只有（使用 /out 隐式或显式）指定的第一个输出文件可以是程序集。  
+ 如果在命令行编译中生成多个输出文件，请记住，仅其中一个输出文件可以是程序集，且只有（使用 -out 隐式或显式）指定的第一个输出文件可以是程序集。  
   
  在编译时生成的任何模块都将成为与编译时生成的程序集关联的文件。 使用 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) 查看程序集清单，了解关联文件。  
   
- 为使 exe 成为友元程序集的目标，/out 编译器选项是必需的。 有关详细信息，请参阅[友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
+ 为使 exe 成为友元程序集的目标，-out 编译器选项是必需的。 有关详细信息，请参阅[友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -65,10 +65,10 @@ ms.lasthandoff: 11/21/2017
  编译 `t.cs` 并创建输出文件 `t.exe`以及生成 `t2.cs` 并创建模块输出文件 `mymodule.netmodule`：  
   
 ```console  
-csc t.cs /out:mymodule.netmodule /target:module t2.cs  
+csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

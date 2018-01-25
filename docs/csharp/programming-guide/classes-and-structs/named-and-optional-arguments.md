@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -33,29 +33,29 @@ ms.lasthandoff: 11/21/2017
  命名形参和可选形参一起使用时，你可以只为可选形参列表中的少数形参提供实参。 此功能极大地方便了对 COM 接口（例如 Microsoft Office 自动化 API）的调用。  
   
 ## <a name="named-arguments"></a>命名实参  
- 有了命名实参，你将不再需要记住或查找形参在所调用方法的形参列表中的顺序。 每个实参的形参都可按形参名称进行指定。 例如，打印的函数的订单详细信息 (如，seller 名称、 订单数和产品名称) 可以通过按中定义的函数的顺序位置发送自变量调用以标准方式。
+ 有了命名实参，你将不再需要记住或查找形参在所调用方法的形参列表中的顺序。 每个实参的形参都可按形参名称进行指定。 例如，通过以函数定义的顺序按位置发送实参，可以采用标准方式调用打印订单详细信息（例如卖家姓名、订单号和产品名称）的函数。
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- 如果你不记得参数的顺序，但知道其名称，你可以按任何顺序发送自变量。  
+ 如果不记得形参的顺序，但却知道其名称，则可以按任意顺序发送实参。  
   
  `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- 命名实参还可以标识每个实参所表示的含义，从而改进代码的可读性。 在下面的示例方法`sellerName`不能为 null 或空白。 为这两者`sellerName`和`productName`是字符串类型，而不是按位置发送自变量，因此最好使用命名自变量来区分这两个并降低阅读代码的任何人混淆。
+ 命名实参还可以标识每个实参所表示的含义，从而改进代码的可读性。 在以下示例方法中，`sellerName` 不能为 null 或空白。 由于 `sellerName` 和 `productName` 都是字符串类型，所以使用命名实参而不是按位置发送实参是有意义的，可以区分这两种类型并减少代码阅读者的困惑。
   
- 命名自变量，使用具有位置自变量时，是否有效，只要 
+ 当命名实参与位置实参一起使用时，只要 
 
-- 它们在后面不接任何位置的自变量，或
+- 没有后接任何位置实参或
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _从 C# 7.2_，它们使用在正确的位置。 在下例中，参数`orderNum`处于正确的位置，但未显式命名。
+- 以 C# 7.2 开头，则它们就有效并用在正确位置。 在以下示例中，形参 `orderNum` 位于正确的位置，但未显式命名。
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- 但是，无序命名自变量是如果它们跟位置自变量无效。
+ 但是，如果其后接位置实参，则无序命名实参无效。
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
  ```
   
 ## <a name="example"></a>示例  
- 下面的代码实现以及一些其他的本部分中的示例。  
+ 以下代码执行本节以及某些其他节中的示例。  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
@@ -106,7 +106,7 @@ ExampleMethod 中的可选形参
 ## <a name="com-interfaces"></a>COM 接口  
  命名实参和可选实参，以及对动态对象的支持和其他增强功能大大提高了与 COM API（例如 Office Automation API）的互操作性。  
   
- 例如，Microsoft Office Excel 的 [Range](http://go.microsoft.com/fwlink/?LinkId=148196) 接口中的 [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) 方法具有 7 个可选形参。 这些形参如下图所示。  
+ 例如，Microsoft Office Excel 的 [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) 接口中的 [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) 方法具有 7 个可选形参。 这些形参如下图所示。  
   
  ![AutoFormat 方法的 IntelliSense 快速信息。](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 AutoFormat 形参  
@@ -133,7 +133,7 @@ AutoFormat 形参
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
  [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  

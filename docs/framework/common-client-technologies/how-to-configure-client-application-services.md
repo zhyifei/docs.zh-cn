@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：配置客户端应用程序服务
 本主题介绍如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的“项目设计器”启用并配置客户端应用程序服务。 你可以使用客户端应用程序服务来验证用户，并从现有 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务检索用户角色和设置。 完成配置后，可以访问应用程序代码中启用的服务，如[客户端应用程序服务概述](../../../docs/framework/common-client-technologies/client-application-services-overview.md)所述。 有关 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 应用程序服务的详细信息，请参阅 [ASP.NET 应用程序服务概述](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  选中或清除“将密码哈希保存在本地以实现脱机登录”。 选择此选项时，将以加密形式在本地缓存用户的密码。 这对实现应用程序的脱机模式非常有用。 选择此选项时，即使是在<xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A>属性设置为 `true` 时也可以对用户进行验证。  
   
-3.  选中或清除“每次服务器 Cookie 到期时要求用户重新登录”。 已在远程服务上配置了身份验证 Cookie，并指示用户的登录将保持活动状态的时间。 有关如何配置 Cookie 的详细信息，请参阅 [authentication 的 forms 元素（ASP.NET 设置架构）](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)中的 `timeout` 属性。  
+3.  选中或清除“每次服务器 Cookie 到期时要求用户重新登录”。 已在远程服务上配置了身份验证 Cookie，并指示用户的登录将保持活动状态的时间。 有关如何配置 Cookie 的详细信息，请参阅 [authentication 的 forms 元素（ASP.NET 设置架构）](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3)中的 `timeout` 属性。  
   
      如果选择此选项，则在身份验证 Cookie 过期后尝试访问远程角色或 Web 设置服务将引发 <xref:System.Net.WebException>。 你可以处理此异常，并显示登录对话框来重新验证用户。 有关此行为的示例，请参阅[演练：使用客户端应用程序服务](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)。 此选项可用于公共位置中部署的应用程序，可确保让应用程序在使用后保持运行状态的用户不会无限期地保持通过身份验证的状态。  
   

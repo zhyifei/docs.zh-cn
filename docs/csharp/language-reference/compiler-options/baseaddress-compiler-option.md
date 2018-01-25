@@ -7,28 +7,28 @@ ms.topic: article
 f1_keywords: /dllbase
 helpviewer_keywords:
 - baseaddress compiler option [C#]
-- /baseaddress compiler option [C#]
 - -baseaddress compiler option [C#]
+- /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f8cc5e19565a0e5044626c4fb8eb9d684fbe0a73
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 4e4b4964d587bfdf95949ebd6f0028a25988c2ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="baseaddress-c-compiler-options"></a>/baseaddress（C# 编译器选项）
-通过 /baseaddress 选项可指定加载 DLL 的首选基址。 若要深入了解何时且为何要使用此选项，请参阅 [Larry Osterman 的网络日志](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)。  
+# <a name="-baseaddress-c-compiler-options"></a>-baseaddress（C# 编译器选项）
+通过 -baseaddress 选项可指定加载 DLL 的首选基址。 若要深入了解何时且为何要使用此选项，请参阅 [Larry Osterman 的网络日志](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)。  
   
 ## <a name="syntax"></a>语法  
   
 ```console  
-/baseaddress:address  
+-baseaddress:address  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `address`  
  DLL 的基址。 可将此地址指定为十进制数、十六进制数或八进制数。  
   
@@ -45,13 +45,13 @@ ms.lasthandoff: 12/06/2017
   
 2.  单击“生成”属性页。  
   
-3.  单击 **“高级”** 按钮。  
+3.  单击“高级”按钮。  
   
 4.  修改“DLL 基址”属性。  
   
      若要以编程方式设置此编译器选项，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>  
  [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

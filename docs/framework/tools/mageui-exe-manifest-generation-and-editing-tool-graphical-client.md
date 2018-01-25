@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe（图形化客户端中的清单生成和编辑工具）
 除了使用基于 Windows 的用户界面 (UI) 之外，MageUI.exe 与命令行工具 Mage.exe 支持的功能完全相同。 使用此工具，你可以对部署清单和应用程序清单执行创建、编辑和签名操作。 用 MageUI.exe 创建的新清单以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 早期版本的 MageUI.exe 应用于以 .NET Framework 的早期版本为目标。 在清单中添加或删除程序集时或重新对现有清单签名时，MageUI.exe 不会将清单更新为以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 为目标。 有关详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
@@ -138,7 +138,7 @@ ms.lasthandoff: 12/22/2017
   
 |UI 元素|描述|  
 |----------------|-----------------|  
-|**权限集类型**|在客户端上运行此应用程序所需的最小权限集。 有关这些权限集以及需要的或不需要的权限的说明，请参阅 [NIB：命名的权限集](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。|  
+|**权限集类型**|在客户端上运行此应用程序所需的最小权限集。 有关这些权限集以及需要的或不需要的权限的说明，请参阅 [NIB：命名的权限集](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。|  
 |**详细信息**|为应用程序清单创建用于表示权限集的 XML。 除非充分理解应用程序清单 XML 格式，否则不应手动编辑此 XML。 有关详细信息，请参阅 [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)。|  
   
 ### <a name="deployment-manifest-tab"></a>部署清单选项卡  
