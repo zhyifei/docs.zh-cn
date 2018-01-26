@@ -31,11 +31,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概述 (WPF)
 本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。 本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。 XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-syntax-in-brief"></a>XAML 语法概述  
  下面章节介绍 XAML 语法的基本形式，并提供一个简短的标记示例。 这些章节并不提供每个语法形式的完整信息，例如这些语法形式如何在后备类型系统中表示。 有关本主题中介绍的每种语法形式的 XAML 语法详情，请参阅 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
   
- 如果已熟悉 XML 语言，则下面几节中的很多材料对你而言都是基础知识。 这得益于 XAML 的一个基本设计原则。  XAML 语言定义它自己的概念，但这些概念也适用于 XML 语言和标记形式。  
+ 如果已熟悉 XML 语言，则下面几节中的很多材料对你而言都是基础知识。 这得益于 XAML 的一个基本设计原则。  XAML 语言定义自己的概念，但这些概念在 XML 语言和标记窗体中工作。  
   
 ### <a name="xaml-object-elements"></a>XAML 对象元素  
  对象元素通常声明类型的实例。 该类型在提供将 XAML 用作语言的技术的后备类型的程序集中定义。  

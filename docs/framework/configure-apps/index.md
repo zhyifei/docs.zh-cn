@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用配置文件配置应用
 .NET Framework 通过配置文件为开发人员和管理员提供了对应用程序运行方式的控制权和灵活性。 配置文件是可以按需要更改的 XML 文件。 管理员能够控制应用程序可以访问哪些受保护的资源，应用程序将使用哪些版本的程序集，以及远程应用程序和对象位于何处。 开发人员可以将设置置于配置文件中，从而没有必要在每次设置更改时重新编译应用程序。 本节说明可以对什么进行配置以及为什么对应用程序进行配置会有用。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/19/2018
  本主题描述配置文件的语法，并提供有关三种配置文件的信息：计算机配置文件、应用程序配置文件和安全配置文件。  
   
 ## <a name="configuration-file-format"></a>配置文件格式  
- 配置文件包含元素，它们是用来设置配置信息的逻辑数据结构。 在配置文件内，使用标记来标记元素的开头和结尾。 例如，`<runtime>` 元素包括`<runtime>`子元素`</runtime>`。 空元素将写为 `<runtime/>` 或 `<runtime>``</runtime>`。  
+ 配置文件包含元素，它们是用来设置配置信息的逻辑数据结构。 在配置文件内，使用标记来标记元素的开头和结尾。 例如，`<runtime>` 元素包括`<runtime>`子元素`</runtime>`。 空元素将写为 `<runtime/>` 或 `<runtime></runtime>`。  
   
  与所有 XML 文件一样，配置文件中的语法区分大小写。  
   
