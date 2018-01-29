@@ -3,7 +3,8 @@ title: "如何：使用 String.Split 分析字符串（C# 指南）"
 description: "String.Split 返回从一组分隔符中拆分的字符串数组。 这是分析字符串的一种简单方法。"
 ms.date: 01/03/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - splitting strings [C#]
@@ -14,18 +15,19 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: fc1032f2cdf6706ec933323643dbf6ecff3e9f6f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9dd5b1204986bd9b181c033d254bb41e8cc894da
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>如何：使用 String.Split 分析字符串（C# 指南）
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> 方法通过基于一个或多个分隔符拆分输入字符串来创建子字符串数组。 最简单的方法通常是分隔字边界上的字符串。 它也用于拆分其他特定字符或字符串上的字符串。
 
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
+
 下方代码将一个常用短语拆分为一个由每个单词组成的字符串数组。
-按“运行”按钮亲自尝试一下。
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 

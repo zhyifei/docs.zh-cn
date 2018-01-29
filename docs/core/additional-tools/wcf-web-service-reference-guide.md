@@ -8,15 +8,15 @@ ms.date: 01/19/2018
 ms.topic: article
 ms.prod: .net-core
 ms.custom: mvc
-ms.openlocfilehash: 210f0a9bbf393055ebcd582d3accb3d77b1c9539
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: e445361f9f4a858f4b34ca1008670fadc62b8b3c
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web Service Reference Provider 工具
 
-多年来，许多 Visual Studio 开发者在其. NET Framework 项目需要访问 Web 服务时，都享受到了[添加服务引用](../../visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)工具所带来的工作效率。  WCF Web 服务引用工具是 Visual Studio 连接服务的扩展，提供了类似于 .NET Core 和 ASP.NET Core 项目的“添加服务引用”功能的体验。 此工具可从网络位置的当前解决方案的 web 服务中或从 WSDL 文件中检索元数据，并生成包含可用于访问 web 服务的 Windows Communication Foundation (WCF) 客户端代理代码的可兼容 .NET Core 的源文件。
+多年来，许多 Visual Studio 开发者在其. NET Framework 项目需要访问 Web 服务时，都享受到了[添加服务引用](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)工具所带来的工作效率。  WCF Web 服务引用工具是 Visual Studio 连接服务的扩展，提供了类似于 .NET Core 和 ASP.NET Core 项目的“添加服务引用”功能的体验。 此工具可从网络位置的当前解决方案的 web 服务中或从 WSDL 文件中检索元数据，并生成包含可用于访问 web 服务的 Windows Communication Foundation (WCF) 客户端代理代码的可兼容 .NET Core 的源文件。
 
 > [!IMPORTANT]
 > 应仅从受信任源引用服务。 从不受信任的源添加引用可能会危及安全性。 

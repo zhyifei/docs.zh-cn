@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>为 .NET Core 应用程序生成 Docker 映像
 
@@ -105,7 +106,7 @@ ms.lasthandoff: 12/23/2017
 * 基于较大的 ASP.NET Core 生成 Docker 基础映像在容器中生成示例 
 * 基于较小的 ASP.NET Core Docker 运行时基础映像将最终生成结果复制到 Docker 映像
 
-> [!Note]
+> [!NOTE]
 > 生成映像包含生成应用程序所需的工具，而运行时映像不包括这些工具。
 
 ### <a name="prerequisites"></a>系统必备
@@ -178,7 +179,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] `docker run` 的“-p”参数将本地计算机上的端口 5000 映射到容器中的端口 80（该端口映射形式为 `host:container`）。 有关详细信息，请参阅命令行参数中的 [docker run](https://docs.docker.com/engine/reference/commandline/exec/) 引用。
+> [!NOTE]
+> `docker run` 的“-p”参数将本地计算机上的端口 5000 映射到容器中的端口 80（该端口映射形式为 `host:container`）。 有关详细信息，请参阅命令行参数中的 [docker run](https://docs.docker.com/engine/reference/commandline/exec/) 引用。
 
 应用程序启动后，在 Web 浏览器中访问 http://localhost:5000。
 
@@ -200,7 +202,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * 运行 `docker exec aspnetcore_sample ipconfig`。
 * 将容器 IP 地址复制并粘贴到浏览器中（例如，172.29.245.43）。
 
-> [!Note]
+> [!NOTE]
 > Docker exec 支持通过名称或哈希标识容器。 示例中使用了名称 (aspnetcore_sample)。
 
 请查看以下示例，了解如何获取正在运行的 Windows 容器的 IP 地址。
@@ -219,7 +221,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > Docker exec 在正在运行的容器中运行新命令。 有关详细信息，请参阅命令行参数中的 [docker exec 引用](https://docs.docker.com/engine/reference/commandline/exec/)。
 
 可使用 [dotnet publish](../tools/dotnet-publish.md) 命令生成已准备好在本地部署到生产环境的应用程序。
@@ -228,7 +230,7 @@ Ethernet adapter Ethernet:
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > -c release 参数用于在发布模式（默认为调试模式）下生成应用程序。 有关详细信息，请参阅命令行参数中的 [dotnet run 引用](../tools/dotnet-run.md)。
 
 可使用以下命令在 Windows 中运行应用程序。
@@ -269,5 +271,5 @@ dotnet published/aspnetapp.dll
 * [在云中使用 Visual Studio for Mac、容器和无服务器代码](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Docker 和 Visual Studio for Mac Lab 入门](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
 
-> [!Note]
+> [!NOTE]
 > 如果你没有 Azure 订阅，请[立即注册](https://azure.microsoft.com/free/?b=16.48)获取一个免费的 30 天试用帐户和 200 美元的 Azure 信用额度，以便试用 Azure 服务的任意组合。
