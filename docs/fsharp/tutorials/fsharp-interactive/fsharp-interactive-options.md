@@ -11,10 +11,10 @@ ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
 ms.openlocfilehash: a9b36a12aa9ffcfa26ea50d72d018a25f5f65243
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/30/2018
 ---
 # <a name="f-interactive-options"></a>F# Interactive 选项
 
@@ -40,32 +40,32 @@ F # 脚本文件的文件扩展名是`.fsx`。
 |选项|描述|
 |------|-----------|
 |**--**|用于指示 F # Interactive 对 F # 程序或脚本，你可以在代码中使用访问列表作为命令行自变量视为其余的自变量**fsi.CommandLineArgs**。|
-|**-选中**[**+**&#124;**-**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-代码页：&lt;int&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-crossoptimize**[**+**&#124;**-**]|启用或禁用跨模块优化。|
-|**-调试**[**+**&#124;**-**]<br /><br />**-调试：**[**完整**&#124;**pdbonly**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**完整**&#124;**pdbonly**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-定义：&lt;字符串&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-exec**|指示 F # interactive 加载文件或运行命令行上给出的脚本文件后退出。|
-|**-fullpaths**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-gui**[**+**&#124;**-**]|启用或禁用 Windows 窗体事件循环。 默认为已启用。|
-|**-帮助**<br /><br />**-?**|用于显示的命令行语法和每个选项的简短说明。|
-|**-lib:&lt;文件夹列表&gt;**<br /><br />**-I:&lt;文件夹列表&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-加载：&lt;filename&gt;**|将在启动时给定的源代码编译并将已编译的 F # 构造加载到会话。 如果目标源包含脚本的指令，例如**#use**或**#load**，则必须使用**-使用**或**#use**而不是**-加载**或**#load**。|
-|**-mlcompatibility**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-noframework**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)|
-|**-nologo**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-nowarn:&lt;警告列表&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-优化**[**+**&#124;**-**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-quiet**|禁止显示 F # Interactive 的输出到**stdout**流。|
-|**-引用调试**|指定应从 F # 引号文本派生，并反映定义的表达式发出额外的调试信息。 调试信息添加到 F # 表达式树节点的自定义属性。 请参阅[代码引用](../../language-reference/code-quotations.md)和[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
-|**-readline**[**+**&#124;**-**]|启用或禁用在交互模式中的 tab 自动补全。|
-|**-引用：&lt;filename&gt;**<br /><br />**-:&lt;filename&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-tailcalls**[**+**&#124;**-**]|启用或禁用的结尾 IL 指令，这会导致堆栈帧要重用为尾递归函数使用。 默认情况下会启用此选项。|
-|**-使用：&lt;filename&gt;**|告知解释程序以使用上启动的给定的文件作为初始的输入。|
-|**-utf8output**|Fsc.exe 编译器选项相同。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-警告：&lt;警告级别&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-warnaserror**[**+**&#124;**-**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
-|**-warnaserror**[**+**&#124;**-** ]:**&lt;int 列表&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--checked**[**+**&#124;**-**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--codepage:&lt;int&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--crossoptimize**[**+**&#124;**-**]|启用或禁用跨模块优化。|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--define:&lt;string&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--exec**|指示 F # interactive 加载文件或运行命令行上给出的脚本文件后退出。|
+|**--fullpaths**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--gui**[**+**&#124;**-**]|启用或禁用 Windows 窗体事件循环。 默认为已启用。|
+|**--help**<br /><br />**-?**|用于显示的命令行语法和每个选项的简短说明。|
+|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--load:&lt;filename&gt;**|将在启动时给定的源代码编译并将已编译的 F # 构造加载到会话。 如果目标源包含脚本的指令，例如**#use**或**#load**，则必须使用**-使用**或**#use**而不是**-加载**或**#load**。|
+|**--mlcompatibility**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--noframework**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)|
+|**--nologo**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--nowarn:&lt;warning-list&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--optimize**[**+**&#124;**-**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--quiet**|禁止显示 F # Interactive 的输出到**stdout**流。|
+|**--quotations-debug**|指定应从 F # 引号文本派生，并反映定义的表达式发出额外的调试信息。 调试信息添加到 F # 表达式树节点的自定义属性。 请参阅[代码引用](../../language-reference/code-quotations.md)和[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
+|**--readline**[**+**&#124;**-**]|启用或禁用在交互模式中的 tab 自动补全。|
+|**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--tailcalls**[**+**&#124;**-**]|启用或禁用的结尾 IL 指令，这会导致堆栈帧要重用为尾递归函数使用。 默认情况下会启用此选项。|
+|**--use:&lt;filename&gt;**|告知解释程序以使用上启动的给定的文件作为初始的输入。|
+|**--utf8output**|Fsc.exe 编译器选项相同。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--warn:&lt;warning-level&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--warnaserror**[**+**&#124;**-**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
+|**--warnaserror**[**+**&#124;**-**]:**&lt;int-list&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](../../language-reference/compiler-options.md)。|
 
 ## <a name="related-topics"></a>相关主题
 
