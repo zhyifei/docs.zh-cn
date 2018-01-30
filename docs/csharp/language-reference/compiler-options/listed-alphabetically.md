@@ -2,7 +2,8 @@
 title: "按字母顺序列出的 C# 编译器选项"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - compiler options [C#], listed alpabetically
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07ca6b9473a4a3401742d05aa7c880da5ac43ad0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f4d7f1b122d3481dc8c3c5256ee361965846a830
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>按字母顺序列出的 C# 编译器选项
 下列编译器选项按字母顺序排序。 有关按类别排序的列表，请参 [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)。  
@@ -28,10 +29,10 @@ ms.lasthandoff: 01/19/2018
 |[-?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|向 stdout 显示用法消息。|  
 |-additionalfile|命名其他文件，这些文件不会直接影响代码生成，但可能由分析器用于生成错误或警告。|  
 |[-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|将指定的模块链接到此程序集中|  
-|-analyzer|从此程序集（缩写形式：/a）运行分析器|  
+|-analyzer|从此程序集（缩写形式：-a）运行分析器|  
 |[/appconfig](../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)|在程序集绑定时指定 app.config 的位置。|  
 |[-baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|指定要生成的库的基址。|  
-|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|创建“Bug 报告”文件。 如果与 /errorreport:prompt 或 /errorreport:send 一起使用，则此文件会与任何崩溃信息一起发送。|  
+|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|创建“Bug 报告”文件。 如果与 -errorreport:prompt 或 -errorreport:send 一起使用，则发送任何崩溃信息时都将随附此文件。|  
 |[/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|使编译器生成溢出检查。|  
 |-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1（默认值）或 SHA256。|  
 |[-codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|指定在打开源文件时使用的代码页。|  

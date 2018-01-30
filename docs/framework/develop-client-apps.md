@@ -1,12 +1,9 @@
 ---
-title: "使用 .NET Framework 开发客户端应用程序"
-ms.custom: 
-ms.date: 03/30/2017
+title: "使用 .NET Framework 开发基于 Windows 的客户端应用程序"
+ms.date: 01/09/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - client application services
@@ -20,49 +17,58 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f90cbac0e7f78d8965a75df281c0db6b213d9e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4cfc8a0f176e3732e7fe6f088c9973bfbcdaf89a
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>使用 .NET Framework 开发客户端应用程序
-利用在用户的计算机或设备本地运行的 .NET Framework，有多种方法开发基于 Windows 的应用程序。 本节包含的主题价始了如何使用 Windows Presentation Foundation (WPF) 或 Windows 窗体创建基于 Windows 的应用程序。 不过，也可以利用 .NET Framework 创建 Web 应用程序，以及通过 Windows 应用商店或 Windows Phone 应用商店发布的面向计算机或设备的客户端应用程序。  
+
+可通过多种方法使用 .NET Framework 开发基于 Windows 的应用程序。 可使用以下任意工具和框架： 
+
+* [通用 Windows 平台 (UWP)](https://developer.microsoft.com/windows/apps)
+* [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
+* [Windows 窗体](../../docs/framework/winforms/index.md)
+
+本节包含的主题说明了如何使用 Windows Presentation Foundation 或 Windows 窗体创建基于 Windows 的应用程序。 但是，还可利用 .NET Framework 创建 Web 应用程序，以及创建可通过 Microsoft Store 发布的面向计算机或设备的客户端应用程序。
+ 
+## <a name="in-this-section"></a>本节内容
+
+[Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
+提供有关使用 WPF 开发和部署应用程序的信息。
+
+[Windows 窗体](../../docs/framework/winforms/index.md)  
+提供有关使用 Windows 窗体开发和部署应用程序的信息。
+
+[常用的客户端技术](../../docs/framework/common-client-technologies/index.md)  
+提供有关在开发客户端应用程序时可使用的其他技术的信息。
+
+## <a name="related-sections"></a>相关章节
+
+[通用 Windows 平台](https://developer.microsoft.com/windows/apps)  
+介绍如何创建可通过 Windows 应用商店向用户提供的 Windows 10 应用。
+
+[适用于 UWP 应用的 .NET](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
+介绍应用商店应用支持的 .NET Framework，可以部署到 Windows 计算机和设备。
+
+[适用于 Windows Phone Silverlight 的 .NET API](https://docs.microsoft.com/en-us/previous-versions/windows/apps/jj207211\(v=vs.105\))  
+列出使用 Windows Phone Silverlight 构建应用时可使用的 .NET Framework API。
   
-## <a name="in-this-section"></a>本节内容  
- [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
- 提供有关使用 WPF 开发和部署应用程序的信息。  
-  
- [Windows 窗体](../../docs/framework/winforms/index.md)  
- 提供有关使用 Windows 窗体开发和部署应用程序的信息。  
-  
- [常用的客户端技术](../../docs/framework/common-client-technologies/index.md)  
- 提供有关在开发客户端应用程序时可使用的其他技术的信息。  
-  
-## <a name="related-sections"></a>相关章节  
- [Windows 应用商店应用](http://msdn.microsoft.com/windows/apps/)  
- 介绍如何创建可以通过 Windows 应用商店向用户提供的应用  
-  
- [适用于应用商店应用的 .NET](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
- 介绍应用商店应用支持的 .NET Framework，可以部署到 Windows 计算机和设备。  
-  
- [适用于 Windows Phone Silverlight 的 .NET API](http://msdn.microsoft.com/library/windows/apps/xaml/jj207211\(v=vs.105\).aspx)  
- 列出利用 Windows Phone Silverlight 生成应用可使用的 .NET Framework API  
-  
- [开发多平台应用程序](../../docs/standard/cross-platform/index.md)  
- 介绍可以针对多个客户端应用类型使用 .NET Framework 的不同方法。  
-  
- [ASP.NET 网站入门](http://www.asp.net/get-started/websites)  
- 介绍使用 ASP.NET 开发 Web 应用的方法。  
-  
-## <a name="see-also"></a>请参阅  
- [可移植类库](../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)  
- [概述](../../docs/framework/get-started/overview.md)  
- [开发指南](../../docs/framework/development-guide.md)  
- [如何：创建 Windows 桌面应用程序](http://msdn.microsoft.com/library/47021403-eaca-4c34-946a-a26c42a64148)  
- [Windows 服务应用程序](../../docs/framework/windows-services/index.md)
+[开发多平台应用程序](../../docs/standard/cross-platform/index.md)  
+介绍可以针对多个客户端应用类型使用 .NET Framework 的不同方法。
+
+[ASP.NET 网站入门](http://www.asp.net/get-started/websites)  
+介绍使用 ASP.NET 开发 Web 应用的方法。
+
+## <a name="see-also"></a>请参阅
+
+[.NET Standard](../../docs/standard/net-standard.md)  
+[概述](../../docs/framework/get-started/overview.md)  
+[开发指南](../../docs/framework/development-guide.md)  
+[Windows 服务应用程序](../../docs/framework/windows-services/index.md)  

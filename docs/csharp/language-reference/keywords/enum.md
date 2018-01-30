@@ -2,21 +2,23 @@
 title: "enum（C# 参考）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - enum
 - enum_CSharpKeyword
-helpviewer_keywords: enum keyword [C#]
+helpviewer_keywords:
+- enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 00ae9b555ae73db445fe4a4facf00753bf8c759a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36d33387dda68270e0490eaa6c792f95d058651e
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="enum-c-reference"></a>enum（C# 参考）
 `enum` 关键字用于声明枚举，一种包含一组被称为枚举数列表的已命名常数的不同类型。  
@@ -26,13 +28,13 @@ ms.lasthandoff: 11/21/2017
  默认情况下，第一个枚举数具有值 0，并且每个连续枚举数的值将增加 1。 例如，在以下枚举中， `Sat` 的值为 `0`， `Sun` 的值为 `1`， `Mon` 的值为 `2`，依次类推。  
   
 ```  
-enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
+enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  枚举数可以使用初始值设定项来替代默认值，如下面的示例中所示。  
   
 ```  
-enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
+enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  在此枚举中，强制元素的序列从 `1` 开始，而不是 `0`。 但建议包括一个值为 0 的常量。 有关详细信息，请参阅[枚举类型](../../../csharp/programming-guide/enumeration-types.md)。  
@@ -40,12 +42,12 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  每个枚举类型都有一个基础类型，该基础类型可以是除 [char](../../../csharp/language-reference/keywords/char.md) 外的任何整型类型。 枚举元素的默认基础类型是 [int](../../../csharp/language-reference/keywords/int.md)。若要声明另一整型的枚举（如 [byte](../../../csharp/language-reference/keywords/byte.md)），则请在后跟该类型的标识符后使用冒号，如以下示例所示。  
   
 ```  
-enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
+enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
- 枚举的已批准类型有 `byte`、 [sbyte](../../../csharp/language-reference/keywords/sbyte.md)、 [short](../../../csharp/language-reference/keywords/short.md)、 [ushort](../../../csharp/language-reference/keywords/ushort.md)、 [int](../../../csharp/language-reference/keywords/int.md)、 [uint](../../../csharp/language-reference/keywords/uint.md)、 [long](../../../csharp/language-reference/keywords/long.md)或 [ulong](../../../csharp/language-reference/keywords/ulong.md)。  
+ 已批准的枚举类型有 [byte](../../../csharp/language-reference/keywords/byte.md)、[sbyte](../../../csharp/language-reference/keywords/sbyte.md)、[short](../../../csharp/language-reference/keywords/short.md)、[ushort](../../../csharp/language-reference/keywords/ushort.md)、[int](../../../csharp/language-reference/keywords/int.md)、[uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) 或 [ulong](../../../csharp/language-reference/keywords/ulong.md)。  
   
- 类型 `Days` 的变量可在基本类型范围内分配到任何值；该值不限于已命名常数。  
+ 类型 `Day` 的变量可在基本类型范围内分配到任何值；该值不限于已命名常数。  
   
  `enum E` 的默认值是由表达式 `(E)0`生成的值。  
   
@@ -55,7 +57,7 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  基础类型指定为每个枚举数分配多少存储空间。 但要将 `enum` 类型转换为整型，则必须使用显示转换。 例如，以下语句通过使用转换将 `Sun` 转换为 [，从而将枚举数](../../../csharp/language-reference/keywords/int.md) 赋值为 `enum` int `int`类型的变量。  
   
 ```  
-int x = (int)Days.Sun;  
+int x = (int)Day.Sun;  
 ```  
   
  当你将 <xref:System.FlagsAttribute?displayProperty=nameWithType> 应用到包含可与按位 `OR` 运算组合的元素的枚举中时，该特性与某些工具一起使用时会影响 `enum` 的行为。 当你使用工具（如 <xref:System.Console> 类方法和表达式计算器）时，你可以注意到这些更改。 （请参阅第三个示例。）  
@@ -68,7 +70,7 @@ int x = (int)Days.Sun;
  如果其他开发人员使用你的代码，则在将新元素添加到任何 `enum` 类型时应提供有关他们的代码应该如何响应的准则。  
   
 ## <a name="example"></a>示例  
- 在下面的示例中，已声明枚举 `Days`。 已将两个枚举数显式转换为整数，并赋值为整数变量。  
+ 在下面的示例中，已声明枚举 `Day`。 已将两个枚举数显式转换为整数，并赋值为整数变量。  
   
  [!code-csharp[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
@@ -92,11 +94,12 @@ int x = (int)Days.Sun;
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [枚举类型](../../../csharp/programming-guide/enumeration-types.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
  [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+ [枚举命名约定](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-classes-structs-and-interfaces#naming-enumerations)
