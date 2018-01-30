@@ -125,4 +125,4 @@ C# 5.0 版 时非常有针对性的版本的语言。 几乎所有该版本的�
 
 但 C# 被放到曾经更广泛使用。 .NET 核心现在面向任何操作系统并具有其眼睛牢固地在云上和在可移植性。  这肯定占用语言设计器的想法和时间，除了构思新功能。
 
-_文章_ [_最初发布 NDepend 博客上_](https://blog.ndepend.com/c-versions-look-language-history/)_。 艾力克 Dietrich 和 Patrick Smacchia。_
+_文章_ [_最初发布 NDepend 博客上_](https://blog.ndepend.com/c-versions-look-language-history/)_、。 艾力克 Dietrich 和 Patrick Smacchia。_
