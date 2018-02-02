@@ -4,8 +4,12 @@
 #### [m_WriteList 字段](m_writelist.md)
 ### [ConnectionGroup 类](connectiongroup.md)
 #### [m_ConnectionList 字段](m_connectionlist.md)
+### [CoreResponseData 类](coreresponsedata.md)
+#### [m_ResponseHeaders 字段](coreresponsedata_m_responseheaders.md)
+#### [m_StatusCode 字段](coreresponsedata_m_statuscode.md)
 ### HttpWebRequest 类
 #### [_AutoRedirects 字段](_autoredirects.md)
+#### [_CoreResponse 字段](httpwebrequest__coreresponse.md)
 #### [_HttpResponse 字段](_httpresponse.md)
 ### ServicePoint 类
 #### [m_ConnectionGroupList 字段](m_connectiongrouplist.md)
