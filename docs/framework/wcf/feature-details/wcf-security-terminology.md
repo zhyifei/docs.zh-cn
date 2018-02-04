@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +14,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全术语
 在讨论安全时使用的某些术语可能是您所不熟悉的。 本主题提供了一些安全术语的扼要解释，但并不试图提供每个术语的全面文档。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]中的术语[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]文档，请参阅[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 中的术语[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]文档，请参阅[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
   
  Access Control List (ACL) — 访问控制列表 (ACL)  
  适用于某个对象的安全保护的列表。 （对象可以是文件、进程、事件或其他任何具有安全描述符的事物。）ACL 中的条目是访问控制项 (ACE)。 有两种类型的 ACL：自由和系统。  

@@ -3,9 +3,11 @@ title: "SByte 数据类型 (Visual Basic)"
 ms.date: 04/20/2017
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.sbyte
+f1_keywords:
+- vb.sbyte
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -17,14 +19,14 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bcd00665ec5b8651089811a61212bfa302fe95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d391d7eea27ec7696dbb4c28da8916c744712f32
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 数据类型 (Visual Basic)
 
@@ -50,6 +52,14 @@ ms.lasthandoff: 11/21/2017
 从 Visual Basic 自 2017 年开始，你还可以使用下划线字符， `_`，作为数字分隔符以增强可读性，如以下示例所示。
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
+
+从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如:
+
+```vb
+Dim number As SByte = &H_F9
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
 如果整数文本在 `SByte` 范围之外（即，如果它小于 <xref:System.SByte.MinValue?displayProperty=nameWithType> 或大于 <xref:System.SByte.MaxValue?displayProperty=nameWithType>），会发生编译错误。 当一个整数文本具有无后缀[整数](integer-data-type.md)这方面的推断。 如果整数文本之外的范围，则`Integer`类型，[长](long-data-type.md)这方面的推断。 这意味着，在前面的示例中，数字文本`0x9A`和`0b10011010`都会被解释为 32 位有符号整数值为 156，这超出<xref:System.SByte.MaxValue?displayProperty=nameWithType>。 若要成功编译代码如下将分配到一个非十进制整数`SByte`，你可以执行以下任一操作：
 

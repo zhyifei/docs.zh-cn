@@ -1,22 +1,24 @@
 ---
 title: "Byte 数据类型 (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Byte
+f1_keywords:
+- vb.Byte
 helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6475ff3ed905abb022a9ef60204c04b45130ae22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 02234afc0dc51a2c1338cdd16d1f97765f64b45e
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 数据类型 (Visual Basic)
 包含无符号的 8 位 （1 个字节） 整数，值的范围从 0 到 255 之间。
@@ -42,6 +44,14 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
+从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如:
+
+```vb
+Dim number As Byte = &H_6A
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 ## <a name="programming-tips"></a>编程提示
 
 -   **负数。** 因为`Byte`是无符号的类型，它不能表示为负数。 如果你使用一元负 (`-`) 运算符的表达式的计算结果为键入`Byte`，Visual Basic 将转换为表达式`Short`第一个。
@@ -60,7 +70,7 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  <xref:System.Byte?displayProperty=nameWithType>  
  [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  

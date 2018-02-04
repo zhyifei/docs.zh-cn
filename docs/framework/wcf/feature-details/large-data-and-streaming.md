@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="large-data-and-streaming"></a>大型数据和流
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是基于 XML 的通信基础结构。 因为 XML 数据通常编码中定义的标准文本格式[XML 1.0 规范](http://go.microsoft.com/fwlink/?LinkId=94838)的连接系统开发人员和架构师通常关心发送的消息的网络占用内存的情况 （或大小） 跨网络和基于文本的编码的 XML 又高效传输的二进制数据带来了特殊的挑战。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  在 Base64 编码字符串中，每个字符都表示原始 8 位数据的 6 位，这导致 Base64 的编码开销比率是 4:3，且未计算额外的格式字符（回车符/换行符），而按惯例这些字符通常是会添加的。 虽然 XML 编码与二进制编码之间的差异显著与否通常视具体情况而定，但当传送 500 MB 负载时大小增加超过 33% 通常是不可接受的。  
   
- 为避免这种编码开销，消息传输优化机制 (MTOM) 标准允许将消息中包含的大型数据元素外部化，并将其作为无任何特殊编码的二进制数据随消息一起传送。 利用 MTOM，消息将以一种与带附件或嵌入式内容（图片和其他嵌入式内容）的简单邮件传输协议 (SMTP) 电子邮件类似的方式交换；MTOM 消息会打包为多部分/相关 MIME 序列，其中根部分是实际的 SOAP 消息。  
+ 为避免这种编码开销，消息传输优化机制 (MTOM) 标准允许将消息中包含的大型数据元素外部化，并将其作为无任何特殊编码的二进制数据随消息一起传送。 利用 MTOM，消息交换中的带附件或嵌入式的内容 （图片和其他嵌入式的内容）; 的简单邮件传输协议 (SMTP) 电子邮件类似的方式MTOM 消息会打包为多部分/相关 MIME 序列，其中根部分是实际的 SOAP 消息。  
   
  MTOM SOAP 消息是在其未编码版本的基础上进行修改的，这样引用各自 MIME 部分的特殊元素标记会替代消息中包含二进制数据的原始元素。 因此，SOAP 消息通过指向随其发送的 MIME 部分来引用二进制内容，但除此之外则仅仅携带 XML 文本数据。 因为此模型与完善的 SMTP 模型基本一致，所以在多种平台上编码和解码 MTOM 消息有着广泛的工具支持，这令其成为一个极其具有可互操作性的选择。  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="encodings"></a>编码  
  *编码*定义一组有关如何在网络上显示消息的规则。 *编码器*实现此类编码，并负责，在发送端，启用<xref:System.ServiceModel.Channels.Message>到字节流或可以跨网络发送的字节缓冲区的内存中消息。 在接收方，编码器会将一系列字节转变为内存中的消息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括三个编码器，同时也允许您进行编写并插入自己的编码器（如有必要）。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括三个编码器，并允许您编写并插入自己的编码器，如有必要。  
   
  每个标准绑定都包括一个预配置编码器，因此默认情况下带 Net* 前缀的绑定使用二进制编码器（通过包括 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 类），而 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WSHttpBinding> 类则使用文本消息编码器（通过 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 类）。  
   

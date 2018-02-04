@@ -8,19 +8,20 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自定义活动
-本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 该自定义活动使用 <xref:System.Net.Mail.SmtpClient> 的功能异步发送电子邮件以及发送经过身份验证的邮件。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
+本示例演示如何创建派生自 <xref:System.Activities.AsyncCodeActivity> 的自定义活动，以使用 SMTP 发送邮件供在工作流应用程序内使用。 自定义活动使用的功能<xref:System.Net.Mail.SmtpClient>以异步方式发送电子邮件以及发送邮件使用身份验证。 它还提供一些最终用户功能，例如测试模式、标记替换、文件模板和测试放置路径。  
   
  下表详细描述了 `SendMail` 活动的参数。  
   
@@ -31,17 +32,17 @@ ms.lasthandoff: 12/22/2017
 |EnableSsl|bool|指定 <xref:System.Net.Mail.SmtpClient> 是否使用安全套接字层 (SSL) 来对连接进行加密。|  
 |UserName|String|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的用户名。|  
 |密码|String|设置用于验证发件人 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 属性的凭据的密码。|  
-|Subject|<xref:System.Activities.InArgument%601>\<字符串 >|邮件主题。|  
-|正文|<xref:System.Activities.InArgument%601>\<字符串 >|邮件正文。|  
-|附件|<xref:System.Activities.InArgument%601>\<字符串 >|用于存储附加到此电子邮件的数据的附件集合。|  
-|From|<xref:System.Net.Mail.MailAddress>|此电子邮件的发件人地址。|  
+|Subject|<xref:System.Activities.InArgument%601>\<string>|邮件主题。|  
+|正文|<xref:System.Activities.InArgument%601>\<string>|邮件正文。|  
+|附件|<xref:System.Activities.InArgument%601>\<string>|用于存储附加到此电子邮件数据的附件集合。|  
+|From|<xref:System.Net.Mail.MailAddress>|来自此电子邮件地址。|  
 |到|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的收件人的地址集合。|  
-|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的抄送 (CC) 收件人的地址集合。|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|地址包含此电子邮件的抄送 (CC) 收件人的集合。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此电子邮件的密件抄送 (BCC) 收件人的地址集合。|  
 |标记|<xref:System.Activities.InArgument%601>< IDictionary\<字符串、 字符串 >>|会在正文中进行替换的标记。 此功能允许用户在正文中指定一些值，这些值稍后可由使用此属性提供的标记进行替换。|  
 |BodyTemplateFilePath|String|正文模板的路径。 `SendMail` 活动将此文件的内容复制到其 body 属性中。<br /><br /> 此模板可包含由 tokens 属性的内容替换的标记。|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|设置此属性时，将所有电子邮件发送到其中指定的地址。<br /><br /> 此属性应在测试工作流时使用。 例如，当您需要确保在不将电子邮件发送到实际收件人的情况下发送所有电子邮件时。|  
-|TestDropPath|String|设置此属性时，也将所有电子邮件保存到指定的文件中。<br /><br /> 此属性应在测试或调试工作流时使用，以确保传出的电子邮件的格式和内容正确。|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|当设置此属性时，所有电子邮件发送到在其中指定的地址。<br /><br /> 此属性应在测试工作流时使用。 例如，如果你想要确保而无需将它们发送到实际收件人发送所有电子邮件。|  
+|TestDropPath|String|当设置此属性时，所有电子邮件还保存在指定的文件。<br /><br /> 此属性被用于在测试或调试工作流，以确保的格式和传出的电子邮件内容是适当的时间。|  
   
 ## <a name="solution-contents"></a>解决方案内容  
  解决方案包含两个项目。  
@@ -115,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>设置说明  
  此示例要求具有对 SMTP 服务器的访问权限。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]设置 SMTP 服务器，请参阅以下链接。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 设置 SMTP 服务器，请参阅以下链接。  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   
@@ -133,9 +134,9 @@ new SendMail
   
 2.  确保您具有对有效 SMTP 服务器的访问权限。 查看设置说明。  
   
-3.  使用您的服务器地址、发件人和收件人电子邮件地址配置程序。  
+3.  使用您的服务器地址、 发件人和到电子邮件地址配置程序。  
   
-     若要正确运行此示例，您可能需要在 Program.cs 中和 Sequence.xaml 中配置发件人和收件人电子邮件地址的值以及 SMTP 服务器的地址。 您将需要更改这两个位置中的地址，因为程序用两种不同的方式发送邮件。  
+     若要正确运行此示例，你可能需要在 Program.cs 中和 Sequence.xaml 中配置 From 和 To 电子邮件地址和 SMTP 服务器的地址的值。 您将需要更改这两个位置中的地址，因为程序用两种不同的方式发送邮件。  
   
 4.  要生成解决方案，按 Ctrl+Shift+B。  
   

@@ -30,18 +30,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="cryptographic-services"></a>加密服务
 <a name="top"></a> 公共网络（如 Internet）不提供实体之间安全通信的方式。 此类网络上的通信易被读取或甚至被未经授权的第三方修改。 加密有助于防止数据被查看，提供检测数据是否已修改的方法，并帮助提供一种跨不安全通道安全通信的方式。 例如，数据可通过使用加密算法进行加密、以加密状态进行传输并在稍后由预期方进行解密。 如果某个第三方截获了加密数据，将很难解密此数据。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
  密钥加密的缺点是它假定双方已商定密钥和 IV，并互相传达了密钥和 IV 的值。 IV 不被视为机密，并可以以纯文本的形式通过消息传输。 但是，密钥必须对未经授权的用户保密。 由于存在这些问题，密钥加密通常与公钥加密一起使用，以秘密地传达密钥和 IV 的值。  
   
- 假定 Alice 和 Bob 是想通过非安全通道进行通信的双方，则他们可能按如下所示使用密钥加密：Alice 和 Bob 同意使用某种具有特定密钥和 IV 的特定算法（例如 AES）。 Alice 编写了一条消息，并创建了一个在其上发送消息的网络流（也许是已命名的管道或网络电子邮件）。 接下来，她使用密钥和 IV 对文本进行加密，然后通过 intranet 向 Bob 发送加密的消息和 IV。 Bob 收到加密文本并使用 IV 和之前商定的密钥对其进行解密。 如果传输遭到截获，侦听者无法恢复原始消息，因为他不知道密钥。 在此方案中，只有密钥必须保持机密。 在实际方案中，Alice 和 Bob 都可以生成密钥并使用公钥（非对称）加密将密钥（对称）传递给另一方。 有关公钥加密的详细信息，请参阅下一节。  
+ 假定 Alice 和 Bob 是想通过非安全通道进行通信的双方，则他们可能按如下所示使用密钥加密：Alice 和 Bob 同意使用某种具有特定密钥和 IV 的特定算法（例如 AES）。 Alice 撰写一条消息，并在其上发送消息创建一个网络流 （也许是命名管道或网络电子邮件）。 接下来，她使用密钥和 IV 对文本进行加密，然后通过 intranet 向 Bob 发送加密的消息和 IV。 Bob 收到加密文本并使用 IV 和之前商定的密钥对其进行解密。 如果传输遭到截获，侦听者无法恢复原始消息，因为他不知道密钥。 在此方案中，只有密钥必须保持机密。 在实际方案中，Alice 和 Bob 都可以生成密钥并使用公钥（非对称）加密将密钥（对称）传递给另一方。 有关公钥加密的详细信息，请参阅下一节。  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供以下实现密钥加密算法的类：  
   

@@ -1,11 +1,13 @@
 ---
 title: "UInteger 数据类型"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.uinteger
+f1_keywords:
+- vb.uinteger
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - UInteger data type
@@ -19,14 +21,13 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f3852bd56d11c19e327e6c2f3e23cfb082a54e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea6d42a604e5a50fab62644034afc82e089792c7
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="uinteger-data-type"></a>UInteger 数据类型
 
@@ -53,10 +54,18 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
 
+从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如:
+
+```vb
+Dim number As UInteger = &H_0F8C_0326
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 此外可以包括数值`UI`或`ui`[键入字符](../../programming-guide\language-features\data-types/type-characters.md)来表示`UInteger`数据类型，如以下示例所示。
 
 ```vb
-Dim number = &H0FAC14D7ui
+Dim number = &H_0FAC_14D7ui
 ```
 
 ## <a name="programming-tips"></a>编程提示
@@ -75,7 +84,7 @@ Dim number = &H0FAC14D7ui
   
 -   **Framework 类型。** .NET Framework 中的对应类型是 <xref:System.UInt32?displayProperty=nameWithType> 结构。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.UInt32>  
  [数据类型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

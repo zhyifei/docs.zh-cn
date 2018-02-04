@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="claims-based-identity-model"></a>基于声明的标识模型
-在生成声明感知应用程序时，用户标识在应用程序中表示为一组声明。 其中一个声明可能是用户名，另一个声明可能是电子邮件地址。 其理念是，配置外部标识系统以便为您的应用程序提供所需的一切，是其了解用户及用户发出的每个请求和加密，从而确保您收到的标识数据来自受信任的源。  
+在生成声明感知应用程序时，用户标识在应用程序中表示为一组声明。 一个声明可能是用户的名称，另一个可能是电子邮件地址。 其理念是，配置外部标识系统以便为您的应用程序提供所需的一切，是其了解用户及用户发出的每个请求和加密，从而确保您收到的标识数据来自受信任的源。  
   
  在此模型下，可以更轻松地实现单一登录，并且应用程序不再负责执行以下操作：  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  为描述 Windows Identity Foundation (WIF) 中的编程模型，将使用术语“标识”来表示一组特性，这些特性描述了系统中要保护的用户或其他实体。  
   
 ### <a name="claim"></a>声明  
- 将声明视为一条标识信息，如“销售”角色中的姓名、电子邮件地址、年龄和成员资格。 应用程序收到的声明越多，您对用户的了解就越深。 可能会想为何将它们称为“声明”，而不是像描述企业目一样称之为“特性”。 原因与传递方法相关。 在此模型中，应用程序不会查找目录中的用户特性。 相反，用户会将声明提供给您的应用程序，然后您的应用程序会对其进行检查。 每个声明均由颁发者做出，您可以像信任颁发者一样信任此声明。 例如，您对由您公司的域控制器做出的声明的信任程度比对用户自身做出的声明的信任程度更高。 WIF 表示具有 <xref:System.Security.Claims.Claim> 类型的声明，此类型拥有一个允许您查明此声明的颁发者的 <xref:System.Security.Claims.Claim.Issuer%2A> 属性。  
+ 将一条标识信息，例如名称、 电子邮件地址、 年龄、 Sales 角色的成员身份作为声明。 应用程序收到的声明越多，您对用户的了解就越深。 可能会想为何将它们称为“声明”，而不是像描述企业目一样称之为“特性”。 原因与传递方法相关。 在此模型中，应用程序不会查找目录中的用户特性。 相反，用户会将声明提供给您的应用程序，然后您的应用程序会对其进行检查。 每个声明均由颁发者做出，您可以像信任颁发者一样信任此声明。 例如，您对由您公司的域控制器做出的声明的信任程度比对用户自身做出的声明的信任程度更高。 WIF 表示具有 <xref:System.Security.Claims.Claim> 类型的声明，此类型拥有一个允许您查明此声明的颁发者的 <xref:System.Security.Claims.Claim.Issuer%2A> 属性。  
   
 ### <a name="security-token"></a>安全令牌  
  用户会将一组声明随请求一起提供给您的应用程序。 在 Web 服务中，SOAP 信封的安全标头中携带了这些声明。 在基于浏览器的 Web 应用程序中，这些声明会通过来自用户浏览器的 HTTP POST 到达，且稍后可能缓存在 Cookie 中（如果需要会话）。 不管这些声明是如何到达的，都必须对其进行序列化，从而产生安全令牌。 安全令牌是由颁发机构进行数字签名的一组序列化的声明。 签名很重要：它可以为您确保用户不只是构建一组声明并将其发送给您。 在不需要加密的安全性较低的情况下，您可以使用未签名的标记，但本主题中不描述此情况。  

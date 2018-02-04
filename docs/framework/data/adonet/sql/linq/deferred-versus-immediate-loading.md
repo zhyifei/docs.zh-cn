@@ -5,28 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f40f6c3d94aeeae41c4cce00bac8de863226f287
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8a4fa1574b8e25a5d98f9547ad916a3c84f10b01
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>推迟加载与即时加载
 查询某对象时，实际上您只检索请求的对象。 *相关*不会自动获取对象在同一时间。 (有关详细信息，请参阅[跨关系查询](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)。)您无法看到相关对象尚未加载这一事实，原因是尝试访问它们时将产生检索它们的请求。  
   
- 例如，您可能需要查询一组特定的订单，然后偶而向特定客户发送电子邮件通知。 您最初不一定需要检索与每个订单有关的所有客户数据。 您可以使用延迟加载将额外信息的检索操作延迟到您确实需要检索它们时再进行。 请看下面的示例：  
+ 例如，你可能想要查询一组特定的订单，然后向特定客户仅偶尔将发送电子邮件通知。 您最初不一定需要检索与每个订单有关的所有客户数据。 您可以使用延迟加载将额外信息的检索操作延迟到您确实需要检索它们时再进行。 请看下面的示例：  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  

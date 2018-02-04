@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="selecting-a-credential-type"></a>选择凭据类型
 *凭据*是数据[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用于建立声明的标识或功能。 例如，护照就是政府颁发的用以证明国家或地区的公民身份的凭据。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，凭据可以采用多种形式，例如用户名标记和 X.509 证书。 本主题讨论凭据、如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用凭据以及如何为应用程序选择正确的凭据。  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 >  将 SSL 安全与 .NET Framework 3.5 及更高版本一起使用时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端将同时使用其证书存储区中的中间证书和 SSL 协商期间收到的中间证书，对服务的证书执行证书链验证。 .NET Framework 3.0 仅使用本地证书存储区中安装的中间证书。  
   
 #### <a name="out-of-band-negotiation"></a>带外协商  
- 如果禁用自动协商，则在将任何消息发送到服务之前必须向客户端提供服务凭据。 这也称为是*的带*设置。 例如，如果指定的凭据类型为证书，且禁用了自动协商，则客户端必须联系服务所有者以在运行客户端应用程序的计算机上接收和安装证书。 例如，当要严格控制哪些客户端可以访问企业对企业方案中的服务时，可以执行上述操作。 使用 Microsoft 管理控制台 (MMC) 证书管理单元等工具时，可以通过电子邮件完成带外协商，并将 X.509 证书存储在 Windows 证书存储区中。  
+ 如果禁用自动协商，则在将任何消息发送到服务之前必须向客户端提供服务凭据。 这也称为是*的带*设置。 例如，如果指定的凭据类型为证书，且禁用了自动协商，则客户端必须联系服务所有者以在运行客户端应用程序的计算机上接收和安装证书。 例如，当要严格控制哪些客户端可以访问企业对企业方案中的服务时，可以执行上述操作。 此扩展的带外协商可以在电子邮件，并且 X.509 证书存储在 Windows 证书存储区，使用 Microsoft 管理控制台 (MMC) 证书管理单元中等工具。  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 属性用于提供使用证书的服务，该证书通过带外协商实现。 这是使用 <xref:System.ServiceModel.BasicHttpBinding> 类时所必需的，因为绑定不允许自动协商。 该属性还可用于不相关的双工方案中。 在此方案中，无需客户端先向服务器发送请求，服务器就将消息发送到客户端。 由于服务器没有来自客户端的请求，因此它必须使用客户端的证书加密发送到客户端的消息。  
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 > [!IMPORTANT]
 >  无法切换标识时，要格外注意一种情况（即启用建立安全上下文时的默认行为）。 如果创建的服务可以与另一个服务进行通信，则无法更改用于打开第二个服务的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端的标识。 如果允许多个客户端使用第一个服务，且该服务访问第二个服务时将模拟客户端，则这将成为问题所在。 如果该服务重新使用所有调用方的相同客户端，则对第二个服务的所有调用都是以第一个调用方的标识进行的，该标识用于打开第二个服务的客户端。 换言之，该服务将第一个客户端的标识用于它的所有客户端以与第二个服务进行通信。 这可以导致特权提升。 如果这不是服务所需的行为，就必须跟踪每个调用方并为每个单独的调用方创建第二个服务的新客户端，并确保该服务仅使用正确调用方的正确客户端与第二个服务进行通信。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]凭据和安全会话，请参阅[安全会话的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 凭据和安全会话，请参阅[安全会话的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -35,16 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f9822c61f454f0dd166cfdad7f26798790a5f23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过窗口与 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序通过提供其自己的 windows<xref:System.Windows.Window>类。 本主题介绍<xref:System.Windows.Window>之前涵盖创建和管理 windows 独立应用程序中的基础知识。  
@@ -120,7 +122,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="configuring-a-window-definition-for-msbuild"></a>为 MSBuild 配置窗口定义  
  如何实现你的窗口确定如何为配置[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]。 窗口定义同时使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记和代码隐藏：  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`项。  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 标记文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`项。  
   
 -   代码隐藏文件配置为[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile`项。  
   
@@ -193,7 +195,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>防止窗口激活  
- 在一些情况下，不应在显示窗口时将其激活，例如 Internet Messenger 风格的应用程序的对话窗口或电子邮件应用程序的通知窗口。  
+ 有一些的情形其中 windows 应不显示时激活，如 Internet messenger 样式应用程序的对话窗口或电子邮件应用程序的通知窗口。  
   
  如果你的应用程序具有一个窗口，在显示时，不应被激活，则可以设置其<xref:System.Windows.Window.ShowActivated%2A>属性`false`之前调用<xref:System.Windows.Window.Show%2A>第一次的方法。 结果是：  
   

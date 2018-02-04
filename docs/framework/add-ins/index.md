@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - .NET Framework, extensibility
 - versioning [.NET Framework], add-ins
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="add-ins-and-extensibility"></a>外接程序和扩展性
 <a name="top"></a> 外接程序为主机应用程序提供扩展功能或服务。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一个编程模型，开发人员可利用此模型来开发外接程序并在其主机应用程序中激活。 该模型通过在主机与外接程序之间构造通信管道来实现此功能。 该模型通过使用 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>和 <xref:System.AddIn.Contract> 命名空间中的类实现。  
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>区分外接程序和主机  
- 外接程序与主机的区别仅仅是主机能够激活外接程序。 主机可以是两个应用程序中较大的一个（如文字处理应用程序及其拼写检查器），也可以是两个应用程序中较小的一个（嵌入媒体播放中的即时消息客户端）。 外接程序模型支持客户端和服务器方案中的外接程序。 服务器外接程序的示例包括为电子邮件服务器提供病毒扫描、垃圾邮件过滤以及 IP 保护的外接程序。 客户端外接程序示例包括文字处理器、图形程序和游戏特殊功能以及本地电子邮件客户端病毒扫描的引用外接程序。  
+ 外接程序与主机的区别仅仅是主机能够激活外接程序。 主机可以是两个应用程序中较大的一个（如文字处理应用程序及其拼写检查器），也可以是两个应用程序中较小的一个（嵌入媒体播放中的即时消息客户端）。 外接程序模型支持客户端和服务器方案中的外接程序。 服务器外接程序的示例包括为电子邮件服务器提供病毒扫描、垃圾邮件过滤以及 IP 保护的外接程序。 客户端外接程序示例包括引用外接文字处理器、 图形程序和游戏和病毒扫描的本地电子邮件客户端的特殊功能。  
   
  [返回页首](#top)  
   

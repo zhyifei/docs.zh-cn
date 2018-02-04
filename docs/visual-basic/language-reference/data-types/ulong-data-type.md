@@ -1,11 +1,13 @@
 ---
 title: "ULong 数据类型 (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.ulong
+f1_keywords:
+- vb.ulong
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -19,14 +21,13 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afc52bfd16541feed599d5445adad7aba04f8e9d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 606e0ef87b209bb2e75e28223f27d081713c1b7e
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 数据类型 (Visual Basic)
 
@@ -53,10 +54,18 @@ ms.lasthandoff: 11/21/2017
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
+从 Visual Basic 15.5 开始，你还可以使用下划线字符 (`_`) 为之间的前缀和十六进制、 二进制文件，或八进制数字的前导分隔符。 例如:
+
+```vb
+Dim number As ULong = &H_F9AC_0326_1489_D68C
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 此外可以包括数值`UL`或`ul`[键入字符](../../programming-guide\language-features\data-types/type-characters.md)来表示`ULong`数据类型，如以下示例所示。
 
 ```vb
-Dim number = &H00_00_0A_96_2F_AC_14_D7ul
+Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 ```
 
 ## <a name="programming-tips"></a>编程提示
