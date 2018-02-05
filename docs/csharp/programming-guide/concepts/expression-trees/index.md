@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f141c414ef56c591baa882d9495e591e6b08bc8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5554b9e923b0cc1da4906cda1b7ca4e6aac75f11
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="expression-trees-c"></a>表达式树 (C#)
 表达式树以树形数据结构表示代码，其中每一个节点都是一种表达式，比如方法调用和 `x < y` 这样的二元运算等。  
@@ -99,7 +100,7 @@ Console.WriteLine(factorial);
 // Prints 120.  
 ```
 
-有关详细信息，请参阅[在 Visual Studio 2010 中使用表达式树生成动态方法](http://go.microsoft.com/fwlink/p/?LinkId=169513)，该方法也适用于 Visual Studio 的更高版本。
+有关详细信息，请参阅[在 Visual Studio 2010 中使用表达式树生成动态方法](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/)，该方法也适用于 Visual Studio 的更高版本。
   
 ## <a name="parsing-expression-trees"></a>解析表达式树  
  下列代码示例展示如何分解表示 Lambda 表达式 `num => num < 5` 的表达式树。  
@@ -155,7 +156,7 @@ Console.WriteLine(expr.Compile()(4));
   
  有关详细信息，请参阅[如何：执行表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Linq.Expressions>  
  [如何：执行表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
  [如何：修改表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  

@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fa3b7af871380d4f18ebe7ef4f5bc5963cc247c4
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="work-with-syntax"></a>使用语法
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="kinds"></a>种类
 
-每个节点、标记或琐碎内容都具有 <xref:System.Int32?displayProperty=fullName> 类型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 属性，标识所表示的确切语法元素。 此值可强制转换为特定语言枚举；每种语言（C# 或 VB）都具有单个 `SyntaxKind` 枚举（分别为 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=fullName> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=fullName>），列出了语法中所有可能的节点、标记和琐碎内容。 可通过访问 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 扩展方法自动完成此转换。
+每个节点、标记或琐碎内容都具有 <xref:System.Int32?displayProperty=nameWithType> 类型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 属性，标识所表示的确切语法元素。 此值可强制转换为特定语言枚举；每种语言（C# 或 VB）都具有单个 `SyntaxKind` 枚举（分别为 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），列出了语法中所有可能的节点、标记和琐碎内容。 可通过访问 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 扩展方法自动完成此转换。
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 属性可轻松消除共享同一节点类的语法节点类型的歧义。 对于标记和琐碎内容，此属性是区分不同元素类型的唯一方法。 
 

@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.workload: dotnetcore
-ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>移植到 .NET Core - 库
 
@@ -123,7 +124,7 @@ global.json 文件是可选文件，可以通过它设置项目的 .NET Core 工
 
 下一步是运行 API 可移植性分析器 (ApiPort) 生成可供分析的可移植性报表。
 
-确保了解 [API 可移植性分析器 (ApiPort)](~/docs/standard/portability-analyzer.md) 及如何生成用于面向 .NET Core 的可移植性报表。 执行此操作的方式可能取决于需求和个人偏好。 下面介绍了一些不同方法。 用户可能会发现自己根据生成代码的方式混合使用了这些方法中的步骤。
+确保了解 [API 可移植性分析器 (ApiPort)](../../standard/analyzers/portability-analyzer.md) 及如何生成用于面向 .NET Core 的可移植性报表。 执行此操作的方式可能取决于需求和个人偏好。 下面介绍了一些不同方法。 用户可能会发现自己根据生成代码的方式混合使用了这些方法中的步骤。
 
 ### <a name="dealing-primarily-with-the-compiler"></a>主要处理编译器
 
