@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a28f8994c8cffdad69272322575df37c437b8b6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 04a46e30256b3b6df3de51346924cbb5fa057837
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="code-access-security"></a>代码访问安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 当今高度连接的计算机系统频繁地暴露来自各种可能未知源的代码中。 代码可附加到电子邮件、包含在文档中或通过 Internet 下载。 不幸的是，许多计算机用户都亲身经历了恶意移动代码（包括病毒和蠕虫）所带来的影响，这些代码可能损坏或破坏数据、花费时间和资金。  
+ 当今高度连接的计算机系统频繁地暴露来自各种可能未知源的代码中。 可以附加到电子邮件、 包含在文档中或通过 Internet 下载代码。 不幸的是，许多计算机用户都亲身经历了恶意移动代码（包括病毒和蠕虫）所带来的影响，这些代码可能损坏或销毁数据、花费时间和资金。  
   
  最常见的安全机制是根据用户的登录凭据（通常为密码）授予用户权限，以及限制允许用户访问的资源（通常为目录和文件）。 然而，这种方法无法解决以下几个问题：用户从许多来源获取代码，其中一些来源可能不可靠；代码包含 bug 或漏洞，被恶意代码所利用；代码有时会执行一些用户不知道的操作。 因此，当谨慎且值得信赖的用户运行恶意或有错的软件时，计算机系统可能会受到损坏并泄露私有数据。 大多数操作系统安全机制要求每一段代码必须完全可信方能运行（Web 页面上的脚本除外）。 因此，仍需要一个广泛适用的安全机制来允许源自一个计算机系统的代码在另一个系统中受保护运行，即使这两个系统之间没有信任关系。  
   

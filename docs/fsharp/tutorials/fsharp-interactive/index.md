@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-ms.openlocfilehash: bcf3fe052f305f29ae4cf618d93759bd911e0078
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a18f339d898374a59858cd774154b3846594d183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interactive-programming-with-f"></a>使用 F# 进行交互式编程 #
 
@@ -26,7 +26,7 @@ API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 F# Interactive (fsi.exe) 用于在控制台以交互方式运行 F# 代码，或执行 F# 脚本。 换句话说，F# Interactive 对 F# 语言执行 REPL（读取、计算、打印循环）。
 
-若要从控制台运行 F# Interactive，请运行 fsi.exe。  你可以找到 fsi.exe 中的"c:\Program 文件 (x86) \Microsoft SDKs\F#\<版本 > \Framework\<版本 >\"。 有关可用命令行选项的信息，请参阅 [F# Interactive 选项](fsharp-interactive-options.md)。
+若要从控制台运行 F# Interactive，请运行 fsi.exe。  你可以找到 fsi.exe 中的"c:\Program 文件 (x86) \Microsoft SDKs\F#\<版本 > \Framework\<版本 >\"。 有关可用命令行选项的信息，请参阅 [F# Interactive 选项](../../language-reference/fsharp-interactive-options.md)。
 
 若要通过 Visual Studio 运行 F# Interactive，可以单击标记为“F# Interactive”的相应工具栏按钮，或使用组合键 **Ctrl+Alt+F**。 执行此操作将打开交互式窗口，该窗口是运行 F# Interactive 会话的工具窗口。 还可以选择一些希望在交互式窗口中运行的代码，然后点击组合键 **ALT+ENTER**。 F# Interactive 在标记为“F# Interactive”的工具窗口中启动。 当您使用此组合键时，请确保焦点位于编辑器窗口内。
 
@@ -98,5 +98,5 @@ test
 
 |标题|描述|
 |-----|-----------|
-|[F# Interactive 选项](fsharp-interactive-options.md)|描述 F# Interactive (fsi.exe) 的命令行语法和选项。|
+|[F# Interactive 选项](../../language-reference/fsharp-interactive-options.md)|描述的 F # Interactive，命令行语法和选项 fsi.exe。|
 |[F# Interactive 库参考](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|描述在 F# Interactive 中执行代码时可用的库功能。|

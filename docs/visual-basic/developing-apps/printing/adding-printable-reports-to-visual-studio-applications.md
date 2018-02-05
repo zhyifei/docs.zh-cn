@@ -3,20 +3,21 @@ title: "将可打印的报表添加到 Visual Studio 应用程序"
 ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - printing [Visual Studio], reports
 - reports [Visual Basic], printing in Visual Studio
 ms.assetid: 93928405-ef41-495e-bce2-9d43d5a7080a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4ce2a8b12d8202a9f201a82b0d4a571249210d48
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 2b0300f31e4c75c72a72590ad22c19441acb7519
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="adding-printable-reports-to-visual-studio-applications"></a>将可打印的报表添加到 Visual Studio 应用程序
 Visual Studio 支持各种报表的解决方案来帮助你添加到 Visual Basic 应用程序报告的丰富数据。 你可以创建并添加使用 ReportViewer 控件、 Crystal Reports 或 SQL Server Reporting Services 报表。  
