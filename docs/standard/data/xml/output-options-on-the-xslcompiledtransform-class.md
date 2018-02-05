@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61f59c1be3376fb76c91994996840b915cd662ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 84171c92a56a9970b5ffc16ce8f30c85d61cc678
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 类的输出选项
 本主题讨论可用的 XSLT 输出选项。 可以在样式表中指定输出选项，或在 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上指定输出选项。  
@@ -60,9 +63,9 @@ ms.lasthandoff: 10/18/2017
 #### <a name="textwriter"></a>TextWriter  
  <xref:System.IO.TextWriter> 输出序列字符。 此输出类型在 <xref:System.IO.StringWriter> 和 <xref:System.IO.StreamWriter> 类中实现，分别将字符输出到字符串或流。 如果希望输出到字符串，请使用此输出类型。  
   
-## <a name="notes"></a>备注  
+## <a name="notes"></a>说明  
   
 -   在写出空标记时，会在元素名的最后一个字符与反斜杠之间写入一个空格，例如 `<myElement />`。 这样，较旧的浏览器可以正确地显示生成的 HTML 页面。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)

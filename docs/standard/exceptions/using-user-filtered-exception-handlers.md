@@ -12,15 +12,18 @@ helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a71a722063448fb0d568f4bfb4f71d4e01c57454
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1f5eb735262ee7ef69e200b1249c7b1c4a1e2ac2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-user-filtered-exception-handlers"></a>使用用户筛选的异常处理程序
 目前，Visual Basic 支持用户筛选的异常。 用户筛选的异常处理程序基于定义的异常需求来捕获和处理异常。 这些处理程序使用含有关键字 **When** 的 **Catch** 语句。  
@@ -52,5 +55,5 @@ Try
 End Try  
 ```  
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [异常](index.md)

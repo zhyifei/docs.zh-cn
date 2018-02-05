@@ -19,15 +19,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 958d6617-5e70-4b36-b5db-63c16dc35e43
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a26f6750f68609b40e6917fc5b257e43d95c3c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 557d639cc8a4e7ade2cfbd1f5d7264bca226d273
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>使用基于事件的异步模式进行多线程编程
 有多种方式可向客户端代码公开异步功能。 基于事件的异步模式为类规定了用于显示异步行为的建议方式。  
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.ComponentModel.BackgroundWorker>  
  描述 <xref:System.ComponentModel.BackgroundWorker> 组件并提供指向其所有成员的链接。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [托管线程处理的最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)  
  [事件](../../../docs/standard/events/index.md)  
  [组件中的多线程处理](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  

@@ -41,15 +41,18 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 607ef0020e15581c6ccca8f232eaea6be547f63b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-class-library-overview"></a>.NET Framework 类库概述
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 包括可加快和优化开发过程并提供对系统功能的访问的类、接口和值类型。 为了便于语言之间进行交互操作，大多数 .NET Framework 类型都符合 CLS，因而可在编译器符合公共语言规范 (CLS) 的任何编程语言中使用。  
@@ -91,28 +94,28 @@ ms.lasthandoff: 11/21/2017
 |类别|类名|描述|Visual Basic 数据类型|C# 数据类型|C++ 数据类型|JScript 数据类型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整数|<xref:System.Byte>|8 位无符号整数。|**Byte**|**byte**|**unsigned char**|**Byte**|  
-||<xref:System.SByte>|8 位有符号整数。<br /><br /> 不符合 CLS。|**SByte**|**sbyte**|**char**<br /><br /> - 或 -<br /><br /> signed char|**SByte**|  
+||<xref:System.SByte>|8 位有符号整数。<br /><br /> 不符合 CLS。|**SByte**|**sbyte**|**char**<br /><br /> 或<br /><br /> signed char|**SByte**|  
 ||<xref:System.Int16>|16 位带符号整数。|**Short**|**short**|**short**|**short**|  
-||<xref:System.Int32>|32 位带符号整数。|**Integer**|**int**|**int**<br /><br /> - 或 -<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 位带符号整数。|**Integer**|**int**|**int**<br /><br /> 或<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 位带符号整数。|**Long**|**long**|**__int64**|**long**|  
 ||<xref:System.UInt16>|16 位无符号整数。<br /><br /> 不符合 CLS。|**UShort**|**ushort**|**unsigned short**|**UInt16**|  
-||<xref:System.UInt32>|32 位无符号整数。<br /><br /> 不符合 CLS。|**UInteger**|**uint**|**unsigned int**<br /><br /> - 或 -<br /><br /> **unsigned long**|**UInt32**|  
+||<xref:System.UInt32>|32 位无符号整数。<br /><br /> 不符合 CLS。|**UInteger**|**uint**|**unsigned int**<br /><br /> 或<br /><br /> **unsigned long**|**UInt32**|  
 ||<xref:System.UInt64>|64 位无符号整数。<br /><br /> 不符合 CLS。|**ULong**|**ulong**|unsigned __int64|**UInt64**|  
 |浮点|<xref:System.Single>|单精度（32 位）浮点数字。|**单精度**|**float**|**float**|**float**|  
 ||<xref:System.Double>|双精度（64 位）浮点数字。|**双精度**|**double**|**double**|**double**|  
 |逻辑运算|<xref:System.Boolean>|布尔值（真或假）。|**布尔值**|**bool**|**bool**|**bool**|  
 |其他|<xref:System.Char>|Unicode（16 位）字符。|**Char**|**char**|**wchar_t**|**char**|  
-||<xref:System.Decimal>|十进制（128 位）值。|**小数**|**小数**|**小数**|**小数**|  
+||<xref:System.Decimal>|十进制（128 位）值。|**小数**|**decimal**|**小数**|**小数**|  
 ||<xref:System.IntPtr>|大小取决于基础平台（32 位平台上为 32 位值，64 位平台上为 64 位值）的有符号整数。|**IntPtr**<br /><br /> 无内置类型。|**IntPtr**<br /><br /> 无内置类型。|**IntPtr**<br /><br /> 无内置类型。|**IntPtr**|  
 ||<xref:System.UIntPtr>|大小取决于基础平台的无符号整数（32 位平台上为 32 位值，64 位平台上为 64 位值）。<br /><br /> 不符合 CLS。|**UIntPtr**<br /><br /> 无内置类型。|**UIntPtr**<br /><br /> 无内置类型。|**UIntPtr**<br /><br /> 无内置类型。|**UIntPtr**|  
-ass 对象|<xref:System.Object>|对象层次结构的根。|**对象**|**对象**|Object\*|**对象**|  
-||<xref:System.String>|Unicode 字符的不变的定长串。|**字符串**|**字符串**|String\*|**字符串**|  
+ass 对象|<xref:System.Object>|对象层次结构的根。|**对象**|**object**|Object\*|**对象**|  
+||<xref:System.String>|Unicode 字符的不变的定长串。|**字符串**|**string**|String\*|**字符串**|  
   
  除了基本数据类型外，<xref:System> 命名空间还包含 100 多个类，范围从处理异常的类到处理核心运行时概念的类，如应用程序域和垃圾回收器。 <xref:System> 命名空间还包含许多二级命名空间。  
   
  有关命名空间的详细信息，请浏览 [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)。 此参考文档提供对每个命名空间的简要概述以及对每种类型及其成员的正式说明。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [常规类型系统](../../docs/standard/base-types/common-type-system.md)  
  [.NET Framework 类库](http://go.microsoft.com/fwlink/?LinkID=227195)  
  [概述](../../docs/framework/get-started/overview.md)

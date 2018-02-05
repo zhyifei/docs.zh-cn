@@ -22,11 +22,14 @@ caps.latest.revision:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7f8ee49861902002e69af96168def5883d73c3a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5405b6fc080696b7e507e70dd8b04f8ddcc4bbb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="automatic-memory-management"></a>自动内存管理
 自动内存管理是公共语言运行时在[托管执行](../../docs/standard/managed-execution-process.md)过程中提供的服务之一。 公共语言运行时的垃圾回收器为应用程序管理内存的分配和释放。 对开发人员而言，这就意味着在开发托管应用程序时不必编写执行内存管理任务的代码。 自动内存管理可解决常见问题，例如，忘记释放对象并导致内存泄漏，或尝试访问已释放对象的内存。 本节描述垃圾回收器如何分配和释放内存。  
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="releasing-memory-for-unmanaged-resources"></a>为非托管资源释放内存  
  对于应用程序创建的大多数对象，可以依赖垃圾回收器自动执行必要的内存管理任务。 但是，非托管资源需要显式清除。 最常用的非托管资源类型是包装操作系统资源的对象，例如，文件句柄、窗口句柄或网络连接。 虽然垃圾回收器可以跟踪封装非托管资源的托管对象的生存期，但却无法具体了解如何清理资源。 创建封装非托管资源的对象时，建议在公共 **Dispose** 方法中提供必要的代码以清理非托管资源。 通过提供 **Dispose** 方法，对象的用户可以在使用完对象后显式释放其内存。 使用封装非托管资源的对象时，应该了解 **Dispose** 并在必要时调用它。 有关清理非托管资源的详细信息和实现 **Dispose** 的设计模式示例，请参见[垃圾回收](../../docs/standard/garbage-collection/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.GC>  
  [垃圾回收](../../docs/standard/garbage-collection/index.md)  
  [托管执行过程](../../docs/standard/managed-execution-process.md)
