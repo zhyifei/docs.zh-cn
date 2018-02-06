@@ -1,13 +1,13 @@
 ---
 layout: HubPage
-hide_bc: True
+hide_bc: 
 title: ".NET 文档"
 description: "了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。"
-ms.openlocfilehash: 6817628e110d59b3d5b7c8e52fa2d5cc7cac4cd7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 623f281c3f348c6e3c52f28b263ac06e0e864870
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 02/01/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -109,9 +109,9 @@ ms.lasthandoff: 12/02/2017
                                                 <h3><a href="/dotnet/core">.NET Core 指南</a></h3>
                                                 <p><a href="/dotnet/core/get-started">入门</a></p>
                                                 <p><a href="/dotnet/core/tutorials">教程</a></p>
-                                                <p><a href="/dotnet/core/porting">Porting from .NET Framework</a></p>
+                                                <p><a href="/dotnet/core/porting">从 .NET Framework 移植</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
-                                                <p><a href="/ef/core/index">EF Core</a></p>
+                                                <p>EF Core<a href="/ef/core/index"></a></p>
                                             </div>
                                         </div>
                                     </div>
