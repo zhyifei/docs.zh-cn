@@ -80,7 +80,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="ObjectInstantiation"></a>   
 ## <a name="handle-object-instantiation-appropriately"></a>适当处理对象实例化  
- 核心。NET 的正则表达式对象模型是<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>类，该类表示正则表达式引擎。 通常，影响正则表达式性能的单个最大因素是 <xref:System.Text.RegularExpressions.Regex> 引擎的使用方式。 定义正则表达式需要将正则表达式引擎与正则表达式模式紧密耦合。 无论该耦合过程是需要通过向其构造函数传递正则表达式模式来实例化 <xref:System.Text.RegularExpressions.Regex> 还是通过向其传递正则表达式模式和要分析的字符串来调用静态方法，都必然会消耗大量资源。  
+ .NET 的正则表达式对象模型核心是<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>类，该类表示正则表达式引擎。 通常，影响正则表达式性能的单个最大因素是 <xref:System.Text.RegularExpressions.Regex> 引擎的使用方式。 定义正则表达式需要将正则表达式引擎与正则表达式模式紧密耦合。 无论该耦合过程是需要通过向其构造函数传递正则表达式模式来实例化 <xref:System.Text.RegularExpressions.Regex> 还是通过向其传递正则表达式模式和要分析的字符串来调用静态方法，都必然会消耗大量资源。  
   
 > [!NOTE]
 >  使用解释并已编译的正则表达式的性能影响的更多详细讨论，请参阅[优化正则表达式性能，第 ii 部分： 采用控制回溯](http://go.microsoft.com/fwlink/?LinkId=211566)BCL 团队博客中。  
@@ -197,7 +197,7 @@ ms.lasthandoff: 10/18/2017
   
  由于单词边界与单词字符不同也不是其子集，因此正则表达式引擎在匹配单词字符时无法跨越单词边界。 这意味着，对于此正则表达式而言，回溯对任何匹配的总体成功不会有任何贡献 -- 由于正则表达式引擎被强制为单词字符的每个成功的初步匹配保存其状态，因此它只会降低性能。  
   
- 如果你确定，回溯是不必要，你可以通过使用禁用它`(?>``subexpression``)`语言元素。 下面的示例通过使用两个正则表达式来分析输入字符串。 第一个正则表达式 `\b\p{Lu}\w*\b` 依赖于回溯。 第二个正则表达式 `\b\p{Lu}(?>\w*)\b` 禁用回溯。 如示例输出所示，这两个正则表达式产生的结果相同。  
+ 如果你确定回溯是不必要的，你可以通过使用`(?>``subexpression``)`语言元素禁用它。 下面的示例通过使用两个正则表达式来分析输入字符串。 第一个正则表达式 `\b\p{Lu}\w*\b` 依赖于回溯。 第二个正则表达式 `\b\p{Lu}(?>\w*)\b` 禁用回溯。 如示例输出所示，这两个正则表达式产生的结果相同。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
