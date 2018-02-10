@@ -1,5 +1,5 @@
 ---
-title: "放弃 - C# 指南"
+title: "丢弃 - C# 指南"
 description: "介绍 C# 对放弃的支持（放弃是未赋值的可丢弃变量），以及放弃的使用方式。"
 keywords: .NET,.NET Core
 author: rpetrusha
@@ -15,7 +15,7 @@ ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/17/2017
 ---
-# <a name="discards---c-guide"></a><span data-ttu-id="5c64d-104">放弃 - C# 指南</span><span class="sxs-lookup"><span data-stu-id="5c64d-104">Discards - C# Guide</span></span>
+# <a name="discards---c-guide"></a><span data-ttu-id="5c64d-104">丢弃 - C# 指南</span><span class="sxs-lookup"><span data-stu-id="5c64d-104">Discards - C# Guide</span></span>
 
 <span data-ttu-id="5c64d-105">从 C# 7 开始，C# 支持放弃，这是一种在应用程序代码中人为取消使用的临时虚拟变量。</span><span class="sxs-lookup"><span data-stu-id="5c64d-105">Starting with C# 7, C# supports discards, which are temporary, dummy variables that are intentionally unused in application code.</span></span> <span data-ttu-id="5c64d-106">放弃相当于未赋值的变量；它们没有值。</span><span class="sxs-lookup"><span data-stu-id="5c64d-106">Discards are equivalent to unassigned variables; they do not have a value.</span></span> <span data-ttu-id="5c64d-107">因为只有一个放弃变量，并且甚至不为该变量分配存储空间，所以放弃可减少内存分配。</span><span class="sxs-lookup"><span data-stu-id="5c64d-107">Because there is only a single discard variable, and that variable may not even be allocated storage, discards can reduce memory allocations.</span></span> <span data-ttu-id="5c64d-108">因为它们使代码的意图清楚，增强了其可读性和可维护性。</span><span class="sxs-lookup"><span data-stu-id="5c64d-108">Because they make the intent of your code clear, they enhance its readability and maintainability.</span></span>
 
