@@ -2,21 +2,23 @@
 title: "abstract（C# 参考）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
-helpviewer_keywords: abstract keyword [C#]
+helpviewer_keywords:
+- abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bd26583c42302d8ce9ba4dd22119713548111236
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9c6dbb03a05ff1c86752983d130691ce23e341d7
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="abstract-c-reference"></a>abstract（C# 参考）
 `abstract` 修饰符指示被修改内容的实现已丢失或不完整。 abstract 修饰符可用于类、方法、属性、索引和事件。 在类声明中使用 `abstract` 修饰符以指示某个类仅旨在作为其他类的基类。 标记为 abstract 的成员，或包含在抽象类中的成员，都必须由派生自抽象类的类来实现。  
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/19/2018
     public abstract void MyMethod();  
     ```  
   
-     实现由替代方法 [override](../../../csharp/language-reference/keywords/override.md) 提供，它是非抽象类的成员。  
+     实现由方法 [override](../../../csharp/language-reference/keywords/override.md) 提供，它是非抽象类的成员。  
   
 -   在抽象方法声明中使用 [static](../../../csharp/language-reference/keywords/static.md) 或 [virtual](../../../csharp/language-reference/keywords/virtual.md) 修饰符是错误的。  
   
@@ -89,5 +91,5 @@ BaseClass bc = new BaseClass();   // Error
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
  [virtual](../../../csharp/language-reference/keywords/virtual.md)  
- [替代](../../../csharp/language-reference/keywords/override.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)

@@ -2,7 +2,8 @@
 title: "演练：创建和使用动态对象（C# 和 Visual Basic）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab1e245ed806cf0ea6346c76c6ade83273eed7be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
+ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>演练：创建和使用动态对象（C# 和 Visual Basic）
 
@@ -37,8 +38,8 @@ ms.lasthandoff: 11/21/2017
   
 -   创建使用 `IronPython` 库的项目。  
   
-## <a name="prerequisites"></a>先决条件  
-你需要[IronPython](http://ironpython.net/) for.NET 来完成本演练。 转到其[下载页](http://ironpython.net/download/)以获取最新版本。
+## <a name="prerequisites"></a>系统必备  
+需要 [IronPython](http://ironpython.net/) for .NET 才能完成此演练。 转到其[下载页](http://ironpython.net/download/)以获取最新版本。
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -172,10 +173,10 @@ ms.lasthandoff: 11/21/2017
   
 9. 保存文件，然后按 Ctrl+F5 生成并运行应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Dynamic?displayProperty=nameWithType>  
  <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
  [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [早期绑定和后期绑定](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [动态](../../../csharp/language-reference/keywords/dynamic.md)  
- [实现动态接口（外部博客）](http://go.microsoft.com/fwlink/?LinkId=230895)
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+ [实现动态接口（可从 Microsoft TechNet 下载 PDF）](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

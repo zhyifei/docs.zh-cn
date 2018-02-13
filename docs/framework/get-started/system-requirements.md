@@ -1,9 +1,11 @@
 ---
 title: ".NET Framework 系统要求"
+description: "了解安装 .NET Framework 4.5 及更高版本对硬件、操作系统和软件的要求。"
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
+ms.date: 02/02/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - software requirements
@@ -15,16 +17,31 @@ ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f206dd52f5fd6dc114ea35ce22df05e0fcff956c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
-本主题中的表格提供 .NET Framework 4.5 及其单点版本（4.5.1 和 4.5.2）、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 及其单点版本（4.6.1 和 4.6.2）和 .NET Framework 4.7 及其单点版本 (4.7.1) 的硬件、操作系统及软件要求。 允许你开发 .NET Framework 的应用的开发环境具有单独的一套需求。
+本主题中的表格针对 .NET Framework 以下版本列出了硬件、操作系统和软件要求：
+
+* .NET Framework 4.5 及其次要版本（4.5.1 和 4.5.2）。
+* .NET Framework 4.6 及其次要版本（4.6.1 和 4.6.2）。
+* .NET Framework 4.7 及其次要版本（4.7.1）。
+
+允许你开发 .NET Framework 的应用的开发环境具有单独的一套需求。
+
+> [!IMPORTANT]
+> 从 .NET Framework 4 开始，所有 .NET Framework 版本都是就地更新的，因此，在系统中只能存在一个 4.x 版本。
+> 此外，某些版本的 Windows 操作系统上预装了特定版本的 .NET Framework。 这表示：
+>
+> * 如果在计算机上已安装了更高的版本，则无法安装以前的 4.x 版本。
+> * 如果操作系统预安装了特定的 .NET 版本，则无法在同一计算机上安装以前的 4.x 版本。
+> * 如果你安装更高版本，则无需先卸载以前的版本。
 
 有关下载信息和链接，请参阅[安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。
 
@@ -61,7 +78,7 @@ ms.lasthandoff: 12/22/2017
 
  **注意：**
 
-- 在 Windows 7 系统上，.NET Framework 要求安装 Windows 7 SP1。 如果使用的是 Windows 7 系统，但尚未安装 Service Pack 1，则需要先安装 SP1，然后才能安装 .NET Framework。
+- 在 Windows 7 系统上，.NET Framework 要求安装 Windows 7 SP1。 如果运行的是 Windows 7 系统，但尚未安装 Service Pack 1，则需要先安装 SP1，然后才能安装 .NET Framework。
 
 - Windows Preinstallation Environment (Windows PE) 上支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 Windows PE 上并非支持所有功能。
 
