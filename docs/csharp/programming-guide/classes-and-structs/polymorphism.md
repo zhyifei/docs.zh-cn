@@ -79,7 +79,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
   
- 在此情况下，如果在 D 中使用类型为 D 的变量调用 `DoWork``DoWork`，被调用的将是新的 。 如果使用类型为 C、B 或 A 的变量访问 D 的实例，对 `DoWork``DoWork` 的调用将遵循虚拟继承的规则，即把这些调用传送到类 C 的  实现。  
+ 在此情况下，如果在 D 中使用类型为 D 的变量调用 `DoWork`，被调用的将是新的 。 如果使用类型为 C、B 或 A 的变量访问 D 的实例，对 `DoWork` 的调用将遵循虚拟继承的规则，即把这些调用传送到类 C 的  实现。  
   
 ### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>从派生类访问基类虚拟成员  
  已替换或重写某个方法或属性的派生类仍然可以使用基关键字访问基类的该方法或属性。 以下代码提供了一个示例：  
