@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -80,7 +83,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="official-artifacts"></a>正式项目
 
-正式规范是一组用于定义标准中包含的 API 的 .cs 文件。 [dotnet/standard 存储库](https://github.com/dotnet/corefx/tree/master/src)中的 [Ref 目录](https://github.com/dotnet/standard/tree/master/netstandard/ref)定义了 .NET Standard API。
+正式规范是一组用于定义标准中包含的 API 的 .cs 文件。 [dotnet/standard 存储库](https://github.com/dotnet/standard)中的 [Ref 目录](https://github.com/dotnet/standard/tree/master/netstandard/ref)定义了 .NET Standard API。
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 元包（[源代码](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)）描述用于部分定义一个或多个 .NET Standard 版本的库集。
 
@@ -98,7 +101,7 @@ ms.lasthandoff: 10/18/2017
 
 .NET Standard 引用程序集的主要分发载体是 [NuGet 包](../core/packages.md)。 实现将以适用于每个 .NET 实现的各种方式提供。
 
-NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位“.NET Standard”框架。 可以使用 `netstandard` [精简 TFM](frameworks.md)（例如 `netstandard1.4`）来指定 .NET Standard 框架作为目标。 如果构建的库将在多个运行时中运行，就应将此框架作为目标。 
+NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位“.NET Standard”框架。 可以使用 `netstandard` [精简 TFM](frameworks.md)（例如 `netstandard1.4`）来指定 .NET Standard 框架作为目标。 如果构建的库将用于在多个运行时上运行，就应将此框架作为目标。 
 
 `NETStandard.Library` 元包引用定义 .NET Standard 的一整套 NuGet 包。  要指定 `netstandard` 作为目标，最常见的方法是引用此元包。 它描述并提供了对大约 40 个 .NET 库及定义 .Net Standard 的相关 API 的访问权限。 可以引用以 `netstandard` 为目标的其他包来使用其他 API。 
 
@@ -148,5 +151,5 @@ NuGet 包面向一个或多个[框架](frameworks.md)。 .NET Standard 包定位
 
 可以结合使用 `netstandard` 框架和 NETStandard.Library 元包来[构建.NET 标准库](../core/tutorials/libraries.md)。 可以查看[使用 .NET Core 工具定位 .NET Standard](../core/packages.md) 的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)

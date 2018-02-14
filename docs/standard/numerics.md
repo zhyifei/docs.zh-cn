@@ -17,15 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6090f198815f1149e212c7a57b40187ded9264f4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework 中的数字
 .NET Framework 支持标准数值整型和浮点型基元、<xref:System.Numerics.BigInteger>（没有理论上限或下限的整型类型）、<xref:System.Numerics.Complex>（表示复杂数字的类型）和 <xref:System.Numerics> 命名空间中一组启用了 SIMD 的矢量类型。  
@@ -84,5 +87,5 @@ ms.lasthandoff: 10/18/2017
   
  也可以将 SIMD 作为 [NuGet 包](http://www.nuget.org/packages/System.Numerics.Vectors)进行下载。  NuGET 包还包含泛型 <xref:System.Numerics.Vector%601> 结构，以便你可以创建任何基元数值类型的矢量。 （基元数值类型包括 <xref:System> 命名空间中的所有数值类型，<xref:System.Decimal> 除外。）此外，<xref:System.Numerics.Vector%601> 结构还提供可在使用矢量时调用的简便方法库。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [应用程序要点](../../docs/standard/application-essentials.md)

@@ -21,11 +21,14 @@ ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc103d1fc853cd98f899e75d08dbfaf4dd9230d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="common-language-runtime-clr"></a>公共语言运行时 (CLR)
 .NET Framework 提供了一个称为公共语言运行时的运行时环境，它运行代码并提供使开发过程更轻松的服务。  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/18/2017
  公共语言运行时的功能通过编译器和工具公开，你可以编写利用此托管执行环境的代码。 使用基于公共语言运行时的语言编译器开发的代码称为托管代码；托管代码具有许多优点，例如：跨语言集成、跨语言异常处理、增强的安全性、版本控制和部署支持、简化的组件交互模型、调试和分析服务等。  
   
 > [!NOTE]
->  编译器和工具可以产生公共语言运行时可以使用的输出，因为类型系统、元数据格式和该运行时环境（虚拟执行系统）都由公共标准（ECMA 公共语言基础结构规范）定义。 有关详细信息，请参阅 [ECMA C# 和公共语言基础结构规范](http://go.microsoft.com/fwlink/?LinkId=99212)。  
+>  编译器和工具可以产生公共语言运行时可以使用的输出，因为类型系统、元数据格式和该运行时环境（虚拟执行系统）都由公共标准（ECMA 公共语言基础结构规范）定义。 有关详细信息，请参阅 [ECMA C# 和公共语言基础结构规范](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)。  
   
  若要使公共语言运行时能够向托管代码提供服务，语言编译器必须生成一些元数据来描述代码中的类型、成员和引用。 元数据与代码一起存储；每个可加载的公共语言运行时可迁移执行 (PE) 文件都包含元数据。 公共语言运行时使用元数据来完成以下任务：查找和加载类，在内存中安排实例，解析方法调用，生成本机代码，强制安全性，以及设置运行时上下文边界。  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 10/18/2017
 |4|4|  
 |4.5（包括 4.5.1 和 4.5.2）|4|  
 |4.6（包括 4.6.1 和 4.6.2）|4|
-|4.7 （包括 4.7.1）|4|  
+|4.7（包括 4.7.1）|4|  
   
 ## <a name="related-topics"></a>相关主题  
   
@@ -84,8 +87,8 @@ ms.lasthandoff: 10/18/2017
 |-----------|-----------------|  
 |[托管执行过程](../../docs/standard/managed-execution-process.md)|描述使用公共语言运行时所需要的步骤。|  
 |[自动内存管理](../../docs/standard/automatic-memory-management.md)|描述垃圾回收器如何分配和释放内存。|  
-|[NIB：.NET Framework 概述](http://msdn.microsoft.com/en-us/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|描述关键的 .NET Framework 概念，例如通用类型系统、跨语言互操作性、托管执行、应用程序域和程序集。|  
+|[NIB：.NET Framework 概述](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|描述关键的 .NET Framework 概念，例如通用类型系统、跨语言互操作性、托管执行、应用程序域和程序集。|  
 |[常规类型系统](../../docs/standard/base-types/common-type-system.md)|描述在运行时中如何声明、使用和管理类型以支持跨语言集成。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [版本和依赖关系](../../docs/framework/migration-guide/versions-and-dependencies.md)

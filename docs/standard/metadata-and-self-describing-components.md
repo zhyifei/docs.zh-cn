@@ -21,20 +21,23 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac08dcf305e8cc0c1a3be3b8300ed9981e7d84d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>元数据和自描述组件
 在过去，以一种语言编写的软件组件（.exe 或 .dll）不能方便地使用以另一种语言编写的软件组件。 在这个问题的解决上，COM 向前迈进了一步。 .NET Framework 允许编译器向所有的模块和程序集发出附加的说明性信息，从而使组件互用更加简单。 这种叫做“元数据”的信息有助于组件无缝交互。  
   
- 元数据是一种二进制信息，用以对存储在公共语言运行时可迁移可执行文件 (PE) 文件或存储在内存中的程序进行描述。 将您的代码编译为 PE 文件时，便会将元数据插入到该文件的一部分中，而将代码转换为 Microsoft 中间语言 (MSIL) 并将其插入到该文件的另一部分中。 在模块或程序集中定义和引用的每个类型和成员都将在元数据中进行说明。 当执行代码时，运行时将元数据加载到内存中，并引用它来发现有关代码的类、成员、继承等信息。  
+ 元数据是一种二进制信息，用以对存储在公共语言运行时可迁移可执行文件 (PE) 文件或存储在内存中的程序进行描述。 将你的代码编译为 PE 文件时，便会将元数据插入到该文件的一部分中，而将代码转换为 Microsoft 中间语言 (MSIL) 并将其插入到该文件的另一部分中。 在模块或程序集中定义和引用的每个类型和成员都将在元数据中进行说明。 当执行代码时，运行时将元数据加载到内存中，并引用它来发现有关代码的类、成员、继承等信息。  
   
  元数据以非特定语言的方式描述在代码中定义的每一类型和成员。 元数据存储以下信息：  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 10/18/2017
   
 -   语言互用性和更简单的基于组件的设计。  
   
-     元数据提供所有必需的有关已编译代码的信息，以供您从用不同语言编写的 PE 文件中继承类。 您可以创建用任何托管语言（任何面向公共语言运行时的语言）编写的任何类的实例，而不用担心显式封送处理或使用自定义的互用代码。  
+     元数据提供所有必需的有关已编译代码的信息，以供你从用不同语言编写的 PE 文件中继承类。 您可以创建用任何托管语言（任何面向公共语言运行时的语言）编写的任何类的实例，而不用担心显式封送处理或使用自定义的互用代码。  
   
 -   特性。  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 10/18/2017
 |----------------|----------------------------|  
 |PE 标头|PE 文件主要部分的索引和入口点的地址。<br /><br /> 运行时使用该信息确定该文件为 PE 文件并确定当将程序加载到内存时执行从何处开始。|  
 |MSIL 指令|组成代码的 Microsoft 中间语言指令 (MSIL)。 许多 MSIL 指令带有元数据标记。|  
-|元数据|元数据表和堆。 运行时使用该部分记录您的代码中每个类型和成员的信息。 本部分还包括自定义特性和安全性信息。|  
+|元数据|元数据表和堆。 运行时使用该部分记录你的代码中每个类型和成员的信息。 本部分还包括自定义特性和安全性信息。|  
   
 ## <a name="run-time-use-of-metadata"></a>元数据在运行时的作用  
  要更好地理解元数据和它在公共语言运行时中的作用，构造一个简单的程序并说明元数据如何影响它的运行时情况可能很有帮助。 下面的代码示例显示名为 `MyApp` 的类中的两种方法。 `Main` 方法是程序入口点，而 `Add` 方法只返回两个整数参数的和。  
@@ -161,7 +164,7 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
   
  下表显示了说明  **方法的元数据标记所引用的 MethodDef**`Add` 表的一部分。 虽然程序集中存在其他元数据表并具有它们自己唯一的值，但这里只讨论该表。  
   
-|行|相对虚拟地址 (RVA)|ImplFlags|Flags|名称<br /><br /> （指向字符串堆。）|Signature（指向 Blob 堆）|  
+|行|相对虚拟地址 (RVA)|ImplFlags|Flags|name<br /><br /> （指向字符串堆。）|Signature（指向 Blob 堆）|  
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|  
 |1|0x00002050|IL<br /><br /> Managed|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor（构造函数）||  
 |2|0x00002058|IL<br /><br /> Managed|Public<br /><br /> Static<br /><br /> ReuseSlot|Main|String|  

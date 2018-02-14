@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9dca33f01c119c185717efa0666146191503f577
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -124,7 +127,7 @@ LINQ 是适用于 C# 和 VB 的强大功能集，可用于编写简单的声明�
 
 每个操作系统都有一个应用程序编程接口 (API)，用于提供系统服务。 .NET 提供多种方式来调用这些 API。
 
-实现本机互操作性的主要方式是通过“平台调用”（简称 P/Invoke），Linux 和 Windows 平台均支持这种方式。 实现本机互操作性的另一种方式称为“COM 互操作”（仅限 Windows），用于在托管代码中操作 [COM 组件](https://msdn.microsoft.com/library/bwa2bx93.aspx)。 这种方式建立在 P/Invoke 基础结构之上，但工作原理略有不同。
+实现本机互操作性的主要方式是通过“平台调用”（简称 P/Invoke），Linux 和 Windows 平台均支持这种方式。 实现本机互操作性的另一种方式称为“COM 互操作”（仅限 Windows），用于在托管代码中操作 [COM 组件](/cpp/atl/introduction-to-com)。 这种方式建立在 P/Invoke 基础结构之上，但工作原理略有不同。
 
 针对 Java 和 Objective-C 的 Mono（以及 Xamarin）互操作性支持基本上以类似的方式构建，也就是说，它们运用相同的原理。
 

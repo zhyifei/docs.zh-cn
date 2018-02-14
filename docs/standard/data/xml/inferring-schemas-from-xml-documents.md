@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aa4d6d2758392fc48969b08db30b91bdfe0eeaa1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8085ecb86018460f14a2532b55907472988b67b2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>从 XML 文档推断架构
 此主题描述如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 类从 XML 文档的结构推断 XML 架构定义语言 (XSD) 架构。  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="schemas-that-cannot-be-refined"></a>无法精选的架构  
  如果给定要精选的类型，有些 W3C XML 架构构造是 XML 架构定义语言 (XSD) 架构的 <xref:System.Xml.Schema.XmlSchemaInference> 过程无法处理的，并会引发异常。 例如顶级复合器不是序列的复杂类型。 在架构对象模型 (SOM) 中，这相对于 <xref:System.Xml.Schema.XmlSchemaComplexType>，它的 <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> 属性不是 <xref:System.Xml.Schema.XmlSchemaSequence> 的实例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Schema.XmlSchemaInference>  
  [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  [推断 XML 架构](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  

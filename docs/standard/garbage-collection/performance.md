@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="garbage-collection-and-performance"></a>垃圾回收和性能
 <a name="top"></a> 本主题介绍与垃圾回收和内存使用情况相关的问题。 它解决了关于托管堆的问题，并解释了如何最小化垃圾回收对应用程序的影响。 每个问题具有访问可用来调查问题的过程的链接。  
@@ -45,7 +48,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>用 SOS 调试  
- 可以使用 [Windows 调试器 (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) 检查托管堆上的对象。  
+ 可以使用 [Windows 调试器 (WinDbg)](/windows-hardware/drivers/debugger/index) 检查托管堆上的对象。  
   
  若要安装 WinDbg，请从 [WDK 和开发人员工具网站](http://go.microsoft.com/fwlink/?LinkID=103787)安装 Windows 调试工具。  
   
@@ -330,7 +333,7 @@ ms.lasthandoff: 10/18/2017
   
      在此示例中，最大可用区域的大小大约为 24000 KB（按十六进制形式则为 3A980）。 此区域比垃圾回收器对分段所需的大小要小得多。  
   
-     - 或 -  
+     或  
   
 -   使用 **vmstat** 命令：  
   
@@ -422,7 +425,7 @@ ms.lasthandoff: 10/18/2017
   
      如果托管堆很大，则 **dumpheap** 可能需要一段时间才能完成。  
   
-     你可以从输出的最后几行开始分析，因为它们列出了占用了大多数空间的对象。 例如：  
+     你可以从输出的最后几行开始分析，因为它们列出了占用了大多数空间的对象。 例如:  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -785,5 +788,5 @@ ms.lasthandoff: 10/18/2017
   
      如果 `% Time in GC` 值在与处理时间同时达到峰值，则垃圾回收将造成 CPU 使用率过高。 否则，配置应用程序，以查找发生使用率过高的位置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [垃圾回收](../../../docs/standard/garbage-collection/index.md)

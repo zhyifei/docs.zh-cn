@@ -13,11 +13,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: ed48191ee397bb5f892a7afba6dfbfa2d06e1045
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0a7a37b1c8eed81866035dc6fb55db89391f25aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/18/2017
     
     * [类型转换](#type-conversion)
     
-    * [阵列](#arrays)
+    * [数组](#arrays)
     
     * [接口](#interfaces)
     
@@ -157,11 +160,11 @@ End Class
 
 下表中将列出 CLS 遵从性规则。 规则的文本摘自 [ECMA-335 标准：公共语言基础结构](http://www.ecma-international.org/publications/standards/Ecma-335.htm)（版权所有 2012，Ecma International）。 有关这些规则的详细信息，请参阅以下各节。 
 
-类别 | 请参阅 | 规则 | 规则编号
+类别 | 查看 | 规则 | 规则编号
 -------- | --- | ---- | -----------
 可访问性 | [成员可访问性](#member-accessibility) | 重写继承的方法时，可访问性应不会更改（重写一个继承自其他具有可访问性 `family-or-assembly` 的程序集的方法除外）。 在此情况下，重写应具有可访问性 `family`。 | 10
 可访问性 | [成员可访问性](#member-accessibility) | 类型和成员的可见性和可访问性应是这样的：只要任何成员是可见的且可访问的，则该成员签名中的类型应是可见且可访问的。 例如，在其程序集外部可见的公共方法不应具有其类型仅在程序集内可见的参数。 只要任何成员是可见且可访问的，则构成该成员签名中使用的实例化泛型类型的类型应是可见且可访问的。 例如，一个在其程序集外部可见的成员签名中出现的实例化泛型类型不应具有其类型仅在程序集内可见的泛型实参。 | 12
-阵列 | [阵列](#arrays) | 数组应具有符合 CLS 的类型的元素，且数组的所有维度的下限应为零。 各重载间只需区别：项是数组还是数组的元素类型。 当重载基于两个或更多数组类型时，元素类型应为命名类型。 | 16
+数组 | [数组](#arrays) | 数组应具有符合 CLS 的类型的元素，且数组的所有维度的下限应为零。 各重载间只需区别：项是数组还是数组的元素类型。 当重载基于两个或更多数组类型时，元素类型应为命名类型。 | 16
 特性 | [特性](#attributes) | 特性应为 [System.Attribute](xref:System.Attribute) 类型或继承自该类型。 | 41
 特性 | [特性](#attributes) | CLS 只允许自定义特性编码的子集。 这些编码中仅应显示的类型（请参阅第 IV 部分）：[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64)、[System.Single](xref:System.Single)、[System.Double](xref:System.Double) 以及基于符合 CLS 的基整数类型的任何枚举类型。 | 34
 特性 | [特性](#attributes) | CLS 不允许公开可见的所需修饰符（`modreq`，请参阅第 II 部分)，但允许其不了解的可选修饰符（`modopt`，请参阅第 II 部分）。 | 35

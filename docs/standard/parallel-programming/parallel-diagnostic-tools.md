@@ -8,17 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: parallel programming, debugging and profiling tools
+helpviewer_keywords:
+- parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ad6875d4937ab0ee68dcb9c6d6f51d079851cdc5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4ed0b3991b08eceb950aa1a3aa1704529700feb3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parallel-diagnostic-tools"></a>并行诊断工具
 [!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] 为调试和分析多线程应用程序提供了广泛的支持。  
@@ -35,5 +39,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="profiling"></a>分析  
  可以利用“并发可视化工具”报告视图直观显示并行程序中的线程如何彼此进行交互，以及如何与系统上其他进程中的线程进行交互。 有关详细信息，请参阅[并发可视化工具](/visualstudio/profiling/concurrency-visualizer)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并行编程](../../../docs/standard/parallel-programming/index.md)
