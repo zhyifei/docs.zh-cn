@@ -1,4 +1,4 @@
-# [扩展 WCF](extending-wcf.md)
+# [扩展 WCF](index.md)
 ## [扩展 ServiceHost 和服务模块层](extending-servicehost-and-the-service-model-layer.md)
 ### [扩展客户端](extending-clients.md)
 #### [如何：检查或修改客户端的消息](how-to-inspect-or-modify-messages-on-the-client.md)
