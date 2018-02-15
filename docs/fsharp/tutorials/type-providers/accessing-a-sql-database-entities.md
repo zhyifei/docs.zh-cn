@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>演练：使用类型提供程序和实体访问 SQL 数据库
 
@@ -45,7 +45,7 @@ API 参考链接将转到 MSDN。  Docs.microsoft.com API 参考尚未完成。
 <br />
 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 你必须能够访问正在运行可从中创建数据库的 SQL Server 的服务器才能完成这些步骤。
 
 ## <a name="create-the-school-database"></a>创建 School 数据库
@@ -66,7 +66,7 @@ API 参考链接将转到 MSDN。  Docs.microsoft.com API 参考尚未完成。
 3. 打开新连接节点的快捷菜单，然后选择**新查询**。
 <br />
 
-4. 打开[创建 School 示例数据库](http://go.microsoft.com/fwlink/?LinkID=237278)上的 Microsoft 网站，然后复制和粘贴数据库脚本创建学生数据库到编辑器窗口。
+4. 打开[创建 School 示例数据库](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx)上的 Microsoft 网站，然后复制和粘贴数据库脚本创建的 School 数据库到编辑器窗口。
 <br />
 
 
@@ -172,7 +172,7 @@ query {
 ```
 
 ## <a name="updating-the-database"></a>更新数据库
-若要更新数据库，请使用 Entity Framework 类和方法。 你可以将两种类型的数据上下文与 SQLEntityConnection 类型提供程序一起使用。 首先，`ServiceTypes.SimpleDataContextTypes.EntityContainer` 是简化的数据上下文，它只包括表示数据库表和列的提供的属性。 其次，完整数据上下文是 Entity Framework 类 `System.Data.Objects.ObjectContext` 的实例，其中包含用于将行添加到数据库的 `System.Data.Objects.ObjectContext.AddObject(System.String,System.Object)` 方法。 Entity Framework 识别表及其相互关系，因此它会强制实现数据库一致性。
+若要更新数据库，请使用 Entity Framework 类和方法。 你可以将两种类型的数据上下文与 SQLEntityConnection 类型提供程序一起使用。 首先，`ServiceTypes.SimpleDataContextTypes.EntityContainer` 是简化的数据上下文，它只包括表示数据库表和列的提供的属性。 其次，完整数据上下文是 Entity Framework 类 `System.Data.Objects.ObjectContext` 的实例，其中包含用于将行添加到数据库的 `System.Data.Objects.ObjectContext.AddObject(System.String,System.Object)` 方法。 实体框架识别表及其相互关系，因此它会强制实现数据库一致性。
 
 
 #### <a name="to-update-the-database"></a>更新数据库
@@ -239,15 +239,10 @@ deleteInstructor("Parker", "Darren")
 查看中可用的查询运算符，了解其他查询选项[查询表达式](../../language-reference/query-expressions.md)，并还查看[ADO.NET 实体框架](https://msdn.microsoft.com/library/bb399572)以了解哪些功能可供你时使用此类型提供程序。
 
 
-## <a name="see-also"></a>另请参阅
-[类型提供程序](index.md)
-
-[SqlEntityConnection 类型提供程序](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[演练： 根据 EDMX 架构文件生成 F # 类型](generating-fsharp-types-from-edmx.md)
-
-[ADO.NET 实体框架](https://msdn.microsoft.com/library/bb399572)
-
-[.edmx 文件概述](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[EDM 生成器 &#40;EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+## <a name="see-also"></a>请参阅
+[类型提供程序](index.md)  
+[SqlEntityConnection 类型提供程序](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[演练： 根据 EDMX 架构文件生成 F # 类型](generating-fsharp-types-from-edmx.md)  
+[ADO.NET 实体框架](https://msdn.microsoft.com/library/bb399572)  
+[.edmx 文件概述](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[EDM 生成器 &#40;EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)  

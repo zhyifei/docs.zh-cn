@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: f5ebdb3f3b50996a397c8420b773178493744d70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ec4652bab591dedc687d22c617b9466bc351f10
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>使用 F # 的 Azure 队列存储入门 #
 
@@ -26,7 +26,7 @@ Azure 队列存储提供了云应用程序组件之间的消息传递。 在设�
 
 有关队列存储的概念概述，请参阅[队列存储.NET 指南](/azure/storage/storage-dotnet-how-to-use-queues)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 若要使用本指南，你必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)。
 此外需要为此帐户存储访问密钥。
@@ -142,8 +142,8 @@ Azure 队列存储提供了云应用程序组件之间的消息传递。 在设�
 
 现在，你已了解队列存储的基础知识，单击下面的链接以了解更复杂的存储任务。
 
-- [存储客户端库.NET 参考](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [用于.NET 的 azure 存储 Api](/dotnet/api/overview/azure/storage)
 - [Azure 存储类型提供程序](https://github.com/fsprojects/AzureStorageTypeProvider)
 - [Azure 存储团队博客](http://blogs.msdn.com/b/windowsazurestorage/)
-- [配置连接字符串](http://msdn.microsoft.com/library/azure/ee758697.aspx)
-- [REST API 参考](http://msdn.microsoft.com/library/azure/dd179355)
+- [配置 Azure 存储连接字符串](/azure/storage/common/storage-configure-connection-string)
+- [Azure 存储服务 REST API 参考](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

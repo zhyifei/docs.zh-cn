@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +14,20 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 2c84f25dfd5d3066f9c5d0b62bc0b28bc98c283d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="extending-wcf"></a>扩展 WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使您能够修改和扩展运行时组件，以便精确控制和扩展基于服务的应用程序。 本节中的主题深入探讨了有关扩展性体系结构的内容。 有关基本编程的详细信息，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以修改和扩展运行的时组件，以便能够准确地控制和扩展基于服务的应用程序。 本节中的主题深入探讨了有关扩展性体系结构的内容。 有关基本编程的详细信息，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [扩展 ServiceHost 和服务模块层](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  

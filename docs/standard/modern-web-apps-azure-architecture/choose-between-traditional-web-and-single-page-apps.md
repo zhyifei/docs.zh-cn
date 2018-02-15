@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>传统 Web 应用程序和单页面应用程序 (Spa) 之间进行选择
 
 > "Atwood 的法律： 任何应用程序可以编写在 JavaScript 中，将最终用 JavaScript 编写。"  
-> _\-Jeff Atwood_
+> _\- Jeff Atwood_
 
 ## <a name="summary"></a>摘要
 
@@ -85,12 +88,12 @@ Spa 可以支持不需要重新加载该页面，因为用户执行的操作或�
 
 以下的决策表总结了一些传统 web 应用程序和 SPA 之间进行选择时要考虑的基本因素。
 
-  | **因素** | **传统 Web 应用** | **单页面应用程序** |
+  | **Factor** | **传统 Web 应用** | **单页面应用程序** |
   |---|---|---|
-  | 所需的团队熟悉 JavaScript/TypeScript | **最小** | **必需** |
-  | 不带脚本的支持浏览器 | **支持** | **不支持** |
-  | 最小的客户端应用程序行为 | **适合** | **太过严厉** |
-  | 丰富而复杂的用户界面要求 | **限制** | **适合** |
+  | 所需的团队熟悉 JavaScript/TypeScript | 最小 | **必需** |
+  | 不带脚本的支持浏览器 | **支持** | 不支持 |
+  | 最小的客户端应用程序行为 | **Well-Suited** | **太过严厉** |
+  | 丰富而复杂的用户界面要求 | **限制** | **Well-Suited** |
 
 >[!div class="step-by-step"]
 [以前](现代-web 的应用程序-characteristics.md)[下一步](architectural-principles.md)

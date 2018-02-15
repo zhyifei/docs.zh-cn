@@ -1,15 +1,18 @@
 ---
 title: "在生产环境中运行由和基于微服务的应用程序"
-description: "使用 Microsoft 平台和工具的 Docker 容器化应用程序生命周期"
+description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: e7a2788098aa731699cbb201c7177e7578907673
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0d7611d07c9995984269e3f7b071154d9b861367
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生产环境中运行由和基于微服务的应用程序
 

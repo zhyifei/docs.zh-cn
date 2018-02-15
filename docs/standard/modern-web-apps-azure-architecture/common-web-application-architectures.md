@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: b6236cfab290211f930d6a1987075abeade4fd6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 #<a name="common-web-application-architectures"></a>常见的 Web 应用程序体系结构
 
@@ -169,10 +172,10 @@ ms.lasthandoff: 11/21/2017
 ASP.NET 核心 MVC 应用程序的用户界面层将对应用程序的入口点，将 ASP.NET 核心 MVC 项目。 此项目应引用应用程序核心项目中，并且其类型应与严格通过在应用程序核心中定义的接口的基础结构进行交互。 没有直接实例化 （或静态调用） 基础结构层类型应允许 UI 层中。
 
 > ### <a name="ui-layer-types"></a>UI 层类型
-> -   控制器
+> -   Controllers
 > -   筛选器
 > -   视图
-> -   Viewmodel
+> -   ViewModels
 > -   启动
 
 Startup 类负责用于配置应用程序，并实现类型绑定到接口，允许在运行时正常工作的依赖关系注入。

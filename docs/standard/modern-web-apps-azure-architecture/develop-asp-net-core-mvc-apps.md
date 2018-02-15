@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 54e7ed6fff9ac709e411d0ac1e345c63fd753201
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用程序
 
@@ -36,7 +39,7 @@ app.UseMvc(routes =>;
 
 在此示例中，名为"default"的路由具有已添加到路由表。 它定义带有占位符的路由模板*控制器*，*操作*，和*id*。控制器和操作占位符具有指定的默认值 ("主页"和"索引"，分别)，和是可选的 id 占位符 (借助于"？"应用于它)。 约定定义此处请求的第一部分应对应的状态为控制器上，与操作的第二个部分的名称，然后如有必要第三部分将表示一个 id 参数。 传统路由通常在一个位置对于应用程序，如中定义的启动类中的配置方法。
 
-属性的路由将直接应用到控制器和操作而不是全局范围内指定。 这具有的优势是使它们更容易可见时要查看特定的方法，但意思路由的信息将不会在应用程序中的一个位置。 使用属性的路由，你可以轻松地指定为某个给定操作的多个路由，以及组合控制器和操作之间的路由。 例如: 
+属性的路由将直接应用到控制器和操作而不是全局范围内指定。 这具有的优势是使它们更容易可见时要查看特定的方法，但意思路由的信息将不会在应用程序中的一个位置。 使用属性的路由，你可以轻松地指定为某个给定操作的多个路由，以及组合控制器和操作之间的路由。 例如:
 
 ```csharp
 [Route("Home")]
@@ -74,7 +77,7 @@ public class ProductsController : Controller
 > - **模型绑定**https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
 > - **模型验证**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **筛选器**https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **Filters** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>使用依赖关系
 
@@ -204,11 +207,11 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET 核心 MVC 还使用约定来找到视图。 你可以重写它使用自定义约定，以便视图将位于功能文件夹 （使用 FeatureConvention，上面提供的功能名称）。 你可以了解有关这种方法的详细信息和 MSDN 文章中，从下载的工作示例[ASP.NET 核心 MVC 的功能切片](https://msdn.microsoft.com/magazine/mt763233.aspx)。
 
-### <a name="cross-cutting-concerns"></a>跨领域问题
+### <a name="cross-cutting-concerns"></a>横切关注点
 
 随着应用程序的增长，则它变得越来越重要抽取跨领域问题，以消除重复和保持一致性。 在 ASP.NET Core 应用程序中的跨领域问题的一些示例，身份验证、 模型验证规则、 输出缓存，日期和错误处理，但是有许多其他。 ASP.NET 核心 MVC[筛选器](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters)让你运行代码之前或之后在请求处理管道中的某些步骤。 例如，筛选器可以运行之前和之后模型绑定之前, 和之后的操作，或之前和之后的操作的结果。 授权筛选器还可用于控制对管道的其余部分的访问。 图 7-2 显示如何执行流传递筛选器，如果请求配置。
 
-![通过授权筛选器、 资源筛选器、 模型绑定，操作筛选器、 操作执行和操作结果转换、 异常筛选器，结果筛选器和结果执行处理该请求。 在路上，请求仅由处理结果筛选器和资源筛选器才会发送到客户端的响应。](./media/image7-2.png)
+![请求通过授权筛选器、资源筛选器、模型绑定、操作筛选器、操作执行和操作结果转换、异常筛选器、结果筛选器和结果执行进行处理。 返回时，请求仅由结果筛选器和资源筛选器进行处理，变成发送到客户端的响应。](./media/image7-2.png)
 
 图 7-2 请求通过筛选器和请求管道的执行。
 
@@ -453,7 +456,7 @@ public class Program
 > ### <a name="references--client-communication"></a>引用 – 客户端通信
 > - **ASP.NET 核心 SignalR**  
 > <https://github.com/aspnet/SignalR>
-> - **WebSocket 管理器**  
+> - **WebSocket Manager**  
 > https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>域驱动的设计 – 应将其应用？

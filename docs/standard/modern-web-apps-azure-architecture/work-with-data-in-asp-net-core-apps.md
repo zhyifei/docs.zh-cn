@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: bcb8f7bbfa83db9c86cd1278a89750b9f02061d9
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 应用中的数据
 
@@ -28,7 +31,7 @@ Tim Berners Lee
 
 若要使用 SQL Server 数据库的 EF 核心，运行以下 dotnet CLI 命令：
 
-dotnet 添加包 Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
 若要添加 InMemory 数据源，用于测试的支持：
 
@@ -438,4 +441,4 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 >[!div class="step-by-step"]
-[以前](develop-asp-net-core-mvc-apps.md) [下一步] (test-asp-net-core-mvc-apps.md)
+[Previous] (develop-asp-net-core-mvc-apps.md) [Next] (test-asp-net-core-mvc-apps.md)

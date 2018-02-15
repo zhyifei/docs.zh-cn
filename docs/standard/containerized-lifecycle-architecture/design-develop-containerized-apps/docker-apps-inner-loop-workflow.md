@@ -1,15 +1,18 @@
 ---
 title: "对于 Docker 应用程序的内部循环开发工作流"
-description: "使用 Microsoft 平台和工具的 Docker 容器化应用程序生命周期"
+description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 30c10b2407ab643e04eb44c00ddf4a89d369a025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
+ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>对于 Docker 应用程序的内部循环开发工作流
 
@@ -255,8 +258,8 @@ Visual Studio Code 支持调试 Docker，如果你使用 Node.js 和其他平台
 
 你还可以调试在 Docker 中的.NET Core 容器时使用 Visual Studio 中下, 一节中所述。
 
-**详细信息：** 若要了解有关调试 Node.js Docker 容器的详细信息，请转到<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/\ 用户\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
+**详细信息：** 若要了解有关调试 Node.js Docker 容器的详细信息，请转到<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/ \用户\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
 
 
 >[!div class="step-by-step"]
-[以前](docker-应用程序的开发-environment.md) [下一步] (visual-studio 的工具的对于-docker.md)
+[Previous] (docker-apps-development-environment.md) [Next] (visual-studio-tools-for-docker.md)

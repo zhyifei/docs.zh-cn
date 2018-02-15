@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: bf833a96809768011f26df35332ab2372ced2aaf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e003f537c6f0f85b3b0ba932655ae2a54c980bc5
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-table-storage-using-f"></a>要开始使用 Azure 表存储使用 F # #
 
@@ -28,7 +28,7 @@ Azure 表存储是将结构化的 NoSQL 数据存储在云中的服务。 表存
 
 有关表存储的概念概述，请参阅[表存储.NET 指南](/azure/storage/storage-dotnet-how-to-use-tables)
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 若要使用本指南，你必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)。
 此外需要为此帐户存储访问密钥。
@@ -186,8 +186,8 @@ Azure 表存储是将结构化的 NoSQL 数据存储在云中的服务。 表存
 
 现在，你已了解表存储的基础知识，单击下面的链接以了解更复杂的存储任务：
 
-- [存储客户端库.NET 参考](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [用于.NET 的 azure 存储 Api](/dotnet/api/overview/azure/storage)
 - [Azure 存储类型提供程序](http://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure 存储团队博客](http://blogs.msdn.com/b/windowsazurestorage/)
-- [配置连接字符串](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [配置 Azure 存储连接字符串](/azure/storage/common/storage-configure-connection-string)
 - [在.NET 的 Azure 表存储入门](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)

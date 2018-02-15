@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 20524c8aa0e64fd40a1a4a6811063557f74074d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/29/2018
 ---
-#<a name="architectural-principles"></a>体系结构原则
+# <a name="architectural-principles"></a>体系结构原则
 
 > "如果生成器生成建筑物方式程序员编写程序，然后应运而生第一个 woodpecker 将销毁文明。"  
-> _\-Gerald Weinberg_
+> _\- Gerald Weinberg_
 
 ## <a name="summary"></a>摘要
 
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
 ![](./media/image4-1.png)
 
-**图 4-1。** 直接的依赖项关系图。
+**图 4-1**。 直接的依赖项关系图。
 
 应用的依赖项反向原则允许 A 调用 B 实现时，调用 B，在运行时，使它可以 a 的抽象方法，但的 B 依赖于接口控制由 A 在编译时 (因此，*反转*典型编译时依赖项）。 在运行时，控制程序执行流程保持不变，但接口简介意味着可以轻松插入这些接口的不同实施。
 
@@ -103,19 +106,19 @@ ms.lasthandoff: 11/21/2017
 至少，单独的 web 应用程序应尽量可与自身的业务模式，而不与其他应用程序共享一个数据库自己持久性存储区他们自己界限的上下文。 通过编程接口，而不是允许的业务逻辑的共享数据库，则会发生界限上下文之间的通信和事件才能置于响应发生的更改。 限定上下文映射限定密切微服务，它还理想情况下其自己单独的绑定上下文作为实现。
 
 > ### <a name="references--modern-web-applications"></a>引用 – 现代 Web 应用程序
-> - **分离问题**  
+> - 分离问题  
 > <http://deviq.com/separation-of-concerns/>
-> - **封装** <http://deviq.com/encapsulation/>
+> - **Encapsulation** <http://deviq.com/encapsulation/>
 > - **依赖项反向原则**  
 > <http://deviq.com/dependency-inversion-principle/>
-> - **显式依赖关系原则**  
+> - **Explicit Dependencies Principle**（显式依赖关系原则）  
 > <http://deviq.com/explicit-dependencies-principle/>
 > - **切勿重复**  
 > <http://deviq.com/don-t-repeat-yourself/>
-> - **持久性无感知**  
+> - 持久性无感知  
 > <http://deviq.com/persistence-ignorance/>
 > - **界限的上下文**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
-[以前](choose-between-traditional-web-and-single-page-apps.md) [下一步] (common-web-application-architectures.md)
+[以前](choose-between-traditional-web-and-single-page-apps.md) [下一步] (常见-web 的应用程序-architectures.md)

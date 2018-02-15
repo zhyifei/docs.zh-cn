@@ -4,11 +4,14 @@ description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |将
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 87aa05895857a425f11820a564f2a249c77f98e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>将现有的.NET 应用程序部署为 Windows 容器
 
@@ -92,14 +95,14 @@ Docker 容器 (为简单起见，*容器*) 可以本机 Linux 和 Windows 上运
 
 当映像名称添加到 Dockerfile 文件时，可以通过使用的标记，如下面的示例基于.NET Framework 的 Windows 容器映像中选择的操作系统和版本：
 
-> | **标记** | **系统和版本** |
+> | 标记 | **系统和版本** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x windowsservercore** | .NET framework 4.x 在 Windows Server Core 上 |
-> | **microsoft/aspnet:4.x windowsservercore** | .NET framework 4.x 使用其他 ASP.NET 自定义，在 Windows Server Core 上 |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x 在 Windows Server Core 上 |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x 使用其他 ASP.NET 自定义，在 Windows Server Core 上 |
 
 为.NET 核心 （适用于 Linux 和 Windows 跨平台），标记将如下所示：
 
-> | **标记** | **系统和版本**
+> | 标记 | **系统和版本**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET 核心 2.0 仅运行时在 Linux 上 |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET 核心 2.0 仅运行时在 Windows Nano Server 上 |

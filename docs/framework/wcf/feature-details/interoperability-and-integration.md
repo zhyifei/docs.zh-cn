@@ -5,27 +5,29 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58bb7f0b5d6e43f4e157bda2f7dff5ad7c57a6c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fcd6f8454f77cfd2fbd80ed0f77ce1549025a4d6
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="interoperability-and-integration"></a>互操作性和集成
 本节介绍与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的互操作性和集成。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Web 服务协议互操作性指南](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用于与支持名为 Web 服务规范的一组规范的 Web 服务进行互操作。 本主题列出了受支持的规范和支持这些规范的绑定。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成与支持的一组称为 Web 服务规范的规范的 Web 服务进行互操作。 本主题列出了受支持的规范和支持这些规范的绑定。  
   
  [与 COM+ 应用程序集成](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  讨论 COM+ 应用程序如何作为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行公开。  
@@ -61,4 +63,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>相关章节  
- [扩展 WCF](../../../../docs/framework/wcf/extending/extending-wcf.md)
+ [扩展 WCF](../../../../docs/framework/wcf/extending/index.md)

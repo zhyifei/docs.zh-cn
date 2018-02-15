@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f1026320114592c25bb5fd123bf92227b26b015
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 132cbc6c7c9ba7d8e6c29f477554fc7b3bbab469
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="guide-to-the-documentation"></a>文档指南
 本文提供有关 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 文档的指南。 建议从链接的文档开始，它们按照特定的兴趣和专业技术水平进行分组。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 -   如果您正在寻找有关特定的功能或功能的指导[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，请参阅下的主题[WCF 功能详细信息](../../../docs/framework/wcf/feature-details/index.md)。  
   
--   如果你想要扩展或自定义[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]以满足你的要求，请参阅[扩展 WCF](../../../docs/framework/wcf/extending/extending-wcf.md)。  
+-   如果你想要扩展或自定义[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]以满足你的要求，请参阅[扩展 WCF](../../../docs/framework/wcf/extending/index.md)。  
   
 -   有关有助于创建和调试工具[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]应用程序，请参阅[Windows Communication Foundation 工具](../../../docs/framework/wcf/tools.md)。  
   

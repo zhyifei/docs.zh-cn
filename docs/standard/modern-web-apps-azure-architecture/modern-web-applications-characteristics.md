@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>现代 Web 应用程序的特征
 
 > "… 正确设计功能附带经济地。 这种方法是棘手，但会继续成功。"  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 ## <a name="summary"></a>摘要
 
@@ -41,7 +44,7 @@ ASP.NET 核心进行了优化的云 （公有云、 私有云、 任何云），
 
 ## <a name="cross-platform"></a>跨平台
 
-ASP.NET 核心是跨平台，可以在 Linux 和 MacOS，以及 Windows 上运行。 这将打开开发和部署的与 ASP.NET Core 构建的应用程序的许多新选项。 Docker 容器，通常目前运行 Linux，可以承载 ASP.NET Core 应用程序，允许它们充分利用的好处[容器和微服务](../microservices-architecture)。
+ASP.NET 核心是跨平台，可以在 Linux 和 MacOS，以及 Windows 上运行。 这将打开开发和部署的与 ASP.NET Core 构建的应用程序的许多新选项。 Docker 容器，通常目前运行 Linux，可以承载 ASP.NET Core 应用程序，允许它们充分利用的好处[容器和微服务](../microservices-architecture/index.md)。
 
 ## <a name="modular-and-loosely-coupled"></a>模块化和松散耦合
 

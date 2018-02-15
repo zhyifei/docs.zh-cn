@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 92e26aff605d3bed89e388dd3616a2a9a3a96081
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>要开始使用 Azure Blob 存储使用 F # #
 
@@ -24,7 +24,7 @@ Azure Blob 存储是将非结构化数据作为对象/blob 存储在云中的服
 
 有关 blob 存储的概念概述，请参阅[blob 存储的.NET 指南](/azure/storage/storage-dotnet-how-to-use-blobs)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 若要使用本指南，你必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)。 你还需要为此帐户的存储访问密钥。
 
@@ -111,10 +111,10 @@ Azure Blob 存储支持块 blob 和页 blob。 在大多数情况下，块 blob 
 *photo1.jpg*
 *2015/architecture/description.txt*
 *2015/architecture/photo3.jpg*
-*2015年 /体系结构/photo4.jpg*
+*2015/architecture/photo4.jpg*
 *2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg* 
- *2016/architecture/description.txt*
+*2016/architecture/photo6.jpg*
+*2016/architecture/description.txt*
 *2016/photo7.jpg*
 
 当调用`ListBlobs`（如上面的示例中） 的容器上, 返回一个层次结构列表。 如果它包含`CloudBlobDirectory`和`CloudBlockBlob`对象，分别表示的目录和 blob 容器中的，然后生成的输出看起来类似于此：
@@ -242,12 +242,13 @@ Azure 存储空间支持在客户端和服务器上的 blob 数据进行加密�
 
 ### <a name="blob-storage-reference"></a>Blob 存储参考
 
-- [存储客户端库.NET 参考](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
-- [REST API 参考](http://msdn.microsoft.com/library/azure/dd179355)
+- [用于.NET 的 azure 存储 Api](/dotnet/api/overview/azure/storage)
+- [Azure 存储服务 REST API 参考](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
 
 ### <a name="related-guides"></a>相关参考线
 
 - [在 C# 中的 Azure Blob 存储入门](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
-- [使用 AzCopy 命令行实用程序传输数据](/azure/storage/storage-use-azcopy)
-- [配置连接字符串](http://msdn.microsoft.com/library/azure/ee758697.aspx)
+- [在 Windows 上传输数据的 AzCopy 命令行实用程序](/azure/storage/common/storage-use-azcopy)
+- [在 Linux 上传输数据的 AzCopy 命令行实用程序](/azure/storage/common/storage-use-azcopy-linux)
+- [配置 Azure 存储连接字符串](/azure/storage/common/storage-configure-connection-string)
 - [Azure 存储团队博客](http://blogs.msdn.com/b/windowsazurestorage/)

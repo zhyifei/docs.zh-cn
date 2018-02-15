@@ -1,15 +1,18 @@
 ---
 title: "使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)"
-description: "使用 Microsoft 平台和工具的 Docker 容器化应用程序生命周期"
+description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d7a24633f5857bc5b72ebab42020627c645f4302
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 717675170f19f18fb48c4cea3ddd15bcd9648d71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
 
@@ -71,4 +74,4 @@ Visual Studio Tools for Docker 提供一致的方法来开发和验证本地 Doc
 
 
 >[!div class="step-by-step"]
-[以前](docker-应用程序的内部的循环-workflow.md) [下一步] (set-up-windows-containers-with-powershell.md)
+[Previous] (docker-apps-inner-loop-workflow.md) [Next] (set-up-windows-containers-with-powershell.md)

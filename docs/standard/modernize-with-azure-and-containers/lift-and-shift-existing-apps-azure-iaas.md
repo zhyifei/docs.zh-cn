@@ -4,11 +4,14 @@ description: "更新现有的.NET 应用程序与 Azure 云和 Windows 容器。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 7f7715bb0ec323874271a7e9ce1c666e23e33b22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>提升和移动现有应用 Azure IaaS
 
@@ -84,9 +87,9 @@ Azure 迁移可保证你的工作负荷可以迁移对业务影响最小并按�
 
 -   **Azure 迁移数据表**
 
-    [https://aka.ms/azuremigration\_数据表](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   **Azure 迁移**
+-   **Azure Migrate**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 

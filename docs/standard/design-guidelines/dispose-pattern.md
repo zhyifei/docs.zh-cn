@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dispose-pattern"></a>释放模式
 所有程序执行过程中都获取一个或多个系统资源，如内存、 系统句柄或数据库连接。 开发人员必须是时使用此类系统资源，请小心，因为它们必须在已获取并使用后释放。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/23/2017
   
  遗憾的是，托管的内存是只是其中之一许多类型的系统资源。 非托管内存资源仍需要显式释放并且称为非托管资源。 GC 已专门不用于管理此类非托管的资源，这意味着用于管理非托管的资源的责任在于的开发人员的手中。  
   
- CLR 提供一些帮助中释放非托管的资源。 <xref:System.Object?displayProperty=nameWithType>声明虚拟方法<xref:System.Object.Finalize%2A>（也称为终结器），由 GC 之前调用对象的内存回收 GC 和可以重写以释放非托管的资源。 重写终结器的类型称为可终结的类型。  
+ CLR 提供一些帮助中释放非托管的资源。 <xref:System.Object?displayProperty=nameWithType> 声明虚拟方法<xref:System.Object.Finalize%2A>（也称为终结器），由 GC 之前调用对象的内存回收 GC 和可以重写以释放非托管的资源。 重写终结器的类型称为可终结的类型。  
   
  虽然在某些方案中清理有效终结器，但它们具有两个明显的缺点：  
   
@@ -95,7 +95,7 @@ public class DisposableResourceHolder : IDisposable {
   
  此外，本部分适用于使用未实现 Dispose 模式的基本类。 如果你从已实现的模式的类继承的只需重写`Dispose(bool)`方法以提供其他资源的清理逻辑。  
   
- **✓ 执行**声明受保护的虚拟 void`Dispose(bool disposing)`方法来集中所有逻辑与释放非托管的资源。  
+ **✓ 执行**声明`protected virtual void Dispose(bool disposing)`方法来集中所有逻辑与释放非托管的资源。  
   
  所有资源清理应该都出现在此方法。 此方法叫做从这两个终结器和`IDisposable.Dispose`方法。 参数将为 false 如果从中调用在终结器。 它应该用于确保在终止期间运行任何代码不能访问其他可终结的对象。 下一步的部分所述的实现终结器的详细信息。  
   
@@ -138,7 +138,7 @@ public class DisposableResourceHolder : IDisposable {
   
  **X 不**声明的任何重载`Dispose`以外的其他方法`Dispose()`和`Dispose(bool)`。  
   
- `Dispose`应考虑保留的字来帮助 codify 此模式并避免混淆之间实施者、 用户和编译器。 某些语言可能选择自动对于特定类型实现此模式。  
+ `Dispose` 应考虑保留的字来帮助 codify 此模式并避免混淆之间实施者、 用户和编译器。 某些语言可能选择自动对于特定类型实现此模式。  
   
  **✓ 执行**允许`Dispose(bool)`不止一次调用方法。 该方法可以选择在第一次调用后不执行任何操作。  
   

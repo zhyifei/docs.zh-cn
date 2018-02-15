@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 1084aee3d81a5df6ac99d6ec0e2ef647b4173c24
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-client-side-web-technologies"></a>常见的客户端 Web 技术
 
@@ -67,7 +70,7 @@ JavaScript 是已标准化 ECMAScript 语言规范中的动态、 解释型编�
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery vs SPA Framework
 
-| **因素** | **jQuery** | **角度**|
+| **Factor** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
 | 将 DOM 抽离 | **是** | **是** |
 | AJAX 支持 | **是** | **是** |
@@ -111,7 +114,7 @@ Microsoft 已开发一个引用应用程序中， [eShopOnContainers](http://aka
 
 响应的最重要功能之一是其使用虚拟的 dom。 虚拟 DOM 提供几个好处，包括 （虚拟 DOM 可以优化实际 DOM 中的哪些部分需要更新） 的性能和可测试性 （无需具有要测试响应和其虚拟 DOM 与其交互的浏览器） 的响应。
 
-响应还很少将它与 HTML 配合方式。 而不是使代码和标记 （具有可能显示在 HTML 特性中的 JavaScript 对引用），之间做出反应的严格分隔作为 JSX 添加其 JavaScript 代码中直接 HTML。 JSX 是可编译到纯 JavaScript HTML 类似的语法。 例如: 
+响应还很少将它与 HTML 配合方式。 而不是使代码和标记 （具有可能显示在 HTML 特性中的 JavaScript 对引用），之间做出反应的严格分隔作为 JSX 添加其 JavaScript 代码中直接 HTML。 JSX 是可编译到纯 JavaScript HTML 类似的语法。 例如:
 
 ```js
 <ul>
@@ -146,7 +149,7 @@ JavaScript 框架的继续发展 breakneck 速度。 使用上面列出来帮助
 > ### <a name="references--client-web-technologies"></a>引用 – 客户端 Web 技术
 > - **HTML 和 CSS**  
 > <https://www.w3.org/standards/webdesign/htmlcss>
-> - **Sass vs。较低**  
+> - **Sass vs。LESS**  
 > <https://www.keycdn.com/blog/sass-vs-less/>
 > - **小于 ASP.NET Core 应用、 Sass 和出色的字体样式**  
 > <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
@@ -156,9 +159,9 @@ JavaScript 框架的继续发展 breakneck 速度。 使用上面列出来帮助
 > <https://jquery.com/>
 > - **jQuery vs AngularJS**  
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
-> - **角度**  
+> - **Angular**  
 > <https://angular.io/>
-> - **做出响应**  
+> - 做出响应  
 > <https://facebook.github.io/react/>
 > - **做出反应 Slingshot**  
 > <https://github.com/coryhouse/react-slingshot>

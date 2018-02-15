@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: e676c1225f7d11381808040cf101e897e0726ad4
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
@@ -27,7 +30,7 @@ ms.lasthandoff: 10/21/2017
 
 是否需要完整且功能强大的 IDE 或轻量，并灵活编辑器，则 Microsoft 将具有你开发 ASP.NET Core 应用程序时涉及。
 
-**Visual Studio 2017 年。** 如果你使用*Visual Studio 2017*你可以生成 ASP.NET Core 应用程序，只要你有*.NET 核心跨平台开发*安装的工作负荷。 图 10-1 Visual Studio 2017 设置对话框中显示的所需的工作负荷。
+**Visual Studio 2017.** 如果你使用*Visual Studio 2017*你可以生成 ASP.NET Core 应用程序，只要你有*.NET 核心跨平台开发*安装的工作负荷。 图 10-1 Visual Studio 2017 设置对话框中显示的所需的工作负荷。
 
 ![](./media/image10-1.png)
 
@@ -57,7 +60,7 @@ ms.lasthandoff: 10/21/2017
 
 -   [与 TFVC 和 Visual Studio 共享你的代码](https://www.visualstudio.com/docs/tfvc/share-your-code-in-tfvc-vs)
 
-创建 Azure 应用程序服务，将在其中部署您的应用程序。 通过在 Azure 门户上转到应用程序服务边栏选项卡中创建 Web 应用。 单击 + 添加，选择 Web 应用程序模板、 单击创建和提供的名称和其他详细信息。 Web 应用程序可从 {name}。.azurewebsites.net 处进行访问。
+创建 Azure 应用程序服务，将在其中部署您的应用程序。 通过在 Azure 门户上转到应用程序服务边栏选项卡中创建 Web 应用。 单击 + 添加，选择 Web 应用程序模板、 单击创建和提供的名称和其他详细信息。 Web 应用程序可从 {name}.azurewebsites.net 处进行访问。
 
 ![AzureWebApp](./media/image10-2.png)
 
@@ -114,4 +117,4 @@ CI/CD 管道配置后，只需对你的 web 应用进行更新并将它们提交
 
 
 >[!div class="step-by-step"]
-[以前](test-asp-net-core-mvc-apps.md) [下一步] (azure-hosting-recommendations-for-asp-net-web-apps.md)
+[Previous] (test-asp-net-core-mvc-apps.md) [Next] (azure-hosting-recommendations-for-asp-net-web-apps.md)

@@ -1,15 +1,18 @@
 ---
 title: "监视容器化应用程序服务"
-description: "使用 Microsoft 平台和工具的 Docker 容器化应用程序生命周期"
+description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3e4a78eb47d0e6712919c89b6f52ec8e4248fb23
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="monitor-containerized-application-services"></a>监视容器化应用程序服务
 
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/23/2017
 
 ### <a name="operations-management-suitehttpmicrosoftcomoms-container-solution-for-docker"></a>[Operations Management Suite](http://microsoft.com/oms) for Docker 容器解决方案
 
-除了在其自身提供有价值的服务，操作管理套件容器解决方案可以管理和监视通过显示有关你的容器和容器主机在哪里，信息的 Docker 主机和容器容器正在运行或未通过，以及 Docker 守护程序和容器的日志发送到*stdout*和*stderr*。 它还显示性能度量值，如 CPU、 内存、 网络和存储对容器和主机来帮助你排查和查找干扰邻居容器。
+除了在其自身提供有价值的服务，操作管理套件容器解决方案可以管理和监视通过显示有关你的容器和容器主机在哪里，信息的 Docker 主机和容器容器正在运行或未通过，以及 Docker 守护程序和容器的日志发送到*stdout*和*stderr*。 它还显示容器和主机的性能指标，如 CPU、内存、网络和存储，帮助排除故障和找到具有干扰性的相邻容器。
 
 ![](./media/image2.png)
 
@@ -88,13 +91,13 @@ Application Insights 和 Operations Management Suite 专注于监视活动;但�
 
 你可以通过运行类似类型的查询来查看性能信息 = 性能，在图 6-3 中所示。
 
-![DockerPerfMetricsView](./media/image3.png){宽度 ="5.78625 中"height ="3.25 in"}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 图 6-3： 性能度量值的 Operations Management Suite 所示的 Docker 主机
 
 保存查询也是中 Operations Management Suite 的标准功能，可帮助你保持查询已发现非常有用，并在你的系统中发现趋势。
 
-**详细信息** 若要查找有关安装和配置 Docker 容器中的解决方案[Operations Management Suite](http://microsoft.com/oms)，请转到<https://docs.microsoft.com/azure/日志-分析/日志-分析-容器>。
+**详细信息** 若要查找有关安装和配置 Docker 容器中的解决方案[Operations Management Suite](http://microsoft.com/oms)，请转到<https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>。
 
 >[!div class="step-by-step"]
-[以前](管理-生产-docker-environments.md) [下一步] (.../key-takeaways/index.md)
+[Previous] (manage-production-docker-environments.md) [Next] (../key-takeaways/index.md)

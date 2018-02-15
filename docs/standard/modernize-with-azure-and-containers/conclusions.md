@@ -4,17 +4,20 @@ description: "更新现有的.NET 应用程序与 Azure 云和 Windows 容器 |�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 0bcc330a5970ab923b48d8790c4de93171283d94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6e2f776b71fda9074605f072335a6e95366d2a97
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conclusions"></a>结论
 
 -   容器基于解决方案最终提供成本节省优势。 容器是部署问题的解决方案，因为他们删除引起的生产环境中的依赖关系之间缺少的摩擦。 通过删除这些问题，它开发/测试、 DevOps 和生产操作会显著提高。
 
--   Docker 容器变得越来越部署的任何基于服务器的应用程序或服务的标准单位。
+-   Docker 容器正逐渐成为任何基于服务器的应用程序或服务的标准部署单位。
 
 -   对于生产环境中，你应承载可扩展基于 Windows 容器的应用程序使用 orchestrator （如 Service Fabric 或 Kubernetes）。
 

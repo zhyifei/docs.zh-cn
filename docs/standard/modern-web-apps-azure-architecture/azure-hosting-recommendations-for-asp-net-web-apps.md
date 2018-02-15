@@ -6,16 +6,19 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: c361a28321ec9dcbfee1db8036757632a5d81f7c
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Azure 托管的 ASP.NET 核心 Web 应用的建议
 
 > "业务线领导者，这些 everywhere 是绕过 IT 部门以获取从云中 (又称 SaaS) 应用程序，并像杂志订阅为它们付费。 并且不再需要该服务时，他们可以取消订阅保留在角中未使用任何设备。"  
-> _\-Daryl Plummer，Gartner 分析师_
+> _\- Daryl Plummer，Gartner 分析师_
 
 ## <a name="summary"></a>摘要
 
@@ -127,4 +130,4 @@ Azure Service Bus 或 Azure 存储队列，可以使用用于安排应用程序�
     <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
-[以前](开发-过程-为-azure.md)
+[Previous] (development-process-for-azure.md)

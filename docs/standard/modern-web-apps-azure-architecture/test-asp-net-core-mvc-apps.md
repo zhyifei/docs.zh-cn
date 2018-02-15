@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 4611ffa8334e124946e849306d3281b695830eb1
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
-ms.translationtype: HT
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d23d0accc33fb8335dff602d6e1d6c8689972906
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>测试 ASP.NET Core MVC 应用程序
 
@@ -112,9 +115,9 @@ Martin Fowler 编写了有关测试棱锥图，它的一个示例显示图 9-1�
 
 此方法的变体结束"应该"每个测试类名称，并修改时态略有：
 
--   CatalogControllerGetImage**应**。**调用**ImageServiceWithId
+-   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**应**。**日志**WarningGivenImageMissingException
+-   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
 一些团队发现的第二个命名的方法更清晰、 但略有更详细。 在任何情况下，尝试使用深入了解测试行为的命名约定，因此当一个或多个测试失败时，很明显来自失败何种情况下其名称。 避免命名你的测试有一个大致，如 ControllerTests.Test1，因为当你在测试结果中看到它们时，这些不提供任何值。
 

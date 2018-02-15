@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +14,20 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae43f65c104376ea1e7cfc036a57c728c90ac12
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aecddc617afcaf197aa212e8eea7e1342c029fa
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用于构建面向服务的应用程序的框架。 借助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，可以将数据作为异步消息从一个服务终结点发送至另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是一个框架，用于构建面向服务的应用程序。 借助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，可以将数据作为异步消息从一个服务终结点发送至另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：  
   
 -   处理企业事务的安全服务。  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **互操作性**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 实现了 Web 服务互操作性的现代行业标准。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支持的标准，请参阅 [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 实现 Web 服务互操作性的现代行业标准。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支持的标准，请参阅 [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
 -   **多种消息模式**  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **服务元数据**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用行业标准（如 WSDL、XML 架构和 WS-Policy）中指定的格式发布服务元数据。 该元数据可用于自动生成并配置客户端，以便访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 可通过 HTTP 和 HTTPS 来发布元数据，也可使用 Web 服务元数据交换标准来发布元数据。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持发布服务元数据中使用如 WSDL、 XML 架构和 Ws-policy 的行业标准中指定的格式。 该元数据可用于自动生成并配置客户端，以便访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 可通过 HTTP 和 HTTPS 来发布元数据，也可使用 Web 服务元数据交换标准来发布元数据。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **数据协定**  
   
@@ -70,11 +72,11 @@ ms.lasthandoff: 01/19/2018
   
 -   **多种传输和编码方式**  
   
-     可通过多种内置传输协议和编码中的任意一种发送消息。 最常用的协议和编码是使用超文本传输协议 (HTTP) 发送文本编码的 SOAP 消息，以便在万维网上使用。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还允许通过 TCP、命名管道或 MSMQ 发送消息。 这些消息可以编码为文本，也可以使用优化的二进制格式。  使用 MTOM 标准可有效地发送二进制数据。 如果所提供的传输或编码都不符合您的需要，您可以创建自己的自定义传输或编码。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]支持通过传输和编码[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。  
+     可通过多种内置传输协议和编码中的任意一种发送消息。 最常用的协议和编码是使用超文本传输协议 (HTTP) 发送文本编码的 SOAP 消息，以便在万维网上使用。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还允许通过 TCP、命名管道或 MSMQ 发送消息。 这些消息可以编码为文本，也可以使用优化的二进制格式。  使用 MTOM 标准可有效地发送二进制数据。 如果所提供的传输或编码都不符合您的需要，您可以创建自己的自定义传输或编码。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支持通过传输和编码[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。  
   
 -   **可靠的排队消息**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用通过 WS-Reliable Messaging 实现的可靠会话和使用 MSMQ 进行可靠的消息交换。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]中的可靠和排队消息支持[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[队列和可靠会话](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用可靠会话通过 Ws-reliable Messaging 实现和使用 MSMQ 的可靠的消息交换。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的可靠和排队消息支持[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[队列和可靠会话](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
   
 -   **持久性消息**  
   
@@ -82,7 +84,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **事务**  
   
-     WCF 还使用三个事务模型之一来支持事务：WS-AtomicTtransactions、 <xref:System.Transactions> 命名空间中的 API 以及 Microsoft 分布式事务协调器。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]中的事务支持[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[事务](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。  
+     WCF 还使用三个事务模型之一来支持事务：WS-AtomicTtransactions、 <xref:System.Transactions> 命名空间中的 API 以及 Microsoft 分布式事务协调器。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的事务支持[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[事务](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。  
   
 -   **AJAX 和 REST 支持**  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **扩展性**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 体系结构具有大量扩展点。 如果需要额外功能，它还提供许多入口点，允许您自定义服务的行为。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 可用扩展点，请参阅 [Extending WCF](../../../docs/framework/wcf/extending/extending-wcf.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 体系结构具有大量扩展点。 如果需要额外功能，它还提供许多入口点，允许您自定义服务的行为。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 可用扩展点，请参阅[扩展 WCF](../../../docs/framework/wcf/extending/index.md)。  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF 与其他 Microsoft 技术的集成  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是一个灵活的平台。 由于这一极强的灵活性， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还在 Microsoft 的一些其他产品中得以利用。 如果您也在使用这些产品中的任何产品，通过了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的基础知识，您会立即受益。  
