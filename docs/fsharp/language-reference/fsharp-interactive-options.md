@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
-ms.openlocfilehash: 0fc369993b3ee4c8a9139e4a365330197fe66946
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: f0a8893abca0435307907aa9c169646bf3dec2d5
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="f-interactive-options"></a>F# Interactive 选项
 
@@ -42,9 +42,11 @@ F # 脚本文件的文件扩展名是`.fsx`。
 |**--**|用于指示 F # Interactive 对 F # 程序或脚本，你可以在代码中使用访问列表作为命令行自变量视为其余的自变量**fsi.CommandLineArgs**。|
 |**--checked**[**+**&#124;**-**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。|
 |**--codepage:&lt;int&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。|
+|**--consolecolors**[**+**&#124;**-**]|输出警告和错误消息的颜色的颜色。|
 |**--crossoptimize**[**+**&#124;**-**]|启用或禁用跨模块优化。|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**完整**&#124;**pdbonly**&#124;**可移植**&#124;**嵌入**]|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。|
 |**--define:&lt;string&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。|
+|**--deterministic**[**+**&#124;**-**]|生成的确定性的程序集 （包括模块版本 GUID 以及时间戳）。|
 |**--exec**|指示 F # interactive 加载文件或运行命令行上给出的脚本文件后退出。|
 |**--fullpaths**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。|
 |**--gui**[**+**&#124;**-**]|启用或禁用 Windows 窗体事件循环。 默认为已启用。|
@@ -61,7 +63,10 @@ F # 脚本文件的文件扩展名是`.fsx`。
 |**--quotations-debug**|指定应从 F # 引号文本派生，并反映定义的表达式发出额外的调试信息。 调试信息添加到 F # 表达式树节点的自定义属性。 请参阅[代码引用](code-quotations.md)和[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
 |**--readline**[**+**&#124;**-**]|启用或禁用在交互模式中的 tab 自动补全。|
 |**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。|
+|**--shadowcopyreferences**[**+**&#124;**-**]|阻止在 F # Interactive 进程锁定的引用。|
+|**--simpleresolution**|使用基于目录的规则，而不是 MSBuild 解析的程序集引用进行解析。|
 |**--tailcalls**[**+**&#124;**-**]|启用或禁用的结尾 IL 指令，这会导致堆栈帧要重用为尾递归函数使用。 默认情况下会启用此选项。|
+|**--targetprofile:&lt;string&gt;**|指定此程序集的目标框架配置文件。 有效值为 mscorlib、 netcore 或 netstandard。  默认值为 mscorlib。|
 |**--use:&lt;filename&gt;**|告知解释程序以使用上启动的给定的文件作为初始的输入。|
 |**--utf8output**|Fsc.exe 编译器选项相同。 有关详细信息，请参阅[编译器选项](compiler-options.md)。|
 |**--warn:&lt;warning-level&gt;**|与相同**fsc.exe**编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。|
