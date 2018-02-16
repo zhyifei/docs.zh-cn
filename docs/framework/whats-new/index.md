@@ -3,22 +3,25 @@ title: ".NET Framework 中的新增功能"
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: what's new [.NET Framework]
+helpviewer_keywords:
+- what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 86f1884749b5fdf93254985ab3e163dca0562648
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新增功能
 <a name="introduction"></a>本文总结了以下版本的 .NET Framework 中的主要新功能和改进：  
@@ -80,15 +83,15 @@ ms.lasthandoff: 01/05/2018
 
 **运行时功能检测**
 
-<xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> 类提供一种机制，用于确定给定的 .NET 实现在编译时或运行时是否支持预定义的功能。 在编译时，编译器可以检查指定的字段是否存在，以确定是否支持某项功能，如果支持，它会发出利用这一功能的代码。 在运行时，应用程序可以在运行时发出代码之前调用 <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> 方法。 有关详细信息，请参阅 [Add helper method to describe features supported by the runtime](https://github.com/dotnet/corefx/issues/17116)（添加 helper 方法以描述运行时支持的功能）。
+<xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> 类提供一种机制，用于确定给定的 .NET 实现在编译时或运行时是否支持预定义的功能。 在编译时，编译器可以检查指定的字段是否存在，以确定是否支持某项功能，如果支持，它会发出利用这一功能的代码。 在运行时，应用程序可以在运行时发出代码之前调用 <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> 方法。 有关详细信息，请参阅 [Add helper method to describe features supported by the runtime](https://github.com/dotnet/corefx/issues/17116)（添加 helper 方法以描述运行时支持的功能）。
 
 **值元组类型是可序列化的**
 
-从 .NET Framework 4.7.1 起，<xref:System.ValueTuple?displayProperty=fullName> 及其相关的泛型类型被标记为[可序列化](xref:System.SerializableAttribute)，允许进行二进制序列化。 这样，可以更轻松地将元组类型（如 <xref:System.Tuple%603> 和 <xref:System.Tuple%604>）迁移到值元组类型。 有关详细信息，请参阅 [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)（.NET Framework 4.7.1 运行时和编译器功能）博客文章中的“Compiler -- ValueTuple is Serializable”（编译器 -- 值元组是可序列化的）。
+从 .NET Framework 4.7.1 起，<xref:System.ValueTuple?displayProperty=nameWithType> 及其相关的泛型类型被标记为[可序列化](xref:System.SerializableAttribute)，允许进行二进制序列化。 这样，可以更轻松地将元组类型（如 <xref:System.Tuple%603> 和 <xref:System.Tuple%604>）迁移到值元组类型。 有关详细信息，请参阅 [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)（.NET Framework 4.7.1 运行时和编译器功能）博客文章中的“Compiler -- ValueTuple is Serializable”（编译器 -- 值元组是可序列化的）。
 
 **支持只读引用**
 
-.NET Framework 4.7.1 增加了 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>。 此特性由语言编译器用于标记具有只读 ref 返回类型或参数的成员。 有关详细信息，请参阅 [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)（.NET Framework 4.7.1 运行时和编译器功能）博客文章中的“Compiler -- Support for ReadOnlyReferences”（编译器 -- 支持只读引用）。 有关 ref 返回值的信息，请参阅 [ref 返回值和 ref 局部变量（C# 指南）](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md)和 [ref 返回值 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)。
+.NET Framework 4.7.1 增加了 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>。 此特性由语言编译器用于标记具有只读 ref 返回类型或参数的成员。 有关详细信息，请参阅 [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)（.NET Framework 4.7.1 运行时和编译器功能）博客文章中的“Compiler -- Support for ReadOnlyReferences”（编译器 -- 支持只读引用）。 有关 ref 返回值的信息，请参阅 [ref 返回值和 ref 局部变量（C# 指南）](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md)和 [ref 返回值 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)。
 
 <a name="clr" />
 #### <a name="common-language-runtime-clr"></a>公共语言运行时 (CLR)
@@ -97,12 +100,6 @@ ms.lasthandoff: 01/05/2018
 
 .NET Framework 4.7.1 中的垃圾回收 (GC) 的更改提升了整体性能，尤其是大型对象堆 (LOH) 分配的性能。 在 .NET Framework 4.7.1 中，小型对象堆 (SOH) 分配和 LOH 分配使用不同的锁，当后台 GC (BGC) 整理 SOH 时即发生 LOH 分配。 这样，进行大量 LOH 分配的应用程序发生分配锁争用的情况将减少，从而提高性能。 有关详细信息，请参阅 [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/)（.NET Framework 4.7.1 运行时和编译器功能）博客文章中的“Runtime -- GC Performance Improvements”（运行时 -- GC 性能改进）一节。 
 
-**支持可移植 PDB**
-
-从 4.7.1 版起，.NET Framework 即支持可移植 PDB。 当标准 PDB 文件仅适用于 Windows 时，可在所有平台上创建和读取可移植 PDB 文件。 大多数情况下，文件格式对在特定 .NET 实现上运行的应用程序是透明的。 异常是在运行时动态发出程序集的应用程序；在此情况下，发出可移植 PDB 的功能可以提供性能改进并减少应用程序的内存占用。 
-
-可以通过在发出程序集之前将字符串“PortablePdb”传递到 <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> 方法来确定在运行时当前 .NET 实现是否支持可移植 PDB。  
- 
 <a name="net471"/>
 #### <a name="networking"></a>网络
 
@@ -1446,7 +1443,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用程序为特定窗体因素而设计，并利用 Windows 操作系统的功能。 通过使用 C# 或 Visual Basic，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可用于生成面向 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。 该子集称为 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 开发人员中心的[概述](http://go.microsoft.com/fwlink/?LinkId=228491)中进行讨论。
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用程序为特定窗体因素而设计，并利用 Windows 操作系统的功能。 通过使用 C# 或 Visual Basic，[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或 4.5.1 的子集可用于生成面向 Windows 的 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用。 该子集称为 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，在 Windows 开发人员中心的[概述](http://go.microsoft.com/fwlink/?LinkId=228491)中进行讨论。
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>可移植类库
