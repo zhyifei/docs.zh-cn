@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 
 若要创建 Application Insights 资源时，请执行后面的列表中显示的文章中的说明。 Azure 门户将为你创建所需的脚本。
 
--   **监视 Docker Application Insights 中的应用程序：**[https://docs.microsoft.com/azure/application-insights/app-insights-docker  ](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **监视 Docker Application Insights 中的应用程序：**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **在 Docker Hub 和 Github 的应用程序 Insights Docker 映像：**  
 [https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/)和<https://github.com/Microsoft/ApplicationInsights-Docker>
