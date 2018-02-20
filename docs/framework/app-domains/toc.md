@@ -10,7 +10,7 @@
 ### [程序集和并行执行](assemblies-and-side-by-side-execution.md)
 ## [应用程序域](application-domains.md)
 ## [应用程序域和程序集用法主题](application-domains-and-assemblies-how-to-topics.md)
-## [使用应用程序域](application-domains.md)
+## [使用应用程序域](use.md)
 ### [如何：创建应用程序域](how-to-create-an-application-domain.md)
 ### [如何：卸载应用程序域](how-to-unload-an-application-domain.md)
 ### [如何：配置应用程序域](how-to-configure-an-application-domain.md)

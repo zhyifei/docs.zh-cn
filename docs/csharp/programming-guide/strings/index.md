@@ -2,20 +2,21 @@
 title: "字符串（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 45dd48a53d3fae58596d9328ef8daba566b2ded1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -125,7 +126,7 @@ string s = String.Empty;
 |[如何：修改字符串内容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|提供了演示如何修改字符串内容的代码示例。|  
 |[如何：串联多个字符串](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|阐释如何使用 `+` 运算符和 `Stringbuilder` 类在编译时和运行时将字符串连接在一起。|  
 |[如何：比较字符串](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|演示如何执行字符串的序号比较。|  
-|[如何：使用 String.Split 分析字符串](../../../csharp/programming-guide/strings/how-to-parse-strings-using-string-split.md)|包含一个代码示例，演示了如何使用 `String.Split` 方法来分析字符串。|  
+|[如何：使用 String.Split 分析字符串](../../how-to/parse-strings-using-split.md)|包含一个代码示例，演示了如何使用 `String.Split` 方法来分析字符串。|  
 |[如何：使用字符串方法搜索字符串](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|介绍如何使用特定方法来搜索字符串。|  
 |[如何：使用正则表达式搜索字符串](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|介绍如何使用正则表达式来搜索字符串。|  
 |[如何：确定字符串是否表示数值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|演示如何安全地分析一个字符串，以查看其是否具有有效的数值。|  
