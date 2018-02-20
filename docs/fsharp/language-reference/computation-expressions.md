@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: acabbf5d-fbb8-479f-894c-7251bf16c8c3
-ms.openlocfilehash: 15ba2e167efc1d295d81439dcf85bc7272e05265
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c4ff998c65f3a5c458f36312f6887d869569d814
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="computation-expressions"></a>计算表达式
 
@@ -41,7 +41,7 @@ builder-name { expression }
 下表介绍可在工作流生成器类的方法。
 
 
-|**方法**|**典型的签名**|**描述**|
+|**方法**|**典型的签名**|**说明**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|为调用`let!`和`do!`中计算表达式。|
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|包装计算表达式为函数。|
@@ -69,14 +69,14 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 
 
-|Expression|转换|
+|表达式|转换|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{&#124; let! pattern = expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; do! expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun () -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; yield expr &#124;}</code>|`builder.Yield(expr)`|
 |<code>{&#124; yield! expr &#124;}</code>|`builder.YieldFrom(expr)`|
-|<code>{&#124; return expr &#124;}<code>|`builder.Return(expr)`|
+|<code>{&#124; return expr &#124;}</code>|`builder.Return(expr)`|
 |<code>{&#124; return! expr &#124;}</code>|`builder.ReturnFrom(expr)`|
 |<code>{&#124; use pattern = expr in cexpr &#124;}</code>|<code>builder.Using(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; use! value = expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun value -> builder.Using(value, (fun value -> {&#124; cexpr &#124;}))))</code>|
@@ -84,7 +84,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 |<code>{&#124; if expr then cexpr0 else cexpr1 &#124;}</code>|<code>if expr then {&#124; cexpr0 &#124;} else {&#124; cexpr1 &#124;}</code>|
 |<code>{&#124; match expr with &#124; pattern_i -> cexpr_i &#124;}</code>|<code>match expr with &#124; pattern_i -> {&#124; cexpr_i &#124;}</code>|
 |<code>{&#124; for pattern in expr do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun pattern -> {&#124; cexpr &#124;}))</code>|
-|<code>{&#124; for identifier = expr1 to expr2 do cexpr &#124;}<code>|<code>builder.For(enumeration, (fun identifier -> {&#124; cexpr &#124;}))</code>|
+|<code>{&#124; for identifier = expr1 to expr2 do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun identifier -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; while expr do cexpr &#124;}</code>|<code>builder.While(fun () -> expr), builder.Delay({&#124;cexpr &#124;})</code>|
 |<code>{&#124; try cexpr with &#124; pattern_i -> expr_i &#124;}</code>|<code>builder.TryWith(builder.Delay({&#124; cexpr &#124;}), (fun value -> match value with &#124; pattern_i -> expr_i &#124; exn -> reraise exn)))</code>|
 |<code>{&#124; try cexpr finally expr &#124;}</code>|<code>builder.TryFinally(builder.Delay( {&#124; cexpr &#124;}), (fun () -> expr))</code>|
@@ -226,7 +226,7 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 ## <a name="custom-operations"></a>自定义操作
 你可以定义上计算表达式的自定义操作，并作为一个操作员计算表达式中使用自定义操作。 例如，你可以在查询表达式中包括的查询运算符。 当定义自定义操作时，你必须定义 Yield 和计算表达式中的方法。 若要定义自定义操作，将它放置在计算表达式，生成器类，然后将应用[ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)。 此特性采用字符串作为参数，这是在自定义操作中使用的名称。 此名称是到作用域中计算表达式的左大括号的开头。 因此，不应使用在此块中有同名的自定义操作的标识符。 例如，如避免标识符使用`all`或`last`在查询表达式中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [异步工作流](asynchronous-workflows.md)
