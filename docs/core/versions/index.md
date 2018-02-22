@@ -3,17 +3,18 @@ title: ".NET Core 版本控制"
 description: "了解 .NET Core 版本控制的工作原理。"
 author: bleroy
 ms.author: mairaw
-ms.date: 08/25/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 369d280268123a69ae9458a2c47e45396728deb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 70c7f179f3451e51d5ab383cde80959a69f959a1
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-core-versioning"></a>.NET Core 版本控制
 
@@ -23,9 +24,13 @@ ms.lasthandoff: 12/23/2017
 
 .NET Core 中有很多版本各异的移动部件。 但从 .NET Core 2.0 开始，采用了所有人都易于理解的顶级版本号，即作为整体的“.NET Core”的唯一版本。 本文的其余部分将详细介绍所有这些部分的版本控制。 这些详细信息对包管理员很重要。
 
+> [!IMPORTANT]
+> 本主题所述的版本控制详细信息不适用于当前版本的 .NET Core SDK 和运行时。
+> 版本方案会在未来发布的版本中进行更改。 你可在 [dotnet/设计](https://github.com/dotnet/designs/pull/29)存储库中查看当前建议。
+
 ## <a name="versioning-details"></a>版本控制详细信息
 
-从 .NET Core 2.0 开始，下载会在其文件名中显示单一版本号。 以下版本号已统一：
+使用 .NET Core 2.0，下载会在其文件名中显示单一版本号。 以下版本号已统一：
 
 * 共享框架和关联的运行时。
 * .NET Core SDK 和关联的 .NET Core CLI。
@@ -35,8 +40,8 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="installers"></a>安装程序
 
-从 .NET Core 2.0 开始，[Daily Builds](https://github.com/dotnet/core-setup#daily-builds)（每日生成）和[发布](https://www.microsoft.com/net/download/core)上提供的下载采用了一种更容易理解的新命名方案。
-还修改了这些下载中的安装程序 UI，以便清楚地显示所安装组件的名称和版本。 具体而言，标题现在显示与下载的文件名相同的版本号。
+使用 .NET Core 2.0，[每日生成](https://github.com/dotnet/core-setup#daily-builds)和[发布](https://www.microsoft.com/net/download/core)上提供的下载将采用一种更容易理解的新命名方案。
+此外，这些下载中的安装程序 UI 也会被修改，以清楚地显示所安装组件的名称和版本。 具体而言，标题现在显示与下载的文件名相同的版本号。
 
 #### <a name="file-name-format"></a>文件名格式
 
@@ -88,7 +93,7 @@ dotnet-sdk-2.0.4-ubuntu.16.04-x64.deb               # SDK tools
 #### <a name="minimum-package-set"></a>最小包集
 
 * `dotnet-runtime-[major].[minor]`：包含指定版本的运行时（包管理器中应仅提供针对给定的主要/次要组合的最新修补程序版本）。 新的修补程序版本更新此包，但是新的次要和主要版本是独立的包。
- 
+
   **依赖项**：`dotnet-host`
 
 * `dotnet-sdk`：最新的 SDK。 `update`：前滚主要、次要和修补程序版本。
@@ -118,7 +123,7 @@ Docker 标记的一般命名约定为，将版本号放在组件名称之前。 
 
 应更新 SDK 标记以表示 SDK 版本，而不是运行时版本。
 
-还有可能我们需要修复 .NET Core 工具，但重新传送一个现有的运行时。 在这种情况下，SDK 版本会升级（例如，升级至 2.1.2），然后运行时在下次传送时升级（例如，运行时和 SDK 在其后传送时升级为 2.1.3）。
+此外，还有可能会修复 .NET Core CLI 工具（包含在 SDK 中），但重新与现有运行时一起交付。 在这种情况下，SDK 版本会升级（例如，升级至 2.1.2），然后运行时在下次交付时升级（例如，运行时和 SDK 在其后交付时升级为 2.1.3）。
 
 ## <a name="semantic-versioning"></a>语义版本控制
 
@@ -128,26 +133,29 @@ Docker 标记的一般命名约定为，将版本号放在组件名称之前。 
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-可选的 `PRERELEASE` 和 `BUILDNUMBER` 部分将永远不会成为受支持版本的一部分，并且将仅存在于夜间版本、来自源目标的本地版本，以及不受支持的预览版本中。
+可选的 `PRERELEASE` 和 `BUILDNUMBER` 部分永远不会成为受支持版本的一部分，并且将仅存在于夜间版本、来自源目标的本地版本，以及不受支持的预览版本中。
 
 ### <a name="how-version-numbers-are-incremented"></a>版本号如何递增？
 
 `MAJOR` 在下列情况时递增：
-  - 旧版本不再受支持。
-  - 采用了现有依赖项的较新 `MAJOR` 版本。
-  - 兼容性的默认设置更改为“关”。
+
+- 旧版本不再受支持。
+- 采用了现有依赖项的较新 `MAJOR` 版本。
+- 兼容性的默认设置更改为“关”。
 
 `MINOR` 在下列情况时递增：
-  - 添加了公共 API 外围应用。
-  - 添加了新行为。
-  - 采用了现有依赖项的较新 `MINOR` 版本。
-  - 引入了新依赖项。
-  
+
+- 添加了公共 API 外围应用。
+- 添加了新行为。
+- 采用了现有依赖项的较新 `MINOR` 版本。
+- 引入了新依赖项。
+
 `PATCH` 在下列情况时递增：
-  - 进行了 Bug 修复。
-  - 添加了对较新平台的支持。
-  - 采用了现有依赖项的较新 `PATCH` 版本。
-  - 任何其他不符合上述情况的更改。
+
+- 进行了 Bug 修复。
+- 添加了对较新平台的支持。
+- 采用了现有依赖项的较新 `PATCH` 版本。
+- 任何其他不符合上述情况的更改。
 
 存在多处更改时，单个更改影响的最高级别元素会递增，并将随后的元素重置为零。 例如，当 `MAJOR` 递增时，`MINOR` 和 `PATCH` 将重置为零。 当 `MINOR` 递增时，`PATCH` 将重置为零，而 `MAJOR` 保持不变。
 
@@ -176,7 +184,7 @@ Current 版本可以升级为 LTS。
 
 .NET Core 包括以下部件：
 
-- 主机（也称为 muxer）：`dotnet.exe` 与 `hostfxr` 策略库。
+- 主机：适用于依赖框架的应用程序的 dotnet.exe，或适用于自包含应用程序的 \<appname >.exe。
 - SDK（开发人员计算机上必需的一套工具，但不用于生产）。
 - 运行时。
 - 以包的形式分发的共享框架实现。 对每个包进行独立的版本控制，特别是对于修补程序版本控制。
@@ -204,7 +212,7 @@ Current 版本可以升级为 LTS。
 
 例如，.NET Core 2.1.3 中的元包都应具有 2.1 作为其 `MAJOR` 和 `MINOR` 版本号。
 
-每次更新任何引用的包时，元包的修补程序版本都会递增。 修补程序版本不会包含更新的框架版本。 因此，从严格意义上讲，元包并不符合 SemVer，因为其版本控制方案不表示基础包中的更改程度，而是主要表示 API 级别。 
+每次更新任何引用的包时，元包的修补程序版本都会递增。 修补程序版本不会包含更新的框架版本。 因此，从严格意义上讲，元包并不符合 SemVer，因为其版本控制方案不表示基础包中的更改程度，而是主要表示 API 级别。
 
 .NET Core 当前有两种主要的元包：
 
@@ -226,7 +234,7 @@ Current 版本可以升级为 LTS。
 
 ## <a name="versioning-in-practice"></a>版本控制实践
 
-下载 .NET Core 时，下载的文件名中将包含版本，例如 `dotnet-sdk-2.0.4-win10-x64.exe`。
+下载 .NET Core 时，下载的文件名中将带有版本，例如 `dotnet-sdk-2.0.4-win10-x64.exe`。
 
 每天，在 GitHub 上的 .NET Core 存储库中都有提交和拉取请求，因此会新生成许多库。 为每个更改创建 .NET Core 的新公共版本是不切实际的。 但可在发布新的 .NET Core 公共稳定版前，不定期（例如，几周或几个月一次）聚合更改。
 
@@ -251,7 +259,8 @@ Current 版本可以升级为 LTS。
 更新各种元包以引用更新的 .NET Core 库包。 [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) 元包和 `netcore` 目标框架作为匹配新版本的 `MAJOR` 版本号的主要更新进行版本控制。
 
 ## <a name="see-also"></a>请参阅
-[目标框架](../../standard/frameworks.md)   
-[.NET Core 分发打包](../build/distribution-packaging.md)   
-[.NET Core 支持生命周期简报](https://www.microsoft.com/net/core/support)   
-[.NET Core 2 和版本绑定](https://github.com/dotnet/designs/issues/3)   
+
+[目标框架](../../standard/frameworks.md)  
+[.NET Core 分发打包](../build/distribution-packaging.md)  
+[.NET Core 支持生命周期简报](https://www.microsoft.com/net/core/support)  
+[.NET Core 2 和版本绑定](https://github.com/dotnet/designs/issues/3)  
