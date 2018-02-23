@@ -4,4 +4,3 @@
 ## [如何：使用字符串方法搜索字符串](how-to-search-strings-using-string-methods.md)
 ## [如何：使用正则表达式搜索字符串](how-to-search-strings-using-regular-expressions.md)
 ## [如何：确定字符串是否表示数值](how-to-determine-whether-a-string-represents-a-numeric-value.md)
-## [如何：将字符串转换为 DateTime](how-to-convert-a-string-to-a-datetime.md)
