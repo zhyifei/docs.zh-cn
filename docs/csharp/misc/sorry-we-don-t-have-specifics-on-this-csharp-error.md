@@ -2,7 +2,8 @@
 title: "抱歉，我们 don &#39; t 对此 C# 错误的详细信息"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS1583
@@ -882,37 +883,37 @@ f1_keywords:
 - CS8168
 - CS8172
 - CS8179
-helpviewer_keywords: errors [C#], additional information
+helpviewer_keywords:
+- errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 312bcc963e2e444bb5125124a0cb690126c0a770
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>抱歉，我们 don &#39; t 对此 C# 错误的详细信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可以咨询其他开发人员，使用以下论坛之一：  
   
- [Visual C# 语言](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ [Visual C# 语言](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
  提供针对 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 语言语法和编辑器相关问题及常规讨论的论坛。  
   
- [Visual C# IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  提供针对如何在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 环境中工作的问题的论坛。  
   
- [Visual C# 常见问题解答](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ [Visual C# 常见问题解答](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  提供针对其他论坛中未涉及的 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 相关问题的论坛。  
   
- [堆栈溢出](http://stackoverflow.com/questions/tagged/c%23)  
+ [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
  提供一个供大家讨论有关 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 的问题的论坛。  
   
  另请参见：  
  [为 Visual C# 程序员提供的附加资源](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../csharp/programming-guide/index.md)  
  [C# 参考](../../csharp/language-reference/index.md)  
  [与我们交流](/visualstudio/ide/talk-to-us)  
- [与我们交流](/visualstudio/ide/talk-to-us)

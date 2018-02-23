@@ -1,12 +1,9 @@
 ---
-title: "Windows 窗体 DataGridView 控件中的默认键盘和鼠标处理"
-ms.custom: 
-ms.date: 03/30/2017
+title: "默认键盘和鼠标处理 Windows 窗体 DataGridView 控件中"
+ms.date: 02/13/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
@@ -17,18 +14,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 627784f3d68ddf03f1f6c94975405dded3163c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
-# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的默认键盘和鼠标处理
+# <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>默认键盘和鼠标处理 Windows 窗体 DataGridView 控件中
+
 下表描述用户如何与交互<xref:System.Windows.Forms.DataGridView>控制通过键盘和鼠标。  
   
 > [!NOTE]
@@ -55,8 +53,9 @@ ms.lasthandoff: 12/22/2017
 |按 CTRL + 箭头|将焦点移到的最远的单元格箭头的方向。|  
 |CTRL + HOME|将焦点移到控件中的第一个单元。|  
 |CTRL + END|将焦点移到控件中的最后一个单元。|  
-|CTRL + PAGE 下移/上|向下翻页或向上翻页相同。|  
-|F2|将当前单元格置于单元格编辑模式，如果<xref:System.Windows.Forms.DataGridView.EditMode%2A>属性值是<xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2>或<xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>。|  
+|CTRL+PAGE DOWN/UP|向下翻页或向上翻页相同。|  
+|F2|将当前单元格置于单元格编辑模式，如果<xref:System.Windows.Forms.DataGridView.EditMode%2A>属性值是<xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2>或<xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>。|
+|F3|如果对当前的列进行排序<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>属性值是<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>。 它等同于单击当前的列标题。 自.NET Framework 4.7.2 之后可用。 若要启用此功能，应用程序必须面向.NET Framework 4.7.2 或更高版本或使用 AppContext 交换机的可访问性改进明确选择使用。|  
 |F4|如果当前单元格是<xref:System.Windows.Forms.DataGridViewComboBoxCell>、 将单元格置于编辑模式和显示的下拉列表。|  
 |ALT + 向上/向下键|如果当前单元格是<xref:System.Windows.Forms.DataGridViewComboBoxCell>、 将单元格置于编辑模式和显示的下拉列表。|  
 |空格键|如果当前单元格是<xref:System.Windows.Forms.DataGridViewButtonCell>， <xref:System.Windows.Forms.DataGridViewLinkCell>，或<xref:System.Windows.Forms.DataGridViewCheckBoxCell>，引发<xref:System.Windows.Forms.DataGridView.CellClick>和<xref:System.Windows.Forms.DataGridView.CellContentClick>事件。 如果当前单元格是<xref:System.Windows.Forms.DataGridViewButtonCell>，还会按下按钮。 如果当前单元格是<xref:System.Windows.Forms.DataGridViewCheckBoxCell>，也会更改的复选状态。|  
@@ -67,14 +66,15 @@ ms.lasthandoff: 12/22/2017
 |Ctrl+Enter|提交到当前单元格的任何更改，而无需移动焦点。 此外提交对当前行，如果该控件绑定到数据源支持编辑或虚拟模式的任何更改已与实现行级提交作用域。|  
 |Ctrl+0|进入<xref:System.DBNull.Value?displayProperty=nameWithType>时可以编辑的单元格的当前单元格中的值。 默认情况下，显示值为<xref:System.DBNull>单元格的值是值<xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>属性<xref:System.Windows.Forms.DataGridViewCellStyle>对当前单元格生效。|  
   
-### <a name="selection-keys"></a>选择键  
+### <a name="selection-keys"></a>选择键
+
  如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>属性设置为`false`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>属性设置为<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>，通过使用导航键来更改当前单元格更改为新的单元格的所选内容。 SHIFT、 CTRL 和 ALT 键不会影响此行为。  
   
  如果<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>设置为<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>，相同的行为发生但添加了以下内容。  
   
 |键或键组合|描述|  
 |----------------------------|-----------------|  
-|SHIFT + 空格键|选择整行或列 （与单击行或列标题相同）。|  
+|SHIFT+SPACEBAR|选择整行或列 （与单击行或列标题相同）。|  
 |导航键 （箭头键，页向上/向下，主页，结束）|如果选择整行或列，则更改为新行或列的当前单元格将所选内容移动到完整的新行或列 （具体取决于所选内容模式中）。|  
   
  如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>设置为`false`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>设置为<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>，通过使用键盘更改为新行或列的当前单元格将所选项移到完整的新行或列。 SHIFT、 CTRL 和 ALT 键不会影响此行为。  
@@ -83,9 +83,9 @@ ms.lasthandoff: 12/22/2017
   
  如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>设置为`true`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>设置为<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>、 定位单元格和当前单元格的行为相同，但仅完整行或列成为选中或取消选中。  
   
-## <a name="default-mouse-handling"></a>默认鼠标处理  
+## <a name="default-mouse-handling"></a>默认鼠标处理
   
-### <a name="basic-mouse-handling"></a>基本鼠标处理  
+### <a name="basic-mouse-handling"></a>基本鼠标处理
   
 > [!NOTE]
 >  单击包含鼠标左键的单元格始终将更改当前单元格。 单击鼠标右键按钮包含的单元格会打开快捷菜单上，如果可用。  
@@ -97,7 +97,8 @@ ms.lasthandoff: 12/22/2017
 |鼠标左键单击|引发<xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>和<xref:System.Windows.Forms.DataGridView.CellMouseClick?displayProperty=nameWithType>事件|  
 |向下鼠标左键并拖动列标题单元格上|如果<xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>属性是`true`，移动所列，以便它可以放入新的位置。|  
   
-### <a name="mouse-selection"></a>鼠标选择  
+### <a name="mouse-selection"></a>鼠标选择
+
  没有选择行为是与鼠标中键或鼠标滚轮相关联。  
   
  如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>属性设置为`false`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>属性设置为<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>，会出现下列行为。  
@@ -121,6 +122,7 @@ ms.lasthandoff: 12/22/2017
   
  如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>设置为`true`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>设置为<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>、 按住 SHIFT 或 CTRL 的同时单击单元格的行为相同的方式，除非该只能使用完整的行和列会受到影响。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.DataGridView>  
+## <a name="see-also"></a>请参阅
+
+<xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

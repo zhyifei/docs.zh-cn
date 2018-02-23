@@ -1,11 +1,12 @@
 ---
 title: "如何：使数据可用于 XAML 中的绑定"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/29/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -15,37 +16,33 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0c342f0d635a9220a88a2af79c76e2c1580dee2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f4e8e785b246e191ae8052f676331ea116b8c0d
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>如何：使数据可用于 XAML 中的绑定
 本主题讨论您可以使数据可用于在绑定的不同方式[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，取决于你的应用程序的需求。  
   
 ## <a name="example"></a>示例  
- 如果你有[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象你想要将绑定到中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，你可以使该对象可绑定是定义为资源并为其提供的一种方法`x:Key`。 在下面的示例中，你有`Person`具有名为的字符串属性对象`PersonName`。 `Person`对象在调用的命名空间中定义`SDKSample`。  
+ 如果你有[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象你想要将绑定到中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，你可以使该对象可绑定是定义为资源并为其提供的一种方法`x:Key`。 在下面的示例中，你有`Person`具有名为的字符串属性对象`PersonName`。 `Person`对象，用突出显示的行将包含显示`<src>`调用的命名空间中定义了元素， `SDKSample`。  
   
- [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
-[!code-xaml[SimpleBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
+ [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- 你可以随后可以绑定到中的对象[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，下面的示例中所示。  
+ 你可以随后可以绑定<xref:System.Windows.Controls.TextBlock>到中的对象的控件[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，如突出显示的行包含`<TextBlock>`元素所示。 
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ 或者，可以使用<xref:System.Windows.Data.ObjectDataProvider>类，如以下示例所示：  
   
- 或者，可以使用<xref:System.Windows.Data.ObjectDataProvider>类，如以下示例所示。  
+ [!code-xaml[ObjectDataProvider}](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=10-14,42)]  
   
- [!code-xaml[SimpleBinding#ODPCP](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#odpcp)]  
-  
- 定义绑定相同的方式：  
-  
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ 定义绑定一样，突出显示的行将包含`<TextBlock>`元素所示。  
   
  在此特定示例中，结果是相同的： 必须<xref:System.Windows.Controls.TextBlock>的文本内容与`Joe`。 但是，<xref:System.Windows.Data.ObjectDataProvider>类提供如能够绑定到方法的结果的功能。 你可以选择使用<xref:System.Windows.Data.ObjectDataProvider>类如果你需要它提供的功能。  
   

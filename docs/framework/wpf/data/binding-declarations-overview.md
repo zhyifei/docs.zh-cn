@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="binding-declarations-overview"></a>绑定声明概述
 本主题讨论声明绑定的不同方法。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
  在标记中创建绑定声明字符串时，必须将这些字符串附加到目标对象的特定依赖属性。 下面的示例演示如何将绑定<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>属性使用的绑定扩展、 指定<xref:System.Windows.Data.Binding.Source%2A>和<xref:System.Windows.Data.Binding.Path%2A>属性。  
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
  你可以指定的属性中的大多数<xref:System.Windows.Data.Binding>类这种方式。 有关更多信息以及与的列表的绑定扩展<xref:System.Windows.Data.Binding>属性不能将使用的绑定扩展，请参阅[绑定标记扩展](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)概述。  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding 和 PriorityBinding  
- <xref:System.Windows.Data.MultiBinding>和<xref:System.Windows.Data.PriorityBinding>不支持 XAML 扩展语法。 因此，你必须使用对象元素语法，如果你声明<xref:System.Windows.Data.MultiBinding>或<xref:System.Windows.Data.PriorityBinding>在 XAML 中。  
+ <xref:System.Windows.Data.MultiBinding> 和<xref:System.Windows.Data.PriorityBinding>不支持 XAML 扩展语法。 因此，你必须使用对象元素语法，如果你声明<xref:System.Windows.Data.MultiBinding>或<xref:System.Windows.Data.PriorityBinding>在 XAML 中。  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>在代码中创建绑定  
@@ -77,8 +79,6 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
-[!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
-[!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
  如果你正在绑定的对象是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>可以调用`SetBinding`直接而不是使用你的对象的方法<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>。 有关示例，请参阅[在代码中创建绑定](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)。  
   
