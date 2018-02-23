@@ -72,10 +72,10 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
  [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
- 正则表达式模式`(Mr\.? |Mrs\.? |Miss |Ms\.? )`匹配任何"Mr"、"先生"、"Mrs"、"太太"、"Miss"、"Ms 或"Ms。"。 对 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法的调用会将匹配的字符串替换为 <xref:System.String.Empty?displayProperty=nameWithType>；换句话说，它从原始字符串中将其移除。  
+ 正则表达式模式`(Mr\.? |Mrs\.? |Miss |Ms\.? )`匹配任何"Mr"、"Mr."、"Mrs"、"Mrs."、"Miss"、"Ms 或"Ms."。 对 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法的调用会将匹配的字符串替换为 <xref:System.String.Empty?displayProperty=nameWithType>；换句话说，将其从原始字符串中移除。  
   
 ### <a name="example-2-identifying-duplicated-words"></a>示例 2：标识重复的单词  
- 意外地重复单词是编写器常犯的错误。 可以使用正则表达式标识重复的单词，如以下示例所示。  
+ 意外地重复单词是编写者常犯的错误。 可以使用正则表达式标识重复的单词，如以下示例所示。  
   
  [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
  [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
