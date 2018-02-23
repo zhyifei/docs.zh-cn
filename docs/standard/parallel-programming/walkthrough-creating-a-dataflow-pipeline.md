@@ -1,12 +1,8 @@
 ---
 title: "演练：创建数据流管道"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +12,22 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d63fb872382bfc0a3ba3b8637c7357ab65c58fbf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2d0c886a443263897330dbd46a7f6f194bb20857
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>演练：创建数据流管道
-尽管可以使用<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>， <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>，和<xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType>方法来接收来自消息源块，也可以连接消息块来形成*数据流管道*。 数据流管道是一系列的组件，或*数据流块*，其中每个执行一个参与更大目标的特定任务。 数据流管道中的每个数据流块会在收到来自另一数据流块的消息时执行工作。 这就好比是汽车制造装配线。 每辆汽车通过装配线时，一站组装车架，下一站则安装引擎，以此类推。 因为装配线可以同时装配多辆汽车，所以比一次装配整辆车拥有更高的产出。  
-  
-> [!TIP]
->  TPL 数据流库（<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 命名空间）不是随 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 一起分发的。 若要安装<xref:System.Threading.Tasks.Dataflow>命名空间中，打开你的项目中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，选择**管理 NuGet 包**从项目菜单，然后联机搜索`Microsoft.Tpl.Dataflow`包。  
-  
- 本文档演示下载书籍的数据流管道*Iliad of Homer*从网站和搜索文本匹配单个单词与该相反单词的第一个单词字符。 本文档中数据流管道的形成包括以下步骤：  
+尽管可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 方法从源块接收消息，但也可以连接消息块来形成一个*数据流管道*。 数据流管道是一系列组件或“数据流块”，每个组件或数据流块执行一个有助于实现更大目标的特定任务。 数据流管道中的每个数据流块会在收到来自另一数据流块的消息时执行工作。 这就好比是汽车制造装配线。 每辆汽车通过装配线时，一站组装车架，下一站则安装引擎，以此类推。 因为装配线可以同时装配多辆汽车，所以比一次装配整辆车拥有更高的产出。
+
+ 本文档演示了一个数据流管道，用于从网站上下载书籍《The Iliad of Homer》并搜索文本以将各个单词与反转第一个单词字符的单词相匹配。 本文档中数据流管道的形成包括以下步骤：  
   
 1.  创建参与管道的数据流块。  
   
@@ -46,26 +41,18 @@ ms.lasthandoff: 10/18/2017
   
 6.  等待管道完成所有工作。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  开始本演练之前，请阅读[数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)。  
   
 ## <a name="creating-a-console-application"></a>创建控制台应用程序  
- 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，创建一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 或 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 控制台应用程序项目。 添加对 System.Threading.Tasks.Dataflow.dll 的引用。  
-  
- 或者，创建一个文件并将其命名为`ReverseWords.cs`(`ReverseWords.vb`为[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)])，然后在 Visual Studio 命令提示符窗口以编译该项目中运行以下命令。  
-  
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll ReverseWords.cs**  
-  
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll ReverseWords.vb**  
-  
+ 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，创建一个 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 或 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 控制台应用程序项目。 安装 System.Threading.Tasks.Dataflow NuGet 包。
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
  将以下代码添加到项目中以创建基本应用程序。  
   
  [!code-csharp[TPLDataflow_Palindromes#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#2)]
- [!code-vb[TPLDataflow_Palindromes#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#2)]  
+ [!code-vb[TPLDataflow_Palindromes#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromesemptymain.vb#2)]  
   
 ## <a name="creating-the-dataflow-blocks"></a>创建数据流块  
  将以下代码添加到 `Main` 方法以创建参与管道的数据流块。 下表总结了管道的每个成员的角色。  
@@ -77,30 +64,22 @@ ms.lasthandoff: 10/18/2017
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|从 Web 下载该书的文本。|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|将该书的文本分成单词的数组。|  
-|`filterWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|将短单词从单词数组中移除，按字母顺序对得到的单词排序，并删除重复项。|  
+|`filterWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|删除短词和单词数组中的重复项。|  
 |`findReversedWords`|<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|查找经过筛选的单词数组集合中所有将字母反转后仍在单词数组中出现的单词。|  
 |`printReversedWords`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|向控制台显示单词及对应的倒序词。|  
   
- 虽然可以将本示例中数据流管道的多个步骤合并为一个步骤，不过本示例阐释了组合多个独立数据流任务来执行较大任务的概念。 示例通过使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 使管道的每个成员能对其输入数据执行操作并将结果发送到管道中的下一步骤。 管道的 `findReversedWords` 成员是一个 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 对象，因为该成员会为每个输入生成多个独立输出。 管道的结尾 `printReversedWords` 是一个 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象，因为它会对其输入执行一个动作，但不产生结果。  
+ 虽然可以将本示例中数据流管道的多个步骤合并为一个步骤，不过本示例阐释了组合多个独立数据流任务来执行较大任务的概念。 示例通过使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 使管道的每个成员能对其输入数据执行操作并将结果发送到管道中的下一步骤。 管道的 `findReversedWords` 成员是一个 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 对象，因为该成员会为每个输入生成多个独立输出。 管道的结尾 `printReversedWords` 是一个 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 对象，因为它会对其输入执行一个操作，但不产生结果。  
   
 ## <a name="forming-the-pipeline"></a>形成管道  
  添加以下代码将每个块与管道中的下一个块连接。  
   
- 当您调用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法将源数据流块连接到目标数据流块时，源数据流块会在数据可用时将数据传播到目标块。  
+ 当您调用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法将源数据流块连接到目标数据流块时，源数据流块会在数据可用时将数据传播到目标块。 如果你还提供 <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions>，并将 <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.PropagateCompletion> 设置为 true，则在管道中成功或未成功完成一个块都将导致管道中下一个块的完成。
   
  [!code-csharp[TPLDataflow_Palindromes#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#4)]
  [!code-vb[TPLDataflow_Palindromes#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#4)]  
   
-## <a name="creating-the-completion-tasks"></a>创建完成任务  
- 添加以下代码，使每个数据流块能够在处理了所有数据之后执行一个最终操作。  
-  
- [!code-csharp[TPLDataflow_Palindromes#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#5)]
- [!code-vb[TPLDataflow_Palindromes#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#5)]  
-  
- 若要在管道中传播完成，每个完成任务都要将下一数据流块设为已完成状态。 例如，当管道的开头设置为已完成状态时，它会处理所有剩余的缓冲信息，然后运行其完成任务，将管道的第二个成员设置为已完成状态。 管道的第二个成员反过来处理所有剩余的缓冲信息，然后运行其完成任务，将管道的第三个成员设置为已完成状态。 此过程将继续，直至管道的所有成员都完成。 此示例使用 `delegate` 关键字（`Function` 中为 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）来定义延续任务。  
-  
 ## <a name="posting-data-to-the-pipeline"></a>将数据发布到管道  
- 添加以下代码以书的 URL 发布*Iliad of Homer*到数据流管道的开头。  
+ 添加以下代码，以将《The Iliad of Homer》一书的 URL 发布到数据流管道的开头。  
   
  [!code-csharp[TPLDataflow_Palindromes#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#6)]
  [!code-vb[TPLDataflow_Palindromes#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#6)]  
@@ -108,7 +87,7 @@ ms.lasthandoff: 10/18/2017
  此示例使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A?displayProperty=nameWithType> 将数据同步发送到管道的开头。 在必须将数据异步发送到数据流节点时，请使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> 方法。  
   
 ## <a name="completing-pipeline-activity"></a>完成管道活动  
- 添加以下代码将管道的开头标记为已完成。 管道的开头在处理了所有缓冲的消息后运行其延续任务。 此延续任务在管道中传播已完成状态。  
+ 添加以下代码将管道的开头标记为已完成。 管道的开头在处理了所有缓冲的消息后传播其完成。
   
  [!code-csharp[TPLDataflow_Palindromes#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#7)]
  [!code-vb[TPLDataflow_Palindromes#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#7)]  
@@ -116,7 +95,7 @@ ms.lasthandoff: 10/18/2017
  此示例通过要处理的数据流管道发送一个 URL。 如果要通过管道发送多个输入，请在提交了所有输入后调用 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A?displayProperty=nameWithType> 方法。 如果您的应用程序没有表示数据不再可用或应用程序不必等待管道完成的定义完善的点，则可以忽略此步骤。  
   
 ## <a name="waiting-for-the-pipeline-to-finish"></a>等待管道完成  
- 添加以下代码以等待管道完成。 由于本示例使用延续任务来在管道中传播完成，因此当管道的结尾完成时整体操作即已完成。  
+ 添加以下代码以等待管道完成。 管道的结尾完成时完成整个操作。  
   
  [!code-csharp[TPLDataflow_Palindromes#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#8)]
  [!code-vb[TPLDataflow_Palindromes#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#8)]  
@@ -132,9 +111,9 @@ ms.lasthandoff: 10/18/2017
 ## <a name="next-steps"></a>后续步骤  
  此示例发送一个通过数据流管道处理的 URL。 如果要通过管道发送多个输入值，可以将并行的形式引入应用程序，这与零件在汽车厂中移动的方式类似。 当管道的第一个成员将其结果发送给第二个成员时，它可以在第二个成员处理第一个结果时并行处理另一个项。  
   
- 通过使用数据流管道实现的并行称为*粗粒度的并行*因为它通常由的较少量的较大任务组成。 你还可以使用更*细粒度的并行*较小的短时间运行任务中数据流管道。 在本示例中，管道的 `findReversedWords` 成员使用 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法来并行处理工作列表中的多个项。 在粗粒度的管道中使用细粒度并行可以提高总吞吐量。  
+ 通过使用数据流管道实现的并行称为*粗粒度并行*，因为它通常由几个较大的任务组成。 此外，你也可以在数据流管道中对短时间运行的较小任务使用*粒度较细的并行*。 在本示例中，管道的 `findReversedWords` 成员使用 [PLINQ](parallel-linq-plinq.md) 并行处理工作列表中的多个项。 在粗粒度的管道中使用细粒度并行可以提高总吞吐量。  
   
- 此外可以将源数据流块连接到多个目标块以创建*数据流网络*。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法采用一个 <xref:System.Predicate%601> 对象，该对象定义了目标块是否根据其值来接受每个消息。 大多数充当源的数据流块类型按目标块连接的顺序向所有已连接的目标块提供消息，直到其中一个块接受此消息。 通过使用此筛选机制，您可以创建已连接数据流块的系统，指示某些数据通过一条路径，其他数据通过另一条路径。 有关使用筛选创建数据流网络的示例，请参阅[演练： 在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
+ 另外，还可以将数据流块连接到多个目标块，以创建“数据流网络”。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法采用一个 <xref:System.Predicate%601> 对象，该对象定义了目标块是否根据其值来接受每个消息。 大多数充当源的数据流块类型按目标块连接的顺序向所有已连接的目标块提供消息，直到其中一个块接受此消息。 通过使用此筛选机制，您可以创建已连接数据流块的系统，指示某些数据通过一条路径，其他数据通过另一条路径。 有关使用筛选创建数据流网络的示例，请参阅[演练：在 Windows 窗体应用程序中使用数据流](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据流](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
