@@ -5,29 +5,32 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: authentication [WCF], specifying the identity of a service
+helpviewer_keywords:
+- authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b741e421a8773e1a4b2d2ab7da5e119073e861ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="service-identity-and-authentication"></a>服务标识和身份验证
 服务的*终结点标识*是从 Web 服务描述语言 (wsdl) 生成的值。 此值可传播到任何客户端，用于对服务进行身份验证。 在客户端启动与终结点的通信并且服务向客户端验证自己的身份之后，客户端将终结点标识值与终结点身份验证过程返回的实际值进行比较。 如果二者匹配，则客户端确信其已与预期的服务终结点联系。 此功能，以防*网络钓鱼*通过防止客户端重定向到由恶意服务承载的终结点。  
   
- 有关演示如何标识设置的示例应用，请参阅[服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]终结点和终结点地址，请参阅[地址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)。  
+ 有关演示如何标识设置的示例应用，请参阅[服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 终结点和终结点地址，请参阅[地址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)。  
   
 > [!NOTE]
 >  在使用 NT LanMan (NTLM) 进行身份验证时，将不检查服务标识，这是因为在 NTLM 下客户端无法对服务器进行身份验证。 在计算机是 Windows 工作组的一部分时，或者在运行不支持的 Kerberos 身份验证的 Windows 早期版本时，将使用 NTLM。  
@@ -45,22 +48,22 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.EndpointAddress.Identity%2A> 类的 <xref:System.ServiceModel.EndpointAddress> 属性表示由客户端调用的服务的标识。 服务在其元数据中发布 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 当客户端开发人员运行时[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对服务终结点，则生成的配置包含的值的服务的<xref:System.ServiceModel.EndpointAddress.Identity%2A>属性。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构（如果已进行安全配置）将验证服务是否处理指定的标识。  
   
 > [!IMPORTANT]
->  元数据包含服务的预期标识，因此建议以安全方式公开服务元数据，例如，通过创建服务的 HTTPS 终结点。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
+>  元数据包含服务的预期标识，因此建议以安全方式公开服务元数据，例如，通过创建服务的 HTTPS 终结点。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [如何： 保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
   
 ## <a name="identity-types"></a>标识类型  
- 服务可以提供五种标识类型。 每种标识类型对应于一个可以包含在配置中的 `<identity>` 元素内的元素。 使用的类型取决于方案和服务的安全要求。 下表描述每种标识类型。  
+ 一种服务可以提供六种类型的标识。 每种标识类型对应于一个可以包含在配置中的 `<identity>` 元素内的元素。 使用的类型取决于方案和服务的安全要求。 下表描述每种标识类型。  
   
 |标识类型|描述|典型的方案|  
 |-------------------|-----------------|----------------------|  
 |域名系统 (DNS)|将此元素用于 X.509 证书或 Windows 帐户。 它将凭据中指定的 DNS 名称与此元素中指定的值进行比较。|DNS 检查让您可以通过 DNS 或使用者名称来使用证书。 如果使用同一个 DNS 或使用者名称来重新颁发证书，则标识检查仍然有效。 在重新颁发证书时，它会获取新的 RSA 密钥，但保留相同的 DNS 或使用者名称。 这意味着客户端不必更新其有关服务的标识信息。|  
-|证书。 `ClientCredentialType` 设置为 Certificate 时的默认值。|此元素指定要与客户端进行比较的 Base64 编码的 X.509 证书值。<br /><br /> 在使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 作为对服务进行身份验证的凭据时也使用此元素。|此元素将身份验证限制为单个基于其指纹值的证书。 这样将启用更为严格的身份验证，因为指纹值是唯一的。 这也带来一个需要注意的问题：如果使用相同使用者名称重新颁发证书，则证书也有一个新的指纹。 因此，客户端无法验证服务，除非新的指纹是已知的。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]查找证书的指纹，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
+|证书。 `ClientCredentialType` 设置为 Certificate 时的默认值。|此元素指定要与客户端进行比较的 Base64 编码的 X.509 证书值。<br /><br /> 在使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 作为对服务进行身份验证的凭据时也使用此元素。|此元素将身份验证限制为单个基于其指纹值的证书。 这样将启用更为严格的身份验证，因为指纹值是唯一的。 这也带来一个需要注意的问题：如果使用相同使用者名称重新颁发证书，则证书也有一个新的指纹。 因此，客户端无法验证服务，除非新的指纹是已知的。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 查找证书的指纹，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
 |证书引用|与前面描述的“证书”选项完全相同。 但是，此元素可让您指定证书名称并存储检索证书的位置。|与前面描述的“证书”方案相同。<br /><br /> 其优点是证书存储位置可以更改。|  
 |RSA|此元素指定要与客户端进行比较的 RSA 密钥值。 这与“证书”选项类似，但并不使用证书的指纹，而是使用证书的 RSA 密钥。|RSA 检查可让您明确地将身份验证限制为单个证书（基于其 RSA 证书）。 这样将启用更为严格的特定 RSA 密钥身份验证，不过与此对应的代价是，如果更改 RSA 密钥值，则该服务不可再用于现有客户端。|  
 |用户主体名称 (UPN)。 `ClientCredentialType` 设置为 Windows 时的默认值，并且服务进程不是在一个系统帐户下运行的。|此元素指定运行服务所依据的 UPN。 请参阅的 Kerberos 协议和标识部分[重写进行身份验证服务的标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|这将确保服务在特定的 Windows 用户帐户下运行。 用户帐户可以是当前已登录用户，也可以是在特定用户帐户下运行的服务。<br /><br /> 如果服务是在 Active Directory 环境内的域帐户下运行，则此设置将利用 Windows Kerberos 安全。|  
 |服务主体名称 (SPN)。 `ClientCredentialType` 设置为 Windows 时的默认值，并且服务进程是在一个系统帐户（LocalService、LocalSystem 或 NetworkService）下运行的。|此元素指定与服务的帐户相关联的 SPN。 请参阅的 Kerberos 协议和标识部分[重写进行身份验证服务的标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|这将确保 SPN 和与 SPN 相关联的特定 Windows 帐户标识服务。<br /><br /> 可以使用 Setspn.exe 工具将计算机帐户与服务的用户帐户进行关联。<br /><br /> 如果服务是在一个系统帐户下或具有与其关联的 SPN 名称的域帐户下运行的，并且计算机是 Active Directory 环境中的域的一个成员，则此设置将利用 Windows Kerberos 安全。|  
   
 ## <a name="specifying-identity-at-the-service"></a>在服务上指定标识  
- 通常情况下不需要设置服务上的标识，因为客户端凭据类型的选择即规定了服务元数据中公开的标识的类型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何重写或指定的服务标识，请参阅[重写进行身份验证服务的标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。  
+ 通常情况下不需要设置服务上的标识，因为客户端凭据类型的选择即规定了服务元数据中公开的标识的类型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何重写或指定的服务标识，请参阅[重写进行身份验证服务的标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。  
   
 ## <a name="using-the-identity-element-in-configuration"></a>使用\<标识 > 配置中的元素  
  如果将前面演示的绑定中的客户端凭据类型更改为 `Certificate,`，则生成的 WSDL 将包含一个 Base64 序列化 X.509 证书作为标识值，如下面的代码所示。 这是除 Windows 之外的所有客户端凭据类型的默认值。  
@@ -120,7 +123,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何堆栈绑定的自定义绑定为正确的元素，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建自定义绑定用于<xref:System.ServiceModel.Channels.SecurityBindingElement>，请参阅[如何： 为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何堆栈绑定的自定义绑定为正确的元素，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建自定义绑定用于<xref:System.ServiceModel.Channels.SecurityBindingElement>，请参阅[如何： 为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  

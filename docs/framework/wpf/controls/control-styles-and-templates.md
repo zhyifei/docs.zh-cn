@@ -24,11 +24,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30fff79b163136b4405b8fe7a5dfffeda532525d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: fc62422125d6a9a17aa353cccec6ab23eca2008b
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="control-styles-and-templates"></a>Control 样式和模板
 在 Windows Presentation Foundation (WPF) 控件具有<xref:System.Windows.Controls.ControlTemplate>，其中包含该控件的可视化树。 您可以通过修改更改的结构和控件的外观<xref:System.Windows.Controls.ControlTemplate>该控件。 没有方法来替换仅的控件，则的可视化树的一部分若要更改必须设置的控件的可视化树<xref:System.Windows.Controls.Control.Template%2A>到其新且完整的控件属性<xref:System.Windows.Controls.ControlTemplate>。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 02/19/2018
  [TabControl 样式和模板](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox 样式和模板](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
  [Thumb 样式和模板](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton 样式和模板](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [切换按钮样式和模板](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar 样式和模板](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip 样式和模板](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [TreeView 样式和模板](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  

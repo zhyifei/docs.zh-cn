@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 164b4e3bff3e327b82c78c403a0e65ec8db744ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ce70b8bca923645ea1e00a55ec4d41903d828a99
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>在绑定上配置超时值
 WCF 绑定中提供了很多超时设置。 正确设置这些超时设置不仅可以提高您服务的性能，而且对发挥您服务的可用性和安全性起到重要作用。 WCF 绑定中提供了下列超时：  
@@ -90,15 +92,15 @@ public static void Main()
   
 1.  SendTimeout — 用于初始化 OperationTimeout，此设置控制发送消息的整个过程，包括接收请求/答复服务操作的答复消息。 从回调协定方法发送答复消息时，此超时也适用。  
   
-2.  OpenTimeout — 打开通道且未指定任何显式超时值时使用  
+2.  OpenTimeout — 打开通道时未不指定任何显式超时值时使用。  
   
-3.  CloseTimeout — 关闭通道且未指定任何显式超时值时使用  
+3.  CloseTimeout — 关闭通道时未不指定任何显式超时值时使用。  
   
-4.  ReceiveTimeout – 未使用  
+4.  ReceiveTimeout – 未使用。  
   
 ### <a name="service-side-timeouts"></a>服务端超时  
  在服务端：  
   
-1.  SendTimeout、OpentTimeout、CloseTimeout 与在客户端上相同  
+1.  SendTimeout、 OpenTimeout、 CloseTimeout 是客户端上相同的。  
   
 2.  ReceiveTimeout — 服务框架层用于初始化会话空闲超时，它控制一个会话在空闲多久之后发生超时。
