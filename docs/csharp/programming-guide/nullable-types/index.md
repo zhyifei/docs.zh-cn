@@ -2,21 +2,22 @@
 title: "可以为 null 的类型（C# 编程指南）"
 ms.date: 05/15/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: af7de7ea0be5368371e4bb174f6313e98f93ac4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b874b265f4adb131a056ea1ef6fb5ffc820343f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="nullable-types-c-programming-guide"></a>可以为 null 的类型（C# 编程指南）
 可以为 null 的类型是 <xref:System.Nullable%601?displayProperty=nameWithType> 结构的实例。 可以为 null 的类型可以表示基础值类型正常范围内的值，再加上一个 `null` 值。 例如，`Nullable<Int32>` 读作“可以为 null 的 Int32”，可以将 -2147483648 到 2147483647 之间的任意值赋值给它，也可以将 `null` 赋值给它。 可以将 [true](../../../csharp/language-reference/keywords/true.md)、[false](../../../csharp/language-reference/keywords/false.md) 或 [null](../../../csharp/language-reference/keywords/null.md) 赋值给 `Nullable<bool>`。 处理数据库和其他包含不可赋值的元素的数据类型时，能够将 `null` 赋值给数值类型和布尔类型会特别有用。 例如，数据库中的布尔字段可以存储值 `true` 或 `false`，也可以处于未定义状态。 
@@ -62,9 +63,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Nullable>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C#](../../../csharp/index.md)  
  [C# 参考](../../../csharp/language-reference/index.md)  
- [“提升”的准确含义是什么？](http://go.microsoft.com/fwlink/?LinkId=112382)
+ [“提升”的准确含义是什么？](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
