@@ -4,11 +4,11 @@ hide_bc:
 title: ".NET 文档"
 description: "了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。"
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 65d0a7681c8210ee458112a5486f36ceac7f65e4
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/24/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -238,7 +238,7 @@ ms.lasthandoff: 02/09/2018
                                             </div>
                                             <div class="cardText">
                                                 <a href="https://www.asp.net/get-started">
-                                                    <h3>构建首个 Web 应用</h3>
+                                                    <h3>生成首个 Web 应用</h3>
                                                     <p>了解如何构建首个 ASP.NET Core Web 应用。</p>
                                                 </a>
                                             </div>
@@ -256,9 +256,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/">
-                                                    <h3>使用 ASP.NET Core</h3>
-                                                    <p>了解如何使用 ASP.NET Core 构建新式 Web 应用。</p>
+                                                <a href="/aspnet/core/tutorials/">
+                                                    <h3>ASP.NET Core 教程</h3>
+                                                    <p>发现适用于你的不同分步指南，了解如何开发 ASP.NET Core 应用程序。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://www.asp.net/learn">
+                                                <a href="/aspnet/overview">
                                                     <h3>什么是 ASP.NET？</h3>
                                                     <p>了解如何生成 ASP.NET Web 应用程序。</p>
                                                 </a>
@@ -296,7 +296,7 @@ ms.lasthandoff: 02/09/2018
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/first-mvc-app/start-mvc">
                                                     <h3>Visual Studio 中的 ASP.NET Core</h3>
-                                                    <p>了解使用 Visual Studio 2015 构建 ASP.NET Core MVC Web 所涉及的基础知识。</p>
+                                                    <p>了解使用 Visual Studio 生成 ASP.NET Core MVC Web 应用的基础知识。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -313,9 +313,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/framework/docker/aspnetmvc">
-                                                    <h3>容器中的 ASP.NET 应用</h3>
-                                                    <p>了解如何利用 Docker 部署 ASP.NET 应用。</p>
+                                                <a href="/aspnet/mvc/overview/deployment/docker-aspnetmvc">
+                                                    <h3>Windows 容器中的 ASP.NET MVC 应用</h3>
+                                                    <p>了解如何利用 Docker 部署 ASP.NET MVC 应用。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -332,9 +332,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>macOS 和 Visual Studio Code 上的 ASP.NET</h3>
-                                                    <p>了解如何利用 Visual Studio Code 在 macOS 上设置、构建和部署 ASP.NET Core 应用。</p>
+                                                <a href="/aspnet/core/tutorials/xplat">
+                                                    <h3>ASP.NET Core 跨平台教程</h3>
+                                                    <p>了解如何使用 ASP.NET Core 生成 Web 应用或 Web API。</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -356,8 +356,8 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/develop/net">
-                                                    <h3>.NET Azure 文档</h3>
+                                                <a href="/dotnet/azure/">
+                                                    <h3>Azure for .NET 文档</h3>
                                                     <p>了解 Azure 服务，例如 Web 应用、WebJobs、云服务和 VM。</p>
                                                 </a>
                                             </div>
@@ -413,7 +413,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://docs.microsoft.com/azure/storage/">
+                                                <a href="/azure/storage/">
                                                     <h3>Azure 存储</h3>
                                                     <p>了解 Azure 存储，并了解如何使用 Azure Blob、表格、队列和文件创建应用程序。</p>
                                                 </a>
@@ -519,7 +519,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/ms754130.aspx">
+                                                <a href="/dotnet/framework/wpf/index">
                                                     <h3>Windows Presentation Foundation (WPF)</h3>
                                                     <p>WPF 向开发人员提供了基于 XAML 的模型，用于在 Windows 上构建桌面应用程序。</p>
                                                 </a>
@@ -538,7 +538,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/dd30h2yb.aspx">
+                                                <a href="/dotnet/framework/winforms/index">
                                                     <h3>Windows 窗体</h3>
                                                     <p>快速开发面向 Windows 桌面版的业务线应用。</p>
                                                 </a>
