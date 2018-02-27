@@ -49,7 +49,7 @@ C# 编译器从 Visual Studio 2017 版本 15.3 或.NET 核心 SDK 2.0 开始支�
 ```
 
 > [!NOTE]
-> 如果使用 Visual Studio IDE 来更新 csproj 文件，IDE 将创建单独的节点，每个生成配置。 你将通常设置的值相同在所有生成配置，但你需要将其显式设置每个生成配置，或修改此设置时选择"所有配置"。 在 csproj 文件中，你将看到以下：
+> 如果使用 Visual Studio IDE 来更新 csproj 文件，IDE 将为每个生成配置创建单独的节点。 通常在所有生成配置中都设置相同的值，但你需要为每个生成配置显式地设置值，或在修改此设置时选择"所有配置"。 在 csproj 文件中，你可以看到如下内容：
 
 ```xml
 <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
