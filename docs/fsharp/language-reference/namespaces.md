@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea42156f-e1b9-4535-9383-b45f46f3f7ca
-ms.openlocfilehash: 4378afebe6fd0d9317f734457576dc75d7488bf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f3f73c4fe2197f1f3f2babbe6691ef6662d8f581
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="namespaces"></a>命名空间
 
@@ -77,7 +77,7 @@ Module2 5 6
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
-##
+## <a name="recursive-namespaces"></a>递归命名空间
 
 F # 4.1 引入了允许的所有包含的代码要相互递归的命名空间的概念。  这是通过`namespace rec`。  利用`namespace rec`可以减轻中无法编写类型和模块之间的相互引用代码的一些难题。  下面是此示例：
 
@@ -123,7 +123,7 @@ module BananaHelpers =
 
 此功能也是可用于顶级[模块](modules.md)在 F # 4.1 或更高版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [模块](modules.md)

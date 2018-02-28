@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 46de2d18-da51-40fa-a262-92edecada79d
-ms.openlocfilehash: 89401c1f889be6c5585a302e3a7ac62478573b95
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9b189903511f53d3ecceb30f3d056e189b00511d
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="modules"></a>模块
 
@@ -91,7 +91,7 @@ F # 模块是分组，如类型、 值、 函数值和中的代码的 F # 代码
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6612.fs)]
 
-## <a name="module-rec-allowing-mutual-recursive-code-at-the-module-level"></a>模块`rec`： 允许在模块级别的相互递归代码
+## <a name="recursive-modules"></a>递归模块
 
 F # 4.1 引入了允许的所有包含的代码要相互递归的模块的概念。  这是通过`module rec`。  利用`module rec`可以减轻中无法编写类型和模块之间的相互引用代码的一些难题。  下面是此示例：
 
@@ -136,7 +136,7 @@ module rec RecursiveModule =
 
 此功能，还可以在[命名空间](namespaces.md)F # 4.1。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [F # 语言参考](index.md)
 [命名空间](namespaces.md)
