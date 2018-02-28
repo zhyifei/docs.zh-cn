@@ -2,25 +2,24 @@
 title: "C# 编码约定（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 84ddc2b3cebb6bad95f5076889de11f12624b4de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
-[C# 语言规范](http://go.microsoft.com/fwlink/?LinkId=199552)未定义编码标准。 但是，Microsoft 根据本主题中的准则来开发样本和文档。  
-  
  编码约定可实现以下目的：  
   
 -   它们为代码创建一致的外观，以确保读取器专注于内容而非布局。  
@@ -30,6 +29,8 @@ ms.lasthandoff: 11/21/2017
 -   它们便于复制、更改和维护代码。  
   
 -   它们展示 C# 最佳做法。  
+
+ Microsoft 根据本主题中的准则来开发样本和文档。  
   
 ## <a name="naming-conventions"></a>命名约定  
   
@@ -200,6 +201,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="security"></a>安全性  
  请遵循[安全编码准则](../../../standard/security/secure-coding-guidelines.md)中的准则。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 编码约定](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
  [安全编码准则](../../../standard/security/secure-coding-guidelines.md)

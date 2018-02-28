@@ -2,25 +2,26 @@
 title: "泛型类（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c92efd63f7b24917dc50ca0864f1a132c5c2bf00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: afeca9fc49221551470f90f6f57d1b40e0142521
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型类（C# 编程指南）
 泛型类封装不特定于特定数据类型的操作。 泛型类最常见用法是用于链接列表、哈希表、堆栈、队列和树等集合。 无论存储数据的类型如何，添加项和从集合删除项等操作的执行方式基本相同。  
   
- 对于大多数需要集合类的方案，推荐做法是使用 .NET Framework 类库中提供的集合类。 有关使用这些类的详细信息，请参阅 [.NET Framework 类库中的泛型](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md)。  
+ 对于大多数需要集合类的方案，推荐做法是使用 .NET 类库中提供的集合类。 有关使用这些类的详细信息，请参阅 [.NET 中的泛型集合](../../../standard/generics/collections.md)。  
   
  通常，创建泛型类是从现有具体类开始，然后每次逐个将类型更改为类型参数，直到泛化和可用性达到最佳平衡。 创建自己的泛型类时，需要考虑以下重要注意事项：  
   
@@ -70,9 +71,9 @@ ms.lasthandoff: 11/21/2017
   
  泛型类是不变量。 换而言之，如果一个输入参数指定 `List<BaseClass>`，且你尝试提供 `List<DerivedClass>`，则会出现编译时错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Collections.Generic>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [泛型](../../../csharp/programming-guide/generics/index.md)  
- [保存状态的枚举器](http://go.microsoft.com/fwlink/?LinkId=112390)  
- [An Inheritance Puzzle, Part One](http://go.microsoft.com/fwlink/?LinkId=112380)（继承测验，第一部分）
+ [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)（保存枚举器状态）  
+ [An Inheritance Puzzle, Part One](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)（继承测验，第一部分）

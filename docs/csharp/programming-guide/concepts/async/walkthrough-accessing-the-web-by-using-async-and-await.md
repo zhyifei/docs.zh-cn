@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 85edc87bc8c5183f85618351034c0b043472b530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 533cb4b342e3de3eb3143b001f5a26e36e4d79b9
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>演练：使用 Async 和 Await 访问 Web (C#)
 使用 async/await 功能可以更轻松直观地编写异步程序。 你可以编写类似于同步代码的异步代码，并让编译器处理异步代码通常需要的疑难回调函数和延续。  
@@ -24,7 +25,7 @@ ms.lasthandoff: 11/21/2017
   
  本演练从对网站列表中的字节数进行求和的同步 Windows Presentation Foundation (WPF) 应用程序入手， 然后使用新功能将该应用程序转换为异步解决方案。  
   
- 如果不想自行生成应用程序，可以从[开发人员代码示例](http://go.microsoft.com/fwlink/?LinkId=255191)下载“Async 示例：访问 Web 演练（C# 和 Visual Basic）”。  
+ 如果不想自行生成应用程序，可以下载 [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)（异步示例：访问 Web 演练（C# 和 Visual Basic））。  
   
  在本演练中，你将完成下列任务：  
   
@@ -52,8 +53,8 @@ ms.lasthandoff: 11/21/2017
   
 -   [示例](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>先决条件  
- 计算机上必须安装 Visual Studio 2012 或更高版本。 有关详细信息，请访问 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkId=235233)。  
+> [!NOTE]
+>  若要运行该示例，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
 ###  <a name="CreateWPFApp"></a> 创建 WPF 应用程序  
   
@@ -731,12 +732,12 @@ namespace AsyncExampleWPF
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [异步示例： 访问 Web 演练 （C# 和 Visual Basic）](http://go.microsoft.com/fwlink/?LinkId=255191)  
+## <a name="see-also"></a>请参阅  
+ [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)（异步示例：访问 Web 演练（C# 和 Visual Basic））  
  [async](../../../../csharp/language-reference/keywords/async.md)  
  [await](../../../../csharp/language-reference/keywords/await.md)  
  [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
- [基于任务的异步编程 (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [基于任务的异步编程 (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
  [如何：使用 Task.WhenAll 扩展异步演练 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [如何：使用 Async 和 Await 并行发起多个 Web 请求 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

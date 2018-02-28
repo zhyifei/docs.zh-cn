@@ -1,92 +1,73 @@
 ---
 title: "为 Visual Basic 程序员提供的附加资源"
-ms.date: 07/20/2015
+description: "发现 Web 上要学习的资源，提出问题并了解有关 Visual Basic 的详细信息。"
+ms.date: 02/21/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic, additional resources
-- Help
 - resources [Visual Basic], additional
-- Help, newsgroups
-- Web sites, Visual Studio
-- webcasts
 - Help, Visual Basic Web sites
-- newsgroups, Visual Studio
-- support, Visual Studio sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4f37aaffa33d618a54ea56252b7183f9bce1ed7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: mairaw
+ms.author: mairaw
+ms.openlocfilehash: 9b2e9718d6f342bdd0865a9593e85683a5bf9a45
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="additional-resources-for-visual-basic-programmers"></a>为 Visual Basic 程序员提供的附加资源
-以下网站提供指南，并且可以帮助你找到常见问题的答案。  
-  
-## <a name="microsoft-resources"></a>Microsoft 资源  
-  
-### <a name="on-the-web"></a>在 Web 上  
-  
-|术语|定义|  
-|----------|----------------|  
-|[Microsoft Visual Basic 开发中心](http://go.microsoft.com/fwlink/?LinkID=47768)|提供代码示例、升级信息、视频、免费下载以及技术内容。|  
-|[Microsoft Visual Basic 团队博客](http://go.microsoft.com/fwlink/?LinkID=123815)|提供对 Visual Basic Team Blog 的访问。|  
-|[Microsoft ASP.NET](http://go.microsoft.com/fwlink/?LinkID=51657)|提供文章、演示、工具预览以及用 Visual Basic 进行 Web 开发的相关信息。|  
-|[MSDN 杂志](http://msdn.microsoft.com/magazine/cc159292.aspx)|提供有关 Visual Basic 的深入文章。|  
-|[Microsoft 模式与实践](http://msdn.microsoft.com/practices/default.aspx)|提供已应用的工程指南，包括生产质量源代码和文档。|  
-  
-### <a name="code-samples"></a>代码示例  
-  
-|术语|定义|  
-|----------|----------------|  
-|[代码库](http://code.msdn.microsoft.com/)|下载并与开发人员社区共享示例应用程序和其他资源。|  
-|[GitHub](http://www.github.com/)|承载开放源代码软件项目。 可以使用 GitHub 查找开放源代码软件或创建新项目以便与世界分享。|  
-|[Visual Basic 代码示例](http://msdn.microsoft.com/vbasic/ms789074)|在 Visual Basic 中提供应用程序、Web 和数据示例。|  
-  
-### <a name="forums"></a>论坛  
-  
-|术语|定义|  
-|----------|----------------|  
-|[Visual Basic 语言](http://go.microsoft.com/fwlink/?LinkId=145963)|讨论 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言语法和编译器。|  
-|[Visual Basic 互操作和升级](http://go.microsoft.com/fwlink/?LinkId=145966)|讨论升级到 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 并使用互操作性功能。|  
-|[Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)|讨论在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成的开发环境中工作。|  
-|[Visual Basic Power Packs](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|讨论作为 Visual Basic Power Packs 的一部分的外接程序、控件、组件、示例以及工具。|  
-|[Visual Basic 常规信息](http://go.microsoft.com/fwlink/?LinkId=145973)|讨论其他论坛中未涉及的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 相关问题。|  
-  
-### <a name="chats-and-discussion-groups"></a>聊天和讨论组  
-  
-|术语|定义|  
-|----------|----------------|  
-|[MSDN 讨论组](http://go.microsoft.com/fwlink/?LinkId=145961)|提供新闻组体验，你可以通过它以社区形式与世界各地的专家进行交流。|  
-|[MSDN 聊天](http://go.microsoft.com/fwlink/?LinkId=145962)|提供关于 Microsoft 产品或技术的讨论。 每次聊天都由一位或多位 Microsoft 专家主持。 聊天结束后可以获得抄本。|  
-  
-### <a name="videos-and-webcasts"></a>视频与 Web 广播  
-  
-|术语|定义|  
-|----------|----------------|  
-|[Channel9](http://go.microsoft.com/fwlink/?LinkID=123827)|提供了通过视频、Wikis 和论坛进行连续交流的社区。|  
-|[我是 VB](http://msdn.microsoft.com/vbasic/dd776132)|观看这些采访并讨论专家为何青睐 Visual Basic 和 Visual Studio。|  
-  
-### <a name="support"></a>支持  
-  
-|术语|定义|  
-|----------|----------------|  
-|[Microsoft 帮助和支持](http://go.microsoft.com/fwlink/?LinkID=108287)|提供对知识库 (KB) 文章、下载和更新、支持 Webcast 以及其他服务的访问。|  
-|[Microsoft Connect](http://connect.microsoft.com/)|可供你报告 Bug 或向 Microsoft 提供有关 Visual Studio 的建议。 你也可以通过在 **“帮助”** 菜单上选择 **“报告 Bug”** 来报告 Bug。|  
-  
-## <a name="third-party-resources"></a>第三方资源  
- MSDN 网站提供了当前相关的第三方网站和新闻组的信息。 有关可用资源的最新列表，请参阅 [MSDN Visual Basic 社区网站](http://go.microsoft.com/fwlink/?LinkID=77372)。  
-  
-|术语|定义|  
-|----------|----------------|  
-|[DevX Visual Basic 区域](http://go.microsoft.com/fwlink/?LinkId=145978)|为当今的 Visual Basic 开发人员提供深入的技术文章。|  
-|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|提供了一个论坛，供大家在 DevX 论坛中讨论 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的新功能。|  
-  
-## <a name="see-also"></a>另请参阅  
- [入门](../../visual-basic/getting-started/index.md)  
- [与我们交流](/visualstudio/ide/talk-to-us)
+# <a name="additional-resources"></a>其他资源
+
+以下网站提供指南，并且可以帮助你找到常见问题的答案。
+
+## <a name="microsoft-resources"></a>Microsoft 资源
+
+### <a name="on-the-web"></a>在 Web 上
+
+|术语|定义|
+|----------|----------------|
+|[Visual Basic .NET Language Design](https://github.com/dotnet/vblang)（Visual Basic .NET 语言设计）|GitHub 上用于 Visual Basic .NET 语言设计的官方存储库。|
+|[Microsoft Visual Basic 团队博客](https://blogs.msdn.microsoft.com/vbteam/)|提供对 Visual Basic Team Blog 的访问。|
+
+### <a name="code-samples"></a>代码示例
+
+|术语|定义|
+|----------|----------------|
+|[代码库](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|下载并与开发人员社区共享示例应用程序和其他资源。|
+|[Visual Basic 文档示例](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|包含整个 Visual Basic 和 .NET 文档中使用的示例。|
+
+### <a name="forums"></a>论坛
+
+|术语|定义|
+|----------|----------------|
+|[Visual Basic 论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|讨论常规 Visual Basic 问题。|
+
+### <a name="videos-and-webcasts"></a>视频与网络广播
+
+|术语|定义|
+|----------|----------------|
+|[Channel9](https://channel9.msdn.com/)|提供了通过视频、Wikis 和论坛进行连续交流的社区。|
+
+### <a name="support"></a>支持
+
+|术语|定义|
+|----------|----------------|
+|[Microsoft 支持](https://support.microsoft.com)|提供对知识库 (KB) 文章、下载和更新、支持 Webcast 以及其他服务的访问。|
+|[Visual Studio 问题](https://developercommunity.visualstudio.com)|可供你报告 Bug 或向 Microsoft 提供有关 .NET 和 Visual Studio 的建议。 也可在 Visual Studio 中通过选择“帮助” > “发送反馈” > “报告问题”来报告错误。|
+
+## <a name="third-party-resources"></a>第三方资源
+
+|术语|定义|
+|----------|----------------|
+|[VBForums](http://www.vbforums.com/)|提供讨论 Visual Basic、.NET 等内容的论坛。|
+|[vbCity](http://vbcity.com/)|供人们学习和询问有关 Visual Basic 和 .NET 问题的社区网站。|
+|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|Stack Overflow 是面向开发人员的问答网站。|
+
+## <a name="see-also"></a>请参阅
+
+[Visual Basic 入门](../../visual-basic/getting-started/index.md)  
+[与我们交流](/visualstudio/ide/talk-to-us)  

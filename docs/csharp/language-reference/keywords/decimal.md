@@ -2,21 +2,23 @@
 title: "decimal（C# 参考）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - decimal_CSharpKeyword
 - decimal
-helpviewer_keywords: decimal keyword [C#]
+helpviewer_keywords:
+- decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0e03ab24f5d22133e061be3872de00a143bbeca8
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+ms.openlocfilehash: 0da001851c681fe4d698b920d9668b2f6b731e3a
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="decimal-c-reference"></a>decimal（C# 参考）
 `decimal` 关键字指示 128 位数据类型。 与其他浮点型相比，`decimal` 类型具有更高的精度和更小的范围，这使它适合于财务和货币计算。 `decimal` 类型的大致范围和精度如下表所示。  
@@ -25,7 +27,7 @@ ms.lasthandoff: 11/25/2017
 |----------|-----------------------|---------------|-------------------------|  
 |`decimal`|(-7.9 x 10<sup>28</sup> - 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> - 10<sup>28</sup>)|28-29 个有效位|<xref:System.Decimal?displayProperty=nameWithType>|  
 
-默认值`decimal`是 0 m。
+`decimal` 的默认值为 0m。
   
 ## <a name="literals"></a>文本  
  如果希望实数被视为 `decimal` 类型，请使用后缀 m 或 M，例如：  
@@ -43,7 +45,7 @@ decimal myMoney = 300.5m;
 decimal myMoney = 300;  
 ```  
   
- 在其他浮点型和 `decimal` 类型之间不存在隐式转换；因此，必须使用强制转换在这两个类型之间转换。 例如:   
+ 在其他浮点型和 `decimal` 类型之间不存在隐式转换；因此，必须使用强制转换在这两个类型之间转换。 例如:  
   
 ```csharp
 decimal myMoney = 99.9m;  
@@ -64,6 +66,7 @@ myMoney = (decimal)x;
  下面的示例尝试添加 [double](../../../csharp/language-reference/keywords/double.md) 和 `decimal` 变量，这会导致编译器错误。  
   
 ```csharp  
+decimal dec = 0m;
 double dub = 9;  
 // The following line causes an error that reads "Operator '+' cannot be applied to   
 // operands of type 'double' and 'decimal'"  
@@ -90,7 +93,7 @@ Console.WriteLine((double)dec + dub);
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Decimal>  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  

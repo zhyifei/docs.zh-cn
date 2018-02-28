@@ -2,20 +2,21 @@
 title: "如何：循环访问目录树（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f45bdc4a08922842b079be3ef9d112693ca5d7a
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何：循环访问目录树（C# 编程指南）
 短语“循环访问目录树”的意思是访问特定根文件夹下的每个嵌套子目录中的每个文件，可以是任意深度。 不需要打开每个文件。 可以以 `string` 的形式只检索文件或子目录的名称，也可以以 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 对象的形式检索其他信息。  
@@ -59,9 +60,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  如果必须在内存或磁盘上存储目录树的内容，那么最佳选择是仅存储每个文件的 <xref:System.IO.FileSystemInfo.FullName%2A> 属性（类型为 `string`）。 然后可以根据需要使用此字符串创建新的 <xref:System.IO.FileInfo> 或 <xref:System.IO.DirectoryInfo> 对象，或打开需要进行其他处理的任何文件。  
   
 ## <a name="robust-programming"></a>可靠编程  
- 可靠的文件迭代代码必须考虑文件系统的诸多复杂性。 有关详细信息，请参阅 [NTFS 技术参考](http://go.microsoft.com/fwlink/?LinkId=79488)。  
+ 可靠的文件迭代代码必须考虑文件系统的诸多复杂性。 有关 Windows 文件系统的详细信息，请参阅 [NTFS Technical Reference](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4)（NTFS 技术参考）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IO>  
- [LINQ 和文件目录](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [LINQ 和文件目录](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)

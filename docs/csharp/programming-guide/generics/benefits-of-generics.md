@@ -2,23 +2,25 @@
 title: "泛型的优点（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: generics [C#], benefits
+helpviewer_keywords:
+- generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f46a328208b49aa33130a020e1a85b6f7aa7d97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2eb4aad3d23e459af738045b37ae3f1e8f33da06
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>泛型的优点（C# 编程指南）
 公共语言运行时和 C# 语言早期版本中存在一个局限，其中通过将类型与通用基类型 <xref:System.Object> 相互强制完成泛化，泛型提供了此局限的解决方案。 通过创建泛型类，可在编译时创建类型安全的集合。  
   
- 通过编写一个使用 .NET Framework 类库中 <xref:System.Collections.ArrayList> 集合类的小程序，可体现出使用非泛型集合类的局限。 <xref:System.Collections.ArrayList> 是一个极为方便的集合类，无需进行修改即可用于存储任何引用或值类型。  
+ 通过编写一个使用 .NET 类库中 <xref:System.Collections.ArrayList> 集合类的小程序，可体现出使用非泛型集合类的局限。 <xref:System.Collections.ArrayList> 类的实例可以存储任何引用或值类型。  
   
  [!code-csharp[csProgGuideGenerics#4](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_1.cs)]  
   
@@ -32,15 +34,16 @@ ms.lasthandoff: 11/21/2017
   
  在 C# 语言 1.0 和 1.1 版中，仅可通过编写自己的类型特定集合来避免 .NET Framework 基类库集合类中出现泛化代码的风险。 当然，由于这样的类不能重复用于多个数据类型，因此你并不具有泛化的优势，且必须为要存储的每个类型重写类。  
   
- <xref:System.Collections.ArrayList> 以及其他相似的类真正需要的是一种方式，这种方式使客户端代码基于每个实例指定打算使用的特定数据类型。 这会省去向上转换为 `T:System.Object` 的必要，并且使编译器可能执行类型检查。 换而言之，<xref:System.Collections.ArrayList> 需要一个类型参数。 那正是泛型所提供的内容。 在泛型 <xref:System.Collections.Generic.List%601> 集合中，在 `N:System.Collections.Generic` 命名空间中，向集合添加项的操作类似于如下所示：  
+ <xref:System.Collections.ArrayList> 以及其他相似的类真正需要的是一种方式，这种方式使客户端代码基于每个实例指定打算使用的特定数据类型。 这会省去向上转换为 <xref:System.Object> 的必要，并且使编译器可能执行类型检查。 换而言之，<xref:System.Collections.ArrayList> 需要一个类型参数。 那正是泛型所提供的内容。 在泛型 <xref:System.Collections.Generic.List%601> 集合中，在 <xref:System.Collections.Generic> 命名空间中，向集合添加项的操作类似于如下所示：  
   
  [!code-csharp[csProgGuideGenerics#6](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_3.cs)]  
   
  对于客户端代码，与 <xref:System.Collections.ArrayList> 相比，<xref:System.Collections.Generic.List%601> 添加的唯一语法是声明和实例化中的类型参数。 虽然编码略为复杂，但与 <xref:System.Collections.ArrayList> 相比，你创建的列表不仅更加安全，而且创建速度大为提高，尤其是在列表项为值类型时。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Collections.Generic>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
  [装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
- [最佳实践集合](http://go.microsoft.com/fwlink/?LinkId=112403)
+ [何时使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  
+ [集合准则](../../../standard/design-guidelines/guidelines-for-collections.md)   

@@ -2,23 +2,25 @@
 title: "new 修饰符（C# 参考）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: new modifier keyword [C#]
+helpviewer_keywords:
+- new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28124c2f3ecef01fd4bc43fe7cfc975dd6466506
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4653cdc15415f0601d07cecb78d1c8e492994b11
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="new-modifier-c-reference"></a>new 修饰符（C# 参考）
 在用作声明修饰符时，`new` 关键字可以显式隐藏从基类继承的成员。 隐藏继承的成员时，该成员的派生版本将替换基类版本。 虽然可以不使用 `new` 修饰符来隐藏成员，但将收到编译器警告。 如果使用 `new` 来显式隐藏成员，将禁止此警告。  
   
- 若要隐藏继承的成员，请使用相同名称在派生类中声明该成员，并使用 `new` 修饰符对其进行修饰。 例如:   
+ 若要隐藏继承的成员，请使用相同名称在派生类中声明该成员，并使用 `new` 修饰符对其进行修饰。 例如:  
   
  [!code-csharp[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_1.cs)]  
   
@@ -26,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
  通过继承隐藏名称采用下列形式之一：  
   
--   通常，在类或结构中引入的常数、字段、属性或类型会隐藏与其共享名称的所有基类成员。  有三种特殊情况。  例如，如果将名称为 `N` 的新字段声明为不可调用的类型，并且基类型将 `N` 声明为一种方法，则新字段在调用语法中不会隐藏基声明。  请参阅[5.0 C# 语言规范](http://go.microsoft.com/fwlink/?LinkId=199552)有关详细信息 （请参见"成员查找"部分"Expressions"中）。  
+-   通常，在类或结构中引入的常数、字段、属性或类型会隐藏与其共享名称的所有基类成员。  有三种特殊情况。  例如，如果将名称为 `N` 的新字段声明为不可调用的类型，并且基类型将 `N` 声明为一种方法，则新字段在调用语法中不会隐藏基声明。  请参阅 [C# 5.0 语言规范](https://www.microsoft.com/download/details.aspx?id=7029)了解详细信息（参阅“表达式”一节中的“成员查找”部分）。  
   
 -   类或结构中引入的方法会隐藏基类中共享该名称的属性、字段和类型。 它还会隐藏具有相同签名的所有基类方法。  
   
@@ -55,7 +57,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

@@ -1,23 +1,25 @@
 ---
 title: "Visual Basic 的新增功能"
-ms.date: 04/27/2017
+ms.date: 02/15/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: VB.StartPage.WhatsNew
+f1_keywords:
+- VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -25,10 +27,13 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="current-version"></a>当前版本
 
-Visual Basic/Visual Studio .NET 2017   
-有关新功能，请参阅 [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 15.5   
+有关新功能，请参阅 [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>早期版本
+
+Visual Basic 15.3   
+有关新功能，请参阅 [Visual Basic 15.3](#visual-basic-153)
 
 Visual Basic/Visual Studio .NET 2015   
 有关新功能，请参阅 [Visual Basic 14](#visual-basic-14)
@@ -53,6 +58,41 @@ Visual Basic/Visual Studio .NET 2003
 
 Visual Basic/Visual Studio .NET 2002   
 Visual Basic.NET 的首次发布
+
+## <a name="visual-basic-155"></a>Visual Basic 15.5
+
+[非尾随命名参数](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+
+在 Visual Basic 15.3 和更早版本中，当方法通过位置和名称调用包含的参数时，位置参数必须位于命名参数之前。 从 Visual Basic 15.5 开始，只要到最后一个位置参数的所有参数都处于正确的位置，位置参数和命名参数就可以以任何顺序出现。 当使用命名参数提高代码的可读性时，此方法特别有用。
+
+例如，以下方法调用在命名参数之间有两个位置参数。 命名参数清楚地表明值 19 代表年龄。
+
+```vb
+StudentInfo.Display("Mary", age:=19, #9/21/1998#)
+```
+
+**前导十六进制/二进制/八进制分隔符**
+
+Visual Basic 2017 新增支持下划线字符 (`_`) 作为数字分隔符。 从 Visual Basic 15.5 开始，可以使用下划线字符作为前缀和十六进制、二进制或八进制数字之间的前导分隔符。 以下示例使用前导数字分隔符将 3,271,948,384 定义为十六进制数字：
+
+```vb
+Dim number As Integer = &H_C305_F860
+``` 
+若要使用下划线字符作为前导分隔符，必须将以下元素添加到 Visual Basic 项目 (*.vbproj) 文件中：
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
+## <a name="visual-basic-153"></a>Visual Basic 15.3
+
+[命名元组推理](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+
+从变量分配元组元素的值时，Visual Basic 会从相应的变量名推断元组元素名；因此无需显式命名元组元素。 以下示例使用推理创建元祖，其中包含三个命名元素：`state`、`stateName` 和 `capital`。
+
+[!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
