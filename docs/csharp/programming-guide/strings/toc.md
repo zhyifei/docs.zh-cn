@@ -1,6 +1,4 @@
 # [字符串](index.md)
 ## [如何：修改字符串内容](how-to-modify-string-contents.md)
 ## [如何：比较字符串](how-to-compare-strings.md)
-## [如何：使用字符串方法搜索字符串](how-to-search-strings-using-string-methods.md)
-## [如何：使用正则表达式搜索字符串](how-to-search-strings-using-regular-expressions.md)
 ## [如何：确定字符串是否表示数值](how-to-determine-whether-a-string-represents-a-numeric-value.md)

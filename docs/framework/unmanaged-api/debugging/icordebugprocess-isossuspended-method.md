@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorDebugProcess.IsOSSuspended
-api_location: mscordbi.dll
-api_type: COM
-f1_keywords: ICorDebugProcess::IsOSSuspended
+api_name:
+- ICorDebugProcess.IsOSSuspended
+api_location:
+- mscordbi.dll
+api_type:
+- COM
+f1_keywords:
+- ICorDebugProcess::IsOSSuspended
 helpviewer_keywords:
 - IsOSSuspended method [.NET Framework debugging]
 - ICorDebugProcess::IsOSSuspended method [.NET Framework debugging]
 ms.assetid: 83406cb2-5797-4402-872d-89c9516aefec
-topic_type: apiref
-caps.latest.revision: "11"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 97c394e3084007227cf157c62a12df3f5cfac8e6
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -44,7 +51,7 @@ HRESULT IsOSSuspended(
  <span data-ttu-id="d556d-106">[in]问题的线程的 ID。</span><span class="sxs-lookup"><span data-stu-id="d556d-106">[in] The ID of thread in question.</span></span>  
   
  `pbSuspended`  
- <span data-ttu-id="d556d-107">[out]一个布尔值，是一个指向`true`如果指定的线程已挂起; 否则为 *`pbSuspended`是`false`。</span><span class="sxs-lookup"><span data-stu-id="d556d-107">[out] A pointer to a Boolean value that is `true` if the specified thread has been suspended; otherwise *`pbSuspended` is `false`.</span></span>  
+ <span data-ttu-id="d556d-107">[out]一个布尔值，是一个指向`true`如果指定的线程已挂起; 否则为 \*`pbSuspended`是`false`。</span><span class="sxs-lookup"><span data-stu-id="d556d-107">[out] A pointer to a Boolean value that is `true` if the specified thread has been suspended; otherwise \*`pbSuspended` is `false`.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="d556d-108">备注</span><span class="sxs-lookup"><span data-stu-id="d556d-108">Remarks</span></span>  
  <span data-ttu-id="d556d-109">当指定的线程已被暂停由于调试器停止此过程中时，指定的线程的 Win32 挂起计数就会递增 1。</span><span class="sxs-lookup"><span data-stu-id="d556d-109">When the specified thread has been suspended as a result of the debugger stopping this process, the specified thread's Win32 suspend count is incremented by one.</span></span> <span data-ttu-id="d556d-110">调试器用户界面 (UI) 可能要将此信息打包在帐户，如果该命令显示操作系统 (OS) 挂起的用户的线程计数。</span><span class="sxs-lookup"><span data-stu-id="d556d-110">The debugger user interface (UI) may want to take this information into account if it displays the operating system (OS) suspend count of the thread to the user.</span></span>  
