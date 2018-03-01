@@ -2,9 +2,11 @@
 title: "C# 运算符"
 ms.date: 03/09/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: cs.operators
+f1_keywords:
+- cs.operators
 helpviewer_keywords:
 - boolean operators [C#]
 - expressions [C#], operators
@@ -20,7 +22,7 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
@@ -90,12 +92,12 @@ ms.lasthandoff: 11/21/2017
   
  <span data-ttu-id="82e44-144">[&x](../../../csharp/language-reference/operators/and-operator.md)：地址。</span><span class="sxs-lookup"><span data-stu-id="82e44-144">[&x](../../../csharp/language-reference/operators/and-operator.md) – address of.</span></span>  
   
- <span data-ttu-id="82e44-145">[*x](../../../csharp/language-reference/operators/multiplication-operator.md)：取消引用。</span><span class="sxs-lookup"><span data-stu-id="82e44-145">[*x](../../../csharp/language-reference/operators/multiplication-operator.md) – dereferencing.</span></span>  
+ <span data-ttu-id="82e44-145">[\*x](../../../csharp/language-reference/operators/multiplication-operator.md)：取消引用。</span><span class="sxs-lookup"><span data-stu-id="82e44-145">[\*x](../../../csharp/language-reference/operators/multiplication-operator.md) – dereferencing.</span></span>  
   
 ## <a name="multiplicative-operators"></a><span data-ttu-id="82e44-146">乘法运算符</span><span class="sxs-lookup"><span data-stu-id="82e44-146">Multiplicative Operators</span></span>  
  <span data-ttu-id="82e44-147">这些运算符的优先级比下一章节高，比上一章节低。</span><span class="sxs-lookup"><span data-stu-id="82e44-147">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>  <span data-ttu-id="82e44-148">请注意，你可以单击运算符转到包含示例的详细页面。</span><span class="sxs-lookup"><span data-stu-id="82e44-148">NOTE, you can click on the operators to go the detailed pages with examples.</span></span>  
   
- <span data-ttu-id="82e44-149">[x * y](../../../csharp/language-reference/operators/multiplication-operator.md)：乘法。</span><span class="sxs-lookup"><span data-stu-id="82e44-149">[x * y](../../../csharp/language-reference/operators/multiplication-operator.md) – multiplication.</span></span>  
+ <span data-ttu-id="82e44-149">[x \* y](../../../csharp/language-reference/operators/multiplication-operator.md)：乘法。</span><span class="sxs-lookup"><span data-stu-id="82e44-149">[x \* y](../../../csharp/language-reference/operators/multiplication-operator.md) – multiplication.</span></span>  
   
  <span data-ttu-id="82e44-150">[x / y](../../../csharp/language-reference/operators/division-operator.md)：除法。</span><span class="sxs-lookup"><span data-stu-id="82e44-150">[x / y](../../../csharp/language-reference/operators/division-operator.md) – division.</span></span>  <span data-ttu-id="82e44-151">如果操作数均为整数，则结果为整数，舍去小数（例如，`-7 / 2 is -3`）。</span><span class="sxs-lookup"><span data-stu-id="82e44-151">If the operands are integers, the result is an integer truncated toward zero (for example, `-7 / 2 is -3`).</span></span>  
   
@@ -181,7 +183,7 @@ ms.lasthandoff: 11/21/2017
   
  <span data-ttu-id="82e44-227">[x -= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)：递减。</span><span class="sxs-lookup"><span data-stu-id="82e44-227">[x -= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) – decrement.</span></span>  <span data-ttu-id="82e44-228">`x` 值减 `y` 值，结果存储在 `x` 中，并返回新值。</span><span class="sxs-lookup"><span data-stu-id="82e44-228">Subtract the value of `y` from the value of `x`, store the result in `x`, and return the new value.</span></span>  <span data-ttu-id="82e44-229">如果 `x` 指定 `event`，则 `y` 必须是 C# 作为事件处理程序删除的相应函数</span><span class="sxs-lookup"><span data-stu-id="82e44-229">If `x` designates an `event`, then `y` must be an appropriate function that C# removes as an event handler</span></span>  
   
- <span data-ttu-id="82e44-230">[x *= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)：乘法赋值。</span><span class="sxs-lookup"><span data-stu-id="82e44-230">[x *= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) – multiplication assignment.</span></span>  <span data-ttu-id="82e44-231">`x` 值乘以 `y` 值，结果存储在 `x` 中，并返回新值。</span><span class="sxs-lookup"><span data-stu-id="82e44-231">Multiply the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span>  
+ <span data-ttu-id="82e44-230">[x \*= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)：乘法赋值。</span><span class="sxs-lookup"><span data-stu-id="82e44-230">[x \*= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) – multiplication assignment.</span></span>  <span data-ttu-id="82e44-231">`x` 值乘以 `y` 值，结果存储在 `x` 中，并返回新值。</span><span class="sxs-lookup"><span data-stu-id="82e44-231">Multiply the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span>  
   
  <span data-ttu-id="82e44-232">[x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md)：除法赋值。</span><span class="sxs-lookup"><span data-stu-id="82e44-232">[x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md) – division assignment.</span></span>  <span data-ttu-id="82e44-233">`x` 值除以 `y` 值，结果存储在 `x` 中，并返回新值。</span><span class="sxs-lookup"><span data-stu-id="82e44-233">Divide the value of `x` by the value of `y`, store the result in `x`, and return the new value.</span></span>  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 11/21/2017
  <span data-ttu-id="82e44-246">[=>](../../../csharp/language-reference/operators/lambda-operator.md)：lambda 声明。</span><span class="sxs-lookup"><span data-stu-id="82e44-246">[=>](../../../csharp/language-reference/operators/lambda-operator.md) – lambda declaration.</span></span>  
   
 ## <a name="arithmetic-overflow"></a><span data-ttu-id="82e44-247">算术溢出</span><span class="sxs-lookup"><span data-stu-id="82e44-247">Arithmetic Overflow</span></span>  
- <span data-ttu-id="82e44-248">算术运算符（[+](../../../csharp/language-reference/operators/addition-operator.md)、[-](../../../csharp/language-reference/operators/subtraction-operator.md)、[*](../../../csharp/language-reference/operators/multiplication-operator.md)、[/](../../../csharp/language-reference/operators/division-operator.md)）的计算结果可能会超出所涉数值类型的可取值范围。</span><span class="sxs-lookup"><span data-stu-id="82e44-248">The arithmetic operators ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) can produce results that are outside the range of possible values for the numeric type involved.</span></span> <span data-ttu-id="82e44-249">详细信息应参考特定运算符的相关章节，而一般情况下：</span><span class="sxs-lookup"><span data-stu-id="82e44-249">You should refer to the section on a particular operator for details, but in general:</span></span>  
+ <span data-ttu-id="82e44-248">算术运算符（[+](../../../csharp/language-reference/operators/addition-operator.md)、[-](../../../csharp/language-reference/operators/subtraction-operator.md)、[\*](../../../csharp/language-reference/operators/multiplication-operator.md)、[/](../../../csharp/language-reference/operators/division-operator.md)）的计算结果可能会超出所涉数值类型的可取值范围。</span><span class="sxs-lookup"><span data-stu-id="82e44-248">The arithmetic operators ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [\*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) can produce results that are outside the range of possible values for the numeric type involved.</span></span> <span data-ttu-id="82e44-249">详细信息应参考特定运算符的相关章节，而一般情况下：</span><span class="sxs-lookup"><span data-stu-id="82e44-249">You should refer to the section on a particular operator for details, but in general:</span></span>  
   
 - <span data-ttu-id="82e44-250">整数算术溢出或者引发 <xref:System.OverflowException>，或者放弃结果的最高有效位。</span><span class="sxs-lookup"><span data-stu-id="82e44-250">Integer arithmetic overflow either throws an <xref:System.OverflowException> or discards the most significant bits of the result.</span></span> <span data-ttu-id="82e44-251">整数被零除总是引发 <xref:System.DivideByZeroException>。</span><span class="sxs-lookup"><span data-stu-id="82e44-251">Integer division by zero always throws a <xref:System.DivideByZeroException>.</span></span>  
 
