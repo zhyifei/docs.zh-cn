@@ -4,7 +4,8 @@ description: "使用 NUnit 分步构建一个 Visual Basic 示例解决方案，
 author: rprouse
 ms.date: 12/01/2017
 ms.topic: article
-dev_langs: vb
+dev_langs:
+- vb
 ms.prod: .net-core
 ms.openlocfilehash: 2166da36fe9d0297f03e7c38249135d281b9a5d6
 ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
