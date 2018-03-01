@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 66b2503744e9024deac3d6dabea57da4fd393bd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>要开始使用 Azure 文件存储使用 F # #
 
@@ -22,7 +22,7 @@ Azure 文件存储区都提供在云中使用标准的文件共享的服务[服�
 
 有关文件存储的概念概述，请参阅[文件存储的.NET 指南](/azure/storage/storage-dotnet-how-to-use-files)。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 若要使用本指南，你必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)。
 此外需要为此帐户存储访问密钥。
@@ -97,7 +97,7 @@ Azure 文件存储区都提供在云中使用标准的文件共享的服务[服�
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>设置文件共享的最大大小
 
-下面的示例演示如何检查共享的当前使用情况以及如何设置共享的配额。 `FetchAttributes`必须调用来填充的共享`Properties`，和`SetProperties`传播到 Azure 文件存储的本地更改。
+下面的示例演示如何检查共享的当前使用情况以及如何设置共享的配额。 `FetchAttributes` 必须调用来填充的共享`Properties`，和`SetProperties`传播到 Azure 文件存储的本地更改。
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -161,5 +161,5 @@ Azure 存储分析支持文件存储的度量值。 使用指标数据，你可�
 
 - [Azure 文件存储现已正式发布](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [内的 Azure 文件存储](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Microsoft Azure 文件服务简介](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx)
-- [将连接保存到 Microsoft Azure 文件](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/27/persisting-connections-to-microsoft-azure-files.aspx)
+- [Microsoft Azure 文件服务简介](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [将连接保存到 Microsoft Azure 文件](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

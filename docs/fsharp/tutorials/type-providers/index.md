@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="type-providers"></a>类型提供程序
 
 > [!NOTE]
-本指南根据 F# 3.0 编写，并将进行更新。  请参阅 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
+本指南根据 F# 3.0 编写，并将进行更新。  请参阅 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
 
 F# 类型提供程序是提供在程序中使用的类型、属性和方法的组件。 类型提供程序是面向富信息编程的 F# 3.0 支持的重要部分。 富信息编程的关键在于消除障碍以使用在 Internet 上和现代企业环境中找到的各种信息源。 将信息源包含在程序中时遇到的一项重大障碍是，需要将信息作为在编程语言环境中使用的类型、属性和方法呈现。 手动写入这些类型不仅相当耗时，而且难以维护。 常见的替代方法是使用代码生成器，它可将文件添加到项目中；但是，代码生成的常规类型无法很好地集成到 F# 所支持的编程的探索模式中，这是因为每次调整服务引用时都必须替换生成的代码。
 
@@ -47,7 +47,7 @@ F# 包含多个面向常用的 Internet 和企业数据服务的内置类型提�
 |[类型提供程序安全性](type-provider-security.md)|提供有关开发类型提供程序时的安全注意事项的信息。|
 |[类型提供程序疑难解答](troubleshooting-type-providers.md)|提供有关使用类型提供程序时会出现的常见问题的信息并包括解决方案的建议。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](../../language-reference/index.md)
 
 [Visual F#](../../index.md)

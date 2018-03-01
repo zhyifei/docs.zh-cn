@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>要开始使用 Azure Blob 存储使用 F # #
 
@@ -236,7 +236,7 @@ Azure 存储空间支持在客户端和服务器上的 blob 数据进行加密�
 现在，你已了解 Blob 存储的基础知识，单击下面的链接以了解详细信息。
 
 ### <a name="tools"></a>工具
-- [F # AzureStorageTypeProvider](http://fsprojects.github.io/AzureStorageTypeProvider/) F # 类型提供程序可以用于浏览 Blob、 表和队列 Azure 存储空间资产并轻松地将应用在其上的 CRUD 操作。
+- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) F # 类型提供程序可以用于浏览 Blob、 表和队列 Azure 存储空间资产并轻松地将应用在其上的 CRUD 操作。
 - [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F # API 使用 Microsoft Azure 表存储服务
 - [Microsoft Azure 存储资源管理器 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)使您能够以可视方式使用 Azure 存储空间数据在 Windows、 OS X 和 Linux 上的 Microsoft 从一个免费的独立应用程序。
 
@@ -251,4 +251,4 @@ Azure 存储空间支持在客户端和服务器上的 blob 数据进行加密�
 - [在 Windows 上传输数据的 AzCopy 命令行实用程序](/azure/storage/common/storage-use-azcopy)
 - [在 Linux 上传输数据的 AzCopy 命令行实用程序](/azure/storage/common/storage-use-azcopy-linux)
 - [配置 Azure 存储连接字符串](/azure/storage/common/storage-configure-connection-string)
-- [Azure 存储团队博客](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure 存储团队博客](https://blogs.msdn.microsoft.com/windowsazurestorage/)

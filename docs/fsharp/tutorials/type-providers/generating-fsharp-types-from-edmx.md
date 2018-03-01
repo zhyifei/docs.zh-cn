@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>演练：根据 EDMX 架构文件生成 F# 类型
 
 > [!NOTE]
-此指南专门针对 F # 3.0 编写，并将更新。  请参阅 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
+此指南专门针对 F # 3.0 编写，并将更新。  请参阅 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
 
 > [!NOTE]
 API 参考链接将转到 MSDN。  Docs.microsoft.com API 参考尚未完成。
@@ -48,7 +48,7 @@ API 参考链接将转到 MSDN。  Docs.microsoft.com API 参考尚未完成。
 <br />
 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 ## <a name="creating-an-edmx-file"></a>创建 EDMX 文件
 如果你已具有 EDMX 文件，则可跳过此步骤。
@@ -222,7 +222,7 @@ changeHireDate("Abercrombie", "Kim", DateTime.Parse("1/12/1998"))
 1. 在菜单栏上，选择**SQL**， **TRANSACT-SQL 编辑器**，**新查询**创建数据库。 如果系统提示你，请指定你的数据库服务器和实例。
 <br />
 
-2. 复制并粘贴创建学生数据库中，数据库脚本的内容中所述[实体框架文档](http://msdn.microsoft.com/data/JJ614587.aspx)数据开发人员中心中。
+2. 复制并粘贴创建学生数据库中，数据库脚本的内容中所述[实体框架文档](https://msdn.microsoft.com/data/JJ614587.aspx)数据开发人员中心中。
 <br />
 
 3. 通过选择具有三角形符号的工具栏按钮或选择 Ctrl + Q 键中运行 SQL 脚本。
@@ -268,14 +268,14 @@ changeHireDate("Abercrombie", "Kim", DateTime.Parse("1/12/1998"))
 通过查看可用的查询运算符中列出浏览其他查询[查询表达式](../../language-reference/query-expressions.md)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [类型提供程序](index.md)
 
 [EdmxFile 类型提供程序](https://msdn.microsoft.com/visualfsharpdocs/conceptual/edmxfile-type-provider-%5bfsharp%5d)
 
 [演练：使用类型提供程序和实体访问 SQL 数据库](accessing-a-sql-database-entities.md)
 
-[Entity Framework](http://msdn.microsoft.com/data/ef)
+[Entity Framework](https://msdn.microsoft.com/data/ef)
 
 [.edmx 文件概述](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 

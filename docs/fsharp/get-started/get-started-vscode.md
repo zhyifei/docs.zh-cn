@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 336316eaf474f4c10d63657f178ce4a336ad7a54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>F # 在 Visual Studio 代码中使用 Ionide 入门
 
-你可以编写 F # [Visual Studio Code](https://code.visualstudio.com)与[Ionide 插件](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)，若要获取与 IntelliSense 和基本代码重构更完美的跨平台的轻型 IDE 体验。  请访问[Ionide.io](http://ionide.io)若要了解有关该插件套件的详细信息。
+你可以编写 F # [Visual Studio Code](https://code.visualstudio.com)与[Ionide 插件](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)，若要获取与 IntelliSense 和基本代码重构更完美的跨平台的轻型 IDE 体验。  请访问[Ionide.io](https://ionide.io)若要了解有关该插件套件的详细信息。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 F # 4.0 或更高版本必须为使用 Ionide 你计算机上安装。
 
@@ -39,9 +39,9 @@ F # 4.0 或更高版本必须为使用 Ionide 你计算机上安装。
 2. 为您的操作系统中安装 Windows SDK:
 
     * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](http://msdn.microsoft.com/windows/desktop/bg162891)
-    * [Windows 8 SDK](http://msdn.microsoft.com/windows/hardware/hh852363.aspx)
-    * [Windows 7 SDK](http://www.microsoft.com/download/details.aspx?id=8279)
+    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
 
 3. 安装[Microsoft Build 工具 2015年](https://www.microsoft.com/en-us/download/details.aspx?id=48159)。  你可能还需要安装[Microsoft 生成工具 2013年](https://www.microsoft.com/en-us/download/details.aspx?id=40760)。
 
@@ -67,7 +67,7 @@ Ionide 会自动检测的编译器和工具，但如果不是，由于某种原�
 
 ### <a name="macos"></a>macOS
 
-在 macOS，Ionide 使用[Mono](http://www.mono-project.com)。  在 macOS 上安装 Mono 的最简单方法是通过 Homebrew。  只需在你的终端键入以下内容：
+在 macOS，Ionide 使用[Mono](https://www.mono-project.com)。  在 macOS 上安装 Mono 的最简单方法是通过 Homebrew。  只需在你的终端键入以下内容：
 
 ```
 brew install mono
@@ -75,7 +75,7 @@ brew install mono
 
 ### <a name="linux"></a>Linux
 
-在 Linux 上 Ionide 还使用[Mono](http://www.mono-project.com)。  如果要在 Debian 或 Ubuntu 上，你可以使用以下各项：
+在 Linux 上 Ionide 还使用[Mono](https://www.mono-project.com)。  如果要在 Debian 或 Ubuntu 上，你可以使用以下各项：
 
 ```
 sudo apt-get update
@@ -96,7 +96,7 @@ sudo apt-get install mono-complete fsharp
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-F # 中，Visual Studio Code 中支持所需的唯一插件[Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)。  但是，你还可以安装[Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE)和，以获取[虚设](http://fsharp.github.io/FAKE/)支持和[Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket)获取[Paket](https://fsprojects.github.io/Paket/)支持。  但是，伪造 Paket 以及其他 F # 社区工具来生成项目并分别管理依赖关系。
+F # 中，Visual Studio Code 中支持所需的唯一插件[Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)。  但是，你还可以安装[Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE)和，以获取[虚设](https://fake.build/)支持和[Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket)获取[Paket](https://fsprojects.github.io/Paket/)支持。  但是，伪造 Paket 以及其他 F # 社区工具来生成项目并分别管理依赖关系。
 
 ## <a name="creating-your-first-project-with-ionide"></a>使用 Ionide 创建第一个项目
 
@@ -121,7 +121,7 @@ F # 中，Visual Studio Code 中支持所需的唯一插件[Ionide fsharp](https
 
 ![](media/getting-started-vscode/vscode-proj-type.png)
 
-这将选择用于特定类型的项目模板。  如有相当多的选项在这里， [FsLab](http://fslab.org)数据科学的模板或[Suave](https://suave.io) Web 编程的模板。  本文章将使用`classlib`模板，因此突出显示，并按**Enter**。  然后将访问以下步骤：
+这将选择用于特定类型的项目模板。  如有相当多的选项在这里， [FsLab](https://fslab.org)数据科学的模板或[Suave](https://suave.io) Web 编程的模板。  本文章将使用`classlib`模板，因此突出显示，并按**Enter**。  然后将访问以下步骤：
 
 ![](media/getting-started-vscode/vscode-new-dir.png)
 
@@ -138,8 +138,8 @@ F # 中，Visual Studio Code 中支持所需的唯一插件[Ionide fsharp](https
 此模板生成的几种方法，你将找到有用：
 
 1. F # 项目本身，底层`ClassLibraryDemo`文件夹。
-2. 添加通过包的正确的目录结构[ `Paket` ](http://fsprojects.github.io/Paket/)。
-3. 跨平台生成脚本[ `FAKE` ](http://fsharp.github.io/FAKE/)。
+2. 添加通过包的正确的目录结构[ `Paket` ](https://fsprojects.github.io/Paket/)。
+3. 跨平台生成脚本[ `FAKE` ](https://fake.build/)。
 4. `paket.exe`可以提取包并为你解决依赖项的可执行文件。
 5. A`.gitignore`文件如果你想要将此项目添加到基于 Git 的源控制。
 

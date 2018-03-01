@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ee2bb9bf-e04a-4fbe-bf58-46d07229e981
-ms.openlocfilehash: 425dbcbce06f183c81acb90993978c6dd9523de9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: e1cbdb452c8f77d97a0231a5ec75d752a98d2ed6
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-workflows"></a>异步工作流
 
@@ -52,11 +52,11 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 ## <a name="asynchronous-primitives"></a>异步基元
 
-执行一个异步任务，并返回结果的方法称为*异步基元*，并这些由专用于`let!`。 多个异步基元都在 F # 核心库中定义。 模块中定义为 Web 应用程序的两个此类方法[ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c)和[ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)。 这两个基元从 Web 页上，为其提供 URL 下载数据。 `AsyncGetResponse`生成`System.Net.WebResponse`对象，和`AsyncDownloadString`生成一个字符串，表示用于网页的 HTML。
+执行一个异步任务，并返回结果的方法称为*异步基元*，并这些由专用于`let!`。 多个异步基元都在 F # 核心库中定义。 模块中定义为 Web 应用程序的两个此类方法[ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c)和[ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)。 这两个基元从 Web 页上，为其提供 URL 下载数据。 `AsyncGetResponse` 生成`System.Net.WebResponse`对象，和`AsyncDownloadString`生成一个字符串，表示用于网页的 HTML。
 
 中包含的异步 I/O 操作的几个基元[ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396)模块。 这些扩展方法的`System.IO.Stream`类[ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e)和[ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618)。
 
-其他异步基元位于[F # 增强工具](http://fsprojects.github.io/VisualFSharpPowerTools/)。 你还可以通过定义其完整的主体括在异步块中的函数编写你自己的异步基元。
+其他异步基元位于[F # 增强工具](https://fsprojects.github.io/VisualFSharpPowerTools/)。 你还可以通过定义其完整的主体括在异步块中的函数编写你自己的异步基元。
 
 若要使用的 F # 异步编程模型与其他异步模型设计.NET Framework 中的异步方法，你创建的函数，返回的 F #`Async`对象。 F # 库具有函数，这可以更方便地执行操作。
 
@@ -72,7 +72,7 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet8003.fs)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [F# 语言参考](index.md)
 

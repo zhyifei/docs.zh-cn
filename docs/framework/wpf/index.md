@@ -28,17 +28,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10f4b45eba5d1b6a4baabe184ad51a3f3fdba3eb
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: a6d4596ad10c518a4ddcb9b295393b57ffb243b0
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
 Visual Studio 中的 Windows Presentation Foundation (WPF) 为开发人员提供了一个统一的编程模型构建在 Windows 上的业务线桌面应用程序。  
   
  [使用 Windows Presentation Foundation 创建桌面应用程序](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
-  
+
  [在 Visual Studio 和 Blend for Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [获取 Visual Studio](https://www.visualstudio.com/features/wpf-vs)
+ [获取 Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

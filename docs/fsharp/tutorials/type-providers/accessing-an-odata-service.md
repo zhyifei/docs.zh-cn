@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 0adae84c-b0fa-455f-994b-274ecdc6df30
-ms.openlocfilehash: 28c2e9a405670f4e5f9512e99e0e6c3e3082856c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 750407c36a989cece30c0c0654ff905c8eee3b33
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-an-odata-service-by-using-type-providers"></a>演练：使用类型提供程序访问 OData 服务
 
 > [!NOTE]
-此指南专门针对 F # 3.0 编写，并将更新。  请参阅 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
+此指南专门针对 F # 3.0 编写，并将更新。  请参阅 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
 
 > [!NOTE]
 API 参考链接将转到 MSDN。  Docs.microsoft.com API 参考尚未完成。
@@ -69,7 +69,7 @@ OData 中，这意味着开放数据协议，是用于通过 Internet 传输数�
 open Microsoft.FSharp.Data.TypeProviders
 
 
-type Northwind = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
+type Northwind = ODataService<"https://services.odata.org/Northwind/Northwind.svc/">
 
 let db = Northwind.GetDataContext()
 let fullContext = Northwind.ServiceTypes.NorthwindEntities()
@@ -100,7 +100,7 @@ let fullContext = Northwind.ServiceTypes.NorthwindEntities()
   - 排序 (`orderBy`， `thenBy`)
 <br />
 
-  - `AddQueryOption`和`Expand`，这是 OData 特定的操作
+  - `AddQueryOption` 和`Expand`，这是 OData 特定的操作
 <br />
 
   有关详细信息，请参阅[LINQ 注意事项 &#40;WCF 数据服务 &#41;](https://msdn.microsoft.com/library/ee622463.aspx).
@@ -242,10 +242,10 @@ db.DataContext.SendingRequest.Add (fun eventArgs -> printfn "Requesting %A" even
 ```
 
 前面的代码的输出为：
-<br />`requesting http://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
+<br />`requesting https://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [查询表达式](../../language-reference/query-expressions.md)
 
 [LINQ 注意事项 （WCF 数据服务）](https://msdn.microsoft.com/library/ee622463.aspx)

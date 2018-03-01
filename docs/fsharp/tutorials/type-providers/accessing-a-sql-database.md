@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 1c413eb0-16a5-4c1a-9a4e-ad6877e645d6
-ms.openlocfilehash: 7177eca33ded712308bbc6198040d833b7364d55
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dbc5d889fb7883b4327180fdf34accf45bf519e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers"></a>演练：使用类型提供程序访问 SQL 数据库
 
 > [!NOTE]
-此指南专门针对 F # 3.0 编写，并将更新。  请参阅 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
+此指南专门针对 F # 3.0 编写，并将更新。  请参阅 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
 
 > [!NOTE]
 API 参考链接将转到 MSDN。  Docs.microsoft.com API 参考尚未完成。
@@ -96,7 +96,7 @@ open Microsoft.FSharp.Linq
 
 #### <a name="to-set-up-the-type-provider-from-a-direct-database-connection"></a>若要设置类型提供程序从直接的数据库连接
 
-有两个关键行的所需创建可用于查询 SQL 数据库使用类型提供程序的类型的代码。 首先，您实例化类型提供程序。 若要执行此操作，创建如下所示的类型缩写`SqlDataConnection`与静态泛型参数。 `SqlDataConnection`是 SQL 类型提供程序，并且不应与混淆`SqlConnection`类型，ADO.NET 编程中使用。 如果你有一个你想要连接到的数据库，并具有一个连接字符串，使用下面的代码来调用类型提供程序。 替换给定的示例字符串自己连接字符串。 例如，如果你的服务器是 MYSERVER 和数据库实例是实例、 数据库名称是 MyDatabase，并且你想要使用 Windows 身份验证访问数据库，则连接字符串是作为提供在下面的示例代码。
+有两个关键行的所需创建可用于查询 SQL 数据库使用类型提供程序的类型的代码。 首先，您实例化类型提供程序。 若要执行此操作，创建如下所示的类型缩写`SqlDataConnection`与静态泛型参数。 `SqlDataConnection` 是 SQL 类型提供程序，并且不应与混淆`SqlConnection`类型，ADO.NET 编程中使用。 如果你有一个你想要连接到的数据库，并具有一个连接字符串，使用下面的代码来调用类型提供程序。 替换给定的示例字符串自己连接字符串。 例如，如果你的服务器是 MYSERVER 和数据库实例是实例、 数据库名称是 MyDatabase，并且你想要使用 Windows 身份验证访问数据库，则连接字符串是作为提供在下面的示例代码。
 
 ```fsharp
 type dbSchema = SqlDataConnection<"Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase;Integrated Security=SSPI;">
@@ -449,7 +449,7 @@ INSERT INTO Table3 (Id, Name, Data)
 ```
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [类型提供程序](index.md)
 
 [SqlDataConnection 类型提供程序](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqldataconnection-type-provider-%5bfsharp%5d)

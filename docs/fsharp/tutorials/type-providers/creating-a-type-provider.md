@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>教程： 创建类型提供程序
 
@@ -56,7 +56,7 @@ F # 3.0 包含多个面向常用的 Internet 和企业数据服务的内置类�
 
 
 ## <a name="a-simple-type-provider"></a>简单类型提供程序
-此示例是在 Samples.HelloWorldTypeProvider`SampleProviders\Providers`目录[F # 3.0 示例包](http://fsharp3sample.codeplex.com)Codeplex 网站上。 提供程序使可包含 100 已擦除的类型，如以下代码通过使用 F # 签名语法和省略的除外的详细信息所示的"类型空间" `Type1`。 有关已擦除的类型的详细信息，请参阅[详细信息有关擦除提供类型](#details-about-erased-provided-types)本主题中更高版本。
+此示例是在 Samples.HelloWorldTypeProvider`SampleProviders\Providers`目录[F # 3.0 示例包](https://fsharp3sample.codeplex.com)Codeplex 网站上。 提供程序使可包含 100 已擦除的类型，如以下代码通过使用 F # 签名语法和省略的除外的详细信息所示的"类型空间" `Type1`。 有关已擦除的类型的详细信息，请参阅[详细信息有关擦除提供类型](#details-about-erased-provided-types)本主题中更高版本。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -499,7 +499,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 - 每个命名的组将导致提供的属性和访问属性导致使用了匹配项的索引器`Groups`集合。
 <br />
 
-下面的代码是实现此类提供程序的逻辑的核心，此示例中省略加入到所提供的类型的所有成员。 有关每个添加的成员的信息，请参阅本主题后面的相应部分。 对于完整的代码中，从示例下载[F # 3.0 示例包](http://fsharp3sample.codeplex.com)Codeplex 网站上。
+下面的代码是实现此类提供程序的逻辑的核心，此示例中省略加入到所提供的类型的所有成员。 有关每个添加的成员的信息，请参阅本主题后面的相应部分。 对于完整的代码中，从示例下载[F # 3.0 示例包](https://fsharp3sample.codeplex.com)Codeplex 网站上。
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1140,7 +1140,7 @@ let data = connection.Astronomy.Asteroids
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 F # 3.0 发行版的一部分的 ProvidedTypes 0.2 帮助器代码仅提供有限支持用于提供生成的类型。 以下语句为真，生成的类型定义：
@@ -1196,10 +1196,10 @@ F # 3.0 发行版的一部分的 ProvidedTypes 0.2 帮助器代码仅提供有�
 你可能会发现以下提示很有帮助在开发过程中。
 
 
-- `Run Two Instances of Visual Studio.`可以在一个实例中开发类型提供程序和测试另一部分中的提供程序，因为测试 IDE 将获取一个锁防止类型提供程序正在重新生成的.dll 文件。 因此，您必须关闭 Visual Studio 的第二个实例，而在第一个实例中，生成提供程序，然后你必须重新打开第二个实例后生成提供程序。
+- `Run Two Instances of Visual Studio.` 可以在一个实例中开发类型提供程序和测试另一部分中的提供程序，因为测试 IDE 将获取一个锁防止类型提供程序正在重新生成的.dll 文件。 因此，您必须关闭 Visual Studio 的第二个实例，而在第一个实例中，生成提供程序，然后你必须重新打开第二个实例后生成提供程序。
 <br />
 
-- `Debug type providers by using invocations of fsc.exe.`你可以通过使用以下工具调用类型提供程序：
+- `Debug type providers by using invocations of fsc.exe.` 你可以通过使用以下工具调用类型提供程序：
 <br />
   - fsc.exe （F # 命令行编译器）
 <br />
@@ -1221,5 +1221,5 @@ F # 3.0 发行版的一部分的 ProvidedTypes 0.2 帮助器代码仅提供有�
 <br />
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [类型提供程序](index.md)

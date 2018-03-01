@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9196bfc-b8a8-4d33-8b53-0dcbd58a69d8
-ms.openlocfilehash: 23528d84d0f28283868a1ea316953543d0fd566a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c3fde46e804b7acac78d3ce5454a3c6f806e24e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="async-programming-in-f"></a>F # 中的异步编程 #
 
@@ -44,7 +44,7 @@ let fetchHtmlAsync url =
         return html
     }
 
-let html = "http://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 printfn "%s" html
 ```
 
@@ -52,11 +52,11 @@ printfn "%s" html
 
 有几个语法构造该数据类型值得注意：
 
-*   `let!`将绑定 （它运行在另一个上下文） 异步表达式的结果。
-*   `use!`工作方式就像`let!`，但在超出范围时释放其绑定的资源。
-*   `do!`将等待异步工作流，它不返回任何内容。
-*   `return`只需从一个异步表达式将返回结果。
-*   `return!`执行另一个异步工作流并返回其返回值作为结果。
+*   `let!` 将绑定 （它运行在另一个上下文） 异步表达式的结果。
+*   `use!` 工作方式就像`let!`，但在超出范围时释放其绑定的资源。
+*   `do!` 将等待异步工作流，它不返回任何内容。
+*   `return` 只需从一个异步表达式将返回结果。
+*   `return!` 执行另一个异步工作流并返回其返回值作为结果。
 
 此外，普通`let`， `use`，和`do`关键字可以与异步版本一起使用，就像一个常规函数中。
 
@@ -64,7 +64,7 @@ printfn "%s" html
 
 如前所述，异步代码是的需要显式启动另一个上下文中进行工作的规范。 以下是两种主要方式来实现此目的：
 
-1.  `Async.RunSynchronously`将在另一个线程上启动的异步工作流，并等待其结果。
+1.  `Async.RunSynchronously` 将在另一个线程上启动的异步工作流，并等待其结果。
 
 ```fsharp
 open System
@@ -79,13 +79,13 @@ let fetchHtmlAsync url =
     }
 
  // Execution will pause until fetchHtmlAsync finishes
- let html = "http://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+ let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 
  // you actually have the result from fetchHtmlAsync now!
  printfn "%s" html
  ```
 
-2.  `Async.Start`将在另一个线程上启动的异步工作流并将**不**等待其结果。
+2.  `Async.Start` 将在另一个线程上启动的异步工作流并将**不**等待其结果。
 
 ```fsharp
 open System
@@ -98,7 +98,7 @@ let uploadDataAsync url data =
         webClient.UploadStringAsync(uri, data)
     }
 
-let workflow = uploadDataAsync "http://url-to-upload-to.com" "hello, world!"
+let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 // Execution will continue after calling this!
 Async.Start(workflow)
@@ -114,7 +114,7 @@ printfn "%s" "uploadDataAsync is running in the background..."
 
 ## <a name="how-to-add-parallelism-to-async-code"></a>如何将并行添加到异步代码
 
-有时你可能需要并行执行多个异步作业收集其结果和解释它们以某种方式。 `Async.Parallel`允许你执行此操作而无需使用任务并行库，这将涉及到无需强制`Task<'T>`和`Async<'T>`类型。
+有时你可能需要并行执行多个异步作业收集其结果和解释它们以某种方式。 `Async.Parallel` 允许你执行此操作而无需使用任务并行库，这将涉及到无需强制`Task<'T>`和`Async<'T>`类型。
 
 下面的示例将使用`Async.Parallel`若要从并行的四个流行网站下载的 HTML，等待这些任务完成，然后输出下载的 HTML。
 
@@ -123,10 +123,10 @@ open System
 open System.Net
 
 let urlList = 
-    [ "http://www.microsoft.com"
-      "http://www.google.com"
-      "http://www.amazon.com"
-      "http://www.facebook.com" ]
+    [ "https://www.microsoft.com"
+      "https://www.google.com"
+      "https://www.amazon.com"
+      "https://www.facebook.com" ]
 
 let fetchHtmlAsync url = 
     async {
@@ -181,7 +181,7 @@ for html in htmlList do
 
 ### <a name="differences"></a>差异
 
-*   嵌套`let!`不允许，与不同嵌套`await`
+*   嵌套`let!`不允许，与不同嵌套 `await`
 
  与不同`await`，可以嵌套; 如果无限期，`let!`无法，并且必须绑定使用在另一个内部之前其结果`let!`， `do!`，或`use!`。
 
@@ -208,7 +208,7 @@ let uploadDataAsync url data =
         webClient.UploadStringAsync(uri, data)
     }
 
-let workflow = uploadDataAsync "http://url-to-upload-to.com" "hello, world!"
+let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 let token = new CancellationTokenSource()
 Async.Start (workflow, token)
@@ -222,5 +222,5 @@ token.Cancel()
 ## <a name="further-resources"></a>其他资源：
 
 *   [MSDN 上的异步工作流](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [F # 的异步序列](http://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F # 的异步序列](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
 *   [F # 数据 HTTP 实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)

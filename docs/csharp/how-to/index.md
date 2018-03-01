@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-c"></a>操作指南 (C#)
 
@@ -59,8 +59,7 @@ ms.lasthandoff: 02/22/2018
 - [确定字符串是否表示数字](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)。
 - [使用 `String.Split` 分隔字符串](parse-strings-using-split.md)。
 - [将多个字符串合并为一个字符串](concatenate-multiple-strings.md)。
-- [在字符串中搜索文本](../programming-guide/strings/how-to-search-strings-using-string-methods.md)。
-- [使用正则表达式搜索字符串](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md)。
+- [在字符串中搜索文本](search-strings.md)。
 
 ## <a name="convert-between-types"></a>在类型间转换
 

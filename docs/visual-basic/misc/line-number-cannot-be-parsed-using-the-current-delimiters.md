@@ -2,11 +2,13 @@
 title: "行&lt;数&gt;无法使用当前的 Delimiter 分析"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrTextFieldParser_MalFormedDelimitedLine
+f1_keywords:
+- vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 8541a2a144964a535f72182fe08187bdc479675a

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 3cd8df9becac0d1a8842eb22e2f772eee6307acf
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>演练：根据 DBML 文件生成 F# 类型 
 
 > [!NOTE]
-此指南专门针对 F # 3.0 编写，并将更新。  请参阅 [FSharp.Data](http://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
+此指南专门针对 F # 3.0 编写，并将更新。  请参阅 [FSharp.Data](https://fsharp.github.io/FSharp.Data/) 了解最新的跨平台类型提供程序。
 
 > [!NOTE]
 API 参考链接将转到 MSDN。  Docs.microsoft.com API 参考尚未完成。
@@ -44,7 +44,7 @@ API 参考链接将转到 MSDN。  Docs.microsoft.com API 参考尚未完成。
 <br />
 
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
 ## <a name="creating-a-dbml-file"></a>创建一个.dbml 文件
 如果你不具有数据库上测试，创建一个在底部的说明[演练： 访问 SQL 数据库使用类型提供程序](accessing-a-sql-database.md)。 如果你按照这些说明操作，将创建名为 MyDatabase 包含几个简单的表和 SQL Server 上的存储的过程的数据库。
@@ -154,7 +154,7 @@ let db = new dbml.MyDataContext(connectionString)
 你可以继续使用其他查询表达式，或从数据上下文获取数据库连接并执行正常的 ADO.NET 数据操作。 有关其他步骤，请参阅部分后"查询数据"中[演练： 访问 SQL 数据库使用类型提供程序](accessing-a-sql-database.md)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [DbmlFile 类型提供程序](https://msdn.microsoft.com/visualfsharpdocs/conceptual/dbmlfile-type-provider-%5bfsharp%5d)
 
 [类型提供程序](index.md)
