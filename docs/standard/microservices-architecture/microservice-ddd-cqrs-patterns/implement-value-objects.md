@@ -1,48 +1,51 @@
 ---
 title: "实现值对象"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |实现值对象"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 实现值对象"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: c20bc80d2ddb864a3a0172beb211974426a278a8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b7b85d2aa3c563fbd4c7cf89336827d25f22c0e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-value-objects"></a><span data-ttu-id="612fe-104">实现值对象</span><span class="sxs-lookup"><span data-stu-id="612fe-104">Implementing value objects</span></span>
+# <a name="implementing-value-objects"></a><span data-ttu-id="f2af9-104">实现值对象</span><span class="sxs-lookup"><span data-stu-id="f2af9-104">Implementing value objects</span></span>
 
-<span data-ttu-id="612fe-105">在前面部分中讨论有关实体和聚合，标识是必不可少的实体。</span><span class="sxs-lookup"><span data-stu-id="612fe-105">As discussed in earlier sections about entities and aggregates, identity is fundamental for entities.</span></span> <span data-ttu-id="612fe-106">但是，有许多对象和数据项不需要的标识和跟踪，例如值中的对象的标识的系统中。</span><span class="sxs-lookup"><span data-stu-id="612fe-106">However, there are many objects and data items in a system that do not require an identity and identity tracking, such as value objects.</span></span>
+<span data-ttu-id="f2af9-105">如前面部分有关实体和聚合的讨论，标识对于实体是必不可少的。</span><span class="sxs-lookup"><span data-stu-id="f2af9-105">As discussed in earlier sections about entities and aggregates, identity is fundamental for entities.</span></span> <span data-ttu-id="f2af9-106">但是，系统中有许多对象和数据项不需要标识和标识跟踪，例如值对象。</span><span class="sxs-lookup"><span data-stu-id="f2af9-106">However, there are many objects and data items in a system that do not require an identity and identity tracking, such as value objects.</span></span>
 
-<span data-ttu-id="612fe-107">值对象可以引用其他实体。</span><span class="sxs-lookup"><span data-stu-id="612fe-107">A value object can reference other entities.</span></span> <span data-ttu-id="612fe-108">例如，在应用程序生成的路由，介绍如何从一个点来访问另一个字符串，该路由将值对象。</span><span class="sxs-lookup"><span data-stu-id="612fe-108">For example, in an application that generates a route that describes how to get from one point to another, that route would be a value object.</span></span> <span data-ttu-id="612fe-109">它将特定的路由上的点的快照，但此建议的路由将不具有有标识，即使它可能是内部指如市/县、 道路等实体。</span><span class="sxs-lookup"><span data-stu-id="612fe-109">It would be a snapshot of points on a specific route, but this suggested route would not have an identity, even though internally it might refer to entities like City, Road, etc.</span></span>
+<span data-ttu-id="f2af9-107">值对象可以引用其他实体。</span><span class="sxs-lookup"><span data-stu-id="f2af9-107">A value object can reference other entities.</span></span> <span data-ttu-id="f2af9-108">例如，在生成描述如何从一个点转到另一点的路由时，该路由应为值对象。</span><span class="sxs-lookup"><span data-stu-id="f2af9-108">For example, in an application that generates a route that describes how to get from one point to another, that route would be a value object.</span></span> <span data-ttu-id="f2af9-109">它将是特定路由上的点的快照，但此建议的路由将不具有标识，即使在内部它可能指 City、Road 等实体。</span><span class="sxs-lookup"><span data-stu-id="f2af9-109">It would be a snapshot of points on a specific route, but this suggested route would not have an identity, even though internally it might refer to entities like City, Road, etc.</span></span>
 
-<span data-ttu-id="612fe-110">图 9-13 显示顺序聚合中的地址值对象。</span><span class="sxs-lookup"><span data-stu-id="612fe-110">Figure 9-13 shows the Address value object within the Order aggregate.</span></span>
+<span data-ttu-id="f2af9-110">图 9-13 显示 Order 聚合中的 Address 值对象。</span><span class="sxs-lookup"><span data-stu-id="f2af9-110">Figure 9-13 shows the Address value object within the Order aggregate.</span></span>
 
 ![](./media/image14.png)
 
-<span data-ttu-id="612fe-111">**图 9-13**。</span><span class="sxs-lookup"><span data-stu-id="612fe-111">**Figure 9-13**.</span></span> <span data-ttu-id="612fe-112">解决顺序聚合中的值对象</span><span class="sxs-lookup"><span data-stu-id="612fe-112">Address value object within the Order aggregate</span></span>
+<span data-ttu-id="f2af9-111">图 9-13。</span><span class="sxs-lookup"><span data-stu-id="f2af9-111">**Figure 9-13**.</span></span> <span data-ttu-id="f2af9-112">Order 聚合中的 Address 值对象</span><span class="sxs-lookup"><span data-stu-id="f2af9-112">Address value object within the Order aggregate</span></span>
 
-<span data-ttu-id="612fe-113">如所示图 9-13，实体通常由多个属性。</span><span class="sxs-lookup"><span data-stu-id="612fe-113">As shown in Figure 9-13, an entity is usually composed of multiple attributes.</span></span> <span data-ttu-id="612fe-114">例如，可以建模为具有标识的实体顺序，将其内部组成的一组特性，例如 OrderId、 OrderDate、 OrderItems，等等。但组成国家/地区，街道、 城市的地址，这是只是一个复杂的值，必须建模等，并将其视为值对象。</span><span class="sxs-lookup"><span data-stu-id="612fe-114">For example, Order can be modeled as an entity with an identity and composed internally of a set of attributes such as OrderId, OrderDate, OrderItems, etc. But the address, which is simply a complex value composed of country, street, city, etc. must be modeled and treated as a value object.</span></span>
+<span data-ttu-id="f2af9-113">如图 9-13 所示，实体通常由多个属性组成。</span><span class="sxs-lookup"><span data-stu-id="f2af9-113">As shown in Figure 9-13, an entity is usually composed of multiple attributes.</span></span> <span data-ttu-id="f2af9-114">例如，`Order` 实体可以建模为具有标识的实体，在内部由一组特性组成，例如 OrderId、OrderDate、OrderItems 等。但地址这个作为由国家/地区、街道、城市等组成的复杂值，必须建模或处理为值对象。</span><span class="sxs-lookup"><span data-stu-id="f2af9-114">For example, the `Order` entity can be modeled as an entity with an identity and composed internally of a set of attributes such as OrderId, OrderDate, OrderItems, etc. But the address, which is simply a complex value composed of country, street, city, etc. and has no identity in this domain,  must be modeled and treated as a value object.</span></span>
 
-## <a name="important-characteristics-of-value-objects"></a><span data-ttu-id="612fe-115">值对象的重要特征</span><span class="sxs-lookup"><span data-stu-id="612fe-115">Important characteristics of value objects</span></span>
+## <a name="important-characteristics-of-value-objects"></a><span data-ttu-id="f2af9-115">值对象的重要特征</span><span class="sxs-lookup"><span data-stu-id="f2af9-115">Important characteristics of value objects</span></span>
 
-<span data-ttu-id="612fe-116">有两个值对象的主要特征：</span><span class="sxs-lookup"><span data-stu-id="612fe-116">There are two main characteristics for value objects:</span></span>
+<span data-ttu-id="f2af9-116">值对象有两个主要特征：</span><span class="sxs-lookup"><span data-stu-id="f2af9-116">There are two main characteristics for value objects:</span></span>
 
--   <span data-ttu-id="612fe-117">它们具有任何标识。</span><span class="sxs-lookup"><span data-stu-id="612fe-117">They have no identity.</span></span>
+-   <span data-ttu-id="f2af9-117">它们没有任何标识。</span><span class="sxs-lookup"><span data-stu-id="f2af9-117">They have no identity.</span></span>
 
--   <span data-ttu-id="612fe-118">它们是不可变。</span><span class="sxs-lookup"><span data-stu-id="612fe-118">They are immutable.</span></span>
+-   <span data-ttu-id="f2af9-118">它们是不可变的。</span><span class="sxs-lookup"><span data-stu-id="f2af9-118">They are immutable.</span></span>
 
-<span data-ttu-id="612fe-119">已讨论的第一个特性。</span><span class="sxs-lookup"><span data-stu-id="612fe-119">The first characteristic was already discussed.</span></span> <span data-ttu-id="612fe-120">不可变性是一个重要要求。</span><span class="sxs-lookup"><span data-stu-id="612fe-120">Immutability is an important requirement.</span></span> <span data-ttu-id="612fe-121">在创建对象后，值对象的值必须是不可变。</span><span class="sxs-lookup"><span data-stu-id="612fe-121">The values of a value object must be immutable once the object is created.</span></span> <span data-ttu-id="612fe-122">因此，当构造对象时，你必须提供所需的值，但则不能允许对其进行更改的对象的生存期内。</span><span class="sxs-lookup"><span data-stu-id="612fe-122">Therefore, when the object is constructed, you must provide the required values, but you must not allow them to change during the object’s lifetime.</span></span>
+<span data-ttu-id="f2af9-119">第一个特征上面讨论了。</span><span class="sxs-lookup"><span data-stu-id="f2af9-119">The first characteristic was already discussed.</span></span> <span data-ttu-id="f2af9-120">不可变性是一个重要要求。</span><span class="sxs-lookup"><span data-stu-id="f2af9-120">Immutability is an important requirement.</span></span> <span data-ttu-id="f2af9-121">创建对象后，值对象的值必须是不可变的。</span><span class="sxs-lookup"><span data-stu-id="f2af9-121">The values of a value object must be immutable once the object is created.</span></span> <span data-ttu-id="f2af9-122">因此，当构造对象时，必须提供所需的值，但不得允许它们在对象生存期内进行更改。</span><span class="sxs-lookup"><span data-stu-id="f2af9-122">Therefore, when the object is constructed, you must provide the required values, but you must not allow them to change during the object’s lifetime.</span></span>
 
-<span data-ttu-id="612fe-123">值对象，可以为性能，其不可变的性质感谢执行某些技巧。</span><span class="sxs-lookup"><span data-stu-id="612fe-123">Value objects allow you to perform certain tricks for performance, thanks to their immutable nature.</span></span> <span data-ttu-id="612fe-124">这是系统中尤其如此其中可能有数千个值对象实例，其中的许多具有相同的值。</span><span class="sxs-lookup"><span data-stu-id="612fe-124">This is especially true in systems where there may be thousands of value object instances, many of which have the same values.</span></span> <span data-ttu-id="612fe-125">不可变本质使他们可以重用;它们可以是可互换的对象，因为它们的值都相同，并且它们具有任何标识。</span><span class="sxs-lookup"><span data-stu-id="612fe-125">Their immutable nature allows them to be reused; they can be interchangeable objects, since their values are the same and they have no identity.</span></span> <span data-ttu-id="612fe-126">有时，这种优化可以使运行速度慢的软件和软件性能良好之间存在的差异。</span><span class="sxs-lookup"><span data-stu-id="612fe-126">This type of optimization can sometimes make a difference between software that runs slowly and software with good performance.</span></span> <span data-ttu-id="612fe-127">当然，，所有这些情况下将取决于应用程序环境以及部署上下文。</span><span class="sxs-lookup"><span data-stu-id="612fe-127">Of course, all these cases depend on the application environment and deployment context.</span></span>
+<span data-ttu-id="f2af9-123">因其不可变性，值对象允许采取某些技巧来提升性能。</span><span class="sxs-lookup"><span data-stu-id="f2af9-123">Value objects allow you to perform certain tricks for performance, thanks to their immutable nature.</span></span> <span data-ttu-id="f2af9-124">当系统有成千上万个值对象实例且其中很多具有相同值时，这特别有用。</span><span class="sxs-lookup"><span data-stu-id="f2af9-124">This is especially true in systems where there may be thousands of value object instances, many of which have the same values.</span></span> <span data-ttu-id="f2af9-125">不可变本质使它们可以重用；它们可以是可互换对象，因为值都相同，且没有任何标识。</span><span class="sxs-lookup"><span data-stu-id="f2af9-125">Their immutable nature allows them to be reused; they can be interchangeable objects, since their values are the same and they have no identity.</span></span> <span data-ttu-id="f2af9-126">有时，这种优化可以在运行缓慢的软件和性能良好的软件之间制造差异。</span><span class="sxs-lookup"><span data-stu-id="f2af9-126">This type of optimization can sometimes make a difference between software that runs slowly and software with good performance.</span></span> <span data-ttu-id="f2af9-127">当然，所有这些将取决于应用程序环境和部署上下文。</span><span class="sxs-lookup"><span data-stu-id="f2af9-127">Of course, all these cases depend on the application environment and deployment context.</span></span>
 
-## <a name="value-object-implementation-in-c"></a><span data-ttu-id="612fe-128">在 C 中的值对象实现\#</span><span class="sxs-lookup"><span data-stu-id="612fe-128">Value object implementation in C\#</span></span>
+## <a name="value-object-implementation-in-c"></a><span data-ttu-id="f2af9-128">C\# 中的值对象实现</span><span class="sxs-lookup"><span data-stu-id="f2af9-128">Value object implementation in C\#</span></span>
 
-<span data-ttu-id="612fe-129">根据实现中，你可以具有等基于比较 （因为值对象不必须基于标识） 的所有属性和其他基本特征之间的相等性的基本实用程序方法的值对象基本类。</span><span class="sxs-lookup"><span data-stu-id="612fe-129">In terms of implementation, you can have a value object base class that has basic utility methods like equality based on comparison between all the attributes (since a value object must not be based on identity) and other fundamental characteristics.</span></span> <span data-ttu-id="612fe-130">下面的示例演示在从 eShopOnContainers 排序微服务中使用的值对象基本类。</span><span class="sxs-lookup"><span data-stu-id="612fe-130">The following example shows a value object base class used in the ordering microservice from eShopOnContainers.</span></span>
+<span data-ttu-id="f2af9-129">就实现而言，你可以拥有值对象基类，它具有基于所有特性（因值对象不得基于标识）和其他基本特征间的对比的基本实用工具方法，如相等。</span><span class="sxs-lookup"><span data-stu-id="f2af9-129">In terms of implementation, you can have a value object base class that has basic utility methods like equality based on comparison between all the attributes (since a value object must not be based on identity) and other fundamental characteristics.</span></span> <span data-ttu-id="f2af9-130">下面的示例演示用于 eShopOnContainers 订购微服务中的值对象基类。</span><span class="sxs-lookup"><span data-stu-id="f2af9-130">The following example shows a value object base class used in the ordering microservice from eShopOnContainers.</span></span>
 
 ```csharp
 public abstract class ValueObject
@@ -93,7 +96,7 @@ public abstract class ValueObject
 }
 ```
 
-<span data-ttu-id="612fe-131">你可以使用此类时实现你实际值的对象，如下面的示例中显示的地址值对象：</span><span class="sxs-lookup"><span data-stu-id="612fe-131">You can use this class when implementing your actual value object, as with the Address value object shown in the following example:</span></span>
+<span data-ttu-id="f2af9-131">实现实际值对象时可以使用此类，如下面实例中显示的 Address 值对象：</span><span class="sxs-lookup"><span data-stu-id="f2af9-131">You can use this class when implementing your actual value object, as with the Address value object shown in the following example:</span></span>
 
 ```csharp
 public class Address : ValueObject
@@ -104,8 +107,9 @@ public class Address : ValueObject
     public String Country { get; private set; }
     public String ZipCode { get; private set; }
 
-    public Address(string street, string city, string state,
-        string country, string zipcode)
+    private Address() { }
+
+    public Address(string street, string city, string state, string country, string zipcode)
     {
         Street = street;
         City = city;
@@ -116,6 +120,7 @@ public class Address : ValueObject
 
     protected override IEnumerable<object> GetAtomicValues()
     {
+        // Using a yield return statement to return each element one at a time
         yield return Street;
         yield return City;
         yield return State;
@@ -125,48 +130,201 @@ public class Address : ValueObject
 }
 ```
 
-## <a name="hiding-the-identity-characteristic-when-using-ef-core-to-persist-value-objects"></a><span data-ttu-id="612fe-132">隐藏的标识特征时使用 EF 核心持久保存值对象</span><span class="sxs-lookup"><span data-stu-id="612fe-132">Hiding the identity characteristic when using EF Core to persist value objects</span></span>
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a><span data-ttu-id="f2af9-132">如何通过 EF Core 2.0 在数据库中持久保存值对象</span><span class="sxs-lookup"><span data-stu-id="f2af9-132">How to persist value objects in the database with EF Core 2.0</span></span>
 
-<span data-ttu-id="612fe-133">限制时使用 EF 核心，其当前版本 (EF 核心 1.1) 中不能使用[复杂类型](https://docs.microsoft.com/de-de/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7)EF 中定义 6.x。</span><span class="sxs-lookup"><span data-stu-id="612fe-133">A limitation when using EF Core is that in its current version (EF Core 1.1) you cannot use [complex types](https://docs.microsoft.com/de-de/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) as defined in EF 6.x.</span></span> <span data-ttu-id="612fe-134">因此，你必须为 EF 实体来存储值对象。</span><span class="sxs-lookup"><span data-stu-id="612fe-134">Therefore, you must store your value object as an EF entity.</span></span> <span data-ttu-id="612fe-135">但是，可以隐藏其 ID，因此你进行清除的标识不重要的模型的值对象中。</span><span class="sxs-lookup"><span data-stu-id="612fe-135">However, you can hide its ID so you make clear that the identity is not important in the model that the value object is part of.</span></span> <span data-ttu-id="612fe-136">隐藏 ID 是作为卷影属性使用的 ID。</span><span class="sxs-lookup"><span data-stu-id="612fe-136">You hide the ID is by using the ID as a shadow property.</span></span> <span data-ttu-id="612fe-137">由于基础结构级别中设置了该配置用于隐藏在模型中的 ID，将为您的域模型，透明，其基础结构实现无法在以后发生更改。</span><span class="sxs-lookup"><span data-stu-id="612fe-137">Since that configuration for hiding the ID in the model is set up in the infrastructure level, it will be transparent for your domain model, and its infrastructure implementation could change in the future.</span></span>
+<span data-ttu-id="f2af9-133">你刚才看到如何在域模型中定义值对象。</span><span class="sxs-lookup"><span data-stu-id="f2af9-133">You just saw how to define a value object in your domain model.</span></span> <span data-ttu-id="f2af9-134">但是，如何切实地通过一般使用标识确定实体的 Entity Framework (EF) Core 来将其持久保存在数据库中呢？</span><span class="sxs-lookup"><span data-stu-id="f2af9-134">But, how can you actually persist it into the database through Entity Framework (EF) Core which usually targets entities with identity?</span></span>
 
-<span data-ttu-id="612fe-138">在 eShopOnContainers，EF 核心基础结构所需的隐藏的 ID 实现在 DbContext 级别中，按以下方式使用 Fluent API 的基础结构项目。</span><span class="sxs-lookup"><span data-stu-id="612fe-138">In eShopOnContainers, the hidden ID needed by EF Core infrastructure is implemented in the following way in the DbContext level, using Fluent API at the infrastructure project.</span></span>
+### <a name="background-and-older-approaches-using-ef-core-11"></a><span data-ttu-id="f2af9-135">背景和较早的方法（使用 EF Core 1.1）</span><span class="sxs-lookup"><span data-stu-id="f2af9-135">Background and older approaches using EF Core 1.1</span></span>
+
+<span data-ttu-id="f2af9-136">背景：使用 EF Core 1.0 和 1.1 版时的限制是不能使用传统 .NET Framework 的 EF 6.x 中所定义的[复杂类型](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7)。</span><span class="sxs-lookup"><span data-stu-id="f2af9-136">As background, a limitation when using EF Core 1.0 and 1.1 was that you cannot use  [complex types](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) as defined in EF 6.x in the traditional .NET Framework.</span></span> <span data-ttu-id="f2af9-137">因此，如果使用 EF Core 1.0 或 1.1，则需要将值对象存储为具有 ID 字段的 EF 实体。</span><span class="sxs-lookup"><span data-stu-id="f2af9-137">Therefore, if using EF Core 1.0 or 1.1, you needed to store your value object as an EF entity with an ID field.</span></span> <span data-ttu-id="f2af9-138">然后，为使它看起来像没有任何标识的值对象，你可以隐藏其 ID：表明值对象的标识在域模型中不重要。</span><span class="sxs-lookup"><span data-stu-id="f2af9-138">Then, so it looked more like a value object with no identity, you could hide its ID so you make clear that the identity of a value object is not important in the domain model.</span></span> <span data-ttu-id="f2af9-139">可以通过将该 ID 用作[阴影属性](https://docs.microsoft.com/ef/core/modeling/shadow-properties )来隐藏其 ID。</span><span class="sxs-lookup"><span data-stu-id="f2af9-139">You could hide that ID by using the ID as a [shadow property](https://docs.microsoft.com/ef/core/modeling/shadow-properties ).</span></span> <span data-ttu-id="f2af9-140">由于在模型中隐藏 ID 的配置是在 EF 基础结构级别中设置的，ID 对于域模型好似透明的。</span><span class="sxs-lookup"><span data-stu-id="f2af9-140">Since that configuration for hiding the ID in the model is set up in the EF infrastructure level, it would be kind of transparent for your domain model.</span></span>
+
+<span data-ttu-id="f2af9-141">在 eShopOnContainers (.NET Core 1.1) 的初始版本中，EF Core 基础结构所需的隐藏 ID 在 DbContext 级别上采用基础结构项目中的 Fluent API 通过以下方式来实现。</span><span class="sxs-lookup"><span data-stu-id="f2af9-141">In the initial version of eShopOnContainers (.NET Core 1.1), the hidden ID needed by EF Core infrastructure was implemented in the following way in the DbContext level, using Fluent API at the infrastructure project.</span></span> <span data-ttu-id="f2af9-142">因此，该 ID 从域模型角度看是隐藏的，但仍存于基础结构中。</span><span class="sxs-lookup"><span data-stu-id="f2af9-142">Therefore, the ID was hidden from the domain model point of view, but still present in the infrastructure.</span></span>
 
 ```csharp
-// Fluent API within the OrderingContext:DbContext in the
-// Ordering.Infrastructure project
-
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
+// Old approach with EF Core 1.1
+// Fluent API within the OrderingContext:DbContext in the Infrastructure project
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
-    addressConfiguration.Property<int>("Id").IsRequired();
-    addressConfiguration.HasKey("Id");
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+
+    addressConfiguration.Property<int>("Id")  // Id is a shadow property
+        .IsRequired();
+    addressConfiguration.HasKey("Id");   // Id is a shadow property
 }
 ```
 
-<span data-ttu-id="612fe-139">因此，该 ID 隐藏的域模型角度来看，并在将来，值对象基础结构也都无法作为复杂类型或另一种方法实施。</span><span class="sxs-lookup"><span data-stu-id="612fe-139">Therefore, the ID is hidden from the domain model point of view, and in the future, the value object infrastructure could also be implemented as a complex type or another way.</span></span>
+<span data-ttu-id="f2af9-143">但是，将值对象持久保存在数据库中执行起来如同将常规实体持久保存在不同表中。</span><span class="sxs-lookup"><span data-stu-id="f2af9-143">However, the persistence of that value object into the database was performed like a regular entity in a different table.</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="612fe-140">其他资源</span><span class="sxs-lookup"><span data-stu-id="612fe-140">Additional resources</span></span>
+<span data-ttu-id="f2af9-144">使用 EF Core 2.0 时，有更好的新方法来持久保存值对象。</span><span class="sxs-lookup"><span data-stu-id="f2af9-144">With EF Core 2.0, there are new and better ways to persist value objects.</span></span>
 
--   <span data-ttu-id="612fe-141">**Martin Fowler。ValueObject 模式**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)</span><span class="sxs-lookup"><span data-stu-id="612fe-141">**Martin Fowler. ValueObject pattern**
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a><span data-ttu-id="f2af9-145">在 EF Core 2.0 中以固有实体类型形式来持久保存值对象</span><span class="sxs-lookup"><span data-stu-id="f2af9-145">Persist value objects as owned entity types in EF Core 2.0</span></span>
+
+<span data-ttu-id="f2af9-146">即使 EF Core 中的固有实体类型与 DDD 中的规范值对象模式之间存在一些差距，当前它是在 EF Core 2.0 中持久保存值对象的最佳方式。</span><span class="sxs-lookup"><span data-stu-id="f2af9-146">Even with some gaps between the canonical value object pattern in DDD and the owned entity type in EF Core, it's currently the best way to persist value objects with EF Core 2.0.</span></span> <span data-ttu-id="f2af9-147">将在本部分末尾看到限制。</span><span class="sxs-lookup"><span data-stu-id="f2af9-147">You can see limitations at the end of this section.</span></span>
+
+<span data-ttu-id="f2af9-148">固有实体类型功能已添加到 EF Core 2.0 及以上版本。</span><span class="sxs-lookup"><span data-stu-id="f2af9-148">The owned entity type feature was added to EF Core since version 2.0.</span></span>
+
+<span data-ttu-id="f2af9-149">固有实体类型允许在任何实体内映射具有以下特征的类型：用作属性且不具有在域模型中显式定义的自己的标识，如值对象。</span><span class="sxs-lookup"><span data-stu-id="f2af9-149">An owned entity type allows you to map types that do not have their own identity explicitely defined in the domain model and are used as properties, such as a value object, within any of your entities.</span></span> <span data-ttu-id="f2af9-150">固有实体类型与其他实体类型共享相同的 CLR 类型。</span><span class="sxs-lookup"><span data-stu-id="f2af9-150">An owned entity type shares the same CLR type with another entity type.</span></span> <span data-ttu-id="f2af9-151">包含定义性导航的实体是所有者实体。</span><span class="sxs-lookup"><span data-stu-id="f2af9-151">The entity containing the defining navigation is the owner entity.</span></span> <span data-ttu-id="f2af9-152">查询所有者时，固有类型将默认包含在内。</span><span class="sxs-lookup"><span data-stu-id="f2af9-152">When querying the owner, the owned types are included by default.</span></span>
+
+<span data-ttu-id="f2af9-153">查看一下域模型，固有类型看上去似乎没有任何标识。</span><span class="sxs-lookup"><span data-stu-id="f2af9-153">Just by looking at the domain model, an owned type looks like it doesn’t have any identity.</span></span>
+<span data-ttu-id="f2af9-154">但是事实上，固有类型确有标识，但所有者导航属性为此标识的一部分。</span><span class="sxs-lookup"><span data-stu-id="f2af9-154">However, under the covers, owned types do have identity, but the owner navigation property is part of this identity.</span></span>
+
+<span data-ttu-id="f2af9-155">自己的类型的实例的标识不完全是自己的。</span><span class="sxs-lookup"><span data-stu-id="f2af9-155">The identity of instances of own types is not completely their own.</span></span> <span data-ttu-id="f2af9-156">它由三个部分组成：</span><span class="sxs-lookup"><span data-stu-id="f2af9-156">It consists of three components:</span></span> 
+
+- <span data-ttu-id="f2af9-157">所有者标识</span><span class="sxs-lookup"><span data-stu-id="f2af9-157">The identity of the owner</span></span>
+
+- <span data-ttu-id="f2af9-158">指向它们的导航属性</span><span class="sxs-lookup"><span data-stu-id="f2af9-158">The navigation property pointing to them</span></span>
+
+- <span data-ttu-id="f2af9-159">对于固有类型的集合，一个独立的组成部分（EF Core 2.0 中尚不支持）。</span><span class="sxs-lookup"><span data-stu-id="f2af9-159">In the case of collections of owned types, an independent component (not yet supported in EF Core 2.0).</span></span>
+
+<span data-ttu-id="f2af9-160">例如，在 eShopOnContainers 的订购域模型中，作为 Order 实体的一部分，Address 值对象在所有者实体（即 Order 实体）内作为固有实体类型实现。</span><span class="sxs-lookup"><span data-stu-id="f2af9-160">For example, in the Ordering domain model at eShopOnContainers, as part of the Order entity, the Address value object is implemented as an owned entity type within the owner entity, which is the Order entity.</span></span> <span data-ttu-id="f2af9-161">Address 是域模型中定义的没有标识属性的类型。</span><span class="sxs-lookup"><span data-stu-id="f2af9-161">Address is a type with no identity property defined in the domain model.</span></span> <span data-ttu-id="f2af9-162">它用作 Order 类型的属性来指定特定订单的发货地址。</span><span class="sxs-lookup"><span data-stu-id="f2af9-162">It is used as a property of the Order type to specify the shipping address for a particular order.</span></span>
+
+<span data-ttu-id="f2af9-163">依照约定，将为固有类型创建一个阴影主键，并通过表拆分将其映射到与所有者相同的表。</span><span class="sxs-lookup"><span data-stu-id="f2af9-163">By convention, a shadow primary key is created for the owned type and it will be mapped to the same table as the owner by using table splitting.</span></span> <span data-ttu-id="f2af9-164">这样就可以通过类似于传统 .NET Framework 的 EF6 中复杂类型的用法来使用固有类型。</span><span class="sxs-lookup"><span data-stu-id="f2af9-164">This allows to use owned types similarly to how complex types are used in EF6 in the traditional .NET Framework.</span></span>
+
+<span data-ttu-id="f2af9-165">请务必注意，固有类型在 EF Core 中永远不会由约定发现，因此你必须显式声明它们。</span><span class="sxs-lookup"><span data-stu-id="f2af9-165">It is important to note that owned types are never discovered by convention in EF Core, so you have to declare them explicitly.</span></span>
+
+<span data-ttu-id="f2af9-166">在 eShopOnContainers 的 OrderingContext.cs 中，在 OnModelCreating() 方法内，应用了多个基础结构配置。</span><span class="sxs-lookup"><span data-stu-id="f2af9-166">In eShopOnContainers, at the OrderingContext.cs, within the OnModelCreating() method, there are multiple infrastructure configuration being applied.</span></span> <span data-ttu-id="f2af9-167">其中之一与 Order 实体相关。</span><span class="sxs-lookup"><span data-stu-id="f2af9-167">One of them is related to the Order entity.</span></span>
+
+```csharp
+// Part of the OrderingContext.cs class at the Ordering.Infrastructure project
+// 
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
+    modelBuilder.ApplyConfiguration(new PaymentMethodEntityTypeConfiguration());
+    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+    modelBuilder.ApplyConfiguration(new OrderItemEntityTypeConfiguration());
+    //...Additional type configurations
+}
+```
+
+<span data-ttu-id="f2af9-168">在下面的代码中，针对 Order 实体定义了持久性基础结构：</span><span class="sxs-lookup"><span data-stu-id="f2af9-168">In the following code, the persistence infrastructure is defined for the Order entity:</span></span>
+
+```csharp
+// Part of the OrderEntityTypeConfiguration.cs class 
+// 
+public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+{
+    orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+    orderConfiguration.HasKey(o => o.Id);
+    orderConfiguration.Ignore(b => b.DomainEvents);
+    orderConfiguration.Property(o => o.Id)
+        .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+
+    //Address value object persisted as owned entity in EF Core 2.0
+    orderConfiguration.OwnsOne(o => o.Address);
+
+    orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
+    
+    //...Additional validations, constraints and code...
+    //...
+}
+```
+
+<span data-ttu-id="f2af9-169">在前面的代码中，`orderConfiguration.OwnsOne(o => o.Address)` 方法指定了 `Address` 属性是 `Order` 类型的固有实体。</span><span class="sxs-lookup"><span data-stu-id="f2af9-169">In the previous code, the `orderConfiguration.OwnsOne(o => o.Address)` method specifies that the `Address` property is an owned entity of the `Order` type.</span></span>
+
+<span data-ttu-id="f2af9-170">默认情况下，EF Core 约定将固有实体类型属性的数据库列命名为 `EntityProperty_OwnedEntityProperty`。</span><span class="sxs-lookup"><span data-stu-id="f2af9-170">By default, EF Core conventions name the database columns for the properties of the owned entity type as `EntityProperty_OwnedEntityProperty`.</span></span> <span data-ttu-id="f2af9-171">因此，`Address` 的内部属性将以 `Address_Street`、`Address_City` 这样的名称（对于 `State``Country` 和 `ZipCode` 可进行类推）出现在 `Orders` 表中。</span><span class="sxs-lookup"><span data-stu-id="f2af9-171">Therefore, the internal properties of `Address` will appear in the `Orders` table with the names `Address_Street`, `Address_City` (and so on for `State`, `Country` and `ZipCode`).</span></span>
+
+<span data-ttu-id="f2af9-172">可以附加 `Property().HasColumnName()` 连贯性方法来重命名这些列。</span><span class="sxs-lookup"><span data-stu-id="f2af9-172">You can append the `Property().HasColumnName()` fluent method to rename those columns.</span></span> <span data-ttu-id="f2af9-173">如果 `Address` 是公共属性，映射将如下所示：</span><span class="sxs-lookup"><span data-stu-id="f2af9-173">In the case where `Address` is a public property, the mappings would be like the following:</span></span>
+
+```csharp
+orderConfiguration.OwnsOne(p => p.Address)
+                            .Property(p=>p.Street).HasColumnName("ShippingStreet");
+
+orderConfiguration.OwnsOne(p => p.Address)
+                            .Property(p=>p.City).HasColumnName("ShippingCity");
+```
+
+<span data-ttu-id="f2af9-174">可以将 `OwnsOne` 方法链接到连贯性映射。</span><span class="sxs-lookup"><span data-stu-id="f2af9-174">It is possible to chain the `OwnsOne` method in a fluent mapping.</span></span> <span data-ttu-id="f2af9-175">在以下假设示例中，`OrderDetails` 拥有 `BillingAddress` 和 `ShippingAddress`，它们均为 `Address` 类型。</span><span class="sxs-lookup"><span data-stu-id="f2af9-175">In the following hypothetical example, `OrderDetails` owns `BillingAddress` and `ShippingAddress`, which are both `Address` types.</span></span> <span data-ttu-id="f2af9-176">然后 `OrderDetails` 归 `Order` 类型所有。</span><span class="sxs-lookup"><span data-stu-id="f2af9-176">Then `OrderDetails` is owned by the `Order` type.</span></span>
+
+```csharp
+orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
+    {
+        cb.OwnsOne(c => c.BillingAddress);
+        cb.OwnsOne(c => c.ShippingAddress);
+    });
+//...
+//...
+public class Order
+{
+    public int Id { get; set; }
+    public OrderDetails OrderDetails { get; set; }
+}
+
+public class OrderDetails
+{
+    public StreetAddress BillingAddress { get; set; }
+    public StreetAddress ShippingAddress { get; set; }
+}
+
+public class Address
+{
+    public string Street { get; set; }
+    public string City { get; set; }
+}
+```
+
+### <a name="additional-details-on-owned-entity-types"></a><span data-ttu-id="f2af9-177">固有实体类型上的其他详细信息</span><span class="sxs-lookup"><span data-stu-id="f2af9-177">Additional details on owned entity types</span></span>
+
+<span data-ttu-id="f2af9-178">•   使用 OwnsOne Fluent API 将导航属性配置为特定类型时即定义固有类型。</span><span class="sxs-lookup"><span data-stu-id="f2af9-178">•   Owned types are defined when you configure a navigation property to a particular type using the OwnsOne fluent API.</span></span>
+
+<span data-ttu-id="f2af9-179">•   我们元数据模型中固有类型的定义为以下各项的组合：所有者类型、导航属性，以及固有类型的 CLR 类型。</span><span class="sxs-lookup"><span data-stu-id="f2af9-179">•   The definition of an owned type in our metadata model is a composite of: the owner type, the navigation property, and the CLR type of the owned type.</span></span>
+
+<span data-ttu-id="f2af9-180">•   我们堆栈中固有类型实例的标识（键）即为所有者类型标识和固有类型定义的组合。</span><span class="sxs-lookup"><span data-stu-id="f2af9-180">•   The identity (key) of an owned type instance in our stack is a composite of the identity of the owner type and the definition of the owned type.</span></span>
+
+#### <a name="owned-entities-capabilities"></a><span data-ttu-id="f2af9-181">固有实体功能：</span><span class="sxs-lookup"><span data-stu-id="f2af9-181">Owned entities capabilities:</span></span>
+
+<span data-ttu-id="f2af9-182">•   固有类型可以引用其他实体，固有（嵌套固有类型）或非固有（其他实体的常规引用导航属性）均可。</span><span class="sxs-lookup"><span data-stu-id="f2af9-182">•   Owned type can reference other entities, either owned (nested owned types) or non-owned (regular reference navigation properties to other entities).</span></span>
+
+<span data-ttu-id="f2af9-183">•   可以通过单独的导航属性在同一所有者实体中以不同固有类型的形式来映射相同的 CLR 类型。</span><span class="sxs-lookup"><span data-stu-id="f2af9-183">•   You can map the same CLR type as different owned types in the same owner entity through separate navigation properties.</span></span>
+
+<span data-ttu-id="f2af9-184">•   表拆分由约定设置，但可以通过使用 ToTable 将固有类型映射到其他表来另行选择。</span><span class="sxs-lookup"><span data-stu-id="f2af9-184">•   Table splitting is setup by convention, but you can opt out by mapping the owned type to a different table using ToTable.</span></span>
+
+<span data-ttu-id="f2af9-185">•   立即加载对于固有类型自动执行，即无需对查询调用 Include()。</span><span class="sxs-lookup"><span data-stu-id="f2af9-185">•   Eager loading is performed automatically on owned types, i.e. no need to call Include() on the query.</span></span>
+
+#### <a name="owned-entities-limitations"></a><span data-ttu-id="f2af9-186">固有实体的限制：</span><span class="sxs-lookup"><span data-stu-id="f2af9-186">Owned entities limitations:</span></span>
+
+<span data-ttu-id="f2af9-187">•   不能创建固有类型的 DbSet<T>（按照设计）。</span><span class="sxs-lookup"><span data-stu-id="f2af9-187">•   You cannot create a DbSet<T> of an owned type (by design).</span></span>
+
+<span data-ttu-id="f2af9-188">•   不能在固有类型上调用 ModelBuilder.Entity<T>()（当前按照设计）。</span><span class="sxs-lookup"><span data-stu-id="f2af9-188">•   You cannot call ModelBuilder.Entity<T>() on owned types (currently by design).</span></span>
+
+<span data-ttu-id="f2af9-189">•   尚且没有固有类型的集合（但在 EF Core 2.0 之后的版本会支持）。</span><span class="sxs-lookup"><span data-stu-id="f2af9-189">•   No collections of owned types yet (but they will be supported in versions after EF Core 2.0).</span></span>
+
+<span data-ttu-id="f2af9-190">•   不支持通过特性对它们进行配置。</span><span class="sxs-lookup"><span data-stu-id="f2af9-190">•   No support for configuring them via an attribute.</span></span>
+
+<span data-ttu-id="f2af9-191">•   不支持使用同一表格中所有者映射的可选（即可以为 null）固有类型（即使用表格拆分）。</span><span class="sxs-lookup"><span data-stu-id="f2af9-191">•   No support for optional (i.e. nullable) owned types that are mapped with the owner in the same table (i.e. using table splitting).</span></span> <span data-ttu-id="f2af9-192">这是因为我们对 null 没有单独的 sentinel。</span><span class="sxs-lookup"><span data-stu-id="f2af9-192">This is because we don't have a separate sentinel for the null.</span></span>
+
+<span data-ttu-id="f2af9-193">•   没有对固有类型的继承映射支持，但应能够以不同固有类型的形式映射同一继承层次结构的两个叶类型。</span><span class="sxs-lookup"><span data-stu-id="f2af9-193">•   No inheritance mapping support for owned types, but you should be able to map two leaf types of the same inheritance hierarchies as different owned types.</span></span> <span data-ttu-id="f2af9-194">EF Core 不会就它们不属于同一层次结构的事实进行推断。</span><span class="sxs-lookup"><span data-stu-id="f2af9-194">EF Core will not reason about the fact that they are part of the same hierarchy.</span></span>
+
+#### <a name="main-differences-with-ef6s-complex-types"></a><span data-ttu-id="f2af9-195">与 EF6 的复杂类型的主要差异</span><span class="sxs-lookup"><span data-stu-id="f2af9-195">Main differences with EF6's complex types</span></span>
+
+<span data-ttu-id="f2af9-196">•   表拆分是可选的，即可以根据需要将它们映射到单独的表并仍属固有类型。</span><span class="sxs-lookup"><span data-stu-id="f2af9-196">•   Table splitting is optional, i.e. they can optionally be mapped to a separate table and still be owned types.</span></span>
+
+<span data-ttu-id="f2af9-197">•   它们可以引用其他实体（即它们可以充当关系上其他非固有类型的依赖端）。</span><span class="sxs-lookup"><span data-stu-id="f2af9-197">•   They can reference other entities (i.e. they can act as the dependent side on relationships to other non-owned types).</span></span>
+
+
+## <a name="additional-resources"></a><span data-ttu-id="f2af9-198">其他资源</span><span class="sxs-lookup"><span data-stu-id="f2af9-198">Additional resources</span></span>
+
+-   <span data-ttu-id="f2af9-199">**Martin Fowler。ValueObject 模式**
+    [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)</span><span class="sxs-lookup"><span data-stu-id="f2af9-199">**Martin Fowler. ValueObject pattern**
 [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)</span></span>
 
--   <span data-ttu-id="612fe-142">**Eric Evans。域驱动的设计： 解决软件核心的复杂性。**</span><span class="sxs-lookup"><span data-stu-id="612fe-142">**Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.**</span></span> <span data-ttu-id="612fe-143">（本书; 包括的值对象的讨论）[ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span><span class="sxs-lookup"><span data-stu-id="612fe-143">(Book; includes a discussion of value objects) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span></span>
+-   <span data-ttu-id="f2af9-200">**Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。）</span><span class="sxs-lookup"><span data-stu-id="f2af9-200">**Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.**</span></span> <span data-ttu-id="f2af9-201">（书籍，包括对值对象的讨论）[https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span><span class="sxs-lookup"><span data-stu-id="f2af9-201">(Book; includes a discussion of value objects) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)</span></span>
 
--   <span data-ttu-id="612fe-144">**Vaughn Vernon。实现域驱动的设计。**</span><span class="sxs-lookup"><span data-stu-id="612fe-144">**Vaughn Vernon. Implementing Domain-Driven Design.**</span></span> <span data-ttu-id="612fe-145">（本书; 包括的值对象的讨论）[ *https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span><span class="sxs-lookup"><span data-stu-id="612fe-145">(Book; includes a discussion of value objects) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span></span>
+-   <span data-ttu-id="f2af9-202">**Vaughn Vernon。实现域驱动设计。**</span><span class="sxs-lookup"><span data-stu-id="f2af9-202">**Vaughn Vernon. Implementing Domain-Driven Design.**</span></span> <span data-ttu-id="f2af9-203">（书籍，包括对值对象的讨论）[https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span><span class="sxs-lookup"><span data-stu-id="f2af9-203">(Book; includes a discussion of value objects) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)</span></span>
 
--   <span data-ttu-id="612fe-146">**隐藏属性**
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span><span class="sxs-lookup"><span data-stu-id="612fe-146">**Shadow Properties**
+-   <span data-ttu-id="f2af9-204">**阴影属性**
+    [https://docs.microsoft.com/ef/core/modeling/shadow-properties](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span><span class="sxs-lookup"><span data-stu-id="f2af9-204">**Shadow Properties**
 [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)</span></span>
 
--   <span data-ttu-id="612fe-147">**复杂类型和/或值对象**。</span><span class="sxs-lookup"><span data-stu-id="612fe-147">**Complex types and/or value objects**.</span></span> <span data-ttu-id="612fe-148">在 EF 核心 GitHub 存储库 （问题选项卡） 中的讨论[ *https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)</span><span class="sxs-lookup"><span data-stu-id="612fe-148">Discussion in the EF Core GitHub repo (Issues tab) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)</span></span>
+-   <span data-ttu-id="f2af9-205">**复杂类型和/或值对象**。</span><span class="sxs-lookup"><span data-stu-id="f2af9-205">**Complex types and/or value objects**.</span></span> <span data-ttu-id="f2af9-206">EF Core GitHub 存储库（“问题”标签页）中的讨论[https://github.com/aspnet/EntityFramework/issues/246](https://github.com/aspnet/EntityFramework/issues/246)</span><span class="sxs-lookup"><span data-stu-id="f2af9-206">Discussion in the EF Core GitHub repo (Issues tab) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)</span></span>
 
--   <span data-ttu-id="612fe-149">**ValueObject.cs。**</span><span class="sxs-lookup"><span data-stu-id="612fe-149">**ValueObject.cs.**</span></span> <span data-ttu-id="612fe-150">中 eShopOnContainers 基值对象类。</span><span class="sxs-lookup"><span data-stu-id="612fe-150">Base value object class in eShopOnContainers.</span></span>
-    [<span data-ttu-id="612fe-151">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*</span><span class="sxs-lookup"><span data-stu-id="612fe-151">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+-   <span data-ttu-id="f2af9-207">**ValueObject.cs.**</span><span class="sxs-lookup"><span data-stu-id="f2af9-207">**ValueObject.cs.**</span></span> <span data-ttu-id="f2af9-208">eShopOnContainers 中的基值对象类。</span><span class="sxs-lookup"><span data-stu-id="f2af9-208">Base value object class in eShopOnContainers.</span></span>
+    [<span data-ttu-id="f2af9-209">https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs</span><span class="sxs-lookup"><span data-stu-id="f2af9-209">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
 
--   <span data-ttu-id="612fe-152">**地址类别。**</span><span class="sxs-lookup"><span data-stu-id="612fe-152">**Address class.**</span></span> <span data-ttu-id="612fe-153">示例值中 eShopOnContainers 对象类。</span><span class="sxs-lookup"><span data-stu-id="612fe-153">Sample value object class in eShopOnContainers.</span></span>
-    [<span data-ttu-id="612fe-154">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*</span><span class="sxs-lookup"><span data-stu-id="612fe-154">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
+-   <span data-ttu-id="f2af9-210">**地址类。**</span><span class="sxs-lookup"><span data-stu-id="f2af9-210">**Address class.**</span></span> <span data-ttu-id="f2af9-211">eShopOnContainers 中的示例值对象类。</span><span class="sxs-lookup"><span data-stu-id="f2af9-211">Sample value object class in eShopOnContainers.</span></span>
+    [<span data-ttu-id="f2af9-212">https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs</span><span class="sxs-lookup"><span data-stu-id="f2af9-212">*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*</span></span>](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
+
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="612fe-155">[以前](seedwork-domain-model-base-classes-interfaces.md) [下一步] (枚举-类-转移-枚举-types.md)</span><span class="sxs-lookup"><span data-stu-id="612fe-155">[Previous] (seedwork-domain-model-base-classes-interfaces.md) [Next] (enumeration-classes-over-enum-types.md)</span></span>
+<span data-ttu-id="f2af9-213">[上一页] (seedwork-domain-model-base-classes-interfaces.md) [下一页] (enumeration-classes-over-enum-types.md)</span><span class="sxs-lookup"><span data-stu-id="f2af9-213">[Previous] (seedwork-domain-model-base-classes-interfaces.md) [Next] (enumeration-classes-over-enum-types.md)</span></span>
