@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorProfilerInfo.GetModuleMetaData
-api_location: mscorwks.dll
-api_type: COM
-f1_keywords: ICorProfilerInfo::GetModuleMetaData
+api_name:
+- ICorProfilerInfo.GetModuleMetaData
+api_location:
+- mscorwks.dll
+api_type:
+- COM
+f1_keywords:
+- ICorProfilerInfo::GetModuleMetaData
 helpviewer_keywords:
 - GetModuleMetaData method [.NET Framework profiling]
 - ICorProfilerInfo::GetModuleMetaData method [.NET Framework profiling]
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
-topic_type: apiref
-caps.latest.revision: "15"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6ad52460bcd6eb320e970cd0ce2078f2e93df353
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -57,7 +64,7 @@ HRESULT GetModuleMetaData(
 ## <a name="remarks"></a><span data-ttu-id="a8462-112">备注</span><span class="sxs-lookup"><span data-stu-id="a8462-112">Remarks</span></span>  
  <span data-ttu-id="a8462-113">你可能会要求针对元数据要打开在读/写模式下，但这将导致该程序的执行速度变慢的元数据，因为对更改它们从编译器的不能优化元数据。</span><span class="sxs-lookup"><span data-stu-id="a8462-113">You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.</span></span>  
   
- <span data-ttu-id="a8462-114">一些模块 （如资源模块） 具有任何元数据。</span><span class="sxs-lookup"><span data-stu-id="a8462-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="a8462-115">在这些情况下，`GetModuleMetaData`将返回的 HRESULT 值为 S_FALSE 和中的 null *`ppOut`。</span><span class="sxs-lookup"><span data-stu-id="a8462-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.</span></span>  
+ <span data-ttu-id="a8462-114">一些模块 （如资源模块） 具有任何元数据。</span><span class="sxs-lookup"><span data-stu-id="a8462-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="a8462-115">在这些情况下，`GetModuleMetaData`将返回的 HRESULT 值为 S_FALSE 和中的 null \*`ppOut`。</span><span class="sxs-lookup"><span data-stu-id="a8462-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in \*`ppOut`.</span></span>  
   
 ## <a name="requirements"></a><span data-ttu-id="a8462-116">惠?</span><span class="sxs-lookup"><span data-stu-id="a8462-116">Requirements</span></span>  
  <span data-ttu-id="a8462-117">**平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a8462-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  

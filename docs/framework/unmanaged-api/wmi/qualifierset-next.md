@@ -3,18 +3,26 @@ title: "QualifierSet_Next 函数 （非托管 API 参考）"
 description: "QualifierSet_Next 函数将检索枚举中的下一步限定符。"
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: QualifierSet_Next
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: QualifierSet_Next
-helpviewer_keywords: QualifierSet_Next function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- QualifierSet_Next
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- QualifierSet_Next
+helpviewer_keywords:
+- QualifierSet_Next function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 01a9c9d162039547849597aaa9c8a6fa38a31455
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

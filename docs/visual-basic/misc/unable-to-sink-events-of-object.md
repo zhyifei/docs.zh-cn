@@ -2,11 +2,13 @@
 title: "无法接收对象的事件，因为该对象激发的事件数已达到它所支持的事件接收器的最大数"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID96
+f1_keywords:
+- vbrID96
 ms.assetid: e40b19a2-8100-43ff-a1a4-0ddee3cc7f9a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 532dc70b6cac70561f49ff2518d4a3afffbb646e

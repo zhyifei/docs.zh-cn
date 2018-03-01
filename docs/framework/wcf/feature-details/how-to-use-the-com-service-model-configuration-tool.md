@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: COM+ [WCF], using service model configuration tool
+helpviewer_keywords:
+- COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dd89a3333ab68b7d580c813a4b7741686b46c5b6
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
      <span data-ttu-id="51042-117">此命令将 `IFinances` 组件（它属于 OnlineStore COM+ 应用程序）的 `ItemOrders.IFinancial` 接口添加到将作为 Web 服务公开的接口集。</span><span class="sxs-lookup"><span data-stu-id="51042-117">The command adds the `IFinances` interface of the `ItemOrders.IFinancial` component (from the OnlineStore COM+ application) to the set of interfaces that will be exposed as Web services.</span></span> <span data-ttu-id="51042-118">此服务使用 COM+ 宿主模式，因此要求显式激活应用程序。</span><span class="sxs-lookup"><span data-stu-id="51042-118">The service uses the COM+ hosting mode and therefore requires explicit application activation.</span></span>  
   
-     <span data-ttu-id="51042-119">虽然可以将通配符星号 (*) 字符用于组件和接口，但应避免使用它，因为你可能希望仅将选定的功能作为 Web 服务公开。</span><span class="sxs-lookup"><span data-stu-id="51042-119">While the wildcard asterisk (*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="51042-120">如果对此组件的将来版本运行命令，则使用通配符可能意外地公开在确定配置语法时尚不存在的接口。</span><span class="sxs-lookup"><span data-stu-id="51042-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
+     <span data-ttu-id="51042-119">虽然可以将通配符星号 (\*) 字符用于组件和接口，但应避免使用它，因为你可能希望仅将选定的功能作为 Web 服务公开。</span><span class="sxs-lookup"><span data-stu-id="51042-119">While the wildcard asterisk (\*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="51042-120">如果对此组件的将来版本运行命令，则使用通配符可能意外地公开在确定配置语法时尚不存在的接口。</span><span class="sxs-lookup"><span data-stu-id="51042-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
   
      <span data-ttu-id="51042-121">/verbose 选项指示该工具除显示所有错误以外，还要显示警告。</span><span class="sxs-lookup"><span data-stu-id="51042-121">The /verbose option instructs the tool to display warnings in addition to any errors.</span></span>  
   

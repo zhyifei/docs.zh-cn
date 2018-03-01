@@ -3,18 +3,26 @@ title: "GetDemultiplexedStub 函数 （非托管 API 参考）"
 description: "GetDemultiplexedStub 函数将创建的对象转发器接收器，以帮助客户端在从 Windows 管理接收异步调用。"
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: GetDemultiplexedStub
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: GetDemultiplexedStub
-helpviewer_keywords: GetDemultiplexedStub function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- GetDemultiplexedStub
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- GetDemultiplexedStub
+helpviewer_keywords:
+- GetDemultiplexedStub function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: f53ee18345347f506a404a22bf5bfea6af037463
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT

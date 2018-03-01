@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: bindings [WCF], overview
+helpviewer_keywords:
+- bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <span data-ttu-id="e1271-127"><xref:System.ServiceModel.BasicHttpBinding>：一个 HTTP 协议绑定，适用于连接到符合 WS-I 基本配置文件规范的 Web 服务（例如，基于 ASP.NET Web 服务的服务）。</span><span class="sxs-lookup"><span data-stu-id="e1271-127"><xref:System.ServiceModel.BasicHttpBinding>: An HTTP protocol binding suitable for connecting to Web services that conforms to the WS-I Basic Profile specification (for example, ASP.NET Web services-based services).</span></span>  
   
--   <span data-ttu-id="e1271-128"><xref:System.ServiceModel.WSHttpBinding>：一个可互操作的绑定，适用于连接到符合 WS-* 协议的终结点。</span><span class="sxs-lookup"><span data-stu-id="e1271-128"><xref:System.ServiceModel.WSHttpBinding>: An interoperable binding suitable for connecting to endpoints that conform to the WS-* protocols.</span></span>  
+-   <span data-ttu-id="e1271-128"><xref:System.ServiceModel.WSHttpBinding>：一个可互操作的绑定，适用于连接到符合 WS-\* 协议的终结点。</span><span class="sxs-lookup"><span data-stu-id="e1271-128"><xref:System.ServiceModel.WSHttpBinding>: An interoperable binding suitable for connecting to endpoints that conform to the WS-\* protocols.</span></span>  
   
 -   <span data-ttu-id="e1271-129"><xref:System.ServiceModel.NetNamedPipeBinding>：使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 连接到同一计算机上的其他 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 终结点。</span><span class="sxs-lookup"><span data-stu-id="e1271-129"><xref:System.ServiceModel.NetNamedPipeBinding>: Uses the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] to connect to other [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] endpoints on the same machine.</span></span>  
   

@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: user-defined bindings [WCF]
+helpviewer_keywords:
+- user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -49,10 +52,10 @@ ms.lasthandoff: 12/22/2017
 |<span data-ttu-id="4535e-135">可靠性</span><span class="sxs-lookup"><span data-stu-id="4535e-135">Reliability</span></span>|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|<span data-ttu-id="4535e-136">No</span><span class="sxs-lookup"><span data-stu-id="4535e-136">No</span></span>|  
 |<span data-ttu-id="4535e-137">安全性</span><span class="sxs-lookup"><span data-stu-id="4535e-137">Security</span></span>|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|<span data-ttu-id="4535e-138">No</span><span class="sxs-lookup"><span data-stu-id="4535e-138">No</span></span>|  
 |<span data-ttu-id="4535e-139">复合双工</span><span class="sxs-lookup"><span data-stu-id="4535e-139">Composite Duplex</span></span>|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|<span data-ttu-id="4535e-140">No</span><span class="sxs-lookup"><span data-stu-id="4535e-140">No</span></span>|  
-|<span data-ttu-id="4535e-141">编码</span><span class="sxs-lookup"><span data-stu-id="4535e-141">Encoding</span></span>|<span data-ttu-id="4535e-142">文本、二进制、MTOM、自定义</span><span class="sxs-lookup"><span data-stu-id="4535e-142">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="4535e-143">是*</span><span class="sxs-lookup"><span data-stu-id="4535e-143">Yes*</span></span>|  
+|<span data-ttu-id="4535e-141">编码</span><span class="sxs-lookup"><span data-stu-id="4535e-141">Encoding</span></span>|<span data-ttu-id="4535e-142">文本、二进制、MTOM、自定义</span><span class="sxs-lookup"><span data-stu-id="4535e-142">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="4535e-143">是\*</span><span class="sxs-lookup"><span data-stu-id="4535e-143">Yes\*</span></span>|  
 |<span data-ttu-id="4535e-144">传输</span><span class="sxs-lookup"><span data-stu-id="4535e-144">Transport</span></span>|<span data-ttu-id="4535e-145">TCP、命名管道、HTTP、HTTPS、MSMQ、自定义</span><span class="sxs-lookup"><span data-stu-id="4535e-145">TCP, Named Pipes, HTTP, HTTPS, MSMQ, Custom</span></span>|<span data-ttu-id="4535e-146">是</span><span class="sxs-lookup"><span data-stu-id="4535e-146">Yes</span></span>|  
   
- <span data-ttu-id="4535e-147">*由于每个绑定都需要一个编码，因此，如果未指定编码，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会添加一个默认编码。</span><span class="sxs-lookup"><span data-stu-id="4535e-147">*Because an encoding is required for each binding, if an encoding is not specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adds a default encoding for you.</span></span> <span data-ttu-id="4535e-148">对于 HTTP 和 HTTPS 传输，默认编码为 Text/XML，对于其他传输，默认编码为二进制。</span><span class="sxs-lookup"><span data-stu-id="4535e-148">The default is Text/XML for the HTTP and HTTPS transports, and Binary otherwise.</span></span>  
+ <span data-ttu-id="4535e-147">\*由于每个绑定都需要一个编码，因此，如果未指定编码，则 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会添加一个默认编码。</span><span class="sxs-lookup"><span data-stu-id="4535e-147">\*Because an encoding is required for each binding, if an encoding is not specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] adds a default encoding for you.</span></span> <span data-ttu-id="4535e-148">对于 HTTP 和 HTTPS 传输，默认编码为 Text/XML，对于其他传输，默认编码为二进制。</span><span class="sxs-lookup"><span data-stu-id="4535e-148">The default is Text/XML for the HTTP and HTTPS transports, and Binary otherwise.</span></span>  
   
 ## <a name="creating-a-new-binding-element"></a><span data-ttu-id="4535e-149">创建新的绑定元素</span><span class="sxs-lookup"><span data-stu-id="4535e-149">Creating a new Binding Element</span></span>  
  <span data-ttu-id="4535e-150">除了从 <xref:System.ServiceModel.Channels.BindingElement> 提供的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 派生的类型外，还可以创自己的建绑定元素。</span><span class="sxs-lookup"><span data-stu-id="4535e-150">In addition to the types derived from <xref:System.ServiceModel.Channels.BindingElement> that are provided by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], you can create your own binding elements.</span></span> <span data-ttu-id="4535e-151">这样，您就可以通过创建自己的、可与堆栈中其他的系统提供的类型组合的 <xref:System.ServiceModel.Channels.BindingElement>，自定义创建绑定堆栈的方式和进入其中的组件。</span><span class="sxs-lookup"><span data-stu-id="4535e-151">This lets you customize the way the stack of bindings is created and the components that go in it by creating your own <xref:System.ServiceModel.Channels.BindingElement> that can be composed with the other system-provided types in the stack.</span></span>  

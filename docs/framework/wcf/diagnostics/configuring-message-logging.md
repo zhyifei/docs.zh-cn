@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: message logging [WCF]
+helpviewer_keywords:
+- message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a867d5f85177ad9a19a5766c65a8f1f98c04cd17
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -97,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <span data-ttu-id="a8eae-157">要记录的最大消息数（`maxMessagesToLog` 属性）：该值指定要记录的最大消息数。</span><span class="sxs-lookup"><span data-stu-id="a8eae-157">Max messages to log (`maxMessagesToLog` attribute): This value specifies the maximum number of messages to log.</span></span> <span data-ttu-id="a8eae-158">所有的消息（服务、传输和格式不正确消息）都统计到该配额中。</span><span class="sxs-lookup"><span data-stu-id="a8eae-158">All messages (service, transport, and malformed messages) are counted towards this quota.</span></span> <span data-ttu-id="a8eae-159">达到配额上限时，会发出一个跟踪，并且不再记录更多的消息。</span><span class="sxs-lookup"><span data-stu-id="a8eae-159">When the quota is reached, a trace is emitted and no additional message is logged.</span></span> <span data-ttu-id="a8eae-160">默认值为 10000。</span><span class="sxs-lookup"><span data-stu-id="a8eae-160">The default value is 10000.</span></span>  
   
--   <span data-ttu-id="a8eae-161">要记录的消息的最大大小（`maxSizeOfMessageToLog` 属性）：该值指定要记录的消息的最大大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="a8eae-161">Max size of message to log (`maxSizeOfMessageToLog` attribute): This value specifies the maximum size of messages to log in bytes.</span></span> <span data-ttu-id="a8eae-162">超过该大小限制的消息将不作记录，也不对该消息执行任何其他活动。</span><span class="sxs-lookup"><span data-stu-id="a8eae-162">Messages that exceed the size limit are not logged, and no other activity is performed for that message.</span></span> <span data-ttu-id="a8eae-163">此设置会影响所有跟踪级别。</span><span class="sxs-lookup"><span data-stu-id="a8eae-163">This setting affects all trace levels.</span></span> <span data-ttu-id="a8eae-164">如果 ServiceModel 跟踪打开，将在第一个记录点发出警告级别的跟踪（ServiceModelSend* 或 TransportReceive）以通知用户。</span><span class="sxs-lookup"><span data-stu-id="a8eae-164">If ServiceModel tracing is on, a Warning level trace is emitted at the first logging point (ServiceModelSend* or TransportReceive) to notify the user.</span></span> <span data-ttu-id="a8eae-165">服务级别和传输级别的消息的默认值为 256K，而格式不正确消息的默认值为 4K。</span><span class="sxs-lookup"><span data-stu-id="a8eae-165">The default value for service level and transport level messages is 256K, while the default value for malformed messages is 4K.</span></span>  
+-   <span data-ttu-id="a8eae-161">要记录的消息的最大大小（`maxSizeOfMessageToLog` 属性）：该值指定要记录的消息的最大大小（以字节为单位）。</span><span class="sxs-lookup"><span data-stu-id="a8eae-161">Max size of message to log (`maxSizeOfMessageToLog` attribute): This value specifies the maximum size of messages to log in bytes.</span></span> <span data-ttu-id="a8eae-162">超过该大小限制的消息将不作记录，也不对该消息执行任何其他活动。</span><span class="sxs-lookup"><span data-stu-id="a8eae-162">Messages that exceed the size limit are not logged, and no other activity is performed for that message.</span></span> <span data-ttu-id="a8eae-163">此设置会影响所有跟踪级别。</span><span class="sxs-lookup"><span data-stu-id="a8eae-163">This setting affects all trace levels.</span></span> <span data-ttu-id="a8eae-164">如果 ServiceModel 跟踪打开，将在第一个记录点发出警告级别的跟踪（ServiceModelSend\* 或 TransportReceive）以通知用户。</span><span class="sxs-lookup"><span data-stu-id="a8eae-164">If ServiceModel tracing is on, a Warning level trace is emitted at the first logging point (ServiceModelSend\* or TransportReceive) to notify the user.</span></span> <span data-ttu-id="a8eae-165">服务级别和传输级别的消息的默认值为 256K，而格式不正确消息的默认值为 4K。</span><span class="sxs-lookup"><span data-stu-id="a8eae-165">The default value for service level and transport level messages is 256K, while the default value for malformed messages is 4K.</span></span>  
   
     > [!CAUTION]
     >  <span data-ttu-id="a8eae-166">计算出来与 `maxSizeOfMessageToLog` 进行比较的消息大小是序列化之前内存中的消息大小。</span><span class="sxs-lookup"><span data-stu-id="a8eae-166">The message size that is computed to compare against `maxSizeOfMessageToLog` is the message size in memory before serialization.</span></span> <span data-ttu-id="a8eae-167">该大小可能与正在记录的消息字符串的实际长度不同，在很多情况下比实际大小更大。</span><span class="sxs-lookup"><span data-stu-id="a8eae-167">This size can differ from the actual length of the message string that is being logged, and in many occasions is bigger than the actual size.</span></span> <span data-ttu-id="a8eae-168">结果可能无法记录消息。</span><span class="sxs-lookup"><span data-stu-id="a8eae-168">As a result, messages may not be logged.</span></span> <span data-ttu-id="a8eae-169">可以通过将 `maxSizeOfMessageToLog` 属性指定为比预期的消息大小大 10% 来解决这个问题。</span><span class="sxs-lookup"><span data-stu-id="a8eae-169">You can account for this fact by specifying the `maxSizeOfMessageToLog` attribute to be 10% larger than the expected message size.</span></span> <span data-ttu-id="a8eae-170">此外，如果记录了格式不正确的消息，消息日志所占用的实际磁盘空间可能达到 `maxSizeOfMessageToLog` 所指定的值的 5 倍。</span><span class="sxs-lookup"><span data-stu-id="a8eae-170">In addition, if malformed messages are logged, the actual disk space utilized by the message logs can be up to 5 times the size of the value specified by `maxSizeOfMessageToLog`.</span></span>  
