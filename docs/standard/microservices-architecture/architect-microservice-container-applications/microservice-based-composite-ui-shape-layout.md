@@ -1,6 +1,6 @@
 ---
-title: "创建复合 UI 基于微服务，包括 visual UI 形状和布局由多个微服务生成"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |创建复合 UI 基于微服务，包括 visual UI 形状和布局由多个微服务生成"
+title: "根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,57 +8,60 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4b32fed5eb0de02b01665efa4368eb83e3fda08d
-ms.sourcegitcommit: e99dfadbca1992c187179b6a3b42bef44534ebb6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>创建复合 UI 基于微服务，包括 visual UI 形状和布局由多个微服务生成
+# <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局
 
-微服务体系结构通常开头服务器端处理数据和逻辑。 但是，更高级的方法是设计用户界面基于微服务以及你的应用程序。 这意味着具有由微服务，而不只是使用微服务的整体的客户端应用和的服务器上的微服务是一个复合 UI。 使用此方法时，生成微服务可以完成，但逻辑和可视表示形式。
+微服务体系结构通常从服务器端处理数据和逻辑开始。 但是，根据微服务设计应用程序 UI 是更好的方法。 这意味着拥有的是由微服务生成的复合 UI，而不是服务器上的微服务和使用微服务的整体式客户端应用。 按照这种方法构建的微服务具有逻辑和可视化表示形式，功能十分完整。
 
-图 4-20 演示仅使用从单一的客户端应用程序的微服务的更简单的方法。 当然，你可以生成的 HTML 和 JavaScript 之间的 ASP.NET MVC 服务。 图是简化形式，用于突出显示具有单个 （整体） 客户端 UI 使用微服务，只需专注在逻辑和数据而不在 UI 形状 （HTML 和 JavaScript）。
+图 4-20 显示了在整体式客户端应用程序中使用微服务的更为简单的方式。 当然，在生成 HTML 之后，可以创建一个 ASP.NET MVC 服务，再生成 JavaScript。 该图是一张简图，强调拥有使用微服务的单一（整体式）客户端 UI，该 UI 仅关注逻辑和数据，而不关注 UI 形状（HTML 和 JavaScript）。
 
 ![](./media/image20.png)
 
-**图 4-20**。 使用后端微服务整体 UI 应用程序
+图 4-20。 使用后端微服务的整体式 UI 应用程序
 
-与此相反，复合 UI 精确地生成并由微服务本身。 某些微服务驱动器 UI 的特定区域的可视化形状。 主要区别是，具有客户端 UI 组件 （例如 TS 类） 基于模板，并且这些模板数据调整 UI ViewModel 来自每个微服务。
+与之相比，复合 UI 是由微服务本身精确生成和组合成的。 一些微服务可控制 UI 特定区域的视觉形状。 主要区别在于，这具有基于模板的客户端 UI 组件（例如 TS 类），而这些模板的 data-shaping-UI ViewModel 来自于每个微服务。
 
-在客户端应用程序启动时，每个客户端 UI 组件 （例如 TypeScript 类） 将自身注册到能够针对给定方案提供 Viewmodel 基础结构微服务。 如果 microservice 更改形状，UI 会也更改。
+客户端应用程序启动时，每个客户端 UI 组件（例如 TypeScript 类）自身都会注册一个基础结构微服务，该微服务能够为特定方案提供 ViewModel。 如果微服务形状发生更改，则 UI 也会更改。
 
-图 4-21 显示此复合 UI 方法的版本。 这简化，因为你可能具有其他聚合精细部分基于不同的技术的微服务 — 它依赖于生成的传统 web 方法 (ASP.NET MVC) 或 SPA （单页面应用程序）。
+图 4-21 显示了一种复合 UI 方法。 这只是一张简图，因为你可能有其他基于不同技术聚合精细部件的微服务，具体取决于是构建传统 Web 方法 (ASP.NET MVC) 还是 SPA（单页应用程序）。
 
 ![](./media/image21.png)
 
-**图 4-21**。 复合 UI 应用程序后端微服务受影响的示例
+图 4-21。 由后端微服务形成的复合 UI 应用程序示例
 
-每个这些 UI 组合微服务将类似于小 API 网关。 但在这种情况下每负责较小的 UI 区域。
+这些 UI 组合微服务中的每一个都类似于一个小型的 API 网关。 但在此处，每个服务都负责一个小的 UI 领域。
 
-由微服务驱动的复合 UI 方法可以将更具挑战性或太快，具体取决于哪些 UI 技术正在使用。 例如，你不将用于构建你使用用于生成 SPA 或本机移动应用程序的传统 web 应用程序使用相同的技术 （如开发可以是此方法的更具挑战性的 Xamarin 应用时）。
+由微服务驱动的复合 UI 方法的挑战性可能更大也可能更小，具体取决于使用的 UI 技术。 例如，对于用于生成 SPA 或本机移动应用的传统 Web 应用程序，则不会使用相同的构建技术（如开发 Xamarin 应用时，此方法可能更具挑战性）。
 
-[EShopOnContainers](http://aka.ms/MicroservicesArchitecture)示例应用程序使用的整体 UI 方法有多个原因。 首先，它是微服务和容器的简介。 复合 UI 更高级，但也需要进一步的设计和开发 UI 时的复杂性。 其次，eShopOnContainers 还提供了基于 Xamarin，可能会使其更复杂的客户端 C 的本机移动应用\#端。
+出于多种原因，[eShopOnContainers](http://aka.ms/MicroservicesArchitecture) 示例应用程序使用整体式 UI 方法。 首先，其作用是引入微服务和容器。 虽然复合 UI 更高级，但该 UI 的设计和开发工作也更复杂。 其次，eShopOnContainers 还提供了基于 Xamarin 的本机移动应用，这增加了客户端 C\# 的复杂性。
 
-但是，我们鼓励你可以使用以下引用若要了解有关复合 UI 基于微服务的详细信息。
+不过，建议通过以下参考资料，深入了解基于微服务的复合 UI。
 
 ## <a name="additional-resources"></a>其他资源
 
--   **使用 ASP.NET (特定的 Workshop 中) 的复合 UI**
-    [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
+-   **Composite UI using ASP.NET (Particular’s Workshop)（使用 ASP.NET（Particular 的 Workshop）复合 UI）**
+    [http://go.particular.net/workshop-composite-ui-demo](http://go.particular.net/workshop-composite-ui-demo)
 
--   **Ruben Oostinga。微服务体系结构中的整体前端**
-    [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
+-   **Ruben Oostinga。The Monolithic Frontend in the Microservices Architecture（微服务体系结构中的整体式前端）**
+    [http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
--   **Mauro Servienti。更好用户界面组合的机密**
-    [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
+-   **Mauro Servienti。The secret of better UI composition**（实现更好的 UI 组合的秘密）
+    [https://particular.net/blog/secret-of-better-ui-composition](https://particular.net/blog/secret-of-better-ui-composition)
 
--   **Viktor Farcic。包括到微服务的前端 Web 组件**
-    [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
+-   **Viktor Farcic。Including Front-End Web Components Into Microservices**（将前端 Web 组件包含到微服务中）
+    [https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
--   **管理微服务体系结构中的前端**\
-    [*http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+-   **Managing Frontend in the Microservices Architecture**\（在微服务体系结构中管理前端）
+    [http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]
-[以前](微服务-可寻址性-服务-registry.md) [下一步] (弹性-高的可用性-microservices.md)
+[上一页] (microservices-addressability-service-registry.md) [下一页] (resilient-high-availability-microservices.md)

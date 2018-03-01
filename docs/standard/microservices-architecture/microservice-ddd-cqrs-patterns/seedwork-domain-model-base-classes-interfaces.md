@@ -1,43 +1,46 @@
 ---
-title: "Seedwork （可重用基类，这些类和接口，您的域模型）"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |Seedwork （可重用基类，这些类和接口，您的域模型）"
+title: "Seedwork（适用于域模型的可重用基类和接口）"
+description: "容器化 .NET 应用程序的 .NET 微服务| Seedwork（域模型的可重用基类和接口）"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 17602d94ea167997389a77f0d2358326258a8219
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aba336676a558f50a2669eb3ca096effb8387916
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork （可重用基类，这些类和接口，您的域模型）
+# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork（适用于域模型的可重用基类和接口）
 
-解决方案文件夹包含*SeedWork*文件夹。 *SeedWork*文件夹包含可以用作基础域实体和值对象的自定义基类。 使用这些基类的类，因此你不需要在每个域的对象类冗余代码。 此文件夹为这些类型的类称为*SeedWork*和不类似于*Framework*。 它称为*SeedWork*因为该文件夹包含仅的可重用的类不能真正将其视为一个框架的一小部分。 *Seedwork*由此引入一个术语[Michael 羽化](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826)和普遍通过[Martin Fowler](https://martinfowler.com/bliki/Seedwork.html)但你还可将该文件夹、 常用 SharedKernel，或类似。
+解决方案文件夹包含 SeedWork 文件夹。 SeedWork 文件夹包含可以用作域实体和值对象的基础的自定义基类。 使用这些基类，从而在每个域的对象类中避免冗余代码。 这些类型的类的文件夹称为 SeedWork，而不是类似于 Framework。 它称为 SeedWork，因为该文件夹仅包含可重用类的一个小型子集，不能将其视为一个框架。  Seedwork 是由 [Michael Feathers](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的一个术语，并且由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 推广普及，但也可将该文件夹命名为 Common、SharedKernel 或类似名称。
 
-图 9-12 显示排序的微服务中的窗体的域模型 seedwork 的类。 它还具有几个自定义的基本类，如实体、 ValueObject 和枚举，加上的几个接口。 （IRepository 和 IUnitOfWork） 这些接口需要实现有关通知基础结构层。 这些接口还使用通过依赖关系注入从应用程序层。
+图 9-12 显示在排序的微服务中形成域模型的 seedwork 的类。 它还包含 Entity、ValueObject 和 Enumeration 等自定义基类，以及一些接口。 这些接口（IRepository 和 IUnitOfWork）告知基础结构层需要实现的内容。 还可通过应用程序层中的依赖关系注入使用这些接口。
 
 ![](./media/image13.PNG)
 
-**图 9-12**。 示例设置的域模型"seedwork"基本类和接口
+**图 9-12**。 域模型“seedwork”基类和接口的示例集
 
-这是许多开发人员共享项目，不正式 framework 之间的复制和粘贴重用的类型。 你可以在任何层或库中的 seedworks。 但是，如果组类和接口获取到足够大，你可能想要创建一个单个的类库。
+这是许多开发者在项目之间共享的复制和粘贴重用类型，不是正式框架。 seedwork 可存在于任何层或库中。 但是，如果类和接口的集足够大，可能需要创建单个类库。
 
 ## <a name="the-custom-entity-base-class"></a>自定义实体基类
 
-下面的代码是实体基本类的一个示例可以由任何域实体，如实体 ID 相同的方式使用代码的放置位置[相等运算符](https://msdn.microsoft.com/en-us/library/c35t2ffz.aspx)，等等。
+以下代码是实体基类的示例，可在其中放置可由任何域实体以相同方式使用的代码，例如实体 ID、[相等运算符](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal)、每个实体的域事件列表等。
 
 ```csharp
-// ENTITY FRAMEWORK CORE 1.1
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;
-
-    public virtual int Id
+    int _Id;    
+    private List<INotification> _domainEvents;
+    public virtual int Id 
     {
         get
         {
@@ -47,6 +50,18 @@ public abstract class Entity
         {
             _Id = value;
         }
+    }
+
+    public List<INotification> DomainEvents => _domainEvents;        
+    public void AddDomainEvent(INotification eventItem)
+    {
+        _domainEvents = _domainEvents ?? new List<INotification>();
+        _domainEvents.Add(eventItem);
+    }
+    public void RemoveDomainEvent(INotification eventItem)
+    {
+        if (_domainEvents is null) return;
+        _domainEvents.Remove(eventItem);
     }
 
     public bool IsTransient()
@@ -68,13 +83,13 @@ public abstract class Entity
         else
             return item.Id == this.Id;
     }
-  
+
     public override int GetHashCode()
     {
         if (!IsTransient())
         {
             if (!_requestedHashCode.HasValue)
-                _requestedHashCode = this.Id.GetHashCode() \^ 31;
+                _requestedHashCode = this.Id.GetHashCode() ^ 31; 
             // XOR for random distribution. See:
             // http://blogs.msdn.com/b/ericlippert/archive/2011/02/28/guidelines-and-rules-for-gethashcode.aspx
             return _requestedHashCode.Value;
@@ -82,7 +97,6 @@ public abstract class Entity
         else
             return base.GetHashCode();
     }
-
     public static bool operator ==(Entity left, Entity right)
     {
         if (Object.Equals(left, null))
@@ -90,7 +104,6 @@ public abstract class Entity
         else
             return left.Equals(right);
     }
-
     public static bool operator !=(Entity left, Entity right)
     {
         return !(left == right);
@@ -98,22 +111,32 @@ public abstract class Entity
 }
 ```
 
-## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>域模型层中的存储库协定 （接口）
+使用每个实体的域事件列表的上一个代码将在下一部分（重点是域事件）介绍。 
 
-存储库协定都是只需.NET express 的存储库的协定要求对于每个聚合中使用的接口。 必须在域模型中; 实现的存储库本身，与 EF 核心代码或任何其他基础结构依赖关系和代码，存储库应仅实现你定义的接口。
+## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>域模型层中的存储库协定（接口）
 
-这种做法 （在域模型层中放置存储库接口） 相关的模式是分隔接口模式。 作为[所述](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)Martin Fowler 通过"使用分隔接口接口定义为在一个包，但在另一个中实现它。 这种方式可以客户端所需的依赖关系的接口的实现完全不能识别。"
+存储库协定是表达存储库的协定要求的 .NET 接口，用于每个聚合。 
 
-执行分隔接口模式启用应用程序层 （在此情况下，微服务的 Web API 项目） 能够依赖于在域模型中，定义的要求，但不是直接依赖到基础结构/持久性层。 此外，你可以使用依赖关系注入隔离实现，它可以实现基础结构中持久性层使用存储库。
+存储库本身（包含 EF Core 代码或其他任何基础结构依赖项和代码（Linq、SQL 等）不能在域模型内实现，存储库应仅实现你定义的接口。 
 
-例如，下面的示例使用 IOrderRepository 界面定义 OrderRepository 类将需要在基础结构层实现的操作。 在应用程序的当前实现中，代码只需要将顺序添加到数据库，由于查询拆分以下未实现 CQS 方法和订单的更新。
+这种做法（在域模型层中放置存储库接口）的相关模式是分隔接口模式。 正如 Martin Fowler [所述](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)，“使用分隔接口在一个包中定义接口，但在另一个包中实现它。 这样一来，需要接口依赖项的客户端可能完全不会识别出实现。”
+
+通过遵循分隔接口模式，应用程序层（在此情况下是微服务的 Web API 项目）可具有在域模型中定义的要求的依赖项，但没有基础结构/持久性层的直接依赖项。 此外，可以使用依赖项注入隔离实现，可在使用存储库的基础结构/持久性层中实现这一点。
+
+例如，包含 IOrderRepository 接口的下面的示例定义 OrderRepository 类在基础机构层中实现所需的操作。 在应用程序的当前实现中，代码只需将订单添加或更新到数据库，因为查询根据简化的 CQRS 方法拆分。
 
 ```csharp
+// Defined at IOrderRepository.cs
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
+        
+    void Update(Order order);
+
+    Task<Order> GetAsync(int orderId);
 }
 
+// Defined at IRepository.cs (Part of the Domain Seedwork)
 public interface IRepository<T> where T : IAggregateRoot
 {
     IUnitOfWork UnitOfWork { get; }
@@ -122,9 +145,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Martin Fowler。分隔的接口。** 
-     [ *http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html%20)
+-   **Martin Fowler。Separated Interface.**（分隔的接口）
+    [*http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 
 >[!div class="step-by-step"]
-[以前](net-核心-微服务构成的域-model.md) [下一步] (实现值 objects.md)
+[Previous] (net-core-microservice-domain-model.md) [Next] (implement-value-objects.md)

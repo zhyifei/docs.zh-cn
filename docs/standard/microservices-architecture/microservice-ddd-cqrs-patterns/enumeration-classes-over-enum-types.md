@@ -1,28 +1,33 @@
 ---
-title: "使用枚举类，而不枚举类型"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |使用枚举类，而不枚举类型"
+title: "使用枚举类（而不是枚举类型）"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用枚举类（而不是枚举类型）"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1745198720fd12a9d26aab2d2afb2c5dd6b6b49d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-enumeration-classes-instead-of-enum-types"></a>使用枚举类，而不枚举类型
+# <a name="using-enumeration-classes-instead-of-enum-types"></a>使用枚举类（而不是枚举类型）
 
-[枚举](https://msdn.microsoft.com/en-us/library/sbbt4032.aspx)(*枚举*简称) 是整数类型的精简语言包装。 你可能想要限制对其使用时将存储从已关闭的一组值的一个值。 典型示例是基于性别 (例如，男性，female，未知) 或大小 (S、 M、 L、 XL) 的分类。 可以使用枚举的控制流或更可靠的抽象[代码告知](http://deviq.com/code-smells/)。 这种类型的使用情况将导致与检查枚举值的多个控制流语句脆弱的代码。
+[枚举](../../../../docs/csharp/language-reference/keywords/enum.md)（或枚举类型）是围绕整型类型的精简语言包装器。 建议在存储一组封闭值中的一个值时，限制对它们的使用。 基于性别（例如，男性、女性、未知）或尺码（小号、中号、大号）进行的分类就是很好的示例。 对控制流或更强健的抽象使用枚举可成为[代码气味](http://deviq.com/code-smells/)。 这种使用方式会使代码很脆弱，并且会使许多控制流语句检查枚举值。
 
-相反，你可以创建可启用的面向对象语言中的所有丰富功能的枚举类。 但是，这不是一个关键问题并在许多情况下，为简单起见，你仍可以使用正则枚举这就是您的首选项。
+相反，你可以创建枚举类，启动面向对象语言的所有丰富功能。
 
-## <a name="implementing-enumeration-classes"></a>实现枚举类
+但这不是关键点，在许多情况下，为了简便起见，如果喜欢，仍然可以使用常规[枚举类型](../../../../docs/csharp/language-reference/keywords/enum.md)。
 
-在 eShopOnContainers 排序微服务提供示例枚举基类实现，如下面的示例中所示：
+## <a name="implementing-an-enumeration-base-class"></a>实现枚举基类
+
+eShopOnContainers 中的订购微服务提供了一个示例枚举基类实现，如下例所示：
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -83,7 +88,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-为任何实体或值的对象，与以下 CardType 枚举类中的类型，可以使用此类。
+在任何实体或值对象中，都可将下列 CardType 枚举类用作类型：
 
 ```csharp
 public class CardType : Enumeration
@@ -99,7 +104,6 @@ public class CardType : Enumeration
     {
     }
 
-
     public static IEnumerable<CardType> List()
     {
         return new[] { Amex, Visa, MasterCard };
@@ -110,23 +114,23 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>其他资源
 
--   **枚举的是恶魔-更新**
-    [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)
+-   **Enum’s are evil—update（枚举并非善茬 - 更新）**
+    [http://www.planetgeek.ch/2009/07/01/enums-are-evil/](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
--   **Daniel Hardman。如何枚举分布疾病-以及如何硬化它**
-    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
+-   **Daniel Hardman.How Enums Spread Disease — And How To Cure It**（枚举传播疾病的方式 - 以及疾病治愈方式）
+    [https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
--   **Jimmy Bogard。枚举类**
-    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
+-   **Jimmy Bogard。Enumeration classes**（枚举类）
+    [https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
 
--   **Steve Smith。枚举在 C# 中的替代项**
-    [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)
+-   **Steve Smith.Enum Alternatives in C#（C# 中的枚举替代方案）**
+    [http://ardalis.com/enum-alternatives-in-c](http://ardalis.com/enum-alternatives-in-c)
 
--   **Enumeration.cs。** 枚举基类中 eShopOnContainers [ *https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+-   **Enumeration.cs.** Base Enumeration class in eShopOnContainers（eShopOnContainers 中的枚举基类）[https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
--   **CardType.cs**。 示例中 eShopOnContainers 枚举类。
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+-   **CardType.cs**. eShopOnContainers 中的枚举类示例。
+    [https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
 
 
 >[!div class="step-by-step"]
-[以前](实现的值-objects.md) [下一步] (域-模型-层-validations.md)
+[上一篇] (implement-value-objects.md) [下一篇] (domain-model-layer-validations.md)

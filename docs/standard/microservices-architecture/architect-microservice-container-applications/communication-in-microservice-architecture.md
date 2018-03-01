@@ -1,6 +1,6 @@
 ---
-title: "在微服务体系结构的通信"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |微服务体系结构体系结构中的通信"
+title: "微服务体系结构中的通信"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务体系结构中的通信"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,108 +8,111 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 8d38095a151b7568619b17340d768eff684d3271
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3920160697c55a81a131a7d8c40b096b064a6f03
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="communication-in-a-microservice-architecture"></a>在微服务体系结构的通信
+# <a name="communication-in-a-microservice-architecture"></a>微服务体系结构中的通信
 
-在单个进程上运行的整体应用程序，在组件调用另一个使用语言级别方法或函数调用一样。 这些也可以紧密耦合，如果你要创建对象，与代码 (例如， `new ClassName()`)，或如果你使用的依赖关系注入通过引用抽象，而不是具体的对象实例可以在去耦方法中调用。 两种方式的同一进程中运行的对象。 从到基于微服务的应用程序的整体应用程序版本更改时的最大挑战在于于更改的通信机制。 从过程中方法调用转换为对服务的 RPC 调用的直接转换将导致聊天式并且将不会执行中的不有效通信分布式环境。 很好地为偶数称为 canon 已知的正确设计分布式的系统的挑战[的分布式计算 fallacies](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) ，它列出在开发人员通常提出从移动时的假设整体分布式设计。
+在单个进程上运行的整体式应用程序中，组件使用语言级别方法或函数调用进行相互调用。 如果使用代码创建对象（例如 `new ClassName()`），则可以紧密耦合，或者如果正在通过引用抽象而不是具体对象实例来使用依赖项，则可以在耦合方法中调用。 两种方式中的对象都在同一进程中运行。 从整体式应用程序更改为基于微服务的应用程序时，最大的挑战在于改变通信机制。 将进程内的方法调用直接转换为对服务的 RPC 调用将在分布式环境中导致效果不佳且效率低下的通信。 正确设计分布式系统的挑战已众所周知，甚至有一个被称为[分布式计算的谬论](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing)的标准，其中列出了开发者在从整体式设计转向分布式设计时经常会做出的假设。
 
-没有不一个解决方案中，但几个。 一个解决方案涉及隔离尽可能多地业务微服务。 然后，你将使用内部微服务之间进行异步通信并替代细化通常会在进程内通信中使用较粗粒度的通信的对象之间的通信。 通过分组调用，并返回聚合结果的多个内部调用，客户端的数据时，可以执行此操作。
+解决方案不止一种，而是多种。 一个解决方案包括尽可能多地隔离业务微服务。 然后，使用内部微服务之间的异步通信，并用对象间的进程内通信中典型的细粒度通信代替粗粒度通信。 执行此操作的方法有分组调用、将聚合多个内部调用结果的数据返回到客户端。
 
-基于微服务的应用程序是在多个进程或服务，通常甚至跨多个服务器或主机上运行的分布式的系统。 每个服务实例通常是一个过程。 因此，使用进程间通信协议，如 HTTP、 AMQP 或如 TCP，具体取决于每个服务的性质的二进制协议服务必须进行交互。
+基于微服务的应用程序是在多个进程或服务上运行的分布式系统，通常甚至跨多个服务器或主机。 每个服务实例通常是一个进程。 因此，服务必须使用进程内通信协议（如 HTTP、AMQP）或二进制协议（如 TCP）进行交互，具体取决于每个服务的性质。
 
-Microservice 社区提升这一理念"[智能终结点和笨拙管道](http://simplicable.com/new/smart-endpoints-and-dumb-pipes)。" 此广告语鼓励为分离尽可能之间微服务，并尽可能在单个 microservice 好地设计。 如前面所述，每个微服务将拥有其自己的数据和它自己域的逻辑。 但微服务组成的端到端应用程序通常只通过使用 REST 通信，而不是复杂的协议，如 WS-choreographed\*的灵活事件驱动的通信，而不是集中式业务流程 orchestrators。
+微服务社区倡导“[智能终结点和哑管道](http://simplicable.com/new/smart-endpoints-and-dumb-pipes)”的理念。 这个标语鼓励设计在微服务之间尽可能分离，在单个微服务内尽可能聚合。 如前所述，每个微服务拥有自己的数据和域逻辑。 但构成端到端应用程序的微服务通常通过使用 REST 通信而不是复杂协议（如 WS-\*）以及灵活的事件驱动通信而不是集中式业务流程协调程序来简化编排。
 
-两个常用的协议为 HTTP 请求/响应与资源 Api （查询其中的绝大部分） 时，并跨多个微服务轻型异步消息传送通信时更新。 下列部分中的更详细地对它们进行了解释。
+两个常用的协议是具有资源 API 的 HTTP 请求/响应（查询大部分时）和轻量级异步消息传送（跨多个微服务更新通信时）。 以下各节将对此进行更详细地描述。
 
 ## <a name="communication-types"></a>通信类型
 
-客户端和服务可以通过许多不同类型的通信，每个面向不同的方案和目标进行通信。 最初，这些类型的通信可以分为两个轴。
+客户端和服务可以通过许多不同类型的通信进行通信，每个通信面向不同的方案和目标。 最初，这些类型的通信可以分为两个轴。
 
-如果协议是同步还是异步定义的第一个轴：
+第一个轴定义协议是同步还是异步：
 
--   同步的协议。 HTTP 是同步的协议。 客户端发送一个请求，并等待从服务响应。 这是独立于客户端代码执行可同步 （线程被阻止） 或异步 （线程不会被阻止，和响应将最终到达回调）。 重要的一点是，协议 (HTTP/HTTPS) 是同步的当它收到 HTTP 服务器响应时，客户端代码仅可以继续其任务。
+-   同步协议。 HTTP 是同步协议。 客户端发送请求并等待服务响应。 这与客户端代码执行无关，可能是同步的（线程被阻止）或异步的（线程没有被阻止，并且响应最终会到达回调）。 重要的一点是，协议 (HTTP/HTTPS) 是同步的，仅当客户端代码接收到 HTTP 服务器响应时，才可以继续其任务。
 
--   异步协议。 其他协议，如 AMQP （许多操作系统和云环境支持的协议） 使用异步消息。 客户端代码或消息发件人通常不会等待响应。 它只是将消息发送到 RabbitMQ 队列或任何其他消息代理时将发送形式的消息。
+-   异步协议。 AMQP 之类的其他协议（许多操作系统和云环境支持的协议）使用异步消息。 客户端代码或消息发件人通常不会等待响应。 它只是在发送消息到 RabbitMQ 队列或任何其他消息代理时才发送消息。
 
-如果通信具有单一的接收方或多个接收方，第二个轴定义：
+第二个轴定义通信具有单个还是多个接收方：
 
--   一个接收方。 每个请求必须由恰好一个接收方或服务来处理。 此通信的一个示例是[命令模式](https://en.wikipedia.org/wiki/Command_pattern)。
+-   单个接收方。 每个请求必须只能由一个接收方或服务来处理。 此通信的示例是[命令模式](https://en.wikipedia.org/wiki/Command_pattern)。
 
--   多个接收方。 每个请求可以由零到多个接收方处理。 这种通信类型必须是异步的。 一个示例是[发布/订阅](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)机制在类似的模式下使用[事件驱动的体系结构](http://microservices.io/patterns/data/event-driven-architecture.html)。 这基于事件 bus 接口或消息代理时传播事件; 通过多个微服务之间的数据更新它通常通过 service bus 或类似的类似项目实现[Azure Service Bus](https://azure.microsoft.com/services/service-bus/)使用[主题和订阅](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)。
+-   多个接收方。 每个请求可以由零到多个接收方处理。 这种类型的通信必须是异步的。 例如[事件驱动体系结构](http://microservices.io/patterns/data/event-driven-architecture.html)等模式中使用的[发布/订阅](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)机制。 当通过事件在多个微服务之间传播数据更新时，这基于事件总线接口或消息代理；它通常通过服务总线或类似 [Azure 服务总线](https://azure.microsoft.com/services/service-bus/)的项目使用[主题和订阅](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)并来实现。
 
-基于微服务构成的应用程序通常将使用这些通信样式的组合。 最常见的类型时调用常规的 Web API HTTP 服务，将使用类似 HTTP/HTTPS 同步协议的单个接收方通信。 微服务通常还使用微服务之间进行异步通信的消息传递协议。
+基于微服务的应用程序通常将使用这些通信样式的组合。 最常见的类型是在调用常规 Web API HTTP 服务时使用 HTTP/HTTPS 等同步协议进行单个接收方通信。 微服务通常也使用消息传送协议在微服务之间进行异步通信。
 
-这些轴不很有必要知道，以便清楚起见对可能出现的通信机制，但它们不是生成微服务时的重要问题。 集成微服务时，所选协议的客户端线程执行即使的异步性质的异步性质是重要事项。 什么*是*重要正在能够将集成你微服务以异步方式同时保持独立微服务，如下面的部分中所述。
+必须知道这些轴以便清楚了解可能的通信机制，但在构建微服务时，它们就不是那么重要了。 集成微服务时，客户端线程执行的异步特性才是重点，而所选协议的异步特性却不是。 重要的是能够异步集成微服务，同时保持微服务独立性，如下节所述。
 
-## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>异步微服务集成将强制使用微服务构成的自主性
+## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>异步微服务集成强化了微服务的自治性
 
-如前文所述，生成基于微服务的应用程序时，重要的一点是集成你微服务的方法。 理想情况下，你应尝试尽量减少内部微服务之间的通信。 较少之间的通信微服务，越好。 但当然，在许多情况下你将需要以某种方式集成微服务。 当你需要执行此操作时，关键的规则是微服务之间的通信应为异步。 并不意味着你需要使用特定协议 （例如，异步消息传送与同步 HTTP）。 它只是微服务之间的通信应仅通过以异步方式将数据传播完成，但不是尝试依赖于其他内部微服务作为初始服务的 HTTP 请求/响应操作的一部分。
+如前所述，生成基于微服务的应用程序时，重要的是集成微服务的方法。 理想情况下，应尝试减少内部微服务之间的通信。 微服务间的通信越少越好。 但在许多情况下，必须以某种方式集成微服务。 当需要执行此操作时，关键的规则是微服务间的通信应为异步。 这并不代表必须使用特定协议（例如，异步消息传送与同步 HTTP）。 这仅代表微服务之间的通信应该只通过异步传播数据来完成，但不要依赖其他内部微服务作为初始服务的 HTTP 请求/响应操作的一部分。
 
-如果可能，永远不会依赖于多个微服务，即使对于查询之间的同步通信 （请求/响应）。 每个微服务的目标是为自治上并供客户端使用者，即使是端到端应用程序的一部分的其他服务都已关闭或不正常。 如果你认为中的需要进行其他微服务 （如执行 HTTP 请求的数据查询） 从一个 microservice 调用以便能够提供对客户端应用程序的响应，必须将不会某些弹性的体系结构微服务失败。
+如果可能，永远不要依赖于多个微服务之间的同步通信（请求/响应），对于查询也是如此。 即使属于端到端应用程序的其他服务已关闭或不正常，每个微服务的目标也是自治，并且可供客户使用。 如果认为需要从一个微服务向其他微服务（如执行数据查询的 HTTP 请求）进行调用，以便能够向客户端应用程序提供响应，那么当某些微服务失败时体系结构不会迅速恢复。
 
-此外，不仅有 HTTP 依赖项之间微服务，如图 4-15 的第一部分中所示，使用 HTTP 请求/响应周期创建长时请求链，使你微服务不自治但其性能也是影响只要该链中的服务之一表现不佳。 
+此外，如图 4-15 的第一部分所示，微服务之间存在 HTTP 依赖项（如使用 HTTP 请求链创建长请求/响应周期时），不仅会使微服务不自治，而且只要该链中的其中一项服务表现不佳，性能就会受到影响。 
 
-越添加微服务，例如查询请求之间的同步依赖关系，总体响应时间获取客户端应用程序的事情就越麻烦。
+在微服务间添加的同步依赖项（如查询请求）越多，客户端应用的整体响应时间就越长。
 
 ![](./media/image15.png)
 
-**图 4-15**。 反模式和微服务之间的通信模式
+**图 4-15**。 微服务间通信的反模式和模式
 
-如果你的 microservice 需要提升另一个微服务中的其他操作，如果可能，请不要执行该操作以同步方式和作为原始的微服务请求和答复操作的一部分。 而应以异步方式执行 （使用异步消息传送或集成事件、 队列，等等）。 但是，尽可能多地，不调用同步作为原始的同步请求和答复操作的一部分操作。
+如果微服务需要在另一个微服务中引发其他操作，请尽可能不要在原始微服务请求和回复操作中同步执行该操作。 而是以异步方式执行（使用异步消息传送或集成事件、队列等）。 但尽可能不要在原始同步请求和回复操作中同步调用操作。
 
-最后 （，这是其中大部分问题出现时生成微服务），如果初始 microservice 需要最初归其他微服务的数据时，不依赖于发出该数据的同步请求。 而是复制或传播到初始服务的数据库数据 （仅需要的属性），通过使用最终一致性 （通常通过使用集成事件，如在后面几节所述）。
+最后（构建微服务时大多数问题会在这里发生），如果初始微服务需要最初由其他微服务拥有的数据，则不要依赖于对该数据进行同步请求。 而是通过使用最终一致性（通常使用集成事件，如后面几节所述），将该数据（仅需要的属性）复制或传播到初始服务的数据库中。
 
-如前文所述的部分中[标识每个微服务的域模型边界](#identifying-domain-model-boundaries-for-each-microservice)，复制跨多个微服务的某些数据不是设计错误 — 相反，当执行操作，您可以将数据转换到特定语言或其他域或绑定上下文的条款。 例如，在[eShopOnContainers](http://aka.ms/MicroservicesArchitecture)具有名为含有名为用户的实体都负责大部分用户的数据的 identity.api 微服务构成的应用程序。 但是，当你需要存储有关排序微服务内的用户数据，则将其存储作为名为 Buyer 不同实体。 买方实体共享相同的标识与原始用户实体，但它可能具有仅需要按排序域和而非整个用户配置文件的几个属性。
+如前面的[标识每个微服务的域模型边界](#identifying-domain-model-boundaries-for-each-microservice)一节中所述，跨多个微服务复制某些数据不是设计错误 - 相反，此操作可以将数据翻译成该附加域或有边界的上下文的特定语言或术语。 例如，在 [eShopOnContainers ](http://aka.ms/MicroservicesArchitecture) 应用程序中，有一个名为 identity.api 的微服务，它负责名为 User 的实体中的大部分用户数据。 但在需要存储有关订购微服务内的用户数据时，将其存储为名为 Buyer 的其他实体。 Buyer 实体与原始 User 实体共享相同的身份，但它可能只具有订购域所需的少量属性，而不是整个用户配置文件。
 
-你可以使用任何协议进行通信和数据以异步方式在之间传播微服务以便具有最终一致性。 如前文所述，你可以使用集成事件，请使用事件总线或 broker 或你甚至可以通过轮询其他服务改为使用 HTTP 的消息。 并不重要。 重要的规则是创建您微服务之间的同步依赖关系。
+可以使用任何协议在微服务之间异步通信和传播数据，以实现最终的一致性。 如前所述，可以通过事件总线或消息代理使用集成事件，或者甚至可以通过轮询其他服务使用 HTTP。 这无关紧要。 重要的规则是不在微服务之间创建同步依赖项。
 
-以下各节介绍你可以考虑使用基于微服务构成的应用程序中的多个通信样式。
+以下各节介绍了可以考虑在基于微服务的应用程序中使用的多种通信样式。
 
 ## <a name="communication-styles"></a>通信样式
 
-有许多协议和你可以将用于通信，具体取决于你想要使用的通信类型的选项。 如果你使用的一种同步基于请求/响应的通信机制，协议，如 HTTP 和 REST 的方法是最常见的尤其是如果您要发布你的 Docker 主机或 microservice 群集外部服务。 如果内部 （在你的 Docker 主机或微服务群集） 的服务之间通信可能还想要使用二进制格式 （如 Service Fabric 远程处理或 WCF 中使用 TCP 和二进制格式） 的通信机制。 或者，你可以使用基于消息的异步通信机制，例如 AMQP。
+根据想要使用的通信类型，有许多可以用于通信的协议和选项。 如果正在使用基于同步请求/响应的通信机制，则 HTTP 和 REST 等协议方法是最常见的，尤其是将服务发布到 Docker 主机或微服务集群之外的情况下。 如果在内部进行服务间的通信（在 Docker 主机或微服务集群中），则还建议使用二进制格式通信机制（例如使用 TCP 和二进制格式的 Service Fabric 远程处理或 WCF）。 或者，可以使用基于消息的异步通信机制，如 AMQP。
 
-也有多个消息格式，如 JSON 或 XML 或甚至是二进制格式，可能会更有效。 如果你选择的二进制格式不是一种标准，它可能并不是一个好办法公开发布你的服务使用该格式。 你微服务之间进行内部通信都可以使用非标准的格式。 （Docker orchestrators 或 Azure Service Fabric） 的你的 Docker 主机或 microservice 群集内或专有的客户端应用程序与微服务通信的微服务之间进行通信时，你可能需要这样做。
+还有 JSON 或 XML 等多种消息格式，或者还有更高效的二进制格式。 如果选择的二进制格式不是标准格式，那么使用该格式公开发布服务可能并不适合。 可以使用非标准格式在微服务之间进行内部通信。 在 Docker 主机或微服务集群（Docker 业务流程协调程序或 Azure Service Fabric）中的微服务之间进行通信时，或与微服务通信的专用客户端应用程序进行通信时，可能需要执行此操作。
 
-### <a name="requestresponse-communication-with-http-and-rest"></a>使用 HTTP 和 REST 请求/响应通信 
+### <a name="requestresponse-communication-with-http-and-rest"></a>使用 HTTP 和 REST 进行请求/响应通信 
 
-当客户端使用请求/响应通信时，它将请求发送到服务，然后服务处理请求并发送回的响应。 请求/响应通信尤其适合对于实时 UI （实时用户接口） 从客户端应用程序查询数据。 因此，在微服务体系结构中你将可能使用此通信机制对于大多数查询，在图 4-16 中所示。
+当客户端使用请求/响应通信时，它将请求发送到服务，然后服务处理请求并返回响应。 请求/响应通信特别适用于查询客户端应用的实时 UI（实时用户界面）数据。 因此，在微服务体系结构中，此通信机制可能会用于大多数查询，如图 4-16 所示。
 
 ![](./media/image16.png)
 
-**图 4-16**。 使用 HTTP 请求/响应通信 （同步或异步）
+**图 4-16**。 使用 HTTP 请求/响应通信（同步或异步）
 
-当客户端使用请求/响应通信时，它假设，响应将到达在短时间，通常少于一秒或几秒钟后最多。 对于响应延迟，你需要实施基于异步通信[消息传递模式](https://docs.microsoft.com/azure/architecture/patterns/category/messaging)和[消息传送技术](https://en.wikipedia.org/wiki/Message-oriented_middleware)，这是我们在下一部分中介绍的不同方法。
+当客户端使用请求/响应通信时，假定响应将在短时间内（通常少于一秒或最多几秒）到达。 为了延迟响应，需要根据[消息传送模式](https://docs.microsoft.com/azure/architecture/patterns/category/messaging)和[消息技术](https://en.wikipedia.org/wiki/Message-oriented_middleware)实现异步通信，这是我们在下一节中介绍的另一种方法。
 
-请求/响应通信的常用体系结构样式是[REST](https://en.wikipedia.org/wiki/Representational_state_transfer)。 此方法为基础，并且紧密耦合的[HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)协议，使用 HTTP 谓词，如 GET、 POST 和 PUT。 创建服务时，其余部分将是最常用的体系结构的通信方法。 当你开发 ASP.NET 核心 Web API 服务时，你可以实现 REST 服务。
+请求/响应通信的常用体系结构样式是 [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)。 此方法基于 [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 协议并与该协议紧密耦合，接受 GET、POST 和 PUT 等 HTTP 谓词。 REST 是创建服务时最常用的体系结构通信方法。 开发 ASP.NET Core Web API 服务时，可以实现 REST 服务。
 
-使用 HTTP REST 服务作为你的接口定义语言时，没有其他值。 例如，如果你使用[Swagger 元数据](http://swagger.io/)来描述服务 API，你可以使用生成可以直接发现和使用你的服务的客户端存根的工具。
+使用 HTTP REST 服务作为接口定义语言时，还有其他值。 例如，如果使用 [Swagger 元数据](http://swagger.io/)介绍服务 API，则可以使用生成客户端存根的工具来直接发现和使用服务。
 
 ### <a name="additional-resources"></a>其他资源
 
--   **Martin Fowler。Richardson 成熟度模型。** REST 模型的说明。
+-   **Martin Fowler。Richardson 成熟模型。** REST 模型的说明。
     [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger。** 官方网站。
     [*http://swagger.io/*](http://swagger.io/)
 
-### <a name="push-and-real-time-communication-based-on-http"></a>推送和基于 HTTP 的实时通信
+### <a name="push-and-real-time-communication-based-on-http"></a>基于 HTTP 的推送和实时通信
 
-（通常用于比 REST 的不同目的） 的另一种可能是与更高级别的框架的实时和一对多通信，如[ASP.NET SignalR](https://www.asp.net/signalr)和协议，例如[Websocket](https://en.wikipedia.org/wiki/WebSocket)。
+另一种可能（通常用于不同于 REST 的目的）是与更高级别框架（如 [ASP.NET SignalR](https://www.asp.net/signalr)）和协议（如[WebSocket](https://en.wikipedia.org/wiki/WebSocket)）之间的实时和一对多通信。
 
-如图 4-17 所示，实时 HTTP 通信意味着你可以将内容推送到连接的客户端，当数据变为可用，而不必等待客户端请求新数据的服务器的服务器代码。
+如图 4-17 所示，实时 HTTP 通信意味着可以让服务器代码在数据可用时将内容推送到连接的客户端，而不是让服务器等待客户端请求新数据。
 
 ![](./media/image17.png)
 
-**图 4-17**。 一对一实时的异步消息通信
+**图 4-17**。 一对一实时异步消息通信
 
-由于实时是通信，客户端应用程序几乎立刻显示所做的更改。 这通常由如 WebSockets，使用多个 Websocket 连接 （每个客户端一个） 协议进行处理。 一个典型示例是当服务同时通信中的许多客户端 web 应用到体育游戏的分数的更改时。
+由于通信是实时的，客户端应用几乎立即显示更改。 这通常由 WebSocket 之类的协议使用多个 WebSocket 连接（每个客户端一个）处理。 一个典型示例是将体育比赛的比分变化同时传送到多个客户端 Web 应用。
 
 
 >[!div class="step-by-step"]
-[以前](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md) [下一步] (异步-消息-基于-communication.md)
+[Previous] (direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md) [Next] (asynchronous-message-based-communication.md)

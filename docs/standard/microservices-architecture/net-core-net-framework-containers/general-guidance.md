@@ -1,6 +1,6 @@
 ---
-title: "一般性指导原则"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |一般性指导原则"
+title: "通用指南"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 通用指南"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,46 +8,49 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 22dea926e77079e4f543934613ced13a28b2dae6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="general-guidance"></a>一般性指导原则
+# <a name="general-guidance"></a>通用指南
 
-本部分提供何时选择.NET Core 或.NET Framework 的摘要。 我们提供有关以下各节中的这些选项的更多详细信息。
+本部分提供有关何时选择 .NET Core 或 .NET Framework 的总结。 后面各部分将提供对上述选择的详细介绍。
 
-当你有以下需求时应该用 .NET Core 与 Linux 或 Windows 容器来容器化 Docker 服务器应用程序：
+将 .NET Core 与 Linux 或 Windows 容器结合使用并用于容器化 Docker 服务器应用程序的适用情况：
 
--   用户有跨平台需求。 例如，你想要使用 Linux 和 Windows 容器。
+-   用户有跨平台需求。 例如，想同时使用 Linux 和 Windows 容器。
 
--   你的应用程序体系结构基于微服务。
+-   应用程序体系结构基于微服务。
 
--   你需要以快速启动容器并需要每个容器，以实现更好的密度或每个硬件单位的多个容器内存占用较小，以便降低成本。
+-   需快速启动容器且每个容器内存占用较小，以实现更好的密度，或每个硬件单位中的容器较多，以降低成本。
 
-简单地说，在创建新容器化的 .NET 应用程序时，应考虑 .NET Core 作为默认选项。 它有许多好处，并最能满足容器的基本原理和工作方式。
+简单地说，在创建新的容器化 .NET 应用程序时，应考虑将 .NET Core 作为默认选择。 它具有许多好处，并最匹配容器的基本原理和运行方式。
 
-使用.NET Core 的另一个好处是你可以运行在同一台计算机中的应用程序的并行.NET 版本。 这一优势是为服务器或虚拟机不使用容器，更重要，因为容器隔离的.NET 应用程序所需的版本。 （只要它们是与基础操作系统兼容。）
+使用 .NET Core 的另一个好处是可在同一台计算机中并行运行 .NET 版本的应用程序。 这一优势对于不使用容器的服务器或虚拟机而言更为重要，因为容器会隔离应用所需的 .NET 版本。 （只要它们与基础操作系统兼容。）
 
-以下情景你应使用.NET Framework 中，使用 Windows 容器，容器化 Docker 服务器应用程序：
+将 .NET Framework 与 Windows 容器结合使用并用于容器化 Docker 服务器应用程序的适用情况：
 
--   你的应用程序当前使用.NET Framework 和 Windows 上具有强依赖关系。
+-   应用程序当前使用 .NET Framework 并在 Windows 上具有强依赖关系。
 
--   你需要使用.NET Core 不支持的 Windows Api。
+-   需要使用 .NET Core 不支持的 Windows API。
 
--   你需要使用第三方.NET 库或不可用于.NET 核心的 NuGet 包。
+-   用户需要使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包。
 
-在 Docker 上使用 .NET Framework 可以最大限度减少部署问题，从而改善部署体验。 [*"直接迁移方案*](https://aka.ms/liftandshiftwithcontainersebook)对于最初使用ASP.NET WebForms、MVC Web 应用或 WCF（Windows Communication Foundation) 服务等传统 .NET Framework 开发的应用程序的容器化非常重要。
+在 Docker 上使用.NET Framework 可通过最大限度地减少部署问题来提升部署体验。 此[*“提升和移动”方案*](https://aka.ms/liftandshiftwithcontainersebook)对于针对最初使用传统 .NET Framework（如 ASP.NET WebForms、MVC web 应用或 WCF (Windows Communication Foundation) 服务）开发的旧应用程序实施容器化而言很重要。
 
 ### <a name="additional-resources"></a>其他资源
 
--   **电子书：借助 Azure 和 Windows 容器使现有的 .NET Framework 应用程序更现代化**
-    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
+-   **e-book: Modernize existing .NET Framework applications with Azure and Windows Containers**（电子书：使用 Azure 和 Windows 容器更新现有 .NET Framework 应用程序）
+    [https://aka.ms/liftandshiftwithcontainersebook](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **示例应用：可通过使用 Windows 容器使旧的 ASP.NET web 应用现代化**
-    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
+-   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers**（示例应用：使用 Windows 容器更新旧的 ASP.NET web 应用）
+    [https://aka.ms/eshopmodernizing](https://aka.ms/eshopmodernizing)
 
 
 >[!div class="step-by-step"]
-[以前](index.md) [下一步] (net-核心-容器-scenarios.md)
+[上一项] (index.md) [下一项] (net-core-container-scenarios.md)

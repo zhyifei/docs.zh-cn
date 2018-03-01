@@ -1,94 +1,96 @@
 ---
-title: "实现微服务应用程序层使用 Web API"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |实现微服务应用程序层使用 Web API"
+title: "使用 Web API 实现微服务应用层"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 Web API 实现微服务应用程序层"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: d505a2561ae9b8dee05e803fd639387b63b28b70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cfca93dca0ec9d05936f4be676e27135c581de94
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>实现微服务应用程序层使用 Web API
+# <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 
-## <a name="using-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>使用依赖关系注入将基础结构对象注入到你的应用程序层
+## <a name="using-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>使用依赖项注入将基础结构对象注入到应用程序层
 
-如前所述，可以作为构建的如在 Web API 项目或一个 MVC web 应用程序项目的项目的一部分实现的应用程序层。 对于使用 ASP.NET Core 构建 microservice，应用程序层通常将为你的 Web API 库。 如果你想要单独的自定义应用程序层代码中即将推出从 ASP.NET Core （其基础结构以及你的控制器），还可以将你的应用程序层放置在单独的类库，但这是可选。
+如前所述，可以在要生成的项目中实现应用程序层，例如在 Web API 项目或 MVC web 应用项目中。 如果使用 ASP.NET Core 构建微服务，应用程序层通常是 Web API 库。 如果要从自定义应用程序层代码中分离来自 ASP.NET Core 的内容（其基础结构以及你的控制器），还可将应用程序层置于单独的类库，但这是可选操作。
 
-例如，作为的一部分直接实现排序微服务构成的应用程序层代码**Ordering.API**项目 （ASP.NET 核心 Web API 项目），作为中所示图 9-19。
+例如，订购微服务的应用程序层代码直接在 Ordering.API 项目（ASP.NET Core Web API 项目）中实现，如图 9-23 所示。
 
 ![](./media/image20.png)
 
-**图 9-19**。 Ordering.API ASP.NET 核心 Web API 项目中的应用程序层
+**图 9-23**。 Ordering.API ASP.NET Core Web API 项目中的应用程序层
 
-ASP.NET 核心包括一个简单[内置 IoC 容器](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)（由 IServiceProvider 接口） 的支持构造函数注入默认情况下，ASP.NET 使某些服务可通过 DI。 ASP.NET 核心使用术语*服务*有关的所有注册的类型，将通过 DI 注入。 应用程序的启动类中 ConfigureServices 方法中配置内置容器的服务。 依赖项的类型需要的服务在中实现。
+ASP.NET Core 包含一个简单的[内置 IoC 容器](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)（表示为 接口），默认情况下，该容器支持构造函数注入，ASP.NET 可通过 DI 提供某些服务。 ASP.NET Core 使用“服务”这一术语来表示将通过 DI 注入的你注册的类型。 可以在应用程序的 Startup 类中的 ConfigureServices 方法中配置内置容器的服务。 依赖项会在类型需要的服务中实现。
 
-通常情况下，你想要将注入实现基础结构对象的依赖关系。 非常典型的依赖关系，以将注入是的存储库。 但你无法将注入可能具有任何其他基础结构依赖项。 对于更简单的实现，你直接无法插入你的单元的工作模式对象 （EF DbContext 对象），因为 DBContext 也是你的基础结构持久性对象的实现。
+通常需要注入实现基础结构对象的依赖项。 一个要注入的非常典型的依赖项是存储库。 但可注入任何其他你拥有的基础结构依赖项。 对于较简单的实现，可直接注入 Unit of Work 模式对象（EF DbContext 对象），因为 DBContext 也是基础结构持久性对象的实现。
 
-在下面的示例中，你可以看到如何.NET 核心将注入通过构造函数的所需的存储库对象。 此类是一个命令处理程序，我们将在下一部分中介绍。
+在下面的示例中，可以看到 .NET 如何通过构造函数注入所需的存储库对象。 此类是一个命令处理程序，我们将在下一部分中对其进行介绍。
 
 ```csharp
-// Sample command handler
 public class CreateOrderCommandHandler
     : IAsyncRequestHandler<CreateOrderCommand, bool>
 {
     private readonly IOrderRepository _orderRepository;
+    private readonly IIdentityService _identityService;
+    private readonly IMediator _mediator;
 
-    // Constructor where Dependencies are injected
-    public CreateOrderCommandHandler(IOrderRepository orderRepository)
+    // Using DI to inject infrastructure persistence Repositories
+    public CreateOrderCommandHandler(IMediator mediator, 
+                                     IOrderRepository orderRepository, 
+                                     IIdentityService identityService)
     {
-        if (orderRepository == null)
-        {
-            throw new ArgumentNullException(nameof(orderRepository));
-        }
-        _orderRepository = orderRepository;
+        _orderRepository = orderRepository ?? 
+                          throw new ArgumentNullException(nameof(orderRepository));
+        _identityService = identityService ?? 
+                          throw new ArgumentNullException(nameof(identityService));
+        _mediator = mediator ?? 
+                                 throw new ArgumentNullException(nameof(mediator));
     }
 
     public async Task<bool> Handle(CreateOrderCommand message)
     {
-        //
-        // ... Additional code
-        //
         // Create the Order AggregateRoot
         // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic
+        // methods and constructor so validations, invariants, and business logic 
         // make sure that consistency is preserved across the whole aggregate
-        var address = new Address(message.Street, message.City, message.State,
-            message.Country, message.ZipCode);
-        var order = new Order(address, message.CardTypeId, message.CardNumber,
-            message.CardSecurityNumber,
-            message.CardHolderName,
-            message.CardExpiration);
-
+        var address = new Address(message.Street, message.City, message.State, 
+                                  message.Country, message.ZipCode);
+        var order = new Order(message.UserId, address, message.CardTypeId, 
+                              message.CardNumber, message.CardSecurityNumber, 
+                              message.CardHolderName, message.CardExpiration);
+            
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
-                item.Discount, item.PictureUrl, item.Units);
+                               item.Discount, item.PictureUrl, item.Units);
         }
 
-        //Persist the Order through the Repository
         _orderRepository.Add(order);
-        var result = await _orderRepository.UnitOfWork
+
+        return await _orderRepository.UnitOfWork
             .SaveEntitiesAsync();
-        return result > 0;
     }
 }
 ```
 
-类使用的插入的存储库来执行事务和保持的状态更改。 它并不重要该类是命令处理程序中，ASP.NET 核心 Web API 控制器方法，还是[DDD 应用程序服务](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)。 最终的是简单的类，使用存储库、 域实体和其他应用程序协调方式类似于命令处理程序。 依赖关系注入工作原理相同的方式针对所有提到类，如使用 DI 示例所示根据构造函数。
+类使用注入的存储库执行事务和保持状态更改。 类是命令处理程序、ASP.NET Core Web API 控制器方法，还是 [DDD 应用程序服务](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)，这并不重要。 它最终是一个简单类，该类使用存储库、域实体和其他应用程序协调，这与命令处理程序相似。 依赖项注入的工作原理对于所有所述的类都是相同的，如基于构造函数使用 DI 的示例。
 
-### <a name="registering-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>注册的依赖关系的实现类型和接口或抽象
+### <a name="registering-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>注册依赖项实现类型和接口或抽象
 
-在使用通过构造函数将插入的对象之前，你需要知道从何处注册的接口和生成注入到通过 DI 你应用程序类的对象的类。 （如 DI 根据构造函数中，如前面所示。）
+使用通过构造函数注入的对象前，需要知道在何处注册接口和类，这些接口和类生成通过 DI 注入应用程序类的对象。 （如基于构造函数的 DI，如前面所示。）
 
-#### <a name="using-the-built-in-ioc-container-provided-by-aspnet-core"></a>使用 ASP.NET Core 提供内置 IoC 容器
+#### <a name="using-the-built-in-ioc-container-provided-by-aspnet-core"></a>使用由 ASP.NET Core 提供的内置 IoC 容器
 
-当使用 ASP.NET Core 提供的内置 IoC 容器时，你注册你想要插入 Startup.cs 文件，如以下代码所示的 ConfigureServices 方法中的类型：
+使用 ASP.NET Core 提供的内置 IoC 容器时，在 Startup.cs 文件中注册要注入ConfigureServices 方法的类型，如以下代码所示：
 
 ```csharp
 // Registration of types into ASP.NET Core built-in container
@@ -107,31 +109,30 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-最常用的模式时注册 IoC 容器中的类型是注册的成对的类型-一个接口和其相关的实现类。 然后从 IoC 容器可以通过任何构造函数请求一个对象，如果你将请求的接口的某些类型的对象。 例如，在前面的示例中，最后一行说明当您的构造函数的任何依赖 IMyCustomRepository （接口或抽象） 上时，IoC 容器将插入 MyCustomSQLServerRepository 实现实例类。
+在 IoC 容器中注册类型时最常用的模式是注册一对类型 - 一个接口及其相关实现类。 当通过任何构造函数请求 IoC 容器中的对象时，请求特定接口类型的对象。 例如，在前面的示例中，最后一行说明当构造函数具有 IMyCustomRepository（接口或抽象）依赖项时，IoC 容器将注入 MyCustomSQLServerRepository 实现类的实例。
 
-#### <a name="using-the-scrutor-library-for-automatic-types-registration"></a>使用自动类型注册 Scrutor 库
+#### <a name="using-the-scrutor-library-for-automatic-types-registration"></a>将 Scrutor 库用于自动类型注册
 
-在使用时 DI.NET 核心，你可能想要能够扫描程序集和自动注册其类型，按照约定。 此功能当前不可用 ASP.NET Core 中。 但是，你可以使用[Scrutor](https://github.com/khellang/Scrutor)为此库。 当具有众多需要在 IoC 容器中注册的类型，此方法非常方便。
+在 .NET Core 中使用 DI 时，可能需要扫描程序集，并自动按约定注册其类型。 当前 ASP.NET Core 中未提供此功能。 但是，可以使用 [Scrutor](https://github.com/khellang/Scrutor) 库。 如果需要在 IoC 容器中注册许多类型，使用该方法很方便。
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Matthew 金。服务注册 Scrutor**
-    [*https://mking.io/blog/registering-services-with-scrutor*](https://mking.io/blog/registering-services-with-scrutor)
+-   **Matthew King。Registering services with Scrutor**（向 Scrutor 注册服务）
+    [https://mking.io/blog/registering-services-with-scrutor](https://mking.io/blog/registering-services-with-scrutor)
 
 <!-- -->
 
 -   **Kristian Hellang。Scrutor。** GitHub 存储库。
-    [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
+    [https://github.com/khellang/Scrutor](https://github.com/khellang/Scrutor)
 
 #### <a name="using-autofac-as-an-ioc-container"></a>使用 Autofac 作为 IoC 容器
 
-此外可以使用其他 IoC 容器，然后将其插入 ASP.NET Core 管道，如下所示在 eShopOnContainers，使用排序 microservice [Autofac](https://autofac.org/)。 使用 Autofac 时通常会注册通过模块，它可以通过拆分根据你的类型，就像您可以对分布在多个类库的应用程序类型的多个文件之间的注册类型的类型。
+还可使用其他 IoC 容器，并将其插入 ASP.NET Core 管道，就像 eShopOnContainers（使用 [Autofac](https://autofac.org/)）中的订购微服务一样。 使用 Autofac 时通常通过模块注册类型，这可根据类型位置，在多个文件之间拆分注册类型，就像可在多个类库中分布应用程序类型一样。
 
-例如，下面是[Autofac 应用程序模块](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/ApplicationModule.cs)为[Ordering.API Web API](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.API)与想要插入的类型的项目。
+例如，下面是 [Ordering.API Web API](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.API) 项目的 [Autofac 应用程序模块](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/ApplicationModule.cs)，包含要注入的类型。
 
 ```csharp
-public class ApplicationModule
-    :Autofac.Module
+public class ApplicationModule : Autofac.Module
 {
     public string QueriesConnectionString { get; }
     public ApplicationModule(string qconstr)
@@ -157,64 +158,64 @@ public class ApplicationModule
 }
 ```
 
-注册过程和概念非常类似于您可以使用内置的 ASP.NET Core iOS 容器，注册类型的方式，但使用 Autofac 时的语法是稍有不同。
+注册过程和概念类似于向内置 ASP.NET Core iOS 容器注册类型，但使用 Autofac 时，语法略有不同。
 
-在示例代码中，以及实现类 OrderRepository 注册 IOrderRepository 的抽象。 这意味着一个构造函数为声明通过 IOrderRepository 抽象或接口的依赖项，每当 IoC 容器将插入 OrderRepository 类的实例。
+在示例代码中，抽象 IOrderRepository 与实现类 OrderRepository 一同注册。 这意味着每当构造函数通过 IOrderRepository 抽象或接口声明依赖项时，IoC 容器会注入 OrderRepository 类的实例。
 
-实例作用域类型确定如何实例共享相同的服务或依赖项的请求之间。 发出请求后的某个依赖项，IoC 容器可以返回以下结果：
+实例作用域类型确定实例在相同服务或依赖项的请求之间的共享方式。 发出依赖项请求时，IoC 容器会返回以下项：
 
--   每个生存期作用域的单个实例 (作为 ASP.NET 核心 IoC 容器中称为*范围*)。
+-   每个生存期范围的一个实例（在 ASP.NET Core IoC 容器中称为“已设置范围”）。
 
--   每个依赖项的新实例 (作为 ASP.NET 核心 IoC 容器中称为*暂时性*)。
+-   每个依赖项的一个实例（在 ASP.NET Core IoC 容器中称为“暂时”）。
 
--   在使用 IoC 容器的所有对象之间共享的单一实例 (作为 ASP.NET 核心 IoC 容器中称为*singleton*)。
+-   使用 IoC 容器的跨所有对象共享的一个实例（在 ASP.NET Core IoC 容器中称为“单一实例”）。
 
 #### <a name="additional-resources"></a>其他资源
 
--   **在 ASP.NET 核心中的依赖关系注入简介**
-    [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+-   ASP.NET Core 中的依赖项注入简介
+    [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
--   **Autofac。** 正式文档。
+-   **Autofac。** 官方文档。
     [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **Cesar de la Torre。比较具有 Autofac IoC 容器实例作用域的 ASP.NET 核心 IoC 容器服务生命周期**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+-   **比较 ASP.NET Core IoC 容器服务生存期与 Autofac IoC 容器实例范围 - Cesar de la Torre**
+    [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
-## <a name="implementing-the-command-and-command-handler-patterns"></a>实现的命令和命令处理程序模式
+## <a name="implementing-the-command-and-command-handler-patterns"></a>实现命令和命令处理程序模式
 
-在上一节中所示 DI 通过构造函数示例中，通过在类的构造函数的存储库已将注入 IoC 容器。 但是，完全其中已它们注入？ 在简单 Web API (例如，在 eShopOnContainers 目录 microservice) 中，你将它们注入控制器构造函数中的 MVC 控制器级。 但是，在本部分的初始代码 ( [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)从中 eShopOnContainers Ordering.API 服务的类)，通过特定命令的构造函数完成的依赖关系注入处理程序。 让我们解释什么是命令处理程序是，为什么你想要使用它。
+在上一部分中的“DI 通过构造函数”示例中，IoC 容器通过类中的构造函数注入存储库。 但是，它们究竟是在哪里注入的？ 在简单的 Web API（例如 eShopOnContainers 中的目录微服务）中，它们在控制器构造函数的 MVC 控制器级别注入。 但是，在本部分的初始代码（eShopOnContainers 中来自 Ordering.API 服务的 [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) 类）中，依赖项注入通过特定命令处理程序的构造函数完成。 让我们来了解一下什么是命令处理程序，以及使用它的好处。
 
-本指南中前面引入了 CQRS 模式本质上与相关命令模式。 CQRS 具有两条边。 第一个领域是使用简化的查询的查询[Dapper](https://github.com/StackExchange/dapper-dot-net)微型 ORM、 以前所述。 第二个区域是命令，为事务的起始点和从外部服务的输入的通道。
+命令模式在本质上与本指南之前介绍的 CQRS 模式相关。 CQRS 具有两个功能。 第一个功能是查询，通过 [Dapper](https://github.com/StackExchange/dapper-dot-net) 微 ORM 使用简化的查询，我们已经在前文中介绍过了。 第二个功能是命令（这是事务的起点），以及服务外的输入通道。
 
-如所示图 9-20，基于模式接受从客户端的命令处理，将其基于域模型规则，并最后将保存与事务的状态。
+如图 9-24 所示，该模式基于接受客户端的命令、根据域模式规则进行处理，最后保持事务状态。
 
 ![](./media/image21.png)
 
-**图 9-20**。 命令或 CQRS 模式中的"事务端"的高级视图
+**图 9-24**。 CQRS 模式中的命令高级别视图或“事务端”
 
 ### <a name="the-command-class"></a>命令类
 
-命令是让系统执行更改系统的状态的操作的请求。 命令是命令性，，应只需一次处理。
+命令是让系统执行更改系统状态的操作的请求。 命令具有命令性，且应仅处理一次。
 
-由于命令都是需求，它们通常命名为与在命令性语气 （例如，"创建"或"更新"），谓词，但可能包括的聚合类型，例如 CreateOrderCommand。 与某个事件，不同命令不是从过去; 事实它是仅一个请求，并因此可能被拒绝。
+由于命令具有命令性，所以通常采用命令语气使用谓词（如“create”或“update”）命名，命令可能包括聚合类型，例如 CreateOrderCommand。 与事件不同，命令不是过去发生的事实，它只是一个请求，因此可以拒绝它。
 
-命令可能源自从启动请求，用户由于 UI 或从一个进程管理器时的进程管理器定向聚合执行操作。
+命令可能源自 UI，由用户发出请求而产生，也可能来自进程管理器，由进程管理器指导聚合执行操作而产生。
 
-命令的重要特征是，它应处理只需一次通过单一接收方。 这是因为某命令是单个操作或你想要在应用程序中执行的事务。 例如，应不超过一次处理相同的顺序创建命令。 这是命令和事件之间的一项重大差异。 事件可能会多次处理，因为许多系统或微服务可能感兴趣的事件。
+命令的一个重要特征是它应该由单一接收方处理，且仅处理一次。 这是因为命令是要在应用程序中执行的单个操作或事务。 例如，同一个订单创建命令的处理次数不应超过一次。 这是命令和事件之间的一个重要区别。 事件可能会经过多次处理，因为许多系统或微服务可能会对该事件感兴趣。
 
-此外，很重要命令被处理仅一次，以防该命令不是幂等。 如果可以执行它多次而无需更改的结果，该命令的性质，因此或由于系统处理命令的方法，某命令是幂等。
+此外，请注意，如果命令不是幂等，命令仅会处理一次。 如果命令可执行多次且结果不变（由于命令的本质或系统处理命令的方式），则命令是幂等。
 
-它是一个好办法使命令和更新幂等，建立在你的域的业务规则条件和固定协定的意义上时。 例如，若要使用相同的示例中，如果出于任何原因 （重试逻辑，发起的黑客攻击、 等） 相同的 CreateOrder 命令达到你的系统多次，你应能够标识它，确保你不会创建多个订单。 为此，你需要附加某种类型的操作中标识并确定是否已处理的命令或更新。
+建议将命令和更新设置为幂等，如果在域的业务规则和固定协定下有意义。 例如，我们使用同一个示例，如果出于任何原因（重试逻辑、黑客攻击等），相同的 CreateOrder 命令多次到达系统，应能识别并确保不会创建多个订单。 为此，需要在操作中附加一些类型的标识，确定是否已处理命令或更新。
 
-将命令发送到一个接收方;不发布命令。 发布为该状态事实集成事件-出发生，可能感兴趣的事件接收器。 对于事件，发布服务器有的无所顾忌哪些情况下，接收方收到事件或它们执行它。 但集成事件是前面部分中已引入另外一回事。
+可将命令发送给单个接收方，但不会发布命令。 发布适用于声明事实的集成事件 - 事件已发生，事件接收方可能对其感兴趣。 对于事件，发布服务器无需在意哪些接收方获取事件或对其进行什么操作。 但集成事件是一个例外，前面章节已有介绍。
 
-命令是使用包含数据字段或与执行该命令所需的所有信息的集合的类实施的。 命令是一种特殊类型的数据传输对象 (DTO)，一个专门用于请求更改或事务。 命令本身基于完全处理命令，而不安装其他所需的信息。
+命令通过包含数据字段或集合（其中包含执行命令所需的所有信息）的类实现。 命令是一种特殊的数据传输对象 (DTO)，专门用于请求更改或事务。 命令本身完全基于处理命令所需的信息，别无其他。
 
-下面的示例演示简化的 CreateOrderCommand 类。 这是在中 eShopOnContainers 排序微服务中使用一个不可变命令。
+下面的示例演示简化的 CreateOrderCommand 类。 这是 eShopOnContainers 的订购微服务中使用的不可变命令。
 
 ```csharp
 // DDD and CQRS patterns comment
-// Note that it is recommended that yuo implement immutable commands
+// Note that we recommend that you implement immutable commands
 // In this case, immutability is achieved by having all the setters as private
 // plus being able to update the data just once, when creating the object
 // through the constructor.
@@ -222,44 +223,33 @@ public class ApplicationModule
 // http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
-// https://msdn.microsoft.com/en-us/library/bb383979.aspx
+// https://msdn.microsoft.com/library/bb383979.aspx
 [DataContract]
 public class CreateOrderCommand
     :IAsyncRequest<bool>
 {
     [DataMember]
     private readonly List<OrderItemDTO> _orderItems;
-
     [DataMember]
     public string City { get; private set; }
-
     [DataMember]
     public string Street { get; private set; }
-
     [DataMember]
     public string State { get; private set; }
-
     [DataMember]
     public string Country { get; private set; }
-
     [DataMember]
     public string ZipCode { get; private set; }
-
     [DataMember]
     public string CardNumber { get; private set; }
-
     [DataMember]
     public string CardHolderName { get; private set; }
-
     [DataMember]
     public DateTime CardExpiration { get; private set; }
-
     [DataMember]
     public string CardSecurityNumber { get; private set; }
-
     [DataMember]
     public int CardTypeId { get; private set; }
-
     [DataMember]
     public IEnumerable<OrderItemDTO> OrderItems => _orderItems;
 
@@ -299,13 +289,13 @@ public class CreateOrderCommand
 }
 ```
 
-基本上，命令类包含有关执行业务事务的使用的域模型对象所需的所有数据。 因此，命令是只需包含只读数据和任何行为的数据结构。 命令的名称指示其用途。 在许多语言，如 C\#，命令表示为类，但它们不在实际的面向对象的意义上 true 类。
+基本上，命令类包含通过使用域模型对象执行业务事务所需的所有数据。 因此，命令是包含只读数据、不包含行为的数据结构。 命令的名称指示其用途。 在 C\# 等许多语言中，命令表示为类，但它们不是真正的面向对象意义上的真的类。
 
-其他特征，命令将将不可变的因为预期使用情况是，它们直接通过域模型中处理。 它们不需要在其计划的生存期内更改。 在 C 中\#类，可以通过不具有任何 setter 或更改内部状态的其他方法来实现不可变性。
+命令的另一个特征是不变性，因为它们的预期用途是由域模型直接处理。 它们不需要在预计的生存期内更改。 在 C\# 类中，可通过不使用任何可更改内部状态的资源库或其他方法，实现不变性。
 
-例如，命令类，用于创建顺序是在数据方面可能类似于你想要创建的顺序，但你可能不需要相同的属性。 例如，CreateOrderCommand 没有一个订单 ID，因为尚未创建顺序。
+例如，用于创建订单的命令类可能与你要创建的订单在数据上类似，但你可能不需要相同的属性。 例如 CreateOrder 命令没有订单 ID，因为订单尚未创建。
 
-许多命令类可以是简单，需仅需要更改某些状态有关的几个字段。 为这种情况如果您只需更改订单的状态从"进程内"到"付费"或"交付"的使用如下命令：
+许多命令类可能很简单，只需要一些有关需要更改的状态的字段。 如果只需要使用类似以下的命令将订单状态从“处理中”更改为“已付款”或“已发货”，则是这种情况：
 
 ```csharp
 [DataContract]
@@ -323,199 +313,334 @@ public class UpdateOrderStatusCommand
 }
 ```
 
-一些开发人员使其 UI 请求对象独立于其命令 Dto，但这是只首选项。 它是提供不会获得很附加的价值，乏味分离，并且对象几乎完全相同的形状。 例如，在 eShopOnContainers，命令直接来自客户端。
+一些开发人员将其 UI 请求对象从命令 DTO 中分离，但这只是一种个人偏好。 这种分离既枯燥又没有太大价值，对象几乎都是相同的形状。 例如，在 eShopOnContainers 中，一些命令直接来自客户端。
 
 ### <a name="the-command-handler-class"></a>命令处理程序类
 
-应实现每个命令的特定命令处理程序类。 这是模式的工作原理，并且你将在其中使用的命令对象、 域对象和基础结构存储库对象。 命令处理程序中的事实是在 CQRS 和 DDD 方面的应用程序层的核心。 但是，所有域逻辑应都包含在域类-聚合根 （根实体） 中子实体或[域服务](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)，但不是在命令处理程序，它是从应用程序的一个类层。
+应为每个命令实现特定命令处理程序类。 这是该模式的工作原理，是应用命令对象、域对象和基础结构存储库对象的情景。 对于 CQRS 和 DDD ，命令处理程序实际上是应用程序层的核心。 但是，域类中应包含所有域逻辑 - 在聚合根（根实体）、子实体或[域服务](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)中，但不在命令处理程序中（命令处理程序是应用程序层中的类）。
 
-命令处理程序收到命令，并从使用聚合获取结果。 结果应为此命令成功执行，或者异常。 在出现异常，系统状态应保持不变。
+命令处理程序收到命令，并从使用的聚合获取结果。 结果应为成功执行命令，或者异常。 出现异常时，系统状态应保持不变。
 
-命令处理程序通常将执行以下步骤：
+命令处理程序通常执行以下步骤：
 
--   它接收命令对象，如 DTO (从[中介](https://en.wikipedia.org/wiki/Mediator_pattern)或其他基础结构对象)。
+-   它接收 DTO 等命令对象（从[转存进程](https://en.wikipedia.org/wiki/Mediator_pattern)或其他基础结构对象）。
 
--   它会验证命令有效 （如果不能验证中介来实现）。
+-   它会验证命令是否有效（如果转存进程未验证）。
 
--   它实例化目标的当前命令的聚合根实例。
+-   它会实例化作为当前命令目标的聚合根实例。
 
--   它在命令中获取所需的数据的聚合根实例上执行该方法。
+-   它会在聚合根实例上执行方法，从命令获得所需数据。
 
--   它保存到其相关数据库聚合的新状态。 此最后一次操作是实际的事务。
+-   它将聚合的新状态保持到相关数据库。 这最后一个操作是实际的事务。
 
-通常情况下，命令处理程序处理单个聚合驱动由其聚合根 （根实体）。 如果多个聚合应受到接收的单个命令，你可以使用域事件通过多个聚合传播状态或操作
+通常情况下，命令处理程序处理由聚合根（根实体）驱动的单个聚合。 如果多个聚合应受到单个命令接收的影响，可使用域事件跨多个聚合传播状态或操作。
 
-重要的一点是处理命令时，所有域逻辑应都为域模型中 （聚合），完全封装并准备好进行单元测试。 命令处理程序就可以充当作为一种方法从数据库中获取域模型和最后一步，以告知基础结构层 （存储库），以便在该模型更改时保留更改。 此方法的优点是可以在独立的、 完全封装的、 丰富的、 行为域模型中的域逻辑重构而无需更改应用程序或基础结构层，它们是联结级别 （命令处理程序，Web API 中的代码存储库、 等）。
+请注意，处理命令时，所有域逻辑应在域模型（聚合）内，完全封装并准备好进行单元测试。 命令处理程序的作用是从数据库获取域模型，最后指示基础结构层（存储库）在模型更改完成后保存更改。 此方法的优点是，你可在独立的、完全封装的、丰富行为域模型中重构域逻辑，无需在应用程序或基础结构层中更改代码，命令处理程序、Web API、存储库等是管道级别。
 
-当命令处理程序获得复杂，而且具有太多逻辑时，这可能是代码告知。 查看它们，并且如果你发现域逻辑，重构代码以将该域行为移动到的域对象 （聚合根和子实体） 的方法。
+如果命令处理程序很复杂，包含过多逻辑，则可能存在代码异味。 请查看它们，如果发现域逻辑，则重构代码，将域行为移动到域对象（聚合根和子实体）的方法。
 
-作为命令处理程序类的示例，下面的代码演示这一章开头你看到的同一个 CreateOrderCommandHandler 类。 在这种情况下我们具有突出显示的句柄方法和域模型对象/聚合操作。
+作为命令处理程序类的示例，下面的代码演示这一章开头介绍的同一个 CreateOrderCommandHandler 类。 在此示例中，我们想要强调 Handle 方法以及域模型对象/聚合的操作。
 
 ```csharp
 public class CreateOrderCommandHandler
     : IAsyncRequestHandler<CreateOrderCommand, bool>
 {
-    private readonly IBuyerRepository _buyerRepository;
     private readonly IOrderRepository _orderRepository;
+    private readonly IIdentityService _identityService;
+    private readonly IMediator _mediator;
 
-    public CreateOrderCommandHandler(IBuyerRepository buyerRepository,
-        IOrderRepository orderRepository)
+    // Using DI to inject infrastructure persistence Repositories
+    public CreateOrderCommandHandler(IMediator mediator, 
+                                     IOrderRepository orderRepository, 
+                                     IIdentityService identityService)
     {
-        if (buyerRepository == null)
-        {
-            throw new ArgumentNullException(nameof(buyerRepository));
-        }
-        if (orderRepository == null)
-        {
-            throw new ArgumentNullException(nameof(orderRepository));
-        }
-
-        _buyerRepository = buyerRepository;
-        _orderRepository = orderRepository;
+        _orderRepository = orderRepository ?? 
+                          throw new ArgumentNullException(nameof(orderRepository));
+        _identityService = identityService ?? 
+                          throw new ArgumentNullException(nameof(identityService));
+        _mediator = mediator ?? 
+                                 throw new ArgumentNullException(nameof(mediator));
     }
 
     public async Task<bool> Handle(CreateOrderCommand message)
     {
-        //
-        // Additional code ...
-        //
-        // Create the Order aggregate root
+        // Create the Order AggregateRoot
         // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic
+        // methods and constructor so validations, invariants, and business logic 
         // make sure that consistency is preserved across the whole aggregate
-        var order = new Order(buyer.Id, payment.Id,
-            new Address(message.Street,
-            message.City, message.State,
-            message.Country, message.ZipCode));
-
+        var address = new Address(message.Street, message.City, message.State, 
+                                  message.Country, message.ZipCode);
+        var order = new Order(message.UserId, address, message.CardTypeId, 
+                              message.CardNumber, message.CardSecurityNumber, 
+                              message.CardHolderName, message.CardExpiration);
+            
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
-                item.Discount, item.PictureUrl, item.Units);
+                               item.Discount, item.PictureUrl, item.Units);
         }
 
-        // Persist the Order through the aggregate's repository
         _orderRepository.Add(order);
-        return await _orderRepository.UnitOfWork.SaveChangesAsync();
+
+        return await _orderRepository.UnitOfWork
+            .SaveEntitiesAsync();
     }
 }
 ```
 
-这些是命令处理程序应执行的附加步骤：
+以下是命令处理程序应执行的附加步骤：
 
--   使用命令的数据来操作时使用的聚合根方法和行为。
+-   使用命令数据对聚合根的方法和行为进行操作。
 
--   内部域对象中，在引发域事件时执行事务，但这是从命令处理程序的角度来看透明。
+-   在域对象中，执行事务时引发域事件，但这从命令处理程序角度看是透明的。
 
--   如果聚合的操作结果是成功并且在完成事务后，引发集成事件命令处理程序。 （这些可能还会出现基础结构的类，如存储库。）
+-   如果聚合操作结果成功且在完成事务后，引发集成事件命令处理程序。 （可能还会由存储库等基础结构类引发。）
 
 #### <a name="additional-resources"></a>其他资源
 
--   **标记 Seemann。在边界将应用程序是面向不对象的**
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries，ApplicationsareNotObject 面向 /*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+-   **Mark Seemann。At the Boundaries, Applications are Not Object-Oriented**（在边界上，应用程序不是面向对象的）
+    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
--   **命令和事件**
+-   **Commands and events**（命令和事件）
     [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **命令处理程序的作用是什么？** 
-     [ *http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
+-   **What does a command handler do?**（命令处理程序的功能是什么？）
+    [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
--   **Jimmy Bogard。域命令模式 – 处理程序**
-    [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
+-   **Jimmy Bogard。Domain Command Patterns – Handlers**（域命令模式 – 处理程序）
+    [https://jimmybogard.com/domain-command-patterns-handlers/](https://jimmybogard.com/domain-command-patterns-handlers/)
 
 -   **Jimmy Bogard。域命令模式 – 验证**
-    [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
+    [https://jimmybogard.com/domain-command-patterns-validation/](https://jimmybogard.com/domain-command-patterns-validation/)
 
-## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>命令处理管道： 如何在触发是命令处理程序
+## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>命令处理管道：如何触发命令处理程序
 
-下一个问题是如何调用命令处理程序。 你可以手动调用它从每个相关的 ASP.NET Core 控制器。 但是，方法是将太结合并不理想。
+下一个问题是如何调用命令处理程序。 可从每个相关的 ASP.NET Core 控制器手动调用。 但是，此方法过于耦合，并不理想。
 
-其他两个主要选项，这些建议的选项有：
+建议的其他两个主要选项是：
 
--   通过内存中中介模式项目。
+-   通过内存中转存进程模式项目。
 
--   使用控制器和处理程序之间的异步消息队列。
+-   在控制器和处理程序之间使用异步消息队列。
 
-### <a name="using-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>在命令管道中使用中介模式 （内存中）
+### <a name="using-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>在命令管道中使用转存进程模式（内存中）
 
-如所示图 9-21，CQRS 方法在情况下会使用智能中介，类似于内存中总线，这是足够智能，可将重定向到正确的命令处理程序基于命令或 DTO 正在接收的类型。 组件之间的单个黑色箭头表示与他们相关之间的交互 （在许多情况下，通过 DI 插入） 的对象之间的依赖关系。
+如图 9-25 所示，在 CQRS 方法中使用类似于内存中总线的智能转存进程，该进程非常智能，可基于要接收的命令或 DTO 的类型重定向到正确的命令处理程序。 组件之间的黑色箭头表示对象（许多情况下，通过 DI 注入）之间的依赖关系及其相关交互。
 
 ![](./media/image22.png)
 
-**图 9-21**。 在单个 CQRS 微服务中的过程中使用中介模式
+**图 9-25**。 在单个 CQRS 微服务进程中使用转存进程模式
 
-使用中介模式有意义的原因是企业应用程序中处理请求可以变得很复杂。 你想要能够添加打开如日志记录、 验证、 审核和安全的跨领域问题数。 在这些情况下，你可以依赖于中介管道 (请参阅[中介模式](https://en.wikipedia.org/wiki/Mediator_pattern)) 以提供一种为这些额外的行为或跨领域问题。
+使用转存进程模式的原因是对于企业应用程序，处理请求可能很复杂。 你需要添加具有开放数量的整合问题，例如登录、验证、审核和安全性。 在这些情况下，可以依赖转存进程管道（请参阅[转存进程模式](https://en.wikipedia.org/wiki/Mediator_pattern)），以提供应对这些额外行为或整合问题的方法。
 
-中介是封装"如何"在此过程中的对象： 它协调基于状态的执行，则调用的方法是命令处理程序，或到处理程序提供的负载。 借助中介组件可以应用跨领域问题集中式和透明的方式通过应用修饰器 (或[管道行为](https://github.com/jbogard/MediatR/wiki/Behaviors)自中介 v3)。 (有关详细信息，请参阅[修饰器模式](https://en.wikipedia.org/wiki/Decorator_pattern)。)
+转存进程是封装此进程方式的对象。它基于状态、命令处理程序调用方式或提供给处理程序的负载，协调执行。 借助转存进程组件，可通过应用修饰器（或[管道行为](https://github.com/jbogard/MediatR/wiki/Behaviors)从 [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) 开始），采用集中且透明的方式，应用整合问题。 有关更多信息，请参见[修饰器模式](https://en.wikipedia.org/wiki/Decorator_pattern)。
 
-修饰器以及行为都类似于[方面面向编程 (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)，则只应用于由中介组件的特定进程管道。 根据应用 AOP 实现的跨领域问题的方面*方面 weavers*在编译时将插入的或基于对象调用截获。 这两种典型的 AOP 方法有时称为"类似于"幻数，因为它不是轻松地了解如何 AOP 完成其工作。 在处理的严重问题或 bug，AOP 可能很难调试。 另一方面，这些修饰符/行为是显式和应用仅在中介来实现，上下文中以便能够调试更可预测和轻松。
+修饰器和行为类似于[面向方面编程 (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)，仅应用于由转存进程组件管理的特定进程管道。 AOP 中实现整合问题的方面基于编译时注入的 aspect weaver 或基于对象调用截获应用。 这两种典型 AOP 方法的工作方式有时“就像是魔术”，因为不容易了解 AOP 的工作方式。 处理严重问题或 bug 时，AOP 可能难以调试。 另一方面，这些修饰器/行为是显式的，且仅在转存进程的上下文中应用，因此调试更可预测、更轻松。
 
-例如，在排序 microservice eShopOnContainers，我们实现两个示例修饰符， [LogDecorator](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Decorators/LogDecorator.cs)类和一个[ValidatorDecorator](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Decorators/ValidatorDecorator.cs)类。 下一节介绍了修饰器的实现。 请注意，在将来版本中，eShopOnContainers 将迁移到[MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)并转向[行为](https://github.com/jbogard/MediatR/wiki/Behaviors)而不是使用修饰器。
+例如，在 eShopOnContainers 订购微服务中，我们实现了两个示例行为：一个 [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) 类和一个 [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) 类。 下一节通过演示 eShopOnContainers 如何实现 [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) [行为](https://github.com/jbogard/MediatR/wiki/Behaviors)介绍了行为的实现。
 
-### <a name="using-message-queues-out-of-proc-in-the-commands-pipeline"></a>在命令的管道中使用消息队列 （进程外）
+### <a name="using-message-queues-out-of-proc-in-the-commands-pipeline"></a>在命令的管道中使用消息队列（进程外）
 
-另一个选项是使用基于代理或消息队列，如图 9-22 中所示的异步消息。 此外可以使用该选项合并与中介组件之前的命令处理程序。
+另一个选项是使用基于中转站或消息队列的异步消息，如图 9-26 中所示。 可在命令处理程序前，将此选项与转存进程组件合并。
 
 ![](./media/image23.png)
 
-**图 9-22**。 通过 CQRS 命令中使用消息队列 （带进程和进程间通信）
+**图 9-26**。 通过 CQRS 命令使用消息队列（进程外和进程间通信）
 
-使用消息队列接受命令可进一步使变得复杂命令的管道，因为你可能需要此管道拆分为两个进程通过外部消息队列连接。 但是，它应使用如果需要可伸缩性和基于异步消息传送的性能改进。 请考虑对于图 9-22，该控制器只需命令消息发送到队列，并且返回。 然后命令处理程序处理其自己的步调的消息。 它是非常有好处的队列-超可伸缩性是所需，例如对于 stocks 或与大量的传入数据的任何其他方案时，消息队列可充当用例中的缓冲区。
+使用消息队列接受命令可能会进一步复杂化命令管道，因为很可能需要将管道拆分为通过外部消息队列连接的两个进程。 如果需要基于异步消息传送，提高可伸缩性和性能，则仍应使用此方法。 请思考图 9-26 的情况，控制器将命令消息发布到队列，然后返回。 然后命令处理程序按自己的步调处理消息。 这是队列的一大优点：消息队列可在需要超高可伸缩性时（例如股票或具有大量传入数据的任何其他方案）充当缓冲区。
 
-但是，消息队列的异步性质，因此你需要找出如何与客户端应用程序有关的成功或失败的命令的进程进行通信。 一般来说，你应永远不会使用"发后不理"命令。 每个业务应用程序需要知道是否命令已成功处理，或至少验证并且接受。
+但是，由于消息队列具有异步性质，你需要解决如何就命令进程的成功或失败，与客户端应用程序通信。 一般来说，应永远不要使用“发后不理”命令。 每个业务应用程序需要了解命令是否处理成功，或至少了解是否已验证和接受。
 
-因此，能够响应客户端在验证已提交至异步队列的命令消息之后将增加你的系统，相比运行事务后返回操作的结果的进程内命令过程的复杂性。 使用队列时，你可能需要返回其他操作结果消息，将需要其他组件和自定义通信系统中通过命令过程的结果。
+因此，相较于运行事务后返回操作结果的进程内命令进程，如果要在验证提交到异步队列的命令消息后响应客户端，这会增加系统复杂性。 使用队列时，可能需要通过其他操作结果消息返回命令进程结果，这将需要在系统中使用其他组件和自定义通信。
 
-此外，异步命令是单向的命令，这在许多情况下可能不需要如 Burtsev Alexey 和中的 Greg Young 之间的以下有趣交换中所述[联机会话](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ):
+此外，异步命令是单向命令，这在许多情况下可能不是必要的，如下文中 Burtsev Alexey 和 Greg Young 之间有趣的[在线对话](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ)中所介绍的：
 
-\[Burtsev Alexey\]发现的代码的许多人都使用异步命令处理或一种方法而无需任何原因需要这么做消息传递的命令 （它们未执行某些较长的操作，它们未在执行外部异步代码，它们甚至不跨应用程序边界要使用消息总线）。 它们为何引入此不必要的复杂性？ 和实际上，我尚未看到 CQRS 代码示例与目前为止，阻塞命令处理程序，但它将在大多数情况下正常工作。
+\[Burtsev Alexey\] 我发现有人在许多代码中使用异步命令处理或单向命令消息传送，但这样做是不合理的（他们并没有执行长操作或外部异步代码，他们甚至没有跨应用程序边界使用消息总线）。 他们为什么要引入不必要的复杂性？ 实际上我至今没有看到过使用阻止命令处理程序的 CQRS 代码示例，但是它在大多数情况下是有效的。
 
-\[Greg Young\] \[...\]异步命令不存在; 它是实际另一个事件。 如果我必须接受你发送我并引发事件，如果我不同意，它不再你告诉我做些什么。 是你告诉我执行某些操作。 这似乎存在细微的差异，首先，但它有许多含义。
+\[Greg Young\] \[...\] 异步命令并不存在；它实际上是另一种事件。 如果我必须接受你发送给我的信息并引发事件（如果我不同意），这不再是你对我的命令。 这是你告诉我一些操作已完成。 虽然最初似乎只有细微差异，但会产生多方面影响。
 
-异步命令极大地增加系统的复杂性，因为没有简单方法以指示失败。 因此，异步命令时，建议不要以外的缩放要求需要时或在特殊情况下通信通过消息内部的微服务。 在这些情况下，则必须设计单独的报告和恢复系统故障。
+异步命令会极大地增加系统的复杂性，因为没有指示失败的简单方法。 因此，除非需要缩放要求或在特殊情况下需要通过消息传达内部微服务，否则不建议使用异步命令。 在这些情况下，必须设计针对失败的单独报告和恢复系统。
 
-在 eShopOnContainers 的初始版本，我们决定使用同步命令处理，从 HTTP 请求启动，而且受中介模式。 轻松，你能够返回成功或失败的进程，如[CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)实现。
+在 eShopOnContainers 的初始版本中，我们决定使用同步命令处理，从 HTTP 请求启动，由转存进程模式驱动。 这样一来，可轻松地返回进程的成功或失败，如 [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) 实现中一样。
 
-在任何情况下，这应该是基于你的应用程序的或微服务构成的业务要求的决策。
+在任何情况下，这应该是基于你的应用程序或微服务的业务要求的决定。
 
-## <a name="implementing-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>实现命令过程管道具有中介模式 (MediatR)
+## <a name="implementing-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>通过转存进程模式 (MediatR) 实现命令进程管道
 
-作为示例实现，本指南建议使用进程内管道基于驱动器命令引入到中介模式和路由，在内存中，到正确的命令处理程序。 本指南还将建议应用修饰符或[行为](https://github.com/jbogard/MediatR/wiki/Behaviors)以便分隔跨领域问题。
+作为示例实现，本指南建议基于转存进程模式使用进程内管道，驱动命令引入和路由命令（内存中）到正确的命令处理程序。 本指南还建议应用[行为](https://github.com/jbogard/MediatR/wiki/Behaviors)以分隔整合问题。
 
-有关在.NET 核心的实现，有一些多个开放源代码库实现中介模式。 本指南中使用的库[MediatR](https://github.com/jbogard/MediatR)开放源代码库 （由 Jimmy Bogard 创建），但你可使用另一种方法。 MediatR 是一个小型和简单的库，您可以像处理处理内存中消息命令，在应用修饰器或行为时。
+有关 .NET Core 中的实现，可使用多个开发源代码库来实现转存进程模式。 本指南中使用的库是 [MediatR](https://github.com/jbogard/MediatR) 开放源代码库（由 Jimmy Bogard 创建），但也可使用其他方法。 MediatR 是一个小型的简单库，可处理命令等内存中消息，同时应用修饰器或行为。
 
-使用中介模式可帮助你减少耦合并隔离请求工作的情况下，同时自动连接到的处理程序执行该工作的问题 — 在这种情况下，到命令处理程序。
+使用转存进程模式有助于减小耦合度，并隔离请求工作的问题，同时自动连接到执行该工作的处理程序（在此情况下为命令处理程序）。
 
-查看本指南时，使用中介模式的另一个好理由已解释的 Jimmy Bogard:
+本指南中 Jimmy Bogard 介绍了使用转存进程模式的另一个好处：
 
-我认为它可能值得一提的是测试此处 – 它提供的很好的一致窗口，你的系统行为。 请求中，响应扩展。我们已找到该方面中一致的方式运行测试的生成非常有价值。
+我认为在这里值得提一下测试，它提供了针对系统行为的良好一致窗口。 请求传入，响应传出。我们发现这对生成行为一致的测试很有用。
 
-首先，让我们看一下到控制器代码在实际使用的中介对象。 如果你未使用的中介对象，你需要插入的所有依赖项该控制器中，如记录器对象和其他人。 因此，构造函数可能十分复杂。 另一方面，如果你使用中介对象，你的构造函数可以是控制器的很简单，只需少量的依赖项，而不是控制器的你将会获得有一个每个横切操作，如以下示例所示的许多依赖关系：
+首先，让我们看一下示例 WebAPI 控制器，你会在其中使用转存进程对象。 如果你没有使用转存进程对象，则需要为此控制器注入所有依赖项，例如记录器对象等。 因此，构造函数可能十分复杂。 但是，如果你使用转存进程对象，控制器的构造函数可以简单很多，只需几个依赖项而不是许多依赖项（如果你针对每个整合操作使用一个依赖项），如以下示例所示：
 
 ```csharp
-public class OrdersController : Controller
+public class MyMicroserviceController : Controller
 {
-    public OrdersController(IMediator mediator,
-        IOrderQueries orderQueries)
+    public MyMicroserviceController(IMediator mediator, 
+                                    IMyMicroserviceQueries microserviceQueries)
     // ...
 ```
 
-你可以看到中介来实现提供的干净且精益 Web API 控制器构造函数。 此外，在控制器方法中，代码将命令发送到中介对象是几乎一个行：
+你会发现转存进程可提供简洁、精益的 Web API 控制器构造函数。 此外，在控制器方法中，将命令发送到转存进程对象的代码几乎只有一行：
 
 ```csharp
 [Route("new")]
-[HttpPost]
-public async Task<IActionResult> CreateOrder([FromBody]CreateOrderCommand
-    createOrderCommand)
+[HttpPost] 
+public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand 
+                                                               runOperationCommand) 
 {
-    var commandResult = await _mediator.SendAsync(createOrderCommand);
+    var commandResult = await _mediator.SendAsync(runOperationCommand); 
+
     return commandResult ? (IActionResult)Ok() : (IActionResult)BadRequest();
 }
 ```
 
-为了使 MediatR 需要注意的你的命令处理程序类，你需要在 IoC 容器中注册的中介类和命令处理程序类。 默认情况下 MediatR 使用 Autofac 作为 IoC 容器中，但你还可以使用内置的 ASP.NET 核心 IoC 容器或 MediatR 支持的任何其他容器。
+### <a name="implementing-idempotent-commands"></a>实现幂等命令
 
-下面的代码演示如何使用 Autofac 模块时注册中介的类型和命令。
+在 eShopOnContainers 中，比上述更高级的示例是从订购微服务提交 CreateOrderCommand 对象。 但由于订购业务进程有点复杂，所以在我们的示例中，其实是从购物篮微服务开始，提交 CreateOrderCommand 对象的操作从名为 [UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) 的集成事件处理程序（而不是从客户端应用调用的简单 WebAPI 控制器，如之前较简单示例所示）执行。 
+
+不过，将命令提交到 MediatR 的操作非常类似，如下面的代码所示。
+
+```csharp
+var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items,     
+                                                eventMsg.UserId, eventMsg.City, 
+                                                eventMsg.Street, eventMsg.State,
+                                                eventMsg.Country, eventMsg.ZipCode,
+                                                eventMsg.CardNumber, 
+                                                eventMsg.CardHolderName, 
+                                                eventMsg.CardExpiration,
+                                                eventMsg.CardSecurityNumber,  
+                                                eventMsg.CardTypeId);
+
+var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOrderCommand, 
+                                                                        eventMsg.RequestId);
+result = await _mediator.Send(requestCreateOrder);
+```
+
+但是，这种情况还是有点高级，因为我们也要实现幂等命令。 CreateOrderCommand 进程应该是幂等的，所以如果出于任何原因（如重试），通过网络复制相同消息，将仅处理同一个业务订单一次。
+
+这是通过以下方式实现的：包装业务命令（在此情况下为 CreateOrderCommand），将其嵌入通用 IdentifiedCommand（通过来自网络的每个消息的 ID 跟踪，必须是幂等的）。
+
+在以下代码中，你会发现 IdentifiedCommand 仅仅是包含 ID 和已包装业务命令对象的 DTO。
+
+```csharp
+public class IdentifiedCommand<T, R> : IRequest<R>
+    where T : IRequest<R>
+{
+    public T Command { get; }
+    public Guid Id { get; }
+    public IdentifiedCommand(T command, Guid id)
+    {
+        Command = command;
+        Id = id;
+    }
+}
+```
+
+名为 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) 的 IdentifiedCommand 的 CommandHandler 将基本上检查消息中的 ID 是否已存在于表格中。 如果已存在，将不会再次处理命令，因此它充当幂等命令。 基础结构代码由以下 `_requestManager.ExistAsync` 方法调用执行。
+
+```csharp
+// IdentifiedCommandHandler.cs
+public class IdentifiedCommandHandler<T, R> : 
+                                   IAsyncRequestHandler<IdentifiedCommand<T, R>, R>
+                                   where T : IRequest<R>
+{
+    private readonly IMediator _mediator;
+    private readonly IRequestManager _requestManager;
+
+    public IdentifiedCommandHandler(IMediator mediator, 
+                                    IRequestManager requestManager)
+    {
+        _mediator = mediator;
+        _requestManager = requestManager;
+    }
+
+    protected virtual R CreateResultForDuplicateRequest()
+    {
+        return default(R);
+    }
+
+    public async Task<R> Handle(IdentifiedCommand<T, R> message)
+    {
+        var alreadyExists = await _requestManager.ExistAsync(message.Id);
+        if (alreadyExists)
+        {
+            return CreateResultForDuplicateRequest();
+        }
+        else
+        {
+            await _requestManager.CreateRequestForCommandAsync<T>(message.Id);
+
+            // Send the embeded business command to mediator 
+            // so it runs its related CommandHandler 
+            var result = await _mediator.Send(message.Command);
+                
+            return result;
+        }
+    }
+}
+```
+
+由于 IdentifiedCommand 充当业务命令的信封，当业务命令由于不是重复 ID 而需要处理时，它会获取此内部业务命令，然后将其重新提交到转存进程，正如从 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) 运行 `_mediator.Send(message.Command)` 时显示的代码的最后一部分所示。
+
+执行该操作时，它会链接和运行业务命令处理程序（在此情况下是针对订购数据库运行事务的 CreateOrderCommandHandler），如以下代码所示。
+
+```csharp
+// CreateOrderCommandHandler.cs
+public class CreateOrderCommandHandler
+                                   : IAsyncRequestHandler<CreateOrderCommand, bool>
+{
+    private readonly IOrderRepository _orderRepository;
+    private readonly IIdentityService _identityService;
+    private readonly IMediator _mediator;
+
+    // Using DI to inject infrastructure persistence Repositories
+    public CreateOrderCommandHandler(IMediator mediator, 
+                                     IOrderRepository orderRepository, 
+                                     IIdentityService identityService)
+    {
+        _orderRepository = orderRepository ?? 
+                          throw new ArgumentNullException(nameof(orderRepository));
+        _identityService = identityService ?? 
+                          throw new ArgumentNullException(nameof(identityService));
+        _mediator = mediator ?? 
+                                 throw new ArgumentNullException(nameof(mediator));
+    }
+
+    public async Task<bool> Handle(CreateOrderCommand message)
+    {
+        // Add/Update the Buyer AggregateRoot
+        var address = new Address(message.Street, message.City, message.State,
+                                  message.Country, message.ZipCode);
+        var order = new Order(message.UserId, address, message.CardTypeId,  
+                              message.CardNumber, message.CardSecurityNumber, 
+                              message.CardHolderName, message.CardExpiration);
+            
+        foreach (var item in message.OrderItems)
+        {
+            order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
+                               item.Discount, item.PictureUrl, item.Units);
+        }
+
+        _orderRepository.Add(order);
+
+        return await _orderRepository.UnitOfWork
+            .SaveEntitiesAsync();
+    }
+}
+```
+
+### <a name="registering-the-types-used-by-mediatr"></a>注册由 MediatR 使用的类型
+
+为了让 MediatR 识别命令处理程序类，需要在 IoC 容器中注册转存进程类和命令处理程序。 默认情况下，MediatR 使用 Autofac 作为 IoC 容器，但还可以使用内置的 ASP.NET Core IoC 容器或受 MediatR 支持的其他容器。
+
+下面的代码演示如何在使用 Autofac 模块时注册转存进程的类型和命令。
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -524,20 +649,21 @@ public class MediatorModule : Autofac.Module
     {
         builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly)
             .AsImplementedInterfaces();
-        builder.RegisterAssemblyTypes(typeof(CreateOrderCommand)
-            .GetTypeInfo().Assembly)
-            .As(o => o.GetInterfaces()
-            .Where(i => i.IsClosedTypeOf(typeof(IAsyncRequestHandler<,>)))
-            .Select(i => new KeyedService("IAsyncRequestHandler", i)));
-        builder.RegisterGenericDecorator(typeof(LogDecorator<,>),
-            typeof(IAsyncRequestHandler<,>), "IAsyncRequestHandler");
 
+        // Register all the Command classes (they implement IAsyncRequestHandler)
+        // in assembly holding the Commands
+        builder.RegisterAssemblyTypes(
+                              typeof(CreateOrderCommand).GetTypeInfo().Assembly).
+                                   AsClosedTypesOf(typeof(IAsyncRequestHandler<,>));
         // Other types registration
+        //...
     }
 }
 ```
 
-因为每个命令处理程序实现具有泛型 IAsyncRequestHandler 接口&lt;T&gt; ，然后检查 RegisteredAssemblyTypes 对象，因为该处理程序能够与相关命令与其处理程序，每个命令，关系述 CommandHandler 类，如以下示例所示：
+MediatR 的“魅力”就在于此。 
+
+由于每个命令处理程序实现通用 IAsyncRequestHandler&lt;T&gt; 接口，注册程序集时，代码注册 RegisteredAssemblyTypes，所有类型标记为 RequestHandlers，同时将 CommandHandlers 与其命令关联，这得益于 CommandHandler 类中声明的关系，如以下示例所示：
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -545,45 +671,59 @@ public class CreateOrderCommandHandler
 {
 ```
 
-这是命令处理程序与关联命令的代码。 该处理程序只需简单的类，但它将继承 RequestHandler&lt;T&gt;，和 MediatR 可确保使用正确的负载调用获取它。
+这是将命令与命令处理程序关联的代码。 此处理程序仅仅是简单类，但它继承自 RequestHandler&lt;T&gt;，MediatR 确保其使用正确负载调用。
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-mediator-and-decorator-patterns"></a>在处理具有的中介和修饰器模式命令时应用的跨领域问题
+## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-meadiatr"></a>使用 MeadiatR 中的行为处理命令时，应用整合问题
 
-没有一件事情： 无法应用于中介管道的跨领域问题。 你还可以看到 Autofac 注册模块代码的末尾，它如何注册修饰器，具体而言，键入自定义的 LogDecorator 类。
-
-此外，请注意，eShopOnContainers 的未来版本它将迁移到[MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)并转向[行为](https://github.com/jbogard/MediatR/wiki/Behaviors)而不是使用修饰器。
-
-[LogDecorator](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Decorators/LogDecorator.cs)类可以将以下代码，以记录有关正在执行的命令处理程序以及它是否成功与否的信息作为实现。
+还需要执行一个操作：将整合问题应用到转存进程管道。 还可在 Autofac 注册模块代码的末尾查看其如何注册行为类型，特别是 LoggingBehavior 类和 ValidatorBehavior 类。 但也可添加其他自定义行为。
 
 ```csharp
-public class LogDecorator<TRequest, TResponse>
-    : IAsyncRequestHandler<TRequest, TResponse>
-    where TRequest : IAsyncRequest<TResponse>
+public class MediatorModule : Autofac.Module
 {
-    private readonly IAsyncRequestHandler<TRequest, TResponse> _inner;
-    private readonly ILogger<LogDecorator<TRequest, TResponse>> _logger;
-
-    public LogDecorator(
-        IAsyncRequestHandler<TRequest, TResponse> inner,
-        ILogger<LogDecorator<TRequest, TResponse>> logger)
+    protected override void Load(ContainerBuilder builder)
     {
-        _inner = inner;
-        _logger = logger;
+        builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly)
+            .AsImplementedInterfaces();
+
+        // Register all the Command classes (they implement IAsyncRequestHandler)
+        // in assembly holding the Commands
+        builder.RegisterAssemblyTypes(
+                              typeof(CreateOrderCommand).GetTypeInfo().Assembly).
+                                   AsClosedTypesOf(typeof(IAsyncRequestHandler<,>));
+        // Other types registration
+        //...        
+        builder.RegisterGeneric(typeof(LoggingBehavior<,>)).
+                                                   As(typeof(IPipelineBehavior<,>));
+        builder.RegisterGeneric(typeof(ValidatorBehavior<,>)).
+                                                   As(typeof(IPipelineBehavior<,>));
     }
+}
+```
 
-    public async Task<TResponse> Handle(TRequest message)
+[LoggingBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) 类可像以下代码那样实现 - 记录执行的命令处理程序的信息，以及是否成功。
+
+```csharp
+public class LoggingBehavior<TRequest, TResponse> 
+         : IPipelineBehavior<TRequest, TResponse>
+{
+    private readonly ILogger<LoggingBehavior<TRequest, TResponse>> _logger;
+    public LoggingBehavior(ILogger<LoggingBehavior<TRequest, TResponse>> logger) =>
+                                                                  _logger = logger;
+
+    public async Task<TResponse> Handle(TRequest request,
+                                        RequestHandlerDelegate<TResponse> next)
     {
-        _logger.LogInformation($"Executing command {_inner.GetType().FullName}");
-        var response = await _inner.Handle(message);
-        _logger.LogInformation($"Succeeded executed command{_inner.GetType().FullName}");
+        _logger.LogInformation($"Handling {typeof(TRequest).Name}");
+        var response = await next();
+        _logger.LogInformation($"Handled {typeof(TResponse).Name}");
         return response;
     }
 }
 ```
 
-只需通过实现此修饰器类和的修饰与其管道，通过 MediatR 处理的所有命令将日志都记录执行有关的信息。
+只需通过实现此修饰器类并修饰管道，所有通过 MediatR 处理的命令可记录有关执行的信息。
 
-排序 microservice 也适用的基本的验证，第二个修饰器 eShopOnContainers [ValidatorDecorator](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Decorators/ValidatorDecorator.cs)依赖于的类[FluentValidation](https://github.com/JeremySkinner/FluentValidation)库，如中所示以下代码：
+eShopOnContainers 订购微服务还会应用基本验证的第二个行为，即依赖 [FluentValidation](https://github.com/JeremySkinner/FluentValidation) 库的 [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) 类，如以下代码所示：
 
 ```csharp
 public class ValidatorDecorator<TRequest, TResponse>
@@ -620,7 +760,39 @@ public class ValidatorDecorator<TRequest, TResponse>
 }
 ```
 
-然后，根据[FluentValidation](https://github.com/JeremySkinner/FluentValidation)库，我们将创建与 CreateOrderCommand，一起传递，如以下代码所示的数据验证：
+然后根据 [FluentValidation](https://github.com/JeremySkinner/FluentValidation) 库为通过 CreateOrderCommand 传递的数据创建验证，如以下代码所示：
+
+```csharp
+public class ValidatorBehavior<TRequest, TResponse> 
+         : IPipelineBehavior<TRequest, TResponse>
+{
+    private readonly IValidator<TRequest>[] _validators;
+    public ValidatorBehavior(IValidator<TRequest>[] validators) =>
+                                                         _validators = validators;
+
+    public async Task<TResponse> Handle(TRequest request,
+                                        RequestHandlerDelegate<TResponse> next)
+    {
+        var failures = _validators
+            .Select(v => v.Validate(request))
+            .SelectMany(result => result.Errors)
+            .Where(error => error != null)
+            .ToList();
+
+        if (failures.Any())
+        {
+            throw new OrderingDomainException(
+                $"Command Validation Errors for type {typeof(TRequest).Name}",
+                        new ValidationException("Validation exception", failures));
+        }
+
+        var response = await next();
+        return response;
+    }
+}
+```
+
+然后根据 FluentValidation 库为通过 CreateOrderCommand 传递的数据创建验证，如以下代码所示：
 
 ```csharp
 public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
@@ -632,14 +804,12 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
         RuleFor(command => command.State).NotEmpty();
         RuleFor(command => command.Country).NotEmpty();
         RuleFor(command => command.ZipCode).NotEmpty();
-        RuleFor(command => command.CardNumber).NotEmpty().Length(12, 19);
+        RuleFor(command => command.CardNumber).NotEmpty().Length(12, 19); 
         RuleFor(command => command.CardHolderName).NotEmpty();
-        RuleFor(command => command.CardExpiration).NotEmpty().Must(BeValidExpirationDate).
-            WithMessage("Please specify a valid card expiration date");
-        RuleFor(command => command.CardSecurityNumber).NotEmpty().Length(3);
+        RuleFor(command => command.CardExpiration).NotEmpty().Must(BeValidExpirationDate).WithMessage("Please specify a valid card expiration date"); 
+        RuleFor(command => command.CardSecurityNumber).NotEmpty().Length(3); 
         RuleFor(command => command.CardTypeId).NotEmpty();
-        RuleFor(command => command.OrderItems).
-            Must(ContainOrderItems).WithMessage("No order items found");
+        RuleFor(command => command.OrderItems).Must(ContainOrderItems).WithMessage("No order items found"); 
     }
 
     private bool BeValidExpirationDate(DateTime dateTime)
@@ -652,54 +822,55 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
         return orderItems.Any();
     }
 }
+
 ```
 
-你可以创建其他验证。 这是实现您命令验证一非常干净且简洁方法。
+可以创建其他验证。 这是实现命令验证的一种简洁、巧妙的方法。
 
-以类似的方式，可以实现其他方面或你想要应用于命令时处理它们的跨领域问题的其他修饰符。
+类似地，可实现其他方面的其他行为或要应用到命令的整合问题（需要处理它们时）。
 
 #### <a name="additional-resources"></a>其他资源
 
-##### <a name="the-mediator-pattern"></a>中介模式
+##### <a name="the-mediator-pattern"></a>转存进程模式
 
--   **中介模式**
-    [*https://en.wikipedia.org/wiki/Mediator\_模式*](https://en.wikipedia.org/wiki/Mediator_pattern)
+-   **Mediator pattern**（转存进程模式）
+    [https://en.wikipedia.org/wiki/Mediator\_pattern](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>修饰器模式
 
--   **修饰器模式**
-    [*https://en.wikipedia.org/wiki/Decorator\_模式*](https://en.wikipedia.org/wiki/Decorator_pattern)
+-   **Decorator pattern**（修饰器模式）
+    [https://en.wikipedia.org/wiki/Decorator\_pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
 -   **MediatR。** GitHub 存储库。
-    [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
+    [https://github.com/jbogard/MediatR](https://github.com/jbogard/MediatR)
 
--   **使用 MediatR 和 AutoMapper CQRS**
-    [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+-   **CQRS with MediatR and AutoMapper**（使用 MediatR 和 AutoMapper 的 CQRS）
+    [https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **你的控制器置于饮食： 文章和命令。** 
-     [ *https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+-   **Put your controllers on a diet: POSTs and commands.**（简化控制器：POST 和命令。）
+    [https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **有关与中介管道的跨领域问题**
-    [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+-   **Tackling cross-cutting concerns with a mediator pipeline**（使用转存进程管道解决整合问题）
+    [https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
--   **CQRS 和 REST： 完全匹配**
-    [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+-   **CQRS and REST: the perfect match**（CQRS 和 REST：完全匹配）
+    [https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
--   **MediatR 管道示例**
-    [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+-   **MediatR Pipeline Examples**（MediatR 管道示例）
+    [https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **垂直切片测试装置，用于 MediatR 和 ASP.NET Core**
-    *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>*
+-   **Vertical Slice Test Fixtures for MediatR and ASP.NET Core**（用于 MediatR 和 ASP.NET Core 的垂直切片测试装置）<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
+    **
 
--   **发布的 Microsoft 依赖关系注入 MediatR 扩展**
-    [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+-   **MediatR Extensions for Microsoft Dependency Injection Released**（用于 Microsoft 依赖项注入发布的 MediatR 扩展）
+    [https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Fluent 验证
 
--   **Jeremy Skinner。FluentValidation。** GitHub 存储库。
+-   **Jeremy Skinner。FluentValidation.** GitHub 存储库。
     [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
 >[!div class="step-by-step"]
-[以前](microservice-application-layer-web-api-design.md) [下一步] (.../implement-resilient-applications/index.md)
+[Previous] (microservice-application-layer-web-api-design.md) [Next] (../implement-resilient-applications/index.md)

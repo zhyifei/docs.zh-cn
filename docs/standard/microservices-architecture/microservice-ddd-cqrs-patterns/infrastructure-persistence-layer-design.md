@@ -1,52 +1,55 @@
 ---
 title: "设计基础结构持久性层"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |设计基础结构持久性层"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计基础结构持久性层"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ce0f1d608eed909a7707f3c580afc5253f3eef06
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>设计基础结构持久性层
 
-数据持久性组件提供对托管微服务 （即，微服务构成的数据库） 的边界内的数据访问。 它们包含的组件，如存储库的实际实现和[工作单元](http://martinfowler.com/eaaCatalog/unitOfWork.html)类，如自定义 EF Dbcontext。
+数据持久性组件提供对微服务边界（即微服务的数据库）内托管的数据的访问。 它们包含组件（例如存储库和[工作单元](http://martinfowler.com/eaaCatalog/unitOfWork.html)类）的实际实现，例如自定义 EF DBContexts。
 
 ## <a name="the-repository-pattern"></a>存储库模式
 
-存储库类或组件，用于封装各种访问数据源所需的逻辑。 它们集中处理通用数据访问功能，提供更好的可维护性和分离的基础结构或用来从域模型层访问数据库技术。 如果你使用如实体框架 ORM，则必须实现的代码被简化，感谢 LINQ 和强类型化。 这允许您将精力集中在数据持久性逻辑上，而不是在数据访问管道。
+存储库是封装访问数据源所需逻辑的类或组件。 它们集中提供常见的数据访问功能，从而提供更好的可维护性，并将用于访问数据库的基础结构或技术与域模型层分离。 如果使用像 Entity Framework 这样的 ORM，则可通过 LINQ 和强类型化来简化必须实现的代码。 这样你就可以专注于数据持久性逻辑而不是数据访问管道。
 
-存储库模式是使用与数据源的完备的方法。 书中[模式的企业应用程序体系结构](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/)，Martin Fowler 描述存储库，如下所示：
+存储库模式是一种使用数据源的详细记录方式。 在 [Patterns of Enterprise Application Architecture](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/)（企业应用程序体系结构模式）一书中，Martin Fowler 是这样描述存储库的：
 
-存储库执行的任务之间的域模型层和数据映射到内存中的域对象的一组类似的方式中起作用的媒介。 客户端对象以声明方式生成查询，并将其发送给答案的存储库。 从概念上讲，一个存储库中封装一组对象存储在数据库中，可以对它们，执行提供更接近于持久性层一种方法的操作。 存储库，此外，支持将分离开来，明确并按一个方向工作域和数据分配之间的依赖关系或映射的用途。
+存储库执行域模型层与数据映射之间的中介者的任务，以类似于内存中一组域对象的方式工作。 客户端对象以声明方式生成查询，并将它们发送到存储库以获取答案。 从概念上讲，存储库封装了存储在数据库中的一组对象以及可对其执行的操作，从而提供一种更接近持久性层的方式。 存储库还明确支持在一个方向上分离工作域与数据分配或映射之间的依赖关系。
 
-### <a name="define-one-repository-per-aggregate"></a>定义每个聚合的一个存储库
+### <a name="define-one-repository-per-aggregate"></a>为每个聚合定义一个存储库
 
-对于每个聚合或聚合的根，您应该创建一个存储库类。 在基于域驱动的设计模式微服务，应使用以更新数据库的唯一通道应存储库。 这是因为它们具有与聚合根域，它控制聚合的固定条件及事务一致性一对一的关系。 可以通过其他数据库中查询通道 （如你可以执行以下 CQRS 方法），因为查询不会更改数据库的状态。 但是，事务区域-更新-必须始终控制存储库和聚合根。
+对于每个聚合或聚合根，应创建一个存储库类。 在基于域驱动设计模式的微服务中，可用来更新数据库的唯一渠道应该是存储库。 这是因为它们与聚合根具有一对一的关系，聚合根控制着聚合的不变量和事务一致性。 可以通过其他渠道查询数据库（就像使用 CQRS 方法时一样），因为查询不会更改数据库的状态。 但是，事务区域（更新）必须始终由存储库和聚合根控制。
 
-基本上，一个存储库，可填充来自的域实体的窗体中的数据库的内存中的数据。 在内存中的实体后，可以更改以及然后将其保存回通过事务的数据库。
+从本质上讲，存储库允许以域实体的形式填充内存中来自数据库的数据。 一旦实体在内存中，就可以对它们进行更改，然后通过事务存回数据库中。
 
-如前所述，如果你使用 CQS/CQRS 体系结构模式，将由域模型中，执行简单的 SQL 语句，使用 Dapper 外侧查询执行的初始查询。 这种方法是更多，你需要比存储库灵活因为您可以查询和联接任何表，并且这些查询不会限制由规则聚合。 该数据将转到演示文稿层或客户端应用程序。
+如前所述，如果使用 CQS/CQRS 体系结构模式，则将由简单的 SQL 语句使用 Dapper 在域模型外并行执行初始查询。 这种方法比存储库更加灵活，因为你可以查询和联接所需的任何表，并且这些查询不受聚合中的规则的限制。 该数据将发送到表示层或客户端应用。
 
-如果用户进行更改，要更新的数据将来自客户端应用程序或演示文稿层到应用程序层 （如 Web API 服务）。 当命令处理程序中收到 （具有数据） 的命令时，请使用存储库来获取你想要从数据库进行更新的数据。 你在内存中与使用命令，传递的信息进行更新，然后添加或更新事务通过数据库中的数据 （域实体）。
+如果用户进行更改，要更新的数据将从客户端应用或表示层发送到应用层（例如 Web API 服务）。 当在命令处理程序中收到命令（包含数据）时，可以使用存储库获取要从数据库更新的数据。 可使用通过命令传递的信息在内存中更新数据，然后通过事务在数据库中添加或更新数据（域实体）。
 
-我们必须强调再次的是，应为每个聚合根定义仅一个存储库，在图 9-17 中所示。 若要实现的聚合根的目标为维护聚合内的所有对象之间的事务一致性，应永远不会在数据库中创建的每个表的存储库。
+请注意，只能为每个聚合根定义一个存储库，如图 9-17 所示。 若要实现聚合根的目标，即维持聚合中所有对象之间的事务一致性，就决不能为数据库中的每个表创建一个存储库。
 
 ![](./media/image18.png)
 
-**图 9-17**。 存储库、 聚合和数据库表之间的关系
+**图 9-17**. 存储库、聚合和数据库表之间的关系
 
-### <a name="enforcing-one-aggregate-root-per-repository"></a>强制实施每个存储库的一个聚合根
+### <a name="enforcing-one-aggregate-root-per-repository"></a>强制每个存储库一个聚合根
 
-可以是很有价值实现存储库设计的方式，它会强制实施仅聚合根应具有存储库的规则。 你可以创建泛型数据或基数据存储库类型约束与配合工作以确保其具有 IAggregateRoot 标记接口的实体的类型。
+以这样一种方式实现存储库设计可能很有价值，即实施仅聚合根具有存储库的规则。 你可以创建一个泛型或基本存储库类型，以限制其使用的实体类型，确保这些实体具有 IAggregateRoot 标记接口。
 
-因此，在基础结构层实现每个存储库类实现其自己的协定或接口，如下面的代码中所示：
+这样，在基础结构层实现的每个存储库类都会实现自己的协定或接口，如以下代码所示：
 
 ```csharp
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
@@ -55,7 +58,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
     {
 ```
 
-每个特定的存储库接口实现的泛型 IRepository 接口：
+每个特定的存储库接口都实现 IRepository 泛型接口：
 
 ```csharp
 public interface IOrderRepository : IRepository<Order>
@@ -65,67 +68,106 @@ public interface IOrderRepository : IRepository<Order>
 }
 ```
 
-但是，更好的方法让代码强制实施约定每个存储库应与单个聚合可以实现泛型存储库类型，因此很显式使用的存储库的目的面向特定的聚合。 可以通过实现该泛型 IRepository 基接口，如以下代码所示中轻松地完成：
+不过，若要让代码执行每个存储库都应与单个聚合关联的约定，一种更好的方式是实现泛型存储库类型，这样就可以明确看出你在使用存储库定位特定聚合。 这可以通过在 IRepository 基接口中实现该泛型来轻松完成，如以下代码所示：
 
 ```csharp
   public interface IRepository<T> where T : IAggregateRoot
 ```
 
-### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>存储库模式，更便于测试应用程序逻辑
+### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>存储库模式使应用程序逻辑测试更轻松
 
-存储库模式，你可以轻松地具有单元测试中测试你的应用程序。 请记住，单元测试仅测试你的代码、 非基础结构，因此存储库抽象更加轻松地实现该目标。
+存储库模式允许使用单元测试轻松测试应用程序。 请记住，单元测试只测试代码，不测试基础结构，所以存储库抽象使得它更容易实现这个目标。
 
-如前面部分所述，建议你定义，并放置的存储库接口在域模型层中以便应用程序层 (例如，Web API microservice) 不直接依赖基础结构层中必须使用实现的实际存储库类。 通过执行此操作，并在你的 Web api 控制器中使用依赖关系注入，你可以实现模拟从数据库返回假数据而不是数据的存储库。 去耦的方法允许你创建和运行的单元测试，可以测试只是你的应用程序的逻辑，而无需连接到数据库。
+如前面部分所述，建议在域模型层中定义并放置存储库接口，这样，应用层（例如，Web API 微服务）就不会直接依赖于已实现实际存储库类的基础结构层。 通过执行此操作并在 Web API 的控制器中使用依赖项注入，可以实现模拟存储库来返回假数据，而不是数据库中的数据。 这种分离方法可用于创建和运行单元测试，这些单元测试可以只测试应用程序的逻辑，而无需连接到数据库。
 
-连接到数据库可能会失败，并更重要的是，针对数据库运行数百个测试是错误的两个原因。 首先，因为大量测试可能需要大量时间。 其次，数据库记录可能会更改，并影响你测试的结果，以便它们可能不一致。 针对数据库的测试不是单元测试集成测试。 你应多个单元测试运行速度快，而较少的集成测试对数据库。
+与数据库的连接可能会失败，更重要的是，针对数据库运行数百个测试的做法并不可取，原因有两个。 首先，由于有大量测试，运行起来可能很费时。 其次，数据库记录可能会更改并影响测试结果，因此它们可能不一致。 针对数据库进行的测试不是单元测试，而是集成测试。 你应该有许多快速运行的单元测试，较少针对数据库的集成测试。
 
-方面的单元测试的关注点分离，你的逻辑在内存中的域实体进行操作。 它假定存储库类传递那些。 一旦你的逻辑修改域实体，该示例假定存储库类将正确存储它们。 重要的一点是创建针对您的域模型和其域逻辑单元测试。 聚合根是 DDD 中的主要一致性边界。
+根据单元测试的关注点分离原则，你的逻辑应作用于内存中的域实体。 它假定存储库类已经提供这些实体。 一旦你的逻辑修改了域实体，它就会假定存储库类将正确存储它们。 这里的重点在于针对域模型及其域逻辑创建单元测试。 聚合根是 DDD 中的主要一致性边界。
 
-### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>存储库模式和旧的数据访问类 （DAL 类） 模式之间的差异
+### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>存储库模式与传统数据访问类（DAL 类）模式之间的区别
 
-数据访问对象直接执行了针对存储的数据访问和持久性操作。 将不会立即执行与你想要在单元的工作对象 （如所示 EF 使用 DbContext 时)，但这些更新内存中执行的操作数据存储库标记。
+数据访问对象直接对存储执行数据访问和持久性操作。 存储库则使用要在工作单元对象的内存中执行的操作对数据进行标记（正如在 EF 中使用 DbContext 时一样），但不立即执行这些更新。
 
-工作单元被称之为作为单个事务涉及多个插入、 更新或删除操作。 简单地说，这意味着，对于特定的用户操作 （例如，在网站上的注册），所有插入、 更新和删除事务在都处理单个事务中。 这是比 chattier 方式处理多个数据库事务更高效。
+工作单元亦称单个事务，涉及多个插入、更新或删除操作。 简而言之，这意味着对于特定的用户操作（例如，网站注册），所有插入、更新和删除事务都在单个事务中处理。 这比以更繁琐的方式处理多个数据库事务更有效。
 
-应用程序层中的代码命令它时，将更高版本在单个操作中执行这些多个持久性操作。 将内存中更改应用于实际的数据库存储的决定通常基于[单元的工作模式](http://martinfowler.com/eaaCatalog/unitOfWork.html)。 在 EF，作为 DBContext 实现单元的工作模式。
+这几个持久性操作稍后会在应用层中的代码发出命令时，在单个操作中执行。 关于将内存中更改应用于实际数据库存储的决策通常基于[工作单元模式](http://martinfowler.com/eaaCatalog/unitOfWork.html)。 在 EF 中，工作单元模式作为 DBContext 实现。
 
-在许多情况下，此模式或将应用对存储操作的方式可以提高应用程序性能并降低出现不一致的可能性。 此外，它减少了事务阻止在数据库表中，因为所有预期的操作是作为一个事务的一部分提交。 这是与执行对数据库的多个独立的操作相比更高效。 因此，所选的 ORM 将能够通过对同一事务，而不是许多小型和单独的事务执行中的多个更新操作进行分组来优化对数据库执行。
+在许多情况下，这种对存储应用操作的模式或方式可以提高应用程序性能并减少出现不一致的可能性。 此外，它还能减少数据库表中的事务阻塞，因为所有预期操作都作为一个事务的一部分进行提交。 与对数据库执行许多独立操作相比，这样做效率更高。 因此，选定的 ORM 能够通过在同一个事务中对几个更新操作进行分组来优化对数据库的执行，而不是使用许多单独的小型事务执行。
 
-### <a name="repositories-should-not-be-mandatory"></a>存储库不应为必填
+### <a name="repositories-should-not-be-mandatory"></a>存储库不应该是强制性的
 
-自定义存储库可用于更早版本，提到的原因，这是在 eShopOnContainers 排序微服务构成的方法。 但是，它不是在 DDD 设计中实现，甚至在一般情况下开发.NET 中的基本模式。
+自定义存储库适用于前面提到的原因，这也是 eShopOnContainers 中的订购微服务所采用的方法。 但是，它不是一种必须在 DDD 设计中甚至在 .NET 的一般开发中实现的模式。
 
-例如，Jimmy Bogard，本指南提供直接反馈时称以下：
+例如，Jimmy Bogard 在为本指南提供直接反馈时表示：
 
-这可能会我最大的反馈。 我实际上不风扇的存储库，主要是因为它们会隐藏基础持久性机制的重要详细信息。 它的为什么我转 MediatR 命令，请过。 我可以使用持久性层的完整功能，并将所有该域行为推送到我的聚合根。 我通常不想模拟我的存储库 – 我仍需要该集成测试与真实存在。 转 CQRS 意味着，我们实际上没有存储库需要更。
+这可能是我最重要的一次反馈。 我真的不喜欢存储库，主要是因为它们隐藏了底层持久性机制的重要细节。 这也是我选择 MediatR 命令的原因。 我可以利用持久性层的完整功能，将所有域行为推送到我的聚合根中。 我通常不想模拟存储库 — 我仍然需要对真实存在的东西执行集成测试。 使用 CQRS 意味着我们不再需要存储库。
 
-我们发现存储库有用，但我们确认它们并不是你 DDD 中的聚合模式和丰富的域模型的方式。 因此，或不使用的存储库模式，如上所示符合。
+我们发现存储库很有用，但我们承认它们对你的 DDD 并不重要，这一点与聚合模式和丰富域模型不同。 因此，你可以根据需要使用或不使用存储库模式。
 
-#### <a name="additional-resources"></a>其他资源
+## <a name="the-specification-pattern"></a>规范模式
 
-##### <a name="the-repository-pattern"></a>存储库模式
+规范模式（全名为查询规范模式）是一种域驱动设计模式，用作可放置含可选排序和分页逻辑的查询定义的位置。
 
--   **Edward Hieatt 和 Rob me。存储库模式。** 
-     [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+规范模式定义对象中的查询。 例如，为了封装搜索某些产品的分页查询，可以创建采用必要输入参数（pageNumber、pageSize、filter 等）的 PagedProduct 规范。 然后，在任何存储库方法（通常为 List() 重载）内，它会接受 ISpecification 并基于该规范运行预期的查询。
+
+这种方法有几个好处：
+
+* 规范具有名称（而不只是一堆 LINQ 表达式），你可以对其进行讨论。
+
+* 可以对规范单独进行单元测试，以确保它是正确的。 如果你需要相似的行为，也可以轻松地重复使用规范。 例如，在 MVC 视图操作和 Web API 操作上，以及各种服务中。
+
+* 规范还可用于描述要返回的数据的形状，以便查询仅返回所需的数据。 这样就不必在 Web 应用程序中进行延迟加载（这通常不是什么好主意），并且有助于使存储库实现免受这些细节的干扰。
+
+常规规范接口示例如下面的 [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb ) 的代码。
+
+```csharp
+// https://github.com/dotnet-architecture/eShopOnWeb 
+public interface ISpecification<T>
+{
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
+}
+```
+
+接下来的部分解释了如何使用 Entity Framework Core 2.0 实现规范模式，以及如何从任何存储库类中使用它。
+
+**重要说明：**规范模式是一种旧模式，可通过多种方式实现，如下面的其他资源中所示。 作为一种模式/概念，旧方法容易理解，但要留心那些未利用现代语言功能（如 Linq 和表达式）的旧实现。
+
+## <a name="additional-resources"></a>其他资源
+
+### <a name="the-repository-pattern"></a>存储库模式
+
+-   **Edward Hieatt 和 Rob Mee.Repository pattern.**（存储库模式。）
+    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
 -   **存储库模式**
-    [*https://msdn.microsoft.com/en-us/library/ff649690.aspx*](https://msdn.microsoft.com/en-us/library/ff649690.aspx)
+    [https://msdn.microsoft.com/library/ff649690.aspx](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **存储库模式： 数据持久性抽象**
+-   **Repository Pattern: A data persistence abstraction**（存储库模式：数据持久性抽象）
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans。域驱动的设计： 解决软件核心的复杂性。** （本书; 包括的存储库模式的讨论）[ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。） （书中讨论了存储库模式）[https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-##### <a name="unit-of-work-pattern"></a>单元的工作模式
+### <a name="unit-of-work-pattern"></a>工作单元模式
 
--   **Martin Fowler。单元的工作模式。** 
-     [ *http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler。Unit of Work pattern.**（工作单元模式。）
+    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **在 ASP.NET MVC 应用程序中实现的存储库和单元的工作模式**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+-   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application**（在 ASP.NET MVC 应用程序中实现存储库和单元工作模式）
+    [https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
+### <a name="the-specification-pattern"></a>规范模式
+
+-   **The Specification pattern.**（规范模式。）
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+
+-   **Eric Evans (2004)。域驱动设计。Addison-Wesley. p. 224。**
+
+-   **规范。Martin Fowler**
+    [https://www.martinfowler.com/apsupp/spec.pdf/](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
-[以前](域的事件的设计-implementation.md) [下一步] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[上一篇] (domain-events-design-implementation.md) [下一篇] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)

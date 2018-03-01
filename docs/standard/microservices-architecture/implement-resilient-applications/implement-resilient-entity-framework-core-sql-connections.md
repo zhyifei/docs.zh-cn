@@ -1,6 +1,6 @@
 ---
-title: "实现弹性 Entity Framework 核心 SQL 连接"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |实现弹性 Entity Framework 核心 SQL 连接"
+title: "实现复原 Entity Framework Core SQL 连接"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 实现复原 Entity Framework Core SQL 连接"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,17 +8,20 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 8600625c2022d69ebaa2645c2a8159a848b12ff0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b37d2c5683aff44165d0330c8d42fc881effbb76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>实现弹性 Entity Framework 核心 SQL 连接
+# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>实现复原 Entity Framework Core SQL 连接
 
-对于 Azure SQL DB，实体框架核心已经提供了内部数据库连接复原和重试逻辑。 但需要启用每个 DbContext 连接的实体框架执行策略，如果你想要[可恢复的 EF 核心连接](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)。
+对于 Azure SQL DB，Entity Framework Core 早已提供了内部数据库连接复原和重试逻辑。 但如果想要[复原 EF Core 连接](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)，则需要为每个 DbContext 连接启用 Entity Framework 执行策略。
 
-例如，下面的代码位于 EF 核心连接级别启用可恢复将重试，如果连接失败的 SQL 连接。
+例如，EF Core 连接级别的下列代码可启用复原 SQL 连接，此连接在连接失败时会重试。
 
 ```csharp
 // Startup.cs from any ASP.NET Core Web API
@@ -44,15 +47,15 @@ public class Startup
 }
 ```
 
-## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>执行策略和使用 BeginTransaction 和多个 Dbcontext 的显式事务
+## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>使用 BeginTransaction 和多个 DbContext 的执行策略和显式事务
 
-当在 EF 核心连接中启用了重试时，使用 EF 核心执行每个操作将成为其自己的可重试操作。 每个查询和 SaveChanges 每次调用将重试作为一个单元如果发生暂时性故障。
+在 EF Core 连接中启用重试时，使用 EF Core 执行的每项操作都会成为其自己的可重试操作。 如果发生暂时性故障，每个查询和 SaveChanges 的每次调用都会作为一个单元进行重试。
 
-但是，如果你的代码启动事务使用 BeginTransaction，你要定义你自己的一组操作需要被视为一个单元 — 发生故障时，已回滚事务内的所有内容。 如果你尝试执行该事务时使用 EF 执行策略 （重试策略） 并将从多个 Dbcontext 的多个 SaveChanges 调用包含在事务中，你将看到如下所示的异常。
+但是，如果代码使用 BeginTransaction 启动事务，这表示在定义一组自己的操作，这些操作需要被视为一个单元 - 如果发生故障，事务内的所有内容都会回退。 如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并且事务中包含一些来自多个 DbContext 的 SaveChanges 调用，则会看到与下列情况类似的异常。
 
-> System.InvalidOperationException： 配置的执行策略 SqlServerRetryingExecutionStrategy 不支持用户启动事务。 使用 DbContext.Database.CreateExecutionStrategy() 返回的执行策略在作为可重试单元事务中执行所有操作。
+> System.InvalidOperationException：已配置的执行策略“SqlServerRetryingExecutionStrategy”不支持用户启动的事务。 使用由“DbContext.Database.CreateExecutionStrategy()”返回的执行策略执行事务（作为一个可回溯单元）中的所有操作。
 
-解决方案是使用委托表示的所有内容，需要执行手动调用 EF 执行策略。 如果发生暂时性故障，则执行策略将再次调用委托。 例如，下面的代码显示如何在使用两个 eShopOnContainers 中实现多个 Dbcontext (\_catalogContext 和 IntegrationEventLogContext) 更新的产品，然后保存时ProductPriceChangedIntegrationEvent 对象，需要使用不同的 DbContext。
+该解决方案通过代表所有需要执行的委托来手动调用 EF 执行策略。 如果发生暂时性故障，执行策略会再次调用委托。 例如，以下代码演示了在更新产品时，如何使用两个 DbContext (\_ catalogContext 和 IntegrationEventLogContext) 在 eShopOnContainers 中实现该操作，然后保存需要使用不同 DbContext 的 ProductPriceChangedIntegrationEvent 对象。
 
 ```csharp
 public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
@@ -84,16 +87,16 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
 }
 ```
 
-第一个 DbContext 是\_DbContext catalogContext，第二位于\_integrationEventLogService 对象。 跨多个 Dbcontext 使用 EF 执行策略执行提交操作。
+第一个 DbContext 是 \_catalogContext，第二个 DbContext 位于 \_ integrationEventLogService 对象内。 通过使用 EF 执行策略在多个 DbContext 之间执行“提交”操作。
 
 ## <a name="additional-resources"></a>其他资源
 
--   **连接复原和与实体框架的命令截获**
-    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
+-   **Connection Resiliency and Command Interception with the Entity Framework**（使用 Entity Framework 的连接复原和命令截获）
+    [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **Cesar de la Torre。使用弹性实体框架核心 Sql 连接和事务**
+-   **Cesar de la Torre。Using Resilient Entity Framework Core Sql Connections and Transactions**（使用复原 Entity Framework Core SQL 连接和事务）
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 
 >[!div class="step-by-step"]
-[以前](实现-重试-指数-backoff.md) [下一步] (implement-custom-http-call-retries-exponential-backoff.md)
+[上一篇] (implement-retries-exponential-backoff.md) [下一篇] (implement-custom-http-call-retries-exponential-backoff.md)

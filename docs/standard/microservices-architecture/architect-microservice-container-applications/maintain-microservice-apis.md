@@ -1,6 +1,6 @@
 ---
-title: "创建、 不断发展，和版本控制 microservice Api 和协定"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |创建、 不断发展，和版本控制 microservice Api 和协定"
+title: "创建、改进微服务 API 及协定并进行版本控制"
+description: "用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 创建、改进微服务 API 及协定并进行版本控制"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,37 +8,40 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 433711c3479eafd52bf9f5d53faf8e5707c6c624
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>创建、 不断发展，和版本控制 microservice Api 和协定
+# <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>创建、改进微服务 API 及协定并进行版本控制
 
-微服务 API 是服务及其客户端之间的协定。 你将能够独立地变化 microservice，仅当你不会中断其 API 协定，这正是协定是很重要。 如果更改协定时，它会影响客户端应用程序或 API 网关。
+微服务 API 是服务及其客户端之间的协定。 用户将能够独立改进微服务，前提是不破坏其 API 协定，这正是协定之所以重要的原因。 如果更改协定，会影响客户端应用程序或 API 网关。
 
-API 定义的性质取决于所使用的哪个协议。 例如，如果你使用消息传送 (如[AMQP](https://www.amqp.org/))，API 包含的消息类型。 如果你使用 HTTP 和 rest 样式服务，该 API 组成的 Url，并请求和响应的 JSON 格式。
+API 定义的本质取决于所使用的协议。 例如，如果使用的是消息传送（如 [AMQP](https://www.amqp.org/)）协议，则 API 由消息类型构成。 如果使用的是 HTTP 和 RESTful 服务，则 API 由 URL、请求和响应 JSON 格式构成。
 
-但是，即使你是仔细初始协定，服务 API 将需要随时间而变化。 该事件发生时-尤其是如果你的 API 是一个由多个客户端应用程序使用的公共 API，你通常不能强制所有客户端升级到新的 API 约定。 通常需要以增量方式部署中同时运行的服务协定的旧和新版本的方式的服务的新版本。 因此，务必对它的服务版本控制的策略。
+但是，即使关注的是初始协定，服务 API 仍需随时间推移而改变。 如果发生这种情况—尤其是如果 API 是一个供多个客户端应用程序使用的公共 API，通常不能强制所有客户端升级到新的 API 协定。 通常需要逐渐增加对新版服务的部署，并且同时运行旧版和新版的服务协定。 因此，有必要制定服务版本控制策略。
 
-小型，如如果你将添加属性或参数到你的 API 的 API 更改时，使用较旧的 API 的客户端应切换，并适用于服务的新版本。 你可能能够提供默认值是必需的任何缺少的特性，并且客户端可能能够忽略任何额外的响应的属性。
+如果 API 改动较小，例如向 API 添加属性或参数，则使用较旧 API 的客户端应切换到服务的新版本。 你或许能够为任何缺少的必需属性提供默认值，并且客户端或许能够忽略任何额外响应属性。
 
-但是，有时你需要对服务 API 进行主版本号和不兼容的更改。 因为你可能不能强制客户端应用程序或服务，若要立即升级到最新版本，服务必须段支持的 api 的较旧版本。 如果使用不基于 HTTP 的机制例如 REST，一种方法是在 URL 中或向 HTTP 标头中嵌入的 API 版本号。 然后你可以决定实现服务同时在同一服务实例，这两个版本，或部署每个处理 API 的版本的不同实例之间。 此一个好方法是[中介模式](https://en.wikipedia.org/wiki/Mediator_pattern)(例如， [MediatR 库](https://github.com/jbogard/MediatR)) 若要分离的不同实现版本到独立的处理程序。
+但是，有时需要对服务 API 作出重大但却不兼容的更改。 因为可能不能强制客户端应用程序或服务立即升级到最新版本，服务必须为旧版 API 提供一段时间的支持。 如果使用基于 HTTP 的机制，如 REST，一种方法是在 URL 中或 HTTP 标头中嵌入 API 版本号。 然后可以决定是在同一服务实例内同时实现两个版本的服务，还是部署不同实例，分别处理两个版本的 API。 解决此问题的一个好方法是使用[中介器模式](https://en.wikipedia.org/wiki/Mediator_pattern)（例如，[MediatR 库](https://github.com/jbogard/MediatR)），将不同的实现版本分离到独立的处理程序中去。
 
-最后，如果你使用 REST 体系结构，[超媒体](https://www.infoq.com/articles/mark-baker-hypermedia)是你的服务的版本控制的最佳解决方案，并允许 evolvable Api。
+最后，如果使用的是 REST 体系结构，[超媒体](https://www.infoq.com/articles/mark-baker-hypermedia)是为服务提供版本控制并允许改进 API 的最佳解决方案。
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Scott Hanselman。ASP.NET 核心 RESTful Web API 版本控制变得更容易**
+-   **Scott Hanselman.ASP.NET Core RESTful Web API versioning made easy**（简化 ASP.NET 核心 RESTful Web API 版本控制）
     <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
--   **版本控制 RESTful web API**
-    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+-   **RESTful web API 版本控制**
+    [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding。版本控制、 超媒体和 REST**
+-   **Roy Fielding。Versioning, Hypermedia, and REST**（版本控制、超媒体和 REST）
     <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 
 >[!div class="step-by-step"]
-[以前](异步-消息-基于-communication.md) [下一步] (微服务-可寻址性-服务-registry.md)
+[上一页] (asynchronous-message-based-communication.md) [下一页] (microservices-addressability-service-registry.md)

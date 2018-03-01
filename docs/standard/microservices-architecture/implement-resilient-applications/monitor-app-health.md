@@ -1,59 +1,62 @@
 ---
 title: "运行状况监视"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |运行状况监视"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 运行状况监视"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: cbbad72f06bcaa882bc50083d9103b0872f51754
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
-运行状况监视，则可以允许容器和微服务的状态有关的接近实时的信息。 运行状况监视至关重要的操作系统微服务的多个方面和 orchestrators 在更高版本所述在阶段，执行部分应用升级时尤其重要。
+运行状况监视可以获取有关容器和微服务状态的近实时信息。 运行状况对于微服务操作的多个方面至关重要，并且在业务流程协调程序分阶段执行部分应用程序升级时尤为重要，稍后将对此进行说明。
 
-基于微服务的应用程序通常使用的检测信号或运行状况检查，以使其性能监视器、 计划程序时和 orchestrators 能够跟踪多种服务。 如果服务不能发送某种形式的"我已处于活动状态"信号按需或按计划，你的应用程序时部署更新，或它可能只需太迟检测故障并不能停止最终会发生重大中断的级联故障可能会面临风险。
+通常，基于微服务的应用程序借助检测信号或运行状况检查，使性能监视器、日程安排和业务流程协调程序得以对大量服务进行跟踪监测。 如果服务无法按需或按计划发送某种表示“我处于活动状态”的信号，那么部署更新时，应用程序可能面临风险，或者它可能较晚发现故障，并且无法阻止可能会导致重大故障的级联故障。
 
-在典型的模型中，服务发送有关其状态报告和聚合该信息，以提供您的应用程序的运行状况状态的总体视图。 如果你使用的 orchestrator，你可以提供到 orchestrator 的群集的运行状况信息，以便群集可以采取相应的措施。 如果你投资高质量运行状况报告自定义的应用程序，可以检测和更加轻松地为你正在运行的应用程序中修复问题。
+在典型模型中，服务发送有关其状态的报告，聚合这些信息便能整体了解应用程序运行状况。 如果使用的是业务流程协调程序，则可以向业务流程协调程序的群集提供运行状况信息，以便群集可以执行相应操作。 如果使用为应用程序定制的高质量运行状况报告，则可以更轻松地检测到正在运行的应用程序存在的问题并进行修复。
 
-## <a name="implementing-health-checks-in-aspnet-core-services"></a>ASP.NET Core services 中实现运行状况检查
+## <a name="implementing-health-checks-in-aspnet-core-services"></a>在 ASP.NET Core 服务中实现运行状况检查
 
-在开发时 ASP.NET Core 微服务或 web 应用程序，你可以使用通过 ASP.NET 团队在名为 HealthChecks 库。 （截至自 2017 年 1 月，早期版本是可在 GitHub 上）。
+部署 ASP.NET Core 微服务或 Web 应用程序时，可以使用 ASP.NET 团队中名为 `HealthChecks` 的库。 可在此 [GitHub 存储库](https://github.com/dotnet-architecture/HealthChecks)中找到早期版本。
 
-此库是易于使用，并提供功能，可让你验证你的应用程序 （如 SQL Server 数据库或远程 API） 所需的任何特定的外部资源正常工作。 当你使用此库时，你可以决定它表示资源是正常的如我们在后面介绍。
+该库使用方便，并提供了一些功能，可以用于验证应用程序（如 SQL Server 数据库或远程 API）所需的任何特定外部资源是否正常工作。 使用该库时，还可以确定资源正常运行的定义，稍后将会介绍。
 
-若要使用此库，你需要先使用你微服务中的库。 其次，你需要查询前端应用程序的运行状况报告。 前端应用程序可以是自定义 reporting 应用程序，或可能的业务流程本身可以相应地作出反应到运行状况状态。
+为了使用该库，首先需要在微服务中使用此库。 其次，需要查询运行状况报告的前端应用程序。 该前端应用程序可能是自定义报告应用程序，也可能是可以根据运行状态做出相应反应的业务流程协调程序。
 
-### <a name="using-the-healthchecks-library-in-your-back-end-aspnet-microservices"></a>使用你的后端 ASP.NET 微服务中的 HealthChecks 库
+### <a name="using-the-healthchecks-library-in-your-back-end-aspnet-microservices"></a>在后端 ASP.NET 微服务中使用 HealthChecks 库
 
-你可以看到如何在 eShopOnContainers 示例应用程序中使用 HealthChecks 库。 若要开始，你需要定义何谓针对每个微服务的正常状态。 在示例应用程序，微服务都可通过 HTTP 和如果其相关的 SQL Server 数据库也是可用来访问 microservice API 是否工作正常。
+可以查看 HealthChecks 库在 eShopOnContainers 示例应用程序中的使用情况。 首先，需要定义每个微服务的正常运行状况的必备条件。 在该示例应用程序中，如果可通过 HTTP 访问微服务 API 并且可以使用与其相关的 SQL Server 数据库，则该微服务的处于正常运行状态。
 
-将来，你将能够作为 NuGet 程序包安装 HealthChecks 库。 但截至撰写本文时，你需要下载并将代码编译为解决方案的一部分。 克隆在 https://github.com/aspnet/HealthChecks 可用的代码并将以下文件夹复制到你的解决方案。
+之后，可以将 HealthChecks 库作为 NuGet 包进行安装。 但截至本文撰写时，解决方案还需下载并编译代码。 可访问 https://github.com/dotnet-architecture/HealthChecks，克隆其中的代码并将以下文件夹复制到解决方案：
 
-  - src/常用
+  - src/common
   - src/Microsoft.AspNetCore.HealthChecks
   - src/Microsoft.Extensions.HealthChecks
   - src/Microsoft.Extensions.HealthChecks.SqlServer
 
-你也可以使用类似的 azure (Microsoft.Extensions.HealthChecks.AzureStorage)，但因为此版本的 eShopOnContainers 在 Azure 上没有任何依赖项的其他检查，不需要它。 因为 eShopOnContainers 基于 ASP.NET Core 不需要 ASP.NET 运行状况检查。
+还可以使用附加检查（如针对 Azure 的 Microsoft.Extensions.HealthChecks.AzureStorage），但由于此版本的 eShopOnContainers 在 Azure 上没有任何依赖项，所以不需要附加检查。 因为 eShopOnContainers 是基于 ASP.NET Core 的，所以不需要 ASP.NET 运行状况检查。
 
-图 10-6 显示在 Visual Studio 中，准备好由任何微服务用作构建基块 HealthChecks 库。
+图 10-6 显示 Visual Studio 中的 HealthChecks 库，任何微服务均可以将该库用作构建基块。
 
 ![](./media/image6.png)
 
-**图 10-6**。 ASP.NET： 在 Visual Studio 解决方案核心 HealthChecks library 源代码
+图 10-6。 Visual Studio 解决方案中的 ASP.NET Core HealthChecks 库源代码
 
-因为引入了更早版本，以在每个微服务项目中执行操作的第一个操作是添加对三个 HealthChecks 库的引用。 之后，你可以添加你想要在该微服务中执行的运行状况检查操作。 这些操作基本上是在其他微服务 (HttpUrlCheck) 或数据库上的依赖项 (当前 SqlCheck\*对于 SQL Server 数据库)。 你添加的每个 ASP.NET 微服务或 ASP.NET web 应用程序的启动类中的操作。
+如前所述，在每个微服务项目中要做的第一件事就是添加对这三个 HealthChecks 库的应用。 然后，添加要在该微服务中执行的运行状况检查操作。 这些操作基本上是其他微服务 (HttpUrlCheck) 或数据库（目前用于 SQL Server 数据库的 SqlCheck\*）上的依赖项。 在每个 ASP.NET 微服务或 ASP.NET Web 应用程序的 Startup 类中添加该操作。
 
-应通过将其所有 HTTP 或数据库的依赖项都添加为一个 AddHealthCheck 方法配置每个服务或 web 应用程序。 例如，从 eShopOnContainers MVC web 应用程序依赖于许多服务，因此具有多个 AddCheck 方法添加到运行状况检查。
+应该将每个服务或 Web 应用程序的所有 HTTP 或数据库依赖项添加为一个 AddHealthCheck 方法，从而对其进行配置。 例如，eShopOnContainers 的 MVC Web 应用程序依赖于多个服务，因此该应用程序的运行状况检查中需添加多个 AddCheck 方法。
 
-例如，下面的代码中可以看到如何目录微服务会在其 SQL Server 数据库上添加依赖项。
+例如，通过以下代码，可以了解 catalog 微服务如何添加其 SQL Server 数据库上的依赖项。
 
 ```csharp
 // Startup.cs from Catalog.api microservice
@@ -72,7 +75,7 @@ public class Startup
 }
 ```
 
-但是，eShopOnContainers MVC web 应用程序剩余的微服务上有多个依赖项。 因此，它调用一个 AddUrlCheck 方法为每个微服务，如下面的示例中所示：
+但是，eShopOnContainers 的 MVC Web 应用程序具有多个对其他微服务的依赖项。 因此，它为每个微服务调用一个 AddUrlCheck 方法，如以下示例所示：
 
 ```csharp
 // Startup.cs from the MVC web app
@@ -93,9 +96,9 @@ public class Startup
 }
 ```
 
-因此，微服务将不提供"正常"状态，直到所有检查也都处于正常状态。
+所以，在微服务的所有检查均处于正常状态后，该微服务才会显示为“正常运行”状态。
 
-如果微服务没有依赖关系，在服务上或在 SQL Server 上，你应仅添加 Healthy("Ok") 检查。 下面的代码是从 eShopOnContainers basket.api 微服务。 （篮 microservice 使用 Redis 缓存中，但库尚未包含 Redis 运行状况检查提供程序。）
+如果微服务没有对服务或 SQL Server 的依赖项，则只需添加正常运行("Ok") 检查。 以下代码来自 eShopOnContainers basket.api 微服务。 （basket 微服务使用 Redis 缓存，但是库中尚未包含 Redis 运行状况检查提供程序。）
 
 ```csharp
 services.AddHealthChecks(checks =>
@@ -105,7 +108,7 @@ services.AddHealthChecks(checks =>
 });
 ```
 
-它具有服务或 web 应用程序可通过公开运行状况检查终结点，若要启用 UseHealthChecks (\[*url\_为\_运行状况\_检查*\]) 扩展方法。 此方法将在 WebHostBuilder 级别 ASP.NET 核心服务或 web 应用程序，如下面的代码中所示的 UseKestrel 之后立即程序类的主要方法。
+为了使服务或 Web 应用程序公开运行状况检查终结点，必须启用 UseHealthChecks(\[url\_for\_health\_checks\]) 扩展方法。 如以下代码所示，该方法紧随 UseKestrel 之后，在 ASP.NET Core 服务或 Web 应用程序的 Program 类主要方法中以 WebHostBuilder 级别使用。
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC
@@ -127,76 +130,76 @@ namespace Microsoft.eShopOnContainers.WebMVC
 }
 ```
 
-进程的工作原理如下： 每个微服务公开终结点 /hc。 该终结点是由 HealthChecks 库 ASP.NET Core 中间件创建的。 当调用该终结点时，它将运行 Startup 类的 AddHealthChecks 方法中配置的所有运行状况检查。
+该进程运行如下：每个微服务公开终结点 /hc。 该终结点乃 HealthChecks 库 ASP.NET Core 中间件所创建。 调用该终结点时，它将运行 Startup 类的 AddHealthChecks 方法中配置的所有运行状况检查。
 
-UseHealthChecks 方法需要使用一个端口或路径。 该端口或路径是要用于检查服务的运行状况状态的终结点。 例如，目录微服务使用路径 /hc。
+UseHealthChecks 方法需要一个端口或路径。 该端口或路径是用于检查服务的运行状况状态的终结点。 例如，catalog 微服务便是使用路径 /hc。
 
-### <a name="caching-health-check-responses"></a>缓存的运行状况检查响应
+### <a name="caching-health-check-responses"></a>缓存运行状况检查的响应结果
 
-因为你不希望你的服务，导致拒绝服务 (DoS) 或只需不想通过检查资源影响服务性能过于频繁，你可以缓存返回，并配置每个运行状况检查缓存持续时间。
+由于不希望在服务中引发拒绝服务 (DoS)，或不想因为频繁检查资源而影响服务性能，则可以缓存返回结果并为每个运行状况检查配置缓存持续时间。
 
-默认情况下，将缓存持续时间内部设置为 5 分钟，但你可以更改该缓存持续时间在每个运行状况检查，如以下代码所示：
+默认情况下，缓存持续时间在内部设置为 5 分钟，但可以更改每个运行状况检查的缓存持续时间，如以下代码所示：
 
 ```csharp
 checks.AddUrlCheck(Configuration["CatalogUrl"],1); // 1 min as cache duration
 ```
 
-### <a name="querying-your-microservices-to-report-about-their-health-status"></a>查询有关其运行状况状态的报表到你微服务
+### <a name="querying-your-microservices-to-report-about-their-health-status"></a>查询微服务，报告其运行状况信息
 
-当你配置了运行状况检查如下所述，在 Docker 中运行的微服务后时，你可以直接检查从浏览器是否正常运行。 （这未需要使你可以通过 localhost 或通过外部的 Docker 主机 IP 访问容器发布外 Docker 主机中，容器端口。）图 10-7 显示在浏览器和相应的响应的请求。
+按照本文所述配置好运行状况检查后，每当在 Docker 上运行该微服务，便可直接通过浏览器检查其运行状况是否正常。 （这要求从 Docker 主机中发布容器端口，以便通过本地主机或外部 Docker 主机 IP 访问该容器。）图 10-7 显示浏览器中的请求以及相应的响应。
 
 ![](./media/image7.png)
 
-**图 10-7**。 正在检查从浏览器单一服务的运行状况状态
+图 10-7。 通过浏览器检查单个服务的运行状况状态
 
-在该测试，你可以看到 （在端口 5101 上运行） catalog.api microservice 处于正常状态，在 JSON 中返回 HTTP 200 状态和状态信息。 它还意味着，内部服务还将检查其 SQL Server 数据库依赖项的运行状况和，运行状况检查已其自身报告为正常。
+在该测试中，可以看到 catalog.api 微服务（在端口 5101 上运行）处于正常运行状态，并以 JSON 形式返回 HTTP 状态 200 和状态信息。 这也表示该服务在内部检查了其 SQL Server 数据库依赖项的运行状况，并且运行状况检查报告显示其运行正常。
 
-## <a name="using-watchdogs"></a>使用监视器
+## <a name="using-watchdogs"></a>使用监视程序
 
-监视程序是一种单独的服务，可以监视运行状况并通过使用前面介绍的 HealthChecks 库查询加载跨服务和报告有关微服务的运行状况。 这可以帮助防止不会检测基于视图的单个服务的错误。 监视器也是一个好的到可以为无需用户交互的已知条件执行修正操作的宿主代码。
+监视程序是一项单独服务，可以监视多个服务的运行和负载状况，并借助前面介绍的 HealthChecks 库进行查询，从而报告微服务的运行状况。 这有助于防止某些根据单个服务视图检测不到的错误。 监视程序也是托管代码的好选择，可以在没有用户交互的情况下根据已知情况执行修正操作。
 
-EShopOnContainers 示例包含一个网页，显示示例运行状况检查报告，图 10-8 所示。 这是最简单的监视器，您可以对，因为它只能是显示 eShopOnContainers 微服务和 web 应用程序的状态。 通常，提供监视还执行操作时检测到不正常状态。
+eShopOnContainers 示例包含一个网页，该网页显示了示例运行状况检查报告，如图 10-8 所示。 这是最简单的监视程序，因为它只显示 eShopOnContainers 中的微服务和 Web 应用程序的状态。 通常，监视程序在检测到不正常运行状态时还会执行相应操作。
 
 ![](./media/image8.png)
 
-**图 10-8**。 示例 eShopOnContainers 中的运行状况检查报告
+图 10-8。 eShopOnContainers 中的示例运行状况检查报告
 
-总之，ASP.NET 核心 HealthChecks 库的 ASP.NET 中间件提供每个微服务构成的单个运行状况检查终结点。 这将执行在其中定义的所有运行状况检查，并返回具体取决于所有这些检查的总体运行状况状态。
+总而言之，ASP.NET Core HealthChecks 库的 ASP.NET 中间件为每个微服务提供了单个运行状况检查终结点。 这将执行其中定义的所有运行状况检查，并根据这些检查返回总体运行状况状态。
 
-HealthChecks 库是可扩展的将来的外部资源的新运行状况检查通过。 例如，我们预期，通过在将来库将具有的 Redis 缓存和其他数据库的运行状况检查。 库允许运行状况报告多个服务或应用程序依赖关系，然后可以执行基于这些运行状况检查的操作。
+通过对将来的外部资源执行新的运行状况检查，可扩展 HealthChecks 库。 例如，我们预计，将来该库中会具有针对 Redis 缓存和其他数据库的运行状况检查。 该库能够报告多个服务或应用程序依赖项的运行状况，用户随后可以根据这些运行状况检查采取相应操作。
 
-## <a name="health-checks-when-using-orchestrators"></a>使用 orchestrators 时的运行状况检查
+## <a name="health-checks-when-using-orchestrators"></a>在使用业务流程协调程序的情况下执行运行状况检查
 
-若要监视你微服务的可用性，orchestrators Docker Swarm、 等 Kubernetes，Service Fabric 将定期通过发送请求以测试微服务执行运行状况检查。 当 orchestrator 确定服务/容器不正常，则它会停止请求路由到该实例。 它通常还会创建该容器的新实例。
+若要监视微服务的可用性，Docker Swarm、Kubernetes 和 Service Fabric 等业务流程协调程序可通过发送微服务测试请求来定期执行运行状况检查。 若业务流程协调程序确定某服务/容器运行不正常，它会停止向该实例路由请求。 通常，它还会为该容器创建新实例。
 
-例如，大多数 orchestrators 可以使用运行状况检查用于管理零停机时间部署。 仅当服务/容器更改为正常的状态将 orchestrator 开始将流量路由到服务/容器实例。
+例如，大多数业务流程协调程序可以使用运行状况检查来管理不会停机的部署。 仅当服务/容器的状态变为正常时，业务流程协调程序才会开始将流量路由到服务/容器实例。
 
-当 orchestrator 执行应用程序升级时，运行状况监视一点尤其重要。 （如 Azure Service Fabric) 某些 orchestrators 更新中的服务阶段 — 例如，它们可能会更新每个应用程序升级的群集表面 1 / 5。 在同一时间升级的节点集称为*升级域*。 每个升级域已升级，并可供用户后，该升级域必须通过运行状况检查，然后部署将移到下一个升级域。
+当业务流程协调程序执行应用程序升级时，运行状况监视尤为重要。 某些业务流程协调程序（如 Azure Service Fabric）会分阶段更新服务，例如，它们可能为每个应用程序升级更新五分之一的群集面。 同时升级的一组节点称为升级域。 完成每个升级域的升级操作并面向用户提供后，在部署进程移至下一升级域之前，该升级域必须通过运行状况检查。
 
-另一个方面，服务的运行状况报告从服务的度量值。 这是某些 orchestrators，Service Fabric 等的运行状况模型的一个高级的功能。 当使用 orchestrator，因为它们用于平衡资源使用情况时，度量值很重要。 度量值也可以是的系统运行状况指示符。 例如，你可能必须具有许多微服务的应用程序和每个实例报告请求每秒 (RPS) 度量值。 如果一个服务使用比另一个服务的更多资源 （内存、 处理器等），orchestrator 无法服务实例中移动群集尝试维护甚至资源利用率。
+服务运行状况的另一方面是报告服务的指标。 这是某些业务流程协调程序（如 Service Fabric）运行状况模型的高级功能。 因为要借助指标来平衡资源使用情况，所以在使用业务流程协调程序时，指标非常重要。 指标也可以是系统运行状况的指示器。 例如，某个应用程序包含多个微服务，并且每个实例都会报告每秒的请求数 (RPS) 指标。 如果某一服务使用的资源（内存、处理器等）比另一个服务多，则业务流程协调程序会在群集中移动服务实例，尝试使资源使用保持均衡状态。
 
-请注意，是否你使用 Azure Service Fabric，它提供其自己[运行状况监视模型](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)，这是更高级比简单的运行状况检查。
+请注意，如果正在使用 Azure Service Fabric，它会提供自己的[运行状况监视模型](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)，该模型比简单的运行状况检查更高级。
 
-## <a name="advanced-monitoring-visualization-analysis-and-alerts"></a>高级监视： 可视化效果、 分析和警报
+## <a name="advanced-monitoring-visualization-analysis-and-alerts"></a>高级监视：可视化、分析和警报
 
-监视的最后一部分直观显示的事件流，对服务性能，报告和警报时检测到的问题。 此方面的监视，你可以使用不同的解决方案。
+监视的最后一部分是对事件流进行可视化、报告服务性能、以及在检测到问题时发出警报。 可以使用不同的解决方案来进行这方面的监视。
 
-你可以使用显示你的服务的状态的简单自定义应用程序，如自定义页上，我们介绍了当我们介绍了[ASP.NET 核心 HealthChecks](https://github.com/aspnet/HealthChecks)。 或者，可以使用更高级的工具，如 Azure Application Insights 和 Operations Management Suite 发出警报基于事件的流。
+可以使用显示服务状态的简单自定义应用程序，例如介绍 [ASP.NET Core HealthChecks](https://github.com/aspnet/HealthChecks) 时显示的自定义页。 或者，可以使用更高级的工具（如 Azure Application Insights 和 Operations Management Suite）来根据事件流发出警报。
 
-最后，如果你已存储的所有事件流，你可以使用 Microsoft Power BI 或 Kibana 或 Splunk 之类的第三方解决方案来实现数据可视化效果。
+最后，如果要存储所有事件流，可以使用 Microsoft Power BI 或第三方解决方案（如 Kibana 或 Splunk）来可视化数据。
 
 ## <a name="additional-resources"></a>其他资源
 
--   **ASP.NET 核心 HealthChecks** （早期发行版） [ *https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks**（早期版本）[https://github.com/aspnet/HealthChecks/](https://github.com/aspnet/HealthChecks/)
 
 -   **Service Fabric 运行状况监视简介**
-    [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
+    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure 的 Application Insights**
-    [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
+-   **Azure Application Insights**
+    [https://azure.microsoft.com/services/application-insights/](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**
-    [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
+    [https://www.microsoft.com/en-us/cloud-platform/operations-management-suite](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
-[以前](实现的线路的断路器-pattern.md) [下一步] (.../secure-net-microservices-web-applications/index.md)
+[上一页] (implement-circuit-breaker-pattern.md) [下一页] (../secure-net-microservices-web-applications/index.md)
