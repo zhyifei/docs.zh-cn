@@ -2,20 +2,21 @@
 title: "Visual Basic 入门"
 ms.date: 08/10/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1593475bf5b4a34f854bc3e89be84d7720cd497b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 291065ae4c42cea741c4631923506076fcbc2f2e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
 文档的本节内容将帮助你了解  Visual Basic  应用程序开发的入门知识。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 [使用 Visual Studio 2017 生成 Visual Basic 和 .NET Core 类库](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>请参阅
- [获得 Visual Basic](https://www.visualstudio.com/downloads/)  
+ [获得 Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
  提供包含 Visual basic 支持的 Visual Studio 版本的下载链接，包含免费版。  
 
  [面向零基础初学者的 Visual Basic 基础知识](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
