@@ -30,15 +30,18 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20b137e5df2fb6ebc62d0a64c1a93b53ded2e191
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的类型转换
 <a name="top"></a>每个值都有与之关联的类型，此类型定义分配给该值的空间大小、它可以具有的可能值的范围以及它可以提供的成员等属性。 许多值可以表示为多种类型。 例如，值 4 可以表示为整数或浮点值。 类型转换可以创建一个等同于旧类型值的新类型值，但却不必保留原始对象的恒等值（或精确值）。  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 -   从接口对象转换回实现该接口的原始类型。  在 C# 中，此转换需要强制转换运算符。 在 Visual Basic 中，如果 `Option Strict` 处于开启状态，则它需要 `CType` 运算符。  
   
- 除这些自动转换外，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 还提供支持自定义类型转换的多种功能。 这些要求包括：  
+ 除这些自动转换外，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 还提供支持自定义类型转换的多种功能。 其中包括：  
   
 -   `Implicit` 运算符，该运算符定义类型之间可用的扩大转换。 有关详细信息，请参阅[使用隐式运算符的隐式转换](#implicit_conversion_with_the_implicit_operator)部分。  
   
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> 大于 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> 大于 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
   
- 为了处理这种收缩转换，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允许类型定义 `Explicit` 运算符。 然后，各种语言编译器可以实现使用自己的语法或属于此运算符<xref:System.Convert>可以调用类来执行转换。 （有关 <xref:System.Convert> 类的详细信息，请参阅本主题后面部分的 [Convert 类](#Convert)。）下面的示例演示如何使用语言功能来处理这些可能超出范围的整数值到 <xref:System.Int32> 值的显式转换。  
+ 为了处理这种收缩转换，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允许类型定义 `Explicit` 运算符。 然后，各种语言编译器可以使用自己的语法实现此运算符，也可以调用 <xref:System.Convert> 类的成员来执行此转换。 （有关 <xref:System.Convert> 类的详细信息，请参阅本主题后面部分的 [Convert 类](#Convert)。）下面的示例演示如何使用语言功能来处理这些可能超出范围的整数值到 <xref:System.Int32> 值的显式转换。  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- 列出的扩大转换和收缩转换支持的表<xref:System.Convert>类，请参阅[类型转换表](../../../docs/standard/base-types/conversion-tables.md)。  
+ 有关列出 <xref:System.Convert> 类支持的扩大转换和收缩转换的表，请参阅[类型转换表](../../../docs/standard/base-types/conversion-tables.md)。  
   
 <a name="ChangeType"></a>   
 ### <a name="custom-conversions-with-the-changetype-method"></a>使用 ChangeType 方法的自定义转换  
@@ -213,7 +216,7 @@ ms.lasthandoff: 11/21/2017
   
  有关使用类型转换器执行转换的更多信息，请参见 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Convert?displayProperty=nameWithType>  
  <xref:System.IConvertible>  
  [类型转换表](../../../docs/standard/base-types/conversion-tables.md)

@@ -1,60 +1,69 @@
 ---
 title: "在 CQRS 微服务中实现读取/查询"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |在 CQRS 微服务中实现读取/查询"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在 CQRS 微服务中实现读取/查询"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/02/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: e017aaaa701d8033110be8d6244d3e1120fc4fd9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ca9bcefb317d2b3c7c225b773918ca4a2484cb8f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服务中实现读取/查询
 
-对于读取/查询，排序的微服务构成从 eShopOnContainers 引用应用程序实现独立于 DDD 模型和事务的区域的查询。 这样做的主要原因和事务的查询的需求较大不相同。 写入执行必须符合域逻辑的事务。 另一方面，查询是幂等的和可以分隔开来域规则。
+对于读取/查询，来自 eShopOnContainers 引用应用程序的订购微服务独立于 DDD 模型和事务区域实现查询。 这主要是因为查询的需要和事务的需要有很大不同。 写入的执行事务必须符合域逻辑。 另一方面，查询是幂等的，可以与域规则分离。
 
-这种方法很简单，如图 9-3 中所示。 API 接口实现的 Web API 控制器使用任何基础结构 （如微 ORM 如 Dapper） 并返回动态 Viewmodel 具体取决于 UI 应用程序的需求。
+如图 9-3 所示，这种方法很简单。 根据用户界面应用程序的要求，Web API 控制器使用任意基础结构（如 Dapper 等微观对象关系映射程序 (ORM)）并返回动态 ViewModel 就可实现 API 接口。
 
 ![](./media/image3.png)
 
-**图 9-3**。 CQRS 微服务中查询的最简单的方法
+**图 9-3**。 CQRS 微服务中用于查询的最简单方法
 
-这是最简单的可能的方法的查询。 查询定义查询数据库，并返回每个查询动态生成动态视图模型。 由于查询是幂等的它们不会更改数据，而无论多少次运行查询。 因此，不需要通过事务端，如聚合和其他模式中使用任何 DDD 模式进行限制，并且正因如此，从事务区域分隔查询。 你只需查询数据库中的用户界面需要的数据，并返回不需要被静态地动态 ViewModel 随处 （用于 Viewmodel 任何类） 除外中定义自己的 SQL 语句。
+这是用于查询的最简单方法。 查询定义查询数据库并返回为每个查询动态构建的动态 ViewModel。 因为查询是幂等的，所以无论查询运行多少次，数据都不会更改。 因此，不会受到事务端所用 DDD 模式的限制（如聚合和其他模式），这也是查询与事务区域分离的原因。 只需查询数据库以获取 UI 需要的数据，并返回动态 ViewModel，除在 SQL 语句中外，动态 ViewModel 不需要在任何地方静态定义（ViewModel 没有类）。
 
-由于这是一种简单方法，代码所需的查询端 (如代码使用 ORM 喜欢 micro [Dapper](https://github.com/StackExchange/Dapper)) 可以实现[同一 Web API 项目中](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)。 图 9-4 演示了此过程。 在中定义查询**Ordering.API** eShopOnContainers 解决方案中的微服务项目。
+因为这种方法很简单，因此查询端所需的代码（例如使用 [Dapper](https://github.com/StackExchange/Dapper) 等微型 ORM 的代码）可[在同一 Web API 项目](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)中实现。 如图 9-4 所示。 查询在 eShopOnContainers 解决方案的“Ordering.API”微服务项目中定义。
 
 ![](./media/image4.png)
 
-**图 9-4**。 在 eShopOnContainers 排序微服务中的查询
+**图 9-4**。 eShopOnContainers 的订购微服务中的查询
 
-## <a name="using-viewmodels-specifically-made-for-client-apps-independent-from-domain-model-constraints"></a>使用 Viewmodel 专门供客户端应用，独立于域模型约束
+## <a name="using-viewmodels-specifically-made-for-client-apps-independent-from-domain-model-constraints"></a>使用专为客户端应用构建的 Viewmodel 不受域模型的约束
 
-由于执行查询以获取客户端应用程序所需的数据，则返回的类型可以专门进行对于客户端，在基于由查询返回的数据。 这些模型或数据传输对象 (Dto)，称为 Viewmodel。
+由于执行查询是为获取客户端应用程序所需的数据，因此返回类型应根据查询所返回的数据专为客户端构建。 这些模型或数据传输对象 (DTO) 称为 ViewModel。
 
-返回的数据 (ViewModel) 可以联接来自多个实体或表的数据，在数据库中，或甚至可跨多个事务的区域的域模型中定义的聚合的结果。 在这种情况下，由于你要创建查询独立的域模型，完全忽略聚合边界和约束，并且你是可用来查询任何表和列可能需要。 此方法为开发人员创建或更新查询提供极大的灵活性和工作效率。
+返回数据 (ViewModel) 可以是来自数据库中多个实体或表的联接数据结果，或者是事务区域域模型中定义的多个聚合中的联接数据结果。 在这种情况下，因为正在创建独立于域模型的查询，所以完全忽略了聚合边界和约束，因此可随意查询可能需要的任何表和列。 这种方法极大地提高了开发人员创建或更新查询的效率和灵活性。
 
-Viewmodel 可以是在类中定义的静态类型。 或者可以创建动态基于查询执行 （如在排序的微服务中实现），这是非常灵活的开发人员。
+Viewmodel 可以是定义在类中的静态类型。 或者可以根据执行的查询对其进行动态创建（如订单微服务中所实现的），开发人员可灵活处理。
 
-## <a name="using-dapper-as-a-micro-orm-to-perform-queries"></a>使用 Dapper 作为微型 ORM 执行查询 
+## <a name="using-dapper-as-a-micro-orm-to-perform-queries"></a>使用 Dapper 作为微型 ORM 以执行查询
 
-用于查询，可以使用任何微型 ORM、 实体框架核心或甚至纯 ADO.NET。 在示例应用程序，我们将选择 Dapper 中常用的微型 ORM 一个很好示例作为 eShopOnContainers 排序微服务构成的。 它可以具有卓越性能，运行纯 SQL 查询，因为它是一个非常轻量的框架。 使用 Dapper，你可以编写可访问和联接多个表的 SQL 查询。
+可使用任何微型 ORM、Entity Framework Core 甚至普通的 ADO.NET 进行查询。 在示例应用程序中，选择 Dapper 用于 eShopOnContainers 中的订单微服务，这是常用微型 ORM 的一个良好示例。 由于它是一个非常轻量化的框架，因此能够以极佳的性能运行普通 SQL 查询。 使用 Dapper，可写入一个可访问和联接多个表的 SQL 查询。
 
-Dapper 是开放源代码项目 （由 Sam Saffron 创建的原始），并且是在中使用的构建基块的一部分[堆栈溢出](https://stackoverflow.com/)。 若要使用 Dapper，只需将其通过安装[Dapper NuGet 包](https://www.nuget.org/packages/Dapper)下, 图中所示。
+Dapper 是开源项目（最初由 Sam Saffron 创建），也是在 [Stack Overflow](https://stackoverflow.com/) 中使用的构建基块的一部分。 要使用 Dapper，只需通过 [Dapper NuGet 包](https://www.nuget.org/packages/Dapper)进行安装，如下图所示：
 
-![](./media/image5.png)
+![](./media/image4.1.png)
 
-你还需要添加 using 语句，使你的代码有权访问 Dapper 扩展方法。
+还需要添加一个 using 语句，使代码具有 Dapper 扩展方法的访问权限。
 
-在代码中使用 Dapper 时，你将直接使用 SqlClient 类 System.Data.SqlClient 命名空间中提供。 通过 QueryAsync 方法和其他扩展方法，它 SqlClient 类进行扩展，你只需直观且高性能的方式运行查询。
+在代码中使用 Dapper 时，可直接使用 <xref:System.Data.SqlClient> 命名空间中提供的 <xref:System.Data.SqlClient.SqlConnection> 类。 通过 QueryAsync 方法和扩展 <xref:System.Data.SqlClient.SqlConnection> 类的其他扩展方法，可以简单直观地运行查询。
 
-## <a name="dynamic-and-static-viewmodels"></a>动态和静态 Viewmodel
+## <a name="dynamic-versus-static-viewmodels"></a>动态与静态 Viewmodel
 
-大部分由查询返回 Viewmodel 排序微服务构成从下面的代码中所示，作为实现*动态*。 这意味着要返回的属性的子集基于查询本身。 如果你将新列添加到查询或联接时，该数据是动态添加到返回视图模型。 此方法可以降低需要在更新部署到基础数据模型，更加灵活和容错的将来的更改进行此设计方法响应修改查询。
+将 ViewModel 从服务器端返回到客户端应用时，可将这些 ViewModel 看作 DTO，这些 DOT 与实体模型的内部实体域不同，因为 ViewModel 以客户端应用所需的方式保存数据。 因此，在许多情况下，可以聚合来自多个域实体的数据，并根据客户端应用需要数据的方式精确地组合这些 ViewModel。
+
+这些 ViewModel 或 DTO 可如稍后的代码片段中显示的 [OrderSummary](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Queries/OrderViewModel.cs) 类一样（作为数据持有者类）显式定义，或者，可以基于查询所返回的属性将动态 ViewModel 或动态 DTO 作为 `dynamic` 类型返回。
+
+### <a name="viewmodel-as-dynamic-type"></a>ViewModel 作为动态类型
+
+如以下代码所示，通过返回一个内部基于查询所返回属性的动态类型，查询可直接返回 ViewModel。 这意味着要返回的属性的子集是基于查询本身的。 因此，如果将新列添加到查询或联接，则该数据将动态添加到返回的 ViewModel 中。
 
 ```csharp
 using Dapper;
@@ -80,23 +89,120 @@ LEFT JOIN[ordering].[orderitems] oi ON o.Id = oi.orderid
 LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
 GROUP BY o.[Id], o.[OrderDate], os.[Name]");
         }
-  }
+    }
 }
 ```
 
-重要的一点是，通过使用动态类型，则返回的集合的数据将被动态组装为视图模型。
+重点在于，通过使用动态类型，返回的数据集合将动态组装为 ViewModel。
 
-对于大多数查询，你不需要预定义 DTO 或 ViewModel 类，这使对其进行编码简单和高效。 但是，如果你想要作为协定的更受限制定义 Viewmodel 可以预定义 Viewmodel （如预定义 Dto)。
+优点：无论何时更新查询的 SQL 语句，此方法都可降低修改静态 ViewModel 类的需要，这使得此设计方法在编码时非常灵活，并在未来更改时能快速改善。
 
-#### <a name="additional-resources"></a>其他资源
+缺点：长远来看，动态类型可能会对清晰度造成不利影响，影响服务与客户端应用的兼容性。 此外，如果使用动态类型，中间件软件（如 Swagger）无法为返回类型提供相同级别的文档。
+
+### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel 作为预定义的 DTO 类
+
+优点：具有静态预定义的 ViewModel 类（如基于显式 DTO 类的“协定”）毫无疑问有利于公共 API 和长期微服务，即使它们只用于同一应用程序。
+
+如果想要为 Swagger 指定响应类型，需要使用显式 DTO 类作为返回类型。 因此，预定义的 DTO 类允许从 Swagger 提供更丰富的信息。 它可在使用 API 时改善 API 文档和兼容性。
+
+缺点：如前所述，更新代码时，更新 DTO 类需要花费更多步骤。
+
+经验之谈：在 eShopOnContainers 的订单微服务内实现的查询中，开始使用动态 ViewModel 开发，是因为它在早期开发阶段的直观性和灵活性。 但是，一旦开发稳定后，我们将选择重构 API，并将静态或预定义的 DTO 用于 ViewModel，因为这样能使微服务的使用者更加清晰地了解用作“协定”的显式 DTO 类型。
+
+在以下示例中，可以看到查询如何使用显式 ViewModel DTO 类返回数据：OrderSummary 类。
+
+```csharp
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
+using System.Threading.Tasks;
+using System.Dynamic;
+using System.Collections.Generic;
+
+public class OrderQueries : IOrderQueries
+{
+  public async Task<IEnumerable<OrderSummary>> GetOrdersAsync()
+    {
+        using (var connection = new SqlConnection(_connectionString))
+        {
+            connection.Open();
+            var result = await connection.QueryAsync<dynamic>(
+                  @"SELECT o.[Id] as ordernumber, 
+                  o.[OrderDate] as [date],os.[Name] as [status], 
+                  SUM(oi.units*oi.unitprice) as total
+                  FROM [ordering].[Orders] o
+                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid 
+                  LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
+                  GROUP BY o.[Id], o.[OrderDate], os.[Name]
+                  ORDER BY o.[Id]");
+        }
+    } 
+}
+```
+
+#### <a name="describing-response-types-of-web-apis"></a>介绍 Web API 的响应类型
+
+使用 Web API 和微服务的开发人员最关心的问题是返回的内容 - 具体的响应类型和错误代码（如果不标准）。 这些问题在 XML 注释和数据批注中进行处理。
+
+如果没有关于 Swagger UI 的合适文档，使用者无法了解返回的类型或可返回的 HTTP 代码。 该问题已通过添加 <xref:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute?displayProperty=nameWithType> 解决，因此 Swagger 可以生成 API 返回模型和值的更加详细的信息，如以下代码所示：
+
+```csharp
+namespace Microsoft.eShopOnContainers.Services.Ordering.API.Controllers
+{
+    [Route("api/v1/[controller]")]
+    [Authorize]
+    public class OrdersController : Controller
+    {
+       //Additional code...
+       [Route("")]
+       [HttpGet]
+       [ProducesResponseType(typeof(IEnumerable<OrderSummary>),
+                             (int)HttpStatusCode.OK)]
+       public async Task<IActionResult> GetOrders()
+       {
+           var orderTask = _orderQueries.GetOrdersAsync();
+           var orders = await orderTask;
+           return Ok(orders);
+        }
+    }
+}
+```
+
+但是，`ProducesResponseType` 属性无法使用动态类型，而需要使用显式类型，如 `OrderSummary` ViewModel DTO，如下例所示：
+
+```csharp
+public class OrderSummary
+{
+    public int ordernumber { get; set; }
+    public DateTime date { get; set; }
+    public string status { get; set; }
+    public double total { get; set; }
+}
+```
+
+这也是长期来看，显式返回类型比动态类型更好的另一原因。
+使用 `ProducesResponseType` 属性时，还可以指定关于可能的 HTTP 错误/代码（如 200、400 等）的预期结果。
+
+下图中，可以看到 Swagger UI 如何显示 ResponseType 信息。
+
+![](./media/image5.png)
+
+**图 9-5**。 显示来自 Web API 的响应类型和可能的 HTTP 状态代码的 Swagger UI
+
+可在上图中看到基于 ViewModel 类型的一些示例值，以及可能返回的 HTTP 状态代码。
+
+## <a name="additional-resources"></a>其他资源
 
 -   **Dapper**
     [*https://github.com/StackExchange/dapper-dot-net*](https://github.com/StackExchange/dapper-dot-net)
 
--   **Julie Lerman。数据点-Dapper、 实体框架和混合应用程序 （MSDN Mag.文章）**
+-   **Julie Lerman.数据点 - Dapper、Entity Framework 和混合应用（MSDN Mag. 文章）**
 
-    *https://msdn.microsoft.com/en-us/magazine/mt703432.aspx*
+    https://msdn.microsoft.com/magazine/mt703432.aspx
 
+-   **使用 Swagger 的 ASP.NET Core Web API 帮助页**
+
+    https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio
 
 >[!div class="step-by-step"]
-[以前](eshoponcontainers-cqrs-ddd-microservice.md) [下一步] (ddd-面向-microservice.md)
+[上一篇] (eshoponcontainers-cqrs-ddd-microservice.md) [下一篇] (ddd-oriented-microservice.md)

@@ -19,15 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc43226a508dfd0286c7667c02bdc2543346be9c
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 .NET Framework 是独立于语言的。 这意味着，作为开发人员，您可以使用面向 .NET Framework 的多种语言（例如，C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 以及 Windows PowerShell）之一进行开发。 您可以访问针对 .NET Framework 开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果您是组件开发人员，无论组件采用哪种语言，均可由任何 .NET Framework 应用程序访问。  
@@ -49,7 +52,7 @@ ms.lasthandoff: 10/20/2017
   
     -   [类型转换](#conversion)  
   
-    -   [阵列](#arrays)  
+    -   [数组](#arrays)  
   
     -   [接口](#Interfaces)  
   
@@ -109,11 +112,11 @@ ms.lasthandoff: 10/20/2017
   
  下表中将列出 CLS 遵从性规则。 规则的文本摘自 [ECMA-335 标准：公共语言基础结构](http://go.microsoft.com/fwlink/?LinkID=116487)（版权所有 2012，Ecma International）。 有关这些规则的详细信息，请参阅以下各节。  
   
-|类别|请参阅|规则|规则编号|  
+|类别|查看|规则|规则编号|  
 |--------------|---------|----------|-----------------|  
 |可访问性|[成员可访问性](#MemberAccess)|重写继承的方法时，可访问性应不会更改（重写一个继承自其他具有可访问性 `family-or-assembly` 的程序集的方法除外）。 在此情况下，重写应具有可访问性 `family`。|10|  
 |可访问性|[成员可访问性](#MemberAccess)|类型和成员的可见性和可访问性应是这样的：只要任何成员是可见的且可访问的，则该成员签名中的类型应是可见且可访问的。 例如，在其程序集外部可见的公共方法不应具有其类型仅在程序集内可见的参数。 只要任何成员是可见且可访问的，则构成该成员签名中使用的实例化泛型类型的类型应是可见且可访问的。 例如，一个在其程序集外部可见的成员签名中出现的实例化泛型类型不应具有其类型仅在程序集内可见的泛型实参。|12|  
-|阵列|[阵列](#arrays)|数组应具有符合 CLS 的类型的元素，且数组的所有维度的下限应为零。 各重载间只需区别：项是数组还是数组的元素类型。 当重载基于两个或更多数组类型时，元素类型应为命名类型。|16|  
+|数组|[数组](#arrays)|数组应具有符合 CLS 的类型的元素，且数组的所有维度的下限应为零。 各重载间只需区别：项是数组还是数组的元素类型。 当重载基于两个或更多数组类型时，元素类型应为命名类型。|16|  
 |特性|[特性](#attributes)|特性应是 <xref:System.Attribute?displayProperty=nameWithType> 类型或从该类型继承的类型。|41|  
 |特性|[特性](#attributes)|CLS 只允许自定义特性编码的子集。 这些编码中仅应显示的类型（请参阅第 IV 部分）：<xref:System.Type?displayProperty=nameWithType>、<xref:System.String?displayProperty=nameWithType>、<xref:System.Char?displayProperty=nameWithType>、<xref:System.Boolean?displayProperty=nameWithType>、<xref:System.Byte?displayProperty=nameWithType>、<xref:System.Int16?displayProperty=nameWithType>、<xref:System.Int32?displayProperty=nameWithType>、<xref:System.Int64?displayProperty=nameWithType>、<xref:System.Single?displayProperty=nameWithType>、<xref:System.Double?displayProperty=nameWithType> 以及基于符合 CLS 的基整数类型的任何枚举类型。|34|  
 |特性|[特性](#attributes)|CLS 不允许公开可见的所需修饰符（`modreq`，请参阅第 II 部分)，但允许其不了解的可选修饰符（`modopt`，请参阅第 II 部分）。|35|  
@@ -412,7 +415,7 @@ ms.lasthandoff: 10/20/2017
   
 -   属性必须具有 setter 和/或 getter。 在程序集中，这些作为特殊方法实现，这意味着它们将显示为单独的方法（getter 命名为 `get_`*propertyname*，setter 命名为 `set_`*propertyname*），且在程序集元数据中标记为 `SpecialName`。 C# 和 Visual Basic 编译器会自动执行此规则，而无需应用 <xref:System.CLSCompliantAttribute> 特性。  
   
--   属性的类型是属性 getter 的返回类型和 setter 的最后一个参数。 这些类型必须符合 CLS，并且不能通过引用将参数分配到属性中（即它们不能为托管指针）。  
+-   属性的类型是属性 getter 的返回类型和 setter 的最后一个自变量。 这些类型必须符合 CLS，并且不能通过引用将参数分配到属性中（即它们不能为托管指针）。  
   
 -   如果属性包含 getter 和 setter 两者，则它们必须都是虚拟的、静态的或实例。 C# 和 Visual Basic 编译器通过它们的属性定义语法自动执行此规则。  
   
@@ -512,7 +515,7 @@ ms.lasthandoff: 10/20/2017
 -   确保组件库的公共接口仅公开符合 CLS 的程序元素。 如果元素不符合 CLS，则编译器通常会发出一个警告。  
   
 > [!WARNING]
->  在某些情况下，语言编译器执行符合 CLS 的规则，而不管是否使用 <xref:System.CLSCompliantAttribute> 特性。 例如，在接口中定义静态成员会违反 CLS 规则。 在此考虑，如果你定义`static`（在 C# 中) 或`Shared`（在 Visual Basic) 的接口中的成员，这两种 C# 和 Visual Basic 编译器显示一条错误消息和编译应用程序将失败。  
+>  在某些情况下，语言编译器执行符合 CLS 的规则，而不管是否使用 <xref:System.CLSCompliantAttribute> 特性。 例如，在接口中定义静态成员会违反 CLS 规则。 就这一点而言，如果在接口中定义 `static`（在 C# 中）或 `Shared`（在 Visual Basic 中）成员，C# 和 Visual Basic 编译器都会显示错误消息，且无法编译应用。  
   
  <xref:System.CLSCompliantAttribute> 特性标记为具有 <xref:System.AttributeUsageAttribute> 值的 <xref:System.AttributeTargets.All?displayProperty=nameWithType> 特性。 利用此值，您可以将 <xref:System.CLSCompliantAttribute> 特性应用于任何程序元素，包括程序集、模块、类型（类、结构、枚举、接口和委托）、类型成员（构造函数、方法、属性、字段和事件）、参数、泛型参数和返回值。 但实际上，您只应将该特性应用于程序集、类型和类型成员。 否则，编译器在库的公共接口中遇到不符合标准的参数、泛型参数或返回值时，将忽略此特性并继续生成编译器警告。  
   
@@ -592,5 +595,5 @@ vbc example.vb /r:UtilityLib.dll
 csc example.cs /r:UtilityLib.dll  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.CLSCompliantAttribute>

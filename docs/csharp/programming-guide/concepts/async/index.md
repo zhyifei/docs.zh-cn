@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b845bf6f31ef84c78dcfd84832036ca2f2c4cae4
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6822143df2d02c284d7506d180139c18cfbaf370
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 Async 和 Await 的异步编程 (C#)
 通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。 但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/23/2018
  当设计异步操作时，该基于异步的方法将自动传输的等效对象添加到可从中选择的选项列表中。 开发人员只需要投入较少的工作量即可使你获取传统异步编程的所有优点。  
   
 ##  <a name="BKMK_HowtoWriteanAsyncMethod"></a> 异步方法更容易编写  
- C# 中的 [Async](../../../../csharp/language-reference/keywords/async.md) 和 [Await](../../../../csharp/language-reference/keywords/await.md) 关键字是异步编程的核心。 通过这两个关键字，可以使用 .NET Framework、.NET Core 或 Windows 运行时中的资源，轻松创建异步方法（几乎与创建同步方法一样轻松）。 使用 `async` 和 `await` 定义的异步方法简称为“异步 (Async) 方法”。  
+ C# 中的 [Async](../../../../csharp/language-reference/keywords/async.md) 和 [Await](../../../../csharp/language-reference/keywords/await.md) 关键字是异步编程的核心。 通过这两个关键字，可以使用 .NET Framework、.NET Core 或 Windows 运行时中的资源，轻松创建异步方法（几乎与创建同步方法一样轻松）。 使用 `async` 关键字定义的异步方法简称为“异步方法”。  
   
  下面的示例演示了一种异步方法。 你应对代码中的几乎所有内容都非常熟悉。 注释调出你添加的用来创建异步的功能。  
   
@@ -92,21 +92,21 @@ string urlContents = await client.GetStringAsync();
   
 -   返回类型为下列类型之一：  
   
-    -   如果你的方法有操作数为 TResult 类型的返回语句，则为 <xref:System.Threading.Tasks.Task%601>。  
+    -   如果你的方法有操作数为 `TResult` 类型的返回语句，则为 <xref:System.Threading.Tasks.Task%601>。  
   
     -   如果你的方法没有返回语句或具有没有操作数的返回语句，则为 <xref:System.Threading.Tasks.Task>。  
   
-    -   `Void`：如果要编写异步事件处理程序。  
+    -   `void`：如果要编写异步事件处理程序。  
 
     -   包含 `GetAwaiter` 方法的其他任何类型（自 C# 7 起）。
   
-     有关详细信息，请参见本主题后面的“返回类型和参数”。  
+     有关详细信息，请参阅[返回类型和参数](#BKMK_ReturnTypesandParameters)部分。  
   
 -   方法通常包含至少一个 await 表达式，该表达式标记一个点，在该点上，直到等待的异步操作完成方法才能继续。 同时，将方法挂起，并且控件返回到方法的调用方。 本主题的下一节将解释悬挂点发生的情况。  
   
  在异步方法中，可使用提供的关键字和类型来指示需要完成的操作，且编译器会完成其余操作，其中包括持续跟踪控件以挂起方法返回等待点时发生的情况。 一些常规流程（例如，循环和异常处理）在传统异步代码中处理起来可能很困难。 在异步方法中，元素的编写频率与同步解决方案相同且此问题得到解决。  
   
- 若要详细了解旧版 .NET Framework 中的异步性，请参阅 [TPL 和传统 .NET Framework 异步编程](http://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f)。  
+ 若要详细了解旧版 .NET Framework 中的异步性，请参阅 [TPL 和传统 .NET Framework 异步编程](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)。  
   
 ##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 异步方法的运行机制  
  异步编程中最需弄清的是控制流是如何从方法移动到方法的。 下图可引导你完成该过程。  
@@ -132,7 +132,7 @@ string urlContents = await client.GetStringAsync();
      因此，`AccessTheWebAsync` 使用一个 await 运算符来挂起其进度，并把控制权交给调用 `AccessTheWebAsync` 的方法。 `AccessTheWebAsync` 将 `Task<int>` 返回给调用方。 该任务表示对产生下载字符串长度的整数结果的一个承诺。  
   
     > [!NOTE]
-    >  如果 `GetStringAsync`（因此 `getStringTask`）在 `AccessTheWebAsync` 等待前完成，则控件会保留在 `AccessTheWebAsync` 中。 如果异步调用过程 (`AccessTheWebAsync`) 已完成，并且 AccessTheWebSync 不必等待最终结果，则挂起然后返回到 `getStringTask` 将造成成本浪费。  
+    >  如果 `GetStringAsync`（因此 `getStringTask`）在 `AccessTheWebAsync` 等待前完成，则控件会保留在 `AccessTheWebAsync` 中。 如果异步调用过程 (`getStringTask`) 已完成，并且 `AccessTheWebSync` 不必等待最终结果，则挂起然后返回到 `AccessTheWebAsync` 将造成成本浪费。  
   
      在调用方内部（此示例中的事件处理程序），处理模式将继续。 在等待结果前，调用方可以开展不依赖于 `AccessTheWebAsync` 结果的其他工作，否则就需等待片刻。   事件处理程序等待 `AccessTheWebAsync`，而 `AccessTheWebAsync` 等待 `GetStringAsync`。  
   
@@ -146,7 +146,7 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_APIAsyncMethods"></a> API 异步方法  
  你可能想知道从何处可以找到 `GetStringAsync` 等支持异步编程的方法。 .NET Framework 4.5 或更高版本以及 .NET Core 包含许多可与 `async` 和 `await` 结合使用的成员。 可以通过追加到成员名称的“Async”后缀和 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的返回类型，识别这些成员。 例如，`System.IO.Stream` 类包含 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 等方法，以及同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>。  
   
- Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `await` 结合使用的方法。 有关详细信息和示例方法，请参阅[快速入门：使用 await 运算符进行异步编程](/previous-versions/windows/apps/hh452713(v=win.10))、[异步编程（Windows 应用商店应用）](/previous-versions/windows/apps/hh464924(v=win.10))和 [WhenAny：.NET Framework 和 Windows 运行时之间的桥接](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)。  
+ Windows 运行时也包含许多可以在 Windows 应用中与 `async` 和 `await` 结合使用的方法。 有关详细信息，请参阅有关 UWP 开发的[线程处理和异步编程](/windows/uwp/threading-async/)，以及[异步编程（Windows 应用商店应用）](/previous-versions/windows/apps/hh464924(v=win.10))和[快速入门：将 await 运算符用于异步编程](/previous-versions/windows/apps/hh452713(v=win.10))（前提是你使用早期版本的 Windows 运行时）。  
   
 ##  <a name="BKMK_Threads"></a>线程  
 异步方法旨在成为非阻止操作。 异步方法中的 `await` 表达式在等待的任务正在运行时不会阻止当前线程。 相反，表达式在继续时注册方法的其余部分并将控件返回到异步方法的调用方。  
@@ -158,7 +158,7 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_AsyncandAwait"></a>async 和 await  
  如果使用 [async](../../../../csharp/language-reference/keywords/async.md) 修饰符将某种方法指定为异步方法，即启用以下两种功能。  
   
--   标记的异步方法可以使用 [await](../../../../csharp/language-reference/keywords/await.md) 来指定暂停点。 await 运算符通知编译器异步方法只有直到等待的异步过程完成才能继续通过该点。 同时，控件返回至异步方法的调用方。  
+-   标记的异步方法可以使用 [await](../../../../csharp/language-reference/keywords/await.md) 来指定暂停点。 `await` 运算符通知编译器异步方法：在等待的异步过程完成后才能继续通过该点。 同时，控件返回至异步方法的调用方。  
   
      异步方法在 `await` 表达式执行时暂停并不构成方法退出，只会导致 `finally` 代码块不运行。  
   
@@ -232,8 +232,7 @@ Windows 运行时编程中的异步 API 具有下列返回类型之一（类似�
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
-  
- 有关详细信息和示例，请参阅[快速入门：使用 await 运算符进行异步编程](/previous-versions/windows/apps/hh452713(v=win.10))。  
+   
   
 ##  <a name="BKMK_NamingConvention"></a> 命名约定  
  按照约定，将“Async”追加到包含 `async` 修饰符的方法的名称中。  
@@ -342,4 +341,6 @@ namespace AsyncFirstExample
   
 ## <a name="see-also"></a>请参阅  
  [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)
+ [await](../../../../csharp/language-reference/keywords/await.md)  
+ [异步编程](../../../../csharp/async.md)  
+ [异步概述](../../../../standard/async.md)  

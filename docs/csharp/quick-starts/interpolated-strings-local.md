@@ -1,6 +1,6 @@
 ---
-title: "快速入门 - 内插字符串 - C# 指南"
-description: "在此内插字符串快速入门中，你需要编写 C# 代码以将表达式结果包含在较大字符串中。"
+title: "“内插的字符串”教程 - C# 本地快速入门"
+description: "在“内插的字符串”本快速入门教程中，编写 C# 代码，将表达式结果添加到更大的字符串中。"
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interpolated-strings"></a>内插字符串
 
-本快速入门介绍如何在 C# 中使用内插字符串将值插入到单个输出字符串中。 读者可以编写 C# 代码并查看代码编译和运行结果。 快速入门包含一系列课程，包括向字符串中插入值，以及用不同方式对这些值进行格式化。
+本快速入门教程介绍了如何在 C# 中使用内插的字符串，将值插入单个输出字符串中。 读者可以编写 C# 代码并查看代码编译和运行结果。 本快速入门教程包含一系列课程，包括将值插入字符串，以及用不同方式设置这些值的格式。
 
-本快速入门教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门简介](local-environment.md)简要概述了你将用到的命令，还提供了详细信息链接。 
+若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。 
 
 ## <a name="create-an-interpolated-string"></a>创建内插字符串
 
@@ -162,9 +162,9 @@ Console.WriteLine($"{DateTime.Now,-20:d} Hour {DateTime.Now,-10:HH} {1063.342,15
 1/11/2018            Hour 09                1,063.34 feet
 ```
 
-你已完成内插字符串快速入门教程。 
+已完成“内插的字符串”快速入门教程。 
     
-可以继续在你自己的开发环境中学习[数组和集合](arrays-and-collections.md)快速入门教程。
+可以在自己的开发环境中继续学习[数组和集合](arrays-and-collections.md)快速入门教程。
 
 可在 C# 参考的[内插字符串](../language-reference/keywords/interpolated-strings.md)主题中了解有关使用内插字符串的详细信息。
 

@@ -10,15 +10,18 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 797bd4a7c160feda69a3190d9e364b166a51c703
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cdd76558852992a5c2f6b7def83e30fb004f93b6
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="net-assembly-file-format"></a>.NET 程序集文件格式
 
-.NET 定义用于充分描述和包含 .NET 程序的二进制文件格式 -“程序集”。 程序集用于程序本身以及所有依赖库。 一个 .NET 程序可作为多个程序集中的其中一个运行，除了相应的 .NET 实现外，无需其他项目。 本机依赖项（包括操作系统 API）是一个需要单独考虑的问题，虽然有时会使用 .NET 程序集格式来描述它，但并未将它包含在此格式内（例如，WinRT）。
+.NET 定义用于充分描述和包含 .NET 程序的二进制文件格式 -“程序集”。 程序集用于程序本身以及所有依赖库。 .NET 程序可作为一个或多个程序集运行，除了相应的 .NET 实现外，无需其他任何项目。 本机依赖项（包括操作系统 API）是一个需要单独考虑的问题，虽然有时会使用 .NET 程序集格式来描述它，但并未将它包含在此格式内（例如，WinRT）。
 
 > 每个 CLI 组件都带有特定于该组件、用于声明、实现和引用的元数据。 因此，特定于组件的元数据被称为组件元数据，并且自 ECMA 335 I.9.1 生成的组件被认为是自描述组件和程序集。
 

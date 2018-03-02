@@ -41,18 +41,21 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8784ed31de4a511f9eee361a4becee3d080298a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-regular-expression-object-model"></a>正则表达式对象模型
-<a name="introduction"></a>本主题介绍在使用.NET 正则表达式中使用的对象模型。 它包含下列部分：  
+<a name="introduction"></a> 本主题介绍了处理 .NET 正则表达式时使用的对象模型。 它包含下列部分：  
   
 -   [正则表达式引擎](#Engine)  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [组集合](#GroupCollection)  
   
--   [捕获的组](#the_captured_group)  
+-   [捕获组](#the_captured_group)  
   
 -   [捕获集合](#CaptureCollection)  
   
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>正则表达式引擎  
- .NET 中的正则表达式引擎由<xref:System.Text.RegularExpressions.Regex>类。 正则表达式引擎负责分析和编译正则表达式，并执行用于将正则表达式模式与输入字符串相匹配的操作。 引擎是.NET 正则表达式对象模型中的核心组件。  
+ .NET 中的正则表达式引擎由 <xref:System.Text.RegularExpressions.Regex> 类表示。 正则表达式引擎负责分析和编译正则表达式，并执行用于将正则表达式模式与输入字符串相匹配的操作。 此引擎是 .NET 正则表达式对象模型中的主要组件。  
   
  可以通过以下两种方式之一使用正则表达式引擎：  
   
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式模式 `^\d{3}-\d{2}-\d{4}$` 的含义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|匹配输入字符串的开头部分。|  
 |`\d{3}`|匹配三个十进制数字。|  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="the-match-collection"></a>Match 集合  
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法返回一个 <xref:System.Text.RegularExpressions.MatchCollection> 对象，该对象包含多个 <xref:System.Text.RegularExpressions.Match> 对象，这些对象表示正则表达式引擎在输入字符串中找到的所有匹配项（其顺序为这些匹配项在输入字符串中的显示顺序）。 如果没有匹配项，则此方法将返回一个不包含任何成员的 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 利用 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性，你可以按照索引（从零到将 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 属性的值减 1 所得的值）访问集合中的各个成员。 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> 是集合的索引器（在 C# 中）和默认属性（在 Visual Basic 中）。  
   
- 默认情况下，调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法会使用延迟计算来填充 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 访问需要完全填充的集合的属性（如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性）可能会降低性能。 因此，建议你使用由 <xref:System.Collections.IEnumerator> 方法返回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 对象访问该集合。 各种语言都提供构造，如`For``Each`在 Visual Basic 中和`foreach`在 C# 中，用于包装该集合的<xref:System.Collections.IEnumerator>接口。  
+ 默认情况下，调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法会使用延迟计算来填充 <xref:System.Text.RegularExpressions.MatchCollection> 对象。 访问需要完全填充的集合的属性（如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 属性）可能会降低性能。 因此，建议你使用由 <xref:System.Collections.IEnumerator> 方法返回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 对象访问该集合。 各种语言都提供了用于包装集合的 <xref:System.Collections.IEnumerator> 接口的构造（如 Visual Basic 中的 `For``Each` 和 C# 中的 `foreach`）。  
   
  下面的示例使用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> 方法将在输入字符串中找到的所有匹配项填充到 <xref:System.Text.RegularExpressions.MatchCollection> 对象中。 此示例枚举了该集合，将匹配项复制到字符串数组并将字符位置记录在整数数组中。  
   
@@ -271,7 +274,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>捕获的组  
- <xref:System.Text.RegularExpressions.Group> 类表示来自单个捕获组的结果。 表示正则表达式中定义的捕获组的组对象由 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性所返回的 <xref:System.Text.RegularExpressions.GroupCollection> 对象的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性是索引器（在 C# 中）和 <xref:System.Text.RegularExpressions.Group> 类的默认属性（在 Visual Basic 中）。 您还可以通过循环访问集合使用来检索各个成员`foreach`或`For``Each`构造。 有关示例，请参见上一部分。  
+ <xref:System.Text.RegularExpressions.Group> 类表示来自单个捕获组的结果。 表示正则表达式中定义的捕获组的组对象由 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性所返回的 <xref:System.Text.RegularExpressions.GroupCollection> 对象的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> 属性是索引器（在 C# 中）和 <xref:System.Text.RegularExpressions.Group> 类的默认属性（在 Visual Basic 中）。 也可以使用 `foreach` 或 `For``Each` 构造循环访问集合，从而检索各个成员。 有关示例，请参见上一部分。  
   
  下面的示例使用嵌套的分组构造来将子字符串捕获到组中。 正则表达式模式 `(a(b))c` 将匹配字符串“abc”。 它会将子字符串“ab”分配给第一个捕获组，并将子字符串“b”分配给第二个捕获组。  
   
@@ -285,7 +288,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式模式 `^(?<name>\w+):(?<value>\w+)` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头部分开始匹配。|  
 |`(?<name>\w+)`|匹配一个或多个单词字符。 此捕获组的名称为 `name`。|  
@@ -295,11 +298,11 @@ ms.lasthandoff: 11/21/2017
  
           <xref:System.Text.RegularExpressions.Group> 类的属性提供有关捕获的组的信息：`Group.Value` 属性包含捕获的子字符串，`Group.Index` 属性指示输入文本中捕获的组的起始位置，`Group.Length` 属性包含捕获的文本的长度，`Group.Success` 属性指示子字符串是否与捕获组所定义的模式匹配。  
   
- 将限定符应用于组 (有关详细信息，请参阅[限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) 修改一个捕获组两种方式捕获的关系：  
+ 通过对组应用量符（有关详细信息，请参阅[量符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)），可以每捕获组修改一个捕获的关系，具体方式分为以下两种：  
   
 -   如果对组应用 `*` 或 `*?` 限定符（将指定零个或多个匹配项），则捕获组在输入字符串中可能没有匹配项。 在没有捕获的文本时，将如下表所示设置 <xref:System.Text.RegularExpressions.Group> 对象的属性。  
   
-    |组属性|值|  
+    |组属性|“值”|  
     |--------------------|-----------|  
     |`Success`|`false`|  
     |`Value`|<xref:System.String.Empty?displayProperty=nameWithType>|  
@@ -360,7 +363,7 @@ ms.lasthandoff: 11/21/2017
 |`;`|匹配分号。|  
 |`((\w+(\s\w+)*),(\d+);)+`|匹配一个或多个以下模式：一个单词后跟任何其他单词，后跟一个逗号、一个或多个数字和一个分号。 这是第一个捕获组。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Text.RegularExpressions>  
  [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)  
  [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
