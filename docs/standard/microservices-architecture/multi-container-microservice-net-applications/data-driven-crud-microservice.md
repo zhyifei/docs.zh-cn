@@ -1,76 +1,72 @@
 ---
 title: "创建简单的数据驱动 CRUD 微服务"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |创建简单的数据驱动 CRUD 微服务"
+description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 创建简单的数据驱动 CRUD 微服务"
 keywords: "Docker, 微服务, ASP.NET, 容器"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: b814d344f2c78e7cf57f9e2896cf1d6b52db38d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
-此部分概述了如何创建一个简单执行的微服务创建，读取、 更新和删除 (CRUD) 操作对数据源。
+本部分概述如何创建一个简单的微服务，用于对数据源执行创建、读取、更新和删除 (CRUD) 操作。
 
-## <a name="designing-a-simple-crud-microservice"></a>设计简单 CRUD 微服务
+## <a name="designing-a-simple-crud-microservice"></a>设计简单的 CRUD 微服务
 
-从设计的角度来看，这种类型的容器化微服务是非常简单。 要解决的问题可能是很简单，或可能的实现是只是证明概念。
+从设计的角度来看，这种类型的容器化微服务是非常简单的。 这有可能是由于要解决的问题很简单，也可能是由于其实现只是一个概念证明。
 
 ![](./media/image4.png)
 
-**图 8-4**。 简单 CRUD 微服务的的内部设计
+**图 8-4**。 简单 CRUD 微服务的内部设计
 
-这种简单的数据驱动器服务的一个示例是从 eShopOnContainers 示例应用程序目录微服务。 此类型的服务实现其功能包括用于其数据模型、 其业务逻辑和其数据访问代码类的单个 ASP.NET 核心 Web API 项目中。 它还将其相关的数据存储中 （作为另一个容器用于开发/测试目的），在 SQL Server 中运行的数据库，但是也可以是任何常规的 SQL Server 主机，如图 8-5 中所示。
+这种由数据驱动的简单服务的一个例子是 eShopOnContainers 示例应用程序的目录微服务。 此类型的服务在单个 ASP.NET Core Web API 项目中实现其全部功能，该项目包含用于其数据模型、业务逻辑和数据访问代码的类。 它还将相关数据存储在 SQL Server 中运行的数据库（作为另一个用于开发/测试目的容器）中，但也可以存储在任何常规 SQL Server 主机上，如图 8-5 中所示。
 
 ![](./media/image5.png)
 
-**图 8-5**。 简单的数据驱动/CRUD microservice 设计
+**图 8-5**。 简单的数据驱动 CRUD 微服务设计
 
-当你正在开发这种服务时，只需[ASP.NET Core](https://docs.microsoft.com/aspnet/core/)和数据访问 API 或 ORM 如[实体框架核心](https://docs.microsoft.com/ef/core/index)。 你还可以生成[Swagger](http://swagger.io/)元数据自动通过[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)提供你的服务提供的说明下, 一节中所述。
+开发这种类型的服务时，只需要 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 和数据访问 API 或 ORM（如 [Entity Framework Core](https://docs.microsoft.com/ef/core/index)）。 还可以通过 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) 自动生成 [Swagger](http://swagger.io/) 元数据，用于提供有关服务功能的说明，如下一部分中所述。
 
-请注意，运行 Docker 容器中的 SQL Server 适用于开发环境中，因为最多可以有所有依赖项一样的数据库服务器，而无需设置中的云或本地数据库运行。 当运行集成测试时，这是非常方便。 但是，对于生产环境中，在容器中运行的数据库服务器不建议，因为你通常不会获得高可用性功能，这种方法。 对于在 Azure 中生产环境中，建议你使用 Azure SQL 数据库或任何其他可提供高可用性和高扩展性的数据库技术。 例如，对于一种 NoSQL 方法，可以选择 DocumentDB。
+请注意，在 Docker 容器中运行 SQL Server 这样的数据库服务器十分适用于开发环境，因为可以设置和运行全部所需的依赖关系，而无需在云中或本地预配数据库。 这在运行集成测试时十分方便。 但是对于生产环境，则不建议在容器中运行数据库服务器，因为这种方法通常无法实现高可用性。 对于 Azure 中的生产环境，建议使用 Azure SQL 数据库或任何其他可提供高可用性和高扩展性的数据库技术。 例如，对于 NoSQL 方法，可选择 DocumentDB。
 
-最后，通过编辑 Dockerfile 并将其 docker-compose.yml 元数据文件，你可以配置如何将创建此容器的映像-将使用，并加上设计设置，例如内部和外部名称和 TCP 端口哪些基本映像。 
+最后，通过编辑 Dockerfile 和 docker-compose.yml 元数据文件，可配置此容器的映像的创建方式—它使用哪种基映像，以及设计内部和外部名称及 TCP 端口等设置。 
 
-## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>与 ASP.NET 核心实现简单 CRUD 微服务
+## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>使用 ASP.NET Core 实现简单 CRUD 微服务
 
-若要实现使用.NET 核心和 Visual Studio 简单 CRUD 微服务，你首先创建一个简单的 ASP.NET 核心 Web API 项目 （在上运行.NET 核心以便它可以在 Linux Docker 主机上运行） 中, 所示为图 8 6。
+要使用 .NET Core 和 Visual Studio 实现简单 CRUD 微服务，需先创建一个简单的 ASP.NET Core Web API 项目（在 .NET Core 上运行以便可在 Linux Docker 主机上运行），如图 8 6 所示。
 
   ------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------
   ![](./media/image6.png)   ![](./media/image7.png)
   ------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------
 
-**图 8-6**。 在 Visual Studio 中创建 ASP.NET 核心 Web API 项目
+**图 8-6**。 在 Visual Studio 中创建 ASP.NET Core Web API 项目
 
-创建项目之后，你可以实现你的 MVC 控制器，就像在任何其他 Web API 项目中，使用实体框架 API 或其他 API。 在 eShopOnContainers.Catalog.API 项目中，你可以看到该微服务的主要依赖关系 ASP.NET Core 本身、 实体框架和 Swashbuckle，图 8-7 中所示。
+创建该项目之后，便可使用 Entity Framework API 或其他 API 实现 MVC 控制器，与任何其他 Web API 项目中的操作一样。 在新的 Web API 项目中，可以看到该微服务中的唯一依赖关系在 ASP.NET Core 本身上。 在内部，在 `Microsoft.AspNetCore.All` 依赖项内，引用的是 Entity Framework 和许多其他 .NET Core Nuget 包，如图 8-7 所示。
 
 ![](./media/image8.PNG)
 
 **图 8-7**。 简单 CRUD Web API 微服务中的依赖关系
 
-### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>实现与实体框架核心的 CRUD Web API 服务
+### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>使用 Entity Framework Core 实现 CRUD Web API 服务
 
-实体框架 (EF) 核心是一种轻型，可扩展的并跨平台版本的受欢迎的实体框架数据访问技术。 EF 核心是对象关系映射器 (ORM)，使.NET 开发人员可以使用.NET 对象的数据库使用。
+Entity Framework (EF) Core 是轻量化、可扩展和跨平台版的常用 Entity Framework 数据访问技术。 EF Core 是一种支持 .NET 开发人员使用 .NET 对象处理数据库的对象关系映射程序 (ORM)。
 
-目录 microservice 使用 EF 和 SQL Server 提供程序，因为在具有适用于 Linux 的 Docker 映像的容器中运行其数据库。 但是，无法将数据库部署到任何 SQL Server，如 Windows 本地或 Azure SQL DB。 唯一需要更改是 ASP.NET Web API 微服务中的连接字符串。
+目录微服务使用 EF 和 SQL Server 提供程序，因为其数据库在具有 SQL Server for Linux Docker 映像的容器中运行。 但也可将数据库部署到任何其他 SQL Server 中，如本地 Windows 或 Azure SQL DB。 唯一需要更改的是 ASP.NET Web API 微服务中的连接字符串。
 
-#### <a name="add-entity-framework-core-to-your-dependencies"></a>将实体框架核心添加到您的依赖关系
-
-你可以为你想要使用，在此情况下 SQL Server，从 Visual Studio IDE 中或使用 NuGet 控制台数据库提供程序安装 NuGet 包。 使用以下命令：
-
-```
-  Install-Package Microsoft.EntityFrameworkCore.SqlServer
-```
 
 #### <a name="the-data-model"></a>数据模型
 
-与 EF 核心数据访问执行使用模型。 模型由实体类和派生的上下文表示与数据库，使你可以查询并将数据保存的会话组成。 可以从现有数据库生成模型、 手动代码模型以匹配您的数据库，或使用 EF 迁移从您的模型创建数据库 （以及它随为您的模型随着时间推移而变化）。 为目录微服务中，我们将使用最后一个方法。 你可以看到举例说明 CatalogItem 实体类在以下代码示例中，这是一个简单的普通旧 CLR 对象 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 实体类。
+使用 EF Core 时，数据访问是通过使用模型来执行的。 模型由实体类和表示数据库会话的派生上下文构成，用于查询和保存数据。 可从现有数据库生成模型，手动编码模型使之与数据库相匹配，或使用 EF 迁移基于模型创建数据库（并在模型随时间推移发生更改后进行相应改进）。 对于目录微服务，使用后一种方法。 可在以下代码示例中看到 CatalogItem 实体类的示例，这是一个简单的普通旧 CLR 对象 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 实体类。
 
 ```csharp
 public class CatalogItem
@@ -79,16 +75,24 @@ public class CatalogItem
     public string Name { get; set; }
     public string Description { get; set; }
     public decimal Price { get; set; }
+    public string PictureFileName { get; set; }
     public string PictureUri { get; set; }
     public int CatalogTypeId { get; set; }
     public CatalogType CatalogType { get; set; }
     public int CatalogBrandId { get; set; }
     public CatalogBrand CatalogBrand { get; set; }
+    public int AvailableStock { get; set; }
+    public int RestockThreshold { get; set; }
+    public int MaxStockThreshold { get; set; }
+
+    public bool OnReorder { get; set; }
     public CatalogItem() { }
+
+    // Additional code ...
 }
 ```
 
-你还需要表示与数据库的会话的 DbContext。 为目录 microservice，CatalogContext 类派生自 DbContext 基类，如下面的示例中所示：
+还需要一个 DbContext 来表示与数据库的会话。 对于目录微服务，CatalogContext 类派生自 DbContext 基类，如下例中所示：
 
 ```csharp
 public class CatalogContext : DbContext
@@ -96,7 +100,6 @@ public class CatalogContext : DbContext
     public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
     {
     }
-
     public DbSet<CatalogItem> CatalogItems { get; set; }
     public DbSet<CatalogBrand> CatalogBrands { get; set; }
     public DbSet<CatalogType> CatalogTypes { get; set; }
@@ -106,13 +109,11 @@ public class CatalogContext : DbContext
 }
 ```
 
-你可以附加代码在 DbContext 实现。 例如，在示例应用程序，我们有 OnModelCreating 方法的 CatalogContext 类中自动填充示例数据第一次尝试访问数据库。 此方法可用于演示数据。 你还可用于 OnModelCreating 方法自定义与许多其他对象/数据库实体映射[EF 扩展性点](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)。
-
-你可以查看更多详细信息中的 OnModelCreating[实现与实体框架核心基础结构持久性层](#implementing_infrastructure_persistence)本书后面一节。
+可具有更多 `DbContext` 实现。 例如，在示例 Catalog.API 微服务中，还有一个名为 `CatalogContextSeed` 的 `DbContext`，它会在首次尝试访问数据库时自动填充示例数据。 此方法对于演示数据以及自动化测试方案很有用。 在 `DbContext` 中，使用用来自定义对象/数据库实体映射的 `OnModelCreating` 方法和其他 [EF 扩展性点](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)。
 
 ##### <a name="querying-data-from-web-api-controllers"></a>从 Web API 控制器查询数据
 
-通常使用语言集成查询 (LINQ)，从数据库检索的实体类的实例，如下面的示例中所示：
+通常使用语言集成查询 (LINQ) 从数据库检索实体类的实例，如下例所示：
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -122,13 +123,13 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context,
-        IOptionsSnapshot<CatalogSettings> settings,
-        ICatalogIntegrationEventService catalogIntegrationEventService)
+    public CatalogController(CatalogContext context, 
+                             IOptionsSnapshot<CatalogSettings> settings,
+                             ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService ??
-           throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+        _catalogIntegrationEventService = catalogIntegrationEventService ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+
         _settings = settings.Value;
         ((DbContext)context).ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     }
@@ -136,46 +137,53 @@ public class CatalogController : ControllerBase
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
     [HttpGet]
     [Route("[action]")]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
-    [FromQuery]int pageIndex = 0)
+    [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
+    public async Task<IActionResult> Items([FromQuery]int pageSize = 10, 
+                                           [FromQuery]int pageIndex = 0)
+
     {
         var totalItems = await _catalogContext.CatalogItems
             .LongCountAsync();
+
         var itemsOnPage = await _catalogContext.CatalogItems
             .OrderBy(c => c.Name)
             .Skip(pageSize * pageIndex)
             .Take(pageSize)
             .ToListAsync();
+
         itemsOnPage = ChangeUriPlaceholder(itemsOnPage);
+
         var model = new PaginatedItemsViewModel<CatalogItem>(
             pageIndex, pageSize, totalItems, itemsOnPage);
+
         return Ok(model);
     } 
-
     //...
 }
 ```
 
 ##### <a name="saving-data"></a>保存数据
 
-创建数据、 将其删除，并在使用实体类的实例数据库中修改。 你可以添加代码，如下例所示硬编码 （模拟数据，在此情况下） 到你的 Web API 控制器。
+使用实体类的实例在数据库中创建、删除和修改数据。 可向 Web API 控制器添加代码，如以下硬编码示例（在此例中为模拟数据）所示。
 
 ```csharp
 var catalogItem = new CatalogItem() {CatalogTypeId=2, CatalogBrandId=2,
-   Name="Roslyn T-Shirt", Price = 12};
+                                     Name="Roslyn T-Shirt", Price = 12};
 _context.Catalog.Add(catalogItem);
 _context.SaveChanges();
 ```
 
-##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>ASP.NET 核心应用程序和 Web API 控制器中的依赖关系注入
+##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>ASP.NET Core 和 Web API 控制器中的依赖注入
 
-在 ASP.NET 核心可以使用现成的依赖关系注入 (DI)。 你不需要设置第三方控制反向 (IoC) 容器，尽管你可以插入到 ASP.NET 核心基础结构你首选的 IoC 容器，如果你想。 在这种情况下，这意味着，可以直接插入所需的 EF DBContext 或通过控制器构造函数的其他存储库。 在上面的 CatalogController 类的示例，我们会将注入 CatalogContext 类型的对象以及其他通过 CatalogController 的构造函数的对象。
+在 ASP.NET Core 中可非常方便地使用依赖关系注入 (DI)。 无需设置第三方控制反转 (IoC) 容器，但如果愿意，可将喜欢的 IoC 容器插入 ASP.NET Core 基础结构。 在本例中，这意味着可通过控制器构造函数直接插入所需的 EF DBContext 或其他存储库。 在上面的 `CatalogController` 类的示例中，是通过 `CatalogController()` 构造函数注入 `CatalogContext` 类型的对象和其他对象。
 
-具有重要的配置，以便在 Web API 项目设置是 DbContext 类注册到服务的 IoC 容器。 则通常中执行此 Startup 类通过调用服务。AddDbContext 方法在 ConfigureServices 方法中，如下面的示例中所示：
+要在 Web API 项目中设置的一个重要配置，是向服务的 IoC 容器注册 DbContext 类。 通常在 `Startup`类中执行此操作，方法在 `ConfigureServices()` 方法中调用 `services.AddDbContext<DbContext>()` 方法，如下例中所示：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
+    // Additional code...
+
     services.AddDbContext<CatalogContext>(options =>
     {
         options.UseSqlServer(Configuration["ConnectionString"],
@@ -183,10 +191,10 @@ public void ConfigureServices(IServiceCollection services)
         {
            sqlOptions.
                MigrationsAssembly(
-               typeof(Startup).
-               GetTypeInfo().
-               Assembly.
-               GetName().Name);
+                   typeof(Startup).
+                    GetTypeInfo().
+                     Assembly.
+                      GetName().Name);
 
            //Configuring Connection Resiliency:
            sqlOptions.
@@ -210,14 +218,14 @@ public void ConfigureServices(IServiceCollection services)
 ### <a name="additional-resources"></a>其他资源
 
 -   **查询数据**
-    [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
+    [https://docs.microsoft.com/ef/core/querying/index](https://docs.microsoft.com/ef/core/querying/index)
 
 -   **保存数据**
-    [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
+    [https://docs.microsoft.com/ef/core/saving/index](https://docs.microsoft.com/ef/core/saving/index)
 
-## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>使用 Docker 容器的数据库连接字符串和环境变量
+## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker 容器使用的数据库连接字符串和环境变量
 
-你可以使用 ASP.NET 核心设置并将 ConnectionString 属性添加到你 settings.json 文件，如下面的示例中所示：
+可使用 ASP.NET Core 设置并向 settings.json 文件添加 ConnectionString 属性，如下例中所示：
 
 ```csharp
 {
@@ -234,9 +242,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Settings.json 文件可以具有默认值为 ConnectionString 属性或任何其他属性。 但是，这些属性将替代在 docker compose.override.yml 文件中指定的环境变量的值。
+Settings.json 文件中可为 ConnectionString 属性或任何其他属性设置默认值。 但使用 Docker 时，这些属性会被 docker-compose.override.yml 文件中指定的环境变量的值替代。
 
-从 docker-compose.yml 或 docker compose.override.yml 文件，你可以初始化这些环境变量以便 Docker 将它们作为 OS 环境变量为你设置，如以下 docker compose.override.yml 文件 （连接中所示字符串和其他行包装在此示例中，但在你自己的文件将不自动换行）。
+在 docker-compose.yml 或 docker-compose.override.yml 文件中，可初始化这些环境变量，以便 Docker 将其设置为 OS 环境变量，如以下 docker-compose.override.yml 文件中所示（本示例中连接字符串和其他行会换行，但在你自己的代码文件中不换行）。
 
 ```yml
 # docker-compose.override.yml
@@ -245,36 +253,34 @@ Settings.json 文件可以具有默认值为 ConnectionString 属性或任何其
 catalog.api:
   environment:
     - ConnectionString=Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
-    - ExternalCatalogBaseUrl=http://10.0.75.1:5101
-    #- ExternalCatalogBaseUrl=http://dockerhoststaging.westus.cloudapp.azure.com:5101
-  
+    # Additional environment variables for this service
   ports:
-    - "5101:5101"
+    - "5101:80"
 ```
 
-解决方法级别的 docker-compose.yml 文件不只是比在项目或微服务级别中，配置文件更灵活，但也更加安全。 请考虑每个微服务生成的 Docker 映像不会包含 docker-compose.yml 文件，仅二进制文件和每个微服务，包括 Dockerfile 的配置文件。 但 docker-compose.yml 文件未部署你的应用程序; 以及它仅在部署时使用。 因此，环境变量值置于这些 docker-compose.yml 文件 （即使没有加密值） 是比将这些值放在与你的代码一起部署的正则.NET 配置文件中更安全的。
+相较于项目或微服务级别的配置文件，解决方法级别的 docker-compose.yml 文件不仅更灵活，而且如果使用从部署工具（如 VSTS Docker 部署任务）设置的值替换在 docker-compose 文件中声明的环境变量，使用该文件会更安全。 
 
-最后，你可以获取该值在代码中使用配置\["ConnectionString"\]，在前面的代码示例中的 ConfigureServices 方法中所示。
+最后，可使用配置 \["ConnectionString"\] 从代码中获取该值，如前面的代码示例中的 ConfigureServices 方法中所示。
 
-但是，对于生产环境中，你可能希望资源管理器如何存储连接字符串类似的机密的其他方法。 通常，将由你选 orchestrator，就像可以与[Docker Swarm 机密管理](https://docs.docker.com/engine/swarm/secrets/)。
+但对于生产环境，可能需要寻找其他方法来存储连接字符串等机密。 通常这一功能由所选的业务流程协调程序来实现，就像执行 [Docker Swarm 机密管理](https://docs.docker.com/engine/swarm/secrets/)时那样操作。
 
-### <a name="implementing-versioning-in-aspnet-web-apis"></a>在 ASP.NET Web Api 中实现版本控制
+### <a name="implementing-versioning-in-aspnet-web-apis"></a>在 ASP.NET Web API 中实现版本控制
 
-随着业务需求变化，可能添加新的资源集合、 资源之间的关系可能会更改，和资源中的数据的结构可能会修改。 更新 Web API 来处理新的要求是一个相对比较简单的过程，但必须考虑此类更改将对使用 Web API 的客户端应用程序的影响。 尽管设计和实现 Web API，开发人员可以完全控制该 API，开发人员没有相同的大程度上控制可能由远程运营的第三方组织生成的客户端应用程序。
+随着业务需求的改变，可能会添加新的资源集，资源之间的关系可能会改变，资源中数据的结构也可能被修改。 更新 Web API 以适应新要求是一个相对比较简单的过程，但必须考虑这些更改会为使用 Web API 的客户端应用程序带来怎样的影响。 虽然设计和实现 Web API 的开发人员对该 API 具有完全控制，但对由远程运营的第三方组织所构建的客户端应用程序却不具有同等程度的控制。
 
-版本控制使 Web API，以指示的功能和它公开的资源。 客户端应用程序然后可以提交到特定版本的功能或资源的请求。 有几种方法来实施版本控制：
+通过版本控制，Web API 能够指示其公开的功能和资源。 客户端应用程序然后便可向特定版本的功能或资源提交请求。 有几种方法可用于实现版本控制：
 
--   URI 版本控制
+-   URI 版本管理
 
 -   查询字符串版本控制
 
 -   标头版本控制
 
-查询字符串和 URI 版本控制是最简单的方法实现。 标头版本控制是一种好方法。 但是，不显式地 URI 版本控制一样简单的标头版本控制。 由于 URL 版本控制，是最简单、 最显式 eShopOnContainers 示例应用程序使用 URI 版本控制。
+查询字符串和 URI 版本控制实现起来最简单。 标头版本控制是一个好方法。 但标头版本控制不如 URI 版本控制简单明确。 由于 URL 版本控制最简单明晰，eShopOnContainers 示例应用程序使用 URI 版本控制。
 
-使用 URI 版本控制，如下所示 eShopOnContainers 示例应用程序中，向每个资源的 URI 添加版本号每次修改 Web API 或更改资源的架构。 现有的 Uri 应继续像以前一样，使符合的资源返回到请求的版本匹配的架构运行。
+使用 URI 版本控制时，如 eShopOnContainers 示例应用程序所示，每次修改 Web API 或更改资源的架构时，都需向每个资源的 URI 中添加版本号。 现有 URI 应维持原有工作方式，返回符合架构的资源，该架构与请求的版本匹配。
 
-下面的代码示例中所示，可以通过在 Web API，从而使显式 URI 中的版本中使用的 Route 属性设置版本 (在此情况下 v1)。
+如下面的代码示例中所示，可通过在 Web API 中使用 Route （路由）属性来设置版本，让 URI 中的版本一目了然（在本例中为 v1）。
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -283,71 +289,66 @@ public class CatalogController : ControllerBase
     // Implementation ...
 ```
 
-此版本控制机制很简单，取决于将请求路由到相应的终结点的服务器。 但是，对于更复杂的版本控制的最佳方法使用 REST 时，应使用超媒体并实现[HATEOAS （超文本作为应用程序引擎状态）](https://docs.microsoft.com/azure/architecture/best-practices/api-design#using-the-hateoas-approach-to-enable-navigation-to-related-resources)。
+此版本控制机制很简单，取决于将请求路由到相应终结点的服务器。 但如果使用 REST，为实现更精密的版本控制和使用最佳方法，应使用超媒体并实现 [HATEOAS（将超文本用作应用状态的引擎）](https://docs.microsoft.com/azure/architecture/best-practices/api-design#using-the-hateoas-approach-to-enable-navigation-to-related-resources)。
 
 ### <a name="additional-resources"></a>其他资源
 
--   **Scott Hanselman。ASP.NET 核心 RESTful Web API 版本控制变得更容易**
+-   **Scott Hanselman.ASP.NET Core RESTful Web API versioning made easy**（简化 ASP.NET 核心 RESTful Web API 版本控制）
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **版本控制 RESTful web API**
+-   **RESTful web API 版本控制**
+    [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
-    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+-   **Roy Fielding。Versioning, Hypermedia, and REST**（版本控制、超媒体和 REST）
+    [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
--   **Roy Fielding。版本控制、 超媒体和 REST**
-    [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
+## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>从 ASP.NET Core Web API 生成 Swagger 描述元数据 
 
-## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>从 ASP.NET 核心 Web API 生成 Swagger 描述元数据 
+[Swagger](http://swagger.io/) 是一个常用开源框架，由包含大量工具的大型“生态系统”提供支持，可帮助设计、生成、存档和使用 RESTful API。 它正逐渐变为 API 描述性元数据域的标准。 应在所有类型的微服务中，无论是数据驱动的微服务还是多个高级域驱动微服务，包含 Swagger 描述性元数据（如下一部分中所述）。
 
-[Swagger](http://swagger.io/)是一个常用的开放源代码框架，支持通过大型的生态系统的工具，可帮助你的设计、 生成、 文档，并使用 RESTful Api。 变得越来越 Api 说明元数据域的标准。 你应包括 Swagger 描述元数据与任何类型的微服务，数据驱动的微服务或多个高级域驱动微服务 （如在下一节中所述）。
+Swagger 的核心是 Swagger 规范，它是 JSON 或 YAML 文件中的 API 描述性元数据。 该规范为 API 创建 RESTful 协定，并以人类和机器均可识别的格式详细描述其资源和操作，以简化开发、发现和集成。
 
-Swagger 的核心是 Swagger 规范，这是 JSON 或 YAML 文件中的 API 描述元数据。 规范创建你的 API，详细列出所有其资源和操作更轻松的开发、 发现和集成这两个用户-和 machine-readable 格式的 RESTful 协定。
+该规范是 OpenAPI 规范 (OAS) 的基础，开发于开放、透明和协作化的社区，旨在让 RESTful 接口定义的方式实现标准化。
 
-是基础的 OpenAPI 规范 (OAS) 和在标准化 RESTful 接口定义的方式打开、 透明，和协作社区中开发的规范。
-
-规范定义的结构如何可以发现服务以及如何理解其功能。 有关详细信息，包括 web 编辑器和示例的 Swagger 规范从公司 Spotify、 Uber、 Slack，等 Microsoft，请参阅 Swagger 站点 (<http://swagger.io>)。
+该规范在如何发现服务以及如何理解其功能方面对其结构进行定义。 有关详细信息，包括 Web 编辑器以及 Spotify、Uber、Slack 和 Microsoft 等公司的 Swagger 规范的示例，请访问 Swagger 站点 (<http://swagger.io>)。
 
 ### <a name="why-use-swagger"></a>为何使用 Swagger？
 
-若要为您的 Api 生成 Swagger 元数据的主要原因如下所示。
+为 API 生成 Swagger 元数据的主要原因如下。
 
-**若要自动使用并将你的 Api 集成其他产品的能力**。 多个产品和[商业工具](http://swagger.io/commercial-tools/)和许多[库和框架](http://swagger.io/open-source-integrations/)支持 Swagger。 Microsoft 具有高级产品和工具，可以自动使用基于 Swagger 的 Api，如下所示：
+**为让其他产品能够自动使用和集成 API**。 许多产品和[商业工具](http://swagger.io/commercial-tools/)以及许多[库和框架](http://swagger.io/open-source-integrations/)均支持 Swagger。 Microsoft 具有高级产品和工具，可自动使用基于 Swagger 的 API，举例如下：
 
--   [AutoRest](https://github.com/Azure/AutoRest)。 你可以自动生成用于调用 Swagger 的.NET 客户端类。 这
+-   [AutoRest](https://github.com/Azure/AutoRest)。 可自动生成用于调用 Swagger 的 .NET 客户端类。 可通过 CLI 使用此工具，它也与 Visual Studio 集成以便能够通过 GUI 轻松使用。
 
--   可以从 CLI 使用工具，并且它也与 Visual Studio 集成以便能够轻松使用通过 GUI。
+-   [Microsoft Flow](https://flow.microsoft.com/en-us/)。 可自动[使用 API 并将其集成](https://flow.microsoft.com/en-us/blog/integrating-custom-api/)到高级 Microsoft Flow 工作流，且无需具备编程技能。
 
--   [Microsoft Flow](https://flow.microsoft.com/en-us/)。 您可以自动[使用和集成你的 API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/)到高级 Microsoft Flow 工作流，而无编程所需的技能。
+-   [Microsoft PowerApps](https://powerapps.microsoft.com/en-us/)。 可自动从通过 [PowerApps Studio](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/) 生成的 [PowerApps 移动应用](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/)使用 API，且无需具备编程技能。
 
--   [Microsoft PowerApps](https://powerapps.microsoft.com/en-us/)。 你可以自动使用你的 API 从[PowerApps 移动应用](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/)用生成[PowerApps Studio](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/)，与所需的任何编程技能。
+-   [Azure 应用服务逻辑应用](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps)。 可自动[使用 API 并将其集成到 Azure 应用服务逻辑应用](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api)，且无需具备编程技能。
 
--   [Azure App Service Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps)。 您可以自动[使用并将你的 API 集成到 Azure App Service 逻辑应用](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api)，与所需的任何编程技能。
+**能够自动生成 API 文档**。 创建大规模 RESTful API 时，如基于微服务的复杂应用程序，需要处理大量终结点，同时请求和响应负载中会使用各种不同的数据模型。 具备正确的文档和稳定可靠的 API 资源管理器（通过 Swagger 获取），是 API 成功发挥功能和开发人员成功使用它的关键所在。
 
-**能够自动生成 API 文档**。 当你创建大规模的 RESTful Api，如复杂基于微服务构成的应用程序，你需要处理具有不同的数据模型中的请求和响应负载使用多个终结点。 具有正确的文档并具有稳定的 API 管理器中，如您获得 Swagger，以及是成功的 API，由开发人员采用的密钥。
+Microsoft Flow、PowerApps 和 Azure 逻辑应用通过使用 Swagger 的元数据来了解如何使用和连接 API。
 
-Swagger 的元数据是 Microsoft Flow、 PowerApps 和 Azure 逻辑应用使用的内容以了解如何使用 Api 和连接到它们。
+### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>如何使用 Swashbuckle NuGet 包自动生成 API Swagger 元数据
 
-### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>如何自动执行使用 Swashbuckle NuGet 包 API Swagger 元数据生成
+手动（在 JSON 或 YAML 文件中）生成 Swagger 元数据可能会耗时较长且较为枯燥。 但可使用 [Swashbuckle NuGet 包](http://aka.ms/swashbuckledotnetcore)动态生成 Swagger API 元数据，让 ASP.NET Web API 服务自动发现 API。
 
-生成手动 （在 JSON 或 YAML 文件中） 的 Swagger 元数据可以是需要很长时间工作。 但是，您可以通过使用自动化的 ASP.NET Web API 服务的 API 发现[Swashbuckle NuGet 包](http://aka.ms/swashbuckledotnetcore)动态生成 Swagger API 元数据。
+Swashbuckle 为 ASP.NET Web API 项目自动生成 Swagger 元数据。 它支持 ASP.NET Core Web API 项目和传统 ASP.NET Web API 以及任何其他风格，如 Azure API 应用、Azure 移动应用和基于 ASP.NET 的 Azure Service Fabric 微服务等。 它还支持容器上部署的普通 Web API，就像为引用应用程序提供支持那样。
 
-Swashbuckle 自动生成你的 ASP.NET Web API 项目的 Swagger 元数据。 它支持 ASP.NET 核心 Web API 项目和传统的 ASP.NET Web API 和任何其他风格，如 Azure API 应用程序，Azure 移动应用程序，基于 ASP.NET 的 Azure Service Fabric 微服务。 它还支持在容器上部署作为中引用应用程序的普通 Web API。
+Swashbuckle 将 API 资源管理器和 Swagger 或 [swagger ui](https://github.com/swagger-api/swagger-ui) 结合起来，为 API 使用者提供更丰富的发现和文档体验。 除 Swagger 元数据生成器引擎外，Swashbuckle 还包含 swagger-ui 的嵌入版本，可在安装 Swashbuckle 后自动提供。
 
-Swashbuckle 将 API 资源管理器和 Swagger 合并或[swagger ui](https://github.com/swagger-api/swagger-ui)提供丰富的发现和文档的 API 使用者体验。 除了其 Swagger 元数据生成器引擎，Swashbuckle 还包含 swagger-ui，它将自动提供安装 Swashbuckle 后的嵌入式的版本。
-
-这意味着可补充你的 API 使用 nice 发现 UI，以帮助开发人员使用你的 API。 它需要大量的代码和维护的很小，因为它自动生成，从而可以专注于生成你的 API。 API 资源管理器的结果看起来像图 8-8。
+这意味除 API 外，又有了一个好用的发现 UI，可帮助开发人员使用 API。 它只需要少量代码和维护，因为它自动生成，这让用户能够专注于生成 API。 API 资源管理器的结果如图 8-8 所示。
 
 ![](./media/image9.png)
 
-**图 8-8**。 Swashbuckle API 资源管理器基于 Swagger 元数据-eShopOnContainers 目录微服务
+**图 8-8**。 基于 Swagger 元数据的 Swashbuckle API 资源管理器—eShopOnContainers 目录微服务
 
-API 资源管理器不是最重要的事情。 之后可以描述自身 Swagger 元数据中的 Web API 后，你的 API 可以无缝地使用从基于 Swagger 的工具，包括可以面向多个平台的客户端代理类代码生成器。 例如，作为提到的那样， [AutoRest](https://github.com/Azure/AutoRest)自动生成.NET 客户端类。 但其他工具如[swagger codegen](https://github.com/swagger-api/swagger-codegen)是否也可用，它允许 API 客户端的代码生成自动库、 服务器存根 （stub） 和文档。
+此处，API 资源管理器不是最重要的部分。 一旦具有可在 Swagger 元数据中进行自我描述的 Web API 后，便可从基于 Swagger 的工具中无缝使用 API，这些工具包括可面向多个平台的客户端代理类代码生成器。 例如，之前提到过，[AutoRest](https://github.com/Azure/AutoRest) 可自动生成 .NET 客户端类。 同时还有 [swagger-codegen](https://github.com/swagger-api/swagger-codegen) 等其他工具可用，这些工具可用于自动生成 API 客户端库、服务器存根（stub）和文档的代码。
 
-当前，Swashbuckle 所包含的两个 NuGet 包： Swashbuckle.SwaggerGen 和 Swashbuckle.SwaggerUi。 前者提供功能直接从你的 API 实现中生成一个或多个 Swagger 文档，并将它们公开 JSON 终结点。 后者提供了嵌入的版本的 swagger ui 工具，它可以由你的应用程序提供服务并由生成的 Swagger 文档，来描述你的 API 提供支持。 但是，Swashbuckle 的最新版本包装这些与 Swashbuckle.AspNetCore metapackage。
+目前，Swashbuckle 在用于 ASP.NET Core 应用程序的高级元包 [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) 1.0.0 版或更高版本下包含两个到多个内部 NuGet 包。
 
-请注意，对于.NET 核心 Web API 项目，你都需要使用[Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/1.0.0)版本 1.0.0 或更高版本。
-
-Web API 项目中安装这些 NuGet 包后，你需要配置 Swagger 中 Startup 类，如以下代码所示：
+在 Web API 项目中安装这些 NuGet 包后，需在 Startup 类中配置 Swagger，如以下代码所示：
 
 ```csharp
 public class Startup
@@ -358,18 +359,20 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         // Other ConfigureServices() code...
-        services.AddSwaggerGen();
-        services.ConfigureSwaggerGen(options =>
+
+        // Add framework services.
+        services.AddSwaggerGen(options =>
         {
             options.DescribeAllEnumsAsStrings();
-            options.SingleApiVersion(new Swashbuckle.Swagger.Model.Info()
+            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
             {
                 Title = "eShopOnContainers - Catalog HTTP API",
                 Version = "v1",
-                Description = "The Catalog Microservice HTTP API",
-                TermsOfService = "eShopOnContainers terms of service"
+                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
+                TermsOfService = "Terms Of Service"
             });
         });
+
         // Other ConfigureServices() code...
     }
 
@@ -380,38 +383,41 @@ public class Startup
         // Other Configure() code...
         // ...
         app.UseSwagger()
-            .UseSwaggerUi();
+            .UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
     }
 }
 ```
 
-完成此操作后，你可以启动你的应用程序，并浏览使用类似这样的 Url 的以下的 Swagger JSON 和 UI 终结点：
+完成此操作后，便可启动应用程序，并使用类似以下的 URL 浏览以下 Swagger JSON 和 UI 终结点：
 
 ```json
   http://<your-root-url>/swagger/v1/swagger.json
   
-  http://<your-root-url>/swagger/ui
+  http://<your-root-url>/swagger/
 ```
 
-你以前看到的生成的 UI 如 http:// url 由 Swashbuckle&lt;你根 url &gt; /swagger/ui。 图 8-9 中你还可以看到如何测试任何 API 方法。
+之前已展示由 Swashbuckle 为类似于 http://&lt;your-root-url&gt;/swagger/ui 的 URL 生成的 UI。 图 8-9 中还展示了如何测试 API 方法。
 
 ![](./media/image10.png)
 
-**图 8-9**。 Swashbuckle 的 UI 测试的目录/项 API 方法
+**图 8-9**。 Swashbuckle UI 测试目录/项目 API 方法
 
-图 8-10 演示从 eShopOnContainers 微服务生成的 Swagger JSON 元数据 （这是工具使用下方） 当请求&lt;你根 url&gt;/swagger/v1/swagger.json 使用[Postman](https://www.getpostman.com/).
+图 8-10 演示当请求 &lt;your-root-url&gt;/swagger/v1/swagger.json using [Postman](https://www.getpostman.com/) 时，从 eShopOnContainers 微服务生成的 Swagger JSON 元数据（工具在下方使用的内容）。
 
 ![](./media/image11.png)
 
 **图 8-10**。 Swagger JSON 元数据
 
-就这么简单。 因为它自动生成的当你将更多的功能添加到你的 API 将增长 Swagger 元数据。
+就是这么简单。 由于是自动生成的，向 API 中添加更多功能后，Swagger 元数据会增长。
 
 ### <a name="additional-resources"></a>其他资源
 
--   **ASP.NET Web API 帮助页使用 Swagger**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+-   **使用 Swagger 的 ASP.NET Web API 帮助页**
+    [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 
 >[!div class="step-by-step"]
-[以前](微服务构成的应用程序-design.md) [下一步] (多-container-应用程序的 docker-compose.md)
+[上一项] (microservice-application-design.md) [下一项] (multi-container-applications-docker-compose.md)
