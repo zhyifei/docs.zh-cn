@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: abb7c9322a9b7ddfd3e0add4d8b9be6941c5e240
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c186b25aeaa42b7285316d7bc9de913dd7b89af7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sql-server-security"></a>SQL Server 安全性
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 具有许多支持创建安全数据库应用程序的功能。  
@@ -44,13 +46,12 @@ ms.lasthandoff: 01/17/2018
  说明了 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express 的安全注意事项。  
   
 ## <a name="related-sections"></a>相关章节  
- [安全和保护 （数据库引擎）](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书安全性主题。  
-  
- [SQL Server 的安全注意事项](http://go.microsoft.com/fwlink/?LinkId=98587)  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书安全性主题。  
-  
+[SQL Server 数据库引擎和 Azure SQL 数据库安全中心](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+介绍 SQL Server 和 Azure SQL Database 的安全注意事项。
+
+[有关安装 SQL Server 的安全注意事项](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+说明安装 SQL Server 之前要考虑的安全问题。
+
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

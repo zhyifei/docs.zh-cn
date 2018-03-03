@@ -1,195 +1,129 @@
 ---
 title: "WPF 社区反馈"
-ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/01/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 helpviewer_keywords:
-- Feedback Center [WPF]
-- Microsoft Product Feedback Center [WPF]
 - community resources [WPF]
 - forums [WPF]
-- blogs for feedback [WPF]
-- weblogs for feedback [WPF]
-- Product Feedback Center [WPF]
 - bug descriptions [WPF]
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
+author: mairaw
+ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82f176a5c4d0f3e371993c9b2273bb045fe6df1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 243e40b1b16fd88a786398c15cd29a5baeacd6ac
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="wpf-community-feedback"></a>WPF 社区反馈
-[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 公开了多种社区资源，方便你了解、讨论和提供有关 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 的反馈，包括 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 团队成员和社区主管撰写的博客、论坛以及 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] 产品反馈中心。 每种社区资源的优点各不相同。 下面将介绍这些优点以及使用各种资源的最佳做法，确保从整个社区尤其是 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] 获取最佳响应。  
-  
+
+Microsoft 公开各种社区资源以便于你了解、 讨论，并提供在 Windows Presentation Foundation (WPF) 的反馈。 这些资源包括论坛和[Visual Studio 开发人员社区](https://developercommunity.visualstudio.com/)站点。 每种社区资源的优点各不相同。 是使用每个以确保最佳响应来自社区和 Microsoft 特别的最佳实践的一组将在这里，介绍这些优点。
+
 > [!NOTE]
->  请不要使用每页底部的“注释”链接来发送产品反馈。 这些链接仅用于发送文档反馈。  
-  
- 
-  
-<a name="Blogs"></a>   
-## <a name="blogs"></a>博客  
- [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 团队成员和社区主管创作了大量在总体上面向 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 或明确针对 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的子集的[博客](http://go.microsoft.com/fwlink/?LinkId=98852)。 内容通常涵盖产品开发、动机和原理以及对特定方案、问题和 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 的详细讨论。 此外，你还可以与对平台有很深了解的人员进一步讨论或研究感兴趣的博客文章。  
-  
-<a name="Forums"></a>   
-## <a name="forums"></a>论坛  
- [WPF 论坛](http://go.microsoft.com/fwlink/?LinkID=187440)（和 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 64 [论坛](http://go.microsoft.com/fwlink/?LinkId=98855)）是用于讨论和解决问题的主要社区资源。 论坛通过提供一整套支持功能来便于讨论和解决问题，其中包括：  
-  
--   搜索。  
-  
--   讨论跟踪。  
-  
--   丰富的文本和代码格式。  
-  
--   [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 集成。  
-  
--   最具价值专家 (MVP) 和社区参与。  
-  
--   确保以最快速度响应文章的监视功能。  
-  
- 请注意，虽然有的问题可能与 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 相关，但 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 论坛可能并不是提出该问题的最合适位置。 例如，所提出的问题可能特定于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 工具，例如 [Expression Blend](http://go.microsoft.com/fwlink/?LinkId=98858)、[Expression Web](http://go.microsoft.com/fwlink/?LinkId=98859) 和 [Expression Design](http://go.microsoft.com/fwlink/?LinkId=98860)。 在这些情况下，应使用相应的 [Expression 社区论坛](http://go.microsoft.com/fwlink/?LinkId=98861)。  
-  
-### <a name="forum-best-practices"></a>论坛最佳做法  
- 使用以下最佳做法可帮助以最快速度处理发布到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 论坛的问题。 这些做法适用于所有论坛。  
-  
-#### <a name="search-existing-posts"></a>搜索现有文章  
- 某些问题普遍存在，在你之前，其他人已经遇到过这些问题。 因此，你可以快速解决问题，也可以在现有讨论中添加意见。  
-  
-#### <a name="use-meaningful-titles"></a>使用有意义的标题  
- 简明而有意义的标题有助于查找文章，从而便于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 论坛的其他社区成员确定是否能够解决你的问题。  
-  
-#### <a name="include-appropriate-content"></a>包含相应的内容  
- 应该对问题和已尝试的处理方法进行描述。 如有可能，请包含支持的代码段或可能的最简单示例以演示问题。 所有这些详细信息都将有助于增加快速解答问题的机会。  
-  
- 可以[在线](http://www.microsoft.com/wn3/locales/help/help_en-us.htm)阅读整套论坛最佳做法。  
-  
-<a name="Product_Feedback_Center"></a>   
-## <a name="product-feedback-center"></a>产品反馈中心  
- 有时，问题可能会难以解决或无法解决。 出现这些情况是因为技术中有 Bug、将技术应用到特定方案存在困难或缺少对特定方案的支持。 此信息对 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] 很重要，它可以通过[产品反馈中心](http://go.microsoft.com/fwlink/?LinkId=99381)提供。  
-  
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 产品反馈中心上发布的项将传送到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 团队的内部 Bug 数据库。 因此，这是向 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能所有者发送反馈的最可靠方法。 此外，还可以验证和跟踪建议与 Bug 以及对它们投票，从而有助于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 团队确定问题优先级。  
-  
-### <a name="wpf-product-feedback-center-best-practices"></a>WPF 产品反馈中心最佳做法  
- 在发布到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 产品反馈中心时，搜索现有文章、提供有意义的标题和适当的内容是很重要的最佳做法，就像将它们发布到 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 论坛一样。 下面列出了一些还应使用的其他最佳做法。  
-  
-#### <a name="search-existing-posts"></a>搜索现有文章  
- 某些问题普遍存在，在你之前，其他人已经遇到过这些问题。 因此，你可以快速解决问题，也可以在现有讨论中添加意见。  
-  
-#### <a name="use-meaningful-titles"></a>使用有意义的标题  
- 简明而有意义的标题可增加将问题在最短时间内定向到最合适的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 团队的机会。 这对于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 等技术（包含许多相关功能）尤为重要。  
-  
-#### <a name="describe-how-to-reproduce-your-bug"></a>说明如何重现 Bug  
- 发布有关 Bug 的文章时，包含以下相关内容很重要：  
-  
--   提供清晰的 Bug 说明。  
-  
--   使用代码段支持 Bug 说明。  
-  
--   提供用于演示如何重现 Bug 的步骤列表。  
-  
--   包含有可能是用于重现 Bug 的最小代码示例。  
-  
--   指明 Bug 是否可以一成不变地重现。  
-  
--   包含相关的异常信息。  
-  
- 如果 Bug 与安装或设置有关，请附加相关的安装日志和快照（位于 %temp% 文件夹中带有“dd_”前缀的文件）。  
-  
- 对于编译或生成问题，请附加生成日志。 可以在命令行中使用 /v: 开关，或通过 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 等 [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] 配置相应级别，将 MSBuild 系统配置为支持具有多种详细级别的日志记录。  
-  
-#### <a name="provide-environment-information"></a>提供环境信息  
- 背景信息通常可用于向文章添加上下文。 具体而言，请指明操作系统平台、处理器系列和架构，如“Windows XP SP2, Pentium III, x86”。  
-  
- 如果所发布的问题与呈现相关，还应包含图形卡和驱动程序详细信息（如有可能）。 由于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 是一个演示框架，因此该信息很重要。  
-  
-#### <a name="provide-solution-or-project-information"></a>提供解决方案或项目信息  
- Bug 可能与用于开发和生成应用程序的工具以及生成的应用程序的类型有关。 因此，可以用于指定以下信息：  
-  
--   生成的应用程序的类型，如：  
-  
-    -   应用程序 (.exe) 或库 (.dll)。  
-  
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 浏览器应用程序 (XBAP)。  
-  
-    -   松散的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 应用程序。  
-  
-    -   安装的独立应用程序。  
-  
-    -   采用 ClickOnce 部署的独立应用程序。  
-  
--   开发工具，如：  
-  
-    -   MSBuild。  
-  
-    -   Expression Graphic Designer。  
-  
-    -   Expression Interactive Designer。  
-  
-    -   [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]。  
-  
--   解决方案配置，如：  
-  
-    -   解决方案。  
-  
-    -   单个项目。  
-  
-    -   包含多个依赖项目的解决方案。  
-  
--   应用程序是否具有特定于语言或非特定于语言的资源。 例如，是否为 `Application`、`Page` 和 `Resource` 类型指定了 `UICulture` 项目属性或可本地化的元数据？  
-  
--   是否在 AssemblyInfo.cs 或 AssemblyInfo.vb 文件中使用了非特定于语言的设置。  
-  
-#### <a name="provide-scenario-and-impact-information"></a>提供方案和影响信息  
- 在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 团队确定是否、何时以及如何修复问题或是否可改用可接受的解决方法时，显示 Bug 及其影响的方案的相关信息对该团队非常重要。  
-  
- 通常，故障和数据丢失方案具有重大影响，因此也最容易确定优先级。 但是，某些 Bug 仅显示在不常见的方案中，在有些情况下这些方案也可能是主线方案。 提供方案和影响的上下文信息有助于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 团队作出正确的决策。  
-  
-<a name="Windows_Presentation_Foundation_Community_Site"></a>   
-## <a name="windows-presentation-foundation-community-site"></a>Windows Presentation Foundation 社区站点  
- [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] 通过一个[社区门户站点](http://go.microsoft.com/fwlink/?LinkId=99382)来支持 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，该站点为 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 相关博客、论坛和其他资源提供了单一入口点。  
-  
-<a name="MSDN_Community_Content"></a>   
-## <a name="msdn-community-content"></a>MSDN 社区内容  
- [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) 文档提供了一整套技术内容，这些技术内容面向 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 启用的核心方案。 当然，开发人员在实际中会遇到大量有趣和不常见的方案，从而可了解到在整体上可能对 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 开发社区有益的事项。  
-  
- 为使开发人员能够与 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 社区共享其知识和体验，该文档现已扩充了 MSDN 社区内容，以便开发人员能够添加和更新有关每个概念性主题、参考主题、操作说明主题、教程主题和示例主题的评论。  
-  
- 向 MSDN 社区内容添加信息的好处是提供一个集中、最新和共享的 [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] 储存库以及社区知识和体验，以扩展联机文档的优势。 另外，为确保提供明确、正确、适当且有用的信息，还可对内容进行裁决。  
-  
-### <a name="what-type-of-content-should-be-added-to-msdn-community-content"></a>哪种内容类型应添加到 MSDN 社区内容中？  
- MSDN 社区内容旨在捕获相关、有用且适当的信息，以便扩展现有 MSDN 内容。 如前所述，应使用更有效的适当工具来发布 Bug、反馈、线程讨论和问题。  
-  
-### <a name="msdn-community-content-moderation"></a>MSDN 社区内容仲裁  
- 为确保内容是合适内容，可对 MSDN 社区内容进行裁决。 如 MSDN [内容仲裁准则](http://go.microsoft.com/fwlink/?LinkId=98864)所述，以下内容类型将被视为不适宜内容：  
-  
--   与 MSDN 社区[行为准则](http://go.microsoft.com/fwlink/?LinkId=98865)冲突的内容  
-  
--   无关内容、不可理解的内容和测试内容  
-  
--   重复的内容  
-  
--   垃圾邮件  
-  
--   文档反馈  
-  
--   Bug 报告  
-  
--   问题  
-  
- 审查方将会根据 MSDN 社区内容仲裁准则来处理这些类型的内容。  
-  
-### <a name="msdn-community-content-language-support"></a>MSDN 社区内容语言支持  
- 美国英语和巴西葡萄牙语版本的 MSDN Online 上都提供了 MSDN 社区内容。 对于将来的版本，正在考虑提供日语、法语、德语、意大利语、西班牙语、朝鲜语、简体中文和繁体中文支持。  
-  
-### <a name="msdn-community-content-frequently-asked-questions"></a>MSDN 社区内容常见问题  
- 有关进一步信息，请参见 MSDN 社区内容[常见问题](http://go.microsoft.com/fwlink/?LinkId=98866)。
+> 不要使用位于每个页的底部的反馈部分来发送产品反馈。 这些链接仅用于发送文档反馈。
+
+## <a name="forums"></a>论坛
+
+[WPF 论坛](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=wpf)是用于讨论和解决问题的主社区资源。 论坛通过提供一整套支持功能来便于讨论和解决问题，其中包括：
+
+- 搜索。
+- 讨论跟踪。
+- 丰富的文本和代码格式。
+- Visual Studio 集成。
+- 最具价值专家 (MVP) 和社区参与。
+- 确保以最快速度响应文章的监视功能。
+
+为你要询问有关 WPF 社区的问题的另一个选项是[堆栈溢出](https://stackoverflow.com/questions/tagged/wpf)。
+
+### <a name="forum-best-practices"></a>论坛最佳做法
+
+使用以下最佳实践来解决问题最快可能及时发布到 WPF 论坛的帮助。 这些做法适用于所有论坛。
+
+#### <a name="search-existing-posts"></a>搜索现有的文章
+
+某些问题普遍存在，在你之前，其他人已经遇到过这些问题。 因此，你可以快速解决问题，也可以在现有讨论中添加意见。
+
+#### <a name="use-meaningful-titles"></a>使用有意义的标题
+
+简洁而有意义的标题提高您的发布的可发现性。 它们还便于其他 WPF 论坛社区成员，以确定是否能够解决你的问题。
+
+#### <a name="include-appropriate-content"></a>包括合适的内容
+
+描述了此问题和如何你尝试通过其工作。 如有可能，请包含支持的代码段或可能的最简单示例以演示问题。 所有这些详细信息都将有助于增加快速解答问题的机会。
+
+## <a name="visual-studio-developer-community"></a>Visual Studio 开发人员社区
+
+有时，问题可能会难以解决或无法解决。 出现这些情况是因为技术中有 Bug、将技术应用到特定方案存在困难或缺少对特定方案的支持。 此信息对 Microsoft 非常重要，且可以通过提供[Visual Studio 开发人员社区](https://developercommunity.visualstudio.com/)站点。
+
+在 WPF 产品反馈中心上发布的项将被路由到 WPF 团队内部的 bug 数据库。 因此，并获取你的反馈到 WPF 功能所有者的最可靠方法。 此外，你可以验证和跟踪的建议和 bug，以及对它们投票，从而可帮助 WPF 团队，以确定问题的优先级。
+
+### <a name="developer-community-best-practices"></a>开发人员社区最佳做法
+
+当发布到 Visual Studio 开发人员社区，搜索现有发送，提供有意义的标题和合适的内容是重要的最佳做法，就像它们为发布到 WPF 论坛。 下面列出了一些还应使用的其他最佳做法。
+
+#### <a name="search-existing-posts"></a>搜索现有的文章
+
+某些问题普遍存在，在你之前，其他人已经遇到过这些问题。 因此，你可以快速解决问题，也可以添加你现有问题的输入。
+
+#### <a name="use-meaningful-titles"></a>使用有意义的标题
+
+简洁而有意义的标题可增加在最短时间内的定向到最适当的 WPF 团队包含你的问题的可能性。 这是对于 WPF，其中包含许多相关的功能等技术尤为重要。
+
+#### <a name="describe-how-to-reproduce-your-bug"></a>描述如何重现 bug
+
+发布有关 Bug 的文章时，包含以下相关内容很重要：
+
+- 提供清晰的 Bug 说明。
+- 使用代码段支持 Bug 说明。
+- 提供用于演示如何重现 Bug 的步骤列表。
+- 包含有可能是用于重现 Bug 的最小代码示例。
+- 指明 Bug 是否可以一成不变地重现。
+- 包含相关的异常信息。
+
+ 如果 Bug 与安装或设置有关，请附加相关的安装日志和快照（位于 %temp% 文件夹中带有“dd_”前缀的文件）。
+
+ 对于编译或生成问题，请附加生成日志。 MSBuild 系统可以配置为支持具有多种详细级别的日志记录通过使用 /v： 从命令行开关或通过配置相应的级别从集成开发环境 (IDE) 等 Visual Studio。
+
+#### <a name="provide-environment-information"></a>提供环境信息
+
+背景信息通常可用于向文章添加上下文。 具体而言，提及的操作系统平台、 处理器系列和体系结构，如"Windows 10 版本 1709，intel （） 至强®，x64。"
+
+如果所发布的问题与呈现相关，还应包含图形卡和驱动程序详细信息（如有可能）。 此信息非常重要，因为 WPF 是一个演示文稿框架。
+
+#### <a name="provide-solution-or-project-information"></a>提供的解决方案或项目的信息
+
+Bug 可能与用于开发和生成应用程序的工具以及生成的应用程序的类型有关。 因此，可以用于指定以下信息：
+
+- 生成的应用程序的类型，如：
+  - 应用程序 (*.exe*) 或库 (*.dll*)
+  - 可扩展应用程序标记语言 (XAML) 浏览器应用程序 (XBAP)
+  - 宽松型 XAML 应用程序
+  - 安装的独立应用程序
+  - 独立 ClickOnce 部署的应用程序
+- 开发工具，如：
+  - MSBuild
+  - 表达式图形设计器
+  - 表达式交互式设计器
+  - Visual Studio
+- 解决方案配置，如：
+  - 一种解决方案
+  - 单个项目
+  - 具有多个依赖项目的解决方案
+- 应用程序是否具有特定于语言或非特定于语言的资源。 例如，是否为 `Application`、`Page` 和 `Resource` 类型指定了 `UICulture` 项目属性或可本地化的元数据？
+- 是否在 AssemblyInfo.cs 或 AssemblyInfo.vb 文件中使用了非特定于语言的设置。
+
+#### <a name="provide-scenario-and-impact-information"></a>提供了方案和影响信息
+
+提供有关显示 bug 及其影响的方案的信息。 它确定是否、 时，以及如何修复问题，或是否可以改用可接受的解决方法，此信息时对 WPF 团队非常重要。
+
+通常，故障和数据丢失方案具有重大影响，因此也最容易确定优先级。 但是，某些 Bug 仅显示在不常见的方案中，在有些情况下这些方案也可能是主线方案。 提供围绕方案和影响的上下文可帮助 WPF 团队做出正确的决策。
+
+## <a name="see-also"></a>请参阅
+
+[如何报告 Visual Studio 2017 的问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
