@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 .NET Framework 是独立于语言的。 这意味着，作为开发人员，您可以使用面向 .NET Framework 的多种语言（例如，C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 以及 Windows PowerShell）之一进行开发。 您可以访问针对 .NET Framework 开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果您是组件开发人员，无论组件采用哪种语言，均可由任何 .NET Framework 应用程序访问。  
@@ -212,7 +212,7 @@ ms.lasthandoff: 12/23/2017
   
 -   类型化的引用是一个特殊构造，它包含一个对对象的引用和一个对类型的引用。 类型化的引用由 <xref:System.TypedReference> 类显示在 .NET Framework 中。  
   
- 如果类型不符合 CLS，则需对其应用 <xref:System.CLSCompliantAttribute> 值为 `isCompliant` 的 `false` 特性。 有关详细信息，请参阅 [CLSCompliantAttribute 特性](#CLSAttribute)部分。  
+ 如果类型不符合 CLS，则需对其应用 <xref:System.CLSCompliantAttribute> 值为 `isCompliant` 的 `false` 特性。 有关更多信息，请参阅 [CLSCompliantAttribute 特性](#CLSAttribute)部分。  
   
  下面的示例说明了方法签名和泛型类型实例化中 CLS 遵从性的问题。 它定义一个具有类型为 `InvoiceItem` 的属性和类型为 <xref:System.UInt32> 的属性的 `Nullable(Of UInt32)` 类，以及一个具有类型为 <xref:System.UInt32> 和 `Nullable(Of UInt32)` 的参数的构造函数。 您尝试编译此示例时会收到四个编译器警告。  
   

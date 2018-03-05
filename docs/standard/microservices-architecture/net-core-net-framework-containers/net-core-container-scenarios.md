@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5d809ecdbef465206015a103a14baab8dc0b49c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9489bca5ac69046818a1809b2f3082baea1eaa8
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>何时为 Docker 容器选择 .NET Core
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 
 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) 是一个 IDE，由 Xamarin Studio 演化而来，在 macOS 中运行，从 2017 年下半年开始可支持 Docker。
 
-还可在 macOS、Linux 和 Windows 中使用 [Visual Studio Code](https://code.visualstudio.com/) (VS Code)。 VS Code 支持 .NET Core，包括 IntelliSense 和调试。 由于 VS Code 是轻量型编辑器，可以使用它，同时结合使用 Docker CLI 和 [.NET Core 命令行接口 (CLI) 工具](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x)来开发面向 Mac 的容器化应用。 还可以使用大多数第三方编辑器来面向 .NET Core，如 Sublime Text、Emacs、VI 和为 .NET 语言提供 IntelliSense 支持的开源 OmniSharp 项目。 除了 IDE 和编辑器，还可为所有支持的平台使用 .NET Core CLI。
+还可在 macOS、Linux 和 Windows 中使用 [Visual Studio Code](https://code.visualstudio.com/) (VS Code)。 VS Code 支持 .NET Core，包括 IntelliSense 和调试。 由于 VS Code 是轻量型编辑器，可以使用它，同时结合使用 Docker CLI 和 [.NET Core 命令行接口 (CLI) 工具](../../../core/tools/index.md)来开发面向 Mac 的容器化应用。 还可以使用大多数第三方编辑器来面向 .NET Core，如 Sublime Text、Emacs、VI 和为 .NET 语言提供 IntelliSense 支持的开源 OmniSharp 项目。 除了 IDE 和编辑器，还可为所有支持的平台使用 .NET Core CLI。
 
 ## <a name="using-containers-for-new-green-field-projects"></a>为新（“绿地”）项目使用容器
 

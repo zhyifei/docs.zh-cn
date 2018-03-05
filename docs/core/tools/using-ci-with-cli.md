@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.workload: dotnetcore
-ms.openlocfilehash: cc2defb72c61e45ecfebd26937f1c3fd2d405171
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 552865f225ceac9e7a365452ee06d7fefeeb7213
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持续集成 (CI) 中使用 .NET Core SDK 和工具
 
@@ -44,7 +45,7 @@ macOS 用户应使用 PKG 安装程序。 在 Linux 上，可选择使用基于�
 
 ## <a name="ci-setup-examples"></a>CI 安装示例
 
-此部分介绍了如何使用 PowerShell 或 bash 脚本进行手动安装，同时还介绍了多个服务型软件 (SaaS) CI 解决方案。 涵盖的 SaaS CI 解决方案包括 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [Visual Studio Team Services 生成](https://www.visualstudio.com/docs/build/overview)。
+此部分介绍了如何使用 PowerShell 或 bash 脚本进行手动安装，同时还介绍了多个服务型软件 (SaaS) CI 解决方案。 涵盖的 SaaS CI 解决方案包括 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [Visual Studio Team Services 生成](https://docs.microsoft.com/vsts/build-release/index)。
 
 ### <a name="manual-setup"></a>手动安装
 
@@ -155,7 +156,7 @@ install:
 1. 使用命令运行[手动安装步骤](#manual-setup)中的脚本。
 1. 创建包含多个 VSTS 内置生成任务的生成，这些任务被配置为使用 .NET Core。
 
-这两种均为有效解决方案。 使用手动安装脚本，可以控制收到的工具版本，因为工具是作为生成的一部分进行下载。 此生成是通过必须创建的脚本进行运行。 本主题仅涉及手动选项。 若要详细了解如何撰写包含 VSTS 生成任务的生成，请参阅 VSTS [持续集成和部署](https://www.visualstudio.com/docs/build/overview)主题。
+这两种均为有效解决方案。 使用手动安装脚本，可以控制收到的工具版本，因为工具是作为生成的一部分进行下载。 此生成是通过必须创建的脚本进行运行。 本主题仅涉及手动选项。 若要详细了解如何撰写包含 VSTS 生成任务的生成，请参阅 VSTS [持续集成和部署](https://docs.microsoft.com/vsts/build-release/index)主题。
 
 若要在 VSTS 中使用手动安装脚本，请新建生成定义，并指定要对生成步骤运行的脚本。 为此，请使用 VSTS 用户界面：
 
@@ -177,7 +178,7 @@ install:
 
 ## <a name="orchestrating-the-build"></a>安排生成
 
-本文档的大部分内容介绍了如何获取 .NET Core 工具和配置各种 CI 服务，并未介绍如何安排或实际生成 .NET Core 代码。 具体如何构建生成进程取决于许多因素，我们无法在本文中笼统概述。 请浏览 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [VSTS](https://www.visualstudio.com/docs/build/overview) 文档集中提供的资源和示例，详细了解如何使用每种技术安排生成。
+本文档的大部分内容介绍了如何获取 .NET Core 工具和配置各种 CI 服务，并未介绍如何安排或实际生成 .NET Core 代码。 具体如何构建生成进程取决于许多因素，我们无法在本文中笼统概述。 请浏览 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [VSTS](https://docs.microsoft.com/vsts/build-release/index) 文档集中提供的资源和示例，详细了解如何使用每种技术安排生成。
 
 使用 .NET Core 工具构建 .NET Core 代码生成进程的两种常规方法是，直接使用 MSBuild 或使用 .NET Core 命令行命令。 应采用哪种方法取决于对方法的熟悉程度和复杂性取舍。 使用 MSBuild，可以将生成进程表达为任务和目标，但需要学习 MSBuild 项目文件语法，这增加了复杂性。 使用 .NET Core 命令行工具可能更为简单，但需要在 `bash` 或 PowerShell 等脚本语言中编写业务流程逻辑。
 

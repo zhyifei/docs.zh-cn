@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d8bbf57625e1d944ab4e97235e718eef7b61a3a4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的类型转换
 <a name="top"></a>每个值都有与之关联的类型，此类型定义分配给该值的空间大小、它可以具有的可能值的范围以及它可以提供的成员等属性。 许多值可以表示为多种类型。 例如，值 4 可以表示为整数或浮点值。 类型转换可以创建一个等同于旧类型值的新类型值，但却不必保留原始对象的恒等值（或精确值）。  
@@ -62,11 +62,11 @@ ms.lasthandoff: 12/23/2017
   
 -   `Explicit` 运算符，该运算符定义类型之间可用的收缩转换。 有关详细信息，请参阅[使用显式运算符的显式转换](#explicit_conversion_with_the_explicit_operator)部分。  
   
--   <xref:System.IConvertible> 接口，该接口定义到 .NET Framework 每个基数据类型的转换。 有关详细信息，请参阅 [IConvertible 接口](#the_iconvertible_interface)部分。  
+-   <xref:System.IConvertible> 接口，该接口定义到 .NET Framework 每个基数据类型的转换。 有关更多信息，请参阅 [IConvertible 接口](#the_iconvertible_interface)部分。  
   
--   <xref:System.Convert> 类，该类提供了一组方法来实现 <xref:System.IConvertible> 接口中的方法。 有关详细信息，请参阅 [Convert 类](#Convert)部分。  
+-   <xref:System.Convert> 类，该类提供了一组方法来实现 <xref:System.IConvertible> 接口中的方法。 有关更多信息，请参阅 [Convert 类](#Convert)部分。  
   
--   <xref:System.ComponentModel.TypeConverter> 类，该类是一个基类，可以扩展该类以支持指定的类型到任何其他类型的转换。 有关详细信息，请参阅 [TypeConverter 类](#the_typeconverter_class)部分。  
+-   <xref:System.ComponentModel.TypeConverter> 类，该类是一个基类，可以扩展该类以支持指定的类型到任何其他类型的转换。 有关更多信息，请参阅 [TypeConverter 类](#the_typeconverter_class)部分。  
   
 <a name="implicit_conversion_with_the_implicit_operator"></a>   
 ## <a name="implicit-conversion-with-the-implicit-operator"></a>使用隐式运算符的隐式转换  

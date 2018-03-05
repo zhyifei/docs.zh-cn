@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3920160697c55a81a131a7d8c40b096b064a6f03
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服务体系结构中的通信
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/23/2017
 
 基于微服务的应用程序通常将使用这些通信样式的组合。 最常见的类型是在调用常规 Web API HTTP 服务时使用 HTTP/HTTPS 等同步协议进行单个接收方通信。 微服务通常也使用消息传送协议在微服务之间进行异步通信。
 
-必须知道这些轴以便清楚了解可能的通信机制，但在构建微服务时，它们就不是那么重要了。 集成微服务时，客户端线程执行的异步特性才是重点，而所选协议的异步特性却不是。 重要的是能够异步集成微服务，同时保持微服务独立性，如下节所述。
+必须知道这些轴以便清楚了解可能的通信机制，但在构建微服务时，它们就不是那么重要了。 集成微服务时，客户端线程执行的异步特性和所选协议的异步特性都不是重点。 重要的是能够异步集成微服务，同时保持微服务独立性，如下节所述。
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>异步微服务集成强化了微服务的自治性
 

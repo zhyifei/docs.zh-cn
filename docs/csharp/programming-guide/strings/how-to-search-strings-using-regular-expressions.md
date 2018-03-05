@@ -2,20 +2,21 @@
 title: "如何：使用正则表达式搜索字符串（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with RegEx
 ms.assetid: dcab2150-a4a2-4fe4-87e3-83b83b58d84a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c851c57b44f1343816b905db002e530121fb6c0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-search-strings-using-regular-expressions-c-programming-guide"></a>如何：使用正则表达式搜索字符串（C# 编程指南）
 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 类可用于搜索字符串。 从简单搜索到充分利用正则表达式，搜索可以采用不同的复杂模式。 以下是使用 <xref:System.Text.RegularExpressions.Regex> 类执行字符串搜索的两个示例。 有关详细信息，请参阅 [.NET Framework 正则表达式](https://msdn.microsoft.com/library/hs600312)。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideStrings#18](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-regular-expressions_2.cs)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [字符串](../../../csharp/programming-guide/strings/index.md)  

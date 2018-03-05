@@ -1,7 +1,7 @@
 ---
-title: ".NET Framework 中的泛型集合"
+title: ".NET 中的泛型集合"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 02/15/2018
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -13,27 +13,25 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- generics [.NET Framework], collections
-- generic collections [.NET Framework]
+- generics [.NET], collections
+- generic collections [.NET]
+- generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 827d5a7edd335769ec5497518cbdf71181aacc2c
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="generic-collections-in-the-net-framework"></a>.NET Framework 中的泛型集合
-此主题概述了 .NET Framework 中的泛型集合类和其他泛型类型。  
-  
-## <a name="generic-collections-in-the-net-framework"></a>.NET Framework 中的泛型集合  
- .NET Framework 类库提供了许多 <xref:System.Collections.Generic> 和 <xref:System.Collections.ObjectModel> 命名空间中的泛型集合类。 若要详细了解这些类，请参阅[常用集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)。  
+# <a name="generic-collections-in-net"></a>.NET 中的泛型集合
+
+ .NET 类库提供了许多 <xref:System.Collections.Generic> 和 <xref:System.Collections.ObjectModel> 命名空间中的泛型集合类。 若要详细了解这些类，请参阅[常用集合类型](../../../docs/standard/collections/commonly-used-collection-types.md)。  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
  许多泛型集合类型均为非泛型类型的直接模拟。 <xref:System.Collections.Generic.Dictionary%602> 是 <xref:System.Collections.Hashtable> 的泛型版本；它使用枚举的泛型结构 <xref:System.Collections.Generic.KeyValuePair%602> 而不是 <xref:System.Collections.DictionaryEntry>。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/23/2017
  <xref:System.Nullable%601> 泛型结构允许使用值类型，如同它们可分配 `null`。 这在处理数据库查询时很有用，其中字段包含可能丢失的值类型。 泛型类型参数可为任意值类型。  
   
 > [!NOTE]
->  在 C# 中，无需显示使用 <xref:System.Nullable%601>，因为语言具有可以为 null 类型的语法。  
+>  在 C# 和 Visual Basic 中，无需显式使用 <xref:System.Nullable%601>，因为语言具有可以为 null 类型的语法。 请参阅[可为 null 的类型（C# 编程指南）](../../csharp/programming-guide/nullable-types/index.md)或 [可为 null 的值类型 (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)。 
   
  <xref:System.ArraySegment%601> 泛型结构提供了分隔任何类型的从零开始的一维数组内的一系列元素的方法。 泛型类型参数是数组中元素的类型。  
   

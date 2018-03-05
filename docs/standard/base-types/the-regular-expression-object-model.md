@@ -48,11 +48,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-regular-expression-object-model"></a>正则表达式对象模型
 <a name="introduction"></a> 本主题介绍了处理 .NET 正则表达式时使用的对象模型。 它包含下列部分：  
@@ -211,7 +211,7 @@ ms.lasthandoff: 12/23/2017
   
 -   `Match.Captures` 属性返回一个 <xref:System.Text.RegularExpressions.CaptureCollection> 对象，该对象的使用是有限制的。 不会为其 <xref:System.Text.RegularExpressions.Match> 属性为 `Success` 的 `false` 对象填充集合。 否则，它将包含一个 <xref:System.Text.RegularExpressions.Capture> 对象，该对象具有的信息与 <xref:System.Text.RegularExpressions.Match> 对象具有的信息相同。  
   
- 有关这些对象的更多信息，请参见本主题后面的[组集合](#GroupCollection)和[捕获集合](#CaptureCollection)部分。  
+ 有关这些对象的更多信息，请参阅本主题后面的[组集合](#GroupCollection)和[捕获集合](#CaptureCollection)部分。  
   
  <xref:System.Text.RegularExpressions.Match> 类的另外两个属性提供了有关匹配项的信息。 `Match.Value` 属性返回输入字符串中与正则表达式模式匹配的子字符串。 `Match.Index` 属性返回输入字符串中匹配的字符串的起始位置（从零开始）。  
   

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -102,12 +102,12 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Steve Smith.测试控制器** (ASP.NET Core) [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith.测试控制器** (ASP.NET Core) [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith.集成测试** (ASP.NET Core) [https://docs.microsoft.com/aspnet/core/testing/integration-testing](https://docs.microsoft.com/aspnet/core/testing/integration-testing)
+-   **Steve Smith.集成测试** (ASP.NET Core) [https://docs.microsoft.com/aspnet/core/testing/integration-testing](/aspnet/core/testing/integration-testing)
 
 -   **使用 dotnet 测试在 .NET Core 中进行单元测试**
-    [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+    [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**。 官方网站。
     [https://xunit.github.io/](https://xunit.github.io/)
@@ -125,7 +125,7 @@ public class PrimeWebDefaultRequestShould
 
 如前所述，在测试多容器应用程序时，所有微服务需要在 Docker 主机或容器群集内运行。 包含有关一系列微服务的多个操作的端到端服务测试要求通过运行 docker-compose up（如果使用业务流程协调程序，则运行同等机制），在 Docker 主机中部署和启动整个应用程序。 整个应用程序及其所有服务运行后，可以执行端到端集成和功能测试。
 
-可以使用多种方法。 在用于部署应用程序的 docker-compose.yml 文件（或 docker-compose.ci.build.yml 等类似文件）中，可在解决方案级别扩展入口点，以使用 [dotnet 测试](https://docs.microsoft.com/dotnet/core/tools/dotnet-test)。 还可以使用将在设置为目标的映像中运行测试的其他 compose 文件。 通过使用包括容器上的微服务和数据库的其他集成测试 compose 文件，可确保运行测试前相关数据始终重置为其初始状态。
+可以使用多种方法。 在用于部署应用程序的 docker-compose.yml 文件（或 docker-compose.ci.build.yml 等类似文件）中，可在解决方案级别扩展入口点，以使用 [dotnet 测试](../../../core/tools/dotnet-test.md)。 还可以使用将在设置为目标的映像中运行测试的其他 compose 文件。 通过使用包括容器上的微服务和数据库的其他集成测试 compose 文件，可确保运行测试前相关数据始终重置为其初始状态。
 
 compose 应用程序运行后，如果运行 Visual Studio，可利用断点和异常。 或者可在 Visual Studio Team Services 或其他任何支持 Docker 容器的 CI/CD 系统中的 CI 管道中自动运行集成测试。
 

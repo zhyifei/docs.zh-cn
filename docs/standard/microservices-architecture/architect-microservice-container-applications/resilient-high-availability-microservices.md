@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bbad2f0843e05f05e90e2e83c7c35cd4f06ed5e0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cb78e98a01e413f31e6476dac77acdc4e5d4f78d
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服务中的复原和高可用性
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/23/2017
 -   **Splunk。** 官方网站。
     [*http://www.splunk.com*](http://www.splunk.com)
 
--   **EventSource 类**。 用于 Windows (ETW) 事件跟踪的 API [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
+-   **EventSource 类**。 用于 Windows (ETW) 事件跟踪的 API [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 
 

@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.workload: dotnetcore
-ms.openlocfilehash: a38c2e5ff5e11cecaa75b8cd678c362a857d7ebc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0428f93d4044fa0dd65a6f48ee425948fe052697
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 入门
 
@@ -30,8 +31,8 @@ ms.lasthandoff: 12/23/2017
 * [在 Visual Studio 2017 中使用 C# 和 .NET Core 生成类库](./tutorials/library-with-visual-studio.md) - 了解如何使用 Visual Studio 2017 生成用 C# 编写的类库。
 * [在 Visual Studio 2017 中使用 .NET Core 生成 Visual Basic Hello World 应用程序](./tutorials/vb-with-visual-studio.md) - 了解如何使用 Visual Basic 和 Visual Studio 2017 生成、调试和发布简单的 .NET Core 控制台应用程序。 
 * [在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 生成类库](./tutorials/vb-library-with-visual-studio.md) - 了解如何使用 Visual Studio 2017 生成用 Visual Basic 编写的类库。
-* [使用 C# 和 .NET Core 在 Windows 上开始 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) - 本[第 9 频道](https://channel9.msdn.com)视频演示了如何安装并使用 Microsoft 轻量级跨平台代码编辑器 [Visual Studio Code](https://www.visualstudio.com/products/code-vs) 在 .NET Core 中创建第一个控制台应用程序。
-* [开始使用 .NET Core 和 Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017)本[第 9 频道](https://channel9.msdn.com)视频演示了如何安装和使用 [Visual Studio 2017](https://www.visualstudio.com/)Microsoft 的功能完备的 IDE）在 .NET Core 中创建你的第一个跨平台控制台应用程序。
+* [使用 C# 和 .NET Core 在 Windows 上开始 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) - 本[第 9 频道](https://channel9.msdn.com)视频演示了如何安装并使用 Microsoft 轻量级跨平台代码编辑器 [Visual Studio Code](https://code.visualstudio.com/) 在 .NET Core 中创建第一个控制台应用程序。
+* [开始使用 .NET Core 和 Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017)本[第 9 频道](https://channel9.msdn.com)视频演示了如何安装和使用 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)Microsoft 的功能完备的 IDE）在 .NET Core 中创建你的第一个跨平台控制台应用程序。
 * [使用命令行开始 .NET Core](tutorials/using-with-xplat-cli.md) - 可以结合使用任何代码编辑器和 [.NET Core 跨平台命令行接口 (CLI)](tools/index.md)。
 
 有关受支持的 Windows 版本列表，请参阅 [Windows 开发的先决条件](windows-prerequisites.md)主题。
