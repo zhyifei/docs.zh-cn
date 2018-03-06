@@ -1,12 +1,9 @@
 ---
-title: "在 .NET Framework 中分析日期和时间字符串"
-ms.custom: 
-ms.date: 03/30/2017
+title: "如何：将字符串转换为 DateTime"
+description: "了解分析表示日期和时间的字符串以从日期和时间字符串创建 DateTime 的方法。"
+ms.date: 02/15/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,62 +16,85 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.assetid: 43bae51e-9b1d-41a6-a187-772c0d096d90
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6e3ef01abdb615b2850b5a9d07e1208ee22eda95
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a17c96a03a35fcc4eb12e188dbc79d8d48153fb7
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>分析 .NET 中的日期和时间字符串
-分析方法将日期和时间的字符串表示形式转换为相当的 <xref:System.DateTime> 对象。 <xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.TryParse%2A> 方法可转换日期和时间的多个常见表示形式中的任何一个。 <xref:System.DateTime.ParseExact%2A> 和 <xref:System.DateTime.TryParseExact%2A> 方法可转换符合日期和时间格式字符串指定的模式的字符串表示形式。 （请参见有关[标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)和[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)的主题。）  
+
+分析字符串以将其转换为 <xref:System.DateTime> 对象需要你指定有关如何以文本格式表示日期和时间的信息。 不同的区域性所使用的日、月和年的顺序也不尽相同。 某些时间表示方法使用 24 小时制，其他时间表示方法则会指定“AM”和“PM”。 某些应用程序仅需要日期。 其他应用程序仅需要时间。 还有其他应用程序需要同时指定日期和时间。 通过将字符串转换为 <xref:System.DateTime> 对象的方法，你将能够提供有关你预期的格式和你的应用程序需要的日期和时间元素的详细信息。 将文本正确转换为 <xref:System.DateTime> 需要执行三个子任务：
+
+1. 必须指定表示日期和时间的文本的预期格式。
+1. 可以指定日期时间格式的区域性。
+1. 可以指定如何以日期和时间格式设置文本表示方法中缺少的组成部分。
+
+<xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.TryParse%2A> 方法可转换日期和时间的多个常见表示方法。 <xref:System.DateTime.ParseExact%2A> 和 <xref:System.DateTime.TryParseExact%2A> 方法可转换符合日期和时间格式字符串指定的模式的字符串表示形式。 （如需详细信息，请参阅有关[标准日期和时间格式字符串](standard-date-and-time-format-strings.md)和[自定义日期和时间格式字符串](custom-date-and-time-format-strings.md)的文章。）
+
+
+当前的 <xref:System.Globalization.DateTimeFormatInfo> 对象提供对如何将文本解释为日期和时间的更好的控制。 <xref:System.Globalization.DateTimeFormatInfo> 的属性描述了日期和时间分隔符，以及月、日、年代的名称，还有“AM”和“PM”标志的格式。 当前线程区域性提供了表示当前区域性的 <xref:System.Globalization.DateTimeFormatInfo>。 如果你希望使用特定区域性或自定义设置，请指定分析方法的 <xref:System.IFormatProvider> 参数。 对于 <xref:System.IFormatProvider> 参数，应指定表示区域性的 <xref:System.Globalization.CultureInfo> 对象，或指定 <xref:System.Globalization.DateTimeFormatInfo> 对象。
+
+表示日期或时间的文本可能缺少某些信息。 例如，大多数人都会假定“3 月 12 日”这个日期表示当前年份。 同样，“2018 年 3 月”表示年份为 2018，月份为 3 月。 表示时间的文本通常仅包括小时、分钟和 AM/PM 标志。  分析方法通过使用合理的默认值处理此类缺少的信息：
+
+- 当仅存在时间时，日期部分将使用当前日期。
+- 当仅存在日期时，时间部分将是午夜。
+- 如果日期中未指定年份，则使用当前年份。
+- 如果未指定一个月中的第几天，则使用一个月中的第一天。
+
+如果字符串中存在日期，则它必须包括月份、某日或某年。 如果存在时间，则它必须包括小时和分钟或 AM/PM 标志。
+
+你可以指定 <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> 常量，以覆盖这些默认值。 使用该常量时，任何缺少的年、月或天属性将设置为值 `1`。 使用 <xref:System.DateTime.Parse%2A> 的[最后一个示例](#styles-example)对此行为进行了演示。
+
+除了日期和时间组成部分，日期和时间的字符串表示形式还可以包含指示时间与协调世界时 (UTC) 相差多少的偏移量。 例如，字符串“2/14/2007 5:32:00 -7:00”定义比 UTC 早七个小时的时间。 如果在时间的字符串表示形式中省略了偏移，分析方法返回 <xref:System.DateTime> 对象，它的 <xref:System.DateTime.Kind%2A> 属性设置为 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>。 如果指定了偏移，分析方法返回 <xref:System.DateTime> 对象，它的 <xref:System.DateTime.Kind%2A> 属性设置为 <xref:System.DateTimeKind.Local?displayProperty=nameWithType>，且值调整为采用计算机的本地时区。 可以通过结合使用 <xref:System.Globalization.DateTimeStyles> 值和分析方法来修改此行为。
   
- 分析受提供信息（如用于日期和时间分隔符的字符串，以及月、日和纪元的名称）的格式提供程序影响。 格式提供程序是当前的 <xref:System.Globalization.DateTimeFormatInfo> 对象，由当前线程区域性隐式提供或由分析方法的 <xref:System.IFormatProvider> 参数显式提供。 对于 <xref:System.IFormatProvider> 参数，应指定表示区域性的 <xref:System.Globalization.CultureInfo> 对象，或指定 <xref:System.Globalization.DateTimeFormatInfo> 对象。  
+格式提供程序还用于解释不明确的数字日期。 不清楚字符串“02/03/04”所表示的日期的哪些组成部分是月、日和年。 组成部分根据格式提供程序中相似日期格式的顺序进行解释。
+
+## <a name="parse"></a>Parse
+
+下面的示例说明了如何使用 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 方法将 `string` 转换为 <xref:System.DateTime>。 此示例使用与当前线程关联的区域性。 如果与当前区域性关联的 <xref:System.Globalization.CultureInfo> 无法分析输入字符串，则会抛出 <xref:System.FormatException>。
+
+> [!TIP]
+> 本文中的所有 C# 示例均在你的浏览器中运行。 按“运行”按钮查看输出。 你还可以对其进行编辑以自行实验。
+
+> [!NOTE]
+> 这些示例可在适用于 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) 和 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions) 的 GitHub 文档存储库中获取。 或者你可以通过适用于 [C#]((https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) 或 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip) 的 zip 文件格式下载该项目。
+
+[!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
+[!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
+
+你也可以显式定义分析字符串时将使用其格式设置约定的区域性。 指定 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回的一个标准 <xref:System.Globalization.DateTimeFormatInfo> 对象。 下面的示例使用格式提供程序将德语字符串分析为 <xref:System.DateTime>。 它创建了一个表示 `de-DE` 区域性的 <xref:System.Globalization.CultureInfo>。 `CultureInfo` 对象可以确保成功分析此特定的字符串。 这会排除处于 <xref:System.Threading.Thread.CurrentThread> 的 <xref:System.Threading.Thread.CurrentCulture> 中的任何设置。  
   
- 要分析的日期的字符串表示形式必须包含月份以及至少日或年。 时间的字符串表示形式必须包含小时以及至少分钟或 AM/PM 指示符。 但是，分析会在可能时为省略的组成部分提供默认值。 缺失日期默认为当前日期，缺失年份默认为当前年份，缺失的月中几号默认为月的第一天，缺失时间默认值为午夜。  
-  
- 如果字符串表示形式仅指定时间，分析方法返回 <xref:System.DateTime> 对象，它的 <xref:System.DateTime.Year%2A>、<xref:System.DateTime.Month%2A> 和 <xref:System.DateTime.Day%2A> 属性设置为 <xref:System.DateTime.Today%2A> 属性的相应值。 不过，如果在分析方法中指定了 <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> 常量，生成的年、月和日属性值设置为 `1`。  
-  
- 除了日期和时间组成部分，日期和时间的字符串表示形式还可以包含指示时间与协调世界时 (UTC) 相差多少的偏移量。 例如，字符串“2/14/2007 5:32:00 -7:00”定义比 UTC 早七个小时的时间。 如果在时间的字符串表示形式中省略了偏移，分析方法返回 <xref:System.DateTime> 对象，它的 <xref:System.DateTime.Kind%2A> 属性设置为 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>。 如果指定了偏移，分析方法返回 <xref:System.DateTime> 对象，它的 <xref:System.DateTime.Kind%2A> 属性设置为 <xref:System.DateTimeKind.Local>，且值调整为采用计算机的本地时区。 可以修改此行为，具体是结合使用 <xref:System.Globalization.DateTimeStyles> 常量和分析方法。  
-  
- 格式提供程序还用于解释不明确的数字日期。 例如，不清楚字符串“02/03/04”所表示的日期的哪些组成部分是月、日和年。 在这种情况下，组成部分根据格式提供程序中相似日期格式的顺序进行解释。  
-  
-## <a name="parse"></a>Parse  
- 下面的代码示例展示了如何使用 Parse 方法，将字符串转换为 DateTime。 此示例使用与当前线程关联的区域性执行分析。 如果与当前区域性关联的 <xref:System.Globalization.CultureInfo> 无法分析输入字符串，则会抛出 <xref:System.FormatException>。  
-  
- [!code-csharp[Parsing.DateAndTime#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example.cs#1)]
- [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example.vb#1)]  
-  
- 还可以指定设置为对象定义的区域性之一的 CultureInfo，也可以指定 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回的标准 <xref:System.Globalization.DateTimeFormatInfo> 对象之一。 下面的代码示例使用格式提供程序将德语字符串分析为 DateTime。 定义和传递的是表示 de-DE 区域性的 CultureInfo，其中字符串正在分析中，以确保成功分析此特定字符串。 这会排除 CurrentThread 的 CurrentCulture 中的任何设置。  
-  
- [!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example2.cs#2)]
- [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example2.vb#2)]  
-  
- 不过，虽然可以使用 <xref:System.DateTime.Parse%2A> 方法重载指定自定义格式提供程序，但此方法不支持使用非标准格式提供程序。 若要分析非标准格式的日期和时间，请改用 <xref:System.DateTime.ParseExact%2A> 方法。  
-  
- 下面的代码示例使用 <xref:System.Globalization.DateTimeStyles> 枚举，指定不得将字符串未定义字段的当前日期和时间信息添加到 DateTime。  
-  
- [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example3.cs#3)]
- [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example3.vb#3)]  
-  
-## <a name="parseexact"></a>ParseExact  
- <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 方法将符合指定字符串模式的字符串转换为 DateTime 对象。 如果传递到此方法的字符串未采用指定格式，将会抛出 <xref:System.FormatException>。 可以指定一种标准日期和时间格式说明符或自定义日期和时间格式说明符的有限组合。 使用自定义格式说明符可以构造自定义识别字符串。 有关说明符的说明，请参见有关[标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)和[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)的主题。  
-  
- <xref:System.DateTime.ParseExact%2A> 方法的每个重载还包含 <xref:System.IFormatProvider> 参数，通常用于提供有关字符串格式设置的区域性专用信息。 通常情况下，此 <xref:System.IFormatProvider> 对象为 <xref:System.Globalization.CultureInfo> 对象，表示标准区域性或 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象。 不过，与其他日期和时间分析函数不同，此方法还支持 <xref:System.IFormatProvider>，用于定义非标准日期和时间格式。  
-  
- 在下面的代码示例中，向 ParseExact 方法传递了要分析的字符串对象，后面依次跟的是格式说明符和 CultureInfo 对象。 此 ParseExact 方法只能分析在 en-US 区域性中采用长日期模式的字符串。  
-  
- [!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Parsing.DateAndTime/cs/Example4.cs#4)]
- [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Parsing.DateAndTime/vb/Example4.vb#4)]  
-  
+[!code-csharp-interactive[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
+[!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
+
+不过，虽然可以使用 <xref:System.DateTime.Parse%2A> 方法重载指定自定义格式提供程序，但此方法不支持分析非标准格式。 若要分析非标准格式的日期和时间，请改用 <xref:System.DateTime.ParseExact%2A> 方法。  
+
+<a name="styles-example"></a>下面的示例使用 <xref:System.Globalization.DateTimeStyles> 枚举，指定不得将当前日期和时间信息添加到未指定字段的 <xref:System.DateTime>。  
+
+[!code-csharp-interactive[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
+[!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
+ 
+## <a name="parseexact"></a>ParseExact
+
+<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 方法将符合其中一个指定字符串模式的字符串转换为 <xref:System.DateTime> 对象。 将未采用其中一种指定格式的字符串传递给此方法时，会引发 <xref:System.FormatException>。 可以指定一种标准日期和时间格式说明符或自定义格式说明符的组合。 使用自定义格式说明符可以构造自定义识别字符串。 有关说明符的说明，请参见有关[标准日期和时间格式字符串](standard-date-and-time-format-strings.md)和[自定义日期和时间格式字符串](custom-date-and-time-format-strings.md)的主题。  
+
+在下面的示例中，向 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 方法传递了一个要分析的字符串对象，后跟一个格式说明符，再后跟一个 <xref:System.Globalization.CultureInfo> 对象。 此 <xref:System.DateTime.ParseExact%2A> 方法只能分析在 `en-US` 区域性中遵循长日期模式的字符串。  
+
+[!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
+[!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
+
+<xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每个重载还包含 <xref:System.IFormatProvider> 参数，用于提供有关字符串格式设置的区域性专用信息。 此 <xref:System.IFormatProvider> 对象为 <xref:System.Globalization.CultureInfo> 对象，表示标准区域性或 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Globalization.DateTimeFormatInfo> 对象。  <xref:System.DateTime.ParseExact%2A> 还使用定义一个或多个自定义日期和时间格式的其他字符串或字符串数组参数。  
+
 ## <a name="see-also"></a>请参阅  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
- [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)
+ [分析字符串](parsing-strings.md)  
+ [格式设置类型](formatting-types.md)  
+ [.NET 中的类型转换](type-conversion.md)  
+ [标准日期和时间格式](standard-date-and-time-format-strings.md)  
+ [自定义日期和时间格式字符串](custom-date-and-time-format-strings.md)
