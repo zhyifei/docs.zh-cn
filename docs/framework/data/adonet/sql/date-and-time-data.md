@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="date-and-time-data"></a>日期和时间数据
 SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 新的数据类型包括单独的日期和时间类型以及具有更大范围、更高精度和更强时区感知能力的扩展数据类型。 从 .NET Framework 3.5 Service Pack (SP) 1 开始，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 完全支持 SQL Server 2008 数据库引擎的所有新功能。 您必须安装 .NET Framework 3.5 SP1（或更高版本）才能将这些新功能与 SqlClient 一起使用。  
@@ -60,7 +62,7 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
  有关 SQL Server 如何解释日期和时间数据的详细信息，请参阅[使用日期和时间数据](http://go.microsoft.com/fwlink/?LinkID=98361)SQL Server 2008 联机丛书中。  
   
 ## <a name="datetime-data-types-and-parameters"></a>日期/时间数据类型和参数  
- 通过使用 <xref:System.Data.SqlClient.SqlParameter> 枚举之一，可以指定 <xref:System.Data.SqlDbType> 的数据类型。 <xref:System.Data.SqlDbType> 中已添加了下面的枚举，以支持新的日期和时间数据类型。  
+ <xref:System.Data.SqlDbType> 中已添加了下面的枚举，以支持新的日期和时间数据类型。  
   
 -   `SqlDbType.Date`  
   
@@ -69,7 +71,12 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
 -   `SqlDbType.DateTime2`  
   
 -   `SqlDbType.DateTimeOffSet`  
-  
+
+你可以指定的数据类型<xref:System.Data.SqlClient.SqlParameter>使用之一前面<xref:System.Data.SqlDbType>枚举。 
+
+> [!NOTE]
+> 无法设置`DbType`属性`SqlParameter`到`SqlDbType.Date`。
+
  也可以通过将 <xref:System.Data.SqlClient.SqlParameter> 对象的 <xref:System.Data.SqlClient.SqlParameter.DbType%2A> 属性设置为特定的 `SqlParameter` 枚举值，按照通常的方式来指定 <xref:System.Data.DbType> 的类型。 <xref:System.Data.DbType> 中已添加了下面的枚举值，以支持 `datetime2` 和 `datetimeoffset` 数据类型：  
   
 -   DbType.DateTime2  

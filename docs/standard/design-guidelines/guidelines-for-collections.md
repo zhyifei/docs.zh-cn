@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="guidelines-for-collections"></a>集合准则
 专门用于操作具有一些公共特征的对象的组的任何类型可被视为集合。 它几乎始终适合于要实现此类类型<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>，因此在本部分中我们仅考虑实现一个或两个接口要集合的类型。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/23/2017
   
  **X 不**使用<xref:System.Collections.ArrayList>或<xref:System.Collections.Generic.List%601>公共 Api 中。  
   
- 这些类型是用于在内部实现中，不在公共 Api 而设计的数据结构。 `List<T>`已针对性能和但代价是 cleanness 的 Api 和灵活性的电源优化。 例如，如果返回`List<T>`，曾经无法在客户端代码将修改的集合时接收通知。 此外，`List<T>`公开多个成员，如<xref:System.Collections.Generic.List%601.BinarySearch%2A>，，不是有用或适用于许多方案。 以下两个部分介绍类型 （抽象） 专为在公共 Api 中使用。  
+ 这些类型是用于在内部实现中，不在公共 Api 而设计的数据结构。 `List<T>` 已针对性能和但代价是 cleanness 的 Api 和灵活性的电源优化。 例如，如果返回`List<T>`，曾经无法在客户端代码将修改的集合时接收通知。 此外，`List<T>`公开多个成员，如<xref:System.Collections.Generic.List%601.BinarySearch%2A>，，不是有用或适用于许多方案。 以下两个部分介绍类型 （抽象） 专为在公共 Api 中使用。  
   
  **X 不**使用`Hashtable`或`Dictionary<TKey,TValue>`公共 Api 中。  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/23/2017
   
  **✓ 执行**使用<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>的一个子类`ReadOnlyCollection<T>`，或在极少数情况下`IEnumerable<T>`为属性或返回值表示的只读集合。  
   
- 通常情况下，首选`ReadOnlyCollection<T>`。 如果不满足某些要求 (例如，集合必须实现`IList`)，通过实现使用自定义集合`IEnumerable<T>`， `ICollection<T>`，或`IList<T>`。 如果实现自定义的只读集合，实现`ICollection<T>.ReadOnly`返回 false。  
+ 通常情况下，首选`ReadOnlyCollection<T>`。 如果不满足某些要求 (例如，集合必须实现`IList`)，通过实现使用自定义集合`IEnumerable<T>`， `ICollection<T>`，或`IList<T>`。 如果实现自定义的只读集合，实现`ICollection<T>.IsReadOnly`返回`true`。  
   
  在其中您可以确认你将想要支持的唯一情形只进迭代的情况下，你可以只需使用`IEnumerable<T>`。  
   

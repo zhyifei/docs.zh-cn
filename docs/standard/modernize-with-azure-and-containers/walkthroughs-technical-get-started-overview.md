@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ead28fe1ffe1e002af73642a1c3b2e72479520f4
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术获取启动的概述 
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/06/2018
 
 在本演练中，你可以浏览初始实施中的两个示例旧版应用程序。 这两个示例应用具有单一的体系结构，并使用传统的 ASP.NET 创建的。 一个应用程序基于 ASP.NET 4.x MVC;第二个应用程序基于 ASP.NET 4.x Web 窗体。 这两个应用程序都位于[eShopModernizing GitHub 存储库](https://github.com/dotnet-architecture/eShopModernizing)。
 
-你可以化这两个示例应用，方式类似于化经典[Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) (WCF) 应用程序将使用作为桌面应用程序。 有关示例，请参阅[eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms)。
+你可以化这两个示例应用，方式类似于化经典[Windows Communication Foundation](../../framework/wcf/whats-wcf.md) (WCF) 应用程序将使用作为桌面应用程序。 有关示例，请参阅[eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms)。
 
 ### <a name="goals"></a>目标
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/06/2018
 
 > ![简单的体系结构方案中的原始的旧版应用程序](./media/image5-1.png)
 >
-> **图 5-1。** 简单的体系结构方案中的原始的旧版应用程序
+> **图 5-1**。 简单的体系结构方案中的原始的旧版应用程序
 
 从业务域角度来看，这两个应用程序管理功能提供相同的目录。 电子商店企业团队的成员将使用应用来查看和编辑产品目录。 图 5-2 显示初始应用程序屏幕快照。
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/06/2018
 
 此演练的目的是显示 containerizing 现有.NET Framework 应用程序的几个选项。 你可以：
 
--   通过使用化你的应用程序[Visual Studio 2017 Tools for Docker](https://docs.microsoft.com/dotnet/core/docker/visual-studio-tools-for-docker) （Visual Studio 2017 年 1 或更高版本）。
+-   通过使用化你的应用程序[Visual Studio 2017 Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) （Visual Studio 2017 年 1 或更高版本）。
 
 -   通过手动添加化你的应用程序[Dockerfile](https://docs.docker.com/engine/reference/builder/)，，然后使用[Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)。
 
@@ -163,7 +163,7 @@ ms.lasthandoff: 01/06/2018
 
 ![从 Visual Studio Team Services 中的 CI/CD 管道将部署到 Azure VM](./media/image5-6.png)
 
-> **图 5-6。** 从 Visual Studio Team Services 中的 CI/CD 管道将部署到 Azure VM
+> **如 5-6**。 从 Visual Studio Team Services 中的 CI/CD 管道将部署到 Azure VM
 
 ### <a name="azure-vms-for-windows-containers"></a>Windows 容器的的 azure Vm
 

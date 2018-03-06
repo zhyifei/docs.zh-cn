@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db9f0ddd875df1f84bcc5681ee1383b0185f8b7e
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 1140a18aba685f3415d7c599d1b76648bf9924e7
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="references"></a>参考资料
 - **为服务器应用选择 .NET Core 或 .NET Framework**  
-<https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server>
+<https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
 [下一个] (modern-web-applications-characteristics.md)

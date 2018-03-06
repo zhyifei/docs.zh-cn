@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4cb85c9dbcc7586510db9947d0151e3856964ef4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adcb9d2352022cc94238296562b3eb7677bdf20b
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>云优化应用程序如何呢？
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 创建新应用程序不使用微服务也有意义。 有许多新的和仍现代方案在其中一种微服务基于方法可能会超出你的需求。 在某些情况下，你可能只是想要创建一个更简单的整体 web 应用程序，或将粗粒度的服务添加到 N 层应用程序。 在这些情况下，你仍可以完全使用云的类似 Azure App Service 所提供的 PaaS 功能。 你仍可以限制到减少维护工作。
 
-此外，因为开发新代码在云优化方案中 （为完整的应用程序或部分子系统），当您创建新的代码，你应使用较新版本的.NET ([.NET 核心](https://docs.microsoft.com/dotnet/core/)和[ASP.NET Core](https://docs.microsoft.com/aspnet/core/)，尤其是)。 这是如果因为.NET 核心是一个框架，精益和快速创建微服务和容器尤其如此。 你会获得小的内存需求量和在容器中，快速开始，你的应用程序将高性能。 此方法十分适合与需求微服务和容器，并获得跨平台框架能够在 Linux、 Windows Server 和 Mac (Mac 开发环境) 上运行同一应用程序的优点。
+此外，因为开发新代码在云优化方案中 （为完整的应用程序或部分子系统），当您创建新的代码，你应使用较新版本的.NET ([.NET 核心](../../../core/index.md)和[ASP.NET Core](/aspnet/core/)，尤其是)。 这是如果因为.NET 核心是一个框架，精益和快速创建微服务和容器尤其如此。 你会获得小的内存需求量和在容器中，快速开始，你的应用程序将高性能。 此方法十分适合与需求微服务和容器，并获得跨平台框架能够在 Linux、 Windows Server 和 Mac (Mac 开发环境) 上运行同一应用程序的优点。
 
 ## <a name="cloud-native-applications-with-cloud-optimized-applications"></a>与云优化应用程序的云本机应用程序
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/23/2017
 
 微服务体系结构已变得分布式和大型或复杂的任务关键型应用程序基于自治服务形式的多个独立子系统的首选的方法。 在基于微服务的体系结构，应用程序生成为一个服务可以是独立开发、 测试、 版本控制的部署，并且扩展的集合。 这可能包括任何自治的每个微服务相关的数据库。
 
-了解可以使用.NET 核心的实现的微服务体系结构的详细信息，请参阅可下载 PDF 电子书[.NET 微服务： 为容器化的.NET 应用程序的体系结构](https://aka.ms/microservicesebook)。 本指南也是可用[联机](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)。
+了解可以使用.NET 核心的实现的微服务体系结构的详细信息，请参阅可下载 PDF 电子书[.NET 微服务： 为容器化的.NET 应用程序的体系结构](https://aka.ms/microservicesebook)。 本指南也是可用[联机](../../microservices-architecture/index.md)。
 
 但即使在微服务提供功能强大的功能独立于部署、 强子系统边界和技术多样性的方案中的它们也会引发许多新的挑战。 与分布式应用程序开发，例如分片和独立的数据模型; 相关面临的挑战实现弹性微服务; 之间的通信需要考虑最终一致性; 需要和操作的复杂性。 微服务引入更高级别的相比传统的整体应用程序的复杂性。
 

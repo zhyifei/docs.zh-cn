@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 76343b75f09a3aa007a955b0ee869d1dcf1146aa
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 812b953935d17320d83e3752d8c7fd600af15533
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 数据类型映射
 SQL Server 和 .NET Framework 基于不同的类型系统。 例如，.NET Framework <xref:System.Decimal> 结构的最大小数位数为 28，而 SQL Server 的 decimal 和 numeric 数据类型的最大小数位数为 38。 为了在读取和写入数据时维护数据的完整性，<xref:System.Data.SqlClient.SqlDataReader> 将公开用于返回 <xref:System.Data.SqlTypes> 的对象的 SQL Server 特定的类型化访问器方法以及用于返回 .NET Framework 类型的访问器方法。 SQL Server 类型和 .NET Framework 类型也可通过 <xref:System.Data.DbType> 和 <xref:System.Data.SqlDbType> 类中的枚举表示，当您指定 <xref:System.Data.SqlClient.SqlParameter> 数据类型时可以使用这些枚举。  
@@ -31,7 +33,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统。 例如，.NET Frame
 |binary|Byte[]|<xref:System.Data.SqlDbType.VarBinary>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
 |bit|Boolean|<xref:System.Data.SqlDbType.Bit>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBoolean%2A>|<xref:System.Data.DbType.Boolean>|<xref:System.Data.SqlClient.SqlDataReader.GetBoolean%2A>|  
 |char|String<br /><br /> Char[]|<xref:System.Data.SqlDbType.Char>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiStringFixedLength>,<br /><br /> <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
-|date<br /><br /> （SQL Server 2008 及更高版本）|DateTime|<xref:System.Data.SqlDbType.Date>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.Date>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
+|日期<sup>1</sup><br /><br /> （SQL Server 2008 及更高版本）|DateTime|<xref:System.Data.SqlDbType.Date> <sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.Date> <sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetime|DateTime|<xref:System.Data.SqlDbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetime2<br /><br /> （SQL Server 2008 及更高版本）|DateTime|<xref:System.Data.SqlDbType.DateTime2>|无|<xref:System.Data.DbType.DateTime2>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetimeoffset<br /><br /> （SQL Server 2008 及更高版本）|DateTimeOffset|<xref:System.Data.SqlDbType.DateTimeOffset>|无|<xref:System.Data.DbType.DateTimeOffset>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|  
@@ -50,7 +52,7 @@ SQL Server 和 .NET Framework 基于不同的类型系统。 例如，.NET Frame
 |smalldatetime|DateTime|<xref:System.Data.SqlDbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |smallint|Int16|<xref:System.Data.SqlDbType.SmallInt>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlInt16%2A>|<xref:System.Data.DbType.Int16>|<xref:System.Data.SqlClient.SqlDataReader.GetInt16%2A>|  
 |smallmoney|Decimal|<xref:System.Data.SqlDbType.SmallMoney>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlMoney%2A>|<xref:System.Data.DbType.Decimal>|<xref:System.Data.SqlClient.SqlDataReader.GetDecimal%2A>|  
-|sql_variant|Object*|<xref:System.Data.SqlDbType.Variant>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A> *|<xref:System.Data.DbType.Object>|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A> *|  
+|sql_variant|对象<sup>2</sup>|<xref:System.Data.SqlDbType.Variant>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A> <sup>2</sup>|<xref:System.Data.DbType.Object>|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A> <sup>2</sup>|  
 |文本|String<br /><br /> Char[]|<xref:System.Data.SqlDbType.Text>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |时间<br /><br /> （SQL Server 2008 及更高版本）|TimeSpan|<xref:System.Data.SqlDbType.Time>|无|<xref:System.Data.DbType.Time>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |时间戳|Byte[]|<xref:System.Data.SqlDbType.Timestamp>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
@@ -60,7 +62,8 @@ SQL Server 和 .NET Framework 基于不同的类型系统。 例如，.NET Frame
 |varchar|String<br /><br /> Char[]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|无|  
   
- \*如果你知道的基础类型，请使用特定的类型化访问器`sql_variant`。  
+<sup>1</sup>无法设置`DbType`属性`SqlParameter`到`SqlDbType.Date`。  
+<sup>2</sup>使用特定的类型化访问器，如果你知道的基础类型`sql_variant`。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-books-online-reference"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 联机丛书参考  
  有关详细信息[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]数据类型，请参阅[数据类型 （数据库引擎）](http://go.microsoft.com/fwlink/?LinkID=107468)。  

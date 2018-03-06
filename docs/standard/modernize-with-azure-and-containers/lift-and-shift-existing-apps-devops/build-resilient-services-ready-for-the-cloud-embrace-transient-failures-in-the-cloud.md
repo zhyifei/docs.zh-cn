@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aaf1ef968600a56d91267c6c12efa90d99446dd7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>构建可复原的服务供云： 采用在云中的暂时性故障 
 
@@ -19,7 +19,7 @@ ms.lasthandoff: 01/19/2018
 
 至少，实施基于软件的模型的复原能力，而不是基于硬件的模型时，你的应用程序可供云。 云应用程序必须采用肯定会发生部分故障。 你需要设计或部分重构你的应用程序，如果您想要获得预期的部分故障中恢复。 它应设计为处理部分故障，如暂时性网络中断和节点或在云中发生故障的 Vm。 正在移到不同 orchestrator 群集内节点的甚至容器可能会导致应用程序中的间歇性短失败。
 
-## <a name="handling-partial-failure"></a>处理部分失败
+## <a name="handling-partial-failure"></a>处理部分失败错误
 
 在基于云的应用程序，没有部分的失败的受始终存在风险。 例如，单个网站实例或容器可能会失败，或者它可能不可用或没有响应。 在短时间。 或者，单个 VM 或服务器可能会崩溃。
 
@@ -47,15 +47,13 @@ ms.lasthandoff: 01/19/2018
 
 -   **实现弹性通信来处理部分失败**
 
-    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies)
+    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
 -   **实体框架连接复原和重试逻辑 （6 和更高版本）**
 
     [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **暂时性故障处理应用程序块**
-
-<!-- -->
 
 -   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 

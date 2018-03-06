@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
-ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>对于 Docker 应用程序的内部循环开发工作流
 
@@ -123,7 +123,7 @@ DockerFile，还需要指示 Docker 侦听到将在运行时 （如端口 80） 
 
 有其他行的这样 Docker 就知道如何运行该应用程序可以在具体取决于你使用的，语言/框架 DockerFile 中添加的配置。 例如，你需要使用的入口点行\["dotnet"，"MyCustomMicroservice.dll"\]运行.NET 核心应用程序中，虽然您可以有多个不同版本，具体取决于生成并运行你的服务的方法。 如果你正在使用的 SDK 和 dotnet CLI 生成并运行.NET 应用程序，则将为略有不同。 底部行是入口点行加上其他行将无法为应用程序选择的语言/平台而异。
 
-**详细信息** 有关构建.NET Core 应用程序的 Docker 映像的信息，请转到<https://docs.microsoft.com/dotnet/articles/core/docker/building-net-docker-images>。
+**详细信息** 有关构建.NET Core 应用程序的 Docker 映像的信息，请转到<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
 
 若要了解有关生成你自己的映像的详细信息，请转到[https://docs.docker.com/engine/ \教程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
 
@@ -258,7 +258,7 @@ Visual Studio Code 支持调试 Docker，如果你使用 Node.js 和其他平台
 
 你还可以调试在 Docker 中的.NET Core 容器时使用 Visual Studio 中下, 一节中所述。
 
-**详细信息：** 若要了解有关调试 Node.js Docker 容器的详细信息，请转到<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/ \用户\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
+**详细信息：** 若要了解有关调试 Node.js Docker 容器的详细信息，请转到<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/ \ 用户\_ed/2016年/02/27 /visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
 
 
 >[!div class="step-by-step"]
