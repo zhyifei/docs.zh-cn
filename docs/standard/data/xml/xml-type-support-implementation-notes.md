@@ -9,21 +9,24 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5e99573fc3a82db7798426172a13a78e10c65636
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 类型支持实现说明
 本主题介绍一些要注意的实现细节。  
   
 ## <a name="list-mappings"></a>列表映射  
- <xref:System.Collections.IList>， <xref:System.Collections.ICollection>， <xref:System.Collections.IEnumerable>，**类型 []**，和<xref:System.String>类型用于表示 XML 架构定义语言 (XSD) 列表类型。  
+ <xref:System.Collections.IList>、<xref:System.Collections.ICollection>、<xref:System.Collections.IEnumerable>、Type[] 和 <xref:System.String> 类型用于表示 XML 架构定义语言 (XSD) 列表类型。  
   
 ## <a name="union-mappings"></a>联合映射  
  联合类型使用 <xref:System.Xml.Schema.XmlAtomicValue> 或 <xref:System.String> 类型表示。 因此，源类型或目标类型必须始终为 <xref:System.String> 或 <xref:System.Xml.Schema.XmlAtomicValue>。  
@@ -54,5 +57,5 @@ ms.lasthandoff: 10/18/2017
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI 和 System.Uri  
  表示相对 URI 的 `xs:anyURI` 的实例映射到 <xref:System.Uri> 时，<xref:System.Uri> 对象没有基 URI。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

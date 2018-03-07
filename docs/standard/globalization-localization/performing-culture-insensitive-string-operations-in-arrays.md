@@ -13,22 +13,25 @@ helpviewer_keywords:
 - arrays [.NET Framework], culture-insensitive string operations
 - comparer parameter
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b4e040ed379cdbf43fbe8b2c4379fdd4dc781f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d273fbaa792092f5ea56bfa59392794b6728ed67
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>在数组中执行不区分区域性的字符串操作
-重载的<xref:System.Array.Sort%2A?displayProperty=nameWithType>和<xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>方法执行区分区域性的排序通过默认使用<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>属性。 返回由这些方法的区分区域性的结果可能会因由于排序顺序不同的区域性。 若要消除区分区域性的行为，请使用接受此方法的重载之一`comparer`参数。 `comparer`参数指定<xref:System.Collections.IComparer>比较数组中的元素时要使用的实现。 对于参数，指定使用的自定义固定的比较器类<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>。 中的"使用 SortedList 类"子主题提供自定义固定的比较器类的一个示例[集合中的执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)主题。  
+默认情况下，<xref:System.Array.Sort%2A?displayProperty=nameWithType> 和 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法重载使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性执行区域性敏感型排序。 由于排序顺序不同，因此这些方法返回的区域性敏感型结果可能会因区域性而异。 若要消除区域性敏感型行为，请使用需要使用 `comparer` 参数的此方法重载之一。 `comparer` 参数指定要在比较数组元素时使用的 <xref:System.Collections.IComparer> 实现。 对于参数，指定使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的自定义固定比较器类。 [在集合中执行非区域性敏感型字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)主题的“使用 SortedList 类”子主题提供了自定义固定比较器类的示例。  
   
- **请注意**传递**CultureInfo.InvariantCulture**与比较方法并执行不区分区域性的比较。 但是，这不会导致对文件路径、注册表项、环境变量等进行非语义比较。 也不支持基于比较结果的安全决策。 对于非语言比较或结果基于安全决策的支持，应用程序应使用的比较方法，接受<xref:System.StringComparison>值。 应用程序应传递<xref:System.StringComparison.Ordinal>。  
+ **注意**：向比较方法传递 CultureInfo.InvariantCulture 确实会执行非区域性敏感型比较。 但是，这不会导致对文件路径、注册表项、环境变量等进行非语义比较。 也不支持基于比较结果的安全决策。 若要进行非语义比较或支持基于结果的安全决策，应用应使用接受 <xref:System.StringComparison> 值的比较方法。 然后，应用应传递 <xref:System.StringComparison.Ordinal>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
  <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>  
  <xref:System.Collections.IComparer>  

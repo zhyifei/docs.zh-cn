@@ -9,11 +9,14 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
-ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -29,21 +32,21 @@ ms.lasthandoff: 10/18/2017
 
 随 .NET Framework 一起提供的原始 ASP.NET 实现。
 
-有时 ASP.NET 是一个涵盖性术语，指包含 ASP.NET Core 在内的两个 ASP.NET 实现。 该术语在任何给定实例中的含义取决于上下文。 请参阅到 ASP.NET 4.x 在你想要使它清除你不使用的 ASP.NET 表示这两个实现。 
+有时 ASP.NET 是一个涵盖性术语，指包含 ASP.NET Core 在内的两个 ASP.NET 实现。 该术语在任何给定实例中的含义取决于上下文。 若要指明不要使用 ASP.NET 表示这两种实现，请参考 ASP.NET 4.x。 
 
-请参阅[ASP.NET 文档](/aspnet/#pivot=aspnet)。
+请参阅 [ASP.NET 文档](/aspnet/#pivot=aspnet)。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 .NET Core 上生成的跨平台、高性能、 开放源 ASP.NET 实现。
 
-请参阅[ASP.NET 核心文档](/aspnet/#pivot=core)。
+请参阅 [ASP.NET Core 文档](/aspnet/#pivot=core)。
 
 ## <a name="assembly"></a>程序集
 
-.dll文件，其中包含可由应用程序或其他程序集调用的 API 集合。
+.dll/.exe 文件，其中包含一组可由应用或其他程序集调用的 API。
 
-.NET 程序集是一个类型集合。 程序集包括接口、类、结构、枚举和委托。  有时，项目的 bin 文件夹中的程序集被称为二进制文件。 另请参阅[库](#library)。
+程序集可以包括接口、类、结构、枚举和委托等类型。 有时，项目的 bin 文件夹中的程序集被称为二进制文件。 另请参阅[库](#library)。
 
 ## <a name="clr"></a>CLR
 
@@ -207,7 +210,7 @@ UWP 是 .NET Native 支持的首个应用程序框架。 现在，我们支持�
 
 NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip 文件，其中具有一个或多个名称相同的程序集以及作者姓名等其他元数据。
 
-.Zip 文件具有 .nupkg扩展名且可能包含用于多个框架和版本的资产（如 .dll 文件和 .xml 文件）。 在应用或库中安装时，会根据应用或库指定的目标框架选择相应的资产。 定义接口的资产位于 ref 文件夹，而定义实现的资产位于 lib文件夹。
+.zip 文件的扩展名为 .nupkg，且可以包含在多个目标框架和版本中使用的资产（如 .dll 文件和 .xml 文件）。 在应用或库中安装时，会根据应用或库指定的目标框架选择相应的资产。 定义接口的资产位于 ref 文件夹，而定义实现的资产位于 lib文件夹。
 
 ## <a name="platform"></a>平台
 

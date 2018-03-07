@@ -1,21 +1,19 @@
 ---
 title: "C# 和 Visual Studio Code 入门 - C# 指南"
 description: "了解如何使用 Visual Studio Code 创建和调试首个 C# .NET Core 应用。"
-keywords: "C#, 入门, 获取, 安装, Visual Studio Code, 跨平台"
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.workload: dotnetcore
-ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0c37040220bb7f38cdd75176bb9ed2a2199b7096
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 和 Visual Studio Code 入门
 
@@ -25,7 +23,7 @@ ms.lasthandoff: 12/23/2017
 
 1. 安装 [Visual Studio Code](https://code.visualstudio.com/)。
 2. 获取 [.NET Core SDK](https://www.microsoft.com/net/download/core)。
-3. 从 Visual Studio Code 应用商店安装 [C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。
+3. 安装 Visual Studio Code 的 [C# 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)。 若要详细了解如何在 Visual Studio Code 上安装扩展，请访问 [VS Code 扩展市场](https://code.visualstudio.com/docs/editor/extension-gallery)。
 
 ## <a name="hello-world"></a>Hello World
 

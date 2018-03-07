@@ -19,15 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>复合格式设置
 .NET Framework 复合格式设置功能使用对象列表和复合格式字符串作为输入。 复合格式字符串由固定文本和索引占位符混和组成，其中索引占位符称为格式项，对应于列表中的对象。 格式设置操作产生的结果字符串由原始固定文本和列表中对象的字符串表示形式混和组成。  
@@ -87,15 +90,15 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>格式字符串组件  
- 可选的*格式字符串*组件是适合正在设置格式的对象类型的格式字符串。 指定标准或自定义数字格式字符串是否相应的对象是数值，标准或自定义日期和时间格式字符串对应的对象是否<xref:System.DateTime>对象，或[枚举格式字符串](../../../docs/standard/base-types/enumeration-format-strings.md)如果相应的对象是一个枚举值。 如果不指定 *formatString*，则对数字、日期和时间或者枚举类型使用常规（“G”）格式说明符。 如果指定 *formatString*，则需要使用冒号。  
+ 可选的*格式字符串*组件是适合正在设置格式的对象类型的格式字符串。 如果相应对象是数值，指定标准或自定义数字格式字符串；如果相应对象是 <xref:System.DateTime> 对象，指定标准或自定义日期和时间格式字符串；或者，如果相应对象是枚举值，指定[枚举格式字符串](../../../docs/standard/base-types/enumeration-format-strings.md)。 如果不指定 *formatString*，则对数字、日期和时间或者枚举类型使用常规（“G”）格式说明符。 如果指定 *formatString*，则需要使用冒号。  
   
  下表列出了 .NET Framework 类库中支持预定义的格式字符串集的类型或类型的类别，并提供指向列出了支持的格式字符串的主题的链接。 请注意，字符串格式化是一个可扩展的机制，可使用该机制定义所有现有类型的新的格式字符串，并定义受应用程序定义的类型支持的格式字符串集。 有关详细信息，请参阅 <xref:System.IFormattable> 和 <xref:System.ICustomFormatter> 接口主题。  
   
-|类型或类型类别|请参阅|  
+|类型或类型类别|查看|  
 |---------------------------|---------|  
-|日期和时间类型（<xref:System.DateTime>，<xref:System.DateTimeOffset>）|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|日期和时间类型（<xref:System.DateTime>，<xref:System.DateTimeOffset>）|[标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |枚举类型（所有派生自 <xref:System.Enum?displayProperty=nameWithType> 的类型）|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|数值类型（<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、 <xref:System.UInt32>、<xref:System.UInt64>）|[标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|数值类型（<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、 <xref:System.UInt32>、<xref:System.UInt64>）|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[标准 TimeSpan 格式字符串](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -126,7 +129,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  如果要设置格式的值为 `null`，则将返回空字符串 ("")。  
   
-2.  如果 <xref:System.ICustomFormatter> 实现可用，则运行时将调用其 <xref:System.ICustomFormatter.Format%2A> 方法。 向该方法传递在格式项的*formatString*值，如果存在，或`null`如果不是，连同<xref:System.IFormatProvider>实现。  
+2.  如果 <xref:System.ICustomFormatter> 实现可用，则运行时将调用其 <xref:System.ICustomFormatter.Format%2A> 方法。 它向方法传递格式项的 formatString 值（若有）或 `null`（若无）以及 <xref:System.IFormatProvider> 实现。  
   
 3.  如果该值实现 <xref:System.IFormattable> 接口，则调用此接口的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式项中存在 *formatString* 值，则向方法传递该值；如果不存在该值，则传递 `null`。 按如下方式确定 <xref:System.IFormatProvider> 参数：  
   
@@ -163,7 +166,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  

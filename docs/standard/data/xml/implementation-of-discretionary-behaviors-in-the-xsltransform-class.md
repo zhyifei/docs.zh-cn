@@ -9,20 +9,22 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7b6c81a5737b879b7c1356c4b9c2ab68fbbc4688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 98ad31039b5351a7dc4aa3cf033ae8cd0f896b7b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 类中任意行为的实现
 > [!NOTE]
->  
-          <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[迁移从 XslTransform 类](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)有关详细信息。  
+>  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
   
  下面将介绍在万维网联合会 (W3C) XSL 转换 (XSLT) 1.0 版建议 (www.w3.org/TR/xslt) 中列出的一些任意行为，在这些行为中，实现提供者选择几个可能的选项中的一个作为处理某种情况的方法。 例如，在第 7.3 节“Creating Processing Instructions”中，W3C 建议指出，如果实例化 `xsl:processing-instruction` 的内容会创建文本节点以外的节点，则会发生错误。 对于某些问题，W3C 说明了在处理器决定从错误中恢复时应做的决策。 对于 7.3 节中给出的问题，W3C 指出，实现可以通过忽略节点及其内容来从此错误中恢复。  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |`xsl:processing-instruction` 名称属性不同时产生无冒号名称 (NCName) 和处理指令目标。|恢复|7.3|  
 |实例化 `xsl:processing-instruction` 的内容创建了文本节点以外的节点。|恢复|7.3|  
 |`xsl:processing-instruction` 内容的实例化结果中包含字符串“`?>`”。|恢复|7.3|  
-|内容的实例的结果`xsl:comment`包含字符串"-"，或结尾"-"。|恢复|7.4|  
+|`xsl:comment` 内容的实例化结果中包含字符串“--”，或以“-”结尾。|恢复|7.4|  
 |`xsl:comment` 内容的实例化结果创建了文本节点以外的节点。|恢复|7.4|  
 |变量绑定元素内部的模板返回属性节点或命名空间节点。|恢复|11.2|  
 |从传入文档函数的 URI 中检索资源时出错。|引发异常|12.1|  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
 -   对于语言，不同处理器的排序方式可能因特定的语言而异，而不是按照 `xsl:sort.` 指定的方式。  
   
- 下表显示为每个数据类型转换使用的.NET Framework 实现中实现的排序行为<xref:System.Xml.Xsl.XslTransform>。  
+ 下表展示了 .NET Framework 用 <xref:System.Xml.Xsl.XslTransform> 实现的转换中为每种数据类型实现的排序行为。  
   
 |数据类型|排序行为|  
 |---------------|----------------------|  
@@ -79,16 +81,16 @@ ms.lasthandoff: 11/21/2017
 ## <a name="optional-features-supported"></a>支持的可选功能  
  下表显示 XSLT 处理器实现的可选功能，这些功能在 <xref:System.Xml.Xsl.XslTransform> 类中实现。  
   
-|功能|引用位置|备注|  
+|功能|引用位置|说明|  
 |-------------|------------------------|-----------|  
 |`disable-output-escaping` 和 `<xsl:text...>` 标记上的 `<xsl:value-of...>` 属性。|W3C XSLT 1.0 建议，<br /><br /> 16.4 节|当在 `disable-output-escaping`、`xsl:text` 或 `xsl:value-of` 元素中使用 `xsl:comment` 或 `xsl:processing-instruction` 元素时，忽略 `xsl:attribute` 属性。<br /><br /> 不支持包含文本的结果树片段和已转义的文本输出。<br /><br /> disable-output-escaping 属性在转换到 <xref:System.Xml.XmlReader> 或 <xref:System.Xml.XmlWriter> 对象时被忽略。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Xsl.XslTransform>  
  [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
  [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  [转换中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
  [转换中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Xsltransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Xsltransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [Xsltransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+ [XslTransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [XslTransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [XslTransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

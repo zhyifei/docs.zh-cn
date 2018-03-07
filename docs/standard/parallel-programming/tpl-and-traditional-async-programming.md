@@ -11,24 +11,28 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, with other asynchronous models
+helpviewer_keywords:
+- tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0f29ca819fa7a59edeb105720d74a25512e95bdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和传统 .NET Framework 异步编程
 .NET Framework 提供了以下两种标准模式，用于执行 I/O 密集型和计算密集型异步操作：  
   
 -   异步编程模型 (APM)，其中异步操作由一对 Begin/End 方法（如 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 和<xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>）表示。  
   
--   基于事件的异步模式 (EAP) 命名的方法/事件对表示异步操作*OperationName*异步和*OperationName*完成，例如， <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType>和<xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>。 （EAP 是在 .NET Framework 2.0 版本中引入的。）  
+-   基于事件的异步模式 (EAP)，其中异步操作由 OperationNameAsync 和 OperationNameCompleted 方法/事件对（如 <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 和 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>）表示。 （EAP 是在 .NET Framework 2.0 版本中引入的。）  
   
  任务并行库 (TPL) 可采用各种方法与任一异步模式协同使用。 可将 APM 和 EAP 操作作为任务向库使用者公开，也可以公开 APM 模式但用 Task 对象在内部实现它们。 在这两种情况下，可通过使用 Task 对象简化代码和利用以下有用的功能：  
   
@@ -110,7 +114,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- 有关更完整示例，其中包括其他异常处理并演示如何从客户端代码调用该方法，请参阅[如何： 在任务中包装 EAP 模式](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)。  
+ 有关包括其他异常处理且展示了如何通过客户端代码调用方法的更完整示例，请参阅[如何：在任务中包装 EAP 模式](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)。  
   
  请记住，通过 <xref:System.Threading.Tasks.TaskCompletionSource%601> 创建的任何任务均由 TaskCompletionSource 启动，因此用户代码不应在此任务中调用 Start 方法。  
   
@@ -123,7 +127,7 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>使用 StreamExtensions 示例代码  
- 中的 Streamextensions.cs 文件[使用.NET Framework 4 进行并行编程示例](http://go.microsoft.com/fwlink/?LinkID=165717)MSDN 网站上包含一些将 Task 对象用于异步文件和网络 I/O 的引用实现。  
+ 在 MSDN 网站上的[使用 .NET Framework 4 的并行编程示例](http://go.microsoft.com/fwlink/?LinkID=165717)中，Streamextensions.cs 文件包含一些引用实现，以便将 Task 对象用于异步文件和网络 I/O。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

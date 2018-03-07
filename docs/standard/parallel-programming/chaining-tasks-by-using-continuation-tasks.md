@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, continuations
+helpviewer_keywords:
+- tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7037e0c91ee6ae83b70d6a26e72b87095456063b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用延续任务来链接任务
 在异步编程中，一个异步操作在完成时调用另一个操作并将数据传递到其中的情况非常常见。 传统上，此过程是通过使用回调方法完成的。 在任务并行库中， *延续任务*提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，由另一个任务（称为 *前面的任务*）在完成时调用。  
@@ -58,7 +62,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="creating-a-continuation-for-multiple-antecedents"></a>为多个前面的任务创建延续  
  还可以创建一个将在一组任务中的任意或全部任务完成时运行的延续任务。 若要在所有前面的任务都完成后执行延续，则可以调用静态（在 Visual Basic 中为 `Shared`）<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法或实例 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法。 若要在多个前面的任务中的任意任务完成时执行延续，则可以调用静态（在 Visual Basic 中为 `Shared`）<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法或实例 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> 方法。  
   
- 请注意，调用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>和<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>重载不会阻止调用线程。  但是，你通常调用全部<xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>和<xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType>方法来检索返回<xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>属性，这不会阻止调用线程。  
+ 请注意，调用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 重载不会阻止调用线程。  不过，通常调用除 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> 外的其他所有方法来检索返回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性，这样不会阻止调用线程。  
   
  下面的示例调用 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 方法来创建反映其十个前面的任务的结果的延续任务。 每个前面的任务计算从 1 到 10 的索引值的平方值。 如果前面的任务成功完成（其 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 属性为 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>），则延续任务的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性为由每个前面的任务返回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 值组成的数组。 该示例计算它们的总和，得出 1 到 10 之间的所有数字的平方和。  
   
@@ -124,7 +128,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="associating-state-with-continuations"></a>将状态与延续关联  
  可以将任意状态与任务延续关联。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法提供重载版本，每个重载版本都带有一个表示延续状态的 <xref:System.Object> 值。 可以之后通过使用 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> 属性访问此状态对象。 如果未提供值，则此状态对象为 `null` 。  
   
- 将使用 [异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的现有代码转换为使用 TPL 时，延续状态非常有用。 在 APM 中，你通常提供中的对象状态**开始*方法** * 方法和更高版本访问该状态通过使用<xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>属性。 通过使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，你可在将使用 APM 的代码转换为使用 TPL 时保留此状态。  
+ 将使用 [异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的现有代码转换为使用 TPL 时，延续状态非常有用。 在 APM 中，通常在 BeginMethod****** 方法中提供对象状态，随后使用 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 属性访问此状态。 通过使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，你可在将使用 APM 的代码转换为使用 TPL 时保留此状态。  
   
  在 <xref:System.Threading.Tasks.Task> 调试器中处理 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 对象时，延续状态也非常有用。 例如，在“并行任务”  窗口中，“任务”  列显示每个任务的状态对象的字符串表示形式。 有关“并行任务”窗口的详细信息，请参阅[使用并行任务窗口](/visualstudio/debugger/using-the-tasks-window)。  
   
@@ -151,9 +155,9 @@ ms.lasthandoff: 10/18/2017
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     有关详细信息，请参阅[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和 [NIB：如何：处理由任务引发的异常](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d)。  
+     有关详细信息，请参阅[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和 [NIB：如何：处理由任务引发的异常](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)。  
   
 -   如果延续为附加子任务并且是通过使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的，则父级会将该延续的异常传播回调用线程，就像任何其他附加子级的情况一样。 有关详细信息，请参阅[附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

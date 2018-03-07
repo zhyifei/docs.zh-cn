@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>保存和写出文档
 加载并保存 <xref:System.Xml.XmlDocument> 后，保存的文档在下列方面可能不同于原始文档：  
@@ -29,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
 -   各个属性之间的所有空白都缩减为一个空白字符。  
   
--   更改元素间的空白。 保留有效空白，但不保留无效空白。 但当保存文档后，它将使用<xref:System.Xml.XmlTextWriter>**缩进**默认整齐打印的输出，以使其更具可读性的模式。  
+-   更改元素间的空白。 保留有效空白，但不保留无效空白。 不过，在文档保存后，它默认使用 <xref:System.Xml.XmlTextWriter> 缩进模式简洁打印输出，以提升文档的可读性。  
   
 -   属性值两边所用的引号字符在默认情况下更改为双引号。 可以使用 <xref:System.Xml.XmlTextReader.QuoteChar%2A> 的 <xref:System.Xml.XmlTextWriter> 属性将引号字符设置为双引号或单引号。  
   
@@ -97,5 +100,5 @@ string xml = mydoc.DocumentElement.OuterXml;
   
  与此相反，如果您需要子节点的内容，可以使用 <xref:System.Xml.XmlNode.InnerText%2A> 属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

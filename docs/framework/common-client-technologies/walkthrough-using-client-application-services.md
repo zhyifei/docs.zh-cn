@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>演练：使用客户端应用程序服务
 本主题介绍如何创建使用客户端应用程序服务对用户进行身份验证并检索用户角色和设置的 Windows 应用程序。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]。  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
   
 ## <a name="creating-the-client-application"></a>创建客户端应用程序  
  将执行的第一个操作是创建一个 Windows 窗体项目。 本演练使用 Windows 窗体，因为更多的人熟悉它，不过过程类似于 Windows Presentation Foundation (WPF) 项目。  
@@ -191,7 +193,7 @@ ms.lasthandoff: 12/22/2017
   	|**用户名**|`manager`|  
   	|**密码**|`manager!`|  
   	|**确认密码**|`manager!`|  
-  	|**电子邮件**|`manager@contoso.com`|  
+  	|**Email**|`manager@contoso.com`|  
   	|**安全提示问题**|`manager`|  
   	|**安全提示问题的答案**|`manager`|  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 12/22/2017
      一条成功消息随即出现。  
   
     > [!NOTE]
-    >  **“电子邮件”**、 **“安全提示问题”**和 **“安全提示问题的答案”** 值是窗体必需的，但不在此示例中使用。  
+    >  窗体需要有“电子邮件”、“安全性问题”和“安全性问题答案”值，但本示例没有使用。  
   
 13. 单击 **“继续”**。  
   
@@ -213,7 +215,7 @@ ms.lasthandoff: 12/22/2017
   	|**用户名**|`employee`|  
   	|**密码**|`employee!`|  
   	|**确认密码**|`employee!`|  
-  	|**电子邮件**|`employee@contoso.com`|  
+  	|**Email**|`employee@contoso.com`|  
   	|**安全提示问题**|`Employee`|  
   	|**安全提示问题的答案**|`employee`|  
   

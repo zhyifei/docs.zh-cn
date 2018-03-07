@@ -11,44 +11,48 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, how to unwrap nested tasks
+helpviewer_keywords:
+- tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2da3de912abb693c4342e1ede02f273348e4b571
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06d54efe5c8bac58746a1e01a194af55fde901b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>如何：解除嵌套任务的包装
-你可以返回的任务从方法返回，然后等待或继续从该任务，如下面的示例中所示：  
+可以从方法返回任务，再等待或继续执行此任务，如下面的示例所示：  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
  [!code-vb[TPL_Unwrap#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippets1-3.vb#01)]  
   
- 在前面的示例中，<xref:System.Threading.Tasks.Task%601.Result%2A>属性属于类型`string`(`String`在 Visual Basic 中)。  
+ 在上面的示例中，<xref:System.Threading.Tasks.Task%601.Result%2A> 属性的类型为 `string`（Visual Basic 中的 `String`）。  
   
- 但是，在某些情况下，你可能想要创建另一个任务中的任务，然后返回嵌套的任务。 在这种情况下，`TResult`的封闭任务本身就是一项任务。 在以下示例中，结果属性是`Task<Task<string>>`在 C# 或`Task(Of Task(Of String))`在 Visual Basic 中。  
+ 不过，在某些情况下，建议在另一个任务中创建任务，再返回嵌套任务。 在这种情况下，封闭任务的 `TResult` 本身就是任务。 在下面的示例中，Result 属性是 C# 中的 `Task<Task<string>>` 或 Visual Basic 中的 `Task(Of Task(Of String))`。  
   
  [!code-csharp[TPL_Unwrap#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#02)]
  [!code-vb[TPL_Unwrap#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippets1-3.vb#02)]  
   
- 但也可以编写代码来解除外部的任务的包装和检索原始任务并将其<xref:System.Threading.Tasks.Task%601.Result%2A>属性，此类代码是不容易编写，因为您必须处理的异常以及取消请求。 在此情况下，我们建议你使用之一<xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>扩展方法，如下面的示例中所示。  
+ 虽然可以编写代码来取消包装外部任务并检索原始任务及其 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性，但此类代码不易编写，因为必须处理异常和取消请求。 在这种情况下，建议使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 扩展方法之一，如下面的示例所示。  
   
  [!code-csharp[TPL_UnWrap#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#03)]
  [!code-vb[TPL_UnWrap#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippets1-3.vb#03)]  
   
- <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>方法可以用于转换任何`Task<Task>`或`Task<Task<TResult>>`(`Task(Of Task)`或`Task(Of Task(Of TResult))`在 Visual Basic 中) 到`Task`或`Task<TResult>`(`Task(Of TResult)`在 Visual Basic 中)。 新任务完全表示内部的嵌套的任务，并包括取消状态，以及所有异常。  
+ <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 方法可用于将任何 `Task<Task>` 或 `Task<Task<TResult>>`（Visual Basic 中的 `Task(Of Task)` 或 `Task(Of Task(Of TResult))`）转换为 `Task` 或 `Task<TResult>`（Visual Basic 中的 `Task(Of TResult)`）。 新任务完全表示内部嵌套任务，并包含取消状态和所有异常。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用<xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>扩展方法。  
+ 下面的示例展示了如何使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 扩展方法。  
   
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]
  [!code-vb[TPL_UnWrap#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_unwrap/vb/snippet04.vb#04)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>  
  [基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

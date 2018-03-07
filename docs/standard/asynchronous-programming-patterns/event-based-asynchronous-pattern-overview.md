@@ -22,15 +22,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61efa26db0f416c56691399779d15310457ce483
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: efe136ceb87213c5f9911b24a8a522b29a37b384
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>基于事件的异步模式概述
 那些同时执行多项任务、但仍能响应用户交互的应用程序通常需要实施一种使用多线程的设计方案。 <xref:System.Threading> 命名空间提供了创建高性能多线程应用程序所必需的所有工具，但要想有效地使用这些工具，需要有丰富的使用多线程软件工程的经验。 对于相对简单的多线程应用程序，<xref:System.ComponentModel.BackgroundWorker> 组件提供了一个简单的解决方案。 对于更复杂的异步应用程序，请考虑实现一个符合基于事件的异步模式的类。  
@@ -43,9 +46,9 @@ ms.lasthandoff: 11/21/2017
   
 -   等待资源变得可用，但不会停止（“挂起”）你的应用程序。  
   
--   使用熟悉的事件和委托模型与挂起的异步操作通信。 有关使用事件处理程序和委托的详细信息，请参阅[事件](../../../docs/standard/events/index.md)。  
+-   使用熟悉的事件和委托模型与挂起的异步操作通信。 若要详细了解如何使用事件处理程序和委托，请参阅[事件](../../../docs/standard/events/index.md)。  
   
- 支持基于事件的异步模式的类将具有名为的一个或多个方法*MethodName*`Async`。 这些方法可能会创建同步版本的镜像，这些同步版本会在当前线程上执行相同的操作。 该类还可能有*MethodName* `Completed`事件并且它可能具有*MethodName* `AsyncCancel` (或只需`CancelAsync`) 方法。  
+ 支持基于事件的异步模式的类包含一个或多个 MethodNameAsync** 方法。这些方法可能会创建同步版本的镜像，这些同步版本会在当前线程上执行相同的操作。此类还可能包含 MethodNameCompleted****** 事件和 MethodNameAsyncCancel******（或直接是 CancelAsync）方法。  
   
  <xref:System.Windows.Forms.PictureBox> 是一个支持基于事件的异步模式的典型组件。 你可以通过调用其 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法来同步下载图像，但是如果图像很大，或者网络连接很慢，应用程序将停止（“挂起”），直到下载操作完成并且对 <xref:System.Windows.Forms.PictureBox.Load%2A> 的调用返回后才会继续执行。  
   
@@ -54,10 +57,10 @@ ms.lasthandoff: 11/21/2017
  基于事件的异步模式要求异步操作可以取消，并且 <xref:System.Windows.Forms.PictureBox> 控件使用其 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 方法支持此要求。 调用 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 会提交一个停止挂起的下载的请求，任务取消时会引发 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件。  
   
 > [!CAUTION]
->  下载有可能刚好在发出 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 请求时完成，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能没有反映取消请求。 这称为*争用条件*，是多线程编程中常见的问题。 有关多线程编程中的问题的详细信息，请参阅[托管线程处理的最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
+>  下载有可能刚好在发出 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 请求时完成，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能没有反映取消请求。 这称为“争用条件”，也是多线程编程中的常见问题。 若要详细了解多线程编程中的问题，请参阅[托管线程最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>基于事件的异步模式的特征  
- 基于事件的异步模式可以采用多种形式，具体取决于某个特定类支持的操作的复杂程度。 最简单的类可能具有一个*MethodName* `Async`方法和相应*MethodName* `Completed`事件。 更复杂的类可能具有多个*MethodName* `Async`方法，与相应的每个方法*MethodName* `Completed`事件，以及这些方法的同步版本。 这些类有选择性地分别支持各种异步方法的取消、进度报告和增量结果。  
+ 基于事件的异步模式可以采用多种形式，具体取决于某个特定类支持的操作的复杂程度。 最简单的类可能包含一个 MethodNameAsync****** 方法和对应的 MethodNameCompleted****** 事件。 更复杂的类可能包含多个 MethodNameAsync****** 方法（每个方法对应一个 MethodNameCompleted****** 事件），以及这些方法的同步版本。 这些类有选择性地分别支持各种异步方法的取消、进度报告和增量结果。  
   
  异步方法可能还支持多个挂起的调用（多个并发调用），允许你的代码在此方法完成其他挂起的操作之前调用此方法任意多次。 若要正确处理此种情况，需要让你的应用程序能够跟踪各个操作的完成。  
   
@@ -118,29 +121,29 @@ public class AsyncExample
 ### <a name="asynchronous-method-overloads"></a>异步方法重载  
  异步操作可以有两个重载：单调用和多调用。 你可以通过方法签名来区分这两种形式：多调用形式有一个额外的参数，即 `userState`。 使用这种形式，你的代码可以多次调用 `Method1Async(string param, object userState)`，而不必等待任何挂起的异步操作的完成。 另一方面，如果你尝试在前一个调用尚未完成时调用 `Method1Async(string param)`，该方法将引发 <xref:System.InvalidOperationException>。  
   
- 多调用重载的 `userState` 参数可帮助你区分各个异步操作。 每次调用提供一个唯一的值 （例如，GUID 或哈希代码） `Method1Async(string param, object userState)`，，当各个操作完成时，事件处理程序可以确定哪些操作的实例引发了完成事件。  
+ 多调用重载的 `userState` 参数可帮助你区分各个异步操作。 应分别为各个 `Method1Async(string param, object userState)` 调用提供唯一值（例如，GUID 或哈希代码）；这样，当各个操作完成时，事件处理程序便可以确定是哪个操作实例抛出了完成事件。  
   
 ### <a name="tracking-pending-operations"></a>跟踪挂起的操作  
- 如果你使用多调用重载，你的代码将需要跟踪挂起任务的 `userState` 对象（任务 ID）。 每次调用`Method1Async(string param, object userState)`，你通常将生成一个新的、 唯一`userState`对象并将其添加到集合。 当对应于此 `userState` 对象的任务引发完成事件时，你的完成方法实现将检查 <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> 并将此对象从集合中删除。 在以这种方式使用时，`userState` 参数充当任务 ID 的角色。  
+ 如果你使用多调用重载，你的代码将需要跟踪挂起任务的 `userState` 对象（任务 ID）。 对于各个 `Method1Async(string param, object userState)` 调用，通常会生成新的唯一 `userState` 对象，并将它添加到集合中。 当对应于此 `userState` 对象的任务引发完成事件时，你的完成方法实现将检查 <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> 并将此对象从集合中删除。 在以这种方式使用时，`userState` 参数充当任务 ID 的角色。  
   
 > [!NOTE]
 >  在为你对多调用重载的调用中的 `userState` 提供唯一值时，一定要小心。 如果任务 ID 不唯一，将导致异步类引发 <xref:System.ArgumentException>。  
   
 ### <a name="canceling-pending-operations"></a>取消挂起的操作  
- 我们必须能够在异步操作完成之前随时取消它们，这一点很重要。 实现基于事件的异步模式的类将具有`CancelAsync`方法 （如果只有一个异步方法） 或*MethodName* `AsyncCancel`方法 （如果有多个异步方法）。  
+ 我们必须能够在异步操作完成之前随时取消它们，这一点很重要。 实现基于事件的异步模式的类包含 `CancelAsync` 方法（如果只有一个异步方法的话），或 MethodNameAsyncCancel****** 方法（如果有多个异步方法的话）。  
   
  允许多个调用采用 `userState` 参数的方法，此类方法可用于跟踪每个任务的生存期。 `CancelAsync` 采用 `userState` 参数，该参数可用于取消特定挂起任务。  
   
  一次只支持一个挂起操作的方法（如 `Method1Async(string param)`）是不可取消的。  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>接收进度更新和增量结果  
- 符合基于事件的异步模式的类可以为跟踪进度和增量结果提供事件。 这将通常被命名为`ProgressChanged`或*MethodName*`ProgressChanged`，且其相应的事件处理程序将会<xref:System.ComponentModel.ProgressChangedEventArgs>参数。  
+ 符合基于事件的异步模式的类可以为跟踪进度和增量结果提供事件。 此事件通常命名为 `ProgressChanged` 或 MethodNameProgressChanged**，它对应的事件处理程序需要使用 <xref:System.ComponentModel.ProgressChangedEventArgs> 参数。  
   
- 事件处理程序`ProgressChanged`事件可以检查<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType>属性来确定在完成一个异步任务的百分比。 此属性的范围是 0 到 100，可用来更新 <xref:System.Windows.Forms.ProgressBar.Value%2A> 的 <xref:System.Windows.Forms.ProgressBar> 属性。 如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> 属性来分辨出哪个操作在报告进度。  
+ `ProgressChanged` 事件的事件处理程序可以检查 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> 属性，以确定异步任务完成百分比。 此属性的范围是 0 到 100，可用来更新 <xref:System.Windows.Forms.ProgressBar.Value%2A> 的 <xref:System.Windows.Forms.ProgressBar> 属性。 如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> 属性来分辨出哪个操作在报告进度。  
   
  一些类可能会在异步操作继续时报告增量结果。 这些结果将存储在从 <xref:System.ComponentModel.ProgressChangedEventArgs> 派生的类中并显示为此派生类中的属性。 你可以在 `ProgressChanged` 事件的事件处理程序中访问这些结果，就像访问 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 属性一样。 如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> 属性来分辨出哪个操作在报告增量结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ComponentModel.ProgressChangedEventArgs>  
  <xref:System.ComponentModel.BackgroundWorker>  
  <xref:System.ComponentModel.AsyncCompletedEventArgs>  

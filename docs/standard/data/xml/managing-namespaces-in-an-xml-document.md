@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e9761afe8b56e15edba6e0319cce9a02501a6bb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7901f4bf88215f84445c1d222e6582e0a063c25a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文档中的命名空间
 XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定义的 URI 关联起来。 要创建这些关联，您应为命名空间 URI 定义前缀，并使用这些前缀来限定 XML 数据中的元素和属性名称。 命名空间可防止元素和属性名称冲突，并允许以不同方式处理和验证同名的元素和属性。  
@@ -67,10 +70,10 @@ XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定�
 ## <a name="managing-namespaces"></a>管理命名空间  
  <xref:System.Xml.XmlNamespaceManager> 类存储命名空间 URI 及其前缀的集合，您可在此集合中查找、添加和删除命名空间。 在某些上下文中，需要使用此类以获得更佳 XML 处理性能。 例如，<xref:System.Xml.Xsl.XsltContext> 类使用 <xref:System.Xml.XmlNamespaceManager> 以获得 XPath 支持。  
   
- 命名空间管理器不执行任何验证命名空间，而是假定前缀和命名空间已经过验证并符合[W3C 命名空间](http://www.w3.org/TR/REC-xml-names/)规范。  
+ 命名空间管理器对命名空间不执行任何验证，而是假定前缀和命名空间已经过验证并符合 [W3C 命名空间](http://www.w3.org/TR/REC-xml-names/)规范。  
   
 > [!NOTE]
->  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)不使用<xref:System.Xml.XmlNamespaceManager>来管理命名空间。 请参阅[处理 XML 命名空间](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430)LINQ 文档了解有关使用 LINQ to XML 时管理命名空间中。  
+>  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) 不使用 <xref:System.Xml.XmlNamespaceManager> 管理命名空间。 若要了解如何在使用 LINQ to XML 时管理命名空间，请参阅 LINQ 文档中的[使用 XML 命名空间](http://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430)。  
   
  下面是可使用 <xref:System.Xml.XmlNamespaceManager> 类执行的一些管理和查找任务。 有关更多信息和示例，请遵循指向每个方法或属性的引用页的链接。  
   
@@ -86,6 +89,6 @@ XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定�
 |检查是否在当前范围内定义了前缀|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 方法|  
 |获取用于查找前缀和 URI 的名称表|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 属性|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.XmlNamespaceManager>  
  [XML 文档和数据](../../../../docs/standard/data/xml/index.md)

@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 19820cd20ea87720968298aad8edef69d2bd1603
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: ee03c9cd64c3c3b251049be0826c7b29abe80bfa
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 文档的形状 (C#)
 本主题介绍 WordprocessingML 文档的 XML 形状。  
@@ -96,11 +97,11 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 ```  
   
 ## <a name="external-resources"></a>外部资源  
- [介绍 Office (2007) Open XML 文件格式](http://go.microsoft.com/fwlink/?LinkId=98093)  
-  
- [Overview of WordprocessingML](http://go.microsoft.com/fwlink/?LinkId=98094)（WordprocessingML 概述）  
-  
- [Office 2003: XML Reference Schemas Download page](http://go.microsoft.com/fwlink/?LinkId=98095)（Office 2003：XML 参考架构下载页）  
+ [介绍 Office (2007) Open XML 文件格式](https://msdn.microsoft.com/library/ms406049.aspx)  
+ [Overview of WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)（WordprocessingML 概述）  
+ [WordProcessingML 文件剖析](http://officeopenxml.com/anatomyofOOXML.php)  
+ [WordprocessingML 简介](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
+ [Office 2003: XML Reference Schemas Download page](https://www.microsoft.com/en-us/download/details.aspx?id=101)（Office 2003：XML 参考架构下载页）  
   
 ## <a name="see-also"></a>请参阅  
  [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

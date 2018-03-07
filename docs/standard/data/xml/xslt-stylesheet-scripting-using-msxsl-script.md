@@ -1,5 +1,5 @@
 ---
-title: "XSLT 样式表脚本使用&lt;msxsl: script&gt;"
+title: "使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 35f24c0a033748917b465510d4f70b75946a0a74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT 样式表脚本使用&lt;msxsl: script&gt;
+# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本
 <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[迁移从 XslTransform 类](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)有关详细信息。  
+>  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
   
  <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。 加载样式表时，任何已定义的函数都会通过包装在类定义中来编译为 Microsoft 中间语言 (MSIL)，因此不会有任何性能损失。  
   
@@ -44,15 +47,15 @@ ms.lasthandoff: 10/18/2017
   
  因为 `msxsl:script` 元素属于命名空间 `urn:schemas-microsoft-com:xslt`，因此样式表必须包含命名空间声明 `xmlns:msxsl=urn:schemas-microsoft-com:xslt`。  
   
- 如果该脚本的调用方不具有<xref:System.Security.Permissions.SecurityPermissionFlag>访问权限，则将永不编译样式表中的脚本和对<xref:System.Xml.Xsl.XslTransform.Load%2A>将失败。  
+ 如果脚本调用方没有 <xref:System.Security.Permissions.SecurityPermissionFlag> 访问权限，样式表中的脚本绝不会编译，且无法调用 <xref:System.Xml.Xsl.XslTransform.Load%2A>。  
   
  如果调用方有 `UnmanagedCode` 权限，则脚本将编译，但允许的操作取决于加载时提供的证据。  
   
- 如果使用一个接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 或 <xref:System.Xml.XmlReader> 的 <xref:System.Xml.XPath.XPathNavigator> 方法加载样式表，则需要使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 实参作为其形参的 <xref:System.Security.Policy.Evidence> 重载。 若要提供证据，调用方必须具有<xref:System.Security.Permissions.SecurityPermissionFlag>权提供`Evidence`脚本程序集。 如果调用方没有此权限，则可以将 `Evidence` 参数设置为 `null`。 这会导致 <xref:System.Xml.Xsl.XslTransform.Load%2A> 函数在发现脚本时失败。 `ControlEvidence` 权限是一种权力很大的权限，只应授予高度可信任的代码。  
+ 如果使用一个接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 或 <xref:System.Xml.XmlReader> 的 <xref:System.Xml.XPath.XPathNavigator> 方法加载样式表，则需要使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 实参作为其形参的 <xref:System.Security.Policy.Evidence> 重载。 为提供证据，调用方必须拥有 <xref:System.Security.Permissions.SecurityPermissionFlag> 权限，以提供脚本程序集的 `Evidence`。 如果调用方没有此权限，则可以将 `Evidence` 参数设置为 `null`。 这会导致 <xref:System.Xml.Xsl.XslTransform.Load%2A> 函数在发现脚本时失败。 `ControlEvidence` 权限是一种权力很大的权限，只应授予高度可信任的代码。  
   
  若要从您的程序集中得到证据，请使用 `this.GetType().Assembly.Evidence`。 若要从统一资源标识符 (URI) 得到证据，请使用 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`。  
   
- 如果使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但没有 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，则程序集的安全区域默认为“完全信任”。 有关详细信息，请参阅<xref:System.Security.SecurityZone>和[命名权限集](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
+ 如果使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但没有 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，则程序集的安全区域默认为“完全信任”。 有关详细信息，请参阅 <xref:System.Security.SecurityZone> 和[命名权限集](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
   
  函数可以在 `msxsl:script` 元素内声明。 下表显示了默认情况下支持的命名空间。 可以在列出的命名空间的外部使用类。 然而，这些类必须是完全限定的。  
   
@@ -65,13 +68,13 @@ ms.lasthandoff: 10/18/2017
 |System.Xml|核心 XML 类。|  
 |System.Xml.Xsl|XSLT 类。|  
 |System.Xml.XPath|XML 路径语言 (XPath) 类。|  
-|Microsoft.VisualBasic|用于 Microsoft Visual Basic 脚本的类。|  
+|Microsoft.VisualBasic|Microsoft Visual Basic 脚本类。|  
   
  声明函数时，该函数包含在脚本块中。 样式表可以包含多个脚本块，每个脚本块彼此独立运行。 也就是说，如果在脚本块的内部执行，则无法调用在其他脚本块中定义的函数，除非该脚本块声明为具有同一命名空间和同一脚本语言。 由于每个脚本块都可以使用自己的语言，因此脚本块的分析将遵照语言分析器的语法规则进行，必须使用适合所使用语言的语法。 例如，如果使用的是 C# 脚本块，则在该块中使用 XML 注释节点 `<!-- an XML comment -->` 是错误的。  
   
- 由脚本函数定义的所提供的自变量以及返回值必须是万维网联合会 (W3C) XPath 或 XSLT 类型之一。 下表显示了相应的 W3C 类型、 等效的.NET Framework 类 （类型），以及 W3C 类型是 XPath 类型还是 XSLT 类型。  
+ 由脚本函数定义的所提供的自变量以及返回值必须是万维网联合会 (W3C) XPath 或 XSLT 类型之一。 下表展示了相应的 W3C 类型、相当的 .NET Framework 类（类型），以及 W3C 类型是 XPath 类型还是 XSLT 类型。  
   
-|类型|等效的.NET Framework 类 （类型）|XPath 类型还是 XSLT 类型|  
+|类型|相当的 .NET Framework 类（类型）|XPath 类型还是 XSLT 类型|  
 |----------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
@@ -83,7 +86,7 @@ ms.lasthandoff: 10/18/2017
   
  如果脚本函数使用上述类型以外的类型，或者如果函数在样式表加载到 <xref:System.Xml.Xsl.XslTransform> 对象中时不进行编译，则会引发异常。  
   
- 使用时`msxsl:script`元素，强烈建议确保该脚本，而不考虑语言，将放置在 CDATA 节内。 例如，下面的 XML 显示放置代码的 CDATA 节的模板。  
+ 使用 `msxsl:script` 元素时，强烈建议将脚本添加到 CDATA 部分中，无论使用何种语言。 例如，下面的 XML 显示放置代码的 CDATA 节的模板。  
   
 ```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp'>  
@@ -104,7 +107,7 @@ ms.lasthandoff: 10/18/2017
 </msxsl:script>  
 ```  
   
- 由于“&”符没有转义，因此将引发异常。 文档加载为 XML，并且之间的文本应用任何特殊处理`msxsl:script`元素标记。  
+ 由于“&”符没有转义，因此将引发异常。 文档以 XML 形式加载，并且不对 `msxsl:script` 元素标记之间的文本应用任何特殊处理。  
   
 ## <a name="example"></a>示例  
  已知圆的半径，下面的示例使用嵌入脚本计算圆的周长。  
@@ -236,5 +239,5 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

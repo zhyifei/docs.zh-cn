@@ -1,7 +1,7 @@
 ---
-title: "在.NET 中编码的字符"
+title: ".NET 中的字符编码"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 12/22/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -16,17 +16,20 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ce7c8ff2154b8503b0ef73954464f380f520c3f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="character-encoding-in-net"></a>在.NET 中编码的字符
+# <a name="character-encoding-in-net"></a>.NET 中的字符编码
 字符是可以许多不同的方式表示的抽象实体。 字符编码是用代表字符的某个值与受支持的字符集中的每个字符配对的系统。 例如，莫尔斯电码就是一种用点线模式与罗马字母表中的每个字符（适合通过电报线路进行传输）进行配对的字符编码。 计算机的字符编码将代表字符的数字值与受支持的字符集中的每个字符配对。 一种字符编码有两个不同组件：  
   
 -   编码器，将一个字符序列转换为一个数字值（字节）序列。  
@@ -36,9 +39,9 @@ ms.lasthandoff: 11/21/2017
  字符编码描述编码器和解码器操作所依据的规则。 例如， <xref:System.Text.UTF8Encoding> 类描述编码为 8 位 Unicode 转换格式 (UTF-8) 和从其进行解码的规则，该格式使用一至四个字节来表示单个 Unicode 字符。 编码和解码还可以包括验证。 例如，<xref:System.Text.UnicodeEncoding> 类将检查所有代理项以确保它们构成有效的代理项对。 （代理项对由码位范围从 U + D800 到 U + DBFF 的字符后跟码位范围从 U + DC00 到 U + DFFF 的字符组成。）回退策略确定编码器处理无效字符的方式或解码器处理无效字节的方式。  
   
 > [!WARNING]
->  .NET 编码类提供一种方法来存储和转换字符数据。 它们不应用于存储字符串形式的二进制数据。 根据所使用的编码，用编码类将二进制数据转换为字符串格式可引起意外的行为，并生成不准确或损坏的数据。 若要将二进制数据转换为字符串形式，请使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。  
+>  .NET 编码类可用于存储和转换字符数据。 它们不应用于存储字符串形式的二进制数据。 根据所使用的编码，用编码类将二进制数据转换为字符串格式可引起意外的行为，并生成不准确或损坏的数据。 若要将二进制数据转换为字符串形式，请使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。  
   
- .NET 使用 utf-16 编码 (由表示<xref:System.Text.UnicodeEncoding>类) 来表示字符和字符串。 面向公共语言运行时的应用程序使用编码器将公共语言运行时支持的 Unicode 字符表示形式映射为其他的编码模式。 它们使用解码器将来自非 Unicode 的编码映射为 Unicode 字符。  
+ .NET 使用 UTF-16 编码（由 <xref:System.Text.UnicodeEncoding> 类表示）来表示字符和字符串。 面向公共语言运行时的应用程序使用编码器将公共语言运行时支持的 Unicode 字符表示形式映射为其他的编码模式。 它们使用解码器将来自非 Unicode 的编码映射为 Unicode 字符。  
   
  本主题包括以下各节：  
   
@@ -54,41 +57,41 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>.NET 中的编码  
- .NET 中的编码类都继承自的所有字符<xref:System.Text.Encoding?displayProperty=nameWithType>类，它是一个抽象类，定义所有字符编码常见功能。 若要访问在 .NET 中实现的单个编码对象，请执行以下操作：  
+ .NET 中的所有字符编码类都继承自 <xref:System.Text.Encoding?displayProperty=nameWithType> 类，这是定义所有字符编码通用功能的抽象类。 若要访问在 .NET 中实现的单个编码对象，请执行以下操作：  
   
--   使用的静态属性<xref:System.Text.Encoding>类，该类返回对象，表示.NET （ASCII、 utf-7、 utf-8、 utf-16 和 utf-32） 中可用的标准字符编码。 例如，<xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 属性返回 <xref:System.Text.UnicodeEncoding> 对象。 每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一节。）  
+-   使用 <xref:System.Text.Encoding> 类的静态属性，这些属性返回表示 .NET 标准字符编码（ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32）的对象。 例如，<xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 属性返回 <xref:System.Text.UnicodeEncoding> 对象。 每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一节。）  
   
 -   调用编码的类构造函数。 以这种方式可以将 ASCII、utf-7、utf-8、utf-16 和 utf-32 编码对象实例化。 默认情况下，每个对象都使用替换回退处理不能进行编码的字符串和不能进行解码的字节，但你可指定应引发异常。 （有关详细信息，请参阅 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 和 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 一节。）  
   
 -   调用 <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 构造函数并向其传递一个表示编码的整数。 标准编码对象使用替换回退，代码页编码和双字节字符集 (DBCS) 编码对象使用最佳回退处理不能进行编码的字符串和不能进行解码的字节。 （有关详细信息，请参阅 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 一节。）  
   
--   调用<xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>方法，返回任何标准、 代码页或 DBCS 编码在.NET 中可用。 可通过重载同时指定编码器和解码器的回退对象。  
+-   调用 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，此方法返回 .NET 中的任何标准编码、代码页编码或 DBCS 编码。 可通过重载同时指定编码器和解码器的回退对象。  
   
 > [!NOTE]
 >  Unicode Standard 将码位（数字）和名称指派给每个受支持脚本中的各字符。 例如，码位 U+0041 表示字符“A”，“LATIN CAPITAL LETTER A”表示名称。 Unicode 转换格式 (UTF) 编码定义将码位编码为一系列一个或多个字节的方式。 Unicode 编码方案简化全球通用的应用程序的开发，因为它允许以单个编码表示任何字符集中的字符。 应用程序开发人员不再需要跟踪用于为特定语言或写入系统生成字符的编码方案，且数据可以在全球系统间共享，而不被损坏。  
 >   
->  .NET 支持由 Unicode 标准定义的三种编码：UTF-8、UTF-16 和 UTF-32。 有关详细信息，请访问 [Unicode 主页](http://go.microsoft.com/fwlink/?LinkId=37123)，查看 Unicode Standard。  
+>  .NET 支持由 Unicode 标准定义的三种编码：UTF-8、UTF-16 和 UTF-32。 有关详细信息，请访问 [Unicode 主页](http://www.unicode.org/)，以了解 Unicode Standard。  
   
- 你可以通过调用来检索有关在.NET 中可用的所有编码信息<xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>方法。 .NET 支持下表中列出的字符编码系统。  
+ 可以检索所有 .NET 编码的相关信息，具体操作是调用 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 方法。 .NET 支持下表中列出的字符编码系统。  
   
 |编码|类|描述|优点/缺点|  
 |--------------|-----------|-----------------|-------------------------------|  
 |ASCII|<xref:System.Text.ASCIIEncoding>|通过使用较低的七位字节将有限范围的字符进行编码。|由于此编码仅支持从 U+0000 到 U+007F 的字符值，因此在大多数情况下不足以支持国际化的应用程序。|  
-|UTF-7|<xref:System.Text.UTF7Encoding>|将字符表示为 7 位 ASCII 字符的序列。 非 ASCII Unicode 字符由 ASCII 字符的转义序列表示。|Utf-7 支持诸如电子邮件和新闻组协议等协议。 但是，utf-7 不是特别安全或可靠。 在某些情况下，更改一位可以彻底更改对整个 utf-7 字符串的解释。 在其他情况下，不同的 utf-7 字符串可以对相同的文本进行编码。 对于包含非 ASCII 字符的序列，utf-7 需要比 utf-8 更多的空间，且编码/解码更慢。 因此，应尽可能使用 utf-8，而不是 utf-7。|  
+|UTF-7|<xref:System.Text.UTF7Encoding>|将字符表示为 7 位 ASCII 字符的序列。 非 ASCII Unicode 字符由 ASCII 字符的转义序列表示。|UTF-7 支持电子邮件和新闻组协议等协议。 但是，utf-7 不是特别安全或可靠。 在某些情况下，更改一位可以彻底更改对整个 utf-7 字符串的解释。 在其他情况下，不同的 utf-7 字符串可以对相同的文本进行编码。 对于包含非 ASCII 字符的序列，utf-7 需要比 utf-8 更多的空间，且编码/解码更慢。 因此，应尽可能使用 utf-8，而不是 utf-7。|  
 |UTF-8|<xref:System.Text.UTF8Encoding>|将每个 Unicode 码位表示为一至四个字节的序列。|Utf-8 支持 8 位数据大小，适用于许多现有的操作系统。 对于字符的 ASCII 范围，utf-8 等同于 ASCII 编码，并适用于范围更广的字符集。 但是，对于中日韩 (CJK) 脚本而言，针对每个字符 utf-8 可能需要三个字节，并且可能会导致比 utf-16 更大的数据大小。 请注意，有时 ASCII 数据（如 HTML 标记）的量证明了 CJK 范围大小增加的合理性。|  
 |UTF-16|<xref:System.Text.UnicodeEncoding>|将每个 Unicode 码位表示为一至两个 16 位整数的序列。 尽管 Unicode 补充字符（U+10000 和更高版本）需要两个 utf-16 代理项码位，但最常见的 Unicode 字符仅需一个 utf-16 码位。 little-endian 和 big endian 字节顺序均受支持。|公共语言运行时使用 Utf-16 编码表示 <xref:System.Char> 和 <xref:System.String> 值，Windows 操作系统使用它表示 `WCHAR` 值。|  
 |UTF-32|<xref:System.Text.UTF32Encoding>|将每个 Unicode 码位表示为一个 32 位整数。 little-endian 和 big endian 字节顺序均受支持。|当应用程序想要避免操作系统上的 utf-16 编码的代理项码位行为时，则使用 utf-32 编码，编码空间对操作系统十分重要。 显示器上呈现的单个标志符号仍可使用多个 UTF-32 字符进行编码。|  
-|ANSI/ISO 编码||为各种代码页提供支持。 在 Windows 操作系统上，代码页用于支持特定语言或语言组。 有关列出.NET 支持的代码页的表，请参阅<xref:System.Text.Encoding>类。 通过调用 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法可检索特定代码页的编码对象。|一个代码页包含 256 个码位，并且是从零开始。 在大多数代码页中，码位 0 到 127 表示 ASCII 字符集，而码位 128 到 255 在代码页之间存在显著差异。 例如，代码页 1252 为拉丁语书写系统（包括英语、德语和法语）提供字符。 代码页 1252 中最后 128 个码位包含重音字符。 代码页 1253 提供希腊语书写系统中所需的字符代码。 代码页 1253 中最后 128 个码位包含希腊语字符。 因此，基于 ANSI 代码页的应用程序不能将希腊语和德语存储在同一个文本流中，除非它包含一个指示所引用的代码页的标识符。|  
+|ANSI/ISO 编码||为各种代码页提供支持。 在 Windows 操作系统上，代码页用于支持特定语言或语言组。 有关列出 .NET 支持代码页的表，请参阅 <xref:System.Text.Encoding> 类。 通过调用 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法可检索特定代码页的编码对象。|一个代码页包含 256 个码位，并且是从零开始。 在大多数代码页中，码位 0 到 127 表示 ASCII 字符集，而码位 128 到 255 在代码页之间存在显著差异。 例如，代码页 1252 为拉丁语书写系统（包括英语、德语和法语）提供字符。 代码页 1252 中最后 128 个码位包含重音字符。 代码页 1253 提供希腊语书写系统中所需的字符代码。 代码页 1253 中最后 128 个码位包含希腊语字符。 因此，基于 ANSI 代码页的应用程序不能将希腊语和德语存储在同一个文本流中，除非它包含一个指示所引用的代码页的标识符。|  
 |双字节字符集 (DBCS) 编码||支持包含超过 256 个字符的语言，例如中文、日语和朝鲜语。 在 DBCS 中，一对码位（双字节）表示一个字符。 <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=nameWithType> 属性返回 DBCS 编码的 `false`。 通过调用 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法可以为特定的 DBCS 检索编码对象。|在 DBCS 中，一对码位（双字节）表示一个字符。 当应用程序处理 DBCS 数据时，DBCS 字符的第一个字节（前导字节）与紧随其后的结尾字节一起处理。 因为根据代码页，一对双字节码位可以代表不同的字符，此模式仍不支持在同一数据流中进行两种语言（如日语和中文）的组合。|  
   
  这些编码使你能够使用 Unicode 字符以及旧版应用程序中最常用的编码。 此外，通过定义从 <xref:System.Text.Encoding> 派生的类并重写其成员，可创建自定义编码。  
   
 ### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>平台说明： [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- 默认情况下， [!INCLUDE[net_core](../../../includes/net-core-md.md)] 不提供除代码页 28591 以外的其他任何代码页编码和 Unicode 编码，例如 utf-8 和 utf-16。 但是，你可以添加到你的应用该面向.NET 标准 Windows 应用中找到的代码页编码。 有关完整信息，请参阅 <xref:System.Text.CodePagesEncodingProvider> 主题。  
+ 默认情况下， [!INCLUDE[net_core](../../../includes/net-core-md.md)] 不提供除代码页 28591 以外的其他任何代码页编码和 Unicode 编码，例如 utf-8 和 utf-16。 不过，可以向应用中添加定目标到 .NET 的标准 Windows 应用中的代码页编码。 有关完整信息，请参阅 <xref:System.Text.CodePagesEncodingProvider> 主题。  
   
 <a name="Selecting"></a>   
 ## <a name="selecting-an-encoding-class"></a>选择编码类  
- 如果有机会选择应用程序要使用的编码，则应使用 Unicode 编码，最好是 <xref:System.Text.UTF8Encoding> 或 <xref:System.Text.UnicodeEncoding>。 (.NET 还支持第三个 Unicode 编码， <xref:System.Text.UTF32Encoding>。)  
+ 如果有机会选择应用程序要使用的编码，则应使用 Unicode 编码，最好是 <xref:System.Text.UTF8Encoding> 或 <xref:System.Text.UnicodeEncoding>。 （.NET 还支持第三种 Unicode 编码，即 <xref:System.Text.UTF32Encoding>。）  
   
  如果打算使用 ASCII 编码 (<xref:System.Text.ASCIIEncoding>)，请选择 <xref:System.Text.UTF8Encoding> 。 这两个编码对于 ASCII 字符集而言是相同的，但 <xref:System.Text.UTF8Encoding> 具有以下优点：  
   
@@ -149,9 +152,12 @@ ms.lasthandoff: 11/21/2017
  当一个字符在目标编码中不具有准确匹配时，编码器可以尝试将其映射到类似的字符。 （最佳回退主要是编码问题而非解码问题。 很少有代码页包含无法成功映射到 Unicode 的字符。）最佳回退是代码页的默认设置，此双字节字符集编码由 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 和 <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> 重载检索。  
   
 > [!NOTE]
->  从理论上讲，Unicode 编码类中提供的.NET (<xref:System.Text.UTF8Encoding>， <xref:System.Text.UnicodeEncoding>，和<xref:System.Text.UTF32Encoding>) 中的每个字符，支持每个字符，因此它们可以用于消除最佳回退的问题。  
+>  从理论上讲，.NET 中的 Unicode 编码类（<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding> 和 <xref:System.Text.UTF32Encoding>）支持所有字符集中的每个字符，因此可用于消除最佳匹配回退问题。  
   
- 不同代码页的最佳策略不同，未对它们进行详细记录。 例如，对于某些代码页，全角拉丁字符映射到更常见的半角拉丁字符。 对于其他代码页，不进行此映射。 即使是在积极的最佳策略下，也不能完全适合某些编码中的某些字符。 例如，中文象形文字不具有到代码页 1252 的合理映射。 在这种情况下，使用替换字符串。 默认情况下，此字符串只是一个问号 (U+003F)。  
+ 最佳匹配策略因代码页而异。 例如，对于某些代码页，全角拉丁字符映射到更常见的半角拉丁字符。 对于其他代码页，不进行此映射。 即使是在积极的最佳策略下，也不能完全适合某些编码中的某些字符。 例如，中文象形文字不具有到代码页 1252 的合理映射。 在这种情况下，使用替换字符串。 默认情况下，此字符串只是一个问号 (U+003F)。  
+  
+> [!NOTE]
+>  最佳匹配策略不会得到详细记录。 不过，[Unicode 联盟](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)网站上记录了多个代码页。 若要了解如何解释映射文件，请查看相应文件夹中的 readme.txt 文件。
   
  下面的示例使用代码页 1252 （适合西欧语言 Windows 代码页）演示最佳映射及其缺点。 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法用于检索代码页 1252 的编码对象。 默认情况下，它使用其不支持的 Unicode 字符的最佳映射。 该示例将包含三个非 ASCII 字符的字符串实例化，这三个字符分别为带圆圈拉丁文大写字母 S (U+24C8)、上标五 (U+2075) 和无穷大 (U+221E) 且由空格分隔。 如示例输出所示，当对字符串进行编码时，三个原始的非空格字符替换为问号 (U+003F)、数字五 (U+0035) 和数字八 (U+0038)。 数字八是对不受支持的无穷大字符的不良替换，问号指示没有映射可用于原始字符。  
   
@@ -175,7 +181,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Encoding#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/replacementascii.cs#2)]
  [!code-vb[Conceptual.Encoding#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/replacementascii.vb#2)]  
   
- .NET 包括<xref:System.Text.EncoderReplacementFallback>和<xref:System.Text.DecoderReplacementFallback>类就代替替换字符串，如果字符没有在编码和解码操作中准确映射。 默认情况下，此替换字符串是一个问号，但可以调用类构造函数重载以选择不同的字符串。 通常，替换字符串是单个字符，但这不是一项要求。 下面的示例通过将以星号 (*) 作为替换字符串的 <xref:System.Text.EncoderReplacementFallback> 对象实例化，更改代码页 1252 编码器的行为。  
+ .NET 包括 <xref:System.Text.EncoderReplacementFallback> 和 <xref:System.Text.DecoderReplacementFallback> 类，用于替换字符没有在编码或解码操作中完全映射时的替换字符串。 默认情况下，此替换字符串是一个问号，但可以调用类构造函数重载以选择不同的字符串。 通常，替换字符串是单个字符，但这不是一项要求。 下面的示例通过将以星号 (*) 作为替换字符串的 <xref:System.Text.EncoderReplacementFallback> 对象实例化，更改代码页 1252 编码器的行为。  
   
  [!code-csharp[Conceptual.Encoding#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/bestfit1a.cs#3)]
  [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]  
@@ -186,7 +192,7 @@ ms.lasthandoff: 11/21/2017
  除了问号 (U+003F) 外，Unicode 替换字符 (U+FFFD) 通常用作替换字符串，特别是当解码无法成功转换为 Unicode 字符的字节序列时。 但是，你可以自由选择任何替换字符串，并且它可以包含多个字符。  
   
 <a name="Exception"></a>   
-### <a name="exception-fallback"></a>Exception Fallback  
+### <a name="exception-fallback"></a>异常回退  
  如果编码器不能对一组字符进行编码，它就不提供最佳回退或替换字符串，而是可能引发 <xref:System.Text.EncoderFallbackException> ，如果解码器不能对字节数组进行解码，它就可能引发 <xref:System.Text.DecoderFallbackException> 。 若要在编码和解码操作中引发异常，请分别提供一个 <xref:System.Text.EncoderExceptionFallback> 对象和一个 <xref:System.Text.DecoderExceptionFallback> 对象到 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 方法。 下面的示例用 <xref:System.Text.ASCIIEncoding> 类演示异常回退。  
   
  [!code-csharp[Conceptual.Encoding#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/exceptionascii.cs#4)]
@@ -267,7 +273,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Encoding#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#7)]
  [!code-vb[Conceptual.Encoding#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#7)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Text.Encoder>  
  <xref:System.Text.Decoder>  
  <xref:System.Text.DecoderFallback>  

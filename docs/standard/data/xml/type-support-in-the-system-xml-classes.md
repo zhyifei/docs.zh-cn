@@ -9,28 +9,31 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 14821ef78f20d1ff303afacb42415e4017a92742
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 38aa6462fc7a0a1eb80c767777da4f2343983296
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>System.Xml 类中的类型支持
 在 .NET Framework 2.0 版中，核心 XML 类已得到增强，具有类型支持功能。 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 和 <xref:System.Xml.XPath.XPathNavigator> 类具有类型支持功能，可以在 XML 架构类型和公共语言运行库 (CLR) 类型之间转换。  
   
  在 .NET Framework 2.0 版中，<xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 和 <xref:System.Xml.XPath.XPathNavigator> 类已得到增强，具有类型支持功能。  
   
--   <xref:System.Xml.XmlReader>和<xref:System.Xml.XPath.XPathNavigator>类分别包括**SchemaInfo**在节点返回的架构信息的属性。  
+-   <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XPath.XPathNavigator> 类均包含 SchemaInfo 属性，用于返回节点的架构信息。  
   
--   **ReadContentAs**和**ReadElementContentAs**和方法的<xref:System.Xml.XmlReader>类读取文本值并将其转换为单个方法调用中的 CLR 值。  
+-   ReadContentAs 和 ReadElementContentAs 以及 <xref:System.Xml.XmlReader> 类的方法在一个方法调用中，读取文本值并将它转换为 CLR 值。  
   
 -   在写出 XML 时，<xref:System.Xml.XmlWriter.WriteValue%2A> 类的 <xref:System.Xml.XmlWriter> 方法将 CLR 类型转换为 XML 架构类型。  
   
--   **ValueAs**和<xref:System.Xml.XPath.XPathNavigator.TypedValue%2A>属性<xref:System.Xml.XPath.XPathNavigator>类返回节点值并将其转换为单个方法调用中的 CLR 值。  
+-   <xref:System.Xml.XPath.XPathNavigator> 类的 ValueAs 和 <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> 属性在一个方法调用中，返回节点值并将它转换为 CLR 值。  
   
 > [!NOTE]
 >  在 .NET Framework 1.0 版中，需要使用 <xref:System.Xml.XmlConvert> 类在 XML 架构和 CLR 类型之间进行转换。  
@@ -42,8 +45,8 @@ ms.lasthandoff: 10/18/2017
  [XML 类型支持实现说明](../../../../docs/standard/data/xml/xml-type-support-implementation-notes.md)  
  介绍一些类型支持实现的详细信息。  
   
- [XML 数据类型的转换](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [XML 数据类型转换](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
  描述如何使用 <xref:System.Xml.XmlConvert> 类在 XML 架构和 CLR 类型之间进行转换。  
   
 ## <a name="related-sections"></a>相关章节  
- [访问强类型 XML 数据使用 XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [使用 XPathNavigator 访问强类型 XML 数据](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

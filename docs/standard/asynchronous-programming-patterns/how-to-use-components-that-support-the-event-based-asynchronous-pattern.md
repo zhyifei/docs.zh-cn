@@ -24,32 +24,35 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49e03a8d886ccd4ed6e4b2a19692c1874f5928ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c7fe7d0a959a490893fba2b2fc7faceedee03879
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>如何：使用支持基于事件的异步模式的组件
-许多组件都为你提供了以异步方式执行其工作的选项。 <xref:System.Media.SoundPlayer>和<xref:System.Windows.Forms.PictureBox>组件，例如，启用可加载听起来和图像"在后台"，同时主线程继续运行而不中断。  
+许多组件都支持异步执行工作。 例如，通过 <xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 组件，可以“在后台”加载音频和图像，同时主线程继续运行而不中断。  
   
- 支持的类上使用异步方法[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)可以很简单，例如将事件处理程序附加到组件的*MethodName* `Completed`事件，正如你的任何其他事件一样。 当调用*MethodName* `Async`方法，你的应用程序将继续运行而不会中断，直到*MethodName* `Completed`引发事件。 在事件处理程序，可以检查<xref:System.ComponentModel.AsyncCompletedEventArgs>参数以确定是否已成功完成异步操作，或者已取消。  
+ 对支持[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)的类使用异步方法，与将事件处理程序附加到组件的 MethodNameCompleted****** 事件一样简单，就像处理其他任何事件一样。 调用 MethodNameAsync****** 方法后，应用会继续运行而不中断，除非 MethodNameCompleted****** 事件抛出。 在事件处理程序中，可以检查 <xref:System.ComponentModel.AsyncCompletedEventArgs> 参数，以确定异步操作是已成功完成，还是已取消。  
   
- 有关使用事件处理程序的详细信息，请参阅[事件处理程序概述](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
+ 若要详细了解如何使用事件处理程序，请参阅[事件处理程序概述](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
   
- 下面的过程演示如何使用的异步图像加载功能<xref:System.Windows.Forms.PictureBox>控件。  
+ 下面的过程展示了如何使用 <xref:System.Windows.Forms.PictureBox> 控件的异步图像加载功能。  
   
-### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>若要启用 PictureBox 控件以异步加载图像  
+### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>启用 PictureBox 控件以异步加载图像的具体步骤  
   
-1.  创建的实例<xref:System.Windows.Forms.PictureBox>组件窗体中。  
+1.  在窗体中，创建 <xref:System.Windows.Forms.PictureBox> 组件的实例。  
   
-2.  分配到一个事件处理程序<xref:System.Windows.Forms.PictureBox.LoadCompleted>事件。  
+2.  将事件处理程序分配给 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件。  
   
-     检查有异步下载过程中可能发生的任何错误。 这是你到哪里检查取消。  
+     检查是否有异步下载期间可能会发生的任何错误。 此时，还检查是否有取消事件。  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#2)]  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  添加两个按钮，调用`loadButton`和`cancelLoadButton`，向窗体。 添加<xref:System.Windows.Forms.Control.Click>事件处理程序来启动和取消下载。  
+3.  将两个按钮 `loadButton` 和 `cancelLoadButton` 添加到窗体。 添加 <xref:System.Windows.Forms.Control.Click> 事件处理程序，以启动和取消下载。  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -67,9 +70,9 @@ ms.lasthandoff: 11/21/2017
   
 4.  运行您的应用程序。  
   
-     映像下载开始后，你可以自由地移动窗体、 降到最低，和其最大化。  
+     随着图像继续下载，可以随意移动窗体，也能最小化和最大化窗体。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [不在生成中： Visual Basic 中的多线程处理](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)
+ [未构造：Visual Basic 中的多线程处理](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)

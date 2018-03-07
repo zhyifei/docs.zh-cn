@@ -1,7 +1,6 @@
 ---
-title: "快速入门 - 集合 - C# 指南"
-description: "在本快速入门课程中通过探索列表集合了解 C#。"
-keywords: "C#, 入门, 教程, 集合, 列表"
+title: "“集合”教程 - C# 本地快速入门"
+description: "在本教程中通过探索列表集合了解 C#。"
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -10,25 +9,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 44e79432c0a1970313cba21778e2bf439f8a4388
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="c-quick-start-collections"></a>C# 快速入门：集合 #
+# <a name="c-quickstart-collections"></a>C# 快速入门：集合
 
 本快速入门教程介绍了 C# 语言和 <xref:System.Collections.Generic.List%601> 类的基础知识。
 
-本快速入门教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门简介](local-environment.md)简要概述了你将用到的命令，还提供了详细信息链接。
+若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
-## <a name="a-basic-list-example"></a>基本的列表示例。
+## <a name="a-basic-list-example"></a>基本列表示例
 
 创建名为 list-quickstart 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console`。
 
 > [!NOTE]
 > 如果你刚完成 [10 分钟 .NET 入门](https://www.microsoft.com/net)，则可以继续使用刚刚创建的 myApp 应用程序。
- 
+
 在常用编辑器中，打开 Program.cs，并将现有代码替换为以下代码：
 
 ```csharp
@@ -53,16 +52,16 @@ namespace list_quickstart
 
 将 `<name>` 替换为自己的名称。 保存 Program.cs。 在控制台窗口中键入 `dotnet run`，试运行看看。
 
-刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环读取整个列表需要用到在前面的快速入门课程中学到的概念。
+刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环访问整个列表需要用到，在前面的快速入门课程中学到的概念。
 
 用于显示名称的代码使用内插字符串。  如果 `$` 字符前面有 `string`，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
 
 接下来将进一步探索。
-    
+
 ## <a name="modify-list-contents"></a>修改列表内容
 
 创建的集合使用 <xref:System.Collections.Generic.List%601> 类型。 此类型存储一系列元素。 元素类型是在尖括号内指定。
-    
+
 <xref:System.Collections.Generic.List%601> 类型的一个重要方面是，既可以扩大，也可以收缩，方便用户添加或删除元素。 在 `Main` 方法的右 `}` 前添加以下代码：
 
 ```csharp
@@ -77,7 +76,7 @@ foreach (var name in names)
 ```
 
 又向列表的末尾添加了两个名称。 同时，也删除了一个名称。 保存此文件，并键入 `dotnet run`，试运行看看。
-    
+
 借助 <xref:System.Collections.Generic.List%601>，还可以按索引引用各项。 索引位于列表名称后面的 `[` 和 `]` 令牌之间。 C# 对第一个索引使用 0。 将以下代码添加到刚才添加的代码的正下方，并试运行看看：
 
 ```csharp
@@ -91,9 +90,10 @@ Console.WriteLine($"I've added {names[2]} and {names[3]} to the list");
 Console.WriteLine($"The list has {names.Count} people in it");
  ```
 
-保存此文件，并再次键入 `dotnet run` 看看结果如何。    
+保存此文件，并再次键入 `dotnet run` 看看结果如何。
 
 ## <a name="search-and-sort-lists"></a>搜索列表并进行排序
+
 我们的示例使用的列表较小，但大家的应用程序创建的列表通常可能会包含更多元素，有时可能会包含数以千计的元素。 若要在更大的集合中查找元素，需要在列表中搜索不同的项。 <xref:System.Collections.Generic.List%601.IndexOf%2A> 方法可搜索项，并返回此项的索引。 将以下代码添加到 `Main` 方法的底部：
 
 ```csharp
@@ -113,7 +113,7 @@ if (index == -1)
 } else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
-    
+
 }
 ```
 
@@ -184,7 +184,7 @@ namespace list_quickstart
 
 ## <a name="lists-of-other-types"></a>其他类型的列表
 
-到目前为止，大家一直在列表中使用 `string` 类型。 接下来，将让 <xref:System.Collections.Generic.List%601> 使用其他类型。 那就生成一组数字吧。 
+到目前为止，大家一直在列表中使用 `string` 类型。 接下来，将让 <xref:System.Collections.Generic.List%601> 使用其他类型。 那就生成一组数字吧。
 
 将以下代码添加到新 `Main` 方法的底部：
 
@@ -204,12 +204,13 @@ foreach(var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
-保存此文件，并键入 `dotnet run` 看看结果如何。 
+保存此文件，并键入 `dotnet run` 看看结果如何。
 
 > [!TIP]
-> 为了能够集中精力探究此部分，可以注释掉调用 `WorkingWithStrings();` 的代码。 只需在此调用前添加两个 `/` 字符即可，如 `// WorkingWithStrings();`。 
+> 为了能够集中精力探究此部分，可以注释掉调用 `WorkingWithStrings();` 的代码。 只需在此调用前添加两个 `/` 字符即可，如 `// WorkingWithStrings();`。
 
 ## <a name="challenge"></a>挑战
+
 看看能不能将本课程中的一些概念与前面的课程融会贯通。 使用斐波那契数列，扩展当前生成的程序。 试着编写代码，生成此序列中的前 20 个数字。 （作为提示，第 20 个斐波纳契数是 6765。）
 
 ## <a name="complete-challenge"></a>完成挑战
@@ -218,6 +219,6 @@ foreach(var item in fibonacciNumbers)
 
 在循环的每次迭代中，取此列表中的最后两个整数进行求和，并将计算出的总和值添加到列表中。 循环会一直重复运行到列表中有 20 个项为止。
 
-恭喜！你已完成列表快速入门教程。 可以继续在你自己的开发环境中学习[类简介](introduction-to-classes.md)快速入门教程。
+恭喜！已完成列表快速入门教程。 可以在自己的开发环境中继续学习[类简介](introduction-to-classes.md)快速入门教程。
 
 若要详细了解如何使用 `List` 类型，可以参阅有关[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主题。 还可以了解其他许多集合类型。

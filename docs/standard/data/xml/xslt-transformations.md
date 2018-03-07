@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0d7fa8492487daff68fd8ebaf4159dd537d13e51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 92d0688b86e6a95af46e09c21c1a8b3cdf66efc3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
-可扩展样式表语言转换 (XSLT) 可以将源 XML 文档的内容转换为另一个格式或结构不同的文档。 例如，可以使用 XSLT 将 XML 转换为在网站上使用的 HTML 或转换为只包含应用程序所需字段的文档。 此转换过程由指定[W3C XSL 转换 (XSLT) 1.0 版建议](http://go.microsoft.com/fwlink/?LinkID=49919)。  
+可扩展样式表语言转换 (XSLT) 可以将源 XML 文档的内容转换为另一个格式或结构不同的文档。 例如，可以使用 XSLT 将 XML 转换为在网站上使用的 HTML 或转换为只包含应用程序所需字段的文档。 此转换过程由 [W3C XSL 转换 (XSLT) 版本 1.0 建议](http://go.microsoft.com/fwlink/?LinkID=49919)规定。  
   
  <xref:System.Xml.Xsl.XslCompiledTransform> 类是 .NET Framework 中的 XSLT 处理器。 <xref:System.Xml.Xsl.XslCompiledTransform> 类支持 W3C XSLT 1.0 建议。  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/18/2017
  [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  提供如何使用 <xref:System.Xml.Xsl.XslTransform> 类的信息。  
   
- **请注意**<xref:System.Xml.Xsl.XslTransform>类是.NET Framework 2.0 版本中已过时。  
+ **注意**：<xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 版本 2.0 中已过时。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Xml.Xsl.XslCompiledTransform>  

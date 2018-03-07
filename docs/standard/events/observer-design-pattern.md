@@ -18,18 +18,21 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83663a28ac7ae19848552583f2ec39a5e96c7fdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="observer-design-pattern"></a>观察程序设计模式
-观察程序设计模式使订阅者能够从提供程序注册并接收通知。 它适用于需要基于推送的通知的任何方案。 该模式定义*提供程序*(也称为*主题*或*可观测对象*) 和零、 一个或多个*观察者*。 观察程序注册提供程序，并且每当预定义的条件、事件或状态发生更改时，该提供程序会通过调用其方法之一来自动通知所有观察程序。 在此方法调用中，该提供程序还可向观察程序提供当前状态信息。 在 .NET Framework 中，通过实现泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 接口来应用观察程序设计模式。 泛型类型参数表示提供通知信息的类型。  
+观察程序设计模式使订阅者能够从提供程序注册并接收通知。 它适用于需要基于推送的通知的任何方案。 此模式定义提供程序（亦称为“使用者”或“可观察对象”），以及零个、一个或多个观察程序。 观察程序注册提供程序，并且每当预定义的条件、事件或状态发生更改时，该提供程序会通过调用其方法之一来自动通知所有观察程序。 在此方法调用中，该提供程序还可向观察程序提供当前状态信息。 在 .NET Framework 中，通过实现泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 接口来应用观察程序设计模式。 泛型类型参数表示提供通知信息的类型。  
   
 ## <a name="applying-the-pattern"></a>应用模式  
  观察程序设计模式适用于分布式基于推送的通知，因为它支持两个不同的组件或应用程序层（如数据源（业务逻辑）层和用户界面（显示）层）之间完全分离。 每当提供程序使用回调向其客户端提供当前信息时，均可以实现此模式。  
@@ -53,7 +56,7 @@ ms.lasthandoff: 10/18/2017
 -   包含提供程序发送到其观察程序的数据的对象。 此对象的类型对应 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 接口的泛型类型参数。 尽管此对象可与 <xref:System.IObservable%601> 实现相同，但通常情况下，它是一个单独的类型。  
   
 > [!NOTE]
->  除实现观察程序设计模式外，你还可能对浏览使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 接口构建的库感兴趣。 例如， [Reactive Extensions (Rx).NET](http://go.microsoft.com/fwlink/?LinkId=186345)包含一组扩展方法和 LINQ 标准序列运算符以支持异步编程。  
+>  除实现观察程序设计模式外，你还可能对浏览使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 接口构建的库感兴趣。 例如，[Reactive Extensions for .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) 包含一组支持异步编程的扩展方法和 LINQ 标准序列运算符。  
   
 ## <a name="implementing-the-pattern"></a>实现模式  
  下面的示例使用观察程序设计模式来实现机场行李认领信息系统。 `BaggageInfo` 类提供有关到达航班以及可领取每次航班行李的行李传送带的信息。 如以下示例所示。  

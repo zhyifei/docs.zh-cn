@@ -22,18 +22,21 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0205edba221b833625becbe6a1f2fdda2f9409a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d3fb814d6b458de90d684a3ac92e22a62e290a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="writing-custom-attributes"></a>编写自定义特性
-要设计你自己的自定义特性，无需掌握许多新的概念。 如果你熟悉面向对象的编程，并且知道如何设计类，那么你已经具备大部分所需知识。 自定义特性是实质上是直接或间接派生自的传统类<xref:System.Attribute?displayProperty=nameWithType>。 与传统类一样，自定义特性包含用于存储和检索数据的方法。  
+要设计你自己的自定义特性，无需掌握许多新的概念。 如果你熟悉面向对象的编程，并且知道如何设计类，那么你已经具备大部分所需知识。 自定义属性本质上是直接或间接派生自 <xref:System.Attribute?displayProperty=nameWithType> 的传统类。 与传统类一样，自定义特性包含用于存储和检索数据的方法。  
   
  正确设计自定义特性的主要步骤如下：  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>有三个对于创建自定义特性很重要的成员： [AttributeTargets](#cpconwritingcustomattributesanchor1)，[继承](#cpconwritingcustomattributesanchor2)，和[AllowMultiple](#cpconwritingcustomattributesanchor3)。  
+ <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> 包含下列三个成员，它们对创建自定义属性非常重要：[AttributeTargets](#cpconwritingcustomattributesanchor1)、[Inherited](#cpconwritingcustomattributesanchor2) 和 [AllowMultiple](#cpconwritingcustomattributesanchor3)。  
   
 <a name="cpconwritingcustomattributesanchor1"></a>   
 ### <a name="attributetargets-member"></a>AttributeTargets 成员  
@@ -69,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="cpconwritingcustomattributesanchor2"></a>   
 ### <a name="inherited-property"></a>Inherited 属性  
- <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType>属性指示是否可以通过从你的特性应用于类派生的类继承属性。 此属性使用 **true** （默认值）或 **false** 标志。 例如，在以下示例中， `MyAttribute` 的 <xref:System.AttributeUsageAttribute.Inherited%2A> 的默认值为 **true**， `YourAttribute` 的 <xref:System.AttributeUsageAttribute.Inherited%2A> 的值为 **false**。  
+ <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 属性指明要对其应用属性的类的派生类能否继承此属性。 此属性使用 **true** （默认值）或 **false** 标志。 例如，在以下示例中， `MyAttribute` 的 <xref:System.AttributeUsageAttribute.Inherited%2A> 的默认值为 **true**， `YourAttribute` 的 <xref:System.AttributeUsageAttribute.Inherited%2A> 的值为 **false**。  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="cpconwritingcustomattributesanchor3"></a>   
 ### <a name="allowmultiple-property"></a>AllowMultiple 属性  
- <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType>属性指示元素是否可以存在特性的多个实例。 如果设置为 **true**，则允许多个实例；如果设置为 **false** （默认值），则只允许一个实例。  
+ <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> 属性指明元素能否包含属性的多个实例。 如果设置为 **true**，则允许多个实例；如果设置为 **false** （默认值），则只允许一个实例。  
   
  在下面的示例中， `MyAttribute` 的 <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 的默认值为 **false**， `YourAttribute` 的对应值为 **true**。  
   
@@ -163,7 +166,7 @@ ms.lasthandoff: 11/21/2017
   
  第一个示例显示只应用了必选命名参数的特性，第二个示例显示同时应用了必选参数和可选参数的特性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Attribute?displayProperty=nameWithType>  
  <xref:System.AttributeUsageAttribute>  
  [特性](../../../docs/standard/attributes/index.md)

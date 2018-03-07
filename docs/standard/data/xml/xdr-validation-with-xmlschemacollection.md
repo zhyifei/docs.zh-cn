@@ -12,29 +12,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fab67e10aa0562b59f8c7704a5ca1feeb66d6208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 进行 XDR 验证
-如果验证所依据的 XML 数据简化 (XDR) 架构存储在**XmlSchemaCollection**，它是与 URI 指定架构添加到集合中时的命名空间关联。 **XmlValidatingReader**映射到集合中与该 URI 相对应的架构的 XML 文档中的命名空间 URI。  
+如果验证所依据的 XML 数据缩减 (XDR) 架构存储在 XmlSchemaCollection 中，此架构与添加到集合时指定的命名空间 URI 相关联。 XmlValidatingReader 将 XML 文档中的命名空间 URI 映射到集合中与此 URI 对应的架构。  
   
 > [!IMPORTANT]
->  现在，<xref:System.Xml.Schema.XmlSchemaCollection> 类已过时，已由 <xref:System.Xml.Schema.XmlSchemaSet> 类所取代。 有关详细信息<xref:System.Xml.Schema.XmlSchemaSet>类，请参阅[编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
+>  现在，<xref:System.Xml.Schema.XmlSchemaCollection> 类已过时，已由 <xref:System.Xml.Schema.XmlSchemaSet> 类所取代。 若要详细了解 <xref:System.Xml.Schema.XmlSchemaSet> 类，请参阅[用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
   
- 例如，如果 XML 文档的根元素是`<bookstore xmlns="urn:newbooks-schema">`，当架构添加到**XmlSchemaCollection**它引用相同的命名空间，如下所示：  
+ 例如，如果 XML 文档的根元素是 `<bookstore xmlns="urn:newbooks-schema">`，且架构被添加到 XmlSchemaCollection，那么将引用相同的命名空间，如下所示：  
   
 ```  
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")  
 ```  
   
- 下面的代码示例创建**XmlValidatingReader**采用**XmlTextReader**并将 XDR 架构 HeadCount.xdr 添加到**XmlSchemaCollection**。  
+ 下面的代码示例创建 XmlValidatingReader，它需要使用 XmlTextReader，并将 XDR 架构 HeadCount.xdr 添加到 XmlSchemaCollection 中。  
   
 ```vb  
 Imports System  
@@ -164,7 +167,7 @@ namespace ValidationSample
 </Schema>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.XmlValidatingReader.ValidationType%2A>  
  <!--zz <xref:System.Xml.XmlValidatingReader.Settings%2A>-->  `System.Xml.XmlValidatingReader.Settings`  
  [XmlSchemaCollection 架构编译](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

@@ -15,25 +15,28 @@ helpviewer_keywords:
 - threading [.NET Framework], garbage collection
 - garbage collection, threads
 ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e47674ef8d1b1a7487e42765bcbce4b33cf98769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fdd56763712dee9c6fa1f292eb3bbb2f0ccbf505
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend、垃圾回收和安全点
-当调用<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>在线程上，系统会注意的线程挂起已请求，并允许以执行，直到它已达到某一安全点之前实际上挂起线程的线程。 线程的安全点是在可执行回收垃圾其执行中的点。  
+如果对线程调用 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>，系统就会注意到线程暂停请求已发出，并允许线程在实际暂停前一直执行到安全点。 线程的安全点是可以执行垃圾回收的执行点。  
   
- 一旦达到某一安全点，运行时就会确保挂起的线程将不在托管代码中执行任何进一步的操作。 托管代码之外执行的线程始终是安全的垃圾回收，并且其执行会继续，直到它将尝试继续执行托管代码。  
+ 一旦达到安全点，运行时就会确保暂停的线程在托管代码中不会进一步取得任何进展。 在托管代码外部执行的线程始终都可以安全执行垃圾回收，并继续执行到尝试恢复执行托管代码。  
   
 > [!NOTE]
->  若要执行垃圾回收，运行时必须挂起执行回收的线程以外的所有线程。 在可以挂起之前，每个线程必须转到某一安全点。  
+>  为了执行垃圾回收，运行时必须暂停所有线程（执行回收的线程除外）。 每个线程必须先到达安全点，然后才能暂停。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Thread>  
  <xref:System.GC>  
  [线程处理](../../../docs/standard/threading/index.md)  

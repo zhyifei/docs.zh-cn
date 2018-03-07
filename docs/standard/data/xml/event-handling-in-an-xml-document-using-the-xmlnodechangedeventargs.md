@@ -12,20 +12,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>使用 mlNodeChangedEventArgs 的 XML 文档中的事件处理
-**XmlNodeChangedEventArgs**封装传递给上注册的事件处理程序的参数**XmlDocument**处理事件的对象。 下表提供了事件以及关于何时引发事件的说明。  
+XmlNodeChangedEventArgs 封装传递给事件处理程序的参数，这些处理程序在 XmlDocument 对象上注册为用于处理事件。 下表提供了事件以及关于何时引发事件的说明。  
   
-|Event|引发|  
+|事件|引发|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|当准备将属于当前文档的节点插入到另一个节点时。|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|当已经将属于当前文档的节点插入到另一个节点时。|  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 |<xref:System.Xml.XmlDocument.NodeChanged>|当节点值已经更改时。|  
   
 > [!NOTE]
->  如果**XmlDataDocument**内存使用率进行了完全优化，以使用**数据集**存储， **XmlDataDocument**可能不会引发任何更改时，上面列出的事件对基础**数据集**。 如果你需要这些事件，就必须遍历整个**XmlDocument**使非完全优化的内存使用量。  
+>  如果 XmlDataDocument 内存使用完全优化为使用 DataSet 存储，那么基础 DataSet 有更改时，XmlDataDocument 可能不会抛出上面列出的任何事件。 如果需要这些事件，必须遍历整个 XmlDocument 一遍，才能非完全优化内存使用。  
   
  下面的代码示例显示如何定义事件处理程序以及如何将该事件处理程序添加到事件。  
   
@@ -80,9 +83,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- 某些 XML 文档对象模型 (DOM) 操作是可导致引发多个事件的复合操作。 例如， **AppendChild**可能还需要删除从其上一个父级追加的节点。 在这种情况下，请参阅**NodeRemoved**首先，激发事件跟**NodeInserted**事件。 之类的操作设置**InnerXml**可能会导致多个事件。  
+ 某些 XML 文档对象模型 (DOM) 操作是可导致引发多个事件的复合操作。 例如，AppendChild 可能还必须删除从上一个父级追加的节点。 在此示例中，依次抛出 NodeRemoved 事件和 NodeInserted 事件。 设置 InnerXml 等操作可能会导致多个事件发生。  
   
- 下面的代码示例演示创建事件处理程序以及如何处理**NodeInserted**事件。  
+ 下面的代码示例展示了如何创建事件处理程序，以及如何处理 NodeInserted 事件。  
   
 ```vb  
 Imports System  
@@ -215,5 +218,5 @@ public class Sample
   
  有关详细信息，请参阅 <xref:System.Xml.XmlNodeChangedEventArgs> 和 <xref:System.Xml.XmlNodeChangedEventHandler>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

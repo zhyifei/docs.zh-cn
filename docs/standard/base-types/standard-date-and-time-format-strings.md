@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: "92"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca51c13a8c25575080c56b8d1ffe5723f34b539e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 标准日期和时间格式字符串使用单个格式说明符来定义日期和时间值的文本表示形式。 包含一个以上字符（包括空白）的任何日期和时间格式字符串都会被解释为自定义日期和时间格式字符串；有关更多信息，请参见[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 可通过两种方式使用标准或自定义格式字符串：  
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |“s”|可排序日期/时间模式。<br /><br /> 有关详细信息，请参阅[可排序（“s”）格式说明符](#Sortable)。|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
 |“t”|短时间模式。<br /><br /> 有关详细信息，请参阅[短时间（“t”）格式说明符](#ShortTime)。|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
 |“T”|长时间模式。<br /><br /> 有关详细信息，请参阅[长时间（“T”）格式说明符](#LongTime)。|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
-|“u”|通用可排序日期/时间模式。<br /><br /> 有关详细信息，请参阅[通用可排序（“u”）格式说明符](#UniversalSortable)。|与<xref:System.DateTime>值： 2009年-06-15T13:45:30-> 2009年-06-15 13:45:30Z<br /><br /> 与<xref:System.DateTimeOffset>值： 2009年-06-15T13:45:30-> 2009年-06-15 20:45:30Z|  
+|“u”|通用可排序日期/时间模式。<br /><br /> 有关详细信息，请参阅[通用可排序（“u”）格式说明符](#UniversalSortable)。|含 <xref:System.DateTime> 值：2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> 含 <xref:System.DateTimeOffset> 值：2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
 |“U”|通用完整日期/时间模式。<br /><br /> 有关详细信息，请参阅[通用完整（“U”）格式说明符](#UniversalFull)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
 |“Y”、“y”|年月模式。<br /><br /> 有关详细信息，请参阅[年月（“Y”）格式说明符](#YearMonth)。|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
 |任何其他单个字符|未知说明符。|引发运行时 <xref:System.FormatException>。|  
@@ -252,7 +255,7 @@ ms.lasthandoff: 11/21/2017
   
  对于 <xref:System.DateTime> 值，“O”或“o”标准格式说明符对应于“yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK”自定义格式字符串，对于 <xref:System.DateTimeOffset> 值，“O”或“o”标准格式说明符则对应于“yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzzz”自定义格式字符串。 在此字符串中，分隔各个字符（例如连字符、冒号和字母“T”）的单引号标记对指示各个字符是不能更改的文本。 撇号不会出现在输出字符串中。  
   
- "O"或"o"标准格式说明符 (和"yyyy '-' MM'-'dd'T' HH': 'mm':'ss。fffffffK"自定义格式字符串） 利用 ISO 8601 表示时区信息保留的三种方式<xref:System.DateTime.Kind%2A>属性<xref:System.DateTime>值：  
+ "O" 或 "o" 标准格式说明符（和 "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" 自定义格式字符串）利用 ISO 8601 表示时区信息的三种方式，从而暂留 <xref:System.DateTime> 值的 <xref:System.DateTime.Kind%2A> 属性：  
   
 -   <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 日期和时间值的时区组件是相对于 UTC 的偏移量（例如，+01:00，-07:00）。 所有 <xref:System.DateTimeOffset> 值也以这种格式表示。  
   
@@ -408,19 +411,19 @@ ms.lasthandoff: 11/21/2017
  [返回表首](#table)  
   
 <a name="Notes"></a>   
-## <a name="notes"></a>备注  
+## <a name="notes"></a>说明  
   
 ### <a name="control-panel-settings"></a>控制面板设置  
  控制面板中 **“区域和语言选项”** 项中的设置会影响由格式化操作产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.DateTimeFormatInfo> 对象，当前线程区域性提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。  
   
- 此外，如果你使用<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>构造函数实例化一个新<xref:System.Globalization.CultureInfo>对象，表示与当前系统区域性，建立的任何自定义相同的区域性**区域和语言选项**控制面板中将应用到新<xref:System.Globalization.CultureInfo>对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。  
+ 此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。  
   
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 属性  
  格式化受当前的 <xref:System.Globalization.DateTimeFormatInfo> 对象的属性影响，其由当前线程区域性隐式提供或由调用格式化的方法的 <xref:System.IFormatProvider> 参数显式提供。 对于 <xref:System.IFormatProvider> 参数，应用程序应指定一个表示区域性的 <xref:System.Globalization.CultureInfo> 对象或表示特定区域性的日期和时间格式设置约定的 <xref:System.Globalization.DateTimeFormatInfo> 对象。 许多标准日期和时间格式说明符是由当前的 <xref:System.Globalization.DateTimeFormatInfo> 对象的属性定义的格式设置模式的别名。 应用程序通过更改相应 <xref:System.Globalization.DateTimeFormatInfo> 属性的相应日期和时间格式模式，可以更改由某些标准日期和时间格式说明符产生的结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
  [示例：.NET Framework 4 格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

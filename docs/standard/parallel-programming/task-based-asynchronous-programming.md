@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallelism, task
+helpviewer_keywords:
+- parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5b672335c237fb4e07332d0d39975aaedb375306
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8e5367c8a786d720cdf3394922527020f8d4d47a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
 任务并行库 (TPL) 以“任务”的概念为基础，后者表示异步操作。 在某些方面，任务类似于线程或 <xref:System.Threading.ThreadPool> 工作项，但是抽象级别更高。 术语“任务并行”是指一个或多个独立的任务同时运行。 任务提供两个主要好处：  
@@ -116,7 +120,7 @@ ms.lasthandoff: 11/21/2017
  每个线程都具有一个关联的区域性和 UI 区域性，分别由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 属性定义。 线程的区域性用在诸如格式、分析、排序和字符串比较操作中。 线程的 UI 区域性用于查找资源。 通常，除非使用 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 属性在应用程序域中为所有线程指定默认区域性，线程的默认区域性和 UI 区域性则由系统区域性定义。 如果你显式设置线程的区域性并启动新线程，则新线程不会继承正在调用的线程的区域性；相反，其区域性就是默认系统区域性。 基于任务的应用编程模型遵循这种做法，这些应用指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 之前的 .NET Framework 版本。  
   
 > [!IMPORTANT]
->  请注意，作为任务上下文一部分的调用线程的区域性适用于面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用，而不是在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 下运行的应用。 通过从顶部的下拉列表中选择该版本在 Visual Studio 中创建你的项目时，你可以指定目标.NET Framework 特定版本**新项目**对话框中，或在你可以使用 Visual Studio 外部<xref:System.Runtime.Versioning.TargetFrameworkAttribute>属性。 对于指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 之前的 .NET Framework 版本的应用，或者对于不指定 .NET framework 特定版本的应用，任务的区域性将继续由它运行的线程的区域性确定。  
+>  请注意，作为任务上下文一部分的调用线程的区域性适用于面向 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用，而不是在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 下运行的应用。 可以在 Visual Studio 中创建项目时，定目标到特定版本的 .NET Framework，具体操作是从“新建项目”对话框顶部的下拉列表选择相应版本。在 Visual Studio 外部，可以使用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性定目标到特定版本。 对于指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 之前的 .NET Framework 版本的应用，或者对于不指定 .NET framework 特定版本的应用，任务的区域性将继续由它运行的线程的区域性确定。  
   
  启动指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 的应用程序，即使任务在线程池线程上以异步方式运行，调用线程的区域性仍然通过每个任务继承。  
   
@@ -125,14 +129,14 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
  [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]  
   
- 如果你使用的 Visual Studio，则可以省略<xref:System.Runtime.Versioning.TargetFrameworkAttribute>属性，并改为选择.NET Framework 4.6 作为目标时创建的项目中**新项目**对话框。  
+ 如果使用的是 Visual Studio，可以省略 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性，并在创建项目时在“新建项目”对话框中改选“.NET Framework 4.6”作为目标。  
   
  对于反映指定 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 之前的 .NET Framework 版本的应用程序行为的输出，请从源代码中移除 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性。 输出将会反应默认系统区域性的格式设置约定，而不是调用线程的区域性。  
   
  有关异步任务和区域性的详细信息，请参阅 <xref:System.Globalization.CultureInfo> 主题中的“区域性和基于异步任务的操作”部分。  
   
 ## <a name="creating-task-continuations"></a>创建任务延续  
- <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>和<xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType>方法使你可以指定任务时要启动*前面的任务*完成。 延续任务的委托已传递了对先行任务的引用，因此它可以检查先行任务的状态，并通过检索 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性的值将先行任务的输出用作延续任务的输入。  
+ 使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 方法，可以指定要在先行任务完成时启动的任务。 延续任务的委托已传递了对先行任务的引用，因此它可以检查先行任务的状态，并通过检索 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性的值将先行任务的输出用作延续任务的输入。  
   
  在下面的示例中，`getData` 任务通过调用 <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> 方法来启动。 当 `processData` 完成时，`getData` 任务自动启动，当 `displayData` 完成时，`processData` 启动。 `getData` 产生一个整数数组，通过 `processData` 任务的 `getData` 属性，<xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 任务可访问该数组。 `processData` 任务处理该数组并返回结果，结果的类型从传递到 <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> 方法的 lambda 表达式的返回类型推断而来。 `displayData` 完成时，`processData` 任务自动执行，而 <xref:System.Tuple%603> 任务可通过 `processData` 任务的 `displayData` 属性访问由 `processData` lambda 表达式返回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 对象。 `displayData` 任务采用 `processData` 任务的结果，继而得出自己的结果，其类型以相似方式推断而来，且可由程序中的 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性使用。  
   
@@ -157,7 +161,7 @@ ms.lasthandoff: 11/21/2017
  请注意，父任务不会等待分离子任务完成。  
   
 ## <a name="creating-child-tasks"></a>创建子任务  
- 如果在任务中运行的用户代码创建的任务时<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>选项，新任务称为*附加子任务*父任务。 因为父任务隐式地等待所有附加子任务完成，所以你可以使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 选项表示结构化的任务并行。 以下示例展示了创建十个附加子任务的父任务。 请注意，虽然此示例调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法等待父任务完成，但不必显式等待附加子任务完成。  
+ 如果任务中运行的用户代码在创建任务时指定了 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 选项，新任务就称为父任务的附加子任务。 因为父任务隐式地等待所有附加子任务完成，所以你可以使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 选项表示结构化的任务并行。 以下示例展示了创建十个附加子任务的父任务。 请注意，虽然此示例调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法等待父任务完成，但不必显式等待附加子任务完成。  
   
  [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
  [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]  
@@ -165,7 +169,7 @@ ms.lasthandoff: 11/21/2017
  父任务可使用 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 选项阻止其他任务附加到父任务。 有关详细信息，请参阅[附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
   
 ## <a name="waiting-for-tasks-to-finish"></a>等待任务完成  
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>和<xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>类型提供了几个重载<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>和<!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>-->`System.Threading.Tasks.Task.Wait`方法，使你能够等待任务完成。 此外，使用静态 <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> 方法的重载可以等待一批任务中的任一任务或所有任务完成。  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 类型提供了 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 和 <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>--> `System.Threading.Tasks.Task.Wait` 方法的若干重载，以便能够等待任务完成。 此外，使用静态 <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> 方法的重载可以等待一批任务中的任一任务或所有任务完成。  
   
  通常，会出于以下某个原因等待任务：  
   
@@ -207,7 +211,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法将生成在指定时间后完成的 <xref:System.Threading.Tasks.Task> 对象。 你可使用此方法来生成偶尔轮询数据的循环，引入超时，将对用户输入的处理延迟预定的一段时间等。  
   
 ### <a name="tasktfromresult"></a>Task(T).FromResult  
- 通过使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法，你可以创建包含预计算结果的 <xref:System.Threading.Tasks.Task%601> 对象。 执行返回 <xref:System.Threading.Tasks.Task%601> 对象的异步运算，且已计算该 <xref:System.Threading.Tasks.Task%601> 对象的结果时，此方法将十分有用。 有关示例，使用<xref:System.Threading.Tasks.Task.FromResult%2A>若要检索缓存中包含的异步下载操作的结果，请参阅[如何： 创建预先计算的任务](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)。  
+ 通过使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法，你可以创建包含预计算结果的 <xref:System.Threading.Tasks.Task%601> 对象。 执行返回 <xref:System.Threading.Tasks.Task%601> 对象的异步运算，且已计算该 <xref:System.Threading.Tasks.Task%601> 对象的结果时，此方法将十分有用。 有关使用 <xref:System.Threading.Tasks.Task.FromResult%2A> 检索缓存中包含的异步下载操作结果的示例，请参阅[如何：创建预先计算的任务](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)。  
   
 ## <a name="handling-exceptions-in-tasks"></a>处理任务中的异常  
  当某个任务抛出一个或多个异常时，异常包装在 <xref:System.AggregateException> 异常中。 该异常传播回与该任务联接的线程，通常该线程正在等待该任务完成或该线程访问 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性。 此行为用于强制实施 .NET Framework 策略 - 默认所有未处理的异常应终止进程。 调用代码可以通过使用 `try`/`catch` 块中的以下任意方法来处理异常：  
@@ -236,17 +240,17 @@ ms.lasthandoff: 11/21/2017
   
 -   最常用模式为 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A>，它在一个语句中创建并启动任务。  
   
--   从多个先行任务创建延续任务，请使用<xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>方法或<xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A>方法或中的等效项<xref:System.Threading.Tasks.Task%601>类。 有关详细信息，请参阅[使用延续任务链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)。  
+-   如果通过多个先行任务创建延续任务，请使用 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> 方法或 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> 方法，或它们在 <xref:System.Threading.Tasks.Task%601> 类中的相当方法。 有关详细信息，请参阅[使用延续任务链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)。  
   
 -   若要在 `BeginX` 或 `EndX` 实例中封装异步编程模型 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 方法，请使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 有关详细信息，请参阅 [TPL 和传统 .NET Framework 异步编程](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)。  
   
  默认的 <xref:System.Threading.Tasks.TaskFactory> 可作为 <xref:System.Threading.Tasks.Task> 类或 <xref:System.Threading.Tasks.Task%601> 类上的静态属性访问。 你还可以直接实例化 <xref:System.Threading.Tasks.TaskFactory> 并指定各种选项，包括 <xref:System.Threading.CancellationToken>、<xref:System.Threading.Tasks.TaskCreationOptions> 选项、<xref:System.Threading.Tasks.TaskContinuationOptions> 选项或 <xref:System.Threading.Tasks.TaskScheduler>。 创建任务工厂时所指定的任何选项将应用于它创建的所有任务，除非 <xref:System.Threading.Tasks.Task> 是通过使用 <xref:System.Threading.Tasks.TaskCreationOptions> 枚举创建的（在这种情况下，任务的选项重写任务工厂的选项）。  
   
 ## <a name="tasks-without-delegates"></a>无委托的任务  
- 在某些情况下，可能需要使用 <xref:System.Threading.Tasks.Task> 封装由外部组件（而不是你自己的用户委托）执行的某个异步操作。 如果该操作基于异步编程模型 Begin/End 模式，你可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是这种情况，你可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 对象将该操作包装在任务中，并因而获得 <xref:System.Threading.Tasks.Task> 可编程性的一些好处，例如对异常传播和延续的支持。 有关详细信息，请参阅<xref:System.Threading.Tasks.TaskCompletionSource%601>。  
+ 在某些情况下，可能需要使用 <xref:System.Threading.Tasks.Task> 封装由外部组件（而不是你自己的用户委托）执行的某个异步操作。 如果该操作基于异步编程模型 Begin/End 模式，你可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是这种情况，你可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 对象将该操作包装在任务中，并因而获得 <xref:System.Threading.Tasks.Task> 可编程性的一些好处，例如对异常传播和延续的支持。 有关更多信息，请参见<xref:System.Threading.Tasks.TaskCompletionSource%601>。  
   
 ## <a name="custom-schedulers"></a>自定义计划程序  
- 大多数应用程序或库开发人员并不关心任务在哪个处理器上运行、任务如何将其工作与其他任务同步以及如何在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 中计划任务。 他们只需要它在主机上尽可能高效地执行。 如果需要对计划细节进行更细化的控制，可以使用任务并行库在默认任务计划程序上配置一些设置，甚至是提供自定义计划程序。 有关详细信息，请参阅<xref:System.Threading.Tasks.TaskScheduler>。  
+ 大多数应用程序或库开发人员并不关心任务在哪个处理器上运行、任务如何将其工作与其他任务同步以及如何在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 中计划任务。 他们只需要它在主机上尽可能高效地执行。 如果需要对计划细节进行更细化的控制，可以使用任务并行库在默认任务计划程序上配置一些设置，甚至是提供自定义计划程序。 有关更多信息，请参见<xref:System.Threading.Tasks.TaskScheduler>。  
   
 ## <a name="related-data-structures"></a>相关数据结构  
  TPL 有几种在并行和顺序方案中都有用的新公共类型。 它们包括 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的一些线程安全的、快速且可缩放的集合类，还包括一些新的同步类型（例如 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 和 <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>），对特定类型的工作负荷而言，这些新同步类型比旧的同步类型效率更高。 .NET Framework 4 中的其他新类型（例如 <xref:System.Threading.Barrier?displayProperty=nameWithType> 和 <xref:System.Threading.SpinLock?displayProperty=nameWithType>）提供了早期版本中未提供的功能。 有关详细信息，请参阅[用于并行编程的数据结构](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)。  
@@ -258,7 +262,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|标题|描述|  
 |-|-|  
 |[使用延续任务来链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|描述延续任务的工作方式。|  
 |[附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|描述附加子任务和分离子任务之间的差异。|  
@@ -273,6 +277,6 @@ ms.lasthandoff: 11/21/2017
 |[数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|描述如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 来创建循环访问数据的并行循环。|  
 |[并行编程](../../../docs/standard/parallel-programming/index.md)|.NET Framework 并行编程的顶级节点。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并行编程](../../../docs/standard/parallel-programming/index.md)  
  [使用 .NET Framework 进行并行编程的示例](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

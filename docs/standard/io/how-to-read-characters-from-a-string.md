@@ -19,21 +19,24 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9116ec63bfc1d12daf7627186a52bd29d5918485
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b8c41350431f49b638c4353e68c9bacded947a1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-read-characters-from-a-string"></a>如何：从字符串中读取字符
-下面的代码示例演示如何以异步方式和从字符串读取字符。  
+下面的代码示例展示了如何从字符串中异步和同步读取字符。  
   
 ## <a name="example"></a>示例  
- 此示例将读取 13 个字符从一个字符串，以同步方式将它们存储在数组中，并显示这些字符。 它然后读取字符串中的剩余字符，将其存储在起始位置的第六个元素的数组并显示数组的内容。  
+ 此示例从字符串中同步读取 13 个字符，将它们存储到数组中，并显示这些字符。 然后，它读取字符串中的剩余字符，将它们存储到数组中（从第六个元素开始），并显示数组的内容。  
   
  [!code-cpp[Conceptual.StringReader#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.stringreader/cpp/source.cpp#1)]
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]
@@ -45,11 +48,11 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source2.cs#2)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IO.StringReader>  
  <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
  [异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [NIB： 如何： 创建目录列表](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [NIB：如何：创建目录列表](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
  [如何：对新建的数据文件进行读取和写入](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [如何：打开并追加到日志文件](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
  [如何：从文件读取文本](../../../docs/standard/io/how-to-read-text-from-a-file.md)  

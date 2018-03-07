@@ -12,25 +12,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a433ec5f83a50aa4fe4b2017a0dac3d2a5e5710c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f134761c4dadcef4692194293c8c99899bb6be2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="accessing-attributes-in-the-dom"></a>访问 DOM 中的属性
-属性是元素的属性，不是元素的子级。 这一区别很重要，因为用来浏览 XML 文档对象模型 (DOM) 的同级、父级和子节点的方法不同。 例如， **PreviousSibling**和**NextSibling**方法不用来从元素导航，到属性或属性之间。 相反，属性为元素的属性，归元素，具有**OwnerElement**属性而不**parentNode**属性，并且具有不同的浏览方法。  
+属性是元素的属性，不是元素的子级。 这一区别很重要，因为用来浏览 XML 文档对象模型 (DOM) 的同级、父级和子节点的方法不同。 例如，PreviousSibling 和 NextSibling 方法不用于从元素转到属性，也不用于在属性之间导航。 相反，属性是元素属性，归元素所有，包含 OwnerElement 属性，而不是 parentNode 属性，并且有不同的导航方法。  
   
- 元素的当前节点时，请使用**HasAttribute**方法，以查看是否存在任何与元素关联的属性。 如果已知元素具有属性，有多种方法可以访问这些属性。 若要从元素中检索单个属性，可以使用**GetAttribute**和**GetAttributeNode**方法**XmlElement**或者，你可以获得所有属性到一个集合。 如果需要循环访问集合，获取集合就很有用。 如果你想从元素的所有属性，使用**属性**要检索到一个集合的所有属性的元素的属性。  
+ 如果当前节点是元素，请使用 HasAttribute 方法，确定是否有任何与此元素关联的属性。 如果已知元素具有属性，有多种方法可以访问这些属性。 若要从元素中检索一个属性，可以使用 XmlElement 的 GetAttribute 和 GetAttributeNode 方法，也可以将所有属性获取到集合中。 如果需要循环访问集合，获取集合就很有用。 如果需要元素中的所有属性，请使用元素的 Attributes 属性，将所有属性检索到集合中。  
   
 ## <a name="retrieving-all-attributes-into-a-collection"></a>将所有属性检索到一个集合中  
- 如果您需要将所有元素节点的属性放入集合，调用**XmlElement.Attributes**属性。 这将得到**XmlAttributeCollection**包含的元素的所有属性。 **XmlAttributeCollection**类继承自**XmlNamedNode**映射。 因此，包括方法和属性可在集合上可用的命名的节点映射此外方法和属性特定于**XmlAttributeCollection**类，如**ItemOf**属性或**追加**方法。 该属性集合中的每一项表示**XmlAttribute**节点。 若要查找上一个元素的属性数，请获取**XmlAttributeCollection**，并使用**计数**属性以查看多少**XmlAttribute**节点在集合中。  
+ 如果需要将元素节点的所有属性添加到集合中，请调用 XmlElement.Attributes 属性。 这会获取包含元素的所有属性的 XmlAttributeCollection。 XmlAttributeCollection 类继承自 XmlNamedNode 映射。 因此，集合中的方法和属性除了包括 XmlAttributeCollection 类专用方法和属性（如 ItemOf 属性或 Append 方法）外，还包括命名节点映射中的方法和属性。 属性集合中的每一项都表示 XmlAttribute 节点。 若要确定元素的属性数，请获取 XmlAttributeCollection，并使用 Count 属性确定集合中的 XmlAttribute 节点数。  
   
- 下面的代码示例演示如何检索一个属性集合，并通过**计数**方法作为循环索引，循环访问它。 然后，此代码显示如何从集合中检索单个属性并显示其值。  
+ 下面的代码示例展示了如何检索属性集合，以及如何通过对循环索引使用 Count 方法来循环访问集合。 然后，此代码显示如何从集合中检索单个属性并显示其值。  
   
 ```vb  
 Imports System  
@@ -137,7 +140,7 @@ sale item
   
  可按名称或索引号检索属性集合中的信息。 上例显示了如何按名称检索数据。 下例将显示如何按索引编号检索数据。  
   
- 因为**XmlAttributeCollection**是集合并可以循环访问按名称或索引，此示例显示了选择从使用从零开始的索引和使用下面的文件，该集合的第一个属性**baseuri.xml**作为输入。  
+ 因为 XmlAttributeCollection 是可以按名称或按索引循环访问的集合，所以此示例展示了如何使用从零开始编制的索引，并使用下面的 baseuri.xml 文件作为输入文件，选择集合中的第一个属性。  
   
 ### <a name="input"></a>输入  
   
@@ -198,7 +201,7 @@ public class Sample
 ```  
   
 ## <a name="retrieving-an-individual-attribute-node"></a>检索单个属性节点  
- 若要从元素中检索单个属性节点，请使用 <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> 方法。 它将返回类型的对象**XmlAttribute**。 一旦**XmlAttribute**，所有方法和属性中提供<xref:System.Xml.XmlAttribute?displayProperty=nameWithType>类都位于该对象，例如查找**OwnerElement**。  
+ 若要从元素中检索单个属性节点，请使用 <xref:System.Xml.XmlElement.GetAttributeNode%2A?displayProperty=nameWithType> 方法。 它返回类型为 XmlAttribute 的对象。 有了 XmlAttribute 对象后，<xref:System.Xml.XmlAttribute?displayProperty=nameWithType> 类中的所有方法和属性都可用于此对象，如查找 OwnerElement。  
   
 ```vb  
 Imports System  
@@ -261,11 +264,11 @@ using System.Xml;
 }  
 ```  
   
- 您也可以如前例所示，从属性集合中检索单个属性节点。 以下代码示例显示如何一行代码可以编写中检索单个属性按索引号从 XML 文档的根树，也称为**DocumentElement**属性。  
+ 您也可以如前例所示，从属性集合中检索单个属性节点。 下面的代码示例展示了如何编写一行代码，以按索引号从 XML 文档树的根节点（亦称为 DocumentElement 属性）检索一个属性。  
   
 ```  
 XmlAttribute attr = doc.DocumentElement.Attributes[0];  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

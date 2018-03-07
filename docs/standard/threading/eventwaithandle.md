@@ -14,62 +14,65 @@ helpviewer_keywords:
 - event wait handles [.NET Framework]
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1bd248133bd95ff05246eb36a8e250247fd7ed61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 665676a25aea48388ba01b8028af00049b113f2b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
-<xref:System.Threading.EventWaitHandle>类允许通过发送信号和等待信号相互通信的线程。 事件等待句柄 （也简称为事件） 是可以指示实时编码器以释放一个或多个正在等待的线程的等待句柄。 处于有信号状态后，手动或自动将重置事件等待句柄。 <xref:System.Threading.EventWaitHandle>类可以表示任一本地事件等待句柄 （本地事件） 或已命名的系统事件等待句柄 （名为事件或系统事件，对所有进程可见）。  
+借助 <xref:System.Threading.EventWaitHandle> 类，线程可以通过发出信号和等待信号进行相互通信。 事件等待句柄（亦简称为“事件”）是可以收到信号以释放一个或多个等待线程的等待句柄。 收到信号后，事件等待句柄便会进行手动或自动重置。 <xref:System.Threading.EventWaitHandle> 类可以表示本地事件等待句柄（本地事件），也可以表示命名系统事件等待句柄（对所有进程可见的命名事件或系统事件）。  
   
 > [!NOTE]
->  事件等待句柄不是在通常是由.NET Framework 中的该单词的意义上的事件。 没有任何委托或事件处理程序所涉及。 Word"事件"用于描述它们，因为具有传统上已称其为操作系统事件，并且正在等待的线程的信号等待句柄 act 指示已发生事件。  
+>  事件等待句柄与 .NET Framework 中通常意义下的事件不同。 并不涉及任何委托或事件处理程序。 之所以使用“事件”一词是因为，它们一直都被称为操作系统事件，并且向等待句柄发出信号可以向等待线程指明事件已发生。  
   
- 这两个本地和命名事件等待句柄使用系统同步对象，因为它们受<xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>包装器来确保释放资源。 你可以使用<xref:System.Threading.WaitHandle.Dispose%2A>方法以立即你完成使用对象时释放资源。  
+ 本地和命名事件等待句柄均使用系统同步对象。为了确保资源获得释放，这些对象受 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 包装器保护。 可以使用 <xref:System.Threading.WaitHandle.Dispose%2A> 方法，在使用完对象后立即释放资源。  
   
 ## <a name="event-wait-handles-that-reset-automatically"></a>自动重置的事件等待句柄  
- 通过指定创建的自动重置事件<xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>创建时<xref:System.Threading.EventWaitHandle>对象。 顾名思义，此同步事件会自动重置时收到信号后释放单个正在等待的线程。 发出事件信号通过调用其<xref:System.Threading.EventWaitHandle.Set%2A>方法。  
+ 若要创建自动重置事件，可以在创建 <xref:System.Threading.EventWaitHandle> 对象时指定 <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>。 顾名思义，此同步事件在一个等待线程释放后收到信号时自动重置。 若要向事件发出信号，请调用它的 <xref:System.Threading.EventWaitHandle.Set%2A> 方法。  
   
- 自动重置事件通常用于一次提供单个线程对资源的独占访问权。 线程通过调用请求资源<xref:System.Threading.WaitHandle.WaitOne%2A>方法。 如果没有其他线程持有等待句柄，该方法返回`true`和调用线程已对资源的控制。  
+ 自动重置事件通常用于一次向一个线程提供对资源的独占访问权限。 线程通过调用 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法来请求获取资源。 如果其他线程都没有等待句柄，此方法返回 `true`，且调用线程可以控制资源。  
   
 > [!IMPORTANT]
->  与所有的同步机制，必须确保，所有代码路径上的正确的都等待句柄之前都等待访问受保护的资源。 线程同步是协作性。  
+>  与所有同步机制一样，必须确保在访问受保护的资源前，所有代码路径都在相应的等待句柄上等待。 线程同步具有协作性。  
   
- 如果任何线程在不等待时收到信号的自动重置事件，它将一直终止线程尝试在其上等待。 该事件释放线程，并立即重置，阻止后面的线程。  
+ 如果向自动重置事件发出信号时没有线程正在等待，此信号会一直发出到有线程尝试在等待句柄上等待。 此时，事件会释放相应线程并立即重置自身，同时阻止后续线程。  
   
 ## <a name="event-wait-handles-that-reset-manually"></a>手动重置的事件等待句柄  
- 通过指定创建手动重置事件<xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>创建时<xref:System.Threading.EventWaitHandle>对象。 顾名思义，此同步事件必须是后手动重置已终止。 它被重置之前，通过调用其<xref:System.Threading.EventWaitHandle.Reset%2A>方法，等待的事件句柄的线程会立即继续而不阻止。  
+ 若要创建手动重置事件，可以在创建 <xref:System.Threading.EventWaitHandle> 对象时指定 <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>。 顾名思义，此同步事件必须在收到信号后进行手动重置。 调用 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法重置事件前，在事件句柄上等待的线程会立即继续运行，而不受阻止。  
   
- 手动重置事件就像入口马棚。 当事件不处于终止状态时，阻止在其等待的线程，如同在马棚让马。 该事件已终止时，通过调用其<xref:System.Threading.EventWaitHandle.Set%2A>方法中，所有正在等待的线程都可以继续。 在事件未终止状态，直到其<xref:System.Threading.EventWaitHandle.Reset%2A>调用方法。 这使得手动重置事件理想的方式，可以保存最多需要等待，直到一个线程完成任务的线程。  
+ 手动重置事件如同畜栏口一样。 如果事件未收到信号，在事件句柄上等待的线程受阻止，如同畜栏中的马一样。 通过调用 <xref:System.Threading.EventWaitHandle.Set%2A> 方法向事件发出信号后，所有等待线程都获得释放，可以继续执行。 在 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法获得调用前，一直向事件发出信号。 这样一来，手动重置事件就非常适用于，阻止需要等待一个线程完成任务的线程。  
   
- 如同让马离开马棚一样，则需要花时间的已发布的线程，以计划由操作系统并继续执行。 如果<xref:System.Threading.EventWaitHandle.Reset%2A>所有线程具有都继续执行之前调用方法，则其余的线程再次进行阻止。 哪些线程恢复和线程阻止取决于随机因素，如在系统上，线程数负载正在等待计划程序，等等。 如果发出事件信号的线程结束信号之后, 它是最常见的使用情况模式，则不出现问题。 如果你想终止的事件，别忘了开始新任务正在等待线程已恢复的线程，您必须具有在恢复所有正在等待的线程之前阻止它。 否则为有争用条件，并且你的代码的行为是不可预知。  
+ 就像马离开畜栏一样，获释放的线程需要一定的时间，才能被操作系统排入计划和恢复执行。 如果在所有线程恢复执行前 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法获得调用，剩余线程将再次受阻止。 恢复哪些线程以及阻止哪些线程都取决于随机因素，如系统负载、等待计划程序的线程数等。 如果向事件发出信号的线程在发出信号后结束（这是最常见的使用模式），这就不存在问题。 如果希望向事件发出信号的线程在所有等待线程恢复后启动新任务，必须将它一直阻止到所有等待线程都已恢复。 否则，将会出现争用条件，而且代码行为也会变得不可预测。  
   
-## <a name="features-common-to-automatic-and-manual-events"></a>对自动和手动事件都通用的功能  
- 通常情况下，一个或多个线程阻止<xref:System.Threading.EventWaitHandle>直到取消阻止的线程调用<xref:System.Threading.EventWaitHandle.Set%2A>方法，该释放一个 （如果为自动重置事件） 正在等待的线程或所有这些方法 （如果是手动重置事件）。 线程都可以发送<xref:System.Threading.EventWaitHandle>，然后阻止它，以原子操作，通过调用静态<xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType>方法。  
+## <a name="features-common-to-automatic-and-manual-events"></a>自动和手动事件的常见功能  
+ 通常情况下，一个或多个线程在 <xref:System.Threading.EventWaitHandle> 上一直受阻止到未受阻止的线程调用 <xref:System.Threading.EventWaitHandle.Set%2A> 方法，此方法释放等待线程之一（如果是自动重置事件）或全部线程（如果是手动重置事件）。 线程可以向 <xref:System.Threading.EventWaitHandle> 发出信号，然后调用静态 <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> 方法以原子操作的形式在其中受阻止。  
   
- <xref:System.Threading.EventWaitHandle>对象可以用于静态<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>和<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>方法。 因为<xref:System.Threading.EventWaitHandle>和<xref:System.Threading.Mutex>类都派生自<xref:System.Threading.WaitHandle>，你可以使用这些方法使用这两个类。  
+ <xref:System.Threading.EventWaitHandle> 对象可以与静态 <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> 方法结合使用。 由于 <xref:System.Threading.EventWaitHandle> 和 <xref:System.Threading.Mutex> 类均派生自 <xref:System.Threading.WaitHandle>，因此可以将这两个类与这些方法结合使用。  
   
-### <a name="named-events"></a>命名的事件  
- Windows 操作系统允许事件等待句柄可以具有的名称。 命名的事件是系统范围。 即，已命名的事件创建后，是可见的所有进程中的所有线程。 因此，命名的事件可用于同步进程以及线程的活动。  
+### <a name="named-events"></a>命名事件  
+ Windows 操作系统允许命名事件等待句柄。 命名事件的范围覆盖整个系统。 也就是说，一旦创建，命名事件就对所有进程中的全部线程可见。 因此，命名事件可用于同步进程和线程的活动。  
   
- 你可以创建<xref:System.Threading.EventWaitHandle>通过使用指定的事件名称的构造函数之一表示已命名的系统事件的对象。  
-  
-> [!NOTE]
->  因为命名的事件是系统范围，就可以有多个<xref:System.Threading.EventWaitHandle>表示相同的对象名为事件。 每次调用构造函数，或<xref:System.Threading.EventWaitHandle.OpenExisting%2A>方法时，新<xref:System.Threading.EventWaitHandle>创建对象。 反复指定相同的名称创建多个表示同一命名的事件的对象。  
-  
- 警告： 建议在使用名为事件。 因为它们是系统范围，则使用相同的名称的另一个进程可以意外阻止您的线程。 同一台计算机上的恶意代码执行可将此作为拒绝服务攻击的基础。  
-  
- 使用访问控制安全性来保护<xref:System.Threading.EventWaitHandle>表示命名的事件，最好是通过使用指定的构造函数的对象<xref:System.Security.AccessControl.EventWaitHandleSecurity>对象。 你还可以应用访问控件安全性使用<xref:System.Threading.EventWaitHandle.SetAccessControl%2A>方法，但这留出创建事件等待句柄的时间和受保护的时间之间的安全漏洞的一段。 保护事件使用访问控制安全性帮助阻止恶意攻击，但它不能解决的意外的名称冲突问题。  
+ 可以使用指定事件名称的构造函数之一，创建表示命名系统事件的 <xref:System.Threading.EventWaitHandle> 对象。  
   
 > [!NOTE]
->  与不同<xref:System.Threading.EventWaitHandle>类，派生的类<xref:System.Threading.AutoResetEvent>和<xref:System.Threading.ManualResetEvent>可以表示仅为本地等待句柄。 它们不能表示已命名的系统事件。  
+>  由于命名事件的范围覆盖整个系统，因此可能有多个 <xref:System.Threading.EventWaitHandle> 对象表示同一命名事件。 每次调用构造函数或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A> 方法，都会新建一个 <xref:System.Threading.EventWaitHandle> 对象。 重复指定相同的名称也会创建多个表示同一命名事件的对象。  
   
-## <a name="see-also"></a>另请参阅  
+ 建议谨慎使用命名事件。 由于命名事件的范围覆盖整个系统，因此同名的另一进程可能会意外阻止线程。 同一台计算机上的恶意代码执行可将此作为拒绝服务攻击的基础。  
+  
+ 借助访问控制安全性，可以保护表示命名事件的 <xref:System.Threading.EventWaitHandle> 对象，最好使用指定 <xref:System.Security.AccessControl.EventWaitHandleSecurity> 对象的构造函数。 还可以使用 <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> 方法应用访问控制安全性，但这会导致在创建和保护事件等待句柄的时间间隔易受攻击。 虽然应用访问控制安全性来保护事件有助于防止恶意攻击，但不能解决无意间的名称冲突问题。  
+  
+> [!NOTE]
+>  与 <xref:System.Threading.EventWaitHandle> 类不同，派生类 <xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 只能表示本地等待句柄。 无法表示命名系统事件。  
+  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.EventWaitHandle>  
  <xref:System.Threading.WaitHandle>  
  <xref:System.Threading.AutoResetEvent>  

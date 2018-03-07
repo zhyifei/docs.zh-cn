@@ -12,20 +12,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 167cd81ecbc25ca243e3b4a7a6aa7327679528e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f1367268920e4b72f29b77a7f2e96f09a1dce37
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 类实现 XSLT 处理器
 > [!NOTE]
->  
-          <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[迁移从 XslTransform 类](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)有关详细信息。  
+>  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
   
  <xref:System.Xml.Xsl.XslTransform> 类是实现 XSL 转换 (XSLT) 1.0 版建议的 XSLT 处理器。 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法定位并读取样式表，<xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法转换给定的源文档。 任何实现了 <xref:System.Xml.XPath.IXPathNavigable> 接口的存储区都可以用作 <xref:System.Xml.Xsl.XslTransform> 的源文档。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 当前在 <xref:System.Xml.XPath.IXPathNavigable>、<xref:System.Xml.XmlDocument> 和 <xref:System.Xml.XmlDataDocument> 上实现了 <xref:System.Xml.XPath.XPathDocument> 接口，所以它们都可以用作转换的输入源文档。  
   
@@ -85,9 +87,9 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
   
  如果未提供 URI 或证据，那么样式表的 证据集就完全受信任。 不要从不受信任的源加载样式表或将不受信任的扩展对象添加到 <xref:System.Xml.Xsl.XsltArgumentList>。  
   
- 有关安全级别和证据以及它如何影响脚本的详细信息，请参阅[XSLT 样式表脚本使用\<msxsl: script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)。 有关安全级别和证据以及它如何影响扩展对象的信息，请参阅[样式表参数和扩展对象的 XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)。  
+ 若要详细了解安全级别和证据及其对脚本的影响，请参阅[使用 \<msxsl:script> 编写 XSLT 样式表脚本](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)。 若要了解安全级别和证据及其对扩展对象的影响，请参阅[样式表参数和扩展对象的 XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)。  
   
- 有关安全级别和证据和它如何影响信息`document()`函数中，请参阅[解析外部 XSLT 样式表和文档](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md)。  
+ 若要了解安全级别和证据及其对 `document()` 函数的影响，请参阅[解析外部 XSLT 样式表和文档](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md)。  
   
  可以给样式表提供许多输入参数。 样式表也可以调用扩展对象上的函数。 参数和扩展对象都是使用 <xref:System.Xml.Xsl.XsltArgumentList> 类提供给样式表的。 有关 <xref:System.Xml.Xsl.XsltArgumentList> 的详细信息，请参阅<xref:System.Xml.Xsl.XsltArgumentList>。  
   
@@ -148,7 +150,7 @@ xsltransform.Transform("MyDocument.xml", "TransformResult.xml", null);
 ```  
   
 ## <a name="transforming-a-section-of-an-xml-document"></a>转换 XML 文档的节  
- 转换将应用于整个文档。 换句话说，如果您传入文档根节点以外的一个节点，并不能防止转换进程访问已加载文档的所有节点。 若要转换结果树片段，必须创建一个仅包含结果树片段的 <xref:System.Xml.XmlDocument>，并将该 <xref:System.Xml.XmlDocument> 传递给 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。 下面的示例对一个结果树片段执行转换。  
+ 转换将应用于整个文档。 换句话说，如果你传入文档根节点以外的一个节点，并不能防止转换进程访问已加载文档的所有节点。 若要转换结果树片段，必须创建一个仅包含结果树片段的 <xref:System.Xml.XmlDocument>，并将该 <xref:System.Xml.XmlDocument> 传递给 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。 下面的示例对一个结果树片段执行转换。  
   
 ```vb  
 Dim xslt As New XslTransform()  
@@ -214,7 +216,7 @@ Root node is book.
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>XSLT 从 .NET Framework 1.0 版到 .NET Framework 1.1 版的迁移  
  下表显示 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法的已过时的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版方法以及新的 <xref:System.Xml.Xsl.XslTransform.Load%2A> 1.1 方法。 新方法允许您通过指定证据来限制样式表的权限。  
   
-|已过时的.NET Framework 1.0 版负载方法|替换.NET Framework 1.1 版 Load 方法|  
+|.NET Framework 版本 1.0 中已过时的 Load 方法|.NET Framework 版本 1.1 中替换的新 Load 方法|  
 |------------------------------------------------------|---------------------------------------------------------|  
 |Load(XPathNavigator input);<br /><br /> Load(XPathNavigator input, XmlResolver resolver);|Load(XPathNavigator stylesheet, XmlResolver resolver, Evidence evidence);|  
 |Load(IXPathNavigable stylesheet);<br /><br /> Load(IXPathNavigable stylesheet, XmlResolver resolver);|Load(IXPathNavigable stylesheet, XmlResolver resolver, Evidence evidence);|  
@@ -222,7 +224,7 @@ Root node is book.
   
  下表显示 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法的已过时方法和新方法。 新方法接受 <xref:System.Xml.XmlResolver> 对象。  
   
-|过时的.NET Framework 1.0 版 Transform 方法|替换.NET Framework 1.1 版 Transform 方法|  
+|.NET Framework 版本 1.0 中已过时的 Transform 方法|.NET Framework 版本 1.1 中替换的新 Transform 方法|  
 |-----------------------------------------------------------|--------------------------------------------------------------|  
 |XmlReader Transform(XPathNavigator input, XsltArgumentList args)|XmlReader Transform(XPathNavigator input, XsltArgumentList args, XmlResolver resolver)|  
 |XmlReader Transform(IXPathNavigable input, XsltArgumentList args)|XmlReader Transform(IXPathNavigable input, XsltArgumentList args, XmlResolver resolver)|  
@@ -236,11 +238,11 @@ Root node is book.
   
  <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> 属性在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.1 版中已过时。 应改用接受 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 对象的新 <xref:System.Xml.XmlResolver> 重载。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Xsl.XslTransform>  
  [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  [转换中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
  [转换中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Xsltransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Xsltransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [Xsltransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+ [XslTransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [XslTransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [XslTransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

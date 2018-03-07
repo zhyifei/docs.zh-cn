@@ -14,57 +14,60 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 39dd80d378171563f2aadadaa146278e8a417d32
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 127f7ea9bb6a6bf91547d049f582439882d2fb6e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>线程本地存储区：线程相关的静态字段和数据槽
-你可以使用托管的线程本地存储 (TLS) 来存储数据的独有线程和应用程序域。 .NET Framework 提供了两种方式使用托管 TLS： 线程相关的静态字段和数据槽。  
+托管线程本地存储 (TLS) 可用于存储对线程和应用域唯一的数据。 .NET Framework 提供了下面两种托管 TLS 使用方式：线程相对静态字段和数据槽。  
   
--   使用线程相关的静态字段 (与线程相关`Shared`在 Visual Basic 中的字段) 如果您可以预料到你在编译时的确切需求。 线程相关的静态字段提供最佳性能。 它们还会为你提供编译时类型检查的优点。  
+-   如果可以在编译时预测确切需求，请使用线程相对静态字段（Visual Basic 中的线程相对 `Shared` 字段）。 线程相对静态字段的性能最佳。 它们还支持编译时类型检查。  
   
--   当你实际要求可能会发现仅在运行时，请使用数据槽。 数据槽速度较慢且更难以使用比线程相关的静态字段，并且数据存储类型为<xref:System.Object>，因此您必须在使用它之前将它转换为正确的类型。  
+-   如果只能在运行时发现实际需求，请使用数据槽。 数据槽使用起来比线程相对静态字段更慢、更加棘手。由于数据存储为类型 <xref:System.Object>，因此使用前必须将它强制转换为正确类型。  
   
- 在非托管 c + + 中，你使用`TlsAlloc`来动态分配槽和`__declspec(thread)`来声明，应在线程相关的存储区中分配变量。 线程相关的静态字段和数据槽提供此行为的托管的版本。  
+ 在非托管 C++ 中，使用 `TlsAlloc` 动态分配槽，使用 `__declspec(thread)` 声明应在线程相对存储中分配变量。 线程相对静态字段和数据槽提供了此行为的托管版本。  
   
- 在[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，你可以使用<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>类，以创建第一次使用该对象时延迟初始化的线程本地对象。 若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)  
+ 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中，可以使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 类，创建在首次使用对象时迟缓初始化的线程本地对象。 若要了解详细信息，请参阅[迟缓初始化](../../../docs/framework/performance/lazy-initialization.md)  
   
-## <a name="uniqueness-of-data-in-managed-tls"></a>托管 TLS 中的数据的唯一性  
- 无论使用线程相关的静态字段或数据槽的托管 TLS 中的数据是唯一的线程和应用程序域的组合。  
+## <a name="uniqueness-of-data-in-managed-tls"></a>托管 TLS 中数据的唯一性  
+ 无论使用线程相对静态字段，还是使用数据槽，托管 TLS 中的数据都是对线程和应用域唯一的数据。  
   
--   在应用程序域中，一个线程时，无法修改数据从另一个线程，即使这两个线程使用的相同字段或槽。  
+-   在应用域内，一个线程无法修改另一个线程的数据，即使两个线程使用相同的字段或槽，也不例外。  
   
--   当一个线程访问多个应用程序域中的相同字段或槽时，每个应用程序域中保留一个单独的值。  
+-   如果线程访问多个应用域中的相同字段或槽，每个应用域中都会保留单独的值。  
   
- 例如，如果某个线程设置的值与线程相关的静态字段，进入另一个应用程序域，，然后检索字段的值，第二个应用程序域中检索到的值不同于第一个应用程序域中的值。 在第二个应用程序域中设置字段的新值并不影响第一个应用程序域中的字段的值。  
+ 例如，如果线程设置线程相对静态字段值，并在进入另一个应用域后检索此字段的值，那么在第二个应用域中检索到的值与第一个应用域中的值不同。 对第二个应用域中的字段设置新值不会影响第一个应用域中的字段值。  
   
- 同样，当某个线程获取两个不同的应用程序域中的相同命名的数据槽，第一个应用程序域中的数据保留独立的第二个应用程序域中的数据。  
+ 同样，如果线程在两个不同的应用域中有同名数据槽，第一个应用域中的数据不受第二个应用域中数据的影响。  
   
-## <a name="thread-relative-static-fields"></a>线程相关的静态字段  
- 如果你知道一段数据始终是唯一的线程和应用程序域组合，应用<xref:System.ThreadStaticAttribute>属性的静态字段。 像使用任何其他静态字段，请使用字段。 字段中的数据是唯一的使用它的每个线程。  
+## <a name="thread-relative-static-fields"></a>线程相对静态字段  
+ 如果确定一条数据始终对线程和应用域是唯一的，请向静态字段应用 <xref:System.ThreadStaticAttribute> 属性。 此字段的使用方法与其他任何静态字段一样。 此字段中的数据对使用它的每个线程都是唯一的。  
   
- 线程相关的静态字段提供更好的性能比数据槽，并且具有编译时类型检查的好处。  
+ 线程相对静态字段的性能优于数据槽，并支持编译时类型检查。  
   
- 请注意类构造函数的任何代码将访问该字段的第一个上下文中的第一个线程上运行。 在所有其他线程或上下文相同的应用程序域中，字段将初始化为`null`(`Nothing`在 Visual Basic 中) 如果它们是引用类型，或为其默认值，如果它们是值类型。 因此，你不应依赖于类的构造函数初始化线程相关的静态字段。 相反，避免初始化线程相关的静态字段和认为它们将初始化为`null`(`Nothing`) 或为其默认值。  
+ 请注意，任何类构造函数代码都会在访问此字段的首个上下文中的第一个线程上运行。 在同一应用域中的其他所有线程或上下文中，如果字段是引用类型，便会初始化为 `null`（Visual Basic 中的 `Nothing`）；如果字段是值类型，便会初始化为默认值。 因此，不得依赖类构造函数来初始化线程相对静态字段。 相反，请避免初始化线程相对静态字段，而是假设它们初始化为 `null` (`Nothing`) 或默认值。  
   
 ## <a name="data-slots"></a>数据槽  
- .NET Framework 提供了对线程和应用程序域的组合是唯一的动态数据槽。 有两种类型的数据槽： 名为槽和未命名的槽。 通过使用实现了同时<xref:System.LocalDataStoreSlot>结构。  
+ .NET Framework 提供了对线程和应用域都是唯一的动态数据槽。 数据槽分为下列两种类型：命名槽和未命名槽。 两种类型都是使用 <xref:System.LocalDataStoreSlot> 结构实现。  
   
--   若要创建命名的数据槽，请使用<xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType>或<xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>方法。 若要获取对现有的已命名的槽的引用，其将名称传递给<xref:System.Threading.Thread.GetNamedDataSlot%2A>方法。  
+-   若要创建命名数据槽，请使用 <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> 方法。 若要获取对现有命名槽的引用，请将它的名称传递给 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法。  
   
--   若要创建未命名的数据槽，请使用<xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType>方法。  
+-   若要创建未命名数据槽，请使用 <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> 方法。  
   
- 对于名为和未命名的槽，则使用<xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType>和<xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType>方法用于设置和检索的槽中的信息。 这些是始终作用于的线程的当前正在执行它们的数据的静态方法。  
+ 对于命名槽和未命名槽，请使用 <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> 方法设置和检索槽中的信息。 这些静态方法始终处理当前正在执行它们的线程的数据。  
   
- 命名的槽可以很方便，因为你可以通过其将名称传递给需要检索槽<xref:System.Threading.Thread.GetNamedDataSlot%2A>方法，而不是维护对未命名的槽的引用。 但是，如果另一个组件使用其线程相关的存储区的相同名称和线程执行你的组件和其他组件中的代码，这两个组件可能会破坏彼此的数据。 （此方案假设这两个组件正在运行在相同的应用程序域中，和，它们不设计共享相同的数据）。  
+ 命名槽非常便捷，因为可以在需要时检索槽，具体操作是将它的名称传递给 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法，而不用维护对未命名槽的引用。 不过，如果另一个组件对线程相对存储使用相同的名称，并且线程同时执行你的组件和另一个组件的代码，这两个组件可能会相互损坏数据。 （此方案假定这两个组件都在同一个应用域中运行，并不旨在共享相同的数据。）  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ContextStaticAttribute>  
  <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
  <xref:System.ThreadStaticAttribute>  

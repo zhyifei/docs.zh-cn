@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 770c714e8f5942ea733c417ae9b06f69e4acf1a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f5a867d1301355f4c9a77654556229274f96d00c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="entity-references-are-preserved"></a>保留实体引用
-XML 文档对象模型 (DOM) 在未展开，而保留实体引用，生成**XmlEntityReference**时遇到实体引用节点。  
+如果实体引用不是被扩展，而是被暂留，XML 文档对象模型 (DOM) 在遇到实体引用时生成 XmlEntityReference 节点。  
   
  使用以下 XML，  
   
@@ -29,17 +32,17 @@ XML 文档对象模型 (DOM) 在未展开，而保留实体引用，生成**XmlE
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- DOM 生成**XmlEntityReference**节点时遇到`&publisher;`引用。 **XmlEntityReference**包含从实体声明中的内容复制的子节点。 前面的代码示例包含实体声明中的文本，因此**XmlText**创建节点作为实体引用节点的子节点。  
+ DOM 可以在遇到 `&publisher;` 引用时生成 XmlEntityReference 节点。 XmlEntityReference 包含从实体声明内容中复制的子节点。 由于上一代码示例包含实体声明文本，因此 XmlText 节点被创建为实体引用节点的子节点。  
   
- ![保留的实体引用的树结构](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
+ ![暂留的实体引用的树结构](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
 保留的实体引用的树结构  
   
- 子节点**XmlEntityReference**是从创建的节点的副本的所有子**XmlEntity**节点时遇到实体声明。  
+ XmlEntityReference 的子节点是在遇到实体声明时，从 XmlEntity 节点创建的所有子节点的副本。  
   
 > [!NOTE]
->  从复制的节点**XmlEntity**不始终是曾放置在实体引用节点下的精确副本。 可以有在实体引用节点范围内并影响子节点的最终配置的命名空间。  
+>  一旦置于实体引用节点下，从 XmlEntity 复制的节点就不一定是完全相同的副本。 可以有在实体引用节点范围内并影响子节点的最终配置的命名空间。  
   
- 默认情况下，例如常规实体`&abc;`保留和**XmlEntityReference**始终创建的节点。  
+ 默认情况下，暂留的是 `&abc;` 等常规实体，并且始终都会创建 XmlEntityReference 节点。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

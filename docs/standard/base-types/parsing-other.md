@@ -1,5 +1,5 @@
 ---
-title: ".NET 中分析其他字符串"
+title: "分析 .NET 中的其他字符串"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,18 +19,21 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd48993f50ec8b91ba7941a682d7de9f22aa12e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 714c361507a95fc5f45efbca79191b17e7917fba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="parsing-other-strings-in-net"></a>.NET 中分析其他字符串
-除了数值和<xref:System.DateTime>字符串，还可以分析表示类型的字符串<xref:System.Char>， <xref:System.Boolean>，和<xref:System.Enum>数据类型。  
+# <a name="parsing-other-strings-in-net"></a>分析 .NET 中的其他字符串
+除了数字和 <xref:System.DateTime> 字符串之外，还可以将表示类型 <xref:System.Char>、<xref:System.Boolean> 和 <xref:System.Enum> 的字符串分析为数据类型。  
   
 ## <a name="char"></a>Char  
  与 **Char** 数据类型关联的静态分析方法 可用于将包含单个字符的字符串转换为其 Unicode 值。 下面的代码示例将字符串分析为 Unicode 字符。  
@@ -40,24 +43,24 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
 ## <a name="boolean"></a>Boolean  
- **布尔**数据类型包含**分析**可用于将转换到实际表示一个布尔值的字符串的方法**布尔**类型。 此方法不区分大小写，可以成功分析包含“True”或“False”的字符串。 **分析**与关联方法**布尔**类型还可以分析包围空格的字符串。 如果传递的其他任何字符串，<xref:System.FormatException>引发。  
+ Boolean 数据类型包含 Parse 方法，可用于将表示 Boolean 值的字符串转换为实际 Boolean 类型。 此方法不区分大小写，可以成功分析包含“True”或“False”的字符串。 与 Boolean 类型关联的 Parse 方法还可以分析两端是空格的字符串。 如果传递的是其他任何字符串，<xref:System.FormatException> 就会抛出。  
   
- 下面的代码示例使用**分析**方法将字符串转换为一个布尔值。  
+ 下面的代码示例使用 Parse 方法，将字符串转换为 Boolean 值。  
   
  [!code-cpp[Conceptual.String.Parse#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#3)]
  [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
  [!code-vb[Conceptual.String.Parse#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#3)]  
   
 ## <a name="enumeration"></a>枚举  
- 可以使用静态 **Parse** 方法将枚举类型初始化为字符串的值。 此方法接受所分析的枚举类型、 字符串进行分析、 和可选的布尔型标志，该值指示分析区分大小写。 所分析的字符串可以包含用逗号分隔的多个值，这些值前面或后面可以是一个或多个空白（也称为空格）。 当字符串包含多个值时，返回的对象的值是所有指定值通过按位 OR 运算组合的值。  
+ 可以使用静态 **Parse** 方法将枚举类型初始化为字符串的值。 此方法接受要分析的枚举类型、要分析的字符串和可选 Boolean 标志（指明分析是否区分大小写）。 所分析的字符串可以包含用逗号分隔的多个值，这些值前面或后面可以是一个或多个空白（也称为空格）。 当字符串包含多个值时，返回的对象的值是所有指定值通过按位 OR 运算组合的值。  
   
- 下面的示例使用**分析**方法将字符串表示形式转换为一个枚举值。 <xref:System.DayOfWeek>枚举初始化为**星期四**从字符串。  
+ 下面的示例使用 Parse 方法，将字符串表示形式转换为枚举值。 <xref:System.DayOfWeek> 枚举从字符串初始化为 Thursday。  
   
  [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
-## <a name="see-also"></a>另请参阅  
- [分析字符串](../../../docs/standard/base-types/parsing-strings.md)  
+## <a name="see-also"></a>请参阅  
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
  [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

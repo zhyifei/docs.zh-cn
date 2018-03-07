@@ -19,18 +19,21 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eeaed0951018c989612691065c027ee46bd6655a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 93c526e87f7aba650cce397962c7262b6fd2f085
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>正则表达式示例：更改日期格式
-下面的代码示例使用<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>方法将采用以下格式的日期*mm*/*dd*/*yy*与日期该窗体*dd*-*mm*-*yy*。  
+下面的代码示例使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，将格式为 mm/dd/yy 的日期替换为格式为 dd-mm-yy 的日期。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#1)]
@@ -42,7 +45,7 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#2)]  
   
 ## <a name="comments"></a>注释  
- 正则表达式模式`\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b`可以解释为下表中所示。  
+ 正则表达式模式 `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` 的释义如下表所示。  
   
 |模式|描述|  
 |-------------|-----------------|  
@@ -64,5 +67,5 @@ ms.lasthandoff: 10/18/2017
 |`-`|添加连字符。|  
 |`$(year)`|添加由 `year` 捕获组捕获的字符串。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)

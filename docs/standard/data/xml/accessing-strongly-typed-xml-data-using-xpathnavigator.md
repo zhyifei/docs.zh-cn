@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61c78adff541ac2ba261d31776478a0468e21d4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 651a8e11b5782227cdf5ffcc3d53cf2c75def031
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 访问强类型 XML 数据
 作为 XPath 2.0 数据模型的实例，<xref:System.Xml.XPath.XPathNavigator> 类可以包含映射到公共语言运行库 (CLR) 类型的强类型数据。 根据 XPath 2.0 数据模型，只有元素和属性可以包含强类型数据。 <xref:System.Xml.XPath.XPathNavigator> 类提供将 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的数据作为强类型数据访问的机制，以及将一种数据类型转换为另一种数据类型的机制。  
@@ -28,11 +31,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="type-information-exposed-by-xpathnavigator"></a>通过 XPathNavigator 公开的类型信息  
  XML 1.0 数据在技术角度没有类型，除非使用 DTD、XML 架构定义语言 (XSD) 架构或其他机制进行处理。 有许多类别的类型信息可以与 XML 元素或属性关联。  
   
--   简单 CLR 类型：任何 XML 架构语言均不直接支持公共语言运行库 (CLR) 类型。 因为能够以最适合的 CLR 类型查看简单元素和属性内容非常有用，所以，在缺少架构信息以及任何添加的架构信息（可能会将此内容优化为更适合的类型）时，可以将所有简单内容类型化为 <xref:System.String>。 可以使用 <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> 属性找到简单元素和属性内容最匹配的 CLR 类型。 有关从架构内置类型映射到 CLR 类型的信息的详细信息，请参阅[System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
+-   简单 CLR 类型：任何 XML 架构语言均不直接支持公共语言运行库 (CLR) 类型。 因为能够以最适合的 CLR 类型查看简单元素和属性内容非常有用，所以，在缺少架构信息以及任何添加的架构信息（可能会将此内容优化为更适合的类型）时，可以将所有简单内容类型化为 <xref:System.String>。 可以使用 <xref:System.Xml.XPath.XPathNavigator.ValueType%2A> 属性找到简单元素和属性内容最匹配的 CLR 类型。 若要详细了解如何从架构内置类型映射到 CLR 类型，请参阅 [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
   
--   简单 (CLR) 类型的列表：具有简单内容的元素或属性可以包含通过空格分隔的值列表。 XML 架构将这些值指定为“列表类型”。 在缺少 XML 架构时，此类简单内容将作为单个文本节点对待。 在 XML 架构可用时，此简单内容可以作为一系列原子值公开，每个值都具有一种映射到 CLR 对象集合的简单类型。 有关从架构内置类型映射到 CLR 类型的信息的详细信息，请参阅[System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
+-   简单 (CLR) 类型的列表：具有简单内容的元素或属性可以包含通过空格分隔的值列表。 XML 架构将这些值指定为“列表类型”。 在缺少 XML 架构时，此类简单内容将作为单个文本节点对待。 在 XML 架构可用时，此简单内容可以作为一系列原子值公开，每个值都具有一种映射到 CLR 对象集合的简单类型。 若要详细了解如何从架构内置类型映射到 CLR 类型，请参阅 [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
   
--   类型化值：已经过架构验证的属性或具有简单类型的元素具有类型化的值。 此值是基元类型，例如数字、字符串或日期类型。 XSD 中的所有内置简单类型均可以映射到 CLR 类型，通过 CLR 类型可以以更适合的类型（而不只是以 <xref:System.String>）访问节点的值。 具有属性或元素子级的元素被认为是复杂类型。 包含简单内容（只有文本节点作为子级）的复杂类型的类型化值与其内容的简单类型的类型化值相同。 包含复杂内容（一个或多个子元素）的复杂类型的类型化值是串联以 <xref:System.String> 形式返回的所有子文本节点的字符串值。 有关从架构内置类型映射到 CLR 类型的信息的详细信息，请参阅[System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
+-   类型化值：已经过架构验证的属性或具有简单类型的元素具有类型化的值。 此值是基元类型，例如数字、字符串或日期类型。 XSD 中的所有内置简单类型均可以映射到 CLR 类型，通过 CLR 类型可以以更适合的类型（而不只是以 <xref:System.String>）访问节点的值。 具有属性或元素子级的元素被认为是复杂类型。 包含简单内容（只有文本节点作为子级）的复杂类型的类型化值与其内容的简单类型的类型化值相同。 包含复杂内容（一个或多个子元素）的复杂类型的类型化值是串联以 <xref:System.String> 形式返回的所有子文本节点的字符串值。 若要详细了解如何从架构内置类型映射到 CLR 类型，请参阅 [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
   
 -   架构语言特定的类型名称：在大多数情况下，作为应用外部架构副产品设置的 CLR 类型用于提供对节点值的访问。 但是，有时可能需要检查与应用于 XML 文档的特定架构相关联的类型。 例如，可能希望搜索 XML 文档，根据附加的架构提取确定包含“PurchaseOrder”类型内容的所有元素。 此类信息只能设置为架构验证的结果，此信息通过 <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> 类的 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 和 <xref:System.Xml.XPath.XPathNavigator> 属性访问。 有关更多信息，请参见下面的“后架构验证信息集 (PSVI)”一节。  
   
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Xml.XPath.XPathNavigator.ValueAsLong%2A>|当前节点的 <xref:System.String> 值根据 <xref:System.Int64> 的 XPath 2.0 强制转换规则强制转换为 `xs:integer` 值。|  
 |<xref:System.Xml.XPath.XPathNavigator.ValueAs%2A>|节点内容根据 XPath 2.0 强制转换规则强制转换为目标类型。|  
   
- 有关从架构内置类型映射到 CLR 类型的信息的详细信息，请参阅[System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
+ 若要详细了解如何从架构内置类型映射到 CLR 类型，请参阅 [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
   
 ## <a name="the-post-schema-validation-infoset-psvi"></a>后架构验证信息集 (PSVI)  
  XML 架构处理器使用 XML 信息集作为输入，并将其转换为后架构验证信息集 (PSVI)。 PSVI 是原始输入 XML 信息集，包含添加的新信息项以及在现有信息项中添加的新属性。 在 PSVI 的 XML 信息集中添加了三种广义信息类，通过 <xref:System.Xml.XPath.XPathNavigator> 公开。  
@@ -190,14 +193,14 @@ Decimal price = (decimal)navigator.ValueAs(typeof(decimal));
 Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C}", navigator.Value, (price - price * (decimal)0.20));  
 ```  
   
- 有关从架构内置类型映射到 CLR 类型的信息的详细信息，请参阅[System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
+ 若要详细了解如何从架构内置类型映射到 CLR 类型，请参阅 [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
  [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  [使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [属性和使用 XPathNavigator Namespace 节点定位](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+ [使用 XPathNavigator 的属性和命名空间节点定位](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
  [使用 XPathNavigator 提取 XML 数据](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)

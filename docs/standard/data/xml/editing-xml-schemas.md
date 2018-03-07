@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="editing-xml-schemas"></a>编辑 XML 架构
 编辑 XML 架构是架构对象模型 (SOM) 最重要的功能之一。 SOM 的所有前架构编译属性均可以用于更改 XML 架构中的现有值。 然后，可以重新编译 XML 架构以反映更改。  
@@ -29,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  编辑加载到 SOM 中的架构的第一步是遍历架构。 在尝试编辑架构之前，应熟悉如何使用 SOM API 遍历架构。 还应熟悉后架构编译信息集 (PSCI) 的前架构编译属性和后架构编译属性。  
   
 ## <a name="editing-an-xml-schema"></a>编辑 XML 架构  
- 本部分中，两个代码示例提供，这两种编辑客户架构中创建[生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)主题。 第一个代码示例向 `PhoneNumber` 元素中添加新的 `Customer` 元素，第二个代码示例向 `Title` 元素中添加新的 `FirstName` 属性。 第一个示例还使用后架构编译 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合遍历客户架构，而第二个代码示例使用前架构编译 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合遍历客户架构。  
+ 此部分中收录了两个代码示例，均编辑[生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)主题中创建的客户架构。 第一个代码示例向 `PhoneNumber` 元素中添加新的 `Customer` 元素，第二个代码示例向 `Title` 元素中添加新的 `FirstName` 属性。 第一个示例还使用后架构编译 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合遍历客户架构，而第二个代码示例使用前架构编译 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合遍历客户架构。  
   
 ### <a name="phonenumber-element-example"></a>PhoneNumber 元素示例  
  第一个代码示例向客户架构的 `PhoneNumber` 元素中添加新的 `Customer` 元素。 代码示例通过下列步骤编辑客户架构。  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
  [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]  
   
- 以下是在中创建的修改后的客户架构[生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)主题。  
+ 下面展示了[生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)主题中创建的已修改客户架构。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,7 +121,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
  [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]  
   
- 以下是在中创建的修改后的客户架构[生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)主题。  
+ 下面展示了[生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)主题中创建的已修改客户架构。  
   
 ```xml  
 <?xml version="1.0" encoding=" utf-8"?>  
@@ -142,11 +145,11 @@ ms.lasthandoff: 11/21/2017
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [读取和写入 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [包括或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
  [后架构编译信息集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

@@ -21,15 +21,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 453776c97ec0531cea94ecf44c31216cf5b17a3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="anchors-in-regular-expressions"></a>正则表达式中的定位点
 <a name="top"></a> 定位点（原子零宽度断言）指定字符串中必须出现匹配的位置。 在搜索表达式中使用定位点时，正则表达式引擎不在字符串中前进或使用字符，它仅在指定位置查找匹配。 例如， `^` 指定必须从行或字符串的开头开始匹配。 因此，正则表达式 `^http:` 仅当 "http:" 出现在行开头时才与之匹配。 下表列出了 .NET 中正则表达式支持的定位点。  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>字符串或行的开头：^  
- `^` 定位点指定以下模式必须从字符串的第一个字符位置开始。 如果你使用`^`与<xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>选项 (请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md))，匹配必须出现在每个行的开头。  
+ `^` 定位点指定以下模式必须从字符串的第一个字符位置开始。 如果结合使用 `^` 与 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项（请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)），匹配必须出现在每行的开头。  
   
  以下示例在正则表达式中使用 `^` 定位点，可提取有关某些职业棒球队存在年限的信息。 该示例调用 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法的两个重载：  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="EndOrNOnly"></a>   
 ## <a name="end-of-string-or-before-ending-newline-z"></a>字符串末尾或结束换行之前：\Z  
- `\Z` 定位点指定匹配项必须出现在输入字符串的末尾，或出现在输入字符串末尾的 `\n` 之前。 它等同于 `$` 定位点，只不过 `\Z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 因此，在多行字符串中，它只能匹配最后一行的末尾，或 `\n`前的最后一行。  
+ `\Z` 定位点指定匹配项必须出现在输入字符串的末尾，或出现在输入字符串末尾的 `\n` 之前。 它等同于 `$` 定位点，只不过 `\Z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 因此，在多行字符串中，它只能匹配最后一行的末尾，或 `\n` 前的最后一行。  
   
  请注意， `\Z` 与 `\n` 匹配但与 `\r\n` （CR/LF 字符组合）不匹配。 若要匹配 CR/LF，请将 `\r?\Z` 包括到正则表达式模式中。  
   
@@ -113,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>仅字符串末尾：\z  
- `\z` 定位点指定匹配必须出现在输入字符串末尾。 与 `$` 语言元素类似，`\z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 与 `\Z` 语言元素不同， `\z` 不匹配字符串末尾的 `\n` 字符。 因此，它只能匹配输入字符串的最后一行。  
+ `\z` 定位点指定匹配必须出现在输入字符串末尾。 与 `$` 语言元素类似，`\z` 忽略了 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 选项。 与 `\Z` 语言元素不同，`\z` 不匹配字符串末尾的 `\n` 字符。 因此，它只能匹配输入字符串的最后一行。  
   
  以下示例在正则表达式中使用 `\z` 定位点，与上一部分的示例中使用的定位点在其他方面相同，用于提取有关某些职业棒球队存在年限的信息。 此示例尝试使用正则表达式模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`匹配字符串数组中五个元素的每一个。 两个字符串以回车符和换行符结尾，一个字符串以换行符结尾，另外两个既不以回车符也不以换行符结尾。 如输出所示，只有不包含回车符或换行符的字符串与模式匹配。  
   
@@ -146,7 +149,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="WordBoundary"></a>   
 ## <a name="word-boundary-b"></a>字边界：\b  
- `\b` 定位符指定匹配必须出现单词字符（ `\w` 语言元素）和非单词字符（ `\W` 语言元素）之间的边界上。 单词字符包括字母数字字符和下划线；非单词字符包括不为字母数字字符或下划线的任何字符。 (有关详细信息，请参阅[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。)匹配也可以出现在字符串开头或结尾处的单词边界上。  
+ `\b` 定位符指定匹配必须出现单词字符（ `\w` 语言元素）和非单词字符（ `\W` 语言元素）之间的边界上。 单词字符包括字母数字字符和下划线；非单词字符包括不为字母数字字符或下划线的任何字符。 （有关详细信息，请参阅[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。）匹配也可以出现在字符串开头或结尾处的单词边界上。  
   
  `\b` 定位点经常用于确保子表达式与整个单词而不仅与单词的开头或结尾匹配。 以下示例中的正则表达式 `\bare\w*\b` 阐释了这种用法。 它与任何以子字符串“are”开头的单词匹配。 该示例的输出也阐释了 `\b` 与输入字符串的开头和结尾均匹配。  
   
@@ -181,6 +184,6 @@ ms.lasthandoff: 11/21/2017
 |`qu`|匹配子字符串“qu”。|  
 |`\w+`|匹配一个或多个单词字符。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)

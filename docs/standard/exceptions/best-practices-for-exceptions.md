@@ -12,17 +12,21 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: exceptions, best practices
+helpviewer_keywords:
+- exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87f9287c3714416ee5d6b63f3c9db311bb97b131
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-exceptions"></a>异常的最佳做法
 
@@ -72,7 +76,7 @@ ms.lasthandoff: 10/28/2017
 
 ## <a name="use-the-predefined-net-exception-types"></a>使用预定义的 .NET 异常类型
 
-仅当预定义的异常类不适用时，引入新异常类。 例如：
+仅当预定义的异常类不适用时，引入新异常类。 例如:
 
 - 如果根据对象的当前状态，属性集或方法调用不适当，则会引发 <xref:System.InvalidOperationException> 异常。
 
@@ -80,7 +84,7 @@ ms.lasthandoff: 10/28/2017
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>异常类名称的结尾为 `Exception`
 
-需要自定义异常时，对其正确命名并从 <xref:System.Exception> 类进行派生。 例如: 
+需要自定义异常时，对其正确命名并从 <xref:System.Exception> 类进行派生。 例如:
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -90,7 +94,7 @@ ms.lasthandoff: 10/28/2017
 
 创建自己的异常类别时至少使用三种公共构造函数：默认构造函数、采用字符串消息的构造函数和采用字符串消息和内部异常的构造函数。
 
-* <xref:System.Exception.%23ctor>它使用默认值。
+* <xref:System.Exception.%23ctor>（使用默认值）。
   
 * <xref:System.Exception.%23ctor%28System.String%29>，它接受字符串消息。  
   
@@ -102,7 +106,7 @@ ms.lasthandoff: 10/28/2017
 
 创建用户定义的异常时，请确保异常的元数据对远程执行的代码可用。 
 
-例如，在.NET 实现支持应用程序域中，可能会发生异常跨应用程序域。 假设应用域 A 创建应用域 B，后者执行引发异常的代码。 应用域 A 若想正确捕获和处理异常，它必须能够找到包含应用域 B 所引发的异常的程序集。如果应用域 B 在其应用程序基下（但未在应用域 A 的应用程序基下）引发了一个包含在程序集内的异常，那么应用域 A 将无法找到异常，且公共语言运行时将引发 <xref:System.IO.FileNotFoundException> 异常。 为避免此情况，可以两种方式部署包含异常信息的程序集：
+例如，在支持应用域的 .NET 实现中，异常可能会跨应用域抛出。 假设应用域 A 创建应用域 B，后者执行引发异常的代码。 应用域 A 若想正确捕获和处理异常，它必须能够找到包含应用域 B 所引发的异常的程序集。如果应用域 B 在其应用程序基下（但未在应用域 A 的应用程序基下）引发了一个包含在程序集内的异常，那么应用域 A 将无法找到异常，且公共语言运行时将引发 <xref:System.IO.FileNotFoundException> 异常。 为避免此情况，可以两种方式部署包含异常信息的程序集：
 
 - 将程序集放在两个应用域共享的公共应用程序基中。
 
@@ -116,7 +120,7 @@ ms.lasthandoff: 10/28/2017
 
 ## <a name="use-grammatically-correct-error-messages"></a>使用语法正确的错误消息
 
-编写清晰的句子，包括结束标点。 在异常的描述字符串中，每个句子都应以句号结尾。 例如，"日志表已溢出。" 就是一个正确的描述字符串。
+编写清晰的句子，包括结束标点。 在异常的描述字符串中，每个句子都应以句号结尾。 例如，“日志表已溢出”。 就是一个正确的描述字符串。
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>在自定义异常中，按需提供其他属性
 
@@ -128,13 +132,13 @@ ms.lasthandoff: 10/28/2017
 
 ## <a name="use-exception-builder-methods"></a>使用异常生成器方法
 
-类从其实现中的不同位置引发同一异常是常见的情况。 为避免过多的代码，应使用帮助器方法创建异常并将其返回。 例如: 
+类从其实现中的不同位置引发同一异常是常见的情况。 为避免过多的代码，应使用帮助器方法创建异常并将其返回。 例如:
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
 [!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
   
-在某些情况下，更适合使用异常的构造函数生成异常。 一个示例是一个全局异常类，如<xref:System.ArgumentException>。
+在某些情况下，更适合使用异常的构造函数生成异常。 例如，<xref:System.ArgumentException> 等全局异常类。
 
 ## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>引发异常时清理中间结果
 
@@ -177,5 +181,5 @@ catch (Exception ex)
 }
 ```
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [异常](index.md)

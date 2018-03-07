@@ -2,7 +2,8 @@
 title: "可访问性级别（C# 参考）"
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
@@ -10,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: fed7d6d0eb3eda4d8d2e1847259dd8d23700d3e7
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="accessibility-levels-c-reference"></a>可访问性级别（C# 参考）
 
-使用访问修饰符 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 [private](../../../csharp/language-reference/keywords/private.md)，以为成员指定以下声明的可访问性级别之一。  
+使用访问修饰符 `public`、`protected`、`internal` 或 `private`，为成员指定以下声明的可访问性级别之一。  
   
 |声明的可访问性|含义|  
 |----------------------------|-------------|  
-|`public`|访问不受限制。|  
-|`protected`|访问限于包含类或派生自包含类的类型。|  
-|`internal`|访问限于当前程序集。|  
-|`protected internal`|访问限于当前程序集或派生自包含类的类型。|  
-|`private`|访问限于包含类。|  
-|`private protected`|访问限于包含类或当前程序集中派生自包含类的类型。 自 C# 7.2 之后可用。 |  
+|[`public`](public.md)|访问不受限制。|  
+|[`protected`](protected.md)|访问限于包含类或派生自包含类的类型。|  
+|[`internal`](internal.md)|访问限于当前程序集。|  
+|[`protected internal`](protected-internal.md)|访问限于当前程序集或派生自包含类的类型。|  
+|[`private`](private.md)|访问限于包含类。|  
+|[`private protected`](private-protected.md)|访问限于包含类或当前程序集中派生自包含类的类型。 自 C# 7.2 之后可用。 |  
   
  除使用 `protected internal` 或`private protected` 组合的情况外，一个成员或类型仅允许一个访问修饰符。  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/09/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/09/2017
  [可访问域](../../../csharp/language-reference/keywords/accessibility-domain.md)  
  [对使用可访问性级别的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
  [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [公用](../../../csharp/language-reference/keywords/public.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
  [专用](../../../csharp/language-reference/keywords/private.md)  
- [受保护](../../../csharp/language-reference/keywords/protected.md)  
- [内部](../../../csharp/language-reference/keywords/internal.md)
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)

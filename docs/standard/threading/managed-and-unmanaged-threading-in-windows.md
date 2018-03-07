@@ -13,18 +13,21 @@ helpviewer_keywords:
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c55caaff3fd96b2791e75a392a9522abfceb22e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的托管和非托管线程处理
-所有线程的管理都是通过 <xref:System.Threading.Thread> 类完成的，包括由公共语言运行时创建的线程以及在运行时以外创建并进入托管环境以执行代码的线程。 运行时监视其进程中曾经在托管执行环境中执行过代码的所有线程。 它不跟踪任何其他线程。 线程可以通过 COM 互操作（原因是运行时将托管对象作为 COM 对象向非托管领域公开）、COM [DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) 函数和平台调用进入托管执行环境。  
+所有线程的管理都是通过 <xref:System.Threading.Thread> 类完成的，包括由公共语言运行时创建的线程以及在运行时以外创建并进入托管环境以执行代码的线程。 运行时监视其进程中曾经在托管执行环境中执行过代码的所有线程。 它不跟踪任何其他线程。 线程可以通过 COM 互操作（原因是运行时将托管对象作为 COM 对象向非托管领域公开）、COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) 函数和平台调用进入托管执行环境。  
   
  当非托管线程进入运行时（如通过 COM 可调用包装）时，系统将检查该线程的线程本地存储区以查找内部托管 <xref:System.Threading.Thread> 对象。 若找到一个对象，运行时就会注意到该线程。 但如果一个也找不到，则运行时将生成新的 <xref:System.Threading.Thread> 对象并将其安装在该线程的线程本地存储区中。  
   
@@ -63,14 +66,14 @@ ms.lasthandoff: 11/21/2017
   
  向 COM 公开的托管对象的行为就如同它们聚合了自由线程封送拆收器一样。 换言之，它们可以通过自由线程的方式从任何 COM 单元中调用。 唯一不显示这种自由线程行为的托管对象是那些从 <xref:System.EnterpriseServices.ServicedComponent> 或 <xref:System.Runtime.InteropServices.StandardOleMarshalObject> 派生的对象。  
   
- 在托管领域中，不支持 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> ，除非使用上下文和上下文绑定的托管实例。 如果你使用企业服务，则你的对象必须派生自<xref:System.EnterpriseServices.ServicedComponent>(本身派生自<xref:System.ContextBoundObject>)。  
+ 在托管领域中，不支持 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> ，除非使用上下文和上下文绑定的托管实例。 如果使用的是企业服务，对象必须派生自 <xref:System.EnterpriseServices.ServicedComponent>（它本身派生自 <xref:System.ContextBoundObject>）。  
   
  当托管代码调用至 COM 对象时，它始终遵循 COM 规则。 换言之，它遵循 OLE32 的规定，通过 COM 单元代理和 COM+ 1.0 上下文包装来调用。  
   
 ## <a name="blocking-issues"></a>阻止问题  
- 在阻止了非托管代码中的线程的操作系统中，如果线程进行非托管调用，则运行时将不会为 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 控制该线程。 情况下<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>，运行时将标记的线程**中止**并在重新进入托管的代码时控制它。 使用托管阻止而不使用非托管阻止更为可取。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType><xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>， <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>， <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>， <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>， <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>， <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>，依次类推所有响应<xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>并对其<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 而且，如果你的线程处于单线程单元，则当你的线程被阻止时，单元中的所有托管阻止操作都将正确发送消息。  
+ 在阻止了非托管代码中的线程的操作系统中，如果线程进行非托管调用，则运行时将不会为 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 控制该线程。 若为 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>，运行时会为 Abort 标记线程，并在重入托管代码时控制此线程。 使用托管阻止而不使用非托管阻止更为可取。 <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>、<xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>、<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>、<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>、<xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 等全都会响应 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 而且，如果你的线程处于单线程单元，则当你的线程被阻止时，单元中的所有托管阻止操作都将正确发送消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
  <xref:System.Threading.ThreadState>  
  <xref:System.EnterpriseServices.ServicedComponent>  

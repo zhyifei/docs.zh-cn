@@ -15,28 +15,31 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b5a304c48a953b172cbcc3aa1c717a660298d36a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="implementing-a-dispose-method"></a>实现 Dispose 方法
 
 通过实现 <xref:System.IDisposable.Dispose%2A> 方法来释放应用程序使用的非托管资源。 .NET 垃圾回收器不分配或释放非托管内存。  
   
-释放对象，模式称为[释放模式](../../../docs/standard/design-guidelines/dispose-pattern.md)，对象的生存期进行规定。 释放模式仅用于访问非托管资源的对象，如文件和管道句柄、注册表句柄、等待句柄或指向非托管内存块的指针。 这是因为垃圾回收器在回收不使用的托管对象时非常高效，但无法回收非托管对象。  
+对象清理模式（称为[清理模式](../../../docs/standard/design-guidelines/dispose-pattern.md)）对对象生存期强制施加顺序。 释放模式仅用于访问非托管资源的对象，如文件和管道句柄、注册表句柄、等待句柄或指向非托管内存块的指针。 这是因为垃圾回收器在回收不使用的托管对象时非常高效，但无法回收非托管对象。  
   
 释放模式有两种变体：  
   
 * 你包装类型在安全句柄中（即，在从 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 派生的类中）使用的每个非托管资源。 在这种情况下，你可以实现 <xref:System.IDisposable> 接口和额外的 `Dispose(Boolean)` 方法。 这是建议的变体，不要求重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。  
   
   > [!NOTE]
-  > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType>命名空间提供一组类派生自<xref:System.Runtime.InteropServices.SafeHandle>中, 列出的[使用安全句柄](#SafeHandles)部分。 如果找不到适用于释放非托管资源的类，则可实现你自己的 <xref:System.Runtime.InteropServices.SafeHandle> 的子类。  
+  > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> 命名空间提供了一组派生自 <xref:System.Runtime.InteropServices.SafeHandle> 的类，[使用安全句柄](#SafeHandles)部分中列出了这些类。 如果找不到适用于释放非托管资源的类，则可实现你自己的 <xref:System.Runtime.InteropServices.SafeHandle> 的子类。  
   
 * 你可以实现 <xref:System.IDisposable> 接口和额外的 `Dispose(Boolean)` 方法，还可以重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。 如果类型的使用者未调用你的 <xref:System.Object.Finalize%2A> 实现，则必须重写 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 以确保释放非托管资源。 如果使用上一项目符号中讨论的推荐方法，则 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 类可代表你执行此操作。  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="the-disposeboolean-overload"></a>Dispose(Boolean) 重载
 
-在第二个重载中，*释放*参数是<xref:System.Boolean>，该值指示方法调用是否来自<xref:System.IDisposable.Dispose%2A>方法 (其值是`true`) 或来自终结器 (其值是`false`)。  
+在第二个重载中，disposing 参数是 <xref:System.Boolean>，用于指明方法调用是来自 <xref:System.IDisposable.Dispose%2A> 方法（值为 `true`），还是来自终结器（值为 `false`）。  
   
 方法的主体包含两个代码块：  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 10/18/2017
   
 * 释放托管资源的条件块。 如果 `disposing` 的值为 `true`，则执行此块。 它释放的托管资源可包括：  
   
-  **托管对象实现<xref:System.IDisposable>。** 可用于调用其 <xref:System.IDisposable.Dispose%2A> 实现的条件块。 如果你已使用安全句柄来包装非托管资源，则应在此处调用 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> 实现。  
+  **实现 <xref:System.IDisposable> 的托管对象。** 可用于调用其 <xref:System.IDisposable.Dispose%2A> 实现的条件块。 如果你已使用安全句柄来包装非托管资源，则应在此处调用 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> 实现。  
   
   **占用大量内存或使用短缺资源的托管对象。** 在 `Dispose` 方法中显式释放这些对象的速度快于垃圾回收器不确定性回收它们的速度。  
   
@@ -108,13 +111,13 @@ ms.lasthandoff: 10/18/2017
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> 在 C# 中，则重写<xref:System.Object.Finalize%2A?displayProperty=nameWithType>通过定义[析构函数](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)。  
+> 在 C# 中，通过定义[析构函数](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>实现派生类的释放模式
 
 从实现 <xref:System.IDisposable> 接口的类派生的类不应实现 <xref:System.IDisposable>，因为 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基类实现由其派生类继承。 相反，若要实现派生类的释放模式，你可提供以下内容：  
   
-* `protected``Dispose(Boolean)` 方法，用于替代基类方法并执行释放派生类的资源的实际工作。 此方法还应调用基类的 `Dispose(Boolean)` 方法并向其传递 *disposing* 参数的 `true` 值。  
+* `protected Dispose(Boolean)` 方法，用于替代基类方法并执行释放派生类的资源的实际工作。 此方法还应调用基类的 `Dispose(Boolean)` 方法并向其传递 *disposing* 参数的 `true` 值。  
   
 * 从包装非托管资源的 <xref:System.Runtime.InteropServices.SafeHandle> 派生的类（推荐），或对 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的重写。 <xref:System.Runtime.InteropServices.SafeHandle> 类提供了一个使你无需编写代码的终结器。 如果你提供了终结器，则应调用 *disposing* 参数为 `false` 的 `Dispose(Boolean)` 重载。  
   
@@ -132,7 +135,7 @@ ms.lasthandoff: 10/18/2017
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> 在 C# 中，则重写<xref:System.Object.Finalize%2A?displayProperty=nameWithType>通过定义[析构函数](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)。  
+> 在 C# 中，通过定义[析构函数](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)重写 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>使用安全句柄
@@ -175,5 +178,5 @@ ms.lasthandoff: 10/18/2017
 <xref:Microsoft.Win32.SafeHandles>   
 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[如何： 定义和使用类和结构 (C + + /cli CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+[如何：定义和使用类和结构 (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
 [释放模式](../../../docs/standard/design-guidelines/dispose-pattern.md)

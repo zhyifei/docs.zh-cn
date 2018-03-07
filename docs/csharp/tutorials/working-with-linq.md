@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e9707d3b67a80fface2c26c589780c60c2e293f7
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -329,6 +329,6 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 ## <a name="conclusion"></a>结束语
 
-此示例展示了在 LINQ 中使用的一些方法，以及如何创建你自己的方法与支持 LINQ 的代码轻松结合使用。 还展示了惰性计算和及早计算的区别，以及决定使用哪种计算对性能产生的影响。
+此示例展示了在 LINQ 中使用的一些方法，以及如何创建你自己的方法与支持 LINQ 的代码轻松结合使用。 还介绍了惰性求值和及早求值的区别，以及决定使用哪种求值对性能产生的影响。
 
 而且，你也了解了一点魔术师掌握的一项技能。 魔术师之所以采用完美洗牌是因为，可以控制每张纸牌在一副纸牌中的移动。 在一些戏法中，魔术师会让一位观众将一张纸牌放在一副纸牌的最上面，然后进行几次洗牌，指出观众所放那张纸牌的具体位置。 在另一些戏法中，则需要按特定方式设置一副纸牌。 魔术师会在变戏法前设置一副纸牌。 然后，她会对一副纸牌进行 5 次向内洗牌。 在舞台上，她可以向观众展示看似杂乱无章的一副纸牌，然后再进行 3 次洗牌，这样刚好就可以得到她想要的一副纸牌了。

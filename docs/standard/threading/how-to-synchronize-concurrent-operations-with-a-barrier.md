@@ -11,28 +11,32 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: Barrier, how to use
+helpviewer_keywords:
+- Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0b2e32fe3cec30a4da7467447aee625dfe7e379b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 616229abed93c6793b392724d038d8f9160cd6ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>如何：使用屏障来使并发操作保持同步
-下面的示例演示如何同步使用的并发任务<xref:System.Threading.Barrier>。  
+下面的示例展示了如何将并发任务与 <xref:System.Threading.Barrier> 同步。  
   
 ## <a name="example"></a>示例  
- 下面的目的是解决方案的程序的以计算多少迭代 （或阶段） 所需的两个线程与每个查找出自己在同一个阶段上通过使用随机化算法的单词。 每个线程具有随机排布其单词后，请 barrier 阶段后操作，它以查看完整的句子是否已呈现在正确的单词顺序的两个结果进行比较。  
+ 下面的程序用于统计两个线程使用随机算法重新随机选择字词，分别在同一阶段查找一半解决方案时所需的迭代次数（或阶段数）。 在每个线程随机选择字词后，屏障后阶段操作会比较两个结果，以确定整个句子是否按正确的字词顺序呈现。  
   
  [!code-csharp[CDS_Barrier#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#01)]
  [!code-vb[CDS_Barrier#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_barrier/vb/barrier_vb.vb#01)]  
   
- A<xref:System.Threading.Barrier>是阻止继续，直到所有任务都到达屏障并行操作中的各个任务的对象。 当一种并行操作分阶段，并且每个阶段要求任务之间的同步时，它是很有用。 在此示例中，有两个阶段对操作。 在第一个阶段中，每个任务填充其部分具有数据的缓冲区。 每个任务完成时填充其部分，任务发出信号屏障已经准备就绪，若要继续，然后等待。 时所有的任务已收到信号屏障，它们会阻止，然后在第二个阶段开始。 屏障是必需的因为第二个阶段需要每个任务具有已生成到目前为止的所有数据的访问。 而无需屏障，可能会尝试从已不填充尚未由其他任务的缓冲区中读取第一个任务完成。 你可以同步任意数量的这种方式的阶段。  
+ <xref:System.Threading.Barrier> 对象可防止并行操作中的各个任务在所有任务到达屏障前继续执行。 如果并行操作分阶段执行，且每个阶段需要在任务之间进行同步，此对象就很有用。 在此示例中，操作分两个阶段执行。 在第一阶段中，每个任务都用数据填充缓冲部分。 在每个任务填充完缓冲部分后，任务向屏障发出信号，指明可以继续执行，然后等待。 当所有任务都向屏障发出信号后，就会取消阻止它们，此时第二阶段开始。 屏障是必要的，因为第二阶段要求每个任务都有权访问此时生成的所有数据。 如果没有屏障，首先完成的任务可能会尝试从其他任务尚未填充的缓冲读取数据。 可以按照这种方式同步任意数量的阶段。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于并行编程的数据结构](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)

@@ -11,22 +11,26 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallelism, data
+helpviewer_keywords:
+- parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13788542fa368bd5bcf1c2f277c9d83f84b35cdb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0644e2d9e7a52dd5747c9442a4771aa7400cdcb0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-parallelism-task-parallel-library"></a>数据并行（任务并行库）
 *数据并行*指的是对源集合或数组的元素同时（即，并行）执行相同操作的场景。 在数据并行操作中，对源集合进行分区，以便多个线程能够同时在不同的网段上操作。  
   
- 任务并行库 (TPL) 支持通过 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 类实现的数据并行。 此类对 [for](~/docs/csharp/language-reference/keywords/for.md) 循环和 [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) 循环（Visual Basic 中的 `For` 和 `For Each`）提供了基于方法的并行执行。 你为 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 循环编写的循环逻辑与编写连续循环的相似。 无需创建线程或列工作项。 在基本循环中，不需要加锁。 TPL 为你处理所有低级别的工作。 使用有关的详细信息<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>和<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>，下载文档[并行编程模式： 了解和使用.NET Framework 4 应用并行模式](http://www.microsoft.com/download/details.aspx?id=19222)。 下面的代码示例演示了一个简单的 `foreach` 循环及其并行等效项。  
+ 任务并行库 (TPL) 支持通过 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 类实现的数据并行。 此类对 [for](~/docs/csharp/language-reference/keywords/for.md) 循环和 [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) 循环（Visual Basic 中的 `For` 和 `For Each`）提供了基于方法的并行执行。 你为 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 循环编写的循环逻辑与编写连续循环的相似。 无需创建线程或列工作项。 在基本循环中，不需要加锁。 TPL 为你处理所有低级别的工作。 若要详细了解如何使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>，请下载文档[并行编程模式：了解并通过 .NET Framework 4 应用并行模式](http://www.microsoft.com/download/details.aspx?id=19222)。 下面的代码示例演示了一个简单的 `foreach` 循环及其并行等效项。  
   
 > [!NOTE]
 >  本文档使用 lambda 表达式在 TPL 中定义委托。 如果不熟悉 C# 或 Visual Basic 中的 lambda 表达式，请参阅 [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
@@ -51,7 +55,7 @@ ms.lasthandoff: 10/18/2017
 |-----------|-----------------|  
 |[如何：编写简单的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|描述如何编写遍历任何数组或可变址 <xref:System.Collections.Generic.IEnumerable%601> 源集合的 <xref:System.Threading.Tasks.Parallel.For%2A> 循环。|  
 |[如何：编写简单的 Parallel.ForEach 循环](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|描述如何编写遍历任何 <xref:System.Collections.Generic.IEnumerable%601> 源集合的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环。|  
-|[如何：停止或中断 Parallel.For 循环](http://msdn.microsoft.com/en-us/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|描述如何停止或中断并行循环，以便所有线程都获得该操作的通知。|  
+|[如何：停止或中断 Parallel.For 循环](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|描述如何停止或中断并行循环，以便所有线程都获得该操作的通知。|  
 |[如何：编写具有线程局部变量的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|描述如何编写 <xref:System.Threading.Tasks.Parallel.For%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。|  
 |[如何：编写具有线程局部变量的 Parallel.ForEach 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|描述如何编写 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。|  
 |[如何：取消 Parallel.For 或 ForEach Loop](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|描述如何通过使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 取消并行循环|  
@@ -59,5 +63,5 @@ ms.lasthandoff: 10/18/2017
 |[任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供任务并行库的概述。|  
 |[并行编程](../../../docs/standard/parallel-programming/index.md)|介绍.NET Framework 中的并行编程。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并行编程](../../../docs/standard/parallel-programming/index.md)

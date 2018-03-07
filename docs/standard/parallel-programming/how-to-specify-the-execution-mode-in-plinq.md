@@ -11,33 +11,37 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, how to use execution mode
+helpviewer_keywords:
+- PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 745ceae9832582c7b66a56075d128f9cf1c8ff69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c1c815131a1553001cdcf20e3c7408e472299677
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>如何：在 PLINQ 中指定执行模式
-此示例演示如何强制 PLINQ 跳过其默认试探法并并行执行的查询而不考虑查询的形状。  
+此示例展示了如何强制 PLINQ 规避默认启发，同时并行执行查询，无论查询的形状如何。  
   
 > [!WARNING]
->  本示例旨在演示用法，运行速度可能不如等效的顺序 LINQ to Objects 查询快。 有关加速的详细信息，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
+>  本示例旨在演示用法，运行速度可能不如等效的顺序 LINQ to Objects 查询快。 若要详细了解加速，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[PLINQ#22](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#22)]
  [!code-vb[PLINQ#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#22)]  
   
- PLINQ 旨在利用并行化的机会。 但是，并非所有查询都受益于并行执行。 例如，当查询包含很少执行工作的单个用户委托，该查询通常将更快地按顺序运行。 这是因为启用并行化执行所涉及的开销是比速度提高获取开销更大。 因此，PLINQ 不自动并行化的每个查询。 它首先检查查询和包含它的各种运算符的形状。 基于此分析，PLINQ 中的默认执行模式可能决定按顺序执行部分或所有查询。 但是，在某些情况下你可能知道更多有关您的查询比 PLINQ 能够从其分析确定。 例如，你可能知道委托是代价很高，并查询将一定受益于并行化。 在这种情况下，你可以使用<xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>方法并指定<xref:System.Linq.ParallelExecutionMode.ForceParallelism>值，以指示 PLINQ 为始终以并行运行查询。  
+ PLINQ 旨在利用机会并行执行查询。 不过，并非所有查询都受益于并行执行。 例如，如果查询包含一个工作量极小的用户委托，顺序运行查询的速度通常更快。 这是因为相较所实现的加速，启用并行执行所涉及的开销更加昂贵。 因此，PLINQ 并不自动并行执行每个查询。 它先检查查询的形状和所包含的各种运算符。 根据此分析，默认执行模式下的 PLINQ 可能会决定顺序执行部分或全部查询。 不过，在某些情况下，你对查询更加了解，所做决定可能优于 PLINQ 根据分析所做的决定。 例如，你可能知道委托非常昂贵，且查询一定会受益于并行执行。 在这种情况下，可以使用 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 方法并指定 <xref:System.Linq.ParallelExecutionMode.ForceParallelism> 值，以指示 PLINQ 始终并行运行查询。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 到此代码剪切并粘贴[PLINQ 数据示例](../../../docs/standard/parallel-programming/plinq-data-sample.md)调用该方法从`Main`。  
+ 将此代码剪切并粘贴到 [PLINQ 数据样本](../../../docs/standard/parallel-programming/plinq-data-sample.md)中，并通过 `Main` 调用方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
  [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

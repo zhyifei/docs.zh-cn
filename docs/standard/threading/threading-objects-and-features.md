@@ -12,15 +12,18 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2a73e5c60a661c171e9e46e6307484cf5e0e6b80
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0cb36c004c46e22256928b3b2432da59fb3e6fa2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threading-objects-and-features"></a>线程处理对象和功能
 .NET Framework 提供许多对象，有助于你创建和管理多线程应用程序。 托管线程通过 <xref:System.Threading.Thread> 类表示。 <xref:System.Threading.ThreadPool> 类可以轻松创建和管理多线程后台任务。 <xref:System.ComponentModel.BackgroundWorker> 类执行的任务和与用户界面交互的任务相同。 <xref:System.Threading.Timer> 类可在指定的时间间隔内执行后台任务。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  描述用于通过发送和等待信号同步线程活动的托管事件等待句柄。  
   
  [Mutex](../../../docs/standard/threading/mutexes.md)  
- 说明如何使用<xref:System.Threading.Mutex>来同步访问的对象或创建你自己的同步机制。  
+ 介绍了如何使用 <xref:System.Threading.Mutex> 同步访问对象或生成自己的同步机制。  
   
  [互锁操作](../../../docs/standard/threading/interlocked-operations.md)  
  说明如何使用 <xref:System.Threading.Interlocked> 类递增或递减值和以单原子操作存储值。  

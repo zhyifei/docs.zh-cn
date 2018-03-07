@@ -9,20 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2b4ede7bdb8dad65e9cd959dfaa2f8956a877762
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1148af537ef9b502c6f3a9a3cc0588eaed39ac2f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 编译器 (xsltc.exe)
 XSLT 编译器 (xsltc.exe) 编译 XSLT 样式表并生成一个程序集。 然后可以将已编译的样式表直接传递到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 不能用 xsltc.exe 生成签名的程序集。  
   
- xsltc.exe 工具包含在 Visual Studio 2008 中。 有关详细信息，请参阅[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=89463)。  
+ xsltc.exe 工具包含在 Visual Studio 2008 中。 有关详细信息，请访问 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=89463)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +44,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |选项|描述|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|指定下面样式表的类名称。 类名称可以是完全限定的名称。<br /><br /> 类名称默认为样式表的名称。 例如，如果编译样式表 customers.xsl，则默认类名称为 customers。|  
-|`/debug[`+&#124;-`]`|指定是否生成调试信息。<br /><br /> 指定 `+` 或 `/debug` 将导致编译器生成调试信息并将此信息放在程序数据库 (PDB) 文件中。 生成的 PDB 文件的名称为 `assemblyName`.pdb。<br /><br /> 指定 `-`（在不指定 `/debug` 时生效）将导致不创建任何调试信息。 生成发布程序集。 **注意：**在调试模式下的编译会显著影响 XSLT 性能。|  
+|`/debug[`+&#124;-`]`|指定是否生成调试信息。<br /><br /> 指定 `+` 或 `/debug` 将导致编译器生成调试信息并将此信息放在程序数据库 (PDB) 文件中。 生成的 PDB 文件的名称为 `assemblyName`.pdb。<br /><br /> 指定 `-`（在不指定 `/debug` 时生效）将导致不创建任何调试信息。 生成发布程序集。 **注意：**在调试模式下编译可能会显著影响 XSLT 性能。|  
 |`/help`|显示该工具的命令语法和选项。|  
 |`/nologo`|禁止显示编译器版权消息。|  
 |`/platform:` `string`|指定程序集可以在其上运行的平台。 下面说明有效的平台值：<br /><br /> `x86` 将程序集编译成可由 32 位、x86 兼容的公共语言运行库运行<br /><br /> `x64` 将程序集编译成可由 64 位公共语言运行库在支持 AMD64 或 EM64T 指令集的计算机上运行。<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 将程序集编译成可由 64 位公共语言运行库在具有 [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 处理器的计算机上运行。<br /><br /> `anycpu` 将程序集编译成可在任何平台上运行。 这是默认设置。|  
@@ -56,7 +59,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 >  您还必须包括已编译的程序集作为应用程序中的引用。  
   
- Xsltc.exe 工具不会验证类 (`/class:``name`) 或程序集 (`/out:``assemblyName`) 名称。 如果名称无效，公共语言运行库将引发错误。  
+ xsltc.exe 工具不验证类 (`/class:``name`) 或程序集 (`/out:``assemblyName`) 名称。 如果名称无效，公共语言运行库将引发错误。  
   
 ## <a name="examples"></a>示例  
  下面的命令编译样式表并创建一个名为 booksort.dll 的程序集。  
@@ -89,7 +92,7 @@ xsltc /settings:DTD+,script+ /out:myTest calc.xsl
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
- [如何： 通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+ [如何：通过使用程序集执行 XSLT 转换](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
  [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)

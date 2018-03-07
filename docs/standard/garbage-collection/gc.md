@@ -1,6 +1,6 @@
 ---
 title: "自动内存管理和垃圾回收"
-description: "了解如何自动内存管理是公共语言运行时提供托管执行过程的服务之一。"
+description: "了解自动内存管理是公共语言运行时在托管执行过程中提供的服务之一。"
 keywords: .NET, .NET Core
 author: dotnet-bot
 ms.author: dotnetcontent
@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-ms.openlocfilehash: 30bcf08ebb4e05706d5b25e2f805474dd1ee428e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a99d849cc1092e36181da7b7ab767a41ff5ef234
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>自动内存管理和垃圾回收
 
@@ -50,7 +53,7 @@ ms.lasthandoff: 10/18/2017
 
 对于应用程序创建的大多数对象，可以依赖垃圾回收器自动执行必要的内存管理任务。 但是，非托管资源需要显式清除。 最常用的非托管资源类型是包装操作系统资源的对象，例如，文件句柄、窗口句柄或网络连接。 虽然垃圾回收器可以跟踪封装非托管资源的托管对象的生存期，但却无法具体了解如何清理资源。 创建封装非托管资源的对象时，建议在公共 `Dispose` 方法中提供必要的代码以清理非托管资源。 通过提供 `Dispose` 方法，对象的用户可以在使用完对象后显式释放其内存。 使用封装非托管资源的对象时，应该了解 `Dispose` 并在必要时调用它。 有关清理非托管资源的更多信息和实现 `Dispose` 的设计模式示例，请参见 [.NET 中的垃圾回收](index.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [System.GC](xref:System.GC)
 

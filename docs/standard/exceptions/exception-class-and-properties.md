@@ -12,15 +12,18 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 120d56832aad5024ee607d6e3114f164c967a12f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-class-and-properties"></a>异常类和属性
 
@@ -46,7 +49,7 @@ Object
 
 继承自 <xref:System.Exception> 的大多数类无法实现其他成员或提供其他功能；它们只从 <xref:System.Exception> 进行继承。 因此，可在异常类层次结构、异常名称和异常所含的信息中找到异常的重要信息。
 
-我们建议您引发和捕获派生的对象<xref:System.Exception>，但你可以引发派生自任何对象<xref:System.Object>作为异常类。 请注意，并非所有语言都支持引发和捕获不是从 <xref:System.Exception> 派生的对象。
+建议仅抛出和捕获派生自 <xref:System.Exception> 的对象，但可以将派生自 <xref:System.Object> 类的任何对象作为异常抛出。 请注意，并非所有语言都支持引发和捕获不是从 <xref:System.Exception> 派生的对象。
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [异常](index.md)

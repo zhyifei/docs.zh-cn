@@ -14,15 +14,18 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f68a7aebdb1625b149287d70fd91c2108a658b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-in-managed-threads"></a>托管线程中的异常
 从 .NET Framework 2.0 版开始，公共语言运行时允许线程中的多数未经处理的异常正常继续。 在多数情况下，这意味着未经处理的异常会导致应用程序终止。  
@@ -32,9 +35,9 @@ ms.lasthandoff: 10/18/2017
   
  公共语言运行时为用于控制程序流的某些未经处理的异常提供支持：  
   
--   A<xref:System.Threading.ThreadAbortException>线程中引发，因为<xref:System.Threading.Thread.Abort%2A>调用。  
+-   由于 <xref:System.Threading.Thread.Abort%2A> 得到调用，因此 <xref:System.Threading.ThreadAbortException> 在线程中抛出。  
   
--   <xref:System.AppDomainUnloadedException>线程中引发，因为正在卸载模块线程正在执行的应用程序域。  
+-   由于线程执行时所在的应用域正在卸载，因此 <xref:System.AppDomainUnloadedException> 在线程中抛出。  
   
 -   公共语言运行时或主机进程通过引发内部异常来终止线程。  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 10/18/2017
   
 -   在线程池线程中，没有诸如未经处理的异常这样的内容。 当某个任务引发了它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后将线程返回至线程池。  
   
--   没有任何此类操作在线程上未经处理的异常创建与<xref:System.Threading.Thread.Start%2A>方法<xref:System.Threading.Thread>类。 当在此类线程中运行的代码引发它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后正常终止线程。  
+-   在使用 <xref:System.Threading.Thread> 类的 <xref:System.Threading.Thread.Start%2A> 方法创建的线程中，不存在未经处理的异常等现象。 当在此类线程中运行的代码引发它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后正常终止线程。  
   
 -   在终结器线程中，没有诸如未经处理的异常这样的内容。 当终结器引发它无法处理的异常时，运行时会将异常堆栈跟踪打印至控制台，然后允许终结器线程继续运行终结器。  
   
@@ -69,7 +72,7 @@ ms.lasthandoff: 10/18/2017
   
 -   重构代码，以便接收到信号时线程能够正常退出。  
   
--   使用<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>方法以中止此线程。  
+-   使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法中止线程。  
   
 -   如果线程必须停止才能使进程终止，请将该线程设置为后台线程，这样它就会在进程退出时自动终止。  
   
@@ -85,5 +88,5 @@ ms.lasthandoff: 10/18/2017
 ## <a name="host-override"></a>主机重写  
  在 .NET Framework 2.0 版中，非托管主机可以使用宿主 API 中的 [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 接口来重写公共语言运行时的默认未经处理的异常。 [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 函数用于设置未经处理的异常的策略。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)

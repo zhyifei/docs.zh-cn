@@ -16,30 +16,33 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fca27cf5261e253c2bb3d3a10fa3db31f28a2415
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80b4cee03e934d3aec98ca323aac43f934c56455
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="timers"></a>计时器
-计时器是使您能够指定要在指定的时间调用的委托的轻型对象。 在线程池中的线程执行等待操作。  
+计时器是一种轻型对象，可便于指定要在指定时间调用的委托。 线程池中的线程执行等待操作。  
   
- 使用<xref:System.Threading.Timer?displayProperty=nameWithType>类非常简单。 你创建**计时器**，并传递<xref:System.Threading.TimerCallback>到回调方法中，将传递的状态表示为回调，初始引发时间，表示回调调用之间的时间段时间的对象的委托。 若要取消的挂起计时器，请调用**Timer.Dispose**函数。  
+ <xref:System.Threading.Timer?displayProperty=nameWithType> 类使用起来非常简单。 创建 Timer 的同时，向回调方法传递 <xref:System.Threading.TimerCallback> 委托、表示传递给回调的状态的对象、初始抛出时间和表示回调调用时间间隔的时间。 若要取消挂起的计时器，请调用 Timer.Dispose 函数。  
   
 > [!NOTE]
->  有两个其他计时器类。 <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>类是使用可视化设计器，并旨在在用户界面上下文中使用的控件; 它会引发用户界面线程上的事件。 <xref:System.Timers.Timer?displayProperty=nameWithType>类派生自<xref:System.ComponentModel.Component>，因此可与可视化设计器使用; 它还会引发事件，但它会发出它们上<xref:System.Threading.ThreadPool>线程。 <xref:System.Threading.Timer?displayProperty=nameWithType>类上，使回调<xref:System.Threading.ThreadPool>线程和根本不使用的事件模型。 它还提供给回调方法，其他计时器不这样做的状态对象。 它是非常轻量。  
+>  还有其他两个计时器类。 <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> 类是与可视化设计器结合使用的控件，适用于用户界面上下文，在用户界面线程上抛出事件。 由于 <xref:System.Timers.Timer?displayProperty=nameWithType> 类派生自 <xref:System.ComponentModel.Component>，因此可以与可视化设计器结合使用；它还会抛出事件，但是在 <xref:System.Threading.ThreadPool> 线程上抛出这些事件。 <xref:System.Threading.Timer?displayProperty=nameWithType> 类在 <xref:System.Threading.ThreadPool> 线程上执行回调，完全不使用事件模型。 它还向回调方法提供状态对象，而其他计时器则不会。 它是极度轻型类。  
   
- 下面的代码示例将启动一个秒 （1000年毫秒） 计时周期后启动每秒，直到您按下一个计时器**Enter**密钥。 包含对计时器的引用的变量是类级字段，以确保计时器不是进行垃圾回收它仍在运行时。 频繁垃圾收集的详细信息，请参阅<xref:System.GC.KeepAlive%2A>。  
+ 下面的代码示例启动计时器，此计时器在一秒（1000 毫秒）后启动，且每秒都会计时，直到按下 Enter 键。 为了确保计时器在运行的同时不受垃圾回收影响，包含对计时器的引用的变量是类级别字段。 若要详细了解积极垃圾回收，请参阅 <xref:System.GC.KeepAlive%2A>。  
   
  [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
  [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
  [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Timer>  
  [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)

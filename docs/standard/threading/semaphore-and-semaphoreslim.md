@@ -16,15 +16,18 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 类表示一个命名（系统范围内）或本地信号量。 它是环绕 Win32 信号量对象的精简包装器。 Win32 信号量是计数信号量，该可用于控制对资源池的访问。  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="semaphores-and-thread-identity"></a>信号量和线程标识  
  两种信号量类型不会在对 <xref:System.Threading.WaitHandle.WaitOne%2A>、<xref:System.Threading.SemaphoreSlim.Wait%2A>、<xref:System.Threading.Semaphore.Release%2A> 和 <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> 方法的调用上强制线程标识。 例如，信号量的一种常见使用方案涉及制造者线程和使用者线程，其中一个线程始终增加信号量计数，另一个始终减少信号量计数。  
   
- 程序员有责任确保线程不会过多次地地释放信号量。 例如，假定信号量的最大计数为 2 并且线程 A 和线程 B 都进入了该信号量。 如果线程 B 中的编程错误导致它两次成功调用了 `Release`。 信号量计数已满，并且当线程 A 最终调用`Release`、<xref:System.Threading.SemaphoreFullException>引发。  
+ 程序员有责任确保线程不会过多次地地释放信号量。 例如，假定信号量的最大计数为 2 并且线程 A 和线程 B 都进入了该信号量。 如果线程 B 中的编程错误导致它两次成功调用了 `Release`。 信号灯计数已满，当线程 A 最终调用 `Release` 时，<xref:System.Threading.SemaphoreFullException> 抛出。  
   
 ## <a name="named-semaphores"></a>命名信号量  
  Windows 操作系统允许信号量拥有名称。 命名信号量是系统范围的。 即，一旦创建了命名信号量，它对所有进程中的所有线程均可见。 因此，命名信号量可用于同步进程以及线程的活动。  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
  使用访问控制安全性来保护表示命名信号量的 <xref:System.Threading.Semaphore> 对象，最好通过使用指定 <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> 对象的构造函数。 你还可以通过使用 <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> 方法应用访问控制安全，但这会使窗口在创建信号量的时间以及信号量受到保护的时间之间留下漏洞。 使用访问控制安全机制来保护信号量有助于阻止恶意攻击，但不能解决的意外的名称冲突问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Semaphore>  
  <xref:System.Threading.SemaphoreSlim>  
  [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)

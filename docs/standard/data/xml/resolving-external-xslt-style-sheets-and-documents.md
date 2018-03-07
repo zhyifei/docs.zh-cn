@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a5e84935f9fff1f993a677d408287cd775269f03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 85176c45b768d1e8fe9efc408fd644bf33aa8c05
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>解析外部 XSLT 样式表和文档
 转换过程中会有几个场合需要解析外部资源。  
@@ -42,24 +45,24 @@ ms.lasthandoff: 11/21/2017
 |--------------------------------------|-------------------|  
 |在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期间定位样式表时。|如果样式表在要求凭据的资源上，则指定接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 参数的重载 <xref:System.Xml.XmlResolver> 方法。|  
 |在 <xref:System.Xml.Xsl.XslTransform.Load%2A> 期间解析 `<xsl:include>` 或 `<xsl:import>` 时。|指定接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 参数的重载 <xref:System.Xml.XmlResolver> 方法。 <xref:System.Xml.XmlResolver> 用来加载由 `import` 或 `include` 语句引用的样式表。 如果您传入 `null`，则不解析外部资源。|  
-|在转换期间解析任何 `document()` 函数时。|指定<xref:System.Xml.XmlResolver>通过转换期间<xref:System.Xml.Xsl.XslTransform.Transform%2A>采用的方法<xref:System.Xml.XmlResolver>自变量。|  
+|在转换期间解析任何 `document()` 函数时。|在转换期间，使用需要使用 <xref:System.Xml.XmlResolver> 参数的 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法指定 <xref:System.Xml.XmlResolver>。|  
   
- `document()`函数将检索其他 XML 资源从样式表，除了由输入流提供的初始 XML 数据。 因为此函数允许包括可能位于其他位置的 XML 数据，所以，向 <xref:System.Xml.XmlResolver> 方法提供一个具有 `null` 值的 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 将使 `document()` 函数无法执行。 若要使用 `document()` 函数，除具有适当的权限集外，还应使用接受 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 参数的 <xref:System.Xml.XmlResolver> 方法。  
+ 除了输入流提供的初始 XML 数据外，`document()` 函数还从样式表中检索其他 XML 资源。 因为此函数允许包括可能位于其他位置的 XML 数据，所以，向 <xref:System.Xml.XmlResolver> 方法提供一个具有 `null` 值的 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 将使 `document()` 函数无法执行。 若要使用 `document()` 函数，除具有适当的权限集外，还应使用接受 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 参数的 <xref:System.Xml.XmlResolver> 方法。  
   
  有关 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法及其 <xref:System.Xml.XmlResolver> 的使用的更多信息，请参见 <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=nameWithType>。  
   
  调用 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法时，将针对在加载时提供的证据来计算权限，并将权限集分配给整个转换过程。 如果 `document()` 函数尝试启动一个操作而该操作需要权限集中没有的权限，就会引发异常。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
  [XslTransform 的输出](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
  [不同存储区的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
  [样式表参数和扩展对象的 XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
- [XSLT 样式表脚本使用\<msxsl: script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)  
+ [使用 \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md) 编写 XSLT 样式表脚本  
  [对 msxsl:node-set() 函数的支持](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
  [转换中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
  [转换中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Xsltransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Xsltransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [Xsltransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+ [XslTransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [XslTransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [XslTransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

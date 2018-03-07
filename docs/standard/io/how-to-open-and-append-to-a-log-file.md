@@ -17,27 +17,30 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 60c31339231405a1cbbb98dae37d36ad3c3709c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 333b20adee4ea2826a1fc6795a39490dca1af843
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>如何：打开并追加到日志文件
-<xref:System.IO.StreamWriter>和<xref:System.IO.StreamReader>写入到字符和从流读取字符。 下面的代码示例将打开`log.txt`文件以进行输入，或如果它尚不存在，并将信息追加到文件末尾创建文件。 文件的内容然后写入标准输出显示。 作为此示例的替代方法，信息可能存储为一个字符串或字符串数组和<xref:System.IO.File.WriteAllText%2A>或<xref:System.IO.File.WriteAllLines%2A>方法无法用于实现相同的功能。  
+<xref:System.IO.StreamWriter> 和 <xref:System.IO.StreamReader> 对流执行字符写入和读取操作。 下面的代码示例打开 `log.txt` 文件以供输入，或创建文件（如果尚无文件的话），并将信息追加到文件末尾。 然后，将文件内容写入标准输出以供显示。 作为此示例的替换方法，可以将信息存储为一个字符串或字符串数组，并能使用 <xref:System.IO.File.WriteAllText%2A> 或 <xref:System.IO.File.WriteAllLines%2A> 方法实现相同的功能。  
   
 > [!NOTE]
->  Visual Basic 用户可以选择使用的方法和属性提供的<xref:Microsoft.VisualBasic.Logging.Log>类或<xref:Microsoft.VisualBasic.FileIO.FileSystem>类用于创建或写入日志文件。  
+>  Visual Basic 用户可以选择使用 <xref:Microsoft.VisualBasic.Logging.Log> 类或 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 类提供的方法和属性，以创建或写入日志文件。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source2.cs#2)]
  [!code-vb[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IO.StreamWriter>  
  <xref:System.IO.StreamReader>  
  <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>  

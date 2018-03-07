@@ -14,34 +14,37 @@ helpviewer_keywords:
 - asynchronous programming, blocking applications
 - blocking application execution
 ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: ccca6e1e4f6b5cdf098018b59426fb2262e2b346
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ec7bfe6fe2cef20a6d74030802113a47e8679e1
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>通过结束异步操作来阻止应用程序执行
-操作完成之前，必须阻止的应用程序无法继续执行其他工作的同时等待异步操作的结果。 使用以下选项之一来阻止应用程序的主线程在等待异步操作以完成时：  
+如果应用无法在等待异步操作结果期间继续执行其他工作，必须阻止应用一直到操作完成。 请使用下列方法之一，在应用等待异步操作完成期间阻止应用的主线程：  
   
--   调用异步操作**结束** *OperationName*方法。 本主题中演示了这种方法。  
+-   调用异步操作的 EndOperationName****** 方法。 本主题介绍的就是这种方法。  
   
--   使用<xref:System.IAsyncResult.AsyncWaitHandle%2A>属性<xref:System.IAsyncResult>异步操作返回**开始** *OperationName*方法。 有关演示此方法的示例，请参阅[使用 AsyncWaitHandle 阻止应用程序执行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。  
+-   使用异步操作的 BeginOperationName****** 方法返回的 <xref:System.IAsyncResult> 的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 属性。 有关展示这种方法的示例，请参阅[使用 AsyncWaitHandle 阻止应用执行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)。  
   
- 应用程序使用**结束** *OperationName*方法进行阻止，直到异步操作已完成，通常会调用**开始** *OperationName*方法，执行任何工作，也能在不操作的结果，然后调用**结束** *OperationName*。  
+ 在异步操作完成前使用 EndOperationName****** 方法阻止的应用，通常会调用 BeginOperationName****** 方法，执行任何不需要等待操作结果也可以执行的工作，并调用 EndOperationName******。  
   
 ## <a name="example"></a>示例  
- 下面的代码示例演示如何使用中的异步方法<xref:System.Net.Dns>类检索指定用户的计算机的域名系统信息。 请注意， `null` (`Nothing`在 Visual Basic 中) 为传递<xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback`和`stateObject`参数因为这些自变量并不需要使用此方法时。  
+ 下面的代码示例展示了如何使用 <xref:System.Net.Dns> 类中的异步方法，检索用户指定计算机的域名系统信息。 请注意，对 <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` 和 `stateObject` 参数传递的是 `null`（Visual Basic 中的 `Nothing`），因为使用这种方法时这些是可选参数。  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]
  [!code-vb[AsyncDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlock.vb#1)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: "C# 中的数字"
 metadata:
-  title: "C# 中的数字"
+  title: "“C# 中的数字”交互教程 - C# 快速入门"
   description: "在有关数字类型的该快速入门教程中，你将使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。"
   audience: Developer
   ms.topic: get-started-article
@@ -13,11 +13,11 @@ metadata:
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 7d18240b2871b5322c767287a737deda0b2ddefc
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: d611f2796471fbb094020caaa70a754c093a833c
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 1
   content: "该快速入门教程以交互方式介绍了 C# 中数字类型，你可使用浏览器来编写 C# 和查看代码的编译及运行结果。 具体包含一系列课程，探索了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。\n"

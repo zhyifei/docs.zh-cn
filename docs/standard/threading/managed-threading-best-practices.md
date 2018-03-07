@@ -16,21 +16,24 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e396bb1f6a710e49e311ca1526a7aae9bca7bf90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c23ef17e2bf2bec389368d1b9d88d11723ef531e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-threading-best-practices"></a>托管线程处理的最佳做法
 多线程处理需在编程时倍加注意。 对于多数任务，通过将执行请求以线程池线程的方式排队，可以降低复杂性。 本主题将探讨更复杂的情形，比如协调多个线程的工作或处理造成阻止的线程。  
   
 > [!NOTE]
-> 从.NET Framework 4 开始，任务并行库和 PLINQ 提供减少某些复杂性和风险的多线程编程的 Api。 有关详细信息，请参阅[.NET 中的并行编程](../../../docs/standard/parallel-programming/index.md)。  
+> 自 .NET Framework 4 起，任务并行库和 PLINQ 提供了 API，可降低多线程编程的一些复杂性和风险。 有关详细信息，请参阅 [.NET 中的并行编程](../../../docs/standard/parallel-programming/index.md)。  
   
 ## <a name="deadlocks-and-race-conditions"></a>死锁和争用条件  
  多线程处理解决了吞吐量和响应性问题，但引入此功能会带来新的问题：死锁和争用条件。  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="deadlocks"></a>死锁  
  两个线程中的每一个线程都尝试锁定另外一个线程已锁定的资源时，就会发生死锁。 两个线程都不能继续执行。  
   
- 托管线程处理类的许多方法都提供了超时设定，有助于检测死锁。 例如，下面的代码尝试获取对已命名的对象的锁`lockObject`。 如果在 300 毫秒内，不获取锁<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>返回`false`。  
+ 托管线程处理类的许多方法都提供了超时设定，有助于检测死锁。 例如，下面的代码尝试在 `lockObject` 对象上获取锁。 如果在 300 毫秒内没有获取锁，<xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> 返回 `false`。  
   
 ```vb  
 If Monitor.TryEnter(lockObject, 300) Then  
@@ -73,7 +76,7 @@ else {
   
  在多线程应用程序中，一个已加载并递增该值的线程可能会被另一个线程抢先，抢先的线程执行全部三个步骤；第一个线程继续执行并存储其值时，它会覆盖 `objCt`，但不考虑该值在其暂停执行期间已更改这一事实。  
   
- 通过使用的方法轻松地避免此特殊的争用条件<xref:System.Threading.Interlocked>类，如<xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>。 若要了解在多个线程间同步数据的其他技巧，请参阅[为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)。  
+ 通过使用 <xref:System.Threading.Interlocked> 类的方法（如 <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType>），可以轻松避免这种争用条件。 若要了解在多个线程间同步数据的其他技巧，请参阅[为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)。  
   
  争用条件也可能会在同步多个线程的活动时发生。 编写每一行代码时，都必须考虑出现以下情况时会发生什么情况：一个线程在执行该行代码（或构成该行的任何机器指令）前，其他线程抢先执行了该代码。  
   
@@ -87,7 +90,7 @@ else {
   
 -   只有正在执行的前台线程数小于处理器数时，后台线程方可执行。  
   
--   当调用<xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>在线程上的方法，该线程可能或可能不会启动立即执行，具体取决于处理器的数目和当前等待执行的线程数。  
+-   对线程调用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法时，此线程可能会或可能不会立即开始执行，具体取决于处理器数以及当前等待执行的线程数。  
   
 -   争用条件可能在以下两种情况下发生：线程被意外抢占；在不同处理器上执行的两个线程抢用同一代码块。  
   
@@ -98,7 +101,7 @@ else {
   
 -   后台线程仅在主用户线程空闲时才执行。 连续运行的前台线程将使后台线程缺乏处理器时间。  
   
--   当调用<xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>方法或的线程上，线程不会启动之前当前线程执行生成由操作系统抢占。  
+-   对线程调用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法时，此线程只有等到当前线程生成或被操作系统强占后才会开始执行。  
   
 -   出现争用条件的原因通常是，程序员未预见到一个线程可能会在某一难以控制的时刻被抢占这一事实，有时就会出现另一线程抢先使用代码块这种情况。  
   
@@ -112,21 +115,21 @@ else {
 ## <a name="general-recommendations"></a>一般性建议  
  使用多线程时需考虑以下准则：  
   
--   不要使用<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>终止其他线程。 对另一个线程调用 **Abort** 无异于引发该线程的异常，也不知道该线程已处理到哪个位置。  
+-   请勿使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 终止其他线程。 对另一个线程调用 **Abort** 无异于引发该线程的异常，也不知道该线程已处理到哪个位置。  
   
--   不要使用<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>和<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>来同步多个线程的活动。 不要使用<xref:System.Threading.Mutex>， <xref:System.Threading.ManualResetEvent>， <xref:System.Threading.AutoResetEvent>，和<xref:System.Threading.Monitor>。  
+-   请勿使用 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> 同步多个线程的活动。 请使用 <xref:System.Threading.Mutex>、<xref:System.Threading.ManualResetEvent>、<xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.Monitor>。  
   
--   不要从主程序中控制工作线程的执行（如使用事件）。 而应设计程序，使工作线程负责等待任务可用，然后执行任务，并在完成时通知程序的其他部分。 如果不阻止工作线程，请考虑使用线程池线程。 <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>在阻止辅助线程的情况下很有用。  
+-   不要从主程序中控制工作线程的执行（如使用事件）。 而应设计程序，使工作线程负责等待任务可用，然后执行任务，并在完成时通知程序的其他部分。 如果不阻止工作线程，请考虑使用线程池线程。 <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> 非常适用于阻止工作线程。  
   
--   不要将类型用作锁定对象。 即，避免代码，如`lock(typeof(X))`在 C# 或`SyncLock(GetType(X))`在 Visual Basic 中或使用<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>与<xref:System.Type>对象。 对于给定的类型，没有只有一个实例<xref:System.Type?displayProperty=nameWithType>每个应用程序域。 如果锁定对象的类型是“公共的”，那么不属于自己的代码也能锁定该对象，从而导致死锁。 有关其他问题，请参阅[可靠性最佳做法](../../../docs/framework/performance/reliability-best-practices.md)。  
+-   不要将类型用作锁定对象。 也就是说，避免一些代码，如 C# 中的 `lock(typeof(X))` 或 Visual Basic 中的 `SyncLock(GetType(X))`，或避免使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Type> 对象。 对于给定类型，每个应用域只有一个 <xref:System.Type?displayProperty=nameWithType> 实例。 如果锁定对象的类型是“公共的”，那么不属于自己的代码也能锁定该对象，从而导致死锁。 有关其他问题，请参阅[可靠性最佳做法](../../../docs/framework/performance/reliability-best-practices.md)。  
   
 -   锁定实例时要谨慎，例如，C# 中的 `lock(this)` 或 Visual Basic 中的 `SyncLock(Me)`。 如果应用程序中不属于该类型的其他代码锁定了该对象，则会发生死锁。  
   
--   请务必确保已进入监视器的线程始终离开该监视器，即使线程在监视器中时发生异常也是如此。 C#[锁](~/docs/csharp/language-reference/keywords/lock-statement.md)语句和 Visual Basic [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)语句提供此行为自动，采用**最后**块以确保<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>是调用。 如果无法确保调用 **Exit**，请考虑将设计更改为使用 **Mutex**。 Mutex 在当前拥有它的线程终止后会自动释放。  
+-   请务必确保已进入监视器的线程始终离开该监视器，即使线程在监视器中时发生异常也是如此。 C# 的 [lock](~/docs/csharp/language-reference/keywords/lock-statement.md) 语句和 Visual Basic 的 [SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md) 语句可自动提供此行为，同时使用 **finally** 块来确保调用 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>。 如果无法确保调用 **Exit**，请考虑将设计更改为使用 **Mutex**。 Mutex 在当前拥有它的线程终止后会自动释放。  
   
 -   请务必针对需要不同资源的任务使用多线程，避免向单个资源指定多个线程。 例如，任何涉及 I/O 的任务都会从其拥有自己的线程这一点得到好处，因为此线程在 I/O 操作期间将阻止，从而允许其他线程执行。 用户输入是另一种可从专用线程获益的资源。 在单处理器计算机上，涉及大量计算的任务可与用户输入和涉及 I/O 的任务并存，但多个计算量大的任务将相互竞争。  
   
--   考虑使用方法<xref:System.Threading.Interlocked>类的简单状态更改，而不是使用`lock`语句 (`SyncLock`在 Visual Basic 中)。 `lock`语句是一个不错的通用工具，但<xref:System.Threading.Interlocked>类提供更好的性能，必须是原子性的更新。 如果不存在争用，它会在内部执行一个锁定前缀。 查看代码时，请注意类似于以下示例所示的代码。 在第一个示例中，状态变量是递增的：  
+-   对于简单的状态更改，请考虑使用 <xref:System.Threading.Interlocked> 类的方法，而不是 `lock` 语句（Visual Basic 中的 `SyncLock`）。 虽然 `lock` 语句是实用的通用工具，但 <xref:System.Threading.Interlocked> 类提升了更新（必须是原子操作）的性能。 如果不存在争用，它会在内部执行一个锁定前缀。 查看代码时，请注意类似于以下示例所示的代码。 在第一个示例中，状态变量是递增的：  
   
     ```vb  
     SyncLock lockObject  
@@ -141,7 +144,7 @@ else {
     }  
     ```  
   
-     您可以通过改进性能<xref:System.Threading.Interlocked.Increment%2A>方法而不是`lock`语句，如下所示：  
+     若要提升性能，可以使用 <xref:System.Threading.Interlocked.Increment%2A> 方法代替 `lock` 语句，如下所示：  
   
     ```vb  
     System.Threading.Interlocked.Increment(myField)  
@@ -152,7 +155,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  在.NET Framework 2.0 版中，<xref:System.Threading.Interlocked.Add%2A>方法提供的增量大于 1 的原子更新。  
+    >  在 .NET Framework 版本 2.0 中，<xref:System.Threading.Interlocked.Add%2A> 方法提供增量大于 1 的原子更新。  
   
      在第二个示例中，仅当引用类型变量为空引用（在 Visual Basic 中为 `Nothing`）时才会将其更新。  
   
@@ -179,7 +182,7 @@ else {
     }  
     ```  
   
-     可通过使用改善性能<xref:System.Threading.Interlocked.CompareExchange%2A>方法请改为，，如下所示：  
+     可以改用 <xref:System.Threading.Interlocked.CompareExchange%2A> 方法提升性能，如下所示：  
   
     ```vb  
     System.Threading.Interlocked.CompareExchange(x, y, Nothing)  
@@ -190,7 +193,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  在.NET Framework 2.0 版中，<xref:System.Threading.Interlocked.CompareExchange%2A>方法具有可以用于任何引用类型的类型安全替换的泛型重载。  
+    >  在 .NET Framework 版本 2.0 中，<xref:System.Threading.Interlocked.CompareExchange%2A> 方法包含泛型重载，可用作任何引用类型的类型安全替换。  
   
 ## <a name="recommendations-for-class-libraries"></a>类库相关建议  
  为多线程处理设计类库时，请考虑以下准则：  
@@ -203,6 +206,6 @@ else {
   
 -   避免提供可更改静态状态的静态方法。 在常见服务器方案中，静态状态可在各个请求之间共享，这意味着多个线程可同时执行该代码。 这可能导致线程出现 bug。 请考虑使用一种设计模式，将数据封装到在各请求之间不共享的实例中。 此外，如果同步静态数据，更改状态的静态方法间的调用可导致死锁或冗余同步，进而降低性能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [线程处理](../../../docs/standard/threading/index.md)  
  [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)

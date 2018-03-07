@@ -13,15 +13,18 @@ helpviewer_keywords:
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
 <a name="top"></a> .NET Framework 提供一系列用于控制线程交互和避免争用情况的同步基元。 这大致可分为 3 个类别：锁定、发出信号和联锁操作。  
@@ -47,9 +50,9 @@ ms.lasthandoff: 11/21/2017
  锁定控制一次针对一个线程的资源，或控制针对指定数目线程的资源。 锁定正在使用时请求排他锁的线程将受阻，直到锁定变为可用。  
   
 ### <a name="exclusive-locks"></a>排他锁  
- 最简单的锁定形式是 C# 中的 `lock` 语句和 Visual Basic 中的 `SyncLock` 语句），它控制对代码块的访问。 此类块经常被称为关键部分。 `lock`语句实现通过使用<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>和<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>方法，并使用`try…catch…finally`块以确保该锁被释放。  
+ 最简单的锁定形式是 C# 中的 `lock` 语句和 Visual Basic 中的 `SyncLock` 语句），它控制对代码块的访问。 此类块经常被称为关键部分。 `lock` 语句是使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 方法进行实现，并使用 `try…catch…finally` 块来确保锁已解除。  
   
- 一般情况下，使用`lock`或`SyncLock`语句来保护小块的代码，永远不会跨越多个一个简单方法是使用的最佳办法<xref:System.Threading.Monitor>类。 <xref:System.Threading.Monitor> 类虽然功能强大，但容易形成孤立锁和死锁情况。  
+ 一般来说，使用 <xref:System.Threading.Monitor> 类的最佳方式是，使用 `lock` 或 `SyncLock` 语句来保护小代码块，但绝不横跨多个方法。 <xref:System.Threading.Monitor> 类虽然功能强大，但容易形成孤立锁和死锁情况。  
   
 #### <a name="monitor-class"></a>Monitor 类  
  <xref:System.Threading.Monitor> 类提供了附加功能，可以与 `lock` 语句配合使用：  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  有关概念性概述，请参阅 [Mutex](../../../docs/standard/threading/mutexes.md)。  
   
 #### <a name="spinlock-class"></a>SpinLock 类  
- 从开始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，你可以使用<xref:System.Threading.SpinLock>类在由所需的开销<xref:System.Threading.Monitor>会降低性能。 当 <xref:System.Threading.SpinLock> 遇到锁定关键部分时，它只在循环中旋转，直到锁变为可用。 如果锁被保留的时间很短，旋转可以比阻止提供更好的性能。 但是，如果锁被保留超过数十个周期数，<xref:System.Threading.SpinLock>同样执行作为<xref:System.Threading.Monitor>，但将使用更多 CPU 周期，因此会降低其他线程或进程的性能。  
+ 自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，如果 <xref:System.Threading.Monitor> 要求的开销降低了性能，可以使用 <xref:System.Threading.SpinLock> 类。 当 <xref:System.Threading.SpinLock> 遇到锁定关键部分时，它只在循环中旋转，直到锁变为可用。 如果锁被保留的时间很短，旋转可以比阻止提供更好的性能。 不过，如果锁保留了超过数十个周期，虽然 <xref:System.Threading.SpinLock> 与 <xref:System.Threading.Monitor> 的性能相同，但前者使用的 CPU 周期更多，因此会降低其他线程或进程的性能。  
   
 ### <a name="other-locks"></a>其他锁  
  锁不必为排他锁。 在允许有限数量的线程并发访问资源时，这通常很有用。 信号量和读取器/编写器锁旨在控制此类连入池的资源访问。  
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="spinwait"></a>   
 ## <a name="spinwait"></a>SpinWait  
- 从开始[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你可以使用<xref:System.Threading.SpinWait?displayProperty=nameWithType>结构当线程必须等待事件接收信号或必须满足条件，但如果实际等待时间预计小于使用等待句柄或 otherwi 所需的等待时间时se 妨碍当前线程。 通过使用 <xref:System.Threading.SpinWait>，你可以指定等待期间要旋转的一小段时间，且只在特定时间不满足条件时让行（例如，通过等待或休眠）。  
+ 自 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]起，如果线程必须等待事件收到信号或必须满足某种条件，但实际等待时间应短于使用等待句柄或以其他方式阻止当前线程所需的等待时间，可以使用 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 结构。 通过使用 <xref:System.Threading.SpinWait>，你可以指定等待期间要旋转的一小段时间，且只在特定时间不满足条件时让行（例如，通过等待或休眠）。  
   
  [返回页首](#top)  
   
@@ -172,7 +175,7 @@ ms.lasthandoff: 11/21/2017
   
  有关概念性概述，请参阅[互锁操作](../../../docs/standard/threading/interlocked-operations.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  [监视器](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [Mutex](../../../docs/standard/threading/mutexes.md)  

@@ -16,15 +16,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9b33d196a7af9bc5a1f81c1624bbd98fea074319
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7a7c577c617ca8f40d64548f9f0f2d103c5887e1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正则表达式中的其他构造
 .NET 中的正则表达式包括三个其他语言构造。 其中一个使你可以在正则表达式模式中间启用或禁用特定匹配选项。 其余两个使你可以在正则表达式中包含注释。  
@@ -46,33 +49,33 @@ ms.lasthandoff: 10/18/2017
 |`s`|单行模式。|  
 |`x`|忽略未转义空格，并允许 x 模式注释。|  
   
- 中定义的正则表达式选项的任何更改`(?imnsx-imnsx)`封闭组结束之前一直有效构造保持。  
+ 如果 `(?imnsx-imnsx)` 构造定义的正则表达式选项有任何更改，更改在封闭组结束前一直有效。  
   
 > [!NOTE]
->  `(?imnsx-imnsx:`*子表达式*`)`分组构造提供相同功能的子表达式。 有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+>  `(?imnsx-imnsx:`subexpression`)` 分组构造为子表达式提供了完全相同的功能。 有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
- 下面的示例使用`i`， `n`，和`x`选项以启用不区分大小写和显式捕获，并忽略中间正则表达式的正则表达式模式中的空白区域。  
+ 下面的示例使用 `i`、`n` 和 `x` 选项，启用不区分大小写和显式捕获，并在正则表达式中间忽略正则表达式模式中的空格。  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous1.cs#1)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous1.vb#1)]  
   
  该示例定义两个正则表达式。 第一个 `\b(D\w+)\s(d\w+)\b` 匹配以一个大写“D”和一个小写“d”开头的两个连续单词。 第二个正则表达式 `\b(D\w+)(?ixn) \s (d\w+) \b` 使用内联选项修改此模式，如下表所述。 结果的比较会确认 `(?ixn)` 构造的效果。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(D\w+)`|匹配后跟一个或多个单词字符的大写“D”。 这是第一个捕获组。|  
 |`(?ixn)`|从此处起，使比较不区分大小写，仅进行显式捕获，以及忽略正则表达式模式中的空格。|  
 |`\s`|与空白字符匹配。|  
-|`(d\w+)`|匹配后跟一个或多个单词字符的大写或小写“d”。 未捕获此组，因为`n`（显式捕获） 选项已启用...|  
+|`(d\w+)`|匹配后跟一个或多个单词字符的大写或小写“d”。 因为 `n`（显式捕获）选项已启用，所以不会捕获此组。|  
 |`\b`|与字边界匹配。|  
   
 ## <a name="inline-comment"></a>内联注释  
- `(?#` *注释*`)`构造允许您在正则表达式中包括的内联注释。 正则表达式引擎不使用在模式匹配的注释的任何部分，虽然所返回的字符串中包含注释<xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>方法。 该注释在第一个右括号处终止。  
+ `(?#` comment`)` 构造可用于在正则表达式中添加内联注释。 正则表达式引擎在模式匹配中不使用注释的任何部分，尽管注释仍包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法返回的字符串中。 该注释在第一个右括号处终止。  
   
  下面的示例重复了上一部分的示例中的第一个正则表达式模式。 它将两个内联注释添加到该正则表达式，以指示比较是否区分大小写。 正则表达式模式 `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b` 按以下方式定义。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(?# case-sensitive comparison)`|注释。 它不影响模式匹配行为。|  
@@ -87,7 +90,7 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>行尾注释  
- 数字符号 (`#`) 将标记为 x 模式注释，也不能在非转义的 # 字符在正则表达式模式的末尾处开始将继续，直到行的末尾。 若要使用此构造，你必须启用`x`选项 （通过内联选项） 或提供<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>值赋给`option`参数实例化时<xref:System.Text.RegularExpressions.Regex>对象或调用静态<xref:System.Text.RegularExpressions.Regex>方法。  
+ 数字符号 (`#`) 标记 x 模式注释，即从正则表达式模式末尾的未转义 # 字符开始一直延续到行末。 若要使用此构造，必须启用 `x` 选项（通过内联选项），或在实例化 <xref:System.Text.RegularExpressions.Regex> 对象或调用静态 <xref:System.Text.RegularExpressions.Regex> 方法时向 `option` 参数提供 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 值。  
   
  下面的示例说明行尾注释构造。 它确定字符串是否为包含至少一个格式项的复合格式字符串。 下表描述了正则表达式模式中的构造：  
   
@@ -107,7 +110,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous3.cs#3)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous3.vb#3)]  
   
- 请注意，而不是提供`(?x)`构造在正则表达式中，注释还具有已识别通过调用<xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>方法并将其传递<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>枚举值。  
+ 请注意，还可以调用 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法并向它传递 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 枚举值，从而识别注释，而不用在正则表达式中提供 `(?x)` 构造。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

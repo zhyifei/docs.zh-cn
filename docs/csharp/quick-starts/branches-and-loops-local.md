@@ -1,6 +1,6 @@
 ---
-title: "快速入门 - 分支和循环 - C# 指南"
-description: "在这个有关分支和循环的快速入门中，编写了 C# 代码以研究语言语法，该语法支持条件分支和循环来重复执行语句。"
+title: "“分支和循环”教程 - C# 本地快速入门"
+description: "在“分支和循环”本快速入门教程中，编写 C# 代码，以研究支持条件分支和循环重复执行语句的语言语法。"
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,21 +9,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>分支和循环
 
-本快速入门教程介绍了如何编写代码，从而检查变量，并根据这些变量更改执行路径。 读者可以编写 C# 代码并查看代码编译和运行结果。 本快速入门教程包含一系列课程，探索了 C# 中的分支和循环构造。 这些课程介绍了 C# 语言的基础知识。
+本快速入门教程介绍了如何编写代码来检查变量，并根据这些变量更改执行路径。 读者可以编写 C# 代码并查看代码编译和运行结果。 本快速入门教程包含一系列课程，介绍了 C# 中的分支和循环构造。 这些课程介绍了 C# 语言的基础知识。
 
-本快速入门教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门简介](local-environment.md)简要概述了你将用到的命令，还提供了详细信息链接。
+若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="make-decisions-using-the-if-statement"></a>使用 `if` 语句做出决定
 
-创建名为 branches-quickstart 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n BranchesAndLoops -o .`。 此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。 
+创建名为 branches-quickstart 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n BranchesAndLoops -o .`。 此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。
 
 在常用编辑器中，打开 Program.cs，并将行 `Console.Writeline("Hello World!");` 替换为以下代码：
 
@@ -45,12 +45,11 @@ int b = 3;
 再次键入 `dotnet run`。 由于答案小于 10，因此什么也没有打印出来。 要测试的条件为 false。 没有任何可供执行的代码，因为仅为 `if` 语句编写了一个可能分支，即 true 分支。
 
 > [!TIP]
-> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 仔细查看错误输出和生成错误的代码。 Compler 错误通常可帮助你找出问题。 
+> 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 仔细查看错误输出和生成错误的代码。 Compler 错误通常可帮助你找出问题。
 
-第一个示例展示了 `if` 和布尔类型的用途。 布尔变量可以包含下列两个值之一：`true` 或 `false`。 C# 为布尔变量定义了特殊类型 `bool`。 `if` 语句检查 `bool` 的值。 如果值为 `true`，执行 `if` 后面的语句。 否则，跳过上述语句。 
+第一个示例展示了 `if` 和布尔类型的用途。 布尔变量可以包含下列两个值之一：`true` 或 `false`。 C# 为布尔变量定义了特殊类型 `bool`。 `if` 语句检查 `bool` 的值。 如果值为 `true`，执行 `if` 后面的语句。 否则，跳过上述语句。
 
 这种检查条件并根据条件执行语句的过程非常强大。
-
 
 ## <a name="make-if-and-else-work-together"></a>让 if 和 else 完美配合
 
@@ -69,7 +68,7 @@ else
 
 > [!IMPORTANT]
 > `if` 和 `else` 语句下的缩进是为了方便读者阅读。
-> C# 语言忽略缩进或空格。 `if` 或 `else` 关键字后面的语句根据条件决定是否执行。 本快速入门教程中的所有示例都遵循一种常见做法，基于语句的控制流缩进代码行。
+> C# 语言忽略缩进或空格。 `if` 或 `else` 关键字后面的语句根据条件决定是否执行。 本快速入门教程中的所有示例都遵循了常见做法，根据语句的控制流缩进代码行。
 
 由于缩进会被忽略，因此需要使用 `{` 和 `}`，指明要在根据条件决定是否执行的代码块中添加多个语句。 C# 程序员通常会对所有 `if` 和 `else` 子句使用这些大括号。 以下示例与刚刚创建的示例相同。 修改上面的代码以匹配下面的代码：
 
@@ -87,7 +86,7 @@ else
 ```
 
 > [!TIP]
-> 在本快速入门教程的其余部分中，代码示例全都遵循公认做法，添加了大括号。
+> 本快速入门教程其余部分的所有代码示例都遵循了公认做法，添加了大括号。
 
 可以测试更复杂的条件。 在 `Main` 方法中，在当前已编写的代码之后添加以下代码：
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-此循环的工作原理与已用过的 `while` 循环和 `do` 循环相同。 `for` 语句包含三个控制具体工作方式的部分。 
+此循环的工作原理与已用过的 `while` 循环和 `do` 循环相同。 `for` 语句包含三个控制具体工作方式的部分。
 
 第一部分是 for 初始值设定项：`for index = 0;` 声明 `index` 是循环变量，并将它的初始值设置为 `0`。
 
@@ -254,11 +253,11 @@ for(int index = 0; index < 10; index++)
 
 已完成“分支和循环”快速入门教程。
 
-可以继续在你自己的开发环境中学习[内插字符串](interpolated-strings-local.md)快速入门教程。
+可以在自己的开发环境中继续学习[内插的字符串](interpolated-strings-local.md)快速入门教程。
 
 若要详细了解这些概念，请参阅下列主题：
 
-[If 和 else 语句](../language-reference/keywords/if-else.md)   
-[While 语句](../language-reference/keywords/while.md)   
-[Do 语句](../language-reference/keywords/do.md)   
-[For 语句](../language-reference/keywords/for.md)   
+[If 和 else 语句](../language-reference/keywords/if-else.md)  
+[While 语句](../language-reference/keywords/while.md)  
+[Do 语句](../language-reference/keywords/do.md)  
+[For 语句](../language-reference/keywords/for.md)  

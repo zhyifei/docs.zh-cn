@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec624a02f98fda4352b5ba8ff43681fba040c676
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 195c0f8184bbbd84826def87ce74daa49965cb93
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="create-new-nodes-in-the-dom"></a>在 DOM 中创建新节点
 <xref:System.Xml.XmlDocument> 为所有节点类型提供了 create 方法。 为该方法提供名称（需要时）以及那些具有内容的节点（如文本节点）的内容或其他参数，这样便可创建节点。 下面的方法需要填充名称和几个其他参数以创建相应的节点。  
@@ -46,17 +49,17 @@ ms.lasthandoff: 10/18/2017
   
  其他节点类型不仅仅只要求向参数提供数据。  
   
- 有关属性的信息，请参阅[DOM 中的元素创建新属性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。 元素和属性名验证的信息，请参阅[XML 元素和属性名验证时创建新节点](../../../../docs/standard/data/xml/xml-element-and-attribute-name-verification-when-creating-new-nodes.md)。 有关如何创建实体引用，请参阅[创建新实体引用](../../../../docs/standard/data/xml/creating-new-entity-references.md)。 命名空间如何影响实体引用的扩展的信息，请参阅[对实体引用扩展的新节点包含元素和属性的 Namespace 影响](../../../../docs/standard/data/xml/namespace-affect-on-entity-ref-expansion-for-new-nodes.md)。  
+ 若要了解属性，请参阅[新建 DOM 中元素的属性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。 若要了解元素和属性名验证，请参阅[新建节点时的 XML 元素和属性名验证](../../../../docs/standard/data/xml/xml-element-and-attribute-name-verification-when-creating-new-nodes.md)。 若要了解如何创建实体引用，请参阅[新建实体引用](../../../../docs/standard/data/xml/creating-new-entity-references.md)。 若要了解命名空间对实体引用扩展产生的影响，请参阅[命名空间影响包含元素和属性的新节点的实体引用扩展](../../../../docs/standard/data/xml/namespace-affect-on-entity-ref-expansion-for-new-nodes.md)。  
   
  创建新节点后，有几个方法可用于将其插入到树中。 下表列出了这些方法，并描述了新节点在 XML 文档对象模型 (DOM) 中的位置。  
   
 |方法|节点位置|  
 |------------|--------------------|  
 |<xref:System.Xml.XmlNode.InsertBefore%2A>|插入到引用节点之前。 例如，在位置 5 插入新节点：<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> 有关更多信息，请参见 <xref:System.Xml.XmlNode.InsertBefore%2A> 方法。|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|插入到引用节点之后。 例如：<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 有关更多信息，请参见 <xref:System.Xml.XmlNode.InsertAfter%2A> 方法。|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|插入到引用节点之后。 例如:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 有关更多信息，请参见 <xref:System.Xml.XmlNode.InsertAfter%2A> 方法。|  
 |<xref:System.Xml.XmlNode.AppendChild%2A>|将节点添加到给定节点的子节点列表的末尾。 如果所添加的节点是 <xref:System.Xml.XmlDocumentFragment>，则会将文档片段的全部内容移至该节点的子列表中。 有关更多信息，请参见 <xref:System.Xml.XmlNode.AppendChild%2A> 方法。|  
 |<xref:System.Xml.XmlNode.PrependChild%2A>|将节点添加到给定节点的子节点列表的开头。 如果所添加的节点是 <xref:System.Xml.XmlDocumentFragment>，则会将文档片段的全部内容移至该节点的子列表中。 有关更多信息，请参见 <xref:System.Xml.XmlNode.PrependChild%2A> 方法。|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|将 <xref:System.Xml.XmlAttribute> 节点追加到与元素关联的属性集合的末尾。 有关更多信息，请参见 <xref:System.Xml.XmlAttributeCollection.Append%2A> 方法。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

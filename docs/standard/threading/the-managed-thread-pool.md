@@ -18,15 +18,18 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-managed-thread-pool"></a>托管线程池
 <xref:System.Threading.ThreadPool> 类为你的应用程序提供一个受系统管理的辅助线程池，从而使你能够专注于应用程序任务，而非线程管理。 如果有需要后台处理的短任务，托管的线程池则为利用多个线程的简便方法。 例如，从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可以创建 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象，它们在线程池线程上执行异步任务。  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 -   公共语言运行时或主机进程将终止该线程。  
   
- 有关详细信息，请参阅[托管线程中的异常](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
+ 有关详细信息，请参阅[托管线程异常](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
   
 > [!NOTE]
 >  在 .NET framework 1.0 和 1.1 版中，公共语言运行时以无提示方式捕获线程池线程中未经处理的异常。 这可能会损坏应用程序状态并最终导致应用程序挂起，可能很难对此进行调试。  
@@ -90,17 +93,17 @@ ms.lasthandoff: 11/21/2017
 >  可以使用 <xref:System.Threading.ThreadPool.SetMinThreads%2A> 方法来增加最小空闲线程数。 但是，不必要地增加这些值可能导致性能问题。 如果在同一时间开始太多的任务，则所有任务均可能会很慢。 大多数情况下，使用自己的分配线程算法，线程池将更好地执行任务。  
   
 ## <a name="skipping-security-checks"></a>跳过安全检查  
- 线程池还提供 <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> 和 <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法。 仅当确定调用方的堆栈与执行排队的任务期间进行的任何安全检查无关时，方可使用这些方法。 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>和<xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>都捕获调用方的堆栈，当线程开始执行任务时被合并到线程池线程的堆栈。 如果安全检查是必需的，则必须检查整个堆栈。 尽管此检查提供了安全性，但它也具有性能成本。  
+ 线程池还提供 <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> 和 <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法。 仅当确定调用方的堆栈与执行排队的任务期间进行的任何安全检查无关时，方可使用这些方法。 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 和 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 均捕获调用方堆栈，当线程开始执行任务时，调用方的堆栈被合并到线程池线程的堆栈中。 如果安全检查是必需的，则必须检查整个堆栈。 尽管此检查提供了安全性，但它也具有性能成本。  
   
 ## <a name="using-the-thread-pool"></a>使用线程池  
- 开头[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，使用线程池的最简单方法是使用[任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)。 默认情况下，并行库类型（例如 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601>）使用线程池线程来运行任务。 也可以通过从托管代码调用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>（或从非托管代码调用 `CorQueueUserWorkItem`）并传递表示执行任务的方法的 <xref:System.Threading.WaitCallback> 委托来使用线程池。 使用线程池的另一种方法是通过使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法并传递在发出信号或超时的时候调用 <xref:System.Threading.WaitOrTimerCallback> 委托所表示的方法的 <xref:System.Threading.WaitHandle>，从而对与等待操作相关的工作项排队。 线程池线程用于调用回调方法。  
+ 自 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 起，使用线程池的最简单方法是使用[任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)。 默认情况下，并行库类型（例如 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601>）使用线程池线程来运行任务。 也可以通过从托管代码调用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>（或从非托管代码调用 `CorQueueUserWorkItem`）并传递表示执行任务的方法的 <xref:System.Threading.WaitCallback> 委托来使用线程池。 使用线程池的另一种方法是通过使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法并传递在发出信号或超时的时候调用 <xref:System.Threading.WaitOrTimerCallback> 委托所表示的方法的 <xref:System.Threading.WaitHandle>，从而对与等待操作相关的工作项排队。 线程池线程用于调用回调方法。  
   
 ## <a name="threadpool-examples"></a>线程池示例  
  本节中的代码示例通过使用 <xref:System.Threading.Tasks.Task> 类、<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法来演示线程池。  
   
 -   [使用任务并行库执行异步任务](#TaskParallelLibrary)  
   
--   [使用 queueuserworkitem 以异步方式执行代码](#ExecuteCodeWithQUWI)  
+-   [使用 QueueUserWorkItem 异步执行代码](#ExecuteCodeWithQUWI)  
   
 -   [为 QueueUserWorkItem 提供任务数据](#TaskDataForQUWI)  
   
@@ -108,7 +111,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="TaskParallelLibrary"></a>   
 ### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a>使用任务并行库执行异步任务  
- 下面的示例演示如何通过调用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法来创建并使用 <xref:System.Threading.Tasks.Task> 对象。 有关示例，使用<xref:System.Threading.Tasks.Task%601>类从异步任务返回一个值，请参阅[如何： 从任务中返回一个值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。  
+ 下面的示例演示如何通过调用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法来创建并使用 <xref:System.Threading.Tasks.Task> 对象。 有关使用 <xref:System.Threading.Tasks.Task%601> 类返回异步任务值的示例，请参阅[如何：返回任务值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
@@ -135,7 +138,7 @@ ms.lasthandoff: 11/21/2017
   
 -   使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 方法，将任务排入队列，以便由 <xref:System.Threading.ThreadPool> 线程执行。  
   
--   使用 <xref:System.Threading.AutoResetEvent> 发出要执行的任务的信号。 请参阅[EventWaitHandle、 AutoResetEvent、 CountdownEvent、 ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)。  
+-   使用 <xref:System.Threading.AutoResetEvent> 发出要执行的任务的信号。 请参阅 [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)。  
   
 -   使用 <xref:System.Threading.WaitOrTimerCallback> 委托处理超时和信号。  
   
@@ -145,7 +148,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.ThreadPool#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.threadpool/cs/source3.cs#3)]
  [!code-vb[Conceptual.ThreadPool#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.threadpool/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.ThreadPool>  
  <xref:System.Threading.Tasks.Task>  
  <xref:System.Threading.Tasks.Task%601>  

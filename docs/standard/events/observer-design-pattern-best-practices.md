@@ -12,23 +12,26 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0edba44efcaa46812f535b39364c2f5e4e3a1afe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dc42ccd425b52719b2b69525d2bbbe4607a19982
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="observer-design-pattern-best-practices"></a>观察程序设计模式最佳做法
 在 .NET Framework 中，将观察者设计模式作为一组接口实现。 <xref:System.IObservable%601?displayProperty=nameWithType> 接口表示数据提供程序，也负责提供允许观察者取消订阅通知的 <xref:System.IDisposable> 实现。 <xref:System.IObserver%601?displayProperty=nameWithType> 接口表示观察者。 本主题描述使用这些接口实现观察者设计模式时开发人员应遵循的最佳做法。  
   
 ## <a name="threading"></a>线程处理  
- 提供程序通常通过向由一些集合对象表示的订阅者列表添加特定观察者来实现 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法，并通过从订阅者列表中删除特定观察者来实现 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法。 观察者可在任何时候调用这些方法。 此外，由于提供程序/观察者协定未指定由谁负责在 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 回调方法后取消订阅，因此提供程序和观察者都可能尝试从列表中删除相同成员。 由于这种可能性，<xref:System.IObservable%601.Subscribe%2A> 和 <xref:System.IDisposable.Dispose%2A> 方法都应该是线程安全的。 通常，这需要使用[并发集合](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)或锁定。 非线程安全的实现应显式注明它们非线程安全。  
+ 提供程序通常通过向由一些集合对象表示的订阅者列表添加特定观察者来实现 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法，并通过从订阅者列表中删除特定观察者来实现 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法。 观察者可在任何时候调用这些方法。 此外，由于提供程序/观察者协定未指定由谁负责在 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 回调方法后取消订阅，因此提供程序和观察者都可能尝试从列表中删除相同成员。 由于这种可能性，<xref:System.IObservable%601.Subscribe%2A> 和 <xref:System.IDisposable.Dispose%2A> 方法都应该是线程安全的。 这通常需要使用[并发回收](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)或锁。 非线程安全的实现应显式注明它们非线程安全。  
   
- 任何其他保证均须在提供程序/观察者协定之上指定。 实施者应清楚地调出何时施加其他要求，从而避免用户对观察者协定产生混淆。  
+ 任何其他保证均须在提供程序/观察者协定之上指定。 实施者应清楚地调出何时施加其他需求，从而避免用户对观察者协定产生混淆。  
   
 ## <a name="handling-exceptions"></a>处理异常  
  由于数据提供程序和观察者之间的松耦合，观察者设计模式中的异常旨在提供信息。 这会影响提供程序和观察者处理观察者设计模式中的异常的方式。  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  在处理异常和调用 <xref:System.IObserver%601.OnError%2A> 方法时，提供程序应遵循以下最佳做法并：  
   
--   如果提供程序有任何具体要求，则它必须处理自己的异常。  
+-   如果提供程序有任何具体需求，则它必须处理自己的异常。  
   
 -   提供程序不应期望或要求观察者以任何特定方式处理异常。  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  虽然可将观察者附加到多个提供程序到，建议的模式是将 <xref:System.IObserver%601> 实例附加到唯一的 <xref:System.IObservable%601> 实例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)  
  [如何：实现监视程序](../../../docs/standard/events/how-to-implement-an-observer.md)  
  [如何：实现提供程序](../../../docs/standard/events/how-to-implement-a-provider.md)

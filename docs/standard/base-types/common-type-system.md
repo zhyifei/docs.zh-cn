@@ -21,15 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
  下表介绍了类可以具有的一些特征。 支持运行时的每种语言都提供了一种方法，来指示类或类成员具有其中的一种或多种特征。 但是，针对 .NET 的各个编程语言不能使所有这些特征都可用。  
   
-|特征|说明|  
+|特征|描述|  
 |--------------------|-----------------|  
 |sealed|指定不能从此类型派生出另一个类。|  
 |实现|指出该类通过提供接口成员的实现，使用一个或多个接口。|  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>结构  
- 结构是隐式从 <xref:System.ValueType?displayProperty=nameWithType> 派生的值类型，后者则是从 <xref:System.Object?displayProperty=nameWithType> 派生的。 对于表示内存要求很小的值以及将值作为按值参数传递给具有强类型参数的方法，结构很有用。 在.NET 中，所有基元数据类型 (<xref:System.Boolean>， <xref:System.Byte>， <xref:System.Char>， <xref:System.DateTime>， <xref:System.Decimal>， <xref:System.Double>， <xref:System.Int16>， <xref:System.Int32>， <xref:System.Int64>， <xref:System.SByte>， <xref:System.Single>， <xref:System.UInt16>， <xref:System.UInt32>，和<xref:System.UInt64>) 定义为结构。  
+ 结构是隐式从 <xref:System.ValueType?displayProperty=nameWithType> 派生的值类型，后者则是从 <xref:System.Object?displayProperty=nameWithType> 派生的。 对于表示内存要求很小的值以及将值作为按值参数传递给具有强类型参数的方法，结构很有用。 在 .NET 中，所有基元数据类型（<xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32> 和 <xref:System.UInt64>）都定义为结构。  
   
  像类一样，结构同时定义数据（结构的字段）和可以对该数据执行的操作（结构的方法）。 这意味着可以对结构调用方法，包括在 <xref:System.Object?displayProperty=nameWithType> 和 <xref:System.ValueType?displayProperty=nameWithType> 类上定义的虚方法以及在值类型自身上定义的任意方法。 换句话说，结构可以具有字段、属性和事件以及静态和非静态方法。 您可以创建结构的实例，将它们作为参数传递，将它们存储为局部变量，或将它们存储在另一值类型或引用类型的字段中。 结构也可以实现接口。  
   
@@ -159,14 +162,14 @@ ms.lasthandoff: 11/21/2017
   
  所有委托从 <xref:System.MulticastDelegate?displayProperty=nameWithType>（继承自 <xref:System.Delegate?displayProperty=nameWithType>）继承。 C#、Visual Basic 和 C++ 语言不允许从这些类型继承， 而是提供了用于声明委托的关键字。  
   
- 由于委托从 <xref:System.MulticastDelegate> 继承，因此委托具有一个调用列表，其中列出了委托表示的方法，在调用委托时将执行该列表中的方法。 列表中的所有方法接收调用委托时提供的参数。  
+ 由于委托从 <xref:System.MulticastDelegate> 继承，因此委托具有一个调用列表，其中列出了委托表示的方法，在调用委托时将执行该列表中的方法。 列表中的所有方法接收调用委托时提供的自变量。  
   
 > [!NOTE]
 >  没有为在调用列表中包含多个方法的委托（即使委托具有返回类型）定义返回值。  
   
  在许多情况下（例如使用回调方法），一个委托只表示一个方法，而您需要做的就是创建委托并调用它。  
   
- 对于表示多个方法的委托，.NET 提供的方法<xref:System.Delegate>和<xref:System.MulticastDelegate>委托类以支持如下操作： 将方法添加到委托的调用列表 (<xref:System.Delegate.Combine%2A?displayProperty=nameWithType>方法)，移除方法 ( <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>方法)，并获取调用列表 (<xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>方法)。  
+ 对于表示多个方法的委托，.NET 提供了 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 委托类的方法，以支持如下操作：将方法添加到委托的调用列表（<xref:System.Delegate.Combine%2A?displayProperty=nameWithType> 方法）、移除方法（<xref:System.Delegate.Remove%2A?displayProperty=nameWithType> 方法）、获取调用列表（<xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> 方法）。  
   
 > [!NOTE]
 >  不需要将这些方法用于 C#、C++ 和 Visual Basic 中的事件处理程序委托，因为这些语言为添加和移除事件处理程序提供了语法。  
@@ -197,7 +200,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="type-accessibility"></a>类型可访问性  
  所有类型都有一个修饰符，控制从其他类型对它们的可访问性。 下表说明了运行时所支持的类型可访问性。  
   
-|可访问性|说明|  
+|可访问性|描述|  
 |-------------------|-----------------|  
 |public|所有程序集都可以访问此类型。|  
 |程序集|只能在其程序集内访问此类型。|  
@@ -302,7 +305,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="characteristics-of-type-members"></a>类型成员的特征  
  通用类型系统允许类型成员具有多种特征，但并不要求语言能支持所有这些特征。 下表介绍了这些成员特征。  
   
-|特征|可应用到|说明|  
+|特征|可应用到|描述|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、属性和事件|类型不提供方法的实现。 继承或实现抽象方法的类型必须提供方法的实现。 只有当派生的类型本身是抽象类型的时候，情况例外。 所有的抽象方法都是虚的。|  
 |private、family、assembly、family 和 assembly、family 或 assembly，或者 public|全部|定义成员的可访问性：<br /><br /> private<br /> 只能在与成员相同的类型或在嵌套类型中访问。<br /><br /> family<br /> 在与成员相同的类型中和从它继承的派生类型访问。<br /><br /> 程序集<br /> 只能在定义该类型的程序集中访问。<br /><br /> family 和 assembly<br /> 只能从同时具备族和程序集访问权的类型进行访问。<br /><br /> family 或 assembly<br /> 只能从具备族和程序集访问权的类型进行访问。<br /><br /> public<br /> 可从任何类型访问。|  
@@ -327,7 +330,7 @@ ms.lasthandoff: 11/21/2017
   
 -   派生类型可以重写继承的虚方法。 重写方法提供了对方法的一种新定义，将根据运行时的值的类型，而不是编译时已知的变量类型来调用方法。 只有在虚拟方法未标记为 `final` 且新方法至少可以像虚拟方法一样进行访问的情况下，方法才能重写虚拟方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET 类库](http://go.microsoft.com/fwlink/?LinkID=217856)  
  [公共语言运行时](../../../docs/standard/clr.md)  
  [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

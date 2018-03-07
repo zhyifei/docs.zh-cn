@@ -19,22 +19,25 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a92c454548c69d1a64c954ab2d510b77553a895
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="substitutions-in-regular-expressions"></a>正则表达式中的替代
 <a name="Top"></a> 替换是只能在替换模式中识别的语言元素。 它们使用正则表达式模式定义全部或部分用于替换输入字符串中的匹配文本的文本。 替换模式可以包含一个或多个替换以及本文字符。 提供替换模式以将拥有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 参数的 `replacement` 方法重载至 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 该方法将匹配的模式替换为 `replacement` 参数定义的模式。  
   
  .NET Framework 定义下表列出的替换元素。  
   
-|替换|说明|  
+|替换|描述|  
 |------------------|-----------------|  
 |`$` *数值*|包括替换字符串中的由 *number*标识的捕获组所匹配的最后一个子字符串，其中 *number* 是一个十进制值。 有关详细信息，请参阅 [替换已编号的组](#Numbered)。|  
 |`${` *name* `}`|包括替换字符串中由 `(?<`*name*`> )` 指定的命名组所匹配的最后一个子字符串。 有关详细信息，请参阅 [替换命名组](#Named)。|  
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/18/2017
   
  正则表达式模式 `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\p{Sc}*`|与零个或多个货币符号字符匹配。|  
 |`\s?`|匹配零个或一个空白字符。|  
@@ -96,7 +99,7 @@ ms.lasthandoff: 10/18/2017
   
  正则表达式模式 `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\p{Sc}*`|与零个或多个货币符号字符匹配。|  
 |`\s?`|匹配零个或一个空白字符。|  
@@ -118,7 +121,7 @@ ms.lasthandoff: 10/18/2017
   
  正则表达式模式 `\b(\d+)(\.(\d+))?` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|从字边界开始进行匹配。|  
 |`(\d+)`|匹配一个或多个十进制数字。 这是第一个捕获组。|  
@@ -137,7 +140,7 @@ ms.lasthandoff: 10/18/2017
   
  正则表达式模式 `^(\w+\s?)+$` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头部分开始匹配。|  
 |`(\w+\s?)+`|匹配一个或多个单词字符后跟零个或一个空白字符的模式一次或多次。|  
@@ -149,7 +152,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>替换匹配项前的文本  
- <code>$\`</code> 替换将匹配的字符串替换为匹配项前面的整个输入字符串。 即，它将在删除匹配的文本时重复输入字符串，直至匹配。 匹配文本后面的任何文本在结果字符串中保持不变。 如果输入字符串中有多个匹配项，则替换文本将派生自原始输入字符串，而不是派生自文本已由早期匹配项替换的字符串。 \(示例进行了说明。\)如果没有匹配项，则 <code>$\`</code> 替换将不起作用。  
+ <code>$\`</code> 替换将匹配的字符串替换为匹配项前面的整个输入字符串。 即，它将在删除匹配的文本时重复输入字符串，直至匹配。 匹配文本后面的任何文本在结果字符串中保持不变。 如果输入字符串中有多个匹配项，则替换文本将派生自原始输入字符串，而不是派生自文本已由早期匹配项替换的字符串。 \(说明如示例所示。\)如果没有匹配项，则 <code>$\`</code> 替换将不起作用。  
   
  下面的示例使用正则表达式模式 `\d+` 来匹配输入字符串中一个或多个十进制数字的序列。 替换字符串 <code>$`</code> 将这些数字替换为该匹配项前的文本。  
   
@@ -164,7 +167,7 @@ ms.lasthandoff: 10/18/2017
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|  
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddeeaa1bb2cc3dd4ee|  
   
  [返回页首](#Top)  
   
@@ -226,5 +229,5 @@ ms.lasthandoff: 10/18/2017
 |1|3|123|ABC**ABC123DEF456**DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -21,25 +21,28 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c500b882c335572b8b458ba515b282e9f5362b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>执行不区分区域性的大小写更改
-<xref:System.String.ToUpper%2A?displayProperty=nameWithType>， <xref:System.String.ToLower%2A?displayProperty=nameWithType>， <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>，和<xref:System.Char.ToLower%2A?displayProperty=nameWithType>方法提供不接受任何参数的重载。 默认情况下，这些不带参数的重载执行基于值的大小写更改<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>。 这将生成可能会因区域性的区分大小写结果。 若要清除你是否想区分区域性的或不区分区域性的大小写更改，应使用要求你显式指定这些方法的重载`culture`参数。 对于区分区域性的大小写更改，指定`CultureInfo.CurrentCulture`为`culture`参数。 对于不区分区域性的大小写更改，指定`CultureInfo.InvariantCulture`为`culture`参数。  
+<xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 方法提供不接受任何参数的重载。 默认情况下，这些不带参数的重载根据 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 的值执行大小写更改。 这样生成的结果（区分大小写）可能会因区域性而异。 为了明确希望大小写更改是区域性敏感型，还是非区域性敏感型，应使用这些要求显式指定 `culture` 参数的方法重载。 对于区域性敏感型大小写更改，请为 `culture` 参数指定 `CultureInfo.CurrentCulture`。 对于非区域性敏感型大小写更改，请为 `culture` 参数指定 `CultureInfo.InvariantCulture`。  
   
- 通常情况下，字符串将转换为标准的情况下，以在稍后启用更轻松查找。 如果字符串将用这种方式中，你应指定`CultureInfo.InvariantCulture`为`culture`参数，因为值<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>更改这种情况的时间和查找发生的时间之间可能发生更改。  
+ 通常情况下，字符串会转换为标准大小写，以方便稍后查找。 如果按这种方式使用字符串，应为 `culture` 参数指定 `CultureInfo.InvariantCulture`，因为 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 的值可能会在大小写更改和执行查找时之间变化。  
   
- 如果安全决策基于大小写更改操作，则操作应该区分区域性，以确保结果不受的值`CultureInfo.CurrentCulture`。 请参阅的"字符串比较，使用当前区域性"部分[使用字符串的最佳实践](../../../docs/standard/base-types/best-practices-strings.md)文章的一个示例，演示如何区分区域性的字符串操作变得不一致的结果。  
+ 如果安全决策以大小写更改操作为依据，操作应为非区域性敏感型，以确保结果不受 `CultureInfo.CurrentCulture` 值的影响。 有关展示了区域性敏感型字符串操作如何产生不一致结果的示例，请参阅[字符串使用最佳做法](../../../docs/standard/base-types/best-practices-strings.md)的“使用当前区域性的字符串比较”部分。  
   
 ## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>使用 String.ToUpper 和 String.ToLower 方法  
- 有关代码的清楚起见，建议你始终使用重载`String.ToUpper`和`String.ToLower`允许你指定的方法`culture`参数显式。 例如，下面的代码执行了标识符查找。 `key.ToLower`操作是区分区域性的默认情况下，但此行为并不清楚从阅读代码。  
+ 为了代码清楚起见，建议始终使用 `String.ToUpper` 和 `String.ToLower` 方法重载，以便显式指定 `culture` 参数。 例如，下面的代码执行标识符查找。 默认情况下，`key.ToLower` 操作为区域性敏感型，但此行为并未通过读取代码明确。  
   
 ### <a name="example"></a>示例  
   
@@ -56,7 +59,7 @@ static object LookupKey(string key)
 }  
 ```  
   
- 如果你想`key.ToLower`操作是不区分区域性的应更改前面的示例中，如下所示，若要显式使用`CultureInfo.InvariantCulture`时更改大小写。  
+ 如果希望 `key.ToLower` 操作为非区域性敏感型，应按照以下所述更改上一示例，以便在更改大小写时显式使用 `CultureInfo.InvariantCulture`。  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
@@ -72,9 +75,9 @@ static object LookupKey(string key)
 ```  
   
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>使用 Char.ToUpper 和 Char.ToLower 方法  
- 尽管`Char.ToUpper`和`Char.ToLower`方法具有相同的特征作为`String.ToUpper`和`String.ToLower`方法，受影响的唯一区域性为土耳其语 （土耳其） 和阿塞拜疆语 （拉丁，阿塞拜疆）。 这些是使用单字符大小写差异的仅有两个区域性。 有关此唯一大小写映射的详细信息，请参阅 <xref:System.String> 类主题中的“大小写”部分。 有关代码的清楚起见并确保一致的结果，建议你始终使用允许你显式指定这些方法的重载`culture`参数。  
+ 尽管 `Char.ToUpper` 和 `Char.ToLower` 方法的特性与 `String.ToUpper` 和 `String.ToLower` 方法相同，但受影响的区域性只有土尔其语（土尔其）和阿塞拜疆语（拉丁，阿塞拜疆）。 这些是唯一两个存在单字符大小写差异的区域性。 有关此唯一大小写映射的详细信息，请参阅 <xref:System.String> 类主题中的“大小写”部分。 为了代码清楚起见，并确保结果一致，建议始终使用这些方法重载，以便显式指定 `culture` 参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
  <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
  <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  

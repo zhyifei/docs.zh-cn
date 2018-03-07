@@ -1,5 +1,5 @@
 ---
-title: "快速入门 - C# 中的数字 - C# 指南"
+title: "“C# 中的数字”教程 - C# 本地快速入门"
 description: "通过浏览数字类型、其属性和方法了解 C#。"
 author: billwagner
 ms.author: wiwagn
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="numbers-in-c-quick-start"></a>C# 快速入门中的数字 #
+# <a name="numbers-in-c-quickstart"></a>“C# 中的数字”快速入门
 
-本快速入门教程以交互方式讲述有关 C# 中的数字类型的知识。 你将编写少量的代码，然后编译并运行这些代码。 本快速入门教程包含一系列课程，探索了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。
+本快速入门教程以交互方式介绍了 C# 中的数字类型。 你将编写少量的代码，然后编译并运行这些代码。 本快速入门教程包含一系列课程，介绍了 C# 中的数字和数学操作。 这些课程介绍了 C# 语言的基础知识。
 
-本快速入门教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门简介](local-environment.md)简要概述了你将用到的命令，还提供了详细信息链接。
+若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="explore-integer-math"></a>探索整数数学运算
 
@@ -319,7 +319,7 @@ Console.WriteLine(c / d);
 
 如果需要，可以试用一些其他公式。 
 
-已完成“C# 中的数字”快速入门教程。 可以继续在你自己的开发环境中学习[分支和循环](branches-and-loops-local.md)快速入门教程。
+已完成“C# 中的数字”快速入门教程。 可以在自己的开发环境中继续学习[分支和循环](branches-and-loops-local.md)快速入门教程。
 
 可以参阅下面的主题，详细了解 C# 中的数字：
 

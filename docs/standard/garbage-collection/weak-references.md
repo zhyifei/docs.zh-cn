@@ -14,15 +14,18 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 906c23caa7065486bb094ad2475ed9e7e24b3d9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ca1331cc45f437882d38adba241e2767821de36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="weak-references"></a>弱引用
 如果应用程序的代码可以访问一个正由该程序使用的对象，垃圾回收器就不能回收该对象， 那么，就认为应用程序对该对象具有强引用。  
@@ -31,26 +34,26 @@ ms.lasthandoff: 10/18/2017
   
  占用大量内存，但通过垃圾回收功能回收以后很容易重新创建的对象特别适合使用弱引用。  
   
- 假设在 Windows 窗体应用程序中的树视图向用户显示复杂分层供选择的选项。 如果基础数据量很大，则用户使用应用程序中的其他部分时，在内存中保留该树会导致效率低下。  
+ 假设 Windows 窗体应用中的树状视图向用户显示层次结构复杂的选项。 如果基础数据量很大，则用户使用应用程序中的其他部分时，在内存中保留该树会导致效率低下。  
   
- 当用户离开切换到应用程序的另一部分时，你可以使用<xref:System.WeakReference>类来创建对树的弱引用和销毁所有强引用。 当用户切换回该树时，应用程序会尝试获得对该树的强引用，如果成功，就不必重新构造该树。  
+ 当用户切换到应用的其他部分时，可以使用 <xref:System.WeakReference> 类创建对树的弱引用，并销毁所有强引用。 当用户切换回该树时，应用程序会尝试获得对该树的强引用，如果成功，就不必重新构造该树。  
   
- 若要建立的对象的弱引用，你可以创建<xref:System.WeakReference>使用对象的实例进行跟踪。 然后将 <xref:System.WeakReference.Target%2A> 属性设置为该对象，将该对象的原始引用设置为 `null`。 有关代码示例，请参阅<xref:System.WeakReference>类库中。  
+ 若要对某对象建立弱引用，请使用要跟踪的对象实例创建 <xref:System.WeakReference>。 然后将 <xref:System.WeakReference.Target%2A> 属性设置为该对象，将该对象的原始引用设置为 `null`。 有关代码示例，请参阅类库中的 <xref:System.WeakReference>。  
   
 ## <a name="short-and-long-weak-references"></a>短弱引用和长弱引用  
  可以创建短弱引用或长弱引用：  
   
 -   Short  
   
-     垃圾回收功能回收对象后，短弱引用的目标会变为 `null`。 弱引用本身是托管对象，与其他任何托管对象一样需要经过垃圾回收。  短的弱引用是默认构造函数<xref:System.WeakReference>。  
+     垃圾回收功能回收对象后，短弱引用的目标会变为 `null`。 弱引用本身是托管对象，与其他任何托管对象一样需要经过垃圾回收。  短弱引用是 <xref:System.WeakReference> 的默认构造函数。  
   
 -   Long  
   
-     一个长弱引用保留在对象之后<xref:System.Object.Finalize%2A>调用方法。 这样，便可以重新创建该对象，但该对象仍保持不可预知的状态。 若要使用的长的引用，指定`true`中<xref:System.WeakReference>构造函数。  
+     在对象的 <xref:System.Object.Finalize%2A> 方法已调用后，长弱引用获得保留。 这样，便可以重新创建该对象，但该对象仍保持不可预知的状态。 若要使用长引用，请在 <xref:System.WeakReference> 构造函数中指定 `true`。  
   
-     如果该对象的类型不具有<xref:System.Object.Finalize%2A>方法，短弱引用功能适用和弱引用是有效的仅直到目标收集，该后可能会发生随时终结器运行。  
+     如果对象类型不包含 <xref:System.Object.Finalize%2A> 方法，应用的是短弱引用功能。弱引用只在目标被收集前有效，运行终结器后可以随时收集目标。  
   
- 若要创建的强引用，并再次使用该对象，强制转换<xref:System.WeakReference.Target%2A>属性<xref:System.WeakReference>到的对象类型。 如果<xref:System.WeakReference.Target%2A>属性返回`null`，该对象已收集; 否则为你可以继续使用该对象，因为应用程序已重新获得对它的强引用。  
+ 若要建立强引用并重新使用对象，请将 <xref:System.WeakReference> 的 <xref:System.WeakReference.Target%2A> 属性强制转换为对象类型。 如果 <xref:System.WeakReference.Target%2A> 属性返回 `null`，表示对象已被收集；否则，可继续使用对象，因为应用已重新获得对它的强引用。  
   
 ## <a name="guidelines-for-using-weak-references"></a>使用弱引用的准则  
  仅在必要时使用长弱引用，因为在终结后对象的状态不可预知。  
@@ -59,5 +62,5 @@ ms.lasthandoff: 10/18/2017
   
  避免将弱引用作为内存管理问题的自动解决方案， 而应开发一个有效的缓存策略来处理应用程序的对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [垃圾回收](../../../docs/standard/garbage-collection/index.md)

@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5a0806e34cfbf7c8e0b5ba995ca4876b8d10405e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ea67841e44d8d88d2effec92eb1668142c1510f2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-document-creation"></a>创建 XML 文档
-有两种创建 XML 文档的方法。 一种方法是创建**XmlDocument**不带任何参数。 另一种方法是创建**XmlDocument**并将其作为参数传递 XmlNameTable。 下面的示例演示如何创建新的空**XmlDocument**不使用任何参数。  
+有两种创建 XML 文档的方法。 一种方法是，创建不含参数的 XmlDocument。 另一种方法是，创建 XmlDocument，并向它传递 XmlNameTable 参数。 下面的示例展示了如何不使用任何参数新建空 XmlDocument。  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -33,9 +36,9 @@ Dim doc As New XmlDocument()
 XmlDocument doc = new XmlDocument();  
 ```  
   
- 创建文档后，你可以加载数据从字符串、 流、 URL、 文本读取器，或**XmlReader**派生类使用**加载**方法。 还有另一种负载方法， **LoadXML**方法，从字符串读取 XML。 有关详细信息的各种**负载**方法，请参阅[XML 文档读入 DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md)。  
+ 创建文档后，可以使用 Load 方法在文档中加载字符串、流、URL、文本读取器或 XmlReader 派生类中的数据。 还有另一种加载方法 LoadXML 方法，可用于从字符串中读取 XML。 若要详细了解各种 Load 方法，请参阅[将 XML 文档读取到 DOM 中](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md)。  
   
- 没有名为的类**XmlNameTable**。 此类是原子化字符串对象的表。 该表使 XML 分析器可以高效地对 XML 文档中所有重复的元素和属性的名称使用相同的字符串对象。 **XmlNameTable**如上所示创建并加载文档时，具有属性和元素名称加载文档时将自动创建。 如果你已有的文档包含名称表，并且这些名称可用于另一个文档，则可以创建新的文档使用**负载**采用的方法**XmlNameTable**作为参数。 当使用此方法创建文档时，它会使用现有**XmlNameTable**包含所有属性和元素已从其他文档加载到它。 它可用于有效地比较元素和属性的名称。 有关详细信息**XmlNameTable**，请参阅[使用 XmlNameTable 比较对象](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md)。 有关参考，请参阅<xref:System.Xml.XmlNameTable>。  
+ 有一个类名为 XmlNameTable。 此类是原子化字符串对象的表。 该表使 XML 分析器可以高效地对 XML 文档中所有重复的元素和属性的名称使用相同的字符串对象。 XmlNameTable 在文档创建（如上所示）时自动创建，并在文档加载时加载属性名和元素名称。 如果已有包含名称表的文档，且这些名称在另一个文档中很有用，可以使用需要使用 XmlNameTable 参数的 Load 方法新建文档。 使用此方法创建文档时，它使用现有 XmlNameTable，其中包含已从其他文档加载到其中的所有属性和元素。 它可用于有效地比较元素和属性的名称。 若要详细了解 XmlNameTable，请参阅[使用 XmlNameTable 比较对象](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md)。 有关参考，请参阅 <xref:System.Xml.XmlNameTable>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

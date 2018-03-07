@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b867b2d7eb2f4b1252579bbf1f47430d9a9a48f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 964e2de7258f4849de01e4fbeae330d009710289
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>从 XslTransform 类迁移
-在重新设计了 XSLT 体系结构[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]释放。 <xref:System.Xml.Xsl.XslTransform> 类已被 <xref:System.Xml.Xsl.XslCompiledTransform> 类所取代。  
+[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 版本重新设计了 XSLT 体系结构。 <xref:System.Xml.Xsl.XslTransform> 类已被 <xref:System.Xml.Xsl.XslCompiledTransform> 类所取代。  
   
  以下各节说明 <xref:System.Xml.Xsl.XslCompiledTransform> 和 <xref:System.Xml.Xsl.XslTransform> 类之间的一些主要区别。  
   
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Xml.Xsl.XslCompiledTransform> 类还进行了其他优化，使其比 <xref:System.Xml.Xsl.XslTransform> 类快得多。  
   
 > [!NOTE]
->  尽管 <xref:System.Xml.Xsl.XslCompiledTransform> 类的总体性能优于 <xref:System.Xml.Xsl.XslTransform> 类，但在首次对转换调用时，<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslCompiledTransform> 方法可能比 <xref:System.Xml.Xsl.XslTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslTransform> 方法慢。 这是因为必须先编译 XSLT 文件，才能加载该文件。 有关详细信息，请参阅以下博客帖子：[比 XslTransform 慢 XslCompiledTransform？](http://go.microsoft.com/fwlink/?LinkId=130590)  
+>  尽管 <xref:System.Xml.Xsl.XslCompiledTransform> 类的总体性能优于 <xref:System.Xml.Xsl.XslTransform> 类，但在首次对转换调用时，<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslCompiledTransform> 方法可能比 <xref:System.Xml.Xsl.XslTransform.Load%2A> 类的 <xref:System.Xml.Xsl.XslTransform> 方法慢。 这是因为必须先编译 XSLT 文件，才能加载该文件。 有关详细信息，请参阅以下博客文章：[XslCompiledTransform 比 XslTransform 慢？](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)  
   
 ## <a name="security"></a>安全性  
  默认情况下，<xref:System.Xml.Xsl.XslCompiledTransform> 类禁用对 XSLT `document()` 函数和嵌入式脚本的支持。 通过创建启用这些功能的 <xref:System.Xml.Xsl.XsltSettings> 对象并将其传递给 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法，可以启用这些功能。 下面的示例演示如何启用脚本并执行 XSLT 转换。  
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
  [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
   
- 有关详细信息，请参阅[XSLT 安全注意事项](../../../../docs/standard/data/xml/xslt-security-considerations.md)。  
+ 有关详细信息，请参阅 [XSLT 安全注意事项](../../../../docs/standard/data/xml/xslt-security-considerations.md)。  
   
 ## <a name="new-features"></a>新增功能  
   
@@ -109,21 +112,21 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
  在 <xref:System.Xml.Xsl.XslCompiledTransform> 中，脚本函数的绑定（方法名称查找）发生在编译时，当使用 <xref:System.Xml.Xsl.XslCompiledTransform> 加载由 XslTranform 使用的样式表时，这些样式表可能会引发异常。  
   
- <xref:System.Xml.Xsl.XslCompiledTransform> 支持在 `msxsl:using` 元素中具有 `msxsl:assembly` 和 `msxsl:script` 子元素。 `msxsl:using` 和 `msxsl:assembly` 元素用于声明其他命名空间和程序集，以便在脚本块中使用。 请参阅[脚本块使用 msxsl: script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)有关详细信息。  
+ <xref:System.Xml.Xsl.XslCompiledTransform> 支持在 `msxsl:using` 元素中具有 `msxsl:assembly` 和 `msxsl:script` 子元素。 `msxsl:using` 和 `msxsl:assembly` 元素用于声明其他命名空间和程序集，以便在脚本块中使用。 有关详细信息，请参阅[使用 msxsl:script 的脚本块](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)。  
   
  <xref:System.Xml.Xsl.XslCompiledTransform> 禁止扩展对象具有相同数量的参数的多个重载。  
   
 ### <a name="msxml-functions"></a>MSXML 函数  
  已向 <xref:System.Xml.Xsl.XslCompiledTransform> 类添加对其他 MSXML 函数的支持。 下面的列表说明新增或改进功能：  
   
--   msxsl:node-设置：<xref:System.Xml.Xsl.XslTransform>所需的自变量[节点集函数](http://msdn.microsoft.com/en-us/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7)函数是一个结果树片段。 <xref:System.Xml.Xsl.XslCompiledTransform> 类没有此要求。  
+-   msxsl:node-set：<xref:System.Xml.Xsl.XslTransform> 要求 [node-set Function](http://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) 函数的参数是结果树片段。 <xref:System.Xml.Xsl.XslCompiledTransform> 类没有此要求。  
   
 -   msxsl:version：<xref:System.Xml.Xsl.XslCompiledTransform> 中支持此函数。  
   
--   XPath 扩展函数： [ms:string 的比较函数](http://msdn.microsoft.com/en-us/20616b82-9e27-444c-b714-4f1e09b73aee)， [ms:utc 函数](http://msdn.microsoft.com/en-us/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f)， [ms:namespace-uri 函数](http://msdn.microsoft.com/en-us/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7)， [ms:local-函数命名](http://msdn.microsoft.com/en-us/10ed60a1-17a9-4d74-8b98-7940ac97c0b5)， [ms:number 函数](http://msdn.microsoft.com/en-us/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954)， [ms:format-日期函数](http://msdn.microsoft.com/en-us/51f35609-89a9-4098-a166-88bf01300bf5)，和[ms:format-时间函数](http://msdn.microsoft.com/en-us/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5)现在支持函数。  
+-   XPath 扩展函数：现在支持 [ms:string-compare Function](http://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee)、[ms:utc Function](http://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f)、[ms:namespace-uri Function](http://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7)、[ms:local-name Function](http://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5)、[ms:number Function](http://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954)、[ms:format-date Function](http://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) 和 [ms:format-time Function](http://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) 函数。  
   
 -   与架构相关的 XPath 扩展函数：这些函数不受 <xref:System.Xml.Xsl.XslCompiledTransform> 本机支持。 但是，它们可以作为扩展函数实现。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
  [使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

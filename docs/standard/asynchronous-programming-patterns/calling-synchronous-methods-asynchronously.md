@@ -26,15 +26,18 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 965e5928c03ae573eacba98a7596f55b56aaba26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>使用异步方式调用同步方法
 使用 .NET Framework 可以以异步方式调用任何方法。 要实现此操作，请定义一个委托，此委托具有与你要调用的方法相同的签名；公共语言运行时会自动使用适当的签名为此委托定义 `BeginInvoke` 和 `EndInvoke` 方法。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  `BeginInvoke` 方法启动异步调用。 该方法具有与你要异步执行的方法相同的参数，另加两个可选参数。 第一个参数是一个 <xref:System.AsyncCallback> 委托，此委托引用在异步调用完成时要调用的方法。 第二个参数是一个用户定义的对象，该对象将信息传递到回调方法。 `BeginInvoke` 将立即返回，而不会等待异步调用完成。 `BeginInvoke` 返回可用于监视异步调用的进度的 <xref:System.IAsyncResult>。  
   
- `EndInvoke` 方法用于检索异步调用的结果。 它可以在调用 `BeginInvoke`之后的任意时间调用。 如果异步调用尚未完成，那么 `EndInvoke` 将阻止调用线程，直到完成异步调用。 参数`EndInvoke`包括`out`和`ref`参数 (`<Out>` `ByRef`和`ByRef`在 Visual Basic 中) 你想要以异步方式执行的方法以及<xref:System.IAsyncResult>返回`BeginInvoke`.  
+ `EndInvoke` 方法用于检索异步调用的结果。 它可以在调用 `BeginInvoke`之后的任意时间调用。 如果异步调用尚未完成，那么 `EndInvoke` 将阻止调用线程，直到完成异步调用。 `EndInvoke` 的参数包括要异步执行的方法的 `out` 和 `ref` 参数（Visual Basic 中的 `<Out>` `ByRef` 和 `ByRef`）以及 `BeginInvoke` 返回的 <xref:System.IAsyncResult>。  
   
 > [!NOTE]
 >  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 中的 IntelliSense 功能可显示 `BeginInvoke` 和 `EndInvoke`的参数。 如果未使用 Visual Studio 或类似的工具，或者如果使用的是包含 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 的 C#，请参阅[异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)，获取关于为这些方法定义的参数的说明。  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 -   执行一些操作，然后调用 `EndInvoke` 进行阻止，直到调用完成。  
   
--   获取<xref:System.Threading.WaitHandle>使用<xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>属性，请使用其<xref:System.Threading.WaitHandle.WaitOne%2A>方法阻止执行，直到<xref:System.Threading.WaitHandle>处于有信号状态，然后调用`EndInvoke`。  
+-   使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> 属性获取 <xref:System.Threading.WaitHandle>，使用它的 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法将执行一直阻止到 <xref:System.Threading.WaitHandle> 收到信号，再调用 `EndInvoke`。  
   
 -   对由 <xref:System.IAsyncResult> 返回的 `BeginInvoke` 进行轮询，以确定异步调用完成的时间，然后调用 `EndInvoke`。  
   
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/21/2017
  如果你使用 <xref:System.Threading.WaitHandle>，则在异步调用完成前后你可以执行其他处理，但必须在调用 `EndInvoke` 检索结果之前。  
   
 > [!NOTE]
->  调用 `EndInvoke`时不会自动关闭等待句柄。 如果释放对等待句柄的所有引用，则当垃圾回收功能回收此等待句柄时将释放系统资源。 若要在完成使用等待句柄时，就会立即释放系统资源，释放通过调用<xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>方法。 显式释放可释放对象时，垃圾回收的工作效率更高。  
+>  调用 `EndInvoke`时不会自动关闭等待句柄。 如果释放对等待句柄的所有引用，则当垃圾回收功能回收此等待句柄时将释放系统资源。 若要在使用完等待句柄后立即释放系统资源，请通过调用 <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> 方法来清理它。 显式释放可释放对象时，垃圾回收的工作效率更高。  
   
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -103,11 +106,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>异步调用完成时执行回调方法  
  如果启动异步调用的线程可以不是处理结果的线程，那么在调用完成时可以执行回调方法。 将在 <xref:System.Threading.ThreadPool> 线程上执行回调方法。  
   
- 要使用回调方法，必须向 `BeginInvoke` 传递代表此回调方法的 <xref:System.AsyncCallback> 委托。 你还可以传递包含此回调方法要使用的信息的对象。 在回调方法中，可以将此回调方法的唯一参数 <xref:System.IAsyncResult>转换为 <xref:System.Runtime.Remoting.Messaging.AsyncResult> 对象。 然后，可以使用<xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType>属性获取用于启动调用，以便你可以调用的委托`EndInvoke`。  
+ 要使用回调方法，必须向 `BeginInvoke` 传递代表此回调方法的 <xref:System.AsyncCallback> 委托。 你还可以传递包含此回调方法要使用的信息的对象。 在回调方法中，可以将此回调方法的唯一参数 <xref:System.IAsyncResult>转换为 <xref:System.Runtime.Remoting.Messaging.AsyncResult> 对象。 然后，可以使用 <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> 属性，获取用于启动调用的委托，以便能够调用 `EndInvoke`。  
   
  有关示例的注释：  
   
--   `threadId`参数`TestMethod`是`out`参数 ([`<Out>` `ByRef`在 Visual Basic 中)，因此永远不会使用其输入的值`TestMethod`。 会将一个虚拟变量传递给 `BeginInvoke` 调用。 如果 `threadId` 参数是 `ref` 参数（Visual Basic 中的`ByRef` ），那么此变量应为一个类级字段，以便可以将它传递给 `BeginInvoke` 和 `EndInvoke`。  
+-   `TestMethod` 的 `threadId` 参数为 `out` 参数（Visual Basic 中的 [`<Out>` `ByRef`），因此 `TestMethod` 从不使用它的输入值。 会将一个虚拟变量传递给 `BeginInvoke` 调用。 如果 `threadId` 参数是 `ref` 参数（Visual Basic 中的`ByRef` ），那么此变量应为一个类级字段，以便可以将它传递给 `BeginInvoke` 和 `EndInvoke`。  
   
 -   传递给 `BeginInvoke` 的状态信息是一个格式字符串，回调方法使用它来设置输出消息的格式。 因为该字符串是作为 <xref:System.Object>类型传递的，所以必须将此状态信息转换为适合的类型才可以使用。  
   
@@ -117,6 +120,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]
  [!code-vb[AsyncDelegateExamples#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/callback.vb#5)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Delegate>  
  [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

@@ -14,15 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a50080fa4b84abe84fbb1a44f18e1fb680a07c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>开发全球通用应用程序的最佳做法
 本节描述在开发全球通用的应用程序时应遵循的最佳做法。  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 9. 在国际操作系统版本上使用国际数据来测试应用程序功能。  
   
-10. 如果安全决策基于字符串比较或大小写更改操作的结果，请让应用程序执行不区分区域性的操作。 这种做法可确保结果不会受 `CultureInfo.CurrentCulture` 值的影响。 请参阅的"字符串比较，使用当前区域性"部分[使用字符串的最佳实践](../../../docs/standard/base-types/best-practices-strings.md)有关的示例，演示如何区分区域性的字符串比较可以产生不一致的结果。  
+10. 如果安全决策基于字符串比较或大小写更改操作的结果，请让应用程序执行不区分区域性的操作。 这种做法可确保结果不会受 `CultureInfo.CurrentCulture` 值的影响。 有关展示了区域性敏感型字符串比较如何产生不一致结果的示例，请参阅[字符串使用最佳做法](../../../docs/standard/base-types/best-practices-strings.md)的“使用当前区域性的字符串比较”部分。  
   
 ## <a name="localization-best-practices"></a>本地化最佳做法  
   
@@ -77,11 +80,11 @@ ms.lasthandoff: 11/21/2017
   
 8.  使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 类来根据区域性检索资源。  
   
-9. 使用 Visual Studio 创建 Windows 窗体对话框，以便它们可以进行本地化使用[Windows 窗体资源编辑器 (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。 不要对 Windows 窗体对话框进行手动编码。  
+9. 使用 Visual Studio 创建 Windows 窗体对话框，以便可以使用 [Windows 窗体资源编辑器 (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) 对它们进行本地化。 不要对 Windows 窗体对话框进行手动编码。  
   
 10. 安排进行专业本地化工作（翻译）。  
   
-11. 创建并本地化资源的完整说明，请参阅[应用程序中的资源](../../../docs/framework/resources/index.md)。  
+11. 有关创建并本地化资源的完整说明，请参阅[应用中的资源](../../../docs/framework/resources/index.md)。  
   
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>ASP.NET 应用程序的全球化最佳做法  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  在 ASP.NET 应用程序中的以下三个位置指定 requestEncoding、responseEncoding、fileEncoding、culture 和 uiCulture 特性的值：  
   
-    -   在 Web.config 文件的全球化一节中。 此文件是 ASP.NET 应用程序的外部文件。 有关详细信息，请参阅[\<全球化 > 元素](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)。  
+    -   在 Web.config 文件的全球化一节中。 此文件是 ASP.NET 应用程序的外部文件。 有关详细信息，请参阅 [\<globalization> 元素](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)。  
   
     -   在页面指令中。 请注意，当应用程序在页面中时，文件已经被读取。 因此，指定 fileEncoding 和 requestEncoding 为时已晚。 只有 uiCulture、Culture 和 responseEncoding 可以在页面指令中指定。  
   
@@ -107,6 +110,6 @@ ms.lasthandoff: 11/21/2017
   
 5.  请注意，uiCulture 值可以设置为浏览器接受的语言。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
  [桌面应用中的资源](../../../docs/framework/resources/index.md)

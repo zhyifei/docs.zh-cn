@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 193a9980bba423292921beff6c4c3172ce02fd92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a834fe8764744f5b2dd41de1f4fe1479059b87bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用于编译架构的 XmlSchemaSet
 介绍 <xref:System.Xml.Schema.XmlSchemaSet>，一个可以存储和验证 XML 架构定义语言 (XSD) 架构的缓存。  
@@ -254,11 +257,11 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet> 尝试导入 `http://www.contoso.com` 命名空间的架构，方法是从 `http://www.contoso.com/schema.xsd` URL 加载该架构。 只有架构文档中声明的架构声明和类型可以在导入架构中使用，即使 `http://www.contoso.com` 中存在 <xref:System.Xml.Schema.XmlSchemaSet> 命名空间的其他架构文档。 如果 `schema.xsd` 文件不能位于 `http://www.contoso.com/schema.xsd` URL，则不会有任何 `http://www.contoso.com` 命名空间的架构导入到导入架构中。  
   
 ## <a name="validating-xml-documents"></a>验证 XML 文档  
- XML 文档可以针对 <xref:System.Xml.Schema.XmlSchemaSet> 中的架构进行验证。 要验证 XML 文档，可以通过下列方式：将架构添加到 <xref:System.Xml.Schema.XmlSchemaSet> 对象的 <xref:System.Xml.XmlReaderSettings.Schemas%2A><xref:System.Xml.XmlReaderSettings> 属性中，或将 <xref:System.Xml.Schema.XmlSchemaSet> 添加到 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 对象的 <xref:System.Xml.XmlReaderSettings> 属性中。 然后，<xref:System.Xml.XmlReaderSettings> 类的 <xref:System.Xml.XmlReader.Create%2A> 方法使用 <xref:System.Xml.XmlReader> 对象创建一个 <xref:System.Xml.XmlReader> 对象并验证该 XML 文档。  
+ XML 文档可以针对 <xref:System.Xml.Schema.XmlSchemaSet> 中的架构进行验证。 若要验证 XML 文档，可以将架构添加到 <xref:System.Xml.XmlReaderSettings> 对象的 <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> 属性中，也可以将 <xref:System.Xml.Schema.XmlSchemaSet> 添加到 <xref:System.Xml.XmlReaderSettings> 对象的 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 属性中。 然后，<xref:System.Xml.XmlReaderSettings> 类的 <xref:System.Xml.XmlReader.Create%2A> 方法使用 <xref:System.Xml.XmlReader> 对象创建一个 <xref:System.Xml.XmlReader> 对象并验证该 XML 文档。  
   
- 有关验证 XML 的详细信息时记录该对象使用<xref:System.Xml.Schema.XmlSchemaSet>，请参阅[使用 xmlschemaset 进行 XML 架构 (XSD) 验证](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)。  
+ 若要详细了解如何使用 <xref:System.Xml.Schema.XmlSchemaSet> 验证 XML 文档，请参阅[使用 XmlSchemaSet 进行 XML 架构 (XSD) 验证](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>  
@@ -266,5 +269,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
- [作为架构缓存的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [使用 xmlschemaset 进行 XML 架构 (XSD) 验证](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+ [XmlSchemaSet 作为架构缓存](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [使用 XmlSchemaSet 进行 XML 架构 (XSD) 验证](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

@@ -13,21 +13,24 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a8c9b513f47fcb07f987b1e17f0b7f485cef3143
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="including-or-importing-xml-schemas"></a>包含或导入 XML 架构
 XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素。 这些架构元素引用其他 XML 架构，可以用于补充包括或导入这些架构的架构的结构。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类映射到架构对象模型 (SOM) API 中的这些元素。  
   
 ## <a name="including-or-importing-an-xml-schema"></a>包括或导入 XML 架构  
- 下面的代码示例中创建的客户架构补充[生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)地址架构的主题。 为客户架构补充地址架构后，可以在客户架构中使用地址类型。  
+ 下面的代码示例为[生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)主题中创建的客户架构补充了地址架构。 为客户架构补充地址架构后，可以在客户架构中使用地址类型。  
   
  地址架构可以使用 `<xs:include />` 或 `<xs:import />` 元素加入，以原样使用地址架构的组件，也可以使用 `<xs:redefine />` 元素修改其任意组件，以适合客户架构的需要。 因为地址架构的 `targetNamespace` 与客户架构的不同，所以，将使用 `<xs:import />` 元素以及导入语义。  
   
@@ -105,12 +108,12 @@ XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 
 </schema>  
 ```  
   
- 有关详细信息`<xs:import />`， `<xs:include />`，和`<xs:redefine />`元素和<xref:System.Xml.Schema.XmlSchemaImport>，<xref:System.Xml.Schema.XmlSchemaInclude>和<xref:System.Xml.Schema.XmlSchemaRedefine>类，请参阅[W3C XML 架构](http://go.microsoft.com/fwlink/?LinkId=45242)和<xref:System.Xml.Schema?displayProperty=nameWithType>命名空间类参考文档。  
+ 若要详细了解 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素以及 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类，请参阅 [W3C XML 架构](http://www.w3.org/XML/Schema)和 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间类参考文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [读取和写入 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+ [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

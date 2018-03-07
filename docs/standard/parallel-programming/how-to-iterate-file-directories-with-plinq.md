@@ -8,39 +8,43 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PLINQ queries, how to iterate directories
+helpviewer_keywords:
+- PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 40fd9f64b5702f5205b7817f3de1e0a8709c5a63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ddd3b509b7c0c35f1c4edea99cb5a4ec6c1ac18e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>如何：使用 PLINQ 循环访问文件目录
-此示例演示两种简单的方法来并行执行对文件目录的操作。 第一个查询使用<xref:System.IO.Directory.GetFiles%2A>方法来填充目录及其所有子目录中的文件名称的数组。 此方法不返回直到填充整个数组，并因此它还会带来操作的开始处的延迟。 但是，填充数组后，PLINQ 在可以处理它并行速度非常快。  
+此示例展示了两种简单方法，以对文件目录平行执行操作。 第一个查询使用 <xref:System.IO.Directory.GetFiles%2A> 方法，在数组中填充目录和所有子目录中的文件名。 在整个数组填充完成前，此方法不会返回数组，所以可能会在操作开始时引入延迟。 不过，在填充数组后，PLINQ 可以非常快速地并行处理数组。  
   
- 第二个查询使用静态<xref:System.IO.Directory.EnumerateDirectories%2A>和<xref:System.IO.DirectoryInfo.EnumerateFiles%2A>立即开始返回结果的方法。 这种方法可以更快时遍历大目录树，但与第一个示例比较的处理时间可以取决于许多因素。  
+ 第二个查询使用立即开始返回结果的静态 <xref:System.IO.Directory.EnumerateDirectories%2A> 和 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法。 循环访问大型目录树时，这种方法可能会比第一个示例更快，尽管处理时间可能取决于很多因素。  
   
 > [!WARNING]
->  这些示例旨在演示用法，并且运行速度可能不如等效的顺序 LINQ to Objects 查询。 有关加速的详细信息，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
+>  这些示例用于演示用法，可能不会比相当的顺序 LINQ to Objects 查询快。 若要详细了解加速，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何循环访问文件目录在简单的情况下，当在树中有权访问所有目录、 文件大小不非常大，并且访问时间都不重要。 正在构造的文件名称的数组时，此方法涉及开头的延迟一段。  
+ 下面的示例展示了如何在以下简单方案中循环访问文件目录：有权访问树中的所有目录，文件大小不是很大，访问时间也不是很长。 这种方法在最初构造文件名数组时有一段延迟。  
   
  [!code-csharp[PLINQ#33](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#33)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何循环访问文件目录在简单的情况下，当在树中有权访问所有目录、 文件大小不非常大，并且访问时间都不重要。 这种方法开始在上一示例的更快地生成的结果。  
+ 下面的示例展示了如何在以下简单方案中循环访问文件目录：有权访问树中的所有目录，文件大小不是很大，访问时间也不是很长。 这种方法比上一示例更快地开始生成结果。  
   
  [!code-csharp[PLINQ#34](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#34)]  
   
- 使用时<xref:System.IO.Directory.GetFiles%2A>，请确保你具有在树中的所有目录的足够权限。 否则为将引发异常，将返回任何结果。 使用时<xref:System.IO.Directory.EnumerateDirectories%2A>在 PLINQ 查询中，它会产生问题，以使你能够继续循环正常方式处理 I/O 异常。 如果你的代码必须处理 I/O 或未经授权的访问异常，则应考虑中所述的方法[如何： 使用并行类循环访问文件目录](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md)。  
+ 使用 <xref:System.IO.Directory.GetFiles%2A> 时，请确保有权访问树中的所有目录。 否则，将抛出异常，且不会返回任何结果。 如果在 PLINQ 查询中使用 <xref:System.IO.Directory.EnumerateDirectories%2A>，棘手的是合理处理 I/O 异常，以便能够继续循环访问。 如果代码必须处理 I/O 或未经授权的访问异常，应考虑使用[如何：使用并行类循环访问文件目录](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md)中介绍的方法。  
   
- 如果 I/O 延迟的问题，例如使用文件 I/O 通过网络，请考虑使用异步 I/O 方法中所述之一[TPL 和传统.NET Framework 异步编程](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)和在此[博客文章](http://go.microsoft.com/fwlink/?LinkID=186458).  
+ 如果 I/O 延迟造成问题（例如，对于通过网络的文件 I/O），请考虑使用 [TPL 和传统 .NET Framework 异步编程](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)和这篇[博客文章](http://go.microsoft.com/fwlink/?LinkID=186458)中介绍的异步 I/O 方法之一。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

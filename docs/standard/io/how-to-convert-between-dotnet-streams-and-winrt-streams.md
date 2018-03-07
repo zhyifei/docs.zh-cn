@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 11c22bf71109137ea328b8e1136180494364ce0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d9e4c1c0b432ff44af0410b1efdc3940cd0ff19c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>如何：在 .NET Framework 流与 Windows 运行时流之间转换
 适用于 Windows 应用商店应用的 .NET Framework 是完整的 .NET Framework 的子集。 由于 Windows 应用商店应用的安全性和其他要求，你无法使用整套 .NET Framework API 来打开和读取文件。 有关详细信息，请参阅 [适用于 Windows 应用商店应用的 .NET 概述](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)。 但是，你可能需要将 .NET Framework API 用于其他流处理操作。 若要操作这些流，你可能会发现在 .NET Framework 流类型（如 <xref:System.IO.MemoryStream> 或 <xref:System.IO.FileStream>）和 Windows 运行时流（如 [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx)、 [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)或 [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx)）之间进行转换非常重要。  
@@ -86,7 +89,7 @@ ms.lasthandoff: 11/21/2017
     [!code-csharp[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/cs/mainpage.xaml.cs#2)]
     [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
- [快速入门： 读取和写入文件 (Windows)](http://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
- [.NET for Windows Store 应用概述](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+## <a name="see-also"></a>请参阅  
+ [快速入门：对文件执行读取和写入操作 (Windows)](http://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+ [适用于 Microsoft Store 应用的 .NET 概述](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
  [适用于 Windows 应用商店应用的 .NET - 支持的 API](http://msdn.microsoft.com/library/windows/apps/br230232.aspx)

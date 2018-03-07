@@ -8,7 +8,8 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.RegularExpressionBuilder
+f1_keywords:
+- VS.RegularExpressionBuilder
 helpviewer_keywords:
 - regex cheat sheet
 - parsing text with regular expressions, language elements
@@ -19,18 +20,21 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab77293796eb20b1056f57f64903beb9357a80c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-language---quick-reference"></a>正则表达式语言 - 快速参考
-<a name="top"></a> 正则表达式是正则表达式引擎尝试匹配输入文本的一种模式。 模式由一个或多个字符文本、运算符或构造组成。  有关简要介绍，请参阅[.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)。  
+<a name="top"></a> 正则表达式是正则表达式引擎尝试匹配输入文本的一种模式。 模式由一个或多个字符文本、运算符或构造组成。  有关简要介绍，请参阅 [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)。  
   
  此快速参考中的每一节都列出了可用于定义正则表达式的字符、运算符和构造的一种特定类别：  
   
@@ -68,7 +72,7 @@ ms.lasthandoff: 11/21/2017
 |`\x` *nn*|使用十六进制表示形式指定字符（*nn* 恰好由两位数字组成）。|`\w\x20\w`|“a bc d”中的<br /><br /> “a b”和“c d”|  
 |`\c` *X*<br /><br /> `\c` *x*|匹配 *X* 或 *x*指定的 ASCII 控件字符，其中 *X* 或 *x* 是控件字符的字母。|`\cC`|“\x0003”中的“\x0003”(Ctrl-C)|  
 |`\u` *nnnn*|使用十六进制表示形式匹配 Unicode 字符（由 *nnnn*正确表示的四位数）。|`\w\u0020\w`|“a bc d”中的<br /><br /> “a b”和“c d”|  
-|`\`|在后面带有不识别为本主题的此表和其他表中的转义符的字符时，与该字符匹配。 例如， `\*` 与 `\x2A`相同，而 `\.` 与 `\x2E`相同。 这允许正则表达式引擎区分语言元素 (如\*或？) 和字符文本 (由表示`\*`或`\?`)。|`\d+[\+-x\*]\d+`|"2 + 2"和"3\*9" 中"(2+2) \* 3\*9"|  
+|`\`|在后面带有不识别为本主题的此表和其他表中的转义符的字符时，与该字符匹配。 例如， `\*` 与 `\x2A`相同，而 `\.` 与 `\x2E`相同。 这样一来，正则表达式引擎可以区分语言元素（如 \* 或 ?）和字符文本（由 `\*` 或 `\?` 表示）。|`\d+[\+-x\*]\d+`|“(2+2) \* 3\*9”中的“2+2”和“3\*9”|  
   
  [返回页首](#top)  
   
@@ -152,7 +156,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>反向引用构造  
- 反向引用允许在同一正则表达式中随后标识以前匹配的子表达式。 下表列出.NET 中的正则表达式支持的反向引用构造。 有关详细信息，请参阅 [Backreference Constructs](backreference-constructs-in-regular-expressions.md)。  
+ 反向引用允许在同一正则表达式中随后标识以前匹配的子表达式。 下表列出了 .NET 正则表达式支持的反向引用构造。 有关详细信息，请参阅 [Backreference Constructs](backreference-constructs-in-regular-expressions.md)。  
   
 |反向引用构造|描述|模式|匹配|  
 |-----------------------------|-----------------|-------------|-------------|  
@@ -179,7 +183,7 @@ ms.lasthandoff: 11/21/2017
   
 |字符|描述|模式|替换模式|输入字符串|结果字符串|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
-|`$` *数值*|替换按组 *number*匹配的子字符串。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
+|`$`*number*|替换按组 *number*匹配的子字符串。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
 |`${` *name* `}`|替换按命名组 *name*匹配的子字符串。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
 |`$$`|替换字符“$”。|`\b(\d+)\s?USD`|`$$$1`|“103 USD”|“$103”|  
 |`$&`|替换整个匹配项的一个副本。|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
@@ -214,7 +218,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>其他构造  
- 其他构造可修改某个正则表达式模式或提供有关该模式的信息。 下表列出.NET 支持的其他构造。 有关详细信息，请参阅 [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md)。  
+ 其他构造可修改某个正则表达式模式或提供有关该模式的信息。 下表列出了 .NET 支持的其他构造。 有关详细信息，请参阅 [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md)。  
   
 |构造|定义|示例|  
 |---------------|----------------|-------------|  
@@ -222,11 +226,11 @@ ms.lasthandoff: 11/21/2017
 |`(?#` *注释* `)`|内联注释。 该注释在第一个右括号处终止。|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [至行尾]|X 模式注释。 该注释以非转义的 `#` 开头，并继续到行的结尾。|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex>  
  [正则表达式](regular-expressions.md)  
  [正则表达式类](the-regular-expression-object-model.md)  
  [正则表达式示例](regular-expression-examples.md)  
- [正则表达式-快速参考 （以 Word 格式下载）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [正则表达式 - 快速参考（以 Word 格式下载）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [正则表达式 — 快速参考（以 PDF 格式下载）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

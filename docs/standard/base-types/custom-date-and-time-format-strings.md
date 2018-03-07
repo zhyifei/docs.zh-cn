@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 日期和时间格式字符串定义由格式设置操作生成的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的文本表示形式。 它还可定义分析操作中需要的日期和时间值的表示形式，以便成功将字符串转换为日期和时间。 自定义格式字符串由一个或多个自定义日期和时间格式说明符组成。 任何不是[标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字符串都会解释为自定义日期和时间格式字符串。  
@@ -358,7 +361,7 @@ ms.lasthandoff: 11/21/2017
   
 -   对于未指定时区的时间（其 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 属性等于 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 的时间），结果等效于 <xref:System.String.Empty?displayProperty=nameWithType>。  
   
- 有关<xref:System.DateTimeOffset>值，"K"格式说明符等效于"zzz"格式说明符，并产生的结果字符串包含<xref:System.DateTimeOffset>于 UTC 的偏移量值。  
+ 对于 <xref:System.DateTimeOffset> 值，"K" 格式说明符相当于 "zzz" 格式说明符，生成的结果字符串包含 <xref:System.DateTimeOffset> 值与 UTC 的偏移。  
   
  如果使用“K”格式说明符而没有其他自定义格式说明符，则将该说明符解释为标准日期和时间格式说明符，并引发 <xref:System.FormatException>。 有关使用单个格式说明符的详细信息，请参阅本主题稍后的[使用单个自定义格式说明符](#UsingSingleSpecifiers)。  
   
@@ -661,7 +664,7 @@ ms.lasthandoff: 11/21/2017
      [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]  
   
 <a name="Notes"></a>   
-## <a name="notes"></a>备注  
+## <a name="notes"></a>说明  
   
 <a name="UsingSingleSpecifiers"></a>   
 ### <a name="using-single-custom-format-specifiers"></a>使用单个自定义格式说明符  
@@ -691,16 +694,16 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control-panel-settings"></a>控制面板设置  
  对于包含许多自定义日期和时间格式说明符的格式设置操作，控制面板中的“区域和语言选项”设置会影响其产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.DateTimeFormatInfo> 对象，当前线程区域性提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。  
   
- 此外，如果你使用<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>构造函数实例化一个新<xref:System.Globalization.CultureInfo>对象，表示与当前系统区域性，建立的任何自定义相同的区域性**区域和语言选项**控制面板中将应用到新<xref:System.Globalization.CultureInfo>对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。  
+ 此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。  
   
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 属性  
  格式化受当前的 <xref:System.Globalization.DateTimeFormatInfo> 对象的属性影响，其由当前线程区域性隐式提供或由调用格式化的方法的 <xref:System.IFormatProvider> 参数显式提供。 对于 <xref:System.IFormatProvider> 参数，应当指定一个表示区域性的 <xref:System.Globalization.CultureInfo> 对象或指定一个 <xref:System.Globalization.DateTimeFormatInfo> 对象。  
   
  由许多自定义日期和时间格式说明符产生的结果字符串还取决于当前的 <xref:System.Globalization.DateTimeFormatInfo> 对象的属性。 应用程序通过更改相应的 <xref:System.Globalization.DateTimeFormatInfo> 属性，可以改变由某些自定义日期和时间格式说明符产生的结果。 例如，“ddd”格式说明符将在 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> 字符串数组中找到的缩写的星期名称添加到结果字符串。 类似地，"MMMM"格式说明符将在 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> 字符串数组中找到的月的完整名称添加到结果字符串。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
  [示例：.NET Framework 4 格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

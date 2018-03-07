@@ -18,22 +18,25 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c94a449edbbe38c4028e27fd946b66a054badf51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>清理非托管资源
-对于你的应用程序创建的对象的大多数，你可以依赖于。NET 的垃圾回收器来处理内存管理。 但是，如果创建包括非托管资源的对象，则当你在应用中使用完非托管资源后，必须显式释放这些资源。 最常用的非托管资源类型是包装操作系统资源的对象，如文件、窗口、网络连接或数据库连接。 虽然垃圾回收器可以跟踪封装非托管资源的对象的生存期，但无法了解如何发布并清理这些非托管资源。  
+对于应用创建的大多数对象，可以依赖 .NET 的垃圾回收器来处理内存管理。 但是，如果创建包括非托管资源的对象，则当你在应用中使用完非托管资源后，必须显式释放这些资源。 最常用的非托管资源类型是包装操作系统资源的对象，如文件、窗口、网络连接或数据库连接。 虽然垃圾回收器可以跟踪封装非托管资源的对象的生存期，但无法了解如何发布并清理这些非托管资源。  
   
  如果你的类型使用非托管资源，则应执行以下操作：  
   
--   实现[释放模式](../../../docs/standard/design-guidelines/dispose-pattern.md)。 这要求你提供 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现以启用非托管资源的确定性释放。 当不再需要此对象（或其使用的资源）时，类型使用者可调用 <xref:System.IDisposable.Dispose%2A>。 <xref:System.IDisposable.Dispose%2A> 方法立即释放非托管资源。  
+-   实现[清理模式](../../../docs/standard/design-guidelines/dispose-pattern.md)。 这要求你提供 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 实现以启用非托管资源的确定性释放。 当不再需要此对象（或其使用的资源）时，类型使用者可调用 <xref:System.IDisposable.Dispose%2A>。 <xref:System.IDisposable.Dispose%2A> 方法立即释放非托管资源。  
   
 -   在类型使用者忘记调用 <xref:System.IDisposable.Dispose%2A> 的情况下，准备释放非托管资源。 有两种方法可以实现此目的：  
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="in-this-section"></a>本节内容  
  [实现 Dispose 方法](../../../docs/standard/garbage-collection/implementing-dispose.md)  
- 描述如何实现[释放模式](../../../docs/standard/design-guidelines/dispose-pattern.md)用于释放非托管的资源。  
+ 介绍了如何实现[清理模式](../../../docs/standard/design-guidelines/dispose-pattern.md)来清理非托管资源。  
   
  [使用实现 IDisposable 的对象](../../../docs/standard/garbage-collection/using-objects.md)  
  描述类型使用者如何确保调用其 <xref:System.IDisposable.Dispose%2A> 实现。 建议使用 C# `using` 语句或 Visual Basic `Using` 语句来执行此操作。  

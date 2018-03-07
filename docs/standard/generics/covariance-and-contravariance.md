@@ -17,15 +17,18 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1ae8b6da5917950664e1ab780b8db76cb6500e70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2abd4c772c02c431ecb73139be7f620fe04d5d82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
 <a name="top"></a>协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更小(不太具体的)的类型，后者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
@@ -64,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
  通常，协变类型参数可用作委托的返回类型，而逆变类型参数可用作参数类型。 对于接口，协变类型参数可用作接口的方法的返回类型，而逆变类型参数可用作接口的方法的参数类型。  
   
- 协变和逆变统称为“变体” 。 未标记为协变或逆变的泛型类型参数称为“固定参数” 。 有关公共语言运行时中变体的事项的简短摘要：  
+ 协变和逆变统称为“变体”。 未标记为协变或逆变的泛型类型参数称为“固定参数” 。 有关公共语言运行时中变体的事项的简短摘要：  
   
 -   在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，Variant 类型参数仅限于泛型接口和泛型委托类型。  
   
@@ -103,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
  下面的示例阐释了逆变类型参数。 该示例定义具有`MustInherit` 属性的抽象（在 Visual Basic 中为 `Shape` ） `Area` 类。 该示例还定义一个实现 `ShapeAreaComparer` （在 Visual Basic 中为 `IComparer<Shape>` ）的`IComparer(Of Shape)` 类。 <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> 方法的实现基于 `Area` 属性的值，所以 `ShapeAreaComparer` 可用于按区域对 `Shape` 对象排序。  
   
- `Circle` 类继承 `Shape` 并重写 `Area`。 该示例创建 <xref:System.Collections.Generic.SortedSet%601> 对象的 `Circle` ，使用采用 `IComparer<Circle>` （在 Visual Basic 中为`IComparer(Of Circle)` ）的构造函数。 但是，该对象不传递 `IComparer<Circle>`，而是传递一个用于实现 `ShapeAreaComparer` 的 `IComparer<Shape>`对象。 当代码需要派生程度较大的类型的比较器 (`Shape`) 时，该示例可以传递派生程度较小的类型的比较器 (`Circle`)，因为 <xref:System.Collections.Generic.IComparer%601> 泛型接口的类型参数是逆变参数。  
+ `Circle` 类继承 `Shape` 并重写 `Area`。 该示例创建 <xref:System.Collections.Generic.SortedSet%601> 对象的 `Circle` ，使用采用 `IComparer<Circle>` （在 Visual Basic 中为`IComparer(Of Circle)` ）的构造函数。 但是，该对象不传递 `IComparer<Circle>`，而是传递一个用于实现 `ShapeAreaComparer` 的 `IComparer<Shape>` 对象。 当代码需要派生程度较大的类型的比较器 (`Shape`) 时，该示例可以传递派生程度较小的类型的比较器 (`Circle`)，因为 <xref:System.Collections.Generic.IComparer%601> 泛型接口的类型参数是逆变参数。  
   
  向 `Circle` 中添加新 `SortedSet<Circle>`对象时，每次将新元素与现有元素进行比较时，都会调用 `IComparer<Shape>.Compare` 对象的`IComparer(Of Shape).Compare` 方法（在 Visual Basic 中为 `ShapeAreaComparer` 方法）。 方法 (`Shape`) 的参数类型比被传递的类型 (`Circle`) 的派生程度小，所以调用是类型安全的。 逆变使 `ShapeAreaComparer` 可以对派生自 `Shape`的任意单个类型的集合以及混合类型的集合排序。  
   
@@ -195,7 +198,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Linq.IOrderedQueryable%601>|是||  
 |<xref:System.Linq.IQueryable%601>|是||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [协变和逆变 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
  [协变和逆变 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
  [委托中的变体](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

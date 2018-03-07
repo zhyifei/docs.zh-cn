@@ -22,27 +22,30 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-numeric-format-strings"></a>自定义数字格式字符串
 你可以创建自定义数字格式字符串，这种字符串由一个或多个自定义数字说明符组成，用于定义设置数值数据格式的方式。 自定义数字格式字符串是任何不属于 [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字符串。  
   
- 所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 也支持自定义数字格式字符串由.NET[复合格式设置功能](../../../docs/standard/base-types/composite-formatting.md)，由它的一些`Write`和`WriteLine`方法<xref:System.Console>和<xref:System.IO.StreamWriter>类<xref:System.String.Format%2A?displayProperty=nameWithType>方法，与<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>方法。  
+ 所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支持自定义数字格式字符串，以供 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 类的一些 `Write` 和 `WriteLine` 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。  
   
 > [!TIP]
 >  你可以下载 [格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。  
   
 <a name="table"></a> 下表描述自定义数字格式说明符并显示由每个格式说明符产生的示例输出。 有关使用自定义数字格式字符串的其他信息，请参见 [说明](#NotesCustomFormatting) 一节，有关使用方法的完整演示，请参见 [示例](#example) 一节。  
   
-|格式说明符|名称|描述|示例|  
+|格式说明符|name|描述|示例|  
 |----------------------|----------|-----------------|--------------|  
 |“0”|零占位符|用对应的数字（如果存在）替换零；否则，将在结果字符串中显示零。<br /><br /> 有关详细信息，请参阅 [“0”自定义说明符](#Specifier0)。|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|数字占位符|用对应的数字（如果存在）替换“#”符号；否则，不会在结果字符串中显示任何数字。<br /><br /> 请注意，如果输入字符串中的相应数字是无意义的 0，则在结果字符串中不会出现任何数字。 例如，0003 ("####") -> 3。<br /><br /> 有关详细信息，请参阅 [“#”自定义说明符](#SpecifierD)。|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |"%"|百分比占位符|将数字乘以 100，并在结果字符串中插入本地化的百分比符号。<br /><br /> 有关详细信息，请参阅 [“%”自定义说明符](#SpecifierPct)。|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
 |"‰"|千分比占位符|将数字乘以 1000，并在结果字符串中插入本地化的千分比符号。<br /><br /> 有关详细信息，请参阅 [“‰”自定义说明符](#SpecifierPerMille)。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |“E0”<br /><br /> “E+0”<br /><br /> “E-0”<br /><br /> “E0”<br /><br /> “E+0”<br /><br /> “E-0”|指数表示法|如果后跟至少一个 0（零），则使用指数表示法设置结果格式。 “E”或“e”指示指数符号在结果字符串中是大写还是小写。 跟在“E”或“e”字符后面的零的数目确定指数中的最小位数。 加号 (+) 指示符号字符总是置于指数前面。 减号 (-) 指示符号字符仅置于负指数前面。<br /><br /> 有关详细信息，请参阅 [“E”和“e”自定义说明符](#SpecifierExponent)。|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
-|“\\”|转义符|使下一个字符被解释为文本而不是自定义格式说明符。<br /><br /> 详细信息： ["\\"转义字符](#SpecifierEscape)。|987654 ("\\###00\\#") -> #987654#|  
+|“\\”|转义符|使下一个字符被解释为文本而不是自定义格式说明符。<br /><br /> 有关详细信息，请参阅[“\\”转义字符](#SpecifierEscape)。|987654 ("\\###00\\#") -> #987654#|  
 |'*string*'<br /><br /> "*string*"|文本字符串分隔符|指示应复制到未更改的结果字符串的封闭字符。|68 ("# ' degrees'") -> 68  degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|  
 |;|部分分隔符|通过分隔格式字符串定义正数、负数和零各部分。<br /><br /> 有关详细信息，请参阅 [“;”部分分隔符](#SectionSeparator)。|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
 |其他|所有其他字符|字符将复制到未更改的结果字符串。|68 ("# °") -> 68 °|  
@@ -171,7 +174,7 @@ ms.lasthandoff: 11/21/2017
  [返回表首](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>"\\"转义字符  
+## <a name="the--escape-character"></a>“\\”转义字符  
  格式字符串中的“#”、“0”、“.”、“,”、“%”和“‰”符号被解释为格式说明符而不是文本字符。 大写和小写“E”以及 + 和 - 符号也可能被解释为格式说明符，具体取决于它们在自定义格式字符串中的位置。  
   
  若要防止某个字符被解释为格式说明符，你可以在该字符前面加上反斜杠（即转义字符）。 转义字符表示以下字符为应包含在未更改的结果字符串中的字符文本。  
@@ -181,7 +184,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  一些编译器（如 C++ 和 C# 编译器）也可能会将单个反斜杠字符解释为转义字符。 若要确保在设置格式时正确解释字符串，在 C# 中，可以在字符串之前使用原义字符串文本字符（@ 字符），或者在 C# 和 C++ 中，在每个反斜杠之前另外添加一个反斜杠字符。 下面的 C# 示例阐释了这两种方法。  
   
- 下面的示例使用转义字符以防止格式设置操作解释"#"、"0"和"\\"字符作为转义符或格式说明符。 C# 示例使用附加的反斜杠以确保将原反斜杠解释为文本字符。  
+ 下面的示例使用转义字符，以防格式设置操作将“#”、“0”和“\\”字符解释为转义字符或格式说明符。 C# 示例使用附加的反斜杠以确保将原反斜杠解释为文本字符。  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
  [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
@@ -218,7 +221,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control-panel-settings"></a>控制面板设置  
  控制面板中 **“区域和语言选项”** 项中的设置会影响由格式化操作产生的结果字符串。 这些设置用于初始化与当前线程区域性关联的 <xref:System.Globalization.NumberFormatInfo> 对象，并且当前线程区域性将提供用于控制格式设置的值。 使用不同设置的计算机将生成不同的结果字符串。  
   
- 此外，如果你使用<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>构造函数实例化一个新<xref:System.Globalization.CultureInfo>对象，表示与当前系统区域性，建立的任何自定义相同的区域性**区域和语言选项**控制面板中将应用到新<xref:System.Globalization.CultureInfo>对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。  
+ 此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 构造函数实例化表示当前系统区域性的新 <xref:System.Globalization.CultureInfo> 对象，通过控制面板中的“区域和语言选项”项创建的任何自定义都会应用于新 <xref:System.Globalization.CultureInfo> 对象。 可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 构造函数来创建不会反映系统的自定义项的 <xref:System.Globalization.CultureInfo> 对象。  
   
 ### <a name="rounding-and-fixed-point-format-strings"></a>舍入和定点格式字符串  
  对于固定点格式字符串（即不包含科学记数法格式字符的格式字符串），数字被舍入为与小数点右边的数字占位符数目相同的小数位数。 如果格式字符串不包含小数点，数字被舍入为最接近的整数。 如果数字位数多于小数点左边数字占位符的个数，多余的数字被复制到结果字符串中紧挨着第一个数字占位符的前面。  
@@ -235,9 +238,9 @@ ms.lasthandoff: 11/21/2017
   
  [返回表首](#table)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Globalization.NumberFormatInfo>  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
- [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+ [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [如何：用前导零填充数字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
  [示例：.NET Framework 4 格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

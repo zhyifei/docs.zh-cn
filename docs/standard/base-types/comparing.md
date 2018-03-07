@@ -1,5 +1,5 @@
 ---
-title: "比较.NET 中的字符串"
+title: "比较 .NET 中的字符串"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -24,17 +24,20 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 34aa922155943d1b4d39de2e7c33ebc1228e1083
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a9c2597ed2321c7494eaf44c3c43c2edc4df1952
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="comparing-strings-in-net"></a>比较.NET 中的字符串
+# <a name="comparing-strings-in-net"></a>比较 .NET 中的字符串
 .NET 提供几种方法来比较字符串的值。 下表列出和描述值比较方法。  
   
 |方法名称|使用|  
@@ -53,9 +56,9 @@ ms.lasthandoff: 11/21/2017
   
 |返回值|条件|  
 |------------------|---------------|  
-|负整数|在排序顺序中，第一个字符串在第二个字符串之前。<br /><br /> - 或 -<br /><br /> 第一个字符串是 `null`。|  
-|0|第一个字符串和第二个字符串相等。<br /><br /> - 或 -<br /><br /> 两个字符串都是 `null`。|  
-|正整数<br /><br /> - 或 -<br /><br /> 1|在排序顺序中，第一个字符串在第二个字符串之后。<br /><br /> - 或 -<br /><br /> 第二个字符串是 `null`。|  
+|负整数|在排序顺序中，第一个字符串在第二个字符串之前。<br /><br /> 或<br /><br /> 第一个字符串是 `null`。|  
+|0|第一个字符串和第二个字符串相等。<br /><br /> 或<br /><br /> 两个字符串都是 `null`。|  
+|正整数<br /><br /> 或<br /><br /> 1|在排序顺序中，第一个字符串在第二个字符串之后。<br /><br /> 或<br /><br /> 第二个字符串是 `null`。|  
   
 > [!IMPORTANT]
 >  <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法主要用于对字符串进行排序。 不应使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法来测试相等性（即，显式查找返回值 0 而不考虑一个字符串是否小于或大于另一个）。 相反，若要确定两个字符串是否相等，请使用 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
  此示例向控制台显示 `-1` 。  
   
- 前面的示例默认区分区域性。 若要执行不区分区域性的字符串比较，使用的重载<xref:System.String.Compare%2A?displayProperty=nameWithType>方法，您可以指定要通过提供使用的区域性*区域性*参数。 有关示例，演示如何使用<xref:System.String.Compare%2A?displayProperty=nameWithType>方法来执行不区分区域性的比较，请参阅[执行不区分区域性的字符串比较](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
+ 前面的示例默认区分区域性。 若要执行非区域性敏感型字符串比较，请使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法重载，这样就可以提供区域性参数，指定要使用的区域性。 有关展示了如何使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法执行非区域性敏感型比较的示例，请参阅[执行非区域性敏感型字符串比较](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法比较两个字符串对象而不考虑本地区域性。 此方法的返回值与上表中 **Compare** 方法返回的值相等。  
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/21/2017
   
  此示例向控制台显示 `-1` 。  
   
- 所有重载<xref:System.String.CompareTo%2A?displayProperty=nameWithType>方法默认执行区分区域性且区分大小写的比较。 此方法不提供任何允许执行不区分区域性的比较的重载。 对于代码的清楚起见，我们建议你使用**String.Compare**方法相反，指定<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>区分区域性的操作或<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>不区分区域性的操作。 有关演示如何使用 **String.Compare** 方法来执行区分和不区分区域性的比较的示例，请参阅 [执行不区分区域性的字符串比较](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的所有重载都默认执行区分大小写的区域性敏感型比较。 此方法不提供任何允许执行不区分区域性的比较的重载。 为了代码清楚起见，建议改用 String.Compare 方法，同时指定 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 执行区域性敏感型操作，或指定 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 执行非区域性敏感型操作。 有关演示如何使用 **String.Compare** 方法来执行区分和不区分区域性的比较的示例，请参阅 [执行不区分区域性的字符串比较](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
   
 ## <a name="equals"></a>Equals  
  **String.Equals** 方法能够轻松确定两个字符串是否相等。 这个区分大小写的方法返回 **true** 或 **false** 布尔值。 它可以在现有类中使用，如下一个示例所示。 以下示例使用 **Equals** 方法来确定一个字符串对象是否包含短语“Hello World”。  
@@ -157,6 +160,6 @@ ms.lasthandoff: 11/21/2017
   
  与 **String.Remove** 方法结合使用时，这两种方法都很有用。 可以使用 **IndexOf** 或 **LastIndexOf** 方法来检索字符的位置，然后将该位置提供给 **Remove** 方法，以删除字符或以该字符开头的单词。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)  
  [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

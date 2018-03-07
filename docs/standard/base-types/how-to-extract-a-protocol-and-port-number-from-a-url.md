@@ -19,21 +19,24 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10ab05ac8b24c0658be2f27809137c6b0bd4834f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 62931273acd41768d131c08510e14ff187d64296
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>如何：从 URL 中提取协议和端口号
 下面的示例从 URL 中提取协议和端口号。  
   
 ## <a name="example"></a>示例  
- 该示例使用<xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>方法返回的协议跟端口号后跟一个冒号。  
+ 此示例使用 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法返回协议，后面依次跟的是冒号和端口号。  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/Example.cs#1)]
  [!code-vb[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/Example.vb#1)]  
@@ -43,18 +46,18 @@ ms.lasthandoff: 10/18/2017
 |模式|描述|  
 |-------------|-----------------|  
 |`^`|从字符串的开头部分开始匹配。|  
-|`(?<proto>\w+)`|匹配一个或多个单词字符。 此组命名`proto`。|  
+|`(?<proto>\w+)`|匹配一个或多个单词字符。 将此组命名为 `proto`。|  
 |`://`|匹配后跟两个正斜线的冒号。|  
 |`[^/]+?`|匹配正斜线以外的任何字符的一次或多次出现（但尽可能少）。|  
-|`(?<port>:\d+)?`|匹配后跟一个或多个数字字符的冒号的零次或一次出现。 此组命名`port`。|  
+|`(?<port>:\d+)?`|匹配后跟一个或多个数字字符的冒号的零次或一次出现。 将此组命名为 `port`。|  
 |`/`|匹配正斜线。|  
   
- <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>方法会扩展到`${proto}${port}`替换序列，串联两个已命名的组捕获在正则表达式模式中的值。 它是到显式连接字符串的结果从返回的集合对象中检索到一个便捷替代方式<xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>属性。  
+ <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法扩展 `${proto}${port}` 替换序列，以连接在正则表达式模式中捕获的两个命名组的值。 便捷的替换方法是，显式连接从 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回的集合对象检索到的字符串。  
   
- 该示例使用<xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>带有两个替换方法`${proto}`和`${port}`、 输出字符串中包含的捕获的组。 您可以捕获的组匹配项的从<xref:System.Text.RegularExpressions.GroupCollection>对象相反，如以下代码所示。  
+ 此示例使用有两处替换（`${proto}` 和 `${port}`）的 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法，在输出字符串中添加捕获组。 可以改为从匹配的 <xref:System.Text.RegularExpressions.GroupCollection> 对象检索捕获组，如下面的代码所示。  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)

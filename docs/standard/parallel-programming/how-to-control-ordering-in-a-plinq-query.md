@@ -11,46 +11,50 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, how to control ordering
+helpviewer_keywords:
+- PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b9e29aa825a68154e32a34a23ca170258092b88a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3aef90c1a1160905662f93a83d6536f6d804b179
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>如何：在 PLINQ 查询中控制排序
-这些示例演示如何控制排序 PLINQ 查询中使用<xref:System.Linq.ParallelEnumerable.AsOrdered%2A>扩展方法。  
+这些示例展示了如何使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 扩展方法控制 PLINQ 查询中的顺序。  
   
 > [!WARNING]
->  这些示例主要是为了演示用法，并可能或可能不运行速度不如等效的顺序 LINQ to 对象查询。  
+>  这些示例主要用于演示用法，可能会或可能不会比相当的顺序 LINQ to Objects 查询快。  
   
 ## <a name="example"></a>示例  
- 下面的示例将保留源序列的排序。 有时这是必要的;例如，有些查询运算符需要经过排序的源序列生成正确的结果。  
+ 下面的示例暂留了源序列的顺序。 有时，这样做是有必要的；例如，一些查询运算符需要有序的源序列，才能生成正确结果。  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示某些查询可能需要对其源序列进行排序的运算符。 这些运算符将适用于无序序列，但它们可能会产生意外的结果。  
+ 下面的示例展示了一些可能要求源序列应为有序的查询运算符。 虽然这些运算符可以处理无序序列，但可能会生成意外结果。  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- 若要运行此方法，请将其粘贴到中的 PLINQDataSample 类[PLINQ 数据示例](../../../docs/standard/parallel-programming/plinq-data-sample.md)项目，然后按 F5。  
+ 若要运行此方法，请将它粘贴到 [PLINQ 数据样本](../../../docs/standard/parallel-programming/plinq-data-sample.md)项目的 PLINQDataSample 类中，再按 F5。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何保留排序的第一个部分的查询，然后删除排序可提高性能的 join 子句中，然后重新应用的最终结果序列的排序。  
+ 下面的示例展示了如何暂留查询第一部分的顺序，再删除顺序以提升 join 子句的性能，并对最终结果序列重新应用顺序。  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- 若要运行此方法，请将其粘贴到中的 PLINQDataSample 类[PLINQ 数据示例](../../../docs/standard/parallel-programming/plinq-data-sample.md)项目，然后按 F5。  
+ 若要运行此方法，请将它粘贴到 [PLINQ 数据样本](../../../docs/standard/parallel-programming/plinq-data-sample.md)项目的 PLINQDataSample 类中，再按 F5。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Linq.ParallelEnumerable>  
  [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

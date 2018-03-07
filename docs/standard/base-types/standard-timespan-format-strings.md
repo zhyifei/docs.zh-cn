@@ -23,18 +23,21 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4c486728ee4f98a6718c4d019976fccd6f380d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02dd73cd7f8f6be07b298e6fb1aac2b4759d21bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-timespan-format-strings"></a>标准 TimeSpan 格式字符串
-<a name="Top"></a>一个标准<xref:System.TimeSpan>格式字符串使用单个格式说明符来定义的文本表示形式<xref:System.TimeSpan>格式设置操作生成的值。 任何包含一个以上字符（包括空格）的格式字符串都被解释为自定义 <xref:System.TimeSpan> 格式字符串。 有关详细信息，请参阅[自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
+<a name="Top"></a> 标准 <xref:System.TimeSpan> 格式字符串使用一个格式说明符，定义格式设置操作生成的 <xref:System.TimeSpan> 值的文本表示形式。 任何包含一个以上字符（包括空格）的格式字符串都被解释为自定义 <xref:System.TimeSpan> 格式字符串。 有关详细信息，请参阅[自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
   
  通过调用 <xref:System.TimeSpan> 方法的重载以及通过支持复合格式设置的方法（如 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>）产生 <xref:System.String.Format%2A?displayProperty=nameWithType> 值的字符串表示形式。 有关更多信息，请参见[格式设置类型](../../../docs/standard/base-types/formatting-types.md)和[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。 以下示例演示了标准格式字符串在格式设置操作中的用法。  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="top"></a>下表列出了标准时间间隔格式说明符。  
   
-|格式说明符|名称|描述|示例|  
+|格式说明符|name|描述|示例|  
 |----------------------|----------|-----------------|--------------|  
 |“c”|常量（固定）格式|此说明符不区分区域性。 它的形式是 `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`。<br /><br /> （“t”格式与“T”格式字符串产生的结果相同。）<br /><br /> 有关详细信息，请参阅[常量（“c”）格式说明符](#Constant)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |“g”|常规短格式|该说明符仅输出需要的内容。 它区分区域性并采用 `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]` 形式。<br /><br /> 有关详细信息，请参阅[常规短（“g”）格式说明符](#GeneralShort)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  方括号 ([ and ]) 中的元素是可选的。 句点 (.) 和冒号 (:) 是文字符号。 下表介绍了剩余的元素。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|可选负号，指示负时间间隔。|  
 |*d*|不带前导零的可选天数。|  
@@ -71,7 +74,7 @@ ms.lasthandoff: 11/21/2017
 |*ss*|秒数，范围为“0”到“59”。|  
 |*fffffff*|秒的可选小数部分。  其值的范围为“0000001”（一刻度或一秒的一千万分之一）到“9999999”（一秒的一千万分之九百九十九万九千九百九或一秒少一刻度）。|  
   
- 与“g”和“G”格式说明符不同，“c”格式说明符不区分区域性。 它产生了 <xref:System.TimeSpan> 值的字符串表示形式，该值不变且在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前对 .NET Framework 的所有先前版本均通用。 "c"是默认设置<xref:System.TimeSpan>格式字符串;<xref:System.TimeSpan.ToString?displayProperty=nameWithType>方法通过使用"c"格式字符串设置格式的时间间隔值。  
+ 与“g”和“G”格式说明符不同，“c”格式说明符不区分区域性。 它产生了 <xref:System.TimeSpan> 值的字符串表示形式，该值不变且在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前对 .NET Framework 的所有先前版本均通用。 “c”是默认的 <xref:System.TimeSpan> 格式字符串；<xref:System.TimeSpan.ToString?displayProperty=nameWithType> 方法使用“c”格式字符串设置时间间隔值的格式。  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> 也支持“t”和“T”标准格式字符串，其行为与“c”标准格式字符串相同。  
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/21/2017
   
  方括号 ([ and ]) 中的元素是可选的。 冒号 (:) 是一种文字符号。 下表介绍了剩余的元素。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|可选负号，指示负时间间隔。|  
 |*d*|不带前导零的可选天数。|  
@@ -118,7 +121,7 @@ ms.lasthandoff: 11/21/2017
   
  方括号 ([ and ]) 中的元素是可选的。 冒号 (:) 是一种文字符号。 下表介绍了剩余的元素。  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|可选负号，指示负时间间隔。|  
 |*d*|不带前导零的天数。|  
@@ -137,7 +140,7 @@ ms.lasthandoff: 11/21/2017
   
  [返回表首](#Top)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
  [自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [分析字符串](../../../docs/standard/base-types/parsing-strings.md)
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

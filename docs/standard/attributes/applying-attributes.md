@@ -16,15 +16,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e23649c5d833bef8b74ec5d3b9c22235756580e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b55684ec30a69bd9773e19420fbe89ca58fd66dd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="applying-attributes"></a>应用特性
 使用以下过程将特性应用于代码的元素。  
@@ -37,11 +40,11 @@ ms.lasthandoff: 11/21/2017
   
 3.  指定特性的位置参数和命名参数。  
   
-     位置参数是必需的，且必须位于所有命名参数之前；它们对应于特性的其中一个构造函数的参数。 命名参数是可选的且对应于特性的读/写属性。 在 c + + 和 C# 中，指定`name` = `value`对于每个可选参数，其中`name`是属性的名称。 在 Visual Basic 中，指定 `name`:=`value`。  
+     位置参数是必需的，且必须位于所有命名参数之前；它们对应于特性的其中一个构造函数的参数。 命名参数是可选的且对应于特性的读/写属性。 在 C++ 和 C# 中，为每个可选参数指定 `name`=`value`，其中 `name` 是属性名。 在 Visual Basic 中，指定 `name`:=`value`。  
   
  编译代码时，特性将被发到元数据中，并且通过运行时反射服务可用于公共语言运行时和任何自定义工具或应用程序。  
   
- 按照惯例，所有特性名称都以 Attribute 结尾。 但是，面向运行时的几种语言（如 Visual Basic 和 C#）无需指定特性的全名。 例如，如果你想要初始化<xref:System.ObsoleteAttribute?displayProperty=nameWithType>，只需引用其作为**过时**。  
+ 按照惯例，所有特性名称都以 Attribute 结尾。 但是，面向运行时的几种语言（如 Visual Basic 和 C#）无需指定特性的全名。 例如，若要初始化 <xref:System.ObsoleteAttribute?displayProperty=nameWithType>，只需将它引用为 Obsolete 即可。  
   
 ## <a name="applying-an-attribute-to-a-method"></a>将特性应用于方法  
  以下代码示例显示如何声明 **System.ObsoleteAttribute**（其将代码标记为已过时。） 将字符串 `"Will be removed in next version"` 传递给特性。 当特性描述的代码被调用时，此特性会导致产生编译器警告，显示传递的字符串。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
  应用此特性时，字符串 `"My Assembly"` 将被放置在文件元数据部分的程序集清单中。 可通过后列方法查看特性：使用 [MSIL 反汇编程序 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)，或创建一个自定义程序来检索特性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [特性](../../../docs/standard/attributes/index.md)  
  [检索存储在特性中的信息](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
  [概念](/cpp/windows/attributed-programming-concepts)  

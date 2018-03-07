@@ -14,32 +14,35 @@ helpviewer_keywords:
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 42ad427fc2c1175c0d9b333aa418aea039f11a35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 83022bd27379e1ee34197af4897a5c809f495f48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="foreground-and-background-threads"></a>前台和后台线程
-托管的线程是后台线程或前台线程。 后台线程相等前台线程有一个例外： 后台线程不会保留运行的托管的执行环境。 一旦所有前台线程已都停止 （其中的.exe 文件是托管程序集） 的托管进程中，系统将停止所有后台线程，并关闭。  
+托管线程可以是后台线程，也可以是前台线程。 后台线程和前台线程几乎完全相同，只有一处不同，即后台线程不会确保托管执行环境一直运行。 一旦托管进程（其中 .exe 文件为托管程序集）中的所有前台线程都停止，系统会停止并关闭所有后台线程。  
   
 > [!NOTE]
->  当运行时停止后台线程，因为进程正在关闭时，线程中不引发任何异常。 但是，当线程将停止，因为<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>方法卸载应用程序域中，<xref:System.Threading.ThreadAbortException>在前台和后台线程中引发。  
+>  如果运行时因进程正在关闭而停止后台线程，不会在线程中抛出任何异常。 不过，如果线程因 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 方法卸载应用域而停止，前台线程和后台线程中都会抛出 <xref:System.Threading.ThreadAbortException>。  
   
- 使用<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>属性来确定线程是背景或前景线程，或更改其状态。 线程可以更改为后台线程在任何时候通过设置其<xref:System.Threading.Thread.IsBackground%2A>属性`true`。  
+ <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> 属性可用于确定是后台线程还是前台进程，也可用于更改线程状态。 可以随时将线程的 <xref:System.Threading.Thread.IsBackground%2A> 属性更改为 `true`，将线程更改为后台线程。  
   
 > [!IMPORTANT]
->  前台或后台线程的状态的不会影响在线程中未经处理的异常的结果。 在.NET Framework 2.0 版中，在前台或后台线程中未经处理的异常会导致应用终止。 请参阅[托管线程中的异常](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
+>  线程的前台或后台状态不会影响线程中抛出未经处理的异常。 在 .NET Framework 版本 2.0 中，前台线程或后台线程中未经处理的异常会导致应用终止。 请参阅[托管线程异常](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
   
- 属于托管的线程池的线程 (即，线程其<xref:System.Threading.Thread.IsThreadPoolThread%2A>属性是`true`) 是后台线程。 从非托管代码进入托管的执行环境的所有线程都标记为后台线程。 通过创建并启动一个新生成的所有线程<xref:System.Threading.Thread>对象是由默认前台线程。  
+ 属于托管线程池的线程（即 <xref:System.Threading.Thread.IsThreadPoolThread%2A> 属性为 `true` 的线程）是后台线程。 从非托管代码进入托管执行环境的所有线程都会标记为后台线程。 默认情况下，通过新建并启动 <xref:System.Threading.Thread> 对象生成的所有线程都是前台线程。  
   
- 如果你使用一个线程来监视活动，例如套接字连接，设置其<xref:System.Threading.Thread.IsBackground%2A>属性`true`，以便线程不会阻止您的进程终止。  
+ 如果使用线程监视活动（如套接字连接），请将它的 <xref:System.Threading.Thread.IsBackground%2A> 属性设置为 `true`，以便线程不会阻止进程终止。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
  <xref:System.Threading.Thread>  
  <xref:System.Threading.ThreadAbortException>

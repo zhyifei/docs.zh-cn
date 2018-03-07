@@ -17,39 +17,42 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9d3fd9a5a49d65b37d2cdb5107e9c516a6df5847
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 146572fb060d1bd37d6eee5b5dce3c255b28f8b2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>检索存储在特性中的信息
-检索的自定义特性是一个简单的过程。 首先，声明你想要检索的属性的实例。 然后，使用<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>方法以初始化为你想要检索的属性值的新属性。 后在初始化新的属性时，只需使用其属性来获取值。  
+检索自定义属性的过程非常简单。 首先，声明要检索的属性实例。 然后，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法，用要检索的属性的值初始化新属性。 在初始化新属性后，只需使用它的属性即可获取值。  
   
 > [!IMPORTANT]
->  本主题介绍如何检索加载到执行上下文的代码中的特性。 若要检索的代码加载到只反射上下文的特性，必须使用<xref:System.Reflection.CustomAttributeData>类，如下所示[如何： 将程序集加载到 Reflection-Only 上下文](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+>  本主题介绍了如何为执行上下文中加载的代码检索属性。 若要为仅反射上下文中加载的代码检索属性，必须使用 <xref:System.Reflection.CustomAttributeData> 类，如[如何：将程序集加载到仅反射上下文](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)中所述。  
   
- 本部分介绍了以下方式来检索属性：  
+ 此部分介绍了如何通过以下方式检索属性：  
   
--   [检索属性的一个实例](#cpconretrievingsingleinstanceofattribute)  
+-   [检索一个属性实例](#cpconretrievingsingleinstanceofattribute)  
   
--   [检索属性应用于同一范围内的多个实例](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+-   [检索应用于同一范围的多个属性实例](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [检索应用到不同的作用域的属性的多个实例](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+-   [检索应用于不同范围的多个属性实例](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
-## <a name="retrieving-a-single-instance-of-an-attribute"></a>检索属性的一个实例  
- 在下面的示例中， `DeveloperAttribute` （上一节中所述） 应用于`MainApp`类级别上的类。 `GetAttribute`方法使用**GetCustomAttribute**检索中存储的值`DeveloperAttribute`之前向控制台显示它们的类级别上。  
+## <a name="retrieving-a-single-instance-of-an-attribute"></a>检索一个属性实例  
+ 在下面的示例中，`DeveloperAttribute`（如上一部分所述）在类一级适用于 `MainApp` 类。 `GetAttribute` 方法使用 GetCustomAttribute 在类一级检索 `DeveloperAttribute` 中存储的值，再在控制台中显示它们。  
   
  [!code-cpp[Conceptual.Attributes.Usage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#18)]
  [!code-csharp[Conceptual.Attributes.Usage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#18)]
  [!code-vb[Conceptual.Attributes.Usage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source3.vb#18)]  
   
- 此程序显示以下文本时执行。  
+ 此程序在执行时显示以下文本。  
   
 ```  
 The Name Attribute is: Joan Smith.  
@@ -57,41 +60,41 @@ The Level Attribute is: 42.
 The Reviewed Attribute is: True.  
 ```  
   
- 如果未找到该属性， **GetCustomAttribute**方法初始化`MyAttribute`为 null 值。 此示例检查`MyAttribute`的此类实例，并通知用户，如果不找到任何属性。 如果`DeveloperAttribute`找不到在类范围中，向控制台显示以下消息。  
+ 如果找不到属性，GetCustomAttribute 方法会将 `MyAttribute` 初始化为 NULL 值。 此示例在 `MyAttribute` 中查找此类实例，并在找不到属性时通知用户。 如果在类范围中找不到 `DeveloperAttribute`，控制台中显示以下消息。  
   
 ```  
 The attribute was not found.   
 ```  
   
- 此示例假定属性定义是在当前命名空间。 请记住要导入的属性定义驻留如果它不在当前命名空间的命名空间。  
+ 此示例假定属性定义位于当前的命名空间中。 请注意，如果属性定义不在当前的命名空间中，请导入属性定义所在的命名空间。  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>   
-## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>检索属性应用于同一范围内的多个实例  
- 在前面的示例中，要检查的类和要查找的特定属性将传递到<xref:System.Attribute.GetCustomAttribute%2A>。 如果也只在类级别上应用属性的一个实例，该代码将运行。 但是，如果属性的多个实例应用于相同的类级别， **GetCustomAttribute**方法未检索所有信息。 在其中将同一特性的多个实例应用于同一作用域的情况下，你可以使用<xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>放置到一个数组的所有实例的属性。 例如，如果两个实例的`DeveloperAttribute`同一类中，在类级别上应用`GetAttribute`方法可以修改，以显示在这两个属性中找到的信息。 请记住，在同一级别中，将多个属性必须与定义的属性**AllowMultiple**属性设置为**true**中<xref:System.AttributeUsageAttribute>。  
+## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>检索应用于同一范围的多个属性实例  
+ 在上一示例中，要检查的类和要查找的特定属性都传递给 <xref:System.Attribute.GetCustomAttribute%2A>。 此代码非常适用于只有一个属性实例在类一级应用的情况。 不过，如果在相同的类一级应用多个属性实例，GetCustomAttribute 方法不会检索所有信息。 如果同一属性的多个实例应用于相同范围，可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 将所有属性实例添加到数组中。 例如，如果在相同的类一级应用两个 `DeveloperAttribute` 实例，可以将 `GetAttribute` 方法修改为显示在这两个属性中找到的信息。 请注意，若要在同一级别应用多个属性，必须在 <xref:System.AttributeUsageAttribute> 中定义属性，并将 AllowMultiple 属性设为 true。  
   
- 下面的代码示例演示如何使用**GetCustomAttributes**方法来创建一个数组，其中引用的所有实例`DeveloperAttribute`在任何给定类。 所有属性的值将显示到控制台。  
+ 下面的代码示例展示了如何使用 GetCustomAttributes 方法来创建数组，以引用任何给定类中的所有 `DeveloperAttribute` 实例。 然后，所有属性的值都显示在控制台中。  
   
  [!code-cpp[Conceptual.Attributes.Usage#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#19)]
  [!code-csharp[Conceptual.Attributes.Usage#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#19)]
  [!code-vb[Conceptual.Attributes.Usage#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source3.vb#19)]  
   
- 如果找不到任何属性，该代码将提醒用户。 否则，在两个实例中包含的信息`DeveloperAttribute`显示。  
+ 如果找不到任何属性，此代码会向用户发出警报。 如果找到，就会显示两个 `DeveloperAttribute` 实例中包含的信息。  
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>   
-## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>检索应用到不同的作用域的属性的多个实例  
- <xref:System.Attribute.GetCustomAttributes%2A>和<xref:System.Attribute.GetCustomAttribute%2A>方法不会搜索整个类和在该类中返回的属性的所有实例。 相反，它们一次搜索只能有一个指定的方法或成员。 如果类具有相同的属性应用于每个成员，并且你想要检索中应用于这些成员的所有属性的值，则必须为每个方法或成员单独向**GetCustomAttributes**和**GetCustomAttribute**。  
+## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>检索应用于不同范围的多个属性实例  
+ <xref:System.Attribute.GetCustomAttributes%2A> 和 <xref:System.Attribute.GetCustomAttribute%2A> 方法不会搜索整个类，也不会返回相应类中的所有属性实例。 而是一次只搜索一个指定方法或成员。 如果类中的相同属性应用于每个成员，且要检索应用于这些成员的所有属性的值，必须将各个方法或成员单独提供给 GetCustomAttributes 和 GetCustomAttribute。  
   
- 下面的代码示例采用类作为一个参数，并搜索`DeveloperAttribute`（已定义以前） 和该类的每个单个方法的类级别上。  
+ 下面的代码示例将类用作参数，并在类一级以及相应类的所有方法一级搜索 `DeveloperAttribute`（如前面所定义）。  
   
  [!code-cpp[Conceptual.Attributes.Usage#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#20)]
  [!code-csharp[Conceptual.Attributes.Usage#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#20)]
  [!code-vb[Conceptual.Attributes.Usage#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source3.vb#20)]  
   
- 如果没有实例`DeveloperAttribute`上的方法级别或类级别上，找到`GetAttribute`方法，则通知用户，未找到特性，并显示方法或不包含属性的类的名称。 如果找到一个属性， `Name`， `Level`，和`Reviewed`字段显示到控制台。  
+ 如果在方法或类一级找不到 `DeveloperAttribute` 实例，`GetAttribute` 方法会通知用户找不到属性，并显示不包含属性的方法名称或类名称。 如果找到属性，控制台中会显示 `Name`、`Level` 和 `Reviewed` 字段。  
   
- 你可以使用的成员<xref:System.Type>类，以传递的类中获取的各个方法和成员。 该示例首先查询**类型**对象以获取类级别的特性信息。 接下来，它使用<xref:System.Type.GetMethods%2A?displayProperty=nameWithType>将转换为数组的所有方法的实例放<xref:System.Reflection.MemberInfo?displayProperty=nameWithType>要检索的方法级别的属性信息的对象。 你还可以使用<xref:System.Type.GetProperties%2A?displayProperty=nameWithType>方法来检查在属性级别上的属性或<xref:System.Type.GetConstructors%2A?displayProperty=nameWithType>要检查的构造函数级别上的特性。  
+ 可以使用 <xref:System.Type> 类的成员，在传递的类中获取各个方法和成员。 此示例先查询 Type 对象，以获取类一级的属性信息。 接下来，它使用 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 将所有方法实例都放入 <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> 对象数组，以检索方法一级的属性信息。 还可以使用 <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> 方法检查属性一级的属性，或使用 <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType>方法检查构造函数一级的属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Type?displayProperty=nameWithType>  
  <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
  <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  

@@ -18,15 +18,18 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7bc068cc248e1ca8e1d3c64eaa4132682721e035
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-options"></a>正则表达式选项
 <a name="Top"></a>默认情况下，正则表达式模式中带有任意文本字符的输入字符串比较区分大小写，正则表达式模式中的空白将被解释为文本空白字符且正则表达式中的捕获组通过隐式和显式命名。 可通过指定正则表达式选项修改默认正则表达式行为的这些和其他数个方面。 列于下表的这些选项，可将内联作为正则表达式的一部分包含，或者可将它们作为 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 枚举值提供给 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 类构造函数或静态模式匹配方法。  
@@ -112,7 +115,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Regex.Language.Options#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#20)]
  [!code-vb[Conceptual.Regex.Language.Options#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#20)]  
   
- 以下各节列出所支持的.NET 中的正则表达式选项。  
+ 下面各部分列出了 .NET 正则表达式支持的选项。  
   
 <a name="Default"></a>   
 ## <a name="default-options"></a>默认选项  
@@ -214,7 +217,7 @@ ms.lasthandoff: 10/18/2017
   
  旨在仅从文档提取末尾有句号、感叹点或问号的句子，仅产生的句子（这由 <xref:System.Text.RegularExpressions.Match> 对象表示）有意义。 集合中的各单词不是。  
   
- 随后未使用的捕获组可能很昂贵，因为正则表达式引擎必须填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合对象。 作为替代方法，你可以使用<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>选项或`n`内联选项，来指定唯一有效的捕获是显式命名或已编号的由指定的组`(?<`*名称*`>`*子表达式*`)`构造。  
+ 随后未使用的捕获组可能很昂贵，因为正则表达式引擎必须填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合对象。 作为替换方法，也可以使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 选项或 `n` 内联选项，指定显式命名的唯一有效捕获，或由 `(?<`名称`>` 子表达式`)` 构造指定的编号组。  
   
  以下示例显示 `\b\(?((\w+),?\s?)+[\.!?]\)?` 正则表达式模式在 <xref:System.Text.RegularExpressions.Regex.Match%2A> 方法被调用且没有 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 选项时返回的匹配信息。 如第一个方法调用输出所示，正则表达式引擎使用有关已捕获的子字符串的信息完全填充 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合对象。 因为第二个方法使用设置为 `options` 的 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 进行调用，所以它不会捕获有关组的信息。  
   
@@ -223,7 +226,7 @@ ms.lasthandoff: 10/18/2017
   
  正则表达式模式 `\b\(?((?>\w+),?\s?)+[\.!?]\)?` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`\(?`|匹配左括号（“(”）的零或一个匹配项。|  
@@ -282,11 +285,11 @@ ms.lasthandoff: 10/18/2017
   
 -   始终按原义解释字符内的空格。 例如，正则表达式模式 `[ .,;:]` 匹配任意单个空白字符、句号、逗号、分号或冒号。  
   
--   空白区域内不允许有加括号的限定符，如`{`  *n*  `}`， `{`  *n*  `,}`，和`{` *n*  `,` *m*`}`。 例如，因为它包含一个空白字符，所以正则表达式模式 `\d{1. 3}` 与任何从 1 到 3 位数的数字序列不匹配。  
+-   加括号的量符（如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`）内不得有空格。 例如，因为它包含一个空白字符，所以正则表达式模式 `\d{1. 3}` 与任何从 1 到 3 位数的数字序列不匹配。  
   
--   引入语言元素的字符序列内不允许有空格。 例如:   
+-   引入语言元素的字符序列内不允许有空格。 例如:  
   
-    -   语言元素 `(?:`subexpression`)` 表示非捕获组，并且该元素的 `(?:` 部分不能有嵌入空格。 模式`(? :`*子表达式*`)`引发<xref:System.ArgumentException>因为正则表达式引擎不能分析该模式，且模式，则在运行时`( ?:`*子表达式* `)`不匹配*子表达式*。  
+    -   语言元素 `(?:`subexpression`)` 表示非捕获组，并且该元素的 `(?:` 部分不能有嵌入空格。 模式 `(? :`子表达式`)` 在运行时抛出 <xref:System.ArgumentException>，因为正则表达式引擎无法分析此模式，且模式 `( ?:`子表达式`)` 与子表达式不匹配。  
   
     -   语言元素 `\p{`name`}` 表示一个 Unicode 类别或命名块，它不能在元素的 `\p{` 部分中包括嵌入空格。 如果你包括了空格，则该元素会在运行时引发 <xref:System.ArgumentException> 异常。  
   
@@ -296,7 +299,7 @@ ms.lasthandoff: 10/18/2017
   
  `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`  
   
- 此模式相当于中定义的模式[仅显式捕获](#Explicit)部分，只不过它使用<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>选项来忽略模式空白。  
+ 此模式与[仅显式捕获](#Explicit)部分中定义的模式相似，不同之处在于它使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 选项忽略模式空格。  
   
  [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
  [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]  
@@ -348,7 +351,7 @@ ms.lasthandoff: 10/18/2017
   
  ECMAScript 和规范化正则表达式的行为在三个方面不同：字符类语法、自引用捕获组和八进制与反向引用的解释。  
   
--   字符类语法。 因为规范的正则表达式支持 Unicode，却不支持 ECMAScript，ECMAScript 中的字符类具有一个受限更多的语法且某些字符类语言元素具有不同的含义。 例如，ECMAScript 不支持语言元素（例如 Unicode 类别或块元素 `\p` 和 `\P`）。 同样，使用 ECMAScript 时，与单词字符匹配的 `\w` 元素等效于 `[a-zA-Z_0-9]` 字符类，使用规范化行为时，该元素等效于 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`。 有关详细信息，请参阅[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  
+-   字符类语法。 因为规范的正则表达式支持 Unicode，却不支持 ECMAScript，ECMAScript 中的字符类具有一个受限更多的语法且某些字符类语言元素具有不同的含义。 例如，ECMAScript 不支持语言元素（例如 Unicode 类别或块元素 `\p` 和 `\P`）。 同样，使用 ECMAScript 时，与单词字符匹配的 `\w` 元素等效于 `[a-zA-Z_0-9]` 字符类，使用规范化行为时，该元素等效于 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`。 有关更多信息，请参见 [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  
   
      下面的示例阐释了规范化与 ECMAScript 模式匹配之间的差异。 它定义了正则表达式 `\b(\w+\s*)+`，该表达式与后跟空白字符的单词匹配。 由两个字符串组成的输入，其中一个字符串使用拉丁字符集，另一个则使用西里尔字符集。 如输出所示，对使用 ECMAScript 匹配的 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法的调用无法与西里尔文的单词匹配，而使用规范化匹配的方法调用与这些单词也不匹配。  
   
@@ -401,5 +404,5 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
  [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

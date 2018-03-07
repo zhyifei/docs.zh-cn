@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 78149e0e1c84a457f68b67ea8fe4c82098e794ad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="recoverable-xslt-errors"></a>可恢复的 XSLT 错误
 W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方面确定如何处理某种情况。 这些方面被认为是任意行为。 例如，在第 7.3 节“Creating Processing Instructions”中，XSLT 1.0 建议指出，如果实例化 `xsl:processing-instruction` 的内容会创建文本节点以外的节点，则会发生错误。 对于某些问题，XSLT 1.0 建议指示在处理器决定从错误中恢复时应做的决策。 对于 7.3 节中给出的问题，W3C 指出，实现可以通过忽略节点及其内容来从此错误中恢复。  
@@ -29,7 +32,7 @@ W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方
   
 -   错误指示此条件将引发异常。  
   
--   在找不到的部分引用[W3C XSL 转换 (XSLT) 1.0 版建议](http://go.microsoft.com/fwlink/?LinkId=49919)和[W3C XSL 转换 (XSLT) 1.0 版规范勘误表](http://go.microsoft.com/fwlink/?LinkId=49917)。  
+-   有关各部分的参考信息，可以参阅 [W3C XSL 转换 (XSLT) 1.0 版建议](http://www.w3.org/TR/xslt)和 [W3C XSL 转换 (XSLT) 1.0 版规范勘误表](http://www.w3.org/1999/11/REC-xslt-19991116-errata/)。  
   
 |XSLT 条件|节|XslCompiledTransform 行为|  
 |--------------------|-------------|-----------------------------------|  
@@ -48,7 +51,7 @@ W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方
 |`xsl:processing-instruction` 内容的实例化结果中包含字符串“--”或以“-”结尾。|7.4|恢复|  
 |`xsl:comment` 内容的实例化结果创建了文本节点以外的节点。|7.4|错误*|  
 |变量绑定元素内部的模板返回属性节点或命名空间节点。|11.2|错误*|  
-|从传入文档函数的 URI 中检索资源时出错。|12.1|错误|  
+|从传入文档函数的 URI 中检索资源时出错。|12.1|Error|  
 |文档函数中的 URI 引用包含片断标识符，在处理片断标识符时出错。|12.1|恢复*|  
 |存在多个名称相同但是值不同的属性，这些属性不是具有相同导入优先级的 `xsl:output` 中的命名 cdata 节元素。|16|恢复|  
 |处理器不支持 `xsl:output` 编码属性中的编码。|16.1|恢复|  
@@ -59,7 +62,7 @@ W3C XSL 转换 (XSLT) 1.0 版建议中涉及到实现提供者可以在哪些方
 |`value` 的 `xsl:number` 属性为 NAN、无限大或小于 0.5。|errata 24|恢复|  
 |文档函数的第二个参数 node-set 为空，且 URI 引用是相对的。|errata 14|恢复|  
   
- <sup>*</sup>此行为是不同于<xref:System.Xml.Xsl.XslTransform>类。 有关详细信息，请参阅[实现的任意行为 XslTransform 类中](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。  
+ <sup>*</sup> 此行为与 <xref:System.Xml.Xsl.XslTransform> 类的行为不同。 有关详细信息，请参阅[在 XslTransform 类中实现任意行为](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)

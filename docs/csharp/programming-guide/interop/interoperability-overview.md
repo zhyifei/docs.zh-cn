@@ -2,7 +2,8 @@
 title: "互操作性概述（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - COM interop
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7e4bc1814ed5c86660b4333542a3dc4eb7462e89
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互操作性概述（C# 编程指南）
 本主题描述在 C# 托管代码和非托管代码之间实现互操作性的方法。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/19/2018
  有关详细信息，请参阅[使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)和[如何：使用平台调用播放波形文件](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)。  
   
 > [!NOTE]
->  [公共语言运行时](../../../standard/clr.md) (CLR) 管理对系统资源的访问。 调用 CLR 外部的非托管代码将避开这种安全机制，因此会带来安全风险。 例如，非托管代码可能直接调用非托管代码中的资源，从而避开 CLR 安全机制。 有关详细信息，请参阅 [.NET Framework 安全性](http://go.microsoft.com/fwlink/?LinkId=37122)。  
+>  [公共语言运行时](../../../standard/clr.md) (CLR) 管理对系统资源的访问。 调用 CLR 外部的非托管代码将避开这种安全机制，因此会带来安全风险。 例如，非托管代码可能直接调用非托管代码中的资源，从而避开 CLR 安全机制。 有关详细信息，请参阅 [.NET Framework 安全性](https://technet.microsoft.com/en-us/security/)。  
   
 ## <a name="c-interop"></a>C++ 互操作  
  可使用 C++ interop（又称为 It Just Works (IJW)）包装本机 C++ 类，以便用 C# 或其他 .NET Framework 语言编写的代码可以使用此类。 为此，请编写 C++ 代码来包装本机 DLL 或 COM 组件。 与其他 .NET Framework 语言不同，[!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] 具有互操作性支持，可使托管和非托管代码放置在同一个应用程序（甚至同一个文件）中。 然后使用 **/clr** 编译器开关生成托管程序集，以便生成 C++ 代码。 最后，在 C# 项目中添加一个对该程序集的引用，并像使用其他托管类那样使用被包装对象。  
@@ -41,13 +42,13 @@ ms.lasthandoff: 01/19/2018
   
 2.  向项目添加对 COM 组件或类型库的引用。  
   
-     添加引用时，[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Tlbimp.exe（类型库导入程序）](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)，该导入程序将类型库作为输入，以输出 .NET Framework 互操作程序集。 该程序集又称为运行时可调用包装器 (RCW)，其中包含包装类型库中的 COM 类和接口的托管类和接口。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 将对生成程序集的引用添加至项目。  
+     添加引用时，[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Tlbimp.exe（类型库导入程序）](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)，该导入程序将类型库作为输入，以输出 .NET Framework 互操作程序集。 该程序集又称为运行时可调用包装器 (RCW)，其中包含包装类型库中的 COM 类和接口的托管类和接口。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 将对生成程序集的引用添加至项目。  
   
 3.  创建在 RCW 中定义的类的实例。 这会创建 COM 对象的实例。  
   
 4.  像使用其他托管对象那样使用该对象。 当垃圾回收对该对象进行回收后，COM 对象的实例也会从内存中释放出来。  
   
- 有关详细信息，请参阅[向 .NET Framework 公开 COM 组件](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)。  
+ 有关详细信息，请参阅[向 .NET Framework 公开 COM 组件](../../../../docs/framework/interop/exposing-com-components.md)。  
   
 ## <a name="exposing-c-to-com"></a>向 COM 公开 C#  
  COM 客户端可以使用已经正确公开的 C# 类型。 公开 C# 类型的基本步骤如下所示：  
@@ -58,14 +59,14 @@ ms.lasthandoff: 01/19/2018
   
 2.  生成 COM 类型库并对它进行注册以供 COM 使用。  
   
-     可修改 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 项目属性以自动注册 COM 互操作的 C# 程序集。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Regasm.exe（程序集注册工具）](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)方法是使用 `/tlb` 命令行开关，其将托管组件作为输入），以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
+     可修改 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 项目属性以自动注册 COM 互操作的 C# 程序集。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Regasm.exe（程序集注册工具）](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)方法是使用 `/tlb` 命令行开关，其将托管组件作为输入），以生成类型库。 此类型库描述程序集中的 `public` 类型并添加注册表项，以便 COM 客户端可以创建托管类。  
   
- 有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)和 [COM 类示例](../../../csharp/programming-guide/interop/example-com-class.md)。  
+ 有关详细信息，请参阅[向 COM 公开 .NET Framework 组件](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)和 [COM 类示例](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [Improving Interop Performance](http://go.microsoft.com/fwlink/?LinkId=99564)（提高互操作性能）  
- [COM 互操作介绍](http://go.microsoft.com/fwlink/?LinkId=112406)  
- [托管代码与非托管代码之间的封送处理](http://go.microsoft.com/fwlink/?LinkId=112398)  
+ [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx)（提高互操作性能）  
+ [COM 和 .NET 之间的互操作性简介](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+ [Visual Basic 中的 COM 互操作简介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+ [托管代码与非托管代码之间的封送处理](../../../../docs/framework/interop/interop-marshaling.md)  
  [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
- [高级 COM 互操作性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)

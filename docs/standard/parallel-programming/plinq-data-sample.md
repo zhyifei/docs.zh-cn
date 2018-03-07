@@ -11,35 +11,39 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, sample data
+helpviewer_keywords:
+- PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0e94fec1d1390c68808c06a8ff23f52556c6f74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b1aaa6f3027283ff20088d6122f9b4ec4bb1111
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="plinq-data-sample"></a>PLINQ 数据示例
-此示例包含.csv 格式，以及将其转换为内存中集合的客户、 产品、 订单和订单详细信息的方法的示例数据。 为了使用 PLINQ 的进一步试验，你可以将从某些其他主题的代码示例粘贴到此主题中的代码和调用它从`Main`方法。 此外可以使用你自己 PLINQ 查询中使用此数据。  
+此示例包含 .csv 格式的示例数据，以及将它转换为“客户”、“产品”、“订单”和“订单详情”内存中集合的方法。 若要进一步试验 PLINQ，可以将其他一些主题中的代码示例粘贴到本主题的代码中，并通过 `Main` 方法调用它。 也可以将此类数据用于自己的 PLINQ 查询。  
   
- 这些数据表示 Northwind 数据库的子集。 五十 （50） 客户记录是包括在内，但并非所有字段。 包含从订单和每个客户的相应 Order_Detail 数据行的子集。 所有产品都都包括在内。  
+ 数据表示 Northwind 数据库中的一部分。 其中包含五十 (50) 个客户记录，但并不包含所有字段。 此外，还包含“订单”中的一部分行和每个客户的相应 Order_Detail 数据。 所有产品都包含在内。  
   
 > [!NOTE]
->  数据集不足够大，为了演示，PLINQ 快于 LINQ to Objects 的包含的查询只是基本`where`和`select`子句。 若要观察对小型数据集，这样，增加速度，请使用包含在数据集中的每个元素的计算密集型操作的查询。  
+>  数据集不是非常大，无法证明对于仅包含基本 `where` 和 `select` 子句的查询，PLINQ 比 LINQ to Objects 快。 为了观察此类小型数据集的加速，请使用包含对数据集中每个元素执行计算成本高的操作的查询。  
   
 ### <a name="to-set-up-this-sample"></a>设置此示例  
   
-1.  创建 Visual Basic 或 Visual C# 控制台应用程序项目。  
+1.  创建 Visual Basic 或 Visual C# 控制台应用项目。  
   
-2.  通过遵循这些步骤的代码替换 Module1.vb 或 Program.cs 的内容。  
+2.  通过运行下面这些步骤后面的代码，替换 Module1.vb 或 Program.cs 的内容。  
   
-3.  在 **“项目”** 菜单上，单击 **“添加新项”**。 选择**文本文件**，然后单击**确定**。 本主题中复制数据，然后将其粘贴在新的文本文件中。 上**文件**菜单上，单击**保存**，命名该文件命名为 Plinqdata.csv，，然后将其保存在包含源代码文件的文件夹。  
+3.  在 **“项目”** 菜单上，单击 **“添加新项”**。 选择“文本文件”，再单击“确定”。 复制此主题中的数据，再将它粘贴到新的文本文件中。 在“文件”菜单上，单击“保存”，将文件命名为“Plinqdata.csv”，再将它保存到包含源代码文件的文件夹中。  
   
-4.  按 F5 以验证生成并正确运行项目。 下面的输出应显示在控制台窗口。  
+4.  按 F5 以验证项目是否正确生成和运行。 下面的输出应显示在控制台窗口中。  
   
     ```  
     Customer count: 50  
@@ -868,5 +872,5 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -1,5 +1,5 @@
 ---
-title: "在.NET 中使用字符串的最佳做法"
+title: "有关使用 .NET 中字符串的最佳做法"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -23,20 +23,23 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d187096fee5119a22d886029cd63173e4ca1c8ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>在.NET 中使用字符串的最佳做法
-<a name="top"></a>.NET 开发本地化和全球化应用程序提供广泛支持，并且可以轻松地执行排序和显示字符串等常见操作时应用的当前区域性或特定区域性的约定。 但排序或比较字符串并不总是区分区域性的操作。 例如，对于应用程序内部使用的字符串，通常应该跨所有区域性以相同的方式对其进行处理。 如果将 XML 标记、HTML 标记、用户名、文件路径和系统对象名称等与区域性无关的字符串数据解释为区分区域性，则应用程序代码会遭遇细微的错误、不佳的性能，在某些情况下，还会遭遇安全性问题。  
+# <a name="best-practices-for-using-strings-in-net"></a>有关使用 .NET 中字符串的最佳做法
+<a name="top"></a> .NET 为开发本地化和全球化应用提供广泛支持，并方便用户在执行排序和显示字符串等常见操作时，轻松应用当前区域性或特定区域性的约定。 但排序或比较字符串并不总是区分区域性的操作。 例如，对于应用程序内部使用的字符串，通常应该跨所有区域性以相同的方式对其进行处理。 如果将 XML 标记、HTML 标记、用户名、文件路径和系统对象名称等与区域性无关的字符串数据解释为区分区域性，则应用程序代码会遭遇细微的错误、不佳的性能，在某些情况下，还会遭遇安全性问题。  
   
- 本主题检查字符串排序、 比较和大小写在.NET 中的方法、 提出建议用于选择适当的字符串处理方法，并提供有关字符串处理方法的其他信息。 它还讨论如何处理数据格式（如数字数据以及日期和时间数据）以用于显示和存储。  
+ 本主题介绍了 .NET 中的字符串排序、比较和大小写转换方法，提出了有关如何选择适当的字符串处理方法的建议，以及有关字符串处理方法的其他信息。 它还讨论如何处理数据格式（如数字数据以及日期和时间数据）以用于显示和存储。  
   
  本主题包含以下各节：  
   
@@ -92,7 +95,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="specifying-string-comparisons-explicitly"></a>显式指定字符串比较  
  重载 .NET 中大部分字符串操作方法。 通常，一个或多个重载会接受默认设置，然而其他重载则不接受默认设置，而是定义比较或操作字符串的精确方式。 大多数不依赖于默认设置的方法都包括 <xref:System.StringComparison>类型的参数，该参数是按区域性和大小写为字符串比较显式指定规则的枚举。 下表描述 <xref:System.StringComparison> 枚举成员。  
   
-|StringComparison 成员|说明|  
+|StringComparison 成员|描述|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|使用当前区域性执行区分大小写的比较。|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|使用当前区域性执行不区分大小写的比较。|  
@@ -148,9 +151,9 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 重载。  
   
--   默认值<xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType>方法，与<xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>方法替换`null`<xref:System.Globalization.CultureInfo>参数。  
+-   默认 <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> 方法和需要使用 `null`<xref:System.Globalization.CultureInfo> 参数的 <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法。  
   
--   默认值<xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType>方法，与<xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>方法替换`null`<xref:System.Globalization.CultureInfo>参数。  
+-   默认 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 方法和需要使用 `null`<xref:System.Globalization.CultureInfo> 参数的 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法。  
   
 -   接受 <xref:System.String> 作为搜索参数且不包含 <xref:System.StringComparison> 参数的 <xref:System.String.IndexOf%2A?displayProperty=nameWithType> 重载。  
   
@@ -223,9 +226,9 @@ ms.lasthandoff: 10/18/2017
   
  使用 <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> 和 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 的比较对 ASCII 字符串产生相同的作用。 但是，<xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> 会做出可能不适用于解释为一组字节的字符串的语言性决策。 还可以使用 `CultureInfo.InvariantCulture.CompareInfo` 对象使 <xref:System.String.Compare%2A> 方法将一组特定的字符解释为等效字符。 例如，下面的等效字符在固定区域性中是有效的：  
   
- InvariantCulture：a + ̊ = å  
+ InvariantCulture: a + ̊ = å  
   
- 当 A 字符的小写拉丁字母“a”(\u0061) 位于字符“+ " ̊"(\u030a) 组合圆圈旁边，则产生上方带有圆圈的小写拉丁字母“å”(\u00e5)。 如下面的示例所示，此行为不同于序号比较。  
+ 如果 A 字符的小写拉丁字母“a”(\u0061) 旁边有上方组合圆圈字符“+ " ̊”(\u030a)，A 字符就会被解释为，上方带有圆圈的小写拉丁字母“å”(\u00e5)。 如下面的示例所示，此行为不同于序号比较。  
   
  [!code-csharp[Conceptual.Strings.BestPractices#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison3.cs#15)]
  [!code-vb[Conceptual.Strings.BestPractices#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison3.vb#15)]  
@@ -244,8 +247,8 @@ ms.lasthandoff: 10/18/2017
 |----------|--------------|-----------------------------------------------------|  
 |区分大小写的内部标识符。<br /><br /> 区分大小写的标准标识符（例如 XML 和 HTTP）。<br /><br /> 区分大小写的安全相关设置。|字节完全匹配的非语言标识符。|<xref:System.StringComparison.Ordinal>|  
 |不区分大小写的内部标识符。<br /><br /> 不区分大小写的标准标识符（例如 XML 和 HTTP）。<br /><br /> 文件路径。<br /><br /> 注册表项和值。<br /><br /> 环境变量。<br /><br /> 资源标识符（例如，句柄名称）。<br /><br /> 不区分大小写的安全相关设置。|无关大小写的非语言标识符；尤其是存储在大多数 Windows 系统服务中的数据。|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|某些保留的、与语言相关的数据。<br /><br /> 需要固定排序顺序的语言数据的显示。|仍与语言相关的区域性不明确数据。|<xref:System.StringComparison.InvariantCulture><br /><br /> - 或 -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|向用户显示的数据。<br /><br /> 大多数用户输入。|需要本地语言自定义的数据。|<xref:System.StringComparison.CurrentCulture><br /><br /> - 或 -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|某些保留的、与语言相关的数据。<br /><br /> 需要固定排序顺序的语言数据的显示。|仍与语言相关的区域性不明确数据。|<xref:System.StringComparison.InvariantCulture><br /><br /> 或<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|向用户显示的数据。<br /><br /> 大多数用户输入。|需要本地语言自定义的数据。|<xref:System.StringComparison.CurrentCulture><br /><br /> 或<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [返回页首](#top)  
   
@@ -374,5 +377,5 @@ ms.lasthandoff: 10/18/2017
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控制字符串](../../../docs/standard/base-types/manipulating-strings.md)

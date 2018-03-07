@@ -20,26 +20,29 @@ helpviewer_keywords:
 - localization [.NET Framework], about localization
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4aaf2da77a1fab55cbebd6bfa05a2b1c74e5cbbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 952696cf813a4bd0915f85a02946489d389d23e7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localization"></a>本地化
-本地化是将应用程序的资源翻译为该应用程序将支持每种区域性的本地化版本的过程。 应继续完成后，仅本地化步[本地化分析检查](../../../docs/standard/globalization-localization/localizability-review.md)步骤以验证全球化应用程序是否准备好进行本地化。  
+本地化是针对应用支持的每个区域性，将应用资源转换为本地化版本的过程。 只有在完成[可本地化评审](../../../docs/standard/globalization-localization/localizability-review.md)步骤，以验证全球化应用是否做好本地化准备后，才应继续执行本地化步骤。  
   
- 应用程序进行本地化了分为两个概念块、 包含所有用户界面元素的块和都包含可执行代码的块。 用户界面块包含仅可本地化的用户界面元素，如字符串、 错误消息、 对话框、 菜单、 嵌入的对象，依次类推非特定区域性资源。 代码块仅包含应用程序代码用于所有支持的区域性。 公共语言运行时支持与其资源分隔应用程序的可执行代码的附属程序集资源模型。 有关实现此模型的详细信息，请参阅[桌面应用中的资源](../../../docs/framework/resources/index.md)。  
+ 做好本地化准备的应用分为两个概念块：一个块包含所有用户界面元素，另一个块包含可执行代码。 用户界面块仅包含可本地化的用户界面元素，如字符串、错误消息、对话框、菜单、嵌入的对象资源等区域性中性元素。 代码块仅包含所有支持的区域性要使用的应用代码。 公共语言运行时支持附属程序集资源模型，用于将应用的可执行代码与资源分隔开来。 若要详细了解如何实现此模型，请参阅[桌面应用中的资源](../../../docs/framework/resources/index.md)。  
   
- 你的应用程序每个本地化版本，将添加新附属程序集包含本地化的用户界面块转换为适当的语言为目标区域性。 所有区域性的代码块应保持不变。 代码块的用户界面块的本地化版本的组合生成你的应用程序的本地化的版本。  
+ 对于应用的每个本地化版本，请添加新的附属程序集，其中包含转换为目标区域性的相应语言的本地化用户界面块。 所有区域性的代码块应保持不变。 用户界面块的本地化版本和代码块组合生成了应用的本地化版本。  
   
- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]提供 Windows 窗体资源编辑器 (Winres.exe)，您可以快速为目标区域性本地化 Windows 窗体。 有关使用此工具的信息，请参阅[Winres.exe （Windows 窗体资源编辑器）](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。  
+ [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供了 Windows 窗体资源编辑器 (Winres.exe)，以便于针对目标区域性快速本地化 Windows 窗体。 若要了解如何使用此工具，请参阅 [Winres.exe（Windows 窗体资源编辑器）](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
  [可本地化性审核](../../../docs/standard/globalization-localization/localizability-review.md)  
  [全球化](../../../docs/standard/globalization-localization/globalization.md)  

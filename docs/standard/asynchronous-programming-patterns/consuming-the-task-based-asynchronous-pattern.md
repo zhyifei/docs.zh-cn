@@ -15,32 +15,35 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90b2a36f0e6bf06b0fefe2191d5b17c9c07d1588
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3eddf8899863b7f1c59950c9cd4fa4d42f7acdb7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用基于任务的异步模式
-使用基于任务的异步模式 (TAP) 处理异步操作时，可以使用回叫实现等待，而不会阻塞。  对于任务，这将通过实现方法如<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>。 通过允许在正常控制流中等待异步操纵，基于语言的异步支持可隐藏回叫，并且编译器生成的代码可提供此相同 API 级别的支持。  
+使用基于任务的异步模式 (TAP) 处理异步操作时，可以使用回叫实现等待，而不会阻塞。  对于任务，这可通过 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 等方法实现。 通过允许在正常控制流中等待异步操纵，基于语言的异步支持可隐藏回叫，并且编译器生成的代码可提供此相同 API 级别的支持。  
   
 ## <a name="suspending-execution-with-await"></a>使用 Await 挂起执行  
- 从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，你可以使用[await](~/docs/csharp/language-reference/keywords/await.md) C# 中的关键字和[Await 运算符](~/docs/visual-basic/language-reference/operators/await-operator.md)在 Visual Basic 中以异步方式等待<xref:System.Threading.Tasks.Task>和<xref:System.Threading.Tasks.Task%601>对象。 当正在等待<xref:System.Threading.Tasks.Task>、`await`表达式是否属于类型`void`。 当正在等待<xref:System.Threading.Tasks.Task%601>、`await`表达式是否属于类型`TResult`。 `await` 表达式必须出现在异步方法的正文内。 若要详细了解 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的 C# 和 Visual Basic 语言支持，请参阅 C# 和 Visual Basic 语言规范。  
+ 自 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 起，可以使用 C# 中的 [await](~/docs/csharp/language-reference/keywords/await.md) 关键字和 Visual Basic 中的 [Await 运算符](~/docs/visual-basic/language-reference/operators/await-operator.md)，异步等待 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 对象。 等待 <xref:System.Threading.Tasks.Task> 时，`await` 表达式的类型为 `void`。 等待 <xref:System.Threading.Tasks.Task%601> 时，`await` 表达式的类型为 `TResult`。 `await` 表达式必须出现在异步方法的正文内。 若要详细了解 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的 C# 和 Visual Basic 语言支持，请参阅 C# 和 Visual Basic 语言规范。  
   
- 实际上，await 功能通过使用延续任务在任务上安装回叫。  此回叫在挂起点恢复异步方法。 如果等待的操作已成功完成，并且该异步方法恢复<xref:System.Threading.Tasks.Task%601>，将其`TResult`返回。  如果<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>，已等待由于结束<xref:System.Threading.Tasks.TaskStatus.Canceled>状态，<xref:System.OperationCanceledException>引发异常。  如果<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>，已等待由于结束<xref:System.Threading.Tasks.TaskStatus.Faulted>状态时，异常导致错误。 一个 `Task` 可能由于多个异常而出错，但只会传播一个异常。 但是，<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>属性返回<xref:System.AggregateException>包含的所有错误的异常。  
+ 实际上，await 功能通过使用延续任务在任务上安装回叫。  此回叫在挂起点恢复异步方法。 恢复异步方法时，如果等待的操作已成功完成且为 <xref:System.Threading.Tasks.Task%601>，返回的是 `TResult`。  如果等待的 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态结束，就会抛出 <xref:System.OperationCanceledException> 异常。  如果等待的 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 以 <xref:System.Threading.Tasks.TaskStatus.Faulted> 状态结束，就会抛出导致它发生故障的异常。 一个 `Task` 可能由于多个异常而出错，但只会传播一个异常。 不过，<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 属性会返回包含所有错误的 <xref:System.AggregateException> 异常。  
   
- 如果同步上下文 (<xref:System.Threading.SynchronizationContext>对象) 与已在挂起的时间执行的异步方法的线程关联 (例如，如果<xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType>属性不是`null`)，异步方法上，将恢复通过使用上下文的相同的同步上下文<xref:System.Threading.SynchronizationContext.Post%2A>方法。 否则，它依赖于任务计划程序 (<xref:System.Threading.Tasks.TaskScheduler>对象)，是时挂起的最新。 通常，这是默认任务计划程序 (<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType>)，其中针对线程池。 此任务计划程序确定等待的异步操作是否应在该操作完成时恢复，或是否应计划该恢复。 默认计划程序通常允许在完成等待操作的线程上延续任务。  
+ 如果同步上下文（<xref:System.Threading.SynchronizationContext> 对象）与暂停时正在执行异步方法的线程（例如，如果 <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType> 属性不是 `null`）相关联，异步方法使用上下文的 <xref:System.Threading.SynchronizationContext.Post%2A> 方法，恢复相同的同步上下文。 否则，它依赖暂停时的当前任务计划程序（<xref:System.Threading.Tasks.TaskScheduler> 对象）。 通常情况下，这是定目标到线程池的默认任务计划程序 (<xref:System.Threading.Tasks.TaskScheduler.Default%2A?displayProperty=nameWithType>)。 此任务计划程序确定等待的异步操作是否应在该操作完成时恢复，或是否应计划该恢复。 默认计划程序通常允许在完成等待操作的线程上延续任务。  
   
- 调用异步方法时，将同步执行函数的正文，直到遇见尚未完成的可等待实例上的第一个 await 表达式，此时调用返回到调用方。 如果异步方法不返回`void`、<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>返回对象来表示正在进行计算。 在非 void 的异步方法，如果遇到的 return 语句或到达方法主体的结尾，将在任务完成中<xref:System.Threading.Tasks.TaskStatus.RanToCompletion>最终状态。 如果未经处理的异常会使控件在保留异步方法的正文的任务结束中<xref:System.Threading.Tasks.TaskStatus.Faulted>状态。 如果该异常是<xref:System.OperationCanceledException>，以改为结束任务<xref:System.Threading.Tasks.TaskStatus.Canceled>状态。 通过此方式，最终将发布结果或异常。  
+ 调用异步方法时，将同步执行函数的正文，直到遇见尚未完成的可等待实例上的第一个 await 表达式，此时调用返回到调用方。 如果异步方法不返回 `void`，将会返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 对象，以表示正在进行的计算。 在非 void 异步方法中，如果遇到 return 语句或到达方法正文末尾，任务就以 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 最终状态完成。 如果未经处理的异常导致无法控制异步方法正文，任务就以 <xref:System.Threading.Tasks.TaskStatus.Faulted> 状态结束。 如果异常为 <xref:System.OperationCanceledException>，任务改为以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态结束。 通过此方式，最终将发布结果或异常。  
   
  此行为有几种重要特殊情况。  出于性能原因，如果任务在等待时已完成，则不会生成控件，并且该函数将继续执行。  返回到原始上下文并不总是所需的行为，可对其进行更改；将在下一节中更详细地描述此内容。  
   
 ### <a name="configuring-suspension-and-resumption-with-yield-and-configureawait"></a>使用 Yield 和 ConfigureAwait 配置挂起和恢复  
- 有多种方法可更好地控制异步方法的执行。 例如，你可以使用<xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType>yield 点引入的异步方法的方法：  
+ 有多种方法可更好地控制异步方法的执行。 例如，可以使用 <xref:System.Threading.Tasks.Task.Yield%2A?displayProperty=nameWithType> 方法，将暂停点引入异步方法：  
   
 ```csharp  
 public class Task : …  
@@ -63,16 +66,16 @@ Task.Run(async delegate
 });  
 ```  
   
- 你还可以使用<xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType>更好地控制挂起和继续在异步方法的方法。  如前所述，默认情况下，异步方法挂起时会捕获当前上下文，捕获的上下文用于在恢复时调用异步方法的延续。  在多数情况下，这就是你所需的确切行为。  在其他情况下，你可能不关心延续上下文，则可以通过避免此类发布返回原始上下文来获得更好的性能。  若要启用此功能，使用<xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType>方法，以通知无法捕获和上下文，在继续，但若要继续执行，只要已正在等待异步操作完成等待操作：  
+ 还可以使用 <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> 方法，更好地控制异步方法中的暂停和恢复。  如前所述，默认情况下，异步方法挂起时会捕获当前上下文，捕获的上下文用于在恢复时调用异步方法的延续。  在多数情况下，这就是你所需的确切行为。  在其他情况下，你可能不关心延续上下文，则可以通过避免此类发布返回原始上下文来获得更好的性能。  若要启用此功能，请使用 <xref:System.Threading.Tasks.Task.ConfigureAwait%2A?displayProperty=nameWithType> 方法，指示等待操作不要捕获和恢复上下文，而是继续执行正在等待完成的所有异步操作：  
   
 ```csharp  
 await someTask.ConfigureAwait(continueOnCapturedContext:false);  
 ```  
   
 ## <a name="canceling-an-asynchronous-operation"></a>取消异步操作  
- 从开始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，支持取消的 TAP 方法提供接受取消标记的至少一个重载 (<xref:System.Threading.CancellationToken>对象)。  
+ 自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，支持取消操作的 TAP 方法提供至少一个接受取消令牌（<xref:System.Threading.CancellationToken> 对象）的重载。  
   
- 通过取消标记源创建一个取消标记 (<xref:System.Threading.CancellationTokenSource>对象)。  源的<xref:System.Threading.CancellationTokenSource.Token%2A>属性返回对其发出信号的取消标记时的源<xref:System.Threading.CancellationTokenSource.Cancel%2A>调用方法。  例如，如果你想要下载单个网页，并且你想要能够取消操作，则创建<xref:System.Threading.CancellationTokenSource>对象，将其标记传递给 TAP 方法，然后调用的源<xref:System.Threading.CancellationTokenSource.Cancel%2A>方法如果你已准备好取消该操作：  
+ 可通过取消令牌源（<xref:System.Threading.CancellationTokenSource> 对象）创建取消令牌。  源的 <xref:System.Threading.CancellationTokenSource.Token%2A> 属性返回取消令牌，它在源的 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 方法获得调用收到信号。  例如，若要下载一个网页，并且希望能够取消此操作，请创建 <xref:System.Threading.CancellationTokenSource> 对象，将它的令牌传递给 TAP 方法，再在准备好取消此操作时，调用源的 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 方法：  
   
 ```csharp  
 var cts = new CancellationTokenSource();  
@@ -103,7 +106,7 @@ var cts = new CancellationTokenSource();
   
  可以从任意线程启动取消请求。  
   
- 你可以将传递<xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType>到的任何方法都接受取消标记以指示永远不会将请求取消的值。  这将导致<xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType>属性以返回`false`，并调用的方法可以相应地优化。  出于测试目的，还可以通过传入预取消标记（该标记使用接受布尔值的构造函数进行实例化）来指示是否应以已取消或未取消状态启动标记。  
+ 可以将 <xref:System.Threading.CancellationToken.None%2A?displayProperty=nameWithType> 值传递给接受取消令牌的任何方法，指明绝不会请求取消操作。  这会导致 <xref:System.Threading.CancellationToken.CanBeCanceled%2A?displayProperty=nameWithType> 属性返回 `false`，并且调用的方法可以相应地进行优化。  出于测试目的，还可以通过传入预取消标记（该标记使用接受布尔值的构造函数进行实例化）来指示是否应以已取消或未取消状态启动标记。  
   
  使用此方法进行取消具有以下优点：  
   
@@ -133,10 +136,10 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
   
 <a name="combinators"></a>   
 ## <a name="using-the-built-in-task-based-combinators"></a>使用内置的基于任务的连结符  
- <xref:System.Threading.Tasks>命名空间包括编写和使用任务的几个方法。  
+ <xref:System.Threading.Tasks> 命名空间包含多个方法，可用于撰写和处理任务。  
   
 ### <a name="taskrun"></a>Task.Run  
- <xref:System.Threading.Tasks.Task>类包括几个<xref:System.Threading.Tasks.Task.Run%2A>方法可让你轻松将作为工作卸载<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>到线程池，例如：  
+ <xref:System.Threading.Tasks.Task> 类包含多个 <xref:System.Threading.Tasks.Task.Run%2A> 方法，以便于将工作作为 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 轻松卸载到线程池，例如：  
   
 ```csharp  
 public async void button1_Click(object sender, EventArgs e)  
@@ -149,7 +152,7 @@ public async void button1_Click(object sender, EventArgs e)
 }  
 ```  
   
- 其中一些<xref:System.Threading.Tasks.Task.Run%2A>方法，如<xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>重载中，作为速记存在<xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>方法。  其他重载，如<xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>，启用用于等待中卸载的工作，例如：  
+ 其中部分 <xref:System.Threading.Tasks.Task.Run%2A> 方法（如 <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 重载）以 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法的简约表示形式存在。  借助其他重载（如 <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType>），可以在卸载的工作内使用 await，例如：  
   
 ```csharp  
 public async void button1_Click(object sender, EventArgs e)  
@@ -163,10 +166,10 @@ public async void button1_Click(object sender, EventArgs e)
 }  
 ```  
   
- 此类重载是逻辑上等效于使用<xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>方法结合<xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>任务并行库中的扩展方法。  
+ 此类重载在逻辑上相当于结合使用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法和任务并行库中的 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 扩展方法。  
   
 ### <a name="taskfromresult"></a>Task.FromResult  
- 使用<xref:System.Threading.Tasks.Task.FromResult%2A>方法中的方案数据可能已可用，而只是需要返回到提升的返回任务的方法从<xref:System.Threading.Tasks.Task%601>:  
+ <xref:System.Threading.Tasks.Task.FromResult%2A> 方法的适用情景为，数据可能已存在，且只需通过提升到 <xref:System.Threading.Tasks.Task%601> 的任务返回方法返回：  
   
 ```csharp  
 public Task<int> GetValueAsync(string key)  
@@ -184,7 +187,7 @@ private async Task<int> GetValueAsyncInternal(string key)
 ```  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
- 使用<xref:System.Threading.Tasks.Task.WhenAll%2A>方法异步等待多个表示为任务的异步操作。  该方法所具有的多个重载支持一组非泛型任务或一组不统一的常规任务（如异步等待多个返回 void 的操作，或异步等待多个返回值的方法，其中每个值可能具有不同类型），并支持一组统一的常规任务（如异步等待多个 `TResult` 返回方法）。  
+ <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法可用于异步等待多个表示为任务的异步操作。  该方法所具有的多个重载支持一组非泛型任务或一组不统一的常规任务（如异步等待多个返回 void 的操作，或异步等待多个返回值的方法，其中每个值可能具有不同类型），并支持一组统一的常规任务（如异步等待多个 `TResult` 返回方法）。  
   
  假设你想要向多个客户发送电子邮件。 你可以重叠发送邮件，因此发送邮件时无需等待上一封邮件完成发送。 还可以查看发送操作完成的时间，以及是否发生了错误：  
   
@@ -193,7 +196,7 @@ IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
 await Task.WhenAll(asyncOps);  
 ```  
   
- 此代码不显式处理的异常可能会发生，但允许异常传播`await`从生成的任务上<xref:System.Threading.Tasks.Task.WhenAll%2A>。  若要处理该异常，可以使用以下代码：  
+ 此代码不显式处理可能发生的异常，而是通过对 <xref:System.Threading.Tasks.Task.WhenAll%2A> 生成的任务执行 `await` 传播异常。  若要处理该异常，可以使用以下代码：  
   
 ```csharp  
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);  
@@ -207,7 +210,7 @@ catch(Exception exc)
 }  
 ```  
   
- 在这种情况下，如果任何异步操作失败，所有异常将都合并在<xref:System.AggregateException>异常，它存储在<xref:System.Threading.Tasks.Task>从返回<xref:System.Threading.Tasks.Task.WhenAll%2A>方法。  但是，仅通过 `await` 关键字传播其中一个异常。  如果想要检查所有异常，可以重写前面的代码，如下所示：  
+ 在这种情况下，如果任意异步操作失败，所有异常都会合并到 <xref:System.AggregateException> 异常中，此异常存储在 <xref:System.Threading.Tasks.Task.WhenAll%2A> 方法返回的 <xref:System.Threading.Tasks.Task> 中。  但是，仅通过 `await` 关键字传播其中一个异常。  如果想要检查所有异常，可以重写前面的代码，如下所示：  
   
 ```csharp  
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();  
@@ -251,7 +254,7 @@ catch(Exception exc)
 ```  
   
 ### <a name="taskwhenany"></a>Task.WhenAny  
- 你可以使用<xref:System.Threading.Tasks.Task.WhenAny%2A>方法以异步方式等待仅仅是一个多个异步操作表示为任务完成。  此方法适用于四个主要用例：  
+ <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法可用于异步等待多个表示为要完成的任务的异步操作之一。  此方法适用于四个主要用例：  
   
 -   冗余：多次执行一个操作并选择最先完成的一次（例如，联系能够生成一个结果的多个股市行情 Web 服务并选择完成最快的一个）。  
   
@@ -259,10 +262,10 @@ catch(Exception exc)
   
 -   限制：允许其他操作完成时开始附加操作。  这是交错方案的扩展。  
   
--   早期释放：例如，用任务 t1 表示的操作可以与任务 t2 组成 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务，您可以等待 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务。 任务 t2 可表示超时，或取消或导致的一些其他信号<xref:System.Threading.Tasks.Task.WhenAny%2A>任务 t1 完成之前完成。  
+-   早期释放：例如，用任务 t1 表示的操作可以与任务 t2 组成 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务，您可以等待 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务。 任务 t2 可以表示超时、取消或其他一些导致 <xref:System.Threading.Tasks.Task.WhenAny%2A> 任务先于 t1 完成的信号。  
   
 #### <a name="redundancy"></a>冗余  
- 假设你想要决定是否购买股票。  你信任一些股票建议 Web 服务，但每个服务最终会在不同的时间段变得很慢，具体取决于每日负载。  你可以使用<xref:System.Threading.Tasks.Task.WhenAny%2A>方法以在任何操作完成时接收通知：  
+ 假设你想要决定是否购买股票。  你信任一些股票建议 Web 服务，但每个服务最终会在不同的时间段变得很慢，具体取决于每日负载。  <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法可用于在任何操作完成时接收通知：  
   
 ```csharp  
 var recommendations = new List<Task<bool>>()   
@@ -275,9 +278,9 @@ Task<bool> recommendation = await Task.WhenAny(recommendations);
 if (await recommendation) BuyStock(symbol);  
 ```  
   
- 与不同<xref:System.Threading.Tasks.Task.WhenAll%2A>，这会返回已成功完成的所有任务的解包的结果<xref:System.Threading.Tasks.Task.WhenAny%2A>返回完成的任务。 如果任务失败，重要的是知道该任务失败，如果任务成功，重要的是知道返回值与哪个任务相关联。  因此，您需要访问返回任务的结果，或进一步等待，如本示例中所示。  
+ <xref:System.Threading.Tasks.Task.WhenAll%2A> 返回已成功完成的所有任务的取消包装结果。与它不同，<xref:System.Threading.Tasks.Task.WhenAny%2A> 返回已完成的任意任务。 如果任务失败，重要的是知道该任务失败，如果任务成功，重要的是知道返回值与哪个任务相关联。  因此，你需要访问返回任务的结果，或进一步等待，如本示例中所示。  
   
- 与<xref:System.Threading.Tasks.Task.WhenAll%2A>，您必须能够容纳异常。  因为接收到完成的任务后，可以等待返回的任务传播错误，并适当地进行 `try/catch`，例如：  
+ 与 <xref:System.Threading.Tasks.Task.WhenAll%2A> 一样，必须能够容纳异常。  因为接收到完成的任务后，可以等待返回的任务传播错误，并适当地进行 `try/catch`，例如：  
   
 ```csharp  
 Task<bool> [] recommendations = …;  
@@ -367,7 +370,7 @@ while(imageTasks.Count > 0)
 }  
 ```  
   
- 你还可以应用到的方案，在涉及计算密集型处理交错<xref:System.Threading.ThreadPool>下载的图像; 例如：  
+ 还可以将交错应用于涉及下载图像 <xref:System.Threading.ThreadPool> 的计算密集型处理的方案；例如：  
   
 ```csharp  
 List<Task<Bitmap>> imageTasks =   
@@ -482,12 +485,12 @@ public async void btnRun_Click(object sender, EventArgs e)
 }  
 ```  
   
- 早期释放的另一个示例涉及使用<xref:System.Threading.Tasks.Task.WhenAny%2A>方法结合<xref:System.Threading.Tasks.Task.Delay%2A>方法，如在下一节中讨论。  
+ 另一个早期释放示例涉及结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法和 <xref:System.Threading.Tasks.Task.Delay%2A> 方法，下一部分将对此进行介绍。  
   
 ### <a name="taskdelay"></a>Task.Delay  
- 你可以使用<xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>方法引入暂停到异步方法的执行。  这对于许多功能都非常有用，包括构建轮询循环和延迟预定时间段的用户输入处理。  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>方法也会很有用结合<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>的实现上的超时等待。  
+ <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法可用于将暂停引入异步方法的执行中。  这对于许多功能都非常有用，包括构建轮询循环和延迟预定时间段的用户输入处理。  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 方法还可以与 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 结合使用，以对 await 实现超时。  
   
- 如果某任务属于较大型异步操作（如 ASP.NET Web 服务）中的一部分，由于花费时间过长而不能完成，则整体操作可能会受到影响（尤其是此任务一直不能完成的情况下）。  因此，等待异步操作时可以超时非常重要。  同步<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>， <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType>，和<xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType>方法接受超时值，但相应<xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>和前面所述<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> / <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>方法不这样做。  相反，你可以使用<xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>和<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>结合使用来实现超时。  
+ 如果某任务属于较大型异步操作（如 ASP.NET Web 服务）中的一部分，由于花费时间过长而不能完成，则整体操作可能会受到影响（尤其是此任务一直不能完成的情况下）。  因此，等待异步操作时可以超时非常重要。  虽然同步 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> 方法接受超时值，但相应的 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 和前述 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法不接受。  相反，可以将 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 与 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>结合使用，以实现超时。  
   
  例如，在 UI 应用程序中，假设你想要下载图像，并在图像下载期间禁用该 UI。 但是，如果下载时间过长，你希望重新启用 UI 并放弃下载：  
   
@@ -516,7 +519,7 @@ public async void btnDownload_Click(object sender, EventArgs e)
 }  
 ```  
   
- 这同样适用于多个下载，因为<xref:System.Threading.Tasks.Task.WhenAll%2A>返回的任务：  
+ 这同样适用于多个下载，因为 <xref:System.Threading.Tasks.Task.WhenAll%2A> 返回任务：  
   
 ```csharp  
 public async void btnDownload_Click(object sender, RoutedEventArgs e)  
@@ -639,7 +642,7 @@ double currentPrice = await NeedOnlyOne(
 ```  
   
 ### <a name="interleaved-operations"></a>交错操作  
- 潜在的性能问题与使用<xref:System.Threading.Tasks.Task.WhenAny%2A>方法，以支持交错方案时你正在使用的任务非常大的集。  对每个调用<xref:System.Threading.Tasks.Task.WhenAny%2A>导致要注册与每个任务的延续任务。 对于 N 个任务，这将导致在交错操作操作期间创建 O(N2) 次延续。  如果处理大型任务集，则可以使用连结符（以下示例中的 `Interleaved`）来解决性能问题：  
+ 处理大型任务集时，如果使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法支持交错方案，可能存在潜在性能问题。  每次调用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 都会向每个任务注册延续。 对于 N 个任务，这将导致在交错操作操作期间创建 O(N2) 次延续。  如果处理大型任务集，则可以使用连结符（以下示例中的 `Interleaved`）来解决性能问题：  
   
 ```csharp  
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)  
@@ -703,10 +706,10 @@ public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)
 ```  
   
 ## <a name="building-task-based-data-structures"></a>构建基于任务的数据结构  
- 生成基于任务的自定义组合器的功能，除了一种数据结构具有<xref:System.Threading.Tasks.Task>和<xref:System.Threading.Tasks.Task%601>表示异步操作的结果，并需要同步，以使用其加入便于非常强大键入用于生成要在异步方案中使用的自定义数据结构。  
+ 除了能够生成基于任务的自定义组合器外，<xref:System.Threading.Tasks.Task> 和表示异步操作结果和联接所必需同步操作结果的 <xref:System.Threading.Tasks.Task%601> 中有数据结构，这令其成为功能非常强大的类型，可用于生成在异步方案中使用的自定义数据结构。  
   
 ### <a name="asynccache"></a>AsyncCache  
- 其中一个任务的重要方面是，它可能被分发到多个使用者，全部用户可能会等待，通过该对话框，注册延续获取其结果或异常 (的情况下<xref:System.Threading.Tasks.Task%601>)，依次类推。  这使得<xref:System.Threading.Tasks.Task>和<xref:System.Threading.Tasks.Task%601>完全适合异步的缓存基础结构中使用。  下面是一个较小的一个示例，但功能强大的异步缓存生成的顶部<xref:System.Threading.Tasks.Task%601>:  
+ 任务的重要方面之一是，它可能会分发到多个使用者，所有使用者都可以等待任务、向任务注册延续、获取任务结果或异常（如果是 <xref:System.Threading.Tasks.Task%601> 的话）等。  这样一来，<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 就非常适用于异步缓存基础结构。  下面的示例展示了在 <xref:System.Threading.Tasks.Task%601> 基础之上生成的功能非常强大的小型异步缓存：  
   
 ```csharp  
 public class AsyncCache<TKey, TValue>  
@@ -733,7 +736,7 @@ public class AsyncCache<TKey, TValue>
 }  
 ```  
   
- [AsyncCache\<TKey，>](http://go.microsoft.com/fwlink/p/?LinkId=251941)类作为委托给其构造函数采用的函数接受`TKey`并返回<xref:System.Threading.Tasks.Task%601>。  以前从缓存访问的所有值都存储在内部字典中，`AsyncCache` 可以确保每个密钥仅生成一个任务，即便同时访问缓存也是如此。  
+ [AsyncCache\<TKey,TValue>](http://go.microsoft.com/fwlink/p/?LinkId=251941) 类接受需要使用 `TKey` 且返回 <xref:System.Threading.Tasks.Task%601> 的函数作为构造函数的委托。  以前从缓存访问的所有值都存储在内部字典中，`AsyncCache` 可以确保每个密钥仅生成一个任务，即便同时访问缓存也是如此。  
   
  例如，你可以生成下载网页的缓存：  
   
@@ -818,7 +821,7 @@ private static void Produce(int data)
 }  
 ```  
   
- <xref:System.Threading.Tasks.Dataflow>命名空间包括<xref:System.Threading.Tasks.Dataflow.BufferBlock%601>类型，你可以使用类似的方式，但无需生成自定义集合类型：  
+ <xref:System.Threading.Tasks.Dataflow> 命名空间包括 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 类型，可以类似方式使用它，但无需生成自定义集合类型：  
   
 ```csharp  
 private static BufferBlock<int> m_data = …;  
@@ -839,9 +842,9 @@ private static void Produce(int data)
 ```  
   
 > [!NOTE]
->  <xref:System.Threading.Tasks.Dataflow>命名空间可用于[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]通过**NuGet**。 若要安装包含的程序集<xref:System.Threading.Tasks.Dataflow>命名空间中，打开你的项目中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，选择**管理 NuGet 包**从项目菜单中，然后联机搜索 Microsoft.Tpl.Dataflow 包。  
+>  <xref:System.Threading.Tasks.Dataflow> 命名空间通过 NuGet 可用于 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 若要安装包含 <xref:System.Threading.Tasks.Dataflow> 命名空间的程序集，请在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中打开项目，选择“项目”菜单中的“管理 NuGet 包”，再在线搜索 Microsoft.Tpl.Dataflow 包。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
  [实现基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
  [与其他异步模式和类型互操作](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

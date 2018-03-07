@@ -14,36 +14,39 @@ helpviewer_keywords:
 - interprocess communication [.NET Framework], pipes
 - I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 879e5a73417f9347224bc22b397814b83972751c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 68c1ad34952ee4d20dbf56aa8ca437a3f99db751
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>.NET Framework 中的管道操作
-管道提供一种进程间通信。 有两种类型的管道：  
+管道为进程间通信提供了平台。 管道分为两种类型：  
   
 -   匿名管道。  
   
-     匿名管道在本地计算机上提供进程间通信。 匿名管道需要较少的开销比命名管道，但提供有限的服务。 匿名管道是单向的并且不通过网络使用。 它们仅支持单个服务器实例。 匿名管道可用于之间其中管道句柄可以轻松地传递给子进程时创建的父和子进程或线程间通信。  
+     匿名管道在本地计算机上提供进程间通信。 与命名管道相比，虽然匿名管道需要的开销更少，但提供的服务有限。 匿名管道是单向的，不能通过网络使用。 仅支持一个服务器实例。 匿名管道可用于线程间通信，也可用于父进程和子进程之间的通信，因为管道句柄可以轻松传递给所创建的子进程。  
   
      在 .NET Framework 中，可通过使用 <xref:System.IO.Pipes.AnonymousPipeServerStream> 和 <xref:System.IO.Pipes.AnonymousPipeClientStream> 类来实现匿名管道。  
   
-     请参阅[如何： 使用匿名管道进行本地进程间通信](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)。  
+     请参阅[如何：使用匿名管道进行本地进程间通信](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)。  
   
--   命名的管道。  
+-   命名管道。  
   
-     命名的管道提供的管道服务器和一个或多个管道客户端之间的进程间通信。 命名的管道可以是单向或双工。 它们支持基于消息的通信，并允许多个客户端同时连接到使用同一管道名称的服务器进程。 命名的管道还支持模拟，这样连接进程便在远程服务器上使用它们自己的权限。  
+     命名管道在管道服务器和一个或多个管道客户端之间提供进程间通信。 命名管道可以是单向的，也可以是双向的。 它们支持基于消息的通信，并允许多个客户端使用相同的管道名称同时连接到服务器进程。 命名管道还支持模拟，这样连接进程就可以在远程服务器上使用自己的权限。  
   
      在 .NET Framework 中，可通过使用 <xref:System.IO.Pipes.NamedPipeServerStream> 和 <xref:System.IO.Pipes.NamedPipeClientStream> 类来实现命名管道。  
   
-     请参阅[如何： 使用命名管道进行网络进程间通信](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)。  
+     请参阅[如何：使用命名管道进行网络进程间通信](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件和流 I-O](../../../docs/standard/io/index.md)  
  [如何：使用匿名管道进行本地进程间通信](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
  [如何：使用命名管道进行网络进程间通信](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

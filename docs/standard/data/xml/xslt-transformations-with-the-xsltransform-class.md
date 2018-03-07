@@ -12,22 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 619e37ab63735ea77d3afb0d94f284b2f310efc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5795824a00b6949d5637ca3c75bd311d522c15f5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform 类的 XSLT 转换
 > [!NOTE]
->  
-          <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[迁移从 XslTransform 类](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)有关详细信息。  
+>  <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)，以获取详细信息。  
   
- XSLT 的目标是将源 XML 文档的内容转换为格式或结构不同的另一个文档（例如，将 XML 转换为在网站上使用的 HTML，或将其转换为只包含应用程序所需字段的文档）。 此转换过程由万维网联合会 (W3C) XSLT 1.0 版建议位于 www.w3.org/TR/xslt 指定。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，<xref:System.Xml.Xsl.XslTransform> 命名空间中的 <xref:System.Xml.Xsl> 类是实现此规范功能的 XSLT 处理器。 有少量的未实现的 W3C XSLT 1.0 建议中, 列出的功能[XslTransform 的输出](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)。 下图显示 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的转换结构。  
+ XSLT 的目标是将源 XML 文档的内容转换为格式或结构不同的另一个文档（例如，将 XML 转换为在网站上使用的 HTML，或将其转换为只包含应用程序所需字段的文档）。 此转换过程由万维网联合会 (W3C) XSLT 版本 1.0 建议（网址为 www.w3.org/TR/xslt）规定。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，<xref:System.Xml.Xsl.XslTransform> 命名空间中的 <xref:System.Xml.Xsl> 类是实现此规范功能的 XSLT 处理器。 有几个 W3C XSLT 1.0 建议尚未实现的功能，[XslTransform 输出](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)中列出了这些功能。 下图显示 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的转换结构。  
   
 ## <a name="overview"></a>概述  
  ![XSLT 转换体系结构](../../../../docs/standard/data/xml/media/xslttransformationswithxsltransformclass.gif "xsltTransformationsWithXslTransformClass")  
@@ -41,8 +43,8 @@ ms.lasthandoff: 11/21/2017
 |------------------------|--------------|  
 |<xref:System.Xml.XPath.XPathNavigator>|它是提供用于在存储区上浏览的游标样式模型以及 XPath 查询支持的 API。 它不提供对基础存储区的编辑。 要进行编辑，请使用 <xref:System.Xml.XmlDocument> 类。|  
 |<xref:System.Xml.XPath.IXPathNavigable>|它是为存储区提供 `CreateNavigator` 的 <xref:System.Xml.XPath.XPathNavigator> 方法的接口。|  
-|<xref:System.Xml.XmlDocument>|它启用对此文档的编辑。 它实现 <xref:System.Xml.XPath.IXPathNavigable>，从而允许随后需要 XSLT 转换的文档编辑方案。 有关详细信息，请参阅[xsltransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)。|  
-|<xref:System.Xml.XmlDataDocument>|它从 <xref:System.Xml.XmlDocument> 派生。 它根据 <xref:System.Data.DataSet> 的指定映射，使用 <xref:System.Data.DataSet> 优化 XML 文档中的结构化数据存储，从而将关系世界与 XML 世界联系起来。 它实现 <xref:System.Xml.XPath.IXPathNavigable>，从而允许可以对从数据库中检索到的关系数据执行 XSLT 转换的方案。 有关详细信息，请参阅[关系数据和 ADO.NET 的 XML 集成](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)。|  
+|<xref:System.Xml.XmlDocument>|它启用对此文档的编辑。 它实现 <xref:System.Xml.XPath.IXPathNavigable>，从而允许随后需要 XSLT 转换的文档编辑方案。 有关详细信息，请参阅 [XslTransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)。|  
+|<xref:System.Xml.XmlDataDocument>|它从 <xref:System.Xml.XmlDocument> 派生。 它根据 <xref:System.Data.DataSet> 的指定映射，使用 <xref:System.Data.DataSet> 优化 XML 文档中的结构化数据存储，从而将关系世界与 XML 世界联系起来。 它实现 <xref:System.Xml.XPath.IXPathNavigable>，从而允许可以对从数据库中检索到的关系数据执行 XSLT 转换的方案。 有关详细信息，请参阅[与关系数据和 ADO.NET 的 XML 集成](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)。|  
 |<xref:System.Xml.XPath.XPathDocument>|此类针对 <xref:System.Xml.Xsl.XslTransform> 处理和 XPath 查询进行了优化，并提供只读的高性能缓存。 它实现 <xref:System.Xml.XPath.IXPathNavigable>，是用于 XSLT 转换的首选存储区。|  
 |<xref:System.Xml.XPath.XPathNodeIterator>|它提供在 XPath 节点集上的浏览。 <xref:System.Xml.XPath.XPathNavigator> 的所有 XPath 选择方法都返回 <xref:System.Xml.XPath.XPathNodeIterator>。 可以在同一存储区上创建多个 <xref:System.Xml.XPath.XPathNodeIterator> 对象，每个对象表示一个选定的节点集。|  
   
@@ -101,12 +103,12 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Xsl.XslTransform>  
  [XslTransform 类实现 XSLT 处理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
- [XslTransform 类中的任意行为的实现](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
+ [XslTransform 类中任意行为的实现](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
  [转换中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
  [转换中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Xsltransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Xsltransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [Xsltransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+ [XslTransform 的 XPathDocument 输入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [XslTransform 的 XmlDataDocument 输入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [XslTransform 的 XmlDocument 输入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

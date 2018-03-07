@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-the-dom"></a>扩展 DOM
-Microsoft.NET Framework 包括一组基本的类提供的 XML 文档对象模型 (DOM) 实现。 <xref:System.Xml.XmlNode> 及其派生类提供的方法和属性可以浏览、查询和修改 XML 文档的内容和结构。  
+Microsoft .NET Framework 包含一组基类，用于实现 XML 文档对象模型 (DOM)。 <xref:System.Xml.XmlNode> 及其派生类提供的方法和属性可以浏览、查询和修改 XML 文档的内容和结构。  
   
  当使用 DOM 将 XML 内容加载到内存中时，所创建的节点包含节点名、节点类型等信息。 可能存在需要特定节点信息但基类未提供的情况。 例如，可能需要查看节点的行号和位置。 这种情况下，可以从现有的 DOM 类派生新类并添加附加功能。  
   
@@ -250,10 +253,10 @@ Number of elements in book.xml: 3
   
  该事件处理过程在派生类中的工作方式同它在原始 DOM 类中的工作方式完全相同。  
   
- 有关节点事件处理的详细信息，请参阅[事件](../../../../docs/standard/events/index.md)和<xref:System.Xml.XmlNodeChangedEventHandler>。  
+ 若要详细了解节点事件处理，请参阅[事件](../../../../docs/standard/events/index.md)和 <xref:System.Xml.XmlNodeChangedEventHandler>。  
   
 ## <a name="default-attributes-and-the-createelement-method"></a>默认属性和 CreateElement 方法  
- 如果要重写派生类中的 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，则在编辑文档期间创建新元素时不添加默认属性。 这只有在编辑时才是问题。 由于 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法负责向 <xref:System.Xml.XmlDocument> 添加默认属性，因此必须在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中编写此功能的代码。 如果要加载包含默认属性的 <xref:System.Xml.XmlDocument>，则这些属性将被正确处理。 默认属性的详细信息，请参阅[DOM 中的元素创建新属性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。  
+ 如果要重写派生类中的 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，则在编辑文档期间创建新元素时不添加默认属性。 这只有在编辑时才是问题。 由于 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法负责向 <xref:System.Xml.XmlDocument> 添加默认属性，因此必须在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中编写此功能的代码。 如果要加载包含默认属性的 <xref:System.Xml.XmlDocument>，则这些属性将被正确处理。 若要详细了解默认属性，请参阅[新建 DOM 中元素的属性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

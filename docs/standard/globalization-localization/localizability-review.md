@@ -22,34 +22,37 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2aaf7c466c6662611e2b37d5c967a99d050158df
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localizability-review"></a>本地化评审
 本地化分析检查是全球通用应用程序开发中的一个中间步骤。 它验证全球化应用程序是否已准备好进行本地化，以及是否能够识别需要特别处理的所有代码或所有用户界面元素。 此步骤还有助于确保本地化过程不会将任何功能缺陷引入应用程序。 一旦本地化分析检查提出的所有问题都得到解决，就意味着可以对应用程序进行本地化了。 如果本地化分析检查详尽彻底，则在本地化过程中应该不需要修改任何源代码。  
   
  本地化分析检查包括以下三项检查：  
   
--   [实现全球化建议？](#global)  
+-   [是否已实现全球化建议？](#global)  
   
--   [是否正确处理区分区域性的功能？](#culture)  
+-   [是否已正确处理区域性敏感型功能？](#culture)  
   
--   [是否已使用国际数据的应用程序的测试？](#test)  
+-   [是否已使用国际数据测试应用？](#test)  
   
 <a name="global"></a>   
 ## <a name="implementing-globalization-recommendations"></a>实现全球化建议  
- 如果已设计和开发应用程序提供本地化的一点是，并且如果您已按照建议中所述[全球化](../../../docs/standard/globalization-localization/globalization.md)篇文章中，将很大程度上保证质量的关口本地化分析检查。. 否则为在此阶段您应查看并实施的建议[全球化](../../../docs/standard/globalization-localization/globalization.md)，并修复源代码中妨碍本地化的错误。  
+ 如果在设计和开发应用时考虑了本地化因素，并且遵循了[全球化](../../../docs/standard/globalization-localization/globalization.md)一文中给出的建议，那么可本地化评审在很大程度上就会成为质量保证关口。 否则，在此阶段，应检查并实现[全球化](../../../docs/standard/globalization-localization/globalization.md)建议，并修复源代码中妨碍本地化的错误。  
   
 <a name="culture"></a>   
 ## <a name="handling-culture-sensitive-features"></a>处理区分区域性的功能  
- .NET Framework 在许多方面不提供编程支持，而且各区域性之间差别很大。 大多数情况下，您必须编写自定义代码来处理诸如以下方面的功能特性：  
+ .NET Framework 在许多方面不提供编程支持，而且各区域性之间差别很大。 大多数情况下，你必须编写自定义代码来处理诸如以下方面的功能特性：  
   
 -   地址。  
   
@@ -78,9 +81,9 @@ ms.lasthandoff: 11/21/2017
   
 -   返回意外结果的字符串比较或相等比较。  
   
- 如果已经在开发应用程序时遵循的全球化建议、 正确处理区分区域性的功能和确定和解决在测试期间出现的本地化问题，你可以转到下一步， [本地化](../../../docs/standard/globalization-localization/localization.md)。  
+ 如果在开发应用时遵循了全球化建议，并正确处理了区域性敏感型功能，同时还发现并解决了测试期间出现的本地化问题，就可以执行下一步[本地化](../../../docs/standard/globalization-localization/localization.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全球化和本地化](../../../docs/standard/globalization-localization/index.md)  
  [本地化](../../../docs/standard/globalization-localization/localization.md)  
  [全球化](../../../docs/standard/globalization-localization/globalization.md)  

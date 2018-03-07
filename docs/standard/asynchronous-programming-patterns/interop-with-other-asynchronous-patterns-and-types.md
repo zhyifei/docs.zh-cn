@@ -18,15 +18,18 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e30b562b4795717df526c143df96607686a7582
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a46358052eb93662408f9c01592f917eee4540b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>与其他异步模式和类型互操作
 .NET Framework 1.0 引进了 <xref:System.IAsyncResult> 模式，也称为 [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)或 `Begin/End` 模式。  .NET Framework 2.0 增加了 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。  从.NET Framework 4 开始， [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 取代了 APM 和 EAP，但能够轻松构建从早期模式中迁移的例程。  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 [!code-csharp[Conceptual.AsyncInterop#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Stream1.cs#3)]
 [!code-vb[Conceptual.AsyncInterop#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/stream1.vb#3)]  
   
- 你可以使用<xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType>方法来实现此操作的 TAP 包装，如下所示：  
+ 可以使用 <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> 方法对此操作实现 TAP 包装器，如下所示：  
   
  [!code-csharp[Conceptual.AsyncInterop#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wrap1.cs#4)]
  [!code-vb[Conceptual.AsyncInterop#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap1.vb#4)]  
@@ -101,12 +104,12 @@ ms.lasthandoff: 11/21/2017
   
 <a name="WHToTap"></a>   
 ### <a name="from-wait-handles-to-tap"></a>从等待句柄到 TAP  
- 虽然等待句柄不能实现异步模式，但高级开发人员可能使用<xref:System.Threading.WaitHandle>类和<xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>方法实现异步通知时设置的等待句柄。  可以包装 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 方法以在等待句柄中启用针对任何同步等待的基于任务的替代方法：  
+ 尽管等待句柄不实现异步模式，但高级开发人员可以在设置等待句柄时使用 <xref:System.Threading.WaitHandle> 类和 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法实现异步通知。  可以包装 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 方法以在等待句柄中启用针对任何同步等待的基于任务的替代方法：  
   
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
  [!code-vb[Conceptual.AsyncInterop#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#12)]  
   
- 使用此方法，可以在异步方法中使用现有 <xref:System.Threading.WaitHandle> 实现。  例如，如果你想要限制在任何特定时间执行的异步操作的数目，则可以利用一个信号量 (<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>对象)。  可以将并发运行的操作数目限制到 *N* ，方法为：初始化到 *N*的信号量的数目、在想要执行操作时等待信号量，并在完成操作时释放信号量：  
+ 使用此方法，可以在异步方法中使用现有 <xref:System.Threading.WaitHandle> 实现。  例如，若要限制在任何特定时间执行的异步操作数，可以利用信号灯（<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 对象）。  可以将并发运行的操作数目限制到 *N* ，方法为：初始化到 *N*的信号量的数目、在想要执行操作时等待信号量，并在完成操作时释放信号量：  
   
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
@@ -120,7 +123,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.AsyncInterop#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#14)]
  [!code-vb[Conceptual.AsyncInterop#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#14)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
  [实现基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
  [使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

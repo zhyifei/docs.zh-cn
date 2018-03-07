@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5a78321b289dd19c5086223856fd3142f1aef75c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 基于推送的验证
 <xref:System.Xml.Schema.XmlSchemaValidator> 类提供了一种高效、高性能的机制，通过基于推送的方式针对 XML 架构验证 XML 数据。 例如，使用 <xref:System.Xml.Schema.XmlSchemaValidator> 类可以就地验证 XML 信息集，而不必将其序列化为 XML 文档，然后使用验证 XML 读取器重新分析该文档。  
@@ -172,11 +175,11 @@ validator.ValidateEndElement(null);
  有关用于验证 XML 信息集中的元素、属性和内容的方法的示例，请参见上一节中的示例。 有关这些方法的更多信息，请参见 <xref:System.Xml.Schema.XmlSchemaValidator> 类参考文档。  
   
 #### <a name="validating-content-using-an-xmlvaluegetter"></a>使用 XmlValueGetter 编写内容  
- <xref:System.Xml.Schema.XmlValueGetter>`delegate` 可以用于以与属性、文本或空白节点的 XML 架构定义语言 (XSD) 类型兼容的公共语言运行库 (CLR) 类型传递属性、文本或空白节点的值。 如果属性、文本或空白节点的 CLR 值已可用，<xref:System.Xml.Schema.XmlValueGetter>`delegate` 非常有用，这样可以避免将值转换为 `string`，然后再重新分析以进行验证。  
+ <xref:System.Xml.Schema.XmlValueGetter>`delegate` 可用于将属性、文本或空格节点的值传递为公共语言运行时 (CLR) 类型，与属性、文本或空格节点的 XML 架构定义语言 (XSD) 类型兼容。 如果属性、文本或空格节点的 CLR 值已可用，<xref:System.Xml.Schema.XmlValueGetter>`delegate` 非常有用，这样就免去了将它转换为 `string` 并重新分析以供验证的成本。  
   
  <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> 和 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> 方法是重载方法，使用属性、文本或空白节点的值作为 `string` 或 <xref:System.Xml.Schema.XmlValueGetter>`delegate`。  
   
- <xref:System.Xml.Schema.XmlSchemaValidator> 类的下列方法使用 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 作为参数。  
+ <xref:System.Xml.Schema.XmlSchemaValidator> 类的下列方法接受 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 作为参数。  
   
 -   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
@@ -214,7 +217,7 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
 }  
 ```  
   
- 有关 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 的完整示例，请参见简介中的示例。 有关 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 的更多信息，请参见 <xref:System.Xml.Schema.XmlValueGetter> 和 <xref:System.Xml.Schema.XmlSchemaValidator> 类的参考文档。  
+ 有关 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 的完整示例，请参见简介中的示例。 若要详细了解 <xref:System.Xml.Schema.XmlValueGetter>`delegate`，请参阅 <xref:System.Xml.Schema.XmlValueGetter> 和 <xref:System.Xml.Schema.XmlSchemaValidator> 类的参考文档。  
   
 #### <a name="post-schema-validation-information"></a>后架构验证信息  
  <xref:System.Xml.Schema.XmlSchemaInfo> 类表示通过 <xref:System.Xml.Schema.XmlSchemaValidator> 类验证的 XML 节点的一些后架构验证信息。 <xref:System.Xml.Schema.XmlSchemaValidator> 类的各种方法使用 <xref:System.Xml.Schema.XmlSchemaInfo> 对象作为可选的 (`null`) `out` 参数。  
@@ -443,10 +446,10 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
 |状态|切换|  
 |-----------|----------------|  
-|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>(<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124;TopLevel*)<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
-|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>&#124;<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124;元素|  
-|元素|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>内容\*)？ <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> \* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>内容\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
-|内容|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>&#124;<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124;元素|  
+|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
+|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|  
+|元素|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
+|内容|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|  
   
 > [!NOTE]
 >  如果调用方法的顺序不符合 <xref:System.InvalidOperationException> 对象的当前状态，上表中的每种方法将引发 <xref:System.Xml.Schema.XmlSchemaValidator>。  
@@ -484,5 +487,5 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 > [!NOTE]
 >  调用上表中的任何方法时不会更改 <xref:System.Xml.Schema.XmlSchemaValidator> 类的各种属性返回的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Schema.XmlSchemaValidator>

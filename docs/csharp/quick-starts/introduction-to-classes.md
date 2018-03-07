@@ -1,5 +1,5 @@
 ---
-title: "快速入门 - 类简介 - C# 指南"
+title: "“类简介”教程 - C# 本地快速入门"
 description: "创建首个 C# 程序，并探索面向对象的概念"
 author: billwagner
 ms.author: wiwagn
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-classes"></a>类简介
 
-本快速入门教程要求你有一台可用于开发的计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门简介](local-environment.md)简要概述了你将用到的命令，还提供了详细信息链接。
+若要学习本快速入门教程，必须有开发计算机。 .NET 主题 [10 分钟入门](https://www.microsoft.com/net/core)介绍了如何在 Mac、PC 或 Linux 上设置本地开发环境。 [本地快速入门教程简介](local-environment.md)不仅简要概述了将用到的命令，还收录了详细信息链接。
 
 ## <a name="create-your-application"></a>创建应用程序
 
@@ -38,9 +38,9 @@ namespace classes
 }
 ```
 
-在本快速入门课程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。  在 classes 目录中，新建名为 BankAccount.cs 的文件。 
+在本快速入门教程中，将要新建表示银行帐户的类型。 通常情况下，开发者都会在不同的文本文件中定义每个类。 这样可以更轻松地管理不断增大的程序。  在 classes 目录中，新建名为 BankAccount.cs 的文件。 
 
-此文件包含“银行帐户”定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本快速入门课程中，银行帐户支持以下行为：
+此文件包含“银行帐户”定义。 面向对象的编程组织代码的方式为，创建类形式的类型。 这些类包含表示特定实体的代码。 `BankAccount` 类表示银行帐户。 代码通过方法和属性实现特定操作。 在本快速入门教程中，银行帐户支持以下行为：
 
 1. 用一个 10 位数唯一标识银行帐户。
 1. 用字符串存储一个或多个所有者名称。
@@ -76,7 +76,7 @@ namespace classes
 }
 ```
 
-继续操作前，先来看看已经生成的内容。  借助 `namespace` 声明，可以按逻辑组织代码。 本快速入门课程的篇幅较小，因此将所有代码都置于一个命名空间内。 
+继续操作前，先来看看已经生成的内容。  借助 `namespace` 声明，可以按逻辑组织代码。 由于本快速入门教程的篇幅较小，因此所有代码都将被添加到一个命名空间中。 
 
 `public class BankAccount` 定义要创建的类或类型。 类声明后面 `{` 和 `}` 中的所有内容定义了类行为。 `BankAccount` 类有五个成员。 前三个成员是属性。 属性是数据元素，可以包含强制执行验证或其他规则的代码。 最后两个成员是方法。 方法是执行一个函数的代码块。 读取每个成员的名称应该能够为自己或其他开发者提供了解类用途的足够信息。
 
@@ -199,11 +199,11 @@ catch (InvalidOperationException e)
 
 ## <a name="challenge---log-all-transactions"></a>挑战 - 记录所有交易
 
-为了完成本快速入门课程，可以编写 `GetAccountHistory` 方法，为交易历史记录创建 `string`。 将此方法添加到 `BankAccount` 类型中：
+为了完成本快速入门教程，可以编写 `GetAccountHistory` 方法，为交易历史记录创建 `string`。 将此方法添加到 `BankAccount` 类型中：
 
 [!code-csharp[History](../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
 
-上面的代码使用 <xref:System.Text.StringBuilder> 类，设置包含每个交易行的字符串的格式。 在前面的快速入门课程中，也遇到过字符串格式设置代码。 新增的一个字符为 `\t`。 这用于插入选项卡，从而设置输出格式。
+上面的代码使用 <xref:System.Text.StringBuilder> 类，设置包含每个交易行的字符串的格式。 在前面的快速入门教程中，也遇到过字符串格式设置代码。 新增的一个字符为 `\t`。 这用于插入选项卡，从而设置输出格式。
 
 添加以下代码行，在 Program.cs 中对它进行测试：
 
@@ -215,6 +215,6 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>后续步骤
 
-如果遇到问题，可以在 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)中查看本快速入门课程的源代码
+如果遇到问题，可以在 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)中查看本快速入门教程的源代码
 
 恭喜！已完成所有快速入门课程。 若要了解详细信息，请学习我们的[教程](../tutorials/index.md)
