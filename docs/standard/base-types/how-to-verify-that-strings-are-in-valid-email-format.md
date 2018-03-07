@@ -18,21 +18,24 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - examples [Visual Basic], strings
 - IsValidEmail
-- validation, e-mail strings
+- validation, email strings
 - input, checking
 - strings [.NET Framework], examples [Visual Basic]
-- e-mail [.NET Framework], validating
+- email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03623cc4086981dc321aafe3020dcd571b74d9bc
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fdbb64cac1f1d4043b8b935fcad32aec88b7bb7a
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：确认字符串是有效的电子邮件格式
 下面的示例使用正则表达式来验证一个字符串是否为有效的电子邮件格式。  
@@ -63,7 +66,7 @@ ms.lasthandoff: 10/20/2017
 |-------------|-----------------|  
 |`^`|从字符串的开头部分开始匹配。|  
 |`(?(")`|确定第一个字符是否为引号。 `(?(")` 为替换构造的开头。|  
-|`(?("")("".+?(?<!\\)""@)`|如果第一个字符是引号，则匹配一个开始引号，后跟至少一个任意字符，再后跟一个结束引号。 在结束引号不前面必须是反斜杠字符 (\\)。 `(?<!` 是零宽度负预测先行断言的开头。 字符串应以 at 符号 (@) 结束。|  
+|`(?("")("".+?(?<!\\)""@)`|如果第一个字符是引号，则匹配一个开始引号，后跟至少一个任意字符，再后跟一个结束引号。 不得在结束引号前面加反斜杠字符 (\\)。 `(?<!` 是零宽度负预测先行断言的开头。 字符串应以 at 符号 (@) 结束。|  
 |`&#124;(([0-9a-z]`|如果第一个字符不是引号，则匹配从 a 到 z 或 A 到 Z（比较不区分大小写）的任意字母字符或从 0 到 9 的任意数字字符。|  
 |`(\.(?!\.))`|如果下一个字符为句点，则匹配它。 如果下一个字符不为句点，则看下一个字符并继续进行匹配。 `(?!\.)` 是宽度为零的负预测先行断言，可防止两个连续句号出现在电子邮件地址的本地部分中。|  
 |``&#124;[-!#\$%&'\*\+/=\?\^`{}\&#124;~\w]``|如果下一个字符不为句点，则匹配任意单词字符或下列字符之一：-!#$%'*+=?^`{}&#124;~。|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 10/20/2017
 |`(?<=[0-9a-z])`|如果 @ 字符之前的字符为从 A 到 Z、从 a 到 z 或从 0 到 9 的字符，则继续进行匹配。 `(?<=[0-9a-z])` 构造定义零宽度正回顾断言。|  
 |`(?(\[)`|检查 @ 后面的字符是否为左括号。|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|如果该字符为左括号，则匹配该左括号，后跟 IP 地址（四个数字组，每个数字组包含一到三位数字，并且每个数字组用句点隔开）和右括号。|  
-|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|如果 @ 后面的字符不是左括号，则匹配一个字母数字字符的 A 到 Z 值 a 到 z 或 0-9 后, 跟零个或多个连字符后, 跟零个或一个字母数字字符值为 A-Z、 a 到 z 或 0-9后, 跟句号。 此模式可以重复一次或多次，并且必须后跟顶级域名。|  
+|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|如果 @ 后面的字符不是左括号，匹配一个字母数字字符（A-Z、a-z 或 0-9 中的某个值），后跟零个或多个连字符，再后跟零个或一个字母数字字符（A-Z、a-z 或 0-9 中的某个值），再后跟一个句点。 此模式可以重复一次或多次，并且必须后跟顶级域名。|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|顶级域名必须以字母数字字符（a-z、A-Z 和 0-9）开始和结束。 它还可以包括从零到 22 个字母数字或连字符的 ASCII 字符。|  
 |`$`|在字符串的结尾结束匹配。|  
   
@@ -113,5 +116,5 @@ vbc /t:library RegexUtilities.vb
     vbc Example.vb /r:RegexUtilities.dll  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 正则表达式](../../../docs/standard/base-types/regular-expressions.md)

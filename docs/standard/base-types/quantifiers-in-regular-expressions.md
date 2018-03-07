@@ -20,15 +20,18 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab06aa0c331c8cbd4c8986cced29334046f30264
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: db1c3af1bb3ad207278eed64a8fb2ef8ed6dc465
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="quantifiers-in-regular-expressions"></a>正则表达式中的限定符
 限定符指定输入中必须存在字符、组或字符类的多少实例才能找到匹配项。  下表列出了 .NET 支持的限定符。  
@@ -38,23 +41,23 @@ ms.lasthandoff: 11/21/2017
 |`*`|`*?`|匹配零次或多次。|  
 |`+`|`+?`|匹配一次或多次。|  
 |`?`|`??`|匹配零次或一次。|  
-|`{` *n* `}`|`{` *n* `}?`|完全匹配 *n* 时间。|  
-|`{` *n* `,}`|`{` *n* `,}?`|匹配至少 *n* 时间。|  
-|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|与来自 *n* 到*m*时间。|  
+|`{` *n* `}`|`{` *n* `}?`|正好匹配 n 次。|  
+|`{` *n* `,}`|`{` *n* `,}?`|至少匹配 n 次。|  
+|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|匹配 n 次到 m 次。|  
   
- 所需数量`n`和`m`是整数常量。 通常，限定符是贪婪的；它们使正则表达式引擎匹配尽可能多的特定模式实例。 向限定符追加 `?` 字符可使它成为惰性的；会使正则表达式引擎匹配尽可能少的实例。 有关贪婪与惰性限定符之间的差异的完整说明，请参见本主题后面的[贪婪与惰性限定符](#Greedy)部分。  
+ 数量 `n` 和 `m` 是整数常量。 通常，限定符是贪婪的；它们使正则表达式引擎匹配尽可能多的特定模式实例。 向限定符追加 `?` 字符可使它成为惰性的；会使正则表达式引擎匹配尽可能少的实例。 有关贪婪与惰性限定符之间的差异的完整说明，请参见本主题后面的[贪婪与惰性限定符](#Greedy)部分。  
   
 > [!IMPORTANT]
->  嵌套限定符（例如正则表达式模式 `(a*)*` 的行为）可以按输入字符串中的字符数的指数函数形式，来增加正则表达式引擎必须执行的比较次数。 此行为，并且其解决方法有关的详细信息，请参阅[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。  
+>  嵌套限定符（例如正则表达式模式 `(a*)*` 的行为）可以按输入字符串中的字符数的指数函数形式，来增加正则表达式引擎必须执行的比较次数。 若要详细了解此行为及其解决方法，请参阅[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。  
   
 ## <a name="regular-expression-quantifiers"></a>正则表达式限定符  
  以下部分列出了 .NET 正则表达式支持的限定符。  
   
 > [!NOTE]
->  如果 *，+，？，{，和} 个字符正则表达式模式中出现，正则表达式引擎会将其解析为限定符或限定符构造的一部分除非它们包括在[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 若要在字符类外部将这些字符解释文本字符，必须通过在它们前面加反斜杠来对它们进行转义。 例如，在字符串`\*`正则表达式模式可以解释为原义星号 ("\*") 字符。  
+>  如果在正则表达式模式中遇到 *、+、?、{ 和 } 字符，正则表达式引擎会将它们解释为量符或量符构造的一部分，除非它们包含在[字符类](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)中。 若要在字符类外部将这些字符解释文本字符，必须通过在它们前面加反斜杠来对它们进行转义。 例如，正则表达式模式中的字符串 `\*` 会被解释为文本星号（“\*”）字符。  
   
 ### <a name="match-zero-or-more-times-"></a>匹配零次或多次：*  
- `*` 限定符与前面的元素匹配零次或多次。 它相当于`{0,}`限定符。 `*`是贪婪限定符的惰性限定符是`*?`。  
+ `*` 限定符与前面的元素匹配零次或多次。 它相当于 `{0,}` 量符。 `*` 是贪婪量符，相当的惰性量符是 `*?`。  
   
  下面的示例说明此正则表达式。 在输入字符串中的九个数字中，五个与模式匹配，四个（`95`、`929`、`9129` 和 `9919`）不匹配。  
   
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式模式的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`91*`|匹配后跟零个或多个“1”字符的“9”。|  
@@ -71,7 +74,7 @@ ms.lasthandoff: 11/21/2017
 |`\b`|在字边界结束。|  
   
 ### <a name="match-one-or-more-times-"></a>匹配一次或多次：+  
- `+`限定符匹配前面的元素一个或多个时间。 它相当于`{1,}`。 `+`是贪婪限定符的惰性限定符是`+?`。  
+ `+` 量符匹配上一元素一次或多次。 它相当于 `{1,}`。 `+` 是贪婪量符，相当的惰性量符是 `+?`。  
   
  例如，正则表达式 `\ban+\w*?\b` 会尝试匹配以后跟字母 `n` 的一个或多个实例的字母 `a` 开头的完整单词。 下面的示例说明此正则表达式。 正则表达式会匹配单词 `an`、`annual`、`announcement` 和 `antique`，并且正确地无法匹配 `autumn` 和 `all`。  
   
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式模式的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`an+`|匹配后跟一个或多个“n”字符的“a”。|  
@@ -88,7 +91,7 @@ ms.lasthandoff: 11/21/2017
 |`\b`|在字边界结束。|  
   
 ### <a name="match-zero-or-one-time-"></a>匹配零次或一次：?  
- `?`限定符可以匹配前面的元素零个或一个时间。 它相当于`{0,1}`。 `?`是贪婪限定符的惰性限定符是`??`。  
+ `?` 量符匹配上一元素零次或一次。 它相当于 `{0,1}`。 `?` 是贪婪量符，相当的惰性量符是 `??`。  
   
  例如，正则表达式 `\ban?\b` 会尝试匹配以后跟字母 `n` 的零个或一个实例的字母 `a` 开头的完整单词。 换句话说，它会尝试匹配单词 `a` 和 `an`。 下面的示例说明此正则表达式。  
   
@@ -97,14 +100,14 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式模式的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`an?`|匹配后跟零个或一个“n”字符的“a”。|  
 |`\b`|在字边界结束。|  
   
 ### <a name="match-exactly-n-times-n"></a>恰好匹配 n 次：{n}  
- `{`  *n*  `}`限定符匹配前面的元素恰好 *n* 时间 where  *n* 是任意整数。 `{`*n*`}`是贪婪限定符的惰性限定符是`{`  *n*  `}?`。  
+ `{`n`}` 量符正好匹配上一元素 n 次，其中 n 是任何整数。 `{`n`}` 是贪婪量符，相当的惰性量符是 `{`n`}?`。  
   
  例如，正则表达式 `\b\d+\,\d{3}\b` 会尝试匹配依次后跟一个或多个十进制数字、三个十进制数字、一个单词边界的单词边界。 下面的示例说明此正则表达式。  
   
@@ -113,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式模式的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`\d+`|匹配一个或多个十进制数字。|  
@@ -122,16 +125,16 @@ ms.lasthandoff: 11/21/2017
 |`\b`|在字边界结束。|  
   
 ### <a name="match-at-least-n-times-n"></a>至少匹配 n 次：{n,}  
- `{`  *n*  `,}`限定符至少匹配前面的元素 *n* 时间 where  *n* 是任意整数。 `{`*n*`,}`是贪婪限定符的惰性限定符是`{`  *n*  `}?`。  
+ `{`n`,}` 量符至少匹配上一元素 n 次，其中 n 是任何整数。 `{`n`,}` 是贪婪量符，相当的惰性量符是 `{`n`}?`。  
   
- 例如，正则表达式 `\b\d{2,}\b\D+` 会尝试匹配依次后跟至少两个数字、一个单词边界和一个非数字字符的单词边界。 下面的示例说明此正则表达式。 正则表达式不匹配短语`"7 days"`因为它只包含一个十进制数字，但它成功匹配短语`"10 weeks and 300 years"`。  
+ 例如，正则表达式 `\b\d{2,}\b\D+` 会尝试匹配依次后跟至少两个数字、一个单词边界和一个非数字字符的单词边界。 下面的示例说明此正则表达式。 正则表达式无法匹配短语 `"7 days"`，因为它只包含一个十进制数字，但可以成功匹配短语 `"10 weeks and 300 years"`。  
   
  [!code-csharp[RegularExpressions.Quantifiers#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#5)]
  [!code-vb[RegularExpressions.Quantifiers#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#5)]  
   
  正则表达式模式的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`\d{2,}`|匹配至少两个十进制数字。|  
@@ -139,7 +142,7 @@ ms.lasthandoff: 11/21/2017
 |`\D+`|匹配至少一个非十进制数字。|  
   
 ### <a name="match-between-n-and-m-times-nm"></a>匹配 n 到 m 次：{n,m}  
- `{`  *n*  `,` *M* `}`限定符至少匹配前面的元素 *n* 时间，但不是能超过*m*时间 where  *n* 和*m*均为整数。 `{`*n*`,`*m* `}`是贪婪限定符的惰性限定符是`{`  *n*  `,` *m*`}?`。  
+ `{`n`,`m`}` 量符至少匹配上一元素 n 次，但不超过 m 次，其中 n 和 m 是整数。 `{`n`,`m`}` 是贪婪量符，相当的惰性量符是 `{`n`,`m`}?`。  
   
  在下面的示例中，正则表达式 `(00\s){2,4}` 尝试与后跟一个空格的两个零数字匹配两到四次。 请注意，输入字符串的最后一部分包含此模式五次，而不是最大值四次。 但是，只有此子字符串的初始部分（到空格和第五对零）与正则表达式模式匹配。  
   
@@ -147,7 +150,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[RegularExpressions.Quantifiers#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#6)]  
   
 ### <a name="match-zero-or-more-times-lazy-match-"></a>匹配零次或多次（惰性匹配）：*?  
- `*?`限定符匹配前面的元素零次或多次，但次数少尽可能。 它是对应的贪婪限定符惰性部分`*`。  
+ `*?` 量符匹配上一元素零次或多次，但次数尽可能少。 它是贪婪量符 `*` 对应的惰性量符。  
   
  在下面的示例中，正则表达式 `\b\w*?oo\w*?\b` 匹配包含字符串 `oo` 的所有单词。  
   
@@ -156,7 +159,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式模式的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`\w*?`|匹配零个或多个单词字符，但字符要尽可能的少。|  
@@ -165,7 +168,7 @@ ms.lasthandoff: 11/21/2017
 |`\b`|在单词边界处结束。|  
   
 ### <a name="match-one-or-more-times-lazy-match-"></a>匹配一次或多次（惰性匹配）：+?  
- `+?`限定符一个或多个时间，但次数少尽可能匹配前面的元素。 它是对应的贪婪限定符惰性部分`+`。  
+ `+?` 量符匹配上一元素一次或多次，但次数尽可能少。 它是贪婪量符 `+` 对应的惰性量符。  
   
  例如，正则表达式 `\b\w+?\b` 匹配由单词边界分隔的一个或多个字符。 下面的示例说明此正则表达式。  
   
@@ -173,7 +176,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[RegularExpressions.Quantifiers#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#8)]  
   
 ### <a name="match-zero-or-one-time-lazy-match-"></a>匹配零次或一次（惰性匹配）：??  
- `??`限定符与前面的元素零个或一个时间，但次数少尽可能匹配。 它是对应的贪婪限定符惰性部分`?`。  
+ `??` 量符匹配上一元素零次或一次，但次数尽可能少。 它是贪婪量符 `?` 对应的惰性量符。  
   
  例如，正则表达式 `^\s*(System.)??Console.Write(Line)??\(??` 尝试匹配字符串“Console.Write”或“Console.WriteLine”。 字符串还可以在“Console”前面包含“System.”， 并且可以后跟左括号。 字符串必须处于行的开头，不过前面可以是空格。 下面的示例说明此正则表达式。  
   
@@ -192,7 +195,7 @@ ms.lasthandoff: 11/21/2017
 |`\(??`|匹配左括号的零个或一个匹配项。|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>恰好匹配 n 次（惰性匹配）：{n}?  
- `{`  *n*  `}?`限定符匹配前面的元素恰好`n`时间 where  *n* 是任意整数。 它是对应的贪婪限定符惰性部分`{`  *n*  `}+`。  
+ `{`n`}?` 量符正好匹配上一元素 `n` 次，其中 n 是任何整数。 它是贪婪量符 `{`n`}+` 对应的惰性量符。  
   
  在下面的示例中，正则表达式 `\b(\w{3,}?\.){2}?\w{3,}?\b` 用于标识网站地址。 请注意，它匹配“www.microsoft.com”和“msdn.microsoft.com”，但不匹配“mywebsite”或“mycompany.com”。  
   
@@ -201,7 +204,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式模式的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(\w{3,}?\.)`|匹配至少 3 个后跟一个点或句点字符的单词字符，但字符数尽可能少。 这是第一个捕获组。|  
@@ -209,12 +212,12 @@ ms.lasthandoff: 11/21/2017
 |`\b`|在单词边界处结束匹配。|  
   
 ### <a name="match-at-least-n-times-lazy-match-n"></a>至少匹配 n 次（惰性匹配）：{n,}?  
- `{`  *n*  `,}?`限定符至少匹配前面的元素`n`时间 where  *n* 是任意整数，但尽可能少的次数可能。 它是对应的贪婪限定符惰性部分`{`  *n*  `,}`。  
+ `{`n`,}?` 量符至少匹配上一元素 `n` 次，其中 n 是任何整数，但次数尽可能少。 它是贪婪量符 `{`n`,}` 对应的惰性量符。  
   
- 请参阅示例`{`  *n*  `}?`举例说明的上一节中的限定符。 该示例中的正则表达式使用`{`  *n*  `,}`限定符来匹配包含后跟句号的至少三个字符的字符串。  
+ 有关说明，请参阅上一部分中的 `{`n`}?` 量符示例。 此示例中的正则表达式使用 `{`n`,}` 量符，匹配至少包含三个字符（后跟一个句点）的字符串。  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>匹配 n 到 m 次（惰性匹配）：{n,m}?  
- `{`  *n*  `,` *M* `}?`限定符可以匹配前面的元素之间`n`和`m`时间 where *n* 和*m*都是整数，但次数少尽可能。 它是对应的贪婪限定符惰性部分`{`  *n*  `,` *m*`}`。  
+ `{`n`,`m`}?` 量符匹配上一元素 `n` 次到 `m` 次，其中 n 和 m 是整数，但次数尽可能少。 它是贪婪量符 `{`n`,`m`}` 对应的惰性量符。  
   
  在下面的示例中，正则表达式 `\b[A-Z](\w*\s+){1,10}?[.!?]` 匹配包含一到十个单词的句子。 它可匹配输入字符串中的所有句子（除了包含 18 个单词的一个句子）。  
   
@@ -223,7 +226,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式模式的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`[A-Z]`|匹配从 A 到 Z 的大写字符。|  
@@ -239,28 +242,28 @@ ms.lasthandoff: 11/21/2017
   
      贪婪限定符尝试尽可能多地匹配元素。  
   
--   非贪婪 （或延迟） 版本。  
+-   非贪婪（或惰性）版本。  
   
-     非贪婪限定符尝试尽可能少地匹配元素。 你可以转换为惰性限定符将贪婪限定符，只需添加`?`。  
+     非贪婪限定符尝试尽可能少地匹配元素。 只需添加 `?`，即可将贪婪量符转换为惰性量符。  
   
- 请考虑一个简单的正则表达式，它旨在从数字字符串（如信用卡号）中提取最后四位数。 正则表达式使用的版本`*`贪婪限定符是`\b.*([0-9]{4})\b`。 但是，如果字符串包含两个数字，则此正则表达式仅匹配第二个数字的最后四位数，如下面的示例所示。  
+ 请考虑一个简单的正则表达式，它旨在从数字字符串（如信用卡号）中提取最后四位数。 使用 `*`贪婪量符的正则表达式版本是 `\b.*([0-9]{4})\b`。 但是，如果字符串包含两个数字，则此正则表达式仅匹配第二个数字的最后四位数，如下面的示例所示。  
   
  [!code-csharp[RegularExpressions.Quantifiers.Greedy#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/cs/Greedy.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers.Greedy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/vb/Greedy.vb#1)]  
   
- 正则表达式不匹配的第一个数字，因为`*`限定符尝试匹配上一个元素中的整个字符串，可能根据多次，因此它找到其匹配字符串的末尾。  
+ 正则表达式无法匹配第一个数字，因为 `*` 量符尝试在整个字符串中尽可能多地匹配上一元素，所以它会在字符串末尾找到匹配。  
   
- 这不是所需行为。 相反，你可以使用`*?`惰性限定符一起提取数字从这两个编号，如以下示例所示。  
+ 这不是所需行为。 相反，可以使用 `*?` 惰性量符，从这两个数字提取数字，如下面的示例所示。  
   
  [!code-csharp[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/cs/Greedy.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.Greedy#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers.Greedy/vb/Greedy.vb#2)]  
   
- 在大多数情况下，具有贪婪和惰性限定符的正则表达式返回相同匹配项。 它们通常返回不同的结果时使用通配符 (`.`) 元字符，与任何字符匹配。  
+ 在大多数情况下，具有贪婪和惰性限定符的正则表达式返回相同匹配项。 与匹配任何字符的通配符 (`.`) 元字符一起使用时，最常见的情况是，它们返回不同的结果。  
   
 ## <a name="quantifiers-and-empty-matches"></a>限定符和空匹配项  
- 限定符`*`， `+`，和`{`  *n*  `,` *m* `}`和延迟的对应永远不会重复执行间隔为空当已找到的最小捕获数匹配。 此规则会在最大可能组捕获数是无限或接近无限时，阻止限定符在空的子表达式匹配项上进入无限循环。  
+ 如果已找到最小捕获数，量符 `*`、`+` 和 `{`n`,`m`}` 及对应的惰性量符绝不会在匹配为空后重复运行。 此规则会在最大可能组捕获数是无限或接近无限时，阻止限定符在空的子表达式匹配项上进入无限循环。  
   
- 例如，下面的代码演示对的调用结果<xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType>与正则表达式模式的方法`(a?)*`，与零个或一个"a"字符匹配零个或更多时间。 请注意，单个捕获组捕获每个"a"作为以及<xref:System.String.Empty?displayProperty=nameWithType>，但该没有第二个空匹配项，因为第一个空匹配使限定符停止重复。  
+ 例如，下面的代码展示了使用正则表达式模式 `(a?)*`（匹配零个或一个“a”字符零次或多次）调用 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 方法的结果。 请注意，一个捕获组捕获所有“a”以及 <xref:System.String.Empty?displayProperty=nameWithType>，但没有第二个空匹配，因为第一个空匹配导致量符停止重复运行。  
   
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch1.vb#1)]  
@@ -270,14 +273,14 @@ ms.lasthandoff: 11/21/2017
 |模式|描述|  
 |-------------|-----------------|  
 |`(a\1`|匹配“a”以及第一个捕获组的值...|  
-|`&#124;(?(1)`|… 或测试是否定义了第一个捕获组。 (请注意，`(?(1)`构造未定义的捕获组。)|  
-|`\1))`|如果第一个捕获组存在，则匹配其值。 如果组不存在，将匹配组<xref:System.String.Empty?displayProperty=nameWithType>。|  
+|`&#124;(?(1)`|… 或测试是否定义了第一个捕获组。 （请注意，`(?(1)` 构造不定义捕获组。）|  
+|`\1))`|如果第一个捕获组存在，则匹配其值。 如果组不存在，组会匹配 <xref:System.String.Empty?displayProperty=nameWithType>。|  
   
- 第一个正则表达式尝试与此模式匹配零到二次；第二个正则表达式尝试恰好匹配两次。 因为第一个模式达到其最小的数与其第一个捕获的捕获<xref:System.String.Empty?displayProperty=nameWithType>，它绝不会重复尝试匹配`a\1`;`{0,2}`限定符上次迭代中允许仅空匹配。 相反，第二个正则表达式匹配“a”，因为它会第二次计算 `a\1`；最小迭代数 2 会强制引擎在空匹配项后面重复。  
+ 第一个正则表达式尝试与此模式匹配零到二次；第二个正则表达式尝试恰好匹配两次。 由于第一个模式在首次捕获 <xref:System.String.Empty?displayProperty=nameWithType> 时达到最小捕获数，因此它绝不会重复尝试匹配 `a\1`；`{0,2}` 量符仅允许在最后一个迭代中有空匹配。 相反，第二个正则表达式匹配“a”，因为它会第二次计算 `a\1`；最小迭代数 2 会强制引擎在空匹配项后面重复。  
   
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
