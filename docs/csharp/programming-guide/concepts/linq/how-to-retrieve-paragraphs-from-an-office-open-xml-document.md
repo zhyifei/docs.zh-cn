@@ -5,31 +5,32 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6014b7cf4dc02c2818dd4b9bf5fadfcbd82e3d4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c48ab7189840b7d22c53c4f379ab6d8a30d8be88
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/05/2018
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a><span data-ttu-id="103d6-102">如何：从 Office Open XML 文档中检索段落 (C#)</span><span class="sxs-lookup"><span data-stu-id="103d6-102">How to: Retrieve Paragraphs from an Office Open XML Document (C#)</span></span>
-<span data-ttu-id="103d6-103">本主题提供一个示例，该示例打开一个 Office Open XML 文档，然后检索文档中所有段落所构成的集合。</span><span class="sxs-lookup"><span data-stu-id="103d6-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a><span data-ttu-id="580cc-102">如何：从 Office Open XML 文档中检索段落 (C#)</span><span class="sxs-lookup"><span data-stu-id="580cc-102">How to: Retrieve Paragraphs from an Office Open XML Document (C#)</span></span>
+<span data-ttu-id="580cc-103">本主题提供一个示例，该示例打开一个 Office Open XML 文档，然后检索文档中所有段落所构成的集合。</span><span class="sxs-lookup"><span data-stu-id="580cc-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
   
- <span data-ttu-id="103d6-104">有关 Office Open XML 的详细信息，请参阅 [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573)。</span><span class="sxs-lookup"><span data-stu-id="103d6-104">For more information on Office Open XML, see [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span></span>  
+ <span data-ttu-id="580cc-104">若要详细了解 Office Open XML，请参阅 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) 和 [www.ericwhite.com](http://ericwhite.com/)。</span><span class="sxs-lookup"><span data-stu-id="580cc-104">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [www.ericwhite.com](http://ericwhite.com/).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="103d6-105">示例</span><span class="sxs-lookup"><span data-stu-id="103d6-105">Example</span></span>  
- <span data-ttu-id="103d6-106">此示例打开一个 Office Open XML 包，使用 Open XML 包中的关系查找文档和样式部件。</span><span class="sxs-lookup"><span data-stu-id="103d6-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="103d6-107">然后，它查询文档，投影一个匿名类型的集合，该集合包含段落 <xref:System.Xml.Linq.XElement> 节点、每个段落的样式名称和每个段落的文本。</span><span class="sxs-lookup"><span data-stu-id="103d6-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
+## <a name="example"></a><span data-ttu-id="580cc-105">示例</span><span class="sxs-lookup"><span data-stu-id="580cc-105">Example</span></span>  
+ <span data-ttu-id="580cc-106">此示例打开一个 Office Open XML 包，使用 Open XML 包中的关系查找文档和样式部件。</span><span class="sxs-lookup"><span data-stu-id="580cc-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="580cc-107">然后，它查询文档，投影一个匿名类型的集合，该集合包含段落 <xref:System.Xml.Linq.XElement> 节点、每个段落的样式名称和每个段落的文本。</span><span class="sxs-lookup"><span data-stu-id="580cc-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
   
- <span data-ttu-id="103d6-108">此示例使用一个名为 `StringConcatenate` 的扩展方法，示例中也提供了该方法。</span><span class="sxs-lookup"><span data-stu-id="103d6-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
+ <span data-ttu-id="580cc-108">此示例使用一个名为 `StringConcatenate` 的扩展方法，示例中也提供了该方法。</span><span class="sxs-lookup"><span data-stu-id="580cc-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
   
- <span data-ttu-id="103d6-109">有关对此示例的工作原理进行说明的详细教程，请参阅 [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="103d6-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span></span>  
+ <span data-ttu-id="580cc-109">有关对此示例的工作原理进行说明的详细教程，请参阅 [XML 的纯功能转换 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="580cc-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span></span>  
   
- <span data-ttu-id="103d6-110">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="103d6-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="103d6-111">它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="103d6-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="580cc-110">本示例使用 WindowsBase 程序集中的类。</span><span class="sxs-lookup"><span data-stu-id="580cc-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="580cc-111">它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。</span><span class="sxs-lookup"><span data-stu-id="580cc-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -171,7 +172,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="103d6-112">当针对[创建 Source Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中说明的示例 Open XML 文档运行时，此示例生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="103d6-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
+ <span data-ttu-id="580cc-112">当针对[创建 Source Office Open XML 文档 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) 中说明的示例 Open XML 文档运行时，此示例生成以下输出：</span><span class="sxs-lookup"><span data-stu-id="580cc-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -191,5 +192,5 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="103d6-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="103d6-113">See Also</span></span>  
- [<span data-ttu-id="103d6-114">高级查询技术 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="103d6-114">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="580cc-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="580cc-113">See Also</span></span>  
+ [<span data-ttu-id="580cc-114">高级查询技术 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="580cc-114">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

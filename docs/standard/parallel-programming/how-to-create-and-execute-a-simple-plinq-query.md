@@ -11,29 +11,33 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, how to create
+helpviewer_keywords:
+- PLINQ queries, how to create
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a99eedc05bbf8d4dcd58e46b484bd57c29f70886
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 20b1be451e53a81dd0631a89310a5b884aa83166
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="how-to-create-and-execute-a-simple-plinq-query"></a><span data-ttu-id="beb15-102">如何：创建并执行简单的 PLINQ 查询</span><span class="sxs-lookup"><span data-stu-id="beb15-102">How to: Create and Execute a Simple PLINQ Query</span></span>
-<span data-ttu-id="beb15-103">下面的示例演示如何通过对源序列使用 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 扩展方法来创建一个简单的并行 LINQ 查询，并使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法执行该查询。</span><span class="sxs-lookup"><span data-stu-id="beb15-103">The following example shows how to create a simple Parallel LINQ query by using the <xref:System.Linq.ParallelEnumerable.AsParallel%2A> extension method on the source sequence, and executing the query by using the <xref:System.Linq.ParallelEnumerable.ForAll%2A> method.</span></span>  
+# <a name="how-to-create-and-execute-a-simple-plinq-query"></a><span data-ttu-id="d4dc0-102">如何：创建并执行简单的 PLINQ 查询</span><span class="sxs-lookup"><span data-stu-id="d4dc0-102">How to: Create and Execute a Simple PLINQ Query</span></span>
+<span data-ttu-id="d4dc0-103">下面的示例演示如何通过对源序列使用 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 扩展方法来创建一个简单的并行 LINQ 查询，并使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法执行该查询。</span><span class="sxs-lookup"><span data-stu-id="d4dc0-103">The following example shows how to create a simple Parallel LINQ query by using the <xref:System.Linq.ParallelEnumerable.AsParallel%2A> extension method on the source sequence, and executing the query by using the <xref:System.Linq.ParallelEnumerable.ForAll%2A> method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="beb15-104">本文档使用 lambda 表达式在 PLINQ 中定义委托。</span><span class="sxs-lookup"><span data-stu-id="beb15-104">This documentation uses lambda expressions to define delegates in PLINQ.</span></span> <span data-ttu-id="beb15-105">如果不熟悉 C# 或 Visual Basic 中的 lambda 表达式，请参阅 [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="beb15-105">If you are not familiar with lambda expressions in C# or Visual Basic, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
+>  <span data-ttu-id="d4dc0-104">本文档使用 lambda 表达式在 PLINQ 中定义委托。</span><span class="sxs-lookup"><span data-stu-id="d4dc0-104">This documentation uses lambda expressions to define delegates in PLINQ.</span></span> <span data-ttu-id="d4dc0-105">如果不熟悉 C# 或 Visual Basic 中的 lambda 表达式，请参阅 [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。</span><span class="sxs-lookup"><span data-stu-id="d4dc0-105">If you are not familiar with lambda expressions in C# or Visual Basic, see [Lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="beb15-106">示例</span><span class="sxs-lookup"><span data-stu-id="beb15-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d4dc0-106">示例</span><span class="sxs-lookup"><span data-stu-id="d4dc0-106">Example</span></span>  
  [!code-csharp[PLINQ#11](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/create1.cs#11)]
  [!code-vb[PLINQ#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/create1.vb#11)]  
   
- <span data-ttu-id="beb15-107">此示例演示用于在结果序列的排序不重要的情况下创建和执行任何并行 LINQ 查询的基本模式；未排序的查询通常比已排序的查询快。</span><span class="sxs-lookup"><span data-stu-id="beb15-107">This example demonstrates the basic pattern for creating and executing any Parallel LINQ query when the ordering of the result sequence is not important; unordered queries are generally faster than ordered queries.</span></span> <span data-ttu-id="beb15-108">查询将源分区为多个任务，这些任务将在多个线程上异步执行。</span><span class="sxs-lookup"><span data-stu-id="beb15-108">The query partitions the source into tasks that are executed asynchronously on multiple threads.</span></span> <span data-ttu-id="beb15-109">每个任务的完成顺序不仅取决于处理分区中的元素所涉及的工作量，还取决于诸如操作系统如何调度每个线程之类的外部因素。</span><span class="sxs-lookup"><span data-stu-id="beb15-109">The order in which each task completes depends not only on the amount of work involved to process the elements in the partition, but also on external factors such as how the operating system schedules each thread.</span></span> <span data-ttu-id="beb15-110">本示例旨在演示用法，运行速度可能不如等效的顺序 LINQ to Objects 查询快。</span><span class="sxs-lookup"><span data-stu-id="beb15-110">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="beb15-111">有关加速的详细信息，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="beb15-111">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span> <span data-ttu-id="beb15-112">有关如何保留在查询中的元素的顺序的详细信息，请参阅[如何： 在 PLINQ 查询中的控件顺序](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md)。</span><span class="sxs-lookup"><span data-stu-id="beb15-112">For more information about how to preserve the ordering of elements in a query, see [How to: Control Ordering in a PLINQ Query](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md).</span></span>  
+ <span data-ttu-id="d4dc0-107">此示例演示用于在结果序列的排序不重要的情况下创建和执行任何并行 LINQ 查询的基本模式；未排序的查询通常比已排序的查询快。</span><span class="sxs-lookup"><span data-stu-id="d4dc0-107">This example demonstrates the basic pattern for creating and executing any Parallel LINQ query when the ordering of the result sequence is not important; unordered queries are generally faster than ordered queries.</span></span> <span data-ttu-id="d4dc0-108">查询将源分区为多个任务，这些任务将在多个线程上异步执行。</span><span class="sxs-lookup"><span data-stu-id="d4dc0-108">The query partitions the source into tasks that are executed asynchronously on multiple threads.</span></span> <span data-ttu-id="d4dc0-109">每个任务的完成顺序不仅取决于处理分区中的元素所涉及的工作量，还取决于诸如操作系统如何调度每个线程之类的外部因素。</span><span class="sxs-lookup"><span data-stu-id="d4dc0-109">The order in which each task completes depends not only on the amount of work involved to process the elements in the partition, but also on external factors such as how the operating system schedules each thread.</span></span> <span data-ttu-id="d4dc0-110">本示例旨在演示用法，运行速度可能不如等效的顺序 LINQ to Objects 查询快。</span><span class="sxs-lookup"><span data-stu-id="d4dc0-110">This example is intended to demonstrate usage, and might not run faster than the equivalent sequential LINQ to Objects query.</span></span> <span data-ttu-id="d4dc0-111">若要详细了解加速，请参阅[了解 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。</span><span class="sxs-lookup"><span data-stu-id="d4dc0-111">For more information about speedup, see [Understanding Speedup in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).</span></span> <span data-ttu-id="d4dc0-112">若要详细了解如何在查询中暂留元素顺序，请参阅[如何：控制 PLINQ 查询中的顺序](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md)。</span><span class="sxs-lookup"><span data-stu-id="d4dc0-112">For more information about how to preserve the ordering of elements in a query, see [How to: Control Ordering in a PLINQ Query](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="beb15-113">另请参阅</span><span class="sxs-lookup"><span data-stu-id="beb15-113">See Also</span></span>  
- [<span data-ttu-id="beb15-114">并行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="beb15-114">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="d4dc0-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="d4dc0-113">See Also</span></span>  
+ [<span data-ttu-id="d4dc0-114">并行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="d4dc0-114">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
