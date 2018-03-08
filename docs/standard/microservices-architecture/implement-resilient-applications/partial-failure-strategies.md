@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>处理部分失败的策略
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/19/2018
 
 **提供回退**。 在此方法中，客户端进程在请求失败时执行回退逻辑，如返回缓存数据或默认值。 这是适用于查询的一种方法，对于更新或命令较复杂。
 
-**限制排队请求数**。 客户端还应对客户端微服务可发送到特定服务的未完成请求的数量设置上限。 如果已达到限制，发出其他请求可能无意义，这些尝试应立即失败。 对于实现，Polly [Bulkhead 隔离](https://github.com/App-vNext/Polly/wiki/Bulkhead)策略可以用于满足此要求。 这种方法实质上是将 [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) 作为实现的平行化限制。 它也允许 bulkhead 外的“队列”。 可在执行前主动舍弃额外的负载（例如，由于容量被视为已满）。 这样一来，其对某些失败情景的响应速度比断路器要快，因为断路器会等待失败。 Polly 中的 BulkheadPolicy 对象公开 bulkhead 和队列的已满程度，且提供有关溢出的事件，因此也可用于驱动自动水平缩放。
+**限制排队请求数**。 客户端还应对客户端微服务可发送到特定服务的未完成请求的数量设置上限。 如果已达到限制，发出其他请求可能无意义，这些尝试应立即失败。 对于实现，Polly [Bulkhead 隔离](https://github.com/App-vNext/Polly/wiki/Bulkhead)策略可以用于满足此要求。 这种方法实质上是将 <xref:System.Threading.SemaphoreSlim> 作为实现的平行化限制。 它也允许 bulkhead 外的“队列”。 可在执行前主动舍弃额外的负载（例如，由于容量被视为已满）。 这样一来，其对某些失败情景的响应速度比断路器要快，因为断路器会等待失败。 Polly 中的 BulkheadPolicy 对象公开 bulkhead 和队列的已满程度，且提供有关溢出的事件，因此也可用于驱动自动水平缩放。
 
 ## <a name="additional-resources"></a>其他资源
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/19/2018
 -   为 Azure 设计可恢复的应用程序
     [https://docs.microsoft.com/azure/architecture/resiliency/](https://docs.microsoft.com/azure/architecture/resiliency/)
 
--   临时故障处理
+-   **瞬时故障处理**
     <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
 
 

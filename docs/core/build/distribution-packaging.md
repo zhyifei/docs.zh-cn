@@ -9,60 +9,121 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 71b9d722-c5a8-4271-9ce1-d87e7ae2494d
-ms.workload: dotnetcore
-ms.openlocfilehash: 9f5cd2f7c4fec553dfdfaf1765663b6896b3061d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e511ea13c578ab44c65a5ba78f666cce1ab6a0c4
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 分发打包
 
 由于 .NET Core 现已可用于更多平台，因此了解如何为其打包、命名并进行版本控制将很有用。 这样，无论用户选择在哪里运行 .NET，包维护人员均可以帮助确保获得一致的体验。
 
-## <a name="net-core-components"></a>.NET Core 组件
+## <a name="disk-layout"></a>磁盘布局
 
-.NET Core 由三个需要打包的主要部分构成：
+安装时，.NET Core 包含一些组件，这些组件在文件系统中排列如下：
 
-1. 主机也称为“muxer”）有两个不同角色：激活运行时以启动应用程序，及激活 SDK 以向其分派命令。 主机是本机可执行文件 (`dotnet.exe`)，并是其支持策略库（安装在 `host/fxr` 中）。 它由 [`dotnet/core-setup`](https://github.com/dotnet/core-setup/) 存储库中的代码生成。 通常一个给定计算机上只有一个主机，但这并不是一个严格的要求。
-2. 框架由运行时和支持的托管库构成。 可以将框架作为应用程序的一部分进行安装，或者将其作为可供多个应用程序重用的某个中心位置中的共享框架进行安装。 一个给定计算机上可以安装任意数量的共享框架。 共享框架在 `shared/Microsoft.NETCore.App/<version>` 下运行。 主机跨修补程序版本前滚。 如果应用程序面向 `Microsoft.NETCore.App` 1.0.0，但仅存在 1.0.4，则将针对 1.0.4 启动此应用。
-3. SDK（也称为“工具”）是一组托管工具，可用于编写和生成 .NET Core 库和应用程序。 SDK 包括 CLI、MSBuild 及相关生成任务和目标、NuGet、新项目模板等。一个计算机上可以拥有多个 SDK（例如，生成显式要求旧版本的项目时），但是建议使用最新发布的工具。
+```
+.
+├── dotnet                       (1)
+├── LICENSE.txt                  (8)
+├── ThirdPartyNotices.txt        (8)
+├── host
+│   └── fxr
+│       └── <fxr version>        (2)
+├── sdk
+│   ├── <sdk version>            (3)
+│   └── NuGetFallbackFolder      (4)
+└── shared
+    ├── Microsoft.NETCore.App
+    │   └── <runtime version>    (5)
+    └── Microsoft.AspNetCore.App
+        └── <aspnetcore version> (6)
+    └── Microsoft.AspNetCore.All
+        └── <aspnetcore version> (7)
+/
+├─usr/share/man/man1
+│       └── dotnet.1.gz          (9)
+└─usr/bin
+        └── dotnet               (10)
+```
 
-## <a name="recommended-package-names"></a>建议的包名称
+- (1) **dotnet** 主机（也称为“muxer”）有两个不同角色：激活运行时以启动应用程序，及激活 SDK 以向其分派命令。 主机是本机可执行文件 (`dotnet.exe`)。
 
-下列指南是针对包名称的建议。 包维护人员可以出于各种原因选择从其中分离，例如他们面向的是特定分发版本的不同传统。
+主机只有一个，不过大部分的其他组件都在带有版本的目录中（2、3、5 和 6）。 也就是说，因为它们是并行安装的，所以系统上可以出现多个版本。
 
-### <a name="minimum-package-set"></a>最小包集
+- (2) **host/fxr/\<fxr version>** 包含了主机所使用的框架解析逻辑。 主机采用已安装的最新 hostfxr。 在执行 .NET Core 应用程序时，hostfxr 负责选择合适的运行时。 例如，.NET Core 2.0.0 的应用程序会使用 2.0.5 运行时（如果可用）。 同样，hostfxr 在开发期间也会选择适当的 SDK。
 
-* `dotnet-runtime-[major].[minor]`：包含指定版本的共享框架（包管理器中应仅提供针对给定的主要/次要组合的最新修补程序版本）。 **依赖项**：`dotnet-host`
-* `dotnet-sdk`：最新的 SDK。 **依赖项**：最新的 `dotnet-sdk-[major].[minor]`。
-* `dotnet-sdk-[major].[minor]`：包含指定版本的 SDK。 指定的版本是包含的共享框架中最高的包含版本，以便用户可以将 SDK 轻松关联到共享框架。 **依赖项**： `dotnet-host`，一个或多个 `dotnet-runtime-[major].[minor]`（这些运行时之一将供 SDK 代码本身使用，在此处用户针对其他运行时进行生成和运行）。
-* `dotnet-host`：最新的主机。
+- (3) **sdk/\<sdk version>** SDK（也称为“工具”）是一组托管工具，可用于编写和生成 .NET Core 库和应用程序。 SDK 包括 CLI、Roslyn 编译器、MSBuild 及相关生成任务和目标、NuGet、新项目模板等。
+
+- (4) **sdk/NuGetFallbackFolder** 包含 `dotnet restore` 步骤中 SDK 所使用的 NuGet 包的缓存。
+
+“共享”文件夹包含框架。 共享框架提供一组位于中心位置的库，从而让不同的应用程序使用。
+
+- (5) **shared/Microsoft.NETCore.App/\<runtime version>** 此框架包含.NET Core 运行时和支持托管库。
+
+- (6,7) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore version>** 包含 ASP.NET Core 库。 已开发且支持 `Microsoft.AspNetCore.App` 下的库（作为 .NET Core 项目的一部分）。 `Microsoft.AspNetCore.All` 下的库是一个超集，其中还包含第三方库。
+
+- (8) **LICENSE.txt,ThirdPartyNotices.txt** 是 .NET Core 许可证和 .NET Core 中使用的第三方库的许可证。
+
+- (9,10) **dotnet.1.gz, dotnet** `dotnet.1.gz` 是 dotnet 手册页。 `dotnet` 是指向 dotnet 主机 (1) 的符号链接。 这些文件安装在已知位置用于系统集成。
+
+## <a name="recommended-packages"></a>推荐的包
+
+.NET Core 版本控制基于运行时组件 `[major].[minor]` 版本号。
+SDK 版本采用同样的 `[major].[minor]`，并有一个独立的 `[patch]`，它为 SDK 合并了功能和修补语义。
+例如：SDK 版本 2.2.302 是支持 2.2 运行时的 SDK 的第 3 个功能版本的第 2 个修补版本。
+
+一些包在自己的名称中就包含一部分版本号。 这能帮助最终用户安装特定版本。
+版本名称中不包含版本的剩余部分。 这允许 OS 包管理器更新这些包（例如，自动安装安全修补程序）。
+
+下表显示推荐的包。
+
+| name                                    | 示例                | 用例：安装...           | 包含           | 依赖项                                   | 版本            |
+|-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
+| dotnet-sdk-[major]                      | dotnet-sdk-2           | 运行时主版本的最新 SDK    |                    | dotnet-sdk-[major].[latestminor]               | \<sdk version>     |
+| dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | 特定运行时的最新 SDK |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<sdk version>     |
+| dotnet-sdk-[major].[minor].[sdk feat]xx | dotnet-sdk-2.1.3xx     | 特定 SDK 的功能版本    | (3),(4)            | aspnetcore-runtime-[major].[minor]             | \<sdk version>     |
+| aspnetcore-runtime-[major].[minor]      | aspnetcore-runtime-2.1 | 特定 ASP.NET Core 运行时   | (6),[(7)]          | dotnet-runtime-[major].[minor]                 | \<runtime version> |
+| dotnet-runtime-[major].[minor]          | dotnet-runtime-2.1     | 特定运行时                | (5)                | host-fxr:\<runtime version>+                   | \<runtime version> |
+| dotnet-host-fxr                         | dotnet-host-fxr        | _dependency_                    | (2)                | host:\<runtime version>+                       | \<runtime version> |
+| dotnet-host                             | dotnet-host            | _dependency_                    | (1),(8),(9),(10)   |                                                | \<runtime version> |
+
+大多数分发都需要从源中构建所有项目。 这对包有一些影响：
+
+- 不能简单地从源中构建 `shared/Microsoft.AspNetCore.All` 下的第三方库。 因此 `aspnetcore-runtime` 包中省略了该文件夹。
+
+- 使用 `nuget.org` 中的二进制项目填充了 `NuGetFallbackFolder`。 它应保留为空。
+
+多个 `dotnet-sdk` 包可能会为 `NuGetFallbackFolder` 提供同样的文件。 要避免包管理器出现问题，这些文件应完全相同（包括校验和、修改日期等等）。
 
 #### <a name="preview-versions"></a>预览版
 
-包维护人员可以决定包含共享框架和 SDK 的预览版。 未进行版本控制的 `dotnet-sdk` 包中不的包含这些版本，但是可将其发布为已进行版本控制的包，并将额外的预览标记追加到该名称的主要和次要版本中。 例如，可以有 `dotnet-sdk-2.0-preview-final` 包。
+包维护人员可以决定提供共享框架和 SDK 的预览版。 提供预览版可能会使用 `dotnet-sdk-[major].[minor].[sdk feat]xx`、`aspnetcore-runtime-[major].[minor]` 和 `dotnet-runtime-[major].[minor]` 包。 对于预览版，包的主版本号必须设为 0。 这样最终版本将被安装为此包的升级版。
 
-### <a name="optional-additional-packages"></a>可选的其他包
+#### <a name="patch-packages"></a>修补程序包
 
-一些维护人员可以选择提供其他包，例如：
+由于包的修补版本可能会带来重大更改，包维护人员可能要提供修补程序包。 这些包允许安装非自动升级的特定修补版本。 因为这些修补程序包不会随（安全）修补程序升级，所以只应在极少数情况使用。
 
-* `dotnet-lts`：共享框架的最新长期支持 (LTS) 版本。 [LTS 和当前版本系列](~/docs/core/versions/lts-current.md)对应 .NET Core 的不同发布阶段。 用户可以根据他们愿意进行更新的频率来选择采用某一个或其他系列。 此概念也与支持级别绑定，因此它可能有意义，也可能没有意义，具体取决于考虑使用的分发版。
+下表显示推荐的包以及修补程序包。
 
-## <a name="disk-layout"></a>磁盘布局
+| name                                           | 示例                  | 包含         | 依赖项                                              |
+|------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|
+| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | dotnet-sdk-[major].[latest sdk minor]                     |
+| dotnet-sdk-[major].[minor]                     | dotnet-sdk-2.1           |                  | dotnet-sdk-[major].[minor].[latest sdk feat]xx            |
+| dotnet-sdk-[major].[minor].[sdk feat]xx        | dotnet-sdk-2.1.3xx       |                  | dotnet-sdk-[major].[minor].[latest sdk patch]             |
+| **dotnet-sdk-[major].[minor].[patch]**         | dotnet-sdk-2.1.300       | (3),(4)          | aspnetcore-runtime-[major].[minor].[sdk runtime patch]    |
+| aspnetcore-runtime-[major].[minor]             | aspnetcore-runtime-2.1   |                  | aspnetcore-runtime-[major].[minor].[latest runtime patch] |
+| **aspnetcore-runtime-[major].[minor].[patch]** | aspnetcore-runtime-2.1.0 | (6),[(7)]        | dotnet-runtime-[major].[minor].[patch]                    |
+| dotnet-runtime-[major].[minor]                 | dotnet-runtime-2.1       |                  | dotnet-runtime-[major].[minor].[latest runtime patch]     |
+| **dotnet-runtime-[major].[minor].[patch]**     | dotnet-runtime-2.1.0     | (5)              | host-fxr:\<runtime version>+                              |
+| dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | host:\<runtime version>+                                  |
+| dotnet-host                                    | dotnet-host              | (1),(8),(9),(10) |                                                           |
 
-安装 .NET Core 包时，其目标目的地在磁盘上的相对位置。
-`dotnet.exe` 主机应位于包含 `dotnet-sdk` SDK 包和 `dotnet-runtime` 共享框架包的已进行版本控制的内容的 `sdk` 和 `shared` 文件夹旁边。
+除了使用修补程序包，还可以使用包管理器将包固定为特定版本。 要避免影响其他应用程序/用户，例如可能会在容器中生成并部署的应用程序。
 
-包内的文件和目录的磁盘布局已进行版本控制。 这表示更新到最新的 `dotnet-runtime` 会将新版本与之前的版本并行安装，从而降低了更新包后中断现有应用程序的可能性。 包更新不应删除之前的版本。
+## <a name="building-packages"></a>生成包
 
-## <a name="update-policies"></a>更新策略
-
-执行 `update` 后，各个包的行为如下所示：
-
-* `dotnet-runtime-[major].[minor]`：新的修补程序版本更新此包，但是新的次要和主要版本是独立的包。
-* `dotnet-sdk`：`update` 前滚主要、次要和修补程序版本。
-* `dotnet-sdk-[major].[minor]`：新的修补程序版本更新此包，但是新的次要和主要版本是独立的包。
-* `dotnet-lts`：`update` 前滚主要、次要和修补程序版本。
-
-本主题已介绍了对打包 .NET Core 的建议，但是各个分发版可随意选择提供何种版本及何时提供。 例如，与保持最新相比，更注重稳定性的分发版可以选择仅发布与 LTS 版本系列贴近的版本。
+Https://github.com/dotnet/source-build 存储库中说明了如何生成 .NET Core SDK 的源 tarball 及其所有组件。 源版本存储库中的输出内容符合本文第一部分中所描述的布局。

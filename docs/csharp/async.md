@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 35038b3dae80958071a9615f7f131fca73513077
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: d2633bf18fa32adc58dd3f5a2388d11010672da8
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -269,4 +269,5 @@ LINQ 中的 Lambda 表达式使用延迟执行，这意味着代码可能在你�
 ## <a name="other-resources"></a>其他资源
 
 * [深入了解异步](../standard/async-in-depth.md)提供了关于任务如何工作的详细信息。
+* [使用 Async 和 Await 的异步编程 (C#)](../csharp/programming-guide/concepts/async/index.md)
 * 由 Lucian Wischik 所著的 [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async)（关于异步的六个要点）是有关异步编程的绝佳资源

@@ -9,11 +9,11 @@ ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 03315a2d9a44405ff520a1c333f56311e2657df6
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>内插字符串（C# 参考）
 
@@ -43,11 +43,11 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 - “格式字符串”是适合正在设置格式的对象类型的格式字符串。 例如，对于 <xref:System.DateTime> 值，它可能是标准的日期和时间格式字符串，例如“D”或“d”。
 
 > [!IMPORTANT]
-> 字符串开头的 `$` 和 `"` 之间不能有任何空格。 此操作会导致编译时错误。
+> 字符串开头的 `$` 和 `"` 之间不能有任何空格。 如果有空格，会导致编译时错误。
 
  可以在可使用字符串的任何位置使用内插字符串。  每次执行带内插字符串的代码时，都会计算内插字符串。 这有助于分隔内插字符串的定义和计算结果。  
   
- 若要在内插字符串中包含大括号（“{”或“}”），请使用两个大括号，即“{{”或“}}”。  请参阅“隐式转换”部分以获取详细信息。  
+ 若要在内插字符串中包含大括号（“{”或“}”），请使用两个大括号，即“{{”或“}}”。  请参阅[隐式转换](#implicit-conversions)部分获取详细信息。  
 
 如果内插字符串包含在内插字符串中具有特殊意义的其他字符，例如引号 (")、冒号 (:) 或逗号 (,)，则出现在文本中时应转义这些字符；如果它们是内插表达式中随附的语言元素，则应将其包括在由括号分隔的表达式内。 以下示例转义了引号以将其包括在结果字符串中，并使用括号来分隔表达式 `(age == 1 ? "" : "s")`，以防冒号被解读为格式字符串的开头。
 
@@ -91,5 +91,8 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 ## <a name="see-also"></a>请参阅  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
+ <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [C# 中的字符串内插](../../../csharp/tutorials/string-interpolation.md)  
+ [C# 中的内插字符串](../../../csharp/quick-starts/interpolated-strings.yml)  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)

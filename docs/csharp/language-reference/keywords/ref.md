@@ -2,7 +2,8 @@
 title: "ref（C# 参考）"
 ms.date: 05/30/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
@@ -82,19 +83,19 @@ ms.lasthandoff: 11/21/2017
    ```csharp
    public ref decimal GetCurrentValue()
    ``` 
-- 在方法中的每个 `return` 语句之前。 例如: 
+- 在 `return` 标记和方法的 `return` 语句中返回的变量之间。 例如:
  
    ```csharp
-   ref return Decimal.Zero;
+   return ref DecimalArray[0];
    ``` 
 
-为了使调用方来修改对象的状态，引用返回值必须为显式定义为的变量存储[ref 本地](#ref-locals)。 
+为方便调用方修改对象的状态，引用返回值必须存储在被显式定义为 [ref 局部变量](#ref-locals)的变量中。 
 
 有关示例，请参阅 [ref 返回值和 ref 局部变量示例](#a-ref-returns-and-ref-locals-example)
 
 ## <a name="ref-locals"></a>ref 局部变量
 
-ref 局部变量用于指代使用 `ref return` 返回的值。  必须将 ref 局部变量初始化，并赋予 ref 返回值。 任何对 ref 本地变量值的修改都将反映在对象的状态中，该对象的方法按引用返回值。
+ref 局部变量用于指代使用 `return ref` 返回的值。  必须将 ref 局部变量初始化，并赋予 ref 返回值。 任何对 ref 本地变量值的修改都将反映在对象的状态中，该对象的方法按引用返回值。
 
 在变量声明前或在方法（该方法将按引用返回值）调用前使用 `ref` 关键字定义 ref 局部变量。 
 
@@ -119,7 +120,7 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [传递参数](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  

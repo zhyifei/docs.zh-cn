@@ -17,15 +17,18 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 603633e1a0f385c061fe0928ea7361490d61fa3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 <a name="Top"></a>一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。 .NET 中的正则表达式语言支持以下字符类：  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  .NET 支持字符类减法表达式，通过该表达式可以定义一组字符作为从一个字符类中排除另一字符类的结果。 有关详细信息，请参阅[字符类减法](#CharacterClassSubtraction)。  
   
 > [!NOTE]
->  字符类，如按类别、 匹配字符[\w](#WordCharacter)来匹配单词字符或[\p {}](#CategoryOrBlock)若要匹配 Unicode 类别，依赖于<xref:System.Globalization.CharUnicodeInfo>类以提供有关字符的信息类别。  从 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 开始，字符类别基于 [Unicode 标准 8.0.0 版](http://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 到 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 之间，字符类别基于 [Unicode 标准 6.3.0 版](http://www.unicode.org/versions/Unicode6.3.0/)。  
+>  按类别匹配字符的字符类（如用于匹配字词字符的 [\w](#WordCharacter)，或用于匹配 Unicode 类别的 [\p{}](#CategoryOrBlock)）依赖 <xref:System.Globalization.CharUnicodeInfo> 类提供字符类别信息。  从 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 开始，字符类别基于 [Unicode 标准 8.0.0 版](http://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 到 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 之间，字符类别基于 [Unicode 标准 6.3.0 版](http://www.unicode.org/versions/Unicode6.3.0/)。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>正字符组：[ ]  
@@ -77,7 +80,7 @@ ms.lasthandoff: 11/21/2017
   
  下表列出了一些常见的包含正字符类的正则表达式模式。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`[aeiou]`|匹配所有元音。|  
 |`[\p{P}\d]`|匹配所有标点符号和十进制数字字符。|  
@@ -105,7 +108,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式 `\b[A-Z]\w*\b` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`[A-Z]`|匹配从 A 到 Z 的所有大写字符。|  
@@ -151,7 +154,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式 `\bth[^o]\w+\b` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`th`|匹配文本字符“th”。|  
@@ -191,7 +194,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式构造  
   
- `\p{`name`}`  
+ `\p{` *name* `}`  
   
  匹配属于 Unicode 常规类别或命名块的任何字符，其中，name 是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
   
@@ -202,7 +205,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式 `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` 的定义如下表所示。  
   
-|模式|说明|  
+|模式|描述|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`\p{IsGreek}+`|匹配一个或多个希腊语字符。|  
@@ -222,7 +225,7 @@ ms.lasthandoff: 11/21/2017
   
  正则表达式构造  
   
- `\P{`name`}`  
+ `\P{` *name* `}`  
   
  匹配不属于 Unicode 常规类别或命名块的任何字符，其中，name是类别缩写或命名块的名称。 有关类别缩写的列表，请参阅本主题稍后的[支持的 Unicode 常规类别](#SupportedUnicodeGeneralCategories)部分。 有关命名块的列表，请参阅本主题稍后的[支持的命名块](#SupportedNamedBlocks)部分。  
   
@@ -312,7 +315,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="white-space-character-s"></a>空白字符：\s  
  `\s` 匹配任何空白字符。 它等效于下表中列出的转义序列和 Unicode 类别。  
   
-|类别|说明|  
+|类别|描述|  
 |--------------|-----------------|  
 |`\f`|窗体换页符，\u000C。|  
 |`\n`|换行符，\u000A。|  
@@ -405,9 +408,9 @@ ms.lasthandoff: 11/21/2017
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>支持的 Unicode 常规类别  
- Unicode 定义下表列出的常规类别。 有关详细信息，请参阅 [Unicode 字符数据库](http://go.microsoft.com/fwlink/?LinkId=57650)中的“UCD 文件格式”和“常规类别值”子主题。  
+ Unicode 定义下表列出的常规类别。 有关详细信息，请参阅 [Unicode 字符数据库](http://www.unicode.org/reports/tr44/)中的“UCD 文件格式”和“常规类别值”子主题。  
   
-|类别|说明|  
+|类别|描述|  
 |--------------|-----------------|  
 |`Lu`|字母，大写|  
 |`Ll`|字母，小写|  
@@ -467,7 +470,7 @@ ms.lasthandoff: 11/21/2017
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> - 或 -<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> 或<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -511,7 +514,7 @@ ms.lasthandoff: 11/21/2017
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - 或 -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> 或<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -597,7 +600,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Char.GetUnicodeCategory%2A>  
  [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)

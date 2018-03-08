@@ -14,11 +14,11 @@ ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 978f631a130f9ec2d450779f2a6296a6ce3af356
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 43b60455762ecd91a790ea5c7dae49d3348794aa
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何：串联多个字符串（C# 指南）
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/23/2018
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
   
 
-若要连接字符串变量，可使用 `+` 或 `+=` 运算符、[字符串内插](../tutorials/string-interpolation.md)或 <xref:System.String.Concat%2A?displayProperty=nameWithType>、<xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Join%2A?displayProperty=nameWithType>、<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 方法。 `+` 运算符易于使用，有利于产生直观代码。 即使在一个语句中使用多个 `+` 运算符，字符串内容也仅会被复制一次。 以下代码演示两个使用 `+` 运算符串联字符串的示例：
+若要连接字符串变量，可使用 `+` 或 `+=` 运算符、[字符串内插](../tutorials/string-interpolation.md)或 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Concat%2A?displayProperty=nameWithType>、<xref:System.String.Join%2A?displayProperty=nameWithType>、<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 方法。 `+` 运算符易于使用，有利于产生直观代码。 即使在一个语句中使用多个 `+` 运算符，字符串内容也仅会被复制一次。 以下代码演示使用 `+` 和 `+=` 运算符串联字符串的示例：
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  在字符串串联操作中，C# 编译器将 null 字符串视为空字符串进行处理。
 
-另一个字符串连接方法为 <xref:System.String.Format%2A?displayProperty=nameWithType>。 此方法非常适用于从少量组件字符串生成字符串的情况。 如果知道构成连接字符串的字符串数量，此方法也是一个不错的选择。
+另一个字符串连接方法为 <xref:System.String.Format%2A?displayProperty=nameWithType>。 此方法非常适用于从少量组件字符串生成字符串的情况。
 
 在其他情况下，可能要将字符串合并在循环中，此时不知道要合并的源字符串的数量，而且源字符串的实际数量可能非常大。 <xref:System.Text.StringBuilder> 类专门用于此类方案。 以下代码使用 <xref:System.Text.StringBuilder> 类的 <xref:System.Text.StringBuilder.Append%2A> 方法串联字符串。  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/23/2018
 
 有关详细信息，请阅读[选择字符串串联或 `StringBuilder` 类的原因](xref:System.Text.StringBuilder#StringAndSB)
 
-还可使用 <xref:System.String.Concat%2A?displayProperty=nameWithType> 方法联接集合中的字符串。 如果字符串应使用分隔符分隔，请使用 <xref:System.String.Join%2A?displayProperty=nameWithType> 方法。 以下代码使用这两种方法合并单词数组：
+还可使用 <xref:System.String.Concat%2A?displayProperty=nameWithType> 方法联接集合中的字符串。 如果源字符串应使用分隔符分隔，请使用 <xref:System.String.Join%2A?displayProperty=nameWithType> 方法。 以下代码使用这两种方法合并单词数组：
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 
@@ -58,6 +58,7 @@ ms.lasthandoff: 02/23/2018
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
+可通过查看 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip)。
 
 ## <a name="see-also"></a>请参阅  
  <xref:System.String>  

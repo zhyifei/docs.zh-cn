@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db1c3af1bb3ad207278eed64a8fb2ef8ed6dc465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>正则表达式中的限定符
 限定符指定输入中必须存在字符、组或字符类的多少实例才能找到匹配项。  下表列出了 .NET 支持的限定符。  
@@ -273,7 +273,7 @@ ms.lasthandoff: 12/23/2017
 |模式|描述|  
 |-------------|-----------------|  
 |`(a\1`|匹配“a”以及第一个捕获组的值...|  
-|`&#124;(?(1)`|… 或测试是否定义了第一个捕获组。 （请注意，`(?(1)` 构造不定义捕获组。）|  
+|<code>&#124;(?(1)</code>|… 或测试是否定义了第一个捕获组。 （请注意，`(?(1)` 构造不定义捕获组。）|  
 |`\1))`|如果第一个捕获组存在，则匹配其值。 如果组不存在，组会匹配 <xref:System.String.Empty?displayProperty=nameWithType>。|  
   
  第一个正则表达式尝试与此模式匹配零到二次；第二个正则表达式尝试恰好匹配两次。 由于第一个模式在首次捕获 <xref:System.String.Empty?displayProperty=nameWithType> 时达到最小捕获数，因此它绝不会重复尝试匹配 `a\1`；`{0,2}` 量符仅允许在最后一个迭代中有空匹配。 相反，第二个正则表达式匹配“a”，因为它会第二次计算 `a\1`；最小迭代数 2 会强制引擎在空匹配项后面重复。  

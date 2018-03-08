@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: c665dfbf8c3b6609a934aae027ba40e0462498db
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
 <a name="top"></a> .NET 中的正则表达式引擎是一款功能强大且完备的工具，根据模式匹配（而不是比较和匹配文本）处理文本。 在大多数情况下，它可以快速、高效地执行模式匹配。 但在某些情况下，正则表达式引擎的速度似乎很慢。 在极端情况下，它甚至看似停止响应，因为它会用若干个小时甚至若干天处理相对小的输入。  
@@ -150,8 +150,8 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`\w+`|匹配一个或多个单词字符。|  
-|`(\r?\n)&#124;,?\s)`|匹配零个或一个回车符后跟一个换行符，或零个或一个逗号后跟一个空白字符。|  
-|`(\w+((\r?\n)&#124;,?\s))*`|匹配一个或多个单词字符的零个或多个事例，后跟零个或一个回车符和换行符，或后跟零个或一个逗号、一个空格字符。|  
+|<code>(\r?\n)&#124;,?\s)</code>|匹配零个或一个回车符后跟一个换行符，或零个或一个逗号后跟一个空白字符。|  
+|<code>(\w+((\r?\n)&#124;,?\s))*</code>|匹配一个或多个单词字符的零个或多个事例，后跟零个或一个回车符和换行符，或后跟零个或一个逗号、一个空格字符。|  
 |`\w+`|匹配一个或多个单词字符。|  
 |`[.?:;!]`|匹配句号、问号、冒号、分号或感叹号。|  
   

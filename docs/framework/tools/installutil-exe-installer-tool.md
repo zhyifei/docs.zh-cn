@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edda4e415f8ce0246ce6aa1a4d39f5bb6cec7728
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 68bb098cf34839e0587864092d1af302d70eca89
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe（安装程序工具）
 安装程序工具是一个命令行实用工具，你可以通过此工具执行指定程序集中的安装程序组件，从而安装和卸载服务器资源。 此工具与 <xref:System.Configuration.Install> 命名空间中的类配合使用。  
@@ -158,7 +160,7 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe
 installutil /LogFile=myLog.InstallLog /reg=true myAssembly.exe  
 ```  
   
- 以下命令执行程序集 `myAssembly.exe` 中的安装程序，使用安装程序的自定义 `/email` 选项来指定用户的电子邮件地址，并取消将输出显示到日志文件。  
+ 以下命令执行程序集 `myAssembly.exe` 中的安装程序，使用安装程序的自定义选项 `/email` 来指定用户的电子邮件地址，并禁止输出到日志文件。  
   
 ```  
 installutil /LogFile= /email=admin@mycompany.com myAssembly.exe  

@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# 中的字符串内插 #
 
-借助字符串内插，可以将字符串中的占位符替换成字符串变量的值。 在低于 C# 6 的版本中，使用 `System.String.Format` 实现字符串内插。 虽然这样做是可行的，但由于要用到编号占位符，因此加大了读取难度且过程更为冗长。
+借助字符串内插，可以将字符串中的占位符替换成字符串变量的值。 在低于 C# 6 的版本中，使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 实现字符串内插。 虽然这样做是可行的，但由于要用到编号占位符，因此加大了读取难度且过程更为冗长。
 
 其他编程语言一直将字符串内插内置于语言之中。 例如：在 PHP 中：
 
@@ -42,7 +42,7 @@ echo "My name is $name.";
 dotnet new console
 ```
 
-此命令将创建基本的 .NET Core 项目，其中包含项目文件 *interpolated.csproj* 和源代码文件 *Program.cs*。 需要执行 `dotnet restore` 来还原编译此项目所需的依赖项。
+此命令创建基本的 .NET Core 项目，其中包含项目文件 interpolated.csproj 和源代码文件 Program.cs。 需要执行 `dotnet restore` 来还原编译此项目所需的依赖项。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ dotnet new console
 
 ## <a name="intro-to-string-interpolation"></a>字符串内插简介
 
-使用 `System.String.Format` 在字符串中指定要被字符串后面的参数替换的“占位符”。 例如：
+使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 在字符串中指定要被字符串后面的参数替换的“占位符”。 例如：
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>字符串内插的工作方式
 
-在后台，编译器将此类字符串内插语法转换成 String.Format。 因此，可以执行[之前使用 String.Format 执行的相同操作](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx)。
+在后台，编译器将此类字符串内插语法转换成 `String.Format`。 因此，可以执行[之前使用 `String.Format` 执行的相同操作](../../standard/base-types/formatting-types.md)。
 
 例如，可以添加填充和数值格式：
 
@@ -114,14 +114,12 @@ Console.WriteLine(localizeMe);
 
 ## <a name="localization-and-internationalization"></a>本地化和国际化
 
-内插字符串支持 `IFormattable` 和 `FormattableString`，这对国际化非常有用。
+内插字符串支持 <xref:System.IFormattable?displayProperty=nameWithType> 和 <xref:System.FormattableString?displayProperty=nameWithType>，这对国际化非常有用。
 
-默认情况下，内插字符串使用当前区域性。 若要使用其他区域性，可以将其显式转换成 `IFormattable`
-
-例如：
+默认情况下，内插字符串使用当前区域性。 若要使用不同的区域性，请将内插字符串强制转换为 `IFormattable`。 例如：
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>结束语 
 
-此教程介绍了如何使用 C# 6 的字符串内插功能。 它主要是简化了 `String.Format` 简单语句的编写，而它的高级用途则存在一些注意事项。
+此教程介绍了如何使用 C# 6 的字符串内插功能。 它主要是简化了 `String.Format` 简单语句的编写，并在高级用途方面存在一些注意事项。 有关详细信息，请参阅[内插字符串](../../csharp//language-reference/keywords/interpolated-strings.md)主题。
