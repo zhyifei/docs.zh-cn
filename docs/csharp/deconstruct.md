@@ -60,17 +60,17 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 请注意不能混合使用声明和赋值给左侧的现有变量的析构。 编译器将生成错误 CS8184，"析构能混合使用声明和左左表达式。" 当成员包括新声明和现有变量。
 
-## <a name="deconstructing-tuple-elements-with-discards"></a>使用放弃析构元组元素
+## <a name="deconstructing-tuple-elements-with-discards"></a>使用弃元析构元组元素
 
-析构元组时，通常只需要关注某些元素的值。 从 C# 7 开始，便可利用 C# 对放弃的支持，放弃是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定放弃。 可放弃任意数量的值，且均由单个放弃 `_` 表示。
+析构元组时，通常只需要关注某些元素的值。 从 C# 7 开始，便可利用 C# 对弃元的支持，弃元是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定弃元。 可弃元任意数量的值，且均由单个弃元 `_` 表示。
 
-以下示例演示了对元组使用放弃时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为放弃处理。  
+以下示例演示了对元组使用弃元时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为弃元处理。  
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 ### <a name="deconstructing-user-defined-types"></a>析构用户定义类型
 
-非元组类型不提供对放弃的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct` 方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
+非元组类型不提供对弃元的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct` 方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
@@ -92,9 +92,9 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 [!code-csharp[Deconstruct-ambiguity](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-ambiguous.cs)]
 
-## <a name="deconstructing-a-user-defined-type-with-discards"></a>使用放弃析构用户定义类型
+## <a name="deconstructing-a-user-defined-type-with-discards"></a>使用弃元析构用户定义类型
 
-就像使用[元组](#deconstructing-tuple-elements-with-discards)一样，可使用放弃来忽略 `Deconstruct` 方法返回的选定项。 每个放弃均由名为“\_”的变量定义，一个析构操作可包含多个放弃。
+就像使用[元组](#deconstructing-tuple-elements-with-discards)一样，可使用弃元来忽略 `Deconstruct` 方法返回的选定项。 每个弃元均由名为“\_”的变量定义，一个析构操作可包含多个弃元。
 
 以下示例将 `Person` 对象析构为四个字符串（名字、姓氏、城市和省/市/自治区），但舍弃姓氏和省/市/自治区。
 
@@ -109,5 +109,5 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
  
 ## <a name="see-also"></a>请参阅
-[放弃](discards.md)   
+[弃元](discards.md)   
 [元组](tuples.md)  
