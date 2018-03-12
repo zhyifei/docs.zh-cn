@@ -38,11 +38,11 @@ ms.author: markl
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.openlocfilehash: a28e97c48561a01b6324af6d723ea5c9f7d48165
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用配置文件配置应用
 .NET Framework 通过配置文件为开发人员和管理员提供了对应用程序运行方式的控制权和灵活性。 配置文件是可以按需要更改的 XML 文件。 管理员能够控制应用程序可以访问哪些受保护的资源，应用程序将使用哪些版本的程序集，以及远程应用程序和对象位于何处。 开发人员可以将设置置于配置文件中，从而没有必要在每次设置更改时重新编译应用程序。 本节说明可以对什么进行配置以及为什么对应用程序进行配置会有用。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 01/25/2018
   
 -   ASP.NET 承载的应用。  
   
-     有关 ASP.NET 配置文件的详细信息，请参阅 [ASP.NET 配置设置](http://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f)  
+     有关 ASP.NET 配置文件的详细信息，请参阅 [ASP.NET 配置设置](https://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f(v=vs.100))  
   
 -   Internet Explorer 承载的应用。  
   

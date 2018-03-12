@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,23 +22,24 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ed41692cd78b61bb53f7cdb360329fbe4133102
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: a3d8f9b7a1eae07eb26397f0664ab575165a35d9
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="deploying-an-interop-application"></a>部署互操作应用程序
 互操作应用程序通常包括 .NET 客户端程序集，表示不同 COM 类型库的一个或多个互操作程序集，以及一个或多个已注册的 COM 组件。 Visual Studio 和 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供用于将类型库导入并转换为互操作程序集的工具，如[将类型库作为程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)中所述。 可以通过以下两种方式部署互操作应用程序：  
   
 -   使用嵌入的互操作类型：从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可指示编译器将类型信息从互操作程序集嵌入到可执行文件中。 编译器只嵌入应用程序使用的类型信息。 无需将互操作程序集与应用程序一起部署。 这是推荐采用的方法。  
   
--   部署互操作程序集：可通过这种方式创建对互操作程序集的标准引用。 这种情况下，互操作程序集必须与应用程序一起部署。 如果使用此方法且不使用专有 COM 组件，请始终引用由打算并入托管代码中的 COM 组件的创建者发布的主互操作程序集 (PIA)。 有关生成和使用主互操作程序集的详细信息，请参阅[主互操作程序集](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080)。  
+-   部署互操作程序集：可通过这种方式创建对互操作程序集的标准引用。 这种情况下，互操作程序集必须与应用程序一起部署。 如果使用此方法且不使用专有 COM 组件，请始终引用由打算并入托管代码中的 COM 组件的创建者发布的主互操作程序集 (PIA)。 有关生成和使用主互操作程序集的详细信息，请参阅[主互操作程序集](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100))。  
   
  如果使用嵌入的互操作类型，则部署过程将既简单又直观。 无需执行任何特殊操作。 本文的其余部分将介绍将应用程序与互操作程序集一起部署的方案。  
   
@@ -58,5 +60,5 @@ ms.lasthandoff: 01/19/2018
 ## <a name="see-also"></a>请参阅  
  [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)  
  [将类型库作为程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [在托管代码中使用 COM 类型](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [在托管代码中使用 COM 类型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [编译互操作项目](../../../docs/framework/interop/compiling-an-interop-project.md)

@@ -20,11 +20,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c082ec115370ba60839d88e5af7df3585a8f8455
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: f2a73bbe23cc1e8fd267489d2607dd7275b09322
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>向 .NET Framework 公开 COM 组件
 本部分概述向托管代码公开现有 COM 组件所需的步骤。 有关编写与 .NET Framework 紧密集成的 COM 服务器的详细信息，请参阅[互操作的设计注意事项](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))。
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/27/2018
   
      公共语言运行时需要包括 COM 类型在内的所有类型的元数据。 有多种方法来获取包含 COM 类型（作为元数据导入）的程序集。  
   
-2.  [在托管代码中创建 COM 类型](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)。  
+2.  [在托管代码中创建 COM 类型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))。  
   
      可检查 COM 类型、激活实例，并采用在任何托管类型上进行调用的方式在 COM 对象上调用方法。  
   

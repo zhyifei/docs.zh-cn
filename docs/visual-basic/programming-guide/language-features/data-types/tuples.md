@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2653b9dc8a6ecbcb718c20be8bd6275edf4cfb6e
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples-visual-basic"></a>元组 (Visual Basic)
 
@@ -64,69 +64,70 @@ Visual Basic 元组的字段是读写;已实例化元组后，你可以修改其
 <PropertyGroup> 
   <LangVersion>15.3</LangVersion> 
 </PropertyGroup> 
+```
 
-The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+版本号可以是任何版本的 Visual Basic 编译器开头 15.3。 而不是硬编码的特定编译器版本，你还可以指定"最新"的值作为`LangVersion`使用 Visual Basic 编译器在系统上安装的最新版本进行编译。
 
-In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+在某些情况下，Visual Basic 编译器无法推断元组元素名称从候选名称，并且仅可以使用其默认名称，如引用元组字段`Item1`， `Item2`，等等。这些方法包括：
 
-- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+- 候选名称是元组成员的名称相同如`Item3`， `Rest`，或`ToString`。
 
-- The candidate name is duplicated in the tuple.
+- 候选名称重复元组中。
  
-When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`. 
+当字段名称推理失败时，Visual Basic 不会生成编译器错误，也不是在运行时引发的异常。 相反，元组字段必须按名称来引用其预定义，如`Item1`和`Item2`。 
   
-## Tuples versus structures
+## <a name="tuples-versus-structures"></a>与结构的元组
 
-A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. These include:
+Visual Basic 元组是值类型之一的实例**System.ValueTuple**泛型类型。 例如，`holiday`是的一个实例，在前面的示例中定义的元组<xref:System.ValueTuple%603>结构。 它被旨在作为数据的轻量容器。 因为此元组的目标是要更加轻松地使用多个数据项创建对象，但它缺少一些自定义结构可能具有的功能。 这些方法包括：
 
-- Customer members. You cannot define your own properties, methods, or events for a tuple.
+- 客户成员。 不能定义自己的属性、 方法或元组的事件。
 
-- Validation. You cannot validate the data assigned to fields.
+- 验证。 无法验证分配给字段的数据。
 
-- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+- 不是可变性。 Visual Basic 元组是可变的。 与此相反，自定义结构允许你控制实例是否可变或不可变。
 
-If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+如果自定义成员、 属性和字段验证或不可变性很重要，则应使用 Visual Basic[结构](../../../language-reference/statements/structure-statement.md)语句以定义自定义值类型。
 
-A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+Visual Basic 元组未继承的成员其**ValueTuple**类型。 除了其字段，这些方法包括以下方法：
 
-| Member | Description |
+| 成员 | 描述 |
 | ---|---|
-| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
-| Equals | Determines whether the current tuple is equal to another tuple or object. |
-| GetHashCode | Calculates the hash code for the current instance. |
-| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
+| CompareTo | 比较到具有相同数量的元素的另一个元组的当前元组。 |
+| Equals | 确定是否等于另一个元组或对象的当前元组。 |
+| GetHashCode | 计算当前实例的哈希代码。 |
+| ToString | 返回此元组，它采用的形式的字符串表示`(Item1, Item2...)`，其中`Item1`和`Item2`表示元组的字段的值。 |
 
-In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
+此外， **ValueTuple**类型实现<xref:System.Collections.IStructuralComparable>和<xref:System.Collections.IStructuralEquatable>接口，可用于定义客户比较器。
 
-## Assignment and tuples
+## <a name="assignment-and-tuples"></a>赋值和元组
 
-Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
+Visual Basic 支持具有相同数目的字段的元组类型之间的分配。 如果下列其中一项为 true，则可以转换的字段类型：
 
-- The source and target field are of the same type.
+- 源和目标字段均为相同的类型。
 
-- A widening (or implicit) conversion of the source type to the target type is defined. 
+- 扩大 （或隐式） 转换的源类型，为目标类型定义。 
 
-- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
+- `Option Strict` 是`On`，和收缩 （或显式） 转换的源类型，为目标类型定义。 如果源值超出了目标类型的范围，此转换可以引发异常。
 
-Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
+对于其他转换，不考虑进行赋值。 让我们看一下元组类型之间允许的赋值类型。
 
-Consider these variables used in the following examples:
+注意以下示例中使用的这些变量：
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
+前两个变量，`unnamed`和`anonymous`，没有为字段提供的语义名称。 其字段名称就是默认`Item1`和`Item2`。 最后两个变量，`named`和`differentName`具有语义的字段的名称。 请注意，这两个元组具有不同的字段名称。
 
-All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
+这些元组的所有四个具有相同数目的字段 （称为 arity），并且这些字段的类型相同。 因此可进行以下赋值：
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
+请注意，元组的名称未赋值。 字段的赋值顺序遵循字段在元组中的顺序。
 
-Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
+最后，请注意，我们可以将分配`named`到的元组`conversion`元组，即使的第一个字段`named`是`Integer`，和的第一个字段`conversion`是`Long`。 此分配将成功，因为转换`Integer`到`Long`的扩大转换。
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tuples with different numbers of fields are not assignable:
+元组具有不同数量的字段不能分配：
 
 ```vb
 ' Does not compile.

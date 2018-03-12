@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40414f39a1b84e7d07086d0634898de5171db590
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26455be1d6d5879041b9ccb397bfc94a04390a64
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>如何：注册主互操作程序集
 类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关使用选择的接口重写类接口的信息，请参阅 [COM可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)。  
@@ -53,11 +55,11 @@ ms.lasthandoff: 01/19/2018
 ## <a name="example"></a>示例  
  下列示例注册 `CompanyA.UtilLib.dll` 主互操作程序集。  
   
-```  
+```console  
 regasm CompanyA.UtilLib.dll  
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [用主互操作程序集编程](http://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e)  
- [定位主互操作程序集](http://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b)  
- [重新分发主互操作程序集](http://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265)
+ [用主互操作程序集编程](https://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e(v=vs.100))  
+ [定位主互操作程序集](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))  
+ [重新分发主互操作程序集](https://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265(v=vs.100))

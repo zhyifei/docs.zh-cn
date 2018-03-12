@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1668961e383532de832b538e57eedb681a26ed52
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8115df3159b715fbd01a15621c391cbe35612dfe
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="compiling-an-interop-project"></a>编译互操作项目
 如果 COM 互操作项目引用一个或多个包含导入 COM 类型的程序集，则可以像其他任何托管项目一样进行编译。 可以在 Visual Studio 等开发环境中或使用命令行编译器时引用互操作程序集。 无论哪种情况，若要正确编译，互操作程序集必须与其他项目文件位于同一个目录中。  
@@ -36,7 +38,7 @@ ms.lasthandoff: 01/19/2018
   
 -   部署互操作程序集：创建对互操作程序集的标准引用。 这种情况下，互操作程序集必须与应用程序一起部署。  
   
- 这两种方法之间的差异在[在托管代码中使用 COM 类型 ](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)中有更详细的讨论。  
+ 这两种方法之间的差异在[在托管代码中使用 COM 类型 ](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))中有更详细的讨论。  
   
  [演练：嵌入 Microsoft Office 程序集中的类型信息](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)和[演练：嵌入托管程序集中的类型 ](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)中演示了如何通过 Visual Studio 嵌入互操作类型。  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="see-also"></a>请参阅  
  [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)  
  [语言独立性和与语言无关的组件](../../../docs/standard/language-independence-and-language-independent-components.md)  
- [在托管代码中使用 COM 类型](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [在托管代码中使用 COM 类型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [演练：嵌入 Microsoft Office 程序集中的类型信息](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
  [演练：嵌入托管程序集中的类型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  [将类型库作为程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

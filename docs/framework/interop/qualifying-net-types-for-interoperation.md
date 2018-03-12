@@ -2,7 +2,8 @@
 title: "为互操作限定 .NET 类型"
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -15,12 +16,13 @@ ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a05330a6834b4775e62b7b55aee03526b2a9bbda
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0f08f2de4a8f402b2c9c41908aa4bcfe2730fef5
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>为互操作限定 .NET 类型
 若要向 COM 应用程序公开程序集中的类型，请考虑 COM 互操作在设计时的需求。 如果符合以下准则，托管类型（类、接口、结构和枚举）将与 COM 类型无缝集成：  
@@ -54,6 +56,6 @@ ms.lasthandoff: 01/19/2018
 ## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [类接口简介](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [类接口简介](https://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024(v=vs.100))  
  [应用互操作属性](../../../docs/framework/interop/applying-interop-attributes.md)  
  [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dfbf3c2282e60ec45cb136f52fb115a8d769678
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bdf39da2a597d75479a2a3ed3d60132a0f7e7def
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>如何：使用 Tlbimp.exe 生成主互操作程序集
 有两种生成主互操作程序集的方法：  
@@ -55,7 +57,7 @@ ms.lasthandoff: 01/19/2018
   
  当具有不同于原始类型库的版本号的依赖主互操作程序集安装在当前目录时，此程序集是不可发现的。 必须在 Windows 注册表中注册此依赖主互操作程序集，或者使用 /reference 选项确保 Tlbimp.exe 可以找到依赖 DLL。  
   
- 还可以包装类型库的多个版本。 有关说明，请参阅[如何：包装类型库的多个版本](http://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f)。  
+ 还可以包装类型库的多个版本。 有关说明，请参阅[如何：包装类型库的多个版本](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100))。  
   
 ## <a name="example"></a>示例  
  以下示例导入 COM 类型库 `LibUtil.tlb` 并借助密钥文件 `CompanyA.snk` 为程序集 `LibUtil.dll` 签署强名称。 通过省略特定的命名空间名称，此示例将生成默认的命名空间，`LibUtil`。  
