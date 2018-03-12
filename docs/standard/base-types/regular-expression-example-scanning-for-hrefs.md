@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c6da140ea82fc3c6d3f5f3001f37711ffe861370
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6592647ab3ff133bceb05b9ee84ce794e41aaf13
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>正则表达式示例：扫描 HREF
 下面的示例搜索输入字符串并显示所有 href="…" 的值和它们在字符串中的位置。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/23/2017
 |`\s*`|匹配零个或多个空白字符。|  
 |`=`|匹配等于号。|  
 |`\s*`|匹配零个或多个空白字符。|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|匹配以下项之一，而不将结果分配到捕获组：<br /><br /> -   引号或撇号，后跟零个或多个除引号或撇号以外的任意字符，再后跟引号或撇号。 名为 `1` 的组包含在此模式。<br />-   一个或多个非空格字符。 名为 `1` 的组包含在此模式。|  
+|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|匹配以下项之一，而不将结果分配到捕获组：<br /> <ul><li><p>一个引号或单引号，后跟零个或多个引号或单引号以外的任意字符，然后再后跟一个引号或单引号。 名为 `1` 的组包含在此模式。</p></li><li><p>一个或多个非空格字符。 名为 `1` 的组包含在此模式。</p></li></ul>|  
 |`(?<1>[^"']*)`|将零个或多个引号或单引号以外的任意字符分配给名为 `1` 的捕获组。|  
 |`"(?<1>\S+)`|将一个或多个非空白字符分配给名为 `1` 的捕获组。|  
   
