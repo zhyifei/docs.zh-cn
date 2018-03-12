@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正则表达式中的分组构造
 分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。 你可以使用分组构造来完成下列任务：  
@@ -393,7 +393,7 @@ ms.lasthandoff: 12/23/2017
 |模式|描述|  
 |-------------|-----------------|  
 |`\d{2}`|匹配两个十进制数字。|  
-|`{?<=\b20)`|如果两个十进制数字的字边界以小数位数“20”开头，则继续匹配。|  
+|`(?<=\b20)`|如果两个十进制数字的字边界以小数位数“20”开头，则继续匹配。|  
 |`\b`|在单词边界处结束匹配。|  
   
  零宽度正回顾后发断言还用于在捕获组中的最后一个或多个字符不得为与该捕获组的正则表达式模式相匹配的字符的子集时限制回溯。 例如，如果组捕获所有的连续单词字符，可以使用零宽度正回顾后发断言要求最后一个字符时按字母顺序的。  
@@ -421,7 +421,7 @@ ms.lasthandoff: 12/23/2017
 |`\w+`|匹配一个或多个后跟空白字符的单词字符。|  
 |`\d{1,2},`|匹配空白字符和逗号后面的一个或两个十进制数字。|  
 |`\d{4}\b`|匹配四个十进制数字并在单词边界处结束匹配。|  
-|`(?<!(Saturday&#124;Sunday) )`|如果匹配以字符串“星期六”或者“星期日”开头，后跟一个空格，则匹配成功。|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|如果匹配以字符串“星期六”或者“星期日”开头，后跟一个空格，则匹配成功。|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>非回溯子表达式  
