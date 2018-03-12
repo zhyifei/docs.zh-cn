@@ -4,20 +4,21 @@ description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |将
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>将现有的.NET 应用程序部署为 Windows 容器
 
 基于 Windows 容器的部署都适用于云优化应用程序、 云本机应用程序和云 DevOps 通用应用程序。
 
-在本指南中，以及下列部分中，我们着重介绍如何使用 Windows 容器的*云就绪 DevOps*应用程序，当提升和移动现有的.NET 应用程序。
+本指南中和的以下部分中的重点是使用 Windows 容器的*云就绪 DevOps*应用程序，当提升和移动现有的.NET 应用程序。
 
 ## <a name="what-are-containers-linux-or-windows"></a>什么是容器 （Linux 或 Windows）
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 
 大量的组织 containerizing 现有的单一应用程序，原因如下：
 
--   **释放通过提高部署灵活性**。 容器提供一致的部署之间开发和操作协定。 当使用容器时，您将听到开发人员说，"It works 我在计算机上，不要在生产中？" 他们可以简单地说，"它作为运行一个容器，因此它将在生产环境中运行。" 打包应用程序，包括其所有依赖项，可以在任何支持的基于容器的环境中执行。 它将运行它本来就在所有的部署目标 （开发、 QA、 过渡或生产） 中运行的方式。 容器消除大多数 frictions，当它们移到下一步，极大地提高了部署，从一个阶段时，你可以将更快地发运。
+-   **释放通过提高部署灵活性**。 容器提供一致的部署之间开发和操作协定。 当使用容器时，您将听到开发人员说，"It works 我在计算机上，不要在生产中？" 他们可以简单地说，"它作为运行一个容器，因此它将在生产中运行。" 打包应用程序，包括其所有依赖项，可以在任何支持的基于容器的环境中执行。 它将运行它本来就在所有的部署目标 （开发、 QA、 过渡或生产） 中运行的方式。 容器消除大多数 frictions，当它们移到下一步，极大地提高了部署，从一个阶段时，你可以将更快地发运。
 
 -   **成本降低**。 容器会导致降低成本，通过合并和删除的现有硬件，或者在更高的密度，每个单位硬件运行应用程序。
 
@@ -57,7 +58,7 @@ ms.lasthandoff: 12/23/2017
 
 ![](./media/image6.png)
 
-> **图 4-6。** Docker 将部署在混合云中的所有层的容器
+> **图 4-6。** Docker 在混合云的所有层部署容器
 
 某个人可以使用熟悉的虚拟机，容器可能看起来非常类似。 容器在操作系统上运行，具有文件系统，并且可以访问通过网络，就像物理或虚拟计算机系统一样。 但是，该技术以及容器背后的概念是大大不同于虚拟机。 从开发人员的角度来看，容器必须被视为多单个进程。 事实上，容器都有一个进程的单入口点。
 
@@ -81,9 +82,9 @@ Docker 容器 (为简单起见，*容器*) 可以本机 Linux 和 Windows 上运
 
 给定的操作系统支持 Docker，以及.NET Framework 和.NET 核心之间的差异的多样性，应针对特定操作系统和基于正在使用的 framework 的特定版本。
 
-对于 Windows，你可以使用 Windows Server Core 或 Windows Nano Server。 这些 Windows 版本提供需要的.NET Framework 或.NET Core 应用程序的不同特征 （如与自承载的 web 服务器 Kestrel 例如 IIS)。
+对于 Windows，可使用 Windows Server Core 或 Windows Nano Server。 这些 Windows 版本提供需要的.NET Framework 或.NET Core 应用程序的不同特征 （如与自承载的 web 服务器 Kestrel 例如 IIS)。
 
-对于 Linux，多个发行版的可用性和支持中 （如 Debian) 的正式.NET Docker 映像。
+对于 Linux，正式的 .NET Docker 映像（如 Debian）中提供并支持多个发行版本。
 
 图 4-7 显示你可以面向，具体取决于应用的.NET Framework 版本的操作系统版本。
 
@@ -95,14 +96,14 @@ Docker 容器 (为简单起见，*容器*) 可以本机 Linux 和 Windows 上运
 
 当映像名称添加到 Dockerfile 文件时，可以通过使用的标记，如下面的示例基于.NET Framework 的 Windows 容器映像中选择的操作系统和版本：
 
-> | 标记 | **系统和版本** |
+> | **标记** | **系统和版本** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x 在 Windows Server Core 上 |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x 使用其他 ASP.NET 自定义，在 Windows Server Core 上 |
 
 为.NET 核心 （适用于 Linux 和 Windows 跨平台），标记将如下所示：
 
-> | 标记 | **系统和版本**
+> | **标记** | **系统和版本**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET 核心 2.0 仅运行时在 Linux 上 |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET 核心 2.0 仅运行时在 Windows Nano Server 上 |

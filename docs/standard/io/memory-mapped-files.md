@@ -22,14 +22,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 23755f7b76e8cc050df8529852af9bf151472f72
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 99aefdaf3d38dc5506bf785c8ba4a9b457cc7bf7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="memory-mapped-files"></a>内存映射文件
-内存映射文件包含虚拟内存中文件的内容。 借助文件和内存空间之间的这种映射，应用（包括多个进程）可以直接对内存执行读取和写入操作，从而修改文件。 自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，可以使用托管代码访问内存映射文件，就像本机 Windows 函数访问内存映射文件（如[管理 Win32 中的内存映射文件](http://go.microsoft.com/fwlink/?linkid=180801)所述）一样。  
+内存映射文件包含虚拟内存中文件的内容。 借助文件和内存空间之间的这种映射，应用（包括多个进程）可以直接对内存执行读取和写入操作，从而修改文件。 自 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 起，可以使用托管代码访问内存映射文件，就像本机 Windows 函数访问内存映射文件（如[管理内存映射文件](https://msdn.microsoft.com/library/ms810613.aspx)所述）一样。  
   
  内存映射文件分为两种类型：  
   

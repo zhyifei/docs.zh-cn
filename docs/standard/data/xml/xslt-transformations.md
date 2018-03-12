@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 92d0688b86e6a95af46e09c21c1a8b3cdf66efc3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63c73fc48d0beaeb3a77acc464734b11410467a0
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xslt-transformations"></a>XSLT 转换
-可扩展样式表语言转换 (XSLT) 可以将源 XML 文档的内容转换为另一个格式或结构不同的文档。 例如，可以使用 XSLT 将 XML 转换为在网站上使用的 HTML 或转换为只包含应用程序所需字段的文档。 此转换过程由 [W3C XSL 转换 (XSLT) 版本 1.0 建议](http://go.microsoft.com/fwlink/?LinkID=49919)规定。  
+可扩展样式表语言转换 (XSLT) 可以将源 XML 文档的内容转换为另一个格式或结构不同的文档。 例如，可以使用 XSLT 将 XML 转换为在网站上使用的 HTML 或转换为只包含应用程序所需字段的文档。 此转换过程由 [W3C XSL 转换 (XSLT) 版本 1.0 建议](https://www.w3.org/TR/xslt-10/)规定。  
   
- <xref:System.Xml.Xsl.XslCompiledTransform> 类是 .NET Framework 中的 XSLT 处理器。 <xref:System.Xml.Xsl.XslCompiledTransform> 类支持 W3C XSLT 1.0 建议。  
+ <xref:System.Xml.Xsl.XslCompiledTransform> 类是 .NET 中的 XSLT 处理器。 <xref:System.Xml.Xsl.XslCompiledTransform> 类支持 [W3C XSLT 1.0 建议](https://www.w3.org/TR/xslt-10/)。  
   
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 2.0 版中已过时。 <xref:System.Xml.Xsl.XslCompiledTransform> 类是 XSLT 引擎的新实现。 它包括性能改进和新的安全功能。 建议的做法是使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类创建 XSLT 应用程序。  
@@ -43,13 +43,9 @@ ms.lasthandoff: 12/23/2017
  [XslTransform 类的 XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  提供如何使用 <xref:System.Xml.Xsl.XslTransform> 类的信息。  
   
- **注意**：<xref:System.Xml.Xsl.XslTransform> 类在 .NET Framework 版本 2.0 中已过时。  
-  
 ## <a name="reference"></a>参考  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
-  
  <xref:System.Xml.Xsl.XsltArgumentList>  
-  
  <xref:System.Xml.Xsl.XsltSettings>  
   
 ## <a name="related-sections"></a>相关章节  

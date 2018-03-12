@@ -4,16 +4,17 @@ description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |构
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>构建可复原的服务供云： 采用在云中的暂时性故障 
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>构建可复原的服务供云： 采用在云中的暂时性故障
 
 恢复能力是指从故障中恢复并继续工作的能力。 复原能力不是有关避免失败，但接受这一事实，将出现故障，并可避免停机时间或数据丢失的方式然后对它们的响应。 恢复的目标是使应用程序在发生故障后回到完全正常运行的状态。
 

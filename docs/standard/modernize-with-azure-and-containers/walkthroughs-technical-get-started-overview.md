@@ -4,36 +4,37 @@ description: "更新现有的.NET 应用程序与 Azure 云和 Windows 容器 |�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术获取启动的概述 
+# <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术获取启动的概述
 
-若要限制此图书的大小，我们进行了其他技术文档和完整的演练的 GitHub 存储库中可用。 此第章所述的演练联机系列介绍基于 Windows 容器和部署到 Azure 的多个环境的分步设置。
+若要限制此图书的大小，其他技术文档和完整的演练可 GitHub 存储库中。 此第章所述的演练联机系列介绍基于 Windows 容器和部署到 Azure 的多个环境的分步设置。
 
-以下各节介绍了每个演练是有关及其目标，其高级愿景的并提供示意图所涉及的任务。 你可以获取本身的演练中*eShopModernizing*在应用程序 GitHub 存储库 wiki [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)。
+以下各节介绍每个演练即将，其目标和高级的愿景，并提供所涉及的任务的图。 你可以获取本身的演练中*eShopModernizing*在应用程序 GitHub 存储库 wiki [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)。
 
-# <a name="technical-walkthrough-list"></a>技术演练列表
+## <a name="technical-walkthrough-list"></a>技术演练列表
 
 以下入门演练提供了示例应用，你可以提升和移动通过使用容器，并且通过在 Azure 中使用多个部署选项然后移动的一致和全面技术指南。
 
 下面的演练的每个使用新示例 eShopLegacy 和 eShopModernizing 应用程序，它们可在 GitHub 上[https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)。
 
--   **电子商店旧应用的教程**
+- **电子商店旧应用的教程**
 
--   **化你现有的.NET 应用程序，与 Windows 容器**
+- **化你现有的.NET 应用程序，与 Windows 容器**
 
--   **将 Windows 容器基于应用程序部署到 Azure Vm**
+- **将 Windows 容器基于应用程序部署到 Azure Vm**
 
--   **将您的 Windows 容器基于应用程序部署到 Azure 容器服务中的 Kubernetes**
+- **将您的 Windows 容器基于应用程序部署到 Azure 容器服务中的 Kubernetes**
 
--   **将您的 Windows 容器基于应用程序部署到 Azure Service Fabric**
+- **将您的 Windows 容器基于应用程序部署到 Azure Service Fabric**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>电子商店旧应用程序的演练 1： 教程
 
@@ -97,13 +98,13 @@ ms.lasthandoff: 03/05/2018
 
 此演练的目的是显示 containerizing 现有.NET Framework 应用程序的几个选项。 你可以：
 
--   通过使用化你的应用程序[Visual Studio 2017 Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) （Visual Studio 2017 年 1 或更高版本）。
+- 通过使用化你的应用程序[Visual Studio 2017 Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) （Visual Studio 2017 年 1 或更高版本）。
 
--   通过手动添加化你的应用程序[Dockerfile](https://docs.docker.com/engine/reference/builder/)，，然后使用[Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)。
+- 通过手动添加化你的应用程序[Dockerfile](https://docs.docker.com/engine/reference/builder/)，，然后使用[Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)。
 
--   通过使用化你的应用程序[Img2Docker](https://github.com/docker/communitytools-image2docker-win)工具 （从 Docker 的开源工具）。
+- 通过使用化你的应用程序[Img2Docker](https://github.com/docker/communitytools-image2docker-win)工具 （从 Docker 的开源工具）。
 
-本演练主要针对 Visual Studio 2017 Tools for Docker 方法，但其他两种方法不符合使用 Dockerfile 非常相似。
+本演练主要针对 Visual Studio 2017 Tools for Docker 方法，但其他两种方法是使用 Dockerfile 方面非常相似。
 
 ### <a name="scenario"></a>方案
 
@@ -137,7 +138,7 @@ ms.lasthandoff: 03/05/2018
 
 ### <a name="overview"></a>概述
 
-将部署到 Azure 中的 Windows Server 2016 VM 上的 Docker 主机，可以快速设置开发/测试/暂存环境。 它还会为你提供测试人员或业务用户，以验证应用程序的一个常见的位置。 Vm 还可以是有效的 IaaS 生产环境。
+将部署到 Docker 主机在 Windows Server 2016 虚拟机 (VM) 在 Azure 中，可以快速设置开发/测试/暂存环境。 它还会为你提供测试人员或业务用户，以验证应用程序的一个常见的位置。 Vm 还可以是有效的基础结构作为服务 (IaaS) 生产环境。
 
 ### <a name="goals"></a>目标
 
@@ -167,13 +168,13 @@ ms.lasthandoff: 03/05/2018
 
 ### <a name="azure-vms-for-windows-containers"></a>Windows 容器的的 azure Vm
 
-Azure Vm 的 Windows 容器是只是基于 Windows Server 2016，Windows 10 的 Vm 或更高版本，它们都具有 Docker 引擎设置。 在大多数情况下，你将在 Azure Vm 中使用 Windows Server 2016。
+Azure Vm 的 Windows 容器是基于 Windows Server 2016、 Windows 10 或更高版本的虚拟机，它们都具有 Docker 引擎设置。 在大多数情况下，在 Azure Vm 中使用 Windows Server 2016。
 
 Azure 目前提供名为的 VM**与容器的 Windows Server 2016**。 可以使用此 VM 尝试新的 Windows Server 容器功能，与 Windows Server Core 或 Windows Nano Server。 安装容器操作系统映像以及然后 VM 已准备好与 Docker 一起使用。
 
 ### <a name="benefits"></a>优点
 
-虽然 Windows 容器可部署到本地 Windows Server 2016 Vm 部署到 Azure 时，你将收到更简单的方法以开始使用准备就绪，可以使用 Windows Server 容器虚拟机。 你还可以获取测试人员和自动的可伸缩性，通过 Azure VM 缩放集可以访问的常见在线位置。
+虽然 Windows 容器可部署到本地 Windows Server 2016 Vm 部署到 Azure 时，你将收到更简单的方法以开始使用准备就绪，可以使用 Windows Server 容器虚拟机。 你还可以获取测试人员和自动的可伸缩性，通过 Azure 虚拟机规模集可以访问的常见在线位置。
 
 ### <a name="next-steps"></a>后续步骤
 
@@ -217,25 +218,25 @@ Azure 目前提供名为的 VM**与容器的 Windows Server 2016**。 可以使�
 
 ### <a name="benefits"></a>优点
 
-有很多好处与部署到在 Kubernetes 中的群集。 最大好处是您获得的生产就绪环境在其中你可以向外扩展应用程序根据你想要使用 （内部的可伸缩性的现有节点中），并根据在群集 （节点或 Vm 的数量的容器实例数全局可伸缩性的群集）。
+有很多好处与部署到在 Kubernetes 中的群集。 最大好处是，您将在其中你可以向外扩展应用程序根据你想要使用 （内部的可伸缩性的现有节点中），并根据在群集 （节点或 Vm 的数量的容器实例数的立即可供生产环境全局可伸缩性的群集）。
 
 Azure 容器服务专门针对 Azure 进行优化受欢迎的开源工具和技术。 获取一个打开的解决方案，它提供可移植性，对于你的容器和应用程序配置。 你选择的大小的主机，数量和 orchestrator 工具-容器服务将处理一切。
 
 与 Kubernetes，开发人员都可以从思考一下物理机和虚拟机进行规划以容器为中心的基础结构，它方便了以下功能，以及其他正在：
 
--   基于多个容器的应用程序
+- 基于多个容器的应用程序
 
--   复制容器实例和水平的自动缩放
+- 复制容器实例和水平的自动缩放
 
--   命名和发现 (例如，内部 DNS)
+- 命名和发现 (例如，内部 DNS)
 
--   平衡负载
+- 平衡负载
 
--   滚动更新
+- 滚动更新
 
--   分发机密
+- 分发机密
 
--   应用程序运行状况检查
+- 应用程序运行状况检查
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -251,7 +252,7 @@ Azure 容器服务专门针对 Azure 进行优化受欢迎的开源工具和技�
 
 ### <a name="overview"></a>概述
 
-应用程序依赖于使用 Windows 容器快速将需要使用从 IaaS Vm 消失移动甚至可更进一步的平台。 这需要能够轻松实现高可伸缩性和更好地自动可伸缩性，并针对中的重大进步自动部署和版本管理。 使用 orchestrator Azure Service Fabric 中，这是可用在 Azure 云中，但也可用于在本地，或甚至在不同的公有云，可以实现这些目标。
+基于 Windows 容器快速的应用程序需要使用从 IaaS Vm 消失移动甚至可更进一步的平台。 这需要能够轻松实现高可伸缩性和更好地自动可伸缩性，并针对中的重大进步自动部署和版本管理。 使用 orchestrator Azure Service Fabric 中，这是可用在 Azure 云中，但也可用于在本地，或甚至在不同的公有云，可以实现这些目标。
 
 ### <a name="goals"></a>目标
 
@@ -277,37 +278,37 @@ Azure 容器服务专门针对 Azure 进行优化受欢迎的开源工具和技�
 
 ## <a name="benefits"></a>优点
 
-向 Service Fabric 中的群集部署的优点是类似于使用 Kubernetes 的好处。 一个区别，不过，是 Service Fabric 是相比 Kubernetes，已在预览为 Windows 容器之前尽早在 2017年的 Windows 应用程序的非常成熟的生产环境。 （Kubernetes 是适用于 Linux 的更加成熟完善一些环境）。 
+向 Service Fabric 中的群集部署的优点是类似于使用 Kubernetes 的好处。 一个区别，不过，是 Service Fabric 是相比 Kubernetes，即在 Kubernetes 版本 1.9 中的 Windows 容器的 beta 阶段中的 Windows 应用程序的更加成熟完善一些生产环境 (自 2017 年 12 月)。 Kubernetes 是用于 Linux 的更加成熟完善一些环境。
 
-使用 Azure Service Fabric 的主要优势是获取生产就绪环境在其中你可以向外扩展应用程序根据你想要使用 （内部的可伸缩性的现有节点中），并根据的数量的容器实例数节点或群集 （群集的全局可伸缩性） 中的 Vm。
+使用 Azure Service Fabric 的主要优势是可以在其中你可以向外扩展应用程序根据你想要使用 （内部的可伸缩性的现有节点中），并根据的数量的容器实例数的立即可供生产环境节点或群集 （群集的全局可伸缩性） 中的 Vm。
 
 Azure Service Fabric 提供了可移植性对于你的容器和应用程序配置。 你可以 Service Fabric 群集在 Azure 中，或将其安装在本地在自己的数据中心。 你甚至可以安装的 Service Fabric 群集在另一个云，如[Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/)。
 
 使用 Service Fabric，开发人员可以进行规划以容器为中心的基础结构，它方便了以下功能，以及其他进度从思考物理机和虚拟机：
 
--   根据应用程序的多个容器。
+- 根据应用程序的多个容器。
 
--   复制容器实例和水平的自动缩放。
+- 复制容器实例和水平的自动缩放。
 
--   命名和发现 (例如，内部 DNS)。
+- 命名和发现 (例如，内部 DNS)。
 
--   平衡负载。
+- 平衡负载。
 
--   滚动更新。
+- 滚动更新。
 
--   分发机密。
+- 分发机密。
 
--   应用程序运行状况检查。
+- 应用程序运行状况检查。
 
 以下功能是独占的 （与其他 orchestrators 比较） 的 Service Fabric 在：
 
--   有状态服务功能，通过可靠的服务应用程序模型。
+- 有状态服务功能，通过可靠的服务应用程序模型。
 
--   Actor 模式，通过 Reliable Actors 应用程序模型。
+- Actor 模式，通过 Reliable Actors 应用程序模型。
 
--   部署精简进程，除了 Windows 或 Linux 容器。
+- 部署精简进程，除了 Windows 或 Linux 容器。
 
--   高级滚动更新和运行状况检查。
+- 高级滚动更新和运行状况检查。
 
 ### <a name="next-steps"></a>后续步骤
 

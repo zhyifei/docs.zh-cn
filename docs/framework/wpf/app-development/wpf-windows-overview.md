@@ -42,11 +42,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过窗口与 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序通过提供其自己的 windows<xref:System.Windows.Window>类。 本主题介绍<xref:System.Windows.Window>之前涵盖创建和管理 windows 独立应用程序中的基础知识。  
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/01/2018
   
 -   代码隐藏文件中的类必须`partial`类具有相同名称指定的`x:Class`属性标记，且必须派生自<xref:System.Windows.Window>。 这样，要与之关联的代码隐藏文件`partial`时生成应用程序为标记文件生成的类 (请参阅[生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md))。  
   
--   代码隐藏文件中<xref:System.Windows.Window>类必须实现的构造函数的调用`InitializeComponent`方法。 `InitializeComponent`实现通过标记文件的生成`partial`类注册事件和设置在标记中定义的属性。  
+-   代码隐藏文件中<xref:System.Windows.Window>类必须实现的构造函数的调用`InitializeComponent`方法。 `InitializeComponent` 实现通过标记文件的生成`partial`类注册事件和设置在标记中定义的属性。  
   
 > [!NOTE]
 >  添加新<xref:System.Windows.Window>到你的项目使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]、<xref:System.Windows.Window>使用标记和代码隐藏实现，并包括必需的配置，以便创建为标记和代码隐藏文件之间的关联此处所述。  
@@ -164,7 +164,7 @@ ms.lasthandoff: 02/01/2018
  通过调用打开一个窗口<xref:System.Windows.Window.Show%2A>是无模式窗口中，这意味着应用程序会在允许用户激活同一个应用程序中的其他窗口的模式下运行。  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>调用以模式方式打开窗口，如对话框。 请参阅[对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)有关详细信息。  
+>  <xref:System.Windows.Window.ShowDialog%2A> 调用以模式方式打开窗口，如对话框。 请参阅[对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)有关详细信息。  
   
  当<xref:System.Windows.Window.Show%2A>是调用，窗口执行初始化工作之前它显示的用于建立这样一来接收用户输入的基础结构。 初始化窗口时，<xref:System.Windows.Window.SourceInitialized>引发事件和显示的窗口。  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 02/01/2018
   
  当一个窗口关闭时，它会引发两个事件：<xref:System.Windows.Window.Closing>和<xref:System.Windows.Window.Closed>。  
   
- <xref:System.Windows.Window.Closing>该窗口将关闭，并且它提供一种机制，闭包可以防止通过哪个窗口前引发。 阻止窗口关闭的一个常见原因是窗口内容包含修改的数据。 在此情况下，<xref:System.Windows.Window.Closing>可以处理事件以确定是否数据有问题，如果是这样，让用户继续关闭窗口而不保存数据还是取消关闭窗口。 下面的示例演示处理的重要方面<xref:System.Windows.Window.Closing>。  
+ <xref:System.Windows.Window.Closing> 该窗口将关闭，并且它提供一种机制，闭包可以防止通过哪个窗口前引发。 阻止窗口关闭的一个常见原因是窗口内容包含修改的数据。 在此情况下，<xref:System.Windows.Window.Closing>可以处理事件以确定是否数据有问题，如果是这样，让用户继续关闭窗口而不保存数据还是取消关闭窗口。 下面的示例演示处理的重要方面<xref:System.Windows.Window.Closing>。  
   
  [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
@@ -322,7 +322,6 @@ ms.lasthandoff: 02/01/2018
  除了有 x 和 y 位置外，窗口还在 z 维度中有一个位置，该位置确定窗口相对于其他窗口的垂直位置。 它称为窗口的 z 顺序，并且有两种类型：正常 z 顺序和最顶层 z 顺序。 在窗口的位置*正常的 z 顺序*由或不是当前处于活动状态。 默认情况下，窗口位于正常 z 顺序中。 在窗口的位置*最顶层的 z 顺序*也由或不是当前处于活动状态。 此外，最顶层 z 顺序中的窗口始终位于正常 z 顺序中的窗口之上。 窗口位于最顶层的 z 顺序通过设置其<xref:System.Windows.Window.Topmost%2A>属性`true`。  
   
  [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup2)]  
   
  在每个 z 顺序中，当前的活动窗口显示在同一 z 顺序中所有其他窗口之上。  
   
@@ -333,12 +332,10 @@ ms.lasthandoff: 02/01/2018
  <xref:System.Windows.FrameworkElement.MinWidth%2A><xref:System.Windows.FrameworkElement.Width%2A>，和<xref:System.Windows.FrameworkElement.MaxWidth%2A>用于管理的一个窗口可以在其生存期内，并且配置了，如以下示例所示的宽度范围。  
   
  [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup2)]  
   
  窗口高度由<xref:System.Windows.FrameworkElement.MinHeight%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.MaxHeight%2A>，并在下面的示例所示配置。  
   
  [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup2)]  
   
  由于各种宽度值和高度值各自指定了一个范围，所以大小可调整大小的窗口的宽度和高度可以是相应维度中指定范围内的任何值。 若要检测其当前的宽度和高度，检查<xref:System.Windows.FrameworkElement.ActualWidth%2A>和<xref:System.Windows.FrameworkElement.ActualHeight%2A>分别。  
   
@@ -355,7 +352,6 @@ ms.lasthandoff: 02/01/2018
  以下示例显示了一个窗口，它在第一次显示时即自动调整垂直方向和水平方向上的大小以适应内容。  
   
  [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup2)]  
   
  下面的示例演示如何设置<xref:System.Windows.Window.SizeToContent%2A>代码中用于指定如何调整窗口大小以适应其内容的属性。
   
@@ -410,7 +406,6 @@ ms.lasthandoff: 02/01/2018
  以下示例显示如何创建在打开时最大化显示的窗口。  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup2)]  
   
  一般情况下，应设置<xref:System.Windows.Window.WindowState%2A>配置一个窗口的初始状态。 显示可调整大小的窗口后，用户可以按窗口标题栏上的“最小化”、“最大化”和“还原”按钮来更改窗口状态。  
   
@@ -438,7 +433,6 @@ ms.lasthandoff: 02/01/2018
  与<xref:System.Windows.Window.WindowStyle%2A>，窗口的大小调整模式不太可能在其生存期内，这意味着，你将很可能将其与更改[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记。  
   
  [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup2)]  
   
  请注意，你可以检测是否最大化窗口、 最小化，或通过检查还原<xref:System.Windows.Window.WindowState%2A>属性。  
   
@@ -463,7 +457,6 @@ ms.lasthandoff: 02/01/2018
  你可以设置<xref:System.Windows.Window.WindowStyle%2A>使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记或代码; 因为它是不太可能更改窗口的生命周期内，你将很可能将其配置使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]标记。  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup2)]  
   
 #### <a name="non-rectangular-window-style"></a>非矩形窗口样式  
  还有一些情况下的边框样式，<xref:System.Windows.Window.WindowStyle%2A>允许你有不能满足需求。 例如，你可能想要创建非矩形边框的应用程序与创建[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]使用。  
@@ -475,7 +468,6 @@ ms.lasthandoff: 02/01/2018
  可以通过设置创建此类型的窗口<xref:System.Windows.Window.WindowStyle%2A>属性<xref:System.Windows.WindowStyle.None>，并通过使用特殊支持<xref:System.Windows.Window>对透明度。  
   
  [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup2)]  
   
  多个值组合起来可以指示窗口呈现完全透明的效果。 在这种状态下，无法使用窗口的非工作区修饰（“关闭”菜单，“最小化”、“最大化”和“还原”按钮等）。 因此，需要提供自己的修饰。  
   
@@ -488,11 +480,10 @@ ms.lasthandoff: 02/01/2018
  某些类型的 windows 不具有任务栏按钮，如消息框和对话框 (请参阅[对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md))。 你可以控制是否通过设置显示窗口任务栏按钮<xref:System.Windows.Window.ShowInTaskbar%2A>属性 (`true`默认情况下)。  
   
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup2)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>安全注意事项  
- <xref:System.Windows.Window>需要`UnmanagedCode`要实例化的安全权限。 对于从本地计算机安装并启动的应用程序，此权限在授予应用程序的权限集中。  
+ <xref:System.Windows.Window> 需要`UnmanagedCode`要实例化的安全权限。 对于从本地计算机安装并启动的应用程序，此权限在授予应用程序的权限集中。  
   
  但是，这位于之外的向从 Internet 或本地 intranet 区域使用启动的应用程序授予的权限集[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]。 因此，用户将收到[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]安全警告并且将需要提升的权限集为完全信任的应用程序。  
   
@@ -500,7 +491,7 @@ ms.lasthandoff: 02/01/2018
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>其他类型的窗口  
- <xref:System.Windows.Navigation.NavigationWindow>是一个窗口，旨在为承载可导航的内容。 有关详细信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md))。  
+ <xref:System.Windows.Navigation.NavigationWindow> 是一个窗口，旨在为承载可导航的内容。 有关详细信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md))。  
   
  对话框是通常用来收集用户信息以完成某项功能的窗口。 例如，当用户想要打开文件时，**打开文件**对话框中将通常显示应用程序以获取用户的文件名称。 有关详细信息，请参阅[对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)。  
   

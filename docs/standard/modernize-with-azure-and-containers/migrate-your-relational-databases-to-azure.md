@@ -4,14 +4,15 @@ description: "更新现有的.NET 应用程序与 Azure 云和 Windows 容器 |�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9189de8d083c8f9dea8c53b428e6cd34ae6dad15
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>将关系数据库迁移到 azure
 
@@ -35,27 +36,27 @@ ms.lasthandoff: 12/23/2017
 
 Azure SQL 数据库中的托管的实例具有以下特征：
 
--   通过 Azure 虚拟网络的安全隔离
+- 通过 Azure 虚拟网络的安全隔离
 
--   应用程序图面兼容性，具有这些功能：
+- 应用程序图面兼容性，具有这些功能：
 
-    -   SQL Server 代理和 SQL Server 事件探查器
+  - SQL Server 代理和 SQL Server 事件探查器
 
-    -   跨数据库引用和查询，SQL CLR 复制、 变更数据捕获 (CDC) 和 Service Broker
+  - 跨数据库引用和查询，SQL CLR 复制、 变更数据捕获 (CDC) 和 Service Broker
 
--   数据库大小最多 35 TB
+- 数据库大小最多 35 TB
 
--   使用这些功能的最小停机时间迁移：
+- 使用这些功能的最小停机时间迁移：
 
-    -   Azure 数据库迁移服务
+  - Azure 数据库迁移服务
 
-    -   本机备份和还原和日志传送
+  - 本机备份和还原和日志传送
 
 使用这些功能，当将现有应用程序数据库迁移到 Azure SQL 数据库的托管实例模型就提供近 100%的 Paas 的优势的 SQL Server。 托管的实例是继续使用实例级功能，而无需更改应用程序设计的其中一个 SQL Server 环境。
 
 托管的实例可能是最适合企业，当前正在使用 SQL Server，并且其需要灵活地在云中其网络安全。 这就像有你的 SQL 数据库的专用虚拟网络。
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>何时迁移到 Azure SQL Database 
+## <a name="when-to-migrate-to-azure-sql-database"></a>何时迁移到 Azure SQL Database
 
 如前文所述，标准的 Azure SQL 数据库是完全托管的、 关系 DBaaS。 SQL 数据库当前 38 与世界各地的数据中心管理数以百万计的生产数据库。 它支持广泛的应用程序和工作负荷，从管理简单的事务数据，为驱动的数据最密集、 任务关键型应用程序需要在全球范围内的高级的数据处理。
 
@@ -65,19 +66,19 @@ Azure SQL 数据库是为应用程序开发人员生成的仅智能云数据库�
 
 Azure SQL 数据库提供以下好处：
 
--   了解和适应你的应用程序的内置智能 （机器学习）
+- 了解和适应你的应用程序的内置智能 （机器学习）
 
--   按需数据库设置
+- 按需数据库设置
 
--   一系列的优惠，为所有工作负荷
+- 一系列的优惠，为所有工作负荷
 
--   99.99%的可用性 SLA，零维护
+- 99.99%的可用性 SLA，零维护
 
--   异地复制和还原服务的数据保护
+- 异地复制和还原服务的数据保护
 
--   Azure SQL 数据库点时间还原功能
+- Azure SQL 数据库点时间还原功能
 
--   与 SQL Server 2016，包括混合和迁移的兼容性
+- 与 SQL Server 2016，包括混合和迁移的兼容性
 
 标准的 Azure SQL Database 是更接近于 PaaS 比 Azure SQL 数据库托管实例。 你应尝试使用它，如果可能，因为你将从托管云中获取更多好处。 但是，Azure SQL 数据库已从常规的主要区别和本地 SQL Server 实例。 根据现有应用程序的数据库要求和你的企业要求和策略，它可能规划你迁移到云时不是最佳选择。
 
@@ -108,23 +109,23 @@ Azure SQL 数据库提供以下好处：
 
 ## <a name="additional-resources"></a>其他资源
 
--   **选择云 SQL Server 选项： Azure SQL 数据库 (PaaS) 或 Azure VM (IaaS) 上的 SQL Server**
+- **选择云 SQL Server 选项： Azure SQL 数据库 (PaaS) 或 Azure VM (IaaS) 上的 SQL Server**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
--   **获取与使用 Azure SQL DB 托管实例和数据库迁移服务更快地云**
+- **获取与使用 Azure SQL DB 托管实例和数据库迁移服务更快地云**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
--   **SQL Server 数据库迁移到云中的 SQL 数据库**
+- **SQL Server 数据库迁移到云中的 SQL 数据库**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **Azure SQL 数据库**
+- **Azure SQL 数据库**
 
     [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
--   **在虚拟机上的 SQL Server**
+- **在虚拟机上的 SQL Server**
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 

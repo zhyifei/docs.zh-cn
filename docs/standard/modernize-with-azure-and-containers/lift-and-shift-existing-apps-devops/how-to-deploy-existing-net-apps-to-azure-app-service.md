@@ -4,14 +4,15 @@ description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |如
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84bffe7aad6bbffb40519c9146d8156159d55850
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aefcd79574cbbf6b3759bfa6cc0f9e46a58244ce
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>如何将现有的.NET 应用程序部署到 Azure App Service 
 
@@ -37,7 +38,7 @@ App Service 迁移工具可以分析您的网站和其转移到 App Service 的�
 
 ### <a name="additional-resources"></a>其他资源
 
--   **Azure App Service 迁移助手**
+- **Azure App Service 迁移助手**
 
     [https://www.migratetoazure.net/](https://www.migratetoazure.net/)
 

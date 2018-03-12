@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-ink"></a>墨迹入门
 将数字墨迹合并到你的应用程序是比以往更容易。 墨迹已从正在实现完全集成到编程的 COM 和 Windows 窗体方法的必然结果发展[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 不需要安装单独的 Sdk 或运行时库。  
@@ -38,14 +40,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="quick-start"></a>快速入门  
  本部分可帮助您编写一个简单[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]收集墨迹的应用程序。  
   
- 如果你尚未这样做，安装 Microsoft Visual Studio 2005 和[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序通常必须进行编译之后，你可以查看它们，即使它们包含完全的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 但是，[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]包括设计的应用程序，XamlPad，加快的实现过程[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-基于 UI。 该应用程序可用于查看和修补本文档中的第一个几个示例。 创建的过程编译的应用程序从[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]在本文档的后面介绍。  
+ 如果你尚未这样做，安装 Microsoft Visual Studio 2005 和[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序通常必须进行编译之后，你可以查看它们，即使它们包含完全的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 但是，[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]包括设计的应用程序，XamlPad，加快的实现过程[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-基于 UI。 该应用程序可用于查看和修补本文档中的第一个几个示例。 创建的过程编译的应用程序从[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]在本文档的后面介绍。  
   
- 若要启动 XAMLPad，请单击**启动**菜单上，指向**所有程序**，指向**Microsoft Winndows SDK**，指向**工具**，然后单击**XAMLPad**。 在呈现窗格中，XAMLPad 呈现代码窗格中编写的 XAML 代码。 你可以编辑 XAML 代码中，并且所做的更改立即出现在呈现窗格中。  
+ 若要启动 XAMLPad，请单击**启动**菜单上，指向**所有程序**，指向**Microsoft Windows SDK**，指向**工具**，然后单击**XAMLPad**。 在呈现窗格中，XAMLPad 呈现代码窗格中编写的 XAML 代码。 你可以编辑 XAML 代码中，并且所做的更改立即出现在呈现窗格中。  
   
 #### <a name="got-ink"></a>如何获取墨迹？  
  若要启动你的第一个[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支持墨迹应用程序：  
   
-1.  打开 Microsoft Visual Studio 2005  
+1.  Open Microsoft Visual Studio 2005  
   
 2.  创建一个新**Windows 应用程序 (WPF)**  
   
