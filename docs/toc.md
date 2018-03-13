@@ -235,7 +235,7 @@
 #### [Lambda 表达式](csharp/lambda-expressions.md)
 ### [属性](csharp/properties.md)
 ### [索引器](csharp/indexers.md)
-### [放弃](csharp/discards.md)
+### [弃元](csharp/discards.md)
 ### [泛型](csharp/programming-guide/generics/index.md)
 ### [迭代器](csharp/iterators.md)
 ### [委托和事件](csharp/delegates-events.md)
@@ -267,6 +267,7 @@
 ### [如何串联字符串](csharp/how-to/concatenate-multiple-strings.md)
 ### [如何将字符串转换为 DateTime](standard/base-types/parsing-datetime.md)
 ### [如何搜索字符串](csharp/how-to/search-strings.md)
+### [如何修改字符串内容](csharp/how-to/modify-string-contents.md)
 <!-- End of C# Concepts section -->
 ## [.NET Compiler Platform SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 编程指南](csharp/programming-guide/)
