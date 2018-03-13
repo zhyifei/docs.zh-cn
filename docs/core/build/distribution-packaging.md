@@ -126,4 +126,4 @@ SDK 版本采用同样的 `[major].[minor]`，并有一个独立的 `[patch]`，
 
 ## <a name="building-packages"></a>生成包
 
-Https://github.com/dotnet/source-build 存储库中说明了如何生成 .NET Core SDK 的源 tarball 及其所有组件。 源版本存储库中的输出内容符合本文第一部分中所描述的布局。
+https://github.com/dotnet/source-build 存储库中说明了如何生成 .NET Core SDK 的源 tarball 及其所有组件。 源版本存储库中的输出内容符合本文第一部分中所描述的布局。
