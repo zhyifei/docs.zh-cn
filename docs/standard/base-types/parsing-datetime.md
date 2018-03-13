@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a17c96a03a35fcc4eb12e188dbc79d8d48153fb7
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>分析 .NET 中的日期和时间字符串
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/22/2018
 > 本文中的所有 C# 示例均在你的浏览器中运行。 按“运行”按钮查看输出。 你还可以对其进行编辑以自行实验。
 
 > [!NOTE]
-> 这些示例可在适用于 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) 和 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions) 的 GitHub 文档存储库中获取。 或者你可以通过适用于 [C#]((https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) 或 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip) 的 zip 文件格式下载该项目。
+> 这些示例可在适用于 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) 和 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions) 的 GitHub 文档存储库中获取。 或者你可以下载压缩文件形式的 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) 或 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip) 项目。
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

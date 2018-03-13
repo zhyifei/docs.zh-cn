@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c89695379d545ac5b22fc0716f3e0060b6c08f31
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>语法分析入门
 
@@ -73,7 +73,7 @@ SyntaxNode：蓝色 | SyntaxToken：绿色 | SyntaxTrivia：红色 ![C# 代码�
 
 ### <a name="manual-traversal"></a>手动遍历
 
-可以在[我们的 GitHub 示例存储库](https://github.com/dotnet/samples/csharp/roslyn-sdk/SyntaxQuickStart)中看到此示例的已完成代码。
+可以在[我们的 GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)中看到此示例的已完成代码。
 
 > [!NOTE]
 > 语法树类型使用继承描述不同的语法元素，这些语法元素在程序中的不同位置生效。 使用这些 API 通常意味着将属性或集合成员强制转换为特定的派生类型。 在以下示例中，作业和强制转换分别是独立的语句，采用显式类型化变量。 你可以读取代码以查看 API 的返回类型以及所返回对象的运行时类型。 在实践中，更常见的是使用隐式类型化变量并靠 API 名称来描述要检查的对象的类型。
@@ -103,7 +103,7 @@ SyntaxNode：蓝色 | SyntaxToken：绿色 | SyntaxTrivia：红色 ![C# 代码�
 
 [!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
-该成员为 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>。 它代表 `namespace Hello World` 声明范围内的所有内容。 添加下列代码检查 `HelloWorld` 命名空间内声明了哪些节点：
+该成员为 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>。 它代表 `namespace HelloWorld` 声明范围内的所有内容。 添加下列代码检查 `HelloWorld` 命名空间内声明了哪些节点：
 
 [!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
@@ -127,14 +127,14 @@ The tree has 4 using statements. They are:
         System.Collections
         System.Linq
         System.Text
-The first member is a NamespaceDeclaration
+The first member is a NamespaceDeclaration.
 There are 1 members declared in this namespace.
-The first member is a ClassDeclaration
-There are 1 members declared in the Program class
-The first member is a MethodDeclaration
-The return type of the Main method is void
-The method has 1 parameters
-The type of the args parameter is string[]
+The first member is a ClassDeclaration.
+There are 1 members declared in the Program class.
+The first member is a MethodDeclaration.
+The return type of the Main method is void.
+The method has 1 parameters.
+The type of the args parameter is string[].
 The body text of the Main method follows:
         {
             Console.WriteLine("Hello, World!");
@@ -143,7 +143,7 @@ The body text of the Main method follows:
 
 ### <a name="query-methods"></a>查询方法
 
-除了遍历树，还可以使用 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 上定义的查询方法来探索语法树。 任何一个熟悉 XPath 的人都可以立刻掌握这些方法。 可以结合 LINQ 使用这些方法快速查找树中的内容。 <xref:Microsoft.CodeAnalysis.SyntaxNode> 具备类似 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes> 的查询方法。
+除了遍历树，还可以使用 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 上定义的查询方法来探索语法树。 任何一个熟悉 XPath 的人都可以立刻掌握这些方法。 可以结合 LINQ 使用这些方法快速查找树中的内容。 <xref:Microsoft.CodeAnalysis.SyntaxNode> 具备类似 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A> 的查询方法。
 
 你可以使用这些查询方法对 `Main` 方法查找参数，而不是在树中进行导航。 将以下代码添加到 `Main` 方法末尾：
 
@@ -163,7 +163,7 @@ The body text of the Main method follows:
 
 新建 C#“独立代码分析工具”项目，将其命名为 SyntaxWalker。
 
-可以在[我们的 GitHub 存储库](https://github.com/dotnet/docs/samples/csharp/roslyn-sdk/SyntaxQuickStart)中看到此示例的已完成代码。 GitHub 上的示例包含本教程介绍的两个项目。
+可以在[我们的 GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)中看到此示例的已完成代码。 GitHub 上的示例包含本教程介绍的两个项目。
 
 如前面的示例所示，你可以定义字符串常量来保存将要分析的程序的文本：
 
@@ -198,23 +198,23 @@ The body text of the Main method follows:
 编译并运行该程序。 您应看到以下输出：
 
 ```console
-        VisitUsingDirective called with System
-        VisitUsingDirective called with System.Collections.Generic
-        VisitUsingDirective called with System.Linq
-        VisitUsingDirective called with System.Text
-        VisitUsingDirective called with Microsoft.CodeAnalysis
-                Success. Adding Microsoft.CodeAnalysis
-        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp
-                Success. Adding Microsoft.CodeAnalysis.CSharp
-        VisitUsingDirective called with Microsoft
-                Success. Adding Microsoft
-        VisitUsingDirective called with System.ComponentModel
-        VisitUsingDirective called with Microsoft.Win32
-                Success. Adding Microsoft.Win32
-        VisitUsingDirective called with System.Runtime.InteropServices
-        VisitUsingDirective called with System.CodeDom
-        VisitUsingDirective called with Microsoft.CSharp
-                Success. Adding Microsoft.CSharp
+        VisitUsingDirective called with System.
+        VisitUsingDirective called with System.Collections.Generic.
+        VisitUsingDirective called with System.Linq.
+        VisitUsingDirective called with System.Text.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.
+                Success. Adding Microsoft.CodeAnalysis.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp.
+                Success. Adding Microsoft.CodeAnalysis.CSharp.
+        VisitUsingDirective called with Microsoft.
+                Success. Adding Microsoft.
+        VisitUsingDirective called with System.ComponentModel.
+        VisitUsingDirective called with Microsoft.Win32.
+                Success. Adding Microsoft.Win32.
+        VisitUsingDirective called with System.Runtime.InteropServices.
+        VisitUsingDirective called with System.CodeDom.
+        VisitUsingDirective called with Microsoft.CSharp.
+                Success. Adding Microsoft.CSharp.
 Microsoft.CodeAnalysis
 Microsoft.CodeAnalysis.CSharp
 Microsoft

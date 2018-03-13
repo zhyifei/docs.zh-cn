@@ -3,16 +3,16 @@ title: "Windows 上 .NET Core 的先决条件"
 description: "了解在 Windows 计算机上开发和运行 .NET Core 应用程序所需的依赖项。"
 author: JRAlexander
 ms.author: johalex
-ms.date: 02/28/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e64ecb807fd377458a9998ebbdfe2f6f15b115bb
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的先决条件
 
@@ -100,5 +100,6 @@ ms.lasthandoff: 03/02/2018
 >
 > * 在“帮助”菜单上，选择“关于 Microsoft Visual Studio”。
 > * 在“关于 Microsoft Visual Studio”对话框中，验证版本号。
->   * 对于 .NET Core 2.x 应用程序，Visual Studio 2017 版本应为 15.3 (26730.01) 或更高版本。
->   * 对于 .NET Core 1.x 应用程序，Visual Studio 2017 版本应为 15.0 (26228.04) 或更高版本。
+>   * 对于 .NET Core 2.1 Preview 1 应用，Visual Studio 2017 版本应为 15.6 预览版 6 或更高版本。
+>   * 对于 .NET Core 2.0 应用，Visual Studio 2017 版本应为 15.3 或更高版本。
+>   * 对于 .NET Core 1.x 应用，Visual Studio 2017 版本应为 15.0 或更高版本。

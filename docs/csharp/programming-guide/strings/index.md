@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 24b3db01047a9f9a47182e0e1ac105f69562c316
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/28/2018
   
  [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
   
- 有关如何创建基于修改的新字符串的详细信息，例如原始字符串上的搜索和替换操作，请参阅[如何：修改字符串内容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
+ 有关如何创建基于修改的新字符串的详细信息，例如原始字符串上的搜索和替换操作，请参阅[如何：修改字符串内容](../../how-to/modify-string-contents.md)。  
   
 ## <a name="regular-and-verbatim-string-literals"></a>常规和逐字字符串文本  
  在必须嵌入 C# 提供的转义字符时，使用常规字符串文本，如以下示例所示：  
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/28/2018
  <xref:System.Console.WriteLine%2A> 方法的一个重载将格式字符串用作参数。 因此，可以仅嵌入格式字符串文本，而无需显式调用该方法。 不过，如果使用 <xref:System.Diagnostics.Trace.WriteLine%2A> 方法在 Visual Studio“输出”窗口中显示调试输出，必须显式调用 <xref:System.String.Format%2A> 方法，因为 <xref:System.Diagnostics.Trace.WriteLine%2A> 仅接受字符串，而不接受格式字符串。 有关格式字符串的详细信息，请参阅[格式设置类型](../../../standard/base-types/formatting-types.md)。  
   
 ## <a name="substrings"></a>子字符串  
- 子字符串是包含在字符串中的任何字符序列。 使用 <xref:System.String.Substring%2A> 方法可以通过原始字符串的一部分新建字符串。 可以使用 <xref:System.String.IndexOf%2A> 方法搜索一次或多次出现的子字符串。 使用 <xref:System.String.Replace%2A> 方法可以将出现的所有指定子字符串替换为新字符串。 与 <xref:System.String.Substring%2A> 方法一样，<xref:System.String.Replace%2A> 实际返回的是新字符串，且不修改原始字符串。 有关详细信息，请参阅[如何：搜索字符串](../../how-to/search-strings.md)和[如何：修改字符串内容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)。  
+ 子字符串是包含在字符串中的任何字符序列。 使用 <xref:System.String.Substring%2A> 方法可以通过原始字符串的一部分新建字符串。 可以使用 <xref:System.String.IndexOf%2A> 方法搜索一次或多次出现的子字符串。 使用 <xref:System.String.Replace%2A> 方法可以将出现的所有指定子字符串替换为新字符串。 与 <xref:System.String.Substring%2A> 方法一样，<xref:System.String.Replace%2A> 实际返回的是新字符串，且不修改原始字符串。 有关详细信息，请参阅[如何：搜索字符串](../../how-to/search-strings.md)和[如何：修改字符串内容](../../how-to/modify-string-contents.md)。  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -123,11 +123,11 @@ string s = String.Empty;
   
 |主题|描述|  
 |-----------|-----------------|  
-|[如何：修改字符串内容](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|提供了演示如何修改字符串内容的代码示例。|  
-|[如何：串联多个字符串](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|阐释如何使用 `+` 运算符和 `Stringbuilder` 类在编译时和运行时将字符串连接在一起。|  
+|[如何：修改字符串内容](../../how-to/modify-string-contents.md)|阐明转换字符串并修改字符串内容的方法。|  
+|[如何：串联多个字符串](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|阐明在编译时和运行时将多个字符串合并为一个字符串的方法。|  
 |[如何：比较字符串](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|演示如何执行字符串的序号比较。|  
 |[如何：使用 String.Split 分析字符串](../../how-to/parse-strings-using-split.md)|包含一个代码示例，演示了如何使用 `String.Split` 方法来分析字符串。|  
-|[如何：搜索字符串](../../how-to/search-strings.md)|介绍如何使用特定方法来搜索字符串。|  
+|[如何：搜索字符串](../../how-to/search-strings.md)|说明如何在字符串中使用搜索来搜索特定的文本或模式。|  
 |[如何：确定字符串是否表示数值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|演示如何安全地分析一个字符串，以查看其是否具有有效的数值。|  
 |[如何：将字符串转换为 DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|展示了如何将字符串（如“01/24/2008”）转换为 <xref:System.DateTime?displayProperty=nameWithType> 对象。|  
 |[基本字符串操作](../../../../docs/standard/base-types/basic-string-operations.md)|收录了介绍如何使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法执行基本字符串操作的主题链接。|  

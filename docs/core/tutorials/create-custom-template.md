@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.workload: dotnetcore
-ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>创建 dotnet new 自定义模板
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="create-a-template-from-a-project"></a>通过项目创建模板
 
-使用已确认可以编译和运行的现有项目，或在硬盘上的文件夹中新建一个控制台应用项目。 本教程假定项目文件夹名为 GarciaSoftware.ConsoleTemplate.CSharp，并存储在用户配置文件中的 Documents/Templates。 本教程的项目模板名称采用格式“\<公司名称>.\<模板类型>.\<编程语言>”，但也可以根据自己的意愿随意命名项目和模板。
+使用已确认可以编译和运行的现有项目，或在硬盘上的文件夹中新建一个控制台应用项目。 本教程假定项目文件夹名为 GarciaSoftware.ConsoleTemplate.CSharp，并存储在用户配置文件中的 Documents\Templates。 本教程的项目模板名称采用格式“\<公司名称>.\<模板类型>.\<编程语言>”，但也可以根据自己的意愿随意命名项目和模板。
 
 1. 向 .template.config 项目根添加文件夹。
 1. 在 .template.config 文件夹中，创建 template.json 文件来配置模板。 有关 template.json 文件的详细信息和成员定义，请参阅 [dotnet new 自定义模板](../tools/custom-templates.md#templatejson)主题和 [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)。
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>将模板打包到 NuGet 包中
 
-1. 为 NuGet 包创建文件夹。 在本教程中，此文件夹名为 GarciaSoftware.ConsoleTemplate.CSharp，并在用户配置文件中的 Documents/NuGetTemplates 文件夹内创建。 在新建的模板文件夹内，创建名为 content 的文件夹，以保存项目文件。
+1. 为 NuGet 包创建文件夹。 在本教程中，使用的文件夹名为 GarciaSoftware.ConsoleTemplate.CSharp，该文件夹在用户配置文件中的 Documents\NuGetTemplates 内创建。 在新建的模板文件夹内，创建名为 content 的文件夹，以保存项目文件。
 1. 将项目文件夹的内容连同 .template.config/template.json 文件一起复制到创建的 content 文件夹中。
 1. 在 content 文件夹旁边，添加 [nuspec 文件](/nuget/create-packages/creating-a-package)。 nuspec 文件是 XML 清单文件，用于描述包内容，并促进创建 NuGet 包。
    
@@ -102,10 +103,10 @@ ms.lasthandoff: 12/23/2017
    </package>
    ```
 
-1. 使用 `nuget pack <PATH_TO_NUSPEC_FILE>` 命令[创建包](/nuget/create-packages/creating-a-package#creating-the-package)。 以下命令假定包含 NuGet 资产的文件夹位于 C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/。 不过，无论将文件夹放置在系统上的什么位置，`nuget pack` 命令都接受 nuspec 文件路径：
+1. 使用 `nuget pack <PATH_TO_NUSPEC_FILE>` 命令[创建包](/nuget/create-packages/creating-a-package#creating-the-package)。 以下命令假定包含 NuGet 资产的文件夹位于 *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*。 不过，无论将文件夹放置在系统上的什么位置，`nuget pack` 命令都接受 nuspec 文件路径：
 
    ```console
-   nuget pack C:/Users/<USER>/Documents/NuGetTemplates/GarciaSoftware.ConsoleTemplate.CSharp/GarciaSoftware.ConsoleTemplate.CSharp.nuspec
+   nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec
    ```
 
 ### <a name="publishing-the-package-to-nugetorg"></a>将包发布到 nuget.org
@@ -119,7 +120,7 @@ ms.lasthandoff: 12/23/2017
 若要从生成的 nupkg 文件安装模板，请结合使用 `dotnet new` 命令和 `-i|--install` 选项，并提供 nupkg 文件路径：
 
 ```console
-dotnet new -i C:/Users/<USER>/GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
+dotnet new -i C:\Users\<USER>\GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
 ```
 
 #### <a name="install-the-template-from-a-nuget-package-stored-at-nugetorg"></a>从 nuget.org 中存储的 NuGet 包安装模板
@@ -187,14 +188,14 @@ dotnet new -u GarciaSoftware.ConsoleTemplate.CSharp.1.0.0
 本教程假定项目模板存储在用户配置文件中的 Documents/Templates 文件夹内。 从这个位置，使用以下命令安装模板，只将 \<USER> 替换为用户的配置文件名称：
 
 ```console
-dotnet new -i C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 ### <a name="create-a-project-from-the-template"></a>通过模板创建项目
 
 从文件系统安装模板后，在要放置模板引擎输出的目录（除非使用 `-o|--output` 选项指定特定的目录）执行 `dotnet new <TEMPLATE>` 命令，即可使用模板。 有关详细信息，请参阅 [`dotnet new` 选项](~/docs/core/tools/dotnet-new.md#options)。 直接向 `dotnet new` 命令提供模板的短名称。
 
-从 C:/Users/\<USER>/Documents/Projects/MyConsoleApp 处创建的新项目文件夹，通过 `garciaconsole` 模板创建项目：
+从 C:\Users\\\<USER>\Documents\Projects\MyConsoleApp 处创建的新项目文件夹，通过 `garciaconsole` 模板创建项目：
 
 ```console
 dotnet new garciaconsole
@@ -202,14 +203,14 @@ dotnet new garciaconsole
 
 ### <a name="uninstall-the-template"></a>卸载模板
 
-如果在本地文件系统中的 C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp 处创建模板，请使用 `-u|--uninstall` 开关和模板文件夹路径卸载模板：
+如果在本地文件系统中的 C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp 处创建模板，请使用 `-u|--uninstall` 开关和模板文件夹路径卸载模板：
 
 ```console
-dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 > [!NOTE]
-> 若要从本地文件系统卸载模板，需要完全限定路径。 例如，C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp 有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp 无效。
+> 若要从本地文件系统卸载模板，需要完全限定路径。 例如，C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp 有效，但是包含文件夹中的 ./GarciaSoftware.ConsoleTemplate.CSharp 无效。
 > 此外，模板路径中不要包含最后的终止目录斜杠。
 
 ## <a name="see-also"></a>请参阅
