@@ -19,24 +19,24 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ee2baef3ddcaebb494f1eae2813e861f93e489dd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 39cf89856b8096fb879ee42f068e96308c5f9660
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="examples-of-xml-serialization"></a><span data-ttu-id="7f38c-102">XML 序列化示例</span><span class="sxs-lookup"><span data-stu-id="7f38c-102">Examples of XML Serialization</span></span>
-<span data-ttu-id="7f38c-103">XML 序列化可以采用从简单到复杂的多种形式。</span><span class="sxs-lookup"><span data-stu-id="7f38c-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="7f38c-104">例如，可以序列化只包含公共字段和公共属性的类，如 [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。</span><span class="sxs-lookup"><span data-stu-id="7f38c-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="7f38c-105">下面的代码示例讨论各种高级方案，包括如何使用 XML 序列化生成符合特定 XML 架构 (XSD) 文档的 XML 流。</span><span class="sxs-lookup"><span data-stu-id="7f38c-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>  
+# <a name="examples-of-xml-serialization"></a><span data-ttu-id="bba20-102">XML 序列化示例</span><span class="sxs-lookup"><span data-stu-id="bba20-102">Examples of XML Serialization</span></span>
+<span data-ttu-id="bba20-103">XML 序列化可以采用从简单到复杂的多种形式。</span><span class="sxs-lookup"><span data-stu-id="bba20-103">XML serialization can take more than one form, from simple to complex.</span></span> <span data-ttu-id="bba20-104">例如，可以序列化只包含公共字段和公共属性的类，如 [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。</span><span class="sxs-lookup"><span data-stu-id="bba20-104">For example, you can serialize a class that simply consists of public fields and properties, as shown in [Introducing XML Serialization](../../../docs/standard/serialization/introducing-xml-serialization.md).</span></span> <span data-ttu-id="bba20-105">下面的代码示例讨论各种高级方案，包括如何使用 XML 序列化生成符合特定 XML 架构 (XSD) 文档的 XML 流。</span><span class="sxs-lookup"><span data-stu-id="bba20-105">The following code examples address various advanced scenarios, including how to use XML serialization to generate an XML stream that conforms to a specific XML Schema (XSD) document.</span></span>  
   
-## <a name="serializing-a-dataset"></a><span data-ttu-id="7f38c-106">序列化数据集</span><span class="sxs-lookup"><span data-stu-id="7f38c-106">Serializing a DataSet</span></span>  
- <span data-ttu-id="7f38c-107">除了序列化公共类的实例外，还可序列化 <xref:System.Data.DataSet> 的实例，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="7f38c-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>  
+## <a name="serializing-a-dataset"></a><span data-ttu-id="bba20-106">序列化数据集</span><span class="sxs-lookup"><span data-stu-id="bba20-106">Serializing a DataSet</span></span>  
+ <span data-ttu-id="bba20-107">除了序列化公共类的实例外，还可序列化 <xref:System.Data.DataSet> 的实例，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="bba20-107">Besides serializing an instance of a public class, an instance of a <xref:System.Data.DataSet> can also be serialized, as shown in the following code example.</span></span>  
   
 ```vb  
 Private Sub SerializeDataSet(filename As String)  
@@ -82,8 +82,8 @@ private void SerializeDataSet(string filename){
 }  
 ```  
   
-## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="7f38c-108">序列化 XmlElement 和 XmlNode</span><span class="sxs-lookup"><span data-stu-id="7f38c-108">Serializing an XmlElement and XmlNode</span></span>  
- <span data-ttu-id="7f38c-109">还可序列化 <xref:System.Xml.XmlElement> 或 <xref:System.Xml.XmlNode> 类的实例，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="7f38c-109">You can also serialize instances of a <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>  
+## <a name="serializing-an-xmlelement-and-xmlnode"></a><span data-ttu-id="bba20-108">序列化 XmlElement 和 XmlNode</span><span class="sxs-lookup"><span data-stu-id="bba20-108">Serializing an XmlElement and XmlNode</span></span>  
+ <span data-ttu-id="bba20-109">还可序列化 <xref:System.Xml.XmlElement> 或 <xref:System.Xml.XmlNode> 类的实例，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="bba20-109">You can also serialize instances of a <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.</span></span>  
   
 ```vb  
 private Sub SerializeElement(filename As String)  
@@ -130,8 +130,8 @@ private void SerializeNode(string filename){
 }  
 ```  
   
-## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="7f38c-110">序列化包含返回复杂对象的字段的类</span><span class="sxs-lookup"><span data-stu-id="7f38c-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>  
- <span data-ttu-id="7f38c-111">如果属性或字段返回一个复杂对象（如数组或类实例），则 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) 会将其转换为嵌套在主 XML 文档内的元素。</span><span class="sxs-lookup"><span data-stu-id="7f38c-111">If a property or field returns a complex object (such as an array or a class instance), the [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="7f38c-112">例如，以下代码示例中的第一个类返回第二个类的实例。</span><span class="sxs-lookup"><span data-stu-id="7f38c-112">For example, the first class in the following code example returns an instance of the second class.</span></span>  
+## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a><span data-ttu-id="bba20-110">序列化包含返回复杂对象的字段的类</span><span class="sxs-lookup"><span data-stu-id="bba20-110">Serializing a Class that Contains a Field Returning a Complex Object</span></span>  
+ <span data-ttu-id="bba20-111">如果属性或字段返回一个复杂对象（如数组或类实例），则 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) 会将其转换为嵌套在主 XML 文档内的元素。</span><span class="sxs-lookup"><span data-stu-id="bba20-111">If a property or field returns a complex object (such as an array or a class instance), the [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) converts it to an element nested within the main XML document.</span></span> <span data-ttu-id="bba20-112">例如，以下代码示例中的第一个类返回第二个类的实例。</span><span class="sxs-lookup"><span data-stu-id="bba20-112">For example, the first class in the following code example returns an instance of the second class.</span></span>  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -154,7 +154,7 @@ public class Address
 }  
 ```  
   
- <span data-ttu-id="7f38c-113">已序列化的 XML 输出可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="7f38c-113">The serialized XML output might resemble the following.</span></span>  
+ <span data-ttu-id="bba20-113">已序列化的 XML 输出可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="bba20-113">The serialized XML output might resemble the following.</span></span>  
   
 ```xml  
 <PurchaseOrder>  
@@ -164,8 +164,8 @@ public class Address
 </PurchaseOrder>  
 ```  
   
-## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="7f38c-114">序列化对象数组</span><span class="sxs-lookup"><span data-stu-id="7f38c-114">Serializing an Array of Objects</span></span>  
- <span data-ttu-id="7f38c-115">还可以序列化返回对象数组的字段，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="7f38c-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>  
+## <a name="serializing-an-array-of-objects"></a><span data-ttu-id="bba20-114">序列化对象数组</span><span class="sxs-lookup"><span data-stu-id="bba20-114">Serializing an Array of Objects</span></span>  
+ <span data-ttu-id="bba20-115">还可以序列化返回对象数组的字段，如下面的代码示例所示。</span><span class="sxs-lookup"><span data-stu-id="bba20-115">You can also serialize a field that returns an array of objects, as shown in the following code example.</span></span>  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -191,7 +191,7 @@ public class Item
 }  
 ```  
   
- <span data-ttu-id="7f38c-116">如果两个项已排序，则已序列化的类实例可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="7f38c-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>  
+ <span data-ttu-id="bba20-116">如果两个项已排序，则已序列化的类实例可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="bba20-116">The serialized class instance might resemble the following, if two items are ordered.</span></span>  
   
 ```xml  
 <PurchaseOrder xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -208,8 +208,8 @@ public class Item
 </PurchaseOrder>  
 ```  
   
-## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="7f38c-117">序列化实现 ICollection 接口的类</span><span class="sxs-lookup"><span data-stu-id="7f38c-117">Serializing a Class that Implements the ICollection Interface</span></span>  
- <span data-ttu-id="7f38c-118">您可以通过实现 <xref:System.Collections.ICollection> 接口创建自己的集合类，并使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化这些类的实例。</span><span class="sxs-lookup"><span data-stu-id="7f38c-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="7f38c-119">请注意，当类实现 <xref:System.Collections.ICollection> 接口时，只序列化该类包含的集合，</span><span class="sxs-lookup"><span data-stu-id="7f38c-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="7f38c-120">而不会序列化添加至该类的任何公共属性或字段。</span><span class="sxs-lookup"><span data-stu-id="7f38c-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="7f38c-121">该类必须包含 Add 方法和 Item 属性（C# 索引器）才能被序列化。</span><span class="sxs-lookup"><span data-stu-id="7f38c-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>  
+## <a name="serializing-a-class-that-implements-the-icollection-interface"></a><span data-ttu-id="bba20-117">序列化实现 ICollection 接口的类</span><span class="sxs-lookup"><span data-stu-id="bba20-117">Serializing a Class that Implements the ICollection Interface</span></span>  
+ <span data-ttu-id="bba20-118">您可以通过实现 <xref:System.Collections.ICollection> 接口创建自己的集合类，并使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化这些类的实例。</span><span class="sxs-lookup"><span data-stu-id="bba20-118">You can create your own collection classes by implementing the <xref:System.Collections.ICollection> interface, and use the <xref:System.Xml.Serialization.XmlSerializer> to serialize instances of these classes.</span></span> <span data-ttu-id="bba20-119">请注意，当类实现 <xref:System.Collections.ICollection> 接口时，只序列化该类包含的集合，</span><span class="sxs-lookup"><span data-stu-id="bba20-119">Note that when a class implements the <xref:System.Collections.ICollection> interface, only the collection contained by the class is serialized.</span></span> <span data-ttu-id="bba20-120">而不会序列化添加至该类的任何公共属性或字段。</span><span class="sxs-lookup"><span data-stu-id="bba20-120">Any public properties or fields added to the class will not be serialized.</span></span> <span data-ttu-id="bba20-121">该类必须包含 Add 方法和 Item 属性（C# 索引器）才能被序列化。</span><span class="sxs-lookup"><span data-stu-id="bba20-121">The class must include an **Add** method and an **Item** property (C# indexer) to be serialized.</span></span>  
   
 ```vb  
 Imports System  
@@ -366,16 +366,16 @@ public class Employee{
 }  
 ```  
   
-## <a name="purchase-order-example"></a><span data-ttu-id="7f38c-122">订单示例</span><span class="sxs-lookup"><span data-stu-id="7f38c-122">Purchase Order Example</span></span>  
- <span data-ttu-id="7f38c-123">您可以将下面的示例代码剪切并粘贴到以 .cs 或 .vb 文件扩展名重命名的文本文件中。</span><span class="sxs-lookup"><span data-stu-id="7f38c-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="7f38c-124">使用 C# 或 Visual Basic 编译器编译该文件，</span><span class="sxs-lookup"><span data-stu-id="7f38c-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="7f38c-125">然后使用生成的可执行文件的名称运行该文件。</span><span class="sxs-lookup"><span data-stu-id="7f38c-125">Then run it using the name of the executable.</span></span>  
+## <a name="purchase-order-example"></a><span data-ttu-id="bba20-122">订单示例</span><span class="sxs-lookup"><span data-stu-id="bba20-122">Purchase Order Example</span></span>  
+ <span data-ttu-id="bba20-123">您可以将下面的示例代码剪切并粘贴到以 .cs 或 .vb 文件扩展名重命名的文本文件中。</span><span class="sxs-lookup"><span data-stu-id="bba20-123">You can cut and paste the following example code into a text file renamed with a .cs or .vb file name extension.</span></span> <span data-ttu-id="bba20-124">使用 C# 或 Visual Basic 编译器编译该文件，</span><span class="sxs-lookup"><span data-stu-id="bba20-124">Use the C# or Visual Basic compiler to compile the file.</span></span> <span data-ttu-id="bba20-125">然后使用生成的可执行文件的名称运行该文件。</span><span class="sxs-lookup"><span data-stu-id="bba20-125">Then run it using the name of the executable.</span></span>  
   
- <span data-ttu-id="7f38c-126">此示例使用一个简单方案演示如何创建对象的实例，并使用 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 方法将该对象实例序列化为文件流。</span><span class="sxs-lookup"><span data-stu-id="7f38c-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="7f38c-127">将 XML 流保存到文件，然后使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法读回该文件，并将其重新构造为原始对象的副本。</span><span class="sxs-lookup"><span data-stu-id="7f38c-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>  
+ <span data-ttu-id="bba20-126">此示例使用一个简单方案演示如何创建对象的实例，并使用 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 方法将该对象实例序列化为文件流。</span><span class="sxs-lookup"><span data-stu-id="bba20-126">This example uses a simple scenario to demonstrate how an instance of an object is created and serialized into a file stream using the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> method.</span></span> <span data-ttu-id="bba20-127">将 XML 流保存到文件，然后使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法读回该文件，并将其重新构造为原始对象的副本。</span><span class="sxs-lookup"><span data-stu-id="bba20-127">The XML stream is saved to a file, and the same file is then read back and reconstructed into a copy of the original object using the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method.</span></span>  
   
- <span data-ttu-id="7f38c-128">在此示例中，对名为 `PurchaseOrder` 的类进行序列化，然后进行反序列化。</span><span class="sxs-lookup"><span data-stu-id="7f38c-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="7f38c-129">另一个名为 `Address` 的类也包含在内，因为名为 `ShipTo` 的公共字段必须设置为 `Address`。</span><span class="sxs-lookup"><span data-stu-id="7f38c-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="7f38c-130">同样，`OrderedItem` 类也包含在内，因为 `OrderedItem` 对象的数组必须设置为 `OrderedItems` 字段。</span><span class="sxs-lookup"><span data-stu-id="7f38c-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="7f38c-131">最后，名为 `Test` 的类包含序列化和反序列化这些类的代码。</span><span class="sxs-lookup"><span data-stu-id="7f38c-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>  
+ <span data-ttu-id="bba20-128">在此示例中，对名为 `PurchaseOrder` 的类进行序列化，然后进行反序列化。</span><span class="sxs-lookup"><span data-stu-id="bba20-128">In this example, a class named `PurchaseOrder` is serialized and then deserialized.</span></span> <span data-ttu-id="bba20-129">另一个名为 `Address` 的类也包含在内，因为名为 `ShipTo` 的公共字段必须设置为 `Address`。</span><span class="sxs-lookup"><span data-stu-id="bba20-129">A second class named `Address` is also included because the public field named `ShipTo` must be set to an `Address`.</span></span> <span data-ttu-id="bba20-130">同样，`OrderedItem` 类也包含在内，因为 `OrderedItem` 对象的数组必须设置为 `OrderedItems` 字段。</span><span class="sxs-lookup"><span data-stu-id="bba20-130">Similarly, an `OrderedItem` class is included because an array of `OrderedItem` objects must be set to the `OrderedItems` field.</span></span> <span data-ttu-id="bba20-131">最后，名为 `Test` 的类包含序列化和反序列化这些类的代码。</span><span class="sxs-lookup"><span data-stu-id="bba20-131">Finally, a class named `Test` contains the code that serializes and deserializes the classes.</span></span>  
   
- <span data-ttu-id="7f38c-132">`CreatePO` 方法创建 `PurchaseOrder`、`Address` 和 `OrderedItem` 类对象，并设置公共字段值。</span><span class="sxs-lookup"><span data-stu-id="7f38c-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="7f38c-133">该方法还构造 <xref:System.Xml.Serialization.XmlSerializer> 类的实例，该类用于序列化和反序列化 `PurchaseOrder`。</span><span class="sxs-lookup"><span data-stu-id="7f38c-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="7f38c-134">请注意，代码传递的是将序列化为构造函数的类的类型。</span><span class="sxs-lookup"><span data-stu-id="7f38c-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="7f38c-135">代码还创建可用于将 XML 流写入 XML 文档的 `FileStream`。</span><span class="sxs-lookup"><span data-stu-id="7f38c-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>  
+ <span data-ttu-id="bba20-132">`CreatePO` 方法创建 `PurchaseOrder`、`Address` 和 `OrderedItem` 类对象，并设置公共字段值。</span><span class="sxs-lookup"><span data-stu-id="bba20-132">The `CreatePO` method creates the `PurchaseOrder`, `Address`, and `OrderedItem` class objects, and sets the public field values.</span></span> <span data-ttu-id="bba20-133">该方法还构造 <xref:System.Xml.Serialization.XmlSerializer> 类的实例，该类用于序列化和反序列化 `PurchaseOrder`。</span><span class="sxs-lookup"><span data-stu-id="bba20-133">The method also constructs an instance of the <xref:System.Xml.Serialization.XmlSerializer> class that is used to serialize and deserialize the `PurchaseOrder`.</span></span> <span data-ttu-id="bba20-134">请注意，代码传递的是将序列化为构造函数的类的类型。</span><span class="sxs-lookup"><span data-stu-id="bba20-134">Note that the code passes the type of the class that will be serialized to the constructor.</span></span> <span data-ttu-id="bba20-135">代码还创建可用于将 XML 流写入 XML 文档的 `FileStream`。</span><span class="sxs-lookup"><span data-stu-id="bba20-135">The code also creates a `FileStream` that is used to write the XML stream to an XML document.</span></span>  
   
- <span data-ttu-id="7f38c-136">`ReadPo` 方法稍简单一些。</span><span class="sxs-lookup"><span data-stu-id="7f38c-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="7f38c-137">它只创建要反序列化的对象并读出它们的值。</span><span class="sxs-lookup"><span data-stu-id="7f38c-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="7f38c-138">与 `CreatePo` 方法一样，您必须先构造 <xref:System.Xml.Serialization.XmlSerializer>，并将要反序列化的类的类型传递给该构造函数。</span><span class="sxs-lookup"><span data-stu-id="7f38c-138">As with the `CreatePo` method, you must first construct a <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="7f38c-139">此外，还需要使用 <xref:System.IO.FileStream> 读取 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="7f38c-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="7f38c-140">要反序列化对象，请调用带有 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 参数的 <xref:System.IO.FileStream> 方法。</span><span class="sxs-lookup"><span data-stu-id="7f38c-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="7f38c-141">已反序列化的对象必须强制转换为 `PurchaseOrder` 类型的对象变量。</span><span class="sxs-lookup"><span data-stu-id="7f38c-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="7f38c-142">然后代码读取已反序列化的 `PurchaseOrder` 的值。</span><span class="sxs-lookup"><span data-stu-id="7f38c-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="7f38c-143">请注意，您还可以读取 PO.xml 文件，创建该文件是为了查看实际的 XML 输出。</span><span class="sxs-lookup"><span data-stu-id="7f38c-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>  
+ <span data-ttu-id="bba20-136">`ReadPo` 方法稍简单一些。</span><span class="sxs-lookup"><span data-stu-id="bba20-136">The `ReadPo` method is a little simpler.</span></span> <span data-ttu-id="bba20-137">它只创建要反序列化的对象并读出它们的值。</span><span class="sxs-lookup"><span data-stu-id="bba20-137">It just creates objects to deserialize and reads out their values.</span></span> <span data-ttu-id="bba20-138">与 `CreatePo` 方法一样，您必须先构造 <xref:System.Xml.Serialization.XmlSerializer>，并将要反序列化的类的类型传递给该构造函数。</span><span class="sxs-lookup"><span data-stu-id="bba20-138">As with the `CreatePo` method, you must first construct a <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor.</span></span> <span data-ttu-id="bba20-139">此外，还需要使用 <xref:System.IO.FileStream> 读取 XML 文档。</span><span class="sxs-lookup"><span data-stu-id="bba20-139">Also, a <xref:System.IO.FileStream> is required to read the XML document.</span></span> <span data-ttu-id="bba20-140">要反序列化对象，请调用带有 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 参数的 <xref:System.IO.FileStream> 方法。</span><span class="sxs-lookup"><span data-stu-id="bba20-140">To deserialize the objects, call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method with the <xref:System.IO.FileStream> as an argument.</span></span> <span data-ttu-id="bba20-141">已反序列化的对象必须强制转换为 `PurchaseOrder` 类型的对象变量。</span><span class="sxs-lookup"><span data-stu-id="bba20-141">The deserialized object must be cast to an object variable of type `PurchaseOrder`.</span></span> <span data-ttu-id="bba20-142">然后代码读取已反序列化的 `PurchaseOrder` 的值。</span><span class="sxs-lookup"><span data-stu-id="bba20-142">The code then reads the values of the deserialized `PurchaseOrder`.</span></span> <span data-ttu-id="bba20-143">请注意，您还可以读取 PO.xml 文件，创建该文件是为了查看实际的 XML 输出。</span><span class="sxs-lookup"><span data-stu-id="bba20-143">Note that you can also read the PO.xml file that is created to see the actual XML output.</span></span>  
   
 ```vb  
 Imports System  
@@ -384,21 +384,21 @@ Imports System.Xml.Serialization
 Imports System.IO  
 Imports Microsoft.VisualBasic  
   
-' The XmlRootAttribute allows you to set an alternate name  
+' The XmlRoot attribute allows you to set an alternate name  
 ' (PurchaseOrder) for the XML element and its namespace. By  
 ' default, the XmlSerializer uses the class name. The attribute  
 ' also allows you to set the XML namespace for the element. Lastly,  
 ' the attribute sets the IsNullable property, which specifies whether  
 ' the xsi:null attribute appears if the class instance is set to  
 ' a null reference.   
-<XmlRootAttribute("PurchaseOrder", _  
+<XmlRoot("PurchaseOrder", _  
  Namespace := "http://www.cpandl.com", IsNullable := False)> _  
 Public Class PurchaseOrder  
     Public ShipTo As Address  
     Public OrderDate As String  
     ' The XmlArrayAttribute changes the XML element name  
     ' from the default of "OrderedItems" to "Items".   
-    <XmlArrayAttribute("Items")> _  
+    <XmlArray("Items")> _  
     Public OrderedItems() As OrderedItem  
     Public SubTotal As Decimal  
     Public ShipCost As Decimal  
@@ -406,7 +406,7 @@ Public Class PurchaseOrder
 End Class   
   
 Public Class Address  
-    ' The XmlAttribute instructs the XmlSerializer to serialize the   
+    ' The XmlAttribute attribute instructs the XmlSerializer to serialize the   
     ' Name field as an XML attribute instead of an XML element (the   
     ' default behavior).   
     <XmlAttribute()> _  
@@ -416,7 +416,7 @@ Public Class Address
     ' Setting the IsNullable property to false instructs the  
     ' XmlSerializer that the XML attribute will not appear if  
     ' the City field is set to a null reference.   
-    <XmlElementAttribute(IsNullable := False)> _  
+    <XmlElement(IsNullable := False)> _  
     Public City As String  
     Public State As String  
     Public Zip As String  
@@ -562,22 +562,22 @@ using System.Xml;
 using System.Xml.Serialization;  
 using System.IO;  
   
-// The XmlRootAttribute allows you to set an alternate name   
+// The XmlRoot attribute allows you to set an alternate name   
 // (PurchaseOrder) for the XML element and its namespace. By   
 // default, the XmlSerializer uses the class name. The attribute   
 // also allows you to set the XML namespace for the element. Lastly,  
 // the attribute sets the IsNullable property, which specifies whether   
 // the xsi:null attribute appears if the class instance is set to   
 // a null reference.  
-[XmlRootAttribute("PurchaseOrder", Namespace="http://www.cpandl.com",   
+[XmlRoot("PurchaseOrder", Namespace="http://www.cpandl.com",   
 IsNullable = false)]  
 public class PurchaseOrder  
 {  
     public Address ShipTo;  
     public string OrderDate;   
-    // The XmlArrayAttribute changes the XML element name  
+    // The XmlArray attribute changes the XML element name  
     // from the default of "OrderedItems" to "Items".  
-    [XmlArrayAttribute("Items")]  
+    [XmlArray("Items")]  
     public OrderedItem[] OrderedItems;  
     public decimal SubTotal;  
     public decimal ShipCost;  
@@ -586,7 +586,7 @@ public class PurchaseOrder
   
 public class Address  
 {  
-    // The XmlAttribute instructs the XmlSerializer to serialize the   
+    // The XmlAttribute attribute instructs the XmlSerializer to serialize the   
     // Name field as an XML attribute instead of an XML element (the   
     // default behavior).  
     [XmlAttribute]  
@@ -596,7 +596,7 @@ public class Address
     // Setting the IsNullable property to false instructs the   
     // XmlSerializer that the XML attribute will not appear if   
     // the City field is set to a null reference.  
-    [XmlElementAttribute(IsNullable = false)]  
+    [XmlElement(IsNullable = false)]  
     public string City;  
     public string State;  
     public string Zip;  
@@ -747,7 +747,7 @@ public class Test
 }  
 ```  
   
- <span data-ttu-id="7f38c-144">XML 输出可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="7f38c-144">The XML output might resemble the following.</span></span>  
+ <span data-ttu-id="bba20-144">XML 输出可能如下所示。</span><span class="sxs-lookup"><span data-stu-id="bba20-144">The XML output might resemble the following.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -774,10 +774,10 @@ public class Test
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7f38c-145">请参阅</span><span class="sxs-lookup"><span data-stu-id="7f38c-145">See Also</span></span>  
- [<span data-ttu-id="7f38c-146">XML 序列化简介</span><span class="sxs-lookup"><span data-stu-id="7f38c-146">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [<span data-ttu-id="7f38c-147">使用属性控制 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="7f38c-147">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [<span data-ttu-id="7f38c-148">用来控制 XML 序列化的属性</span><span class="sxs-lookup"><span data-stu-id="7f38c-148">Attributes That Control XML Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
- [<span data-ttu-id="7f38c-149">XmlSerializer 类</span><span class="sxs-lookup"><span data-stu-id="7f38c-149">XmlSerializer Class</span></span>](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
- [<span data-ttu-id="7f38c-150">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="7f38c-150">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [<span data-ttu-id="7f38c-151">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="7f38c-151">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a><span data-ttu-id="bba20-145">请参阅</span><span class="sxs-lookup"><span data-stu-id="bba20-145">See Also</span></span>  
+ [<span data-ttu-id="bba20-146">XML 序列化简介</span><span class="sxs-lookup"><span data-stu-id="bba20-146">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+ [<span data-ttu-id="bba20-147">使用属性控制 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="bba20-147">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
+ [<span data-ttu-id="bba20-148">用来控制 XML 序列化的属性</span><span class="sxs-lookup"><span data-stu-id="bba20-148">Attributes That Control XML Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [<span data-ttu-id="bba20-149">XmlSerializer 类</span><span class="sxs-lookup"><span data-stu-id="bba20-149">XmlSerializer Class</span></span>](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+ [<span data-ttu-id="bba20-150">如何：序列化对象</span><span class="sxs-lookup"><span data-stu-id="bba20-150">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="bba20-151">如何：反序列化对象</span><span class="sxs-lookup"><span data-stu-id="bba20-151">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
