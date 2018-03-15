@@ -167,7 +167,7 @@ cd aspnetapp
 dotnet run
 ```
 
-应用程序启动后，在 Web 浏览器中访问 http://localhost:5000。
+应用程序启动后，在 Web 浏览器中访问 http://localhost:5000 。
 
 ### <a name="build-and-run-the-sample-with-docker-for-linux-containers"></a>使用 Docker for Linux 容器生成和运行示例
 
@@ -182,7 +182,7 @@ docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 > [!NOTE]
 > `docker run` 的“-p”参数将本地计算机上的端口 5000 映射到容器中的端口 80（该端口映射形式为 `host:container`）。 有关详细信息，请参阅命令行参数中的 [docker run](https://docs.docker.com/engine/reference/commandline/exec/) 引用。
 
-应用程序启动后，在 Web 浏览器中访问 http://localhost:5000。
+应用程序启动后，在 Web 浏览器中访问 http://localhost:5000 。
 
 ### <a name="build-and-run-the-sample-with-docker-for-windows-containers"></a>使用 Docker for Windows 容器生成和运行示例
 
@@ -195,7 +195,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> 使用 Windows 容器时，必须直接在浏览器中导航到容器 IP 地址（而不是 http://localhost）。 可通过以下步骤获取容器的 IP 地址：
+> 使用 Windows 容器时，必须直接在浏览器中导航到容器 IP 地址（而不是 http://localhost） 。 可通过以下步骤获取容器的 IP 地址：
 
 * 打开另一个命令提示符。
 * 运行 `docker ps`，查看正在运行的容器。 其中应包含“Aspnetcore_sample”。
