@@ -19,18 +19,18 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ee2baef3ddcaebb494f1eae2813e861f93e489dd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 39cf89856b8096fb879ee42f068e96308c5f9660
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="examples-of-xml-serialization"></a>XML 序列化示例
 XML 序列化可以采用从简单到复杂的多种形式。 例如，可以序列化只包含公共字段和公共属性的类，如 [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)中所示。 下面的代码示例讨论各种高级方案，包括如何使用 XML 序列化生成符合特定 XML 架构 (XSD) 文档的 XML 流。  
@@ -384,21 +384,21 @@ Imports System.Xml.Serialization
 Imports System.IO  
 Imports Microsoft.VisualBasic  
   
-' The XmlRootAttribute allows you to set an alternate name  
+' The XmlRoot attribute allows you to set an alternate name  
 ' (PurchaseOrder) for the XML element and its namespace. By  
 ' default, the XmlSerializer uses the class name. The attribute  
 ' also allows you to set the XML namespace for the element. Lastly,  
 ' the attribute sets the IsNullable property, which specifies whether  
 ' the xsi:null attribute appears if the class instance is set to  
 ' a null reference.   
-<XmlRootAttribute("PurchaseOrder", _  
+<XmlRoot("PurchaseOrder", _  
  Namespace := "http://www.cpandl.com", IsNullable := False)> _  
 Public Class PurchaseOrder  
     Public ShipTo As Address  
     Public OrderDate As String  
     ' The XmlArrayAttribute changes the XML element name  
     ' from the default of "OrderedItems" to "Items".   
-    <XmlArrayAttribute("Items")> _  
+    <XmlArray("Items")> _  
     Public OrderedItems() As OrderedItem  
     Public SubTotal As Decimal  
     Public ShipCost As Decimal  
@@ -406,7 +406,7 @@ Public Class PurchaseOrder
 End Class   
   
 Public Class Address  
-    ' The XmlAttribute instructs the XmlSerializer to serialize the   
+    ' The XmlAttribute attribute instructs the XmlSerializer to serialize the   
     ' Name field as an XML attribute instead of an XML element (the   
     ' default behavior).   
     <XmlAttribute()> _  
@@ -416,7 +416,7 @@ Public Class Address
     ' Setting the IsNullable property to false instructs the  
     ' XmlSerializer that the XML attribute will not appear if  
     ' the City field is set to a null reference.   
-    <XmlElementAttribute(IsNullable := False)> _  
+    <XmlElement(IsNullable := False)> _  
     Public City As String  
     Public State As String  
     Public Zip As String  
@@ -562,22 +562,22 @@ using System.Xml;
 using System.Xml.Serialization;  
 using System.IO;  
   
-// The XmlRootAttribute allows you to set an alternate name   
+// The XmlRoot attribute allows you to set an alternate name   
 // (PurchaseOrder) for the XML element and its namespace. By   
 // default, the XmlSerializer uses the class name. The attribute   
 // also allows you to set the XML namespace for the element. Lastly,  
 // the attribute sets the IsNullable property, which specifies whether   
 // the xsi:null attribute appears if the class instance is set to   
 // a null reference.  
-[XmlRootAttribute("PurchaseOrder", Namespace="http://www.cpandl.com",   
+[XmlRoot("PurchaseOrder", Namespace="http://www.cpandl.com",   
 IsNullable = false)]  
 public class PurchaseOrder  
 {  
     public Address ShipTo;  
     public string OrderDate;   
-    // The XmlArrayAttribute changes the XML element name  
+    // The XmlArray attribute changes the XML element name  
     // from the default of "OrderedItems" to "Items".  
-    [XmlArrayAttribute("Items")]  
+    [XmlArray("Items")]  
     public OrderedItem[] OrderedItems;  
     public decimal SubTotal;  
     public decimal ShipCost;  
@@ -586,7 +586,7 @@ public class PurchaseOrder
   
 public class Address  
 {  
-    // The XmlAttribute instructs the XmlSerializer to serialize the   
+    // The XmlAttribute attribute instructs the XmlSerializer to serialize the   
     // Name field as an XML attribute instead of an XML element (the   
     // default behavior).  
     [XmlAttribute]  
@@ -596,7 +596,7 @@ public class Address
     // Setting the IsNullable property to false instructs the   
     // XmlSerializer that the XML attribute will not appear if   
     // the City field is set to a null reference.  
-    [XmlElementAttribute(IsNullable = false)]  
+    [XmlElement(IsNullable = false)]  
     public string City;  
     public string State;  
     public string Zip;  

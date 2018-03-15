@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: b4305d24163f9b23631d5efb6e838f55127cd9f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compiler-directives"></a>编译器指令
 
@@ -29,11 +29,11 @@ ms.lasthandoff: 10/18/2017
 
 |指令|描述|
 |---------|-----------|
-|`#if`*符号*|支持条件编译。 后面部分中的代码`#if`则会包括*符号*定义。|
+|`#if` *符号*|支持条件编译。 后面部分中的代码`#if`则会包括*符号*定义。|
 |`#else`|支持条件编译。 如果未定义与前面的 `#if` 一起使用的符号，则将一段代码标记为包含在内。|
 |`#endif`|支持条件编译。 标记条件代码段的末尾。|
-|`#`[行]*int*，<br/>`#`[行]*int* *字符串*，<br/>`#`[行]*int* *原义字符串*|指示原始源代码行和文件名以用于调试。 此功能是为生成 F# 源代码的工具而提供的。|
-|`#nowarn`*warningcode*|禁用编译器警告。 若要禁用警告，请在编译器输出中查找其编号，然后将它包含在引号内。 省略“FS”前缀。 若要禁用同一行上的多个警告编号，请将每个编号用引号引起来，并使用空格分隔每个字符串。 例如: 
+|`#`[行]*int*，<br/>`#`[行]*int* *字符串*，<br/>`#`[line] *int* *verbatim-string*|指示原始源代码行和文件名以用于调试。 此功能是为生成 F# 源代码的工具而提供的。|
+|`#nowarn` *warningcode*|禁用编译器警告。 若要禁用警告，请在编译器输出中查找其编号，然后将它包含在引号内。 省略“FS”前缀。 若要禁用同一行上的多个警告编号，请将每个编号用引号引起来，并使用空格分隔每个字符串。 例如:
 
 `#nowarn "9" "40"`
 
@@ -75,11 +75,11 @@ F# 中没有 `#define` 预处理器指令。 必须使用编译器选项或项�
 
 |指令|描述|
 |---------|-----------|
-|`#light`["on"|"关闭"]|启用或禁用轻量语法，以便与其他版本的 ML 兼容。 默认情况下，轻量语法处于启用状态。 详细语法始终处于启用状态。 因此，可以同时使用轻量语法和详细语法。 指令 `#light` 本身等效于 `#light "on"`。 如果指定 `#light "off"`，则必须对所有语言构造使用详细语法。 F# 文档中展示的语法基于使用轻量语法这一假设。 有关详细信息，请参阅[详细语法](verbose-syntax.md)。|
+|`#light` ["on"&#124;"off"]|启用或禁用轻量语法，以便与其他版本的 ML 兼容。 默认情况下，轻量语法处于启用状态。 详细语法始终处于启用状态。 因此，可以同时使用轻量语法和详细语法。 指令 `#light` 本身等效于 `#light "on"`。 如果指定 `#light "off"`，则必须对所有语言构造使用详细语法。 F# 文档中展示的语法基于使用轻量语法这一假设。 有关详细信息，请参阅[详细语法](verbose-syntax.md)。|
 有关解释器 (fsi.exe) 指令，请参阅[使用 F # 进行交互式编程](../tutorials/fsharp-interactive/index.md)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [编译器选项](compiler-options.md)
