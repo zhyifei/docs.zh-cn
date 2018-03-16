@@ -3,7 +3,6 @@ title: "如何：手动创建包装"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
 ms.suite: 
 ms.technology:
 - dotnet-clr
@@ -12,17 +11,16 @@ ms.topic: article
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5451599a5421149a7dc99ced6a42bb8220af247a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7ac7afdd85037d50bdda9fae0a33896dc441bce5
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="how-to-create-wrappers-manually"></a>如何：手动创建包装
 如果决定在托管源代码中手动声明 COM 类型，则最佳的着手点是现有的接口定义语言 (IDL) 文件或类型库。 不具备 IDL 文件或无法生成类型库文件时，可以通过创建托管的声明并将生成的程序集导出到类型库来模拟 COM 类型。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  完成声明后，请像编译任何其他托管源代码一样编译此文件。  
   
-4.  与使用 Tlbimp.exe 导入的类型相同，某些类型需要其他信息，你可以将其直接添加到自己的代码中。 有关详细信息，请参阅[如何：编辑互操作程序集](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)。  
+4.  与使用 Tlbimp.exe 导入的类型相同，某些类型需要其他信息，你可以将其直接添加到自己的代码中。 有关详细信息，请参阅[如何：编辑互操作程序集](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))。  
   
 ## <a name="example"></a>示例  
  以下代码演示了 IDL 中的 `ISATest` 接口和 `SATest` 类以及 C# 源代码中相应类型的示例。  
@@ -110,7 +108,7 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [自定义运行时可调用包装器](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)  
  [COM 数据类型](http://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061)  
  [如何： 编辑互操作程序集](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)  

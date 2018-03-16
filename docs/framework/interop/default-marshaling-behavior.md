@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e66caf800fd49b4822ee22326b8a5cf712d99bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/19/2018
  本部分确定互操作封送处理服务的默认行为特征。 它提供有关封送处理数组、布尔值类型、char 类型、委托、类、对象、字符串和结构的详细信息。  
   
 > [!NOTE]
->  不支持泛型类型的封送处理。 有关详细信息，请参阅[使用泛型类型进行交互操作](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)。  
+>  不支持泛型类型的封送处理。 有关详细信息，请参阅[使用泛型类型进行交互操作](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))。  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>使用互操作封送拆收器进行内存管理  
  互操作封送拆收器始终尝试释放由非托管代码分配的内存。 此行为符合 COM 内存管理规则，但不同于用于管理本机 C++ 的规则。  
@@ -447,7 +449,7 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
  [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)  
  [数组的默认封送处理](../../../docs/framework/interop/default-marshaling-for-arrays.md)  

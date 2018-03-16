@@ -10,23 +10,23 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a2db07c4f5688aece212681af40d69c377f6fa4a
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>教程： 创建类型提供程序
 
 F # 中的类型提供程序机制是支持的其编程信息丰富的重要部分。 本教程介绍如何创建你自己的类型提供程序通过逐步引导您完成开发的几个简单类型提供程序来演示基本概念。 有关 F # 中的类型提供程序机制的详细信息，请参阅[类型提供程序](index.md)。
 
-F # 生态系统包含某个范围的常用的 Internet 和企业数据服务的类型提供程序。 例如:
+F # 生态系统包含某个范围的常用的 Internet 和企业数据服务的类型提供程序。 例如：
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/)的 JSON、 XML、 CSV 和 HTML 文档格式包括类型提供程序
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/)包括类型提供程序的 JSON、 XML、 CSV 和 HTML 文档格式。
 
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/)提供对这些数据源的查询的到通过对象映射和 F # LINQ 的 SQL 数据库的强类型访问。
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)都有一组的类型提供程序的 com，超时和累积时间检查 T-SQL 的 F # 中的嵌入
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)编译时的类型提供程序的一组已选中 T-SQL 的 F # 中的嵌入。
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)是较旧的用于仅使用.NET Framework 编程时，用于访问 SQL、 实体框架、 OData 和 WSDL 数据服务的类型提供程序集。
 
@@ -62,7 +62,7 @@ F # 生态系统包含某个范围的常用的 Internet 和企业数据服务的
 
 ## <a name="a-simple-type-provider"></a>简单类型提供程序
 
-此示例是类似于中的示例 Samples.HelloWorldTypeProvider`examples`目录[F # 类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)。 提供程序使可包含 100 已擦除的类型，如以下代码通过使用 F # 签名语法和省略的除外的详细信息所示的"类型空间" `Type1`。 有关已擦除的类型的详细信息，请参阅[详细信息有关擦除提供类型](#details-about-erased-provided-types)本主题中更高版本。
+此示例是 Samples.HelloWorldTypeProvider，类似于中的示例`examples`目录[F # 类型提供程序 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)。 提供程序使可包含 100 已擦除的类型，如以下代码通过使用 F # 签名语法和省略的除外的详细信息所示的"类型空间" `Type1`。 有关已擦除的类型的详细信息，请参阅[详细信息有关擦除提供类型](#details-about-erased-provided-types)本主题中更高版本。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -135,11 +135,11 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
   // And add them to the namespace
   do this.AddNamespace(namespaceName, types)
 
-  [<assembly:TypeProviderAssembly>] 
-  do()
+[<assembly:TypeProviderAssembly>] 
+do()
 ```
 
-若要使用此提供程序，打开 Visual Studio 2012 的单独实例，创建一个 F # 脚本，然后通过使用如以下代码所示的 #r 中添加提供程序对你的脚本中的引用：
+若要使用此提供程序，打开 Visual Studio 的单独实例，创建一个 F # 脚本，然后通过使用如以下代码所示的 #r 中添加提供程序对你的脚本中的引用：
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -451,13 +451,13 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 ### <a name="type-checked-regex-provider"></a>检查类型的正则表达式提供程序
 
-假设你想要实现包装.NET 正则表达式的类型提供`System.Text.RegularExpressions.Regex`提供了以下的编译时保证的接口中的库：
+假设你想要实现包装.NET 正则表达式的类型提供<xref:System.Text.RegularExpressions.Regex>提供了以下的编译时保证的接口中的库：
 
 - 验证正则表达式是否有效。
 
 - 提供基于正则表达式中的任何组名称的匹配项的命名的属性。
 
-本部分演示如何使用类型提供程序创建`RegExProviderType`键入正则表达式模式使以提供这些优点。 如果提供的模式不有效，并且类型提供程序可以提取组模式中，以便你可以通过使用名为匹配的属性访问它们，编译器将报告错误。 在设计时类型提供程序，应考虑如何查找其公开的 API 应到最终用户，如何这种设计将将转换为.NET 代码。 下面的示例演示如何使用此类 API 来获取区域代码的组件：
+本部分演示如何使用类型提供程序创建`RegexTyped`键入正则表达式模式使以提供这些优点。 如果提供的模式不有效，并且类型提供程序可以提取组模式中，以便你可以通过使用名为匹配的属性访问它们，编译器将报告错误。 在设计时类型提供程序，应考虑如何查找其公开的 API 应到最终用户，如何这种设计将将转换为.NET 代码。 下面的示例演示如何使用此类 API 来获取区域代码的组件：
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -480,7 +480,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - `RegexTyped`构造函数会导致对正则表达式构造函数中，在该模式的静态类型参数中传递的调用。
 
-- 结果`Match`方法表示由标准`System.Text.RegularExpressions.Match`类型。
+- 结果`Match`方法表示由标准<xref:System.Text.RegularExpressions.Match>类型。
 
 - 每个命名的组将导致提供的属性和访问属性导致使用了匹配项的索引器`Groups`集合。
 
@@ -552,7 +552,7 @@ do ()
 
 - 你使用`obj`如的基类型的方法，但你将使用`Regex`作为运行时表示形式的这种类型，如下一步的示例所示的对象。
 
-- 调用`Regex`构造函数引发`System.ArgumentException`正则表达式无效。 编译器将捕获此异常并在编译时或在 Visual Studio 编辑器中向用户报告一条错误消息。 此异常使正则表达式来验证而无需运行应用程序。
+- 调用`Regex`构造函数引发<xref:System.ArgumentException>正则表达式无效。 编译器将捕获此异常并在编译时或在 Visual Studio 编辑器中向用户报告一条错误消息。 此异常使正则表达式来验证而无需运行应用程序。
 
 上面定义的类型没有用尚未因为它未包含任何有意义的方法或属性。 首先，添加一个静态`IsMatch`方法：
 
@@ -583,7 +583,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-然后，你将一个属性添加到每个组的匹配类型中。 在运行时，匹配项都表示为`System.Text.RegularExpressions.Match`值，因此必须使用定义该属性引号`System.Text.RegularExpressions.Match.Groups`索引属性要获取其相关的组。
+然后，你将一个属性添加到每个组的匹配类型中。 在运行时，匹配项都表示为<xref:System.Text.RegularExpressions.Match>值，因此必须使用定义该属性引号<xref:System.Text.RegularExpressions.Match.Groups>索引属性要获取其相关的组。
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -756,13 +756,11 @@ do ()
 作为一个简单的示例，请考虑以逗号分隔值 (CSV) 格式的科学数据访问的类型提供程序。 本部分假定 CSV 文件包含浮点型数据后, 跟一个标题行，如以下表所示：
 
 
-```
-|Distance (meter)|Time (second)|
+|距离 （计数）|时间 （秒）|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
-```
 
 本部分演示如何提供可用于获取与行类型`Distance`类型的属性`float<meter>`和`Time`类型的属性`float<second>`。 为简单起见，进行以下假设：
 
@@ -788,7 +786,7 @@ printfn "%f" (float time)
 在这种情况下，编译器应将这些调用转换成类似于下面的示例：
 
 ```fsharp
-let info = new MiniCsvFile("info.csv")
+let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
 printfn "%f" (float time)
@@ -1045,9 +1043,10 @@ ProvidedType API 具有延迟 AddMember 的版本。
 
 ### <a name="providing-array-types-and-generic-type-instantiations"></a>提供数组类型和泛型类型实例化
 
-通过使用正常使提供的成员 （其签名包括数组类型、 byref 类型和泛型类型的实例化） `MakeArrayType`， `MakePointerType`，和`MakeGenericType`System.Type，任何实例上包括`ProvidedTypeDefinitions`。
+通过使用正常使提供的成员 （其签名包括数组类型、 byref 类型和泛型类型的实例化） `MakeArrayType`， `MakePointerType`，和`MakeGenericType`上的任何实例<xref:System.Type>，包括`ProvidedTypeDefinitions`。
 
-注意： 在某些情况下你可能需要使用中的帮助程序`ProvidedTypeBuilder.MakeGenericType`。  请参阅更多详细信息的类型提供程序 SDK 文档。
+> [!NOTE]
+> 在某些情况下，你可能需要使用中的帮助程序`ProvidedTypeBuilder.MakeGenericType`。  请参阅[类型提供程序 SDK 文档](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations)有关详细信息。
 
 ### <a name="providing-unit-of-measure-annotations"></a>提供的度量值批注的单元
 
@@ -1096,12 +1095,12 @@ ProvidedTypes API 提供帮助器，用于提供度量值批注。 例如，若�
 
 #### <a name="providing-generated-types"></a>提供生成的类型
 
-到目前为止，本文档解释了如何提供已擦除的类型。 你可以使用 F # 中的类型提供程序机制来提供生成的类型，添加到用户的程序的实际.NET 类型定义为。 你必须引用生成提供通过使用的类型定义的类型。
+到目前为止，本文档介绍了如何提供已擦除的类型。 你可以使用 F # 中的类型提供程序机制来提供生成的类型，添加到用户的程序的实际.NET 类型定义为。 你必须引用生成提供通过使用的类型定义的类型。
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 F # 3.0 发行版的一部分的 ProvidedTypes 0.2 帮助器代码仅提供有限支持用于提供生成的类型。 以下语句为真，生成的类型定义：
@@ -1159,7 +1158,7 @@ F # 中的类型提供程序机制具有以下限制：
   你可以使用打印到 stdout 日志记录。
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 * [类型提供程序](index.md)
 
