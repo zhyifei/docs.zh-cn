@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`和基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。  
@@ -29,11 +31,11 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   
->  \<安装驱动器 >: \WF_WCF_Samples  
+>  \<InstallDrive>:\WF_WCF_Samples  
 >   
 >  如果此目录不存在，请转到[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]超链接"http://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和[!INCLUDE[wf](../../../../includes/wf-md.md)]示例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下载所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
->  \<安装驱动器 >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation。  
+>  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
  Windows 进程激活服务 (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 新增的进程激活机制，它向使用非 HTTP 协议的应用程序提供了类似 IIS 的功能，这些功能以前只对基于 HTTP 的应用程序可用。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用侦听器适配器接口传递激活请求，该激活请求通过由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的非 HTTP 协议（如 TCP、命名管道和 MSMQ）接收。 用于通过非 HTTP 协议接收请求的功能由 SMSvcHost.exe 中运行的托管 Windows 服务承载。  
   
@@ -360,5 +362,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

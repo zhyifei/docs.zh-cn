@@ -17,10 +17,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="messaging-protocols"></a>消息协议
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道堆栈采用编码和传输通道将内部消息表示形式转换成其网络传输格式，并使用特定传输进行发送。 用于 Web 服务互操作性的最常见传输是 HTTP，Web 服务使用的最常见编码是基于 XML 的 SOAP 1.1、SOAP 1.2 和消息传输优化机制 (MTOM)。  
@@ -30,8 +30,8 @@ ms.lasthandoff: 02/01/2018
 |规范/文档|Link|  
 |-----------------------------|----------|  
 |HTTP 1.1|http://www.ietf.org/rfc/rfc2616.txt|  
-|SOAP 1.1 HTTP 绑定|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/，第 7 节|  
-|SOAP 1.2 HTTP 绑定|http://www.w3.org/TR/soap12-part2/，第 7 节|  
+|SOAP 1.1 HTTP 绑定|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/第 7 节|  
+|SOAP 1.2 HTTP 绑定|http://www.w3.org/TR/soap12-part2/第 7 节|  
   
  本主题讨论 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 所采用的以下协议的 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 实现细节。  
   
@@ -75,12 +75,12 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 和 SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>信封和处理模型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现遵循 Basic Profile 1.1 (BP11) 和基本配置文件 1.0 (SSBP10) 的 SOAP 1.1 信封处理。 SOAP 1.2 信封处理是遵循 SOAP12-Part1 实现的。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现了遵循 Basic Profile 1.1 (BP11) 和 Basic Profile 1.0 (SSBP10) 的 SOAP 1.1 信封处理。 SOAP 1.2 信封处理是遵循 SOAP12-Part1 实现的。  
   
  本节说明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在涉及 BP11 和 SOAP12-Part1 时所采用的某些实现选项。  
   
 #### <a name="mandatory-header-processing"></a>强制标头处理  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 遵循规则处理标头标记`mustUnderstand`有以下变化的 SOAP 1.1 和 SOAP 1.2 规范中所述。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 遵循 SOAP 1.1 和 SOAP 1.2 规范中所述的规则来处理标有 `mustUnderstand` 的标头，但有以下变化。  
   
  进入 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道堆栈的消息由关联的绑定元素所配置的各个通道进行处理，例如，文本消息编码、安全、可靠消息传递和事务。 每个通道都识别来自关联命名空间的标头，并将其标记为已理解。 消息进入调度程序后，操作格式化程序读取相应消息/操作协定所期望的标头，并将其标记为已理解。 然后，调度程序验证是否还有任何标头未被理解，但仍标记为 `mustUnderstand`，如果是这样，则引发异常。 包含 `mustUnderstand` 标头并且目标为接收方的消息不会由接收方应用程序代码进行处理。  
   
@@ -102,14 +102,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="http-binding"></a>HTTP 绑定  
   
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP 绑定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 SOAP1.1 HTTP 绑定遵循 Basic Profile 1.1 规范第 3.4 节提供如下说明：  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 遵循 Basic Profile 1.1 规范第 3.4 节实现 SOAP1.1 HTTP 绑定，并提供如下说明：  
   
 -   B2211：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务不实现 HTTP POST 请求的重定向。  
   
 -   B2212：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端依据 3.4.8 支持 HTTP Cookie。  
   
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP 绑定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.2 一部分 2 (SOAP12Part2) 规范提供如下说明中所述实现 SOAP 1.2 HTTP 绑定。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 按照 SOAP 1.2-part 2 (SOAP12Part2) 规范实现 SOAP 1.2 HTTP 绑定，并提供如下说明。  
   
  SOAP 1.2 为 `application/soap+xml` 媒体类型提供了一个可选的操作参数。 在未使用 WS-Addressing 时，采用此参数优化消息调度很有用，这种情况下，不需要分析 SOAP 消息的正文。  
   
@@ -120,7 +120,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  如果 WS-Addressing 禁用，并且传入的请求不包含操作参数，则视为未指定消息 `Action`。  
   
 ## <a name="ws-addressing"></a>WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现三个版本的 Ws-addressing:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现了三个版本的 WS-Addressing：  
   
 -   WS-Addressing 2004/08  
   
@@ -132,7 +132,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现的所有 WS-Addressing 版本都使用终结点引用来描述终结点。  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>终结点引用和 WS-Addressing 版本  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现许多基础结构使用的协议的 Ws-addressing，并且在特定`EndpointReference`元素和`W3C.WsAddressing.EndpointReferenceType`类 （例如，WS ReliableMessaging、 Ws-secureconversation 和 Ws-trust）。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持使用采用其他基础结构协议的 WS-Addressing 的任一版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点支持每个终结点一个 WS-Addressing 版本。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现一些使用 WS-Addressing 的基础结构协议，尤其是 `EndpointReference` 元素和 `W3C.WsAddressing.EndpointReferenceType` 类（例如，WS ReliableMessaging、WS-SecureConversation 和 WS-Trust）。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持使用采用其他基础结构协议的 WS-Addressing 的任一版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点支持每个终结点一个 WS-Addressing 版本。  
   
  对于 R3111，在与 `EndpointReference` 终结点交换的消息中使用的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元素或类型的命名空间必须与此终结点所实现的 WS-Addressing 版本匹配。  
   
@@ -143,7 +143,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  B3121：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 采用 WS-MetadataExchange (MEX) 规范第 6 节中描述的机制来按值或按引用包含终结点引用的元数据。  
   
- 考虑这样一种情况，某个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务要求使用安全断言标记语言 (SAML) 令牌（由位于 http://sts.fabrikam123.com 的颁发机构颁发）进行身份验证。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点通过使用 `sp:IssuedToken` 断言（嵌套有指向令牌颁发机构的 `sp:Issuer` 断言）来描述这一身份验证要求。 访问该 `sp:Issuer` 断言的客户端应用程序需要知道如何与令牌颁发机构终结点进行通信。 客户端需要知道令牌颁发机构的有关元数据。 通过使用 MEX 中定义的终结点引用元数据扩展，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了对令牌颁发机构元数据的引用。  
+ 假设其中[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务需要使用在令牌颁发者颁发的安全断言标记语言 (SAML) 令牌的身份验证http://sts.fabrikam123.com。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点通过使用 `sp:IssuedToken` 断言（嵌套有指向令牌颁发机构的 `sp:Issuer` 断言）来描述这一身份验证要求。 访问该 `sp:Issuer` 断言的客户端应用程序需要知道如何与令牌颁发机构终结点进行通信。 客户端需要知道令牌颁发机构的有关元数据。 通过使用 MEX 中定义的终结点引用元数据扩展，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了对令牌颁发机构元数据的引用。  
   
 ```xml  
 <sp:IssuedToken>  
@@ -176,7 +176,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  与 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序交互的应用程序可添加这些消息头，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 将对其进行相应处理。  
   
 #### <a name="reference-parameters-and-properties"></a>引用参数和属性  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现处理终结点引用参数和引用 p  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 根据相应的规范实现对终结点引用参数和引用属性的处  
   
  理。  
   
@@ -207,7 +207,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
 -   R3322：使用 WS-Addressing 2004/08 时，还必须在请求中包含 `ReplyTo`。  
   
--   R3323：如果使用 WS-Addressing 1.0 并且请求中不存在 `ReplyTo`，则会使用 [address] 属性等于“http://www.w3.org/2005/08/addressing/anonymous”的默认终结点引用。  
+-   R3323： 当使用 Ws-addressing 1.0 和`ReplyTo`不存在在请求中，使用 [address] 属性等于的默认终结点引用"http://www.w3.org/2005/08/addressing/anonymous"使用。  
   
 -   R3324： 请求方必须包含`wsa:To`， `wsa:Action`，和`wsa:RelatesTo`中答复消息的标头，以及所有引用参数或引用属性 （或两者） 指定的标头`ReplyTo`中的终结点引用请求。  
   
@@ -234,7 +234,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 绑定和 WS-Policy 断言  
   
 #### <a name="indicating-use-of-ws-addressing"></a>指示使用 WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用策略断言来指示终结点支持特定的 Ws-addressing 版本。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用策略断言来指示终结点对某个特定 WS-Addressing 版本的支持。  
   
  下面的策略断言具有终结点策略主题 [WS-PA]，并指示从终结点收发的消息必须使用 WS-Addressing 2004/08。  
   
@@ -278,7 +278,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  但是，有些消息交换模式可以从在请求方和响应方之间建立两个独立的反向 HTTP 连接中获益，例如，由响应方发送的主动单向消息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一个实用工具依据两个基础传输通道可构成一个复合双工通道，其中一个通道用于输入消息和其他用于输出消息。 对于 HTTP 传输，复合双工提供了两个反向 HTTP 连接。 请求方使用一个连接将消息发送到响应方，而响应方使用另一个连接将消息发送回请求方。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一个实用工具，通过它，两个基础传输通道可构成一个复合双工通道，其中一个通道用于输入消息，另一个用于输出消息。 对于 HTTP 传输，复合双工提供了两个反向 HTTP 连接。 请求方使用一个连接将消息发送到响应方，而响应方使用另一个连接将消息发送回请求方。  
   
  对于通过单独的 http 请求发送的答复，ws-am 断言是：  
   
@@ -304,11 +304,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  上面的陈述对于请求消息的 `wsa:ReplyTo` 标头提出了以下要求：  
   
--   R3514：如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有一个带有 `ReplyTo` 或 `[address]` 断言，且附加了 `wsap10:UsingAddressing` 的策略备选项，那么发送到该终结点的请求消息必须有一个 `wsap:UsingAddressing` 属性不等于“http://www.w3.org/2005/08/addressing/anonymous”的 `cdp:CompositeDuplex` 标头。  
+-   R3514： 请求消息发送到终结点必须有`ReplyTo`具有标头`[address]`属性不等于"http://www.w3.org/2005/08/addressing/anonymous"如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有的策略备`wsap10:UsingAddressing`或`wsap:UsingAddressing`断言结合`cdp:CompositeDuplex`附加。  
   
--   R3515：如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有一个带有 `ReplyTo` 断言的策略备选项，且未附加 `[address]` 断言，那么发送到该终结点的请求消息必须有一个 `ReplyTo` 属性等于“http://www.w3.org/2005/08/addressing/anonymous”的 `wsap10:UsingAddressing` 标头，或者根本没有 `cdp:CompositeDuplex` 标头。  
+-   R3515： 请求消息发送到终结点必须有`ReplyTo`具有标头`[address]`属性等于"http://www.w3.org/2005/08/addressing/anonymous"，或者没有`ReplyTo`如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有策略替代项的标头与`wsap10:UsingAddressing`断言，但未`cdp:CompositeDuplex`附加的断言。  
   
--   R3516：如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有一个带有 `ReplyTo` 断言的策略备选项，且未附加 `[address]` 断言，那么发送到该终结点的请求消息必须有一个 `wsap:UsingAddressing` 属性等于“http://www.w3.org/2005/08/addressing/anonymous”的 `cdp:CompositeDuplex` 标头。  
+-   R3516： 请求消息发送到终结点必须有`ReplyTo`具有标头`[address]`属性等于"http://www.w3.org/2005/08/addressing/anonymous"如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有的策略备`wsap:UsingAddressing`断言，并没有`cdp:CompositeDuplex`附加的断言。  
   
  WS-addressing WSDL 规范力图描述类似协议绑定，它引入了一个带有 3 个文本值（required、optional 和 prohibited）的 `<wsaw:Anonymous/>` 元素来指示对 `wsa:ReplyTo` 标头的要求（第 3.2 节）。 遗憾的是，在 WS-Policy 的上下文中，这样的元素定义不特别适合用作断言，因为它要求使用特定于域的扩展来支持将此类元素用作断言的备选项的交集。 这样的元素定义还指示 `ReplyTo` 标头的值在传输时与终结点行为相反，这使它只能特定于 HTTP 传输。  
   
@@ -410,7 +410,7 @@ Content-Length: 0
   
  下面的一系列步骤描述了特定于 MTOM 的编码过程：  
   
-1.  确保要编码的 SOAP 信封不包含 `[namespace name]` 为“http://www.w3.org/2004/08/xop/include”并且 `[local name]` 为 `Include` 的元素信息项。  
+1.  确保要编码 SOAP 信封包含任何元素信息项替换为`[namespace name]`的"http://www.w3.org/2004/08/xop/include"和`[local name]`的`Include`。  
   
 2.  创建一个空 MIME 包。  
   
@@ -576,7 +576,7 @@ mail-address   =     id-left "@" id-right
  配置为使用 MTOM 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点将始终发送 MTOM 编码消息。 即使没有一个部分符合必需的标准，消息仍然是 MTOM 编码消息（序列化为一个 MIME 包，具有包含 SOAP 信封的单个 MIME 部分）。  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>MTOM 的 WS-Policy 断言  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用下面的策略断言来指示 MTOM 使用情况的终结点：  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用以下策略断言来指示终结点对 MTOM 的使用：  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  

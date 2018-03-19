@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>终结点地址
 每个终结点都具有与其关联的地址，该地址用于查找和标识终结点。 此地址主要包括指定终结点位置的统一资源标识符 (URI)。 终结点地址在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 编程模型中由 <xref:System.ServiceModel.EndpointAddress> 类表示，该类包含一个可选的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 属性（允许由与一个终结点交换消息的其他终结点对该终结点进行身份验证）和一组可选的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 属性（定义到达服务所需的任何其他 SOAP 头）。 可选头提供其他的更详细寻址信息以标识服务终结点或与之交互。 终结点的地址在网络上表示为 WS-Addressing 终结点引用 (EPR)。  
   
 ## <a name="uri-structure-of-an-address"></a>地址的 URI 结构  
- 大多数传输的地址 URI 包含四个部分。 例如，下面详细列举了 URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint 的四个部分：  
+ 大多数传输的地址 URI 包含四个部分。 例如，URI 的四个部分http://www.fabrikam.com:322/mathservice.svc/secureEndpoint下面详细列举，如下所示：  
   
 -   方案：http:  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
 </system.serviceModel>  
 ```  
   
- 在前面的示例中，net.tcp://payroll.myorg.com:8000 和 http://shipping.myorg.com:8000 是其各自方案的唯一基址（已使它们通过）。  
+ 在前面的示例中，net.tcp://payroll.myorg.com: 8000 和http://shipping.myorg.com:8000是传递通过其各自方案的唯一基址。  
   
  `baseAddressPrefixFilter` 不支持通配符。  
   
@@ -148,6 +150,6 @@ ms.lasthandoff: 01/19/2018
   
  在某些方案中，终结点接收抵达基础传输的所有消息，而不仅仅是具有相应 `To` 头的消息。 若要启用这一点，用户可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 类。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [指定终结点地址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

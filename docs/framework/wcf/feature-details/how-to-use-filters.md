@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/22/2017
      这**MessageFilter**查找 RoundingCalculator 标头中包含"rounding"值的消息。 此标头由客户端设置，用于指示应将消息路由到 roundingCalc 服务。  
   
     > [!NOTE]
-    >  S12 命名空间前缀默认情况下，在命名空间表中，定义并表示命名空间"http://www.w3.org/2003/05/soap-envelope"。  
+    >  S12 命名空间前缀默认情况下，在命名空间表中，定义和表示的命名空间"http://www.w3.org/2003/05/soap-envelope"。  
   
 2.  您还必须定义用于查找在两个虚拟终结点上接收到的消息的筛选器。 第一个虚拟终结点是"regular/calculator"终结点。 客户端可以将请求发送到此终结点，以指示应将消息路由到 regularCalc 服务。 下面的配置定义一个筛选器，该筛选器使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 确定消息是否通过具有 filterData 中指定的名称的终结点到达。  
   
@@ -336,5 +338,5 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="health-monitoring"></a>运行状况监视
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/23/2017
 
 可以查看 HealthChecks 库在 eShopOnContainers 示例应用程序中的使用情况。 首先，需要定义每个微服务的正常运行状况的必备条件。 在该示例应用程序中，如果可通过 HTTP 访问微服务 API 并且可以使用与其相关的 SQL Server 数据库，则该微服务的处于正常运行状态。
 
-之后，可以将 HealthChecks 库作为 NuGet 包进行安装。 但截至本文撰写时，解决方案还需下载并编译代码。 可访问 https://github.com/dotnet-architecture/HealthChecks，克隆其中的代码并将以下文件夹复制到解决方案：
+之后，可以将 HealthChecks 库作为 NuGet 包进行安装。 但截至本文撰写时，解决方案还需下载并编译代码。 克隆的代码在https://github.com/dotnet-architecture/HealthChecks的以下文件夹复制到你的解决方案：
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,16 +190,16 @@ eShopOnContainers 示例包含一个网页，该网页显示了示例运行状�
 
 ## <a name="additional-resources"></a>其他资源
 
--   **ASP.NET Core HealthChecks**（早期版本）[https://github.com/aspnet/HealthChecks/](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET 核心 HealthChecks** （早期发行版） [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
 -   **Service Fabric 运行状况监视简介**
-    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
+    [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
-    [https://azure.microsoft.com/services/application-insights/](https://azure.microsoft.com/services/application-insights/)
+-   **Azure 的 Application Insights**
+    [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**
-    [https://www.microsoft.com/en-us/cloud-platform/operations-management-suite](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
+    [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
 [上一页] (implement-circuit-breaker-pattern.md) [下一页] (../secure-net-microservices-web-applications/index.md)

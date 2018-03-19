@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9b7d2c0f52ea42fcb98be149ab005cd67c2db46a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;添加&gt;webRequestModules （网络设置） 的元素
 将自定义的 Web 请求模块添加到应用程序。  
   
  \<configuration>  
-\<system.net >  
-\<webRequestModules >  
+\<system.net>  
+\<webRequestModules>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  当 URI 匹配的前缀传递给创建 Web 请求模块<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。  
   
- 值`prefix`属性应为有效的 URI-例如，"http"或"http://www.contoso.com"的开始字符。  
+ 值`prefix`属性应为有效的 URI-例如，"http"，前导字符或"http://www.contoso.com"。  
   
  值`type`属性应为有效类型名称和相应的程序集名称，用逗号分隔。  
   
@@ -92,6 +94,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Net.WebRequest>  
  [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -8,7 +8,7 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -16,10 +16,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 架构定义 (Xsd.exe) 工具从 XDR、XML 和 XSD 文件或者从运行时程序集中的类生成 XML 架构或公共语言运行时类。  
@@ -98,7 +98,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  类到 XSD  
  使用运行时程序集文件中的一个或多个类型生成 XML 架构。 生成的架构定义了 `System.Xml.Serialization.XmlSerializer` 使用的 XML 格式。  
   
- Xsd.exe 只允许操作遵循由万维网联合会 (W3C) 提议的 XML 架构定义 (XSD) 语言的 XML 架构。 有关 XML 架构定义提议或 XML 标准的更多信息，请参见 http://w3.org。  
+ Xsd.exe 只允许操作遵循由万维网联合会 (W3C) 提议的 XML 架构定义 (XSD) 语言的 XML 架构。 有关 XML 架构定义建议书或 XML 标准的详细信息，请参阅http://w3.org。  
   
 ## <a name="setting-options-with-an-xml-file"></a>通过 XML 文件设置选项  
  通过使用 `/parameters` 开关，可指定设置各种选项的单个 XML 文件。 可设置的选项取决于您如何使用 XSD.exe 工具。 选择包括生成架构、生成代码文件，或生成包含 `DataSet` 功能的代码文件。 例如，生成架构时可将 `<assembly\>` 元素设置为可执行文件 (.exe) 或类库文件 (.dll) 的名称，但生成代码文件时则不能。 下面的 XML 演示如何将 `<generateSchemas\>` 元素用于指定的可执行文件：  
@@ -233,7 +233,7 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll    
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Data.DataSet>  
  <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [工具](../../../docs/framework/tools/index.md)      

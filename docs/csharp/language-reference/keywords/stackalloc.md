@@ -2,33 +2,35 @@
 title: "stackalloc（C# 参考）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - stackalloc_CSharpKeyword
 - stackalloc
-helpviewer_keywords: stackalloc keyword [C#]
+helpviewer_keywords:
+- stackalloc keyword [C#]
 ms.assetid: adc04c28-3ed2-4326-807a-7545df92b852
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ad4453f889a344fcd44dfad44a30fef07380b6a3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4b9c5328bfa1b0fc9a7751763c7d728096886905
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc（C# 参考）
 在不安全代码上下文中使用 `stackalloc` 关键字在堆栈上分配内存块。  
   
-```  
+```csharp  
 int* block = stackalloc int[100];  
 ```  
   
 ## <a name="remarks"></a>备注  
  此关键字仅在局部变量初始值设定项中有效。 以下代码导致编译器错误。  
   
-```  
+```csharp  
 int* block;  
 // The following assignment statement causes compiler errors. You  
 // can use stackalloc only when declaring and initializing a local   
@@ -51,7 +53,7 @@ block = stackalloc int[100];
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

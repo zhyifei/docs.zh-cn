@@ -5,26 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8fa70ba3cf8e66411812b84821e80772c9930f7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 指定 COM+ 集成服务协定。  
   
- \<系统。ServiceModel >  
-\<comContracts >  
+ \<system.ServiceModel>  
+\<comContracts>  
   
 ## <a name="syntax"></a>语法  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
 |comContracts|包含 `comContract` 元素的集合。|  
   
 ## <a name="remarks"></a>备注  
- COM + 集成服务协定当前只限于"http://tempuri.org"命名空间，而协定名称从支持的 COM 接口派生。 但是，可以使用配置文件中的 `comContracts` 节以及 `comContract` 元素来指定替代服务协定。 例如，可以使用下面的配置来指定服务协定的命名空间、协定名称、要包含的用户定义类型以及其他设置。  
+ COM + 集成服务协定是当前只限于"http://tempuri.org"命名空间，而协定名称从支持的 COM 接口派生。 但是，可以使用配置文件中的 `comContracts` 节以及 `comContract` 元素来指定替代服务协定。 例如，可以使用下面的配置来指定服务协定的命名空间、协定名称、要包含的用户定义类型以及其他设置。  
   
 ```xml  
 <comContracts>  
@@ -101,10 +103,10 @@ ms.lasthandoff: 12/22/2017
   
  在初始化服务时，指定的命名空间和协定名称将应用到生成的服务说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
  <xref:System.ServiceModel.Configuration.ComContractElement>  
- [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
  [与 COM+ 应用程序集成](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [如何：配置 COM+ 服务设置](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
