@@ -66,6 +66,7 @@
 #### [如何：自定义基于时间的缓存策略](how-to-customize-a-time-based-cache-policy.md)
 #### [如何：为请求设置缓存策略](how-to-set-cache-policy-for-a-request.md)
 ## [网络编程中的安全性](security-in-network-programming.md)
+### [传输层安全性 (TLS) 最佳做法](tls.md)
 ### [使用安全套接字层](using-secure-sockets-layer.md)
 #### [证书选择和验证](certificate-selection-and-validation.md)
 ### [Internet 身份验证](internet-authentication.md)
