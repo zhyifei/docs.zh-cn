@@ -8,11 +8,11 @@ ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 9e7fefde6763dbd5c73c01e45e5652d9f207c213
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: db22c9251fa5e9f5a9cb66af6ec8b193b88e0eb3
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 中的新增功能
 
@@ -31,7 +31,7 @@ C# 7.2 使用[语言版本选择](csharp-7-1.md#language-version-selection)配�
   - 命名的参数可后接位置参数。
 * [数值文字中的前导下划线](#leading-underscores-in-numeric-literals)
   - 数值文字现可在任何打印数字前放置前导下划线。
-* [`private protected` 访问修饰符](#private-protected)
+* [`private protected` 访问修饰符](#private-protected-access-modifier)
   - `private protected` 访问修饰符允许访问同一程序集中的派生类。
 
 ## <a name="reference-semantics-with-value-types"></a>具有值类型的引用语义

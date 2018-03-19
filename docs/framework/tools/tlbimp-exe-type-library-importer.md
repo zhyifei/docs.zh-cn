@@ -3,9 +3,9 @@ title: "Tlbimp.exe（类型库导入程序）"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2e6b98d03988c5eb747fb3a4c766c98f477a3b5a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb29c82b21088f4bfe4752d70b927ca048c875b
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe（类型库导入程序）
 类型库导入程序将 COM 类型库中的类型定义转换为公共语言运行时程序集中的等效定义。 Tlbimp.exe 的输出是一个二进制文件（程序集），其中包含在原始类型库中定义的类型的运行时元数据。 可以使用 [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 这样的工具检查此文件。  
@@ -61,7 +61,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|阻止 Tlbimp.exe 向类添加成员。 这样可避免潜在的 <xref:System.TypeLoadException>。|  
 |**/nologo**|取消显示 Microsoft 启动版权标志。|  
 |**/out:** *filename*|指定输出文件、程序集以及要写入元数据定义的命名空间的名称。 如果类型库指定的接口定义语言 (IDL) 自定义特性显式控制程序集的命名空间，则 **/out** 选项对程序集的命名空间没有任何影响。 如果你没有指定此选项，则 Tlbimp.exe 会将元数据写入到与在输入文件内定义的实际类型库同名的文件中，并且为其分配 .dll 扩展名。 如果输出文件的名称与输入文件的名称相同，则该工具将生成一个错误以防止覆盖类型库。|  
-|**/primary**|生成指定类型库的主互操作程序集。 将在程序集中添加相关信息以指示类型库的发行者已生成程序集。 通过指定主互操作程序集，可以将发布者的程序集与使用 Tlbimp.exe 从类型库创建的任何其他程序集区分开来。 如果你是用 Tlbimp.exe 导入的类型库的发布者，则应只使用 **/primary** 选项。 请注意，你必须使用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)对主互操作程序集进行签名。 有关详细信息，请参阅[主互操作程序集](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080)。|  
+|**/primary**|生成指定类型库的主互操作程序集。 将在程序集中添加相关信息以指示类型库的发行者已生成程序集。 通过指定主互操作程序集，可以将发布者的程序集与使用 Tlbimp.exe 从类型库创建的任何其他程序集区分开来。 如果你是用 Tlbimp.exe 导入的类型库的发布者，则应只使用 **/primary** 选项。 请注意，你必须使用[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)对主互操作程序集进行签名。 有关详细信息，请参阅[主互操作程序集](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100))。|  
 |**/product:** `productinformation`|将产品信息添加到输出程序集。 此信息可在程序集的“文件属性”对话框中查看。|  
 |**/productversion:** `productversioninformation`|将产品版本信息添加到输出程序集。 没有格式限制。 此信息可在程序集的“文件属性”对话框中查看。|  
 |**/publickey:** *filename*|指定包含用来对结果程序集签名的公钥的文件。 如果指定 **/keyfile:** 或 **/keycontainer:** 选项而非 **/publickey:**，则 Tlbimp.exe 将根据随 **/keyfile:** 或 **/keycontainer:** 一起提供的公钥/私钥对来生成公钥。 **/publickey:** 选项支持测试键和延迟签名方案。 文件的格式为 Sn.exe 生成的格式。 有关详细信息，请参阅[强名称工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 中的 Sn.exe 的 **-p** 选项。|  
@@ -80,7 +80,7 @@ tlbimp tlbFile [options]
 |**/?**|显示该工具的命令语法和选项。|  
   
 > [!NOTE]
->  Tlbimp.exe 的命令行选项不区分大小写，并可以按任意顺序提供。 只需指定足够的选项来唯一标识它。 因此，/n 等效于 /nologo，且 /ou: outfile.dll 等效于 /out:outfile.dll 。  
+>  Tlbimp.exe 的命令行选项不区分大小写，并可以按任意顺序提供。 只需指定足够的选项来唯一标识它。 因此，**/n** 等效于 **/nologo**，而 **/ou:** *outfile.dll* 等效于 **/out:** *outfile.dll*。  
   
 ## <a name="remarks"></a>备注  
  Tlbimp.exe 同时执行整个类型库的转换。 不能使用该工具为在单个类型库中定义的类型的子集生成类型信息。  

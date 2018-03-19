@@ -2,20 +2,21 @@
 title: "方法（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ff6e59f70a5718f6616fa9a585dd84144e1774a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods-c-programming-guide"></a>方法（C# 编程指南）
 方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。 Main 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。  
@@ -38,8 +39,8 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
   
-## <a name="method-parameters-vs-arguments"></a>方法参数与参数  
- 该方法定义指定任何所需参数的名称和类型。 调用代码调用该方法时，它为每个参数提供了称为参数的具体值。 参数必须与参数类型兼容，但调用代码中使用的参数名（如果有）不需要与方法中定义的参数名相同。 例如:   
+## <a name="method-parameters-vs-arguments"></a>方法参数与自变量  
+ 该方法定义指定任何所需参数的名称和类型。 调用代码调用该方法时，它为每个参数提供了称为参数的具体值。 参数必须与参数类型兼容，但调用代码中使用的参数名（如果有）不需要与方法中定义的参数名相同。 例如:  
   
  [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
   
@@ -82,7 +83,7 @@ public ref double GetEstimatedDistance()
   
  [!code-csharp[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
- 在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内参数的原始值，则此步骤可能很有必要。  
+ 在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内自变量的原始值，则此步骤可能很有必要。  
 
 若要使用按引用从方法返回的值，必须声明 [ref local](ref-returns.md#ref-locals) 变量（如果想要修改其值）。 例如，如果 `Planet.GetEstimatedDistance` 方法按引用返回 <xref:System.Double> 值，则可以将其定义为具有如下所示代码的 ref local 变量：
 
@@ -130,7 +131,7 @@ static void Main(string[] args)
   
  [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
- 异步方法不能声明任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 参数，但是可以调用具有这类参数的方法。  
+ 异步方法不能声明任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数，但是可以调用具有这类参数的方法。  
   
  有关异步方法的详细信息，请参阅[使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)、[异步程序中的控制流](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)和[异步返回类型](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
@@ -148,7 +149,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  如果该方法返回 `void` 或是异步方法，则该方法的主体必须是语句表达式（与 lambda 相同）。  对于属性和索引器，两者必须是只读的，并且不使用 `get` 访问器关键字。  
   
-## <a name="iterators"></a>迭代器  
+## <a name="iterators"></a>Iterators  
  迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 当 [yield return](../../../csharp/language-reference/keywords/yield.md) 语句到达时，将记住当前在代码中的位置。 下次调用迭代器时，将从该位置重新开始执行。  
   
  通过使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 语句从客户端代码调用迭代器。  
@@ -160,7 +161,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [类和结构](index.md)  
  [访问修饰符](access-modifiers.md)  

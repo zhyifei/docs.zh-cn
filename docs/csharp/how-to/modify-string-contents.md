@@ -9,15 +9,17 @@ helpviewer_keywords:
 - strings [C#], modifying
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a67cf24c0f6024d23bc1106943d3447620f18b1f
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 830ca207c4cd5bd24dbb667328465cafb2509409
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何：修改以 C# 编写的字符串内容 #
 
 本文演示通过修改现有 `string` 来生成 `string` 的几种方法。 演示的所有方法均将修改的结果返回为新的 `string` 对象。 为了清楚地演示这一点，所有示例均将结果存储在新的变量中。 之后，你可以检查原始 `string` 和运行每个示例时从修改中得到的 `string`。
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 本文中演示了几种方法。 你可以替换现有文本。 可以搜索模式并将匹配的文本替换为其他文本。 可以将字符串视为字符序列。 还可以使用删除空格的简便方法。 应选择与你的方案最匹配的方法。
 

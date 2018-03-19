@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-operators"></a>C# 运算符
 C# 提供了许多运算符，这些运算符是指定要在表达式中执行哪些操作（数学、索引、函数调用等等）的符号。  可以[重载](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)许多应用于用户定义类型的运算符，从而更改其含义。  
@@ -78,7 +78,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md)：数值取反。  
   
- [!x](../../../csharp/language-reference/operators/logical-negation-operator.md)：逻辑取反。  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md)：逻辑取反。  
   
  [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md)：按位求补。  
   
@@ -215,7 +215,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
 -   [小数](../../../csharp/language-reference/keywords/decimal.md)算术溢出总是引发 <xref:System.OverflowException>。 小数被零除总是引发 <xref:System.DivideByZeroException>。  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C#](../../../csharp/index.md) [可重载运算符](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  

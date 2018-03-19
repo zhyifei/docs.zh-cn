@@ -2,18 +2,20 @@
 title: "使用索引器（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: indexers [C#], about indexers
+helpviewer_keywords:
+- indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d5c727edbbea116d858c6acf6b600f8fd9f43ee2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17bbfabe8a53fc51e81434d0a2bd9fb2b29c4695
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引器（C# 编程指南）
 索引器使你可从语法上方便地创建[类](../../../csharp/language-reference/keywords/class.md)、[结构](../../../csharp/language-reference/keywords/struct.md)或[接口](../../../csharp/language-reference/keywords/interface.md)，以便客户端应用程序能像访问数组一样访问它们。 在主要目标是封装内部集合或数组的类型中，常常要实现索引器。 例如，假设有一个名为 TempRecord 的类，它表示 24 小时的周期内在 10 个不同时间点所记录的温度（单位为华氏度）。 该类包含一个名为“temps”、类型为 float 的数组，用于表示温度；以及一个 <xref:System.DateTime>，用于表示记录温度的日期。 通过在此类中实现索引器，客户端可采用 `float temp = tr[4]` 的形式（而非 `float temp = tr.temps[4]`）访问 TempRecord 实例中的温度。 索引器表示法不但简化了客户端应用程序的语法；它还使类及其目标更容易直观地为其它开发者所理解。  
@@ -34,9 +36,9 @@ public int this[int index]    // Indexer declaration
   
  索引器的签名由其形参的数目和类型所组成。 不包含索引器类型或形参的名称。 如果要在相同类中声明多个索引器，则它们的签名必须不同。  
   
- 索引器值不分类为变量；因此，无法将索引器值作为 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 参数来传递。  
+ 索引器值不分类为变量；因此，无法将索引器值作为 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数来传递。  
   
- 若要使索引器的名称可为其他语言所用，请在声明中使用 `name` 属性。 例如：  
+ 若要使索引器的名称可为其他语言所用，请在声明中使用 `name` 属性。 例如:  
   
 ```  
 [System.Runtime.CompilerServices.IndexerName("TheItem")]  
@@ -75,7 +77,7 @@ public int this [int index]   // Indexer declaration
   
 -   在可接受的程度内，为 `get` 和 [set](../../../csharp/language-reference/keywords/set.md) 访问器的可访问性设置尽可能多的限制。 这一点对 `set` 访问器尤为重要。 有关详细信息，请参阅[限制访问器可访问性](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [索引器](../../../csharp/programming-guide/indexers/index.md)  
  [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)

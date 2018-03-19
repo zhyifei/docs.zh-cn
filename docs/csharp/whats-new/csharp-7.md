@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="whats-new-in-c-7"></a>C# 7 中的新增功能
 
@@ -24,7 +24,7 @@ C# 7 向 C# 语言添加了许多新功能：
 * [元组](#tuples)
     - 可以创建包含多个公共字段的轻量级未命名类型。 编译器和 IDE 工具可理解这些类型的语义。
 * [弃元](#discards)
-    - 弃元是指在不关心所赋予的值时，赋值中使用的临时只写变量。 在对元组和用户定义类型进行解构，以及在使用 `out` 参数调用方法时，它们特别有用。
+    - 放弃是指在不关心所赋予的值时，赋值中使用的临时只写变量。 在对元组和用户定义类型进行解构，以及在使用 `out` 参数调用方法时，它们特别有用。
 * [模式匹配](#pattern-matching)
     - 可以基于任意类型和这些类型的成员的值创建分支逻辑。
 * [`ref` 局部变量和返回结果](#ref-locals-and-returns)
@@ -149,25 +149,25 @@ C# 为用于说明设计意图的类和结构提供了丰富的语法。 但是�
 
 可在[元组主题](../tuples.md)中深入了解有关元组的详细信息。
 
-## <a name="discards"></a>弃元
+## <a name="discards"></a>放弃
 
-通常，在进行元组解构或使用 `out` 参数调用方法时，必须定义一个其值无关紧要且你不打算使用的变量。 为处理此情况，C# 增添了对弃元的支持。 弃元是一个名为 `_`（下划线字符）的只写变量，可向单个变量赋予要弃元的所有值。 弃元类似于未赋值的变量；不可在代码中使用弃元（赋值语句除外）。
+通常，在进行元组解构或使用 `out` 参数调用方法时，必须定义一个其值无关紧要且你不打算使用的变量。 为处理此情况，C# 增添了对放弃的支持。 放弃是一个名为 `_`（下划线字符）的只写变量，可向单个变量赋予要放弃的所有值。 放弃类似于未赋值的变量；不可在代码中使用放弃（赋值语句除外）。
 
-在以下方案中支持弃元：
+在以下方案中支持放弃：
 
 * 在对元组或用户定义的类型进行解构时。
 
-* 在使用 [out](../language-reference/keywords/out.md) 参数调用方法时。
+* 在使用 [out](../language-reference/keywords/out-parameter-modifier.md) 参数调用方法时。
 
 * 在使用 [is](../language-reference/keywords/is.md) 和 [switch](../language-reference/keywords/switch.md) 语句匹配操作的模式中。
 
-* 在要将某赋值的值显式标识为弃元时用作独立标识符。
+* 在要将某赋值的值显式标识为放弃时用作独立标识符。
 
-以下示例定义了 `QueryCityDataForYears` 方法，它返回一个包含两个不同年份的城市数据的六元组。 本例中，方法调用仅与此方法返回的两个人口值相关，因此在进行元组解构时，将元组中的其余值视为弃元。
+以下示例定义了 `QueryCityDataForYears` 方法，它返回一个包含两个不同年份的城市数据的六元组。 本例中，方法调用仅与此方法返回的两个人口值相关，因此在进行元组解构时，将元组中的其余值视为放弃。
 
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-有关详细信息，请参阅[弃元](../discards.md)。
+有关详细信息，请参阅[放弃](../discards.md)。
  
 ## <a name="pattern-matching"></a>模式匹配
 

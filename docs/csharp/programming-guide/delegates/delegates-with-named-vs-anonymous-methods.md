@@ -2,22 +2,23 @@
 title: "带有命名方法的委托与带有匿名方法的委托（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 59317ad3cd9a5d360d0375bf46ff0c9f752a5944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d242f9ab1ecb1963f674d6094f05d78b77fbee9c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>带有命名方法的委托与带有匿名方法的委托（C# 编程指南）
+# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>带有命名方法的委托与匿名方法（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)可以与命名方法相关联。 使用命名方法实例化委托时，该方法作为参数传递，例如：  
   
  [!code-csharp[csProgGuideDelegates#1](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_1.cs)]  
@@ -29,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
  委托实例可以封装静态方法或实例方法。  
   
- 尽管委托可以使用 [out](../../../csharp/language-reference/keywords/out.md) 参数，但不建议将该委托与多播事件委托配合使用，因为你无法知道将调用哪个委托。  
+ 尽管委托可以使用 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数，但不建议将该委托与多播事件委托配合使用，因为你无法知道将调用哪个委托。  
   
 ## <a name="example-1"></a>示例 1  
  以下是声明和使用委托的简单示例。 请注意，委托 `Del` 与关联的方法 `MultiplyNumbers` 具有相同的签名  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideDelegates#3](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_3.cs)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [委托](../../../csharp/programming-guide/delegates/index.md)  
  [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  

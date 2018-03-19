@@ -2,21 +2,22 @@
 title: "运算符（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 267022b8c6b7f8faf301cae1a62f4dfaa8249f96
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="operators-c-programming-guide"></a>运算符（C# 编程指南）
 在 C# 中，运算符  是应用于表达式或语句中的一个或多个操作数  的程序元素。 接受一个操作数的运算符称为`++`一元 `new`运算符，例如递增运算符 ( *) 或* 。 接受两个操作数的运算符称为`+`二元`-`运算符，例如算术运算符（`*`、`/`、 *、* ）。 条件运算符`?:`接受三个操作数，是 C# 中唯一的三元运算符。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  **主要运算符**  
   
-|Expression|描述|  
+|表达式|描述|  
 |----------------|-----------------|  
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|成员访问<br /><br /> 条件成员访问|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|方法和委托调用|  
@@ -61,11 +62,11 @@ ms.lasthandoff: 11/21/2017
   
  **一元运算符**  
   
-|Expression|描述|  
+|表达式|描述|  
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|标识|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|求反|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|逻辑求反|  
+|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|逻辑求反|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|按位求反|  
 |[++](../../../csharp/language-reference/operators/increment-operator.md)x|前递增|  
 |[--](../../../csharp/language-reference/operators/decrement-operator.md)x|前递减|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/21/2017
   
  **乘法运算符**  
   
-|Expression|描述|  
+|表达式|描述|  
 |----------------|-----------------|  
 |[*](../../../csharp/language-reference/operators/multiplication-operator.md)|乘法|  
 |[/](../../../csharp/language-reference/operators/division-operator.md)|除号|  
@@ -81,21 +82,21 @@ ms.lasthandoff: 11/21/2017
   
  **相加运算符**  
   
-|Expression|描述|  
+|表达式|描述|  
 |----------------|-----------------|  
 |x [+](../../../csharp/language-reference/operators/addition-operator.md) y|相加、字符串串联、委托组合|  
 |x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|相减、委托移除|  
   
  **移位运算符**  
   
-|Expression|描述|  
+|表达式|描述|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
   
  **关系和类型运算符**  
   
-|Expression|描述|  
+|表达式|描述|  
 |----------------|-----------------|  
 |x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|小于|  
 |x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|大于|  
@@ -106,14 +107,14 @@ ms.lasthandoff: 11/21/2017
   
  **相等运算符**  
   
-|Expression|描述|  
+|表达式|描述|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|等于|  
 |x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|不等于|  
   
  **逻辑、条件和 Null 运算符**  
   
-|类别|Expression|描述|  
+|类别|表达式|描述|  
 |--------------|----------------|-----------------|  
 |逻辑“与”|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整型按位“与”，布尔型逻辑“与”|  
 |逻辑 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整型按位 XOR，布尔型逻辑 XOR|  
@@ -125,7 +126,7 @@ ms.lasthandoff: 11/21/2017
   
  **赋值和匿名运算符**  
   
-|Expression|描述|  
+|表达式|描述|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|赋值|  
 |x op= y|复合赋值。 支持以下这些运算符：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[!=](../../../csharp/language-reference/operators/not-equal-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
@@ -173,6 +174,6 @@ a = (b = c);
 ## <a name="related-sections"></a>相关章节  
  有关详细信息，请参阅[运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)和 [C# 运算符](../../../csharp/language-reference/operators/index.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [语句、表达式和运算符](../../../csharp/programming-guide/statements-expressions-operators/index.md)
