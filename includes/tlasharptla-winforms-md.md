@@ -1,1 +1,1 @@
-<span data-ttu-id="3f823-101">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="3f823-101">Windows Forms</span></span>
+<span data-ttu-id="05642-101">Windows 窗体</span><span class="sxs-lookup"><span data-stu-id="05642-101">Windows Forms</span></span>
