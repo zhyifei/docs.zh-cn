@@ -2,23 +2,24 @@
 title: "传递引用类型参数（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2cd862a9179e027ab82631631784203993d0465a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 282929d82822f81f12dae91d2f422da51a0f43e5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>传递引用类型参数（C# 编程指南）
-[引用类型](../../../csharp/language-reference/keywords/reference-types.md)的变量不直接包含其数据；它包含对其数据的引用。 如果按值传递引用类型参数，则可能会按引用更改指向的数据，例如类成员的值。 但是，不能更改引用本身的值；也就是说，不能使用相同引用为新类分配内存，并将其保留在程序块外部。 为此，请使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 关键字传递参数。 为简单起见，下面的示例使用 `ref`。  
+[引用类型](../../../csharp/language-reference/keywords/reference-types.md)的变量不直接包含其数据；它包含对其数据的引用。 如果按值传递引用类型参数，则可能更改属于所引用对象的数据，例如类成员的值。 但是，不能更改引用本身的值；例如，不能使用相同引用为新类分配内存，并将其保留在方法外部。 为此，请使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 关键字传递参数。 为简单起见，下面的示例使用 `ref`。  
   
 ## <a name="passing-reference-types-by-value"></a>按值传递引用类型  
  以下示例演示将引用类型参数 `arr` 按值传递给方法 `Change`。 由于该参数是对 `arr` 的引用，因此可以更改数组元素的值。 但是，只有在方法内才能将参数重新分配给其他内存位置，且不会影响原始变量 `arr`。  
@@ -43,9 +44,11 @@ ms.lasthandoff: 11/21/2017
   
  有关字符串的详细信息，请参阅[字符串](../../../csharp/language-reference/keywords/string.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [传递参数](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
  [使用 ref 和 out 传递数组](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
  [ref](../../../csharp/language-reference/keywords/ref.md)  
+ [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+ [out](../../../csharp/language-reference/keywords/out.md)  
  [引用类型](../../../csharp/language-reference/keywords/reference-types.md)

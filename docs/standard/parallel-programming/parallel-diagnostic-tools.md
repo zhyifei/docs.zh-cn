@@ -18,14 +18,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4ed0b3991b08eceb950aa1a3aa1704529700feb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 127737877ac64ac9278bc039650caf72936571bf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="parallel-diagnostic-tools"></a>并行诊断工具
-[!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] 为调试和分析多线程应用程序提供了广泛的支持。  
+Visual Studio 为调试和分析多线程应用程序提供了广泛的支持。  
   
 ## <a name="debugging"></a>调试  
  Visual Studio 调试器添加了用于调试并行应用程序的新窗口。 有关详细信息，请参阅下列主题：  

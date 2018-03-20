@@ -3,16 +3,17 @@ title: "dotnet publish 命令 - .NET Core CLI"
 description: "dotnet publish 命令可将 .NET Core 项目发布到目录。"
 author: mairaw
 ms.author: mairaw
-ms.date: 09/01/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 46e2f6d485f360660424accbddc2278eaa497a8d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2aa69217e949b970b632c4fad72838b63c2a8988
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-publish"></a>dotnet 发布
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```
-dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
 
@@ -50,6 +51,8 @@ dotnet publish [-h|--help]
 * 应用程序的依赖项。 将这些依赖项从 NuGet 缓存复制到输出文件夹。
 
 `dotnet publish` 命令的输出已准备好部署到托管系统（例如，服务器、电脑、Mac 和笔记本电脑）以供执行，它还是准备应用程序以供部署的唯一受官方支持的方法。 根据项目指定的部署的类型，托管系统不一定已在其上安装 .NET Core 共享运行时。 有关详细信息，请参阅 [.NET 核心应用程序部署](../deploying/index.md)。 有关已发布应用程序的目录结构，请参阅[目录结构](/aspnet/core/hosting/directory-structure)。
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>参数
 
@@ -156,14 +159,18 @@ dotnet publish [-h|--help]
 使用指定的项目文件发布应用程序：
 
 `dotnet publish ~/projects/app1/app1.csproj`
-    
+
 使用 `netcoreapp1.1` 框架发布当前目录中的项目：
 
 `dotnet publish --framework netcoreapp1.1`
-    
+
 使用 `netcoreapp1.1` 框架和 `OS X 10.10` 的运行时发布当前应用程序（必须在项目文件中列出此 RID）。
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
+
+发布当前应用程序，但在还原操作期间不还原项目到项目 (P2P) 引用，只还原根项目（.NET Core SDK 2.0 及更高版本）：
+
+`dotnet publish --no-dependencies`
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,11 +1,12 @@
 ---
 title: "指定完全限定的类型名称"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/14/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,48 +16,108 @@ helpviewer_keywords:
 - tokens
 - BNF
 - assemblies [.NET Framework], names
-- Backus-Naur form
-- languages, BNF grammar
+- languages, grammar
 - fully qualified type names
 - type names
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e31e6e0284de44768b2faad7bcf84d5be343e479
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完全限定的类型名称
 必须指定类型名称才能为各种反射操作提供有效输入。 完全限定的类型名称包含程序集名称规范、命名空间规范和类型名称。 类型名称规范由 <xref:System.Type.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>、<xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 等方法使用。  
   
-## <a name="backus-naur-form-grammar-for-type-names"></a>类型名称的巴科斯-诺尔范式语法  
- 巴科斯-诺尔范式 (BNF) 定义正式语言的语法。 下表列出的 BNF 词法规则，说明如何识别有效输入。 最终元素（无法再减小的元素）全部以大写字母显示。 非最终元素（可以再减小的元素）则显示为大小写混合或带单引号的字符串，但单引号 (') 不是语法本身的一部分。 竖线 (|) 表示具有子规则的规则。  
-  
-|完全限定的类型名称的 BNF 语法|  
-|-----------------------------------------------|  
-|TypeSpec                          :=   ReferenceTypeSpec<br /><br /> |     SimpleTypeSpec|  
-|ReferenceTypeSpec            :=   SimpleTypeSpec '&'|  
-|SimpleTypeSpec                :=   PointerTypeSpec<br /><br /> |     ArrayTypeSpec<br /><br /> |     TypeName|  
-|PointerTypeSpec                :=   SimpleTypeSpec '*'|  
-|ArrayTypeSpec                  :=   SimpleTypeSpec '[ReflectionDimension]'<br /><br /> |     SimpleTypeSpec '[ReflectionEmitDimension]'|  
-|ReflectionDimension           :=   '*'<br /><br /> |     ReflectionDimension ',' ReflectionDimension<br /><br /> |     NOTOKEN|  
-|ReflectionEmitDimension    :=   '*'<br /><br /> |     Number '..' 数字<br /><br /> |     Number '…'<br /><br /> |     ReflectionDimension ',' ReflectionDimension<br /><br /> |     NOTOKEN|  
-|Number                            :=   [0-9]+|  
-|TypeName                         :=   NamespaceTypeName<br /><br /> |     NamespaceTypeName ',' AssemblyNameSpec|  
-|NamespaceTypeName        :=   NestedTypeName<br /><br /> |     NamespaceSpec '.'NestedTypeName|  
-|NestedTypeName               :=   IDENTIFIER<br /><br /> |     NestedTypeName '+' IDENTIFIER|  
-|NamespaceSpec                 :=   IDENTIFIER<br /><br /> |     NamespaceSpec '.'IDENTIFIER|  
-|AssemblyNameSpec           :=   IDENTIFIER<br /><br /> |     IDENTIFIER ',' AssemblyProperties|  
-|AssemblyProperties            :=   AssemblyProperty<br /><br /> |     AssemblyProperties ',' AssemblyProperty|  
-|AssemblyProperty              :=   AssemblyPropertyName '=' AssemblyPropertyValue|  
-  
+## <a name="grammar-for-type-names"></a>类型名称的语法  
+ 语法定义正式语言的语法。 下表列出了词法规则，说明如何识别有效输入。 最终元素（无法再减小的元素）全部以大写字母显示。 非最终元素（可以再减小的元素）则显示为大小写混合或带单引号的字符串，但单引号 (') 不是语法本身的一部分。 竖线 (|) 表示具有子规则的规则。  
+
+```antlr
+TypeSpec
+    : ReferenceTypeSpec
+    | SimpleTypeSpec
+    ;
+
+ReferenceTypeSpec
+    : SimpleTypeSpec '&'
+    ;
+
+SimpleTypeSpec
+    : PointerTypeSpec
+    | ArrayTypeSpec
+    | TypeName
+    ;
+
+PointerTypeSpec
+    : SimpleTypeSpec '*'
+    ;
+
+ArrayTypeSpec
+    : SimpleTypeSpec '[ReflectionDimension]'
+    | SimpleTypeSpec '[ReflectionEmitDimension]'
+    ;
+
+ReflectionDimension
+    : '*'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+ReflectionEmitDimension
+    : '*'
+    | Number '..' Number
+    | Number '…'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+Number
+    : [0-9]+
+    ;
+
+TypeName
+    : NamespaceTypeName
+    | NamespaceTypeName ',' AssemblyNameSpec
+    ;
+
+NamespaceTypeName
+    : NestedTypeName
+    | NamespaceSpec '.' NestedTypeName
+    ;
+
+NestedTypeName
+    : IDENTIFIER
+    | NestedTypeName '+' IDENTIFIER
+    ;
+
+NamespaceSpec
+    : IDENTIFIER
+    | NamespaceSpec '.' IDENTIFIER
+    ;
+
+AssemblyNameSpec
+    : IDENTIFIER
+    | IDENTIFIER ',' AssemblyProperties
+    ;
+
+AssemblyProperties
+    : AssemblyProperty
+    | AssemblyProperties ',' AssemblyProperty
+    ;
+
+AssemblyProperty
+    : AssemblyPropertyName '=' AssemblyPropertyValue
+    ;
+```
+
 ## <a name="specifying-special-characters"></a>指定特殊字符  
  在类型名称中，IDENTIFIER 是语言规则确定的任何有效名称。  
   

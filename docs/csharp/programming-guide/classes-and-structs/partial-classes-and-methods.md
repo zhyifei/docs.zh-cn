@@ -2,21 +2,22 @@
 title: "分部类和方法（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>分部类和方法（C# 编程指南）
 可以将[类](../../../csharp/language-reference/keywords/class.md)或[结构](../../../csharp/language-reference/keywords/struct.md)、[接口](../../../csharp/language-reference/keywords/interface.md)或方法的定义拆分到两个或更多个源文件中。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。  
@@ -92,13 +93,13 @@ ms.lasthandoff: 11/21/2017
   
 -   下面用于分部类型定义中的关键字是可选的，但是如果某关键字出现在一个分部类型定义中，则该关键字不能与在同一类型的其他分部定义中指定的关键字冲突：  
   
-    -   [公用](../../../csharp/language-reference/keywords/public.md)  
+    -   [public](../../../csharp/language-reference/keywords/public.md)  
   
     -   [专用](../../../csharp/language-reference/keywords/private.md)  
   
-    -   [受保护](../../../csharp/language-reference/keywords/protected.md)  
+    -   [protected](../../../csharp/language-reference/keywords/protected.md)  
   
-    -   [内部](../../../csharp/language-reference/keywords/internal.md)  
+    -   [internal](../../../csharp/language-reference/keywords/internal.md)  
   
     -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   分部方法声明必须以上下文关键字 [partial](../../../csharp/language-reference/keywords/partial-type.md) 开头，并且方法必须返回 [void](../../../csharp/language-reference/keywords/void.md)。  
   
--   分部方法可以有 [ref](../../../csharp/language-reference/keywords/ref.md) 参数，但不能有 [out](../../../csharp/language-reference/keywords/out.md) 参数。  
+-   分部方法可以有 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 或 [ref](../../../csharp/language-reference/keywords/ref.md) 参数，但不能有 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数。  
   
 -   分部方法为隐式 [private](../../../csharp/language-reference/keywords/private.md) 方法，因此不能为 [virtual](../../../csharp/language-reference/keywords/virtual.md) 方法。  
   
@@ -165,7 +166,7 @@ partial void onNameChanged()
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [类](../../../csharp/programming-guide/classes-and-structs/classes.md)  
  [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)  

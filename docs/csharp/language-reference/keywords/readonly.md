@@ -2,26 +2,28 @@
 title: "readonly（C# 参考）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
-helpviewer_keywords: readonly keyword [C#]
+helpviewer_keywords:
+- readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b499f9fc5121afe6c2e92bcf8c5d2ac593b4c06c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 175eebf6e49e79db1ff86689599416a10827a792
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="readonly-c-reference"></a>readonly（C# 参考）
 `readonly` 关键字是一个可在字段上使用的修饰符。 当字段声明包括 `readonly` 修饰符时，该声明引入的字段赋值只能作为声明的一部分出现，或者出现在同一类的构造函数中。  
   
-## <a name="example"></a>示例  
+## <a name="readonly-field-example"></a>Readonly 字段示例  
  在此示例中，即使在类构造函数中给字段 `year` 赋了值，它的值仍无法在 `ChangeYear` 方法中更改：  
   
  [!code-csharp[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
@@ -34,7 +36,7 @@ ms.lasthandoff: 11/21/2017
     public readonly int y = 5;  
     ```  
   
--   对于实例字段，在包含字段声明的类的实例构造函数中；或者，对于静态字段，在包含字段声明的类的静态构造函数中。 也只有在这些上下文中，将 `readonly` 字段作为 [out](../../../csharp/language-reference/keywords/out.md) 或 [ref](../../../csharp/language-reference/keywords/ref.md) 参数传递才有效。  
+-   对于实例字段，在包含字段声明的类的实例构造函数中；或者，对于静态字段，在包含字段声明的类的静态构造函数中。 也只有在这些上下文中，将 `readonly` 字段作为 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 或 [ref](../../../csharp/language-reference/keywords/ref.md) 参数传递才有效。  
   
 > [!NOTE]
 >  `readonly` 关键字不同于 [const](../../../csharp/language-reference/keywords/const.md) 关键字。 `const` 字段只能在该字段的声明中初始化。 
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
 ```  
   
-## <a name="example"></a>示例  
+## <a name="comparing-readonly-and-non-readonly-instance-fields"></a>比较 readonly 和非 readonly 实例字段  
  [!code-csharp[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
   
  在前面的示例中，如果使用如下的语句：  
@@ -62,7 +64,7 @@ public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

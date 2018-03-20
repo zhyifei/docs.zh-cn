@@ -8,12 +8,13 @@ ms.date: 11/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: dc93e0554d422ddf42ac54dd94223f0285451e85
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 50e8d5c335386c41e36a490263a4f4ebd2bd39ba
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-restore"></a>dotnet 还原
 
@@ -118,7 +119,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在还原操作期间使用的 NuGet 包源。 这会替代 *NuGet.config* 文件中指定的所有源。 多次指定此选项可以提供多个源。
+指定要在还原操作期间使用的 NuGet 包源。 这会替代 NuGet.config 文件中指定的所有源。 多次指定此选项可以提供多个源。
 
 `--verbosity <LEVEL>`
 
@@ -160,7 +161,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在还原操作期间使用的 NuGet 包源。 这会替代 *NuGet.config* 文件中指定的所有源。 多次指定此选项可以提供多个源。
+指定要在还原操作期间使用的 NuGet 包源。 这会替代 NuGet.config 文件中指定的所有源。 多次指定此选项可以提供多个源。
 
 `--verbosity <LEVEL>`
 

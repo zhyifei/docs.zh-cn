@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 实现基础结构持久性层
 
@@ -240,13 +240,13 @@ builder.RegisterType<OrderRepository>()
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application**（在 ASP.NET MVC 应用程序中实现存储库和单元工作模式）
+-   **在 ASP.NET MVC 应用程序中实现存储库和工作单元模式**
     [https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen。Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain**（使用 Entity Framework、Dapper 和 Chain 实现存储库模式的策略）
-    [https://www.infoq.com/articles/repository-implementation-strategies](https://www.infoq.com/articles/repository-implementation-strategies)
+-   **Jonathan Allen。Entity Framework、Dapper 和 Chain 中存储库模式的实现策略**
+    [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre。比较 ASP.NET Core IoC 容器服务生存期与 Autofac IoC 容器实例范围**
+-   **Cesar de la Torre。比较 ASP.NET Core IoC 容器服务生存期和 Autofac IoC 容器实例范围**
     [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>表映射
@@ -330,7 +330,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>EF Core 中的 Hi/Lo 算法
 
-前面示例中代码的一个有趣方面是，它使用 [Hi/Lo 算法](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/)作为键生成策略。
+前面示例中代码的一个有趣方面是，它使用 [Hi/Lo 算法](https://vladmihalcea.com/the-hilo-algorithm/)作为键生成策略。
 
 当需要唯一键时，Hi/Lo 算法很有用。 总之，Hi-Lo 算法将唯一标识符分配给表行，同时不依赖于立即将行存储于数据库中。 这使你立即开始使用标识符，就像常规顺序数据库 ID 中的那般。
 
@@ -460,19 +460,19 @@ public IEnumerable<T> List(ISpecification<T> spec)
 -   **表映射**
     [https://docs.microsoft.com/ef/core/modeling/relational/tables](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **Use HiLo to generate keys with Entity Framework Core**（通过 Entity Framework Core 使用 HiLo 来生成键）
+-   **使用 HiLo 通过 Entity Framework Core 生成关键值**
     [http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
 -   **支持字段**
     [https://docs.microsoft.com/ef/core/modeling/backing-field](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith.Encapsulated Collections in Entity Framework Core**（在Entity Framework Core 中封装集合）
+-   **Steve Smith.Entity Framework Core 中已封装的集合**
     [http://ardalis.com/encapsulated-collections-in-entity-framework-core](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **阴影属性**
     [https://docs.microsoft.com/ef/core/modeling/shadow-properties](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **The Specification pattern**（规范模式）
+-   **规范模式**
     [http://deviq.com/specification-pattern/](http://deviq.com/specification-pattern/)
     
 

@@ -1,7 +1,7 @@
 ---
 title: "方法 - C# 指南"
 description: "有关方法、方法参数和方法返回值的概述"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/26/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 38e9d8955c99c7fb3ee6347af70037d3da08ff39
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods"></a>方法 #
 
@@ -87,11 +87,11 @@ ms.lasthandoff: 11/02/2017
  <a name="inherited"></a>
  ##<a name="inherited-and-overridden-methods"></a>继承和重写方法 ##
 
-除了类型中显式定义的成员，类型还继承在其基类中定义的成员。 由于托管的类型系统中的所有类型都继承直接或间接从<xref:System.Object>类，所有类型都都继承的成员，如<xref:System.Object.Equals(System.Object)>， <xref:System.Object.GetType>，和<xref:System.Object.ToString>。 下面的示例定义 `Person` 类，实例化两个 `Person` 对象，并调用 `Person.Equals` 方法来确定两个对象是否相等。 但是，`Equals` 方法不是在 `Person` 类中定义；而是继承自 <xref:System.Object>。
+除了类型中显式定义的成员，类型还继承在其基类中定义的成员。 由于托管类型系统中的所有类型都直接或间接继承自 <xref:System.Object> 类，因此所有类型都继承其成员，如 <xref:System.Object.Equals(System.Object)>、<xref:System.Object.GetType> 和 <xref:System.Object.ToString>。 下面的示例定义 `Person` 类，实例化两个 `Person` 对象，并调用 `Person.Equals` 方法来确定两个对象是否相等。 但是，`Equals` 方法不是在 `Person` 类中定义；而是继承自 <xref:System.Object>。
 
 [!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
-类型可以使用 `override` 关键字并提供重写方法的实现来重写继承的成员。 方法签名必须重写的方法相同。 下面的示例是类似于前一个，只不过它将重写<xref:System.Object.Equals(System.Object)>方法。 （它还重写 <xref:System.Object.GetHashCode> 方法，因为这两种方法用于提供一致的结果。）
+类型可以使用 `override` 关键字并提供重写方法的实现来重写继承的成员。 方法签名必须与重写的方法的签名一样。 下面的示例类似于上一个示例，只不过它重写 <xref:System.Object.Equals(System.Object)> 方法。 （它还重写 <xref:System.Object.GetHashCode> 方法，因为这两种方法用于提供一致的结果。）
 
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
@@ -118,7 +118,7 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>按引用传递参数 ###
 
-如果想要更改方法中的自变量值并想要在控件返回到调用方法时反映出这一更改，请按引用传递参数。 要按引用传递参数，请使用 `ref` 或 `out` 关键字。
+如果想要更改方法中的自变量值并想要在控件返回到调用方法时反映出这一更改，请按引用传递参数。 要按引用传递参数，请使用 [`ref`](language-reference/keywords/ref.md) 或 [`out`](language-reference/keywords/out-parameter-modifier.md) 关键字。 还可以使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 关键字，按引用传递值以避免复制，但仍防止修改。
 
 下面的示例与上一个示例完全一样，只是换成按引用将值传递给 `ModifyValue` 方法。 参数值在 `ModifyValue` 方法中修改时，值中的更改将在控件返回调用方时反映出来。
 
@@ -195,7 +195,7 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 
 在这种情况下，使用本地变量 `result`存储值是可选的。 此步骤可以帮助提高代码的可读性，或者如果需要存储该方法整个范围内自变量的原始值，则此步骤可能很有必要。
 
-有时，需要方法返回多个值。 从 C# 7.0 开始，可以使用元组类型和元组文本轻松实现此目的。 元组类型定义元组元素的数据类型。 元组文本提供返回的元组的实际值。 在下面的示例中，`(string, string, string, int)`定义返回的元组类型`GetPersonalInfo`方法。 表达式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是元组文本；方法返回 `PersonInfo` 对象的第一个、中间和最后一个名称及其使用期限。
+有时，需要方法返回多个值。 从 C# 7.0 开始，可以使用元组类型和元组文本轻松实现此目的。 元组类型定义元组元素的数据类型。 元组文本提供返回的元组的实际值。 在下面的示例中，`(string, string, string, int)` 定义 `GetPersonalInfo` 方法返回的元组类型。 表达式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是元组文本；方法返回 `PersonInfo` 对象的第一个、中间和最后一个名称及其使用期限。
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -263,13 +263,13 @@ if (person != null)
 > [!NOTE]
 > 异步方法在遇到第一个尚未完成的 awaited 对象或到达异步方法的末尾时（以先发生者为准），将返回到调用方。
 
-异步方法可以具有返回类型的<xref:System.Threading.Tasks.Task%601>， <xref:System.Threading.Tasks.Task>，或`void`。 `void` 返回类型主要用于定义需要 `void` 返回类型的事件处理程序。 无法等待返回 `void` 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。 C# 7（发布后）会放宽此限制，允许异步方法[返回任何类似于任务的类型](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)。
+异步方法可以具有 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、 或 `void` 返回类型。 `void` 返回类型主要用于定义需要 `void` 返回类型的事件处理程序。 无法等待返回 `void` 的异步方法，并且返回 void 方法的调用方无法捕获该方法引发的异常。 C# 7（发布后）会放宽此限制，允许异步方法[返回任何类似于任务的类型](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)。
 
 在下面的示例中，`DelayAsync` 是一个异步方法，包含返回整数的 return 语句。 由于它是异步方法，其方法声明必须具有返回类型 `Task<int>`。 因为返回类型是 `Task<int>`，`DoSomethingAsync` 中 `await` 表达式的计算将如以下 `int result = await delayTask` 语句所示得出整数。
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-异步方法不能声明任何 [ref](language-reference/keywords/ref.md) 或 [out](language-reference/keywords/out.md) 参数，但是可以调用具有这类参数的方法。
+异步方法不能声明任何 [in](language-reference/keywords/in-parameter-modifier.md)、[ref](language-reference/keywords/ref.md) 或 [out](language-reference/keywords/out-parameter-modifier.md) 参数，但是可以调用具有这类参数的方法。
 
  有关异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](async.md)、[异步程序中的控制流](programming-guide/concepts/async/control-flow-in-async-programs.md)和[异步返回类型](programming-guide/concepts/async/async-return-types.md)。
 
@@ -290,13 +290,13 @@ public Customer this[long id] => store.LookupCustomer(id);
 如果该方法返回 `void` 或是异步方法，则该方法的主体必须是语句表达式（与 lambda 相同）。  对于属性和索引器，两者必须是只读，并且不使用 `get` 访问器关键字。
 
 <a name="iterators"></a>
-## <a name="iterators"></a>迭代器 ##
+## <a name="iterators"></a>Iterators ##
 
 迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 到达 `yield return` 语句后，会记住当前位置，以便调用方可以请求序列中的下一个元素。
 
 迭代器的返回类型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-有关详细信息，请参阅[迭代器](programming-guide/concepts/iterators.md)。
+有关更多信息，请参见 [迭代器](programming-guide/concepts/iterators.md)。
 
 ## <a name="see-also"></a>请参阅 ##
 
@@ -305,6 +305,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 [继承](programming-guide/classes-and-structs/inheritance.md)   
 [抽象类、密封类及类成员](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
 [params](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out.md)   
+[out](language-reference/keywords/out-parameter-modifier.md)   
 [ref](language-reference/keywords/ref.md)   
+[in](language-reference/keywords/in-parameter-modifier.md)   
 [传递参数](programming-guide/classes-and-structs/passing-parameters.md)

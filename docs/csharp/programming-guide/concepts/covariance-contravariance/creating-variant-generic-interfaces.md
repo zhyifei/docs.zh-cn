@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0a6ba6bd85d0bdfa7e98dd85886fee89527b59fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 585d1fc3ee6114532d7ddbfd30f5e09950d3b0b0
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>创建变体泛型接口 (C#)
 接口中的泛型类型参数可以声明为协变或逆变。 协变允许接口方法具有与泛型类型参数定义的返回类型相比，派生程度更大的返回类型。 逆变允许接口方法具有与泛型形参指定的实参类型相比，派生程度更小的实参类型。 具有协变或逆变泛型类型参数的泛型接口称为“变体”。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  可通过对泛型类型参数使用 `in` 和 `out` 关键字来声明变体泛型接口。  
   
 > [!IMPORTANT]
->  C# 中的 `ref` 和 `out` 参数不能为变体。 值类型也不支持变体。  
+>  C# 中的 `ref`、`in` 和 `out` 参数不能为变体。 值类型也不支持变体。  
   
  可以使用 `out` 关键字将泛型类型参数声明为协变。 协变类型必须满足以下条件：  
   
@@ -193,6 +194,6 @@ class Program
   
  在此示例中，没有指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之间选择。 这可能导致代码中出现问题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [泛型接口中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
  [对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

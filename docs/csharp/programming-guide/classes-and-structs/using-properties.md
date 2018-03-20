@@ -2,30 +2,31 @@
 title: "使用属性（C# 编程指南）"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>使用属性（C# 编程指南）
 属性结合了字段和方法的多个方面。 对于对象的用户来说，属性似乎是一个字段，访问属性需要相同的语法。 对于类的实现者来说，属性是一两个代码块，表示 [get](../../../csharp/language-reference/keywords/get.md) 访问器和/或 [set](../../../csharp/language-reference/keywords/set.md) 访问器。 读取属性时，执行 `get` 访问器的代码块；向属性赋予新值时，执行 `set` 访问器的代码块。 将不带 `set` 访问器的属性视为只读。 将不带 `get` 访问器的属性视为只写。 将具有以上两个访问器的属性视为读写。  
   
- 与字段不同，属性不会被归类为变量。 因此，不能将属性作为 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 参数传递。  
+ 与字段不同，属性不会被归类为变量。 因此，不能将属性作为 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 参数传递。  
   
  属性具有许多用途：它们可以先验证数据，再允许进行更改；可以在类上透明地公开数据，其中数据实际是从某个其他源（如数据库）检索到的；可以在数据发生更改时采取措施，例如引发事件或更改其他字段的值。  
   
- 通过依次指定字段的访问级别、属性类型、属性名、声明 `get` 访问器和/或 `set` 访问器的代码块，在类块中声明属性。 例如:   
+ 通过依次指定字段的访问级别、属性类型、属性名、声明 `get` 访问器和/或 `set` 访问器的代码块，在类块中声明属性。 例如:  
   
  [!code-csharp[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
- 引用属性时，除了作为赋值目标外，还调用 `get` 访问器读取属性值。 例如:   
+ 引用属性时，除了作为赋值目标外，还调用 `get` 访问器读取属性值。 例如:  
   
  [!code-csharp[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
- `get` 访问器可以用于返回字段值或计算并返回字段值。 例如:   
+ `get` 访问器可以用于返回字段值或计算并返回字段值。 例如:  
   
  [!code-csharp[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
@@ -59,14 +60,14 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
- 向属性赋值时，通过使用提供新值的自变量调用 `set` 访问器。 例如:   
+ 向属性赋值时，通过使用提供新值的自变量调用 `set` 访问器。 例如:  
   
  [!code-csharp[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   
  为 `set` 访问器中的本地变量声明使用隐式参数名 `value` 是错误的。  
   
 ## <a name="remarks"></a>备注  
- 可以将属性标记为`public`， `private`， `protected`， `internal`，`protected internal`或`private protected`。 这些访问修饰符定义该类的用户访问该属性的方式。 相同属性的 `get` 和 `set` 访问器可以具有不同的访问修饰符。 例如，`get` 可能为 `public`允许从类型外部进行只读访问；而 `set` 可能为 `private` 或 `protected`。 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 可以将属性标记为 `public`、`private`、`protected`、`internal`、`protected internal` 或 `private protected`。 这些访问修饰符定义该类的用户访问该属性的方式。 相同属性的 `get` 和 `set` 访问器可以具有不同的访问修饰符。 例如，`get` 可能为 `public`允许从类型外部进行只读访问；而 `set` 可能为 `private` 或 `protected`。 有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
  可以通过使用 `static` 关键字将属性声明为静态属性。 这使属性可供调用方在任何时候使用，即使不存在类的任何实例。 有关详细信息，请参阅[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [接口属性](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  

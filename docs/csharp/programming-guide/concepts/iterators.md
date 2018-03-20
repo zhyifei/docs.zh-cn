@@ -2,17 +2,18 @@
 title: "迭代器 (C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 48b09368ed0a84dc84793091b819ba7b4b6183f1
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 迭代器可用于逐步迭代集合，例如列表和数组。  
@@ -48,7 +49,7 @@ public static System.Collections.IEnumerable SomeNumbers()
   
  Visual Studio 2005 的 C# 中引入了迭代器。  
   
- **主题内容**  
+ **在本主题中**  
   
 -   [简单迭代器](#BKMK_SimpleIterator)  
   
@@ -344,7 +345,7 @@ public class Stack<T> : IEnumerable<T>
   
  `yield return` 语句中必须存在从表达式类型到迭代器返回类型的隐式转换。  
   
- 在 C# 中，迭代器方法不能有任何 `ref` 或 `out` 参数。  
+ 在 C# 中，迭代器方法不能有任何 `in`、`ref` 或 `out` 参数。  
   
  在 C# 中，“yield”不是保留字，只有在 `return` 或 `break` 关键字之前使用时才有特殊含义。  
   
@@ -370,7 +371,7 @@ public class Stack<T> : IEnumerable<T>
   
 -   在迭代器中封装生成列表。 使用迭代器方法，可生成该列表，然后在循环中产出每个结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Collections.Generic>  
  <xref:System.Collections.Generic.IEnumerable%601>  
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  

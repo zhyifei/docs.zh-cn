@@ -3,16 +3,17 @@ title: "dotnet run 命令 - .NET Core CLI"
 description: "dotnet run 命令可便于使用源代码运行应用程序。"
 author: mairaw
 ms.author: mairaw
-ms.date: 09/24/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 1f5a3927859f89bef6c50d3d31b73de43cd1cd31
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 251aca6dcd3edb17fe86dc03ea8f5c6d7d699d48
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-run"></a>dotnet 运行
 
@@ -42,9 +43,9 @@ dotnet run [-h|--help]
 
 ## <a name="description"></a>描述
 
-`dotnet run` 命令为从源代码使用一个命令运行应用程序提供了一个方便的选项。 这对从命令行中进行快速迭代开发很有帮助。 命令取决于生成代码的 [`dotnet build`](dotnet-build.md) 命令。 对于此生成的任何要求，例如项目必须首先还原，同样适用于 `dotnet run`。 
+`dotnet run` 命令为从源代码使用一个命令运行应用程序提供了一个方便的选项。 这对从命令行中进行快速迭代开发很有帮助。 命令取决于生成代码的 [`dotnet build`](dotnet-build.md) 命令。 对于此生成的任何要求，例如项目必须首先还原，同样适用于 `dotnet run`。
 
-输出文件会写入到默认位置，即 `bin/<configuration>/<target>`。 例如，如果具有 `netcoreapp1.0` 应用程序并且运行 `dotnet run`，则输出置于 `bin/Debug/netcoreapp1.0`。 将根据需要覆盖文件。 临时文件将置于 `obj` 目录。 
+输出文件会写入到默认位置，即 `bin/<configuration>/<target>`。 例如，如果具有 `netcoreapp1.0` 应用程序并且运行 `dotnet run`，则输出置于 `bin/Debug/netcoreapp1.0`。 将根据需要覆盖文件。 临时文件将置于 `obj` 目录。
 
 如果该项目指定多个框架，在不使用 `-f|--framework <FRAMEWORK>` 选项指定框架时，执行 `dotnet run` 将导致错误。
 
@@ -57,6 +58,8 @@ dotnet myapp.dll
 有关 `dotnet` 驱动程序的详细信息，请参阅 [.NET Core 命令行工具 (CLI)](index.md) 主题。
 
 若要运行应用程序，`dotnet run` 命令需从 NuGet 缓存解析共享运行时之外的应用程序依赖项。 因为它使用缓存的依赖项，因此，不推荐在生产中使用 `dotnet run` 来运行应用程序。 相反，使用 [`dotnet publish`](dotnet-publish.md)[ 命令创建部署](../deploying/index.md)，并部署已发布的输出。
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="options"></a>选项
 
@@ -133,7 +136,7 @@ dotnet myapp.dll
 指定项目文件的路径和名称。 （请参阅备注。）如果未指定，则默认为当前目录。
 
 > [!NOTE]
-> 通过 `-p|--project` 选项使用项目文件的路径和名称。 CLI 中的回归可阻止使用 .NET Core 1.x SDK 提供文件夹路径。 若要详细了解此问题，请参阅 [dotnet run -p - 无法启动项目 (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)。
+> 通过 `-p|--project` 选项使用项目文件的路径和名称。 CLI 中的回归可阻止使用 .NET Core SDK 1.x 提供文件夹路径。 若要详细了解此问题，请参阅 [dotnet run -p - 无法启动项目 (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)。
 
 ---
 
@@ -150,3 +153,7 @@ dotnet myapp.dll
 运行当前目录中的项目（在本例中，`--help` 参数被传递到应用程序，因为使用了 `--` 参数）：
 
 `dotnet run --configuration Release -- --help`
+
+在当前仅显示最小输出的目录中还原项目的依赖项和工具，然后运行项目（.NET Core SDK 2.0 及更高版本）：
+
+`dotnet run --verbosity m`

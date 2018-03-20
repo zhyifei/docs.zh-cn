@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 表达式（C# 编程指南）
 Lambda 表达式是一种可用于创建 [委托](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 或 [表达式目录树](../../../csharp/programming-guide/delegates/using-delegates.md) 类型的 [匿名函数](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 。 通过使用 lambda 表达式，可以写入可作为参数传递或作为函数调用值返回的本地函数。 Lambda 表达式对于编写 LINQ 查询表达式特别有用。  
@@ -265,7 +265,7 @@ class Test
   
 -   在外部方法中看不到 lambda 表达式内引入的变量。  
   
--   Lambda 表达式无法从封闭方法中直接捕获 `ref` 或 `out` 参数。  
+-   Lambda 表达式无法从封闭方法中直接捕获 `in`、`ref` 或 `out` 参数。  
   
 -   Lambda 表达式中的返回语句不会导致封闭方法返回。  
   

@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>正则表达式选项
 <a name="Top"></a>默认情况下，正则表达式模式中带有任意文本字符的输入字符串比较区分大小写，正则表达式模式中的空白将被解释为文本空白字符且正则表达式中的捕获组通过隐式和显式命名。 可通过指定正则表达式选项修改默认正则表达式行为的这些和其他数个方面。 列于下表的这些选项，可将内联作为正则表达式的一部分包含，或者可将它们作为 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 枚举值提供给 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 类构造函数或静态模式匹配方法。  
@@ -285,7 +285,7 @@ ms.lasthandoff: 12/23/2017
   
 -   始终按原义解释字符内的空格。 例如，正则表达式模式 `[ .,;:]` 匹配任意单个空白字符、句号、逗号、分号或冒号。  
   
--   加括号的量符（如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`）内不得有空格。 例如，因为它包含一个空白字符，所以正则表达式模式 `\d{1. 3}` 与任何从 1 到 3 位数的数字序列不匹配。  
+-   加括号的限定符内不允许有空格，如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`。 例如，因为它包含一个空白字符，所以正则表达式模式 `\d{1. 3}` 与任何从 1 到 3 位数的数字序列不匹配。  
   
 -   引入语言元素的字符序列内不允许有空格。 例如:  
   

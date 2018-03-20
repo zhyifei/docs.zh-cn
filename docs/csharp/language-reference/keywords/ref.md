@@ -1,6 +1,6 @@
 ---
 title: "ref（C# 参考）"
-ms.date: 05/30/2017
+ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -11,15 +11,13 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
@@ -40,35 +38,41 @@ ms.lasthandoff: 02/28/2018
 
 若要使用 `ref` 参数，方法定义和调用方法均必须显式使用 `ref` 关键字，如下面的示例所示。  
 
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]
+[!code-csharp-interactive[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
 
-传递到 `ref` 形参的实参必须先经过初始化，然后才能传递。 这与 [out](out.md) 形参不同，在传递之前，不需要显式初始化该形参的实参。
+传递到 `ref` 或 `in` 形参的实参必须先经过初始化，然后才能传递。 这与 [out](out-parameter-modifier.md) 形参不同，在传递之前，不需要显式初始化该形参的实参。
 
-类的成员不能具有仅在 `ref` 和 `out` 方面不同的签名。 如果类型的两个成员之间的唯一区别在于其中一个具有 `ref` 参数，而另一个具有 `out` 参数，则会发生编译错误。 例如，以下代码将不会编译。  
+类的成员不能具有仅在 `ref`、`in` 或 `out` 方面不同的签名。 如果类型的两个成员之间的唯一区别在于其中一个具有 `ref` 参数，而另一个具有 `out` 或 `in` 参数，则会发生编译器错误。 例如，以下代码将不会编译。  
+
+```csharp
+class CS0663_Example
+{
+    // Compiler error CS0663: "Cannot define overloaded 
+    // methods that differ only on ref and out".
+    public void SampleMethod(out int i) { }
+    public void SampleMethod(ref int i) { }
+}
+```
+但是，当一个方法具有 `ref`、`in` 或 `out` 参数，另一个方法具有值参数时，则可以重载方法，如下面的示例所示。
   
- [!code-csharp[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
   
- 但是，当一个方法具有 `ref` 或 `out` 参数，另一个方法具有值参数时，则可以重载方法，如下面的示例所示。
-  
- [!code-csharp[ref-and-overloads](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]
-  
- 在其他要求签名匹配的情况下（如隐藏或重写），`ref` 和 `out` 是签名的一部分，相互之间不匹配。  
+ 在其他要求签名匹配的情况下（如隐藏或重写），`in`、`ref` 和 `out` 是签名的一部分，相互之间不匹配。  
   
  属性不是变量。 它们是方法，不能传递到 `ref` 参数。  
   
  有关如何传递数组的信息，请参阅[使用 ref 和 out传递数组](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)。  
   
- 你不能将 `ref` 和 `out` 关键字用于以下几种方法：  
+ 不能将 `ref`、`in` 和 `out` 关键字用于以下几种方法：  
   
--   异步方法，通过使用 [async](../../../csharp/language-reference/keywords/async.md) 修饰符定义。  
-  
--   迭代器方法，包括 [yield return](../../../csharp/language-reference/keywords/yield.md) 或 `yield break` 语句。  
-  
+- 异步方法，通过使用 [async](../../../csharp/language-reference/keywords/async.md) 修饰符定义。  
+- 迭代器方法，包括 [yield return](../../../csharp/language-reference/keywords/yield.md) 或 `yield break` 语句。  
+
 ## <a name="passing-an-argument-by-reference-an-example"></a>按引用传递参数：示例
 
 前面的示例按引用传递值类型。 还可使用 `ref` 关键字按引用传递引用类型。 按引用传递引用类型使所调用方能够替换调用方中引用参数引用的对象。 对象的存储位置按引用参数的值传递到方法。 如果更改参数存储位置中的值（以指向新对象），你还可以将存储位置更改为调用方所引用的位置。 下面的示例将引用类型的实例作为 `ref` 参数传递。   
   
- [!code-csharp[ReferencesByRef](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
 有关如何通过值和引用传递引用类型的详细信息，请参阅[传递引用类型参数](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)。
   
@@ -111,11 +115,11 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 
 下列示例定义一个具有两个 <xref:System.String> 字段（`Title` 和 `Author`）的 `Book` 类。 还定义包含 `Book` 对象的专用数组的 `BookCollection` 类。 通过调用 `GetBookByTitle` 方法，可按引用返回个别 book 对象。
 
-[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#1)]  
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
 
 调用方将 `GetBookByTitle` 方法所返回的值存储为 ref 局部变量时，调用方对返回值所做的更改将反映在 `BookCollection` 对象中，如下例所示。
 
-[!code-csharp[csrefreturns](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-5.cs#2)]  
+[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
