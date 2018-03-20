@@ -2,7 +2,8 @@
 title: "@（C# 参考）"
 ms.date: 02/09/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - '@_CSharpKeyword'
@@ -13,29 +14,29 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30f937951557ba65971a752b414cce6b485149be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b62231afc3014f9fc2b9ac7bd39168f40e12c8d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="-c-reference"></a><span data-ttu-id="8c6d9-102">@（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="8c6d9-102">@ (C# Reference)</span></span>
+# <a name="-c-reference"></a><span data-ttu-id="c1139-102">@（C# 参考）</span><span class="sxs-lookup"><span data-stu-id="c1139-102">@ (C# Reference)</span></span>
 
-<span data-ttu-id="8c6d9-103">`@` 特殊字符用作原义标识符。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-103">The `@` special character serves as a verbatim identifier.</span></span> <span data-ttu-id="8c6d9-104">它具有以下用途：</span><span class="sxs-lookup"><span data-stu-id="8c6d9-104">It can be used in the following ways:</span></span>
+<span data-ttu-id="c1139-103">`@` 特殊字符用作原义标识符。</span><span class="sxs-lookup"><span data-stu-id="c1139-103">The `@` special character serves as a verbatim identifier.</span></span> <span data-ttu-id="c1139-104">它具有以下用途：</span><span class="sxs-lookup"><span data-stu-id="c1139-104">It can be used in the following ways:</span></span>
 
-1. <span data-ttu-id="8c6d9-105">使 C# 关键字用作标识符。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-105">To enable C# keywords to be used as identifiers.</span></span> <span data-ttu-id="8c6d9-106">`@` 字符可作为代码元素的前缀，编译器将把此代码元素解释为标识符而非 C# 关键字。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-106">The `@` character prefixes a code element that the compiler is to interpret as an identifier rather than a C# keyword.</span></span> <span data-ttu-id="8c6d9-107">下面的示例使用 `@` 字符定义其在 `for` 循环中使用的名为 `for` 的标识符。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-107">The following example uses the `@` character to define an identifier named `for` that it uses in a `for` loop.</span></span>
+1. <span data-ttu-id="c1139-105">使 C# 关键字用作标识符。</span><span class="sxs-lookup"><span data-stu-id="c1139-105">To enable C# keywords to be used as identifiers.</span></span> <span data-ttu-id="c1139-106">`@` 字符可作为代码元素的前缀，编译器将把此代码元素解释为标识符而非 C# 关键字。</span><span class="sxs-lookup"><span data-stu-id="c1139-106">The `@` character prefixes a code element that the compiler is to interpret as an identifier rather than a C# keyword.</span></span> <span data-ttu-id="c1139-107">下面的示例使用 `@` 字符定义其在 `for` 循环中使用的名为 `for` 的标识符。</span><span class="sxs-lookup"><span data-stu-id="c1139-107">The following example uses the `@` character to define an identifier named `for` that it uses in a `for` loop.</span></span>
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. <span data-ttu-id="8c6d9-108">指示将原义解释字符串。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-108">To indicate that a string literal is to be interpreted verbatim.</span></span> <span data-ttu-id="8c6d9-109">`@` 字符在此实例中定义原义标识符。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-109">The `@` character in this instance defines a *verbatim string literal*.</span></span> <span data-ttu-id="8c6d9-110">简单转义序列（如代表反斜杠的 `"\\"`）、十六进制转义序列（如代表大写字母 A 的 `"\x0041"`）和 Unicode 转义序列（如代表大写字母 A 的 `"\u0041"`）都将按字面解释。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-110">Simple escape sequences (such as `"\\"` for a backslash), hexadecimal escape sequences (such as `"\x0041"` for an uppercase A, and Unicode escape sequences, such as `"\u0041"` for an uppercase A, are interpreted literally.</span></span> <span data-ttu-id="8c6d9-111">只有引号转义序列 (`""`) 不会按字面解释；因为它生成单引号。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-111">Only a quote escape sequence (`""`) is not interpreted literally; it produces a single quotation mark.</span></span> <span data-ttu-id="8c6d9-112">下面的示例分别使用常规字符串和原义字符串定义两个相同的文件路径。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-112">The following example defines two identical file paths, one by using a regular string literal and the other by using a verbatim string literal.</span></span> <span data-ttu-id="8c6d9-113">这是原义字符串的较常见用法之一。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-113">This is one of the more common uses of verbatim string literals.</span></span>
+1. <span data-ttu-id="c1139-108">指示将原义解释字符串。</span><span class="sxs-lookup"><span data-stu-id="c1139-108">To indicate that a string literal is to be interpreted verbatim.</span></span> <span data-ttu-id="c1139-109">`@` 字符在此实例中定义原义标识符。</span><span class="sxs-lookup"><span data-stu-id="c1139-109">The `@` character in this instance defines a *verbatim string literal*.</span></span> <span data-ttu-id="c1139-110">简单转义序列（如代表反斜杠的 `"\\"`）、十六进制转义序列（如代表大写字母 A 的 `"\x0041"`）和 Unicode 转义序列（如代表大写字母 A 的 `"\u0041"`）都将按字面解释。</span><span class="sxs-lookup"><span data-stu-id="c1139-110">Simple escape sequences (such as `"\\"` for a backslash), hexadecimal escape sequences (such as `"\x0041"` for an uppercase A, and Unicode escape sequences, such as `"\u0041"` for an uppercase A, are interpreted literally.</span></span> <span data-ttu-id="c1139-111">只有引号转义序列 (`""`) 不会按字面解释；因为它生成单引号。</span><span class="sxs-lookup"><span data-stu-id="c1139-111">Only a quote escape sequence (`""`) is not interpreted literally; it produces a single quotation mark.</span></span> <span data-ttu-id="c1139-112">下面的示例分别使用常规字符串和原义字符串定义两个相同的文件路径。</span><span class="sxs-lookup"><span data-stu-id="c1139-112">The following example defines two identical file paths, one by using a regular string literal and the other by using a verbatim string literal.</span></span> <span data-ttu-id="c1139-113">这是原义字符串的较常见用法之一。</span><span class="sxs-lookup"><span data-stu-id="c1139-113">This is one of the more common uses of verbatim string literals.</span></span>
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 
-   <span data-ttu-id="8c6d9-114">下面的示例演示定义包含相同字符序列的常规字符串和原义字符串的效果。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-114">The following example illustrates the effect of defining a regular string literal and a verbatim string literal that contain identical character sequences.</span></span>
+   <span data-ttu-id="c1139-114">下面的示例演示定义包含相同字符序列的常规字符串和原义字符串的效果。</span><span class="sxs-lookup"><span data-stu-id="c1139-114">The following example illustrates the effect of defining a regular string literal and a verbatim string literal that contain identical character sequences.</span></span>
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. <span data-ttu-id="8c6d9-115">使编译器在命名冲突的情况下区分两种属性。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-115">To enable the compiler to distinguish between attributes in cases of a naming conflict.</span></span> <span data-ttu-id="8c6d9-116">属性是派生自 <xref:System.Attribute> 的类型。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-116">An attribute is a type that derives from <xref:System.Attribute>.</span></span> <span data-ttu-id="8c6d9-117">其类型名称通常包含后缀 **Attribute**，但编译器不会强制进行此转换。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-117">Its type name typically includes the suffix **Attribute**, although the compiler does not enforce this convention.</span></span> <span data-ttu-id="8c6d9-118">随后可在代码中按其完整类型名称（例如 `[InfoAttribute]`）或短名称（例如 `[Info]`）引用此属性。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-118">The attribute can then be referenced in code either by its full type name (for example, `[InfoAttribute]` or its shortened name (for example, `[Info]`).</span></span> <span data-ttu-id="8c6d9-119">但是，如果两个短名称相同，并且一个类型名称包含 **Attribute** 后缀而另一类型名称不包含，则会出现命名冲突。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-119">However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the **Attribute** suffix but the other does not.</span></span> <span data-ttu-id="8c6d9-120">例如，由于编译器无法确定将 `Info` 还是 `InfoAttribute` 属性应用于 `Main` 方法，因此下面的代码无法编译。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-120">For example, the following code fails to compile because the compiler cannot determine whether the `Info` or `InfoAttribute` attribute is applied to the `Main` method.</span></span>
+1. <span data-ttu-id="c1139-115">使编译器在命名冲突的情况下区分两种属性。</span><span class="sxs-lookup"><span data-stu-id="c1139-115">To enable the compiler to distinguish between attributes in cases of a naming conflict.</span></span> <span data-ttu-id="c1139-116">属性是派生自 <xref:System.Attribute> 的类型。</span><span class="sxs-lookup"><span data-stu-id="c1139-116">An attribute is a type that derives from <xref:System.Attribute>.</span></span> <span data-ttu-id="c1139-117">其类型名称通常包含后缀 **Attribute**，但编译器不会强制进行此转换。</span><span class="sxs-lookup"><span data-stu-id="c1139-117">Its type name typically includes the suffix **Attribute**, although the compiler does not enforce this convention.</span></span> <span data-ttu-id="c1139-118">随后可在代码中按其完整类型名称（例如 `[InfoAttribute]`）或短名称（例如 `[Info]`）引用此属性。</span><span class="sxs-lookup"><span data-stu-id="c1139-118">The attribute can then be referenced in code either by its full type name (for example, `[InfoAttribute]` or its shortened name (for example, `[Info]`).</span></span> <span data-ttu-id="c1139-119">但是，如果两个短名称相同，并且一个类型名称包含 **Attribute** 后缀而另一类型名称不包含，则会出现命名冲突。</span><span class="sxs-lookup"><span data-stu-id="c1139-119">However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the **Attribute** suffix but the other does not.</span></span> <span data-ttu-id="c1139-120">例如，由于编译器无法确定将 `Info` 还是 `InfoAttribute` 属性应用于 `Example` 类，因此下面的代码无法编译。</span><span class="sxs-lookup"><span data-stu-id="c1139-120">For example, the following code fails to compile because the compiler cannot determine whether the `Info` or `InfoAttribute` attribute is applied to the `Example` class.</span></span>
 
    ```csharp
    using System;
@@ -72,11 +73,11 @@ ms.lasthandoff: 11/21/2017
    }
    ```  
 
-   <span data-ttu-id="8c6d9-121">如果使用原义标识符标识 `Info` 属性，该示例就可成功进行编译。</span><span class="sxs-lookup"><span data-stu-id="8c6d9-121">If the verbatim identifier is used to identify the `Info` attribute, the example compiles successfully.</span></span>
+   <span data-ttu-id="c1139-121">如果使用原义标识符标识 `Info` 属性，该示例就可成功进行编译。</span><span class="sxs-lookup"><span data-stu-id="c1139-121">If the verbatim identifier is used to identify the `Info` attribute, the example compiles successfully.</span></span>
 
    [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
 
-## <a name="see-also"></a><span data-ttu-id="8c6d9-122">另请参阅</span><span class="sxs-lookup"><span data-stu-id="8c6d9-122">See Also</span></span>  
- [<span data-ttu-id="8c6d9-123">C# 参考</span><span class="sxs-lookup"><span data-stu-id="8c6d9-123">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="8c6d9-124">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="8c6d9-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="8c6d9-125">C# 特殊字符</span><span class="sxs-lookup"><span data-stu-id="8c6d9-125">C# Special Characters</span></span>](../../../csharp/language-reference/tokens/index.md)
+## <a name="see-also"></a><span data-ttu-id="c1139-122">请参阅</span><span class="sxs-lookup"><span data-stu-id="c1139-122">See Also</span></span>  
+ [<span data-ttu-id="c1139-123">C# 参考</span><span class="sxs-lookup"><span data-stu-id="c1139-123">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="c1139-124">C# 编程指南</span><span class="sxs-lookup"><span data-stu-id="c1139-124">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c1139-125">C# 特殊字符</span><span class="sxs-lookup"><span data-stu-id="c1139-125">C# Special Characters</span></span>](../../../csharp/language-reference/tokens/index.md)
