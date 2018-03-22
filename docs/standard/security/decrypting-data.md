@@ -1,12 +1,12 @@
 ---
-title: "解密数据"
-ms.custom: 
+title: 解密数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -184,7 +184,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>不对称解密  
  通常，一方（A 方）同时生成公钥和私钥，并将其存储在内存或加密密钥容器中。  然后 A 方将公钥发送到另一方（B 方）。  B 方使用此公钥将数据加密后发送回 A 方。接收到数据后，A 方使用对应的私钥将其解密。  A 方只有使用与 B 方用于加密数据的公钥相对应的私钥，解密才能成功。  
   
- 有关如何将非对称密钥存储在安全加密密钥容器中以及随后如何获取非对称密钥的信息，请参阅 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
+ 有关如何将非对称密钥存储在安全加密密钥容器中以及随后如何获取非对称密钥的信息，请参阅 [如何：将非对称密钥存储在密钥容器中](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
   
  下面的示例阐释如何对表示一个对称密钥和 IV 的两个字节数组进行解密。  有关如何以可方便地发送到第三方的格式从 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 对象提取非对称公钥的信息，请参阅 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)的托管流的值。  
   

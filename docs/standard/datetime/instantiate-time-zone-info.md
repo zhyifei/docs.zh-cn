@@ -1,12 +1,12 @@
 ---
-title: "如何： 实例化 TimeZoneInfo 对象"
-ms.custom: 
+title: 如何： 实例化 TimeZoneInfo 对象
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - instantiating time zone objects
 - time zone objects [.NET Framework], instantiation
 ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/23/2017
 [!code-csharp[System.TimeZone2.Concepts#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#5)]
 [!code-vb[System.TimeZone2.Concepts#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#5)]
 
-<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType>方法的单个参数是时区的标识符，你想要检索，对应于对象的<xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType>属性。 时区标识符是唯一标识时区的键字段。 虽然大多数键都相对较短，但时区标识符相对较长。 在大多数情况下，其值对应于 <xref:System.TimeZoneInfo.StandardName%2A> 对象的 <xref:System.TimeZoneInfo> 属性，该属性用于提供时区标准时间的名称。 但是，有例外情况。 确保提供有效标识符的最好方法是枚举系统上可用的时区，然后记下上面显示的时区标识符。 有关说明，请参阅 [How to: Enumerate time zones present on a computer](../../../docs/standard/datetime/enumerate-time-zones.md)。 [Finding the time zones defined on a local system](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) 主题还包含所选时区标识符的列表。
+<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType>方法的单个参数是时区的标识符，你想要检索，对应于对象的<xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType>属性。 时区标识符是唯一标识时区的键字段。 虽然大多数键都相对较短，但时区标识符相对较长。 在大多数情况下，其值对应于 <xref:System.TimeZoneInfo.StandardName%2A> 对象的 <xref:System.TimeZoneInfo> 属性，该属性用于提供时区标准时间的名称。 但是，有例外情况。 确保提供有效标识符的最好方法是枚举系统上可用的时区，然后记下上面显示的时区标识符。 有关说明，请参阅 [如何：枚举计算机上存在的时区](../../../docs/standard/datetime/enumerate-time-zones.md)。 [查找本地系统上定义的时区](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)主题还包含了一个所选时区标识符列表。
 
 如果找到时区，该方法将返回其 <xref:System.TimeZoneInfo> 对象。 如果未找到时区，该方法将引发 <xref:System.TimeZoneNotFoundException>。 如果找到该时区但其数据已损坏或不完整，该方法将引发 <xref:System.InvalidTimeZoneException>。
 
