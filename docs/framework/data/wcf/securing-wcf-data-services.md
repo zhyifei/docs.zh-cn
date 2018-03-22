@@ -1,12 +1,13 @@
 ---
-title: "WCF 数据服务的安全"
-ms.custom: 
+title: WCF 数据服务的安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,11 +16,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c45da4ec1fa5d111be19437dde54035a89f9162e
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -78,7 +80,7 @@ context.Credentials = _
  侦听器可用于在数据服务对数据服务资源采取操作之前截取对它们的请求。 有关详细信息，请参阅[拦截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。 拦截器可让您基于发出请求的已进行身份验证的用户作出授权决策。 [!INCLUDE[crexample](../../../../includes/crexample-md.md)]如何限制对数据服务资源的访问基于经过身份验证的用户标识，请参阅[如何： 截获数据服务消息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
 ### <a name="restrict-access-to-the-persisted-data-store-and-local-resources"></a>限制对持久数据存储区和本地资源的访问  
- 用于访问持久存储区的帐户应仅授予刚好足够的数据库或文件系统权限以支持数据服务的要求。 在使用匿名身份验证时，这是用于运行主机应用程序的帐户。 有关详细信息，请参阅 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。 使用模拟时，必须为经过身份验证的用户授予这些资源的访问权限，通常是作为 Windows 组的一部分。  
+ 用于访问持久存储区的帐户应仅授予刚好足够的数据库或文件系统权限以支持数据服务的要求。 在使用匿名身份验证时，这是用于运行主机应用程序的帐户。 有关详细信息，请参阅 [如何：开发在 IIS 上运行的 WCF 数据服务](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。 使用模拟时，必须为经过身份验证的用户授予这些资源的访问权限，通常是作为 Windows 组的一部分。  
   
 ## <a name="other-security-considerations"></a>其他安全注意事项  
   
