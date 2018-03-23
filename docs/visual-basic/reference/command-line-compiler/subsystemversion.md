@@ -1,35 +1,34 @@
 ---
-title: /subsystemversion (Visual Basic)
-ms.date: 07/20/2015
+title: -subsystemversion (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8330896f890febc4d9f8627715fdd55a8f341f0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 9369f87f62bd2f481c543f6cdbb3344ac841193e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="subsystemversion-visual-basic"></a>/subsystemversion (Visual Basic)
+# <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 指定可以运行生成的可执行文件的子系统的最低版本，以此确定可以运行该可执行文件的 Windows 版本。 大多数情况下，此选项确保该可执行文件可以利用早期 Windows 版本中未提供的特定安全功能。  
   
 > [!NOTE]
->  若要指定子系统本身，请使用 [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 编译器选项。  
+>  若要指定子系统本身，请使用 [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) 编译器选项。  
   
 ## <a name="syntax"></a>语法  
   
 ```vb  
-/subsystemversion:major.minor  
+-subsystemversion:major.minor  
 ```  
   
 #### <a name="parameters"></a>参数  
@@ -52,7 +51,7 @@ ms.lasthandoff: 10/18/2017
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>默认值  
- **/subsystemversion** 编译器选项的默认值取决于以下列表中的条件：  
+ -subsystemversion 编译器选项的默认值取决于以下列表中的条件：  
   
 -   只要设置了以下列表中的任意编译器选项，则默认值为 6.02：  
   
@@ -60,14 +59,14 @@ ms.lasthandoff: 10/18/2017
   
     -   [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
   
-    -   [/platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
+    -   [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
   
 -   如果使用 MSBuild，面向 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]，并且未设置先前在此列表中指定的任何编译器选项，则默认值为 6.00。  
   
 -   如果前面的条件均不符合，则默认值为 4.00。  
   
 ## <a name="setting-this-option"></a>设置此选项  
- 若要设置**/subsystemversion**编译器选项在 Visual Studio 中，你必须打开.vbproj 文件和指定的值`SubsystemVersion`MSBuild XML 中的属性。 不能在 Visual Studio IDE 中设置此选项。 有关详细信息，请参阅本主题前面的“默认值”或[常用的 MSBuild 项目属性](/visualstudio/msbuild/common-msbuild-project-properties)。  
+ 若要设置**-subsystemversion**编译器选项在 Visual Studio 中，你必须打开.vbproj 文件和指定的值`SubsystemVersion`MSBuild XML 中的属性。 不能在 Visual Studio IDE 中设置此选项。 有关详细信息，请参阅本主题前面的“默认值”或[常用的 MSBuild 项目属性](/visualstudio/msbuild/common-msbuild-project-properties)。  
   
 
   
