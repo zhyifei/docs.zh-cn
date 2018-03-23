@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc14d090951f12fd322b90fababa064d1f5b4e80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令行编译器用作一种编译来自 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 的程序的替代方法提供。 以下是按功能分类排序的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令行编译器选项的列表。  
+Visual Basic 命令行编译器提供作为编译来自程序的替代方法[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境 (IDE)。 下面是 Visual Basic 命令行编译器选项按功能分类排序的列表。  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="compiler-output"></a>编译器输出  
   
@@ -45,6 +47,8 @@ ms.lasthandoff: 03/22/2018
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|处理 XML 文件的文档注释。|  
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器从而以 [!INCLUDE[Compact](~/includes/compact-md.md)] 为目标。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定输出目录。|  
+|[/refonly](refonly-compiler-option.md)|输出仅引用程序集。|
+|[/refout](refout-compiler-option.md)|指定引用程序集的输出路径。|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|指定输出的格式。|  
   
 ## <a name="net-assemblies"></a>.NET 程序集  
@@ -113,7 +117,7 @@ ms.lasthandoff: 03/22/2018
 |[@（指定响应文件）](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定响应文件。|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定的 DLL 的基址。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定要用于编译中所有源代码文件的代码页。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器应报告内部编译器错误的方式。|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 编译器应报告内部编译器错误的方式。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|向 Windows 内核提供下列信息：特定的可执行文件是否支持高熵地址空间布局随机化 (ASLR)。|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定的类，包含`Sub Main`要使用在启动过程。|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|不要使用 Vbc.rsp 进行编译|  
@@ -130,6 +134,6 @@ ms.lasthandoff: 03/22/2018
   
 ## <a name="see-also"></a>另请参阅  
  [按字母顺序列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [项目设计器简介](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [项目设计器简介](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)

@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 命令行编译器"
+title: Visual Basic 命令行编译器
 ms.date: 02/20/2018
 ms.prod: .net
 ms.technology:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b1219a5965352057ab6fe564282394e14f6d063
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 1a2f03a62488b746b623b7ead94c122b40178a97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic 命令行编译器
 
 Visual Basic 命令行编译器提供了编译的程序从 Visual Studio 集成的开发环境 (IDE) 中的替代方法。 本部分包含有关 Visual Basic 编译器选项的说明。
 
-每个编译器选项均以两种形式:-选项和 /option。 Visual Basic 文档仅显示 /option 窗体。
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>本节内容
 

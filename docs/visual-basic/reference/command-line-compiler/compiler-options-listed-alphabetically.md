@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a1619343874396e22c3606f8a0aeadd81cd7a
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>按字母顺序列出的 Visual Basic 编译器选项
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令行编译器用作一种编译来自 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 的程序的替代方法。 以下是按字母顺序排序的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令行编译器选项的列表。  
+Visual Basic 命令行编译器提供作为编译的程序从备用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境 (IDE)。 下面是 Visual Basic 命令行编译器选项按字母顺序排序的列表。  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 |选项|目标|  
 |------------|-------------|  
@@ -36,9 +38,9 @@ ms.lasthandoff: 03/22/2018
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定义条件编译的符号。|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|指定程序集是完全签名的还是部分签名的。|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|将文档注释处理到一个 XML 文件中。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器应报告内部编译器错误的方式。|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 编译器应报告内部编译器错误的方式。|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定输出文件各节的对齐位置。|  
-|[-help](../../../visual-basic-reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-?` 选项。 未进行编译。|  
+|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-?` 选项。 未进行编译。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|指示特定的可执行文件是否支持高熵地址空间布局随机化 (ASLR)。|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|从指定的程序集导入命名空间。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定密钥对的密钥容器名称从而为程序集赋予强名称。|  
@@ -67,6 +69,8 @@ ms.lasthandoff: 03/22/2018
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|阻止编译器显示与语法相关的错误和警告的代码。|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|搜索要编译的源文件的子目录。|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|从程序集导入元数据。|  
+|[/refonly](refonly-compiler-option.md)|输出仅引用程序集。|
+|[/refout](refout-compiler-option.md)|指定引用程序集的输出路径。|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|禁用整数溢出检查。|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|将托管资源嵌入程序集。|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|指定所有类型声明的命名空间。|  

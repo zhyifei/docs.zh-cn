@@ -1,13 +1,13 @@
 ---
-title: ".NET 性能提示"
-ms.custom: 
+title: .NET 性能提示
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - C# language, performance
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Visual Basic, performance
 - performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload:
 - wiwagn
-ms.openlocfilehash: cad50862d5ed05dd13c3f73f50af0c466ad930cd
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: ac1f5b9e0897650751320a7f5a9290c378d428b6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-performance-tips"></a>.NET 性能提示
 术语“性能”通常指程序的执行速度。 有时通过遵循源代码中的一些基本规则便可以提高执行速度。 在某些程序中，十分重要的一点是需要仔细检查代码并使用探查器确保程序尽可能快地运行。 而在其他程序中，由于代码在编写时便运行得足够快，因此不必执行此类优化。 本文列出了一些性能可能遭受影响的常见领域以及相关改进建议，并提供其他性能主题的链接。 有关规划和测量性能的详细信息，请参阅[性能](../../../docs/framework/performance/index.md)  
@@ -48,12 +48,12 @@ ms.lasthandoff: 02/19/2018
 -   [垃圾回收器基础知识和性能提示](http://go.microsoft.com/fwlink/?LinkId=99296)  
   
 -   [.NET 应用程序的性能提示和技巧](http://go.microsoft.com/fwlink/?LinkId=99297)  
-  
--   [了解用于 .NET 的诊断工具](http://go.microsoft.com/fwlink/?LinkId=112407)  
-  
+
 -   [Rico Mariani 关于性能问题的见解](http://go.microsoft.com/fwlink/?LinkId=115679)  
+
+-   [Vance Morrison 的博客](https://blogs.msdn.microsoft.com/vancem/)
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [性能](../../../docs/framework/performance/index.md)  
  [编程概念](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
  [Visual Basic 编程指南](../../visual-basic/programming-guide/index.md)  
