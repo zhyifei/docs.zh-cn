@@ -1,26 +1,26 @@
 ---
-title: "WCF 服务发布"
-ms.custom: 
+title: WCF 服务发布
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 服务发布
 从基于 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务主机和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端提供的早期开发环境进行处理，到实际将应用程序部署到生产环境中以进行测试，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布都对您有所帮助。 在提交最终部署计划之前，可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务发布来验证您的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务是否正常运行以及是否可以发布。 也可以选择将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库部署到多个不同的目标位置，以进行测试。  

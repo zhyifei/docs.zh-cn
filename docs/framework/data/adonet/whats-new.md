@@ -1,26 +1,28 @@
 ---
-title: "什么 &#39; s ADO.NET 中的新增功能"
-ms.custom: 
+title: 什么&#39;s ADO.NET 中的新增功能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="what39s-new-in-adonet"></a>什么 &#39; s ADO.NET 中的新增功能
+# <a name="what39s-new-in-adonet"></a>什么&#39;s ADO.NET 中的新增功能
 以下是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新增功能。  
   
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider  
@@ -54,14 +56,14 @@ ms.lasthandoff: 01/19/2018
   
 -   `Type System Version=SQL Server 2012;` 是传递给 `Type System Version` 连接属性的新值。 `Type System Version=Latest;` 值现已过时，它与 `Type System Version=SQL Server 2008;` 等效。 有关详细信息，请参阅<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
   
--   SqlClient 为稀疏列（SQL Server 2008 中新增的功能）提供额外支持。 如果应用程序已访问使用稀疏列的表中的数据，应看到性能有所提高。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 列指示某列是否为属于列集成员的稀疏列。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>指示列是否为稀疏列 (请参阅[SQL Server 架构集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)有关详细信息)。 有关稀疏列的详细信息，请参阅[使用稀疏列](http://go.microsoft.com/fwlink/?LinkId=224244)。  
+-   SqlClient 为稀疏列（SQL Server 2008 中新增的功能）提供额外支持。 如果应用程序已访问使用稀疏列的表中的数据，应看到性能有所提高。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 列指示某列是否为属于列集成员的稀疏列。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 指示列是否为稀疏列 (请参阅[SQL Server 架构集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)有关详细信息)。 有关稀疏列的详细信息，请参阅[使用稀疏列](http://go.microsoft.com/fwlink/?LinkId=224244)。  
   
 -   包含空间数据类型的程序集 Microsoft.SqlServer.Types.dll 已从 10.0 版本升级到版本 11.0。 引用此程序集的应用程序可能失败。 有关详细信息，请参阅[数据库引擎功能的重大更改](http://go.microsoft.com/fwlink/?LinkId=224367)。  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET 实体框架  
  当与实体框架5.0 一起使用时，[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 添加启用新方案的 API。 有关改进和功能的已添加到实体框架 5.0 的详细信息，请参阅以下主题：[新增](http://go.microsoft.com/fwlink/?LinkID=251106)和[实体框架发行和版本控制](http://go.microsoft.com/fwlink/?LinkId=234899)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  

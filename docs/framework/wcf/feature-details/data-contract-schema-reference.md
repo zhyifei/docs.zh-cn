@@ -1,34 +1,34 @@
 ---
-title: "数据协定架构参考"
-ms.custom: 
+title: 数据协定架构参考
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data-contract-schema-reference"></a>数据协定架构参考
 本主题介绍 <xref:System.Runtime.Serialization.DataContractSerializer> 用来描述 XML 序列化的公共语言运行库 (CLR) 类型的 XML 架构 (XSD) 的子集。  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 映射  
- 在使用元数据终结点或 `DataContractSerializer` 从 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务中导出元数据时， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)将 CLR 类型映射到 XSD。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定序列化程序](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
+ 在使用元数据终结点或 `DataContractSerializer` 从 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务中导出元数据时， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)将 CLR 类型映射到 XSD。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [数据协定序列化程序](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
   
  在使用 Svcutil.exe 访问 Web 服务描述语言 (WSDL) 或 XSD 并生成服务或客户端的数据协定时， `DataContractSerializer` 还会将 XSD 映射到 CLR 类型。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |`elementFormDefault`|必须进行限定。 必须对一个架构的所有元素进行限定才能得到 `DataContractSerializer`的支持。 这可以通过这两个设置xs:schema/@elementFormDefault到"限定"或通过设置xs:element/@form为"限定"上每个单独元素声明。|  
 |`finalDefault`|已忽略。|  
 |`Id`|已忽略。|  
-|`targetNamespace`|支持，并已映射到数据协定命名空间。 如果未指定此属性，则使用空白命名空间。 不可以是保留的命名空间 http://schemas.microsoft.com/2003/10/Serialization/。|  
+|`targetNamespace`|支持，并已映射到数据协定命名空间。 如果未指定此属性，则使用空白命名空间。 不能为保留的命名空间http://schemas.microsoft.com/2003/10/Serialization/。|  
 |`version`|已忽略。|  
   
 ### <a name="xsschema-contents"></a>\<xs:schema >： 内容  
@@ -213,7 +213,7 @@ ms.lasthandoff: 12/22/2017
 |`keyref`|已忽略。|  
 |(空白)|支持。|  
   
- \*使用时`simpleType`和`complexType,`匿名类型的映射是与非匿名类型相同，只不过没有匿名数据协定，因此创建命名的数据协定，使用派生自元素名称的生成名称。 下面的列表中是匿名类型的规则：  
+ \* 使用时`simpleType`和`complexType,`匿名类型的映射是与非匿名类型相同，只不过没有匿名数据协定，因此创建命名的数据协定，使用派生自元素名称的生成名称。 下面的列表中是匿名类型的规则：  
   
 -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现详细信息：如果 `xs:element` 名称不包含句点，则匿名类型映射到外部数据协定类型的内部类型。 如果名称包含句点，则结果数据协定类型是独立的（不是内部类型）。  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/22/2017
 |`list`|支持。 映射到标志枚举数据协定。 请参见“ `xs:simpleType` 列表”一节。|  
 |`union`|已禁止。|  
   
-### <a name="xsrestriction"></a>\<xs: restriction >  
+### <a name="xsrestriction"></a>\<xs:restriction>  
   
 -   仅 base="`xs:anyType`" 支持复杂类型限制。  
   
@@ -342,7 +342,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs:list >  
+### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` 将用 `System.FlagsAttribute` 标记的枚举类型映射到从 `xs:list` 派生的 `xs:string`。 不支持其他 `xs:list` 变体。  
   
 ### <a name="xslist-attributes"></a>\<xs:list >： 属性  
@@ -537,7 +537,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>。|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 类型映射  
- 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 中，已引入 `ISerializable` 作为一种用于序列化持久性或数据传输对象的机制。 有许多实现 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 `ISerializable` 类型，这些类型可以在应用程序之间进行传递。 `DataContractSerializer` 自然支持 `ISerializable` 类。 `DataContractSerializer` 映射到 `ISerializable` 实现架构类型，这些类型仅在类型的 QName（限定名）上存在不同，并且实际上是属性集合。 例如， `DataContractSerializer` 将 <xref:System.Exception> 映射到下面 http://schemas.datacontract.org/2004/07/System 命名空间中的 XSD 类型。  
+ 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 中，已引入 `ISerializable` 作为一种用于序列化持久性或数据传输对象的机制。 有许多实现 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 `ISerializable` 类型，这些类型可以在应用程序之间进行传递。 `DataContractSerializer` 自然支持 `ISerializable` 类。 `DataContractSerializer` 映射到 `ISerializable` 实现架构类型，这些类型仅在类型的 QName（限定名）上存在不同，并且实际上是属性集合。 例如，`DataContractSerializer`映射<xref:System.Exception>到中的以下 XSD 类型http://schemas.datacontract.org/2004/07/System命名空间。  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -695,7 +695,7 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  

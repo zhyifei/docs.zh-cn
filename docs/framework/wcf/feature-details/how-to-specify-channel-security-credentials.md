@@ -1,24 +1,26 @@
 ---
-title: "如何：指定通道安全凭据"
-ms.custom: 
+title: 如何：指定通道安全凭据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>如何：指定通道安全凭据
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务标记允许 COM 应用程序调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 大多数 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务都要求客户端指定用于身份验证和授权的凭据。 当从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，您可以在托管代码或应用程序配置文件中指定这些凭据 当从 COM 应用程序调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，您可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据。 本主题将介绍使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 接口指定凭据的各种方法。  
@@ -148,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
      有关用于此方法的参数的更多信息，请参见 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [联合](../../../../docs/framework/wcf/feature-details/federation.md)  
  [如何：在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  

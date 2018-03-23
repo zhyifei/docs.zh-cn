@@ -1,24 +1,26 @@
 ---
-title: "302 - 出现用户定义的警告"
-ms.custom: 
+title: 302 - 出现用户定义的警告
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1f0bf1-0151-45e6-be92-573d397b54de
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ae455c9eec2335fcf6eb5473932bd8d9e5d2db95
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="302---userdefinedwarningoccurred"></a>302 - 出现用户定义的警告
 ## <a name="properties"></a>属性  
@@ -40,6 +42,6 @@ ms.lasthandoff: 12/22/2017
   
 |数据项名称|数据项类型|描述|  
 |--------------------|--------------------|-----------------|  
-|name|`xs:string`|事件的用户定义名称。|  
-|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为网站名称应用程序虚拟路径 &#124;服务虚拟路径 &#124;ServiceName。 示例: 默认网站/CalculatorApplication &#124;/CalculatorService.svc &#124;CalculatorService。|  
+|名称|`xs:string`|事件的用户定义名称。|  
+|HostReference|`xs:string`|对于 Web 承载的服务，此字段唯一标识 Web 层次结构中的服务。 其格式定义为网站名称应用程序虚拟路径&#124;服务虚拟路径&#124;ServiceName。 示例: 默认网站/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService。|  
 |Payload|`xs:string`|事件的用户定义负载。|

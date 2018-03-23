@@ -1,7 +1,7 @@
 ---
-title: ".NET 术语表"
-description: "了解 .NET 文档中所用的选定术语的含义。"
-keywords: ".NET 术语表, .NET 字典, .NET 术语, .NET 平台, .NET framework, .NET 运行时"
+title: .NET 术语表
+description: 了解 .NET 文档中所用的选定术语的含义。
+keywords: .NET 术语表, .NET 字典, .NET 术语, .NET 平台, .NET framework, .NET 运行时
 author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
@@ -13,10 +13,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-glossary"></a>.NET 术语表
 

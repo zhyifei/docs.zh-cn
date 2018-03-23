@@ -17,10 +17,10 @@ manager: craigg
 ms.workload:
 - dotnet
 ms.openlocfilehash: b44934aa0db73f872f0ab27a4c36c5c615855de1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 组合两个 `Boolean` 表达式。  
@@ -43,7 +43,7 @@ boolean_expression || boolean_expression
 ## <a name="remarks"></a>备注  
  OR 是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 逻辑运算符。 它用于组合两个条件。 在一个语句中使用多个逻辑运算符时，首先计算 AND 运算符，然后计算 OR 运算符。 不过，使用括号可以更改求值的顺序。  
   
- 双竖线 (&#124; &#124;) 具有相同的功能与 OR 运算符。  
+ 双竖线 (&#124;&#124;) 具有相同的功能与 OR 运算符。  
   
  下表显示可能的输入值和返回类型。  
   
@@ -62,5 +62,5 @@ boolean_expression || boolean_expression
   
  [!code-csharp[DP EntityServices Concepts 2#OR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#or)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

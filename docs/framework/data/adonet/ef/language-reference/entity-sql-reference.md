@@ -1,24 +1,26 @@
 ---
-title: "Entity SQL 引用"
-ms.custom: 
+title: Entity SQL 引用
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="entity-sql-reference"></a>Entity SQL 引用
 本节包含 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 参考主题。 本主题总结并组[!INCLUDE[esql](../../../../../../includes/esql-md.md)]按类别的运算符。  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/19/2018
 |[=（等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|比较两个表达式是否相等。|  
 |[>（大于）](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否大于右侧表达式的值。|  
 |[>=（大于或等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否大于或等于右侧表达式的值。|  
-|[是 （& A) #91;不 &#93;NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|确定查询表达式是否为 null。|  
+|[是&AMP;#91;不&AMP;#93;NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|确定查询表达式是否为 null。|  
 |[<（小于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于右侧表达式的值。|  
 |[<=（小于或等于）](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|比较两个表达式以确定左侧表达式的值是否小于或等于右侧表达式的值。|  
 |[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|确定表达式的结果值是否在指定范围内。|  
@@ -92,7 +94,7 @@ ms.lasthandoff: 01/19/2018
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|按条件筛选由查询返回的数据。|  
   
 ## <a name="reference-operators"></a>引用运算符  
- 引用是指向特定实体集中的特定实体的逻辑指针（外键）。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支持使用以下运算符进行构造、 解构和导航到引用。  
+ 引用是指向特定实体集中的特定实体的逻辑指针（外键）。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持使用以下运算符进行构造、 解构和导航到引用。  
   
 |运算符|使用|  
 |--------------|---------|  
@@ -118,7 +120,7 @@ ms.lasthandoff: 01/19/2018
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|将两个或更多查询的结果组合成单个集合。|  
   
 ## <a name="type-operators"></a>类型运算符  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供允许构造、 查询和操作表达式 （值） 的类型的操作。 下表列出了用于处理类型的运算符。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供允许构造、 查询和操作表达式 （值） 的类型的操作。 下表列出了用于处理类型的运算符。  
   
 |运算符|使用|  
 |--------------|---------|  
@@ -141,5 +143,5 @@ ms.lasthandoff: 01/19/2018
 |[--（注释）](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 注释。|  
 |[FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|定义可在 Entity SQL 查询中执行的内联函数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [实体 SQL 语言](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

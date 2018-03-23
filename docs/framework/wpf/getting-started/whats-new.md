@@ -1,30 +1,32 @@
 ---
-title: "WPF 版本 4.5 中的新增功能"
-ms.custom: 
+title: WPF 版本 4.5 中的新增功能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-caps.latest.revision: "55"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8de8725bc48f69cdd18100d90a1bc610caa7ecfb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="what39s-new-in-wpf-version-45"></a>WPF 版本 4.5 中的新增功能
-<a name="introduction"></a>本主题包含有关新的和增强功能的信息[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]版本 4.5。  
+<a name="introduction"></a> 本主题包含有关新的和增强功能的信息[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]版本 4.5。  
   
  本主题包含以下各节：  
   
@@ -113,8 +115,8 @@ ms.lasthandoff: 12/22/2017
 |目标属性|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=nameWithType>|  
 |源对象|<xref:System.Windows.Data.BindingExpression.ResolvedSource%2A?displayProperty=nameWithType>|  
 |源属性|<xref:System.Windows.Data.BindingExpression.ResolvedSourcePropertyName%2A?displayProperty=nameWithType>|  
-|是否<xref:System.Windows.Data.BindingExpression>属于<xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
-|所有者<xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
+|是否<xref:System.Windows.Data.BindingExpression>属于 <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
+|所有者 <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
   
 <a name="DisconnectedSource"></a>   
 ## <a name="checking-for-a-valid-datacontext-object"></a>检查有效的 DataContext 对象  
@@ -136,5 +138,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="markup-extensions-for-events"></a>事件的标记扩展  
  WPF 4.5 支持事件的标记扩展。  虽然 WPF 未定义用于事件的标记扩展，但第三方能够创建可与事件配合使用的标记扩展。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [.NET Framework 中的新增功能](../../../../docs/framework/whats-new/index.md)

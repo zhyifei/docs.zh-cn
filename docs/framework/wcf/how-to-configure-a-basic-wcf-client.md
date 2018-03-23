@@ -1,28 +1,28 @@
 ---
-title: "如何：配置基本 Windows Communication Foundation 客户端"
-ms.custom: 
+title: 如何：配置基本 Windows Communication Foundation 客户端
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: f23918031c6cc8cd6509d7b7c079b8df050bbb08
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>如何：配置基本 Windows Communication Foundation 客户端
 这是创建基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的第五项任务。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
@@ -65,9 +65,9 @@ ms.lasthandoff: 01/19/2018
   
      该终结点元素指定 `ServiceReference1.ICalculator` 服务约定用于 WCF 客户端和服务之间的通信。 配置 WCF 通道时使用系统提供 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>。 此约定是使用 Visual Studio 中的“添加服务引用”生成的。 它基本上是在 GettingStartedLib 项目中定义的约定的副本。 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 绑定指定 HTTP 作为传输协议、 可互操作安全性和其他配置详细信息。  
   
-2.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何使用生成的客户端在此配置，请参阅[如何： 使用客户端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)。  
+2.  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何使用生成的客户端在此配置，请参阅[如何： 使用客户端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用绑定配置服务和客户端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

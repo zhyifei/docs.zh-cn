@@ -1,24 +1,26 @@
 ---
-title: "持久性实例上下文"
-ms.custom: 
+title: 持久性实例上下文
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e4f1f3f9e840ba422e327792ec2b0554fad45902
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="durable-instance-context"></a>持久性实例上下文
 此示例演示如何自定义 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 运行库以启用持久性实例上下文。 它使用 SQL Server 2005 作为其后备存储（在本例中为 SQL Server 2005 Express）。 但是，它还提供了一种访问自定义存储机制的方法。  
@@ -471,4 +473,4 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅

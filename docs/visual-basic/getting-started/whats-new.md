@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 的新增功能"
+title: Visual Basic 的新增功能
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
-ms.translationtype: HT
+ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -34,6 +34,9 @@ Visual Basic 15.5
 
 Visual Basic 15.3   
 有关新功能，请参阅 [Visual Basic 15.3](#visual-basic-153)
+
+Visual Basic 2017   
+有关新功能，请参阅 [Visual Basic 2017](#visual-basic-2017)
 
 Visual Basic/Visual Studio .NET 2015   
 有关新功能，请参阅 [Visual Basic 14](#visual-basic-14)
@@ -78,7 +81,7 @@ Visual Basic 2017 新增支持下划线字符 (`_`) 作为数字分隔符。 从
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-若要使用下划线字符作为前导分隔符，必须将以下元素添加到 Visual Basic 项目 (*.vbproj) 文件中：
+若要使用下划线字符作为前导分隔符，必须将下面的元素添加到 Visual Basic 项目 (\*.vbproj) 文件：
 
 ```xml
 <PropertyGroup>
@@ -88,15 +91,19 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[命名元组推理](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**命名元组推理**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 从变量分配元组元素的值时，Visual Basic 会从相应的变量名推断元组元素名；因此无需显式命名元组元素。 以下示例使用推理创建元祖，其中包含三个命名元素：`state`、`stateName` 和 `capital`。
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
+**其他编译器开关**  
+
+Visual Basic 命令行编译器现在支持[ **-refout** ](../reference/command-line-compiler/refout-compiler-option.md)和[ **-refonly** ](../reference/command-line-compiler/refonly-compiler-option.md)编译器选项来控制的输出引用程序集。 **-refout**定义引用程序集，输出目录和**-refonly**指定仅引用程序集将是编译的输出。
+
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[元组](../programming-guide/language-features/data-types/tuples.md)
+[**元组**](../programming-guide/language-features/data-types/tuples.md)
 
 元组是一种轻量级数据结构，通常用于从单个方法调用返回多个值。 一般情况下，若要从方法返回多个值，必须执行以下操作之一：
 
