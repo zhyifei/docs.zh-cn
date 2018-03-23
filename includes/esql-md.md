@@ -1,1 +1,1 @@
-<span data-ttu-id="1b4f9-101">Entity SQL</span><span class="sxs-lookup"><span data-stu-id="1b4f9-101">Entity SQL</span></span>
+<span data-ttu-id="44f75-101">Entity SQL</span><span class="sxs-lookup"><span data-stu-id="44f75-101">Entity SQL</span></span>
