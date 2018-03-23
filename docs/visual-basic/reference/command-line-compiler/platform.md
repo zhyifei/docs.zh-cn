@@ -1,32 +1,31 @@
 ---
-title: /platform (Visual Basic)
-ms.date: 07/20/2015
+title: -平台 (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 09c7d677e614186d26a2ff8a1ce2fe5213cf7799
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="platform-visual-basic"></a>/platform (Visual Basic)
+# <a name="-platform-visual-basic"></a>-平台 (Visual Basic)
 指定公共语言运行时 (CLR) 的哪个平台版本可以运行输出文件。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-/platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
+-platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
 ## <a name="arguments"></a>自变量  
@@ -41,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |`anycpu32bitpreferred`|将程序集编译成可在任意平台上运行。 应用程序将作为 32 位 应用程序在 Windows 的 32 位版本和 64 位版本上运行。 此标志仅对可执行文件 (.EXE) 有效且需要 [!INCLUDE[net_v45](~/includes/net-v45-md.md)]。|  
   
 ## <a name="remarks"></a>备注  
- 使用 `/platform` 选项来指定输出文件所面向的处理器类型。  
+ 使用 `-platform` 选项来指定输出文件所面向的处理器类型。  
   
  通常，无论平台如何，Visual Basic 内编写的 .NET Framework 程序集将运行相同内容。 但是，存在一些不同平台行为不同的情况。 这些常见的情况是：  
   
@@ -55,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 -   将平台调用或 COM 互操作与不存在于任何平台的组件一起使用。  
   
- **/Platform**选项将减少一些问题，如果你知道你的代码将在运行的体系结构进行的假设。 尤其是在下列情况下：  
+ **-平台**选项将减少一些问题，如果你知道你的代码将在运行的体系结构进行的假设。 尤其是在下列情况下：  
   
 -   如果你针对 64 位平台且应用程序在 32 位计算机上运行，则相对于不使用此开关而出现的错误，此错误消息更早出现且更加针对问题。  
   
@@ -63,17 +62,17 @@ ms.lasthandoff: 12/21/2017
   
  在 64 位 Windows 操作系统上：  
   
--   用 `/platform:x86` 编译的程序集将在 WOW64 下运行的 32 位 CLR 上执行。  
+-   用 `-platform:x86` 编译的程序集将在 WOW64 下运行的 32 位 CLR 上执行。  
   
--   用 `/platform:anycpu` 编译的可执行文件将在 64 位 CLR 上执行。  
+-   用 `-platform:anycpu` 编译的可执行文件将在 64 位 CLR 上执行。  
   
--   用 `/platform:anycpu` 编译的 DLL 将在加载它的进程所在的同一 CLR 上执行。  
+-   用 `-platform:anycpu` 编译的 DLL 将在加载它的进程所在的同一 CLR 上执行。  
   
--   用 `/platform:anycpu32bitpreferred` 编译的可执行文件将在 32 位 CLR 上执行。  
+-   用 `-platform:anycpu32bitpreferred` 编译的可执行文件将在 32 位 CLR 上执行。  
   
  了解如何开发 64 位版本的 Windows 上运行的应用程序的详细信息，请参阅[64 位应用程序](../../../framework/64-bit-apps.md)。  
   
-### <a name="to-set-platform-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中设置 /platform  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>若要设置的 Visual Studio IDE 中的平台  
   
 1.  在**解决方案资源管理器**，选择项目，打开**项目**菜单，，然后单击**属性**。  
   
@@ -82,13 +81,13 @@ ms.lasthandoff: 12/21/2017
      有关详细信息，请参阅[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
 ## <a name="example"></a>示例  
- 下例阐释使用 `/platform` 编译器选项的方式。  
+ 下例阐释使用 `-platform` 编译器选项的方式。  
   
-```  
-vbc /platform:x86 myFile.vb  
+```console
+vbc -platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [/target (Visual Basic)](target.md)  
  [Visual Basic 命令行编译器](index.md)  
  [示例编译命令行](sample-compilation-command-lines.md)

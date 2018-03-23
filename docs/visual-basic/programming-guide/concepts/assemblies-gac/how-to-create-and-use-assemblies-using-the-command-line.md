@@ -1,22 +1,21 @@
 ---
-title: "如何： 创建和使用程序集使用命令行 (Visual Basic)"
-ms.custom: 
-ms.date: 07/20/2015
+title: 如何： 创建和使用程序集使用命令行 (Visual Basic)
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f3e91f9fb88019f937dcd281aa14ab4e887daf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>如何： 创建和使用程序集使用命令行 (Visual Basic)
 程序集或动态链接库 (DLL) 会在运行时链接到程序。 为了演示如何生成和使用 DLL，请考虑以下方案：  
@@ -110,19 +109,19 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 ## <a name="compiling-the-code"></a>编译代码  
  若要生成文件 `MathLibrary.DLL`，请使用以下命令行编译两个文件 `Add` 和 `Mult`。  
   
-```vb  
-vbc /target:library /out:MathLibrary.DLL Add.vb Mult.vb  
+```console  
+vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [/Target (Visual Basic 中)](../../../../visual-basic/reference/command-line-compiler/target.md)编译器选项告知编译器输出而不是 EXE 文件的 DLL。 [(Visual Basic 中) 的 /out](../../../../visual-basic/reference/command-line-compiler/out.md)跟文件名称的编译器选项用于指定 DLL 文件的名称。 否则，编译器使用第一个文件 (`Add.vb`) 作为 DLL 的名称。  
+ [-目标 (Visual Basic 中)](../../../../visual-basic/reference/command-line-compiler/target.md)编译器选项告知编译器输出而不是 EXE 文件的 DLL。 [-Out (Visual Basic 中)](../../../../visual-basic/reference/command-line-compiler/out.md)跟文件名称的编译器选项用于指定 DLL 文件的名称。 否则，编译器使用第一个文件 (`Add.vb`) 作为 DLL 的名称。  
   
  若要生成可执行文件 `TestCode.exe`，请使用以下命令行：  
   
-```vb  
-vbc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.vb  
+```console  
+vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- **/out** 编译器选项告知编译器输出 EXE 文件并指定输出文件的名称 (`TestCode.exe`)。 此编译器选项是可选的。 [/Reference (Visual Basic 中)](../../../../visual-basic/reference/command-line-compiler/reference.md)编译器选项指定的 DLL 文件或此程序使用的文件。  
+ **-出**编译器选项告知编译器输出的 EXE 文件，并指定输出文件的名称 (`TestCode.exe`)。 此编译器选项是可选的。 [-参考 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)编译器选项指定的 DLL 文件或此程序使用的文件。  
   
  有关从命令行生成的详细信息，请参阅和[从命令行生成](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
   

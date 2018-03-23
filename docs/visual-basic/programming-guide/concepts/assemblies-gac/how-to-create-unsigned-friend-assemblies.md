@@ -1,22 +1,21 @@
 ---
-title: "如何： 创建未签名友元程序集 (Visual Basic)"
-ms.custom: 
-ms.date: 07/20/2015
+title: 如何： 创建未签名友元程序集 (Visual Basic)
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a2b2667c60a07a2897a0934d210901042e2e43c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 8cc71a27f24c634ebadb060325df4c602b1387b0
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>如何： 创建未签名友元程序集 (Visual Basic)
 本示例演示如何将友元程序集和未签名的程序集一起使用。  
@@ -30,7 +29,7 @@ ms.lasthandoff: 11/21/2017
     ```vb  
     ' friend_unsigned_A.vb  
     ' Compile with:   
-    ' Vbc /target:library friend_unsigned_A.vb  
+    ' vbc -target:library friend_unsigned_A.vb  
     Imports System.Runtime.CompilerServices  
     Imports System  
   
@@ -53,8 +52,8 @@ ms.lasthandoff: 11/21/2017
   
 3.  使用以下命令编译 friend_signed_A 并为其签名。  
   
-    ```vb  
-    Vbc /target:library friend_unsigned_A.vb  
+    ```console  
+    vbc -target:library friend_unsigned_A.vb  
     ```  
   
 4.  创建名为的 Visual Basic 文件`friend_unsigned_B`，其中包含下面的代码。 由于 friend_unsigned_A 将 friend_unsigned_B 指定为友元程序集，因此 friend_unsigned_B 中的代码可以访问 friend_unsigned_A 中的 `Friend` 类型和成员。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 11/21/2017
     ```vb  
     ' friend_unsigned_B.vb  
     ' Compile with:   
-    ' Vbc /r:friend_unsigned_A.dll friend_unsigned_B.vb  
+    ' vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     Module Module1  
         Sub Main()  
             ' Access a Friend type.  
@@ -80,15 +79,15 @@ ms.lasthandoff: 11/21/2017
   
 5.  使用以下命令编译 friend_signed_B。  
   
-    ```vb  
-    Vbc /r:friend_unsigned_A.dll friend_unsigned_B.vb  
+    ```console
+    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
      编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 你可以通过使用显式设置程序集`/out`编译器选项。  
   
 6.  运行 friend_signed_B.exe 文件。  
   
-     此程序将输出两个字符串：“Class1.Test”和“Class2.Test”。  
+     该程序显示两个字符串:"Class1.Test"和"Class2.Test"。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。 主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `Friend` 类型和成员的可见性。  

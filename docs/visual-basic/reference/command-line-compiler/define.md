@@ -1,10 +1,10 @@
 ---
-title: /define (Visual Basic)
-ms.date: 07/20/2015
+title: -定义 (Visual Basic)
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 62669ec40803170cb623382b09472b82121d26bb
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 136339c84ce80bff790c6683eef76065fb6d71ef
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="define-visual-basic"></a>/define (Visual Basic)
+# <a name="-define-visual-basic"></a>-定义 (Visual Basic)
 定义条件编译器常数。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-/define:["]symbol[=value][,symbol[=value]]["]  
+-define:["]symbol[=value][,symbol[=value]]["]  
 ' -or-  
-/d:["]symbol[=value][,symbol[=value]]["]  
+-d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
 ## <a name="arguments"></a>自变量  
@@ -42,13 +41,13 @@ ms.lasthandoff: 12/21/2017
 |`value`|可选。 指派给 `symbol` 的值。 如果`value`是一个字符串，则必须由反斜杠/双引号序列括起来 (\\") 而不是引号引起来。 如果未指定值，则视为 True。|  
   
 ## <a name="remarks"></a>备注  
- `/define` 选项具有与在源文件中使用 `#Const` 预处理器指令类似的效果，只是使用 `/define` 定义的常数为公共的且应用于项目中的所有文件。  
+ `-define`选项才起作用类似于使用`#Const`在源代码文件中，除使用定义的常数的预处理器指令`-define`是公共的并将应用到项目中的所有文件。  
   
  可以将由此选项创建的符号同 `#If`...`Then`...`#Else` 指令一起使用，以对源文件进行条件编译。  
   
- `/d` 是 `/define` 的缩写形式。  
+ `-d` 是 `-define` 的缩写形式。  
   
- 通过使用逗号分隔符号定义，可以用 `/define` 定义多个符号。  
+ 通过使用逗号分隔符号定义，可以用 `-define` 定义多个符号。  
   
 |在 Visual Studio 集成开发环境中设置/定义|  
 |---|  
@@ -59,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [#If...Then...#Else 指令](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
  [#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)  

@@ -1,41 +1,40 @@
 ---
-title: /optioncompare
+title: -optioncompare
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /optioncompare
+- -optioncompare
 helpviewer_keywords:
 - optioncompare compiler option [Visual Basic]
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 62a9a4bf3428f3ee731e7ecc63be51dbf3076ee4
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 033be2ce3845ed470d56c2097b89b81d10275046
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="optioncompare"></a>/optioncompare
+# <a name="-optioncompare"></a>-optioncompare
 指定如何进行字符串比较。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-/optioncompare:{binary | text}  
+-optioncompare:{binary | text}  
 ```  
   
 ## <a name="remarks"></a>备注  
- 你可以指定`/optioncompare`两种形式之一：`/optioncompare:binary`使用二进制字符串比较和`/optioncompare:text`使用文本字符串比较。 默认情况下，编译器使用`/optioncompare:binary`。  
+ 你可以指定`-optioncompare`两种形式之一：`-optioncompare:binary`使用二进制字符串比较和`-optioncompare:text`使用文本字符串比较。 默认情况下，编译器使用`-optioncompare:binary`。  
   
- 在 Microsoft Windows 中，正在使用的代码页确定二进制排序顺序。 典型的二进制排序顺序如下所示：  
+ 在 Microsoft Windows 中，当前代码页确定二进制排序顺序。 典型的二进制排序顺序如下所示：  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  `(A = a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-### <a name="to-set-optioncompare-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置 /optioncompare  
+### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>在 Visual Studio IDE 中设置-optioncompare  
   
 1.  在 **“解决方案资源管理器”**中选择一个项目。 在“项目”菜单上，单击“属性”。   
   
@@ -51,22 +50,22 @@ ms.lasthandoff: 12/21/2017
   
 3.  修改中的值**Option Compare**框。  
   
-### <a name="to-set-optioncompare-programmatically"></a>以编程方式设置 /optioncompare  
+### <a name="to-set--optioncompare-programmatically"></a>以编程方式设置-optioncompare  
   
 -   请参阅[Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)。  
   
 ## <a name="example"></a>示例  
  下面的代码编译`ProjFile.vb`并使用二进制字符串比较。  
   
-```  
-vbc /optioncompare:binary projFile.vb  
+```console
+vbc -optioncompare:binary projFile.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
+ [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
+ [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+ [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
  [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

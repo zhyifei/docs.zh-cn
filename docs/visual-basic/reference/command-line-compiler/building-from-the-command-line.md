@@ -1,10 +1,11 @@
 ---
-title: "从命令行生成 (Visual Basic)"
+title: 从命令行生成 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - builds [Visual Basic], command-line
@@ -18,23 +19,21 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d982506af2c4f01e80ae5b3862fcbcfff2aa9d99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: c3f71a84feffce46bafd92ff701a0250c059a82e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>从命令行生成 (Visual Basic)
 A[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]项目由一个或多个单独的源文件组成。 在称为编译过程中，这些文件被集中到一个包中，可以为应用程序运行的单个可执行文件。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]作为编译来自程序的替代方法提供命令行编译器[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境 (IDE)。 命令行编译器设计为不需要完整的 IDE 中的功能集情况-例如，当你正在使用或者编写的有限的系统内存或存储空间使用的计算机。  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 作为编译来自程序的替代方法提供命令行编译器[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境 (IDE)。 命令行编译器设计为不需要完整的 IDE 中的功能集情况-例如，当你正在使用或者编写的有限的系统内存或存储空间使用的计算机。  
   
- 在从命令行编译时，必须显式引用 Microsoft[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]通过运行时库`/reference`编译器选项。  
-  
- 若要编译中的源文件[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]IDE 中，选择**生成**命令**生成**菜单。  
+  若要编译中的源文件[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]IDE 中，选择**生成**命令**生成**菜单。  
   
 > [!TIP]
 >  通过使用 Visual Studio IDE 生成项目文件时，你可以显示有关信息关联**vbc**命令，并在输出窗口中的开关。 若要显示此信息，请打开[选项对话框、 项目和解决方案、 生成和运行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然后设置**MSBuild 项目生成输出详细级别**到**正常**或更高级别的详细级别。 有关详细信息，请参阅[如何：查看、保存和配置生成日志文件](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7)。  

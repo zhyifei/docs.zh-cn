@@ -1,12 +1,13 @@
 ---
-title: "如何：使用跟踪和调试进行条件编译"
-ms.custom: 
+title: 如何：使用跟踪和调试进行条件编译
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace compiler options
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用跟踪和调试进行条件编译
 在开发过程中调试应用程序时，跟踪和调试输出都会出现在 Visual Studio 的“输出”窗口中。 但是，若要在已部署的应用程序中包含跟踪功能，则必须在 TRACE 编译器指令处于启动状态下编译已检测应用程序。 这样就可以将跟踪代码编译成应用程序的发布版本。 如果未启用 TRACE 指令，将在编译过程中忽略所有跟踪代码，并且不会将其包含在将部署的可执行代码中。  
@@ -59,9 +61,9 @@ ms.lasthandoff: 12/22/2017
   
      例如，在命令行上输入的以下编译器指令将在经过编译的可执行文件中包含跟踪代码：  
   
-     对于 Visual Basic，即为 vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb  
+     对于 Visual Basic: **vbc-r:System.dll-d： 跟踪 = TRUE-d： 调试 = FALSE MyApplication.vb**  
   
-     对于 C#，即为 csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs  
+     对于 C#: **csc-r:System.dll-d： 跟踪-d： 调试 = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  若要编译多个应用程序文件，请在文件名之间留一个空格，例如 MyApplication1.vb MyApplication2.vb MyApplication3.vb 或 MyApplication1.cs MyApplication2.cs MyApplication3.cs。  
@@ -72,8 +74,8 @@ ms.lasthandoff: 12/22/2017
     |---------------|-------------|  
     |`vbc`|Visual Basic 编译器|  
     |`csc`|C# 编译器|  
-    |`/r:`|引用外部程序集（EXE 或 DLL）|  
-    |`/d:`|定义条件编译符号|  
+    |`-r:`|引用外部程序集（EXE 或 DLL）|  
+    |`-d:`|定义条件编译符号|  
   
     > [!NOTE]
     >  必须用大写字母来拼写 TRACE 或 DEBUG。 有关条件编译命令的详细信息，请在命令提示处输入 `vbc /?`（对于 Visual Basic）或 `csc /?`（对于 C#）。 有关详细信息，请参阅[从命令行生成](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) 或[调用命令行编译器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic)。  
@@ -95,16 +97,16 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-disable-tracing-or-debugging"></a>禁用跟踪或调试  
   
-1.  从源代码中删除编译器指令。  
+从源代码中删除编译器指令。  
   
-     \- 或 -  
+\- 或 -  
   
-2.  注释掉编译器指令。  
+注释掉编译器指令。  
   
-    > [!NOTE]
-    >  准备进行编译时，可从“生成”菜单中选择“生成”，也可使用命令行方法但不键入 d:，以定义条件编译符号。  
+> [!NOTE]
+>  准备进行编译时，可从“生成”菜单中选择“生成”，也可使用命令行方法但不键入 d:，以定义条件编译符号。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
  [如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
  [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)  

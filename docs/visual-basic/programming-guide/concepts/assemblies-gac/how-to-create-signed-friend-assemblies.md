@@ -1,22 +1,21 @@
 ---
-title: "如何： 创建签名的友元程序集 (Visual Basic)"
-ms.custom: 
-ms.date: 07/20/2015
+title: 如何： 创建签名的友元程序集 (Visual Basic)
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3ffaf30cdcbc075b772a7350984d060e47fddb7
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 4fd9521a87a985cbdeff1616c3070c822892b6e5
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何： 创建签名的友元程序集 (Visual Basic)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 12/21/2017
     ```vb  
     ' friend_signed_A.vb  
     ' Compile with:   
-    ' Vbc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.vb  
+    ' Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     Imports System.Runtime.CompilerServices  
   
     <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>   
@@ -60,8 +59,8 @@ ms.lasthandoff: 12/21/2017
   
 4.  使用以下命令编译 friend_signed_A 并为其签名。  
   
-    ```vb  
-    Vbc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.vb  
+    ```console  
+    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
 5.  创建名为的 Visual Basic 文件`friend_signed_B`，并包含以下代码。 由于 friend_signed_A 将 friend_signed_B 指定为友元程序集，因此 friend_signed_B 中的代码可以访问 friend_signed_A 中的 `Friend` 类型和成员。 文件包含以下代码。  
@@ -69,7 +68,7 @@ ms.lasthandoff: 12/21/2017
     ```vb  
     ' friend_signed_B.vb  
     ' Compile with:   
-    ' Vbc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll friend_signed_B.vb  
+    ' Vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     Module Sample  
         Public Sub Main()  
             Dim inst As New Class1  
@@ -80,25 +79,25 @@ ms.lasthandoff: 12/21/2017
   
 6.  使用以下命令编译 friend_signed_B 并为其签名。  
   
-    ```vb  
-    Vbc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll friend_signed_B.vb  
+    ```console  
+    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 你可以通过使用显式设置程序集`/out`编译器选项。 有关详细信息，请参阅[(Visual Basic 中) 的 /out](../../../../visual-basic/reference/command-line-compiler/out.md)。  
+     编译器生成的程序集的名称必须与传递给 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性的友元程序集的名称匹配。 你可以通过使用显式设置程序集`-out`编译器选项。 有关详细信息，请参阅[-out (Visual Basic 中)](../../../../visual-basic/reference/command-line-compiler/out.md)。  
   
 7.  运行 friend_signed_B.exe 文件。  
   
-     程序将打印字符串“Class1.Test”。  
+     该程序显示字符串"Class1.Test"。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。 主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `Friend` 类型和成员的可见性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [程序集和全局程序集缓存 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [如何： 创建未签名友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe （强名称工具）][Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))  
  [创建和使用具有强名称的程序集](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)

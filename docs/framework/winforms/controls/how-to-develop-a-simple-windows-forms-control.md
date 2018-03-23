@@ -1,12 +1,13 @@
 ---
-title: "如何：开发简单的 Windows 窗体控件"
-ms.custom: 
+title: 如何：开发简单的 Windows 窗体控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab7fced9237cad3de30d417770f6f1d7f7e7ed6a
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：开发简单的 Windows 窗体控件
 本部分演示创建自定义 Windows 窗体控件的关键步骤。 在本演练中开发的简单控件允许的对齐方式其<xref:System.Windows.Forms.Control.Text%2A>要更改属性。 它不会引发或处理事件。  
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     当设置属性，可更改控件的可视显示时，必须调用<xref:System.Windows.Forms.Control.Invalidate%2A>方法进行重绘控件。 <xref:System.Windows.Forms.Control.Invalidate%2A>在基类中定义<xref:System.Windows.Forms.Control>。  
+     当设置属性，可更改控件的可视显示时，必须调用<xref:System.Windows.Forms.Control.Invalidate%2A>方法进行重绘控件。 <xref:System.Windows.Forms.Control.Invalidate%2A> 在基类中定义<xref:System.Windows.Forms.Control>。  
   
 3.  重写受保护<xref:System.Windows.Forms.Control.OnPaint%2A>方法继承自<xref:System.Windows.Forms.Control>提供到您的控件的呈现逻辑。 如果你不重写<xref:System.Windows.Forms.Control.OnPaint%2A>，控件将不能自行绘制。 在下面的代码片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法显示<xref:System.Windows.Forms.Control.Text%2A>属性从继承<xref:System.Windows.Forms.Control>与由指定的对齐方式`alignmentValue`字段。  
   
@@ -70,12 +72,12 @@ ms.lasthandoff: 12/22/2017
   
     2.  将源代码编译成程序集并将其保存在应用程序的目录中。 要完成此操作，请从包含源文件的目录执行以下命令。  
   
-        ```vb  
-        vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
+        ```console  
+        vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb  
         ```  
   
-        ```csharp  
-        csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
+        ```console 
+        csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs  
         ```  
   
          `/t:library` 编译器选项会告知编译器正在创建的程序集是库（而不是可执行文件）。 `/out` 选项指定程序集的路径和名称。 `/r` 选项提供代码引用的程序集的名称。 在此示例中，将创建只有你的应用程序可以使用的私有程序集。 因此，必须将其保存在应用程序的目录中。 有关打包和部署控件以进行分发的详细信息，请参阅[部署](../../../../docs/framework/deployment/index.md)。  
@@ -94,25 +96,25 @@ ms.lasthandoff: 12/22/2017
   
 2.  通过从包含源文件的目录执行以下命令，将源代码编译成可执行程序集。  
   
-    ```vb  
-    vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
+    ```console  
+    vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
     ```  
   
-    ```csharp  
-    csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
+    ```console 
+    csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs  
     ```  
   
      CustomWinControls.dll 是包含的类的程序集`FirstControl`。 此程序集必须与访问程序集的窗体的源文件（SimpleForm.cs或SimpleForms.vb）位于同一目录中。  
   
 3.  使用以下命令执行 SimpleForm.exe。  
   
-    ```  
+    ```console
     SimpleForm  
     ```  
   
  [!code-csharp[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
  [!code-vb[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Windows 窗体控件中的属性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
  [Windows 窗体控件中的事件](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)

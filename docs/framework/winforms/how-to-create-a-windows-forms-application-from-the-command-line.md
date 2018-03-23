@@ -1,8 +1,9 @@
 ---
-title: "如何： 从命令行创建 Windows 窗体应用程序"
-ms.date: 03/30/2017
+title: 如何： 从命令行创建 Windows 窗体应用程序
+ms.date: 03/14/2018
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,16 +13,15 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.workload:
+- dotnet
+ms.openlocfilehash: 79fda0f5f455cbac50c0c1b51f0cd3bef4c5bfbc
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何： 从命令行创建 Windows 窗体应用程序
 下面的过程介绍从命令行创建和运行 Windows 窗体应用程序所必须完成的基本步骤。 在 Visual Studio 中没有对这些过程的扩展支持。  另请参阅[演练： 创建简单的 Windows 窗体](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  
@@ -49,9 +49,9 @@ ms.lasthandoff: 12/22/2017
   
 4.  将 `Main` 方法添加到类。  
   
-    1.  将 <xref:System.STAThreadAttribute> 应用到 `Main` 方法，以指定 Windows 窗体应用程序是一个单线程单元。  
+    1.  应用<xref:System.STAThreadAttribute>与 C#`Main`方法，以指定你的 Windows 窗体应用程序是单线程单元。 （该属性不需要在 Visual Basic 中，由于 Windows 窗体应用程序开发与 Visual Basic 使用单线程单元模型默认情况下。）  
   
-    2.  调用 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>，让你的应用程序拥有 Windows XP 的外观。  
+    2.  调用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>将操作系统样式应用于你的应用程序。  
   
     3.  创建一个窗体实例，并运行。  
   
@@ -64,13 +64,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  编译该窗体。  
   
-    -   如果你使用的 C#，请键入：`csc form1.cs`  
+    -   如果你使用的 C#，请键入： `csc form1.cs`  
   
          `-or-`  
   
-    -   如果你在使用 Visual Basic 中，类型：`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
+    -   如果你在使用 Visual Basic 中，类型： `vbc form1.vb`  
   
-3.  在命令提示符下键入：`Form1.exe`  
+3.  在命令提示符下键入： `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>添加控件并处理事件  
  上一过程中的步骤演示了如何只创建一个可编译和运行的基本 Windows 窗体。 下一个过程中将显示如何创建控件并将其添加到窗体中，以及如何处理控件的事件。 你可以将其添加到 Windows 窗体控件的详细信息，请参阅[Windows 窗体控件](../../../docs/framework/winforms/controls/index.md)。  
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/22/2017
   
 -   若要编译代码，请遵循处理过程中描述如何编译和运行应用程序的说明。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Control>  
  [更改 Windows 窗体外观](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  

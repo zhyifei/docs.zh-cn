@@ -1,36 +1,35 @@
 ---
-title: /highentropyva (Visual Basic)
-ms.date: 07/20/2015
+title: -highentropyva (Visual Basic)
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 55568808bb94f98ce7a20016fc5a2a0a2ef23a38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 12d40e5acda73786ee88d16bacd9bc5f69400be8
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="highentropyva-visual-basic"></a>/highentropyva (Visual Basic)
+# <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
 指示是否 64 位可执行文件或可执行文件标记的[/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md)编译器选项支持高熵地址空间布局随机化 (ASLR)。  
   
 ## <a name="syntax"></a>语法  
   
 ```  
-/highentropyva[+ | -]  
+-highentropyva[+ | -]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `+` &#124; `-`  
- 可选。 选项默认处于关闭状态，或如果你指定`/highentropyva-`。 如果你指定的选项位于`/highentropyva`或`/highentropyva+`。  
+ 可选。 选项默认处于关闭状态，或如果你指定`-highentropyva-`。 如果你指定的选项位于`-highentropyva`或`-highentropyva+`。  
   
 ## <a name="remarks"></a>备注  
  如果指定此选项时，Windows 内核的兼容版本可以使用更高程度的熵时内核的 ASLR 一部分随机进程的地址空间布局。 如果内核使用更高程度的平均信息量，可以将更多的地址分配到例如堆栈或堆的内存区域。 因此，猜测特定内存区域的位置会更加困难。  
