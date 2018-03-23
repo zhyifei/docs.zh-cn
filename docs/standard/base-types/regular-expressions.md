@@ -1,12 +1,12 @@
 ---
-title: ".NET Framework 正则表达式"
-ms.custom: 
+title: .NET Framework 正则表达式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,7 +26,7 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -75,7 +75,7 @@ ms.lasthandoff: 02/01/2018
  [!code-csharp[Conceptual.Regex#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
  [!code-vb[Conceptual.Regex#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
- 正则表达式模式 `(Mr\.? |Mrs\.? |Miss |Ms\.? )` 匹配任何“Mr”、“Mr.”、“Mrs”、“Mrs.”、“Miss”、“Ms”或“Ms.”。 对 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法的调用会将匹配的字符串替换为 <xref:System.String.Empty?displayProperty=nameWithType>；换句话说，它从原始字符串中将其移除。  
+ 正则表达式模式 `(Mr\.? |Mrs\.? |Miss |Ms\.? )` 匹配任何"Mr"、"Mr."、"Mrs"、"Mrs."、"Miss"、"Ms 或"Ms."。 对 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法的调用会将匹配的字符串替换为 <xref:System.String.Empty?displayProperty=nameWithType>；换句话说，将其从原始字符串中移除。  
   
 ### <a name="example-2-identifying-duplicated-words"></a>示例 2：标识重复的单词  
  意外地重复单词是编写者常犯的错误。 可以使用正则表达式标识重复的单词，如以下示例所示。  
