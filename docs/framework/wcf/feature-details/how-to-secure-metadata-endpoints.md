@@ -1,22 +1,24 @@
 ---
-title: "如何：保护元数据终结点"
-ms.custom: 
+title: 如何：保护元数据终结点
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6923703230d6792d8938de149f64c41a3bf95699
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 类的 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 属性设置为 `true`。  
   
-4.  将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 属性设置为适当的 URL。 请注意，如果指定绝对地址，则 URL 必须以方案“https://”开始。 如果指定相对地址，则必须为服务主机提供一个 HTTPS 基址。 如果不设置此属性，则默认地址为 ""，或者直接为服务的 HTTPS 基址。  
+4.  将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 属性设置为适当的 URL。 请注意，如果指定绝对地址，则 URL 必须以方案 "https://" 开始。 如果指定相对地址，则必须为服务主机提供一个 HTTPS 基址。 如果不设置此属性，则默认地址为 ""，或者直接为服务的 HTTPS 基址。  
   
 5.  将该实例添加到 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 类的 <xref:System.ServiceModel.Description.ServiceDescription> 属性返回的行为集合中，如下面的代码所示：  
   

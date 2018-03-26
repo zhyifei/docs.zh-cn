@@ -1,12 +1,12 @@
 ---
-title: "基于事件的异步模式概述"
-ms.custom: 
+title: 基于事件的异步模式概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -30,10 +30,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: efe136ceb87213c5f9911b24a8a522b29a37b384
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>基于事件的异步模式概述
 那些同时执行多项任务、但仍能响应用户交互的应用程序通常需要实施一种使用多线程的设计方案。 <xref:System.Threading> 命名空间提供了创建高性能多线程应用程序所必需的所有工具，但要想有效地使用这些工具，需要有丰富的使用多线程软件工程的经验。 对于相对简单的多线程应用程序，<xref:System.ComponentModel.BackgroundWorker> 组件提供了一个简单的解决方案。 对于更复杂的异步应用程序，请考虑实现一个符合基于事件的异步模式的类。  
@@ -143,7 +143,7 @@ public class AsyncExample
   
  一些类可能会在异步操作继续时报告增量结果。 这些结果将存储在从 <xref:System.ComponentModel.ProgressChangedEventArgs> 派生的类中并显示为此派生类中的属性。 你可以在 `ProgressChanged` 事件的事件处理程序中访问这些结果，就像访问 <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> 属性一样。 如果有多个异步操作挂起，你可以使用 <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> 属性来分辨出哪个操作在报告增量结果。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ComponentModel.ProgressChangedEventArgs>  
  <xref:System.ComponentModel.BackgroundWorker>  
  <xref:System.ComponentModel.AsyncCompletedEventArgs>  

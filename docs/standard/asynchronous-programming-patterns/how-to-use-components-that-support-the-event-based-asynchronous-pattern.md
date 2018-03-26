@@ -1,12 +1,12 @@
 ---
-title: "如何：使用支持基于事件的异步模式的组件"
-ms.custom: 
+title: 如何：使用支持基于事件的异步模式的组件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,7 +24,7 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -32,10 +32,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c7fe7d0a959a490893fba2b2fc7faceedee03879
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>如何：使用支持基于事件的异步模式的组件
 许多组件都支持异步执行工作。 例如，通过 <xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 组件，可以“在后台”加载音频和图像，同时主线程继续运行而不中断。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/19/2018
   
      随着图像继续下载，可以随意移动窗体，也能最小化和最大化窗体。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
  [未构造：Visual Basic 中的多线程处理](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)

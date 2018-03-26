@@ -1,33 +1,35 @@
 ---
 title: '&lt;serviceThrottling&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a059684967af26c72aca48a3fa6bb10c2f26b0c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltservicethrottlinggt"></a>&lt;serviceThrottling&gt;
 指定 Windows Communication Foundation (WCF) 服务的限制机制。  
   
- \<系统。ServiceModel >  
-\<行为 >  
-\<serviceBehaviors >  
-\<行为 >  
-\<serviceThrottling >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<serviceBehaviors>  
+\<behavior>  
+\<serviceThrottling>  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
  限制控件会对并发调用、实例或会话的数目施加限制以防止过度使用资源。  
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
  <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>  
  [使用 ServiceThrottlingBehavior 控制 WCF 服务性能](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

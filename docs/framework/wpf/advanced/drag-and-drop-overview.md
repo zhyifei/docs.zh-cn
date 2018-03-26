@@ -1,12 +1,13 @@
 ---
-title: "拖放概述"
-ms.custom: 
+title: 拖放概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="drag-and-drop-overview"></a>拖放概述
 本主题概述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序中的拖放支持。 拖放通常指一种数据传输方法：使用鼠标（或一些其他指针设备）选择一个或多个对象，将其拖至 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中的某些所需拖放目标之上并放置。  
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="drag-source-events"></a>拖动源事件  
   
-|Event|摘要|  
+|Event|总结|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.GiveFeedback>|此事件在拖放操作期间持续发生，并且使放置源能够向用户提供反馈信息。 通常通过更改鼠标指针外观来指示拖放目标允许的效果这一方式来提供这种反馈。  这是冒泡事件。|  
 |<xref:System.Windows.DragDrop.QueryContinueDrag>|此事件于拖放操作期间键盘或鼠标按钮状态发生变化时发生，并使放置源能够根据键/按钮状态取消拖放操作。 这是冒泡事件。|  
@@ -88,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="drop-target-events"></a>拖放目标事件  
   
-|Event|摘要|  
+|Event|总结|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.DragEnter>|将对象拖到拖放目标的边界中时发生此事件。 这是冒泡事件。|  
 |<xref:System.Windows.DragDrop.DragLeave>|将对象拖出拖放目标边界时发生此事件。  这是冒泡事件。|  
@@ -99,7 +101,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.DragDrop.PreviewDragOver>|<xref:System.Windows.DragDrop.DragOver> 的隧道版本。|  
 |<xref:System.Windows.DragDrop.PreviewDrop>|<xref:System.Windows.DragDrop.Drop> 的隧道版本。|  
   
- 若要处理对象实例的拖放事件，请为上表中所列的事件添加处理程序。 若要处理类级别的拖放事件，请替代相应的虚拟 On*Event 和 On*PreviewEvent 方法。 有关详细信息，请参阅[按控件基类进行的路由事件类处理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events)。  
+ 若要处理对象实例的拖放事件，请为上表中所列的事件添加处理程序。 若要处理类级别的拖放事件，请替代相应的虚拟 On*Event 和 On\*PreviewEvent 方法。 有关详细信息，请参阅[按控件基类进行的路由事件类处理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events)。  
   
 <a name="Implementing_Drag_And_Drop"></a>   
 ## <a name="implementing-drag-and-drop"></a>实现拖放  
@@ -229,7 +231,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Windows.Clipboard>  
  [演练：在用户控件上启用拖放功能](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
  [帮助主题](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  

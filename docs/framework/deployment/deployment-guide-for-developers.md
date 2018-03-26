@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 部署指南（针对开发人员）"
+title: .NET Framework 部署指南（针对开发人员）
 ms.custom: updateeachrelease
 ms.date: 12/14/2017
 ms.prod: .net-framework
@@ -16,10 +16,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6b2083efabd6c16bafd8b241980c4cd413258ae5
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)] ）的开发人员提供了相关信息。
@@ -30,11 +30,11 @@ ms.lasthandoff: 02/05/2018
 
 - 适用于所有操作系统的 .NET Framework 4.7（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=825299) 或 [脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=825303)）
 
-- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 适用于所有操作系统（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=780597)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=780601)）
+- 适用于所有操作系统的[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] （[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=780597) 或 [脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=780601)）
 
-- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 适用于所有操作系统（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=671729)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=671744)）
+- 适用于所有操作系统的[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] （[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=671729) 或 [脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=671744)）
 
-- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 适用于所有操作系统（[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=528222)或[脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=528232)）
+- 适用于所有操作系统的[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] （[Web 安装程序](http://go.microsoft.com/fwlink/?LinkId=528222) 或 [脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=528232)）
 
 - 适用于所有操作系统的 .NET Framework 4.5.2（[Web 安装程序](http://go.microsoft.com/fwlink/p/?LinkId=397703) 或 [脱机安装程序](http://go.microsoft.com/fwlink/p/?LinkId=397706)）
 
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/05/2018
 
 ||Web 安装程序|脱机安装程序|
 |-|-------------------|-----------------------|
-|下载文件|.NET Framework 4.7.1： <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7： <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.1： <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7： <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|下载文件|.NET Framework 4.7.1： <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7： <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]： <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]：<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]：<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.1： <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7： <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]： <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]： <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]： <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
 |是否需要 Internet 连接？|是|否|
 |下载文件大小|较小（仅包含面向目标平台的安装程序）*|较大*|
 |语言包|包括**|除非使用面向所有操作系统的程序包，否则必须 [单独安装](#chain_langpack)|
@@ -196,7 +196,7 @@ InstallAware 从单个源生成 Windows 应用 (APPX)、Windows Installer (MSI)�
 dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 ```
 
- 你可以使用其他命令行选项来自定义安装。 例如:
+ 你可以使用其他命令行选项来自定义安装。 例如：
 
 - 若要为用户提供一种方法来关闭运行中的 .NET Framework 应用，从而最大程度减少系统重新启动，请按照如下方式设置被动模式并使用 `/showrmui` 选项：
 
@@ -255,15 +255,15 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 |在除 Windows 10 Fall Creators Update 之外的所有操作系统版本上安装的 .NET Framework 4.7.1|461310|
 |在 Windows 10 创意者更新上安装的 .NET Framework 4.7|460798|
 |在除 Windows 10 创意者更新之外的所有操作系统版本上安装的 .NET Framework 4.7|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 安装在 Windows 10 周年版本上|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 安装在除 Windows 10 周年版本外的所有 OS 版本上|394806|
-|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 安装在 Windows 10 November Update 上|394254|
-|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 安装在除 Windows 10 November Update 外的所有 OS 版本上|394271|
-|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 安装在 Windows 10 上|393295|
-|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 安装在除 Windows 10 外的所有 OS 版本上|393297|
+|在 Windows 10 周年纪念版上安装的[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] |394802|
+|在除 Windows 10 周年纪念版以外的所有操作系统版本上安装的[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] |394806|
+|Windows 10 November Update 上安装的[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |394254|
+|在 Windows 10 November Update 以外的所有操作系统版本上安装的[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |394271|
+|Windows 10 上安装的[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |393295|
+|在 Windows 10 以外的所有操作系统版本上安装的[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |393297|
 |.NET Framework 4.5.2|379893|
-|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 随 [!INCLUDE[win81](../../../includes/win81-md.md)] 或 Windows Server 2012 R2 一起安装|378675|
-|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 安装在 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 Windows 7 上|378758|
+|使用[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 或 Windows Server 2012 R2 安装的 [!INCLUDE[win81](../../../includes/win81-md.md)] |378675|
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 或 Windows 7 上安装的 [!INCLUDE[win8](../../../includes/win8-md.md)]|378758|
 |[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|378389|
 
 ### <a name="detecting-the-language-packs"></a>检测语言包

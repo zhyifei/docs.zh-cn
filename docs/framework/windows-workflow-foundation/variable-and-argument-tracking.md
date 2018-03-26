@@ -1,23 +1,24 @@
 ---
-title: "变量和自变量跟踪"
-ms.custom: 
+title: 变量和自变量跟踪
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c0857830b52b2f71df5d81f4bd232b62b894da63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="variable-and-argument-tracking"></a>变量和自变量跟踪
 当跟踪工作流的执行时，提取数据往往很有用。 这在访问跟踪记录后续执行时可提供其他上下文。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以使用跟踪在工作流的任意活动范围内提取所有可见变量或参数。 跟踪配置文件简化了对数据的提取。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 12/22/2017
   
 3.  对于自定义跟踪参与者，请确保 WF 代码不会泄露存储在变量或自变量中的敏感信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Windows Server App Fabric 监视](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 监视应用程序](http://go.microsoft.com/fwlink/?LinkId=201275)

@@ -1,27 +1,29 @@
 ---
-title: "检索标识或自动编号值"
-ms.custom: 
+title: 检索标识或自动编号值
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>检索标识或自动编号值
 关系数据库中的主键是始终包含唯一值的列或列的组合。 知道主键值使您可以定位包含该值的行。 关系数据库引擎（如 SQL Server、Oracle 和 Microsoft Access/Jet）支持创建可指定为主键的自动递增列。 在向表中添加行时，服务器会生成这些值。 在 SQL Server 中可以设置列的标识属性，在 Oracle 中可以创建序列，在 Microsoft Access 中可以创建 AutoNumber 列。  
@@ -540,7 +542,7 @@ class Program {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [行状态和行版本](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  

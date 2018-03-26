@@ -1,12 +1,13 @@
 ---
-title: "Caspol.exe（代码访问安全策略工具）"
-ms.custom: 
+title: Caspol.exe（代码访问安全策略工具）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permission sets, modifying security policy
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-caps.latest.revision: "44"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe（代码访问安全策略工具）
 代码访问安全性 (CAS) 策略工具 (Caspol.exe) 使用户和管理员可修改计算机策略级别、用户策略级别和企业策略级别的安全策略。  
@@ -97,8 +99,8 @@ caspol [options]
 |**-custom**  *xmlfile*|添加自定义成员资格条件。 强制性 *xmlfile* 参数指定包含自定义成员资格条件的 XML 序列化的 .xml 文件。|  
 |**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|指定具有给定程序集哈希的代码。 若要使用哈希作为代码组成员资格条件，则必须指定哈希值或程序集文件。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.HashMembershipCondition>。|  
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定具有给定软件发行者的代码，软件发行者由证书文件、文件上的签名或 X509 证书的十六进制表示形式来指示。 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.PublisherMembershipCondition>。|  
-|**-site** *website*|指定具有给定源站点的代码。 例如:<br /><br /> **-site** www.proseware.com<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.SiteMembershipCondition>。|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|指定具有特定强名称的代码，强名称由文件名、字符串形式的程序集名称和 *major*.*minor*.*build*.*revision* 格式的程序集版本指示。 例如:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.StrongNameMembershipCondition>。|  
+|**-site** *website*|指定具有给定源站点的代码。 例如：<br /><br /> **-site** www.proseware.com<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.SiteMembershipCondition>。|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|指定具有特定强名称的代码，强名称由文件名、字符串形式的程序集名称和 *major*.*minor*.*build*.*revision* 格式的程序集版本指示。 例如：<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.StrongNameMembershipCondition>。|  
 |**-url** *URL*|指定源自给定 URL 的代码。 URL 必须包含一个协议，如 http:// 或 ftp://。 此外，可以使用通配符 (\*) 指定来自特定 URL 的多个程序集。 **注意：**由于 URL 可以用多个名称标识，使用 URL 作为成员条件不是确定代码标识的安全方式。 应尽可能使用强名称成员条件、发行者成员条件或哈希成员条件。 <br /><br /> 有关此成员资格条件的详细信息，请参阅 <xref:System.Security.Policy.UrlMembershipCondition>。|  
 |**-zone** *zonename*|指定具有给定源区域的代码。 *zonename* 参数可以是下列值之一：**MyComputer**、**Intranet**、**Trusted**、**Internet** 或 **Untrusted**。 有关此成员资格条件的更多信息，请参见 <xref:System.Security.Policy.ZoneMembershipCondition> 类。|  
   
@@ -255,6 +257,6 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
 caspol -all -resolveperm testassembly  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -1,24 +1,26 @@
 ---
-title: "将 Windows 应用商店应用迁移到 .NET Native"
-ms.custom: 
+title: 将 Windows 应用商店应用迁移到 .NET Native
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 对 Windows 应用商店中或开发者的计算机上的应用进行静态编译。 这不同于及时生成 (JIT) 编译器或 [本地映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 在该设备上为 Windows 应用商店应用执行的动态编译。 尽管存在不同， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 尝试保持与 [.NET for Windows 应用商店应用](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)的兼容。 通常，在 Windows 应用商店应用的 .NET 上可以运行的程序在 [!INCLUDE[net_native](../../../includes/net-native-md.md)]上也可以运行。  然而，在某些情况下，你可能会遇到行为变更。 本文档从以下方面讨论了 Windows 应用商店应用的标准 .NET 和 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 之间的差异：  
@@ -166,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 方法会正确解析包含 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 中短日期的字符串。 然而，它不会继续兼容 Microsoft 知识库文章 [KB2803771](http://support.microsoft.com/kb/2803771) 和 [KB2803755](http://support.microsoft.com/kb/2803755)中描述的日期和时间解析的变更。  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")`中正确地舍入[!INCLUDE[net_native](../../../includes/net-native-md.md)]。 在某些版本的 CLR 中，结果字符串会缩短，而不是舍入。  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` 在正确地舍入[!INCLUDE[net_native](../../../includes/net-native-md.md)]。 在某些版本的 CLR 中，结果字符串会缩短，而不是舍入。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient 差异  
@@ -230,7 +232,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>支持，但某些情况下，例如与一起使用时引发了异常[IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)或 byref 变量。  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 支持，但某些情况下，例如与一起使用时引发了异常[IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)或 byref 变量。  
   
  不推荐将 API 用于 [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) 支持：  
   
@@ -683,7 +685,7 @@ ms.lasthandoff: 12/22/2017
   
  不支持启用 Windows 应用商店应用项目的单元测试库上的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] ，因为这会导致项目无法构建。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [.NET for Windows Store 应用概述](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  

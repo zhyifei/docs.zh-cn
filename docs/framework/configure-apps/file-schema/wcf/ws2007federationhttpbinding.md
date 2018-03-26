@@ -1,24 +1,26 @@
 ---
 title: '&lt;ws2007FederationHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b1f85d4cc45075f82035fa5b8c0c95341ba142d6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 派生自一个安全且可互操作绑定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)并支持联合的安全性。  
@@ -101,7 +103,7 @@ ms.lasthandoff: 01/19/2018
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
- 联合是一种可以在多个企业或信任域通过共享标识进行身份验证和授权的功能。 它使用 WS-Trust 协议将标识的表示形式从一个信任域映射到另一个信任域。 联合 HTTP 绑定支持 SOAP 安全以及混合模式安全，但不支持传输安全。 配置了此绑定的服务必须使用 HTTP 传输。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+ 联合是一种可以在多个企业或信任域通过共享标识进行身份验证和授权的功能。 它使用 WS-Trust 协议将标识的表示形式从一个信任域映射到另一个信任域。 联合 HTTP 绑定支持 SOAP 安全以及混合模式安全，但不支持传输安全。 配置了此绑定的服务必须使用 HTTP 传输。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [\<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -136,7 +138,7 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.WS2007FederationHttpBinding>  
  <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>  
  [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)  

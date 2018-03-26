@@ -1,28 +1,28 @@
 ---
 title: NetNamedPipeBinding
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 4ea4e34049ef54cd6d161e381bf92818b5f3531c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 本示例演示在同一台计算机上提供跨进程通信的 `netNamedPipeBinding` 绑定。 命名管道不能跨计算机工作。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)计算器服务。  
@@ -107,4 +107,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  
   
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅

@@ -26,7 +26,7 @@ ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  

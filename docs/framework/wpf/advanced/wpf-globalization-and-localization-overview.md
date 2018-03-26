@@ -1,32 +1,34 @@
 ---
-title: "WPF 全球化和本地化概述"
-ms.custom: 
+title: WPF 全球化和本地化概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6f2bc9021ca376b7b27f74efed6866a907b480ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和本地化概述
 当你将自己的产品限制为只能通过一种语言使用时，便将潜在的客户群限制为全球 65 亿人口中的一小部分。 如果想让自己的应用程序被全球用户所接受，那么对产品进行经济而有效的本地化将是赢得更多客户的最好、最经济的方法。  
   
- 此概述介绍全球化和本地化[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 全球化是指设计和开发在多个地点执行的应用程序。 例如，全球化支持适用于不同区域性用户的本地化用户界面和区域数据。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供了全球化的设计功能，包括自动布局、 附属程序集和本地化的属性和注释。
+ 此概述介绍全球化和本地化[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 全球化是指设计和开发在多个地点执行的应用程序。 例如，全球化支持适用于不同区域性用户的本地化用户界面和区域数据。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了全球化的设计功能，包括自动布局、 附属程序集和本地化的属性和注释。
   
  本地化是针对应用程序所支持的特定区域性将应用程序资源转换为本地化版本的过程。 当您在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，使用中的 Api<xref:System.Windows.Markup.Localizer>命名空间。 这些 Api power [LocBaml 工具示例](http://go.microsoft.com/fwlink/?LinkID=160016)命令行工具。 有关如何生成和使用的信息，请参阅[本地化应用程序](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。    
   
@@ -65,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
 -   使用本地化属性来控制而不是有选择地省略本地化<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>元素上的属性。 请参阅[本地化属性和注释](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)有关详细信息。  
   
--   使用**msbuild /t:updateuid**和**通过**添加并签<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性在你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性，用于开发和本地化之间跟踪更改。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性可以帮助您本地化新开发更改。 如果你手动添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性设置为[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，该任务是通常乏味并且不太准确。  
+-   使用**msbuild /t:updateuid**和**通过**添加并签<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性在你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性，用于开发和本地化之间跟踪更改。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 属性可以帮助您本地化新开发更改。 如果你手动添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性设置为[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，该任务是通常乏味并且不太准确。  
   
     -   无法编辑或更改<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>后你开始进行本地化的属性。  
   
@@ -134,9 +136,9 @@ ms.lasthandoff: 12/22/2017
   
  `<Grid x:Uid="Grid_1">`  
   
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性所需顺序[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]正常工作。  
+ <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 属性所需顺序[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]正常工作。  
   
- 它们由[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]来跟踪更改之间的开发和本地化的[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性使您能够合并的较新版本[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]与较旧的本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 你添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性通过运行**msbuild /t:updateuid 运行**命令 shell 中。 这是添加的推荐的方法<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性因为手动将它们添加为通常耗时且不太准确。 你可以检查是否<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性是否正确设置了通过运行**通过运行**。  
+ 它们由[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]本地化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]来跟踪更改之间的开发和本地化的[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 属性使您能够合并的较新版本[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]与较旧的本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 你添加<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性通过运行**msbuild /t:updateuid 运行**命令 shell 中。 这是添加的推荐的方法<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性因为手动将它们添加为通常耗时且不太准确。 你可以检查是否<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>属性是否正确设置了通过运行**通过运行**。  
   
  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]使用结构化<xref:System.Windows.Controls.Grid>控制，这很有用要利用自动布局控件中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 请注意，对话框拆分成三行五列。 不是一种行和列定义具有固定的大小;因此，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]位于每个单元中的元素可以调整以适应增加和减少的大小在本地化过程。  
   
@@ -168,7 +170,7 @@ ms.lasthandoff: 12/22/2017
   
  `</Resource>`  
   
- `RunIcon.JPG`不需要本地化，因为它应显示相同的所有区域性。 `Localizable`设置为`false`，以便它仍然在语言中性主程序集而不是附属程序集。 所有编译资源的默认值是`Localizable`设置为`true`。  
+ `RunIcon.JPG`不需要本地化，因为它应显示相同的所有区域性。 `Localizable` 设置为`false`，以便它仍然在语言中性主程序集而不是附属程序集。 所有编译资源的默认值是`Localizable`设置为`true`。  
   
  **本地化“运行”对话框**  
   
@@ -180,7 +182,7 @@ ms.lasthandoff: 12/22/2017
   
  使用你喜欢的支持 Unicode 的 CSV 编辑器来编辑此文件。 筛选掉本地化类别为“None”的所有项。 应看到下面的项：  
   
-|资源键|本地化类别|“值”|  
+|资源键|本地化类别|值|  
 |-|-|-| 
 |Button_1:System.Windows.Controls.Button.$Content|Button|确定|  
 |Button_2:System.Windows.Controls.Button.$Content|Button|取消|  
@@ -192,7 +194,7 @@ ms.lasthandoff: 12/22/2017
   
  将该应用程序本地化为德语版本需要进行下面的翻译：  
   
-|资源键|本地化类别|“值”|  
+|资源键|本地化类别|值|  
 |-|-|-| 
 |Button_1:System.Windows.Controls.Button.$Content|Button|确定|  
 |Button_2:System.Windows.Controls.Button.$Content|Button|Abbrechen|  
@@ -267,7 +269,7 @@ ms.lasthandoff: 12/22/2017
   
  此注释将成为与 TextBlock_1 的内容以及在 LocBaml 工具的情况下关联 (请参阅[本地化应用程序](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md))，将可以看到它输出.csv 文件中的 TextBlock_1 行的第六个列中：  
   
-|资源键|类别|可读性|可修改性|注释|“值”|  
+|资源键|类别|可读性|可修改性|注释|值|  
 |-|-|-|-|-|-|  
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|此字符用作装饰性规则。|&#124;|  
   
@@ -285,7 +287,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
- 默认本地化特性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供还可重写通过代码，因此你可以正确设置自定义控件的适当的默认值。 例如:  
+ 默认本地化特性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供还可重写通过代码，因此你可以正确设置自定义控件的适当的默认值。 例如：  
   
  `[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]`  
   

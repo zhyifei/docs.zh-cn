@@ -1,27 +1,29 @@
 ---
-title: "标准查询运算符转换"
-ms.custom: 
+title: 标准查询运算符转换
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-caps.latest.revision: "2"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="standard-query-operator-translation"></a>标准查询运算符转换
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将标准查询运算符转换为 SQL 命令。 数据库的查询处理器决定了 SQL 转换的执行语义。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/17/2018
  <xref:System.Linq.Enumerable.Union%2A> 方法是为多重集定义的，定义为多重集的无序串联（实际上是 SQL 中的 UNION ALL 子句的执行结果）。  
   
 ### <a name="take-skip"></a>Take、Skip  
- <xref:System.Linq.Enumerable.Take%2A>和<xref:System.Linq.Enumerable.Skip%2A>方法是定义完善的仅针对*有序集*。 未定义针对无序集或多重集的语义。  
+ <xref:System.Linq.Enumerable.Take%2A> 和<xref:System.Linq.Enumerable.Skip%2A>方法是定义完善的仅针对*有序集*。 未定义针对无序集或多重集的语义。  
   
 > [!NOTE]
 >  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅中的"跳过和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
@@ -123,7 +125,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持相等和比较*平面*自变量，但不是能为自变量或包含序列。 平自变量是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持相等和比较*平面*自变量，但不是能为自变量或包含序列。 平自变量是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。  
   
  以下是平参数的一些示例：  
   
@@ -236,7 +238,7 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  [返回或跳过序列中的元素](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
  [连接两个序列](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  

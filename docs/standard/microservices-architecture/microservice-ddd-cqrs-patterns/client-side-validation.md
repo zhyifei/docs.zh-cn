@@ -1,7 +1,7 @@
 ---
-title: "客户端验证（表示层中的验证）"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 客户端验证（表示层中的验证）"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 客户端验证（表示层中的验证）
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 客户端验证（表示层中的验证）
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>客户端验证（表示层中的验证）
 
@@ -35,27 +35,27 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 移动应用中进行的验证
 
--   **Validate Text Input and Show Errors**（验证文本输入和显示错误）
-    [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **验证文本输入和显示的错误**
+    [*https://developer.xamarin.com/recipes/ios/standard\_控件/文本\_字段/验证\_输入 /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validation Callback**（验证回叫）
-    [https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+-   **验证回调**
+    [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core 应用中进行的验证
 
 -   **Rick Anderson。添加验证**
-    [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web 应用中进行的验证（Angular 2、TypeScript、JavaScript）
 
--   **Ado Kukic.Angular 2 Form Validation****
-    **（（Angular 2 窗体验证））[https://scotch.io/tutorials/angular-2-form-validation**](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic.角度 2 窗体验证** **
+    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form Validation**（窗体验证）
-    [https://angular.io/docs/ts/latest/cookbook/form-validation.html](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+-   **窗体验证**
+    [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **验证。** Breeze 文档。
-    [http://breeze.github.io/doc-js/validation.html](http://breeze.github.io/doc-js/validation.html)
+    [*http://breeze.github.io/doc-js/validation.html*](http://breeze.github.io/doc-js/validation.html)
 
 总之，与验证有关的最重要的概念有以下几条：
 

@@ -20,7 +20,7 @@ ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="common-schema-collections"></a>公共架构集合
 通用架构集合是每个 .NET Framework 托管提供程序均实现的架构集合。 您可以查询由.NET Framework 托管提供程序以确定支持的架构集合列表，通过调用**GetSchema**不带任何参数，或包含架构集合名称"MetaDataCollections"的方法。 此时将返回 <xref:System.Data.DataTable>，包含支持的架构集合列表、每个架构集合支持的限制数以及所使用的标识符部分数。 这些集合描述所有必需的列。 提供程序可以根据需要随意添加其他列。 例如，`SqlClient` 和 `OracleClient` 向限制集合中添加 ParameterName。  

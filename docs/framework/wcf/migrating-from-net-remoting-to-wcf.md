@@ -1,24 +1,26 @@
 ---
-title: "从 .NET 远程处理迁移到 WCF"
-ms.custom: 
+title: 从 .NET 远程处理迁移到 WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>从 .NET 远程处理迁移到 WCF
 本文介绍如何迁移借助 .NET 远程处理来使用 Windows Communication Foundation (WCF) 的应用程序。 本文对这些产品之间的相似概念进行比较，并介绍如何在 WCF 中完成若干常见的远程处理方案。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |服务操作|服务器类型上的公共方法|标记为具有 [OperationContract] 属性|  
 |序列化|ISerializable 或 [Serializable]|DataContractSerializer 或 XmlSerializer|  
 |传递的对象|按值或按引用|仅按值|  
-|错误/异常|任何可序列化的异常|FaultContract\<TDetail >|  
+|错误/异常|任何可序列化的异常|FaultContract\<TDetail>|  
 |客户端代理对象|从 MarshalByRefObjects 自动创建强类型透明代理|生成强类型的代理按需使用 ChannelFactory\<TChannel >|  
 |所需平台|客户端和服务器必须使用 Microsoft 操作系统和 .NET|跨平台|  
 |消息格式|Private|行业标准（SOAP、WS-* 等。）|  
@@ -678,5 +680,5 @@ public class RemotingServer : MarshalByRefObject
   
  正常的 WCF 数据交换是按值进行的。 这可确保其中某个数据对象上的调用方法仅在本地执行 – 它将不会调用其他层上的代码。 虽然可能实现类似于返回的按引用对象，但*从*服务器上，不能为客户端将按引用对象传递*到*服务器。 在 WCF 中使用双工服务可实现需要在客户端和服务器间来回会话的方案。 有关详细信息，请参阅[双工服务](./feature-details/duplex-services.md)。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  .NET 远程处理是一种通信框架，仅用于完全信任的环境中。 它是一项传统技术，仅支持向后兼容性。 它不应用于生成新的应用程序。 相反，WCF 融入了安全性，并建议将其用于生成新的和现有的应用程序。 Microsoft 建议将现有的远程处理应用程序迁移到使用 WCF 或 ASP.NET Web API。

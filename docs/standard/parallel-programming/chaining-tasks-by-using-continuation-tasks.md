@@ -1,12 +1,12 @@
 ---
-title: "使用延续任务来链接任务"
-ms.custom: 
+title: 使用延续任务来链接任务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -22,10 +22,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用延续任务来链接任务
 在异步编程中，一个异步操作在完成时调用另一个操作并将数据传递到其中的情况非常常见。 传统上，此过程是通过使用回调方法完成的。 在任务并行库中， *延续任务*提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，由另一个任务（称为 *前面的任务*）在完成时调用。  
@@ -159,5 +159,5 @@ ms.lasthandoff: 01/19/2018
   
 -   如果延续为附加子任务并且是通过使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 选项创建的，则父级会将该延续的异常传播回调用线程，就像任何其他附加子级的情况一样。 有关详细信息，请参阅[附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

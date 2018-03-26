@@ -1,26 +1,28 @@
 ---
-title: "XML 值属性 (Visual Basic)"
+title: XML 值属性 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.XmlPropertyExtensionValue
+f1_keywords:
+- vb.XmlPropertyExtensionValue
 helpviewer_keywords:
 - Value property [Visual Basic]
 - Visual Basic code, accessing XML
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d9294c2d1d83dce3bca2abc22ee9c70296fc8014
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="xml-value-property-visual-basic"></a>XML 值属性 (Visual Basic)
 提供对的集合的第一个元素的值的访问<xref:System.Xml.Linq.XElement>对象。  
@@ -35,7 +37,7 @@ object.Value
   
 |术语|定义|  
 |---|---|  
-|`object`|必需。 <xref:System.Xml.Linq.XElement> 对象的集合。|  
+|`object`|必须的。 <xref:System.Xml.Linq.XElement> 对象的集合。|  
   
 ## <a name="return-value"></a>返回值  
  A`String`包含值的集合，第一个元素或`Nothing`如果该集合为空。  

@@ -1,7 +1,7 @@
 ---
-title: "使用 docker-compose.yml 定义多容器应用程序"
-description: "用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 docker-compose.yml 定义多容器应用程序"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 使用 docker-compose.yml 定义多容器应用程序
+description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 docker-compose.yml 定义多容器应用程序
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
@@ -12,14 +12,14 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定义多容器应用程序 
 
-在本指南中，[步骤 4. 构建多容器 Docker 应用程序时在 docker-compose.yml 中定义服务](#step4_define_svcs_in_docker_compose_yml)部分介绍了 [docker-compose.yml](https://docs.docker.com/compose/compose-file/) 文件。 但还有其他方式可使用 docker-compose 文件，这值得进一步探索。
+本指南中， [docker-compose.yml](https://docs.docker.com/compose/compose-file/)文件的部分中引入了[步骤 4。构建多容器 Docker 应用程序时在 docker-compose.yml 中定义你的服务](#step4_define_svcs_in_docker_compose_yml)。 但还有其他方式可使用 docker-compose 文件，这值得进一步探索。
 
 例如，可明确描述希望如何在 docker-compose.yml 文件中部署多容器应用程序。 此外，也可以描述将如何生成自定义 Docker 映像。 （也可以使用 Docker CLI 生成自定义 Docker 映像。）
 
@@ -434,11 +434,11 @@ Docker-compose 要求 .env 文件中的每行都是 &lt;variable&gt;=&lt;value&g
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Overview of Docker Compose**（Docker Compose 概述）
-    [https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
+-   **概述 Docker Compose**
+    [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Multiple Compose files**（多个 Compose 文件）
-    [https://docs.docker.com/compose/extends/\#multiple-compose-files](https://docs.docker.com/compose/extends/#multiple-compose-files)
+-   **多个 Compose 文件**
+    [*https://docs.docker.com/compose/extends/\#多个构成文件*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>生成优化的 ASP.NET Core Docker 映像
 
@@ -468,8 +468,8 @@ ENTRYPOINT ["dotnet", "run"]
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Building Optimized Docker Images with ASP.NET Core**（使用 ASP.NET Core 生成优化的 Docker 映像）
-    [https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
+-   **构建优化与 ASP.NET 核心的 Docker 映像**
+    [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 ### <a name="building-the-application-from-a-build-ci-container"></a>从生成 (CI) 容器构建应用程序
 
@@ -549,8 +549,8 @@ docker-compose build 和 docker-compose up 命令之间的区别在于，docker-
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Building bits from a container: Setting the eShopOnContainers solution up in a Windows CLI environment (dotnet CLI, Docker CLI and VS Code)**（从容器构建位：在 Windows CLI 环境中设置 eShopOnContainers 解决方案（dotnet CLI、Docker CLI 和 VS Code））
-    [https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+-   **生成从容器的 bits： 在 Windows CLI 环境 (dotnet 为 CLI，Docker CLI 和 VS Code) 中设置 eShopOnContainers 解决方案**
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI，-Docker-CLI-和-VS 的代码)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]

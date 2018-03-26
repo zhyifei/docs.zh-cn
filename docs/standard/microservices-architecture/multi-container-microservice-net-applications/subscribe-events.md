@@ -1,7 +1,7 @@
 ---
-title: "订阅事件"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 订阅事件"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 订阅事件
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 订阅事件
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="subscribing-to-events"></a>订阅事件
 
@@ -302,7 +302,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他资源
 
--   **遵循消息幂等性**（此页上的副标题）[https://msdn.microsoft.com/library/jj591565.aspx](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **遵循消息幂等性**（子标题的文本在此页上） [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>删除重复的集成事件消息
 
@@ -322,63 +322,63 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他资源
 
--   **Forked eShopOnContainers using NServiceBus (Particular Software)**（使用 NServiceBus（特定软件）创建 eShopOnContainers 的分支）
+-   **使用 NServiceBus （特定软件） 的分叉的 eShopOnContainers**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Event Driven Messaging**（事件驱动的消息传递）
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **事件驱动的消息传送**
+    [*http://soapatterns.org/design\_模式/事件\_驱动\_消息传送*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard。Refactoring Towards Resilience: Evaluating Coupling**
-    （重构复原能力：评估耦合度）[https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+-   **Jimmy Bogard。重构入恢复能力： 评估耦合**
+    [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publish-Subscribe channel**
-    （发布-订阅通道）[*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+-   **发布-订阅通道**
+    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **绑定上下文之间的通信**
-    [https://msdn.microsoft.com/library/jj591572.aspx](https://msdn.microsoft.com/library/jj591572.aspx)
+    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual Consistency**
-    （最终一致性）[https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **最终一致性**
+    [*https://en.wikipedia.org/wiki/Eventual\_一致性*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown。Strategies for Integrating Bounded Contexts**
-    （绑定上下文的集成策略）[*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+-   **Philip Brown。集成的策略限制上下文**
+    [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson.Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2**
-    （使用聚合、事件溯源和 CQRS 开发事务微服务 - 第 2 部分）[https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
+-   **Chris Richardson.开发使用聚合、 事件来源和 CQRS-第 2 部分的事务微服务**
+    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson.Event Sourcing pattern**
-    （事件溯源模式）[*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
+-   **Chris Richardson.事件采购模式**
+    [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
--   **事件溯源简介**
-    [https://msdn.microsoft.com/library/jj591559.asp](https://msdn.microsoft.com/library/jj591559.aspx)
+-   **引入了事件源**
+    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Event Store 数据库**。 官方网站。
-    [https://geteventstore.com/](https://geteventstore.com/)
+    [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen。Event-Driven Data Management for Microservices**
-    *（微服务的事件驱动数据管理）<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
+-   **Patrick Nommensen。微服务的事件驱动的数据管理**
+    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
 -   **CAP 定理**
-    [https://en.wikipedia.org/wiki/CAP*\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
+    [*https://en.wikipedia.org/wiki/CAP\_定理*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **What is CAP Theorem?**
-    （什么是 CAP 定理？）[https://www.quora.com/What-Is-CAP-Theorem-1](https://www.quora.com/What-Is-CAP-Theorem-1)
+-   **什么是 CAP 定理？**
+    [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **数据一致性入门指南** 
-    [https://msdn.microsoft.com/library/dn589800.aspx](https://msdn.microsoft.com/library/dn589800.aspx)
+-   **数据一致性入门**
+    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling。The CAP Theorem: Why “Everything is Different” with the Cloud and Internet**
-    （CAP 定理：为什么云和 Internet“完全不同”）[https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
+-   **Rick Saling。CAP 定理中:"所有内容原样不同"云和 Internet 的原因**
+    [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer。CAP Twelve Years Later: How the "Rules" Have Changed**
-    （十二年后的 CAP：“规则”有哪些变化）[https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
+-   **Eric Brewer。CAP 十二年更高版本： 如何更改了"规则"**
+    [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **参与外部 (DTC) 事务** (MSMQ) [https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **参与外部 (DTC) 事务**(MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure 服务总线。中转消息传送：重复检测**
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+-   **Azure 服务总线。中转消息传送： 重复检测**
+    [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide**（可靠性指南，RabbitMQ 文档）[https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **可靠性指南**（RabbitMQ 文档） [  *https://www.rabbitmq.com/reliability.html\#使用者*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

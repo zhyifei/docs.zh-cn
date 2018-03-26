@@ -1,12 +1,12 @@
 ---
-title: "实现基于事件的异步模式的最佳做法"
-ms.custom: 
+title: 实现基于事件的异步模式的最佳做法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -26,10 +26,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 910edb8c79518f63e8b881b8eaecd69060fb6711
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>实现基于事件的异步模式的最佳做法
 基于事件的异步模式提供了一种在类中使用熟悉的事件和委托语义公开异步行为的有效方法。 若要实现基于事件的异步模式，你需要遵循某些特定的行为要求。 以下部分描述了在你实现遵循基于事件的异步模式的类时应该考虑的要求和准则。  
@@ -155,7 +155,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   当你使用任何形式的多线程时，都有可能会遇到非常严重且复杂的 Bug。 在实现任何使用多线程处理的解决方案之前，请参阅[托管线程处理最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ComponentModel.AsyncOperation>  
  <xref:System.ComponentModel.AsyncOperationManager>  
  <xref:System.ComponentModel.AsyncCompletedEventArgs>  

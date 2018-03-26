@@ -1,8 +1,9 @@
 ---
-title: "如何：承载和运行基本的 Windows Communication Foundation 服务"
+title: 如何：承载和运行基本的 Windows Communication Foundation 服务
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,12 +15,13 @@ ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何：承载和运行基本的 Windows Communication Foundation 服务
 这是创建 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的第三项任务。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
@@ -422,10 +424,10 @@ End Module
 ```  
   
 > [!NOTE]
->  此类服务需要在计算机上注册 HTTP 地址以进行侦听的权限。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何配置命名空间保留，请参阅[配置 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 下运行时，必须使用管理员特权运行 service.exe。  
+>  此类服务需要在计算机上注册 HTTP 地址以进行侦听的权限。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何配置命名空间保留，请参阅[配置 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 下运行时，必须使用管理员特权运行 service.exe。  
   
  此时服务正在运行。 继续执行[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 有关疑难解答的信息，请参阅[疑难解答入门教程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [入门](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自承载](../../../docs/framework/wcf/samples/self-host.md)

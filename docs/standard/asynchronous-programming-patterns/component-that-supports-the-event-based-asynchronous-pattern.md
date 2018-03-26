@@ -1,12 +1,12 @@
 ---
-title: "演练：实现支持基于事件的异步模式的组件"
-ms.custom: 
+title: 演练：实现支持基于事件的异步模式的组件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,7 +24,7 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -32,10 +32,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 4d42c1d4b58f5e2517ff8d8c504628c7aab6fd0d
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>演练：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
@@ -111,7 +111,7 @@ ms.lasthandoff: 02/09/2018
      这些警告会在下一部分中得到清除。  
   
 ## <a name="defining-private-delegates"></a>定义专用委托  
- `PrimeNumberCalculator` 组件的异步特性是通过特殊的 <xref:System.Threading.SendOrPostCallback> 委托在内部进行实现。 <xref:System.Threading.SendOrPostCallback> 表示对 <xref:System.Threading.ThreadPool> 线程执行的回调方法。 回调方法必须有需要使用单个 <xref:System.Object> 类型参数的签名。也就是说，需要在包装类中的各委托之间传递状态。 有关更多信息，请参见<xref:System.Threading.SendOrPostCallback>。  
+ `PrimeNumberCalculator` 组件的异步特性是通过特殊的 <xref:System.Threading.SendOrPostCallback> 委托在内部进行实现。 <xref:System.Threading.SendOrPostCallback> 表示对 <xref:System.Threading.ThreadPool> 线程执行的回调方法。 回调方法必须有需要使用单个 <xref:System.Object> 类型参数的签名。也就是说，需要在包装类中的各委托之间传递状态。 有关详细信息，请参阅<xref:System.Threading.SendOrPostCallback>。  
   
 #### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>若要实现组件的内部异步行为，请执行以下操作：  
   
@@ -263,7 +263,7 @@ ms.lasthandoff: 02/09/2018
   
  还可以测试是否有最简单的除数（如 2、3 和 5）来改进此示例。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
  [未构造：Visual Basic 中的多线程处理](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  

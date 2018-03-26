@@ -1,24 +1,26 @@
 ---
-title: "从开发的角度比较 ASP.NET Web 服务与 WCF"
-ms.custom: 
+title: 从开发的角度比较 ASP.NET Web 服务与 WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>从开发的角度比较 ASP.NET Web 服务与 WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 具有一个 ASP.NET 兼容模式选项，用户使用此选项可以对 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序进行编程和配置，使其像 ASP.NET Web 服务一样，并且还可以模仿这些服务的行为。 以下各部分基于使用这两种技术开发应用程序的要求来比较 ASP.NET Web 服务和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
@@ -380,7 +382,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  此示例演示如何在构造 <xref:System.ServiceModel.ServiceHost> 时指定一个或多个传输协议的地址。 这些地址称为基址。  
   
- 为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的任意终结点提供的地址是与终结点宿主的基址相关的地址。 对于每个通信传输协议，宿主都可以有一个基址。 在上面的配置文件配置示例中，为终结点选定的 <xref:System.ServiceModel.BasicHttpBinding> 将 HTTP 用作传输协议，因此终结点的地址 `EchoService` 与宿主的 HTTP 基址相关。 对于上面示例的宿主，HTTP 基址为 http://www.contoso.com:8000/。 对于在 IIS 或 WAS 中承载的服务，其基址为服务的服务文件的 URL。  
+ 为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的任意终结点提供的地址是与终结点宿主的基址相关的地址。 对于每个通信传输协议，宿主都可以有一个基址。 在上面的配置文件配置示例中，为终结点选定的 <xref:System.ServiceModel.BasicHttpBinding> 将 HTTP 用作传输协议，因此终结点的地址 `EchoService` 与宿主的 HTTP 基址相关。 对于在前面的示例的宿主，HTTP 基址是http://www.contoso.com:8000/。 对于在 IIS 或 WAS 中承载的服务，其基址为服务的服务文件的 URL。  
   
  只有在 IIS 或 WAS 中承载并将 HTTP 配置为独有传输协议的服务，才可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 兼容模式选项。 启用此选项需要执行下列步骤。  
   
@@ -761,5 +763,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>全球化  
  通过 ASP.NET 配置语言，您可以为这些服务单独指定区域性。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持配置设置，ASP.NET 兼容模式下除外。 若要对不使用 ASP.NET 兼容模式的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务进行本地化，请将服务类型编译为区域性特定的程序集，并为每个区域性特定的程序集提供独立的区域性特定终结点。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [基于目标和使用的标准比较 ASP.NET Web 服务与 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

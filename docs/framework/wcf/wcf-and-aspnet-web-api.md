@@ -1,24 +1,26 @@
 ---
-title: "WCF 和 ASP.NET Web API"
-ms.custom: 
+title: WCF 和 ASP.NET Web API
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-caps.latest.revision: "2"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1270eb202a1e8cbf1a297a13593dd0aa6046cb6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 和 ASP.NET Web API
 WCF 是 Microsoft 为生成面向服务的应用程序而提供的统一编程模型。 借助这一模型，开发人员可以构建既能跨平台与现有投资集成又能与现有投资交互的安全、可靠的事务处理解决方案。 [ASP.NET Web API](http://www.asp.net/web-api)是一个框架，可以轻松地生成覆盖广泛的客户端，包括浏览器和移动设备的 HTTP 服务。 ASP.NET Web API 是用于在 .NET Framework 上生成 RESTful 应用程序的理想平台。 本主题提供了一些指南，可帮助您决定哪种技术能够最佳满足您的需要。  
@@ -37,6 +39,6 @@ WCF 是 Microsoft 为生成面向服务的应用程序而提供的统一编程�
   
  使用 WCF 可创建可靠、安全的 Web 服务，这些服务可通过各种传输方式来访问。 使用 ASP.NET Web API 可创建基于 HTTP 的服务，这些服务可从各种客户端来访问。 如果要创建和设计新的 REST 样式服务，请使用 ASP.NET Web API。 虽然 WCF 针对编写 REST 样式服务提供了一些支持，但 ASP.NET Web API 中的 REST 支持更加完整，并且，所有将来的 REST 功能改进都将在 ASP.NET Web API 中进行。 如果您现在拥有一种 WCF 服务，并且要公开其他 REST 终结点，请使用 WCF 和 <xref:System.ServiceModel.WebHttpBinding>。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)  

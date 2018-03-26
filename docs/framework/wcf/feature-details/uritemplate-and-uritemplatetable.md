@@ -1,24 +1,26 @@
 ---
-title: "UriTemplate 和 UriTemplateTable"
-ms.custom: 
+title: UriTemplate 和 UriTemplateTable
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 和 UriTemplateTable
 Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 添加了两个新类，让开发人员控制他们的 URI。 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 构成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中基于 URI 的调度引擎的基础。 这些类还可单独使用，使开发人员能够利用模板和 URI 映射机制，而无需实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
@@ -98,13 +100,13 @@ Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局�
   
 -   "shoe / {船} / *"  
   
--   "shoe/船？ x = 2"  
+-   "shoe/boat?x=2"  
   
 -   "shoe / {船}？ x = {平台}"  
   
 -   "shoe/{boat}?x={bed}&y=band"  
   
--   "？ x = {shoe}"  
+-   "?x={shoe}"  
   
 -   "shoe?x=3&y={var}  
   
@@ -140,7 +142,7 @@ Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局�
 -   /{shoe}{boat} - 必须用文本分隔变量。  
   
 ### <a name="matching-and-compound-path-segments"></a>匹配和复合路径段  
- 复合路径段允许定义在单个路径段内具有多个变量的 UriTemplate。 例如，在下面的模板字符串:"地址 / {state}。{city}"相同的段内定义了两个变量 （state 和 city）。 该模板会匹配诸如"http://example.com/Washington.Redmond"的 URL，但它也会匹配"http://example.com/Washington.Redmond.Microsoft"的 URL。 在后一种情况下，state 变量将包含"Washington"，city 变量将包含"Redmond.Microsoft"。 这时，任何文本（“/”除外）都将与 {city} 变量相匹配。 如果你希望模板不要匹配"额外"的文本，可将变量放在单独的模板段中，例如:"地址 / {state} / {city}。  
+ 复合路径段允许定义在单个路径段内具有多个变量的 UriTemplate。 例如，在下面的模板字符串:"地址 / {state}。{city}"相同的段内定义了两个变量 （state 和 city）。 此模板将如匹配 URL"http://example.com/Washington.Redmond"，但它还将匹配的 URL，如"http://example.com/Washington.Redmond.Microsoft"。 在后一种情况下，state 变量将包含"Washington"，city 变量将包含"Redmond.Microsoft"。 这时，任何文本（“/”除外）都将与 {city} 变量相匹配。 如果你希望模板不要匹配"额外"的文本，可将变量放在单独的模板段中，例如:"地址 / {state} / {city}。  
   
 ### <a name="named-wildcard-segments"></a>命名通配符段  
  命名通配符段是其变量名称以通配符“*”开头的任何路径变量段。 下面的模板字符串包含一个名为“shoe”的命名通配符段。  
@@ -343,7 +345,7 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 > [!NOTE]
 >  作为 URI 路径或 <xref:System.UriTemplate> 路径段文本的组成部分时，字符 á 和 Á 视为不同的字符（但字符 a 和 A 视为相同的字符）。 作为 <xref:System.UriTemplate> {variableName} 或查询字符串的组成部分时，字符 á 和 Á 被视为相同的字符（字符 a 和 A 也视为相同的字符）。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  

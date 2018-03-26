@@ -1,33 +1,35 @@
 ---
 title: '&lt;httpTransport&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 50cbf6521870a54f4f87c3eeb12030d5d7f2f6bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 为自定义绑定指定用于传输 SOAP 消息的 HTTP 传输。  
   
- \<system.serviceModel >  
-\<绑定 >  
-\<customBinding >  
-\<绑定 >  
-\<httpTransport >  
+ \<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<httpTransport>  
   
 ## <a name="syntax"></a>语法  
   
@@ -63,7 +65,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |maxBufferSize|一个正整数，指定缓冲区的最大大小。 默认值为 524288。|  
 |proxyAddress|一个指定 HTTP 代理的地址的 URI。 如果 `useSystemWebProxy` 为 `true`，则此设置必须为 `null`。 默认值为 `null`。|  
 |proxyAuthenticationScheme|指定用于验证 HTTP 代理正在处理的客户端请求的协议。 包括以下有效值：<br /><br /> -None： 会执行任何验证。<br />-Digest： 指定摘要式身份验证。<br />-Negotiate： 协商使用客户端，以确定身份验证方案。 如果客户端和服务器均支持 Kerberos，则使用 Kerberos；否则使用 NTLM。<br />-Ntlm： 指定 NTLM 身份验证。<br />-Basic： 指定基本身份验证。<br />-Anonymous： 指定匿名身份验证。<br />-IntegratedWindowsAuthentication： 指定 Windows 身份验证。<br /><br /> 默认值为 Anonymous。 此属性的类型为 <xref:System.Net.AuthenticationSchemes>。|  
-|realm|一个指定要在代理/服务器上使用的领域的字符串。 默认值为一个空字符串。<br /><br /> 服务器使用领域将受保护的资源分区。 每个分区都可以有自己的身份验证方案和/或授权数据库。 领域仅用于基本和摘要式身份验证。 在客户端成功进行身份验证之后，该身份验证对给定领域内的所有资源都有效。 有关领域的详细说明，请参见位于 http://www.ietf.org 的 RFC 2617。|  
+|realm|一个指定要在代理/服务器上使用的领域的字符串。 默认值为一个空字符串。<br /><br /> 服务器使用领域将受保护的资源分区。 每个分区都可以有自己的身份验证方案和/或授权数据库。 领域仅用于基本和摘要式身份验证。 在客户端成功进行身份验证之后，该身份验证对给定领域内的所有资源都有效。 有关领域的详细说明，请参阅在 RFC 2617 http://www.ietf.org。|  
 |transferMode|指定对消息进行缓冲处理还是流式处理，或者指定消息是请求还是响应。 包括以下有效值：<br /><br /> 缓冲： 请求和响应消息进行缓冲处理。<br />串流： 对请求和响应消息进行流式处理。<br />-StreamedRequest： 请求消息进行流式处理和响应消息进行缓冲处理。<br />-StreamedResponse： 请求消息进行缓冲处理和响应消息进行流式处理。<br /><br /> 默认值为 Buffered。 此属性的类型为 <xref:System.ServiceModel.TransferMode>。|  
 |unsafeConnectionNtlmAuthentication|一个布尔值，指定是否在服务器上启用不安全连接共享。 默认值为 `false`。 如果启用，将对每个 TCP 连接执行一次 NTLM 身份验证。|  
 |useDefaultWebProxy|一个布尔值，指定是否使用计算机范围的代理设置，而不使用用户特定的设置。 默认值为 `true`。|  
@@ -75,12 +77,12 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  `httpTransport` 元素是创建实现 HTTP 传输协议的自定义绑定的起始点。 HTTP 是用于互操作性用途的主要传输。 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 支持此传输以确保与其他非 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web 服务堆栈的互操作性。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
@@ -90,4 +92,4 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

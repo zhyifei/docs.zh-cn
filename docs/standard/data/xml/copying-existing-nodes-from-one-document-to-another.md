@@ -1,15 +1,15 @@
 ---
-title: "将现有节点从一个文档复制到另一个文档"
-ms.custom: 
+title: 将现有节点从一个文档复制到另一个文档
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>将现有节点从一个文档复制到另一个文档
 ImportNode 方法是一种机制，用于将节点或整个节点子树从一个 XmlDocument 复制到另一个 XmlDocument。 该调用返回的节点是源文档节点的副本，其中包括属性值、节点名、节点类型以及所有与命名空间相关的属性，如前缀、本地名称和命名空间统一资源标识符 (URI)。 源文档不更改。 导入该节点后，仍需使用插入节点的方法之一将该节点添加到树中。  
@@ -50,5 +50,5 @@ ImportNode 方法是一种机制，用于将节点或整个节点子树从一个
 > [!NOTE]
 >  虽然可以导入 DocumentType 节点，但一个文档只能有一个 DocumentType。 因此，导入该文档类型后，在将其插入到树中之前，必须确保文档中没有任何文档类型。 若要了解如何删除节点，请参阅[从 XML 文档中删除节点、内容和值](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 文档对象模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

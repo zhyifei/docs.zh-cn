@@ -1,24 +1,26 @@
 ---
-title: "OLE DB 数据类型映射"
-ms.custom: 
+title: OLE DB 数据类型映射
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 407f194a8530f9b9e4241a6bdb4d26a4b891aa46
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 数据类型映射
 下表显示了针对适用于 ADO 和 OLE DB 的 .NET Framework 数据提供程序 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 中的数据类型推断出的 <xref:System.Data.OleDb> 类型。 另外，还列出了 <xref:System.Data.OleDb.OleDbDataReader> 的类型化访问器方法。  
@@ -58,8 +60,8 @@ ms.lasthandoff: 01/17/2018
 |adUserDefined|DBTYPE_UDT|不受支持||  
 |adVarNumeric|DBTYPE_VARNUMERIC|不受支持||  
   
- \*对于 OLE DB 类型`DBTYPE_IUNKNOWN`和`DBTYPE_IDISPATCH`，对象引用是指针的封送的表示。  
+ \* 对于 OLE DB 类型`DBTYPE_IUNKNOWN`和`DBTYPE_IDISPATCH`，对象引用是指针的封送的表示。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

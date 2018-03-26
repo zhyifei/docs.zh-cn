@@ -1,24 +1,26 @@
 ---
-title: "将 WSE 3.0 Web 服务迁移到 WCF"
-ms.custom: 
+title: 将 WSE 3.0 Web 服务迁移到 WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>将 WSE 3.0 Web 服务迁移到 WCF
 将 WSE 3.0 Web 服务迁移到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的好处包括：提高性能，支持其他传输协议、其他安全方案和 WS-* 规范。 在从 WSE 3.0 迁移到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 之后，Web 服务的性能最多可以提高 200% 到 400%。 有关支持的传输的详细信息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 有关支持的方案的列表[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 有关支持的规范的列表[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[Web 服务协议互操作性指南](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)。  
@@ -67,12 +69,12 @@ ms.lasthandoff: 12/22/2017
   
 |WSE 3.0 关守安全断言|WCF 自定义绑定配置|  
 |----------------------------------------|--------------------------------------|  
-|\<usernameOverTransportSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<mutualCertificate10Security / >|`<customBinding>   <binding name="MyBinding">     <security messageSecurityVersion="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" authenticationMode="MutualCertificate" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<usernameForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<anonymousForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<kerberosSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<mutualCertificate11Security / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="MutualCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameOverTransportSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<mutualCertificate10Security />|`<customBinding>   <binding name="MyBinding">     <security messageSecurityVersion="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" authenticationMode="MutualCertificate" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<anonymousForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<kerberosSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<mutualCertificate11Security />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="MutualCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
   
  有关在 WCF 中创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
@@ -133,7 +135,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="custom-transport"></a>自定义传输协议  
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，与 WSE 3.0 自定义传输协议等效的机制是通道扩展。 有关创建通道扩展的详细信息，请参阅[扩展通道层](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [基本编程生命周期](../../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  [自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  

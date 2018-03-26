@@ -1,12 +1,13 @@
 ---
-title: "如何：以编程方式打印 XPS 文件"
-ms.custom: 
+title: 如何：以编程方式打印 XPS 文件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 0b58e617fb04ecaba45ed655dc650459e89453dd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>如何：以编程方式打印 XPS 文件
 你可以使用的一个重载<xref:System.Printing.PrintQueue.AddJob%2A>方法打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件而无需打开<xref:System.Windows.Controls.PrintDialog>或原则上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]根本。  
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/19/2018
   
  **请注意**为简单起见，以上示例通过测试是否存在 *.xps 扩展名来确定文件是否为 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。 但是，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件不需要具有此扩展名。 [isXPS.exe（isXPS 合规性工具）](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)是一种测试文件是否具有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Printing.PrintQueue>  
  <xref:System.Printing.PrintQueue.AddJob%2A>  
  <xref:System.Threading.ApartmentState>  

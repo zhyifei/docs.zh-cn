@@ -20,7 +20,7 @@ ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 服务发布
 从基于 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务主机和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端提供的早期开发环境进行处理，到实际将应用程序部署到生产环境中以进行测试，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务发布都对您有所帮助。 在提交最终部署计划之前，可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务发布来验证您的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务是否正常运行以及是否可以发布。 也可以选择将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库部署到多个不同的目标位置，以进行测试。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/23/2018
   
  你可以使用**发布**指定是否你想要复制程序集、 配置和目标位置，到项目中定义的所有服务的.svc 文件，并覆盖目标位置的现有文件。  
   
- 如果选择将应用程序部署到本地 IIS，则可能会遇到与 IIS 设置有关的错误。 请确保已正确安装 IIS。 可以在浏览器中键入"超链接"http://localhost"http://localhost"，然后检查是否显示了 IIS 默认页面。  在某些情况下，此类问题也可能由于 IIS 中的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 注册不正确导致的。 你可以打开 Visual Studio 命令提示符并运行命令"aspnet_regiis.exe-ir"来解决 ASP.NET 注册问题，或运行命令"ServiceModelReg.exe – ia"来解决 WCF 注册问题。  
+ 如果选择将应用程序部署到本地 IIS，则可能会遇到与 IIS 设置有关的错误。 请确保已正确安装 IIS。 可以在浏览器中键入"超链接 "http://localhost" http://localhost"，然后检查是否显示了 IIS 默认页面。  在某些情况下，此类问题也可能由于 IIS 中的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 注册不正确导致的。 你可以打开 Visual Studio 命令提示符并运行命令"aspnet_regiis.exe-ir"来解决 ASP.NET 注册问题，或运行命令"ServiceModelReg.exe – ia"来解决 WCF 注册问题。  
   
 ## <a name="files-generated-for-publishing"></a>生成的待发布文件  
  在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库可以由 Web 承载之前，该工具生成以下文件：程序集文件、Web.config 文件和 .svc 文件。 这些文件全部复制到目标位置。 然后发布该服务。  

@@ -1,7 +1,7 @@
 ---
-title: "设计微服务域模型"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计微服务域模型"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 设计微服务域模型
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计微服务域模型
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>设计微服务域模型
 
@@ -63,11 +63,11 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 
 #### <a name="additional-resources"></a>其他资源
 
--   **DevIQ.Domain Entity**
-    （域实体）[*http://deviq.com/entity/*](http://deviq.com/entity/)
+-   **DevIQ.域实体**
+    [*http://deviq.com/entity/*](http://deviq.com/entity/)
 
--   **Martin Fowler。The Domain Model**
-    （域模型）[*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+-   **Martin Fowler。域模型**
+    [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
 -   **Martin Fowler。The Anemic Domain Model**（贫乏域模型）
 
@@ -87,16 +87,16 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Martin Fowler。Value Object pattern**
-    （值对象模式）[*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+-   **Martin Fowler。值对象模式**
+    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Value Object**（值对象）
+-   **值对象**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **Value Objects in Test-Driven Development**
-    （测试驱动开发中的值对象）[*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **值 Test-Driven 开发中的对象**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub 自动值对象*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。） （书籍，包括对值对象的讨论）[https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。） （书；包括值对象的讨论）[https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>聚合模式
 
@@ -139,22 +139,22 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Vaughn Vernon。Effective Aggregate Design - Part I: Modeling a Single Aggregate**（有效的聚合设计 - 第一部分：对单个聚合建模）
-    [https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon。有效的聚合设计的一部分： 建模单个聚合**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_社区\_论述\_聚合\_一部分\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon。Effective Aggregate Design - Part II: Making Aggregates Work Together**（有效的聚合设计 - 第二部分：让聚合一起工作）
+-   **Vaughn Vernon。有效的聚合设计的第二部分： 进行聚合工作组合在一起**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Vaughn Vernon。Effective Aggregate Design - Part III: Gaining Insight Through Discovery**（有效的聚合设计 - 第三部分：通过发现深入探索）
+-   **Vaughn Vernon。通过发现有效的聚合设计的第三部分： 获得见解**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
--   **Sergey Grybniak。DDD Tactical Design Patterns**（DDD 战术性设计模式）
-    [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+-   **Sergey Grybniak。DDD 战术性设计模式**
+    [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson.Developing Transactional Microservices Using Aggregates**
-    （使用聚合开发事务微服务）[https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+-   **Chris Richardson.开发使用聚合的事务微服务**
+    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ.The Aggregate pattern**（聚合模式）
+-   **DevIQ.聚合模式**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 

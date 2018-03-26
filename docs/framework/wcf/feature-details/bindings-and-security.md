@@ -1,12 +1,13 @@
 ---
-title: "绑定与安全"
-ms.custom: 
+title: 绑定与安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
@@ -14,28 +15,29 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="bindings-and-security"></a>绑定与安全
 包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的系统提供的绑定提供了一种编写 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的快捷方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  
   
- 有关概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]编程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用绑定，请参阅[编程 WCF 安全](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ 有关概述[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 编程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用绑定，请参阅[编程 WCF 安全](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
   
  如果你已选择一个绑定，则可以了解有关在中与安全性相关联的运行时行为的详细信息[安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
  部分安全性功能无法用系统提供的绑定进行编程。 使用自定义绑定的更多控制，请参阅[使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="security-functions-of-bindings"></a>绑定的安全功能  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含许多由系统提供的绑定，这些绑定可以满足大多数需求。 如果某个特定绑定不能满足要求，你还可以创建自定义绑定。 系统提供的绑定的列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自定义绑定，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含许多由系统提供的绑定，这些绑定可以满足大多数需求。 如果某个特定绑定不能满足要求，你还可以创建自定义绑定。 系统提供的绑定的列表，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自定义绑定，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的每个绑定都具有两种形式：一种是 API，一种是在配置文件中使用的 XML 元素。 例如， `WSHttpBinding` (API) 具有一个对应[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   WS-I 中定义的基本安全配置文件。  
   
- 默认情况下，此绑定是不安全的。 它的目的是与 ASMX 服务进行互操作。 启用安全性后，此绑定可以与 Internet 信息服务 (IIS) 安全机制（例如基本身份验证、摘要和 Windows 集成安全性）进行无缝的互操作。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。 此绑定支持以下功能：  
+ 默认情况下，此绑定是不安全的。 它的目的是与 ASMX 服务进行互操作。 启用安全性后，此绑定可以与 Internet 信息服务 (IIS) 安全机制（例如基本身份验证、摘要和 Windows 集成安全性）进行无缝的互操作。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。 此绑定支持以下功能：  
   
 -   HTTPS 传输安全。  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
     -   提供从服务协商的服务凭据作为通道设置的一部分。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.WSDualHttpSecurity>和<xref:System.ServiceModel.WSDualHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> 和<xref:System.ServiceModel.WSDualHttpSecurityMode>。  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  在代码中，使用<xref:System.ServiceModel.NetTcpBinding>类; 在配置中，使用[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
@@ -155,7 +157,7 @@ ms.lasthandoff: 12/22/2017
   
 -   MSMQ 传输安全性 (Transport)。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetMsmqSecurity>和<xref:System.ServiceModel.NetMsmqSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> 和<xref:System.ServiceModel.NetMsmqSecurityMode>。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  在代码中，使用<xref:System.ServiceModel.NetMsmqBinding>类; 在配置中，使用[ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)。  
@@ -176,17 +178,17 @@ ms.lasthandoff: 12/22/2017
   
  仅当安全模式设置为 <xref:System.ServiceModel.MessageCredentialType.Certificate> 或 <xref:System.ServiceModel.NetMsmqSecurityMode.Both> 时，才支持 <xref:System.ServiceModel.NetMsmqSecurityMode.Message> 凭据。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.MessageSecurityOverMsmq>和<xref:System.ServiceModel.MsmqTransportSecurity>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> 和<xref:System.ServiceModel.MsmqTransportSecurity>。  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  在代码中，使用<xref:System.ServiceModel.WSFederationHttpBinding>类; 在配置中，使用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  默认情况下，此绑定使用 WS-Security（消息层安全性）。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)， <xref:System.ServiceModel.WSFederationHttpSecurity>，和<xref:System.ServiceModel.WSFederationHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)， <xref:System.ServiceModel.WSFederationHttpSecurity>，和<xref:System.ServiceModel.WSFederationHttpSecurityMode>。  
   
 ## <a name="custom-bindings"></a>自定义绑定  
- 如果系统提供的绑定都不能满足您的需求，则可以使用自定义安全绑定元素来创建自定义绑定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
+ 如果系统提供的绑定都不能满足您的需求，则可以使用自定义安全绑定元素来创建自定义绑定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="binding-choices"></a>绑定选择  
  下表概括了安全模式设置中提供的功能，也就是说，它列出了当安全模式设置为 `Transport`、`Message` 或 `TransportWithMessageCredential` 时可以使用的功能。 使用此表可帮助您找到应用程序所需的安全功能。  
@@ -216,12 +218,12 @@ ms.lasthandoff: 12/22/2017
 |类型|描述|  
 |----------|-----------------|  
 |无|指定客户端不需要提供任何凭据。 这相当于匿名客户端。|  
-|Basic|基本身份验证 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，在[http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
-|摘要|摘要式身份验证。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，在[http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|Basic|基本身份验证 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，在[ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|摘要|摘要式身份验证。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，在[ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
 |NTLM|NT LAN Manager (NTLM) 身份验证。|  
 |Windows|Windows 身份验证。|  
 |证书|使用证书执行的身份验证。|  
-|IssuedToken|允许服务要求使用由安全令牌服务或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 颁发的令牌对客户端进行身份验证。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][联合身份验证和已颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
+|IssuedToken|允许服务要求使用由安全令牌服务或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 颁发的令牌对客户端进行身份验证。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [联合身份验证和已颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ### <a name="message-client-credentials-in-bindings"></a>绑定中的消息客户端凭据  
  下表列出在 Message 安全模式下使用绑定时可用的客户端凭据类型。  
@@ -234,7 +236,7 @@ ms.lasthandoff: 12/22/2017
 |证书|允许服务要求使用证书对客户端进行身份验证。|  
 |IssuedToken|允许服务使用安全令牌服务来提供自定义令牌。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  

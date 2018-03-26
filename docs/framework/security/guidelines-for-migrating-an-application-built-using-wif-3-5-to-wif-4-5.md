@@ -1,24 +1,26 @@
 ---
-title: "使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南"
-ms.custom: 
+title: 使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 87443a83b80440a30e942b30bd98cce09816f25f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>使用 WIF 3.5 至 WIF 4.5 构建的应用程序迁移指南
 ## <a name="applies-to"></a>适用于  
@@ -180,7 +182,7 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  由于 WIF 3.5 和 WIF 4.5 中有许多类共享相同的名称，所以在同时使用 WIF 3.5 和 WIF 4.5 时，请确保使用完全限定的类名或使用命名空间别名，以区分 WIF 3.5 和 WIF 4.5 中的类。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [WIF 配置架构](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
  [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
  [Windows Identity Foundation 4.5 中的新增功能](../../../docs/framework/security/whats-new-in-wif.md)  

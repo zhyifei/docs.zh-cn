@@ -1,7 +1,7 @@
 ---
-title: "设计面向微服务的应用程序"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计面向微服务的应用程序"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 设计面向微服务的应用程序
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计面向微服务的应用程序
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>设计面向微服务的应用程序
 
@@ -104,8 +104,8 @@ ms.lasthandoff: 01/19/2018
 
 ### <a name="additional-resources"></a>其他资源
 
--   **eShopOnContainers GitHub 存储库。Source code for the reference application**（参考应用程序的源代码）
-    https://aka.ms/eShopOnContainers/
+-   **eShopOnContainers GitHub 存储库。引用应用程序源代码**
+    *https://aka.ms/eShopOnContainers/*
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>基于微服务的解决方案的优点
 

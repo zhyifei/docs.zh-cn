@@ -1,24 +1,26 @@
 ---
-title: "限制消息分布"
-ms.custom: 
+title: 限制消息分布
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="limiting-message-distribution"></a>限制消息分布
 对等通道设计为一个广播网格。 其基本洪泛模型实现以下操作：将任意网格成员发送的每条消息均分发给该网格的所有其他成员。 在某个成员生成的每条消息都与所有其他成员相关且对他们有用的情况下（例如聊天室），这是一个理想的模型。 但是，许多应用程序偶尔需要限制消息分发。 例如，如果一个新成员加入网格，希望检索通过网格发送的最后一条消息，则无需将此请求群发给该网格的每个成员。 可以将请求限制为仅发送给近邻，或是筛选出本地生成的消息。也可以将消息发送到网格上的单个节点。 本主题讨论如何使用跃点计数、消息传播筛选器、本地筛选器或直接连接来控制通过网格转发消息的方式，并提供有关方式选择的通用准则。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  对这些问题的回答将帮助您确定是使用跃点计数、消息传播筛选器、本地筛选器还是直接连接。 请考虑以下通用准则：  
   
--   **人员**  
+-   **Who**  
   
     -   *单个节点*： 本地筛选器或直接连接。  
   
@@ -75,5 +77,5 @@ ms.lasthandoff: 12/22/2017
   
     -   *低*： 可能不需要任何，直接连接。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [生成对等通道应用程序](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

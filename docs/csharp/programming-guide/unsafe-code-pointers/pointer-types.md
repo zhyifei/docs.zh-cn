@@ -1,5 +1,5 @@
 ---
-title: "指针类型（C# 编程指南）"
+title: 指针类型（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>指针类型（C# 编程指南）
 在不安全的上下文中，类型可以是指针类型、值类型或引用类型。 指针类型声明采用下列形式之一：  
@@ -38,7 +38,7 @@ void* identifier; //allowed but not recommended
   
  指针类型不从[对象](../../../csharp/language-reference/keywords/object.md)继承，并且指针类型与 `object` 之间不存在转换。 此外，装箱和取消装箱不支持指针。 但是，你可在不同的指针类型之间以及指针类型和整型之间进行转换。  
   
- 在同一个声明中声明多个指针时，星号 (*) 仅与基础类型一起写入；而不是用作每个指针名称的前缀。 例如:  
+ 在同一个声明中声明多个指针时，星号 (*) 仅与基础类型一起写入；而不是用作每个指针名称的前缀。 例如：  
   
 ```  
 int* p1, p2, p3;   // Ok  
@@ -133,7 +133,7 @@ Console.ReadLine();
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [不安全代码和指针](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
  [指针转换](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  

@@ -1,24 +1,26 @@
 ---
-title: "工具"
-ms.custom: 
+title: 工具
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>工具
 本主题列出由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 工具生成的所有异常。  
@@ -27,8 +29,8 @@ ms.lasthandoff: 12/22/2017
   
 |资源代码|资源字符串|  
 |-------------------|---------------------|  
-|ParametersTarget|\<枚举 >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersTarget|\<enum>|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|指定的路径无效。 请检查指定的参数。|  
 |ParametersReference|\<文件路径 >|  
 |WrnCannotLoadConfigFileForValidation|处理从指定位置加载的配置文件时出错。 无法验证此配置文件中定义的服务。|  
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 |HelpCodeGenerationCategory|-= 代码生成 =-|  
 |RetreivingMetadataWithMexAndDisco|尝试使用 WS-Metadata Exchange 或 DISCO 从指定位置下载元数据。|  
 |ErrGeneralSchemaValidation|验证导出期间生成的 XML 架构时出错。|  
-|ParametersDirectory|\<目录 >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|无法为传递给指定选项的指定值加载任何类型。 请确保使用指定选项指定了此类型所属的程序集。|  
 |ErrOptionModeConflict|该指定的选项不能与另一个指定的选项一起使用，原因是它们指示了不同的输出类型。|  
 |ErrIsNotAnAssembly|无法将指定的文件加载为程序集。 请验证此文件是否是 .NET 程序集。|  
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 |ErrDirectoryNotFound|找不到指定的目录。 请验证目录是否存在以及您是否具有相应的读取权限。|  
 |ErrUnableToLoadFile|无法读取指定的文件。|  
 |ErrNoFilesFound|指定的输入路径似乎未引用任何现有的文件。|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|指定的输入路径似乎是目录。 输入必须是 URL 或文件路径。|  
 |HelpConfig|指示工具生成具有所提供名称的配置文件。 默认文件：output.config。|  
 |ErrSingleUseSwitch|不能多次指定所指定的选项。|  
@@ -123,9 +125,9 @@ ms.lasthandoff: 12/22/2017
 |ErrInvalidTarget|当使用指定的选项指定时，指定的目标无效。 已指定受支持的目标。|  
 |ErrPathTooLong|产生的路径过长。 请检查指定的自变量。|  
 |HelpCommonOptionsCategory|-= 常用选项 =-|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|没有指定有效的输入文件。 请指定元数据文档或程序集文件。|  
-|ParametersLanguage|\<语言 >|  
+|ParametersLanguage|\<language>|  
 |ErrUnableToLoadMetadataDocument|从加载的文档之一读取元数据时出错。 已指定文档标识符。|  
 |ErrConflictingInputs|指定的输入自变量与指定内容冲突，因为它们指示了不同的工具操作模式。|  
 |WrnUnableToLoadContractForValidation|加载协定类型时出错。 已指定类型和详细信息。|  
@@ -136,7 +138,7 @@ ms.lasthandoff: 12/22/2017
 |GeneratingFiles|正在生成文件...|  
 |ErrCannotSpecifyMultipleMappingsForNamespace|向指定选项传递了无效值。 指定的目标命名空间无法像指定的那样映射到多个 CLR 命名空间。|  
 |ErrCouldNotLoadReferenceAssemblyAt|无法加载指定的引用程序集。|  
-|ParametersOut|\<文件 >|  
+|ParametersOut|\<file>|  
 |NoCodeWasGeneratedSuggestDCOnly|若要从架构生成协定，请使用指定选项。|  
 |ErrUnableToLoadInputConfig|无法加载指定的配置文件。|  
 |ErrUnexpectedDelimiter|无效的自变量分隔符（“:”或“=”）无法启动选项。|  
@@ -153,7 +155,7 @@ ms.lasthandoff: 12/22/2017
 |ErrCodegenError|生成指定语言的代码时出错。<br /><br /> 该语言不支持所有正在生成的代码元素。 应使用另一种语言。|  
 |ErrInputWsdlParseError|读取指定的内容时发生 WSDL 分析错误。 请验证 XML 是否格式正确且有效。|  
 |ErrCouldNotCreateInstance|无法创建传递给指定参数的指定类型的实例。|  
-|ParametersNamespace|\<字符串，字符串 >|  
+|ParametersNamespace|\<string,string>|  
 |HelpNostdlib|不引用标准库（默认情况下，引用 mscorlib.dll 和 system.servicemodel.dll）。|  
 |WrnCannotLoadConfigFileForExport|处理从指定位置加载的配置文件时出错。 无法加载此配置文件中定义的服务。|  
 |WrnUnableToLoadContractForExport|加载协定类型时出错。 无法导出该指定类型。|

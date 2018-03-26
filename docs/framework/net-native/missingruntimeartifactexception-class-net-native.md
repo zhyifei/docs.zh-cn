@@ -1,24 +1,26 @@
 ---
-title: "缺少运行时间项目异常类 (.NET Native)"
-ms.custom: 
+title: 缺少运行时间项目异常类 (.NET Native)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e41e6c6d47d7057e2482a48e6f48c33a1325294c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>缺少运行时间项目异常类 (.NET Native)
 **适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -89,6 +91,6 @@ ms.lasthandoff: 12/22/2017
   
  `MissingRuntimeArtifactException` 类不包括独有成员；它的所有成员都是从其基类即 <xref:System.MemberAccessException> 继承的。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

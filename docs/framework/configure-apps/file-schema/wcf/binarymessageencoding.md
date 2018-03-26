@@ -1,33 +1,35 @@
 ---
 title: '&lt;binaryMessageEncoding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 503c0edf3a21b3fb0f57b5199aa2a1a17df4222d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
 定义一个在网络上以二进制形式对 Windows Communication Foundation (WCF) 消息进行编码的二进制消息编码器。  
   
- \<system.serviceModel >  
-\<绑定 >  
-\<customBinding >  
-\<绑定 >  
-\<binaryMessageEncoding >  
+ \<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<binaryMessageEncoding>  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,13 +56,13 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  编码是将消息转换为一个字节序列的过程。 解码是反向过程。 Windows Communication Foundation (WCF) 包含三种类型的 SOAP 消息编码：文本、二进制和消息传输优化机制 (MTOM)。  
@@ -75,7 +77,7 @@ ms.lasthandoff: 12/22/2017
    maxSessionSize="3141" />  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
@@ -85,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  [绑定](../../../../../docs/framework/wcf/bindings.md)  
  [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -1,28 +1,28 @@
 ---
 title: '&lt;wsHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 8cf154f94b61e114e1ce379d27d5960987253344
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 定义一个适合于非双工服务约定的安全、可靠且可互操作的绑定。 该绑定为保证可靠性实现 WS-ReliableMessaging 规范，为保证消息安全性和进行身份验证实现 WS-Security 规范。 传输协议是 HTTP，消息编码方式是 Text/XML 编码。  
@@ -148,7 +148,7 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.WSHttpBinding>  
  <xref:System.ServiceModel.Configuration.WSHttpBindingElement>  
  [绑定](../../../../../docs/framework/wcf/bindings.md)  

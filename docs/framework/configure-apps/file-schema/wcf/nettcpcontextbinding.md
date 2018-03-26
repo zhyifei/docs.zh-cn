@@ -1,24 +1,26 @@
 ---
 title: '&lt;netTcpContextBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 13c8474cacc0ca2f2cb03328517281e8a9f440a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
 为要求对保护级别进行签名的 <xref:System.ServiceModel.NetTcpBinding> 指定上下文。 NetTcpContextBinding 的 contextExchangeMechanism 是 SOAPHeader。  
@@ -106,7 +108,7 @@ ms.lasthandoff: 01/19/2018
 |-------------|-----------------|  
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.NetTcpBinding>  
  <xref:System.ServiceModel.NetTcpContextBinding>  
  <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>  

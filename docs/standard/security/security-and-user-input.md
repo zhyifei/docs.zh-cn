@@ -1,12 +1,12 @@
 ---
-title: "安全性和用户输入"
-ms.custom: 
+title: 安全性和用户输入
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], user input
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -22,10 +22,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 157e20a80f0a76e157fad091bec6bfe635a9ccb8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="security-and-user-input"></a>安全性和用户输入
 用户数据是指任何种类的输入（来自 Web 请求或 URL 的数据、对 Microsoft Windows 窗体应用程序控件输入的数据等等），它可能会对代码产生负面影响，因为这些数据通常直接用作参数来调用其他代码。 这种情况类似于恶意代码使用奇特参数调用你的代码，因而必须采取同样的防范措施。 用户输入实际上更难以保证安全性，因为没有堆栈帧来跟踪可能不受信任的数据的存在。  
@@ -68,5 +68,5 @@ ms.lasthandoff: 12/23/2017
   
 -   请注意，用户名可能不止有一种规范格式。 例如，经常可以使用 MYDOMAIN\\*username* 形式或 *username*@mydomain.example.com 形式。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

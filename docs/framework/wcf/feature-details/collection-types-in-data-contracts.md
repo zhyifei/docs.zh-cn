@@ -1,12 +1,13 @@
 ---
-title: "数据协定中的集合类型"
-ms.custom: 
+title: 数据协定中的集合类型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  关于集合类型的其他要求（例如，有一个名为 `Add` 的方法和一个默认构造函数）在下面各部分详细讨论。 这确保了既可以对集合类型序列化，也可以对其反序列化。 这意味着不直接支持某些集合，例如泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> （因为它没有默认构造函数）。 但是，也可以避开这些限制。有关信息，请参见本主题后面的“使用集合接口类型和只读集合”。  
   
- 包含在集合中的类型必须是数据协定类型，或者是可序列化的。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][支持的数据协定序列化程序类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ 包含在集合中的类型必须是数据协定类型，或者是可序列化的。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [支持的数据协定序列化程序类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 什么被视为有效集合，什么不被视为有效集合，以及如何序列化集合的更多信息，请参见本主题“高级集合规则”部分中有关序列化集合的信息。  
   
@@ -298,8 +300,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |引用类型|引用类型所实现的接口|示例|类型被视为|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非泛型或封闭式泛型（任意多个参数）|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 或<br /><br /> `MyType<T> : IDictionary` 其中 T=`int`|封闭式泛型 `IDictionary<object,object>`|  
-|封闭式泛型（任意多个参数）|<xref:System.Collections.Generic.IDictionary%602>，封闭式|`MyType<T> : IDictionary<string, bool>`其中 T =`int`|封闭式泛型（例如 `IDIctionary<string,bool>`）|  
-|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键或值中的一个是封闭式的，另一个是开放式的，并使用类型的某个参数|`MyType<T,U,V> : IDictionary<string,V>`其中 T =`int`，U =`float`，V =`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>`其中 Z =`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
+|封闭式泛型（任意多个参数）|<xref:System.Collections.Generic.IDictionary%602>，封闭式|`MyType<T> : IDictionary<string, bool>` 其中 T =`int`|封闭式泛型（例如 `IDIctionary<string,bool>`）|  
+|封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键或值中的一个是封闭式的，另一个是开放式的，并使用类型的某个参数|`MyType<T,U,V> : IDictionary<string,V>` 其中 T =`int`，U =`float`，V =`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 其中 Z =`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
 |封闭式泛型（任意多个参数）|泛型 <xref:System.Collections.Generic.IDictionary%602>，键和值均是开放式的，且每个都使用类型的一个参数|`MyType<T,U,V> : IDictionary<V,U>` 其中 T=`int`，U=`bool`，V=`string`|封闭式泛型（例如 `IDictionary<string,bool>`）|  
 |开放式泛型（两个参数）|开放式泛型 <xref:System.Collections.Generic.IDictionary%602>，按显示顺序使用类型的两个泛型参数|`MyType<K,V> : IDictionary<K,V>`，K 和 V 均是开放式的|开放式泛型（例如 `IDictionary<K,V>`）|  
   
@@ -353,7 +355,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>集合命名  
  以下是集合命名规则的列表：  
   
--   所有字典集合数据协定以及包含基元类型的列表集合数据协定的默认命名空间都是 http://schemas.microsoft.com/2003/10/Serialization/Arrays，前提是未使用 Namespace 重写其命名空间。 为此，映射到内置 XSD 类型的类型以及 `char`、 `Timespan`和 `Guid` 类型都将被视为基元。  
+-   所有字典集合数据协定，以及包含基元类型的列表集合数据协定中的默认命名空间是http://schemas.microsoft.com/2003/10/Serialization/Arrays使用 Namespace 重写。 为此，映射到内置 XSD 类型的类型以及 `char`、 `Timespan`和 `Guid` 类型都将被视为基元。  
   
 -   包含非基元类型的集合类型的默认命名空间如果未使用 Namespace 重写，则与集合中包含的类型的数据协定命名空间相同。  
   
@@ -406,5 +408,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collections-and-object-reference-preservation"></a>集合和对象引用保存  
  当序列化程序在保存对象引用的模式下工作时，对象引用保存也适用于集合。 具体而言，会为整个集合以及集合中包含的各个项保存对象标识。 对于字典，会为键/值对对象以及各个键和值对象保存对象标识。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

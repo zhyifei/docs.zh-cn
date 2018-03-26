@@ -1,7 +1,7 @@
 ---
-title: "创建 dotnet new 自定义模板"
-description: "在本趣味性教程中，了解如何创建 dotnet new 命令的自定义模板。"
-keywords: ".NET, .NET Core, 模板, 模板化, 教程, dotnet new"
+title: 创建 dotnet new 自定义模板
+description: 在本趣味性教程中，了解如何创建 dotnet new 命令的自定义模板。
+keywords: .NET, .NET Core, 模板, 模板化, 教程, dotnet new
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
@@ -12,10 +12,10 @@ ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
 ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>创建 dotnet new 自定义模板
 

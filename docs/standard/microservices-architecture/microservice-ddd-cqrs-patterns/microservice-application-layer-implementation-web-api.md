@@ -1,7 +1,7 @@
 ---
-title: "使用 Web API 实现微服务应用层"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 Web API 实现微服务应用程序层"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 使用 Web API 实现微服务应用层
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 Web API 实现微服务应用程序层
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: cfca93dca0ec9d05936f4be676e27135c581de94
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 实现微服务应用层
 
@@ -117,13 +117,13 @@ public void ConfigureServices(IServiceCollection services)
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Matthew King。Registering services with Scrutor**（向 Scrutor 注册服务）
-    [https://mking.io/blog/registering-services-with-scrutor](https://mking.io/blog/registering-services-with-scrutor)
+-   **Matthew King。向 Scrutor 注册服务**
+    [*https://mking.io/blog/registering-services-with-scrutor*](https://mking.io/blog/registering-services-with-scrutor)
 
 <!-- -->
 
 -   **Kristian Hellang。Scrutor。** GitHub 存储库。
-    [https://github.com/khellang/Scrutor](https://github.com/khellang/Scrutor)
+    [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
 
 #### <a name="using-autofac-as-an-ioc-container"></a>使用 Autofac 作为 IoC 容器
 
@@ -172,14 +172,14 @@ public class ApplicationModule : Autofac.Module
 
 #### <a name="additional-resources"></a>其他资源
 
--   ASP.NET Core 中的依赖项注入简介
-    [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+-   **在 ASP.NET 核心中的依赖关系注入简介**
+    [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
 -   **Autofac。** 官方文档。
     [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **比较 ASP.NET Core IoC 容器服务生存期与 Autofac IoC 容器实例范围 - Cesar de la Torre**
-    [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+-   **比较 ASP.NET 核心 IoC 容器服务生命周期和 Autofac IoC 容器实例作用域-Cesar 卢瓦尔 Torre。**
+    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="implementing-the-command-and-command-handler-patterns"></a>实现命令和命令处理程序模式
 
@@ -398,20 +398,20 @@ public class CreateOrderCommandHandler
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Mark Seemann。At the Boundaries, Applications are Not Object-Oriented**（在边界上，应用程序不是面向对象的）
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+-   **Mark Seemann。在边界将应用程序是面向不对象的**
+    [*http://blog.ploeh.dk/2011/05/31/AttheBoundariesApplicationsareNotObject 面向 /*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
--   **Commands and events**（命令和事件）
+-   **命令和事件**
     [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **What does a command handler do?**（命令处理程序的功能是什么？）
+-   **命令处理程序的作用是什么？**
     [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
--   **Jimmy Bogard。Domain Command Patterns – Handlers**（域命令模式 – 处理程序）
-    [https://jimmybogard.com/domain-command-patterns-handlers/](https://jimmybogard.com/domain-command-patterns-handlers/)
+-   **Jimmy Bogard。域命令模式 – 处理程序**
+    [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
 
 -   **Jimmy Bogard。域命令模式 – 验证**
-    [https://jimmybogard.com/domain-command-patterns-validation/](https://jimmybogard.com/domain-command-patterns-validation/)
+    [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>命令处理管道：如何触发命令处理程序
 
@@ -833,39 +833,39 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
 ##### <a name="the-mediator-pattern"></a>转存进程模式
 
--   **Mediator pattern**（转存进程模式）
-    [https://en.wikipedia.org/wiki/Mediator\_pattern](https://en.wikipedia.org/wiki/Mediator_pattern)
+-   **中介模式**
+    [*https://en.wikipedia.org/wiki/Mediator\_模式*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>修饰器模式
 
--   **Decorator pattern**（修饰器模式）
-    [https://en.wikipedia.org/wiki/Decorator\_pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
+-   **修饰器模式**
+    [*https://en.wikipedia.org/wiki/Decorator\_模式*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
 -   **MediatR。** GitHub 存储库。
-    [https://github.com/jbogard/MediatR](https://github.com/jbogard/MediatR)
+    [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
--   **CQRS with MediatR and AutoMapper**（使用 MediatR 和 AutoMapper 的 CQRS）
-    [https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+-   **使用 MediatR 和 AutoMapper CQRS**
+    [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **Put your controllers on a diet: POSTs and commands.**（简化控制器：POST 和命令。）
-    [https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+-   **你的控制器置于饮食： 文章和命令。**
+    [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **Tackling cross-cutting concerns with a mediator pipeline**（使用转存进程管道解决整合问题）
-    [https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+-   **应对与中介管道的跨领域问题**
+    [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
--   **CQRS and REST: the perfect match**（CQRS 和 REST：完全匹配）
-    [https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+-   **CQRS 和 REST： 完全匹配**
+    [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
--   **MediatR Pipeline Examples**（MediatR 管道示例）
-    [https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+-   **MediatR 管道示例**
+    [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **Vertical Slice Test Fixtures for MediatR and ASP.NET Core**（用于 MediatR 和 ASP.NET Core 的垂直切片测试装置）<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
-    **
+-   **垂直切片测试装置，用于 MediatR 和 ASP.NET Core**
+    *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/> *
 
--   **MediatR Extensions for Microsoft Dependency Injection Released**（用于 Microsoft 依赖项注入发布的 MediatR 扩展）
-    [https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+-   **发布的 Microsoft 依赖关系注入 MediatR 扩展**
+    [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Fluent 验证
 

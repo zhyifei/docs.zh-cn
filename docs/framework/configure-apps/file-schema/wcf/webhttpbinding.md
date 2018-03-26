@@ -1,24 +1,26 @@
 ---
 title: '&lt;webHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 0eb39fe234664b5ef5ffb604090191db14e8d751
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 定义一个绑定元素，该元素用于为响应 HTTP 请求（而不是 SOAP 消息）的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Web 服务配置终结点。  
@@ -102,7 +104,7 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中的联合支持和 ASP.AJAX 集成都建立在 Web 编程模型的基础之上。 对模型的详细信息，请参阅[WCF Web HTTP 编程模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
  [WCF Web HTTP 编程模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  

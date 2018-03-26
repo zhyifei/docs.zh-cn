@@ -1,28 +1,30 @@
 ---
-title: "UI 自动化对 DataGrid 控件类型的支持"
-ms.custom: 
+title: UI 自动化对 DataGrid 控件类型的支持
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Grid control type
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 3eb60004f4ffad0b62b10cf1e3ff5f28a3bf3fef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>UI 自动化对 DataGrid 控件类型的支持
 > [!NOTE]
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出了值或定义与数据网格控件密切相关的属性。 有关详细信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]属性，请参阅[的客户端 UI 自动化属性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|属性|值|备注|  
+|属性|值|说明|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-control-patterns"></a>必需的 UI 自动化控件模式  
  下表列出了需要由所有数据网格控件支持的控件模式。 有关控件模式的详细信息，请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。  
   
-|控件模式|支持|备注|  
+|控件模式|支持|说明|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|是|数据网格控件本身始终支持 Grid 控件模式，因为它包含的项具有放置在网格中的元数据。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|视情况而定|是否能够滚动数据网格取决于内容以及滚动条是否存在。|  
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-events"></a>必需的 UI 自动化事件  
  下表列出需要由所有数据网格控件支持的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 有关事件的详细信息，请参阅 [F:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|备注|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支持|说明|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必需|无|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 属性更改事件。|必需|无|  
@@ -115,7 +117,7 @@ ms.lasthandoff: 12/22/2017
   
  *上面的示例显示了包含多个控件级别的 DataGrid。 Group（“Contoso”）控件包含两个 DataItem 控件（“Accounts Receivable.doc”和“Accounts Payable.doc”）。 DataGrid/GridItem 对不依赖于其他级别的对。 Group 下的 DataItem 控件还能以 ListItem 控件类型公开，使它们能够更清楚地呈现为可选择的对象，而不是简单的数据元素。 此示例不包括分组数据项的子元素。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Windows.Automation.ControlType.DataGrid>  
  [UI 自动化控件类型概述](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [UI 自动化概述](../../../docs/framework/ui-automation/ui-automation-overview.md)

@@ -1,7 +1,7 @@
 ---
-title: "测试 ASP.NET Core 服务和 Web 应用"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 测试 ASP.NET Core 服务和 web 应用"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 测试 ASP.NET Core 服务和 Web 应用
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 测试 ASP.NET Core 服务和 web 应用
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>测试 ASP.NET Core 服务和 Web 应用
 
@@ -102,24 +102,24 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Steve Smith.测试控制器** (ASP.NET Core) [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith.测试控制器**（ASP.NET 核） [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith.集成测试** (ASP.NET Core) [https://docs.microsoft.com/aspnet/core/testing/integration-testing](/aspnet/core/testing/integration-testing)
+-   **Steve Smith.集成测试**（ASP.NET 核） [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
--   **使用 dotnet 测试在 .NET Core 中进行单元测试**
-    [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
+-   **.NET Core 使用 dotnet 测试中的单元测试**
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**。 官方网站。
-    [https://xunit.github.io/](https://xunit.github.io/)
+    [*https://xunit.github.io/*](https://xunit.github.io/)
 
 -   **单元测试基础知识。**
-    [https://msdn.microsoft.com/library/hh694602.aspx](https://msdn.microsoft.com/library/hh694602.aspx)
+    [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
 -   **Moq**。 GitHub 存储库。
-    [https://github.com/moq/moq](https://github.com/moq/moq)
+    [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
 -   **NUnit**。 官方网站。
-    [https://www.nunit.org/](https://www.nunit.org/)
+    [*https://www.nunit.org/*](https://www.nunit.org/)
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>在多容器应用程序上实现服务测试 
 
