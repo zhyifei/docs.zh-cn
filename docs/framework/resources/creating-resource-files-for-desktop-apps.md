@@ -1,12 +1,13 @@
 ---
-title: "创建桌面应用程序的资源文件"
-ms.custom: 
+title: 创建桌面应用程序的资源文件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 555ef705dc485462dc209b090e5cdbee98983681
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b73520dfc3d5123aedce77254f738a61a27ccd95
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>创建桌面应用程序的资源文件
 可以将字符串、图像或对象数据等资源包含在资源文件中，方便应用程序使用。 .NET Framework 提供了五种创建资源文件的方法：  
@@ -130,11 +132,15 @@ greeting=Hello, {0}!
   
  如果使用的是 Visual Basic，且源代码文件名为 Greeting.vb，以下命令将创建一个包含嵌入的 .resources 文件的可执行文件：  
   
- vbc greeting.vb /resource:GreetingResources.resources  
+```console 
+vbc greeting.vb -resource:GreetingResources.resources
+```
   
  如果使用的是 C#，并且将源代码文件命名为 Greeting.cs，以下命令将创建一个包含嵌入 .resources 文件的可执行文件：  
   
- csc greeting.cs /resource:GreetingResources.resources  
+ ```console
+csc greeting.cs -resource:GreetingResources.resources
+```
   
 <a name="ResxFiles"></a>   
 ## <a name="resources-in-resx-files"></a>.resx 文件中的资源  
