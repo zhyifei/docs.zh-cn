@@ -93,7 +93,7 @@ ms.lasthandoff: 03/23/2018
     ```  
   
     > [!NOTE]
-    >  可以将 Assert 用于跟踪和调试。 此示例将调用堆栈输出到 Listeners 集合中的任意侦听器。 有关详细信息，请参阅[托管代码中的断言<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>和 ](/visualstudio/debugger/assertions-in-managed-code)。  
+    >  可以将 Assert 用于跟踪和调试。 此示例将调用堆栈输出到 Listeners 集合中的任意侦听器。 有关详细信息，请参阅[托管代码中的断言](/visualstudio/debugger/assertions-in-managed-code) 和 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>  
