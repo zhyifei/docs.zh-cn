@@ -1,38 +1,38 @@
 ---
 title: NetNamedPipeBinding
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 4ea4e34049ef54cd6d161e381bf92818b5f3531c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
-# <a name="netnamedpipebinding"></a><span data-ttu-id="32ff9-102">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="32ff9-102">NetNamedPipeBinding</span></span>
-<span data-ttu-id="32ff9-103">本示例演示在同一台计算机上提供跨进程通信的 `netNamedPipeBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="32ff9-103">This sample demonstrates the `netNamedPipeBinding` binding, which provides cross-process communication on the same machine.</span></span> <span data-ttu-id="32ff9-104">命名管道不能跨计算机工作。</span><span class="sxs-lookup"><span data-stu-id="32ff9-104">Named pipes do not work across machines.</span></span> <span data-ttu-id="32ff9-105">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)计算器服务。</span><span class="sxs-lookup"><span data-stu-id="32ff9-105">This sample is based on The [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) calculator service.</span></span>  
+# <a name="netnamedpipebinding"></a><span data-ttu-id="63ce9-102">NetNamedPipeBinding</span><span class="sxs-lookup"><span data-stu-id="63ce9-102">NetNamedPipeBinding</span></span>
+<span data-ttu-id="63ce9-103">本示例演示在同一台计算机上提供跨进程通信的 `netNamedPipeBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="63ce9-103">This sample demonstrates the `netNamedPipeBinding` binding, which provides cross-process communication on the same machine.</span></span> <span data-ttu-id="63ce9-104">命名管道不能跨计算机工作。</span><span class="sxs-lookup"><span data-stu-id="63ce9-104">Named pipes do not work across machines.</span></span> <span data-ttu-id="63ce9-105">此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)计算器服务。</span><span class="sxs-lookup"><span data-stu-id="63ce9-105">This sample is based on The [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) calculator service.</span></span>  
   
- <span data-ttu-id="32ff9-106">在本示例中，服务是自承载服务。</span><span class="sxs-lookup"><span data-stu-id="32ff9-106">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="32ff9-107">客户端和服务都是控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="32ff9-107">Both the client and the service are console applications.</span></span>  
+ <span data-ttu-id="63ce9-106">在本示例中，服务是自承载服务。</span><span class="sxs-lookup"><span data-stu-id="63ce9-106">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="63ce9-107">客户端和服务都是控制台应用程序。</span><span class="sxs-lookup"><span data-stu-id="63ce9-107">Both the client and the service are console applications.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="32ff9-108">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="32ff9-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="63ce9-108">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="63ce9-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="32ff9-109">绑定是在客户端和服务的配置文件中指定的。</span><span class="sxs-lookup"><span data-stu-id="32ff9-109">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="32ff9-110">中指定的绑定类型`binding`属性[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如下面的示例配置所示：</span><span class="sxs-lookup"><span data-stu-id="32ff9-110">The binding type is specified in the `binding` attribute of the[\<endpoint>](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) element as shown in the following sample configuration:</span></span>  
+ <span data-ttu-id="63ce9-109">绑定是在客户端和服务的配置文件中指定的。</span><span class="sxs-lookup"><span data-stu-id="63ce9-109">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="63ce9-110">中指定的绑定类型`binding`属性[\<终结点 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如下面的示例配置所示：</span><span class="sxs-lookup"><span data-stu-id="63ce9-110">The binding type is specified in the `binding` attribute of the[\<endpoint>](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) element as shown in the following sample configuration:</span></span>  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/19/2018
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="32ff9-111">前面的示例演示如何配置终结点以使用具有默认设置的 `netNamedPipeBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="32ff9-111">The previous sample shows how to configure an endpoint to use the `netNamedPipeBinding` binding with the default settings.</span></span> <span data-ttu-id="32ff9-112">如果要配置 `netNamedPipeBinding` 绑定并更改它的一些设置，则必须定义绑定配置。</span><span class="sxs-lookup"><span data-stu-id="32ff9-112">If you want to configure the `netNamedPipeBinding` binding and change some of its settings, you must define a binding configuration.</span></span> <span data-ttu-id="32ff9-113">终结点必须使用 `bindingConfiguration` 属性按名称来引用绑定配置。</span><span class="sxs-lookup"><span data-stu-id="32ff9-113">The endpoint must reference the binding configuration by name with a `bindingConfiguration` attribute.</span></span>  
+ <span data-ttu-id="63ce9-111">前面的示例演示如何配置终结点以使用具有默认设置的 `netNamedPipeBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="63ce9-111">The previous sample shows how to configure an endpoint to use the `netNamedPipeBinding` binding with the default settings.</span></span> <span data-ttu-id="63ce9-112">如果要配置 `netNamedPipeBinding` 绑定并更改它的一些设置，则必须定义绑定配置。</span><span class="sxs-lookup"><span data-stu-id="63ce9-112">If you want to configure the `netNamedPipeBinding` binding and change some of its settings, you must define a binding configuration.</span></span> <span data-ttu-id="63ce9-113">终结点必须使用 `bindingConfiguration` 属性按名称来引用绑定配置。</span><span class="sxs-lookup"><span data-stu-id="63ce9-113">The endpoint must reference the binding configuration by name with a `bindingConfiguration` attribute.</span></span>  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/19/2018
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="32ff9-114">在本示例中，绑定配置的名称为 `Binding1` 并具有以下定义：</span><span class="sxs-lookup"><span data-stu-id="32ff9-114">In this sample, the binding configuration is named `Binding1` and has the following definition:</span></span>  
+ <span data-ttu-id="63ce9-114">在本示例中，绑定配置的名称为 `Binding1` 并具有以下定义：</span><span class="sxs-lookup"><span data-stu-id="63ce9-114">In this sample, the binding configuration is named `Binding1` and has the following definition:</span></span>  
   
 ```xml  
 <bindings>  
@@ -79,7 +79,7 @@ ms.lasthandoff: 01/19/2018
 </bindings>  
 ```  
   
- <span data-ttu-id="32ff9-115">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="32ff9-115">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="32ff9-116">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="32ff9-116">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="63ce9-115">运行示例时，操作请求和响应将显示在客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="63ce9-115">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="63ce9-116">在客户端窗口中按 Enter 可以关闭客户端。</span><span class="sxs-lookup"><span data-stu-id="63ce9-116">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -90,21 +90,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="32ff9-117">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="32ff9-117">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="63ce9-117">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="63ce9-117">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="32ff9-118">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="32ff9-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="63ce9-118">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="63ce9-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="32ff9-119">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="32ff9-119">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="63ce9-119">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="63ce9-119">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="32ff9-120">若要在单机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="32ff9-120">To run the sample in a single machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="63ce9-120">若要在单机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="63ce9-120">To run the sample in a single machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="32ff9-121">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="32ff9-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="32ff9-122">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="32ff9-122">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="63ce9-121">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="63ce9-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="63ce9-122">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="63ce9-122">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="32ff9-123">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="32ff9-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="32ff9-124">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="32ff9-124">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="63ce9-123">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="63ce9-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="63ce9-124">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="63ce9-124">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  
   
-## <a name="see-also"></a><span data-ttu-id="32ff9-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="32ff9-125">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="63ce9-125">另请参阅</span><span class="sxs-lookup"><span data-stu-id="63ce9-125">See Also</span></span>

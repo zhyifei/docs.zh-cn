@@ -1,1 +1,1 @@
-<span data-ttu-id="12cc4-101">WF</span><span class="sxs-lookup"><span data-stu-id="12cc4-101">WF</span></span>
+<span data-ttu-id="bbafb-101">WF</span><span class="sxs-lookup"><span data-stu-id="bbafb-101">WF</span></span>

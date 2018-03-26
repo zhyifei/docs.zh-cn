@@ -1,35 +1,37 @@
 ---
 title: '&lt;serviceThrottling&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a059684967af26c72aca48a3fa6bb10c2f26b0c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
-# <a name="ltservicethrottlinggt"></a><span data-ttu-id="0a873-102">&lt;serviceThrottling&gt;</span><span class="sxs-lookup"><span data-stu-id="0a873-102">&lt;serviceThrottling&gt;</span></span>
-<span data-ttu-id="0a873-103">指定 Windows Communication Foundation (WCF) 服务的限制机制。</span><span class="sxs-lookup"><span data-stu-id="0a873-103">Specifies the throttling mechanism of a Windows Communication Foundation (WCF) service.</span></span>  
+# <a name="ltservicethrottlinggt"></a><span data-ttu-id="64828-102">&lt;serviceThrottling&gt;</span><span class="sxs-lookup"><span data-stu-id="64828-102">&lt;serviceThrottling&gt;</span></span>
+<span data-ttu-id="64828-103">指定 Windows Communication Foundation (WCF) 服务的限制机制。</span><span class="sxs-lookup"><span data-stu-id="64828-103">Specifies the throttling mechanism of a Windows Communication Foundation (WCF) service.</span></span>  
   
- <span data-ttu-id="0a873-104">\<系统。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0a873-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="0a873-105">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="0a873-105">\<behaviors></span></span>  
-<span data-ttu-id="0a873-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="0a873-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="0a873-107">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="0a873-107">\<behavior></span></span>  
-<span data-ttu-id="0a873-108">\<serviceThrottling ></span><span class="sxs-lookup"><span data-stu-id="0a873-108">\<serviceThrottling></span></span>  
+ <span data-ttu-id="64828-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="64828-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="64828-105">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="64828-105">\<behaviors></span></span>  
+<span data-ttu-id="64828-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="64828-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="64828-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="64828-107">\<behavior></span></span>  
+<span data-ttu-id="64828-108">\<serviceThrottling></span><span class="sxs-lookup"><span data-stu-id="64828-108">\<serviceThrottling></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a873-109">语法</span><span class="sxs-lookup"><span data-stu-id="0a873-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64828-109">语法</span><span class="sxs-lookup"><span data-stu-id="64828-109">Syntax</span></span>  
   
 ```xml  
 <serviceThrottling maxConcurrentCalls="Integer"  
@@ -37,33 +39,33 @@ ms.lasthandoff: 12/22/2017
     maxConcurrentSessions="Integer" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0a873-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="0a873-110">Attributes and Elements</span></span>  
- <span data-ttu-id="0a873-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="0a873-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="64828-110">特性和元素</span><span class="sxs-lookup"><span data-stu-id="64828-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="64828-111">下列各节描述了特性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="64828-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0a873-112">特性</span><span class="sxs-lookup"><span data-stu-id="0a873-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="64828-112">特性</span><span class="sxs-lookup"><span data-stu-id="64828-112">Attributes</span></span>  
   
-|<span data-ttu-id="0a873-113">特性</span><span class="sxs-lookup"><span data-stu-id="0a873-113">Attribute</span></span>|<span data-ttu-id="0a873-114">描述</span><span class="sxs-lookup"><span data-stu-id="0a873-114">Description</span></span>|  
+|<span data-ttu-id="64828-113">特性</span><span class="sxs-lookup"><span data-stu-id="64828-113">Attribute</span></span>|<span data-ttu-id="64828-114">描述</span><span class="sxs-lookup"><span data-stu-id="64828-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="0a873-115">maxConcurrentCalls</span><span class="sxs-lookup"><span data-stu-id="0a873-115">maxConcurrentCalls</span></span>|<span data-ttu-id="0a873-116">一个正整数，用于限制当前在整个 <xref:System.ServiceModel.ServiceHost> 中处理的消息数目。</span><span class="sxs-lookup"><span data-stu-id="0a873-116">A positive integer that limits the number of messages that currently process across a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="0a873-117">超出限制的调用会进行排队。</span><span class="sxs-lookup"><span data-stu-id="0a873-117">Calls in excess of the limit are queued.</span></span> <span data-ttu-id="0a873-118">将此值设置为 0 与将其设置为 Int32.MaxValue 等效。</span><span class="sxs-lookup"><span data-stu-id="0a873-118">Setting this value to 0 is equivalent to setting it to Int32.MaxValue.</span></span> <span data-ttu-id="0a873-119">默认值是 16 * 处理器计数。</span><span class="sxs-lookup"><span data-stu-id="0a873-119">The default is 16 * processor count.</span></span>|  
-|<span data-ttu-id="0a873-120">maxConcurrentInstances</span><span class="sxs-lookup"><span data-stu-id="0a873-120">maxConcurrentInstances</span></span>|<span data-ttu-id="0a873-121">一个正整数，用于限制在整个 <xref:System.ServiceModel.InstanceContext> 中一次执行的 <xref:System.ServiceModel.ServiceHost> 对象数。</span><span class="sxs-lookup"><span data-stu-id="0a873-121">A positive integer that limits the number of <xref:System.ServiceModel.InstanceContext> objects that execute at one time across a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="0a873-122">用于创建其他实例的请求将会排队，并在出现低于该限值的槽时完成。</span><span class="sxs-lookup"><span data-stu-id="0a873-122">Requests to create additional instances are queued and complete when a slot below the limit becomes available.</span></span> <span data-ttu-id="0a873-123">默认值是 maxConcurrentSessions 和 MaxConcurrentCalls 的和</span><span class="sxs-lookup"><span data-stu-id="0a873-123">The default is the sum of maxConcurrentSessions and MaxConcurrentCalls</span></span>|  
-|<span data-ttu-id="0a873-124">maxConcurrentSessions</span><span class="sxs-lookup"><span data-stu-id="0a873-124">maxConcurrentSessions</span></span>|<span data-ttu-id="0a873-125">一个正整数，用于限制 <xref:System.ServiceModel.ServiceHost> 对象可以接受的会话数。</span><span class="sxs-lookup"><span data-stu-id="0a873-125">A positive integer that limits the number of sessions a <xref:System.ServiceModel.ServiceHost> object can accept.</span></span><br /><br /> <span data-ttu-id="0a873-126">此服务将接受超出限制的连接，但是，只有处于限制范围之内的通道处于活动状态（会从此通道中读取消息）。</span><span class="sxs-lookup"><span data-stu-id="0a873-126">The service will accept connections in excess of the limit, but only the channels below the limit are active (messages are read from the channel).</span></span> <span data-ttu-id="0a873-127">将此值设置为 0 与将其设置为 Int32.MaxValue 等效。</span><span class="sxs-lookup"><span data-stu-id="0a873-127">Setting this value to 0 is equivalent to setting it to Int32.MaxValue.</span></span> <span data-ttu-id="0a873-128">默认值是 100 * 处理器计数。</span><span class="sxs-lookup"><span data-stu-id="0a873-128">The default is 100 * processor count.</span></span>|  
+|<span data-ttu-id="64828-115">maxConcurrentCalls</span><span class="sxs-lookup"><span data-stu-id="64828-115">maxConcurrentCalls</span></span>|<span data-ttu-id="64828-116">一个正整数，用于限制当前在整个 <xref:System.ServiceModel.ServiceHost> 中处理的消息数目。</span><span class="sxs-lookup"><span data-stu-id="64828-116">A positive integer that limits the number of messages that currently process across a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="64828-117">超出限制的调用会进行排队。</span><span class="sxs-lookup"><span data-stu-id="64828-117">Calls in excess of the limit are queued.</span></span> <span data-ttu-id="64828-118">将此值设置为 0 与将其设置为 Int32.MaxValue 等效。</span><span class="sxs-lookup"><span data-stu-id="64828-118">Setting this value to 0 is equivalent to setting it to Int32.MaxValue.</span></span> <span data-ttu-id="64828-119">默认值是 16 \* 处理器计数。</span><span class="sxs-lookup"><span data-stu-id="64828-119">The default is 16 \* processor count.</span></span>|  
+|<span data-ttu-id="64828-120">maxConcurrentInstances</span><span class="sxs-lookup"><span data-stu-id="64828-120">maxConcurrentInstances</span></span>|<span data-ttu-id="64828-121">一个正整数，用于限制在整个 <xref:System.ServiceModel.InstanceContext> 中一次执行的 <xref:System.ServiceModel.ServiceHost> 对象数。</span><span class="sxs-lookup"><span data-stu-id="64828-121">A positive integer that limits the number of <xref:System.ServiceModel.InstanceContext> objects that execute at one time across a <xref:System.ServiceModel.ServiceHost>.</span></span> <span data-ttu-id="64828-122">用于创建其他实例的请求将会排队，并在出现低于该限值的槽时完成。</span><span class="sxs-lookup"><span data-stu-id="64828-122">Requests to create additional instances are queued and complete when a slot below the limit becomes available.</span></span> <span data-ttu-id="64828-123">默认值是 maxConcurrentSessions 和 MaxConcurrentCalls 的和</span><span class="sxs-lookup"><span data-stu-id="64828-123">The default is the sum of maxConcurrentSessions and MaxConcurrentCalls</span></span>|  
+|<span data-ttu-id="64828-124">maxConcurrentSessions</span><span class="sxs-lookup"><span data-stu-id="64828-124">maxConcurrentSessions</span></span>|<span data-ttu-id="64828-125">一个正整数，用于限制 <xref:System.ServiceModel.ServiceHost> 对象可以接受的会话数。</span><span class="sxs-lookup"><span data-stu-id="64828-125">A positive integer that limits the number of sessions a <xref:System.ServiceModel.ServiceHost> object can accept.</span></span><br /><br /> <span data-ttu-id="64828-126">此服务将接受超出限制的连接，但是，只有处于限制范围之内的通道处于活动状态（会从此通道中读取消息）。</span><span class="sxs-lookup"><span data-stu-id="64828-126">The service will accept connections in excess of the limit, but only the channels below the limit are active (messages are read from the channel).</span></span> <span data-ttu-id="64828-127">将此值设置为 0 与将其设置为 Int32.MaxValue 等效。</span><span class="sxs-lookup"><span data-stu-id="64828-127">Setting this value to 0 is equivalent to setting it to Int32.MaxValue.</span></span> <span data-ttu-id="64828-128">默认值是 100 \* 处理器计数。</span><span class="sxs-lookup"><span data-stu-id="64828-128">The default is 100 \* processor count.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0a873-129">子元素</span><span class="sxs-lookup"><span data-stu-id="0a873-129">Child Elements</span></span>  
- <span data-ttu-id="0a873-130">无。</span><span class="sxs-lookup"><span data-stu-id="0a873-130">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="64828-129">子元素</span><span class="sxs-lookup"><span data-stu-id="64828-129">Child Elements</span></span>  
+ <span data-ttu-id="64828-130">无。</span><span class="sxs-lookup"><span data-stu-id="64828-130">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0a873-131">父元素</span><span class="sxs-lookup"><span data-stu-id="0a873-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="64828-131">父元素</span><span class="sxs-lookup"><span data-stu-id="64828-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="0a873-132">元素</span><span class="sxs-lookup"><span data-stu-id="0a873-132">Element</span></span>|<span data-ttu-id="0a873-133">描述</span><span class="sxs-lookup"><span data-stu-id="0a873-133">Description</span></span>|  
+|<span data-ttu-id="64828-132">元素</span><span class="sxs-lookup"><span data-stu-id="64828-132">Element</span></span>|<span data-ttu-id="64828-133">描述</span><span class="sxs-lookup"><span data-stu-id="64828-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0a873-134">\<行为 ></span><span class="sxs-lookup"><span data-stu-id="0a873-134">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="0a873-135">指定行为元素。</span><span class="sxs-lookup"><span data-stu-id="0a873-135">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="64828-134">\<behavior></span><span class="sxs-lookup"><span data-stu-id="64828-134">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="64828-135">指定行为元素。</span><span class="sxs-lookup"><span data-stu-id="64828-135">Specifies a behavior element.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0a873-136">备注</span><span class="sxs-lookup"><span data-stu-id="0a873-136">Remarks</span></span>  
- <span data-ttu-id="0a873-137">限制控件会对并发调用、实例或会话的数目施加限制以防止过度使用资源。</span><span class="sxs-lookup"><span data-stu-id="0a873-137">Throttling controls place limits on the number of concurrent calls, instances, or sessions to prevent over-consumption of resources.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="64828-136">备注</span><span class="sxs-lookup"><span data-stu-id="64828-136">Remarks</span></span>  
+ <span data-ttu-id="64828-137">限制控件会对并发调用、实例或会话的数目施加限制以防止过度使用资源。</span><span class="sxs-lookup"><span data-stu-id="64828-137">Throttling controls place limits on the number of concurrent calls, instances, or sessions to prevent over-consumption of resources.</span></span>  
   
- <span data-ttu-id="0a873-138">每次达到属性值时，就会记录一个跟踪。</span><span class="sxs-lookup"><span data-stu-id="0a873-138">A trace is written every time the value of attributes is reached.</span></span> <span data-ttu-id="0a873-139">第一个跟踪将记录为警告。</span><span class="sxs-lookup"><span data-stu-id="0a873-139">The first trace is written as a warning.</span></span>  
+ <span data-ttu-id="64828-138">每次达到属性值时，就会记录一个跟踪。</span><span class="sxs-lookup"><span data-stu-id="64828-138">A trace is written every time the value of attributes is reached.</span></span> <span data-ttu-id="64828-139">第一个跟踪将记录为警告。</span><span class="sxs-lookup"><span data-stu-id="64828-139">The first trace is written as a warning.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0a873-140">示例</span><span class="sxs-lookup"><span data-stu-id="0a873-140">Example</span></span>  
- <span data-ttu-id="0a873-141">下面的配置示例指定服务将最大并发调用数限制为 2，并将最大并发实例数限制为 10。</span><span class="sxs-lookup"><span data-stu-id="0a873-141">The following configuration example specifies that the service limits the maximum concurrent calls to 2, and the maximum number of concurrent instances to 10.</span></span> <span data-ttu-id="0a873-142">运行此示例的详细示例，请参阅[限制](../../../../../docs/framework/wcf/samples/throttling.md)。</span><span class="sxs-lookup"><span data-stu-id="0a873-142">For a detailed example of running this example, see [Throttling](../../../../../docs/framework/wcf/samples/throttling.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="64828-140">示例</span><span class="sxs-lookup"><span data-stu-id="64828-140">Example</span></span>  
+ <span data-ttu-id="64828-141">下面的配置示例指定服务将最大并发调用数限制为 2，并将最大并发实例数限制为 10。</span><span class="sxs-lookup"><span data-stu-id="64828-141">The following configuration example specifies that the service limits the maximum concurrent calls to 2, and the maximum number of concurrent instances to 10.</span></span> <span data-ttu-id="64828-142">运行此示例的详细示例，请参阅[限制](../../../../../docs/framework/wcf/samples/throttling.md)。</span><span class="sxs-lookup"><span data-stu-id="64828-142">For a detailed example of running this example, see [Throttling](../../../../../docs/framework/wcf/samples/throttling.md).</span></span>  
   
 ```xml  
 <behaviors>   
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0a873-143">请参阅</span><span class="sxs-lookup"><span data-stu-id="0a873-143">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="64828-143">另请参阅</span><span class="sxs-lookup"><span data-stu-id="64828-143">See Also</span></span>  
  <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
  <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>  
- [<span data-ttu-id="0a873-144">使用 ServiceThrottlingBehavior 控制 WCF 服务性能</span><span class="sxs-lookup"><span data-stu-id="0a873-144">Using ServiceThrottlingBehavior to Control WCF Service Performance</span></span>](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+ [<span data-ttu-id="64828-144">使用 ServiceThrottlingBehavior 控制 WCF 服务性能</span><span class="sxs-lookup"><span data-stu-id="64828-144">Using ServiceThrottlingBehavior to Control WCF Service Performance</span></span>](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

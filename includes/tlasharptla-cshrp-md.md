@@ -1,1 +1,1 @@
-<span data-ttu-id="9ee74-101">C#</span><span class="sxs-lookup"><span data-stu-id="9ee74-101">C#</span></span>
+<span data-ttu-id="2bf81-101">C#</span><span class="sxs-lookup"><span data-stu-id="2bf81-101">C#</span></span>

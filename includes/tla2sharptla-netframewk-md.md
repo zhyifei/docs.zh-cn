@@ -1,1 +1,1 @@
-<span data-ttu-id="b8ba0-101">框架</span><span class="sxs-lookup"><span data-stu-id="b8ba0-101">Framework</span></span>
+<span data-ttu-id="fa4c4-101">框架</span><span class="sxs-lookup"><span data-stu-id="fa4c4-101">Framework</span></span>

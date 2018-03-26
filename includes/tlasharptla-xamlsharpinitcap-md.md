@@ -1,1 +1,1 @@
-<span data-ttu-id="81333-101">可扩展应用程序标记语言 (XAML)</span><span class="sxs-lookup"><span data-stu-id="81333-101">Extensible Application Markup Language (XAML)</span></span>
+<span data-ttu-id="938b8-101">可扩展应用程序标记语言 (XAML)</span><span class="sxs-lookup"><span data-stu-id="938b8-101">Extensible Application Markup Language (XAML)</span></span>
