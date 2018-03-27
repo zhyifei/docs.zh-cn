@@ -51,13 +51,13 @@ ms.lasthandoff: 03/26/2018
   
 3.  **发布**窗口随即显示。 单击**...**. 按钮指定服务应部署到的目标位置。 你可以选择将应用部署到本地 IIS、 文件系统或 FTP 站点。 如果部署到本地 IIS 应用程序，你可以选择你的网站，并通过单击创建 web 应用程序在其下**创建新的 Web 应用程序**在右上角的图标。  
   
-4.  单击后**发布**主窗口中，在 Visual Studio 部署到指定的目标位置的应用程序，并将 Web.config、.svc 和程序集文件复制到目标目录。 . .Svc 的名称将为"ProjectName.ServiceName.svc"。 已成功发布服务后，你可以在 Visual Studio 输出窗口中，其外观类似于"正在连接到超链接"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName..."中找到一个热链接。 可在按住 Ctrl 键的同时单击该链接来打开 Visual Studio 中的浏览器页面，以便查看服务目录结构。  
+4.  单击后**发布**主窗口中，在 Visual Studio 部署到指定的目标位置的应用程序，并将 Web.config、.svc 和程序集文件复制到目标目录。 . .Svc 的名称将为"ProjectName.ServiceName.svc"。 已成功发布服务后，你可以在 Visual Studio 输出窗口中，其外观类似于"正在连接到超链接 "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName..." 中找到一个热链接。 可在按住 Ctrl 键的同时单击该链接来打开 Visual Studio 中的浏览器页面，以便查看服务目录结构。  
   
-     如果您无法浏览到网站，这可能是因为 IIS 中未启用目录浏览器。 请按照要启用它的"可尝试的方法"部分中的提示。 或者，你可以直接键入"超链接"http://localhost/WebApplicationFolderName"http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc"来查看服务页面。  
+     如果您无法浏览到网站，这可能是因为 IIS 中未启用目录浏览器。 请按照要启用它的"可尝试的方法"部分中的提示。 或者，你可以直接键入"超链接"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" 来查看服务页面。  
   
  你可以使用**发布**指定是否你想要复制程序集、 配置和目标位置，到项目中定义的所有服务的.svc 文件，并覆盖目标位置的现有文件。  
   
- 如果选择将应用程序部署到本地 IIS，则可能会遇到与 IIS 设置有关的错误。 请确保已正确安装 IIS。 可以在浏览器中键入"超链接 "http://localhost" http://localhost"，然后检查是否显示了 IIS 默认页面。  在某些情况下，此类问题也可能由于 IIS 中的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 注册不正确导致的。 你可以打开 Visual Studio 命令提示符并运行命令"aspnet_regiis.exe-ir"来解决 ASP.NET 注册问题，或运行命令"ServiceModelReg.exe – ia"来解决 WCF 注册问题。  
+ 如果选择将应用程序部署到本地 IIS，则可能会遇到与 IIS 设置有关的错误。 请确保已正确安装 IIS。 可以在浏览器中键入"超链接 "http://localhost" http://localhost" ， 然后检查是否显示了 IIS 默认页面。  在某些情况下，此类问题也可能由于 IIS 中的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 注册不正确导致的。 你可以打开 Visual Studio 命令提示符并运行命令"aspnet_regiis.exe-ir"来解决 ASP.NET 注册问题，或运行命令"ServiceModelReg.exe – ia"来解决 WCF 注册问题。  
   
 ## <a name="files-generated-for-publishing"></a>生成的待发布文件  
  在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库可以由 Web 承载之前，该工具生成以下文件：程序集文件、Web.config 文件和 .svc 文件。 这些文件全部复制到目标位置。 然后发布该服务。  
