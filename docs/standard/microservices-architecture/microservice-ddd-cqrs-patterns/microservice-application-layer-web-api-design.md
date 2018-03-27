@@ -1,7 +1,7 @@
 ---
-title: "设计微服务应用层和 Web API"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计微服务应用层和 Web API"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 设计微服务应用层和 Web API
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计微服务应用层和 Web API
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>设计微服务应用层和 Web API
 
@@ -29,7 +29,7 @@ SOLID 原则是应用于所有新式任务关键型应用的重要技术，例�
 
 -   Liskov 替换原则
 
--   反转分离原则
+-   接口分隔原则
 
 -   依赖关系反转原则
 
@@ -43,14 +43,14 @@ DI 是实现依赖关系反转原则的一种方法。 它是一种用于在对�
 
 #### <a name="additional-resources"></a>其他资源
 
--   **SOLID: Fundamental OOP Principles**（SOLID：基本 OOP 原则）
-    [http://deviq.com/solid/](http://deviq.com/solid/%20)
+-   **SOLID: Fundamental OOP Principles**
+    [*http://deviq.com/solid/*](http://deviq.com/solid/%20)（SOLID：基本 OOP 原则）
 
--   **Inversion of Control Containers and the Dependency Injection pattern**（控制反转容器和依赖注入模式）
-    [https://martinfowler.com/articles/injection.html](https://martinfowler.com/articles/injection.html)
+-   **Inversion of Control Containers and the Dependency Injection pattern**
+    [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)（控制反转容器和依赖关系注入模式）
 
--   **Steve Smith.New is Glue**（新的即是粘的）
-    [http://ardalis.com/new-is-glue](http://ardalis.com/new-is-glue)
+-   **Steve Smith.New is Glue**
+    [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)（新颖粘附）
 
 
 >[!div class="step-by-step"]

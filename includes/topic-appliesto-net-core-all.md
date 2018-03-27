@@ -1,1 +1,1 @@
-**本主题适用于： ✓** .NET 核心 SDK 1.x **✓** .NET 核心 SDK 2.x
+**本主题适用于：✓** .NET Core SDK 1.x **✓** .NET Core SDK 2.0

@@ -1,5 +1,5 @@
 ---
-title: "in 参数修饰符（C# 参考）"
+title: in 参数修饰符（C# 参考）
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
@@ -60,7 +60,10 @@ class InOverloads
   
 - 迭代器方法，包括 [yield return](../../../csharp/language-reference/keywords/yield.md) 或 `yield break` 语句。  
 
-通常可声明 `in` 参数以避免按值传递参数所需的复制操作。 参数为结构或结构数组时，这非常有用。
+通常可声明 `in` 参数以避免按值传递参数所需的复制操作。 当自变量为值类型（例如复制操作比按引用传递开销更大的结构）时，这最为有用。
+
+> [!WARNING]
+>  如果使用不当，`in` 参数的开销甚至可能更大。 编译器可能不知晓成员方法是否修改结构的状态。 每当编译器无法确定对象是否未修改时，它就会防御性地创建副本并使用该副本调用成员引用。 任何可能的修改均针对该防御性副本。 避免这些副本的两种方法是：传递 `in` 参数作为 `in` 自变量，或定义结构作为 `readonly struct` 。
 
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ class InOverloads
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
- [方法参数](../../../csharp/language-reference/keywords/method-parameters.md)
+ [方法参数](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [具有值类型的引用语义](../../../csharp/reference-semantics-with-value-types.md)

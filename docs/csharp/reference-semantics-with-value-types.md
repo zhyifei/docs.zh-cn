@@ -1,6 +1,6 @@
 ---
-title: "具有值类型的引用语义"
-description: "了解安全地最大程度减少结构复制操作的语言功能"
+title: 具有值类型的引用语义
+description: 了解安全地最大程度减少结构复制操作的语言功能
 author: billwagner
 ms.author: wiwagn
 ms.date: 11/10/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8a0cfe83200d50eefa9b01ab51591a5fe0703ec0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>具有值类型的引用语义
 
@@ -110,6 +110,22 @@ ms.lasthandoff: 03/15/2018
 - 无法捕获 Lambda 表达式或本地函数中的 `ref struct` 变量。
 
 这些限制可确保不会以可提升至托管堆的方式意外地使用 `ref struct`。
+
+## <a name="readonly-ref-struct-type"></a>`readonly ref struct` 类型
+
+将结构声明为 `readonly ref` 兼具 `ref struct` 和 `readonly struct` 声明的优点和限制。 
+
+以下示例演示 `readonly ref struct` 的声明。
+
+```csharp
+readonly ref struct ReadOnlyRefPoint2D
+{
+    public int X { get; }
+    public int Y { get; }
+    
+    ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
+}
+```
 
 ## <a name="conclusions"></a>结论
 

@@ -1,43 +1,45 @@
 ---
-title: "new 运算符（C# 参考）"
-ms.date: 07/20/2015
+title: new 运算符（C# 参考）
+ms.date: 03/15/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: new operator keyword [C#]
+helpviewer_keywords:
+- new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3c2b484b9872a54ce42520de77a723b9edb441a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab582cd14bc649ca8d1678a583a8f95e78c6bf7e
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="new-operator-c-reference"></a>new 运算符（C# 参考）
-用于创建对象和调用构造函数。 例如：  
+用于创建对象和调用构造函数。 例如:  
   
-```  
+```csharp
 Class1 obj  = new Class1();  
 ```  
   
  它还用于创建匿名类型的实例：  
   
-```  
+```csharp
 var query = from cust in customers  
-            select new {Name = cust.Name, Address = cust.PrimaryAddress};  
+            select new { Name = cust.Name, Address = cust.PrimaryAddress };  
 ```  
   
- `new` 运算符还用于调用值类型的默认构造函数。 例如：  
+ `new` 运算符还用于调用值类型的默认构造函数。 例如:  
   
-```  
+```csharp
 int i = new int();  
 ```  
   
  在前面的语句中，`i` 的初始值为 `0`，这是类型 `int` 的默认值。 此语句与下面的语句的效果相同：  
   
-```  
+```csharp
 int i = 0;  
 ```  
   
@@ -45,7 +47,7 @@ int i = 0;
   
  请记住，为 [struct](../../../csharp/language-reference/keywords/struct.md) 声明默认构造函数是错误的，因为每个值类型均隐式含有公共默认构造函数。 可以对结构类型声明参数化构造函数，以设置其初始值，但仅在需要除默认值以外的值时才需要这样做。  
   
- 值类型对象（例如结构）是在堆栈上创建的，而引用类型对象（例如类）是在堆上创建的。 这两种类型的对象均被自动销毁，但基于值类型的对象是在它们超出范围时被销毁，而基于引用类型的对象是在删除对它们的最后一个引用后在非指定时间被销毁。 对于占用固定资源（如大量内存、文件句柄或网络连接）的引用类型，有时需要应用确定性终结，以确保尽快销毁对象。 有关详细信息，请参阅 [Using 语句](../../../csharp/language-reference/keywords/using-statement.md)。  
+ 值类型对象（如结构）和引用类型对象（如类）都会自动销毁，但值类型对象是在其包含的上下文被销毁时才会销毁，而引用类型对象是在对它们的最后一个引用被删除后的未指定时间由垃圾回收器销毁。 对于包含文件句柄或网络连接等资源的类型，最好使用确定性清理来确保尽快释放其包含的资源。 有关详细信息，请参阅 [Using 语句](../../../csharp/language-reference/keywords/using-statement.md)。  
   
  不能重载 `new` 运算符。  
   
@@ -54,14 +56,14 @@ int i = 0;
 ## <a name="example"></a>示例  
  在下面的示例中，使用 `new` 运算符创建并初始化 `struct` 对象和类对象，并向它们分配值。 显示默认值和分配的值。  
   
- [!code-csharp[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
+ [!code-csharp[csrefKeywordsOperator#7](codesnippet/CSharp/new-operator_1.cs)]  
   
  请注意，本示例中字符串的默认值为 `null`。 因此，未显示此字符串。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 参考](../../../csharp/language-reference/index.md)  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [C# 关键字](../../../csharp/language-reference/keywords/index.md)  

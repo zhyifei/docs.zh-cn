@@ -1,18 +1,19 @@
 ---
-title: "面向对象的编程 (C#)"
+title: 面向对象的编程 (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 6da28e97a33e962d4926a3b65d0fdf388c252d9a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="object-oriented-programming-c"></a>面向对象的编程 (C#)
 C# 提供对面向对象的编程（包括封装、继承和多形性）的完整支持。  
@@ -82,7 +83,7 @@ struct SampleStruct
   
  有关详细信息，请参见:  
   
--   [类](../../../csharp/language-reference/keywords/class.md)  
+-   [class](../../../csharp/language-reference/keywords/class.md)  
   
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
@@ -95,7 +96,7 @@ struct SampleStruct
  定义字段：  
   
 ```csharp  
-Class SampleClass  
+class SampleClass  
 {  
     public string sampleField;  
 }  
@@ -229,12 +230,12 @@ Container.Nested nestedInstance = new Container.Nested()
   
 |C# 修饰符|定义|  
 |------------------|----------------|  
-|[公用](../../../csharp/language-reference/keywords/public.md)|同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。|  
-|[专用](../../../csharp/language-reference/keywords/private.md)|只有同一类中的代码可以访问该类型或成员。|  
-|[受保护](../../../csharp/language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|  
-|[内部](../../../csharp/language-reference/keywords/internal.md)|同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。|  
-|[受保护内部](../../../csharp/language-reference/keywords/protected-internal.md)|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|  
-|[私有受保护](../../../csharp/language-reference/keywords/private-protected.md)|同一个类或基类程序集中的派生类中的代码，可以访问该类型或成员。|  
+|[public](../../../csharp/language-reference/keywords/public.md)|同一程序集中的任何其他代码或引用该程序集的其他程序集都可以访问该类型或成员。|  
+|[private](../../../csharp/language-reference/keywords/private.md)|只有同一类中的代码可以访问该类型或成员。|  
+|[protected](../../../csharp/language-reference/keywords/protected.md)|只有同一类或派生类中的代码可以访问该类型或成员。|  
+|[internal](../../../csharp/language-reference/keywords/internal.md)|同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。|  
+|[受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md)|同一程序集中的任何代码或其他程序集中的任何派生类都可以访问该类型或成员。|  
+|[专用受保护](../../../csharp/language-reference/keywords/private-protected.md)|同一类或基类程序集内派生类中的代码可以访问该类型或成员。|  
   
  有关详细信息，请参阅[访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
@@ -343,7 +344,7 @@ public abstract class B { }
 |C# 修饰符|定义|  
 |------------------|----------------|  
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|允许在派生类中重写类成员。|  
-|[替代](../../../csharp/language-reference/keywords/override.md)|重写基类中定义的虚拟（可重写）成员。|  
+|[override](../../../csharp/language-reference/keywords/override.md)|重写基类中定义的虚拟（可重写）成员。|  
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|要求在派生类中重写类成员。|  
 |[new 修饰符](../../../csharp/language-reference/keywords/new-modifier.md)|隐藏继承自基类的成员|  
   
@@ -375,7 +376,7 @@ class SampleClass : ISampleInterface
   
  [接口](../../../csharp/programming-guide/interfaces/index.md)  
   
- [接口](../../../csharp/language-reference/keywords/interface.md)  
+ [interface](../../../csharp/language-reference/keywords/interface.md)  
   
 ##  <a name="Generics"></a> 泛型  
  .NET Framework 中的类、结构、接口和方法可以包括“类型参数”，类型参数定义它们可以存储或使用的对象的类型。 最常见的泛型示例是集合，从中可以指定要存储在集合中的对象的类型。  
@@ -383,7 +384,7 @@ class SampleClass : ISampleInterface
  定义泛型类：  
   
 ```csharp  
-Public class SampleGeneric<T>   
+public class SampleGeneric<T>   
 {  
     public T Field;  
 }  

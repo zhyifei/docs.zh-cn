@@ -1,22 +1,19 @@
 ---
-title: "dotnet new 命令 - .NET Core CLI"
-description: "dotnet new 命令可根据指定模板新建 .NET Core 项目。"
-keywords: "dotnet-new, CLI, CLI 命令, .NET Core"
+title: dotnet new 命令 - .NET Core CLI
+description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="synopsis"></a>摘要
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 ```
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
@@ -55,7 +52,7 @@ dotnet new [-h|--help]
 
 调用命令时要实例化的模板。 每个模板可能具有可传递的特定选项。 有关详细信息，请参阅[模板选项](#template-options)。
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 此命令包含默认的模板列表。 使用 `dotnet new -l` 获取可用模板的列表。 下表列出了与 .NET Core 2.0 SDK 一起预安装的模板。 模板的默认语言显示在括号内。
 
@@ -101,7 +98,7 @@ dotnet new [-h|--help]
 
 ## <a name="options"></a>选项
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 `--force`
 
@@ -113,7 +110,9 @@ dotnet new [-h|--help]
 
 `-i|--install <PATH|NUGET_ID>`
 
-从提供的 `PATH` 或 `NUGET_ID` 安装源或模板包。 若要了解如何创建自定义模板，请参阅 [dotnet new 自定义模板](custom-templates.md)。
+从提供的 `PATH` 或 `NUGET_ID` 安装源或模板包。 若要安装模板包的预发布版本，需要以 `<package-name>::<package-version>` 格式指定该版本。 默认情况下，`dotnet new` 为该版本传递 \*，表示最后一个稳定的包版本。 请在[示例](#examples)部分查看示例。
+
+若要了解如何创建自定义模板，请参阅 [dotnet new 自定义模板](custom-templates.md)。
 
 `-l|--list`
 
@@ -175,11 +174,11 @@ dotnet new [-h|--help]
 
 每个项目模板都可能有附加选项。 核心模板有以下附加选项：
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 **console、angular、react、reactredux**
 
-`--no-restore` - 在项目创建期间不执行隐式还原。
+  `--no-restore` - 在项目创建期间不执行隐式还原。
 
 **classlib**
 
@@ -322,6 +321,10 @@ dotnet new [-h|--help]
 列出适用于 MVC 的所有模板：
 
 `dotnet new mvc -l`
+
+安装适用于 ASP.NET Core 的单页应用程序模板 2.0 版（命令选项仅可用于 .NET Core SDK 1.1 及更高版本）：
+
+`dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
 
 ## <a name="see-also"></a>请参阅
 

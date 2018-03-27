@@ -1,6 +1,6 @@
 ---
-title: "ref 返回值和 ref 局部变量（C# 指南）"
-description: "了解如何定义和使用 ref 返回值和 ref 局部变量"
+title: ref 返回值和 ref 局部变量（C# 指南）
+description: 了解如何定义和使用 ref 返回值和 ref 局部变量
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/23/2017
@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 返回值和局部变量
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 后续使用 `p` 等同于使用 `GetContactInformation` 返回的变量，因为 `p` 是此变量的别名。 对 `p` 所做的更改也会更改从 `GetContactInformation` 返回的变量。
 
-注意，请同时在局部变量声明前和方法调用前使用 `ref` 关键字。 无法同时将 `ref` 关键字包含在变量声明和赋值将导致编译器错误 CS8172：“无法使用值对按引用变量进行初始化”。 
+注意，请同时在局部变量声明前和方法调用前使用 `ref` 关键字。 
+
+可通过相同方式按引用访问值。 在某些情况下，按引用访问值可避免潜在的高开销复制操作，从而提高性能。 例如，以下语句显示用户可如何定义一个用于引用值的 ref 局部变量值。
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+注意，请同时在局部变量声明前和第二个示例中的值前使用 `ref` 关键字。 在这两个示例中，如果无法同时将 `ref` 关键字包含在变量声明和赋值中，则会导致编译器错误 CS8172：“无法使用值对按引用变量进行初始化”。 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>ref 返回结果和 ref 局部变量：示例
 
@@ -101,4 +109,5 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
  
 ## <a name="see-also"></a>请参阅
 
-[ref 关键字](../../language-reference/keywords/ref.md)
+[ref 关键字](../../language-reference/keywords/ref.md)  
+[具有值类型的引用语义](../../../csharp/reference-semantics-with-value-types.md)

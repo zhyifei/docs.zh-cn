@@ -1,12 +1,8 @@
 ---
-title: "自定义日期和时间格式字符串"
-ms.custom: 
+title: 自定义日期和时间格式字符串
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 日期和时间格式字符串定义由格式设置操作生成的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的文本表示形式。 它还可定义分析操作中需要的日期和时间值的表示形式，以便成功将字符串转换为日期和时间。 自定义格式字符串由一个或多个自定义日期和时间格式说明符组成。 任何不是[标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字符串都会解释为自定义日期和时间格式字符串。  
@@ -614,7 +610,7 @@ ms.lasthandoff: 12/23/2017
  “:”自定义格式说明符表示时间分隔符，它用于区分小时、分钟和秒。 相应的本地化时间分隔符通过当前或指定区域性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 属性进行检索。  
   
 > [!NOTE]
->  若要更改特定日期和时间字符串的时间分隔符，请指定文本字符串分隔符内的分隔字符。 例如，在自定义格式字符串 `hh'_'dd'_'ss` 产生的结果字符串中，始终将“_”（下划线）用作时间分隔符。 若要更改区域所有日期的时间分隔符，可更改当前区域的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 属性，或者实例化 <xref:System.Globalization.DateTimeFormatInfo> 对象，将字符分配到其 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> 属性并调用包含 <xref:System.IFormatProvider> 形参的格式设置方法的重载。  
+>  若要更改特定日期和时间字符串的时间分隔符，请指定文本字符串分隔符内的分隔字符。 例如，在自定义格式字符串 `hh'_'dd'_'ss` 产生的结果字符串中，始终将“\_”（下划线）用作时间分隔符。 若要更改区域所有日期的时间分隔符，可更改当前区域的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 属性，或者实例化 <xref:System.Globalization.DateTimeFormatInfo> 对象，将字符分配到其 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> 属性并调用包含 <xref:System.IFormatProvider> 形参的格式设置方法的重载。  
   
  如果使用“:”格式说明符而没有其他自定义格式说明符，则将该说明符解释为标准日期和时间格式说明符，并引发 <xref:System.FormatException>。 有关使用单个格式说明符的详细信息，请参阅本主题稍后的[使用单个自定义格式说明符](#UsingSingleSpecifiers)。  
   

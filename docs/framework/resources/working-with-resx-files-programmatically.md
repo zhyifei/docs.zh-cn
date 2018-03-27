@@ -1,12 +1,13 @@
 ---
-title: "以编程方式使用 .resx 文件"
-ms.custom: 
+title: 以编程方式使用 .resx 文件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 951bd2160baddf100a685af2d78ec49e2146077b
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-resx-files-programmatically"></a>以编程方式使用 .resx 文件
 由于 XML 资源 (.resx) 文件必须由定义完善的 XML 组成，这些 XML 的标头必须遵循特定架构（后跟名称/值对的数据），因此你会发现手动创建这些文件很容易出错。 作为一种替代方法，可以使用 .NET Framework 类库中的类型和成员以编程方式创建 .resx 文件。 你还可以使用 .NET Framework 类库来检索存储在 .resx 文件中的资源。 本主题说明如何使用 <xref:System.Resources> 命名空间的类型和成员来操作 .resx 文件。  
@@ -83,15 +85,15 @@ ms.lasthandoff: 12/22/2017
   
  这会生成一个具有与 .resx 文件相同的根文件名的二进制资源文件，并且该文件的扩展名为 .resources。 然后，可在编译时将该文件编译为可执行文件或库。 如果你使用的是 Visual Basic 编译器，则使用以下语法以在应用程序的可执行文件中嵌入一个 .resources 文件：  
   
- **vbc** *filename* **.vb /resource:** *.resourcesFilename*  
+ vbc filename .vb -resource: .resourcesFilename  
   
  如果使用的是 C#，则语法如下所示：  
   
- **csc** *filename* **.cs /resource:** *.resourcesFilename*  
+ csc filename .cs -resource: .resourcesFilename  
   
  还可以使用 [程序集链接器 (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)在附属程序集中嵌入 .resources 文件，基本语法如下：  
   
- **al** *resourcesFilename* **/out:** *assemblyFilename*  
+ al resourcesFilename -out: assemblyFilename  
   
 ## <a name="see-also"></a>请参阅  
  [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

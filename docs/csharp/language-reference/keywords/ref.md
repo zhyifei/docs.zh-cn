@@ -1,5 +1,5 @@
 ---
-title: "ref（C# 参考）"
+title: ref（C# 参考）
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ref keyword [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 63f984f4004cfce9694e7e7405ec2477bc370731
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/15/2018
 
 - 在方法签名中，按引用将值返回给调用方。 有关详细信息，请参阅[引用返回值](#reference-return-values)。
 
-- 在成员正文中，指示引用返回值是否作为调用方欲修改的引用被存储在本地。 有关详细信息，请参阅 [ref 局部变量](#ref-locals)。
+- 在成员正文中，指示引用返回值是否作为调用方欲修改的引用被存储在本地，或在一般情况下，局部变量按引用访问另一个值。 有关详细信息，请参阅 [ref 局部变量](#ref-locals)。
 
 ## <a name="passing-an-argument-by-reference"></a>按引用传递参数
 
@@ -109,7 +109,13 @@ ref 局部变量用于指代使用 `return ref` 返回的值。  必须将 ref �
 ref decimal estValue = ref Building.GetEstimatedValue();
 ```
 
-请注意，必须在两个位置中同时使用 `ref` 关键字，否则编译器将生成错误 CS8172：“无法使用值对按引用变量进行初始化”。 
+可通过相同方式按引用访问值。 在某些情况下，按引用访问值可避免潜在的高开销复制操作，从而提高性能。 例如，以下语句显示用户可如何定义一个用于引用值的 ref 局部变量值。
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+请注意，在这两个示例中，必须在两个位置同时使用 `ref` 关键字，否则编译器将生成错误 CS8172：“无法使用值对按引用变量进行初始化”。 
  
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 返回值和 ref 局部变量示例
 

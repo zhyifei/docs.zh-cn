@@ -1,7 +1,7 @@
 ---
-title: "在生产环境中运行由和基于微服务的应用程序"
-description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 在生产环境中运行由和基于微服务的应用程序
+description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -9,10 +9,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0d7611d07c9995984269e3f7b071154d9b861367
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生产环境中运行由和基于微服务的应用程序
 
@@ -24,11 +24,11 @@ ms.lasthandoff: 12/23/2017
 
 当应用程序是向外扩展的跨多个主机系统时，管理每个主机系统和抽象化基础平台的复杂性的能力变得极具吸引力。 这就确切地说是 orchestrators 和计划程序提供的内容。 看看简要此处所示：
 
--   **计划程序*** *"计划"指的管理员可以将服务文件加载到建立如何运行特定容器的主机系统的能力。 启动 Docker 群集中的容器往往会被称为计划。 虽然计划针对加载的更多常规的意义上中的服务定义的特定行为的是计划程序负责将挂钩到主机的 init 系统中任何所需的容量的服务进行管理。
+-   **计划程序 * * * *"计划"指的管理员可以将服务文件加载到建立如何运行特定容器的主机系统的能力。 启动 Docker 群集中的容器往往会被称为计划。 虽然计划针对加载的更多常规的意义上中的服务定义的特定行为的是计划程序负责将挂钩到主机的 init 系统中任何所需的容量的服务进行管理。
 
 一个群集计划程序有多个目标： 有效地使用群集的资源，使用用户提供的放置约束，计划应用程序快速不将它们保留在挂起状态，具有在一定程度"的公平性，"正在可靠的错误，并始终为可用。
 
--   **业务流程*** *平台扩展到部署在主机群集上的复杂、 multicontainer 工作负荷的生命周期管理功能。 通过使宿主基础结构的抽象化，业务流程工具将向用户授予了如何将整个群集视为单个部署目标。
+-   **业务流程 * * * *平台扩展到部署在主机群集上的复杂、 multicontainer 工作负荷的生命周期管理功能。 通过使宿主基础结构的抽象化，业务流程工具将向用户授予了如何将整个群集视为单个部署目标。
 
 业务流程的过程包括工具和一个平台，它可以自动执行的应用程序管理从初始放置或每个容器; 的部署的所有方面将容器移动到不同的主机，具体取决于其主机的运行状况或性能;版本控制和滚动更新以及运行状况监视功能的支持缩放和故障转移;还有更多。
 
