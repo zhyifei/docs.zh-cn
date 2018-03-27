@@ -1,8 +1,9 @@
 ---
-title: "值类型表（C# 参考）"
+title: 值类型表（C# 参考）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - value types [C#], table
@@ -10,7 +11,7 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 49ada8d7c006808077b5a7c93175a143932bf277
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
 |[bool](../../../csharp/language-reference/keywords/bool.md)|Boolean||  
 |[byte](../../../csharp/language-reference/keywords/byte.md)|无符号、数字、整型||  
 |[char](../../../csharp/language-reference/keywords/char.md)|无符号、数字、整型||  
-|[小数](../../../csharp/language-reference/keywords/decimal.md)|数字、十进制|M 或 m|  
+|[decimal](../../../csharp/language-reference/keywords/decimal.md)|数字、十进制|M 或 m|  
 |[double](../../../csharp/language-reference/keywords/double.md)|数字、浮点|D 或 d|  
 |[enum](../../../csharp/language-reference/keywords/enum.md)|枚举||  
 |[float](../../../csharp/language-reference/keywords/float.md)|数字、浮点|F 或 f|  
