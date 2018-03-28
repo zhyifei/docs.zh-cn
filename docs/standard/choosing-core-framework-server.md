@@ -1,19 +1,19 @@
 ---
-title: "为服务器应用选择 .NET Core 或 .NET Framework"
-description: "关于在 .NET 中生成服务器应用时应考虑使用哪种 .NET 实现的指南。"
+title: 为服务器应用选择 .NET Core 或 .NET Framework
+description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NET 实现的指南。
 author: cartermp
 ms.author: mairaw
-ms.date: 08/15/2016
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -79,6 +79,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 ### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>需要使用不可用于 .NET Core 的第三方 .NET 库或 NuGet 包
 
 库很快将使用 .NET Standard。 通过 .NET Standard 可跨各种 .NET 实现（包括 .NET Core）共享代码。 使用 .NET Standard 2.0 则更简单：
+
 - API 曲面已变为更大。 
 - 引入了 .NET Framework 兼容性模式。 此兼容性模式允许 .NET Standard/.NET Core 项目引用.NET Framework 库。 若要详细了解兼容性模式，请参阅 [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)（宣布发布 .NET Standard 2.0）。
 
@@ -92,7 +93,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 * ASP.NET 网页应用程序：ASP.NET 网页未包含在 ASP.NET Core 中。 ASP.NET Core [Razor 页](/aspnet/core/mvc/razor-pages/)与网页有许多相似之处。
 
-* ASP.NET SignalR 服务器/客户端实现。 目前，ASP.NET SignalR 不可用于 ASP.NET Core（非客户端或服务器）。 ASP.NET Core SignalR 预计可用于 ASP.NET Core 2.1。 请参阅 [ASP.NET Core Schedule and Roadmap](https://github.com/aspnet/Home/wiki/Roadmap)（ASP.NET Core 计划和路线图）。 [服务器端](https://github.com/aspnet/SignalR-Server)和[客户端库](https://github.com/aspnet/SignalR-Client-Net) GitHub 存储库上的预览状态可用。
+* ASP.NET SignalR 服务器/客户端实现。 目前对于 ASP.NET Core 2.1 提供预览版 [ASP.NET SignalR](https://github.com/aspnet/SignalR)。
 
 * WCF 服务的实现。 虽然 [WCF 客户端库](https://github.com/dotnet/wcf)可从 .NET Core 使用 WCF 服务，WCF 服务器实现目前只在 .NET Framework 上可用。 这种情况虽然不属于 .NET Core 当前计划，但将来会考虑这点。
 
