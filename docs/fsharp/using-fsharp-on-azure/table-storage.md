@@ -1,43 +1,53 @@
 ---
-title: "要开始使用 Azure 表存储使用 F #"
-description: "在云中使用 Azure 表存储，NoSQL 数据存储中存储结构化的数据。"
-keywords: "visual f #、 f # 中，函数编程，.NET，.NET 核心，Azure"
+title: '要开始使用 Azure 表存储使用 F #'
+description: 在云中使用 Azure 表存储或 Azure Cosmos DB 存储结构化的数据。
+keywords: 'visual f #、 f # 中，函数编程，.NET，.NET 核心，Azure'
 author: sylvanc
 ms.author: phcart
-ms.date: 09/20/2016
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: 905374a60261b0c2a863edb956943d41ae80f04d
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 6d40211e13e8d213aa5a40d585dd384abf49ddfa
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="get-started-with-azure-table-storage-using-f"></a>要开始使用 Azure 表存储使用 F # #
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>开始使用 Azure 表存储和使用 F # Azure Cosmos DB 表 API # 
 
 Azure 表存储是将结构化的 NoSQL 数据存储在云中的服务。 表存储是具有无模式的设计的键/属性存储区。 表存储是无模式，因为它很容易使数据适应随着需求的应用程序发展变化。 对数据的访问是快速、 经济高效的所有类型的应用程序。 表存储是通常显著低于成本传统 SQL 相似的数据量。
 
 你可以使用表存储来存储灵活的数据集，例如 web 应用程序、 通讯簿、 设备信息和的元数据，您的服务需要的任何其他类型的用户数据。 你可以在表中，存储任意数量的实体和存储帐户可以包含任意数量的表，直至达到存储帐户容量限制。
 
-### <a name="about-this-tutorial"></a>关于本教程
+Azure Cosmos DB 为应用程序编写为 Azure 表存储以及如要求高级功能提供表 API:
 
-本教程演示如何编写 F # 代码来执行一些常见的任务，使用 Azure 表存储，包括创建和删除表和插入、 更新、 删除和查询表数据。
+- 关守全局分发。
+- 全球范围内的专用的吞吐量。
+- 在的 99%的单位数的毫秒延迟。
+- 保证高可用性。
+- 自动辅助索引。
 
-有关表存储的概念概述，请参阅[表存储.NET 指南](/azure/storage/storage-dotnet-how-to-use-tables)
+为 Azure 表存储编写的应用程序可以通过使用表 API 进行任何代码更改，将迁移到 Azure Cosmos DB，并充分利用高级功能。 表 API 具有可用的客户端 Sdk for.NET、 Java、 Python 和 Node.js。
+
+有关详细信息，请参阅[简介 Azure Cosmos DB 表 API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)。
+
+## <a name="about-this-tutorial"></a>关于本教程
+
+本教程演示如何编写 F # 代码来执行一些常见的任务，使用 Azure 表存储或 Azure Cosmos DB 表 API，包括创建和删除表和插入、 更新、 删除和查询表数据。
 
 ## <a name="prerequisites"></a>系统必备
 
-若要使用本指南，你必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)。
-此外需要为此帐户存储访问密钥。
+若要使用本指南，你必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)或[Azure Cosmos DB 帐户](https://azure.microsoft.com/try/cosmosdb/)。
+
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>创建的 F # 脚本并开始 F # 交互
 
 这篇文章中的示例可在 F # 应用程序或 F # 脚本。 若要创建的 F # 脚本，创建具有的文件`.fsx`扩展，例如`tables.fsx`，F # 开发环境中。
 
-接下来，使用[程序包管理器](package-management.md)如[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安装`WindowsAzure.Storage`包和引用`WindowsAzure.Storage.dll`在脚本中使用`#r`指令。 执行此再次为 Microsoft.WindowsAzure.ConfigurationManager 操作以获取 Microsoft.Azure 命名空间。
+接下来，使用[程序包管理器](package-management.md)如[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安装`WindowsAzure.Storage`包和引用`WindowsAzure.Storage.dll`在脚本中使用`#r`指令。 不要针对重新`Microsoft.WindowsAzure.ConfigurationManager`以获取 Microsoft.Azure 命名空间。
 
 ### <a name="add-namespace-declarations"></a>添加命名空间声明
 
@@ -45,11 +55,15 @@ Azure 表存储是将结构化的 NoSQL 数据存储在云中的服务。 表存
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>获取连接字符串
+### <a name="get-your-azure-storage-connection-string"></a>获取 Azure 存储连接字符串
 
-对于本教程，你将需要一个 Azure 存储连接字符串。 有关连接字符串的详细信息，请参阅[配置存储连接字符串](/azure/storage/storage-configure-connection-string)。
+如果您正在连接到 Azure 存储表服务，你将对于本教程需要你的连接字符串。 你可以从 Azure 门户复制你的连接字符串。 有关连接字符串的详细信息，请参阅[配置存储连接字符串](/azure/storage/storage-configure-connection-string)。
 
-对于本教程中，您将在脚本中，如下输入你的连接字符串：
+### <a name="get-your-azure-cosmos-db-connection-string"></a>获取 Azure Cosmos DB 连接字符串
+
+如果您正在连接到 Azure Cosmos DB，你将对于本教程需要你的连接字符串。 你可以从 Azure 门户复制你的连接字符串。 在 Azure 门户中，在你 Cosmos DB 的帐户，请转到**设置** > **连接字符串**，然后单击**复制**按钮以复制主连接字符串。 
+
+本教程中，在脚本中，如下例所示输入您的连接字符串：
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
@@ -71,21 +85,21 @@ Azure 表存储是将结构化的 NoSQL 数据存储在云中的服务。 表存
 
 ### <a name="create-the-table-service-client"></a>创建表服务客户端
 
-`CloudTableClient`类使你能够检索表和实体存储在表存储。 下面是创建服务客户端的一种方法：
+`CloudTableClient`类使你能够检索表和表存储中的实体。 下面是创建服务客户端的一种方法：
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
 现在，你就可以编写代码，从读取数据并将数据写入表存储了。
 
-## <a name="create-a-table"></a>创建表
+### <a name="create-a-table"></a>创建表
 
 此示例演示如何创建表，如果不存在：
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
 
-## <a name="add-an-entity-to-a-table"></a>向表中添加实体
+### <a name="add-an-entity-to-a-table"></a>向表中添加实体
 
-实体必须具有从继承的类型`TableEntity`。 你可以扩展`TableEntity`中任何方式，但你类型*必须*具有无参数构造函数。 同时具有的属性`get`和`set`将存储在 Azure 表。
+实体必须具有从继承的类型`TableEntity`。 你可以扩展`TableEntity`中任何方式，但你类型*必须*具有无参数构造函数。 同时具有的属性`get`和`set`存储在 Azure 表。
 
 实体的分区键和行键唯一地标识表中的实体。 具有相同的分区键的实体的查询查询可以速度快于具有不同的分区键，但使用不同的分区键可实现的并行操作可伸缩性更好。
 
@@ -93,11 +107,11 @@ Azure 表存储是将结构化的 NoSQL 数据存储在云中的服务。 表存
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-现在，我们将添加我们`Customer`到表。 若要执行此操作，你可以创建`TableOperation`，将在表上执行。 在这种情况下，创建`Insert`操作。
+现在添加`Customer`到表。 为此，请创建`TableOperation`对表执行。 在这种情况下，创建`Insert`操作。
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
-## <a name="insert-a-batch-of-entities"></a>插入一批实体
+### <a name="insert-a-batch-of-entities"></a>插入一批实体
 
 你可以将一批实体插入表使用单个写入操作。 批处理操作允许您将操作合并为单个的执行，但它们具有一些限制：
 
@@ -110,20 +124,20 @@ Azure 表存储是将结构化的 NoSQL 数据存储在云中的服务。 表存
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L62-L71)]
 
-## <a name="retrieve-all-entities-in-a-partition"></a>检索分区中的所有实体
+### <a name="retrieve-all-entities-in-a-partition"></a>检索分区中的所有实体
 
-若要查询表以获取分区中的所有实体，使用`TableQuery`对象。 在这里，你的筛选实体"Buster"所在的分区键。
+若要查询表以获取分区中的所有实体，使用`TableQuery`对象。 在这里，你的筛选实体"Smith"所在的分区键。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L77-L80)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
 你现在打印结果：
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
 
-## <a name="retrieve-a-range-of-entities-in-a-partition"></a>检索分区中实体的一部分
+### <a name="retrieve-a-range-of-entities-in-a-partition"></a>检索分区中实体的一部分
 
-如果你不想查询分区中的所有实体，你可以通过组合分区键筛选器与行键筛选器来指定一个范围。 在这里，你使用两个筛选器来获取"Buster"分区的所有实体，行键 （名字） 以字母开头早于字母表中的"M"。
+如果你不想查询分区中的所有实体，你可以通过组合分区键筛选器与行键筛选器来指定一个范围。 在这里，你使用两个筛选器来获取"Smith"分区的所有实体，行键 （名字） 以字母开头早于字母表中的"M"。
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
 
@@ -131,9 +145,9 @@ Azure 表存储是将结构化的 NoSQL 数据存储在云中的服务。 表存
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L102-L103)]
 
-## <a name="retrieve-a-single-entity"></a>检索单个实体
+### <a name="retrieve-a-single-entity"></a>检索单个实体
 
-你可以编写查询以检索单个特定实体。 在这里，使用`TableOperation`来指定客户"Larry Buster"。 而不是一个集合，则将取回`Customer`。 在查询中指定分区键和行键是从表服务中检索单个实体的最快方法。
+你可以编写查询以检索单个特定实体。 在这里，使用`TableOperation`来指定客户"Ben Smith"。 而不是一个集合，则将取回`Customer`。 在查询中指定分区键和行键是从表服务中检索单个实体的最快方法。
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -142,52 +156,53 @@ Azure 表存储是将结构化的 NoSQL 数据存储在云中的服务。 表存
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
 
 
-## <a name="replace-an-entity"></a>替换实体
+### <a name="replace-an-entity"></a>替换实体
 
-若要更新实体，从表服务中检索它，修改实体对象，然后将所做的更改保存回表服务使用`Replace`操作。 这将导致在服务器上，将完全替换该实体，除非服务器上的该实体已更改自检索之后，在这种情况下，该操作将失败。 此失败将防止你的应用程序无意中覆盖从其他源的更改。
+若要更新实体，从表服务中检索它，修改实体对象，然后将所做的更改保存回表服务使用`Replace`操作。 这将导致在服务器上，将完全替换该实体，除非服务器上的该实体已更改自检索之后，在这种情况下则操作将失败。 此失败将防止你的应用程序无意中覆盖从其他源的更改。
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
-## <a name="insert-or-replace-an-entity"></a>插入或替换实体
+### <a name="insert-or-replace-an-entity"></a>插入或替换实体
 
-有时，你不知道或不实体是否存在于表。 并且如果是这样，不再需要存储在它的当前值。 你可以使用`InsertOrReplace`创建实体，或者将其替换如果它存在，而不考虑其状态。
+有时，你不知道表中是否存在实体。 并且如果是这样，不再需要存储在它的当前值。 你可以使用`InsertOrReplace`创建实体，或者将其替换如果它存在，而不考虑其状态。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L134-L140)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
-## <a name="query-a-subset-of-entity-properties"></a>查询实体属性子集
+### <a name="query-a-subset-of-entity-properties"></a>查询实体属性子集
 
 表查询可以检索的几个属性，而不是所有这些实体中。 此方法称为投影，可以提高查询性能，尤其适用于大型实体。 在这里，你返回仅电子邮件地址使用`DynamicTableEntity`和`EntityResolver`。 请注意，不支持投影在本地存储仿真程序，因此仅当你在上表服务使用的帐户时，在运行此代码。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L146-L157)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
-## <a name="retrieve-entities-in-pages-asynchronously"></a>以异步方式检索页中的实体
+### <a name="retrieve-entities-in-pages-asynchronously"></a>以异步方式检索页中的实体
 
 如果您正在读取大量实体，并且你想要在检索，而不是等待其全部返回，可以使用分段的查询时进行处理。 在这里，你结果在页中返回通过使用异步工作流，以便为大量要返回的结果在等待时，将不会阻止执行。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L163-L177)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L163-L178)]
 
 你现在以同步方式执行此计算：
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L179-L179)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L180-L180)]
 
-## <a name="delete-an-entity"></a>删除实体
+### <a name="delete-an-entity"></a>删除实体
 
-你可以在检索后删除实体。 使用更新实体，这将失败如果该实体自从你检索到它以后发生更改。
+你可以在检索后删除实体。 使用更新实体，此操作失败如果该实体自从你检索到它以后发生更改。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L185-L186)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L186-L187)]
 
-## <a name="delete-a-table"></a>删除表
+### <a name="delete-a-table"></a>删除表
 
 你可以从存储帐户中删除表。 已删除的表将不可用的一段时间之后必须重新创建。
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L192-L192)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
 ## <a name="next-steps"></a>后续步骤
 
-现在，你已了解表存储的基础知识，单击下面的链接以了解更复杂的存储任务：
+现在，你已了解表存储的基础知识，单击下面的链接以了解更复杂的存储任务和 Azure Cosmos DB 表 API。
 
-- [用于.NET 的 azure 存储 Api](/dotnet/api/overview/azure/storage)
-- [Azure 存储类型提供程序](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Azure 存储团队博客](https://blogs.msdn.microsoft.com/b/windowsazurestorage/)
-- [配置 Azure 存储连接字符串](/azure/storage/common/storage-configure-connection-string)
-- [在.NET 的 Azure 表存储入门](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)
+- [Azure Cosmos DB 表 API 简介](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
+- [存储客户端库.NET 参考](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Azure 存储类型提供程序](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Azure 存储团队博客](http://blogs.msdn.com/b/windowsazurestorage/)
+- [配置连接字符串](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
+- [在.NET 的 Azure 表存储入门](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

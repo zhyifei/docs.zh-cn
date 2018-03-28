@@ -1,6 +1,6 @@
 ---
-title: "F# 指南"
-description: "本指南提供有关 F # 中，在.NET 运行的函数编程语言的各种学习资料的概述。"
+title: F# 指南
+description: '本指南提供有关 F # 中，在.NET 运行的函数编程语言的各种学习资料的概述。'
 author: jackfoxy
 ms.author: phcart
 ms.date: 03/19/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 8be5ac5090e10ae9270e7eec529bd9b7c3c663fb
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: a101233f396368c0bc25937c49f77699cb9f8cf2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="f-guide"></a>F# 指南
 
@@ -54,11 +54,14 @@ F # 即将其核心的工作效率。 对 F # 的工具支持是无处不在和�
 
 [要开始使用 F # 使用.NET 核心 CLI](get-started/get-started-command-line.md)如果你想要使用命令行工具。
 
+[F # 和 Xamarin 入门](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)移动使用 F # 的编程。
+
 ## <a name="references"></a>参考资料
 
 [F # 语言参考](language-reference/index.md)是官方、 全面引用所有 F # 语言功能。 每篇文章说明了的语法，并显示代码示例。 可以使用内容的表中的筛选器栏以查找特定的文章。
 
 [F # 核心库参考](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)为 F # 核心库的 API 参考。
+
 
 ## <a name="additional-guides"></a>附加指南
 
