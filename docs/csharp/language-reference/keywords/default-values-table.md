@@ -44,7 +44,7 @@ int myInt = 0;
 |[bool](../../../csharp/language-reference/keywords/bool.md)|`false`|
 |[byte](../../../csharp/language-reference/keywords/byte.md)|0|
 |[char](../../../csharp/language-reference/keywords/char.md)|'\0'|
-|[小数](../../../csharp/language-reference/keywords/decimal.md)|0 M|
+|[decimal](../../../csharp/language-reference/keywords/decimal.md)|0 M|
 |[double](../../../csharp/language-reference/keywords/double.md)|0.0D|
 |[enum](../../../csharp/language-reference/keywords/enum.md)|表达式 (E)0 生成的值，其中 E 是枚举标识符。|
 |[float](../../../csharp/language-reference/keywords/float.md)|0.0F|

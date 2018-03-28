@@ -34,4 +34,4 @@ ms.lasthandoff: 11/21/2017
  [整型表](integral-types-table.md)  
  [设置数值结果表的格式](formatting-numeric-results-table.md)  
  [类型参考表](reference-tables-for-types.md)  
- [小数](decimal.md)
+ [decimal](decimal.md)

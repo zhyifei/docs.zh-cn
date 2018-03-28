@@ -26,17 +26,17 @@ ms.lasthandoff: 11/21/2017
 |[byte](../../../csharp/language-reference/keywords/byte.md)|`System.Byte`|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`System.SByte`|  
 |[char](../../../csharp/language-reference/keywords/char.md)|`System.Char`|  
-|[小数](../../../csharp/language-reference/keywords/decimal.md)|`System.Decimal`|  
+|[decimal](../../../csharp/language-reference/keywords/decimal.md)|`System.Decimal`|  
 |[double](../../../csharp/language-reference/keywords/double.md)|`System.Double`|  
 |[float](../../../csharp/language-reference/keywords/float.md)|`System.Single`|  
 |[int](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`System.UInt32`|  
 |[long](../../../csharp/language-reference/keywords/long.md)|`System.Int64`|  
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|`System.UInt64`|  
-|[对象](../../../csharp/language-reference/keywords/object.md)|`System.Object`|  
+|[object](../../../csharp/language-reference/keywords/object.md)|`System.Object`|  
 |[short](../../../csharp/language-reference/keywords/short.md)|`System.Int16`|  
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|`System.UInt16`|  
-|[字符串](../../../csharp/language-reference/keywords/string.md)|`System.String`|  
+|[string](../../../csharp/language-reference/keywords/string.md)|`System.String`|  
   
 ## <a name="remarks"></a>备注  
  此表中的所有类型，除 `object` 和 `string` 外，皆被称为简单类型。  
