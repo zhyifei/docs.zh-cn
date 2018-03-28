@@ -1,6 +1,6 @@
 ---
-title: "Azure 的开发过程"
-description: "设计使用 ASP.NET Core 和 Azure 的现代 Web 应用程序 |Azure 的开发过程"
+title: Azure 的开发过程
+description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | Azure 的开发过程
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
@@ -11,110 +11,110 @@ ms.workload:
 - dotnetcore
 ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
 ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
-> _"利用云，个人及小型企业可以对齐其指和立即设置企业级的服务。"_  
-> _-Roy Stephan_
+> “凭借云，个体和小型企业可轻松无忧地立即建立企业级服务。”  
+> - Roy Stephan
 
- ## <a name="vision"></a>Vision
+ ## <a name="vision"></a>愿景
 
-> *开发设计良好的 ASP.NET 核心应用程序您喜欢使用 Visual Studio 或 dotnet CLI 和 Visual Studio Code 或首选编辑器的方法。*
+> 使用 Visual Studio、dotnet CLI、Visual Studio Code 或所选用的编辑器，按照自己喜欢的方式开发出设计优良的 ASP .NET Core 应用程序。
 
-## <a name="development-environment-for-aspnet-core-apps"></a>对于 ASP.NET Core 应用程序的开发环境
+## <a name="development-environment-for-aspnet-core-apps"></a>ASP.NET Core 应用的开发环境
 
-### <a name="development-tools-choices-ide-or-editor"></a>开发工具的选择： IDE 或编辑器
+### <a name="development-tools-choices-ide-or-editor"></a>开发工具选择：IDE 或编辑器
 
-是否需要完整且功能强大的 IDE 或轻量，并灵活编辑器，则 Microsoft 将具有你开发 ASP.NET Core 应用程序时涉及。
+无论你更青睐内容丰富、功能强大的 IDE 还是灵活轻量的编辑器，Microsoft 都可为你提供用于开发 ASP.NET Core 应用程序的工具。
 
-**Visual Studio 2017.** 如果你使用*Visual Studio 2017*你可以生成 ASP.NET Core 应用程序，只要你有*.NET 核心跨平台开发*安装的工作负荷。 图 10-1 Visual Studio 2017 设置对话框中显示的所需的工作负荷。
+**Visual Studio 2017。** 如果使用 Visual Studio 2017，安装 .NET Core 跨平台开发工作负荷后，即可构建 ASP.NET Core 应用程序。 图 10-1 显示了 Visual Studio 2017 安装对话框中的必需工作负荷。
 
 ![](./media/image10-1.png)
 
-**图 10-1。** 在 Visual Studio 2017 中安装.NET 核心工作负荷。
+**图 10-1.** 在 Visual Studio 2017 中安装 .NET Core 工作负荷。
 
 [下载 Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Visual Studio Code 和 dotnet CLI** （适用于 Mac、 Linux 和 Windows 的跨平台工具）。 如果需要支持任何开发语言的轻量和跨平台编辑器，可以使用 Microsoft Visual Studio 代码和 dotnet CLI。 这些产品提供简单而稳定可靠的体验，简化了开发人员工作流。 此外，Visual Studio Code 支持扩展 C\#和 web 开发，提供 intellisense 和快捷方式-对编辑器内的任务。
+**Visual Studio Code 和 dotnet CLI**（适用于 Mac、Linux 和 Windows 的跨平台工具）。 如果更青睐支持任何开发语言的轻量级跨平台编辑器，可以使用 Microsoft Visual Studio Code 和 the dotnet CLI。 这些产品提供简单但可靠的体验，可以简化开发人员工作流。 此外，Visual Studio Code 支持适用于 C\# 和 Web 开发的扩展，在该编辑器内提供智能感知和快捷任务。
 
-[下载.NET 核心 SDK](https://www.microsoft.com/net/download/core)
+[下载 .NET Core SDK](https://www.microsoft.com/net/download/core)
 
-[下载 Visual Studio 代码](https://code.visualstudio.com/download)
+[下载 Visual Studio Code](https://code.visualstudio.com/download)
 
 
 
-## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Azure 托管的 ASP.NET Core 应用的开发工作流
+## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Azure 托管型 ASP.NET Core 应用的开发工作流
 
-从每个开发人员的计算机，编码使用其首选的语言和本地测试的应用开始应用程序开发生命周期。 开发人员可以选择其首选的源代码管理系统和持续集成 (CI) 和/或连续传送/部署 (CD) 使用的生成服务器可以配置或基于 Azure 的内置功能。
+应用程序开发生命周期始于每位开发人员的计算机，开发人员使用其首选语言对应用进行编码和本地测试。 开发人员可选择其青睐的源代码管理系统，并可使用生成服务器或基于内置 Azure 功能配置持续集成 (CI) 和/或持续交付/部署 (CD)。
 
-若要开始开发使用 CI/CD 的 ASP.NET Core 应用程序，可以使用 Visual Studio Team Services 或您的组织拥有 Team Foundation Server (TFS)。
+若要开始使用 CI/CD 开发 ASP.NET Core 应用程序，可使用 Visual Studio Team Services 或组织自身的 Team Foundation Server (TFS)。
 
 ### <a name="initial-setup"></a>初始设置
 
-若要创建您的应用程序的发行管道，你需要有源代码管理中的应用程序代码。 设置本地存储库并将其连接到团队项目的远程存储库。 请按照这些说明操作：
+若要为应用创建发布管道，需要具备源代码管理中的应用程序代码。 设置一个本地存储库，并将其连接到团队项目中的远程存储库。 请按照以下说明执行操作：
 
--   [使用 Git 和 Visual Studio 共享你的代码](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)或
+-   [使用 Git 和 Visual Studio 分享代码](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs)或
 
--   [与 TFVC 和 Visual Studio 共享你的代码](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+-   [使用 TFVC 和 Visual Studio 分享代码](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
-创建 Azure 应用程序服务，将在其中部署您的应用程序。 通过在 Azure 门户上转到应用程序服务边栏选项卡中创建 Web 应用。 单击 + 添加，选择 Web 应用程序模板、 单击创建和提供的名称和其他详细信息。 Web 应用程序可从 {name}.azurewebsites.net 处进行访问。
+创建要在其中部署应用程序的 Azure 应用服务。 转至 Azure 门户上的“应用服务”选项卡，创建一个 Web 应用。 单击“+添加”，选择 Web 应用模板，单击“创建”并提供名称或其他详细信息。 该 Web 应用可通过 {name}.azurewebsites.net 进行访问。
 
 ![AzureWebApp](./media/image10-2.png)
 
-**图 10-2。** 在 Azure 门户中创建新的 Azure App Service Web 应用。
+**图 10-2.** 在 Azure 门户中创建新的 Azure 应用服务 Web 应用。
 
-CI 生成过程将执行的自动的生成新代码时提交到项目的源控件存储库。 这使你的代码将生成的即时反馈 （和，理想情况下，通过自动的测试），可能被部署。 此 CI 生成将生成 web 部署包项目并将其发布供使用 CD 过程。
+无论新代码何时提交至项目的源代码管理存储库，CI 生成过程均会执行自动生成。 由此你可获得即时反馈，知悉代码已生成（且理想情况下可通过自动测试），并且或许可进行部署。 此 CI 生成将生成一个 Web 部署包项目，并将其发布，以供 CD 进程使用。
 
 [定义 CI 生成过程](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
 
-请务必启用持续集成，以便系统才将在你的团队中有人在提交新代码时对生成进行排队。 测试生成并验证它是否生成 web 部署包作为其项目之一。
+请务必启用持续集成，从而使得无论何时团队成员提交新代码，系统均可将生成排队。 测试该生成，并验证其是否生成 Web 部署包作为其中一个项目。
 
-如果生成成功，CD 过程将将 CI 生成的结果，部署到 Azure web 应用。 若要配置这种情况，你可以创建和配置*版本*，这会将它们部署到你的 Azure 应用程序服务。
+生成成功后，CD 过程会将 CI 生成结果部署到 Azure Web 应用。 如需对其配置，请创建并配置一个 Release（它将部署到 Azure 应用服务）。
 
 [定义 CD 发布过程](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
 
-CI/CD 管道配置后，只需对你的 web 应用进行更新并将它们提交到源代码管理，让他们部署。
+配置 CI/CD 管道后，即可更新 Web 应用，并将更新提交至源代码管理以进行部署。
 
-### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>有关开发 Azure 托管的 ASP.NET Core 应用程序的工作流
+### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>开发 Azure 托管型 ASP.NET Core 应用程序的工作流
 
-配置你的 Azure 帐户和你的 CI/CD 过程后，开发 Azure 托管的 ASP.NET Core 应用程序非常简单。 以下是你通常会生成一个图 10-3 中所示，在 Azure App Service 中为 Web 应用，托管的 ASP.NET Core 应用时的基本步骤。
+配置 Azure 帐户和 CI/CD 过程后，即可轻松开发 Azure 托管的 ASP.NET Core 应用程序。 构建 ASP.NET Core 应用并将其托管在 Azure 应用服务作为 Web 应用时，通常会采用以下基本步骤，如图 10-3 所示。
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
-**图 10-3。** 用于构建应用的 ASP.NET Core 和在 Azure 中承载它们的分步工作流
+**图 10-3.** 构建 ASP.NET Core 应用以及将应用于托管于 Azure 的分步工作流
 
-#### <a name="step-1-local-dev-environment-inner-loop"></a>步骤 1。 本地开发环境内部循环
+#### <a name="step-1-local-dev-environment-inner-loop"></a>步骤 1. 本地开发环境内循环
 
-开发以部署到 Azure ASP.NET Core 应用程序是与否则开发你的应用程序没有什么不同。 使用本地开发环境，您很熟悉，无论是 Visual Studio 2017 或 dotnet CLI 和 Visual Studio Code 或首选的编辑器。 您可以编写代码、 运行和调试所做的更改，运行自动的测试，并使本地提交到源代码管理，直到你准备好将更改推送到共享的源控件存储库。
+开发要部署到 Azure 的 ASP.NET Core 应用程序与开发其他程序并无不同。 使用惯用的本地开发环境，无论是 Visual Studio 2017、dotnet CLI、Visual Studio Code 还是个人首选的编辑器。 在准备将更改推送到共享源代码存储库前，可以编写代码、运行并调试更改、运行自动测试以及本地提交到源代码管理。
 
-#### <a name="step-2-application-code-repository"></a>步骤 2。 应用程序代码存储库
+#### <a name="step-2-application-code-repository"></a>步骤 2. 应用程序代码存储库
 
-每当准备好与你的团队共享你的代码时，你应将所做的更改从本地源存储库推送到你的团队共享的源存储库。 如果你一直在自定义的分支中，此步骤通常涉及将你的代码合并到一个共享的分支 (可能通过的方式[拉取请求](https://docs.microsoft.com/vsts/git/pull-requests))。
+无论何时准备与团队共享代码，均应将更改从本地源存储库中推送到团队共享源存储库。 如果一直在自定义分支中工作，此步骤通常涉及将代码合并到共享分支中（或许通过[拉取请求](https://docs.microsoft.com/vsts/git/pull-requests)方式）。
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步骤 3。 生成服务器： 持续集成。 生成，测试包
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步骤 3. 生成服务器：持续集成。 生成、测试、打包
 
-对共享的应用程序代码存储库进行新的提交时，将在生成服务器上触发新的生成。 CI 过程的一部分，为此生成应完全编译应用程序并运行自动的测试，以确认所有内容按预期工作。 CI 过程的最终结果应准备好进行部署的 web 应用的打包的版本。
+向共享应用程序代码存储库进行新的提交时，生成服务器上会触发新的生成。 作为 CI 过程的一部分，该生成应充分编译应用程序，并运行自动测试以确定一切正常。 CI 过程的最终结果应是已可部署的打包版 Web 应用。
 
-#### <a name="step-4-build-server-continuous-delivery"></a>步骤 4。 生成服务器： 持续交付
+#### <a name="step-4-build-server-continuous-delivery"></a>步骤 4. 生成服务器：持续交付
 
-一次成功的生成，CD 过程将选取生成的生成项目。 这将包括 web 部署包。 生成服务器会将此包部署到 Azure App Service，将替换为新创建的一个现有的任何服务。 此步骤通常面向过渡环境，但某些应用程序直接部署到生产通过 CD 过程。
+生成成功后，CD 过程将选取产生的生成项目。 其中包括一个 Web 部署包。 生成服务器将此包部署到 Azure 应用服务，使用新创建的服务替换任何现有服务。 通常该步骤面向过渡环境，但是部分应用程序通过 CD 过程直接部署到生产。
 
-#### <a name="step-5-azure-app-service-web-app"></a>步骤 5。 Azure App Service。 Web 应用。
+#### <a name="step-5-azure-app-service-web-app"></a>步骤 5. Azure 应用服务。 Web 应用。
 
-部署后，ASP.NET Core 应用程序将在 Azure App Service Web 应用的上下文内运行。 此 Web 应用可以监视和进一步配置为使用 Azure 门户。
+部署后，ASP.NET Core 应用程序在 Azure 应用服务 Web 应用的上下文运行。 可使用 Azure 门户监视以及进一步配置该 Web 应用。
 
-#### <a name="step-6-production-monitoring-and-diagnostics"></a>步骤 6。 生产监视和诊断
+#### <a name="step-6-production-monitoring-and-diagnostics"></a>步骤 6. 生产监视和诊断
 
-在 Web 应用运行时，你可以监视应用程序的运行状况，并收集诊断和用户行为数据。 Application Insights 包含在 Visual Studio 中，并提供有关 ASP.NET 应用程序的自动检测。 它可以为您提供使用情况、 异常、 请求、 性能和日志的信息。
+该 Web 应用运行时，可监视该应用程序的运行状况，并收集诊断和用户行为数据。 Application Insights 包含于 Visual Studio 中，为 ASP.NET 应用提供自动检测。 它可提供有关使用情况、异常、请求、性能和日志的信息。
 
 ## <a name="references"></a>参考资料
 
-**生成和 ASP.NET Core 应用部署到 Azure**  
+**构建 ASP.NET Core 应用并将其部署到 Azure**  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
 
 
 >[!div class="step-by-step"]
-[Previous] (test-asp-net-core-mvc-apps.md) [Next] (azure-hosting-recommendations-for-asp-net-web-apps.md)
+[上一篇] (test-asp-net-core-mvc-apps.md) [下一篇] (azure-hosting-recommendations-for-asp-net-web-apps.md)

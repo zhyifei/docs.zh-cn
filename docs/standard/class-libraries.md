@@ -1,6 +1,6 @@
 ---
-title: ".NET 类库"
-description: "了解如何通过 .NET 类库，将实用功能组合为可供多个应用程序使用的模块。"
+title: .NET 类库
+description: 了解如何通过 .NET 类库，将实用功能组合为可供多个应用程序使用的模块。
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -13,11 +13,11 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="net-class-libraries"></a>.NET 类库
 
@@ -55,11 +55,16 @@ ms.lasthandoff: 12/23/2017
 
 下列平台支持 .NET Standard 库：
 
-*   .NET 核心
-*   ASP.NET Core
-*   .NET Framework 4.5+
-*   Windows 应用商店应用
-*   Windows Phone 8+
+* .NET 核心
+* .NET Framework
+* Mono
+* Xamarin.iOS、Xamarin.Mac、Xamarin.Android
+* 通用 Windows 平台 (UWP)
+* Windows
+* Windows Phone
+* Windows Phone Silverlight
+
+有关详细信息，请参阅 [.NET Standard](net-standard.md) 主题。
 
 ### <a name="mono-class-libraries"></a>Mono 类库
 

@@ -1,6 +1,6 @@
 ---
-title: "析构元组和其他类型"
-description: "了解如何析构元组和其他类型。"
+title: 析构元组和其他类型
+description: 了解如何析构元组和其他类型。
 keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms-author: ronpet
@@ -62,15 +62,15 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>使用弃元析构元组元素
 
-析构元组时，通常只需要关注某些元素的值。 从 C# 7 开始，便可利用 C# 对弃元的支持，弃元是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定弃元。 可弃元任意数量的值，且均由单个弃元 `_` 表示。
+析构元组时，通常只需要关注某些元素的值。 从 C# 7 开始，便可利用 C# 对弃元的支持，弃元是一种仅能写入的变量，且其值将被忽略。 在赋值中，通过下划线字符 (\_) 指定弃元。 可弃元任意数量的值，且均由单个弃元  `_` 表示。
 
-以下示例演示了对元组使用弃元时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为弃元处理。  
+以下示例演示了对元组使用弃元时的用法。 `QueryCityDataForYears` 方法返回一个 6 元组，包含城市名称、城市面积、一个年份、该年份的城市人口、另一个年份及该年份的城市人口。 该示例显示了两个年份之间人口的变化。 对于元组提供的数据，我们不关注城市面积，并在一开始就知道城市名称和两个日期。 因此，我们只关注存储在元组中的两个人口数量值，可将其余值作为弃元处理。    
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 ### <a name="deconstructing-user-defined-types"></a>析构用户定义类型
 
-非元组类型不提供对弃元的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct` 方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
+非元组类型不提供对弃元的内置支持。 但是，用户作为类、结构或接口的创建者，可通过实现一个或多个 `Deconstruct`方法来析构该类型的实例。 该方法返回 void，且要析构的每个值由方法签名中的 [out](language-reference/keywords/out-parameter-modifier.md) 参数指示。 例如，下面的 `Person` 类的 `Deconstruct` 方法返回名字、中间名和姓氏：
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 
@@ -109,5 +109,5 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
  
 ## <a name="see-also"></a>请参阅
-[弃元](discards.md)   
+[放弃](discards.md)   
 [元组](tuples.md)  
