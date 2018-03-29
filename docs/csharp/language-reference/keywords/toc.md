@@ -23,7 +23,6 @@
 #### [interface](interface.md)
 #### [object](object.md)
 #### [string](string.md)
-#### [内插字符串](interpolated-strings.md)
 ### [void](void.md)
 ### [var](var.md)
 ### [类型参考表](reference-tables-for-types.md)
