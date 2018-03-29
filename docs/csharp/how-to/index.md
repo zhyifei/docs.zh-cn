@@ -1,17 +1,17 @@
 ---
-title: "操作指南（C# 指南）"
-description: "快速提示及重点短代码示例集合"
+title: 操作指南（C# 指南）
+description: 快速提示及重点短代码示例集合
 author: billwagner
 ms.author: wiwagn
 ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: dfb90870233acbe3898e8863f060cd15dd22c3c7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-c"></a>操作指南 (C#)
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 03/12/2018
 
 字符串是用于显示或操作文本的基本数据类型。 这些文章介绍了字符串的常见处理方法。
 
-- [比较字符串](../programming-guide/strings/how-to-compare-strings.md)。
+- [比较字符串](compare-strings.md)。
 - [修改字符串内容](modify-string-contents.md)。
 - [确定字符串是否表示数字](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)。
 - [使用 `String.Split` 分隔字符串](parse-strings-using-split.md)。
