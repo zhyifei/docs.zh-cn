@@ -1,8 +1,9 @@
 ---
-title: "显式数值转换表（C# 参考）"
+title: 显式数值转换表（C# 参考）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - conversions [C#], explicit numeric
@@ -12,7 +13,7 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801

@@ -1,9 +1,10 @@
 ---
-title: "默认值表（C# 参考）"
+title: 默认值表（C# 参考）
 descripton: Learn what are the default values of value types returned by the default constructors.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - constructors [C#], return values
@@ -15,7 +16,7 @@ helpviewer_keywords:
 - constructors [C#], default constructor
 - types [C#], default constructor return values
 ms.assetid: 4af2c1df-9e3a-48c1-83ac-b192986fc5bc
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: d034c1daf495c50e299fec4c5bf399652dad08ce

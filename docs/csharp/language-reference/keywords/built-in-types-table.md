@@ -1,14 +1,15 @@
 ---
-title: "内置类型表（C# 参考）"
+title: 内置类型表（C# 参考）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: d9d1e4945526a862074e73e608185696328946be
