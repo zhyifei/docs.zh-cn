@@ -1,9 +1,9 @@
 ---
 layout: HubPage
 ms.topic: hub-page
-hide_bc: 
-title: ".NET 文档"
-description: "了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。"
+hide_bc: true
+title: .NET 文档
+description: 了解如何通过 C#、Visual Basic 和 F# 在任意平台上使用 .NET 创建各种应用程序。 浏览 API 引用、代码示例、教程以及其他内容。
 ms.custom: updateeachrelease
 ms.openlocfilehash: f3a044df40a5508f62b5b441965c4ce16e998428
 ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
