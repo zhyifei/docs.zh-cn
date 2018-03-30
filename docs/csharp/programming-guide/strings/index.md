@@ -1,5 +1,5 @@
 ---
-title: "字符串（C# 编程指南）"
+title: 字符串（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24b3db01047a9f9a47182e0e1ac105f69562c316
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>字符串（C# 编程指南）
 字符串是值为文本的 <xref:System.String> 类型对象。 文本在内部存储为 <xref:System.Char> 对象的依序只读集合。 在 C# 字符串末尾没有 null 终止字符；因此，一个 C# 字符串可以包含任何数量的嵌入的 null 字符 ('\0')。 字符串的 <xref:System.String.Length%2A> 属性表示其包含的 `Char` 对象数量，而非 Unicode 字符数。 若要访问字符串中的各个 Unicode 码位，请使用 <xref:System.Globalization.StringInfo> 对象。  
@@ -124,8 +124,7 @@ string s = String.Empty;
 |主题|描述|  
 |-----------|-----------------|  
 |[如何：修改字符串内容](../../how-to/modify-string-contents.md)|阐明转换字符串并修改字符串内容的方法。|  
-|[如何：串联多个字符串](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|阐明在编译时和运行时将多个字符串合并为一个字符串的方法。|  
-|[如何：比较字符串](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|演示如何执行字符串的序号比较。|  
+|[如何：比较字符串](../../how-to/compare-strings.md)|演示如何对字符串执行序号和特定于区域性的比较。|  
 |[如何：使用 String.Split 分析字符串](../../how-to/parse-strings-using-split.md)|包含一个代码示例，演示了如何使用 `String.Split` 方法来分析字符串。|  
 |[如何：搜索字符串](../../how-to/search-strings.md)|说明如何在字符串中使用搜索来搜索特定的文本或模式。|  
 |[如何：确定字符串是否表示数值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|演示如何安全地分析一个字符串，以查看其是否具有有效的数值。|  
