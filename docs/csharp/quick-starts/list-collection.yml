@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: "<span data-ttu-id=\"631b1-101\">C# 中的集合</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-101\">Collections in C#</span></span>"
+title: <span data-ttu-id="5d884-101">C# 中的集合</span><span class="sxs-lookup"><span data-stu-id="5d884-101">Collections in C#</span></span>
 metadata:
-  title: "“集合”交互教程 - C# 快速入门"
-  description: "在本教程中，读者将使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。"
+  title: “集合”交互教程 - C# 快速入门
+  description: 在本教程中，读者将使用浏览器通过交互方式了解 C#。 读者可以直接在浏览器中编写 C# 代码，并查看代码编译和运行结果。
   audience: Developer
   ms.topic: get-started-article
   ms.custom: mvc
@@ -11,30 +11,196 @@ metadata:
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 483b403b35eef4405b1c7debc52678aef19cb9b6
-  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+  ms.openlocfilehash: 08060fc95d94db91a429439e502a8f6dc2978c4d
+  ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 02/01/2018
+  ms.lasthandoff: 03/28/2018
 items:
 - durationInMinutes: 1
-  content: "<span data-ttu-id=\"631b1-105\">本快速入门教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C# 代码，并查看代码编译和运行结果。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-105\">This quickstart teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code.</span></span> <span data-ttu-id=\"631b1-106\">具体包含一系列课程，介绍了如何创建、修改和浏览集合和数组。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-106\">It contains a series of lessons that create, modify and explore collections and arrays.</span></span>\n"
-- title: "<span data-ttu-id=\"631b1-107\">创建列表</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-107\">Create lists</span></span>"
+  content: >
+    <span data-ttu-id="5d884-105">本快速入门教程通过交互方式介绍了 C#，读者可以使用浏览器编写 C# 代码，并查看代码编译和运行结果。</span><span class="sxs-lookup"><span data-stu-id="5d884-105">This quickstart teaches you C# interactively, using your browser to write C# code and see the results of compiling and running your code.</span></span> <span data-ttu-id="5d884-106">具体包含一系列课程，介绍了如何创建、修改和浏览集合和数组。</span><span class="sxs-lookup"><span data-stu-id="5d884-106">It contains a series of lessons that create, modify and explore collections and arrays.</span></span>
+- title: <span data-ttu-id="5d884-107">创建列表</span><span class="sxs-lookup"><span data-stu-id="5d884-107">Create lists</span></span>
   durationInMinutes: 2
-  content: "<span data-ttu-id=\"631b1-108\">在交互式窗口中，运行以下代码。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-108\">Run the following code in the interactive window.</span></span> <span data-ttu-id=\"631b1-109\">为此，请在交互式窗口中键入以下代码块（将“<name>”替换为自己的名称），再单击“运行”按钮：</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-109\">To do that, type the following code block in the interactive window (replace \"<name>\" with your name) and click the **Run** button:</span></span>\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n<span data-ttu-id=\"631b1-110\">刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-110\">You've just created a list of strings, added three names to that list, and printed out the names in all CAPS.</span></span> <span data-ttu-id=\"631b1-111\">循环访问整个列表需要用到，在前面的快速入门课程中学到的概念。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-111\">You're using concepts that you've learned in earlier quickstarts to loop through the list.</span></span>\n\n<span data-ttu-id=\"631b1-112\">用于显示名称的代码使用内插字符串。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-112\">The code to display names makes use of **interpolated strings**.</span></span>  <span data-ttu-id=\"631b1-113\">如果 `$` 字符前面有 `string`，可以在字符串声明中嵌入 C# 代码。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-113\">When you precede a `string` with the `$` character, you can embed C# code in the string declaration.</span></span> <span data-ttu-id=\"631b1-114\">实际字符串使用自己生成的值替换该 C# 代码。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-114\">The actual string replaces that C# code with the value it generates.</span></span> <span data-ttu-id=\"631b1-115\">在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-115\">In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A> method.</span></span>\n\n<span data-ttu-id=\"631b1-116\">接下来将进一步探索。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-116\">Let's keep exploring.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"631b1-117\">此联机编码体验处于预览模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-117\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"631b1-118\">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-118\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
-- title: "<span data-ttu-id=\"631b1-119\">修改列表内容</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-119\">Modify list contents</span></span>"
+  content: >
+    <span data-ttu-id="5d884-108">在交互式窗口中，运行以下代码。</span><span class="sxs-lookup"><span data-stu-id="5d884-108">Run the following code in the interactive window.</span></span> <span data-ttu-id="5d884-109">为此，请在交互式窗口中键入以下代码块（将“<name>”替换为自己的名称），再单击“运行”按钮：</span><span class="sxs-lookup"><span data-stu-id="5d884-109">To do that, type the following code block in the interactive window (replace "<name>" with your name) and click the **Run** button:</span></span>
+
+
+    ```csharp
+
+    var names = new List<string> { "<name>", "Ana", "Felipe" };
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    <span data-ttu-id="5d884-110">刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。</span><span class="sxs-lookup"><span data-stu-id="5d884-110">You've just created a list of strings, added three names to that list, and printed out the names in all CAPS.</span></span> <span data-ttu-id="5d884-111">循环访问整个列表需要用到，在前面的快速入门课程中学到的概念。</span><span class="sxs-lookup"><span data-stu-id="5d884-111">You're using concepts that you've learned in earlier quickstarts to loop through the list.</span></span>
+
+
+    <span data-ttu-id="5d884-112">用于显示名称的代码使用[字符串内插](../language-reference/tokens/interpolated.md)功能。</span><span class="sxs-lookup"><span data-stu-id="5d884-112">The code to display names makes use of the [string interpolation](../language-reference/tokens/interpolated.md) feature.</span></span> <span data-ttu-id="5d884-113">如果 `string` 前面有 `$`符号，可以在字符串声明中嵌入 C# 代码。</span><span class="sxs-lookup"><span data-stu-id="5d884-113">When you precede a `string` with the `$` character, you can embed C# code in the string declaration.</span></span> <span data-ttu-id="5d884-114">实际字符串使用自己生成的值替换该 C# 代码。</span><span class="sxs-lookup"><span data-stu-id="5d884-114">The actual string replaces that C# code with the value it generates.</span></span> <span data-ttu-id="5d884-115">在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="5d884-115">In this example, it replaces the `{name.ToUpper()}` with each name, converted to capital letters, because you called the <xref:System.String.ToUpper%2A> method.</span></span>
+
+
+    <span data-ttu-id="5d884-116">接下来将进一步探索。</span><span class="sxs-lookup"><span data-stu-id="5d884-116">Let's keep exploring.</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="5d884-117">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="5d884-117">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5d884-118">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="5d884-118">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5d884-119">修改列表内容</span><span class="sxs-lookup"><span data-stu-id="5d884-119">Modify list contents</span></span>
   durationInMinutes: 3
-  content: "<span data-ttu-id=\"631b1-120\">创建的集合使用 <xref:System.Collections.Generic.List%601> 类型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-120\">The collection you created uses the <xref:System.Collections.Generic.List%601> type.</span></span> <span data-ttu-id=\"631b1-121\">此类型存储一系列元素。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-121\">This type stores sequences of elements.</span></span> <span data-ttu-id=\"631b1-122\">元素类型是在尖括号内指定。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-122\">You specify the type of the elements between the angle brackets.</span></span>\n\n<span data-ttu-id=\"631b1-123\"><xref:System.Collections.Generic.List%601> 类型的一个重要方面是，既可以扩大，也可以收缩，方便用户添加或删除元素。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-123\">One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements.</span></span> <span data-ttu-id=\"631b1-124\">在已编写的代码下方添加以下代码：</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-124\">Add the following code below the code you've already written:</span></span>\n\n```csharp\nConsole.WriteLine();\nnames.Add(\"Maria\");\nnames.Add(\"Bill\");\nnames.Remove(\"Ana\");\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n<span data-ttu-id=\"631b1-125\">又向列表的末尾添加了两个名称。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-125\">You've added two more names to the end of the list.</span></span> <span data-ttu-id=\"631b1-126\">同时，也删除了一个名称。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-126\">You've also removed one as well.</span></span>\n\n<span data-ttu-id=\"631b1-127\">借助 <xref:System.Collections.Generic.List%601>，还可以按索引引用各项。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-127\">The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well.</span></span> <span data-ttu-id=\"631b1-128\">使用 `[` 和 `]` 令牌访问这些项。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-128\">You access items using the `[` and `]` tokens.</span></span> <span data-ttu-id=\"631b1-129\">在已编写的代码下方添加以下代码，再试运行看看：</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-129\">Add the following code below what you've already written and try it:</span></span>\n\n```csharp\nConsole.WriteLine($\"My name is {names[0]}.\");\nConsole.WriteLine($\"I've added {names[2]} and {names[3]} to the list.\");\n```\n\n<span data-ttu-id=\"631b1-130\">不得访问超出列表末尾的项。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-130\">You're not allowed to access past the end of the list.</span></span> <span data-ttu-id=\"631b1-131\">可以使用 <xref:System.Collections.Generic.List%601.Count%2A> 属性确定列表长度。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-131\">You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property.</span></span> <span data-ttu-id=\"631b1-132\">添加以下代码，试运行看看：</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-132\">Add the following code to try it:</span></span>\n\n```csharp\nConsole.WriteLine($\"The list has {names.Count} people in it\");\n```\n\n<span data-ttu-id=\"631b1-133\">再次单击“运行”，看看结果如何。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-133\">Click **Run** again to see the results.</span></span> <span data-ttu-id=\"631b1-134\">在 C# 中，索引是从 0 开始编制，因此最大有效索引是用列表项数减 1 计算得出。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-134\">In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"631b1-135\">此联机编码体验处于预览模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-135\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"631b1-136\">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-136\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
-- title: "<span data-ttu-id=\"631b1-137\">搜索列表并进行排序</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-137\">Search and sort lists</span></span>"
+  content: >
+    <span data-ttu-id="5d884-120">创建的集合使用 <xref:System.Collections.Generic.List%601> 类型。</span><span class="sxs-lookup"><span data-stu-id="5d884-120">The collection you created uses the <xref:System.Collections.Generic.List%601> type.</span></span> <span data-ttu-id="5d884-121">此类型存储一系列元素。</span><span class="sxs-lookup"><span data-stu-id="5d884-121">This type stores sequences of elements.</span></span> <span data-ttu-id="5d884-122">元素类型是在尖括号内指定。</span><span class="sxs-lookup"><span data-stu-id="5d884-122">You specify the type of the elements between the angle brackets.</span></span>
+
+
+    <span data-ttu-id="5d884-123"><xref:System.Collections.Generic.List%601> 类型的一个重要方面是，既可以扩大，也可以收缩，方便用户添加或删除元素。</span><span class="sxs-lookup"><span data-stu-id="5d884-123">One important aspect of this <xref:System.Collections.Generic.List%601> type is that it can grow or shrink, enabling you to add or remove elements.</span></span> <span data-ttu-id="5d884-124">在已编写的代码下方添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="5d884-124">Add the following code below the code you've already written:</span></span>
+
+
+    ```csharp
+
+    Console.WriteLine();
+
+    names.Add("Maria");
+
+    names.Add("Bill");
+
+    names.Remove("Ana");
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    <span data-ttu-id="5d884-125">又向列表的末尾添加了两个名称。</span><span class="sxs-lookup"><span data-stu-id="5d884-125">You've added two more names to the end of the list.</span></span> <span data-ttu-id="5d884-126">同时，也删除了一个名称。</span><span class="sxs-lookup"><span data-stu-id="5d884-126">You've also removed one as well.</span></span>
+
+
+    <span data-ttu-id="5d884-127">借助 <xref:System.Collections.Generic.List%601>，还可以按索引引用各项。</span><span class="sxs-lookup"><span data-stu-id="5d884-127">The <xref:System.Collections.Generic.List%601> enables you to reference individual items by **index** as well.</span></span> <span data-ttu-id="5d884-128">使用 `[` 和 `]` 令牌访问这些项。</span><span class="sxs-lookup"><span data-stu-id="5d884-128">You access items using the `[` and `]` tokens.</span></span> <span data-ttu-id="5d884-129">在已编写的代码下方添加以下代码，再试运行看看：</span><span class="sxs-lookup"><span data-stu-id="5d884-129">Add the following code below what you've already written and try it:</span></span>
+
+
+    ```csharp
+
+    Console.WriteLine($"My name is {names[0]}.");
+
+    Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
+
+    ```
+
+
+    <span data-ttu-id="5d884-130">不得访问超出列表末尾的项。</span><span class="sxs-lookup"><span data-stu-id="5d884-130">You're not allowed to access past the end of the list.</span></span> <span data-ttu-id="5d884-131">可以使用 <xref:System.Collections.Generic.List%601.Count%2A> 属性确定列表长度。</span><span class="sxs-lookup"><span data-stu-id="5d884-131">You can check how long the list is using the <xref:System.Collections.Generic.List%601.Count%2A> property.</span></span> <span data-ttu-id="5d884-132">添加以下代码，试运行看看：</span><span class="sxs-lookup"><span data-stu-id="5d884-132">Add the following code to try it:</span></span>
+
+
+    ```csharp
+
+    Console.WriteLine($"The list has {names.Count} people in it");
+
+    ```
+
+
+    <span data-ttu-id="5d884-133">再次单击“运行”，看看结果如何。</span><span class="sxs-lookup"><span data-stu-id="5d884-133">Click **Run** again to see the results.</span></span> <span data-ttu-id="5d884-134">在 C# 中，索引是从 0 开始编制，因此最大有效索引是用列表项数减 1 计算得出。</span><span class="sxs-lookup"><span data-stu-id="5d884-134">In C#, indices start at 0, so the largest valid index is one less than the number of items in the list.</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="5d884-135">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="5d884-135">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5d884-136">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="5d884-136">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5d884-137">搜索列表并进行排序</span><span class="sxs-lookup"><span data-stu-id="5d884-137">Search and sort lists</span></span>
   durationInMinutes: 5
-  content: "<span data-ttu-id=\"631b1-138\">我们的示例使用的列表较小，但大家的应用程序创建的列表通常可能会包含更多元素，有时可能会包含数以千计的元素。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-138\">Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands.</span></span> <span data-ttu-id=\"631b1-139\">若要在更大的集合中查找元素，需要在列表中搜索不同的项。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-139\">To find elements in these larger collections, you need to search the list for different items.</span></span> <span data-ttu-id=\"631b1-140\"><xref:System.Collections.Generic.List%601.IndexOf%2A> 方法可搜索项，并返回此项的索引。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-140\">The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item.</span></span> <span data-ttu-id=\"631b1-141\">试试此方法，看看它的运行机制如何。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-141\">Try this to see how it works.</span></span>  <span data-ttu-id=\"631b1-142\">在当前已编写的代码下方添加以下代码：</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-142\">Add the following code below what you've written so far:</span></span>\n\n```csharp\nvar index = names.IndexOf(\"Felipe\");\nif (index != -1)\n  Console.WriteLine($\"The name {names[index]} is at index {index}\");\n\nvar notFound = names.IndexOf(\"Not Found\");\n  Console.WriteLine($\"When an item is not found, IndexOf returns {notFound}\");\n```\n\n<span data-ttu-id=\"631b1-143\">可能无法确定列表是否包含某项，因此，应始终检查 <xref:System.Collections.Generic.List%601.IndexOf%2A> 返回的索引。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-143\">You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span></span> <span data-ttu-id=\"631b1-144\">如果索引为 -1，表明找不到相应项。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-144\">If it is -1, the item was not found.</span></span>\n\n<span data-ttu-id=\"631b1-145\">还可以对列表中的项进行排序。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-145\">The items in your list can be sorted as well.</span></span> <span data-ttu-id=\"631b1-146\"><xref:System.Collections.Generic.List%601.Sort%2A> 方法按正常顺序（按字母顺序，如果是字符串的话）对列表中的所有项进行排序。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-146\">The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings).</span></span> <span data-ttu-id=\"631b1-147\">添加以下代码，再试运行看看：</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-147\">Add this code and run again:</span></span>\n\n```csharp\nnames.Sort();\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n> [!NOTE]\n> <span data-ttu-id=\"631b1-148\">此联机编码体验处于预览模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-148\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"631b1-149\">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-149\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
-- title: "<span data-ttu-id=\"631b1-150\">其他类型的列表</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-150\">Lists of other types</span></span>"
+  content: >
+    <span data-ttu-id="5d884-138">我们的示例使用的列表较小，但大家的应用程序创建的列表通常可能会包含更多元素，有时可能会包含数以千计的元素。</span><span class="sxs-lookup"><span data-stu-id="5d884-138">Our samples use relatively small lists, but your applications may often create lists with many more elements, sometimes numbering in the thousands.</span></span> <span data-ttu-id="5d884-139">若要在更大的集合中查找元素，需要在列表中搜索不同的项。</span><span class="sxs-lookup"><span data-stu-id="5d884-139">To find elements in these larger collections, you need to search the list for different items.</span></span> <span data-ttu-id="5d884-140"><xref:System.Collections.Generic.List%601.IndexOf%2A> 方法可搜索项，并返回此项的索引。</span><span class="sxs-lookup"><span data-stu-id="5d884-140">The <xref:System.Collections.Generic.List%601.IndexOf%2A> method searches for an item and returns the index of the item.</span></span> <span data-ttu-id="5d884-141">试试此方法，看看它的运行机制如何。</span><span class="sxs-lookup"><span data-stu-id="5d884-141">Try this to see how it works.</span></span>  <span data-ttu-id="5d884-142">在当前已编写的代码下方添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="5d884-142">Add the following code below what you've written so far:</span></span>
+
+
+    ```csharp
+
+    var index = names.IndexOf("Felipe");
+
+    if (index != -1)
+      Console.WriteLine($"The name {names[index]} is at index {index}");
+
+    var notFound = names.IndexOf("Not Found");
+      Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+    ```
+
+
+    <span data-ttu-id="5d884-143">可能无法确定列表是否包含某项，因此，应始终检查 <xref:System.Collections.Generic.List%601.IndexOf%2A> 返回的索引。</span><span class="sxs-lookup"><span data-stu-id="5d884-143">You may not know if an item is in the list, so you should always check the index returned by <xref:System.Collections.Generic.List%601.IndexOf%2A>.</span></span> <span data-ttu-id="5d884-144">如果索引为 -1，表明找不到相应项。</span><span class="sxs-lookup"><span data-stu-id="5d884-144">If it is -1, the item was not found.</span></span>
+
+
+    <span data-ttu-id="5d884-145">还可以对列表中的项进行排序。</span><span class="sxs-lookup"><span data-stu-id="5d884-145">The items in your list can be sorted as well.</span></span> <span data-ttu-id="5d884-146"><xref:System.Collections.Generic.List%601.Sort%2A> 方法按正常顺序（按字母顺序，如果是字符串的话）对列表中的所有项进行排序。</span><span class="sxs-lookup"><span data-stu-id="5d884-146">The <xref:System.Collections.Generic.List%601.Sort%2A> method sorts all the items in the list in their normal order (alphabetically in the case of strings).</span></span> <span data-ttu-id="5d884-147">添加以下代码，再试运行看看：</span><span class="sxs-lookup"><span data-stu-id="5d884-147">Add this code and run again:</span></span>
+
+
+    ```csharp
+
+    names.Sort();
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="5d884-148">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="5d884-148">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5d884-149">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="5d884-149">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5d884-150">其他类型的列表</span><span class="sxs-lookup"><span data-stu-id="5d884-150">Lists of other types</span></span>
   durationInMinutes: 5
-  content: "<span data-ttu-id=\"631b1-151\">到目前为止，大家一直在列表中使用 `string` 类型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-151\">You've been using the `string` type in lists so far.</span></span> <span data-ttu-id=\"631b1-152\">接下来，将让 <xref:System.Collections.Generic.List%601> 使用其他类型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-152\">Let's make a <xref:System.Collections.Generic.List%601> using a different type.</span></span> <span data-ttu-id=\"631b1-153\">那就生成一组数字吧。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-153\">Let's build a set of numbers.</span></span> <span data-ttu-id=\"631b1-154\">删除当前编写的代码，再将它替换为以下代码：</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-154\">Delete the code you wrote so far, and replace it with this:</span></span>\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n```\n\n<span data-ttu-id=\"631b1-155\">这会创建一个整数列表，并将头两个整数设置为值 1。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-155\">That creates a list of integers, and sets the first two integers to the value 1.</span></span> <span data-ttu-id=\"631b1-156\">这些是斐波那契数列（一系列数字）的头两个值。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-156\">These are the first two values of a *Fibonacci Sequence*, a sequence of numbers.</span></span> <span data-ttu-id=\"631b1-157\">斐波那契数列中的每个数字都是前两个数字之和。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-157\">Each next Fibonacci number is found by taking the sum of the previous two numbers.</span></span> <span data-ttu-id=\"631b1-158\">添加以下代码：</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-158\">Add this code:</span></span>\n\n```csharp\nvar previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\nvar previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\nfibonacciNumbers.Add(previous + previous2);\n\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n<span data-ttu-id=\"631b1-159\">按“运行”，看看结果如何；</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-159\">Press **Run** to see the results;</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"631b1-160\">此联机编码体验处于预览模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-160\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"631b1-161\">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-161\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
-- title: "<span data-ttu-id=\"631b1-162\">挑战</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-162\">Challenge</span></span>"
+  content: >
+    <span data-ttu-id="5d884-151">到目前为止，大家一直在列表中使用 `string` 类型。</span><span class="sxs-lookup"><span data-stu-id="5d884-151">You've been using the `string` type in lists so far.</span></span> <span data-ttu-id="5d884-152">接下来，将让 <xref:System.Collections.Generic.List%601> 使用其他类型。</span><span class="sxs-lookup"><span data-stu-id="5d884-152">Let's make a <xref:System.Collections.Generic.List%601> using a different type.</span></span> <span data-ttu-id="5d884-153">那就生成一组数字吧。</span><span class="sxs-lookup"><span data-stu-id="5d884-153">Let's build a set of numbers.</span></span> <span data-ttu-id="5d884-154">删除当前编写的代码，再将它替换为以下代码：</span><span class="sxs-lookup"><span data-stu-id="5d884-154">Delete the code you wrote so far, and replace it with this:</span></span>
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+    ```
+
+
+    <span data-ttu-id="5d884-155">这会创建一个整数列表，并将头两个整数设置为值 1。</span><span class="sxs-lookup"><span data-stu-id="5d884-155">That creates a list of integers, and sets the first two integers to the value 1.</span></span> <span data-ttu-id="5d884-156">这些是斐波那契数列（一系列数字）的头两个值。</span><span class="sxs-lookup"><span data-stu-id="5d884-156">These are the first two values of a *Fibonacci Sequence*, a sequence of numbers.</span></span> <span data-ttu-id="5d884-157">斐波那契数列中的每个数字都是前两个数字之和。</span><span class="sxs-lookup"><span data-stu-id="5d884-157">Each next Fibonacci number is found by taking the sum of the previous two numbers.</span></span> <span data-ttu-id="5d884-158">添加以下代码：</span><span class="sxs-lookup"><span data-stu-id="5d884-158">Add this code:</span></span>
+
+
+    ```csharp
+
+    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+
+    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+
+    fibonacciNumbers.Add(previous + previous2);
+
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    <span data-ttu-id="5d884-159">按“运行”，看看结果如何；</span><span class="sxs-lookup"><span data-stu-id="5d884-159">Press **Run** to see the results;</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="5d884-160">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="5d884-160">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5d884-161">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="5d884-161">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5d884-162">挑战</span><span class="sxs-lookup"><span data-stu-id="5d884-162">Challenge</span></span>
   durationInMinutes: 10
-  content: "<span data-ttu-id=\"631b1-163\">看看能不能将本课程中的一些概念与前面的课程融会贯通。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-163\">See if you can put together some of the concepts from this and earlier lessons.</span></span> <span data-ttu-id=\"631b1-164\">使用斐波那契数列，扩展当前生成的程序。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-164\">Expand on what you've built so far with Fibonacci Numbers.</span></span> <span data-ttu-id=\"631b1-165\">试着编写代码，生成此序列中的前 20 个数字。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-165\">Try and write the code to generate the first 20 numbers in the sequence.</span></span> <span data-ttu-id=\"631b1-166\">（作为提示，第 20 个斐波纳契数是 6765。）</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-166\">(As a hint, the 20th Fibonacci number is 6765.)</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"631b1-167\">此联机编码体验处于预览模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-167\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"631b1-168\">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-168\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
-- title: "<span data-ttu-id=\"631b1-169\">完成挑战</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-169\">Complete challenge</span></span>"
+  content: >
+    <span data-ttu-id="5d884-163">看看能不能将本课程中的一些概念与前面的课程融会贯通。</span><span class="sxs-lookup"><span data-stu-id="5d884-163">See if you can put together some of the concepts from this and earlier lessons.</span></span> <span data-ttu-id="5d884-164">使用斐波那契数列，扩展当前生成的程序。</span><span class="sxs-lookup"><span data-stu-id="5d884-164">Expand on what you've built so far with Fibonacci Numbers.</span></span> <span data-ttu-id="5d884-165">试着编写代码，生成此序列中的前 20 个数字。</span><span class="sxs-lookup"><span data-stu-id="5d884-165">Try and write the code to generate the first 20 numbers in the sequence.</span></span> <span data-ttu-id="5d884-166">（作为提示，第 20 个斐波纳契数是 6765。）</span><span class="sxs-lookup"><span data-stu-id="5d884-166">(As a hint, the 20th Fibonacci number is 6765.)</span></span>
+
+
+    > [!NOTE]
+
+    > <span data-ttu-id="5d884-167">此联机编码体验处于预览模式。</span><span class="sxs-lookup"><span data-stu-id="5d884-167">This online coding experience is in preview mode.</span></span> <span data-ttu-id="5d884-168">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class="sxs-lookup"><span data-stu-id="5d884-168">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+- title: <span data-ttu-id="5d884-169">完成挑战</span><span class="sxs-lookup"><span data-stu-id="5d884-169">Complete challenge</span></span>
   durationInMinutes: 3
-  content: "<span data-ttu-id=\"631b1-170\">最后是否生成如下代码？</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-170\">Did you come up with something like this?</span></span>\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n<span data-ttu-id=\"631b1-171\">在循环的每次迭代中，取此列表中的最后两个整数进行求和，并将计算出的总和值添加到列表中。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-171\">With each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list.</span></span> <span data-ttu-id=\"631b1-172\">循环会一直重复运行到列表中有 20 个项为止。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-172\">The loop repeats until you've added 20 items to the list.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"631b1-173\">此联机编码体验处于预览模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-173\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"631b1-174\">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-174\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
-- content: "<span data-ttu-id=\"631b1-175\">已完成“列表”快速入门教程。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-175\">You've completed the list quickstart.</span></span> <span data-ttu-id=\"631b1-176\">这是快速入门交互教程系列中的最后一个教程。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-176\">This quickstart is the final interactive quickstart.</span></span> <span data-ttu-id=\"631b1-177\">你可继续在自己的开发环境中学习这些教程。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-177\">You can continue these quickstarts on your own development environment.</span></span> <span data-ttu-id=\"631b1-178\">请先了解[本地开发](local-environment.md)基础知识，再选择一个快速入门教程。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-178\">Learn the basics of [local development](local-environment.md) and then pick a quickstart.</span></span> <span data-ttu-id=\"631b1-179\">可以再次尝试本练习，也可以直接学习下一个快速入门教程，亦可以重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)快速入门教程。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-179\">You can try this same exercise, move directly to the next quickstart, or start again at with the [numbers in C#](numbers-in-csharp-local.md) quickstart.</span></span>\n\n<span data-ttu-id=\"631b1-180\">若要详细了解如何使用 `List` 类型，可以参阅有关[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主题。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-180\">You can learn more about working with the `List` type in the [.NET Guide](../../standard/index.md) topic on [collections](../../standard/collections/index.md).</span></span> <span data-ttu-id=\"631b1-181\">还可以了解其他许多集合类型。</span><span class=\"sxs-lookup\"><span data-stu-id=\"631b1-181\">You'll also learn about many other collection types.</span></span>\0"
+  content: "<span data-ttu-id=\"5d884-170\">最后是否生成如下代码？</span><span class=\"sxs-lookup\"><span data-stu-id=\"5d884-170\">Did you come up with something like this?</span></span>\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\n<span data-ttu-id=\"5d884-171\">在循环的每次迭代中，取此列表中的最后两个整数进行求和，并将计算出的总和值添加到列表中。</span><span class=\"sxs-lookup\"><span data-stu-id=\"5d884-171\">With each iteration of the loop, you're taking the last two integers in the list, summing them, and adding that value to the list.</span></span> <span data-ttu-id=\"5d884-172\">循环会一直重复运行到列表中有 20 个项为止。</span><span class=\"sxs-lookup\"><span data-stu-id=\"5d884-172\">The loop repeats until you've added 20 items to the list.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"5d884-173\">此联机编码体验处于预览模式。</span><span class=\"sxs-lookup\"><span data-stu-id=\"5d884-173\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"5d884-174\">如果遇到问题，请[在 dotnet/try 存储库上](https://github.com/dotnet/try/issues)进行报告。</span><span class=\"sxs-lookup\"><span data-stu-id=\"5d884-174\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
+- content: >-
+    <span data-ttu-id="5d884-175">已完成“列表”快速入门教程。</span><span class="sxs-lookup"><span data-stu-id="5d884-175">You've completed the list quickstart.</span></span> <span data-ttu-id="5d884-176">这是快速入门交互教程系列中的最后一个教程。</span><span class="sxs-lookup"><span data-stu-id="5d884-176">This quickstart is the final interactive quickstart.</span></span> <span data-ttu-id="5d884-177">你可继续在自己的开发环境中学习这些教程。</span><span class="sxs-lookup"><span data-stu-id="5d884-177">You can continue these quickstarts on your own development environment.</span></span> <span data-ttu-id="5d884-178">请先了解[本地开发](local-environment.md)基础知识，再选择一个快速入门教程。</span><span class="sxs-lookup"><span data-stu-id="5d884-178">Learn the basics of [local development](local-environment.md) and then pick a quickstart.</span></span> <span data-ttu-id="5d884-179">可以再次尝试本练习，也可以直接学习下一个快速入门教程，亦可以重新开始学习 [C# 中的数字](numbers-in-csharp-local.md)快速入门教程。</span><span class="sxs-lookup"><span data-stu-id="5d884-179">You can try this same exercise, move directly to the next quickstart, or start again at with the [numbers in C#](numbers-in-csharp-local.md) quickstart.</span></span>
+
+
+    <span data-ttu-id="5d884-180">若要详细了解如何使用 `List` 类型，可以参阅有关[集合](../../standard/collections/index.md)的 [.NET 指南](../../standard/index.md)主题。</span><span class="sxs-lookup"><span data-stu-id="5d884-180">You can learn more about working with the `List` type in the [.NET Guide](../../standard/index.md) topic on [collections](../../standard/collections/index.md).</span></span> <span data-ttu-id="5d884-181">还可以了解其他许多集合类型。</span><span class="sxs-lookup"><span data-stu-id="5d884-181">You'll also learn about many other collection types.</span></span>
