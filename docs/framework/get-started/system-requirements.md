@@ -1,6 +1,6 @@
 ---
-title: ".NET Framework 系统要求"
-description: "了解安装 .NET Framework 4.5 及更高版本对硬件、操作系统和软件的要求。"
+title: .NET Framework 系统要求
+description: 了解安装 .NET Framework 4.5 及更高版本对硬件、操作系统和软件的要求。
 ms.custom: updateeachrelease
 ms.date: 02/02/2018
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: e0b6faf42f0fa47f6104454440033a6272efb224
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -35,13 +35,7 @@ ms.lasthandoff: 02/09/2018
 
 允许你开发 .NET Framework 的应用的开发环境具有单独的一套需求。
 
-> [!IMPORTANT]
-> 从 .NET Framework 4 开始，所有 .NET Framework 版本都是就地更新的，因此，在系统中只能存在一个 4.x 版本。
-> 此外，某些版本的 Windows 操作系统上预装了特定版本的 .NET Framework。 这表示：
->
-> * 如果在计算机上已安装了更高的版本，则无法安装以前的 4.x 版本。
-> * 如果操作系统预安装了特定的 .NET 版本，则无法在同一计算机上安装以前的 4.x 版本。
-> * 如果你安装更高版本，则无需先卸载以前的版本。
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 有关下载信息和链接，请参阅[安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。
 

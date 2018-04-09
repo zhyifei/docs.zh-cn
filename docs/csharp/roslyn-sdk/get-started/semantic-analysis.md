@@ -1,6 +1,6 @@
 ---
-title: "语义分析入门"
-description: "本教程概述如何使用.NET 编译器 SDK 进行语义分析。"
+title: 语义分析入门
+description: 本教程概述如何使用.NET 编译器 SDK 进行语义分析。
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/06/2018
@@ -8,17 +8,21 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>语义分析入门
 
 本教程假定你熟悉语法 API。 [语法分析入门](syntax-analysis.md)一文提供了详细介绍。
 
 在本教程中，你将了解“符号”和“绑定 API”。 这些 API 提供关于程序语义含义的信息。 它们帮助你就程序中的符号所代表的类型进行问答。
+
+需要安装 .NET Compiler Platform SDK：
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>了解编译和符号
 
@@ -31,9 +35,6 @@ ms.lasthandoff: 03/12/2018
 ## <a name="querying-symbols"></a>查询符号
 
 在本教程中，你会再次看到“Hello World”程序。 这次你将在该程序中查询符号，以理解这些符号所代表的类型。 在命名空间中查询类型，并学习如何查找类型上可用的方法。
-
-> [!IMPORTANT]
-> 下列示例需要安装 .NET 编译器 SDK 作为 Visual Studio 2017 的一部分。 你可以找到 .NET 编译器 SDK，它是列在 Visual Studio 扩展开发工作负荷下的最后一个可选组件。 安装此组件时，不会安装模板。
 
 可以在[我们的 GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart)中看到此示例的已完成代码。
 

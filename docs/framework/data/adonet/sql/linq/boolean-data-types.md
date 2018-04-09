@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-caps.latest.revision: ''
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/23/2018
 |[Or 运算符](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; Operator](~/docs/csharp/language-reference/operators/or-operator.md)|  
 |[OrElse 运算符](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124;&#124; Operator](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
 |[Xor 运算符](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[^ 运算符](~/docs/csharp/language-reference/operators/xor-operator.md)|  
-|[Not 运算符](~/docs/visual-basic/language-reference/operators/not-operator.md)|[!运算符](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
+|[Not 运算符](~/docs/visual-basic/language-reference/operators/not-operator.md)|[运算符!](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

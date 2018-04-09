@@ -1,12 +1,12 @@
 ---
-title: "复合格式设置"
-ms.custom: 
+title: 复合格式设置
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 
+caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="composite-formatting"></a>复合格式设置
-.NET Framework 复合格式设置功能使用对象列表和复合格式字符串作为输入。 复合格式字符串由固定文本和索引占位符混和组成，其中索引占位符称为格式项，对应于列表中的对象。 格式设置操作产生的结果字符串由原始固定文本和列表中对象的字符串表示形式混和组成。  
+.NET 复合格式设置功能使用对象列表和复合格式字符串作为输入。 复合格式字符串由固定文本和索引占位符混和组成，其中索引占位符称为格式项，对应于列表中的对象。 格式设置操作产生的结果字符串由原始固定文本和列表中对象的字符串表示形式混和组成。  
   
  复合格式设置功能受诸如以下方法的支持：  
   
@@ -149,7 +149,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]
  [!code-vb[Formatting.Composite#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#3)]  
   
- 假定当前日期是五月的星期四，那么在美国英语区域性中上述示例中的两个字符串的值都是 `Thursday May`。  
+ 假定当前日期是五月的星期四，那么在美国英语区域性中上述示例中的两个字符串的值都是 `Thursday May`英语区域性。  
   
  <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 提供与 <xref:System.String.Format%2A?displayProperty=nameWithType> 相同的功能。 这两种方法的唯一差异是 <xref:System.String.Format%2A?displayProperty=nameWithType> 将其结果作为字符串返回，而 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 将结果写入与 <xref:System.Console> 对象关联的输出流中。 下面的示例使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法将 `MyInt` 的值的格式设置为货币值。  
   
@@ -169,6 +169,8 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>请参阅  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [字符串内插 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
+ [字符串内插 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
  [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)  

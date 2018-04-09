@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>域事件：设计和实现
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/26/2018
 2.  在命令处理程序中接收命令。
     -   执行单个聚合的事务。
     -   （可选）引发副作用的域事件（例如 OrderStartedDomainEvent）。
-1.  处理域事件（在当前进程中），这些域事件会在多个聚合或应用程序操作中执行可变数量的副作用。 例如：
+1.  处理域事件（在当前进程中），这些域事件会在多个聚合或应用程序操作中执行可变数量的副作用。 例如:
     -   验证或创建购买者和付款方式。
     -   创建相关集成事件并将其发送到事件总线，以在微服务中传播状态，或触发外部操作，例如将电子邮件发送给购买者。
     -   处理其他副作用。
@@ -76,7 +76,7 @@ ms.lasthandoff: 03/26/2018
 
 **图 9-15**。 处理每个域的多个操作
 
-事件处理程序通常在应用程序层中，因为会将存储库或应用程序 API 等基础结构对象用于微服务行为。 在此意义上，事件处理程序类似于命令处理程序，因此两者都在应用程序层中。 两者的重要区别是命令应只处理一次。 域事件可能处理零或*n*超时，因为如果可由多个接收方或具有每个处理程序不同的用途的事件处理程序接收。
+事件处理程序通常在应用程序层中，因为会将存储库或应用程序 API 等基础结构对象用于微服务行为。 在此意义上，事件处理程序类似于命令处理程序，因此两者都在应用程序层中。 两者的重要区别是命令应只处理一次。 域事件可处理零或 n 次，因为它可被多个接收方或事件处理程序接收，针对每个处理程序具有不同用途。
 
 借助每个域事件的可变数量的处理程序，可添加更多域规则，而不会影响当前代码。 例如，如果要实现必须在事件发生后立即发生的以下业务规则，可能只需轻松地添加一些（或者甚至是一个）事件处理程序：
 
@@ -89,13 +89,13 @@ ms.lasthandoff: 03/26/2018
 ```csharp
 public class OrderStartedDomainEvent : INotification
 {
-    public string UserId { get; private set; }
-    public int CardTypeId { get; private set; }
-    public string CardNumber { get; private set; }
-    public string CardSecurityNumber { get; private set; }
-    public string CardHolderName { get; private set; }
-    public DateTime CardExpiration { get; private set; }
-    public Order Order { get; private set; }
+    public string UserId { get; }
+    public int CardTypeId { get; }
+    public string CardNumber { get; }
+    public string CardSecurityNumber { get; }
+    public string CardHolderName { get; }
+    public DateTime CardExpiration { get; }
+    public Order Order { get; }
 
     public OrderStartedDomainEvent(Order order,
                                    int cardTypeId, string cardNumber,
@@ -337,38 +337,38 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Greg Young.什么是域事件？**
-    [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+-   **Greg Young.What is a Domain Event?**
+    [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)（什么是域事件？）
 
--   **Jan Stenberg。域事件和最终一致性**
-    [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
+-   **Jan Stenberg.Domain Events and Eventual Consistency**
+    [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)（域事件和最终一致性）
 
--   **Jimmy Bogard。更好的域事件模式**
-    [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
+-   **Jimmy Bogard.A better domain events pattern**
+    [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)（更好的域事件模式）
 
--   **Vaughn Vernon。有效聚合设计第 II 部分： 进行聚合在一起工作**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_文章/Vernon\_2011年\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Vaughn Vernon.Effective Aggregate Design Part II: Making Aggregates Work Together**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)（高效聚合设计第二部：协同聚合）
 
--   **Jimmy Bogard。增强你的域： 域事件**
-    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
+-   **Jimmy Bogard.Strengthening your domain: Domain Events**
+    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>*（强化域：域事件）
 
--   **Tony Truong。域事件模式示例**
-    [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
+-   **Tony Truong.Domain Events Pattern Example**
+    [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)（域事件模式示例）
 
--   **Udi Dahan.如何创建完全封装域模型**
-    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+-   **Udi Dahan.How to create fully encapsulated Domain Models**
+    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)（如何创建完全封装的域模型）
 
--   **Udi Dahan.域事件 – 执行 2**
-    [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
+-   **Udi Dahan.Domain Events – Take 2**
+    [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)（域事件 – 搞定两个问题）
 
--   **Udi Dahan.域事件 – Salvation**
-    [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
+-   **Udi Dahan.Domain Events – Salvation**
+    [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)（域事件 – 救助）
 
--   **Jan Kronquist。不发布域的事件，将它们返回 ！**
-    [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+-   **Jan Kronquist。Don't publish Domain Events, return them!**
+    [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)（不要发布域事件，返回它们！）
 
--   **Cesar de la Torre。Domain Events vs.DDD 和微服务体系结构中的集成事件**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
+-   **Cesar de la Torre。Domain Events vs.Integration Events in DDD and microservices architectures**
+    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)（DDD 和微服务体系结构中的域事件和集成事件）
 
 
 >[!div class="step-by-step"]

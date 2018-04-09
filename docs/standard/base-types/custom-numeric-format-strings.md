@@ -1,12 +1,12 @@
 ---
-title: "自定义数字格式字符串"
-ms.custom: 
+title: 自定义数字格式字符串
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,23 +22,23 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: 
+caps.latest.revision: 54
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b33acfef1cabd3aa53fbe8947bd7adbe52d3b7a4
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="custom-numeric-format-strings"></a>自定义数字格式字符串
 你可以创建自定义数字格式字符串，这种字符串由一个或多个自定义数字说明符组成，用于定义设置数值数据格式的方式。 自定义数字格式字符串是任何不属于 [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字符串。  
   
- 所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支持自定义数字格式字符串，以供 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 类的一些 `Write` 和 `WriteLine` 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。  
+ 所有数字类型的 `ToString` 方法的某些重载支持自定义数字格式字符串。 例如，可将数字格式字符串提供给 <xref:System.Int32.ToString%28System.String%29> 类型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 方法和 <xref:System.Int32> 方法。 .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支持自定义数字格式字符串，以供 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 类的一些 `Write` 和 `WriteLine` 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。 [字符串内插](../../csharp/language-reference/tokens/interpolated.md)功能还支持自定义数字格式字符串。  
   
 > [!TIP]
 >  你可以下载 [格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。  

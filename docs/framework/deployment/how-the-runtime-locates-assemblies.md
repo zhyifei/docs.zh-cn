@@ -1,12 +1,13 @@
 ---
-title: "运行时如何定位程序集"
-ms.custom: 
+title: 运行时如何定位程序集
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 若要成功部署 .NET Framework 应用程序，必须了解公共语言运行时如何查找和绑定到构成应用程序的程序集。 默认情况下，运行时尝试与生成应用程序的程序集的准确版本绑定。 可通过配置文件设置重写此默认行为。  
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   名称，即被引用的程序集的名称。  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性，这是根位置下用户定义的子目录列表。 可使用应用程序域的 <xref:System.AppDomain.AppendPrivatePath%2A> 属性在应用程序配置文件和托管代码中指定此位置。 在托管代码中指定时，先探测托管代码 `privatePath` ，然后探测应用程序配置文件中指定的路径。  
+-   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 元素的 `privatePath` 特性，这是根位置下用户定义的子目录列表。 可使用应用程序域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 属性在应用程序配置文件和托管代码中指定此位置。 在托管代码中指定时，先探测托管代码 `privatePath` ，然后探测应用程序配置文件中指定的路径。  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>探测应用程序基和区域性目录  
  运行时始终先探测应用程序基，它可能是计算机的 URL 或应用程序根目录。 如果应用程序基中不存在引用的程序集且未提供区域性信息，则运行时将搜索具有程序集名称的所有子目录。 探测的目录包括：  
@@ -232,7 +234,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  运行时探测以下 URL：  
   
- http://www.code.microsoft.com/de/myAssembly.dl  
+ http://www.code.microsoft.com/de/myAssembly.dll  
   
  http://www.code.microsoft.com/de/myAssembly/myAssembly.dll  
   
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>探测的其他位置  
  还可使用当前的绑定上下文来确定程序集的位置。 在 COM 互操作方案中使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法时，最常使用此操作。 如果某个程序集使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法引用其他程序集，调用程序集的位置被视为可提示引用的程序集的位置。 如果找到匹配项，则加载此程序集。 如果未找到匹配项，则运行时将继续执行搜索语义，然后查询 Windows Installer 以提供程序集。 如果未提供与绑定请求匹配的程序集，则将引发异常。 如果引用了类型，则此异常为托管代码中的 <xref:System.TypeLoadException> 如果找不到正在加载的程序集，则为 <xref:System.IO.FileNotFoundException> 。  
   
- 例如，如果 Assembly1 引用 Assembly2 且 Assembly1 是从 http://www.code.microsoft.com/utils 下载的，则此位置被视为可提示 Assembly2.dll 的位置。 然后，运行时在 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中探测程序集。 如果在这两个位置中均未找到 Assembly2，则运行时将查询 Windows Installer。  
+ 例如，如果 Assembly1 引用 Assembly2 且 Assembly1 是从 http://www.code.microsoft.com/utils 下载的，则此位置被视为可提示 Assembly2.dll 的位置。 然后运行时会在 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中探测程序集。 如果在这两个位置中均未找到 Assembly2，则运行时将查询 Windows Installer。  
   
 ## <a name="see-also"></a>请参阅  
  [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

@@ -1,6 +1,6 @@
 ---
-title: "如何：串联多个字符串（C# 指南）"
-description: "可以在 C# 中通过多种方法串联字符串。 了解多种选项和进行不同选择的原因。"
+title: 如何：串联多个字符串（C# 指南）
+description: 可以在 C# 中通过多种方法串联字符串。 了解多种选项和进行不同选择的原因。
 ms.date: 02/20/2018
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-caps.latest.revision: 
+caps.latest.revision: 21
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 43b60455762ecd91a790ea5c7dae49d3348794aa
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 05f4932710870c26256659252fcef3814462d488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何：串联多个字符串（C# 指南）
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/28/2018
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
   
 
-若要连接字符串变量，可使用 `+` 或 `+=` 运算符、[字符串内插](../tutorials/string-interpolation.md)或 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Concat%2A?displayProperty=nameWithType>、<xref:System.String.Join%2A?displayProperty=nameWithType>、<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 方法。 `+` 运算符易于使用，有利于产生直观代码。 即使在一个语句中使用多个 `+` 运算符，字符串内容也仅会被复制一次。 以下代码演示使用 `+` 和 `+=` 运算符串联字符串的示例：
+若要连接字符串变量，可使用 `+` 或 `+=` 运算符、[字符串内插](../language-reference/tokens/interpolated.md)或 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Concat%2A?displayProperty=nameWithType>、<xref:System.String.Join%2A?displayProperty=nameWithType>、<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 方法。 `+` 运算符易于使用，有利于产生直观代码。 即使在一个语句中使用多个 `+` 运算符，字符串内容也仅会被复制一次。 以下代码演示使用 `+` 和 `+=` 运算符串联字符串的示例：
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 

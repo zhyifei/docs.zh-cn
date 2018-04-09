@@ -1,6 +1,6 @@
 ---
-title: "属性"
-description: "了解 C# 属性，包括验证功能、计算值、迟缓计算及属性更改通知。"
+title: 属性
+description: 了解 C# 属性，包括验证功能、计算值、迟缓计算及属性更改通知。
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>属性
 
@@ -76,7 +76,7 @@ public class Person
 }
 ```
 
-属性实现是单个表达式时，可为 getter 或 setter 使用表达式主体成员：
+属性实现是单个表达式时，可为 getter 或 setter 使用 expression-bodied 成员：
 
 ```csharp
 public class Person
@@ -149,7 +149,7 @@ public class Person
 
 现在，可以从任意代码访问 `FirstName` 属性，但只能从 `Person` 类中的其他代码对其赋值。
 
-可以向 set 和 get 访问器添加任何严格访问修饰符。 在单个访问器上放置的任何访问修饰符都必须比属性定义上的访问修饰符提供更严格的限制。 上述做法是合法的，因为 `FirstName` 属性为 `public`，但 set 访问器为 `private`。 不能声明具有 `public` 访问器的 `private` 属性。 也可以声明属性声明`protected`， `internal`， `protected internal`，`private protected`甚至`private`。   
+可以向 set 和 get 访问器添加任何严格访问修饰符。 在单个访问器上放置的任何访问修饰符都必须比属性定义上的访问修饰符提供更严格的限制。 上述做法是合法的，因为 `FirstName` 属性为 `public`，但 set 访问器为 `private`。 不能声明具有 `public` 访问器的 `private` 属性。 属性声明还可以声明为 `protected`、`internal`、`protected internal``private protected` 甚至 `private`。   
 
 在 `get` 访问器上放置限制性更强的修饰符也是合法的。 例如，可以有一个 `public` 属性，但将 `get` 访问器限制为 `private`。 不过实际情况下很少这么做。
 
@@ -193,9 +193,9 @@ public class Person
 }
 ```
 
-上面的示例使用*字符串内插*语法来创建全名的格式化字符串。
+上面的示例使用[字符串内插](../csharp/language-reference/tokens/interpolated.md)功能来创建全名的格式化字符串。
 
-也可以使用*表达式主体成员*，以更简洁的方式来创建 `FullName` 计算属性：
+也可以使用 expression bodied 成员，以更简洁的方式来创建 `FullName` 计算属性：
 
 ```csharp
 public class Person
@@ -208,7 +208,7 @@ public class Person
 }
 ```
  
-*表达式主体成员*使用 *lambda 表达式*语法来定义包含单个表达式的方法。 在这里，该表达式返回 person 对象的全名。
+expression-bodied 成员使用 lambda 表达式语法来定义包含单个表达式的方法。 在这里，该表达式返回 person 对象的全名。
 
 ### <a name="lazy-evaluated-properties"></a>迟缓计算的属性
 

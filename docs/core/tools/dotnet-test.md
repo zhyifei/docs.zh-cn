@@ -1,18 +1,19 @@
 ---
-title: "dotnet test 命令 - .NET Core CLI"
-description: "dotnet test 命令可用于在给定项目中执行单元测试。"
+title: dotnet test 命令 - .NET Core CLI
+description: dotnet test 命令可用于在给定项目中执行单元测试。
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 6102281c4daf149f31e65ef8360831fe9e0ef4f6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -42,9 +43,9 @@ dotnet test [-h|--help]
 
 ## <a name="description"></a>描述
 
-`dotnet test` 命令用于执行给定项目中的单元测试。 单元测试是控制台应用程序项目，它包含单元测试框架（如 MSTest、NUnit 或 xUnit）和该框架的 dotnet 测试运行程序上的依赖项。 单元测试打包为 NuGet 包并还原为该项目的普通依赖项。
+`dotnet test` 命令用于执行给定项目中的单元测试。 `dotnet test` 命令启动为项目指定的测试运行程序控制台应用程序。 测试运行程序执行为单元测试框架（例如 MSTest、NUnit 或 xUnit）定义的测试，并报告每个测试是否成功。 测试运行程序和单元测试库打包为 NuGet 包并还原为该项目的普通依赖项。
 
-测试项目还必须指定测试运行程序。 使用普通 `<PackageReference>` 元素指定，如下方示例项目文件所示：
+测试项目使用普通 `<PackageReference>` 元素指定测试运行程序，如下方示例项目文件所示：
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 

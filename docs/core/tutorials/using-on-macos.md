@@ -1,6 +1,6 @@
 ---
-title: "在 macOS 上入门 .NET Core"
-description: "本文档提供使用 Visual Studio Code 创建 .NET Core 解决方案的步骤和工作流概述。"
+title: 在 macOS 上入门 .NET Core
+description: 本文档提供使用 Visual Studio Code 创建 .NET Core 解决方案的步骤和工作流概述。
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.workload: dotnetcore
-ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上入门 .NET Core
 
@@ -102,7 +103,7 @@ namespace Library
 }
 ```
 
-`Thing` 类包含一个公共方法 `Get`，它返回两个数字的总和，实现方法是将总和转换为字符串，然后反序列化为一个整数。 这将使用大量现代 C# 功能，如[`using static` 指令](../../csharp/language-reference/keywords/using-static.md)、[表达式体成员](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)和[内插字符串](../../csharp/language-reference/keywords/interpolated-strings.md)。
+`Thing` 类包含一个公共方法 `Get`，它返回两个数字的总和，实现方法是将总和转换为字符串，然后反序列化为一个整数。 这将使用大量现代 C# 功能，如[`using static` 指令](../../csharp/language-reference/keywords/using-static.md)、[expression-bodied 成员](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)和[字符串内插](../../csharp/language-reference/tokens/interpolated.md)。
 
 使用 [`dotnet build`](../tools/dotnet-build.md) 命令生成库。 这将在 golden/library/bin/Debug/netstandard1.4 下生成一个 library.dll 文件：
 

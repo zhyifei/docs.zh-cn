@@ -1,6 +1,6 @@
 ---
-title: "使用 LINQ"
-description: "此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。"
+title: 使用 LINQ
+description: 此教程将介绍如何使用 LINQ 生成序列、编写用于 LINQ 查询的方法，以及如何区分及早计算和惰性计算。
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="working-with-linq"></a>使用 LINQ
 
@@ -313,7 +313,7 @@ public static void Main(string[] args)
 
 [!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
-此类型使用在构造函数中设置的*自动实现的只读属性*，而且无法修改。 它还使用新的*字符串内插*功能，简化了字符串输出格式设置。
+此类型使用在构造函数中设置的*自动实现的只读属性*，而且无法修改。 它还使用[字符串内插](../language-reference/tokens/interpolated.md)功能，简化了字符串输出格式设置。
 
 将生成初始的一副纸牌的查询更新为使用新类型：
 

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -81,7 +81,7 @@ Visual Basic 2017 新增支持下划线字符 (`_`) 作为数字分隔符。 从
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-若要使用下划线字符作为前导分隔符，必须将下面的元素添加到 Visual Basic 项目 (\*.vbproj) 文件：
+若要使用下划线字符作为前导分隔符，必须将以下元素添加到 Visual Basic 项目 (\*.vbproj) 文件中：
 
 ```xml
 <PropertyGroup>
@@ -99,11 +99,11 @@ Dim number As Integer = &H_C305_F860
 
 **其他编译器开关**  
 
-Visual Basic 命令行编译器现在支持[ **-refout** ](../reference/command-line-compiler/refout-compiler-option.md)和[ **-refonly** ](../reference/command-line-compiler/refonly-compiler-option.md)编译器选项来控制的输出引用程序集。 **-refout**定义引用程序集，输出目录和**-refonly**指定仅引用程序集将是编译的输出。
+Visual Basic 命令行编译器现在支持 [-refout](../reference/command-line-compiler/refout-compiler-option.md) 和 [-refonly](../reference/command-line-compiler/refonly-compiler-option.md) 编译器选项，可控制引用程序集的输出。 -refout 定义引用程序集的输出目录，-refonly 指定只通过编译输出一个引用程序集。
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[**元组**](../programming-guide/language-features/data-types/tuples.md)
+[**元祖**](../programming-guide/language-features/data-types/tuples.md)
 
 元组是一种轻量级数据结构，通常用于从单个方法调用返回多个值。 一般情况下，若要从方法返回多个值，必须执行以下操作之一：
 
@@ -154,7 +154,7 @@ Visual Basic 命令行编译器现在支持[ **-refout** ](../reference/command-
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  可以在错误消息中使用类型或成员的非限定字符串名，而无需对字符串进行硬编码。  这使代码可以在重构时保持正确。  此功能也可用于挂接“模型-视图-控制器”MVC 链接并触发属性更改事件。  
   
-[字符串内插](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[字符串内插](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  可以使用字符串内插表达式构造字符串。  内插字符串表达式类似于包含表达式的模板字符串。  与[复合格式设置](../../standard/base-types/composite-format.md)相比，内插字符串在自变量方面更易于理解。  
   
 [null 条件成员访问和索引](../../csharp/language-reference/operators/null-conditional-operators.md)  

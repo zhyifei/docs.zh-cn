@@ -1,6 +1,6 @@
 ---
-title: "“集合”教程 - C# 本地快速入门"
-description: "在本教程中通过探索列表集合了解 C#。"
+title: “集合”教程 - C# 本地快速入门
+description: 在本教程中通过探索列表集合了解 C#。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>C# 快速入门：集合
 
@@ -54,7 +54,7 @@ namespace list_quickstart
 
 刚刚创建了一个字符串列表，并向其中添加了三个名称，再输出了全部大写的名称。 循环访问整个列表需要用到，在前面的快速入门课程中学到的概念。
 
-用于显示名称的代码使用内插字符串。  如果 `$` 字符前面有 `string`，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
+用于显示名称的代码使用[字符串内插](../language-reference/tokens/interpolated.md)功能。  如果 `string` 前面有 `$`符号，可以在字符串声明中嵌入 C# 代码。 实际字符串使用自己生成的值替换该 C# 代码。 在此示例中，`{name.ToUpper()}` 被替换为各个转换为大写字母的名称，因为调用了 <xref:System.String.ToUpper%2A> 方法。
 
 接下来将进一步探索。
 

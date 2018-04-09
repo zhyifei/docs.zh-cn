@@ -1,7 +1,7 @@
 ---
-title: "查询对象的集合"
-description: "如何查询集合。"
-keywords: .NET, .NET Core, C#
+title: 查询对象的集合
+description: 如何查询集合。
+keywords: .NET、.NET Core、C#
 author: BillWagner
 manager: wpickett
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
-ms.openlocfilehash: 74d6c1f080c3e70867f5d2f074315bd1d8486bf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a62e5c6324d15376f1b42ad078eeb883b05ef14f
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="query-a-collection-of-objects"></a>查询对象的集合
 此示例演示如何对一系列 `Student` 对象执行简单查询。 每个 `Student` 对象均包含一些关于学生的基本信息和表示学生在四门考试中的分数的列表。  
@@ -31,4 +31,4 @@ ms.lasthandoff: 11/21/2017
 
 ## <a name="see-also"></a>请参阅  
  [LINQ 查询表达式](index.md)  
- [内插字符串](../language-reference/keywords/interpolated-strings.md)
+ [字符串内插](../language-reference/tokens/interpolated.md)

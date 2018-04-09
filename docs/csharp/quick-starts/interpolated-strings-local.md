@@ -1,6 +1,6 @@
 ---
-title: "“内插的字符串”教程 - C# 本地快速入门"
-description: "在“内插的字符串”本快速入门教程中，编写 C# 代码，将表达式结果添加到更大的字符串中。"
+title: “内插的字符串”教程 - C# 本地快速入门
+description: 在“内插的字符串”本快速入门教程中，编写 C# 代码，将表达式结果添加到更大的字符串中。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings"></a>内插字符串
 
@@ -166,5 +166,4 @@ Console.WriteLine($"{DateTime.Now,-20:d} Hour {DateTime.Now,-10:HH} {1063.342,15
     
 可以在自己的开发环境中继续学习[数组和集合](arrays-and-collections.md)快速入门教程。
 
-可在 C# 参考的[内插字符串](../language-reference/keywords/interpolated-strings.md)主题中了解有关使用内插字符串的详细信息。
-
+可在 C# 参考的[字符串内插](../language-reference/tokens/interpolated.md)主题中了解有关内插字符串的详细信息。

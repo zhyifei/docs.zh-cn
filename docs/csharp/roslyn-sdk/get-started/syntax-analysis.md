@@ -1,6 +1,6 @@
 ---
-title: "语法分析 (Roslyn API) 入门"
-description: "介绍如何遍历、查询及浏览语法树。"
+title: 语法分析 (Roslyn API) 入门
+description: 介绍如何遍历、查询及浏览语法树。
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/05/2018
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>语法分析入门
 
@@ -43,6 +43,10 @@ namespace HelloWorld
 
 该简介概述了使用语法 API 可以访问的信息类型。 语法 API 仅仅是描述你从 C# 中熟悉的代码结构的正式 API。 完整的功能包括关于设置代码格式（包括换行符、空格和缩进）的信息。 在人工程序员或编译者编写和读取代码时，你可以使用此信息完整表示代码。 使用此结构可以在深有意义的级别上与源代码进行交互。 它不再是文本字符串，而是代表 C# 程序结构的数据。
 
+若要开始，需要安装 .NET 编译器平台 SDK：
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>了解语法树
 
 将语法 API 用于 C# 代码结构的所有分析。 语法 API 公开分析程序、语法树和用于分析并构造语法树的实用程序。 这是搜索特定语法元素的代码或读取程序代码的方式。
@@ -67,9 +71,6 @@ SyntaxNode：蓝色 | SyntaxToken：绿色 | SyntaxTrivia：红色 ![C# 代码�
 ## <a name="traversing-trees"></a>遍历树
 
 你可通过两种方式检查语法树中的节点。 可以遍历该树以检查每个节点，也可以查询特定元素或节点。
-
-> [!IMPORTANT]
-> 下列示例需要安装 .NET Compiler Platform SDK 作为 Visual Studio 2017 的一部分。 你可以找到 .NET 编译器 SDK，它是列在 Visual Studio 扩展开发工作负荷下的最后一个可选组件。 安装此组件时，不会安装模板。
 
 ### <a name="manual-traversal"></a>手动遍历
 

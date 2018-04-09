@@ -1,7 +1,7 @@
 ---
-title: "什么是 C# 6-C# 指南中的新增功能"
-description: "了解 C# 版本 6 中的新增功能"
-keywords: ".NET、.NET Core"
+title: C# 6 中的新增功能 - C# 指南
+description: 了解 C# 版本 6 中的新增功能
+keywords: .NET, .NET Core
 author: BillWagner
 ms.date: 09/22/2016
 ms.topic: article
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 中的新增功能
 
@@ -56,7 +56,7 @@ C# 6.0 版本包含许多可提高开发人员工作效率的功能。 此版本
 
 但是，这种简单的语法限制了你可以使用自动属性支持的设计类型。 C# 6 改进了自动属性功能，以便用户可以在更多方案中使用它们。 无需频繁地求助于手动声明和操纵支持字段的更详细的语法。
 
-新的语法将介绍用于只读属性，和用于初始化自动属性后面的变量存储方案。
+新语法可处理适用于只读属性的方案以及初始化自动属性后的变量存储的方案。
 
 ### <a name="read-only-auto-properties"></a>只读自动属性
 
@@ -105,17 +105,17 @@ public class Student
 
 `Grades` 成员在声明它的位置处被初始化。 这样，就能更容易地仅执行一次初始化。 初始化是属性声明的一部分，可更轻松地将存储分配等同于 `Student` 对象的公用接口。
 
-属性初始值设定项此处只能使用于读/写属性，以及只读属性，如图所示。
+属性初始化表达式可与读/写属性以及只读属性一起使用，如下所示。
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
 ## <a name="expression-bodied-function-members"></a>Expression-bodied 函数成员
 
-我们编写的很多成员的主体只包含一条可以表示为表达式的语句。 可通过改为编写 expression-bodied 成员来简化该语法。 它适用于方法和只读属性。 例如，重写 `ToString()` 通常是理想之选：
+我们编写的很多成员的主体只包含一条可以表示为表达式的语句。 可通过改为编写 expression-bodied 成员来简化该语法。 这适用于方法和只读属性。 例如，重写 `ToString()` 通常是理想之选：
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-你还可以在只读属性以及使用表达式正文成员：
+还可以在只读属性中使用 expression-bodied 成员：
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
@@ -128,7 +128,7 @@ using static 增强功能可用于导入单个类的静态方法。 以前，`us
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
-现在，可以使用 <xref:System.Math> 类中的任何静态方法而不必限定 <xref:System.Math> 类。 <xref:System.Math> 类是此功能的一个很好的用例，因为它不包含任何实例方法。 还可以使用 `using static` 为具有静态和实例方法的类导入类的静态方法。 最有用的示例之一是<xref:System.String>:
+现在，可以使用 <xref:System.Math> 类中的任何静态方法而不必限定 <xref:System.Math> 类。 <xref:System.Math> 类是此功能的一个很好的用例，因为它不包含任何实例方法。 还可以使用 `using static` 为具有静态和实例方法的类导入类的静态方法。 最有用的示例之一是 <xref:System.String>：
 
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
@@ -215,11 +215,11 @@ C# 6 包含新语法，用于从格式字符串和表达式编写字符串，可
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-使用 C# 6，新的字符串内插功能可以在格式字符串中嵌入表达式。 只需在字符串前面加上 `$`：
+使用 C# 6，新的[字符串内插](../language-reference/tokens/interpolated.md)功能可以在格式字符串中嵌入表达式。 只需在字符串前面加上 `$`：
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-此初始示例使用替代表达式的变量表达式。 可以扩展此语法以使用任何表达式。 例如，可以在内插过程中计算学生的成绩平均值：
+此初始示例使用替代表达式的属性表达式。 可以扩展此语法以使用任何表达式。 例如，可以在内插过程中计算学生的成绩平均值：
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -227,7 +227,7 @@ C# 6 包含新语法，用于从格式字符串和表达式编写字符串，可
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
-上一行代码会将 `Grades.Average()` 的值格式设置为具有两位小数的浮点数。
+上一行代码将 `Grades.Average()` 的值格式设置为具有两位小数的浮点数。
 
 `:` 始终解释为要设置格式的表达式和格式字符串之间的分隔符。 当表达式以另一种方式（如条件运算符）使用 `:` 时，这可能会产生问题：
 
@@ -249,22 +249,17 @@ public string GetGradePointPercentages() =>
 
 ### <a name="string-interpolation-and-specific-cultures"></a>字符串内插和特定区域性
 
-前面部分中显示的所有示例将使用执行代码的计算机上的当前区域性和语言设置字符串格式。 通常，可能需要使用特定区域性设置生成的字符串的格式。
-从字符串内插生成的对象是可隐式转换为 <xref:System.String> 或 <xref:System.FormattableString> 的类型。
+前面部分中显示的所有示例使用执行代码的计算机上的当前区域性和语言设置字符串格式。 通常，可能需要使用特定区域性设置生成的字符串的格式。
+为此，请利用通过字符串内插生成的对象可以隐式转换为 <xref:System.FormattableString> 这一事实。
 
-<xref:System.FormattableString> 类型包含格式字符串，以及在将其转换为字符串之前计算参数的结果。 在设置字符串的格式时，可以使用 <xref:System.FormattableString> 的公共方法指定区域性。 例如，下面将使用德语作为语言和区域性生成一个字符串。 （它将使用“,”字符作为小数分隔符，使用“.”字符作为千位分隔符。）
+<xref:System.FormattableString> 实例包含格式字符串，以及在将其转换为字符串之前评估表达式的结果。 在设置字符串的格式时，可以使用 <xref:System.FormattableString> 的公共方法指定区域性。 例如，以下示例使用德国区域性生成字符串。 （它使用“,”字符作为小数分隔符，使用“.”字符作为千位分隔符。）
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> .NET Core 版本 1.0.1 中不支持上述示例。 仅在 .NET Framework 中受支持。
-
-一般情况下，字符串内插表达式将字符串作为其输出生成。 但是，如果希望更好地控制用于设置字符串格式的区域性，可以指定特定的输出。  如果这是你经常需要使用的功能，可以创建简便方法作为扩展方法，以便能够通过特定区域性轻松设置格式。
+有关详细信息，请参阅[字符串内插](../language-reference/tokens/interpolated.md)主题。
 
 ## <a name="exception-filters"></a>异常筛选器
 

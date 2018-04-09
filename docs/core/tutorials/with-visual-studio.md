@@ -1,7 +1,7 @@
 ---
-title: "使用 Visual Studio 2017 生成 .NET Core C# Hello World 应用程序"
-description: "了解如何使用 Visual Studio 2017 生成简单的 C# .NET Core 控制台应用程序。"
-keywords: ".NET Core, .NET Core 控制台应用程序, Visual Studio 2017"
+title: 使用 Visual Studio 2017 生成 .NET Core C# Hello World 应用程序
+description: 了解如何使用 Visual Studio 2017 生成简单的 C# .NET Core 控制台应用程序。
+keywords: .NET Core, .NET Core 控制台应用程序, Visual Studio 2017
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
@@ -12,11 +12,11 @@ ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 21b36bfa355bbea1b078c4bd29afdf5afeb61453
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 7042a7356fa1b65f7a152208dbfaa9ba27081a8d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 生成 C# .NET Core Hello World 应用程序
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/28/2018
 
    ![Visual Studio Program c-sharp 文件，含更新后 Main 方法](./media/with-visual-studio/codewindow.png)
 
-   此代码在控制台中显示“What is your name?”， 然后等待用户输入字符串并按 Enter 键。 它将此字符串存储到名为 `name` 的变量中。 它还会检索 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性的值（其中包含当前的本地时间），并将此值赋给 `date` 变量。 最后，使用[内插字符串](../../csharp/language-reference/keywords/interpolated-strings.md)在控制台窗口中显示这些值。
+   此代码在控制台中显示“What is your name?”， 然后等待用户输入字符串并按 Enter 键。 它将此字符串存储到名为 `name` 的变量中。 它还会检索 <xref:System.DateTime.Now?displayProperty=nameWithType> 属性的值（其中包含当前的本地时间），并将此值赋给 `date` 变量。 最后，使用[内插字符串](../../csharp/language-reference/tokens/interpolated.md)在控制台窗口中显示这些值。
 
 1. 依次选择**“生成”** > **“生成解决方案”**，编译此程序。
 

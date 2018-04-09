@@ -1,5 +1,5 @@
 ---
-title: "标准数字格式字符串"
+title: 标准数字格式字符串
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 标准数字格式字符串用于格式化通用数值类型。 标准数字格式字符串采用 `Axx` 的形式，其中：  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/23/2017
  
 - .NET [复合格式功能](../../../docs/standard/base-types/composite-formatting.md)，由 <xref:System.Console> 和 <xref:System.IO.StreamWriter> 类的一些 `Write` 和 `WriteLine` 方法、<xref:System.String.Format%2A?displayProperty=nameWithType> 方法以及 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法使用。 复合格式功能允许你将多个数据项的字符串表示形式包含在单个字符串中，以指定字段宽度，并在字段中对齐数字。 有关更多信息，请参见[复合格式设置](../../../docs/standard/base-types/composite-formatting.md)。  
 
-- C# 和 Visual Basic 中的[内插的字符串](../../csharp/language-reference/keywords/interpolated-strings.md)，与复合格式字符串相比，语法更简化。
+- C# 和 Visual Basic 中的[内插的字符串](../../csharp/language-reference/tokens/interpolated.md)，与复合格式字符串相比，语法更简化。
  
 > [!TIP]
 >  你可以下载 [格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。  
@@ -89,6 +89,8 @@ ms.lasthandoff: 12/23/2017
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   可以提供它作为内插字符串的内插表达式项中的 `formatString` 参数。 有关详细信息，请参阅 C# 参考中的[字符串内插](../../csharp/language-reference/tokens/interpolated.md)主题，或 Visual Basic 参考中的[内插字符串](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)主题。  
   
  以下各节提供有关每个标准数字格式字符串的详细信息。  
   

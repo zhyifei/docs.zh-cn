@@ -1,7 +1,7 @@
 ---
-title: "字符串内插 - C#"
-description: "了解 C# 6 中的字符串内插的工作方式"
-keywords: ".NET, .NET Core, C#, 字符串"
+title: 字符串内插 - C#
+description: 了解 C# 6 中的字符串内插的工作方式
+keywords: .NET, .NET Core, C#, 字符串
 author: mgroves
 ms.author: wiwagn
 ms.date: 03/06/2017
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# 中的字符串内插 #
 
@@ -122,4 +122,4 @@ Console.WriteLine(localizeMe);
 
 ## <a name="conclusion"></a>结束语 
 
-此教程介绍了如何使用 C# 6 的字符串内插功能。 它主要是简化了 `String.Format` 简单语句的编写，并在高级用途方面存在一些注意事项。 有关详细信息，请参阅[内插字符串](../../csharp//language-reference/keywords/interpolated-strings.md)主题。
+此教程介绍了如何使用 C# 6 的字符串内插功能。 它主要是简化了 `String.Format` 简单语句的编写，并在高级用途方面存在一些注意事项。 有关详细信息，请参阅[字符串内插](../../csharp//language-reference/tokens/interpolated.md)主题。
