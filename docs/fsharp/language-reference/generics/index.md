@@ -1,7 +1,7 @@
 ---
-title: "泛型 (F#)"
-description: "了解如何使用 F # 泛型函数和类型，从而使你能够编写代码，而无需重复代码可与不同的类型。"
-keywords: "visual f#, f#, 函数编程"
+title: 泛型 (F#)
+description: '了解如何使用 F # 泛型函数和类型，从而使你能够编写代码，而无需重复代码可与不同的类型。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

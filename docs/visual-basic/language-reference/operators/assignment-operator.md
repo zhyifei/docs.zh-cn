@@ -1,10 +1,11 @@
 ---
-title: "= 运算符 (Visual Basic)"
+title: = 运算符 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Assign
@@ -13,7 +14,7 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 230005640b2b494e5413b14ba13a7cb82ee9f22b
@@ -54,7 +55,7 @@ variableorproperty = value
   
 ## <a name="see-also"></a><span data-ttu-id="ffd4a-120">另请参阅</span><span class="sxs-lookup"><span data-stu-id="ffd4a-120">See Also</span></span>  
  [<span data-ttu-id="ffd4a-121">&= 运算符</span><span class="sxs-lookup"><span data-stu-id="ffd4a-121">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
- [<span data-ttu-id="ffd4a-122">*= 运算符</span><span class="sxs-lookup"><span data-stu-id="ffd4a-122">*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [<span data-ttu-id="ffd4a-122">\*= 运算符</span><span class="sxs-lookup"><span data-stu-id="ffd4a-122">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
  [<span data-ttu-id="ffd4a-123">+= 运算符</span><span class="sxs-lookup"><span data-stu-id="ffd4a-123">+= Operator</span></span>](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
  [<span data-ttu-id="ffd4a-124">-= 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffd4a-124">-= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
  [<span data-ttu-id="ffd4a-125">/ = 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ffd4a-125">/= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  

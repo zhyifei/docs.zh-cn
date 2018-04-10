@@ -1,7 +1,7 @@
 ---
-title: "F# Interactive (fsi.exe) 参考"
-description: "了解如何 F # Interactive (fsi.exe) 用于在控制台以交互方式运行 F # 代码或执行 F # 脚本。"
-keywords: "visual f#, f#, 函数编程"
+title: F# Interactive (fsi.exe) 参考
+description: '了解如何 F # Interactive (fsi.exe) 用于在控制台以交互方式运行 F # 代码或执行 F # 脚本。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

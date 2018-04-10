@@ -1,7 +1,7 @@
 ---
-title: "容器和 Docker 简介"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 容器和 Docker 简介"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 容器和 Docker 简介
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 容器和 Docker 简介
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

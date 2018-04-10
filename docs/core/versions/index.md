@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 版本控制"
-description: "了解 .NET Core 版本控制的工作原理。"
+title: .NET Core 版本控制
+description: 了解 .NET Core 版本控制的工作原理。
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018

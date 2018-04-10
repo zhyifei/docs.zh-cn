@@ -1,7 +1,7 @@
 ---
-title: "异常处理 (F#)"
-description: "了解在 F # 中处理的异常的基础知识和查找异常处理表达式和函数的链接。"
-keywords: "visual f#, f#, 函数编程"
+title: 异常处理 (F#)
+description: '了解在 F # 中处理的异常的基础知识和查找异常处理表达式和函数的链接。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

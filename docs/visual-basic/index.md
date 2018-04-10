@@ -1,6 +1,6 @@
 ---
 title: Visual Basic
-ms.date: 07/20/2015
+ms.date: 03/28/2018
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96c7c93056b11c08ccdfa48a0d78f2996c2d86d4
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 6a7a02ee91a9e80e9d4871a701f90052c0f63df6
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="visual-basic-guide"></a><span data-ttu-id="c26fb-102">Visual Basic 指南</span><span class="sxs-lookup"><span data-stu-id="c26fb-102">Visual Basic Guide</span></span>
+# <a name="visual-basic-guide"></a><span data-ttu-id="50651-102">Visual Basic 指南</span><span class="sxs-lookup"><span data-stu-id="50651-102">Visual Basic Guide</span></span>
 
-<span data-ttu-id="c26fb-103">Visual Basic 用于高效生成类型安全和面向对象的应用程序。</span><span class="sxs-lookup"><span data-stu-id="c26fb-103">Visual Basic is engineered for productively building type-safe and object-oriented applications.</span></span> <span data-ttu-id="c26fb-104">Visual Basic 使开发人员能够以 Windows、Web 和移动设备为目标。</span><span class="sxs-lookup"><span data-stu-id="c26fb-104">Visual Basic enables developers to target Windows, Web, and mobile devices.</span></span> <span data-ttu-id="c26fb-105">与所有面向 Microsoft .NET Framework 的语言一样，安全性和语言互操作性让使用 Visual Basic 编写的程序大大受益。</span><span class="sxs-lookup"><span data-stu-id="c26fb-105">As with all languages targeting the Microsoft .NET Framework, programs written in Visual Basic benefit from security and language interoperability.</span></span>  
+<span data-ttu-id="50651-103">Visual Basic 用于高效生成类型安全和面向对象的应用程序。</span><span class="sxs-lookup"><span data-stu-id="50651-103">Visual Basic is engineered for productively building type-safe and object-oriented applications.</span></span> <span data-ttu-id="50651-104">Visual Basic 使开发人员能够以 Windows、Web 和移动设备为目标。</span><span class="sxs-lookup"><span data-stu-id="50651-104">Visual Basic enables developers to target Windows, Web, and mobile devices.</span></span> <span data-ttu-id="50651-105">与所有面向 Microsoft .NET Framework 的语言一样，安全性和语言互操作性让使用 Visual Basic 编写的程序大大受益。</span><span class="sxs-lookup"><span data-stu-id="50651-105">As with all languages targeting the Microsoft .NET Framework, programs written in Visual Basic benefit from security and language interoperability.</span></span>  
   
- <span data-ttu-id="c26fb-106">这一代 Visual Basic 将延续传统，继续方便你快速轻松地创建 .NET Framework 应用程序。</span><span class="sxs-lookup"><span data-stu-id="c26fb-106">This generation of Visual Basic continues the tradition of giving you a fast and easy way to create .NET Framework-based applications.</span></span>  
+ <span data-ttu-id="50651-106">这一代 Visual Basic 将延续传统，继续方便你快速轻松地创建 .NET Framework 应用程序。</span><span class="sxs-lookup"><span data-stu-id="50651-106">This generation of Visual Basic continues the tradition of giving you a fast and easy way to create .NET Framework-based applications.</span></span>  
   
- <span data-ttu-id="c26fb-107">如果你尚无 Visual Basic，可以从 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 网站免费获取包含 Visual Basic 的 Visual Studio 版本。</span><span class="sxs-lookup"><span data-stu-id="c26fb-107">If you don't already have Visual Basic, you can acquire a version of Visual Studio that includes Visual Basic for free from the [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) site.</span></span>  
+ <span data-ttu-id="50651-107">如果你尚无 Visual Basic，可以从 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 网站免费获取包含 Visual Basic 的 Visual Studio 版本。</span><span class="sxs-lookup"><span data-stu-id="50651-107">If you don't already have Visual Basic, you can acquire a version of Visual Studio that includes Visual Basic for free from the [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) site.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c26fb-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="c26fb-108">In This Section</span></span>  
- [<span data-ttu-id="c26fb-109">入门</span><span class="sxs-lookup"><span data-stu-id="c26fb-109">Getting Started</span></span>](../visual-basic/getting-started/index.md)  
- <span data-ttu-id="c26fb-110">通过列出各产品版本中的新功能和可用内容，帮助用户开始工作。</span><span class="sxs-lookup"><span data-stu-id="c26fb-110">Helps you begin working by listing what is new and what is available in various editions of the product.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="50651-108">本节内容</span><span class="sxs-lookup"><span data-stu-id="50651-108">In This Section</span></span>  
+ [<span data-ttu-id="50651-109">入门</span><span class="sxs-lookup"><span data-stu-id="50651-109">Getting Started</span></span>](../visual-basic/getting-started/index.md)  
+ <span data-ttu-id="50651-110">通过列出各产品版本中的新功能和可用内容，帮助用户开始工作。</span><span class="sxs-lookup"><span data-stu-id="50651-110">Helps you begin working by listing what is new and what is available in various editions of the product.</span></span>  
    
- <span data-ttu-id="c26fb-111">[编程概念](../visual-basic/programming-guide/concepts/index.md) 介绍对 Visual Basic 程序员最有用的语言概念。</span><span class="sxs-lookup"><span data-stu-id="c26fb-111">[Programming Concepts](../visual-basic/programming-guide/concepts/index.md) Presents the language concepts that are most useful to Visual Basic programmers.</span></span>
+ <span data-ttu-id="50651-111">[编程概念](../visual-basic/programming-guide/concepts/index.md) 介绍对 Visual Basic 程序员最有用的语言概念。</span><span class="sxs-lookup"><span data-stu-id="50651-111">[Programming Concepts](../visual-basic/programming-guide/concepts/index.md) Presents the language concepts that are most useful to Visual Basic programmers.</span></span>
 
- [<span data-ttu-id="c26fb-112">程序结构和代码约定</span><span class="sxs-lookup"><span data-stu-id="c26fb-112">Program Structure and Code Conventions</span></span>](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- <span data-ttu-id="c26fb-113">收录了有关 Visual Basic 基本结构和代码约定（如命名约定、代码注释和 Visual Basic 限制）的文档。</span><span class="sxs-lookup"><span data-stu-id="c26fb-113">Contains documentation on the basic structure and code conventions of Visual Basic such as naming conventions, comments in code, and limitations within Visual Basic.</span></span>  
+ [<span data-ttu-id="50651-112">程序结构和代码约定</span><span class="sxs-lookup"><span data-stu-id="50651-112">Program Structure and Code Conventions</span></span>](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ <span data-ttu-id="50651-113">收录了有关 Visual Basic 基本结构和代码约定（如命名约定、代码注释和 Visual Basic 限制）的文档。</span><span class="sxs-lookup"><span data-stu-id="50651-113">Contains documentation on the basic structure and code conventions of Visual Basic such as naming conventions, comments in code, and limitations within Visual Basic.</span></span>  
   
- [<span data-ttu-id="c26fb-114">Visual Basic 语言功能</span><span class="sxs-lookup"><span data-stu-id="c26fb-114">Visual Basic Language Features</span></span>](../visual-basic/programming-guide/language-features/index.md)  
- <span data-ttu-id="c26fb-115">收录了主题链接，有助于你了解 Visual Basic 的重要功能（包括 LINQ 和 XML 文本）。</span><span class="sxs-lookup"><span data-stu-id="c26fb-115">Provides links to topics that introduce and discuss important features of Visual Basic, including LINQ and XML literals.</span></span>  
+ [<span data-ttu-id="50651-114">Visual Basic 语言功能</span><span class="sxs-lookup"><span data-stu-id="50651-114">Visual Basic Language Features</span></span>](../visual-basic/programming-guide/language-features/index.md)  
+ <span data-ttu-id="50651-115">收录了主题链接，有助于你了解 Visual Basic 的重要功能（包括 LINQ 和 XML 文本）。</span><span class="sxs-lookup"><span data-stu-id="50651-115">Provides links to topics that introduce and discuss important features of Visual Basic, including LINQ and XML literals.</span></span>  
    
- [<span data-ttu-id="c26fb-116">Visual Basic 参考</span><span class="sxs-lookup"><span data-stu-id="c26fb-116">Visual Basic Reference</span></span>](../visual-basic/reference/index.md)  
- <span data-ttu-id="c26fb-117">介绍了 Visual Basic 语言和编译器的相关信息。</span><span class="sxs-lookup"><span data-stu-id="c26fb-117">Contains the Visual Basic language and compiler information.</span></span>  
+ [<span data-ttu-id="50651-116">Visual Basic 参考</span><span class="sxs-lookup"><span data-stu-id="50651-116">Visual Basic Reference</span></span>](../visual-basic/reference/index.md)  
+ <span data-ttu-id="50651-117">介绍了 Visual Basic 语言和编译器的相关信息。</span><span class="sxs-lookup"><span data-stu-id="50651-117">Contains the Visual Basic language and compiler information.</span></span>  
 
- [<span data-ttu-id="c26fb-118">使用 Visual Basic 开发应用程序</span><span class="sxs-lookup"><span data-stu-id="c26fb-118">Developing Applications with Visual Basic</span></span>](../visual-basic/developing-apps/index.md)  
- <span data-ttu-id="c26fb-119">介绍了使用 Visual Basic 开发应用程序的各个方面，安全性、异常处理、调试和使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库。</span><span class="sxs-lookup"><span data-stu-id="c26fb-119">Discusses various aspects of development in Visual Basic, such as security, exception handling, and using the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class library.</span></span>
+ [<span data-ttu-id="50651-118">使用 Visual Basic 开发应用程序</span><span class="sxs-lookup"><span data-stu-id="50651-118">Developing Applications with Visual Basic</span></span>](../visual-basic/developing-apps/index.md)  
+ <span data-ttu-id="50651-119">介绍了使用 Visual Basic 开发应用程序的各个方面，安全性、异常处理、调试和使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库。</span><span class="sxs-lookup"><span data-stu-id="50651-119">Discusses various aspects of development in Visual Basic, such as security, exception handling, and using the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class library.</span></span>
 
- [<span data-ttu-id="c26fb-120">COM 互操作</span><span class="sxs-lookup"><span data-stu-id="c26fb-120">COM Interop</span></span>](../visual-basic/programming-guide/com-interop/index.md)  
- <span data-ttu-id="c26fb-121">阐明了与使用 Visual Basic 创建和使用组件对象模型 (COM) 对象相关联的互操作性问题。</span><span class="sxs-lookup"><span data-stu-id="c26fb-121">Explains the interoperability issues associated with creating and using component object model (COM) objects with Visual Basic.</span></span>  
+ [<span data-ttu-id="50651-120">COM 互操作</span><span class="sxs-lookup"><span data-stu-id="50651-120">COM Interop</span></span>](../visual-basic/programming-guide/com-interop/index.md)  
+ <span data-ttu-id="50651-121">阐明了与使用 Visual Basic 创建和使用组件对象模型 (COM) 对象相关联的互操作性问题。</span><span class="sxs-lookup"><span data-stu-id="50651-121">Explains the interoperability issues associated with creating and using component object model (COM) objects with Visual Basic.</span></span>  
   
- [<span data-ttu-id="c26fb-122">示例</span><span class="sxs-lookup"><span data-stu-id="c26fb-122">Samples</span></span>](../visual-basic/sample-applications.md)  
- <span data-ttu-id="c26fb-123">包含示例相关信息。</span><span class="sxs-lookup"><span data-stu-id="c26fb-123">Contains information about samples.</span></span>  
+ [<span data-ttu-id="50651-122">示例</span><span class="sxs-lookup"><span data-stu-id="50651-122">Samples</span></span>](../visual-basic/sample-applications.md)  
+ <span data-ttu-id="50651-123">包含示例相关信息。</span><span class="sxs-lookup"><span data-stu-id="50651-123">Contains information about samples.</span></span>  
   
- [<span data-ttu-id="c26fb-124">演练</span><span class="sxs-lookup"><span data-stu-id="c26fb-124">Walkthroughs</span></span>](../visual-basic/walkthroughs.md)  
- <span data-ttu-id="c26fb-125">提供常见方案的分步说明链接。</span><span class="sxs-lookup"><span data-stu-id="c26fb-125">Provides links to step-by-step instructions for common scenarios.</span></span>  
+ [<span data-ttu-id="50651-124">演练</span><span class="sxs-lookup"><span data-stu-id="50651-124">Walkthroughs</span></span>](../visual-basic/walkthroughs.md)  
+ <span data-ttu-id="50651-125">提供常见方案的分步说明链接。</span><span class="sxs-lookup"><span data-stu-id="50651-125">Provides links to step-by-step instructions for common scenarios.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="c26fb-126">相关章节</span><span class="sxs-lookup"><span data-stu-id="c26fb-126">Related Sections</span></span>  
- [<span data-ttu-id="c26fb-127">Visual Studio 开发入门</span><span class="sxs-lookup"><span data-stu-id="c26fb-127">Get Started Developing with Visual Studio</span></span>](/visualstudio/ide/get-started-developing-with-visual-studio)  
- <span data-ttu-id="c26fb-128">提供帮助你了解 Visual Studio 基本知识的链接。</span><span class="sxs-lookup"><span data-stu-id="c26fb-128">Provides links to topics that help you learn about the basics of Visual Studio.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="50651-126">相关章节</span><span class="sxs-lookup"><span data-stu-id="50651-126">Related Sections</span></span>  
+ [<span data-ttu-id="50651-127">Visual Studio 开发入门</span><span class="sxs-lookup"><span data-stu-id="50651-127">Get Started Developing with Visual Studio</span></span>](/visualstudio/ide/get-started-developing-with-visual-studio)  
+ <span data-ttu-id="50651-128">提供帮助你了解 Visual Studio 基本知识的链接。</span><span class="sxs-lookup"><span data-stu-id="50651-128">Provides links to topics that help you learn about the basics of Visual Studio.</span></span>  
   
- [<span data-ttu-id="c26fb-129">.NET Framework 类库</span><span class="sxs-lookup"><span data-stu-id="c26fb-129">.NET Framework Class Library</span></span>](http://go.microsoft.com/fwlink/?LinkID=227195)  
- <span data-ttu-id="c26fb-130">介绍由 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SKD 中包含的类、接口和值类型组成的库。</span><span class="sxs-lookup"><span data-stu-id="c26fb-130">Provides entry to the library of classes, interfaces, and value types that are included in the Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.</span></span>
+ [<span data-ttu-id="50651-129">.NET Framework 类库</span><span class="sxs-lookup"><span data-stu-id="50651-129">.NET Framework Class Library</span></span>](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ <span data-ttu-id="50651-130">介绍由 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SKD 中包含的类、接口和值类型组成的库。</span><span class="sxs-lookup"><span data-stu-id="50651-130">Provides entry to the library of classes, interfaces, and value types that are included in the Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.</span></span>

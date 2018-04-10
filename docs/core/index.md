@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 指南"
-description: ".NET Core 是一种用于创建 Windows、Linux 和 Mac 应用的模块式高性能的 .NET 实现。 了解 .NET Core 以开始使用。"
+title: .NET Core 指南
+description: .NET Core 是一种用于创建 Windows、Linux 和 Mac 应用的模块式高性能的 .NET 实现。 了解 .NET Core 以开始使用。
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,7 +9,8 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: de71e043533d7a7d3d7d3fd3af0a8530c0e145b6
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT

@@ -1,6 +1,6 @@
 ---
-title: "直接迁移现有应用 DevOps"
-description: "使用 Azure 云和 Windows 容器更新现有 .NET 应用程序。"
+title: 直接迁移现有应用 DevOps
+description: 使用 Azure 云和 Windows 容器更新现有 .NET 应用程序。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

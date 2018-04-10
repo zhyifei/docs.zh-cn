@@ -1,11 +1,13 @@
 ---
-title: "Visual Basic 中的数组"
-ms.custom: 
+title: Visual Basic 中的数组
+ms.custom: ''
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Array
+f1_keywords:
+- vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
@@ -173,7 +175,7 @@ Dim sales()() As Double = New Double(11)() {}
   
 ## <a name="array-size"></a><span data-ttu-id="dfa60-202">数组大小</span><span class="sxs-lookup"><span data-stu-id="dfa60-202">Array Size</span></span>  
 
- <span data-ttu-id="dfa60-203">数组的大小是数组所有维度的长度的产物。</span><span class="sxs-lookup"><span data-stu-id="dfa60-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="dfa60-204">它表示数组中当前所包含的元素总数。</span><span class="sxs-lookup"><span data-stu-id="dfa60-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="dfa60-205">例如，下面的示例声明每个维度中的四个元素的二维数组。</span><span class="sxs-lookup"><span data-stu-id="dfa60-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="dfa60-206">如示例输出所示，数组的大小为 16 (或 (3 + 1) * (3 + 1)。</span><span class="sxs-lookup"><span data-stu-id="dfa60-206">As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).</span></span>
+ <span data-ttu-id="dfa60-203">数组的大小是数组所有维度的长度的产物。</span><span class="sxs-lookup"><span data-stu-id="dfa60-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="dfa60-204">它表示数组中当前所包含的元素总数。</span><span class="sxs-lookup"><span data-stu-id="dfa60-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="dfa60-205">例如，下面的示例声明每个维度中的四个元素的二维数组。</span><span class="sxs-lookup"><span data-stu-id="dfa60-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="dfa60-206">如示例输出所示，数组的大小为 16 (或 (3 + 1) \* (3 + 1)。</span><span class="sxs-lookup"><span data-stu-id="dfa60-206">As the output from the example shows, the array's size is 16 (or (3 + 1) \* (3 + 1).</span></span>
 
  [!code-vb[array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]  
 

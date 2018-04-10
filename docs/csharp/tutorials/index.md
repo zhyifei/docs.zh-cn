@@ -1,6 +1,6 @@
 ---
-title: "C# 教程"
-description: "查看这些 C# 教程，了解生成 C# 程序的方式以及 C# 语言功能。"
+title: C# 教程
+description: 查看这些 C# 教程，了解生成 C# 程序的方式以及 C# 语言功能。
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn

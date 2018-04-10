@@ -1,7 +1,7 @@
 ---
-title: "C# 互动教程 - C# 快速入门"
-description: "通过浏览器了解 C#，并开始使用自己的开发环境"
-keywords: "C#, 入门, 课程, 交互式"
+title: C# 互动教程 - C# 快速入门
+description: 通过浏览器了解 C#，并开始使用自己的开发环境
+keywords: C#, 入门, 课程, 交互式
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/30/2018

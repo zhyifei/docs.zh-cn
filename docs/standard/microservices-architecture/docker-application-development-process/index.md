@@ -1,7 +1,7 @@
 ---
-title: "基于 Docker 的应用程序的开发流程"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 基于 Docker 的应用程序的开发流程"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 基于 Docker 的应用程序的开发流程
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 基于 Docker 的应用程序的开发流程
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017

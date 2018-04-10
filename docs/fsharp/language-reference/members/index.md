@@ -1,7 +1,7 @@
 ---
-title: "成员 (F#)"
-description: "了解在 F # 编程语言的对象成员。"
-keywords: "visual f#, f#, 函数编程"
+title: 成员 (F#)
+description: '了解在 F # 编程语言的对象成员。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

@@ -1,6 +1,6 @@
 ---
-title: "WMI 和性能计数器 （非托管 API 参考）"
-description: "总结了.NET Framework WMI 和性能计数器信息的非托管 API。"
+title: WMI 和性能计数器 （非托管 API 参考）
+description: 总结了.NET Framework WMI 和性能计数器信息的非托管 API。
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

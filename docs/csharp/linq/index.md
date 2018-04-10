@@ -1,6 +1,6 @@
 ---
-title: "语言集成查询 (LINQ)"
-description: "介绍了 C# 中的语言集成查询 (LINQ)"
+title: 语言集成查询 (LINQ)
+description: 介绍了 C# 中的语言集成查询 (LINQ)
 keywords: .NET, .NET Core, LINQ, C#
 author: BillWagner
 ms.author: wiwagn

@@ -1,7 +1,7 @@
 ---
-title: "函数 (F#)"
-description: "了解有关在 F # 和 F # 如何支持常见的函数编程构造函数。"
-keywords: "visual f#, f#, 函数编程"
+title: 函数 (F#)
+description: '了解有关在 F # 和 F # 如何支持常见的函数编程构造函数。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
