@@ -1,10 +1,8 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt;元素'
 ms.custom: ''
-ms.date: 01/08/2018
+ms.date: 03/28/2018
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
@@ -94,6 +91,7 @@ ms.lasthandoff: 03/26/2018
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|禁用恢复为默认值为 Tls12、 Tls11、 Tls SystemDefault TLS 版本。|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|禁用 SslStream TLS 服务器端发出警报。|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |控件是否[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer)序列化基于 ECMAScript V6 和 V8 标准一些控制字符。 有关详细信息，请参阅[缓解：使用 DataContractJsonSerializer 对控制字符进行序列化](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET Framework 4.7 |
+|`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|控件是否<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>支持多个调整或仅一次调整用于时区。 如果`true`，它使用<xref:System.TimeZoneInfo>类型进行序列化和反序列化的日期和时间数据; 否则，它使用<xref:System.TimeZone>类型，不支持多个调整规则。|.NET Framework 4.6.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控件是否<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType>构造函数将设置新的对象的<xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType>具有现有对象引用的属性。 有关详细信息，请参阅[缓解：ClaimsIdentity 构造函数](~/docs/framework/migration-guide/mitigation-claimsidentity-constructor.md)。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控件是否尝试重新使用<xref:System.Security.Cryptography.AesCryptoServiceProvider>解密器引发<xref:System.Security.Cryptography.CryptographicException>。 有关详细信息，请参阅 AesCryptoServiceProvider 解密器提供了可重用 transform](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控件是否的值[CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)属性是[IntPtr](xref:System.IntPtr) ，表示一个窗口的内存位置处理，或者它是否是窗口句柄 (HWND)。 有关详细信息，请参阅[缓解：应向 CspParameters.ParentWindowHandle 分配 HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md)。 |.NET Framework 4.7|   
@@ -109,6 +107,7 @@ ms.lasthandoff: 03/26/2018
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|控制是否在服务启动时引发的异常会传播到调用方<xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>方法。|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |确定 Windows Presentation Foundation 是否适用旧算法 (`true`) 或新算法 (`false`) 在分配的空间\*的列。 有关详细信息，请参阅[缓解：网格控件向 *-列分配空间](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md)。 |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|是否选择器或选项卡控件始终引发所选内容之前更新其所选的值属性的值的控件更改事件。|.NET Framework 4.7.1|
+|`Switch.System.Windows.DoNotScaleForDpiChanges`|确定在每个系统上是否发生 DPI 更改 (值为`false`) 或每个监视器基础 (值为`true`)。|.NET Framework 4.6.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|允许自定义代码之外 opts<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType>实现安全地筛选消息，而不引发异常时<xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType>调用方法。 有关详细信息，请参阅[缓解：自定义 IMessageFilter.PreFilterMessage 实现](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md)。|.NET Framework 4.6.1|  
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|确定是否一个可选`WM_POINTER`-在 WPF 应用程序中启用基于的触摸/触笔堆栈。 有关详细信息，请参阅[缓解： 基于指针的触摸和触笔支持](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|控制是否旧式[NullReferenceException](xref:System.NullReferenceException)引发而不是更具体地说就是指示异常原因的异常 (如[DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException)或[FileNotFoundException](xref:System.IO.FileNotFoundException)。 它旨在取决于处理的代码用于[NullReferenceException](xref:System.NullReferenceException)。 | .NET Framework 4.7 |

@@ -1,6 +1,6 @@
 ---
-title: "C# 指南"
-description: "了解 C# 指南如何帮助新的开发人员或经验丰富的专家深入了解 C#。"
+title: C# 指南
+description: 了解 C# 指南如何帮助新的开发人员或经验丰富的专家深入了解 C#。
 author: BillWagner
 ms.date: 01/30/2018
 ms.topic: article

@@ -1,12 +1,13 @@
 ---
-title: "&lt;legacyImpersonationPolicy&gt;元素"
-ms.custom: 
+title: '&lt;legacyImpersonationPolicy&gt;元素'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - <legacyImpersonationPolicy> element
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caeede11d8128af00beb5b1b3426e8c4a5406520
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a50ad06026b6ef2f819abefc22016aee29f8ab5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt;元素
 指定 Windows 标识不流经异步点，而不考虑当前线程上执行上下文的流设置。  
   
  \<configuration>  
-\<运行时 >  
-\<legacyImpersonationPolicy >  
+\<runtime>  
+\<legacyImpersonationPolicy>  
   
 ## <a name="syntax"></a>语法  
   
@@ -53,15 +55,15 @@ ms.lasthandoff: 12/22/2017
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity>流经异步点，具体取决于<xref:System.Threading.ExecutionContext>流设置确定是否当前的线程。 这是默认设置。|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity>不流经异步点，而不考虑<xref:System.Threading.ExecutionContext>流当前线程上的设置。|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity> 流经异步点，具体取决于<xref:System.Threading.ExecutionContext>流设置确定是否当前的线程。 这是默认设置。|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity> 不流经异步点，而不考虑<xref:System.Threading.ExecutionContext>流当前线程上的设置。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|说明|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|公共语言运行时和 .NET Framework 应用程序所使用的每个配置文件中的根元素。|  
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
@@ -93,8 +95,8 @@ ms.lasthandoff: 12/22/2017
   
  默认情况下的 ASP.NET 通过使用以下配置设置来禁用下的 aspnet.config 文件中的模拟流：  
   
-```  
-configuration>  
+``` xml
+<configuration>  
    <runtime>  
       <legacyImpersonationPolicy enabled="true"/>  
       <alwaysFlowImpersonationPolicy enabled="false"/>  
@@ -124,7 +126,7 @@ configuration>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<alwaysFlowImpersonationPolicy > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)
+ [\<alwaysFlowImpersonationPolicy> Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

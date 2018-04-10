@@ -1,18 +1,20 @@
 ---
-title: "this（C# 参考）"
-description: "this 关键字（C# 参考）"
-keywords: "this (C#), this 关键字 (C#), this 关键字（C# 参考）, this 关键字（C# 语言参考）"
-ms.custom: 
+title: this（C# 参考）
+description: this 关键字（C# 参考）
+keywords: this (C#), this 关键字 (C#), this 关键字（C# 参考）, this 关键字（C# 语言参考）
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - this
 - this_CSharpKeyword
-helpviewer_keywords: this keyword [C#]
+helpviewer_keywords:
+- this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: f159967707061481a34e72a97ec8cc8316d982ca

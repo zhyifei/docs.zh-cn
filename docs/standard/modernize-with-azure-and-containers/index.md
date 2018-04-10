@@ -1,6 +1,6 @@
 ---
-title: "使用 Azure 云和 Windows 容器更新现有 .NET 应用程序"
-description: "了解如何提升和移动现有应用程序到 Azure 云和与此电子书的容器。"
+title: 使用 Azure 云和 Windows 容器更新现有 .NET 应用程序
+description: 了解如何提升和移动现有应用程序到 Azure 云和与此电子书的容器。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

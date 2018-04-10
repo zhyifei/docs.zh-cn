@@ -1,7 +1,7 @@
 ---
-title: "C# 中的新增功能 - C# 指南"
-description: "C# 语言是如何不断发展的"
-keywords: "C#, 最新功能, 新增功能, Roslyn"
+title: C# 中的新增功能 - C# 指南
+description: C# 语言是如何不断发展的
+keywords: C#, 最新功能, 新增功能, Roslyn
 author: BillWagner
 ms.author: wiwagn
 ms.date: 11/13/2017

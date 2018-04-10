@@ -1,7 +1,7 @@
 ---
-title: "运行、管理和监视 Docker 生产环境"
-description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 运行、管理和监视 Docker 生产环境
+description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017

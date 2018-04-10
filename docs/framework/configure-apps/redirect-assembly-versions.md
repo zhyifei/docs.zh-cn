@@ -1,12 +1,13 @@
 ---
-title: "重定向程序集版本"
-ms.custom: 
+title: 重定向程序集版本
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - assembly binding, redirection
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 24343e1ee2e95cbeb7613d3b22dd7cdac848903b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="redirecting-assembly-versions"></a>重定向程序集版本
 你可以将编译时绑定引用重定向到 .NET Framework 程序集、第三方程序集或你自己的应用的程序集。 你还可以重定向应用，以通过多种方式使用不同版本的程序集：通过发布服务器策略、通过应用配置文件或通过计算机配置文件。 本文讨论了程序集绑定在 .NET Framework 中的工作原理以及如何对其进行配置。  
@@ -56,12 +58,11 @@ ms.lasthandoff: 01/19/2018
   
 ```xml  
 <dependentAssembly>  
-        <assemblyIdentity name="someAssembly"  
-          publicKeyToken="32ab4ba45e0a69a1"  
-          culture="en-us" />  
-  
-        <bindingRedirect oldVersion="7.0.0.0" newVersion="8.0.0.0" />  
-      </dependentAssembly>  
+  <assemblyIdentity name="someAssembly"  
+    publicKeyToken="32ab4ba45e0a69a1"  
+    culture="en-us" />  
+  <bindingRedirect oldVersion="7.0.0.0" newVersion="8.0.0.0" />  
+</dependentAssembly>  
 ```  
   
 ### <a name="relying-on-automatic-binding-redirection"></a>依赖于自动绑定重定向  
@@ -129,7 +130,7 @@ ms.lasthandoff: 01/19/2018
 ```  
   
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>限制到特定版本的程序集绑定  
- 你可以使用**appliesTo**属性[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)将对特定版本的.NET 程序集绑定引用重定向程序应用程序配置文件中的元素Framework。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 appliesTo 特性，\<assemblyBinding> 元素将适用于 .NET Framework 的所有版本[](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)。  
+ 你可以使用**appliesTo**属性[ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)将对特定版本的.NET 程序集绑定引用重定向程序应用程序配置文件中的元素Framework。 此可选特性用 .NET Framework 版本号来指示其适用的版本。 如果没有指定 **appliesTo** 特性，[\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 元素将适用于 .NET Framework 的所有版本。  
   
  例如，若要重定向 .NET Framework 3.5 程序集的程序集绑定，应在你的应用配置文件中包括以下 XML 代码。  
   
@@ -162,7 +163,7 @@ ms.lasthandoff: 01/19/2018
 </assemblyBinding>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [\<bindingRedirect > 元素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
  [程序集绑定重定向安全权限](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)  

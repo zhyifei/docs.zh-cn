@@ -1,17 +1,19 @@
 ---
-title: "base（C# 参考）"
-description: "了解 base 关键字，使用它从 C# 中的派生类中访问基类的成员。"
+title: base（C# 参考）
+description: 了解 base 关键字，使用它从 C# 中的派生类中访问基类的成员。
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - base
 - BaseClass.BaseClass
 - base_CSharpKeyword
-helpviewer_keywords: base keyword [C#]
+helpviewer_keywords:
+- base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 1bbaa0cc05b35f822113bc3a8c3cde966b1484ef

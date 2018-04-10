@@ -1,12 +1,11 @@
 ---
-title: "演练：在 WPF 中排列 Windows 窗体控件"
-ms.custom: 
-ms.date: 03/30/2017
+title: 演练：在 WPF 中排列 Windows 窗体控件
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 480d61f6ca2aa67e0de48030655a6368c70554f4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f3129b4128444530b1277299f3f95ce49232421
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>演练：在 WPF 中排列 Windows 窗体控件
 本演练演示如何使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局功能来排列[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]混合应用程序中的控件。  
@@ -161,26 +160,17 @@ ms.lasthandoff: 01/19/2018
 5.  单击**Click me**按钮。 `button1_Click`事件处理程序将设置<xref:System.Windows.Forms.Control.Top%2A>和<xref:System.Windows.Forms.Control.Left%2A>托管控件的属性。 这将导致托管的控件中被重新定位<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。 宿主保持相同的屏幕区域，但承载控件被剪裁。 相反，应始终填充托管的控件<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。  
   
 ## <a name="understanding-z-order-limitations"></a>了解 Z 顺序限制  
- 默认情况下，可见<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素始终绘制堆积一起[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素，并且它们不会受到 z 顺序。 若要启用 z 顺序，设置<xref:System.Windows.Interop.HwndHost.IsRedirected%2A>属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>为 true 和<xref:System.Windows.Interop.HwndHost.CompositionMode%2A>属性<xref:System.Windows.Interop.CompositionMode.Full>或<xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
-  
-#### <a name="to-see-the-default-z-order-behavior"></a>查看默认 Z 顺序行为  
-  
-1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
-  
+ 可见<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素始终绘制基于其他 WPF 元素，并且它们会受到影响按 z 顺序。 若要查看此 z 顺序行为，请执行以下操作：
+
+1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。
+
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
-  
+ 
 2.  按 F5 生成并运行该应用程序。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素绘制通过 label 元素。  
-  
-#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a>IsRedirected 为 true 时查看 Z 顺序行为  
-  
-1.  前面的 z 顺序示例替换为以下 XAML。  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
-  
-     按 F5 生成并运行该应用程序。 通过绘制 label 元素<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。  
-  
+
+
 ## <a name="docking"></a>停靠  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]停靠。 设置<xref:System.Windows.Controls.DockPanel.Dock%2A>附加属性停靠在托管的控件<xref:System.Windows.Controls.DockPanel>元素。  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素支持[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]停靠。 设置<xref:System.Windows.Controls.DockPanel.Dock%2A>附加属性停靠在托管的控件<xref:System.Windows.Controls.DockPanel>元素。  
   
 #### <a name="to-dock-a-hosted-control"></a>停靠承载控件  
   
@@ -222,7 +212,7 @@ ms.lasthandoff: 01/19/2018
 2.  按 F5 生成并运行该应用程序。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素居中在网格行中，但它不会拉伸以填充可用空间。 如果该窗口是足够大，可能会看到显示由所承载的两个或多个月<xref:System.Windows.Forms.MonthCalendar>控件，但这些为中心的行中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局引擎中心不能调整大小以填充可用空间的元素。  
   
 ## <a name="scaling"></a>缩放  
- 与不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素、 大多数[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]都不能持续缩放控件。 默认情况下，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素只能缩放其托管的控件在可能的情况。  若要启用完备缩放，设置<xref:System.Windows.Interop.HwndHost.IsRedirected%2A>属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>为 true 和<xref:System.Windows.Interop.HwndHost.CompositionMode%2A>属性<xref:System.Windows.Interop.CompositionMode.Full>或<xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
+ 与 WPF 元素不同大多数 Windows 窗体控件不是连续的可缩放的。 若要提供自定义缩放，重写<xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType>方法。 
   
 #### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a>使用默认行为缩放承载控件  
   
@@ -230,19 +220,13 @@ ms.lasthandoff: 01/19/2018
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  按 F5 生成并运行该应用程序。 承载控件及其周围元素按 0.5 的比例进行缩放。 但是，承载控件的字体不缩放。  
-  
-#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a>通过将 IsRedirected 设置为 true 缩放承载控件  
-  
-1.  用下面的 XAML 替换上一个缩放示例。  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
-  
-2.  按 F5 生成并运行该应用程序。 承载控件、其周围的元素和承载控件的字体按 0.5 的比例缩放。  
-  
+2.  按 F5 生成并运行该应用程序。 承载控件及其周围元素按 0.5 的比例进行缩放。 但是，承载控件的字体不缩放。
+
+<!-- This could use an example of custom scaling. -->
+
 ## <a name="rotating"></a>旋转  
- 与不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件不支持旋转。 默认情况下，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素不与其他旋转[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]元素时应用的旋转转换。 非 180 度引发的任何旋转值<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件。  若要启用到任何角度轮换，设置<xref:System.Windows.Interop.HwndHost.IsRedirected%2A>属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>为 true 和<xref:System.Windows.Interop.HwndHost.CompositionMode%2A>属性<xref:System.Windows.Interop.CompositionMode.Full>或<xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
-  
+ WPF 与元素不同，Windows 窗体控件不支持旋转。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素在应用的旋转转换时不旋转与其他 WPF 元素。 非 180 度引发的任何旋转值<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件。
+ 
 #### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a>查看混合应用程序中的旋转效果  
   
 1.  将复制到下面的 XAML<xref:System.Windows.Controls.Grid>元素。  
@@ -250,15 +234,8 @@ ms.lasthandoff: 01/19/2018
      [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
 2.  按 F5 生成并运行该应用程序。 承载控件不旋转，但是它周围的元素旋转 180 度。 可能必须调整窗口大小才能看到这些元素。  
-  
-#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a>IsRedirected 为 true 时查看混合应用程序中的旋转效果  
-  
-1.  用下面的 XAML 替换上一个旋转示例。  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
-  
-2.  按 F5 生成并运行该应用程序。 旋转承载控件。  请注意，<xref:System.Windows.Media.RotateTransform.Angle%2A>属性可以设置为任何值。 可能必须调整窗口大小才能看到这些元素。  
-  
+ 
+
 ## <a name="setting-padding-and-margins"></a>设置填充和边距  
  填充和边距中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局是类似于填充和边距中的[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]。 只需设置<xref:System.Windows.Controls.Control.Padding%2A>和<xref:System.Windows.FrameworkElement.Margin%2A>属性<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。  
   
@@ -272,7 +249,7 @@ ms.lasthandoff: 01/19/2018
 2.  按 F5 生成并运行该应用程序。 填充和边距设置适用于承载[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]与它们将按应用相同的方式控件[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]。  
   
 ## <a name="using-dynamic-layout-containers"></a>使用动态布局容器  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]提供两个动态布局容器，<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>。 你还可以使用这些容器中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局。  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 提供两个动态布局容器，<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>。 你还可以使用这些容器中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局。  
   
 #### <a name="to-use-a-dynamic-layout-container"></a>使用动态布局容器  
   
@@ -292,7 +269,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  按 F5 生成并运行该应用程序。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素填充<xref:System.Windows.Controls.DockPanel>，和<xref:System.Windows.Forms.FlowLayoutPanel>排列其子控件在默认<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF 设计器](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  

@@ -1,7 +1,7 @@
 ---
-title: ".NET Core 中的单元测试"
-description: "单元测试从未如此简单。 了解如何在 .NET Core 和 .NET Standard 项目中使用单元测试。"
-keywords: ".NET, .NET Core, .NET Standard, 单元测试"
+title: .NET Core 中的单元测试
+description: 单元测试从未如此简单。 了解如何在 .NET Core 和 .NET Standard 项目中使用单元测试。
+keywords: .NET, .NET Core, .NET Standard, 单元测试
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
@@ -9,7 +9,8 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: cb78a66a3a6a7158a86a76d62e5230c75b51a416
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT

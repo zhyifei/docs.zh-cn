@@ -1,7 +1,7 @@
 ---
-title: "将旧版整体式 .NET Framework 应用程序迁移到 Windows 容器"
-description: "容器化 .NET 应用程序的 .NET 微服务体系结构 | 将旧版整体式 .NET Framework 应用程序迁移到 Windows 容器"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 将旧版整体式 .NET Framework 应用程序迁移到 Windows 容器
+description: 容器化 .NET 应用程序的 .NET 微服务体系结构 | 将旧版整体式 .NET Framework 应用程序迁移到 Windows 容器
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

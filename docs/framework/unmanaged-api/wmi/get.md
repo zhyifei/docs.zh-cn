@@ -1,6 +1,6 @@
 ---
-title: "Get 函数 （非托管 API 参考）"
-description: "Get 函数将检索指定的属性值。"
+title: Get 函数 （非托管 API 参考）
+description: Get 函数将检索指定的属性值。
 ms.date: 11/06/2017
 ms.prod: .net-framework
 ms.technology:

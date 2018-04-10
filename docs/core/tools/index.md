@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 命令行接口 (CLI) 工具"
-description: "概述了 .NET Core 命令行接口 (CLI) 工具和功能。"
+title: .NET Core 命令行接口 (CLI) 工具
+description: 概述了 .NET Core 命令行接口 (CLI) 工具和功能。
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

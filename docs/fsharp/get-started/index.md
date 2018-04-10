@@ -1,7 +1,7 @@
 ---
-title: "F # 入门"
-description: "了解如何开始使用 F # 编程.NET 中的语言。"
-keywords: "visual f#, f#, 函数编程, .NET, .NET Core"
+title: 'F # 入门'
+description: '了解如何开始使用 F # 编程.NET 中的语言。'
+keywords: visual f#, f#, 函数编程, .NET, .NET Core
 author: cartermp
 ms.author: phcart
 ms.date: 09/06/2016

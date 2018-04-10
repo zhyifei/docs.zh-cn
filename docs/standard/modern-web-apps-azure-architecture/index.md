@@ -1,6 +1,6 @@
 ---
-title: "使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序"
-description: "使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 简介"
+title: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
+description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 简介
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017

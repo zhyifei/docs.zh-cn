@@ -1,23 +1,24 @@
 ---
-title: "将工作流和活动序列化为 XAML 和从 XAML 序列化工作流和活动"
-ms.custom: 
+title: 将工作流和活动序列化为 XAML 和从 XAML 序列化工作流和活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c1954f02aef13599f7bd24f8e2d136f0f876256
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ca32eb9543498279448617e33169ddd22882702
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>将工作流和活动序列化为 XAML 和从 XAML 序列化工作流和活动
 除了可将工作流定义编译为程序集中包含的类型之外，还可将工作流定义序列化为 XAML。 这些已序列化的定义可以重新加载以供编辑或检测，可以传递给生成系统以供编译，也可以加载并调用。 本主题概述如何序列化工作流定义以及如何使用 XAML 工作流定义。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- 每个 <xref:System.Activities.DynamicActivityProperty> 实例均表示工作流的一个输入参数，并且 <xref:System.Activities.ActivityBuilder.Implementation%2A> 包含构成工作流逻辑的活动。 请注意，此示例中的右值表达式是 Visual Basic 表达式。 Lambda 表达式不可序列化为 XAML，除非使用 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>。 如果序列化的工作流要在工作流设计器中打开或进行编辑，则应使用 Visual Basic 表达式。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][使用命令性代码创作工作流、 活动和表达式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
+ 每个 <xref:System.Activities.DynamicActivityProperty> 实例均表示工作流的一个输入参数，并且 <xref:System.Activities.ActivityBuilder.Implementation%2A> 包含构成工作流逻辑的活动。 请注意，此示例中的右值表达式是 Visual Basic 表达式。 Lambda 表达式不可序列化为 XAML，除非使用 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>。 如果序列化的工作流要在工作流设计器中打开或进行编辑，则应使用 Visual Basic 表达式。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [使用命令性代码创作工作流、 活动和表达式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
   
  若要将由 <xref:System.Activities.ActivityBuilder> 实例表示的工作流定义序列化为 XAML，应使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 创建 <xref:System.Xaml.XamlWriter>，然后通过 <xref:System.Xaml.XamlServices>，使用 <xref:System.Xaml.XamlWriter> 对工作流定义进行序列化。 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 提供一些方法，可以在 <xref:System.Activities.ActivityBuilder> 实例和 XAML 之间进行映射，并可加载 XAML 工作流以及返回可调用的 <xref:System.Activities.DynamicActivity>。 在下面的示例中，将上一示例中的 <xref:System.Activities.ActivityBuilder> 实例序列化为一个字符串，并将其保存到一个文件中。  
   
@@ -74,7 +75,7 @@ sw.Close();
 </Activity>  
 ```  
   
- 若要加载的序列化的工作流， <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>使用方法。 这将使用序列化的工作流定义，并返回一个表示该工作流定义的 <xref:System.Activities.DynamicActivity>。 请注意，在验证过程中对 <xref:System.Activities.Activity.CacheMetadata%2A> 的正文调用 <xref:System.Activities.DynamicActivity> 之前，不对 XAML 进行反序列化。 如果未显式调用验证，则在调用工作流时执行验证。 如果 XAML 工作流定义无效，则会引发 <xref:System.Argument> 异常。 从 <xref:System.Activities.Activity.CacheMetadata%2A> 引发的所有异常均不会导致调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>，必须由调用方进行处理。 在下面的示例中，将使用 <xref:System.Activities.WorkflowInvoker> 加载并调用上一示例中的序列化的工作流。  
+ 若要加载的序列化的工作流， <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>使用方法。 这将使用序列化的工作流定义，并返回一个表示该工作流定义的 <xref:System.Activities.DynamicActivity>。 请注意，在验证过程中对 <xref:System.Activities.Activity.CacheMetadata%2A> 的正文调用 <xref:System.Activities.DynamicActivity> 之前，不对 XAML 进行反序列化。 如果未显式调用验证，则在调用工作流时执行验证。 如果 XAML 工作流定义无效，则会引发 <xref:System.ArgumentException> 异常。 从 <xref:System.Activities.Activity.CacheMetadata%2A> 引发的所有异常均不会导致调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>，必须由调用方进行处理。 在下面的示例中，将使用 <xref:System.Activities.WorkflowInvoker> 加载并调用上一示例中的序列化的工作流。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#43](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#43)]  
   
@@ -83,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]调用工作流使用输入和输出参数，请参阅[使用 WorkflowInvoker 和 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)和<xref:System.Activities.WorkflowInvoker.Invoke%2A>。  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 调用工作流使用输入和输出参数，请参阅[使用 WorkflowInvoker 和 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)和<xref:System.Activities.WorkflowInvoker.Invoke%2A>。  
   
  如果序列化的工作流包含 C# 表达式，则<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings>实例与其<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A>属性设置为`true`必须作为参数传递给传递<xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>，否则为<xref:System.NotSupportedException>将引发类似于的消息以下： `Expression Activity type 'CSharpValue`1 需要编译才能运行。  请确保已编译工作流。  
   
@@ -96,7 +97,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][C# 表达式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [C# 表达式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
   
  序列化的工作流定义也可以加载到<xref:System.Activities.ActivityBuilder>实例使用<xref:System.Activities.XamlIntegration.ActivityXamlServices><xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A>方法。 在将序列化的工作流加载到 <xref:System.Activities.ActivityBuilder> 实例中后，可以对其进行检查和修改。 这对自定义工作流设计器作者很有用，并将提供用于在设计过程中保存和重新加载工作流定义的机制。 在下面的示例中，将加载上一示例中的序列化的工作流定义并检查其属性。  
   

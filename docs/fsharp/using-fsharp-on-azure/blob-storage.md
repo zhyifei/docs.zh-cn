@@ -1,7 +1,7 @@
 ---
-title: "要开始使用 Azure Blob 存储使用 F #"
-description: "在云中，而 Azure Blob 存储中存储非结构化的数据。"
-keywords: "visual f #、 f # 中，函数编程，.NET，.NET 核心，Azure"
+title: '要开始使用 Azure Blob 存储使用 F #'
+description: 在云中，而 Azure Blob 存储中存储非结构化的数据。
+keywords: 'visual f #、 f # 中，函数编程，.NET，.NET 核心，Azure'
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 14ccba36638c724536793a6a589cf1c0a6186eeb
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>要开始使用 Azure Blob 存储使用 F # #
 
@@ -247,7 +247,7 @@ Azure 存储空间支持在客户端和服务器上的 blob 数据进行加密�
 
 ### <a name="related-guides"></a>相关参考线
 
-- [在 C# 中的 Azure Blob 存储入门](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
+- [在 C# 中的 Azure Blob 存储入门](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [在 Windows 上传输数据的 AzCopy 命令行实用程序](/azure/storage/common/storage-use-azcopy)
 - [在 Linux 上传输数据的 AzCopy 命令行实用程序](/azure/storage/common/storage-use-azcopy-linux)
 - [配置 Azure 存储连接字符串](/azure/storage/common/storage-configure-connection-string)

@@ -1,7 +1,7 @@
 ---
-title: "类型提供程序"
-description: "了解如何提供类型、 属性和方法，在程序中的使用方法的组件的 F # 类型提供程序。"
-keywords: "visual f#, f#, 函数编程"
+title: 类型提供程序
+description: '了解如何提供类型、 属性和方法，在程序中的使用方法的组件的 F # 类型提供程序。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

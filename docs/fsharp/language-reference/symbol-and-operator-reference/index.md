@@ -1,20 +1,20 @@
 ---
-title: "符号和运算符参考 (F#)"
-description: "了解符号和 F # 编程语言中使用的运算符。"
-keywords: "visual f#, f#, 函数编程"
+title: 符号和运算符参考 (F#)
+description: '了解符号和 F # 编程语言中使用的运算符。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/05/2018
 |`"""`|[字符串](../strings.md)|分隔逐字文本字符串。 区别你可以在字符串中使用单引号来指示引号字符的 `@"..."`。|
 |`#`|[编译器指令](../compiler-directives.md)<br /><br />[可变类型](../flexible-types.md)|<ul><li>给预处理器指令或编译器指令加上前缀，如 `#light`。<br /></li><li>当用于类型时，指示“灵活类型”，即某一类型或该类型的任何一个派生类型。<br /></li><ul/>|
 |`$`|无可用的详细信息。|<ul><li>在内部用于特定编译器生成的变量和函数名称。<br /></li><ul/>|
-|`%`|[算术运算符](arithmetic-operators.md)<br /><br />[代码引用](../code-quotations.md)|<ul><li>计算整数模数。<br /></li><li>用于将表达式拼接到类型化的代码引号中。<br /></li><ul/>|
+|`%`|[算术运算符](arithmetic-operators.md)<br /><br />[代码引用](../code-quotations.md)|<ul><li>计算整数余数。<br /></li><li>用于将表达式拼接到类型化的代码引号中。<br /></li><ul/>|
 |`%%`|[代码引用](../code-quotations.md)|<ul><li>用于将表达式拼接到非类型化的代码引号中。<br /></li><ul/>|
-|`%?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，计算整数模数。<br /></li><ul/>|
+|`%?`|[可为 null 的运算符](nullable-operators.md)|<ul><li>当右侧是可以为 null 的类型时，请计算整数余数。<br /></li><ul/>|
 |`&`|[match 表达式](../match-expressions.md)|<ul><li>计算可变值的地址，以便在与其他语言进行互操作时使用。<br /></li><li>在“与”模式下使用。<br /></li><ul/>|
 |`&&`|[布尔运算符](boolean-operators.md)|<ul><li>计算“布尔与”运算。<br /></li><ul/>|
 |`&&&`|[位运算符](bitwise-operators.md)|<ul><li>计算“位与”运算。<br /></li><ul/>|
@@ -127,7 +127,7 @@ ms.lasthandoff: 01/05/2018
 |--------|-------------|
 |`as`|右|
 |`when`|右|
-|<code>&#124;</code>（管道）|左侧|
+|<code>&#124;</code> （管道）|左侧|
 |`;`|右|
 |`let`|不相关|
 |`function`, `fun`, `match`, `try`|不相关|
@@ -138,7 +138,7 @@ ms.lasthandoff: 01/05/2018
 |`or`, <code>&#124;&#124;</code>|左侧|
 |`&`, `&&`|左侧|
 |`:>`, `:?>`|右|
-|`!=`*操作*， `<`*操作*， `>`*操作*， `=`， <code>&#124;</code>*操作*， `&` *操作*，`&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左侧|
+|`!=`*操作*， `<`*操作*， `>`*操作*， `=`， <code>&#124;</code>*操作*， `&`*操作*, `&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左侧|
 |`^`*op*<br /><br />（包括 `^^^`）|右|
 |`::`|右|
 |`:?`|未关联|
@@ -146,14 +146,14 @@ ms.lasthandoff: 01/05/2018
 |`*`*op*，`/`*op*，`%`*op*|左|
 |`**`*op*|右|
 |`f x`（函数应用程序）|左侧|
-|<code>&#124;</code>（模式匹配）|右|
+|<code>&#124;</code> （模式匹配）|右|
 |前缀运算符（`+`*op*，`-`*op*，`%`，`%%`，`&`，`&&``!`*op*，`~`*op*）|左侧|
 |`.`|左|
 |`f(x)`|左侧|
 |`f<`*types*`>`|左侧|
 F# 支持自定义运算符重载。 这意味着你可以自定义自己的运算符。 在上表中，*op* 可以是任何有效的运算符字符序列（可能为空），它既可以内嵌，也可以由用户定义。 因此，你可以使用此表来确定用于自定义运算符以实现所需优先级级别的字符顺序。 当编译器确定优先级时，会忽略前面的 `.` 字符。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 [F# 语言参考](../index.md)
 
 [运算符重载](../operator-overloading.md)

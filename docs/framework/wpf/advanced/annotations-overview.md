@@ -1,13 +1,13 @@
 ---
-title: "批注概述"
-ms.custom: 
+title: 批注概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  下图显示了突出显示、文本便笺以及墨迹便笺批注的一些示例。  
   
- ![突出显示、文本和墨迹便笺批注。](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![突出显示、 文本和墨迹便笺批注.](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
   
  下面的示例演示了可用于在应用程序中启用批注支持的方法。  
   

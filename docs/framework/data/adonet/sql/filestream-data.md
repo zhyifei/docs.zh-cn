@@ -1,24 +1,26 @@
 ---
-title: "FILESTREAM 数据"
-ms.custom: 
+title: FILESTREAM 数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 898fb6072742c745e7e86d2ea543803dc65ae014
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数据。 在 FILESTREAM 之前，存储二进制数据需要特殊处理。 非结构化的数据（例如文本文档、图像和视频）通常存储在数据库之外，从而使得难以管理此类数据。  
@@ -160,7 +162,7 @@ namespace FileStreamTest
                         string path = reader.GetString(0);  
                         byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
   
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Write, FileOptions.SequentialScan, allocationSize: 0))  
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.ReadWrite, FileOptions.SequentialScan, allocationSize: 0))  
                         {  
                             // Seek to the end of the file  
                             fileStream.Seek(0, SeekOrigin.End);  
@@ -175,42 +177,7 @@ namespace FileStreamTest
   
         }  
     }  
-} using (SqlConnection connection = new SqlConnection(  
-    connStringBuilder.ToString()))  
-{  
-    connection.Open();  
-  
-    SqlCommand command = new SqlCommand("", connection);  
-    command.CommandText = "select Top(1) Photo.PathName(), "  
-    + "GET_FILESTREAM_TRANSACTION_CONTEXT () from employees";  
-  
-    SqlTransaction tran = connection.BeginTransaction(  
-        System.Data.IsolationLevel.ReadCommitted);  
-    command.Transaction = tran;  
-  
-    using (SqlDataReader reader = command.ExecuteReader())  
-    {  
-        while (reader.Read())  
-        {  
-            // Get the pointer for file  
-            string path = reader.GetString(0);  
-            byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-            FileStream fileStream = new SqlFileStream(path,  
-                (byte[])reader.GetValue(1),  
-                FileAccess.ReadWrite,  
-                FileOptions.SequentialScan, 0);  
-  
-            // Seek to the end of the file  
-            fs.Seek(0, SeekOrigin.End);  
-  
-            // Append a single byte   
-            fileStream.WriteByte(0x01);  
-            fileStream.Close();  
-        }  
-    }  
-    tran.Commit();  
-}  
+}
 ```  
   
  另一个示例，请参阅[如何存储和提取到文件流列的二进制数据](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
@@ -226,7 +193,7 @@ namespace FileStreamTest
 |[在客户端应用程序中使用 FILESTREAM 存储](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|介绍用于处理 FILESTREAM 数据的 Win32 API 函数。|  
 |[FILESTREAM 与其他 SQL Server 功能](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|提供将 FILESTREAM 数据与 SQL Server 的其他功能一起使用时的注意事项、准则和限制。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  

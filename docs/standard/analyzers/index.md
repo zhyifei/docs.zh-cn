@@ -1,6 +1,6 @@
 ---
-title: "基于 Roslyn 的分析器 - .NET"
-description: "了解基于 Roslyn 的分析器，用其发现问题并针对这些问题提供修复建议。"
+title: 基于 Roslyn 的分析器 - .NET
+description: 了解基于 Roslyn 的分析器，用其发现问题并针对这些问题提供修复建议。
 keywords: .NET, .NET Core
 author: billwagner
 ms.author: billwagner

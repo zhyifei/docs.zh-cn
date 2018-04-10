@@ -1,7 +1,7 @@
 ---
-title: "F# 语言参考"
-description: "F # 语言功能从查找信息语言令牌、 概念、 类型、 表达式和编译器支持的结构主题对此引用。"
-keywords: "visual f#, f#, 函数编程"
+title: F# 语言参考
+description: 'F # 语言功能从查找信息语言令牌、 概念、 类型、 表达式和编译器支持的结构主题对此引用。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

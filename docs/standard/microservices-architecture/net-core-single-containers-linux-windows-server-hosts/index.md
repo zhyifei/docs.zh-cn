@@ -1,7 +1,7 @@
 ---
-title: "在 Linux 或 Windows Nano Server 主机上部署基于单容器的 .NET Core Web 应用"
-description: "适用于容器化 .NET 应用程序的体系结构 | 在 Linux 或 Windows Nano Server 主机上部署基于单容器的 .NET Core Web 应用"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 在 Linux 或 Windows Nano Server 主机上部署基于单容器的 .NET Core Web 应用
+description: 适用于容器化 .NET 应用程序的体系结构 | 在 Linux 或 Windows Nano Server 主机上部署基于单容器的 .NET Core Web 应用
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

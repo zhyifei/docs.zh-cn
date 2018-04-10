@@ -1,7 +1,7 @@
 ---
-title: "Docker 应用程序设计"
-description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: Docker 应用程序设计
+description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017

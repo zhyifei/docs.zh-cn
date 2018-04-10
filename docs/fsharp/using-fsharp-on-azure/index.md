@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: fdb2378a731a13894cf71356a2713c62a5c2064e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -121,7 +121,7 @@ Webhook 可采用 F# 实现，并通过 [Azure Function in F# with a Webhook Bin
 
 同样，其他 Azure 资源也可用相同的组件通过 F# 脚本进行部署和管理。 例如，你可以创建存储帐户、 部署 Azure 云服务、 创建 Azure Cosmos 数据库实例和从 F # 脚本以编程方式管理 Azure 通知中心。
 
-通常，使用 F# 脚本来部署和管理资源并不必要。 例如，Azure 资源也可直接通过 JSON 模板说明进行部署，可对该模板进行参数化。 请参阅 [Azure 资源管理器模板](/azure/azure-resource-manager/resource-manager-template-best-practices)，包括 [Azure 快速入门模板](https://azure.microsoft.com/documentation/templates/)等示例。
+通常，使用 F# 脚本来部署和管理资源并不必要。 例如，Azure 资源也可直接通过 JSON 模板说明进行部署，可对该模板进行参数化。 请参阅 [Azure 资源管理器模板](/azure/azure-resource-manager/resource-manager-template-best-practices)，包括 [Azure 快速入门模板](https://azure.microsoft.com/resources/templates/)等示例。
 
 ## <a name="other-resources"></a>其他资源
 

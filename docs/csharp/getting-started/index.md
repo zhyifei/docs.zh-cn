@@ -1,7 +1,7 @@
 ---
-title: "入门 - C# 指南"
-description: "查看简短教程，快速了解介绍性 C# 概念并编写 .NET Core 应用程序。"
-keywords: "C#, 入门, 获取, 安装"
+title: 入门 - C# 指南
+description: 查看简短教程，快速了解介绍性 C# 概念并编写 .NET Core 应用程序。
+keywords: C#, 入门, 获取, 安装
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-c"></a>C# 入门 #
 
@@ -43,10 +43,6 @@ ms.lasthandoff: 10/18/2017
    Visual Studio Code 是免费的代码编辑器，已针对构建和调试现代 Web 和云应用程序而优化。 它支持 IntelliSense，并可在 Linux、macOS 和 Windows 上使用。
 
    此主题介绍了如何使用 Visual Studio Code 和 .NET Core 创建并运行简单的 Hello World 应用程序。
-
-* [为 Visual C# 程序员提供的附加资源](additional-resources.md)
-
-   提供指向可帮助你找到常见问题答案的网站和新闻组的链接。
 
 ## <a name="related-sections"></a>相关章节
 

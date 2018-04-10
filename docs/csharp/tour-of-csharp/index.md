@@ -1,7 +1,7 @@
 ---
-title: "C# 介绍 - C# 指南"
-description: "刚开始接触 C#？ 了解 C# 语言的基础知识。"
-keywords: ".NET, .NET Core, C#, C# Primer, C# 指南"
+title: C# 介绍 - C# 指南
+description: 刚开始接触 C#？ 了解 C# 语言的基础知识。
+keywords: .NET, .NET Core, C#, C# Primer, C# 指南
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016

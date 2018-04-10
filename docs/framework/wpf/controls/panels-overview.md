@@ -1,12 +1,13 @@
 ---
-title: "面板概述"
-ms.custom: 
+title: 面板概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d25c6d9e4e6d067ad2107df2374329d84300c015
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd04413636c7d6182ff01712eecedbbd4ed02761
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="panels-overview"></a>面板概述
-<xref:System.Windows.Controls.Panel>元素是控制元素的呈现的组件，其大小和维度、 其位置和其子内容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了许多预定义<xref:System.Windows.Controls.Panel>元素，以及能够构造自定义<xref:System.Windows.Controls.Panel>元素。  
+<xref:System.Windows.Controls.Panel> 元素是控制元素的呈现的组件，其大小和维度、 其位置和其子内容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了许多预定义<xref:System.Windows.Controls.Panel>元素，以及能够构造自定义<xref:System.Windows.Controls.Panel>元素。  
   
  本主题包含以下各节：  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>Panel 类  
- <xref:System.Windows.Controls.Panel>是的基类，提供布局的所有元素支持在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 派生<xref:System.Windows.Controls.Panel>元素用于放置和排列中的元素[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和代码。  
+ <xref:System.Windows.Controls.Panel> 是的基类，提供布局的所有元素支持在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 派生<xref:System.Windows.Controls.Panel>元素用于放置和排列中的元素[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和代码。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含一套全面的派生面板实现，可支持许多复杂的布局。 这些派生类公开可实现大部分标准 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 方案的属性和方法。 开发人员找不到满足其需求的子排列行为可以通过重写创建新的布局<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>和<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法。 有关自定义布局行为的详细信息，请参阅[自定义 Panel 元素](#Panels_custom_panel_elements)。  
   
@@ -56,11 +58,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="panel-common-members"></a>Panel 公共成员  
  所有<xref:System.Windows.Controls.Panel>元素支持的基大小调整和定位属性定义<xref:System.Windows.FrameworkElement>，包括<xref:System.Windows.FrameworkElement.Height%2A>， <xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>，和<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。 有关其他信息定义的定位属性<xref:System.Windows.FrameworkElement>，请参阅[对齐、 边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)。  
   
- <xref:System.Windows.Controls.Panel>公开至关重要的一点是了解和使用布局中的其他的属性。 <xref:System.Windows.Controls.Panel.Background%2A>属性用来填充的派生的面板元素的边界之间的区域<xref:System.Windows.Media.Brush>。 <xref:System.Windows.Controls.Panel.Children%2A>表示元素的子集合，<xref:System.Windows.Controls.Panel>组成。 <xref:System.Windows.Controls.Panel.InternalChildren%2A>表示的内容<xref:System.Windows.Controls.Panel.Children%2A>集合以及由数据绑定生成这些成员。 同时组成<xref:System.Windows.Controls.UIElementCollection>承载父项中的子元素<xref:System.Windows.Controls.Panel>。  
+ <xref:System.Windows.Controls.Panel> 公开至关重要的一点是了解和使用布局中的其他的属性。 <xref:System.Windows.Controls.Panel.Background%2A>属性用来填充的派生的面板元素的边界之间的区域<xref:System.Windows.Media.Brush>。 <xref:System.Windows.Controls.Panel.Children%2A> 表示元素的子集合，<xref:System.Windows.Controls.Panel>组成。 <xref:System.Windows.Controls.Panel.InternalChildren%2A> 表示的内容<xref:System.Windows.Controls.Panel.Children%2A>集合以及由数据绑定生成这些成员。 同时组成<xref:System.Windows.Controls.UIElementCollection>承载父项中的子元素<xref:System.Windows.Controls.Panel>。  
   
  Panel 也公开<xref:System.Windows.Controls.Panel.ZIndex%2A?displayProperty=nameWithType>附加属性，可以用于实现分层的顺序派生的<xref:System.Windows.Controls.Panel>。 一个面板成员<xref:System.Windows.Controls.Panel.Children%2A>较高的集合<xref:System.Windows.Controls.Panel.ZIndex%2A?displayProperty=nameWithType>值显示于较低的那些<xref:System.Windows.Controls.Panel.ZIndex%2A?displayProperty=nameWithType>值。 这是特别有用面板的如<xref:System.Windows.Controls.Canvas>和<xref:System.Windows.Controls.Grid>它们允许子元素共享相同的坐标空间。  
   
- <xref:System.Windows.Controls.Panel>此外定义<xref:System.Windows.Controls.Panel.OnRender%2A>方法，可以使用重写的默认演示文稿行为<xref:System.Windows.Controls.Panel>。  
+ <xref:System.Windows.Controls.Panel> 此外定义<xref:System.Windows.Controls.Panel.OnRender%2A>方法，可以使用重写的默认演示文稿行为<xref:System.Windows.Controls.Panel>。  
   
 #### <a name="attached-properties"></a>附加属性  
  派生面板元素广泛使用附加属性。 附加属性是没有常规 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性“包装器”的依赖属性的特殊化形式。 附加属性在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中具有特殊化的语法，可在后面的几个示例中看到。  
@@ -81,10 +83,10 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Controls.StackPanel>|是|将子元素排列成水平或垂直的一行。|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|否|处理选项卡中的按钮布局<xref:System.Windows.Controls.TabControl>。|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|否|排列中的内容<xref:System.Windows.Controls.ToolBar>控件。|  
-|<xref:System.Windows.Controls.Primitives.UniformGrid>|否|<xref:System.Windows.Controls.Primitives.UniformGrid>用于与所有相等的单元格大小排列在网格中的子级。|  
+|<xref:System.Windows.Controls.Primitives.UniformGrid>|否|<xref:System.Windows.Controls.Primitives.UniformGrid> 用于与所有相等的单元格大小排列在网格中的子级。|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|否|为可以“虚拟化”其子级集合的面板提供基类。|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|是|在水平或垂直方向上将内容排列为一行并使其虚拟化。|  
-|<xref:System.Windows.Controls.WrapPanel>|是|<xref:System.Windows.Controls.WrapPanel>在从左到右，换行到下一行包含框的边缘上的内容的顺序位置定位子元素。 后续排序按照按顺序从顶部到底部或从右到左，具体取决于值<xref:System.Windows.Controls.WrapPanel.Orientation%2A>属性。|  
+|<xref:System.Windows.Controls.WrapPanel>|是|<xref:System.Windows.Controls.WrapPanel> 位置中连续数据的位置的子元素的从左到右，将内容断开至下一行上包含框的边缘。 后续排序按照按顺序从顶部到底部或从右到左，具体取决于值<xref:System.Windows.Controls.WrapPanel.Orientation%2A>属性。|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>用户界面 Panel  
@@ -96,8 +98,8 @@ ms.lasthandoff: 12/22/2017
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|按内容约束|按内容约束|  
 |<xref:System.Windows.Controls.DockPanel>|约束|约束|  
-|<xref:System.Windows.Controls.StackPanel>（垂直方向）|约束|按内容约束|  
-|<xref:System.Windows.Controls.StackPanel>（水平方向）|按内容约束|约束|  
+|<xref:System.Windows.Controls.StackPanel> （垂直方向）|约束|按内容约束|  
+|<xref:System.Windows.Controls.StackPanel> （水平方向）|按内容约束|约束|  
 |<xref:System.Windows.Controls.Grid>|约束|约束，除非情况下在其中<xref:System.Windows.GridUnitType.Auto>将应用于行和列|  
 |<xref:System.Windows.Controls.WrapPanel>|按内容约束|按内容约束|  
   
@@ -107,10 +109,10 @@ ms.lasthandoff: 12/22/2017
 ### <a name="canvas"></a>Canvas  
  <xref:System.Windows.Controls.Canvas>元素启用的内容根据绝对定位*x-*和*y-*坐标。 元素可以在唯一位置绘制；或者，如果元素占用了相同坐标，则这些元素在标记中显示的顺序决定它们的绘制顺序。  
   
- <xref:System.Windows.Controls.Canvas>提供的任何最灵活的布局支持<xref:System.Windows.Controls.Panel>。 高度和宽度属性用于定义的区域的画布上，以及内的元素分配相对于父区域的绝对坐标<xref:System.Windows.Controls.Canvas>。 四个附加的属性， <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>， <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>，<xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>，允许对中的对象放置进行精细控制<xref:System.Windows.Controls.Canvas>，开发人员可以放置和排列在屏幕上精确的元素。  
+ <xref:System.Windows.Controls.Canvas> 提供的任何最灵活的布局支持<xref:System.Windows.Controls.Panel>。 高度和宽度属性用于定义的区域的画布上，以及内的元素分配相对于父区域的绝对坐标<xref:System.Windows.Controls.Canvas>。 四个附加的属性， <xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>， <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>，<xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType>和<xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>，允许对中的对象放置进行精细控制<xref:System.Windows.Controls.Canvas>，开发人员可以放置和排列在屏幕上精确的元素。  
   
 #### <a name="cliptobounds-within-a-canvas"></a>Canvas 内 ClipToBounds  
- <xref:System.Windows.Controls.Canvas>可以在屏幕上，甚至在坐标之外自己定义的任何位置定位子元素<xref:System.Windows.FrameworkElement.Height%2A>和<xref:System.Windows.FrameworkElement.Width%2A>。 此外，<xref:System.Windows.Controls.Canvas>不受及其所有子级的大小。 因此，很可能要过度绘制外的父级的绑定矩形其他元素的子元素<xref:System.Windows.Controls.Canvas>。 默认行为<xref:System.Windows.Controls.Canvas>是允许子级的父级边界之外绘制<xref:System.Windows.Controls.Canvas>。 如果不需要，此行为<xref:System.Windows.UIElement.ClipToBounds%2A>属性可以设置为`true`。 这将导致<xref:System.Windows.Controls.Canvas>裁剪到其自身的大小。 <xref:System.Windows.Controls.Canvas>是允许要绘制超出界限的子级的唯一布局元素。  
+ <xref:System.Windows.Controls.Canvas> 可以在屏幕上，甚至在坐标之外自己定义的任何位置定位子元素<xref:System.Windows.FrameworkElement.Height%2A>和<xref:System.Windows.FrameworkElement.Width%2A>。 此外，<xref:System.Windows.Controls.Canvas>不受及其所有子级的大小。 因此，很可能要过度绘制外的父级的绑定矩形其他元素的子元素<xref:System.Windows.Controls.Canvas>。 默认行为<xref:System.Windows.Controls.Canvas>是允许子级的父级边界之外绘制<xref:System.Windows.Controls.Canvas>。 如果不需要，此行为<xref:System.Windows.UIElement.ClipToBounds%2A>属性可以设置为`true`。 这将导致<xref:System.Windows.Controls.Canvas>裁剪到其自身的大小。 <xref:System.Windows.Controls.Canvas> 是允许要绘制超出界限的子级的唯一布局元素。  
   
  [宽度属性比较示例](http://go.microsoft.com/fwlink/?LinkID=160050)中以图形方式展示了此行为。  
   
@@ -151,13 +153,13 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Panels_overview_Grid_subsection"></a>   
 ### <a name="grid"></a>Grid  
- <xref:System.Windows.Controls.Grid>元素合并绝对定位和表格数据控件的功能。 A<xref:System.Windows.Controls.Grid>使您能够轻松地位置和样式的元素。 <xref:System.Windows.Controls.Grid>允许你定义灵活的行和列分组，并甚至还提供了一种机制来共享之间多个大小调整信息<xref:System.Windows.Controls.Grid>元素。  
+ <xref:System.Windows.Controls.Grid>元素合并绝对定位和表格数据控件的功能。 A<xref:System.Windows.Controls.Grid>使您能够轻松地位置和样式的元素。 <xref:System.Windows.Controls.Grid> 允许你定义灵活的行和列分组，并甚至还提供了一种机制来共享之间多个大小调整信息<xref:System.Windows.Controls.Grid>元素。  
   
 #### <a name="how-is-grid-different-from-table"></a>网格与表格有何不同？  
- <xref:System.Windows.Documents.Table>和<xref:System.Windows.Controls.Grid>共享一些常见的功能，但每个最适合于不同的方案。 A<xref:System.Windows.Documents.Table>旨在用于在流内容中 (请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)有关流内容的详细信息)。 网格最适合在表单内（主要在流内容以外的任意位置）使用。 在<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支持流分页、 列回流等内容时选择的内容行为<xref:System.Windows.Controls.Grid>却没有。 A<xref:System.Windows.Controls.Grid>另一方面最佳使用外部<xref:System.Windows.Documents.FlowDocument>包括的原因有很多<xref:System.Windows.Controls.Grid>添加基于一个行和列的索引，元素<xref:System.Windows.Documents.Table>却没有。 <xref:System.Windows.Controls.Grid>元素允许的子内容，允许多个元素中的单个"单元格。"存在分层 <xref:System.Windows.Documents.Table>不支持分层。 子元素的<xref:System.Windows.Controls.Grid>进行绝对定位相对于其"单元格"边界的区域。 <xref:System.Windows.Documents.Table>不支持此功能。 最后，<xref:System.Windows.Controls.Grid>是比种更轻量<xref:System.Windows.Documents.Table>。  
+ <xref:System.Windows.Documents.Table> 和<xref:System.Windows.Controls.Grid>共享一些常见的功能，但每个最适合于不同的方案。 A<xref:System.Windows.Documents.Table>旨在用于在流内容中 (请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)有关流内容的详细信息)。 网格最适合在表单内（主要在流内容以外的任意位置）使用。 在<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支持流分页、 列回流等内容时选择的内容行为<xref:System.Windows.Controls.Grid>却没有。 A<xref:System.Windows.Controls.Grid>另一方面最佳使用外部<xref:System.Windows.Documents.FlowDocument>包括的原因有很多<xref:System.Windows.Controls.Grid>添加基于一个行和列的索引，元素<xref:System.Windows.Documents.Table>却没有。 <xref:System.Windows.Controls.Grid>元素允许的子内容，允许多个元素中的单个"单元格。"存在分层 <xref:System.Windows.Documents.Table> 不支持分层。 子元素的<xref:System.Windows.Controls.Grid>进行绝对定位相对于其"单元格"边界的区域。 <xref:System.Windows.Documents.Table> 不支持此功能。 最后，<xref:System.Windows.Controls.Grid>是比种更轻量<xref:System.Windows.Documents.Table>。  
   
 #### <a name="sizing-behavior-of-columns-and-rows"></a>列和行的大小调整行为  
- 在中定义的行和列<xref:System.Windows.Controls.Grid>可以充分利用<xref:System.Windows.GridUnitType.Star>以便分发剩余的空间按比例调整大小。 当<xref:System.Windows.GridUnitType.Star>被选为的高度或宽度的行或列，列或行接收剩余的可用空间的加权的比例。 这是与此相反<xref:System.Windows.GridUnitType.Auto>，这会将分发均匀地根据中的列或行的内容的大小的空间。 在使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 时，此值以 `*` 或 `2*` 的形式表示。 在第一种情况下，行或列将得到一倍的可用空间，在第二种情况下，将得到两倍的可用空间，依此类推。 通过将此项可按比例分配空间的技术结合起来<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>值`Stretch`可以按百分比的屏幕空间的分区布局空间。 <xref:System.Windows.Controls.Grid>是唯一的布局面板可以分发以这种方式的空间。  
+ 在中定义的行和列<xref:System.Windows.Controls.Grid>可以充分利用<xref:System.Windows.GridUnitType.Star>以便分发剩余的空间按比例调整大小。 当<xref:System.Windows.GridUnitType.Star>被选为的高度或宽度的行或列，列或行接收剩余的可用空间的加权的比例。 这是与此相反<xref:System.Windows.GridUnitType.Auto>，这会将分发均匀地根据中的列或行的内容的大小的空间。 在使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 时，此值以 `*` 或 `2*` 的形式表示。 在第一种情况下，行或列将得到一倍的可用空间，在第二种情况下，将得到两倍的可用空间，依此类推。 通过将此项可按比例分配空间的技术结合起来<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>值`Stretch`可以按百分比的屏幕空间的分区布局空间。 <xref:System.Windows.Controls.Grid> 是唯一的布局面板可以分发以这种方式的空间。  
   
 #### <a name="defining-and-using-a-grid"></a>定义和使用 Grid  
  以下示例演示如何生成 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，该 UI 类似于 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]“开始”菜单上提供的“运行”对话框上的 UI。  
@@ -199,17 +201,17 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>VirtualizingStackPanel  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此外提供了一种变体<xref:System.Windows.Controls.StackPanel>自动"显示"数据绑定子内容的元素。 在此上下文中，“虚拟化”一词指的是一种技术：通过此技术根据屏幕上哪些项可见，从较多的数据项中生成一个元素子集。 如果在指定时刻只有少量 UI 元素位于屏幕上，则此时生成大量 UI 元素需要占用大量内存和处理器。 <xref:System.Windows.Controls.VirtualizingStackPanel>(由提供的功能通过<xref:System.Windows.Controls.VirtualizingPanel>) 计算可见的项，并处理<xref:System.Windows.Controls.ItemContainerGenerator>从<xref:System.Windows.Controls.ItemsControl>(如<xref:System.Windows.Controls.ListBox>或<xref:System.Windows.Controls.ListView>) 仅创建为可见项的元素。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 此外提供了一种变体<xref:System.Windows.Controls.StackPanel>自动"显示"数据绑定子内容的元素。 在此上下文中，“虚拟化”一词指的是一种技术：通过此技术根据屏幕上哪些项可见，从较多的数据项中生成一个元素子集。 如果在指定时刻只有少量 UI 元素位于屏幕上，则此时生成大量 UI 元素需要占用大量内存和处理器。 <xref:System.Windows.Controls.VirtualizingStackPanel> (由提供的功能通过<xref:System.Windows.Controls.VirtualizingPanel>) 计算可见的项，并处理<xref:System.Windows.Controls.ItemContainerGenerator>从<xref:System.Windows.Controls.ItemsControl>(如<xref:System.Windows.Controls.ListBox>或<xref:System.Windows.Controls.ListView>) 仅创建为可见项的元素。  
   
  <xref:System.Windows.Controls.VirtualizingStackPanel>元素会自动设置为项主机控件的如<xref:System.Windows.Controls.ListBox>。 当承载数据绑定集合时，内容被自动虚拟化，只要内容的边界内<xref:System.Windows.Controls.ScrollViewer>。 在承载许多子项时，这将大幅提高性能。  
   
- 以下代码演示如何使用<xref:System.Windows.Controls.VirtualizingStackPanel>作为项主机。 <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizingProperty%2A?displayProperty=nameWithType>附加的属性必须设置为`true`（默认） 才能进行虚拟化。  
+ 以下代码演示如何使用<xref:System.Windows.Controls.VirtualizingStackPanel>作为项主机。 <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizingProperty?displayProperty=nameWithType>附加的属性必须设置为`true`（默认） 才能进行虚拟化。  
   
  [!code-xaml[VirtualizingStackPanel_Intro#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VirtualizingStackPanel_Intro/CS/default.xaml#1)]  
   
 <a name="Panels_overview_WrapPanel"></a>   
 ### <a name="wrappanel"></a>WrapPanel  
- <xref:System.Windows.Controls.WrapPanel>用于按顺序从左到右，换行到下一步的行在到达其父容器的边缘时的内容的位置来定位子元素。 内容可以设置为水平或垂直方向。 <xref:System.Windows.Controls.WrapPanel>可用于简单流动[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]方案。 它还可以用来将统一大小调整应用于其所有子元素。  
+ <xref:System.Windows.Controls.WrapPanel> 用于按顺序从左到右，换行到下一步的行在到达其父容器的边缘时的内容的位置来定位子元素。 内容可以设置为水平或垂直方向。 <xref:System.Windows.Controls.WrapPanel> 可用于简单流动[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]方案。 它还可以用来将统一大小调整应用于其所有子元素。  
   
  下面的示例演示如何创建<xref:System.Windows.Controls.WrapPanel>以显示<xref:System.Windows.Controls.Button>换行时到达其容器的边缘的控件。  
   
@@ -224,7 +226,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Panels_nested_panel_elements"></a>   
 ## <a name="nested-panel-elements"></a>嵌套 Panel 元素  
- <xref:System.Windows.Controls.Panel>可以相互嵌套元素，以便生成复杂布局。 这可以证明非常有用的其中一个<xref:System.Windows.Controls.Panel>非常适合的一部分[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，但可能会不符合的不同部分的需求[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+ <xref:System.Windows.Controls.Panel> 可以相互嵌套元素，以便生成复杂布局。 这可以证明非常有用的其中一个<xref:System.Windows.Controls.Panel>非常适合的一部分[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，但可能会不符合的不同部分的需求[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
   
  对于应用程序可以支持的嵌套数量，并没有实际限制，但通常最好限制应用程序仅使用预期布局实际所需的面板。 在许多情况下，<xref:System.Windows.Controls.Grid>元素可而不是嵌套面板，因为它作为一个布局容器的灵活性。 这可以通过将不必要的元素排除在树以外来提高应用程序的性能。  
   
@@ -259,11 +261,11 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Windows.Window.SizeToContent%2A>属性提供一种机制，使应用程序开发人员可以预计的需要本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 使用<xref:System.Windows.SizeToContent.WidthAndHeight>此属性值，该值父<xref:System.Windows.Window>始终动态调整大小以适应内容并不受人工高度或宽度的限制。  
   
- <xref:System.Windows.Controls.DockPanel><xref:System.Windows.Controls.Grid>，和<xref:System.Windows.Controls.StackPanel>是为所有不错的选择可本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 <xref:System.Windows.Controls.Canvas>但是，是不错的选择，因为它将定位内容绝对支持，从而使得难以本地化。  
+ <xref:System.Windows.Controls.DockPanel><xref:System.Windows.Controls.Grid>，和<xref:System.Windows.Controls.StackPanel>是为所有不错的选择可本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 <xref:System.Windows.Controls.Canvas> 但是，是不错的选择，因为它将定位内容绝对支持，从而使得难以本地化。  
   
  有关创建带有可本地化 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的其他信息，请参阅[使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
  [WPF 布局库示例](http://go.microsoft.com/fwlink/?LinkID=160054)  
  [布局](../../../../docs/framework/wpf/advanced/layout.md)  

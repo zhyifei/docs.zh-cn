@@ -1,10 +1,12 @@
 ---
-title: "=&gt; 运算符（C# 参考）"
+title: =&gt; 运算符（C# 参考）
 ms.date: 10/02/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: =>_CSharpKeyword
+f1_keywords:
+- =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
