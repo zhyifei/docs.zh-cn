@@ -1,1 +1,1 @@
-<span data-ttu-id="30bf0-101">自 2.0 之后可用</span><span class="sxs-lookup"><span data-stu-id="30bf0-101">Available since 2.0</span></span>
+<span data-ttu-id="40082-101">自 2.0 之后可用</span><span class="sxs-lookup"><span data-stu-id="40082-101">Available since 2.0</span></span>
