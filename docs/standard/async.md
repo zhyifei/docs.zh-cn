@@ -1,6 +1,6 @@
 ---
-title: "异步概述"
-description: "了解异步编程为何是一项能够简单处理多个核心上的阻塞 I/O 和并发操作的关键技术。"
+title: 异步概述
+description: 了解异步编程为何是一项能够简单处理多个核心上的阻塞 I/O 和并发操作的关键技术。
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

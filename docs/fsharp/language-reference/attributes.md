@@ -1,7 +1,7 @@
 ---
-title: "特性 (F#)"
-description: "了解如何 F # 属性启用要应用到编程构造的元数据。"
-keywords: "visual f#, f#, 函数编程"
+title: 特性 (F#)
+description: '了解如何 F # 属性启用要应用到编程构造的元数据。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

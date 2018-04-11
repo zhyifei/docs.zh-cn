@@ -1,13 +1,15 @@
 ---
-title: "无论是作为参数还是作为返回值，属性或方法调用都不能包括对私有对象的引用"
+title: 无论是作为参数还是作为返回值，属性或方法调用都不能包括对私有对象的引用
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID98
+f1_keywords:
+- vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: cce2bc67beb7e4ac0664b5b7240f5eb3ea0204f9
