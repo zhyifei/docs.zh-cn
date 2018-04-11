@@ -2,6 +2,7 @@
 ## [[] 运算符](index-operator.md)
 ## [() 运算符](invocation-operator.md)
 ## [。运算符](member-access-operator.md)
+## [?. 和 ?[] 运算符](null-conditional-operators.md)
 ## [:: 运算符](namespace-alias-qualifer.md)
 ## [+ 运算符](addition-operator.md)
 ## [- 运算符](subtraction-operator.md)
@@ -40,4 +41,3 @@
 ## [-> 运算符](dereference-operator.md)
 ## [??运算符](null-conditional-operator.md)
 ## [=> 运算符](lambda-operator.md)
-## [null 条件运算符](null-conditional-operators.md)
