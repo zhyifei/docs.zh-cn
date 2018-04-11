@@ -1,13 +1,13 @@
 ---
-title: "ICorDebug::CreateProcess 方法"
-ms.custom: 
+title: ICorDebug::CreateProcess 方法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ICorDebug.CreateProcess
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 16e45f3bad92914ce8c7fb0044534789a7a28b2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 方法
 将启动一个进程和调试器的控制之下其主线程。  
@@ -97,20 +97,20 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>备注  
  此方法的参数是不同于 Win32`CreateProcess`方法。  
   
- 若要启用非托管的混合模式调试，设置`dwCreationFlags`到 DEBUG_PROCESS &#124;DEBUG_ONLY_THIS_PROCESS。 如果你想要使用仅托管调试，则不要设置这些标志。  
+ 若要启用非托管的混合模式调试，设置`dwCreationFlags`到 DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS。 如果你想要使用仅托管调试，则不要设置这些标志。  
   
  如果调试器和进程要调试 （附加的进程） 共享单个控制台中，并且如果使用互操作调试，则可能会附加进程保持控制台锁定并在调试事件处停止。 然后，调试器将阻止使用控制台的任何尝试。 若要避免此问题，在设置 CREATE_NEW_CONSOLE 标志`dwCreationFlags`参数。  
   
  不支持 Win9x 和非 x86 平台，例如-基于 IA-64 和 AMD64 基于平台进行互操作调试。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

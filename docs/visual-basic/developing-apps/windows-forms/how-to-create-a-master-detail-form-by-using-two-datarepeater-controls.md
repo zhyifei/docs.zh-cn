@@ -1,22 +1,22 @@
 ---
-title: "如何： 使用两个 DataRepeater 控件 (Visual Studio) 创建主 / 从窗体"
+title: 如何： 使用两个 DataRepeater 控件 (Visual Studio) 创建主 / 从窗体
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - DataRepeater, master/detail tables
 ms.assetid: eec43ae3-05d8-45a1-8d41-3803c6359dbe
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: f17cb86c3ea0ea056291a51becd7ecf9f73d0a73
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-create-a-masterdetail-form-by-using-two-datarepeater-controls-visual-studio"></a>如何：使用两个 DataRepeater 控件创建主/详细信息窗体 (Visual Studio)
 你可以使用两个或多个显示相关的数据<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件创建主/从窗体。 例如，你可能想要一个中显示一个客户列表<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>，并当用户选择某个客户，在第二个中显示的该客户的订单列表<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 9. 选择此表节点，然后将其拖到第二个项模板区域<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控件。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
  [DataRepeater 控件简介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
  [如何：在 DataRepeater 控件中显示绑定数据](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  

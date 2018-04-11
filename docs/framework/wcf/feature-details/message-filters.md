@@ -1,28 +1,28 @@
 ---
-title: "消息筛选器"
-ms.custom: 
+title: 消息筛选器
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="message-filters"></a>消息筛选器
 为了实现基于内容的路由，路由服务使用 <xref:System.ServiceModel.Dispatcher.MessageFilter> 实现，这些实现检查消息的特定部分，例如地址、终结点名称或特定 XPath 语句。 如果随 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 一起提供的消息筛选器均无法满足您的需求，则您可以通过创建 <xref:System.ServiceModel.Dispatcher.MessageFilter> 基类的新实现来创建自定义筛选器。  
@@ -38,14 +38,14 @@ ms.lasthandoff: 12/22/2017
   
 |筛选器类型|描述|筛选器数据含义|示例筛选器|  
 |------------------|-----------------|-------------------------|--------------------|  
-|操作|使用 <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 类匹配包含特定操作的消息。|筛选器基于的操作。|\<筛选器名称 ="action1"filterType ="操作"filterData ="http://namespace/contract/operation"/ >|  
-|EndpointAddress|使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`匹配包含特定地址的消息。|筛选器基于的地址（在 To 标头中）。|\<筛选器名称 ="地址 1"filterType ="EndpointAddress"filterData ="http://host/vdir/s.svc/b"/ >|  
-|EndpointAddressPrefix|使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`匹配包含特定地址前缀的消息。|筛选器基于的地址（使用最长的前缀匹配项）。|\<筛选器名称 ="prefix1"filterType ="EndpointAddressPrefix"filterData ="http://host/"/ >|  
-|And|使用始终在返回前计算两个条件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 类。|不使用 filterData;而 filter1 和 filter2 具有相应消息筛选器的名称 （也在表中），它应**AND**它们连接起来。|\<筛选器名称 ="and1"filterType ="和"filter1 ="地址 1"filter2 ="action1"/ >|  
-|自定义|一个用户定义的类型，此类型扩展 <xref:System.ServiceModel.Dispatcher.MessageFilter> 类并具有采用字符串的构造函数。|customType 特性是要创建的类的完全限定类型名称；filterData 是在创建筛选器时要传递给构造函数的字符串。|\<筛选器名称 ="custom1"filterType ="Custom"customType="CustomAssembly.CustomMsgFilter，CustomAssembly"filterData ="自定义数据"/ >|  
-|EndpointName|使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 类根据消息已到达的服务终结点的名称来匹配消息。|名称的服务终结点，例如:"serviceEndpoint1"。  该终结点应为在路由服务上公开的终结点之一。|\<筛选器名称 ="stock1"filterType ="终结点"filterData ="SvcEndpoint"/ >|  
-|MatchAll|使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 类。 该筛选器匹配所有到达的消息。|不使用 filterData。 该筛选器将始终匹配所有消息。|\<筛选器名称 ="matchAll1"filterType ="MatchAll"/ >|  
-|XPath|使用 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 类匹配消息中的特定 XPath 查询。|在匹配消息时要使用的 XPath 查询。|\<筛选器名称 ="XPath1"filterType ="XPath"filterData ="//ns:element"/ >|  
+|操作|使用 <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 类匹配包含特定操作的消息。|筛选器基于的操作。|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|EndpointAddress|使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`匹配包含特定地址的消息。|筛选器基于的地址（在 To 标头中）。|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>类，与<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`匹配包含特定地址前缀的消息。|筛选器基于的地址（使用最长的前缀匹配项）。|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|And|使用始终在返回前计算两个条件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 类。|不使用 filterData;而 filter1 和 filter2 具有相应消息筛选器的名称 （也在表中），它应**AND**它们连接起来。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|自定义|一个用户定义的类型，此类型扩展 <xref:System.ServiceModel.Dispatcher.MessageFilter> 类并具有采用字符串的构造函数。|customType 特性是要创建的类的完全限定类型名称；filterData 是在创建筛选器时要传递给构造函数的字符串。|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
+|EndpointName|使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 类根据消息已到达的服务终结点的名称来匹配消息。|名称的服务终结点，例如:"serviceEndpoint1"。  该终结点应为在路由服务上公开的终结点之一。|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|MatchAll|使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 类。 该筛选器匹配所有到达的消息。|不使用 filterData。 该筛选器将始终匹配所有消息。|\<filter name="matchAll1" filterType="MatchAll" />|  
+|XPath|使用 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 类匹配消息中的特定 XPath 查询。|在匹配消息时要使用的 XPath 查询。|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
  下面的示例定义使用 XPath、EndpointName 和 PrefixEndpointAddress 消息筛选器的筛选器条目。 该示例还演示如何对 RoundRobinFilter1 和 RoundRobinFilter2 条目使用自定义筛选器。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 |tempuri|http://tempuri.org|  
 |ser|http://schemas.microsoft.com/2003/10/Serialization|  
   
- 如果您确定您将在 XPath 查询中使用特定命名空间，则可以将此命名空间和唯一的命名空间前缀添加到命名空间表中，并在所有 XPath 查询中使用该前缀而不是使用完整命名空间。 下面的示例定义命名空间"http://my.custom.namespace"，然后在 filterData 包含 XPath 查询中使用的"custom"的前缀。  
+ 如果您确定您将在 XPath 查询中使用特定命名空间，则可以将此命名空间和唯一的命名空间前缀添加到命名空间表中，并在所有 XPath 查询中使用该前缀而不是使用完整命名空间。 下面的示例定义的命名空间的前缀"custom""http://my.custom.namespace"，然后在 filterData 包含的 XPath 查询中使用。  
   
 ```xml  
 <namespaceTable>  

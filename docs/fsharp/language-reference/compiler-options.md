@@ -11,10 +11,10 @@ ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c797cf0b-5953-4053-8626-0558e9eaf10f
 ms.openlocfilehash: 23731832141bc2f74a04c5f4027fc210b5589537
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="compiler-options"></a>编译器选项
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 03/26/2018
 |**--optimize**[**+**&#124;**-**]**[&lt;string-list&gt;]**<br /><br />**-O[+&#124;-] [&lt;string-list&gt;]**|启用或禁用优化。 可以禁用或启用有选择地将其列出一些优化选项。 这些是： **nojitoptimize**， **nojittracking**， **nolocaloptimize**， **nocrossoptimize**， **notailcalls**.|
 |**--out:&lt;output-filename&gt;**<br /><br />**-o:&lt;output-filename&gt;**|指定的已编译的程序集或模块的名称。<br /><br />此编译器选项等效于具有相同名称的 C# 编译器选项。 有关详细信息，请参阅[&#47;出&#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/bw3t50f3.aspx)。|
 |**--pdb:&lt;pdb-filename&gt;**|命名的输出调试 PDB （程序数据库） 文件。 时，此选项才适用**-调试**也被启用。<br /><br />此编译器选项等效于具有相同名称的 C# 编译器选项。 有关详细信息，请参阅[ &#47;pdb &#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/ms228625.aspx)。|
-|**--platform:&lt;platform-name&gt;**|指定生成的代码才会在指定的平台上运行 (**x86**， **Itanium**，或**x64**)，或者，如果该平台名称**anycpu**选择，指定生成的代码可以在任何平台上运行。<br /><br />此编译器选项等效于具有相同名称的 C# 编译器选项。 有关详细信息，请参阅[&#47;平台&#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/zekwfyz4.aspx)。|
+|**-平台：&lt;平台名称&gt;**|指定生成的代码才会在指定的平台上运行 (**x86**， **Itanium**，或**x64**)，或者，如果该平台名称**anycpu**选择，指定生成的代码可以在任何平台上运行。<br /><br />此编译器选项等效于具有相同名称的 C# 编译器选项。 有关详细信息，请参阅[&#47;平台&#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/zekwfyz4.aspx)。|
 |**--preferreduilang:&lt;lang&gt;**| 指定首选的输出语言区域性名称 （例如，ES-ES、 JA-JP）。 |
 |**--quotations-debug**|指定应从 F # 引号文本派生，并反映定义的表达式发出额外的调试信息。 调试信息添加到 F # 表达式树节点的自定义属性。 请参阅[代码引用](code-quotations.md)和[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
 |**--reference:&lt;assembly-filename&gt;**<br /><br />**-r** &lt;**assembly-filename&gt;**|使从 F # 或.NET Framework 的程序集代码可供正在编译的代码使用。<br /><br />此编译器选项等效于具有相同名称的 C# 编译器选项。 有关详细信息，请参阅[&#47;引用&#40;C&#35;编译器选项&#41;](https://msdn.microsoft.com/library/yabyz3h4.aspx)。|
