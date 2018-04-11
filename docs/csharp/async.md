@@ -1,6 +1,6 @@
 ---
-title: "异步编程"
-description: "了解 .NET Core 提供的 C# 语言级别异步编程模式。"
+title: 异步编程
+description: 了解 .NET Core 提供的 C# 语言级别异步编程模式。
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

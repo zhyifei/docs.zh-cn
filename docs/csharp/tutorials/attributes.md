@@ -1,7 +1,7 @@
 ---
-title: "特性 - C#"
-description: "了解特性在 C# 中的工作方式。"
-keywords: ".NET, .NET Core, C#, 特性"
+title: 特性 - C#
+description: 了解特性在 C# 中的工作方式。
+keywords: .NET, .NET Core, C#, 特性
 author: mgroves
 ms.author: wiwagn
 ms.date: 03/06/2017

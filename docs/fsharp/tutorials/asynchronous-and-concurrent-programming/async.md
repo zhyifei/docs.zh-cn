@@ -1,6 +1,6 @@
 ---
-title: "F # 中的异步编程"
-description: "了解如何通过是易于使用和自然语言的语言级别编程模型实现 F # 异步编程。"
+title: 'F # 中的异步编程'
+description: '了解如何通过是易于使用和自然语言的语言级别编程模型实现 F # 异步编程。'
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart
