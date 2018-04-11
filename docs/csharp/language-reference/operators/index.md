@@ -1,6 +1,6 @@
 ---
 title: C# 运算符
-ms.date: 03/09/2017
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 14ebd489c48f53c8618cadf91f9744bb30f582d3
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="c-operators"></a>C# 运算符
 C# 提供了许多运算符，这些运算符是指定要在表达式中执行哪些操作（数学、索引、函数调用等等）的符号。 可以[重载](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)许多应用于用户定义类型的运算符，从而更改其含义。  
@@ -101,7 +101,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
   
  [x / y](../../../csharp/language-reference/operators/division-operator.md)：除法。 如果操作数均为整数，则结果为整数，舍去小数（例如，`-7 / 2 is -3`）。  
   
- [x % y](../../../csharp/language-reference/operators/modulus-operator.md)：取模。 如果操作数均为整数，则返回 x 除以 y 后的余数。  如果 `q = x / y` 且 `r = x % y`，则 `x = q * y + r`。  
+ [x % y](../../../csharp/language-reference/operators/remainder-operator.md)：余数。 如果操作数均为整数，则返回 x 除以 y 后的余数。  如果 `q = x / y` 且 `r = x % y`，则 `x = q * y + r`。  
   
 ## <a name="additive-operators"></a>相加运算符  
  这些运算符的优先级比下一章节高，比上一章节低。  
@@ -187,7 +187,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
   
  [x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md)：除法赋值。 `x` 值除以 `y` 值，结果存储在 `x` 中，并返回新值。  
   
- [x %= y](../../../csharp/language-reference/operators/modulus-assignment-operator.md)：取模赋值。 `x` 值除以 `y` 值，余数存储在 `x` 中，并返回新值。  
+ [x %= y](../../../csharp/language-reference/operators/remainder-assignment-operator.md)：余数赋值。 `x` 值除以 `y` 值，余数存储在 `x` 中，并返回新值。  
   
  [x &= y](../../../csharp/language-reference/operators/and-assignment-operator.md)：AND 赋值。 `y` 值和 `x` 值相与，结果存储在 `x` 中，并返回新值。  
   

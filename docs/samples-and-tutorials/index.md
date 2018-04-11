@@ -1,7 +1,7 @@
 ---
-title: "示例和教程"
-description: "有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语言的示例和教程信息。"
-keywords: ".NET、.NET core、ASP.NET、C#、示例、教程"
+title: 示例和教程
+description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语言的示例和教程信息。
+keywords: .NET、.NET core、ASP.NET、C#、示例、教程
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: d800d861f65779a73f83cf44e8884566eb7adee4
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="samples-and-tutorials"></a>示例和教程
 
@@ -25,17 +25,17 @@ ms.lasthandoff: 02/09/2018
 
 **[在 .NET Core 中使用 dotnet 测试的单元测试](../core/testing/unit-testing-with-dotnet-test.md)**
 
-本指南演示如何创建 ASP.NET Core Web 应用和关联的单元测试。 首先创建一个简单的 Web 服务应用，然后添加测试。 然后继续创建更多测试来指导新功能的实现。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test)。
+本指南演示如何创建 ASP.NET Core Web 应用和关联的单元测试。 首先创建一个简单的 Web 服务应用，然后添加测试。 然后继续创建更多测试来指导新功能的实现。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test)。
 
 ### <a name="tutorials"></a>教程
 
 **[使用 CLI 工具编写 .NET Core 控制台应用：分步指南](../core/tutorials/using-with-xplat-cli.md)**
 
-本指南介绍如何使用 .NET Core CLI 工具生成跨平台控制台应用。 将从基本的控制台应用开始介绍，最终涵盖包括测试在内的多个项目。 逐步添加功能，不断地增长知识。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/core/console-apps)。
+本指南介绍如何使用 .NET Core CLI 工具生成跨平台控制台应用。 将从基本的控制台应用开始介绍，最终涵盖包括测试在内的多个项目。 逐步添加功能，不断地增长知识。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/console-apps)。
 
 **[使用跨平台工具编写库](../core/tutorials/libraries.md)**
 
-本示例介绍如何使用跨平台 CLI 工具编写 .NET 的库。 这些工具提供可跨任何支持的操作系统工作的高效率、低级别体验。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library)。
+本示例介绍如何使用跨平台 CLI 工具编写 .NET 的库。 这些工具提供可跨任何支持的操作系统工作的高效率、低级别体验。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library)。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -47,41 +47,41 @@ ms.lasthandoff: 02/09/2018
 
 **[迭代器](../csharp/iterators.md)**
 
-本示例演示用于创建和使用 C# 迭代器的语法和功能。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators)。
+本示例演示用于创建和使用 C# 迭代器的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/iterators)。
 
 **[索引器](../csharp/indexers.md)**
 
-本示例演示用于 C# 索引器的语法和功能。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)。
+本示例演示用于 C# 索引器的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/indexers)。
 
 **[委托和事件](../csharp/delegates-events.md)**
 
-本示例演示用于 C# 委托和事件的语法和功能。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events)。 侧重于事件的[第二个示例](https://github.com/dotnet/docs/tree/master/samples/csharp/events)也位于相同的存储库中。
+本示例演示用于 C# 委托和事件的语法和功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events)。 侧重于事件的[第二个示例](https://github.com/dotnet/samples/tree/master/csharp/events)也位于相同的存储库中。
 
 **[表达式树](../csharp/expression-trees.md)**
 
-本示例演示可以使用表达式树解决的许多问题。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees)。
+本示例演示可以使用表达式树解决的许多问题。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)。
 
 **LINQ 示例**
 
-这一系列示例将演示许多语言集成查询 (LINQ) 功能。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp)。
+这一系列示例将演示许多语言集成查询 (LINQ) 功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/linq/csharp)。
 
 ### <a name="tutorials"></a>教程
 
 **[控制台应用程序](../csharp/tutorials/console-teleprompter.md)**
 
-本教程演示控制台 I/O、控制台应用的结构以及基于任务的异步编程模型的基础。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter)。
+本教程演示控制台 I/O、控制台应用的结构以及基于任务的异步编程模型的基础。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)。
 
 **[REST 客户端](../csharp/tutorials/console-webapiclient.md)**
 
-本教程演示 Web 通信、JSON 序列化和 C# 语言中面向对象的特性。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)。
+本教程演示 Web 通信、JSON 序列化和 C# 语言中面向对象的特性。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)。
 
 **[使用 LINQ](../csharp/tutorials/working-with-linq.md)**
 
-本教程演示许多 LINQ 功能和支持 LINQ 的语言元素。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq)。
+本教程演示许多 LINQ 功能和支持 LINQ 的语言元素。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)。
 
 **[Docker 中托管的微服务](../csharp/tutorials/microservices.md)**
 
-本教程演示如何生成 ASP.NET Core 微服务并将其托管在 Docker 中。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)。
+本教程演示如何生成 ASP.NET Core 微服务并将其托管在 Docker 中。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice)。
 
 **[借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](../core/tutorials/using-on-mac-vs.md)**
 
@@ -95,11 +95,11 @@ ms.lasthandoff: 02/09/2018
 
 **[在 Windows Docker 容器中运行 ASP.NET MVC 应用程序](../framework/docker/aspnetmvc.md)**
 
-本教程演示如何在 Windows Docker 容器中部署现有 ASP.NET MVC 应用。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator)。
+本教程演示如何在 Windows Docker 容器中部署现有 ASP.NET MVC 应用。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator)。
 
 **[在 Windows 容器中运行 .NET Framework 控制台应用程序](../framework/docker/console.md)**
 
-本教程演示如何在 Windows 容器中部署现有控制台应用。 可在 GitHub 上的 dotnet/docs 存储库中找到[完整示例](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)。
+本教程演示如何在 Windows 容器中部署现有控制台应用。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)。
 
 ## <a name="viewing-and-downloading-samples"></a>查看和下载示例
 
