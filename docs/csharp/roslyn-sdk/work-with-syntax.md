@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 0230777c59185a6b50d5dac5066efc3afa347f44
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="work-with-syntax"></a>使用语法
 
@@ -69,13 +69,13 @@ ms.lasthandoff: 03/26/2018
 
 每个节点、标记或琐碎内容都知道其在源文本内的位置和包含的字符数。 文本位置表示为一个 32 位整数，是一个从零开始的 `char` 索引。 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 对象表示开始位置和字符计数，都表示为整数。 如果 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 的长度为零，则其表示两个字符之间的位置。
 
-每个节点具有两个<xref:Microsoft.CodeAnalysis.Text.TextSpan>属性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*>和<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。 
+每个节点具有两个 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 属性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。 
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 属性表示从节点子树中第一个标记的开头到最后一个标记末尾的文本范围。 此范围不包括任何前导或尾随琐碎内容。
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> 属性表示的文本范围包括节点的正常范围，加上任何前导或尾随琐碎内容的范围。
 
-例如： 
+例如: 
 
 ``` csharp
       if (x > 3)
@@ -89,7 +89,7 @@ ms.lasthandoff: 03/26/2018
 
 ## <a name="kinds"></a>种类
 
-每个节点、标记或琐碎内容都具有 <xref:System.Int32?displayProperty=nameWithType> 类型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 属性，标识所表示的确切语法元素。 此值可强制转换为特定语言枚举；每种语言（C# 或 VB）都具有单个 `SyntaxKind` 枚举（分别为 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），列出了语法中所有可能的节点、标记和琐碎内容。 通过访问可以自动完成此转换<xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType>或<xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>扩展方法。
+每个节点、标记或琐碎内容都具有 <xref:System.Int32?displayProperty=nameWithType> 类型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 属性，标识所表示的确切语法元素。 此值可强制转换为特定语言枚举；每种语言（C# 或 VB）都具有单个 `SyntaxKind` 枚举（分别为 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），列出了语法中所有可能的节点、标记和琐碎内容。 可通过访问 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 扩展方法自动完成此转换。
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 属性可轻松消除共享同一节点类的语法节点类型的歧义。 对于标记和琐碎内容，此属性是区分不同元素类型的唯一方法。 
 

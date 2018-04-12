@@ -1,7 +1,7 @@
 ---
-title: "将 NoSQL 数据库用作持久性基础结构"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 将 NoSQL 数据库用作持久性基础结构"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 将 NoSQL 数据库用作持久性基础结构
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 将 NoSQL 数据库用作持久性基础结构
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
 
@@ -307,32 +307,32 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 #### <a name="additional-resources"></a>其他资源
 
--   **NoSQL 数据库的文档数据建模**
-    [https://docs.microsoft.com/zh-cn/azure/cosmos-db/modeling-data](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
+-   Modeling document data for NoSQL databases（针对 NoSQL 数据库的文档数据建模）
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
 
--   **Vaughn Vernon。The Ideal Domain-Driven Design Aggregate Store?**（理想的域驱动设计聚合应用商店？）
-    [https://vaughnvernon.co/?p=942](https://vaughnvernon.co/?p=942)
+-   **Vaughn Vernon。The Ideal Domain-Driven Design Aggregate Store?（理想的域驱动设计聚合应用商店？）**
+    [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
 
--   **Azure Cosmos DB: API for MongoDB 简介** 
-    [https://docs.microsoft.com/zh-cn/azure/cosmos-db/mongodb-introduction](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)**
+-   Introduction to Azure Cosmos DB: API for MongoDB（Azure Cosmos DB 介绍：API for MongoDB）**** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
 
--   **Azure Cosmos DB：使用 .NET 和 Azure 门户生成 MongoDB API Web 应用** 
-    [https://docs.microsoft.com/zh-cn/azure/cosmos-db/create-mongodb-dotnet **](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
+-   Azure Cosmos DB: Build a MongoDB API web app with .NET and the Azure portal（Azure Cosmos DB：使用 .NET 和 Azure 门户生成 MongoDB API web 应用）**** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
 
--   **将 Azure Cosmos DB 模拟器用于本地开发和测试** 
-    [https://docs.microsoft.com/zh-cn/azure/cosmos-db/local-emulator](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)**
+-   Use the Azure Cosmos DB Emulator for local development and testing（将 Azure Cosmos DB 仿真器用于本地开发和测试）**** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
 
--   **将 MongoDB 应用程序连接到 Azure Cosmos DB** 
-    [https://docs.microsoft.com/zh-cn/azure/cosmos-db/connect-mongodb-account](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)**
+-   Connect a MongoDB application to Azure Cosmos DB（将 MongoDB 应用程序连接到 Azure Cosmos DB）**** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/en-us/azure/cosmos-db/connect-mongodb-account)
 
--   **Cosmos DB 仿真器 Docker 映像（Windows 容器）** 
-    [https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)**
+-   The Cosmos DB Emulator Docker image (Windows Container)（Cosmos DB 仿真器 Docker 映像（Windows 容器））**** 
+    [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
 
--   **MongoDB Docker 映像（Linux 和 Windows 容器）** 
-    [https://hub.docker.com/r/_/mongo/](https://hub.docker.com/r/_/mongo/)**
+-   The MongoDB Docker image (Linux and Windows Container)（MongoDB Docker 映像（Linux 和 Windows 容器））**** 
+    [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
--   **使用 MongoChef (Studio 3T) 和 Azure Cosmos DB：用于 MongoDB 帐户的 API** 
-    [https://docs.microsoft.com/zh-cn/azure/cosmos-db/mongodb-mongochef](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)**
+-   Use MongoChef (Studio 3T) with an Azure Cosmos DB: API for MongoDB account（将 MongoChef (Studio 3T) 用于 Azure Cosmos DB：API for MongoDB 帐户）**** 
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-mongochef)
 
 
 >[!div class="step-by-step"]
