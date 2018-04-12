@@ -1,7 +1,7 @@
 ---
-title: "深入了解异步"
-description: "了解如何使用基于 .NET 任务的异步模型直接编写绑定 I/O 和 CPU 的异步代码。"
-keywords: ".NET、.NET Core、.NET Standard"
+title: 深入了解异步
+description: 了解如何使用基于 .NET 任务的异步模型直接编写绑定 I/O 和 CPU 的异步代码。
+keywords: .NET、.NET Core、.NET Standard
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
