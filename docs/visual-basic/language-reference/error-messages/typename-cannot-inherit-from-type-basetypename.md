@@ -1,17 +1,19 @@
 ---
-title: "&#39;&lt;typename&gt;&#39; 不能继承自&lt;类型&gt;&#39;&lt;基类型名称&gt;&#39; 因为它将扩展基访问权限&lt;类型&gt;程序集外部"
+title: '&#39;&lt;typename&gt;&#39; 不能继承自&lt;类型&gt;&#39;&lt;基类型名称&gt;&#39; 因为它将扩展基访问权限&lt;类型&gt;程序集外部'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30910
 - bc30910
-helpviewer_keywords: BC30910
+helpviewer_keywords:
+- BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d01981d3136968ae2534539b8eccab4c5c535fbc

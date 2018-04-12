@@ -1,17 +1,19 @@
 ---
-title: "结构 &#39;&lt;structurename&gt;&#39; 必须包含至少一个实例成员变量或未标记为至少一个实例事件声明 &#39;自定义 &#39;"
+title: 结构 &#39;&lt;structurename&gt;&#39; 必须包含至少一个实例成员变量或未标记为至少一个实例事件声明 &#39;自定义 &#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30941
 - vbc30941
-helpviewer_keywords: BC30941
+helpviewer_keywords:
+- BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b28dd59271bdaca52072710ea797fae6e9168eab

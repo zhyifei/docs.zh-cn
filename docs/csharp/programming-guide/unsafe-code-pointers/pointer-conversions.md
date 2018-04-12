@@ -1,12 +1,14 @@
 ---
-title: "指针转换（C# 编程指南）"
+title: 指针转换（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], conversions
+helpviewer_keywords:
+- pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 36589d139c91e04d9e3d8b31281a91c26b85a5d5
@@ -22,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 |<span data-ttu-id="bbe69-106">From</span><span class="sxs-lookup"><span data-stu-id="bbe69-106">From</span></span>|<span data-ttu-id="bbe69-107">到</span><span class="sxs-lookup"><span data-stu-id="bbe69-107">To</span></span>|  
 |----------|--------|  
-|<span data-ttu-id="bbe69-108">任何指针类型</span><span class="sxs-lookup"><span data-stu-id="bbe69-108">Any pointer type</span></span>|<span data-ttu-id="bbe69-109">void*</span><span class="sxs-lookup"><span data-stu-id="bbe69-109">void*</span></span>|  
+|<span data-ttu-id="bbe69-108">任何指针类型</span><span class="sxs-lookup"><span data-stu-id="bbe69-108">Any pointer type</span></span>|<span data-ttu-id="bbe69-109">void\*</span><span class="sxs-lookup"><span data-stu-id="bbe69-109">void\*</span></span>|  
 |<span data-ttu-id="bbe69-110">null</span><span class="sxs-lookup"><span data-stu-id="bbe69-110">null</span></span>|<span data-ttu-id="bbe69-111">任何指针类型</span><span class="sxs-lookup"><span data-stu-id="bbe69-111">Any pointer type</span></span>|  
   
  <span data-ttu-id="bbe69-112">显式指针转换用于使用强制转换对不包含隐式转换的转换执行操作。</span><span class="sxs-lookup"><span data-stu-id="bbe69-112">Explicit pointer conversion is used to perform conversions, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="bbe69-113">下表显示了这些转换。</span><span class="sxs-lookup"><span data-stu-id="bbe69-113">The following table shows these conversions.</span></span>  

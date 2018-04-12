@@ -1,12 +1,14 @@
 ---
-title: "如何：显式实现接口成员（C# 编程指南）"
+title: 如何：显式实现接口成员（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: interfaces [C#], explicitly implementing
+helpviewer_keywords:
+- interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: e02ae26000057e4e7323a777a6a0e1ca6fd8871b

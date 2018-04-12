@@ -1,12 +1,14 @@
 ---
-title: "* 运算符 (Visual Basic)"
+title: '* 运算符 (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.*
+f1_keywords:
+- vb.*
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], multiplication
 - operators [Visual Basic], multiplication
@@ -14,7 +16,7 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 450d728e44ef5639d75369e05b47cb3009b4d769
@@ -23,7 +25,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="-operator-visual-basic"></a><span data-ttu-id="b63a7-102">* 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b63a7-102">* Operator (Visual Basic)</span></span>
+# <a name="-operator-visual-basic"></a><span data-ttu-id="b63a7-102">\* 运算符 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b63a7-102">\* Operator (Visual Basic)</span></span>
 <span data-ttu-id="b63a7-103">将两个数字相乘。</span><span class="sxs-lookup"><span data-stu-id="b63a7-103">Multiplies two numbers.</span></span>  
   
 ## <a name="syntax"></a><span data-ttu-id="b63a7-104">语法</span><span class="sxs-lookup"><span data-stu-id="b63a7-104">Syntax</span></span>  
@@ -66,7 +68,7 @@ number1 * number2
  [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-operator_1.vb)]  
   
 ## <a name="see-also"></a><span data-ttu-id="b63a7-135">另请参阅</span><span class="sxs-lookup"><span data-stu-id="b63a7-135">See Also</span></span>  
- [<span data-ttu-id="b63a7-136">*= 运算符</span><span class="sxs-lookup"><span data-stu-id="b63a7-136">*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [<span data-ttu-id="b63a7-136">\*= 运算符</span><span class="sxs-lookup"><span data-stu-id="b63a7-136">\*= Operator</span></span>](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
  [<span data-ttu-id="b63a7-137">算术运算符</span><span class="sxs-lookup"><span data-stu-id="b63a7-137">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [<span data-ttu-id="b63a7-138">Visual Basic 中的运算符优先级</span><span class="sxs-lookup"><span data-stu-id="b63a7-138">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
  [<span data-ttu-id="b63a7-139">按功能列出的运算符</span><span class="sxs-lookup"><span data-stu-id="b63a7-139">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  

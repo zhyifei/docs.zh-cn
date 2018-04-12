@@ -1,17 +1,19 @@
 ---
-title: "语句不能之外结束块行 &#39; 如果 &#39;语句"
+title: 语句不能之外结束块行 &#39; 如果 &#39;语句
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc32005
 - bc32005
-helpviewer_keywords: BC32005
+helpviewer_keywords:
+- BC32005
 ms.assetid: 4039f51b-e0ee-4789-a89b-45d06de06b5d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 73fe3eb44e904366db7d505bbe8c5fef461eb78b

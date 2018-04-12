@@ -1,17 +1,19 @@
 ---
-title: "常量必须是内部类型或者枚举类型，不能是类、结构、类型参数或数组类型"
+title: 常量必须是内部类型或者枚举类型，不能是类、结构、类型参数或数组类型
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30424
 - bc30424
-helpviewer_keywords: BC30424
+helpviewer_keywords:
+- BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 702472751810c2d2bd08ece944ef0ffafc2049b5

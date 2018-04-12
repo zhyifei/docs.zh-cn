@@ -1,17 +1,19 @@
 ---
-title: "运算符声明必须是: +、-，*，-，-，^， &amp;，Like、 Mod，和，或 Xor，不是， &lt; &lt;， &gt; &gt;，=， &lt; &gt;， &lt;， &lt;=、 &gt;&gt;= CType，为 true 时，IsFalse"
+title: '运算符声明必须是: +、-，*，-，-，^， &amp;，Like、 Mod，和，或 Xor，不是， &lt; &lt;， &gt; &gt;，=， &lt; &gt;， &lt;， &lt;=、 &gt;&gt;= CType，为 true 时，IsFalse'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc33000
 - vbc33000
-helpviewer_keywords: BC33000
+helpviewer_keywords:
+- BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 80c8358dd13105c18e73e94735a51b02d5bd22c5
@@ -20,7 +22,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="efd48-102">运算符声明必须是: +、-，*，\,/，^， &amp;，Like、 Mod，和，或 Xor，不是， &lt; &lt;， &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="efd48-102">Operator declaration must be one of:  +,-,*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="efd48-102">运算符声明必须是: +、-，\*，\,/，^， &amp;，Like、 Mod，和，或 Xor，不是， &lt; &lt;， &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="efd48-102">Operator declaration must be one of:  +,-,\*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
 <span data-ttu-id="efd48-103">您可以声明仅有资格享受重载的运算符。</span><span class="sxs-lookup"><span data-stu-id="efd48-103">You can declare only an operator that is eligible for overloading.</span></span> <span data-ttu-id="efd48-104">下表列出可以声明的运算符。</span><span class="sxs-lookup"><span data-stu-id="efd48-104">The following table lists the operators you can declare.</span></span>  
   
 |<span data-ttu-id="efd48-105">类型</span><span class="sxs-lookup"><span data-stu-id="efd48-105">Type</span></span>|<span data-ttu-id="efd48-106">运算符</span><span class="sxs-lookup"><span data-stu-id="efd48-106">Operators</span></span>|  

@@ -1,17 +1,19 @@
 ---
-title: "默认属性 &#39;&lt;propertyname1&gt;&#39; 与默认属性 &#39; 冲突&lt;propertyname2&gt;&#39; 在 &#39;&lt;类名&gt;&#39;，因此应声明为 &#39;阴影 &#39;"
+title: 默认属性 &#39;&lt;propertyname1&gt;&#39; 与默认属性 &#39; 冲突&lt;propertyname2&gt;&#39; 在 &#39;&lt;类名&gt;&#39;，因此应声明为 &#39;阴影 &#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc40007
 - bc40007
-helpviewer_keywords: BC40007
+helpviewer_keywords:
+- BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: af92c06f6d07b6ea64a05b9043547a46e3679111

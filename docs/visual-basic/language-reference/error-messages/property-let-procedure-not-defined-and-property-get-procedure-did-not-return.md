@@ -1,14 +1,16 @@
 ---
-title: "未定义 Property Let 过程，并且 Property Get 过程未返回对象"
+title: 未定义 Property Let 过程，并且 Property Get 过程未返回对象
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID451
+f1_keywords:
+- vbrID451
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b043ca698a9c90afd41de90c7dbc5879ae7de623

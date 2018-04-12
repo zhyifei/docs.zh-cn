@@ -1,12 +1,14 @@
 ---
-title: "嵌套类型（C# 编程指南）"
+title: 嵌套类型（C# 编程指南）
 ms.date: 07/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: nested types [C#]
+helpviewer_keywords:
+- nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: ab13c68b638062ab89c90dbfc51b51b8d72d3bde

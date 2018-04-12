@@ -1,17 +1,19 @@
 ---
-title: "表达式已类型 &#39;&lt;typename&gt;&#39; 这是将受限的类型并且不能用于访问从继承的成员 &#39; 对象 &#39; 或 &#39;ValueType &#39;"
+title: 表达式已类型 &#39;&lt;typename&gt;&#39; 这是将受限的类型并且不能用于访问从继承的成员 &#39; 对象 &#39; 或 &#39;ValueType &#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc31393
 - vbc31393
-helpviewer_keywords: BC31393
+helpviewer_keywords:
+- BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: a30742bd46ccd1a3e5a688ebd2621e2c8a3d50e7
