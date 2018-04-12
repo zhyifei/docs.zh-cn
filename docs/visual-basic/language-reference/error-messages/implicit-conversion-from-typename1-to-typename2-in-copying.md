@@ -1,17 +1,19 @@
 ---
-title: "从隐式转换 &#39;&lt;typename1&gt;&#39; 为 &#39;&lt;typename2&gt;&#39; 中复制的值的 &#39;ByRef &#39;参数 &#39;&lt;parametername&gt;&#39; 回匹配的自变量。"
+title: 从隐式转换 &#39;&lt;typename1&gt;&#39; 为 &#39;&lt;typename2&gt;&#39; 中复制的值的 &#39;ByRef &#39;参数 &#39;&lt;parametername&gt;&#39; 回匹配的自变量。
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc41999
 - bc41999
-helpviewer_keywords: BC41999
+helpviewer_keywords:
+- BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 9e858b475a816a35d18822643de5a273abe28562

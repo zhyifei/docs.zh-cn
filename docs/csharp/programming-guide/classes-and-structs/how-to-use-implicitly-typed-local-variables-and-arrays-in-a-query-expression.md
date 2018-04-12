@@ -1,12 +1,14 @@
 ---
-title: "如何：在查询表达式中使用隐式类型的局部变量和数组（C# 编程指南）"
+title: 如何：在查询表达式中使用隐式类型的局部变量和数组（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: implicitly-typed local variables [C#], how to use
+helpviewer_keywords:
+- implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 754698fc423fb2dfc9bf50ed15be610831cefeda

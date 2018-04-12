@@ -1,12 +1,14 @@
 ---
-title: "字符串长度超过最大长度 32767 个字符的 &#39;FileSystem &#39;Api"
+title: 字符串长度超过最大长度 32767 个字符的 &#39;FileSystem &#39;Api
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrFileIO_StringLengthExceeded
+f1_keywords:
+- vbrFileIO_StringLengthExceeded
 ms.assetid: 4044ae87-9984-400c-b247-20f9c1b1a0c0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 2cee17283907fca67b1606b0c27eefae66c87ff4

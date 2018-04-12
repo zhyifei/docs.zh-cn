@@ -1,17 +1,19 @@
 ---
-title: "不能引用 &#39;&lt;名称&gt;&#39; 因为它是值类型字段 &#39; 的成员&lt;名称&gt;&#39; 的类 &#39;&lt;类名&gt;&#39; 它具有 &#39;System.MarshalByRefObject &#39;为基类"
+title: 不能引用 &#39;&lt;名称&gt;&#39; 因为它是值类型字段 &#39; 的成员&lt;名称&gt;&#39; 的类 &#39;&lt;类名&gt;&#39; 它具有 &#39;System.MarshalByRefObject &#39;为基类
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30310
 - bc30310
-helpviewer_keywords: BC30310
+helpviewer_keywords:
+- BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 7a84811b9f0e706cf3ebede09e07c03bd7e4cea4

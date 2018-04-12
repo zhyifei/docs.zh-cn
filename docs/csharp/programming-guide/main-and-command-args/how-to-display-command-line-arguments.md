@@ -1,12 +1,14 @@
 ---
-title: "如何：显示命令行自变量（C# 编程指南）"
+title: 如何：显示命令行自变量（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: command-line arguments [C#], displaying
+helpviewer_keywords:
+- command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: f6ae495eef227c6e4d9fb9ca0d4d0c031163fd52

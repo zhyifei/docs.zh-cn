@@ -1,17 +1,19 @@
 ---
-title: "Lambda 表达式不是有效的第一个表达式中 &#39;选择用例 &#39;语句"
+title: Lambda 表达式不是有效的第一个表达式中 &#39;选择用例 &#39;语句
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc36635
 - vbc36635
-helpviewer_keywords: BC36635
+helpviewer_keywords:
+- BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: e91401d6891d4e38014bb716a337560885cf73a2

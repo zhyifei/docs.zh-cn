@@ -1,12 +1,14 @@
 ---
-title: "循环控制变量的类型 &#39;&lt;typename&gt;&#39; 未实现 &#39;System.IComparable &#39;接口"
+title: 循环控制变量的类型 &#39;&lt;typename&gt;&#39; 未实现 &#39;System.IComparable &#39;接口
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_IComparable2
+f1_keywords:
+- vbrArgument_IComparable2
 ms.assetid: 8dba1270-380a-4f05-8bad-1031e6a9cc90
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: daf475d05edd3a520644aef23ba40e054ba95c6d
