@@ -84,7 +84,7 @@ ms.lasthandoff: 04/10/2018
 |tempuri|http://tempuri.org|  
 |ser|http://schemas.microsoft.com/2003/10/Serialization|  
   
- 如果您确定您将在 XPath 查询中使用特定命名空间，则可以将此命名空间和唯一的命名空间前缀添加到命名空间表中，并在所有 XPath 查询中使用该前缀而不是使用完整命名空间。 下面的示例定义的命名空间的前缀 "http://my.custom.namespace"，然后在 filterData 包含的 XPath 查询中使用。  
+ 如果您确定您将在 XPath 查询中使用特定命名空间，则可以将此命名空间和唯一的命名空间前缀添加到命名空间表中，并在所有 XPath 查询中使用该前缀而不是使用完整命名空间。 下面的示例定义的命名空间的前缀 " http://my.custom.namespace "，然后在 filterData 包含的 XPath 查询中使用。  
   
 ```xml  
 <namespaceTable>  

@@ -13,7 +13,7 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  将 `httpsGetEnabled` 元素的 `<serviceMetadata>` 属性设置为 `true`。  
   
-7.  将 `httpsGetUrl` 元素的 `<serviceMetadata>` 属性设置为适当的值。 请注意，如果指定绝对地址，则 URL 必须以方案“https://”开始。 如果指定相对地址，则必须为服务主机提供一个 HTTPS 基址。 如果不设置此属性，则默认地址为 ""，或者直接为服务的 HTTPS 基址。  
+7.  将 `httpsGetUrl` 元素的 `<serviceMetadata>` 属性设置为适当的值。 请注意，如果指定绝对地址，则 URL 必须以方案 “https://” 开始。 如果指定相对地址，则必须为服务主机提供一个 HTTPS 基址。 如果不设置此属性，则默认地址为 ""，或者直接为服务的 HTTPS 基址。  
   
 8.  若要使用服务行为，设置`behaviorConfiguration`属性[\<服务 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)行为元素的名称属性的值的元素。 下面的配置代码演示了一个完整的示例。  
   
