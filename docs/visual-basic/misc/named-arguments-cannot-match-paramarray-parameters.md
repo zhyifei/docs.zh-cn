@@ -1,12 +1,14 @@
 ---
-title: "命名参数无法匹配 ParamArray 参数"
+title: 命名参数无法匹配 ParamArray 参数
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrNamedArgumentOnParamArray
+f1_keywords:
+- vbrNamedArgumentOnParamArray
 ms.assetid: ba35fb86-329a-4ceb-864b-045c07661482
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: aee97f441b1d79da999b6d7ac6d7e6ac7340dd04
