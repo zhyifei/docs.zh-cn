@@ -1,12 +1,12 @@
 ---
 title: EventWaitHandle
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], EventWaitHandle class
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - event wait handles [.NET Framework]
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-caps.latest.revision: 
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/23/2017
   
  手动重置事件如同畜栏口一样。 如果事件未收到信号，在事件句柄上等待的线程受阻止，如同畜栏中的马一样。 通过调用 <xref:System.Threading.EventWaitHandle.Set%2A> 方法向事件发出信号后，所有等待线程都获得释放，可以继续执行。 在 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法获得调用前，一直向事件发出信号。 这样一来，手动重置事件就非常适用于，阻止需要等待一个线程完成任务的线程。  
   
- 就像马离开畜栏一样，获释放的线程需要一定的时间，才能被操作系统排入计划和恢复执行。 如果在所有线程恢复执行前 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法获得调用，剩余线程将再次受阻止。 恢复哪些线程以及阻止哪些线程都取决于随机因素，如系统负载、等待计划程序的线程数等。 如果向事件发出信号的线程在发出信号后结束（这是最常见的使用模式），这就不存在问题。 如果希望向事件发出信号的线程在所有等待线程恢复后启动新任务，必须将它一直阻止到所有等待线程都已恢复。 否则，将会出现争用条件，而且代码行为也会变得不可预测。  
+ 就像马离开畜栏一样，获释放的线程需要一定的时间，操作系统才能排入计划和恢复执行。 如果在所有线程恢复执行前 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法获得调用，剩余线程将再次受阻止。 恢复哪些线程以及阻止哪些线程都取决于随机因素，如系统负载、等待计划程序的线程数等。 如果向事件发出信号的线程在发出信号后结束（这是最常见的使用模式），这就不存在问题。 如果希望向事件发出信号的线程在所有等待线程恢复后启动新任务，必须将它一直阻止到所有等待线程都已恢复。 否则，将会出现争用条件，而且代码行为也会变得不可预测。  
   
 ## <a name="features-common-to-automatic-and-manual-events"></a>自动和手动事件的常见功能  
  通常情况下，一个或多个线程在 <xref:System.Threading.EventWaitHandle> 上一直受阻止到未受阻止的线程调用 <xref:System.Threading.EventWaitHandle.Set%2A> 方法，此方法释放等待线程之一（如果是自动重置事件）或全部线程（如果是手动重置事件）。 线程可以向 <xref:System.Threading.EventWaitHandle> 发出信号，然后调用静态 <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> 方法以原子操作的形式在其中受阻止。  

@@ -1,23 +1,25 @@
 ---
-title: "结构分析工具 (Mefx)"
-ms.custom: 
+title: 结构分析工具 (Mefx)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Composition Analysis Tool [MEF]
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: d6e5ab22ff2fe382fa2a266e3180cb34f970cc48
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -126,7 +128,7 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
 >  在大多数情况下，Mefx 将能够诊断级联失败的根源。 但是，在以编程方式将部件添加到容器的情况下，在涉及层次结构容器的情况下，或者在涉及自定义 `ExportProvider` 实现的情况下，Mefx 将不能诊断原因。 一般情况下，因尽可能避免前面所述的各种情况，因为失败原因通常很难诊断。  
   
 <a name="white_lists"></a>   
-## <a name="white-lists"></a>白名单  
+## <a name="white-lists"></a>允许列表  
  使用 `/whitelist` 选项可以指定一个文本文件，其中列出预期将被拒绝的部件。 意外的拒绝则将被标记出来。 在分析不完整的库或分析缺少某些依赖关系的子库时，这将很有帮助。 `/whitelist` 选项可应用于 `/rejected` 或 `/causes` 操作。  
   
  请考虑名为 test.txt 且包含文本“ClassLibrary1.ChainOne”的文件。 如果在前面的示例中将 `/rejected` 操作用于 `/whitelist` 选项，它将生成以下输出：  

@@ -1,12 +1,12 @@
 ---
-title: "托管线程处理的最佳做法"
-ms.custom: 
+title: 托管线程处理的最佳做法
+ms.custom: ''
 ms.date: 11/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -101,7 +101,7 @@ else {
   
 -   后台线程仅在主用户线程空闲时才执行。 连续运行的前台线程将使后台线程缺乏处理器时间。  
   
--   对线程调用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法时，此线程只有等到当前线程生成或被操作系统强占后才会开始执行。  
+-   对线程调用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法时，此线程只有等到当前线程生成或由操作系统强占后才会开始执行。  
   
 -   出现争用条件的原因通常是，程序员未预见到一个线程可能会在某一难以控制的时刻被抢占这一事实，有时就会出现另一线程抢先使用代码块这种情况。  
   
