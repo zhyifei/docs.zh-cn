@@ -1,18 +1,18 @@
 ---
-title: "Docker 应用程序的外部循环 DevOps 工作流中的步骤"
-description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: Docker 应用程序的外部循环 DevOps 工作流中的步骤
+description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a03a9d153793b30ca9276b64a0a33e3de26f8f6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 应用程序的外部循环 DevOps 工作流中的步骤
 
@@ -110,13 +110,13 @@ Visual Studio Team Services 这些任务中，生成 Linux Docker 主机/虚拟�
 
 **详细信息** 用于读取有关将 Visual Studio Team Services Docker CI 的详细信息管道，若要查看演练，请访问以下站点：
 
-Docker 容器形式运行 Visual Studio Team Services 代理： [https://hub.docker.com/r/ \ microsoft/vsts 代理 /](https://hub.docker.com/r/microsoft/vsts-agent/)
+Docker 容器形式运行 Visual Studio Team Services 代理： [ https://hub.docker.com/r/\ microsoft/vsts 代理 /](https://hub.docker.com/r/microsoft/vsts-agent/)
 
 VSTS Docker 扩展： <https://aka.ms/vstsdockerextension>
 
 构建利用 Visual Studio Team Services 的.NET 核心 Linux Docker 映像： <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
-在生成的基于 Linux 的 Visual Studio 团队服务构建 Docker 支持机： <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+构建 Docker 支持与基于 Linux 的 Visual Studio 团队服务生成计算机： <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multicontainer-docker-applications"></a>集成、 测试和验证 multicontainer Docker 应用程序
 
@@ -220,7 +220,7 @@ Docker 映像的不可变性可确保具有什么已开发、 测试通过 CI，
 
 **详细信息** 以便阅读更多有关使用 Visual Studio Team Services 和 Docker CD 管道，请访问以下站点：
 
-Docker 和 Azure 容器服务的 visual Studio Team Services 扩展： [https://aka.ms/ \ vstsdockerextension](https://aka.ms/vstsdockerextension)
+Docker 和 Azure 容器服务的 visual Studio Team Services 扩展： [ https://aka.ms/\ vstsdockerextension](https://aka.ms/vstsdockerextension)
 
 Azure 容器服务： <https://aka.ms/azurecontainerservice>
 

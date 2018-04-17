@@ -1,18 +1,18 @@
 ---
-title: "对于 Docker 应用程序的内部循环开发工作流"
-description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 对于 Docker 应用程序的内部循环开发工作流
+description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>对于 Docker 应用程序的内部循环开发工作流
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 03/05/2018
 
 适用于 Mac 和 Windows 的 Docker 的最新版本，它是比以往若开发 Docker 应用程序，并且安装程序直接。
 
-**详细信息** 有关用于 Windows 的 Docker 设置的说明，请转到[https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)。
+**详细信息** 有关用于 Windows 的 Docker 设置的说明，请转到[ https://docs.docker.com/docker-for-windows/ ](https://docs.docker.com/docker-for-windows/)。
 
 有关设置适用于 Mac 的 Docker 的说明，请转到<https://docs.docker.com/docker-for-mac/>。
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/05/2018
 
 Microsoft 提供了 Visual Studio 代码，这是在 Mac、 Windows 和 Linux 上支持并提供包含 IntelliSense 的轻量代码编辑器[处理很多语言支持](https://code.visualstudio.com/docs/languages/overview)(JavaScript、.NET、 转到、 Java、 Ruby、 Python 和大多数现代的语言），[调试](https://code.visualstudio.com/Docs/editor/debugging)，[集成 Git 与](https://code.visualstudio.com/Docs/editor/versioncontrol)和[扩展支持](https://code.visualstudio.com/docs/extensions/overview)。 此编辑器是非常适合于 Mac 和 Linux 的开发人员。 在 Windows 中，你还可以使用完整的 Visual Studio 应用程序。
 
-**详细信息** 安装 Visual Studio for Windows、 Mac 或 Linux 的说明，请转到[http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/)。
+**详细信息** 安装 Visual Studio for Windows、 Mac 或 Linux 的说明，请转到[ http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/ ](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/)。
 
 您可以使用 Docker CLI 和写入你的代码使用任何代码编辑器中，但如果你使用 Visual Studio 代码，它使用户可以轻松对作者 Dockerfile 和 docker-compose.yml 文件在工作区中。 此外，你可以从 IDE 它会提示用户可以使用下方的 Docker CLI 的详细的操作运行的脚本运行 Visual Studio Code 任务。
 
@@ -125,7 +125,7 @@ DockerFile，还需要指示 Docker 侦听到将在运行时 （如端口 80） 
 
 **详细信息** 有关构建.NET Core 应用程序的 Docker 映像的信息，请转到<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
 
-若要了解有关生成你自己的映像的详细信息，请转到[https://docs.docker.com/engine/ \教程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
+若要了解有关生成你自己的映像的详细信息，请转到[ https://docs.docker.com/engine/\教程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
 
 **多平台映像存储库**
 
@@ -258,8 +258,8 @@ Visual Studio Code 支持调试 Docker，如果你使用 Node.js 和其他平台
 
 你还可以调试在 Docker 中的.NET Core 容器时使用 Visual Studio 中下, 一节中所述。
 
-**详细信息：** 若要了解有关调试 Node.js Docker 容器的详细信息，请转到<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/ \ 用户\_ed/2016年/02/27 /visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
+**详细信息：** 若要了解有关调试 Node.js Docker 容器的详细信息，请转到<https://blog.docker.com/2016/07/live-debugging-docker/>和[ https://blogs.msdn.microsoft.com/\ 用户\_ed/2016年/02/27 /visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
 
 
 >[!div class="step-by-step"]
-[Previous] (docker-apps-development-environment.md) [Next] (visual-studio-tools-for-docker.md)
+[以前](docker-应用程序的开发-environment.md) [下一步] (visual-studio 的工具的对于-docker.md)

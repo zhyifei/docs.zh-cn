@@ -1,18 +1,18 @@
 ---
-title: "DevOps 协作基础的容器"
-description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: DevOps 协作基础的容器
+description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 832beea490bb8221c7aa4202316cbebee84ef32e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f7d0f9b1d72f353b2c22f846f723c82f769f6a4e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps 协作基础的容器
 
@@ -71,4 +71,4 @@ DevOps 应视为一种部署模式，而非目的。 它应以增量方式实现
 -   即插很好地与你现有的 DevOps 投资，包括在开放源代码中的投资的很多
 
 >[!div class="step-by-step"]
-[Previous] (index.md) [Next] (../Microsoft-platform-tools-containerized-apps/index.md)
+[以前](index.md) [下一步] (.../Microsoft-platform-tools-containerized-apps/index.md)

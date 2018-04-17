@@ -1,18 +1,18 @@
 ---
-title: "监视容器化应用程序服务"
-description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 监视容器化应用程序服务
+description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58bf96dfa06a78892563698200e6f4df5f371346
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b3ffa6c230176e1de6269ed0b30d05711ff78704
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-containerized-application-services"></a>监视容器化应用程序服务
 
@@ -42,10 +42,10 @@ ms.lasthandoff: 12/23/2017
 
 若要创建 Application Insights 资源时，请执行后面的列表中显示的文章中的说明。 Azure 门户将为你创建所需的脚本。
 
--   **监视 Docker Application Insights 中的应用程序：**[https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+-   **在 Application Insights 监视 Docker 应用程序：**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **在 Docker Hub 和 Github 的应用程序 Insights Docker 映像：**  
-[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/)和<https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) 和 <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **为 ASP.NET 配置 Application Insights 设置：**  
 [https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
@@ -100,4 +100,4 @@ Application Insights 和 Operations Management Suite 专注于监视活动;但�
 **详细信息** 若要查找有关安装和配置 Docker 容器中的解决方案[Operations Management Suite](http://microsoft.com/oms)，请转到<https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>。
 
 >[!div class="step-by-step"]
-[Previous] (manage-production-docker-environments.md) [Next] (../key-takeaways/index.md)
+[以前](管理-生产-docker-environments.md) [下一步] (.../key-takeaways/index.md)

@@ -1,20 +1,20 @@
 ---
-title: 状态和 Docker 应用程序中的数据
+title: Docker 应用程序中的状态和数据
 description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
-keywords: Docker, 微服务, ASP.NET, 容器
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d4b75faffd76a85f9ca1c779ed58bfa37625cff3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 83094cd9a13d77f489df639096bb42b23ce152e7
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="state-and-data-in-docker-applications"></a>状态和 Docker 应用程序中的数据
+# <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
 容器的基元是不可变性。 与 VM 相比，容器不会消失，作为一种常见情况。 在从死进程、 重载的 CPU 或完整或失败的磁盘的各种窗体中，VM 可能会失败。 但，我们希望在虚拟机可用并 RAID 驱动器是司空见惯以确保驱动器故障维护数据。
 
@@ -36,7 +36,7 @@ Docker 使用一个称作功能*覆盖文件系统*来实现写入时复制流�
 
 数据卷专门指定在跳过的一个或多个容器内的目录[联合的文件系统](https://docs.docker.com/v1.8/reference/glossary#union-file-system)。 数据卷用于维护数据，独立于容器的生命周期。 Docker 因此永远不会自动删除卷时您删除容器，也不能将它不再引用的容器的"垃圾收集"卷。 主机操作系统可以浏览和编辑中的任何卷的数据自由，这是另一个原因应谨慎使用数据卷。
 
-A[数据卷容器](https://docs.docker.com/v1.8/userguide/dockervolumes/)是对常规数据卷的改进。 它是实质上是具有一个或多个数据卷 （如前面所述），在其中创建的休眠的容器。 通过中央装入点还原时，数据卷容器提供对容器的访问。 访问此方法的好处是它提取原始数据，进行逻辑装入点的数据容器的位置。 它还允许访问数据容器卷以创建和销毁时将数据保存在专用的容器中持久保留的"应用程序"容器。
+A[数据卷容器](https://docs.docker.com/v1.8/userguide/dockervolumes/)是对常规数据卷的改进。 它是实质上是具有一个或多个数据卷 （如前面所述），在其中创建的休眠的容器。 数据卷容器从中央装入点提供对容器的访问。 访问此方法的好处是它提取原始数据，进行逻辑装入点的数据容器的位置。 它还允许访问数据容器卷以创建和销毁时将数据保存在专用的容器中持久保留的"应用程序"容器。
 
 图 4-5 显示正则 Docker 卷可以置于存储容器本身外，但在主机服务器/VM 物理边界内。 *Docker 卷没有使用到另一台主机服务器/虚拟机从卷的能力*。
 

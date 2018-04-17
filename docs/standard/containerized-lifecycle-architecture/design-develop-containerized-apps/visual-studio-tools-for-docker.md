@@ -1,18 +1,18 @@
 ---
-title: "使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)"
-description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
+description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: cbd4dea32b98e79e85302aa5d4a5c97b1b0fa556
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 03/05/2018
 
 如果你在使用 Visual Studio 2015，你必须具有 Update 3 或更高版本以及 Visual Studio Tools for Docker。
 
-**详细信息：** 安装 Visual Studio 的说明，请转到[https://www.visualstudio.com/ \ 产品/vs-2015年-产品的版本](https://www.visualstudio.com/products/vs-2015-product-editions)。
+**详细信息：** 安装 Visual Studio 的说明，请转到[ https://www.visualstudio.com/\ 产品/vs-2015年-产品的版本](https://www.visualstudio.com/products/vs-2015-product-editions)。
 
 若要查看更多有关安装 Visual Studio Tools for Docker，请转到<http://aka.ms/vstoolsfordocker>和<https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>。
 
@@ -74,4 +74,4 @@ Visual Studio Tools for Docker 提供一致的方法来开发和验证本地 Doc
 
 
 >[!div class="step-by-step"]
-[Previous] (docker-apps-inner-loop-workflow.md) [Next] (set-up-windows-containers-with-powershell.md)
+[以前](docker-应用程序的内部的循环-workflow.md) [下一步] (set-up-windows-containers-with-powershell.md)
