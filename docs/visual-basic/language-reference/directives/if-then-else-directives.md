@@ -1,9 +1,9 @@
 ---
-title: "#<a name=\"ifthenelse-directives\"></a>如果......#Else 指令"
-ms.date: 07/20/2015
+title: '#如果......#Else 指令'
+ms.date: 04/11/2018
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.#EndIf
@@ -22,14 +22,13 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 77757e441ae937aa86122f237e839d1005644409
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 884c7ed6f0a346f2d35f01006cea23e47907d13f
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else 指令
 有条件地编译选定的 Visual Basic 代码块。  
@@ -67,14 +66,29 @@ ms.lasthandoff: 11/21/2017
  而不考虑任何评估的结果，将计算所有表达式使用`Option Compare Binary`。 `Option Compare`语句不会影响中的表达式`#If`和`#ElseIf`语句。  
   
 > [!NOTE]
->  任何单行形式的`#If`， `#Else`， `#ElseIf`，和`#End If`指令存在。 没有其他代码可出现在任何指令所在的行。  
-  
-## <a name="example"></a>示例  
+>  任何单行形式的`#If`， `#Else`， `#ElseIf`，和`#End If`指令存在。 没有其他代码可出现在任何指令所在的行。 
+
+条件编译块内的语句必须是完整的逻辑语句。 例如，你不能有条件地编译只有函数的属性，但你可以有条件地声明及其属性以及函数：
+
+```vb
+   #If DEBUG Then
+   <WebMethod()>
+   Public Function SomeFunction() As String
+   #Else
+   <WebMethod(CacheDuration:=86400)>
+   Public Function SomeFunction() As String
+   #End If
+```
+
+## <a name="example"></a>示例
  此示例使用`#If...Then...#Else`构造来确定是否编译某些语句。  
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
 ## <a name="see-also"></a>另请参阅  
- [#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)  
- [If...Then...Else 语句](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+[#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)  
+[If...Then...Else 语句](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+[条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
+<xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>   
+
+

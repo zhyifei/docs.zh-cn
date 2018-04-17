@@ -1,12 +1,9 @@
 ---
-title: "封送处理不同类型的数组"
-ms.custom: 
+title: 封送处理不同类型的数组
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +12,20 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1102243eaf43eeb87b16bb654568ef15a821214c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 62958f1656dfbfcb45356378161090b8271b6b83
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送处理不同类型的数组
-数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅 [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)。  
+数组是包含有一个或多个相同类型的元素的托管代码中的引用类型。 尽管数组是引用类型，但它们却作为 In 参数传递到非托管函数。 此行为与托管数组传递到托管对象的方式不一致，数组作为 In/Out 参数进行传递。 有关其他详细信息，请参阅[复制和固定](copying-and-pinning.md)。  
   
  下表列出了数组的封送处理选项，并描述了它们的用法。  
   
@@ -95,7 +93,7 @@ ms.lasthandoff: 01/19/2018
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614)是一个自定义的非托管的库，包含之前列出的函数、 两个结构变量，实现**MYPOINT**和**MYPERSON**。 此结构包含以下元素：  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100))是一个自定义的非托管的库，包含之前列出的函数、 两个结构变量，实现**MYPOINT**和**MYPERSON**。 此结构包含以下元素：  
   
 ```  
 typedef struct _MYPOINT  
@@ -123,7 +121,7 @@ typedef struct _MYPERSON
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a>请参阅  
- [封送类型数组](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
- [平台调用数据类型](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+## <a name="see-also"></a>另请参阅  
+ [封送类型数组](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
+ [平台调用数据类型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [在托管代码中创建原型](creating-prototypes-in-managed-code.md)

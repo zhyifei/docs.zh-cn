@@ -1,12 +1,9 @@
 ---
-title: "COM 可调用包装"
-ms.custom: 
+title: COM 可调用包装
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,23 +16,23 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 270d7e85491f0f4ada797910d4fc12c1a14be625
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="com-callable-wrapper"></a>COM 可调用包装
 COM 客户端调用 .NET 对象时，公共语言运行时将创建托管对象和该对象的 COM 可调用包装器 (CCW)。 无法直接引用 .NET 对象，COM 客户端使用 CCW 作为托管对象的代理。  
   
  无论请求其服务的 COM 客户端数量是多少，该运行时都只为托管对象创建恰好一个 CCW。 如下图所示，多个 COM 客户端可以保持对公开 INew 接口的 CCW 的引用。 反之，CCW 保持对实现该接口的托管对象的单一引用，并被垃圾回收。 COM 和 .NET 客户端可以同时对同一托管对象发出请求。  
   
- ![COM 可调用包装器](../../../docs/framework/interop/media/ccw.gif "ccw")  
+ ![COM 可调用包装器](./media/ccw.gif "ccw")  
 通过 COM 可调用包装器访问 .NET 对象  
   
  COM 可调用包装器对在 .NET Framework 内运行的其它类不可见。 它们的主要目的是封送托管和非托管代码之间的调用；但是，CCW 还托管它们包装的托管对象的对象标识和对象生存期。  
@@ -46,13 +43,14 @@ COM 客户端调用 .NET 对象时，公共语言运行时将创建托管对象�
 ## <a name="object-lifetime"></a>对象生存期  
  与其包装的 .NET 客户端不同，CCW 在传统 COM 方式中会进行引用计数。 当 CCW 上的引用计数达到零时，包装器将释放其对托管对象的引用。 将在下一个垃圾回收周期期间收集无剩余引用的托管对象。  
   
-## <a name="simulating-com-interfaces"></a>模拟 COM 接口  
- [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md) (CCW) 公开所有公共的 COM 可见接口和数据类型，并以与 COM 对基于接口的交互的强制一致的方式向 COM 客户端返回值。 对于 COM 客户端而言，调用 .NET Framework 对象上的方法与调用 COM 对象上的方法相同。  
+## <a name="simulating-com-interfaces"></a>模拟 COM 接口
+
+CCW 公开所有公共、 COM 可见接口、 数据类型和返回值对 COM 客户端与基于接口的交互的 COM 的强制一致的方式。 对于 COM 客户端而言，调用 .NET Framework 对象上的方法与调用 COM 对象上的方法相同。  
   
  若要创建这一无缝的方法，CCW 生成传统 COM 接口，如 IUnknown 和 IDispatch。 如下图所示，CCW 保持对其包装的 .NET 对象的单一引用。 COM 客户端和 .NET 对象通过代理和 CCW 的存根构造进行相互交互。  
   
- ![COM 接口](../../../docs/framework/interop/media/ccwwithinterfaces.gif "ccwwithinterfaces")  
-COM 接口和 COM 可调用包器  
+ ![COM 接口](./media/ccwwithinterfaces.gif "ccwwithinterfaces")  
+COM 接口和 COM 可调用包装  
   
  除公开由托管环境中的类显式实现的接口外，.NET Framework 代表对象提供对下表中列出的 COM 接口的实现。 .NET 类可以通过提供其自身对这些接口的实现而替代默认行为。 但是，运行时始终提供 IUnknown 和 IDispatch 接口的实现。  
   
@@ -69,15 +67,15 @@ COM 接口和 COM 可调用包器
   
 |接口|描述|  
 |---------------|-----------------|  
-|(_classname) 类接口|该接口由运行时公开但未显式定义，它公开托管对象上显式公开的所有公共接口、方法、属性和字段。|  
+|(\_*Classname*) 类接口|该接口由运行时公开但未显式定义，它公开托管对象上显式公开的所有公共接口、方法、属性和字段。|  
 |**IConnectionPoint** 和 **IconnectionPointContainer**|以基于委托的事件（用于注册事件订阅服务器的接口）为源的对象的接口。|  
 |**IdispatchEx**|如果类实现 IExpando，则为由运行时提供的接口。 IDispatchEx 接口是 IDispatch 接口的扩展，与 IDispatch 不同，它可枚举、添加、删除和以区分大小的方式调用成员。|  
 |**IEnumVARIANT**|集合类型类的接口，如果类实现 IEnumerable，则该接口将枚举集合中的对象。|  
   
 ## <a name="introducing-the-class-interface"></a>类接口简介  
- 类接口，未在托管代码中显式定义，是公开 .NET 对象中显式公开的所有公共方法、属性、字段和事件的接口。 此接口可以是双重接口或仅支持调度的接口。 类接口接收 .NET 类本身的名称（前面带下划线）。 例如，对于类 Mammal，类接口为 _Mammal。  
+ 类接口，未在托管代码中显式定义，是公开 .NET 对象中显式公开的所有公共方法、属性、字段和事件的接口。 此接口可以是双重接口或仅支持调度的接口。 类接口接收 .NET 类本身的名称（前面带下划线）。 例如，对于类 Mammal，类接口是\_Mammal。  
   
- 对于派生类，类接口也公开基类的所有公共方法、属性和字段。 派生类还公开各基类的类接口。 例如，如果类 Mammal 扩展类 MammalSuperclass（MammalSuperclass 类本身扩展 System.Object），则 .NET 对象向 COM 客户端公开名为 _Mammal、_MammalSuperclass 和 _Object 的三个类接口。  
+ 对于派生类，类接口也公开基类的所有公共方法、属性和字段。 派生类还公开各基类的类接口。 例如，如果类 Mammal 扩展类 MammalSuperclass，后者本身扩展 System.Object，对 COM 客户端.NET 对象公开三个类接口名为\_Mammal， \_MammalSuperclass，和\_对象。  
   
  例如，请考虑以下 .NET 类：  
   
@@ -104,7 +102,7 @@ public class Mammal
 }  
 ```  
   
- COM 客户端可以获取指向名为`_Mammal` 的类接口（如由[类型库导出程序 (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 工具生成的类型库中所述）的指针。 如果 `Mammal` 类实现了一个或多个接口，则这些接口将出现在组件类下。  
+ COM 客户端可以获取指向名为`_Mammal` 的类接口（如由[类型库导出程序 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) 工具生成的类型库中所述）的指针。 如果 `Mammal` 类实现了一个或多个接口，则这些接口将出现在组件类下。  
   
 ```  
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]  
@@ -156,7 +154,7 @@ public class LoanApp : IExplicit {
   
  ClassInterfaceType.None 值防止类元数据导出到类型库时生成类接口。 在前面的示例中，COM 客户端只能通过 `IExplicit` 接口访问 `LoanApp` 类。  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>避免缓存调度标识符 (DispId)。  
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>避免缓存调度标识符 (Dispid)
  对于脚本化客户端、Microsoft Visual Basic 6.0 客户端或不缓存接口成员的 DispId 的任何后期绑定客户端，可接受使用类接口。 DispId 标识接口成员，以启用后期绑定。  
   
  对于类接口，基于接口中成员的位置生成 DispId。 如果更改了成员顺序并将类导出到类型库中，则将改变类接口中生成的 DispId。  
@@ -185,11 +183,9 @@ public class LoanApp : IAnother {
   
  自动生成的双重接口可能适合少数情况；但是，更多情况下，它将造成与版本相关的复杂性。 例如，使用派生类的类接口的 COM 客户端可以通过对基类的更改轻松中断。 当第三方提供基类时，类接口的布局将不受你的控制。 进一步来说，与仅支持调度的接口不同，双重接口 (ClassInterface.AutoDual)提供对导出的类型库中的类接口的说明。 此类说明会促使后期绑定的客户端在运行时缓存 DispId。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)  
- [COM 包装](../../../docs/framework/interop/com-wrappers.md)  
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [模拟 COM 接口](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
- [为互操作限定 .NET 类型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)
+ [COM 包装](com-wrappers.md)  
+ [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)  
+ [为互操作限定 .NET 类型](qualifying-net-types-for-interoperation.md)  
+ [运行时可调用包装器](runtime-callable-wrapper.md)

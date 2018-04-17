@@ -1,12 +1,13 @@
 ---
-title: "演练： 我第一个 WPF 桌面应用程序"
-ms.custom: 
+title: 演练：我的第一个 WPF 桌面应用程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +16,22 @@ helpviewer_keywords:
 - getting started [WPF], WPF
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
-caps.latest.revision: "71"
+caps.latest.revision: 71
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3725e96b514b0204f10f6b5c45ed2bbec1d892de
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>演练： 我第一个 WPF 桌面应用程序
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>演练：我的第一个 WPF 桌面应用程序
 本演练中提供的开发的简介[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]包括元素所共有的大多数的应用程序[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序：[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]标记、 代码隐藏、 应用程序定义、 控件、 布局、数据绑定和样式。 
   
- 本演练将指导你通过一个简单的开发[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序使用以下步骤。 
+本演练将指导你通过一个简单的开发[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序使用以下步骤。 
   
 -   定义[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]设计的应用程序的外观[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 
   
@@ -43,9 +45,9 @@ ms.lasthandoff: 01/19/2018
   
 -   绑定[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]数据到同时填充[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]从数据并保留数据和[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]同步。 
   
- 本演练结束时，您便会生成独立[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]应用程序，用户可查看所选人员的费用报销。 应用程序将包含多种[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]浏览器样式窗口中承载的页。 
+本演练结束时，您便会生成独立[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]应用程序，用户可查看所选人员的费用报销。 应用程序将包含多种[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]浏览器样式窗口中承载的页。 
   
- 用于生成本演练的示例代码已适用于[!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]和[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]在[生成 WPF 应用程序简介](http://go.microsoft.com/fwlink/?LinkID=160008)。 
+用于生成本演练的示例代码已适用于[!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]和[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]在[生成 WPF 应用程序简介](http://go.microsoft.com/fwlink/?LinkID=160008)。 
 
 ## <a name="prerequisites"></a>系统必备  
 
@@ -54,12 +56,12 @@ ms.lasthandoff: 01/19/2018
 有关安装最新版本的 Visual Studio 的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。
   
 ## <a name="creating-the-application-project"></a>创建应用程序项目  
- 在本部分中，将创建包含应用程序定义、两个页面以及图像的应用程序基础结构。 
+在本部分中，将创建包含应用程序定义、两个页面以及图像的应用程序基础结构。 
   
 1. 在 Visual Basic 或 Visual C# 中创建名为 `ExpenseIt` 的新 WPF 应用程序项目。 有关详细信息，请参阅[如何：创建新的 WPF 应用程序项目](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。 
   
     > [!NOTE]
-    >  本演练使用<xref:System.Windows.Controls.DataGrid>是在.NET Framework 4 中可用的控件。 为确保你的项目面向.NET Framework 4 或更高版本。 有关详细信息，请参阅[如何： 面向.NET Framework 版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。 
+    >  本演练使用<xref:System.Windows.Controls.DataGrid>是在.NET Framework 4 中可用的控件。 为确保你的项目面向.NET Framework 4 或更高版本。 有关详细信息，请参阅[如何：面向 .NET Framework 的某个版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。 
   
 2. 打开 Application.xaml (Visual Basic) 或 App.xaml (C#)。 
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/19/2018
   
 4. 更改<xref:System.Windows.Window>元素<xref:System.Windows.Navigation.NavigationWindow>。 
   
-     此应用程序将导航到不同内容，具体取决于用户交互。 因此，main<xref:System.Windows.Window>需要更改为<xref:System.Windows.Navigation.NavigationWindow>。 <xref:System.Windows.Navigation.NavigationWindow>继承的所有属性<xref:System.Windows.Window>。 <xref:System.Windows.Navigation.NavigationWindow> XAML 文件中的元素创建的实例<xref:System.Windows.Navigation.NavigationWindow>类。 有关详细信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。 
+     此应用程序将导航到不同内容，具体取决于用户交互。 因此，main<xref:System.Windows.Window>需要更改为<xref:System.Windows.Navigation.NavigationWindow>。 <xref:System.Windows.Navigation.NavigationWindow> 继承的所有属性<xref:System.Windows.Window>。 <xref:System.Windows.Navigation.NavigationWindow> XAML 文件中的元素创建的实例<xref:System.Windows.Navigation.NavigationWindow>类。 有关详细信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。 
   
 5. 在更改下列属性<xref:System.Windows.Navigation.NavigationWindow>元素：  
   
@@ -113,7 +115,7 @@ ms.lasthandoff: 01/19/2018
     [!code-vb[ExpenseIt#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]  
   
 ## <a name="adding-files-to-the-application"></a>将文件添加到应用程序  
- 在本部分中，将向应用程序添加两个页面和一个图像。 
+在本部分中，将向应用程序添加两个页面和一个图像。 
   
 1. 将新的页 (WPF) 添加到名为的项目`ExpenseItHome.xaml`。 有关详细信息，请参阅[如何： 将新项添加到 WPF 项目](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad)。 
   
@@ -171,12 +173,12 @@ ms.lasthandoff: 01/19/2018
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. 将名为 watermark.png 的图像添加至项目。 可以创建自己的图像，也可以从示例代码中复制文件。 有关详细信息，请参阅[NIB： 如何： 将现有项目添加到项目](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。 
+10. 添加了名为映像*watermark.png*到项目。 可以创建自己的图像，也可以从示例代码中复制文件。 有关详细信息，请参阅[如何： 将现有项目添加到项目](/previous-versions/visualstudio/visual-studio-2008/9f4t9t92(v=vs.90))。 
 
 ## <a name="building-and-running-the-application"></a>生成并运行应用程序  
- 在本部分中，将生成和运行应用程序。 
+在本部分中，将生成和运行应用程序。 
   
-1. 生成并运行应用程序通过按 f5 键或选择**启动调试**从**调试**菜单。 
+1. 生成并运行应用程序通过按 F5，或选择**启动调试**从**调试**菜单。 
   
      下图显示具有的应用程序<xref:System.Windows.Navigation.NavigationWindow>按钮。 
   
@@ -185,7 +187,7 @@ ms.lasthandoff: 01/19/2018
 2. 关闭应用程序以返回到[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。 
   
 ## <a name="creating-the-layout"></a>创建布局  
- 布局提供有序的方式来放置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素，并还管理的大小和这些元素的位置时[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]一起调整大小。 通常使用以下布局控件之一来创建布局：  
+布局提供有序的方式来放置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素，并还管理的大小和这些元素的位置时[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]一起调整大小。 通常使用以下布局控件之一来创建布局：  
   
 -   <xref:System.Windows.Controls.Canvas>  
   
@@ -199,12 +201,12 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
- 每个布局控件都为子元素支持特殊类型的布局。 ExpenseIt 页面可进行调整，并且每个页面均有与其他元素水平或垂直排列的元素。 因此，<xref:System.Windows.Controls.Grid>是应用程序的理想布局元素。 
+每个布局控件都为子元素支持特殊类型的布局。 ExpenseIt 页面可进行调整，并且每个页面均有与其他元素水平或垂直排列的元素。 因此，<xref:System.Windows.Controls.Grid>是应用程序的理想布局元素。 
   
 > [!NOTE]
 >  有关详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)。 有关布局详细信息，请参阅[布局](../../../../docs/framework/wpf/advanced/layout.md)。 
   
- 在部分中，你创建一个单列的表具有三个行和 10 像素边距通过添加到的列和行定义<xref:System.Windows.Controls.Grid>ExpenseItHome.xaml 中。 
+在部分中，你创建一个单列的表具有三个行和 10 像素边距通过添加到的列和行定义<xref:System.Windows.Controls.Grid>ExpenseItHome.xaml 中。 
   
 1. 打开 ExpenseItHome.xaml。 
   
@@ -221,17 +223,17 @@ ms.lasthandoff: 01/19/2018
     [!code-xaml[ExpenseIt#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]  
   
 ## <a name="adding-controls"></a>添加控件  
- 在此部分中，主页页面[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]更新以显示用户可从中以显示所选人员的费用报表的人员列表。 控件是允许用户与应用程序交互的 UI 对象。 有关详细信息，请参阅 [控件](../../../../docs/framework/wpf/controls/index.md)。 
+在此部分中，主页页面[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]更新以显示用户可从中以显示所选人员的费用报表的人员列表。 控件是允许用户与应用程序交互的 UI 对象。 有关详细信息，请参阅 [控件](../../../../docs/framework/wpf/controls/index.md)。 
   
- 若要创建此[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，以下元素添加到 ExpenseItHome.xaml:  
+若要创建此[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，以下元素添加到 ExpenseItHome.xaml:  
   
--   <xref:System.Windows.Controls.ListBox>（有关的人员列表）。 
+-   <xref:System.Windows.Controls.ListBox> （有关的人员列表）。 
   
--   <xref:System.Windows.Controls.Label>（对于列表标头）。 
+-   <xref:System.Windows.Controls.Label> （对于列表标头）。 
   
--   <xref:System.Windows.Controls.Button>（若要单击以查看费用报表列表中选择的人员）。 
+-   <xref:System.Windows.Controls.Button> （若要单击以查看费用报表列表中选择的人员）。 
   
- 每个控件所在的行中<xref:System.Windows.Controls.Grid>通过设置<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>附加属性。 有关附加属性的详细信息，请参阅[附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。 
+每个控件所在的行中<xref:System.Windows.Controls.Grid>通过设置<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>附加属性。 有关附加属性的详细信息，请参阅[附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。 
   
 1. 打开 ExpenseItHome.xaml。 
   
@@ -241,12 +243,12 @@ ms.lasthandoff: 01/19/2018
   
 3. 生成并运行应用程序。 
   
- 下图显示了在本部分中由 XAML 创建的控件。 
+下图显示了在本部分中由 XAML 创建的控件。 
   
- ![ExpenseIt 示例屏幕快照](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure2.png "GettingStartedFigure2")  
+![ExpenseIt 示例屏幕快照](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure2.png "GettingStartedFigure2")  
   
 ## <a name="adding-an-image-and-a-title"></a>添加的映像和标题  
- 在此部分中，主页页面[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]更新使用的映像和页面标题。 
+在此部分中，主页页面[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]更新使用的映像和页面标题。 
   
 1. 打开 ExpenseItHome.xaml。 
   
@@ -272,9 +274,9 @@ ms.lasthandoff: 01/19/2018
   
 7. 生成并运行应用程序。 
   
- 下图显示完成本部分的结果。 
+下图显示完成本部分的结果。 
   
- ![ExpenseIt 示例屏幕快照](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure3.png "GettingStartedFigure3")  
+![ExpenseIt 示例屏幕快照](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure3.png "GettingStartedFigure3")  
   
 ## <a name="adding-code-to-handle-events"></a>添加代码以处理事件  
   
@@ -292,7 +294,7 @@ ms.lasthandoff: 01/19/2018
     [!code-vb[ExpenseIt#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt6/ExpenseItHome.xaml.vb#16)]  
   
 ## <a name="creating-the-ui-for-expensereportpage"></a>为 ExpenseReportPage 创建 UI  
- ExpenseReportPage.xaml 显示在 ExpenseItHome.xaml 中选择的人员的费用报表。 本部分添加控件并创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的 ExpenseReportPage.xaml。 本部分还将背景和填充颜色添加到各种[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素。 
+ExpenseReportPage.xaml 显示在 ExpenseItHome.xaml 中选择的人员的费用报表。 本部分添加控件并创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的 ExpenseReportPage.xaml。 本部分还将背景和填充颜色添加到各种[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素。 
   
 1. 打开 ExpenseReportPage.xaml。 
   
@@ -311,12 +313,12 @@ ms.lasthandoff: 01/19/2018
   
      出现费用报告页。 
   
- 下图显示[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素添加到 ExpenseReportPage.xaml。 注意向后导航按钮已启用。 
+下图显示[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素添加到 ExpenseReportPage.xaml。 注意向后导航按钮已启用。 
   
- ![ExpenseIt 示例屏幕快照](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure4.png "GettingStartedFigure4")  
+![ExpenseIt 示例屏幕快照](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure4.png "GettingStartedFigure4")  
   
 ## <a name="styling-controls"></a>设置控件样式  
- 各种元素的外观通常可以为中的相同类型的所有元素相同[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 使用样式，以使外观可在多个元素上重复使用。 可重用性的样式有助于简化[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]创建和管理。 有关样式的详细信息，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。 本部分替换在以前步骤中通过样式定义的按元素划分的属性。 
+各种元素的外观通常可以为中的相同类型的所有元素相同[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 使用样式，以使外观可在多个元素上重复使用。 可重用性的样式有助于简化[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]创建和管理。 有关样式的详细信息，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。 本部分替换在以前步骤中通过样式定义的按元素划分的属性。 
   
 1. 打开 Application.xaml 或 App.xaml。 
   
@@ -361,7 +363,7 @@ ms.lasthandoff: 01/19/2018
      在添加后[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]在此部分中，应用程序看上去相同一样使用样式更新之前。 
   
 ## <a name="binding-data-to-a-control"></a>将数据绑定到控件  
- 在本部分中，你创建[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]绑定到各种控件的数据。 
+在本部分中，你创建[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]绑定到各种控件的数据。 
   
 1. 打开 ExpenseItHome.xaml。 
   
@@ -386,7 +388,7 @@ ms.lasthandoff: 01/19/2018
      此 XAML 将绑定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>属性<xref:System.Windows.Controls.ListBox>到数据源并应用数据模板作为<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>。 
   
 ## <a name="connecting-data-to-controls"></a>将数据连接到控件  
- 在本部分中，你编写检索 ExpenseItHome.xaml 页面上的用户的列表中选择并将其引用的构造函数传递的当前项的代码`ExpenseReportPage`期间实例化。 `ExpenseReportPage` 通过传递项设置数据上下文，该项是在 ExpenseReportPage.xaml 中定义的控件要绑定到的对象。 
+在本部分中，你编写检索 ExpenseItHome.xaml 页面上的用户的列表中选择并将其引用的构造函数传递的当前项的代码`ExpenseReportPage`期间实例化。 `ExpenseReportPage` 通过传递项设置数据上下文，该项是在 ExpenseReportPage.xaml 中定义的控件要绑定到的对象。 
   
 1. 打开 ExpenseReportPage.xaml.vb 或 ExpenseReportPage.xaml.cs。 
   
@@ -403,7 +405,7 @@ ms.lasthandoff: 01/19/2018
     [!code-vb[ExpenseIt#27](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseItHome.xaml.vb#27)]  
   
 ## <a name="styling-data-with-data-templates"></a>使用数据模板的样式数据  
- 在本部分中，你将更新[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]有关数据中的每个项绑定使用数据模板的列表。 
+在本部分中，你将更新[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]有关数据中的每个项绑定使用数据模板的列表。 
   
 1. 打开 ExpenseReportPage.xaml。 
   
@@ -427,7 +429,7 @@ ms.lasthandoff: 01/19/2018
  ![ExpenseIt 示例屏幕快照](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure5.png "GettingStartedFigure5")  
   
 ## <a name="best-practices"></a>最佳实践  
- 本示例演示了 WPF 的特定功能，因此不遵循应用程序开发的最佳做法。 有关全面介绍[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]应用程序开发最佳做法，根据需要参阅以下主题：  
+本示例演示了 WPF 的特定功能，因此不遵循应用程序开发的最佳做法。 有关全面介绍[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]应用程序开发最佳做法，根据需要参阅以下主题：  
   
 -   辅助功能 - [辅助功能最佳做法](../../../../docs/framework/ui-automation/accessibility-best-practices.md)  
   
@@ -438,7 +440,7 @@ ms.lasthandoff: 01/19/2018
 -   性能 - [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
   
 ## <a name="whats-next"></a>后续步骤  
- 你现在有多种方法来创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 现在你应有的数据绑定的基本构建基块全面的了解[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]应用程序。 本主题并不详尽，但希望你现在也能够意识到你可以自己发现本主题尚未介绍的技术。 
+你现在有多种方法来创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 现在你应有的数据绑定的基本构建基块全面的了解[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]应用程序。 本主题并不详尽，但希望你现在也能够意识到你可以自己发现本主题尚未介绍的技术。 
   
  有关 WPF 体系结构和编程模型的详细信息，请参阅以下主题：  
   

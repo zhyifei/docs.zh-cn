@@ -1,12 +1,9 @@
 ---
-title: "数组的默认封送处理"
-ms.custom: 
+title: 数组的默认封送处理
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +12,22 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91df17448a57f7495dc95fb2b4ab1fa63dd8a27f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 84f4015fd9bc5eb2de11b71530115d20c583d21d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-arrays"></a>数组的默认封送处理
 在完全由托管代码组成的应用程序中，公共语言运行时将数组类型作为 In/Out 参数传递。 而互操作封送拆收器默认将数组作为 In 参数传递。  
   
- 使用[固定优化](../../../docs/framework/interop/copying-and-pinning.md)，blittable 数组在与同一单元中的对象交互时，可能看上去像是作为 In/Out 参数运行。 但是，如果随后将代码导出到用于生成跨计算机代理的类型库，且该库用于跨单元封送调用，则调用可还原为真正的 In 参数行为。  
+ 使用[固定优化](copying-and-pinning.md)，blittable 数组在与同一单元中的对象交互时，可能看上去像是作为 In/Out 参数运行。 但是，如果随后将代码导出到用于生成跨计算机代理的类型库，且该库用于跨单元封送调用，则调用可还原为真正的 In 参数行为。  
   
  数组本就很复杂，而托管数组和非托管数组之间的差异使它们比其他 blittable 类型具有更多信息。 本主题提供封送处理数组的以下信息：  
   
@@ -51,9 +49,9 @@ ms.lasthandoff: 01/19/2018
   
 |托管数组类型|元素类型|级别|下限|签名表示法|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|ELEMENT_TYPE_ARRAY|由类型指定。|由秩指定。|由界限视情况指定。|type **[** *n*,*m* **]**|  
+|ELEMENT_TYPE_ARRAY|由类型指定。|由秩指定。|由界限视情况指定。|*类型* **[** *n*，*m* **]**|  
 |ELEMENT_TYPE_CLASS|未知|未知|未知|**System.Array**|  
-|ELEMENT_TYPE_SZARRAY|由类型指定。|1|0|type **[** *n* **]**|  
+|ELEMENT_TYPE_SZARRAY|由类型指定。|1|0|*类型* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>非托管数组  
@@ -71,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="safe-arrays"></a>安全数组  
  从类型库将安全数组导入 .NET 程序集时，该数组转换为已知类型（例如 int）的一维数组。 适用于参数的类型转换规则同样适用于数组元素。 例如，BSTR 类型的安全数组可变为托管字符串数组，而变体的安全数组可变为托管对象数组。 从类型库中捕获 SAFEARRAY 元素类型并将它保存在 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举的 SAFEARRAY 值中。  
   
- 由于无法根据类型库确定安全数组的秩和界限，因此假定秩等于 1，下限等于 0。 必须在由[类型库导入程序 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 生成的托管签名中定义秩和界限。 如果运行时传递给方法的秩不同，则会引发 <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>。 如果运行时传递的数组的类型不同，则会引发 <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>。 下面的示例演示托管代码和非托管代码中的安全数组。  
+ 由于无法根据类型库确定安全数组的秩和界限，因此假定秩等于 1，下限等于 0。 必须在由[类型库导入程序 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 生成的托管签名中定义秩和界限。 如果运行时传递给方法的秩不同，则会引发 <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>。 如果运行时传递的数组的类型不同，则会引发 <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>。 下面的示例演示托管代码和非托管代码中的安全数组。  
   
  非托管的签名  
   
@@ -100,7 +98,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- 如果修改由 Tlbimp.exe 产生的方法签名以指示元素类型 ELEMENT_TYPE_ARRAY 而非 ELEMENT_TYPE_SZARRAY，则可将多维或非零界限安全数组封送到托管代码中。 或者，可将 /sysarray 开关与 Tlbimp.exe 一起使用，将所有数组作为 <xref:System.Array?displayProperty=nameWithType> 对象导入。 如果已知正在传递的数组是多维数组，则可编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，然后重新编译它。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)。  
+ 如果修改由 Tlbimp.exe 产生的方法签名以指示元素类型 ELEMENT_TYPE_ARRAY 而非 ELEMENT_TYPE_SZARRAY，则可将多维或非零界限安全数组封送到托管代码中。 或者，可将 /sysarray 开关与 Tlbimp.exe 一起使用，将所有数组作为 <xref:System.Array?displayProperty=nameWithType> 对象导入。 如果已知正在传递的数组是多维数组，则可编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，然后重新编译它。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))。  
   
 ### <a name="c-style-arrays"></a>C 样式数组  
  将 C 样式数组从类型库导入 .NET 程序集中时，数组被转换为 ELEMENT_TYPE_SZARRAY。  
@@ -140,7 +138,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- 虽然可将 size_is 或 length_is 属性应用于接口定义语言 (IDL) 源中的数组，以便将大小传达给客户端，但是 Microsoft 接口定义语言 (MIDL) 编译器不会将该信息传送到类型库。 如果不知道大小，互操作封送处理服务就无法封送数组元素。 因此，将变长数组作为引用参数导入。 例如:  
+ 虽然可将 size_is 或 length_is 属性应用于接口定义语言 (IDL) 源中的数组，以便将大小传达给客户端，但是 Microsoft 接口定义语言 (MIDL) 编译器不会将该信息传送到类型库。 如果不知道大小，互操作封送处理服务就无法封送数组元素。 因此，将变长数组作为引用参数导入。 例如：  
   
  非托管的签名  
   
@@ -164,7 +162,7 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- 编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，再重新编译该代码，即可向封送拆收器提供数组大小。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)。 要指示数组中的元素数，请采用以下任一方式将 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 类型应用于托管方法定义的数组参数：  
+ 编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，再重新编译该代码，即可向封送拆收器提供数组大小。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))。 要指示数组中的元素数，请采用以下任一方式将 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 类型应用于托管方法定义的数组参数：  
   
 -   标识含数组中的元素数的另一个参数。 按位置标识参数，从第一个参数开始，将第一个参数标识为数字 0。     
   
@@ -180,7 +178,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   将数组大小定义为常数。 例如:  
+-   将数组大小定义为常数。 例如：  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -212,7 +210,7 @@ void New3(ref String ar);
  在与含有 LPSTR 或 LPWSTR 的结构数组相关的 OLE 自动化中，存在一项限制。  因此，必须将 String 字段作为 UnmanagedType.BSTR 封送。 否则，将引发异常。  
   
 ### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
- 将包含 ELEMENT_TYPE_SZARRAY 参数（一维数组）的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 同样的转换规则也适用于数组元素类型。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如:  
+ 将包含 ELEMENT_TYPE_SZARRAY 参数（一维数组）的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 同样的转换规则也适用于数组元素类型。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如：  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -235,7 +233,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  安全数组的秩始终为 1，下限始终为 0。 大小在运行时由所传递的托管数组的大小确定。  
   
- 还可以通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将数组作为 C 样式数组封送。 例如:  
+ 还可以通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将数组作为 C 样式数组封送。 例如：  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -270,7 +268,7 @@ HRESULT New(LPStr ar[]);
  虽然封送拆收器具有封送数组所需的长度信息，但通常会将数组长度作为单独的参数传递，以便将长度传达给被调用方。  
   
 ### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
- 将包含 ELEMENT_TYPE_ARRAY 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如:  
+ 将包含 ELEMENT_TYPE_ARRAY 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为给定类型的 SAFEARRAY。 自动将托管数组的内容从托管内存复制到 SAFEARRAY 中。 例如：  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -293,7 +291,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  安全数组的秩、大小和界限在运行时由托管数组的特征确定。  
   
- 还可以通过应用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将数组作为 C 样式数组封送。 例如:  
+ 还可以通过应用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将数组作为 C 样式数组封送。 例如：  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -320,7 +318,7 @@ HRESULT New(long ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
- 无法封送嵌套数组。 例如，使用[类型库导出程序 (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 进行导出时，以下签名将生成错误。  
+ 无法封送嵌套数组。 例如，使用[类型库导出程序 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) 进行导出时，以下签名将生成错误。  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -333,7 +331,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- 将包含 <xref:System.Array?displayProperty=nameWithType> 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为 _Array 接口。 只能通过 _Array 接口的方法和属性访问托管数组的内容。 还可通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 System.Array 作为 SAFEARRAY 封送。 作为安全数组封送时，将数组元素视作变体封送。 例如:  
+ 将包含 <xref:System.Array?displayProperty=nameWithType> 参数的方法从 .NET 程序集导出到类型库时，会将该数组参数转换为 _Array 接口。 只能通过 _Array 接口的方法和属性访问托管数组的内容。 还可通过使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 System.Array 作为 SAFEARRAY 封送。 作为安全数组封送时，将数组元素视作变体封送。 例如：  
   
 #### <a name="managed-signature"></a>托管的签名  
   
@@ -381,8 +379,8 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [方向特性](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)
+## <a name="see-also"></a>另请参阅  
+ [默认封送处理行为](default-marshaling-behavior.md)  
+ [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)  
+ [方向特性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [复制和锁定](copying-and-pinning.md)

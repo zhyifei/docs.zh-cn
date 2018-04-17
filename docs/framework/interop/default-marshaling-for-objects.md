@@ -1,13 +1,9 @@
 ---
 title: 对象的默认封送处理
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>对象的默认封送处理
 可将类型化为 <xref:System.Object?displayProperty=nameWithType> 的参数和字段作为下列任一类型向非托管代码公开：  
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>封送 ByRef 变体  
  虽然变体本身可以按值或按引用传递，但 VT_BYREF 标志也可用于任何变体类型，指示变体的内容按引用传递，而不是按值传递。 对于按引用封送变体与使用设置的 VT_BYREF 标志封送变体，人们容易混淆这二者之间的差异。 下图阐明了这些差异。  
   
- ![堆栈上传递的变体](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
+ ![堆栈上传递的变体](./media/interopvariant.gif "interopvariant")  
 按值和按引用传递的变体  
   
  **值封送对象和变体的默认行为**  
@@ -342,7 +337,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |变体 v (VT_BYREF | VT_)|Ref 对象 o|仅类型未发生更改时。|  
   
 ## <a name="see-also"></a>另请参阅  
- [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [方向特性](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)
+ [默认封送处理行为](default-marshaling-behavior.md)  
+ [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)  
+ [方向特性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [复制和锁定](copying-and-pinning.md)

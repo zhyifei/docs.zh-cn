@@ -1,13 +1,9 @@
 ---
-title: "如何：从 COM 中引用 .NET 类型"
-ms.custom: 
+title: 如何：从 COM 中引用 .NET 类型
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - cpp
@@ -20,17 +16,16 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b452dd686286ba0ddf648ee532e67a0c121f66eb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3ac4308230f29067f358a45fd7f882abe6e41b96
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-reference-net-types-from-com"></a>如何：从 COM 中引用 .NET 类型
 从客户端和服务器代码的角度看，COM 和 .NET Framework 之间的区别在很大程度上是不可见的。 Microsoft Visual Basic 客户端可在对象浏览器中查看 .NET 对象，这将公开对象方法和语法、属性和字段，正如任何其他 COM 对象那样。  
@@ -39,23 +34,23 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-import-a-library"></a>导入库  
   
--   在“#import”指令中指定“raw_interfaces_only”选项。 例如:  
+-   在“#import”指令中指定“raw_interfaces_only”选项。 例如：  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     或  
+     -或-  
   
--   包括用于 Mscorlib.tlb 的 #import 指令。 例如:  
+-   包括用于 Mscorlib.tlb 的 #import 指令。 例如：  
   
     ```cpp  
     #import "mscorlib.tlb"  
     #import "..\LoanLib\LoanLib.tlb"  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [向 COM 注册程序集](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [调用.NET 对象](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [为 COM 访问部署应用程序](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)
+## <a name="see-also"></a>另请参阅  
+ [向 COM 公开 .NET Framework 组件](exposing-dotnet-components-to-com.md)  
+ [向 COM 注册程序集](registering-assemblies-with-com.md)  
+ [调用.NET 对象](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [为 COM 访问部署应用程序](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

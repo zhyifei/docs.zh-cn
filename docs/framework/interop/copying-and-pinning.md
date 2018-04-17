@@ -1,12 +1,9 @@
 ---
-title: "复制和锁定"
-ms.custom: 
+title: 复制和锁定
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -14,38 +11,38 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c785c7bc9160cb252aad61fea00cce0d9a7eacdf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="copying-and-pinning"></a>复制和锁定
 封送数据时，互操作封送拆收器可以复制或锁定正在封送的数据。 复制数据会将数据副本放置从一个内存位置放到另一个内存位置。 下图显示从托管内存向非托管内存复制值类型和复制按引用传递的类型之间的差异。  
   
- ![按值和按引用传递的值类型](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")  
+ ![按值和按引用传递的值类型](./media/interopmarshalcopy.gif "interopmarshalcopy")  
 按值和按引用传递的值类型  
   
  按值传递的方法参数作为堆栈上的值封送到非托管代码。 直接进行复制。 按引用传递的参数作为堆栈上的指针传递。 引用类型也按值和按引用传递。 如下图所示，复制或锁定按值传递的引用类型。  
   
- ![COM 互操作](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
+ ![COM 互操作](./media/interopmarshalpin.gif "interopmarshalpin")  
 按值和按引用传递的引用类型  
   
  锁定操作将数据暂时锁定在其当前内存位置，从而阻止公共语言运行时的垃圾回收器将其重定位。 封送拆收器锁定数据可减小复制的开销并提高性能。 数据的类型确定在封送处理过程中是复制数据，还是锁定数据。  在封送 <xref:System.String> 等对象的过程中自动执行锁定操作；然而，也可使用 <xref:System.Runtime.InteropServices.GCHandle> 类手动锁定内存。  
   
 ## <a name="formatted-blittable-classes"></a>已设置格式的 Blittable 类  
- 在托管和非托管内存中，已设置格式的 [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 类具有固定布局（已设置格式）以及通用数据表示形式。 当这些类型需要封送处理时，指向堆中对象的指针被直接传递给被调用方。 被调用方可以更改该指针所引用的内存位置的内容。  
+ 在托管和非托管内存中，已设置格式的 [blittable](blittable-and-non-blittable-types.md) 类具有固定布局（已设置格式）以及通用数据表示形式。 当这些类型需要封送处理时，指向堆中对象的指针被直接传递给被调用方。 被调用方可以更改该指针所引用的内存位置的内容。  
   
 > [!NOTE]
 >  如果参数标记为 Out 或 In/Out，则被调用方可以更改内存内容。相反，当参数设置为作为 In（已设置格式的 blittable 类型的默认值）封送时，被调用方应当避免更改内存内容。 在将同一类导出到类型库并用于进行跨单元调用时，修改 In 对象将产生问题。  
   
 ## <a name="formatted-non-blittable-classes"></a>已设置格式的非 Blittable 类  
- 在托管和非托管内存中，已设置格式的[ blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 类具有固定布局（已设置格式），但数据表示形式不同。 在以下情况下，数据可能需要转换：  
+ 在托管和非托管内存中，已设置格式的[ blittable](blittable-and-non-blittable-types.md) 类具有固定布局（已设置格式），但数据表示形式不同。 在以下情况下，数据可能需要转换：  
   
 -   如果按值封送非 blittable 类，则被调用方接收指向该数据结构副本的指针。  
   
@@ -86,8 +83,8 @@ ms.lasthandoff: 01/19/2018
   
  按值传递 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 时，封送拆收器将对 StringBuilder 的内部缓冲区的引用直接传递给调用方。 调用方和被调用方必须就缓冲区大小达成一致。 调用方负责创建具有足够长度的 StringBuilder。 被调用方必须采取必要措施确保不溢出缓冲区。 对于默认将按值传递的引用类型作为 In 参数传递的规则，StringBuilder 是一个例外。 它始终作为 In/Out 传递。  
   
-## <a name="see-also"></a>请参阅  
- [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [使用互操作封送处理程序的内存管理](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [方向特性](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>另请参阅  
+ [默认封送处理行为](default-marshaling-behavior.md)  
+ [使用互操作封送处理程序的内存管理](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
+ [方向特性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [互操作封送处理](interop-marshaling.md)

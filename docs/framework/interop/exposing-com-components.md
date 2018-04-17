@@ -1,30 +1,25 @@
 ---
-title: "向 .NET Framework 公开 COM 组件"
-ms.custom: 
+title: 向 .NET Framework 公开 COM 组件
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f2a73bbe23cc1e8fd267489d2607dd7275b09322
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e17c0b8c3676bb632c9b45af0577708c98446967
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>向 .NET Framework 公开 COM 组件
 本部分概述向托管代码公开现有 COM 组件所需的步骤。 有关编写与 .NET Framework 紧密集成的 COM 服务器的详细信息，请参阅[互操作的设计注意事项](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))。
@@ -33,7 +28,7 @@ ms.lasthandoff: 03/12/2018
   
 #### <a name="to-expose-com-components-to-the-net-framework"></a>向 .NET Framework 公开 COM 组件  
   
-1.  [将类型库当作程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)。  
+1.  [将类型库当作程序集导入](importing-a-type-library-as-an-assembly.md)。  
   
      公共语言运行时需要包括 COM 类型在内的所有类型的元数据。 有多种方法来获取包含 COM 类型（作为元数据导入）的程序集。  
   
@@ -41,17 +36,17 @@ ms.lasthandoff: 03/12/2018
   
      可检查 COM 类型、激活实例，并采用在任何托管类型上进行调用的方式在 COM 对象上调用方法。  
   
-3.  [编译互操作项目](../../../docs/framework/interop/compiling-an-interop-project.md)。  
+3.  [编译互操作项目](compiling-an-interop-project.md)。  
   
      [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 为符合公共语言规范 (CLS) 的多种语言提供编译器，包括 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++。  
   
-4.  [部署互操作应用程序](../../../docs/framework/interop/deploying-an-interop-application.md)。  
+4.  [部署互操作应用程序](deploying-an-interop-application.md)。  
   
-     最好将互操作应用程序部署为全局程序集缓存中具有[强名称](../../../docs/framework/app-domains/strong-named-assemblies.md)的签名程序集。  
+     最好将互操作应用程序部署为全局程序集缓存中具有[强名称](../app-domains/strong-named-assemblies.md)的签名程序集。  
   
-## <a name="see-also"></a>请参阅  
- [与非托管代码交互操作](../../../docs/framework/interop/index.md)  
- [互操作的设计注意事项](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)  
- [COM 互操作示例：.NET 客户端和 COM 服务器](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  
- [语言独立性和与语言无关的组件](../../../docs/standard/language-independence-and-language-independent-components.md)  
- [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+## <a name="see-also"></a>另请参阅  
+ [与非托管代码交互操作](index.md)  
+ [互操作的设计注意事项](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))  
+ [COM 互操作示例：.NET 客户端和 COM 服务器](com-interop-sample-net-client-and-com-server.md)  
+ [语言独立性和与语言无关的组件](../../standard/language-independence-and-language-independent-components.md)  
+ [Gacutil.exe（全局程序集缓存工具）](../tools/gacutil-exe-gac-tool.md)

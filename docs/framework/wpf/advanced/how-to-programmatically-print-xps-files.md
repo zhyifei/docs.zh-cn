@@ -1,13 +1,9 @@
 ---
 title: 如何：以编程方式打印 XPS 文件
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,29 +12,28 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0b58e617fb04ecaba45ed655dc650459e89453dd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>如何：以编程方式打印 XPS 文件
 你可以使用的一个重载<xref:System.Printing.PrintQueue.AddJob%2A>方法打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件而无需打开<xref:System.Windows.Controls.PrintDialog>或原则上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]根本。  
   
- 你还可以打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件使用多<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>和<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>。 有关此操作的详细信息，请参阅[打印 XPS 文档](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c)。  
+ 你还可以打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件使用多<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>和<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>。 有关此操作的详细信息，请参阅[打印 XPS 文档](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))。  
   
- 另一种打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]是使用<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>或<xref:System.Windows.Controls.PrintDialog.PrintVisual%2A>方法<xref:System.Windows.Controls.PrintDialog>控件。 请参阅[调用打印对话框](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)。  
+ 另一种打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]是使用<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>或<xref:System.Windows.Controls.PrintDialog.PrintVisual%2A>方法<xref:System.Windows.Controls.PrintDialog>控件。 请参阅[调用打印对话框](how-to-invoke-a-print-dialog.md)。  
   
 ## <a name="example"></a>示例  
  使用三个参数的主要步骤<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法如下所示。 以下示例提供了详细信息。  
   
-1.  确定打印机是否是 XPSDrv 打印机。 （有关 XPSDrv 的详细信息，请参阅[打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)。）  
+1.  确定打印机是否是 XPSDrv 打印机。 （有关 XPSDrv 的详细信息，请参阅[打印概述](printing-overview.md)。）  
   
 2.  如果打印机不是 XPSDrv 打印机，将线程的单元设置为单线程。  
   
@@ -54,7 +49,7 @@ ms.lasthandoff: 03/26/2018
   
  此示例相应地，方法是实例化从开始<xref:System.Threading.Thread>对象并将其传递**PrintXPS**方法作为<xref:System.Threading.ThreadStart>参数。 （该示例的后面部分定义了 **PrintXPS** 方法。）接下来，将线程设置为单线程单元。 `Main` 方法的唯一剩余代码会启动新线程。  
   
- 该示例的内容主要关于 `static`**BatchXPSPrinter.PrintXPS** 方法。 创建打印服务器和队列后，该方法会提示用户提供包含 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件的目录。 在验证存在该目录且其中存在 *.xps 文件之后，该方法会将每个此类文件添加到打印队列。 该示例假定，打印机将是不是 XPSDrv，因此，我们传递`false`到的最后一个参数<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法。 出于此原因，该方法先验证文件中的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 标记，然后再尝试将其转换为打印机的页面描述语言。 如果验证失败，会引发异常。 该示例代码将捕获该异常，并通知用户相关信息，然后继续处理下一 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。  
+ 该示例的内容主要关于 `static`**BatchXPSPrinter.PrintXPS** 方法。 创建打印服务器和队列后，该方法会提示用户提供包含 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件的目录。 后验证目录是否存在以及是否存在\*.xps 文件中，该方法将每个此类文件添加到打印队列。 该示例假定，打印机将是不是 XPSDrv，因此，我们传递`false`到的最后一个参数<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法。 出于此原因，该方法先验证文件中的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 标记，然后再尝试将其转换为打印机的页面描述语言。 如果验证失败，会引发异常。 该示例代码将捕获该异常，并通知用户相关信息，然后继续处理下一 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。  
   
  [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
  [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
@@ -69,7 +64,7 @@ ms.lasthandoff: 03/26/2018
   
  此是经过伪装将使你能够将传递`true`作为最后一个参数的<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>而不会导致异常，但由于*\<出现 >*实际上不防止仅仅是乱码将打印。  
   
- **请注意**为简单起见，以上示例通过测试是否存在 *.xps 扩展名来确定文件是否为 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。 但是，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件不需要具有此扩展名。 [isXPS.exe（isXPS 合规性工具）](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)是一种测试文件是否具有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
+ **请注意**为简单起见，上面的示例使用是否存在\*.xps 扩展作为其测试该文件为[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。 但是，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件不需要具有此扩展名。 [isXPS.exe（isXPS 合规性工具）](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))是一种测试文件是否具有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:System.Printing.PrintQueue>  
@@ -77,8 +72,8 @@ ms.lasthandoff: 03/26/2018
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](http://www.microsoft.com/xps)  
- [打印 XPS 文档](http://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c)  
- [托管和非托管线程处理](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
- [isXPS.exe（isXPS 合规性工具）](http://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3)  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [打印 XPS 文档](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))  
+ [托管和非托管线程处理](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
+ [isXPS.exe（isXPS 合规性工具）](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))  
+ [WPF 中的文档](documents-in-wpf.md)  
+ [打印概述](printing-overview.md)

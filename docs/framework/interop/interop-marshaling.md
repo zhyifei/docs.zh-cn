@@ -1,28 +1,26 @@
 ---
-title: "互操作封送处理"
-ms.custom: 
+title: 互操作封送处理
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cb22c708221fcc80962fd7da6e26c3720173d824
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interop-marshaling"></a>互操作封送处理
 <a name="top"></a> 互操作封送处理控制调用期间，通过方法自变量和返回值在托管内存和非托管内存之间传递数据的方式。 互操作封送处理是由公共语言运行时的封送处理服务执行的运行时活动。  
@@ -51,12 +49,12 @@ ms.lasthandoff: 01/19/2018
   
 -   COM 互操作，它使托管代码能够通过接口与组件对象模型 (COM) 对象交互。  
   
- 平台调用和 COM 互操作都使用互操作封送处理在调用方和被调用方之间准确地移动方法自变量，并且如果需要，也可以将数据从被调用方移回调用方。 正如下图所示，除涉及 [回调函数](../../../docs/framework/interop/callback-functions.md) 以外，平台调用方法调用从托管代码流向非托管代码，而绝不会以相反方向流动。 虽然平台调用的调用只能从托管代码流向非托管代码，但是数据仍然可以作为输入参数或输出参数在两个方向流动。 COM 互操作方法调用可以在任一方向流动。  
+ 平台调用和 COM 互操作都使用互操作封送处理在调用方和被调用方之间准确地移动方法自变量，并且如果需要，也可以将数据从被调用方移回调用方。 正如下图所示，除涉及 [回调函数](callback-functions.md) 以外，平台调用方法调用从托管代码流向非托管代码，而绝不会以相反方向流动。 虽然平台调用的调用只能从托管代码流向非托管代码，但是数据仍然可以作为输入参数或输出参数在两个方向流动。 COM 互操作方法调用可以在任一方向流动。  
   
- ![平台调用](../../../docs/framework/interop/media/interopmarshaling.png "interopmarshaling")  
+ ![平台调用](./media/interopmarshaling.png "interopmarshaling")  
 平台调用和 COM 互操作调用流  
   
- 在最低级别，这两种机制都使用同一种互操作封送处理服务；不过，某些数据类型则仅受 COM 互操作或平台调用支持。 有关详细信息，请参阅 [默认封送行为](../../../docs/framework/interop/default-marshaling-behavior.md)。  
+ 在最低级别，这两种机制都使用同一种互操作封送处理服务；不过，某些数据类型则仅受 COM 互操作或平台调用支持。 有关详细信息，请参阅 [默认封送行为](default-marshaling-behavior.md)。  
   
  [返回页首](#top)  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 01/19/2018
  COM 也有一个在 COM 单元或不同的 COM 进程之间封送数据的封送拆收器。 当在同一个 COM 单元内的托管和非托管代码之间进行调用时，互操作封送拆收器是涉及到的唯一一个封送拆收器。 当在另一个 COM 单元或另一个进程中的托管代码和非托管代码之间进行调用时，则同时涉及互操作封送拆收器和 COM 封送拆收器。  
   
 ### <a name="com-clients-and-managed-servers"></a>COM 客户端和托管服务器  
- 具有由 [Regasm.exe（程序集注册工具）](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 注册的类型库的导出的托管服务器有一个设置为 `Both` 的 `ThreadingModel` 注册表项。 此值指示服务器可以在单线程单元 (STA) 或多线程单元 (MTA) 中激活。 服务器对象在与其调用方相同的单元中创建，如下表所示。  
+ 具有由 [Regasm.exe（程序集注册工具）](../tools/regasm-exe-assembly-registration-tool.md) 注册的类型库的导出的托管服务器有一个设置为 `Both` 的 `ThreadingModel` 注册表项。 此值指示服务器可以在单线程单元 (STA) 或多线程单元 (MTA) 中激活。 服务器对象在与其调用方相同的单元中创建，如下表所示。  
   
 |COM 客户端|.NET 服务器|封送要求|  
 |----------------|-----------------|-----------------------------|  
@@ -76,7 +74,7 @@ ms.lasthandoff: 01/19/2018
   
  由于客户端和服务器位于同一单元中，因此互操作封送处理服务将自动处理所有数据封送。 下图显示了在同一个 COM 样式的单元内的托管和非托管堆之间进行的互操作封送处理服务。  
   
- ![互操作封送处理](../../../docs/framework/interop/media/interopheap.gif "interopheap")  
+ ![互操作封送处理](./media/interopheap.gif "interopheap")  
 相同单元封送进程  
   
  如果计划导出托管服务器，请注意，COM 客户端确定服务器的单元。 在 MTA 中初始化的 COM 客户端所调用的托管服务器必须确保线程安全。  
@@ -93,7 +91,7 @@ ms.lasthandoff: 01/19/2018
   
  当托管客户端和非托管服务器位于同一单元中时，互操作封送处理服务处理所有数据封送。 但是，当客户端和服务器在不同的单元中初始化时，还需要 COM 封送处理。 下图显示跨单元调用的元素。  
   
- ![COM 封送处理](../../../docs/framework/interop/media/singleprocessmultapt.gif "singleprocessmultapt")  
+ ![COM 封送处理](./media/singleprocessmultapt.gif "singleprocessmultapt")  
 .NET 客户端和 COM 对象之间的跨单元调用  
   
  对于跨单元封送，可以执行下列操作：  
@@ -105,7 +103,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  将 C# 客户端的线程设置为 STA 后，对 MTA COM 组件的调用将需要跨单元封送。  
   
- 有关显式选择单元模型的说明， 请参阅 [托管和非托管线程处理](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)。  
+ 有关显式选择单元模型的说明， 请参阅 [托管和非托管线程处理](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))。  
   
  [返回页首](#top)  
   
@@ -119,13 +117,13 @@ ms.lasthandoff: 01/19/2018
   
  下图显示互操作封送处理和 COM 封送处理如何跨进程和主机边界提供通信信道。  
   
- ![COM 封送处理](../../../docs/framework/interop/media/interophost.gif "interophost")  
+ ![COM 封送处理](./media/interophost.gif "interophost")  
 跨进程封送  
   
 ### <a name="preserving-identity"></a>保留标识  
  公共语言运行时保留托管引用和非托管引用的标识。 下图显示跨进程和主机边界的直接非托管引用（顶部行）和直接托管引用（底部行）的流。  
   
- ![COM 可调用包装器和运行时可调用包装器](../../../docs/framework/interop/media/interopdirectref.gif "interopdirectref")  
+ ![COM 可调用包装器和运行时可调用包装器](./media/interopdirectref.gif "interopdirectref")  
 跨进程和主机边界传递引用  
   
  在此图中：  
@@ -142,10 +140,10 @@ ms.lasthandoff: 01/19/2018
 ### <a name="managed-remoting"></a>托管远程处理  
  运行时还提供了托管远程处理，可用于跨进程和主机边界建立托管对象之间的通信信道。 托管远程处理可以适应通信组件之间的防火墙，如下图所示。  
   
- ![SOAP 或 TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP 或 TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 跨使用 SOAP 或 TcpChannel 类的防火墙的远程调用  
   
- 某些非托管调用可以通过 SOAP 传递， 如 [服务组件](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) 和 COM 之间的调用。  
+ 某些非托管的调用可以为通过 SOAP 传递，如维护的组件和 COM 之间的调用。  
   
  [返回页首](#top)  
   
@@ -154,15 +152,15 @@ ms.lasthandoff: 01/19/2018
   
 |标题|描述|  
 |-----------|-----------------|  
-|[默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)|描述互操作封送处理服务用于封送数据的规则。|  
-|[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|描述如何声明方法参数以及如何将自变量传递给由非托管库导出的函数。|  
-|[用 COM 互操作对数据进行封送处理](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|描述如何自定义 COM 包装器以更改封送行为。|  
-|[如何：将托管代码 DCOM 迁移到 WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何从 DCOM 迁移到 WCF。|  
-|[如何：映射 HRESULT 和异常](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|描述如何将自定义异常映射到 HRESULT，并提供从每个 HRESULT 到其在 .NET Framework 中的相似异常类的完整映射。|  
-|[使用泛型类型进行交互操作](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|描述在使用用于 COM 互操作性的泛型类型时，哪些操作受支持。|  
-|[与非托管代码交互操作](../../../docs/framework/interop/index.md)|描述由公共语言运行时提供的互操作性服务。|  
-|[高级 COM 互操作性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的详细信息。|  
-|[互操作的设计注意事项](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|提供有关编写集成 COM 组件的提示。|  
+|[默认封送处理行为](default-marshaling-behavior.md)|描述互操作封送处理服务用于封送数据的规则。|  
+|[用平台调用封送数据](marshaling-data-with-platform-invoke.md)|描述如何声明方法参数以及如何将自变量传递给由非托管库导出的函数。|  
+|[用 COM 互操作对数据进行封送处理](marshaling-data-with-com-interop.md)|描述如何自定义 COM 包装器以更改封送行为。|  
+|[如何：将托管代码 DCOM 迁移到 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何从 DCOM 迁移到 WCF。|  
+|[如何：映射 HRESULT 和异常](how-to-map-hresults-and-exceptions.md)|描述如何将自定义异常映射到 HRESULT，并提供从每个 HRESULT 到其在 .NET Framework 中的相似异常类的完整映射。|  
+|[使用泛型类型进行交互操作](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|描述在使用用于 COM 互操作性的泛型类型时，哪些操作受支持。|  
+|[与非托管代码交互操作](index.md)|描述由公共语言运行时提供的互操作性服务。|  
+|[高级 COM 互操作性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))|提供一些链接，指向关于将 COM 组件并入 .NET Framework 应用程序中的详细信息。|  
+|[互操作的设计注意事项](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|提供有关编写集成 COM 组件的提示。|  
   
  [返回页首](#top)  
   

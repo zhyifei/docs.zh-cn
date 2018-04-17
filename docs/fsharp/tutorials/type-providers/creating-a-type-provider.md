@@ -1,7 +1,7 @@
 ---
-title: "教程：创建类型提供程序 (F#)"
-description: "了解如何在 F # 3.0 中创建你自己 F # 类型提供程序，通过检查几个简单类型提供程序来演示基本概念。"
-keywords: "visual f#, f#, 函数编程"
+title: '教程： 创建类型提供程序 （F #）'
+description: '了解如何在 F # 3.0 中创建你自己 F # 类型提供程序，通过检查几个简单类型提供程序来演示基本概念。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: b2e83218184bd1aef8258378485b99697cc8cf8d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="tutorial-creating-a-type-provider"></a>教程： 创建类型提供程序
+# <a name="tutorial-create-a-type-provider"></a>教程： 创建类型提供程序
 
 F # 中的类型提供程序机制是支持的其编程信息丰富的重要部分。 本教程介绍如何创建你自己的类型提供程序通过逐步引导您完成开发的几个简单类型提供程序来演示基本概念。 有关 F # 中的类型提供程序机制的详细信息，请参阅[类型提供程序](index.md)。
 

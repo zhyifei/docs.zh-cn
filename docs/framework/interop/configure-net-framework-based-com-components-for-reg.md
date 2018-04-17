@@ -1,12 +1,9 @@
 ---
-title: "如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活"
-ms.custom: 
+title: 如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fdae288650a0ff7b1a34b3a38a231d3da6caf560
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b97f73e93ad0ef8d9def596361ac68e93ae5e6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -133,7 +130,7 @@ ms.lasthandoff: 01/19/2018
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4" />  
+                        version="1.2.3.4"   
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -181,8 +178,8 @@ ms.lasthandoff: 01/19/2018
   
      同样，`myresource.res` 是包含嵌入资源的资源文件的名称。  
   
-## <a name="see-also"></a>请参阅  
- [免注册 COM 互操作](../../../docs/framework/interop/registration-free-com-interop.md)  
- [免注册 COM 互操作的要求](http://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da)  
- [将 COM 组件配置为免注册激活](http://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
- [基于 .NET 组件的免注册激活：演练](http://go.microsoft.com/fwlink/?LinkId=158812)
+## <a name="see-also"></a>另请参阅  
+ [免注册 COM 互操作](registration-free-com-interop.md)  
+ [免注册 COM 互操作要求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
+ [将 COM 组件配置为免注册激活](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [基于 .NET 组件的免注册激活：演练](https://msdn.microsoft.com/library/ms973915.aspx)

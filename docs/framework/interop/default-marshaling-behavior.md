@@ -1,13 +1,9 @@
 ---
 title: 默认封送处理行为
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d653e6bd82a897d1fe8591f263a12f4c3a67abf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -52,10 +47,10 @@ BSTR MethodOne (BSTR b) {
   
  但是，如果将方法定义为平台调用原型，将每个 BSTR 类型替换为 <xref:System.String> 类型并调用 `MethodOne`，则公共语言运行时会尝试释放 `b` 两次。 可使用 <xref:System.IntPtr> 类型而不是字符串类型来更改封送处理行为。  
   
- 运行时始终使用 CoTaskMemFree 方法来释放内存。 如果正在使用的内存未通过 **CoTaskMemAlloc** 方法分配，则必须使用 **IntPtr** 并通过适当的方法手动释放内存。 同样，可在永不应释放内存的情况下避免自动释放内存，例如，从 kernel32.dll（它将指针返回内核内存）使用 GetCommandLine 函数时。 有关手动释放内存的详细信息，请参阅[缓冲区示例](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5)。  
+ 运行时始终使用 CoTaskMemFree 方法来释放内存。 如果正在使用的内存未通过 **CoTaskMemAlloc** 方法分配，则必须使用 **IntPtr** 并通过适当的方法手动释放内存。 同样，可在永不应释放内存的情况下避免自动释放内存，例如，从 kernel32.dll（它将指针返回内核内存）使用 GetCommandLine 函数时。 有关手动释放内存的详细信息，请参阅[缓冲区示例](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>类的默认封送处理  
- 类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关使用所选接口重写类接口的信息，请参阅[类接口简介](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)。  
+ 类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关重写具有所选的接口的类接口的信息，请参阅[类接口简介](com-callable-wrapper.md#introducing-the-class-interface)。  
   
 ### <a name="passing-classes-to-com"></a>向 COM 传递类  
  当托管类传递给 COM 时，互操作封送拆收器自动使用 COM 代理包装类，并将由代理所生成的类接口传递到 COM 方法调用。 然后，代理委托对类接口的所有调用返回托管对象。 代理还公开其他不由类显式实现的接口。 代理代表类自动实现接口，如 IUnknown 和 IDispatch。  
@@ -171,7 +166,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>值类型的默认封送处理  
- 大多数值类型（如整数和浮点数）是 [blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)类型，不需要封送处理。 其他[非 blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 类型在托管和非托管内存中具有不同的表示形式，且需要封送处理。 其他类型仍需要跨互操作边界的显式格式设置。  
+ 大多数值类型（如整数和浮点数）是 [blittable](blittable-and-non-blittable-types.md)类型，不需要封送处理。 其他[非 blittable](blittable-and-non-blittable-types.md) 类型在托管和非托管内存中具有不同的表示形式，且需要封送处理。 其他类型仍需要跨互操作边界的显式格式设置。  
   
  本主题提供以下有关格式化的值类型的信息：  
   
@@ -450,8 +445,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [复制和锁定](../../../docs/framework/interop/copying-and-pinning.md)  
- [数组的默认封送处理](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [对象的默认封送处理](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [字符串的默认封送处理](../../../docs/framework/interop/default-marshaling-for-strings.md)
+ [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)  
+ [复制和锁定](copying-and-pinning.md)  
+ [数组的默认封送处理](default-marshaling-for-arrays.md)  
+ [对象的默认封送处理](default-marshaling-for-objects.md)  
+ [字符串的默认封送处理](default-marshaling-for-strings.md)

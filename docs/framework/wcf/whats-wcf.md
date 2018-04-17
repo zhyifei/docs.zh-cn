@@ -1,33 +1,33 @@
 ---
-title: "什么是 Windows Communication Foundation"
-ms.custom: 
+title: 什么是 Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: 
+caps.latest.revision: 51
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7aecddc617afcaf197aa212e8eea7e1342c029fa
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是一个框架，用于构建面向服务的应用程序。 借助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，可以将数据作为异步消息从一个服务终结点发送至另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用于构建面向服务的应用程序的框架。 借助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，可以将数据作为异步消息从一个服务终结点发送至另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：  
   
 -   处理企业事务的安全服务。  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/14/2018
   
 -   **互操作性**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 实现 Web 服务互操作性的现代行业标准。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支持的标准，请参阅 [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 实现了 Web 服务互操作性的现代行业标准。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支持的标准，请参阅 [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
 -   **多种消息模式**  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/14/2018
   
 -   **服务元数据**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持发布服务元数据中使用如 WSDL、 XML 架构和 Ws-policy 的行业标准中指定的格式。 该元数据可用于自动生成并配置客户端，以便访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 可通过 HTTP 和 HTTPS 来发布元数据，也可使用 Web 服务元数据交换标准来发布元数据。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用行业标准（如 WSDL、XML 架构和 WS-Policy）中指定的格式发布服务元数据。 该元数据可用于自动生成并配置客户端，以便访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 可通过 HTTP 和 HTTPS 来发布元数据，也可使用 Web 服务元数据交换标准来发布元数据。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **数据协定**  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 02/14/2018
   
 -   **多种传输和编码方式**  
   
-     可通过多种内置传输协议和编码中的任意一种发送消息。 最常用的协议和编码是使用超文本传输协议 (HTTP) 发送文本编码的 SOAP 消息，以便在万维网上使用。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还允许通过 TCP、命名管道或 MSMQ 发送消息。 这些消息可以编码为文本，也可以使用优化的二进制格式。  使用 MTOM 标准可有效地发送二进制数据。 如果所提供的传输或编码都不符合您的需要，您可以创建自己的自定义传输或编码。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支持通过传输和编码[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。  
+     可通过多种内置传输协议和编码中的任意一种发送消息。 最常用的协议和编码是将发送文本编码使用超文本传输协议 (HTTP)，以便在万维网上使用的 SOAP 消息。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还允许通过 TCP、命名管道或 MSMQ 发送消息。 这些消息可以编码为文本，也可以使用优化的二进制格式。  使用 MTOM 标准可有效地发送二进制数据。 如果所提供的传输或编码都不符合您的需要，您可以创建自己的自定义传输或编码。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支持通过传输和编码[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[传输](../../../docs/framework/wcf/feature-details/transports.md)。  
   
 -   **可靠的排队消息**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用可靠会话通过 Ws-reliable Messaging 实现和使用 MSMQ 的可靠的消息交换。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的可靠和排队消息支持[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[队列和可靠会话](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用通过 WS-Reliable Messaging 实现的可靠会话和使用 MSMQ 进行可靠的消息交换。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的可靠和排队消息支持[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]请参阅[队列和可靠会话](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
   
 -   **持久性消息**  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/14/2018
   
  [!INCLUDE[dublin](../../../includes/dublin-md.md)] 应用程序服务器是针对部署和管理使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 进行通信的应用程序专门生成的。 [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] 包括丰富的工具和配置选项，专门设计用于启用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的应用程序。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.ServiceModel>  
  [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)  
  [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)  

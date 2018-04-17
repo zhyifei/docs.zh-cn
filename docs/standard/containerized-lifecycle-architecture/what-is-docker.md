@@ -1,18 +1,18 @@
 ---
-title: "什么是 Docker？"
-description: "使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 什么是 Docker？
+description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c471c4bc1588aaa6c0e145ede0b67ab5340f254a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
 
@@ -30,11 +30,11 @@ Docker 映像容器可以本机 Linux 和 Windows 上运行。 但是，Windows 
 
 若要运行[Windows 容器](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)，有两种类型的运行时：
 
--   **Windows Server 容器** 此运行时提供通过进程和命名空间隔离技术的应用程序隔离。 Windows Server 容器与容器主机和与主机上运行的所有容器共享内核。
+-   **Windows Server 容器** 此运行时提供通过进程和命名空间隔离技术的应用程序隔离。 Windows Server 容器与容器主机和主机上运行的所有容器共享内核。
 
--   **HYPER-V 容器** 这会将对由 Windows Server 容器通过在高度优化的 VM 中运行每个容器提供的隔离上扩展。 在此配置中，容器主机的内核不与 HYPER-V 容器，提供更好地隔离共享。
+-   **HYPER-V 容器** 这会将对由 Windows Server 容器通过在高度优化的 VM 中运行每个容器提供的隔离上扩展。 在此配置中，容器主机的内核不与 Hyper-V 容器共享，以提供更好地隔离。
 
-适用于这些容器的映像的创建相同的方式和功能相同。 区别在于如何从映像创建容器-运行 HYPER-V 容器需要使用额外的参数。 有关详细信息，请参阅[HYPER-V 容器](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)。
+适用于这些容器的映像的创建相同的方式和功能相同。 区别在于如何从映像创建容器-运行 HYPER-V 容器需要使用额外的参数。 有关详细信息，请参阅 [Hyper-V 容器](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)。
 
 ## <a name="comparing-docker-containers-with-vms"></a>比较与 Vm 的 Docker 容器
 
@@ -44,7 +44,7 @@ Docker 映像容器可以本机 Linux 和 Windows 上运行。 但是，Windows 
 
 在同一个内核上运行的副作用是，为你实现比 Vm 较少隔离。
 
-映像的主要目标是使其进行环境 （依赖关系） 相同跨不同的部署。 也就是说，你可以在您的计算机上进行调试它，然后使用相同的环境保证将其部署到另一台计算机。
+映像的主要目标是使环境（依赖项）在不同的部署中保持不变。 也就是说，可以在计算机上调试它，然后将其部署到保证具有相同环境的另一台计算机上。
 
 容器映像是一种方法来打包的应用或服务并将其部署以可靠且可重现的方式。 在这一方面，Docker 不是仅一种技术，也是基本原理和进程。
 
@@ -56,4 +56,4 @@ Docker 映像容器可以本机 Linux 和 Windows 上运行。 但是，Windows 
 
 
 >[!div class="step-by-step"]
-[以前](index.md) [下一步] (docker terminology.md)
+[上一页] (index.md) [下一页] (docker-terminology.md)
