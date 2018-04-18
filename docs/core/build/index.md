@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8b49079c-6ede-429a-92d7-ecd2fda1ab0e
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6aa5abd071355b1c1a367b35e9521e6b1af9c945
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a14e8dbf3f9be9910a2c50cfbcb3f52f4e7385e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-net-core-from-source"></a>从源生成 .NET Core
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="build-the-clr-from-source"></a>从源生成 CLR
 
-可在 [GitHub 上的 `dotnet/coreclr` 存储库](https://github.com/dotnet/coreclr/)中找到 .NET CoreCLR 的源代码。
+有关 .NET CoreCLR 的源代码，可以访问 GitHub 上的 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存储库。
 
 生成目前依赖于以下系统必备组件：
 * [Git](https://git-scm.com/)
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/23/2017
 * [Python](https://www.python.org/)
 * C++ 编译器。
 
-安装完这些系统必备组件后，可以通过调用作为 [CoreCLR 存储库](https://github.com/dotnet/coreclr/)基础的生成脚本（Windows 中的 `build.cmd`，或 Linux 和 macOS 中的 `build.sh`）来生成 CLR。
+安装完这些必备组件后，可以 [dotnet/coreclr 存储库](https://github.com/dotnet/coreclr/)为基础，调用生成脚本（Windows 中的 `build.cmd`，或 Linux 和 macOS 中的 `build.sh`）生成 CLR。
 
 组件的安装因操作系统 (OS) 而异。 请参阅特定 OS 的生成说明：
 
@@ -82,12 +82,12 @@ bin\Log 目录包含生成期间生成的日志文件（生成失败时这些日
  2. **使用 corerun.exe 运行通过未打包的 DLL 运行应用程序**。
     此存储库还定义了一个名为 corerun.exe 的简单主机，它与 NuGet 没有任何依赖关系。
     需要告诉主机在何处获取实际使用的所需 DLL，且必须手动将它们聚集在一起。
-    [CoreCLR 存储库](https://github.com/dotnet/coreclr)中的所有测试都使用此方法，此方法还可用于初步单元测试等快速本地“编辑-编译-调试”循环。
+    [dotnet/coreclr 存储库](https://github.com/dotnet/coreclr)中的所有测试都使用这种方式，可用于快速本地“编辑-编译-调试”循环（如初步单元测试）。
     有关使用此方法的详细信息，请参阅[使用 CoreRun.exe 执行 .NET Core 应用](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md)。
 
 ## <a name="build-the-cli-from-source"></a>从源生成 CLI
 
-可以在 [GitHub 上的 `dotnet/cli` 存储库](https://github.com/dotnet/cli/)中找到 .NET Core CLI 的源代码。
+有关 .NET Core CLI 的源代码，可以访问 GitHub 上的 [dotnet/cli](https://github.com/dotnet/cli/) 存储库。
 
 为了生成 .NET Core CLI，需要在计算机上安装以下项。
 
