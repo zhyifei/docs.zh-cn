@@ -19,7 +19,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空间（C# 编程指南）
-在 C# 编程中，命名空间在两个方面被大量使用。 首先，.NET Framework 使用命名空间来组织它的许多类，如下所示：  
+在 C# 编程中，命名空间在两个方面被大量使用。 首先，.NET Framework 使用命名空间来组织许多类，如下所示：  
   
  [!code-csharp[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
