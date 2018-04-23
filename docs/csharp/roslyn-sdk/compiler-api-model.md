@@ -1,6 +1,6 @@
 ---
-title: ".NET Compiler Platform SDK 概念和对象模型"
-description: "此概述提供了高效使用 .NET 编译器 SDK 所需的背景。 介绍了 API 层、涉及的主要类型以及总体对象模型。"
+title: .NET Compiler Platform SDK 概念和对象模型
+description: 此概述提供了高效使用 .NET 编译器 SDK 所需的背景。 介绍了 API 层、涉及的主要类型以及总体对象模型。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>了解 .NET Compiler Platform SDK 模型
 
@@ -22,15 +22,15 @@ ms.lasthandoff: 03/15/2018
 
 .NET Compiler Platform SDK 通过提供镜像传统编译器管道的 API 层，作为使用者向用户公开 C# 和 Visual Basic 编译器的代码分析。
 
-![编译器管道将源代码处理为对象代码的步骤](media/compiler-pipeline.png)
+![编译器管道将源代码处理为对象代码的步骤](media/compiler-api-model/compiler-pipeline.png)
 
 此管道的每个阶段都是一个单独的组件。 首先，分析阶段标记化源文本，并将其分析为遵循语言语法的语法。 随后，声明阶段分析源和导入的元数据，形成命名符号。 然后，绑定阶段将代码中的标识符与符号匹配。 最后，发出阶段发出所有信息均由编译器生成的程序集。
 
-![编译器管道 API 提供对编译器管道中包含的每个步骤的访问权限](media/compiler-pipeline-api.png)
+![编译器管道 API 提供对编译器管道中包含的每个步骤的访问权限](media/compiler-api-model/compiler-pipeline-api.png)
 
 .NET Compiler Platform SDK 对应于每个阶段提供一个对象模型，该模型允许访问该阶段的信息。 分析阶段公开一个语法树，声明阶段公开一个分层符号表，绑定阶段公开编译器语义分析的结果，发出阶段公开生成 IL 字节代码的 API。
 
-![编译器管道每个步骤的编译器 API 提供的语言服务](media/compiler-pipeline-lang-svc.png)
+![编译器管道每个步骤的编译器 API 提供的语言服务](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 每个编译器将这些组件合并在一起，组成一个端到端整体。
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/15/2018
 
 .NET 编译器 SDK 包含两个主要 API 层：编译器 API 和工作区 API。
 
-![由编译器管道 API 表示的 API 层](media/api-layers.png)
+![由编译器管道 API 表示的 API 层](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>编译器 API
 

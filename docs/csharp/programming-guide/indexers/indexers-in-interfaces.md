@@ -1,21 +1,22 @@
 ---
-title: "接口中的索引器（C# 编程指南）"
+title: 接口中的索引器（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 304f2e037d8df025376d06f229ddd1584f8713b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 478920b5c1dea489db48caa48c045c4bd3da66ec
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>接口中的索引器（C# 编程指南）
 可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明索引器。 接口索引器的访问器与[类](../../../csharp/language-reference/keywords/class.md)索引器的访问器有所不同，差异如下：  
@@ -37,10 +38,10 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
- 在前面的示例中，可通过使用接口成员的完全限定名来使用显示接口成员实现。 例如：  
+ 在前面的示例中，可通过使用接口成员的完全限定名来使用显示接口成员实现。 例如:  
   
 ```  
-public string ISomeInterface.this   
+public string ISomeInterface.this[int index]   
 {   
 }   
 ```  
@@ -48,7 +49,7 @@ public string ISomeInterface.this
  但仅当类采用相同的索引签名实现多个接口时，才需用到完全限定名称以避免歧义。 例如，如果 `Employee` 类正在实现接口 `ICitizen` 和接口 `IEmployee`，而这两个接口具有相同的索引签名，则需要用到显式接口成员实现。 即是说以下索引器声明：  
   
 ```  
-public string IEmployee.this   
+public string IEmployee.this[int index]   
 {   
 }   
 ```  
@@ -56,14 +57,14 @@ public string IEmployee.this
  在 `IEmployee` 接口中实现索引器，而以下声明：  
   
 ```  
-public string ICitizen.this   
+public string ICitizen.this[int index]
 {   
 }   
 ```  
   
  在 `ICitizen` 接口中实现索引器。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [索引器](../../../csharp/programming-guide/indexers/index.md)  
  [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  

@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f575e8bdf06490eb0e5eba0ac07fe23787aa18d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b932de530c8ae48c4c8204d7da8e9b3dff59021
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>数据并行和任务并行中的潜在缺陷
 在许多情况下，与普通的顺序循环相比，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 可以显著提升性能。 但是，对循环进行并行化的工作增加了复杂性，可能会导致在顺序代码中出现不常见或根本不会遇到的问题。 本主题列出了一些在编写并行循环时要避免的做法。  
@@ -93,4 +93,4 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>请参阅  
  [并行编程](../../../docs/standard/parallel-programming/index.md)  
  [PLINQ 的潜在问题](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [并行编程模式：了解并使用 .NET Framework 4 应用并行模式](http://go.microsoft.com/fwlink/?LinkID=185142)
+ [并行编程模式：了解并使用 .NET Framework 4 应用并行模式](https://www.microsoft.com/download/details.aspx?id=19222)

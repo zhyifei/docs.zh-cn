@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: ec9d9fcdcaf2c018762542f6dc403e2a4f89376b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 04452159c759a0c7236c1b93dc966e5e9c54574a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 
@@ -28,16 +28,17 @@ ms.lasthandoff: 03/28/2018
 
 此命令会以浮动工具窗口的形式打开语法可视化工具。 如果没有打开代码编辑器窗口，则显示为空白，如下图所示。 
 
-![语法可视化工具窗口](media/syntax-visualizer.png)
+![语法可视化工具窗口](media/syntax-visualizer/syntax-visualizer.png)
 
 将此工具窗口停靠在 Visual Studio 中方便操作的位置，例如左侧。 可视化工具显示关于当前代码文件的信息。
 
 使用 File > New Project 命令新建项目。 可以创建 VB 项目或 C# 项目。 当 Visual Studio 打开此项目的主代码文件时，可视化工具会显示它的语法树。 可以打开此 Visual Studio 实例中的任何现有 C#/VB 文件，可视化工具会显示该文件的语法树。 如果在 Visual Studio 中打开了多个代码文件，可视化工具会显示当前活动的代码文件（键盘焦点所在的代码文件）的语法树。
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-![将 C# 语法树可视化](media/visualize-csharp.png)
+![将 C# 语法树可视化](media/syntax-visualizer/visualize-csharp.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="visualizing-a-vb-syntax-treemediavisualize-visual-basicpng"></a>![将 VB 语法树可视化](media/visualize-visual-basic.png)
+![将 VB 语法树可视化](media/syntax-visualizer/visualize-visual-basic.png)
+
 ---
 
 如前面的图像所示，可视化工具窗口在顶部显示语法树，在底部显示属性网格。 属性网格显示当前在树中选中的项的属性，包括项的 .NET 类型和种类（SyntaxKind）。
@@ -60,13 +61,18 @@ ms.lasthandoff: 03/28/2018
 
 右键单击树中的任何项，然后单击“查看定向语法关系图”。 
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 可视化工具会以图解形式显示以所选项为根的关系子树。 针对 C# 示例中对应于 `Main()` 方法的 MethodDeclaration 节点，尝试以下步骤。 可视化工具显示如下所示的语法关系图：
 
-![查看 C# 语法关系图](media/csharp-syntax-graph.png)
+![查看 C# 语法关系图](media/syntax-visualizer/csharp-syntax-graph.png)
+# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 
 针对前面的 VB 示例中对应于 `Main()` 方法的 SubBlock 节点，尝试相同的操作。 可视化工具显示如下所示的语法关系图：
 
-![查看 VB 语法关系图](media/visual-basic-syntax-graph.png)
+![查看 VB 语法关系图](media/syntax-visualizer/visual-basic-syntax-graph.png)
+
+---
 
 语法关系图查看器中有可以显示其着色方案的图例的选项。 还可以将鼠标悬停在语法关系图中的每个项上，以查看该项对应的属性。
 
@@ -74,7 +80,7 @@ ms.lasthandoff: 03/28/2018
 
 下面是可视化工具窗口以及语法关系图窗口所采用的停靠布局：
 
-![可视化工具和语法关系图窗口的一个停靠布局](media/docking-layout.png)
+![可视化工具和语法关系图窗口的一个停靠布局](media/syntax-visualizer/docking-layout.png)
 
 另一种选择在双监视器配置中，将语法关系图窗口放在第二个监视器上。
 
@@ -84,19 +90,19 @@ ms.lasthandoff: 03/28/2018
 
 可视化工具中的属性网格会更新，如下图所示：该表达式的符号为 SynthesizedIntrinsicOperatorSymbol，其中 Kind = Method。
 
-![符号属性](media/symbol-properties.png)
+![符号属性](media/syntax-visualizer/symbol-properties.png)
 
 针对同一个 AddExpression 节点，请尝试“查看 TypeSymbol (如果有)”。 如下图所示，可视化工具中的属性网格已更新，指示所选表达式的类型为 `Int32`。
 
-![TypeSymbol 属性](media/type-symbol-properties.png)
+![TypeSymbol 属性](media/syntax-visualizer/type-symbol-properties.png)
 
 针对同一个 AddExpression 节点，请尝试“查看转换后的 TypeSymbol (如果有)”。 属性网格的更新内容指示虽然表达式的类型为 `Int32`，但转换后的表达式类型为 `Double`，如下图所示。 此节点包含转换后的类型符号信息，因为 `Int32` 表达式所在的上下文要求必须转换为 `Double` 型。 此转换满足了为赋值运算符左侧的变量 `x` 指定的类型为 `Double` 型的要求。
 
-![转换后的 TypeSymbol 属性](media/converted-type-symbol-properties.png)
+![转换后的 TypeSymbol 属性](media/syntax-visualizer/converted-type-symbol-properties.png)
 
 最后，针对同一 AddExpression 节点，尝试“查看常数值(如果有)”。 属性网格显示该表达式的值是一个值为 `2` 的编译时常数。
 
-![一个常数值](media/constant-value.png)
+![一个常数值](media/syntax-visualizer/constant-value.png)
 
 在 VB 中也可以重复上述示例。 在 VB 文件中键入 `Dim x As Double = 1 + 1`。 在代码编辑器窗口中选择表达式 `1 + 1`。 可视化工具突出显示了对应的 AddExpression 节点。 对此 AddExpression 节点重复前面所述的步骤，应该能看到相同的结果。
 
@@ -114,15 +120,15 @@ End Module
 
 此代码引入了映射到文件顶部的 `System.Console` 类型的 `C` 别名，并在 `Main()` 内使用此别名。 选择在 `Main()` 方法的 `C.WriteLine()` 中使用此别名 `C`。 可视化工具会选择对应的 IdentifierName 节点。 右键单击此节点，并单击“查看符号(如果有)”。 属性网格指示此标识符绑定至 `System.Console` 类型，如下图所示：
 
-![符号属性](media/symbol-visual-basic.png)
+![符号属性](media/syntax-visualizer/symbol-visual-basic.png)
 
 针对同一 IdentifierName 节点，尝试“查看 AliasSymbol (如果有)”。 属性网格指示该标识符为绑定至 `System.Console` 目标的别名 `C`。 换而言之，属性网格会提供对应于标识符 `C` 的 AliasSymbol 的相关信息。
 
-![AliasSymbol 属性](media/alias-symbol.png)
+![AliasSymbol 属性](media/syntax-visualizer/alias-symbol.png)
 
 检查对应于任何声明的类型、方法和属性的符号。 在可视化工具中选择对应节点，单击“查看符号(如果有)”。 选择 `Sub Main()` 方法，包括该方法的正文。 针对可视化工具中对应的 SubBlock 节点，单击“查看符号(如果有)”。 属性网格显示此 SubBlock 节点的 MethodSymbol 的名称为 `Main`，返回类型为 `Void`。
 
-![查看方法声明的符号](media/method-symbol.png)
+![查看方法声明的符号](media/syntax-visualizer/method-symbol.png)
 
 在 C# 中可以轻松重复上述 VB 示例。 为别名键入 `using C = System.Console;` 以代替 `Imports C = System.Console`。 在 C# 中完成的上述步骤会在可视化工具窗口中产生相同的结果。
 

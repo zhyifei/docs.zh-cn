@@ -1,6 +1,6 @@
 ---
-title: "使用 .NET Compiler Platform SDK 工作区模型"
-description: "此概述介绍了用于查询和操作代码的工作区和项目的类型。"
+title: 使用 .NET Compiler Platform SDK 工作区模型
+description: 此概述介绍了用于查询和操作代码的工作区和项目的类型。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d0d4e9c012b025b9393ac34f0833795fca9841d5
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="work-with-a-workspace"></a>使用工作区
 
@@ -40,8 +40,8 @@ ms.lasthandoff: 12/19/2017
 
 下图表示了如何将工作区关联到主机环境和工具，以及如何进行编辑。
 
-![包含项目和源文件的工作区中不同元素之间的关系](media/workspace-obj-relations.png)
+![包含项目和源文件的工作区中不同元素之间的关系](media/work-with-workspace/workspace-obj-relations.png)
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 Roslyn 公开了一组编译器 API 和工作区 API，提供了有关源代码的丰富信息，并完全保真地记录了 C# 和 Visual Basic 语言。  .NET Compiler Platform SDK 极大地降低了创建以代码为中心的工具和应用程序的门槛。 在元编程、代码生成和转换、C# 和 VB 语言的交互式使用以及在域专属语言中嵌入 C# 和 VB 等领域，它带来了许多创新机遇。  

@@ -1,7 +1,7 @@
 ---
-title: ".NET Core CLI 扩展性模型"
-description: "了解如何扩展命令行接口 (CLI) 工具。"
-keywords: "CLI, 扩展性, 自定义命令, .NET Core"
+title: .NET Core CLI 扩展性模型
+description: 了解如何扩展命令行接口 (CLI) 工具。
+keywords: CLI, 扩展性, 自定义命令, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.workload: dotnetcore
-ms.openlocfilehash: 0d273510903c888f3212a57f4c28b118b73cab5c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 53329c302066891c240a234156c2572acc66e7ab
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具扩展性模型
 
@@ -82,8 +83,8 @@ ms.lasthandoff: 12/23/2017
 
 这些类型的工具含有依赖项关系图，它完全独立于使用这些工具的项目的依赖项关系图。 还原过程将首先还原项目的依赖项，然后还原每个工具及其依赖项。
 
-可在 [.NET Core CLI 存储库](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects)中找到有关此过程的更多示例和不同组合。
-还可以在相同存储库中查看[所用工具的实现](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages)。
+可在 [.NET Core CLI 存储库](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects)中找到有关此过程的更多示例和不同组合。
+还可以在相同存储库中查看[所用工具的实现](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)。
 
 ### <a name="custom-targets"></a>自定义目标
 NuGet 可将[自定义 MSBuild 目标和属性文件打包](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)。 在移动 .NET Core CLI 工具以使用 MSBuild 后，会对 .NET Core 项目应用可扩展性的相同机制。 若要扩展生成过程、访问生成过程中的任何项目（如生成的文件）或检查调用生成时使用的配置等，建议使用该类型的扩展。

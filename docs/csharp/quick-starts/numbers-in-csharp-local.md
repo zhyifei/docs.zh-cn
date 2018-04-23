@@ -1,6 +1,6 @@
 ---
-title: "“C# 中的数字”教程 - C# 本地快速入门"
-description: "通过浏览数字类型、其属性和方法了解 C#。"
+title: “C# 中的数字”教程 - C# 本地快速入门
+description: 通过浏览数字类型、其属性和方法了解 C#。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 99c2f8e4807c4d18c0c798e3a737f4a88d6e62d6
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 6570693ea09ca2b548615291ba4f2b69f6d92482
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>“C# 中的数字”快速入门
 
@@ -315,7 +315,7 @@ Console.WriteLine(c / d);
 至此，大家已了解不同的数字类型。请编写代码来计算圆面积（其中，半径为 2.50 厘米）。 请注意，圆面积是用半径的平方乘以 PI 进行计算。 小提示：.NET 包含 PI 常数 <xref:System.Math.PI?displayProperty=nameWithType>，可用于相应的值计算。 
 
 你应获得 19 和 20 之间的答案。
-要查看你的答案，可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)
+要查看你的答案，可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
 
 如果需要，可以试用一些其他公式。 
 

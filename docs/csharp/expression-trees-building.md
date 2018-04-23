@@ -1,6 +1,6 @@
 ---
-title: "生成表达式树"
-description: "了解生成表达式树的方法。"
+title: 生成表达式树
+description: 了解生成表达式树的方法。
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7e45f566f66c129111c65a1166a6c71ff518dfc7
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-expression-trees"></a>生成表达式树
 
@@ -169,7 +169,7 @@ BlockExpression body = Expression.Block(
 
 用于生成阶乘函数的表达式树的代码相对更长、更复杂，它充满了标签和 break 语句以及我们在日常编码任务中想要避免的其他元素。 
 
-在本部分中，我还更新了用于访问此表达式树中所有节点的访客代码，并编写了在此示例中创建的节点的相关信息。 可以在 dotnet/docs GitHub 存储库[查看或下载示例代码](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees)。 生成并运行这些示例，自行动手试验。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+在本部分中，我还更新了用于访问此表达式树中所有节点的访客代码，并编写了在此示例中创建的节点的相关信息。 可以在 dotnet/docs GitHub 存储库[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)。 生成并运行这些示例，自行动手试验。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="examining-the-apis"></a>检查 API
 

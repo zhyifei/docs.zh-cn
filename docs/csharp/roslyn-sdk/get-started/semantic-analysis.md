@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 8703670f650a16d1b6642eaaf4f82f0a73ab4c69
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>语义分析入门
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/28/2018
 
 在本教程中，你会再次看到“Hello World”程序。 这次你将在该程序中查询符号，以理解这些符号所代表的类型。 在命名空间中查询类型，并学习如何查找类型上可用的方法。
 
-可以在[我们的 GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart)中看到此示例的已完成代码。
+可以在[我们的 GitHub 存储库](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart)中看到此示例的已完成代码。
 
 > [!NOTE]
 > 语法树类型使用继承描述不同的语法元素，这些语法元素在程序中的不同位置生效。 使用这些 API 通常意味着将属性或集合成员强制转换为特定的派生类型。 在以下示例中，作业和强制转换分别是独立的语句，采用显式类型化变量。 你可以读取代码以查看 API 的返回类型以及所返回对象的运行时类型。 在实践中，更常见的是使用隐式类型化变量并靠 API 名称来描述要检查的对象的类型。

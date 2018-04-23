@@ -1,12 +1,13 @@
 ---
-title: "反射类型和泛型类型"
-ms.custom: 
+title: 反射类型和泛型类型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54ce839c6a569bed784a03acd5e2b92f4f1f5aca
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="reflection-and-generic-types"></a>反射类型和泛型类型
 <a name="top"></a> 从反射的角度来说，泛型类型和普通类型之间的区别在于泛型类型具有与之关联的一组类型形参（若是泛型类型定义）或类型实参（若是构造类型）。 泛型方法和普通方法以相同方式互不相同。  
@@ -65,15 +67,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>这是泛型类型还是泛型方法？  
- 当使用反射来检查未知类型（由 <xref:System.Type>的实例表示）时，请使用 <xref:System.Type.IsGenericType%2A> 属性来确定未知类型是否为泛型。 如果类型是泛型，它会返回 `true` 。 同样，当检查未知方法（由 <xref:System.Reflection.MethodInfo> 类的实例表示）时，请使用 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> 属性来确定此方法是否为泛型。  
+ 当使用反射来检查未知类型（由 <xref:System.Type>的实例表示）时，请使用 <xref:System.Type.IsGenericType%2A> 属性来确定未知类型是否为泛型。 如果类型是泛型，它会返回 `true` 。 同样，当检查未知方法（由 <xref:System.Reflection.MethodInfo> 类的实例表示）时，请使用 <xref:System.Reflection.MethodBase.IsGenericMethod%2A> 属性来确定此方法是否为泛型。  
   
 ### <a name="is-this-a-generic-type-or-method-definition"></a>这是泛型类型定义还是泛型方法定义？  
- 使用 <xref:System.Type.IsGenericTypeDefinition%2A> 属性来确定 <xref:System.Type> 对象是否表示泛型类型定义，并使用 <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> 方法来确定 <xref:System.Reflection.MethodInfo> 是否表示泛型方法定义。  
+ 使用 <xref:System.Type.IsGenericTypeDefinition%2A> 属性来确定 <xref:System.Type> 对象是否表示泛型类型定义，并使用 <xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A> 方法来确定 <xref:System.Reflection.MethodInfo> 是否表示泛型方法定义。  
   
  泛型类型定义和泛型方法定义是一些从中创建可实例化类型的模板。 .NET Framework 类库中的泛型类型（如 <xref:System.Collections.Generic.Dictionary%602>）是泛型类型定义。  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>类型或方法是开放式还是封闭式的？  
- 如果可实例化类型都已替换为所有类型形参（包括所有封闭类型的所有类型形参），则泛型类型或方法是封闭式的。 若为封闭式，则只能创建泛型类型的实例。 如果类型为开放式， <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> 属性将返回 `true` 。 对于方法， <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> 方法执行相同的功能。  
+ 如果可实例化类型都已替换为所有类型形参（包括所有封闭类型的所有类型形参），则泛型类型或方法是封闭式的。 若为封闭式，则只能创建泛型类型的实例。 如果类型为开放式， <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> 属性将返回 `true` 。 对于方法， <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> 方法执行相同的功能。  
   
  [返回页首](#top)  
   
@@ -149,7 +151,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 <a name="invariants"></a>   
 ## <a name="invariants"></a>固定协定  
- 有关泛型类型反射中常用术语的固定条件表格，请参阅 <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>。 有关与泛型方法相关的其他术语，请参阅 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType>。  
+ 有关泛型类型反射中常用术语的固定条件表格，请参阅 <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>。 有关与泛型方法相关的其他术语，请参阅 <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>。  
   
  [返回页首](#top)  
   

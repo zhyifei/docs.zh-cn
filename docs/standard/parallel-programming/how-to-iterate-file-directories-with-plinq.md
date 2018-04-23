@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ddd3b509b7c0c35f1c4edea99cb5a4ec6c1ac18e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 523db9d356954a4a397b63d836018070effa9e5b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>如何：使用 PLINQ 循环访问文件目录
 此示例展示了两种简单方法，以对文件目录平行执行操作。 第一个查询使用 <xref:System.IO.Directory.GetFiles%2A> 方法，在数组中填充目录和所有子目录中的文件名。 在整个数组填充完成前，此方法不会返回数组，所以可能会在操作开始时引入延迟。 不过，在填充数组后，PLINQ 可以非常快速地并行处理数组。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/23/2017
   
  使用 <xref:System.IO.Directory.GetFiles%2A> 时，请确保有权访问树中的所有目录。 否则，将抛出异常，且不会返回任何结果。 如果在 PLINQ 查询中使用 <xref:System.IO.Directory.EnumerateDirectories%2A>，棘手的是合理处理 I/O 异常，以便能够继续循环访问。 如果代码必须处理 I/O 或未经授权的访问异常，应考虑使用[如何：使用并行类循环访问文件目录](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md)中介绍的方法。  
   
- 如果 I/O 延迟造成问题（例如，对于通过网络的文件 I/O），请考虑使用 [TPL 和传统 .NET Framework 异步编程](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)和这篇[博客文章](http://go.microsoft.com/fwlink/?LinkID=186458)中介绍的异步 I/O 方法之一。  
+ 如果 I/O 延迟造成问题（例如，对于通过网络的文件 I/O），请考虑使用 [TPL 和传统 .NET Framework 异步编程](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)和这篇[博客文章](https://blogs.msdn.microsoft.com/pfxteam/2009/08/04/parallel-extensions-and-io/)中介绍的异步 I/O 方法之一。  
   
 ## <a name="see-also"></a>请参阅  
  [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
