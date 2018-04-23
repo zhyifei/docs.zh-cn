@@ -13,7 +13,7 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 -   将 `double` 转换为 `float` 时，`double` 值舍入为最接近的 `float` 值。 如果 `double` 值太小或太大，无法匹配目标类型，结果将为零或无穷大。  
   
--   将 `float` 或 `double` 转换为 `decimal` 时，源值转换为 `decimal` 表示形式，并四舍五入到第 28 位小数后最接近的数（如果需要）。 根据源值的值，可能出现以下结果之一：  
+-   将 `float` 或 `double` 转换为 `decimal` 时，源值转换为 `decimal` 表示形式，并四舍五入到第 28 位小数后最接近的数（如果需要）。 根据源值的值，可能出现以下结果之一：  
   
     -   如果源值太小，无法表示为 `decimal`，结果则为零。  
   
