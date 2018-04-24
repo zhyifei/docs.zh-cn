@@ -1,28 +1,28 @@
 ---
-title: "并行 LINQ (PLINQ)"
-ms.custom: 
+title: 并行 LINQ (PLINQ)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 94eeeda4666a4e6c1cb8729d6563ffcc4aa479c4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5c24f51401b1e493864409ddafe580cea7ac435e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parallel-linq-plinq"></a>并行 LINQ (PLINQ)
 并行 LINQ (PLINQ) 是 LINQ to Objects 的并行实现。 PLINQ 将整套 LINQ 标准查询运算符实现为 <xref:System.Linq> 命名空间的扩展方法，并提供适用于并行操作的其他运算符。 PLINQ 将 LINQ 语法的简洁和可靠性与并行编程的强大功能结合在一起。 就像面向任务并行库的代码一样，PLINQ 查询会根据主计算机的能力按比例调整并发程度。  
@@ -63,4 +63,4 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>请参阅  
  <xref:System.Linq.ParallelEnumerable>  
  [并行编程](../../../docs/standard/parallel-programming/index.md)  
- [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+ [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

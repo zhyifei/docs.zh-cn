@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 7e9732fb6eaef240d08449635697ba6b8ad9c510
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -150,7 +150,7 @@ Mono 是主要在需要小型运行时使用的 .NET 实现。 它是运行时�
 
 Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平台使用的完整静态编译器（预先编译）。
 
-若要了解有关 Mono 的详细信息，请参阅 [Mono 文档](http://www.mono-project.com/docs/)。
+若要了解有关 Mono 的详细信息，请参阅 [Mono 文档](https://www.mono-project.com/docs/)。
 
 ## <a name="net"></a>.NET
 

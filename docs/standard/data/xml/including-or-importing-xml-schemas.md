@@ -1,30 +1,30 @@
 ---
-title: "包含或导入 XML 架构"
-ms.custom: 
+title: 包含或导入 XML 架构
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: 
+caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a8c9b513f47fcb07f987b1e17f0b7f485cef3143
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7ee43ddbcd038574fbff3ae487fbebbbd2643656
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="including-or-importing-xml-schemas"></a>包含或导入 XML 架构
 XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素。 这些架构元素引用其他 XML 架构，可以用于补充包括或导入这些架构的架构的结构。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类映射到架构对象模型 (SOM) API 中的这些元素。  
@@ -108,7 +108,7 @@ XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 
 </schema>  
 ```  
   
- 若要详细了解 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素以及 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类，请参阅 [W3C XML 架构](http://www.w3.org/XML/Schema)和 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间类参考文档。  
+ 若要详细了解 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素以及 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类，请参阅 [W3C XML 架构](https://www.w3.org/XML/Schema)和 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间类参考文档。  
   
 ## <a name="see-also"></a>请参阅  
  [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  

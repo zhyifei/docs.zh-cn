@@ -1,30 +1,30 @@
 ---
-title: "Windows 中的托管和非托管线程处理"
-ms.custom: 
+title: Windows 中的托管和非托管线程处理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 66bf8458a3f4f9dd622129e82acb659dddf8467a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的托管和非托管线程处理
 所有线程的管理都是通过 <xref:System.Threading.Thread> 类完成的，包括由公共语言运行时创建的线程以及在运行时以外创建并进入托管环境以执行代码的线程。 运行时监视其进程中曾经在托管执行环境中执行过代码的所有线程。 它不跟踪任何其他线程。 线程可以通过 COM 互操作（原因是运行时将托管对象作为 COM 对象向非托管领域公开）、COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) 函数和平台调用进入托管执行环境。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 |接近 **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>托管线程和 COM 单元  
- 可标记一个托管线程以指示其将托管一个[单线程](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx)或[多线程](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx)单元。 （有关 COM 线程处理体系结构的详细信息，请参阅 [Processes, threads, and Apartments](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)（进程、线程和单元）。）<xref:System.Threading.Thread.GetApartmentState%2A> 类的 <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A> 和 <xref:System.Threading.Thread> 方法返回并分配线程的单元状态。 如果未设置该状态，则 <xref:System.Threading.Thread.GetApartmentState%2A> 返回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
+ 可标记一个托管线程以指示其将托管一个[单线程](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx)或[多线程](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx)单元。 （有关 COM 线程处理体系结构的详细信息，请参阅 [Processes, threads, and Apartments](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)（进程、线程和单元）。）<xref:System.Threading.Thread.GetApartmentState%2A> 类的 <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A> 和 <xref:System.Threading.Thread> 方法返回并分配线程的单元状态。 如果未设置该状态，则 <xref:System.Threading.Thread.GetApartmentState%2A> 返回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
   
  只有当线程处于 <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> 状态时才可以设置该属性；但一个线程只能设置一次。  
   

@@ -1,30 +1,30 @@
 ---
-title: "使用 XmlSchemaSet 进行 XML 架构 (XSD) 验证"
-ms.custom: 
+title: 使用 XmlSchemaSet 进行 XML 架构 (XSD) 验证
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-caps.latest.revision: 
+caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 99e2f66a1aedafe316ab65ae302113ea553146ed
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f18852411d733d12bcbbdba2b64bc2f134ea061c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>使用 XmlSchemaSet 进行 XML 架构 (XSD) 验证
 XML 文档可以根据 <xref:System.Xml.Schema.XmlSchemaSet> 中的 XML 架构定义语言 (XSD) 架构进行验证。  
@@ -33,7 +33,7 @@ XML 文档可以根据 <xref:System.Xml.Schema.XmlSchemaSet> 中的 XML 架构�
  XML 文档通过 <xref:System.Xml.XmlReader.Create%2A> 类的 <xref:System.Xml.XmlReader> 方法进行验证。 若要验证 XML 文档，请构造一个 <xref:System.Xml.XmlReaderSettings> 对象，其中包含用于验证 XML 文档的 XML 架构定义语言 (XSD) 架构。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema> 命名空间包含扩展方法，以便于在使用 [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) 时轻松针对 XSD 文件验证 XML 树。 若要详细了解如何在使用 LINQ to XML 时验证 XML 文档，请参阅[如何：使用 XSD 进行验证](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)。  
+>  <xref:System.Xml.Schema> 命名空间包含扩展方法，以便于在使用 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) 时轻松针对 XSD 文件验证 XML 树。 若要详细了解如何在使用 LINQ to XML 时验证 XML 文档，请参阅[如何：使用 XSD 进行验证](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b)。  
   
  通过将架构作为参数传递给 <xref:System.Xml.Schema.XmlSchemaSet> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法，可以将单个架构或一组架构（作为 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>）添加到 <xref:System.Xml.Schema.XmlSchemaSet>。 请注意，在验证文档时，文档的目标命名空间必须匹配架构集中架构的目标命名空间。  
   

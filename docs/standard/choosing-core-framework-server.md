@@ -9,11 +9,11 @@ ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 1fba5ce14b2504ea688bdff35efa959b8a5a86ab
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/19/2018
 
 如果应用程序（Web/服务）需要在多个平台（Windows、Linux 和 macOS）上运行，请使用 .NET Core。
 
-.NET Core 作为开发工作站支持前面提到的操作系统。 Visual Studio 提供了适用于 Windows 和 macOS 的集成开发环境 (IDE)。 还可使用运行于 macOS、Linux 和 Windows 上的 Visual Studio Code。 Visual Studio Code 支持 .NET Core，包括 IntelliSense 和调试。 大多数第三方编辑器（如 Sublime、Emacs 和 VI）都可搭配 .NET Core 使用。 这些第三方编辑器可使用 [Omnisharp](http://www.omnisharp.net/) 获取编辑器 IntelliSense。 也可不使用任何代码编辑器，直接使用适用于所有支持平台的 [.NET Core CLI 工具](../core/tools/index.md)。
+.NET Core 作为开发工作站支持前面提到的操作系统。 Visual Studio 提供了适用于 Windows 和 macOS 的集成开发环境 (IDE)。 还可使用运行于 macOS、Linux 和 Windows 上的 Visual Studio Code。 Visual Studio Code 支持 .NET Core，包括 IntelliSense 和调试。 大多数第三方编辑器（如 Sublime、Emacs 和 VI）都可搭配 .NET Core 使用。 这些第三方编辑器可使用 [Omnisharp](https://www.omnisharp.net/) 获取编辑器 IntelliSense。 也可不使用任何代码编辑器，直接使用适用于所有支持平台的 [.NET Core CLI 工具](../core/tools/index.md)。
 
 ### <a name="microservices-architecture"></a>微服务体系结构
 

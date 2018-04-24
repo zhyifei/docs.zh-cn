@@ -13,15 +13,15 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-class-libraries"></a>.NET 类库
 
-类库是 .NET 的[共享库](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)概念。 通过类库可将实用功能组件化为可供多个应用程序使用的模块。 还可使用类库加载应用程序启动时不需要或未知的功能。 类库通过 [.NET 程序集文件格式](assembly-format.md)进行描述。
+类库是 .NET 的[共享库](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)概念。 通过类库可将实用功能组件化为可供多个应用程序使用的模块。 还可使用类库加载应用程序启动时不需要或未知的功能。 类库通过 [.NET 程序集文件格式](assembly-format.md)进行描述。
 
 有三种类型的类库可供使用：
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/19/2018
 
 创建可移植库时，需选择平台配置。 这些是需要支持的各个平台（例如，.NET Framework 4.5+、Windows Phone 8.0+）。 要支持的平台越多，可生成的 API 和平台假设就越少，公分母越小。 这一特性可能最初会令人感到疑惑，因为人们常认为“越多越好”，但却发现更多的支持平台总导致可用 API 更少。
 
-许多库开发人员已经从由一个源开发多个平台特定的库（使用条件编译指令）转向开发可移植库。 有[多种方法](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)可在可移植库中访问平台特定的功能，其中[诱饵替换](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)是目前最广为接受的方法。
+许多库开发人员已经从由一个源开发多个平台特定的库（使用条件编译指令）转向开发可移植库。 有[多种方法](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)可在可移植库中访问平台特定的功能，其中[诱饵替换](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)是目前最广为接受的方法。
 
 ### <a name="net-standard-class-libraries"></a>.NET Standard 类库
 

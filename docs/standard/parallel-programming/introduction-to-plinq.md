@@ -1,12 +1,12 @@
 ---
-title: "PLINQ 介绍"
-ms.custom: 
+title: PLINQ 介绍
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,22 +14,22 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6ee718737885618322c3623a80b0b091bbfc729d
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 1148d2b245d67304071d8dd23bb1a88bdc020b8d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 介绍
 ## <a name="what-is-a-parallel-query"></a>什么是并行查询？  
- [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 中引入了语言集成查询 (LINQ)。  它具有统一的模型，以类型安全方式查询任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 数据源。 LINQ to Objects 是针对内存中集合（如 <xref:System.Collections.Generic.List%601> 和数组）运行的 LINQ 查询的名称。 本文假定你对 LINQ 有基本的了解。 有关详细信息，请参阅 [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
+ [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 中引入了语言集成查询 (LINQ)。  它具有统一的模型，以类型安全方式查询任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 数据源。 LINQ to Objects 是针对内存中集合（如 <xref:System.Collections.Generic.List%601> 和数组）运行的 LINQ 查询的名称。 本文假定你对 LINQ 有基本的了解。 有关详细信息，请参阅 [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。  
   
  并行 LINQ (PLINQ) 是 LINQ 模式的并行实现。 一个 PLINQ 查询的许多方面都类似于非并行的 LINQ to Objects 查询。 与顺序 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 查询一样，PLINQ 查询对任何内存中 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 数据源执行操作，并且推迟了执行，即在枚举查询前不会开始执行。 主要区别在于，PLINQ 会尝试充分利用系统上的所有处理器。 方法是将数据源分区成片段，然后在多个处理器上针对单独工作线程上的每个片段执行并行查询。 在许多情况下，并行执行意味着查询运行速度显著提高。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/27/2018
 ## <a name="the-parallelenumerable-class"></a>ParallelEnumerable 类  
  <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 类公开了几乎所有的 PLINQ 功能。  它和 <xref:System.Linq?displayProperty=nameWithType> 命名空间类型的其余部分一起被编译到 System.Core.dll 程序集中。 Visual Studio 中默认的 C# 和 Visual Basic 项目均会引用该程序集并导入该命名空间。  
   
- 尽管 <xref:System.Linq.ParallelEnumerable> 实现了 LINQ to Objects 支持的所有标准查询运算符，但它不会尝试并行执行每个实现。 如果不熟悉 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]，请参阅 [LINQ 简介](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)。  
+ 尽管 <xref:System.Linq.ParallelEnumerable> 实现了 LINQ to Objects 支持的所有标准查询运算符，但它不会尝试并行执行每个实现。 如果不熟悉 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]，请参阅 [LINQ 简介](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)。  
   
  除了标准查询运算符外，<xref:System.Linq.ParallelEnumerable> 类还包含一组启用并行执行专用行为的方法。 下表中列出了这些特定于 PLINQ 的方法。  
   

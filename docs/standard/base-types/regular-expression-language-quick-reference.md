@@ -1,12 +1,12 @@
 ---
-title: "正则表达式语言 - 快速参考"
-ms.custom: 
+title: 正则表达式语言 - 快速参考
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e43264619158ed9325875d9843e322e08872a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="regular-expression-language---quick-reference"></a>正则表达式语言 - 快速参考
 <a name="top"></a> 正则表达式是正则表达式引擎尝试匹配输入文本的一种模式。 模式由一个或多个字符文本、运算符或构造组成。  有关简要介绍，请参阅 [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/23/2017
   
  我们还提供此信息的两种格式，你可以下载和打印，以便参考：  
   
- [以 Word (.docx) 格式下载](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [以 PDF (.pdf) 格式下载](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [以 Word (.docx) 格式下载](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [以 PDF (.pdf) 格式下载](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>字符转义  
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/23/2017
 |`??`|匹配上一个元素零次或一次，但次数尽可能少。|`"rai??n"`|“ran”和“rain”|  
 |`{` *n* `}?`|匹配前面的元素恰好 *n* 次。|`",\d{3}?"`|“1,043.6”中的“,043”，“9,876,543,210”中的“,876”、“,543”和“,210”|  
 |`{` *n* `,}?`|匹配上一个元素至少 *n* 次，但次数尽可能少。|`"\d{2,}?"`|“166”，“29”和“1930”|  
-|`{` *n* `,` *m* `}?`|匹配上一个元素的次数介于 *n* 和 *m* 次，但次数尽可能少。|`"\d{3,5}?"`|“166”、“17668”<br /><br /> “193024”中的“193”、“024”|  
+|`{` *n* `,` *m* `}?`|匹配上一个元素的次数介于 *n* 和 *m* 之间，但次数尽可能少。|`"\d{3,5}?"`|“166”、“17668”<br /><br /> “193024”中的“193”、“024”|  
   
  [返回页首](#top)  
   
@@ -232,5 +232,5 @@ ms.lasthandoff: 12/23/2017
  [正则表达式](regular-expressions.md)  
  [正则表达式类](the-regular-expression-object-model.md)  
  [正则表达式示例](regular-expression-examples.md)  
- [正则表达式 - 快速参考（以 Word 格式下载）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [正则表达式 — 快速参考（以 PDF 格式下载）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [正则表达式 - 快速参考（以 Word 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [正则表达式 — 快速参考（以 PDF 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

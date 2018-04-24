@@ -1,6 +1,6 @@
 ---
-title: ".NET 和 Docker 简介"
-description: "了解 Docker 和 .NET Core"
+title: .NET 和 Docker 简介
+description: 了解 Docker 和 .NET Core
 keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
@@ -14,11 +14,11 @@ manager: wpickett
 ms.custom: mvc
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 75c631cf0abac543889cb7387f6fc3fdb2624512
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
@@ -105,15 +105,15 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 **.NET Framework 4.7**
 
-[dotnet-framework:4.7 示例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7)演示 [.NET Framework 4.7](../../framework/whats-new/index.md#v47) 的基本“hello world”用法。 它演示如何生成并部署依赖于 [.NET Framework 4.7 docker 映像](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile)的应用程序。
+[dotnet-framework:4.7 示例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7)演示 [.NET Framework 4.7](../../framework/whats-new/index.md#v47) 的基本“hello world”用法。 它演示如何生成并部署依赖于 [.NET Framework 4.7 docker 映像](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.7/Dockerfile)的应用程序。
 
 **.NET Framework 4.6.2**
 
-[dotnet-framework:4.6.2 示例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2)演示 [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462) 的基本“hello world”用法。 它演示如何生成并部署依赖于 [.NET Framework 4.6.2 docker 映像](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2)的应用程序。
+[dotnet-framework:4.6.2 示例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2)演示 [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462) 的基本“hello world”用法。 它演示如何生成并部署依赖于 [.NET Framework 4.6.2 docker 映像](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile)的应用程序。
 
 **.NET Framework 3.5**
 
- [dotnet-framework:3.5 示例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5)演示 [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5) 的基本“hello world”用法。 它演示如何在 Docker 中生成并部署依赖于 .NET Framework 3.5 的项目。
+ [dotnet-framework:3.5 示例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5)演示 [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile) 的基本“hello world”用法。 它演示如何在 Docker 中生成并部署依赖于 .NET Framework 3.5 的项目。
 
 #### <a name="aspnet-core"></a>ASP.NET Core
 
@@ -133,7 +133,7 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 * [DockerHub 上的 Windows Communication Framework (WCF) 映像](https://hub.docker.com/r/microsoft/wcf/)
 
-* [GitHub 上的 Windows Communication Framework (WCF) 映像](https://github.com/microsoft/iis-docker)
+* [GitHub 上的 Windows Communication Framework (WCF) 映像](https://github.com/microsoft/wcf-docker)
 
 * [使用 .NET Full Framework 4.6.2 的 Windows Communication Framework (WCF) Docker 示例](https://github.com/Microsoft/wcf-docker-samples)
 
@@ -141,7 +141,7 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 * [DockerHub 上的 Internet Information Server (IIS) 映像](https://hub.docker.com/r/microsoft/iis/)
 
-* [GitHub 上的 Internet Information Server (IIS) 映像](https://github.com/microsoft/wcf-docker)
+* [GitHub 上的 Internet Information Server (IIS) 映像](https://github.com/microsoft/iis-docker)
 
 ### <a name="interact-with-other-microsoft-stack-container-images"></a>与其他 Microsoft 堆栈容器映像进行交互
 
@@ -149,9 +149,7 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 * [使用 Docker 快速入门运行 Microsoft SQL Server for Linux 2017 容器映像](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
-* [DockerHub 上的 Microsoft SQL Server for Linux 映像](https://hub.docker.com/r/microsoft/mssql-server-windows/)
-
-* [DockerHub 上的 Microsoft SQL Server for Windows 容器映像](https://hub.docker.com/r/microsoft/mssql-server-windows/)
+* [DockerHub 上的 Microsoft SQL Server for Linux 映像](https://hub.docker.com/r/microsoft/mssql-server-linux/)
 
 * [DockerHub 上的用于 Windows 容器的 Microsoft SQL Server Express Edition 映像](https://hub.docker.com/r/microsoft/mssql-server-windows-express/)
 
@@ -165,9 +163,9 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 #### <a name="operations-management-suite-oms-linux-agent"></a>Operations Management Suite (OMS) Linux 代理
 
-* [Operations Management Suite (OMS) Linux 代理概述](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md#overview)
+* [Operations Management Suite (OMS) Linux 代理概述](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md)
 
-* [DockerHub 上的 Operations Management Suite (OMS) 映像](https://hub.docker.com/r/microsoft/vsts-agent/)
+* [DockerHub 上的 Operations Management Suite (OMS) 映像](https://hub.docker.com/r/microsoft/oms/)
 
 * [GitHub 上的 Operations Management Suite (OMS) 映像](https://github.com/Microsoft/OMS-docker)
 
@@ -175,7 +173,7 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 * [DockerHub 上的 Microsoft Azure 命令行接口 (CLI) 映像](https://hub.docker.com/r/microsoft/azure-cli/) 
 
-* [GitHub 上的 Microsoft Azure 命令行接口 (CLI) 映像](https://github.com/Microsoft/OMS-docker)
+* [GitHub 上的 Microsoft Azure 命令行接口 (CLI) 映像](https://github.com/Azure/azure-cli#Docker)
 
 > [!NOTE]
 > 如果你没有 Azure 订阅，请[立即注册](https://azure.microsoft.com/free/?b=16.48)获取一个免费的 30 天试用帐户和 200 美元的 Azure 信用额度，以便试用 Azure 服务的任意组合。

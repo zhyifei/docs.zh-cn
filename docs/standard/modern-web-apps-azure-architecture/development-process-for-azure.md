@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: ea5e699046d603ebb765265be403fd4561aa742e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
@@ -86,27 +87,27 @@ ms.lasthandoff: 02/28/2018
 
 **图 10-3.** 构建 ASP.NET Core 应用以及将应用于托管于 Azure 的分步工作流
 
-#### <a name="step-1-local-dev-environment-inner-loop"></a>步骤 1. 本地开发环境内循环
+#### <a name="step-1-local-dev-environment-inner-loop"></a>步骤 1。 本地开发环境内循环
 
 开发要部署到 Azure 的 ASP.NET Core 应用程序与开发其他程序并无不同。 使用惯用的本地开发环境，无论是 Visual Studio 2017、dotnet CLI、Visual Studio Code 还是个人首选的编辑器。 在准备将更改推送到共享源代码存储库前，可以编写代码、运行并调试更改、运行自动测试以及本地提交到源代码管理。
 
-#### <a name="step-2-application-code-repository"></a>步骤 2. 应用程序代码存储库
+#### <a name="step-2-application-code-repository"></a>步骤 2。 应用程序代码存储库
 
 无论何时准备与团队共享代码，均应将更改从本地源存储库中推送到团队共享源存储库。 如果一直在自定义分支中工作，此步骤通常涉及将代码合并到共享分支中（或许通过[拉取请求](https://docs.microsoft.com/vsts/git/pull-requests)方式）。
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步骤 3. 生成服务器：持续集成。 生成、测试、打包
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>步骤 3。 生成服务器：持续集成。 生成、测试、打包
 
 向共享应用程序代码存储库进行新的提交时，生成服务器上会触发新的生成。 作为 CI 过程的一部分，该生成应充分编译应用程序，并运行自动测试以确定一切正常。 CI 过程的最终结果应是已可部署的打包版 Web 应用。
 
-#### <a name="step-4-build-server-continuous-delivery"></a>步骤 4. 生成服务器：持续交付
+#### <a name="step-4-build-server-continuous-delivery"></a>步骤 4。 生成服务器：持续交付
 
 生成成功后，CD 过程将选取产生的生成项目。 其中包括一个 Web 部署包。 生成服务器将此包部署到 Azure 应用服务，使用新创建的服务替换任何现有服务。 通常该步骤面向过渡环境，但是部分应用程序通过 CD 过程直接部署到生产。
 
-#### <a name="step-5-azure-app-service-web-app"></a>步骤 5. Azure 应用服务。 Web 应用。
+#### <a name="step-5-azure-app-service-web-app"></a>步骤 5。 Azure 应用服务。 Web 应用。
 
 部署后，ASP.NET Core 应用程序在 Azure 应用服务 Web 应用的上下文运行。 可使用 Azure 门户监视以及进一步配置该 Web 应用。
 
-#### <a name="step-6-production-monitoring-and-diagnostics"></a>步骤 6. 生产监视和诊断
+#### <a name="step-6-production-monitoring-and-diagnostics"></a>步骤 6。 生产监视和诊断
 
 该 Web 应用运行时，可监视该应用程序的运行状况，并收集诊断和用户行为数据。 Application Insights 包含于 Visual Studio 中，为 ASP.NET 应用提供自动检测。 它可提供有关使用情况、异常、请求、性能和日志的信息。
 

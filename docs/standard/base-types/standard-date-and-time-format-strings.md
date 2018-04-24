@@ -1,12 +1,12 @@
 ---
-title: "标准日期和时间格式字符串"
-ms.custom: 
+title: 标准日期和时间格式字符串
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: 
+caps.latest.revision: 92
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5de7da12867e11fcde00089e13c98396ed279a5e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 标准日期和时间格式字符串使用单个格式说明符来定义日期和时间值的文本表示形式。 包含一个以上字符（包括空白）的任何日期和时间格式字符串都会被解释为自定义日期和时间格式字符串；有关更多信息，请参见[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 可通过两种方式使用标准或自定义格式字符串：  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/23/2017
  标准日期和时间格式字符串可以与 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值一起使用。  
   
 > [!TIP]
->  你可以下载 [格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。  
+>  可以下载[格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，可将格式字符串应用于数值或日期和时间值并显示结果字符串。  
   
 <a name="table"></a>下表描述了标准日期和时间格式说明符。 除非另行说明，否则，特定的标准日期和时间格式说明符将产生相同的字符串表示形式，这与它是与 <xref:System.DateTime> 值还是 <xref:System.DateTimeOffset> 值一起使用无关。 有关使用标准日期和时间格式字符串的其他信息，请参见[注释](#Notes)部分。  
   
@@ -426,4 +426,4 @@ ms.lasthandoff: 12/23/2017
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
  [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [示例：.NET Framework 4 格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [示例：.NET Framework 4 格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

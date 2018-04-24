@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: b420859380d7c3c39a7d85f94df1708d9f26bebc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="file-and-stream-io"></a>文件和流 I/O
 文件和流 I/O（输入/输出）是指在存储媒介中传入或传出数据。 在 .NET Framework 中，`System.IO` 命名空间包含允许以异步方式和同步方式对数据流和文件进行读取和写入操作的类型。 这些命名空间还包含对文件执行压缩和解压缩的类型，以及通过管道和串行端口启用通信的类型。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/02/2018
   
  除了使用这些类之外，Visual Basic 用户还可以对文件 I/O 使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> 类提供的方法和属性。  
   
- 请参阅[如何：复制目录](../../../docs/standard/io/how-to-copy-directories.md)、[如何：创建目录列表](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)和[如何：枚举目录和文件](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  
+ 请参阅[如何：复制目录](../../../docs/standard/io/how-to-copy-directories.md)、[如何：创建目录列表](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)和[如何：枚举目录和文件](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)。  
   
 ## <a name="streams"></a>流  
  抽象基类 <xref:System.IO.Stream> 支持读取和写入字节。 所有表示流的类都继承自 <xref:System.IO.Stream> 类。 <xref:System.IO.Stream> 类及其派生类提供数据源和存储库的常见视图，使程序员不必了解操作系统和基础设备的具体细节。  

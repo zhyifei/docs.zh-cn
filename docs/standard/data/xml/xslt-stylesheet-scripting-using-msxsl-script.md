@@ -1,29 +1,29 @@
 ---
-title: "使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本"
-ms.custom: 
+title: 使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 01d4271eb5795e3760d289842bdfbdfa11c883fd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>使用 &lt;msxsl:script&gt; 编写 XSLT 样式表脚本
 <xref:System.Xml.Xsl.XslTransform> 类使用 `script` 元素支持嵌入的脚本。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/19/2018
   
  若要从您的程序集中得到证据，请使用 `this.GetType().Assembly.Evidence`。 若要从统一资源标识符 (URI) 得到证据，请使用 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`。  
   
- 如果使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但没有 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，则程序集的安全区域默认为“完全信任”。 有关详细信息，请参阅 <xref:System.Security.SecurityZone> 和[命名权限集](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
+ 如果使用接受 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但没有 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，则程序集的安全区域默认为“完全信任”。 有关详细信息，请参阅 <xref:System.Security.SecurityZone> 和[命名权限集](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
   
  函数可以在 `msxsl:script` 元素内声明。 下表显示了默认情况下支持的命名空间。 可以在列出的命名空间的外部使用类。 然而，这些类必须是完全限定的。  
   

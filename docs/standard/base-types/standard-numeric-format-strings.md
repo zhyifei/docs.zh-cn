@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34fe406dac4cbbc0c25e43f479154fd3e398ffc2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-numeric-format-strings"></a>标准数字格式字符串
 标准数字格式字符串用于格式化通用数值类型。 标准数字格式字符串采用 `Axx` 的形式，其中：  
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/28/2018
 - C# 和 Visual Basic 中的[内插的字符串](../../csharp/language-reference/tokens/interpolated.md)，与复合格式字符串相比，语法更简化。
  
 > [!TIP]
->  你可以下载 [格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，你可将格式字符串应用于数值或日期和时间值并显示结果字符串。  
+>  可以下载[格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序，可将格式字符串应用于数值或日期和时间值并显示结果字符串。  
   
 <a name="table"></a>下表介绍标准数字格式说明符并显示每个格式说明符产生的示例输出。 有关使用标准数字格式字符串的其他信息，请参见[注释](#NotesStandardFormatting)一节；有关使用方法的完整演示，请参见[示例](#example)一节。  
   
@@ -361,5 +361,5 @@ ms.lasthandoff: 03/28/2018
  [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
  [如何：用前导零填充数字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [示例：.NET Framework 4 格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+ [示例：.NET Framework 4 格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
  [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)

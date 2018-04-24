@@ -1,7 +1,7 @@
 ---
-title: "使用 Azure Service Fabric"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 Azure Service Fabric"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 使用 Azure Service Fabric
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 Azure Service Fabric
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9480a3f67e9d0a61d0669bf34be4b66208f5e9ce
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85c9c336b0a215dc22a9308c5726f03789f31d5a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-azure-service-fabric"></a>使用 Azure Service Fabric
 
@@ -90,7 +90,7 @@ Service Fabric 充分展示了什么是一个好的平台，开发人员可在�
 
 有状态服务确实存在缺点。 该服务允许横向扩展，因而更复杂。完成跨有状态微服务和数据分区复制数据等任务时，必须解决通常由外部数据库系统实现的功能。 但这正是含[有状态可靠服务](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)的 [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) 等业务流程协调程序可发挥重要作用的一方面，它可使用 [Reliable Services API](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) 和 [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) 简化有状态微服务的开发过程和生命周期。
 
-其他允许有状态微服务，支持 Actor 模式，提高业务逻辑和数据之间的容错、缩短延迟的微服务框架有来自 Microsoft Research 的 Microsoft [Orleans](https://github.com/dotnet/orleans) 和 [Akka.NET](http://getakka.net/)。 这两个框架目前都在改善其对 Docker 的支持。
+其他允许有状态微服务，支持 Actor 模式，提高业务逻辑和数据之间的容错、缩短延迟的微服务框架有来自 Microsoft Research 的 Microsoft [Orleans](https://github.com/dotnet/orleans) 和 [Akka.NET](https://getakka.net/)。 这两个框架目前都在改善其对 Docker 的支持。
 
 请注意，Docker 容器本身是无状态的。 若要实现有状态服务，需到前面提到的某个级别更高的规范框架。 
 

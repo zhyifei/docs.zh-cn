@@ -1,12 +1,12 @@
 ---
-title: "异步文件 I-O"
-ms.custom: 
+title: 异步文件 I-O
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff9ae65e47a35f4acfade1d06c703f9e1f5f6bee
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c67c9b397dfcd6f6ba947c2876919693c4f472
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-file-io"></a>异步文件 I/O
 异步操作使您能在不阻塞主线程的情况下执行占用大量资源的 I/O 操作。 在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用或 [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] 应用中一个耗时的流操作可能阻塞 UI 线程并让您的应用看起来好像不工作时，这种性能的考虑就显得尤为重要了。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/23/2017
   
  `Await` (Visual Basic) 或 `await` (C#) 运算符，可以应用到异步方法的结果中。  
   
- 如下面的示例所示，若要实现异步 I/O 操作，请把这些关键字和异步方法结合使用。 有关详细信息，请参阅[使用 Async 和 Await 的异步编程](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)。  
+ 如下面的示例所示，若要实现异步 I/O 操作，请把这些关键字和异步方法结合使用。 有关详细信息，请参阅[使用 Async 和 Await 的异步编程](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)。  
   
  下面的示例演示如何使用两个 <xref:System.IO.FileStream> 对象把文件从一个目录异步复制到另一个目录。 需要注意 <xref:System.Web.UI.WebControls.Button.Click> 控件的 <xref:System.Windows.Controls.Button> 事件处理程序具有 `async` 修饰符标记，因为它调用异步方法。  
   
@@ -71,4 +71,4 @@ ms.lasthandoff: 12/23/2017
 ## <a name="see-also"></a>请参阅  
  <xref:System.IO.Stream>  
  [文件和流 I/O](../../../docs/standard/io/index.md)  
- [使用 Async 和 Await 的异步编程](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+ [使用 Async 和 Await 的异步编程](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)

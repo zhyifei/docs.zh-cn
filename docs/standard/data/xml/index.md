@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 0da27afc5509af6db510b5e622ffde461ae2e0a1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
 .NET Framework 提供了一组全面而集成的类，可用来方便地生成可以识别 XML 的应用程序。 通过以下命名空间中的类，可以分析和编写 XML，编辑内存中的 XML 数据，进行数据验证以及 XSLT 转换。  
@@ -35,21 +35,21 @@ ms.lasthandoff: 03/02/2018
   
 -   <xref:System.Xml.Linq>  
   
- 有关完整列表，请参阅 [System.Xml 命名空间](http://msdn.microsoft.com/library/gg145036.aspx)网页。  
+ 有关完整列表，请参阅 [System.Xml 命名空间](https://msdn.microsoft.com/library/gg145036.aspx)网页。  
   
  这些命名空间中的类支持万维网联合会 (W3C) 建议。 例如:  
   
--   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 类可实现 [W3C 文档对象模型 (DOM) 级别 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 级别 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)建议。  
+-   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 类可实现 [W3C 文档对象模型 (DOM) 级别 1 核心](https://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 级别 2 核心](https://www.w3.org/TR/DOM-Level-2-Core/)建议。  
   
--   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 和 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 类支持 [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空间](http://www.w3.org/TR/REC-xml-names/)建议。  
+-   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 和 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 类支持 [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空间](https://www.w3.org/TR/REC-xml-names/)建议。  
   
--   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 类中的架构支持 [W3C XML 架构第 1 部分：结构](http://www.w3.org/TR/xmlschema-1/)和 [XML 架构第 2 部分：数据类型](http://www.w3.org/TR/xmlschema-2/)建议。  
+-   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 类中的架构支持 [W3C XML 架构第 1 部分：结构](https://www.w3.org/TR/xmlschema-1/)和 [XML 架构第 2 部分：数据类型](https://www.w3.org/TR/xmlschema-2/)建议。  
   
 -   <xref:System.Xml.Xsl?displayProperty=nameWithType> 命名空间中的类支持符合 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 建议的 XSLT 转换。  
   
  .NET Framework 中的 XML 类具有以下优点：  
   
--   **高效率。** 通过 [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)，可更方便地用 XML 编程，并可得到与 SQL 类似的查询体验。  
+-   **高效率。** 通过 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)，可更方便地用 XML 编程，并可得到与 SQL 类似的查询体验。  
   
 -   **扩展性。** .NET Framework 中的 XML 类可使用抽象基类和虚拟方法进行扩展。 例如，您可以创建 <xref:System.Xml.XmlUrlResolver> 类的一个派生类，用以将缓存流存储到本地磁盘。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/02/2018
  讨论用于处理 XML 数据的选项。  
   
  [内存中 XML 数据处理](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- 讨论用于处理内存中 XML 数据的三种模型。 [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)、<xref:System.Xml.XmlDocument> 类（基于 W3C 文档对象模型）和 <xref:System.Xml.XPath.XPathDocument> 类（基于 XPath 数据模型）。  
+ 讨论用于处理内存中 XML 数据的三种模型。 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)、<xref:System.Xml.XmlDocument> 类（基于 W3C 文档对象模型）和 <xref:System.Xml.XPath.XPathDocument> 类（基于 XPath 数据模型）。  
   
  [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
  描述如何使用 XSLT 处理器。  

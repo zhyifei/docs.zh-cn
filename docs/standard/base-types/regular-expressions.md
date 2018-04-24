@@ -26,18 +26,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5d0ec5572776368fa9943a87fa72280a4ebeb03d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-regular-expressions"></a>.NET 正则表达式
 正则表达式提供了功能强大、灵活而又高效的方法来处理文本。 使用正则表达式的全面模式匹配表示法，可以快速分析大量文本，以找到特定的字符模式；验证文本以确保它匹配预定义模式（如电子邮件地址）；提取、编辑、替换或删除文本子字符串；将提取的字符串添加到集合以生成报告。 对于处理字符串或分析大文本块的许多应用程序而言，正则表达式是不可缺少的工具。  
@@ -63,8 +63,8 @@ ms.lasthandoff: 02/01/2018
   
  若要详细了解正则表达式语言，请参阅[正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)，或下载和打印下面的小册子之一：  
   
- [快速参考（Word (.docx) 格式）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [快速参考（PDF (.pdf) 格式）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [快速参考（Word (.docx) 格式）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [快速参考（PDF (.pdf) 格式）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 ## <a name="regular-expression-examples"></a>正则表达式示例  
  <xref:System.String> 类包括许多字符串搜索和替换方法，当你要在较大字符串中定位文本字符串时，可以使用这些方法。 当你希望在较大字符串中定位若干子字符串之一时，或者当你希望在字符串中标识模式时，正则表达式最有用，如以下示例所示。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 02/01/2018
  正则表达式模式 `(Mr\.? |Mrs\.? |Miss |Ms\.? )` 匹配任何"Mr"、"Mr."、"Mrs"、"Mrs."、"Miss"、"Ms 或"Ms."。 对 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法的调用会将匹配的字符串替换为 <xref:System.String.Empty?displayProperty=nameWithType>；换句话说，将其从原始字符串中移除。  
   
 ### <a name="example-2-identifying-duplicated-words"></a>示例 2：标识重复的单词  
- 意外地重复单词是编写者常犯的错误。 可以使用正则表达式标识重复的单词，如以下示例所示。  
+ 意外地重复单词是编写器常犯的错误。 可以使用正则表达式标识重复的单词，如以下示例所示。  
   
  [!code-csharp[Conceptual.Regex#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
  [!code-vb[Conceptual.Regex#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
@@ -131,5 +131,5 @@ ms.lasthandoff: 02/01/2018
 ## <a name="reference"></a>参考  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
- [正则表达式 - 快速参考（以 Word 格式下载）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [正则表达式 — 快速参考（以 PDF 格式下载）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [正则表达式 - 快速参考（以 Word 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [正则表达式 — 快速参考（以 PDF 格式下载）](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

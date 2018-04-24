@@ -1,12 +1,12 @@
 ---
-title: "开发全球通用应用程序的最佳做法"
-ms.custom: 
+title: 开发全球通用应用程序的最佳做法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - global applications, best practices
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 65566d54c97db7592fdd38178d88fe2963e637bf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>开发全球通用应用程序的最佳做法
 本节描述在开发全球通用的应用程序时应遵循的最佳做法。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  在 ASP.NET 应用程序中的以下三个位置指定 requestEncoding、responseEncoding、fileEncoding、culture 和 uiCulture 特性的值：  
   
-    -   在 Web.config 文件的全球化一节中。 此文件是 ASP.NET 应用程序的外部文件。 有关详细信息，请参阅 [\<globalization> 元素](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)。  
+    -   在 Web.config 文件的全球化一节中。 此文件是 ASP.NET 应用程序的外部文件。 有关详细信息，请参阅 [\<globalization> 元素](https://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)。  
   
     -   在页面指令中。 请注意，当应用程序在页面中时，文件已经被读取。 因此，指定 fileEncoding 和 requestEncoding 为时已晚。 只有 uiCulture、Culture 和 responseEncoding 可以在页面指令中指定。  
   

@@ -1,12 +1,12 @@
 ---
-title: "常用的集合类型"
-ms.custom: 
+title: 常用的集合类型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - collections [.NET Framework], generic
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-caps.latest.revision: 
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cdc4e0660c5eae0a9550cf73d273d394ed71b823
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 127813e52b6e72f896ebe4f5017651467f748a04
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合类型
 集合类型是数据集合（如哈希表、队列、堆栈、包、字典和列表）的常见变体。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/23/2017
   
  集合会因元素的存储方式、排序方式、执行搜索的方式以及比较方式的不同而不同。 <xref:System.Collections.Queue> 类和 <xref:System.Collections.Generic.Queue%601> 泛型类提供先进先出列表，而 <xref:System.Collections.Stack> 类和 <xref:System.Collections.Generic.Stack%601> 泛型类提供后进先出列表。 <xref:System.Collections.SortedList> 类和 <xref:System.Collections.Generic.SortedList%602> 泛型类提供 <xref:System.Collections.Hashtable> 类和 <xref:System.Collections.Generic.Dictionary%602> 泛型类的已排序版本。 <xref:System.Collections.Hashtable> 或 <xref:System.Collections.Generic.Dictionary%602> 的元素只能通过元素的键访问，但 <xref:System.Collections.SortedList> 或 <xref:System.Collections.ObjectModel.KeyedCollection%602> 的元素能通过元素的键或索引访问。 所有集合中的索引都从零开始，<xref:System.Array> 除外，它允许不从零开始的数组。  
   
- LINQ to Objects 功能让你可以通过使用 LINQ 查询来访问内存中的对象，条件是该对象类型实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 LINQ 查询提供了一种通用的数据访问模式；与标准 `foreach` 循环相比，它通常更加简洁，可读性更高；这种查询可提供筛选、排序和分组功能。 LINQ 查询还可提高性能。 有关详细信息，请参阅 [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) 和[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
+ LINQ to Objects 功能让你可以通过使用 LINQ 查询来访问内存中的对象，条件是该对象类型实现 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 LINQ 查询提供了一种通用的数据访问模式；与标准 `foreach` 循环相比，它通常更加简洁，可读性更高；这种查询可提供筛选、排序和分组功能。 LINQ 查询还可提高性能。 有关详细信息，请参阅 [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) 和[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
   
 ## <a name="related-topics"></a>相关主题  
   

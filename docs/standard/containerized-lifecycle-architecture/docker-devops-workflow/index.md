@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 13f279b371bc5212a4ce9a171d37316c5e6efb77
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
-ms.translationtype: MT
+ms.openlocfilehash: bde96fd6348cf651dcca988eb546549fedf4df85
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>使用 Microsoft 工具的 Docker 应用程序 DevOps 工作流
 
@@ -32,7 +33,7 @@ Microsoft 工具可以自动完成容器化应用程序（Docker、.NET Core 或
 
 -   在 Visual Studio Team Services 的生成管道中运行自动测试。
 
--   Visual Studio Team Services 可以通过交付到多个环境（不仅适用于生产环境，还适用于测试环境）缩短 DevOps 生命周期，包括 A/B 试验、[Canary 发布](http://martinfowler.com/bliki/CanaryRelease.html)等。
+-   Visual Studio Team Services 可以通过交付到多个环境（不仅适用于生产环境，还适用于测试环境）缩短 DevOps 生命周期，包括 A/B 试验、[Canary 发布](https://martinfowler.com/bliki/CanaryRelease.html)等。
 
 -   组织可以使用 Azure 资源管理器和熟悉的工具，轻松从 Azure 容器注册表中存储的专用映像配置 Docker 容器以及 Azure 组件（数据、PaaS 等）的任何依赖项。
 

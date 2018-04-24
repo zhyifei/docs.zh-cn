@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4d42c1d4b58f5e2517ff8d8c504628c7aab6fd0d
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7350b7969500676deb251aea3d42f47324fb171b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>演练：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/10/2018
 -   创建继承自 <xref:System.ComponentModel.Component> 的类 `PrimeNumberCalculator`。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>定义公共异步事件和委托  
- 组件使用事件与客户端进行通信。 MethodNameCompleted****** 事件预警客户端注意异步任务完成，MethodNameProgressChanged****** 事件向客户端告知异步任务的进度。  
+ 组件使用事件与客户端进行通信。 MethodNameCompleted ****** 事件预警客户端注意异步任务完成，MethodNameProgressChanged ****** 事件向客户端告知异步任务的进度。  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>若要定义组件客户端的异步事件，请执行以下步骤：  
   
@@ -266,6 +266,6 @@ ms.lasthandoff: 04/10/2018
 ## <a name="see-also"></a>请参阅  
  [如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [未构造：Visual Basic 中的多线程处理](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [未构造：Visual Basic 中的多线程处理](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [如何：实现支持基于事件的异步模式的组件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
  [使用基于事件的异步模式进行多线程编程](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)

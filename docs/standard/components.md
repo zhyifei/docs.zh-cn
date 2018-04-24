@@ -1,6 +1,6 @@
 ---
-title: ".NET 体系结构组件"
-description: "描述 .NET 体系结构组件，例如 .NET Standard、.NET 实现和工具。"
+title: .NET 体系结构组件
+description: 描述 .NET 体系结构组件，例如 .NET Standard、.NET 实现和工具。
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -61,7 +61,7 @@ Mono 是主要在需要小型运行时使用的 .NET 实现。 它是在 Android
 
 Mono 通常与实时编译器一起使用，但它也提供在 iOS 之类的平台使用的完整静态编译器（预先编译）。
 
-若要了解有关 Mono 的详细信息，请参阅 [Mono 文档](http://www.mono-project.com/docs/)。
+若要了解有关 Mono 的详细信息，请参阅 [Mono 文档](https://www.mono-project.com/docs/)。
 
 ### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
@@ -86,7 +86,7 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 - .NET 项目系统（基于 .csproj.vbproj 和 .fsproj 文件）
 - [MSBuild](/visualstudio/msbuild/msbuild)（用于生成项目的生成引擎）
 - [NuGet](/nuget/)（适用于.NET 的 Microsoft 程序包管理器）
-- 开放源生成业务流程工具，例如 [CAKE](http://cakebuild.net/) 和 [FAKE](https://fake.build/)
+- 开放源生成业务流程工具，例如 [CAKE](https://cakebuild.net/) 和 [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>请参阅
 [为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   

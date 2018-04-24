@@ -1,5 +1,5 @@
 ---
-title: "公共语言运行时 (CLR)"
+title: 公共语言运行时 (CLR)
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2993fbcdc1caf73147c252a0d501e65478a3d08d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-language-runtime-clr"></a>公共语言运行时 (CLR)
 .NET Framework 提供了一个称为公共语言运行时的运行时环境，它运行代码并提供使开发过程更轻松的服务。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/19/2018
 |-----------|-----------------|  
 |[托管执行过程](../../docs/standard/managed-execution-process.md)|描述使用公共语言运行时所需要的步骤。|  
 |[自动内存管理](../../docs/standard/automatic-memory-management.md)|描述垃圾回收器如何分配和释放内存。|  
-|[NIB：.NET Framework 概述](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|描述关键的 .NET Framework 概念，例如通用类型系统、跨语言互操作性、托管执行、应用程序域和程序集。|  
+|[NIB：.NET Framework 概述](https://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|描述关键的 .NET Framework 概念，例如通用类型系统、跨语言互操作性、托管执行、应用程序域和程序集。|  
 |[常规类型系统](../../docs/standard/base-types/common-type-system.md)|描述在运行时中如何声明、使用和管理类型以支持跨语言集成。|  
   
 ## <a name="see-also"></a>请参阅  

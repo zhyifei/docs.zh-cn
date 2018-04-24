@@ -1,12 +1,12 @@
 ---
-title: "基于任务的异步编程"
-ms.custom: 
+title: 基于任务的异步编程
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e5367c8a786d720cdf3394922527020f8d4d47a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c0782498743f857afac4af073fb0a0cb8fc4d55a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>基于任务的异步编程
 任务并行库 (TPL) 以“任务”的概念为基础，后者表示异步操作。 在某些方面，任务类似于线程或 <xref:System.Threading.ThreadPool> 工作项，但是抽象级别更高。 术语“任务并行”是指一个或多个独立的任务同时运行。 任务提供两个主要好处：  
@@ -279,4 +279,4 @@ ms.lasthandoff: 12/23/2017
   
 ## <a name="see-also"></a>请参阅  
  [并行编程](../../../docs/standard/parallel-programming/index.md)  
- [使用 .NET Framework 进行并行编程的示例](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+ [使用 .NET Framework 进行并行编程的示例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

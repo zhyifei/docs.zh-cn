@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7d160d23808832ff6456e5c95f6e5ed5f4d44fa5
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -206,7 +207,7 @@ await strategy.ExecuteAsync(async () =>
 > - **EF Core：相关数据**  
 > <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **避免延迟加载 ASPNET 应用程序中的实体**  
-> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>选择 EF Core 还是微型 ORM？
 
@@ -236,7 +237,7 @@ public async Task<IEnumerable<CatalogType>> GetCatalogTypesWithDapper()
 
 ```sql
 select * from #Posts p
-left join \#Users u on u.Id = p.OwnerId
+left join #Users u on u.Id = p.OwnerId
 Order by p.Id
 ```
 
@@ -270,7 +271,7 @@ NoSQL 数据库需要处理的另一复杂性是版本控制。 对象的属性�
 
 可以在 NoSQL 数据库中存储多个对象版本，而这是固定架构关系数据库通常不支持的功能。 但是，在这种情况下，应用程序代码需要考虑以前对象版本的存在，这增加了额外的复杂性。
 
-NoSQL 数据库通常不会强制实施 [ACID](http://en.wikipedia.org/wiki/ACID)，这意味着它在性能和可伸缩性方面优于关系数据库。 它们非常适合特别大型的数据集和对象，不适合规范化表格结构中的存储。 根据最适合的情景分别加以利用，单个应用程序能同时获得关系数据库和 NoSQL 数据库带来的好处。
+NoSQL 数据库通常不会强制实施 [ACID](https://en.wikipedia.org/wiki/ACID)，这意味着它在性能和可伸缩性方面优于关系数据库。 它们非常适合特别大型的数据集和对象，不适合规范化表格结构中的存储。 根据最适合的情景分别加以利用，单个应用程序能同时获得关系数据库和 NoSQL 数据库带来的好处。
 
 ## <a name="azure-documentdb"></a>Azure Cosmos DB
 

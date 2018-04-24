@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0ea65b0a61719c85ab1da53bcc99f5d43a3210b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 1e649bcb37b711d01199bd4e4823a9bb0cac60b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parallel-programming-in-net"></a>.NET 中的并行编程
 许多个人计算机和工作站都有两个或四个内核（即 CPU），使多个线程能够同时执行。 在不久的将来，计算机预期会有更多的内核。 为了利用当今和未来的硬件，您可以对代码进行并行化，以将工作分摊在多个处理器上。 过去，并行化需要线程和锁的低级操作。 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 新增了运行时、类库类型和诊断工具，增强了对并行编程的支持。 这些功能简化了并行开发，使您能够通过固有方法编写高效、细化且可伸缩的并行代码，而不必直接处理线程或线程池。 下图从较高层面上概述了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中的并行编程体系结构。  
@@ -44,4 +44,4 @@ ms.lasthandoff: 04/09/2018
   
 ## <a name="see-also"></a>请参阅  
  [并行编程模式：了解并使用 .NET Framework 4 应用并行模式](https://www.microsoft.com/download/details.aspx?id=19222)  
- [使用 .NET Framework 进行并行编程的示例](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+ [使用 .NET Framework 进行并行编程的示例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

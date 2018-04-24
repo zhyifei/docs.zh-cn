@@ -1,12 +1,12 @@
 ---
-title: "如何：从文件读取文本"
-ms.custom: 
+title: 如何：从文件读取文本
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6fbf9c910847986af1c02b5848c81266009e2e07
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e1058879d4af8aac12baf24d10a0c22894351e6f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：从文件读取文本
 下面的示例演示如何使用适用于桌面应用的 .NET 以异步方式和同步方式从文本文件中读取文本。 在这两个示例中，当你创建 <xref:System.IO.StreamReader> 类的实例时，你会提供文件的绝对路径或相对路径。 以下示例假定名为 TestFile.txt 的文件位于此应用程序所在的文件夹中。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/19/2018
  <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
  <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
  [异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [NIB：如何：创建目录列表](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [NIB：如何：创建目录列表](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
  [快速入门：对文件执行读取和写入操作](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
  [如何：在 .NET Framework 流和 Windows 运行时流之间进行转换](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
  [如何：对新建的数据文件进行读取和写入](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

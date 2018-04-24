@@ -1,6 +1,6 @@
 ---
-title: "本机互操作性"
-description: "了解如何与 .NET 中的本机组件交互。"
+title: 本机互操作性
+description: 了解如何与 .NET 中的本机组件交互。
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -13,11 +13,11 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9b0fa5ebe37e51c45a8a5d8a42ce9b9688cc7c1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="native-interoperability"></a>本机互操作性
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/23/2017
 调用本机代码的原因有以下几种：
 
 *   在操作系统附带的 API 有很多并不在托管类库中。 最好的例子就是对硬件或操作系统管理功能的访问。
-*   与包含或者可以生成 C 式 ABI（本机 ABI）的其他组件通信。 例如，这包括通过 [Java 本机接口 (JNI)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) 或其他任何可以生成本机组件的托管语言公开的 Java 代码。
+*   与包含或者可以生成 C 式 ABI（本机 ABI）的其他组件通信。 例如，这包括通过 [Java 本机接口 (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) 或其他任何可以生成本机组件的托管语言公开的 Java 代码。
 *   在 Windows 上，安装的大部分软件（例如 Microsoft Office 套件）会注册 COM 组件，用于代表软件的程序，并使开发人员能够自动化或者使用它们。 在这种情况下，也需要本机互操作性。
 
 当然，上述列表并未包括开发人员想要/偏向于/需要与本机组件交互的所有可能场合与情境。 例如，.NET 类库使用本机互操作性支持来实现其相当多的 API，如控制台支持和操作、文件系统访问，等等。 但务必知道，本机互操作性总能提供相应的选项来满足用户的需要。
@@ -340,6 +340,6 @@ public class StatClass {
 
 ## <a name="more-resources"></a>更多资源
 
-*   [PInvoke.net wiki](http://www.pinvoke.net) 是一个极佳的 Wiki 站点，其中提供了有关常用 Win32 API 以及如何调用这些 API 的信息。
+*   [PInvoke.net wiki](https://www.pinvoke.net/) 是一个极佳的 Wiki 站点，其中提供了有关常用 Win32 API 以及如何调用这些 API 的信息。
 *   [MSDN 上的 P/Invoke](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [有关 P/Invoke 的 Mono 文档](http://www.mono-project.com/docs/advanced/pinvoke/)
+*   [有关 P/Invoke 的 Mono 文档](https://www.mono-project.com/docs/advanced/pinvoke/)

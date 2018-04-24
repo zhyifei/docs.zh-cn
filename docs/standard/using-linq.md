@@ -1,6 +1,6 @@
 ---
-title: "LINQ（语言集成查询）"
-description: "了解 LINQ 如何向 C# 和 VB 中提供语言级查询功能和 API，以便能够编写具有表达力度的声明性代码。"
+title: LINQ（语言集成查询）
+description: 了解 LINQ 如何向 C# 和 VB 中提供语言级查询功能和 API，以便能够编写具有表达力度的声明性代码。
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -13,11 +13,11 @@ ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eb9bc30c31ab02df7c04c885f59cadfcc1f00253
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ce6819abee90ceccc52a79f8bda794f2fd345fb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="linq-language-integrated-query"></a>LINQ（语言集成查询）
 
@@ -83,7 +83,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 为了执行此任务而编写代码来手动遍历 XML 文档会带来重重困难。
 
-LINQ 提供程序的作用不仅仅是与 XML 交互。 [Linq to SQL](../../docs/framework/data/adonet/sql/linq/index.md) 是适用于 MSSQL Server 数据库的极其简练的对象关系映射器 (ORM)。 使用 [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 库可以通过 LINQ 有效遍历 JSON 文档。 此外，如果没有哪个库可以解决你的需要，你还可以[编写自己的 LINQ 提供程序](https://msdn.microsoft.com/library/Bb546158.aspx)！
+LINQ 提供程序的作用不仅仅是与 XML 交互。 [Linq to SQL](../../docs/framework/data/adonet/sql/linq/index.md) 是适用于 MSSQL Server 数据库的极其简练的对象关系映射器 (ORM)。 使用 [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 库可以通过 LINQ 有效遍历 JSON 文档。 此外，如果没有哪个库可以解决你的需要，你还可以[编写自己的 LINQ 提供程序](https://msdn.microsoft.com/library/Bb546158.aspx)！
 
 ## <a name="why-use-the-query-syntax"></a>为何使用查询语法？
 
@@ -143,7 +143,7 @@ var cats = dogs.Select(dog => dog.TurnIntoACat());
 var queryCats = from dog in dogs
                 select dog.TurnIntoACat();
 
-// Summing then lengths of a set of strings
+// Summing the lengths of a set of strings
 int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
@@ -263,4 +263,4 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 
 *   [101 LINQ 示例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [Linqpad](https://www.linqpad.net/)，适用于 C#/F#/VB 的演练环境和数据库查询引擎
-*   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，帮助用户了解如何实现 LINQ 到对象的电子书
+*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，帮助用户了解如何实现 LINQ 到对象的电子书

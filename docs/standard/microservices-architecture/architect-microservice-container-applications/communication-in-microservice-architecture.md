@@ -1,7 +1,7 @@
 ---
-title: "微服务体系结构中的通信"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务体系结构中的通信"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 微服务体系结构中的通信
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务体系结构中的通信
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服务体系结构中的通信
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/23/2018
 
 基于微服务的应用程序是在多个进程或服务上运行的分布式系统，通常甚至跨多个服务器或主机。 每个服务实例通常是一个进程。 因此，服务必须使用进程内通信协议（如 HTTP、AMQP）或二进制协议（如 TCP）进行交互，具体取决于每个服务的性质。
 
-微服务社区倡导“[智能终结点和哑管道](http://simplicable.com/new/smart-endpoints-and-dumb-pipes)”的理念。 这个标语鼓励设计在微服务之间尽可能分离，在单个微服务内尽可能聚合。 如前所述，每个微服务拥有自己的数据和域逻辑。 但构成端到端应用程序的微服务通常通过使用 REST 通信而不是复杂协议（如 WS-\*）以及灵活的事件驱动通信而不是集中式业务流程协调程序来简化编排。
+微服务社区倡导“[智能终结点和哑管道](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)”的理念。 这个标语鼓励设计在微服务之间尽可能分离，在单个微服务内尽可能聚合。 如前所述，每个微服务拥有自己的数据和域逻辑。 但构成端到端应用程序的微服务通常通过使用 REST 通信而不是复杂协议（如 WS-\*）以及灵活的事件驱动通信而不是集中式业务流程协调程序来简化编排。
 
 两个常用的协议是具有资源 API 的 HTTP 请求/响应（查询大部分时）和轻量级异步消息传送（跨多个微服务更新通信时）。 以下各节将对此进行更详细地描述。
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/23/2018
 
 -   单个接收方。 每个请求必须只能由一个接收方或服务来处理。 此通信的示例是[命令模式](https://en.wikipedia.org/wiki/Command_pattern)。
 
--   多个接收方。 每个请求可以由零到多个接收方处理。 这种类型的通信必须是异步的。 例如[事件驱动体系结构](http://microservices.io/patterns/data/event-driven-architecture.html)等模式中使用的[发布/订阅](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)机制。 当通过事件在多个微服务之间传播数据更新时，这基于事件总线接口或消息代理；它通常通过服务总线或类似 [Azure 服务总线](https://azure.microsoft.com/services/service-bus/)的项目使用[主题和订阅](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)并来实现。
+-   多个接收方。 每个请求可以由零到多个接收方处理。 这种类型的通信必须是异步的。 例如[事件驱动体系结构](https://microservices.io/patterns/data/event-driven-architecture.html)等模式中使用的[发布/订阅](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)机制。 当通过事件在多个微服务之间传播数据更新时，这基于事件总线接口或消息代理；它通常通过服务总线或类似 [Azure 服务总线](https://azure.microsoft.com/services/service-bus/)的项目使用[主题和订阅](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)并来实现。
 
 基于微服务的应用程序通常将使用这些通信样式的组合。 最常见的类型是在调用常规 Web API HTTP 服务时使用 HTTP/HTTPS 等同步协议进行单个接收方通信。 微服务通常也使用消息传送协议在微服务之间进行异步通信。
 
@@ -91,15 +91,15 @@ ms.lasthandoff: 02/23/2018
 
 请求/响应通信的常用体系结构样式是 [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)。 此方法基于 [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 协议并与该协议紧密耦合，接受 GET、POST 和 PUT 等 HTTP 谓词。 REST 是创建服务时最常用的体系结构通信方法。 开发 ASP.NET Core Web API 服务时，可以实现 REST 服务。
 
-使用 HTTP REST 服务作为接口定义语言时，还有其他值。 例如，如果使用 [Swagger 元数据](http://swagger.io/)介绍服务 API，则可以使用生成客户端存根的工具来直接发现和使用服务。
+使用 HTTP REST 服务作为接口定义语言时，还有其他值。 例如，如果使用 [Swagger 元数据](https://swagger.io/)介绍服务 API，则可以使用生成客户端存根的工具来直接发现和使用服务。
 
 ### <a name="additional-resources"></a>其他资源
 
 -   **Martin Fowler。Richardson 成熟模型。** REST 模型的说明。
-    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger。** 官方网站。
-    [*http://swagger.io/*](http://swagger.io/)
+    [*https://swagger.io/*](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>基于 HTTP 的推送和实时通信
 

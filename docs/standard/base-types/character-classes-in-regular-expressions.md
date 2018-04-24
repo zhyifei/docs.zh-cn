@@ -1,12 +1,12 @@
 ---
-title: "正则表达式中的字符类"
-ms.custom: 
+title: 正则表达式中的字符类
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: 
+caps.latest.revision: 58
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 538aa21712f1e2290fb009c24774059098c60c1e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 <a name="Top"></a>一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。 .NET 中的正则表达式语言支持以下字符类：  
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/15/2018
  .NET 支持字符类减法表达式，通过该表达式可以定义一组字符作为从一个字符类中排除另一字符类的结果。 有关详细信息，请参阅[字符类减法](#CharacterClassSubtraction)。  
   
 > [!NOTE]
->  按类别匹配字符的字符类（如用于匹配字词字符的 [\w](#WordCharacter)，或用于匹配 Unicode 类别的 [\p{}](#CategoryOrBlock)）依赖 <xref:System.Globalization.CharUnicodeInfo> 类提供字符类别信息。  从 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 开始，字符类别基于 [Unicode 标准 8.0.0 版](http://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 到 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 之间，字符类别基于 [Unicode 标准 6.3.0 版](http://www.unicode.org/versions/Unicode6.3.0/)。  
+>  按类别匹配字符的字符类（如用于匹配字词字符的 [\w](#WordCharacter)，或用于匹配 Unicode 类别的 [\p{}](#CategoryOrBlock)）依赖 <xref:System.Globalization.CharUnicodeInfo> 类提供字符类别信息。  从 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 开始，字符类别基于 [Unicode 标准 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 到 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 之间，字符类别基于 [Unicode 标准 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>正字符组：[ ]  
@@ -408,7 +408,7 @@ ms.lasthandoff: 03/15/2018
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>支持的 Unicode 常规类别  
- Unicode 定义下表列出的常规类别。 有关详细信息，请参阅 [Unicode 字符数据库](http://www.unicode.org/reports/tr44/)中的“UCD 文件格式”和“常规类别值”子主题。  
+ Unicode 定义下表列出的常规类别。 有关详细信息，请参阅 [Unicode 字符数据库](https://www.unicode.org/reports/tr44/)中的“UCD 文件格式”和“常规类别值”子主题。  
   
 |类别|描述|  
 |--------------|-----------------|  

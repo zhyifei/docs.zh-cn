@@ -1,7 +1,7 @@
 ---
-title: "标识每个微服务的域模型边界"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 标识每个微服务的域模型边界"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 标识每个微服务的域模型边界
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 标识每个微服务的域模型边界
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>标识每个微服务的域模型边界
 
 在为每个微服务标识模型边界和大小时，虽然应尽可能倾向小型微服务，但目标并不是尽可能达到最细粒度分离。 相反，目标应在域知识指导下实现最有意义的分离。 重点不在于大小，而在于业务功能。 此外，如果基于大量依赖关系的应用程序的某一特定区域需要清除内聚，这也表明需要单个微服务。 内聚是一种标识如何将微服务分离或组合的方法。 最终，当获得关于域的详细知识时，应以迭代方式调整微服务的大小。 查找适当的大小不是一个单步过程。
 
-[Sam Newman](http://samnewman.io/) 是一位公认的微服务促进者以及[《构建微服务》](http://samnewman.io/books/building_microservices/)一书的作者，他强调应该按照前面介绍的界定的上下文 (BC) 模式（域驱动设计的一部分）来设计微服务。 有时，BC 可以由几个物理服务组成，但反之则不然。
+[Sam Newman](https://samnewman.io/) 是一位公认的微服务促进者以及[《构建微服务》](https://samnewman.io/books/building_microservices/)一书的作者，他强调应该按照前面介绍的界定的上下文 (BC) 模式（域驱动设计的一部分）来设计微服务。 有时，BC 可以由几个物理服务组成，但反之则不然。
 
 具有特定域实体的域模型应用于具体的 BC 或微服务中。 BC 划分了域模型的适用性，并使开发人员团队成员对哪些必须具有内聚和哪些可以独立开发有了清晰和共同的理解。 这些都是微服务的相同目标。
 

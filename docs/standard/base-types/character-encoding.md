@@ -1,12 +1,12 @@
 ---
-title: ".NET 中的字符编码"
-ms.custom: 
+title: .NET 中的字符编码
+ms.custom: ''
 ms.date: 12/22/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字符编码
 字符是可以许多不同的方式表示的抽象实体。 字符编码是用代表字符的某个值与受支持的字符集中的每个字符配对的系统。 例如，莫尔斯电码就是一种用点线模式与罗马字母表中的每个字符（适合通过电报线路进行传输）进行配对的字符编码。 计算机的字符编码将代表字符的数字值与受支持的字符集中的每个字符配对。 一种字符编码有两个不同组件：  
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/01/2018
 > [!NOTE]
 >  Unicode Standard 将码位（数字）和名称指派给每个受支持脚本中的各字符。 例如，码位 U+0041 表示字符“A”，“LATIN CAPITAL LETTER A”表示名称。 Unicode 转换格式 (UTF) 编码定义将码位编码为一系列一个或多个字节的方式。 Unicode 编码方案简化全球通用的应用程序的开发，因为它允许以单个编码表示任何字符集中的字符。 应用程序开发人员不再需要跟踪用于为特定语言或写入系统生成字符的编码方案，且数据可以在全球系统间共享，而不被损坏。  
 >   
->  .NET 支持由 Unicode 标准定义的三种编码：UTF-8、UTF-16 和 UTF-32。 有关详细信息，请访问 [Unicode 主页](http://www.unicode.org/)，以了解 Unicode Standard。  
+>  .NET 支持由 Unicode 标准定义的三种编码：UTF-8、UTF-16 和 UTF-32。 有关详细信息，请访问 [Unicode 主页](https://www.unicode.org/)，以了解 Unicode Standard。  
   
  可以检索所有 .NET 编码的相关信息，具体操作是调用 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 方法。 .NET 支持下表中列出的字符编码系统。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 02/01/2018
  最佳匹配策略因代码页而异。 例如，对于某些代码页，全角拉丁字符映射到更常见的半角拉丁字符。 对于其他代码页，不进行此映射。 即使是在积极的最佳策略下，也不能完全适合某些编码中的某些字符。 例如，中文象形文字不具有到代码页 1252 的合理映射。 在这种情况下，使用替换字符串。 默认情况下，此字符串只是一个问号 (U+003F)。  
   
 > [!NOTE]
->  最佳匹配策略不会得到详细记录。 不过，[Unicode 联盟](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)网站上记录了多个代码页。 若要了解如何解释映射文件，请查看相应文件夹中的 readme.txt 文件。
+>  最佳匹配策略不会得到详细记录。 不过，[Unicode 联盟](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)网站上记录了多个代码页。 若要了解如何解释映射文件，请查看相应文件夹中的 readme.txt 文件。
   
  下面的示例使用代码页 1252 （适合西欧语言 Windows 代码页）演示最佳映射及其缺点。 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法用于检索代码页 1252 的编码对象。 默认情况下，它使用其不支持的 Unicode 字符的最佳映射。 该示例将包含三个非 ASCII 字符的字符串实例化，这三个字符分别为带圆圈拉丁文大写字母 S (U+24C8)、上标五 (U+2075) 和无穷大 (U+221E) 且由空格分隔。 如示例输出所示，当对字符串进行编码时，三个原始的非空格字符替换为问号 (U+003F)、数字五 (U+0035) 和数字八 (U+0038)。 数字八是对不受支持的无穷大字符的不良替换，问号指示没有映射可用于原始字符。  
   

@@ -16,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: ''
+caps.latest.revision: 79
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 51c16e8c1cd031e4f2b8a207c8d288b7691e7a84
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 日期和时间格式字符串定义由格式设置操作生成的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的文本表示形式。 它还可定义分析操作中需要的日期和时间值的表示形式，以便成功将字符串转换为日期和时间。 自定义格式字符串由一个或多个自定义日期和时间格式说明符组成。 任何不是[标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字符串都会解释为自定义日期和时间格式字符串。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/22/2018
  自定义日期和时间格式字符串可以与 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值一起使用。  
   
 > [!TIP]
->  可以下载[格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序可将格式字符串应用于日期和时间或数值，并显示结果字符串。  
+>  可以下载[格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，通过该应用程序可将格式字符串应用于日期和时间或数值，并显示结果字符串。  
   
 <a name="table"></a>在格式设置操作中，可将自定义日期和时间格式字符串与日期和时间实例的 `ToString` 方法或支持复合格式设置的方法结合使用。 下面的示例演示了这两种用法。  
   
@@ -702,4 +702,4 @@ ms.lasthandoff: 03/22/2018
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
  [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [示例：.NET Framework 4 格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [示例：.NET Framework 4 格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
