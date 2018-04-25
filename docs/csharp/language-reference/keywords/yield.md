@@ -1,5 +1,5 @@
 ---
-title: "yield（C# 参考）"
+title: yield（C# 参考）
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11fe3734df61333916e7a07010393bddc96e525c
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 98453fb218dca1feb36c64331403d6761d231a0e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="yield-c-reference"></a>yield（C# 参考）
 如果你在语句中使用 `yield` 关键字，则意味着它在其中出现的方法、运算符或 `get` 访问器是迭代器。 通过使用 `yield` 定义迭代器，可在实现自定义集合类型的 <xref:System.Collections.Generic.IEnumerator%601> 和 <xref:System.Collections.IEnumerable> 模式时无需其他显式类（保留枚举状态的类，有关示例，请参阅 <xref:System.Collections.IEnumerator>）。  
@@ -79,7 +79,7 @@ foreach (string element in elements)
  在 `foreach` 循环的每个后续迭代中，迭代器主体的执行将从它暂停的位置继续，直至到达 `yield return` 语句后才会停止。 在到达迭代器方法的结尾或 `foreach` 语句时，`yield break` 循环便已完成。  
   
 ## <a name="example"></a>示例  
- 下面的示例包含一个位于 `yield return` 循环内的 `for` 语句。 `foreach` 中的 `Process` 语句体的每次迭代都会创建对 `Power` 迭代器函数的调用。 对迭代器函数的每个调用将继续到 `yield return` 语句的下一次执行（在 `for` 循环的下一次迭代期间发生）。  
+ 下面的示例包含一个位于 `yield return` 循环内的 `for` 语句。 `Main` 方法中的 `foreach` 语句体的每次迭代都会创建对 `Power` 迭代器函数的调用。 对迭代器函数的每个调用将继续到 `yield return` 语句的下一次执行（在 `for` 循环的下一次迭代期间发生）。  
   
  迭代器方法的返回类型是 <xref:System.Collections.IEnumerable>（一种迭代器接口类型）。 当调用迭代器方法时，它将返回一个包含数字幂的可枚举对象。  
   

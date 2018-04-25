@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 部署指南（针对管理员）
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 本文分步说明系统管理员可以如何使用 Microsoft System Center Configuration Manager 在网络中部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的软件和硬件要求列表，请参阅[系统需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -230,11 +230,16 @@ ms.lasthandoff: 03/22/2018
 ## <a name="troubleshooting"></a>疑难解答  
   
 ### <a name="log-file-locations"></a>日志文件位置  
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安装过程中，会生成下列日志文件：  
+ 在 .NET Framework 安装过程中，将会生成下列日志文件：  
   
- %temp%\Microsoft .NET Framework 4.5.txt %temp%\Microsoft .NET Framework 4.5.html  
+ %temp%\Microsoft .NET Framework version\*.txt  
+ %temp%\Microsoft .NET Framework version\*.html  
   
- 可使用[日志收集工具](http://www.microsoft.com/download/details.aspx?id=12493)收集 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 日志文件，并创建可减小这些文件的大小的压缩 cabinet (.cab) 文件。  
+ 其中，version 是要安装的 .NET Framework 版本（如 4.5 或 4.7.2）。  
+ 
+ 还可以使用 .NET Framework 安装命令中的 `/log` 命令行选项，指定将日志文件写入到哪个目录。 有关详细信息，请参阅[面向 开发人员的 .NET Framework 部署指南](deployment-guide-for-developers.md#command-line-options)。 
+ 
+ 可使用[日志收集工具](https://www.microsoft.com/download/details.aspx?id=12493)收集 .NET Framework 日志文件，并创建可缩小这些文件的压缩 cabinet (.cab) 文件。  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>返回代码  

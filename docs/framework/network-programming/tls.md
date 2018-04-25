@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -78,7 +78,7 @@ WCF 支持 TLS1.0、1.1 和 1.2 作为 .NET Framework 4.7 中的默认设置。 
 
 ### <a name="for-tcp-sockets-networking"></a>对于 TCP 套接字网络
 
-<xref:System.Net.Security.SslStream>，使用 .NET Framework 4.7 和更高版本，默认为由操作系统选择最佳安全协议和版本。 若要获取默认操作系统最佳选择，如有可能，请不要使用采取显式 <xref:System.Security.Authentication.SslProtocols> 参数的 <xref:System.Net.Security.SslStream> 的方法重载。 否则，将传递 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>。 我们建议不要使用 <xref:System.Security.Authentication.SslProtocols.Default>；设置 `SslProtocols.Default` 将强制使用 SSL 3.0 /TLS 1.0 并阻止 TLS 1.2。
+<xref:System.Net.Security.SslStream>，使用 .NET Framework 4.7 和更高版本，默认为由操作系统选择最佳安全协议和版本。 若要获取默认操作系统最佳选择，如有可能，请不要使用采取显式 <xref:System.Security.Authentication.SslProtocols> 参数的 <xref:System.Net.Security.SslStream> 的方法重载。 否则，将传递 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>。 建议不要使用 <xref:System.Security.Authentication.SslProtocols.Default>；设置 `SslProtocols.Default` 会强制使用 SSL 3.0 /TLS 1.0，而不使用 TLS 1.2。
 
 不要设置 <xref:System.Net.ServicePointManager.SecurityProtocol> 属性的值（针对 HTTP 网络）。
 
@@ -114,7 +114,7 @@ WCF 使用与 .NET Framework 的其余部分相同的网络堆栈。
 
 使用以下部分审核你的代码，以验证你未设置特定 TLS 或 SSL 版本：
 
-### <a name="for-net-framework-46---462-and-not-wfc"></a>对于 .NET Framework 4.6 - 4.6.2 且不是 WFC
+### <a name="for-net-framework-46---462-and-not-wcf"></a>对于 .NET Framework 4.6 - 4.6.2（而不是 WFC）
 
 将 `DontEnableSystemDefaultTlsVersions` `AppContext` 开关设置为 `false`。 请参阅[通过 AppContext 开关配置安全性](#configuring-security-via-appcontext-switches)。
 

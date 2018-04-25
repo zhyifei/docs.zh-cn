@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: d130ef34961d19c450dd7142c8a5996c83465646
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上入门 .NET Core
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="getting-started"></a>入门
 
-在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。 对于此主题，可以在 GitHub 的 dotnet/docs 存储库中[查看或下载源](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。 若要[查看或下载本主题的源代码](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)，请访问 GitHub 上的 dotnet/samples 存储库。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 启动 Visual Studio Code。 按 <kbd>Ctrl</kbd>+<kbd>\`</kbd>（反引号）或在菜单中依次选择“视图”>“集成终端”，在 Visual Studio Code 中打开嵌入式终端。 若要在 Visual Studio Code 外部执行操作，仍可以使用资源管理器的“通过命令提示符打开”（在 Mac 或 Linux 上，为“在终端中打开”）命令打开外部 shell。
 

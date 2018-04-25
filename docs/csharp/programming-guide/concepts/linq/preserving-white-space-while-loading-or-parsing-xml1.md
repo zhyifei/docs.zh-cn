@@ -1,30 +1,31 @@
 ---
-title: "在加载或分析 XML1 时保留空白"
-ms.custom: 
+title: 在加载或分析 XML1 时保留空白
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bc4923ef5ea526de3c988636cd766c3b012c902e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 74576fbc6707607ff9b2557b0825110e32c0b897
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>在加载或分析 XML 时保留空白
-本主题说明如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的空白行为。  
+本主题介绍了如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的空白符行为。  
   
  一种常用情况是读取缩进的 XML，在内存中创建一个没有任何空白文本节点（即不保留空白）的 XML 树，对该 XML 执行某些操作，然后保存带缩进的 XML。 在序列化带格式的 XML 时，只保留 XML 树中有意义的空白。 这是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的默认行为。  
   
  另一个常见的情况是读取和修改已经有意缩进的 XML。 您可能不想以任何方式更改这种缩进。 若要在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中执行此操作，您要在加载或解析 XML 时保留空白，并在序列化 XML 时禁用格式设置。  
   
- 本主题说明用于填充 XML 树的方法的空白行为。 有关序列化 XML 树时如何控制空白的信息，请参阅[在序列化时保留空白](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)。  
+ 本主题介绍了填充 XML 树的方法的空白符行为。 有关序列化 XML 树时如何控制空白的信息，请参阅[在序列化时保留空白](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)。  
   
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>用于填充 XML 树的方法的行为  
  <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中的以下方法用于填充 XML 树。 可以从文件、<xref:System.IO.TextReader>、<xref:System.Xml.XmlReader> 或字符串填充 XML 树：  

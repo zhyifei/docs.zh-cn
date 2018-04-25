@@ -1,6 +1,6 @@
 ---
-title: "索引器"
-description: "了解 C# 索引器以及它们如何实现索引属性，这些属性是使用一个或多个参数引用的属性。"
+title: 索引器
+description: 了解 C# 索引器以及它们如何实现索引属性，这些属性是使用一个或多个参数引用的属性。
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="indexers"></a>索引器
 
@@ -39,7 +39,7 @@ public int this[string key]
 }
 ```
 
-从最初的示例中，可以看到属性语法和索引器语法之间的关系。 此类比在索引器的大部分语法规则中进行。 索引器可以有任何有效的访问修饰符 （公共、 受保护内部、 受保护、 内部、 私有或私有受保护）。 它们可能是密封、虚拟或抽象的。 与属性一样，可以在索引器中为 get 和 set 访问器指定不同访问修饰符。
+从最初的示例中，可以看到属性语法和索引器语法之间的关系。 此类比在索引器的大部分语法规则中进行。 索引器可以使用任何有效的访问修饰符（public、protected internal、protected、internal、private 或 private protected）。 它们可能是密封、虚拟或抽象的。 与属性一样，可以在索引器中为 get 和 set 访问器指定不同访问修饰符。
 你还可以指定只读索引器（忽略 set 访问器）或只写索引器（忽略 get 访问器）。
 
 属性的各种用法同样适用于索引器。 此规则的唯一例外是“自动实现属性”。 编译器无法始终为索引器生成正确的存储。
@@ -51,7 +51,7 @@ public int this[string key]
 如果类型的 API 对集合进行建模，并且为集合定义了参数，则需要在此类型中定义索引器。 索引器可能直接映射到属于 .NET Core 框架一部分的集合类型，也可能不。 除了对集合进行建模，类型还有其他职责。
 通过索引器可提供与类型的抽象化匹配的 API，而无需公开如何存储或计算此抽象化的值的内部细节。
 
-让我们演练一些使用索引器的常见场景。 可以访问[索引器的示例文件夹](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+让我们演练一些使用索引器的常见场景。 可以访问[索引器的示例文件夹](https://github.com/dotnet/samples/tree/master/csharp/indexers)。 有关下载说明，请参阅[示例和教程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ### <a name="arrays-and-vectors"></a>数组和矢量
 

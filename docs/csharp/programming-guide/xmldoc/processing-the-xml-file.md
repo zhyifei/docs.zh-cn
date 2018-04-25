@@ -1,21 +1,22 @@
 ---
-title: "处理 XML 文件（C# 编程指南）"
+title: 处理 XML 文件（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>处理 XML 文件（C# 编程指南）
 编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 （有关如何标记代码的信息，请参阅[文档注释的建议标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)。）ID 字符串唯一标识构造。 处理 XML 文件的程序可以使用 ID 字符串来标识文档应用于的相应 .NET Framework 元数据/反射项目。  
@@ -24,7 +25,7 @@ ms.lasthandoff: 11/21/2017
   
  编译器在生成 ID 字符串时应遵循以下规则：  
   
--   字符串中没有空格。  
+-   字符串不得包含空白符。  
   
 -   ID 字符串的第一部分标识被标识的成员类型，单个字符后跟一个冒号。 使用下面的成员类型：  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
 -   仅适用于转换运算符（op_Implicit 和 op_Explicit），该方法的返回值被编码为“~”，后面是返回类型，如上面的编码所示。  
   
--   对于泛型类型，类型名称后跟反勾号，然后是指示泛型类型参数数量的一个数字。  例如，  
+-   对于泛型类型，类型名称后跟反勾号，然后是指示泛型类型参数数量的一个数字。  例如，应用于对象的  
   
      `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`.  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
- [/doc （C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

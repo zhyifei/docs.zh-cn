@@ -1,8 +1,9 @@
 ---
-title: "如何：将字符串转换为数字（C# 编程指南）"
+title: 如何：将字符串转换为数字（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - conversions [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3dc67bc2f25bba14df0e3ce6859bb8bc9094871c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5cecfdf822352d22713985d84cdd7025d0665c8
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何：将字符串转换为数字（C# 编程指南）
 可以使用 <xref:System.Convert> 类中的方法或使用各种数值类型（int、long、float 等）中的 `TryParse` 方法将[字符串](../../../csharp/language-reference/keywords/string.md)转换为数字。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  可以对预期字符串会包含的数值类型（如 <xref:System.Int32?displayProperty=nameWithType> 类型）使用 `Parse` 或 `TryParse` 方法。  <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType> 方法在内部使用 <xref:System.Int32.Parse%2A>。  如果字符串的格式无效，则 `Parse` 会引发异常，而 `TryParse` 会返回 [false](../../../csharp/language-reference/keywords/false.md)。  
   
 ## <a name="example"></a>示例  
- `Parse` 和 `TryParse` 方法会忽略字符串开头和末尾的空格，但所有其他字符必须是组成合适数值类型（int、long、ulong、float、decimal 等）的字符。  组成数字的字符中的任何空格都会导致错误。  例如，可以使用 `decimal.TryParse` 分析“10”、“10.3”、“  10  ”，但不能使用此方法分析从“10X”、“1 0”（注意空格）、“10 .3”（注意空格）、“10e1”（`float.TryParse` 在此处适用）等中分析出 10。  
+ `Parse` 和 `TryParse` 方法会忽略字符串开头和末尾的空白符，但其他所有字符都必须是组成合适数值类型（int、long、ulong、float、decimal 等）的字符。  如果组成数字的字符中有任何空白符，都会导致错误出现。  例如，可以使用 `decimal.TryParse` 分析“10”、“10.3”、“  10  ”，但不能使用此方法分析从“10X”、“1 0”（注意空格）、“10 .3”（注意空格）、“10e1”（`float.TryParse` 在此处适用）等中分析出 10。  
   
  下面的示例演示了对 `Parse` 和 `TryParse` 的成功调用和不成功的调用。  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型](../../../csharp/programming-guide/types/index.md)  
  [如何：确定字符串是否表示数值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
  [.NET Framework 4 格式设置实用工具](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

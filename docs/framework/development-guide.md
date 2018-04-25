@@ -1,28 +1,28 @@
 ---
-title: ".NET Framework 开发指南"
-ms.custom: 
+title: .NET Framework 开发指南
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d7950ae39ada3e1e0e070967f8d578fc3371126
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3432ac629a6c754cf7f863b6444dc81b6f9919ef
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/19/2018
  [Windows 服务应用程序](../../docs/framework/windows-services/index.md)  
  介绍如何使用 Visual Studio 和 .NET Framework 创建作为服务安装的应用，以及如何开始、停止和以其他方式控制其行为。  
   
- [并行处理和并发](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [.NET 中的并行处理、并发和异步编程](../../docs/standard/parallel-processing-and-concurrency.md)  
  提供有关托管线程处理、并行编程和异步编程设计模式的信息。  
   
  [.NET Framework 中的网络编程](../../docs/framework/network-programming/index.md)  

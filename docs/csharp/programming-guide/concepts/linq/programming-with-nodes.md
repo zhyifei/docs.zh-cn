@@ -1,21 +1,22 @@
 ---
-title: "使用节点进行编程 (C#)"
-ms.custom: 
+title: 使用节点进行编程 (C#)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 629e530caeabf3231655881199c0c1d83ae9f464
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 92ec8445123a8b685bd6ea134aca0b792cab6d2d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="programming-with-nodes-c"></a>使用节点进行编程 (C#)
 需要编写 XML 编辑器、转换系统或报告编写器这类程序的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 开发人员通常需要编写在比元素和属性更细的粒度下运行的程序。 开发人员通常需要在节点级别上工作，操作文本节点、处理指令和添加注释。 本主题提供有关在节点级别进行编程的一些详细信息。  
@@ -131,10 +132,10 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>XPath 轴方法不返回 XDocument 的子空白  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许 <xref:System.Xml.Linq.XDocument> 具有子文本节点，但这些文本节点只能包含空白。 但是，XPath 对象模型不包括空白作为文档的子节点，因此在使用 <xref:System.Xml.Linq.XDocument> 轴循环访问 <xref:System.Xml.Linq.XContainer.Nodes%2A> 的子级时，将返回空白文本节点。 但在使用 XPath 轴方法循环访问 <xref:System.Xml.Linq.XDocument> 的子级时，不会返回空白文本节点。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许 <xref:System.Xml.Linq.XDocument> 具有子文本节点，但这些文本节点只能包含空白。 不过，XPath 对象模型没有将空白符添加为文档子节点。因此，如果使用 <xref:System.Xml.Linq.XDocument> 轴循环访问 <xref:System.Xml.Linq.XContainer.Nodes%2A> 的子级，将会返回空白符文本节点。 然而，如果使用 XPath 轴方法循环访问 <xref:System.Xml.Linq.XDocument> 的子级，就不会返回空白符文本节点。  
   
 ```csharp  
-// Create a document with some white space child nodes of the document.  
+// Create a document with some white-space child nodes of the document.  
 XDocument root = XDocument.Parse(  
 @"<?xml version='1.0' encoding='utf-8' standalone='yes'?>  
   
@@ -143,10 +144,10 @@ XDocument root = XDocument.Parse(
 <!--a comment-->  
 ", LoadOptions.PreserveWhitespace);  
   
-// count the white space child nodes using LINQ to XML  
+// count the white-space child nodes using LINQ to XML  
 Console.WriteLine(root.Nodes().OfType<XText>().Count());  
   
-// count the white space child nodes using XPathEvaluate  
+// count the white-space child nodes using XPathEvaluate  
 Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Count());   
 ```  
   

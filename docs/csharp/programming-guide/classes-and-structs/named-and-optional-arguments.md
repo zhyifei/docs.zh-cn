@@ -1,8 +1,9 @@
 ---
-title: "命名实参和可选实参（C# 编程指南）"
+title: 命名实参和可选实参（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c3c2c2ec0c982582032c1ae586d23226028ad899
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/19/2018
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- 命名实参还可以标识每个实参所表示的含义，从而改进代码的可读性。 在以下示例方法中，`sellerName` 不能为 null 或空白。 由于 `sellerName` 和 `productName` 都是字符串类型，所以使用命名实参而不是按位置发送实参是有意义的，可以区分这两种类型并减少代码阅读者的困惑。
+ 命名实参还可以标识每个实参所表示的含义，从而改进代码的可读性。 在下面的示例方法中，`sellerName` 不得为 NULL 或空白符。 由于 `sellerName` 和 `productName` 都是字符串类型，所以使用命名实参而不是按位置发送实参是有意义的，可以区分这两种类型并减少代码阅读者的困惑。
   
  当命名实参与位置实参一起使用时，只要 
 

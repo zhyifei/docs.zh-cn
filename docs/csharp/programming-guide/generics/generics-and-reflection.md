@@ -1,21 +1,22 @@
 ---
-title: "泛型和反射（C# 编程指南）"
+title: 泛型和反射（C# 编程指南）
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3048cb6a9b333107f6ea37edf31ead96f9fe2057
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>泛型和反射（C# 编程指南）
 因为公共语言运行时 (CLR) 能够在运行时访问泛型类型信息，所以可以使用反射获取关于泛型类型的信息，方法与用于非泛型类型的方法相同。 有关详细信息，请参阅[运行时中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。  
@@ -38,18 +39,18 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Type.DeclaringMethod%2A>|返回定义当前泛型类型参数的泛型方法，如果类型参数未由泛型方法定义，则返回 null。|  
 |<xref:System.Type.MakeGenericType%2A>|替代由当前泛型类型定义的类型参数组成的类型数组的元素，并返回表示结果构造类型的 <xref:System.Type> 对象。|  
   
- 此外，新成员将添加到 <xref:System.Reflection.MethodInfo> 类来启用泛型方法的运行时信息。 有关用于反射泛型方法的术语的固定条件列表，请参阅 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> 属性注解。  
+ 此外，<xref:System.Reflection.MethodInfo> 类的成员还为泛型方法启用运行时信息。 有关用于反射泛型方法的术语的固定条件列表，请参阅 <xref:System.Reflection.MethodBase.IsGenericMethod%2A> 属性注解。  
   
 |System.Reflection.MemberInfo 成员名称|描述|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|如果方法是泛型，则返回 true。|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|如果方法是泛型，则返回 true。|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|返回类型对象的数组，这些对象表示构造泛型方法的类型实参或泛型方法定义的类型形参。|  
 |<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|返回当前构造方法的基础泛型方法定义。|  
-|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|如果方法或任何其封闭类型包含未提供特定类型的任何类型参数，则返回 true。|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|如果当前 <xref:System.Reflection.MethodInfo> 表示泛型方法的定义，则返回 true。|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|如果方法或任何其封闭类型包含未提供特定类型的任何类型参数，则返回 true。|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|如果当前 <xref:System.Reflection.MethodInfo> 表示泛型方法的定义，则返回 true。|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|用类型数组的元素替代当前泛型方法定义的类型参数，并返回表示结果构造方法的 <xref:System.Reflection.MethodInfo> 对象。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [泛型](../../../csharp/programming-guide/generics/index.md)  
  [反射类型和泛型类型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  

@@ -1,19 +1,19 @@
 ---
-title: "在 Docker 中运行控制台应用程序"
-description: "了解如何利用现有 .NET Framework 控制台应用程序并在 Windows Docker 容器中运行该程序。"
+title: 在 Docker 中运行控制台应用程序
+description: 了解如何利用现有 .NET Framework 控制台应用程序并在 Windows Docker 容器中运行该程序。
 author: spboyer
-keywords: ".NET, 容器, 控制台, 应用程序"
+keywords: .NET, 容器, 控制台, 应用程序
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中运行控制台应用程序
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/09/2017
 
 除答案外，已将 `Environment.MachineName` 添加到响应中，以显示在本地与在 Windows 容器中运行该应用程序的区别。 本地运行应用程序时，会返回本地计算机名称；在 Windows 容器中运行该应用程序时，则会返回容器会话 ID。
 
-[完整示例](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)位于 GitHub 上的 dotnet/docs 存储库中。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+有关[完整示例](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)，请访问 GitHub 上的 dotnet/samples 存储库。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 开始着手将应用程序移动到容器之前，需要熟悉某些 Docker 术语。
 
@@ -46,7 +46,7 @@ Docker 映像的一个重要特性是映像由基本映像组合而成。 每个
 1. [创建映像的 Dockerfile](#creating-the-dockerfile)
 1. [生成并运行 Docker 容器的过程](#creating-the-image)
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 [Windows 10 周年更新](https://www.microsoft.com/en-us/software-download/windows10/) 或 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) 支持 Windows 容器。
 
 > [!NOTE]
@@ -141,5 +141,5 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 .\run.ps1 "Is this easy or what?"
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 无需对应用程序代码进行任何更改，只需通过添加 Dockerfile 并发布应用程序，即可容器化 .NET Framework 控制台应用程序、立即利用运行多个实例的优势、洁净启动和停止，以及使用更多 Windows Server 2016 功能。

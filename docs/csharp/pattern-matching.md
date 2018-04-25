@@ -1,7 +1,7 @@
 ---
-title: "模式匹配 - C# 指南"
-description: "了解 C# 中的模式匹配表达式"
-keywords: .NET, .NET Core, C#
+title: 模式匹配 - C# 指南
+description: 了解 C# 中的模式匹配表达式
+keywords: .NET、.NET Core、C#
 ms.date: 01/24/2017
 ms.author: wiwagn
 ms.topic: article
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>模式匹配 #
 
@@ -112,27 +112,27 @@ ms.lasthandoff: 11/11/2017
 
 `null` 模式的特殊行为十分有趣，因为模式中的常量 `null` 没有类型，但可以转换为任何引用类型或可以为 null 的类型。 没有将 `null` 转换为任何类型，语言定义 `null` 值不会匹配任何类型模式（无论该变量的编译时类型是什么，都是如此）。 此行为使新的基于 `switch` 的类型模式与 `is` 语句保持一致：如果检查的值为 `null`，`is` 语句始终返回 `false`。 而且更简单：一旦检查类型，便不需要其他的 null 检查。 对于此，可以从上面的示例中的任何块中均不存在 null 检查得知：它们不是必需的，因为与类型模式匹配即可保证非 null 值。
 
-## <a name="var-declarations-in-case-expressions"></a>`var`中的声明`case`表达式
+## <a name="var-declarations-in-case-expressions"></a>`case` 表达式中的 `var` 声明
 
-引入`var`匹配表达式之一引进到模式匹配项的新规则。
+引入 `var` 作为一种匹配表达式也为模式匹配引入了新规则。
 
-第一个规则是`var`声明后面的正常类型推断规则： 类型推断为 switch 表达式的静态类型。 该规则中，从类型始终匹配。
+第一个规则是 `var` 声明遵循常规类型推理规则：将类型推理为 switch 表达式的静态类型。 根据此规则，类型始终匹配。
 
-第二条规则是`var`声明没有其他类型的模式表达式包含 null 检查。 这意味着变量可能为 null，并且在这种情况下是必需的 null 检查。
+第二个规则是 `var` 声明不含 NULL 检查，与其他类型模式表达式不一样。 也就是说，变量可为 NULL，只有在这种情况下，才必须执行 NULL 检查。
 
-这些两个规则意味着在许多情况下，`var`中的声明`case`作为的相同条件相匹配的表达式`default`表达式。
-因为任何非默认情况下是优先于`default`情况下，`default`用例将永远不会执行。
+这两个规则表示，在许多情况下，`case` 表达式中的 `var` 声明匹配与 `default` 表达式相同的条件。
+因为任何非默认事例都优先于 `default` 事例，所以永远不会执行 `default` 事例。
 
 > [!NOTE]
-> 编译器不会发出警告在这些情况下其中`default`用例已写入，但将永远不会执行。 这是一致与当前`switch`列出所有可能的情况下了语句行为。
+> 如果 `default` 事例已编写但永远不会执行，编译器也不会发出警告。 这与在已列出所有可能事例的情况下的当前 `switch` 语句行为一致。
 
-第三个规则引入了使用其中`var`用例可能会很有用。 假设你正在模式匹配的输入是一个字符串，其中你搜索所知的命令的值。 你可以编写类似于：
+第三个规则引入了 `var` 事例可能适用的用途。 假设要进行模式匹配，其中输入是字符串，且要搜索已知命令值。 可以编写如下代码：
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-`var`种情况下，匹配`null`，空字符串或任何字符串，其中包含仅由空白。 请注意，上面的代码中使用`?.`运算符，以确保，它不会意外引发<xref:System.NullReferenceException>。 `default`情况下处理此命令解析程序不理解的其他任何字符串值。
+`var` 事例匹配 `null`、空字符串或任何仅包含空白符的字符串。 请注意，为了确保不会意外抛出 <xref:System.NullReferenceException>，上面的代码使用 `?.` 运算符。 `default` 事例处理此命令分析程序不理解的其他任何字符串值。
 
-这是一个示例可能需要考虑`var`case 表达式不同于`default`表达式。
+在这个例子中，建议使用 `var` 事例表达式，而不是 `default` 表达式。
 
 ## <a name="conclusions"></a>结论
 

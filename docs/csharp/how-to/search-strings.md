@@ -1,5 +1,5 @@
 ---
-title: "如何：搜索字符串（C# 指南）"
+title: 如何：搜索字符串（C# 指南）
 ms.date: 02/21/2018
 ms.prod: .net
 ms.technology:
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: cb381ee811846ae8ff0589d918be4f43b3e9ddc3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-search-strings"></a>如何：搜索字符串
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/12/2018
 | -------- |-------------|
 | the      | 匹配文本“the” |
 | (eir)?   | 匹配 0 个或 1 个“eir” |
-| \s       | 匹配空格字符    |
+| \s       | 与空白符匹配    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 03/12/2018
 
 此单个搜索模式匹配很多有效字符串。 正则表达式更适用于搜索或验证模式，而不是单个文本字符串。
 
-可通过查看 [GitHub 存储库](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip)。
+可通过查看 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
 ## <a name="see-also"></a>请参阅  
 

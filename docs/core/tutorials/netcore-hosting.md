@@ -1,7 +1,7 @@
 ---
-title: "托管 .NET Core"
-description: "从本机代码托管 .NET Core 运行时"
-keywords: ".NET, .NET Core, 托管, 托管 .NET Core"
+title: 托管 .NET Core
+description: 从本机代码托管 .NET Core 运行时
+keywords: .NET, .NET Core, 托管, 托管 .NET Core
 author: mjrousos
 ms.author: mikerou
 ms.date: 2/3/2017
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 5ff2e8e4da12b2a9822b595abbb2bdb0f583cf02
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="hosting-net-core"></a>托管 .NET Core
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="creating-the-host"></a>创建主机
 
-用于演示本文中所述步骤的[示例主机](https://github.com/dotnet/docs/tree/master/samples/core/hosting)可从 dotnet/docs GitHub 存储库获取。 该示例的 host.cpp 文件中的注释清楚地将本教程中已编号的步骤与它们在示例中的执行位置关联。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+有关展示本文中所述步骤的[示例主机](https://github.com/dotnet/samples/tree/master/core/hosting)，请访问 dotnet/samples GitHub 存储库。 该示例的 host.cpp 文件中的注释清楚地将本教程中已编号的步骤与它们在示例中的执行位置关联。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 请记住，示例主机的用途在于提供学习指导，在纠错方面不甚严谨，其重在可读性而非效率。 更多的真实主机示例可从 [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) 存储库获取。 尤其是 [CoreRun 主机](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun)，它是学习者了解简单示例后用来深入学习的通用主机。
 
@@ -90,7 +90,7 @@ AppDomain 标志指定与安全性和互操作性相关的 AppDomain 行为。 �
 *  `PLATFORM_RESOURCE_ROOTS` 此列表包含的路径用于探测资源附属程序集（在区域性特定的子目录中）。
 *  `AppDomainCompatSwitch` 此字符串指定当不具有显式目标框架名字对象（一种程序集级别的属性，指示程序集应针对哪个框架运行）时应用于程序集的兼容性事项。 通常情况下，应将其设置为 `"UseLatestBehaviorWhenTFMNotSpecified"`，但某些主机可能更想要获取较旧的 Silverlight 或 Windows Phone 兼容性特事项。
 
-在[简单示例主机](https://github.com/dotnet/docs/tree/master/samples/core/hosting)中，这些属性将进行如下设置：
+在[简单示例主机](https://github.com/dotnet/samples/tree/master/core/hosting)中，这些属性将进行如下设置：
 
 [!code-cpp[NetCoreHost#6](../../../samples/core/hosting/host.cpp#6)]
 

@@ -1,17 +1,18 @@
 ---
-title: ".NET Core 运行时标识符 (RID) 目录"
-description: "了解运行时标识符 (RID) 及如何在 .NET Core 中使用 RID。"
+title: .NET Core 运行时标识符 (RID) 目录
+description: 了解运行时标识符 (RID) 及如何在 .NET Core 中使用 RID。
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9343d475319084ddfe3450b4c1d2bbcbd394ad1f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 目录
 
@@ -19,7 +20,7 @@ RID 是运行时标识符的缩写。 RID 值用于标识应用程序运行所�
 .NET 包使用它们来表示 NuGet 包中特定于平台的资产。 以下值是 RID 的示例：`linux-x64`、`ubuntu.14.04-x64`、`win7-x64` 或 `osx.10.12-x64`。
 对于具有本机依赖项的包，RID 将指定在其中可以还原包的平台。
 
-可在项目文件的 `<RuntimeIdentifier>` 元素中设置 RID。 也可使用以下 [.NET Core CLI 命令](./tools/index.md) 通过 `--runtime` 选项使用它们：
+可以在项目文件的 `<RuntimeIdentifier>` 元素中设置一个 RID。 可以将多个 RID 定义为项目文件的 `<RuntimeIdentifiers>` 元素中的列表（以分号分隔）。 也可使用以下 [.NET Core CLI 命令](./tools/index.md) 通过 `--runtime` 选项使用它们：
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)

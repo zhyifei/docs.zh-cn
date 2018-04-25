@@ -1,18 +1,19 @@
 ---
-title: "dotnet store 命令"
-description: "“dotnet store”命令可将指定的程序集存储到运行时包存储区。"
+title: dotnet store 命令
+description: “dotnet store”命令可将指定的程序集存储到运行时包存储区。
 author: bleroy
 ms.author: mairaw
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: c8e09141eebef2cbddf6742cceeff05e11c25adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 80ea40dfbedba3dca0e767b66e14f5de22374d4f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/23/2017
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-目标运行时标识符。
+目标[运行时标识符](../rid-catalog.md)。
 
 ## <a name="optional-options"></a>可选选项
 

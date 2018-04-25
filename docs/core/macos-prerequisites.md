@@ -1,6 +1,6 @@
 ---
-title: "Mac 上 .NET Core 的先决条件"
-description: "在 macOS 计算机上开发、部署和运行 .NET Core 应用程序所支持的 macOS 版本和 .NET Core 依赖项。"
+title: Mac 上 .NET Core 的先决条件
+description: 在 macOS 计算机上开发、部署和运行 .NET Core 应用程序所支持的 macOS 版本和 .NET Core 依赖项。
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.workload: dotnetcore
-ms.openlocfilehash: 5aac7566f532312c890bad07c901929ae826ece3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 4bad51e7d0d705ea730382edf80850bca15c5e7a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>macOS 上 .NET Core 的先决条件
 
@@ -65,9 +66,9 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit"></a>增大最大打开文件限制
+## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>提高开放文件上限（低于 .NET Core SDK 2.0.2 的 .NET Core 版本） 
 
-macOS 上的默认打开文件限制可能不足以满足某些 .NET Core 工作负荷，如还原项目或运行单元测试。
+在低于 .NET Core SDK 2.0.2 的旧版 .NET Core 中，macOS 上的默认开放文件上限可能对某些 .NET Core 工作负荷（如还原项目或运行单元测试）不够用。
 
 可通过执行以下步骤来增大此限制：
 

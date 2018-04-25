@@ -1,6 +1,6 @@
 ---
-title: "包、元包和框架"
-description: "了解包、元包和框架的术语。"
+title: 包、元包和框架
+description: 了解包、元包和框架的术语。
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f9b98fb38390e91c7a144ff5585c0a26824303dc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>包、元包和框架
 
@@ -78,6 +78,7 @@ ms.lasthandoff: 03/16/2018
 重要的 .NET Core 元包有：
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - 描述了属于 .NET Core 发行版的部分库。 也就是 [`.NETCoreApp` 框架](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj)。 它依赖于更小的 `NETStandard.Library`。
+- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) - 包含来自 ASP.NET Core、Entity Framework Core 以及 ASP.NET Core 和 Entity Framework Core 使用的内部和第三方依赖项的所有受支持包。 有关详细信息，请参阅 [ASP.NET Core 2.x 的 Microsoft.AspNetCore.All 元包](/aspnet/core/fundamentals/metapackage)。
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - 一组兼容外观，使基于 mscorlib 的可移植类库(PCL) 得以在 .Net Core上运行。
 
 ## <a name="frameworks"></a>框架

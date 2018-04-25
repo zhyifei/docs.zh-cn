@@ -1,6 +1,6 @@
 ---
-title: "使用 dotnet test 和 xUnit 在 .NET Core 中进行 F# 库单元测试"
-description: "通过使用 dotnet test 和 xUnit 分步生成示例解决方案的交互体验，了解 .NET Core 中的 F# 单元测试概念。"
+title: 使用 dotnet test 和 xUnit 在 .NET Core 中进行 F# 库单元测试
+description: 通过使用 dotnet test 和 xUnit 分步生成示例解决方案的交互体验，了解 .NET Core 中的 F# 单元测试概念。
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
@@ -10,15 +10,15 @@ dev_langs:
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6a9596db49024bead9c33b52642f46f519bb2b4c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8485b1a64992c7a632d22d9dc492ee4d83592208
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 F# 库单元测试
 
-本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-with-fsharp/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="creating-the-source-project"></a>创建源项目
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/23/2017
 
 ```fsharp
 module MyMath =
-    let sumOfSquares xs = raise (System.NotImplementedException("You haven't written a test yet!"))
+    let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
 将目录更改回 unit-testing-with-fsharp 目录。 运行 [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) 向解决方案添加类库项目。
@@ -70,7 +70,7 @@ module MyMath =
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
-可以在 GitHub 上的[示例存储库](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)中看到整个文件。
+可以在 GitHub 上的[示例存储库](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-with-fsharp/MathService.Tests/MathService.Tests.fsproj)中看到整个文件。
 
 最终的解决方案布局将如下所示：
 
@@ -102,22 +102,22 @@ let ``Fail every time`` () = Assert.True(false)
 
 `[<Fact>]` 属性表示由测试运行程序运行的测试方法。 在 unit-testing-with-fsharp中，执行 [`dotnet test`](../tools/dotnet-test.md) 以构建测试和类库，然后运行测试。 xUnit 测试运行程序包含要运行测试的程序入口点。 `dotnet test` 使用已创建的单元测试项目启动测试运行程序。
 
-这两个测试演示了最基本的已通过测试和未通过测试。 `My test` 通过，而 `Fail every time` 未通过。 现在创建针对 `sumOfSquares` 方法的测试。 `sumOfSquares` 方法返回输入序列中的所有奇整数值的平方和。 可以以迭代的方式创建可验证此功能的测试，而非尝试同时写入所有的函数。 若要让每个测试都通过，意味着要针对此方法创建必要的功能。
+这两个测试演示了最基本的已通过测试和未通过测试。 `My test` 通过，而 `Fail every time` 未通过。 现在创建针对 `squaresOfOdds` 方法的测试。 `squaresOfOdds` 方法返回输入序列中所有奇整数值的平方序列。 可以以迭代的方式创建可验证此功能的测试，而非尝试同时写入所有的函数。 若要让每个测试都通过，意味着要针对此方法创建必要的功能。
 
-可以编写的最简单的测试是调用包含所有偶数的 `sumOfSquares`，它的结果应该是一个空整数序列。  此测试如下所示：
+可以编写的最简单的测试是调用包含所有偶数的 `squaresOfOdds`，它的结果应该是一个空整数序列。  此测试如下所示：
 
 ```fsharp
 [<Fact>]
-let ``Sum of evens returns empty collection`` () =
+let ``Sequence of Evens returns empty collection`` () =
     let expected = Seq.empty<int>
-    let actual = MyMath.sumOfSquares [2; 4; 6; 8; 10]
+    let actual = MyMath.squaresOfOdds [2; 4; 6; 8; 10]
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
 测试失败。 尚未创建实现。 在起作用的 `MathService` 类中编写最简单的代码，以生成此测试：
 
 ```csharp
-let sumOfSquares xs =
+let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
@@ -129,18 +129,18 @@ let sumOfSquares xs =
 
 ```fsharp
 [<Fact>]
-let ``Sum of sequences of Ones and Evens`` () =
+let ``Sequences of Ones and Evens returns Ones`` () =
     let expected = [1; 1; 1; 1]
-    let actual = MyMath.sumOfSquares [2; 1; 4; 1; 6; 1; 8; 1; 10]
+    let actual = MyMath.squaresOfOdds [2; 1; 4; 1; 6; 1; 8; 1; 10]
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-执行 `dotnet test` 以运行测试，并显示新测试失败。 现在更新 `sumOfSquares` 方法，以处理此新测试。 筛选出序列中的所有偶数值，以使此测试通过。 可以编写一个小筛选器函数并使用 `Seq.filter` 来实现此目的：
+执行 `dotnet test` 以运行测试，并显示新测试失败。 现在更新 `squaresOfOdds` 方法，以处理此新测试。 筛选出序列中的所有偶数值，以使此测试通过。 可以编写一个小筛选器函数并使用 `Seq.filter` 来实现此目的：
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs =
+let squaresOfOdds xs =
     xs
     |> Seq.filter isOdd
 ```
@@ -151,7 +151,7 @@ let sumOfSquares xs =
 [<Fact>]
 let ``SquaresOfOdds works`` () =
     let expected = [1; 9; 25; 49; 81]
-    let actual = MyMath.sumOfSquares [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
+    let actual = MyMath.squaresOfOdds [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
     Assert.Equal(expected, actual)
 ```
 
@@ -161,7 +161,7 @@ let ``SquaresOfOdds works`` () =
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs = 
+let squaresOfOdds xs = 
     xs 
     |> Seq.filter isOdd 
     |> Seq.map square
