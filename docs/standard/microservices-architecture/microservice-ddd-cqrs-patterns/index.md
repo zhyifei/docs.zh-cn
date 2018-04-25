@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f29a8d19e49685f864b7ca83e466ceb1f73a62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>使用 DDD 和 CQRS 模式降低微服务中的业务复杂性
 
@@ -38,41 +38,41 @@ DDD 是一个大主题，具有一套丰富的学习资源。 开始时可以阅
 ##### <a name="ddd-domain-driven-design"></a>DDD（域驱动设计）
 
 -   **Eric Evans。Domain Language**
-    [*http://domainlanguage.com/*](http://domainlanguage.com/)（域语言）
+    [https://domainlanguage.com/](https://domainlanguage.com/)（域语言）
 
 -   **Martin Fowler。Domain-Driven Design**
-    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)（域驱动设计）
+    [https://martinfowler.com/tags/domain%20driven%20design.html](https://martinfowler.com/tags/domain%20driven%20design.html)（域驱动设计）
 
 -   **Jimmy Bogard。Strengthening your domain: a primer**
-    [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)（增强域：初级）
+    [https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)（强化域：入门）
 
 ##### <a name="ddd-books"></a>DDD 丛书
 
--   **Eric Evans。《域驱动设计：软件核心复杂性应对之道》**
-    [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software**
+    [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)（域驱动设计：软件核心复杂性应对之道）
 
--   **Eric Evans。《Domain-Driven Design Reference: Definitions and Pattern Summaries》**
-    [*https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/*](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)（域驱动设计参考：定义和模式摘要）
+-   **Eric Evans。Domain-Driven Design Reference: Definitions and Pattern Summaries**
+    [https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)（域驱动设计参考：定义和模式摘要）
 
--   **Vaughn Vernon。《实现领域驱动设计》**
-    [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+-   **Vaughn Vernon。Implementing Domain-Driven Design**
+    [https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)（实现域驱动设计）
 
--   **Vaughn Vernon。《Domain-Driven Design Distilled》**
-    [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)（域驱动设计精选）
+-   **Vaughn Vernon。Domain-Driven Design Distilled**
+    [https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)（域驱动设计核心理念）
 
--   **Jimmy Nilsson。《Applying Domain-Driven Design and Patterns》**
-    [*https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/*](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)（应用域驱动的设计和模式）
+-   **Jimmy Nilsson。Applying Domain-Driven Design and Patterns**
+    [https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)（应用域驱动设计和模式）
 
--   **Cesar de la Torre。《N-Layered Domain-Oriented Architecture Guide with .NET》**
-    [*https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/*](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)（.NET 中面向域的 N 层体系结构指南）
+-   **Cesar de la Torre。N-Layered Domain-Oriented Architecture Guide with .NET**
+    [https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)（使用 .NET 的 N 层域导向体系结构指南）
 
--   **Abel Avram 与 Floyd Marinescu。《Domain-Driven Design Quickly》**
-    [*https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/*](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)（域驱动的快速设计）
+-   **Abel Avram 与 Floyd Marinescu。Domain-Driven Design Quickly**
+    [https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)（快速完成域驱动设计）
 
 DDD 培训
 
--   **Julie Lerman 与 Steve Smith。域驱动设计基础知识**
-    [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
+-   **Julie Lerman 与 Steve Smith。Domain-Driven Design Fundamentals**
+    [http://bit.ly/PS-DDD](http://bit.ly/PS-DDD)（域驱动设计基础知识）
 
 
 >[!div class="step-by-step"]
