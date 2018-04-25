@@ -1,6 +1,6 @@
 ---
-title: "弃元 - C# 指南"
-description: "介绍 C# 对弃元的支持（弃元是未赋值的可抛弃变量），以及弃元的使用方式。"
+title: 弃元 - C# 指南
+description: 介绍 C# 对弃元的支持（弃元是未赋值的可抛弃变量），以及弃元的使用方式。
 keywords: .NET,.NET Core
 author: rpetrusha
 ms.author: ronpet
@@ -17,9 +17,9 @@ ms.lasthandoff: 11/17/2017
 ---
 # <a name="discards---c-guide"></a>弃元 - C# 指南
 
-从 C# 7 开始，C# 支持弃元，这是一种在应用程序代码中人为取消使用的临时虚拟变量。 弃元相当于未赋值的变量；它们没有值。 因为只有一个弃元变量，并且甚至不为该变量分配存储空间，所以弃元可减少内存分配。 因为它们使代码的意图清楚，增强了其可读性和可维护性。
+从 C# 7 开始，C# 支持弃元，这是一种在应用程序代码中人为取消使用的临时虚拟变量。 弃元相当于未赋值的变量；它们没有值。 因为只有一个弃元变量，甚至不为该变量分配存储空间，所以弃元可减少内存分配。 因为它们使代码的意图清楚，增强了其可读性和可维护性。
 
-通过将下划线 (`_`) 赋给一个变量作为其变量名，指示该变量为一个弃元。 例如，下面的方法调用返回在其中的第一个和第二个值是弃元-3 元组和*区域*是一个以前声明的变量将设置为相应的第三个组件返回*GetCityInformation*:
+通过将下划线 (`_`) 赋给一个变量作为其变量名，指示该变量为一个弃元。 例如，下面的方法调用返回 3 元组，其中的第一个和第二个值是弃元，*area* 是一个以前声明的变量，它将设置为 *GetCityInformation* 返回的相应的第三个部分:
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
@@ -72,15 +72,15 @@ ms.lasthandoff: 11/17/2017
 
 请注意，`_` 也是有效标识符。 当在支持的上下文之外使用时，`_` 不视为弃元，而视为有效变量。 如果名为 `_` 的标识符已在范围内，则使用 `_` 作为独立弃元可能导致：
 
-- 将预期的弃元的值赋给范围内 `_` 变量，会导致该变量的值被意外修改。 例如: 
+- 将预期的弃元的值赋给范围内 `_` 变量，会导致该变量的值被意外修改。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
  
-- 因违反类型安全而发生的编译器错误。 例如: 
+- 因违反类型安全而发生的编译器错误。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
  
-- 编译器错误 CS0136：“无法在此范围中声明名为“_”的局部变量或参数，因为该名称用于在封闭的局部范围中定义局部变量或参数”。 例如: 
+- 编译器错误 CS0136：“无法在此范围中声明名为“_”的局部变量或参数，因为该名称用于在封闭的局部范围中定义局部变量或参数”。 例如:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
