@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8587857ef0d0f48f88331d9588e7e97e3290d34c
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c5082806c907a6c6d4f51bf77e54deee08de3d8b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令行在 Windows/Linux/macOS 上入门 .NET Core
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="hello-console-app"></a>Hello，控制台应用！
 
-可在 dotnet/docs GitHub 存储库[查看或下载示例代码](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+若要[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)，可以访问 dotnet/samples GitHub 存储库。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 打开命令提示符，创建一个名为“Hello”的文件夹。 导航到创建的文件夹，键入下列内容：
 
