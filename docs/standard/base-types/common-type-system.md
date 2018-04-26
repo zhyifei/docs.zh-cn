@@ -1,12 +1,12 @@
 ---
-title: "常规类型系统"
-ms.custom: 
+title: 常规类型系统
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4660e8764c429f526e05e8e7b6c44bd30c4172c1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -331,6 +331,6 @@ ms.lasthandoff: 12/23/2017
 -   派生类型可以重写继承的虚方法。 重写方法提供了对方法的一种新定义，将根据运行时的值的类型，而不是编译时已知的变量类型来调用方法。 只有在虚拟方法未标记为 `final` 且新方法至少可以像虚拟方法一样进行访问的情况下，方法才能重写虚拟方法。  
   
 ## <a name="see-also"></a>请参阅  
- [.NET 类库](http://go.microsoft.com/fwlink/?LinkID=217856)  
+ [.NET API 浏览器](/dotnet/api)  
  [公共语言运行时](../../../docs/standard/clr.md)  
  [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)
