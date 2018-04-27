@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 Async 和 Await 的异步编程 (C#)
 通过使用异步编程，你可以避免性能瓶颈并增强应用程序的总体响应能力。 但是，编写异步应用程序的传统技术可能比较复杂，使它们难以编写、调试和维护。  
@@ -98,7 +98,7 @@ string urlContents = await client.GetStringAsync();
   
     -   `void`：如果要编写异步事件处理程序。  
 
-    -   包含 `GetAwaiter` 方法的其他任何类型（自 C# 7 起）。
+    -   包含 `GetAwaiter` 方法的其他任何类型（自 C# 7.0 起）。
   
      有关详细信息，请参阅[返回类型和参数](#BKMK_ReturnTypesandParameters)部分。  
   
@@ -179,7 +179,7 @@ string urlContents = await client.GetStringAsync();
   
 如果方法不含任何 return 语句或包含不返回操作数的 return 语句，将 <xref:System.Threading.Tasks.Task> 用作返回类型。  
 
-自 C# 7 起，还可以指定其他任何返回类型，前提是返回类型包含 `GetAwaiter` 方法。 例如，<xref:System.Threading.Tasks.ValueTask%601> 就是这种类型。 可用于 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 包。
+自 C# 7.0 起，还可以指定其他任何返回类型，前提是返回类型包含 `GetAwaiter` 方法。 例如，<xref:System.Threading.Tasks.ValueTask%601> 就是这种类型。 可用于 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 包。
   
  下面的示例演示如何声明并调用可返回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task> 的方法。  
   

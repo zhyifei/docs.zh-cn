@@ -13,16 +13,16 @@ ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
 caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 72563b9e37c26257a2bf5939f63ece050ec003ab
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: c4ac62a38698f0e43c2868e86fa8776e913b715d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="events-c-programming-guide"></a>事件（C# 编程指南）
 [类](../../../csharp/language-reference/keywords/class.md) 或对象可以通过事件向其他类或对象通知发生的相关事情。 发送（或 *引发*）事件的类称为“发行者”  ，接收（或 *处理*）事件的类称为“订户” 。  
   
- 在典型的 C# Windows 窗体或 Web 应用程序中，可订阅由按钮和列表框等控件引发的事件。 可以使用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 集成的开发环境 (IDE) 来浏览控件发布的事件，并选择想要处理的事件。 IDE 将自动添加空白事件处理程序方法和订阅该事件的代码。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。  
+ 在典型的 C# Windows 窗体或 Web 应用程序中，可订阅由按钮和列表框等控件引发的事件。 可以使用 Visual C# 集成开发环境 (IDE) 来浏览控件发布的事件，并选择想要处理的事件。 IDE 将自动添加空白事件处理程序方法和订阅该事件的代码。 有关详细信息，请参阅[如何：订阅和取消订阅事件](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。  
   
 ## <a name="events-overview"></a>事件概述  
  事件具有以下属性：  

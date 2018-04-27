@@ -23,16 +23,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: ca56291e31526a6295c4a44f930e294d71b72488
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="handling-and-raising-events"></a>处理和引发事件
 .NET Framework 中的事件基于委托模型。 委托模型遵守观察者设计模式，使订阅者能够向提供方注册并接收相关通知。 事件发送方推送事件发生的通知，事件接收器接收该通知并定义对它的响应。 本文介绍委托模型的主要组件、如何在应用程序中使用事件以及如何在你的代码中实现事件。  
   
- 有关在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用中处理事件的信息，请参阅[事件和路由事件概述（Windows 应用商店应用）](http://go.microsoft.com/fwlink/p/?LinkId=261485)。  
+ 有关在 Windows 8.x Store 应用中处理事件的信息，请参阅[事件和路由事件概述](/previous-versions/windows/apps/hh758286(v=win.10))。  
   
 ## <a name="events"></a>事件  
  事件是由对象发送的用于发出操作信号的消息。 该操作可能是由用户交互引起，例如单击按钮；也可能是由某些其他程序的逻辑引发，例如更改属性值。 引发事件的对象称为“事件发送方”。 事件发送方不知道哪个对象或方法将接收（处理）它引发的事件。 事件通常是事件发送方的成员，例如 <xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 类的成员，<xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是实现  <xref:System.ComponentModel.INotifyPropertyChanged> 接口的类的成员。  

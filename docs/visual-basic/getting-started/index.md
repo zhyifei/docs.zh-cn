@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
 文档的本节内容将帮助你了解  Visual Basic  应用程序开发的入门知识。  
@@ -55,10 +55,10 @@ ms.lasthandoff: 03/12/2018
  提供指向一些页面的链接，这些页面介绍面向对象的编程并描述如何创建您自己的对象以及如何使用对象来简化代码过程。  
   
  [示例](../../visual-basic/sample-applications.md)  
- 提供指向 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的代码示例的链接。  
+ 提供指向 Visual Basic 中的示例代码的链接。  
   
  [演练](../../visual-basic/walkthroughs.md)  
- 提供阐示 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言的各个方面的帮助页的列表。  
+ 提供阐示 Visual Basic 语言的各个方面的帮助页列表。  
   
  [与我们交流](/visualstudio/ide/talk-to-us)  
  介绍如何得到支持和提供反馈。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/12/2018
  [Visual Studio](/visualstudio/)  
  提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文档的链接。  
   
- [C#](../../csharp/index.md) 提供文档链接，该文档描述有关使用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 进行应用程序开发的信息。  
+ [C#](../../csharp/index.md) 提供文档链接，该文档描述有关使用 Visual C# 进行应用程序开发的信息。  
   
  [Visual C++](/cpp/)  
  提供 Visual C++ 文档的链接。  

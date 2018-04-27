@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a52fad2755c8c255d9489cd7148b0d279c0e1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-operators"></a>C# 运算符
 C# 提供了许多运算符，这些运算符是指定要在表达式中执行哪些操作（数学、索引、函数调用等等）的符号。 可以[重载](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)许多应用于用户定义类型的运算符，从而更改其含义。  
@@ -63,7 +63,7 @@ C# 提供了许多运算符，这些运算符是指定要在表达式中执行�
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md)：对整数运算禁用溢出检查。 这是默认的编译器行为。  
   
- [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) - 返回类型 T 的默认值，引用类型的默认值为 `null`，数值类型的默认值为 0，结构类型成员的默认填充值为 0/`null`。  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) - 生成类型 T 的默认值。  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)：声明并返回委托实例。  
   

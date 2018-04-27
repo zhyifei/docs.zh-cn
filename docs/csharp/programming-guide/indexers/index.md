@@ -14,11 +14,11 @@ ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
 caps.latest.revision: 29
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: db49a602b83940cab3f87dea17accb92a2be825d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5397462994d5e684406c6de65c4f31d9d20eef22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="indexers-c-programming-guide"></a>索引器（C# 编程指南）
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 
 请注意，`=>` 引入了表达式主体，并未使用 `get` 关键字。 
 
-自 C# 7 起，get 和 set 访问器均可作为表达式主体成员实现。 在这种情况下，必须使用 `get` 和 `set` 关键字。 例如: 
+自 C# 7.0 起，get 和 set 访问器均可作为表达式主体成员实现。 在这种情况下，必须使用 `get` 和 `set` 关键字。 例如:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -72,6 +72,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 编程指南](../../../csharp/programming-guide/index.md)  
  [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
