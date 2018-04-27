@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt;元素'
 ms.custom: ''
-ms.date: 03/28/2018
+ms.date: 04/19/2018
 ms.prod: .net-framework
 ms.technology:
 - dotnet-bcl
@@ -19,17 +19,17 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 146416a9872a8444316c2e4a754067b82030a81d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;元素
 定义 <xref:System.AppContext> 类使用的一个或多个开关，用于提供新功能的选择退出机制。  
   
  \<configuration>  
- \<runtime>  
+ \<运行时 >  
 \<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>语法  
@@ -80,12 +80,13 @@ ms.lasthandoff: 04/09/2018
 |`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|控件是否的性能<xref:System.Windows.Forms.PrintPreviewDialog>针对网络打印机进行了优化。 有关详细信息，请参阅[PrintPreviewDialog 控件概述](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)。|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|控制是否异步操作不流从调用线程的上下文。 有关详细信息，请参阅[CurrentCulture 和 CurrentUICulture 穿过了任务](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks)。|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|控件是否<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType>方法尝试仅使用最后一个 DNS 条目的声明类型匹配。 有关详细信息，请参阅[缓解：X509CertificateClaimSet.FindClaims 方法](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md)。|.NET Framework 4.6.1|  
+|`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|控制是否允许 AuthorizationContext.Empty 返回可变对象。|.NET Framework 4.6|  
 |`Switch.System.IO.BlockLongPaths`|控件是否路径长度超过`MAX_PATH`（260 个字符） 引发<xref:System.IO.PathTooLongException>。 有关详细信息，请参阅[长路径支持](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support)。|.NET Framework 4.6.2|  
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|使用反斜杠 ("\\") 而不是正斜杠 （"/"） 中的路径分隔符作为<xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType>属性。 有关详细信息，请参阅[缓解： ZipArchiveEntry.FullName 路径分隔符](~/docs/framework/migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md)。|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|控制是否运行系统使用创建的后台线程引发的异常<xref:System.IO.Ports.SerialPort>流终止进程。|.NET Framework 4.7.1| 
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|控制是否使用旧路径规范化和支持 URI 路径<xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType>和<xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType>方法。 有关详细信息，请参阅[缓解： 路径规范化](~/docs/framework/migration-guide/mitigation-path-normalization.md)和[缓解： 路径冒号检查](~/docs/framework/migration-guide/mitigation-path-colon-checks.md)。|.NET Framework 4.6.2|  
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|控制是否相等比较的测试<xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType>的一个对象的属性<xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType>的第二个对象的属性。 有关详细信息，请参阅[不正确实现 MemberDescriptor.Equals](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals)。|.NET Framework 4.6.2|  
- `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|禁用证书增强型密钥用法 (EKU) 对象标识符 (OID) 验证。 增强型密钥用法 (EKU) 扩展为指示使用密钥的应用程序的对象标识符 (Oid) 的集合。|.NET Framework 4.6|
+ `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|禁用证书增强型密钥用法 (EKU) 对象标识符 (OID) 验证。 增强型密钥使用 (EKU) 扩展是指示使用密钥的应用程序的对象标识符 (OID) 的集合。|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|通过禁用 SCH_SEND_AUX_RECORD 使用禁用 TLS1.0 浏览器利用针对 SSL/TLS （动物） 缓解。|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|控件是否<xref:System.Net.ServicePointManager?displayProperty=nameWithType>和<xref:System.Net.Security.SslStream?displayProperty=nameWithType>类可以使用 SSL 3.0 协议。 有关详细信息，请参阅[缓解：TLS 协议](~/docs/framework/migration-guide/mitigation-tls-protocols.md)。|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|禁用恢复为默认值为 Tls12、 Tls11、 Tls SystemDefault TLS 版本。|.NET Framework 4.7|
@@ -100,10 +101,13 @@ ms.lasthandoff: 04/09/2018
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|确定是否`TransportWithMessageCredential`安全模式允许带未签名的消息"to"标头。 这是一个可以选择使用的开关。 有关详细信息，请参阅[.NET Framework 4.6.1 中的运行时更改](https://msdn.microsoft.com/library/mt592686.aspx#WCF)。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|控件是否<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>构造函数引发<xref:System.ArgumentException>如果其中一个元素是`null`。|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|确定是否尝试使用 X509 证书与 CSG 密钥存储提供程序将引发异常。 有关详细信息，请参阅[WCF 传输安全性支持使用 CNG 中存储的证书](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)。|.NET Framework 4.6.1|
+|`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|使用 HTTP 传输时与自承载服务，此值设置为`true`会导致 WCF 若要忽略应用程序添加`Connection: close`到请求的响应标头的标头。 此值设置为`false`使添加`Connection: close`到响应标头，这会导致关闭请求套接字之后发送响应的标头。|.NET Framework 4.6|
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|因一个线程执行一次的限制可重入服务的实例的句柄死锁。|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|连同`Switch.System.Net.DontEnableSchUseStrongCrypto`，确定 WCF 消息安全是否使用 TLS 1.1 和 TLS 1.2。|.NET Framework 4.7 |    
+|`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|值为`false`设置默认配置以允许操作系统选择的协议。 值为`true`将默认值设置为可用的最高协议。 （还适用于服务的以前的 framework 版本的分支）|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|确定默认的消息签名的 WCF 中的 MSMQ 消息的算法是 SHA1 或 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|控制 WCF 是否使用 SHA1 或 SHA256 哈希来生成随机的命名管道的名称。|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|控制是否引发[NullReferenceException](xref:System.NullReferenceException)当异常消息为 null。|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|控制是否在服务启动时引发的异常会传播到调用方<xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>方法。|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |确定 Windows Presentation Foundation 是否适用旧算法 (`true`) 或新算法 (`false`) 在分配的空间\*的列。 有关详细信息，请参阅[缓解：网格控件向 *-列分配空间](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md)。 |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|是否选择器或选项卡控件始终引发所选内容之前更新其所选的值属性的值的控件更改事件。|.NET Framework 4.7.1|
@@ -141,7 +145,7 @@ ms.lasthandoff: 04/09/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.AppContext?displayProperty=nameWithType>  
  [\<运行时 > 元素](runtime-element.md)  
  [\<configuration> 元素](../configuration-element.md)

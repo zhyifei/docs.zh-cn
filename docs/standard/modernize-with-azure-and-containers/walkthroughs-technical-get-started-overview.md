@@ -1,30 +1,31 @@
 ---
-title: "演练和技术获取启动的概述"
-description: "更新现有的.NET 应用程序与 Azure 云和 Windows 容器 |演练和技术获取启动的概述"
+title: 演练和技术获取启动的概述
+description: 更新现有的.NET 应用程序与 Azure 云和 Windows 容器 |演练和技术获取启动的概述
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 0bad7e3afbdf3e55c447319b3756f2235b9e0a19
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>演练和技术获取启动的概述
 
 若要限制此图书的大小，其他技术文档和完整的演练可 GitHub 存储库中。 此第章所述的演练联机系列介绍基于 Windows 容器和部署到 Azure 的多个环境的分步设置。
 
-以下各节介绍每个演练即将，其目标和高级的愿景，并提供所涉及的任务的图。 你可以获取本身的演练中*eShopModernizing*在应用程序 GitHub 存储库 wiki [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)。
+以下各节介绍每个演练即将，其目标和高级的愿景，并提供所涉及的任务的图。 你可以获取本身的演练中*eShopModernizing*在应用程序 GitHub 存储库 wiki [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki)。
 
 ## <a name="technical-walkthrough-list"></a>技术演练列表
 
 以下入门演练提供了示例应用，你可以提升和移动通过使用容器，并且通过在 Azure 中使用多个部署选项然后移动的一致和全面技术指南。
 
-下面的演练的每个使用新示例 eShopLegacy 和 eShopModernizing 应用程序，它们可在 GitHub 上[https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)。
+下面的演练的每个使用新示例 eShopLegacy 和 eShopModernizing 应用程序，它们可在 GitHub 上[ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing)。
 
 - **电子商店旧应用的教程**
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 03/08/2018
 
 ![ASP.NET MVC 和 ASP.NET Web 窗体应用程序 （现有/旧技术）](./media/image5-2.png)
 
-> **图 5-2。** ASP.NET MVC 和 ASP.NET Web 窗体应用程序 （现有/旧技术）
+> **图 5-2**。 ASP.NET MVC 和 ASP.NET Web 窗体应用程序 （现有/旧技术）
 
 这些是用于浏览和修改目录条目的 web 应用程序。 实际上，这两个应用提供相同的业务/功能的功能，我们只是为了进行比较。 你可以看到用于通过使用 ASP.NET MVC 和 ASP.NET Web 窗体框架的应用的类似现代化进程。
 
@@ -112,7 +113,7 @@ ms.lasthandoff: 03/08/2018
 
 > ![在开发环境中的容器化应用程序的简化的体系结构示意图](./media/image5-3.png)
 >
-> **图 5-3。** 在开发环境中的容器化应用程序的简化的体系结构示意图
+> **图 5-3**。 在开发环境中的容器化应用程序的简化的体系结构示意图
 
 ### <a name="benefits"></a>优点
 
@@ -126,7 +127,7 @@ ms.lasthandoff: 03/08/2018
 
 ### <a name="next-steps"></a>后续步骤
 
-浏览 GitHub wiki 上的此内容更深入： [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+在 GitHub wiki 上浏览此更深入的内容： [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>演练 3： 将 Windows 容器基于应用程序部署到 Azure Vm
 
@@ -152,13 +153,13 @@ ms.lasthandoff: 03/08/2018
 
 ![从开发人员 PC 通过 Docker 引擎连接到 Azure VM 部署](./media/image5-4.png)
 
-> **图 5-4。** 从开发人员 PC 通过 Docker 引擎连接到 Azure VM 部署
+> **图 5-4**。 从开发人员 PC 通过 Docker 引擎连接到 Azure VM 部署
 
 #### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>方案 b： 部署到 Azure VM 通过 Docker 注册表
 
 ![将部署到 Azure VM 通过 Docker 注册表](./media/image5-5.png)
 
-> **图 5-5。** 将部署到 Azure VM 通过 Docker 注册表
+> **图 5-5**。 将部署到 Azure VM 通过 Docker 注册表
 
 #### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-visual-studio-team-services"></a>方案 c: Azure VM 将从部署到 Visual Studio Team Services 中的 CI/CD 管道
 
@@ -208,13 +209,13 @@ Azure 目前提供名为的 VM**与容器的 Windows Server 2016**。 可以使�
 
 ![从开发环境直接到 Kubernetes 群集部署](./media/image5-7.png)
 
-> **图 5-7。** 从开发环境直接到 Kubernetes 群集部署
+> **图 5-7**。 从开发环境直接到 Kubernetes 群集部署
 
 #### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-team-services"></a>方案 b: Kubernetes 群集将从部署到 CI/CD 管道在 Team Services
 
 ![从 Team Services 中的 CI/CD 管道到 Kubernetes 群集部署](./media/image5-8.png)
 
-> **图 5-8。** 从 Team Services 中的 CI/CD 管道到 Kubernetes 群集部署
+> **图 5-8**。 从 Team Services 中的 CI/CD 管道到 Kubernetes 群集部署
 
 ### <a name="benefits"></a>优点
 
@@ -240,7 +241,7 @@ Azure 容器服务专门针对 Azure 进行优化受欢迎的开源工具和技�
 
 ## <a name="next-steps"></a>后续步骤
 
-浏览 GitHub wiki 上的此内容更深入： [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+在 GitHub wiki 上浏览此更深入的内容： [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>演练 5： 将你的 Windows 容器基于应用部署到 Azure Service Fabric
 
@@ -268,13 +269,13 @@ Azure 容器服务专门针对 Azure 进行优化受欢迎的开源工具和技�
 
 ![从开发环境将部署直接到 Service Fabric 群集](./media/image5-9.png)
 
-> **图 5-9。** 从开发环境将部署直接到 Service Fabric 群集
+> **图 5-9**。 从开发环境将部署直接到 Service Fabric 群集
 
 ### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-team-services"></a>方案 b: Service Fabric 群集将从部署到 CI/CD 管道在 Team Services
 
 ![从 Visual Studio Team Services 中的 CI/CD 管道将部署到 Service Fabric 群集](./media/image5-10.png)
 
-> **图 5-10。** 从 Visual Studio Team Services 中的 CI/CD 管道将部署到 Service Fabric 群集
+> **图 5-10**。 从 Visual Studio Team Services 中的 CI/CD 管道将部署到 Service Fabric 群集
 
 ## <a name="benefits"></a>优点
 

@@ -1,12 +1,13 @@
 ---
-title: "类、结构和接口的名称"
-ms.custom: 
+title: 类、结构和接口的名称
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type names, guidelines
@@ -19,18 +20,18 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7c76fccec77454cb4551e427e254fe84d9a60299
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bcb3d1c636c8f846be8290738f322f36e09c9dad
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>类、结构和接口的名称
 请按照命名准则适用于常规类型命名。  
@@ -110,7 +111,7 @@ public interface ISessionChannel<TSession> where TSession : ISession{
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  

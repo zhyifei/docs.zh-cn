@@ -14,11 +14,11 @@ ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3b2937cc71c0c31bd8dce3d77fb33f48e1b5750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ab152687f4f9e4ba6bd032ae7c1352f65af715f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何时使用枚举 (Visual Basic)
 枚举提供轻松使用成组的相关的常数。 一个枚举，枚举，或`Enum`，是一组值的符号名称。 枚举将被视为数据类型，并可用于创建使用变量和属性集使用的常数。  
@@ -37,14 +37,14 @@ ms.lasthandoff: 11/21/2017
 -   确保向前兼容性。 枚举，与你的代码就很难如果有人在将来更改成员名称所对应的值失败。  
   
 ## <a name="naming-enumerations"></a>命名枚举  
- 用于枚举成员的命名约定。 当[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]遇到枚举成员名称，如果其他引用的类型库包含相同的名称，可能会引发异常。 使用标识你的应用程序或组件中的值的唯一前缀。  
+ 用于枚举成员的命名约定。 当 Visual Basic 遇到枚举成员名称时，如果其他引用的类型库包含相同的名称，可能会引发异常。 使用标识你的应用程序或组件中的值的唯一前缀。  
   
  当引用时枚举的成员，你必须限定枚举名称的成员名称，否则使用`Imports`语句。 有关详细信息，请参阅[枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)。  
   
 ## <a name="predefined-enumerations"></a>预定义的枚举  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供了大量预定义的枚举，如`FirstDayOfWeek`和`MsgBoxResult`，以便于你的代码。 有关这些列表请参阅[常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)。  
+ Visual Basic 提供了大量预定义的枚举，如`FirstDayOfWeek`和`MsgBoxResult`，以便于你的代码。 有关这些列表请参阅[常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何： 声明枚举](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
  [如何：引用枚举成员](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
  [枚举和名称限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  

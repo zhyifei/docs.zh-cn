@@ -1,11 +1,11 @@
 ---
-title: "XML 和 SOAP 序列化"
-ms.custom: 
+title: XML 和 SOAP 序列化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SOAP, XML serialization
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1ac5e83d6daf9654c541dcd8a748717be3ed05d0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8895a3ca460034cd963bc43e1f27535a51cf9356
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-and-soap-serialization"></a>XML 和 SOAP 序列化
 XML 序列化将对象的公共字段和属性或者方法的参数及返回值转换（序列化）为符合特定 XML 架构定义语言 (XSD) 文档的 XML 流。 XML 序列化会生成强类型类，同时将公共属性和字段转换为序列格式（在此情况下为 XML），以便存储或传输。  
@@ -93,10 +93,10 @@ XML 序列化将对象的公共字段和属性或者方法的参数及返回值�
  添加 <xref:System.Xml.Serialization.XmlSchemaImporter> 类所使用的类型。  
   
 ## <a name="related-sections"></a>相关章节  
- [高级开发技术](http://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
+ [高级开发技术](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
  提供链接来指向关于 .NET Framework 中完善的开发任务和技术的更多信息。  
   
- [使用 ASP.NET 创建的 XML Web service 以及 XML Web Service 客户端](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [使用 ASP.NET 创建的 XML Web service 以及 XML Web Service 客户端](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  提供一些主题，描述并说明如何使用 ASP.NET 对 XML Web services 进行编程。  
   
 ## <a name="see-also"></a>请参阅  

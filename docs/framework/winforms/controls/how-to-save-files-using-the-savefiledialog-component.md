@@ -1,12 +1,13 @@
 ---
-title: "如何：使用 SaveFileDialog 组件保存文件"
-ms.custom: 
+title: 如何：使用 SaveFileDialog 组件保存文件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 70301cd3d357ab90ac6e7ed6d76a902107ef5e4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cace4dcd9aa5eb5d46579044905bbf2e5d755b66
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>如何：使用 SaveFileDialog 组件保存文件
 <xref:System.Windows.Forms.SaveFileDialog>组件，用户可以浏览文件系统并选择要保存文件。 对话框返回用户在对话框中所选的文件路径和名称。 但是必须编写代码才能真正地将文件写入磁盘。  
@@ -172,7 +174,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     （[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）将以下代码放在窗体构造函数中以注册事件处理程序。  
+     (Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  

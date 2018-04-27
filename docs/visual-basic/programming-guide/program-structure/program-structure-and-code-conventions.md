@@ -1,11 +1,12 @@
 ---
-title: "程序结构和代码约定 (Visual Basic)"
-ms.custom: 
+title: 程序结构和代码约定 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - coding conventions
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b38ba9623a20dcd1be4bc96f4aff1eb646b0a053
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 9980a815d83b21214f1be441d641c3da38c1b541
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>程序结构和代码约定 (Visual Basic)
-本部分介绍典型[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程序结构中，提供一个简单的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程序，"Hello，World"，并讨论了[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]代码约定。 代码约定是针对不是程序的逻辑，而是其物理结构和外观的建议值。 以下它们使得你的代码易于阅读、 理解和维护。 代码约定，可以包括的其他：  
+本部分介绍了典型的 Visual Basic 程序结构，提供一个简单的 Visual Basic 程序，"Hello，World"，并讨论了 Visual Basic 代码约定。 代码约定是针对不是程序的逻辑，而是其物理结构和外观的建议值。 以下它们使得你的代码易于阅读、 理解和维护。 代码约定，可以包括的其他：  
   
 -   标记和注释代码的标准化的格式。  
   
@@ -37,11 +38,11 @@ ms.lasthandoff: 10/22/2017
   
 -   对象、 变量和过程的命名约定。  
   
- 以下主题提供一套编程准则[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程序，以及好的用法的示例。  
+ 以下主题提供一系列编程原则对于 Visual Basic 的程序，以及好的用法的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Visual Basic 程序的结构](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- 提供的构成的元素概述[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程序。  
+ 概述构成 Visual Basic 程序的元素。  
   
  [Visual Basic 中的 main 过程](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
  讨论作为起始点和总体控制你的应用程序的过程。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/22/2017
  演示如何将划分为多行的长语句和合并在一个行上的短语句。  
   
  [如何：折叠和隐藏代码节](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)  
- 演示如何以折叠和隐藏中的代码段[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]代码编辑器。  
+ 演示如何折叠并隐藏 Visual Basic 中的代码段代码编辑器。  
   
  [如何：标记语句](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)  
  演示如何将标记的一行代码来确定它适用于使用与语句如`On Error Goto`。  
@@ -77,17 +78,17 @@ ms.lasthandoff: 10/22/2017
  讨论如何将描述性注释添加到你的代码。  
   
  [代码中用作元素名称的关键字](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
- 介绍如何使用方括号 (`[]`) 来分隔变量名也存在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]关键字。  
+ 介绍如何使用方括号 (`[]`) 来分隔也是 Visual Basic 关键字的变量名。  
   
  [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- 描述各种方式引用的元素[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程序。  
+ 描述各种方式引用的 Visual Basic 程序元素。  
   
  [Visual Basic 限制](../../../visual-basic/programming-guide/program-structure/limitations.md)  
- 讨论中的已知编码限制删除[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 讨论在 Visual Basic 中的已知编码限制删除。  
   
 ## <a name="related-sections"></a>相关章节  
  [版式和代码约定](../../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- 提供标准编码约定[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 适用于 Visual Basic，提供了标准编码约定。  
   
  [编写代码](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
  描述使你更轻松地编写和管理你的代码的功能。

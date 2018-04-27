@@ -16,11 +16,11 @@ ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7f5138d430e6737a4a8a47d4a800905dedff660
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: de52d95cfbc8135db1dc9434860f02b8992db0b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-messages-visual-basic"></a>错误消息 (Visual Basic)
 编写、编译或运行 Visual Basic 应用程序时，可能会生成以下类型的错误：  
@@ -34,7 +34,7 @@ ms.lasthandoff: 10/18/2017
  若要了解如何排查特定错误，请参阅[为 Visual Basic 程序员提供的附加资源](../../../visual-basic/getting-started/additional-resources.md)。  
   
 ## <a name="run-time-errors"></a>运行时错误  
- 如果 Visual Basic 应用程序试图执行系统无法执行的操作，则会生成运行时错误，并且 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会抛出 `Exception` 对象。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 可以使用 `Throw` 语句生成任何数据类型的自定义错误，包括 `Exception` 对象。 应用程序可以通过显示捕获到的异常的错误号和消息来识别错误。 如果未捕获到错误，应用程序会结束。  
+ 如果 Visual Basic 应用程序尝试执行系统无法执行的操作，将发生运行时错误，并且 Visual Basic 将引发`Exception`对象。 Visual Basic 可以生成自定义错误的任何数据类型，包括`Exception`对象，通过使用`Throw`语句。 应用程序可以通过显示捕获到的异常的错误号和消息来识别错误。 如果未捕获到错误，应用程序会结束。  
   
  代码可用于捕获和检查运行时错误。 如果将生成错误的代码封闭在 `Try` 代码块中，则可以在匹配的 `Catch` 代码块中捕获抛出的任何错误。 若要了解如何在运行时捕获错误并在代码中响应错误，请参阅 [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。  
   

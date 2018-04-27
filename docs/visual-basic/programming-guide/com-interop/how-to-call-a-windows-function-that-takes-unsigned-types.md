@@ -1,11 +1,12 @@
 ---
-title: "如何：调用采用无符号类型的 Windows 函数 (Visual Basic)"
-ms.custom: 
+title: 如何：调用采用无符号类型的 Windows 函数 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dd0738300ec846041e78f19836f29e7adff1c821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：调用采用无符号类型的 Windows 函数 (Visual Basic)
-如果你使用的类、 模块或结构，它具有无符号的整数类型的成员，则可以访问与这些成员[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+如果你使用的类、 模块或结构，它具有无符号的整数类型的成员，则可以访问使用 Visual Basic 这些成员。  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>若要调用采用无符号的类型的 Windows 函数  
   
-1.  使用[声明语句](../../../visual-basic/language-reference/statements/declare-statement.md)告诉[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]哪些库包含函数、 什么其名称是在库中，其调用的序列是什么，和如何将字符串转换调用它时。  
+1.  使用[声明语句](../../../visual-basic/language-reference/statements/declare-statement.md)，其中库包含函数、 什么其名称是在库中，其调用的序列是什么，和如何将字符串转换调用它时告诉 Visual Basic。  
   
 2.  在`Declare`语句，使用`UInteger`， `ULong`， `UShort`，或`Byte`为适合于与无符号类型的每个参数。  
   

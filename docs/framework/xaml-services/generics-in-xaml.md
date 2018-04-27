@@ -1,34 +1,34 @@
 ---
-title: "XAML 中的泛型"
-ms.custom: 
+title: XAML 中的泛型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c0e5bfb4f327028f09e8c898cf07e5fec9a5f789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e64224edcb49d5040332b7cef9649c98cf26798b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generics-in-xaml"></a>XAML 中的泛型
 .NET Framework XAML 服务在 System.Xaml 中实现提供对使用泛型的 CLR 类型的支持。 这种支持包括作为类型参数指定的泛型约束和通过调用适当强制约束`Add`泛型集合用例的方法。 本主题描述使用和引用 XAML 中的泛型类型的方面。  
   
 ## <a name="xtypearguments"></a>x: TypeArguments  
- `x:TypeArguments`由 XAML 语言定义的指令。 当使用作为泛型类型，由支持的 XAML 类型的成员`x:TypeArguments`约束类型的泛型后备构造函数的参数传递。 有关适用于.NET Framework XAML 服务的引用语法用法的`x:TypeArguments`，其中包括语法示例，请参阅[X:typearguments 指令](../../../docs/framework/xaml-services/x-typearguments-directive.md)。  
+ `x:TypeArguments` 由 XAML 语言定义的指令。 当使用作为泛型类型，由支持的 XAML 类型的成员`x:TypeArguments`约束类型的泛型后备构造函数的参数传递。 有关适用于.NET Framework XAML 服务的引用语法用法的`x:TypeArguments`，其中包括语法示例，请参阅[X:typearguments 指令](../../../docs/framework/xaml-services/x-typearguments-directive.md)。  
   
  因为`x:TypeArguments`接收一个字符串，并具有类型转换器支持，通常将其声明中作为特性的 XAML 用法。  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
  在 WPF 和目标确定[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你可以使用 XAML 2009 功能以及`x:TypeArguments`，但仅针对宽松 XAML (未标记编译的 XAML)。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
   
- 中的自定义工作流[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]为[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]不支持泛型 XAML 用法。  
+ 有关 Windows Workflow Foundation 中的自定义工作流[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]不支持泛型 XAML 用法。  
   
 ## <a name="see-also"></a>请参阅  
  [x:TypeArguments 指令](../../../docs/framework/xaml-services/x-typearguments-directive.md)  

@@ -15,19 +15,19 @@ ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegates-visual-basic"></a>委托 (Visual Basic)
-委托是引用方法的对象。 有时亦称为*类型安全函数指针*，因为它们与其他编程语言中使用的函数指针类似。 不过，与函数指针不同的是，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 委托是基于类 <xref:System.Delegate?displayProperty=nameWithType> 的引用类型。 委托既可以引用共享方法（无需特定类实例即可调用的方法），也可以引用实例方法。  
+委托是引用方法的对象。 有时亦称为*类型安全函数指针*，因为它们与其他编程语言中使用的函数指针类似。 但与函数指针不同 Visual Basic 委托是基于类的引用类型<xref:System.Delegate?displayProperty=nameWithType>。 委托既可以引用共享方法（无需特定类实例即可调用的方法），也可以引用实例方法。  
   
 ## <a name="delegates-and-events"></a>委托和事件  
- 在过程调用方和被调用的过程之间需要中介的情况下，委托非常有用。 例如，你希望引发事件的对象能够在不同的情况下调用不同的事件处理程序。 遗憾的是，引发事件的对象无法提前确定用于处理特定事件的事件处理程序。 借助 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，可以在使用 `AddHandler` 语句时创建委托，动态地将事件处理程序与事件相关联。 在运行时，委托会将调用转接到相应的事件处理程序。  
+ 在过程调用方和被调用的过程之间需要中介的情况下，委托非常有用。 例如，你希望引发事件的对象能够在不同的情况下调用不同的事件处理程序。 遗憾的是，引发事件的对象无法提前确定用于处理特定事件的事件处理程序。 Visual Basic 可以动态相关联的事件处理程序与事件通过创建你的委托，当你使用`AddHandler`语句。 在运行时，委托会将调用转接到相应的事件处理程序。  
   
- 虽然可以创建你自己的委托，但在大多数情况下，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会创建委托并为你保管详细信息。 例如，`Event` 语句将 `<EventName>EventHandler` 委托类隐式定义为包含 `Event` 语句的类的嵌套类，并且具有与事件相同的签名。 `AddressOf` 语句隐式创建引用特定过程的委托的实例。 下面两行代码是等同的。 第一行代码显式创建 `Eventhandler` 的实例，将对方法 `Button1_Click` 的引用作为自变量发送。 第二行代码是执行相同操作的更简便方式。  
+ 虽然你可以在大多数情况下，Visual Basic 创建委托并负责的详细信息为你创建自己的委托。 例如，`Event` 语句将 `<EventName>EventHandler` 委托类隐式定义为包含 `Event` 语句的类的嵌套类，并且具有与事件相同的签名。 `AddressOf` 语句隐式创建引用特定过程的委托的实例。 下面两行代码是等同的。 第一行代码显式创建 `Eventhandler` 的实例，将对方法 `Button1_Click` 的引用作为自变量发送。 第二行代码是执行相同操作的更简便方式。  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   

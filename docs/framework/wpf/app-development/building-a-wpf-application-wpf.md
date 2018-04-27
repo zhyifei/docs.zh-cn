@@ -1,13 +1,13 @@
 ---
-title: "生成 WPF 应用程序 (WPF)"
-ms.custom: 
+title: 生成 WPF 应用程序 (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-caps.latest.revision: 
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序可以以 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可执行文件 (.exe)、库 (.dll) 或这两类程序集相结合的形式来生成。 本主题将介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并对生成过程中的各个关键步骤进行说明。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  创建 CodeDOM 型新分部类并将其复制到 obj\Release 文件夹。  
   
- 另外，还会针对每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件生成特定于语言的代码文件。 例如，对于 [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 项目中的 Page1.xaml 页面，会生成 Page1.g.vb；对于 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 项目中的 Page1.xaml 页面，会生成 Page1.g.cs。 文件名中的“.g”表明文件包含的是生成的代码，这些代码针对标记文件的顶级元素（如 `Page` 或 `Window`）进行了分部类声明。 在 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 中，该类使用 `partial` 修饰符来声明（在 [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 中则使用 `Extends`），以表明该类在其他位置（通常是在代码隐藏文件 page1.xaml.cs 中）还存在另一声明。  
+ 另外，还会针对每一个 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件生成特定于语言的代码文件。 例如，对于 Visual Basic 项目中的 Page1.xaml 页，Page1.g.vb 都会生成;对于 C# 项目中的 Page1.xaml 页中，将生成 Page1.g.cs。 文件名中的“.g”表明文件包含的是生成的代码，这些代码针对标记文件的顶级元素（如 `Page` 或 `Window`）进行了分部类声明。 类的声明与`partial`修饰符在 C# (`Extends`在 Visual Basic 中) 以指示没有为类在其他位置的另一个声明，通常在代码隐藏文件 page1.xaml.cs。  
   
  分部类扩展从适当的基类 (如<xref:System.Windows.Controls.Page>页) 并实现<xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType>接口。 <xref:System.Windows.Markup.IComponentConnector>接口具有初始化组件和连接名称和其内容中的元素上的事件的方法。 因此，生成的代码文件中都包含如下所示的方法实现：  
   
@@ -137,7 +137,7 @@ End Sub
   
  对于 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，始终会创建这些清单文件。 对于已安装的应用程序，这些文件不会创建，除非在项目文件中为 `GenerateManifests` 属性指定值 `true`。  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]获取这些权限分配给典型 Internet 区域的应用程序遇到两个其他权限：<xref:System.Security.Permissions.WebBrowserPermission>和<xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统会在应用程序清单中声明这些权限。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 获取这些权限分配给典型 Internet 区域的应用程序遇到两个其他权限：<xref:System.Security.Permissions.WebBrowserPermission>和<xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 生成系统会在应用程序清单中声明这些权限。  
   
 <a name="Incremental_Build_Support"></a>   
 ## <a name="incremental-build-support"></a>增量生成支持  

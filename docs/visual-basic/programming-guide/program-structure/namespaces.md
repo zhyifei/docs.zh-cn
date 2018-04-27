@@ -26,11 +26,11 @@ ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18d0a9abb1d8b9e3e22f3b81bf605fb8ed75cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0ec038a17b4a6b10dbe339fe33969c4ade57e2a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空间
 命名空间组织程序集中定义的对象。 程序集可以包含多个命名空间，命名空间又可以包含其他命名空间。 使用大组对象（比如类库）时，命名空间可以避免多义性和简化引用。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="avoiding-name-collisions"></a>避免名称冲突  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 命名空间解决有时被称为 *命名空间污染*的问题，即类库开发人员会受到另一个库中使用的相似名称的妨碍。 这些冲突及其现有组件有时被称为 *名称冲突*。  
   
- 例如，如果创建一个名为 `ListBox`的新类，你可以在项目中不加限定地使用它。 但是，如果你想要使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Windows.Forms.ListBox>类在同一项目中，你必须使用完全限定的引用以使引用唯一。 如果引用不唯一， [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会产生一个错误，指出名称不明确。 下面的代码示例演示如何声明这些对象：  
+ 例如，如果创建一个名为 `ListBox`的新类，你可以在项目中不加限定地使用它。 但是，如果你想要使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Windows.Forms.ListBox>类在同一项目中，你必须使用完全限定的引用以使引用唯一。 如果引用不是唯一的 Visual Basic 会生成一个错误，指出的名称不明确。 下面的代码示例演示如何声明这些对象：  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 11/21/2017
   
  ![Namespace 层次结构](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- 默认情况下，使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 创建的所有可执行文件都包含与项目具有相同名称的命名空间。 例如，如果在一个名为 `ListBoxProject`的项目中定义对象，则可执行文件 ListBoxProject.exe 包含一个名为 `ListBoxProject`的命名空间。  
+ 默认情况下，使用 Visual Basic 创建的每个可执行文件包含具有与你的项目相同的名称的命名空间。 例如，如果在一个名为 `ListBoxProject`的项目中定义对象，则可执行文件 ListBoxProject.exe 包含一个名为 `ListBoxProject`的命名空间。  
   
- 多个程序集可以使用相同的命名空间。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会将它们视为多个名称的单个组。 例如，你可以为名为 `SomeNameSpace` 的程序集中名为 `Assemb1`的命名空间定义多个类，并为名为 `Assemb2`的程序集中相同的命名空间定义其他类。  
+ 多个程序集可以使用相同的命名空间。 Visual Basic 会将它们视为单个组名称。 例如，你可以为名为 `SomeNameSpace` 的程序集中名为 `Assemb1`的命名空间定义多个类，并为名为 `Assemb2`的程序集中相同的命名空间定义其他类。  
   
 ## <a name="fully-qualified-names"></a>完全限定名  
  完全限定名是以在其中定义对象的命名空间的名称为前缀的对象引用。 如果创建对类的引用（通过选择“项目”  菜单中的“添加引用”  ），然后为代码中的对象使用完全限定名，则可以使用在其他项目中定义的对象。 以下代码段演示如何为来自另一个项目命名空间的对象使用完全限定名：  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- 如果尝试使用 `Class1` 而不对其完全限定，则 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会产生错误消息，指出名称 `Class1` 不明确。  
+ 如果你尝试使用`Class1`无需使用完全限定它，Visual Basic 产生错误消息，指出名称`Class1`不明确。  
   
 ## <a name="namespace-level-statements"></a>命名空间级别语句  
  在命名空间中，可以定义项，如模块、接口、类、委托、枚举、结构和其他命名空间。 无法在命名空间级别定义属性、过程、变量和事件等项。 这些项必须在模块、结构或类等容器内部进行声明。  
@@ -128,7 +128,7 @@ End Namespace
   
  [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_8.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
  [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  

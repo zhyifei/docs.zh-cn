@@ -1,34 +1,36 @@
 ---
-title: "演练：使用 Microsoft Expression Blend 创建按钮"
-ms.custom: 
+title: 演练：使用 Microsoft Expression Blend 创建按钮
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e029537466e836cfc103bad64d4102652162c465
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>演练：使用 Microsoft Expression Blend 创建按钮
 本演练将引导你完成创建过程[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用 Microsoft Expression Blend 的自定义的按钮。  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend 的工作原理是生成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]然后编译以使可执行程序。 如果你想使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]直接，没有创建一个使用此条件的应用程序的另一个演练[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]与[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]而不是 Blend。 请参阅[创建使用 xaml 按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)有关详细信息。  
+>  Microsoft Expression Blend 的工作原理是生成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]然后编译以使可执行程序。 如果你想使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]直接，没有创建一个使用此条件的应用程序的另一个演练[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]使用 Visual Studio 而不是 Blend。 请参阅[创建使用 xaml 按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)有关详细信息。  
   
  下图显示的自定义的按钮，你将要创建。  
   
@@ -107,22 +109,22 @@ ms.lasthandoff: 12/22/2017
   
      ![如何创建另一个矩形内的矩形](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")  
   
-5.  **移动到顶部 ContentPresenter:**此时，很可能文本"Button"不不再可见。 如果该条件，否则这是因为**innerRectangle**之上**myContentPresenter**。 若要解决此问题，拖动**myContentPresenter**下面**innerRectangle**。 重新定位矩形和**myContentPresenter**看起来类似如下。  
+5.  **移动到顶部 ContentPresenter:** 此时，很可能文本"Button"不不再可见。 如果该条件，否则这是因为**innerRectangle**之上**myContentPresenter**。 若要解决此问题，拖动**myContentPresenter**下面**innerRectangle**。 重新定位矩形和**myContentPresenter**看起来类似如下。  
   
     > [!NOTE]
     >  或者，您可以定位**myContentPresenter**通过右键单击它并按顶部**转发发送**。  
   
      ![如何将一个按钮移基于另一个按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")  
   
-6.  **更改查找范围的 innerRectangle:**设置<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>， <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>，和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>值为 20。 此外，设置<xref:System.Windows.Shapes.Shape.Fill%2A>为使用自定义表达式"{TemplateBinding 后台}"的模板的背景) 并设置<xref:System.Windows.Shapes.Shape.Stroke%2A>"透明"。 请注意，设置<xref:System.Windows.Shapes.Shape.Fill%2A>和<xref:System.Windows.Shapes.Shape.Stroke%2A>的**innerRectangle**是那些用于相反**outerRectangle**。  
+6.  **更改查找范围的 innerRectangle:** 设置<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>， <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>，和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>值为 20。 此外，设置<xref:System.Windows.Shapes.Shape.Fill%2A>为使用自定义表达式"{TemplateBinding 后台}"的模板的背景) 并设置<xref:System.Windows.Shapes.Shape.Stroke%2A>"透明"。 请注意，设置<xref:System.Windows.Shapes.Shape.Fill%2A>和<xref:System.Windows.Shapes.Shape.Stroke%2A>的**innerRectangle**是那些用于相反**outerRectangle**。  
   
      ![如何更改矩形的外观](../../../../docs/framework/wpf/controls/media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")  
   
 7.  **在最前面添加玻璃层：**自定义按钮的外观的最后一个部分是在最前面添加玻璃层。 此玻璃层包含，第三个矩形。 因为玻璃将覆盖了整个按钮，玻璃矩形中是类似的维度**outerRectangle**。 因此，只需制作的副本创建矩形**outerRectangle**。 突出显示**outerRectangle**并使用 CTRL + C 和 CTRL + V 复制。 命名此新添加的矩形"glassCube"。  
   
-8.  **如有必要重新定位 glassCube:**如果**glassCube**是尚未定位，以便它涵盖了整个按钮，将它拖到位置。  
+8.  **如有必要重新定位 glassCube:** 如果**glassCube**是尚未定位，以便它涵盖了整个按钮，将它拖到位置。  
   
-9. **提供与 outerRectangle 略有不同的形状的 glassCube:**更改的属性**glassCube**。 首先通过更改<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>到 10 的属性和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>为 2。  
+9. **提供与 outerRectangle 略有不同的形状的 glassCube:** 更改的属性**glassCube**。 首先通过更改<xref:System.Windows.Shapes.Rectangle.RadiusX%2A>和<xref:System.Windows.Shapes.Rectangle.RadiusY%2A>到 10 的属性和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>为 2。  
   
      ![GlassCube 的外观设置](../../../../docs/framework/wpf/controls/media/custom-button-blend-glasscubeappearance.gif "custom_button_blend_GlassCubeAppearance")  
   
@@ -153,9 +155,9 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-set-property-triggers"></a>若要设置属性触发器  
   
-1.  **创建新的属性触发器：**与**glassCube**处于选中状态，单击**+ 属性**中**触发器**面板 （请参阅，如下图所下一步）。 这将创建一个默认属性触发器属性触发器。  
+1.  **创建新的属性触发器：**与**glassCube**处于选中状态，单击 **+ 属性**中**触发器**面板 （请参阅，如下图所下一步）。 这将创建一个默认属性触发器属性触发器。  
   
-2.  **请使用触发器的属性的 IsMouseOver:**更改将属性设为<xref:System.Windows.UIElement.IsMouseOver%2A>。 这使得属性触发器激活时<xref:System.Windows.UIElement.IsMouseOver%2A>属性是`true`（当用户指向使用鼠标按钮）。  
+2.  **请使用触发器的属性的 IsMouseOver:** 更改将属性设为<xref:System.Windows.UIElement.IsMouseOver%2A>。 这使得属性触发器激活时<xref:System.Windows.UIElement.IsMouseOver%2A>属性是`true`（当用户指向使用鼠标按钮）。  
   
      ![如何在属性上设置触发器](../../../../docs/framework/wpf/controls/media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")  
   
@@ -211,7 +213,7 @@ ms.lasthandoff: 12/22/2017
   
      ![如何创建关键帧](../../../../docs/framework/wpf/controls/media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")  
   
-4.  **收缩此关键帧处 glassCube:**与所选第二个关键帧的情况下，压缩的大小**glassCube**为使用其完整大小的 90%**大小转换**。  
+4.  **收缩此关键帧处 glassCube:** 与所选第二个关键帧的情况下，压缩的大小**glassCube**为使用其完整大小的 90%**大小转换**。  
   
      ![如何缩小按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")  
   

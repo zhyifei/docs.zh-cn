@@ -1,30 +1,30 @@
 ---
-title: "虚成员"
-ms.custom: 
+title: 虚成员
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 692a5803ddb538de6dc5f061c18cc0b250d0f4ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1b7abe1dbeb7f4888dd8ee4001b410cc583935c4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="virtual-members"></a>虚成员
 虚拟成员可以被重写，因此更改行为的子类。 它们是非常类似于在它们提供的可扩展性方面的回调，但它们可以在执行性能和内存消耗方面获得更好。 此外，虚拟成员感觉需要创建一个特殊类型的现有类型 （专用） 的方案中更自然。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/23/2017
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  

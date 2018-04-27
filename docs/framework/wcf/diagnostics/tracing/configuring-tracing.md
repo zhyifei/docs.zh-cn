@@ -1,28 +1,28 @@
 ---
-title: "配置跟踪"
-ms.custom: 
+title: 配置跟踪
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 > [!NOTE]
->  若要编辑的配置文件[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]中的服务项目[!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)]，右键单击应用程序的配置文件-对于 Web 承载的应用程序，则为 Appname.exe.config 在中的自承载应用程序，为 Web.config **解决方案资源管理器**。 然后选择**编辑 WCF 配置**上下文菜单项。 这将启动[配置编辑器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，从而使你可以修改配置设置[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务使用图形用户界面。  
+>  若要编辑的配置文件[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务 Visual Studio 中的项目，请右键单击应用程序的配置文件-对于 Web 承载的应用程序，则为 Appname.exe.config 在中的自承载应用程序，为 Web.config **解决方案资源管理器**。 然后选择**编辑 WCF 配置**上下文菜单项。 这将启动[配置编辑器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，从而使你可以修改配置设置[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服务使用图形用户界面。  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>配置要发出跟踪的跟踪源  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 为每个程序集定义一个跟踪源。 在程序集中生成的跟踪由为该跟踪源定义的侦听器访问。 定义下列跟踪源：  
@@ -146,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]创建用户定义跟踪源，请参阅[扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 创建用户定义跟踪源，请参阅[扩展跟踪](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>配置要使用跟踪的跟踪侦听器  
  在运行时，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 向处理数据的侦听器馈送跟踪数据。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 为 <xref:System.Diagnostics> 提供多个预定义的侦听器，这些侦听器用于输出的格式有所不同。 您也可以添加自定义侦听器类型。  
@@ -155,7 +155,7 @@ ms.lasthandoff: 12/22/2017
   
  可以将自定义跟踪侦听器配置为在网络上发送跟踪，例如，发送到远程数据库。 作为应用程序部署人员，您应对远程计算机上的跟踪日志施加适当的访问控制。  
   
- 您也可以通过编程方式配置跟踪侦听器。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][如何： 创建和初始化跟踪侦听器](http://go.microsoft.com/fwlink/?LinkId=94648)和[创建自定义 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)。  
+ 您也可以通过编程方式配置跟踪侦听器。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [如何： 创建和初始化跟踪侦听器](http://go.microsoft.com/fwlink/?LinkId=94648)和[创建自定义 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)。  
   
 > [!CAUTION]
 >  由于 `System.Diagnostics.XmlWriterTraceListener` 不是线程安全的，因此，跟踪源可能会在输出跟踪时以独占方式锁定资源。 当多个线程输出对配置为使用此侦听器的跟踪源的跟踪时，可能会出现资源争用，这会致使重大的性能问题。 若要解决此问题，应实现一个线程安全的自定义侦听器。  
@@ -187,7 +187,7 @@ ms.lasthandoff: 12/22/2017
   
  `propagateActivity` 属性指示是否应将活动传播到参与消息交换的其他终结点。 将此值设置为 `true` 后，可以获取由任意两个终结点生成的跟踪文件，然后观察某一终结点上的一组跟踪是如何流向另一终结点上的一组跟踪的。  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]活动跟踪和传播，请参阅[传播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 活动跟踪和传播，请参阅[传播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
   
  同时`propagateActivity`和`ActivityTracing`布尔值均适用于 System.ServiceModel TraceSource。 `ActivityTracing`值也适用于任何跟踪源，包括[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]或用户定义的。  
   

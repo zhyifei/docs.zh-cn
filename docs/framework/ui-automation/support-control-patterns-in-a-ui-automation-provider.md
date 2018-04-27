@@ -1,12 +1,13 @@
 ---
-title: "在 UI 自动化提供程序中支持控件模式"
-ms.custom: 
+title: 在 UI 自动化提供程序中支持控件模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9e85aa2fe36ad6fab59ae071a662755219ccbbb8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c66df9103b1edb43490a7e1a6a9d1a3cc87bfc28
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>在 UI 自动化提供程序中支持控件模式
 > [!NOTE]
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  为元素应支持的控件模式实现相应的接口，例如为 为 <xref:System.Windows.Automation.Provider.IInvokeProvider> 实现 <xref:System.Windows.Automation.InvokePattern>。  
   
-2.  返回包含的每个控件接口的实现中实现的对象<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
+2.  返回包含的每个控件接口的实现中实现的对象 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
   
 ## <a name="example"></a>示例  
  下面的示例演示了对单项选择自定义列表框实现 <xref:System.Windows.Automation.Provider.ISelectionProvider> 。 它返回三个属性并获取当前所选的项。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[UIAFragmentProvider_snip#119](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListPattern.vb#119)]  
   
 ## <a name="example"></a>示例  
- 下面的示例演示了返回实现 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> 的类的 <xref:System.Windows.Automation.Provider.ISelectionProvider>的实现。 大多数列表框控件还支持其他模式，但在本示例中对所有其他模式标识符返回了 null 引用（`Nothing` 中的 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]）。  
+ 下面的示例演示了返回实现 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A> 的类的 <xref:System.Windows.Automation.Provider.ISelectionProvider>的实现。 大多数列表框控件还支持其他模式，但在此示例中的 null 引用 (`Nothing`在 Microsoft Visual Basic.NET) 对所有其他模式标识符返回。  
   
  [!code-csharp[UIAFragmentProvider_snip#120](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#120)]
  [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]  

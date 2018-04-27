@@ -1,11 +1,12 @@
 ---
-title: "重载过程注意事项 (Visual Basic)"
-ms.custom: 
+title: 重载过程注意事项 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>重载过程注意事项 (Visual Basic)
 重载过程，你必须使用不同*签名*为每个重载版本。 这通常意味着每个版本，必须指定不同的参数列表。 有关详细信息，请参阅"不同的签名"[过程重载](./procedure-overloading.md)。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="alternatives-to-overloaded-versions"></a>重载版本的替代方法  
  特别是可选的自变量存在或其数量是变量时，有时需要重载版本的替代方法。  
   
- 请记住，可选自变量不一定支持的所有语言，以及参数数组仅限于[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 如果你正在编写一个可从任何几种语言编写的代码调用的过程，那么重载版本提供最大的灵活性。  
+ 请记住，所有语言，不一定支持可选自变量和参数数组限制为 Visual Basic。 如果你正在编写一个可从任何几种语言编写的代码调用的过程，那么重载版本提供最大的灵活性。  
   
 ### <a name="overloads-and-optional-arguments"></a>重载和可选自变量  
  当调用的代码 （可选） 可以提供，或者忽略一个或多个自变量时，可以定义多个重载的版本，或使用可选参数。  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>隐式重载 ParamArray 参数  
  编译器将使用的过程视为[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数具有无限数目的重载，不同于彼此中什么调用代码将传递给参数数组，如下所示：  
   
--   当调用的代码不会提供的自变量的一个重载`ParamArray`  
+-   当调用的代码不会提供的自变量的一个重载 `ParamArray`  
   
 -   当调用的代码提供的一维数组的一个重载`ParamArray`元素类型  
   
@@ -129,7 +130,7 @@ ms.lasthandoff: 11/21/2017
   
 -   如果调用代码传递过程不支持的数据类型，编译器无法发出错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [过程疑难解答](./troubleshooting-procedures.md)  

@@ -1,12 +1,13 @@
 ---
-title: "演练：使用 Visual C# 从 Windows 窗体控件继承"
-ms.custom: 
+title: 演练：使用 Visual C# 从 Windows 窗体控件继承
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adc8e4321dccea34b7d3132b2052ee9baa98a868
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdf472776fc293bc5dfa1db940d23c6a297767e7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>演练：使用 Visual C# 从 Windows 窗体控件继承 #
 使用 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] 可通过继承来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体继承功能<xref:System.Windows.Forms.Button>控制，并将公开一个名为的自定义属性`ButtonValue`。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  在“文件”菜单上指向“新建”，然后单击“项目”打开“新建项目”对话框。  
   
-2.  在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 项目列表中，选择“Windows 窗体控件库”项目模板，然后在“名称”框中键入 `ValueButtonLib`。  
+2.  选择**Windows 窗体控件库**Visual C# 项目，然后键入列表中的项目模板`ValueButtonLib`中**名称**框。  
   
      默认情况下，项目名称 `ValueButtonLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ValueButton` 的组件，则可以使用 `ValueButtonLib.ValueButton` 指定 `ValueButton` 组件。 有关详细信息，请参阅[命名空间](../../../csharp/programming-guide/namespaces/index.md)。  
   

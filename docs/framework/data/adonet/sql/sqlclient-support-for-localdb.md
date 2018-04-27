@@ -1,30 +1,32 @@
 ---
-title: "SqlClient 对 LocalDB 的支持"
-ms.custom: 
+title: SqlClient 对 LocalDB 的支持
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3d643ac386aebf51673f937b3f47e73c749b78f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e2564e49a90a1c8fd9fe2cc000ebf648cf90b4e7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient 对 LocalDB 的支持
-从 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] （代号 Denali）开始，提供轻量版本 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]（称为 LocalDB）。 本主题讨论如何连接到 LocalDB 数据库。  
+从 SQL Server 代码名 Denali 开始，SQL Server，称为 LocalDB 的轻量版本将可用。 本主题讨论如何连接到 LocalDB 数据库。  
   
 ## <a name="remarks"></a>备注  
- 有关 LocalDB 的更多信息（包括如何安装 LocalDB 和配置 LocalDB 实例），请参见 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书。  
+ 有关 LocalDB 的详细信息，包括如何安装 LocalDB 和配置 LocalDB 实例，请参阅 SQL Server 联机丛书。  
   
  以下汇总了使用 LocalDB 可以执行的操作：  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
  连接到 LocalDB 数据库时，不允许`User Instance=True` 。  
   
- 可以从 [Microsoft SQL Server 2012 功能包](http://www.microsoft.com/download/en/details.aspx?id=29065)下载 LocalDB。 如果将使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，将需要 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 中的 sqlcmd，也可以从 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 功能包中获得它。  
+ 可以从 [Microsoft SQL Server 2012 功能包](http://www.microsoft.com/download/en/details.aspx?id=29065)下载 LocalDB。 如果将使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，你将需要 SQL Server 2012，你还可以从 SQL Server 2012 功能包中的 sqlcmd。  
   
 ## <a name="programmatically-create-a-named-instance"></a>以编程方式创建命名实例  
  应用程序可以创建命名实例并指定数据库，如下所示：  

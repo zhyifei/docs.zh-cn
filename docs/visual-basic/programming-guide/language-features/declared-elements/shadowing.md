@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 中的隐藏"
-ms.custom: 
+title: Visual Basic 中的隐藏
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbfce3edc122ca875552b2d41ba876fe5cfcfc4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 489e1786b08085f229f66b2dbc434b96b06d86df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的隐藏
-当两个编程元素共享相同的名称时，可以隐藏其中一个，或*卷影*，另一个。 在这种情况下，隐藏的元素也无法供引用;相反，当你的代码使用的元素名称，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器将其解析为隐藏的元素。  
+当两个编程元素共享相同的名称时，可以隐藏其中一个，或*卷影*，另一个。 在这种情况下，隐藏的元素也无法供引用;相反，当你的代码使用的元素名称时，Visual Basic 编译器将其解析为隐藏的元素。  
   
-## <a name="purpose"></a>用途  
+## <a name="purpose"></a>目标  
  隐藏的主要目的是保护类成员的定义。 基类可能会经历创建具有与一个已定义同名的元素的更改。 如果发生这种情况，`Shadows`修饰符强制就会通过引用您的类将解析为成员你定义，而不是到新的基类元素。  
   
 ## <a name="types-of-shadowing"></a>隐藏类型  
@@ -147,7 +148,7 @@ End Class
   
  在前面的示例中，变量`basObj`声明为类的基类。 分配`dervCls`构成一个的扩大转换，因此有效到它的对象。 但是，基类不能访问该变量的隐藏版本`z`在派生类中，因此编译器将解析`basObj.z`到原始的基类值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [在 Visual Basic 中的作用域](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
  [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  

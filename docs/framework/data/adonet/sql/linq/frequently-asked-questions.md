@@ -1,27 +1,29 @@
 ---
-title: "常见问题"
-ms.custom: 
+title: 常见问题
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e09dd7cb3fc979a9be0165705247cc5a63a6b328
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: caccbb76f32c38f29fa4f49adc9b7b1c8fe4045d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="cannot-connect"></a>无法连接  
  问： 我无法连接到数据库。  
   
- 答： 请确保您的连接字符串是正确的，以及您的 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 实例正在运行。 另请注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 要求启用命名管道协议。 有关详细信息，请参阅[通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
+ 答： 请确保你的连接字符串正确，以及您的 SQL Server 实例正在运行。 另请注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 要求启用命名管道协议。 有关详细信息，请参阅[通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
   
 ## <a name="changes-to-database-lost"></a>对数据库的更改丢失  
  问： 我对数据库中的数据进行了更改，但是在重新运行应用程序时更改已丢失。  
@@ -155,7 +157,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>提供程序模型  
  问： 是否有公共提供程序模型可用？  
   
- 答： 没有任何公共提供程序模型可用。 目前，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 仅支持 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]。  
+ 答： 没有任何公共提供程序模型可用。 在此期间，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持 SQL Server 和[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]仅。  
   
 ## <a name="sql-injection-attacks"></a>SQL 注入式攻击  
  问： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何防范 SQL 注入式攻击？  
@@ -174,7 +176,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  检查默认的 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) 以确定该值对于您的应用程序是否正确。  
   
     > [!CAUTION]
-    >  如果使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 中的[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，则可能会覆盖您的更改。  
+    >  如果你使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，所做的更改可能会被覆盖。  
   
 ## <a name="aptca"></a>APTCA  
  问： System.Data.Linq 是否标记为供部分受信任的代码使用？  
@@ -196,7 +198,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 请不要试图重用 <xref:System.Data.Linq.DataContext> 的实例。 每个 <xref:System.Data.Linq.DataContext> 都会保持对应一个特定编辑/查询会话的状态（包括标识缓存）。 若要获取基于数据库当前状态的新实例，请使用新的 <xref:System.Data.Linq.DataContext>。  
   
- 仍然可以使用基础 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 连接池。 有关详细信息，请参阅[SQL Server 连接池 (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 仍然可以使用基础 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 连接池。 有关详细信息，请参阅 [SQL Server 连接池 (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ## <a name="second-datacontext-is-not-updated"></a>第二个 DataContext 未更新  
  问： 我使用 <xref:System.Data.Linq.DataContext> 的一个实例存储数据库中的值。 但是，相同数据库上的另一个 <xref:System.Data.Linq.DataContext> 未反映更新的值。 第二个 <xref:System.Data.Linq.DataContext> 实例似乎返回缓存的值。  

@@ -1,42 +1,44 @@
 ---
-title: "演练：创建自定义的动画按钮"
-ms.custom: 
+title: 演练：创建自定义的动画按钮
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom animated buttons [WPF]
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ece907b23772504990ef334f446d7b6072f5d44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 349a9627c20de24a17c533bb9b2fd5f6d1735c70
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>演练：创建自定义的动画按钮
 顾名思义，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]的丰富的表示体验使客户非常有利。 这些演练演示了如何自定义的外观和行为 （包括动画） 的按钮。 此自定义完成，以便你可以应用此自定义按钮轻松于任何按钮在你的应用程序中使用的样式和模板。 下图显示的自定义的按钮，你将要创建。  
   
  ![你将创建的自定义的按钮](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
   
- 通过使用创建构成该按钮的外观的向量图形[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]它是更功能强大且可扩展除外，则是类似于 HTML。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]可以键入中手动使用 Microsoft Visual Studio 或记事本，或者可以使用 Microsoft Expression Blend 等 visual 设计工具。 Expression Blend 工作方式是创建基础[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码，因此这两种方法创建相同的图形。  
+ 通过使用创建构成该按钮的外观的向量图形[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 它是更功能强大且可扩展除外，则是类似于 HTML。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 可以键入中手动使用 Microsoft Visual Studio 或记事本，或者可以使用 Microsoft Expression Blend 等 visual 设计工具。 Expression Blend 工作方式是创建基础[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码，因此这两种方法创建相同的图形。  
   
 ## <a name="in-this-section"></a>本节内容  
  [使用 Microsoft Expression Blend 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
  演示如何通过使用设计器功能的 Expression Blend 创建具有自定义行为的按钮。  
   
  [使用 XAML 创建按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- 演示如何创建按钮与自定义行为通过使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。  
+ 演示如何创建按钮与自定义行为通过使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和 Visual Studio。  
   
 ## <a name="related-sections"></a>相关章节  
  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  

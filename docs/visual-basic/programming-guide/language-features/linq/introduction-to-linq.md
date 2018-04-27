@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 中的 LINQ 简介"
-ms.custom: 
+title: Visual Basic 中的 LINQ 简介
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], about LINQ in Visual Basic queries
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bb55aecc1faafd812da212565a7a858c714e933
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 1f41252d6f28c7b2ffb459b3374833fde56393f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 简介
-语言集成查询 (LINQ) 向 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 添加了查询功能，能够为处理各种数据提供简单而强大的功能。 LINQ 不将查询发送到数据库来处理，也不对搜索的每种类型的数据使用不同的查询语法，而是将查询作为 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言的一部分引入。 它使用统一语法，而不考虑数据的类型。  
+语言集成查询 (LINQ) 将查询功能添加到 Visual Basic，并提供简单且功能强大的功能，当您使用所有类型的数据时。 而不是将查询发送到数据库来处理，或者具有不同的查询语法的每种要搜索的数据类型，LINQ 的 Visual Basic 语言一部分引入查询。 它使用统一语法，而不考虑数据的类型。  
   
- LINQ，可以查询数据从 SQL Server 数据库、 XML、 内存中数组和集合，[!INCLUDE[vstecado](~/includes/vstecado-md.md)]该支持 LINQ 的数据集或任何其他远程或本地数据源。 使用通用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言元素即可完成以上所有查询。 因为查询是用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言编写的，所以查询结果返回为强类型化对象。 这些对象支持 IntelliSense，这使你能够更快地编写代码，并在编译时（而不是在运行时）捕获查询中的错误。 可将 LINQ 查询用作其他查询的源，以便缩小结果的范围。 还可将它们绑定到控件，使用户能够轻松地查看和修改查询结果。  
+ LINQ，可以查询数据从 SQL Server 数据库、 XML、 内存中数组和集合，[!INCLUDE[vstecado](~/includes/vstecado-md.md)]该支持 LINQ 的数据集或任何其他远程或本地数据源。 你可以执行所有这些常见的 Visual Basic 语言元素。 因为您的查询用 Visual Basic 语言编写的将查询结果返回为强类型对象。 这些对象支持 IntelliSense，这使你能够更快地编写代码，并在编译时（而不是在运行时）捕获查询中的错误。 可将 LINQ 查询用作其他查询的源，以便缩小结果的范围。 还可将它们绑定到控件，使用户能够轻松地查看和修改查询结果。  
   
  例如，下面的代码示例显示一个 LINQ 查询，它从集合返回一个客户列表并根据位置对其进行分组。  
   
@@ -58,27 +59,27 @@ ms.lasthandoff: 12/21/2017
   
 -   [How To 和演练主题](#HowToAndWalkthroughTopics)  
   
-##  <a name="RunningtheExamples"></a>运行示例  
+##  <a name="RunningtheExamples"></a> 运行示例  
  若要运行简介中和“LINQ 查询的结构”部分中的示例，请包含以下代码，它将返回客户和订单的列表。  
   
  [!code-vb[VbVbalrIntroToLINQ#31](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
   
-##  <a name="LINQProviders"></a>LINQ 提供程序  
- A *LINQ 提供程序*映射你[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]到所查询的数据源的 LINQ 查询。 编写 LINQ 查询时，该提供程序将接受该查询，并将其转换为数据源能够执行的命令。 该提供程序还将来自源的数据转换为构成查询结果的对象。 最后，当你将更新发送至数据源时，它又将这些对象转换为数据。  
+##  <a name="LINQProviders"></a> LINQ 提供程序  
+ A *LINQ 提供程序*将你的 Visual Basic LINQ 查询映射到所查询的数据源。 编写 LINQ 查询时，该提供程序将接受该查询，并将其转换为数据源能够执行的命令。 该提供程序还将来自源的数据转换为构成查询结果的对象。 最后，当你将更新发送至数据源时，它又将这些对象转换为数据。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 包括以下 LINQ 提供程序。  
+ Visual Basic 包括以下 LINQ 提供程序。  
   
 |提供程序|描述|  
 |---|---|  
-|LINQ to Objects|通过 LINQ to Objects 提供程序，可以查询内存中集合和数组。 如果对象支持 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 接口，则可以通过 LINQ to Objects 提供程序对其进行查询。<br /><br /> 可以通过导入 <xref:System.Linq> 命名空间来启用 LINQ to Objects 提供程序，默认情况下，将为所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 项目导入此命名空间。<br /><br /> 有关 LINQ to Objects 提供程序的详细信息，请参阅[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)。|  
-|LINQ to SQL|通过 LINQ to SQL 提供程序，可以查询和修改 SQL Server 数据库中的数据。 这样就可以轻松将应用程序的对象模型映射到数据库中的表和对象。<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 通过包括对象关系设计器（O/R 设计器）使其能更轻松地使用 LINQ to SQL。 此设计器用于在应用程序中创建映射到数据库中的对象的对象模型。 O/R 设计器还提供功能来映射存储的过程和函数<xref:System.Data.Linq.DataContext>对象，该管理与数据库的通信和存储进行开放式并发检查的状态对象。<br /><br /> 有关 LINQ to SQL 提供程序的详细信息，请参阅[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)。 有关对象关系设计器的详细信息，请参阅[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。|  
-|LINQ to XML|通过 LINQ to XML 提供程序，可以查询和修改 XML。 可以修改内存中 XML，也可以从文件加载 XML 以及将 XML 保存到文件。<br /><br /> 此外，LINQ to XML 提供程序还包括 XML 文本和 XML 轴属性，通过它们，你可以在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 代码中直接编写 XML。 有关详细信息，请参阅[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)。|  
+|LINQ to Objects|通过 LINQ to Objects 提供程序，可以查询内存中集合和数组。 如果对象支持 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 接口，则可以通过 LINQ to Objects 提供程序对其进行查询。<br /><br /> 你可以通过导入启用 LINQ to Objects 提供程序<xref:System.Linq>命名空间，默认情况下，对于所有 Visual Basic 项目导入。<br /><br /> 有关 LINQ to Objects 提供程序的详细信息，请参阅[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)。|  
+|LINQ to SQL|通过 LINQ to SQL 提供程序，可以查询和修改 SQL Server 数据库中的数据。 这样就可以轻松将应用程序的对象模型映射到数据库中的表和对象。<br /><br /> Visual Basic，使得更轻松地使用 LINQ to SQL 通过包括对象关系设计器 （O/R 设计器）。 此设计器用于在应用程序中创建映射到数据库中的对象的对象模型。 O/R 设计器还提供功能来映射存储的过程和函数<xref:System.Data.Linq.DataContext>对象，该管理与数据库的通信和存储进行开放式并发检查的状态对象。<br /><br /> 有关 LINQ to SQL 提供程序的详细信息，请参阅[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)。 有关对象关系设计器的详细信息，请参阅[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。|  
+|LINQ to XML|通过 LINQ to XML 提供程序，可以查询和修改 XML。 可以修改内存中 XML，也可以从文件加载 XML 以及将 XML 保存到文件。<br /><br /> 此外，LINQ to XML 提供程序，XML 文本和 XML 轴属性，可用于在 Visual Basic 代码中直接编写 XML。 有关详细信息，请参阅[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)。|  
 |LINQ to DataSet|LINQ to DataSet 提供程序可以对中的查询和更新数据[!INCLUDE[vstecado](~/includes/vstecado-md.md)]数据集。 可以将 LINQ 的强大功能添加到使用数据集的应用程序，以便简化和扩展查询、聚合和更新数据集中数据的功能。<br /><br /> 有关详细信息，请参阅 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)。|  
   
-##  <a name="StructureOfALINQQuery"></a>LINQ 查询的结构  
+##  <a name="StructureOfALINQQuery"></a> LINQ 查询的结构  
  LINQ 查询，通常称为*查询表达式*，由的标识的数据源和查询的迭代变量的查询子句组合而成。 查询表达式还可以包含排序、筛选、分组和联接的说明或要对源数据应用的计算。 查询表达式语法类似于 SQL的语法；因此，你可能发现该语法大都非常熟悉。  
   
- 查询表达式以 `From` 子句开头。 此子句标识查询的源数据和用于分别表示源数据中每个元素的变量。 这些变量叫做*范围变量*或*迭代变量*。 `From` 子句是查询所必需的，但 `Aggregate` 查询除外，在该查询中 `From` 子句是可选的。 在 `From` 或 `Aggregate` 子句中标识查询的范围和源后，即可包括查询子句的任意组合来优化查询。 有关查询子句的详细信息，请参阅本主题中稍后介绍的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] LINQ 查询运算符。 例如，下面的查询将客户数据源集合标识为 `customers` 变量和一个名为 `cust` 的迭代变量。  
+ 查询表达式以 `From` 子句开头。 此子句标识查询的源数据和用于分别表示源数据中每个元素的变量。 这些变量叫做*范围变量*或*迭代变量*。 `From` 子句是查询所必需的，但 `Aggregate` 查询除外，在该查询中 `From` 子句是可选的。 在 `From` 或 `Aggregate` 子句中标识查询的范围和源后，即可包括查询子句的任意组合来优化查询。 有关查询子句的详细信息，请参阅本主题后面的 Visual Basic LINQ 查询运算符。 例如，下面的查询将客户数据源集合标识为 `customers` 变量和一个名为 `cust` 的迭代变量。  
   
  [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
@@ -98,29 +99,29 @@ ms.lasthandoff: 12/21/2017
   
  [!code-vb[VbVbalrIntroToLINQ#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
   
- 还有几个其他 LINQ 查询运算符，可用它们创建功能强大的查询表达式。 本主题的下一部分将讨论查询表达式中可以包括的各种查询子句。 有关详细信息[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]查询子句，请参阅[查询](../../../../visual-basic/language-reference/queries/queries.md)。  
+ 还有几个其他 LINQ 查询运算符，可用它们创建功能强大的查询表达式。 本主题的下一部分将讨论查询表达式中可以包括的各种查询子句。 有关 Visual Basic 查询子句的详细信息，请参阅[查询](../../../../visual-basic/language-reference/queries/queries.md)。  
   
-##  <a name="VisualBasicLINQQueryOperators"></a>Visual Basic LINQ 查询运算符  
- 你可以调用 <xref:System.Linq> 命名空间和支持 LINQ 查询的其他命名空间中的类包括的方法，以便根据应用程序的需要创建和完善查询。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 包括最常见查询子句的关键字，如下表所述。  
+##  <a name="VisualBasicLINQQueryOperators"></a> Visual Basic LINQ 查询运算符  
+ 你可以调用 <xref:System.Linq> 命名空间和支持 LINQ 查询的其他命名空间中的类包括的方法，以便根据应用程序的需要创建和完善查询。 Visual Basic 包括关键字的最常见的查询子句，如下表所述。  
   
 |术语|定义|  
 |---|---|  
-|[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)|需要 `From` 子句或 `Aggregate` 子句才能开始查询。 `From` 子句可指定查询的源集合和迭代变量。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#7](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_8.vb)]|  
-|[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)|可选。 声明查询的一组迭代变量。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#8](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_9.vb)]<br /><br /> 如果未指定 `Select` 子句，则该查询的迭代变量将由 `From` 或 `Aggregate` 子句指定的迭代变量组成。|  
-|[Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)|可选。 指定查询的筛选条件。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#9](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_10.vb)]|  
-|[Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)|可选。 指定查询中列的排列顺序。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_11.vb)]|  
-|[Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)|可选。 将两个集合合并为单个集合。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_12.vb)]|  
-|[Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)|可选。 对查询结果的元素进行分组。 可用于将聚合函数应用到每个组。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_13.vb)]|  
-|[Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)|可选。 将两个集合合并为单个分层集合。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_14.vb)]|  
+|[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)|需要 `From` 子句或 `Aggregate` 子句才能开始查询。 `From` 子句可指定查询的源集合和迭代变量。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#7](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_8.vb)]|  
+|[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)|可选。 声明查询的一组迭代变量。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#8](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_9.vb)]<br /><br /> 如果未指定 `Select` 子句，则该查询的迭代变量将由 `From` 或 `Aggregate` 子句指定的迭代变量组成。|  
+|[Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)|可选。 指定查询的筛选条件。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#9](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_10.vb)]|  
+|[Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)|可选。 指定查询中列的排列顺序。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_11.vb)]|  
+|[Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)|可选。 将两个集合合并为单个集合。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_12.vb)]|  
+|[Group By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)|可选。 对查询结果的元素进行分组。 可用于将聚合函数应用到每个组。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_13.vb)]|  
+|[Group Join 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)|可选。 将两个集合合并为单个分层集合。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_14.vb)]|  
 |[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)|需要 `From` 子句或 `Aggregate` 子句才能开始查询。 `Aggregate` 子句向集合应用一个或多个聚合函数。 例如，可以使用 `Aggregate` 子句计算查询所返回的所有元素之和。<br /><br /> [!code-vb[VbVbalrIntroToLINQ#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_15.vb)]<br /><br /> 还可以使用 `Aggregate` 子句来修改查询。 例如，可以使用 `Aggregate` 子句，对相关查询集合执行计算。<br /><br /> [!code-vb[VbVbalrIntroToLINQ#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_16.vb)]|  
-|[Let 子句](../../../../visual-basic/language-reference/queries/let-clause.md)|可选。 计算一个值，并将其分配到查询中的新变量。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_17.vb)]|  
-|[Distinct 子句](../../../../visual-basic/language-reference/queries/distinct-clause.md)|可选。 限制当前迭代变量的值，以在查询结果中消除重复值。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#17](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_18.vb)]|  
-|[Skip 子句](../../../../visual-basic/language-reference/queries/skip-clause.md)|可选。 绕过集合中指定数量的元素，然后返回剩余的元素。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#18](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_19.vb)]|  
-|[Skip While 子句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)|可选。 跳过集合中指定条件为 `true` 的任何元素，然后返回剩余元素。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#19](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_20.vb)]|  
-|[Take 子句](../../../../visual-basic/language-reference/queries/take-clause.md)|可选。 从集合的开头返回指定数量的连续元素。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#20](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_21.vb)]|  
-|[Take While 子句](../../../../visual-basic/language-reference/queries/take-while-clause.md)|可选。 包括集合中指定条件为 `true` 的任何元素，并绕过剩余元素。 例如:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#21](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_22.vb)]|  
+|[Let 子句](../../../../visual-basic/language-reference/queries/let-clause.md)|可选。 计算一个值，并将其分配到查询中的新变量。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_17.vb)]|  
+|[Distinct 子句](../../../../visual-basic/language-reference/queries/distinct-clause.md)|可选。 限制当前迭代变量的值，以在查询结果中消除重复值。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#17](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_18.vb)]|  
+|[Skip 子句](../../../../visual-basic/language-reference/queries/skip-clause.md)|可选。 绕过集合中指定数量的元素，然后返回剩余的元素。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#18](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_19.vb)]|  
+|[Skip While 子句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)|可选。 跳过集合中指定条件为 `true` 的任何元素，然后返回剩余元素。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#19](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_20.vb)]|  
+|[Take 子句](../../../../visual-basic/language-reference/queries/take-clause.md)|可选。 从集合的开头返回指定数量的连续元素。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#20](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_21.vb)]|  
+|[Take While 子句](../../../../visual-basic/language-reference/queries/take-while-clause.md)|可选。 包括集合中指定条件为 `true` 的任何元素，并绕过剩余元素。 例如：<br /><br /> [!code-vb[VbVbalrIntroToLINQ#21](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_22.vb)]|  
   
- 有关详细信息[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]查询子句，请参阅[查询](../../../../visual-basic/language-reference/queries/queries.md)。  
+ 有关 Visual Basic 查询子句的详细信息，请参阅[查询](../../../../visual-basic/language-reference/queries/queries.md)。  
   
  可以通过调用 LINQ 提供的可枚举类型和可查询类型的成员来使用其他 LINQ 查询功能。 可以通过对查询表达式的结果调用特定查询运算符来使用这些附加功能。 例如，下面的代码示例使用 <xref:System.Linq.Enumerable.Union%2A> 方法，将两个查询的结果合并为一个查询结果。 它使用 <xref:System.Linq.Enumerable.ToList%2A> 方法，将查询结果返回为一个泛型列表。  
   
@@ -128,15 +129,15 @@ ms.lasthandoff: 12/21/2017
   
  有关其他 LINQ 功能的详细信息，请参阅[标准查询运算符概述](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
   
-##  <a name="ConnectingToADatabase"></a>通过使用 LINQ to SQL 连接到数据库  
- 在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中，可使用 LINQ to SQL 文件标识希望访问的 SQL Server 数据库对象（如表、视图和存储过程）。 LINQ to SQL 文件具有 .dbml 扩展名。  
+##  <a name="ConnectingToADatabase"></a> 通过使用 LINQ to SQL 连接到数据库  
+ 在 Visual Basic 中，您可以确定 SQL Server 数据库对象，如表、 视图和存储的过程，你想要通过使用 LINQ to SQL 文件访问。 LINQ to SQL 文件具有 .dbml 扩展名。  
   
  如果必须有效连接到 SQL Server 数据库，你可以添加**LINQ to SQL 类**到你的项目项模板。 此操作将显示对象关系设计器（O/R 设计器）。 O/R 设计器使你可以将你想要访问从代码中的项**服务器资源管理器**/**数据库资源管理器**拖动到设计器图面。 LINQ to SQL 文件可向项目添加 <xref:System.Data.Linq.DataContext> 对象。 此对象包括你希望访问的表和视图的属性和集合，以及希望调用的存储过程的方法。 保存对 LINQ to SQL (.dbml) 文件所作的更改后，即可通过引用由 O/R 设计器定义的 <xref:System.Data.Linq.DataContext> 对象，在代码中访问这些对象。 项目的 <xref:System.Data.Linq.DataContext> 对象根据 LINQ to SQL 文件的名称进行命名。 例如，名为 Northwind.dbml 的 LINQ to SQL 文件将创建名为 `NorthwindDataContext` 的 <xref:System.Data.Linq.DataContext> 对象。  
   
  有关分步说明的示例，请参阅[如何： 查询数据库](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)和[如何： 调用存储过程](../../../../visual-basic/programming-guide/language-features/linq/how-to-call-a-stored-procedure-by-using-linq.md)。  
   
-##  <a name="VisualBasicFeaturesThatSupportLINQ"></a>支持 LINQ 的 Visual Basic 功能  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 还包括其他值得注意的功能，它们能够简化 LINQ 的使用，并减少执行 LINQ 查询所必须编写的代码量。 其中包括：  
+##  <a name="VisualBasicFeaturesThatSupportLINQ"></a> 支持 LINQ 的 Visual Basic 功能  
+ Visual Basic 包括其他值得注意的功能，简化 LINQ 的使用并减少执行 LINQ 查询所必须编写的代码量。 其中包括：  
   
 -   **匿名类型**，使您能够创建基于查询结果的新类型。  
   
@@ -146,7 +147,7 @@ ms.lasthandoff: 12/21/2017
   
  有关详细信息，请参阅[功能，支持 LINQ 的 Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/features-that-support-linq.md)。  
   
-##  <a name="QueryExecution"></a>延迟和立即执行查询  
+##  <a name="QueryExecution"></a> 延迟和立即执行查询  
  执行查询与创建查询相互独立。 创建查询后，通过单独的机制触发其执行。 只要定义它，可以执行查询 (*立即执行*)，或该定义可以存储和更高版本执行查询 (*延迟执行*)。  
   
  默认情况下，创建查询后，它本身不会立即执行。 而会将查询定义存储在用于引用查询结果的变量中。 当稍后在代码中（如在 `For…Next` 循环中）访问查询结果变量时，将执行该查询。 此过程称为*延迟执行*。  
@@ -157,8 +158,8 @@ ms.lasthandoff: 12/21/2017
   
  有关执行查询的详细信息，请参阅[编写你的第一个 LINQ 查询](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)。  
   
-##  <a name="XMLInVisualBasic"></a>在 Visual Basic 中的 XML  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的 XML 功能包括 XML 文本和 XML 轴属性，可用于在代码中轻松创建、访问、查询和修改 XML。 XML 文本可用于在代码中直接编写 XML。 Visual Basic 编译器将 XML 视为第一类数据对象。  
+##  <a name="XMLInVisualBasic"></a> 在 Visual Basic 中的 XML  
+ 在 Visual Basic 中的 XML 功能包括 XML 文本和 XML 轴属性，可用于轻松地创建，访问、 查询和修改你的代码中的 XML。 XML 文本可用于在代码中直接编写 XML。 Visual Basic 编译器将 XML 视为第一类数据对象。  
   
  下面的代码示例演示了如何创建 XML 元素、访问其子元素和属性，以及使用 LINQ 查询该元素的内容。  
   
@@ -166,19 +167,19 @@ ms.lasthandoff: 12/21/2017
   
  有关详细信息，请参阅[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)。  
   
-##  <a name="RelatedResources"></a>相关的资源  
+##  <a name="RelatedResources"></a> 相关的资源  
   
 |主题|描述|  
 |---|---|  
-|[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|描述 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中可查询和可将 XML 包括为 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 代码中的第一类数据对象的 XML 功能。|  
-|[查询](../../../../visual-basic/language-reference/queries/queries.md)|提供有关 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中可用查询子句的参考信息。|  
+|[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|介绍在 Visual Basic 中可查询和可让你 XML 包括为 Visual Basic 代码中的第一类数据对象的 XML 功能。|  
+|[查询](../../../../visual-basic/language-reference/queries/queries.md)|提供有关可在 Visual Basic 中的查询子句的参考信息。|  
 |[LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|包括常规信息、编程指南和 LINQ 示例。|  
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|包括常规信息、编程指南和 LINQ to SQL 示例。|  
 |[LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|包括常规信息、编程指南和 LINQ to Objects 示例。|  
 |[LINQ to ADO.NET（门户网站页）](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|包括常规信息、编程指南和 LINQ to [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 示例。|  
 |[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|包括常规信息、编程指南和 LINQ to XML 示例。|  
   
-##  <a name="HowToAndWalkthroughTopics"></a>How To 和演练主题  
+##  <a name="HowToAndWalkthroughTopics"></a> How To 和演练主题  
  [如何：查询数据库](how-to-query-a-database-by-using-linq.md)  
   
  [如何：调用存储过程](how-to-call-a-stored-procedure-by-using-linq.md)  

@@ -1,30 +1,32 @@
 ---
-title: "Visual Basic 和 WPF 事件处理"
-ms.custom: 
+title: Visual Basic 和 WPF 事件处理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f61b63e7f80ec779d03c230bd4f24eed00098242
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 和 WPF 事件处理
-有关[!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)]语言具体而言，可以使用特定于语言的`Handles`实例，而不是附加的属性的事件处理程序或使用与关联事件处理程序关键字<xref:System.Windows.UIElement.AddHandler%2A>方法。 但是，用于将处理程序附加到实例的 `Handles` 技术存在一些限制，因为 `Handles` 语法不支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统的某些特定路由事件功能。  
+对于 Microsoft Visual Basic.NET 语言具体而言，你使用的是特定于语言的`Handles`实例，而不是附加的属性的事件处理程序或使用与关联事件处理程序关键字<xref:System.Windows.UIElement.AddHandler%2A>方法。 但是，用于将处理程序附加到实例的 `Handles` 技术存在一些限制，因为 `Handles` 语法不支持 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统的某些特定路由事件功能。  
   
 ## <a name="using-handles-in-a-wpf-application"></a>在 WPF 应用程序中使用“Handles”  
  通过 `Handles` 连接到实例和事件的事件处理程序必须全部在实例的分部类声明中定义，此要求也适用于通过元素上的特性值进行分配的事件处理程序。 你只能指定`Handles`具有的页面上的元素<xref:System.Windows.FrameworkContentElement.Name%2A>属性值 (或[X:name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)声明)。 这是因为<xref:System.Windows.FrameworkContentElement.Name%2A>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]创建是支持所需的实例引用*实例.事件*所需的引用格式`Handles`语法。 可用于的唯一元素`Handles`而无需<xref:System.Windows.FrameworkContentElement.Name%2A>引用是定义分部类的根元素实例。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  `Handles` 无法附加针对标记为已处理的事件而调用的处理程序。 相反，你必须使用代码和调用`handledEventsToo`重载<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>。  
   
 > [!NOTE]
->  在 XAML 中为相同事件指定事件处理程序时，请勿在 [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] 代码中使用 `Handles` 语法。 在这种情况下，将调用事件处理程序两次。  
+>  不要使用`Handles`Visual Basic 代码时在 XAML 中指定的事件处理程序相同的事件中的语法。 在这种情况下，将调用事件处理程序两次。  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF 如何实现“Handles”功能  
  当[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]页已编译，中间文件声明`Friend``WithEvents`对具有的页面上的每个元素的引用<xref:System.Windows.FrameworkContentElement.Name%2A>属性集 (或[X:name 指令](../../../../docs/framework/xaml-services/x-name-directive.md)声明)。 每个命名实例都可能是可通过 `Handles` 分配给处理程序的元素。  

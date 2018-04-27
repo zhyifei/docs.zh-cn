@@ -23,17 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cf1d7fda58c3bca0f9d76c3c4d3b8d22545a9912
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>标记扩展和 WPF XAML
 本主题介绍 XAML 的标记扩展概念，包括其语法规则、用途以及作为其基础的类对象模型。 标记扩展是 XAML 语言以及 XAML 服务的 .NET 实现的常规功能。 本主题专门详细讨论用于 WPF XAML 的标记扩展。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/26/2018
 -   在特意不使用 WPF 基元素和控件模型提供的集合支持的情况下，`x:Array` 为 XAML 语法中常规数组的创建提供支持。 有关详细信息，请参阅 [x:Array 标记扩展](../../../../docs/framework/xaml-services/x-array-markup-extension.md)。  
   
 > [!NOTE]
->  `x:` 前缀在 XAML 文件或生成的根元素中用于 XAML 语言内部函数的典型 XAML 命名空间映射。 例如，WPF 应用程序的 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 模板使用此 `x:` 映射启动 XAML 文件。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但本文档将采用默认的 `x:` 映射，并通过它来标识属于 XAML 语言的 XAML 命名空间已定义部分的那些实体，这与 WPF 默认命名空间或与特定框架不相关的其他 XAML 命名空间相反。  
+>  `x:` 前缀在 XAML 文件或生成的根元素中用于 XAML 语言内部函数的典型 XAML 命名空间映射。 例如，WPF 应用程序的 Visual Studio 模板启动使用这一个 XAML 文件`x:`映射。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但本文档将采用默认的 `x:` 映射，并通过它来标识属于 XAML 语言的 XAML 命名空间已定义部分的那些实体，这与 WPF 默认命名空间或与特定框架不相关的其他 XAML 命名空间相反。  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>特定于 WPF 的标记扩展  
@@ -112,7 +112,7 @@ ms.lasthandoff: 03/26/2018
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>转义序列和标记扩展  
- XAML 处理器中的特性处理使用大括号作为标记扩展序列的指示符。 必要时，也可以使用后跟文本大括号的空大括号对输入转义序列，来生成文本大括号字符特性值。 请参阅[{} 转义序列的标记扩展](../../xaml-services/escape-sequence-markup-extension.md)。  
+ XAML 处理器中的特性处理使用大括号作为标记扩展序列的指示符。 必要时，也可以使用后跟文本大括号的空大括号对输入转义序列，来生成文本大括号字符特性值。 请参阅[{}转义序列的标记扩展](../../xaml-services/escape-sequence-markup-extension.md)。  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>XAML 中的嵌套标记扩展用法  
@@ -130,7 +130,7 @@ ms.lasthandoff: 03/26/2018
   
  当用在对象元素语法中以填充属性元素时，大多数标记扩展都不会包含任何内容或深层属性元素语法。 这样你便可以关闭对象元素标记，而不提供任何子元素。 不论何时 XAML 处理器遇到任何对象元素，都会调用该类的构造函数来实例化从已分析元素创建的对象。 标记扩展类也一样：如果希望标记扩展可在对象元素语法中使用，就必须提供默认构造函数。 有些现有标记扩展具有至少一个必需的属性值，必须指定该属性值才能使实例化生效。 如果是这样，该属性值通常会作为对象元素上的属性特性而给出。 在 [XAML 命名空间 (x:) 语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)和 [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)参考页中，会指出具有必需属性的标记扩展（以及必需属性的名称）。 参考页还将指出特定标记扩展是否禁止使用对象元素语法或特性语法。 需要注意 [x:Array 标记扩展](../../../../docs/framework/xaml-services/x-array-markup-extension.md)，它无法支持特性语法，因为该数组的内容必须在标记内作为内容指定。 数组内容的处理方式与常规对象一样，因此特性可以没有默认的类型转换器。 此外，[x:Array 标记扩展](../../../../docs/framework/xaml-services/x-array-markup-extension.md)需要 `type` 参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [XAML 命名空间 (x:) 语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  

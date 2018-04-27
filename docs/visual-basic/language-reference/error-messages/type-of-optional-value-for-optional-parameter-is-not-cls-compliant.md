@@ -1,9 +1,9 @@
 ---
-title: "可选值的可选参数的类型&lt;parametername&gt;不符合 CLS"
+title: 可选值的可选参数的类型&lt;parametername&gt;不符合 CLS
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 50ea7ce108796d099272c4a909f2fc6c81e9c77c
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 08457b5234b98cdff6fb3286b3442a6bd0155a37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>可选值的可选参数的类型&lt;parametername&gt;不符合 CLS
 一个过程标记为 `<CLSCompliant(True)>`，但声明一个[可选](../../../visual-basic/language-reference/modifiers/optional.md)参数，该参数具有不符合的类型的默认值。  
   
  一个过程要符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md) (CLS)，必须只使用符合 CLS 的类型。 这适用于参数的类型、返回类型及其所有本地变量的类型。 也适用于可选参数的默认值。  
   
- 以下 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 数据类型不符合 CLS：  
+ 下面的 Visual Basic 数据类型不符合 cls 的：  
   
 -   [SByte 数据类型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
@@ -51,4 +51,4 @@ ms.lasthandoff: 12/21/2017
   
 -   如果过程必须符合 CLS，则将此默认值的类型改为最接近的符合 CLS 的类型。 例如，如果不需要 2147483647 以上的数值范围，可以使用 `UInteger` 取代 `Integer` 。 如果确实需要更大范围，可以用 `UInteger` 代替 `Long`。  
   
--   如果在与自动化或 COM 对象对接，请记住，某些类型具有与 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中不同的数据宽度。 例如，`int` 在其他环境中通常为 16 位。 如果接受此类组件中的一个 16 位整数，则在托管的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 代码中将其声明为 `Short` 而不是 `Integer`。
+-   如果在与自动化或 COM 对象对接，请记住，某些类型具有与 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中不同的数据宽度。 例如，`int` 在其他环境中通常为 16 位。 如果你接受来自此类组件的 16 位整数，将其声明为`Short`而不是`Integer`托管 Visual Basic 代码中。

@@ -1,11 +1,12 @@
 ---
-title: "如何：调用运算符过程 (Visual Basic)"
-ms.custom: 
+title: 如何：调用运算符过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21545f2488bfabd0abc9c6e316d21bbc4d5aeb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>如何：调用运算符过程 (Visual Basic)
 通过在表达式中使用运算符调用运算符过程。 对于转换运算符，你调用[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)将值从一种数据类型转换为另一个。  
   
- 不显式调用运算符过程。 只需使用运算符，或`CType`函数，在赋值语句或表达式，通常使用运算符相同的方式。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]使运算符过程调用。  
+ 不显式调用运算符过程。 只需使用运算符，或`CType`函数，在赋值语句或表达式，通常使用运算符相同的方式。 Visual Basic 进行到运算符过程的调用。  
   
  在类或结构上定义一个运算符也称为*重载*运算符。  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  请确保数据类型的操作数不适合进行转换，且正确顺序。  
   
-3.  `CType`调用转换运算符过程并返回转换后的值。  
+3.  `CType` 调用转换运算符过程并返回转换后的值。  
   
 ## <a name="example"></a>示例  
  下面的示例创建两个<xref:System.TimeSpan>结构，并将它们相加，并将结果存储在第三个<xref:System.TimeSpan>结构。 <xref:System.TimeSpan>结构定义运算符过程重载了几个标准运算符。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  请确保类或结构将定义你想要使用的运算符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符过程](./operator-procedures.md)  
  [如何：定义运算符](./how-to-define-an-operator.md)  
  [如何：定义转换运算符](./how-to-define-a-conversion-operator.md)  

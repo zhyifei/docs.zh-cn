@@ -1,24 +1,26 @@
 ---
-title: "演练：简单对象模型和查询 (C#)"
-ms.custom: 
+title: 演练：简单对象模型和查询 (C#)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 444692cb035d97b0fe57c1ea9ba7802491ca2160
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d30ef93fc6af4eaf49cfe84ebf78cf79f0f4900
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>演练：简单对象模型和查询 (C#)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>概述  
  本演练由六项主要任务组成：  
   
--   在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中创建 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 解决方案。  
+-   创建[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的解决方案。  
   
 -   将类映射到数据库表。  
   
@@ -51,11 +53,11 @@ ms.lasthandoff: 01/17/2018
 -   执行查询并观察结果。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
- 此任务为第一项任务，在此任务中，您要创建一个 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 解决方案，此解决方案包含生成和运行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 项目所必需的引用。  
+ 在此第一个任务中，创建一个包含必要的引用，生成并运行的 Visual Studio 解决方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  上[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]**文件**菜单上，指向**新建**，然后单击**项目**。  
+1.  在 Visual Studio**文件**菜单上，指向**新建**，然后单击**项目**。  
   
 2.  在**项目类型**窗格**新项目**对话框中，单击**Visual C#**。  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/17/2018
   
 1.  在**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-2.  在**添加引用**对话框中，单击**.NET**，单击 System.Data.Linq 程序集，，然后单击**确定**。  
+2.  在**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   

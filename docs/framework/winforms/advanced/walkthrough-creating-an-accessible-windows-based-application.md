@@ -1,28 +1,30 @@
 ---
-title: "演练：创建可访问的基于 Windows 的应用程序"
-ms.custom: 
+title: 演练：创建可访问的基于 Windows 的应用程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8f0a35b569b38e0d7ca79129f720034420ecd23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 600a0d3aaf7da1cd7513ba6dd1dadcb58031fbef
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建可访问的基于 Windows 的应用程序
 创建具有辅助功能的应用程序具有重要的商业意义。 很多政府都有针对软件购买的辅助功能法规。 Certified for Windows 徽标包括辅助功能需求。 据估计，仅美国就有 3 千万居民（其中很多为潜在客户）受到软件辅助功能的影响。  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-begin-making-the-application"></a>开始生成应用程序  
   
--   在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中创建新的 Windows 应用程序。 将项目命名为 **PizzaOrder**。 （有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。）  
+-   在 Visual Basic 或 Visual C# 中创建新的 Windows 应用程序。 将项目命名为 **PizzaOrder**。 （有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。）  
   
 ## <a name="adding-the-controls-to-the-form"></a>将控件添加到窗体  
  将控件添加到窗体时，请牢记以下指南以生成具有辅助功能的应用程序：  

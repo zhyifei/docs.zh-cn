@@ -1,12 +1,12 @@
 ---
-title: "抽象（抽象类型和接口）"
-ms.custom: 
+title: 抽象（抽象类型和接口）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - interfaces [.NET Framework], abstract
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 276c5883487d8fba47d7fb80060d4c947e0f6cd6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2628758891d629400603c51d12ece33df0e1ff1c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象（抽象类型和接口）
 一种抽象是描述的协定，但不提供完整实现的协定的类型。 通常作为抽象类或接口，实现的抽象，而且随附一组明确定义的参考文档描述实现协定的类型所需的语义。 .NET Framework 中最重要的抽象的一些包括<xref:System.IO.Stream>， <xref:System.Collections.Generic.IEnumerable%601>，和<xref:System.Object>。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/23/2017
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  

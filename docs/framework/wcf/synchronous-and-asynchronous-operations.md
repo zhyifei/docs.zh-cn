@@ -1,12 +1,13 @@
 ---
-title: "同步和异步操作"
-ms.custom: 
+title: 同步和异步操作
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 -   如果在 ASP.NET 页中调用操作，可使用异步页。  
   
--   如果从任何单线程的应用程序（如 Windows 窗体或 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]）调用操作。 使用基于事件的异步调用模型时，将在 UI 线程上引发结果事件，从而向应用程序添加响应性而无需您自己处理多个线程。  
+-   如果调用的从任何应用程序是单线程，如 Windows 窗体或 Windows Presentation Foundation (WPF) 的操作。 使用基于事件的异步调用模型时，将在 UI 线程上引发结果事件，从而向应用程序添加响应性而无需您自己处理多个线程。  
   
 -   通常，如果可在同步调用和异步调用之间进行选择，应选择异步调用。  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 3.  IAsyncResult 异步模式  
   
 #### <a name="task-based-asynchronous-pattern"></a>基于任务的异步模式  
- 基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法只需实现您的服务操作并且指定任务的返回类型\<T >，其中 T 是逻辑运算返回的类型。 例如:  
+ 基于任务的异步模式是实现异步操作的首选方法，因为它最简单且最直接。 若要使用此方法只需实现您的服务操作并且指定任务的返回类型\<T >，其中 T 是逻辑运算返回的类型。 例如：  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -167,7 +169,7 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
- 使用基于事件的异步模式只需添加事件处理程序，即可接收响应的通知 -- 将在用户界面线程上自动引发生成的事件。 若要使用此方法，同时指定两个**/async**和**/tcv:Version35**命令选项与[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下所示以下示例。  
+ 使用基于事件的异步模式只需添加事件处理程序，即可接收响应的通知 -- 将在用户界面线程上自动引发生成的事件。 若要使用此方法，同时指定两个 **/async**和 **/tcv:Version35**命令选项与[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下所示以下示例。  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
@@ -175,7 +177,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  完成此操作后，Svcutil.exe 将生成带有事件基础结构的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类，该事件基础结构使调用应用程序可以实现和分配事件处理程序，以便接收响应和采取相应的操作。 有关完整示例，请参阅[如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- 但是，基于事件的异步模型仅在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中可用。 此外，如果 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 客户端通道是使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 创建的，那么即使在 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 中，也不支持该模型。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端通道对象时，必须使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 对象异步调用操作。 若要使用此方法，指定**/async**命令选项和[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下面的示例。  
+ 但是，基于事件的异步模型仅在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中可用。 此外，如果 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 客户端通道是使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 创建的，那么即使在 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 中，也不支持该模型。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端通道对象时，必须使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 对象异步调用操作。 若要使用此方法，指定 **/async**命令选项和[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下面的示例。  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
@@ -191,7 +193,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
 ### <a name="event-based-asynchronous-clients-and-message-contracts"></a>基于事件的异步模式客户端和消息协定  
  基于事件的异步模型设计准则规定，如果返回了多个值，则一个值会作为 `Result` 属性返回，其他值会作为 <xref:System.EventArgs> 对象上的属性返回。 因此产生的结果之一是，如果客户端使用基于事件的异步命令选项导入元数据，且该操作返回多个值，则默认的 <xref:System.EventArgs> 对象将返回一个值作为 `Result` 属性，返回的其余值是 <xref:System.EventArgs> 对象的属性。  
   
- 如果你想要接收此消息对象作为`Result`属性和使返回的值，因为该对象上的属性使用**/messageContract**命令选项。 这会生成一个签名，该签名会将响应消息作为 `Result` 对象上的 <xref:System.EventArgs> 属性返回。 然后，所有内部返回值就都是响应消息对象的属性了。  
+ 如果你想要接收此消息对象作为`Result`属性和使返回的值，因为该对象上的属性使用 **/messageContract**命令选项。 这会生成一个签名，该签名会将响应消息作为 `Result` 对象上的 <xref:System.EventArgs> 属性返回。 然后，所有内部返回值就都是响应消息对象的属性了。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  

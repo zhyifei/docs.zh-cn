@@ -1,24 +1,26 @@
 ---
-title: "高级错误处理"
-ms.custom: 
+title: 高级错误处理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7771b9a4d5a6c0fb4349894afd348e9dece27fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35911a80e7686a1023f42115f785fb64d949aeff
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-error-handling"></a>高级错误处理
 此示例演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 路由服务。 路由服务是一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 组件，使用该组件可方便地在应用程序中包含基于内容的路由器。 此示例使用事务和其他更加复杂的消息传递概念（如多播）演示如何智能地将路由服务从错误中恢复过来。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
      使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 打开 AdvancedErrorHandling.sln。  
   
-2.  按**F5**或**CTRL + SHIFT + B**中[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。  
+2.  按**F5**或**CTRL + SHIFT + B** Visual Studio 中。  
   
     1.  如果使用 Ctrl+Shift+B 生成应用程序，则必须用 ./RoutingService/bin/debug/RoutingService.exe 启动应用程序。  
   

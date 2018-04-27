@@ -11,14 +11,14 @@ ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 62fba60aa6a9f95057010997d5f427f2c66ec178
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cd92be378894235f4753cfc52e8382a1960bd37b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="modules-visual-basic"></a>模块 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供了多个模块，可以简化在代码中，包括操作字符串，执行数学计算，获取系统信息、 执行文件和目录操作的常见任务等。 下表列出了由提供的模块[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+Visual Basic 提供了多个模块，可以简化在代码中，包括操作字符串，执行数学计算，获取系统信息、 执行文件和目录操作的常见任务等。 下表列出提供的 Visual Basic 的模块。  
   
 |||  
 |---|---|  
@@ -35,6 +35,6 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualBasic.Strings>|包含成员执行字符串操作，如重新格式化字符串，搜索字符串，获取一个字符串的长度，依此类推。|  
 |<xref:Microsoft.VisualBasic.VBMath>|包含成员执行数学运算。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)  
  [Visual Basic](../../visual-basic/index.md)

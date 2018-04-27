@@ -1,12 +1,13 @@
 ---
-title: "如何：确定此时是否可以打印一项打印作业"
-ms.custom: 
+title: 如何：确定此时是否可以打印一项打印作业
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>如何：确定此时是否可以打印一项打印作业
 打印队列并不总是可用的一天 24 小时。 它们具有开始和结束时间属性，可设置为使它们在每天的某些时间不可用。 例如，此功能可以用于保留以供在下午 5 点后的特定部门专用打印机。 该部门都使用不同队列维护比其他部门打印机。 将设置为其他部门队列来下午 5 点以后将不可用，尽管可将队列的支持的部门设置为始终保持可用。  
   
  此外，打印作业本身可以被设置为仅在指定的时间范围内可打印。  
   
- <xref:System.Printing.PrintQueue>和<xref:System.Printing.PrintSystemJobInfo>类中公开[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]提供一种远程检查是否给定的打印作业可以打印给定队列上的当前时间。  
+ <xref:System.Printing.PrintQueue>和<xref:System.Printing.PrintSystemJobInfo>类中公开[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一种远程检查是否给定的打印作业可以打印给定队列上的当前时间。  
   
 ## <a name="example"></a>示例  
  下面的示例是一个示例，可以使用诊断问题的打印作业。  
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- **TimeConverter.ConvertToLocalHumanReadableTime** （如下面的代码示例所示） 的方法不使用任何方法引入了[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]，因此是简要讨论。 此方法不具有双转换任务： 它必须采用一个整数，该整数表示午夜分钟后，并将其转换为用户可读的时间和它必须将其转换为本地时间。 这是通过实现通过先创建<xref:System.DateTime>设置为午夜 UTC，然后它使用的对象<xref:System.DateTime.AddMinutes%2A>方法将添加的分钟数传递给方法。 这将返回一个新<xref:System.DateTime>表示传递给方法的原始时间。 <xref:System.DateTime.ToLocalTime%2A>方法然后将此转换为本地时间。  
+ **TimeConverter.ConvertToLocalHumanReadableTime** （如下面的代码示例所示） 的方法不使用任何引入了 Microsoft.NET Framework，因此是简要讨论的方法。 此方法不具有双转换任务： 它必须采用一个整数，该整数表示午夜分钟后，并将其转换为用户可读的时间和它必须将其转换为本地时间。 这是通过实现通过先创建<xref:System.DateTime>设置为午夜 UTC，然后它使用的对象<xref:System.DateTime.AddMinutes%2A>方法将添加的分钟数传递给方法。 这将返回一个新<xref:System.DateTime>表示传递给方法的原始时间。 <xref:System.DateTime.ToLocalTime%2A>方法然后将此转换为本地时间。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

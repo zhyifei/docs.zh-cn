@@ -1,24 +1,26 @@
 ---
-title: "默认 XAML 架构上下文和 WPF XAML 架构上下文"
-ms.custom: 
+title: 默认 XAML 架构上下文和 WPF XAML 架构上下文
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>默认 XAML 架构上下文和 WPF XAML 架构上下文
 XAML 架构上下文是限定 XAML 生产环境中使用的特定 XAML 词汇如何与编写行为，包括如何类型映射解决时，程序集的加载方式、 如何某些读取器和编写器的对象进行交互的概念实体解释设置。 本主题介绍.NET Framework XAML 服务和基于 CLR 类型系统的关联的默认 XAML 架构上下文的功能。 本主题还介绍适用于 WPF XAML 架构上下文。  
@@ -35,7 +37,7 @@ XAML 架构上下文是限定 XAML 生产环境中使用的特定 XAML 词汇如
 ## <a name="wpf-xaml-schema-context"></a>WPF XAML 架构上下文  
  因为的 WPF 实现，提供有趣举例说明了可以通过实现的非默认 XAML 架构上下文中引入的功能的类型，本主题中描述的 WPF XAML 架构上下文。 此外，XAML 架构上下文概念中未讨论很大程度 WPF 文档，此迭代 WPF XAML;XAML 架构上下文便会启用的行为可能仅集成并讨论了默认 XAML 架构上下文的工作原理完全可以理解。 WPF XAML 架构上下文实现以下行为。  
   
- **查找重写：** WPF xaml 具有几个内容模型其中有不是函数的 XAML 内容属性<xref:System.Windows.Markup.ContentPropertyAttribute>特性化。 <xref:System.Xaml.XamlType.LookupContentProperty%2A>替代 WPF 实现此行为。  
+ **查找重写：** WPF xaml 具有几个内容模型其中有不是函数的 XAML 内容属性<xref:System.Windows.Markup.ContentPropertyAttribute>特性化。 <xref:System.Xaml.XamlType.LookupContentProperty%2A> 替代 WPF 实现此行为。  
   
  **WPF 表达式的延迟：** WPF 功能将值的延迟，直到运行时上下文可用的多个表达式类。 此外，模板扩展是依赖于延迟技术的运行时行为。  
   
@@ -68,7 +70,7 @@ XAML 架构上下文是限定 XAML 生产环境中使用的特定 XAML 词汇如
     -   如果映射中非限定名称，则调用<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`适用于[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]和[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]。  
+ `XamlBuildTask` 适用于[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]和 Windows Workflow Foundation。  
   
  请注意，程序集引用了通过`XamlBuildTask`始终是完全限定。  
   

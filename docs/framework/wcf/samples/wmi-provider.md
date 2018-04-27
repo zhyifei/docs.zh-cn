@@ -1,26 +1,26 @@
 ---
-title: "WMI 提供程序"
-ms.custom: 
+title: WMI 提供程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: 
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c1b90a5231505f7d72d10c0ab9f9f80037d48bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wmi-provider"></a>WMI 提供程序
 此示例演示如何在运行时使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中内置的 Windows Management Instrumentation (WMI) 提供程序从 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务中收集数据。 另外，此示例还演示如何向服务添加用户定义的 WMI 对象。 示例激活的 WMI 提供程序[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)并演示了如何收集数据`ICalculator`服务在运行时。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/19/2018
  将 WMI 对象添加到服务，可以显示用户定义的信息以及内置的 WMI 提供程序信息。 这可以通过使用 Installutil.exe 应用程序将服务方案发布到 WMI 来实现。 本主题末尾的安装说明介绍了如何实现上述操作的说明以及更详细的信息。  
   
 ## <a name="accessing-wmi-information"></a>访问 WMI 信息  
- 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供的脚本，WMI Api[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]应用程序、 c + + 应用程序和[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)](http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp)。  
+ 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供脚本、 Visual Basic 应用程序、 c + + 应用程序，用于 WMI Api 和[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)](http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp)。  
   
  此示例使用两个 Java 脚本：一个脚本用于枚举在计算机上运行的服务及其某些属性，另一个脚本用于查看用户定义的 WMI 数据。 该脚本打开与 WMI 提供程序的连接、分析数据并显示所收集的数据。  
   
@@ -156,5 +156,5 @@ cscript EnumerateCustomObjects.js
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 监视示例](http://go.microsoft.com/fwlink/?LinkId=193959)

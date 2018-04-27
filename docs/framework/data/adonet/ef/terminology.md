@@ -1,24 +1,26 @@
 ---
-title: "实体框架术语"
-ms.custom: 
+title: 实体框架术语
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>实体框架术语
 本主题定义经常引用中的术语[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文档。 如果有其他可用信息，则会提供指向相关主题的链接。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 01/19/2018
 |独立关联|实体之间的关联，由独立对象表示和跟踪。|  
 |密钥|实体类型的属性 (Attribute)，用于指定使用哪个属性 (Property) 或属性 (Property) 集标识实体类型的唯一实例。 在对象层中由 <xref:System.Data.EntityKey> 类表示。<br /><br /> 有关详细信息，请参阅[密钥元素 (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b)和[实体键](../../../../../docs/framework/data/adonet/entity-key.md)。|  
 |延迟加载|当查询返回对象时，不会同时加载相关对象。 但在访问导航属性时，会自动加载相关对象。|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|用于定义一组查询运算符的查询语法，通过这些运算符，可以在 [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)] 中以直接的声明性方式表示遍历、筛选和投影操作。<br /><br /> 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|定义一组允许 Visual C# 和 Visual Basic 中的直接的声明性方式表示遍历、 筛选和投影操作的查询运算符的查询语法。<br /><br /> 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。|  
 |映射|概念模型与存储模型中的项之间的对应规范。<br /><br /> 有关详细信息，请参阅[MSL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  
 |.msl 文件|一种 XML 文件，该文件以 MSL 表示，包含概念模型与存储模型之间的映射。|  
 |映射规范语言 (MSL)|一种基于 XML 的语言，可用于将概念模型中定义的项映射到存储模型中的项。<br /><br /> 有关详细信息，请参阅[MSL 规范](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
 |Multiple Entity Sets Per Type — 每种类型多个实体集|在多个实体集中定义一个实体类型的功能。<br /><br /> 有关详细信息，请参阅[EntitySet 元素 (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287)和[如何： 使用每种类型的多个实体集定义模型](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7)。|  
 |Navigation Property — 导航属性|实体类型的属性，表示与其他实体类型的关系，由关联定义。 导航属性用于根据关联另一端的重数返回相关对象，如 <xref:System.Data.Objects.DataClasses.EntityCollection%601> 或 <xref:System.Data.Objects.DataClasses.EntityReference%601>。<br /><br /> 有关详细信息，请参阅[NavigationProperty 元素 (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e)和[导航属性](../../../../../docs/framework/data/adonet/navigation-property.md)。|  
 |Query Path — 查询路径|路径的字符串表示形式，用于指定执行对象查询时要返回的相关对象。 查询路径是通过调用 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 的 <xref:System.Data.Objects.ObjectQuery%601> 方法定义的。<br /><br /> 有关详细信息，请参阅[加载相关对象](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)。|  
-|对象上下文|表示概念模型中定义的实体容器。 它包含与基础数据源的连接，并提供更改跟踪和标识解析等服务。 对象上下文由 <xref:System.Data.Objects.ObjectContext> 或 `DbContext` 类的实例表示。<br /><br /> `DbContext`是的一部分[Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900)。 Entity Framework 5.0 不是 .NET Framework 的一部分，但基于 .NET Framework 4.5 构建。 实体框架 5.0 现作为[实体框架](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488)包。 有关详细信息，请参阅[实体框架发行和版本控制](http://go.microsoft.com/fwlink/?LinkId=234899)。|  
+|对象上下文|表示概念模型中定义的实体容器。 它包含与基础数据源的连接，并提供更改跟踪和标识解析等服务。 对象上下文由 <xref:System.Data.Objects.ObjectContext> 或 `DbContext` 类的实例表示。<br /><br /> `DbContext` 是的一部分[Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900)。 Entity Framework 5.0 不是 .NET Framework 的一部分，但基于 .NET Framework 4.5 构建。 实体框架 5.0 现作为[实体框架](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488)包。 有关详细信息，请参阅[实体框架发行和版本控制](http://go.microsoft.com/fwlink/?LinkId=234899)。|  
 |对象层|实体框架所使用的实体类型和对象上下文定义。|  
 |Object Query — 对象查询|在对象上下文中对数据模型执行的查询，该查询以对象形式返回数据。<br /><br /> 有关详细信息，请参阅[对象查询](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276)。|  
 |Object-relational Mapping — 对象关系映射|一种技术，用于将关系数据库中的数据转换为可在面向对象的软件应用程序中使用的数据类型。<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]通过将存储模型中定义的关系数据映射到概念模型中定义的数据类型来提供对象关系映射服务。<br /><br /> 有关详细信息，请参阅[建模和映射](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。|  

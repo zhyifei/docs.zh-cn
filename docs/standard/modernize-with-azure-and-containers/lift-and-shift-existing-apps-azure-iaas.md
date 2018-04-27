@@ -1,18 +1,19 @@
 ---
-title: "提升和移动现有应用 Azure IaaS"
-description: "更新现有的.NET 应用程序与 Azure 云和 Windows 容器。"
+title: 提升和移动现有应用 Azure IaaS
+description: 更新现有的.NET 应用程序与 Azure 云和 Windows 容器。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: d7922ad3a3cd5346f81008e1841a55b5e3663832
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>提升和移动现有应用 Azure IaaS
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 03/08/2018
 
 ![定位云基础结构的通用应用程序](./media/image2-1.png)
 
-> **图 2-1。** 定位云基础结构的通用应用程序
+> **图 2-1.** 定位云基础结构的通用应用程序
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>为什么现有.NET web 应用程序迁移到 Azure IaaS
 
@@ -88,9 +89,9 @@ Azure 迁移可保证你的工作负荷可以迁移对业务影响最小并按�
 
 - **Azure 迁移数据表**
 
-    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_数据表](https://aka.ms/azuremigration\_datasheet)
 
-- **Azure Migrate**
+- **Azure 迁移**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 

@@ -1,11 +1,12 @@
 ---
-title: "类型提升 (Visual Basic)"
-ms.custom: 
+title: 类型提升 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3a55c023afe7afe96f862f0b3cbbdb03a15b902
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddb0d61f0f1c94e8e28493d0c62afe1e09503804
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-promotion-visual-basic"></a>类型提升 (Visual Basic)
-当你声明一个模块中的编程元素时[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提升其作用域限制为包含该模块的命名空间。 这称为*类型提升*。  
+在声明中模块的编程元素时，Visual Basic 会将其范围到包含该模块的命名空间的提升。 这称为*类型提升*。  
   
  下面的示例演示了模块的主干定义而且该模块的两个成员。  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- 在前面的示例中，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]无法提升类`abc`到`thisNameSpace`原因是已经存在具有相同名称在命名空间级别的枚举。 访问`abcSub`，必须使用完全限定字符串`thisNamespace.thisModule.abc.abcSub`。 但是，类`xyz`仍会提升，并且可以访问`xyzSub`与使用较短的限定字符串`thisNamespace.xyz.xyzSub`。  
+ 在前面的示例中，Visual Basic 不能将升级类`abc`到`thisNameSpace`原因是已经存在具有相同名称在命名空间级别的枚举。 访问`abcSub`，必须使用完全限定字符串`thisNamespace.thisModule.abc.abcSub`。 但是，类`xyz`仍会提升，并且可以访问`xyzSub`与使用较短的限定字符串`thisNamespace.xyz.xyzSub`。  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>分部类型的类型提升的失效  
  如果类或结构在模块内的使用[部分](../../../../visual-basic/language-reference/modifiers/partial.md)关键字，类型提升会自动失效该类或结构，无论该命名空间具有具有相同名称的成员。 该模块中的其他元素都仍可进行类型提升。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **完全限定。** 当你使用模块和相同的命名空间中的其他元素时，最安全的方法是始终对所有的编程元素中使用完全限定。 如果使某个模块成员的类型提升并不完全限定该成员，你无意中无法访问不同的编程元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Module 语句](../../../../visual-basic/language-reference/statements/module-statement.md)  
  [Namespace 语句](../../../../visual-basic/language-reference/statements/namespace-statement.md)  
  [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  

@@ -1,23 +1,24 @@
 ---
-title: "使用活动委托"
-ms.custom: 
+title: 使用活动委托
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="using-activity-delegates"></a>使用活动委托
 通过活动委托，活动作者可以公开具有特定签名的回调，活动的用户可为其提供基于活动的处理程序。 可以使用两种类型的活动委托：<xref:System.Activities.ActivityAction%601> 用于定义没有返回值的活动委托，<xref:System.Activities.ActivityFunc%601> 用于定义有返回值的活动委托。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]对象初始值设定项，请参阅[如何： 初始化对象而不会调用构造函数 （C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=161015)和[如何： 使用对象初始值设定项声明对象](http://go.microsoft.com/fwlink/?LinkId=161016)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 对象初始值设定项，请参阅[如何： 初始化对象而不会调用构造函数 （C# 编程指南）](http://go.microsoft.com/fwlink/?LinkId=161015)和[如何： 使用对象初始值设定项声明对象](http://go.microsoft.com/fwlink/?LinkId=161016)。  
   
  在下面的示例中，在工作流中使用一个 <xref:System.Activities.Statements.TryCatch> 活动。 该工作流引发一个 <xref:System.ApplicationException>，并由 <xref:System.Activities.Statements.Catch%601> 活动对其进行处理。 处理程序<xref:System.Activities.Statements.Catch%601>活动的活动操作是<xref:System.Activities.Statements.WriteLine>活动和异常详细信息流动到使用`ex` <xref:System.Activities.DelegateInArgument%601>。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
   
- 若要将 `TextGenerator` 活动和 `WriteRandomText` 活动一起使用，应将前者指定为 <xref:System.Activities.ActivityDelegate.Handler%2A>。  
+ 若要将 `TextGenerator` 活动和 `WriteFillerText` 活动一起使用，应将前者指定为 <xref:System.Activities.ActivityDelegate.Handler%2A>。  
   
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   

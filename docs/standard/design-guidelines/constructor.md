@@ -1,12 +1,12 @@
 ---
-title: "构造函数设计"
-ms.custom: 
+title: 构造函数设计
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines, constructors
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - default constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 66a297ed035f5afde06913b89f1f92dee5745f48
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d208511bd04d5daf9930ecf6cf53e7708ca4da3f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="constructor-design"></a>构造函数设计
 有两种类型的构造函数： 键入构造函数和实例构造函数。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/23/2017
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [成员设计准则](../../../docs/standard/design-guidelines/member.md)  

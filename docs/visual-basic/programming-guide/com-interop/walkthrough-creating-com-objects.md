@@ -1,11 +1,12 @@
 ---
-title: "演练：使用 Visual Basic 创建 COM 对象"
-ms.custom: 
+title: 演练：使用 Visual Basic 创建 COM 对象
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], creating COM objects
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff7d3868a2e3ddaba06ebc6f98c8eacfc7299366
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e660d672fc32455cee349dc44ad20c3244c087b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>演练：使用 Visual Basic 创建 COM 对象
-创建新的应用程序或组件时，则最好创建.NET Framework 程序集。 但是，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]还可以轻松地公开给 com。 是.NET Framework 组件 这使你能够新组件需要 COM 组件的早期应用程序套件。 本演练演示如何使用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]公开[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]作为 COM 对象，使用或不使用 COM 类模板的对象。  
+创建新的应用程序或组件时，则最好创建.NET Framework 程序集。 但是，Visual Basic 还可以轻松地公开给 com。 是.NET Framework 组件 这使你能够新组件需要 COM 组件的早期应用程序套件。 本演练演示如何使用 Visual Basic 公开[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]作为 COM 对象，使用或不使用 COM 类模板的对象。  
   
  公开 COM 对象的最简单方法是使用 COM 类模板。 COM 类模板创建一个新的类，然后配置你的项目生成为 COM 对象的类和互操作性层，并将其注册到操作系统。  
   
 > [!NOTE]
->  虽然你还可以公开中创建的类[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]作为 COM 对象以供使用的非托管代码，它不是真正的 COM 对象并且不能由[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 有关详细信息，请参阅[在.NET Framework 应用程序的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
+>  尽管你可以公开为 COM 对象以供使用的非托管代码在 Visual Basic 中创建的类，但它不是真正的 COM 对象，并且不能由 Visual Basic。 有关详细信息，请参阅[在.NET Framework 应用程序的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -41,11 +42,11 @@ ms.lasthandoff: 11/21/2017
   
 3.  选择**添加新项**从**项目**菜单。 随即出现“添加新项”对话框。  
   
-4.  选择**COM 类**从**模板**列表，，然后单击**添加**。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]添加了一个新类并配置 COM 互操作的新项目。  
+4.  选择**COM 类**从**模板**列表，，然后单击**添加**。 Visual Basic 添加了一个新类和配置 COM 互操作的新项目。  
   
 5.  将如属性、 方法和事件的代码添加到的 COM 类。  
   
-6.  选择**生成 ClassLibrary1**从**生成**菜单。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]生成程序集和与操作系统中注册的 COM 对象。  
+6.  选择**生成 ClassLibrary1**从**生成**菜单。 Visual Basic 生成程序集和与操作系统中注册的 COM 对象。  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>创建不使用 COM 类模板的 COM 对象  
  你还可以创建手动而不是使用 COM 类模板的 COM 类。 当你正在从命令行或要更好地控制如何定义 COM 对象时，此过程非常有用。  
@@ -93,12 +94,12 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
-9. 将属性、 方法和事件添加到类，它与结束`End Class`语句。 选择**生成解决方案**从**生成**菜单。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]生成程序集和与操作系统中注册的 COM 对象。  
+9. 将属性、 方法和事件添加到类，它与结束`End Class`语句。 选择**生成解决方案**从**生成**菜单。 Visual Basic 生成程序集和与操作系统中注册的 COM 对象。  
   
     > [!NOTE]
-    >  使用生成的 COM 对象[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]不能由其他[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]应用程序因为它们不是真正的 COM 对象。 尝试将引用添加到此类的 COM 对象将引发错误。 有关详细信息，请参阅[在.NET Framework 应用程序的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
+    >  使用 Visual Basic 生成的 COM 对象无法供其他 Visual Basic 应用程序，因为它们不是真正的 COM 对象。 尝试将引用添加到此类的 COM 对象将引发错误。 有关详细信息，请参阅[在.NET Framework 应用程序的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.ComClassAttribute>  
  [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
  [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  

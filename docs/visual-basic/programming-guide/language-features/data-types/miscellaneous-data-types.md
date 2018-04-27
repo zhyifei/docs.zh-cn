@@ -1,29 +1,30 @@
 ---
-title: "其他数据类型 (Visual Basic)"
-ms.custom: 
+title: 其他数据类型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6bb86bb6d203aa4e6bdded27a4cb78a8155ddec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f80aacccab4c215b3e3917cc73097080aa6b9941
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>其他数据类型 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供不是针对数字或字符的几种数据类型。 相反，它们处理专用数据如是/否值、 日期/时间值和对象地址。  
+Visual Basic 提供不是针对数字或字符的几种数据类型。 相反，它们处理专用数据如是/否值、 日期/时间值和对象地址。  
   
- 显示的并排显示比较表[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]数据类型，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
+ 显示 Visual Basic 数据类型的并排显示比较的表，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
   
 ## <a name="boolean-type"></a>布尔值类型  
  [布尔数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)是解释为无符号的值`True`或`False`。 其数据宽度取决于实现的平台。 如果变量可以包含如 true/false，只有两种状态值是/否，或打开/关闭，将其声明为`Boolean`。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  利用`Object`数据类型是，可以使用它来存储任何数据类型的数据。 其缺点在于，会产生额外的操作需要更多的执行时间，使得你的应用程序执行速度减慢。 如果你使用`Object`变量为值类型，你会产生*装箱*和*取消装箱*。 如果你使用它为引用类型，则会引发*后期绑定*。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
  [数值数据类型](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  

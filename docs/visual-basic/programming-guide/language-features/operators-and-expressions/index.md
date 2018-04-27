@@ -20,11 +20,11 @@ ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dae47988e27ed4b1a714943ce1fbffe3b815066b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c32ce34dc7d6cb662ebdb42a3d3431f8107687f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic 中的运算符和表达式
 运算符是对包含值的一个或多个代码元素执行运算的代码元素。 值元素包括变量、常量、文本、属性、`Function` 和 `Operator` 过程的返回结果以及表达式。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  表达式是一系列与运算符结合使用的值元素，将生成新值。 运算符通过执行计算、比较或其他运算来处理值元素。  
   
 ## <a name="types-of-operators"></a>运算符类型  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 提供以下类型的运算符：  
+ Visual Basic 提供以下类型的运算符：  
   
 -   [算术运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)：对数字值执行常见计算，包括更改位模式。  
   
@@ -69,11 +69,11 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
- 在上面的示例中，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 在赋值运算符 (`=`) 右侧的表达式中执行运算，再将生成的值赋给左侧变量 `x`。 对于可以合并到表达式中的运算符数量没有实际限制，但需要了解 [Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)，以确保结果符合预期。  
+ 在前面的示例中，Visual Basic 所执行的赋值运算符右侧的表达式中的操作 (`=`)，然后将生成的值分配给变量`x`左侧。 对于可以合并到表达式中的运算符数量没有实际限制，但需要了解 [Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)，以确保结果符合预期。  
   
  有关详细信息和示例，请参阅 [Visual Basic 2005 中的运算符重载](http://go.microsoft.com/fwlink/?LinkId=101703)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符](../../../../visual-basic/language-reference/operators/index.md)  
  [运算符的有效组合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)  
  [语句](../../../../visual-basic/language-reference/statements/index.md)

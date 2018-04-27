@@ -1,24 +1,26 @@
 ---
-title: "流处理源示例"
-ms.custom: 
+title: 流处理源示例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e3d2de4dd5510b212e030ea537cea0be3dce24f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-feeds-sample"></a>流处理源示例
 此示例演示如何管理包含大量项的联合源。 在服务器上，此示例演示如何延迟在源中创建各个 <xref:System.ServiceModel.Syndication.SyndicationItem> 对象，一直到项就要被写入网络流之前。  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  为了最充分地演示联合 API 的流处理功能，此示例使用了一个似乎不可能的方案，在这个方案中，服务器公开一个包含无数个项的源。 在这种情况下，服务器继续在源中生成新的项，一直到它认为客户端已从源中读取指定数目（默认为 10）的项为止。 为简单起见，客户端和服务器是在同一个进程中实现的，并且使用一个共享 `ItemCounter` 对象跟踪客户端生成的项数。 `ItemCounter` 类型存在的唯一目的是为了使示例方案能够完全终止，它并不是所演示的模式的核心元素。  
   
- 演示使用[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]迭代器 (使用`yield``return`关键字构造)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]迭代器，请参阅 MSDN 上的“使用迭代器”主题。  
+ 演示将使用的 Visual C# 中迭代器 (使用`yield``return`关键字构造)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]迭代器，请参阅 MSDN 上的“使用迭代器”主题。  
   
 ## <a name="service"></a>服务  
  服务实现包含一个操作的基本 <xref:System.ServiceModel.Web.WebGetAttribute> 协定，如下面的代码所示。  

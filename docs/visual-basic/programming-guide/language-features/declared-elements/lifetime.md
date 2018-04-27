@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 中的生存期"
-ms.custom: 
+title: Visual Basic 中的生存期
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 999490885571889b2de911cc14754f8db257d0af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的生存期
 *生存期*的已声明的元素是的时间段期间它是可供使用。 变量是具有生存期的唯一元素。 为此，编译器将过程参数和函数返回值视为变量的特殊情况。 变量的生存期表示在此期间它可以存放一个值的时间。 其值可以更改在其生存期内，但它始终包含一些值。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  在过程内块内声明的变量 (如`For`循环) 初始化在进入该过程。 无论你的代码执行该块，则这些初始化会生效。  
   
 ## <a name="end-of-lifetime"></a>生存期结束时的  
- 当过程终止时，将不会保留其本地变量的值，和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]回收其内存。 下次调用过程中，所有其本地变量重新创建和重新初始化。  
+ 当过程终止时，不保留其本地变量的值，并 Visual Basic 回收其内存。 下次调用过程中，所有其本地变量重新创建和重新初始化。  
   
  当类或结构的实例终止时，其非共享的变量将丢失其内存和它们的值。 每个类或结构的新实例创建，并重新初始化其非共享的变量。 但是，`Shared`变量被保留，直到你的应用程序停止运行。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 |类的实例中不`Shared`（过程是一个实例成员）|第一次特定实例上调用过程|当垃圾回收 (GC) 释放该实例|  
   
 ## <a name="static-variables-of-the-same-name"></a>具有相同名称的静态变量  
- 您可以声明具有相同名称在多个过程中的静态变量。 如果执行此操作，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器将每个此类变量视为一个单独的元素。 其中一个变量的初始化并不影响其他的值。 这同样适用如果定义一个具有一组重载过程并声明中每个重载具有相同名称的静态变量。  
+ 您可以声明具有相同名称在多个过程中的静态变量。 如果执行此操作时，Visual Basic 编译器会将每个此类变量视为一个单独的元素。 其中一个变量的初始化并不影响其他的值。 这同样适用如果定义一个具有一组重载过程并声明中每个重载具有相同名称的静态变量。  
   
 ## <a name="containing-elements-for-static-variables"></a>静态变量包含的元素  
  你可以在该类中的过程，即声明静态局部变量一个类中。 但是，不能声明为静态局部变量结构中，为结构成员或为该结构内的一个过程的局部变量。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="security"></a>安全性  
  在前面的示例中，您可以通过声明中生成相同的生存期`applesSold`在模块级别。 如果发生这种方式更改变量的作用域，但是，该过程将不再具有到它的独占访问权限。 由于无法访问其他过程`applesSold`并将其值更改，运行总计可能是不可靠并且代码可能会更难以维护。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)  
  [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

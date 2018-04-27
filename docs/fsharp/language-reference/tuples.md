@@ -1,7 +1,7 @@
 ---
-title: "元组 (F#)"
-description: "了解有关 F # 元组的未命名，但有序值，可能具有不同的类型的组。"
-keywords: "visual f#, f#, 函数编程"
+title: 元组 (F#)
+description: '了解有关 F # 元组的未命名，但有序值，可能具有不同的类型的组。'
+keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e0a5e5eb08e13bd5cbe9f88a47d4cf4bba19ea22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tuples"></a>元组
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>与 C# 元组间的互操作
 
-C# 7 引入语言的元组。  在 C# 中的元组是结构，并且等效于在 F # 中的结构元组。  如果你需要与 C# 进行互操作，你必须使用结构元组。
+C# 7.0 引入语言的元组。  在 C# 中的元组是结构，并且等效于在 F # 中的结构元组。  如果你需要与 C# 进行互操作，你必须使用结构元组。
 
 这是很简单的操作。  例如，假设你需要将元组传递给 C# 类并随后使用其结果，也是一个元组：
 
@@ -119,7 +119,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-必须模式匹配上一个元组，并构造另一种具有构成部分。  例如:
+必须模式匹配上一个元组，并构造另一种具有构成部分。  例如：
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
@@ -130,7 +130,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 ### <a name="compiled-form-of-struct-tuples"></a>结构元组的已编译的形式
 
-结构元组 (例如， `struct (x, y)`)，从根本上不同于引用元组。  编译为<xref:System.ValueTuple>arity 或类型参数的数目的重载的类型。  它们是等效于[C# 7 元组](../../csharp/tuples.md)和[Visual Basic 自 2017 年 1 元组](../../visual-basic/programming-guide/language-features/data-types/tuples.md)，又能交互双向。
+结构元组 (例如， `struct (x, y)`)，从根本上不同于引用元组。  编译为<xref:System.ValueTuple>arity 或类型参数的数目的重载的类型。  它们是等效于[C# 7.0 元组](../../csharp/tuples.md)和[Visual Basic 自 2017 年 1 元组](../../visual-basic/programming-guide/language-features/data-types/tuples.md)，又能交互双向。
 
 ## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)

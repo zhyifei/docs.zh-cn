@@ -1,12 +1,13 @@
 ---
-title: "如何：在字符串中放置引号（Windows 窗体）"
-ms.custom: 
+title: 如何：在字符串中放置引号（Windows 窗体）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 267a69b9470040dfc60f3c0b280b71e3f52dbc88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd7c6a460f24b1406ad914e20b9113920814737c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：在字符串中放置引号（Windows 窗体）
-有时可能需要将引号（“”）放入文本字符串中。 例如:  
+有时可能需要将引号（“”）放入文本字符串中。 例如：  
   
  她说：“该好好款待你了！”  
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>在代码中的字符串内放置引号  
   
-1.  在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中，将两个引号插入一行中作为嵌入引号。 在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)] 中，插入转义序列 \\" 作为嵌入引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
+1.  在 Visual Basic 中，将作为一个嵌入的引号插入行中的两个引号引起来。 在 Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]，插入此转义序列\\"作为一个嵌入的引号。 例如，若要创建前面提到的字符串，请使用下面的代码。  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -59,9 +61,9 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     或  
+     -或-  
   
-2.  插入 ASCII 字符或 Unicode 字符表示引号。 在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中，使用 ASCII 字符 (34)。 在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中，使用 Unicode 字符 (\u0022)。  
+2.  插入 ASCII 字符或 Unicode 字符表示引号。 在 Visual Basic 中，使用 ASCII 字符 (34)。 在 Visual C# 中，使用 Unicode 字符 (\u0022)。  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -78,7 +80,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  在本示例中，不能使用 \u0022，因为不能使用指定基本字符集中字符的通用字符名。 否则，将产生 C3851。 有关详细信息，请参阅[编译器错误 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)。  
   
-     或  
+     -或-  
   
 3.  还可以为该字符定义一个常数，然后在需要时使用。  
   

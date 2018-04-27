@@ -1,12 +1,13 @@
 ---
-title: "如何：创建 MDI 子窗体"
-ms.custom: 
+title: 如何：创建 MDI 子窗体
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d28a7390ea3cfbd922f029d963ad3249db399177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>如何：创建 MDI 子窗体
 MDI 子窗体是必不可少的元素[多文档界面 (MDI) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)，因为这些窗体是用户交互的中心。  
@@ -47,7 +49,7 @@ MDI 子窗体是必不可少的元素[多文档界面 (MDI) 应用程序](../../
   
 4.  在**解决方案资源管理器**，右键单击项目，指向**添加**，然后选择**添加新项**。  
   
-5.  在**添加新项**对话框中，选择**Windows 窗体**(在[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]或[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) 或**Windows 窗体应用程序 (.NET)** (在[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])从**模板**窗格。 在**名称**框中，将窗体**Form2**。 单击**打开**按钮以向项目添加窗体。  
+5.  在**添加新项**对话框中，选择**Windows 窗体**（在 Visual Basic 或 Visual C# 中） 或**Windows 窗体应用程序 (.NET)** (在[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 从**模板**窗格。 在**名称**框中，将窗体**Form2**。 单击**打开**按钮以向项目添加窗体。  
   
     > [!NOTE]
     >  在此步骤中创建的 MDI 子窗体是标准的 Windows 窗体。 因此，它具有 <xref:System.Windows.Forms.Form.Opacity%2A> 属性，该属性允许你控制窗体的透明度。 但是，<xref:System.Windows.Forms.Form.Opacity%2A> 属性旨在用于顶级窗口。 不要将其与 MDI 子窗体同时使用，否则可能会引起绘制问题。  

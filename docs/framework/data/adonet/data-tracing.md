@@ -1,27 +1,29 @@
 ---
-title: "ADO.NET 中的数据跟踪"
-ms.custom: 
+title: ADO.NET 中的数据跟踪
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: df958982739c7ab2fd7aba42918b919c25d86829
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 377c69feda356aee9e11720cf12c9c97158d45a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的数据跟踪
-ADO.NET 具有内置数据跟踪功能，用于 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 的 .NET 数据提供程序以及 ADO.NET <xref:System.Data.DataSet> 和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 网络协议均支持此功能。  
+ADO.NET 具有内置数据跟踪功能的.NET 数据提供程序支持的 SQL Server、 Oracle、 OLE DB 和 ODBC，以及 ADO.NET <xref:System.Data.DataSet>，和 SQL Server 网络协议。  
   
  跟踪数据访问 API 调用可以帮助诊断以下问题：  
   
@@ -40,7 +42,7 @@ ADO.NET 具有内置数据跟踪功能，用于 [!INCLUDE[ssNoVersion](../../../
  有关设置和在 ADO.NET 中配置托管的跟踪的详细信息，请参阅[跟踪数据访问](http://msdn.microsoft.com/library/hh880086.aspx)。  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息  
- 在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]数据提供程序[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]，数据访问跟踪 ([数据访问跟踪](http://msdn.microsoft.com/library/hh880086.aspx)) 已更新，便于更轻松地将客户端事件与诊断信息，如连接失败，关联从服务器的连接环形缓冲区和应用程序性能信息在扩展的事件日志中。 有关读取扩展的事件日志的信息，请参阅[查看事件会话数据](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx)。  
+ 在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]对于 SQL Server 的数据提供程序，数据访问跟踪 ([数据访问跟踪](http://msdn.microsoft.com/library/hh880086.aspx)) 已更新，便于更轻松地将客户端事件与诊断信息，如连接失败，关联从服务器的连接环形缓冲区和应用程序性能信息在扩展的事件日志中。 有关读取扩展的事件日志的信息，请参阅[查看事件会话数据](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx)。  
   
  对于连接操作，ADO.NET 将发送一个客户端连接 ID。 如果连接失败，你可以访问连接环形缓冲区 ([连接中使用连接环形缓冲区的 SQL Server 2008 的故障排除](http://go.microsoft.com/fwlink/?LinkId=207752)) 并查找`ClientConnectionID`字段和获取有关的诊断信息连接失败。 如果出现错误，则将客户端连接 ID 记录在环形缓冲区中。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 为 16 字节的 GUID。 如果 `client_connection_id` 操作已添加到扩展事件会话中的事件，则还可以在扩展事件目标输出中找到查找客户端连接 ID。 如果需要进一步的客户端驱动程序诊断帮助，可以启用数据访问跟踪并重新运行连接命令，然后观察 `ClientConnectionID` 字段。  
   

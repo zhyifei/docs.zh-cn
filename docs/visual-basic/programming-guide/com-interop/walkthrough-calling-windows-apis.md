@@ -1,11 +1,12 @@
 ---
-title: "演练：调用 Windows API (Visual Basic)"
-ms.custom: 
+title: 演练：调用 Windows API (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - DLLs, calling
@@ -17,23 +18,23 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d494ad0f8bd4eb0dac57de214064fd2d208011ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34bfb732e2d99b259811573a427ae66628c7fc3a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>演练：调用 Windows API (Visual Basic)
 Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 你可以使用它们难以编写你自己的等效过程时执行任务。 例如，Windows 提供了一个名为函数`FlashWindowEx`，能让你将应用程序的标题栏显现深色和浅色之间切换。  
   
  在代码中使用 Windows Api 的优点是，它们可节省开发时间，因为它们包含大量已写入的有用的函数和等待使用。 其缺点在于 Windows Api 可能很难使用，并不出现问题时。  
   
- Windows Api 表示一类特殊的互操作性。 Windows Api 并使用托管的代码，并没有内置类型库，并使用有别于那些与 Visual Studio 一起使用的数据类型。 由于这些差异，而是因为 Windows Api 不是 COM 对象，与 Windows Api 互操作性和[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]执行使用平台调用，或 PInvoke。 平台调用是一项服务，使托管代码能够调用在 Dll 中实现的非托管的函数。 有关详细信息，请参阅[使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)。 你可以使用中的 PInvoke[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]使用`Declare`语句或应用`DllImport`属性设为一个空过程。  
+ Windows Api 表示一类特殊的互操作性。 Windows Api 并使用托管的代码，并没有内置类型库，并使用有别于那些与 Visual Studio 一起使用的数据类型。 由于这些差异，而是因为 Windows Api 不是 COM 对象，与 Windows Api 互操作性和[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]执行使用平台调用，或 PInvoke。 平台调用是一项服务，使托管代码能够调用在 Dll 中实现的非托管的函数。 有关详细信息，请参阅[使用非托管 DLL 函数](../../../framework/interop/consuming-unmanaged-dll-functions.md)。 你可以通过使用 Visual Basic 中使用 PInvoke`Declare`语句或应用`DllImport`属性设为一个空过程。  
   
- Windows API 调用中的一个重要部分[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编程在过去，但很少需要使用 Visual Basic.NET。 只要可能，应使用从托管的代码[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]执行任务，而不是 Windows API 调用。 本演练提供了用于这些情况中的使用的信息是必需的 Windows Api。  
+ Windows API 调用已在过去，编程的 Visual Basic 的一个重要部分，但很少需要使用 Visual Basic.NET。 只要可能，应使用从托管的代码[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]执行任务，而不是 Windows API 调用。 本演练提供了用于这些情况中的使用的信息是必需的 Windows Api。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -49,7 +50,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 你
   
 2.  通过单击打开新的 Windows 应用程序项目**新建**上**文件**菜单上，，然后单击**项目**。 此时将出现 “新建项目” 对话框。  
   
-3.  选择**Windows 应用程序**从列表中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]项目模板。 将显示新项目。  
+3.  选择**Windows 应用程序**从 Visual Basic 项目模板列表中。 将显示新项目。  
   
 4.  添加以下`Declare`函数到类或想要使用该 DLL 的模块：  
   
@@ -66,13 +67,13 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 你
   
  指定`Lib`关键字后, 跟的名称和包含要调用的函数的 dll 的位置。 不需要指定的 Windows 系统目录中的文件的路径。  
   
- 使用`Alias`如果要调用的函数的名称不是有效的关键字[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]过程名称或与你的应用程序中的其他项的名称冲突。 `Alias`指示被调用函数的真实名称。  
+ 使用`Alias`关键字正在调用的函数的名称不是有效的 Visual Basic 过程名称，或与你的应用程序中的其他项的名称冲突。 `Alias` 指示被调用函数的真实名称。  
   
 #### <a name="argument-and-data-type-declarations"></a>自变量和数据类型声明  
- 声明参数和其数据类型。 此部分会很困难，因为 Windows 使用的数据类型并不对应于 Visual Studio 数据类型。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]通过将参数转换为兼容的数据类型，名为的过程可为你进行大量工作*封送处理*。 你可以显式控制自变量封送的方式使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>中定义特性<xref:System.Runtime.InteropServices>命名空间。  
+ 声明参数和其数据类型。 此部分会很困难，因为 Windows 使用的数据类型并不对应于 Visual Studio 数据类型。 Visual Basic 可通过将参数转换为兼容的数据类型，名为的过程为你进行大量工作*封送处理*。 你可以显式控制自变量封送的方式使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>中定义特性<xref:System.Runtime.InteropServices>命名空间。  
   
 > [!NOTE]
->  以前版本的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]来声明参数`As Any`，这意味着该数据的任何数据就无法使用类型。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]需要对所有使用特定的数据类型`Declare`语句。  
+>  Visual Basic 早期版本允许您可以声明参数`As Any`，这意味着该数据的任何数据就无法使用类型。 Visual Basic 要求对所有使用特定的数据类型`Declare`语句。  
   
 #### <a name="windows-api-constants"></a>Windows API 常量  
  某些参数是常量的组合。 例如，`MessageBox`本演练中所示的 API 接受整数自变量调用的`Typ`控制消息框的显示方式。 你可以通过检查来确定这些常量的数值`#define`文件参见 WinUser.h 中的语句。 以十六进制表示，通常显示的数字值，因此你可能想要使用一个计算器来添加它们并转换为十进制数。 例如，如果你想要合并的感叹号样式的常量`MB_ICONEXCLAMATION`0x00000030 和是/无样式`MB_YESNO`0x00000004，你可以将数字并获取结果 0x00000034 52 十进制。 虽然可以直接使用十进制的结果，则最好将这些值作为你的应用程序中的常量声明并将其组合使用`Or`运算符。  
@@ -85,7 +86,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 你
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3.  添加等效`Const`到你的类或模块，以使这些常量可供你的应用程序的语句。 例如:   
+3.  添加等效`Const`到你的类或模块，以使这些常量可供你的应用程序的语句。 例如：  
   
      [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
   
@@ -100,7 +101,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 你
 3.  按 F5 运行项目。 两种版本同时显示消息框**是**和**否**响应按钮。 单击其中任何一个。  
   
 #### <a name="data-marshaling"></a>数据封送处理  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]自动转换为数据类型的参数和返回值为 Windows API 调用，但你可以使用`MarshalAs`属性来显式指定的 API 需要的非托管的数据类型。 关于互操作封送处理的详细信息，请参阅[互操作封送处理](../../../framework/interop/interop-marshaling.md)。  
+ Visual Basic 会自动将转换数据类型的参数和返回值为 Windows API 调用，但你可以使用`MarshalAs`属性来显式指定的 API 需要的非托管的数据类型。 关于互操作封送处理的详细信息，请参阅[互操作封送处理](../../../framework/interop/interop-marshaling.md)。  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>要在 API 调用中使用 Declare 和 MarshalAs  
   
@@ -115,7 +116,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 你
      [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
 ## <a name="api-calls-using-dllimport"></a>使用 DllImport API 调用  
- `DllImport`属性提供了不带类型库 Dll 中调用函数的第二个方法。 `DllImport`大致相当于使用`Declare`语句，但可以更好地控制函数的调用方式。  
+ `DllImport`属性提供了不带类型库 Dll 中调用函数的第二个方法。 `DllImport` 大致相当于使用`Declare`语句，但可以更好地控制函数的调用方式。  
   
  你可以使用`DllImport`与大多数 Windows API 调用，只要调用指共享 (有时称为*静态*) 方法。 不能使用需要的类的实例的方法。 与不同`Declare`语句，`DllImport`调用不能使用`MarshalAs`属性。  
   
@@ -123,7 +124,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 你
   
 1.  通过单击打开新的 Windows 应用程序项目**新建**上**文件**菜单上，，然后单击**项目**。 此时将出现 “新建项目” 对话框。  
   
-2.  选择**Windows 应用程序**从列表中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]项目模板。 将显示新项目。  
+2.  选择**Windows 应用程序**从 Visual Basic 项目模板列表中。 将显示新项目。  
   
 3.  添加名为的按钮`Button2`到启动窗体。  
   
@@ -155,7 +156,7 @@ Windows Api 是动态链接库 (Dll) 的 Windows 操作系统的一部分。 你
   
 12. 单击**Button2**。 如果可以移动该文件，将显示"该文件已成功移动"消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.DllImportAttribute>  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  

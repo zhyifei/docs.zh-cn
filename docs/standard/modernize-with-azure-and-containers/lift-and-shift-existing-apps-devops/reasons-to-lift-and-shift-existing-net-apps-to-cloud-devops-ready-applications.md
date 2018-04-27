@@ -1,18 +1,19 @@
 ---
-title: "到提起并移动现有的.NET 应用到云 DevOps 通用应用程序的原因"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |到提起并移动现有的.NET 应用到云 DevOps 通用应用程序的原因"
+title: 到提起并移动现有的.NET 应用到云 DevOps 通用应用程序的原因
+description: 为容器化的.NET 应用程序的.NET 微服务体系结构 |到提起并移动现有的.NET 应用到云 DevOps 通用应用程序的原因
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1339264f49a065888a95e6ef6fe8575aa3c75564
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: b6a65dfff45b240e89ab22fd7eba82d6cdbc27b8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reasons-to-lift-and-shift-existing-net-apps-to-cloud-devops-ready-applications"></a>到提起并移动现有的.NET 应用到云 DevOps 通用应用程序的原因
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 03/08/2018
 
 > ![重要的云就绪 DevOps 应用程序的主要元素](./media/image2.png)
 >
-> **图 4-2。** 重要的云就绪 DevOps 应用程序的主要元素
+> **图 4-2**。 重要的云就绪 DevOps 应用程序的主要元素
 
 总之，云 DevOps 就绪应用程序是一种方法构建和管理应用程序利用云计算模型时使用的容器、 托管的云基础结构、 有弹性的应用程序的方法，组合的监视、 持续交付和 DevOps，所有操作都无需重新设计和重新编写你现有的应用程序。
 

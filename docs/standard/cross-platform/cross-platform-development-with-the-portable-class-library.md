@@ -1,30 +1,30 @@
 ---
-title: "使用可移植类库的跨平台开发"
-ms.custom: 
+title: 使用可移植类库的跨平台开发
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Portable Class Library [.NET Framework]
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: "95"
+caps.latest.revision: 95
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e6b853c3548f27bbb4056f7d59d51a6964e0d91
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>使用可移植类库的跨平台开发
 Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速轻松地为 Microsoft 平台构建跨平台应用和库。  
@@ -38,7 +38,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
  Visual Studio 提供了帮助你使用可移植类库进行开发的模板。 根据你正在使用的 Visual Studio 版本，可用的模板和菜单可能会与本文中所述的有所不同。  
   
 > [!WARNING]
->  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)包括对可移植类库模板的更新。 如果你具有较早版本的 Visual Studio 和 Visual Studio 2013 安装在同一台计算机，然后再安装 Update 2 中，对更改**目标框架**选择将应用于这两个版本的 Visual Studio。  
+>  Visual Studio 2013 Update 2 包括对可移植类库模板的更新。 如果你具有较早版本的 Visual Studio 和 Visual Studio 2013 安装在同一台计算机，然后再安装 Update 2 中，对更改**目标框架**选择将应用于这两个版本的 Visual Studio。  
   
  本主题内容：  
   
@@ -59,10 +59,10 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
 |-----------------------|---------------------------------------------------|  
 |Visual Studio 2010 专业版、高级专业版或旗舰版|是的当你安装[可移植库工具](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2)。|  
 |Visual Studio Express 2010 版|不是。|  
-|Visual Studio 2012 专业版、高级专业版或旗舰版|可以。 电话支持安装[Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772)。|  
+|Visual Studio 2012 专业版、高级专业版或旗舰版|可以。 对于 Windows Phone 8.0 支持安装[Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)。|  
 |Visual Studio Express 2012 版|不是。|  
-|Visual Studio 2013 专业版、高级专业版或旗舰版|可以。 对于 Windows Phone 8.1 支持，请安装[Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)。|  
-|Visual Studio Express 2013 for Windows|是的当你安装[最新版本的 Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629)，其中包括 Update 2 中，或添加[Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)。|  
+|Visual Studio 2013 专业版、高级专业版或旗舰版|可以。 对于 Windows Phone 8.1 支持，请安装[最新版本的 Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/)。|  
+|适用于 Windows 的 visual Studio Community 2013|是的当你安装[最新版本的 Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/)，其中包括 Update 2。|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>创建可移植类库项目  
@@ -152,10 +152,10 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
   
  ➊ 要求[Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/)包  
  ➋ 要求[Microsoft 压缩](https://www.nuget.org/packages/Microsoft.Bcl.Compression)包  
- ➌ 要求[Microsoft HTTP 客户端库](http://www.nuget.org/packages/Microsoft.Net.Http)包  
+ ➌ 要求[Microsoft HTTP 客户端库](https://www.nuget.org/packages/Microsoft.Net.Http)包  
   
 > [!WARNING]
->  当你引用时，你可能会遇到错误[Microsoft 压缩](https://www.nuget.org/packages/Microsoft.Bcl.Compression)和[Microsoft HTTP 客户端库](http://www.nuget.org/packages/Microsoft.Net.Http)Windows Phone Silverlight 8.1 应用使用的可移植库中的包。 有关详细信息，请参阅[平台兼容性和重大更改的 Windows Phone Silverlight 8.1 应用](http://go.microsoft.com/fwlink/p/?LinkId=394744)。  
+>  当你引用时，你可能会遇到错误[Microsoft 压缩](https://www.nuget.org/packages/Microsoft.Bcl.Compression)和[Microsoft HTTP 客户端库](https://www.nuget.org/packages/Microsoft.Net.Http)Windows Phone Silverlight 8.1 应用使用的可移植库中的包。 有关详细信息，请参阅[平台兼容性和重大更改的 Windows Phone Silverlight 8.1 应用](/previous-versions/windows/apps/dn642084(v=vs.105))。  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>支持的类型和成员  
@@ -197,7 +197,7 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
  当你创建引用可移植类库程序集的 Windows 应用商店或 Windows Phone 应用时，部署该应用所需的一切皆包含在该应用包中，且无需执行进一步的步骤。  
   
 ### <a name="deploying-a-net-framework-app"></a>部署 .NET Framework 应用  
- 部署引用可移植类库程序集的 .NET Framework 应用时，你必须指定一个对 .NET Framework 正确版本的依赖项。 通过指定此依赖项，可确保与你的应用程序一起安装所需的版本。 如果面向.NET Framework 4 或更高版本，计算机必须具有与.NET Framework 4[更新](http://go.microsoft.com/fwlink/?LinkId=210824)，Update 4.0.3 for.NET Framework 4 中或安装了.NET Framework 4.5。  
+ 部署引用可移植类库程序集的 .NET Framework 应用时，你必须指定一个对 .NET Framework 正确版本的依赖项。 通过指定此依赖项，可确保与你的应用程序一起安装所需的版本。 如果面向.NET Framework 4 或更高版本，计算机必须具有与.NET Framework 4[更新](https://www.microsoft.com/download/details.aspx?id=3556)，Update 4.0.3 for.NET Framework 4 中或安装了.NET Framework 4.5。  
   
 -   若要创建 ClickOnce 部署的依赖项： 在**解决方案资源管理器**，选择你想要发布的项目的项目节点。 （这是引用了可移植类库项目的项目）在菜单栏上，选择**项目**，**属性**，然后选择**发布**选项卡。上**发布**页上，选择**先决条件**。 选择所需 .NET framework 版本（或 .NET Framework 4 更新）作为系统必备组件。  
   
@@ -217,9 +217,9 @@ Visual Studio 中 .NET Framework 可移植类库项目类型可帮助你快速�
     <param name="background" value="white" />  
     <param name="minRuntimeVersion" value="4.0.60129.0" />  
     <param name="autoUpgrade" value="true" />  
-    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50826.0"   
+    <a href="https://www.microsoft.com/getsilverlight/get-started/install/"   
              style="text-decoration:none">  
-      <img src=http://go.microsoft.com/fwlink/?LinkId=161376  
+      <img src=http://download.microsoft.com/download/5/1/6/5165823D-1D79-4871-8AC2-42DDDB94A5C2/PNGs/SLMedallion_ENU.png  
              alt="Get Microsoft Silverlight" style="border-style:none"/>  
     </a>  
   </object>  

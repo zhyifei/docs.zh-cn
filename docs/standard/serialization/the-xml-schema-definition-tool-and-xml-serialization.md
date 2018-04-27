@@ -1,11 +1,11 @@
 ---
-title: "XML 架构定义工具和 XML 序列化"
-ms.custom: 
+title: XML 架构定义工具和 XML 序列化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Xsd.exe
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 41a17644d2d89b83822e64d48a6a12d0dccfc2a2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 502218ec2795fcf3cf166edc8ee0852dd6b3a5d1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML 架构定义工具和 XML 序列化
 XML 架构定义工具（[XML 架构定义工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)）是作为 Windows® 软件开发工具包 (SDK) 的一部分随 .NET Framework 工具一起安装的。 该工具主要有下面两个用途：  
@@ -43,4 +43,4 @@ XML 架构定义工具（[XML 架构定义工具 (Xsd.exe)](../../../docs/standa
  [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
  [如何：使用 XML 架构定义工具生成类和 XML 架构文档](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
- [.NET Framework 中的 XML 架构绑定支持](http://msdn.microsoft.com/library/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)
+ [.NET Framework 中的 XML 架构绑定支持](https://msdn.microsoft.com/library/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)

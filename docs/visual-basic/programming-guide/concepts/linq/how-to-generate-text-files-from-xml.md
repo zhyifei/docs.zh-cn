@@ -1,28 +1,29 @@
 ---
-title: "如何： 从 XML (Visual Basic 中) 生成文本文件"
-ms.custom: 
+title: 如何： 从 XML (Visual Basic 中) 生成文本文件
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 901d31b6dbac54740404a7dc182ecbadca5ddd74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 14d70da183a1dd179d9e3665de2aba0195e37148
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>如何： 从 XML (Visual Basic 中) 生成文本文件
 本示例演示如何从 XML 文件生成逗号分隔值 (CSV) 文件。  
   
 ## <a name="example"></a>示例  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 版本使用过程代码将字符串集合聚合为一个字符串。  
+ Visual Basic 版本使用过程代码将为一个字符串的字符串集合聚合。  
   
  本示例使用下面的 XML 文档：[示例 XML 文件：客户和订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
@@ -60,5 +61,5 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [投影和转换 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

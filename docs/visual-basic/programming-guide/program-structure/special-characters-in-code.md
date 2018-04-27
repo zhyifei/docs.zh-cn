@@ -1,11 +1,12 @@
 ---
-title: "代码中的特殊字符 (Visual Basic)"
-ms.custom: 
+title: 代码中的特殊字符 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.)
@@ -36,17 +37,17 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11c5ef9ad41fc2362d9ba4f2cb5eb5b63a9ca31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>代码中的特殊字符 (Visual Basic)
-有时您必须使用特殊字符，在代码中，即，不是字母或数字的字符。 标点和特殊字符中的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字符集各有其用途，从组织程序文本到定义编译器或已编译的程序执行的任务。 它们不指定要执行的操作。  
+有时您必须使用特殊字符，在代码中，即，不是字母或数字的字符。 标点和 Visual Basic 字符集中的特殊字符各有其用途，从组织程序文本到定义编译器或已编译的程序执行的任务。 它们不指定要执行的操作。  
   
 ## <a name="parentheses"></a>括号  
  当你定义的过程中，如使用括号`Sub`或`Function`。 必须将所有过程自变量列表都括在括号中。 你还使用括号的变量或自变量置于逻辑组，特别是可重写中的复杂表达式的运算符优先级的默认顺序。 下面的示例阐释了这一点。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  按照前面的代码的值执行`d`8.225 和的值`e`为 3。 对计算`d`使用默认优先顺序，`/`通过`+`并且等效于`d = b + (c / a)`。 计算中的括号`e`重写默认的优先级。  
   
 ## <a name="separators"></a>分隔符  
- 分隔符执行其名称所示： 分隔各部分的代码。 在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，分隔符字符是冒号 (`:`)。 当你想要包括在单独的行，而不是单独的行的多个语句时，请使用分隔符。 这可以节省空间，并提高代码的可读性。 下面的示例演示用冒号分隔的三个语句。  
+ 分隔符执行其名称所示： 分隔各部分的代码。 在 Visual Basic 中的分隔符字符是冒号 (`:`)。 当你想要包括在单独的行，而不是单独的行的多个语句时，请使用分隔符。 这可以节省空间，并提高代码的可读性。 下面的示例演示用冒号分隔的三个语句。  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   
@@ -95,6 +96,6 @@ ms.lasthandoff: 11/21/2017
   
  `!`字符也用作`Single`类型字符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  [类型字符](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

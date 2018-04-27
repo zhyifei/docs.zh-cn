@@ -1,11 +1,12 @@
 ---
-title: "过程疑难解答 (Visual Basic)"
-ms.custom: 
+title: 过程疑难解答 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>过程疑难解答 (Visual Basic)
 此页列出在使用过程时可能发生的一些常见问题。  
@@ -83,11 +84,11 @@ ms.lasthandoff: 11/21/2017
   
  以下各项，即使它们涉及到参数列表中，不是签名的过程的组件：  
   
--   过程修饰符关键字，如`Public`， `Shared`，和`Static`  
+-   过程修饰符关键字，如`Public`， `Shared`，和 `Static`  
   
 -   参数名称  
   
--   参数修饰符关键字，如`ByRef`和`Optional`  
+-   参数修饰符关键字，如`ByRef`和 `Optional`  
   
 -   数据类型 （除转换运算符） 的返回值  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
  如果重载具有一个或多个过程[可选](../../../../visual-basic/language-reference/modifiers/optional.md)参数或[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数，则必须避免复制任何*隐式重载*。 有关信息，请参阅[中重载过程注意事项](./considerations-in-overloading-procedures.md)。  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>调用重载过程的错误版本  
- 如果过程有多个重载的版本，你应熟悉所有其参数列表，并了解如何[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]之间重载解析调用。 否则，你可以调用预期以外的重载。  
+ 如果过程有多个重载的版本，你应熟悉所有其参数列表，并了解如何通过 Visual Basic 来解决在重载之间的调用。 否则，你可以调用预期以外的重载。  
   
  就能确定你想要调用的重载，请务必遵守以下规则：  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>重载决策可选和 ParamArray 自变量  
  如果过程的两个重载具有完全相同的签名，只不过声明的最后一个参数[可选](../../../../visual-basic/language-reference/modifiers/optional.md)之一中和[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)中另一个，则编译器将解析对该过程的调用根据最接近的匹配。 有关详细信息，请参阅[重载解析](./overload-resolution.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [Sub 过程](./sub-procedures.md)  
  [Function 过程](./function-procedures.md)  

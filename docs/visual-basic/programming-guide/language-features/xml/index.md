@@ -9,15 +9,15 @@ ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: 1b3fc9a716bdc7c369aa7c5c9c2ed118debd2785
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11918a9bca7cc71129db17a6a41f3508b1fe66df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-in-visual-basic"></a>Visual Basic 中的 XML
 
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 提供了集成语言支持，以便能够与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 进行交互。  
+Visual Basic 提供了集成的语言支持，使它能够与交互[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 11/21/2017
   
 |主题|描述|  
 |-----------|-----------------|  
-|[Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|介绍了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 如何支持 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。|  
+|[Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)|描述如何 Visual Basic 支持[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。|  
 |[在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)|介绍了如何使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 创建 XML 文本对象。|  
 |[在 Visual Basic 中操控 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|介绍了如何使用 Visual Basic 加载和分析 XML。|  
 |[在 Visual Basic 中访问 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|介绍了 XML 轴属性，以及用于访问 XML 元素和属性的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 方法。|  

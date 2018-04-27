@@ -1,12 +1,13 @@
 ---
-title: "在 Visual Basic 中访问 XML"
-ms.custom: 
+title: 在 Visual Basic 中访问 XML
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], accessing XML
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 79c7b8a94731e151a803a041d91dd1e240ddeb97
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 064e4b224d37172b8f79e57c73164b90186ef922
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-xml-in-visual-basic"></a>在 Visual Basic 中访问 XML
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供用于访问和导航 XML 轴属性[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]结构。 这些属性使用特殊语法，可以通过指定的 XML 名称来访问元素和属性。  
+Visual Basic 提供用于访问和导航 XML 轴属性[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]结构。 这些属性使用特殊语法，可以通过指定的 XML 名称来访问元素和属性。  
   
- 下表列出了使你能够访问 XML 元素和属性中的语言功能[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 下表列出可用于访问 XML 元素和属性在 Visual Basic 中的语言功能。  
   
 ### <a name="xml-axis-properties"></a>XML 轴属性  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 |*属性轴*|`phone.@type`|获取所有`type`属性`phone`元素。|  
 |*子代轴*|`contacts...<name>`|获取所有`name`元素`contacts`元素，而不考虑如何深层他们发生层次结构中。|  
 |*扩展索引器*|`contacts...<name>(0)`|获取第一个`name`从序列的元素。|  
-|*值*|`contacts...<name>.Value`|序列中获取的字符串表示形式的第一个对象或`Nothing`如果序列为空。|  
+|*value*|`contacts...<name>.Value`|序列中获取的字符串表示形式的第一个对象或`Nothing`如果序列为空。|  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：访问 XML 子代元素](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  

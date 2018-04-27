@@ -1,24 +1,26 @@
 ---
-title: "演练：仅使用存储过程 (C#)"
-ms.custom: 
+title: 演练：仅使用存储过程 (C#)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: befc1cbafa7e2ab0a6f6ceeddf1170090f13f92d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4c13e4c12abf17f995bb819ddd7d6337407e3b28
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>演练：仅使用存储过程 (C#)
 本演练提供了通过仅执行存储过程来访问数据的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 基本端对端方案。 数据库管理员经常使用此方法来限制数据存储的访问方式。  
@@ -28,7 +30,7 @@ ms.lasthandoff: 01/17/2018
   
  出于本演练的需要，您将用到已映射到 Northwind 示例数据库中存储过程的两个方法：CustOrdersDetail 和 CustOrderHist。 此映射发生在运行 SqlMetal 命令行工具来生成 C# 文件时。 有关更多信息，请参见本演练后面的“先决条件”一节。  
   
- 本演练不依赖于[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员还可以使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 来实现存储过程功能。 请参阅[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ 本演练不依赖于[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 使用 Visual Studio 的开发人员还可以使用[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]实现存储的过程功能。 请参阅[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>概述  
  本演练由六项主要任务组成：  
   
--   在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中设置 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 解决方案。  
+-   设置[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的解决方案。  
   
 -   将 System.Data.Linq 程序集添加到项目中。  
   
@@ -67,11 +69,11 @@ ms.lasthandoff: 01/17/2018
 -   运行和测试应用程序。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
- 此任务为第一项任务，在此任务中，您要创建一个 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 解决方案，此解决方案包含生成和运行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 项目所必需的引用。  
+ 在此第一个任务中，创建一个包含必要的引用，生成并运行的 Visual Studio 解决方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  上[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]**文件**菜单上，指向**新建**，然后单击**项目**。  
+1.  在 Visual Studio**文件**菜单上，指向**新建**，然后单击**项目**。  
   
 2.  在**项目类型**窗格中的**新项目**对话框中，单击**Visual C#**。  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 01/17/2018
   
 1.  在**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-2.  在**添加引用**对话框中，单击**.NET**，单击 System.Data.Linq 程序集，，然后单击**确定**。  
+2.  在**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   

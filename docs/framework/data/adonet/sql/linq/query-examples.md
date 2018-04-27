@@ -1,27 +1,29 @@
 ---
-title: "查询示例"
-ms.custom: 
+title: 查询示例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1b3aabf5a47088fa408547527c5f18fa69a48e02
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5b1681f609d8715167defcb1df57cc270b61e53a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-examples"></a>查询示例
-本节提供典型的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 查询的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 和 C# 示例。 使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员可以在“示例”一节中提供的示例解决方案中找到许多其他示例。 有关详细信息，请参阅[示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。  
+本部分提供的典型的 Visual Basic 和 C# 示例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查询。 在示例部分，使用 Visual Studio 的开发人员可以在提供的示例解决方案找到许多的更多示例。 有关详细信息，请参阅[示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。  
   
 > [!IMPORTANT]
 >  *db*中的代码示例中经常会使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档。 *db*被假定为实例*Northwind*类，该类继承自<xref:System.Data.Linq.DataContext>。  

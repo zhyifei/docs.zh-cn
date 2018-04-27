@@ -1,12 +1,13 @@
 ---
-title: "演练：在 WPF 中承载 Win32 控件"
-ms.custom: 
+title: 演练：在 WPF 中承载 Win32 控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,28 +16,29 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0795875b4d5f1a91b7c570320acb078b845ae712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>演练：在 WPF 中承载 Win32 控件
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你有大量的投资[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]代码，它可能更有效地重用至少在该代码的一部分你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是完全重写应用程序。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供用于承载的简单机制[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口，请在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你有大量的投资[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]代码，它可能更有效地重用至少在该代码的一部分你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是完全重写应用程序。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供用于承载的简单机制[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口，请在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。  
   
  本主题将指导你通过应用程序，[承载 WPF 示例中的 Win32 ListBox 控件](http://go.microsoft.com/fwlink/?LinkID=159998)，则该主机[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]列表框控件。 此常规过程可以扩展以承载任何[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口。  
   
   
 <a name="requirements"></a>   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  本主题假定你基本熟悉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]编程。 有关的基本介绍[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]编程，请参阅[入门](../../../../docs/framework/wpf/getting-started/index.md)。 有关的简介[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]编程，你应引用的任何有关该主题的很多书籍尤其*编程 Windows* Charles Petzold 通过。  
   
- 由于本主题附带的示例实现在[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]，它利用[!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)]访问[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 熟悉[!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]很有用，但不是必需。  
+ 由于本主题附带的示例在 C# 中实现的它使使用[!INCLUDE[TLA#tla_pinvoke](../../../../includes/tlasharptla-pinvoke-md.md)]访问[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 熟悉[!INCLUDE[TLA2#tla_pinvoke](../../../../includes/tla2sharptla-pinvoke-md.md)]很有用，但不是必需。  
   
 > [!NOTE]
 >  本主题包括来自相关示例的一些代码示例。 但是，出于可读性考虑，不包括完整的示例代码。 可以获取，也可以查看完整的代码从[承载 WPF 示例中的 Win32 ListBox 控件](http://go.microsoft.com/fwlink/?LinkID=159998)。  

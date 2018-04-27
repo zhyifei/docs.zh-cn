@@ -1,27 +1,29 @@
 ---
-title: "本地事务"
-ms.custom: 
+title: 本地事务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3d7865675871bafb527bb9ee85de1f96e9847402
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d56e2a978c3b9b58eadb946ee053721435c9f2d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-transactions"></a>本地事务
 如果要将多项任务绑定在一起，使其作为单个工作单元来执行，可以使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的事务。 例如，假设应用程序执行两个任务。 首先使用订单信息更新表。 然后更新包含库存信息的表，将已订购的商品记入借方。 如果任何一项任务失败，然后两个更新将回滚。  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  不应对本地事务使用 `EnlistDistributedTransaction` 方法。  
   
- 事务的作用域限于该连接。 以下示例执行显式事务，该事务由 `try` 块中两个独立的命令组成。 这两个命令对 AdventureWorks [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 示例数据库的 Production.ScrapReason 表执行 INSERT 语句，如果没有引发异常，则提交。 如果引发异常，`catch` 块中的代码将回滚事务。 如果在事务完成之前事务中止或连接关闭，事务将自动回滚。  
+ 事务的作用域限于该连接。 以下示例执行显式事务，该事务由 `try` 块中两个独立的命令组成。 命令执行 INSERT 语句的 Production.ScrapReason 表在 AdventureWorks SQL Server 示例数据库中，如果未引发的异常则提交。 如果引发异常，`catch` 块中的代码将回滚事务。 如果在事务完成之前事务中止或连接关闭，事务将自动回滚。  
   
 ## <a name="example"></a>示例  
  按照下列步骤执行事务。  

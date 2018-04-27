@@ -1,36 +1,38 @@
 ---
-title: "System.Transactions 与 SQL Server 的集成"
-ms.custom: 
+title: System.Transactions 与 SQL Server 的集成
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06f1555c8dbbdf10e8a1d0de867ddb227cb148b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 与 SQL Server 的集成
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版引入了一个可通过 <xref:System.Transactions> 命名空间访问的事务框架。 此框架公开事务的方式是完全集成在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]。  
   
  除了对编程能力的增强之外， <xref:System.Transactions> 与 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 可一起使用，在处理事务时协调优化。 可提升事务是可以根据需要自动提升为完全分布式事务的轻型（本地）事务。  
   
- 从 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 开始，当您使用 <xref:System.Data.SqlClient> 时 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]会提供对可提升事务的支持。 可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。 可提升事务是自动的并且需要从开发人员无需干预。  
+ 从开始[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0，<xref:System.Data.SqlClient>支持可提升事务，当您使用 SQL Server 时。 可提升的事务不会调用分布式事务增加的系统开销，除非需要增加的系统开销。 可提升事务是自动的并且需要从开发人员无需干预。  
   
- 只有一起使用 SQL Server 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序 (`SqlClient`) 和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]时，才可以使用可提升事务。  
+ 当你使用时，可提升事务才可用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]SQL Server 数据提供程序 (`SqlClient`) 与 SQL Server。  
   
 ## <a name="creating-promotable-transactions"></a>创建可提升事务  
  SQL Server 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供程序支持可提升事务，这种事务通过 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> 命名空间中的类处理。 可提升事务通过将分布式事务推迟到需要时再创建，对分布式事务进行优化。 如果只需要一个资源管理器，则不会发生任何分布式事务。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/17/2018
 >  在部分信任方案中，将事务提升为分布式事务时，需要 <xref:System.Transactions.DistributedTransactionPermission> 。  
   
 ## <a name="promotable-transaction-scenarios"></a>可提升事务方案  
- 分布式事务由 Microsoft 分布式事务处理协调器 (MS DTC) 管理，该协调程序集成了事务中访问的所有资源管理器，通常会占用大量的系统资源。 可提升事务是 <xref:System.Transactions> 事务的一种特殊形式，有效地将工作委托给简单的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 事务。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 协调在处理事务时涉及到的工作，根据需要将其提升为完全分布式事务。  
+ 分布式事务由 Microsoft 分布式事务处理协调器 (MS DTC) 管理，该协调程序集成了事务中访问的所有资源管理器，通常会占用大量的系统资源。 可提升事务是一种特殊形式的<xref:System.Transactions>有效地将工作委托给简单的 SQL Server 事务的事务。 <xref:System.Transactions><xref:System.Data.SqlClient>，和 SQL Server 协调在处理事务，涉及到的工作，根据需要将其提升为完全分布式事务。  
   
  使用可提升事务的优点是在使用活动 <xref:System.Transactions.TransactionScope> 事务打开某个连接但不打开任何其他连接时，事务作为轻型事务提交，而不引发完全分布式事务的其他系统开销。  
   

@@ -1,13 +1,13 @@
 ---
-title: "绑定声明概述"
-ms.custom: 
+title: 绑定声明概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 3fcc1b57f758abd2791bc6970c29300fd2fc0e30
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-declarations-overview"></a>绑定声明概述
 本主题讨论声明绑定的不同方法。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 02/22/2018
   
 -   在最简单的情况下，<xref:System.Windows.Data.Binding.Path%2A>属性值是要使用的绑定，如的源对象的属性的名称`Path=PropertyName`。  
   
--   在 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 中，可以通过类似语法指定属性的子属性。 例如，子句 `Path=ShoppingCart.Order` 设置与对象或属性 `ShoppingCart` 的子属性 `Order` 的绑定。  
+-   可通过与 C# 相似的语法指定的属性的子属性。 例如，子句 `Path=ShoppingCart.Order` 设置与对象或属性 `ShoppingCart` 的子属性 `Order` 的绑定。  
   
 -   若要绑定到附加属性，请将附加属性置于括号中。 例如，若要将绑定到附加的属性<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>，语法是`Path=(DockPanel.Dock)`。  
   

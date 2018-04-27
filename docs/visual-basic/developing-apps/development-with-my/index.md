@@ -17,11 +17,11 @@ ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf51e1f6292a61c071fe6d92f5fcbce4be84ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ea802572a59a3b94508558cee97290cac67e1ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="development-with-my-visual-basic"></a>使用 My 开发 (Visual Basic)
 Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能强大，还有助于提高工作效率和易用性。 其中一项功能称为 `My`，可提供对与应用程序及其运行时环境相关的信息和默认对象实例的访问权限。 此类信息按可通过 IntelliSense 搜索的格式进行编排，并根据用途进行了逻辑界定。  
@@ -43,12 +43,12 @@ Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能�
  介绍了 `My.Resources` 和 `My.Settings` 对象，这些对象提供对应用程序资源和设置的访问权限。  
   
  [Visual Basic 应用程序模型概述](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 介绍了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 应用程序启动/关闭模型。  
+ 介绍了 Visual Basic 应用程序启动/关闭模式。  
   
  [My 对项目类型的依赖方式](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  详细介绍了不同项目类型中可用的 `My` 功能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
  <xref:Microsoft.VisualBasic.Devices.Computer>  
  <xref:Microsoft.VisualBasic.ApplicationServices.User>  

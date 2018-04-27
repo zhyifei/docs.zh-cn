@@ -1,22 +1,23 @@
 ---
-title: "聚合操作 (Visual Basic)"
-ms.custom: 
+title: 聚合操作 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9d4b07eeb1d09d7db0f75d96629c816f66dbb128
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2f4234b9f56794b9bfe6c56029ccc9c00ae0642
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregation-operations-visual-basic"></a>聚合操作 (Visual Basic)
 聚合运算从值的集合中计算出单个值。 例如，从一个月累计的每日温度值计算出日平均温度值就是一个聚合运算。  
@@ -41,13 +42,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="query-expression-syntax-examples"></a>查询表达式语法示例  
   
-### <a name="average"></a>Average  
- 下面的代码示例使用`Aggregate Into Average`中的子句[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]计算数组中的数字表示温度的平均温度。  
+### <a name="average"></a>平均值  
+ 下面的代码示例使用`Aggregate Into Average`在 Visual Basic，若要计算的平均温度的数字表示温度数组中的子句。  
   
  [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
   
 ### <a name="count"></a>计数  
- 下面的代码示例使用`Aggregate Into Count`中的子句[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]进行计数大于或等于 80 数组中的值的数目。  
+ 下面的代码示例使用`Aggregate Into Count`子句在 Visual Basic 中进行计数大于或等于 80 数组中的值的数目。  
   
  [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[CsLINQAggregating#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_6.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Linq>  
  [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  

@@ -1,24 +1,26 @@
 ---
-title: "实体框架数据提供程序"
-ms.custom: 
+title: 实体框架数据提供程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 751df1483bab40feb5fa9d336edbac07f76d66cb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2169ae35ac418b5dfe8c1a6276b36f7701460e13
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-data-providers"></a>实体框架数据提供程序
 本节提供有关支持[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的数据提供程序的信息。  
@@ -28,7 +30,7 @@ ms.lasthandoff: 01/17/2018
  介绍 EntityClient 数据提供程序。 此提供程序将对数据模型的查询转换为规范命令树。 随后，该命令树可以由用于[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]的 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 数据提供程序使用。  
   
  [用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- 描述[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]数据提供程序支持[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]用于[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]数据库。  
+ 描述[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]数据提供程序支持[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]用于 SQL Server 数据库。  
   
 ## <a name="related-sections"></a>相关章节  
  [实体框架 (SQL Server Compact)](http://go.microsoft.com/fwlink/?LinkId=135638)  

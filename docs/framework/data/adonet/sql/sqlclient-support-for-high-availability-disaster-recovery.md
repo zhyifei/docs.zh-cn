@@ -1,31 +1,33 @@
 ---
-title: "SqlClient 对高可用性的支持，灾难恢复"
-ms.custom: 
+title: SqlClient 对高可用性的支持，灾难恢复
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: aab233fca7754f154166778646acba8d8df7de83
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
-本主题介绍对高可用性、灾难恢复（AlwaysOn 可用性组）的 SqlClient支持（[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的新功能）。  AlwaysOn 可用性组功能已添加到 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 中。 有关 AlwaysOn 可用性组的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书。  
+本主题介绍对高可用性、灾难恢复（AlwaysOn 可用性组）的 SqlClient支持（[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的新功能）。  AlwaysOn 可用性组功能已添加到 SQL Server 2012。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
   
- 现在，您可以在连接属性中指定一个 具有（高可用性、灾难恢复功能）的可用性组 (AG) 的可用性组侦听器或 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 故障转移群集实例。 如果 SqlClient 应用程序连接到发生故障转移的 AlwaysOn 数据库，原始连接会中断，而且应用程序必须打开一个新连接以在故障转移之后继续工作。  
+ 现在，您可以指定的可用性组侦听器 （高可用性、 灾难恢复） 可用性组 (AG) 或连接属性中的 SQL Server 2012 故障转移群集实例。 如果 SqlClient 应用程序连接到发生故障转移的 AlwaysOn 数据库，原始连接会中断，而且应用程序必须打开一个新连接以在故障转移之后继续工作。  
   
- 如果您没有连接到可用性组侦听器或 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 故障转移群集实例，并且如果多个 IP 地址关联一个主机名，SqlClient 将按顺序循环访问与 DNS 条目关联的所有 IP 地址。 如果 DNS 服务器返回的第一个 IP 地址未绑定到到任何网络接口卡 (NIC)，这可能非常耗时。 连接到一个可用性组侦听器或 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 故障转移群集实例时，SqlClient 尝试并行建立所有 IP 地址的连接，如果一个连接尝试成功，驱动程序将丢弃所有挂起的连接尝试。  
+ 如果您没有连接到可用性组侦听器或 SQL Server 2012 故障转移群集实例，并且如果多个 IP 地址关联一个主机名，SqlClient 将按顺序循环访问与 DNS 条目关联的所有 IP 地址。 如果 DNS 服务器返回的第一个 IP 地址未绑定到到任何网络接口卡 (NIC)，这可能非常耗时。 连接到可用性组侦听器或 SQL Server 2012 故障转移群集实例时，SqlClient 尝试并行建立与所有 IP 地址的连接和如果连接尝试成功，驱动程序将放弃所做的任何挂起的连接尝试次数。  
   
 > [!NOTE]
 >  增加连接超时值和实现连接重试逻辑会增加应用程序连接到可用性组的概率。 此外，由于故障转移，连接可能失败，所以您应当实现连接重试逻辑，重试失败的连接，直到它重新连接。  
@@ -46,23 +48,23 @@ ms.lasthandoff: 01/19/2018
 >  设置`MultiSubnetFailover`到`true`无需与[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) 或更高版本。
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 连接  
- 连接到 `MultiSubnetFailover=True` 2012 可用性组侦听器或 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 故障转移群集实例时， 始终指定 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。 对于单子网和多子网 AlwaysOn 拓扑，`MultiSubnetFailover` 可使 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 中的所有可用性组或故障转移群集实例故障转移速度变快，大大缩短故障转移时间。 在多子网故障转移期间，客户端将尝试并行连接。 在子网故障转移期间，将积极重试 TCP 连接。  
+ 始终指定`MultiSubnetFailover=True`时连接到 SQL Server 2012 可用性组侦听器或 SQL Server 2012 故障转移群集实例。 `MultiSubnetFailover` 所有可用性组或故障转移群集实例在 SQL Server 2012 和将显著减少单个和多子网 AlwaysOn 拓扑的故障转移时间，请使更快的故障转移。 在多子网故障转移期间，客户端将尝试并行连接。 在子网故障转移期间，将积极重试 TCP 连接。  
   
- `MultiSubnetFailover` 连接属性指示应用程序将部署到可用性组或 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 故障转移群集实例，并且 SqlClient 将通过连接到所有的 IP 地址尝试连接到主 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 实例上的数据库。 为连接指定 `MultiSubnetFailover=True` 时，客户端尝试 TCP 连接的频率比操作系统的默认 TCP 重新传输间隔快。 这使得在 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例进行故障转移后更快地重新连接，它同时适用于单子网/多子网可用性组和故障转移群集实例。  
+ `MultiSubnetFailover`连接属性指示在可用性组或 SQL Server 2012 故障转移群集实例中部署应用程序，SqlClient 将尝试通过尝试连接到主 SQL Server 实例上的数据库连接到所有 IP 地址。 为连接指定 `MultiSubnetFailover=True` 时，客户端尝试 TCP 连接的频率比操作系统的默认 TCP 重新传输间隔快。 这使得在 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例进行故障转移后更快地重新连接，它同时适用于单子网/多子网可用性组和故障转移群集实例。  
   
  有关 SqlClient 中的连接字符串关键字的更多信息，请参见 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
   
- 如果在连接到除可用性组侦听器或 `MultiSubnetFailover=True` 2012 故障转移群集实例之外的对象时指定 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]，可能导致性能下降，因此不支持这样做。  
+ 指定`MultiSubnetFailover=True`时连接到的内容，而不是可用性组侦听器或 SQL Server 2012 故障转移群集实例可能会导致性能下降，并且不支持。  
   
- 遵循下列准则连接到可用性组或 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 故障转移群集实例中的服务器：  
+ 使用以下准则来连接到可用性组中的服务器或 SQL Server 2012 故障转移群集实例：  
   
 -   连接到单子网或多子网时使用 `MultiSubnetFailover` 连接属性，这样可提高它们的性能。  
   
 -   要连接到可用性组，请在连接字符串中指定作为服务器的可用性组的可用性组侦听器。  
   
--   连接到一个配置超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 实例会导致连接失败。  
+-   连接到 SQL Server 实例配置了 64 个以上的 IP 地址将导致连接失败。  
   
--   根据身份验证类型（`MultiSubnetFailover` 身份验证、 Kerberos 身份验证或 Windows 身份验证），使用 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 连接属性的应用程序行为可能不受影响。  
+-   使用的应用程序的行为`MultiSubnetFailover`连接属性不受影响基于身份验证类型： SQL Server 身份验证、 Kerberos 身份验证或 Windows 身份验证。  
   
 -   增加 `Connect Timeout` 的值以延长故障转移时间并减少应用程序连接重试次数。  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/19/2018
  如果主副本配置为拒绝只读工作负荷并且连接字符串包含 `ApplicationIntent=ReadOnly`，连接将失败。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>从数据库镜像升级到使用多子网群集  
- 如果 <xref:System.ArgumentException> 和 `MultiSubnetFailover` 连接关键字在连接字符串中存在，或者使用 `Failover Partner` 和 TCP 以外的其他协议，则会出现连接错误 (`MultiSubnetFailover=True`)。 如果使用 <xref:System.Data.SqlClient.SqlException>且 `MultiSubnetFailover` 返回一个故障转移伙伴响应指示它是数据库镜像对的一部分，也会出现错误 ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]) 。  
+ 如果 <xref:System.ArgumentException> 和 `MultiSubnetFailover` 连接关键字在连接字符串中存在，或者使用 `Failover Partner` 和 TCP 以外的其他协议，则会出现连接错误 (`MultiSubnetFailover=True`)。 错误 (<xref:System.Data.SqlClient.SqlException>)，也会发生如果`MultiSubnetFailover`使用和 SQL Server 返回故障转移伙伴响应指示它数据库镜像对的一部分。  
   
  如果您将当前使用数据库镜像的 SqlClient 应用程序升级到多子网方案，应删除 `Failover Partner` 连接属性并使用 `MultiSubnetFailover` 设置为 `True` 的属性替换它，同时使用可用性组侦听器替换连接字符串中的服务器名称。 如果连接字符串使用 `Failover Partner` 和 `MultiSubnetFailover=True`，驱动程序将生成错误。 但是，如果连接字符串使用 `Failover Partner` 和 `MultiSubnetFailover=False`（或 `ApplicationIntent=ReadWrite`），应用程序将使用数据库镜像。  
   

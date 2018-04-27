@@ -12,18 +12,18 @@ ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1bef4da309f5e281b4016912d4b0da8237db6ec0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 26cb885187cff31a085e34c60c820fe7c0bdc787
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reference-visual-basic"></a>参考 (Visual Basic)
-本节提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编程的各个方面的相关参考信息的链接。  
+本部分提供的 Visual Basic 编程的各个方面的相关引用信息的链接。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Visual Basic 语言参考](../../visual-basic/language-reference/index.md)  
- 提供了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言的各个方面的参考信息。  
+ 提供 Visual Basic 语言的各个方面的参考信息。  
   
  [Visual Basic 命令行编译器](../../visual-basic/reference/command-line-compiler/index.md)  
  提供了命令行编译器相关信息的链接，该编译器提供了一种编译来自 Visual Studio IDE 的程序的替代方法。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  提供了使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 类库相关信息的链接。  
   
  [Visual Basic 语言规范](../../visual-basic/reference/language-specification/index.md)  
- 提供了到完整 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言规范的链接，该规范包含了语言各个方面的详细信息。  
+ 提供完整的 Visual Basic 语言规范，其中包含所有方面的语言的详细的信息的链接。  
   
 ## <a name="reference"></a>参考  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  

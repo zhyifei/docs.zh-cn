@@ -1,11 +1,12 @@
 ---
-title: "数组疑难解答 (Visual Basic)"
-ms.custom: 
+title: 数组疑难解答 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting arrays
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0417ae8d37642a65b14cc81ae9dcf3a3c32d63ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e5c00c2b531dd019a207b16ffcac95424bfe450
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>数组疑难解答 (Visual Basic)
 此页列出与数组一起使用时可能发生的一些常见问题的方法。  
@@ -60,11 +61,11 @@ ms.lasthandoff: 11/21/2017
  初始化数组的过程将分配给每个维度的上限和下限。 每次访问数组的元素必须指定有效的索引或下标，对于每个维度。 如果任何索引其下限低于或高于其上限<xref:System.IndexOutOfRangeException>异常结果。 编译器无法检测此类错误，因此在运行时出错。  
   
 ### <a name="determining-bounds"></a>确定边界  
- 如果另一个组件将数组传递给你的代码，例如作为过程自变量，你不知道该数组的大小或其维度的长度。 然后再尝试访问任何元素，你始终应该确定对于数组的每个维度的上限。 如果数组创建以某种方式以外[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]`New`子句，下限可能不是 0，并且它是最安全的做法是，以确定该下限。  
+ 如果另一个组件将数组传递给你的代码，例如作为过程自变量，你不知道该数组的大小或其维度的长度。 然后再尝试访问任何元素，你始终应该确定对于数组的每个维度的上限。 如果 Visual Basic 以外的其他一些方式创建了数组`New`子句，下限可能不是 0，并且它是最安全的做法是，以确定该下限。  
   
 ### <a name="specifying-the-dimension"></a>指定维度  
- 在确定多维数组的边界时，一定要小心如何指定的维度。 `dimension`参数<xref:System.Array.GetLowerBound%2A>和<xref:System.Array.GetUpperBound%2A>方法是从 0 开始时`Rank`参数[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函数都是基于 1 的。  
+ 在确定多维数组的边界时，一定要小心如何指定的维度。 `dimension`参数<xref:System.Array.GetLowerBound%2A>和<xref:System.Array.GetUpperBound%2A>方法是从 0 开始时`Rank`参数的 Visual Basic<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函数都是基于 1 的。  
   
-## <a name="see-also"></a>另请参阅  
- [阵列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+## <a name="see-also"></a>请参阅  
+ [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [如何：在 Visual Basic 中初始化数组变量](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

@@ -1,26 +1,27 @@
 ---
-title: "如何：更新正在运行的工作流实例的定义"
-ms.custom: 
+title: 如何：更新正在运行的工作流实例的定义
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 86a6e8d22d1e46407082af5d71cd83c179825bb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c0590f7fc9cd8cc48b725b83af55b4ed81a0e59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>如何：更新正在运行的工作流实例的定义
 动态更新为工作流应用程序开发人员提供了一种机制，可用于更新持久化工作流实例的工作流定义。 所需的更改可以实施 Bug 修复、新的需求以适应意外变化。 此步骤在本教程演示如何使用动态更新来修改的持久化的实例`v1`数字猜测工作流以匹配在中引入的新功能[How to： 主机的工作流的并行安装多个版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [若要允许启动以前版本的工作流](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a>创建 CreateUpdateMaps 项目  
+###  <a name="BKMK_CreateProject"></a> 创建 CreateUpdateMaps 项目  
   
 1.  右键单击**WF45GettingStartedTutorial**中**解决方案资源管理器**选择**添加**，**新项目**。  
   
@@ -234,7 +235,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_StateMachine"></a>更新 StateMachineNumberGuessWorkflow  
+###  <a name="BKMK_StateMachine"></a> 更新 StateMachineNumberGuessWorkflow  
   
 1.  将 `CreateStateMachineUpdateMap` 添加到 `Program` 类（或 `Module1`）。  
   
@@ -427,7 +428,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_Flowchart"></a>更新 FlowchartNumberGuessWorkflow  
+###  <a name="BKMK_Flowchart"></a> 更新 FlowchartNumberGuessWorkflow  
   
 1.  将以下 `CreateFlowchartUpdateMethod` 添加到 `Program` 类（或 `Module1`）。 此方法与 `CreateStateMachineUpdateMap` 类似。 它最初调用 `StartUpdate`，然后更新流程图工作流定义，最后保存更新映射和更新的工作流定义。  
   
@@ -541,7 +542,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_Sequential"></a>更新 SequentialNumberGuessWorkflow  
+###  <a name="BKMK_Sequential"></a> 更新 SequentialNumberGuessWorkflow  
   
 1.  将以下 `CreateSequentialUpdateMethod` 添加到 `Program` 类（或 `Module1`）。 此方法与其他两个方法类似。 它最初调用 `StartUpdate`，然后更新顺序工作流定义，最后保存更新映射和更新的工作流定义。  
   
@@ -621,7 +622,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_CreateUpdateMaps"></a>若要生成并运行 CreateUpdateMaps 应用程序  
+###  <a name="BKMK_CreateUpdateMaps"></a> 若要生成并运行 CreateUpdateMaps 应用程序  
   
 1.  更新 `Main` 方法并添加以下三个方法调用。 这些方法将添加到以下各节中。 每个方法都更新对应的猜数工作流并创建一个描述这些更新的 `DynamicUpdateMap`。  
   
@@ -655,7 +656,7 @@ ms.lasthandoff: 12/22/2017
   
      创建更新映射并更新工作流定义后，下一步是生成包含已更新定义的已更新工作流程序集。  
   
-###  <a name="BKMK_BuildAssembly"></a>若要生成更新的工作流程序集  
+###  <a name="BKMK_BuildAssembly"></a> 若要生成更新的工作流程序集  
   
 1.  打开 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 的第二个实例。  
   
@@ -669,7 +670,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  导航到**NumberGuessWorkflowActivities_du**中创建的文件夹[How to： 主机多个版本的工作流通过并行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
-7.  选择**XAML 文件 (\*.xaml;\*。xoml)**从**类型的文件**下拉列表。  
+7.  选择**XAML 文件 (\*.xaml;\*。xoml)** 从**类型的文件**下拉列表。  
   
 8.  选择**SequentialNumberGuessWorkflow_du.xaml**， **FlowchartNumberGuessWorkflow_du.xaml**，和**StateMachineNumberGuessWorkflow_du.xaml**单击**添加**。  
   
@@ -680,13 +681,13 @@ ms.lasthandoff: 12/22/2017
   
 9. 按 Ctrl+Shift+B 生成项目。  
   
-10. 选择**关闭解决方案**从**文件**菜单。 解决方案文件的项目不是必需的因此单击**否**关闭[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]而不保存解决方案文件。 选择**退出**从**文件**菜单关闭[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]。  
+10. 选择**关闭解决方案**从**文件**菜单。 解决方案文件的项目不是必需的因此单击**否**关闭 Visual Studio 而不保存解决方案文件。 选择**退出**从**文件**要关闭 Visual Studio 的菜单。  
   
 11. 打开 Windows 资源管理器并导航到**NumberGuessWorkflowActivities_du\bin\Debug**文件夹 (或**bin\Release**具体取决于项目设置)。  
   
 12. 重命名**NumberGuessWorkflowActivities.dll**到**NumberGuessWorkflowActivities_v15.dll**，并将其复制到**PreviousVersions** 中创建的文件夹[如何： 承载多个工作流的并行版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>用新版本更新 WorkflowVersionMap  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> 用新版本更新 WorkflowVersionMap  
   
 1.  切换回 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 的初始实例。  
   
@@ -1073,7 +1074,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  按 Ctrl+Shift+B 生成项目。  
   
-###  <a name="BKMK_ApplyUpdate"></a>若要应用动态更新  
+###  <a name="BKMK_ApplyUpdate"></a> 若要应用动态更新  
   
 1.  右键单击**WF45GettingStartedTutorial**中**解决方案资源管理器**选择**添加**，**新项目**。  
   
@@ -1448,7 +1449,7 @@ ms.lasthandoff: 12/22/2017
 **检查： SequentialNumberGuessWorkflow;版本 = 2.0.0.0**   
 **按任意键继续...**  
   
-###  <a name="BKMK_BuildAndRun"></a>若要使用已更新的工作流中运行应用程序  
+###  <a name="BKMK_BuildAndRun"></a> 若要使用已更新的工作流中运行应用程序  
   
 1.  右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**选择**设为启动项目**。  
   
@@ -1483,7 +1484,7 @@ ms.lasthandoff: 12/22/2017
 **请输入介于 1 和 10 之间的数字**   
 **6 是正确的。4 轮流猜测了它。**  
   
-###  <a name="BKMK_StartPreviousVersions"></a>若要允许启动以前版本的工作流  
+###  <a name="BKMK_StartPreviousVersions"></a> 若要允许启动以前版本的工作流  
  如果已用完工作流而无法更新，可以修改 `NumberGuessWorkflowHost` 以允许启动以前版本的工作流。  
   
 1.  双击**WorkflowHostForm**中**解决方案资源管理器**，然后选择**WorkflowType**组合框。  

@@ -1,23 +1,24 @@
 ---
-title: "缓冲接收"
-ms.custom: 
+title: 缓冲接收
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>缓冲接收
 此示例演示如何在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中设置和配置缓冲接收功能。 利用缓冲接收功能，工作流作者可创建工作流，而无需担心接收消息的顺序。 当工作流准备接收消息时，缓冲接收功能将本地缓冲并传递这些消息。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  此服务还公开使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 的服务的元数据。  
   
- 同样，也将使用 <xref:System.ServiceModel.NetMsmqBinding> 配置客户端终结点。 通过使用生成的客户端代码和配置**添加服务引用**功能[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。 下面的示例是在 App.config 文件中生成的客户端终结点。  
+ 同样，也将使用 <xref:System.ServiceModel.NetMsmqBinding> 配置客户端终结点。 通过使用生成的客户端代码和配置**添加服务引用**Visual Studio 功能。 下面的示例是在 App.config 文件中生成的客户端终结点。  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-run-the-sample"></a>运行示例  
   
-1.  浏览到 http://localhost/private/loanservice/service1.xamlx 以确保服务正在运行。  
+1.  浏览到http://localhost/private/loanservice/service1.xamlx以确保服务正在运行。  
   
 2.  按 F5 运行 LoanClient 应用程序。 在工作流完成后，应会将一个 out.txt 文件保存到包含消息交换结果的 C:\Inbox 中。  
   

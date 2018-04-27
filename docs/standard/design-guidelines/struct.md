@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f4a6debc25a51e3a0a83e70fc8c8f8fc55c62f5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfa32112a2eb85a93cdd1e7a72d4411a3b197a1a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="struct-design"></a>结构设计
 通用值类型最常称为结构，其 C# 关键字。 本部分提供常规结构设计的准则。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/23/2017
   
  **✓ 执行**实现<xref:System.IEquatable%601>有关值类型。  
   
- <xref:System.Object.Equals%2A?displayProperty=nameWithType>有关值类型的方法会导致装箱，和其默认实现不是非常高效，因为它使用反射。 <xref:System.IEquatable%601.Equals%2A>可以更好的性能，并且可以实现，以便它不会导致装箱。  
+ <xref:System.Object.Equals%2A?displayProperty=nameWithType>有关值类型的方法会导致装箱，和其默认实现不是非常高效，因为它使用反射。 <xref:System.IEquatable%601.Equals%2A> 可以更好的性能，并且可以实现，以便它不会导致装箱。  
   
  **X 不**显式延长<xref:System.ValueType>。 事实上，大多数语言防止这种情况。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/23/2017
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [类型设计准则](../../../docs/standard/design-guidelines/type.md)  

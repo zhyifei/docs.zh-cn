@@ -1,12 +1,13 @@
 ---
-title: "x:Type 标记扩展"
-ms.custom: 
+title: x:Type 标记扩展
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - x:TypeExtension
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db56c2bcdca14b87de320dfe19a6c364c76ecef7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xtype-markup-extension"></a>x:Type 标记扩展
 提供 CLR<xref:System.Type>是指定的 XAML 类型的基础类型的对象。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 |`typeNameValue`|必须的。 类型名称解析为当前的默认 XAML 命名空间;或指定的映射前缀如果`prefix`提供。|  
   
 ## <a name="remarks"></a>备注  
- `x:Type`标记扩展有相似的职能到`typeof()`中的运算符[!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]或`GetType`中的运算符[!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]。  
+ `x:Type`标记扩展有相似的职能到`typeof()`C# 中的运算符或`GetType`运算符在 Microsoft Visual Basic。  
   
  `x:Type`标记扩展提供采用类型的属性从字符串转换行为<xref:System.Type>。 该输入是 XAML 类型。 输入的 XAML 类型和输出 CLR 之间的关系<xref:System.Type>在于输出<xref:System.Type>是<xref:System.Xaml.XamlType.UnderlyingType%2A>的输入<xref:System.Xaml.XamlType>后查找所需,<xref:System.Xaml.XamlType>基于 XAML 架构上下文和<xref:System.Windows.Markup.IXamlTypeResolver>的上下文提供的服务。  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
  `x:Type`标记扩展可在对象元素语法。 在这种情况下，指定的值<xref:System.Windows.Markup.TypeExtension.TypeName%2A>正确初始化扩展所需的属性。  
   
- `x:Type`标记扩展还可以用作详细属性; 但是此，请使用不是典型： `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ `x:Type`标记扩展还可以用作详细属性; 但是此，请使用不是典型： `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
   
@@ -82,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 提供了额外支持，泛型类型，并修改功能行为的`x:TypeArguments`和`x:Type`以提供此支持。  
   
--   `x:TypeArguments`并且一般的对象实例化的关联的对象元素可以上而不是根元素。 有关详细信息，请参阅"XAML 2009"一节[X:typearguments 指令](../../../docs/framework/xaml-services/x-typearguments-directive.md)。  
+-   `x:TypeArguments` 并且一般的对象实例化的关联的对象元素可以上而不是根元素。 有关详细信息，请参阅"XAML 2009"一节[X:typearguments 指令](../../../docs/framework/xaml-services/x-typearguments-directive.md)。  
   
 -   XAML 2009 支持的语法，用于指定在标记中的泛型类型的约束。 这可由`x:TypeArguments`，也可由`x:Type`，或通过组合中的两个功能。  
   

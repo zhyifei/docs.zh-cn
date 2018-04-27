@@ -1,24 +1,26 @@
 ---
-title: "SQL Server 中的服务器和数据库角色"
-ms.custom: 
+title: SQL Server 中的服务器和数据库角色
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d8de6b3302684bd8769b7b1baaebedefb649c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: b650c61a8d3d0b457bc9d5232c613d47f36ccbfc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的服务器和数据库角色
 所有版本的 SQL Server 均使用基于角色的安全，它允许您为角色、用户组而不是各个用户分配权限。 固定服务器和固定数据库角色具有分配给它们的一组固定的权限。  
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
 > [!IMPORTANT]
 >  `sysadmin` 固定服务器角色包含所有其他角色并且具有无限范围。 请不要将这些主体添加到此角色，除非它们是高度信任的。 `sysadmin` 角色成员对所有服务器数据库和资源有不可撤消的管理特权。  
   
- 将用户添加到固定服务器角色时，请仔细选择。 例如，`bulkadmin` 角色允许用户将任意本地文件的内容插入表中，这样可能会损坏数据的完整性。 有关固定服务器角色和权限的完整列表，请参见 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书。  
+ 将用户添加到固定服务器角色时，请仔细选择。 例如，`bulkadmin` 角色允许用户将任意本地文件的内容插入表中，这样可能会损坏数据的完整性。 固定的服务器角色和权限的完整列表，请参阅 SQL Server 联机丛书。  
   
 ## <a name="fixed-database-roles"></a>固定数据库角色  
  固定数据库角色具有一组预定义的权限，这些权限旨在允许您轻松管理权限组。 `db_owner` 角色的成员可对数据库执行所有配置和维护活动。  
@@ -38,8 +40,8 @@ ms.lasthandoff: 01/17/2018
   
 |资源|描述|  
 |--------------|-----------------|  
-|[服务器级角色](http://msdn.microsoft.com/library/ms188659.aspx)和[固定的服务器角色的权限](http://msdn.microsoft.com/library/ms175892.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]联机丛书|描述 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的固定服务器角色以及与其关联的权限。|  
-|[数据库级角色](http://msdn.microsoft.com/library/ms189121.aspx)和[固定的数据库角色的权限](http://msdn.microsoft.com/library/ms189612.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]联机丛书|描述固定数据库角色及与其关联的权限|  
+|[服务器级角色](http://msdn.microsoft.com/library/ms188659.aspx)和[固定的服务器角色的权限](http://msdn.microsoft.com/library/ms175892.aspx)SQL Server 联机丛书中|描述固定的服务器角色和 SQL Server 中与它们关联的权限。|  
+|[数据库级角色](http://msdn.microsoft.com/library/ms189121.aspx)和[固定的数据库角色的权限](http://msdn.microsoft.com/library/ms189612.aspx)SQL Server 联机丛书中|描述固定数据库角色及与其关联的权限|  
   
 ## <a name="database-roles-and-users"></a>数据库角色和用户  
  要使用数据库对象，必须将登录映射到数据库用户帐户。 这样就可以将数据库用户添加到数据库角色，从而继承与这些角色关联的任何权限集。 可以授予所有权限。  
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/17/2018
  `dbo` 或数据库所有者是具有在数据库中执行所有活动的默示权限的用户帐户。 `sysadmin` 固定服务器角色的成员会自动映射到 `dbo`。  
   
 > [!NOTE]
->  `dbo`也是一个架构的名称，如中所述[所有权和 SQL Server 中的用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。  
+>  `dbo` 也是一个架构的名称，如中所述[所有权和 SQL Server 中的用户架构分离](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。  
   
  `dbo` 用户帐户经常与 `db_owner` 固定数据库角色相混淆。 `db_owner` 的作用域是一个数据库；`sysadmin` 的作用域是整个服务器。 `db_owner` 角色中的成员无法授予 `dbo` 用户特权。  
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 01/17/2018
 |资源|描述|  
 |--------------|-----------------|  
 |[标识和访问控制](http://msdn.microsoft.com/library/bb510418.aspx)SQL Server 联机丛书中|包含指向描述主体、角色、凭据、安全对象和权限的主题的链接。|  
-|[主体](http://msdn.microsoft.com/library/ms181127.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]联机丛书|描述主体并包含指向描述服务器和数据库角色的主题的链接。|  
+|[主体](http://msdn.microsoft.com/library/ms181127.aspx)SQL Server 联机丛书中|描述主体并包含指向描述服务器和数据库角色的主题的链接。|  
   
 ## <a name="see-also"></a>请参阅  
  [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

@@ -1,27 +1,29 @@
 ---
-title: "如何：通过修改 DBML 文件生成自定义代码"
-ms.custom: 
+title: 如何：通过修改 DBML 文件生成自定义代码
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c9a2b382c84548d3226fe68531961e0f53033e7d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dccef2af3d13099b71d3ea8418242e5a5cc16ae5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>如何：通过修改 DBML 文件生成自定义代码
-你可以生成[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]或 C# 源代码从数据库标记语言 (.dbml) 元数据文件。 此方法提供了一个在生成应用程序映射代码前自定义默认 .dbml 文件的机会。 这是一项高级功能。  
+你可以从数据库标记语言 (.dbml) 元数据文件生成 Visual Basic 或 C# 源代码。 此方法提供了一个在生成应用程序映射代码前自定义默认 .dbml 文件的机会。 这是一项高级功能。  
   
  此过程中的步骤如下：  
   
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
   
 2.  使用编辑器修改此 .dbml 文件。 请注意，此 .dbml 文件必须通过 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .dbml 文件的架构定义 (.xsd) 文件的验证。 有关详细信息，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)。  
   
-3.  生成 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 或 C# 源代码。  
+3.  生成 Visual Basic 或 C# 源代码。  
   
  下面的示例使用 SQLMetal 命令行工具。 有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
@@ -42,7 +44,7 @@ sqlmetal /dbml:mymeta.dbml mydbfile.mdf
 ```  
   
 ## <a name="example"></a>示例  
- 下面的代码从 .dbml 文件生成 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 或 C# 源代码文件。  
+ 下面的代码从.dbml 文件生成 Visual Basic 或 C# 源代码文件。  
   
 ```  
 sqlmetal /namespace:nwind /code:nwind.vb /language:vb DBMLFile.dbml  

@@ -1,34 +1,34 @@
 ---
-title: "演练：使用 XAML 创建按钮"
-ms.custom: 
+title: 演练：使用 XAML 创建按钮
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>演练：使用 XAML 创建按钮
 本演练的目的是了解如何创建用于动画的按钮[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]应用程序。 本演练使用样式和模板来创建自定义的按钮资源允许的代码重用，并从按钮声明的按钮逻辑分离。 本演练完全在编写[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
 > [!IMPORTANT]
->  本演练将指导你逐步完成创建应用程序，通过键入或复制并粘贴[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到 Microsoft [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。 如果你想要了解如何使用设计工具 (Microsoft Expression Blend) 来创建相同的应用程序，请参阅[创建通过使用 Microsoft Expression Blend 按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)。  
+>  本演练将指导你逐步完成创建应用程序，通过键入或复制并粘贴[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到 Microsoft Visual Studio。 如果你想要了解如何使用设计工具 (Microsoft Expression Blend) 来创建相同的应用程序，请参阅[创建通过使用 Microsoft Expression Blend 按钮](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)。  
   
  下图显示已完成的按钮。  
   
@@ -39,9 +39,9 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>创建新的 WPF 项目并将按钮添加到窗口  
   
-1.  启动[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。  
+1.  启动 Visual Studio。  
   
-2.  **创建新的 WPF 项目：**上**文件**菜单上，指向**新建**，然后单击**项目**。 查找**Windows 应用程序 (WPF)**模板和名称的项目"AnimatedButton"。 这将创建应用程序的主干。  
+2.  **创建新的 WPF 项目：**上**文件**菜单上，指向**新建**，然后单击**项目**。 查找**Windows 应用程序 (WPF)** 模板和名称的项目"AnimatedButton"。 这将创建应用程序的主干。  
   
 3.  **添加基本的默认按钮：**对于本演练需要的所有文件都会都提供模板。 通过在解决方案资源管理器中单击双打开 Window1.xaml 文件。 默认情况下，没有<xref:System.Windows.Controls.Grid>Window1.xaml 中的元素。 删除<xref:System.Windows.Controls.Grid>元素和几个将按钮添加到[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]页上通过键入或者复制并粘贴到 Window1.xaml 以下突出显示的代码：  
   
@@ -332,7 +332,7 @@ ms.lasthandoff: 12/22/2017
   
      按 F5 运行应用程序，然后单击一个按钮。 请注意后单击因为它仍然具有焦点的按钮始终保持突出显示。 如果单击另一个按钮时，新建按钮将获得焦点，而最后一个失去它。  
   
-4.  **添加的动画效果**<xref:System.Windows.UIElement.MouseEnter> **和** <xref:System.Windows.UIElement.MouseLeave> **:**接下来我们将某些动画添加到触发器。 添加以下标记内部的任意位置`ControlTemplate.Triggers`块。  
+4.  **添加的动画效果**<xref:System.Windows.UIElement.MouseEnter> **和** <xref:System.Windows.UIElement.MouseLeave> **:** 接下来我们将某些动画添加到触发器。   添加以下标记内部的任意位置`ControlTemplate.Triggers`块。  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -389,7 +389,7 @@ ms.lasthandoff: 12/22/2017
   
      按 f5 键以运行该应用程序，并单击一个按钮。 当你单击按钮时，会旋转玻璃矩形。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  在本演练中，您可以执行以下练习：  
   
 -   目标<xref:System.Windows.Style>到对象类型 (<xref:System.Windows.Controls.Button>)。  

@@ -1,10 +1,11 @@
 ---
-title: "Visual Basic 中的运算符优先级"
+title: Visual Basic 中的运算符优先级
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d8de9deea84c7f0c11c91b55951cdfc200b017f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的运算符优先级
 如果在表达式中出现多个运算，计算和解析按预设的顺序调用每个部分*运算符优先级*。  
@@ -95,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  第一个表达式的计算结果除法 96 / 8 （这会导致 12），然后除法 12 / 4，结果为 3。 因为编译器将评估的操作`n1`从左到右，评估时相同为显式指明该顺序`n2`。 同时`n1`和`n2`具有三个结果。 与此相反，`n3`的结果为 48，是因为圆括号强制编译器可以计算 8 / 4 第一个。  
   
- 由于此行为，运算符被认为是*左结合运算符*中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 由于此行为，运算符被认为是*左结合运算符*在 Visual Basic 中。  
   
 ## <a name="overriding-precedence-and-associativity"></a>重写优先级和关联性  
- 可以使用括号来强制先于其他计算的表达式的某些部分。 这会重写的优先顺序和左的关联性。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]始终执行括在括号之前以外的操作。 但是，在括号内，这样可保持普通优先级和关联性，除非你使用在括号内的括号。 下面的示例阐释了这一点。  
+ 可以使用括号来强制先于其他计算的表达式的某些部分。 这会重写的优先顺序和左的关联性。 Visual Basic 始终执行括在括号之前以外的操作。 但是，在括号内，这样可保持普通优先级和关联性，除非你使用在括号内的括号。 下面的示例阐释了这一点。  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -118,7 +119,7 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [= 运算符](../../../visual-basic/language-reference/operators/assignment-operator.md)  
  [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)  
  [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)  

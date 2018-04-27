@@ -1,24 +1,26 @@
 ---
-title: "LINQ to SQL 中的安全性"
-ms.custom: 
+title: LINQ to SQL 中的安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0ee361c27bd14f0266b2b86f315f9c091e049c12
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 96951b3b3c8a6ee93a83ba24f6c6a19c3e36381c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL 中的安全性
 连接到数据库时始终都存在安全风险。 尽管 LINQ to SQL 可能包括一些使用 SQL Server 中的数据的新方法，但它并没有提供任何附加安全机制。  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="connection-strings"></a>连接字符串  
  应尽可能避免在连接字符串中使用密码。 连接字符串不仅会在自己的权限方面带来安全风险，而且在使用对象关系设计器或 SQLMetal 命令行工具时，连接字符串还可能会以明文形式添加到对象模型或外部映射文件。 可通过文件系统访问对象模型或外部映射文件的任何用户都可以查看连接密码（如果该密码包含在连接字符串中）。  
   
- 为了尽可能降低此类风险，请使用集成安全性与 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 建立可信连接。 通过使用这种方法，您无需将密码存储在连接字符串中。 有关详细信息，请参阅[SQL Server 安全性](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md)。  
+ 若要尽量减少此类风险，请使用集成的安全性来建立与 SQL Server 的受信任的连接。 通过使用这种方法，您无需将密码存储在连接字符串中。 有关详细信息，请参阅[SQL Server 安全性](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md)。  
   
  如果缺少集成安全性，则连接字符串中将需要明文密码。 帮助保护连接字符串的最佳方法如下（按风险升序排列）：  
   

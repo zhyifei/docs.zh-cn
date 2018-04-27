@@ -1,12 +1,13 @@
 ---
-title: "编码和 Windows 窗体全球化"
-ms.custom: 
+title: 编码和 Windows 窗体全球化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ListView control [Windows Forms], lack of Unicode support
@@ -26,22 +27,23 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f25f4f7206b68e961f3c09a488af643ad5d0a4fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 16e54e1915370549124c202bce6ad09c4aca1a40
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>编码和 Windows 窗体全球化
 Windows 窗体应用程序完全支持 Unicode，这意味着每个字符都用唯一编号表示，无论何种平台、程序或语音都是如此。 有关 Unicode 的详细信息，请参阅[Unicode 联盟网站](http://www.unicode.org)。  
   
 ## <a name="benefits-of-unicode"></a>Unicode 的优点  
- 启用 Unicode 的窗体的优点包括，能够处理仅限 Unicode（例如印地语）的脚本。 此外，还可以在单个窗体上使用多种语言。 以 Unicode 格式，所有字符都是两个字节长，所以不需要执行任何特殊操作来表示双字节字符。 还可以编写可在所有平台上工作的单个代码集。 这一点不同于 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 的以前版本，在以前版本中，你必须针对不同的平台（例如 Windows NT 和 [!INCLUDE[win98](../../../../includes/win98-md.md)]）编写不同的代码。  
+ 启用 Unicode 的窗体的优点包括，能够处理仅限 Unicode（例如印地语）的脚本。 此外，还可以在单个窗体上使用多种语言。 以 Unicode 格式，所有字符都是两个字节长，所以不需要执行任何特殊操作来表示双字节字符。 还可以编写可在所有平台上工作的单个代码集。 这是从以前版本的 Visual Basic 中，你需要编写针对不同的平台，例如 Windows NT 不同的代码更改和[!INCLUDE[win98](../../../../includes/win98-md.md)]。  
   
  但是，某些控件不支持在 [!INCLUDE[win98](../../../../includes/win98-md.md)] 和 Windows Millennium Edition 中启用 Unicode。 全部继承自公共控件的这些控件将使用 Windows 代码页（例如 [!INCLUDE[vcpransi](../../../../includes/vcpransi-md.md)]）处理数据。 这些控件包括：<xref:System.Windows.Forms.TabControl>、<xref:System.Windows.Forms.ListView>、<xref:System.Windows.Forms.TreeView>、<xref:System.Windows.Forms.DateTimePicker>、<xref:System.Windows.Forms.MonthCalendar>、<xref:System.Windows.Forms.TrackBar>、<xref:System.Windows.Forms.ProgressBar>、<xref:System.Windows.Forms.ImageList>、<xref:System.Windows.Forms.ToolBar> 和 <xref:System.Windows.Forms.StatusBar>。 因此，不能在列出的平台上的这些控件中显示 Unicode 数据。 例如，不能在英语版 [!INCLUDE[win98](../../../../includes/win98-md.md)] 操作系统上显示日语字符。  
   

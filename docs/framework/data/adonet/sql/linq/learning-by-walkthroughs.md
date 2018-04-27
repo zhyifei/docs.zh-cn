@@ -1,24 +1,26 @@
 ---
-title: "通过演练学习"
-ms.custom: 
+title: 通过演练学习
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98373ccee7f9fde178f26c62cd77acb17676c6cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learning-by-walkthroughs"></a>通过演练学习
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了一些演练。 本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="general"></a>常规  
  以下信息大致介绍了这些演练：  
   
--   环境：每个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 作为其集成开发环境 (IDE)。  
+-   环境： 每个[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]演练使用 Visual Studio 作为其集成的开发环境 (IDE)。  
   
 -   SQL 引擎：所编写的这些演练需使用 SQL Server Express 来执行。 如果您没有 SQL Server Express，可以免费下载。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
@@ -50,11 +52,11 @@ ms.lasthandoff: 01/19/2018
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练通常需要 Northwind 示例数据库。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
--   您在演练中看到的对话框和菜单命令可能会与“帮助”中描述的有所不同，具体取决于您现用的设置或 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 版本。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+-   显示的对话框和菜单命令在演练中看到可能有所不同具体取决于你现用的设置或 Visual Studio 版本中的帮助中, 所述。 若要更改设置，请单击 **“工具”** 菜单上的 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 -   对于介绍多层方案的演练，服务器必须位于与开发计算机不同的计算机上，并且您必须具有访问此服务器的相应权限。  
   
--   通常表示 Northwind 示例数据库中 Orders 表的类名为 `[Order]`。 这种转义是必需的，因为 `Order` 是 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的一个关键字。  
+-   通常表示 Northwind 示例数据库中 Orders 表的类名为 `[Order]`。 这种转义是必需的因为`Order`是 Visual Basic 中的关键字。  
   
 ## <a name="troubleshooting"></a>疑难解答  
  发生运行时错误的原因可能是您没有足够的权限来访问这些演练中使用的数据库。 请参见以下步骤以帮助解决最常见的此类问题。  

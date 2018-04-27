@@ -1,12 +1,13 @@
 ---
-title: "如何：使用 Windows 窗体 BindingSource 绑定到 Web 服务"
-ms.custom: 
+title: 如何：使用 Windows 窗体 BindingSource 绑定到 Web 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a647f688f0ae8566a7129982e78e3d9503bee6af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 00526e97c148fc4b587571993d2780d2e99f3ecc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>如何：使用 Windows 窗体 BindingSource 绑定到 Web 服务
 如果想要将 Windows 窗体控件绑定到因调用 XML Web 服务获取的结果，可使用 <xref:System.Windows.Forms.BindingSource> 组件。 此过程类似于将 <xref:System.Windows.Forms.BindingSource> 组件绑定到类型。 必须创建客户端代理，其中包含 Web 服务公开的方法和类型。 从 Web 服务 (.asmx) 本身或其 Web 服务描述语言 (WSDL) 文件生成客户端代理。 此外，客户端代理必须公开 Web 服务用作公共属性的复杂类型字段。 然后将 <xref:System.Windows.Forms.BindingSource> 绑定到 Web 服务代理中公开的某个类型。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  使用 WSDL 工具输入 Web 服务的 .asmx 文件或 WSDL 文件的 `wsdl` 和 URL，后接应用程序的命名空间，并可选择性地接正在使用的语言。  
   
-     以下代码示例使用 Web 服务，它位于 http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx。 例如，对于 C# 类型，位于 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`，对于 Visual Basic 类型，则位于 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`。 将路径作为参数传递到 WSDL 工具将以指定语言在与应用程序相同的目录和命名空间中生成客户端代理。 如果正在使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，则将文件添加到项目中。  
+     下面的代码示例使用 Web 服务位于http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx。 例如，对于 C# 类型，位于 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`，对于 Visual Basic 类型，则位于 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`。 将路径作为参数传递到 WSDL 工具将以指定语言在与应用程序相同的目录和命名空间中生成客户端代理。 如果正在使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，则将文件添加到项目中。  
   
 5.  选择客户端代理中要将绑定到的类型。  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
   
 -   对 System, System.Drawing、System.Web.Services、System.Windows.Forms 和 System.Xml 程序集的引用。  
   
- 有关从 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令行生成此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中生成此示例。  另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
+ 为 Visual Basic 或 Visual C# 中生成此示例从命令行有关的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中生成此示例。  另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
   
 ## <a name="see-also"></a>请参阅  
  [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  

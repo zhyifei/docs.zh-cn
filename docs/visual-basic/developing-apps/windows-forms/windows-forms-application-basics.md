@@ -1,25 +1,26 @@
 ---
-title: "Windows 窗体应用程序基础知识 (Visual Basic)"
+title: Windows 窗体应用程序基础知识 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
-一个重要部分[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是创建 Windows 窗体应用程序在用户的计算机上本地运行的能力。 Visual Studio 可用于创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于从类<xref:System.Windows.Forms>命名空间。  
+Visual Basic 的一个重要部分是创建 Windows 窗体应用程序在用户的计算机上本地运行的能力。 Visual Studio 可用于创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于从类<xref:System.Windows.Forms>命名空间。  
   
 ## <a name="designing-windows-forms-applications"></a>设计 Windows 窗体应用程序  
  你可以创建 Windows 窗体和 Windows 服务应用程序与[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。 有关详细信息，请参阅下列主题：  
@@ -52,9 +53,9 @@ ms.lasthandoff: 01/19/2018
   
 |到|查看|  
 |--------|---------|  
-|创建与新的 Windows 窗体应用程序[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[演练： 创建简单的 Windows 窗体](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|创建与新的 Windows 窗体应用程序 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[演练： 创建简单的 Windows 窗体](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |使用窗体上控件|[如何：向 Windows 窗体添加控件](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|创建与图形<xref:System.Drawing>|[图形编程入门](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|创建与图形 <xref:System.Drawing>|[图形编程入门](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |创建自定义控件|[如何：从 UserControl 类继承](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>显示和操作数据  
@@ -77,19 +78,19 @@ ms.lasthandoff: 01/19/2018
 |使用数据源窗口|[演练：在 Windows 窗体上显示数据](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>将应用程序部署到客户端计算机  
- 写入你的应用程序之后，以便他们可以安装和运行在其自己的客户端计算机上必须将它发送到你的用户。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技术，你可以部署你的应用程序从内[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，只需几次点击并为用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]管理的所有元素和你的应用程序中的依赖关系，并确保客户端计算机上正确安装应用程序。  
+ 写入你的应用程序之后，以便他们可以安装和运行在其自己的客户端计算机上必须将它发送到你的用户。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技术，你可以部署你的应用程序从内[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，只需几次点击并为用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 管理的所有元素和你的应用程序中的依赖关系，并确保客户端计算机上正确安装应用程序。  
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 应用程序可以配置为仅在用户连接到网络时运行，或配置为联机和脱机时均可运行。 指定应用程序应支持脱机操作时[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]将链接添加到你的应用程序在用户的**启动**菜单上，以便用户可以打开它而使用的 URL。  
   
- 更新应用程序时，便向你的 Web 服务器发布了一个新的部署清单和应用程序的一个新副本。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]检测到存在可用的更新和升级用户的安装;无需任何自定义编程需要更新旧程序集。  
+ 更新应用程序时，便向你的 Web 服务器发布了一个新的部署清单和应用程序的一个新副本。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 检测到存在可用的更新和升级用户的安装;无需任何自定义编程需要更新旧程序集。  
   
  有关 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 的完整介绍，请参阅 [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 有关使用这些功能的分步信息，请参阅下列帮助主题：  
   
 |到|查看|  
 |--------|---------|  
-|部署的应用程序[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|部署的应用程序 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |更新[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]部署|[如何：管理 ClickOnce 应用程序的更新](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|管理与安全性[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：启用 ClickOnce 安全设置](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|管理与安全性 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[如何：启用 ClickOnce 安全设置](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>其他控件和功能  
  Windows 窗体中有许多其他功能，可帮助快速轻松地实现常见任务，如对创建对话框、打印、添加帮助和文档以及将应用程序本地化为多种语言的支持。 此外，Windows 窗体依赖于可靠的安全系统[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，使你能够更安全应用程序发布到你的客户。  

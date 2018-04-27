@@ -1,11 +1,12 @@
 ---
-title: "算术运算符 (Visual Basic)"
-ms.custom: 
+title: 算术运算符 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - type safety
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7fec98c38eebc34a0f84e051dc7c0914f537418f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cef1e3610d885a0f3a2bae718641f7b8ca1062dc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>算术运算符 (Visual Basic)
 算术运算符用于执行很多熟悉的算术运算，涉及计算的文本、 变量、 其他表达式、 函数和属性调用和常量所表示的数字值。 算术运算符也属于是移位运算符，它们充当级别的单个位进行运算的操作数和向左或向右移动其位模式。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
 |被除数数据类型|除数数据类型|被除数的值|结果|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>（不是数学上定义的数字）|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> （不是数学上定义的数字）|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
@@ -98,11 +99,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="type-safety"></a>类型安全  
  操作数通常应是类型的相同。 例如，如果你正在添加`Integer`变量，你应将其添加到另一个`Integer`变量，并且你应将结果赋给变量的类型`Integer`以及。  
   
- 一种方法以确保良好的类型安全编码做法是使用[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)。 如果你设置`Option Strict On`，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]自动执行*类型安全*转换。 例如，如果你尝试添加`Integer`变量`Double`变量并将值赋给`Double`变量，该操作将正常进行，因为`Integer`值可以转换为`Double`而不会丢失数据。 类型不安全的转换，另一方面，导致编译器错误与`Option Strict On`。 例如，如果你尝试添加`Integer`变量`Double`变量并将值赋给`Integer`变量，会导致编译器错误，因为`Double`变量不能隐式转换为类型`Integer`。  
+ 一种方法以确保良好的类型安全编码做法是使用[Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)。 如果你设置`Option Strict On`，Visual Basic 会自动执行*类型安全*转换。 例如，如果你尝试添加`Integer`变量`Double`变量并将值赋给`Double`变量，该操作将正常进行，因为`Integer`值可以转换为`Double`而不会丢失数据。 类型不安全的转换，另一方面，导致编译器错误与`Option Strict On`。 例如，如果你尝试添加`Integer`变量`Double`变量并将值赋给`Integer`变量，会导致编译器错误，因为`Double`变量不能隐式转换为类型`Integer`。  
   
- 如果你设置`Option Strict Off`，但[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]允许隐式收缩转换完成，尽管它们会导致意外丢失数据或精度。 为此，我们建议你使用`Option Strict On`编写生产代码时。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ 如果你设置`Option Strict Off`，但是，Visual Basic 将允许隐式收缩转换完成，尽管它们会导致意外丢失数据或精度。 为此，我们建议你使用`Option Strict On`编写生产代码时。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [算术运算符](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
  [移位运算符](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
  [在 Visual Basic 中的比较运算符](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  

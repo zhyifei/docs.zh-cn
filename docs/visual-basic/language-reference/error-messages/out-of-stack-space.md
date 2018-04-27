@@ -13,11 +13,11 @@ ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3959c24aa4e95204e156a9863ef0ce237af1fcda
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ec839d1f0ad1931ed4229e898a900c3210d813ed
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="out-of-stack-space-visual-basic"></a>堆栈空间不足 (Visual Basic)
 堆栈是内存的动态与执行程序的需求的增长和缩减的工作区域。 已超出其限制。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 10/18/2017
   
 5.  检查的数嵌套`DoEvents`使用函数调用，`Calls`到哪些过程是堆栈上处于活动状态的视图的对话框。  
   
-6.  请确保你不会触发的事件的事件过程调用在堆栈上的已导致"事件 cascade"。 级联事件类似于未终止的递归过程调用，但它是不太明显的因为默认情况下，调用通过[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]而不是代码中显式调用。 使用`Calls`到哪些过程是堆栈上处于活动状态的视图的对话框。  
+6.  请确保你不会触发的事件的事件过程调用在堆栈上的已导致"事件 cascade"。 级联事件类似于未终止的递归过程调用，但是它不太明显，因为默认情况下，调用通过 Visual Basic 而不是代码中的显式调用。 使用`Calls`到哪些过程是堆栈上处于活动状态的视图的对话框。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [“内存”窗口](/visualstudio/debugger/memory-windows)

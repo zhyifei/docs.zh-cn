@@ -1,12 +1,13 @@
 ---
-title: "演练：演示可视化继承"
-ms.custom: 
+title: 演练：演示可视化继承
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e76ddcb33980db1a6d1b6e602c1b71da60b53381
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>演练：演示可视化继承
 通过 Visual 继承，可以查看基本表单上的控件和添加新控件。 在本演练中，你将创建基窗体，并将其编译到类库。 将此类库导入另一个项目，并创建一个从基窗体继承的新窗体。 在本演练中，你将学会如何执行以下任务：  
@@ -107,7 +109,7 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a>添加基窗体的继承者不能修改的按钮  
   
-1.  切换到设计视图，通过单击**Form1.vb [设计]，Form1.cs [Design]，or Form1.jsl [Design]**选项卡上方代码编辑器中，或按 F7。  
+1.  切换到设计视图，通过单击**Form1.vb [设计]，Form1.cs [Design]，or Form1.jsl [Design]** 选项卡上方代码编辑器中，或按 F7。  
   
 2.  按如下方式添加第二个按钮并设置其属性：  
   
@@ -157,7 +159,7 @@ ms.lasthandoff: 01/19/2018
   
 7.  选择个人**Say Goodbye**按钮，并请注意它不具有调整大小图柄。 此外，在**属性**窗口中，此按钮的属性呈灰显，指示不能修改它们。  
   
-8.  如果使用 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]：  
+8.  如果你使用的 Visual C#:  
   
     1.  在**解决方案资源管理器**，右键单击**Form1**中**InheritanceTest**项目，然后选择**删除**。 在显示的消息框中，单击**确定**以确认删除。  
   
@@ -172,7 +174,7 @@ ms.lasthandoff: 01/19/2018
 12. 按 F5 运行此应用程序，并观察继承的窗体的行为。  
   
 ## <a name="next-steps"></a>后续步骤  
- 用户控件的继承方式大致相同。 打开新的类库项目并添加用户控件。 在其上放置构成控件，然后编译项目。 打开另一个新的类库项目，并添加对已编译的类库的引用。 另外，尝试将继承的控件 (通过**添加新项**对话框) 到项目和使用**继承选择器**。 添加用户控件，并更改 `Inherits`（[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中的 `:`）语句。 有关详细信息，请参阅[如何： 继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
+ 用户控件的继承方式大致相同。 打开新的类库项目并添加用户控件。 在其上放置构成控件，然后编译项目。 打开另一个新的类库项目，并添加对已编译的类库的引用。 另外，尝试将继承的控件 (通过**添加新项**对话框) 到项目和使用**继承选择器**。 添加用户控件，并更改`Inherits`(`:`在 Visual C#) 语句。 有关详细信息，请参阅[如何： 继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  

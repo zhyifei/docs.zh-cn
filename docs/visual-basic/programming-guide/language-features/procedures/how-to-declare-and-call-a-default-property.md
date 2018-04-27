@@ -1,11 +1,12 @@
 ---
-title: "如何：在 Visual Basic 中声明和调用默认属性"
-ms.custom: 
+title: 如何：在 Visual Basic 中声明和调用默认属性
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8baa03e37325a6ad7065ec1a60052b3ea6a46c6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c4f471eba42e47d6bef45a4d38abc0cbd2d32bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>如何：在 Visual Basic 中声明和调用默认属性
-A*默认属性*是一个类或结构的属性，你的代码可以访问而无需指定它。 当调用的代码代表一个类或结构，但不是属性的名称，上下文允许访问某一属性，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]解析对该类或结构的默认属性的访问权限，如果存在。  
+A*默认属性*是一个类或结构的属性，你的代码可以访问而无需指定它。 当调用代码对类或结构，但不是属性和上下文允许对属性的访问，Visual Basic 对该类或结构的默认属性解析的访问权限，如果存在。  
   
  类或结构最多可以有一个默认属性。 但是，可以重载默认属性，也具有多个它的版本。  
   
@@ -89,7 +90,7 @@ A*默认属性*是一个类或结构的属性，你的代码可以访问而无�
   
  由于这些缺点，应考虑未定义默认属性。 为了代码的可读性，你应还考虑始终显式引用所有属性，包括默认属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性过程](./property-procedures.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)  

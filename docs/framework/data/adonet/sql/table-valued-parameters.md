@@ -1,30 +1,32 @@
 ---
-title: "表值参数"
-ms.custom: 
+title: 表值参数
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e881213979d32cb9335f01d2804c35c19856b5e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01b19d49ee82a884247e4eb260f659f19f124cee
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="table-valued-parameters"></a>表值参数
-表值参数提供一种将客户端应用程序中的多行数据封送到 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的简单方式，而不需要多次往返或特殊服务器端逻辑来处理数据。 您可以使用表值参数来包装客户端应用程序中的数据行，并使用单个参数化命令将数据发送到服务器。 传入的数据行存储在一个表变量中，然后您可以通过使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 对该表变量进行操作。  
+表值参数提供一种将客户端应用程序中的多行数据封送到 SQL Server 的简单方式，不需要多次往返或特殊服务器端逻辑来处理数据。 您可以使用表值参数来包装客户端应用程序中的数据行，并使用单个参数化命令将数据发送到服务器。 传入的数据行存储在一个表变量中，然后您可以通过使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 对该表变量进行操作。  
   
  可以使用标准的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SELECT 语句来访问表值参数中的列值。 表值参数为强类型，其结构会自动进行验证。 表值参数的大小仅受服务器内存的限制。  
   
@@ -35,13 +37,13 @@ ms.lasthandoff: 01/17/2018
   
 |资源|描述|  
 |--------------|-----------------|  
-|[表值参数 （数据库引擎）](http://go.microsoft.com/fwlink/?LinkId=98363)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]联机丛书|说明如何创建和使用表值参数。|  
-|[用户定义的表类型](http://go.microsoft.com/fwlink/?LinkId=98364)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]联机丛书|说明用于声明表值参数的用户定义的表类型。|  
+|[表值参数 （数据库引擎）](http://go.microsoft.com/fwlink/?LinkId=98363) SQL Server 联机丛书中|说明如何创建和使用表值参数。|  
+|[用户定义的表类型](http://go.microsoft.com/fwlink/?LinkId=98364)SQL Server 联机丛书中|说明用于声明表值参数的用户定义的表类型。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在 SQL Server 的早期版本中传递多行  
- 在 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2008 中引入表值参数之前，用于将多行数据传递到存储过程或参数化 SQL 命令的选项受到限制。 开发人员可以选择使用以下选项，将多个行传递给服务器：  
+ 表值参数中引入的 SQL Server 2008 之前，将多行数据传递到存储的过程或参数化的 SQL 命令的选项受到限制。 开发人员可以选择使用以下选项，将多个行传递给服务器：  
   
--   使用一系列单个参数表示多个数据列和行中的值。 使用此方法传递的数据量受所允许的参数数量的限制。 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 过程最多可以有 2100 个参数。 必须使用服务器端逻辑才能将这些单个值组合到表变量或临时表中以进行处理。  
+-   使用一系列单个参数表示多个数据列和行中的值。 使用此方法传递的数据量受所允许的参数数量的限制。 SQL Server 过程最多可以有 2100 个参数。 必须使用服务器端逻辑才能将这些单个值组合到表变量或临时表中以进行处理。  
   
 -   将多个数据值捆绑到分隔字符串或 XML 文档中，然后将这些文本值传递给过程或语句。 此过程要求相应的过程或语句包括验证数据结构和取消捆绑值所需的逻辑。  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/17/2018
 -   使用 `bcp` 实用工具程序或 <xref:System.Data.SqlClient.SqlBulkCopy> 对象将很多行数据加载到表中。 尽管这项技术非常有效，但不支持服务器端处理，除非将数据加载到临时表或表变量中。  
   
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
- 表值参数以通过使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE 语句定义的强类型表结构为基础。 您必须先在 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅[用户定义表类型](http://go.microsoft.com/fwlink/?LinkID=98364)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]联机丛书。  
+ 表值参数以通过使用 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE 语句定义的强类型表结构为基础。 您必须先在 SQL Server 中创建一个表类型并定义结构，才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅[用户定义表类型](http://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 联机丛书中。  
   
  下面的语句可创建一个名为 CategoryTableType 的表类型，其中包括 CategoryID 和 CategoryName 列：  
   
@@ -90,14 +92,14 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 -   不能将传递到表值参数[CLR 用户定义函数](http://msdn.microsoft.com/library/ms131077.aspx)。  
   
--   只有对表值参数进行索引才能支持 UNIQUE 或 PRIMARY KEY 约束。 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 不维护有关表值参数的统计信息。  
+-   只有对表值参数进行索引才能支持 UNIQUE 或 PRIMARY KEY 约束。 SQL Server 不维护有关表值参数的统计信息。  
   
 -   在 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 代码中表值参数是只读的。 无法更新表值参数的行中的列值且无法插入或删除行。 若要修改传递给表值参数中的存储过程或参数化语句的数据，则必须将数据插入到临时表或表变量中。  
   
 -   无法使用 ALTER TABLE 语句来修改表值参数的设计。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>配置 SqlParameter 示例  
- <xref:System.Data.SqlClient>支持填充表值参数从<xref:System.Data.DataTable>，<xref:System.Data.Common.DbDataReader>或<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>对象。 必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 下面的代码段演示如何配置 <xref:System.Data.SqlClient.SqlParameter> 以插入数据。  
+ <xref:System.Data.SqlClient> 支持填充表值参数从<xref:System.Data.DataTable>，<xref:System.Data.Common.DbDataReader>或<xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord>对象。 必须通过使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 属性指定表值参数的类型名称。 `TypeName` 必须与以前在服务器上创建的兼容类型的名称相匹配。 下面的代码段演示如何配置 <xref:System.Data.SqlClient.SqlParameter> 以插入数据。  
   
 ```csharp  
 // Configure the command and parameter.  

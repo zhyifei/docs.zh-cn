@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c5026c7c3e90afa843b819fb51d7a4a7c8249a0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>什么&#39;s Windows Workflow Foundation 中的新增功能
 [!INCLUDE[wf](../../../includes/wf-md.md)]中的 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 对以前版本中的多个开发范例进行了更改。 现在，工作流可以更方便地创建、执行、维护和实现许多新功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
@@ -66,4 +66,4 @@ ms.lasthandoff: 03/23/2018
 -   现在可以使用 <xref:System.Activities.Bookmark> 对象管理对挂起的工作流的恢复。  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>简化的 WF 设计器扩展体验功能  
- 新 WF 设计器建立在 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 的基础上，它提供了更简单的可在 Visual Studio 之外重新承载 WF 设计器时使用的模型，还提供了更简单的用于创建自定义活动设计器的机制。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [自定义工作流设计体验](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)。
+ 新 WF 设计器生成 Windows Presentation Foundation (WPF) 上，提供更简单的模型重新承载 WF 设计器在 Visual Studio 之外时要使用以及还提供了用于创建自定义活动设计器的方便机制。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [自定义工作流设计体验](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)。

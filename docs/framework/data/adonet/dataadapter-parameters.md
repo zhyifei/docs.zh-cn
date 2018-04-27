@@ -1,27 +1,29 @@
 ---
-title: "DataAdapter 参数"
-ms.custom: 
+title: DataAdapter 参数
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b5cc66e1d2240450743afa8ca8aaa6efe94398d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 600dd949ffbed5c1066f9e3c3d9cc09eb174a22e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter 参数
 <xref:System.Data.Common.DbDataAdapter> 具有四个用于从数据源检索数据和更新数据源中数据的属性：<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> 属性返回数据源中的数据；<xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> 属性用于管理数据源中的更改。 调用 `SelectCommand` 的 `Fill` 方法之前必须设置 `DataAdapter` 属性。 在调用 `InsertCommand` 的 `UpdateCommand` 方法之前必须设置 `DeleteCommand`、`Update` 或 `DataAdapter` 属性，具体取决于对 <xref:System.Data.DataTable> 中的数据做了哪些更改。 例如，如果已添加行，在调用 `InsertCommand` 之前必须设置 `Update`。 当 `Update` 正在处理已插入、已更新或已删除的行时，`DataAdapter` 将使用相应的 `Command` 属性来处理该操作。 有关已修改行的当前信息将通过 `Command` 集合传递到 `Parameters` 对象。  
@@ -36,7 +38,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 > [!NOTE]
 >  参数占位符的语法取决于数据源。 此示例显示 SQL Server 数据源的占位符。 使用问号 (?) 占位符代表 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> 参数。  
   
- 在此[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]示例中，`CompanyName`使用的值更新字段`@CompanyName`行的参数其中`CustomerID`等于的值`@CustomerID`参数。 参数从已修改的行使用检索信息<xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A>属性<xref:System.Data.SqlClient.SqlParameter>对象。 下面是上一示例 UPDATE 语句的参数。 代码假定变量 `adapter` 表示有效的 <xref:System.Data.SqlClient.SqlDataAdapter> 对象。  
+ 在 Visual Basic 此示例中，`CompanyName`使用的值更新字段`@CompanyName`行的参数其中`CustomerID`等于的值`@CustomerID`参数。 参数从已修改的行使用检索信息<xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A>属性<xref:System.Data.SqlClient.SqlParameter>对象。 下面是上一示例 UPDATE 语句的参数。 代码假定变量 `adapter` 表示有效的 <xref:System.Data.SqlClient.SqlDataAdapter> 对象。  
   
 ```  
 adapter.Parameters.Add( _  
@@ -64,7 +66,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|该参数使用列的原始值。|  
 |`Proposed`|该参数使用建议值。|  
   
- 下一节中的 `SqlClient` 代码示例为 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 定义了一个参数，在该示例中 `CustomerID` 列用作以下两个参数的 `SourceColumn`：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 `@CustomerID`参数用于更新**CustomerID**列中的当前值`DataRow`。 因此， `CustomerID` `SourceColumn`与`SourceVersion`的`Current`使用。  *@OldCustomerID* 参数用于标识数据源中的当前行。 由于在该行的 `Original` 版本中找到了匹配列值，所以将使用 `SourceColumn` 为 `CustomerID` 的相同 `SourceVersion` (`Original`)。  
+ 下一节中的 `SqlClient` 代码示例为 <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 定义了一个参数，在该示例中 `CustomerID` 列用作以下两个参数的 `SourceColumn`：`@CustomerID` (`SET CustomerID = @CustomerID`) 和 `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`)。 `@CustomerID`参数用于更新**CustomerID**列中的当前值`DataRow`。 因此， `CustomerID` `SourceColumn`与`SourceVersion`的`Current`使用。 *@OldCustomerID*参数用于标识数据源中的当前行。 由于在该行的 `Original` 版本中找到了匹配列值，所以将使用 `SourceColumn` 为 `CustomerID` 的相同 `SourceVersion` (`Original`)。  
   
 ## <a name="working-with-sqlclient-parameters"></a>使用 SqlClient 参数  
  下面的示例演示如何创建 <xref:System.Data.SqlClient.SqlDataAdapter> 并将 <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> 设置为 <xref:System.Data.MissingSchemaAction.AddWithKey>，以便从数据库中检索其他架构信息。 <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> 和 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 属性集及其相应的 <xref:System.Data.SqlClient.SqlParameter> 对象已添加到 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合。 该方法返回一个 `SqlDataAdapter` 对象。  

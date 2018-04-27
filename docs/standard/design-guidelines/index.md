@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c48b3cbaae4155a894ba77263505b2ca85238427
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c54ec4a5cc3c4bef1e6460b2c9971af4e2af983a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="framework-design-guidelines"></a>框架设计准则
 本部分提供有关设计的库扩展且使用.NET Framework 进行交互的准则。 目的是帮助确保通过提供用于开发的编程语言无关的统一编程模型的 API 一致性和易于使用的库设计器。 我们建议你遵循这些设计准则，开发的类和扩展.NET Framework 的组件时。 不一致的库设计产生负面影响开发人员工作效率，并且不鼓励采用。  
@@ -57,9 +57,9 @@ ms.lasthandoff: 01/19/2018
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [概述](../../../docs/framework/get-started/overview.md)  
- [.NET Framework 的路线图](http://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
+ [.NET Framework 的路线图](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
  [开发指南](../../../docs/framework/development-guide.md)

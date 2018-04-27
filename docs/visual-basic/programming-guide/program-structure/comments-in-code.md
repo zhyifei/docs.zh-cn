@@ -1,11 +1,12 @@
 ---
-title: "代码中的注释 (Visual Basic)"
-ms.custom: 
+title: 代码中的注释 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Uncomment button
@@ -20,19 +21,19 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0cf1aa755c479c73c64951f80ab0b76985507da6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cd3277ea61ac9b46d8d20028bd100811988f611
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comments-in-code-visual-basic"></a>代码中的注释 (Visual Basic)
-阅读代码示例时，经常会遇到注释符号 (`'`)。 此符号通知[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器忽略它，后面的文本或*注释*。 注释是为了方便阅读而为代码添加的简短的解释性说明。  
+阅读代码示例时，经常会遇到注释符号 (`'`)。 此符号通知 Visual Basic 编译器忽略它，后面的文本或*注释*。 注释是为了方便阅读而为代码添加的简短的解释性说明。  
   
- 在所有过程的开头加入一段说明过程功能特征（过程的作用）的简短注释是一个很好的编程做法。 这对您自己和检查代码的任何其他人都有好处。 应该把实现的详细信息（过程实现的方式）与描述功能特征的注释分开。 若给说明加入了实现的详细信息，切记在更新函数时对这些详细信息进行更新。  
+ 在所有过程的开头加入一段说明过程功能特征（过程的作用）的简短注释是一个很好的编程做法。 这对你自己和检查代码的任何其他人都有好处。 应该把实现的详细信息（过程实现的方式）与描述功能特征的注释分开。 若给说明加入了实现的详细信息，切记在更新函数时对这些详细信息进行更新。  
   
  注释可以和语句同行并跟随其后，也可以另占一整行。 以下代码阐释了这两种情况。  
   
@@ -43,12 +44,12 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
   
 ## <a name="commenting-guidelines"></a>注释原则  
- 下表提供了在一段代码前可以加上哪些类型的注释的一般原则。 这些准则仅仅是一些建议；[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 并未强制实施有关添加注释的规则。 编写注释时，应编写对您和代码的任何其他读者都最为有效的注释。  
+ 下表提供了在一段代码前可以加上哪些类型的注释的一般原则。 这些是一些建议;Visual Basic 不强制实施有关添加注释的规则。 编写注释时，应编写对你和代码的任何其他读者都最为有效的注释。  
   
 |||  
 |---|---|  
 |注释类型|注释说明|  
-|用途|描述过程的用途（而不是其实现方式）|  
+|目标|描述过程的用途（而不是其实现方式）|  
 |假设|列举每个外部变量、控件、打开的文件或过程访问的其他元素|  
 |效果|列举每个受影响的外部变量、控件、文件以及它的作用（仅在作用不明显时列举）|  
 |输入|指定参数的用途|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  也可以用在文本前加关键字 `REM` 的方式给代码添加注释。 但是，`'`符号和**注释**/**取消注释**按钮都更轻松地使用和需要较少的空间和内存。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 XML 注释将代码文档化](http://msdn.microsoft.com/magazine/dd722812.aspx)  
  [如何：创建 XML 文档](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
  [XML 注释标记](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  

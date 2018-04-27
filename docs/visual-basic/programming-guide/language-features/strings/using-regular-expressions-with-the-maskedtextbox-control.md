@@ -1,31 +1,32 @@
 ---
-title: "在 MaskedTextBox 控件中使用正则表达式 (Visual Basic)"
-ms.custom: 
+title: 在 MaskedTextBox 控件中使用正则表达式 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>在 MaskedTextBox 控件中使用正则表达式 (Visual Basic)
 此示例演示如何将简单的正则表达式，用于转换<xref:System.Windows.Forms.MaskedTextBox>控件。  
   
 ## <a name="description-of-the-masking-language"></a>屏蔽语言的说明  
- 标准<xref:System.Windows.Forms.MaskedTextBox>屏蔽语言取决于使用的那个`Masked Edit`中控制[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]6.0，并且应该为从该平台迁移的用户所熟悉。  
+ 标准<xref:System.Windows.Forms.MaskedTextBox>屏蔽语言取决于使用的那个`Masked Edit`控制在 Visual Basic 6.0 中，并且应该为从该平台迁移的用户所熟悉。  
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>属性<xref:System.Windows.Forms.MaskedTextBox>控件指定要使用哪些输入的掩码。 掩码必须是组成一个或多个以下表格中的屏蔽元素的字符串。  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |&|字符。 所需的项。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
 |C|字符。 可选的条目。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]？|  
 |包含当前请求的 URL 的|字母数字。 可选的条目。|\W|  
-|。|相应于区域性的小数点占位符。|不可用。|  
+|.|相应于区域性的小数点占位符。|不可用。|  
 |,|相应数千于区域性的占位符。|不可用。|  
 |:|相应于区域性的时间分隔符。|不可用。|  
 |/|相应于区域性的日期分隔符。|不可用。|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|美国境内电话号码，可选的区域代码。 如果用户不希望输入的可选字符，她可以输入空间，或将鼠标指针放在由第一个 0 表示掩码中的位置直接。|  
 |`$\d{6}.00`|`$999,999.00`|0 到 999999 的范围中的货币值。 货币、 千位和十进制字符将替换为在运行时它们特定于区域性的等效项。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
  <xref:System.Windows.Forms.MaskedTextBox>  
  [在 Visual Basic 中验证字符串](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  

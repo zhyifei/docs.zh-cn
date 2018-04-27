@@ -1,9 +1,9 @@
 ---
-title: "创建程序集清单时出错：&lt;错误消息&gt;"
+title: 创建程序集清单时出错：&lt;错误消息&gt;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5e88d28ef787eb57b71d94f4ee51c09e9751dbff
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4032bbcbf9924eb5aad4e2cb1a6e74df9a472eca
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-creating-assembly-manifest-lterror-messagegt"></a>创建程序集清单时出错：&lt;错误消息&gt;
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器调用程序集链接器（Al.exe，也称作 Alink）生成包含清单的程序集。 该链接器已报告在创建程序集的预发出阶段中出错。  
+Visual Basic 编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。 该链接器已报告在创建程序集的预发出阶段中出错。  
   
  如果指定的密钥文件或密钥容器有问题，就可能发生错误。 若要对程序集进行完全签名，必须提供包含公钥和私钥信息的有效密钥文件。 若要延迟对程序集的签名，必须选择“仅延迟签名”复选框，并提供包含公钥信息的有效密钥文件。 当程序集为延迟签名时，不需要使用私有密钥。 有关详细信息，请参阅[如何：使用强名称为程序集签名](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。  
   

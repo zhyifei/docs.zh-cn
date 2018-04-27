@@ -1,30 +1,31 @@
 ---
-title: ".NET Framework 应用程序中的 COM 互操作性 (Visual Basic)"
-ms.custom: 
+title: .NET Framework 应用程序中的 COM 互操作性 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interoperability, COM and .NET framework objects
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0c84143e22f33f572447c50e33559a52469b181a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 25fbde3845d378d4a2bcfc13c71124ad1bc29514
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 应用程序中的 COM 互操作性 (Visual Basic)
-如果你想要在同一个应用程序中使用 COM 对象和.NET Framework 对象，你需要处理中的对象在内存中的存在的差异。 .NET Framework 对象位于托管内存-由公共语言运行时控制的内存 — 和根据需要可由运行时移动。 COM 对象位于非托管内存中，不应将移至另一个内存位置。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]与[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]提供工具以控制这些交互托管和非托管组件。 有关托管代码的详细信息，请参阅[公共语言运行时](../../../standard/clr.md)。  
+如果你想要在同一个应用程序中使用 COM 对象和.NET Framework 对象，你需要处理中的对象在内存中的存在的差异。 .NET Framework 对象位于托管内存-由公共语言运行时控制的内存 — 和根据需要可由运行时移动。 COM 对象位于非托管内存中，不应将移至另一个内存位置。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 与[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]提供工具以控制这些交互托管和非托管组件。 有关托管代码的详细信息，请参阅[公共语言运行时](../../../standard/clr.md)。  
   
- 除了使用.NET 应用程序中的 COM 对象，可能还想要使用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]开发可从 com。 通过非托管代码访问的对象  
+ 除了使用.NET 应用程序中的 COM 对象，你可能还想要使用 Visual Basic 开发可从 com。 通过非托管代码访问的对象  
   
  此页上的链接提供有关 COM 和.NET Framework 对象之间的交互的详细信息。  
   

@@ -1,11 +1,12 @@
 ---
-title: "运算符过程 (Visual Basic)"
-ms.custom: 
+title: 运算符过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>运算符过程 (Visual Basic)
-运算符过程是一系列[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]定义一个标准的运算符的行为的语句 (如`*`， `<>`，或`And`) 对类或你定义的结构。 这也称为*运算符重载*。  
+运算符过程是一系列定义一个标准的运算符的行为的 Visual Basic 语句 (如`*`， `<>`，或`And`) 对类或你定义的结构。 这也称为*运算符重载*。  
   
 ## <a name="when-to-define-operator-procedures"></a>何时定义运算符过程  
  当你已定义类或结构时，可声明为类或结构的类型的变量。 有时这种变量需要参与一个操作作为表达式的一部分。 若要执行此操作，它必须是运算符的操作数。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]仅在其基本数据类型上定义运算符。 你可以定义一个运算符的行为或两个操作数均为你的类或结构的类型。  
+ Visual Basic 仅在其基本数据类型上定义运算符。 你可以定义一个运算符的行为或两个操作数均为你的类或结构的类型。  
   
  有关详细信息，请参阅[Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)。  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/21/2017
   
  有关详细信息和示例，请参阅 [Visual Basic 2005 中的运算符重载](http://go.microsoft.com/fwlink/?LinkId=101703)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [Sub 过程](./sub-procedures.md)  
  [Function 过程](./function-procedures.md)  

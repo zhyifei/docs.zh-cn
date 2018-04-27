@@ -15,11 +15,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 虽然可以将 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 项目可视化为按序列执行的一系列过程，但实际上大多数程序都是事件驱动型。也就是说，外部发生的*事件*决定了执行流。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/21/2017
  事件是一种信号，可指示应用程序某重要事件已发生。 例如，当用户单击窗体控件时，窗体会引发 `Click` 事件，并调用可处理此事件的过程。 借助事件，各个不同的任务还可以相互通信。 例如，应用程序执行的排序任务与主应用程序是分开的。 如果用户取消排序，应用程序便会发送 cancel 事件，指示停止排序过程。  
   
 ## <a name="event-terms-and-concepts"></a>事件术语和概念  
- 此部分介绍了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的事件术语和概念。  
+ 本部分介绍的术语和概念与在 Visual Basic 中的事件一起使用。  
   
 ### <a name="declaring-events"></a>声明事件  
  可以使用 `Event` 关键字在类、结构、模块和接口中声明事件，如以下示例所示：  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>引发事件  
- 事件类似于消息，指示某重要事件已发生。 广播消息的行为称为*引发*事件。 在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中，使用 `RaiseEvent` 语句引发事件，如以下示例所示：  
+ 事件类似于消息，指示某重要事件已发生。 广播消息的行为称为*引发*事件。 在 Visual Basic 中，你可以引发事件的`RaiseEvent`语句，如以下示例所示：  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="event-handlers"></a>事件处理程序  
  *事件处理程序*是在相应事件发生时调用的过程。 可以将签名一致的任意有效子例程用作事件处理程序。 不过，不能将函数用作事件处理程序，因为它不能向事件源返回值。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 对事件处理程序采用标准命名约定，即名称中包含事件发送方的名称、下划线和事件名称。 例如，`button1` 按钮的 `Click` 事件将命名为 `Sub button1_Click`。  
+ Visual Basic 使用标准命名约定对事件处理程序将合并的事件发送方、 下划线和事件的名称的名称。 例如，`button1` 按钮的 `Click` 事件将命名为 `Sub button1_Click`。  
   
 > [!NOTE]
 >  我们建议在为你自己的事件定义事件处理程序时采用此命名约定，但这不是一项强制性要求；可以命名任意有效的子例程名称。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  虽然 `Handles` 子句是关联事件与事件处理程序的标准方法，但只能在编译时关联事件与事件处理程序。  
   
- 在某些情况下（如事件与窗体或控件相关联），[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会自动存根空事件处理程序，并将其与事件相关联。 例如，在设计模式下双击窗体上的命令按钮时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会为命令按钮创建空事件处理程序和 `WithEvents` 变量，如以下代码所示：  
+ 在某些情况下，如使用窗体或控件，与关联的事件 Visual Basic 自动引出一个空的事件处理程序并将其与事件关联。 例如，双击在设计模式下的窗体上的命令按钮时，Visual Basic 创建一个空的事件处理程序和`WithEvents`变量的命令按钮，如以下代码所示：  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
   
- `RemoveHandler` 用于解除事件与事件处理程序的关联，所用语法与 `AddHandler` 一样。 例如:  
+ `RemoveHandler` 用于解除事件与事件处理程序的关联，所用语法与 `AddHandler` 一样。 例如：  
   
  [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-handle-events-from-a-base-class"></a>处理继承自基类的事件的具体操作  
   
--   向事件处理程序过程的声明行添加 `Handles MyBase.` *eventname* 语句，在派生类中声明事件处理程序，其中 *eventname* 是要处理的继承自基类的事件名称。 例如:  
+-   向事件处理程序过程的声明行添加 `Handles MyBase.` *eventname* 语句，在派生类中声明事件处理程序，其中 *eventname* 是要处理的继承自基类的事件名称。 例如：  
   
      [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
   

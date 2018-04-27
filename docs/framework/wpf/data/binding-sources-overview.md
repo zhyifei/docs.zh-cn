@@ -1,28 +1,30 @@
 ---
-title: "绑定源概述"
-ms.custom: 
+title: 绑定源概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnet
+ms.openlocfilehash: 94238ba34976ad5971e7181aa3377e38ab0e4659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-sources-overview"></a>绑定源概述
 在数据绑定中，绑定源对象是指用户从其获取数据的对象。 本主题讨论可用作绑定源的对象类型。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 01/09/2018
 ### <a name="other-characteristics"></a>其他特性  
  下表提供了需要注意的其他要点：  
   
--   如果要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中创建对象，类必须具有默认的构造函数。 在某些 [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] 语言（如 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]）中，可能已为用户创建默认的构造函数。  
+-   如果要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中创建对象，类必须具有默认的构造函数。 在某些[!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]语言，如 C# 中，可能会为你创建的默认构造函数。  
   
 -   用作绑定的绑定源属性的属性必须为类的公共属性。 不能出于绑定目的来访问显式定义的接口属性，也不能访问没有基实现的受保护、私有、内部或虚拟属性。  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/09/2018
   
  WPF 从不直接绑定到集合。 如果指定集合作为绑定源，WPF 实际上会绑定到该集合的默认视图。 有关默认视图的信息，请参阅[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
- 如果你有的高级的方案，并且你想要实现您自己的集合，请考虑使用<xref:System.Collections.IList>接口。 <xref:System.Collections.IList>提供可按照索引，这可以提高性能单独访问的对象的非泛型集合。  
+ 如果你有的高级的方案，并且你想要实现您自己的集合，请考虑使用<xref:System.Collections.IList>接口。 <xref:System.Collections.IList> 提供可按照索引，这可以提高性能单独访问的对象的非泛型集合。  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>数据绑定中的权限要求  

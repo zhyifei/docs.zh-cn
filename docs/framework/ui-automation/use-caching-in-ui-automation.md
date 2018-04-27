@@ -1,12 +1,13 @@
 ---
-title: "在 UI 自动化中使用缓存"
-ms.custom: 
+title: 在 UI 自动化中使用缓存
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 808ba16cbacfad2cc255ae40e2cbad3178350afc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f559153190e4acb3b67acf75954260b31906c0d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-caching-in-ui-automation"></a>在 UI 自动化中使用缓存
 > [!NOTE]
@@ -44,9 +46,9 @@ ms.lasthandoff: 12/22/2017
   
 5.  如果想通过不检索对对象的完全引用来提高效率，请将 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 属性设置为 <xref:System.Windows.Automation.AutomationElementMode.None> 。 （这将导致无法从那些对象中检索当前值。）  
   
-6.  使用 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 块（ `using` 中的`Using` ）中的 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]激活请求。  
+6.  使用激活请求<xref:System.Windows.Automation.CacheRequest.Activate%2A>内`using`块 (`Using`在 Microsoft Visual Basic.NET)。  
   
- 在获得 <xref:System.Windows.Automation.AutomationElement> 对象或订阅事件后，通过使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A> （如果使用了 <xref:System.Windows.Automation.CacheRequest.Push%2A> ）或处理 <xref:System.Windows.Automation.CacheRequest.Activate%2A>创建的对象来禁用请求。 使用 <xref:System.Windows.Automation.CacheRequest.Activate%2A> 块（ `using` 中的`Using` ）中的 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]。  
+ 在获得 <xref:System.Windows.Automation.AutomationElement> 对象或订阅事件后，通过使用 <xref:System.Windows.Automation.CacheRequest.Pop%2A> （如果使用了 <xref:System.Windows.Automation.CacheRequest.Push%2A> ）或处理 <xref:System.Windows.Automation.CacheRequest.Activate%2A>创建的对象来禁用请求。 (使用<xref:System.Windows.Automation.CacheRequest.Activate%2A>中`using`块 (`Using`在 Microsoft Visual Basic.NET)。  
   
 ### <a name="cache-automationelement-properties"></a>缓存 AutomationElement 属性  
   

@@ -12,14 +12,14 @@ ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 890d5a3a3f9c3a737a59e17fef0d4ac0407e9924
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3269a980d19466205e6c67a18f22dded9301ec59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm 组件 (Visual Basic)
-通过 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 组件，你可以在运行时打印 Windows 窗体的图像。 其行为取代了 Visual Basic 早期版本中的 `PrintForm` 方法。  
+<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm>适用于 Visual Basic 组件，可以在运行时打印 Windows 窗体的图像。 其行为取代了 Visual Basic 早期版本中的 `PrintForm` 方法。  
   
  Visual Studio 中不再包含 PowerPack 控件，但你可以从 [下载中心](http://www.microsoft.com/en-us/download/details.aspx?id=25169)下载它们。  
   
@@ -73,7 +73,7 @@ pf.PrintAction = PrintToPrinter
 pf.Print()  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
  [如何：使用 PrintForm 组件打印窗体](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  

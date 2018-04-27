@@ -1,24 +1,26 @@
 ---
-title: "动态重新配置"
-ms.custom: 
+title: 动态重新配置
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbf286891211da0e35274ff59f3bee69ebf3c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 36b548ee47ed9165743bbfb1eaab5cf3bbe82bd2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-reconfiguration"></a>动态重新配置
 此示例演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 路由服务。 路由服务是一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 组件，使用该组件可方便地在应用程序中包含基于内容的路由器。 此示例采用标准的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 计算器示例，用于使用路由服务进行通信。 此示例演示如何在运行时动态重新配置路由服务。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  若要打开**解决方案资源管理器**，选择**解决方案资源管理器**从**视图**菜单。  
   
-3.  按**F5**或**CTRL + SHIFT + B**中[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。  
+3.  按**F5**或**CTRL + SHIFT + B** Visual Studio 中。  
   
     1.  如果你想要自动启动所需的项目，当你按**F5**，右键单击该解决方案并选择**属性**。 选择**启动项目**节点下的**通用属性**的左窗格中。 选择**多启动项目**单选按钮，设置所有项目具有**启动**操作。  
   

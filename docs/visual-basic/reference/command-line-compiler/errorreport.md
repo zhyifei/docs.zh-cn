@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59dc833299161eac7b119e654c94534f202b1cb7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5dc321f7f927d68a9f270076640cbc6d31d2f6d5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-errorreport"></a>-errorreport
-指定 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器应报告内部编译器错误的方式。  
+指定 Visual Basic 编译器应报告内部编译器错误的方式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/22/2018
 ```  
   
 ## <a name="remarks"></a>备注  
- 此选项可以方便地向报表[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]到内部编译器错误 (ICE) [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Microsoft 团队。 默认情况下，编译器会向 Microsoft 发送任何信息。 但是，如果您遇到内部编译器错误，此选项允许你向 Microsoft 报告错误。 该信息将帮助 Microsoft 工程师确定原因以及可帮助改善的下一个版本[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 此选项提供一种简便方式 Visual Basic 内部编译器错误 (ICE) 报告到 Microsoft 的 Visual Basic 团队。 默认情况下，编译器会向 Microsoft 发送任何信息。 但是，如果您遇到内部编译器错误，此选项允许你向 Microsoft 报告错误。 该信息将帮助 Microsoft 工程师确定原因以及可能帮助改进 Visual Basic 的下一个版本。  
   
  发送报表用户的能力取决于计算机和用户策略权限。  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 03/22/2018
 vbc -errorreport:prompt t2.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

@@ -1,12 +1,12 @@
 ---
-title: "向 Windows 运行时传递 URI"
-ms.custom: 
+title: 向 Windows 运行时传递 URI
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Runtime, .NET Framework support for
 - Windows Runtime, passing a URI to
 ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 78ba02fa227bd5c10337da0ef8b65ceab476c1ed
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ed49555b7d87973849f30a502a46e508b6323e7
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>向 Windows 运行时传递 URI
-Windows 运行时方法只接受绝对 URI。 如果将一个相对 URI 传递给 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 方法，则将会引发 <xref:System.ArgumentException> 异常。 原因是： 当你使用[!INCLUDE[wrt](../../../includes/wrt-md.md)]在.NET Framework 代码中， [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)类显示为<xref:System.Uri?displayProperty=nameWithType>Intellisense 中。 <xref:System.Uri?displayProperty=nameWithType>类允许相对 Uri，但[Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)类却没有。 这也适用于 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件中公开的方法。 如果组件公开接收 URI 的方法，则代码中的签名包含 <xref:System.Uri?displayProperty=nameWithType>。 但是，你的组件的用户，签名包括[Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376)。 传递给组件的 URI 必须是绝对 URI。  
+Windows 运行时方法只接受绝对 URI。 如果将一个相对 URI 传递给 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 方法，则将会引发 <xref:System.ArgumentException> 异常。 原因是： 当你使用[!INCLUDE[wrt](../../../includes/wrt-md.md)]在.NET Framework 代码中，<xref:Windows.Foundation.Uri?displayProperty=nameWithType>类显示为<xref:System.Uri?displayProperty=nameWithType>Intellisense 中。 <xref:System.Uri?displayProperty=nameWithType>类允许相对 Uri，但<xref:Windows.Foundation.Uri?displayProperty=nameWithType>类却没有。 这也适用于 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 组件中公开的方法。 如果组件公开接收 URI 的方法，则代码中的签名包含 <xref:System.Uri?displayProperty=nameWithType>。 但是，你的组件的用户，签名包括<xref:Windows.Foundation.Uri?displayProperty=nameWithType>。 传递给组件的 URI 必须是绝对 URI。  
   
  本主题演示了如何检测绝对 URI 以及如何在引用应用包中的资源时创建一个。  
   

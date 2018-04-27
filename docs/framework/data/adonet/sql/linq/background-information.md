@@ -1,24 +1,26 @@
 ---
-title: "背景信息"
-ms.custom: 
+title: 背景信息
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7adb74578bcab646744ea674bd6a07017101896e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10e0facae7856db2f169503ca89facb0194e9237
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="background-information"></a>背景信息
 本节中的主题介绍有关使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的基础知识以外的概念和过程。  
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
   
 -   参与[LINQ 论坛](http://go.microsoft.com/fwlink/?LinkId=76488)，可以与专家们讨论更复杂的主题的详细信息。  
   
--   学习详细介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 和 C# 代码示例的白皮书。 有关详细信息，请参阅[LINQ to SQL： 关系数据的.net 语言集成查询](http://go.microsoft.com/fwlink/?LinkId=93205)。  
+-   学习详细介绍的白皮书[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技术，并包含 Visual Basic 和 C# 代码示例。 有关详细信息，请参阅[LINQ to SQL： 关系数据的.net 语言集成查询](http://go.microsoft.com/fwlink/?LinkId=93205)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ADO.NET 和 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  

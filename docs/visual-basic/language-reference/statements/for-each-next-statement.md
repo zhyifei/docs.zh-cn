@@ -1,10 +1,11 @@
 ---
-title: "For Each...Next 语句 (Visual Basic)"
+title: For Each...Next 语句 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b1593d279d4338ebadca803fe757a201cbcd654b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 语句 (Visual Basic)
 集合中每个元素重复一的组语句。  
@@ -97,7 +98,7 @@ Next [ element ]
   
  你可以放置任意数量的`Exit For`中的语句`For Each`循环。 当使用内嵌套`For Each`循环，`Exit For`会导致执行到下一步较高级别的嵌套退出最内部的循环，并将控制权。  
   
- `Exit For`通常使用某种条件; 评估之后例如，在`If`...`Then`...`Else`结构。 你可能想要使用`Exit For`在以下情况：  
+ `Exit For` 通常使用某种条件; 评估之后例如，在`If`...`Then`...`Else`结构。 你可能想要使用`Exit For`在以下情况：  
   
 -   继续循环是不必要或无法完成。 这可能引起错误的值或终止请求。  
   
@@ -133,7 +134,7 @@ Next [ element ]
   
  数据类型`element`必须是这样，数据类型的元素的`group`可以转换为它。  
   
- 数据类型`group`必须指的是集合或数组，它是可枚举是引用类型。 通常这意味着，`group`实现的对象是指<xref:System.Collections.IEnumerable>界面`System.Collections`命名空间或<xref:System.Collections.Generic.IEnumerable%601>界面`System.Collections.Generic`命名空间。 `System.Collections.IEnumerable`定义<xref:System.Collections.IEnumerable.GetEnumerator%2A>方法，返回集合的枚举器对象。 枚举器对象实现`System.Collections.IEnumerator`界面`System.Collections`命名空间，并公开<xref:System.Collections.IEnumerator.Current%2A>属性和<xref:System.Collections.IEnumerator.Reset%2A>和<xref:System.Collections.IEnumerator.MoveNext%2A>方法。 Visual Basic 使用这些遍历该集合。  
+ 数据类型`group`必须指的是集合或数组，它是可枚举是引用类型。 通常这意味着，`group`实现的对象是指<xref:System.Collections.IEnumerable>界面`System.Collections`命名空间或<xref:System.Collections.Generic.IEnumerable%601>界面`System.Collections.Generic`命名空间。 `System.Collections.IEnumerable` 定义<xref:System.Collections.IEnumerable.GetEnumerator%2A>方法，返回集合的枚举器对象。 枚举器对象实现`System.Collections.IEnumerator`界面`System.Collections`命名空间，并公开<xref:System.Collections.IEnumerator.Current%2A>属性和<xref:System.Collections.IEnumerator.Reset%2A>和<xref:System.Collections.IEnumerator.MoveNext%2A>方法。 Visual Basic 使用这些遍历该集合。  
   
 ### <a name="narrowing-conversions"></a>收缩转换  
  当`Option Strict`设置为`On`，收缩转换通常会导致编译器错误。 在`For Each`语句，但是，从中的元素的转换`group`到`element`进行求值和执行在运行时，编译器错误引起的收缩转换将被抑制。  
@@ -149,7 +150,7 @@ Next [ element ]
   
  **修改集合。** 返回的枚举器对象<xref:System.Collections.IEnumerable.GetEnumerator%2A>通常不允许您更改通过添加、 删除、 替换或重新排序的任何元素的集合。 如果你更改的集合，您已经启动后`For Each`...`Next`循环的枚举器对象将变为无效，和下一步尝试访问的元素会导致<xref:System.InvalidOperationException>异常。  
   
- 但是，修改此阻止不由[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，而是通过实现<xref:System.Collections.IEnumerable>接口。 就能实现`IEnumerable`以允许进行迭代过程修改一种。 如果你正在考虑进行这种动态修改，请确保你了解的特征`IEnumerable`你使用的集合上实现。  
+ 但是，修改此阻止不取决于通过 Visual Basic 中，而是由的实现<xref:System.Collections.IEnumerable>接口。 就能实现`IEnumerable`以允许进行迭代过程修改一种。 如果你正在考虑进行这种动态修改，请确保你了解的特征`IEnumerable`你使用的集合上实现。  
   
  **修改集合元素。** <xref:System.Collections.IEnumerator.Current%2A>的枚举器对象的属性是[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)，并返回每个集合元素的本地副本。 这意味着，你不能修改元素本身中`For Each`...`Next`循环。 你所做的任何修改会影响仅从本地复制`Current`并不反映回基础集合。 但是，如果元素是引用类型，则可以修改它所指向的实例的成员。 下面的示例修改`BackColor`的每个成员`thisControl`元素。 但是，不能修改`thisControl`本身。  
   

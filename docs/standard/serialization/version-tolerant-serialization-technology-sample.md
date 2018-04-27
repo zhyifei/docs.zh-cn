@@ -1,28 +1,28 @@
 ---
-title: "版本容错序列化技术示例"
-ms.custom: 
+title: 版本容错序列化技术示例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9517abe23dba1b1b4b198fb8375e1ae35d8a2ca4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ddeea50bafe250addad33a024c563258ede357c4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>版本容错序列化技术示例
-[下载示例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+[下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
  此示例演示 .NET 序列化的版本容错功能。 此示例生成的应用程序使用不同版本的 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 对数据进行序列化和反序列化。 尽管存在不同类型的版本，但应用程序仍可以进行无缝通信。 有关详细信息，请参阅[版本容错序列化](../../../docs/standard/serialization/version-tolerant-serialization.md)。  
   

@@ -1,11 +1,9 @@
 ---
-title: "重载属性和方法 (Visual Basic)"
-ms.custom: 
+title: 重载的属性和方法 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - properties [Visual Basic], overloading
@@ -18,34 +16,36 @@ helpviewer_keywords:
 - method overloading
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
-caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8a872540716941ccd0dbb8b058508b89ce26a988
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96d5ef2462f5312baa5269865977596035a254d5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a>重载属性和方法 (Visual Basic)
+# <a name="overloaded-properties-and-methods-visual-basic"></a>重载的属性和方法 (Visual Basic)
+
 重载是创建多个过程、 实例构造函数或在具有相同名称但不同的自变量类型的类的属性。  
   
-## <a name="overloading-usage"></a>重载使用情况  
+## <a name="overloading-usage"></a>重载使用情况
+
  当您的对象模型指示你使用的操作对不同数据类型的过程相同的名称，则重载是特别有用。 例如，可以显示多种不同的数据类型的类可能具有`Display`过程如下所示：  
   
- [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]  
+ [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
   
  如果没有重载，你将需要创建不同的名称，为每个过程，即使它们执行相同的操作中，如下所示：  
   
- [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]  
+ [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
   
  重载，使得更轻松地使用属性或方法，因为它提供了一种可以使用的数据类型。 例如，重载`Display`以前可以使用以下代码行的任何调用讨论的方法：  
   
- [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
+ [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
   
- 在运行时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]调用的参数的数据类型的正确的过程基于你指定。  
+ 在运行时，Visual Basic 调用正确的过程基于你指定的参数的数据类型。  
   
-## <a name="overloading-rules"></a>重载规则  
+## <a name="overloading-rules"></a>重载规则
+
  通过添加两个或多个属性或方法具有相同名称创建的类重载的成员。 除非是重载派生成员，每个重载的成员必须具有不同的参数列表和重载属性或过程时，不作为区别性功能使用以下各项：  
   
 -   修饰符，如`ByVal`或`ByRef`，适用于成员或参数的成员。  
@@ -62,28 +62,30 @@ ms.lasthandoff: 11/21/2017
   
  `Overloads`和`Shadows`修饰符不能同时使用具有相同的属性或方法。  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>示例
+
  下面的示例创建接受的重载的方法`String`或`Decimal`美元总金额和返回包含增值税的字符串表示形式。  
   
-##### <a name="to-use-this-example-to-create-an-overloaded-method"></a>若要使用此示例创建了重载的方法  
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>若要使用此示例创建了重载的方法
   
 1.  打开一个新项目并添加一个名为类`TaxClass`。  
   
 2.  向 `TaxClass` 类添加下面的代码。  
   
-     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]  
+     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
   
 3.  向窗体中添加下面的过程。  
   
-     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]  
+     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
   
 4.  将按钮添加到表单中，然后调用`ShowTax`过程从`Button1_Click`该按钮的事件。  
   
 5.  运行该项目并单击要测试的重载的窗体上的按钮`ShowTax`过程。  
   
- 在运行时，编译器将选择相应的重载的函数正在使用的参数匹配。 重载的方法时单击按钮时，都会首先调用与`Price`参数是一个字符串和消息，"价格是一个字符串。 税金是 $5.12"显示。 `TaxAmount`使用调用`Decimal`值的第二个时间和消息时，请"价格是十进制。 税金是 $5.12"显示。  
+ 在运行时，编译器将选择相应的重载的函数正在使用的参数匹配。 重载的方法时单击按钮时，都会首先调用与`Price`参数是一个字符串和消息，"价格是一个字符串。 税金是 $5.12"显示。 `TaxAmount` 使用调用`Decimal`值的第二个时间和消息时，请"价格是十进制。 税金是 $5.12"显示。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅
+
  [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  [在 Visual Basic 中隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
  [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)  

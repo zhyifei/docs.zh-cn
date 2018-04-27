@@ -1,13 +1,13 @@
 ---
-title: "应用程序管理概述"
-ms.custom: 
+title: 应用程序管理概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-caps.latest.revision: 
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a881793c50a4ce506e752774e70e0904e30525c1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 96a1ae8dce80588b296d9ab7fc9dff60fb7a04f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-management-overview"></a>应用程序管理概述
 所有应用程序都可能会共享一组适用于实现和管理应用程序的常见功能。 本主题提供中的功能的概述<xref:System.Windows.Application>用于创建和管理应用程序的类。  
@@ -128,7 +128,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
- <xref:System.Windows.Application.Current%2A>返回的实例的引用<xref:System.Windows.Application>类。 如果你想对引用你<xref:System.Windows.Application>派生的类的值必须转换<xref:System.Windows.Application.Current%2A>属性，如下面的示例中所示。  
+ <xref:System.Windows.Application.Current%2A> 返回的实例的引用<xref:System.Windows.Application>类。 如果你想对引用你<xref:System.Windows.Application>派生的类的值必须转换<xref:System.Windows.Application.Current%2A>属性，如下面的示例中所示。  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
@@ -159,7 +159,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Showing_a_User_Interface"></a>   
 ### <a name="showing-a-user-interface"></a>显示用户界面  
- 大多数独立[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]应用程序打开<xref:System.Windows.Window>它们是什么时候运行。 <xref:System.Windows.Application.Startup>事件处理程序是一个位置，从中你可以执行此操作，如以下代码所示。  
+ 大多数的独立 Windows 应用程序打开<xref:System.Windows.Window>它们是什么时候运行。 <xref:System.Windows.Application.Startup>事件处理程序是一个位置，从中你可以执行此操作，如以下代码所示。  
   
  [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
@@ -195,7 +195,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Processing_Command_Line_Arguments"></a>   
 ### <a name="processing-command-line-arguments"></a>处理命令行参数  
- 在[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]，可以从命令提示符或桌面启动独立应用程序。 在这两种情况下，命令行参数都可以传递至应用程序。 以下示例展示了一个通过单个命令行参数“/StartMinimized”来启动的应用程序：  
+ 在 Windows 中，可以从命令提示符或桌面启动独立应用程序。 在这两种情况下，命令行参数都可以传递至应用程序。 以下示例展示了一个通过单个命令行参数“/StartMinimized”来启动的应用程序：  
   
  `wpfapplication.exe /StartMinimized`  
   
@@ -206,13 +206,13 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
  [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
   
- 这段代码处理<xref:System.Windows.Application.Startup>以检查是否**/StartMinimized**提供命令行自变量; 如果是这样，它将打开主窗口中的以<xref:System.Windows.WindowState>的<xref:System.Windows.WindowState.Minimized>。 请注意，因为<xref:System.Windows.Window.WindowState%2A>必须以编程方式设置主属性<xref:System.Windows.Window>必须在代码中显式打开。  
+ 这段代码处理<xref:System.Windows.Application.Startup>以检查是否 **/StartMinimized**提供命令行自变量; 如果是这样，它将打开主窗口中的以<xref:System.Windows.WindowState>的<xref:System.Windows.WindowState.Minimized>。 请注意，因为<xref:System.Windows.Window.WindowState%2A>必须以编程方式设置主属性<xref:System.Windows.Window>必须在代码中显式打开。  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]无法检索和处理命令行自变量，因为程序启动时使用[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]部署 (请参阅[部署的 WPF 应用](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md))。 但是，它们可以检索和处理来自用于启动它们的 URL 的查询字符串参数。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 无法检索和处理命令行自变量，因为程序启动时使用[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]部署 (请参阅[部署的 WPF 应用](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md))。 但是，它们可以检索和处理来自用于启动它们的 URL 的查询字符串参数。  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>应用程序激活和停用  
- [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 允许用户在应用程序间切换。 最常见的方法是使用 ALT + TAB 键组合。 仅将应用程序切换到，如果它具有可见<xref:System.Windows.Window>，用户可选择。 当前所选<xref:System.Windows.Window>是*活动窗口*(也称为*前景窗口*) 且<xref:System.Windows.Window>接收用户输入。 活动窗口的应用程序是*活动应用程序*(或*前台应用程序*)。 应用程序会在以下情况下变为活动应用程序：  
+ Windows 允许用户应用程序之间切换。 最常见的方法是使用 ALT + TAB 键组合。 仅将应用程序切换到，如果它具有可见<xref:System.Windows.Window>，用户可选择。 当前所选<xref:System.Windows.Window>是*活动窗口*(也称为*前景窗口*) 且<xref:System.Windows.Window>接收用户输入。 活动窗口的应用程序是*活动应用程序*(或*前台应用程序*)。 应用程序会在以下情况下变为活动应用程序：  
   
 -   它将启动并显示<xref:System.Windows.Window>。  
   
@@ -248,14 +248,14 @@ ms.lasthandoff: 01/19/2018
   
 -   用户关闭主<xref:System.Windows.Window>。  
   
--   用户结束[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]通过注销或关闭的会话。  
+-   用户通过注销或关闭来结束 Windows 会话。  
   
 -   满足了特定于应用程序的条件。  
   
  若要帮助你管理应用程序关闭<xref:System.Windows.Application>提供<xref:System.Windows.Application.Shutdown%2A>方法，<xref:System.Windows.Application.ShutdownMode%2A>属性，与<xref:System.Windows.Application.SessionEnding>和<xref:System.Windows.Application.Exit>事件。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>仅可以从具有应用程序调用<xref:System.Security.Permissions.UIPermission>。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序始终具有此权限。 但是，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]在 Internet 区域部分信任安全沙箱中运行不这样做。  
+>  <xref:System.Windows.Application.Shutdown%2A> 仅可以从具有应用程序调用<xref:System.Security.Permissions.UIPermission>。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序始终具有此权限。 但是，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]在 Internet 区域部分信任安全沙箱中运行不这样做。  
   
 #### <a name="shutdown-mode"></a>关闭模式  
  大多数应用程序会在所有窗口都关闭后或在主窗口关闭后关闭。 但是，有时，应用程序会在何时关闭取决于特定于应用程序的其他条件。 你可以指定在其下你的应用程序将关闭的情况下通过设置的条件<xref:System.Windows.Application.ShutdownMode%2A>与以下项之一<xref:System.Windows.ShutdownMode>枚举值：  
@@ -273,10 +273,10 @@ ms.lasthandoff: 01/19/2018
  当你有特定于应用程序关闭条件时，您设置<xref:System.Windows.Application.ShutdownMode%2A>到<xref:System.Windows.ShutdownMode.OnExplicitShutdown>。 在这种情况下，它是你有责任关闭应用程序的情况下通过显式调用<xref:System.Windows.Application.Shutdown%2A>方法; 否则，你的应用程序将继续运行即使关闭所有的窗口。 请注意，<xref:System.Windows.Application.Shutdown%2A>时隐式调用<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnLastWindowClose>或<xref:System.Windows.ShutdownMode.OnMainWindowClose>。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>可以设置从[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]，但它将被忽略;[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]始终关闭的情况下在浏览器中，或浏览器承载导航离开时[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]已关闭。 有关详细信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+>  <xref:System.Windows.Application.ShutdownMode%2A> 可以设置从[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]，但它将被忽略;[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]始终关闭的情况下在浏览器中，或浏览器承载导航离开时[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]已关闭。 有关详细信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
   
 #### <a name="session-ending"></a>会话结束  
- 描述了关闭条件<xref:System.Windows.Application.ShutdownMode%2A>属性是特定于应用程序。 不过，在某些情况下，应用程序可能会因外部条件而关闭。 用户结束时发生的最常见的外部条件[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]会话通过执行以下操作：  
+ 描述了关闭条件<xref:System.Windows.Application.ShutdownMode%2A>属性是特定于应用程序。 不过，在某些情况下，应用程序可能会因外部条件而关闭。 用户通过执行以下操作将结束 Windows 会话时，将发生最常见的外部条件：  
   
 -   注销  
   
@@ -286,17 +286,17 @@ ms.lasthandoff: 01/19/2018
   
 -   休眠  
   
- 若要检测[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]会话结束，你可以处理<xref:System.Windows.Application.SessionEnding>事件，如下面的示例中所示。  
+ 若要检测的 Windows 会话结束时，你可以处理<xref:System.Windows.Application.SessionEnding>事件，如下面的示例中所示。  
   
  [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
  [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
  [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
- 在此示例中，代码检查<xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A>属性来确定如何[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]结束会话。 它会根据该值向用户显示确认消息。 如果用户不希望会话结束，该代码将设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>到`true`以防止[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]从结束的会话。  
+ 在此示例中，代码检查<xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A>属性来确定如何结束 Windows 会话。 它会根据该值向用户显示确认消息。 如果用户不希望会话结束，该代码将设置<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>到`true`以防 Windows 会话结束。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>不会引发[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
+>  <xref:System.Windows.Application.SessionEnding> 不会引发[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
   
 #### <a name="exit"></a>Exit  
  应用程序在关闭时可能需要执行一些最终处理，如保持应用程序状态。 对于这些情况下，你就可以处理<xref:System.Windows.Application.Exit>事件。  
@@ -311,7 +311,7 @@ ms.lasthandoff: 01/19/2018
   
  有关完整示例，请参阅[保留和还原应用程序作用域属性跨应用程序会话](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)。  
   
- <xref:System.Windows.Application.Exit>可以由两个独立应用程序和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 有关[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，<xref:System.Windows.Application.Exit>时在以下情况下引发：  
+ <xref:System.Windows.Application.Exit> 可以由两个独立应用程序和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 有关[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，<xref:System.Windows.Application.Exit>时在以下情况下引发：  
   
 -   [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]离开。  
   
@@ -320,7 +320,7 @@ ms.lasthandoff: 01/19/2018
 -   关闭浏览器时。  
   
 #### <a name="exit-code"></a>退出代码  
- 在大多数情况下，应用程序由操作系统根据用户的请求来启动。 但是，应用程序也可由另一应用程序启动，以执行某项特定任务。 当被启动的应用程序关闭时，执行启动操作的应用程序可能想要了解导致被启动应用程序关闭的条件。 在这些情况下，[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]允许应用程序在关闭返回应用程序退出代码。 默认情况下，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序返回的退出代码值为 0。  
+ 在大多数情况下，应用程序由操作系统根据用户的请求来启动。 但是，应用程序也可由另一应用程序启动，以执行某项特定任务。 当被启动的应用程序关闭时，执行启动操作的应用程序可能想要了解导致被启动应用程序关闭的条件。 在这些情况下，Windows 允许应用程序在关闭返回应用程序退出代码。 默认情况下，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序返回的退出代码值为 0。  
   
 > [!NOTE]
 >  当你调试从[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，应用程序退出代码所示**输出**窗口应用程序关闭时，将类似于以下的消息中：  
@@ -351,7 +351,7 @@ ms.lasthandoff: 01/19/2018
   
 -   尝试让应用程序保持运行。  
   
--   录制中的详细、 开发人员友好异常信息[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]事件日志。  
+-   录制详细，便于开发人员，在 Windows 事件日志中的异常信息。  
   
  实现此支持取决于是否能够检测到未经处理的异常，这是什么<xref:System.Windows.Application.DispatcherUnhandledException>为引发事件。  
   

@@ -1,28 +1,30 @@
 ---
-title: "UI 自动化对 Tree 控件类型的支持"
-ms.custom: 
+title: UI 自动化对 Tree 控件类型的支持
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - control types, Tree
 - Tree control type
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 14356089cfcef3fcd51ecd470322b04d29a989a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3eece614368bb35cda5d7345daebb540b1ae1d95
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>UI 自动化对 Tree 控件类型的支持
 > [!NOTE]
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-ui-automation-properties"></a>必需的 UI 自动化属性  
  下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，这些属性的值或定义与列表控件尤其相关。 有关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性的详细信息，请参阅 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|“值”|说明|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|值|说明|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|请参阅注释。|此属性的值在应用程序的所有控件中都必须保持唯一。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|请参阅注释。|包含整个控件的最外层矩形。|  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|树控件始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的内容视图中。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|树控件始终包括在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|请参阅注释。|如果该控件可以接收键盘焦点，则它必须支持此属性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|请参阅注释。|如果树控件具有与之关联的标签，则此属性将为该标签返回 <xref:System.Windows.Automation.AutomationElement> 。 否则，该属性将返回 null 引用（`Nothing` 中的 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]）。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|请参阅注释。|如果树控件具有与之关联的标签，则此属性将为该标签返回 <xref:System.Windows.Automation.AutomationElement> 。 否则，该属性将返回空引用 (`Nothing`在 Microsoft Visual Basic.NET)。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|“树”|与 List 控件类型相对应的本地化字符串。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|请参阅注释。|树控件的名称属性的值通常来自对该控件进行标记的文本。 如果没有文本标签，则应用程序开发人员必须为此属性提供值。|  
   

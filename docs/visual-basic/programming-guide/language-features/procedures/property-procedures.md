@@ -1,11 +1,12 @@
 ---
-title: "Property 过程 (Visual Basic)"
-ms.custom: 
+title: Property 过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbdf49d5c3eb5ef71b25a060d62f55f19098f445
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d9df6f381c89263aa16315fb06a2b3b0d645bbf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-procedures-visual-basic"></a>Property 过程 (Visual Basic)
-属性过程是一系列[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]操作模块、 类或结构上的自定义属性的语句。 属性过程也称为是*属性访问器*。  
+属性过程是一系列操作模块、 类或结构上的自定义属性的 Visual Basic 语句。 属性过程也称为是*属性访问器*。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供有关以下属性过程：  
+ Visual Basic 提供以下属性过程：  
   
 -   A`Get`过程返回属性的值。 就是当访问表达式中的属性。  
   
@@ -113,7 +114,7 @@ End Property
   
  [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [Function 过程](./function-procedures.md)  
  [运算符过程](./operator-procedures.md)  

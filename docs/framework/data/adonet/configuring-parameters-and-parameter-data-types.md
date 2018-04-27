@@ -1,27 +1,29 @@
 ---
-title: "配置参数和参数数据类型"
-ms.custom: 
+title: 配置参数和参数数据类型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>配置参数和参数数据类型
 通过提供类型检查和验证，命令对象可使用参数来将值传递给 SQL 语句或存储过程。 与命令文本不同，参数输入被视为文本值，而不是可执行代码。 这样可帮助抵御“SQL 注入”攻击，这种攻击的攻击者会将命令插入 SQL 语句，从而危及服务器的安全。  
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/17/2018
 >  从小数转换到其他类型是缩窄转换，这种转换会将小数值舍入到最近的接近零的整数值。 如果无法以目标类型表示转换结果，则会引发 <xref:System.OverflowException> 。  
   
 > [!NOTE]
->  在向服务器发送一个空参数值时，用户必须指定 <xref:System.DBNull>，而不是 `null` （`Nothing` 中的 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]）。 系统中的 null 值是一个不具有任何值的空对象。 <xref:System.DBNull> 用于表示 null 值。 有关数据库 null 值的详细信息，请参阅 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)。  
+>  当你向服务器发送 null 参数值时，必须指定<xref:System.DBNull>，而不`null`(`Nothing`在 Visual Basic 中)。 系统中的 null 值是一个不具有任何值的空对象。 <xref:System.DBNull> 用于表示 null 值。 有关数据库 null 值的详细信息，请参阅 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)。  
   
 ## <a name="deriving-parameter-information"></a>派生参数信息  
  还可以使用 `DbCommandBuilder` 类从存储过程派生参数。 `SqlCommandBuilder` 和 `OleDbCommandBuilder` 类都提供了静态方法 `DeriveParameters`，该静态方法将自动使用存储过程中的参数信息填充 Command 对象的 Parameters 集合。 请注意， `DeriveParameters` 会覆盖此命令的任何现有参数信息。  

@@ -1,5 +1,5 @@
 ---
-title: 无法写入到输出文件 &#39;&lt;filename&gt;&#39;:&lt;错误&gt;
+title: 无法写入输出文件&#39; &lt;filename&gt;&#39;:&lt;错误&gt;
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d142a8c741a9f0e25b8ac3c0002d04f437bf0ca9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>无法写入到输出文件 &#39;&lt;filename&gt;&#39;:&lt;错误&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>无法写入输出文件&#39; &lt;filename&gt;&#39;:&lt;错误&gt;
 创建文件时出现问题。  
   
  无法打开输出文件以进行写入。 文件（或包含该文件的文件夹）可能由另一个进程打开以供独占使用，或者可能设置了只读特性。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  如果仍出现错误，请重新启动计算机。  
   
-4.  如果错误重复出现，请重新安装 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+4.  如果错误重复出现，请重新安装 Visual Basic。  
   
 5.  如果在重新安装之后依然出现错误，请通知 Microsoft 产品支持服务。  
   
@@ -65,5 +65,5 @@ ms.lasthandoff: 10/18/2017
   
 3.  Press **OK**.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [与我们交流](/visualstudio/ide/talk-to-us)

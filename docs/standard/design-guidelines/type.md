@@ -1,12 +1,12 @@
 ---
-title: "类型设计准则"
-ms.custom: 
+title: 类型设计准则
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 53c7bccd4afb92e6afcaccf4b1c50c41f574fedb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="type-design-guidelines"></a>类型设计准则
 从 CLR 角度来看，有只有两种类型的类别 — 引用类型和值类型，但为了 framework 设计有关的讨论，我们可以将类型划分为多个逻辑组，每个都有其自己的特定设计规则。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/23/2017
  [嵌套类型](../../../docs/standard/design-guidelines/nested-types.md)  
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)

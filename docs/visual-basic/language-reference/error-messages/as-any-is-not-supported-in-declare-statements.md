@@ -1,5 +1,5 @@
 ---
-title: '&#39;作为任何 &#39;中不支持 &#39; Declare &#39;语句'
+title: '&#39;与任何&#39;中不支持&#39;Declare&#39;语句'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: ''
@@ -15,14 +15,14 @@ ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59120622688ee38d5b8f45c08dfc3ae40711fb8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d8146e339ac5cb005b99c9a1e02f1cd248c4558b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;作为任何 &#39;中不支持 &#39; Declare &#39;语句
-`Any`与使用的数据类型`Declare`Visual Basic 6.0 和早期版本，以允许使用的自变量，无法包含任何类型的数据中的语句。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]支持重载，但是，也因此使得`Any`数据类型已过时。  
+# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;与任何&#39;中不支持&#39;Declare&#39;语句
+`Any`与使用的数据类型`Declare`Visual Basic 6.0 和早期版本，以允许使用的自变量，无法包含任何类型的数据中的语句。 Visual Basic 支持重载，但是，也因此使得`Any`数据类型已过时。  
   
  **错误 ID:** BC30828  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [演练：调用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  [Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)  

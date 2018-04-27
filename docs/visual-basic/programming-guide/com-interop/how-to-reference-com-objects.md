@@ -1,11 +1,12 @@
 ---
-title: "如何：从 Visual Basic 中引用 COM 对象"
-ms.custom: 
+title: 如何：从 Visual Basic 中引用 COM 对象
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], referencing COM objects
@@ -14,21 +15,21 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a8ac167b40688b1d1116f148d0d5fd6afdcaada8
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0f6f7b4887e2cfba65da7a7a890b78c3d6a8508f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>如何：从 Visual Basic 中引用 COM 对象
-在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，添加对具有类型库的 COM 对象的引用的 COM 库需要创建互操作程序集。 对 COM 对象的成员的引用将路由到互操作程序集，然后转发到实际的 COM 对象。 从 COM 对象的响应路由到互操作程序集，并将其转发到你[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。  
+在 Visual Basic 中，添加对具有类型库的 COM 对象的引用需要创建互操作程序集的 COM 库。 对 COM 对象的成员的引用将路由到互操作程序集，然后转发到实际的 COM 对象。 从 COM 对象的响应路由到互操作程序集，并将其转发到你[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。  
   
  您可以无需通过将 COM 对象的类型信息嵌入在.NET 程序集使用互操作程序集引用的 COM 对象。 若要嵌入类型信息，请设置`Embed Interop Types`属性`True`为 COM 对象的引用。 如果你使用命令行编译器进行编译，请使用`/link`选项来引用 COM 库。 有关详细信息，请参阅[/link (Visual Basic 中)](../../../visual-basic/reference/command-line-compiler/link.md)。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]添加对类型库中的集成的开发环境 (IDE) 的引用时，会自动创建互操作程序集。 在从命令行处理时，你可以使用 Tlbimp 实用工具来手动创建互操作程序集。  
+ 添加对类型库中的集成的开发环境 (IDE) 的引用时，Visual Basic 会自动创建互操作程序集。 在从命令行处理时，你可以使用 Tlbimp 实用工具来手动创建互操作程序集。  
   
 ### <a name="to-add-references-to-com-objects"></a>将引用添加到 COM 对象  
   

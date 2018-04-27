@@ -1,11 +1,12 @@
 ---
-title: "如何：更改过程自变量的值 (Visual Basic)"
-ms.custom: 
+title: 如何：更改过程自变量的值 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ba23c8f0b4b0b6e751546019af902a6305b9ef53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 93d9cc11e919e45fdd3b48dd2731b165f3466640
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>如何：更改过程自变量的值 (Visual Basic)
 当调用过程时，你提供每个自变量对应于在过程中定义的参数之一。 在某些情况下，该过程代码可以更改基础中调用代码的自变量的值。 在其他情况下，该过程只可以更改其本地副本的自变量。  
   
- 在调用过程中，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]使每个自变量传递的本地副本[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。 对于每个自变量传递[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]使该过程代码中调用代码的实参的编程元素直接引用。  
+ Visual Basic 在调用过程时，使每个自变量传递的本地副本[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。 对于每个自变量传递[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 使该过程代码中调用代码的实参的编程元素直接引用。  
   
  如果调用代码中的基础元素是可修改的元素，并传递自变量`ByRef`，过程代码可以使用的直接引用来更改调用代码中的元素的值。  
   
@@ -56,9 +57,9 @@ ms.lasthandoff: 11/21/2017
   
 1.  在过程声明中，指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)对应于参数的参数。  
   
-     - 或 -  
+     -或-  
   
-     在调用代码中，将括在参数列表中的括号中的自变量。 这将强制[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]以按值传递自变量，即使相应的参数指定`ByRef`。  
+     在调用代码中，将括在参数列表中的括号中的自变量。 这将强制 Visual Basic 能够按值传递自变量，即使相应的参数指定`ByRef`。  
   
 2.  在过程代码中，使用参数名称的自变量的本地副本分配一个值。 调用代码中的基础值不会更改。  
   
@@ -80,12 +81,12 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>编译代码  
  当通过引用传递的变量时，你必须使用`ByRef`关键字来指定此机制。  
   
- 中的默认值[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是按值传递自变量。 但是，很好的编程做法包括[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字后跟每个声明的参数。 这使得你的代码易于阅读。  
+ Visual Basic 中的默认值是通过值传递自变量。 但是，很好的编程做法包括[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字后跟每个声明的参数。 这使得你的代码易于阅读。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  允许一个过程来更改基础中调用代码的自变量的值始终没有潜在风险。 请确保您希望此值可更改，并做好准备，然后再使用它的有效性检查它。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [如何：将自变量传递给过程](./how-to-pass-arguments-to-a-procedure.md)  

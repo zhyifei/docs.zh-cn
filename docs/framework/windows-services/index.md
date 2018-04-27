@@ -24,11 +24,11 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-windows-service-applications"></a>开发 Windows 服务应用程序
 使用 Microsoft[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，你可以轻松创建服务通过创建作为服务安装的应用程序。 此类型的应用程序称为 Windows 服务。 使用框架功能，可以创建服务、 安装它们，并启动、 停止和以其他方式控制其行为。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/19/2018
  概述介绍 Windows 服务应用程序，一种服务，以及服务应用程序与其他常见的项目类型的区别的生存期。  
   
  [演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- 提供创建中的服务的示例[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]和 Visual C#。  
+ 提供 Visual Basic 和 Visual C# 中创建服务的一个示例。  
   
  [服务应用程序编程体系结构](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  说明在服务编程中使用的语言元素。  

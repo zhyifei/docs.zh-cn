@@ -1,12 +1,12 @@
 ---
-title: "参数设计"
-ms.custom: 
+title: 参数设计
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d89ed81c06558a6bc101864a7fef3173f019fd0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-design"></a>参数设计
 本部分参数的设计方案，包括有关检查的自变量的指南的各节提供全面的指南。 此外，你应参考中所述的指导原则[命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)。  
@@ -82,9 +82,9 @@ ms.lasthandoff: 12/23/2017
   
  当通过按值参数传递的参数，则成员会收到一份中传递的实际自变量。 如果参数为值类型，自变量的副本将放在堆栈上。 如果参数为引用类型，引用的副本将放在堆栈上。 最常用的 CLR 语言，例如 C#、 VB.NET 和 c + +，默认为按值传递参数。  
   
- 当自变量传递通过`ref`参数，该成员会接收对中传递的实际自变量的引用。 如果参数为值类型，对自变量的引用将存储在堆栈上。 如果参数为引用类型，对引用的引用将存储在堆栈上。 `Ref`参数可以用于允许要修改由调用方传递自变量的成员。  
+ 当自变量传递通过`ref`参数，该成员会接收对中传递的实际自变量的引用。 如果参数为值类型，对自变量的引用将存储在堆栈上。 如果参数为引用类型，对引用的引用将存储在堆栈上。 `Ref` 参数可以用于允许要修改由调用方传递自变量的成员。  
   
- `Out`参数是类似于`ref`参数，其中有一些小的差异。 参数最初被认为是未分配的它还未分配的一些值无法读取成员正文中。 此外，该参数必须之前的成员返回分配的一些值。  
+ `Out` 参数是类似于`ref`参数，其中有一些小的差异。 参数最初被认为是未分配的它还未分配的一些值无法读取成员正文中。 此外，该参数必须之前的成员返回分配的一些值。  
   
  **请避免 x**使用`out`或`ref`参数。  
   
@@ -164,7 +164,7 @@ public class String {
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [成员设计准则](../../../docs/standard/design-guidelines/member.md)  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>任务 2：承载工作流设计器
-本主题描述在 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 应用程序中承载 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 的实例的过程。  
+本主题描述用于托管的实例的过程[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 应用程序中。  
   
  过程配置**网格**控件包含设计器中，以编程方式创建的一个实例<xref:System.Activities.Presentation.WorkflowDesigner>包含默认<xref:System.Activities.Statements.Sequence>活动，注册设计器的元数据，以提供所有内置活动和主机的设计器支持[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]中[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]应用程序。  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 03/26/2018
   
 10. 请参阅[任务 3： 创建工具箱窗格和属性网格窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)若要了解如何添加**工具箱**和**属性网格**到重新承载的工作流设计器支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [重新托管工作流设计器](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
  [任务 1：新建 Windows Presentation Foundation 应用程序](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
  [任务 3：创建“工具箱”和“属性网格”窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

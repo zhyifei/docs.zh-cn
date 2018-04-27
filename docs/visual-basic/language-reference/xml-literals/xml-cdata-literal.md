@@ -17,11 +17,11 @@ ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 906fd2494dd952c08088b9b7e38dba4505780481
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e8dfc091409e060e20970b0b6d6bc19b4fc2aeea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA 文本 (Visual Basic)
 一个文本表示<xref:System.Xml.Linq.XCData>对象。  
@@ -34,13 +34,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="parts"></a>部件  
  `<![CDATA[`  
- 必需。 表示 XML CDATA 节的开头。  
+ 必须的。 表示 XML CDATA 节的开头。  
   
  `content`  
- 必需。 若要显示在 XML CDATA 部分中的文本内容。  
+ 必须的。 若要显示在 XML CDATA 部分中的文本内容。  
   
  `]]>`  
- 必需。 表示节的结尾。  
+ 必须的。 表示节的结尾。  
   
 ## <a name="return-value"></a>返回值  
  一个 <xref:System.Xml.Linq.XCData> 对象。  
@@ -55,16 +55,16 @@ ms.lasthandoff: 11/21/2017
  你可以将 XML CDATA 文本分配给一个变量，或将其包含在 XML 元素文本。  
   
 > [!NOTE]
->  XML 文本可以跨多个行，但不使用行继续符。 这使您可以从 XML 文档中复制内容，然后将其粘贴直接到[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程序。  
+>  XML 文本可以跨多个行，但不使用行继续符。 这使您可以从 XML 文档中复制内容并将其粘贴到 Visual Basic 程序直接。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器将 XML CDATA 文本转换为调用<xref:System.Xml.Linq.XCData.%23ctor%2A>构造函数。  
+ Visual Basic 编译器将 XML CDATA 文本转换为调用<xref:System.Xml.Linq.XCData.%23ctor%2A>构造函数。  
   
 ## <a name="example"></a>示例  
  下面的示例创建一个包含文本的 CDATA 节"可以包含文本\<XML > 标记"。  
   
  [!code-vb[VbXMLSamples#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-cdata-literal_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq.XCData>  
  [XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
  [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)  

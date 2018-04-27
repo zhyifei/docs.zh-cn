@@ -1,12 +1,13 @@
 ---
-title: "如何：配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序"
-ms.custom: 
+title: 如何：配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ab1d7223299697a4be10ba5b35bc90b120603d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>如何：配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序
 可以从大多数 Web 服务器部署 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序，前提是这些服务器配置了相应的 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 类型。 默认情况下，[!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] 配置有这些 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型，但 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 和 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 未配置。  
@@ -68,9 +70,9 @@ ms.lasthandoff: 12/22/2017
 |.xps|application/vnd.ms-xpsdocument|  
   
 > [!NOTE]
->  不需要在客户端系统上注册 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型或文件扩展名。 它们在安装 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 时会自动注册。  
+>  不需要在客户端系统上注册 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型或文件扩展名。 当你安装 Microsoft.NET Framework 时，它们会自动注册。  
   
- 以下 [!INCLUDE[TLA#tla_visualbscrpt](../../../../includes/tlasharptla-visualbscrpt-md.md)] 示例自动将必需的 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 类型添加到 [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]。 若要使用该脚本，请将代码复制到服务器上的 .vbs 文件。 然后，通过从命令行运行该文件或在 [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)] 中双击该文件来运行脚本。  
+ 下面的 Microsoft Visual Basic Scripting Edition (VBScript) 示例会自动将添加所需[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]类型[!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]。 若要使用该脚本，请将代码复制到服务器上的 .vbs 文件。 然后，通过从命令行运行该文件或在 [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)] 中双击该文件来运行脚本。  
   
 ```  
 ' This script adds the necessary Windows Presentation Foundation MIME types   

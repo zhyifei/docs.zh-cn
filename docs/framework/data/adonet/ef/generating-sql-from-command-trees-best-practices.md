@@ -1,24 +1,26 @@
 ---
-title: "从命令目录树生成 SQL - 最佳做法"
-ms.custom: 
+title: 从命令目录树生成 SQL - 最佳做法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>从命令目录树生成 SQL - 最佳做法
 输出查询命令目录树高度模拟可使用 SQL 表示的查询。 但是，对于提供程序编写者而言，从输出命令目录树生成 SQL 还是存在一些常见的难题。 本主题讨论这些难题。 在下一主题中，示例提供程序将演示如何解决这些难题。  
@@ -147,7 +149,7 @@ ON b.y = d.z
  在由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]传递的查询命令目录树中可以重用表达式。 不要假定每个表达式在查询命令目录树中仅出现一次。  
   
 ## <a name="mapping-primitive-types"></a>映射基元类型  
- 在将概念 (EDM) 类型映射到提供程序类型时，应映射到最宽的类型 (Int32)，以便适合所有可能的值。 此外，避免映射到无法用于许多操作的类型，如 BLOB 类型（例如，`ntext` 中的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]）。  
+ 在将概念 (EDM) 类型映射到提供程序类型时，应映射到最宽的类型 (Int32)，以便适合所有可能的值。 此外，避免映射到不能用于许多操作，如 BLOB 类型的类型 (例如， `ntext` SQL Server 中)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

@@ -1,11 +1,12 @@
 ---
-title: "如何：在 Visual Basic 中调用事件处理程序"
-ms.custom: 
+title: 如何：在 Visual Basic 中调用事件处理程序
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,21 +15,21 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 52b4b6ca8b03d8301535d6aeedc3bd0190d8527f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b8a35459fdeb7cce0b494a9b3024a79bd4173cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>如何：在 Visual Basic 中调用事件处理程序
 *事件*是匹配项或操作-例如鼠标单击或信用额度超出-，识别被某程序组件，并为其编写代码以响应。 *事件处理程序*是为响应事件而编写的代码。  
   
- 中的事件处理程序[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是`Sub`过程。 但是，你不能正常情况下调用此相同方式其他`Sub`过程。 相反，为事件处理程序标识过程。 你可以使用执行此操作[处理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句和[WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)变量，或与[AddHandler 语句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)。 使用`Handles`子句是声明中的事件处理程序的默认方法[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 这是事件处理程序编写的设计器时在集成的开发环境 (IDE) 中编程的方式。 `AddHandler`语句是适用于在运行时动态引发事件。  
+ 在 Visual Basic 中的一个事件处理程序`Sub`过程。 但是，你不能正常情况下调用此相同方式其他`Sub`过程。 相反，为事件处理程序标识过程。 你可以使用执行此操作[处理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句和[WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)变量，或与[AddHandler 语句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)。 使用`Handles`子句是声明一个事件处理程序在 Visual Basic 中的默认方法。 这是事件处理程序编写的设计器时在集成的开发环境 (IDE) 中编程的方式。 `AddHandler`语句是适用于在运行时动态引发事件。  
   
- 发生事件时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]自动调用事件处理程序过程。 有权访问该事件的任何代码可能会导致它通过执行发生[RaiseEvent 语句](../../../../visual-basic/language-reference/statements/raiseevent-statement.md)。  
+ 发生事件时，Visual Basic 会自动调用事件处理程序过程中。 有权访问该事件的任何代码可能会导致它通过执行发生[RaiseEvent 语句](../../../../visual-basic/language-reference/statements/raiseevent-statement.md)。  
   
  你可以与同一事件关联多个事件处理程序。 在某些情况下可以取消关联从事件处理程序。 有关详细信息，请参阅[事件](../../../../visual-basic/programming-guide/language-features/events/index.md)。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  事件处理的声明中`Sub`过程中，添加[处理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句，以指定`WithEvents`变量和事件名称。  
   
-4.  发生事件时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]自动调用`Sub`过程。 你的代码可以使用`RaiseEvent`语句使发生的事件。  
+4.  发生事件时，Visual Basic 将自动调用`Sub`过程。 你的代码可以使用`RaiseEvent`语句使发生的事件。  
   
      下面的示例定义一个事件和一个`WithEvents`引用引发事件的类中的变量。 事件处理`Sub`过程使用`Handles`子句指定的类和它所处理的事件。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  执行[AddHandler 语句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)动态连接事件处理`Sub`与事件的过程。  
   
-3.  发生事件时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]自动调用`Sub`过程。 你的代码可以使用`RaiseEvent`语句使发生的事件。  
+3.  发生事件时，Visual Basic 将自动调用`Sub`过程。 你的代码可以使用`RaiseEvent`语句使发生的事件。  
   
      下面的示例定义`Sub`过程来处理<xref:System.Windows.Forms.Form.Closing>窗体的事件。 然后，它使用[AddHandler 语句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)关联`catchClose`的事件处理程序的过程<xref:System.Windows.Forms.Form.Closing>。  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
      你可以通过执行取消事件处理程序从事件[RemoveHandler 语句](../../../../visual-basic/language-reference/statements/removehandler-statement.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [Sub 过程](./sub-procedures.md)  
  [Sub 语句](../../../../visual-basic/language-reference/statements/sub-statement.md)  

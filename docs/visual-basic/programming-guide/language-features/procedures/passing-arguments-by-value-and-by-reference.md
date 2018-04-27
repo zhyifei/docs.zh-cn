@@ -1,11 +1,12 @@
 ---
-title: "通过值和通过引用传递自变量 (Visual Basic)"
-ms.custom: 
+title: 通过值和通过引用传递自变量 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 752c0c8e90cafe457cbd5d684bc984a1ea4632ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f10e0e582e060c1305a9c0fe922620cb4da2c215
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>通过值和通过引用传递自变量 (Visual Basic)
-在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，可以将自变量传递给过程*按值*或*通过引用*。 这称为*传递机制*，同时确定过程是否可以修改调用代码中的以该参数基础的编程元素。 过程声明确定每个参数的传递机制，通过指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字。  
+在 Visual Basic 中，可以传递了参数给过程*按值*或*通过引用*。 这称为*传递机制*，同时确定过程是否可以修改调用代码中的以该参数基础的编程元素。 过程声明确定每个参数的传递机制，通过指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字。  
   
 ## <a name="distinctions"></a>区别  
  如果将参数传递给过程中，应注意的彼此交互的几点差异：  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **保护**。 在两个传递机制之间进行选择，最重要的标准是要更改的调用变量公开。 传递自变量的优点`ByRef`是过程可以返回到调用代码通过该自变量的值。 传递自变量的优点`ByVal`是它可防止变量被过程正在更改。  
   
--   **性能**。 尽管的传递机制可能会影响代码的性能，区别在于通常无意义。 一个例外是值类型传递`ByVal`。 在这种情况下，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]复制自变量的整个数据内容。 因此，较大的值类型，如一个结构，它可以更高效，以将其传递`ByRef`。  
+-   **性能**。 尽管的传递机制可能会影响代码的性能，区别在于通常无意义。 一个例外是值类型传递`ByVal`。 在这种情况下，Visual Basic 将复制自变量的整个数据内容。 因此，较大的值类型，如一个结构，它可以更高效，以将其传递`ByRef`。  
   
      对于引用类型，仅指向的数据为复制 （四个字节在 32 位平台上，在 64 位平台上的 8 个字节）。 因此，你可以将类型自变量传递`String`或`Object`的值，从而不会降低性能。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  如果参数用声明`ByRef`，调用代码可以强制机制来`ByVal`通过将在调用中的括号中的自变量名称。 有关详细信息，请参阅[如何： 强制通过值传递到自变量](./how-to-force-an-argument-to-be-passed-by-value.md)。  
   
- 中的默认值[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是按值传递自变量。  
+ Visual Basic 中的默认值是通过值传递自变量。  
   
 ## <a name="when-to-pass-an-argument-by-value"></a>何时通过值传递自变量  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="code"></a>代码  
  [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [如何：将自变量传递给过程](./how-to-pass-arguments-to-a-procedure.md)  

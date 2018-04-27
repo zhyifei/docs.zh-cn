@@ -20,17 +20,17 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-caps.latest.revision: ''
+caps.latest.revision: 20
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b10d759a4f79eabe973a0fcd60736428e46f659
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f176598db00c57159bf351ea5d9ec428c5c04bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xnull-markup-extension"></a>x:Null 标记扩展
 指定`null`作为 XAML 成员的值。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- 中的 null 引用的关键字[!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]和[!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)]为 null。 [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]关键字为空引用是`Nothing`，但始终使用`{x:Null}`作为 XAML 用法无论与 XAML 关联的代码隐藏语言。  
+ 在 C# 中的 null 引用的关键字和[!INCLUDE[TLA#tla_cpp](../../../includes/tlasharptla-cpp-md.md)]为 null。 空引用 Microsoft Visual Basic 关键字是`Nothing`，但始终使用`{x:Null}`作为 XAML 用法无论与 XAML 关联的代码隐藏语言。  
   
  `x:Null`标记扩展有任何可设置属性。  
   

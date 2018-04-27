@@ -1,33 +1,34 @@
 ---
-title: "如何：创建使用现有服务协定的工作流服务"
-ms.custom: 
+title: 如何：创建使用现有服务协定的工作流服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a754875dc3f7968086f4f92044205b8ebceb01e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>如何：创建使用现有服务协定的工作流服务
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以协定优先工作流开发的形式实现了 Web 服务与工作流之间的更佳集成。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。  
   
 > [!NOTE]
->  本主题提供了有关创建协定优先工作流服务的分步指南。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]协定优先工作流服务开发，请参阅[协定第一个工作流服务开发](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)。  
+>  本主题提供了有关创建协定优先工作流服务的分步指南。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 协定优先工作流服务开发，请参阅[协定第一个工作流服务开发](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)。  
   
 ### <a name="creating-the-workflow-project"></a>创建工作流项目  
   
-1.  在[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]，选择**文件**，**新项目**。 选择**WCF**节点下的**C#**中的节点**模板**树，然后选择**WCF 工作流服务应用程序**模板。  
+1.  在 Visual Studio 中，选择**文件**，**新项目**。 选择**WCF**节点下的**C#** 中的节点**模板**树，然后选择**WCF 工作流服务应用程序**模板。  
   
 2.  将新项目`ContractFirst`单击**确定**。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  在**解决方案资源管理器**，打开 Service1.xamlx。 该工作流服务将出现在设计器中。  
   
-5.  选择**序列**活动。 在属性窗口中，单击**...** 按钮**ImplementedContract**属性。 在**类型集合编辑器**出现窗口中，单击**类型**下拉列表中，然后选择**浏览类型...** 项。 在**浏览并选择.Net 类型**对话框下**\<当前项目 >**，打开所有子节点并选择**IBookService**。 单击 **“确定”**。 在**类型集合编辑器**对话框中，单击**确定**。  
+5.  选择**序列**活动。 在属性窗口中，单击 **...** 按钮**ImplementedContract**属性。 在**类型集合编辑器**出现窗口中，单击**类型**下拉列表中，然后选择**浏览类型...** 项。 在**浏览并选择.Net 类型**对话框下**\<当前项目 >**，打开所有子节点并选择**IBookService**。 单击 **“确定”**。 在**类型集合编辑器**对话框中，单击**确定**。  
   
 6.  选择并删除**ReceiveRequest**和**SendResponse**活动。  
   

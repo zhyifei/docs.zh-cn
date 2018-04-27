@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-string-syntax"></a>连接字符串语法
 每个 .NET Framework 数据提供程序都有一个继承自 `Connection` 的 <xref:System.Data.Common.DbConnection> 对象，以及一个提供程序特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 属性。 每个提供程序的特定连接字符串语法记录在其 `ConnectionString` 属性中。 下表列出了 .NET Framework 中包含的四个数据提供程序。  
@@ -98,7 +98,7 @@ Data Source=MySqlServer\MSSQL1;"
 在生成连接字符串时，您还可以将 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> 的 `SqlConnectionStringBuilder` 属性设置为实例名。 <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性是只读的。  
   
 ### <a name="type-system-version-changes"></a>类型系统版本更改  
- `Type System Version` 中的 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 关键字指定 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 类型的客户端表示形式。 有关 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 关键字的更多信息，请参见 `Type System Version`。  
+ `Type System Version`中的关键字<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>指定 SQL Server 类型的客户端表示形式。 有关 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 关键字的更多信息，请参见 `Type System Version`。  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>连接并附加到 SQL Server Express 用户实例  
  用户实例是 SQL Server Express 中的一个功能。 它们允许以最低权限的本地 Windows 帐户运行的用户附加并运行 SQL Server 数据库，而无需具有管理权限。 使用用户 Windows 凭据执行用户实例，而不是作为服务执行用户实例。  
@@ -106,7 +106,7 @@ Data Source=MySqlServer\MSSQL1;"
  使用用户实例的详细信息，请参阅[SQL Server Express 用户实例](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)。  
   
 ## <a name="using-trustservercertificate"></a>使用 TrustServerCertificate  
- `TrustServerCertificate` 关键字仅在连接到具有有效证书的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 实例时有效。 当 `TrustServerCertificate` 设置为 `true` 时，传输层将使用 SSL 来加密通道并跳过证书链以验证信任。  
+ `TrustServerCertificate`关键字无效，仅当连接到 SQL Server 实例使用有效的证书。 当 `TrustServerCertificate` 设置为 `true` 时，传输层将使用 SSL 来加密通道并跳过证书链以验证信任。  
   
 ```  
 "TrustServerCertificate=true;"   
@@ -207,7 +207,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
  有关 ODBC 连接字符串语法的更多信息，请参见 <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)  
  [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [ADO.NET 托管提供程序和数据集开发人员中心](http://go.microsoft.com/fwlink/?LinkId=217917)

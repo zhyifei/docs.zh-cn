@@ -31,11 +31,11 @@ ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf6b3ce7e5f9549ca04c4980bd3c91513b343ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06702cdc9073065a418b17d198dbb43be4aefca1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>如何：在代码中拆分和合并语句 (Visual Basic)
 当编写代码时，你有时可能会创建一些冗长需要水平滚动在代码编辑器中的语句。 尽管这不会影响的方式代码运行，这使得困难为你或任何其他人阅读代码，因为在监视器上显示。 在这种情况下，你应考虑将单个长语句拆分为多个行。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
      通过使用行继续符将无法继续注释。 编译器不检查具有特殊含义的注释中的字符。 对于多行注释，请重复注释符号 (`'`) 在每一行上。  
   
- 将每个语句放在单独的行是建议的方法，尽管[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]还允许你在同一行上放置多个语句。  
+ 尽管推荐的方法是将每个语句放在单独的行，Visual Basic 还允许你在同一行上放置多个语句。  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>若要在同一行上放置多个语句  
   
@@ -67,6 +67,6 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  [语句](../../../visual-basic/programming-guide/language-features/statements.md)

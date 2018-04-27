@@ -1,9 +1,10 @@
 ---
-title: "抱歉，我们 don &#39; t 对此 Visual Basic 错误的详细信息"
+title: 抱歉，我们不&#39;t 对此 Visual Basic 错误的详细信息
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vbc30234
@@ -3048,36 +3049,36 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>抱歉，我们 don &#39; t 对此 Visual Basic 错误的详细信息
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>抱歉，我们不&#39;t 对此 Visual Basic 错误的详细信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可使用以下论坛之一咨询其他开发人员：  
   
  [Visual Basic 语言](http://go.microsoft.com/fwlink/?LinkId=145963)  
- 提供针对 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言语法和编辑器相关问题及常规讨论的论坛。  
+ 提供论坛供问题有关及常规讨论的 Visual Basic 语言语法和编译器。  
   
  [Visual Basic 互操作和升级](http://go.microsoft.com/fwlink/?LinkId=145966)  
- 提供论坛供大家讨论与 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 升级以及互操作性功能的使用相关的问题。  
+ 提供论坛供大家讨论有关和升级到 Visual Basic 并使用互操作性功能的问题。  
   
  [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
  提供针对如何在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 环境中工作的问题的论坛。  
   
  [Visual Basic 常规信息](http://go.microsoft.com/fwlink/?LinkId=145973)  
- 提供针对其他论坛中未涉及的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 相关问题的论坛。  
+ 提供论坛供大家讨论有关和与其他论坛中未涉及的 Visual Basic 问题。  
   
- [堆栈溢出](http://stackoverflow.com/questions/tagged/vb.net)  
- 提供一个供大家讨论有关 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 的问题的论坛。  
+ [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
+ 提供论坛供大家讨论有关和使用 Visual Basic 问题。  
   
  另请参见：  
  [为 Visual Basic 程序员提供的附加资源](../../visual-basic/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 编程指南](../../visual-basic/programming-guide/index.md)  
  [Visual Basic 参考](../../visual-basic/reference/index.md)

@@ -1,56 +1,58 @@
 ---
-title: "构建联接和跨产品查询"
-ms.custom: 
+title: 构建联接和跨产品查询
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5f652f25d04480afb3df1f623347eee23d3ed258
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 468ee54b0936afcbb548249bc714ea4b04abd3de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>构建联接和跨产品查询
 下面的示例演示如何组合来自多个表的结果。  
   
 ## <a name="example"></a>示例  
- 下面的示例在 `From` 中的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 子句（在 C# 中为 `from` 子句）中使用外键导航来选择位于伦敦的客户所下的所有订单。  
+ 下面的示例使用中的外键导航`From`在 Visual Basic 中的子句 (`from`子句在 C# 中) 以选择位于伦敦的客户的所有订单。  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>示例  
- 下面的示例在 `Where` 中的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 子句（在 C# 中为 `where` 子句）中使用外键导航来筛选出 `Products` 位于美国的脱销 `Supplier`。  
+ 下面的示例使用中的外键导航`Where`在 Visual Basic 中的子句 (`where`子句在 C# 中) 来筛选出的 stock`Products`其`Supplier`是在美国。  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>示例  
- 下面的示例在 `From` 中的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 子句（在 C# 中为 `from` 子句）中使用外键导航来筛选出位于西雅图的员工并列出它们所在的地区。  
+ 下面的示例使用中的外键导航`From`在 Visual Basic 中的子句 (`from`子句在 C# 中) 来筛选出存在位于西雅图的员工并列出它们所在的地区。  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>示例  
- 下面的示例在 `Select` 中的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 子句（在 C# 中为 `select` 子句）中使用外键导航来筛选出存在以下关系的雇员对：其中一位雇员是另一位雇员的下属，且这两位雇员来自同一 `City`。  
+ 下面的示例使用中的外键导航`Select`在 Visual Basic 中的子句 (`select`子句在 C# 中) 来筛选出存在关系的雇员对其中一个员工隶属于另且这两位雇员均来自同一`City`。  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>示例  
- 下面的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 示例查找所有客户和订单，确保相应的订单与客户匹配，并保证对于该列表中的每位客户，都提供了联系人姓名。  
+ 下面的 Visual Basic 示例查找所有客户和订单、 可确保相应的订单匹配给客户，并保证对于该列表中每个客户，都提供了联系人名称。  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   

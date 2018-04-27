@@ -1,23 +1,24 @@
 ---
-title: "属性网格扩展性"
-ms.custom: 
+title: 属性网格扩展性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e3069e97a1696b37d56728eb86161cc2487dfdfa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9393947420709590312200e8f142092c95b91b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-grid-extensibliity"></a>属性网格扩展性
 开发人员可以自定义属性网格，此网格将在设计器中选择给定活动时显示。 执行此操作可获得丰富的编辑体验。 此示例演示如何完成此操作。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 -   创建一个从 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor> 派生的类型。  
   
--   在构造函数中，使用 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 数据模板设置 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 值。 虽然可以将其绑定到 XAML 模板，但在此示例中，代码用于初始化数据绑定。  
+-   在构造函数中，<xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A>使用 Windows Presentation Foundation (WPF) 数据模板设置值。 虽然可以将其绑定到 XAML 模板，但在此示例中，代码用于初始化数据绑定。  
   
 -   数据模板具有在属性网格中呈现的项的 <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> 的数据上下文。 请注意，在下面的代码（此代码来自 CustomInlineEditor.cs）中，稍后会将此上下文绑定到 `Value` 属性。  
   

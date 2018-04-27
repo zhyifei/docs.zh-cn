@@ -1,33 +1,35 @@
 ---
-title: "在 Windows 窗体上使用的控件"
-ms.custom: 
+title: 在 Windows 窗体上使用的控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9958af954675784e9cbdec4c26605fb83ffa0005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6454d7ead50c96ed4f92b2b9d53e7b9bbb4a84f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows 窗体上使用的控件
 下面按字母顺序列出了可在 Windows 窗体上使用的控件和组件。 除本节介绍的 Windows 窗体控件外，还可向 Windows 窗体添加 ActiveX 控件和自定义控件。 如果在此处列出的控件中未找到所需控件，还可创建自己的控件。 有关详细信息，请参阅[设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。 有关选择所需控件的详细信息，请参阅[按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。  
   
 > [!NOTE]
->  [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 控件基于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 提供的类。  
+>  Visual Basic 控件基于提供的类[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
  [按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  

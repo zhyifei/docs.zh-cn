@@ -1,12 +1,13 @@
 ---
-title: "Windows 窗体中更加安全的文件和数据访问"
-ms.custom: 
+title: Windows 窗体中更加安全的文件和数据访问
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows 窗体中更加安全的文件和数据访问
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用权限帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
@@ -144,7 +146,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  在 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 中，务必添加用于启用事件处理程序的代码。 通过使用上一示例中的代码，以下代码显示了如何启用事件处理程序。`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  在 Visual C# 中，确保你添加代码以启用事件处理程序。 通过使用上一示例中的代码，以下代码显示了如何启用事件处理程序。`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>其他文件  
  有时你将需要读取或写入到用户未指定的文件，例如当你必须保存应用程序设置时。 在本地 Intranet 和 Internet 区域中，你的应用程序将无权在本地文件中存储数据。 但是，它将能够在独立存储中存储数据。 独立存储是一个抽象的数据隔离舱（而非具体的存储位置），它包含一个或多个独立存储文件（称为存储区），这些文件包含存储数据的实际目录位置。 文件访问权限（如 <xref:System.Security.Permissions.FileIOPermission>）不是必须具有的权限；<xref:System.Security.Permissions.IsolatedStoragePermission> 类控制独立存储权限。 默认情况下，在本地 Intranet 和 Internet 区域中运行的应用程序可以使用独立存储来存储数据；但是，磁盘配额等设置可能有所不同。 有关独立存储的详细信息，请参阅[独立存储](../../../docs/standard/io/isolated-storage.md)。  

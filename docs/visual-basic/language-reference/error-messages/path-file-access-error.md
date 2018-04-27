@@ -13,11 +13,11 @@ ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bff3ec554a594e99bc65e5cd8df28a056dcc1ebd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pathfile-access-error"></a>路径/文件访问错误
 在文件访问或磁盘访问操作中，操作系统无法获得路径和文件名称之间的连接。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  请确保你没有尝试打开只读文件中顺序`Output`或`Append`模式。 如果出现这种情况，打开中的文件`Input`模式或更改文件的只读属性。  
   
-4.  请确保不尝试更改[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]数据库或文档中的项目。  
+4.  请确保你没有尝试更改数据库或文档中的 Visual Basic 项目。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误类型](../../../visual-basic/programming-guide/language-features/error-types.md)

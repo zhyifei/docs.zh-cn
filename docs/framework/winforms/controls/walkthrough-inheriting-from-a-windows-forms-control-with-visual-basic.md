@@ -1,13 +1,13 @@
 ---
-title: "演练：使用 Visual Basic 从 Windows 窗体控件继承"
-ms.custom: 
+title: 演练：使用 Visual Basic 从 Windows 窗体控件继承
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b165de0d18cede275dfe8405b0266c1a909ac570
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 342ab60d4c3481d2154293fab9fb1254f937a934
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>演练：使用 Visual Basic 从 Windows 窗体控件继承
-使用 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 可通过继承来创建功能强大的自定义控件。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体继承功能<xref:System.Windows.Forms.Button>控制，并将公开一个名为的自定义属性`ButtonValue`。  
+使用 Visual Basic 中，您可以创建功能强大的自定义控件，通过*继承*。 通过继承，可以创建不仅保留了标准 Windows 窗体控件的所有固有功能，而且还包含自定义功能的控件。 在本演练中，将创建一个名为 `ValueButton` 的简单继承控件。 此按钮将从标准 Windows 窗体继承功能<xref:System.Windows.Forms.Button>控制，并将公开一个名为的自定义属性`ButtonValue`。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  在“文件”菜单上指向“新建”，然后单击“项目”打开“新建项目”对话框。  
   
-2.  在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 项目列表中，选择“Windows 窗体控件库”项目模板，然后在“名称”框中键入 `ValueButtonLib`。  
+2.  选择**Windows 窗体控件库**Visual Basic 项目中和类型的列表中的项目模板`ValueButtonLib`中**名称**框。  
   
      默认情况下，项目名称 `ValueButtonLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ValueButton` 的组件，则可以使用 `ValueButtonLib.ValueButton` 指定 `ValueButton` 组件。 有关详细信息，请参阅 [Visual Basic 中的命名空间](~/docs/visual-basic/programming-guide/program-structure/namespaces.md)。  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  在“文件”菜单上，指向“添加”，然后单击“新建项目”打开“添加新项目”对话框。  
   
-2.  选择 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 项目节点并单击“Windows 窗体应用程序”。  
+2.  选择 Visual Basic 项目节点，然后单击**Windows 窗体应用程序**。  
   
 3.  在“名称”框中键入 `Test`。  
   

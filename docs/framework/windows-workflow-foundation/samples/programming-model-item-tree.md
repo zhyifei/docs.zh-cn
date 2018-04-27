@@ -1,26 +1,27 @@
 ---
-title: "编程模型项树"
-ms.custom: 
+title: 编程模型项树
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83e804a3ede525510b5c46b494882656c74591b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 497aa75214bdbbefa7f09ef56fe96926c2461ed6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="programming-model-item-tree"></a>编程模型项树
-此示例演示如何使用 <xref:System.Activities.Presentation.Model.ModelItem> 树视图中的声明性数据绑定导航 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 树。  
+此示例演示如何导航<xref:System.Activities.Presentation.Model.ModelItem>树进行从 Windows Presentation Foundation (WPF) 树视图中的声明性数据绑定。  
   
 ## <a name="sample-details"></a>示例详细信息  
  <xref:System.Activities.Presentation.Model.ModelItem> 树是 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 基础结构用来公开有关要编辑的基础实例的数据的抽象。 下图描述了 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 中的基础结构的各层。  

@@ -1,24 +1,26 @@
 ---
-title: "LINQ to SQL 查询"
-ms.custom: 
+title: LINQ to SQL 查询
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8c32ff4040213ce73b78f7ea0f6d56e222d55b25
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 62e6252da06201e33d6f81f3160bee063272132f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL 查询
 定义 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询所用的语法与在 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 中使用的语法相同。 唯一的差异是您的查询中引用的对象映射到数据库中的元素。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/17/2018
 |项|LINQ 查询|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查询|  
 |----------|----------------|----------------------------------------------------------------------|  
 |保存查询的局部变量的返回类型（对于返回序列的查询而言）|泛型 `IEnumerable`|泛型 `IQueryable`|  
-|指定数据源|使用 `From` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) 或 `from` (C#) 子句|相同|  
+|指定数据源|使用`From`(Visual Basic 中) 或`from`子句 (C#)|相同|  
 |筛选|使用`Where` / `where`子句|相同|  
 |分组|使用`Group…By` / `groupby`子句|相同|  
 |选择（投影）|使用`Select` / `select`子句|相同|  

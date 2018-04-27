@@ -1,11 +1,12 @@
 ---
-title: "处理事件 (Visual Basic)"
-ms.custom: 
+title: 处理事件 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e4e31937d67d2140865a9626f79fbddc16796709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>演练：处理事件 (Visual Basic)
 这是演示如何使用事件的两个主题的第二个。 第一个主题，[演练： 声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，演示如何声明和引发事件。 本部分使用的窗体和该演练中的类以显示如何处理事件发生时。  
   
- `Widget`类的示例使用传统的事件处理语句。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供用于处理事件的其他技术。 作为练习，您可以修改此示例以使用`AddHandler`和`Handles`语句。  
+ `Widget`类的示例使用传统的事件处理语句。 Visual Basic 提供用于处理事件的其他技术。 作为练习，您可以修改此示例以使用`AddHandler`和`Handles`语句。  
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>若要处理的 PercentDone 事件的小组件类  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
  如果用户单击**取消**时的按钮`LongTask`正在运行，`Button2_Click`执行事件就会立即`DoEvents`语句允许发生的事件处理。 类级变量`mblnCancel`设置为`True`，和`mWidget_PercentDone`事件然后测试它，并设置`ByRef Cancel`参数`True`。  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>连接到一个对象的 WithEvents 变量  
- `Form1`现在已设置好处理`Widget`对象的事件。 剩下的就是查找`Widget`某个位置。  
+ `Form1` 现在已设置好处理`Widget`对象的事件。 剩下的就是查找`Widget`某个位置。  
   
  当你声明一个变量`WithEvents`在设计时，没有对象，则与之关联。 A`WithEvents`变量是就像任何其他对象变量一样。 你必须创建一个对象，并为其分配引用与`WithEvents`变量。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- 此代码执行时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]创建`Widget`对象，并将其事件连接到与关联的事件过程`mWidget`。 自此以后，每当`Widget`引发其`PercentDone`事件，`mWidget_PercentDone`执行事件过程。  
+ 在此代码的执行，Visual Basic 创建`Widget`对象，并将其事件连接到与关联的事件过程`mWidget`。 自此以后，每当`Widget`引发其`PercentDone`事件，`mWidget_PercentDone`执行事件过程。  
   
 #### <a name="to-call-the-longtask-method"></a>若要调用 LongTask 方法  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
  之前`LongTask`调用方法时，标签，必须初始化的显示完成百分比和类级别`Boolean`标志取消方法必须设置为`False`。  
   
- `LongTask`已调用 12.2 秒任务持续时间。 `PercentDone`引发事件一次每 1 / 3 的第二个。 引发事件时，每次`mWidget_PercentDone`执行事件过程。  
+ `LongTask` 已调用 12.2 秒任务持续时间。 `PercentDone`引发事件一次每 1 / 3 的第二个。 引发事件时，每次`mWidget_PercentDone`执行事件过程。  
   
  当`LongTask`完成操作后，`mblnCancel`测试以查看是否`LongTask`正常结束，或如果它停止，因为`mblnCancel`已设置为`True`。 仅在前一种情况中，会更新完成百分比。  
   
@@ -124,6 +125,6 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  你可以声明任意多个`WithEvents`需要为你的变量，但数组`WithEvents`不支持变量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练：声明和引发事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)

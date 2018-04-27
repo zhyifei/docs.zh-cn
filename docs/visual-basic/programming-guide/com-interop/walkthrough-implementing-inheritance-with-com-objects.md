@@ -1,11 +1,12 @@
 ---
-title: "演练：用 COM 对象实现继承 (Visual Basic)"
-ms.custom: 
+title: 演练：用 COM 对象实现继承 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8d6906c58431a0e844e8f430ade10ae819e77ff2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>演练：用 COM 对象实现继承 (Visual Basic)
-您可以派生从 Visual Basic 类`Public`中 COM 对象，甚至那些在早期版本的中创建的类[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 属性和方法从 COM 对象继承的类可以重写或只是作为属性重载，并可以重写任何其他基类方法，或将其重载。 具有不希望重新编译的现有类库时，从 COM 对象的继承非常有用。  
+您可以派生从 Visual Basic 类`Public`中 COM 对象，甚至那些在早期版本的 Visual Basic 中创建的类。 属性和方法从 COM 对象继承的类可以重写或只是作为属性重载，并可以重写任何其他基类方法，或将其重载。 具有不希望重新编译的现有类库时，从 COM 对象的继承非常有用。  
   
  以下过程演示如何使用 Visual Basic 6.0 中创建一个包含类的 COM 对象，然后将其用作基类。  
   
@@ -77,18 +78,18 @@ ms.lasthandoff: 11/21/2017
 10. 创建并注册的 COM 对象，通过单击**使 ComObject1.dll**上**文件**菜单。  
   
     > [!NOTE]
-    >  虽然你还可以公开与创建的类[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]为 COM 对象，它不是真正的 COM 对象并且不在本演练中使用。 有关详细信息，请参阅[在.NET Framework 应用程序的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
+    >  尽管你可以公开为 COM 对象的 Visual basic 创建的类，但它不是真正的 COM 对象，并且不在本演练中使用。 有关详细信息，请参阅[在.NET Framework 应用程序的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 ## <a name="interop-assemblies"></a>互操作程序集  
- 在以下过程中，你将创建一个互操作程序集，它将充当 （如 COM 对象） 的非托管的代码和托管的代码之间的桥梁[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]使用。 互操作程序集的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]创建句柄的许多细节，使用 COM 的对象，如*互操作封送处理*，打包参数和返回值为等效的数据的过程类型标记为不将移到和从 COM 对象。 中的引用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]互操作程序集，而不是实际的 COM 对象的应用程序指向。  
+ 在以下过程中，你将创建一个互操作程序集，它将充当 （如 COM 对象） 的非托管的代码和托管的代码之间的桥梁[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]使用。 Visual Basic 创建的互操作程序集处理的许多细节，如使用 COM 对象的*互操作封送处理*，打包参数和返回值为等效的数据的过程类型标记为不将移到和从 COM 对象。 在 Visual Basic 应用程序引用将指向互操作程序集，而不是实际的 COM 对象。  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>若要使用 Visual Basic 2005 和更高版本的 COM 对象  
   
-1.  打开一个新的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows 应用程序项目。  
+1.  打开一个新的 Visual Basic Windows 应用程序项目。  
   
 2.  在“项目”菜单上，单击“添加引用”。  
   
-     **添加引用**对话框随即显示。  
+     将显示“添加引用”对话框。  
   
 3.  上**COM**选项卡上，双击`ComObject1`中**组件名称**列表，然后单击**确定**。  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  按 F5 运行项目。  
   
- 单击窗体上的按钮时`AddNumbers`方法首先调用的`Short`数据类型的数字和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]从基类中选择相应的方法。 第二次调用`AddNumbers`定向到中的重载方法`MathClass`。 第三个调用调用`SubtractNumbers`方法，扩展类。 设置中的基类的属性，并显示的值。  
+ 单击窗体上的按钮时`AddNumbers`方法首先调用的`Short`数据类型的数字和 Visual Basic 选择相应的方法从基类。 第二次调用`AddNumbers`定向到中的重载方法`MathClass`。 第三个调用调用`SubtractNumbers`方法，扩展类。 设置中的基类的属性，并显示的值。  
   
 ## <a name="next-steps"></a>后续步骤  
  你可能已经注意到，重载`AddNumbers`函数显示为具有相同的数据类型为继承自基类的 COM 对象的方法。 这是因为自变量和参数的基类方法被定义为 16 位整数，在 Visual Basic 6.0 中，但它们公开为 16 位整数类型的`Short`更高版本的 Visual Basic 中。 新的函数可接受 32 位整数，并重载基类函数。  
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/21/2017
   
 -   使用的属性`ByRef`参数不能重写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
  [Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)  
  [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)

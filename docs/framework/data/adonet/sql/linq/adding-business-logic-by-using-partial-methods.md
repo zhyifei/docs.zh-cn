@@ -1,33 +1,35 @@
 ---
-title: "通过使用分部方法添加业务逻辑"
-ms.custom: 
+title: 通过使用分部方法添加业务逻辑
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9704ad7d4030ee85701f1f95f87c539c1fbd0122
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ea345f01c68f8c962069a3e9fdca7feff84c5c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>通过使用分部方法添加业务逻辑
-你可以自定义[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]和 C# 生成的代码中的你[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目通过使用*分部方法*。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 生成的代码定义签名作为分部方法的一部分。 如果您要实现此方法，您可以添加自己的分部方法。 如果您不添加自己的实现，编译器将丢弃分部方法签名并调用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的默认方法。  
+你可以自定义 Visual Basic 和 C# 生成的代码中的你[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目通过使用*分部方法*。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 生成的代码定义签名作为分部方法的一部分。 如果您要实现此方法，您可以添加自己的分部方法。 如果您不添加自己的实现，编译器将丢弃分部方法签名并调用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的默认方法。  
   
 > [!NOTE]
->  如果使用的是 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，则可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 向实体类添加验证及其他自定义内容。  
+>  如果你使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]向实体类添加验证及其他自定义项。  
   
  例如，Northwind 示例数据库中 `Customer` 类的默认映射包括下面的分部方法：  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
  在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中通常使用这种方式来重写 `Insert`、`Update`、`Delete` 的默认方法以及在对象生命周期事件过程中验证属性。  
   
- 有关详细信息，请参阅[分部方法](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) 或[分部 （方法） （C# 参考）](~/docs/csharp/language-reference/keywords/partial-method.md) (C#)。  
+ 有关详细信息，请参阅[分部方法](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)(Visual Basic 中) 或[分部 （方法） （C# 参考）](~/docs/csharp/language-reference/keywords/partial-method.md) (C#)。  
   
 ## <a name="example"></a>示例  
   

@@ -1,12 +1,13 @@
 ---
-title: "流提供程序（WCF 数据服务）"
-ms.custom: 
+title: 流提供程序（WCF 数据服务）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>流提供程序（WCF 数据服务）
 数据服务可公开二进制大型对象数据。 此二进制数据可以表示视频和音频流、图像、文档文件或其他类型的二进制媒体。 当数据模型中的某个实体包括一个或多个二进制属性时，数据服务会在响应源的入口内以 base-64 编码形式返回此二进制数据。 加载和序列化大型二进制数据，这种方式会影响性能，因为[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定义用于检索独立于其所属的实体的二进制数据的机制。 这一点是通过将实体和二进制数据分隔到一个或多个数据流来实现的。  
@@ -61,7 +63,7 @@ ms.lasthandoff: 01/19/2018
   
  还必须将命名空间 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 添加到实体，或添加到定义数据模型的 .edmx 或 .csdl 文件的根目录中。  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]使用的数据服务[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序，并公开媒体资源，请参阅文章[数据服务流提供程序系列： 实现流提供程序 (第 1 部分)](http://go.microsoft.com/fwlink/?LinkID=198989)。  
+ 有关使用的数据服务的示例[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序，并公开媒体资源，请参阅文章[数据服务流提供程序系列： 实现流提供程序 (第 1 部分)](http://go.microsoft.com/fwlink/?LinkID=198989)。  
   
  **反射提供程序**  
  若要指示某个实体为媒体链接入口，需将 <xref:System.Data.Services.Common.HasStreamAttribute> 添加到在反射提供程序中定义相应实体类型的类中。  
@@ -122,7 +124,7 @@ ms.lasthandoff: 01/19/2018
   
     -   数据模型中不应包括作为媒体资源的二进制属性。 数据模型中公开的所有属性都会在响应源的入口中返回。  
   
-    -   为了提高使用大型二进制数据流时的性能，建议您创建一个自定义流类来存储数据库中的二进制数据。 此类由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 实现返回并将二进制数据分块区发送到数据库。 有关[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]数据库，我们建议你到数据库中使用 FILESTREAM 数据进行流处理的二进制数据大于 1MB 时。  
+    -   为了提高使用大型二进制数据流时的性能，建议您创建一个自定义流类来存储数据库中的二进制数据。 此类由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 实现返回并将二进制数据分块区发送到数据库。 对于 SQL Server 数据库，我们建议你到数据库中使用 FILESTREAM 数据进行流处理的二进制数据大于 1MB 时。  
   
     -   确保您的数据库设计为存储将由数据服务接收的大型二进制数据流。  
   

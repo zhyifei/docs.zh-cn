@@ -1,24 +1,26 @@
 ---
 title: FROM (Entity SQL)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 115fb8dfef46c74837d774012babdef9db915341
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64d41359ba8a4131acb38b128238065ee2545f80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 指定中使用的集合[选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)语句。  
@@ -107,7 +109,7 @@ LOB.Customers
 >  与 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中不同，在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，不需要显式取消嵌套的步骤。  
   
 > [!NOTE]
->  `CROSS` 中引入了 `OUTER APPLY` 和 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 运算符。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序（包括 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 版本）不支持这些运算符，所以不能对这些后端提供程序执行此类查询。  
+>  `CROSS` 中引入了 `OUTER APPLY` 和 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 运算符。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序，包括 SQL Server 的版本早于[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]，不支持这些运算符，对这些后端提供程序不能执行此类查询。  
 >   
 >  下面是一些可能导致输出查询中出现 `CROSS APPLY` 和/或 `OUTER APPLY`运算符的典型情况：分页相关子查询；相关子查询或导航所生成的集合上的 AnyElement；使用接受元素选择器的分组方法的 LINQ 查询；显式指定 `CROSS APPLY` 或 `OUTER APPLY` 的查询；在 `DEREF` 构造上具有 `REF` 构造的查询。  
   

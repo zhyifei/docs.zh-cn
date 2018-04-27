@@ -1,29 +1,30 @@
 ---
-title: "中 Visual Basic2 XML 文本简介"
-ms.custom: 
+title: 中 Visual Basic2 XML 文本简介
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 112c1d898c3cdf14b52d843dee8f5a51002be858
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 文本简介
-本节提供有关使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 创建 XML 树的信息。  
+本部分提供有关在 Visual Basic 中创建 XML 树的信息。  
   
  有关使用 LINQ 查询的结果作为内容的 XML 树的信息，请参阅[函数构造 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
- 有关详细信息中的 XML 文本[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，请参阅[概述的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
+ 在 Visual Basic 中的 XML 文本的详细信息，请参阅[概述的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
   
 ## <a name="creating-xml-trees"></a>创建 XML 树  
  下面的示例演示如何创建一个 <xref:System.Xml.Linq.XElement>，在本例中为 `contacts`：  
@@ -204,5 +205,5 @@ Child1 was cloned
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

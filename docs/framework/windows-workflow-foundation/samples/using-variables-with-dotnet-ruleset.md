@@ -1,23 +1,24 @@
 ---
-title: "将变量用于 .NET Framework 3.5 规则集"
-ms.custom: 
+title: 将变量用于 .NET Framework 3.5 规则集
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2656cc5d8add0027d6bf038d5de735ebccd2d96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 216136ba084505947b5ab3c985284d704cb5872f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>将变量用于 .NET Framework 3.5 规则集
 此示例演示如何创建一个工作流，该工作流使用 <xref:System.Activities.Statements.Interop> 活动来集成在 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 中编写并应用了策略和规则的自定义活动。 该工作流将数据传递给此自定义活动，采用的方式是将变量绑定到此自定义活动公开的依赖项属性。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-examine-travelrulelibrary"></a>检查 TravelRuleLibrary  
   
-1.  使用 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]，打开 InteropWith35RuleSet.sln 解决方案文件。  
+1.  使用 Visual Studio，打开 InteropWith35RuleSet.sln 解决方案文件。  
   
 2.  在工作流设计器中打开 TravelRuleSet.cs。  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  右键单击`DiscountPolicy`和选择**查看代码**选项以检查活动的 C# 代码旁边的代码。  
   
-     观察 `DiscountLevel` 的依赖项属性设置。 这等效于 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 中的参数。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自变量，请参阅[变量和自变量](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。  
+     观察 `DiscountLevel` 的依赖项属性设置。 这等效于 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 中的参数。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自变量，请参阅[变量和自变量](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md)。  
   
 ## <a name="interopwith35ruleset"></a>InteropWith35RuleSet  
  这是一个顺序工作流项目，该项目使用 <xref:System.Activities.Statements.Interop> 活动与 `TravelRuleLibrary` 项目中创建的自定义规则集集成。 变量是在顶级 <xref:System.Activities.Statements.Sequence> 活动上创建的。 <xref:System.Activities.Statements.Interop> 活动用于与 `TravelRuleSet` 活动进行的集成。 在 <xref:System.Activities.Statements.Sequence> 上声明的变量用于绑定到依赖项属性。  

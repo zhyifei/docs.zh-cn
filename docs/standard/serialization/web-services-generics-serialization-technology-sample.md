@@ -8,21 +8,21 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0c29e6778cc0749620a7e38d51303356c2e99436
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: aa4e54a1085e3e5713004c489051e54b0fc8ee9d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web 服务泛型序列化技术示例
-[下载示例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
+[下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
  此示例演示如何在 ASP.NET Web 服务中使用和控制泛型的序列化。  
   
@@ -70,14 +70,14 @@ ms.lasthandoff: 03/23/2018
   
 1.  打开浏览器窗口，选择其地址栏。  
   
-2.  键入“http://localhost/[virtual directory]/Service.asmx”，其中“[virtual directory]”表示生成该示例时创建的虚拟目录。  
+2.  类型 **http://localhost/[虚拟 directory]/Service.asmx**，其中 [虚拟目录] 表示生成该示例时创建的虚拟目录。  
   
 ## <a name="remarks"></a>备注  
- 该示例将显示默认的 ASP.NET 页面，该页面包含指向 Web 服务定义的链接。 除了修改 Web 服务的源代码以外，还可以自定义其显示方式。 有关详细信息，请参阅[生成 XML Web services 客户端](http://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c)。  
+ 该示例将显示默认的 ASP.NET 页面，该页面包含指向 Web 服务定义的链接。 除了修改 Web 服务的源代码以外，还可以自定义其显示方式。 有关详细信息，请参阅[生成 XML Web services 客户端](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [序列化](../../../docs/standard/serialization/index.md)  
- [使用 ASP.NET 创建的 XML Web service 以及 XML Web Service 客户端](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+ [使用 ASP.NET 创建的 XML Web service 以及 XML Web Service 客户端](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

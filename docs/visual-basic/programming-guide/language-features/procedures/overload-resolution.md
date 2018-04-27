@@ -1,11 +1,12 @@
 ---
-title: "重载决策 (Visual Basic)"
-ms.custom: 
+title: 重载决策 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7eb71b69496e27b664fe297e9e5f105b360ce01d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e62560d853c95bc4bba6ba829d8579ee4388858e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overload-resolution-visual-basic"></a>重载决策 (Visual Basic)
-当[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器遇到对多个重载版本中定义的过程的调用，编译器必须确定哪个要调用的重载。 这是通过执行以下步骤：  
+当 Visual Basic 编译器遇到对多个重载版本中定义的过程的调用时，编译器必须确定哪个要调用的重载。 这是通过执行以下步骤：  
   
-1.  **可访问性。** 它会消除任何重载具有阻止调用代码中调用它的访问级别。  
+1.  **辅助功能。** 它会消除任何重载具有阻止调用代码中调用它的访问级别。  
   
 2.  **参数数目。** 它会消除定义不同数量的参数提供的调用中的任何重载。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
 |以逗号分隔的列表中的两个或多个值|`ParamArray`|  
 |（包括空数组） 任何长度的数组|`ParamArray`|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [可选参数](./optional-parameters.md)  
  [参数数组](./parameter-arrays.md)  
  [过程重载](./procedure-overloading.md)  

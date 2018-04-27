@@ -1,26 +1,26 @@
 ---
 title: Serialization1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dd6989e651f09a5e4d3354227a44b823b1b3ddcf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 14b2f596245eb7f9cdcb9b3e30eeb100180cd793
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization"></a>序列化
 序列化是将对象转换为一种格式，可以随时保存或传输的过程。 例如，你可以将对象序列化，传输通过 Internet 使用 HTTP，和目标计算机上反其序列化。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/23/2017
   
  反序列化对象时，不调用任何构造函数。 （有例外规则。 集合的构造函数标记有<xref:System.Runtime.Serialization.CollectionDataContractAttribute>在反序列化过程中调用。)因此，在正常构造过程中执行的任何逻辑需要作为一个序列化回调实现。  
   
- `OnDeserializedAttribute`是最常使用的回调属性。 此系列中的其他属性还有 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些属性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
+ `OnDeserializedAttribute` 是最常使用的回调属性。 此系列中的其他属性还有 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 这些属性可分别用来标记在反序列化之前、序列化之前以及序列化之后执行的回调。  
   
  **请考虑 ✓**使用<xref:System.Runtime.Serialization.KnownTypeAttribute>以指示反序列化复杂对象图时，应使用的具体类型。  
   
@@ -110,7 +110,7 @@ public class Person : ISerializable {
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  

@@ -1,27 +1,29 @@
 ---
-title: "ADO.NET 中的性能计数器"
-ms.custom: 
+title: ADO.NET 中的性能计数器
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9843d5c5edfc5ea590e4e6d0e5474a7d817e0ba6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: a36e552392f887cd4e0f6dfac822c87f08a90af7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的性能计数器
 ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支持。 在早期版本的 ADO.NET 中提供的 <xref:System.Data.SqlClient> 性能计数器已被否决，并已替换为本主题讨论的新性能计数器。 可以使用 ADO.NET 性能计数器来监视应用程序的状态和应用程序所使用的连接资源。 可以使用 Windows 性能监视器来监视性能计数器，或使用 <xref:System.Diagnostics.PerformanceCounter> 命名空间中的 <xref:System.Diagnostics> 类以编程方式访问性能计数器。  
@@ -66,7 +68,7 @@ ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.
  下面的控制台应用程序演示如何在应用程序中检索性能计数器的值。 必须打开连接并且确保连接处于活动状态，才能为所有 ADO.NET 性能计数器返回信息。  
   
 > [!NOTE]
->  此示例使用示例**AdventureWorks**中包含的数据库[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]。 在此示例代码中提供的连接字符串假定安装了数据库，该数据库在实例名为 SqlExpress 的本地计算机上；还假定你已创建了 SQL Server 登录，此登录与连接字符串中提供的登录相匹配。 如果使用仅允许 Windows 身份验证的默认安全设置来配置服务器，则需要启用 SQL Server 登录。 可以根据您的环境需要修改连接字符串。  
+>  此示例使用示例**AdventureWorks**包含与 SQL Server 数据库。 在此示例代码中提供的连接字符串假定安装了数据库，该数据库在实例名为 SqlExpress 的本地计算机上；还假定你已创建了 SQL Server 登录，此登录与连接字符串中提供的登录相匹配。 如果使用仅允许 Windows 身份验证的默认安全设置来配置服务器，则需要启用 SQL Server 登录。 可以根据您的环境需要修改连接字符串。  
   
 ### <a name="example"></a>示例  
   

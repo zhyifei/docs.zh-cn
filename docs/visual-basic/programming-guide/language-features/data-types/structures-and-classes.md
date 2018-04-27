@@ -1,11 +1,12 @@
 ---
-title: "结构和类 (Visual Basic)"
-ms.custom: 
+title: 结构和类 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>结构和类 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]统一的结构和类，因此这两个实体支持的大多数功能相同的语法。 但是，也有重要区别结构和类。  
+Visual Basic 统一的结构和类，因此这两个实体支持的大多数功能相同的语法。 但是，也有重要区别结构和类。  
   
  类具有引用类型的优点-传递一个引用是比传递的所有数据的结构变量更高效。 另一方面，结构不需要全局堆上的内存的分配。  
   
@@ -92,9 +93,9 @@ ms.lasthandoff: 11/21/2017
   
      结构元素，但是，将独立于其自身实例。 为其值的更改不会反映在任何其他结构变量，即使在其他情况下的相同`Structure`声明。  
   
--   **相等性。** 与的元素的测试，必须执行两个结构相等性测试。 可以使用比较两个对象变量<xref:System.Object.Equals%2A>方法。 <xref:System.Object.Equals%2A>指示两个变量是否指向同一个实例。  
+-   **相等性。** 与的元素的测试，必须执行两个结构相等性测试。 可以使用比较两个对象变量<xref:System.Object.Equals%2A>方法。 <xref:System.Object.Equals%2A> 指示两个变量是否指向同一个实例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
  [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  

@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ba48579735379bfc857993cd1546f5f7125101f4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac4cd9f14f046a970b6ec41c1b176e9980a960cf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>使用 Azure 云和 Windows 容器更新现有 .NET 应用程序 (v1.0)
 
@@ -28,7 +29,7 @@ Redmond, Washington 98052-6399
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制本书中的任何内容。
 
-本书中会提供免费的电子书籍 （电子图书） 可通过 microsoft 的多个通道，如 http://dot.net/architecture 窗体。
+本书位于免费电子书 （电子图书） 可通过 microsoft 的多个通道的形式如http://dot.net/architecture。
 
 若要了解本书的相关问题，请发送电子邮件至 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -36,7 +37,7 @@ Redmond, Washington 98052-6399
 
 本书中提及的一些示例仅用于说明，纯属虚构。 不存在任何实际关联或联系，请勿妄加推断。
 
-Microsoft 和 http://www.microsoft.com 上“商标”网页列出的商标是 Microsoft 集团公司的商标。 所有其他标记均为其各自所有者的财产。
+Microsoft 和列在商标http://www.microsoft.com"商标"网页上是 Microsoft 公司集团的商标。 所有其他标记均为其各自所有者的财产。
 
 作者:
 > **Cesar de la Torre**，Microsoft Corp. .NET 产品团队的高级项目经理。
@@ -172,11 +173,11 @@ Microsoft 和 http://www.microsoft.com 上“商标”网页列出的商标是 M
 
 ### <a name="additional-resources"></a>其他资源
 
-- **使用 Microsoft 平台和工具容器化 Docker 应用程序生命周期**（可下载电子书）：[*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **容器 Docker 应用生命周期内使用 Microsoft 平台和工具**（可下载电子图书）： [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
-- **.NET 微服务：适用于容器化 .NET 应用程序的体系结构**（可下载电子书）：[*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **.NET 微服务： 为容器化的.NET 应用程序的体系结构**（可下载电子图书）： [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
 
-- **使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序**（可下载电子书）：[https://aka.ms/webappebook](https://aka.ms/webappebook)
+- **构建使用 ASP.NET Core 和 Azure 的现代 web 应用程序**（可下载电子图书）： [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>本指南的目标读者
 

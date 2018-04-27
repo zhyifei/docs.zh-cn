@@ -1,24 +1,26 @@
 ---
-title: "事务和并发性"
-ms.custom: 
+title: 事务和并发性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e6dfa946313bb9d43077bad68b761e8f03c175c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 80db92f94f8cb523c3b8f9d0d08bbcb6b33c2fbe
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transactions-and-concurrency"></a>事务和并发性
 事务由作为包执行的单个命令或一组命令组成。 通过事务可以将多个操合并为单个工作单元。 如果在事务中的某一点发生故障，则所有更新都可以回滚到其事务前状态。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/17/2018
   
  如果一个事务涉及同一个数据库或服务器中的多个表，则存储过程中的显式事务通常可以更好地执行。 您可以通过使用 Transact-SQL `BEGIN TRANSACTION`、`COMMIT TRANSACTION` 和 `ROLLBACK TRANSACTION` 语句在 SQL Server 存储过程中创建事务。 有关更多信息，请参见 SQL Server 联机丛书。  
   
- 涉及不同资源管理器的事务（如 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 和 Oracle 之间的事务）需要分布式事务。  
+ 涉及不同资源管理器，如 SQL Server 和 Oracle 之间的事务的事务需要分布式的事务。  
   
 ## <a name="in-this-section"></a>本节内容  
  [本地事务](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/17/2018
  描述如何在 ADO.NET 中执行分布式事务。  
   
  [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- 说明 <xref:System.Transactions> 与 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 集成以使用分布式事务。  
+ 描述<xref:System.Transactions>与 SQL Server 的集成用于处理分布式事务。  
   
  [开放式并发](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  描述开放式并发和保守式并发，以及如何测试并发冲突。  

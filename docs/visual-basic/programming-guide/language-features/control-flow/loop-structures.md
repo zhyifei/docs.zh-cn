@@ -1,11 +1,12 @@
 ---
-title: "循环结构 (Visual Basic)"
-ms.custom: 
+title: 循环结构 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - control flow [Visual Basic], loops
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2f813a555677e3828297c9c360b7a47217c39524
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8c13f2cc6546a652f0967bd83369d8af5998f7e2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="loop-structures-visual-basic"></a>循环结构 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]循环结构，可以重复运行的代码的一个或多个行。 您可以重复循环结构中的语句，直到条件为`True`，直到条件`False`，集合中指定的次数，或者一次每个元素。  
+Visual Basic 循环结构，可以重复运行的代码的一个或多个行。 您可以重复循环结构中的语句，直到条件为`True`，直到条件`False`，集合中指定的次数，或者一次每个元素。  
   
  下图显示运行一组语句，直到条件变为真循环结构。  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="for-each-loops"></a>For Each 循环  
  `For Each`...`Next`构造为集合中运行一组语句对于每个元素执行一次。 指定循环控制变量，但不是需要确定启动或为其结束值。 有关详细信息，请参阅[每个...下一条语句](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控制流](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
  [决策结构](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
  [其他控件结构](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  

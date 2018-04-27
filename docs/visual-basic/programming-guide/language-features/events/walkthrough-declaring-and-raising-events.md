@@ -1,11 +1,12 @@
 ---
-title: "声明和引发事件 (Visual Basic)"
-ms.custom: 
+title: 声明和引发事件 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>演练：声明和引发事件 (Visual Basic)
 本演练演示如何声明和引发事件的类名为`Widget`。 完成步骤后，你可能想要读取的配套主题，[演练： 处理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)，其中说明了如何使用事件从`Widget`对象提供在应用程序的状态信息。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>若要生成本主题的代码示例  
   
-1.  打开一个新[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Windows 应用程序项目，然后创建名为窗体`Form1`。  
+1.  打开一个新的 Visual Basic Windows 应用程序项目并创建名为窗体`Form1`。  
   
 2.  添加两个按钮和标签与`Form1`。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  你可以声明事件自变量，就像参数的过程，有以下例外： 事件不能有`Optional`或`ParamArray`参数，且事件不具有返回值。  
   
- `PercentDone`事件由引发`LongTask`方法`Widget`类。 `LongTask`采用两个参数： 方法自称要工作和之前的最小时间间隔的时间长度`LongTask`暂停以引发`PercentDone`事件。  
+ `PercentDone`事件由引发`LongTask`方法`Widget`类。 `LongTask` 采用两个参数： 方法自称要工作和之前的最小时间间隔的时间长度`LongTask`暂停以引发`PercentDone`事件。  
   
 #### <a name="to-raise-the-percentdone-event"></a>若要引发 PercentDone 事件  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/21/2017
   
  现在，`Widget`类可以引发事件，你可以将移动到下一个演练。 [演练： 处理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)演示如何使用`WithEvents`要关联的事件处理程序替换`PercentDone`事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>  
  <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>  
  [演练：处理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  

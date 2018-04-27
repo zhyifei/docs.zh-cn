@@ -1,10 +1,11 @@
 ---
-title: "Option Infer 语句"
+title: Option Infer 语句
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.OptionInfer
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: fb6aea2b1e8faf9afd7d252d8828358130fb5374
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-infer-statement"></a>Option Infer 语句
 允许声明变量时使用局部类型推理。  
@@ -57,7 +58,7 @@ Option Infer 处于打开状态时的 IntelliSense
 Option Infer 处于关闭状态时的 IntelliSense  
   
 > [!NOTE]
->  变量声明为 `Object` 时，可在程序运行时更改运行时类型。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]执行操作调用*装箱*和*取消装箱*之间进行转换`Object`和值类型，这会使执行速度较慢。 有关装箱和取消装箱的信息，请参阅[Visual Basic 语言规范](../../../visual-basic/reference/language-specification/index.md)。
+>  变量声明为 `Object` 时，可在程序运行时更改运行时类型。 Visual Basic 执行调用的操作*装箱*和*取消装箱*之间进行转换`Object`和值类型，这会使执行速度较慢。 有关装箱和取消装箱的信息，请参阅[Visual Basic 语言规范](../../../visual-basic/reference/language-specification/index.md)。
   
  类型推理适用于过程级，且在类、结构、模块或接口中的过程之外不适用。  
   

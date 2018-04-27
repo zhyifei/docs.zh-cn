@@ -1,11 +1,12 @@
 ---
-title: "如何：调用返回值的过程 (Visual Basic)"
-ms.custom: 
+title: 如何：调用返回值的过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f6d408eed67fa417f42252bb49ecea28d4458382
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cbaaa5ed17845a7ac8847786fb10111c724015ba
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>如何：调用返回值的过程 (Visual Basic)
 A`Function`过程返回到调用代码的一个值。 它通过调用包括其名称和自变量放在右边的赋值语句或表达式中。  
@@ -48,11 +49,11 @@ A`Function`过程返回到调用代码的一个值。 它通过调用包括其�
 4.  从过程返回的值存储在变量或赋值语句左侧的属性。  
   
 ## <a name="example"></a>示例  
- 下面的示例调用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Interaction.Environ%2A>检索操作系统环境变量的值。 第一个行调用`Environ`内一个表达式和第二个行调用它在赋值语句中。 `Environ`将变量名称作为其唯一的自变量。 它返回到调用代码的变量的值。  
+ 下面的示例调用 Visual Basic<xref:Microsoft.VisualBasic.Interaction.Environ%2A>检索操作系统环境变量的值。 第一个行调用`Environ`内一个表达式和第二个行调用它在赋值语句中。 `Environ` 将变量名称作为其唯一的自变量。 它返回到调用代码的变量的值。  
   
  [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Function 过程](./function-procedures.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [Function 语句](../../../../visual-basic/language-reference/statements/function-statement.md)  

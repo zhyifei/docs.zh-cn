@@ -1,12 +1,13 @@
 ---
-title: "如何：获取和设置 Windows 窗体 DataGridView 控件中的当前单元格"
-ms.custom: 
+title: 如何：获取和设置 Windows 窗体 DataGridView 控件中的当前单元格
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75f8a96b77ffcd40a51cf484f50032f7f2e44309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b53d135a1d019ce20dfc8c5c2c1ba59e5968306e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>如何：获取和设置 Windows 窗体 DataGridView 控件中的当前单元格
 与交互<xref:System.Windows.Forms.DataGridView>通常需要你以编程方式发现哪个单元格当前处于活动状态。 你可能还需要更改当前单元格。 你可以执行这些任务与<xref:System.Windows.Forms.DataGridView.CurrentCell%2A>属性。  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
   
--   <xref:System.Windows.Forms.Button>控件名为`getCurrentCellButton`和`setCurrentCellButton`。 在[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]，必须将附加<xref:System.Windows.Forms.Control.Click>到关联的事件处理程序的代码示例中的每个按钮的事件。  
+-   <xref:System.Windows.Forms.Button> 控件名为`getCurrentCellButton`和`setCurrentCellButton`。 在 Visual C# 中，你必须将附加<xref:System.Windows.Forms.Control.Click>到关联的事件处理程序的代码示例中的每个按钮的事件。  
   
 -   名为 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控件。  
   

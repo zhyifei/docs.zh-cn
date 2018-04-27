@@ -1,11 +1,12 @@
 ---
-title: "语句 (Visual Basic)"
-ms.custom: 
+title: 语句 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>语句 (Visual Basic)
-中的语句[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是完整的指令。 它可以包含关键字、 运算符、 变量、 常量和表达式。 每个语句都属于以下类别之一：  
+在 Visual Basic 中的语句是完整的指令。 它可以包含关键字、 运算符、 变量、 常量和表达式。 每个语句都属于以下类别之一：  
   
 -   **声明语句**，其中命名变量、 常量或过程，并还可以指定数据类型。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/22/2017
  第三个声明是`Dim`语句，它声明了变量`thisWidget`。 数据类型的特定对象，即从创建对象`Widget`类。 你可以声明任何的变量基本数据类型或为在你使用的应用程序中公开任意对象类型。  
   
 ### <a name="initial-values"></a>初始值  
- 包含声明语句的代码运行时，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]保留已声明的元素所需的内存。 如果该元素具有一个值，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]其初始化为其数据类型的默认值。 有关详细信息，请参阅"行为" [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)。  
+ 包含声明语句的代码运行时，Visual Basic 将保留已声明的元素所需的内存。 如果该元素具有一个值，则 Visual Basic 会将它初始化为其数据类型的默认值。 有关详细信息，请参阅"行为" [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
  如下面的示例所示，你可以将初始值分配给一个变量，作为其声明的一部分。  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 10/22/2017
 ### <a name="type-conversions-in-assignment-statements"></a>赋值语句中的类型转换  
  你将分配给变量、 属性或数组元素的值必须是适合于该目标元素的数据类型。 一般情况下，你应尝试生成与目标元素相同的数据类型的值。 但是，某些类型可以在分配期间转换为其他类型中。  
   
- 有关数据类型之间进行转换的信息，请参阅[在 Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)。 简单地说，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]自动将给定类型的值转换为其扩大的任何其他类型。 A*扩大转换*是一个程序中始终成功运行时，不会丢失任何数据。 例如，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]将转换`Integer`值赋给`Double`在适当的时候，因为`Integer`扩大到`Double`。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ 有关数据类型之间进行转换的信息，请参阅[在 Visual Basic 中的类型转换](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)。 简单地说，Visual Basic 会自动将给定类型的值转换为其扩大的任何其他类型。 A*扩大转换*是一个程序中始终成功运行时，不会丢失任何数据。 例如，Visual Basic 会将转换`Integer`值赋给`Double`在适当的时候，因为`Integer`扩大到`Double`。 有关详细信息，请参阅 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
  *收缩转换*（那些不扩大） 执行的运行时，在发生故障或数据丢失的风险。 你可以通过使用类型转换函数，显式执行收缩转换，或者你可以直接将编译器隐式执行所有转换，通过设置`Option Strict Off`。 有关详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 10/22/2017
 |后`From`集合初始值设定项中的关键字。|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> 有关详细信息，请参阅[集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。|  
   
 ## <a name="adding-comments"></a>添加注释  
- 源代码并不总是具有自我说明性，甚至到编写它的程序员。 若要帮助说明其代码，因此，大多数程序员来说请自由使用嵌入的注释。 过程或特定指令的读取或更高版本使用它的任何人都可以解释代码中的注释。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]在编译期间，将忽略注释，而且它们不影响已编译的代码。  
+ 源代码并不总是具有自我说明性，甚至到编写它的程序员。 若要帮助说明其代码，因此，大多数程序员来说请自由使用嵌入的注释。 过程或特定指令的读取或更高版本使用它的任何人都可以解释代码中的注释。 Visual Basic 中忽略注释在编译期间，并且不会影响已编译的代码。  
   
  注释行开头撇号 (`'`) 或`REM`跟一个空格。 它们都可添加任何位置在代码中，除字符串中。 要追加到一条语句的注释，插入撇号或`REM`后面添加注释的语句之后。 注释还可以在其自己单独的行上。 下面的示例演示这些可能的匹配项。  
   

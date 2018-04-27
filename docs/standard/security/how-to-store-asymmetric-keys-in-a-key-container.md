@@ -1,12 +1,12 @@
 ---
-title: "如何：将非对称密钥存储在密钥容器中"
-ms.custom: 
+title: 如何：将非对称密钥存储在密钥容器中
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - encryption [.NET Framework], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8fb1a3f752114d72f7a89b641dcaf69bd61c3264
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eece5dbcab1e81d9f9a2a5dd9e6ed42da108b09c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：将非对称密钥存储在密钥容器中
-非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关密钥容器的详细信息，请参阅[了解计算机级别和用户级别的 RSA 密钥容器](http://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)。  
+非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关密钥容器的详细信息，请参阅[了解计算机级别和用户级别的 RSA 密钥容器](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)。  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>创建非对称密钥并且将它保存在密钥容器中  
   

@@ -1,31 +1,32 @@
 ---
-title: "字符串基础 (Visual Basic)"
-ms.custom: 
+title: 字符串基础 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8881ad6ab7f28689019463abdab3b867e010d51e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a40435b76b0eee4f4eca15d5ba1a31cc58698ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-basics-in-visual-basic"></a>字符串基础 (Visual Basic)
-`String` 数据类型表示一系列字符（每个字符都进而表示 `Char` 数据类型的一个实例）。 本主题介绍 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的字符串的基本概念。  
+`String` 数据类型表示一系列字符（每个字符都进而表示 `Char` 数据类型的一个实例）。 本主题介绍了在 Visual Basic 中的字符串的基本概念。  
   
 ## <a name="string-variables"></a>字符串变量  
- 可以向字符串的实例分配表示一系列字符的文本值。 例如:   
+ 可以向字符串的实例分配表示一系列字符的文本值。 例如：  
   
  [!code-vb[VbVbalrStrings#63](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_1.vb)]  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- 此代码会导致错误，因为编译器会在第二个引号之后终止字符串，字符串的其余部分会解释为代码。 为了解决此问题，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 会将字符串中的两个引号解释为字符串中的一个引号。 下面的示例演示在字符串中包含引号的正确方法：  
+ 此代码会导致错误，因为编译器会在第二个引号之后终止字符串，字符串的其余部分会解释为代码。 若要解决此问题，Visual Basic 会将文本字符串中的一个引号作为字符串中的两个引号解释。 下面的示例演示在字符串中包含引号的正确方法：  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   
@@ -58,11 +59,11 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>字符串中的字符  
- 可以将字符串视为一系列 `Char` 值，`String` 类型具有内置函数，可用于对字符串执行很多操作（类似于数组允许的操作）。 与 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的所有数组一样，这些是从零开始的数组。 还可以通过 `Chars` 属性引用字符串中的特定字符，该属性提供了一种方法，用于通过字符在字符串中出现的位置来访问它。 例如:   
+ 可以将字符串视为一系列 `Char` 值，`String` 类型具有内置函数，可用于对字符串执行很多操作（类似于数组允许的操作）。 与 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的所有数组一样，这些是从零开始的数组。 还可以通过 `Chars` 属性引用字符串中的特定字符，该属性提供了一种方法，用于通过字符在字符串中出现的位置来访问它。 例如：  
   
  [!code-vb[VbVbalrStrings#67](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_5.vb)]  
   
- 在上面的示例中，字符串的 `Chars` 属性返回字符串中的第四个字符（即 `D`），并将它分配给 `myChar`。 还可以通过 `Length` 属性获取特定字符串的长度。 如果需要对字符串执行多个数组类型的操作，则可以使用字符串的 `ToCharArray` 函数将它转换为 `Char` 实例的数组。 例如:   
+ 在上面的示例中，字符串的 `Chars` 属性返回字符串中的第四个字符（即 `D`），并将它分配给 `myChar`。 还可以通过 `Length` 属性获取特定字符串的长度。 如果需要对字符串执行多个数组类型的操作，则可以使用字符串的 `ToCharArray` 函数将它转换为 `Char` 实例的数组。 例如：  
   
  [!code-vb[VbVbalrStrings#68](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_6.vb)]  
   
@@ -79,7 +80,7 @@ World]]></xml>.Value
   
  与其他内部数据类型不同，`String` 是引用类型。 当引用类型的变量作为参数传递给函数或子例程时，会传递对数据存储位置的内存地址的引用（而不是字符串的实际值）。 因此在上面的示例中，变量的名称保持不变，但它会指向 `String` 类的另一个新实例（该实例会保存新值）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
  [String 数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)  
  [Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)  

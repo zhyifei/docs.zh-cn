@@ -1,28 +1,29 @@
 ---
-title: "XML 文本中的空白 (Visual Basic)"
-ms.custom: 
+title: XML 文本中的空白 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d8587abb98fe33ab2c5a0cef6cea76049a00909e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e6d23aa54b150748aac9aa955f4bd86ee88358ea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 文本中的空白 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器包含仅从 XML 文本的有意义的空白字符，在创建时[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 它不会合并无意义的空白字符。  
+Visual Basic 编译器创建时包含的有意义的空白字符将从 XML 文本[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]对象。 它不会合并无意义的空白字符。  
   
 ## <a name="significant-and-insignificant-white-space"></a>有效空白和无关紧要的空白区域  
  只有三个区域中，XML 文本中的空格字符是有意义：  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
  若要在 XML 文本中包括无关紧要的空白区域，使用嵌入式的表达式包含具有空白区域的字符串文本。  
   
 > [!NOTE]
->  如果`xml:space`属性出现在 XML 元素文本，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器包括中的属性<xref:System.Xml.Linq.XElement>对象，但添加此属性不会更改编译器如何处理空白区域。  
+>  如果`xml:space`特性随即显示 XML 元素文本中，Visual Basic 编译器包含中的属性<xref:System.Xml.Linq.XElement>对象，但添加此属性不会更改编译器如何处理空白区域。  
   
 ## <a name="examples"></a>示例  
  下面的示例包含两个 XML 元素，外部和内部。 这两个元素包含文本内容中的空白区域。 中的外部元素的空白区域是无意义，因为它只包含空格和一个 XML 元素。 中元素的内部的空白区域很重要，因为它包含空格和文本。  
@@ -55,5 +56,5 @@ ms.lasthandoff: 10/18/2017
 </outer>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

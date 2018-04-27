@@ -1,11 +1,12 @@
 ---
 title: Value Types and Reference Types
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - reference data types [Visual Basic]
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2b54945d27d186771e8b5353e753afd74c56d71b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cbab25e4af6b96ae22fe18d0b8a8fdbc7a7c7a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
-在 Visual Basic 中，数据类型是基于其分类来实现的。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]数据类型可依据特定类型的变量存储其自己的数据或指向的数据进行分类。 如果它存储其自己的数据则*值类型*; 如果它保留一个指向它的内存中其他位置的数据*引用类型*。  
+在 Visual Basic 中，数据类型是基于其分类来实现的。 Visual Basic 数据类型可以根据特定类型的变量存储其自己的数据或指向的数据进行分类。 如果它存储其自己的数据则*值类型*; 如果它保留一个指向它的内存中其他位置的数据*引用类型*。  
   
 ## <a name="value-types"></a>值类型  
  数据类型是*值类型*如果它包含在其自己的内存分配数据。 值类型包括：  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 -   所有的结构，即使其成员是引用类型  
   
--   枚举，因为其基础类型始终是`SByte`， `Short`， `Integer`， `Long`， `Byte`， `UShort`， `UInteger`，或`ULong`  
+-   枚举，因为其基础类型始终是`SByte`， `Short`， `Integer`， `Long`， `Byte`， `UShort`， `UInteger`，或 `ULong`  
   
  每个结构是值类型，即使它包含引用类型成员。 为此，值类型，如`Char`和`Integer`由.NET Framework 结构实现。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 -   所有数组，即使其元素为值类型  
   
--   类类型如<xref:System.Windows.Forms.Form>  
+-   类类型如 <xref:System.Windows.Forms.Form>  
   
 -   委托  
   
@@ -78,9 +79,9 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="working-with-the-object-data-type"></a>使用对象数据类型  
  可以将引用类型或值类型分配给变量的`Object`数据类型。 `Object`变量始终保留一个指向的数据，永远不会数据本身。 但是，如果将分配到的值类型`Object`变量，其行为就像它包含其自己的数据。 有关详细信息，请参阅[Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)。  
   
- 你可以找出是否`Object`变量作为引用类型或值类型将其传递到<xref:Microsoft.VisualBasic.Information.IsReference%2A>中的方法<xref:Microsoft.VisualBasic.Information>类<xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空间。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType>返回`True`如果的内容`Object`变量表示引用类型。  
+ 你可以找出是否`Object`变量作为引用类型或值类型将其传递到<xref:Microsoft.VisualBasic.Information.IsReference%2A>中的方法<xref:Microsoft.VisualBasic.Information>类<xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空间。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> 返回`True`如果的内容`Object`变量表示引用类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [可以为 null 的值类型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
  [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)  

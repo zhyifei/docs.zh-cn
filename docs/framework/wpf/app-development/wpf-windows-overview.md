@@ -1,13 +1,13 @@
 ---
-title: "WPF Windows 概述"
-ms.custom: 
+title: WPF Windows 概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 
+caps.latest.revision: 65
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF Windows 概述
 用户通过窗口与 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 独立应用程序交互。 窗口的主要用途是托管使数据可视化并使用户能够与数据交互的内容。 独立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序通过提供其自己的 windows<xref:System.Windows.Window>类。 本主题介绍<xref:System.Windows.Window>之前涵盖创建和管理 windows 独立应用程序中的基础知识。  
@@ -282,7 +282,7 @@ ms.lasthandoff: 03/08/2018
   
  尽管可以通过在非客户端和客户端区域中提供的机制显式关闭窗口，窗口可能还会隐式由于关闭应用程序的其他部分中的行为或[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]，其中包括：  
   
--   用户注销或关机[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]。  
+-   用户注销或关闭 Windows。  
   
 -   窗口的所有者关闭 (请参阅<xref:System.Windows.Window.Owner%2A>)。  
   
@@ -315,7 +315,7 @@ ms.lasthandoff: 03/08/2018
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- 如果启动位置指定为<xref:System.Windows.WindowStartupLocation.Manual>，和<xref:System.Windows.Window.Left%2A>和<xref:System.Windows.Window.Top%2A>尚未设置属性，<xref:System.Windows.Window>将要求[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]用于在出现的位置。  
+ 如果启动位置指定为<xref:System.Windows.WindowStartupLocation.Manual>，和<xref:System.Windows.Window.Left%2A>和<xref:System.Windows.Window.Top%2A>尚未设置属性，<xref:System.Windows.Window>将要求的位置的 Windows 中显示。  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>最顶层窗口和 Z 顺序  

@@ -18,14 +18,14 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a8e1f06e1f32baacd494339a561a363f5d81c9d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="keywords-visual-basic"></a>关键字 (Visual Basic)
-下表列出了所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 语言关键字。  
+下表列出了所有的 Visual Basic 语言关键字。  
   
 ## <a name="reserved-keywords"></a>保留的关键字  
  已保留下面的关键字。也就是说，无法将这些关键字用作编程元素（如变量或过程）的名称。 可以用括号 (`[]`) 括住名称，从而忽略此限制。 有关详细信息，请参阅[已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)中的“转义后名称”。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 |[>> 运算符](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 运算符](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`、`GoSub`、`Variant` 和 `Wend` 为保留的关键字，尽管不能再用于 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 `Let` 关键字的含义已更改。 `Let` 现用于 LINQ 查询。 有关详细信息，请参阅 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
+>  `EndIf``GoSub`， `Variant`，和`Wend`保留为保留关键字，但不再在 Visual Basic 中使用它们。 `Let` 关键字的含义已更改。 `Let` 现用于 LINQ 查询。 有关详细信息，请参阅 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
   
 ## <a name="unreserved-keywords"></a>未保留的关键字  
  未保留下面的关键字。也就是说，可以将这些关键字用作编程元素的名称。 不过，不建议使用这样做，因为这可能会导致代码难以读取，并且出现难以发现的细微错误。  

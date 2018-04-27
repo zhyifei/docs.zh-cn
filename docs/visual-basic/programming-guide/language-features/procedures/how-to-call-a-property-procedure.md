@@ -1,11 +1,12 @@
 ---
-title: "如何：调用 Property 过程 (Visual Basic)"
-ms.custom: 
+title: 如何：调用 Property 过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,25 +15,25 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf9080e3c2b23302257499f13e734231f3614495
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 38b3704328916a487f94879ea0096ae923f19082
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>如何：调用 Property 过程 (Visual Basic)
 通过将值存储在属性中或检索其值调用 property 过程。 访问的属性相同的方式访问的变量。  
   
- 该属性的`Set`过程存储一个值，并将其`Get`过程检索的值。 但是，你不显式调用这些过程的名称。 就像将存储或检索变量的值时，才使用赋值语句或表达式中的属性。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]调用属性的过程。  
+ 该属性的`Set`过程存储一个值，并将其`Get`过程检索的值。 但是，你不显式调用这些过程的名称。 就像将存储或检索变量的值时，才使用赋值语句或表达式中的属性。 Visual Basic 使对该属性的过程的调用。  
   
 ### <a name="to-call-a-propertys-get-procedure"></a>调用属性的 Get 过程  
   
 1.  你将使用的变量的名称相同的方式的表达式中使用的属性名称。 你可以使用属性任意位置，你可以使用变量或常量。  
   
-     - 或 -  
+     -或-  
   
      使用以下等的属性名称 (`=`) 在赋值语句登录。  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/21/2017
   
  赋值语句右侧生成的值存储在属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性过程](./property-procedures.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [Property 语句](../../../../visual-basic/language-reference/statements/property-statement.md)  

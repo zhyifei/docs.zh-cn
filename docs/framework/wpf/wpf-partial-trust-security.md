@@ -1,12 +1,13 @@
 ---
-title: "WPF 部分信任安全"
-ms.custom: 
+title: WPF 部分信任安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全
 <a name="introduction"></a>一般情况下，应该限制 Internet 应用程序直接访问关键系统资源，防止恶意损坏。 默认情况下，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和客户端脚本语言不能访问关键系统资源。 因为[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]可以从浏览器启动浏览器承载的应用程序，它们应该符合一组类似的限制。 若要强制执行这些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依赖于同时[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]和[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](请参阅[WPF 安全策略 — 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。 默认情况下，浏览器承载的应用程序请求 Internet 区域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]组权限，而不考虑是否从 Internet、 本地 intranet 或本地计算机启动的权限。 如果应用程序的运行权限小于完整权限集，则说明该应用程序正在部分信任环境下运行。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供支持，以确保在部分信任，并连同，，可以安全地使用尽可能多的功能的各种[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]，为部分信任编程提供额外支持。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供支持，以确保在部分信任，并连同，，可以安全地使用尽可能多的功能的各种[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]，为部分信任编程提供额外支持。  
   
  本主题包含以下各节：  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  此表包含了[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]在高级别的功能。 有关详细信息，[!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)]文档中的每个成员所需的权限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 此外，以下功能含有部分信任执行的相关详细信息，其中包括特殊注意事项。  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](请参阅[XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md))。  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (请参阅[XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md))。  
   
 -   弹出窗口 (请参阅<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。  
   
@@ -100,18 +102,18 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  上表中描述的行为针对不遵循 ClickOnce 受信任部署模型的完全信任 XBAP。  
   
- 通常，超出允许权限的代码可能是在独立应用程序和浏览器托管的应用程序之间共享的公用代码。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]和[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供用于管理这种情况下的几种方法。  
+ 通常，超出允许权限的代码可能是在独立应用程序和浏览器托管的应用程序之间共享的公用代码。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 和[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供用于管理这种情况下的几种方法。  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>使用 CAS 检测权限  
- 在某些情况下，它有可能库程序集以供这两个独立应用程序中共享代码和[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 这时，代码执行的功能所需要的权限可能超出应用程序的授权权限集允许的权限。 你的应用程序可以检测是否它具有特定的权限使用[!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)]安全。 具体而言，它可以测试它是否具有特定权限通过调用<xref:System.Security.CodeAccessPermission.Demand%2A>所需的权限的实例上的方法。 以下示例对此进行了演示，示例中的代码查询其是否能够将文件保存到本地磁盘：  
+ 在某些情况下，它有可能库程序集以供这两个独立应用程序中共享代码和[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 这时，代码执行的功能所需要的权限可能超出应用程序的授权权限集允许的权限。 指示它通过使用 Microsoft.NET Framework 安全性具有特定的权限，则可以检测到你的应用程序。 具体而言，它可以测试它是否具有特定权限通过调用<xref:System.Security.CodeAccessPermission.Demand%2A>所需的权限的实例上的方法。 以下示例对此进行了演示，示例中的代码查询其是否能够将文件保存到本地磁盘：  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- 如果应用程序没有所需的权限，对的调用<xref:System.Security.CodeAccessPermission.Demand%2A>将引发安全异常。 如果没有引发异常，则表示已授予该权限。 `IsPermissionGranted`封装此行为，并返回`true`或`false`根据。  
+ 如果应用程序没有所需的权限，对的调用<xref:System.Security.CodeAccessPermission.Demand%2A>将引发安全异常。 如果没有引发异常，则表示已授予该权限。 `IsPermissionGranted` 封装此行为，并返回`true`或`false`根据。  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>功能下降  
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
  使用[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]以检查是否有权限是一种适合技术时你需要根据每个权限检查。 然而，这一技巧依赖于在正常处理过程中捕获异常（通常不鼓励这样做），并且可能导致性能问题。 相反，如果你[!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]仅在 Internet 区域沙盒中的运行时，你可以使用<xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType>属性，返回 true [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]。  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>是否在不哪个应用程序的权限集运行使用的浏览器中运行应用程序仅将区分开来。  
+>  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> 是否在不哪个应用程序的权限集运行使用的浏览器中运行应用程序仅将区分开来。  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>管理权限  

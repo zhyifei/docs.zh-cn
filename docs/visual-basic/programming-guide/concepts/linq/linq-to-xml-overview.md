@@ -1,22 +1,23 @@
 ---
-title: "LINQ to XML 概述 (Visual Basic)"
-ms.custom: 
+title: LINQ to XML 概述 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 41dd5818dc33a690c7abe4c33aa7a7becfde2123
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4ccc81f1f7b875c7388dc09cc45521c6257c00d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML 概述 (Visual Basic)
 在很多环境中，XML 已广泛采用为格式化数据的方式。 例如，在 Web 上，在配置文件、Microsoft Office Word 文件以及数据库中，都可以看到 XML。  
@@ -92,11 +93,11 @@ Dim contacts = _
 </Contacts>  
 ```  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编译器将 XML 文本转换为对 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的方法调用。  
+ Visual Basic 编译器会将转换到 XML 文本[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]方法调用。  
   
  有关详细信息，请参阅[创建 XML 树 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq>  
  [入门 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  [Visual Basic 中的 LINQ to XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  

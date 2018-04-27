@@ -1,29 +1,29 @@
 ---
-title: "自定义工作流设计体验"
-ms.custom: 
+title: 自定义工作流设计体验
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5ca6e23febf14b2db28bad950d2cd012fdce30fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ee64ae3db9dbf98f2a62397075406c118a867bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-the-workflow-design-experience"></a>自定义工作流设计体验
-在 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中，已经对用于设计自定义活动以及重新承载 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 的方案进行了大量简化。 现在，开发和部署工作变得更轻松、更灵活。 主要的基础更改是，新的活动设计器编程模型是基于 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 构建的。 这使您能够以声明方式定义活动设计器，并且可以相当轻松地在其他应用程序中重新承载 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。 在重新承载时，可以开发自定义表达式编辑器来支持 IntelliSense 或简化的表达式域。 通过使用工作流服务，与 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 的集成已变得更完美。 可使用自定义活动设计器和模型项树来增强重新承载的工作流设计器中的设计时体验。  
+在 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中，已经对用于设计自定义活动以及重新承载 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 的方案进行了大量简化。 现在，开发和部署工作变得更轻松、更灵活。 主要的基础更改是由新的活动设计器编程模型构建的 Windows Presentation Foundation (WPF) 时。 这使您能够以声明方式定义活动设计器，并且可以相当轻松地在其他应用程序中重新承载 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]。 在重新承载时，可以开发自定义表达式编辑器来支持 IntelliSense 或简化的表达式域。 通过使用工作流服务，与 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 的集成已变得更完美。 可使用自定义活动设计器和模型项树来增强重新承载的工作流设计器中的设计时体验。  
   
 ## <a name="in-this-section"></a>本节内容  
  [使用自定义活动设计器和模板](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)  

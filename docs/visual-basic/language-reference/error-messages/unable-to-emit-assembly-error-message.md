@@ -1,9 +1,9 @@
 ---
-title: "无法发出程序集：&lt;错误消息&gt;"
+title: 无法发出程序集：&lt;错误消息&gt;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b19b6439d85822c69adac0b3e0e04b2f31299836
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 61a5c6b753b8aa70905027bc1449739769cd8da5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>无法发出程序集：&lt;错误消息&gt;
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集与链接器在创建程序集的发出阶段中报告错误。  
+Visual Basic 编译器使用创建程序集的发出阶段中报告错误链接器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。  
   
  **错误 ID:** BC30145  
   

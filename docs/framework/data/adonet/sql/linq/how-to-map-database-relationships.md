@@ -1,27 +1,29 @@
 ---
-title: "如何：映射数据库关系"
-ms.custom: 
+title: 如何：映射数据库关系
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b1637fd322468f743c29605b31c3c6849bd78aa6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: b283c2235ce0b6b407acfb52f81b15a26a3c00a0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-map-database-relationships"></a>如何：映射数据库关系
 可以在您的实体类中将始终相同的任何数据关系编码为属性引用。 例如，在 Northwind 示例数据库中，由于客户通常会下订单，因此在模型中客户与其订单之间始终存在关系。  
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 定义了 <xref:System.Data.Linq.Mapping.AssociationAttribute> 属性来帮助表示此类关系。 此属性与 <xref:System.Data.Linq.EntitySet%601> 和 <xref:System.Data.Linq.EntityRef%601> 类型一起使用，来表示将作为数据库中的外键关系的内容。 有关详细信息，请参阅的关联属性部分[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有 .NET 编程语言，即使是那些通常不区分大小写的编程语言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
+>  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有.NET 编程语言，即使那些不通常区分大小写，包括 Visual Basic。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
   
  大多数关系都是一对多关系，这一点在本主题后面部分的示例中会有所体现。 您还可以按如下方式来表示一对一和多对多关系：  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/17/2018
  在下面的一对多示例中，`Customer` 类具有一个声明客户与其订单之间的关系的属性。  `Orders` 属性为 <xref:System.Data.Linq.EntitySet%601> 类型。 此类型表明这种关系是一对多的（一个客户对多个订单）。 <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> 属性用来说明如何实现这种关联，即通过指定相关类中要与此属性比较的属性的名称。 在此示例中，`CustomerID`属性进行比较，就像数据库*联接*将比较该列值。  
   
 > [!NOTE]
->  如果您使用的是 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，则可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来创建类之间的关联。  
+>  如果你使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建类之间的关联。  
   
  [!code-csharp[DlinqCustomize#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#3)]
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  

@@ -1,10 +1,11 @@
 ---
-title: "Dim 语句 (Visual Basic)"
+title: Dim 语句 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Dim 语句 (Visual Basic)
 声明，并为一个或多个变量分配存储空间。  
@@ -97,7 +98,7 @@ Dim [ WithEvents ] variablelist
   
 -   `variablelist`  
   
-     必需。 正在此语句中声明的变量的列表。  
+     必须的。 正在此语句中声明的变量的列表。  
   
      `variable [ , variable ... ]`  
   
@@ -107,7 +108,7 @@ Dim [ WithEvents ] variablelist
   
     |部件|描述|  
     |---|---|  
-    |`variablename`|必需。 变量的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+    |`variablename`|必须的。 变量的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
     |`boundslist`|可选。 一个数组变量的每个维度的边界的列表。|  
     |`New`|可选。 创建类的新实例时`Dim`语句在运行时。|  
     |`datatype`|可选。 变量的数据类型。|  
@@ -251,17 +252,17 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  有关数组文本的详细信息，请参阅[数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
-##  <a name="default"></a>默认数据类型和值  
+##  <a name="default"></a> 默认数据类型和值  
  下表描述了指定 `Dim` 语句中数据类型和初始值设定项的各种组合的结果。  
   
 |是否指定数据类型？|是否指定初始值设定项？|示例|结果|  
 |---|---|---|---|  
-|否|No|`Dim qty`|如果[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)为 off （默认），则变量设置为`Nothing`。<br /><br /> 如果 `Option Strict` 处于打开状态，则发生编译时错误。|  
+|否|否|`Dim qty`|如果[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)为 off （默认），则变量设置为`Nothing`。<br /><br /> 如果 `Option Strict` 处于打开状态，则发生编译时错误。|  
 |否|是|`Dim qty = 5`|如果[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)位于 （默认值），则变量采用数据类型的初始值设定项。 请参阅[局部类型推理](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 和 `Option Strict` 均处于关闭状态，则变量采用 `Object` 的数据类型。<br /><br /> 如果 `Option Infer` 处于关闭状态但 `Option Strict` 处于打开状态，则发生编译时错误。|  
 |是|否|`Dim qty As Integer`|将变量初始化为数据类型的默认值。 请参阅本节后面的表。|  
 |是|是|`Dim qty  As Integer = 5`|如果初始值设定项的数据类型不可转换为指定数据类型，则会发生编译时错误。|  
   
- 如果你指定的数据类型，但不是指定初始值设定项，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]将变量初始化为其数据类型的默认值。 下表显示的默认初始化值。  
+ 如果你指定的数据类型，但不是指定初始值设定项，Visual Basic 将变量初始化为其数据类型的默认值。 下表显示的默认初始化值。  
   
 |数据类型|默认值|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |过程声明|初始化变量|变量停止现有|  
 |---|---|---|  
 |模块中|在首次调用该过程|当程序停止执行|  
-|在类或结构，过程是`Shared`|第一次该过程称为某个特定实例上或对类或结构本身|当程序停止执行|  
-|在类或结构，过程并不`Shared`|第一次特定实例上调用过程|当垃圾回收 (GC) 释放该实例|  
+|在类或结构，过程是 `Shared`|第一次该过程称为某个特定实例上或对类或结构本身|当程序停止执行|  
+|在类或结构，过程并不 `Shared`|第一次特定实例上调用过程|当垃圾回收 (GC) 释放该实例|  
   
 ## <a name="attributes-and-modifiers"></a>特性和修饰符  
  仅对成员变量上，而不是本地变量，你可以应用特性。 属性提供信息对程序集的元数据，这并没有意义的临时存储，例如本地变量。  
@@ -318,7 +319,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)  
  [ReDim 语句](../../../visual-basic/language-reference/statements/redim-statement.md)  
  [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
@@ -326,7 +327,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
  [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [“项目设计器”->“编译”页 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
  [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [阵列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  [对象初始值设定项：命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  [对象初始值设定项：命名类型和匿名类型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  

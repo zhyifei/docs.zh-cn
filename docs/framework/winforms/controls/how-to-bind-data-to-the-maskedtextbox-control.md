@@ -1,12 +1,13 @@
 ---
-title: "如何：将数据绑定到 MaskedTextBox 控件"
-ms.custom: 
+title: 如何：将数据绑定到 MaskedTextBox 控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb3fd4038634969d34be4514f4d314cf5d7513e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8adf445de4648c0a751a852f67a55ca9683e3469
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>如何：将数据绑定到 MaskedTextBox 控件
 你可以将数据绑定到<xref:System.Windows.Forms.MaskedTextBox>控制就像可以向任何其他 Windows 窗体控件。 但是，如果在数据库中数据的格式与掩码定义所需的格式不匹配，你将需要重新设置数据格式。 下面的过程演示如何执行此操作使用<xref:System.Windows.Forms.Binding.Format>和<xref:System.Windows.Forms.Binding.Parse>的事件<xref:System.Windows.Forms.Binding>类来显示单独的电话号码和电话作为单个可编辑字段的扩展数据库字段。  
@@ -250,7 +252,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="compiling-the-code"></a>编译代码  
   
--   创建[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]或[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]项目。  
+-   创建 Visual C# 或 Visual Basic 项目。  
   
 -   添加<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.MaskedTextBox>控件添加到窗体中，如前面的过程中所述。  
   

@@ -1,12 +1,13 @@
 ---
-title: "如何：定义拆分窗口中的大小调整和定位行为"
-ms.custom: 
+title: 如何：定义拆分窗口中的大小调整和定位行为
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed78a49119c87c52a07cc2ade030e66087d3f420
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e62091addfb64c287154b190f02caf1600533b3b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>如何：定义拆分窗口中的大小调整和定位行为
 面板的<xref:System.Windows.Forms.SplitContainer>控制有助于使自身对其大小调整和由用户操作。 但是，将有的时候你将想要以编程方式控制拆分器-它位于，其中可以移动的程度。  
   
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>属性和其他属性上的<xref:System.Windows.Forms.SplitContainer>控件使你的用户界面以满足你需求的行为的精确控制。 下表中列出了这些属性。  
   
-|name|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 属性|确定是否通过键盘或鼠标可移动拆分器。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 属性|确定以到可移动拆分条从左侧或右上边缘像素为单位的距离。|  
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
+     (Visual C#)将以下代码放在窗体的构造函数中以注册事件处理程序。  
   
     ```csharp  
     this.Load += new System.EventHandler(this.Form1_Load);  

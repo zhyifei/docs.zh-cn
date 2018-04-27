@@ -1,12 +1,13 @@
 ---
-title: "如何：诊断有问题的打印作业"
-ms.custom: 
+title: 如何：诊断有问题的打印作业
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd9bfb187f77f1cff344aaeabebd36aec1312e30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2d8650f0bc5e30ff2ccbd4c2074a00c17140e7e2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>如何：诊断有问题的打印作业
-网络管理员经常接收到有关打印作业无法打印或打印速度慢的用户投诉。 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 的 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 中公开的一组丰富的打印作业属性提供一种方法，用于执行快速的打印作业远程诊断。  
+网络管理员经常接收到有关打印作业无法打印或打印速度慢的用户投诉。 打印作业属性中公开的丰富[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一种执行打印作业进行快速远程故障排除。  
   
 ## <a name="example"></a>示例  
  以下是创建此类实用程序的主要步骤。  

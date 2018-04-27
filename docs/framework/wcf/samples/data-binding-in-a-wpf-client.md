@@ -1,27 +1,29 @@
 ---
-title: "Windows Presentation Foundation 客户端中的数据绑定"
-ms.custom: 
+title: Windows Presentation Foundation 客户端中的数据绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55e60aaba0ebba57668f91d692ce774bd0ef0115
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d10591866e11bd9e5ae707a0c17c3e293d7f4f71
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation 客户端中的数据绑定
-本示例演示 Windows Presentation Foundation (WPF) 客户端中数据绑定的用法。 本示例使用一个 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，该服务随机生成一个要返回到客户端的唱片集数组。 每个唱片集都有名称、价格和唱片集曲目列表。 唱片集曲目具有名称和持续时间。 服务返回的信息自动绑定到由 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 客户端提供的用户接口 (UI)。  
+本示例演示 Windows Presentation Foundation (WPF) 客户端中数据绑定的用法。 本示例使用一个 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务，该服务随机生成一个要返回到客户端的唱片集数组。 每个唱片集都有名称、价格和唱片集曲目列表。 唱片集曲目具有名称和持续时间。 服务返回的信息自动绑定到 Windows Presentation Foundation (WPF) 客户端提供的用户界面 (UI) 中。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  

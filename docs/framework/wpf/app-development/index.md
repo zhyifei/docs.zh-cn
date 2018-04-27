@@ -19,15 +19,15 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 00161608997abc14202775c06ecfb283d8d67013
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-development"></a>应用程序开发
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]是一个演示文稿框架，可用于开发以下类型的应用程序：  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 是一个演示文稿框架，可用于开发以下类型的应用程序：  
   
 -   独立应用程序（传统风格的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 应用程序，这些应用程序作为要安装到客户端计算机并从客户端计算机运行的可执行程序集来生成）。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/29/2018
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件  
- 通过为以下三类非可执行数据文件提供支持，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 扩展了 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 对于嵌入资源的核心支持：资源、内容和数据。 有关详细信息，请参阅 [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 扩展支持三种类型的非可执行文件数据文件中嵌入的资源 Microsoft.NET Framework 的核心支持： 资源、 内容和数据。 有关详细信息，请参阅 [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。  
   
  在对于 WPF 非可执行数据文件的众多支持中，其中的一项重要支持就是能够通过唯一的 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 来识别和加载这些文件。 有关详细信息，请参阅 [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)。  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/29/2018
   
  <xref:System.Windows.Window> 支持用于创建被称为对话框的特殊窗口类型的功能。 可以创建两种类型的对话框，即模式和无模式对话框。  
   
- 为了方便起见，也为了享受可重用性所带来的益处，以及在应用程序间实现一致的用户体验，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供了三种常用的 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 对话框：<xref:Microsoft.Win32.OpenFileDialog>、<xref:Microsoft.Win32.SaveFileDialog> 和 <xref:System.Windows.Controls.PrintDialog>。  
+ 为方便起见和可重用性和跨应用程序、 一致的用户体验的优点[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]会公开三个常见的 Windows 对话框： <xref:Microsoft.Win32.OpenFileDialog>， <xref:Microsoft.Win32.SaveFileDialog>，和<xref:System.Windows.Controls.PrintDialog>。  
   
  消息框是一种特殊类型的对话框，用于向用户显示重要的文本信息并询问简单的“是/否/确定/取消”问题。 使用 <xref:System.Windows.MessageBox> 类创建并显示消息框。  
   

@@ -1,12 +1,13 @@
 ---
-title: "如何：在运行时在控件集合中进行添加或移除"
-ms.custom: 
+title: 如何：在运行时在控件集合中进行添加或移除
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 548ca8d682ffea6f2afa03124719a1bb5097a2fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b34863e7846f75c5dc9a8af24591522e37252f4c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>如何：在运行时在控件集合中进行添加或移除
 应用程序开发中的常见任务是将控件添加到和从窗体上任何容器控件中删除控件 (如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控件或甚至窗体本身)。 在设计时，可直接将控件拖到面板或分组框上。 在运行时，这些控件维护一个 `Controls` 集合，该集合会跟踪集合中放置了哪些控件。  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>以编程方式从集合移除控件  
   
-1.  从事件中移除事件处理程序。 在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中使用 [RemoveHandler 语句](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)关键字；在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中则使用 [-= 运算符（C# 参考）](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)。  
+1.  从事件中移除事件处理程序。 在 Visual Basic 中，使用[RemoveHandler 语句](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)关键字; 在 Visual C# 中，使用[-= 运算符 （C# 参考）](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)。  
   
 2.  使用 `Remove` 方法，从面板的 `Controls` 集合中删除所需控件。  
   

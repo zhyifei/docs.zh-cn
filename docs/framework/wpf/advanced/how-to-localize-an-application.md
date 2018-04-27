@@ -1,9 +1,10 @@
 ---
-title: "如何：对应用程序进行本地化"
+title: 如何：对应用程序进行本地化
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,12 +17,13 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c5621de2a2d10e67f45fa2d6980cb84c388630f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-localize-an-application"></a>如何：对应用程序进行本地化
 本教程介绍如何通过使用 LocBaml 工具创建本地化应用程序。  
@@ -88,7 +90,7 @@ ms.lasthandoff: 12/22/2017
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>生成 LocBaml 工具  
   
-1.  生成 LocBaml 所需的所有文件都位于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 示例中。 下载[!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]文件从[LocBaml 工具示例](http://go.microsoft.com/fwlink/?LinkID=160016)。  
+1.  生成 LocBaml 所需的所有文件都位于 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 示例中。 下载中的 C# 文件[LocBaml 工具示例](http://go.microsoft.com/fwlink/?LinkID=160016)。  
   
 2.  从命令行运行项目文件 (locbaml.csproj) 来生成该工具：  
   
@@ -98,17 +100,17 @@ ms.lasthandoff: 12/22/2017
   
 4.  运行 LocBaml 时可指定下列选项：  
   
-    -   **分析**或**-p:**分析 Baml，资源，或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]文件生成的.csv 或.txt 文件。  
+    -   **分析**或 **-p:** 分析 Baml，资源，或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]文件生成的.csv 或.txt 文件。  
   
-    -   **生成**或**-g:**通过使用已翻译的文件生成本地化的二进制文件。  
+    -   **生成**或 **-g:** 通过使用已翻译的文件生成本地化的二进制文件。  
   
-    -   **out**或**-o** {*文件目录*] **:**输出文件的名称。  
+    -   **out**或 **-o** {*文件目录*] **:** 输出文件的名称。  
   
-    -   **区域性**或**-cul** {*区域性*] **:**输出程序集的区域设置。  
+    -   **区域性**或 **-cul** {*区域性*] **:** 输出程序集的区域设置。  
   
-    -   **转换**或**-trans** {*translation.csv*] **:**已翻译或本地化的文件。  
+    -   **转换**或 **-trans** {*translation.csv*] **:** 已翻译或本地化的文件。  
   
-    -   **asmpath**或**-asmpath:** {*文件目录*] **:**如果你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码包含自定义控件，则必须提供**asmpath**对自定义控件程序集。  
+    -   **asmpath**或 **-asmpath:** {*文件目录*] **:** 如果你[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]代码包含自定义控件，则必须提供**asmpath**对自定义控件程序集。  
   
     -   **nologo：**显示没有徽标或版权信息。  
   
@@ -172,7 +174,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>使用 LocBaml 生成新的 .resources.dll 文件  
- 通过使用 LocBaml 分析 HelloApp.resources.dll 而标识的内容已被翻译，且必须合并回原始应用程序。 使用**生成**或**-g**以生成一个新的选项。 resources.dll 文件。  
+ 通过使用 LocBaml 分析 HelloApp.resources.dll 而标识的内容已被翻译，且必须合并回原始应用程序。 使用**生成**或 **-g**以生成一个新的选项。 resources.dll 文件。  
   
 1.  使用下列语法来生成新的 HelloApp.resources.dll 文件。 将区域性标记为 zh-CN (/cul:zh-CN)。  
   
@@ -195,7 +197,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  若要测试新的附属程序集，你需要更改应用程序将在其下运行的区域性设置。 可以通过两种方法执行此操作：  
   
-    -   更改操作系统的区域设置 (**启动**&#124;**控制面板**&#124;**区域和语言选项**)。  
+    -   更改操作系统的区域设置 (**启动** &#124; **控制面板** &#124; **区域和语言选项**)。  
   
     -   在你的应用程序中，将下列代码添加到 App.xaml.cs 中：  
   

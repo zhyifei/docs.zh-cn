@@ -1,11 +1,12 @@
 ---
-title: "Sub 过程 (Visual Basic)"
-ms.custom: 
+title: Sub 过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e20e0dd5ff9e2b931e5792bebb3144930826f89
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 过程 (Visual Basic)
-A`Sub`过程是一系列[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]语句括`Sub`和`End Sub`语句。 `Sub`过程执行任务，再将控制权返回给调用代码，但是它不会返回一个值调用的代码。  
+A`Sub`过程是一系列 Visual Basic 语句括在`Sub`和`End Sub`语句。 `Sub`过程执行任务，再将控制权返回给调用代码，但是它不会返回一个值调用的代码。  
   
  每次调用过程时，其执行语句，从第一个可执行之后的语句开始`Sub`语句和与第一个结束`End Sub`， `Exit Sub`，或`Return`遇到的语句。  
   
@@ -38,7 +39,7 @@ A`Sub`过程是一系列[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]语句括`Sub
 ## <a name="declaration-syntax"></a>声明语法  
  声明的语法`Sub`过程是，如下所示：  
   
- `[`*修饰符* `] Sub` *subname* `[(` *parameterlist*  `)]`  
+ `[` *修饰符* `] Sub` *subname* `[(` *parameterlist*  `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -65,7 +66,7 @@ A`Sub`过程是一系列[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]语句括`Sub
   
  针对调用语法`Sub`过程是，如下所示：  
   
- `[Call]`  *subname* `[(` *argumentlist*`)]`  
+ `[Call]`  *subname* `[(` *argumentlist* `)]`  
   
  你可以调用`Sub`从定义它在类外部的方法。 首先，你必须使用`New`关键字来创建类的实例，或调用的方法返回类的实例。 有关详细信息，请参阅[New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)。 然后，使用以下语法来调用`Sub`实例对象上的方法：  
   
@@ -80,7 +81,7 @@ A`Sub`过程是一系列[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]语句括`Sub
   
  [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [Function 过程](./function-procedures.md)  
  [属性过程](./property-procedures.md)  

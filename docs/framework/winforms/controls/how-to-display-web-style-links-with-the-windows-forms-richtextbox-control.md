@@ -1,12 +1,13 @@
 ---
-title: "如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接"
-ms.custom: 
+title: 如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 80f794be15eae33ca4e28dc0cfe04872f63230b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b82a5251cb5e1f632d126105cfae5cf2b8f62fc0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows 窗体 RichTextBox 控件显示 Web 样式的链接
 Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色和带下划线的 Web 链接。 你可以编写将打开一个显示时单击链接在链接文本中指定的网站的浏览器窗口的代码。  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>若要链接到网页上用 RichTextBox 控件  
   
-1.  设置<xref:System.Windows.Forms.RichTextBox.Text%2A>为字符串，其中包含有效的 URL (例如，"http://www.microsoft.com/") 的属性。  
+1.  设置<xref:System.Windows.Forms.RichTextBox.Text%2A>属性为字符串，其中包含有效的 URL (例如，"http://www.microsoft.com/")。  
   
 2.  请确保<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>属性设置为`true`（默认值）。  
   
@@ -91,7 +93,7 @@ Windows 窗体<xref:System.Windows.Forms.RichTextBox>控件可以显示为彩色
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)][!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体构造函数中以注册事件处理程序。  
+     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   

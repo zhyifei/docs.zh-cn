@@ -1,24 +1,26 @@
 ---
-title: "演练：操作数据 (C#)"
-ms.custom: 
+title: 演练：操作数据 (C#)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 60724967cccd1209aeec1bf53b4e6d4fa5051996
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d1851bd4c358b96cc9b49f274b31f5f69d9b8d7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-data-c"></a>演练：操作数据 (C#)
 本演练提供了用于在数据库中添加、修改和删除数据的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将使用 Northwind 示例数据库的一个副本来添加一位客户，更改该客户的姓名，然后删除一个订单。  
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>概述  
  本演练由六项主要任务组成：  
   
--   在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中创建 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 解决方案。  
+-   创建[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的解决方案。  
   
 -   向项目添加数据库代码文件。  
   
@@ -60,11 +62,11 @@ ms.lasthandoff: 01/17/2018
 -   将这些更改提交至 Northwind 数据库。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
- 此任务为第一项任务，在此任务中，您要创建一个 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 解决方案，此解决方案包含生成和运行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 项目所必需的引用。  
+ 在此第一个任务中，创建一个包含必要的引用，生成并运行的 Visual Studio 解决方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  上[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]**文件**菜单上，指向**新建**，然后单击**项目**。  
+1.  在 Visual Studio**文件**菜单上，指向**新建**，然后单击**项目**。  
   
 2.  在**项目类型**窗格中的**新项目**对话框中，单击**Visual C#**。  
   
@@ -83,7 +85,7 @@ ms.lasthandoff: 01/17/2018
   
 1.  在**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-2.  在**添加引用**对话框中，单击**.NET**，单击 System.Data.Linq 程序集，，然后单击**确定**。  
+2.  在**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   
@@ -115,7 +117,7 @@ ms.lasthandoff: 01/17/2018
   
      A**控制台**窗口随即打开。  
   
-     你可以通过按 Enter，在关闭应用程序**控制台**窗口中，或通过单击**停止调试**上[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]**调试**菜单。  
+     你可以通过按 Enter，在关闭应用程序**控制台**窗口中，或通过单击**停止调试**在 Visual Studio**调试**菜单。  
   
 ## <a name="creating-a-new-entity"></a>创建新实体  
  创建新实体很简单。 可以使用 `Customer` 关键字创建对象（如 `new`）。  

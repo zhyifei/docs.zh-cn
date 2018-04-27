@@ -1,11 +1,12 @@
 ---
-title: "确定对象类型 (Visual Basic)"
-ms.custom: 
+title: 确定对象类型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], discovering which an object belongs to
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9a63b5cf5941deb4dcc7518880b4dc7d0545803c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a6d24be68ea4a9872f8f4fe89c1aabb943fbcb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="determining-object-type-visual-basic"></a>确定对象类型 (Visual Basic)
-一般的对象变量 (即，变量声明为`Object`) 可以包含来自任何类的对象。 使用类型的变量时`Object`，可能需要采取不同的基于对象的类; 例如，某些对象可能不支持特定属性或方法。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供以下两种方法确定哪种类型的对象存储在一个对象变量：`TypeName`函数和`TypeOf...Is`运算符。  
+一般的对象变量 (即，变量声明为`Object`) 可以包含来自任何类的对象。 使用类型的变量时`Object`，可能需要采取不同的基于对象的类; 例如，某些对象可能不支持特定属性或方法。 Visual Basic 提供以下两种方法确定哪种类型的对象存储在一个对象变量：`TypeName`函数和`TypeOf...Is`运算符。  
   
 ## <a name="typename-and-typeofis"></a>E，TypeOf...是  
  `TypeName`函数返回一个字符串，并是最佳选择，当你需要存储或显示类对象的名称，如下面的代码段中所示：  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
   
- 需要注意的一点是因为此处。 `TypeOf...Is`运算符返回`True`如果一个对象的特定类型，或从特定类型派生。 几乎所有操作都与[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]涉及对象，其中包括一些通常不被视为对象，如字符串和整数的元素。 这些对象派生自和继承方法从<xref:System.Object>。 当传递`Integer`和计算与`Object`、`TypeOf...Is`运算符返回`True`。 下面的示例报告参数`InParam`既是`Object`和`Integer`:  
+ 需要注意的一点是因为此处。 `TypeOf...Is`运算符返回`True`如果一个对象的特定类型，或从特定类型派生。 几乎所有操作都使用 Visual Basic 涉及对象，其中包括一些通常不被视为对象，如字符串和整数的元素。 这些对象派生自和继承方法从<xref:System.Object>。 当传递`Integer`和计算与`Object`、`TypeOf...Is`运算符返回`True`。 下面的示例报告参数`InParam`既是`Object`和`Integer`:  
   
  [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_4.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Information.TypeName%2A>  
  [使用字符串名调用属性或方法](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)  
  [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)  

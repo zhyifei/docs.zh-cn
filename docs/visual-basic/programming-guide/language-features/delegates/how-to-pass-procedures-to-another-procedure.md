@@ -1,29 +1,30 @@
 ---
-title: "如何：在 Visual Basic 中将过程传递给另一过程"
-ms.custom: 
+title: 如何：在 Visual Basic 中将过程传递给另一过程
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e8e205f5238aab39aa92574bc5c680e68cc8a81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30264e0480b603b21f8f71893af0fd742af40286
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>如何：在 Visual Basic 中将过程传递给另一过程
 此示例演示如何使用委托将传递给另一个过程的过程。  
   
- 委托是一种可以使用任何与其他类型一样在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 `AddressOf`运算符返回委托对象时应用于过程名称。  
+ 委托是一种可以使用与在 Visual Basic 中的任何其他类型一样。 `AddressOf`运算符返回委托对象时应用于过程名称。  
   
  此示例具有带可以采用另一个过程，通过获取引用委托参数的过程`AddressOf`运算符。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
      当`Test`是它调用，首先显示的结果`AddNumbers`活动上`5`和`3`，也就是 8。 然后的结果`SubtractNumbers`作用于`9`和`3`显示时，也就是 6。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [委托](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [AddressOf 运算符](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
  [Delegate 语句](../../../../visual-basic/language-reference/statements/delegate-statement.md)  

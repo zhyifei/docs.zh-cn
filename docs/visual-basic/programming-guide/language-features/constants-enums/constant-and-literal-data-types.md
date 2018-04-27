@@ -1,11 +1,12 @@
 ---
-title: "常量和 Literal 数据类型 (Visual Basic)"
-ms.custom: 
+title: 常量和 Literal 数据类型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declaring constants [Visual Basic], literal data types
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 554753e26d185593ce43b741b3b2f9e3cb1ad6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58fa1e8c6c659c80cd7998a88d07849ea223750f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常量和 Literal 数据类型 (Visual Basic)
 文本是一个值，表示为本身而不是变量的值或表达式，如数字 3 或字符串"Hello"的结果。 常量是有意义的名称，它接受文本的位置，并保留在整个程序，而不是一个变量，其值可能会更改此相同的值。  
@@ -53,7 +54,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
- 下表显示了包含的字符和类型字符位于[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 如下表所示的封闭字符和 Visual Basic 中可用的类型字符。  
   
 |数据类型|封闭字符|追加的类型字符|  
 |---|---|---|  
@@ -69,7 +70,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Single`|(无)|F 或 ！|  
 |`String`|"|(无)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用户定义的常量](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)  
  [如何：声明常量](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)  
  [常量概述](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  

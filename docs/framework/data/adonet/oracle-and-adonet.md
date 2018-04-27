@@ -1,27 +1,29 @@
 ---
-title: "Oracle 和 ADO.NET"
-ms.custom: 
+title: Oracle 和 ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 529c98b0ea9b9d4ec3587ce138af8af981f1e008
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40b81df158dbad0247df76124201decae41e3267
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
   
  本节说明特定于适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序的功能和行为。  
   
- 适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序允许使用 Oracle 客户端软提供的 Oracle 调用接口 (OCI) 来访问 Oracle 数据库。 该数据提供程序设计的功能与用于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]、OLE DB 和 ODBC 的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 数据提供程序的功能类似。  
+ 适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序允许使用 Oracle 客户端软提供的 Oracle 调用接口 (OCI) 来访问 Oracle 数据库。 数据提供程序的功能可类似于[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的 SQL Server、 OLE DB 和 ODBC 数据访问接口。  
   
  若要使用适用于 Oracle 的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序，应用程序必须引用 <xref:System.Data.OracleClient> 命名空间，如下所示：  
   
@@ -83,7 +85,7 @@ csc /r:System.Data.OracleClient.dll
  说明如何使用 ADO.NET 中的数据。  
   
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- 说明如何使用特定于 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的功能。  
+ 描述如何使用 SQL Server 特定的功能。  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  说明允许在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中编写独立于提供程序的代码的泛型类。  

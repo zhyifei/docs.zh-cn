@@ -10,37 +10,37 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a636734958cd73a2f158d3f25cbbe448ff703612
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-adonet"></a>什么&#39;s ADO.NET 中的新增功能
 以下是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新增功能。  
   
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider  
- 以下是 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中用于 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 数据提供程序的新增功能：  
+ 以下功能是中的新增[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]数据提供程序中的 SQL Server [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
   
 -   ConnectRetryCount 和 ConnectRetryInterval 连接字符串关键字 (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) 可以让你控制空闲连接复原功能。  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 到应用程序的流支持支持服务器上的数据是非结构化的情况。  请参阅[SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)有关详细信息。  
+-   流式处理支持从 SQL Server 到应用程序支持非结构化服务器上的数据的方案。  请参阅[SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)有关详细信息。  
   
 -   已添加了异步编程支持。  请参阅[异步编程](../../../../docs/framework/data/adonet/asynchronous-programming.md)有关详细信息。  
   
 -   连接故障现在将记录在扩展事件日志中。 有关详细信息，请参阅 [ADO.NET 中的数据跟踪](../../../../docs/framework/data/adonet/data-tracing.md)。  
   
--   SqlClient 现在支持 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的高可用性、灾难恢复功能 AlwaysOn。 有关详细信息，请参阅[对高可用性、 灾难恢复的 SqlClient 支持](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。  
+-   SqlClient 现在具有对 SQL Server 的高可用性、 灾难恢复功能 AlwaysOn 的支持。 有关详细信息，请参阅[对高可用性、 灾难恢复的 SqlClient 支持](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。  
   
--   使用 <xref:System.Security.SecureString> 身份验证时，密码可以作为 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 传递。 有关更多信息，请参见<xref:System.Data.SqlClient.SqlCredential>。  
+-   密码可以作为传递<xref:System.Security.SecureString>时使用 SQL Server 身份验证。 有关更多信息，请参见<xref:System.Data.SqlClient.SqlCredential>。  
   
--   如果 `TrustServerCertificate` 为 false 且 `Encrypt` 为 true，则 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL 证书中的服务器名称（或 IP 地址）必须与连接字符串中指定的服务器名称（或 IP 地址）完全匹配。 否则，连接尝试将失败。 有关更多信息，请参见 `Encrypt` 中 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 选项的说明。  
+-   当`TrustServerCertificate`为 false 和`Encrypt`为 true，连接字符串中指定的服务器名称 （或 IP 地址），SQL Server SSL 证书中的服务器名称 （或 IP 地址） 必须完全匹配。 否则，连接尝试将失败。 有关更多信息，请参见 `Encrypt` 中 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 选项的说明。  
   
      如果此更改导致现有应用程序不再连接，可以通过以下方法之一修复应用程序：  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/23/2018
 ## <a name="adonet-entity-framework"></a>ADO.NET 实体框架  
  当与实体框架5.0 一起使用时，[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 添加启用新方案的 API。 有关改进和功能的已添加到实体框架 5.0 的详细信息，请参阅以下主题：[新增](http://go.microsoft.com/fwlink/?LinkID=251106)和[实体框架发行和版本控制](http://go.microsoft.com/fwlink/?LinkId=234899)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  

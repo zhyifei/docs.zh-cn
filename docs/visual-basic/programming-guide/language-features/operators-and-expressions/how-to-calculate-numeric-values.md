@@ -1,11 +1,12 @@
 ---
-title: "如何：计算数值 (Visual Basic)"
-ms.custom: 
+title: 如何：计算数值 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator precedence
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 322e2c9fe7f668e08a42cd707c5d81090aca627c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>如何：计算数值 (Visual Basic)
 您可以计算通过数值表达式使用的数字值。 A*数值表达式*会包含文本、 常量和变量表示数字值的表达式并处理这些值的运算符。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
      前三个行显示文本、 常量和变量。 每个单独构成有效的数值表达式。 最后一行显示了具有两个文本的变量的组合。  
   
-     请注意，并未数值表达式组成的完整[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]单独的语句。 作为一个完整的语句的一部分，必须使用表达式。  
+     请注意数值表达式本身并不构成一个完整的 Visual Basic 语句。 作为一个完整的语句的一部分，必须使用表达式。  
   
 #### <a name="to-store-a-numeric-value"></a>若要存储的数字值  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/21/2017
   
      有关详细信息，请参阅[Visual Basic 中的运算符优先级](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符和表达式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
  [值的比较](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
  [语句](../../../../visual-basic/language-reference/statements/index.md)  

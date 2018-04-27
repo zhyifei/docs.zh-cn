@@ -1,11 +1,12 @@
 ---
-title: "数值型数据类型 (Visual Basic)"
-ms.custom: 
+title: 数值型数据类型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - integral types [Visual Basic], Visual Basic
@@ -29,19 +30,19 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9c185b7c04d589bfe74d1cca0c60df3e81ab80d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5e7a5340f9b0d103acc14350f30f17d8d709de3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-data-types-visual-basic"></a>数值型数据类型 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供几个*数值数据类型*来处理在各种表示形式之间的数字。 *整型*类型只表示整数 （正数、 负数和零），和*nonintegral*类型带有整数和小数部分表示的数字。  
+Visual Basic 提供几个*数值数据类型*来处理在各种表示形式之间的数字。 *整型*类型只表示整数 （正数、 负数和零），和*nonintegral*类型带有整数和小数部分表示的数字。  
   
- 显示的并排显示比较表[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]数据类型，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
+ 显示 Visual Basic 数据类型的并排显示比较的表，请参阅[数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
   
 ## <a name="integral-numeric-types"></a>整型数值类型  
  *整数数据类型*是指那些表示只有其中没有小数部分的数字。  
@@ -51,10 +52,10 @@ ms.lasthandoff: 11/21/2017
  *无符号*整型[Byte 数据类型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)（8 位）、 [UShort 数据类型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)（16 位）、 [UInteger 数据类型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)（32-位） 和[ULong 数据类型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)（64 位）。 如果变量包含二进制数据或未知的性质的数据，将其声明为这些类型之一。  
   
 ### <a name="performance"></a>性能  
- 算术运算是更快于整数类型比其他数据类型。 它们是使用最快`Integer`和`UInteger`中的类型[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 算术运算是更快于整数类型比其他数据类型。 它们是使用最快`Integer`和`UInteger`Visual Basic 中的类型。  
   
 ### <a name="large-integers"></a>大整数  
- 如果你需要存储的整数大于`Integer`可以容纳的数据类型，则可以使用`Long`数据类型。 `Long`变量可以存储从-9223372036854775808 到 9223372036854775807 数字。 操作`Long`时速度稍慢比使用`Integer`。  
+ 如果你需要存储的整数大于`Integer`可以容纳的数据类型，则可以使用`Long`数据类型。 `Long` 变量可以存储从-9223372036854775808 到 9223372036854775807 数字。 操作`Long`时速度稍慢比使用`Integer`。  
   
  如果你需要更大的值，则可以使用[十进制数据类型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)。 你可以按住从-79228162514264337593543950335 到 79228162514264337593543950335 的数字`Decimal`变量，如果不使用任何小数位数。 但是，与操作`Decimal`的数字是显著变慢于与任何其他数值数据类型。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  非整型的数值数据类型是`Decimal`（128 位固定点）[单一数据类型](../../../../visual-basic/language-reference/data-types/single-data-type.md)（32 位浮点） 和[Double 数据类型](../../../../visual-basic/language-reference/data-types/double-data-type.md)（64 位浮点数）。 它们是已全部签名的类型。 如果变量可以包含一小部分，将其声明为这些类型之一。  
   
- `Decimal`不是浮点数据类型。 `Decimal`数字具有二进制整数值和一个指定值的哪些部分是小数部分的整数缩放因子。  
+ `Decimal` 不是浮点数据类型。 `Decimal` 数字具有二进制整数值和一个指定值的哪些部分是小数部分的整数缩放因子。  
   
  你可以使用`Decimal`货币值的变量。 优点是值的精度。 `Double`数据类型速度更快，需要较少的内存，但它可能会发生舍入误差。 `Decimal`数据类型将保留完整精确到 28 位小数。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
  非整型的数字值可以表示为 mmmEeee，在 mmm 即*尾数*（有效位数） 和电气是*指数*（10 的幂）。 非整型类型的最高正值是为 7.9228162514264337593543950335 e + 28 `Decimal`，3.4028235 e + 38 个`Single`，1.79769313486231570 e + 308 `Double`。  
   
 ### <a name="performance"></a>性能  
- `Double`是效率最高的小数部分组成的数据类型中，因为在当前平台上的处理器执行以双精度浮点运算。 但是，与操作`Double`速度与整数类型，例如`Integer`。  
+ `Double` 是效率最高的小数部分组成的数据类型中，因为在当前平台上的处理器执行以双精度浮点运算。 但是，与操作`Double`速度与整数类型，例如`Integer`。  
   
 ### <a name="small-magnitudes"></a>小量值  
  对于具有可能的最小大小 （接近 0），数字`Double`变量可以存储的数字越小越-4.94065645841246544 e-324 负值和最大 4.94065645841246544 e-324 的正值。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="small-fractional-numbers"></a>小的小数数字  
  如果你不需要的完整范围的`Double`数据类型，则可以使用`Single`数据类型，它包含从-3.4028235 e + 38 到 3.4028235 e + 38 浮点数。 最小最小量值为`Single`变量为-1.401298 e-为负值，1.401298 e 45-45 正值。 如果你有大量的存储小的浮点数的变量，公共语言运行时可以有时存储你`Single`变量更有效地，以节省内存消耗。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
  [字符数据类型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
  [杂项数据类型](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  

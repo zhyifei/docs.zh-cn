@@ -1,23 +1,25 @@
 ---
-title: "ADO.NET 代码示例"
+title: ADO.NET 代码示例
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ea26b4297f587a449b8484947257081e0d11906c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fec055db7069a213b31b9f4443b2f0e7467dd7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 代码示例
 本主题中的代码列表演示如何使用下面的 ADO.NET 技术从数据库中检索数据：
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/17/2018
 以下代码列表演示如何使用 ADO.NET 数据提供程序从数据库中检索数据。 数据在一个 `DataReader` 中返回。 有关详细信息，请参阅[使用 DataReader 检索数据](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)。
 
 ### <a name="sqlclient"></a>SqlClient
-此示例中的代码假定您可以连接到 Microsoft `Northwind` 上的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.SqlClient.SqlCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.SqlClient.SqlParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 <xref:System.Data.SqlClient.SqlConnection>在内部打开`using`块，这将确保关闭和释放在代码退出时会资源。 示例代码使用 <xref:System.Data.SqlClient.SqlDataReader> 执行命令，并在控制台窗口中显示结果。
+此示例中的代码假定你可以连接到`Northwind`Microsoft SQL Server 上的示例数据库。 在此情形 5 中，示例代码创建一个 <xref:System.Data.SqlClient.SqlCommand> 以从 Products 表中选择行，并添加 <xref:System.Data.SqlClient.SqlParameter> 来将结果限制为其 UnitPrice 大于指定参数值的行。 <xref:System.Data.SqlClient.SqlConnection>在内部打开`using`块，这将确保关闭和释放在代码退出时会资源。 示例代码使用 <xref:System.Data.SqlClient.SqlDataReader> 执行命令，并在控制台窗口中显示结果。
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]

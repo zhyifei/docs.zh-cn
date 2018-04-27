@@ -1,11 +1,12 @@
 ---
-title: "如何：防止过程自变量的值被更改 (Visual Basic)"
-ms.custom: 
+title: 如何：防止过程自变量的值被更改 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7975cbbc38c39223a4af5c87ac6bb090be548f2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59c0486bd9543167e4c17a3109c4b89b3502e80e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>如何：防止过程自变量的值被更改 (Visual Basic)
-如果过程声明将参数作为[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]使该过程代码中调用代码的实参的编程元素直接引用。 这允许更改基础中调用代码的自变量的值的过程。 在某些情况下调用的代码可能想要防止此类更改。  
+如果过程声明将参数作为[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 使该过程代码中调用代码的实参的编程元素直接引用。 这允许更改基础中调用代码的自变量的值的过程。 在某些情况下调用的代码可能想要防止此类更改。  
   
  你可以始终保护自变量不被更改通过声明的相应参数[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)过程中。 如果你想要能够更改在某些情况下，而不是其他给定的自变量，可以将其声明`ByRef`并让调用代码确定在每次调用的传递机制。 此，它会将相应实参括在括号中以将其传递的值，或不将其括起来在括号中以通过引用传递。 有关详细信息，请参阅[如何： 强制通过值传递到自变量](./how-to-force-an-argument-to-be-passed-by-value.md)。  
   
@@ -48,9 +49,9 @@ ms.lasthandoff: 11/21/2017
  第二个`MsgBox`调用显示"后 replace(n): 11、 21、 31、 41"。 因为`n`传递`ByVal`，`replace`不能修改变量`n`通过向它分配一个新数组，调用代码中。 当`replace`创建新的数组实例`k`并将其分配到本地变量`a`，它将失去对引用`n`传递中调用代码。 当其更改的成员`a`，只有本地数组`k`受到影响。 因此，`replace`不会增加的数组值`n`调用代码中。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 中的默认值[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是按值传递自变量。 但是，很好的编程做法包括[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字后跟每个声明的参数。 这使得你的代码易于阅读。  
+ Visual Basic 中的默认值是通过值传递自变量。 但是，很好的编程做法包括[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)关键字后跟每个声明的参数。 这使得你的代码易于阅读。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [如何：将自变量传递给过程](./how-to-pass-arguments-to-a-procedure.md)  

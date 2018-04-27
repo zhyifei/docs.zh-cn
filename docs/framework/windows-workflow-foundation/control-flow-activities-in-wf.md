@@ -1,26 +1,27 @@
 ---
-title: "WF 中的控制流活动"
-ms.custom: 
+title: WF 中的控制流活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e8520e34cf9bd9d31e9b877849e7c9611d6d989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 91fb4e18d753709ab973730300ffef5a952c56d6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-activities-in-wf"></a>WF 中的控制流活动
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供用于控制工作流中执行流的多个活动。 其中一些活动（如 `Switch` 和 `If`）实现与编程环境（如 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]）类似的流控制结构，而其他活动（如 `Pick`）建立新编程结构的模型。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供用于控制工作流中执行流的多个活动。 某些这些活动 (如`Switch`和`If`) 实现与编程环境，如 Visual C# 中，同时其他类似的流控制结构 (如`Pick`) 建立新编程结构的模型。  
   
  请注意，当诸如 `Parallel` 和 `ParallelForEach` 活动之类的活动计划同时执行多个子活动时，一个工作流只能使用单个线程。 这些活动的每个子活动都按顺序执行，并在前面的活动完成或变为空闲之前，不会执行后续活动。 因此，这些活动对于某些应用程序来说最有用，这些应用程序中的多个可能阻止执行的活动必须采用交错的方式执行。 如果这些活动中没有任何子活动变为空闲，则 `Parallel` 活动执行方式就像 `Sequence` 活动一样，并且 `ParallelForEach` 活动执行方式就像 `ForEach` 活动一样。 然而，如果使用异步活动（例如从 <xref:System.Activities.AsyncCodeActivity> 派生的活动）或消息活动，则控件制将传递给下一个分支，同时子活动等待其要接收的消息或其要完成的异步工作。  
   

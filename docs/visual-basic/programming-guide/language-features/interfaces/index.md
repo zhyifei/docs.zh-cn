@@ -14,11 +14,11 @@ ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 558eae39b38161d01d599bba6c3121839560884b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interfaces-visual-basic"></a>接口 (Visual Basic)
 接口定义了类可以实现的属性、方法和事件。 接口允许将功能定义为一些紧密相关的属性、方法和事件的小组；这样就减少了兼容性问题，因为可以在不损害现有代码的情况下开发接口的增强型实现。 在任何时候都可以通过开发附加接口和实现来添加新的功能。  
@@ -46,13 +46,13 @@ ms.lasthandoff: 10/22/2017
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## <a name="implementing-interfaces"></a>实现接口  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 保留字 `Implements` 有两种使用方式。 `Implements` 语句表示类或结构实现接口。 `Implements` 关键字表示类成员或结构成员实现特定的接口成员。  
+ Visual Basic 保留字`Implements`两种方式使用。 `Implements` 语句表示类或结构实现接口。 `Implements` 关键字表示类成员或结构成员实现特定的接口成员。  
   
 ### <a name="implements-statement"></a>Implements 语句  
  如果一个类或结构实现一个或多个接口，则它必须紧随在 `Class` 或 `Structure` 语句之后包括 `Implements` 语句。 `Implements` 语句需要一个由类实现的接口的逗号分隔列表。 类或结构必须使用 `Implements` 关键字来实现所有的接口成员。  
   
 ### <a name="implements-keyword"></a>Implements 关键字  
- `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 实现接口成员的成员名称可使用任何合法标识符，不受早期 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 版本中使用的 `InterfaceName_MethodName` 约定的限制。  
+ `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 实现接口成员的成员的名称可以使用任何合法标识符，并不限于`InterfaceName_MethodName`早期版本的 Visual Basic 中使用的约定。  
   
  例如，以下代码显示了如何声明一个名为 `Sub1` 的用于实现接口方法的子例程：  
   

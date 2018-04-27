@@ -1,24 +1,26 @@
 ---
-title: "在 SQL Server 中编写安全的动态 SQL"
-ms.custom: 
+title: 在 SQL Server 中编写安全的动态 SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 41c396bf2101e54adb1608f938c702ff7663cb1d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5fdf41353e1772eab46e2e6b8f16ad7bfdf7a72f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中编写安全的动态 SQL
 SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过程。 如果输入的语句没有经过验证直接传递到服务器，并且应用程序不慎执行了注入的代码，这种攻击有可能损坏或毁坏数据。  
@@ -68,7 +70,7 @@ SQL 注入是恶意用户输入 Transact-SQL 语句来取代有效输入的过�
  在执行使用证书进行签名的存储过程时，授予给证书用户的权限会与调用方的权限合并。 执行上下文保持不变，证书用户不模拟调用方。 为存储过程签名需要执行多个步骤才能实现。 每次修改过程时，都必须重新签名。  
   
 ### <a name="cross-database-access"></a>跨数据库访问  
- 在执行动态创建的 SQL 语句时，跨数据库的所属权链接不起作用。 在 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中，您可以通过创建一个可访问另一个数据库中数据的存储过程并使用两个数据库中都存在的证书为此过程签名来解决此问题。 这可为用户提供访问该过程所使用的数据库资源的权限，而不必向他们授予数据库访问权或权限。  
+ 在执行动态创建的 SQL 语句时，跨数据库的所属权链接不起作用。 你可以解决此 SQL Server 中通过创建一个可访问另一个数据库中的数据的存储的过程并签名具有这两个数据库中存在的证书的过程。 这可为用户提供访问该过程所使用的数据库资源的权限，而不必向他们授予数据库访问权或权限。  
   
 ## <a name="external-resources"></a>外部资源  
  有关更多信息，请参见以下资源。  

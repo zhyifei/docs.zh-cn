@@ -1,11 +1,12 @@
 ---
-title: "扩大转换和收缩转换 (Visual Basic)"
-ms.custom: 
+title: 扩大转换和收缩转换 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf1f8d956935a9a363211abf94b4f1c2f538074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 960b4e4c7184309b6a84247d86fb94ccb2faf877
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>扩大转换和收缩转换 (Visual Basic)
 类型转换的一个重要的注意事项是转换的结果是否在目标数据类型的范围内。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
 |[双精度](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |任何枚举类型 ([枚举](../../../../visual-basic/language-reference/statements/enum-statement.md))|其基础的整型类型和基础类型扩大到的任何类型。|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char` 数组|`Char`数组，`String`|  
+|`Char` 数组|`Char` 数组， `String`|  
 |任何类型|[对象](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |任何派生的类型|任何基的类型派生自<sup>3</sup>。|  
 |任何类型|它实现任何接口。|  
@@ -97,11 +98,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="exceptions-during-conversion"></a>转换期间的异常  
  由于扩大转换始终成功，但它们不会引发异常。 收缩转换，转换失败时，通常会引发以下异常：  
   
--   <xref:System.InvalidCastException>-如果未定义转换之间的两种类型  
+-   <xref:System.InvalidCastException> -如果未定义转换之间的两种类型  
   
--   <xref:System.OverflowException>-（仅限整型） 如果转换后的值的目标类型太大  
+-   <xref:System.OverflowException> -（仅限整型） 如果转换后的值的目标类型太大  
   
- 如果类或结构定义[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)以用作到或从该类或结构，转换运算符，`CType`可以引发任何它认为适当的任何异常。 此外，，`CType`可能调用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]函数或[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]反过来可能会引发异常的各种方法。  
+ 如果类或结构定义[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)以用作到或从该类或结构，转换运算符，`CType`可以引发任何它认为适当的任何异常。 此外，，`CType`可能调用 Visual Basic 函数或[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]反过来可能会引发异常的各种方法。  
   
 ## <a name="changes-during-reference-type-conversions"></a>引用类型转换过程中的更改  
  从转换*引用类型*只复制的指针的值。 值本身不复制也不以任何方式更改。 可以更改唯一是变量的用于保存指针的数据类型。 在下面的示例中，数据类型从派生类转换为其基本类，但两个变量现在指向的对象是不变。  
@@ -115,7 +116,7 @@ Dim square As cSquare = New cSquare
 shape = square  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  

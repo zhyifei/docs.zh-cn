@@ -19,19 +19,19 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c3f71a84feffce46bafd92ff701a0250c059a82e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>从命令行生成 (Visual Basic)
-A[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]项目由一个或多个单独的源文件组成。 在称为编译过程中，这些文件被集中到一个包中，可以为应用程序运行的单个可执行文件。  
+Visual Basic 项目组成一个或多个单独的源代码文件。 在称为编译过程中，这些文件被集中到一个包中，可以为应用程序运行的单个可执行文件。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 作为编译来自程序的替代方法提供命令行编译器[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境 (IDE)。 命令行编译器设计为不需要完整的 IDE 中的功能集情况-例如，当你正在使用或者编写的有限的系统内存或存储空间使用的计算机。  
+ Visual Basic 作为编译来自程序的替代方法提供命令行编译器[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境 (IDE)。 命令行编译器设计为不需要完整的 IDE 中的功能集情况-例如，当你正在使用或者编写的有限的系统内存或存储空间使用的计算机。  
   
   若要编译中的源文件[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]IDE 中，选择**生成**命令**生成**菜单。  
   

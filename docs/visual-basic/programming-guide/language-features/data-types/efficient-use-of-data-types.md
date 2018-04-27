@@ -1,11 +1,12 @@
 ---
-title: "有效使用数据类型 (Visual Basic)"
-ms.custom: 
+title: 有效使用数据类型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - performance, data type efficiency
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0e13a1d61aacb06eb336c39aab969847127dfc67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4cac585cdc3072d595d2446e1937678f9ab03335
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>有效使用数据类型 (Visual Basic)
 未声明的变量和数据类型未声明的变量分配`Object`数据类型。 这使得可以轻松快速，编写程序，但它可能会导致它们执行速度更慢。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 -   这会导致你的代码的执行速度更快。  
   
 ## <a name="most-efficient-data-types"></a>最有效的数据类型  
- 从不包含小数的变量，整数数据类型是比非整型类型效率更高。 在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，`Integer`和`UInteger`是最有效的数值类型。  
+ 从不包含小数的变量，整数数据类型是比非整型类型效率更高。 在 Visual Basic 中，`Integer`和`UInteger`是最有效的数值类型。  
   
  对于分数，`Double`是最有效的数据类型，因为在当前平台上的处理器执行以双精度浮点运算。 但是，与操作`Double`速度与整数类型，例如`Integer`。  
   
@@ -56,7 +57,7 @@ Protected s As String
 ## <a name="character-conversion"></a>字符转换  
  `AscW`和`ChrW`在 Unicode 函数操作。 你应使用它们优先`Asc`和`Chr`，执行和跳出执行 Unicode，必须将其转换。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
  <xref:Microsoft.VisualBasic.Strings.Chr%2A>  

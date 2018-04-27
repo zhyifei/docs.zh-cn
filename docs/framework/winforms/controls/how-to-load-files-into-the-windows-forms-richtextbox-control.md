@@ -1,12 +1,13 @@
 ---
-title: "如何：将文件加载到 Windows 窗体 RichTextBox 控件中"
-ms.custom: 
+title: 如何：将文件加载到 Windows 窗体 RichTextBox 控件中
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 003770e5d21383973946c4ebb83d560f0fa23207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27ddc78c16b04f067e83f799e8ccb275cebdeb14
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>如何：将文件加载到 Windows 窗体 RichTextBox 控件中
 Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以显示纯文本、Unicode 纯文本或 RTF 格式 (RTF) 文件。 若要显示这些文件，请调用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 还可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法从流中加载数据。 有关详细信息，请参阅 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
@@ -42,7 +44,7 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以显示纯文�
   
 2.  调用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 控件的 <xref:System.Windows.Forms.RichTextBox> 方法，指定要加载的文件，并且可以指定文件类型。 在下面的示例中，要加载的文件来自 <xref:System.Windows.Forms.OpenFileDialog> 组件的 <xref:System.Windows.Forms.FileDialog.FileName%2A> 属性。 如果调用该方法时仅使用文件名作为其唯一参数，则会假定该文件类型为 RTF。 若要指定其他文件类型，请使用 <xref:System.Windows.Forms.RichTextBoxStreamType> 枚举的值作为其第二个参数来调用该方法。  
   
-     在下面的示例中，单击按钮时显示 <xref:System.Windows.Forms.OpenFileDialog> 组件。 然后，在 <xref:System.Windows.Forms.RichTextBox> 控件中打开并显示所选文件。 此示例假定窗体包含一个 `btnOpenFile` 按钮。  
+     在下面的示例中，单击按钮时显示 <xref:System.Windows.Forms.OpenFileDialog> 组件。 然后，在 <xref:System.Windows.Forms.RichTextBox> 控件中打开并显示所选文件。 此示例假定窗体包含一个`btnOpenFile`按钮。  
   
     ```vb  
     Private Sub btnOpenFile_Click(ByVal sender As System.Object, _  
@@ -77,7 +79,7 @@ Windows 窗体 <xref:System.Windows.Forms.RichTextBox> 控件可以显示纯文�
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)][!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体构造函数中以注册事件处理程序。  
+     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
   
     ```csharp  
     this.btnOpenFile.Click += new System.EventHandler(this. btnOpenFile_Click);  

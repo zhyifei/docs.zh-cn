@@ -1,18 +1,19 @@
 ---
-title: "构建可复原的服务供云。 采用在云中的暂时性故障"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |构建可复原的服务供云。 采用在云中的暂时性故障"
+title: 构建可复原的服务供云。 采用在云中的暂时性故障
+description: 为容器化的.NET 应用程序的.NET 微服务体系结构 |构建可复原的服务供云。 采用在云中的暂时性故障
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 0ac1d67a5b5b9a19f47c1d20eeb446977466510f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>构建可复原的服务供云： 采用在云中的暂时性故障
 

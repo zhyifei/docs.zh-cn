@@ -1,27 +1,29 @@
 ---
-title: "在 UI 自动化客户端中缓存"
-ms.custom: 
+title: 在 UI 自动化客户端中缓存
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: cce1890357f5781f1772b6a0aa583e493e2cfa8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>在 UI 自动化客户端中缓存
 > [!NOTE]
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="activating-the-cacherequest"></a>激活 CacheRequest  
  仅当在 <xref:System.Windows.Automation.AutomationElement> 对于当前线程处于活动状态的情况下检索 <xref:System.Windows.Automation.CacheRequest> 对象时，才会执行缓存。 有两种方法可激活 <xref:System.Windows.Automation.CacheRequest>。  
   
- 通常的方法是调用 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。 此方法返回实现 <xref:System.IDisposable>的对象。 只要 <xref:System.IDisposable> 对象存在，请求就将保持活动状态。 控制对象的生存期的最简单方法是将调用括在 `using` ([!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]) 或 `Using` ([!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) 块中。 这样即使引发异常也能确保请求从堆栈中弹出。  
+ 通常的方法是调用 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。 此方法返回实现 <xref:System.IDisposable>的对象。 只要 <xref:System.IDisposable> 对象存在，请求就将保持活动状态。 控制对象的生存期的最简单方法是调用括在`using`(C#) 或`Using`(Visual Basic 中) 块。 这样即使引发异常也能确保请求从堆栈中弹出。  
   
  另一种方法是调用 <xref:System.Windows.Automation.CacheRequest.Push%2A>，此方法在你想要嵌套缓存请求时非常有用。 此方法将请求放在堆栈上，并激活请求。 在 <xref:System.Windows.Automation.CacheRequest.Pop%2A>从堆栈中删除请求之前，请求将保持活动状态。 如果将另一个请求推入堆栈，该请求将暂时变为非活动状态；只有堆栈顶部的请求才会处于活动状态。  
   

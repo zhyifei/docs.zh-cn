@@ -1,27 +1,29 @@
 ---
-title: "部署 WPF 应用程序 (WPF)"
-ms.custom: 
+title: 部署 WPF 应用程序 (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf0c5383728648d46427ce8fe2f5a97a736ab00
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3beb8ee0869384f9f453023fe549b2339c126898
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 应用程序 (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序在生成后需要进行部署。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 包含多项部署技术。 用于部署 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署技术取决于应用程序的类型。 本主题将简要概述各项部署技术，以及如何使用这些技术来满足各类 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序的部署要求。  
@@ -93,7 +95,7 @@ ms.lasthandoff: 01/19/2018
   
  有关 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序安全性的详细信息，请参阅[安全性](../../../../docs/framework/wpf/security-wpf.md)。  
   
- 仅标记 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面可以利用 XCopy 或 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 安装到本地文件系统。 这些页面可以使用 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 或 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 资源管理器来查看。  
+ 仅标记 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 页面可以利用 XCopy 或 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 安装到本地文件系统。 可以使用查看这些页面[!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]或 Windows 资源管理器。  
   
  有关 XAML 的详细信息，请参阅 [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
   
@@ -124,7 +126,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>安装 .NET Framework  
- 要运行 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，必须先在客户端上安装 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]。 当查看 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序时，[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 会自动检测客户端是否已安装 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]。 如果 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 尚未安装，则 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 会提示用户安装。  
+ 若要运行[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序中，客户端必须安装 Microsoft.NET Framework。 当查看 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序时，[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 会自动检测客户端是否已安装 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]。 如果 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 尚未安装，则 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 会提示用户安装。  
   
  为检测 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 是否已安装，[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 含有一个引导应用程序，该应用程序会被注册为具有以下扩展名的内容文件的回退 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 处理程序：.xaml、.xps、.xbap 和 .application。 如果导航到这些文件类型，且客户端上还未安装 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]，则该引导应用程序会请求相应权限以完成安装。 如果未被授予相应权限，则 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 和应用程序都不会安装。  
   

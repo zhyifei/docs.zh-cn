@@ -1,12 +1,12 @@
 ---
-title: "枚举设计"
-ms.custom: 
+title: 枚举设计
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3e89567761367ddcd67078b138c15b982a0d666
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enum-design"></a>枚举设计
 枚举是特殊类型的值类型。 有两种枚举： 简单枚举和标志枚举。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/23/2017
   
  **X 不**扩展<xref:System.Enum?displayProperty=nameWithType>直接。  
   
- <xref:System.Enum?displayProperty=nameWithType>是一种特殊类型使用由 CLR 创建用户定义的枚举。 大多数编程语言提供与此功能使你可以访问的编程元素。 例如，在 C#`enum`关键字用于定义枚举。  
+ <xref:System.Enum?displayProperty=nameWithType> 是一种特殊类型使用由 CLR 创建用户定义的枚举。 大多数编程语言提供与此功能使你可以访问的编程元素。 例如，在 C#`enum`关键字用于定义枚举。  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>设计标志枚举  
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/23/2017
   
  **请考虑 ✓**通常提供特殊的枚举值使用标志的组合。  
   
- 按位运算是一个高级的概念，应该不需要用于简单任务。 <xref:System.IO.FileAccess.ReadWrite>是一个示例这样的特殊值。  
+ 按位运算是一个高级的概念，应该不需要用于简单任务。 <xref:System.IO.FileAccess.ReadWrite> 是一个示例这样的特殊值。  
   
  **请避免 x**创建标志枚举值的某些组合将无效。  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/23/2017
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [类型设计准则](../../../docs/standard/design-guidelines/type.md)  

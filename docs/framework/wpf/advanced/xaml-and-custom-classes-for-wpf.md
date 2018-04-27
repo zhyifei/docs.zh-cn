@@ -1,28 +1,30 @@
 ---
-title: "XAML 及 WPF 的自定义类"
-ms.custom: 
+title: XAML 及 WPF 的自定义类
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a7aa7ffe38f1fbd7de71dbc95ae12b8faca6e356
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML 及 WPF 的自定义类
 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 框架中实现的 XAML 支持定义任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 语言的自定义类或结构，然后使用 XAML 标记访问类。 通常通过将自定义类型映射到 XAML 命名空间前缀，可在同一标记文件中混合使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定义类型和自定义类型。 本主题讨论将自定义类用作 XAML 元素必须满足的要求。  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  其中允许的特性语法，但包含的对象元素的属性元素语法不允许通过 XAML 的属性的示例是需要的各种属性<xref:System.Windows.Input.Cursor>类型。 <xref:System.Windows.Input.Cursor>类具有专用的类型转换器<xref:System.Windows.Input.CursorConverter>，但不是公开默认构造函数，因此<xref:System.Windows.FrameworkElement.Cursor%2A>属性只能设置通过特性语法即使实际<xref:System.Windows.Input.Cursor>类型是引用类型。  
   
 ### <a name="per-property-type-converters"></a>按属性类型转换器  
- 或者，属性本身可能声明属性级别的类型转换器。 这使"微型 language"，它处理传入的字符串值的属性作为输入通过实例化对象的类型的属性内联<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>操作根据相应的类型。 此操作的目的通常是提供方便的访问器，且这不是在 XAML 中启用属性设置的唯一方式。 但是，如果要使用不提供默认构造函数或特性化类型转换器的现有 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 类型，也可使用特性的类型转换器。 从示例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]API 都需要某些属性<xref:System.Globalization.CultureInfo>类型。 在这种情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用现有[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]<xref:System.Globalization.CultureInfo>类型以更好地满足兼容性和迁移方案中使用早期版本的框架，但<xref:System.Globalization.CultureInfo>类型不支持必要的构造函数或类型级别类型转换无法直接使用 XAML 的属性值。  
+ 或者，属性本身可能声明属性级别的类型转换器。 这使"微型 language"，它处理传入的字符串值的属性作为输入通过实例化对象的类型的属性内联<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>操作根据相应的类型。 此操作的目的通常是提供方便的访问器，且这不是在 XAML 中启用属性设置的唯一方式。 但是，如果要使用不提供默认构造函数或特性化类型转换器的现有 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 类型，也可使用特性的类型转换器。 从示例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]API 都需要某些属性<xref:System.Globalization.CultureInfo>类型。 在这种情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用现有的 Microsoft.NET Framework<xref:System.Globalization.CultureInfo>类型以更好地满足兼容性和迁移方案中使用早期版本的框架，但<xref:System.Globalization.CultureInfo>类型不支持所需构造函数或类型级别类型转换无法直接使用 XAML 的属性值。  
   
  每当公开具有 XAML 用法的属性时，特别是对于控件作者，应特别考虑使用依赖属性支持此属性。 如果你使用现有尤其如此[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]实现的 XAML 处理器，因为您可以通过改进性能<xref:System.Windows.DependencyProperty>备份。 依赖属性将对用户针对 XAML 可访问属性所需的属性公开属性系统功能。 这包括动画、数据绑定和样式支持等功能。 有关详细信息，请参阅[自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和 [XAML 加载和依赖属性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)。  
   

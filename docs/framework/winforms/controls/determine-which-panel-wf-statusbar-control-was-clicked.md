@@ -1,12 +1,13 @@
 ---
-title: "如何：确定 Windows 窗体 StatusBar 控件中被单击的面板"
-ms.custom: 
+title: 如何：确定 Windows 窗体 StatusBar 控件中被单击的面板
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a91ad8c28bae7d517a9e13937d5de340b1b6a605
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35dc392ed95a5dbe8182b1adbd05affea55d0baa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>如何：确定 Windows 窗体 StatusBar 控件中被单击的面板
 > [!IMPORTANT]
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-determine-which-panel-was-clicked"></a>若要确定被单击的面板  
   
-1.  在<xref:System.Windows.Forms.StatusBar.PanelClick>事件处理程序中，使用`Select Case`(在[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) 或`switch case`([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]或[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 语句，以确定哪个面板被单击通过检查事件自变量中被单击的面板的索引。  
+1.  在<xref:System.Windows.Forms.StatusBar.PanelClick>事件处理程序中，使用`Select Case`（在 Visual Basic) 或`switch case`(Visual C# 或[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 语句，以确定哪个面板被单击通过检查事件自变量中被单击的面板的索引。  
   
      下面的代码示例要求是否存在，请在窗体上的<xref:System.Windows.Forms.StatusBar>控件， `StatusBar1`，和两个<xref:System.Windows.Forms.StatusBarPanel>对象，`StatusBarPanel1`和`StatusBarPanel2`。  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)][!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体构造函数中以注册事件处理程序。  
+     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
   
     ```csharp  
     this.statusBar1.PanelClick += new   

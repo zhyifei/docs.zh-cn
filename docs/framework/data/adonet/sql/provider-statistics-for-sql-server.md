@@ -1,27 +1,29 @@
 ---
-title: "用于 SQL Server 的提供程序统计信息"
-ms.custom: 
+title: 用于 SQL Server 的提供程序统计信息
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 43cafc8feb6cee761baffcb2efe41aec18e98abb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27346f483251231f16abfa1d0fc5001e156ca8ea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="provider-statistics-for-sql-server"></a>用于 SQL Server 的提供程序统计信息
 从 .NET Framework 2.0 版开始，适用于 SQL Server 的 .NET Framework 数据提供程序支持运行时统计信息。 必须在创建了有效的连接对象后将 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 属性设置为 `True`，以启用统计信息。 启用了统计信息之后，可以通过 <xref:System.Collections.IDictionary> 对象的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法检索 <xref:System.Data.SqlClient.SqlConnection> 引用，以将统计信息作为“实时快照”查看。 通过列表作为一组名称/值对字典条目进行枚举。 这些名称/值对不排序。 可以随时调用 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 对象的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重置计数器。 如果尚未启用统计信息收集功能，则不会生成异常。 此外，如果调用 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 之前没有先调用 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，检索到的值是每个条目的初始值。 如果启用了统计信息，运行应用程序一段时间，然后禁用统计信息，检索到的值将反映在禁用统计信息之前收集的值。 所有统计信息值按照连接进行收集。  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/17/2018
  以下控制台应用程序显示如何在连接上启用统计信息，如何分别检索四个统计信息值，以及如何将统计信息输出到控制台窗口。  
   
 > [!NOTE]
->  下面的示例使用示例**AdventureWorks**中包含的数据库[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+>  下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
 ```vb  
 Option Strict On  
@@ -215,7 +217,7 @@ namespace CS_Stats_Console_GetValue
  以下控制台应用程序显示如何在连接上启用统计信息，如何使用枚举器检索所有可用统计信息值，以及如何将统计信息输出到控制台窗口。  
   
 > [!NOTE]
->  下面的示例使用示例**AdventureWorks**中包含的数据库[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+>  下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
 ```vb  
 Option Strict On  

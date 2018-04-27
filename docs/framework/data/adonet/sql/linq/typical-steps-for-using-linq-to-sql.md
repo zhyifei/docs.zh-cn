@@ -1,24 +1,26 @@
 ---
-title: "使用 LINQ to SQL 的典型步骤"
-ms.custom: 
+title: 使用 LINQ to SQL 的典型步骤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3aedef610d8ad3f743b346a46059b15d917cf7ca
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31daf8ee10334327070cb5bfc4068bc80e1d7ea4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>使用 LINQ to SQL 的典型步骤
 若要实现 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序，请按照本主题后面部分说明的步骤操作。 请注意，很多步骤是可选的。 您可以以对象模型的默认状态使用它，这种可能性很高。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/17/2018
   
 -   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
-     此设计器提供了用于从现有数据库创建对象模型的丰富用户界面。 此工具是 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] IDE 的一部分，最适合小型或中型数据库。  
+     此设计器提供了用于从现有数据库创建对象模型的丰富用户界面。 此工具是 Visual Studio IDE 的一部分，并最适合小型或中型数据库。  
   
 -   SQLMetal 代码生成工具  
   
@@ -41,13 +43,13 @@ ms.lasthandoff: 01/17/2018
   
 -   代码编辑器  
   
-     您可以通过使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]代码编辑器或其他编辑器编写自己的代码。 我们建议，在您具有现有数据库且可以使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]或 SQLMetal 工具时不要使用这种方法，因为这种方法容易出错。 但是，代码编辑器在改进或修改你已通过使用其他工具生成的代码方面非常有用。 有关详细信息，请参阅[如何： 使用代码编辑器自定义实体类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)。  
+     可以通过使用 Visual Studio 代码编辑器或其他编辑器编写你自己的代码。 我们建议，在您具有现有数据库且可以使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]或 SQLMetal 工具时不要使用这种方法，因为这种方法容易出错。 但是，代码编辑器在改进或修改你已通过使用其他工具生成的代码方面非常有用。 有关详细信息，请参阅[如何： 使用代码编辑器自定义实体类](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)。  
   
-### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2.选择您要生成的代码类型。  
+### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2.选择你要生成的代码类型。  
   
--   用于基于属性的映射的 C# 或 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 源代码文件。  
+-   C# 或 Visual Basic 源代码文件基于属性的映射。  
   
-     然后将此代码文件加入您的 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 项目中。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
+     然后此代码文件包含你的 Visual Studio 项目中。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
   
 -   用于外部映射的 XML 文件。  
   

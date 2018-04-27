@@ -1,24 +1,26 @@
 ---
-title: "安全注意事项（实体框架）"
-ms.custom: 
+title: 安全注意事项（实体框架）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d70b1a6aff3e93122b5d0fb21affdfcd13d817e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-considerations-entity-framework"></a>安全注意事项（实体框架）
 本主题介绍有关开发、部署和运行[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序的特定安全注意事项。 除此之外，您还应遵循有关创建安全的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 应用程序的建议。 有关详细信息，请参阅[安全概述](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.Security.Permissions.SecurityPermission>：使用 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 以通过 <xref:System.Runtime.Serialization.ISerializable> 接口对异常进行序列化。  
   
--   打开数据库连接和对数据库执行命令的权限，如 <xref:System.Data.SqlClient.SqlClientPermission> 数据库的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。  
+-   打开数据库连接和对执行命令的数据库，如权限<xref:System.Data.SqlClient.SqlClientPermission>为 SQL Server 数据库。  
   
  有关详细信息，请参阅[代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。  
   

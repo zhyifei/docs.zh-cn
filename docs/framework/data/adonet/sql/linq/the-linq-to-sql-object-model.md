@@ -1,27 +1,29 @@
 ---
-title: "LINQ to SQL 对象模型"
-ms.custom: 
+title: LINQ to SQL 对象模型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0bfaf7b08b3725f1c1cc2f0985c7612aa47a6cb4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cc05166cffdd7254c657f0c490afaaac4cf08fcb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 对象模型
 在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，用开发人员的编程语言表示的对象模型映射到关系数据库的数据模型。 然后就会按照对象模型来执行对数据的操作。  
@@ -83,7 +85,7 @@ ms.lasthandoff: 01/17/2018
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性将存储过程和函数映射到方法。 表示存储过程的方法与表示用户定义的函数的方法通过 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 属性加以区分。 如果此属性设置为 `false`（默认值），则此方法表示存储过程。 如果它设置为 `true`，则此方法表示数据库函数。  
   
 > [!NOTE]
->  如果您使用的是 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，则可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来创建映射到存储过程和用户定义的函数的方法。  
+>  如果你使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建映射到存储的过程和用户定义函数的方法。  
   
 ### <a name="example"></a>示例  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

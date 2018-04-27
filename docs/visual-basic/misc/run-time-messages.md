@@ -1,24 +1,25 @@
 ---
-title: "Visual Basic 运行时消息"
+title: Visual Basic 运行时消息
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37c88c7d88e01e6201a4679ae312e045c8cfab4a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 14258d0cb19b62ec93672998039b8d59a1943fb2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 运行时消息
-本部分包含运行时出现的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 错误消息。  
+本部分包含发生在运行时的 Visual Basic 错误消息。  
   
  [\<地址 > 不是有效的远程文件地址](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   

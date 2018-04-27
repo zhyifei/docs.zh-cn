@@ -15,14 +15,14 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58568b541c43a35f093c45f5ad0efe978b642c91
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM 互操作 (Visual Basic)
-组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 此部分介绍了一些与通过 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 创建和使用 COM 对象相关的问题。  
+组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 本部分将介绍一些创建和使用 Visual Basic 中使用 COM 对象相关联的问题。  
   
 ## <a name="in-this-section"></a>本节内容  
  [COM 互操作介绍](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  

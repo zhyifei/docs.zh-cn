@@ -15,21 +15,21 @@ ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7074206baa51259592cca3fdc224d99438791f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 620453d140e3d4ba2ee468e5bf087df6deb9aad4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 语言功能
-下面各主题介绍并讨论了 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]（面向对象的编程语言）的基本组成部分。 使用窗体和控件创建应用程序的用户界面后，需要编写代码来定义应用程序的行为。 与所有新式编程语言一样，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 支持许多常见的编程构造和语言元素。  
+以下主题介绍和讨论 Visual Basic 中，面向对象的编程语言的基本组件。 使用窗体和控件创建应用程序的用户界面后，需要编写代码来定义应用程序的行为。 与任何现代编程语言一样，Visual Basic 支持许多通用编程构造和语言元素。  
   
- 如果你已使用其他语言进行过编程，可能会对此部分中介绍的大部分资料感到熟悉。 虽然大多数构造与其他语言的构造类似，但 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 的事件驱动本质却造成了细微差异。  
+ 如果你已使用其他语言进行过编程，可能会对此部分中介绍的大部分资料感到熟悉。 尽管大部分构造都是类似于其他语言中，Visual Basic 的事件驱动性质引入了一些细微的差异。  
   
- 如果是刚开始接触编程，可通过此部分中的资料，了解用于编写代码的基本构建基块的入门知识。 掌握基础知识后，便能使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 创建强大的应用程序。  
+ 如果是刚开始接触编程，可通过此部分中的资料，了解用于编写代码的基本构建基块的入门知识。 一旦你已了解基础知识，你可以创建使用 Visual Basic 的强大应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
- [阵列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  介绍了如何通过声明和使用包含多个相关值的数组，让代码变得更紧凑、更强大。  
   
  [集合初始值设定项](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
@@ -91,4 +91,4 @@ ms.lasthandoff: 10/18/2017
  介绍了 .NET Framework 提供的一些类型集合。 展示了如何使用简单的集合和键/值对集合。  
   
  [Visual Basic 语言参考](../../../visual-basic/language-reference/index.md)  
- 收录了有关 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 编程的各方面参考信息。
+ 提供有关 Visual Basic 编程的各个方面的参考信息。

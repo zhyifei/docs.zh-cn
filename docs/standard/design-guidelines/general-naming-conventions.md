@@ -1,12 +1,12 @@
 ---
-title: "通用命名约定"
-ms.custom: 
+title: 通用命名约定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e5c09c4db8e65d836c7afc7cb78c1f9e32bab65
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87f866210667905566d75bfed22ba7b9a521abdc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="general-naming-conventions"></a>通用命名约定
 本部分介绍通用命名约定与 word 选择相关指导说明了如何避免使用特定于语言的名称使用缩写和首字母缩写词和建议。  
@@ -83,8 +83,8 @@ ms.lasthandoff: 12/23/2017
 |**double**|**双精度**|**double**|**双精度**|  
 |**bool**|**布尔值**|**bool**|**布尔值**|  
 |**char**|**Char**|**wchar_t**|**Char**|  
-|**字符串**|**字符串**|**字符串**|**字符串**|  
-|**对象**|**对象**|**对象**|**对象**|  
+|**string**|**字符串**|**字符串**|**字符串**|  
+|**object**|**对象**|**对象**|**对象**|  
   
  **✓ 执行**使用公用名，如`value`或`item`，而不是重复的类型名称，在极少数的情况下当的标识符具有任何语义含义和参数的类型并不重要。  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 12/23/2017
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  [框架设计指南](../../../docs/standard/design-guidelines/index.md)  

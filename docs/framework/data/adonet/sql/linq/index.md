@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 62f7a3b0fcefa9eb6f5b56d96217a9988a193104
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7f303f5b7a7b8675f7d322c6855f4273ebe826ff
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 是 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 3.5 版的一个组件，提供了用于将关系数据作为对象管理的运行时基础结构。  
@@ -30,9 +30,9 @@ ms.lasthandoff: 01/19/2018
   
  在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，关系数据库的数据模型映射到用开发人员所用的编程语言表示的对象模型。 当应用程序运行时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会将对象模型中的语言集成查询转换为 SQL，然后将它们发送到数据库进行执行。 当数据库返回结果时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会将它们转换回您可以用您自己的编程语言处理的对象。  
   
- 使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员通常使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]，它提供了用于实现许多 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 功能的用户界面。  
+ 通常使用 Visual Studio 的开发人员使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]，它提供用于实现许多功能的用户界面[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。  
   
- 此版本的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 附带的文档介绍了生成 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序所需的基本构造块、流程和技术。 你还可以搜索 Microsoft 文档的特定问题，并且可以参与[LINQ 论坛](http://go.microsoft.com/fwlink/?LinkId=76488)，可以与专家们讨论更复杂的主题的详细信息。 最后，[LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205)（LINQ to SQL：关系数据的 .NET 语言集成查询）白皮书详细介绍了 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技术并包含了 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 和 C# 代码示例。  
+ 此版本的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 附带的文档介绍了生成 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序所需的基本构造块、流程和技术。 你还可以搜索 Microsoft 文档的特定问题，并且可以参与[LINQ 论坛](http://go.microsoft.com/fwlink/?LinkId=76488)，可以与专家们讨论更复杂的主题的详细信息。 最后， [LINQ to SQL： 关系数据的.net 语言集成查询](http://go.microsoft.com/fwlink/?LinkId=93205)白皮书详细介绍[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]技术，并包含 Visual Basic 和 C# 代码示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [入门](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
@@ -45,14 +45,14 @@ ms.lasthandoff: 01/19/2018
  提供有关 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的多个方面的参考信息。 相关主题包括“SQL-CLR 类型映射”、“标准查询运算符转换”等。  
   
  [示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
- 提供指向 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 和 C# 示例的链接。  
+ 提供指向 Visual Basic 和 C# 示例。  
   
 ## <a name="related-sections"></a>相关章节  
  [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  提供对 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 技术的概述。  
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- 介绍针对 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 用户的 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 技术。  
+ 描述[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]为 Visual Basic 用户的技术。  
   
  [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  链接到 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 门户。  

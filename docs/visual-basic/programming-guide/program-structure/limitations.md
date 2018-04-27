@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 限制"
-ms.custom: 
+title: Visual Basic 限制
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - limits
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 97a2e162b9f1a673fbe805a5d2ef1421cd423a4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d06b743996969dcd7fc022bbb8ab625f3a151137
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 限制
-早期版本的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]强制在代码中，如变量名的长度的边界中模块和模块大小允许的变量数目。 在 Visual Basic.NET 中，这些限制都放宽了，为你提供更大的自由度中编写和排列你的代码。  
+早期版本的 Visual Basic 强制执行在代码中，如的变量名，在模块和模块大小允许的变量数的长度的边界。 在 Visual Basic.NET 中，这些限制都放宽了，为你提供更大的自由度中编写和排列你的代码。  
   
- 物理限制都依赖更上运行时内存比在编译时的注意事项。 如果你使用较为审慎编程方法，并将大型应用程序中划分为多个类和模块，则很少会遇到内部[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]限制。  
+ 物理限制都依赖更上运行时内存比在编译时的注意事项。 如果你使用较为审慎编程方法，并将大型应用程序中划分为多个类和模块，则遇到了内部的 Visual Basic 限制的可能性很小。  
   
  以下是在极端情况下可能会遇到一些限制：  
   
@@ -40,6 +41,6 @@ ms.lasthandoff: 11/21/2017
   
 -   **环境字符串长度。** 没有为 32768 个字符作为命令行参数使用任何环境字符串的最大值。 这是在所有平台上的限制。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序结构和代码约定](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

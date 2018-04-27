@@ -1,9 +1,10 @@
 ---
-title: "转换摘要 (Visual Basic)"
+title: 转换摘要 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - data type conversion [Visual Basic], keywords
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 76c5d56276dca62af8f0dacc66618b9b941bea35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 87c87dbc9608e5973904343311b504e4586d7197
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="conversion-summary-visual-basic"></a>转换摘要 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]语言关键字和运行时库成员按目的组织和用途。  
+Visual Basic 语言关键字和运行时库成员按目的组织和用途。  
   
 |操作|语言元素|  
 |------------|----------------------|  
@@ -30,13 +31,13 @@ ms.lasthandoff: 11/21/2017
 |将日期转换为序列号。|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A>|  
 |将十进制数字转换成其他基数。|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A>|  
 |将数字转换为字符串。|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A>|  
-|将一种数据类型转换为另一个。|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CType](../../../visual-basic/language-reference/functions/ctype-function.md)， <xref:Microsoft.VisualBasic.Conversion.Fix%2A>，<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
+|将一种数据类型转换为另一个。|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)， [CType](../../../visual-basic/language-reference/functions/ctype-function.md)， <xref:Microsoft.VisualBasic.Conversion.Fix%2A>， <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |将日期转换为日、 月、 周日期或年。|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|  
 |将时间转换为小时、 分钟或秒。|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A>|  
 |将字符串转换为 ASCII 值。|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|  
 |将字符串转换为数字。|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
 |将时间转换为序列号。|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../../../visual-basic/language-reference/keywords/index.md)  
  [Visual Basic 运行库成员](../../../visual-basic/language-reference/runtime-library-members.md)

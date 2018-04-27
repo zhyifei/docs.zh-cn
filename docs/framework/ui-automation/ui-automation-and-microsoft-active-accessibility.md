@@ -1,12 +1,13 @@
 ---
-title: "UI 自动化和 Microsoft Active Accessibility"
-ms.custom: 
+title: UI 自动化和 Microsoft Active Accessibility
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Active Accessibility
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 自动化和 Microsoft Active Accessibility
 > [!NOTE]
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>编程语言  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 基于 [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] ，支持双重接口，因此可以用 C/C++、 [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]和脚本语言进行编程。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] （包括用于标准控件的客户端提供程序库）用托管代码编写，并且 UI 自动化客户端应用程序可以使用 [!INCLUDE[TLA#tla_vcshrp](../../../includes/tlasharptla-vcshrp-md.md)] 或 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]轻松进行编程。 作为接口实现的 UI 自动化提供程序可以用托管代码或 C/C++ 编写。  
+<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 基于[!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)]，支持双重接口，因此 C/c + + 中可编程[!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]，和脚本语言。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] （包括用于标准控件的客户端提供程序库） 用托管代码编写，并且 UI 自动化客户端应用程序轻松进行编程使用 C# 或 Visual Basic.NET。 作为接口实现的 UI 自动化提供程序可以用托管代码或 C/C++ 编写。  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation 中的支持  
@@ -94,7 +96,7 @@ ms.lasthandoff: 12/22/2017
 |ROLE_SYSTEM_LIST|Header|  
 |ROLE_SYSTEM_COLUMNHEADER|标头项|  
 |ROLE_SYSTEM_LINK|超链接|  
-|ROLE_SYSTEM_GRAPHIC|Image|  
+|ROLE_SYSTEM_GRAPHIC|图像|  
 |ROLE_SYSTEM_LIST|列表|  
 |ROLE_SYSTEM_LISTITEM|列表项|  
 |ROLE_SYSTEM_MENUPOPUP|菜单|  
@@ -148,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
  下表显示了哪些 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性对应于 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 状态常量。  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]状态|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|是否触发状态更改？|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 状态|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性|是否触发状态更改？|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
 |STATE_SYSTEM_CHECKED|对于复选框， <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> 对于单选按钮， <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
 |STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  
@@ -177,13 +179,13 @@ ms.lasthandoff: 12/22/2017
 |STATE_SYSTEM_DEFAULT|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
 |STATE_SYSTEM_ANIMATED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
 |STATE_SYSTEM_EXTSELECTABLE|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
-|STATE_SYSTEM_MARQUEED|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
-|STATE_SYSTEM_SELFVOICING|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
+|STATE_SYSTEM_MARQUEED|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
+|STATE_SYSTEM_SELFVOICING|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
 |STATE_SYSTEM_TRAVERSED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
-|STATE_SYSTEM_ALERT_HIGH|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
+|STATE_SYSTEM_ALERT_HIGH|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
 |STATE_SYSTEM_ALERT_MEDIUM|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
-|STATE_SYSTEM_ALERT_LOW|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
-|STATE_SYSTEM_FLOATING|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]服务器广泛实现|  
+|STATE_SYSTEM_ALERT_LOW|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
+|STATE_SYSTEM_FLOATING|未通过 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 服务器广泛实现|  
 |STATE_SYSTEM_HOTTRACKED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
 |STATE_SYSTEM_PRESSED|在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中不可用|  
   
@@ -235,8 +237,8 @@ ms.lasthandoff: 12/22/2017
 |EVENT_SYSTEM_MENUSTART|<xref:System.Windows.Automation.AutomationElement.MenuOpenedEvent>|  
 |EVENT_SYSTEM_MINIMIZEEND|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>属性更改|  
 |EVENT_SYSTEM_MINIMIZESTART|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> 属性更改|  
-|EVENT_SYSTEM_MOVESIZEEND|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>属性更改|  
-|EVENT_SYSTEM_MOVESIZESTART|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>属性更改|  
+|EVENT_SYSTEM_MOVESIZEEND|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 属性更改|  
+|EVENT_SYSTEM_MOVESIZESTART|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 属性更改|  
 |EVENT_SYSTEM_SCROLLINGEND|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty> 或 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 属性更改|  
 |EVENT_SYSTEM_SCROLLINGSTART|<xref:System.Windows.Automation.ScrollPattern.VerticalScrollPercentProperty>或 <xref:System.Windows.Automation.ScrollPattern.HorizontalScrollPercentProperty> 属性更改|  
 |EVENT_SYSTEM_SOUND|无等效项|  
@@ -250,7 +252,7 @@ ms.lasthandoff: 12/22/2017
 |无等效项|<xref:System.Windows.Automation.ScrollPattern.HorizontalViewSizeProperty> 属性更改|  
 |无等效项|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> 属性更改|  
 |无等效项|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> 属性更改|  
-|无等效项|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>属性更改|  
+|无等效项|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> 属性更改|  
 |无等效项|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> 事件|  
 |无等效项|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   

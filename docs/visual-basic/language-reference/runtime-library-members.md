@@ -16,14 +16,14 @@ ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 运行库成员
-`Microsoft.VisualBasic`命名空间包含类、 模块、 常量和枚举构成[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]运行时库。 这些库成员提供过程、 属性和可以在代码中使用的常量值。 每个模块和类表示一个特定的功能类别。  
+`Microsoft.VisualBasic`命名空间包含类、 模块、 常量和枚举构成 Visual Basic 运行库。 这些库成员提供过程、 属性和可以在代码中使用的常量值。 每个模块和类表示一个特定的功能类别。  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection 类  
   
@@ -197,8 +197,8 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 常量和枚举  
- `Microsoft.VisualBasic`命名空间的一部分提供常量和枚举[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]运行时库。 在代码中，可以使用这些常量的值。 每个枚举表示特定的功能类别。 有关详细信息，请参阅[常量和枚举](../../visual-basic/language-reference/constants-and-enumerations.md)。  
+ `Microsoft.VisualBasic`命名空间提供常量和枚举作为 Visual Basic 运行时库的一部分。 在代码中，可以使用这些常量的值。 每个枚举表示特定的功能类别。 有关详细信息，请参阅[常量和枚举](../../visual-basic/language-reference/constants-and-enumerations.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [常量和枚举](../../visual-basic/language-reference/constants-and-enumerations.md)  
  [关键字](../../visual-basic/language-reference/keywords/index.md)

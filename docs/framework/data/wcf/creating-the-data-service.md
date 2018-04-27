@@ -1,27 +1,29 @@
 ---
-title: "创建数据服务"
-ms.custom: 
+title: 创建数据服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 781def411214b0804cdc094c00b2f655b6c3823d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-the-data-service"></a>创建数据服务
 在此任务中，你将创建使用示例数据服务[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公开[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]基于 Northwind 示例数据库的源。 此任务涉及以下几个基本步骤：  
@@ -35,16 +37,16 @@ ms.lasthandoff: 01/19/2018
 4.  启用对数据服务的访问。  
   
 > [!NOTE]
->  在完成此任务时创建的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序将在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 提供的 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Development Server 上运行。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server 仅支持来自本地计算机的访问。 为了便于在开发的过程中测试数据服务和解决问题，可考虑通过使用 Internet Information Services (IIS) 运行承载数据服务的应用程序。 有关详细信息，请参阅 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]在完成此任务时创建的 Web 应用程序在运行[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]提供 Visual Studio 开发服务器。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server 仅支持来自本地计算机的访问。 为了便于在开发的过程中测试数据服务和解决问题，可考虑通过使用 Internet Information Services (IIS) 运行承载数据服务的应用程序。 有关详细信息，请参阅 [如何：开发在 IIS 上运行的 WCF 数据服务](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
   
 ### <a name="to-create-the-aspnet-web-application"></a>创建 ASP.NET Web 应用程序  
   
-1.  在[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]上**文件**菜单上，选择**新建**，然后选择**项目**。  
+1.  在 Visual Studio 中，在**文件**菜单上，选择**新建**，然后选择**项目**。  
   
-2.  在**新项目**对话框中下,[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]或[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]选择**Web**模板，，然后选择**ASP.NET Web 应用程序**。  
+2.  在**新项目**对话框中，在下，Visual Basic 或 Visual C# 选择**Web**模板，，然后选择**ASP.NET Web 应用程序**。  
   
     > [!NOTE]
-    >  如果使用的是 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Web Developer，则必须创建新的网站，而不是创建新的 Web 应用程序。  
+    >  如果使用的是 Visual Studio Web Developer，则必须创建新的网站，而不是新的 Web 应用程序。  
   
 3.  类型`NorthwindService`作为项目的名称。  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  通过执行以下步骤中，连接到数据库的数据模型，然后单击**下一步**:  
   
-    -   如果你没有已配置的数据库连接，请单击**新连接**并创建新连接。 有关详细信息，请参阅[如何： 创建到 SQL Server 数据库的连接](http://go.microsoft.com/fwlink/?LinkId=123631)。 此 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 实例必须附加了 Northwind 示例数据库。  
+    -   如果你没有已配置的数据库连接，请单击**新连接**并创建新连接。 有关详细信息，请参阅[如何： 创建到 SQL Server 数据库的连接](http://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 实例必须附加了 Northwind 示例数据库。  
   
          \- 或 -  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/19/2018
 7.  单击**完成**关闭向导。  
   
     > [!NOTE]
-    >  此生成的数据模型将在实体类型上公开外键属性。 使用 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 创建的数据模型不包括这些外键属性。 因此，在尝试访问使用 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 创建的 Northwind 数据服务之前，必须更新已创建的所有客户端应用程序的客户端数据服务类，然后才能访问这一版本的 Northwind 数据服务。  
+    >  此生成的数据模型将在实体类型上公开外键属性。 使用 Visual Studio 2008 创建的数据模型不包括这些外键属性。 因此，在尝试访问使用 Visual Studio 2008 创建的 Northwind 数据服务之前，必须更新已创建的任何客户端应用程序的客户端数据服务类才能访问这一版本的 Northwind 数据服务。  
   
 ### <a name="to-create-the-data-service"></a>创建数据服务  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  有关服务的名称，键入`Northwind`。  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。 在**解决方案资源管理器**，服务将具有名称为 Northwind 扩展名。 svc.cs 或。 svc.vb。  
+     Visual StudioVisual Studio 创建新的服务的 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。 在**解决方案资源管理器**，服务将具有名称为 Northwind 扩展名。 svc.cs 或。 svc.vb。  
   
 4.  在数据服务的代码中，用数据模型的实体容器的类型（在此示例中为 `/* TODO: put your data source class name here */`）替换定义数据服务的类定义中的注释 `NorthwindEntities`。 该类定义应如下所示：  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 01/19/2018
     >  任何可以访问该 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 应用程序的客户端也能够访问由数据服务公开的资源。 在生产数据服务中，为防止对资源进行未经授权的访问，还应保护应用程序本身的安全。 有关更多信息，请参见 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。  
   
 ## <a name="next-steps"></a>后续步骤  
- 您已成功创建新的数据服务公开[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]必须启用到客户端上具有权限的数据源的访问，基于 Northwind 示例数据库，并且你的源[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 应用程序。 接下来，将开始从数据服务[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]和将访问[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源通过 Web 浏览器提交 HTTP GET 请求：  
+ 您已成功创建新的数据服务公开[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]必须启用到客户端上具有权限的数据源的访问，基于 Northwind 示例数据库，并且你的源[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 应用程序。 接下来，将从 Visual Studio 启动数据服务，并通过 Web 浏览器提交 HTTP GET 请求来访问 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 源：  
   
  [从 Web 浏览器访问服务](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   

@@ -1,12 +1,13 @@
 ---
-title: "WCF 的委派和模拟"
-ms.custom: 
+title: WCF 的委派和模拟
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF 的委派和模拟
 模拟 是一种常用技术，服务可使用该技术限制客户端对服务域资源的访问。 服务域资源可以是计算机资源，如本地文件（模拟），也可以是其他计算机上的资源，如文件共享（委托）。 有关示例应用程序，请参见 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 有关如何使用模拟的示例，请参阅 [How to: Impersonate a Client on a Service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  服务可以模拟客户端的范围取决于服务帐户在尝试模拟时拥有的权限、使用的模拟类型和客户端可能允许的模拟范围。  
   
 > [!NOTE]
->  当客户端和服务在同一计算机上运行，并且客户端在系统帐户（例如 `Local System` 或 `Network Service`）下运行时，如果安全会话是使用有状态安全上下文令牌建立的，则不能模拟客户端。 Windows 窗体或控制台应用程序通常在当前登录的帐户下运行，因此默认情况下可以模拟该帐户。 但是，如果客户端为 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页并且该页承载在 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 或 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]中，则客户端默认情况下运行在 `Network Service` 帐户下。 默认情况下，系统提供的所有支持安全会话的绑定都使用无状态安全上下文令牌 (SCT)。 但如果客户端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页，并且使用了具有有状态 SCT 的安全会话，则不能模拟该客户端。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安全会话中使用有状态 Sct，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  当客户端和服务在同一计算机上运行，并且客户端在系统帐户（例如 `Local System` 或 `Network Service`）下运行时，如果安全会话是使用有状态安全上下文令牌建立的，则不能模拟客户端。 Windows 窗体或控制台应用程序通常在当前登录的帐户下运行，因此默认情况下可以模拟该帐户。 但是，如果客户端为 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页并且该页承载在 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 或 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]中，则客户端默认情况下运行在 `Network Service` 帐户下。 默认情况下，系统提供的所有支持安全会话的绑定都使用无状态安全上下文令牌 (SCT)。 但如果客户端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 页，并且使用了具有有状态 SCT 的安全会话，则不能模拟该客户端。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 安全会话中使用有状态 Sct，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>服务方法中的模拟：声明性模型  
  大多数模拟方案都涉及在调用方上下文中执行服务方法。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一种模拟功能，此功能通过允许用户在 <xref:System.ServiceModel.OperationBehaviorAttribute> 特性中指定模拟要求，使此操作易于执行。 例如，在下面的代码中， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构在执行 `Hello` 方法之前模拟调用方。 只有当本机资源的访问控制列表 (ACL) 允许调用方访问权限时，在 `Hello` 方法内访问该本机资源的任何尝试才能成功。 若要启用模拟，请将 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 属性设置为 <xref:System.ServiceModel.ImpersonationOption> 枚举值之一（<xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>），如下面的示例所示。  
@@ -82,13 +84,13 @@ ms.lasthandoff: 12/22/2017
  只有当调用方使用可以映射到 Windows 用户帐户的凭据进行身份验证时， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构才能模拟调用方。 如果将服务配置为使用无法映射到 Windows 用户帐户的凭据进行身份验证，则不会执行服务方法。  
   
 > [!NOTE]
->  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，如果创建了有状态 SCT，则模拟会失败，导致 <xref:System.InvalidOperationException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
+>  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]中，如果创建了有状态 SCT，则模拟会失败，导致 <xref:System.InvalidOperationException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>服务方法中的模拟：命令性模型  
  有时，调用方不需要模拟整个服务方法，只需模拟它的一部分就行。 在这种情况下，请获取服务方法中调用方的 Windows 标识并以强制方式执行模拟。 为此，请使用 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 的 <xref:System.ServiceModel.ServiceSecurityContext> 属性返回 <xref:System.Security.Principal.WindowsIdentity> 类的实例并在使用该实例前调用 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 方法。  
   
 > [!NOTE]
->  请确保使用 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` 语句或 C# `using` 语句以自动还原模拟操作。 如果不使用此语句，或使用 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 C# 以外的编程语言，请确保还原模拟级别。 否则可导致拒绝服务和特权升级攻击。  
+>  请务必使用 Visual Basic`Using`语句或 C#`using`语句以自动还原模拟操作。 如果你不使用此语句，或使用 Visual Basic 或 C# 以外的编程语言，请确保还原模拟级别。 否则可导致拒绝服务和特权升级攻击。  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|行为|  
 |---------------------------|------------------------------------------------|--------------|  
-|必需|不可用|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模拟调用方|  
+|必需|n/a|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模拟调用方|  
 |Allowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不模拟调用方|  
 |Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模拟调用方|  
 |NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不模拟调用方|  
@@ -124,31 +126,31 @@ ms.lasthandoff: 12/22/2017
   
 |`AllowedImpersonationLevel` 值|服务具有 `SeImpersonatePrivilege`|服务和客户端能够委托|缓存的令牌 `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|匿名|是|不可用|Impersonation|  
-|匿名|否|不可用|标识|  
-|标识|不可用|不可用|标识|  
-|模拟|是|不可用|Impersonation|  
-|Impersonation|否|不可用|标识|  
+|匿名|是|n/a|Impersonation|  
+|匿名|否|n/a|标识|  
+|标识|n/a|n/a|标识|  
+|模拟|是|n/a|Impersonation|  
+|Impersonation|否|n/a|标识|  
 |委托|是|是|委托|  
 |委托|是|否|Impersonation|  
-|委托|否|不可用|标识|  
+|委托|否|n/a|标识|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>从用户名凭据和缓存的令牌模拟获取的模拟级别  
  通过向服务传递客户端的用户名和密码，客户端可以让 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以该用户的身份登录，这等效于将 `AllowedImpersonationLevel` 属性设置为 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>。 （`AllowedImpersonationLevel` 在 <xref:System.ServiceModel.Security.WindowsClientCredential> 和 <xref:System.ServiceModel.Security.HttpDigestClientCredential> 类中可用。）下表提供了当服务接收用户名凭据时获取的模拟级别。  
   
 |`AllowedImpersonationLevel`|服务具有 `SeImpersonatePrivilege`|服务和客户端能够委托|缓存的令牌 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|不可用|是|是|委托|  
-|不可用|是|否|Impersonation|  
-|无|否|不可用|标识|  
+|n/a|是|是|委托|  
+|n/a|是|否|Impersonation|  
+|无|否|n/a|标识|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>从基于 S4U 的模拟获取的模拟级别  
   
 |服务具有 `SeTcbPrivilege`|服务具有 `SeImpersonatePrivilege`|服务和客户端能够委托|缓存的令牌 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|是|是|不可用|Impersonation|  
-|是|否|不可用|标识|  
-|否|不可用|不可用|标识|  
+|是|是|n/a|Impersonation|  
+|是|否|n/a|标识|  
+|否|n/a|n/a|标识|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>将客户端证书映射到 Windows 帐户  
  客户端有可能使用证书向服务验证自己的身份，并让服务通过 Active Directory 将客户端映射到现有帐户。 下面的 XML 演示如何将服务配置为使用映射证书。  

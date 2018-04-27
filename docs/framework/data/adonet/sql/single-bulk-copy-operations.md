@@ -1,27 +1,29 @@
 ---
-title: "单个批量复制操作"
-ms.custom: 
+title: 单个批量复制操作
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 961981fcdf9709a336d76df99c8f65448e76b98a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37402672a6df808cb5e1c2424817fd9ce749cc82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-bulk-copy-operations"></a>单个批量复制操作
 执行 SQL Server 批量复制操作最简单的方法就是对数据库执行单次操作。 默认情况下，批量复制操作是作为一个独立的操作执行的：该复制操作以非事务处理方式进行，不可进行回滚。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 >  我们建议源列和目标列的数据类型匹配。 如果数据类型不匹配， **SqlBulkCopy**尝试将每个源值转换为目标数据类型，使用由规则<xref:System.Data.SqlClient.SqlParameter.Value%2A>。 转换可能会影响性能，还可能会导致意外的错误。 例如，大多数情况下，`Double` 数据类型可以转换为 `Decimal` 数据类型，但是有时就不能。  
   
 ## <a name="example"></a>示例  
- 以下控制台应用程序演示如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类加载数据。 在此示例中，<xref:System.Data.SqlClient.SqlDataReader>用于将数据从复制**Production.Product**表中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] **AdventureWorks**到同一个数据库中的类似表的数据库。  
+ 以下控制台应用程序演示如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 类加载数据。 在此示例中，<xref:System.Data.SqlClient.SqlDataReader>用于将数据从复制**Production.Product**表中的 SQL Server**AdventureWorks**到同一个数据库中的类似表的数据库。  
   
 > [!IMPORTANT]
 >  除非你已创建了工作表中所述，将不会运行此示例[批量复制示例设置](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 提供此代码是为了演示使用的语法**SqlBulkCopy**仅。 如果源表和目标表位于同一个 SQL Server 实例中，则使用 Transact-SQL `INSERT … SELECT` 语句复制数据会更加容易、更加迅速。  

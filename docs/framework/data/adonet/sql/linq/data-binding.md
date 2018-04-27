@@ -1,36 +1,38 @@
 ---
-title: "数据绑定"
-ms.custom: 
+title: 数据绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bb7562c2f6fab7ce496fd87ecdd891531589abfa
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8308700a35bdd2aec2d66f4edd8a89c128e07d7c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-binding"></a>数据绑定
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持绑定到公共控件，如网格控件。 具体而言，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 定义用于绑定到数据网格和处理主-从绑定的基本模式，这两者都与显示和更新有关。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持绑定到公共控件，如网格控件。 具体而言，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 定义用于绑定到数据网格和处理主-从绑定的基本模式，这两者都与显示和更新有关。  
   
 ## <a name="underlying-principle"></a>基本原理  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查询转换成 SQL 以便在数据库上执行。 所得结果为强类型化的 `IEnumerable`。 因为这些对象是一般的公共语言运行时 (CLR) 对象，可以使用一般的对象数据绑定来显示结果。 另一方面，更改操作（插入、更新和删除）则需要额外的步骤。  
   
 ## <a name="operation"></a>操作  
- 隐式绑定到 Windows 窗体控件是通过实现 <xref:System.ComponentModel.IListSource> 完成的。 数据源泛型 <xref:System.Data.Linq.Table%601>（C# 中的 `Table<T>` 或 `Table(Of T)`[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]中的 `DataQuery`）和泛型 <xref:System.ComponentModel.IListSource> 已更新以实现 。 用户界面 (UI) 数据绑定引擎（Windows 窗体和 Windows Presentation Foundation）都会测试其数据源是否实现了 <xref:System.ComponentModel.IListSource>。 因此，如果将查询的直接影响结果写入控件的数据源，则会隐式调用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 集合生成，如下例中所示：  
+ 隐式绑定到 Windows 窗体控件是通过实现 <xref:System.ComponentModel.IListSource> 完成的。 数据源泛型<xref:System.Data.Linq.Table%601>(`Table<T>`在 C# 或`Table(Of T)`在 Visual Basic 中) 和泛型`DataQuery`已经更新，以实现<xref:System.ComponentModel.IListSource>。 用户界面 (UI) 数据绑定引擎（Windows 窗体和 Windows Presentation Foundation）都会测试其数据源是否实现了 <xref:System.ComponentModel.IListSource>。 因此，如果将查询的直接影响结果写入控件的数据源，则会隐式调用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 集合生成，如下例中所示：  
   
  [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
  [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]  
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/17/2018
   
     -   如果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 从 <xref:System.Data.Linq.Table%601> 中找到基础 <xref:System.Linq.IQueryable%601>，则源允许进行编辑，这种情形与第一项中的情形相同。  
   
-    -   如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找不到基础<xref:System.Data.Linq.Table%601>，源不允许进行编辑 (例如， `groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]浏览相应的查询以填充泛型`SortableBindingList`，是一个简单<xref:System.ComponentModel.BindingList%601>，实现根据给定属性对 T 实体进行排序的功能。  
+    -   如果[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]找不到基础<xref:System.Data.Linq.Table%601>，源不允许进行编辑 (例如， `groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 浏览相应的查询以填充泛型`SortableBindingList`，是一个简单<xref:System.ComponentModel.BindingList%601>，实现根据给定属性对 T 实体进行排序的功能。  
   
 ## <a name="specialized-collections"></a>专用集合  
  对于本文档前面部分介绍的许多功能而言，已将 <xref:System.ComponentModel.BindingList%601> 专门用于某些不同的类。 这些类为泛型 `SortableBindingList` 和泛型 `DataBindingList`。 这两种类都声明为内部类。  

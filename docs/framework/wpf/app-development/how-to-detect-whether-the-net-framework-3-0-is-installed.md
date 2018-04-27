@@ -1,34 +1,36 @@
 ---
-title: "如何：检测是否安装了 .NET Framework 3.0"
-ms.custom: 
+title: 如何：检测是否安装了 .NET Framework 3.0
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6990ca4bff7c8756f8d7f25ff0153b3a5d41a4f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>如何：检测是否安装了 .NET Framework 3.0
 管理员可以将部署之前[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]应用程序在系统中，它们必须首先确认[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]运行时就存在。 本主题提供了编写的脚本的 HTML/JavaScript 中，管理员可以用于确定是否[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]系统上存在。  
   
 > [!NOTE]
->  有关详细信息上安装、 部署和检测[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]，请参阅中的讨论[部署 Microsoft.NET Framework 版本 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)。  
+>  有关详细安装信息，部署和检测 Microsoft.NET Framework，请参阅中的讨论[部署 Microsoft.NET Framework 版本 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)。  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>检测".NET CLR"用户代理字符串  

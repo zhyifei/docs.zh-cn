@@ -1,36 +1,38 @@
 ---
-title: "枚举 SQL Server 的实例 (ADO.NET)"
-ms.custom: 
+title: 枚举 SQL Server 的实例 (ADO.NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7b0a81fd9b92e626b52c5a74c65798ddedbd94a9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7a47a3e342887a1dce3912a06ab49a88b7b9b615
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>枚举 SQL Server 的实例 (ADO.NET)
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 允许应用程序在当前网络中查找 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 此返回的表包含与用户尝试创建一个新的连接时提供的列表匹配和扩展包含在所有可用的服务器上的下拉列表的网络上可用的服务器实例的列表**连接属性**对话框。 显示的结果并非总是完整的。  
+SQL Server 允许应用程序查找当前的网络中的 SQL Server 实例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 类向应用程序开发人员公开此信息，提供包含所有可见服务器的信息的 <xref:System.Data.DataTable>。 此返回的表包含与用户尝试创建一个新的连接时提供的列表匹配和扩展包含在所有可用的服务器上的下拉列表的网络上可用的服务器实例的列表**连接属性**对话框。 显示的结果并非总是完整的。  
   
 > [!NOTE]
->  与大多数 Windows 服务一样，最好使用尽可能少的权限运行 SQL 浏览器服务。 有关 SQL Browser 服务以及如何管理其行为的更多信息，请参见 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书。  
+>  与大多数 Windows 服务一样，最好使用尽可能少的权限运行 SQL 浏览器服务。 有关 SQL 浏览器服务以及如何管理其行为的更多信息，请参见“SQL Server 联机图书”。  
   
 ## <a name="retrieving-an-enumerator-instance"></a>检索枚举器实例  
- 若要检索包含有关可用 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 实例的信息的表，必须先使用共享/静态 <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> 属性来检索枚举器：  
+ 要检索包含可用 SQL Server 实例信息的表，必须先使用共享/静态 <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> 属性检索枚举器：  
   
 ```vb  
 Dim instance As System.Data.Sql.SqlDataSourceEnumerator = _  
@@ -59,20 +61,20 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|服务器的名称。|  
 |**InstanceName**|服务器实例的名称。 如果服务器作为默认实例运行，则为空白。|  
 |**IsClustered**|指示服务器是否属于群集。|  
-|**Version**|服务器的版本。 例如:<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
+|**Version**|服务器的版本。 例如：<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>枚举限制  
  所有可用服务器可能会列出，也可能不会列出。 根据超时和网络通信量等因素，列表可能会有所不同。 这可能会使两个连续调用生成不同的列表。 只会列出相同网络上的服务器。 广播包通常不会遍历路由器，这也就是可能会看不到某个服务器列出的原因，但是在各个调用之间是稳定的。  
   
- 列出的服务器可能包含其他信息，也可能不包含其他信息，例如 `IsClustered` 和版本。 这取决于获取列表的方式。 通过 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 浏览器服务列出的服务器比通过 Windows 基础结构发现的服务器具有更详细的信息，后者仅列出名称。  
+ 列出的服务器可能包含其他信息，也可能不包含其他信息，例如 `IsClustered` 和版本。 这取决于获取列表的方式。 通过 SQL Server 浏览器服务列出的服务器将比通过 Windows 基础结构发现的服务器更加详细，后者只会列出名称。  
   
 > [!NOTE]
 >  只有以完全信任模式运行时，才可以使用服务器枚举。 在部分信任的环境中运行的程序集将无法使用服务器枚举，即使这些程序集具有 <xref:System.Data.SqlClient.SqlClientPermission> 代码访问安全性 (CAS) 权限。  
   
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 通过使用名为 SQL Browser 的外部 Windows 服务来提供 <xref:System.Data.Sql.SqlDataSourceEnumerator> 的信息。 默认情况下启用此服务，但是管理员可以关闭或禁用此服务，使服务器实例对此类是不可见的。  
+ SQL Server 提供的信息<xref:System.Data.Sql.SqlDataSourceEnumerator>通过名为 SQL Browser 的外部 Windows 服务使用。 默认情况下启用此服务，但是管理员可以关闭或禁用此服务，使服务器实例对此类是不可见的。  
   
 ## <a name="example"></a>示例  
- 以下控制台应用程序检索所有可见 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 实例的信息，并在控制台窗口中显示该信息。  
+ 以下控制台应用程序检索所有可见 SQL Server 实例的信息并在控制台窗口中显示该信息。  
   
 ```vb  
 Imports System.Data.Sql  

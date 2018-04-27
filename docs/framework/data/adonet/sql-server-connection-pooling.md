@@ -1,27 +1,29 @@
 ---
-title: "SQL Server 连接池 (ADO.NET)"
-ms.custom: 
+title: SQL Server 连接池 (ADO.NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 497ebbd573ea05568010485f04f08cdeddbf6041
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c0be63e767255508ac93555a503980f3798e70c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 连接池 (ADO.NET)
 连接到数据库服务器通常由几个需要很长时间的步骤组成。 必须建立物理通道（例如套接字或命名管道），必须与服务器进行初次握手，必须分析连接字符串信息，必须由服务器对连接进行身份验证，必须运行检查以便在当前事务中登记，等等。  
@@ -78,13 +80,13 @@ using (SqlConnection connection = new SqlConnection(
  连接池进程通过在连接释放回池中时重新分配连接，来满足这些连接请求。 如果已达到最大池大小且不存在可用的连接，则该请求将会排队。 然后，池进程尝试重新建立任何连接，直至到达超时时间（默认值为 15 秒）。 如果池进程在连接超时之前无法满足请求，将引发异常。  
   
 > [!CAUTION]
->  我们强烈建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 要关闭连接，可以使用 `Close` 对象的 `Dispose` 或 `Connection` 方法，也可以通过在 C# 的 `using` 语句中或 `Using` 的 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 语句中打开所有连接。 不是显式关闭的连接可能不会添加或返回到池中。 有关详细信息，请参阅[using 语句](~/docs/csharp/language-reference/keywords/using-statement.md)或[如何： 释放系统资源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)为[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]。  
+>  我们强烈建议您在使用完连接时一定要关闭连接，以便连接可以返回池。 你可以执行此使用`Close`或`Dispose`方法`Connection`对象，或通过打开内的所有连接`using`C# 中的语句或`Using`在 Visual Basic 中的语句。 不是显式关闭的连接可能不会添加或返回到池中。 有关详细信息，请参阅[using 语句](~/docs/csharp/language-reference/keywords/using-statement.md)或[如何： 释放系统资源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)适用于 Visual Basic。  
   
 > [!NOTE]
 >  不要在类的 `Close` 方法中对 `Dispose`、`Connection` 或任何其他托管对象调用 `DataReader` 或 `Finalize`。 在终结器中，仅释放类直接拥有的非托管资源。 如果类不拥有任何非托管资源，则不要在类定义中包含 `Finalize` 方法。 有关详细信息，请参阅[垃圾回收](../../../../docs/standard/garbage-collection/index.md)。  
   
 > [!NOTE]
->  从连接池中提取连接或连接返回连接池时，服务器不会引发登录和注销事件。 这是因为连接返回连接池时实际上没有关闭。 有关详细信息，请参阅[Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx)和[审核注销事件类](http://msdn2.microsoft.com/library/ms175827.aspx)中[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]联机丛书。  
+>  从连接池中提取连接或连接返回连接池时，服务器不会引发登录和注销事件。 这是因为连接返回连接池时实际上没有关闭。 有关详细信息，请参阅[Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx)和[审核注销事件类](http://msdn2.microsoft.com/library/ms175827.aspx)SQL Server 联机丛书中。  
   
 ## <a name="removing-connections"></a>移除连接  
  如果空闲时间达到大约 4-8 分钟，或池进程检测到与服务器的连接已断开，连接池进程会将该连接从池中移除。 注意，只有在尝试与服务器进行通信之后才能检测到断开的连接。 如果发现某连接不再连接到服务器，则会将其标记为无效。 无效连接只有在关闭或重新建立后，才会从连接池中移除。  
@@ -111,7 +113,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>因为许多数据库产生的池碎片  
  许多 Internet 服务提供商在一台服务器上托管多个网站。 他们可能使用单个数据库确认窗体身份验证登录，然后为该用户或用户组打开与特定数据库的连接。 与身份验证数据库的连接将建立池连接，供每个用户使用。 但是，每个数据库的连接存在一个独立的池，这会增加与服务器的连接数。  
   
- 这也会对应用程序设计产生副作用。 可通过一种相对简单的方法来避免此副作用，而不会影响连接到 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 时的安全性。 连接到服务器上的相同数据库而不是为每个用户或组连接到单独的数据库，然后执行 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE 语句来切换到所需数据库。 以下代码段演示如何创建与 `master` 数据库的初始连接，然后切换到 `databaseName` 字符串变量中指定的所需数据库。  
+ 这也会对应用程序设计产生副作用。 但是，可以通过一个相对简单的方式避免此副作用，而又不会影响连接 SQL Server 时的安全性。 连接到服务器上的相同数据库而不是为每个用户或组连接到单独的数据库，然后执行 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE 语句来切换到所需数据库。 以下代码段演示如何创建与 `master` 数据库的初始连接，然后切换到 `databaseName` 字符串变量中指定的所需数据库。  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  
@@ -136,7 +138,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>应用程序角色和连接池  
- 通过调用 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 系统存储过程激活 `sp_setapprole` 应用程序角色之后，无法重置该连接的安全上下文。 但是，如果启用了池，连接将返回池，在重复使用池连接时会出错。 有关详细信息，请参阅知识库文章中，"[SQL 与 OLE DB 资源池的应用程序角色错误](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。"  
+ 通过调用 `sp_setapprole` 系统存储过程激活了 SQL Server 应用程序角色之后，该连接的安全上下文无法重置。 但是，如果启用了池，连接将返回池，在重复使用池连接时会出错。 有关详细信息，请参阅知识库文章中，"[SQL 与 OLE DB 资源池的应用程序角色错误](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。"  
   
 ### <a name="application-role-alternatives"></a>应用程序角色替代项  
  建议您利用可以使用的安全机制，而不使用应用程序角色。 有关详细信息，请参阅[SQL Server 中创建应用程序角色](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)。  

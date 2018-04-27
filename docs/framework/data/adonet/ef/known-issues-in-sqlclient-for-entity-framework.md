@@ -1,38 +1,40 @@
 ---
-title: "SqlClient 中的已知问题（实体框架）"
-ms.custom: 
+title: SqlClient 中的已知问题（实体框架）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3fb62e266ee6f0ca7957667d7c41fbd90dd34d32
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d5363ede9735ea805284638f795af67f2415ad0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  
   
 ## <a name="trailing-spaces-in-string-functions"></a>字符串函数中的尾随空格  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 忽略字符串值中的尾随空格。 因此，传递字符串中的尾随空格可能导致不可预知的结果，甚至会导致失败。  
+ SQL Server 将忽略字符串值中的尾随空格。 因此，传递字符串中的尾随空格可能导致不可预知的结果，甚至会导致失败。  
   
- 如果字符串中必须包含尾随空格，应考虑在末尾追加一个空白字符，这样 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 就不会修整该字符串。 如果尾随空格不是必需的，应在传递给查询管道之前进行修整。  
+ 如果你必须具有字符串中的尾随空格，您应考虑追加一个空白字符，在结束时，SQL Server 不会修整字符串。 如果尾随空格不是必需的，应在传递给查询管道之前进行修整。  
   
 ## <a name="right-function"></a>RIGHT 函数  
  如果将非 `null` 值和 0 分别作为第一个参数和第二个参数传递给 `RIGHT(nvarchar(max)`, 0`)` 或 `RIGHT(varchar(max)`, 0`)`，将返回 `NULL` 值，而不是 `empty` 字符串。  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS 和 OUTER APPLY 运算符  
- [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 引入了 CROSS 和 OUTER APPLY 运算符。 在某些情况下查询管道可能生成包含 CROSS APPLY 和/或 OUTER APPLY 运算符的 TRANSACT-SQL 语句。 因为某些后端提供程序（包括 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 版本）不支持这些运算符，所以不能对这些后端提供程序执行此类查询。  
+ [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 引入了 CROSS 和 OUTER APPLY 运算符。 在某些情况下查询管道可能生成包含 CROSS APPLY 和/或 OUTER APPLY 运算符的 TRANSACT-SQL 语句。 因为某些后端提供程序，包括 SQL Server 的版本早于[!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]，不支持这些运算符，对这些后端提供程序不能执行此类查询。  
   
  下面是一些可能导致输出查询中出现 CROSS APPLY 和/或 OUTER APPLY 运算符的典型情况：  
   
@@ -68,7 +70,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>服务器生成的 GUID 标识值  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持服务器生成的 GUID 类型标识值，但提供程序必须支持在插入行后返回服务器生成的标识值。 从开始[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]2005，你可以返回中的服务器生成 GUID 类型[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]数据库通过[OUTPUT 子句](http://go.microsoft.com/fwlink/?LinkId=169400)。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持服务器生成的 GUID 类型标识值，但提供程序必须支持在插入行后返回服务器生成的标识值。 从 SQL Server 2005 开始，你可以通过 SQL Server 数据库中返回服务器生成 GUID 类型[OUTPUT 子句](http://go.microsoft.com/fwlink/?LinkId=169400)。  
   
 ## <a name="see-also"></a>请参阅  
  [用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  

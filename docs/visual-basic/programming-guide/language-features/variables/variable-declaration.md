@@ -1,12 +1,13 @@
 ---
-title: "Visual Basic 中的变量声明"
-ms.custom: 
+title: Visual Basic 中的变量声明
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8edd0b65b08efd437cc35e8f58ed7ed423736920
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的变量声明
 声明一个变量以指定其名称和特性。 变量的声明语句是[Dim 语句](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置和内容确定变量的特征。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="declaration-levels"></a>声明级别  
   
 ### <a name="local-and-member-variables"></a>本地和成员变量  
- A*局部变量*是指在过程内声明。 A*成员变量*为属于[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]键入; 在模块级别，在类、 结构或模块，但不是能在该类、 结构或模块的内部任何过程声明。  
+ A*局部变量*是指在过程内声明。 A*成员变量*是 Visual Basic 类型; 的成员在模块级别，在类、 结构或模块，但不是能在该类、 结构或模块的内部任何过程声明。  
   
 ### <a name="shared-and-instance-variables"></a>共享和实例变量  
  在类或结构中，成员变量的类别取决于共享。 如果它用声明[共享](../../../../visual-basic/language-reference/modifiers/shared.md)关键字，它是*共享的变量*，并且它在类或结构的所有实例间共享的单个副本中存在。  
@@ -51,15 +52,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="declaring-data-type"></a>声明数据类型  
  [作为](../../../../visual-basic/language-reference/statements/as-clause.md)声明语句中的子句允许你定义的数据类型或正在声明的变量的对象类型。 你可以指定任何以下类型的变量：  
   
--   基本数据类型，如`Boolean`， `Long`，或`Decimal`  
+-   基本数据类型，如`Boolean`， `Long`，或 `Decimal`  
   
 -   复合数据类型，如数组或结构  
   
 -   对象类型或在你的应用程序或其他应用程序中定义的类  
   
--   A[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类，如<xref:System.Windows.Forms.Label>或<xref:System.Windows.Forms.TextBox>  
+-   A[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类，如<xref:System.Windows.Forms.Label>或 <xref:System.Windows.Forms.TextBox>  
   
--   接口类型，如<xref:System.IComparable>或<xref:System.IDisposable>  
+-   接口类型，如<xref:System.IComparable>或 <xref:System.IDisposable>  
   
  您可以声明在一个语句中的多个变量，而无需重复的数据类型。 在下面的语句中，变量`i`， `j`，和`k`声明为类型`Integer`，`l`和`m`作为`Long`，和`x`和`y`作为`Single`:  
   
@@ -86,7 +87,7 @@ Dim l, m As Long, x, y As Single
   
  变量的*访问级别*是有权访问它的代码的范围。 这由访问修饰符 (如[公共](../../../../visual-basic/language-reference/modifiers/public.md)或[私有](../../../../visual-basic/language-reference/modifiers/private.md)) 在中使用`Dim`语句。 有关详细信息，请参阅[访问 Visual Basic 中的级别](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：创建新变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
  [如何：将数据移入和移出变量](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
  [数据类型](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  

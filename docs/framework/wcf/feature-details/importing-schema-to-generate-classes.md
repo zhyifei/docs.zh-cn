@@ -1,12 +1,13 @@
 ---
-title: "导入架构以生成类"
-ms.custom: 
+title: 导入架构以生成类
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 一起使用的可用架构中生成类，则使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 类。 本主题描述该过程和变体。  
@@ -59,7 +61,7 @@ ms.lasthandoff: 12/22/2017
  可以将 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 的 <xref:System.Runtime.Serialization.XsdDataContractImporter> 属性设置为 <xref:System.Runtime.Serialization.ImportOptions> 类的一个实例，以便控制导入过程的各个方面。 许多选项会直接影响生成的类型。  
   
 #### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>控制访问级别（GenerateInternal 或 /internal 开关）  
- 这对应于**/ 内部**切换[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
+ 这对应于 **/ 内部**切换[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
  通常情况下，公共类型是从架构生成的，具有私有字段和匹配的公共数据成员属性。 若要生成内部类型，则将 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 属性设置为 `true`。  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
   
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>控制命名空间（Namespaces 或 /namespace 开关）  
- 这对应于**/namespace**切换`Svcutil.exe`工具。  
+ 这对应于 **/namespace**切换`Svcutil.exe`工具。  
   
  通常情况下，将从架构生成的类型生成到[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]对应于特定每个 XSD 命名空间具有命名空间[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]根据中所述的映射的命名空间[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). 通过将 <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> 属性设置为 <xref:System.Collections.Generic.Dictionary%602> 可以自定义此映射。 如果在字典中找到了给定的 XSD 命名空间，则也可从字典中获得匹配的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 命名空间。  
   
@@ -77,13 +79,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- 下面的示例使用 `Namespaces` 属性将“http://schemas.contoso.com/carSchema”命名空间映射为“Contoso.Cars”。  
+ 下面的示例使用`Namespaces`属性映射"http://schemas.contoso.com/carSchema"命名空间为"Contoso.Cars"。  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>添加 SerializableAttribute（GenerateSerializable 或 /serializable 开关）  
- 这对应于**/ 可序列化**切换`Svcutil.exe`工具。  
+ 这对应于 **/ 可序列化**切换`Svcutil.exe`工具。  
   
  有时，对于从架构生成的类型来说，能够与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 运行时序列化引擎（例如 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 类）一起使用十分重要。 这在使用这些类型进行 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理时很有用。 若要启用它，则除常规 <xref:System.SerializableAttribute> 属性除外，还必须将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于生成的类型。 如果 `GenerateSerializable` 导入选项设置为 `true`，则将自动生成该属性。  
   
@@ -93,9 +95,9 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[c_SchemaImportExport#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#4)]  
   
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>添加数据绑定支持（EnableDataBinding 或 /enableDataBinding 开关）  
- 这对应于**/enableDataBinding**切换于 Svcutil.exe 工具。  
+ 这对应于 **/enableDataBinding**切换于 Svcutil.exe 工具。  
   
- 有时，可能需要将从架构生成的类型绑定到图形用户界面组件，这样这些类型实例的任何更新都将自动更新 UI。 `XsdDataContractImporter` 可以生成实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口的类型，以使任何属性更改都触发事件。 如果正在生成将与支持此接口（如 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]）的客户端 UI 编程环境一起使用的类型，则将 <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> 属性设置为 `true` 以启用此功能。  
+ 有时，可能需要将从架构生成的类型绑定到图形用户界面组件，这样这些类型实例的任何更新都将自动更新 UI。 `XsdDataContractImporter` 可以生成实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口的类型，以使任何属性更改都触发事件。 如果要生成支持此接口 (如 Windows Presentation Foundation (WPF)) 的客户端 UI 编程环境一起使用的类型，设置<xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A>属性`true`若要启用此功能。  
   
  下面的示例演示在 `Vehicle` 设置为 <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> 时生成的 `true` 类。  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  也可将任何关联视为列表。 例如，可以将上面的关联视为一个复杂的 `city` 对象列表，这些对象碰巧有两个字段（一个字符串字段和一个整数字段）。 这两种模式在 XSD 架构中都有一种表示形式。 由于无法区分列表和关联，因此始终将这种模式作为列表处理，架构中出现特定于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的特殊批注除外。 该批注指示给定模式表示一个关联。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+>  也可将任何关联视为列表。 例如，可以将上面的关联视为一个复杂的 `city` 对象列表，这些对象碰巧有两个字段（一个字符串字段和一个整数字段）。 这两种模式在 XSD 架构中都有一种表示形式。 由于无法区分列表和关联，因此始终将这种模式作为列表处理，架构中出现特定于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的特殊批注除外。 该批注指示给定模式表示一个关联。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  通常情况下，将列表作为派生自泛型列表的集合数据协定导入，或作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数组导入，具体取决于架构是否遵循集合的标准命名模式。 此进行了更详细地描述[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 通常将关联作为 <xref:System.Collections.Generic.Dictionary%602> 或派生自字典对象的集合数据协定导入。 例如，考虑下面的架构。  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
  引用的集合类型机制不仅适用于基元集合，也适用于复杂类型集合（包括其他集合的集合）。  
   
- `ReferencedCollectionTypes`属性对应于**/collectionType**切换于 SvcUtil.exe 工具。 请注意，若要引用多个集合类型， **/collectionType**交换机必须多次指定。 如果类型不在 MsCorLib.dll 中，还必须使用引用其程序集**/参考**切换。  
+ `ReferencedCollectionTypes`属性对应于 **/collectionType**切换于 SvcUtil.exe 工具。 请注意，若要引用多个集合类型， **/collectionType**交换机必须多次指定。 如果类型不在 MsCorLib.dll 中，还必须使用引用其程序集 **/参考**切换。  
   
 #### <a name="import-options-referencing-existing-types"></a>导入选项：引用现有类型  
  有时，架构中的类型对应于现有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型，因此不需要从头开始生成这些类型。 （本节仅适用于非集合类型。 有关集合类型，请参见上一节。）  
@@ -149,7 +151,7 @@ ms.lasthandoff: 12/22/2017
   
  向引用的类型集合添加多个具有相同数据协定名称和命名空间的类型是合法的，前提是不导入具有该名称和命名空间的架构类型。 这样您就可以轻松地将程序集中的所有类型添加到集合中，而无需担心在架构中并未实际出现的类型重复项。  
   
- `ReferencedTypes`属性对应于**/参考**切入特定的 Svcutil.exe 工具操作模式。  
+ `ReferencedTypes`属性对应于 **/参考**切入特定的 Svcutil.exe 工具操作模式。  
   
 > [!NOTE]
 >  当使用 Svcutil.exe 或 (在[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)])**添加服务引用**自动引用 MsCorLib.dll 中的类型的所有工具。  
@@ -159,7 +161,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="design-considerations"></a>设计注意事项  
   
--   直接使用弱类型 XML 表示形式可能有些困难。 可以考虑使用其他序列化引擎（例如 <xref:System.Xml.Serialization.XmlSerializer>），以便以强类型方式使用与数据协定不兼容的架构。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
+-   直接使用弱类型 XML 表示形式可能有些困难。 可以考虑使用其他序列化引擎（例如 <xref:System.Xml.Serialization.XmlSerializer>），以便以强类型方式使用与数据协定不兼容的架构。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
   
 -   某些架构构造不能通过 <xref:System.Runtime.Serialization.XsdDataContractImporter> 事件导入，即使是 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 属性设置为 `true`。 此外，在此情况下可以考虑使用 <xref:System.Xml.Serialization.XmlSerializer>。  
   
@@ -169,7 +171,7 @@ ms.lasthandoff: 12/22/2017
   
  可以结合使用 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 选项和上述 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 选项。 对于那些必须作为 <xref:System.Xml.Serialization.IXmlSerializable> 实现生成的类型，使用 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 功能时将跳过结构检查。  
   
- <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>选项对应于**/importXmlTypes**切换于 Svcutil.exe 工具。  
+ <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>选项对应于 **/importXmlTypes**切换于 Svcutil.exe 工具。  
   
 ##### <a name="working-with-generated-ixmlserializable-types"></a>使用生成的 IXmlSerializable 类型  
  生成的 `IXmlSerializable` 类型包含名为“nodesField”的私有字段，该字段返回一个 <xref:System.Xml.XmlNode> 对象数组。 反序列化此类的实例时，可以使用 XML 文档对象模型直接通过该字段访问 XML 数据。 序列化此类的实例时，可以将该字段设置为所需的 XML 数据，然后它将被序列化。  
@@ -188,7 +190,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 属性。 指定用于为生成的类生成代码的 <xref:System.CodeDom.Compiler.CodeDomProvider>。 导入机制尝试避免不受 <xref:System.CodeDom.Compiler.CodeDomProvider> 支持的功能。 如果未设置 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，则可以无限制地使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 功能全集。  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

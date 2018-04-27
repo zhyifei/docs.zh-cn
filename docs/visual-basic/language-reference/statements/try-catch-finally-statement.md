@@ -1,10 +1,11 @@
 ---
-title: "Try...Catch...Finally 语句 (Visual Basic)"
+title: Try...Catch...Finally 语句 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Try...Catch...Finally
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 701475d41d24ad89e6c83796f7cc5cd4b7802a32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally 语句 (Visual Basic)
 提供用于处理部分或全部错误的给定块中的代码，同时仍在运行代码的方法。  
@@ -70,17 +71,17 @@ End Try
 ## <a name="remarks"></a>备注  
  如果你预计特定异常可能发生在特定的代码部分的过程，将代码放入`Try`块并使用`Catch`块保留控件和处理异常发生时。  
   
- A`Try…Catch`语句组成`Try`块后跟一个或多个`Catch`子句，指定各种异常的处理程序。 当中引发了异常`Try`块，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]查找`Catch`处理异常的语句。 如果匹配`Catch`未找到语句，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]检查调用当前的方法，并以此类推遍历调用堆栈的方法。 如果没有`Catch`找到该块，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]向用户显示一条未处理的异常消息并停止执行程序。  
+ A`Try…Catch`语句组成`Try`块后跟一个或多个`Catch`子句，指定各种异常的处理程序。 当中引发了异常`Try`阻止，Visual Basic 查找`Catch`处理异常的语句。 如果匹配`Catch`找不到语句、 Visual Basic 检查调用当前的方法，并以此类推遍历调用堆栈的方法。 如果没有`Catch`块找不到，Visual Basic 为用户显示一条未处理的异常消息和停止程序执行。  
   
  你可以使用多个`Catch`中的语句`Try…Catch`语句。 如果你这样做，请的顺序`Catch`子句很重要，因为它们按顺序检查。 在使用更笼统的子句之前获取特定性更强的异常。  
   
  以下`Catch`语句条件将最不具体，并将捕获所有派生自异常<xref:System.Exception>类。 应与上一通常使用一种这些变体`Catch`中阻止`Try...Catch...Finally`结构之后捕获您期望的所有特定异常。 控制流可以永远不会到达`Catch`遵循以下任一这些变体的块。  
   
--   `type`是`Exception`，例如：`Catch ex As Exception`  
+-   `type`是`Exception`，例如： `Catch ex As Exception`  
   
--   语句未包含任何`exception`变量，例如：`Catch`  
+-   语句未包含任何`exception`变量，例如： `Catch`  
   
- 当`Try…Catch…Finally`语句嵌套在另一个`Try`块，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]首先检查每个`Catch`中最内层语句`Try`块。 如果没有任何匹配`Catch`语句找不到，则继续搜索`Catch`语句的外部`Try…Catch…Finally`块。  
+ 当`Try…Catch…Finally`语句嵌套在另一个`Try`块中，Visual Basic 首先检查每个`Catch`中最内层语句`Try`块。 如果没有任何匹配`Catch`语句找不到，则继续搜索`Catch`语句的外部`Try…Catch…Finally`块。  
   
  从本地变量`Try`块中不可用`Catch`进行阻止，因为它们是单独的块。 如果你想要在多个块中使用变量，声明外部变量`Try...Catch...Finally`结构。  
   
@@ -108,7 +109,7 @@ End Try
 ## <a name="exception-argument"></a>异常自变量  
  `Catch`块`exception`自变量是的一个实例<xref:System.Exception>类或派生自类`Exception`类。 `Exception`类实例对应于中发生的错误`Try`块。  
   
- 属性`Exception`对象帮助以确定原因和处理的异常的位置。 例如，<xref:System.Exception.StackTrace%2A>属性列表导致异常，帮助您找到代码中发生错误的调用的方法。 <xref:System.Exception.Message%2A>返回描述异常的消息。 <xref:System.Exception.HelpLink%2A>返回与关联的帮助文件链接。 <xref:System.Exception.InnerException%2A>返回`Exception`导致当前异常，或它的对象返回`Nothing`如果没有原始`Exception`。  
+ 属性`Exception`对象帮助以确定原因和处理的异常的位置。 例如，<xref:System.Exception.StackTrace%2A>属性列表导致异常，帮助您找到代码中发生错误的调用的方法。 <xref:System.Exception.Message%2A> 返回描述异常的消息。 <xref:System.Exception.HelpLink%2A> 返回与关联的帮助文件链接。 <xref:System.Exception.InnerException%2A> 返回`Exception`导致当前异常，或它的对象返回`Nothing`如果没有原始`Exception`。  
   
 ## <a name="considerations-when-using-a-trycatch-statement"></a>使用 Try 时的注意事项...Catch 语句  
  使用`Try…Catch`语句只是为了指示不寻常或意外程序事件的匹配项。 此错误的原因包括：  
@@ -134,7 +135,7 @@ End Try
   
  `Await`表达式不能包含在内`Catch`块或`Finally`块。  
   
-## <a name="iterators"></a>迭代器  
+## <a name="iterators"></a>Iterators  
  迭代器函数或`Get`访问器对集合执行自定义迭代。 迭代器使用[产生](../../../visual-basic/language-reference/statements/yield-statement.md)语句以返回一次的集合的每个元素。 使用调用迭代器函数[每个...下一条语句](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
   
  A`Yield`语句可以是内部`Try`块。 A`Try`包含块`Yield`语句可以有`Catch`阻止，并且可以`Finally`块。 请参阅的"重试块在 Visual Basic"部分[迭代器](../../programming-guide/concepts/iterators.md)有关示例。  

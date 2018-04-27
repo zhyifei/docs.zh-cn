@@ -1,27 +1,29 @@
 ---
-title: "如何：验证 DBML 和外部映射文件"
-ms.custom: 
+title: 如何：验证 DBML 和外部映射文件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7724586c33c19654c3657a5a4604a3c74f2c8756
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d3fc297078c9f6c1ac8b2d8a498050f294a5437
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>如何：验证 DBML 和外部映射文件
-您修改的外部映射文件和 .dbml 文件必须通过其各自架构定义的验证。 本主题为 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 用户提供了执行验证过程的步骤。  
+您修改的外部映射文件和 .dbml 文件必须通过其各自架构定义的验证。 本主题提供的步骤的 Visual Studio 用户来实现验证过程。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/17/2018
      确定是否已生成了错误、警告或消息。 如果未生成，则说明此 XML 文件对此架构定义有效。  
   
 ## <a name="alternate-method-for-supplying-schema-definition"></a>提供架构定义的另一种方法  
- 如果因某种原因导致相应的.xsd 文件未出现在**XML 架构**对话框中，你可以从帮助主题中下载此.xsd 文件。 以下步骤可帮助您将所下载的文件保存为 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] XML 编辑器所需的 Unicode 格式。  
+ 如果因某种原因导致相应的.xsd 文件未出现在**XML 架构**对话框中，你可以从帮助主题中下载此.xsd 文件。 以下步骤帮助你在所需由 Visual Studio XML 编辑器中的 Unicode 格式保存下载的文件。  
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>从帮助主题中复制架构定义文件  
   

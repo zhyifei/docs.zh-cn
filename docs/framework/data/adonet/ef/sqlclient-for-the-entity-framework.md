@@ -1,24 +1,26 @@
 ---
-title: "用于实体框架的 SqlClient"
-ms.custom: 
+title: 用于实体框架的 SqlClient
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 08f662d41f1a147970ae7611f4fe061dd86bac1f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2801ad445be073f2cd4725d04a0c731e8bfcdd1b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>用于实体框架的 SqlClient
 本节介绍用于 SQL Server (SqlClient) 的 .NET Framework 数据提供程序，该提供程序使实体框架能够在 Microsoft SQL Server 上工作。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken 架构属性  
  `ProviderManifestToken` 是以 SSDL 表示的 `Schema` 元素的一个必需特性。 此标记用于为脱机方案加载提供程序清单。 有关详细信息`ProviderManifestToken`属性，请参阅[架构元素 (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)。  
   
- SqlClient 可以用作不同版本 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 的数据提供程序。 这些版本具有不同的功能。 例如，[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 不支持在 `varchar(max)` 中引入的 `nvarchar(max)` 和 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 类型。  
+ SqlClient 可以用作不同版本的 SQL Server 数据提供程序。 这些版本具有不同的功能。 例如，[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 不支持在 `varchar(max)` 中引入的 `nvarchar(max)` 和 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 类型。  
   
  针对不同版本的 SQL Server，SqlClient 生成和接受以下提供程序清单标记。  
   

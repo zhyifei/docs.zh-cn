@@ -1,23 +1,24 @@
 ---
-title: "重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持"
-ms.custom: 
+title: 重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>重新承载的工作流设计器中新 Workflow Foundation 4.5 功能的支持
 [!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引入了许多新功能，包括对工作流设计器体验的多项增强。 本主题详细介绍重新承载的设计器中支持哪些功能以及当前不支持哪些功能。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  以下屏幕快照显示了 `WriteLine` 的 `Body` 中的 `NoPersistScope` 活动。  
   
- ![自动 &#45; 放置位置的环绕](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![自动&#45;包围放置位置](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  以下屏幕快照显示了在第一个 `Sequence` 下面丢弃第二个时在 `Body` 中自动创建的 `WriteLine` 活动。  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/22/2017
  也可以在设计器中拖动并放置多个选择的活动，并使用上下文菜单与这些活动交互。  
   
 ### <a name="outline-view-of-workflow-items"></a>工作流项的大纲视图  
- 为了更加方便地浏览分层工作流，工作流的组件显示在树样式的大纲视图中。 大纲视图将显示在**文档大纲**视图。 若要打开此视图[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]，从顶部菜单中，选择**视图**，**其他窗口**，**文档大纲**，或按 Ctrl W、 u。 单击大纲视图中的节点将会定位到工作流设计器中的相应活动，并且该大纲视图将会更新以显示在设计器中选择的活动。 重新承载的编辑器支持此功能。  
+ 为了更加方便地浏览分层工作流，工作流的组件显示在树样式的大纲视图中。 大纲视图将显示在**文档大纲**视图。 若要在 Visual Studio 中，打开此视图，从顶部菜单中，选择**视图**，**其他窗口**，**文档大纲**，或按 Ctrl W、 u。 单击大纲视图中的节点将会定位到工作流设计器中的相应活动，并且该大纲视图将会更新以显示在设计器中选择的活动。 重新承载的编辑器支持此功能。  
   
  从完成的工作流的以下屏幕截图[入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)显示大纲视图中的，一个顺序工作流。  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
  也可以将活动拖动到流程图节点和状态之间的连接上，以在两个其他节点之间自动插入该节点。 以下屏幕快照显示了突出显示的连接线，可在此连接线处从工具箱拖动并放置活动。  
   
- ![自动 &#45; 插入放置活动的处理](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "自动插入")  
+ ![自动&#45;插入放置活动的句柄](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "自动插入")  
   
  重新承载的设计器支持自动连接和自动插入。  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 12/22/2017
  有关创建状态机工作流的详细信息，请参阅[状态机工作流](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。 重新承载的工作流编辑器状态机工作流。  
   
 ### <a name="contract-first-workflow-development"></a>协定优先工作流开发  
- 通过协定优先工作流开发工具，开发人员可以先用代码设计一个协定，然后，通过在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 中进行几次单击，即可在工具箱中自动生成表示每个操作的活动模板。 这些活动随后用于创建实现由该协定定义的操作的工作流。 工作流设计器将对该工作流服务进行验证，以确保实现这些操作并且工作流的签名与协定签名匹配。 开发人员还可以将工作流服务与所实现的协定的集合进行关联。 协定优先工作流服务开发的详细信息，请参阅[如何： 创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+ 协定优先工作流开发工具允许开发人员可以先，设计一个协定在代码中的，然后在 Visual Studio 中单击几下，自动生成活动模板在工具箱中表示每个操作。 这些活动随后用于创建实现由该协定定义的操作的工作流。 工作流设计器将对该工作流服务进行验证，以确保实现这些操作并且工作流的签名与协定签名匹配。 开发人员还可以将工作流服务与所实现的协定的集合进行关联。 协定优先工作流服务开发的详细信息，请参阅[如何： 创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
 > [!WARNING]
 >  工作流设计器不支持协定优先工作流开发。

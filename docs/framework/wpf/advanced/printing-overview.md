@@ -1,12 +1,13 @@
 ---
-title: "打印概述"
-ms.custom: 
+title: 打印概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>打印概述
-通过 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]，使用 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 的应用程序开发人员可以使用一组新的功能丰富的打印和打印系统管理 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
+使用 Microsoft.NET Framework 中，应用程序开发人员使用[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]具有一套丰富新的打印和打印系统管理[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
   
  本主题包含以下各节：  
   
@@ -46,14 +48,12 @@ ms.lasthandoff: 12/22/2017
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 打印路径  
- 
-          [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] 打印路径是一种新的 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 功能，可重新定义如何在 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 应用程序中处理打印。 因为 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可以替换文档表示语言（如 RTF）、打印后台处理程序格式（如 WMF）和页面描述语言（如 PCL 和 Postscript），所以在打印机驱动程序或设备中，从应用程序发布到最终处理，新的打印路径都保持 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 格式。  
+ [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]打印路径是一种新[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]重新定义了如何打印处理 Windows 应用程序中的功能。 因为 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可以替换文档表示语言（如 RTF）、打印后台处理程序格式（如 WMF）和页面描述语言（如 PCL 和 Postscript），所以在打印机驱动程序或设备中，从应用程序发布到最终处理，新的打印路径都保持 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 格式。  
   
  
           [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径是基于 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印机驱动程序模型 (XPSDrv) 生成的，该模型为开发人员带来了多个优点，如 [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 打印、改进了颜色支持以及大大提高了打印性能。 （有关 XPSDrv 的详细信息，请参阅 [Windows 驱动程序开发工具包](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx)。）  
   
- 
-          [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文档的打印后台处理程序的操作本质上与 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 的以前版本相同。 但是，它已得到增强，除了现有的 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径外，还支持 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 打印路径。 新的打印路径在本机使用 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 后台打印文件。 虽然为 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 的之前版本编写的用户模式打印机驱动程序将继续运行，但仍需要 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印机驱动程序 (XPSDrv)，以便使用 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径。  
+ 有关打印后台处理程序的操作[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]文档本质而言，与以前版本的 Windows 中的相同。 但是，它已得到增强，除了现有的 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径外，还支持 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 打印路径。 新的打印路径在本机使用 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 后台打印文件。 虽然为 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 的之前版本编写的用户模式打印机驱动程序将继续运行，但仍需要 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印机驱动程序 (XPSDrv)，以便使用 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径。  
   
  
           [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径的优势巨大，其中包括：  

@@ -16,17 +16,17 @@ ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
 caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a7a47ad7e4ade9f15159c27ac672aeb937a05493
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5e4397fb90e4fa5a3e68390137b84a375cf35956
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variables-in-visual-basic"></a>变量 (Visual Basic)
-使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 执行计算时，经常需要存储值。 例如，可能需要计算、比较多个值，并根据比较结果对这些值执行不同的运算。 若要进行比较，必须保留这些值。  
+你通常需要执行使用 Visual Basic 的计算时存储值。 例如，可能需要计算、比较多个值，并根据比较结果对这些值执行不同的运算。 若要进行比较，必须保留这些值。  
   
 ## <a name="usage"></a>用法  
- 与大部分编程语言一样，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 使用变量来存储值。 变量有名称（用于引用变量中值的词语）。 变量还具有数据类型（用于确定变量可存储的数据种类）。 如果变量需要存储一组密切相关的索引数据项，可以表示数组。  
+ Visual Basic 中，就像大多数的编程语言一样使用变量来存储值。 变量有名称（用于引用变量中值的词语）。 变量还具有数据类型（用于确定变量可存储的数据种类）。 如果变量需要存储一组密切相关的索引数据项，可以表示数组。  
   
  使用本地类型推断，可以声明变量，而无需显式声明数据类型。 相反，编译器将通过初始化表达式的类型推断出变量的类型。 有关详细信息，请参阅[本地类型推断](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)和 [Option Infer 语句](../../../../visual-basic/language-reference/statements/option-infer-statement.md)。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="variables-and-properties"></a>变量和属性  
  与变量一样，属性表示可访问的值。 不过，它比变量更复杂。 属性使用代码块来控制如何设置并检索值。 有关详细信息，请参阅 [Visual Basic 中属性和变量的差异](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
  [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
  [变量疑难解答](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)  

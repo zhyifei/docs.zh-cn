@@ -1,13 +1,13 @@
 ---
-title: "如何：使用 Windows 凭据保护服务的安全"
-ms.custom: 
+title: 如何：使用 Windows 凭据保护服务的安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6a5225f25ca921407d64f579bbc7c204917ff260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>如何：使用 Windows 凭据保护服务的安全
-本主题说明如何在上启用传输安全[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]驻留在 Windows 域，并且由同一个域中的客户端调用的服务。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]此方案中，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 有关示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
+本主题说明如何在上启用传输安全[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]驻留在 Windows 域，并且由同一个域中的客户端调用的服务。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此方案中，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 有关示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
   
  本主题假定您已定义一个现有的协定接口和实现及其加载项。 您还可以修改一个现有的服务和客户端。  
   
@@ -57,17 +57,17 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>在服务中使用该绑定  
- 这是第二个过程，演示如何在自承载服务中使用该绑定。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]承载服务，请参见[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
+ 这是第二个过程，演示如何在自承载服务中使用该绑定。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 承载服务，请参见[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>在服务中使用绑定  
   
 1.  在上一过程的代码之后插入此过程的代码。  
   
-2.  创建一个名为 <xref:System.Type> 的 `contractType` 变量，并为其分配接口类型 (`ICalculator`)。 在使用 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 时，请使用 `GetType` 运算符；在使用 C# 时，请使用 `typeof` 关键字。  
+2.  创建一个名为 <xref:System.Type> 的 `contractType` 变量，并为其分配接口类型 (`ICalculator`)。 当使用 Visual Basic，使用`GetType`运算符; 在使用 C# 中，使用`typeof`关键字。  
   
 3.  创建另一个名为 `Type` 的 `serviceType` 变量，并为其分配所实现的协定的类型 (`Calculator`)。  
   
-4.  使用该服务的基址创建 <xref:System.Uri> 类的一个实例，该实例名为 `baseAddress`。 基址必须具有与传输匹配的方案。 在本示例中，传输方案为 HTTP，且地址包含特殊的统一资源标识符 (URI)“localhost”和端口号 (8036)，以及一个终结点基址（“serviceModelSamples/”）：http://localhost:8036/serviceModelSamples/。  
+4.  使用该服务的基址创建 <xref:System.Uri> 类的一个实例，该实例名为 `baseAddress`。 基址必须具有与传输匹配的方案。 在这种情况下，传输方案为 HTTP，且地址包含特殊的统一资源标识符 (URI)"localhost"和端口号 (8036) 以及终结点基址 ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/。  
   
 5.  使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 变量创建 `baseAddress` 类的一个实例。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>通过代码在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承自 <xref:System.ServiceModel.ClientBase%601> 类，这确保了每个客户端都具有与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务通信所需的构造函数、方法和属性。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承自 <xref:System.ServiceModel.ClientBase%601> 类，这确保了每个客户端都具有与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务通信所需的构造函数、方法和属性。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
   
 2.  在客户端程序的 `Main` 方法的开头插入此过程的代码。  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>通过配置在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  替换[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)包含上一节中的配置代码的生成的配置文件的部分。  
   

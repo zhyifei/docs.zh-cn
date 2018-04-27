@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1cc114c2882aa82787f94a271dd7684c716b01
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 195d4b8f8e88d22e63c29ab9152399eb5c4a19df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-recurse"></a>-recurse
 编译源代码文件的指定的目录或项目目录的所有子目录中。  
@@ -42,19 +42,19 @@ ms.lasthandoff: 03/22/2018
 >  `-recurse`选项不是可从 Visual Studio 开发环境中; 仅当从命令行进行编译时，它才可用。  
   
 ## <a name="example"></a>示例  
- 下面的命令编译所有[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]当前目录中的文件。  
+ 下面的命令编译当前目录中的所有 Visual Basic 文件。  
   
 ```console
 vbc *.vb  
 ```  
   
- 下面的命令编译所有[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]文件中`Test\ABC`目录和它下面的任何目录，然后生成`Test.ABC.dll`。  
+ 下面的命令编译中的所有 Visual Basic 文件`Test\ABC`目录和它下面的任何目录，然后生成`Test.ABC.dll`。  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

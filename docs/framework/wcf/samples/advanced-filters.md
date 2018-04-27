@@ -1,24 +1,26 @@
 ---
-title: "高级筛选器"
-ms.custom: 
+title: 高级筛选器
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>高级筛选器
 此示例演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 路由服务。 路由服务是一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 组件，使用该组件可方便地在应用程序中包含基于内容的路由器。 此示例采用标准的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 计算器示例，使用路由服务进行通信。 此示例演示如何使用消息筛选器和消息筛选器表定义基于内容的路由逻辑。  
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- 第三个筛选器是 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>。 此筛选器与在地址匹配于所提供地址前缀（或前面部分）的终结点上出现的所有消息都匹配。 在此示例中，地址前缀定义为“http://localhost/routingservice/router/rounding/”。 这就是说，此筛选器与发送到“http://localhost/routingservice/router/rounding/*”的所有传入消息都匹配。 在本例中，这些消息即是在地址为“http://localhost/routingservice/router/rounding/calculator”的舍入计算器终结点上出现的消息。  
+ 第三个筛选器是 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>。 此筛选器与在地址匹配于所提供地址前缀（或前面部分）的终结点上出现的所有消息都匹配。 在此示例中的地址前缀定义为"http://localhost/routingservice/router/rounding/"。 这意味着，任何传入的消息发送到"http://localhost/routingservice/router/rounding/*"匹配此筛选器。 在这种情况下，它是在舍入计算器终结点显示的消息具有的地址"http://localhost/routingservice/router/rounding/calculator"。  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  若要打开**解决方案资源管理器**，选择**解决方案资源管理器**从**视图**菜单。  
   
-3.  在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 中按 F5 或 Ctrl+Shift+B。  
+3.  在 Visual Studio 中按 F5 或 CTRL + SHIFT + B。  
   
     1.  如果你想要自动启动所需的项目，按 F5 时，右键单击该解决方案并选择**属性**。 选择**启动项目**节点下的**通用属性**的左窗格中。 选择**多启动项目**单选按钮，设置所有项目具有**启动**操作。  
   

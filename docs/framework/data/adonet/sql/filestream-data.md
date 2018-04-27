@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 757c64fdc66d9c564fc151bc78fdbda23d9b6705
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filestream-data"></a>FILESTREAM 数据
 FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数据。 在 FILESTREAM 之前，存储二进制数据需要特殊处理。 非结构化的数据（例如文本文档、图像和视频）通常存储在数据库之外，从而使得难以管理此类数据。  
@@ -28,13 +28,13 @@ FILESTREAM 存储特性用于 varbinary(max) 列中存储的二进制 (BLOB) 数
 > [!NOTE]
 >  您必须安装 .NET Framework 3.5 SP1（或更高版本）才能使用 SqlClient 处理 FILESTREAM 数据。  
   
- 在 varbinary(max) 列上指定 FILESTREAM 特性会造成 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 将数据存储在本地 NTFS 文件系统中，而不是存储在数据库文件中。 虽然数据是单独存储的，但您可以使用所支持的相同 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 语句来处理存储在数据库中的 varbinary(max) 数据。  
+ 在 varbinary(max) 列上指定 FILESTREAM 属性可使 SQL Server 将数据存储在本地 NTFS 文件系统中，而不是存储在数据库文件中。 虽然数据是单独存储的，但您可以使用所支持的相同 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 语句来处理存储在数据库中的 varbinary(max) 数据。  
   
 ## <a name="sqlclient-support-for-filestream"></a>SqlClient 对 FILESTREAM 的支持  
- 用于 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 数据提供程序 (<xref:System.Data.SqlClient>) 支持使用在 <xref:System.Data.SqlTypes.SqlFileStream> 命名空间中定义的 <xref:System.Data.SqlTypes> 类来读写 FILESTREAM 数据。 `SqlFileStream` 继承自 <xref:System.IO.Stream> 类，该类提供了用于读写数据流的方法。 从流读取数据可将数据从流传输到一个数据结构，例如一个字节数组。 写入操作可将数据从该数据结构传输到一个流。  
+ [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>、 支持读取和写入 FILESTREAM 数据使用<xref:System.Data.SqlTypes.SqlFileStream>中定义的类<xref:System.Data.SqlTypes>命名空间。 `SqlFileStream` 继承自 <xref:System.IO.Stream> 类，该类提供了用于读写数据流的方法。 从流读取数据可将数据从流传输到一个数据结构，例如一个字节数组。 写入操作可将数据从该数据结构传输到一个流。  
   
-### <a name="creating-the-includessnoversionincludesssnoversion-mdmd-table"></a>创建 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 表  
- 下列 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 语句将创建一个名为 employees 的表并插入一行数据。 启用 FILESTREAM 存储之后，您可以将此表与下面的代码示例结合使用。 本主题的最后提供了指向 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书中资源的链接。  
+### <a name="creating-the-sql-server-table"></a>创建 SQL Server 表  
+ 下列 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 语句将创建一个名为 employees 的表并插入一行数据。 启用 FILESTREAM 存储之后，你可以将此表与下面的代码示例结合使用。 本主题的最后介绍了 SQL Server 联机丛书中的资源的链接。  
   
 ```  
 CREATE TABLE employees  
@@ -182,8 +182,8 @@ namespace FileStreamTest
   
  另一个示例，请参阅[如何存储和提取到文件流列的二进制数据](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
   
-## <a name="resources-in-includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书中的资源  
- FILESTREAM 的完整文档位于 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 联机丛书中的以下各节中。  
+## <a name="resources-in-sql-server-books-online"></a>SQL Server 联机丛书中的资源  
+ 有关 FILESTREAM 的完整文档位于 SQL Server 联机丛书中的下列部分中。  
   
 |主题|描述|  
 |-----------|-----------------|  
@@ -193,7 +193,7 @@ namespace FileStreamTest
 |[在客户端应用程序中使用 FILESTREAM 存储](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|介绍用于处理 FILESTREAM 数据的 Win32 API 函数。|  
 |[FILESTREAM 与其他 SQL Server 功能](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|提供将 FILESTREAM 数据与 SQL Server 的其他功能一起使用时的注意事项、准则和限制。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  

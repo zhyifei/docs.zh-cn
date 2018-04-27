@@ -15,18 +15,18 @@ ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ffa6e015339387746b0cc1c4e5d3c2b84f84720e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eae0bec98d960dd8d6cbe5859599a3758bdbfe56
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="strings-in-visual-basic"></a>字符串 (Visual Basic)
-此部分介绍了有关如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中使用字符串的基本概念。  
+本部分介绍在 Visual Basic 中使用字符串的基本概念。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- 列出了介绍有关如何在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中使用字符串的基本概念的主题。  
+ 介绍了在 Visual Basic 中使用字符串背后的基本概念的主题列表。  
   
  [如何：在 Visual Basic 中使用 StringBuilder 创建字符串](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  展示了如何通过多个短字符串有效创建一个长字符串。  
@@ -43,5 +43,5 @@ ms.lasthandoff: 10/18/2017
  [演练：在 Visual Basic 中加密和解密字符串](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  展示了如何使用加密服务提供程序版本的三重数据加密标准算法来加密和解密字符串。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 语言功能](../../../../visual-basic/programming-guide/language-features/index.md)

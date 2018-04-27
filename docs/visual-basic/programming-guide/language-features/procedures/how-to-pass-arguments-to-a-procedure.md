@@ -1,11 +1,12 @@
 ---
-title: "如何：将自变量传递给过程 (Visual Basic)"
-ms.custom: 
+title: 如何：将自变量传递给过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3debb4fa6e7b15f9c321ef207d0cc04181a98da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>如何：将自变量传递给过程 (Visual Basic)
 当调用过程时，过程名后面加上括号中的参数列表。 你提供参数对应于每个所需的参数为过程所定义，并且 （可选） 可以提供自变量`Optional`参数。 如果未提供`Optional`调用中的参数，必须包含逗号来标记其位置自变量列表中的，如果你所提供的任何后续自变量。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  如果省略的自变量`Optional`参数并且有另一个参数之后在参数列表中，可以将省略的自变量的位置标记的参数列表中的额外逗号。  
   
-     下面的示例调用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数。  
+     下面的示例调用 Visual Basic<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数。  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
@@ -53,7 +54,8 @@ ms.lasthandoff: 11/21/2017
   
      在自变量列表中的第二个逗号将标记的位置省略第二个参数，并且最后一个的字符串传递给的可选第三个参数`MsgBox`，即在标题栏中显示的文本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅
+
  [Sub 过程](./sub-procedures.md)  
  [Function 过程](./function-procedures.md)  
  [属性过程](./property-procedures.md)  
@@ -63,4 +65,4 @@ ms.lasthandoff: 11/21/2017
  [递归过程](./recursive-procedures.md)  
  [过程重载](./procedure-overloading.md)  
  [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [面向对象的编程](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [面向对象的编程 (Visual Basic)](../../concepts/object-oriented-programming.md)  

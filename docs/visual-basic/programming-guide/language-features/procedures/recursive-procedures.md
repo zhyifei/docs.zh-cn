@@ -1,11 +1,12 @@
 ---
-title: "递归过程 (Visual Basic)"
-ms.custom: 
+title: 递归过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 444eeaf043cf3710c5154fd7e8577590e3ce7d1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 471746f4412b61c9782e8019aa8a9ec6221afb04
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="recursive-procedures-visual-basic"></a>递归过程 (Visual Basic)
-A*递归*过程是指调用自身。 一般情况下，这不是最有效的方法来编写[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]代码。  
+A*递归*过程是指调用自身。 一般情况下，这不是编写 Visual Basic 代码的最有效方法。  
   
  以下过程使用递归将计算其原始的自变量的阶乘。  
   
@@ -45,7 +46,7 @@ A*递归*过程是指调用自身。 一般情况下，这不是最有效的方�
   
  **测试**。 如果您编写一个递归的过程，你应测试它应非常仔细地以确保始终满足某些限制条件。 你还应该确保你不能运行由于递归调用过多的内存不足。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.StackOverflowException>  
  [过程](./index.md)  
  [Sub 过程](./sub-procedures.md)  

@@ -18,16 +18,16 @@ ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6ce0cb7cba8f05b488d47f99da51b0b5de75eb15
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 4ec3ab191942e47d5025a0e641085b0f507088c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-in-visual-basic"></a>控制流 (Visual Basic)
 程序可以按从头到尾的顺序执行所有语句，而不受管制。 只需使用这种单向控制流，即可编写一些非常简单的程序。 然而，任何一种编程语言的大部分功能性和实用性都是源自能否更改控制语句和循环的执行顺序。  
   
- 借助控制结构，可以对程序执行流进行管制。 使用控制结构，可以编写用于制定决策或重复执行操作的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 代码。 使用其他控制结构，可以保证处置资源或对同一对象引用运行一系列语句。  
+ 借助控制结构，可以对程序执行流进行管制。 使用控制结构，你可以编写 Visual Basic 代码做出决策或重复操作。 使用其他控制结构，可以保证处置资源或对同一对象引用运行一系列语句。  
   
 ## <a name="in-this-section"></a>本节内容  
  [决策结构](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  

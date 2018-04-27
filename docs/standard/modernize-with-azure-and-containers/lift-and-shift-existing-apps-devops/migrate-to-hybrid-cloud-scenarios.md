@@ -1,18 +1,19 @@
 ---
-title: "将迁移到混合云方案"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |将迁移到混合云方案"
+title: 将迁移到混合云方案
+description: 为容器化的.NET 应用程序的.NET 微服务体系结构 |将迁移到混合云方案
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/2/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6216068786745ac4ebc00263a14b4afe247193f5
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: a2fc5a2118736d3491a5a0731e47c697edd674f1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>将迁移到混合云方案
 
@@ -24,7 +25,7 @@ Microsoft 提供最佳的混合云解决方案，一个在其中你可以优化�
 
 最后，你可以将分发和无缝地分析数据，请针对云和本地资产使用相同的查询语言并应用分析和深层学习 Azure 丰富您的数据，而不考虑其源中。
 
-## <a name="azure-stack"></a>Azure Stack
+## <a name="azure-stack"></a>Azure 堆栈
 
 Azure 堆栈是混合云平台，可让你从你的组织的数据中心提供 Azure 服务。 Azure 堆栈旨在为你在关键方案，例如边缘以及未连接的环境中或满足特定的安全和合规性要求的现代应用程序支持新的选项。
 

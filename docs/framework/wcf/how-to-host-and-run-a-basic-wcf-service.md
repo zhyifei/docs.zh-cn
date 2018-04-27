@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>如何：承载和运行基本的 Windows Communication Foundation 服务
 这是创建 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序所需的六项任务中的第三项任务。 有关全部六项任务的概述，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)主题。  
@@ -40,9 +40,9 @@ ms.lasthandoff: 03/26/2018
   
 ## <a name="to-create-a-new-console-application-to-host-the-service"></a>新建用于承载服务的控制台应用程序  
   
-1.  通过右键单击入门解决方案，依次选择创建新的控制台应用程序项目**添加**，**新项目**。 在**添加新项目**对话框中的，在对话框中，选择左侧**Windows**下**C#**或**VB**。 在对话框的中心部分选择**控制台应用程序**。 将项目命名为 GettingStartedHost。  
+1.  通过右键单击入门解决方案，依次选择创建新的控制台应用程序项目**添加**，**新项目**。 在**添加新项目**对话框中的，在对话框中，选择左侧**Windows**下**C#** 或**VB**。 在对话框的中心部分选择**控制台应用程序**。 将项目命名为 GettingStartedHost。  
   
-2.  通过右键单击 GettingStartedHost 项目目标框架设置为.NET Framework 4.5 **GettingStartedHost**在解决方案资源管理器并选择**属性**。 在下拉框中标记为**目标框架**选择**.NET Framework 4.5**。 为 VB 项目是稍有不同，在 GettingStartedHost 项目属性对话框，请设置目标框架，单击**编译**屏幕中，左侧选项卡，然后单击**高级编译选项**在对话框左下角的按钮。 然后选择**.NET Framework 4.5**的下拉框中标记为**目标框架**。  
+2.  通过右键单击 GettingStartedHost 项目目标框架设置为.NET Framework 4.5 **GettingStartedHost**在解决方案资源管理器并选择**属性**。 在下拉框中标记为**目标框架**选择 **.NET Framework 4.5**。 为 VB 项目是稍有不同，在 GettingStartedHost 项目属性对话框，请设置目标框架，单击**编译**屏幕中，左侧选项卡，然后单击**高级编译选项**在对话框左下角的按钮。 然后选择 **.NET Framework 4.5**的下拉框中标记为**目标框架**。  
   
      设置目标框架将导致[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]若要重新加载解决方案，按**确定**出现提示时。  
   
@@ -170,7 +170,7 @@ ms.lasthandoff: 03/26/2018
   
 ### <a name="to-verify-the-service-is-working"></a>验证服务是否正常运行  
   
-1.  从 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 内部运行 GettingStartedHost 控制台应用程序。 在 [!INCLUDE[wv](../../../includes/wv-md.md)] 以及更高版本的操作系统上运行时，必须使用管理员特权运行该服务。 由于 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 是使用管理员特权运行的，因此 GettingStartedHost 也是使用管理员特权运行的。 也可以启动新的命令提示，使用管理员特权运行它，并在其中运行 service.exe。  
+1.  从 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 内部运行 GettingStartedHost 控制台应用程序。 在 [!INCLUDE[wv](../../../includes/wv-md.md)] 以及更高版本的操作系统上运行时，必须使用管理员特权运行该服务。 因为使用管理员权限运行，Visual Studio，也是使用管理员特权运行 GettingStartedHost。 也可以启动新的命令提示，使用管理员特权运行它，并在其中运行 service.exe。  
   
 2.  打开 Internet Explorer，并浏览到服务的调试页，网址为 `http://localhost:8000/GettingStarted/CalculatorService`。  
   
@@ -424,10 +424,10 @@ End Module
 ```  
   
 > [!NOTE]
->  此类服务需要在计算机上注册 HTTP 地址以进行侦听的权限。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何配置命名空间保留，请参阅[配置 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 下运行时，必须使用管理员特权运行 service.exe。  
+>  此类服务需要在计算机上注册 HTTP 地址以进行侦听的权限。 管理员帐户具有此权限，但对于非管理员帐户来说，必须授予对 HTTP 命名空间的权限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何配置命名空间保留，请参阅[配置 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 Visual Studio 下运行时，必须使用管理员特权运行 service.exe。  
   
  此时服务正在运行。 继续执行[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 有关疑难解答的信息，请参阅[疑难解答入门教程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [入门](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自承载](../../../docs/framework/wcf/samples/self-host.md)

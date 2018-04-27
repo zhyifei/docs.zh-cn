@@ -16,14 +16,14 @@ ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: be5576c56c2c6b2b1021c98e1e48314beaac4cbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 298faf593dc15d6ede5fbb4238599373f3a49a82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>临时路径不可用，因此无法写入临时文件
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 未能确定临时文件的存储路径。  
+Visual Basic 无法确定存储临时文件的路径。  
   
  **错误 ID:** BC30698  
   
@@ -33,5 +33,5 @@ ms.lasthandoff: 10/18/2017
   
 2.  如果问题依然存在，请重新安装 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [与我们交流](/visualstudio/ide/talk-to-us)

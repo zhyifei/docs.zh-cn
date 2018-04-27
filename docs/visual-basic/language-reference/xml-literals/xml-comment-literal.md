@@ -18,11 +18,11 @@ ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 36be34ac22cfe926a2eea946f5e4c4eb534de696
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5bb8c10c28a4ab864220c1b4ce4702622e55c92
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 注释文本 (Visual Basic)
 一个文本表示<xref:System.Xml.Linq.XComment>对象。  
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/21/2017
   
 |术语|定义|  
 |---|---|  
-|`<!--`|必需。 表示 XML 注释的开头。|  
-|`content`|必需。 若要显示的 XML 注释中的文本。 不能包含一系列的两个连字符 （-） 或靠近结束标记的连字符结尾。|  
-|`-->`|必需。 表示 XML 注释的结尾。|  
+|`<!--`|必须的。 表示 XML 注释的开头。|  
+|`content`|必须的。 若要显示的 XML 注释中的文本。 不能包含一系列的两个连字符 （-） 或靠近结束标记的连字符结尾。|  
+|`-->`|必须的。 表示 XML 注释的结尾。|  
   
 ## <a name="return-value"></a>返回值  
  一个 <xref:System.Xml.Linq.XComment> 对象。  
@@ -54,16 +54,16 @@ ms.lasthandoff: 11/21/2017
  可以将 XML 注释文本分配给一个变量，或者可以将其包含在 XML 元素文本。  
   
 > [!NOTE]
->  XML 文本可以跨多行，而无需使用行继续符。 此功能，可将内容复制从 XML 文档并将其粘贴直接到[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程序。  
+>  XML 文本可以跨多行，而无需使用行继续符。 此功能，可从 XML 文档中复制内容，然后将其粘贴到 Visual Basic 程序直接。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器将 XML 注释文本转换为调用<xref:System.Xml.Linq.XComment.%23ctor%2A>构造函数。  
+ Visual Basic 编译器将 XML 注释文本转换为调用<xref:System.Xml.Linq.XComment.%23ctor%2A>构造函数。  
   
 ## <a name="example"></a>示例  
  下面的示例创建包含文本的 XML 注释"这是一个注释"。  
   
  [!code-vb[VbXMLSamples#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-comment-literal_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq.XComment>  
  [XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
  [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)  

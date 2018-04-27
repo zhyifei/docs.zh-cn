@@ -1,28 +1,28 @@
 ---
-title: "基本序列化技术示例"
-ms.custom: 
+title: 基本序列化技术示例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c3d269b7603c63db73fdcbab91b777e69b228cc9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2aa2dd790a0f292175fae6c45d8bfc60859ac4ac
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技术示例
-[下载示例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
+[下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
   
  本示例说明公共语言运行时将内存中的对象图序列化成流的能力。 此示例可以使用 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 或 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 来进行序列化。 用数据填充的链接列表可以被序列化成文件流，也可以从文件流反序列化该链接列表。 上述任何一种情况都会显示该列表，这样，您就可以看到相应的结果。 链接列表的类型为 `LinkedList`，该类型由此示例定义。  
   

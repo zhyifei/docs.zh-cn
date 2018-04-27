@@ -1,31 +1,33 @@
 ---
-title: "基于特性的映射"
-ms.custom: 
+title: 基于特性的映射
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a7a66b165e5bcfc605842b96295ae1721e7b3af5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 49969af962db9fb533ad316622af42104438be7d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attribute-based-mapping"></a>基于特性的映射
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]映射到 SQL Server 数据库[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象模型通过应用属性或通过使用外部映射文件。 本主题概述了基于属性的方法。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 映射到 SQL Server 数据库[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象模型通过应用属性或通过使用外部映射文件。 本主题概述了基于属性的方法。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 最基本的映射形式是将数据库映射到 <xref:System.Data.Linq.DataContext>，将表映射到类，将列和关系映射到这些类的属性。 您也可以使用属性来将继承层次结构映射到对象模型中。 有关详细信息，请参阅[如何： 在 Visual Basic 或 C# 中生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
- 使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员通常会使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来执行基于属性的映射。 也可以使用 SQLMetal 命令行工具，或亲自手动对属性进行编码。 有关详细信息，请参阅[如何： 在 Visual Basic 或 C# 中生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ 通常使用 Visual Studio 的开发人员使用执行基于属性的映射[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 也可以使用 SQLMetal 命令行工具，或亲自手动对属性进行编码。 有关详细信息，请参阅[如何： 在 Visual Basic 或 C# 中生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
 > [!NOTE]
 >  您还可以通过使用外部 XML 文件进行映射。 有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/17/2018
  有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有 .NET 编程语言，即使是那些通常不区分大小写的编程语言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
+>  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有.NET 编程语言，即使那些不通常区分大小写，包括 Visual Basic。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute 属性  
  使用此属性 (Attribute) 可指定属性 (Property) 表示数据库中的关联，如外键对主键关系。 有关关系的详细信息，请参阅[如何： 映射数据库关系](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/17/2018
  有关详细信息，请参阅<xref:System.Data.Linq.Mapping.AssociationAttribute>。  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有 .NET 编程语言，即使是那些通常不区分大小写的编程语言，包括 [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
+>  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有.NET 编程语言，即使那些不通常区分大小写，包括 Visual Basic。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute 属性  
  使用此属性可映射继承层次结构。  

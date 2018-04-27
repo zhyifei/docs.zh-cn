@@ -1,24 +1,26 @@
 ---
-title: "异步编程"
+title: 异步编程
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 20e40a6705ad77dc42a70739e75abdbb058465e6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7dbc106b96e4e695108b6178951e3d43078467bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
-本主题讨论对用于 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (SqlClient) 的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 数据提供程序中的异步编程的支持，包括为支持 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引入的异步编程功能而进行的增强。  
+本主题讨论对中的异步编程的支持[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]for SQL Server (SqlClient) 的数据提供程序包括进行以支持异步编程功能中引入的增强功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
 ## <a name="legacy-asynchronous-programming"></a>旧版异步编程  
  在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，使用 SqlClient 进行的异步编程是通过以下方法和 `Asynchronous Processing=true` 连接属性完成的：  
@@ -637,7 +639,7 @@ namespace SqlBulkCopyAsyncCodeSample {
  该示例打开一个连接到**AdventureWorks**数据库。 使用 <xref:System.Data.SqlClient.SqlCommand> 对象创建一个 <xref:System.Data.SqlClient.SqlDataReader> 对象。 在使用该读取器时，打开第二个 <xref:System.Data.SqlClient.SqlDataReader>，使用来自第一个 <xref:System.Data.SqlClient.SqlDataReader> 的数据作为第二个读取器的 WHERE 子句的输入。  
   
 > [!NOTE]
->  下面的示例使用示例**AdventureWorks**中包含的数据库[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+>  下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
 ```csharp
 using System;  
@@ -709,7 +711,7 @@ class Class1 {
  以下控制台应用程序演示如何对三个 <xref:System.Data.SqlClient.SqlDataReader> 对象和单个启用了 MARS 的 <xref:System.Data.SqlClient.SqlCommand> 对象使用两个 <xref:System.Data.SqlClient.SqlConnection> 对象。 第一个命令对象检索信用评级为 5 的供应商列表。 第二个命令对象使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的供应商 ID 为第二个 <xref:System.Data.SqlClient.SqlDataReader> 加载特定供应商的所有产品。 每个产品记录通过第二个 <xref:System.Data.SqlClient.SqlDataReader> 访问。 执行计算来确定新**OnOrderQty**应为。 第三个命令对象然后用于更新**ProductVendor**使用新值的表。 整个过程在单个事务中进行，在结束时回滚。  
   
 > [!NOTE]
->  下面的示例使用示例**AdventureWorks**中包含的数据库[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
+>  下面的示例使用示例**AdventureWorks**包含与 SQL Server 数据库。 示例代码中提供的连接字符串假定数据库在本地计算机上已安装并且可用。 根据环境的需要修改连接字符串。  
   
 ```csharp
 using System;  

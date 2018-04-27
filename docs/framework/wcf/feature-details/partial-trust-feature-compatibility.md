@@ -1,24 +1,26 @@
 ---
-title: "部分信任功能兼容性"
-ms.custom: 
+title: 部分信任功能兼容性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能兼容性
 在部分受信任的环境中运行时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支持一个有限的功能子集。 部分信任中支持的功能围绕 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主题中所述的一组特定的方案而设计。  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   确保在将应用程序作为完全受信任的应用程序部署时，用户不能修改代码访问安全设置，从而无法在部分信任环境中运行该应用程序。 如果用户可以这样做，则不会运行该行为，且不引发任何异常。 若要确保这一点，请参阅**levelfinal**选项使用[Caspol.exe （代码访问安全策略工具）](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)] 常见行为，请参阅 [How to: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)方法。  
+ 有关常见行为的示例，请参阅[如何： 在企业中锁定下终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
   
 ## <a name="configuration"></a>配置  
  除一种例外情况之外，部分受信任的代码只能加载本地 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 文件中的 `app.config` 配置节。 要加载引用 machine.config 或根 web.config 文件中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 节的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置节，需要 ConfigurationPermission(Unrestricted)。 如果没有此权限，则对本地配置文件之外的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 配置节（行为、绑定）的引用会导致在加载配置时产生异常。  

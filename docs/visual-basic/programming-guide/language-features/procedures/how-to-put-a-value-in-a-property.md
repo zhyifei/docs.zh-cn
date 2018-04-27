@@ -1,11 +1,12 @@
 ---
-title: "如何：在属性中放置值 (Visual Basic)"
-ms.custom: 
+title: 如何：在属性中放置值 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,25 +15,25 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 44e7c4a92ea3d087c12e74aa2ede33a52c8730cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f00303b290e324612ad3ac7af673690b4cf4e15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>如何：在属性中放置值 (Visual Basic)
 通过将属性名称放在赋值语句的左侧，可以在属性中存储值。  
   
- 该属性的`Set`过程存储一个值，但并不按名称显式调用它。 就像你将使用变量，你可以使用该属性。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]调用属性的过程。  
+ 该属性的`Set`过程存储一个值，但并不按名称显式调用它。 就像你将使用变量，你可以使用该属性。 Visual Basic 使对该属性的过程的调用。  
   
 ### <a name="to-store-a-value-in-a-property"></a>若要将值存储在属性  
   
 1.  在赋值语句的左侧使用的属性名称。  
   
-     下面的示例设置的值[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]`TimeOfDay`属性为中午，隐式调用其`Set`过程。  
+     下面的示例设置的值的 Visual Basic`TimeOfDay`属性为中午，隐式调用其`Set`过程。  
   
      [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-put-a-value-in-a-property_1.vb)]  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  赋值语句右侧生成的值存储在属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>  
  [属性过程](./property-procedures.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  

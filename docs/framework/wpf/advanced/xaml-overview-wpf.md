@@ -1,12 +1,13 @@
 ---
-title: "XAML 概述 (WPF)"
-ms.custom: 
+title: XAML 概述 (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,16 +27,17 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.workload:
+- dotnet
+ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概述 (WPF)
 本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。 本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。 XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。  
@@ -146,7 +148,7 @@ ms.lasthandoff: 01/25/2018
   
  在这里，每个<xref:System.Windows.Controls.Button>是的子元素<xref:System.Windows.Controls.StackPanel>。 这是一个简单直观的标记，此标记由于两个不同的原因省略了两个标记。  
   
--   **省略的 StackPanel.Children 属性元素：** <xref:System.Windows.Controls.StackPanel>派生自<xref:System.Windows.Controls.Panel>。 <xref:System.Windows.Controls.Panel>定义<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>作为其 XAML 内容属性。  
+-   **省略的 StackPanel.Children 属性元素：** <xref:System.Windows.Controls.StackPanel>派生自<xref:System.Windows.Controls.Panel>。 <xref:System.Windows.Controls.Panel> 定义<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>作为其 XAML 内容属性。  
   
 -   **省略的 UIElementCollection 对象元素：** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>属性采用类型<xref:System.Windows.Controls.UIElementCollection>，该类实现<xref:System.Collections.IList>。 可以省略集合的元素标记，基于的 XAML 规则进行处理集合，如<xref:System.Collections.IList>。 (在这种情况下，<xref:System.Windows.Controls.UIElementCollection>实际上不能被实例化，因为它不会公开默认构造函数，这就是为什么<xref:System.Windows.Controls.UIElementCollection>对象元素将显示注释掉)。  
   
@@ -192,7 +194,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="type-converters"></a>类型转换器  
  在 [XAML 语法概述](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#xaml_syntax_in_brief)一节中，曾提到特性值必须能够通过字符串进行设置。 如何将字符串转换成其他对象类型或基元值的基本本机处理基于<xref:System.String>类型本身，此外到本机处理对于某些类型，如<xref:System.DateTime>或<xref:System.Uri>。 但是很多 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 类型或这些类型的成员扩展了基本字符串特性处理行为，因此可以将更复杂的对象类型的实例指定为字符串和特性。  
   
- <xref:System.Windows.Thickness>结构是一种具有启用 XAML 用法的类型转换的类型。 <xref:System.Windows.Thickness>指示度量值的嵌套矩形范围内，用作值的属性如<xref:System.Windows.FrameworkElement.Margin%2A>。 通过在上放置类型转换器<xref:System.Windows.Thickness>，使用的所有属性<xref:System.Windows.Thickness>可以更方便地指定在 XAML 中，因为它们可以指定为属性。 下面的示例使用类型转换和属性语法来提供一个值<xref:System.Windows.FrameworkElement.Margin%2A>:  
+ <xref:System.Windows.Thickness>结构是一种具有启用 XAML 用法的类型转换的类型。 <xref:System.Windows.Thickness> 指示度量值的嵌套矩形范围内，用作值的属性如<xref:System.Windows.FrameworkElement.Margin%2A>。 通过在上放置类型转换器<xref:System.Windows.Thickness>，使用的所有属性<xref:System.Windows.Thickness>可以更方便地指定在 XAML 中，因为它们可以指定为属性。 下面的示例使用类型转换和属性语法来提供一个值<xref:System.Windows.FrameworkElement.Margin%2A>:  
   
  [!code-xaml[XAMLOvwSupport#MarginTCE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
   
@@ -260,7 +262,7 @@ ms.lasthandoff: 01/25/2018
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>事件和 XAML 代码隐藏  
- 大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序既包括 XAML 标记，也包括代码隐藏。 在一个项目中，XAML 编写为 `.xaml` 文件，而 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 语言（如 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 或 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]）用于编写代码隐藏文件。 在 WPF 编程和应用程序模型中对 XAML 文件进行标记编译时，XAML 文件的 XAML 代码隐藏文件的位置是通过如下方式来标识的：以 XAML 根元素的 `x:Class` 特性形式指定一个命名空间和类。  
+ 大多数 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序既包括 XAML 标记，也包括代码隐藏。 在项目中，XAML 编写为`.xaml`文件，和一个[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]使用如 Microsoft Visual Basic 或 C# 的语言来编写代码隐藏文件。 在 WPF 编程和应用程序模型中对 XAML 文件进行标记编译时，XAML 文件的 XAML 代码隐藏文件的位置是通过如下方式来标识的：以 XAML 根元素的 `x:Class` 特性形式指定一个命名空间和类。  
   
  通过目前已介绍的示例，你已了解了几个按钮，但这其中没有一个按钮具有任何与其关联的逻辑行为。 为对象元素添加行为的主要应用程序级机制是使用元素类的现有事件，并为在运行时引发该事件时调用的该事件编写特定的处理程序。 在标记中指定事件名称以及要使用的处理程序的名称，而在代码隐藏中定义实现处理程序的代码。  
   
@@ -314,7 +316,7 @@ ms.lasthandoff: 01/25/2018
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>基类型和 XAML  
- 基础 WPF XAML 及其 XAML 命名空间是类型的一个集合，这些类型对应于 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象以及 XAML 的标记元素。 但是，并不是所有的类都能映射到元素。 抽象类，如<xref:System.Windows.Controls.Primitives.ButtonBase>，并且某些非抽象基类，这些类用于中的继承[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]对象模型。 基类（包括抽象类）对于 XAML 开发仍然很重要，因为每个具体的 XAML 元素都从其层次结构中的某个基类继承成员。 通常，这些成员包括可以设置为元素特性的属性或者可以处理的事件。 <xref:System.Windows.FrameworkElement>是的具体基类[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF 框架级别。 在设计时[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，你将使用各种形状、 面板、 修饰器，或从其派生控件类，它们全部<xref:System.Windows.FrameworkElement>。 相关的基类， <xref:System.Windows.FrameworkContentElement>，适用于流布局演示文稿，支持工作的面向文档的元素使用[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]中特意镜像[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]中<xref:System.Windows.FrameworkElement>。 元素级的特性和 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象模型的组合提供一组通用的属性，这些属性可以在大多数具体的 XAML 元素上设置，而不管具体的 XAML 元素及其基础类型。  
+ 基础 WPF XAML 及其 XAML 命名空间是类型的一个集合，这些类型对应于 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象以及 XAML 的标记元素。 但是，并不是所有的类都能映射到元素。 抽象类，如<xref:System.Windows.Controls.Primitives.ButtonBase>，并且某些非抽象基类，这些类用于中的继承[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]对象模型。 基类（包括抽象类）对于 XAML 开发仍然很重要，因为每个具体的 XAML 元素都从其层次结构中的某个基类继承成员。 通常，这些成员包括可以设置为元素特性的属性或者可以处理的事件。 <xref:System.Windows.FrameworkElement> 是的具体基类[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF 框架级别。 在设计时[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，你将使用各种形状、 面板、 修饰器，或从其派生控件类，它们全部<xref:System.Windows.FrameworkElement>。 相关的基类， <xref:System.Windows.FrameworkContentElement>，适用于流布局演示文稿，支持工作的面向文档的元素使用[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]中特意镜像[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]中<xref:System.Windows.FrameworkElement>。 元素级的特性和 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象模型的组合提供一组通用的属性，这些属性可以在大多数具体的 XAML 元素上设置，而不管具体的 XAML 元素及其基础类型。  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>XAML 安全性  
@@ -332,7 +334,7 @@ ms.lasthandoff: 01/25/2018
   
  如果尚未这样做，请尝试教程主题中的练习[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。 创建该教程中介绍的以标记为中心的应用程序时，该练习有助于巩固本主题中介绍的许多概念。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用基于一个特定的应用程序模型<xref:System.Windows.Application>类。 有关详细信息，请参阅[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用基于一个特定的应用程序模型<xref:System.Windows.Application>类。 有关详细信息，请参阅[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
   
  [生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)详细介绍如何通过命令行以及使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 生成包含 XAML 的应用程序。  
   

@@ -1,24 +1,26 @@
 ---
-title: "对象引用"
-ms.custom: 
+title: 对象引用
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a86b442ffeeeb77a0c124b9b3e3441ba24d68e4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fcb34efeb7eed28f85774dc5489b3e56aeac4e6c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-references"></a>对象引用
 此示例演示如何在服务器与客户端之间通过引用来传递对象。 此示例使用模拟*社交网络*。 社会网络由一个 `Person` 类组成，该类包含一个朋友列表，其中每个朋友都是 `Person` 类的一个实例，并有自己的朋友列表。 这将创建一个对象图。 服务在这些社会网络上公开操作。  
@@ -103,7 +105,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>客户端  
- 使用创建的客户端代理**添加服务引用**功能[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。  
+ 使用创建的客户端代理**添加服务引用**Visual Studio 功能。  
   
  创建了一个由五个 `Person` 对象组成的社会网络。 客户端在服务中调用三个方法中的每一个。  
   

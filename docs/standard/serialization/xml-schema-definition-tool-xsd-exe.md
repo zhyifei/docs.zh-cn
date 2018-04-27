@@ -1,25 +1,25 @@
 ---
 title: XML Schema Definition Tool (Xsd.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 08e612ccc55cf85929d0b16217259d73510bc15e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 XML 架构定义 (Xsd.exe) 工具从 XDR、XML 和 XSD 文件或者从运行时程序集中的类生成 XML 架构或公共语言运行时类。  
@@ -63,9 +63,9 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |选项|描述|  
 |------------|-----------------|  
-|**/e**[**lement**]**:***element*|指定架构中要为其生成代码的元素。 默认情况下，键入所有元素。 可以多次指定该参数。|  
+|**/e**[**lement**] **: * * * 元素*|指定架构中要为其生成代码的元素。 默认情况下，键入所有元素。 可以多次指定该参数。|  
 |**/enableDataBinding**|在所有生成的类型上实现 <xref:System.ComponentModel.INotifyPropertyChanged> 接口以启用数据绑定。 缩写形式为 `/edb`。|  
-|**/enableLinqDataSet**|（缩写形式：`/eld`。）指定可使用 LINQ to DataSet 查询的生成的数据集。 此选项在同时指定 /dataset 选项的情况下使用。 有关详细信息，请参阅 [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 有关使用 LINQ 的一般信息，请参阅 [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。|  
+|**/enableLinqDataSet**|（缩写形式：`/eld`。）指定可使用 LINQ to DataSet 查询的生成的数据集。 此选项在同时指定 /dataset 选项的情况下使用。 有关详细信息，请参阅 [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 有关使用 LINQ 的一般信息，请参阅 [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)。|  
 |**/f**[**ields**]|生成字段，而不是生成属性。 默认情况下生成属性。|  
 |**/l**[**anguage**]**:***language*|指定要使用的编程语言。 从 `CS`（默认情况下为 C#）、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#) 中进行选择。 也可指定实现 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的类的完全限定名|  
 |**/n**[**amespace**]**:***namespace*|为生成的类型指定运行时命名空间。 默认命名空间为 `Schemas`。|  
@@ -233,11 +233,11 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll    
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Data.DataSet>  
  <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [工具](../../../docs/framework/tools/index.md)      
  [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
  [LINQ to DataSet 概述](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
  [查询类型化数据集](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [LINQ（语言集成查询）](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+ [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

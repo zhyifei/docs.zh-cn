@@ -1,12 +1,13 @@
 ---
-title: "如何： 选择打印机附加到用户 &#39; s Windows 窗体中的计算机"
-ms.custom: 
+title: 如何： 选择依附于的用户的打印机&#39;s Windows 窗体中的计算机
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +17,19 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: deee6eb0bb15535425e0e90963b9bd72dc955477
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90feca3e1efeeae45b26a747e97ad8b5b945ec56
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>如何： 选择打印机附加到用户 &#39; s Windows 窗体中的计算机
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a>如何： 选择依附于的用户的打印机&#39;s Windows 窗体中的计算机
 用户通常希望选择默认打印机之外的打印机进行打印。 可以使用 <xref:System.Windows.Forms.PrintDialog> 组件使用户能够从当前安装的打印机中选择打印机。 通过 <xref:System.Windows.Forms.PrintDialog> 组件，会捕获 <xref:System.Windows.Forms.DialogResult> 组件的 <xref:System.Windows.Forms.PrintDialog> 并用于选择打印机。  
   
  在下面的过程中，选择一个文本文件以打印到默认打印机。 <xref:System.Windows.Forms.PrintDialog> 类随后进行实例化。  
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     （[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）将以下代码放在窗体构造函数中以注册事件处理程序。  
+     (Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

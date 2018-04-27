@@ -1,29 +1,31 @@
 ---
-title: "SqlClient 流支持"
-ms.custom: 
+title: SqlClient 流支持
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfa672908248afa951ab3a429e437e0e2c0607c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 流支持
-[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 和应用程序之间的流支持（[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的新增功能）支持服务器上的非结构化数据（文档、图像和媒体文件）。 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 数据库可以存储二进制大型对象 (BLOB)，但检索 BLOB 会使用大量内存。  
+SQL Server 和应用程序之间的流支持 (中的新增功能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 服务器 （文档、 图像和媒体文件） 上支持将非结构化的数据。 SQL Server 数据库可以存储二进制大型对象 (Blob)，但检索 BLOB 会使用大量的内存。  
   
- 针对 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的流支持简化了对数据进行流处理的应用程序的编写，无需完全将数据加载到内存中，从而减少了内存溢出异常。  
+ 流式处理支持与其他 SQL Server 简化了编写应用程序流数据，而无需完全将数据加载到内存，从而导致较少内存溢出异常中。  
   
  通过流支持，中间层应用程序还可以更好地扩展，尤其是在业务对象连接到 SQL Azure 以发送、检索和操作大型 BLOB 的方案中。  
   
@@ -32,10 +34,10 @@ ms.lasthandoff: 01/17/2018
 >   
 >  为支持流处理而添加的成员用于从查询中检索数据，并将参数传递给查询和存储过程。 这种流功能面向基本的 OLTP 和数据迁移方案，适用于本地和非本地数据迁移环境。  
   
-## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的流支持  
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的流支持在 <xref:System.Data.Common.DbDataReader> 和 <xref:System.Data.SqlClient.SqlDataReader> 类中引入的新功能，以便获取 <xref:System.IO.Stream>、<xref:System.Xml.XmlReader> 和 <xref:System.IO.TextReader> 对象并对其做出反应。  这些类用于检索查询中的数据。 因此，[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的流支持面向 OLTP 方案，适用于本地和非本地环境。  
+## <a name="streaming-support-from-sql-server"></a>SQL Server 中的流支持  
+ 流式处理从 SQL Server 的支持引入了中的新增功能<xref:System.Data.Common.DbDataReader>并在<xref:System.Data.SqlClient.SqlDataReader>类，以便获取<xref:System.IO.Stream>， <xref:System.Xml.XmlReader>，和<xref:System.IO.TextReader>对象，并对其做出反应。  这些类用于检索查询中的数据。 因此，从 SQL Server 的流式处理支持面向 OLTP 方案，适用于本地和非本地环境。  
   
- 为了启用 <xref:System.Data.SqlClient.SqlDataReader> 中的流支持，将以下成员添加到了 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]：  
+ 将以下成员添加到<xref:System.Data.SqlClient.SqlDataReader>以启用 SQL Server 中的流支持：  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/17/2018
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- 为了启用 <xref:System.Data.Common.DbDataReader> 中的流支持，将以下成员添加到了 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]：  
+ 将以下成员添加到<xref:System.Data.Common.DbDataReader>以启用 SQL Server 中的流支持：  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -57,8 +59,8 @@ ms.lasthandoff: 01/17/2018
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的流支持  
- 对 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的流支持 <xref:System.Data.SqlClient.SqlParameter> 类中引入了新功能，因此其可以接受 <xref:System.Xml.XmlReader>、<xref:System.IO.Stream> 和 <xref:System.IO.TextReader> 对象并做出反应。 <xref:System.Data.SqlClient.SqlParameter> 用于将参数传递给查询和存储过程。  
+## <a name="streaming-support-to-sql-server"></a>到 SQL Server 的流式处理支持  
+ 流式处理到 SQL Server 的支持引入了中的新增功能<xref:System.Data.SqlClient.SqlParameter>类，以便它可以接受和响应<xref:System.Xml.XmlReader>， <xref:System.IO.Stream>，和<xref:System.IO.TextReader>对象。 <xref:System.Data.SqlClient.SqlParameter> 用于将参数传递给查询和存储过程。  
   
  释放 <xref:System.Data.SqlClient.SqlCommand> 对象或调用 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> 必须取消任何流操作。 如果应用程序发送 <xref:System.Threading.CancellationToken>，则不保证取消。  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/17/2018
   
  <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 对象将转移到由 <xref:System.Data.SqlClient.SqlParameter.Size%2A> 定义的值。  
   
-## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a>示例 -- 来自 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的流  
+## <a name="sample----streaming-from-sql-server"></a>示例--流从 SQL Server  
  请使用以下 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 来创建示例数据库：  
   
 ```  
@@ -108,13 +110,13 @@ GO
   
 -   通过提供用于检索大型文件的异步方法来避免阻止用户接口线程。  
   
--   在 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中传输 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的大型文本文件。  
+-   从 SQL Server 传输大型文本文件[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
--   在 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中传输 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的大型 XML 文件。  
+-   从 SQL Server 传输大型的 XML 文件[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
--   检索 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中的数据。  
+-   从 SQL Server 检索数据。  
   
--   将一个 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 数据库中的大型文件 (BLOB) 传输到另一个数据库而不会用尽内存。  
+-   从一个 SQL Server 数据库的大型文件 (Blob) 传输到另一个没有内存不足。  
   
 ```  
 using System;  
@@ -305,7 +307,7 @@ namespace StreamingFromServer {
 }  
 ```  
   
-## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a>示例 -- 到 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的流  
+## <a name="sample----streaming-to-sql-server"></a>示例--流式传输到 SQL Server  
  请使用以下 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] 来创建示例数据库：  
   
 ```  
@@ -329,9 +331,9 @@ GO
   
  该示例说明如何执行以下功能：  
   
--   在 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中将大型 BLOB 传输到 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
+-   将大型 BLOB 传输到 SQL Server [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
--   在 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 中将大型文本文件传输到 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
+-   将一个大型文本文件传输到 SQL Server [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
 -   使用新异步功能来传输大型 BLOB。  
   
@@ -339,7 +341,7 @@ GO
   
 -   正在取消大型 BLOB 传输...  
   
--   使用新的异步功能从一个 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 流式传输到另一个。  
+-   到另一个使用新的异步功能从一个 SQL Server 流式处理。  
   
 ```  
 using System;  
@@ -461,8 +463,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a>示例 -- 从一个 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 流式传输到另一个 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- 此示例演示如何以异步方式将大型 BLOB 从一个 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 流式传输到另一个，支持取消。  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>示例--流式传输一个 SQL Server 到另一个 SQL Server  
+ 此示例演示如何以异步方式流式传输到另一个，支持取消大型 BLOB 从一个 SQL Server。  
   
 ```  
 using System;  

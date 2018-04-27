@@ -19,11 +19,11 @@ ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea4db763bbed651a01845b49395255586cb60113
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dadb21f4985497a90cc62f98c5fb2abdd7cc2781
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 子轴属性 (Visual Basic)
 提供对以下一项的子级的访问：<xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。  
@@ -38,10 +38,10 @@ object.<child>
   
 |术语|定义|  
 |---|---|  
-|`object`|必需。 <xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。|  
-|.<|必需。 表示子轴属性的开头。|  
-|`child`|必需。 若要访问，在窗体的子节点的名称 [`prefix``:`]`name`。<br /><br /> -   `Prefix`-可选。 子节点的 XML 命名空间前缀。 必须是使用 `Imports` 语句定义的全局 XML 命名空间。<br />-   `Name`必需。 本地子节点名。 请参阅[声明的 XML 元素和属性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
-|>|必需。 表示子轴属性的结尾。|  
+|`object`|必须的。 <xref:System.Xml.Linq.XElement> 对象、<xref:System.Xml.Linq.XDocument> 对象、<xref:System.Xml.Linq.XElement> 对象的集合或 <xref:System.Xml.Linq.XDocument> 对象的集合。|  
+|.<|必须的。 表示子轴属性的开头。|  
+|`child`|必须的。 若要访问，在窗体的子节点的名称 [`prefix``:`]`name`。<br /><br /> -   `Prefix` -可选。 子节点的 XML 命名空间前缀。 必须是使用 `Imports` 语句定义的全局 XML 命名空间。<br />-   `Name` 必需。 本地子节点名。 请参阅[声明的 XML 元素和属性的名称](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|>|必须的。 表示子轴属性的结尾。|  
   
 ## <a name="return-value"></a>返回值  
  <xref:System.Xml.Linq.XElement> 对象的集合。  
@@ -49,7 +49,7 @@ object.<child>
 ## <a name="remarks"></a>备注  
  可以使用 XML 子轴属性，从 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 对象，或从 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 对象的集合，按名称访问子节点。 使用 XML `Value` 属性来访问返回的集合中第一个子节点的值。 有关详细信息，请参阅[XML 值属性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器转换子轴属性调用<xref:System.Xml.Linq.XContainer.Elements%2A>方法。  
+ Visual Basic 编译器转换子轴属性调用<xref:System.Xml.Linq.XContainer.Elements%2A>方法。  
   
 ## <a name="xml-namespaces"></a>XML 命名空间  
  子轴属性中的名称仅可使用通过 `Imports` 语句全局声明的 XML 命名空间前缀。 它不能使用在 XML 元素文本中局部声明的 XML 命名空间前缀。 有关详细信息，请参阅[Imports 语句 (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。  
@@ -81,7 +81,7 @@ object.<child>
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Xml.Linq.XElement>  
  [XML 轴属性](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
  [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)  

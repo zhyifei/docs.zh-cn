@@ -1,12 +1,13 @@
 ---
-title: "LINQ 注意事项（WCF 数据服务）"
-ms.custom: 
+title: LINQ 注意事项（WCF 数据服务）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,25 +17,26 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f6742294c570501b20646c89455c7856f393f7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: df596093333aa35b89f8d7ed36f817a457e48fda
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 注意事项（WCF 数据服务）
-本主题提供有关使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端时 LINQ 查询的编写和执行方式的信息以及使用 LINQ 查询实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的数据服务的限制。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]编写和执行针对查询[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于数据服务，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
+本主题提供有关使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端时 LINQ 查询的编写和执行方式的信息以及使用 LINQ 查询实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的数据服务的限制。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 编写和执行针对查询[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于数据服务，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
   
 ## <a name="composing-linq-queries"></a>编写 LINQ 查询  
- LINQ 允许针对实现 <xref:System.Collections.Generic.IEnumerable%601> 的对象集合编写查询。 这两个**添加服务引用**中的对话框[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]和 DataSvcUtil.exe 工具用于生成的表示形式[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]作为实体容器继承的类，从服务<xref:System.Data.Services.Client.DataServiceContext>，以及表示源中返回的实体的对象。 这些工具还可为由服务作为源公开的集合的实体容器类生成属性。 封装了数据服务的类的每个属性都会返回一个 <xref:System.Data.Services.Client.DataServiceQuery%601>。 因为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实现 LINQ 定义的 <xref:System.Linq.IQueryable%601> 接口，所以可以针对数据服务公开的源编写 LINQ 查询，客户端库会将其转换为一个查询请求 URI，在执行时将此 URI 发送给数据服务。  
+ LINQ 允许针对实现 <xref:System.Collections.Generic.IEnumerable%601> 的对象集合编写查询。 这两个**添加服务引用**使用 Visual Studio 中的对话框和 DataSvcUtil.exe 工具来生成的表示形式[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务为继承自的实体容器类<xref:System.Data.Services.Client.DataServiceContext>，以及表示源中返回的实体的对象。 这些工具还可为由服务作为源公开的集合的实体容器类生成属性。 封装了数据服务的类的每个属性都会返回一个 <xref:System.Data.Services.Client.DataServiceQuery%601>。 因为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实现 LINQ 定义的 <xref:System.Linq.IQueryable%601> 接口，所以可以针对数据服务公开的源编写 LINQ 查询，客户端库会将其转换为一个查询请求 URI，在执行时将此 URI 发送给数据服务。  
   
 > [!IMPORTANT]
->  可以采用 LINQ 语法表示的查询集大于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 数据服务使用的 URI 语法所支持的查询集。 如果无法将查询映射到目标数据服务中的 URI，则会引发 <xref:System.NotSupportedException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][不受支持的 LINQ 方法](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods)本主题中。  
+>  可以采用 LINQ 语法表示的查询集大于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 数据服务使用的 URI 语法所支持的查询集。 如果无法将查询映射到目标数据服务中的 URI，则会引发 <xref:System.NotSupportedException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [不受支持的 LINQ 方法](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods)本主题中。  
   
  下面的示例是一个 LINQ 查询，它返回运费成本超过 30 美元的 `Orders` 并按装运日期对结果进行排序，最近的装运日期排在最前面：  
   
@@ -176,7 +178,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |投影和筛选运算符|以下接受位置参数的投影和筛选运算符不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>：<br /><br /> -   <xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%2CSystem.Collections.Generic.IEqualityComparer%7B%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2C%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29>|  
 |分组运算符|所有分组运算符都不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>，其中包括：<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> 分组运算符必须在客户端上执行。|  
 |聚合运算符|所有聚合运算符都不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>，其中包括：<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> 聚合运算符必须在客户端上执行或由服务操作封装。|  
-|分页运算符|以下分页运算符不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>：<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A>**注意：**对空序列执行的分页运算符将返回 null。|  
+|分页运算符|以下分页运算符不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>：<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **注意：**对空序列执行的分页运算符将返回 null。|  
 |其他运算符|以下其他运算符不能用于 <xref:System.Data.Services.Client.DataServiceQuery%601>：<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
@@ -197,7 +199,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.String.ToUpper>|`string toupper(string p0)`|  
 |<xref:System.String.Trim>|`string trim(string p0)`|  
   
-|<xref:System.DateTime>成员<sup>1</sup>|支持的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 函数|  
+|<xref:System.DateTime> 成员<sup>1</sup>|支持的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 函数|  
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Day>|`int day(DateTime p0)`|  
 |<xref:System.DateTime.Hour>|`int hour(DateTime p0)`|  

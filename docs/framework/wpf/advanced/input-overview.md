@@ -1,12 +1,13 @@
 ---
-title: "输入概述"
-ms.custom: 
+title: 输入概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,16 +32,17 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b10890cc433e1adf72b7e26c91e919bd239942b8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="input-overview"></a>输入概述
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 子系统提供了功能强大的 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，可获取鼠标、键盘、触摸和触笔等各种设备中的输入。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的服务，并说明了输入系统的体系结构。  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Input.Mouse>和<xref:System.Windows.Input.Keyboard>类本概述的更详细地介绍。  
   
 ### <a name="stylus-input"></a>触笔输入  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]集成了对支持<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是笔输入变得广通过[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序可以通过使用鼠标 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 将触笔视为鼠标，但 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也公开了触笔设备抽象，其使用的模型与键盘和鼠标类似。  所有与触笔相关的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都包含单词“触笔”。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 集成了对支持<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是笔输入变得广通过[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序可以通过使用鼠标 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 将触笔视为鼠标，但 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也公开了触笔设备抽象，其使用的模型与键盘和鼠标类似。  所有与触笔相关的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都包含单词“触笔”。  
   
  由于触笔可充当鼠标，因此仅支持鼠标输入的应用程序仍可以自动获得一定程度的触笔支持。 以这种方式使用触笔时，应用程序有能力处理相应的触笔事件，然后处理相应的鼠标事件。 此外，通过触笔设备抽象也可以使用墨迹输入等较高级别的服务。  有关墨迹输入的详细信息，请参阅[墨迹入门](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)。  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="handling_input_events"></a>   
 ## <a name="handling-input-events"></a>处理输入事件  
- 若要在元素上接收输入，必须将事件处理程序与该特定事件关联。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，这很简单：将事件的名称作为要侦听此事件的元素的特性进行引用。  然后，根据委托，将特性的值设置为所定义的事件处理程序的名称。  事件处理程序必须用代码（例如 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]）编写，并且可以包含在代码隐藏文件中。  
+ 若要在元素上接收输入，必须将事件处理程序与该特定事件关联。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，这很简单：将事件的名称作为要侦听此事件的元素的特性进行引用。  然后，根据委托，将特性的值设置为所定义的事件处理程序的名称。  事件处理程序必须用如 C# 的代码编写，并且可以包括在代码隐藏文件中。  
   
  当操作系统报告发生键操作时，如果键盘焦点正处在元素上，则将发生键盘事件。 鼠标和触笔事件分别分为两类：报告指针位置相对于元素的变化的事件，和报告设备按钮状态的变化的事件。  
   
@@ -330,7 +332,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="keyboard-focus"></a>键盘焦点  
  键盘焦点指当前正在接收键盘输入的元素。  在整个桌面上，只能有一个具有键盘焦点的元素。  在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，具有键盘焦点的元素将具有<xref:System.Windows.IInputElement.IsKeyboardFocused%2A>设置为`true`。  静态<xref:System.Windows.Input.Keyboard>方法<xref:System.Windows.Input.Keyboard.FocusedElement%2A>返回当前具有键盘焦点的元素。  
   
- 可以获取键盘焦点，通过 tab 键移到元素或通过单击鼠标某些元素，如<xref:System.Windows.Controls.TextBox>。  键盘焦点也可以获取以编程方式使用<xref:System.Windows.Input.Keyboard.Focus%2A>方法<xref:System.Windows.Input.Keyboard>类。  <xref:System.Windows.Input.Keyboard.Focus%2A>尝试将指定的元素键盘焦点给予。  返回的元素<xref:System.Windows.Input.Keyboard.Focus%2A>是当前具有键盘焦点的元素。  
+ 可以获取键盘焦点，通过 tab 键移到元素或通过单击鼠标某些元素，如<xref:System.Windows.Controls.TextBox>。  键盘焦点也可以获取以编程方式使用<xref:System.Windows.Input.Keyboard.Focus%2A>方法<xref:System.Windows.Input.Keyboard>类。  <xref:System.Windows.Input.Keyboard.Focus%2A> 尝试将指定的元素键盘焦点给予。  返回的元素<xref:System.Windows.Input.Keyboard.Focus%2A>是当前具有键盘焦点的元素。  
   
  若要获取键盘焦点的元素顺序<xref:System.Windows.UIElement.Focusable%2A>属性和<xref:System.Windows.UIElement.IsVisible%2A>属性必须设置为**true**。  一些类，如<xref:System.Windows.Controls.Panel>，具有<xref:System.Windows.UIElement.Focusable%2A>设置为`false`默认情况下; 因此，你可能需要将此属性设置为`true`如果你想要能够获得焦点该元素。  
   
@@ -375,11 +377,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="commands"></a>命令  
  使用命令，输入处理可以更多地在语义级别（而不是在设备输入级别）进行。  命令是简单的指令，如 `Cut`、`Copy`、`Paste` 或 `Open`。  命令可用于集中命令逻辑。  相同的命令可能会访问从<xref:System.Windows.Controls.Menu>上<xref:System.Windows.Controls.ToolBar>，或通过键盘快捷方式。 命令还提供一种机制，用于在命令不可用时禁用控件。  
   
- <xref:System.Windows.Input.RoutedCommand>是[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]实现<xref:System.Windows.Input.ICommand>。  当<xref:System.Windows.Input.RoutedCommand>执行时，<xref:System.Windows.Input.CommandManager.PreviewExecuted>和<xref:System.Windows.Input.CommandManager.Executed>引发哪些隧道和通过元素树的气泡，如其他输入对命令目标。  如果未设置命令目标，则具有键盘焦点的元素将成为命令目标。  执行此命令的逻辑附加到<xref:System.Windows.Input.CommandBinding>。  当<xref:System.Windows.Input.CommandManager.Executed>事件到达<xref:System.Windows.Input.CommandBinding>对于该特定的命令，<xref:System.Windows.Input.ExecutedRoutedEventHandler>上<xref:System.Windows.Input.CommandBinding>调用。  此处理程序执行该命令的操作。  
+ <xref:System.Windows.Input.RoutedCommand> 是[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]实现<xref:System.Windows.Input.ICommand>。  当<xref:System.Windows.Input.RoutedCommand>执行时，<xref:System.Windows.Input.CommandManager.PreviewExecuted>和<xref:System.Windows.Input.CommandManager.Executed>引发哪些隧道和通过元素树的气泡，如其他输入对命令目标。  如果未设置命令目标，则具有键盘焦点的元素将成为命令目标。  执行此命令的逻辑附加到<xref:System.Windows.Input.CommandBinding>。  当<xref:System.Windows.Input.CommandManager.Executed>事件到达<xref:System.Windows.Input.CommandBinding>对于该特定的命令，<xref:System.Windows.Input.ExecutedRoutedEventHandler>上<xref:System.Windows.Input.CommandBinding>调用。  此处理程序执行该命令的操作。  
   
  有关命令的详细信息，请参阅[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供一个常见的命令组成的库<xref:System.Windows.Input.ApplicationCommands>， <xref:System.Windows.Input.MediaCommands>， <xref:System.Windows.Input.ComponentCommands>， <xref:System.Windows.Input.NavigationCommands>，和<xref:System.Windows.Documents.EditingCommands>，也可以定义自己。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一个常见的命令组成的库<xref:System.Windows.Input.ApplicationCommands>， <xref:System.Windows.Input.MediaCommands>， <xref:System.Windows.Input.ComponentCommands>， <xref:System.Windows.Input.NavigationCommands>，和<xref:System.Windows.Documents.EditingCommands>，也可以定义自己。  
   
  下面的示例演示如何设置<xref:System.Windows.Controls.MenuItem>，以便在单击时它将会调用<xref:System.Windows.Input.ApplicationCommands.Paste%2A>命令<xref:System.Windows.Controls.TextBox>，那么<xref:System.Windows.Controls.TextBox>具有键盘焦点。  
   

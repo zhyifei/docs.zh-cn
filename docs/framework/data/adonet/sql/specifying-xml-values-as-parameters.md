@@ -1,36 +1,38 @@
 ---
-title: "将 XML 值指定为参数"
-ms.custom: 
+title: 将 XML 值指定为参数
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7514d2d19b6691fc5a25e17e7ad483d108fe4aa2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dace7c3adc1b7a55c8c945e82399828ce16f1bb0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>将 XML 值指定为参数
-如果查询需要其值为一个 XML 字符串的参数，开发人员可以使用提供该值的实例**SqlXml**数据类型。 真的没有任何窍门；[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的 XML 列接受参数值的方式与其他数据类型完全相同。  
+如果查询需要其值为一个 XML 字符串的参数，开发人员可以使用提供该值的实例**SqlXml**数据类型。 真的没有任何窍门;SQL Server 中的 XML 列接受参数值，方式与其他数据类型完全相同。  
   
 ## <a name="example"></a>示例  
  以下控制台应用程序创建的新表中**AdventureWorks**数据库。 新表包括一个名为**SalesID**和名为的 XML 列**SalesInfo**。  
   
 > [!NOTE]
->  **AdventureWorks**示例数据库未安装默认情况下，当你安装时[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]。 可以通过运行 SQL Server 安装程序来安装。  
+>  **AdventureWorks**示例数据库未安装默认情况下，安装 SQL Server 时。 可以通过运行 SQL Server 安装程序来安装。  
   
  示例准备一个 <xref:System.Data.SqlClient.SqlCommand> 对象，用于在新表中插入行。 保存的文件提供所需的 XML 数据**SalesInfo**列。  
   

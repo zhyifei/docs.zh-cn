@@ -1,11 +1,12 @@
 ---
-title: "错误类型 (Visual Basic)"
-ms.custom: 
+title: 错误类型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - exceptions, types
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e01ed588d284a475a537a5fcf5ca506d25ca69f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b3cf1307f54a5c902bf8e6379c8760c735a45e4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-types-visual-basic"></a>错误类型 (Visual Basic)
-在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，错误 (也称为*异常*) 分为三个类别之一： 语法错误、 运行时错误和逻辑错误。  
+在 Visual Basic 中，错误 (也称为*异常*) 分为三个类别之一： 语法错误、 运行时错误和逻辑错误。  
   
 ## <a name="syntax-errors"></a>语法错误  
- *语法错误*是指那些编写代码时出现。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]检查你的代码，并在你键入**代码编辑器**窗口，并提醒你如果你的错误，如拼错单词或不正确地使用一个语言元素。 语法错误是最常见的错误类型。 你可以轻松地更正这些编码的环境中就会立即发生。  
+ *语法错误*是指那些编写代码时出现。 Visual Basic 检查你的代码，并在你键入**代码编辑器**窗口，并提醒你如果你的错误，如拼错单词或不正确地使用一个语言元素。 语法错误是最常见的错误类型。 你可以轻松地更正这些编码的环境中就会立即发生。  
   
 > [!NOTE]
 >  `Option Explicit`语句是一种避免语法错误。 它会强制您可以声明，提前，所有应用程序中使用的变量。 因此，如果这些变量将用在代码中，任何排字错误立即捕获，并且可以固定的。  
@@ -40,6 +41,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="logic-errors"></a>逻辑错误  
  *逻辑错误*是指那些出现一次应用程序正在使用。 它们是以响应用户操作的大多数通常不需要或意外结果。 例如，键入的密钥或其他外部的影响可能会导致应用程序停止工作预期参数中或完全。 逻辑错误通常是最难的类型，若要解决，因为并不总是清除它们发生的位置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
  [调试器基础知识](/visualstudio/debugger/debugger-basics)

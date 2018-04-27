@@ -1,22 +1,23 @@
 ---
-title: "打印和报告 (Visual Basic)"
+title: 打印和报告 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e51ca5482a87dca1661f8b7d78272b70da676359
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1bcb8d0101bb558d64208ff8b2df72238a968adb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-and-reporting-visual-basic"></a>打印和报告 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供有关打印和报告的几个选项。 以下主题提供的概述和指向与打印和报告相关的相关文档。  
+Visual Basic 提供了有关打印和报告的几个选项。 以下主题提供的概述和指向与打印和报告相关的相关文档。  
   
 ## <a name="in-this-section"></a>本节内容  
  [PrintForm 组件](../../../visual-basic/developing-apps/printing/printform-component.md)  

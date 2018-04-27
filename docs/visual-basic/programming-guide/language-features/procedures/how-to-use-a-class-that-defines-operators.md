@@ -1,11 +1,12 @@
 ---
-title: "如何：使用定义运算符的类 (Visual Basic)"
-ms.custom: 
+title: 如何：使用定义运算符的类 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 223b3fc84fe75d1d530cd182c9332e5c663aa519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e0bcfaeca638dfabb841a9e935b872f76fdf957
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>如何：使用定义运算符的类 (Visual Basic)
-如果你使用的类或结构，它定义自己的运算符，则可以访问这些运算符从[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+如果你使用的类或结构，它定义自己的运算符，则可以从 Visual Basic 中访问这些运算符。  
   
  在类或结构上定义一个运算符也称为*重载*运算符。  
   
 ## <a name="example"></a>示例  
- 以下示例访问 SQL 结构<xref:System.Data.SqlTypes.SqlString>，后者定义转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字符串之间进行双向和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字符串。 使用`CType(` *SQL 字符串表达式*， `String)` SQL 将字符串转换为[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字符串，和`CType(` *Visual Basic 字符串表达式*， <xref:System.Data.SqlTypes.SqlString>`)`在另一个方向转换。  
+ 以下示例访问 SQL 结构<xref:System.Data.SqlTypes.SqlString>，后者定义转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字符串和 Visual Basic 字符串之间的两个方向。 使用`CType(` *SQL 字符串表达式*，`String)`将 SQL 字符串转换为 Visual Basic 字符串，和`CType(` *Visual Basic 字符串表达式*， <xref:System.Data.SqlTypes.SqlString> `)`在另一个方向转换。  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
  你的项目必须具有对 System.Data 和 System.XML 的引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符过程](./operator-procedures.md)  
  [如何：定义运算符](./how-to-define-an-operator.md)  
  [如何：定义转换运算符](./how-to-define-a-conversion-operator.md)  

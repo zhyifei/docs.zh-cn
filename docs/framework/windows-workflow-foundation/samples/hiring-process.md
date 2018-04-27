@@ -1,23 +1,24 @@
 ---
-title: "招聘流程"
-ms.custom: 
+title: 招聘流程
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>招聘流程
 本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。 这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。  
@@ -129,7 +130,7 @@ ms.lasthandoff: 12/22/2017
 |自定义跟踪|此示例包含保存 `HiringRequestProcess` 的历史记录（记录完成的操作、执行者以及执行时间）的自定义跟踪参与者。 源代码位于 HiringRequestService 的跟踪文件夹中。|HiringRequestService|  
 |ETW 跟踪|在 HiringRequestService 服务的 App.config 文件中配置系统提供的 ETW 跟踪。|HiringRequestService|  
 |活动的构成|此过程定义使用 <xref:System.Activities.Activity> 的自由构成。 流程图包含若干个顺序活动和并行活动，而这些活动同时又包含其他活动，等待。|HiringRequestService|  
-|并行活动|-   <xref:System.Activities.Statements.ParallelForEach%601>用于在 CEO 和 HR 经理的收件箱中注册并行 （等待两名 HR 经理的审批步骤）。<br />-   <xref:System.Activities.Statements.Parallel>用于执行一些清理任务。 在已完成和已拒绝步骤中|HiringRequestService|  
+|并行活动|-   <xref:System.Activities.Statements.ParallelForEach%601> 用于在 CEO 和 HR 经理的收件箱中注册并行 （等待两名 HR 经理的审批步骤）。<br />-   <xref:System.Activities.Statements.Parallel> 用于执行一些清理任务。 在已完成和已拒绝步骤中|HiringRequestService|  
 |模型取消|此流程图使用 <xref:System.Activities.Statements.CancellationScope> 创建取消行为（在此情况下它执行一些清理操作）。|HiringRequestService|  
 |客户持久性参与者|`HiringRequestPersistenceParticipant` 将工作流变量中的数据保存到 Contoso HR 数据库中存储的某个表中。|HiringRequestService|  
 |工作流服务|使用工作流服务实现 `ResumeRequestService`。 工作流定义和服务信息包含在 ResumeRequestService.xamlx 中。 此服务配置为使用持久性和跟踪。|ResumeRequestService|  
@@ -141,13 +142,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="data-storage"></a>数据存储  
  数据存储在名为 `ContosoHR` 的 SQL Server 数据库中（创建此数据库的脚本位于 `DbSetup` 文件夹中）。 工作流实例存储在名为 `InstanceStore` 的 SQL Server 数据库中（创建实例存储的脚本是 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 分布的一部分）。  
   
- 通过从 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 命令提示中运行 Setup.cmd 脚本可创建这两个数据库。  
+ 这两个数据库创建的 Visual Studio 命令提示符处运行 Setup.cmd 脚本。  
   
 ## <a name="running-the-sample"></a>运行示例  
   
 #### <a name="to-create-the-databases"></a>创建数据库  
   
-1.  打开一个 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 命令提示符。  
+1.  打开 Visual Studio 命令提示。  
   
 2.  导航到示例文件夹。  
   
@@ -157,7 +158,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-set-up-the-solution-for-execution"></a>设置执行解决方案  
   
-1.  以管理员身份运行 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。 打开 HiringRequest.sln。  
+1.  以管理员身份运行 Visual Studio。 打开 HiringRequest.sln。  
   
 2.  右键单击该解决方案中的**解决方案资源管理器**和选择**属性**。  
   
@@ -221,7 +222,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="troubleshooting"></a>疑难解答  
   
-1.  确保您使用管理员权限运行 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。  
+1.  确保使用管理员特权运行 Visual Studio。  
   
 2.  如果生成解决方案失败，请验证以下内容：  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 12/22/2017
   
         2.  右键单击**Contoso**和选择**更新 Web/服务引用**。  
   
-        3.  在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 中按 Ctrl+Shift+B 重新生成解决方案。  
+        3.  通过 Visual Studio 中按 CTRL + SHIFT + B 重新生成解决方案。  
   
 ## <a name="uninstalling"></a>卸载  
   

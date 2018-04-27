@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0862f747cb969a6aa2e63d86e842097260e95b56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 通过 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供程序在运行时公开服务的检测数据。  
   
 ## <a name="enabling-wmi"></a>启用 WMI  
- WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。 [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]WMI SDK，请参阅[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
+ WMI 是 Microsoft 基于 Web 的企业管理 (WBEM) 标准的实现。 [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] WMI SDK，请参阅[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是有关应用程序如何向外部管理工具公开管理规范的行业标准。  
   
  WMI 提供程序是一个在运行时通过 WBEM 兼容接口公开规范的组件。 它由一组包含属性/值对的 WMI 对象组成。 这些对可以是多个简单类型。 管理工具可以在运行时通过接口连接至服务。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 公开服务的特性，如地址、绑定、行为和侦听器。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  此配置项公开 WMI 接口。 现在，您可以通过此接口连接管理应用程序并访问应用程序的管理规范。  
   
 ## <a name="accessing-wmi-data"></a>访问 WMI 数据  
- 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供用于脚本的 WMI API、[!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)] 应用程序、C++ 应用程序和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 有关详细信息，请参阅[使用 WMI](http://go.microsoft.com/fwlink/?LinkId=95183)。  
+ 可以采用多种不同方式访问 WMI 数据。 Microsoft 提供脚本、 Visual Basic 应用程序、 c + + 应用程序，用于 WMI Api 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 有关详细信息，请参阅[使用 WMI](http://go.microsoft.com/fwlink/?LinkId=95183)。  
   
 > [!CAUTION]
 >  如果您使用 .NET Framework 提供的方法以编程方式访问 WMI 数据，您应注意此类方法可能会在建立连接时引发异常。 连接并不是在构建 <xref:System.Management.ManagementObject> 实例的过程中建立的，而是在涉及实际数据交换的第一次请求时建立的。 因此，您应该使用 `try..catch` 块来捕捉可能的异常。  
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/22/2017
 Whoami /user  
 ```  
   
- 此方法提供了当前用户的 SID，但是此方法不能用于获取任意用户的 SID。 另一个获取 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 资源工具包对于管理任务](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具比较两个用户（本地用户或域用户）的 SID，其副功能是将两个 SID 显示到命令行。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][已知 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
+ 此方法提供了当前用户的 SID，但是此方法不能用于获取任意用户的 SID。 另一个获取 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 资源工具包对于管理任务](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具比较两个用户（本地用户或域用户）的 SID，其副功能是将两个 SID 显示到命令行。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [已知 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>访问远程 WMI 对象实例  
  如果您需要访问远程计算机上的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 实例，就必须对您用于访问的工具启用数据包保密性。 以下部分描述如何通过使用 WMI CIM Studio、Windows Management Instrumentation 测试器以及 .NET SDK 2.0 实现这些目标。  
@@ -172,7 +172,7 @@ Whoami /user
   
 1.  在**连接到命名空间：**窗口中，键入**root\ServiceModel**单击**确定。**  
   
-2.  在**WMI CIM Studio 登录**窗口中，单击**选项 >>**按钮展开该窗口。 选择**数据包隐私**为**身份验证级别**，然后单击**确定**。  
+2.  在**WMI CIM Studio 登录**窗口中，单击**选项 >>** 按钮展开该窗口。 选择**数据包隐私**为**身份验证级别**，然后单击**确定**。  
   
 ### <a name="windows-management-instrumentation-tester"></a>Windows Management Instrumentation 测试器  
  此工具由 Windows 安装。 若要运行它，启动命令控制台中，通过键入**cmd.exe**中**开始/运行**对话框中，单击**确定**。 然后，键入**wbemtest.exe**命令窗口中。 Windows Management Instrumentation 测试器工具随即启动。  

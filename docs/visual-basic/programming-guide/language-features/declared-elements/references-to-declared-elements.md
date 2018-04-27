@@ -1,32 +1,33 @@
 ---
-title: "对已声明元素的引用 (Visual Basic)"
-ms.custom: 
+title: 对已声明元素的引用 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>对已声明元素的引用 (Visual Basic)
-如果你的代码引用已声明的元素，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器匹配该名称的相应声明你引用中的名称。 如果多个元素具有相同名称声明，则可以控制这些元素哪一项将引用的*合格*其名称。  
+如果你的代码引用声明的元素，Visual Basic 编译器匹配该名称的相应声明你引用中的名称。 如果多个元素具有相同名称声明，则可以控制这些元素哪一项将引用的*合格*其名称。  
   
  编译器将尝试匹配对具有的名称声明的名称引用*范围最小*。 这意味着它开头进行引用的代码，并向外扩展到包含元素的连续级别。  
   
- 下面的示例演示对具有相同名称的两个变量的引用。 此示例声明两个变量，每个名为`totalCount`，不同的模块中的作用域级别`container`。 当过程`showCount`显示`totalCount`而无需限定，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器将解析对范围最小的作用域，即内的局部声明的声明的引用`showCount`。 当它鉴定`totalCount`与包含模块`container`，编译器将解析对具有更广泛的作用域声明的引用。  
+ 下面的示例演示对具有相同名称的两个变量的引用。 此示例声明两个变量，每个名为`totalCount`，不同的模块中的作用域级别`container`。 当过程`showCount`显示`totalCount`而无需限定，Visual Basic 编译器将解析对范围最小的作用域，即内的局部声明的声明的引用`showCount`。 当它鉴定`totalCount`与包含模块`container`，编译器将解析对具有更广泛的作用域声明的引用。  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -199,9 +200,9 @@ Dim xDoc As xD.XmlDocument
  可以通过为你的所有元素分别都指定唯一名称来避免名称多义性。 然后你可以对任何元素引用而无需限定其名称前的使用命名空间、 模块或类。 你还可以减少意外错误的元素中引用的可能性。  
   
 ## <a name="shadowing"></a>隐藏  
- 当两个编程元素共享相同的名称时，可以隐藏其中一个，或*卷影*，另一个。 隐藏的元素不可用于参考;相反，当你的代码使用隐藏的元素名称，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器将其解析为隐藏的元素。 包含示例的更多详细说明，请参阅[Visual Basic 中的隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+ 当两个编程元素共享相同的名称时，可以隐藏其中一个，或*卷影*，另一个。 隐藏的元素不可用于参考;相反，当你的代码使用隐藏的元素名称时，Visual Basic 编译器将其解析为隐藏的元素。 包含示例的更多详细说明，请参阅[Visual Basic 中的隐藏](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  [已声明元素的特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
  [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  

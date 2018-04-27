@@ -1,11 +1,12 @@
 ---
-title: "Function 过程 (Visual Basic)"
-ms.custom: 
+title: Function 过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Function 过程 (Visual Basic)
-A`Function`过程是一系列[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]语句括`Function`和`End Function`语句。 `Function`过程执行任务，再将控制权返回给调用代码。 当它返回控件时，它还到调用代码返回一个值。  
+A`Function`过程是一系列 Visual Basic 语句括在`Function`和`End Function`语句。 `Function`过程执行任务，再将控制权返回给调用代码。 当它返回控件时，它还到调用代码返回一个值。  
   
  每次调用过程时，运行，其语句开头的第一个可执行语句后`Function`语句和与第一个结束`End Function`， `Exit Function`，或`Return`遇到的语句。  
   
@@ -91,11 +92,11 @@ End Function
   
  针对调用语法`Function`过程是，如下所示：  
   
- *左值*`=`*functionname* `[(` *argumentlist*    `)]`  
+ *左值*`=`*functionname* `[(` *argumentlist*  `)]`  
   
- `If ((`*functionname* `[(` *argumentlist* `)] / 3) <=`*表达式*  `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`*表达式*  `) Then`  
   
- 当调用`Function`过程中，则不需要使用其返回值。 如果不这样做，将执行的函数的所有操作，而将忽略返回值。 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>通常会调用这种方式。  
+ 当调用`Function`过程中，则不需要使用其返回值。 如果不这样做，将执行的函数的所有操作，而将忽略返回值。 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 通常会调用这种方式。  
   
 ### <a name="illustration-of-declaration-and-call"></a>声明和调用图  
  以下`Function`过程计算的最长端或斜边直角三角形，其他两条边为给定的值。  
@@ -106,7 +107,7 @@ End Function
   
  [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/function-procedures_2.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [Sub 过程](./sub-procedures.md)  
  [属性过程](./property-procedures.md)  

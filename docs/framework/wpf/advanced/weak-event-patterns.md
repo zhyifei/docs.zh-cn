@@ -1,34 +1,36 @@
 ---
-title: "弱事件模式"
-ms.custom: 
+title: 弱事件模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weak-event-patterns"></a>弱事件模式
-在应用程序，很可能不会被附加到事件源的处理程序破坏与附加到源的处理程序的侦听器对象结合使用。 这种情况下可能会导致内存泄漏。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]引入了一种设计模式，可以用于解决此问题，通过专用管理器类的特定事件并在该事件的侦听器上实现接口。 此设计模式中被称为*弱事件模式*。  
+在应用程序，很可能不会被附加到事件源的处理程序破坏与附加到源的处理程序的侦听器对象结合使用。 这种情况下可能会导致内存泄漏。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 引入了一种设计模式，可以用于解决此问题，通过专用管理器类的特定事件并在该事件的侦听器上实现接口。 此设计模式中被称为*弱事件模式*。  
   
 ## <a name="why-implement-the-weak-event-pattern"></a>为什么实现弱事件模式？  
- 侦听事件可能导致内存泄漏。 为侦听事件的典型方法是使用将处理程序附加到源上的事件的特定于语言的语法。 例如，在[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]，语法是： `source.SomeEvent += new SomeEventHandler(MyEventHandler)`。  
+ 侦听事件可能导致内存泄漏。 为侦听事件的典型方法是使用将处理程序附加到源上的事件的特定于语言的语法。 例如，在 C# 中，该语法是： `source.SomeEvent += new SomeEventHandler(MyEventHandler)`。  
   
  此方法创建的强引用从事件源移到的事件侦听器。 通常，为侦听器附加事件处理程序会导致侦听器具有上 （除非显式删除事件处理程序） 受源的对象生存期对象生存期。 但在某些情况下，你可能想，侦听器可以由其他因素控制的对象生存期，如是否它当前所属的应用程序，而不是源的生存期的可视化树。 只要源对象生存期扩展的侦听器对象生存期结束后，正常事件模式会导致内存泄漏： 侦听器保持活动状态时间超过预期。  
   

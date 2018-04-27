@@ -1,11 +1,12 @@
 ---
-title: "数据类型疑难解答 (Visual Basic)"
-ms.custom: 
+title: 数据类型疑难解答 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4d2fb1cd1be9c88ad0dd413eedb8a226fe59f41e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f34e7bc50a51032387cf01db3fae17ef44b8b4d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>数据类型疑难解答 (Visual Basic)
 此页列出了一些对内部数据类型执行操作时可能发生的常见问题。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
  请注意，不足以声明`decimalRemainder`作为`Decimal`。 你还必须强制转换为`Decimal`，或它们使用`Double`默认情况下和`decimalRemainder`接收相同的不准确值`doubleRemainder`。  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>布尔值类型不准确地转换为数值类型  
- [Boolean 数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不会存储为数字，并且存储的值不应为等效于数字。 为了与早期版本中，兼容[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供转换关键字 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)， `CBool`， `CInt`，依次类推) 之间进行转换`Boolean`与数值类型。 但是，其他语言有时执行这些转换以不同方式，如同[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]方法。  
+ [Boolean 数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不会存储为数字，并且存储的值不应为等效于数字。 为了与早期版本兼容，Visual Basic 提供转换关键字 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)， `CBool`， `CInt`，依次类推) 之间进行转换`Boolean`与数值类型。 但是，其他语言有时执行这些转换以不同方式，如同[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]方法。  
   
  绝不应编写依赖于等效数字值的代码`True`和`False`。 只要有可能，应限制使用`Boolean`到为其设计的逻辑值的变量。 如果您需要混合`Boolean`和数字值，请确保你了解你选择的转换方法。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
  如果必须将转换`Boolean`值为数值数据类型，请小心使用有关哪些转换方法。  
   
 ## <a name="character-literal-generates-compiler-error"></a>字符文本生成编译器错误  
- 如果未指定任何类型的字符，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]将采用默认的文本的数据类型。 字符文本的默认类型-用引号引起来 (`" "`) — 是`String`。  
+ 在没有任何类型的字符的情况下，Visual Basic 将采用默认的文本数据类型。 字符文本的默认类型-用引号引起来 (`" "`) — 是`String`。  
   
  `String`数据类型不会扩大到[Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)。 这意味着，如果你想要分配到文本`Char`变量，必须进行收缩转换，或将文本强制转换到`Char`类型。  
 
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
  始终风险中没有使用收缩转换，因为它们可以在运行时失败。 例如，从转换`String`到`Char`如果可能会失败`String`值包含多个字符。 因此，它更好地编程为使用`C`类型字符。  
   
 ## <a name="string-conversion-fails-at-run-time"></a>字符串转换将在运行时失败  
- [字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)参与非常少的扩大转换。 `String`只扩大到自身和`Object`，且仅`Char`和`Char()`(`Char`数组) 扩大到`String`。 这是因为`String`变量和常量可以包含其他数据类型不能包含的值。  
+ [字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)参与非常少的扩大转换。 `String` 只扩大到自身和`Object`，且仅`Char`和`Char()`(`Char`数组) 扩大到`String`。 这是因为`String`变量和常量可以包含其他数据类型不能包含的值。  
   
  当类型检查开关 ([Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`，编译器不允许所有隐式收缩转换。 这包括涉及`String`。 你的代码仍可以使用转换关键字如`CStr`和[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)，以指示[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]尝试转换。  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="meaningless-values"></a>无意义的值  
  一般情况下，`String`值不是在其他数据类型，有意义，转换是高度人工和危险。 只要有可能，应限制使用`String`它们设计作为字符序列的变量。 绝不应编写依赖于其他类型中的等效值的代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  

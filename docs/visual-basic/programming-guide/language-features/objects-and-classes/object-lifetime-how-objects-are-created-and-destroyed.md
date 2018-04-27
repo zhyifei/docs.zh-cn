@@ -32,11 +32,11 @@ ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f985d6bf7b26ec22d6e533eae1f1d7ea0682e56c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d93d0c94bdbeb93e0527ef6b5c6248b3b580599f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>对象生存期：如何创建和销毁对象 (Visual Basic)
 使用 `New` 关键字创建类的实例（即对象）。 通常，初始化任务必须在使用之前在新对象上执行。 常见的初始化任务包括打开文件、连接到数据库以及读取注册表项的值。 Visual Basic 控制的使用过程调用的新对象的初始化*构造函数*（允许控制初始化的特殊方法）。  
@@ -44,10 +44,10 @@ ms.lasthandoff: 11/21/2017
  对象离开范围之后，由公共语言运行时 (CLR) 进行释放。 Visual Basic 控制使用过程调用的系统资源的释放*析构函数*。 同时，构造函数和析构函数支持强大、可预测的类库的创建。  
   
 ## <a name="using-constructors-and-destructors"></a>使用构造函数和析构函数  
- 构造函数和析构函数控制对象的创建和析构。 Visual Basic 中的 `Sub New` 和 `Sub Finalize` 过程初始化并销毁对象，它们替换 `Class_Initialize` 6.0 及更低版本中使用的 `Class_Terminate` 和 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 方法。  
+ 构造函数和析构函数控制对象的创建和析构。 `Sub New`和`Sub Finalize`在 Visual Basic 中的过程初始化并销毁对象，它们替换`Class_Initialize`和`Class_Terminate`Visual Basic 6.0 和早期版本中使用的方法。  
   
 ### <a name="sub-new"></a>Sub New  
- 创建类时，`Sub New` 构造函数仅可运行一次。 调用此函数的位置只能是相同类或派生类的另一个构造函数的代码的第一行。 此外，`Sub New` 方法中的代码始终在类中任何其他代码之前运行。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]和更高版本会隐式创建`Sub New`在运行时，如果不显式定义的构造函数`Sub New`类的过程。  
+ 创建类时，`Sub New` 构造函数仅可运行一次。 调用此函数的位置只能是相同类或派生类的另一个构造函数的代码的第一行。 此外，`Sub New` 方法中的代码始终在类中任何其他代码之前运行。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 和更高版本会隐式创建`Sub New`在运行时，如果不显式定义的构造函数`Sub New`类的过程。  
   
  若要创建类的构造函数，请在类定义中的任何位置创建一个名为 `Sub New` 的过程。 若要创建参数化构造函数，请按指定任何其他过程的参数的方式，将参数名称和数据类型指定为 `Sub New`，如下面代码所示：  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
   
- 定义派生自另一个类的类时，构造函数的首行必须是对基类的构造函数的调用，除非此基类具有一个无参数且可访问的构造函数。 例如，对包含以上构造函数的基类的调用将为 `MyBase.New(s)`。 否则，`MyBase.New` 是可选的，并且 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 运行时对其进行隐式调用。  
+ 定义派生自另一个类的类时，构造函数的首行必须是对基类的构造函数的调用，除非此基类具有一个无参数且可访问的构造函数。 例如，对包含以上构造函数的基类的调用将为 `MyBase.New(s)`。 否则为`MyBase.New`是可选的和 Visual Basic 运行时将隐式调用它。  
   
  编写了用于调用父对象构造函数的代码之后，你可以将任何附加初始化代码添加到 `Sub New` 过程。 `Sub New` 在作为参数化构造函数调用时可接受参数。 这些参数是从调用构造函数的过程（例如，`Dim AnObject As New ThisClass(X)`）中传递的。  
   
@@ -155,7 +155,7 @@ End Sub
   
  垃圾回收系统间的另一个区别涉及到 `Nothing` 的使用。 为了在 Visual Basic 6.0 及更低版本中利用引用计数，程序员有时将 `Nothing` 分配到对象变量以释放这些变量持有的引用。 如果变量持有对对象的最后引用，则会立即释放该对象的资源。 在 Visual Basic 的更高版本中，虽然可能存在此过程仍有用的情况，但执行此过程不会使引用的对象立即释放其资源。 若要立即释放资源，请使用对象的 <xref:System.IDisposable.Dispose%2A> 方法（如果可用）。 只有当变量的生存期相对于垃圾回收器用于检测孤立对象的时间来说很长时，你才应该将变量设置为 `Nothing`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.IDisposable.Dispose%2A>  
  [初始化和终止的组件](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
  [New 运算符](../../../../visual-basic/language-reference/operators/new-operator.md)  

@@ -1,31 +1,33 @@
 ---
-title: "文档序列化和存储"
-ms.custom: 
+title: 文档序列化和存储
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'serialization of documents [WPF], , '
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9a232e1e2557bf1ecc6bb5f27f941e03a204aec6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e65a20323e3797d6d56ac7941e4ac9aeeb0ed473
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="document-serialization-and-storage"></a>文档序列化和存储
-[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 为创建和显示高质量的文档提供一个强大环境。  增强功能可支持固定文档和流文档以及高级查看控件，这些增强功能与强大的二维和三维图形功能结合在一起，提高了 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 应用程序的质量水平，增强了用户体验。  [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的主要功能是能够灵活管理文档的内存中表示形式，而几乎每个应用程序都需要能够高效保存和加载数据存储中的文档。  将文档从内部的内存中表示形式转换为外部数据存储的过程称为序列化。  反之，读取数据存储并重新创建原始内存中实例的过程则称为反序列化。  
+Microsoft.NET Framework 提供了一个功能强大的环境，用于创建和显示高质量的文档。  增强功能可支持固定文档和流文档以及高级查看控件，这些增强功能与强大的二维和三维图形功能结合在一起，提高了 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 应用程序的质量水平，增强了用户体验。  [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的主要功能是能够灵活管理文档的内存中表示形式，而几乎每个应用程序都需要能够高效保存和加载数据存储中的文档。  将文档从内部的内存中表示形式转换为外部数据存储的过程称为序列化。  反之，读取数据存储并重新创建原始内存中实例的过程则称为反序列化。  
   
  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
     -   对自定义运行时设置和选项的用户界面支持。  
   
 ### <a name="xps-print-path"></a>XPS 打印路径  
- [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径还通过打印输出为编写文档提供一种可扩展机制。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可以作为文档文件格式，也可以作为 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档可直接发送到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机，而无需转换为中间格式。  有关打印路径输出选项和功能的其他信息，请参阅[打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)。  
+ Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印路径还提供了一个可扩展机制，用于编写文档，一直到打印输出。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可以作为文档文件格式，也可以作为 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档可直接发送到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机，而无需转换为中间格式。  有关打印路径输出选项和功能的其他信息，请参阅[打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)。  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>插件序列化程序  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
  插件序列化程序对应用程序开发人员很有帮助：它向新的存储设计和文件格式提供扩展性，而无需在生成时对每种潜在的格式进行直接编码。  插件序列化程序还通过为自定义或专有文件格式提供部署、安装和更新系统可访问插件的标准方法，使第三方开发人员受益匪浅。  
   
 ### <a name="using-a-plug-in-serializer"></a>使用插件序列化程序  
- 插件序列化程序易于使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider>类枚举<xref:System.Windows.Documents.Serialization.SerializerDescriptor>对象对每个插件已安装的系统上。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>属性筛选器已安装的即插即用的项基于当前配置并验证是否可以加载和应用程序使用序列化程序。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>还提供其他属性，如<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>和<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，应用程序可以用于提示中选择可用的输出格式的序列化程序的用户。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 的默认插件序列化程序随 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 一起提供，并会始终进行枚举。  在用户选择输出格式之后,<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法用于创建<xref:System.Windows.Documents.Serialization.SerializerWriter>对于特定的格式。  <xref:System.Windows.Documents.Serialization.SerializerWriter>。<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A>然后调用方法以输出到数据存储文档流。  
+ 插件序列化程序易于使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider>类枚举<xref:System.Windows.Documents.Serialization.SerializerDescriptor>对象对每个插件已安装的系统上。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>属性筛选器已安装的即插即用的项基于当前配置并验证是否可以加载和应用程序使用序列化程序。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>还提供其他属性，如<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>和<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，应用程序可以用于提示中选择可用的输出格式的序列化程序的用户。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 的默认插件序列化程序随 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 一起提供，并会始终进行枚举。  在用户选择输出格式之后,<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法用于创建<xref:System.Windows.Documents.Serialization.SerializerWriter>对于特定的格式。  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 然后可以调用方法以输出到数据存储文档流。  
   
  下面的示例演示使用的应用程序<xref:System.Windows.Documents.Serialization.SerializerProvider>"PlugInFileFilter"属性中的方法。  PlugInFileFilter 枚举已安装的即插即用的项，并生成一个筛选器字符串，可用的文件选项<xref:Microsoft.Win32.SaveFileDialog>。  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>安装插件序列化程序  
- <xref:System.Windows.Documents.Serialization.SerializerProvider>类提供了插件序列化程序发现和访问的较高级别应用程序接口。  <xref:System.Windows.Documents.Serialization.SerializerProvider>查找并提供应用程序的序列化程序已安装并且可在系统上访问的列表。  已安装序列化程序的具体信息通过注册表设置来定义。  插件序列化程序可以通过使用添加到注册表<xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A>方法; 或者，如果[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]尚未安装，则插件的安装脚本可能直接设置注册表值本身。  <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A>方法可以用于删除以前安装插件，或注册表设置都可以通过卸载脚本同样重置。  
+ <xref:System.Windows.Documents.Serialization.SerializerProvider>类提供了插件序列化程序发现和访问的较高级别应用程序接口。  <xref:System.Windows.Documents.Serialization.SerializerProvider> 查找并提供应用程序的序列化程序已安装并且可在系统上访问的列表。  已安装序列化程序的具体信息通过注册表设置来定义。  插件序列化程序可以通过使用添加到注册表<xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A>方法; 或者，如果[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]尚未安装，则插件的安装脚本可能直接设置注册表值本身。  <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A>方法可以用于删除以前安装插件，或注册表设置都可以通过卸载脚本同样重置。  
   
 ### <a name="creating-a-plug-in-serializer"></a>创建插件序列化程序  
  插件序列化程序和链接序列化程序使用同一公开的公共方法和事件，并且可同样设计为以同步或异步方式运行。  创建插件序列化程序通常应执行下列三个基本步骤：  

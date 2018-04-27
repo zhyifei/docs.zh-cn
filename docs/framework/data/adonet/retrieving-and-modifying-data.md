@@ -1,24 +1,26 @@
 ---
-title: "在 ADO.NET 中检索和修改数据"
-ms.custom: 
+title: 在 ADO.NET 中检索和修改数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ff937e619d449fbfbedb234749292b6acc4bdf50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 05760e7295606f700f72e5a3af14e395bcc5d820
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中检索和修改数据
 任何数据库应用程序的一项主要功能是连接数据源并检索数据源中包含的数据。 ADO.NET 的.NET Framework 数据提供程序充当应用程序和数据源，二者之间的桥梁使您可以执行命令以及使用检索数据**DataReader**或**DataAdapter**. 任何数据库应用程序的一项关键功能是更新数据库中存储的数据的能力。 在 ADO.NET 中，更新数据时会使用**DataAdapter**和<xref:System.Data.DataSet>，和**命令**对象，它可能还会使用事务。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/17/2018
  包含说明如何执行本地事务、分布式事务及使用开放式并发的主题。  
   
  [检索标识或自动编号值](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- 提供的映射为生成的值示例**标识**中的列[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]表或**Autonumber**字段在 Microsoft Access 表中，到表中插入行的列。 讨论在 `DataTable` 中合并标识值。  
+ 提供的映射为生成的值示例**标识**列中的 SQL Server 表或**Autonumber**字段在 Microsoft Access 表中，到表中插入行的列。 讨论在 `DataTable` 中合并标识值。  
   
  [检索二进制数据](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  描述如何检索二进制数据或使用的大型数据结构`CommandBehavior`。`SequentialAccess` 若要修改的默认行为`DataReader`。  
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/17/2018
  介绍了 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 对异步编程的支持。  
   
  [SqlClient 流支持](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- 讨论如何编写在不将其完全加载到内存的情况下从 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 流式读取数据的应用程序。  
+ 讨论如何编写应用程序流数据从 SQL Server 而不会使完全加载到内存中。  
   
 ## <a name="see-also"></a>请参阅  
  [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  

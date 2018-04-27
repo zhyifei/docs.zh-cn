@@ -1,12 +1,13 @@
 ---
-title: "导航概述"
-ms.custom: 
+title: 导航概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,19 +32,20 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 07609671d061851e6ede2f2bd90e4bee38e43159
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="navigation-overview"></a>导航概述
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]支持两种类型的应用程序中的可用的浏览器样式导航： 独立应用程序和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 以导航窗格中的包内容[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>类。 你可以从一个导航<xref:System.Windows.Controls.Page>到另一个以声明方式，通过使用<xref:System.Windows.Documents.Hyperlink>，或以编程方式使用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日志记住从其导航和导航回它们的页。  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 支持两种类型的应用程序中的可用的浏览器样式导航： 独立应用程序和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 以导航窗格中的包内容[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>类。 你可以从一个导航<xref:System.Windows.Controls.Page>到另一个以声明方式，通过使用<xref:System.Windows.Documents.Hyperlink>，或以编程方式使用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日志记住从其导航和导航回它们的页。  
   
  <xref:System.Windows.Controls.Page><xref:System.Windows.Documents.Hyperlink>， <xref:System.Windows.Navigation.NavigationService>，和日记构成导航支持部门提供核心[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 本概述介绍包括导航到宽松的高级的导航支持之前探讨这些功能进行了介绍[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件，[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]文件和对象。  
   
@@ -118,7 +120,7 @@ ms.lasthandoff: 12/22/2017
   
 -   代码隐藏文件中的类必须`partial`类具有相同名称指定的`x:Class`属性标记，且必须派生自<xref:System.Windows.Controls.Page>。 这样，要与之关联的代码隐藏文件`partial`时生成应用程序为标记文件生成的类 (请参阅[生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md))。  
   
--   代码隐藏文件中<xref:System.Windows.Controls.Page>类必须实现的构造函数的调用`InitializeComponent`方法。 `InitializeComponent`实现通过标记文件的生成`partial`类注册事件和设置在标记中定义的属性。  
+-   代码隐藏文件中<xref:System.Windows.Controls.Page>类必须实现的构造函数的调用`InitializeComponent`方法。 `InitializeComponent` 实现通过标记文件的生成`partial`类注册事件和设置在标记中定义的属性。  
   
 > [!NOTE]
 >  添加新<xref:System.Windows.Controls.Page>到你的项目使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]、<xref:System.Windows.Controls.Page>使用标记和代码隐藏实现，它包括必要的配置来创建为标记和代码隐藏文件之间的关联此处所述。  
@@ -215,7 +217,7 @@ ms.lasthandoff: 12/22/2017
 [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml3)]  
   
 > [!NOTE]
->  本部分描述了中的默认片段导航实现[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]此外可以实现自己的片段导航方案的一部分，需要处理<xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType>事件。  
+>  本部分描述了中的默认片段导航实现[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 此外可以实现自己的片段导航方案的一部分，需要处理<xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType>事件。  
   
 > [!IMPORTANT]
 >  您可以导航到片段中松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页 (仅限标记的[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件都具有`Page`作为根元素) 才可通过浏览页[!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)]。  
@@ -276,7 +278,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml.cs#nsnavigationpagecodebehind)]
  [!code-vb[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSNavigationPage.xaml.vb#nsnavigationpagecodebehind)]  
   
- 当<xref:System.Windows.Documents.Hyperlink>上<xref:System.Windows.Controls.Page>是单击，方法是实例化启动导航<xref:System.Windows.Controls.Page>以导航到使用非默认构造函数和调用<xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>方法。 <xref:System.Windows.Navigation.NavigationService.Navigate%2A>接受对对象的引用，<xref:System.Windows.Navigation.NavigationService>将导航到，而不是包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
+ 当<xref:System.Windows.Documents.Hyperlink>上<xref:System.Windows.Controls.Page>是单击，方法是实例化启动导航<xref:System.Windows.Controls.Page>以导航到使用非默认构造函数和调用<xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>方法。 <xref:System.Windows.Navigation.NavigationService.Navigate%2A> 接受对对象的引用，<xref:System.Windows.Navigation.NavigationService>将导航到，而不是包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
   
 #### <a name="programmatic-navigation-with-a-pack-uri"></a>使用 Pack URI 以编程方式导航  
  如果你需要构造包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]以编程方式 (仅当可以确定包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]在运行时，例如)，你可以使用<xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>方法。 这在下面的示例中显示。  
@@ -338,7 +340,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType>  
   
- 每次<xref:System.Windows.Navigation.NavigationService>引发事件时，<xref:System.Windows.Application>类引发相应的事件。 <xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationWindow>提供相同的事件，以检测其各自的范围中的导航。  
+ 每次<xref:System.Windows.Navigation.NavigationService>引发事件时，<xref:System.Windows.Application>类引发相应的事件。 <xref:System.Windows.Controls.Frame> 和<xref:System.Windows.Navigation.NavigationWindow>提供相同的事件，以检测其各自的范围中的导航。  
   
  在某些情况下，<xref:System.Windows.Controls.Page>可能对感兴趣这些事件。 例如，<xref:System.Windows.Controls.Page>可能处理<xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType>事件，以确定是否取消导航离开本身。 这在下面的示例中显示。  
   
@@ -455,7 +457,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  <xref:System.Windows.Controls.Page>向后导航。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]在中使用以下控件时，会自动使用这种支持<xref:System.Windows.Controls.Page>:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 在中使用以下控件时，会自动使用这种支持<xref:System.Windows.Controls.Page>:  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -513,13 +515,13 @@ ms.lasthandoff: 12/22/2017
   
  以下是一些支持 cookie 的方式[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:  
   
--   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]独立应用程序和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]可以同时创建和管理 cookie。  
+-   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]可以同时创建和管理 cookie。  
   
 -   通过创建的 cookie[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]可以从浏览器访问。  
   
 -   来自相同域的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以创建和共享 cookie。  
   
--   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]来自同一个域的页可以创建和共享 cookie。  
+-   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 和[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]来自同一个域的页可以创建和共享 cookie。  
   
 -   调度 cookie 时[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页发出 Web 请求。  
   
@@ -537,15 +539,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="The_NavigationWindow_Class"></a>   
 ## <a name="the-navigationwindow-class"></a>NavigationWindow 类  
- 到目前为止，你已全面了解最有可能用可导航内容生成应用程序的导航服务。 这些服务已讨论的上下文中[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，但不限于[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 现代操作系统和[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]应用程序充分利用现代用户将浏览器样式导航并入独立应用程序的浏览器体验。 常见示例包括：  
+ 到目前为止，你已全面了解最有可能用可导航内容生成应用程序的导航服务。 这些服务已讨论的上下文中[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，但不限于[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 现代操作系统和 Windows 应用程序充分利用现代用户将浏览器样式导航并入独立应用程序的浏览器体验。 常见示例包括：  
   
 -   **Word 同义词库**：导航字选择。  
   
 -   **文件资源管理器**：导航文件和文件夹。  
   
--   **向导**：将复杂任务分为多页，可以在它们之间导航。 一个示例是处理添加和删除 Windows 组件向导[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]功能。  
+-   **向导**：将复杂任务分为多页，可以在它们之间导航。 一个示例是处理添加和删除 Windows 功能的 Windows 组件向导。  
   
- 若要将浏览器样式导航并入独立应用程序，你可以使用<xref:System.Windows.Navigation.NavigationWindow>类。 <xref:System.Windows.Navigation.NavigationWindow>派生自<xref:System.Windows.Window>并且将其扩展导航相同的支持，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]提供。 你可以使用<xref:System.Windows.Navigation.NavigationWindow>作为独立应用程序中任一的主窗口或如对话框第二个窗口。  
+ 若要将浏览器样式导航并入独立应用程序，你可以使用<xref:System.Windows.Navigation.NavigationWindow>类。 <xref:System.Windows.Navigation.NavigationWindow> 派生自<xref:System.Windows.Window>并且将其扩展导航相同的支持，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]提供。 你可以使用<xref:System.Windows.Navigation.NavigationWindow>作为独立应用程序中任一的主窗口或如对话框第二个窗口。  
   
  若要实现<xref:System.Windows.Navigation.NavigationWindow>，如同处理中的大多数顶级类[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)](<xref:System.Windows.Window>， <xref:System.Windows.Controls.Page>，依次类推)，使用标记和代码隐藏的组合。 这在下面的示例中显示。  
   
@@ -592,7 +594,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Frame_in_Standalone_Applications"></a>   
 ## <a name="the-frame-class"></a>框架类  
- 这两个浏览器和<xref:System.Windows.Navigation.NavigationWindow>是该主机可导航内容的窗口。 在某些情况下，应用程序具有无需整个窗口托管的内容。 相反，此类内容在其他内容中托管。 你可以通过使用可导航的内容将插入其他内容<xref:System.Windows.Controls.Frame>类。 <xref:System.Windows.Controls.Frame>提供相同的支持<xref:System.Windows.Navigation.NavigationWindow>和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
+ 这两个浏览器和<xref:System.Windows.Navigation.NavigationWindow>是该主机可导航内容的窗口。 在某些情况下，应用程序具有无需整个窗口托管的内容。 相反，此类内容在其他内容中托管。 你可以通过使用可导航的内容将插入其他内容<xref:System.Windows.Controls.Frame>类。 <xref:System.Windows.Controls.Frame> 提供相同的支持<xref:System.Windows.Navigation.NavigationWindow>和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
   
  下面的示例演示如何将添加<xref:System.Windows.Controls.Frame>到<xref:System.Windows.Controls.Page>以声明方式使用`Frame`元素。  
   
@@ -633,7 +635,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Navigation_Hosts"></a>   
 ## <a name="navigation-hosts"></a>导航主机  
- <xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationWindow>是称为导航主机的类。 A*导航主机*是一个类，可以导航到并显示内容。 为了实现此目的，每个导航宿主都使用自己<xref:System.Windows.Navigation.NavigationService>和日志。 导航主机的基本构造在下图中显示。  
+ <xref:System.Windows.Controls.Frame> 和<xref:System.Windows.Navigation.NavigationWindow>是称为导航主机的类。 A*导航主机*是一个类，可以导航到并显示内容。 为了实现此目的，每个导航宿主都使用自己<xref:System.Windows.Navigation.NavigationService>和日志。 导航主机的基本构造在下图中显示。  
   
  ![导航器关系图](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
   
@@ -738,7 +740,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Security"></a>   
 ## <a name="security"></a>安全性  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]导航支持允许[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]以导航到跨 Internet，而且它允许应用程序来承载第三方内容。 若要防止有害行为，应用程序和用户[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了各种各样的安全功能中所述[安全](../../../../docs/framework/wpf/security-wpf.md)和[WPF 部分信任安全](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 导航支持允许[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]以导航到跨 Internet，而且它允许应用程序来承载第三方内容。 若要防止有害行为，应用程序和用户[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了各种各样的安全功能中所述[安全](../../../../docs/framework/wpf/security-wpf.md)和[WPF 部分信任安全](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Application.SetCookie%2A>  

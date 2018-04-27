@@ -1,25 +1,26 @@
 ---
-title: "如何：调用不返回值的过程 (Visual Basic)"
-ms.custom: 
+title: 如何：调用不返回值的过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bbea50132d1110b38bf9b01397795a2cd51f86d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb9f13d5387f4a440a7fdd39c5e8f50cb8d56270
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>如何：调用不返回值的过程 (Visual Basic)
 A`Sub`过程不会返回到调用代码的值。 显式调用该过程与独立的调用语句。 不能只需通过其名称在表达式中调用它。  
@@ -32,11 +33,11 @@ A`Sub`过程不会返回到调用代码的值。 显式调用该过程与独立�
   
 3.  将自变量放在括号里，用逗号分隔参数列表中。 请确保你提供的相同顺序的自变量，`Sub`过程所定义的相应参数。  
   
-     下面的示例调用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>函数来激活应用程序窗口。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>将窗口标题作为其唯一的自变量。 它不会调用的代码返回一个值。 如果未运行 Notepad 进程，本示例将引发<xref:System.ArgumentException>。 `Shell`过程假定应用程序都位于指定的路径。  
+     下面的示例调用 Visual Basic<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>函数来激活应用程序窗口。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 将窗口标题作为其唯一的自变量。 它不会调用的代码返回一个值。 如果未运行 Notepad 进程，本示例将引发<xref:System.ArgumentException>。 `Shell`过程假定应用程序都位于指定的路径。  
   
      [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.Interaction.Shell%2A>  
  <xref:System.ArgumentException>  
  [过程](./index.md)  

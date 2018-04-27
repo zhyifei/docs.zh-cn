@@ -1,12 +1,13 @@
 ---
-title: "如何： 更改 Windows 窗体 MonthCalendar 控件 &#39; s 外观"
-ms.custom: 
+title: 如何： 更改 Windows 窗体 MonthCalendar 控件&#39;s 外观
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +17,19 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 89aa2d57e7990bb2b0016fa4936cf1487578db01
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6d2a3f12368d5215f7fe7611aa2f06e6b0fb1192
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何： 更改 Windows 窗体 MonthCalendar 控件 &#39; s 外观
+# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>如何： 更改 Windows 窗体 MonthCalendar 控件&#39;s 外观
 Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义在许多方面的日历的外观。 例如，你可以设置配色方案，并选择以显示或隐藏周数和当前日期。  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>若要更改月历的配色方案  
@@ -85,7 +87,7 @@ Windows 窗体<xref:System.Windows.Forms.MonthCalendar>控件允许你自定义�
        }  
     ```  
   
-     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)][!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体构造函数中以注册事件处理程序。  
+     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82a0adc9e821df3a789cf19e798d4bad9e9a69e3
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: f07fc7988c4329397e464f05d334648e98cb129d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-netcf"></a>-netcf
 设置编译器从而以 [!INCLUDE[Compact](~/includes/compact-md.md)] 为目标。  
@@ -32,12 +32,12 @@ ms.lasthandoff: 03/22/2018
 ```  
   
 ## <a name="remarks"></a>备注  
- `-netcf`选项使[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器将编译目标[!INCLUDE[Compact](~/includes/compact-md.md)]而不是完整[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 仅存在于完整的语言功能[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]处于禁用状态。  
+ `-netcf`选项会使 Visual Basic 编译器到目标[!INCLUDE[Compact](~/includes/compact-md.md)]而不是完整[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 仅存在于完整的语言功能[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]处于禁用状态。  
   
  `-netcf`选项旨在用于[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)。 通过禁用的语言功能`-netcf`是相同的语言功能和目标的文件中不存在`-sdkpath`。  
   
 > [!NOTE]
->  `-netcf`选项不是可从 Visual Studio 开发环境中; 仅当从命令行进行编译时，它才可用。 `-netcf`时会设置选项[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]加载设备项目。  
+>  `-netcf`选项不是可从 Visual Studio 开发环境中; 仅当从命令行进行编译时，它才可用。 `-netcf`加载 Visual Basic 设备项目时，设置选项。  
   
  `-netcf`选项更改下列语言功能：  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 03/22/2018
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   使用 Visual Basic 6.0 关键字已从删除[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]生成一个不同的错误时`-netcf`使用。 这会影响以下关键字的错误消息：  
+-   使用已从 Visual Basic 中删除的 Visual Basic 6.0 关键字生成一个不同的错误时`-netcf`使用。 这会影响以下关键字的错误消息：  
   
     -   `Open`  
   
@@ -94,7 +94,7 @@ ms.lasthandoff: 03/22/2018
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

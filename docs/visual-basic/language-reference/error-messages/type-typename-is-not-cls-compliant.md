@@ -1,9 +1,9 @@
 ---
-title: "类型&lt;typename&gt;不符合 CLS"
+title: 类型&lt;typename&gt;不符合 CLS
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 36a49ccf7d2185c26ef8d23eebea216cc193d951
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 73abc8b055e7eb9d1a4f6917d816cab5b4509f86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-lttypenamegt-is-not-cls-compliant"></a>类型&lt;typename&gt;不符合 CLS
 变量、 属性或函数返回声明具有不符合 CLS 的数据类型。  
   
  应用程序，以符合[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，它必须只使用符合 cls 的类型。  
   
- 以下 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 数据类型不符合 CLS：  
+ 下面的 Visual Basic 数据类型不符合 cls 的：  
   
 -   [SByte 数据类型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   

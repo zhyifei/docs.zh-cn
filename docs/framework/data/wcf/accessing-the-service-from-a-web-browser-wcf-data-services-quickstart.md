@@ -1,30 +1,32 @@
 ---
-title: "从 Web 浏览器访问服务（WCF 数据服务快速入门）"
-ms.custom: 
+title: 从 Web 浏览器访问服务（WCF 数据服务快速入门）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>从 Web 浏览器访问服务（WCF 数据服务快速入门）
-在此任务中，您将从 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 启动 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]，然后可以选择在 Web 浏览器中禁用源读取。 你将进而检索服务定义文档以及提交给公开的资源的 Web 浏览器通过 HTTP GET 请求以访问数据服务资源。  
+在此任务中，您将从 Visual Studio 启动 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，并在 Web 浏览器中禁用源阅读（可选）。 你将进而检索服务定义文档以及提交给公开的资源的 Web 浏览器通过 HTTP GET 请求以访问数据服务资源。  
   
 > [!NOTE]
->  默认情况下，[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 自动为计算机上的 `localhost` URI 分配一个端口号。 本任务在 URI 示例中使用端口号 `12345`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何在中设置特定的端口号你[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]项目，请参阅[创建数据服务](../../../../docs/framework/data/wcf/creating-the-data-service.md)。  
+>  默认情况下，Visual Studio 自动为计算机上的 `localhost` URI 分配一个端口号。 本任务在 URI 示例中使用端口号 `12345`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何在你 Visual Studio 项目，请参阅中设置特定的端口号[创建数据服务](../../../../docs/framework/data/wcf/creating-the-data-service.md)。  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>使用 Internet Explorer 请求默认服务文档  
   
@@ -33,9 +35,9 @@ ms.lasthandoff: 12/22/2017
      这可确保禁用源阅读。 如果未禁用此功能，则 Web 浏览器会将返回的 AtomPub 编码文档视为 XML 源，而不是显示原始 XML 数据。  
   
     > [!NOTE]
-    >  当浏览器无法将该源作为原始 XML 数据显示时，您应该仍能够以页面源代码的形式查看该源。  
+    >  当浏览器无法将该源作为原始 XML 数据显示时，你应该仍能够以页面源代码的形式查看该源。  
   
-2.  在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 中，按 F5 键以开始调试应用程序。  
+2.  在 Visual Studio 中，按 F5 键可开始调试应用程序。  
   
 3.  在本地计算机上打开 Web 浏览器。 在地址栏中，输入以下 URI：  
   

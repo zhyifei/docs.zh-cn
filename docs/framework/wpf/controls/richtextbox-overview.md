@@ -1,12 +1,13 @@
 ---
-title: "RichTextBox 概述"
-ms.custom: 
+title: RichTextBox 概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,26 +16,27 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e88afe5f9c35448b3234498af413500bee163abc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ac25413aaf15a18f70eff6114db81fbb6cc5411
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 概述
-<xref:System.Windows.Controls.RichTextBox>控制，你可以显示或编辑流内容包括段落、 图像、 表和的详细信息。 本主题介绍<xref:System.Windows.Controls.TextBox>类，并提供如何使用中的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和[!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]。  
+<xref:System.Windows.Controls.RichTextBox>控制，你可以显示或编辑流内容包括段落、 图像、 表和的详细信息。 本主题介绍<xref:System.Windows.Controls.TextBox>类，并提供如何使用中的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和 C#。  
   
   
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>使用 TextBox 还是 RichTextBox？  
  同时<xref:System.Windows.Controls.RichTextBox>和<xref:System.Windows.Controls.TextBox>允许用户编辑文本，但是，在不同的方案中使用两个控件。 A<xref:System.Windows.Controls.RichTextBox>必要要编辑格式化的文本、 图像、 表或其他丰富内容的用户时是更好的选择。 例如，编辑文档、 文章或需要格式、 博客映像，等时，最好使用<xref:System.Windows.Controls.RichTextBox>。 A<xref:System.Windows.Controls.TextBox>需要少的系统资源则<xref:System.Windows.Controls.RichTextBox>仅纯文本需要编辑 （即在窗体中的使用情况） 时，它是理想选择。 请参阅[文本框中概述](../../../../docs/framework/wpf/controls/textbox-overview.md)有关详细信息<xref:System.Windows.Controls.TextBox>。 下表总结了的主要功能<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>。  
   
-|控件|实时拼写检查|上下文菜单|格式设置等命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)|<xref:System.Windows.Documents.FlowDocument>内容，例如图像、 段落、 表等。|  
+|控件|实时拼写检查|上下文菜单|格式设置等命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)|<xref:System.Windows.Documents.FlowDocument> 内容，例如图像、 段落、 表等。|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|是|是|否|不是。|  
 |<xref:System.Windows.Controls.RichTextBox>|是|是|是|是|  

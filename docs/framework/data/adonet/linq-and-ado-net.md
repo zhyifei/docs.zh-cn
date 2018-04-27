@@ -1,33 +1,35 @@
 ---
-title: "LINQ 和 ADO.NET"
-ms.custom: 
+title: LINQ 和 ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b020b3df627fcb220f4227d76fdf8eb3d60e80e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: be91650c7c06a3bdb5410166cc560ffc9a65d542
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
-今天，很多业务开发人员必须使用两种或更多种编程语言：对于业务逻辑和表示层使用高级语言（如 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 或 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]），而使用查询语言与数据库交互（如 [!INCLUDE[tsql](../../../../includes/tsql-md.md)]）。 这要求开发人员精通多种语言才能奏效，同时也导致在开发环境中语言不匹配。 例如，使用数据访问 API 对数据库执行查询的应用程序会将查询指定为用引号括起的字符串。 编译器不能读取此查询字符串，因此不会检查是否有错误，如语法无效或引用的列或行是否实际存在。 不会检查查询参数的类型，也不支持 `IntelliSense`。  
+今天，很多业务开发人员必须使用两个 （或多个） 的编程语言： 对于业务逻辑和表示层 （如 Visual C# 或 Visual Basic） 的高级语言和使用查询语言与数据库交互 (如[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 这要求开发人员精通多种语言才能奏效，同时也导致在开发环境中语言不匹配。 例如，使用数据访问 API 对数据库执行查询的应用程序会将查询指定为用引号括起的字符串。 编译器不能读取此查询字符串，因此不会检查是否有错误，如语法无效或引用的列或行是否实际存在。 不会检查查询参数的类型，也不支持 `IntelliSense`。  
   
  [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 使开发人员能够在应用程序代码中形成基于集合的查询，而不必使用单独的查询语言。 您可以编写针对各种可枚举数据源（即实现 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 接口的数据源）的 <xref:System.Collections.IEnumerable> 查询，可枚举数据源包括驻留在内存中的数据结构、XML 文档、SQL 数据库和 <xref:System.Data.DataSet> 对象等。 虽然这些可枚举数据源以多种方式实现，但它们都公开相同的语法和语言构造。 由于可以使用编程语言本身形成查询，因此您不必使用编译器无法理解或验证的以字符串形式嵌入的其他查询语言。 通过提供编译时类型和语法检查以及 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，将查询集成到编程语言也使 `IntelliSense` 程序员的工作更有效。 这些功能降低了对查询调试和错误修复的需求。  
   
  将数据从 SQL 表传输到内存中的对象通常单调乏味并容易出错。 由 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 和 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 实现的 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 提供程序可以将源数据转换为基于 <xref:System.Collections.IEnumerable> 的对象集合。 在您查询数据和更新数据时，程序员始终会以 <xref:System.Collections.IEnumerable> 集合的形式查看这些数据。 为编写针对这些集合的查询提供完全的 `IntelliSense` 支持。  
   
- 有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 技术：[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供针对 <xref:System.Data.DataSet> 的形式多样的优化查询，[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 使您可以直接查询 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 数据库架构，而 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] 允许您查询 [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]。  
+ 有三种独立的 ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 技术：[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 和 [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供更丰富的优化查询通过<xref:System.Data.DataSet>和[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]可以直接查询 SQL Server 数据库架构和[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]允许您查询[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]。  
   
  下面的关系图概述了 ADO.NET LINQ 技术如何关联到高级编程语言和启用 LINQ 的数据源。  
   

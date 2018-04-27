@@ -1,11 +1,12 @@
 ---
-title: "已声明的元素名称 (Visual Basic)"
-ms.custom: 
+title: 已声明的元素名称 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], case sensitivity
@@ -29,20 +30,20 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: ad883dd8e1de419c74b5bcdb8762994e762b4cf7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="declared-element-names-visual-basic"></a>已声明的元素名称 (Visual Basic)
 每个声明的元素有一个名称，也称为*标识符*，即来引用它的代码使用。  
   
 ## <a name="rules"></a>规则  
- 中的元素名称[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]必须遵守以下规则：  
+ 在 Visual Basic 中的元素名称必须遵守以下规则：  
   
 -   它必须以字母字符或下划线开头 (`_`)。  
   
@@ -79,18 +80,18 @@ ms.lasthandoff: 12/21/2017
  另一方面，你的名称不应为太短，它不会不充分描述该元素表示和你的代码如何使用它。 这是你代码的可读性很重要。 如果其他人尝试理解它，或你自己正在寻求通过它您在编写后很长时间，适合元素名称可以节省相当长的时间。  
   
 ## <a name="escaped-names"></a>转义的名称  
- 通常，元素名称必须与任何不匹配的保留的关键字[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，如`Case`或`Friend`。 但是，你可以定义*转义名称*，这由括号括起来 (`[ ]`)。 转义的名称可以匹配任何[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]关键字，因为括号消除了不明确性。 在更高版本在你的代码中引用名时，还可以使用括号。  
+ 通常，元素名称必须不匹配的任何关键字由 Visual Basic 中，如保留`Case`或`Friend`。 但是，你可以定义*转义名称*，这由括号括起来 (`[ ]`)。 转义的名称可以匹配任何 Visual Basic 关键字，因为括号消除了不明确性。 在更高版本在你的代码中引用名时，还可以使用括号。  
   
  一般情况下，应使用转义的名称时，才：  
   
--   你的代码已从早期版本的迁移[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，没有保留关键字用作名称; 或  
+-   你的代码已从没有保留关键字作为名称; 正在使用的 Visual Basic 的早期版本迁移或  
   
 -   你正在使用在其中给定的关键字不保留的另一种语言编写的代码。  
   
  否则，应考虑重命名元素，如果其名称与关键字冲突。 集成的开发环境 (IDE) 提供了执行此操作的简单办法。 有关详细信息，请参阅[重构](/visualstudio/vb-ide/refactoring-vb)。  
   
 ## <a name="case-sensitivity-in-names"></a>在名称中的区分大小写  
- 中的元素名称[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]不区分大小写。 这意味着当编译器在比较两个字母大小写不同的名称，将其解释为相同的名称。 例如，它认为 `ABC` 和 `abc` 指的是同一个声明的元素。  
+ 在 Visual Basic 中的元素名称不区分大小写。 这意味着当编译器在比较两个字母大小写不同的名称，将其解释为相同的名称。 例如，它认为 `ABC` 和 `abc` 指的是同一个声明的元素。  
   
  但是，公共语言运行时 (CLR) 使用区分大小写的绑定。 因此，当你生成程序集或 DLL 并使其可供其他程序集使用时，则名称将不再不区分大小写。 例如，如果你用名为 `ABC`的元素定义类，而其他程序集通过公共语言运行时使用你的类，则元素必须指的是 `ABC`。 如果你以后重新编译你的类并将更改元素的名称与`abc`，则使用你的类的其他程序集将无法再访问该元素。 因此，发布程序集的更新版本时，不应该更改公共元素的字母大小写。  
   

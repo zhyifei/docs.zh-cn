@@ -1,12 +1,13 @@
 ---
-title: "处理二进制数据（WCF 数据服务）"
-ms.custom: 
+title: 处理二进制数据（WCF 数据服务）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e02a98a327947e32acd42ccf79d922f5dff6fb6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99143200b8135d5737454de325a95399c62fd506
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>处理二进制数据（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，你可以检索和更新从二进制数据[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送通过以下方式之一：  
@@ -33,10 +35,10 @@ ms.lasthandoff: 12/22/2017
   
 -   作为单独的二进制资源流。 当访问和更改可能表示照片、视频或其他任何类型的二进制编码数据的二进制大型对象 (BLOB) 数据时，建议使用此方法。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]实现二进制数据的流中定义，通过 HTTP [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 在这种机制，二进制数据是视为是分开的媒体资源，但与实体，这称为媒体链接入口相关。 有关详细信息，请参阅[流提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 实现二进制数据的流中定义，通过 HTTP [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 在这种机制，二进制数据是视为是分开的媒体资源，但与实体，这称为媒体链接入口相关。 有关详细信息，请参阅[流提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。  
   
 > [!TIP]
->  有关如何创建的分步示例[!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]客户端应用程序，用于下载二进制图像文件从[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务，它存储照片，请参阅文章[数据服务流提供程序系列的第 2 部分： 访问媒体从客户端的资源流](http://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中的流照片数据服务的示例代码，请参阅[流照片数据服务示例](http://go.microsoft.com/fwlink/?LinkId=198988)MSDN 代码库中。  
+>  有关如何创建下载二进制图像文件从一个 Windows Presentation Foundation (WPF) 客户端应用程序的分步示例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务，它存储照片，请参阅文章[数据服务流提供程序系列的一部分2： 从客户端访问媒体资源流](http://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中的流照片数据服务的示例代码，请参阅[流照片数据服务示例](http://go.microsoft.com/fwlink/?LinkId=198988)MSDN 代码库中。  
   
 ## <a name="entity-metadata"></a>实体元数据  
  具有相关媒体资源流的实体由应用于实体类型（媒体链接入口）的 `HasStream` 属性在数据服务元数据中表示。 在下面的示例中，`PhotoInfo`实体为媒体链接项具有相关的媒体资源，由`HasStream`属性。  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库提供了从基于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的数据服务访问二进制资源流的方法。 下载媒体资源时，可以使用媒体资源的 URI，也可以获取一个包含媒体资源数据本身的二进制流。 还可以上载媒体资源数据作为一个二进制流。  
   
 > [!TIP]
->  有关如何创建的分步示例[!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]客户端应用程序，用于下载二进制图像文件从[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务，它存储照片，请参阅文章[数据服务流提供程序系列的第 2 部分： 访问媒体从客户端的资源流](http://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中的流照片数据服务的示例代码，请参阅[流照片数据服务示例](http://go.microsoft.com/fwlink/?LinkId=198988)MSDN 代码库中。  
+>  有关如何创建下载二进制图像文件从一个 Windows Presentation Foundation (WPF) 客户端应用程序的分步示例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务，它存储照片，请参阅文章[数据服务流提供程序系列的一部分2： 从客户端访问媒体资源流](http://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中的流照片数据服务的示例代码，请参阅[流照片数据服务示例](http://go.microsoft.com/fwlink/?LinkId=198988)MSDN 代码库中。  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>获取二进制流的 URI  
  检索某些类型的媒体资源（如图像和其他媒体文件）时，在应用程序中使用媒体资源的 URI 通常比处理二进制数据流本身更容易。 要获取与给定媒体链接入口相关联的资源流的 URI，必须对跟踪实体的 <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> 实例调用 <xref:System.Data.Services.Client.DataServiceContext> 方法。 下面的示例揭示了如何调用 <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> 方法以获取用于在客户端上创建新图像的媒体资源流的 URI：  

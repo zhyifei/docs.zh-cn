@@ -1,27 +1,29 @@
 ---
-title: "如何：通过使用代码编辑器自定义实体类"
-ms.custom: 
+title: 如何：通过使用代码编辑器自定义实体类
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0bb8f0e7116c1a2e0856ca72b618eb6607a654be
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3e518a18787a7faa1d3e501d5941fae70daf8b9d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>如何：通过使用代码编辑器自定义实体类
-使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 的开发人员可以使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 来创建或自定义其实体类。  
+使用 Visual Studio 的开发人员可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]若要创建或自定义它们的实体类。  
   
  您也可以使用 [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)] 代码编辑器编写您自己的映射代码或自定义已生成的代码。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
   

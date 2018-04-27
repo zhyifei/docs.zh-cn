@@ -1,32 +1,34 @@
 ---
-title: "如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）"
-ms.custom: 
+title: 如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5993837546b28742756ed4a5ec323e6f1a5ef782
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>如何：使用 ADO.NET 实体框架数据源创建数据服务（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 将实体数据作为数据服务公开。 此实体数据由[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]时数据源是一个关系数据库。 本主题介绍如何在基于现有数据库的 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Web 应用程序中创建基于[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]的数据模型，以及如何使用此数据模型创建新的数据服务。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 将实体数据作为数据服务公开。 此实体数据由[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]时数据源是一个关系数据库。 本主题演示如何创建[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-基于的 Visual Studio Web 应用程序基于现有数据库和使用此数据模型来创建新的数据服务中的数据模型。  
   
- [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]还提供了一个可以在 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 项目外部生成[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]模型的命令行工具。 有关详细信息，请参阅[如何： 使用 EdmGen.exe 生成模型和映射文件](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。  
+ [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]还提供了一个命令行工具，可以生成[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]Visual Studio 在项目外部模型。 有关详细信息，请参阅[如何： 使用 EdmGen.exe 生成模型和映射文件](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)。  
   
 ### <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>将基于现有数据库的实体框架模型添加到现有 Web 应用程序  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>使用新数据模型创建数据服务  
   
-1.  在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 中，打开代表数据模型的 .edmx 文件。  
+1.  在 Visual Studio 中，打开代表数据模型的 .edmx 文件。  
   
 2.  在**模型浏览器**，右键单击模型，单击**属性**，然后记下实体容器的名称。  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  为该服务，提供一个名称，然后单击**确定**。  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。  
+     Visual Studio 将为新服务创建 XML 标记和代码文件。 默认情况下，代码编辑器窗口将打开。  
   
 6.  在数据服务代码中，将用于定义数据服务的类定义中的注释 `/* TODO: put your data source class name here */` 替换为从 <xref:System.Data.Objects.ObjectContext> 类继承且作为数据模型的实体容器的类型，如步骤 2 中所述。  
   

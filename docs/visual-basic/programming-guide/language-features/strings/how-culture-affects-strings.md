@@ -1,27 +1,28 @@
 ---
-title: "区域性对字符串的影响 (Visual Basic)"
-ms.custom: 
+title: 区域性对字符串的影响 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b61f008edc446445fd5873b6138b64f29e0b8b8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c95dcc8d04725f7a072e8c8bc7fe058e53a95c05
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>区域性对字符串的影响 (Visual Basic)
-此帮助页讨论如何[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]使用区域性信息来执行的字符串转换和比较。  
+此帮助页讨论 Visual Basic 如何使用区域性信息来执行的字符串转换和比较。  
   
 ## <a name="when-to-use-culture-specific-strings"></a>何时使用特定于区域性的字符串  
  通常情况下，你应到显示的所有数据使用特定于区域性的字符串，读取用户，并将应用程序的内部数据区域性固定的字符串。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  但是，如果应用程序将日期上载到中央服务器，它应格式化根据某个特定区域性，以防止可能不同的日期格式之间产生混淆的字符串。  
   
 ## <a name="culture-sensitive-functions"></a>区分区域性的函数  
- 所有[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字符串转换函数 (除`Str`和`Val`函数) 使用应用程序的区域性信息以确保转换和比较适合于的区域性应用程序的用户。  
+ 所有 Visual Basic 字符串转换函数 (除`Str`和`Val`函数) 使用应用程序的区域性信息以确保转换和比较适合于在应用程序的区域性用户。  
   
  已成功在具有不同的区域性设置的计算机运行的应用程序中使用字符串转换函数的关键是了解哪些功能使用特定区域性设置，以及它使用当前区域性设置。 请注意，应用程序的区域性设置，默认情况下，从继承的操作系统的区域性设置。 有关详细信息，请参阅<xref:Microsoft.VisualBasic.Strings.Asc%2A>， <xref:Microsoft.VisualBasic.Strings.AscW%2A>， <xref:Microsoft.VisualBasic.Strings.Chr%2A>， <xref:Microsoft.VisualBasic.Strings.ChrW%2A>， <xref:Microsoft.VisualBasic.Strings.Format%2A>， <xref:Microsoft.VisualBasic.Conversion.Hex%2A>， <xref:Microsoft.VisualBasic.Conversion.Oct%2A>，和[类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **正在确定是否两个应用程序内部字符串完全匹配 （通常出于安全考虑）。** 使用忽略当前区域性的操作。  
   
- 你可以执行这两种类型的比较与[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Strings.StrComp%2A>函数。 指定可选`Compare`参数控制比较的类型：`Text`对于大多数输入和输出`Binary`用于确定完全匹配。  
+ 你可以执行这两种类型的比较使用 Visual Basic<xref:Microsoft.VisualBasic.Strings.StrComp%2A>函数。 指定可选`Compare`参数控制比较的类型：`Text`对于大多数输入和输出`Binary`用于确定完全匹配。  
   
  `StrComp`函数返回一个整数，指示基于排序顺序比较两个字符串之间的关系。 结果为正值指示第一个字符串大于第二个字符串。 负数的结果指示第一个字符串较小，而零表示在字符串之间的相等性。  
   
@@ -79,14 +80,14 @@ ms.lasthandoff: 11/21/2017
 |值，则为`comparisonType`自变量|比较类型|何时使用|  
 |---|---|---|  
 |`Ordinal`|基于字符串的组成部分字节数进行比较。|比较时使用此值： 区分大小写标识符、 与安全相关的设置或其他非语言标识符字节必须完全匹配。|  
-|`OrdinalIgnoreCase`|基于字符串的组成部分字节数进行比较。<br /><br /> `OrdinalIgnoreCase`使用固定区域性信息来确定何时仅在大小写不同的两个字符。|比较时使用此值： 不区分大小写的标识符、 与安全相关的设置和在 Windows 中存储的数据。|  
+|`OrdinalIgnoreCase`|基于字符串的组成部分字节数进行比较。<br /><br /> `OrdinalIgnoreCase` 使用固定区域性信息来确定何时仅在大小写不同的两个字符。|比较时使用此值： 不区分大小写的标识符、 与安全相关的设置和在 Windows 中存储的数据。|  
 |`CurrentCulture` 或 `CurrentCultureIgnoreCase`|比较基于当前区域性中的字符串的解释。|比较时使用这些值： 向用户、 大多数用户输入和其他需要语言解释的数据显示的数据。|  
 |`InvariantCulture` 或 `InvariantCultureIgnoreCase`|基于字符串的解释在固定区域性的比较。<br /><br /> 此函数不同于`Ordinal`和`OrdinalIgnoreCase`，因为固定区域性将超出其可接受范围内的字符视为等效的固定字符。|仅当比较持久保存数据或显示与语言相关的数据时需要固定的排序顺序，请使用这些值。|  
   
 ### <a name="security-considerations"></a>安全注意事项  
  如果你的应用程序进行安全决策基于比较或大小写更改操作的结果，则该操作，应使用<xref:System.String.Compare%2A?displayProperty=nameWithType>方法，并传入`Ordinal`或`OrdinalIgnoreCase`为`comparisonType`自变量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Globalization.CultureInfo>  
  [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
  [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

@@ -1,11 +1,12 @@
 ---
-title: "如何：重载参数数量不确定的过程 (Visual Basic)"
-ms.custom: 
+title: 如何：重载参数数量不确定的过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37d5b47f06bad1c2a8871168c5642663aedcccf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8cb4faa2dfd01f854dcc3bf8c2a330adf5acdcac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>如何：重载参数数量不确定的过程 (Visual Basic)
 如果过程有[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)参数，不能定义采用一维数组的参数数组的重载的版本。 有关详细信息，请参阅"隐式重载为 ParamArray 参数"中[中重载过程注意事项](./considerations-in-overloading-procedures.md)。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- 这些重载版本中的代码不需要测试是否调用的代码提供的一个或多个值`ParamArray`参数，或如果是这样，多少。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]将控制权传递给匹配调用实参列表的版本。  
+ 这些重载版本中的代码不需要测试是否调用的代码提供的一个或多个值`ParamArray`参数，或如果是这样，多少。 Visual Basic 将控制权传递给匹配调用实参列表的版本。  
   
 ## <a name="compiling-the-code"></a>编译代码  
  因为使用为过程`ParamArray`参数的值等效于一组重载版本，你无法使用与这些隐式重载任一对应的参数列表来重载这样的过程。 有关详细信息，请参阅[中重载过程注意事项](./considerations-in-overloading-procedures.md)。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  每当你处理数组可以是无限期地大型，没有无限大某种内部容量的你的应用程序的风险。 如果你接受一个参数数组，你应测试调用代码传递给它，该数组的长度，并采取适当的措施，如果你的应用程序太大。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [过程](./index.md)  
  [过程参数和自变量](./procedure-parameters-and-arguments.md)  
  [可选参数](./optional-parameters.md)  

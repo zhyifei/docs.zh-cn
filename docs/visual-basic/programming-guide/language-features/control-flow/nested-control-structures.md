@@ -1,11 +1,12 @@
 ---
-title: "嵌套的控件结构 (Visual Basic)"
-ms.custom: 
+title: 嵌套的控件结构 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>嵌套的控件结构 (Visual Basic)
 你可以控制将语句放在其他控制语句，例如`If...Then...Else`中块`For...Next`循环。 控制语句放在另一个控制语句称为*嵌套*。  
   
 ## <a name="nesting-levels"></a>嵌套级别  
- 中的控制结构[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可以嵌套到尽可能多的级别。 它是常见做法使嵌套的结构的缩进的每个正文更具可读性。 集成的开发环境 (IDE) 编辑器自动执行此操作。  
+ 在 Visual Basic 中的控件结构就可以嵌入到尽可能多的级别。 它是常见做法使嵌套的结构的缩进的每个正文更具可读性。 集成的开发环境 (IDE) 编辑器自动执行此操作。  
   
  在下面的示例中，该过程`sumRows`将相加矩阵中每一行的正元素。  
   
@@ -78,9 +79,9 @@ Next ctl
  ![无效嵌套示意图](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 无效嵌套的并使用结构  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]编译器检测到这种重叠的控制结构和发出信号，编译时错误。  
+ Visual Basic 编译器检测到这种重叠的控制结构，并发出信号编译时错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控制流](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
  [决策结构](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
  [循环结构](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  

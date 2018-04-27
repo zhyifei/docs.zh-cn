@@ -1,11 +1,12 @@
 ---
-title: "如何：创建过程 (Visual Basic)"
-ms.custom: 
+title: 如何：创建过程 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56a44918b7a1426d215cee0ff2981f5763432a48
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5e23358e26dbc993b0f9290a8491a3c66717b4c6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>如何：创建过程 (Visual Basic)
 你将包含起始的声明语句之间的过程 (`Sub`或`Function`) 和结束的声明语句 (`End Sub`或`End Function`)。 过程的所有代码均位于这些语句之间。  
@@ -61,7 +62,8 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅
+
  [过程](./index.md)  
  [Sub 过程](./sub-procedures.md)  
  [Function 过程](./function-procedures.md)  
@@ -71,4 +73,4 @@ ms.lasthandoff: 11/21/2017
  [递归过程](./recursive-procedures.md)  
  [过程重载](./procedure-overloading.md)  
  [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [面向对象的编程](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [面向对象的编程 (Visual Basic)](../../concepts/object-oriented-programming.md)  

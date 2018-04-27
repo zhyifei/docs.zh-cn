@@ -2,9 +2,10 @@
 title: Option Strict Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 隐式数据类型将转换限制为仅扩大转换，不允许后期绑定，而不接受隐式类型化导致`Object`类型。  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>隐式收缩转换错误  
  隐式数据类型转换为收缩转换时，将发生隐式收缩转换错误。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可以将多种数据类型转换为其他数据类型。 一种数据类型的值转换为精度较低或容量较小的数据类型时，可能发生数据丢失。 如果这种收缩转换失败，则会发生运行时错误。 `Option Strict`可确保在编译时通知这些收缩转换，以便你可以避免它们。 有关详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)和[扩大和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ Visual Basic 可以将多种数据类型转换为其他数据类型。 一种数据类型的值转换为精度较低或容量较小的数据类型时，可能发生数据丢失。 如果这种收缩转换失败，则会发生运行时错误。 `Option Strict` 可确保在编译时通知这些收缩转换，以便你可以避免它们。 有关详细信息，请参阅[隐式和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)和[扩大和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
  可能会导致错误的转换包括在表达式中发生的隐式转换。 有关详细信息，请参阅下列主题：  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  上**编译**选项卡上，设置中的值**Option Strict**框。  
   
-###  <a name="conditions"></a>在 IDE 中设置警告配置  
+###  <a name="conditions"></a> 在 IDE 中设置警告配置  
  当你使用[编译页，项目设计器 (Visual Basic 中)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`语句中，你可以生成错误的条件的其他控制。 **警告配置**部分**编译页**已设置，对应于导致编译时错误的三个条件时`Option Strict`上。 这些设置如下：  
   
 -   隐式转换  

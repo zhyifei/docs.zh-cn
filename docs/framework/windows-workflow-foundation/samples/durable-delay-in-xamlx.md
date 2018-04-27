@@ -1,23 +1,24 @@
 ---
-title: "XAMLX 中的持久延迟"
-ms.custom: 
+title: XAMLX 中的持久延迟
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff5eb09acea16ac125fac5d9e3ed875c9095e1c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX 中的持久延迟
 此示例演示如何使用持久延迟，在持久延迟过程中，将把工作流保留到持久性设备。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="discussion"></a>讨论  
  示例工作流包含发往一个本地文件并由延迟分隔的两个消息。 触发延迟时，工作流会卸载，并在重新加载到内存中之前，在工作流实例存储中等待 5 秒。  
   
- .xamlx 文件是在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 中承载的工作流服务。 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 使用 Cassini，而 Cassini 使用工作流服务主机来承载工作流。  
+ .Xamlx 文件是在 Visual Studio 中承载工作流服务。 Visual Studio 使用 Cassini 使用工作流服务主机来承载工作流。  
   
  除了承载工作流之外，工作流服务主机还通过加载和卸载工作流实例来对其进行管理。 若要启动 [!INCLUDE[wf](../../../../includes/wf-md.md)] 定义的实例（在工作流服务主机上），请设置将向工作流中的 <xref:System.ServiceModel.Activities.Receive> 活动发送消息的客户端。 此 <xref:System.ServiceModel.Activities.Receive> 将自己的 <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> 属性设置为 `true`，从而可以在接收到消息时创建工作流的新实例。  
   

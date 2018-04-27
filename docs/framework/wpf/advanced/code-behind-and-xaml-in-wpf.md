@@ -1,30 +1,32 @@
 ---
-title: "WPF 中的代码隐藏和 XAML"
-ms.custom: 
+title: WPF 中的代码隐藏和 XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c28a501996e4f2cc25e9e280b2f63e1c0c67051
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的代码隐藏和 XAML
-<a name="introduction"></a>代码隐藏是一个术语用于描述与采用标记定义的对象联接的代码时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页进行标记编译。 本主题介绍隐藏代码的要求以及中的代码的可选内联代码机制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
+<a name="introduction"></a> 代码隐藏是一个术语用于描述与采用标记定义的对象联接的代码时[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]页进行标记编译。 本主题介绍隐藏代码的要求以及中的代码的可选内联代码机制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
  本主题包含以下各节：  
   
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/22/2017
   
 -   处理程序必须在后备类型系统中匹配相应的事件的委托。  
   
--   有关[!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]语言具体而言，可以使用特定于语言的`Handles`关键字将与实例和处理程序声明，而不是附加处理程序中的属性中的事件的处理程序[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 但是，此技术也存在一些限制，因为`Handles`关键字不能支持所有的特定功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系统，如某些路由事件方案或附加事件。 有关详细信息，请参阅[Visual Basic 和 WPF 的事件处理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+-   对于 Microsoft Visual Basic 语言具体而言，你使用的是特定于语言的`Handles`关键字将与实例和处理程序声明，而不是附加处理程序中的属性中的事件的处理程序[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 但是，此技术也存在一些限制，因为`Handles`关键字不能支持所有的特定功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系统，如某些路由事件方案或附加事件。 有关详细信息，请参阅[Visual Basic 和 WPF 的事件处理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x： 代码  
- [X:code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)中定义的指令元素[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 `x:Code`指令元素可以包含内联编程代码。 以内联方式定义的代码可以与进行交互[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]同一页面上。 下面的示例阐释了内联[!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)]代码。 请注意，代码是内部`x:Code`元素和代码必须用引起`<CDATA[`...`]]>`进行转义的内容[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]，以便[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器 (解释[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架构或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]架构) 不会尝试解释内容按原义作为[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。  
+ [X:code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)中定义的指令元素[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 `x:Code`指令元素可以包含内联编程代码。 以内联方式定义的代码可以与进行交互[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]同一页面上。 下面的示例阐释了内联 C# 代码。 请注意，代码是内部`x:Code`元素和代码必须用引起`<CDATA[`...`]]>`进行转义的内容[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]，以便[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器 (解释[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]架构或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]架构) 不会尝试解释内容按原义作为[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

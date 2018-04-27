@@ -1,12 +1,12 @@
 ---
-title: "释放模式"
-ms.custom: 
+title: 释放模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Dispose method
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: cb83b943a03eadd760d0080b1c9920e2c1e78cce
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dispose-pattern"></a>释放模式
 所有程序执行过程中都获取一个或多个系统资源，如内存、 系统句柄或数据库连接。 开发人员必须是时使用此类系统资源，请小心，因为它们必须在已获取并使用后释放。  
@@ -287,7 +287,7 @@ public class ComplexResourceHolder : IDisposable {
   
  *部分 © 2005年，2009 Microsoft Corporation。保留所有权利。*  
   
- *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
+ *通过从皮尔逊教育版，Inc.的权限重新打印[Framework 设计准则： 约定、 语法和可重用.NET 库，版本 2 的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)通过 Krzysztof Cwalina 和 Brad Abrams，发布 2008 年 10 月 22，通过Microsoft Windows 开发系列的一部分的 Addison Wesley Professional。*  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>  

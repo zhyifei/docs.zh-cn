@@ -1,18 +1,19 @@
 ---
-title: "云优化应用程序如何呢？"
-description: "为容器化的.NET 应用程序的.NET 微服务体系结构 |云优化应用程序如何呢？"
+title: 云优化应用程序如何呢？
+description: 为容器化的.NET 应用程序的.NET 微服务体系结构 |云优化应用程序如何呢？
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 249da9ecbac90514647f4fdc926928ac7ad4648e
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 63eb80dc43e174f4c803f772f09f6e72d8c8e7c2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>云优化应用程序如何呢？
 

@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 9e461a847e36277cb7d70534249a926693584b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>如何：以编程方式打印 XPS 文件
 你可以使用的一个重载<xref:System.Printing.PrintQueue.AddJob%2A>方法打印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]文件而无需打开<xref:System.Windows.Controls.PrintDialog>或原则上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]根本。  
@@ -56,17 +56,17 @@ ms.lasthandoff: 04/16/2018
   
  如果使用 XPSDrv 打印机，则可将最后一个参数设置为 `true`。 在这种情况下，由于 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 是打印机的页面描述语言，该方法会将文件发送到打印机，而不会对其进行验证或将其转换为另一种页面描述语言。 如果您不确定在设计时是否应用程序将使用为防止，则可以修改应用程序具有它读取<xref:System.Printing.PrintQueue.IsXpsDevice%2A>属性和根据它所找到的分支。  
   
- 由于发布 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 和 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 后，最初存在几个可立即使用的 XPSDrv 打印机，可能需要将非 XPSDrv 打印机伪装为 XPSDrv 打印机。 为此，请将 Pipelineconfig.xml 添加到运行应用程序的计算机的注册表项中的以下文件列表：  
+ 由于存在将最初几台 XPSDrv 打印机后会立即提供的版本[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]和 Microsoft.NET Framework，你可能需要伪装为防止非 XPSDrv 打印机。 为此，请将 Pipelineconfig.xml 添加到运行应用程序的计算机的注册表项中的以下文件列表：  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>*\DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>* \DependentFiles  
   
  其中 *\<PseudoXPSPrinter>* 是任一打印队列。 然后必须重新启动计算机。  
   
- 此是经过伪装将使你能够将传递`true`作为最后一个参数的<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>而不会导致异常，但由于*\<出现 >*实际上不防止仅仅是乱码将打印。  
+ 此是经过伪装将使你能够将传递`true`作为最后一个参数的<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>而不会导致异常，但由于*\<出现 >* 实际上不防止仅仅是乱码将打印。  
   
  **请注意**为简单起见，上面的示例使用是否存在\*.xps 扩展作为其测试该文件为[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]。 但是，[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件不需要具有此扩展名。 [isXPS.exe（isXPS 合规性工具）](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))是一种测试文件是否具有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 有效性的方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Printing.PrintQueue>  
  <xref:System.Printing.PrintQueue.AddJob%2A>  
  <xref:System.Threading.ApartmentState>  

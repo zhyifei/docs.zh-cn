@@ -1,12 +1,13 @@
 ---
-title: "如何：用 Windows 窗体创建多窗格用户界面"
-ms.custom: 
+title: 如何：用 Windows 窗体创建多窗格用户界面
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6011eb2d49e537a2f5dfc540611af40a30b3e721
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>如何：用 Windows 窗体创建多窗格用户界面
 在下面的过程中，将创建多窗格用户界面类似于在 Microsoft Outlook 中与使用**文件夹**列表中，**消息**窗格中，和一个**预览**窗格。 这种安排主要通过停靠处理该窗体控件。  
@@ -175,7 +177,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-3.  在[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]，添加对刚才创建的过程的调用`New()`过程。 在[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]，将此代码行添加到窗体类的构造函数。  
+3.  在 Visual Basic 中，添加对刚才创建过程的调用`New()`过程。 在 Visual C# 中，将此代码行添加到窗体类的构造函数。  
   
     ```vb  
     ' Add this to the New procedure.  

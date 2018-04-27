@@ -1,32 +1,34 @@
 ---
-title: "WPF 中的双向功能概述"
-ms.custom: 
+title: WPF 中的双向功能概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fa2349bca86676f4dc3e1703216a2b0dc50ccd59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的双向功能概述
 与其他任何开发平台，不同[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]具有支持的双向内容快速开发的许多功能，例如，混合的左到右和向右键都处于同一文档的数据。 同时，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]创建的用户的需要双向功能，如阿拉伯语和希伯来语用户了绝佳的体验。  
   
- 以下各节结合一些示例阐释了如何获得双向内容的最佳显示效果，并对许多双向功能进行了说明。 使用的大多数示例[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]，不过你可以轻松地将应用到的概念[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]或[!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]代码。  
+ 以下各节结合一些示例阐释了如何获得双向内容的最佳显示效果，并对许多双向功能进行了说明。 使用的大多数示例[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]，不过你可以轻松地应用到 C# 或 Microsoft Visual Basic 代码的概念。  
   
 
   
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
  在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、<xref:System.Windows.Documents.FlowDocument>是一种多功能[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]可以托管的文本、 表、 图像和其他元素组合的元素。 以下各节中的示例均使用此元素。  
   
- 将文本添加到<xref:System.Windows.Documents.FlowDocument>可以按多种方法。 若要这样做，一种简单的方法是通过<xref:System.Windows.Documents.Paragraph>这是一个块级别元素，用于组内容，如文本。 将文本添加到内联级别的元素的示例使用<xref:System.Windows.Documents.Span>和<xref:System.Windows.Documents.Run>。 <xref:System.Windows.Documents.Span>是用于对其他内联元素，进行分组的内联级别流内容元素时<xref:System.Windows.Documents.Run>是内联级别流内容元素旨在包含一连串无格式文本。 A<xref:System.Windows.Documents.Span>可以包含多个<xref:System.Windows.Documents.Run>元素。  
+ 将文本添加到<xref:System.Windows.Documents.FlowDocument>可以按多种方法。 若要这样做，一种简单的方法是通过<xref:System.Windows.Documents.Paragraph>这是一个块级别元素，用于组内容，如文本。 将文本添加到内联级别的元素的示例使用<xref:System.Windows.Documents.Span>和<xref:System.Windows.Documents.Run>。 <xref:System.Windows.Documents.Span> 是用于对其他内联元素，进行分组的内联级别流内容元素时<xref:System.Windows.Documents.Run>是内联级别流内容元素旨在包含一连串无格式文本。 A<xref:System.Windows.Documents.Span>可以包含多个<xref:System.Windows.Documents.Run>元素。  
   
  第一个文档示例包含具有大量的网络共享的名称; 的文档例如`\\server1\folder\file.ext`。 无论此网络链接是包含在阿拉伯语文档还是英语文档中，建议始终以相同的方式显示它。 下图显示了该链接以阿拉伯数字表示<xref:System.Windows.FlowDirection.RightToLeft>文档。  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FlowDirectionNontext"></a>   
 ## <a name="flowdirection-with-non-text-elements"></a>非文本元素的 FlowDirection  
- <xref:System.Windows.FlowDirection>定义不仅文本流动方式中的文本元素，但还的几乎所有其他流向[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素。 下图显示<xref:System.Windows.Controls.ToolBar>使用水平<xref:System.Windows.Media.LinearGradientBrush>绘制其背景。  
+ <xref:System.Windows.FlowDirection> 定义不仅文本流动方式中的文本元素，但还的几乎所有其他流向[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素。 下图显示<xref:System.Windows.Controls.ToolBar>使用水平<xref:System.Windows.Media.LinearGradientBrush>绘制其背景。  
   
  **演示从左向右渐变的工具栏的图形**  
   
@@ -245,13 +247,13 @@ ms.lasthandoff: 12/22/2017
   
  首先，设置应用程序组件的`NumberSubstitution.CultureSource="Text"`。 使用此设置可以确保设置不是来自[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的文本元素"用户"作为默认值，如<xref:System.Windows.Controls.TextBlock>。  
   
- 例如:  
+ 例如：  
   
 ||  
 |-|  
 |`<TextBlock`<br /><br /> `Name="text1" NumberSubstitution.CultureSource="Text">`<br /><br /> `1234+5679=6913`<br /><br /> `</TextBlock>`|  
   
- 在相应[!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)]代码中，设置`Language`属性例如，若要`"ar-SA"`。  
+ 在相应 C# 代码中，设置`Language`属性例如，若要`"ar-SA"`。  
   
 ||  
 |-|  
@@ -263,13 +265,13 @@ ms.lasthandoff: 12/22/2017
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage(`<br /><br /> `System.Globalization.CultureInfo.CurrentUICulture.IetfLanguageTag);`|  
   
- <xref:System.Globalization.CultureInfo.CurrentCulture%2A>表示在运行时使用当前线程的当前区域性。  
+ <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 表示在运行时使用当前线程的当前区域性。  
   
  你最终[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]示例应类似于下面的示例。  
   
  [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
- 你最终[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]应类似于以下示例。  
+ 你最终的 C# 示例应类似于以下。  
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   

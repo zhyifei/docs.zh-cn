@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ef070c737f6a108aa9c9285d2cc8e0a1144479bd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>检索标识或自动编号值
 关系数据库中的主键是始终包含唯一值的列或列的组合。 知道主键值使您可以定位包含该值的行。 关系数据库引擎（如 SQL Server、Oracle 和 Microsoft Access/Jet）支持创建可指定为主键的自动递增列。 在向表中添加行时，服务器会生成这些值。 在 SQL Server 中可以设置列的标识属性，在 Oracle 中可以创建序列，在 Microsoft Access 中可以创建 AutoNumber 列。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/26/2018
  某些数据库引擎（如 Microsoft Access Jet 数据库引擎）不支持输出参数，不能在单个批处理中处理多个语句。 当使用 Jet 数据库引擎时，可以通过在 `RowUpdated` 的 `DataAdapter` 事件的事件处理程序中执行单独的 SELECT 命令来检索为插入行生成的新 AutoNumber 值。  
   
 > [!NOTE]
->  使用自动递增值的替代方法是使用 <xref:System.Guid.NewGuid%2A> 对象的 <xref:System.Guid> 方法在客户端计算机上生成一个 GUID（即全局唯一标识符），插入每个新行时可以将此标识符复制到服务器。 `NewGuid` 方法使用算法生成一个 16 字节的二进制值，该算法不生成重复值的概率很高。 在 SQL Server 数据库中，GUID 存储在 `uniqueidentifier` 列中，SQL Server 可以使用 Transact-SQL `NEWID()` 函数自动生成此列。 将 GUID 用作主键会对性能产生负面影响。 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 引入对 `NEWSEQUENTIALID()` 函数的支持，此函数生成一个连续 GUID，虽然不能保证此 GUID 全局唯一，却可以更有效地进行索引。  
+>  使用自动递增值的替代方法是使用 <xref:System.Guid.NewGuid%2A> 对象的 <xref:System.Guid> 方法在客户端计算机上生成一个 GUID（即全局唯一标识符），插入每个新行时可以将此标识符复制到服务器。 `NewGuid` 方法使用算法生成一个 16 字节的二进制值，该算法不生成重复值的概率很高。 在 SQL Server 数据库中，GUID 存储在 `uniqueidentifier` 列中，SQL Server 可以使用 Transact-SQL `NEWID()` 函数自动生成此列。 将 GUID 用作主键会对性能产生负面影响。 SQL Server 提供了对支持`NEWSEQUENTIALID()`函数，将生成一个连续 GUID 不保证是全局唯一，但可以更有效地索引，该函数。  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>检索 SQL Server“标识”列的值  
  使用 Microsoft SQL Server 时，可以创建通过输出参数返回插入行标识值的存储过程。 下表说明 SQL Server 中可用来检索标识列值的三个 Transact-SQL 函数。  
@@ -542,7 +542,7 @@ class Program {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [行状态和行版本](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  

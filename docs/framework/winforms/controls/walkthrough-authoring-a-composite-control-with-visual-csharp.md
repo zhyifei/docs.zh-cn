@@ -1,12 +1,13 @@
 ---
-title: "演练：使用 Visual C# 创作复合控件"
-ms.custom: 
+title: 演练：使用 Visual C# 创作复合控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom controls [C#]
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 880effb930943fcb8715dbc10c9676fae0bd903c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c88a9b4786fd544d175243fedb56b5071c8990f6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>演练：使用 Visual C# 创作复合控件 #
 复合控件提供了一种创建和重用自定义图形界面的方法。 复合控件本质上是具有可视化表示形式的组件。 因此，它可能包含一个或多个 Windows 窗体控件、组件或代码块，它们能够通过验证用户输入、修改显示属性或执行作者所需的其他任务来扩展功能。 可以按照与其他控件相同的方式将复合控件置于 Windows 窗体中。 在本演练的第一部分，将创建一个名为 `ctlClock` 的简单复合控件。 在本演练的第二部分，将通过继承扩展 `ctlClock` 的功能。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  在“文件”菜单上指向“新建”，然后单击“项目”打开“新建项目”对话框。  
   
-2.  从 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 项目列表中选择“Windows 窗体控件库”项目模板，在“名称”框中键入 `ctlClockLib`，然后单击“确定”。  
+2.  从 Visual C# 项目的列表中选择**Windows 窗体控件库**项目模板中，键入`ctlClockLib`中**名称**框中，并依次**确定**。  
   
      默认情况下，项目名称 `ctlClockLib` 也会分配到根命名空间中。 根命名空间用于限定程序集中的组件名。 例如，如果两个程序集都提供名为 `ctlClock` 的组件，则可以使用 `ctlClockLib.ctlClock.` 指定 `ctlClock` 组件  
   
@@ -328,7 +330,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  将按钮添加到控件。 按如下方式设置该按钮的属性。  
   
-    |属性|“值”|  
+    |属性|值|  
     |--------------|-----------|  
     |**名称**|`btnAlarmOff`|  
     |**文本**|**禁用警报**|  
@@ -376,7 +378,7 @@ ms.lasthandoff: 01/19/2018
   
 9. 按下述方法设置这些控件的属性。  
   
-    |控件|属性|“值”|  
+    |控件|属性|值|  
     |-------------|--------------|-----------|  
     |`label1`|**文本**|`(blank space)`|  
     ||**名称**|`lblTest`|  

@@ -1,12 +1,13 @@
 ---
-title: "如何：完成 Windows 窗体打印作业"
-ms.custom: 
+title: 如何：完成 Windows 窗体打印作业
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 00c43ff4ca418d272dc00132907c5bcbc0c5bc8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06ee6625d18563ea6322606b0343283b513877bd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>如何：完成 Windows 窗体打印作业
 通常情况下，文字处理器和其他应用程序涉及打印将提供的选项以向打印作业已完成的用户显示一条消息。 你可以在 Windows 窗体中提供此功能，通过处理<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件<xref:System.Drawing.Printing.PrintDocument>组件。  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     （[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）将以下代码放在窗体构造函数中以注册事件处理程序。  
+     (Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
   
     ```csharp  
     this.printDocument1.EndPrint += new  

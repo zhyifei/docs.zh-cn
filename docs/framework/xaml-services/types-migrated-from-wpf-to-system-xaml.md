@@ -1,42 +1,44 @@
 ---
-title: "从 WPF 迁移到 System.Xaml 的类型"
-ms.custom: 
+title: 从 WPF 迁移到 System.Xaml 的类型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF XAML [XAML Services], migration to System.Xaml
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 86dd2dc74903dfb889ab618622786f5349a5fb32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f4d4bc0b21770e5ac0c138c140334198d30a740a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>从 WPF 迁移到 System.Xaml 的类型
-在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 和 [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]中， [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 都包含一个 XAML 语言实现。 为 WPF XAML 实现提供扩展性的很多公共类型都存在于 WindowsBase、PresentationCore 和 PresentationFramework 程序集中。 同样，为 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] XAML 提供扩展性的公共类型存在于 System.Workflow.ComponentModel 程序集中。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，一些与 XAML 相关的类型已迁移到 System.Xaml 程序集。 XAML 语言服务的一个常见 .NET Framework 实现支持最初由特定框架的 XAML 实现定义的很多 XAML 扩展性方案，但是现在这些方案都属于整体 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 语言支持的一部分。 本主题列出了迁移的类型并讨论了与迁移有关的问题。  
+在[!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]和[!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]，这两个[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]和 Windows Workflow Foundation 包含一个 XAML 语言实现。 为 WPF XAML 实现提供扩展性的很多公共类型都存在于 WindowsBase、PresentationCore 和 PresentationFramework 程序集中。 同样，对于 Windows Workflow Foundation XAML 提供扩展性的公共类型存在于 System.Workflow.ComponentModel 程序集中。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，一些与 XAML 相关的类型已迁移到 System.Xaml 程序集。 XAML 语言服务的一个常见 .NET Framework 实现支持最初由特定框架的 XAML 实现定义的很多 XAML 扩展性方案，但是现在这些方案都属于整体 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 语言支持的一部分。 本主题列出了迁移的类型并讨论了与迁移有关的问题。  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>程序集和命名空间  
  在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]中，WPF 为支持 XAML 而实现的类型通常位于 <xref:System.Windows.Markup> 命名空间中。 大多数这些类型都位于 WindowsBase 程序集中。  
   
- 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中，新增了一个 <xref:System.Xaml> 命名空间和 System.Xaml 程序集。 最初为 WPF XAML 实现的很多类型现在作为任何 XAML 实现的扩展性点或服务提供。 为了使其可用于更普通的方案，将类型从其最初所在的 WPF 程序集类型转发到 System.Xaml 程序集。 这可启用 XAML 扩展性方案而无需包含其他框架（如 WPF 和 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]）的程序集。  
+ 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中，新增了一个 <xref:System.Xaml> 命名空间和 System.Xaml 程序集。 最初为 WPF XAML 实现的很多类型现在作为任何 XAML 实现的扩展性点或服务提供。 为了使其可用于更普通的方案，将类型从其最初所在的 WPF 程序集类型转发到 System.Xaml 程序集。 这可启用 XAML 扩展性方案而无需包含其他框架 （如 WPF 和 Windows Workflow Foundation） 的程序集。  
   
  对于已迁移的类型，大多数类型仍位于 <xref:System.Windows.Markup> 命名空间中。 这是做部分是为了避免中断每个文件上现有实现中的 CLR 命名空间映射。 因此， <xref:System.Windows.Markup> 中的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 命名空间包含混合的常规 XAML 语言支持类型（来自 System.Xaml 程序集）和特定于 WPF XAML 实现的类型（来自 WindowsBase 和其他 WPF 程序集）。 在版本 4 的 WPF 程序集中，已迁移到 System.Xaml，但以前存在于 WPF 程序集中的任何类型都具有类型转发支持。  
   
 ### <a name="workflow-xaml-support-types"></a>工作流 XAML 支持类型  
- [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 还提供 XAML 支持类型，并且在很多情况下它们具有与 WPF 等效项相同的短名称。 下面是 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] XAML 支持类型的列表：  
+ Windows Workflow Foundation 还提供 XAML 支持类型，并在许多情况下它们具有与 WPF 等效的相同短名称。 下面是 Windows Workflow Foundation XAML 支持类型的列表：  
   
 -   <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
   
@@ -44,11 +46,11 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
   
- 这些支持类型仍存在于 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 程序集中，并且仍然可用于特定 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 应用程序；但是，它们不应由不使用 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]的应用程序或框架引用。  
+ 这些支持类型仍存在的 Windows Workflow Foundation 程序集中的[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]并仍可用于特定的 Windows Workflow Foundation 应用程序; 但是，它们不应引用的应用程序或不使用的框架Windows Workflow Foundation。  
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
- 在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]中，WPF 的 <xref:System.Windows.Markup.MarkupExtension> 类位于 WindowsBase 程序集中。 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]的 Parallel 类 <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>位于 System.Workflow.ComponentModel 程序集中。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中， <xref:System.Windows.Markup.MarkupExtension> 类被迁移到 System.Xaml 程序集中。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中， <xref:System.Windows.Markup.MarkupExtension> 适用于使用 .NET Framework XAML 服务的任何 XAML 扩展性方案，而不仅仅用于在特定框架上生成的方案。 在可能的情况下，特定的框架或架构中的用户代码也应在 XAML 扩展的 <xref:System.Windows.Markup.MarkupExtension> 类上生成。  
+ 在 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 和 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]中，WPF 的 <xref:System.Windows.Markup.MarkupExtension> 类位于 WindowsBase 程序集中。 Windows Workflow Foundation 的 parallel 类<xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>位于 System.Workflow.ComponentModel 程序集中。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中， <xref:System.Windows.Markup.MarkupExtension> 类被迁移到 System.Xaml 程序集中。 在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]中， <xref:System.Windows.Markup.MarkupExtension> 适用于使用 .NET Framework XAML 服务的任何 XAML 扩展性方案，而不仅仅用于在特定框架上生成的方案。 在可能的情况下，特定的框架或架构中的用户代码也应在 XAML 扩展的 <xref:System.Windows.Markup.MarkupExtension> 类上生成。  
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>MarkupExtension 支持服务类  
