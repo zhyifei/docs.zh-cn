@@ -1,60 +1,61 @@
 ---
-title: "如何：在 Visual Basic 中将过程传递给另一过程"
-ms.custom: 
+title: 如何：在 Visual Basic 中将过程传递给另一过程
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e8e205f5238aab39aa92574bc5c680e68cc8a81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 30264e0480b603b21f8f71893af0fd742af40286
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a><span data-ttu-id="a8829-102">如何：在 Visual Basic 中将过程传递给另一过程</span><span class="sxs-lookup"><span data-stu-id="a8829-102">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>
-<span data-ttu-id="a8829-103">此示例演示如何使用委托将传递给另一个过程的过程。</span><span class="sxs-lookup"><span data-stu-id="a8829-103">This example shows how to use delegates to pass a procedure to another procedure.</span></span>  
+# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a><span data-ttu-id="0ff6a-102">如何：在 Visual Basic 中将过程传递给另一过程</span><span class="sxs-lookup"><span data-stu-id="0ff6a-102">How to: Pass Procedures to Another Procedure in Visual Basic</span></span>
+<span data-ttu-id="0ff6a-103">此示例演示如何使用委托将传递给另一个过程的过程。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-103">This example shows how to use delegates to pass a procedure to another procedure.</span></span>  
   
- <span data-ttu-id="a8829-104">委托是一种可以使用任何与其他类型一样在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="a8829-104">A delegate is a type that you can use like any other type in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="a8829-105">`AddressOf`运算符返回委托对象时应用于过程名称。</span><span class="sxs-lookup"><span data-stu-id="a8829-105">The `AddressOf` operator returns a delegate object when applied to a procedure name.</span></span>  
+ <span data-ttu-id="0ff6a-104">委托是一种可以使用与在 Visual Basic 中的任何其他类型一样。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-104">A delegate is a type that you can use like any other type in Visual Basic.</span></span> <span data-ttu-id="0ff6a-105">`AddressOf`运算符返回委托对象时应用于过程名称。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-105">The `AddressOf` operator returns a delegate object when applied to a procedure name.</span></span>  
   
- <span data-ttu-id="a8829-106">此示例具有带可以采用另一个过程，通过获取引用委托参数的过程`AddressOf`运算符。</span><span class="sxs-lookup"><span data-stu-id="a8829-106">This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.</span></span>  
+ <span data-ttu-id="0ff6a-106">此示例具有带可以采用另一个过程，通过获取引用委托参数的过程`AddressOf`运算符。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-106">This example has a procedure with a delegate parameter that can take a reference to another procedure, obtained with the `AddressOf` operator.</span></span>  
   
-### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="a8829-107">创建的委托和匹配的过程</span><span class="sxs-lookup"><span data-stu-id="a8829-107">Create the delegate and matching procedures</span></span>  
+### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="0ff6a-107">创建的委托和匹配的过程</span><span class="sxs-lookup"><span data-stu-id="0ff6a-107">Create the delegate and matching procedures</span></span>  
   
-1.  <span data-ttu-id="a8829-108">创建名为的委托`MathOperator`。</span><span class="sxs-lookup"><span data-stu-id="a8829-108">Create a delegate named `MathOperator`.</span></span>  
+1.  <span data-ttu-id="0ff6a-108">创建名为的委托`MathOperator`。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-108">Create a delegate named `MathOperator`.</span></span>  
   
      [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
   
-2.  <span data-ttu-id="a8829-109">创建名为的过程`AddNumbers`使用参数和返回值相匹配的`MathOperator`，以便的签名匹配。</span><span class="sxs-lookup"><span data-stu-id="a8829-109">Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.</span></span>  
+2.  <span data-ttu-id="0ff6a-109">创建名为的过程`AddNumbers`使用参数和返回值相匹配的`MathOperator`，以便的签名匹配。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-109">Create a procedure named `AddNumbers` with parameters and return value that match those of `MathOperator`, so that the signatures match.</span></span>  
   
      [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
   
-3.  <span data-ttu-id="a8829-110">创建名为的过程`SubtractNumbers`相匹配的签名与`MathOperator`。</span><span class="sxs-lookup"><span data-stu-id="a8829-110">Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.</span></span>  
+3.  <span data-ttu-id="0ff6a-110">创建名为的过程`SubtractNumbers`相匹配的签名与`MathOperator`。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-110">Create a procedure named `SubtractNumbers` with a signature that matches `MathOperator`.</span></span>  
   
      [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
   
-4.  <span data-ttu-id="a8829-111">创建名为的过程`DelegateTest`采用委托作为参数。</span><span class="sxs-lookup"><span data-stu-id="a8829-111">Create a procedure named `DelegateTest` that takes a delegate as a parameter.</span></span>  
+4.  <span data-ttu-id="0ff6a-111">创建名为的过程`DelegateTest`采用委托作为参数。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-111">Create a procedure named `DelegateTest` that takes a delegate as a parameter.</span></span>  
   
-     <span data-ttu-id="a8829-112">此过程可以接受对引用`AddNumbers`或`SubtractNumbers`，因为它们的签名匹配`MathOperator`签名。</span><span class="sxs-lookup"><span data-stu-id="a8829-112">This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.</span></span>  
+     <span data-ttu-id="0ff6a-112">此过程可以接受对引用`AddNumbers`或`SubtractNumbers`，因为它们的签名匹配`MathOperator`签名。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-112">This procedure can accept a reference to `AddNumbers` or `SubtractNumbers`, because their signatures match the `MathOperator` signature.</span></span>  
   
      [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
   
-5.  <span data-ttu-id="a8829-113">创建名为的过程`Test`调用`DelegateTest`一次使用的委托`AddNumbers`作为参数，并再次使用的委托`SubtractNumbers`作为参数。</span><span class="sxs-lookup"><span data-stu-id="a8829-113">Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.</span></span>  
+5.  <span data-ttu-id="0ff6a-113">创建名为的过程`Test`调用`DelegateTest`一次使用的委托`AddNumbers`作为参数，并再次使用的委托`SubtractNumbers`作为参数。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-113">Create a procedure named `Test` that calls `DelegateTest` once with the delegate for `AddNumbers` as a parameter, and again with the delegate for `SubtractNumbers` as a parameter.</span></span>  
   
      [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
   
-     <span data-ttu-id="a8829-114">当`Test`是它调用，首先显示的结果`AddNumbers`活动上`5`和`3`，也就是 8。</span><span class="sxs-lookup"><span data-stu-id="a8829-114">When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8.</span></span> <span data-ttu-id="a8829-115">然后的结果`SubtractNumbers`作用于`9`和`3`显示时，也就是 6。</span><span class="sxs-lookup"><span data-stu-id="a8829-115">Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.</span></span>  
+     <span data-ttu-id="0ff6a-114">当`Test`是它调用，首先显示的结果`AddNumbers`活动上`5`和`3`，也就是 8。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-114">When `Test` is called, it first displays the result of `AddNumbers` acting on `5` and `3`, which is 8.</span></span> <span data-ttu-id="0ff6a-115">然后的结果`SubtractNumbers`作用于`9`和`3`显示时，也就是 6。</span><span class="sxs-lookup"><span data-stu-id="0ff6a-115">Then the result of `SubtractNumbers` acting on `9` and `3` is displayed, which is 6.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8829-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="a8829-116">See Also</span></span>  
- [<span data-ttu-id="a8829-117">委托</span><span class="sxs-lookup"><span data-stu-id="a8829-117">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [<span data-ttu-id="a8829-118">AddressOf 运算符</span><span class="sxs-lookup"><span data-stu-id="a8829-118">AddressOf Operator</span></span>](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [<span data-ttu-id="a8829-119">Delegate 语句</span><span class="sxs-lookup"><span data-stu-id="a8829-119">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [<span data-ttu-id="a8829-120">如何：调用委托方法</span><span class="sxs-lookup"><span data-stu-id="a8829-120">How to: Invoke a Delegate Method</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+## <a name="see-also"></a><span data-ttu-id="0ff6a-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="0ff6a-116">See Also</span></span>  
+ [<span data-ttu-id="0ff6a-117">委托</span><span class="sxs-lookup"><span data-stu-id="0ff6a-117">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [<span data-ttu-id="0ff6a-118">AddressOf 运算符</span><span class="sxs-lookup"><span data-stu-id="0ff6a-118">AddressOf Operator</span></span>](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="0ff6a-119">Delegate 语句</span><span class="sxs-lookup"><span data-stu-id="0ff6a-119">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="0ff6a-120">如何：调用委托方法</span><span class="sxs-lookup"><span data-stu-id="0ff6a-120">How to: Invoke a Delegate Method</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

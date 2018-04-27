@@ -1,12 +1,13 @@
 ---
-title: "如何：在 Windows 窗体控件中处理用户输入事件"
-ms.custom: 
+title: 如何：在 Windows 窗体控件中处理用户输入事件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,31 +17,32 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8255d279f6a5e33df696673bae749f62b8ecf2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7599bcbd93183aa06bb35c30e0265b9b15b966cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a><span data-ttu-id="8cfe7-102">如何：在 Windows 窗体控件中处理用户输入事件</span><span class="sxs-lookup"><span data-stu-id="8cfe7-102">How to: Handle User Input Events in Windows Forms Controls</span></span>
-<span data-ttu-id="8cfe7-103">此示例演示如何处理大多数键盘、鼠标、焦点和 Windows 窗体控件中可能会发生的验证事件。</span><span class="sxs-lookup"><span data-stu-id="8cfe7-103">This example demonstrates how to handle most keyboard, mouse, focus, and validation events that can occur in a Windows Forms control.</span></span> <span data-ttu-id="8cfe7-104">命名为 `TextBoxInput` 的文本框在其具有焦点时接收事件，有关每个事件的信息将以事件发生的顺序写入被命名为 `TextBoxOutput` 的文本框中。</span><span class="sxs-lookup"><span data-stu-id="8cfe7-104">The text box named `TextBoxInput` receives the events when it has focus, and information about each event is written in the text box named `TextBoxOutput` in the order in which the events are raised.</span></span> <span data-ttu-id="8cfe7-105">该应用程序还包括一组复选框，可用于筛选要报告的事件。</span><span class="sxs-lookup"><span data-stu-id="8cfe7-105">The application also includes a set of check boxes that can be used to filter which events to report.</span></span>  
+# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a><span data-ttu-id="248a1-102">如何：在 Windows 窗体控件中处理用户输入事件</span><span class="sxs-lookup"><span data-stu-id="248a1-102">How to: Handle User Input Events in Windows Forms Controls</span></span>
+<span data-ttu-id="248a1-103">此示例演示如何处理大多数键盘、鼠标、焦点和 Windows 窗体控件中可能会发生的验证事件。</span><span class="sxs-lookup"><span data-stu-id="248a1-103">This example demonstrates how to handle most keyboard, mouse, focus, and validation events that can occur in a Windows Forms control.</span></span> <span data-ttu-id="248a1-104">命名为 `TextBoxInput` 的文本框在其具有焦点时接收事件，有关每个事件的信息将以事件发生的顺序写入被命名为 `TextBoxOutput` 的文本框中。</span><span class="sxs-lookup"><span data-stu-id="248a1-104">The text box named `TextBoxInput` receives the events when it has focus, and information about each event is written in the text box named `TextBoxOutput` in the order in which the events are raised.</span></span> <span data-ttu-id="248a1-105">该应用程序还包括一组复选框，可用于筛选要报告的事件。</span><span class="sxs-lookup"><span data-stu-id="248a1-105">The application also includes a set of check boxes that can be used to filter which events to report.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8cfe7-106">示例</span><span class="sxs-lookup"><span data-stu-id="8cfe7-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="248a1-106">示例</span><span class="sxs-lookup"><span data-stu-id="248a1-106">Example</span></span>  
  [!code-cpp[System.Windows.Forms.UserInputWalkthrough#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.UserInputWalkthrough/cpp/form1.cpp#0)]
  [!code-csharp[System.Windows.Forms.UserInputWalkthrough#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.UserInputWalkthrough/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.UserInputWalkthrough#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.UserInputWalkthrough/VB/form1.vb#0)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="8cfe7-107">编译代码</span><span class="sxs-lookup"><span data-stu-id="8cfe7-107">Compiling the Code</span></span>  
- <span data-ttu-id="8cfe7-108">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="8cfe7-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="248a1-107">编译代码</span><span class="sxs-lookup"><span data-stu-id="248a1-107">Compiling the Code</span></span>  
+ <span data-ttu-id="248a1-108">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="248a1-108">This example requires:</span></span>  
   
--   <span data-ttu-id="8cfe7-109">对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="8cfe7-109">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="248a1-109">对 System、System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="248a1-109">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="8cfe7-110">有关从 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 的命令行生成此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="8cfe7-110">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="8cfe7-111">还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中生成此示例。</span><span class="sxs-lookup"><span data-stu-id="8cfe7-111">You can also build this example in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="8cfe7-112">另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="8cfe7-112">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="248a1-110">为 Visual Basic 或 Visual C# 中生成此示例从命令行有关的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="248a1-110">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="248a1-111">还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中生成此示例。</span><span class="sxs-lookup"><span data-stu-id="248a1-111">You can also build this example in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="248a1-112">另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="248a1-112">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8cfe7-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="8cfe7-113">See Also</span></span>  
- [<span data-ttu-id="8cfe7-114">Windows 窗体中的用户输入</span><span class="sxs-lookup"><span data-stu-id="8cfe7-114">User Input in Windows Forms</span></span>](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="248a1-113">请参阅</span><span class="sxs-lookup"><span data-stu-id="248a1-113">See Also</span></span>  
+ [<span data-ttu-id="248a1-114">Windows 窗体中的用户输入</span><span class="sxs-lookup"><span data-stu-id="248a1-114">User Input in Windows Forms</span></span>](../../../docs/framework/winforms/user-input-in-windows-forms.md)

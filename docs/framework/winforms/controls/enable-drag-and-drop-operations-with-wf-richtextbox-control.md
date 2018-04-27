@@ -1,12 +1,13 @@
 ---
-title: "如何：在 Windows 窗体 RichTextBox 控件中启用拖放操作"
-ms.custom: 
+title: 如何：在 Windows 窗体 RichTextBox 控件中启用拖放操作
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,25 +19,26 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8497f0c13fece9c6a2b3ca2d1d2df0d427c605e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 17bf3b8e50c4e51cb14225e402903428a309d67a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="cc37e-102">如何：在 Windows 窗体 RichTextBox 控件中启用拖放操作</span><span class="sxs-lookup"><span data-stu-id="cc37e-102">How to: Enable Drag-and-Drop Operations with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="cc37e-103">通过处理 <xref:System.Windows.Forms.RichTextBox> 和 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件，在 Windows 窗体 <xref:System.Windows.Forms.RichTextBox.DragDrop> 控件中进行拖放操作。</span><span class="sxs-lookup"><span data-stu-id="cc37e-103">Drag-and-drop operations with the Windows Forms <xref:System.Windows.Forms.RichTextBox> control are done by handling the <xref:System.Windows.Forms.RichTextBox.DragEnter> and <xref:System.Windows.Forms.RichTextBox.DragDrop> events.</span></span> <span data-ttu-id="cc37e-104">因此，在 <xref:System.Windows.Forms.RichTextBox> 控件中进行拖放操作是非常简单的。</span><span class="sxs-lookup"><span data-stu-id="cc37e-104">Thus, drag-and-drop operations are extremely simple with the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="6feb4-102">如何：在 Windows 窗体 RichTextBox 控件中启用拖放操作</span><span class="sxs-lookup"><span data-stu-id="6feb4-102">How to: Enable Drag-and-Drop Operations with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="6feb4-103">通过处理 <xref:System.Windows.Forms.RichTextBox> 和 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件，在 Windows 窗体 <xref:System.Windows.Forms.RichTextBox.DragDrop> 控件中进行拖放操作。</span><span class="sxs-lookup"><span data-stu-id="6feb4-103">Drag-and-drop operations with the Windows Forms <xref:System.Windows.Forms.RichTextBox> control are done by handling the <xref:System.Windows.Forms.RichTextBox.DragEnter> and <xref:System.Windows.Forms.RichTextBox.DragDrop> events.</span></span> <span data-ttu-id="6feb4-104">因此，在 <xref:System.Windows.Forms.RichTextBox> 控件中进行拖放操作是非常简单的。</span><span class="sxs-lookup"><span data-stu-id="6feb4-104">Thus, drag-and-drop operations are extremely simple with the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a><span data-ttu-id="cc37e-105">在 RichTextBox 控件中实现拖动操作</span><span class="sxs-lookup"><span data-stu-id="cc37e-105">To enable drag operations in a RichTextBox control</span></span>  
+### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a><span data-ttu-id="6feb4-105">在 RichTextBox 控件中实现拖动操作</span><span class="sxs-lookup"><span data-stu-id="6feb4-105">To enable drag operations in a RichTextBox control</span></span>  
   
-1.  <span data-ttu-id="cc37e-106">将 <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> 控件的 <xref:System.Windows.Forms.RichTextBox> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="cc37e-106">Set the <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> property of the <xref:System.Windows.Forms.RichTextBox> control to `true`.</span></span>  
+1.  <span data-ttu-id="6feb4-106">将 <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> 控件的 <xref:System.Windows.Forms.RichTextBox> 属性设置为 `true`。</span><span class="sxs-lookup"><span data-stu-id="6feb4-106">Set the <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> property of the <xref:System.Windows.Forms.RichTextBox> control to `true`.</span></span>  
   
-2.  <span data-ttu-id="cc37e-107">在 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件的事件处理程序中编写代码。</span><span class="sxs-lookup"><span data-stu-id="cc37e-107">Write code in the event handler of the <xref:System.Windows.Forms.RichTextBox.DragEnter> event.</span></span> <span data-ttu-id="cc37e-108">使用 `if` 语句来确保要拖动的数据为可接受的类型（本例为文本）。</span><span class="sxs-lookup"><span data-stu-id="cc37e-108">Use an `if` statement to ensure that the data being dragged is of an acceptable type (in this case, text).</span></span> <span data-ttu-id="cc37e-109"><xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> 属性可以设置为 <xref:System.Windows.Forms.DragDropEffects> 枚举的任何值。</span><span class="sxs-lookup"><span data-stu-id="cc37e-109">The <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> property can be set to any value of the <xref:System.Windows.Forms.DragDropEffects> enumeration.</span></span>  
+2.  <span data-ttu-id="6feb4-107">在 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件的事件处理程序中编写代码。</span><span class="sxs-lookup"><span data-stu-id="6feb4-107">Write code in the event handler of the <xref:System.Windows.Forms.RichTextBox.DragEnter> event.</span></span> <span data-ttu-id="6feb4-108">使用 `if` 语句来确保要拖动的数据为可接受的类型（本例为文本）。</span><span class="sxs-lookup"><span data-stu-id="6feb4-108">Use an `if` statement to ensure that the data being dragged is of an acceptable type (in this case, text).</span></span> <span data-ttu-id="6feb4-109"><xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> 属性可以设置为 <xref:System.Windows.Forms.DragDropEffects> 枚举的任何值。</span><span class="sxs-lookup"><span data-stu-id="6feb4-109">The <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> property can be set to any value of the <xref:System.Windows.Forms.DragDropEffects> enumeration.</span></span>  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     <span data-ttu-id="cc37e-110">（[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）将以下代码放在窗体构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="cc37e-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="6feb4-110">(Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="6feb4-110">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -87,9 +89,9 @@ ms.lasthandoff: 12/22/2017
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3.  <span data-ttu-id="cc37e-111">编写代码以处理 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件。</span><span class="sxs-lookup"><span data-stu-id="cc37e-111">Write code to handle the <xref:System.Windows.Forms.RichTextBox.DragDrop> event.</span></span> <span data-ttu-id="cc37e-112">使用 <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> 方法来检索要拖动的数据。</span><span class="sxs-lookup"><span data-stu-id="cc37e-112">Use the <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> method to retrieve the data being dragged.</span></span>  
+3.  <span data-ttu-id="6feb4-111">编写代码以处理 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件。</span><span class="sxs-lookup"><span data-stu-id="6feb4-111">Write code to handle the <xref:System.Windows.Forms.RichTextBox.DragDrop> event.</span></span> <span data-ttu-id="6feb4-112">使用 <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> 方法来检索要拖动的数据。</span><span class="sxs-lookup"><span data-stu-id="6feb4-112">Use the <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> method to retrieve the data being dragged.</span></span>  
   
-     <span data-ttu-id="cc37e-113">在下面的示例中，代码会将 <xref:System.Windows.Forms.RichTextBox.Text%2A> 控件的 <xref:System.Windows.Forms.RichTextBox> 属性设置为等于要拖动的数据。</span><span class="sxs-lookup"><span data-stu-id="cc37e-113">In the example below, the code sets the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control equal to the data being dragged.</span></span> <span data-ttu-id="cc37e-114">如果 <xref:System.Windows.Forms.RichTextBox> 控件中已有文本，拖动的文本将插入到插入点。</span><span class="sxs-lookup"><span data-stu-id="cc37e-114">If there is already text in the <xref:System.Windows.Forms.RichTextBox> control, the dragged text is inserted at the insertion point.</span></span>  
+     <span data-ttu-id="6feb4-113">在下面的示例中，代码会将 <xref:System.Windows.Forms.RichTextBox.Text%2A> 控件的 <xref:System.Windows.Forms.RichTextBox> 属性设置为等于要拖动的数据。</span><span class="sxs-lookup"><span data-stu-id="6feb4-113">In the example below, the code sets the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control equal to the data being dragged.</span></span> <span data-ttu-id="6feb4-114">如果 <xref:System.Windows.Forms.RichTextBox> 控件中已有文本，拖动的文本将插入到插入点。</span><span class="sxs-lookup"><span data-stu-id="6feb4-114">If there is already text in the <xref:System.Windows.Forms.RichTextBox> control, the dragged text is inserted at the insertion point.</span></span>  
   
     ```vb  
     Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _   
@@ -149,7 +151,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     <span data-ttu-id="cc37e-115">（[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）将以下代码放在窗体构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="cc37e-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="6feb4-115">(Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="6feb4-115">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -163,20 +165,20 @@ ms.lasthandoff: 12/22/2017
        (this, &Form1::richTextBox1_DragDrop);  
     ```  
   
-### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a><span data-ttu-id="cc37e-116">测试应用程序中的拖放功能</span><span class="sxs-lookup"><span data-stu-id="cc37e-116">To test the drag-and-drop functionality in your application</span></span>  
+### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a><span data-ttu-id="6feb4-116">测试应用程序中的拖放功能</span><span class="sxs-lookup"><span data-stu-id="6feb4-116">To test the drag-and-drop functionality in your application</span></span>  
   
-1.  <span data-ttu-id="cc37e-117">保存并生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="cc37e-117">Save and build your application.</span></span> <span data-ttu-id="cc37e-118">在运行期间，运行写字板。</span><span class="sxs-lookup"><span data-stu-id="cc37e-118">While it is running, run WordPad.</span></span>  
+1.  <span data-ttu-id="6feb4-117">保存并生成应用程序。</span><span class="sxs-lookup"><span data-stu-id="6feb4-117">Save and build your application.</span></span> <span data-ttu-id="6feb4-118">在运行期间，运行写字板。</span><span class="sxs-lookup"><span data-stu-id="6feb4-118">While it is running, run WordPad.</span></span>  
   
-     <span data-ttu-id="cc37e-119">写字板是由 Windows 安装的允许拖放操作的文本编辑器。</span><span class="sxs-lookup"><span data-stu-id="cc37e-119">WordPad is a text editor installed by Windows that allows drag-and-drop operations.</span></span> <span data-ttu-id="cc37e-120">可以通过单击“开始”  按钮，选择“运行” ，在“运行” `WordPad`**对话框的文本框中键入** ，然后单击“确定” 来访问它。</span><span class="sxs-lookup"><span data-stu-id="cc37e-120">It is accessible by clicking the **Start** button, selecting **Run**, typing `WordPad` in the text box of the **Run** dialog box, and then clicking **OK**.</span></span>  
+     <span data-ttu-id="6feb4-119">写字板是由 Windows 安装的允许拖放操作的文本编辑器。</span><span class="sxs-lookup"><span data-stu-id="6feb4-119">WordPad is a text editor installed by Windows that allows drag-and-drop operations.</span></span> <span data-ttu-id="6feb4-120">可以通过单击“开始”  按钮，选择“运行” ，在“运行” `WordPad`**对话框的文本框中键入** ，然后单击“确定” 来访问它。</span><span class="sxs-lookup"><span data-stu-id="6feb4-120">It is accessible by clicking the **Start** button, selecting **Run**, typing `WordPad` in the text box of the **Run** dialog box, and then clicking **OK**.</span></span>  
   
-2.  <span data-ttu-id="cc37e-121">打开写字板后，在其中键入文本字符串。</span><span class="sxs-lookup"><span data-stu-id="cc37e-121">Once WordPad is open, type a string of text in it.</span></span> <span data-ttu-id="cc37e-122">使用鼠标选择该文本，然后将所选的文本拖到 Windows 应用程序中的 <xref:System.Windows.Forms.RichTextBox> 控件之上。</span><span class="sxs-lookup"><span data-stu-id="cc37e-122">Using the mouse, select the text, and then drag the selected text over to the <xref:System.Windows.Forms.RichTextBox> control in your Windows application.</span></span>  
+2.  <span data-ttu-id="6feb4-121">打开写字板后，在其中键入文本字符串。</span><span class="sxs-lookup"><span data-stu-id="6feb4-121">Once WordPad is open, type a string of text in it.</span></span> <span data-ttu-id="6feb4-122">使用鼠标选择该文本，然后将所选的文本拖到 Windows 应用程序中的 <xref:System.Windows.Forms.RichTextBox> 控件之上。</span><span class="sxs-lookup"><span data-stu-id="6feb4-122">Using the mouse, select the text, and then drag the selected text over to the <xref:System.Windows.Forms.RichTextBox> control in your Windows application.</span></span>  
   
-     <span data-ttu-id="cc37e-123">注意，将鼠标移到 <xref:System.Windows.Forms.RichTextBox> 控件上（并因此引发 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件）时，鼠标指针会改变，可以将所选的文本放入 <xref:System.Windows.Forms.RichTextBox> 控件。</span><span class="sxs-lookup"><span data-stu-id="cc37e-123">Notice that when you point the mouse at the <xref:System.Windows.Forms.RichTextBox> control (and, consequently, raise the <xref:System.Windows.Forms.RichTextBox.DragEnter> event), the mouse pointer changes and you can drop the selected text into the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+     <span data-ttu-id="6feb4-123">注意，将鼠标移到 <xref:System.Windows.Forms.RichTextBox> 控件上（并因此引发 <xref:System.Windows.Forms.RichTextBox.DragEnter> 事件）时，鼠标指针会改变，可以将所选的文本放入 <xref:System.Windows.Forms.RichTextBox> 控件。</span><span class="sxs-lookup"><span data-stu-id="6feb4-123">Notice that when you point the mouse at the <xref:System.Windows.Forms.RichTextBox> control (and, consequently, raise the <xref:System.Windows.Forms.RichTextBox.DragEnter> event), the mouse pointer changes and you can drop the selected text into the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-     <span data-ttu-id="cc37e-124">释放鼠标按钮，所选文本将放开（也就是引发 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件）并插入到 <xref:System.Windows.Forms.RichTextBox> 控件中。</span><span class="sxs-lookup"><span data-stu-id="cc37e-124">When you release the mouse button, the selected text is dropped (that is, the <xref:System.Windows.Forms.RichTextBox.DragDrop> event is raised) and is inserted within the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+     <span data-ttu-id="6feb4-124">释放鼠标按钮，所选文本将放开（也就是引发 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件）并插入到 <xref:System.Windows.Forms.RichTextBox> 控件中。</span><span class="sxs-lookup"><span data-stu-id="6feb4-124">When you release the mouse button, the selected text is dropped (that is, the <xref:System.Windows.Forms.RichTextBox.DragDrop> event is raised) and is inserted within the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc37e-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="cc37e-125">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6feb4-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="6feb4-125">See Also</span></span>  
  <xref:System.Windows.Forms.RichTextBox>  
- [<span data-ttu-id="cc37e-126">如何：在应用程序之间执行拖放操作</span><span class="sxs-lookup"><span data-stu-id="cc37e-126">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
- [<span data-ttu-id="cc37e-127">RichTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="cc37e-127">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [<span data-ttu-id="cc37e-128">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="cc37e-128">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [<span data-ttu-id="6feb4-126">如何：在应用程序之间执行拖放操作</span><span class="sxs-lookup"><span data-stu-id="6feb4-126">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
+ [<span data-ttu-id="6feb4-127">RichTextBox 控件</span><span class="sxs-lookup"><span data-stu-id="6feb4-127">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="6feb4-128">在 Windows 窗体上使用的控件</span><span class="sxs-lookup"><span data-stu-id="6feb4-128">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

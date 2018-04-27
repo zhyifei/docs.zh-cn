@@ -1,12 +1,13 @@
 ---
-title: "如何： 选择打印机附加到用户 &#39; s Windows 窗体中的计算机"
-ms.custom: 
+title: 如何： 选择依附于的用户的打印机&#39;s Windows 窗体中的计算机
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,29 +17,30 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: deee6eb0bb15535425e0e90963b9bd72dc955477
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90feca3e1efeeae45b26a747e97ad8b5b945ec56
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a><span data-ttu-id="ab1fc-102">如何： 选择打印机附加到用户 &#39; s Windows 窗体中的计算机</span><span class="sxs-lookup"><span data-stu-id="ab1fc-102">How to: Choose the Printers Attached to a User&#39;s Computer in Windows Forms</span></span>
-<span data-ttu-id="ab1fc-103">用户通常希望选择默认打印机之外的打印机进行打印。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="ab1fc-104">可以使用 <xref:System.Windows.Forms.PrintDialog> 组件使用户能够从当前安装的打印机中选择打印机。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="ab1fc-105">通过 <xref:System.Windows.Forms.PrintDialog> 组件，会捕获 <xref:System.Windows.Forms.DialogResult> 组件的 <xref:System.Windows.Forms.PrintDialog> 并用于选择打印机。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
+# <a name="how-to-choose-the-printers-attached-to-a-user39s-computer-in-windows-forms"></a><span data-ttu-id="0c11a-102">如何： 选择依附于的用户的打印机&#39;s Windows 窗体中的计算机</span><span class="sxs-lookup"><span data-stu-id="0c11a-102">How to: Choose the Printers Attached to a User&#39;s Computer in Windows Forms</span></span>
+<span data-ttu-id="0c11a-103">用户通常希望选择默认打印机之外的打印机进行打印。</span><span class="sxs-lookup"><span data-stu-id="0c11a-103">Often, users want to choose a printer other than the default printer to print to.</span></span> <span data-ttu-id="0c11a-104">可以使用 <xref:System.Windows.Forms.PrintDialog> 组件使用户能够从当前安装的打印机中选择打印机。</span><span class="sxs-lookup"><span data-stu-id="0c11a-104">You can enable users to choose a printer from among those currently installed by using the <xref:System.Windows.Forms.PrintDialog> component.</span></span> <span data-ttu-id="0c11a-105">通过 <xref:System.Windows.Forms.PrintDialog> 组件，会捕获 <xref:System.Windows.Forms.DialogResult> 组件的 <xref:System.Windows.Forms.PrintDialog> 并用于选择打印机。</span><span class="sxs-lookup"><span data-stu-id="0c11a-105">Through the <xref:System.Windows.Forms.PrintDialog> component, the <xref:System.Windows.Forms.DialogResult> of the <xref:System.Windows.Forms.PrintDialog> component is captured and used to select the printer.</span></span>  
   
- <span data-ttu-id="ab1fc-106">在下面的过程中，选择一个文本文件以打印到默认打印机。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="ab1fc-107"><xref:System.Windows.Forms.PrintDialog> 类随后进行实例化。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
+ <span data-ttu-id="0c11a-106">在下面的过程中，选择一个文本文件以打印到默认打印机。</span><span class="sxs-lookup"><span data-stu-id="0c11a-106">In the following procedure, a text file is selected to be printed to the default printer.</span></span> <span data-ttu-id="0c11a-107"><xref:System.Windows.Forms.PrintDialog> 类随后进行实例化。</span><span class="sxs-lookup"><span data-stu-id="0c11a-107">The <xref:System.Windows.Forms.PrintDialog> class is then instantiated.</span></span>  
   
-### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="ab1fc-108">选择打印机，然后打印文件</span><span class="sxs-lookup"><span data-stu-id="ab1fc-108">To choose a printer and then print a file</span></span>  
+### <a name="to-choose-a-printer-and-then-print-a-file"></a><span data-ttu-id="0c11a-108">选择打印机，然后打印文件</span><span class="sxs-lookup"><span data-stu-id="0c11a-108">To choose a printer and then print a file</span></span>  
   
-1.  <span data-ttu-id="ab1fc-109">选择要用于使用的打印机<xref:System.Windows.Forms.PrintDialog>组件。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
+1.  <span data-ttu-id="0c11a-109">选择要用于使用的打印机<xref:System.Windows.Forms.PrintDialog>组件。</span><span class="sxs-lookup"><span data-stu-id="0c11a-109">Select the printer to be used using the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
   
-     <span data-ttu-id="ab1fc-110">在下面的代码示例中，要处理两个事件。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="ab1fc-111">在第一个，<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件，<xref:System.Windows.Forms.PrintDialog>实例化类并在中捕获用户选定的打印机<xref:System.Windows.Forms.DialogResult>属性。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
+     <span data-ttu-id="0c11a-110">在下面的代码示例中，要处理两个事件。</span><span class="sxs-lookup"><span data-stu-id="0c11a-110">In the following code example, there are two events being handled.</span></span> <span data-ttu-id="0c11a-111">在第一个，<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件，<xref:System.Windows.Forms.PrintDialog>实例化类并在中捕获用户选定的打印机<xref:System.Windows.Forms.DialogResult>属性。</span><span class="sxs-lookup"><span data-stu-id="0c11a-111">In the first, a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event, the <xref:System.Windows.Forms.PrintDialog> class is instantiated and the printer selected by the user is captured in the <xref:System.Windows.Forms.DialogResult> property.</span></span>  
   
-     <span data-ttu-id="ab1fc-112">在第二个事件中，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件<xref:System.Drawing.Printing.PrintDocument>组件时，示例文档打印到指定的打印机。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
+     <span data-ttu-id="0c11a-112">在第二个事件中，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件<xref:System.Drawing.Printing.PrintDocument>组件时，示例文档打印到指定的打印机。</span><span class="sxs-lookup"><span data-stu-id="0c11a-112">In the second event, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event of the <xref:System.Drawing.Printing.PrintDocument> component, a sample document is printed to the printer specified.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-     <span data-ttu-id="ab1fc-113">（[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]）将以下代码放在窗体构造函数中以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="ab1fc-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="0c11a-113">(Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。</span><span class="sxs-lookup"><span data-stu-id="0c11a-113">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -117,5 +119,5 @@ ms.lasthandoff: 12/22/2017
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ab1fc-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="ab1fc-114">See Also</span></span>  
- [<span data-ttu-id="ab1fc-115">Windows 窗体打印支持</span><span class="sxs-lookup"><span data-stu-id="ab1fc-115">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a><span data-ttu-id="0c11a-114">请参阅</span><span class="sxs-lookup"><span data-stu-id="0c11a-114">See Also</span></span>  
+ [<span data-ttu-id="0c11a-115">Windows 窗体打印支持</span><span class="sxs-lookup"><span data-stu-id="0c11a-115">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

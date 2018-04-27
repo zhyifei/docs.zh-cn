@@ -1,11 +1,12 @@
 ---
-title: "如何：使用定义运算符的类 (Visual Basic)"
-ms.custom: 
+title: 如何：使用定义运算符的类 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,44 +18,44 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 223b3fc84fe75d1d530cd182c9332e5c663aa519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e0bcfaeca638dfabb841a9e935b872f76fdf957
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a><span data-ttu-id="5bf65-102">如何：使用定义运算符的类 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5bf65-102">How to: Use a Class that Defines Operators (Visual Basic)</span></span>
-<span data-ttu-id="5bf65-103">如果你使用的类或结构，它定义自己的运算符，则可以访问这些运算符从[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5bf65-103">If you are using a class or structure that defines its own operators, you can access those operators from [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a><span data-ttu-id="cdaed-102">如何：使用定义运算符的类 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cdaed-102">How to: Use a Class that Defines Operators (Visual Basic)</span></span>
+<span data-ttu-id="cdaed-103">如果你使用的类或结构，它定义自己的运算符，则可以从 Visual Basic 中访问这些运算符。</span><span class="sxs-lookup"><span data-stu-id="cdaed-103">If you are using a class or structure that defines its own operators, you can access those operators from Visual Basic.</span></span>  
   
- <span data-ttu-id="5bf65-104">在类或结构上定义一个运算符也称为*重载*运算符。</span><span class="sxs-lookup"><span data-stu-id="5bf65-104">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
+ <span data-ttu-id="cdaed-104">在类或结构上定义一个运算符也称为*重载*运算符。</span><span class="sxs-lookup"><span data-stu-id="cdaed-104">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5bf65-105">示例</span><span class="sxs-lookup"><span data-stu-id="5bf65-105">Example</span></span>  
- <span data-ttu-id="5bf65-106">以下示例访问 SQL 结构<xref:System.Data.SqlTypes.SqlString>，后者定义转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字符串之间进行双向和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字符串。</span><span class="sxs-lookup"><span data-stu-id="5bf65-106">The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] string.</span></span> <span data-ttu-id="5bf65-107">使用`CType(` *SQL 字符串表达式*， `String)` SQL 将字符串转换为[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字符串，和`CType(` *Visual Basic 字符串表达式*， <xref:System.Data.SqlTypes.SqlString>`)`在另一个方向转换。</span><span class="sxs-lookup"><span data-stu-id="5bf65-107">Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.</span></span>  
+## <a name="example"></a><span data-ttu-id="cdaed-105">示例</span><span class="sxs-lookup"><span data-stu-id="cdaed-105">Example</span></span>  
+ <span data-ttu-id="cdaed-106">以下示例访问 SQL 结构<xref:System.Data.SqlTypes.SqlString>，后者定义转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字符串和 Visual Basic 字符串之间的两个方向。</span><span class="sxs-lookup"><span data-stu-id="cdaed-106">The following example accesses the SQL structure <xref:System.Data.SqlTypes.SqlString>, which defines the conversion operators ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) in both directions between a SQL string and a Visual Basic string.</span></span> <span data-ttu-id="cdaed-107">使用`CType(` *SQL 字符串表达式*，`String)`将 SQL 字符串转换为 Visual Basic 字符串，和`CType(` *Visual Basic 字符串表达式*， <xref:System.Data.SqlTypes.SqlString> `)`在另一个方向转换。</span><span class="sxs-lookup"><span data-stu-id="cdaed-107">Use `CType(`*SQL string expression*, `String)` to convert a SQL string to a Visual Basic string, and `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` to convert in the other direction.</span></span>  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
  [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
- <span data-ttu-id="5bf65-108"><xref:System.Data.SqlTypes.SqlString>结构定义的转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 从`String`到<xref:System.Data.SqlTypes.SqlString>，另一个从<xref:System.Data.SqlTypes.SqlString>到`String`。</span><span class="sxs-lookup"><span data-stu-id="5bf65-108">The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`.</span></span> <span data-ttu-id="5bf65-109">将分配的语句`title`到`jobTitle`使用第一个运算符，与<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数调用使用第二个。</span><span class="sxs-lookup"><span data-stu-id="5bf65-109">The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.</span></span>  
+ <span data-ttu-id="cdaed-108"><xref:System.Data.SqlTypes.SqlString>结构定义的转换运算符 ([CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)) 从`String`到<xref:System.Data.SqlTypes.SqlString>，另一个从<xref:System.Data.SqlTypes.SqlString>到`String`。</span><span class="sxs-lookup"><span data-stu-id="cdaed-108">The <xref:System.Data.SqlTypes.SqlString> structure defines a conversion operator ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) from `String` to <xref:System.Data.SqlTypes.SqlString> and another from <xref:System.Data.SqlTypes.SqlString> to `String`.</span></span> <span data-ttu-id="cdaed-109">将分配的语句`title`到`jobTitle`使用第一个运算符，与<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函数调用使用第二个。</span><span class="sxs-lookup"><span data-stu-id="cdaed-109">The statement that assigns `title` to `jobTitle` makes use of the first operator, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> function call uses the second.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5bf65-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="5bf65-110">Compiling the Code</span></span>  
- <span data-ttu-id="5bf65-111">请确保类或结构将定义你想要使用的运算符。</span><span class="sxs-lookup"><span data-stu-id="5bf65-111">Be sure the class or structure you are using defines the operator you want to use.</span></span> <span data-ttu-id="5bf65-112">不要假定的类或结构已定义每个可用于重载的运算符。</span><span class="sxs-lookup"><span data-stu-id="5bf65-112">Do not assume that the class or structure has defined every operator available for overloading.</span></span> <span data-ttu-id="5bf65-113">可用运算符的列表，请参阅[Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="5bf65-113">For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="cdaed-110">编译代码</span><span class="sxs-lookup"><span data-stu-id="cdaed-110">Compiling the Code</span></span>  
+ <span data-ttu-id="cdaed-111">请确保类或结构将定义你想要使用的运算符。</span><span class="sxs-lookup"><span data-stu-id="cdaed-111">Be sure the class or structure you are using defines the operator you want to use.</span></span> <span data-ttu-id="cdaed-112">不要假定的类或结构已定义每个可用于重载的运算符。</span><span class="sxs-lookup"><span data-stu-id="cdaed-112">Do not assume that the class or structure has defined every operator available for overloading.</span></span> <span data-ttu-id="cdaed-113">可用运算符的列表，请参阅[Operator 语句](../../../../visual-basic/language-reference/statements/operator-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="cdaed-113">For a list of available operators, see [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md).</span></span>  
   
- <span data-ttu-id="5bf65-114">应包括适当`Imports`SQL 字符串的开头的源文件的语句 (在这种情况下<xref:System.Data.SqlTypes>)。</span><span class="sxs-lookup"><span data-stu-id="5bf65-114">Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).</span></span>  
+ <span data-ttu-id="cdaed-114">应包括适当`Imports`SQL 字符串的开头的源文件的语句 (在这种情况下<xref:System.Data.SqlTypes>)。</span><span class="sxs-lookup"><span data-stu-id="cdaed-114">Include the appropriate `Imports` statement for the SQL string at the beginning of your source file (in this case <xref:System.Data.SqlTypes>).</span></span>  
   
- <span data-ttu-id="5bf65-115">你的项目必须具有对 System.Data 和 System.XML 的引用。</span><span class="sxs-lookup"><span data-stu-id="5bf65-115">Your project must have references to System.Data and System.XML.</span></span>  
+ <span data-ttu-id="cdaed-115">你的项目必须具有对 System.Data 和 System.XML 的引用。</span><span class="sxs-lookup"><span data-stu-id="cdaed-115">Your project must have references to System.Data and System.XML.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5bf65-116">另请参阅</span><span class="sxs-lookup"><span data-stu-id="5bf65-116">See Also</span></span>  
- [<span data-ttu-id="5bf65-117">运算符过程</span><span class="sxs-lookup"><span data-stu-id="5bf65-117">Operator Procedures</span></span>](./operator-procedures.md)  
- [<span data-ttu-id="5bf65-118">如何：定义运算符</span><span class="sxs-lookup"><span data-stu-id="5bf65-118">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)  
- [<span data-ttu-id="5bf65-119">如何：定义转换运算符</span><span class="sxs-lookup"><span data-stu-id="5bf65-119">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)  
- [<span data-ttu-id="5bf65-120">如何：调用运算符过程</span><span class="sxs-lookup"><span data-stu-id="5bf65-120">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)  
- [<span data-ttu-id="5bf65-121">Widening</span><span class="sxs-lookup"><span data-stu-id="5bf65-121">Widening</span></span>](../../../../visual-basic/language-reference/modifiers/widening.md)  
- [<span data-ttu-id="5bf65-122">Narrowing</span><span class="sxs-lookup"><span data-stu-id="5bf65-122">Narrowing</span></span>](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [<span data-ttu-id="5bf65-123">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="5bf65-123">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [<span data-ttu-id="5bf65-124">如何：声明结构</span><span class="sxs-lookup"><span data-stu-id="5bf65-124">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [<span data-ttu-id="5bf65-125">隐式转换和显式转换</span><span class="sxs-lookup"><span data-stu-id="5bf65-125">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [<span data-ttu-id="5bf65-126">扩大转换和收缩转换</span><span class="sxs-lookup"><span data-stu-id="5bf65-126">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="cdaed-116">请参阅</span><span class="sxs-lookup"><span data-stu-id="cdaed-116">See Also</span></span>  
+ [<span data-ttu-id="cdaed-117">运算符过程</span><span class="sxs-lookup"><span data-stu-id="cdaed-117">Operator Procedures</span></span>](./operator-procedures.md)  
+ [<span data-ttu-id="cdaed-118">如何：定义运算符</span><span class="sxs-lookup"><span data-stu-id="cdaed-118">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)  
+ [<span data-ttu-id="cdaed-119">如何：定义转换运算符</span><span class="sxs-lookup"><span data-stu-id="cdaed-119">How to: Define a Conversion Operator</span></span>](./how-to-define-a-conversion-operator.md)  
+ [<span data-ttu-id="cdaed-120">如何：调用运算符过程</span><span class="sxs-lookup"><span data-stu-id="cdaed-120">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)  
+ [<span data-ttu-id="cdaed-121">Widening</span><span class="sxs-lookup"><span data-stu-id="cdaed-121">Widening</span></span>](../../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="cdaed-122">Narrowing</span><span class="sxs-lookup"><span data-stu-id="cdaed-122">Narrowing</span></span>](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="cdaed-123">Structure 语句</span><span class="sxs-lookup"><span data-stu-id="cdaed-123">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="cdaed-124">如何：声明结构</span><span class="sxs-lookup"><span data-stu-id="cdaed-124">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [<span data-ttu-id="cdaed-125">隐式转换和显式转换</span><span class="sxs-lookup"><span data-stu-id="cdaed-125">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ [<span data-ttu-id="cdaed-126">扩大转换和收缩转换</span><span class="sxs-lookup"><span data-stu-id="cdaed-126">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

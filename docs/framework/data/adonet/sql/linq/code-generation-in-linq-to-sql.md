@@ -1,49 +1,51 @@
 ---
-title: "LINQ to SQL 中的代码生成"
-ms.custom: 
+title: LINQ to SQL 中的代码生成
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0d1c80817bb1126d8e9828171c2a2aeee52eb672
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: ff543efecb65e61fecef0056650b35735bef83c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="code-generation-in-linq-to-sql"></a><span data-ttu-id="05e2d-102">LINQ to SQL 中的代码生成</span><span class="sxs-lookup"><span data-stu-id="05e2d-102">Code Generation in LINQ to SQL</span></span>
-<span data-ttu-id="05e2d-103">可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令行工具生成表示数据库的代码。</span><span class="sxs-lookup"><span data-stu-id="05e2d-103">You can generate code to represent a database by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal command-line tool.</span></span> <span data-ttu-id="05e2d-104">在任一情况下，端到端代码生成都分成三个阶段：</span><span class="sxs-lookup"><span data-stu-id="05e2d-104">In either case, end-to-end code generation occurs in three stages:</span></span>  
+# <a name="code-generation-in-linq-to-sql"></a><span data-ttu-id="69e65-102">LINQ to SQL 中的代码生成</span><span class="sxs-lookup"><span data-stu-id="69e65-102">Code Generation in LINQ to SQL</span></span>
+<span data-ttu-id="69e65-103">可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令行工具生成表示数据库的代码。</span><span class="sxs-lookup"><span data-stu-id="69e65-103">You can generate code to represent a database by using either the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] or the SQLMetal command-line tool.</span></span> <span data-ttu-id="69e65-104">在任一情况下，端到端代码生成都分成三个阶段：</span><span class="sxs-lookup"><span data-stu-id="69e65-104">In either case, end-to-end code generation occurs in three stages:</span></span>  
   
-1.  <span data-ttu-id="05e2d-105">*DBML 提取器*从数据库中提取架构信息并重新组合到一个 XML 格式的 DBML 文件的信息。</span><span class="sxs-lookup"><span data-stu-id="05e2d-105">The *DBML Extractor* extracts schema information from the database and reassembles the information into an XML-formatted DBML file.</span></span>  
+1.  <span data-ttu-id="69e65-105">*DBML 提取器*从数据库中提取架构信息并重新组合到一个 XML 格式的 DBML 文件的信息。</span><span class="sxs-lookup"><span data-stu-id="69e65-105">The *DBML Extractor* extracts schema information from the database and reassembles the information into an XML-formatted DBML file.</span></span>  
   
-2.  <span data-ttu-id="05e2d-106">通过将扫描该 DBML 文件*DBML 验证程序*是否有错误。</span><span class="sxs-lookup"><span data-stu-id="05e2d-106">The DBML file is scanned by the *DBML Validator* for errors.</span></span>  
+2.  <span data-ttu-id="69e65-106">通过将扫描该 DBML 文件*DBML 验证程序*是否有错误。</span><span class="sxs-lookup"><span data-stu-id="69e65-106">The DBML file is scanned by the *DBML Validator* for errors.</span></span>  
   
-3.  <span data-ttu-id="05e2d-107">如果未显示验证错误，文件将传递到代码生成器。</span><span class="sxs-lookup"><span data-stu-id="05e2d-107">If no validation errors appear, the file is passed to the Code Generator.</span></span>  
+3.  <span data-ttu-id="69e65-107">如果未显示验证错误，文件将传递到代码生成器。</span><span class="sxs-lookup"><span data-stu-id="69e65-107">If no validation errors appear, the file is passed to the Code Generator.</span></span>  
   
- <span data-ttu-id="05e2d-108">有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="05e2d-108">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="05e2d-109">使用开发人员[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]也可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]生成代码。</span><span class="sxs-lookup"><span data-stu-id="05e2d-109">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can also use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to generate code.</span></span> <span data-ttu-id="05e2d-110">请参阅[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。</span><span class="sxs-lookup"><span data-stu-id="05e2d-110">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
+ <span data-ttu-id="69e65-108">有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="69e65-108">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span> <span data-ttu-id="69e65-109">使用 Visual Studio 的开发人员还可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]生成代码。</span><span class="sxs-lookup"><span data-stu-id="69e65-109">Developers using Visual Studio can also use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to generate code.</span></span> <span data-ttu-id="69e65-110">请参阅[LINQ to SQL Visual Studio 中的工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。</span><span class="sxs-lookup"><span data-stu-id="69e65-110">See [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
-## <a name="dbml-extractor"></a><span data-ttu-id="05e2d-111">DBML 提取器</span><span class="sxs-lookup"><span data-stu-id="05e2d-111">DBML Extractor</span></span>  
- <span data-ttu-id="05e2d-112">DBML 提取器是一个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 组件，它采用数据库元数据作为输入，生成 DBML 文件作为输出。</span><span class="sxs-lookup"><span data-stu-id="05e2d-112">The DBML Extractor is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that takes database metadata as input and produces a DBML file as output.</span></span>  
+## <a name="dbml-extractor"></a><span data-ttu-id="69e65-111">DBML 提取器</span><span class="sxs-lookup"><span data-stu-id="69e65-111">DBML Extractor</span></span>  
+ <span data-ttu-id="69e65-112">DBML 提取器是一个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 组件，它采用数据库元数据作为输入，生成 DBML 文件作为输出。</span><span class="sxs-lookup"><span data-stu-id="69e65-112">The DBML Extractor is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that takes database metadata as input and produces a DBML file as output.</span></span>  
   
-## <a name="code-generator"></a><span data-ttu-id="05e2d-113">代码生成器</span><span class="sxs-lookup"><span data-stu-id="05e2d-113">Code Generator</span></span>  
- <span data-ttu-id="05e2d-114">代码生成器是一个 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 组件，该组件将 DBML 文件转换为 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]、C# 或 XML 映射文件。</span><span class="sxs-lookup"><span data-stu-id="05e2d-114">The Code Generator is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that translates DBML files to [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)], C#, or XML mapping files.</span></span>  
+## <a name="code-generator"></a><span data-ttu-id="69e65-113">代码生成器</span><span class="sxs-lookup"><span data-stu-id="69e65-113">Code Generator</span></span>  
+ <span data-ttu-id="69e65-114">代码生成器是[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]组件，用于将 DBML 文件添加到 Visual Basic、 C# 或 XML 映射文件。</span><span class="sxs-lookup"><span data-stu-id="69e65-114">The Code Generator is a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] component that translates DBML files to Visual Basic, C#, or XML mapping files.</span></span>  
   
-## <a name="xml-schema-definition-file"></a><span data-ttu-id="05e2d-115">XML 架构定义文件</span><span class="sxs-lookup"><span data-stu-id="05e2d-115">XML Schema Definition File</span></span>  
- <span data-ttu-id="05e2d-116">DBML 文件必须对下面的 XSD 架构定义文件有效。</span><span class="sxs-lookup"><span data-stu-id="05e2d-116">The DBML file must be valid against the following schema definition as an XSD file.</span></span>  
+## <a name="xml-schema-definition-file"></a><span data-ttu-id="69e65-115">XML 架构定义文件</span><span class="sxs-lookup"><span data-stu-id="69e65-115">XML Schema Definition File</span></span>  
+ <span data-ttu-id="69e65-116">DBML 文件必须对下面的 XSD 架构定义文件有效。</span><span class="sxs-lookup"><span data-stu-id="69e65-116">The DBML file must be valid against the following schema definition as an XSD file.</span></span>  
   
- <span data-ttu-id="05e2d-117">请将此架构定义文件与用于验证外部映射文件的架构定义文件区分开来。</span><span class="sxs-lookup"><span data-stu-id="05e2d-117">Distinguish this schema definition file from the schema definition file that is used to validate an external mapping file.</span></span> <span data-ttu-id="05e2d-118">有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md))。</span><span class="sxs-lookup"><span data-stu-id="05e2d-118">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).</span></span>  
+ <span data-ttu-id="69e65-117">请将此架构定义文件与用于验证外部映射文件的架构定义文件区分开来。</span><span class="sxs-lookup"><span data-stu-id="69e65-117">Distinguish this schema definition file from the schema definition file that is used to validate an external mapping file.</span></span> <span data-ttu-id="69e65-118">有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md))。</span><span class="sxs-lookup"><span data-stu-id="69e65-118">For more information, see [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]<span data-ttu-id="05e2d-119"> 用户还会发现此 XSD 文件在“XML 架构”对话框中名为“DbmlSchema.xsd”。</span><span class="sxs-lookup"><span data-stu-id="05e2d-119"> users will also find this XSD file in the XML Schemas dialog box as "DbmlSchema.xsd".</span></span> <span data-ttu-id="05e2d-120">若要正确使用 XSD 文件，用于验证 DBML 文件，请参阅[如何： 验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="05e2d-120">To use the XSD file correctly for validating a DBML file, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
+>  <span data-ttu-id="69e65-119">Visual Studio 用户还会发现此 XSD 文件在 XML 架构对话框中为"DbmlSchema.xsd"。</span><span class="sxs-lookup"><span data-stu-id="69e65-119">Visual Studio users will also find this XSD file in the XML Schemas dialog box as "DbmlSchema.xsd".</span></span> <span data-ttu-id="69e65-120">若要正确使用 XSD 文件，用于验证 DBML 文件，请参阅[如何： 验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。</span><span class="sxs-lookup"><span data-stu-id="69e65-120">To use the XSD file correctly for validating a DBML file, see [How to: Validate DBML and External Mapping Files](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).</span></span>  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -253,8 +255,8 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="sample-dbml-file"></a><span data-ttu-id="05e2d-121">DBML 文件示例</span><span class="sxs-lookup"><span data-stu-id="05e2d-121">Sample DBML File</span></span>  
- <span data-ttu-id="05e2d-122">下面的代码摘自从 Northwind 示例数据库创建的 DBML 文件。</span><span class="sxs-lookup"><span data-stu-id="05e2d-122">The following code is an excerpt from the DBML file created from the Northwind sample database.</span></span> <span data-ttu-id="05e2d-123">你可以通过使用 SQLMetal 生成整个文件**/xml**选项。</span><span class="sxs-lookup"><span data-stu-id="05e2d-123">You can generate the whole file by using SQLMetal with the **/xml** option.</span></span> <span data-ttu-id="05e2d-124">有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="05e2d-124">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
+## <a name="sample-dbml-file"></a><span data-ttu-id="69e65-121">DBML 文件示例</span><span class="sxs-lookup"><span data-stu-id="69e65-121">Sample DBML File</span></span>  
+ <span data-ttu-id="69e65-122">下面的代码摘自从 Northwind 示例数据库创建的 DBML 文件。</span><span class="sxs-lookup"><span data-stu-id="69e65-122">The following code is an excerpt from the DBML file created from the Northwind sample database.</span></span> <span data-ttu-id="69e65-123">你可以通过使用 SQLMetal 生成整个文件 **/xml**选项。</span><span class="sxs-lookup"><span data-stu-id="69e65-123">You can generate the whole file by using SQLMetal with the **/xml** option.</span></span> <span data-ttu-id="69e65-124">有关详细信息，请参阅 [SqlMetal.exe（代码生成工具）](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。</span><span class="sxs-lookup"><span data-stu-id="69e65-124">For more information, see [SqlMetal.exe (Code Generation Tool)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -280,9 +282,9 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="05e2d-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="05e2d-125">See Also</span></span>  
- [<span data-ttu-id="05e2d-126">背景信息</span><span class="sxs-lookup"><span data-stu-id="05e2d-126">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [<span data-ttu-id="05e2d-127">外部映射</span><span class="sxs-lookup"><span data-stu-id="05e2d-127">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [<span data-ttu-id="05e2d-128">如何：将对象模型作为外部文件生成</span><span class="sxs-lookup"><span data-stu-id="05e2d-128">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
- [<span data-ttu-id="05e2d-129">下载示例数据库</span><span class="sxs-lookup"><span data-stu-id="05e2d-129">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
- [<span data-ttu-id="05e2d-130">参考</span><span class="sxs-lookup"><span data-stu-id="05e2d-130">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a><span data-ttu-id="69e65-125">请参阅</span><span class="sxs-lookup"><span data-stu-id="69e65-125">See Also</span></span>  
+ [<span data-ttu-id="69e65-126">背景信息</span><span class="sxs-lookup"><span data-stu-id="69e65-126">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
+ [<span data-ttu-id="69e65-127">外部映射</span><span class="sxs-lookup"><span data-stu-id="69e65-127">External Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [<span data-ttu-id="69e65-128">如何：将对象模型作为外部文件生成</span><span class="sxs-lookup"><span data-stu-id="69e65-128">How to: Generate the Object Model as an External File</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
+ [<span data-ttu-id="69e65-129">下载示例数据库</span><span class="sxs-lookup"><span data-stu-id="69e65-129">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [<span data-ttu-id="69e65-130">参考</span><span class="sxs-lookup"><span data-stu-id="69e65-130">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

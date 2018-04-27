@@ -1,12 +1,13 @@
 ---
-title: "如何：实现自定义 ToolStripRenderer"
-ms.custom: 
+title: 如何：实现自定义 ToolStripRenderer
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,46 +16,47 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a717f951e7e804a9f0e06cb51458d7d691632c4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e403cf958840e9b94989dbd782f783675e7c31bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-implement-a-custom-toolstriprenderer"></a><span data-ttu-id="6c93e-102">如何：实现自定义 ToolStripRenderer</span><span class="sxs-lookup"><span data-stu-id="6c93e-102">How to: Implement a Custom ToolStripRenderer</span></span>
-<span data-ttu-id="6c93e-103">可以通过实现从 <xref:System.Windows.Forms.ToolStripRenderer> 中派生的类来自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观。</span><span class="sxs-lookup"><span data-stu-id="6c93e-103">You can customize the appearance of a <xref:System.Windows.Forms.ToolStrip> control by implementing a class that derives from <xref:System.Windows.Forms.ToolStripRenderer>.</span></span> <span data-ttu-id="6c93e-104">这使你可以灵活地创建一个不同于 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 类和 <xref:System.Windows.Forms.ToolStripSystemRenderer> 类提供的外观的外观。</span><span class="sxs-lookup"><span data-stu-id="6c93e-104">This gives you the flexibility to create an appearance that differs from the appearance provided the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> and <xref:System.Windows.Forms.ToolStripSystemRenderer> classes.</span></span>  
+# <a name="how-to-implement-a-custom-toolstriprenderer"></a><span data-ttu-id="7b941-102">如何：实现自定义 ToolStripRenderer</span><span class="sxs-lookup"><span data-stu-id="7b941-102">How to: Implement a Custom ToolStripRenderer</span></span>
+<span data-ttu-id="7b941-103">可以通过实现从 <xref:System.Windows.Forms.ToolStripRenderer> 中派生的类来自定义 <xref:System.Windows.Forms.ToolStrip> 控件的外观。</span><span class="sxs-lookup"><span data-stu-id="7b941-103">You can customize the appearance of a <xref:System.Windows.Forms.ToolStrip> control by implementing a class that derives from <xref:System.Windows.Forms.ToolStripRenderer>.</span></span> <span data-ttu-id="7b941-104">这使你可以灵活地创建一个不同于 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 类和 <xref:System.Windows.Forms.ToolStripSystemRenderer> 类提供的外观的外观。</span><span class="sxs-lookup"><span data-stu-id="7b941-104">This gives you the flexibility to create an appearance that differs from the appearance provided the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> and <xref:System.Windows.Forms.ToolStripSystemRenderer> classes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6c93e-105">示例</span><span class="sxs-lookup"><span data-stu-id="6c93e-105">Example</span></span>  
- <span data-ttu-id="6c93e-106">以下代码示例演示了如何实现一个自定义 <xref:System.Windows.Forms.ToolStripRenderer> 类。</span><span class="sxs-lookup"><span data-stu-id="6c93e-106">The following code example demonstrates how to implement a custom <xref:System.Windows.Forms.ToolStripRenderer> class.</span></span> <span data-ttu-id="6c93e-107">在此示例中，`GridStrip` 控件实现了一个滑动磁贴拼图，这样用户就可以在表布局中移动磁贴，以形成图像。</span><span class="sxs-lookup"><span data-stu-id="6c93e-107">In this example, the `GridStrip` control implements a sliding-tile puzzle, which allows the user to move tiles in a table layout to form an image.</span></span> <span data-ttu-id="6c93e-108">某个自定义 <xref:System.Windows.Forms.ToolStrip> 控件在网格布局中排列其 <xref:System.Windows.Forms.ToolStripButton> 控件。</span><span class="sxs-lookup"><span data-stu-id="6c93e-108">A custom <xref:System.Windows.Forms.ToolStrip> control arranges its <xref:System.Windows.Forms.ToolStripButton> controls in a grid layout.</span></span> <span data-ttu-id="6c93e-109">布局包含一个空单元格，用户可以通过拖放操作，将相邻的磁贴滑动到其中。</span><span class="sxs-lookup"><span data-stu-id="6c93e-109">The layout contains one empty cell, into which the user can slide an adjacent tile by using a drag-and-drop operation.</span></span> <span data-ttu-id="6c93e-110">用户可以移动的磁贴会突出显示。</span><span class="sxs-lookup"><span data-stu-id="6c93e-110">Tiles that the user can move are highlighted.</span></span>  
+## <a name="example"></a><span data-ttu-id="7b941-105">示例</span><span class="sxs-lookup"><span data-stu-id="7b941-105">Example</span></span>  
+ <span data-ttu-id="7b941-106">以下代码示例演示了如何实现一个自定义 <xref:System.Windows.Forms.ToolStripRenderer> 类。</span><span class="sxs-lookup"><span data-stu-id="7b941-106">The following code example demonstrates how to implement a custom <xref:System.Windows.Forms.ToolStripRenderer> class.</span></span> <span data-ttu-id="7b941-107">在此示例中，`GridStrip` 控件实现了一个滑动磁贴拼图，这样用户就可以在表布局中移动磁贴，以形成图像。</span><span class="sxs-lookup"><span data-stu-id="7b941-107">In this example, the `GridStrip` control implements a sliding-tile puzzle, which allows the user to move tiles in a table layout to form an image.</span></span> <span data-ttu-id="7b941-108">某个自定义 <xref:System.Windows.Forms.ToolStrip> 控件在网格布局中排列其 <xref:System.Windows.Forms.ToolStripButton> 控件。</span><span class="sxs-lookup"><span data-stu-id="7b941-108">A custom <xref:System.Windows.Forms.ToolStrip> control arranges its <xref:System.Windows.Forms.ToolStripButton> controls in a grid layout.</span></span> <span data-ttu-id="7b941-109">布局包含一个空单元格，用户可以通过拖放操作，将相邻的磁贴滑动到其中。</span><span class="sxs-lookup"><span data-stu-id="7b941-109">The layout contains one empty cell, into which the user can slide an adjacent tile by using a drag-and-drop operation.</span></span> <span data-ttu-id="7b941-110">用户可以移动的磁贴会突出显示。</span><span class="sxs-lookup"><span data-stu-id="7b941-110">Tiles that the user can move are highlighted.</span></span>  
   
- <span data-ttu-id="6c93e-111">`GridStripRenderer` 类自定义了 `GridStrip` 控件外观的三个方面：</span><span class="sxs-lookup"><span data-stu-id="6c93e-111">The `GridStripRenderer` class customizes three aspects of the `GridStrip` control's appearance:</span></span>  
+ <span data-ttu-id="7b941-111">`GridStripRenderer` 类自定义了 `GridStrip` 控件外观的三个方面：</span><span class="sxs-lookup"><span data-stu-id="7b941-111">The `GridStripRenderer` class customizes three aspects of the `GridStrip` control's appearance:</span></span>  
   
--   <span data-ttu-id="6c93e-112">`GridStrip` 边框</span><span class="sxs-lookup"><span data-stu-id="6c93e-112">`GridStrip` border</span></span>  
+-   <span data-ttu-id="7b941-112">`GridStrip` 边框</span><span class="sxs-lookup"><span data-stu-id="7b941-112">`GridStrip` border</span></span>  
   
--   <span data-ttu-id="6c93e-113"><xref:System.Windows.Forms.ToolStripButton> 边框</span><span class="sxs-lookup"><span data-stu-id="6c93e-113"><xref:System.Windows.Forms.ToolStripButton> border</span></span>  
+-   <span data-ttu-id="7b941-113"><xref:System.Windows.Forms.ToolStripButton> 边框</span><span class="sxs-lookup"><span data-stu-id="7b941-113"><xref:System.Windows.Forms.ToolStripButton> border</span></span>  
   
--   <span data-ttu-id="6c93e-114"><xref:System.Windows.Forms.ToolStripButton> 图像</span><span class="sxs-lookup"><span data-stu-id="6c93e-114"><xref:System.Windows.Forms.ToolStripButton> image</span></span>  
+-   <span data-ttu-id="7b941-114"><xref:System.Windows.Forms.ToolStripButton> 图像</span><span class="sxs-lookup"><span data-stu-id="7b941-114"><xref:System.Windows.Forms.ToolStripButton> image</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="6c93e-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="6c93e-115">Compiling the Code</span></span>  
- <span data-ttu-id="6c93e-116">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="6c93e-116">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="7b941-115">编译代码</span><span class="sxs-lookup"><span data-stu-id="7b941-115">Compiling the Code</span></span>  
+ <span data-ttu-id="7b941-116">此示例需要：</span><span class="sxs-lookup"><span data-stu-id="7b941-116">This example requires:</span></span>  
   
--   <span data-ttu-id="6c93e-117">对 System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="6c93e-117">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="7b941-117">对 System.Drawing 和 System.Windows.Forms 程序集的引用。</span><span class="sxs-lookup"><span data-stu-id="7b941-117">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="6c93e-118">有关从 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令行生成此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="6c93e-118">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="6c93e-119">还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中生成此示例。</span><span class="sxs-lookup"><span data-stu-id="6c93e-119">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="6c93e-120">另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="6c93e-120">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="7b941-118">为 Visual Basic 或 Visual C# 中生成此示例从命令行有关的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="7b941-118">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="7b941-119">还可以通过将代码粘贴到新项目，在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中生成此示例。</span><span class="sxs-lookup"><span data-stu-id="7b941-119">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="7b941-120">另请参阅 [如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="7b941-120">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c93e-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="6c93e-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7b941-121">请参阅</span><span class="sxs-lookup"><span data-stu-id="7b941-121">See Also</span></span>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripRenderer>  
  <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
  <xref:System.Windows.Forms.ToolStripSystemRenderer>  
  <xref:System.Windows.Forms.StatusStrip>  
- [<span data-ttu-id="6c93e-122">ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="6c93e-122">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+ [<span data-ttu-id="7b941-122">ToolStrip 控件</span><span class="sxs-lookup"><span data-stu-id="7b941-122">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
