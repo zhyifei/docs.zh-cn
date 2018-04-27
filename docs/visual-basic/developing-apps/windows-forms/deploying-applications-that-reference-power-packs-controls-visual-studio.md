@@ -12,11 +12,11 @@ ms.assetid: f2230f53-a745-4731-89e6-033943faa209
 caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2a9562acf05cd27eed7bc1ad963845af9a7ca5f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d73c7111c3d89cadcad317c9a67e5f483da7125
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a>部署引用 Power Pack 控件 (Visual Studio) 的应用程序
 如果你想要部署引用 Power Pack 控件的应用程序 (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>， <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>， <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>，或<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>)，必须在目标计算机上安装的控件。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="installing-the-power-packs-controls-as-a-prerequisite"></a>作为必备组件安装 Power Pack 控件  
  若要成功部署应用程序，你还必须部署应用程序引用的所有组件。 安装必备组件的过程称为 *引导*。  
   
- 当[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]安装在开发计算机，一个 Power Pack 引导程序包添加到上[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]引导程序目录。 按照添加 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 或 Windows 安装程序部署必备项的过程进行操作时即可使用此包。  
+ 开发计算机上安装 Visual Studio 后，Power Pack 引导程序包添加到 Visual Studio 引导程序目录。 按照添加 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 或 Windows 安装程序部署必备项的过程进行操作时即可使用此包。  
   
  默认情况下，引导组件将从与安装包的相同的位置进行部署。 或者，你可以选择从 URL 或文件共享位置部署组件，用户可从这些位置按需进行下载。  
   

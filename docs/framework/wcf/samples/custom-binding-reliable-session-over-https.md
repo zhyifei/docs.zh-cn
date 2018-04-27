@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b68e5692122efbb79f8101079e721802c3dda42c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 716970f87d52a7535b9d42abd333d22685fdafc4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>基于 HTTPS 的自定义绑定可靠会话
 此示例演示对可靠会话使用 SSL 传输安全。 可靠会话实现 WS-Reliable Messaging 协议。 您可以通过在可靠会话上组合 WS-Security 来获得安全的可靠会话。 但是有时候，您可以选择对 SSL 改用 HTTP 传输安全。  
@@ -115,13 +115,13 @@ ms.lasthandoff: 03/26/2018
   
  指定的地址使用 https:// 方案。  
   
- 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，所以当尝试从浏览器中访问 https: 地址（例如 https://localhost/servicemodelsamples/service.svc）时将出现安全警报。 为了允许 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端就地使用测试证书，已向客户端添加了一些附加代码，以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
-  
-```  
+ 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当你尝试访问 https 时显示安全警报： 地址，如https://localhost/servicemodelsamples/service.svc，从你的浏览器。 为了允许 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端就地使用测试证书，已向客户端添加了一些附加代码，以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
+
+```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
-```  
-  
+```
+
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ```  
@@ -149,4 +149,4 @@ Press <ENTER> to terminate client.
   
 5.  若要在单或跨计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅

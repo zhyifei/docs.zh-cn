@@ -1,29 +1,30 @@
 ---
-title: "如何：创建自定义跟踪参与者"
-ms.custom: 
+title: 如何：创建自定义跟踪参与者
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 345fd696559ba52d41874ff774bd46a2d37f6e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d53035c2fb41800a91d3cdea134ae811a09fa3e9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>如何：创建自定义跟踪参与者
-工作流跟踪用于查看工作流执行的状态。 工作流运行时发出跟踪记录，这些跟踪记录描述工作流生命周期事件、活动生命周期事件、书签摘要和故障。 这些跟踪记录供跟踪参与者使用。 [!INCLUDE[wf](../../../includes/wf-md.md)] 包括一个标准跟踪参与者，可将跟踪记录作为 Windows 事件跟踪 (ETW) 事件写入。 如果这不能满足您的要求，您还可以编写自定义跟踪参与者。 本教程步骤说明如何创建自定义跟踪参与者和跟踪配置文件，该配置文件捕获 `WriteLine` 活动的输出，以便将这些活动显示给用户。  
+工作流跟踪用于查看工作流执行的状态。 工作流运行时发出跟踪记录，这些跟踪记录描述工作流生命周期事件、活动生命周期事件、书签摘要和故障。 这些跟踪记录供跟踪参与者使用。 Windows Workflow Foundation (WF) 包括一个标准跟踪参与者，将跟踪记录作为事件跟踪 Windows (ETW) 事件写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。 本教程步骤说明如何创建自定义跟踪参与者和跟踪配置文件，该配置文件捕获 `WriteLine` 活动的输出，以便将这些活动显示给用户。  
   
 > [!NOTE]
 >  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成前面的主题。 若要下载完整的版本或观看教程视频演练，请参阅[Windows Workflow Foundation (WF45)-入门教程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [若要生成并运行应用程序](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a>若要创建自定义跟踪参与者  
+###  <a name="BKMK_CustomTrackingParticipant"></a> 若要创建自定义跟踪参与者  
   
 1.  右键单击**NumberGuessWorkflowHost**中**解决方案资源管理器**选择**添加**，**类**。 类型`StatusTrackingParticipant`到**名称**框中，然后单击**添加**。  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
      未指定跟踪配置文件时，使用默认跟踪配置文件。 使用默认跟踪配置文件时，将为所有 `ActivityStates` 发出跟踪记录。 因为我们只需在 `WriteLine` 活动的生命周期内捕获一次文本，所以我们仅从 `ActivityStates.Executing` 状态捕获文本。 在[创建跟踪配置文件并注册跟踪参与者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)，跟踪配置文件会创建一个仅指定`WriteLine``ActivityStates.Executing`发出跟踪记录。  
   
-###  <a name="BKMK_TrackingProfile"></a>创建跟踪配置文件并注册跟踪参与者  
+###  <a name="BKMK_TrackingProfile"></a> 创建跟踪配置文件并注册跟踪参与者  
   
 1.  右键单击**WorkflowHostForm**中**解决方案资源管理器**选择**查看代码**。  
   
@@ -235,7 +236,7 @@ ms.lasthandoff: 12/22/2017
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a>若要显示的跟踪信息  
+###  <a name="BKMK_DisplayTracking"></a> 若要显示的跟踪信息  
   
 1.  右键单击**WorkflowHostForm**中**解决方案资源管理器**选择**查看代码**。  
   
@@ -330,7 +331,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>若要生成并运行应用程序  
+###  <a name="BKMK_BuildAndRun"></a> 若要生成并运行应用程序  
   
 1.  按 Ctrl+Shift+B 生成应用程序。  
   

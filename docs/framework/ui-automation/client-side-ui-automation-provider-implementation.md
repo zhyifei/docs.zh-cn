@@ -1,28 +1,30 @@
 ---
-title: "客户端 UI 自动化提供程序的实现"
-ms.custom: 
+title: 客户端 UI 自动化提供程序的实现
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, client-side provider implementation
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 50335994fab424b3100c91a202a7ea53643db551
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 09f54098c34d835c04a18b16dc5e33c7ebed5edb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>客户端 UI 自动化提供程序的实现
 > [!NOTE]
@@ -34,9 +36,9 @@ ms.lasthandoff: 12/22/2017
   
  但较旧的控件（例如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 中的控件）不直接支持 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 这些控件都将改为由存在于客户端进程中的提供程序提供，并且使用跨进程通信获取有关控件的信息；例如，通过监视在窗口与控件之间来回的消息。 此类客户端提供程序有时称为代理。  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 为标准的 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 控件提供提供程序。 此外，回退提供程序为任何不由另一个服务器端提供程序或代理提供、但具有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 实现的控件提供部分 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 支持。 所有这样的提供程序均已自动加载，并且可供客户端应用程序使用。  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] 提供标准的提供程序[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体控件。 此外，回退提供程序为任何不由另一个服务器端提供程序或代理提供、但具有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 实现的控件提供部分 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] 支持。 所有这样的提供程序均已自动加载，并且可供客户端应用程序使用。  
   
- 有关 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 控件支持的详细信息，请参阅 [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。  
+ 有关详细信息对支持[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体控件，请参阅[用于标准控件的 UI 自动化支持](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。  
   
  应用程序还可以注册其他客户端提供程序。  
   

@@ -1,12 +1,13 @@
 ---
-title: "演练：在 WPF 中承载 Windows 窗体复合控件"
-ms.custom: 
+title: 演练：在 WPF 中承载 Windows 窗体复合控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f332461bd5abb5e3fca705a8a5fd363c3d33296
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe706e92223d868476ac438e98b16cf07bb21259
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>演练：在 WPF 中承载 Windows 窗体复合控件
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你有大量的投资[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]它可以更有效地至少重用的代码中，在该代码的一部分你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序而不是从头开始重新编写。 最常见的方案是在你有现成[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]控件。 在某些情况下，你甚至可能无法使用这些控件的源代码。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供一个简单的过程，此类中的控件承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 例如，你可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]大部分你编程，同时承载专用<xref:System.Windows.Forms.DataGridView>控件。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你有大量的投资[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]它可以更有效地至少重用的代码中，在该代码的一部分你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序而不是从头开始重新编写。 你有现有的 Windows 窗体控件时最常见的方案。 在某些情况下，你甚至可能无法使用这些控件的源代码。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一个简单的过程，此类中的控件承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 例如，你可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]大部分你编程，同时承载专用<xref:System.Windows.Forms.DataGridView>控件。  
   
- 本演练将引导你通过应用程序承载[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]复合控件，可执行中的数据输入[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 复合控件打包在一个 DLL 中。 此常规步骤可扩展到更复杂的应用程序和控件。 本演练可在外观和功能几乎完全相同[演练： 承载 Windows 窗体中的 WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)。 主要区别在于承载方案是相反的。  
+ 本演练将指导你逐步承载 Windows 窗体复合控件来执行中的数据输入的应用程序[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 复合控件打包在一个 DLL 中。 此常规步骤可扩展到更复杂的应用程序和控件。 本演练可在外观和功能几乎完全相同[演练： 承载 Windows 窗体中的 WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)。 主要区别在于承载方案是相反的。  
   
- 本演练分为两个部分。 第一个部分简要介绍的实现[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]复合控件。 第二个部分详细讨论如何托管中的复合控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序，从该控件，接收事件，以及访问某些控件的属性。  
+ 本演练分为两个部分。 第一个部分简要介绍 Windows 窗体复合控件的实现。 第二个部分详细讨论如何托管中的复合控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序，从该控件，接收事件，以及访问某些控件的属性。  
   
  本演练涉及以下任务：  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/19/2018
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)]。  
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>实现 Windows 窗体复合控件  
- [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]此示例中使用的复合控件是一个简单的数据输入窗体。 此窗体需要用户名和地址，然后使用自定义事件将该信息返回到主机。 下图显示呈现的控件。  
+ 在此示例中使用的 Windows 窗体复合控件是一个简单的数据输入窗体。 此窗体需要用户名和地址，然后使用自定义事件将该信息返回到主机。 下图显示呈现的控件。  
   
  ![简单的 Windows 窗体控件](../../../../docs/framework/wpf/advanced/media/wfcontrol.gif "WFControl")  
 Windows 窗体复合控件  
@@ -63,7 +65,7 @@ Windows 窗体复合控件
   
 4.  对于位置，指定将方便地命名的顶级文件夹，如`WpfHostingWindowsFormsControl`。 随后，将主机应用程序放在此文件夹中。  
   
-5.  单击**确定**以创建该项目。 默认项目包含一个名为的单个控件`UserControl1`。  
+5.  单击“确定”，创建项目。 默认项目包含一个名为的单个控件`UserControl1`。  
   
 6.  在解决方案资源管理器，重命名`UserControl1`到`MyControl1`。  
   
@@ -154,7 +156,7 @@ Windows 窗体复合控件
   
 4.  对于位置，指定包含 MyControls 项目的同一顶层文件夹。  
   
-5.  单击**确定**以创建该项目。  
+5.  单击“确定”，创建项目。  
   
  你还需要将引用添加到包含 DLL`MyControl1`和其他程序集。  
   
@@ -167,7 +169,7 @@ Windows 窗体复合控件
 4.  添加到名为 WindowsFormsIntegration.dll 的 WindowsFormsIntegration 程序集的引用。  
   
 ### <a name="implementing-the-basic-layout"></a>实现基本布局  
- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] MainWindow.xaml 的主机应用程序实现。 此文件包含[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]标记，定义布局，并承载[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]控件。 该应用程序分为三个区域：  
+ [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] MainWindow.xaml 的主机应用程序实现。 此文件包含[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]标记，定义布局，并承载 Windows 窗体控件。 该应用程序分为三个区域：  
   
 -   **控件属性**面板中，其中包含一套可用于修改所承载控件的各种属性的选项按钮。  
   
@@ -193,9 +195,9 @@ Windows 窗体复合控件
   
  XAML 中的两个元素处理承载：  
   
--   `WindowsFormsHost`表示<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素，使你向主机[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]中控制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
+-   `WindowsFormsHost` 表示<xref:System.Windows.Forms.Integration.WindowsFormsHost>让您可以承载 Windows 窗体控件中的元素[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。  
   
--   `mcl:MyControl1`它表示`MyControl1`，添加到<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素的子集合。 因此，这[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]作为的一部分时呈现控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]窗口中，并且你可以与该控件从应用程序进行通信。  
+-   `mcl:MyControl1`它表示`MyControl1`，添加到<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素的子集合。 因此，此 Windows 窗体控件呈现为属于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]窗口中，并且你可以与该控件从应用程序进行通信。  
   
 ### <a name="implementing-the-code-behind-file"></a>实现代码隐藏文件  
  代码隐藏文件，MainWindow.xaml.vb 或 MainWindow.xaml.cs，包含实现的功能与过程性代码[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]前面部分所述。 主要任务有：  
@@ -229,7 +231,7 @@ using MyControls;
 ```  
   
 #### <a name="handling-the-onbuttonclick-event"></a>处理 OnButtonClick 事件  
- `MyControl1`引发`OnButtonClick`事件在用户单击控件的按钮之一时。  
+ `MyControl1` 引发`OnButtonClick`事件在用户单击控件的按钮之一时。  
   
  向 `MainWindow` 类添加下面的代码。  
   

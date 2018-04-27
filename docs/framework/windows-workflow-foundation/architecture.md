@@ -1,26 +1,27 @@
 ---
-title: "Windows 工作流体系结构"
-ms.custom: 
+title: Windows 工作流体系结构
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed13d7885cb8abd760aed6bd5812cb8b7c75bc02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a3a59369738ada0c6b770d272afa9c6c79c2ce01
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-architecture"></a>Windows 工作流体系结构
-[!INCLUDE[wf](../../../includes/wf-md.md)] 提升了开发长时间运行的交互式应用程序的抽象级别。 工作单元封装为活动。 活动运行环境提供用于流控制、异常处理、错误传播、状态数据保存、从内存加载和卸载正在进行的工作流、跟踪以及事务流的功能。  
+Windows Workflow Foundation (WF) 提升开发交互式长时间运行应用程序的抽象级别。 工作单元封装为活动。 活动运行环境提供用于流控制、异常处理、错误传播、状态数据保存、从内存加载和卸载正在进行的工作流、跟踪以及事务流的功能。  
   
 ## <a name="activity-architecture"></a>活动体系结构  
  活动作为 CLR 类型开发，这些类型或者派生自 <xref:System.Activities.Activity>、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity>，或者派生自返回某个值的对应 <xref:System.Activities.Activity%601>、<xref:System.Activities.CodeActivity%601>、<xref:System.Activities.AsyncCodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 变体。 通过开发派生自 <xref:System.Activities.Activity> 的活动，用户可以组合预先存在的活动，以便快速创建在工作流环境中执行的工作单元。 另一方面，<xref:System.Activities.CodeActivity> 支持通过将 <xref:System.Activities.CodeActivityContext> 主要用于访问活动参数，在托管代码中创作执行逻辑。 <xref:System.Activities.AsyncCodeActivity> 类似于 <xref:System.Activities.CodeActivity>，只不过它可以用于实现异步任务。 通过开发派生自 <xref:System.Activities.NativeActivity> 的活动，用户可以通过 <xref:System.Activities.NativeActivityContext> 访问运行时，以实现安排子级、创建书签、调用异步工作、注册事务等功能。  

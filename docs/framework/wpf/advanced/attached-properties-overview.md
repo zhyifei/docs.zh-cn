@@ -1,13 +1,13 @@
 ---
-title: "附加属性概述"
-ms.custom: 
+title: 附加属性概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1d0eb55e75cd450d55b69aadca9c60e157eb09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceba94d80ca66ab228804ffff2a5b8f89a68d7c4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="attached-properties-overview"></a>附加属性概述
 附加属性是由 XAML 定义的概念。 附加属性旨在用作可在任何对象上设置的一类全局属性。 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中，附加属性通常定义为没有常规属性“包装器”的依赖性属性的专用形式。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>父级定义的附加属性示例  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定义附加属性的最典型方案是：父元素支持子元素集合，并实现分别为每个子元素报告行为细节的行为。  
   
- <xref:System.Windows.Controls.DockPanel>定义<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>附加属性，和<xref:System.Windows.Controls.DockPanel>作为其呈现逻辑的一部分具有类级别的代码 (具体而言，<xref:System.Windows.Controls.DockPanel.MeasureOverride%2A>和<xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>)。 A<xref:System.Windows.Controls.DockPanel>实例将始终检查是否任何直接子元素设置的值<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>。 如果已设置，这些值将变为应用于该特定子元素的呈现逻辑的输入。 嵌套<xref:System.Windows.Controls.DockPanel>实例都处理自己的即时子元素集合，但该行为是特定于实现的如何<xref:System.Windows.Controls.DockPanel>进程<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>值。 理论上，可以有影响直接父级之外的元素的附加属性。 如果<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>未包含任何元素上设置附加的属性<xref:System.Windows.Controls.DockPanel>引发要遵照它时，没有错误或异常的父元素。 这只是表示设置全局属性值，但它具有无当前<xref:System.Windows.Controls.DockPanel>父无法使用该信息。  
+ <xref:System.Windows.Controls.DockPanel> 定义<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>附加属性，和<xref:System.Windows.Controls.DockPanel>作为其呈现逻辑的一部分具有类级别的代码 (具体而言，<xref:System.Windows.Controls.DockPanel.MeasureOverride%2A>和<xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>)。 A<xref:System.Windows.Controls.DockPanel>实例将始终检查是否任何直接子元素设置的值<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>。 如果已设置，这些值将变为应用于该特定子元素的呈现逻辑的输入。 嵌套<xref:System.Windows.Controls.DockPanel>实例都处理自己的即时子元素集合，但该行为是特定于实现的如何<xref:System.Windows.Controls.DockPanel>进程<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>值。 理论上，可以有影响直接父级之外的元素的附加属性。 如果<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>未包含任何元素上设置附加的属性<xref:System.Windows.Controls.DockPanel>引发要遵照它时，没有错误或异常的父元素。 这只是表示设置全局属性值，但它具有无当前<xref:System.Windows.Controls.DockPanel>父无法使用该信息。  
   
 <a name="attached_properties_code"></a>   
 ## <a name="attached-properties-in-code"></a>代码中的附加属性  
@@ -106,7 +106,7 @@ ms.lasthandoff: 12/22/2017
  定义为依赖项属性的附加的属性，通过声明`public` `static` `readonly`字段类型<xref:System.Windows.DependencyProperty>。 你使用的返回值定义此字段<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 字段名称必须匹配附加属性名称，且追加字符串 `Property`，以遵循命名标识字段及其所表示的属性的既定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 模式。 附加属性提供程序还必须提供静态的 `Get`PropertyName 和 `Set`PropertyName 方法，作为附加属性访问器，否则将导致属性系统无法使用附加属性。  
   
 > [!NOTE]
->  如果省略附加属性的 get 访问器，该属性的数据绑定在设计工具（如 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 和 Expression Blend）中将无法工作。  
+>  如果省略附加的属性 get 访问器时，数据绑定的属性上不会在设计工具，例如 Visual Studio 和 Expression Blend。  
   
 #### <a name="the-get-accessor"></a>Get 访问器  
  `Get` PropertyName 访问器的签名必须是：  

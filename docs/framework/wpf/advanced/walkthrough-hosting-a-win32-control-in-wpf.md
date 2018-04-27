@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c33e764b9af46aec3788e7e113d01c4c5fc9905
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>演练：在 WPF 中承载 Win32 控件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当你有大量的投资[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]代码，它可能更有效地重用至少在该代码的一部分你[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是完全重写应用程序。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供用于承载的简单机制[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口，请在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。  
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>在控件和页面之间的实现通信  
- 通过将其发送操作该控件[!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]消息。 当用户与控件交互时，控件会通过向其宿主窗口发送通知来通知你。 [承载 WPF 示例中的 Win32 ListBox 控件](http://go.microsoft.com/fwlink/?LinkID=159998)示例包含一个用户界面，提供了几个示例的原理：  
+ 通过将其发送 Windows 消息操作控件。 当用户与控件交互时，控件会通过向其宿主窗口发送通知来通知你。 [承载 WPF 示例中的 Win32 ListBox 控件](http://go.microsoft.com/fwlink/?LinkID=159998)示例包含一个用户界面，提供了几个示例的原理：  
   
 -   向列表中追加项。  
   

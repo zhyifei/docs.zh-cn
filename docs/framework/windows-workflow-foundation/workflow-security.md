@@ -1,29 +1,29 @@
 ---
-title: "工作流安全性"
-ms.custom: 
+title: 工作流安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dbb1d1efc0758410f12f2c669cca85b9f0e38406
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-security"></a>工作流安全性
-[!INCLUDE[wf](../../../includes/wf-md.md)] 集成了多种不同的技术，如 Microsoft SQL Server 和 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]。 如果操作不当，采用这些技术可能会给工作流带来安全问题。  
+Windows Workflow Foundation (WF) 集成了多种不同的技术，例如 Microsoft SQL Server 和[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]。 如果操作不当，采用这些技术可能会给工作流带来安全问题。  
   
 ## <a name="persistence-security-concerns"></a>持久性安全问题  
   
@@ -41,15 +41,15 @@ ms.lasthandoff: 12/22/2017
   
 -   使用大量子活动、位置、书签、宿主扩展或作用域时，或使用负载很大的书签时，可能会耗尽内存，或在持久化过程中分配过多的数据库空间。 可使用对象级和数据级的安全措施来缓解该问题。  
   
--   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 时，必须保护实例存储区的安全。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][SQL Server 最佳做法](http://go.microsoft.com/fwlink/?LinkId=164972)。  
+-   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 时，必须保护实例存储区的安全。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL Server 最佳做法](http://go.microsoft.com/fwlink/?LinkId=164972)。  
   
--   应为实例存储区中的敏感数据加密。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][SQL 安全性加密](http://go.microsoft.com/fwlink/?LinkId=164976)。  
+-   应为实例存储区中的敏感数据加密。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL 安全性加密](http://go.microsoft.com/fwlink/?LinkId=164976)。  
   
 -   因为数据库连接字符串通常包含在配置文件中，所以，Windows 级别的安全性 (ACL) 应该用于确保配置文件（通常是 Web.Config）是安全的，并且登录名和密码信息不包含在连接字符串中。 应改为在数据库和 Web 服务器之间使用 Windows 身份验证。  
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost 的注意事项  
   
--   应确保在工作流中使用的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 终结点的安全。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 安全性概述](http://go.microsoft.com/fwlink/?LinkID=164975)。  
+-   应确保在工作流中使用的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 终结点的安全。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 安全概述](http://go.microsoft.com/fwlink/?LinkID=164975)。  
   
 -   宿主级授权可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 来实现。 请参阅[How To： 为服务创建自定义授权管理器](http://go.microsoft.com/fwlink/?LinkId=192228)有关详细信息。 此外说明了这一点在下面的示例：[工作流服务的安全](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。  
   

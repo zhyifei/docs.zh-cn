@@ -1,24 +1,26 @@
 ---
-title: "WS 2007 联合 HTTP 绑定"
-ms.custom: 
+title: WS 2007 联合 HTTP 绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b04984ad1e21da4bc86760046029d3b94b70758
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b7126e4c0c293bfbf78cecf97cc13ea91e6c0c62
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 联合 HTTP 绑定
 此示例演示 <xref:System.ServiceModel.WS2007FederationHttpBinding> 的用法，它是一个标准绑定，可用来生成支持 1.3 版 WS-Trust 规范的联合方案。  
@@ -108,17 +110,15 @@ ms.lasthandoff: 12/22/2017
  STS 使用标准的 <xref:System.ServiceModel.WS2007HttpBinding> 提供单个终结点。 服务响应客户端对令牌的请求。 如果客户端使用 Windows 帐户进行身份验证，则服务将颁发一个令牌，该令牌以声明的形式包含客户端的用户名。 在创建令牌的过程中，STS 使用与 CN=STS 证书关联的私钥对令牌进行签名。 另外，它还创建对称密钥并使用与 CN=localhost 证书关联的公钥对该密钥进行加密。 在向客户端返回令牌的过程中，STS 还返回对称密钥。 客户端向 `ICalculator` 服务出示所颁发的令牌，并通过使用密钥对消息进行签名来证明客户端知道该对称密钥。  
   
  运行示例时，对安全令牌的请求显示在 STS 控制台窗口中。 操作请求和响应显示在客户端和服务控制台窗口中。 在任何一个控制台窗口中按 Enter 可以关闭应用程序。  
-  
- `Add(100,15.99) = 115.99`  
-  
- `Subtract(145,76.54) = 68.46`  
-  
- `Multiply(9,81.25) = 731.25`  
-  
- `Divide(22,7) = 3.14285714285714`  
-  
- `Press <ENTER> to terminate client.`  
-  
+
+```
+Add(100,15.99) = 115.99
+Subtract(145,76.54) = 68.46
+Multiply(9,81.25) = 731.25
+Divide(22,7) = 3.14285714285714
+Press <ENTER> to terminate client.
+```
+
  通过运行此示例随附的 Setup.bat 文件，可以用相关的证书将服务器和 STS 配置为运行自承载应用程序。 该批处理文件在 LocalMachine/TrustedPeople 证书存储区中创建两个证书。 第一个证书的主题名称为 CN=STS，STS 使用该证书对颁发给客户端的安全令牌进行签名。 第二个证书的主题名称为 CN=localhost，STS 使用该证书，按照服务能够解密的方式对密钥进行加密。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  

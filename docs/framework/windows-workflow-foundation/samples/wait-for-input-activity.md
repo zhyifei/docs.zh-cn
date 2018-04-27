@@ -1,26 +1,27 @@
 ---
-title: "等待输入活动"
-ms.custom: 
+title: 等待输入活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b9e7942ced071a795f1bf408ca4778a216cd85e4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wait-for-input-activity"></a>等待输入活动
-此示例演示如何在工作流中创建命名书签。 [!INCLUDE[wf](../../../../includes/wf-md.md)] 没有提供用于创建声明性书签的活动。 因此，当您需要在工作流中创建书签时，必须编写一个创建书签的自定义活动。 此示例中定义的 `WaitForInput` 活动提供了此项功能，以便用户可以通过声明方式在工作流内创建书签。  
+此示例演示如何在工作流中创建命名书签。 Windows Workflow Foundation (WF) 不提供用于创建声明性书签的活动。 因此，当您需要在工作流中创建书签时，必须编写一个创建书签的自定义活动。 此示例中定义的 `WaitForInput` 活动提供了此项功能，以便用户可以通过声明方式在工作流内创建书签。  
   
 ## <a name="projects-in-this-sample"></a>此示例中的项目  
   

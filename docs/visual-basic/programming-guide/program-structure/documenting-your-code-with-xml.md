@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>使用 XML 将代码文档化 (Visual Basic)
 在 Visual Basic 中，可以记录你的代码使用 XML  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
   
     -   `cref` 属性可以附加到任何标记，以提供对代码元素的引用。 编译器会验证此代码元素存在。 如果验证失败，编译器会发出警告。 编译器还将考虑所有`Imports`语句时查找类型中所述`cref`属性。  
   
-    -   \<摘要 > 标记中的 IntelliSense 将使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]以显示有关类型或成员的其他信息。  
+    -   \<摘要 > 标记用于通过 Visual Studio 中的 IntelliSense，以显示有关类型或成员的其他信息。  
   
 ## <a name="related-sections"></a>相关章节  
  有关创建带有文档注释的 XML 文件的详细信息，请参阅以下主题：  

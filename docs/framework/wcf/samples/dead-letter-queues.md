@@ -1,24 +1,26 @@
 ---
-title: "死信队列"
-ms.custom: 
+title: 死信队列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>死信队列
 本示例演示如何处理传递失败的消息。 它基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -50,21 +52,21 @@ ms.lasthandoff: 12/22/2017
  客户端应用程序可以读取死信队列中的消息，并重试发送消息或纠正导致原始消息放入死信队列的错误，然后发送消息。 在本示例中，客户端显示一条错误消息。  
   
  服务协定为 `IOrderProcessor`，如下面的示例代码所示。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  此示例中的服务代码是[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
   
  与服务的通信发生在事务范围内。 服务读取队列中的消息，执行操作，然后显示操作的结果。 应用程序还为死信消息创建死信队列。  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  客户端的配置为消息到达服务指定一个短的持续时间。 如果消息无法在指定的持续时间内传输，则该消息将会过期并将移动到死信队列中。  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  死信队列是客户端队列，对于客户端队列管理器来说是本地队列。  
   
  死信消息服务实现可检查消息传递失败的原因并采取纠正措施。 消息失败的原因在两个枚举 <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> 和 <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A> 中捕获。 您可以从 <xref:System.ServiceModel.Channels.MsmqMessageProperty> 中检索 <xref:System.ServiceModel.OperationContext>，如下面的示例代码所示：  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  死信队列中的消息是被发送到处理消息的服务的消息。 因此，当死信消息服务从队列中读取消息时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道层会发现终结点的不匹配，因此不会调度该消息。 在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。 若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。 这是成功处理从死信队列中读取的消息所必需的。  
   
  在本示例中，如果失败的原因是消息超时，则死信消息服务会重新发送该消息。对于所有其他原因，则显示传送失败，如下面的示例代码所示：  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  下面的示例演示死信消息的配置：  
   
 ```xml  

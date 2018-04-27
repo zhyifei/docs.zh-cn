@@ -1,13 +1,13 @@
 ---
-title: "如何：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作"
-ms.custom: 
+title: 如何：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-caps.latest.revision: 
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60e52bc1486f74bdce44062a4ac861032b7b660c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5d8a0351fc206aad9d88f9ca3f7c930ff853ff7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>如何：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作
 可通过在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 消息循环上显示窗体来解决 COM 互操作性问题 ，可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法来创建该消息循环。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   在单独的线程上显示每个 Windows 窗体。  
   
- 在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]中，对此功能提供广泛支持。  
+ 没有对 Visual Studio 中的此功能提供广泛支持。  
   
  另请参阅 [演练：通过在每个 Windows 窗体各自的线程上显示该 Windows 窗体来支持 COM 互操作](http://msdn.microsoft.com/library/ms233639\(v=vs.110\))。  
   

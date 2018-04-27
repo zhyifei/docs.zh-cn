@@ -1,23 +1,24 @@
 ---
-title: "外部 RuleSet 工具包"
-ms.custom: 
+title: 外部 RuleSet 工具包
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fbac6bf8be169aca8ad61c69b8d024f44928d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40e28bb2b17e511a1b8953ccc8ff9bdf4f0f7392
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="external-ruleset-toolkit"></a>外部 RuleSet 工具包
 通常在工作流应用程序中使用规则时，这些规则就是程序集的一部分。 在某些情况下，您可能希望将 RuleSet 和程序集分开维护，这样就可以在不重新生成和部署工作流程序集的情况下更新 RuleSet。 此示例使您可以在数据库中管理和编辑 RuleSet，并在运行时从工作流访问这些 RuleSet。 这样正在运行的工作流实例就能够自动合并 RuleSet 更改。  
@@ -67,9 +68,9 @@ ms.lasthandoff: 12/22/2017
   
  图 3：RuleSet 编辑器  
   
- 这是对编辑器对话框的重新承载，它是 Windows Workflow Foundation [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 外接程序的一部分。 它可提供相同的功能，包括 Intellisense 支持。 规则是根据与工具中 RuleSet 相关联的目标类型 （如工作流） 创作当你单击**浏览**在主工具对话框中，**工作流/类型选择器**对话框出现时，如图 4 中所示。  
+ 这是重新承载的编辑器对话框是 Windows Workflow Foundation Visual Studio 外接程序的一部分。 它可提供相同的功能，包括 Intellisense 支持。 规则是根据与工具中 RuleSet 相关联的目标类型 （如工作流） 创作当你单击**浏览**在主工具对话框中，**工作流/类型选择器**对话框出现时，如图 4 中所示。  
   
- ![工作流和 #47;键入所选内容](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![工作流&#47;键入选择](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  图 4：工作流/类型选择器  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
  图 5：验证错误  
   
- 从**数据**菜单在工具中，你可以导入和导出 Ruleset。 当你单击**导入**，此时将显示文件选择器对话框，您可以从中选择.rules 文件。 这个文件可能是最初在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中创建的文件，也可能不是。 此 .rules 文件应包含一个序列化的 `RuleDefinitions` 实例，该实例包含一个条件集合和一个 RuleSet 集合。 此工具不使用条件集合，但它使用 `RuleDefinitions` .rules 格式，以允许与 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 环境进行交互。  
+ 从**数据**菜单在工具中，你可以导入和导出 Ruleset。 当你单击**导入**，此时将显示文件选择器对话框，您可以从中选择.rules 文件。 这可能会也可能不是最初在 Visual Studio 中创建的文件。 此 .rules 文件应包含一个序列化的 `RuleDefinitions` 实例，该实例包含一个条件集合和一个 RuleSet 集合。 该工具不使用条件集合，但它使用`RuleDefinitions`.rules 格式，以允许与 Visual Studio 环境进行交互。  
   
  选择.rules 文件后, **RuleSet 选择器**对话框 （请参见图 6）。 您可以使用此对话框，从文件中选择想要导入的 RuleSet（默认指定的是所有 RuleSet）。 由于 WF 项目中的版本和程序集的版本相同，所以此 .rules 文件中的 RuleSet 没有版本号。 在导入过程中，该工具会自动分配的下一个可用主要版本号 （这可以在导入后进行更改）;你可以看到在分配的版本号**RuleSet 选择器**列表。  
   
@@ -141,7 +142,7 @@ ms.lasthandoff: 12/22/2017
   
 9. 工作流项目中添加了一个应用程序配置文件，以便为服务要使用的数据库指定连接字符串。 这个连接字符串应与 RuleSet 工具使用的相同，它指向包含 RuleSet 表的数据库。  
   
-10. 您现在可以像运行任何其他工作流控制台应用程序一样运行 `RuleSetToolkitUsageSample` 项目。 在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中按 F5 或 Ctrl+F5，或直接运行 RuleSetToolkitUsageSample.exe 文件。  
+10. 您现在可以像运行任何其他工作流控制台应用程序一样运行 `RuleSetToolkitUsageSample` 项目。 按 F5 或 Ctrl + F5 在 Visual Studio 内或直接运行 RuleSetToolkitUsageSample.exe 文件。  
   
     > [!NOTE]
     >  因为 RuleSet 工具会加载用法示例程序集，所以您必须关闭该工具才能重新编译用法示例。

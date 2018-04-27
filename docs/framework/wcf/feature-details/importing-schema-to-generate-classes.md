@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 一起使用的可用架构中生成类，则使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 类。 本主题描述该过程和变体。  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
  `ReferencedTypes`属性对应于 **/参考**切入特定的 Svcutil.exe 工具操作模式。  
   
 > [!NOTE]
->  当使用 Svcutil.exe 或 (在[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)])**添加服务引用**自动引用 MsCorLib.dll 中的类型的所有工具。  
+>  当使用 Svcutil.exe 或 （在 Visual Studio)**添加服务引用**自动引用 MsCorLib.dll 中的类型的所有工具。  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>导入选项：将 Non-DataContract 架构作为 IXmlSerializable 类型导入  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> 支持架构的有限子集。 如果出现不受支持的架构构造（例如，XML 属性），导入尝试会失败并引发异常。 但是，将 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 属性设置为 `true` 可扩展受支持架构的范围。 设置为 `true` 时，<xref:System.Runtime.Serialization.XsdDataContractImporter> 生成可实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口的类型。 这样可直接访问这些类型的 XML 表示形式。  

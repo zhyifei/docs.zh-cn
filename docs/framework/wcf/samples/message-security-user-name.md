@@ -1,28 +1,28 @@
 ---
-title: "用户名消息安全"
-ms.custom: 
+title: 用户名消息安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-caps.latest.revision: 
+caps.latest.revision: 57
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3d0c5278cf1860a89ea6a1c3ed33b45ed3c48e92
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: da9cf3a59976453a5372a95af83dcff181171a01
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-user-name"></a>用户名消息安全
 本示例演示如何实现一个应用程序，该应用程序对客户端使用具有用户名身份验证的 WS-Security，并要求使用服务器的 X.509v3 证书对服务器进行身份验证。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 默认情况下，使用客户端提供的用户名和密码登录有效的 Windows 帐户。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)。 本示例由客户端控制台程序 (Client.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (Service.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -129,8 +129,8 @@ ms.lasthandoff: 01/19/2018
 ```  
   
  客户端实现设置要使用的用户名和密码。  
-  
-```  
+
+```csharp
 // Create a client.  
 CalculatorClient client = new CalculatorClient();  
   
@@ -143,8 +143,8 @@ Console.WriteLine(client.GetCallerIdentity());
 ...  
 //Closing the client gracefully closes the connection and cleans up resources.  
 client.Close();  
-```  
-  
+```
+
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ```  
@@ -164,7 +164,7 @@ Press <ENTER> to terminate client.
   
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -188,7 +188,7 @@ Press <ENTER> to terminate client.
   
      Setup.bat 批处理文件中的以下行可以让 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 辅助进程帐户访问 LocalMachine 存储区中存储的服务器证书。  
   
-    ```  
+    ```bat
     echo ************  
     echo setting privileges on server certificates  
     echo ************  
@@ -217,7 +217,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  Setup.bat 批处理文件设计为通过 Visual Studio 命令提示符运行。 这要求路径环境变量指向 SDK 的安装目录。 将在 Visual Studio 命令提示中自动设置此环境变量。  
   
-3.  通过在浏览器中输入地址 http://localhost/servicemodelsamples/service.svc 来验证是否对服务具有访问权限。  
+3.  验证是否可以通过输入地址使用浏览器的服务访问http://localhost/servicemodelsamples/service.svc。  
   
 4.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   

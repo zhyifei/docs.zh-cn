@@ -26,11 +26,11 @@ ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3ff175a0f8d152febf2d50c294d401b12285fc7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1fae8215543c50484dc5ea7fc24f292ba84e2699
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>互操作性疑难解答 (Visual Basic)
 当你 COM 和托管的代码之间的互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，你可能会遇到一个或多个以下的常见问题。  
@@ -107,7 +107,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  你可以通过检查异常对象的内容找到如错误描述、 HRESULT 和 COM 错误的原因的信息。  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX 控件问题  
- 使用 Visual Basic 6.0 中的大多数 ActiveX 控件使用 Visual Basic.NET，而问题。 主要的例外是容器控件中或以可视方式包含其他控件的控件。 无法与正常工作的较旧控件的一些示例[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]如下所示：  
+ 使用 Visual Basic 6.0 中的大多数 ActiveX 控件使用 Visual Basic.NET，而问题。 主要的例外是容器控件中或以可视方式包含其他控件的控件。 将无法正常使用 Visual Studio 的较旧控件的一些示例如下所示：  
   
 -   Microsoft 窗体 2.0 框架控件  
   
@@ -115,7 +115,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 -   Sheridan 选项卡控件  
   
- 有仅几个解决方法不受支持 ActiveX 控件问题。 你可以迁移现有控件与[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]如果你拥有原始源代码。 否则，你可以检查与软件供应商更新。控件替换的 NET 兼容版本不受支持 ActiveX 控件。  
+ 有仅几个解决方法不受支持 ActiveX 控件问题。 如果你拥有原始源代码，可以迁移到 Visual Studio 的现有控件。 否则，你可以检查与软件供应商更新。控件替换的 NET 兼容版本不受支持 ActiveX 控件。  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a> 传递的控件 ByRef 的 ReadOnly 属性  
  Visual Basic.NET 有时引发 COM 错误，例如，"错误 0x800A017F CTL_E_SETNOTSUPPORTED"传递时`ReadOnly`作为某些较旧的 ActiveX 控件的属性`ByRef`其他过程的参数。 从 Visual Basic 6.0 的类似过程调用不会引发错误，和参数被视为通过值传递。 Visual Basic.NET 错误消息指示你尝试更改一个属性，没有一个属性`Set`过程。  

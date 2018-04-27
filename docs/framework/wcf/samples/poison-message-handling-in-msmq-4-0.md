@@ -1,24 +1,26 @@
 ---
-title: "MSMQ 4.0 中的病毒消息处理"
-ms.custom: 
+title: MSMQ 4.0 中的病毒消息处理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的病毒消息处理
 本示例演示如何在服务中执行病毒消息处理。 此示例基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 其中使用到了 `netMsmqBinding`。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -49,19 +51,19 @@ ms.lasthandoff: 12/22/2017
  示例演示了如何使用 `Move` 处理病毒消息。 `Move` 可使消息移动到病毒子队列中。  
   
  服务协定是 `IOrderProcessor`，它定义了适合与队列一起使用的单向服务。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  该服务操作显示一条指示它正在处理订单的消息。 为了演示病毒消息功能，`SubmitPurchaseOrder` 服务操作将引发异常，以便在任意一次调用服务时回滚事务。 这将导致消息被放回队列中。 并最终将消息标记为病毒。 配置设置为将病毒消息移到病毒子队列。  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,8 +129,8 @@ public class OrderProcessorService : IOrderProcessor
   
     }  
 }  
-```  
-  
+```
+
  服务配置包括下面的病毒消息属性：`receiveRetryCount`、`maxRetryCycles`、`retryCycleDelay` 和 `receiveErrorHandling`，如下面的配置文件所示。  
   
 ```xml  
@@ -171,8 +173,8 @@ public class OrderProcessorService : IOrderProcessor
  病毒消息队列中的消息是指发送到正在处理消息的服务的消息，这可能不同于病毒消息服务终结点。 因此，当病毒消息服务从队列中读取消息时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道层可发现与终结点的不匹配之处，并且不会调度消息。 在这种情况下，消息将发送到订单处理服务，但将由病毒消息服务接收。 如果无论消息是否发送到不同的终结点都要继续接收消息，则我们必须添加 `ServiceBehavior` 来筛选地址，其中匹配标准是要匹配消息发送到的任何服务终结点。 这是成功处理从病毒消息队列中读取的消息所必需的。  
   
  病毒消息服务实现本身非常类似于服务实现。 它实现协定并处理订单。 代码示例如下所示。  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]  
@@ -215,8 +217,8 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-```  
-  
+```
+
  与从订单队列中读取消息的订单处理服务不同，病毒消息服务从病毒子队列中读取消息。 病毒队列是主队列的子队列，其名称为“poison”，由 MSMQ 自动生成。 若要访问该队列，请提供主队列名称，后接“;”并在子队列为“poison”的情况下提供子队列名称，如下面的示例配置中所示。  
   
 > [!NOTE]
@@ -325,7 +327,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  将 `security mode` 设置为 `None` 等效于将 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全设置为 `None`。  
   
-3.  若要使元数据交换正常工作，应当向 http 绑定注册一个 URL。 这要求服务在具有提升权限的命令窗口中运行。 否则，您将接收到异常，比如：未经处理的异常：System.ServiceModel.AddressAccessDeniedException：HTTP 无法注册 URL http://+:8000/ServiceModelSamples/service/。 进程不具有此命名空间的访问权限（有关详细信息，请参见 http://go.microsoft.com/fwlink/?LinkId=70353）。 ---> System.Net.HttpListenerException：访问被拒绝。  
+3.  若要使元数据交换正常工作，应当向 http 绑定注册一个 URL。 这要求服务在具有提升权限的命令窗口中运行。 否则，接收异常比如： 未经处理的异常： System.ServiceModel.AddressAccessDeniedException: HTTP 无法注册 URL http://+:8000/ServiceModelSamples/service/。 你的进程不具有对此命名空间的访问权限 (请参阅http://go.microsoft.com/fwlink/?LinkId=70353有关详细信息)。 ---> System.Net.HttpListenerException：访问被拒绝。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

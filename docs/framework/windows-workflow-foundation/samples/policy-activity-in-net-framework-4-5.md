@@ -1,26 +1,27 @@
 ---
-title: ".NET Framework 4.5 中的策略活动"
-ms.custom: 
+title: .NET Framework 4.5 中的策略活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 66968503d2f481647d999854358a246b4d963475
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8457182b666570853953830a92c3f2380a0eb85
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的策略活动
-Policy4 活动通过使用 WF 3.5 中附带的规则引擎，允许直接在 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中使用 <xref:System.Workflow.Activities.Rules.RuleSet> (WF 3.5) 中的 [!INCLUDE[wf2](../../../../includes/wf2-md.md)][!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 对象。 通过使用此活动，可以创建和执行 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3.5 规则引擎的更多信息（此信息已作为 Windows Workflow Foundation 的一部分包含），请参见 Windows Workflow Foundation 规则引擎简介。 有关迁移的详细信息中的 WF 规则[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，请阅读[迁移指南](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
+Policy4 活动允许 Windows Workflow Foundation 中[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>对象用于在 Windows Workflow Foundation 中[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接通过 WF 3.5 中附带的规则引擎。 通过使用此活动，可以创建和执行 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3.5 规则引擎的更多信息（此信息已作为 Windows Workflow Foundation 的一部分包含），请参见 Windows Workflow Foundation 规则引擎简介。 有关迁移的详细信息中的 WF 规则[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]，请阅读[迁移指南](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

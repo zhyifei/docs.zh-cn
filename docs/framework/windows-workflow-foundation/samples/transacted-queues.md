@@ -1,26 +1,27 @@
 ---
-title: "事务处理队列"
-ms.custom: 
+title: 事务处理队列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-queues"></a>事务处理队列
-此示例演示如何在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中集成队列和事务，以创建可靠的且可伸缩的服务。 A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope`在客户端工作流中用于将消息发送到队列中事务使用<xref:System.ServiceModel.NetMsmqBinding>。 在服务器上使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，在同一个事务中从队列接受消息并更新工作流的状态。  
+此示例演示如何集成队列和事务中 Windows Workflow Foundation (WF) 以创建可靠、 可伸缩的服务。 A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope`在客户端工作流中用于将消息发送到队列中事务使用<xref:System.ServiceModel.NetMsmqBinding>。 在服务器上使用 <xref:System.ServiceModel.Activities.TransactedReceiveScope>，在同一个事务中从队列接受消息并更新工作流的状态。  
   
 ## <a name="demonstrates"></a>演示  
  <xref:System.Activities.Statements.TransactionScope>、<xref:System.ServiceModel.Activities.TransactedReceiveScope>、<xref:System.ServiceModel.NetMsmqBinding>、<xref:System.ServiceModel.Activities.Receive> 和基于内容的相关性。  

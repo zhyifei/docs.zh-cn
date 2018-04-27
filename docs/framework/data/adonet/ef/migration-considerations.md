@@ -1,24 +1,26 @@
 ---
-title: "迁移注意事项（实体框架）"
-ms.custom: 
+title: 迁移注意事项（实体框架）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8e4c1b06e5a3a7717b99379fd9bca2c5a8a14a6a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c31d7d481d5016b8f2d440f8a727e5bfcf66717c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migration-considerations-entity-framework"></a>迁移注意事项（实体框架）
 现有的应用程序可以从多方面受益于 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 实体框架。 其中最重要的益处之一在于能够使用概念模型将应用程序使用的数据结构与数据源中的架构分离。 这样，日后便可轻松地对存储模型或数据源本身进行更改，而无需对应用程序进行补偿更改。 有关优势的详细信息，使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，请参阅[实体框架概述](../../../../../docs/framework/data/adonet/ef/overview.md)和[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  升级应用程序。  
   
-     通过使用的早期版本创建的项目[!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)]和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]必须升级为使用[!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]SP1 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]开头版本 3.5 SP1。  
+     通过使用 Visual Studio 的早期版本创建的项目和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]必须升级为使用[!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]SP1 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]开头版本 3.5 SP1。  
   
 2.  定义模型和映射。  
   
@@ -59,15 +61,15 @@ ms.lasthandoff: 01/19/2018
   
      [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]在对概念模型执行查询时使用特殊格式的连接字符串。 此连接字符串包装有关模型和映射文件和到数据源的连接的信息。 有关详细信息，请参阅[如何： 定义连接字符串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)。  
   
-4.  配置 [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 项目。  
+4.  配置 Visual Studio 项目。  
   
-     必须将对[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]程序集以及模型和映射文件的引用添加到 [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 项目。 可以将这些映射文件添加到项目中，以确保这些文件随应用程序一起部署在连接字符串中所指示的位置。 有关详细信息，请参阅[如何： 手动配置实体框架项目](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。  
+     引用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]必须将程序集的模型和映射文件添加到 Visual Studio 项目。 可以将这些映射文件添加到项目中，以确保这些文件随应用程序一起部署在连接字符串中所指示的位置。 有关详细信息，请参阅[如何： 手动配置实体框架项目](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>有关包含现有对象的应用程序的注意事项  
  从 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 开始，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]就支持“纯旧式”CLR 对象 (POCO)，也称为持久性未知对象。 大多数情况下，通过进行少量修改，现有对象可以使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 有关详细信息，请参阅[使用 POCO 实体](http://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3)。 此外可以将迁移到应用程序[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]和使用由实体框架工具生成的数据类。 有关详细信息，请参阅[如何： 使用实体数据模型向导](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>有关使用 ADO.NET 提供程序的应用程序的注意事项  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]提供程序，如 SqlClient，使你能够查询要返回表格格式数据的数据源。 此外可以将数据加载到[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]数据集。 下表介绍在升级使用现有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供程序的应用程序时的注意事项：  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供程序，如 SqlClient，使你能够查询要返回表格格式数据的数据源。 此外可以将数据加载到[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]数据集。 下表介绍在升级使用现有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供程序的应用程序时的注意事项：  
   
  使用数据读取器显示表格格式数据。  
  你可以考虑执行[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询使用 EntityClient 提供程序以及枚举返回<xref:System.Data.EntityClient.EntityDataReader>对象。 仅当应用程序使用数据读取器显示表格格式数据，且不需要由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供用于将数据具体化为对象、跟踪更改和进行更新的功能时，才应这样做。 可以继续使用对数据源进行更新的现有数据访问代码，但可以使用从 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 属性访问的现有连接。 有关详细信息，请参阅[用于实体框架的 EntityClient 提供程序](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
@@ -104,7 +106,7 @@ ms.lasthandoff: 01/19/2018
  如果应用程序需要查询 XML 数据，则仍然可以通过使用 LINQ to XML 来利用 LINQ 查询的优点。 有关详细信息，请参阅[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)。  
   
  维护状态的应用程序。  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web 应用程序需要经常维护网页或用户会话的状态。 中的对象<xref:System.Data.Objects.ObjectContext>可以存储在客户端视图状态或在服务器上，会话状态中实例，并稍后能检索并重新附加到新的对象上下文。 有关详细信息，请参阅[附加和分离对象](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23)。  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web 应用程序需要经常维护网页或用户会话的状态。 中的对象<xref:System.Data.Objects.ObjectContext>可以存储在客户端视图状态或在服务器上，会话状态中实例，并稍后能检索并重新附加到新的对象上下文。 有关详细信息，请参阅[附加和分离对象](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23)。  
   
 ## <a name="see-also"></a>请参阅  
  [部署注意事项](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  

@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms"></a>Windows 窗体
-因为窗体是应用程序的基本单位，有必要思考一下它们的功能和设计。 窗体最终成为白板，作为开发成员，你要用控件进行增强以创建用户界面，并借助代码操纵数据。 为此，[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 向你提供可帮助编写代码的集成开发环境 (IDE) 以及以 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 编写的丰富的控件集。 通过使用代码补充这些控件的功能，你可轻松并快速开发所需要的解决方案。  
+因为窗体是应用程序的基本单位，有必要思考一下它们的功能和设计。 窗体最终成为白板，作为开发成员，你要用控件进行增强以创建用户界面，并借助代码操纵数据。 为此，Visual Studio 为您提供的集成的开发环境 (IDE) 可帮助编写代码，以及丰富的控件集编写的[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。 通过使用代码补充这些控件的功能，你可轻松并快速开发所需要的解决方案。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Windows 窗体入门](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  

@@ -1,26 +1,27 @@
 ---
-title: "Hello World 自定义活动"
-ms.custom: 
+title: Hello World 自定义活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 155726e5cd65c2f31a3205a8d18f662b66fb40e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fa441a3019b0ef6df31dc0a46be7ea7e8e00a4b8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hello-world-custom-activity"></a>Hello World 自定义活动
-此示例演示几个 [!INCLUDE[wf](../../../../includes/wf-md.md)] 的主要功能，包括如何创建一个简单的自定义活动。 此示例中演示的一些功能使用 C# 创建自定义活动并使用 `in` 和 `out` 参数（<xref:System.Activities.InArgument> 和 <xref:System.Activities.OutArgument>）。  
+此示例演示几个重要功能的 Windows Workflow Foundation (WF)，包括如何创建一个简单的自定义活动。 此示例中演示的一些功能使用 C# 创建自定义活动并使用 `in` 和 `out` 参数（<xref:System.Activities.InArgument> 和 <xref:System.Activities.OutArgument>）。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

@@ -26,11 +26,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>外接程序和扩展性
 <a name="top"></a> 外接程序为主机应用程序提供扩展功能或服务。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了一个编程模型，开发人员可利用此模型来开发外接程序并在其主机应用程序中激活。 该模型通过在主机与外接程序之间构造通信管道来实现此功能。 该模型通过使用 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>和 <xref:System.AddIn.Contract> 命名空间中的类实现。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  下图显示外接程序管道。  
   
- ![添加 &#45; 管道模型中。] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![添加&#45;管道模型中。] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 外接程序管道  
   
  这些段的程序集不需要处于同一个应用程序域。 可以将外接程序加载至其自己的新应用程序域、现有应用程序域，甚至主机的应用程序域。 可以将多个外接程序加载到同一个应用程序域，这样外接程序便可以共享资源和安全性上下文。  
@@ -116,7 +116,7 @@ ms.lasthandoff: 02/01/2018
   
 |标题|描述|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|描述从主机应用程序到外接程序之间的段的通信管道。 提供描述如何构造管道以及如何在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中将段部署到管道的演练主题中的代码示例。|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|描述从主机应用程序到外接程序之间的段的通信管道。 提供描述如何构造管道以及如何将段部署到 Visual Studio 中的管道的演练主题中的代码示例。|  
 |[应用程序域和程序集](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|描述（为安全性、可靠性和版本控制提供隔离边界的）应用程序域与程序集之间的关系。|  
   
  [返回页首](#top)  

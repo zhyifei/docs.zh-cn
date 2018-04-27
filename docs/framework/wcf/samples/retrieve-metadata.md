@@ -1,24 +1,26 @@
 ---
-title: "检索元数据"
-ms.custom: 
+title: 检索元数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7321578cb76b9f06f09086834c2826a72631e49f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b3a85c43cf812ccb8e099149646d63cda6b80b71
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="retrieve-metadata"></a>检索元数据
 本示例演示如何实现一个客户端，它能从服务中动态检索元数据以选择用来通信的终结点。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服务进行了修改以公开两个终结点-一个终结点位于基址中使用`basicHttpBinding`绑定和安全的终结点位于 {*baseaddress*} /secure 使用`wsHttpBinding`绑定。 不必使用终结点地址和绑定配置客户端，客户端可以使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 类动态检索服务的元数据，然后使用 <xref:System.ServiceModel.Description.ServiceEndpointCollection> 类以 <xref:System.ServiceModel.Description.WsdlImporter> 的形式导入元数据。  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  客户端应用程序使用导入的 <xref:System.ServiceModel.Description.ServiceEndpointCollection> 来创建与服务通信的客户端。 客户端应用程序会遍历每个检索到的终结点并与每个实现 `ICalculator` 协定的终结点通信。 会为相应的地址和绑定提供检索到的终结点，以便将客户端配置成可与每个终结点通信，如下面的示例代码所示。  
   
-```  
+```csharp   
 // Create a MetadataExchangeClient for retrieving metadata.  
 EndpointAddress mexAddress = new EndpointAddress(ConfigurationManager.AppSettings["mexAddress"]);  
 MetadataExchangeClient mexClient = new MetadataExchangeClient(mexAddress);  

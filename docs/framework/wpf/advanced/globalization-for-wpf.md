@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 909461811907c1eb3f494b29294db45dbbe8b01d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主题介绍你应注意的编写时的问题[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]面向全球市场的应用程序。 全球化编程元素中定义[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]中`System.Globalization`。  
@@ -180,7 +180,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="using_clickonce"></a>   
 ## <a name="using-clickonce-with-localized-applications"></a>在本地化的应用程序中使用 ClickOnce  
- ClickOnce 是将随附的新 Windows 窗体部署技术[!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]。 通过该技术可安装应用程序和升级 Web 应用程序。 对使用 ClickOnce 部署的应用程序进行本地化后，只能在本地化的区域性中查看该应用程序。 例如，如果部署的应用程序本地化为日语它可以仅在查看日语[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]不能在英语版[!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]。 这会带来问题，因为它是一个常见方案用于日语用户运行英语版本的[!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]。  
+ ClickOnce 是将随附的新 Windows 窗体部署技术[!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]。 通过该技术可安装应用程序和升级 Web 应用程序。 对使用 ClickOnce 部署的应用程序进行本地化后，只能在本地化的区域性中查看该应用程序。 例如，如果部署的应用程序本地化为日语它可以仅在查看日语[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]不在英语 Windows。 因为它是一个常见方案用于日语用户运行英语版本的 Windows，这会带来问题。  
   
  此问题的解决方案是设置非特定语言回退特性。 应用程序开发人员可选择从主程序集中删除资源，并指定可在特定区域性对应的附属程序集中找到该资源。 若要控制此过程，请使用<xref:System.Resources.NeutralResourcesLanguageAttribute>。 构造函数<xref:System.Resources.NeutralResourcesLanguageAttribute>类具有两个签名，另一个采用<xref:System.Resources.UltimateResourceFallbackLocation>参数指定的位置其中<xref:System.Resources.ResourceManager>应提取回退资源： 主程序集或附属程序集。 下面的示例演示如何使用此特性。 对于最终的回退位置，代码会导致<xref:System.Resources.ResourceManager>查找当前正在执行的程序集的目录的"de"子目录中的资源。  
   

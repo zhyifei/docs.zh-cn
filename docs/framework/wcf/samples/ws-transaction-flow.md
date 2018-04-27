@@ -1,28 +1,28 @@
 ---
-title: "WS 事务流"
-ms.custom: 
+title: WS 事务流
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-caps.latest.revision: 
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bf441831a205b022899999b1bf34e1505b8fb6bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f79ffdfe624674074f2e9cadeaccb7f2ab3ba0d7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-transaction-flow"></a>WS 事务流
 本示例演示客户端协调事务和使用 WS-Atomic 事务或 OleTransactions 协议的事务流的客户端和服务器选项的用法。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务，但操作特性化，用于演示使用`TransactionFlowAttribute`与**TransactionFlowOption**若要确定何种程度事务到启用了流的枚举。 在流事务范围内，请求操作的日志将写入数据库并保存，直到客户端协调事务完成。如果客户端事务没有完成，则 Web 服务事务确保不提交对数据库的相应更新。  
@@ -31,8 +31,8 @@ ms.lasthandoff: 12/22/2017
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
  初始化到服务的连接和事务后，客户端访问多个服务操作。 用于服务的协定定义如下，每个操作演示 `TransactionFlowOption` 的一种不同的设置。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -48,8 +48,8 @@ public interface ICalculator
     [OperationContract]  
     double Divide(double n1, double n2);   
 }  
-```  
-  
+```
+
  这按处理操作的顺序定义这些操作：  
   
 -   `Add` 操作请求必须包括流事务。  
@@ -83,8 +83,8 @@ public interface ICalculator
   
 > [!NOTE]
 >  <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 属性定义服务方法实现的本地行为，不定义客户端对事务进行流处理的能力或要求。  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 [ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
 public class CalculatorService : ICalculator  
@@ -119,22 +119,22 @@ public class CalculatorService : ICalculator
   
     // Logging method omitted for brevity  
 }  
-```  
-  
+```
+
  在客户端，针对操作的服务的 `TransactionFlowOption` 设置反映在客户端 `ICalculator` 接口的生成的定义中。 而且服务的 `transactionFlow` 属性设置也反映在客户端的应用程序配置中。 通过选择适当的 `endpointConfigurationName`，客户端可以选择传输和协议。  
-  
-```  
+
+```csharp
 // Create a client using either wsat or oletx endpoint configurations  
 CalculatorClient client = new CalculatorClient("WSAtomicTransaction_endpoint");  
 // CalculatorClient client = new CalculatorClient("OleTransactions_endpoint");  
-```  
-  
+```
+
 > [!NOTE]
 >  无论选择哪种协议或传输，观察到的本示例的行为都是相同的。  
   
  启动到服务的连接后，客户端在对服务操作的调用附近创建新的 `TransactionScope`。  
-  
-```  
+
+```csharp
 // Start a transaction scope  
 using (TransactionScope tx =  
             new TransactionScope(TransactionScopeOption.RequiresNew))  
@@ -191,8 +191,8 @@ using (TransactionScope tx =
 }  
   
 Console.WriteLine("Transaction committed");  
-```  
-  
+```
+
  对操作的调用如下：  
   
 -   `Add` 请求将必需的事务流动到服务，服务的操作在客户端的事务范围内发生。  

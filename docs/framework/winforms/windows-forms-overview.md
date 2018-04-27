@@ -1,27 +1,29 @@
 ---
-title: "Windows 窗体概述"
-ms.custom: 
+title: Windows 窗体概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2620d8314a11e0a90864120c40dbc3935cce75fe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-overview"></a>Windows 窗体概述
 以下概述介绍了智能客户端应用程序的优点、Windows 窗体编程的主要功能以及可以如何使用 Windows 窗体来构建可满足当今企业和最终用户需求的智能客户端。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/22/2017
  可以使用 Windows 窗体开发智能客户端。 智能客户端是包含丰富图形的应用程序，可轻松进行部署和更新，无论是否连接到 Internet 均可正常工作，并能以相较于基于 Windows 的传统应用程序更为安全的方式访问本地计算机上的资源。  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>构建丰富的交互式用户界面  
- Windows 窗体是用于 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的智能客户端技术，是一组简化读取和写入文件系统等常见应用程序任务的托管库。 使用类似于 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的开发环境时，可以创建 Windows 窗体智能客户端应用程序，该应用程序可显示信息、请求来自用户的输入以及通过网络和远程计算机通信。  
+ Windows 窗体是用于 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的智能客户端技术，是一组简化读取和写入文件系统等常见应用程序任务的托管库。 当你使用诸如 Visual Studio 之类的开发环境时，你可以与远程计算机通过网络来创建 Windows 窗体智能客户端应用程序显示的信息、 请求来自用户的输入和沟通。  
   
  在 Windows 窗体中，窗体是一种可视图面，可在其上对用户显示信息。 通常情况下，通过向窗体添加控件和开发对用户操作（如点击鼠标或按键）的响应来构建 Windows 窗体应用程序。 控件是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
  Windows 窗体具有丰富的 UI 控件，这些控件可模拟 Microsoft Office 等高端应用程序中的功能。 使用 <xref:System.Windows.Forms.ToolStrip> 和 <xref:System.Windows.Forms.MenuStrip> 控件时，可以创建包含文本和图像的工具栏和菜单、显示子菜单和托管其他控件（如文本框和组合框）。  
   
- 借助 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 拖放 Windows 窗体设计器，可以轻松创建 Windows 窗体应用程序。 只需用光标选中控件，然后将它们添加到窗体中所需的位置即可。 设计器提供诸如网格线和对齐线的工具，以便简化对齐控件的操作。 无论是使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或在命令行进行编译，均可使用 <xref:System.Windows.Forms.FlowLayoutPanel>、<xref:System.Windows.Forms.TableLayoutPanel> 和 <xref:System.Windows.Forms.SplitContainer> 控件在更短的时间内创建高级窗体布局。  
+ 使用 Visual Studio 拖放 Windows 窗体设计器中，你可以轻松创建 Windows 窗体应用程序。 只需用光标选中控件，然后将它们添加到窗体中所需的位置即可。 设计器提供诸如网格线和对齐线的工具，以便简化对齐控件的操作。 和是否使用 Visual Studio 或在命令行编译，可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>时间更短控件，创建高级窗体布局。  
   
  最后，如果必须创建自己的自定义用户界面元素，<xref:System.Drawing> 命名空间包含各种类，可用以直接在窗体上呈现线条、圆形和其他形状。  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  可以使用“数据源”窗口轻松创建数据绑定控件。 窗口显示数据源，如数据库、Web 服务和项目中的对象。 可以通过将此窗口中的项拖动到项目中的窗体上来创建数据绑定控件。 还可以通过将对象从“数据源”窗口拖动到现有控件上来将现有控件与数据进行数据绑定。  
   
- 可在 Windows 窗体中管理的另一类数据绑定是“设置”。 大多数智能客户端应用程序均必须保留有关其运行时状态的某些信息（例如窗体的最后已知大小）并保留用户首选项数据（例如保存的文件的默认位置）。 “应用程序设置”功能通过提供一种在客户端计算机上存储两种类型的设置的简单方法来满足这些要求。 通过使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或代码编辑器定义这些设置后，这些设置便作为 XML保留并自动在运行时读取回内存中。  
+ 可在 Windows 窗体中管理的另一类数据绑定是“设置”。 大多数智能客户端应用程序均必须保留有关其运行时状态的某些信息（例如窗体的最后已知大小）并保留用户首选项数据（例如保存的文件的默认位置）。 “应用程序设置”功能通过提供一种在客户端计算机上存储两种类型的设置的简单方法来满足这些要求。 通过使用 Visual Studio 或代码编辑器定义这些设置后，设置是作为 XML 保留并自动在运行时读取回内存。  
   
 #### <a name="help-displaying-and-manipulating-data"></a>帮助显示和操作数据  
  如需了解如何使用这些功能的步骤信息，请参阅以下“帮助”主题。  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 |使用应用程序设置|[如何：创建应用程序设置](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>将应用程序部署到客户端计算机  
- 编写了应用程序后，必须将应用程序发送给用户，以便他们可以在自己的客户端计算机上安装和运行此应用程序。 使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技术时，只需进行几次点击便可以从 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 内部署应用程序，然后向用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 管理你的应用程序中的所有元素和依赖项，并确保应用程序正确安装到客户端计算机上。  
+ 编写了应用程序后，必须将应用程序发送给用户，以便他们可以在自己的客户端计算机上安装和运行此应用程序。 当你使用[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]技术，可以部署你的应用程序从 Visual Studio 中通过只需几次点击，还向用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 管理你的应用程序中的所有元素和依赖项，并确保应用程序正确安装到客户端计算机上。  
   
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序可以配置为仅在用户连接到网络时运行，或配置为联机和脱机时均可运行。 如果指定应用程序支持脱机操作，则 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 会在用户的“开始”菜单中添加一个指向应用程序的链接。 然后用户便可以打开应用程序，而无需使用此 URL。  
   

@@ -1,24 +1,26 @@
 ---
-title: "类型化客户端"
-ms.custom: 
+title: 类型化客户端
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edad174ac5977aabf6c3fb410ede6ab07b85e4aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 638b4a82a5407cbfbe15b75f6f1bfda27367b174
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="typed-client"></a>类型化客户端
 此示例演示如何从生成的类型化客户端获取信息[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  使用客户端的 `Endpoint` 属性可以访问有关正在与客户端进行通信的服务终结点的信息，包括地址、绑定和协定信息。 客户端的 `InnerChannel` 属性是 <xref:System.ServiceModel.IClientChannel> 的一个实例，使用该实例可以访问有关基础通道的信息，例如基础通道的状态和会话标识符。  
   
-```  
+```csharp   
 // Create a client.  
 CalculatorClient client = new CalculatorClient();  
 ...  

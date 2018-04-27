@@ -1,24 +1,26 @@
 ---
-title: "WCF 测试客户端 (WcfTestClient.exe)"
-ms.custom: 
+title: WCF 测试客户端 (WcfTestClient.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 测试客户端 (WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 测试客户端 (WcfTestClient.exe) 是一个 GUI 工具，使用该工具，用户可以输入测试参数、将该输入提交给服务并查看服务发回的响应。 当与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机结合时，它可以提供完美的服务测试体验。  
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/05/2018
   
  若要查看消息的 XML，请单击**XML**。 若要将其发送给服务，请单击**Invoke**。  
   
- 数据集参数，请单击**...** 下一步按钮**编辑...** 若要在新窗口中显示数据网格中编辑它。 请注意**复制数据集**和**粘贴数据集**按钮。 如果第一次编辑时 DataSet 对象的架构未知，则 DataGrid 为空。 您必须将具有相同架构的 DataSet 对象粘贴到 DataGrid 中的当前对象。 （请注意，在粘贴操作之前需要从其他位置复制架构。）你可以通过单击来复制 Dataset 对象以供将来使用**复制数据集**按钮。  
+ 数据集参数，请单击 **...** 下一步按钮**编辑...** 若要在新窗口中显示数据网格中编辑它。 请注意**复制数据集**和**粘贴数据集**按钮。 如果第一次编辑时 DataSet 对象的架构未知，则 DataGrid 为空。 您必须将具有相同架构的 DataSet 对象粘贴到 DataGrid 中的当前对象。 （请注意，在粘贴操作之前需要从其他位置复制架构。）你可以通过单击来复制 Dataset 对象以供将来使用**复制数据集**按钮。  
   
  服务响应将出现在测试参数下面。  
   
@@ -172,9 +174,9 @@ ms.lasthandoff: 01/05/2018
 ## <a name="closing-wcf-test-client"></a>关闭 WCF 测试客户端  
  可以通过以下方式关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端：  
   
--   上**文件**菜单上，单击**退出**。 或者，在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端主窗口中，单击**关闭**。 此外，这两个操作还关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务自动主机，如果 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 测试客户端是由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 启动的，则还会停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 调试过程。  
+-   上**文件**菜单上，单击**退出**。 或者，在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端主窗口中，单击**关闭**。 这两种操作还关闭[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务自动主机，如果 Visual Studio 调试处理的停止[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端由 Visual Studio 启动。  
   
--   右键单击**WCF 服务主机**在通知区域中，然后单击图标**退出。** 这将关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务自动主机和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端并停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 调试进程。  
+-   右键单击**WCF 服务主机**在通知区域中，然后单击图标**退出。** 这将关闭[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务自动主机和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]测试客户端并停止 Visual Studio 调试处理。  
   
 ## <a name="see-also"></a>请参阅  
  [WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

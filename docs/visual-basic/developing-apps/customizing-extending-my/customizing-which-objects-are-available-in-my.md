@@ -1,24 +1,25 @@
 ---
-title: "自定义 My 中可用的对象 (Visual Basic)"
+title: 自定义 My 中可用的对象 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 669641a2b6ecbf988f6cad68acf52c5561b32515
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>自定义 My 中可用的对象 (Visual Basic)
-本主题介绍如何控制哪些`My`通过设置你的项目的情况下启用对象`_MYTYPE`条件编译常量。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成开发环境 (IDE) 保留`_MYTYPE`与项目的类型同步的项目的条件编译常量。  
+本主题介绍如何控制哪些`My`通过设置你的项目的情况下启用对象`_MYTYPE`条件编译常量。 Visual Studio 集成开发环境 (IDE) 保留`_MYTYPE`与项目的类型同步的项目的条件编译常量。  
   
 ## <a name="predefined-mytype-values"></a>预定义的 _MYTYPE 值  
  必须使用`/define`编译器选项来设置`_MYTYPE`条件编译常量。 指定为你自己的值时`_MYTYPE`常量，你必须括起的字符串值中反斜杠/引号 (\\") 序列。 例如，你可以使用：  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 |Web|"Web"|  
 |Web 控件库|"WebControl"|  
 |Windows 应用程序|"WindowsForms"|  
-|Windows 应用程序，使用自定义启动时`Sub Main`|"WindowsFormsWithCustomSubMain"|  
+|Windows 应用程序，使用自定义启动时 `Sub Main`|"WindowsFormsWithCustomSubMain"|  
 |Windows 控件库|"Windows"|  
 |Windows 服务|"控制台"|  
 |空|"空"|  
@@ -49,14 +50,14 @@ ms.lasthandoff: 11/21/2017
   
 |_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"控制台"|"控制台"|"Windows"|未定义|"Windows"|TRUE|  
+|"控制台"|"控制台"|"Windows"|未定义|"Windows"|true|  
 |"Custom"|未定义|未定义|未定义|未定义|未定义|  
 |"空"|未定义|未定义|未定义|未定义|未定义|  
-|"Web"|未定义|"Web"|FALSE|"Web"|FALSE|  
-|"WebControl"|未定义|"Web"|FALSE|"Web"|TRUE|  
+|"Web"|未定义|"Web"|false|"Web"|false|  
+|"WebControl"|未定义|"Web"|false|"Web"|true|  
 |"Windows"或""|"Windows"|"Windows"|未定义|"Windows"|TRUE|  
-|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
-|"WindowsFormsWithCustomSubMain"|"控制台"|"Windows"|TRUE|"Windows"|TRUE|  
+|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
+|"WindowsFormsWithCustomSubMain"|"控制台"|"Windows"|true|"Windows"|true|  
   
  默认情况下，未定义的条件编译常数解析为`FALSE`。 编译你的项目以重写默认行为时，你可以指定为未定义的常数的值。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
  下表介绍的预定义的值的效果`_MY`编译常量。  
   
-|常量|含义|  
+|返回的常量|含义|  
 |--------------|-------------|  
 |`_MYAPPLICATIONTYPE`|使`My.Application`，如果常量是"控制台"窗口，"或"WindowsForms":<br /><br /> -"控制台"版本派生自<xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>。 并提供比"Windows"版本较少的成员。<br />-"Windows"版本派生自<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>和具有比"WindowsForms"版本较少的成员。<br />-的版本"WindowsForms"`My.Application`派生自<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>。 如果`TARGET`常量被定义为"winexe"，则该类包括`Sub Main`方法。|  
 |`_MYCOMPUTERTYPE`|使`My.Computer`，如果常量是"Web"或"Windows":<br /><br /> -"Web"版本派生自<xref:Microsoft.VisualBasic.Devices.ServerComputer>，并且具有较少的成员，于"Windows"版本。<br />-的版本"Windows"`My.Computer`派生自<xref:Microsoft.VisualBasic.Devices.Computer>。|  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
 |`_MYWEBSERVICES`|使`My.WebServices`，如果常量是`TRUE`。|  
 |`_MYTYPE`|使`My.Log`， `My.Request`，和`My.Response`，如果常量是"Web"。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
  <xref:Microsoft.VisualBasic.Devices.Computer>  
  <xref:Microsoft.VisualBasic.Logging.Log>  

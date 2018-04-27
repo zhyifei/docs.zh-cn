@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8fa5a9e4287bcbcb490754b84a8b5060d321f779
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX 中的持久延迟
 此示例演示如何使用持久延迟，在持久延迟过程中，将把工作流保留到持久性设备。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/26/2018
   
  .Xamlx 文件是在 Visual Studio 中承载工作流服务。 Visual Studio 使用 Cassini 使用工作流服务主机来承载工作流。  
   
- 除了承载工作流之外，工作流服务主机还通过加载和卸载工作流实例来对其进行管理。 若要启动 [!INCLUDE[wf](../../../../includes/wf-md.md)] 定义的实例（在工作流服务主机上），请设置将向工作流中的 <xref:System.ServiceModel.Activities.Receive> 活动发送消息的客户端。 此 <xref:System.ServiceModel.Activities.Receive> 将自己的 <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> 属性设置为 `true`，从而可以在接收到消息时创建工作流的新实例。  
+ 除了承载工作流之外，工作流服务主机还通过加载和卸载工作流实例来对其进行管理。 若要启动 （在工作流服务主机） 的 Windows Workflow Foundation (WF) 定义的实例，设置发送到的消息的客户端<xref:System.ServiceModel.Activities.Receive>工作流中的活动。 此 <xref:System.ServiceModel.Activities.Receive> 将自己的 <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> 属性设置为 `true`，从而可以在接收到消息时创建工作流的新实例。  
   
  初始化过程中，会将一个卸载实例行为添加到配置文件，该行为应在该配置文件指定到的工作流服务主机下，将实例卸载到持久性存储区（数据库）。 对于此示例，它在工作流进入空闲状态后（触发了延迟时）立即卸载实例。  
   

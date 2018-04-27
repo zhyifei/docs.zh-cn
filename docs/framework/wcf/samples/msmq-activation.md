@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="msmq-activation"></a>MSMQ 激活
 本示例演示如何在 Windows 进程激活服务 (WAS) 中承载从消息队列读取的应用程序。 此示例使用`netMsmqBinding`和基于[双向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)示例。 本示例中的服务是一个 Web 承载的应用程序，而客户端是自承载的，并输出到控制台以观察提交的采购订单的状态。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/19/2018
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  如果此目录不存在，请转到[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]超链接 "http://go.microsoft.com/fwlink/?LinkId=150780" \t"_blank"和[!INCLUDE[wf](../../../../includes/wf-md.md)]示例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下载所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
+>  如果此目录不存在，请转到[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]超链接"http://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和 Windows Workflow Foundation (WF) 示例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下载所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]示例。 此示例位于以下目录：  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -282,7 +282,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  此命令是单行文本。  
   
-         执行此命令可以使用 http://localhost/servicemodelsamples 和 net.msmq://localhost/servicemodelsamples 访问 /servicemodelsamples 应用程序。  
+         此命令启用 /servicemodelsamples 应用程序使用访问http://localhost/servicemodelsamples和 net.msmq: //localhost/servicemodelsamples。  
   
 7.  如果您以前没有进行此操作，应确保启用 MSMQ 激活服务。 从**启动**菜单上，单击**运行**，和类型`Services.msc`。 适用于的服务列表中搜索**Net.Msmq Listener Adapter**。 右键单击并选择**属性**。 设置**启动类型**到**自动**，单击**应用**单击**启动**按钮。 此步骤只能在第一次使用 Net.Msmq Listener Adapter 服务之前操作一次。  
   
@@ -362,5 +362,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AppFabric 承载和持久性示例](http://go.microsoft.com/fwlink/?LinkId=193961)

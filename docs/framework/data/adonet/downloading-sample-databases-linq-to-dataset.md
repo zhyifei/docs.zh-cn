@@ -1,24 +1,26 @@
 ---
-title: "下载示例数据库 (LINQ to DataSet)"
-ms.custom: 
+title: 下载示例数据库 (LINQ to DataSet)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e19e51ecf4868d0d49e26b4aafd7e8b3840992d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>下载示例数据库 (LINQ to DataSet)
 示例和演练[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文档使用 AdventureWorks 示例数据库。 您可以从 Microsoft 下载站点免费下载此产品。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文档中的示例和演练使用 SQL Server 作为数据存储区。 免费提供的 SQL Server Express Edition 也可代替 SQL Server 用作数据存储区。  
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/17/2018
      如果您已将这些文件安装到其他驱动器或目录，则必须在执行 `sp_attach_db` 存储过程之前适当修改路径。  
   
 ## <a name="downloading-sql-server-express-edition"></a>下载 SQL Server Express Edition  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 一节中的示例和演练使用 SQL Server 2005 作为数据存储区，但也可以修改为使用 SQL Server Express Edition。 SQL Server Express Edition 免费提供，您可以利用应用程序重新发布它。 如果您要使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，则 Pro 和更高的版本将会包括 SQL Server Express Edition。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 一节中的示例和演练使用 SQL Server 2005 作为数据存储区，但也可以修改为使用 SQL Server Express Edition。 SQL Server Express Edition 免费提供，您可以利用应用程序重新发布它。 如果你使用的 Visual Studio，Pro 和更高版本中包含 SQL Server Express Edition。  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>下载并安装 SQL Server Express Edition  
   

@@ -1,24 +1,26 @@
 ---
-title: "基于消息队列的消息安全性"
-ms.custom: 
+title: 基于消息队列的消息安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a63c89e969f7a245dcf14d87872b8d629f1ee846
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: aeb0e66c5bad2b2d03a08560e1021b57e793ad55
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-over-message-queuing"></a>基于消息队列的消息安全性
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS-Security 和 X.509v3 证书身份验证，并要求使用服务器的 X.509v3 证书对 MSMQ 进行服务器身份验证。 有时候消息安全性更重要，以确保 MSMQ 存储区中的消息始终是加密的，并且应用程序能够对消息执行其自己的身份验证。  
@@ -93,7 +95,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果已运行跨计算机使用证书的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 示例，请确保清除已安装在 CurrentUser - TrustedPeople 存储中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  此示例要求安装并运行 MSMQ。  
   
 ## <a name="demonstrates"></a>演示  
@@ -105,8 +107,8 @@ ms.lasthandoff: 01/19/2018
   
 ## <a name="description"></a>描述  
  示例客户端和服务代码是相同[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例有一处不同。 操作协定是通过保护级别批注的，这说明消息必须是经过签名和加密的。  
-  
-```  
+
+```csharp
 // Define a service contract.   
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
@@ -114,8 +116,8 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, ProtectionLevel=ProtectionLevel.EncryptAndSign)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  为了确保使用所要求的令牌来标识服务和客户端以保证消息的安全性，App.config 中包含了凭据信息。  
   
  客户端配置指定要用来对服务进行身份验证的服务证书。 它使用其本地计算机存储区作为受信任的存储区，以依赖服务的有效性。 它还指定消息所附加的用来对客户端进行服务身份验证的客户端证书。  
@@ -256,29 +258,29 @@ public interface IOrderProcessor
   
  此示例演示如何使用配置控制身份验证，以及如何从安全上下文中获取调用方的标识，如下面的示例代码所述：  
   
-```  
-    // Service class which implements the service contract.  
-    // Added code to write output to the console window.  
-    public class OrderProcessorService : IOrderProcessor  
+```csharp
+// Service class which implements the service contract.  
+// Added code to write output to the console window.  
+public class OrderProcessorService : IOrderProcessor  
+{  
+    private string GetCallerIdentity()  
     {  
-        private string GetCallerIdentity()  
-        {  
-            // The client certificate is not mapped to a Windows identity by default.  
-            // ServiceSecurityContext.PrimaryIdentity is populated based on the information  
-            // in the certificate that the client used to authenticate itself to the service.  
-            return ServiceSecurityContext.Current.PrimaryIdentity.Name;  
-        }  
-  
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
-        public void SubmitPurchaseOrder(PurchaseOrder po)  
-        {  
-            Console.WriteLine("Client's Identity {0} ", GetCallerIdentity());  
-            Orders.Add(po);  
-            Console.WriteLine("Processing {0} ", po);  
-        }  
+        // The client certificate is not mapped to a Windows identity by default.  
+        // ServiceSecurityContext.PrimaryIdentity is populated based on the information  
+        // in the certificate that the client used to authenticate itself to the service.  
+        return ServiceSecurityContext.Current.PrimaryIdentity.Name;  
+    }  
+
+    [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
+    public void SubmitPurchaseOrder(PurchaseOrder po)  
+    {  
+        Console.WriteLine("Client's Identity {0} ", GetCallerIdentity());  
+        Orders.Add(po);  
+        Console.WriteLine("Processing {0} ", po);  
+    }  
   //…  
 }  
-```  
+```
   
  运行时，服务代码将显示客户端标识。 下面提供了服务代码的示例输出：  
   
@@ -302,7 +304,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
      批处理文件中的以下行用于创建客户端证书。 创建的证书的主题名称中会使用指定的客户端名称。 证书存储在 `My` 存储位置下的 `CurrentUser` 存储区中。  
   
-    ```  
+    ```bat
     echo ************  
     echo making client cert  
     echo ************  
@@ -313,7 +315,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
      批处理文件中的以下行将客户端证书复制到服务器的 TrustedPeople 存储中，以使服务器能够做出相关的信任或不信任决定。 为了使 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务信任安装在 TrustedPeople 存储区中的证书，必须将客户端证书验证模式设置为 `PeerOrChainTrust` 或 `PeerTrust` 值。 请参见前面的服务配置示例，了解如何使用配置文件完成此操作。  
   
-    ```  
+    ```bat
     echo ************  
     echo copying client cert to server's LocalMachine store  
     echo ************  
@@ -324,7 +326,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书：  
   
-    ```  
+    ```bat  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  

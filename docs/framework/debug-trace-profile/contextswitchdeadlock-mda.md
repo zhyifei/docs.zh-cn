@@ -1,12 +1,13 @@
 ---
 title: contextSwitchDeadlock MDA
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 如果在尝试进行 COM 上下文转换期间检测到一个死锁，将激活 `contextSwitchDeadlock` 托管调试助手 (MDA)。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  若要确定是否错误地激活了 MDA，请禁用所有断点，重新启动应用程序，然后让它可以不间断地运行。 如果没有激活 MDA，则最初的激活很可能是错误的。 在此情况下，请禁用 MDA，以避免干扰调试会话。  
   
 > [!NOTE]
->  此 MDA 处于 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 和更高版本的默认集合中。 当在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中启用宿主进程时，将无法禁用处于默认集合中的 MDA。 默认情况下，托管进程处于启用状态，因此必须将其显式禁用。 有关如何禁用 MDA 的信息，请参阅[使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)中的“启用和禁用 MDA”。  
+>  此 MDA 处于 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 和更高版本的默认集合中。 Visual Studio 中启用宿主进程时，不能禁用默认值在集合中的 Mda。 默认情况下，托管进程处于启用状态，因此必须将其显式禁用。 有关如何禁用 MDA 的信息，请参阅[使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)中的“启用和禁用 MDA”。  
   
 ## <a name="resolution"></a>解决方法  
  遵循有关 STA 消息发送的 COM 规则。  

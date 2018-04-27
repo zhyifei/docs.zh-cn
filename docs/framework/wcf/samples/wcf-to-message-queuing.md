@@ -1,31 +1,33 @@
 ---
-title: "Windows Communication Foundation 到消息队列"
-ms.custom: 
+title: Windows Communication Foundation 到消息队列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 90013752ed03f24c0995bc837efde5f20bf272c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2ea59c7f1ef2ac6f22500a13eb9bb4456149b7c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 到消息队列
 本示例演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序如何向消息队列 (MSMQ) 应用程序发送消息。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。 服务和客户端不需要同时运行。  
   
  服务从队列接收消息并处理订单。 服务创建一个事务性队列，并为收到的消息设置消息处理程序，如下面的示例代码所示。  
-  
-```  
+
+```csharp
 static void Main(string[] args)  
 {  
     if (!MessageQueue.Exists(  
@@ -41,11 +43,11 @@ static void Main(string[] args)
     Console.WriteLine("Order Service is running");  
     Console.ReadLine();  
 }  
-```  
-  
+```
+
  当消息到达队列中时，将调用消息处理程序 `ProcessOrder`。  
-  
-```  
+
+```csharp
 public static void ProcessOrder(Object source,  
     ReceiveCompletedEventArgs asyncResult)  
 {  
@@ -70,8 +72,8 @@ public static void ProcessOrder(Object source,
     }  
   
 }  
-```  
-  
+```
+
  服务从 MSMQ 消息正文中提取 `ProcessOrder` 并处理订单。  
   
  MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。  
@@ -86,8 +88,8 @@ public static void ProcessOrder(Object source,
 >  队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。  
   
  客户端创建采购订单并在事务的范围内提交该采购订单，如下面的示例代码所示。  
-  
-```  
+
+```csharp
 // Create the purchase order  
 PurchaseOrder po = new PurchaseOrder();  
 // Fill in the details  
@@ -105,13 +107,13 @@ Console.WriteLine("Order has been submitted:{0}", po);
   
 //Closing the client gracefully closes the connection and cleans up resources  
 client.Close();  
-```  
-  
+```
+
  客户端按顺序使用自定义客户端将 MSMQ 消息发送给队列。 由于接收和处理消息的应用程序是 MSMQ 应用程序，而不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，因此这两个应用程序之间没有隐式服务协定。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。  
   
  对于使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定发送消息的所有 `MsmqIntegration` 应用程序而言，自定义客户端在本质上都是相同的。 与其他客户端不同，它不包含一系列服务操作。 它只是一个提交消息操作。  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
@@ -136,8 +138,8 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
         base.Channel.SubmitPurchaseOrder(msg);  
     }  
 }  
-```  
-  
+```
+
  运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。  
   
 > [!NOTE]

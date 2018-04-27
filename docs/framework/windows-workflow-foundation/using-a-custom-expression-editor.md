@@ -14,16 +14,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6e9481364a70257f6c1711692daf5c81eee9fd88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自定义表达式编辑器
 可以实现自定义表达式编辑器，以提供更丰富或更简单的表达式编辑体验。 在以下几种情况下，您可能需要使用自定义表达式编辑器：  
   
--   为 IntelliSense 和重新承载的工作流设计器中的其他丰富的编辑功能提供支持。 必须提供此功能，因为无法在重新承载的应用程序中使用默认的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 表达式编辑器。  
+-   为 IntelliSense 和重新承载的工作流设计器中的其他丰富的编辑功能提供支持。 必须提供此功能，因为默认 Visual Studio 表达式编辑器不能在重新承载的应用程序。  
   
 -   若要简化的表达式编辑体验业务分析师用户，以便它们，例如，不必学习 Visual Basic 或 Visual Basic 表达式处理。  
   

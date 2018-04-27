@@ -1,13 +1,13 @@
 ---
-title: "DataGrid 控件概述（Windows 窗体）"
-ms.custom: 
+title: DataGrid 控件概述（Windows 窗体）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控件概述（Windows 窗体）
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.lasthandoff: 12/22/2017
 |多个相关表。|网格可以显示树视图以便选择表格，你也可指定网格显示父表。 通过父表中的记录，用户可导航到相关的子行。|  
   
 > [!NOTE]
->  使用 <xref:System.Data.DataRelation> 使数据集中的表相关。  另请参阅[超链接“http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)”数据集中的关系](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))或[数据集中的关系](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))。  
+>  使用 <xref:System.Data.DataRelation> 使数据集中的表相关。  另请参阅[超链接"http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)"数据集中的关系](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))或[数据集中的关系](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))。  
   
  当 <xref:System.Windows.Forms.DataGrid> 控件显示表并且 <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> 属性设置为 `true` 时，可通过单击列标题对数据重新排序。 用户还可以添加行和编辑单元格。  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 12/22/2017
   
  列样式与数据集中列相关，同样，表样式也与数据表相关。 与每张表每次只能定义一种表样式相同，在特定的表样式中每列也只能定义一种列样式。 此关系在列的 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 属性中定义。  
   
- 如果已经创建了表样式，但未向其中添加列样式，则在运行时创建窗体和网格时，[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 将添加默认列样式。 然而，如果已经创建了表样式，并且向其中添加了列样式，那么 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 将不会创建任何列样式。 此外，还需要定义列样式，并向它们分配映射名称以便在网格中显示你希望显示的列。  
+ 如果你已经创建表样式，但未向其添加列样式，Visual Studio 将在运行时创建的窗体和网格时添加默认列样式。 但是，如果你已经创建了表样式，并向其添加任何列样式，Visual Studio 将不会创建任何列样式。 此外，还需要定义列样式，并向它们分配映射名称以便在网格中显示你希望显示的列。  
   
  由于数据网格中包含的列是通过向它们分配列样式指定的，而尚未向列分配列样式，因此可包含网格中未显示的数据集中的数据列。 然而，由于数据列包含在数据集中，因此可采用编程方式来编辑未显示的数据。  
   

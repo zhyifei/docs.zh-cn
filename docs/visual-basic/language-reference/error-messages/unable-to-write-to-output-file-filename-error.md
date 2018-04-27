@@ -16,11 +16,11 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ce97bcb2dd0de774c1a82ae75ef5b83c02467edb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>无法写入输出文件&#39; &lt;filename&gt;&#39;:&lt;错误&gt;
 创建文件时出现问题。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/26/2018
   
 1.  再次编译此程序以查看错误是否重复出现。  
   
-2.  如果仍出现错误，请保存你的工作并重新启动 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。  
+2.  如果错误仍然存在，保存你的工作并重新启动 Visual Studio。  
   
 3.  如果仍出现错误，请重新启动计算机。  
   

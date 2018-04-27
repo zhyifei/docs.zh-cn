@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6b61f5ae7d0e7f3102e0566fb1a6eff3ca072d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca790f97eb677414655b583e46cb693506ed0cc2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
-本节介绍 [!INCLUDE[wf](../../../includes/wf-md.md)] 的编程模型、示例和工具。  
+本部分介绍编程模型、 示例和工具的 Windows Workflow Foundation (WF)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Windows Workflow 文档使用指南](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
@@ -40,16 +40,16 @@ ms.lasthandoff: 12/22/2017
  介绍 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 的 Windows Workflow Foundation 中的新功能  
   
  [Windows Workflow 概念性概述](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md)  
- 一组介绍 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 背后较大概念的主题。  
+ 一组的主题讨论了 Windows Workflow Foundation 背后重要概念。  
   
  [入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- 一组介绍 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 应用程序编程的演练主题。  
+ 向你介绍 Windows Workflow Foundation 应用程序编程的演练主题一组。  
   
  [Windows Workflow Foundation 编程](../../../docs/framework/windows-workflow-foundation/programming.md)  
  要成为一名熟练的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 程序员所应该了解的一组入门知识主题。  
   
  [扩展 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md)  
- 一组介绍如何扩展或自定义 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 以符合您需求的主题。  
+ 一组的主题讨论如何扩展或自定义 Windows Workflow Foundation，以满足你的需求。  
   
  [针对 .NET Framework 4.5 的 Windows Workflow Foundation 词汇表](../../../docs/framework/windows-workflow-foundation/glossary.md)  
  定义 WF 专用的术语列表。  

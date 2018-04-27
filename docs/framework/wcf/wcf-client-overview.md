@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 491cbf19ac3c8f1817b12c895655ca1958972a62
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 客户端概述
 本节描述客户端应用程序可以做什么，如何配置、创建和使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 客户端，以及如何保护客户端应用程序。  
@@ -73,11 +73,11 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  为了演示如何使用 <xref:System.ServiceModel.ClientBase%601> 类，现假设已从服务应用程序生成了下面的简单服务协定。  
   
 > [!NOTE]
->  如果您是使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端，则当您将一个服务引用添加到项目中时，对象将自动加载到对象浏览器中。  
+>  如果你使用 Visual Studio 来创建你[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]客户端，对象将自动加载到对象浏览器添加到你的项目的服务引用时。  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 如果您不是使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，则请检查已生成的协定代码以查找扩展 <xref:System.ServiceModel.ClientBase%601> 的类型以及服务协定接口 `ISampleService`。 在这种情况下，该类型看上去类似下列代码：  
+ 如果你不使用 Visual Studio，检查生成的协定代码以查找扩展的类型<xref:System.ServiceModel.ClientBase%601>以及服务协定接口`ISampleService`。 在这种情况下，该类型看上去类似下列代码：  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   

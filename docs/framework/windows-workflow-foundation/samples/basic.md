@@ -1,26 +1,27 @@
 ---
 title: Basic1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ec3fe498bc76c5fe7221d14c8af219420037c14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f10a7789c60f6e5e0734f4f0c93e7e088162e7f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="basic"></a>Basic
-本节提供演示基本 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能的示例。  
+本节提供演示基本的 Windows Workflow Foundation (WF) 功能的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [内置活动](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
@@ -42,10 +43,10 @@ ms.lasthandoff: 12/22/2017
  包含演示执行工作流的示例。  
   
  [表达式](../../../../docs/framework/windows-workflow-foundation/samples/expressions.md)  
- 包含演示 [!INCLUDE[wf](../../../../includes/wf-md.md)] 表达式的示例。  
+ 包含演示 Windows Workflow Foundation (WF) 表达式的示例。  
   
  [迁移](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
- 包含演示如何迁移使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 早期版本创建的工作流的示例。  
+ 包含演示如何创建与以前版本的 Windows Workflow Foundation (WF) 的迁移工作流的示例。  
   
  [持久性](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
  包含演示如何将工作流保存在持久介质中的示例。  
@@ -63,6 +64,6 @@ ms.lasthandoff: 12/22/2017
  包含演示工作流事务的示例。  
   
  [验证](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
- 包含演示 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 中的验证的示例。  
+ 包含演示 Windows Workflow Foundation 中的验证的示例。  
   
 ## <a name="reference"></a>参考

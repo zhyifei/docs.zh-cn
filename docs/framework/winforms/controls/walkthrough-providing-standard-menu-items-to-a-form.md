@@ -1,12 +1,13 @@
 ---
-title: "演练：向窗体提供标准菜单项"
-ms.custom: 
+title: 演练：向窗体提供标准菜单项
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 89089617a62ab079dd4cccf3ddf6e1e774bac8ba
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 00988266804207e85bc715342f888fd29348066e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>演练：向窗体提供标准菜单项
 可使用 <xref:System.Windows.Forms.MenuStrip> 控件向窗体提供标准菜单。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
--   若要能够创建和运行的计算机上的 Windows 窗体应用程序项目的足够权限其中[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]安装。  
+-   若要能够创建和运行 Windows 窗体应用程序项目的计算机上安装了 Visual Studio 的足够权限。  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建项目并设置窗体。  

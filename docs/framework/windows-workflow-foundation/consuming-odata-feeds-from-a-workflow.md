@@ -1,29 +1,30 @@
 ---
-title: "使用工作流中的 OData 源"
-ms.custom: 
+title: 使用工作流中的 OData 源
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>使用工作流中的 OData 源
 WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的一个组件，可以使用此组件创建一些服务，利用开放式数据协议 (OData) 来借助具象状态传输 (REST) 语义通过 Web 或 Intranet 公开和使用数据。 OData 将数据公开为可通过 URI 进行寻址的资源。 如果任一应用程序可发送 HTTP 请求并处理数据服务返回的 OData 源，则该应用程序可与基于 OData 的数据服务进行交互。 此外，WCF 数据服务包括多个客户端库，当从 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序使用 OData 源时，这些客户端库会提供更丰富的编程体验。 本主题概述如何在使用/未使用客户端库的情况下，在工作流中使用 OData 源。  
   
 ## <a name="using-the-sample-northwind-odata-service"></a>使用示例 Northwind OData 服务  
- 本主题中的示例使用 [http://services.odata.org/Northwind/Northwind.svc/](http://go.microsoft.com/fwlink/?LinkID=187426)上的示例 Northwind 数据服务。 此服务作为 [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) 的一部分提供，它提供了对示例 Northwind 数据库的只读访问。 如果需要写权限或需要本地 WCF 数据服务，可按照 [WCF 数据服务快速入门](http://go.microsoft.com/fwlink/?LinkID=131076) 中的步骤执行操作，以创建可提供对 Northwind 数据库的访问的本地 OData 服务。 如果按照该快速入门中的步骤执行操作，则会用本地 URI 代替本主题中的代码示例中提供的 URI。  
+ 本主题中的示例使用示例 Northwind 数据服务[ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426)。 此服务作为 [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) 的一部分提供，它提供了对示例 Northwind 数据库的只读访问。 如果需要写权限或需要本地 WCF 数据服务，可按照 [WCF 数据服务快速入门](http://go.microsoft.com/fwlink/?LinkID=131076) 中的步骤执行操作，以创建可提供对 Northwind 数据库的访问的本地 OData 服务。 如果按照该快速入门中的步骤执行操作，则会用本地 URI 代替本主题中的代码示例中提供的 URI。  
   
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>通过客户端库使用 OData 源  
  WCF 数据服务包括一些客户端库，使您能够通过 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 和客户端应用程序更轻松地使用 OData 源。 这些库简化了 HTTP 消息的发送和接收。 它们还可将消息负载转换为代表实体数据的 CLR 对象。 客户端库具有两个核心类 <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 通过使用这些类，可以查询数据服务，然后作为 CLR 对象使用返回的实体数据。 本节介绍了用于创建使用客户端库的活动的两种方法。  
@@ -36,13 +37,13 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  请注意，此服务未公开任何服务操作，并且 **“服务”** 列表中包含表示由 Northwind 数据服务公开的实体的项目。 在添加服务引用时，将为这些实体生成类，并可在客户端代码中使用生成的类。 本主题中的示例使用这些类和 `NorthwindEntities` 类来执行查询。  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][生成数据服务客户端库 （WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkID=191611)。  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [生成数据服务客户端库 （WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkID=191611)。  
   
 ### <a name="using-asynchronous-methods"></a>使用异步方法  
- 若要解决在通过 Web 访问资源时可能发生的延迟问题，建议您异步访问 WCF 数据服务。 WCF 数据服务客户端库包括用于调用查询的异步方法，而 [!INCLUDE[wf](../../../includes/wf-md.md)] 提供了用于创作异步活动的 <xref:System.Activities.AsyncCodeActivity> 类。 可写入<xref:System.Activities.AsyncCodeActivity> 派生的活动以利用具有异步方法的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类，或者可将要异步执行的代码放入某个方法中并使用委托进行调用。 本节提供了 <xref:System.Activities.AsyncCodeActivity> 派生的活动的两个示例；一个示例使用 WCF 数据服务客户端库的异步方法，另一个示例使用委托。  
+ 若要解决在通过 Web 访问资源时可能发生的延迟问题，建议您异步访问 WCF 数据服务。 WCF 数据服务客户端库包括用于调用查询的异步方法和 Windows Workflow Foundation (WF) 提供<xref:System.Activities.AsyncCodeActivity>用于创作异步活动的类。 可写入<xref:System.Activities.AsyncCodeActivity> 派生的活动以利用具有异步方法的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类，或者可将要异步执行的代码放入某个方法中并使用委托进行调用。 本节提供了 <xref:System.Activities.AsyncCodeActivity> 派生的活动的两个示例；一个示例使用 WCF 数据服务客户端库的异步方法，另一个示例使用委托。  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][异步操作 （WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193396)和[创建异步活动](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [异步操作 （WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193396)和[创建异步活动](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。  
   
 ### <a name="using-client-library-asynchronous-methods"></a>使用客户端库异步方法  
  <xref:System.Data.Services.Client.DataServiceQuery%601> 类提供 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 和 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法来异步查询 OData 服务。 这些方法可从 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 派生的类的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity> 重写调用。 当 <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 重写返回时，工作流会进入空闲状态（但不保持）；当完成异步工作时，运行时将调用 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 。  
@@ -77,7 +78,7 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  下面的示例定义了一个 `ListCustomers` 活动。 此活动将查询示例 Northwind 数据服务并返回一个包含 Northwind 数据库中的所有客户的 `List<Customer>` 。 异步工作由 `GetCustomers` 方法执行。 此方法将查询所有客户的服务，然后将这些客户复制到 `List<Customer>`。 然后，此方法会检查结果是否已分页。 如果结果已分页，则此方法会查询下一页结果的服务，再将这些结果添加到列表，然后继续操作直到检索到所有客户数据。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]WCF 数据服务中的分页，请参阅。 [如何：加载分页结果（WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193452)。  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF 数据服务中的分页，请参阅。 [如何：加载分页结果（WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193452)。  
   
  在添加所有客户后，将返回该列表。 活动的 `GetCustomers` 重写中指定了 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 方法。 由于该方法具有一个返回值，因此将创建一个 `Func<string, List<Customer>>` 来指定该方法。  
   
@@ -110,7 +111,7 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
   
  **返回的原始数据：**  
 **\<？ xml 版本 ="1.0"encoding ="utf-8"独立 ="yes"？ >**   
-**\<ContactName xmlns ="http://schemas.microsoft.com/ado/2007/08/dataservices"> Maria Anders\</ContactName >**在工作流中此示例中的代码无法合并到<xref:System.Activities.CodeActivity.Execute%2A>重写<xref:System.Activities.CodeActivity>-基于自定义活动，但也可以通过使用来完成相同的功能<xref:System.Activities.Expressions.InvokeMethod%601>活动。 利用 <xref:System.Activities.Expressions.InvokeMethod%601> 活动，工作流作者可调用类的静态和实例方法，并可选择异步调用指定方法。 在下面的示例中，将配置 <xref:System.Activities.Expressions.InvokeMethod%601> 活动以调用 <xref:System.Net.WebClient.DownloadString%2A> 类的 <xref:System.Net.WebClient> 方法并返回一个客户列表。  
+**\<ContactName xmlns ="http://schemas.microsoft.com/ado/2007/08/dataservices"> Maria Anders\</ContactName >** 在工作流中此示例中的代码无法合并到<xref:System.Activities.CodeActivity.Execute%2A>的重写<xref:System.Activities.CodeActivity>-基于自定义活动，但相同此外可以通过使用实现的功能<xref:System.Activities.Expressions.InvokeMethod%601>活动。 利用 <xref:System.Activities.Expressions.InvokeMethod%601> 活动，工作流作者可调用类的静态和实例方法，并可选择异步调用指定方法。 在下面的示例中，将配置 <xref:System.Activities.Expressions.InvokeMethod%601> 活动以调用 <xref:System.Net.WebClient.DownloadString%2A> 类的 <xref:System.Net.WebClient> 方法并返回一个客户列表。  
   
  [!code-csharp[CFX_WCFDataServicesActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#3)]  
   
@@ -129,11 +130,11 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  **xmlns:m ="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns ="http://www.w3.org/2005/Atom">**  
  **\<标题类型 ="text"> 订单 \< /t >**  
- **\<id > http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/订单\</id >**  
+ **\<id >http://services.odata.org/Northwind/Northwind.svc/Customers(ALFKI) /orders\</id >**  
  **\<更新 > 2010年-05-19T19:37:07Z\</ 更新 >**  
  **\<k rel ="自助"title ="Orders"href ="Orders"/ >**  
  **\<条目 >**  
- **\<id > http://services.odata.org/Northwind/Northwind.svc/Orders (10643)\</id >**  
+ **\<id >http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id >**  
  **\<标题类型 ="text"> \< /t >**  
  **\<更新 > 2010年-05-19T19:37:07Z\</ 更新 >**  
  **\<作者 >**  
@@ -142,4 +143,4 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  **\<k rel ="edit"title ="Order"href="Orders(10643)"/ >**  
  **\<k rel ="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **类型 ="应用程序/atom + xml; 键入 = entry"title ="客户"href ="订单 （10643）/客户"/ >**  
-**...**本示例提供了一个方法，工作流应用程序作者可通过该方法使用从 OData 服务返回的原始数据。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用 URI 访问 WCF 数据服务的详细信息，请参阅 [访问数据服务资源（WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193397) 和 [OData：URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)。
+**...** 本示例提供了一个方法，工作流应用程序作者可通过该方法使用从 OData 服务返回的原始数据。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用 URI 访问 WCF 数据服务的详细信息，请参阅 [访问数据服务资源（WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193397) 和 [OData：URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)。

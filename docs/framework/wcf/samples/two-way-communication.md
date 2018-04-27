@@ -1,24 +1,26 @@
 ---
-title: "双向通信"
-ms.custom: 
+title: 双向通信
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ea6ea34e83f9c813062620c5029ea4b812cd777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="two-way-communication"></a>双向通信
 本示例演示如何通过 MSMQ 执行事务处理双向排队通信。 本示例使用 `netMsmqBinding` 绑定。 在本例中，服务是一个自承载的控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -33,33 +35,33 @@ ms.lasthandoff: 12/22/2017
  本示例演示使用队列的双向通信。 客户端从事务范围内向队列发送采购订单。 服务接收订单、处理订单，然后在事务范围内使用队列中订单的状态回调客户端。 为了便于双向通信，客户端和服务都使用队列以便将采购订单和订单状态排入队列。  
   
  服务协定 `IOrderProcessor` 定义适合使用队列的单向服务操作。 服务操作包括用于向其发送订单状态的答复终结点。 答复终结点是用于将订单状态发回客户端的队列的 URI。 订单处理应用程序实现下面的协定。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
-}  
-```  
+}
+```
   
  用于发送订单状态的答复协定由客户端指定。 客户端实现订单状态协定。 服务使用下面协定的生成的代理将订单状态发回客户端。  
-  
-```  
+
+```csharp
 [ServiceContract]  
 public interface IOrderStatus  
 {  
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-```  
-  
+```
+
  服务操作处理提交的采购订单。 对服务操作应用 <xref:System.ServiceModel.OperationBehaviorAttribute> 以在用于从队列中接收消息的事务中指定自动登记，并指定在服务操作完成时事务自动完成。 `Orders` 类封装了订单处理功能。 在本例中，它将采购订单添加到字典。 `Orders` 类中的操作可以使用服务操作登记的事务。  
   
  服务操作除了处理提交的采购订单之外，还向客户端答复有关订单状态的信息。  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)  
 {  
@@ -79,16 +81,16 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
     //Close the client.  
     client.Close();  
 }  
-```  
-  
+```
+
  MSMQ 队列名称是在配置文件的 appSettings 节中指定的。 服务的终结点是在配置文件的 System.ServiceModel 节中定义的。  
   
 > [!NOTE]
 >  MSMQ 队列名称和终结点地址使用略有不同的寻址约定。 MSMQ 队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点地址指定一个 net.msmq: 方案，使用“localhost”来表示本地计算机，并在其路径中使用正斜杠。 若要从在远程计算机上承载的队列读取数据，请将“.”和“localhost”替换为远程计算机名称。  
   
  服务是自承载服务。 使用 MSMQ 传输时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，该服务检查队列是否存在并在必要时创建队列。 从配置文件中读取队列名称。 基址由[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)来生成到服务代理。  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -112,11 +114,11 @@ public static void Main()
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  客户端创建事务。 与队列的通信在事务范围内进行，从而可以将事务范围视为所有消息在其中成功或失败的原子单元。  
-  
-```  
+
+```csharp
 // Create a ServiceHost for the OrderStatus service type.  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
 {  
@@ -152,11 +154,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  客户端代码实现 `IOrderStatus` 协定以便从服务接收订单状态。 在本例中，它输出订单状态。  
-  
-```  
+
+```csharp
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
@@ -168,8 +170,8 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-```  
-  
+```
+
  订单状态队列在 `Main` 方法中创建。 客户端配置包括订单状态服务配置，以便承载订单状态服务，如下面的示例配置所示。  
   
 ```xml  
@@ -323,7 +325,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 3.  本示例中的服务在 `OrderProcessorService` 中创建一个绑定。 实例化该绑定后添加一行代码以将安全模式设置为 `None`。  
   
-    ```  
+    ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  

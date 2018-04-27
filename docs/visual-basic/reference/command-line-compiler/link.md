@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4410818b43c0ab12f9488198fffbe4b0f2d89252
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4699e3adfd83a35ee81a5c8838e300adf6ecf667
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-link-visual-basic"></a>-链接 (Visual Basic)
 使编译器让指定程序集中的 COM 类型信息可供当前正在编译的项目使用。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/22/2018
 > [!NOTE]
 >  在代码中创建嵌入 COM 类型的实例时，必须使用适当的接口创建该实例。 尝试使用组件类创建嵌入 COM 类型的实例会导致错误。  
   
- 若要在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中设置 `-link` 选项，请添加程序集引用并将 `Embed Interop Types` 属性设置为 **true**。 `Embed Interop Types` 属性的默认值为 **false**。  
+ 若要设置`-link`选项在 Visual Studio 中，添加程序集引用并设置`Embed Interop Types`属性**true**。 `Embed Interop Types` 属性的默认值为 **false**。  
   
  如果链接到本身引用了其他 COM 程序集（程序集 B）的 COM 程序集（程序集 A），则在满足以下任一条件时，还必须链接到程序集 B：  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 03/22/2018
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [演练：嵌入托管程序集中的类型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  [-参考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  

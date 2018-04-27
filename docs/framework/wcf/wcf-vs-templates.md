@@ -1,30 +1,32 @@
 ---
-title: "WCF Visual Studio 模板"
-ms.custom: 
+title: WCF Visual Studio 模板
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 模板
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 模板是预定义的项目和项模板，可在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中用于快速生成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务和周边应用程序。  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Visual Studio 模板是预定义的项目和项模板，你可以使用 Visual Studio 中快速生成[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务和周边应用程序。  
   
 ## <a name="using-the-wcf-templates"></a>使用 WCF 模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 模板为服务开发提供基本的类结构。 具体地说，这些模板提供服务协定、数据协定、服务实现和配置的基本定义。 可以使用这些模板创建代码交互最少的简单服务以及更高级的服务的构造块。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Visual Studio 模板为服务开发提供基本的类结构。 具体地说，这些模板提供服务协定、数据协定、服务实现和配置的基本定义。 可以使用这些模板创建代码交互最少的简单服务以及更高级的服务的构造块。  
   
 ### <a name="wcf-service-library-project-template"></a>WCF 服务库项目模板  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务库项目模板将显示在新项目对话框在下**Visual C# \WCF**和**Visual Basic\WCF**。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/19/2018
 -   应用程序配置文件 (App.config)。 该配置文件为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务模型的基本元素提供安全的 HTTP 绑定。 它还包括一个服务终结点，并启用了元数据交换。  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]被配置为使用运行时为该项目的配置文件中识别 App.config 文件[WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)，这是默认配置。 如果在可执行文件中承载服务库，则由于 DLL 的配置文件无效，必须将配置代码移动到可执行文件的配置文件。  
+>  Visual Studio 配置为将 App.config 文件识别为项目的配置文件，运行使用时[WCF 服务主机 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)，这是默认配置。 如果在可执行文件中承载服务库，则由于 DLL 的配置文件无效，必须将配置代码移动到可执行文件的配置文件。  
   
 ### <a name="wcf-service-application-template"></a>WCF 服务应用程序模板  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务应用程序模板将显示在新项目对话框在下**Visual C# \WCF**和**Visual Basic\WCF**。  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]网站模板将显示在新项目对话框在下**Visual C# \Web Site\WCF 服务**和**Visual Basic\Web Site\WCF 服务**。 这将创建与 WCF 服务应用程序模板相同的文件，但按照它是 ASP.NET 网站来进行组织。 创建 App_Code 和 App_Data 文件夹。  
   
 ### <a name="wcf-service-item-template"></a>WCF 服务项模板  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项模板是一个自定义模板，通过该模板可以快速将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务添加到现有的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 项目。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务项模板是一种要添加的快速方法的自定义模板[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务添加到现有 Visual Studio 项目。  
   
  若要使用此模板，请转到**解决方案资源管理器**窗格中，右键单击你的项目名称，指向**添加**，然后单击**新项**以启动**添加新项**对话框。  
   
@@ -70,15 +72,15 @@ ms.lasthandoff: 01/19/2018
  如果现有项目是 Web 项目，则也会创建服务主机文件 (service1.svc)。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF 服务项目和项模板。  
- 这些模板将创建承载工作流服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，工作流服务是可像 Web 服务那样被访问的工作流。 XAML 或命令式编程模型具有单独的模板。 通过使用模板，可以创建顺序工作流或状态机工作流。 有关这些类型的工作流的详细信息，请参阅[Windows Workflow Foundation 教程](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]创建工作流项目，请参阅[创建旧版工作流项目](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
+ 这些模板将创建承载工作流服务的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，工作流服务是可像 Web 服务那样被访问的工作流。 XAML 或命令式编程模型具有单独的模板。 通过使用模板，可以创建顺序工作流或状态机工作流。 有关这些类型的工作流的详细信息，请参阅[Windows Workflow Foundation 教程](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 创建工作流项目，请参阅[创建旧版工作流项目](/visualstudio/workflow-designer/creating-legacy-workflow-projects)。  
   
- 当使用 XOML 类型的工作流来代替基于代码的工作流时，[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 设计器的响应能力较强。 XOML 工作流是要创建的默认工作流类型。  
+ 使用工作流的 XOML 类型代替基于代码的是，visual Studio 设计器时更快地响应。 XOML 工作流是要创建的默认工作流类型。  
   
 ### <a name="wcf-syndication-service-library-template"></a>WCF 联合服务库模板  
  通过使用此模板，可以将 RSS 或 ATOM 格式的源作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务公开。 有关详细信息，请参阅[WCF 联合](../../../docs/framework/wcf/feature-details/wcf-syndication.md)。  
   
 #### <a name="changing-the-address-of-the-feed"></a>更改源的地址  
- 在执行期间，联合模板使用 Internet Explorer。 当您右键单击你的项目中**解决方案资源管理器**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，选择**属性**，然后选择**调试**选项卡上，你可以查看的默认地址模板。 Internet Explorer 尝试在此地址打开源。  
+ 在执行期间，联合模板使用 Internet Explorer。 当您右键单击你的项目中**解决方案资源管理器**在 Visual Studio 中，选择**属性**，然后选择**调试**选项卡上，你可以查看的默认地址模板。 Internet Explorer 尝试在此地址打开源。  
   
  如果你更改你的源的地址，你还必须更改中的地址**调试**选项卡。如果不这样做，Internet Explorer 将尝试在默认地址打开源，从而失败。  
   

@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 77c69c5c39d90dcc28aa9c6084d84ace29df6f18
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows 窗体中更加安全的文件和数据访问
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用权限帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
  遇到安全限制时，你有两个选择：断言该权限（假设已将该权限授予你的应用程序），或者使用编写为用于部分信任中的功能版本。 以下各节探讨如何使用文件、数据库和在部分信任环境中运行的应用程序中的注册表访问。  
   
 > [!NOTE]
->  默认情况下，生成 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具默认这些部署从在其上运行的计算机请求完全信任。 如果决定要提升在部分信任中运行的安全优势，则必须在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中或 在 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 工具（Mage.exe 或 MageUI.exe）之一中更改此默认值。 有关 Windows 窗体安全性以及如何确定你的应用程序的适当信任级别的详细信息，请参阅[中的安全性 Windows 窗体概述](../../../docs/framework/winforms/security-in-windows-forms-overview.md)。  
+>  默认情况下，生成 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具默认这些部署从在其上运行的计算机请求完全信任。 如果你决定要添加的安全优势的以部分信任运行，则必须更改此默认设置在 Visual Studio 或之一[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]工具 （Mage.exe 或 MageUI.exe）。 有关 Windows 窗体安全性以及如何确定你的应用程序的适当信任级别的详细信息，请参阅[中的安全性 Windows 窗体概述](../../../docs/framework/winforms/security-in-windows-forms-overview.md)。  
   
 ## <a name="file-access"></a>文件访问  
  <xref:System.Security.Permissions.FileIOPermission> 类控制 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的文件和文件夹访问。 默认情况下，安全系统不会向本地 Intranet 和 Internet 区域等部分信任环境授予 <xref:System.Security.Permissions.FileIOPermission>。 但是，如果修改应用程序的设计或使用不同的方法访问文件，那么需要文件访问权限的应用程序仍可以在这些环境中正常工作。 默认情况下，将向本地 Intranet 区域授予以下权限：具有相同的站点访问权限和相同的目录访问权限、连回其源站点、从其安装目录进行读取。 默认情况下，仅向 Internet 区域授予连回其源站点的权限。  

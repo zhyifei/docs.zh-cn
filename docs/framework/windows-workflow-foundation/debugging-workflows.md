@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>调试工作流
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供多个用于从开发环境调试运行的工作流的选项。 可以在设计器、XAML 和代码中调试工作流。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  工作流调试还支持使用 Visual Studio 的基础结构附加到某个过程。 这使工作流创作者能够调试在另一个宿主环境（如 Internet 信息服务 (IIS) 7.0）中运行的工作流。  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
- [!INCLUDE[wf](../../../includes/wf-md.md)] 远程调试的函数与其他 Visual Studio 组件的远程调试相同。 有关使用远程调试的信息，请参阅[如何： 启用远程调试](http://go.microsoft.com/fwlink/?LinkId=196257)。  
+ Windows Workflow Foundation (WF) 的远程调试的函数与其他 Visual Studio 组件的远程调试相同。 有关使用远程调试的信息，请参阅[如何： 启用远程调试](http://go.microsoft.com/fwlink/?LinkId=196257)。  
   
 > [!NOTE]
 >  如果工作流应用程序针对 x86 体系结构并位于运行 64 位操作系统的计算机上远程调试将不工作，除非在远程计算机上安装 Visual Studio 或工作流应用程序的目标更改为**任何 CPU**。  

@@ -1,12 +1,13 @@
 ---
-title: "数据绑定和 Windows 窗体"
-ms.custom: 
+title: 数据绑定和 Windows 窗体
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master-details lists
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>数据绑定和 Windows 窗体
 在 Windows 窗体中，你不仅可以绑定到传统的数据源，还可以绑定到几乎任何包含数据的结构。 可以绑定到你在运行时、从文件读取时或从其他控件的值派生时计算的一数组值。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 |数据绑定的类型|描述|  
 |--------------------------|-----------------|  
-|简单数据绑定|控件绑定到单个数据元素（如数据集表的列中的值）的能力。 对于诸如 <xref:System.Windows.Forms.TextBox> 控件或 <xref:System.Windows.Forms.Label> 控件的控件，即通常只显示单个值的控件，通常使用这种绑定。 事实上，控件上的任何属性都可以绑定到数据库中的字段。 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，对此功能提供广泛支持。<br /><br /> 有关详细信息，请参见:<br /><br /> -   [与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [如何： 在 Windows 窗体中导航数据](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [如何： 创建 Windows 窗体上的简单绑定控件](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|简单数据绑定|控件绑定到单个数据元素（如数据集表的列中的值）的能力。 对于诸如 <xref:System.Windows.Forms.TextBox> 控件或 <xref:System.Windows.Forms.Label> 控件的控件，即通常只显示单个值的控件，通常使用这种绑定。 事实上，控件上的任何属性都可以绑定到数据库中的字段。 没有对 Visual Studio 中的此功能提供广泛支持。<br /><br /> 有关详细信息，请参见:<br /><br /> -   [与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [如何： 在 Windows 窗体中导航数据](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [如何： 创建 Windows 窗体上的简单绑定控件](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |复杂数据绑定|控件绑定一个以上数据元素（通常为一个数据库中的一个以上的记录）的能力。 复杂绑定也称基于列表的绑定。 支持复杂绑定的控件示例为 <xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.ListBox> 和 <xref:System.Windows.Forms.ComboBox> 控件。 复杂数据绑定的示例，请参阅[如何： 将 Windows 窗体 ComboBox 或 ListBox 控件绑定到数据](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)。|  
   
 ## <a name="bindingsource-component"></a>BindingSource 组件  

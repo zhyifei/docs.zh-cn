@@ -1,24 +1,26 @@
 ---
-title: "避免出现与 Using 语句有关的问题"
-ms.custom: 
+title: 避免出现与 Using 语句有关的问题
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 202bf02f017857a354a6f23270e49571c6240b26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd3065a21c1714b0643bfb87b731193d3367352f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a>避免出现与 Using 语句有关的问题
 本示例演示在使用类型化客户端时，不应使用 C# 的“using”语句自动清除资源。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  
@@ -32,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  `DemonstrateProblemUsingCanThrow` 方法中演示的第一个问题是，右大括号引发异常，不执行右大括号后面的代码：  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -44,7 +46,7 @@ Console.WriteLine("Hope this code wasn't important, because it might not happen.
   
  `DemonstrateProblemUsingCanThrowAndMask` 方法中演示的第二个问题是右大括号引发异常的另一种隐含情况：  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -57,7 +59,7 @@ using (CalculatorClient client = new CalculatorClient())
   
  最后，示例演示 `DemonstrateCleanupWithExceptions` 中发生异常时如何正确清除异常。 本示例使用 try/catch 块报告错误并调用 `Abort`。 请参阅[预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)示例有关捕获从客户端调用的异常详细信息。  
   
-```  
+```csharp   
 try  
 {  
     ...  

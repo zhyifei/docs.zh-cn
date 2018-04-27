@@ -1,24 +1,26 @@
 ---
-title: "使用消息凭据的 WS 传输"
-ms.custom: 
+title: 使用消息凭据的 WS 传输
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f782ac12c92755eb26eddd30c5d8c15168c35858
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>使用消息凭据的 WS 传输
 此示例演示如何将 SSL 传输安全与消息中传送的客户端凭据结合使用。 本示例使用 `wsHttpBinding` 绑定。  
@@ -33,15 +35,15 @@ ms.lasthandoff: 12/22/2017
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
  此示例中的程序代码在几乎等同于的[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)服务。 服务协定还提供了一个附加操作，即 `GetCallerIdentity`。 该操作向调用方返回调用方标识的名称。  
-  
-```  
+
+```csharp
 public string GetCallerIdentity()  
 {  
     // Use ServiceSecurityContext.WindowsIdentity to get the name of the caller.  
     return ServiceSecurityContext.Current.WindowsIdentity.Name;  
 }  
-```  
-  
+```
+
  必须在生成和运行示例之前使用 Web 服务器证书向导创建证书并分配此证书。 配置文件设置中的终结点定义和绑定定义可启用 `TransportWithMessageCredential` 安全模式，如下面的客户端示例配置所示。  
   
 ```xml  
@@ -72,13 +74,13 @@ public string GetCallerIdentity()
   
  指定的地址使用 https:// 方案。 绑定配置将安全模式设置为 `TransportWithMessageCredential`。 必须在服务的 Web.config 文件中指定相同的安全模式。  
   
- 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，所以当尝试从浏览器中访问 https: 地址（例如 https://localhost/servicemodelsamples/service.svc）时将出现安全警报。 为了允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端就地使用测试证书，已向客户端添加了一些附加代码，以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
-  
-```  
+ 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当你尝试访问 https 时显示安全警报： 地址，如https://localhost/servicemodelsamples/service.svc，从你的浏览器。 为了允许 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端就地使用测试证书，已向客户端添加了一些附加代码，以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
+
+```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
 // not recommended for production code.  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
-```  
+```
   
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   

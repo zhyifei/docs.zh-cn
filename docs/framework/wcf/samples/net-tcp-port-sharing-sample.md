@@ -1,24 +1,26 @@
 ---
-title: "Net.TCP 端口共享示例"
-ms.custom: 
+title: Net.TCP 端口共享示例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dea3a0f0d69662021c78b0f1d57ad0ba8c11fcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP 端口共享示例
 TCP/IP 协议使用一个称为端口的 16 位数字来区分与在同一台计算机上运行的多个网络应用程序的连接。 如果某个应用程序正在侦听一个端口，则此端口的所有 TCP 通信将转至该应用程序。 其他应用程序无法同时侦听此端口。  
@@ -46,8 +48,8 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
   
 ## <a name="enabling-port-sharing"></a>启用端口共享  
  下面的代码演示如何在服务器上启用端口共享。 它在具有随机 URI 路径的固定端口上启动 `ICalculator` 服务的一个实例。 即使两个服务可以共享同一端口，但它们的整体终结点地址仍必须是唯一的，以便 NetTcp Port Sharing Service 可以将消息路由到正确的应用程序。  
-  
-```  
+
+```csharp
 // Configure a binding with TCP port sharing enabled  
 NetTcpBinding binding = new NetTcpBinding();  
 binding.PortSharingEnabled = true;  
@@ -59,8 +61,8 @@ string address =
    String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
-```  
-  
+```
+
  启用端口共享后，可以多次运行此服务，而不会引起端口号冲突。 如果更改代码以禁用端口共享，则启动服务的两个副本将导致第二个副本失败，并出现 <xref:System.ServiceModel.AddressAlreadyInUseException>。  
   
 ```  
@@ -69,8 +71,8 @@ Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is 
   
 ## <a name="running-the-sample"></a>运行示例  
  可以使用测试客户端来检查消息是否正确路由到共享端口的服务。  
-  
-```  
+
+```csharp
 class client  
 {  
    static void Main(string[] args)  
@@ -112,8 +114,8 @@ class client
       factory.Close();  
    }  
 }  
-```  
-  
+```
+
  服务的每个实例将输出其唯一的编号和地址。 例如，运行 service.exe 时可能会看到以下文本。  
   
 ```  

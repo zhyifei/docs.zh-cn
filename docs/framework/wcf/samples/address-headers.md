@@ -1,24 +1,26 @@
 ---
-title: "地址标头"
-ms.custom: 
+title: 地址标头
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aafd6ec911464dcc2b936b9f9fc74b9bc39808bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1392e06b0148ee24c9591839b58baf45da5109d4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="address-headers"></a>地址标头
 “地址标头”示例演示客户端如何将引用参数传递给使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的服务。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="client"></a>客户端  
  若要使客户端发送引用参数，该客户端必须向 `AddressHeader` 的 `EndpointAddress` 添加一个 `ServiceEndpoint`。 由于 `EndpointAddress` 类是不可变的，因此必须使用 `EndpointAddressBuilder` 类来完成终结点地址的修改。 下面的代码将客户端初始化为作为其消息的一部分来发送引用参数。  
   
-```  
+```csharp   
 HelloClient client = new HelloClient();  
 EndpointAddressBuilder builder =   
     new EndpointAddressBuilder(client.Endpoint.Address);  
@@ -54,23 +56,21 @@ client.Endpoint.Address = builder.ToEndpointAddress();
 ## <a name="server"></a>服务器  
  服务操作 `Hello()` 的实现使用当前 `OperationContext` 来检查传入消息上标头的值。  
   
-```  
+```csharp   
 string id = null;  
 // look at headers on incoming message  
 for (int i = 0;   
      i < OperationContext.Current.IncomingMessageHeaders.Count;   
      ++i)  
 {  
-    MessageHeaderInfo h =   
-        OperationContext.Current.IncomingMessageHeaders[i];  
+    MessageHeaderInfo h = OperationContext.Current.IncomingMessageHeaders[i];  
     // for any reference parameters with the correct name & namespace  
     if (h.IsReferenceParameter &&   
         h.Name == IDName &&   
         h.Namespace == IDNamespace)  
     {  
         // read the value of that header  
-        XmlReader xr =   
-OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
+        XmlReader xr = OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
         id = xr.ReadElementContentAsString();  
     }  
 }  

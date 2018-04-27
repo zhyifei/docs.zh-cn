@@ -1,23 +1,24 @@
 ---
-title: "属性提升活动"
-ms.custom: 
+title: 属性提升活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12f7aa4bd10a22a3cd3ea361e32016b95e41e46b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-promotion-activity"></a>属性提升活动
 本示例提供了将 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能直接集成到工作流创作体验的端到端解决方案。 提供了一组用于简化对提升功能的使用的配置元素、工作流活动和工作流扩展。 此外，该示例包含一个演示如何使用此集合的简单工作流。  
@@ -109,7 +110,7 @@ go
  `promotedValue` 元素的顺序与已提升的属性在 `InstancePromotedProperties` 视图中的位置有关。 `Count` 是第一个 `promotedValue` 元素。 因此，它将映射到 `Value1` 视图中的 `InstancePromotedProperties` 列。 `LastIncrementedAt` 是第二个 `promotedValue` 元素。 因此，它将映射到 `Value2` 视图中的 `InstancePromotedProperties` 列。  
   
 #### <a name="using-the-promotevalue-activity"></a>使用 PromoteValue 活动  
- 检查 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 设计器中的 CounterService.xamlx 文件。 请注意，WF 定义中包含两个特殊活动：`PromoteValue<DateTime>` 和 `PromoteValue<Int32>`。  
+ 检查 Windows Workflow Foundation 设计器中的 CounterService.xamlx 文件。 请注意，WF 定义中包含两个特殊活动：`PromoteValue<DateTime>` 和 `PromoteValue<Int32>`。  
   
  `PromoteValue<Int32>` 活动的 `Name` 成员已定义为 `Count`。 这与配置中的第一个 `promotedValue` 元素匹配，并且其 `Value` 已定义为 `Counter` 工作流变量。 当工作流保留时，`Counter` 工作流变量将作为已提升的属性保留到 `Value1` 视图的 `InstancePromotedProperties` 列中。  
   

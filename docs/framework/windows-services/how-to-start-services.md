@@ -1,27 +1,29 @@
 ---
-title: "如何：启动服务"
-ms.custom: 
+title: 如何：启动服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e27f579c0ed7d1be0b061bc6e79bba0c060abb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-start-services"></a>如何：启动服务
 安装的服务后，必须启动。 从开始调用<xref:System.ServiceProcess.ServiceBase.OnStart%2A>服务类的方法。 通常情况下，<xref:System.ServiceProcess.ServiceBase.OnStart%2A>方法定义有用的服务将执行的工作。 服务启动后，它保持活动状态直到被手动暂停或停止。  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  服务可以设置自动或手动启动。 重新启动或首次打开在其安装的计算机时，将启动服务，它会自动启动。 用户必须启动手动启动服务。  
   
 > [!NOTE]
->  默认情况下，使用创建服务[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]设置为手动启动。  
+>  默认情况下，使用 Visual Studio 创建的服务设置为手动启动。  
   
  有几种方法，你可以手动启动服务 — 从**服务器资源管理器**，从**服务控制管理器**，或代码中使用的组件调用<xref:System.ServiceProcess.ServiceController>。  
   

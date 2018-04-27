@@ -1,29 +1,30 @@
 ---
-title: "COM 互操作介绍 (Visual Basic)"
-ms.custom: 
+title: COM 互操作介绍 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a13fabd729218dc2a980b9c63e153d17a140cce
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM 互操作介绍 (Visual Basic)
 组件对象模型 (COM) 允许到其他组件和承载应用程序公开其功能的对象。 COM 对象进行了 Windows 编程多年的基础，而应用程序面向公共语言运行时 (CLR) 提供了许多优点。  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]com 开发的那些，最终将取代应用程序 到那时，你可能必须使用或通过创建 COM 对象[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。 与 COM 互操作性或*COM 互操作*，使你能够使用现有的 COM 对象时转换到[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]在自己的进度。  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] com 开发的那些，最终将取代应用程序 到那时，你可能需要使用或通过使用 Visual Studio 创建 COM 对象。 与 COM 互操作性或*COM 互操作*，使你能够使用现有的 COM 对象时转换到[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]在自己的进度。  
   
  通过使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]若要创建 COM 组件，你可以使用免注册 COM 互操作。 这使您控制当多个版本的计算机上，安装并允许最终用户使用 XCOPY 或 FTP 将复制到其计算机上的相应目录的应用程序可以运行它的位置时，才启用哪个 DLL 版本。 有关详细信息，请参阅[免注册 COM 互操作](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)。  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 12/21/2017
  有关程序集和程序集清单的详细信息，请参阅[程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。  
   
 ### <a name="importing-and-exporting-type-libraries"></a>导入和导出类型库  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]包含一个实用工具，Tlbimp，它允许你从类型库到导入信息[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。 通过使用 Tlbexp 实用程序，可以从程序集生成类型库。  
+ Visual Studio 包含一个实用工具，Tlbimp，它允许你从类型库到导入信息[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]应用程序。 通过使用 Tlbexp 实用程序，可以从程序集生成类型库。  
   
  有关 Tlbimp 和 Tlbexp 的信息，请参阅[Tlbimp.exe （类型库导入程序）](../../../framework/tools/tlbimp-exe-type-library-importer.md)和[Tlbexp.exe （类型库导出程序）](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)。  
   

@@ -889,11 +889,11 @@ ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c6cabc4c619e6ace4c376fd125e7531f10bf9b88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>抱歉，我们不&#39;t 对此 C# 错误的详细信息
 很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可以咨询其他开发人员，使用以下论坛之一：  
@@ -902,7 +902,7 @@ ms.lasthandoff: 04/26/2018
  提供论坛供有关的问题及常规讨论的 Visual C# 语言的语法和编译器。  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- 提供针对如何在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 环境中工作的问题的论坛。  
+ 提供有关如何在 Visual Studio 环境中的问题的论坛。  
   
  [Visual C# 常见问题解答](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  提供论坛供大家讨论有关，因此会发出与 Visual C# 编写其他论坛中未涉及。  

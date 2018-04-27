@@ -1,24 +1,26 @@
 ---
-title: "已经过事务处理的 MSMQ 绑定"
-ms.custom: 
+title: 已经过事务处理的 MSMQ 绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 702f3ac45ade5fcd2f37d256ce1213a79f012ae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-msmq-binding"></a>已经过事务处理的 MSMQ 绑定
 本示例演示如何使用消息队列 (MSMQ) 执行已经过事务处理的排队通信。  
@@ -33,19 +35,19 @@ ms.lasthandoff: 12/22/2017
  在本示例中，客户端在事务范围内向服务发送一批消息。 然后，服务在服务定义的事务范围内接收发送到队列的消息。  
   
  服务协定为 `IOrderProcessor`，如下面的示例代码所示。 此接口定义了适合与队列一起使用的单向服务。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  服务行为通过将 `TransactionScopeRequired` 设置为 `true` 来定义操作行为。 这可确保此方法所访问的任何资源管理器都使用相同的事务范围从队列中检索消息。 它还确保在方法引发异常的情况下，将消息返回到队列。 如果未设置操作行为，队列通道会创建一个从队列中读取消息的事务，并在调度前自动提交该事务，这样当操作失败时，消息将丢失。 对于服务操作而言，最常见的方案是在用于从队列中读取消息的事务中进行登记，如下面的代码中所示。  
-  
-```  
+
+```csharp
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -58,11 +60,11 @@ public interface IOrderProcessor
      }  
   …  
 }  
-```  
-  
+```
+
  服务是自承载服务。 使用 MSMQ 传输时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，该服务包含代码，以检查队列是否存在并在不存在时创建队列。 从配置文件中读取队列名称。 基址由[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)来生成到服务代理。  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -89,8 +91,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。  
   
 ```xml  
@@ -103,8 +105,8 @@ public static void Main()
 >  队列名称为本地计算机使用圆点 (.)，并在使用 <xref:System.Messaging> 创建队列时在其路径中使用反斜杠分隔符。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 终结点使用具有 net.msmq 方案的队列地址，使用“localhost”来表示本地计算机，并在其路径中使用正斜杠。  
   
  客户端创建事务范围。 与队列的通信发生在事务范围之内，从而可将该事务范围视为原子单元，其中所有消息均将发送到队列或者没有任何消息发送到队列。 通过在事务范围上调用 <xref:System.Transactions.TransactionScope.Complete%2A> 可以提交事务。  
-  
-```  
+
+```csharp
 // Create a client.  
 OrderProcessorClient client = new OrderProcessorClient();  
   
@@ -142,14 +144,14 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  若要验证事务正在运行，请按照下面的示例代码注释事务范围来修改客户端，重新生成解决方案并运行客户端。  
-  
-```  
+
+```csharp
 //scope.Complete();  
-```  
-  
+```
+
  因为事务没有完成，所以消息未发送到队列。  
   
  运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。  

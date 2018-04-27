@@ -1,13 +1,13 @@
 ---
-title: "如何：更改 Windows 窗体的边框"
-ms.custom: 
+title: 如何：更改 Windows 窗体的边框
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,22 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e977617f16ef882ad0dcfe1a96a6e8af73d2ae48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 936d9d67454a272e79990f2e1b432391ecdc26a5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>如何：更改 Windows 窗体的边框
 当确定 Windows 窗体的外观和行为时，有几种边框样式可供选择。 通过更改 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 属性，可控制窗体调整大小的行为。 此外，设置 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 会影响标题栏的显示方式以及其上出现的按钮布局。 有关详细信息，请参阅<xref:System.Windows.Forms.FormBorderStyle>。  
   
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中对此任务提供广泛支持。  
+ Visual Studio 中对此任务提供广泛支持。  
   
  另请参阅[如何： 更改使用设计器的 Windows 窗体的边框](http://msdn.microsoft.com/library/yettzh3e\(v=vs.110\))。  
   

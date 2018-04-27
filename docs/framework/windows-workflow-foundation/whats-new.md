@@ -17,14 +17,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>什么&#39;s Windows Workflow Foundation 中的新增功能
-[!INCLUDE[wf](../../../includes/wf-md.md)]中的 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 对以前版本中的多个开发范例进行了更改。 现在，工作流可以更方便地创建、执行、维护和实现许多新功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
+中的 Windows Workflow Foundation (WF)[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]从以前的版本更改多个开发范例。 现在，工作流可以更方便地创建、执行、维护和实现许多新功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
   
 ## <a name="workflow-activity-model"></a>工作流活动模型  
  现在，活动是创建工作流的基本单元，它取代了使用的 <xref:System.Workflow.Activities.SequentialWorkflowActivity> 或 <xref:System.Workflow.Activities.StateMachineWorkflowActivity> 类。 <xref:System.Activities.Activity> 类提供工作流行为的抽象基类。 然后，活动作者可以实现基本自定义活动的 <xref:System.Activities.CodeActivity> 功能，或实现使用运行时范围的自定义活动功能的 <xref:System.Activities.NativeActivity>。 <xref:System.Activities.Activity> 是活动作者用于 express 以声明方式在其他方面的新行为的类<xref:System.Activities.NativeActivity>， <xref:System.Activities.CodeActivity>， <xref:System.Activities.AsyncCodeActivity>，或<xref:System.Activities.DynamicActivity>对象，无论它们是自定义方式开发或不包含在[内置活动库](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)。  

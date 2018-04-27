@@ -1,12 +1,13 @@
 ---
-title: "演练：创建可扩展的应用程序"
-ms.custom: 
+title: 演练：创建可扩展的应用程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - add-in-side adapter [.NET Framework]
 - contracts for add-in pipelines [.NET Framework]
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8946e30ac9d7a224af7801bc721e7d9cf6e1fab0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>演练：创建可扩展的应用程序
 本演练介绍如何创建用于执行简单的计算器功能的外接程序的管道。 它并不演示实际方案;相反，它演示了管道以及如何外接程序可以提供主机服务的基本功能。  
@@ -61,14 +63,14 @@ ms.lasthandoff: 01/19/2018
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你需要具备以下条件：  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。  
+-   Visual Studio。  
   
 ## <a name="creating-a-visual-studio-solution"></a>创建 Visual Studio 解决方案  
- 使用一种解决方案[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]以包含的管道段的项目。  
+ 在 Visual Studio 中使用的解决方案包含的管道段项目。  
   
 #### <a name="to-create-the-pipeline-solution"></a>若要创建管道解决方案  
   
-1.  在[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，创建一个名为的新项目`Calc1Contract`。 使该项目基于**类库**模板。  
+1.  在 Visual Studio 中，创建一个名为的新项目`Calc1Contract`。 使该项目基于**类库**模板。  
   
 2.  将解决方案命名`CalculatorV1`。  
   

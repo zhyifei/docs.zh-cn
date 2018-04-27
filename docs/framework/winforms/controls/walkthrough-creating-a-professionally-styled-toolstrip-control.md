@@ -1,12 +1,13 @@
 ---
-title: "演练：创建具有专业样式的 ToolStrip 控件"
-ms.custom: 
+title: 演练：创建具有专业样式的 ToolStrip 控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 18ffb09e581b830329a0d32f11ae09d8b0f68788
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>演练：创建具有专业样式的 ToolStrip 控件
 可让你的应用程序<xref:System.Windows.Forms.ToolStrip>控制专业的外观和行为，通过编写您自己的类派生自<xref:System.Windows.Forms.ToolStripProfessionalRenderer>类型。  
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你将需要：  
   
--   若要能够创建和运行的计算机上的 Windows 窗体应用程序项目的足够权限其中[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]安装。  
+-   若要能够创建和运行 Windows 窗体应用程序项目的计算机上安装了 Visual Studio 的足够权限。  
   
 ## <a name="creating-a-windows-control-library-project"></a>创建 Windows 控件库项目  
  第一步是创建控件库项目。  
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
     |属性|值|  
     |--------------|-----------|  
-    |name|`stackStrip`|  
+    |名称|`stackStrip`|  
     |CanOverflow|`false`|  
     |停靠|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |字体|`Tahoma, 10pt, style=Bold`|  
@@ -90,9 +92,9 @@ ms.lasthandoff: 01/19/2018
   
     |属性|值|  
     |--------------|-----------|  
-    |name|`mailStackButton`|  
+    |名称|`mailStackButton`|  
     |CheckOnClick|true|  
-    |CheckState|<xref:System.Windows.Forms.CheckState.Checked>|  
+    |复选|<xref:System.Windows.Forms.CheckState.Checked>|  
     |DisplayStyle|<xref:System.Windows.Forms.ToolStripItemDisplayStyle.ImageAndText>|  
     |ImageAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
     |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  

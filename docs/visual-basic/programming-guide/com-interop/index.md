@@ -15,11 +15,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a2c418855cd2e79c31301705706ff1b98f119a97
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM 互操作 (Visual Basic)
 组件对象模型 (COM) 允许对象向其他组件和主机应用公开自己的功能。 如今的大部分软件都包含 COM 对象。 尽管 .NET 程序集是新应用的最佳选择，有时也建议使用 COM 对象。 本部分将介绍一些创建和使用 Visual Basic 中使用 COM 对象相关联的问题。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/26/2018
  介绍了如何添加对包含类型库的 COM 对象的引用。  
   
  [如何：使用 ActiveX 控件](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- 展示了如何使用现有 ActiveX 控件向 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 工具箱添加功能。  
+ 演示如何使用现有的 ActiveX 控件将功能添加到 Visual Studio 工具箱。  
   
  [演练：调用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  逐步介绍了如何调用属于 Windows 操作系统的 API。  

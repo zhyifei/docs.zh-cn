@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94eca5c2aad919fe46fa75626954e10bb68f1110
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b34a0118c9223e8d09bf56de39e3fea1b115688f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 性能
 Dustin Metzgar  
@@ -27,7 +27,7 @@ Dustin Metzgar
   
  Microsoft Corporation，2010 年 9 月  
   
- Microsoft [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 包括一个 [!INCLUDE[wf](../../../includes/wf-md.md)] 主要修订版，这一版本在性能方面进行了大量的投资。  与 .NET Framework 3.0 和 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中附带的前两版 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 相比，新修订版在设计上进行了重大的更改。 新版本对编程模型内核、运行时和工具均重新进行了架构设计，从而极大地提升了性能和可用性。 本主题会展示这些修订版的重要性能特征，并将它们与之前的版本进行比较。  
+ Microsoft[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]包括主要修订了大量的投资的 Windows Workflow Foundation (WF) 中性能。  与 .NET Framework 3.0 和 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中附带的前两版 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 相比，新修订版在设计上进行了重大的更改。 新版本对编程模型内核、运行时和工具均重新进行了架构设计，从而极大地提升了性能和可用性。 本主题会展示这些修订版的重要性能特征，并将它们与之前的版本进行比较。  
   
  在 WF3 和 WF4 之间，单个工作流组件的性能也都得到了几个数量级的提升。  这使手工编写的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流服务之间的差距变得相当微小。  在 WF4 中，工作流延迟也得到了显著的降低。  暂留性能提高了 2.5 至 3.0 倍。  采用工作流跟踪方式的运行状况监视显著降低了开销。  这些就是迁移到或在应用程序中采用 WF4 的令人心动的原因。  
   
@@ -192,7 +192,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  如所示在前面的部分中，"组件级性能比较"已显著降低了 WF3 和 WF4 之间的开销。  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流服务目前的性能几乎与手工编码的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务相当，但同时仍具备 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 运行时的所有优点。  此测试方案会将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务与 WF4 中的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流服务进行比较。  
   
 ### <a name="online-store-service"></a>在线商店服务  
- [!INCLUDE[wf2](../../../includes/wf2-md.md)] 的优势之一是能够使用几个服务撰写流程。  本例为一个在线商店服务，该服务会协调两个服务调用以采购订单。  第一步是使用订单验证服务验证订单。  第二步是使用仓库服务填写订单。  
+ Windows Workflow Foundation 的优势之一是编写使用多个服务的进程的能力。  本例为一个在线商店服务，该服务会协调两个服务调用以采购订单。  第一步是使用订单验证服务验证订单。  第二步是使用仓库服务填写订单。  
   
  订单验证服务和仓库服务这两个后端服务在两项测试中保持不变。  发生变化的部分是执行业务流程的在线商店服务。  在一种方案中，服务手工编码为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。  而在另一种方案中，服务编写为 WF4 中的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流服务。 在此项测试中，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 特定的功能（如跟踪和暂留）都会关闭。  
   
@@ -448,7 +448,7 @@ public class Workflow1 : Activity
  运行状况监视对吞吐量大约有 3% 的影响。  基本配置文件的成本大约为 8%。  
   
 ## <a name="interop"></a>Interop  
- WF4 几乎是对 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 完全重写，因此 WF3 工作流和活动不能与 WF4 直接兼容。  采用的许多客户[!INCLUDE[wf2](../../../includes/wf2-md.md)]尽早将有内部或第三方工作流定义和自定义活动的 WF3。  为了简化向 WF4 的迁移，一种方法是使用 Interop 活动，这种活动可以从 WF4 工作流中执行 WF3 活动。  建议仅在必要时才使用 <xref:System.Activities.Statements.Interop> 活动。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 迁移到 WF4 签出[WF4 迁移指南](http://go.microsoft.com/fwlink/?LinkID=153313)。  
+ WF4 几乎是对 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 完全重写，因此 WF3 工作流和活动不能与 WF4 直接兼容。  早期采用 Windows Workflow Foundation 的很多客户将适用于 WF3 将内部或第三方工作流定义和自定义活动。  为了简化向 WF4 的迁移，一种方法是使用 Interop 活动，这种活动可以从 WF4 工作流中执行 WF3 活动。  建议仅在必要时才使用 <xref:System.Activities.Statements.Interop> 活动。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 迁移到 WF4 签出[WF4 迁移指南](http://go.microsoft.com/fwlink/?LinkID=153313)。  
   
 ### <a name="environment-setup"></a>环境设置  
  ![工作流性能测试环境](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")  

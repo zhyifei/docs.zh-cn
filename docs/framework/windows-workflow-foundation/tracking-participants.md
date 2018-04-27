@@ -1,23 +1,24 @@
 ---
-title: "跟踪参与者"
-ms.custom: 
+title: 跟踪参与者
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f335695c86037d792b17b98080b7a2e668ac1df5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d67924061b5d87bdb2e3229d9bf956501036c30
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-participants"></a>跟踪参与者
 跟踪参与者是扩展点，允许工作流开发人员访问 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 对象并对其进行处理。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包括一个标准跟踪参与者，可将跟踪记录作为 Windows 事件跟踪 (ETW) 事件写入。 如果这不能满足您的要求，您还可以编写自定义跟踪参与者。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="tracking-participants"></a>跟踪参与者  
  跟踪基础结构允许对传出跟踪记录应用筛选器，以便参与者可订阅该记录的子集。 应用筛选器的机制是通过跟踪配置文件来实现的。  
   
- [!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 提供跟踪参与者，可将跟踪记录写入 ETW 会话。 通过在配置文件中添加特定于跟踪的行为，可以对工作流服务配置参与者。 通过启用 ETW 跟踪参与者，可以在事件查看器中查看跟踪记录。 基于 ETW 的跟踪的 SDK 示例是一种很好的方法，可使用基于 ETW 的跟踪参与者来熟悉 WF 跟踪。  
+ 中的 Windows Workflow Foundation (WF)[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]提供跟踪参与者，可将跟踪记录写入 ETW 会话。 通过在配置文件中添加特定于跟踪的行为，可以对工作流服务配置参与者。 通过启用 ETW 跟踪参与者，可以在事件查看器中查看跟踪记录。 基于 ETW 的跟踪的 SDK 示例是一种很好的方法，可使用基于 ETW 的跟踪参与者来熟悉 WF 跟踪。  
   
 ## <a name="etw-tracking-participant"></a>ETW 跟踪参与者  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 包括一个 ETW 跟踪参与者，可将跟踪记录写入 ETW 会话。 它的实现方式非常高效，对应用程序的性能或对服务器的吞吐量影响非常小。 使用标准 ETW 跟踪参与者的一个优点是，它接收的跟踪记录可以在 Windows 事件查看器中与其他应用程序日志及系统日志一起查看。  

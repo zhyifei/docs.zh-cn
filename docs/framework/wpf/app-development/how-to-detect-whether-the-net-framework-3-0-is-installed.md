@@ -20,21 +20,21 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>如何：检测是否安装了 .NET Framework 3.0
-管理员可以将部署之前[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]应用程序在系统中，它们必须首先确认[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]运行时就存在。 本主题提供了编写的脚本的 HTML/JavaScript 中，管理员可以用于确定是否[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]系统上存在。  
+管理员可部署的系统上的 Microsoft.NET Framework 应用程序之前，它们必须首先确认存在的.NET Framework 运行时。 本主题提供了用 HTML/JavaScript 编写的脚本，可以使用管理员确定.NET Framework 是否存在的系统上。  
   
 > [!NOTE]
 >  有关详细安装信息，部署和检测 Microsoft.NET Framework，请参阅中的讨论[部署 Microsoft.NET Framework 版本 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)。  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>检测".NET CLR"用户代理字符串  
- 当[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]是安装，MSI 向添加了".NET CLR"和版本号的用户代理字符串。 下面的示例演示一个简单的 HTML 页中嵌入的脚本。 脚本搜索用户代理字符串以确定是否[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]安装，并在搜索的结果上显示的状态消息。  
+ 安装.NET Framework 时，MSI 将".NET CLR"和版本数添加到用户代理字符串。 下面的示例演示一个简单的 HTML 页中嵌入的脚本。 用户代理字符串以确定.NET Framework 安装，并显示一条状态消息上的搜索结果中搜索脚本。  
   
 ```  
 <HTML>  

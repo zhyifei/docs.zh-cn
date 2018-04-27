@@ -1,27 +1,29 @@
 ---
-title: "规划应用程序性能"
-ms.custom: 
+title: 规划应用程序性能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15130ac57b0df2ab1632ad8ec31ae5e350afdfec
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="planning-for-application-performance"></a>规划应用程序性能
 达到性能目标成功取决于你开发你性能策略的程度。 规划是开发任何产品中的第一个阶段。 本主题介绍一些非常简单规则可用于开发良好的性能策略。  
@@ -36,12 +38,12 @@ ms.lasthandoff: 12/22/2017
  始终保持度量、 调查、 在应用程序开发周期中改进/更正的周期。 从开发周期的末尾开始，你需要测量可靠且稳定的环境中的应用程序的性能。 应避免通过外部因素造成的变化。 例如，测试性能时，你应禁用防病毒软件或如 SMS 任何自动更新，顺序不适用于影响性能测试结果。 一旦具有度量应用程序的性能，需要标识将导致最大的改进的更改。 一次修改了你的应用程序，再次启动该周期。  
   
 ## <a name="make-performance-tuning-an-iterative-process"></a>进行性能优化的迭代过程  
- 您应该知道你将使用每个功能的相对成本。 例如，在中对反射的使用[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]通常是性能密集型根据计算资源，因此你将想要谨慎地使用。 这并不意味着若要避免使用反射，仅在你应小心地将其与你使用的功能的性能需求的应用程序性能要求相平衡。  
+ 您应该知道你将使用每个功能的相对成本。 例如，Microsoft.NET Framework 中对反射的使用是通常在计算资源方面影响性能，因此你想要谨慎地使用。 这并不意味着若要避免使用反射，仅在你应小心地将其与你使用的功能的性能需求的应用程序性能要求相平衡。  
   
 ## <a name="build-towards-graphical-richness"></a>生成大量图形的内容  
  一种用于创建实现可缩放的方法的关键技术[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序性能是构建于图形丰富功能和复杂性。 始终使用最少的性能密集型资源实现方案目标开头。 后实现这些目标，请通过使用更多性能密集型功能，始终记住你方案的目标构建向图形丰富功能。 请记住，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是非常丰富的平台，并提供非常丰富的图形功能。 使用不加考虑性能密集型功能可以对应用程序总体性能产生负面影响。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件是广泛的自定义其外观，而不修改其控件行为的从而本质上是可扩展。 通过利用的样式、 数据模板和控件模板，你可以创建并以增量方式不断发展可自定义[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，适应性能要求。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件是广泛的自定义其外观，而不修改其控件行为的从而本质上是可扩展。 通过利用的样式、 数据模板和控件模板，你可以创建并以增量方式不断发展可自定义[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]，适应性能要求。  
   
 ## <a name="see-also"></a>请参阅  
  [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

@@ -22,18 +22,18 @@ ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9a9dee47f06e4f7d9fc8d237376df7707130921d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>从命令行生成 (Visual Basic)
 Visual Basic 项目组成一个或多个单独的源代码文件。 在称为编译过程中，这些文件被集中到一个包中，可以为应用程序运行的单个可执行文件。  
   
- Visual Basic 作为编译来自程序的替代方法提供命令行编译器[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境 (IDE)。 命令行编译器设计为不需要完整的 IDE 中的功能集情况-例如，当你正在使用或者编写的有限的系统内存或存储空间使用的计算机。  
+ Visual Basic 提供命令行编译器作为编译的程序从 Visual Studio 集成的开发环境 (IDE) 中的替代方法。 命令行编译器设计为不需要完整的 IDE 中的功能集情况-例如，当你正在使用或者编写的有限的系统内存或存储空间使用的计算机。  
   
-  若要编译中的源文件[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]IDE 中，选择**生成**命令**生成**菜单。  
+  若要编译源文件从 Visual Studio IDE 中的，选择**生成**命令**生成**菜单。  
   
 > [!TIP]
 >  通过使用 Visual Studio IDE 生成项目文件时，你可以显示有关信息关联**vbc**命令，并在输出窗口中的开关。 若要显示此信息，请打开[选项对话框、 项目和解决方案、 生成和运行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然后设置**MSBuild 项目生成输出详细级别**到**正常**或更高级别的详细级别。 有关详细信息，请参阅[如何：查看、保存和配置生成日志文件](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7)。  

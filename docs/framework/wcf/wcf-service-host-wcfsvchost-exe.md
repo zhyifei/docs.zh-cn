@@ -1,38 +1,40 @@
 ---
-title: "WCF 服务主机 (WcfSvcHost.exe)"
-ms.custom: 
+title: WCF 服务主机 (WcfSvcHost.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 495088463a6a7463ce1452588dc55d35110f0092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服务主机 (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务主机 (WcfSvcHost.exe) 允许您启动 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 调试器 (F5) 以自动承载和测试已实现的服务。 然后可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端 (WcfTestClient.exe) 或您自己的客户端来测试服务，以查找并解决任何潜在错误。  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务主机 (WcfSvcHost.exe) 允许您启动 Visual Studio 调试器 (F5) 以自动承载和测试已实现的服务。 然后可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端 (WcfTestClient.exe) 或您自己的客户端来测试服务，以查找并解决任何潜在错误。  
   
 ## <a name="wcf-service-host"></a>WCF 服务主机  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机将枚举 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项目中的服务、加载项目的配置并为它所找到的每项服务对主机进行实例化。 此工具通过 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 服务模板集成到 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，在您开始调试项目时将会调用此工具。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机将枚举 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项目中的服务、加载项目的配置并为它所找到的每项服务对主机进行实例化。 该工具集成到 Visual Studio 通过[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务模板，并在你开始调试项目时调用。  
   
  使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机可以承载 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务（在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库项目中），而无需在开发过程中额外编写代码或提交到特定的主机。  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机不支持部分信任。 如果想要在部分信任中使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，请不要使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 服务库项目模板生成服务。 而应通过选择 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 服务网站模板在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中创建新的网站。该网站可以在支持 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 部分信任的 WebServer 中承载服务。  
+>  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机不支持部分信任。 如果你想要使用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]在部分信任环境中的服务不使用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]在 Visual Studio 中生成服务的服务库项目模板。 相反，Visual Studio 中创建新的网站，通过选择[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务网站模板，其中可托管的 WebServer 中的服务[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]支持部分信任。  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>WCF 服务主机承载的项目类型  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机可以承载以下 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库项目类型：[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库、顺序工作流服务库、状态机工作流服务库和联合服务库。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务主机也可以承载这些服务可以添加到服务库项目使用**添加项**功能。 这包括 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务、WF 状态机服务、WF 顺序服务、XAML WF 状态机服务和 XAML WF 顺序服务。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机可以承载以下 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库项目类型：[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务库、顺序工作流服务库、状态机工作流服务库和联合服务库。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机也可以承载这些服务可以添加到服务库项目使用**添加项**功能。 这包括 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务、WF 状态机服务、WF 顺序服务、XAML WF 状态机服务和 XAML WF 顺序服务。  
   
  但是，应该注意到该工具将不会帮助您配置主机。 对于此项任务，必须手动编辑 App.config 文件。 另外，此工具也不会验证用户定义的配置文件。  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 >  不应该使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机在生产环境中承载服务，因为其设计初衷并不是为了执行此操作。  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机无法满足此类环境的可靠性、安全性和可管理性要求。 请改用 IIS，因为它可以提供卓越的可靠性和监视功能，并且是承载服务的首选解决方案。 在服务开发完成后，应该将服务从 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机迁移到 IIS。  
   
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>在 Visual Studio 中使用 WCF 服务主机的方案  
- 下表列出了中的所有参数**命令行自变量**对话框中，可通过右键单击你的项目中找到**解决方案资源管理器**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，选择**属性**，然后选择**调试**选项卡上，单击**启动项目**。 这些参数可用于配置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机。  
+ 下表列出了中的所有参数**命令行自变量**对话框中，可通过右键单击你的项目中找到**解决方案资源管理器**在 Visual Studio 中，选择**属性**，然后选择**调试**选项卡上，单击**启动项目**。 这些参数可用于配置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机。  
   
 |参数|含义|  
 |---------------|-------------|  
@@ -51,12 +53,12 @@ ms.lasthandoff: 12/22/2017
 #### <a name="using-wcf-test-client"></a>使用 WCF 测试客户端  
  在创建新的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务项目并按 F5 启动调试器后，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机将开始承载它在项目中找到的所有服务。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 测试客户端将会自动打开，并显示在配置文件中定义的服务终结点列表。 可以从主窗口中测试参数并调用服务。  
   
- 若要确保[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]使用测试客户端中，右键单击你的项目中**解决方案资源管理器**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，选择**属性**，然后选择**调试**选项卡。单击**启动项目**并确保中显示以下**命令行自变量**对话框。  
+ 若要确保[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]使用测试客户端中，右键单击你的项目中**解决方案资源管理器**在 Visual Studio 中，选择**属性**，然后选择**调试**选项卡。单击**启动项目**并确保中显示以下**命令行自变量**对话框。  
   
  `/client:WcfTestClient.exe`  
   
 #### <a name="using-a-custom-client"></a>使用自定义客户端  
- 若要使用自定义客户端，右键单击你的项目中**解决方案资源管理器**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，选择**属性**，然后选择**调试**选项卡。单击**启动项目**和编辑`/client`中的参数**命令行自变量**对话框中，以指向自定义客户端，如下面的示例中所示。  
+ 若要使用自定义客户端，右键单击你的项目中**解决方案资源管理器**在 Visual Studio 中，选择**属性**，然后选择**调试**选项卡。单击**启动项目**和编辑`/client`中的参数**命令行自变量**对话框中，以指向自定义客户端，如下面的示例中所示。  
   
  `/client:"path/CustomClient.exe"`  
   
@@ -71,13 +73,13 @@ ms.lasthandoff: 12/22/2017
  `/client:iexplore.exe /clientArgs:http://localhost:8731/Design_Time_Addresses/Feed1/`  
   
 #### <a name="specifying-no-client"></a>指定无客户端  
- 若要指定无客户端将使用后[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务承载，右键单击你的项目中**解决方案资源管理器**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，选择**属性**，然后选择**调试**选项卡。单击**启动项目**并使**命令行自变量**对话框留空。  
+ 若要指定无客户端将使用后[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务承载，右键单击你的项目中**解决方案资源管理器**在 Visual Studio 中，选择**属性**，然后选择**调试**选项卡。单击**启动项目**并使**命令行自变量**对话框留空。  
   
 #### <a name="using-a-custom-host"></a>使用自定义主机  
- 若要使用自定义主机，右键单击你的项目中**解决方案资源管理器**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，选择**属性**，然后选择**调试**选项卡。单击**启动外部程序**并输入自定义宿主的完整路径。 你还可以使用**命令行自变量**对话框中，指定要传递给该主机自变量。  
+ 若要使用自定义主机，右键单击你的项目中**解决方案资源管理器**在 Visual Studio 中，选择**属性**，然后选择**调试**选项卡。单击**启动外部程序**并输入自定义宿主的完整路径。 你还可以使用**命令行自变量**对话框中，指定要传递给该主机自变量。  
   
 ## <a name="wcf-service-host-user-interface"></a>WCF 服务主机用户界面  
- 当最初调用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务主机 (由内按 F5 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)])，则**WCF 服务主机**窗口将自动打开。 当正在运行 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机时，此程序的图标将出现在通知区域中。 双击该图标可以打开**WCF 服务主机**窗口  
+ 当最初调用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]（通过按 F5 在 Visual Studio），服务主机**WCF 服务主机**窗口将自动打开。 当正在运行 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机时，此程序的图标将出现在通知区域中。 双击该图标可以打开**WCF 服务主机**窗口  
   
  如果在承载服务过程中出错，则将打开“[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机”对话框以显示相关信息。  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="stopping-wcf-service-host"></a>停止 WCF 服务主机  
  可以通过以下四种方法关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机：  
   
--   在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中停止调试会话。  
+-   停止在 Visual Studio 中的调试会话。  
   
 -   选择**退出**从**文件**菜单中的**WCF 服务主机**窗口。  
   
@@ -111,7 +113,7 @@ ms.lasthandoff: 12/22/2017
 -   退出正在使用的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>在无管理员权限的情况下使用服务主机  
- 为了使没有管理员权限的用户能够开发 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务，在安装 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的过程中为命名空间“http://+:8731/Design_Time_Addresses”创建了一个 ACL（访问控制列表）。 该 ACL 被设置为“(UI)”，这将包括登录到此计算机的所有交互用户。 管理员可以在此 ACL 中添加或移除用户，或者打开其他端口。此 ACL 使用户可以在无管理员权限的情况下使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务自动主机 (wcfSvcHost.exe)。  
+ 为了使没有管理员特权才能开发用户[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服务，为命名空间创建一个 ACL （访问控制列表）"http://+:8731/Design_Time_Addresses"在 Visual Studio 的安装过程。 该 ACL 被设置为“(UI)”，这将包括登录到此计算机的所有交互用户。 管理员可以在此 ACL 中添加或移除用户，或者打开其他端口。此 ACL 使用户可以在无管理员权限的情况下使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务自动主机 (wcfSvcHost.exe)。  
   
  可以使用提升的管理员帐户在 [!INCLUDE[wv](../../../includes/wv-md.md)] 中通过 netsh.exe 工具来修改访问权限。 下面是使用 netsh.exe 的示例。  
   

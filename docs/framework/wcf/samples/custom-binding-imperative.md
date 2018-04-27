@@ -1,24 +1,26 @@
 ---
-title: "自定义绑定命令"
-ms.custom: 
+title: 自定义绑定命令
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58116f11fc482792cb84023bd3e1c23fe9e94a55
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44bedc3290d9c10078806ed63a8c5ddfe9754801
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-binding-imperative"></a>自定义绑定命令
 本示例演示如何在不使用配置文件或 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 生成的客户端的情况下，编写命令性代码来定义和使用自定义绑定。 本示例将 HTTP 传输提供的功能与可靠会话通道结合在一起，用于创建基于 HTTP 的可靠绑定。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -27,8 +29,8 @@ ms.lasthandoff: 01/19/2018
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
  在客户端和服务上，创建包含两个绑定元素（可靠会话和 HTTP）的自定义绑定：  
-  
-```  
+
+```csharp
 ReliableSessionBindingElement reliableSession = new ReliableSessionBindingElement();  
 reliableSession.Ordered = true;  
   
@@ -37,32 +39,32 @@ httpTransport.AuthenticationScheme = System.Net.AuthenticationSchemes.Anonymous;
 httpTransport.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;  
   
 CustomBinding binding = new CustomBinding(reliableSession, httpTransport);  
-```  
+```
   
  在服务上，通过将终结点添加到 ServiceHost 来使用绑定：  
-  
-```  
+
+```csharp
 serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, "");  
-```  
-  
+```
+
  在客户端上，<xref:System.ServiceModel.ChannelFactory> 使用绑定来创建服务通道：  
-  
-```  
+
+```csharp
 EndpointAddress address = new EndpointAddress("http://localhost:8000/servicemodelsamples/service");  
 ChannelFactory<ICalculator> channelFactory = new ChannelFactory<ICalculator>(binding, address);  
 ICalculator channel = channelFactory.CreateChannel();  
-```  
-  
+```
+
  然后将此通道用于与服务进行交互：  
-  
-```  
+
+```csharp
 // Call the Add service operation.  
 double value1 = 100.00D;  
 double value2 = 15.99D;  
 double result = channel.Add(value1, value2);  
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
-```  
-  
+```
+
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ```  

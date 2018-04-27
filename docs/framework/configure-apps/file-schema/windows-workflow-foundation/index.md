@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: baa8846d339e87c121ece2678157c132035db07f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9644b1e25c8d1568a01434a587e4271b163a3f0b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-configuration-schema"></a>Windows Workflow Foundation 配置架构
-使用 [!INCLUDE[wf](../../../../../includes/wf-md.md)] 配置元素可以配置工作流应用程序。 对于工作流应用程序，除配置其他内容外，还可以配置跟踪。 有关跟踪的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 对于工作流服务，还可以使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 配置元素。 有关 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 的详细信息，请参阅 [WCF 配置架构](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+Windows Workflow Foundation (WF) 配置元素，可以配置工作流应用程序。 对于工作流应用程序，除配置其他内容外，还可以配置跟踪。 有关跟踪的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 对于工作流服务，还可以使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 配置元素。 有关 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 的详细信息，请参阅 [WCF 配置架构](../../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
   
  由于配置文件的格式都是以 XML 形式设置的，因此，如果要使用文本编辑器手动编辑这些文件，则您必须熟悉 XML。 否则，您可能会遇到一些问题，如找不到某个 XML 元素标记或特性。 这是因为 XML 元素标记和特性是区分大小写的。  
   

@@ -16,14 +16,14 @@ ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20239045426e466ba58427bb9794ea7e55b3aa4c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>如何：调用命令行编译器 (Visual Basic)
-可以通过在命令行中，也称为 MS-DOS 提示符中键入其可执行文件的名称来调用命令行编译器。 如果从默认的 Windows 命令提示符下进行编译，你必须键入可执行文件的完全限定的路径。 若要覆盖此默认行为，则您可以使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]命令提示符下，或修改 PATH 环境变量。 同时，可以从任何目录编译通过只需键入编译器的名称。  
+可以通过在命令行中，也称为 MS-DOS 提示符中键入其可执行文件的名称来调用命令行编译器。 如果从默认的 Windows 命令提示符下进行编译，你必须键入可执行文件的完全限定的路径。 若要重写此默认行为，你可以使用 Visual Studio 命令提示符处，或修改 PATH 环境变量。 同时，可以从任何目录编译通过只需键入编译器的名称。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,9 +31,9 @@ ms.lasthandoff: 04/26/2018
   
 1.  打开 Microsoft Visual Studio 程序组中的 Visual Studio Tools 程序文件夹。  
   
-2.  你可以使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]访问你的计算机上的任何目录中的编译器，如果安装了 Visual Studio 命令提示符。  
+2.  如果安装了 Visual Studio，你可以使用 Visual Studio 命令提示符以访问任何目录中的编译器，你的计算机上。  
   
-3.  调用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]命令提示符。  
+3.  调用 Visual Studio 命令提示。  
   
 4.  在命令行中，键入`vbc.exe` *sourceFileName*然后按 ENTER。  
   

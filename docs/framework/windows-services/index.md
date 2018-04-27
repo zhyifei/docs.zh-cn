@@ -24,14 +24,14 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: cc01c836daa73b1a39ceab0b523791b6a520dc70
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="developing-windows-service-applications"></a>开发 Windows 服务应用程序
-使用 Microsoft[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，你可以轻松创建服务通过创建作为服务安装的应用程序。 此类型的应用程序称为 Windows 服务。 使用框架功能，可以创建服务、 安装它们，并启动、 停止和以其他方式控制其行为。  
+使用 Microsoft Visual Studio 或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，你可以轻松创建服务通过创建作为服务安装的应用程序。 此类型的应用程序称为 Windows 服务。 使用框架功能，可以创建服务、 安装它们，并启动、 停止和以其他方式控制其行为。  
   
 > [!WARNING]
 >  Visual Studio 2010 中未包括 c + + 的 Windows 服务模板。 若要创建 Windows 服务，你可以在 Visual C# 或 Visual Basic，无法与现有的 c + + 代码，如果需要互操作，在托管代码中创建服务，或可以通过在本机 c + + 创建 Windows 服务[ATL 项目向导](/cpp/atl/reference/atl-project-wizard).  

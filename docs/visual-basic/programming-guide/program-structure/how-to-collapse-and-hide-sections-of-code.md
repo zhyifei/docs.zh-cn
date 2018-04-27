@@ -16,14 +16,14 @@ ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c02e95573d0ba894bf68510219bd66965fc234fc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4497c9586182cca9e2be97dc39e5ccb242725d25
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>如何：折叠和隐藏代码节 (Visual Basic)
-`#Region`指令，可折叠并隐藏 Visual Basic 文件中的代码段。 `#Region`指令允许你在使用时指定的一段代码，你可以展开或折叠[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]代码编辑器。 有选择地隐藏代码的能力使你的文件更易于管理并且更易读。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。  
+`#Region`指令，可折叠并隐藏 Visual Basic 文件中的代码段。 `#Region`指令允许你使用 Visual Studio 代码编辑器时指定的一段代码，你可以展开或折叠。 有选择地隐藏代码的能力使你的文件更易于管理并且更易读。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。  
   
  `#Region` 指令支持代码块语义，例如`#If...#End If`。 这意味着它们不能在一个块开始和结束在另一个;开始和结束必须在同一个块中。 `#Region` 指令不支持在函数内。  
   

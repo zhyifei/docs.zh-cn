@@ -16,11 +16,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 61a5c6b753b8aa70905027bc1449739769cd8da5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 59288ba7b4cec34cd2266d66aa931e92598e819a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>无法发出程序集：&lt;错误消息&gt;
 Visual Basic 编译器使用创建程序集的发出阶段中报告错误链接器调用程序集链接器 (Al.exe，也称作 Alink) 生成包含清单的程序集。  
@@ -61,7 +61,7 @@ Visual Basic 编译器使用创建程序集的发出阶段中报告错误链接�
   
      如果路径或文件包含空格，则使用双引号 (")。  
   
-6.  在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中，添加对刚创建的文件的 .NET 程序集引用。  
+6.  在 Visual Studio 中，将添加到刚刚创建的文件的.NET 程序集引用。  
   
 ## <a name="see-also"></a>请参阅  
  

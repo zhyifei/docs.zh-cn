@@ -1,24 +1,26 @@
 ---
-title: "对 COM 客户端使用 WCF 标记"
-ms.custom: 
+title: 对 COM 客户端使用 WCF 标记
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18633ab7c7d54b4feafc22f6b598acc564084f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 322467510d499040c07d6e5e84842542aa325737
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>对 COM 客户端使用 WCF 标记
 本示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务标记将 Web 服务集成到基于 COM 的开发环境（如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0）中。 本示例由 Windows 脚本宿主客户端 (.vbs)、客户端支持库 (.dll) 和 Internet 信息服务 (IIS) 承载的服务库 (.dll) 组成。 该服务是一个计算器服务，COM 客户端将对服务调用数学运算（加、减、乘和除）。 客户端活动显示在消息框窗口中。  
@@ -199,7 +201,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。  
   
-3.  在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 命令提示下，打开语言特定文件夹下的 \client\bin 文件夹。  
+3.  在 Visual Studio 命令提示符下打开语言特定文件夹下的 \client\bin 文件夹。  
   
     > [!NOTE]
     >  如果使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7 或 Windows Server 2008 R2，请确保使用管理员特权运行命令提示。  

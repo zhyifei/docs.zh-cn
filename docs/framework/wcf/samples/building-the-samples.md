@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>生成 Windows Communication Foundation 示例
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]可以生成示例，使用 Visual Studio 2010 或使用**msbuild**命令从命令行。 本主题介绍这两个过程。  
@@ -39,9 +39,9 @@ ms.lasthandoff: 04/26/2018
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>使用 Visual Studio 生成示例  
   
-1.  如果使用的是 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7 或 Windows Server 2008 R2，同时运行了 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，则必须用提升的权限运行 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。 为此，请右键单击开始菜单上的图标，然后单击**以管理员身份运行**。  
+1.  如果你使用[!INCLUDE[wv](../../../../includes/wv-md.md)]， [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，Windows 7 或 Windows Server 2008 R2，并运行[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，必须用提升的权限运行 Visual Studio。 为此，请右键单击开始菜单上的图标，然后单击**以管理员身份运行**。  
   
-2.  从**文件**菜单在 Visual Studio 中，单击**打开**，然后单击**项目/解决方案**。 定位至示例安装目录下的语言特定的子目录，然后双击 .sln 文件图标，以便在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中打开该解决方案。  
+2.  从**文件**菜单在 Visual Studio 中，单击**打开**，然后单击**项目/解决方案**。 导航到在其中安装此示例中，目录下的特定于语言的子目录，并双击.sln 文件图标，以在 Visual Studio 中打开解决方案。  
   
 3.  在**生成**菜单上，选择**重新生成解决方案**。 客户端程序文件在 client\bin 中生成，服务程序文件在 service\bin 中生成。 如果服务在 IIS 中承载，服务程序文件还将被复制到 servicemodelsamples 目录及其 \bin 子目录中。  
   

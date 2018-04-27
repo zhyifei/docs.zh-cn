@@ -1,31 +1,32 @@
 ---
-title: "在 Windows 事件跟踪中跟踪事件"
-ms.custom: 
+title: 在 Windows 事件跟踪中跟踪事件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件跟踪中跟踪事件
-此示例演示如何在工作流服务上启用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 跟踪以及在 Windows 事件跟踪 (ETW) 中发出跟踪事件。 为了将工作流跟踪记录发到 ETW 中，该示例使用 ETW 跟踪参与者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。  
+此示例演示如何启用 Windows Workflow Foundation (WF) 跟踪对工作流服务和发出跟踪事件中事件的 Windows 跟踪 (ETW)。 为了将工作流跟踪记录发到 ETW 中，该示例使用 ETW 跟踪参与者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。  
   
  该示例中的工作流接收请求，将输入数据的倒数分配给输入变量，并将该倒数返回到客户端。 当输入数据为 0 时，会发生未处理的除数为零异常，从而导致工作流中止。 启用了跟踪后，将向 ETW 发出错误跟踪记录，以后可帮助对错误进行故障排除。 ETW 跟踪参与者通过跟踪配置文件配置为订阅跟踪记录。 跟踪配置文件在 Web.config 文件中定义，作为配置参数提供给 ETW 跟踪参与者。 ETW 跟踪参与者在工作流服务的 Web.config 文件中配置，作为服务行为应用于服务。 在此示例中，使用事件查看器来查看事件日志中的跟踪事件。  
   
 ## <a name="workflow-tracking-details"></a>工作流跟踪详细信息  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 提供一个跟踪基础结构，用于跟踪工作流实例的执行。 跟踪运行时会创建工作流实例以发出与工作流生命周期有关的事件、来自工作流活动的事件以及自定义事件。 下表详细介绍了跟踪基础结构的主要组件。  
+ Windows Workflow Foundation 提供一个跟踪基础结构，用于跟踪工作流实例的执行。 跟踪运行时会创建工作流实例以发出与工作流生命周期有关的事件、来自工作流活动的事件以及自定义事件。 下表详细介绍了跟踪基础结构的主要组件。  
   
 |组件|描述|  
 |---------------|-----------------|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  若要运行解决方案，请按 F5。  
   
-     默认情况下，服务会侦听端口 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。  
+     默认情况下，该服务正在侦听端口 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。  
   
 4.  使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]，打开 WCF 测试客户端。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  在 WCF 测试客户端，选择**添加服务**从**文件**菜单。  
   
-     在输入框中添加终结点地址。 默认设置为 http://localhost:53797/SampleWorkflowService.xamlx。  
+     在输入框中添加终结点地址。 默认值为 http://localhost:53797/SampleWorkflowService.xamlx。  
   
 6.  打开事件查看器应用程序。  
   

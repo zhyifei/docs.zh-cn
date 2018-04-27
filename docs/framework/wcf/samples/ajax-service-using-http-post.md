@@ -1,24 +1,26 @@
 ---
-title: "使用 HTTP POST 的 AJAX 服务"
-ms.custom: 
+title: 使用 HTTP POST 的 AJAX 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2447f641748cdcc3419fda2a6ae8f02d68ed98e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1446fadeb249d91f0eb3e65b1155f00090441a5a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-using-http-post"></a>使用 HTTP POST 的 AJAX 服务
 此示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建使用 HTTP POST 的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 异步 JavaScript 和 XML (AJAX) 服务。 AJAX 服务是指可以从 Web 浏览器客户端使用基本 JavaScript 代码访问的服务。 此示例基于[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例; 两个样本之间的唯一区别是使用 HTTP POST 而不是 HTTP GET。  
@@ -31,19 +33,20 @@ ms.lasthandoff: 12/22/2017
  以下示例中的服务是不包含 AJAX 特定代码的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
   
  如果<xref:System.ServiceModel.Web.WebInvokeAttribute>属性应用于某个操作，或<xref:System.ServiceModel.Web.WebGetAttribute>特性未应用，则使用默认的 HTTP 谓词 ("POST")。 POST 请求虽然比 GET 请求更难构造，但它们不会被缓存；当不适宜缓存时，应对所有操作使用 POST 请求。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "PostAjaxService")]  
-    public interface ICalculator  
-    {        [WebInvoke]  
-        double Add(double n1, double n2);  
-        //Other operations omitted…  
-    }  
-```  
-  
+public interface ICalculator  
+{
+    [WebInvoke]  
+    double Add(double n1, double n2);  
+    //Other operations omitted…  
+}
+```
+
  通过使用 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 在服务上创建 AJAX 终结点，就像在基本 AJAX 服务示例中一样。  
   
- 与 GET 请求不同的是，不能从浏览器中调用 POST 服务。 例如，导航到 http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 将导致出错，因为 POST 服务要求在消息正文中（而不是在 URL 中）采用 JSON 格式发送 `n1` 和 `n2` 参数。  
+ 与 GET 请求不同的是，不能从浏览器中调用 POST 服务。 例如，导航到http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200产生错误，因为 POST 服务要求`n1`和`n2`要在消息正文中发送的参数-采用 JSON 格式-，不能在 URL。  
   
  客户端网页 PostAjaxClientPage.aspx 包含 ASP.NET 代码以便在用户单击页面上的操作按钮之一时调用服务。 服务响应中的相同方式为[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例 GET 请求。  
   
@@ -62,6 +65,6 @@ ms.lasthandoff: 12/22/2017
   
 2.  生成解决方案 PostAjaxService.sln 中所述[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  定位到 http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx（不要在浏览器中从项目目录中打开 PostAjaxClientPage.aspx）。  
+3.  导航到http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx（不要打开 PostAjaxClientPage.aspx 浏览器中从项目目录中）。  
   
 ## <a name="see-also"></a>请参阅

@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用于构建面向服务的应用程序的框架。 借助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，可以将数据作为异步消息从一个服务终结点发送至另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **持久性消息**  
   
-     持久性消息决不会由于通信中断而丢失。 持久性消息模式的消息会始终保存到数据库中。 如果发生中断，数据库将允许您在恢复连接后恢复消息交换。 此外，也可以使用 [!INCLUDE[wf](../../../includes/wf-md.md)]来创建持久性消息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     持久性消息决不会由于通信中断而丢失。 持久性消息模式的消息会始终保存到数据库中。 如果发生中断，数据库将允许您在恢复连接后恢复消息交换。 你还可以创建使用 Windows Workflow Foundation (WF) 的持久消息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **事务**  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF 与其他 Microsoft 技术的集成  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是一个灵活的平台。 由于这一极强的灵活性， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 还在 Microsoft 的一些其他产品中得以利用。 如果您也在使用这些产品中的任何产品，通过了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的基础知识，您会立即受益。  
   
- 与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配对的第一项技术是 Windows Workflow Foundation (WF)。 工作流简化应用程序开发的工作流中的步骤封装为"活动"。 在 [!INCLUDE[wf2](../../../includes/wf2-md.md)]的第一个版本中，开发人员必须为工作流创建主机。 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 的下一版本与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]进行了集成， 从而允许在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务中轻松承载任何工作流；通过在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]中自动选择 WF/WCF 作为项目类型可实现此目的。  
+ 与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 配对的第一项技术是 Windows Workflow Foundation (WF)。 工作流简化应用程序开发的工作流中的步骤封装为"活动"。 在 Windows Workflow Foundation 的第一个版本，开发人员必须为工作流创建主机。 Windows Workflow Foundation 的下一个版本进行了集成与[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。 从而允许在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务中轻松承载任何工作流；通过在 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]中自动选择 WF/WCF 作为项目类型可实现此目的。  
   
  Microsoft BizTalk Server R2 还利用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 作为通信技术。 BizTalk 设计用于接收一种标准化格式的数据，然后将其转换为另一种格式。 必须将消息传递到其中央消息框，在这里可以使用严格的映射，也可以通过使用其中一种 BizTalk 功能（如其工作流引擎）来转换消息。 目前，BizTalk 可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 业务线 (LOB) 适配器将消息传递到消息框。  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/16/2018
   
  [!INCLUDE[dublin](../../../includes/dublin-md.md)] 应用程序服务器是针对部署和管理使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 进行通信的应用程序专门生成的。 [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] 包括丰富的工具和配置选项，专门设计用于启用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel>  
  [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)  
  [Windows Communication Foundation 体系结构](../../../docs/framework/wcf/architecture.md)  

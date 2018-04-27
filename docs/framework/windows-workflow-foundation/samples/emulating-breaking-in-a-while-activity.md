@@ -1,34 +1,35 @@
 ---
-title: "在 While 活动中模拟中断"
-ms.custom: 
+title: 在 While 活动中模拟中断
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22a03c2e7dcc8d024ed407e7df24a4e9db4e2bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27264832dd82719d7ccb81e1398df343653515b1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>在 While 活动中模拟中断
 此示例演示如何中断下列活动的循环机制：<xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.While> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  
   
- 这样做很有用，因为 [!INCLUDE[wf](../../../../includes/wf-md.md)] 并不包括任何可中断这些循环的执行的活动。  
+ 这很有用，因为 Windows Workflow Foundation (WF) 不包括任何可中断这些循环的执行的活动。  
   
 ## <a name="scenario"></a>方案  
  此示例从供应商列表（`Vendor` 类的实例）中查找第一个可靠的供应商。 每个供应商都具有一个 `ID`、一个 `Name` 和一个用于确定供应商的可靠程度的可靠性值。 此示例创建一个名为 `FindReliableVendor` 的自定义活动，该活动接收两个输入参数（一个供应商列表和一个最小可靠值），然后返回列表中符合提供的条件的第一个供应商。  
   
 ## <a name="breaking-a-loop"></a>中断循环  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] 不包括用于中断循环的活动。 此代码示例通过使用一个 <xref:System.Activities.Statements.If> 活动和若干变量，可实现循环中断。 在此示例中，当为 <xref:System.Activities.Statements.While> 变量分配一个值而不是 `reliableVendor` 时，则会中断 `null` 活动。  
+ Windows Workflow Foundation (WF) 不包括用于中断循环的活动。 此代码示例通过使用一个 <xref:System.Activities.Statements.If> 活动和若干变量，可实现循环中断。 在此示例中，当为 <xref:System.Activities.Statements.While> 变量分配一个值而不是 `reliableVendor` 时，则会中断 `null` 活动。  
   
  以下代码示例演示了此示例如何中断一个 while 循环。  
   

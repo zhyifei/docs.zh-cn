@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用配置文件配置服务
 通过使用配置文件配置 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务，可提供在部署时而非设计时提供终结点和服务行为数据的灵活性。 本主题概述了当前可用的主要技术。  
@@ -37,9 +37,9 @@ ms.lasthandoff: 04/26/2018
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration：Web.config 和 App.config  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]的 System.Configuration 配置系统。  
   
- 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中配置服务时，使用 Web.config 文件或 App.config 文件指定设置。 配置文件名称的选择由为服务选择的宿主环境确定。 如果正在使用 IIS 来承载服务，则使用 Web.config 文件。 如果正在使用任何其他宿主环境，则使用 App.config 文件。  
+ 配置服务时 Visual Studio 中，使用 Web.config 文件或 App.config 文件指定的设置。 配置文件名称的选择由为服务选择的宿主环境确定。 如果正在使用 IIS 来承载服务，则使用 Web.config 文件。 如果正在使用任何其他宿主环境，则使用 App.config 文件。  
   
- 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中，名为 App.config 的文件可用于创建最终的配置文件。 实际用于配置的最终名称取决于程序集名称。 例如，名为“Cohowinery.exe”的程序集具有的最终配置文件名称为“Cohowinery.exe.config”。 但是，只需要修改 App.config 文件。 在编译时，对该文件所做的更改会自动应用于最终应用程序配置文件。  
+ 在 Visual Studio 中，名为 App.config 文件用于创建最终的配置文件。 实际用于配置的最终名称取决于程序集名称。 例如，名为“Cohowinery.exe”的程序集具有的最终配置文件名称为“Cohowinery.exe.config”。 但是，只需要修改 App.config 文件。 在编译时，对该文件所做的更改会自动应用于最终应用程序配置文件。  
   
  在使用 App.config 文件的过程中，当应用程序启动并应用配置时，文件配置系统会将 App.config 文件与 Machine.config 文件的内容合并。 此机制允许在 Machine.config 文件中定义计算机范围的设置。 可以使用 App.config 文件重写 Machine.config 文件的设置；也可以锁定 Machine.config 文件中的设置以应用它们。 对于 Web.config，配置系统会将应用程序目录之下的所有目录中的 Web.config 文件合并到要应用的配置中。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 配置和设置属性的更多信息，请参见 <xref:System.Configuration> 命名空间中的主题。  
   

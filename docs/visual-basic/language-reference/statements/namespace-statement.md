@@ -21,18 +21,18 @@ ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
 caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9863286a8eda2559ab678c77a81cc7d6063c3e3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90eb33bdbc01afc983869c919f9d7b2feab44037
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="namespace-statement"></a>Namespace 语句
 声明命名空间的名称，并使遵循声明在该命名空间中进行编译的源代码。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb  
 Namespace [Global.] { name | name.name }  
     [ componenttypes ]  
 End Namespace  
@@ -43,7 +43,7 @@ End Namespace
  可选。 允许你定义超出你的项目的根命名空间的命名空间。 请参阅[在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)。  
   
  `name`  
- 必需。 用于标识命名空间的唯一名称。 必须是有效的 Visual Basic 标识符。 有关详细信息，请参阅[声明元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 必须的。 用于标识命名空间的唯一名称。 必须是有效的 Visual Basic 标识符。 有关详细信息，请参阅[声明元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `componenttypes`  
  可选。 构成命名空间的元素。 这些组件包括但不限于枚举、 结构、 接口、 类、 模块、 委托和其他命名空间。  
@@ -110,7 +110,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
  [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  [在 Visual Basic 中的命名空间](../../../visual-basic/programming-guide/program-structure/namespaces.md)

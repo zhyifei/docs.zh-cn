@@ -1,26 +1,27 @@
 ---
-title: "工作流托管选项"
-ms.custom: 
+title: 工作流托管选项
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be885a964ad7e8d63045febfa279b23d0d85ab1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3f022a5162ab8624d0c696efde6416484e77e874
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-hosting-options"></a>工作流托管选项
-大多数 [!INCLUDE[wf](../../../includes/wf-md.md)] 示例都使用承载在控制台应用程序中的工作流，但这并非现实世界工作流的实际场景。 实际业务应用程序中的工作流将会承载在恒定进程中 — 或是由开发人员编写的 Windows 服务，或是诸如 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 或 AppFabric 之类的服务器应用程序。 这些方法之间的区别如下。  
+大多数 Windows Workflow Foundation (WF) 示例使用控制台应用程序中承载的工作流，但这并非现实世界工作流的一个现实的方案。 实际业务应用程序中的工作流将会承载在恒定进程中 — 或是由开发人员编写的 Windows 服务，或是诸如 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 或 AppFabric 之类的服务器应用程序。 这些方法之间的区别如下。  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>用配有 Windows AppFabric 的 IIS 承载工作流  
  用配有 AppFabric 的 IIS 是承载工作流的首选方法。 用 AppFabric 来承载工作流的应用程序是 Windows Activation Service，它解除了仅通过 IIS 对 HTTP 的依赖。  

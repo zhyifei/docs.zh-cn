@@ -1,24 +1,26 @@
 ---
-title: "自定义多路分解器"
-ms.custom: 
+title: 自定义多路分解器
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-demux"></a>自定义多路分解器
 此示例演示如何将 MSMQ 消息头映射到不同服务操作，以便[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服务使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>并不仅限于使用一个服务操作，如中所示[到消息队列Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)和[Windows Communication Foundation 到消息队列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)示例。  
@@ -26,8 +28,8 @@ ms.lasthandoff: 12/22/2017
  本示例中的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。  
   
  此服务协定是 `IOrderProcessor`，它定义了适合与队列一起使用的单向服务。  
-  
-```  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
+```
+
  MSMQ 消息没有 Action 标头。 无法自动将不同的 MSMQ 消息映射到操作协定。 所以只能有一个操作协定。 为了克服此限制，服务实现 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 接口的 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 方法。 通过 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 方法，服务可以将给定的消息头映射到特定服务操作。 在本示例中，将消息的标签标头映射到服务操作。 操作协定的 `Name` 参数确定必须为给定的消息标签调度哪个服务操作。 例如，如果消息的标签标头包含“SubmitPurchaseOrder”，则调用“SubmitPurchaseOrder”服务操作。  
-  
-```  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
+```
+
  服务必须实现 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> 接口的 <xref:System.ServiceModel.Description.IContractBehavior> 方法，如下面的示例代码所示。 这会将自定义 `OperationSelector` 应用于服务框架调度运行时。  
-  
-```  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
+```
+
  在到达 OperationSelector 之前，消息必须通过调度程序的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>。 默认情况下，如果在由服务实现的任何协定上找不到消息操作，则会拒绝该消息。 为了避免这种阻碍的发生，我们实现了一个名为 <xref:System.ServiceModel.Description.IEndpointBehavior> 的 `MatchAllFilterBehavior`，它通过应用 `ContractFilter` 允许任何消息通过 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>，如下所示。  
-  
-```  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
  当服务接收到消息时，会使用标签标头提供的信息调度相应的服务操作。 消息正文反序列化为 `PurchaseOrder` 对象，如下面的示例代码所示。  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
+```
+
  服务是自承载服务。 使用 MSMQ 时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在本示例中，服务包含用以检查队列是否存在的代码，并在队列不存在时创建该队列。 从配置文件中读取队列名称。  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,8 +117,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  MSMQ 队列名称是在配置文件的 appSettings 节中指定的。  
   
 > [!NOTE]

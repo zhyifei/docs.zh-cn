@@ -17,11 +17,11 @@ ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f65df8469ecfbc1296963f95eefbb29068f1cb57
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8cc41f5d4f60b1ed5ee81128d0ab9a53728ceb65
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 语言参考
 本部分提供各个方面的 Visual Basic 语言的参考的信息。  
@@ -92,4 +92,4 @@ ms.lasthandoff: 04/26/2018
  在 Visual Basic 语言中的所有区域上提供全面的帮助。  
   
  [Visual Basic 命令行编译器](../../visual-basic/reference/command-line-compiler/index.md)  
- 介绍了如何将命令行编译器用作一种替代方法，从而在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 集成开发环境 (IDE) 中编译程序。
+ 描述如何使用命令行编译器来编译的程序从 Visual Studio 集成的开发环境 (IDE) 中的替代方法。

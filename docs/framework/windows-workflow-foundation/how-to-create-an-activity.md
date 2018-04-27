@@ -1,26 +1,27 @@
 ---
-title: "如何：创建活动"
-ms.custom: 
+title: 如何：创建活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-an-activity"></a>如何：创建活动
 活动是 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的核心行为单元。 活动的执行逻辑可以使用托管代码实现，也可以使用其他活动实现。 本主题演示如何创建两个活动。 第一个活动是简单活动，它使用代码来实现其执行逻辑。 第二个活动的实现是用其他活动定义的。 后续教程步骤会使用这些活动。  
@@ -41,10 +42,10 @@ ms.lasthandoff: 12/22/2017
     > [!TIP]
     >  如果未显示 **解决方案资源管理器** 窗口，请从 **“视图”** 菜单选择 **“解决方案资源管理器** 。  
   
-5.  在 **“已安装”** 节点中，选择 **“Visual C#”**、 **“工作流”** （或 **“Visual Basic”**、 **“工作流”**）。 确保**.NET Framework 4.5**中选择[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]版本下拉列表。 选择**活动库**从**工作流**列表。 类型`NumberGuessWorkflowActivities`中**名称**中，然后单击**确定**。  
+5.  在 **“已安装”** 节点中，选择 **“Visual C#”**、 **“工作流”** （或 **“Visual Basic”**、 **“工作流”**）。 确保 **.NET Framework 4.5**中选择[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]版本下拉列表。 选择**活动库**从**工作流**列表。 类型`NumberGuessWorkflowActivities`中**名称**中，然后单击**确定**。  
   
     > [!NOTE]
-    >  根据的编程语言配置为主要语言中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]、 **Visual C#**或**Visual Basic**节点可能位于**其他语言**中的节点**已安装**节点。  
+    >  根据在 Visual Studio 中配置为主要语言的编程语言的不同， **“Visual C#”** 或 **“Visual Basic”** 节点可能位于 **“已安装”** 节点下的 **“其他语言”** 节点中。  
   
 6.  右键单击**Activity1.xaml**中**解决方案资源管理器**选择**删除**。 单击 **“确定”** 以确认。  
   

@@ -1,29 +1,31 @@
 ---
-title: "ADO.NET 数据集"
-ms.custom: 
+title: ADO.NET 数据集
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b9d566f99802ea80ae73132579bb3068b1ff3b28
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9458206ea7edfeba61f9805c2b601d6aa9198256
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="adonet-datasets"></a>ADO.NET 数据集
 <xref:System.Data.DataSet> 对象对于支持 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的断开连接的分布式数据方案起到至关重要的作用。 **数据集**是的内存驻留表示形式提供一致的关系编程模型，而不考虑数据源的数据。 它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 **数据集**表示一组完整的数据，包括相关的表、 约束和表之间的关系。 下图显示**数据集**对象模型。  
   
- ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net 图](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet 对象模型  
   
  方法和中的对象**数据集**与关系数据库模型中保持一致。  
@@ -52,7 +54,7 @@ DataSet 对象模型
  **数据集**， **DataTable**，和**DataColumn**所有具有**ExtendedProperties**属性。 **ExtendedProperties**是**PropertyCollection**可以放置自定义的信息，如 SELECT 语句用于生成结果集或生成数据的时间。 **ExtendedProperties**架构信息一起持久化集合**数据集**。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]为数据集中存储的已断开连接的数据提供语言集成查询功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]使用标准[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]语法，并提供编译时语法检查、 静态类型和 IntelliSense 支持，当你使用[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]IDE。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]为数据集中存储的已断开连接的数据提供语言集成查询功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使用标准[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]语法，并使用 Visual Studio IDE 时提供编译时语法检查、 静态类型和 IntelliSense 支持。  
   
  有关详细信息，请参阅 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   

@@ -17,11 +17,11 @@ ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>演练：用 COM 对象实现继承 (Visual Basic)
 您可以派生从 Visual Basic 类`Public`中 COM 对象，甚至那些在早期版本的 Visual Basic 中创建的类。 属性和方法从 COM 对象继承的类可以重写或只是作为属性重载，并可以重写任何其他基类方法，或将其重载。 具有不希望重新编译的现有类库时，从 COM 对象的继承非常有用。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 04/26/2018
     >  尽管你可以公开为 COM 对象的 Visual basic 创建的类，但它不是真正的 COM 对象，并且不在本演练中使用。 有关详细信息，请参阅[在.NET Framework 应用程序的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 ## <a name="interop-assemblies"></a>互操作程序集  
- 在以下过程中，你将创建一个互操作程序集，它将充当 （如 COM 对象） 的非托管的代码和托管的代码之间的桥梁[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]使用。 Visual Basic 创建的互操作程序集处理的许多细节，如使用 COM 对象的*互操作封送处理*，打包参数和返回值为等效的数据的过程类型标记为不将移到和从 COM 对象。 在 Visual Basic 应用程序引用将指向互操作程序集，而不是实际的 COM 对象。  
+ 在下面的过程中，你将创建一个互操作的程序集，它作为非托管的代码 （如 COM 对象） 和 Visual Studio 将使用的托管的代码之间的桥梁。 Visual Basic 创建的互操作程序集处理的许多细节，如使用 COM 对象的*互操作封送处理*，打包参数和返回值为等效的数据的过程类型标记为不将移到和从 COM 对象。 在 Visual Basic 应用程序引用将指向互操作程序集，而不是实际的 COM 对象。  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>若要使用 Visual Basic 2005 和更高版本的 COM 对象  
   

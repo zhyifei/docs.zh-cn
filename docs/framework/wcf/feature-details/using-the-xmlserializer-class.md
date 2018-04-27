@@ -1,13 +1,13 @@
 ---
-title: "使用 XmlSerializer 类"
-ms.custom: 
+title: 使用 XmlSerializer 类
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bc1ede649a68747461882dfe607214bfb06b2ec3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c541c44f0043000ccd4e7edb0d38eba2c66d0844
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 类
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用两种不同的序列化技术将应用程序中的数据转换为在客户端和服务之间进行传输的 XML，此过程称为序列化。  
@@ -45,12 +45,12 @@ ms.lasthandoff: 12/22/2017
   
  许多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型属于后两种类别，因此可序列化。 可序列化类型的数组也可序列化。 完整列表，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
   
- 与数据协定类型一起使用的 <xref:System.Runtime.Serialization.DataContractSerializer>，是编写新 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的推荐方式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 与数据协定类型一起使用的 <xref:System.Runtime.Serialization.DataContractSerializer>，是编写新 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的推荐方式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>使用 XmlSerializer 类的时机  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还支持 <xref:System.Xml.Serialization.XmlSerializer> 类。 <xref:System.Xml.Serialization.XmlSerializer> 类不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的专用类。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务同样使用该类作为序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 类支持的类型少于 <xref:System.Runtime.Serialization.DataContractSerializer> 类支持的类型，但它允许对生成的 XML 进行更多的控制，并且支持更多的 XML 架构定义语言 (XSD) 标准。 它也不要求针对可序列化类型的任何声明性属性。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 文档中的“XML 序列化”主题。 <xref:System.Xml.Serialization.XmlSerializer> 类并不支持数据协定类型。  
   
- 当使用 Svcutil.exe 或**添加服务引用**功能[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]来生成第三方服务的客户端代码或访问第三方架构，自动为你选择适当的序列化程序。 如果架构与 <xref:System.Runtime.Serialization.DataContractSerializer> 不兼容，则选择 <xref:System.Xml.Serialization.XmlSerializer>。  
+ 当使用 Svcutil.exe 或**添加服务引用**来生成第三方服务的客户端代码或访问第三方架构，一个适当的序列化程序的 Visual Studio 中的功能会自动为你选择。 如果架构与 <xref:System.Runtime.Serialization.DataContractSerializer> 不兼容，则选择 <xref:System.Xml.Serialization.XmlSerializer>。  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>手动切换到 XmlSerializer  
  有时候，您也许必须手动切换到 <xref:System.Xml.Serialization.XmlSerializer>。 例如，在以下情况下可能需要这样做：  
@@ -133,11 +133,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>IXmlSerializable 内容类型的架构注意事项  
  当导出架构和 `IXmlSerializable` 内容类型时，将调用架构提供程序方法。 并将 <xref:System.Xml.Schema.XmlSchemaSet> 传递给架构提供程序方法。 该方法可以将任何有效架构添加到架构集中。 该架构集将包含发生架构导出时已知的架构。 当架构提供程序方法必须将某项添加到架构集时，它必须确定该集中是否已存在具有相应命名空间的 <xref:System.Xml.Schema.XmlSchema>。 如果已存在，则架构提供程序方法必须将新项添加到现有 `XmlSchema` 中。 否则，它必须创建一个新的 `XmlSchema` 实例。 如果使用的是 `IXmlSerializable` 类型数组，这是非常重要的。 例如，如果您有一个 `IXmlSerializable` 类型，且已作为命名空间“B”中的类型“A”导出，则在调用架构提供程序方法时，架构集可能已包含保存“ArrayOfA”类型的“B”架构。  
   
- 除了将类型添加到 <xref:System.Xml.Schema.XmlSchemaSet>，内容类型的架构提供程序方法必须返回非空值。 它可能返回 <xref:System.Xml.XmlQualifiedName>，指定用于给定 `IXmlSerializable` 类型的架构类型名称。 此限定名称也将用作数据协定名称和该类型的命名空间。 返回架构提供程序方法时允许立即返回架构集中不存在的类型。 但是，导出所有相关类型（调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法中有关 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的所有相关类型并访问 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 属性）时，该类型应该存在于架构集中。 在进行所有相关的 `Schemas` 调用之前访问 `Export` 属性可能会导致 <xref:System.Xml.Schema.XmlSchemaException>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]导出过程中，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
+ 除了将类型添加到 <xref:System.Xml.Schema.XmlSchemaSet>，内容类型的架构提供程序方法必须返回非空值。 它可能返回 <xref:System.Xml.XmlQualifiedName>，指定用于给定 `IXmlSerializable` 类型的架构类型名称。 此限定名称也将用作数据协定名称和该类型的命名空间。 返回架构提供程序方法时允许立即返回架构集中不存在的类型。 但是，导出所有相关类型（调用 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法中有关 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的所有相关类型并访问 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 属性）时，该类型应该存在于架构集中。 在进行所有相关的 `Schemas` 调用之前访问 `Export` 属性可能会导致 <xref:System.Xml.Schema.XmlSchemaException>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 导出过程中，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
   
  架构提供程序方法也可以返回要使用的 <xref:System.Xml.Schema.XmlSchemaType>。 该类型可能是匿名的，也可能不是。 如果它是匿名的，则每次将 `IXmlSerializable` 类型用作数据成员时，`IXmlSerializable` 类型的架构都将作为匿名类型导出。 `IXmlSerializable` 类型仍具有数据协定名称和命名空间。 (这确定的中所述[数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)只不过<xref:System.Runtime.Serialization.DataContractAttribute>属性不能用于自定义的名称。)如果它不是匿名的，则它必须是 `XmlSchemaSet` 中的一种类型。 这种情况相当于返回该类型的 `XmlQualifiedName`。  
   
- 另外，还将导出该类型的全局元素声明。 如果该类型没有应用于它的 <xref:System.Xml.Serialization.XmlRootAttribute> 特性，则该元素具有与数据协定相同的名称和命名空间，且其“nillable”属性为 `true`。 其中唯一的例外是架构命名空间（“http://www.w3.org/2001/XMLSchema”）。换而言之，如果该类型的数据协定在此命名空间中，则相应的全局元素将位于空白命名空间中，因为禁止将新元素添加到架构命名空间中。 如果该类型具有应用于它的 `XmlRootAttribute` 属性 (Attribute)，则将使用以下属性 (Property) 导出全局元素声明：<xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>、<xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> 和 <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A>。 应用了 `XmlRootAttribute` 的默认值是数据协定名称、空命名空间和为 `true` 的“nillable”。  
+ 另外，还将导出该类型的全局元素声明。 如果该类型没有应用于它的 <xref:System.Xml.Serialization.XmlRootAttribute> 特性，则该元素具有与数据协定相同的名称和命名空间，且其“nillable”属性为 `true`。 唯一的例外是架构命名空间 ("http://www.w3.org/2001/XMLSchema") – 因为禁止将新元素添加到架构命名空间，则相应的全局元素类型的数据协定是此命名空间中，如果将在空白命名空间中。 如果该类型具有应用于它的 `XmlRootAttribute` 属性 (Attribute)，则将使用以下属性 (Property) 导出全局元素声明：<xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>、<xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> 和 <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A>。 应用了 `XmlRootAttribute` 的默认值是数据协定名称、空命名空间和为 `true` 的“nillable”。  
   
  同样的全局元素声明规则也适用于旧数据集类型。 请注意，`XmlRootAttribute` 无法重写通过自定义代码添加的全局元素声明，无论是使用构架提供程序方法添加到 `XmlSchemaSet` 中的，还是通过旧数据集类型的 `GetSchema` 添加的。  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `ReadXml` 实现不应读取包装元素。 它应读取 `WriteXml` 生成的那一个元素。  
   
--   定期序列化元素类型时（例如，作为数据协定中的数据成员），序列化程序将在调用 `WriteXml` 之前输出包装元素，如同处理内容类型一样。 然而，在顶层序列化元素类型时，序列化程序通常根本不输出 `WriteXml` 写入的元素周围的包装元素，除非在 `DataContractSerializer` 或 `NetDataContractSerializer` 构造函数中构造序列化程序时显式指定了根名称和命名空间。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+-   定期序列化元素类型时（例如，作为数据协定中的数据成员），序列化程序将在调用 `WriteXml` 之前输出包装元素，如同处理内容类型一样。 然而，在顶层序列化元素类型时，序列化程序通常根本不输出 `WriteXml` 写入的元素周围的包装元素，除非在 `DataContractSerializer` 或 `NetDataContractSerializer` 构造函数中构造序列化程序时显式指定了根名称和命名空间。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
 -   如果在构造期间没有指定根名称和命名空间的情况下在顶层序列化元素类型，则 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> 实质上不执行任何操作，且 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> 将调用 `WriteXml`。 在此模式下，要序列化的对象不能为 `null`，且不能以多态形式进行分配。 另外，不能启用对象图保留，也不能使用 `NetDataContractSerializer`。  
   

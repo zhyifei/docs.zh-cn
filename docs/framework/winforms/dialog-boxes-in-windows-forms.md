@@ -1,31 +1,33 @@
 ---
-title: "Windows 窗体中的对话框"
-ms.custom: 
+title: Windows 窗体中的对话框
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8f493013744ffa7819d4cb554f794d9a591a371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 423f8e83290d46b1f49a34517f67ddaef398b3b3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Windows 窗体中的对话框
-对话框用于与用户交互和检索信息。 简单地说，对话框是将其 <xref:System.Windows.Forms.FormBorderStyle> 枚举属性设置为 `FixedDialog` 的窗体。 可以通过使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中的 Windows 窗体设计器构建自己的自定义对话框。 添加 `Label`、`Textbox` 和 `Button` 等控件，以便根据你的特定需求自定义对话框。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]还包括预定义的对话框框中，如**文件打开**和消息框，你可以调整为你自己的应用程序。 有关详细信息，请参阅[对话框控件和组件](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)。  
+对话框用于与用户交互和检索信息。 简单地说，对话框是将其 <xref:System.Windows.Forms.FormBorderStyle> 枚举属性设置为 `FixedDialog` 的窗体。 您可以通过使用 Visual Studio 中的 Windows 窗体设计器来构造你自己的自定义对话框。 添加 `Label`、`Textbox` 和 `Button` 等控件，以便根据你的特定需求自定义对话框。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]还包括预定义的对话框框中，如**文件打开**和消息框，你可以调整为你自己的应用程序。 有关详细信息，请参阅[对话框控件和组件](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：显示 Windows 窗体的对话框](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  

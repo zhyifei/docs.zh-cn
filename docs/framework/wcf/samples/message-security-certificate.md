@@ -1,28 +1,28 @@
 ---
-title: "消息安全证书"
-ms.custom: 
+title: 消息安全证书
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-caps.latest.revision: 
+caps.latest.revision: 51
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9339258c4f5df606db9126c8b4b886b0a26029a6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6ff680c9d85e4d395af550bf60de3b962d6a0c2a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-certificate"></a>消息安全证书
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS 安全性和 X.509 v3 证书身份验证，并要求使用服务器的 X.509 v3 证书进行服务器身份验证。 此示例使用默认设置，以便客户端和服务器之间的所有应用程序消息都经过签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)和客户端控制台程序和由 Internet 信息服务 (IIS) 承载的服务库组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -31,8 +31,8 @@ ms.lasthandoff: 01/19/2018
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
  此示例演示如何使用配置来控制身份验证，以及如何从安全上下文中获取调用方的标识，如下面的示例代码所述。  
-  
-```  
+
+```csharp
 public class CalculatorService : ICalculator  
 {  
     public string GetCallerIdentity()  
@@ -192,8 +192,8 @@ public class CalculatorService : ICalculator
 ```  
   
  下面的示例演示如何在程序中调用服务。  
-  
-```  
+
+```csharp
 // Create a client.  
 CalculatorClient client = new CalculatorClient();  
   
@@ -202,7 +202,7 @@ Console.WriteLine(client.GetCallerIdentity());
 ...  
 //Closing the client gracefully closes the connection and cleans up resources.  
 client.Close();  
-```  
+```
   
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
@@ -221,7 +221,7 @@ Press <ENTER> to terminate client.
   
      批处理文件中的以下行用于创建客户端证书。 创建的证书的主题名称中会使用指定的客户端名称。 证书存储在 `My` 存储位置下的 `CurrentUser` 存储区中。  
   
-    ```  
+    ```bat
     echo ************  
     echo making client cert  
     echo ************  
@@ -232,7 +232,7 @@ Press <ENTER> to terminate client.
   
      批处理文件中的以下行将客户端证书复制到服务器的 TrustedPeople 存储中，以使服务器能够做出相关的信任或不信任决定。 为了使安装在 TrustedPeople 存储中的证书能够被 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务信任，必须将客户端证书验证模式设置为 `PeerOrChainTrust` 或 `PeerTrust`。 请参见前面的服务配置示例，了解如何使用配置文件完成此操作。  
   
-    ```  
+    ```bat
     echo ************  
     echo copying client cert to server's LocalMachine store  
     echo ************  
@@ -243,7 +243,7 @@ Press <ENTER> to terminate client.
   
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -267,7 +267,7 @@ Press <ENTER> to terminate client.
   
      Setup.bat 文件中的以下行使存储在 LocalMachine 存储中的服务器证书可以供 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作进程帐户访问。  
   
-    ```  
+    ```bat
     echo ************  
     echo setting privileges on server certificates  
     echo ************  

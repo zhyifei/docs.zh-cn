@@ -1,24 +1,26 @@
 ---
-title: "预期异常"
-ms.custom: 
+title: 预期异常
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 728f13fcf265c20c480d34388001d528ce43190e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="expected-exceptions"></a>预期异常
 此示例演示如何在使用类型化客户端时捕获预期异常。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。 在此示例中，客户端是一个控制台应用程序 (.exe)，服务是由 Internet 信息服务 (IIS) 承载的。  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  调用客户端通信方法的代码必须捕获 `TimeoutException` 和 `CommunicationException`。 处理此类错误的一种方法是中止客户端并报告通信故障。  
   
-```  
+```csharp   
 try  
 {  
     ...  

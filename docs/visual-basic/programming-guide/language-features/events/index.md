@@ -15,14 +15,14 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
-虽然可以将 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 项目可视化为按序列执行的一系列过程，但实际上大多数程序都是事件驱动型。也就是说，外部发生的*事件*决定了执行流。  
+大多数程序时可能会将 Visual Studio 项目可视化为一系列实际上，在序列中，执行的过程是事件驱动的-也就是说执行流由外部发生的事情调用决定*事件*。  
   
  事件是一种信号，可指示应用程序某重要事件已发生。 例如，当用户单击窗体控件时，窗体会引发 `Click` 事件，并调用可处理此事件的过程。 借助事件，各个不同的任务还可以相互通信。 例如，应用程序执行的排序任务与主应用程序是分开的。 如果用户取消排序，应用程序便会发送 cancel 事件，指示停止排序过程。  
   

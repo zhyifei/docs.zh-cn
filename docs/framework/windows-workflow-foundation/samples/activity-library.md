@@ -1,30 +1,13 @@
----
-title: "活动库"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99d8fba848129156d94e54d1da7d08122ccfa735
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ ---
+标题:"活动库"ms.custom:""ms.date:"03/30/2017"ms.prod:".net framework"ms.reviewer:""ms.suite:""ms.tgt_pltfrm:""ms.topic:"文章"ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d caps.latest.revision: 7 作者:"dotnet bot"ms.author:"dotnetcontent"管理器:"wpickett"ms.workload: 
+  - "dotnet"
 ---
 # <a name="activity-library"></a>活动库
-本节包含了演示 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的高级自定义活动的示例。  
+本节包含演示高级自定义活动中 Windows Workflow Foundation (WF) 示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [.NET Framework 4.5 中的策略活动](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- 演示 Policy4 活动如何通过使用在 WF 3.5 中提供的规则引擎，允许在 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中直接执行 <xref:System.Workflow.Activities.Rules.RuleSet> (WF 3.5) 中的现有 [!INCLUDE[wf2](../../../../includes/wf2-md.md)][!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 对象。  
+ 演示如何使用 Policy4 活动中的 Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>对象用于在 Windows Workflow Foundation 中[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接通过 WF 3.5 中附带的规则引擎。  
   
  [要基于一系列值进行切换的自定义活动](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
  演示如何创建扩展对 <xref:System.Activities.Statements.Switch%601> 的使用的自定义活动。  
@@ -57,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  演示 `ThrottleParallelForEach` 活动与 <xref:System.Activities.Statements.ParallelForEach%601> 活动的相似之处，二者的不同之处在于，前者允许设置一个并发因子来限制要同时执行的分支的数量。  
   
  [实体活动](../../../../docs/framework/windows-workflow-foundation/samples/entity-activities.md)  
- 演示如何结合使用 ADO.NET Entity Framework 和 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 来简化数据访问。  
+ 演示如何使用 ADO.NET 实体框架 Windows Workflow Foundation 来简化数据访问。  
   
  [数据库访问活动](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  演示如何创建活动以允许访问数据库以检索或修改信息并使用[ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。  
@@ -66,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  演示如何编写一个自定义活动，该活动从执行路径中移除其他活动，从而有效注释掉这些活动。  
   
  [.NET Framework 4.5 中的外部化策略活动](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- 演示 ExternalizedPolicy4 活动如何通过使用在 WF 3.5 中提供的规则引擎，允许在 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中直接执行 <xref:System.Workflow.Activities.Rules.RuleSet> (WF 3.5) [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 对象中的现有 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
+ 演示如何使用 ExternalizedPolicy4 活动执行中的现有 Windows Workflow Foundation [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Windows Workflow foundation 中的对象[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF 4.5) 直接通过使用规则引擎，它是在 WF 3.5 中提供。  
   
  [NoPersistScope 活动](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
  演示如何操作工作流中的不可序列化且可释放的状态。  

@@ -13,17 +13,17 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 230229203029740b82e706fe2aa7ff8ee06c486a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows 窗体应用程序基础知识 (Visual Basic)
 Visual Basic 的一个重要部分是创建 Windows 窗体应用程序在用户的计算机上本地运行的能力。 Visual Studio 可用于创建使用 Windows 窗体的应用程序和用户界面。 Windows 窗体应用程序基于从类<xref:System.Windows.Forms>命名空间。  
   
 ## <a name="designing-windows-forms-applications"></a>设计 Windows 窗体应用程序  
- 你可以创建 Windows 窗体和 Windows 服务应用程序与[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。 有关详细信息，请参阅下列主题：  
+ 可以使用 Visual Studio 中创建 Windows 窗体和 Windows 服务应用程序。 有关详细信息，请参阅下列主题：  
   
 -   [Windows 窗体入门](../../../framework/winforms/getting-started-with-windows-forms.md)。 提供有关如何创建和程序 Windows 窗体的信息。  
    
@@ -32,7 +32,7 @@ Visual Basic 的一个重要部分是创建 Windows 窗体应用程序在用户�
 -   [Windows 服务应用程序](../../../framework/windows-services/index.md)。 说明如何创建 Windows 服务的主题列表。  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>构建丰富的交互式用户界面  
- Windows 窗体是的智能客户端组件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，一组的托管库，使读取和写入文件系统等常见应用程序任务。 使用类似的开发环境[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，你可以通过网络与远程计算机创建 Windows 窗体应用程序显示的信息、 请求来自用户的输入和沟通。  
+ Windows 窗体是的智能客户端组件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，一组的托管库，使读取和写入文件系统等常见应用程序任务。 使用诸如 Visual Studio 之类的开发环境，你可以创建 Windows 窗体应用程序显示的信息、 请求来自用户的输入和沟通与远程计算机通过网络。  
   
  在 Windows 窗体，窗体是向用户的信息显示在其一个可视化图面。 通常情况下，通过将窗体上的控件和开发对用户操作，如点击鼠标或按键响应需要构建 Windows 窗体应用程序。 控件是离散的用户界面 (UI) 元素，用于显示数据或接受数据输入。  
   
@@ -44,7 +44,7 @@ Visual Basic 的一个重要部分是创建 Windows 窗体应用程序在用户�
   
  Windows 窗体具有丰富的 UI 控件，这些控件可模拟 Microsoft Office 等高端应用程序中的功能。 使用<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.MenuStrip>控件，可以创建包含文本和图像、 显示子菜单和托管其他控件，如文本框和组合框的工具栏和菜单。  
   
- 与[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]拖放窗体设计器中，可以轻松创建 Windows 窗体应用程序： 只需用光标选中控件并将它们放置在要在窗体上。 设计器提供诸如网格线和"对齐线"等工具可简化对齐控件。 无论是使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]或编译命令行中，你可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控件，创建高级窗体布局的最小时间和精力。  
+ 使用 Visual Studio 拖放窗体设计器中，你可以轻松创建 Windows 窗体应用程序： 只需用光标选中控件并将它们放置在要在窗体上。 设计器提供诸如网格线和"对齐线"等工具可简化对齐控件。 和是否使用 Visual Studio 或在命令行编译，可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控件，创建高级窗体布局的最小时间和精力。  
   
 ### <a name="custom-ui-elements"></a>自定义 UI 元素  
  最后，如果必须创建自己的自定义用户界面元素，<xref:System.Drawing>命名空间包含的所有类需要呈现线条、 圆形和其他形状直接在窗体上的。  
@@ -53,7 +53,7 @@ Visual Basic 的一个重要部分是创建 Windows 窗体应用程序在用户�
   
 |到|查看|  
 |--------|---------|  
-|创建与新的 Windows 窗体应用程序 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[演练： 创建简单的 Windows 窗体](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|使用 Visual Studio 创建新的 Windows 窗体应用程序|[演练： 创建简单的 Windows 窗体](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |使用窗体上控件|[如何：向 Windows 窗体添加控件](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |创建与图形 <xref:System.Drawing>|[图形编程入门](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |创建自定义控件|[如何：从 UserControl 类继承](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -67,7 +67,7 @@ Visual Basic 的一个重要部分是创建 Windows 窗体应用程序在用户�
  你可以创建数据绑定控件轻松使用数据源窗口中，你的项目中显示数据源，如数据库、 Web 服务和对象。 可以通过将此窗口中的项拖动到项目中的窗体上来创建数据绑定控件。 还可以通过将对象从“数据源”窗口拖动到现有控件上来将现有控件与数据进行数据绑定。  
   
 ### <a name="settings"></a>设置  
- 你可以管理 Windows 窗体中的数据绑定的另一种是设置。 大多数智能客户端应用程序必须保留有关其运行时状态，例如窗体，最后一次大小的一些信息，并保留用户首选项数据，如保存文件的默认位置。 应用程序设置功能通过提供一种简单的方法将这两种类型的设置存储客户端计算机上满足这些要求。 一次定义使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]或代码编辑器中，这些设置便作为 XML 保留并自动在运行时读取回内存。  
+ 你可以管理 Windows 窗体中的数据绑定的另一种是设置。 大多数智能客户端应用程序必须保留有关其运行时状态，例如窗体，最后一次大小的一些信息，并保留用户首选项数据，如保存文件的默认位置。 应用程序设置功能通过提供一种简单的方法将这两种类型的设置存储客户端计算机上满足这些要求。 一旦使用 Visual Studio 或代码编辑器的定义，这些设置便作为 XML 保留并自动在运行时读取回内存。  
   
  有关使用这些功能的分步信息，请参阅下列帮助主题。  
   
@@ -78,7 +78,7 @@ Visual Basic 的一个重要部分是创建 Windows 窗体应用程序在用户�
 |使用数据源窗口|[演练：在 Windows 窗体上显示数据](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>将应用程序部署到客户端计算机  
- 写入你的应用程序之后，以便他们可以安装和运行在其自己的客户端计算机上必须将它发送到你的用户。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技术，你可以部署你的应用程序从内[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，只需几次点击并为用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 管理的所有元素和你的应用程序中的依赖关系，并确保客户端计算机上正确安装应用程序。  
+ 写入你的应用程序之后，以便他们可以安装和运行在其自己的客户端计算机上必须将它发送到你的用户。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技术，你可以通过只需几次点击部署你的应用程序从 Visual Studio 中和用户提供指向 Web 上的应用程序的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 管理的所有元素和你的应用程序中的依赖关系，并确保客户端计算机上正确安装应用程序。  
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 应用程序可以配置为仅在用户连接到网络时运行，或配置为联机和脱机时均可运行。 指定应用程序应支持脱机操作时[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]将链接添加到你的应用程序在用户的**启动**菜单上，以便用户可以打开它而使用的 URL。  
   

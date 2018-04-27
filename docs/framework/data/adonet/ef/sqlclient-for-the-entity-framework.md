@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2801ad445be073f2cd4725d04a0c731e8bfcdd1b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5949ee1931b9ab9adf1f14b921432cae531cebd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>用于实体框架的 SqlClient
 本节介绍用于 SQL Server (SqlClient) 的 .NET Framework 数据提供程序，该提供程序使实体框架能够在 Microsoft SQL Server 上工作。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
 |2000|2005|2008|  
   
 > [!NOTE]
->  从开始[!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)]2010， [ADO.NET 实体数据模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)不支持 SQL Server 2000。  
+>  从 Visual Studio 2010，开始[ADO.NET 实体数据模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)不支持 SQL Server 2000。  
   
 ## <a name="provider-namespace-name"></a>提供程序命名空间名称  
  所有提供程序都必须指定一个命名空间。 实体框架通过此属性获知提供程序为特定构造（如类型和函数）使用哪个前缀。 SqlClient 提供程序清单的命名空间为 `SqlServer`。 有关命名空间的详细信息，请参阅[命名空间](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)。  

@@ -1,29 +1,30 @@
 ---
-title: "持久双工"
-ms.custom: 
+title: 持久双工
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1298f150709b48f18de654be2ab17adfdcbf42a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-duplex"></a>持久双工
-此示例演示如何使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的消息传递活动来设置和配置持久双工消息交换。 持久双工消息交换是一类持续时间较长的双向消息交换。 消息交换的生存期可能比通信通道的生存期和服务实例的内存生存期要长一些。  
+此示例演示如何设置和配置持久双工消息交换使用 Windows Workflow Foundation (WF) 中的消息传递活动。 持久双工消息交换是一类持续时间较长的双向消息交换。 消息交换的生存期可能比通信通道的生存期和服务实例的内存生存期要长一些。  
   
 ## <a name="sample-details"></a>示例详细信息  
- 在此示例中，将使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 实现的两个 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 服务配置为具有持久双工消息交换。 持久双工消息交换由两个单向消息通过 MSMQ 发送并使用关联[.NET 上下文交换](http://go.microsoft.com/fwlink/?LinkID=166059)。 使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 消息传递活动发送消息。 .NET 上下文交换用于指定所发送消息上的回调地址。 使用 Windows 进程激活服务 (WAS) 承载这两个服务，并将其配置为启用服务实例的持久性。  
+ 在此示例中，两个[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]实现使用 Windows Workflow Foundation 的服务配置为具有持久双工消息交换。 持久双工消息交换由两个单向消息通过 MSMQ 发送并使用关联[.NET 上下文交换](http://go.microsoft.com/fwlink/?LinkID=166059)。 使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 消息传递活动发送消息。 .NET 上下文交换用于指定所发送消息上的回调地址。 使用 Windows 进程激活服务 (WAS) 承载这两个服务，并将其配置为启用服务实例的持久性。  
   
  第一个服务 (Service1.xamlx) 会向第二个服务 (Service2.xamlx) 发送执行某项工作的请求。  完成此项工作后，Service2.xamlx 会向 Service1.xamlx 发送通知，以指示工作已完成。 工作流控制台应用程序会设置服务正在侦听的队列，并会发送初始启动消息以激活 Service1.xamlx。 一旦 Service1.xamlx 收到来自 Service2.xamlx 的有关请求的工作已完成的通知，它就会将结果保存到一个 XML 文件中。 在等待回调消息时，Service1.xamlx 会使用默认的 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 保持其实例状态。 Service2.xamlx 将其实例状态保持为完成 Service1.xamlx 所请求的工作的一部分。  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  运行示例。  
   
-    1.  浏览到 http://localhost/private/durableduplex/service1.xamlx 和 http://localhost/private/durableduplex/service2.xamlx 以确保这两个服务正在运行。  
+    1.  浏览到http://localhost/private/durableduplex/service1.xamlx和http://localhost/private/durableduplex/service2.xamlx以确保这两个服务正在运行。  
   
     2.  按 F5 运行 DurableDuplexClient。  
   

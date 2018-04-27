@@ -1,23 +1,24 @@
 ---
-title: "挂起的实例管理"
-ms.custom: 
+title: 挂起的实例管理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e04f1e2f334993975b2c4261efdc28ba318dfa3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f5073e9de217637141d7e3c9d70bb6a0b7a9cd0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="suspended-instance-management"></a>挂起的实例管理
 此示例演示如何管理已挂起的工作流实例。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 的默认操作为 `AbandonAndSuspend`。 这意味着，在默认情况下，从 <xref:System.ServiceModel.WorkflowServiceHost> 中承载的某个工作流实例抛出的未处理异常会导致从内存中释放（放弃）该实例，而该实例的持久版本将被标记为已挂起。 已挂起的工作流实例在取消挂起之前无法运行。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/22/2017
  此示例演示如何实现用于查询已挂起实例的命令行实用工具，以及如何为用户提供恢复或终止实例的选项。 在此示例中，一个工作流服务有意引发异常，从而使该服务挂起。 然后可以使用命令行实用工具查询该实例，并随后恢复或终止该实例。  
   
 ## <a name="demonstrates"></a>演示  
- <xref:System.ServiceModel.WorkflowServiceHost> 中具有 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 和 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 的 [!INCLUDE[wf](../../../../includes/wf-md.md)]。  
+ <xref:System.ServiceModel.WorkflowServiceHost> 与<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>和<xref:System.ServiceModel.Activities.WorkflowControlEndpoint>Windows Workflow Foundation (WF) 中。  
   
 ## <a name="discussion"></a>讨论  
  本示例中实现的命令行实用工具特定于 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 中附带的 SQL 实例存储区实现。 如果您具有该实例存储区的自定义实现，则可以使用特定于您实例存储区的实现替换示例中的 `WorkflowInstanceCommand` 实现，来改编此实用工具。  

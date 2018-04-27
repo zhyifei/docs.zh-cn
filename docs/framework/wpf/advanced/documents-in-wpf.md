@@ -1,12 +1,13 @@
 ---
-title: "WPF 中的文档"
-ms.custom: 
+title: WPF 中的文档
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02f65d68cdaad8824905c4545239f5b607c672d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0fcf7281cce7e5921ad7a03011ff85c254231690
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文档
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供丰富的文档功能，可创建旨在比前几代 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 更易于访问和读取的高保真内容文档。 除增强功能和质量外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 还对文档显示、打包和安全性能提供集成服务。 本主题介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文档类型和文档打包。  
@@ -42,12 +44,12 @@ ms.lasthandoff: 12/22/2017
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>文档控件和文本布局  
- [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 提供一组预建的控件，可以简化固定文档、流文档和应用程序内常规文本的使用。  使用支持固定的文档内容的显示<xref:System.Windows.Controls.DocumentViewer>控件。  流文档内容的显示支持的三个不同的控件： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>它们分别映射到不同的用户方案 （请参阅以下部分）。  其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件提供简化的布局以支持常规文本使用（请参阅下面的[用户界面中的文本](#text_in_the_user_interface)）。  
+ .NET Framework 提供一组预建简化使用固定的文档、 流文档和应用程序中的常规文本的控件。  使用支持固定的文档内容的显示<xref:System.Windows.Controls.DocumentViewer>控件。  流文档内容的显示支持的三个不同的控件： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>它们分别映射到不同的用户方案 （请参阅以下部分）。  其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控件提供简化的布局以支持常规文本使用（请参阅下面的[用户界面中的文本](#text_in_the_user_interface)）。  
   
 ### <a name="fixed-document-control---documentviewer"></a>固定文档控件 - DocumentViewer  
  <xref:System.Windows.Controls.DocumentViewer>控件用于显示<xref:System.Windows.Documents.FixedDocument>内容。 <xref:System.Windows.Controls.DocumentViewer>控件提供的常见操作包括打印输出中，将复制到剪贴板、 缩放和文本搜索功能提供内置支持直观的用户界面。 此控件通过常见的滚动机制提供对页面内容的访问。 如所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件，<xref:System.Windows.Controls.DocumentViewer>支持完整或部分前景，从而使要直观地集成到几乎任何应用程序或环境的控件。  
   
- <xref:System.Windows.Controls.DocumentViewer>旨在以只读方式运行; 显示内容编辑或修改的内容不可用，并且不支持。  
+ <xref:System.Windows.Controls.DocumentViewer> 旨在以只读方式运行; 显示内容编辑或修改的内容不可用，并且不支持。  
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>流文档概述  
@@ -56,16 +58,16 @@ ms.lasthandoff: 12/22/2017
  流文档内容的显示支持由三个控件： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>包括功能，使用户能够动态各种查看模式，包括单页面 （页上的每一次的） 查看模式，两个--a-次一页 （书本阅读格式） 查看模式和连续滚动 （无界限） 查看模式之间进行选择。  有关这些查看模式的详细信息，请参阅<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  如果你不需要动态切换不同的查看模式之间的能力<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供轻量流内容查看器中使用特定查看模式修复。  
+ <xref:System.Windows.Controls.FlowDocumentReader> 包括功能，使用户能够动态各种查看模式，包括单页面 （页上的每一次的） 查看模式，两个--a-次一页 （书本阅读格式） 查看模式和连续滚动 （无界限） 查看模式之间进行选择。  有关这些查看模式的详细信息，请参阅<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  如果你不需要动态切换不同的查看模式之间的能力<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供轻量流内容查看器中使用特定查看模式修复。  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 和 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>显示的内容中页每次查看模式时，尽管<xref:System.Windows.Controls.FlowDocumentScrollViewer>显示连续滚动模式中的内容。  同时<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>固定为特定的查看模式。 与进行比较<xref:System.Windows.Controls.FlowDocumentReader>，其中包括使用户能够动态各种查看模式之间进行选择的功能 (如由<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>枚举)，但代价是多个资源密集型比<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> 显示的内容中页每次查看模式时，尽管<xref:System.Windows.Controls.FlowDocumentScrollViewer>显示连续滚动模式中的内容。  同时<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>固定为特定的查看模式。 与进行比较<xref:System.Windows.Controls.FlowDocumentReader>，其中包括使用户能够动态各种查看模式之间进行选择的功能 (如由<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>枚举)，但代价是多个资源密集型比<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
  默认情况下，总是显示垂直滚动条，而水平滚动条则在需要时显示。 默认值[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]为<xref:System.Windows.Controls.FlowDocumentScrollViewer>不包括工具栏; 但是，<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A>属性可用来启用内置的工具栏。  
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>用户界面中的文本  
- 除可将文本添加到文档外，文本显然还可以用于应用程序 UI（如窗体）中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的如中的简短句子时应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label>可在时极少的文字支持是必需的。 有关详细信息，请参阅 [TextBlock 概述](../../../../docs/framework/wpf/controls/textblock-overview.md)。  
+ 除可将文本添加到文档外，文本显然还可以用于应用程序 UI（如窗体）中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包括多个用于在屏幕中绘制文本的控件。 每个控件都面向不同的方案，并具有自己的功能和限制列表。 一般情况下，<xref:System.Windows.Controls.TextBlock>有限的文本支持是必需的如中的简短句子时应使用元素[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 可在时极少的文字支持是必需的。 有关详细信息，请参阅 [TextBlock 概述](../../../../docs/framework/wpf/controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文档打包  
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>包组件  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 打包 API 允许将应用程序数据和文档组织成单个可移植单元。 ZIP 文件是最常见的包类型之一，并且是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附带的默认包类型。  <xref:System.IO.Packaging.Package>本身是一个抽象类从其<xref:System.IO.Packaging.ZipPackage>使用一个打开标准 XML 的 ZIP 文件的结构来实现。  <xref:System.IO.Packaging.Package.Open%2A>方法使用<xref:System.IO.Packaging.ZipPackage>，创建并使用默认的 ZIP 文件。 包可以包含三种基本类型的项：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 打包 API 允许将应用程序数据和文档组织成单个可移植单元。 ZIP 文件是最常见的包类型之一，并且是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附带的默认包类型。  <xref:System.IO.Packaging.Package> 本身是一个抽象类从其<xref:System.IO.Packaging.ZipPackage>使用一个打开标准 XML 的 ZIP 文件的结构来实现。  <xref:System.IO.Packaging.Package.Open%2A>方法使用<xref:System.IO.Packaging.ZipPackage>，创建并使用默认的 ZIP 文件。 包可以包含三种基本类型的项：  
   
 |||  
 |-|-|  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="PackageParts"></a>   
 #### <a name="packageparts"></a>PackageParts  
- A <xref:System.IO.Packaging.PackagePart> （"部件"） 是指的对象存储在一个抽象类<xref:System.IO.Packaging.Package>。 在 ZIP 文件中，包的各个部件与存储在 ZIP 文件中的各个文件相对应。  <xref:System.IO.Packaging.ZipPackagePart>提供存储在可序列化对象的默认实现<xref:System.IO.Packaging.ZipPackage>。  与文件系统类似，包中包含的部件存储在分层目录或“文件夹样式”组织中。  使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]打包 Api，应用程序可以编写、 存储和读取多个<xref:System.IO.Packaging.PackagePart>对象使用单个 ZIP 文件容器。  
+ A <xref:System.IO.Packaging.PackagePart> （"部件"） 是指的对象存储在一个抽象类<xref:System.IO.Packaging.Package>。 在 ZIP 文件中，包的各个部件与存储在 ZIP 文件中的各个文件相对应。  <xref:System.IO.Packaging.ZipPackagePart> 提供存储在可序列化对象的默认实现<xref:System.IO.Packaging.ZipPackage>。  与文件系统类似，包中包含的部件存储在分层目录或“文件夹样式”组织中。  使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]打包 Api，应用程序可以编写、 存储和读取多个<xref:System.IO.Packaging.PackagePart>对象使用单个 ZIP 文件容器。  
   
 <a name="PackageDigitalSignatures"></a>   
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  

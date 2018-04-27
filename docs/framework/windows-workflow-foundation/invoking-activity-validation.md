@@ -1,26 +1,27 @@
 ---
-title: "调用活动验证"
-ms.custom: 
+title: 调用活动验证
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f22fc7dc53f52b47be2da3313f678825d4362750
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 39c059e7d8ed2191a4e0ce42d7d5b2087db84a5c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="invoking-activity-validation"></a>调用活动验证
-活动验证提供了一种在执行任何活动配置之前标识和报告此配置中的错误的方法。 当在工作流设计器中修改工作流，并且工作流设计器中显示任何验证错误或警告时，将执行验证。 此外，当调用工作流时，如果发生任何验证错误，默认验证逻辑将引发 <xref:System.Activities.InvalidWorkflowException>，此时，也将在运行时执行验证。 工作流应用程序和工具开发人员可使用 [!INCLUDE[wf](../../../includes/wf-md.md)] 提供的 <xref:System.Activities.Validation.ActivityValidationServices> 类来显式验证活动。 本主题说明如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 执行活动验证。  
+活动验证提供了一种在执行任何活动配置之前标识和报告此配置中的错误的方法。 当在工作流设计器中修改工作流，并且工作流设计器中显示任何验证错误或警告时，将执行验证。 此外，当调用工作流时，如果发生任何验证错误，默认验证逻辑将引发 <xref:System.Activities.InvalidWorkflowException>，此时，也将在运行时执行验证。 Windows Workflow Foundation (WF) 提供<xref:System.Activities.Validation.ActivityValidationServices>可按工作流应用程序和工具开发人员用来显式验证活动的类。 本主题说明如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 执行活动验证。  
   
 ## <a name="using-activityvalidationservices"></a>使用 ActivityValidationServices  
  <xref:System.Activities.Validation.ActivityValidationServices> 具有两种 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 重载，用于调用活动的验证逻辑。 第一种重载采用要验证的根活动，并返回验证错误和警告的集合。 下面的示例使用含有两个必需参数的自定义 `Add` 活动。  
@@ -243,7 +244,7 @@ else
 >  自定义活动作者可以在活动的 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写中提供验证逻辑。 由 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 引发的任何异常不会视为验证错误。 这些异常将从对 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的调用中转义，并且必须由调用方进行处理。  
   
 ## <a name="using-validationsettings"></a>使用 ValidationSettings  
- 默认情况下，当 <xref:System.Activities.Validation.ActivityValidationServices> 调用验证时，将计算活动树中的所有活动。 <xref:System.Activities.Validation.ValidationSettings> 允许通过配置其三个属性，采用多种不同方法来自定义验证。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定验证程序是应遍历整个活动树，还是仅向提供的活动应用验证逻辑。 该值的默认值为 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 指定从类型映射到约束列表的其他约束。 对于计算的活动树中的每个活动的基类型，将查找 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到匹配的约束列表，则会针对活动计算该列表中的所有约束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定验证程序是应计算所有约束还是仅计算 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的约束。 默认值为 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 有助于工作流主机作者为工作流添加其他验证，例如，适用于 FxCop 等工具的策略约束。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]约束，请参阅[声明性约束](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)。  
+ 默认情况下，当 <xref:System.Activities.Validation.ActivityValidationServices> 调用验证时，将计算活动树中的所有活动。 <xref:System.Activities.Validation.ValidationSettings> 允许通过配置其三个属性，采用多种不同方法来自定义验证。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定验证程序是应遍历整个活动树，还是仅向提供的活动应用验证逻辑。 该值的默认值为 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 指定从类型映射到约束列表的其他约束。 对于计算的活动树中的每个活动的基类型，将查找 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到匹配的约束列表，则会针对活动计算该列表中的所有约束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定验证程序是应计算所有约束还是仅计算 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的约束。 默认值为 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 有助于工作流主机作者为工作流添加其他验证，例如，适用于 FxCop 等工具的策略约束。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 约束，请参阅[声明性约束](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)。  
   
  若要使用 <xref:System.Activities.Validation.ValidationSettings>，请配置所需属性，然后在调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 时传递这些属性。 在此示例中，将验证由包含自定义 <xref:System.Activities.Statements.Sequence> 活动的 `Add` 组成的工作流。 `Add` 活动具有两个必需参数。  
   

@@ -1,28 +1,28 @@
 ---
-title: "匿名消息安全"
-ms.custom: 
+title: 匿名消息安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-caps.latest.revision: 
+caps.latest.revision: 52
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6f3ac3ba51939f319d1d0e98265d7867233f2b6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c93aacbe5af47c9094dccdaa15828bfa9fda79c5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-anonymous"></a>匿名消息安全
 “匿名消息安全”示例演示如何实现 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序，该应用程序使用不带客户端身份验证的消息级安全性，但需要使用服务器的 X.509 证书进行服务器身份验证。 客户端与服务器之间的所有应用程序消息均已进行签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。 此示例由客户端控制台程序 (.exe) 和 Internet 信息服务 (IIS) 所承载的服务库 (.dll) 组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -31,8 +31,8 @@ ms.lasthandoff: 01/19/2018
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
  如果不对客户端进行身份验证，则本示例向返回 `True` 的计算器接口添加新运算。  
-  
-```  
+
+```csharp
 public class CalculatorService : ICalculator  
 {  
     public bool IsCallerAnonymous()  
@@ -42,8 +42,8 @@ public class CalculatorService : ICalculator
     }  
     ...  
 }  
-```  
-  
+```
+
  服务公开单一终结点，以便与使用配置文件 (Web.config) 定义的服务进行通信。 终结点由地址、绑定和协定组成。 此绑定是用 `wsHttpBinding` 绑定配置的。 `wsHttpBinding` 绑定的默认安全模式是 `Message`。 `clientCredentialType` 属性设置为 `None`。  
   
 ```xml  
@@ -123,8 +123,8 @@ public class CalculatorService : ICalculator
  本示例将 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> 以便对服务的证书进行身份验证。 这是在`behaviors`一节中的客户端的 App.config 文件中实现的。 这意味着如果证书在用户的“受信任人”存储中，则信任此证书，而不对证书的颁发者链执行身份验证。 此处使用的设置是为了方便起见，使示例可以不需要证书颁发机构 (CA) 颁发的证书就能运行。 此设置没有默认设置 ChainTrust 安全。 在生产代码中使用 `PeerOrChainTrust` 之前，应仔细考虑此设置的安全含义。  
   
  客户端实现添加对的调用`IsCallerAnonymous`方法，否则不会不进行区分从[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
-  
-```  
+
+```csharp
 // Create a client with a client endpoint configuration.  
 CalculatorClient client = new CalculatorClient();  
   
@@ -145,8 +145,8 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ```  
@@ -166,7 +166,7 @@ Press <ENTER> to terminate client.
   
      Setup.bat 批处理文件中的以下行创建将要使用的服务器证书。  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -190,7 +190,7 @@ Press <ENTER> to terminate client.
   
      Setup.bat 批处理文件中的以下行可以让 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 辅助进程帐户访问 LocalMachine 存储区中存储的服务器证书。  
   
-    ```  
+    ```bat
     echo ************  
     echo setting privileges on server certificates  
     echo ************  
@@ -218,7 +218,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     >  Setup 批处理文件设计为通过 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示运行。 这要求路径环境变量指向 SDK 的安装目录。 将在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示中自动设置此环境变量。  
   
-3.  通过在浏览器中输入地址 http://localhost/servicemodelsamples/service.svc 来验证是否对服务具有访问权限。  
+3.  验证是否可以通过输入地址使用浏览器的服务访问http://localhost/servicemodelsamples/service.svc。  
   
 4.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   

@@ -1,26 +1,27 @@
 ---
-title: "持久性"
-ms.custom: 
+title: 持久性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c14759-9f87-458a-b339-beec8300e339
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b326c56ce96b9b0f2d2089976b530d530d9a55b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e07e215b9afed5cc2af950186cfe66c9808c8f2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="persistence"></a>持久性
-本节包含演示如何将工作流保存到 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的持久介质的示例。  
+本节包含演示如何将工作流保存在持久介质中 Windows Workflow Foundation (WF) 示例。  
   
 ## <a name="in-this-section"></a>本节内容  
  [持久保持工作流应用程序](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  

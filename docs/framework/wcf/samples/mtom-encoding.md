@@ -1,24 +1,26 @@
 ---
-title: "MTOM 编码"
-ms.custom: 
+title: MTOM 编码
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed65e2098a95a05f7cc5efa6d9014f67bf5ed261
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d826b5f2973ac451b3943fd78b661093906c72ad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="mtom-encoding"></a>MTOM 编码
 此示例演示如何将消息传输优化机制 (MTOM) 消息编码与 WSHttpBinding 一起使用。 MTOM 是一种机制，用来以原始字节形式传输包含 SOAP 消息的较大二进制附件，从而使所传输的消息较小。  
@@ -41,15 +43,15 @@ ms.lasthandoff: 12/22/2017
 ```  
   
  MTOM 编码器可以优化字节和流的数组。 在下面的示例中，操作使用 `Stream` 参数，因此可以进行优化。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
   public interface IUpload  
   {  
       [OperationContract]  
       int Upload(Stream data);  
   }  
-```  
+```
   
  为该示例选择的协定会将二进制数据传输到服务，并将上载的字节数作为返回值接收。 在安装服务之后运行客户端时，服务会显示数字 1000，这表示收到了全部 1000 个字节。 剩下的输出列出了在各种负载情况下经过优化和未经优化的消息大小。  
   

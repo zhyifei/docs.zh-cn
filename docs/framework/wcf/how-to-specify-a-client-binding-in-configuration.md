@@ -1,24 +1,26 @@
 ---
-title: "如何：在配置中指定客户端绑定"
-ms.custom: 
+title: 如何：在配置中指定客户端绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08cbf0145a2ac3f19e51a065acf97e3cf23b7986
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2441fd7507c5bb368405685598480650114b76a9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>如何：在配置中指定客户端绑定
 在此示例中，创建了一个使用计算器服务的客户端控制台应用程序，并在配置中以声明方式为该客户端指定了绑定。 该客户端访问实现了 `CalculatorService` 接口的 `ICalculator`，并且服务和客户端都使用 <xref:System.ServiceModel.BasicHttpBinding> 类。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
   
-4.  Svcutil.exe 还为使用 <xref:System.ServiceModel.BasicHttpBinding> 类的客户端生成配置。 使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 时，请将此文件命名为 App.config。请注意，在服务的实现内部，未指定地址和绑定信息。 而且，不必编写代码也可从配置文件中检索该信息。  
+4.  Svcutil.exe 还为使用 <xref:System.ServiceModel.BasicHttpBinding> 类的客户端生成配置。 在使用 Visual Studio 时，将此文件 App.config 命名。请注意，在服务的实现内部，未指定地址和绑定信息。 而且，不必编写代码也可从配置文件中检索该信息。  
   
      [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]   
             

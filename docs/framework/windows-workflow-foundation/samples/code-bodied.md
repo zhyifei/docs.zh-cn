@@ -1,23 +1,24 @@
 ---
 title: Code-Bodied
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5bfb2d95-9092-4551-9c59-bd8f0a37225e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e9c0cecbf398fb024bda672cf9085e9c779d620
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a07ef581459585f0418cdd24660b8064d0f51b0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="code-bodied"></a>Code-Bodied
 本节包含使用代码以声明方式创建的自定义活动示例。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  此示例演示如何开发一个自定义 <xref:System.Activities.CodeActivity>，该活动使用 <xref:System.Activities.AsyncCodeActivityContext> 在工作流外部异步执行工作。 
   
  [Hello World 自定义活动](../../../../docs/framework/windows-workflow-foundation/samples/hello-world-custom-activity.md)  
- 此示例演示几个 [!INCLUDE[wf](../../../../includes/wf-md.md)] 的主要功能，包括如何创建一个简单的自定义活动。  
+ 此示例演示几个重要功能的 Windows Workflow Foundation (WF)，包括如何创建一个简单的自定义活动。  
   
  [动态自变量](../../../../docs/framework/windows-workflow-foundation/samples/dynamic-arguments.md)  
  此示例演示如何实现由活动使用方而不是活动作者为其定义自变量的活动。

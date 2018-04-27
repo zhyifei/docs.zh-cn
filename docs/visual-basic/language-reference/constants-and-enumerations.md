@@ -13,11 +13,11 @@ ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bffbb8dabdd2463633c9d2ca8de3ef120850be3f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常量和枚举 (Visual Basic)
 Visual Basic 提供许多预定义的常量和枚举的开发人员。 常数存储中保持不变的应用程序的执行中的值。 枚举提供了使用相关常量集以及将常量值与名称相关联的一个便捷方法。  
@@ -31,7 +31,7 @@ Visual Basic 提供许多预定义的常量和枚举的开发人员。 常数存
 |---|---|  
 |`CONFIG`|对应的当前设置的字符串**活动解决方案配置**框中**Configuration Manager**。|  
 |`DEBUG`|A`Boolean`可以在中设置的值**项目属性**对话框。 默认情况下，项目的调试配置定义`DEBUG`。 当`DEBUG`定义，<xref:System.Diagnostics.Debug>类方法将生成输出复制到**输出**窗口。 当未定义时，<xref:System.Diagnostics.Debug>类方法不进行编译，不生成任何调试输出。|  
-|`TARGET`|表示对项目或命令行中的设置的输出类型的字符串**target**选项。 可能值`TARGET`是：<br /><br /> -"winexe"Windows 应用程序。<br />-"exe"控制台应用程序。<br />-类库的"库"。<br />-"模块"模块。<br />- **Target**可能在中设置选项[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境。 有关详细信息，请参阅[/target (Visual Basic 中)](../../visual-basic/reference/command-line-compiler/target.md)。|  
+|`TARGET`|表示对项目或命令行中的设置的输出类型的字符串**target**选项。 可能值`TARGET`是：<br /><br /> -"winexe"Windows 应用程序。<br />-"exe"控制台应用程序。<br />-类库的"库"。<br />-"模块"模块。<br />- **Target**可能在 Visual Studio 集成的开发环境中设置选项。 有关详细信息，请参阅[/target (Visual Basic 中)](../../visual-basic/reference/command-line-compiler/target.md)。|  
 |`TRACE`|A`Boolean`可以在中设置的值**项目属性**对话框。 默认情况下，项目的所有配置都定义`TRACE`。 当`TRACE`定义，<xref:System.Diagnostics.Trace>类方法将生成输出复制到**输出**窗口。 当未定义时，<xref:System.Diagnostics.Trace>类方法将不会被编译，但未`Trace`生成输出。|  
 |`VBC_VER`|一个数字，表示在 Visual Basic 版本，*主要*。*次要*格式。 版本的版本号[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]为 8.0。|  
   

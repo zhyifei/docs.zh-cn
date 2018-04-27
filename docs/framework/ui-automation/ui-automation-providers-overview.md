@@ -1,27 +1,29 @@
 ---
-title: "UI 自动化提供程序概述"
-ms.custom: 
+title: UI 自动化提供程序概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dc5cb5749bbfe06fd3a1bbe3537b28c7bbfa295d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8279b8c2c39ce37fa9e3af55a6b079e8202b3ff
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自动化提供程序概述
 > [!NOTE]
@@ -38,12 +40,12 @@ ms.lasthandoff: 12/22/2017
  UI 自动化提供程序分为两类：客户端提供程序和服务器端提供程序。  
   
 ### <a name="client-side-providers"></a>客户端提供程序  
- 客户端提供程序由 UI 自动化客户端实现，以便与不支持（或不完全支持） [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的应用程序进行通信。 客户端提供程序常通过发送和接收 [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] 消息，与跨进程边界的服务器进行通信。  
+ 客户端提供程序由 UI 自动化客户端实现，以便与不支持（或不完全支持） [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的应用程序进行通信。 客户端提供程序通常与服务器通信跨进程边界通过发送和接收 Windows 消息。  
   
- 由于 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)]或 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 应用程序中控件的 UI 自动化提供程序是作为操作系统的一部分提供的，所以客户端应用程序很少需要实现自己的提供程序，本概述不再赘述。  
+ 因为 UI 自动化提供程序中的控件[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]，Windows 窗体，或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]作为操作系统的一部分提供，应用程序、 客户端应用程序很少需要实现自己的提供程序，并且本概述不覆盖它们进一步。  
   
 ### <a name="server-side-providers"></a>服务器端提供程序  
- 服务器端提供程序由自定义控件或基于除 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]、 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)]或 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]外 UI 框架的应用程序实现。  
+ 服务器端提供程序由自定义控件或基于 UI 框架以外的应用程序实现[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]，Windows 窗体，或[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]。  
   
  服务器端提供程序向 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心系统公开接口，核心系统依次处理来自客户端的请求，使服务器端提供程序与跨进程边界的客户端应用程序进行通信。  
   

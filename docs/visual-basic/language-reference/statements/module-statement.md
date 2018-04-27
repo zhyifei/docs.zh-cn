@@ -1,10 +1,11 @@
 ---
-title: "Module 语句"
+title: Module 语句
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - Module
@@ -18,21 +19,21 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 92cdcd1919f21243118108da3bc382ea5d954130
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 51f8fd063449c072a69cdffd9f6ce2a96cc3f68c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="module-statement"></a>Module 语句
 声明的模块的名称，并引入的变量、 属性、 事件和模块包含的过程的定义。  
   
 ## <a name="syntax"></a>语法  
   
-```  
+```vb 
 [ <attributelist> ] [ accessmodifier ]  Module name  
     [ statements ]  
 End Module  
@@ -52,7 +53,7 @@ End Module
  请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `name`  
- 必需。 此模块的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 必须的。 此模块的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `statements`  
  可选。 定义变量、 属性、 事件、 过程和嵌套的类型，此模块的语句。  
@@ -103,7 +104,7 @@ End Module
 ## <a name="example"></a>示例  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
  [Namespace 语句](../../../visual-basic/language-reference/statements/namespace-statement.md)  
  [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  

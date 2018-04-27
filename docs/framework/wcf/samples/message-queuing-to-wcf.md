@@ -1,24 +1,26 @@
 ---
-title: "到 Windows Communication Foundation 的消息队列"
-ms.custom: 
+title: 到 Windows Communication Foundation 的消息队列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a4b63dd620d071b875caa255f681bdd5fb867f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6a29c0225117c57079b5048705f58dcde4a06426
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>到 Windows Communication Foundation 的消息队列
 本示例演示消息队列 (MSMQ) 应用程序如何将 MSMQ 消息发送到 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -28,8 +30,8 @@ ms.lasthandoff: 12/22/2017
  MSMQ 消息不包含有关哪些标头可映射到操作协定的不同参数的信息。 该参数属于 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) 类型，包含基础 MSMQ 消息。 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) 类中的“T”类型代表序列化到 MSMQ 消息正文中的数据。 在此示例中，`PurchaseOrder` 类型序列化到 MSMQ 消息正文中。  
   
  下面的示例代码演示订单处理服务的服务协定。  
-  
-```  
+
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
@@ -38,11 +40,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  服务是自承载服务。 使用 MSMQ 时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，该服务检查队列是否存在并在必要时创建队列。 从配置文件中读取队列名称。  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get the MSMQ queue name from the application settings in   
@@ -53,11 +55,11 @@ public static void Main()
         MessageQueue.Create(queueName, true);  
     …  
 }  
-```  
-  
+```
+
  该服务为 <xref:System.ServiceModel.ServiceHost> 创建和打开 `OrderProcessorService`，如下面的示例代码所示。  
-  
-```  
+
+```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))  
 {  
     serviceHost.Open();  
@@ -66,8 +68,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
     Console.ReadLine();  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。  
   
 > [!NOTE]
@@ -80,8 +82,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ```  
   
  该客户端应用程序是一个 MSMQ 应用程序，它使用 <xref:System.Messaging.MessageQueue.Send%2A> 方法向队列发送持久的事务性消息，如下面的示例代码所示。  
-  
-```  
+
+```csharp
 //Connect to the queue.  
 MessageQueue orderQueue = new MessageQueue(ConfigurationManager.AppSettings["orderQueueName"]);  
   
@@ -119,8 +121,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
 Console.WriteLine("Placed the order:{0}", po);  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>设置、生成和运行示例  

@@ -1,26 +1,27 @@
 ---
-title: "协定优先的工作流服务开发"
-ms.custom: 
+title: 协定优先的工作流服务开发
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bdafa52219dc7a275ceb64e24e8ecd91f0ec8068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4bc0c8fafd80651114d85d2d6b06c57dec6199b5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contract-first-workflow-service-development"></a>协定优先的工作流服务开发
-从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，[!INCLUDE[wf](../../../includes/wf-md.md)] 功能将 Web 服务和工作流更好地集成在第一个协定优先工作流开发的形式中。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。 本主题概述工作流服务中的活动和属性如何映射到服务协定的特性。 有关创建协定优先工作流服务的分步示例，请参阅[如何： 创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+从开始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 功能的更佳 web 服务和协定优先工作流开发的形式中的工作流之间的集成。 通过协定优先的工作流开发工具，可以在代码中优先设计协定。 然后该工具在工具箱中为协定中的操作自动生成活动模板。 本主题概述工作流服务中的活动和属性如何映射到服务协定的特性。 有关创建协定优先工作流服务的分步示例，请参阅[如何： 创建使用现有服务协定的工作流服务](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
 ## <a name="in-this-topic"></a>在本主题中  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [生成的配置的消息传递活动](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a>将服务协定特性映射到的工作流属性  
+##  <a name="MappingAttributes"></a> 将服务协定特性映射到的工作流属性  
  下面几节中的表指定不同 WCF 特性和属性，以及它们如何映射到协定优先工作流中的消息活动和属性。  
   
 -   [服务协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [错误协定特性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a>服务协定特性  
+###  <a name="ServiceContract"></a> 服务协定特性  
   
 |属性名|支持|描述|WF 验证|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  在此处插入小节正文。  
   
-###  <a name="OperationContract"></a>操作协定特性  
+###  <a name="OperationContract"></a> 操作协定特性  
   
 |属性名|支持|描述|WF 验证|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 12/22/2017
 |ReplyAction|是|获取或设置用于该操作答复消息的 SOAP 操作的值。|SendReply.Action 应当匹配。|  
 |TypeId|No|在派生类中实现时，获取此特性的唯一标识符。 （从特性继承。）|(N/A)|  
   
-###  <a name="MessageContract"></a>消息协定特性  
+###  <a name="MessageContract"></a> 消息协定特性  
   
 |属性名|支持|描述|WF 验证|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 |WrapperName|是|获取或设置消息正文的包装元素名称。|无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。|  
 |WrapperNamespace|No|获取或设置消息正文包装元素的命名空间。|(N/A)|  
   
-###  <a name="DataContract"></a>数据协定特性  
+###  <a name="DataContract"></a> 数据协定特性  
   
 |属性名|支持|描述|WF 验证|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -105,7 +106,7 @@ ms.lasthandoff: 12/22/2017
 |命名空间|是|获取或设置类型的数据协定的命名空间。|无验证（Receive.Content 和 SendReply.Content 必须匹配消息协定类型）。|  
 |TypeId|No|在派生类中实现时，获取此特性的唯一标识符。 （从特性继承。）|(N/A)|  
   
-###  <a name="FaultContract"></a>错误协定特性  
+###  <a name="FaultContract"></a> 错误协定特性  
   
 |属性名|支持|描述|WF 验证|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -117,19 +118,19 @@ ms.lasthandoff: 12/22/2017
 |ProtectionLevel|No|指定 SOAP 错误要求的绑定的保护级别。|(N/A)|  
 |TypeId|No|在派生类中实现时，获取此特性的唯一标识符。 （从特性继承。）|(N/A)|  
   
-##  <a name="AdditionalSupport"></a>其他支持和实现信息  
+##  <a name="AdditionalSupport"></a> 其他支持和实现信息  
   
 -   [不支持的服务协定功能](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
 -   [生成的配置的消息传递活动](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a>不支持的服务协定功能  
+###  <a name="UnsupportedFeatures"></a> 不支持的服务协定功能  
   
 -   不支持在协定中用 TPL（任务并行库）任务。  
   
 -   不支持服务协定的继承。  
   
-###  <a name="ActivityGeneration"></a>生成的配置的消息传递活动  
+###  <a name="ActivityGeneration"></a> 生成的配置的消息传递活动  
  向 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活动加入两个公共静态方法，以支持在使用协定优先工作流服务时生成预配置消息活动。  
   
 -   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  

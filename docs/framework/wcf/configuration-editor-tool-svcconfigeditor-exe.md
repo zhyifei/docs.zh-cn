@@ -1,12 +1,13 @@
 ---
-title: "配置编辑器工具 (SvcConfigEditor.exe)"
-ms.custom: 
+title: 配置编辑器工具 (SvcConfigEditor.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuration files, creating
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1531c68bdbb3b28436d0701536ef274f34513b19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>配置编辑器工具 (SvcConfigEditor.exe)
 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务配置编辑器 (SvcConfigEditor.exe)，管理员和开发人员可以使用图形用户界面来创建和修改 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的配置设置。 利用此工具，您不必直接编辑 XML 配置文件就可管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 绑定、行为、服务和诊断的设置。  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
 4.  单击 **“确定”**。  
   
 > [!NOTE]
->  不能编辑的值[ \<Baseaddressprefixfilter >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)内此工具。 若要添加或修改此元素，您应使用文本编辑器或 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。  
+>  不能编辑的值[ \<Baseaddressprefixfilter >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)内此工具。 若要添加或修改此元素，应使用文本编辑器或 Visual Studio。  
   
 ### <a name="client"></a>客户端  
  **客户端**节点显示所有客户端终结点的配置文件中。 在树中的每个子节点对应的子元素 <`client`> 配置文件中的元素。  
@@ -196,11 +198,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  选择要向其添加扩展元素的绑定。  
   
-2.  单击 **“添加”**。  
+2.  单击 **添加**。  
   
 3.  从可用扩展列表中，选择要添加的绑定元素扩展。 按住 Ctrl 键的同时进行选择可选择多项。  
   
-4.  单击 **“添加”**。  
+4.  单击 **添加**。  
   
 #### <a name="adjusting-the-extension-position-in-a-custom-binding"></a>调整自定义绑定中的扩展位置  
  自定义绑定是形成堆栈的一系列绑定元素。 堆栈中的每个绑定元素都有其自己的配置设置。 绑定元素扩展在自定义绑定中的顺序指示它们在堆栈中的位置。 堆栈顶部的元素首先得到应用。 若要更改顺序：  
@@ -299,11 +301,11 @@ ms.lasthandoff: 12/22/2017
   
 2.  选择要编辑的行为。  
   
-3.  单击 **“添加”**。  
+3.  单击 **添加**。  
   
 4.  从可用扩展列表中，选择要添加的行为元素扩展。  
   
-5.  单击 **“添加”**。  
+5.  单击 **添加**。  
   
 ##### <a name="adjusting-the-extension-position-in-a-behavior"></a>调整行为中的扩展位置  
  行为是形成堆栈的元素集合。 堆栈中的每个元素都有其自己的配置。 行为元素扩展在行为中的顺序指示它们在堆栈中的位置。 堆栈顶部的元素首先得到应用。 若要更改顺序：  

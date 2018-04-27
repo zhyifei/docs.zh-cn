@@ -1,27 +1,29 @@
 ---
-title: "优化性能：数据绑定"
-ms.custom: 
+title: 优化性能：数据绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c420748a9361655eeb2df33ce8426d9f167d3414
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b21089ea3f3aef8a934c78187b30f2576b8d39b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-performance-data-binding"></a>优化性能：数据绑定
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素能够以 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 形式绑定到来自各种数据源的数据。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="how-data-binding-references-are-resolved"></a>如何解析数据绑定引用  
  讨论数据绑定性能问题前，有必要了解 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定引擎如何解析用于绑定的对象引用。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定的源可以是任何 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象。 可绑定到 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象的属性、子属性或索引器。 通过使用解析绑定引用[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]反射或<xref:System.ComponentModel.ICustomTypeDescriptor>。 以下为解析用于绑定的对象引用的三种方法。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定的源可以是任何 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象。 可绑定到 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象的属性、子属性或索引器。 使用任一 Microsoft.NET Framework 反射解析绑定引用或<xref:System.ComponentModel.ICustomTypeDescriptor>。 以下为解析用于绑定的对象引用的三种方法。  
   
  第一种方法涉及到使用反射。 在这种情况下，<xref:System.Reflection.PropertyInfo>对象用于发现的属性的属性，并提供对属性元数据的访问权限。 使用时<xref:System.ComponentModel.ICustomTypeDescriptor>界面，数据绑定引擎使用此接口访问的属性值。 <xref:System.ComponentModel.ICustomTypeDescriptor>接口是在该对象不具有一组静态属性的情况下特别有用。  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 |**绑定 TextBlock 的文本属性**|**绑定时间 (ms)**|**呈现时间 -- 包括绑定 (ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |绑定到 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 对象的属性|115|314|  
-|属性[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]实现的对象<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|属性[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]实现的对象 <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
 |到<xref:System.Windows.DependencyProperty>的<xref:System.Windows.DependencyObject>。|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 |**数据绑定 ItemsSource**|**1 个项的更新时间 (ms)**|  
 |--------------------------------------|---------------------------------------|  
 |到[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]<xref:System.Collections.Generic.List%601>对象|1656|  
-|到<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|到 <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
 ## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>将 IList 绑定到 ItemsControl 而非 IEnumerable  

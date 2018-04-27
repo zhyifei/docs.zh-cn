@@ -1,24 +1,26 @@
 ---
-title: "事务处理批处理"
-ms.custom: 
+title: 事务处理批处理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>事务处理批处理
 本示例演示如何通过使用消息队列 (MSMQ) 来批处理事务处理读取。 事务处理批处理是排队通信中事务处理读取的一种性能优化功能。  
@@ -114,7 +116,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  若要在远程计算机上运行数据库，请更改连接字符串，使其指向数据库所在的计算机。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
  若要运行此示例，必须安装 MSMQ 并需要使用 SQL 或 SQL Express。  
   
 ## <a name="demonstrates"></a>演示  
@@ -142,8 +144,8 @@ ms.lasthandoff: 12/22/2017
  服务行为通过将 `TransactionScopeRequired` 设置为 `true` 来定义操作行为。 这可确保此方法所访问的任何资源管理器都使用相同的事务范围从队列中检索消息。 在此示例中，我们使用一个基本数据库来存储消息中包含的采购订单信息。 事务范围还可保证该方法引发异常时，消息将返回到队列。 如果不设置此操作行为，则队列通道会创建一个从队列中读取消息的事务，并在调度消息前自动提交事务，因此，如果操作失败，消息将丢失。 最常见的方案是在用于从队列中读取消息的事务中登记服务操作，如下面的代码所示。  
   
  请注意，`ReleaseServiceInstanceOnTransactionComplete` 设置为 `false`。 这是批处理的一个重要要求。 `ReleaseServiceInstanceOnTransactionComplete` 上的 `ServiceBehaviorAttribute` 属性指示事务完成后对服务实例执行什么操作。 默认情况下，事务一旦完成即释放服务实例。 批处理的核心方面是使用单个事务来读取和调度队列中的许多消息。 因此，释放服务实例会导致事务结束，从而过早地取消批处理的真正使用。 如果此属性设置为 `true`，并且将事务处理批处理行为添加到终结点，则批处理验证行为将引发异常。  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  `Orders` 类包装了订单处理。 在此示例中，它用采购订单信息更新数据库。  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  批处理行为及其配置在服务应用程序配置中指定。  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  批次大小的选择取决于应用程序。 如果批次大小过小，则可能无法获得所需的性能。 另一方面，如果批次大小过大，则可能会使性能下降。 例如，事务的生存期可能较长并对数据库保持锁定，或者事务可能会变为死锁状态，这会导致批处理回滚并重做工作。  
   
  客户端创建事务范围。 与队列的通信发生在事务范围之内，从而可将该事务范围视为原子单元，其中所有消息均将发送到队列或者没有任何消息发送到队列。 通过在事务范围上调用 <xref:System.Transactions.TransactionScope.Complete%2A> 可以提交事务。  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 您可以看到服务从客户端接收消息。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。 请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。 可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。 在批次中读取和处理消息时，可以看到滚动输出。  
   
 ```  

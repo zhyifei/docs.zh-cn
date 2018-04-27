@@ -1,24 +1,26 @@
 ---
-title: "与 ASMX Web 服务互操作"
-ms.custom: 
+title: 与 ASMX Web 服务互操作
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0f548f345e3711edfd547b2e6879fafdbd0ad4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fa28637ad4ffdc2652c4c925208cd699134579a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperating-with-asmx-web-services"></a>与 ASMX Web 服务互操作
 本示例演示如何将 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端应用程序与现有 ASMX Web 服务集成。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  下面示例代码中显示的 ASMX Web 服务实现计算并返回相应结果。  
   
-```  
+```csharp  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class CalculatorService : System.Web.Services.WebService  
     {  
@@ -57,7 +59,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- 经过配置后，同一计算机上的客户端可以在 http://localhost/servicemodelsamples/service.asmx 上访问该服务。 若要使远程计算机上的客户端能够访问该服务，必须指定限定域名，而不是本地主机。  
+ 经过配置之后，可以在访问服务http://localhost/servicemodelsamples/service.asmx通过同一台计算机上的客户端。 若要使远程计算机上的客户端能够访问该服务，必须指定限定域名，而不是本地主机。  
   
  通信通过生成的客户端[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 该客户端包含在 generatedClient.cs 文件中。 若要生成代理代码，ASMX 服务必须可用，因为需要使用该服务来检索更新的元数据。 在客户端目录中通过命令提示符运行以下命令可以生成该类型化代理。  
   
@@ -78,7 +80,7 @@ svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samp
   
  客户端实现将构造生成的客户端的实例。 然后可以使用生成的客户端与服务通信。  
   
-```  
+```csharp  
 // Create a client.  
 CalculatorServiceSoapClient client = new CalculatorServiceSoapClient();  
   

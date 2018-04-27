@@ -1,26 +1,27 @@
 ---
-title: "与外部数据交换结合使用互操作"
-ms.custom: 
+title: 与外部数据交换结合使用互操作
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 96f6fe26-5305-494f-9119-7748e0c4b3fa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b777cab4caf5b2b02c66e8378a7efce265157df0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4acec4209ddadd181774ae754cb1d6b94a21685e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-interop-with-external-data-exchange"></a>与外部数据交换结合使用互操作
-可使用 <xref:System.Activities.Statements.Interop> 活动从 [!INCLUDE[wf](../../../../includes/wf-md.md)] 和 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] (WF3) 中的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 执行活动以及在 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF4) 中的 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 内执行工作流。 此示例演示如何通过使用 WF4 工作流服务中的 <xref:System.Workflow.Activities.ExternalDataExchangeService> 活动配置和运行 WF3 工作流，该工作流使用 <xref:System.Activities.Statements.Interop> 及对应的自定义活动进行方法调用和事件处理。  
+<xref:System.Activities.Statements.Interop>活动可以用于执行 Windows Workflow Foundation (WF) 中的活动[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]和[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)](WF3) 中，和中 Windows Workflow Foundation 中的工作流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)](WF4)。 此示例演示如何通过使用 WF4 工作流服务中的 <xref:System.Workflow.Activities.ExternalDataExchangeService> 活动配置和运行 WF3 工作流，该工作流使用 <xref:System.Activities.Statements.Interop> 及对应的自定义活动进行方法调用和事件处理。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  

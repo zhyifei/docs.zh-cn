@@ -1,12 +1,13 @@
 ---
-title: "WindowsFormsHost 元素的布局注意事项"
-ms.custom: 
+title: WindowsFormsHost 元素的布局注意事项
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
@@ -16,33 +17,34 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 895185797ebdef2145caec4c1c5ac26e3688c463
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b915d3cdaebc862534c2ba6bd006d3b447e2a651
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 元素的布局注意事项
 本主题介绍如何<xref:System.Windows.Forms.Integration.WindowsFormsHost>与交互元素[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局系统。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]支持不同，但类似的逻辑大小和位置上窗体或页面的元素。 当你创建混合用户界面 (UI) 承载[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中控制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素集成两种布局方案。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]支持不同，但类似的逻辑大小和位置上窗体或页面的元素。 当你创建混合用户界面 (UI) 承载[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中控制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素集成两种布局方案。  
   
 ## <a name="differences-in-layout-between-wpf-and-windows-forms"></a>WPF 和 Windows 窗体之间的布局差异  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用独立于解析的布局。 所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局维度使用指定*设备无关的像素*。 独立于设备的像素是在大小和分辨率无关英寸的 96，因此获取无论您 72 dpi 监视器或 19200 dpi 打印机上呈现，均类似的结果。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用独立于解析的布局。 所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局维度使用指定*设备无关的像素*。 独立于设备的像素是在大小和分辨率无关英寸的 96，因此获取无论您 72 dpi 监视器或 19200 dpi 打印机上呈现，均类似的结果。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此外基于*动态布局*。 这意味着 UI 元素会在窗体或根据其内容、 其父布局容器和可用的屏幕大小的页面上排列本身。 动态布局协助进行本地化，通过它们所包含的字符串改变长度时自动调整大小和 UI 元素的位置。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 此外基于*动态布局*。 这意味着 UI 元素会在窗体或根据其内容、 其父布局容器和可用的屏幕大小的页面上排列本身。 动态布局协助进行本地化，通过它们所包含的字符串改变长度时自动调整大小和 UI 元素的位置。  
   
  中的布局[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]是设备相关，很可能是静态的。 通常情况下，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件绝对方式来定位使用硬件以像素为单位的维度的窗体上。 但是，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]支持某些动态布局功能下, 表中进行了总结。  
   
 |布局功能|描述|  
 |--------------------|-----------------|  
 |自动调整大小|某些[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件调整大小以正确显示其内容。 有关详细信息，请参阅[AutoSize 属性概述](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。|  
-|锚定和停靠|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件支持定位和基于父容器的大小。 有关详细信息，请参阅 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>。|  
+|锚定和停靠|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件支持定位和基于父容器的大小。 有关详细信息，请参阅 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>。|  
 |自动缩放|容器控件来调整自身其子根据输出设备或的大小，以像素为单位，默认容器字体的分辨率。 有关详细信息，请参阅[Windows 窗体中的自动缩放](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)。|  
 |布局容器|<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>控件排列及其子控件，并根据其内容调整大小。|  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 -   大多数情况下，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件不支持按比例缩放。 尽管该控件的整体尺寸将会缩放，但其子控件和组件元素可能不会按预期调整大小。 此限制取决于每个 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件支持缩放的程度。 此外，不能缩放[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]缩小到 0 像素的小时的控件。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件支持自动缩放，在其中窗体将自动调整自身的字号基于其控件。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 用户界面中，更改字号不会改变整个布局的大小，但是可动态调整单个元素的大小。  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件支持自动缩放，在其中窗体将自动调整自身的字号基于其控件。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 用户界面中，更改字号不会改变整个布局的大小，但是可动态调整单个元素的大小。  
   
 ### <a name="z-order"></a>Z 顺序  
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 用户界面中，可以更改元素的 z 顺序以控制重叠行为。 由于承载的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件是在单独的 HWND 中绘制的，所以始终在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素之上绘制它。  
@@ -74,13 +76,13 @@ ms.lasthandoff: 12/22/2017
   
  所有其他情况下需要坐标系统缩放。 托管的控件不调整大小。 相反，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素尝试来缩放所承载的控件及其所有子控件。 因为[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]不完全支持缩放，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素可以扩展到由特定控件支持的程度。  
   
- 重写<xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A>方法以提供有关将托管的自定义缩放行为[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]控件。  
+ 重写<xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A>方法以提供用于承载 Windows 窗体控件的自定义缩放行为。  
   
  除了向外，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素处理舍入和溢出的情况下下, 表中所述。  
   
 |转换问题|描述|  
 |----------------------|-----------------|  
-|舍入|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]独立于设备的像素大小指定为`double`，和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]硬件像素大小指定为`int`。 在情况下其中`double`-基于的维度转换为`int`-基于维度，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素使用标准的舍入，以便小于 0.5 的小数部分的值是向下舍入为 0。|  
+|舍入|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 独立于设备的像素大小指定为`double`，和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]硬件像素大小指定为`int`。 在情况下其中`double`-基于的维度转换为`int`-基于维度，<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素使用标准的舍入，以便小于 0.5 的小数部分的值是向下舍入为 0。|  
 |溢出|当<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素将从转换`double`值复制到`int`值，可能会溢出。 值大于<xref:System.Int32.MaxValue>设置为<xref:System.Int32.MaxValue>。|  
   
 ### <a name="layout-related-properties"></a>布局相关的属性  
@@ -90,7 +92,7 @@ ms.lasthandoff: 12/22/2017
  中托管的布局更改[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件传播到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]以触发布局更新。 <xref:System.Windows.UIElement.InvalidateMeasure%2A>方法<xref:System.Windows.Forms.Integration.WindowsFormsHost>确保托管控件中的布局更改会导致[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局引擎运行。  
   
 ### <a name="continuously-sized-windows-forms-controls"></a>连续大小 Windows 窗体控件  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]与控件支持连续伸缩完全交互[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局系统。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素使用<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法像往常一样来调整和排列托管[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 与控件支持连续伸缩完全交互[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局系统。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素使用<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法像往常一样来调整和排列托管[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  
   
 ### <a name="sizing-algorithm"></a>大小调整算法  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素使用以下过程来托管的控件的大小：  

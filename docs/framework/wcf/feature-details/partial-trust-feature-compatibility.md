@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能兼容性
 在部分受信任的环境中运行时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支持一个有限的功能子集。 部分信任中支持的功能围绕 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主题中所述的一组特定的方案而设计。  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
 >  为了避免重复错误在跟踪文件中造成泛滥， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会在第一次安全失败之后禁用资源或操作跟踪。 对于在第一次尝试访问资源或执行操作时出现的每个失败的资源访问，将会有一个异常跟踪。  
   
 ## <a name="wcf-service-host"></a>WCF 服务主机  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务主机不支持部分信任。 如果需要在部分信任环境中使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务，请不要使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 服务库项目模板生成服务， 而应通过选择 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 服务网站模板在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中创建新的网站，该网站可以在支持 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 部分信任的 Web 服务器中承载服务。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务主机不支持部分信任。 如果你想要使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务在部分信任环境中，则不要使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]在 Visual Studio 中生成服务的服务库项目模板。 相反，Visual Studio 中创建新网站，通过选择[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务网站模板，其中可托管的 Web 服务器中的服务[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支持部分信任。  
   
 ## <a name="other-limitations"></a>其他限制  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通常仅限于由主机应用程序带来的安全注意事项。 例如，如果在 XAML 浏览器应用程序 (XBAP) 中承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ，则遵循 XBAP 限制，如 [Windows Presentation Foundation 部分信任安全](http://go.microsoft.com/fwlink/?LinkId=89138)所示。  

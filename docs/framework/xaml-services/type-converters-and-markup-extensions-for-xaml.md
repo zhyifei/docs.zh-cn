@@ -1,12 +1,13 @@
 ---
-title: "XAML 的类型转换器和标记扩展"
-ms.custom: 
+title: XAML 的类型转换器和标记扩展
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6425685083c3b73d75d2d7c8a4509ae035542085
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的类型转换器和标记扩展
 类型转换器和标记扩展是 XAML 类型系统和 XAML 编写器用来生成对象图组件的两种技术。 尽管类型转换器和标记扩展共享一些特征，但它们在 XAML 节点流中以不同的方式表示。 在本文档集中，类型转换器、标记扩展和类似的构造有时统称为值转换器。  
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/22/2017
  有关 XAML 的标记扩展实现模式的详细信息，请参阅 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 类型都在 <xref:System.Windows.Markup> 命名空间内而不是在 <xref:System.Xaml> 命名空间内。 这并不意味着这些类型是特定于 WPF 或特定于本来会填充包含字符串 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 的 CLR 命名空间的 `Windows`技术。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 都在 System.Xaml 程序集中，并且没有特定的框架依赖关系。 这些类型存在于 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 的CLR 命名空间中，并保留在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的 CLR 命名空间中，以避免破坏现有 WPF 项目中的引用。 有关详细信息，请参阅 [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)。  
+>  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 类型都在 <xref:System.Windows.Markup> 命名空间内而不是在 <xref:System.Xaml> 命名空间内。 这并不意味着这些类型是特定于本来会填充包含字符串的 CLR 命名空间的 WPF 或 Windows 窗体技术`Windows`。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 都在 System.Xaml 程序集中，并且没有特定的框架依赖关系。 这些类型存在于 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 的CLR 命名空间中，并保留在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的 CLR 命名空间中，以避免破坏现有 WPF 项目中的引用。 有关详细信息，请参阅 [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)。  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>值序列化程序  

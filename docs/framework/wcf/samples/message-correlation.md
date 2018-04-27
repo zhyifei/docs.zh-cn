@@ -1,24 +1,26 @@
 ---
-title: "消息相关性"
-ms.custom: 
+title: 消息相关性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-correlation"></a>消息相关性
 此示例演示在请求/响应方案中，消息队列 (MSMQ) 应用程序如何向 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务发送 MSMQ 消息，以及如何在发送方应用程序与接收方应用程序之间将消息关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
@@ -28,8 +30,8 @@ ms.lasthandoff: 12/22/2017
  `IOrderProcessor` 服务协定定义了适合与队列一起使用的单向服务操作。 MSMQ 消息没有 Action 标头，因此无法将不同的 MSMQ 消息自动映射到操作协定。 因此，在这种情况下只有一个操作协定。 如果您希望在服务中定义更多的操作协定，则应用程序必须提供相关信息，如 MSMQ 消息中的哪个标头（例如标签或 correlationID）可用于确定要调度的操作协定。 此进行了演示[自定义多路分解器](../../../../docs/framework/wcf/samples/custom-demux.md)。  
   
  MSMQ 消息也不包含诸如哪些标头映射到操作协定的不同参数等信息。 因此，在该操作协定中只有一个参数。 该参数属于类型<!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`-->，`System.ServiceModel.MSMQIntegration.MsmqMessage`包含基础 MSMQ 消息。 `MsmqMessage<T>` 类中的“T”类型表示序列化到 MSMQ 消息正文中的数据。 在此示例中，`PurchaseOrder` 类型序列化到 MSMQ 消息正文中。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
 public interface IOrderProcessor  
@@ -37,11 +39,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  服务操作处理采购订单，并在服务控制台窗口中显示采购订单的内容及其状态。 <xref:System.ServiceModel.OperationBehaviorAttribute> 使用队列配置要在事务中登记的操作并在返回操作时标记事务已完成。 `PurchaseOrder` 包含必须由服务处理的订单详细信息。  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 public class OrderProcessorService : IOrderProcessor  
 {  
@@ -74,13 +76,13 @@ public class OrderProcessorService : IOrderProcessor
         client.Close();  
     }  
 }  
-```  
-  
+```
+
  服务使用自定义客户端 `OrderResponseClient` 将 MSMQ 消息发送到队列。 由于接收和处理消息的应用程序是 MSMQ 应用程序，而不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，因此这两个应用程序之间没有隐式服务协定。 所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。  
   
  对于使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定发送消息的所有 `msmqIntegrationBinding` 应用程序而言，自定义代理在本质上都是相同的。 与其他代理不同，它不包含一系列服务操作。 它只是一个提交消息操作。  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderResponse  
 {  
@@ -108,11 +110,11 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
         base.Channel.SendOrderResponse(msg);  
     }  
 }  
-```  
-  
+```
+
  服务是自承载服务。 使用 MSMQ 集成传输时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，服务包含 <xref:System.Messaging> 代码，以检查队列是否存在并在必要时创建队列。 从配置文件中读取队列名称。  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
        // Get the MSMQ queue name from application settings in configuration.  
@@ -134,7 +136,7 @@ public static void Main()
             serviceHost.Close();  
       }  
 }  
-```  
+```
   
  订单请求发送至的 MSMQ 队列是在配置文件的 appSettings 节中指定的。 客户端终结点和服务终结点是在配置文件的 system.serviceModel 节中定义的。 二者均指定了 `msmqIntegrationbinding` 绑定。  
   
@@ -176,8 +178,8 @@ public static void Main()
 ```  
   
  客户端应用程序使用 <xref:System.Messaging> 向队列发送持久的事务性消息。 消息的正文包含采购订单。  
-  
-```  
+
+```csharp
 static void PlaceOrder()  
 {  
     //Connect to the queue  
@@ -219,8 +221,8 @@ static void PlaceOrder()
     orderMessageID = msg.Id;  
     Console.WriteLine("Placed the order, waiting for response...");  
 }  
-```  
-  
+```
+
  从中接收订单响应的 MSMQ 队列是在配置文件的 appSettings 节中定义的，如下面的示例配置所示。  
   
 > [!NOTE]
@@ -233,8 +235,8 @@ static void PlaceOrder()
 ```  
   
  客户端应用程序保存发送到服务的订单请求消息的 `messageID`，并等待服务响应。 一旦响应到达队列，客户端使用消息的 `correlationID` 属性将该响应与客户端发送的订单消息关联，此属性包含客户端最初向服务发送的订单消息的 `messageID`。  
-  
-```  
+
+```csharp
 static void DisplayOrderStatus()  
 {  
     MessageQueue orderResponseQueue = new   
@@ -273,8 +275,8 @@ static void DisplayOrderStatus()
     }  
   }  
 }  
-```  
-  
+```
+
  运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。 可以看到服务接收来自客户端的消息，并向客户端回发响应。 客户端会显示来自服务的响应。 在每个控制台窗口中按 Enter 可以关闭服务和客户端。  
   
 > [!NOTE]

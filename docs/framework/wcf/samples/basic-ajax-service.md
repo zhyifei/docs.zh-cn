@@ -1,24 +1,26 @@
 ---
-title: "基本 AJAX 服务"
-ms.custom: 
+title: 基本 AJAX 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b2bf20c0a98f0571780e5af45c32f8062450d88
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d50d9054da934a50ea02340481c7592e4756306e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="basic-ajax-service"></a>基本 AJAX 服务
 本示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务（通过从 Web 浏览器客户端使用 JavaScript 代码可以访问的服务）。 该服务使用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性以确保服务响应 HTTP GET 请求并被配置为对响应使用 JavaScript 对象表示法 (JSON) 数据格式。  
@@ -29,24 +31,23 @@ ms.lasthandoff: 01/19/2018
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
  在下面的代码中，将 <xref:System.ServiceModel.Web.WebGetAttribute> 属性应用于 `Add` 操作以确保服务响应 HTTP GET 请求。 为了简单起见，该代码使用 GET（您可以从任何 Web 浏览器构造 HTTP GET 请求）。 也可以使用 GET 来启用缓存。 在缺少 `WebGetAttribute` 属性时，HTTP POST 是默认属性。  
-  
-```  
-[ServiceContract(Namespace = "SimpleAjaxService")]  
-public interface ICalculator  
-{  
-  
-    [WebGet]  
-    double Add(double n1, double n2);  
-    //Other operations omitted…  
-}  
-```  
-  
- 示例 .svc 文件使用的是 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>，后者会将 <xref:System.ServiceModel.Description.WebScriptEndpoint> 标准终结点添加到服务。 可在相对于 .svc 文件的空地址处配置该终结点。 这意味着服务的地址是 http://localhost/ServiceModelSamples/service.svc，除了操作名以外没有其他后缀。  
-  
-```  
-<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>  
-```  
-  
+
+```csharp
+[ServiceContract(Namespace = "SimpleAjaxService")]
+public interface ICalculator
+{
+    [WebGet]
+    double Add(double n1, double n2);
+    //Other operations omitted…
+}
+```
+
+ 示例 .svc 文件使用的是 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>，后者会将 <xref:System.ServiceModel.Description.WebScriptEndpoint> 标准终结点添加到服务。 可在相对于 .svc 文件的空地址处配置该终结点。 这意味着服务的地址是http://localhost/ServiceModelSamples/service.svc，除了操作名以外没有其他后缀。  
+
+```svc
+<%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
+```
+
  将对 <xref:System.ServiceModel.Description.WebScriptEndpoint> 进行预配置，以便能从 ASP.NET AJAX 客户端页访问服务。 可以使用 Web.config 中的以下节对终结点进行其他配置更改。 如果不需要额外更改，则可以移除该节。  
   
 ```xml  
@@ -60,36 +61,36 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- <xref:System.ServiceModel.Description.WebScriptEndpoint> 将服务的默认数据格式设置为 JSON 而不是 XML。 若要调用服务，请在完成本主题后面的设置和生成步骤后定位到 http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200。 这个测试功能是通过使用 HTTP GET 请求实现的。  
+ <xref:System.ServiceModel.Description.WebScriptEndpoint> 将服务的默认数据格式设置为 JSON 而不是 XML。 若要调用服务，导航到http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200后向上完成集，生成本主题稍后所述的步骤。 这个测试功能是通过使用 HTTP GET 请求实现的。  
   
  客户端 Web 页 SimpleAjaxClientPage.aspx 包含 ASP.NET 代码，无论何时用户单击该页面上的操作按钮之一，就能调用服务。 `ScriptManager` 控件用于使服务的代理可以通过 JavaScript 访问。  
-  
-```  
+
+```aspx-csharp
 <asp:ScriptManager ID="ScriptManager" runat="server">  
     <Services>  
         <asp:ServiceReference Path="service.svc" />  
     </Services>  
 </asp:ScriptManager>  
-```  
-  
+```
+
  使用以下 JavaScript 代码实例化本地代理和调用操作。  
-  
-```  
+
+```javascript
 // Code for extracting arguments n1 and n2 omitted…  
 // Instantiate a service proxy  
 var proxy = new SimpleAjaxService.ICalculator();  
 // Code for selecting operation omitted…  
 proxy.Add(parseFloat(n1), parseFloat(n2), onSuccess, onFail, null);  
-```  
-  
+```
+
  如果服务调用成功，则代码调用 `onSuccess` 处理程序并在文本框中显示操作结果。  
-  
-```  
+
+```javascript
 function onSuccess(mathResult){  
      document.getElementById("result").value = mathResult;  
-}  
-```  
-  
+}
+```
+
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
 >   

@@ -1,24 +1,26 @@
 ---
-title: "使用传输安全的 BasicBinding"
-ms.custom: 
+title: 使用传输安全的 BasicBinding
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2a65adbb908aded9f4124f473f0b298d573a521f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d06f7652f7366fc795cd157398bbb15ed78828c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="basicbinding-with-transport-security"></a>使用传输安全的 BasicBinding
 本示例演示对基本绑定使用 SSL 传输安全。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -65,15 +67,14 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
- 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，所以当尝试从浏览器中访问 HTTPS: 地址（例如 https://localhost/servicemodelsamples/service.svc）时将出现安全警报。 为了允许 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端使用测试证书，向客户端添加了一些附加代码，以禁用安全警报。 使用真正的证书时不需要此代码和附带的类。  
-  
-```  
+ 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，当你尝试访问 HTTPS 时显示安全警报： 在浏览器中，如地址https://localhost/servicemodelsamples/service.svc。 为了允许 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端使用测试证书，向客户端添加了一些附加代码，以禁用安全警报。 使用真正的证书时不需要此代码和附带的类。  
+
+```csharp
 // This code is required only for test certificates such as those   
 // created by Makecert.exe.  
-PermissiveCertificatePolicy.Enact(  
-                           "CN=ServiceModelSamples-HTTPS-Server");  
-```  
-  
+PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
+```
+
  运行示例时，操作请求和响应将显示在客户端控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ```  

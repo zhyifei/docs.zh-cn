@@ -1,12 +1,13 @@
 ---
-title: "演练：绑定到混合应用程序中的数据"
-ms.custom: 
+title: 演练：绑定到混合应用程序中的数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c1348f3a57dd04d58298c9746b74a7c3a1baf30c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b8afe4732363ec61d73db13e9b190381cbd8f29d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>演练：绑定到混合应用程序中的数据
 将数据源绑定到控件而言至关重要向用户提供访问基础数据，无论使用[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本演练演示如何同时包含这两者的混合应用程序中使用数据绑定[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件。  
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/19/2018
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>指定窗体布局  
- 窗体的布局由一个三行三列的网格来定义。 <xref:System.Windows.Controls.Label>控件可用于标识客户表中的每个列。  
+ 窗体的布局由一个三行三列的网格来定义。 <xref:System.Windows.Controls.Label> 控件可用于标识客户表中的每个列。  
   
 #### <a name="to-set-up-the-grid-layout"></a>设置网格布局  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 01/19/2018
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>向项目添加数据源  
- 与[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，你可以轻松添加到你的项目的数据源。 此过程将向项目添加强类型数据集。 还添加了其他支持类，例如每个所选表适用的表适配器。  
+ 使用 Visual Studio，你可以轻松添加数据源，到你的项目。 此过程将向项目添加强类型数据集。 还添加了其他支持类，例如每个所选表适用的表适配器。  
   
 #### <a name="to-add-the-data-source"></a>添加数据源  
   

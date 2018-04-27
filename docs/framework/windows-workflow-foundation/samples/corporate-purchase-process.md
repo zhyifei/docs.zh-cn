@@ -1,30 +1,31 @@
 ---
-title: "企业采购过程"
-ms.custom: 
+title: 企业采购过程
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbbed0209eec95ec452385b6c78b1beb2ddfcd75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 451698d92c47c32b45e08bdef7e88e8f04b90ed3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。  
   
  此示例包含一个 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 客户端应用程序，此应用程序允许以不同的参与者身份（如原始请求方或特定的供应商）与该过程进行交互。  
   
-## <a name="requirements"></a>惠?  
+## <a name="requirements"></a>要求  
   
 -   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>流程说明  
- 此示例演示如何实现 [!INCLUDE[wf](../../../../includes/wf-md.md)] 程序以便为一般公司收集由供应商提交的建议书。  
+ 此示例演示 Windows Workflow Foundation (WF) 程序收集由为一般公司的供应商的建议书的实现。  
   
 1.  公司 X 的一名员工创建了一份征求建议书 (RFP)。  
   

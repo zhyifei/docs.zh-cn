@@ -1,27 +1,29 @@
 ---
-title: "演练：本地化混合应用程序"
-ms.custom: 
+title: 演练：本地化混合应用程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f9bb7588ef1f6962a5cd55196154ac7f666d53b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b00553c005b714094f208fc6d4ed40e838b90b49
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>演练：本地化混合应用程序
 本演练演示如何以本地化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的元素[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-基于混合应用程序。  
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  按 F5 生成并运行该应用程序。  
   
-     这两个`SimpleControl`元素和标签控件显示文本**"Hello"**。  
+     这两个`SimpleControl`元素和标签控件显示文本 **"Hello"**。  
   
 ## <a name="enabling-localization"></a>启用本地化  
  Windows 窗体设计器提供用于在附属程序集中启用本地化的设置。  
@@ -123,7 +125,7 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-assign-resource-identifiers"></a>分配资源标识符  
   
-1.  从开始菜单中，打开[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]命令提示符。  
+1.  从开始菜单中，打开 Visual Studio 命令提示符。  
   
 2.  使用以下命令将资源标识符分配到可本地化内容。  
   
@@ -150,7 +152,7 @@ ms.lasthandoff: 01/19/2018
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv  
     ```  
   
-3.  打开与 temp.csv 文件[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]或其他文本编辑器。 替换字符串`"Hello"`有其西班牙语转换技术， `"Hola"`。  
+3.  使用 Visual Studio 或其他文本编辑器中打开 temp.csv 文件。 替换字符串`"Hello"`有其西班牙语转换技术， `"Hola"`。  
   
 4.  保存 temp.csv 文件。  
   

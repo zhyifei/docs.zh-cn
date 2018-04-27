@@ -1,29 +1,30 @@
 ---
-title: "使用跟踪提取 WF 数据"
-ms.custom: 
+title: 使用跟踪提取 WF 数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44e49aa0c9b3b9b53b921fe90838875ab34b7772
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extract-wf-data-using-tracking"></a>使用跟踪提取 WF 数据
 此示例演示如何使用工作流跟踪从活动中提取工作流变量和自变量。 它还演示如何为跟踪记录添加批注以及如何从自定义跟踪记录中提取数据负载。 此示例使用 Windows 事件跟踪 (ETW) 跟踪参与者来提取工作流中的数据。  
   
 ## <a name="sample-details"></a>示例详细信息  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] 提供跟踪以查看工作流实例的执行情况。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 除工作流跟踪记录以外，还可以从工作流提取工作流实例中的数据。 下面的列表详述了可从跟踪记录中提取的数据的类型：  
+ Windows Workflow Foundation (WF) 提供了跟踪，以深入了解工作流实例的执行。 跟踪运行时在工作流执行过程中会发出工作流跟踪记录。 除工作流跟踪记录以外，还可以从工作流提取工作流实例中的数据。 下面的列表详述了可从跟踪记录中提取的数据的类型：  
   
 1.  活动中的工作流变量和活动执行过程中的跟踪记录。  
   

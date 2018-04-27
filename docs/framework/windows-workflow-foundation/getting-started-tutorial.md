@@ -1,29 +1,30 @@
 ---
-title: "入门 Tutorial2"
-ms.custom: 
+title: 入门 Tutorial2
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WF [WF], getting started
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f25058071e041ac1e14de2c223750013c8ef1d30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1be017762ed64f61516216c9d103547f88598254
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="getting-started-tutorial"></a>入门教程
-本节包含一组介绍 [!INCLUDE[wf](../../../includes/wf-md.md)] 应用程序编程的演练主题。 按照这些主题中的过程操作，将生成一个猜数游戏应用程序。 本教程中的第一个主题将逐步引导您创建工作流所需的自定义活动。 在第二个主题中，将这些活动与内置的工作流活动组合成一个流程图工作流。 在第三个主题中，配置宿主应用程序以运行工作流，并在最后的主题中介绍持久性。 此过程的每一步骤都依赖于前面的步骤，因此建议您按顺序完成这些步骤。  
+本部分包含一的组向你介绍 Windows Workflow Foundation (WF) 应用程序编程的演练主题。 按照这些主题中的过程操作，将生成一个猜数游戏应用程序。 本教程中的第一个主题将逐步引导您创建工作流所需的自定义活动。 在第二个主题中，将这些活动与内置的工作流活动组合成一个流程图工作流。 在第三个主题中，配置宿主应用程序以运行工作流，并在最后的主题中介绍持久性。 此过程的每一步骤都依赖于前面的步骤，因此建议您按顺序完成这些步骤。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  

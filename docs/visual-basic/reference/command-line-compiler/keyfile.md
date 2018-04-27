@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02169f1f43ba93b68dc47f5bad038b78d3635a80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 319d01e8162dbc3806b0d9ba59e90410acb1acd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-keyfile"></a>-keyfile
 指定包含密钥或密钥对的文件从而为程序集赋予强名称。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/22/2018
  请参阅[创建和使用具有强名称程序集](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)有关程序集进行签名的详细信息。  
   
 > [!NOTE]
->  `-keyfile`选项不是可从[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]开发环境中; 仅当从命令行进行编译时，它才可用。  
+>  `-keyfile`选项不是可从 Visual Studio 开发环境中; 仅当从命令行进行编译时，它才可用。  
   
 ## <a name="example"></a>示例  
  下面的代码编译源文件`Input.vb`，并指定密钥文件。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/22/2018
 vbc -keyfile:myfile.sn input.vb  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序集和全局程序集缓存](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [-参考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  

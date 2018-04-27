@@ -1,27 +1,29 @@
 ---
-title: "实现业务逻辑 (LINQ to SQL)"
-ms.custom: 
+title: 实现业务逻辑 (LINQ to SQL)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d905f34c29fbd8a15cb8225a4a547490a5c14efd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: f519162818739d04cbe66b107911a0e0c30d93bc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>实现业务逻辑 (LINQ to SQL)
 本主题中的术语“业务逻辑”指的是在对数据库数据进行插入、更新或删除操作之前，应用于数据的任何自定义规则或验证测试。 业务逻辑有时也称为“业务规则”或“域逻辑”。 在 n 层应用程序中，业务逻辑通常设计为逻辑层，因此可以独立于表示层或数据访问层进行修改。 在对数据库数据进行任何更新、插入或删除操作前后，数据访问层可以调用业务逻辑。  
@@ -166,7 +168,7 @@ public string CustomerID
 }  
 ```  
   
- 在类的自定义部分，编写方法的实现定义。 在[!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)]之后你键入,`partial`你将看到方法定义类的其他部分中的 IntelliSense。  
+ 在类的自定义部分，编写方法的实现定义。 在 Visual Studio 中，键入后`partial`你将看到方法定义类的其他部分中的 IntelliSense。  
   
 ```vb  
 Partial Public Class Customer  

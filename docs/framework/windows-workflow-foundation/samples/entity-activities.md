@@ -1,35 +1,36 @@
 ---
-title: "实体活动"
-ms.custom: 
+title: 实体活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c507c3da7f4583bf6ffb7b869cecbf0bfd305077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="entity-activities"></a>实体活动
-此示例演示如何结合使用 ADO.NET 实体框架和 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 来简化数据访问。  
+此示例演示如何使用 ADO.NET 实体框架 Windows Workflow Foundation 来简化数据访问。  
   
- ADO.NET 实体框架使开发人员可以处理以下形式的数据：特定于域的对象、属性和关系（例如客户、订单、订单详细信息以及这些实体之间的关系）。 ADO.NET 实体框架通过提供一个抽象级别以便能够针对一个概念应用程序模型编程（而不是针对一个关系存储架构直接编程）来做到这一点。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ADO.NET 实体框架，请参阅[ADO.NET 实体框架](http://go.microsoft.com/fwlink/?LinkId=165549)。  
+ ADO.NET 实体框架使开发人员可以处理以下形式的数据：特定于域的对象、属性和关系（例如客户、订单、订单详细信息以及这些实体之间的关系）。 ADO.NET 实体框架通过提供一个抽象级别以便能够针对一个概念应用程序模型编程（而不是针对一个关系存储架构直接编程）来做到这一点。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ADO.NET 实体框架，请参阅[ADO.NET 实体框架](http://go.microsoft.com/fwlink/?LinkId=165549)。  
   
 ## <a name="sample-details"></a>示例详细信息  
  此示例使用 `Northwind` 数据库，并包含用于创建和移除 `Northwind` 数据库的脚本（Setup.cmd 和 Cleanup.cmd）。 此示例中的项目包含一个基于 `Northwind` 数据库的实体数据模型。 您可以通过打开包含在项目中的 `Northwind.edmx` 文件找到此模型。 此模型用于定义可使用 ADO.NET 实体框架访问的对象的形状。  
   
  此示例中包括以下活动：  
   
--   `EntitySQLQuery`：`EntitySQLQuery` 活动允许您基于 Entity SQL 查询字符串从数据库中检索对象。 Entity SQL 是一种与 SQL 相似的、独立于存储的语言，它允许您基于概念模型以及属于该模型或域的一部分的实体来指定查询。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Entity SQL 语言，请参阅[Entity SQL 语言](http://go.microsoft.com/fwlink/?LinkId=165646)。  
+-   `EntitySQLQuery`：`EntitySQLQuery` 活动允许您基于 Entity SQL 查询字符串从数据库中检索对象。 Entity SQL 是一种与 SQL 相似的、独立于存储的语言，它允许您基于概念模型以及属于该模型或域的一部分的实体来指定查询。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Entity SQL 语言，请参阅[Entity SQL 语言](http://go.microsoft.com/fwlink/?LinkId=165646)。  
   
 -   `EntityLinqQuery`：此活动允许您基于 LINQ 查询或谓词从数据库中检索对象。  
   

@@ -16,16 +16,16 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e518a18787a7faa1d3e501d5941fae70daf8b9d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f57b07d03297347561b6b2e2634038aa1f29bc40
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>如何：通过使用代码编辑器自定义实体类
 使用 Visual Studio 的开发人员可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]若要创建或自定义它们的实体类。  
   
- 您也可以使用 [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)] 代码编辑器编写您自己的映射代码或自定义已生成的代码。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
+ 你还可以使用 Visual Studio 代码编辑器编写你自己的映射代码或自定义已生成的代码。 有关详细信息，请参阅[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
   
  本节中的主题说明如何自定义对象模型。  
   

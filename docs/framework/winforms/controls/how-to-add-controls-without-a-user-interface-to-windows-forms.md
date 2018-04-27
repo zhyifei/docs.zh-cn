@@ -1,13 +1,13 @@
 ---
-title: "如何：向 Windows 窗体添加无用户界面的控件"
-ms.custom: 
+title: 如何：向 Windows 窗体添加无用户界面的控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,17 +22,17 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e900c1c34f69531a14cfa11803ef5a6afb4783c6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：向 Windows 窗体添加无用户界面的控件
 非可视控件 （或组件） 功能提供给你的应用程序。 不同于其他控件，组件不向用户提供的用户界面并因此不需要在 Windows 窗体设计器图面上显示。 后一个组件添加到窗体中，Windows 窗体设计器将在所有组件将都显示的窗体的底部显示可调整大小的任务栏。 控件现已添加到组件栏中后，你可选择的组件，设置其属性，就像任何其他控件在窗体上。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
      此组件将出现在组件栏中。  
   
- 而且，组件可以在运行时添加到窗体中。 这是常见的方案中，尤其是因为组件不具有 visual 表达式，不同于具有用户界面的控件。 在示例中，<xref:System.Windows.Forms.Timer>在运行时添加组件。 (请注意，[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]包含大量不同的计时器; 在这种情况下，使用 Windows 窗体<xref:System.Windows.Forms.Timer>组件。 有关在不同的计时器[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，请参阅[基于服务器的计时器简介](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。)  
+ 而且，组件可以在运行时添加到窗体中。 这是常见的方案中，尤其是因为组件不具有 visual 表达式，不同于具有用户界面的控件。 在示例中，<xref:System.Windows.Forms.Timer>在运行时添加组件。 (请注意，Visual Studio 包含大量不同的计时器的; 在这种情况下，使用 Windows 窗体<xref:System.Windows.Forms.Timer>组件。 有关 Visual Studio 中不同的计时器的详细信息，请参阅[基于服务器的计时器简介](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。)  
   
 > [!CAUTION]
 >  组件通常具有必须为该组件可有效地工作设置的特定于控件的属性。 情况下<xref:System.Windows.Forms.Timer>下方的组件，你将设置`Interval`属性。 请确保，将组件添加到你的项目，你设置的属性需要该组件时。  

@@ -10,20 +10,20 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 02332e04f729abd125f43acdbe0883851004537e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: af557d41709ea1015a4454d62df93e60dd975217
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="jsonp"></a>JSONP
-本示例演示在 WCF REST 服务中如何支持 JSON with Padding (JSONP)。 JSONP 是通过在当前文档中生成脚本标记来调用跨域脚本时使用的约定。 结果在指定的回调函数中返回。 JSONP 基于这样的标记如\<脚本 src ="http:/ /..."> 可以从任何域评估脚本，并在其中可能已定义其他函数范围内计算这些标记检索的脚本。  
+本示例演示在 WCF REST 服务中如何支持 JSON with Padding (JSONP)。 JSONP 是通过在当前文档中生成脚本标记来调用跨域脚本时使用的约定。 结果在指定的回调函数中返回。 JSONP 基于这样的标记如`<script src="http://..." >`可以从任何域评估脚本，并在其中可能已定义其他函数范围内计算这些标记检索的脚本。  
   
 ## <a name="demonstrates"></a>演示  
  使用 JSONP 进行跨域脚本编写。  
@@ -79,6 +79,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1.  打开 JSONP 示例的解决方案。  
   
-2.  按 F5 以启动超链接"http://localhost:26648/JSONPClientPage.aspx"在浏览器的 http://localhost:26648/JSONPClientPage.aspx。  
+2.  按 f5 键以启动`http://localhost:26648/JSONPClientPage.aspx`浏览器中。  
   
 3.  请注意，在页面加载后，"名称"和"Address"的文本输入会使用值填充。  这些值是在浏览器完成呈现页面后调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务所提供的。

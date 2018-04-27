@@ -1,12 +1,13 @@
 ---
-title: "演练： 创建主 / 从窗体使用两个 Windows 窗体 DataGridView 控件"
-ms.custom: 
+title: 演练： 创建主 / 从窗体使用两个 Windows 窗体 DataGridView 控件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af6f1bcb172543b372cbca52f54b675b6baf87d2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5c3dfc547fe775b38ad4c2e658755268f791502
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>演练：使用两个 Windows 窗体 DataGridView 控件创建一个主/从窗体
 使用的最常见方案之一<xref:System.Windows.Forms.DataGridView>控件是*主/从*窗体中，在其中显示两个数据库表之间的父/子关系。 在主表中选择行，则会导致要使用的相应的子数据更新的详细信息表。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-masterdetail-form"></a>若要创建主/从窗体  
   
-1.  创建一个类，派生自<xref:System.Windows.Forms.Form>和包含两个<xref:System.Windows.Forms.DataGridView>控件和第二个<xref:System.Windows.Forms.BindingSource>组件。 下面的代码提供了基本的窗体初始化，并且包含`Main`方法。 如果你使用[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]设计器来创建你的窗体中，你可以使用设计器生成的代码而不是此代码中，但一定要使用的变量的声明中显示的名称。  
+1.  创建一个类，派生自<xref:System.Windows.Forms.Form>和包含两个<xref:System.Windows.Forms.DataGridView>控件和第二个<xref:System.Windows.Forms.BindingSource>组件。 下面的代码提供了基本的窗体初始化，并且包含`Main`方法。 如果你使用 Visual Studio 设计器创建你的窗体，则可以使用设计器生成的代码，而不是此代码中，但一定要使用的变量的声明中显示的名称。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  

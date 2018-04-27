@@ -1,27 +1,29 @@
 ---
-title: "UI 自动化对标准控件的支持"
-ms.custom: 
+title: UI 自动化对标准控件的支持
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f7529c68e96f93ebbba9fc5e750e09331bda9699
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af46a984f1b4c2577daee120752590ff18b9d1d8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>UI 自动化对标准控件的支持
 > [!NOTE]
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 |Edit|Edit|  
 |SysLink|超链接|  
 |Static|Text|  
-|Static|Image|  
+|Static|图像|  
 |SysIPAddress32|自定义|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -94,20 +96,20 @@ ms.lasthandoff: 12/22/2017
   
 |类名|控件类型|  
 |----------------|------------------|  
-|SysAnimate32|Image|  
+|SysAnimate32|图像|  
 |SysPager|Spinner|  
 |SysDateTimePick32|自定义|  
 |SysMonthCal32|Calendar|  
 |MS_WINNOTE|ToolTip|  
-|VBBubble|工具提示|  
+|VBBubble|ToolTip|  
 |ScrollBar（在用作独立控件时）|Slider|  
 |SuperGrid|自定义|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Windows 窗体控件  
- [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 控件通过 UIAutomationClientsideProviders.dll 中的客户端提供程序向 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 公开。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
+ Windows 窗体控件公开给[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]通过 UIAutomationClientsideProviders.dll 中的客户端提供程序。 此程序集将自动注册，以用于 UI 自动化客户端应用程序。  
   
- 通常， [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 支持作为 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 公共控件的托管包装器的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]控件。 支持以下控件。  
+ 通常情况下，Windows 窗体控件的托管包装[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]公共控件支持的[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 支持以下控件。  
   
 |类名|  
 |----------------|  

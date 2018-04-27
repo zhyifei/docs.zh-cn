@@ -1,24 +1,26 @@
 ---
-title: "会话和队列"
-ms.custom: 
+title: 会话和队列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>会话和队列
 此示例演示如何通过消息队列 (MSMQ) 传输来发送和接收排队通信中的一组相关消息。 本示例使用 `netMsmqBinding` 绑定。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -42,8 +44,8 @@ ms.lasthandoff: 12/22/2017
  在该示例中，客户端向服务发送多则消息，作为单一事务范围中的会话的一部分。  
   
  服务协定是 `IOrderTaker`，它定义了适合与队列一起使用的单向服务。 在以下示例代码中显示的协定中使用的 <xref:System.ServiceModel.SessionMode> 表明消息是会话的一部分。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  该服务按如下方式定义服务操作：第一个操作在事务中登记，但不会自动完成事务。 后续操作也在同一个事务中登记，但也不自动完成事务。 会话中的最后一个操作自动完成该事务。 因此，对服务协定中的若干个操作调用使用了同一个事务。 如果其中任何一个操作引发异常，则事务将回滚，并且会话将返回到队列中。 成功完成最后一个操作后，事务即已提交。 服务使用 `PerSession` 作为 <xref:System.ServiceModel.InstanceContextMode>，以便在服务的同一个实例上的会话中接收所有消息。  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  服务是自承载服务。 使用 MSMQ 传输时，必须提前创建所使用的队列。 可以手动或通过代码完成此操作。 在此示例中，服务包含 <xref:System.Messaging> 代码，以检查队列是否存在并在必要时创建队列。 使用 <xref:System.Configuration.ConfigurationManager.AppSettings%2A> 类从配置文件中读取队列名称。  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  MSMQ 队列名称是在配置文件的 appSettings 节中指定的。 服务终结点是在配置文件的 system.serviceModel 节中定义的，它指定了 `netMsmqBinding` 绑定。  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  客户端创建事务范围。 会话中的所有消息都将发送到该事务范围中的队列，使其被视为一个原子单元，其中的所有消息都将成功或失败。 通过调用 <xref:System.Transactions.TransactionScope.Complete%2A> 提交事务。  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  只能对会话中的所有消息使用单一事务，并且必须在提交事务之前发送会话中的所有消息。 关闭客户端将关闭会话。 因此，必须在完成事务之前关闭客户端，以便向队列发送会话中的所有消息。  
   

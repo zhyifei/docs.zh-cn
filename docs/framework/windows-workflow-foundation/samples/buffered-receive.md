@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="buffered-receive"></a>缓冲接收
-此示例演示如何在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中设置和配置缓冲接收功能。 利用缓冲接收功能，工作流作者可创建工作流，而无需担心接收消息的顺序。 当工作流准备接收消息时，缓冲接收功能将本地缓冲并传递这些消息。  
+此示例演示如何设置和配置缓冲的接收功能在 Windows Workflow Foundation (WF)。 利用缓冲接收功能，工作流作者可创建工作流，而无需担心接收消息的顺序。 当工作流准备接收消息时，缓冲接收功能将本地缓冲并传递这些消息。  
   
 ## <a name="demonstrates"></a>演示  
  将缓冲接收与消息传递活动一起使用的无序消息处理。  

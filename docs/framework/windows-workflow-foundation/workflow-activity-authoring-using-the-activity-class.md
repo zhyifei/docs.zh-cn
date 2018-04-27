@@ -1,32 +1,33 @@
 ---
-title: "使用 Activity 类的工作流活动创作"
-ms.custom: 
+title: 使用 Activity 类的工作流活动创作
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 52d29f9cbed65932b3f9e97f0e9275861953b5d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 517e646c8a84ed4374c01da974d952d4f50a4e22
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-activity-authoring-using-the-activity-class"></a>使用 Activity 类的工作流活动创作
-创建活动使用的最基本方法[!INCLUDE[wf](../../../includes/wf-md.md)]中[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]是创建继承自的类<xref:System.Activities.Activity>创建功能通过组合来自定义从活动或[内置活动库](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md). 本主题演示如何创建向控制台写入两个消息的活动。  
+最基本的方法来创建使用中的 Windows Workflow Foundation (WF) 活动[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]是创建继承自的类<xref:System.Activities.Activity>创建功能通过组合来自定义从活动或[内置活动库](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)。 本主题演示如何创建向控制台写入两个消息的活动。  
   
 ### <a name="to-create-a-custom-activity-using-the-activity-designer"></a>使用活动设计器创建自定义活动  
   
 1.  打开 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]。  
   
-2.  依次选择“文件”、“新建”和“项目”。 选择**Workflow 4.0**下**Visual C#**中**项目类型**窗口中，然后选择**v2010**节点。 选择**活动库**中**模板**窗口。 将新项目命名为 HelloActivity。  
+2.  依次选择“文件”、“新建”和“项目”。 选择**Workflow 4.0**下**Visual C#** 中**项目类型**窗口中，然后选择**v2010**节点。 选择**活动库**中**模板**窗口。 将新项目命名为 HelloActivity。  
   
 3.  打开新的活动。  将 <xref:System.Activities.Statements.Sequence> 活动从工具箱拖到设计器图面。  
   

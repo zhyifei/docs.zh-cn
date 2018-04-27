@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0948b9ef0675541ca595bb297e01e62c9d79a181
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e7dc75a0600c9694c4a20f028c810c6aca54eeb6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-doc"></a>-doc
 将文档注释处理到一个 XML 文件中。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/22/2018
   
 -   成员，例如一个字段，[事件](../../../visual-basic/language-reference/statements/event-statement.md)，[属性](../../../visual-basic/language-reference/statements/property-statement.md)，[函数](../../../visual-basic/language-reference/statements/function-statement.md)，或[子例程](../../../visual-basic/language-reference/statements/sub-statement.md)。  
   
- 若要使用生成的 XML 文件与[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] [IntelliSense](/visualstudio/ide/using-intellisense)功能，请让你想要支持的程序集相同的 XML 文件的文件名称。 请确保 XML 文件与程序集相同的目录中，以便当中引用的程序集[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]项目，.xml 文件也可以找到。 XML 文档文件不是必需的 IntelliSense 项目中或在项目引用的项目中的代码工作的。  
+ 若要使用 Visual Studio 中使用生成的 XML 文件[IntelliSense](/visualstudio/ide/using-intellisense)功能，请让你想要支持的程序集相同的 XML 文件的文件名称。 请确保 XML 文件与程序集相同的目录中，以便在 Visual Studio 项目中引用的程序集，以及找到的.xml 文件。 XML 文档文件不是必需的 IntelliSense 项目中或在项目引用的项目中的代码工作的。  
   
  除非使用编译`/target:module`，XML 文件包含标记`<assembly></assembly>`。 这些标记指定包含编译输出文件的程序集清单的文件的名称。  
   
@@ -59,6 +59,6 @@ ms.lasthandoff: 03/22/2018
 ## <a name="example"></a>示例  
  请参阅[使用 XML 编制文档您代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)有关的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
  [使用 XML 记录代码](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

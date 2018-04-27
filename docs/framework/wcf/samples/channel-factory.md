@@ -1,24 +1,26 @@
 ---
-title: "通道工厂"
-ms.custom: 
+title: 通道工厂
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7f5fb22c329bf7b27c32f05a2d8e41734723f53b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37b5f880b18f4caac9dc452d93129922ecc33543
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="channel-factory"></a>通道工厂
 此示例演示客户端应用程序如何使用 <xref:System.ServiceModel.ChannelFactory> 类而不是生成的客户端创建通道。 此示例基于[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  此示例使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建到服务终结点的通道。 通常情况下，若要创建的服务终结点的通道你生成的客户端类型[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)和创建生成的类型的实例。 还可以通过使用 <xref:System.ServiceModel.ChannelFactory%601> 类创建通道，如该示例所示。 下面的示例代码所创建的服务等同于中的服务[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
-```  
+```csharp  
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
 WSHttpBinding binding = new WSHttpBinding();  
 ChannelFactory<ICalculator> factory = new   
@@ -41,7 +43,7 @@ ICalculator channel = factory.CreateChannel();
   
  一旦创建了通道，便可以像调用生成的客户端那样调用服务操作。  
   
-```  
+```csharp  
 // Call the Add service operation.  
 double value1 = 100.00D;  
 double value2 = 15.99D;  
@@ -51,7 +53,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
   
  若要关闭通道，必须将其强制转换为 <xref:System.ServiceModel.IClientChannel> 接口。 这是因为生成的通道是在使用 `ICalculator` 接口的客户端应用程序中声明的，该应用程序具有 `Add` 和 `Subtract` 等方法，但没有 `Close` 方法。 `Close` 方法在 <xref:System.ServiceModel.ICommunicationObject> 接口上产生。  
   
-```  
+```csharp  
 // Close the channel.  
  ((IClientChannel)client).Close();  
 ```  
@@ -79,7 +81,7 @@ Press <ENTER> to terminate client.
   
 1.  将下面代码中的“localhost”替换为运行服务的计算机的完全限定名称。  
   
-    ```  
+    ```csharp  
     EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
     ```  
   

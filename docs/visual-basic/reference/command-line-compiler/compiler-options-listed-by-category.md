@@ -1,6 +1,6 @@
 ---
 title: 按类别列出的 Visual Basic 编译器选项
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>按类别列出的 Visual Basic 编译器选项
-Visual Basic 命令行编译器提供作为编译来自程序的替代方法[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境 (IDE)。 下面是 Visual Basic 命令行编译器选项按功能分类排序的列表。  
+Visual Basic 命令行编译器提供作为编译的程序从 Visual Studio 集成的开发环境 (IDE) 中的替代方法。 下面是 Visual Basic 命令行编译器选项按功能分类排序的列表。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -31,7 +31,7 @@ Visual Basic 命令行编译器提供作为编译来自程序的替代方法[!IN
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|显示使用 UTF-8 编码的编译器输出。|  
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|在编译期间输出其他信息。|  
 |`-modulename:<string>`|指定源模块的名称|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|指定编译器输出的语言。|  
+|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|指定编译器输出的语言。|
   
 ## <a name="optimization"></a>优化  
   
@@ -45,6 +45,7 @@ Visual Basic 命令行编译器提供作为编译来自程序的替代方法[!IN
 |选项|目标|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|处理 XML 文件的文档注释。|  
+|[-确定性](../../../visual-basic/reference/command-line-compiler/deterministic.md)|使编译器输出的二进制内容都是相同编译如果输入相同程序集。|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|设置编译器从而以 [!INCLUDE[Compact](~/includes/compact-md.md)] 为目标。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定输出目录。|  
 |[/refonly](refonly-compiler-option.md)|输出仅引用程序集。|
@@ -132,7 +133,7 @@ Visual Basic 命令行编译器提供作为编译来自程序的替代方法[!IN
 |`-parallel[+&#124;-]`|指定是否使用并发生成 (+)。|  
 |`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1（默认值）或 SHA256。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
  [项目设计器简介](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  

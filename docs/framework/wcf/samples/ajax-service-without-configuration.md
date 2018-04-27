@@ -1,24 +1,26 @@
 ---
-title: "无配置的 AJAX 服务"
-ms.custom: 
+title: 无配置的 AJAX 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13f74a69e05c419cc76cc8df8f58d3e3385ab35f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: ae16dc38c5508eac4a94d464e818f0b97d3b9e3b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-without-configuration"></a>无配置的 AJAX 服务
 本示例演示如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建一个基本的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务（可通过从 Web 浏览器客户端使用 JavaScript 代码访问的服务）而不使用任何配置设置。 该服务在 .svc 文件中使用特殊语法来自动启用 AJAX 终结点。  
@@ -29,17 +31,17 @@ ms.lasthandoff: 01/19/2018
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
  此示例是基于使用 HTTP POST 的 AJAX 服务生成的。 中所述[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例中，<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>用于承载服务。  
-  
-```  
+
+```svc
 <%ServiceHost  
     language=c#  
     Debug="true"  
     Service="Microsoft.Ajax.Samples.CalculatorService  
     Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"  
 %>  
-```  
-  
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 自动将 <xref:System.ServiceModel.Description.WebScriptEndpoint> 添加到服务。 如果不需要对终结点，任何配置更改\<系统。ServiceModel > 部分可以完全删除从服务的 Web.config 文件。 Web.config 文件包含一些由 ConfigFreeClientPage.aspx 使用的 ASP.NET 设置。 如果不是这样，则可以移除整个 Web.config 文件。  
+```
+
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 自动将 <xref:System.ServiceModel.Description.WebScriptEndpoint> 添加到服务。 如果不需要对终结点进行任何配置更改，则可从服务的 Web.config 文件中完全移除 `<system.ServiceModel>` 部分。 Web.config 文件包含一些由 ConfigFreeClientPage.aspx 使用的 ASP.NET 设置。 如果不是这样，则可以移除整个 Web.config 文件。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  生成解决方案 ConfigFreeAjaxService.sln 中所述[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  导航到 http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx（不要在浏览器中从项目目录内打开 ConfigFreeClientPage.aspx）。  
+3.  导航到http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx（不要打开 ConfigFreeClientPage.aspx 浏览器中从项目目录中）。  
   
 > [!NOTE]
 >  运行此示例时，请确保不要对 IIS 中的 ServiceModelSamples 文件夹同时启用匿名身份验证和 Windows 身份验证。 如果同时启用了这两种身份验证，请禁用 Windows 身份验证。 运行了该示例后，请启用 Windows 身份验证并运行“iisreset”。  

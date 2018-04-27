@@ -1,12 +1,13 @@
 ---
-title: "如何：使用 Windows 窗体计时器组件以设置的间隔运行过程"
-ms.custom: 
+title: 如何：使用 Windows 窗体计时器组件以设置的间隔运行过程
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 62cb416b311fd3c2c29f8ffc7c513fa6a9dfd8fe
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0b25f2ea86e58b7fe644f84412d1923fa761b82
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>如何：使用 Windows 窗体计时器组件以设置的间隔运行过程
 有时可能需要创建一个在循环完成之前以特定时间间隔运行或者在设定时间间隔之后运行的过程。 <xref:System.Windows.Forms.Timer> 组件可实现此过程。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>若要使用 Timer 组件以设定间隔运行过程  
   
-1.  在窗体中添加 <xref:System.Windows.Forms.Timer>。 请参阅下图中的示例，了解如何以编程方式执行此操作。 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 还支持将组件添加到窗体。 另请参阅[如何： 添加控件无用户界面到 Windows 窗体](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))。  
+1.  在窗体中添加 <xref:System.Windows.Forms.Timer>。 请参阅下图中的示例，了解如何以编程方式执行此操作。 Visual Studio 还提供支持将组件添加到窗体。 另请参阅[如何： 添加控件无用户界面到 Windows 窗体](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\))。  
   
 2.  设置计时器的 <xref:System.Windows.Forms.Timer.Interval%2A> 属性（以毫秒计）。 此属性确定过程再次运行之前的时间间隔。  
   

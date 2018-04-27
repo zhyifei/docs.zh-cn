@@ -12,11 +12,11 @@ ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 26cb885187cff31a085e34c60c820fe7c0bdc787
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 15d71f039223b464a3b5affb9ba7b37886b93200
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="reference-visual-basic"></a>参考 (Visual Basic)
 本部分提供的 Visual Basic 编程的各个方面的相关引用信息的链接。  
@@ -43,10 +43,10 @@ ms.lasthandoff: 04/26/2018
   
 ## <a name="related-sections"></a>相关章节  
  [常规用户界面元素 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- 包含在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中使用的对话框和窗口的主题。  
+ 包含对话框和窗口用于 Visual Studio 中的主题。  
   
  [Visual Studio 中的 XML 工具](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- 提供了 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中可用的各种 XML 工具的相关主题的链接。  
+ 提供有关 Visual Studio 中提供的各种 XML 工具的主题的链接。  
   
  [自动化与扩展性参考](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- 为共享和特定语言组件提供了涵盖 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中自动化和扩展性的主题的链接。
+ 提供指向介绍自动化和扩展性在 Visual Studio 中，共享和特定于语言的组件的主题。

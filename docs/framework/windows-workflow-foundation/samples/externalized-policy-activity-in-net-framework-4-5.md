@@ -1,26 +1,27 @@
 ---
-title: ".NET Framework 4.5 中的外部化的策略活动"
-ms.custom: 
+title: .NET Framework 4.5 中的外部化的策略活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9dc86cd8ff3cce31e67c146e099f70181ad1e33a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7085b9069235de7cd8754937f9f6facdf60cd5b3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外部化的策略活动
-此示例演示 ExternalizedPolicy4 活动如何允许执行现有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的对象[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] [!INCLUDE[wf2](../../../../includes/wf2-md.md)] (WF 4.5) 直接通过 WF 3.5 中附带的规则引擎。 通过使用此活动，可以打开并执行任何现有 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WF 3.5 规则引擎包含的 Windows Workflow Foundation，请阅读[Windows Workflow Foundation 规则引擎简介](http://go.microsoft.com/fwlink/?LinkId=166079)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]迁移到规则[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，请阅读上的迁移指南[迁移指南](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
+此示例演示 ExternalizedPolicy4 活动如何允许执行现有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的对象[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]直接通过使用规则引擎的 Windows Workflow Foundation (WF 4.5)在 WF 3.5 中提供的。 通过使用此活动，可以打开并执行任何现有 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3.5 规则引擎包含的 Windows Workflow Foundation，请阅读[Windows Workflow Foundation 规则引擎简介](http://go.microsoft.com/fwlink/?LinkId=166079)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 迁移到规则[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，请阅读上的迁移指南[迁移指南](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
   
 ## <a name="projects-in-this-sample"></a>此示例中的项目  
   

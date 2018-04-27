@@ -1,24 +1,26 @@
 ---
-title: "自定义绑定安全性"
-ms.custom: 
+title: 自定义绑定安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 94c43586606f42cca120ded59637a998d113d229
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4774e4ed6c5afc6e9c4af50e0663ffe8c0964b7f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-binding-security"></a>自定义绑定安全性
 本示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。  
@@ -56,16 +58,16 @@ ms.lasthandoff: 01/19/2018
   
 ```xml  
 <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata />  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
+    <serviceBehaviors>  
+    <behavior name="CalculatorServiceBehavior">  
+        <serviceMetadata />  
+        <serviceDebug includeExceptionDetailInFaults="False" />  
+        <serviceCredentials>  
+        <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
+        </serviceCredentials>  
+    </behavior>  
+    </serviceBehaviors>  
+</behaviors>  
 ```  
   
  此外，此自定义绑定将消息安全性与 Windows 凭据类型（默认凭据类型）一起使用。 这是通过 `security` 绑定元素实现的。 如果 Kerberos 身份验证机制可用，则使用消息级安全性对客户端和服务进行身份验证。 如果在 Active Directory 环境中运行示例，则会发生这种情况。 如果 Kerberos 身份验证机制不可用，则使用 NTLM 身份验证。 NTLM 向服务对客户端进行身份验证，但不向客户端对服务进行身份验证。 `security`绑定元素配置为使用`SecureConversation``authenticationType`，这将导致客户端和服务上安全会话的创建。 为了使服务的双工协定起作用，需要这么做。  
@@ -93,7 +95,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
      证书存储在 Web 承载的服务的 CurrentUser 存储中。  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  

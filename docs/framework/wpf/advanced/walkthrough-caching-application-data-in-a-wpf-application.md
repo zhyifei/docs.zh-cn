@@ -1,12 +1,13 @@
 ---
-title: "演练：在 WPF 应用程序中缓存应用程序数据"
-ms.custom: 
+title: 演练：在 WPF 应用程序中缓存应用程序数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>演练：在 WPF 应用程序中缓存应用程序数据
 缓存可以将数据存储在内存中以便快速访问。 当再次访问数据时，应用程序可以从改为从原始源检索该缓存获取数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。  
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-wpf-application"></a>创建 WPF 应用程序  
   
-1.  启动 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。  
+1.  启动 Visual Studio。  
   
 2.  在**文件**菜单上，单击**新建**，然后单击**新项目**。  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  单击 **“确定”**。  
   
-     WPF 设计器中打开**设计**查看，并显示 MainWindow.xaml 文件。 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]创建**我的项目**文件夹、 Application.xaml 文件和 MainWindow.xaml 文件。  
+     WPF 设计器中打开**设计**查看，并显示 MainWindow.xaml 文件。 Visual Studio 将创建**我的项目**文件夹、 Application.xaml 文件和 MainWindow.xaml 文件。  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>面向.NET Framework 和添加对缓存程序集的引用  
  默认情况下，WPF 应用程序目标[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>在 WPF 应用程序的命名空间，应用程序必须指定目标[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 并且必须包括对命名空间的引用。  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  在**解决方案资源管理器**，右键单击项目的名称，然后单击**添加引用**。  
   
-    2.  选择**.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。  
+    2.  选择 **.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。  
   
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>若要更改 Visual C# 项目中的目标.NET Framework  
   
@@ -132,13 +134,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  单击“应用程序”  选项卡。  
   
-3.  在**目标框架**列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择**.NET Framework 4 Client Profile**。)  
+3.  在**目标框架**列表中，选择[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (不要选择 **.NET Framework 4 Client Profile**。)  
   
 4.  通过执行以下步骤添加对缓存程序集的引用：  
   
     1.  右键单击**引用**文件夹，然后单击**添加引用**。  
   
-    2.  选择**.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。  
+    2.  选择 **.NET**选项卡上，选择`System.Runtime.Caching`，然后单击**确定**。  
   
 ## <a name="adding-a-button-to-the-wpf-window"></a>将按钮添加到作为 WPF 窗口  
  接下来，你将添加一个按钮控件，并创建为按钮的事件处理程序`Click`事件。 稍后你将添加到的代码，因此单击按钮时，文本文件的内容是缓存，并且不显示。  

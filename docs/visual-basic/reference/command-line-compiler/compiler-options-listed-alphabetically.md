@@ -1,6 +1,6 @@
 ---
 title: Visual Basic Compiler Options Listed Alphabetically
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a6e95c52c708128267ab6dc79a1b37d21b30bac2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>按字母顺序列出的 Visual Basic 编译器选项
-Visual Basic 命令行编译器提供作为编译的程序从备用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]集成的开发环境 (IDE)。 下面是 Visual Basic 命令行编译器选项按字母顺序排序的列表。  
+Visual Basic 命令行编译器用作编译来自 Visual Studio 集成的开发环境 (IDE) 的程序的替代方法。 下面是 Visual Basic 命令行编译器选项按字母顺序排序的列表。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -37,6 +37,7 @@ Visual Basic 命令行编译器提供作为编译的程序从备用[!INCLUDE[vsp
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|生成调试信息。|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定义条件编译的符号。|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|指定程序集是完全签名的还是部分签名的。|  
+|[-确定性](../../../visual-basic/reference/command-line-compiler/deterministic.md)|使编译器输出的二进制内容都是相同编译如果输入相同程序集。|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|将文档注释处理到一个 XML 文件中。|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 编译器应报告内部编译器错误的方式。|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定输出文件各节的对齐位置。|  

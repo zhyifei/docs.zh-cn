@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c4f18bc3e078a03795037f77505aa2533f1e853e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases"></a>下载示例数据库
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的许多示例和演练都使用 Northwind 示例数据库和 SQL Server Express Edition。 您可以从 Microsoft 下载网站免费下载这些产品。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
      默认情况下，数据库安装在*驱动器*: \SQL Server 2000 Sample Databases。  
   
 ## <a name="downloading-sql-server-express-edition"></a>下载 SQL Server Express Edition  
- SQL Server Express Edition 免费提供，您可以利用应用程序重新发布它。 如果您使用的是 [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)]，则专业版和更高版本中包含了 SQL Server Express Edition。  
+ SQL Server Express Edition 免费提供，您可以利用应用程序重新发布它。 如果你使用的 Visual Studio，Pro 和更高版本中包含 SQL Server Express Edition。  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>下载并安装 SQL Server Express Edition  
   
