@@ -1,31 +1,33 @@
 ---
-title: "Windows Communication Foundation 到消息队列"
-ms.custom: 
+title: Windows Communication Foundation 到消息队列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 90013752ed03f24c0995bc837efde5f20bf272c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2ea59c7f1ef2ac6f22500a13eb9bb4456149b7c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="windows-communication-foundation-to-message-queuing"></a><span data-ttu-id="28bcb-102">Windows Communication Foundation 到消息队列</span><span class="sxs-lookup"><span data-stu-id="28bcb-102">Windows Communication Foundation to Message Queuing</span></span>
-<span data-ttu-id="28bcb-103">本示例演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序如何向消息队列 (MSMQ) 应用程序发送消息。</span><span class="sxs-lookup"><span data-stu-id="28bcb-103">This sample demonstrates how a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application can send a message to a Message Queuing (MSMQ) application.</span></span> <span data-ttu-id="28bcb-104">此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。</span><span class="sxs-lookup"><span data-stu-id="28bcb-104">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span> <span data-ttu-id="28bcb-105">服务和客户端不需要同时运行。</span><span class="sxs-lookup"><span data-stu-id="28bcb-105">The service and client do not have to be running at the same time.</span></span>  
+# <a name="windows-communication-foundation-to-message-queuing"></a><span data-ttu-id="da2ad-102">Windows Communication Foundation 到消息队列</span><span class="sxs-lookup"><span data-stu-id="da2ad-102">Windows Communication Foundation to Message Queuing</span></span>
+<span data-ttu-id="da2ad-103">本示例演示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序如何向消息队列 (MSMQ) 应用程序发送消息。</span><span class="sxs-lookup"><span data-stu-id="da2ad-103">This sample demonstrates how a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application can send a message to a Message Queuing (MSMQ) application.</span></span> <span data-ttu-id="da2ad-104">此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。</span><span class="sxs-lookup"><span data-stu-id="da2ad-104">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span> <span data-ttu-id="da2ad-105">服务和客户端不需要同时运行。</span><span class="sxs-lookup"><span data-stu-id="da2ad-105">The service and client do not have to be running at the same time.</span></span>  
   
- <span data-ttu-id="28bcb-106">服务从队列接收消息并处理订单。</span><span class="sxs-lookup"><span data-stu-id="28bcb-106">The service receives messages from the queue and processes orders.</span></span> <span data-ttu-id="28bcb-107">服务创建一个事务性队列，并为收到的消息设置消息处理程序，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="28bcb-107">The service creates a transactional queue and sets up a message received message handler, as shown in the following sample code.</span></span>  
-  
-```  
+ <span data-ttu-id="da2ad-106">服务从队列接收消息并处理订单。</span><span class="sxs-lookup"><span data-stu-id="da2ad-106">The service receives messages from the queue and processes orders.</span></span> <span data-ttu-id="da2ad-107">服务创建一个事务性队列，并为收到的消息设置消息处理程序，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="da2ad-107">The service creates a transactional queue and sets up a message received message handler, as shown in the following sample code.</span></span>  
+
+```csharp
 static void Main(string[] args)  
 {  
     if (!MessageQueue.Exists(  
@@ -41,11 +43,11 @@ static void Main(string[] args)
     Console.WriteLine("Order Service is running");  
     Console.ReadLine();  
 }  
-```  
-  
- <span data-ttu-id="28bcb-108">当消息到达队列中时，将调用消息处理程序 `ProcessOrder`。</span><span class="sxs-lookup"><span data-stu-id="28bcb-108">When a message is received in the queue, the message handler `ProcessOrder` is invoked.</span></span>  
-  
-```  
+```
+
+ <span data-ttu-id="da2ad-108">当消息到达队列中时，将调用消息处理程序 `ProcessOrder`。</span><span class="sxs-lookup"><span data-stu-id="da2ad-108">When a message is received in the queue, the message handler `ProcessOrder` is invoked.</span></span>  
+
+```csharp
 public static void ProcessOrder(Object source,  
     ReceiveCompletedEventArgs asyncResult)  
 {  
@@ -70,11 +72,11 @@ public static void ProcessOrder(Object source,
     }  
   
 }  
-```  
+```
+
+ <span data-ttu-id="da2ad-109">服务从 MSMQ 消息正文中提取 `ProcessOrder` 并处理订单。</span><span class="sxs-lookup"><span data-stu-id="da2ad-109">The service extracts the `ProcessOrder` from the MSMQ message body, and processes the order.</span></span>  
   
- <span data-ttu-id="28bcb-109">服务从 MSMQ 消息正文中提取 `ProcessOrder` 并处理订单。</span><span class="sxs-lookup"><span data-stu-id="28bcb-109">The service extracts the `ProcessOrder` from the MSMQ message body, and processes the order.</span></span>  
-  
- <span data-ttu-id="28bcb-110">MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="28bcb-110">The MSMQ queue name is specified in an appSettings section of the configuration file, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="da2ad-110">MSMQ 队列名称在配置文件的 appSettings 节中指定，如以下示例配置所示。</span><span class="sxs-lookup"><span data-stu-id="da2ad-110">The MSMQ queue name is specified in an appSettings section of the configuration file, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <appSettings>  
@@ -83,11 +85,11 @@ public static void ProcessOrder(Object source,
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="28bcb-111">队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。</span><span class="sxs-lookup"><span data-stu-id="28bcb-111">The queue name uses a dot (.) for the local computer and backslash separators in its path.</span></span>  
+>  <span data-ttu-id="da2ad-111">队列名称为本地计算机使用圆点 (.)，并在其路径中使用反斜杠分隔符。</span><span class="sxs-lookup"><span data-stu-id="da2ad-111">The queue name uses a dot (.) for the local computer and backslash separators in its path.</span></span>  
   
- <span data-ttu-id="28bcb-112">客户端创建采购订单并在事务的范围内提交该采购订单，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="28bcb-112">The client creates a purchase order and submits the purchase order within the scope of a transaction, as shown in the following sample code.</span></span>  
-  
-```  
+ <span data-ttu-id="da2ad-112">客户端创建采购订单并在事务的范围内提交该采购订单，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="da2ad-112">The client creates a purchase order and submits the purchase order within the scope of a transaction, as shown in the following sample code.</span></span>  
+
+```csharp
 // Create the purchase order  
 PurchaseOrder po = new PurchaseOrder();  
 // Fill in the details  
@@ -105,13 +107,13 @@ Console.WriteLine("Order has been submitted:{0}", po);
   
 //Closing the client gracefully closes the connection and cleans up resources  
 client.Close();  
-```  
+```
+
+ <span data-ttu-id="da2ad-113">客户端按顺序使用自定义客户端将 MSMQ 消息发送给队列。</span><span class="sxs-lookup"><span data-stu-id="da2ad-113">The client uses a custom client in-order to send the MSMQ message to the queue.</span></span> <span data-ttu-id="da2ad-114">由于接收和处理消息的应用程序是 MSMQ 应用程序，而不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，因此这两个应用程序之间没有隐式服务协定。</span><span class="sxs-lookup"><span data-stu-id="da2ad-114">Because the application that receives and processes the message is an MSMQ application and not a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, there is no implicit service contract between the two applications.</span></span> <span data-ttu-id="da2ad-115">所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。</span><span class="sxs-lookup"><span data-stu-id="da2ad-115">So, we cannot create a proxy using the Svcutil.exe tool in this scenario.</span></span>  
   
- <span data-ttu-id="28bcb-113">客户端按顺序使用自定义客户端将 MSMQ 消息发送给队列。</span><span class="sxs-lookup"><span data-stu-id="28bcb-113">The client uses a custom client in-order to send the MSMQ message to the queue.</span></span> <span data-ttu-id="28bcb-114">由于接收和处理消息的应用程序是 MSMQ 应用程序，而不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，因此这两个应用程序之间没有隐式服务协定。</span><span class="sxs-lookup"><span data-stu-id="28bcb-114">Because the application that receives and processes the message is an MSMQ application and not a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, there is no implicit service contract between the two applications.</span></span> <span data-ttu-id="28bcb-115">所以在此方案中，我们不能使用 Svcutil.exe 工具创建代理。</span><span class="sxs-lookup"><span data-stu-id="28bcb-115">So, we cannot create a proxy using the Svcutil.exe tool in this scenario.</span></span>  
-  
- <span data-ttu-id="28bcb-116">对于使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定发送消息的所有 `MsmqIntegration` 应用程序而言，自定义客户端在本质上都是相同的。</span><span class="sxs-lookup"><span data-stu-id="28bcb-116">The custom client is essentially the same for all [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications that use the `MsmqIntegration` binding to send messages.</span></span> <span data-ttu-id="28bcb-117">与其他客户端不同，它不包含一系列服务操作。</span><span class="sxs-lookup"><span data-stu-id="28bcb-117">Unlike other clients, it does not include a range of service operations.</span></span> <span data-ttu-id="28bcb-118">它只是一个提交消息操作。</span><span class="sxs-lookup"><span data-stu-id="28bcb-118">It is a submit message operation only.</span></span>  
-  
-```  
+ <span data-ttu-id="da2ad-116">对于使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 绑定发送消息的所有 `MsmqIntegration` 应用程序而言，自定义客户端在本质上都是相同的。</span><span class="sxs-lookup"><span data-stu-id="da2ad-116">The custom client is essentially the same for all [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications that use the `MsmqIntegration` binding to send messages.</span></span> <span data-ttu-id="da2ad-117">与其他客户端不同，它不包含一系列服务操作。</span><span class="sxs-lookup"><span data-stu-id="da2ad-117">Unlike other clients, it does not include a range of service operations.</span></span> <span data-ttu-id="da2ad-118">它只是一个提交消息操作。</span><span class="sxs-lookup"><span data-stu-id="da2ad-118">It is a submit message operation only.</span></span>  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
@@ -136,54 +138,54 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
         base.Channel.SubmitPurchaseOrder(msg);  
     }  
 }  
-```  
-  
- <span data-ttu-id="28bcb-119">运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="28bcb-119">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="28bcb-120">您可以看到服务从客户端接收消息。</span><span class="sxs-lookup"><span data-stu-id="28bcb-120">You can see the service receive messages from the client.</span></span> <span data-ttu-id="28bcb-121">在每个控制台窗口中按 Enter 可以关闭服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="28bcb-121">Press ENTER in each console window to shut down the service and client.</span></span> <span data-ttu-id="28bcb-122">请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="28bcb-122">Note that because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="28bcb-123">例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。</span><span class="sxs-lookup"><span data-stu-id="28bcb-123">For example, you could run the client, shut it down, and then start up the service and it would still receive its messages.</span></span>  
+```
+
+ <span data-ttu-id="da2ad-119">运行示例时，客户端和服务活动将显示在服务和客户端控制台窗口中。</span><span class="sxs-lookup"><span data-stu-id="da2ad-119">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="da2ad-120">您可以看到服务从客户端接收消息。</span><span class="sxs-lookup"><span data-stu-id="da2ad-120">You can see the service receive messages from the client.</span></span> <span data-ttu-id="da2ad-121">在每个控制台窗口中按 Enter 可以关闭服务和客户端。</span><span class="sxs-lookup"><span data-stu-id="da2ad-121">Press ENTER in each console window to shut down the service and client.</span></span> <span data-ttu-id="da2ad-122">请注意：由于正在使用队列，因此不必同时启动和运行客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="da2ad-122">Note that because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="da2ad-123">例如，可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。</span><span class="sxs-lookup"><span data-stu-id="da2ad-123">For example, you could run the client, shut it down, and then start up the service and it would still receive its messages.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="28bcb-124">此示例需要安装消息队列。</span><span class="sxs-lookup"><span data-stu-id="28bcb-124">This sample requires the installation of Message Queuing.</span></span> <span data-ttu-id="28bcb-125">请参阅中的安装说明[消息队列](http://go.microsoft.com/fwlink/?LinkId=94968)。</span><span class="sxs-lookup"><span data-stu-id="28bcb-125">See the installation instructions in [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94968).</span></span>  
+>  <span data-ttu-id="da2ad-124">此示例需要安装消息队列。</span><span class="sxs-lookup"><span data-stu-id="da2ad-124">This sample requires the installation of Message Queuing.</span></span> <span data-ttu-id="da2ad-125">请参阅中的安装说明[消息队列](http://go.microsoft.com/fwlink/?LinkId=94968)。</span><span class="sxs-lookup"><span data-stu-id="da2ad-125">See the installation instructions in [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94968).</span></span>  
   
-### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="28bcb-126">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="28bcb-126">To setup, build, and run the sample</span></span>  
+### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="da2ad-126">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="da2ad-126">To setup, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="28bcb-127">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="28bcb-127">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="da2ad-127">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="da2ad-127">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="28bcb-128">如果先运行服务，则它将检查以确保队列存在。</span><span class="sxs-lookup"><span data-stu-id="28bcb-128">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="28bcb-129">如果队列不存在，则服务将创建一个队列。</span><span class="sxs-lookup"><span data-stu-id="28bcb-129">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="28bcb-130">可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。</span><span class="sxs-lookup"><span data-stu-id="28bcb-130">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="28bcb-131">执行下面的步骤来在 Windows 2008 中创建队列。</span><span class="sxs-lookup"><span data-stu-id="28bcb-131">Follow these steps to create a queue in Windows 2008.</span></span>  
+2.  <span data-ttu-id="da2ad-128">如果先运行服务，则它将检查以确保队列存在。</span><span class="sxs-lookup"><span data-stu-id="da2ad-128">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="da2ad-129">如果队列不存在，则服务将创建一个队列。</span><span class="sxs-lookup"><span data-stu-id="da2ad-129">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="da2ad-130">可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。</span><span class="sxs-lookup"><span data-stu-id="da2ad-130">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="da2ad-131">执行下面的步骤来在 Windows 2008 中创建队列。</span><span class="sxs-lookup"><span data-stu-id="da2ad-131">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  <span data-ttu-id="28bcb-132">在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开服务器管理器。</span><span class="sxs-lookup"><span data-stu-id="28bcb-132">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
+    1.  <span data-ttu-id="da2ad-132">在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开服务器管理器。</span><span class="sxs-lookup"><span data-stu-id="da2ad-132">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  <span data-ttu-id="28bcb-133">展开**功能**选项卡。</span><span class="sxs-lookup"><span data-stu-id="28bcb-133">Expand the **Features** tab.</span></span>  
+    2.  <span data-ttu-id="da2ad-133">展开**功能**选项卡。</span><span class="sxs-lookup"><span data-stu-id="da2ad-133">Expand the **Features** tab.</span></span>  
   
-    3.  <span data-ttu-id="28bcb-134">右键单击**私有消息队列**，然后选择**新建**，**专用队列**。</span><span class="sxs-lookup"><span data-stu-id="28bcb-134">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
+    3.  <span data-ttu-id="da2ad-134">右键单击**私有消息队列**，然后选择**新建**，**专用队列**。</span><span class="sxs-lookup"><span data-stu-id="da2ad-134">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  <span data-ttu-id="28bcb-135">检查**事务**框。</span><span class="sxs-lookup"><span data-stu-id="28bcb-135">Check the **Transactional** box.</span></span>  
+    4.  <span data-ttu-id="da2ad-135">检查**事务**框。</span><span class="sxs-lookup"><span data-stu-id="da2ad-135">Check the **Transactional** box.</span></span>  
   
-    5.  <span data-ttu-id="28bcb-136">输入`ServiceModelSamplesTransacted`作为新队列的名称。</span><span class="sxs-lookup"><span data-stu-id="28bcb-136">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
+    5.  <span data-ttu-id="da2ad-136">输入`ServiceModelSamplesTransacted`作为新队列的名称。</span><span class="sxs-lookup"><span data-stu-id="da2ad-136">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  <span data-ttu-id="28bcb-137">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="28bcb-137">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3.  <span data-ttu-id="da2ad-137">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="da2ad-137">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  <span data-ttu-id="28bcb-138">若要在单台计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="28bcb-138">To run the sample in a single-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4.  <span data-ttu-id="da2ad-138">若要在单台计算机配置上运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="da2ad-138">To run the sample in a single-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="28bcb-139">跨计算机运行示例</span><span class="sxs-lookup"><span data-stu-id="28bcb-139">To run the sample across computers</span></span>  
+### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="da2ad-139">跨计算机运行示例</span><span class="sxs-lookup"><span data-stu-id="da2ad-139">To run the sample across computers</span></span>  
   
-1.  <span data-ttu-id="28bcb-140">将 \service\bin\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。</span><span class="sxs-lookup"><span data-stu-id="28bcb-140">Copy the service program files from the \service\bin\ folder, under the language-specific folder, to the service computer.</span></span>  
+1.  <span data-ttu-id="da2ad-140">将 \service\bin\ 文件夹（在语言特定文件夹内）中的服务程序文件复制到服务计算机上。</span><span class="sxs-lookup"><span data-stu-id="da2ad-140">Copy the service program files from the \service\bin\ folder, under the language-specific folder, to the service computer.</span></span>  
   
-2.  <span data-ttu-id="28bcb-141">将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。</span><span class="sxs-lookup"><span data-stu-id="28bcb-141">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
+2.  <span data-ttu-id="da2ad-141">将 \client\bin\ 文件夹（在语言特定文件夹内）中的客户端程序文件复制到客户端计算机上。</span><span class="sxs-lookup"><span data-stu-id="da2ad-141">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
   
-3.  <span data-ttu-id="28bcb-142">在 Client.exe.config 文件中，更改客户端终结点地址以指定服务计算机名称，而不是使用“.”。</span><span class="sxs-lookup"><span data-stu-id="28bcb-142">In the Client.exe.config file, change the client endpoint address to specify the service computer name instead of ".".</span></span>  
+3.  <span data-ttu-id="da2ad-142">在 Client.exe.config 文件中，更改客户端终结点地址以指定服务计算机名称，而不是使用“.”。</span><span class="sxs-lookup"><span data-stu-id="da2ad-142">In the Client.exe.config file, change the client endpoint address to specify the service computer name instead of ".".</span></span>  
   
-4.  <span data-ttu-id="28bcb-143">在服务计算机上，在命令提示符下启动 Service.exe。</span><span class="sxs-lookup"><span data-stu-id="28bcb-143">On the service computer, launch Service.exe from a command prompt.</span></span>  
+4.  <span data-ttu-id="da2ad-143">在服务计算机上，在命令提示符下启动 Service.exe。</span><span class="sxs-lookup"><span data-stu-id="da2ad-143">On the service computer, launch Service.exe from a command prompt.</span></span>  
   
-5.  <span data-ttu-id="28bcb-144">在客户端计算机上，在命令提示符下启动 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="28bcb-144">On the client computer, launch Client.exe from a command prompt.</span></span>  
+5.  <span data-ttu-id="da2ad-144">在客户端计算机上，在命令提示符下启动 Client.exe。</span><span class="sxs-lookup"><span data-stu-id="da2ad-144">On the client computer, launch Client.exe from a command prompt.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="28bcb-145">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="28bcb-145">The samples may already be installed on your computer.</span></span> <span data-ttu-id="28bcb-146">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="28bcb-146">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="da2ad-145">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="da2ad-145">The samples may already be installed on your computer.</span></span> <span data-ttu-id="da2ad-146">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="da2ad-146">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="28bcb-147">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="28bcb-147">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="28bcb-148">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="28bcb-148">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="da2ad-147">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="da2ad-147">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="da2ad-148">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="da2ad-148">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
-## <a name="see-also"></a><span data-ttu-id="28bcb-149">请参阅</span><span class="sxs-lookup"><span data-stu-id="28bcb-149">See Also</span></span>  
- [<span data-ttu-id="28bcb-150">如何：与 WCF 终结点和消息队列应用程序交换消息</span><span class="sxs-lookup"><span data-stu-id="28bcb-150">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [<span data-ttu-id="28bcb-151">消息队列</span><span class="sxs-lookup"><span data-stu-id="28bcb-151">Message Queuing</span></span>](http://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a><span data-ttu-id="da2ad-149">请参阅</span><span class="sxs-lookup"><span data-stu-id="da2ad-149">See Also</span></span>  
+ [<span data-ttu-id="da2ad-150">如何：与 WCF 终结点和消息队列应用程序交换消息</span><span class="sxs-lookup"><span data-stu-id="da2ad-150">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [<span data-ttu-id="da2ad-151">消息队列</span><span class="sxs-lookup"><span data-stu-id="da2ad-151">Message Queuing</span></span>](http://go.microsoft.com/fwlink/?LinkId=94968)

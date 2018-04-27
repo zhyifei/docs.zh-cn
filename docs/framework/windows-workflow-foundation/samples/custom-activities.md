@@ -1,36 +1,37 @@
 ---
-title: "自定义活动"
-ms.custom: 
+title: 自定义活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cde06b3-51b2-4e46-900d-11140bae77f4
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24655f8e230cf2286dc451ab8a26f1a4ccf445a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b8176a5bd55022cfe8d0be191127874df5a86062
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="custom-activities"></a><span data-ttu-id="e118b-102">自定义活动</span><span class="sxs-lookup"><span data-stu-id="e118b-102">Custom Activities</span></span>
-<span data-ttu-id="e118b-103">本节包含演示如何在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中创建自定义活动的示例。</span><span class="sxs-lookup"><span data-stu-id="e118b-103">This section contains samples that demonstrate how to create custom activities in [!INCLUDE[wf](../../../../includes/wf-md.md)].</span></span>  
+# <a name="custom-activities"></a><span data-ttu-id="80dcb-102">自定义活动</span><span class="sxs-lookup"><span data-stu-id="80dcb-102">Custom Activities</span></span>
+<span data-ttu-id="80dcb-103">本节包含演示如何创建在 Windows Workflow Foundation (WF) 的自定义活动的示例。</span><span class="sxs-lookup"><span data-stu-id="80dcb-103">This section contains samples that demonstrate how to create custom activities in Windows Workflow Foundation (WF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e118b-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="e118b-104">In This Section</span></span>  
- [<span data-ttu-id="e118b-105">Code-Bodied</span><span class="sxs-lookup"><span data-stu-id="e118b-105">Code-Bodied</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
- <span data-ttu-id="e118b-106">包含使用代码以声明方式创建的自定义活动示例。</span><span class="sxs-lookup"><span data-stu-id="e118b-106">Contains custom activity samples created declaratively in code.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="80dcb-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="80dcb-104">In This Section</span></span>  
+ [<span data-ttu-id="80dcb-105">Code-Bodied</span><span class="sxs-lookup"><span data-stu-id="80dcb-105">Code-Bodied</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
+ <span data-ttu-id="80dcb-106">包含使用代码以声明方式创建的自定义活动示例。</span><span class="sxs-lookup"><span data-stu-id="80dcb-106">Contains custom activity samples created declaratively in code.</span></span>  
   
- [<span data-ttu-id="e118b-107">复合</span><span class="sxs-lookup"><span data-stu-id="e118b-107">Composite</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  
- <span data-ttu-id="e118b-108">包含由其他活动组成的自定义活动示例。</span><span class="sxs-lookup"><span data-stu-id="e118b-108">Contains custom activity samples composed of other activities.</span></span>  
+ [<span data-ttu-id="80dcb-107">复合</span><span class="sxs-lookup"><span data-stu-id="80dcb-107">Composite</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  
+ <span data-ttu-id="80dcb-108">包含由其他活动组成的自定义活动示例。</span><span class="sxs-lookup"><span data-stu-id="80dcb-108">Contains custom activity samples composed of other activities.</span></span>  
   
- [<span data-ttu-id="e118b-109">自定义活动设计器</span><span class="sxs-lookup"><span data-stu-id="e118b-109">Custom Activity Designers</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  
- <span data-ttu-id="e118b-110">包含使用自定义设计器在工作流设计器中进行显示的活动示例。</span><span class="sxs-lookup"><span data-stu-id="e118b-110">Contains activity samples that use custom designers for display in the workflow designer.</span></span>  
+ [<span data-ttu-id="80dcb-109">自定义活动设计器</span><span class="sxs-lookup"><span data-stu-id="80dcb-109">Custom Activity Designers</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  
+ <span data-ttu-id="80dcb-110">包含使用自定义设计器在工作流设计器中进行显示的活动示例。</span><span class="sxs-lookup"><span data-stu-id="80dcb-110">Contains activity samples that use custom designers for display in the workflow designer.</span></span>  
   
- [<span data-ttu-id="e118b-111">验证</span><span class="sxs-lookup"><span data-stu-id="e118b-111">Validation</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
- <span data-ttu-id="e118b-112">包含演示设计时活动验证的示例。</span><span class="sxs-lookup"><span data-stu-id="e118b-112">Contains samples that demonstrate design-time activity validation.</span></span>
+ [<span data-ttu-id="80dcb-111">验证</span><span class="sxs-lookup"><span data-stu-id="80dcb-111">Validation</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
+ <span data-ttu-id="80dcb-112">包含演示设计时活动验证的示例。</span><span class="sxs-lookup"><span data-stu-id="80dcb-112">Contains samples that demonstrate design-time activity validation.</span></span>

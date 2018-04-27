@@ -17,42 +17,42 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6b61f5ae7d0e7f3102e0566fb1a6eff3ca072d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca790f97eb677414655b583e46cb693506ed0cc2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="windows-workflow-foundation"></a><span data-ttu-id="972ac-102">Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="972ac-102">Windows Workflow Foundation</span></span>
-<span data-ttu-id="972ac-103">本节介绍 [!INCLUDE[wf](../../../includes/wf-md.md)] 的编程模型、示例和工具。</span><span class="sxs-lookup"><span data-stu-id="972ac-103">This section describes the programming model, samples, and tools of the [!INCLUDE[wf](../../../includes/wf-md.md)].</span></span>  
+# <a name="windows-workflow-foundation"></a><span data-ttu-id="90f90-102">Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="90f90-102">Windows Workflow Foundation</span></span>
+<span data-ttu-id="90f90-103">本部分介绍编程模型、 示例和工具的 Windows Workflow Foundation (WF)。</span><span class="sxs-lookup"><span data-stu-id="90f90-103">This section describes the programming model, samples, and tools of the Windows Workflow Foundation (WF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="972ac-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="972ac-104">In This Section</span></span>  
- [<span data-ttu-id="972ac-105">Windows Workflow 文档使用指南</span><span class="sxs-lookup"><span data-stu-id="972ac-105">Guide to the Windows Workflow Documentation</span></span>](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
- <span data-ttu-id="972ac-106">一组建议你阅读的主题，取决于你对相关知识的熟悉程度（从初学者到非常熟悉）和需求。</span><span class="sxs-lookup"><span data-stu-id="972ac-106">A set of suggested topics to read, depending upon your familiarity (novice to well-acquainted), and requirements.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="90f90-104">本节内容</span><span class="sxs-lookup"><span data-stu-id="90f90-104">In This Section</span></span>  
+ [<span data-ttu-id="90f90-105">Windows Workflow 文档使用指南</span><span class="sxs-lookup"><span data-stu-id="90f90-105">Guide to the Windows Workflow Documentation</span></span>](../../../docs/framework/windows-workflow-foundation/guide-to-the-documentation.md)  
+ <span data-ttu-id="90f90-106">一组建议你阅读的主题，取决于你对相关知识的熟悉程度（从初学者到非常熟悉）和需求。</span><span class="sxs-lookup"><span data-stu-id="90f90-106">A set of suggested topics to read, depending upon your familiarity (novice to well-acquainted), and requirements.</span></span>  
   
- [<span data-ttu-id="972ac-107">Windows Workflow Foundation 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="972ac-107">What's New in Windows Workflow Foundation</span></span>](../../../docs/framework/windows-workflow-foundation/whats-new.md)  
- <span data-ttu-id="972ac-108">介绍对以前版本中的多个开发范例的更改。</span><span class="sxs-lookup"><span data-stu-id="972ac-108">Discusses the changes in several development paradigms from previous versions.</span></span>  
+ [<span data-ttu-id="90f90-107">Windows Workflow Foundation 中的新增功能</span><span class="sxs-lookup"><span data-stu-id="90f90-107">What's New in Windows Workflow Foundation</span></span>](../../../docs/framework/windows-workflow-foundation/whats-new.md)  
+ <span data-ttu-id="90f90-108">介绍对以前版本中的多个开发范例的更改。</span><span class="sxs-lookup"><span data-stu-id="90f90-108">Discusses the changes in several development paradigms from previous versions.</span></span>  
   
- [<span data-ttu-id="972ac-109">.NET 4.5 中 Windows Workflow Foundation 的新增功能</span><span class="sxs-lookup"><span data-stu-id="972ac-109">What's New in Windows Workflow Foundation in .NET 4.5</span></span>](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)  
- <span data-ttu-id="972ac-110">介绍 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 的 Windows Workflow Foundation 中的新功能。</span><span class="sxs-lookup"><span data-stu-id="972ac-110">Describes the new features in Windows Workflow Foundation in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)].</span></span>  
+ [<span data-ttu-id="90f90-109">.NET 4.5 中 Windows Workflow Foundation 的新增功能</span><span class="sxs-lookup"><span data-stu-id="90f90-109">What's New in Windows Workflow Foundation in .NET 4.5</span></span>](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)  
+ <span data-ttu-id="90f90-110">介绍 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 的 Windows Workflow Foundation 中的新功能。</span><span class="sxs-lookup"><span data-stu-id="90f90-110">Describes the new features in Windows Workflow Foundation in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)].</span></span>  
   
- [<span data-ttu-id="972ac-111">Windows Workflow Foundation 功能详细信息</span><span class="sxs-lookup"><span data-stu-id="972ac-111">Windows Workflow Foundation Feature Specifics</span></span>](../../../docs/framework/windows-workflow-foundation/feature-specifics.md)  
- <span data-ttu-id="972ac-112">介绍 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 的 Windows Workflow Foundation 中的新功能</span><span class="sxs-lookup"><span data-stu-id="972ac-112">Describes the new features in Windows Workflow Foundation in  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]</span></span>  
+ [<span data-ttu-id="90f90-111">Windows Workflow Foundation 功能详细信息</span><span class="sxs-lookup"><span data-stu-id="90f90-111">Windows Workflow Foundation Feature Specifics</span></span>](../../../docs/framework/windows-workflow-foundation/feature-specifics.md)  
+ <span data-ttu-id="90f90-112">介绍 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 的 Windows Workflow Foundation 中的新功能</span><span class="sxs-lookup"><span data-stu-id="90f90-112">Describes the new features in Windows Workflow Foundation in  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]</span></span>  
   
- [<span data-ttu-id="972ac-113">Windows Workflow 概念性概述</span><span class="sxs-lookup"><span data-stu-id="972ac-113">Windows Workflow Conceptual Overview</span></span>](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md)  
- <span data-ttu-id="972ac-114">一组介绍 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 背后较大概念的主题。</span><span class="sxs-lookup"><span data-stu-id="972ac-114">A set of topics that discusses the larger concepts behind [!INCLUDE[wf2](../../../includes/wf2-md.md)].</span></span>  
+ [<span data-ttu-id="90f90-113">Windows Workflow 概念性概述</span><span class="sxs-lookup"><span data-stu-id="90f90-113">Windows Workflow Conceptual Overview</span></span>](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md)  
+ <span data-ttu-id="90f90-114">一组的主题讨论了 Windows Workflow Foundation 背后重要概念。</span><span class="sxs-lookup"><span data-stu-id="90f90-114">A set of topics that discusses the larger concepts behind Windows Workflow Foundation.</span></span>  
   
- [<span data-ttu-id="972ac-115">入门教程</span><span class="sxs-lookup"><span data-stu-id="972ac-115">Getting Started Tutorial</span></span>](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- <span data-ttu-id="972ac-116">一组介绍 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 应用程序编程的演练主题。</span><span class="sxs-lookup"><span data-stu-id="972ac-116">A set of walkthrough topics that introduce you to programming [!INCLUDE[wf2](../../../includes/wf2-md.md)] applications.</span></span>  
+ [<span data-ttu-id="90f90-115">入门教程</span><span class="sxs-lookup"><span data-stu-id="90f90-115">Getting Started Tutorial</span></span>](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
+ <span data-ttu-id="90f90-116">向你介绍 Windows Workflow Foundation 应用程序编程的演练主题一组。</span><span class="sxs-lookup"><span data-stu-id="90f90-116">A set of walkthrough topics that introduce you to programming Windows Workflow Foundation applications.</span></span>  
   
- [<span data-ttu-id="972ac-117">Windows Workflow Foundation 编程</span><span class="sxs-lookup"><span data-stu-id="972ac-117">Windows Workflow Foundation Programming</span></span>](../../../docs/framework/windows-workflow-foundation/programming.md)  
- <span data-ttu-id="972ac-118">要成为一名熟练的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 程序员所应该了解的一组入门知识主题。</span><span class="sxs-lookup"><span data-stu-id="972ac-118">A set of primer topics that you should understand to become a proficient [!INCLUDE[wf1](../../../includes/wf1-md.md)] programmer.</span></span>  
+ [<span data-ttu-id="90f90-117">Windows Workflow Foundation 编程</span><span class="sxs-lookup"><span data-stu-id="90f90-117">Windows Workflow Foundation Programming</span></span>](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ <span data-ttu-id="90f90-118">要成为一名熟练的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 程序员所应该了解的一组入门知识主题。</span><span class="sxs-lookup"><span data-stu-id="90f90-118">A set of primer topics that you should understand to become a proficient [!INCLUDE[wf1](../../../includes/wf1-md.md)] programmer.</span></span>  
   
- [<span data-ttu-id="972ac-119">扩展 Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="972ac-119">Extending Windows Workflow Foundation</span></span>](../../../docs/framework/windows-workflow-foundation/extend.md)  
- <span data-ttu-id="972ac-120">一组介绍如何扩展或自定义 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 以符合您需求的主题。</span><span class="sxs-lookup"><span data-stu-id="972ac-120">A set of topics that discusses how to extend or customize [!INCLUDE[wf2](../../../includes/wf2-md.md)] to suit your needs.</span></span>  
+ [<span data-ttu-id="90f90-119">扩展 Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="90f90-119">Extending Windows Workflow Foundation</span></span>](../../../docs/framework/windows-workflow-foundation/extend.md)  
+ <span data-ttu-id="90f90-120">一组的主题讨论如何扩展或自定义 Windows Workflow Foundation，以满足你的需求。</span><span class="sxs-lookup"><span data-stu-id="90f90-120">A set of topics that discusses how to extend or customize Windows Workflow Foundation to suit your needs.</span></span>  
   
- [<span data-ttu-id="972ac-121">针对 .NET Framework 4.5 的 Windows Workflow Foundation 词汇表</span><span class="sxs-lookup"><span data-stu-id="972ac-121">Windows Workflow Foundation Glossary for .NET Framework 4.5</span></span>](../../../docs/framework/windows-workflow-foundation/glossary.md)  
- <span data-ttu-id="972ac-122">定义 WF 专用的术语列表。</span><span class="sxs-lookup"><span data-stu-id="972ac-122">Defines a list of terms that are specific to WF.</span></span>  
+ [<span data-ttu-id="90f90-121">针对 .NET Framework 4.5 的 Windows Workflow Foundation 词汇表</span><span class="sxs-lookup"><span data-stu-id="90f90-121">Windows Workflow Foundation Glossary for .NET Framework 4.5</span></span>](../../../docs/framework/windows-workflow-foundation/glossary.md)  
+ <span data-ttu-id="90f90-122">定义 WF 专用的术语列表。</span><span class="sxs-lookup"><span data-stu-id="90f90-122">Defines a list of terms that are specific to WF.</span></span>  
   
- [<span data-ttu-id="972ac-123">Windows Workflow 示例</span><span class="sxs-lookup"><span data-stu-id="972ac-123">Windows Workflow Samples</span></span>](../../../docs/framework/windows-workflow-foundation/samples/index.md)  
- <span data-ttu-id="972ac-124">包含演示 WF 功能和方案的示例应用程序。</span><span class="sxs-lookup"><span data-stu-id="972ac-124">Contains sample applications that demonstrate WF features and scenarios.</span></span>
+ [<span data-ttu-id="90f90-123">Windows Workflow 示例</span><span class="sxs-lookup"><span data-stu-id="90f90-123">Windows Workflow Samples</span></span>](../../../docs/framework/windows-workflow-foundation/samples/index.md)  
+ <span data-ttu-id="90f90-124">包含演示 WF 功能和方案的示例应用程序。</span><span class="sxs-lookup"><span data-stu-id="90f90-124">Contains sample applications that demonstrate WF features and scenarios.</span></span>

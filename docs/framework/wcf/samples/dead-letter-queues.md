@@ -1,70 +1,72 @@
 ---
-title: "死信队列"
-ms.custom: 
+title: 死信队列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="dead-letter-queues"></a><span data-ttu-id="e11f2-102">死信队列</span><span class="sxs-lookup"><span data-stu-id="e11f2-102">Dead Letter Queues</span></span>
-<span data-ttu-id="e11f2-103">本示例演示如何处理传递失败的消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-103">This sample demonstrates how to handle and process messages that have failed delivery.</span></span> <span data-ttu-id="e11f2-104">它基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。</span><span class="sxs-lookup"><span data-stu-id="e11f2-104">It is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="e11f2-105">本示例使用 `netMsmqBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="e11f2-105">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="e11f2-106">此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  
+# <a name="dead-letter-queues"></a><span data-ttu-id="306c1-102">死信队列</span><span class="sxs-lookup"><span data-stu-id="306c1-102">Dead Letter Queues</span></span>
+<span data-ttu-id="306c1-103">本示例演示如何处理传递失败的消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-103">This sample demonstrates how to handle and process messages that have failed delivery.</span></span> <span data-ttu-id="306c1-104">它基于[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。</span><span class="sxs-lookup"><span data-stu-id="306c1-104">It is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="306c1-105">本示例使用 `netMsmqBinding` 绑定。</span><span class="sxs-lookup"><span data-stu-id="306c1-105">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="306c1-106">此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e11f2-107">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="e11f2-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="306c1-107">本主题的最后介绍了此示例的设置过程和生成说明。</span><span class="sxs-lookup"><span data-stu-id="306c1-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e11f2-108">本示例演示仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上可用的每个应用程序死信队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-108">This sample demonstrates each application dead letter queue that is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="e11f2-109">可以修改此示例以使用 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上针对 MSMQ 3.0 的默认系统范围队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-109">The sample can be modified to use the default system-wide queues for MSMQ 3.0 on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  
+>  <span data-ttu-id="306c1-108">本示例演示仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上可用的每个应用程序死信队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-108">This sample demonstrates each application dead letter queue that is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="306c1-109">可以修改此示例以使用 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上针对 MSMQ 3.0 的默认系统范围队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-109">The sample can be modified to use the default system-wide queues for MSMQ 3.0 on [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] and [!INCLUDE[wxp](../../../../includes/wxp-md.md)].</span></span>  
   
- <span data-ttu-id="e11f2-110">在排队通信中，客户端使用队列与服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="e11f2-110">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="e11f2-111">更确切地说，客户端向队列发送消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-111">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="e11f2-112">服务从队列接收消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-112">The service receives messages from the queue.</span></span> <span data-ttu-id="e11f2-113">因此不必同时运行服务和客户端便可使用队列进行通信。</span><span class="sxs-lookup"><span data-stu-id="e11f2-113">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
+ <span data-ttu-id="306c1-110">在排队通信中，客户端使用队列与服务进行通信。</span><span class="sxs-lookup"><span data-stu-id="306c1-110">In queued communication, the client communicates to the service using a queue.</span></span> <span data-ttu-id="306c1-111">更确切地说，客户端向队列发送消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-111">More precisely, the client sends messages to a queue.</span></span> <span data-ttu-id="306c1-112">服务从队列接收消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-112">The service receives messages from the queue.</span></span> <span data-ttu-id="306c1-113">因此不必同时运行服务和客户端便可使用队列进行通信。</span><span class="sxs-lookup"><span data-stu-id="306c1-113">The service and client therefore, do not have to be running at the same time to communicate using a queue.</span></span>  
   
- <span data-ttu-id="e11f2-114">由于排队通信可能需要一定的休眠时间，因此可能需要在消息上关联生存期时间值，以确保消息超过该时间后不会发送到应用程序。</span><span class="sxs-lookup"><span data-stu-id="e11f2-114">Because queued communication can involve a certain amount of dormancy, you may want to associate a time-to-live value on the message to ensure that the message does not get delivered to the application if it has gone past the time.</span></span> <span data-ttu-id="e11f2-115">在某些情况下，还必须通知应用程序消息传递是否失败。</span><span class="sxs-lookup"><span data-stu-id="e11f2-115">There are also cases, where an application must be informed whether a message failed delivery.</span></span> <span data-ttu-id="e11f2-116">在所有这些情况下（如消息的生存期过期或消息传递失败），会将消息放入死信队列中。</span><span class="sxs-lookup"><span data-stu-id="e11f2-116">In all of these cases, such as when the time-to-live on the message has expired or the message failed delivery, the message is put in a dead letter queue.</span></span> <span data-ttu-id="e11f2-117">然后，执行发送任务的应用程序可以读取死信队列中的消息并采取纠正措施（从不执行任何操作到纠正传递失败的原因），并重新发送消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-117">The sending application can then read the messages in the dead-letter queue and take corrective actions that range from no action to correcting the reasons for failed delivery and resending the message.</span></span>  
+ <span data-ttu-id="306c1-114">由于排队通信可能需要一定的休眠时间，因此可能需要在消息上关联生存期时间值，以确保消息超过该时间后不会发送到应用程序。</span><span class="sxs-lookup"><span data-stu-id="306c1-114">Because queued communication can involve a certain amount of dormancy, you may want to associate a time-to-live value on the message to ensure that the message does not get delivered to the application if it has gone past the time.</span></span> <span data-ttu-id="306c1-115">在某些情况下，还必须通知应用程序消息传递是否失败。</span><span class="sxs-lookup"><span data-stu-id="306c1-115">There are also cases, where an application must be informed whether a message failed delivery.</span></span> <span data-ttu-id="306c1-116">在所有这些情况下（如消息的生存期过期或消息传递失败），会将消息放入死信队列中。</span><span class="sxs-lookup"><span data-stu-id="306c1-116">In all of these cases, such as when the time-to-live on the message has expired or the message failed delivery, the message is put in a dead letter queue.</span></span> <span data-ttu-id="306c1-117">然后，执行发送任务的应用程序可以读取死信队列中的消息并采取纠正措施（从不执行任何操作到纠正传递失败的原因），并重新发送消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-117">The sending application can then read the messages in the dead-letter queue and take corrective actions that range from no action to correcting the reasons for failed delivery and resending the message.</span></span>  
   
- <span data-ttu-id="e11f2-118">`NetMsmqBinding` 绑定中的死信队列用下面的属性表示：</span><span class="sxs-lookup"><span data-stu-id="e11f2-118">The dead-letter queue in the `NetMsmqBinding` binding is expressed in the following properties:</span></span>  
+ <span data-ttu-id="306c1-118">`NetMsmqBinding` 绑定中的死信队列用下面的属性表示：</span><span class="sxs-lookup"><span data-stu-id="306c1-118">The dead-letter queue in the `NetMsmqBinding` binding is expressed in the following properties:</span></span>  
   
--   <span data-ttu-id="e11f2-119"><xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 属性表示客户端需要的死信队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-119"><xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> property to express the kind of dead-letter queue required by the client.</span></span> <span data-ttu-id="e11f2-120">此枚举具有下列值：</span><span class="sxs-lookup"><span data-stu-id="e11f2-120">This enumeration has the following values:</span></span>  
+-   <span data-ttu-id="306c1-119"><xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 属性表示客户端需要的死信队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-119"><xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> property to express the kind of dead-letter queue required by the client.</span></span> <span data-ttu-id="306c1-120">此枚举具有下列值：</span><span class="sxs-lookup"><span data-stu-id="306c1-120">This enumeration has the following values:</span></span>  
   
--   <span data-ttu-id="e11f2-121">`None`：客户端不需要死信队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-121">`None`: No dead-letter queue is required by the client.</span></span>  
+-   <span data-ttu-id="306c1-121">`None`：客户端不需要死信队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-121">`None`: No dead-letter queue is required by the client.</span></span>  
   
--   <span data-ttu-id="e11f2-122">`System`：系统死信队列用于存储死消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-122">`System`: The system dead-letter queue is used to store dead messages.</span></span> <span data-ttu-id="e11f2-123">系统死信队列由计算机上运行的所有应用程序共享。</span><span class="sxs-lookup"><span data-stu-id="e11f2-123">The system dead-letter queue is shared by all applications running on the computer.</span></span>  
+-   <span data-ttu-id="306c1-122">`System`：系统死信队列用于存储死消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-122">`System`: The system dead-letter queue is used to store dead messages.</span></span> <span data-ttu-id="306c1-123">系统死信队列由计算机上运行的所有应用程序共享。</span><span class="sxs-lookup"><span data-stu-id="306c1-123">The system dead-letter queue is shared by all applications running on the computer.</span></span>  
   
--   <span data-ttu-id="e11f2-124">`Custom`：使用 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 属性指定的自定义死信队列用于存储死消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-124">`Custom`: A custom dead-letter queue specified using the <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property is used to store dead messages.</span></span> <span data-ttu-id="e11f2-125">此功能仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上可用。</span><span class="sxs-lookup"><span data-stu-id="e11f2-125">This feature is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="e11f2-126">当应用程序必须使用自己的死信队列而不与同一计算机上运行的其他应用程序共享该死信队列时使用此功能。</span><span class="sxs-lookup"><span data-stu-id="e11f2-126">This is used when the application must use its own dead letter queue instead of sharing it with other applications running on the same computer.</span></span>  
+-   <span data-ttu-id="306c1-124">`Custom`：使用 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 属性指定的自定义死信队列用于存储死消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-124">`Custom`: A custom dead-letter queue specified using the <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property is used to store dead messages.</span></span> <span data-ttu-id="306c1-125">此功能仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上可用。</span><span class="sxs-lookup"><span data-stu-id="306c1-125">This feature is only available on [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="306c1-126">当应用程序必须使用自己的死信队列而不与同一计算机上运行的其他应用程序共享该死信队列时使用此功能。</span><span class="sxs-lookup"><span data-stu-id="306c1-126">This is used when the application must use its own dead letter queue instead of sharing it with other applications running on the same computer.</span></span>  
   
--   <span data-ttu-id="e11f2-127"><xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 属性表示要用作死信队列的特定队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-127"><xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property to express the specific queue to use as a dead-letter queue.</span></span> <span data-ttu-id="e11f2-128">此属性仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。</span><span class="sxs-lookup"><span data-stu-id="e11f2-128">This is available only in [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span>  
+-   <span data-ttu-id="306c1-127"><xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 属性表示要用作死信队列的特定队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-127"><xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> property to express the specific queue to use as a dead-letter queue.</span></span> <span data-ttu-id="306c1-128">此属性仅在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中可用。</span><span class="sxs-lookup"><span data-stu-id="306c1-128">This is available only in [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span>  
   
- <span data-ttu-id="e11f2-129">在本示例中，客户端在事务范围内将一批消息发送到服务并为这些消息的“生存期”指定任意低的值（约 2 秒钟）。</span><span class="sxs-lookup"><span data-stu-id="e11f2-129">In this sample, the client sends a batch of messages to the service from within the scope of a transaction and specifies an arbitrarily low value for "time-to-live" for these messages (about 2 seconds).</span></span> <span data-ttu-id="e11f2-130">客户端还指定一个自定义死信队列用于排队已过期的消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-130">The client also specifies a custom dead-letter queue to use to enqueue the messages that have expired.</span></span>  
+ <span data-ttu-id="306c1-129">在本示例中，客户端在事务范围内将一批消息发送到服务并为这些消息的“生存期”指定任意低的值（约 2 秒钟）。</span><span class="sxs-lookup"><span data-stu-id="306c1-129">In this sample, the client sends a batch of messages to the service from within the scope of a transaction and specifies an arbitrarily low value for "time-to-live" for these messages (about 2 seconds).</span></span> <span data-ttu-id="306c1-130">客户端还指定一个自定义死信队列用于排队已过期的消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-130">The client also specifies a custom dead-letter queue to use to enqueue the messages that have expired.</span></span>  
   
- <span data-ttu-id="e11f2-131">客户端应用程序可以读取死信队列中的消息，并重试发送消息或纠正导致原始消息放入死信队列的错误，然后发送消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-131">The client application can read the messages in the dead-letter queue and either retry sending the message or correct the error that caused the original message to be placed in the dead-letter queue and send the message.</span></span> <span data-ttu-id="e11f2-132">在本示例中，客户端显示一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-132">In the sample, the client displays an error message.</span></span>  
+ <span data-ttu-id="306c1-131">客户端应用程序可以读取死信队列中的消息，并重试发送消息或纠正导致原始消息放入死信队列的错误，然后发送消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-131">The client application can read the messages in the dead-letter queue and either retry sending the message or correct the error that caused the original message to be placed in the dead-letter queue and send the message.</span></span> <span data-ttu-id="306c1-132">在本示例中，客户端显示一条错误消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-132">In the sample, the client displays an error message.</span></span>  
   
- <span data-ttu-id="e11f2-133">服务协定为 `IOrderProcessor`，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="e11f2-133">The service contract is `IOrderProcessor`, as shown in the following sample code.</span></span>  
-  
-```  
+ <span data-ttu-id="306c1-133">服务协定为 `IOrderProcessor`，如下面的示例代码所示。</span><span class="sxs-lookup"><span data-stu-id="306c1-133">The service contract is `IOrderProcessor`, as shown in the following sample code.</span></span>  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
+```
+
+ <span data-ttu-id="306c1-134">此示例中的服务代码是[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。</span><span class="sxs-lookup"><span data-stu-id="306c1-134">The service code in the sample is that of the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span></span>  
   
- <span data-ttu-id="e11f2-134">此示例中的服务代码是[事务性 MSMQ 绑定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。</span><span class="sxs-lookup"><span data-stu-id="e11f2-134">The service code in the sample is that of the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).</span></span>  
-  
- <span data-ttu-id="e11f2-135">与服务的通信发生在事务范围内。</span><span class="sxs-lookup"><span data-stu-id="e11f2-135">Communication with the service takes place within the scope of a transaction.</span></span> <span data-ttu-id="e11f2-136">服务读取队列中的消息，执行操作，然后显示操作的结果。</span><span class="sxs-lookup"><span data-stu-id="e11f2-136">The service reads messages from the queue, performs the operation and then displays the results of the operation.</span></span> <span data-ttu-id="e11f2-137">应用程序还为死信消息创建死信队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-137">The application also creates a dead-letter queue for dead-letter messages.</span></span>  
-  
-```  
+ <span data-ttu-id="306c1-135">与服务的通信发生在事务范围内。</span><span class="sxs-lookup"><span data-stu-id="306c1-135">Communication with the service takes place within the scope of a transaction.</span></span> <span data-ttu-id="306c1-136">服务读取队列中的消息，执行操作，然后显示操作的结果。</span><span class="sxs-lookup"><span data-stu-id="306c1-136">The service reads messages from the queue, performs the operation and then displays the results of the operation.</span></span> <span data-ttu-id="306c1-137">应用程序还为死信消息创建死信队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-137">The application also creates a dead-letter queue for dead-letter messages.</span></span>  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,14 +119,14 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
- <span data-ttu-id="e11f2-138">客户端的配置为消息到达服务指定一个短的持续时间。</span><span class="sxs-lookup"><span data-stu-id="e11f2-138">The client's configuration specifies a short duration for the message to reach the service.</span></span> <span data-ttu-id="e11f2-139">如果消息无法在指定的持续时间内传输，则该消息将会过期并将移动到死信队列中。</span><span class="sxs-lookup"><span data-stu-id="e11f2-139">If the message cannot be transmitted within the duration specified, the message expires and is moved to the dead-letter queue.</span></span>  
+```
+
+ <span data-ttu-id="306c1-138">客户端的配置为消息到达服务指定一个短的持续时间。</span><span class="sxs-lookup"><span data-stu-id="306c1-138">The client's configuration specifies a short duration for the message to reach the service.</span></span> <span data-ttu-id="306c1-139">如果消息无法在指定的持续时间内传输，则该消息将会过期并将移动到死信队列中。</span><span class="sxs-lookup"><span data-stu-id="306c1-139">If the message cannot be transmitted within the duration specified, the message expires and is moved to the dead-letter queue.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e11f2-140">客户端可以在指定的时间内将消息传送到服务队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-140">It is possible for the client to deliver the message to the service queue within the specified time.</span></span> <span data-ttu-id="e11f2-141">为确可以在操作中看到死信服务，应在启动服务之前运行客户端。</span><span class="sxs-lookup"><span data-stu-id="e11f2-141">To ensure you see the dead-letter service in action, you should run the client before starting the service.</span></span> <span data-ttu-id="e11f2-142">消息将超时并被传送到死信服务。</span><span class="sxs-lookup"><span data-stu-id="e11f2-142">The message times out and is delivered to the dead-letter service.</span></span>  
+>  <span data-ttu-id="306c1-140">客户端可以在指定的时间内将消息传送到服务队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-140">It is possible for the client to deliver the message to the service queue within the specified time.</span></span> <span data-ttu-id="306c1-141">为确可以在操作中看到死信服务，应在启动服务之前运行客户端。</span><span class="sxs-lookup"><span data-stu-id="306c1-141">To ensure you see the dead-letter service in action, you should run the client before starting the service.</span></span> <span data-ttu-id="306c1-142">消息将超时并被传送到死信服务。</span><span class="sxs-lookup"><span data-stu-id="306c1-142">The message times out and is delivered to the dead-letter service.</span></span>  
   
- <span data-ttu-id="e11f2-143">应用程序必须定义使用哪个队列作为其死信队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-143">The application must define which queue to use as its dead-letter queue.</span></span> <span data-ttu-id="e11f2-144">如果未指定队列，则使用默认系统范围事务性死信队列对死消息排队。</span><span class="sxs-lookup"><span data-stu-id="e11f2-144">If no queue is specified, the default system-wide transactional dead-letter queue is used to queue dead messages.</span></span> <span data-ttu-id="e11f2-145">在本示例中，客户端应用程序指定其自己的应用程序死信队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-145">In this example, the client application specifies its own application dead-letter queue.</span></span>  
+ <span data-ttu-id="306c1-143">应用程序必须定义使用哪个队列作为其死信队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-143">The application must define which queue to use as its dead-letter queue.</span></span> <span data-ttu-id="306c1-144">如果未指定队列，则使用默认系统范围事务性死信队列对死消息排队。</span><span class="sxs-lookup"><span data-stu-id="306c1-144">If no queue is specified, the default system-wide transactional dead-letter queue is used to queue dead messages.</span></span> <span data-ttu-id="306c1-145">在本示例中，客户端应用程序指定其自己的应用程序死信队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-145">In this example, the client application specifies its own application dead-letter queue.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -157,14 +159,14 @@ class Client
 </configuration>  
 ```  
   
- <span data-ttu-id="e11f2-146">死信消息服务从死信队列中读取消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-146">The dead-letter message service reads messages from the dead-letter queue.</span></span> <span data-ttu-id="e11f2-147">死信消息服务实现 `IOrderProcessor` 协定。</span><span class="sxs-lookup"><span data-stu-id="e11f2-147">The dead-letter message service implements the `IOrderProcessor` contract.</span></span> <span data-ttu-id="e11f2-148">但其实现不处理订单。</span><span class="sxs-lookup"><span data-stu-id="e11f2-148">Its implementation however is not to process orders.</span></span> <span data-ttu-id="e11f2-149">死信消息服务是客户端服务，没有处理订单的功能。</span><span class="sxs-lookup"><span data-stu-id="e11f2-149">The dead-letter message service is a client service and does not have the facility to process orders.</span></span>  
+ <span data-ttu-id="306c1-146">死信消息服务从死信队列中读取消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-146">The dead-letter message service reads messages from the dead-letter queue.</span></span> <span data-ttu-id="306c1-147">死信消息服务实现 `IOrderProcessor` 协定。</span><span class="sxs-lookup"><span data-stu-id="306c1-147">The dead-letter message service implements the `IOrderProcessor` contract.</span></span> <span data-ttu-id="306c1-148">但其实现不处理订单。</span><span class="sxs-lookup"><span data-stu-id="306c1-148">Its implementation however is not to process orders.</span></span> <span data-ttu-id="306c1-149">死信消息服务是客户端服务，没有处理订单的功能。</span><span class="sxs-lookup"><span data-stu-id="306c1-149">The dead-letter message service is a client service and does not have the facility to process orders.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e11f2-150">死信队列是客户端队列，对于客户端队列管理器来说是本地队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-150">The dead-letter queue is a client queue and is local to the client queue manager.</span></span>  
+>  <span data-ttu-id="306c1-150">死信队列是客户端队列，对于客户端队列管理器来说是本地队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-150">The dead-letter queue is a client queue and is local to the client queue manager.</span></span>  
   
- <span data-ttu-id="e11f2-151">死信消息服务实现可检查消息传递失败的原因并采取纠正措施。</span><span class="sxs-lookup"><span data-stu-id="e11f2-151">The dead-letter message service implementation checks for the reason a message failed delivery and takes corrective measures.</span></span> <span data-ttu-id="e11f2-152">消息失败的原因在两个枚举 <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> 和 <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A> 中捕获。</span><span class="sxs-lookup"><span data-stu-id="e11f2-152">The reason for a message failure is captured in two enumerations, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> and <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>.</span></span> <span data-ttu-id="e11f2-153">您可以从 <xref:System.ServiceModel.Channels.MsmqMessageProperty> 中检索 <xref:System.ServiceModel.OperationContext>，如下面的示例代码所示：</span><span class="sxs-lookup"><span data-stu-id="e11f2-153">You can retrieve the <xref:System.ServiceModel.Channels.MsmqMessageProperty> from the <xref:System.ServiceModel.OperationContext> as shown in the following sample code:</span></span>  
-  
-```  
+ <span data-ttu-id="306c1-151">死信消息服务实现可检查消息传递失败的原因并采取纠正措施。</span><span class="sxs-lookup"><span data-stu-id="306c1-151">The dead-letter message service implementation checks for the reason a message failed delivery and takes corrective measures.</span></span> <span data-ttu-id="306c1-152">消息失败的原因在两个枚举 <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> 和 <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A> 中捕获。</span><span class="sxs-lookup"><span data-stu-id="306c1-152">The reason for a message failure is captured in two enumerations, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> and <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>.</span></span> <span data-ttu-id="306c1-153">您可以从 <xref:System.ServiceModel.Channels.MsmqMessageProperty> 中检索 <xref:System.ServiceModel.OperationContext>，如下面的示例代码所示：</span><span class="sxs-lookup"><span data-stu-id="306c1-153">You can retrieve the <xref:System.ServiceModel.Channels.MsmqMessageProperty> from the <xref:System.ServiceModel.OperationContext> as shown in the following sample code:</span></span>  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
+    …  
+}
+```
+
+ <span data-ttu-id="306c1-154">死信队列中的消息是被发送到处理消息的服务的消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-154">Messages in the dead-letter queue are messages that are addressed to the service that is processing the message.</span></span> <span data-ttu-id="306c1-155">因此，当死信消息服务从队列中读取消息时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道层会发现终结点的不匹配，因此不会调度该消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-155">Therefore, when the dead-letter message service reads messages from the queue, the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] channel layer finds the mismatch in endpoints and does not dispatch the message.</span></span> <span data-ttu-id="306c1-156">在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。</span><span class="sxs-lookup"><span data-stu-id="306c1-156">In this case, the message is addressed to the order processing service but is received by the dead-letter message service.</span></span> <span data-ttu-id="306c1-157">若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。</span><span class="sxs-lookup"><span data-stu-id="306c1-157">To receive a message that is addressed to a different endpoint, an address filter to match any address is specified in the `ServiceBehavior`.</span></span> <span data-ttu-id="306c1-158">这是成功处理从死信队列中读取的消息所必需的。</span><span class="sxs-lookup"><span data-stu-id="306c1-158">This is required to successfully process messages that are read from the dead-letter queue.</span></span>  
   
- <span data-ttu-id="e11f2-154">死信队列中的消息是被发送到处理消息的服务的消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-154">Messages in the dead-letter queue are messages that are addressed to the service that is processing the message.</span></span> <span data-ttu-id="e11f2-155">因此，当死信消息服务从队列中读取消息时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道层会发现终结点的不匹配，因此不会调度该消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-155">Therefore, when the dead-letter message service reads messages from the queue, the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] channel layer finds the mismatch in endpoints and does not dispatch the message.</span></span> <span data-ttu-id="e11f2-156">在这种情况下，会将消息发送到订单处理服务，但由死信消息服务接收。</span><span class="sxs-lookup"><span data-stu-id="e11f2-156">In this case, the message is addressed to the order processing service but is received by the dead-letter message service.</span></span> <span data-ttu-id="e11f2-157">若要接收发送到不同终结点的消息，请在 `ServiceBehavior` 中指定一个可匹配任何地址的地址筛选器。</span><span class="sxs-lookup"><span data-stu-id="e11f2-157">To receive a message that is addressed to a different endpoint, an address filter to match any address is specified in the `ServiceBehavior`.</span></span> <span data-ttu-id="e11f2-158">这是成功处理从死信队列中读取的消息所必需的。</span><span class="sxs-lookup"><span data-stu-id="e11f2-158">This is required to successfully process messages that are read from the dead-letter queue.</span></span>  
-  
- <span data-ttu-id="e11f2-159">在本示例中，如果失败的原因是消息超时，则死信消息服务会重新发送该消息。对于所有其他原因，则显示传送失败，如下面的示例代码所示：</span><span class="sxs-lookup"><span data-stu-id="e11f2-159">In this sample, the dead-letter message service resends the message if the reason for failure is that the message timed out. For all other reasons, it displays the delivery failure, as shown in the following sample code:</span></span>  
-  
-```  
+ <span data-ttu-id="306c1-159">在本示例中，如果失败的原因是消息超时，则死信消息服务会重新发送该消息。对于所有其他原因，则显示传送失败，如下面的示例代码所示：</span><span class="sxs-lookup"><span data-stu-id="306c1-159">In this sample, the dead-letter message service resends the message if the reason for failure is that the message timed out. For all other reasons, it displays the delivery failure, as shown in the following sample code:</span></span>  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,9 +239,9 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
- <span data-ttu-id="e11f2-160">下面的示例演示死信消息的配置：</span><span class="sxs-lookup"><span data-stu-id="e11f2-160">The following sample shows the configuration for a dead-letter message:</span></span>  
+```
+
+ <span data-ttu-id="306c1-160">下面的示例演示死信消息的配置：</span><span class="sxs-lookup"><span data-stu-id="306c1-160">The following sample shows the configuration for a dead-letter message:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -276,20 +278,20 @@ public class PurchaseOrderDLQService : IOrderProcessor
 </configuration>  
 ```  
   
- <span data-ttu-id="e11f2-161">在运行示例的过程中，需要运行 3 个可执行文件以查看死信队列如何适用于每个应用程序：客户端、服务和死信服务（从每个应用程序的死信队列中读取消息并将消息重新发送到服务）。</span><span class="sxs-lookup"><span data-stu-id="e11f2-161">In running the sample, there are 3 executables to run to see how the dead-letter queue works for each application; the client, service and a dead-letter service that reads from the dead-letter queue for each application and resends the message to the service.</span></span> <span data-ttu-id="e11f2-162">所有这些应用程序都是控制台应用程序，均在控制台窗口中输出结果。</span><span class="sxs-lookup"><span data-stu-id="e11f2-162">All are console applications with output in console windows.</span></span>  
+ <span data-ttu-id="306c1-161">在运行示例的过程中，需要运行 3 个可执行文件以查看死信队列如何适用于每个应用程序：客户端、服务和死信服务（从每个应用程序的死信队列中读取消息并将消息重新发送到服务）。</span><span class="sxs-lookup"><span data-stu-id="306c1-161">In running the sample, there are 3 executables to run to see how the dead-letter queue works for each application; the client, service and a dead-letter service that reads from the dead-letter queue for each application and resends the message to the service.</span></span> <span data-ttu-id="306c1-162">所有这些应用程序都是控制台应用程序，均在控制台窗口中输出结果。</span><span class="sxs-lookup"><span data-stu-id="306c1-162">All are console applications with output in console windows.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e11f2-163">由于队列正在使用中，因此不必同时启动和运行客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="e11f2-163">Because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="e11f2-164">可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-164">You can run the client, shut it down, and then start up the service and it still receives its messages.</span></span> <span data-ttu-id="e11f2-165">您应该启动服务，然后关闭服务，以便创建队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-165">You should start the service and shut it down so that the queue can be created.</span></span>  
+>  <span data-ttu-id="306c1-163">由于队列正在使用中，因此不必同时启动和运行客户端和服务。</span><span class="sxs-lookup"><span data-stu-id="306c1-163">Because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="306c1-164">可以先运行客户端，再将其关闭，然后启动服务，这样服务仍然会收到客户端的消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-164">You can run the client, shut it down, and then start up the service and it still receives its messages.</span></span> <span data-ttu-id="306c1-165">您应该启动服务，然后关闭服务，以便创建队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-165">You should start the service and shut it down so that the queue can be created.</span></span>  
   
- <span data-ttu-id="e11f2-166">在运行客户端时，客户端将显示消息：</span><span class="sxs-lookup"><span data-stu-id="e11f2-166">When running the client, the client displays the message:</span></span>  
+ <span data-ttu-id="306c1-166">在运行客户端时，客户端将显示消息：</span><span class="sxs-lookup"><span data-stu-id="306c1-166">When running the client, the client displays the message:</span></span>  
   
 ```  
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="e11f2-167">客户端尝试发送消息，但由于短的超时，消息过期并在每个应用程序的死信队列中排队。</span><span class="sxs-lookup"><span data-stu-id="e11f2-167">The client attempted to send the message but with a short timeout, the message expired and is now queued in the dead-letter queue for each application.</span></span>  
+ <span data-ttu-id="306c1-167">客户端尝试发送消息，但由于短的超时，消息过期并在每个应用程序的死信队列中排队。</span><span class="sxs-lookup"><span data-stu-id="306c1-167">The client attempted to send the message but with a short timeout, the message expired and is now queued in the dead-letter queue for each application.</span></span>  
   
- <span data-ttu-id="e11f2-168">然后运行死信服务，读取消息并显示错误代码，然后将消息重新发回服务。</span><span class="sxs-lookup"><span data-stu-id="e11f2-168">You then run the dead-letter service, which reads the message and displays the error code and resends the message back to the service.</span></span>  
+ <span data-ttu-id="306c1-168">然后运行死信服务，读取消息并显示错误代码，然后将消息重新发回服务。</span><span class="sxs-lookup"><span data-stu-id="306c1-168">You then run the dead-letter service, which reads the message and displays the error code and resends the message back to the service.</span></span>  
   
 ```  
 The dead letter service is ready.  
@@ -304,7 +306,7 @@ Trying to resend the message
 Purchase order resent  
 ```  
   
- <span data-ttu-id="e11f2-169">服务启动，然后读取重新发送的消息并处理该消息。</span><span class="sxs-lookup"><span data-stu-id="e11f2-169">The service starts and then reads the resent message and processes it.</span></span>  
+ <span data-ttu-id="306c1-169">服务启动，然后读取重新发送的消息并处理该消息。</span><span class="sxs-lookup"><span data-stu-id="306c1-169">The service starts and then reads the resent message and processes it.</span></span>  
   
 ```  
 The service is ready.  
@@ -319,29 +321,29 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
         Order status: Pending  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e11f2-170">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="e11f2-170">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="306c1-170">设置、生成和运行示例</span><span class="sxs-lookup"><span data-stu-id="306c1-170">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="e11f2-171">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="e11f2-171">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="306c1-171">确保已执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="306c1-171">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="e11f2-172">如果先运行服务，则它将检查以确保队列存在。</span><span class="sxs-lookup"><span data-stu-id="e11f2-172">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="e11f2-173">如果队列不存在，则服务将创建一个队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-173">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="e11f2-174">可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-174">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="e11f2-175">执行下面的步骤来在 Windows 2008 中创建队列。</span><span class="sxs-lookup"><span data-stu-id="e11f2-175">Follow these steps to create a queue in Windows 2008.</span></span>  
+2.  <span data-ttu-id="306c1-172">如果先运行服务，则它将检查以确保队列存在。</span><span class="sxs-lookup"><span data-stu-id="306c1-172">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="306c1-173">如果队列不存在，则服务将创建一个队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-173">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="306c1-174">可以先运行服务以创建队列或通过 MSMQ 队列管理器创建一个队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-174">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="306c1-175">执行下面的步骤来在 Windows 2008 中创建队列。</span><span class="sxs-lookup"><span data-stu-id="306c1-175">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  <span data-ttu-id="e11f2-176">在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开服务器管理器。</span><span class="sxs-lookup"><span data-stu-id="e11f2-176">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
+    1.  <span data-ttu-id="306c1-176">在 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 中打开服务器管理器。</span><span class="sxs-lookup"><span data-stu-id="306c1-176">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  <span data-ttu-id="e11f2-177">展开**功能**选项卡。</span><span class="sxs-lookup"><span data-stu-id="e11f2-177">Expand the **Features** tab.</span></span>  
+    2.  <span data-ttu-id="306c1-177">展开**功能**选项卡。</span><span class="sxs-lookup"><span data-stu-id="306c1-177">Expand the **Features** tab.</span></span>  
   
-    3.  <span data-ttu-id="e11f2-178">右键单击**私有消息队列**，然后选择**新建**，**专用队列**。</span><span class="sxs-lookup"><span data-stu-id="e11f2-178">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
+    3.  <span data-ttu-id="306c1-178">右键单击**私有消息队列**，然后选择**新建**，**专用队列**。</span><span class="sxs-lookup"><span data-stu-id="306c1-178">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  <span data-ttu-id="e11f2-179">检查**事务**框。</span><span class="sxs-lookup"><span data-stu-id="e11f2-179">Check the **Transactional** box.</span></span>  
+    4.  <span data-ttu-id="306c1-179">检查**事务**框。</span><span class="sxs-lookup"><span data-stu-id="306c1-179">Check the **Transactional** box.</span></span>  
   
-    5.  <span data-ttu-id="e11f2-180">输入`ServiceModelSamplesTransacted`作为新队列的名称。</span><span class="sxs-lookup"><span data-stu-id="e11f2-180">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
+    5.  <span data-ttu-id="306c1-180">输入`ServiceModelSamplesTransacted`作为新队列的名称。</span><span class="sxs-lookup"><span data-stu-id="306c1-180">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  <span data-ttu-id="e11f2-181">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="e11f2-181">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3.  <span data-ttu-id="306c1-181">若要生成 C# 或 Visual Basic .NET 版本的解决方案，请按照 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的说明进行操作。</span><span class="sxs-lookup"><span data-stu-id="306c1-181">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  <span data-ttu-id="e11f2-182">在运行示例单或跨计算机配置更改队列名称，相应地替换的计算机的完整名称为 localhost 并按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e11f2-182">To run the sample in a single- or cross-computer configuration change queue names appropriately, replacing localhost with full name of the computer and follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4.  <span data-ttu-id="306c1-182">在运行示例单或跨计算机配置更改队列名称，相应地替换的计算机的完整名称为 localhost 并按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="306c1-182">To run the sample in a single- or cross-computer configuration change queue names appropriately, replacing localhost with full name of the computer and follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a><span data-ttu-id="e11f2-183">在加入到工作组的计算机上运行此示例</span><span class="sxs-lookup"><span data-stu-id="e11f2-183">To run the sample on a computer joined to a workgroup</span></span>  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a><span data-ttu-id="306c1-183">在加入到工作组的计算机上运行此示例</span><span class="sxs-lookup"><span data-stu-id="306c1-183">To run the sample on a computer joined to a workgroup</span></span>  
   
-1.  <span data-ttu-id="e11f2-184">如果计算机不是域成员，请将身份验证模式和保护级别设置为 `None` 以禁用传输安全性，如下面的示例配置所示：</span><span class="sxs-lookup"><span data-stu-id="e11f2-184">If your computer is not part of a domain, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration:</span></span>  
+1.  <span data-ttu-id="306c1-184">如果计算机不是域成员，请将身份验证模式和保护级别设置为 `None` 以禁用传输安全性，如下面的示例配置所示：</span><span class="sxs-lookup"><span data-stu-id="306c1-184">If your computer is not part of a domain, turn off transport security by setting the authentication mode and protection level to `None` as shown in the following sample configuration:</span></span>  
   
     ```xml  
     <bindings>  
@@ -353,23 +355,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     </bindings>  
     ```  
   
-     <span data-ttu-id="e11f2-185">确保通过设置终结点的 `bindingConfiguration` 属性将终结点与绑定关联。</span><span class="sxs-lookup"><span data-stu-id="e11f2-185">Ensure the endpoint is associated with the binding by setting the endpoint's `bindingConfiguration` attribute.</span></span>  
+     <span data-ttu-id="306c1-185">确保通过设置终结点的 `bindingConfiguration` 属性将终结点与绑定关联。</span><span class="sxs-lookup"><span data-stu-id="306c1-185">Ensure the endpoint is associated with the binding by setting the endpoint's `bindingConfiguration` attribute.</span></span>  
   
-2.  <span data-ttu-id="e11f2-186">确保在运行示例前更改 DeadLetterService、服务器和客户端上的配置。</span><span class="sxs-lookup"><span data-stu-id="e11f2-186">Ensure that you change the configuration on the DeadLetterService, server and the client before you run the sample.</span></span>  
+2.  <span data-ttu-id="306c1-186">确保在运行示例前更改 DeadLetterService、服务器和客户端上的配置。</span><span class="sxs-lookup"><span data-stu-id="306c1-186">Ensure that you change the configuration on the DeadLetterService, server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="e11f2-187">将 `security mode` 设置为 `None` 等效于将 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全设置为 `None`。</span><span class="sxs-lookup"><span data-stu-id="e11f2-187">Setting `security mode` to `None` is equivalent to setting `MsmqAuthenticationMode`, `MsmqProtectionLevel` and `Message` security to `None`.</span></span>  
+    >  <span data-ttu-id="306c1-187">将 `security mode` 设置为 `None` 等效于将 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全设置为 `None`。</span><span class="sxs-lookup"><span data-stu-id="306c1-187">Setting `security mode` to `None` is equivalent to setting `MsmqAuthenticationMode`, `MsmqProtectionLevel` and `Message` security to `None`.</span></span>  
   
-## <a name="comments"></a><span data-ttu-id="e11f2-188">注释</span><span class="sxs-lookup"><span data-stu-id="e11f2-188">Comments</span></span>  
- <span data-ttu-id="e11f2-189">默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。</span><span class="sxs-lookup"><span data-stu-id="e11f2-189">By default with the `netMsmqBinding` binding transport, security is enabled.</span></span> <span data-ttu-id="e11f2-190">`MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。</span><span class="sxs-lookup"><span data-stu-id="e11f2-190">Two properties, `MsmqAuthenticationMode` and `MsmqProtectionLevel`, together determine the type of transport security.</span></span> <span data-ttu-id="e11f2-191">默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。</span><span class="sxs-lookup"><span data-stu-id="e11f2-191">By default the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="e11f2-192">MSMQ 必须是域的成员才可以提供身份验证和签名功能。</span><span class="sxs-lookup"><span data-stu-id="e11f2-192">For MSMQ to provide the authentication and signing feature, it must be part of a domain.</span></span> <span data-ttu-id="e11f2-193">如果在不是域成员的计算机上运行此示例，则会接收以下错误：“用户的内部消息队列证书不存在”。</span><span class="sxs-lookup"><span data-stu-id="e11f2-193">If you run this sample on a computer that is not part of a domain, you receive the following error: "User's internal message queuing certificate does not exist".</span></span>  
+## <a name="comments"></a><span data-ttu-id="306c1-188">注释</span><span class="sxs-lookup"><span data-stu-id="306c1-188">Comments</span></span>  
+ <span data-ttu-id="306c1-189">默认情况下对 `netMsmqBinding` 绑定传输启用了安全性。</span><span class="sxs-lookup"><span data-stu-id="306c1-189">By default with the `netMsmqBinding` binding transport, security is enabled.</span></span> <span data-ttu-id="306c1-190">`MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 这两个属性共同确定了传输安全性的类型。</span><span class="sxs-lookup"><span data-stu-id="306c1-190">Two properties, `MsmqAuthenticationMode` and `MsmqProtectionLevel`, together determine the type of transport security.</span></span> <span data-ttu-id="306c1-191">默认情况下，身份验证模式设置为 `Windows`，保护级别设置为 `Sign`。</span><span class="sxs-lookup"><span data-stu-id="306c1-191">By default the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="306c1-192">MSMQ 必须是域的成员才可以提供身份验证和签名功能。</span><span class="sxs-lookup"><span data-stu-id="306c1-192">For MSMQ to provide the authentication and signing feature, it must be part of a domain.</span></span> <span data-ttu-id="306c1-193">如果在不是域成员的计算机上运行此示例，则会接收以下错误：“用户的内部消息队列证书不存在”。</span><span class="sxs-lookup"><span data-stu-id="306c1-193">If you run this sample on a computer that is not part of a domain, you receive the following error: "User's internal message queuing certificate does not exist".</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e11f2-194">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="e11f2-194">The samples may already be installed on your computer.</span></span> <span data-ttu-id="e11f2-195">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="e11f2-195">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="306c1-194">您的计算机上可能已安装这些示例。</span><span class="sxs-lookup"><span data-stu-id="306c1-194">The samples may already be installed on your computer.</span></span> <span data-ttu-id="306c1-195">在继续操作之前，请先检查以下（默认）目录：</span><span class="sxs-lookup"><span data-stu-id="306c1-195">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e11f2-196">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="e11f2-196">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e11f2-197">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="e11f2-197">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="306c1-196">如果此目录不存在，请访问 [针对 .NET Framework 4 的 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation (WF) 示例](http://go.microsoft.com/fwlink/?LinkId=150780) 以下载所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 示例。</span><span class="sxs-lookup"><span data-stu-id="306c1-196">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="306c1-197">此示例位于以下目录：</span><span class="sxs-lookup"><span data-stu-id="306c1-197">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
-## <a name="see-also"></a><span data-ttu-id="e11f2-198">请参阅</span><span class="sxs-lookup"><span data-stu-id="e11f2-198">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="306c1-198">请参阅</span><span class="sxs-lookup"><span data-stu-id="306c1-198">See Also</span></span>
