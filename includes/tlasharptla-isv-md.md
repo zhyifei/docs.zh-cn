@@ -1,1 +1,1 @@
-独立软件供应商 (ISV)
+<span data-ttu-id="967e9-101">独立软件供应商 (ISV)</span><span class="sxs-lookup"><span data-stu-id="967e9-101">independent software vendor (ISV)</span></span>

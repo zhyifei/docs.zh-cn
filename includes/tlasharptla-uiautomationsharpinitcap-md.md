@@ -1,1 +1,1 @@
-UI 自动化
+<span data-ttu-id="dc648-101">UI 自动化</span><span class="sxs-lookup"><span data-stu-id="dc648-101">UI Automation</span></span>

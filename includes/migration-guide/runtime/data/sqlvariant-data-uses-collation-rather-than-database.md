@@ -1,0 +1,10 @@
+### <a name="sqlvariant-data-uses-sqlvariant-collation-rather-than-database-collation"></a><span data-ttu-id="71403-101">Sql_variant 数据使用 sql_variant 排序规则而不是数据库排序规则</span><span class="sxs-lookup"><span data-stu-id="71403-101">Sql_variant data uses sql_variant collation rather than database collation</span></span>
+
+|   |   |
+|---|---|
+|<span data-ttu-id="71403-102">详细信息</span><span class="sxs-lookup"><span data-stu-id="71403-102">Details</span></span>|<span data-ttu-id="71403-103"><code>sql_variant</code> 数据使用 <code>sql_variant</code> 排序规则而不是数据库排序规则。</span><span class="sxs-lookup"><span data-stu-id="71403-103"><code>sql_variant</code> data uses <code>sql_variant</code> collation rather than database collation.</span></span>|
+|<span data-ttu-id="71403-104">建议</span><span class="sxs-lookup"><span data-stu-id="71403-104">Suggestion</span></span>|<span data-ttu-id="71403-105">如果数据库排序规则与 <code>sql_variant</code> 排序规则不同，则此更改将解决可能的数据损坏。</span><span class="sxs-lookup"><span data-stu-id="71403-105">This change addresses possible data corruption if the database collation differs from the <code>sql_variant</code> collation.</span></span> <span data-ttu-id="71403-106">依赖损坏的数据的应用程序可能会失败。</span><span class="sxs-lookup"><span data-stu-id="71403-106">Applications that rely on the corrupted data may experience failure.</span></span>|
+|<span data-ttu-id="71403-107">范围</span><span class="sxs-lookup"><span data-stu-id="71403-107">Scope</span></span>|<span data-ttu-id="71403-108">透明</span><span class="sxs-lookup"><span data-stu-id="71403-108">Transparent</span></span>|
+|<span data-ttu-id="71403-109">版本</span><span class="sxs-lookup"><span data-stu-id="71403-109">Version</span></span>|<span data-ttu-id="71403-110">4.5</span><span class="sxs-lookup"><span data-stu-id="71403-110">4.5</span></span>|
+|<span data-ttu-id="71403-111">类型</span><span class="sxs-lookup"><span data-stu-id="71403-111">Type</span></span>|<span data-ttu-id="71403-112">运行时</span><span class="sxs-lookup"><span data-stu-id="71403-112">Runtime</span></span>|
+

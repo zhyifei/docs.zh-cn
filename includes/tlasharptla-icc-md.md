@@ -1,1 +1,1 @@
-国际色彩联合会 (ICC)
+<span data-ttu-id="17730-101">国际色彩联合会 (ICC)</span><span class="sxs-lookup"><span data-stu-id="17730-101">International Color Consortium (ICC)</span></span>

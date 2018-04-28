@@ -1,1 +1,1 @@
-Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）
+<span data-ttu-id="a5371-101">Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）</span><span class="sxs-lookup"><span data-stu-id="a5371-101">Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>
