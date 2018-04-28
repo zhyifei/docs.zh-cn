@@ -1,30 +1,32 @@
 ---
-title: "如何：创建支持凭据"
-ms.custom: 
+title: 如何：创建支持凭据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>如何：创建支持凭据
 自定义安全方案可能要求提供多个凭据。 例如，某个服务可能要求客户端不仅提供用户名和密码，还要提供能够证明客户端用户已满 18 岁的凭据。 第二个凭据是*支持凭据*。 本主题说明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端中实现此类凭据。  
   
 > [!NOTE]
->  支持凭据的规范是 WS-SecurityPolicy 规范的一部分。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Web 服务安全规范](http://go.microsoft.com/fwlink/?LinkId=88537)。  
+>  支持凭据的规范是 WS-SecurityPolicy 规范的一部分。 有关详细信息，请参阅[Web 服务安全规范](http://go.microsoft.com/fwlink/?LinkId=88537)。  
   
 ## <a name="supporting-tokens"></a>支持令牌  
  简单地说，当使用消息安全，*主凭据*始终用于保护消息 （例如，X.509 证书或 Kerberos 票证）。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |签名和加密|签名的加密支持令牌是在 `wsse:SecurityHeader` 中出现时还进行加密的签名支持令牌。|  
   
 ## <a name="programming-supporting-credentials"></a>对支持凭据进行编程  
- 若要创建使用必须创建的支持令牌的服务[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [如何： 创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
+ 若要创建使用必须创建的支持令牌的服务[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (有关详细信息，请参阅[如何： 自定义绑定使用 SecurityBindingElement 创建](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
   
  创建自定义绑定的第一步是创建一个安全绑定元素，该元素可以是以下三种类型之一：  
   

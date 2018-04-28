@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: ''
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系统提供的互操作性绑定支持的 Web 服务协议
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以与 Web 服务进行互操作，它支持一组称为 Web 服务规范的规范。 为了简化互操作性最佳做法的服务配置，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 引入三个可互操作的系统提供绑定：<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>、<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 和 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 对于与结构化信息标准促进组织 (OASIS) 标准的互操作性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括一个可互操作的系统提供绑定：<xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 对于元数据发布，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]包括两个可互操作的系统提供绑定： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主题列出系统提供的可互操作绑定支持的规范。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/26/2018
 |类别|协议|规范和用法|  
 |--------------|--------------|-----------------------------|  
 |消息|SOAP 1.2|[入门](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
-|消息|WS-Addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`、`ws2007HttpBinding` 和 `wsDualHttpBinding` 实现万维网联合会 (W3C) WS-Addressing 建议以启用异步消息传送、消息关联和非特定传输寻址机制。<br /><br /> WCF 不支持对 WS-Addressing 标头进行加密，尽管 WS-＊ 规范允许这样做。|  
+|消息|Ws-addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`、`ws2007HttpBinding` 和 `wsDualHttpBinding` 实现万维网联合会 (W3C) WS-Addressing 建议以启用异步消息传送、消息关联和非特定传输寻址机制。<br /><br /> WCF 不支持对 WS-Addressing 标头进行加密，尽管 WS-＊ 规范允许这样做。|  
 |消息传送|WS-Addressing 1.0 - 元数据|[Ws-addressing 1.0 元数据](http://www.w3.org/2007/05/addressing/metadata)通过将策略版本中 ServiceMetadata 行为的设置与 policyversion 设置为 1.2 （默认） 启用对此协议的支持，wsdl 说明是符合 Ws-addressing wsdl，使用将设置为 1.5 policyversion，wsdl 说明是符合 ws 寻址元数据。<br /><br /> WCF 不支持对 WS-Addressing 标头进行加密，尽管 WS-＊ 规范允许这样做。|  
 |安全性|WSS SOAP Message Security 1.0（WSS SOAP 消息安全 1.0）|[WSS SOAP 消息安全 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> 当 `securityMode` 属性设置为“wsSecurityOverHttp”（默认值）并使用 `wsSecurity` 子元素配置了参数时使用。<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
 |安全性|WSS SOAP 消息安全用户名令牌配置文件 1.1|[WSS SOAP 消息安全用户名令牌配置文件 1.0](http://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> 当 `wsSecurity` 元素的 `authenticationMode` 属性设置为“Username”时使用。<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/26/2018
 </wsFederationHttpBinding>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ 有关详细信息，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ## <a name="system-provided-metadata-bindings"></a>系统提供的元数据绑定  
  下表说明系统提供的可互操作元数据绑定（由 <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> 类公开）支持的协议。  
@@ -108,7 +108,7 @@ ms.lasthandoff: 03/26/2018
 |--------------|--------------|-----------------------------|  
 |传输|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
 |消息|SOAP 1.2|[入门](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
-|消息|WS-Addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
+|消息|Ws-addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
 |元数据|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WS-MetadataExchange 以检索 XML 架构、WSDL 和 WS-Policy。|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
@@ -118,10 +118,10 @@ ms.lasthandoff: 03/26/2018
 |--------------|--------------|-----------------------------|  
 |传输|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> 启用传输安全。|  
 |消息|SOAP 1.2|[入门](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [消息传递框架](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附属 （包括 HTTP 绑定）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
-|消息|WS-Addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
+|消息|Ws-addressing 2005/08|[Web 服务寻址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服务寻址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
 |元数据|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现 WS-MetadataExchange 以检索 XML 架构、WSDL 和 WS-Policy。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
  [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  

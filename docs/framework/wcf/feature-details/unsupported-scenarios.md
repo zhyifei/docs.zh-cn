@@ -1,24 +1,26 @@
 ---
-title: "不支持的方案"
-ms.custom: 
+title: 不支持的方案
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 不支持某些特定安全方案。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在该平台上不支持使用 Windows 身份验证来运行服务。 在 Windows XP Home Edition 下运行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   创建了基于状态的安全上下文令牌 (SCT)。默认情况下禁止创建此类令牌。  
   
- 基于状态的 SCT 只能使用自定义绑定来创建。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 创建安全上下文令牌的安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在代码中，可通过创建安全绑定元素（<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>）启用令牌，方法是：使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> 方法，并且将 `requireCancellation` 参数设置为 `false`。 该参数引用 SCT 的缓存。 若将该值设置为 `false`，则启用基于状态的 SCT 功能。  
+ 基于状态的 SCT 只能使用自定义绑定来创建。 有关详细信息，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在代码中，可通过创建安全绑定元素（<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>）启用令牌，方法是：使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> 方法，并且将 `requireCancellation` 参数设置为 `false`。 该参数引用 SCT 的缓存。 若将该值设置为 `false`，则启用基于状态的 SCT 功能。  
   
  或者，在配置中，令牌启用通过创建 <`customBinding`>，然后添加 <`security`> 元素，并设置`authenticationMode`属性设为 SecureConversation 和`requireSecurityContextCancellation`属性设为`true`。  
   
@@ -53,10 +55,10 @@ ms.lasthandoff: 12/22/2017
  如果所模拟的上下文没有加载程序集的访问权限，并且这是公共语言运行库 (CLR) 第一次试图加载该 AppDomain 的程序集，则 <xref:System.AppDomain> 会缓存失败。 随后进行的加载该程序集（或多个程序集）的尝试仍将失败，即使撤消了模拟，并且恢复之后的上下文具有加载该程序集的访问权限。 这是因为，用户上下文更改后，CLR 不会重新尝试加载。 必须重新启动应用程序域才能从失败中恢复。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 类的 <xref:System.ServiceModel.Security.WindowsClientCredential> 属性的默认值为 <xref:System.Security.Principal.TokenImpersonationLevel.Identification>。 大多数情况下，标识级模拟上下文不具有加载任何其他程序集的权限。 这是默认值，因此这是一个需要注意的非常常见的条件。 当模拟进程不具有 `SeImpersonate` 特权时，也会发生标识级模拟。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+>  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 类的 <xref:System.ServiceModel.Security.WindowsClientCredential> 属性的默认值为 <xref:System.Security.Principal.TokenImpersonationLevel.Identification>。 大多数情况下，标识级模拟上下文不具有加载任何其他程序集的权限。 这是默认值，因此这是一个需要注意的非常常见的条件。 当模拟进程不具有 `SeImpersonate` 特权时，也会发生标识级模拟。 有关详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ### <a name="delegation-requires-credential-negotiation"></a>委托要求凭据协商  
- 若要将 Kerberos 身份验证协议与委托联合使用，必须实现带有凭据协商的 Kerberos 协议（有时称作多段或多步 Kerberos）。 如果不用凭据协商来实现 Kerberos 协议（有时称作单稳或单路 Kerberos），则会引发异常。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何实现凭据协商，请参阅[调试 Windows 身份验证错误](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)。  
+ 若要将 Kerberos 身份验证协议与委托联合使用，必须实现带有凭据协商的 Kerberos 协议（有时称作多段或多步 Kerberos）。 如果不用凭据协商来实现 Kerberos 协议（有时称作单稳或单路 Kerberos），则会引发异常。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何实现凭据协商，请参阅[调试 Windows 身份验证错误](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)。  
   
 ## <a name="cryptography"></a>密码  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
  与 FIPS 兼容的 AES 加密无法在标识级模拟下以双工回调模式工作。  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP 证书  
- *加密 API： 下一代 (CNG)*是 cryptoapi 的长期替代。 此 API 已在上的非托管代码中用[!INCLUDE[wv](../../../../includes/wv-md.md)]，[!INCLUDE[lserver](../../../../includes/lserver-md.md)]和更高版本的 Windows 版本。  
+ *加密 API： 下一代 (CNG)* 是 cryptoapi 的长期替代。 此 API 已在上的非托管代码中用[!INCLUDE[wv](../../../../includes/wv-md.md)]，[!INCLUDE[lserver](../../../../includes/lserver-md.md)]和更高版本的 Windows 版本。  
   
  因为它们使用传统的 CryptoAPI 来处理 CNG/KSP 证书，.NET framework 4.6.1 及更早版本不支持这些证书。 使用.NET Framework 4.6.1 及早期版本使用这些证书将导致异常。  
   
@@ -81,18 +83,18 @@ ms.lasthandoff: 12/22/2017
   
 -   对 `p/invoke` 执行 `CertGetCertificateContextProperty`，并对返回的 `dwProvType` 检查 `CertGetCertificateContextProperty`。  
   
--   使用`certutil`命令从命令行来查询证书。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][证书疑难解答方面的 Certutil 任务](http://go.microsoft.com/fwlink/?LinkId=120056)。  
+-   使用`certutil`命令从命令行来查询证书。 有关详细信息，请参阅[证书疑难解答方面的 Certutil 任务](http://go.microsoft.com/fwlink/?LinkId=120056)。  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果要求使用 ASP.NET 模拟和 ASP.NET 兼容性，消息安全将失败  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支持以下设置组合，因为它们可能阻止客户端身份验证的发生：  
   
 -   启用了 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟。 这通过 Web.config 文件中设置`impersonate`属性 <`identity`> 元素`true`。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]通过设置启用兼容性模式`aspNetCompatibilityEnabled`属性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 通过设置启用兼容性模式`aspNetCompatibilityEnabled`属性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
   
 -   使用了消息模式安全。  
   
- 解决办法是禁用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式。 或者，如果要求使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式，则可以禁用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟功能，并且改用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的模拟。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ 解决办法是禁用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式。 或者，如果要求使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 兼容模式，则可以禁用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟功能，并且改用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的模拟。 有关详细信息，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 文本地址失败  
  当客户端和服务位于同一台计算机上，并且为服务使用了 IPv6 文本地址时，安全请求将失败。  
@@ -104,11 +106,11 @@ ms.lasthandoff: 12/22/2017
   
  举例来说，若某个服务具有以下三个终结点地址，便可能出现此情况：  
   
--   http://localhost/CalculatorService/service（服务）  
+-   http://localhost/CalculatorService/service （服务）  
   
 -   http://localhost/CalculatorService/issue_ticket (STS)  
   
--   http://localhost/CalculatorService/mex（元数据终结点）  
+-   http://localhost/CalculatorService/mex （元数据终结点）  
   
  这将引发异常。  
   

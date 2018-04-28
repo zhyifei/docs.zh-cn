@@ -1,26 +1,26 @@
 ---
-title: "工作流持久性"
-ms.custom: 
+title: 工作流持久性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e65f07fc01d0d364d7271c4f1378b968b687881
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2278762895978f90d80977f9e538b0e10a4f3f8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-persistence"></a>工作流持久性
 工作流持久性是指独立于进程或计算机信息持续捕获工作流实例的状态。 其目的在于：在发生系统故障时为工作流实例提供一个已知恢复点，通过卸载当前未主动执行工作的工作流实例来节省内存，或者将工作流实例状态从服务器场中的一个节点移至另一个节点。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  若要存储和加载应用程序特定数据以及与工作流实例相关的信息，您可以创建用于扩展 <xref:System.Activities.Persistence.PersistenceParticipant> 类的持久性参与者。 持久性参与者参与持久性进程的目的是：将可序列化的自定义数据保存到持久性存储中，将实例存储中的数据加载到内存中，以及在持久性事务下执行任何其他逻辑。 有关详细信息，请参阅[持久性参与者](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)。  
   
- Windows Server App Fabric 大大简化了配置持久性的过程。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][使用 Windows Server App Fabric 的持久性概念](http://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server App Fabric 大大简化了配置持久性的过程。 有关详细信息，请参阅[使用 Windows Server App Fabric 的持久性概念](http://go.microsoft.com/fwlink/?LinkId=201200)  
   
 ## <a name="implicit-persistence-points"></a>隐式持久点  
  以下列表包含当实例存储与工作流关联时持久化工作流所依据的条件的示例。  

@@ -1,20 +1,17 @@
 ---
-title: "结构 (F#)"
-description: "了解有关 F # 结构，紧凑对象类型通常比具有少量的数据和简单的行为的类型的类更有效。"
-keywords: "visual f#, f#, 函数编程"
+title: 结构 (F#)
+description: '了解有关 F # 结构，紧凑对象类型通常比具有少量的数据和简单的行为的类型的类更有效。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 50819506-3210-418f-9602-0ee1c9a52177
-ms.openlocfilehash: 542b69a5aacb8fcfb0e8f6d6c943fe1954c4c59c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 14a4799b13c40e363dd400f7effd53264acc5614
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="structures"></a>结构
 
@@ -58,7 +55,7 @@ type [accessibility-modifier] type-name =
 
 F # 4.1 开始，您可以表示[记录](records.md)和[可区分联合](discriminated-unions.md)为与结构`[<Struct>]`属性。  请查看每个文章以了解详细信息。
     
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [类](classes.md)

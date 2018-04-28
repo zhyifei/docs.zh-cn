@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5258f2eaf9ca60dc43ff8182c058d9c68043200f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2138a412af30812b4ff443963604dda52eafea11
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="accessing-services-using-a-client"></a>使用客户端访问服务
 客户端应用程序必须创建、配置和使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端或通道对象，以便与服务进行通信。 [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)主题提供的对象和创建基本的客户端和通道对象和使用它们所涉及的步骤概述。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/26/2018
 > [!NOTE]
 >  试图显式检测出错的会话通道通常是没有用处的，因为您何时得到通知取决于会话实现。 例如，因为 <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType>（禁用了可靠会话）表现了 TCP 连接会话的状态，所以，如果您在服务或客户端上侦听 <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> 事件，则在出现网络故障时，您可能会很快得到通知。 但是，可靠会话（由启用了 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 的绑定建立）旨在防止服务受到小型网络故障的影响。 如果可以在一段合理的时间内重新建立会话，则同一绑定（为可靠会话而配置）可能不会出错，除非中断持续了一段较长的时间。  
   
- 默认情况下，大多数由系统提供的绑定（它们向应用程序层公开通道）都使用会话，但 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 不使用会话。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用会话](../../../../docs/framework/wcf/using-sessions.md)。  
+ 默认情况下，大多数由系统提供的绑定（它们向应用程序层公开通道）都使用会话，但 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 不使用会话。 有关详细信息，请参阅[使用会话](../../../../docs/framework/wcf/using-sessions.md)。  
   
 ### <a name="the-proper-use-of-sessions"></a>正确使用会话  
  会话提供了一种了解整个消息交换是否已完成以及会话双方是否都认为交换成功的方式。 建议让调用应用程序在一个 try 块内打开、使用和关闭通道。 如果会话通道打开，然后调用了一次 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 方法，并且该调用成功返回，则会话是成功的。 在此情况下，成功意味着绑定所指定的所有传递保证都得到满足，并且另一方在调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> 之前没有对通道调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A>。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/26/2018
  在客户端应用程序中处理异常是非常简单的。 如果在一个 try 块内打开、使用并关闭通道，则除非引发了异常，否则对话都是成功的。 通常情况下，如果引发了异常，则会中止对话。  
   
 > [!NOTE]
->  利用`using`语句 (`Using`在 Visual Basic 中) 不建议。 这是因为 `using` 语句的末尾会引发异常，这些异常会屏蔽您可能需要了解的其他异常。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [避免出现与 Using 语句问题](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+>  利用`using`语句 (`Using`在 Visual Basic 中) 不建议。 这是因为 `using` 语句的末尾会引发异常，这些异常会屏蔽您可能需要了解的其他异常。 有关详细信息，请参阅[避免问题与 Using 语句](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
  下面的代码示例演示使用 try/catch 块而不是 `using` 语句的推荐客户端模式。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/26/2018
  有关使用应用程序级别的错误信息的更完整信息，请参阅[指定和处理在协定和服务中的错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 [预期异常](../../../../docs/framework/wcf/samples/expected-exceptions.md)描述预期的异常，并显示如何处理它们。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何在开发通道时处理错误，请参阅[处理异常和错误](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
   
 ### <a name="client-blocking-and-performance"></a>客户端阻塞和性能  
- 当应用程序同步调用请求-答复操作时，客户端会阻塞，直到接收到返回值或引发异常（例如 <xref:System.TimeoutException?displayProperty=nameWithType>）为止。 此行为与本地行为类似。 当应用程序同步调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象或通道上的操作时，客户端将直到通道层可以向网络写入数据或引发异常时才返回。 虽然单向消息交换模式（通过标记操作来指定，即将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 设置为 `true`）可以使某些客户端更快做出响应，但是根据绑定和已经发送的消息的性质，单向操作也可能阻塞。 单向操作仅与消息交换有关。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [单向服务](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
+ 当应用程序同步调用请求-答复操作时，客户端会阻塞，直到接收到返回值或引发异常（例如 <xref:System.TimeoutException?displayProperty=nameWithType>）为止。 此行为与本地行为类似。 当应用程序同步调用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象或通道上的操作时，客户端将直到通道层可以向网络写入数据或引发异常时才返回。 虽然单向消息交换模式（通过标记操作来指定，即将 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 设置为 `true`）可以使某些客户端更快做出响应，但是根据绑定和已经发送的消息的性质，单向操作也可能阻塞。 单向操作仅与消息交换有关。 有关详细信息，请参阅[单向服务](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
   
  无论使用何种消息交换模式，大的数据块都会降低客户端的处理速度。 若要了解如何处理这些问题，请参阅[大型数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   

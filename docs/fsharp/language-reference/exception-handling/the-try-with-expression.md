@@ -1,20 +1,17 @@
 ---
-title: "异常：try...with 表达式 (F#)"
-description: "了解如何使用 F # try … 与表达式用于异常处理。"
-keywords: "visual f#, f#, 函数编程"
+title: 异常：try...with 表达式 (F#)
+description: '了解如何使用 F # try … 与表达式用于异常处理。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36721076-95cd-4636-ae43-79dd512bee6c
-ms.openlocfilehash: 163dfab49d4aaf23123800246fae2cad33e2257c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 06e40b79fc1958918dc0615ce9d1004e0a6e74a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-trywith-expression"></a>异常：try...with 表达式
 
@@ -49,7 +46,7 @@ with
 |:? *异常类型*|与指定的.NET 异常类型匹配。|
 |:? *异常类型*作为*标识符*|匹配指定的.NET 异常类型，但会命名的值的异常。|
 |*异常名称*(*参数*)|匹配 F # 异常类型和绑定参数。|
-|*identifier*|与任何异常匹配，并绑定到的异常对象的名称。 等效于**:？作为 System.Exception***标识符*|
+|*identifier*|与任何异常匹配，并绑定到的异常对象的名称。 等效于 **:？作为 System.Exception * * * 标识符*|
 |*标识符*时*条件*|如果条件为 true，则匹配的任何异常。|
 
 ## <a name="examples"></a>示例
@@ -64,7 +61,7 @@ with
 你可以使用`try...with`在异步工作流和其他计算表达式，在这种情况下的自定义的版本`try...with`使用表达式。 有关详细信息，请参阅[异步工作流](../asynchronous-workflows.md)，和[计算表达式](../computation-expressions.md)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [异常处理](index.md)
 
 [异常类型](exception-types.md)

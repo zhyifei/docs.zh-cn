@@ -1,33 +1,35 @@
 ---
-title: "&lt;httpDigest&gt; 元素"
-ms.custom: 
+title: '&lt;httpDigest&gt; 元素'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95e6a7d31949bd7a6badb029e3f768a63fbaf924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75579a583b774896f43099d3cc30f1679b10a889
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; 元素
 指定一个在向服务证明客户端身份时使用的摘要类型凭据。  
   
- \<系统。ServiceModel >  
+ \<system.ServiceModel>  
 \<行为 >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<行为 >  
-\<c a t e >  
+\<clientCredentials>  
 \<httpDigest >  
   
 ## <a name="syntax"></a>语法  
@@ -52,12 +54,12 @@ ms.lasthandoff: 12/22/2017
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<c a t e >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用于向服务验证客户端身份的凭据。|  
   
 ## <a name="remarks"></a>备注  
  摘要是使用算法和一组输入确定的哈希。 身份验证器和被验证方一致同意某种算法并交换用作输入的数据。 客户端可以计算哈希并将其发送给服务。 服务也可以计算哈希并比较值。 如果匹配，则客户端将通过验证。  
   
- 必须使用 Windows 上的 Active Directory 和 Internet 信息服务 (IIS) 启用此功能。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][摘要式身份验证在 IIS 6.0 中的](http://go.microsoft.com/fwlink/?LinkId=88443)。  
+ 必须使用 Windows 上的 Active Directory 和 Internet 信息服务 (IIS) 启用此功能。 有关详细信息，请参阅[摘要式身份验证在 IIS 6.0 中](http://go.microsoft.com/fwlink/?LinkId=88443)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

@@ -1,24 +1,26 @@
 ---
-title: "使用数据协定解析程序"
-ms.custom: 
+title: 使用数据协定解析程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28bba68c985191b69fea3b7ab85812917a827b30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>使用数据协定解析程序
 使用数据协定解析程序可以动态配置已知类型。 序列化或反序列化并非数据协定所需的类型时，要求提供已知类型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 已知类型的更多信息，请参见 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)将 CLR 类型映射到 XSD。 已知类型通常以静态方式指定。 这意味着您必须了解在实现某个操作期间，该操作可能接收的所有可能类型。 在某些方案中无法做到这一点，因此能够以动态方式指定已知类型十分重要。  
@@ -96,7 +98,7 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- 通过实现可以应用于服务的特性，可以通过声明方式指定数据协定解析程序。  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)示例。 此示例实现一个称为"KnownAssembly"的属性，它将自定义数据协定解析程序添加到服务的行为。  
+ 通过实现可以应用于服务的特性，可以通过声明方式指定数据协定解析程序。  有关详细信息，请参阅[KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)示例。 此示例实现一个称为"KnownAssembly"的属性，它将自定义数据协定解析程序添加到服务的行为。  
   
 ## <a name="see-also"></a>请参阅  
  [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  

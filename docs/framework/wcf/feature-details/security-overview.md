@@ -1,27 +1,29 @@
 ---
-title: "安全 Overview1"
-ms.custom: 
+title: 安全 Overview1
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-overview"></a>安全性概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是一个基于 SOAP 消息的分布式编程平台，因此保护客户端和服务之间的消息安全对于保护数据非常重要。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基于现有安全性基础结构和 SOAP 消息的经验证的安全标准提供可互操作的安全消息交换通用平台。  
@@ -96,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 -   *消息安全模式*，而另一只手、 使用 Ws-security （和其他规范） 实现传输安全性。 因为消息安全性直接应用于 SOAP 消息并与应用程序数据一起包含在 SOAP 信封内，它的优点是独立于传输协议、可扩展性更强以及可确保端到端安全性（与点到点相对）；它的缺点是比传输安全性模式慢很多倍，因为它必须处理 SOAP 消息的 XML 特性。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]这些差异，请参阅[保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些差异，请参阅[保护服务和客户端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。  
   
  第三种安全模式同时使用前两种模式，并具备这两种模式的优点。 此模式称为 `TransportWithMessageCredential`。 在此模式下，消息安全性用于对客户端进行身份验证，而传输安全性则用于对服务器进行身份验证并提供消息机密性和完整性。 得益于这一特点，`TransportWithMessageCredential` 安全模式几乎与传输安全模式一样快，并且提供与消息安全性一样的客户端身份验证可扩展性。 但是，与消息安全性模式不同，它不提供完整的端到端安全性。  
   
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
  在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，访问控制功能提供通过与公共语言运行时 (CLR) 集成<xref:System.Security.Permissions.PrincipalPermissionAttribute>和通过一组 Api 称为*标识模型*。 有关访问控制和基于声明的授权的详细信息，请参阅[扩展安全](../../../../docs/framework/wcf/extending/extending-security.md)。  
   
 ### <a name="auditing"></a>审核  
- *审核*是到 Windows 事件日志的安全事件的日志记录。 您可以记录与安全相关的事件，例如身份验证失败（或成功）。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。 有关编程的详细信息，请参阅[如何： 审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
+ *审核*是到 Windows 事件日志的安全事件的日志记录。 您可以记录与安全相关的事件，例如身份验证失败（或成功）。 有关详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。 有关编程的详细信息，请参阅[如何： 审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  

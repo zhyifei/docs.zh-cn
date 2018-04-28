@@ -38,11 +38,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 07609671d061851e6ede2f2bd90e4bee38e43159
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c84c5742fcbb0d1554bd6fc379fc44f3b9cb055
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="navigation-overview"></a>导航概述
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 支持两种类型的应用程序中的可用的浏览器样式导航： 独立应用程序和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 以导航窗格中的包内容[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>类。 你可以从一个导航<xref:System.Windows.Controls.Page>到另一个以声明方式，通过使用<xref:System.Windows.Documents.Hyperlink>，或以编程方式使用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日志记住从其导航和导航回它们的页。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="CreatingAXAMLPage"></a>   
 ### <a name="implementing-a-page"></a>实现页  
- 在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，您可以导航到包含的多个内容类型[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]对象、 自定义对象、 枚举值、 用户控件[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件，和[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]文件。 但是，你将发现最常见方便地对包内容是通过使用<xref:System.Windows.Controls.Page>。 此外，<xref:System.Windows.Controls.Page>实现特定于导航的功能来改善其外观，并简化开发。  
+ 在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，您可以导航到多个包括.NET Framework 对象、 自定义对象、 枚举值、 用户控件的内容类型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件，和[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]文件。 但是，你将发现最常见方便地对包内容是通过使用<xref:System.Windows.Controls.Page>。 此外，<xref:System.Windows.Controls.Page>实现特定于导航的功能来改善其外观，并简化开发。  
   
  使用<xref:System.Windows.Controls.Page>，你可以以声明方式实现的可导航页[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]内容通过使用如下所示的标记。  
   

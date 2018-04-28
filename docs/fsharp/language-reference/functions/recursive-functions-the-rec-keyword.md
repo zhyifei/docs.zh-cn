@@ -1,20 +1,17 @@
 ---
-title: "递归函数：rec 关键字 (F#)"
-description: "了解如何 F # 建议关键字用于使用 let 关键字定义的递归函数。"
-keywords: "visual f#, f#, 函数编程"
+title: 递归函数：rec 关键字 (F#)
+description: '了解如何 F # 建议关键字用于使用 let 关键字定义的递归函数。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 1a95639f-9bfe-4f1d-a5e2-246d1d37776e
-ms.openlocfilehash: b837d2c0f8e2b1d28980620103097ccc8345c098
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1f5302c125605d2186deab0bbeaf2e84cc51edc3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>递归函数：rec 关键字
 
@@ -39,7 +36,7 @@ function2-body
 ## <a name="remarks"></a>备注
 递归函数，自身，调用的函数进行显式标识的 F # 语言。 这使正在定义的标识符可在该函数的作用域。
 
-下面的代码演示计算的递归函数 *n*第斐波那契数。
+下面的代码演示计算的递归函数*n*第斐波那契数。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
@@ -57,5 +54,5 @@ function2-body
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [函数](index.md)

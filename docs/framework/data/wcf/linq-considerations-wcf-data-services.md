@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: df596093333aa35b89f8d7ed36f817a457e48fda
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c20817e791ae95efecd00a41a44c14eedec017d4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 注意事项（WCF 数据服务）
 本主题提供有关使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 客户端时 LINQ 查询的编写和执行方式的信息以及使用 LINQ 查询实现[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 的数据服务的限制。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 编写和执行针对查询[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-基于数据服务，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  LINQ 允许针对实现 <xref:System.Collections.Generic.IEnumerable%601> 的对象集合编写查询。 这两个**添加服务引用**使用 Visual Studio 中的对话框和 DataSvcUtil.exe 工具来生成的表示形式[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务为继承自的实体容器类<xref:System.Data.Services.Client.DataServiceContext>，以及表示源中返回的实体的对象。 这些工具还可为由服务作为源公开的集合的实体容器类生成属性。 封装了数据服务的类的每个属性都会返回一个 <xref:System.Data.Services.Client.DataServiceQuery%601>。 因为 <xref:System.Data.Services.Client.DataServiceQuery%601> 类实现 LINQ 定义的 <xref:System.Linq.IQueryable%601> 接口，所以可以针对数据服务公开的源编写 LINQ 查询，客户端库会将其转换为一个查询请求 URI，在执行时将此 URI 发送给数据服务。  
   
 > [!IMPORTANT]
->  可以采用 LINQ 语法表示的查询集大于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 数据服务使用的 URI 语法所支持的查询集。 如果无法将查询映射到目标数据服务中的 URI，则会引发 <xref:System.NotSupportedException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [不受支持的 LINQ 方法](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods)本主题中。  
+>  可以采用 LINQ 语法表示的查询集大于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 数据服务使用的 URI 语法所支持的查询集。 如果无法将查询映射到目标数据服务中的 URI，则会引发 <xref:System.NotSupportedException>。 有关详细信息，请参阅[不受支持的 LINQ 方法](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods)本主题中。  
   
  下面的示例是一个 LINQ 查询，它返回运费成本超过 30 美元的 `Orders` 并按装运日期对结果进行排序，最近的装运日期排在最前面：  
   

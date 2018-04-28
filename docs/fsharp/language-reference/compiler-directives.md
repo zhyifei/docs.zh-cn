@@ -1,20 +1,17 @@
 ---
-title: "编译器指令 (F#)"
-description: "了解有关 F # 语言预处理器指令、 条件编译指令、 行指令和编译器指令。"
-keywords: "visual f#, f#, 函数编程"
+title: 编译器指令 (F#)
+description: '了解有关 F # 语言预处理器指令、 条件编译指令、 行指令和编译器指令。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 03fe3598f04025cf6dfaf2424b9fcb33ed4b3859
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-directives"></a>编译器指令
 
@@ -32,8 +29,8 @@ ms.lasthandoff: 03/15/2018
 |`#if` *符号*|支持条件编译。 后面部分中的代码`#if`则会包括*符号*定义。|
 |`#else`|支持条件编译。 如果未定义与前面的 `#if` 一起使用的符号，则将一段代码标记为包含在内。|
 |`#endif`|支持条件编译。 标记条件代码段的末尾。|
-|`#`[行]*int*，<br/>`#`[行]*int* *字符串*，<br/>`#`[line] *int* *verbatim-string*|指示原始源代码行和文件名以用于调试。 此功能是为生成 F# 源代码的工具而提供的。|
-|`#nowarn` *warningcode*|禁用编译器警告。 若要禁用警告，请在编译器输出中查找其编号，然后将它包含在引号内。 省略“FS”前缀。 若要禁用同一行上的多个警告编号，请将每个编号用引号引起来，并使用空格分隔每个字符串。 例如:
+|`#`[行]*int*，<br/>`#`[行]*int* *字符串*，<br/>`#`[行]*int* *原义字符串*|指示原始源代码行和文件名以用于调试。 此功能是为生成 F# 源代码的工具而提供的。|
+|`#nowarn` *warningcode*|禁用编译器警告。 若要禁用警告，请在编译器输出中查找其编号，然后将它包含在引号内。 省略“FS”前缀。 若要禁用同一行上的多个警告编号，请将每个编号用引号引起来，并使用空格分隔每个字符串。 例如：
 
 `#nowarn "9" "40"`
 

@@ -1,35 +1,35 @@
 ---
-title: "审核安全事件"
-ms.custom: 
+title: 审核安全事件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 
+caps.latest.revision: 27
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="auditing-security-events"></a>审核安全事件
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建的应用程序可以利用审核功能来记录安全事件（成功、失败或两者）。 这些事件被写入 Windows 系统事件日志，并且可以使用事件查看器进行检查。  
   
  审核为管理员提供了一种检测已经发生或正在发生的攻击的方式。 此外，审核有助于开发人员调试与安全相关的问题。 例如，如果授权或检查策略配置中的错误意外拒绝授权用户进行访问，开发人员可以通过检查事件日志迅速发现并隔离此错误的原因。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]编程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 编程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，请参阅[基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="audit-level-and-behavior"></a>审核级别和行为  
  存在两个安全审核级别：  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  你可以检查这两个审核级别成功或失败，这被称为*审核行为*。  
   
 ## <a name="audit-log-location"></a>审核日志位置  
- 一旦确定审核级别和行为，您（或管理员）就可指定审核日志的位置。 有以下三种选择：Default、Application 和 Security。 当指定“默认值”时，实际日志取决于所使用的系统以及该系统是否支持写入安全日志。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主题后面的“操作系统”部分。  
+ 一旦确定审核级别和行为，您（或管理员）就可指定审核日志的位置。 有以下三种选择：Default、Application 和 Security。 当指定“默认值”时，实际日志取决于所使用的系统以及该系统是否支持写入安全日志。 有关详细信息，请参阅本主题中后面的"操作系统"部分。  
   
  写入 Security 日志要求具有 `SeAuditPrivilege`。 默认情况下，只有“本地系统”和“网络服务”帐户具有此特权。 管理 Security 日志功能 `read` 和 `delete` 要求具有 `SeSecurityPrivilege`。 默认情况下，只有管理员具有此特权。  
   
@@ -86,10 +86,10 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- 如果启用了审核但未指定 `auditLogLocation`，则对于支持写入 Security 日志的平台来说，默认日志名称为“Security”日志；否则为“Application”日志。 仅 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 操作系统支持写入安全日志。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主题后面的“操作系统”部分。  
+ 如果启用了审核但未指定 `auditLogLocation`，则对于支持写入 Security 日志的平台来说，默认日志名称为“Security”日志；否则为“Application”日志。 仅 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 操作系统支持写入安全日志。 有关详细信息，请参阅本主题中后面的"操作系统"部分。  
   
 ## <a name="security-considerations"></a>安全注意事项  
- 如果恶意用户了解到审核功能处于启用状态，攻击者可能会发送将导致写入审核项的无效消息。 如果以这种方式填充审核日志，则审核系统会出现故障。 为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]查看和管理在 Windows XP 中使用事件查看器的事件日志上的 Microsoft 支持文章[如何查看和管理在 Windows XP 中的事件查看器中的事件日志](http://go.microsoft.com/fwlink/?LinkId=89150)。  
+ 如果恶意用户了解到审核功能处于启用状态，攻击者可能会发送将导致写入审核项的无效消息。 如果以这种方式填充审核日志，则审核系统会出现故障。 为了缓解此问题，请将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，然后使用事件查看器的属性来控制审核行为。 详细信息，请参阅 Microsoft 支持文章上查看和管理在 Windows XP 中使用事件查看器的事件日志[如何查看和管理在 Windows XP 中的事件查看器中的事件日志](http://go.microsoft.com/fwlink/?LinkId=89150)。  
   
  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上写入 Application 日志的审核事件对任何通过身份验证的用户都是可见的。  
   

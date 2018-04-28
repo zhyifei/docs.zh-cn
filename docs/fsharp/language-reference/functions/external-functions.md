@@ -1,20 +1,17 @@
 ---
-title: "外部函数 (F#)"
-description: "了解如何为本机代码中调用函数的 F # 语言支持。"
-keywords: "visual f#, f#, 函数编程"
+title: 外部函数 (F#)
+description: '了解如何为本机代码中调用函数的 F # 语言支持。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c26b6124-ceaa-471c-9dc9-861b4dfa332a
-ms.openlocfilehash: 69b73983a91bc6c7cc38fa34484a3c89fc01858f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 28e74258d91ff2d9742caa7a6c06f515cd987c0a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="external-functions"></a>外部函数
 
@@ -56,6 +53,6 @@ InteropWithNative.HelloWorld()
 与本机代码的互操作性称为*平台调用*，并且是 CLR 的功能。 有关详细信息，请参阅[与非托管代码交互操作](../../../../docs/framework/interop/index.md)。 该部分中的信息都适用于 F #。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [函数](index.md)

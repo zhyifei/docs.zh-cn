@@ -1,12 +1,13 @@
 ---
-title: "如何：启用消息重播检测"
-ms.custom: 
+title: 如何：启用消息重播检测
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,27 +18,28 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6524f0e32d5876851ce89b01a439ed1d1d09da3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 55cd4b928c640f506e058f6a441189842bc9b8a3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>如何：启用消息重播检测
 当攻击者复制双方之间的消息流并将该消息流向一方或多方重播时，将发生重播攻击。 除非攻击程度降低，否则受到攻击的计算机会将该流处理为合法消息，从而导致产生大量不良结果，例如某项的冗余排序。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]消息重播检测，请参阅[消息重播检测](http://go.microsoft.com/fwlink/?LinkId=88536)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 消息重播检测，请参阅[消息重播检测](http://go.microsoft.com/fwlink/?LinkId=88536)。  
   
  下面的过程演示在用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 控制重播检测时所使用的各种属性。  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>使用代码在客户端上控制重播检测  
   
-1.  创建要在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中使用的 <xref:System.ServiceModel.Channels.CustomBinding>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 下面的示例使用通过 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建的 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
+1.  创建要在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中使用的 <xref:System.ServiceModel.Channels.CustomBinding>。 有关详细信息，请参阅[如何： 自定义绑定使用 SecurityBindingElement 创建](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 下面的示例使用通过 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建的 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
 2.  使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> 属性返回对 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 类的引用，并根据需要设置任何下列属性：  
   

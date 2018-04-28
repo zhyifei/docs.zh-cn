@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -155,7 +155,7 @@ ms.lasthandoff: 04/26/2018
   
  可以将自定义跟踪侦听器配置为在网络上发送跟踪，例如，发送到远程数据库。 作为应用程序部署人员，您应对远程计算机上的跟踪日志施加适当的访问控制。  
   
- 您也可以通过编程方式配置跟踪侦听器。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [如何： 创建和初始化跟踪侦听器](http://go.microsoft.com/fwlink/?LinkId=94648)和[创建自定义 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)。  
+ 您也可以通过编程方式配置跟踪侦听器。 有关详细信息，请参阅[如何： 创建和初始化跟踪侦听器](http://go.microsoft.com/fwlink/?LinkId=94648)和[创建自定义 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)。  
   
 > [!CAUTION]
 >  由于 `System.Diagnostics.XmlWriterTraceListener` 不是线程安全的，因此，跟踪源可能会在输出跟踪时以独占方式锁定资源。 当多个线程输出对配置为使用此侦听器的跟踪源的跟踪时，可能会出现资源争用，这会致使重大的性能问题。 若要解决此问题，应实现一个线程安全的自定义侦听器。  

@@ -1,12 +1,13 @@
 ---
-title: "从类导出架构"
-ms.custom: 
+title: 从类导出架构
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF, schema import and export
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01e841e76c4a6cf06169113422921367d671ea98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d9e63223fce7f86b0cf2a64ba4e7aa2e54ca6219
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exporting-schemas-from-classes"></a>从类导出架构
 若要从数据协定模型中使用的类生成 XML 架构定义语言 (XSD) 架构，请使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 类。 本主题描述创建架构的过程。  
@@ -54,9 +56,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="export-options"></a>导出选项  
  您可以将 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 的 <xref:System.Runtime.Serialization.XsdDataContractExporter> 属性设置为 <xref:System.Runtime.Serialization.ExportOptions> 类的实例以控制导出过程的各个方面。 您可以具体设置以下选项：  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 这一 `Type` 集合表示要导出的类型的已知类型。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [数据协定已知的类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)每次调用 `Export` 时，除了导出已传递给 `Export` 方法的类型外，还导出这些已知类型。  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 这一 `Type` 集合表示要导出的类型的已知类型。 (有关详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)每次调用 `Export` 时，除了导出已传递给 `Export` 方法的类型外，还导出这些已知类型。  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 通过此属性可以提供 <xref:System.Runtime.Serialization.IDataContractSurrogate> ，该属性将自定义导出过程。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 通过此属性可以提供 <xref:System.Runtime.Serialization.IDataContractSurrogate> ，该属性将自定义导出过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
 ## <a name="helper-methods"></a>帮助器方法  
  除了具有导出架构的主要作用， `XsdDataContractExporter` 还具有几个有用的帮助器方法，它们可提供有关类型的信息。 这些方法包括：  

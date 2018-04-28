@@ -1,20 +1,17 @@
 ---
 title: 值 (F#)
 description: '了解如何在 F # 中的值为具有特定类型的数量。'
-keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b40e4a0409a9161a4ef48c8d4ad82b4da346538e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="values"></a>值
 
@@ -47,12 +44,12 @@ F# 不是纯粹的函数语言，但它完全支持函数编程。 使用不可�
 ## <a name="related-topics"></a>相关主题
 
 
-|标题|说明|
+|标题|描述|
 |-----|-----------|
 |[let 绑定](../functions/let-bindings.md)|提供有关使用信息`let`关键字以将名称绑定到值和函数。|
 |[函数](../functions/index.md)|提供 F# 中函数的概述。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [Null 值](null-Values.md)
 
 [F# 语言参考](../index.md)

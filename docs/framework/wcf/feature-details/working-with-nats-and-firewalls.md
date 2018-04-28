@@ -1,27 +1,29 @@
 ---
-title: "使用 NAT 和防火墙"
-ms.custom: 
+title: 使用 NAT 和防火墙
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>使用 NAT 和防火墙
 网络连接的客户端和服务器通常不具有用于进行通信的直接和开放的路径。 数据包在终结点计算机和网络中的中间计算机上进行筛选、路由、分析和转换。 网络地址转换 (NAT) 和防火墙是可以参与网络通信的中间应用程序的常见示例。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
  家庭用户防火墙的常见配置是禁止传入连接，除非以前与该计算机之间建立过传出连接。 企业用户防火墙的常见配置是在所有端口上禁止传入连接，除非该连接来自专门标识的组。 这方面的一个示例是这样一个防火墙，它在除端口 80 和 443 以外的所有端口上禁止连接，以便提供 HTTP 和 HTTPS 服务。 家庭和企业用户都存在托管防火墙，它允许计算机上受信任的用户或进程更改防火墙配置。 对于没有用于控制网络使用的公司策略的家庭用户而言，托管防火墙更为常见。  
   
 ## <a name="using-teredo"></a>使用 Teredo  
- Teredo 是一种 IPv6 过渡技术，可用来对位于 NAT 后面的计算机进行直接寻址。 Teredo 依靠使用可以公开和全局路由的服务器来公布潜在的连接。 Teredo 服务器为应用程序客户端和服务器提供了一个公用的接头地点，以便它们可以交换连接信息。 然后，这些计算机请求一个临时 Teredo 地址，并且通过现有网络对数据包进行隧道路由。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 Teredo 支持要求在操作系统中启用 IPv6 和 Teredo 支持。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和更高版本的操作系统支持 Teredo。 默认情况下，[!INCLUDE[wv](../../../../includes/wv-md.md)] 和更高版本的操作系统支持 IPv6，只要求用户启用 Teredo。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 要求用户同时启用 IPv6 和 Teredo。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Teredo 概述](http://go.microsoft.com/fwlink/?LinkId=87571)。  
+ Teredo 是一种 IPv6 过渡技术，可用来对位于 NAT 后面的计算机进行直接寻址。 Teredo 依靠使用可以公开和全局路由的服务器来公布潜在的连接。 Teredo 服务器为应用程序客户端和服务器提供了一个公用的接头地点，以便它们可以交换连接信息。 然后，这些计算机请求一个临时 Teredo 地址，并且通过现有网络对数据包进行隧道路由。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 Teredo 支持要求在操作系统中启用 IPv6 和 Teredo 支持。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和更高版本的操作系统支持 Teredo。 默认情况下，[!INCLUDE[wv](../../../../includes/wv-md.md)] 和更高版本的操作系统支持 IPv6，只要求用户启用 Teredo。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 要求用户同时启用 IPv6 和 Teredo。 有关详细信息，请参阅[Teredo 概述](http://go.microsoft.com/fwlink/?LinkId=87571)。  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>选择传输协议和消息交换模式  
  选择传输协议和 MEP 的过程分为三步：  

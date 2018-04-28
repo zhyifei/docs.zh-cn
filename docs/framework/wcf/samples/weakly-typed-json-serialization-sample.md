@@ -1,24 +1,26 @@
 ---
-title: "弱类型 JSON 序列化示例"
-ms.custom: 
+title: 弱类型 JSON 序列化示例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dedf1188afd886c44d897aa1d93ffa226e906ada
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱类型 JSON 序列化示例
 将用户定义的类型序列化为给定的连网格式，或者将连网格式反序列为原来的用户定义的类型时，给定的用户定义的类型必须在服务和客户端上可用。 通常，为实现此目的，系统将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于这些用户定义的类型，并将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用于这些类型的成员。 处理 JavaScript 对象符号 (JSON) 对象时，该机制同样适用，如主题 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)中所述。  
@@ -121,7 +123,7 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- `JsonObject` 构造函数采用通过 <xref:System.Xml.XmlDictionaryReader>方法获取的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 。 该读取器包含客户端接收的 JSON 消息的 XML 表示形式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] ，请参阅 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)中所述。  
+ `JsonObject` 构造函数采用通过 <xref:System.Xml.XmlDictionaryReader>方法获取的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 。 该读取器包含客户端接收的 JSON 消息的 XML 表示形式。 有关详细信息，请参阅主题[映射之间 JSON 和 XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
   
  该程序生成以下输出：  
   

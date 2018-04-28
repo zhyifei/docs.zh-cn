@@ -1,20 +1,17 @@
 ---
-title: "Fixed 的关键字 （F #）"
-description: "了解如何可以固定到堆栈本地，若要防止收集使用 F # fixed 关键字。"
-keywords: "visual f#, f#, 函数编程"
+title: 'Fixed 的关键字 （F #）'
+description: '了解如何可以固定到堆栈本地，若要防止收集使用 F # fixed 关键字。'
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: 1605603bc35941e21c798600140036fb678869b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8c1d486ec754335dfbaeec439b1eb949494e4241
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="the-fixed-keyword"></a>Fixed 的关键字
 
@@ -30,7 +27,7 @@ use ptr = fixed expression
 
 这将扩展的语法的表达式，以允许提取一个指针，并将其绑定到已阻止正在收集或在垃圾回收期间移动的名称。  
 
-表达式中的指针固定通过`fixed`关键字绑定到通过标识符`use`关键字。  此语义是类似于通过资源管理`use`关键字。  指针被固定在范围内，而超出范围后，它不再被固定。  `fixed`不能使用的上下文之外`use`绑定。  必须将该指针绑定到的名称与`use`。
+表达式中的指针固定通过`fixed`关键字绑定到通过标识符`use`关键字。  此语义是类似于通过资源管理`use`关键字。  指针被固定在范围内，而超出范围后，它不再被固定。  `fixed` 不能使用的上下文之外`use`绑定。  必须将该指针绑定到的名称与`use`。
 
 利用`fixed`必须在函数或方法中的表达式中执行。  它不能在脚本级别或模块级别的作用域。
 

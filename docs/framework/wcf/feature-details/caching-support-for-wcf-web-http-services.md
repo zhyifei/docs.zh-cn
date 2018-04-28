@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 912bfae4ab867540c01af798f883a0249ec297f7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>对 WCF Web HTTP 服务的缓存支持
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可以使用 WCF Web HTTP 服务在 ASP.NET 中已提供的声明性缓存机制。 这样，你可以缓存来自 WCF Web HTTP 服务操作的响应。 如果用户向配置为进行缓存的服务发送了 HTTP GET，ASP.NET 将发送回已缓存的响应且不会调用服务方法。 在缓存过期后，下次用户发送 HTTP GET 时，将会调用服务方法且再次缓存响应。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET 缓存，请参阅[ASP.NET 缓存概述](http://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -71,7 +71,7 @@ public class Service
 </system.web>  
 ```  
   
- 这是可供 ASP.NET 应用程序使用的同一配置元素。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET 缓存配置文件的更多信息，请参见 <xref:System.Web.Configuration.OutputCacheProfile>。 对于 Web HTTP 服务，缓存配置文件中最重要的特性是 `cacheDuration` 和 `varyByParam`。 这两个特性都是必需的。 `cacheDuration` 以秒为单位设置应缓存响应的时间。 `varyByParam` 允许您指定用于缓存响应的查询字符串参数。 对于使用不同查询字符串参数值发出的所有请求，将单独进行缓存。 例如，对 http://MyServer/MyHttpService/MyOperation?param=10 发出初始请求后，使用同一 URI 发出的所有后续请求都将返回已缓存的响应（只要缓存持续时间尚未结束）。 对于形式相同但具有不同参数查询字符串参数值的类似请求的响应，将单独进行缓存。 如果不需要此单独缓存行为，请将 `varyByParam` 设置为“无”。  
+ 这是可供 ASP.NET 应用程序使用的同一配置元素。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET 缓存配置文件的更多信息，请参见 <xref:System.Web.Configuration.OutputCacheProfile>。 对于 Web HTTP 服务，缓存配置文件中最重要的特性是 `cacheDuration` 和 `varyByParam`。 这两个特性都是必需的。 `cacheDuration` 以秒为单位设置应缓存响应的时间。 `varyByParam` 允许您指定用于缓存响应的查询字符串参数。 对于使用不同查询字符串参数值发出的所有请求，将单独进行缓存。 例如，一旦对进行初始请求http://MyServer/MyHttpService/MyOperation?param=10拥有同一 URI 发出的所有后续请求将返回缓存的响应 （只要缓存持续时间尚未结束）。 对于形式相同但具有不同参数查询字符串参数值的类似请求的响应，将单独进行缓存。 如果不需要此单独缓存行为，请将 `varyByParam` 设置为“无”。  
   
 ## <a name="sql-cache-dependency"></a>SQL 缓存依赖项  
  还可以跟随 SQL 缓存依赖项来缓存 Web HTTP 服务响应。 如果 WCF Web HTTP 服务依赖于 SQL 数据库中存储的数据，则当 SQL 数据库表中的数据更改时，您可能希望缓存服务的响应并使已缓存的响应无效。 此行为完全在 Web.config 文件中配置。 你必须首先定义中的连接字符串 <`connectionStrings`> 元素。  
@@ -135,7 +135,7 @@ public class Service
  此处将缓存持续时间设置为 60 秒，将 `varyByParam` 设置为“无”，并将 `sqlDependency` 设置为以分号分隔的数据库名称列表/以冒号分隔的表对。 当 `MyTable` 中的数据发生更改时，将删除服务操作的已缓存响应；当调用操作时，将生成新的响应（通过调用服务操作），缓存该响应并将其返回到客户端。  
   
 > [!IMPORTANT]
->  对于 ASP.NET，可以访问 SQL 数据库，你必须使用[ASP.NET SQL 服务器注册工具](http://go.microsoft.com/fwlink/?LinkId=152536)。 此外，还必须允许适当的用户帐户对数据库和表具有访问权限。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [从 Web 应用程序访问 SQL Server](http://go.microsoft.com/fwlink/?LinkId=178988)。  
+>  对于 ASP.NET，可以访问 SQL 数据库，你必须使用[ASP.NET SQL 服务器注册工具](http://go.microsoft.com/fwlink/?LinkId=152536)。 此外，还必须允许适当的用户帐户对数据库和表具有访问权限。 有关详细信息，请参阅[从 Web 应用程序访问 SQL Server](http://go.microsoft.com/fwlink/?LinkId=178988)。  
   
 ## <a name="conditional-http-get-based-caching"></a>基于条件 HTTP GET 的缓存  
  在 Web HTTP 方案条件 HTTP GET 通常由服务用于实现智能 HTTP 缓存中所述[HTTP 规范](http://go.microsoft.com/fwlink/?LinkId=165800)。 为此，服务必须在 HTTP 响应中设置 ETag 标头的值。 服务还必须检查 HTTP 请求中的 If-None-Match 标头，查看是否有任何指定的 ETag 与当前 ETag 相匹配。  

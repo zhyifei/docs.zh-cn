@@ -1,12 +1,13 @@
 ---
-title: "架构导入和导出"
-ms.custom: 
+title: 架构导入和导出
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79ca0be932f473c99f8e9aeb64635e4bcd4397bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8489c0bf20d3d62501db269c5a72de657bcbbc97
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="schema-import-and-export"></a>架构导入和导出
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括新序列化引擎 <xref:System.Runtime.Serialization.DataContractSerializer>。 `DataContractSerializer` 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行转换（双向）。 除了序列化程序本身，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还包括关联的架构导入和架构导出机制。 *架构*是序列化程序生成或反序列化程序可以访问的 XML 的形状的正式、 精确和计算机可读说明。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用万维网联合会 (W3C) XML 架构定义语言 (XSD) 作为其架构表示形式，它可以与许多第三方平台广泛互操作。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  请注意，生成的类型遵循多种数据协定最佳做法 (位于[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   此类型实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+-   此类型实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 有关详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 -   数据成员作为封装私有字段的公共属性来实现。  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 如果架构不符合数据协定规则，请使用另一个序列化引擎。 例如，<xref:System.Xml.Serialization.XmlSerializer> 使用自己的独立架构导入机制。 另有一种特殊的导入模式，可在其中扩展所支持架构的范围。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]有关生成的部分<xref:System.Xml.Serialization.IXmlSerializable>中的类型[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
+ 有关详细信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 如果架构不符合数据协定规则，请使用另一个序列化引擎。 例如，<xref:System.Xml.Serialization.XmlSerializer> 使用自己的独立架构导入机制。 另有一种特殊的导入模式，可在其中扩展所支持架构的范围。 有关详细信息，请参阅有关生成的部分<xref:System.Xml.Serialization.IXmlSerializable>中的类型[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   
- `XsdDataContractExporter` 支持可以用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 序列化的任何 `DataContractSerializer` 类型。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][支持的数据协定序列化程序类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 请注意，使用 `XsdDataContractExporter` 生成的架构通常是 `XsdDataContractImporter` 可以使用的有效数据（除非 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 用于对架构进行自定义）。  
+ `XsdDataContractExporter` 支持可以用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 序列化的任何 `DataContractSerializer` 类型。 有关详细信息，请参阅[类型受数据协定序列化程序](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 请注意，使用 `XsdDataContractExporter` 生成的架构通常是 `XsdDataContractImporter` 可以使用的有效数据（除非 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 用于对架构进行自定义）。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用<xref:System.Runtime.Serialization.XsdDataContractImporter>，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用<xref:System.Runtime.Serialization.XsdDataContractImporter>，请参阅[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用<xref:System.Runtime.Serialization.XsdDataContractExporter>，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用<xref:System.Runtime.Serialization.XsdDataContractExporter>，请参阅[从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

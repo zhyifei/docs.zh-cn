@@ -1,31 +1,32 @@
 ---
-title: "如何：对工作流和工作流服务启用 SQL 持久性"
-ms.custom: 
+title: 如何：对工作流和工作流服务启用 SQL 持久性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>如何：对工作流和工作流服务启用 SQL 持久性
 本主题介绍如何通过编程方式以及使用配置文件来配置 SQL 工作流实例存储功能，以便为工作流和工作流服务启用持久性。  
   
- Windows Server App Fabric 大大简化了配置持久性的过程。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][App Fabric 暂留配置](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server App Fabric 大大简化了配置持久性的过程。 有关详细信息，请参阅[应用程序结构持久性配置](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  使用 SQL 工作流实例存储功能之前，创建一个数据库以供该功能用来持久保存工作流实例。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安装程序将与 SQL 工作流实例存储功能相关联的 SQL 脚本文件复制到 %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN 文件夹。 针对您希望 SQL 工作流实例存储用于持久保存工作流实例的 SQL Server 2005 或 SQL Server 2008 数据库，运行这些脚本文件。 首先运行 SqlWorkflowInstanceStoreSchema.sql 文件，之后运行 SqlWorkflowInstanceStoreLogic.sql 文件。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  System.Data.SqlClient.SqlException: 找不到存储过程“System.Activities.DurableInstancing.CreateLockOwner”  
   
- 下面介绍如何使用 SQL 工作流实例存储来为工作流与工作流服务启用持久性。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]属性的 SQL 工作流实例存储，请参阅[SQL 工作流实例存储属性](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)。  
+ 下面介绍如何使用 SQL 工作流实例存储来为工作流与工作流服务启用持久性。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 属性的 SQL 工作流实例存储，请参阅[SQL 工作流实例存储属性](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)。  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>为使用 WorkflowApplication 的自承载工作流启用持久性  
  可通过使用 <xref:System.Activities.WorkflowApplication> 对象模型为以编程方式使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 的自承载工作流启用持久性。 以下过程包含了执行上述操作的步骤。  

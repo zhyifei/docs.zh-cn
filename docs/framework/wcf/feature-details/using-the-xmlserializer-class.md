@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c541c44f0043000ccd4e7edb0d38eba2c66d0844
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 15e958a3bfe4dfdeebfaaad83130a604c56932c7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 类
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用两种不同的序列化技术将应用程序中的数据转换为在客户端和服务之间进行传输的 XML，此过程称为序列化。  
@@ -45,10 +45,10 @@ ms.lasthandoff: 04/27/2018
   
  许多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型属于后两种类别，因此可序列化。 可序列化类型的数组也可序列化。 完整列表，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
   
- 与数据协定类型一起使用的 <xref:System.Runtime.Serialization.DataContractSerializer>，是编写新 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的推荐方式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 与数据协定类型一起使用的 <xref:System.Runtime.Serialization.DataContractSerializer>，是编写新 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的推荐方式。 有关详细信息，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>使用 XmlSerializer 类的时机  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还支持 <xref:System.Xml.Serialization.XmlSerializer> 类。 <xref:System.Xml.Serialization.XmlSerializer> 类不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的专用类。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务同样使用该类作为序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 类支持的类型少于 <xref:System.Runtime.Serialization.DataContractSerializer> 类支持的类型，但它允许对生成的 XML 进行更多的控制，并且支持更多的 XML 架构定义语言 (XSD) 标准。 它也不要求针对可序列化类型的任何声明性属性。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 文档中的“XML 序列化”主题。 <xref:System.Xml.Serialization.XmlSerializer> 类并不支持数据协定类型。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还支持 <xref:System.Xml.Serialization.XmlSerializer> 类。 <xref:System.Xml.Serialization.XmlSerializer> 类不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的专用类。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务同样使用该类作为序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 类支持的类型少于 <xref:System.Runtime.Serialization.DataContractSerializer> 类支持的类型，但它允许对生成的 XML 进行更多的控制，并且支持更多的 XML 架构定义语言 (XSD) 标准。 它也不要求针对可序列化类型的任何声明性属性。 有关详细信息，请参阅中的 XML 序列化主题[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]文档。 <xref:System.Xml.Serialization.XmlSerializer> 类并不支持数据协定类型。  
   
  当使用 Svcutil.exe 或**添加服务引用**来生成第三方服务的客户端代码或访问第三方架构，一个适当的序列化程序的 Visual Studio 中的功能会自动为你选择。 如果架构与 <xref:System.Runtime.Serialization.DataContractSerializer> 不兼容，则选择 <xref:System.Xml.Serialization.XmlSerializer>。  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/27/2018
   
 -   `ReadXml` 实现不应读取包装元素。 它应读取 `WriteXml` 生成的那一个元素。  
   
--   定期序列化元素类型时（例如，作为数据协定中的数据成员），序列化程序将在调用 `WriteXml` 之前输出包装元素，如同处理内容类型一样。 然而，在顶层序列化元素类型时，序列化程序通常根本不输出 `WriteXml` 写入的元素周围的包装元素，除非在 `DataContractSerializer` 或 `NetDataContractSerializer` 构造函数中构造序列化程序时显式指定了根名称和命名空间。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+-   定期序列化元素类型时（例如，作为数据协定中的数据成员），序列化程序将在调用 `WriteXml` 之前输出包装元素，如同处理内容类型一样。 然而，在顶层序列化元素类型时，序列化程序通常根本不输出 `WriteXml` 写入的元素周围的包装元素，除非在 `DataContractSerializer` 或 `NetDataContractSerializer` 构造函数中构造序列化程序时显式指定了根名称和命名空间。 有关详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
 -   如果在构造期间没有指定根名称和命名空间的情况下在顶层序列化元素类型，则 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> 实质上不执行任何操作，且 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> 将调用 `WriteXml`。 在此模式下，要序列化的对象不能为 `null`，且不能以多态形式进行分配。 另外，不能启用对象图保留，也不能使用 `NetDataContractSerializer`。  
   

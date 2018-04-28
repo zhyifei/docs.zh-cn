@@ -1,26 +1,26 @@
 ---
-title: "选择凭据类型"
-ms.custom: 
+title: 选择凭据类型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>选择凭据类型
 *凭据*是数据[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用于建立声明的标识或功能。 例如，护照就是政府颁发的用以证明国家或地区的公民身份的凭据。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，凭据可以采用多种形式，例如用户名标记和 X.509 证书。 本主题讨论凭据、如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用凭据以及如何为应用程序选择正确的凭据。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/01/2018
 |Windows|允许在使用 Windows 凭据建立的安全上下文中交换 SOAP 消息。|  
 |用户名|允许服务可以要求使用用户名凭据对客户端进行身份验证。 请注意，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不允许对用户名进行任何加密操作，例如生成签名或加密数据。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 确保在使用用户名凭据时确保传输的安全性。|  
 |证书|允许服务可以要求使用 X.509 证书对客户端进行身份验证。|  
-|已颁发的令牌|根据安全策略配置的自定义令牌类型。 默认令牌类型为安全断言标记语言 (SAML)。 令牌由安全令牌服务颁发。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][联合身份验证和已颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
+|已颁发的令牌|根据安全策略配置的自定义令牌类型。 默认令牌类型为安全断言标记语言 (SAML)。 令牌由安全令牌服务颁发。 有关详细信息，请参阅[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>服务凭据的协商模型  
  *协商*是通过交换凭据建立客户端和服务之间的信任关系的过程。 该过程在客户端和服务之间以迭代方式进行，以便仅公开协商过程下一步所需的信息。 实际上，最终结果是将服务凭据传递给要在后续操作中使用的客户端。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  根据是对服务进行编程还是对客户端进行编程，设置凭据的方法会略有不同。  
   
 ### <a name="setting-service-credentials"></a>设置服务凭据  
- 如果使用的是传输模式，且使用 HTTP 作为传输，则必须使用 Internet Information Services (IIS)，或使用证书配置端口。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)和[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+ 如果使用的是传输模式，且使用 HTTP 作为传输，则必须使用 Internet Information Services (IIS)，或使用证书配置端口。 有关详细信息，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)和[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要在代码中使用凭据配置服务，则创建 <xref:System.ServiceModel.ServiceHost> 类的一个实例，并使用 <xref:System.ServiceModel.Description.ServiceCredentials> 类指定适当的凭据，该类可通过 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 属性访问。  
   

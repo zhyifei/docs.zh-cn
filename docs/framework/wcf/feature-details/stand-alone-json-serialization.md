@@ -1,24 +1,26 @@
 ---
-title: "独立 JSON 序列化"
-ms.custom: 
+title: 独立 JSON 序列化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="stand-alone-json-serialization"></a>独立 JSON 序列化
 JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行的 JavaScript 代码而设计的一种数据格式。 它是在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中创建的 ASP.NET AJAX 服务所使用的默认数据格式。  
@@ -38,7 +40,7 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
 |<xref:System.Enum>|数字|请参见本主题中后面的“枚举和 JSON”。|  
 |<xref:System.Boolean>|Boolean|--|  
 |<xref:System.String>, <xref:System.Char>|String|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|这些类型在 JSON 与 XML 中的格式相同（基本上，TimeSpan 采用 ISO 8601 持续时间格式，GUID 采用“12345678-ABCD-ABCD-ABCD-1234567890AB”格式，URI 则采用其本来的字符串形式，例如“http://www.example.com”）。 精确的信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|在 JSON 中这些类型的格式是与 XML 中的相同 (实质上，采用 ISO 8601 持续时间格式的时间跨度，采用"12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和其自然字符串形式的 URI，如"http://www.example.com")。 精确的信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
 |<xref:System.Xml.XmlQualifiedName>|String|格式为“名称:命名空间”（第一个冒号之前的所有内容都是名称）。 可以缺少名称或命名空间。 如果没有命名空间，则也可以省略冒号。|  
 |<xref:System.Array> 类型的 <xref:System.Byte>|数字数组|每个数字都表示一个字节的值。|  
 |<xref:System.DateTime>|DateTime 或 String|请参见本主题中后面的“日期/时间和 JSON”。|  
@@ -51,7 +53,7 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
 |任何类型的 `Null` 值|null|也支持可以为 null 的类型，这些类型映射到 JSON 的方式与不可以为 null 的类型相同。|  
   
 ### <a name="enumerations-and-json"></a>枚举和 JSON  
- 在 JSON 中，枚举成员值被作为数字处理，这与数据协定中处理枚举成员值的方式不同。在数据协定中，枚举成员值被视为成员名称。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]数据协定的处理，请参阅[数据协定中的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
+ 在 JSON 中，枚举成员值被作为数字处理，这与数据协定中处理枚举成员值的方式不同。在数据协定中，枚举成员值被视为成员名称。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 数据协定的处理，请参阅[数据协定中的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
 -   例如，如果存在 `public enum Color {red, green, blue, yellow, pink}`，则序列化 `yellow` 将生成数字 3，而不是字符串“yellow”。  
   
@@ -117,7 +119,7 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
  有关多态序列化工作方式的详细信息，以及使用多态序列化时必须遵从的部分限制的讨论，请参见本主题后面的“高级信息”一节。  
   
 ### <a name="versioning"></a>版本管理  
- JSON 中完全支持数据协定版本管理功能，其中包括 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 不仅如此，在多数情况下还可以将一个类型反序列化为一种格式（例如 XML），然后再将其序列化为另一种格式（例如 JSON），同时仍然保留 <xref:System.Runtime.Serialization.IExtensibleDataObject> 中的数据。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 请记住，JSON 不进行排序，因此所有顺序信息都将丢失。 而且，JSON 不支持多个键/值对使用同一键名。 最后，对 <xref:System.Runtime.Serialization.IExtensibleDataObject> 执行的所有操作在本质上都是多态的，即它们的派生类型均被分配给所有类型的基类型 <xref:System.Object>。  
+ JSON 中完全支持数据协定版本管理功能，其中包括 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 不仅如此，在多数情况下还可以将一个类型反序列化为一种格式（例如 XML），然后再将其序列化为另一种格式（例如 JSON），同时仍然保留 <xref:System.Runtime.Serialization.IExtensibleDataObject> 中的数据。 有关详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 请记住，JSON 不进行排序，因此所有顺序信息都将丢失。 而且，JSON 不支持多个键/值对使用同一键名。 最后，对 <xref:System.Runtime.Serialization.IExtensibleDataObject> 执行的所有操作在本质上都是多态的，即它们的派生类型均被分配给所有类型的基类型 <xref:System.Object>。  
   
 ## <a name="json-in-urls"></a>URL 中的 JSON  
  在结合使用 ASP.NET AJAX 终结点与 HTTP GET 谓词（使用 <xref:System.ServiceModel.Web.WebGetAttribute> 属性）时，传入的参数将出现在请求 URL 而不是消息正文中。 JSON 支持即使在请求 URL 中，因此，如果某项操作采用`Int`名为"number"和`Person`复杂类型称为"p"，URL 可能类似于以下 URL。  
@@ -192,13 +194,13 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  禁止将数据成员命名为“__type”，因为它可能与类型提示发生冲突。  
   
 #### <a name="reducing-the-size-of-type-hints"></a>减小类型提示的大小  
- 为了减小 JSON 消息的大小，默认的数据协定命名空间前缀 (http://schemas.datacontract.org/2004/07/) 已替换为“#”字符。 (若要使此替换可逆，请使用一项转义规则： 如果以"#"开头的命名空间或"\\"字符，它们追加另一个额外"\\"字符)。 这样，如果“Circle”是 .NET 命名空间“MyApp.Shapes”中的一个类型，则其默认的数据协定命名空间将是 http://schemas.datacontract.org/2004/07/MyApp。 下面是 Shapes 及其 JSON 表示形式。  
+ 若要减小 JSON 值消息，默认数据协定命名空间前缀 (http://schemas.datacontract.org/2004/07/)替换"#"字符。 (若要使此替换可逆，请使用一项转义规则： 如果以"#"开头的命名空间或"\\"字符，它们追加另一个额外"\\"字符)。 因此，如果"Circle"是.NET 命名空间"MyApp.Shapes"中的类型，其默认数据协定命名空间是http://schemas.datacontract.org/2004/07/MyApp。 下面是 Shapes 及其 JSON 表示形式。  
   
 ```json  
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}  
 ```  
   
- 执行反序列化时，既能识别截断的名称 (#MyApp.Shapes)，也能识别完整的名称 (http://schemas.datacontract.org/2004/07/MyApp.Shapes)。  
+ 截断 (#MyApp.Shapes) 和完整 (http://schemas.datacontract.org/2004/07/MyApp.Shapes)名称理解在反序列化。  
   
 #### <a name="type-hint-position-in-json-objects"></a>JSON 对象中的类型提示位置  
  请注意，类型提示必须出现在 JSON 表示形式的开头。 这是 JSON 处理中唯一一种重视键/值对顺序的情况。 例如，下面不是指定类型提示的有效方式。  
@@ -256,7 +258,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  当反序列化回 <xref:System.Object> 时：  
   
--   `Shape`必须是已知类型列表中。 具有<xref:System.Collections.Generic.List%601>类型的`Shape`到已知类型中不起作用。 请注意，不需要添加`Shape`到在序列化的已知类型在此情况下-这自动完成。  
+-   `Shape` 必须是已知类型列表中。 具有<xref:System.Collections.Generic.List%601>类型的`Shape`到已知类型中不起作用。 请注意，不需要添加`Shape`到在序列化的已知类型在此情况下-这自动完成。  
   
 -   集合反序列化为<xref:System.Array>类型的<xref:System.Object>包含`Shape`实例。  
   

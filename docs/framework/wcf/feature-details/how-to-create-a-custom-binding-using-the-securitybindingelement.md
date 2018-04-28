@@ -1,13 +1,13 @@
 ---
-title: "如何：使用 SecurityBindingElement 创建自定义绑定"
-ms.custom: 
+title: 如何：使用 SecurityBindingElement 创建自定义绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>如何：使用 SecurityBindingElement 创建自定义绑定
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括多个系统提供的绑定，虽然这些绑定可进行配置，但在配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的所有安全选项时仍显得不够灵活。 本主题演示如何直接从各个绑定元素创建自定义绑定，并着重说明创建这样的绑定时可以指定的一些安全设置。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建自定义绑定，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括多个系统提供的绑定，虽然这些绑定可进行配置，但在配置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持的所有安全选项时仍显得不够灵活。 本主题演示如何直接从各个绑定元素创建自定义绑定，并着重说明创建这样的绑定时可以指定的一些安全设置。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建自定义绑定，请参阅[扩展绑定](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支持 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道形状，它是 TCP 传输在 <xref:System.ServiceModel.TransferMode> 设置为 <xref:System.ServiceModel.TransferMode.Buffered> 时使用的默认通道形状。 您必须将 <xref:System.ServiceModel.TransferMode> 设置为 <xref:System.ServiceModel.TransferMode.Streamed>，才能在此方案中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
@@ -88,9 +88,9 @@ ms.lasthandoff: 12/22/2017
 |||SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- 请注意，SecurityBindingElements 有许多可配置的设置。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
+ 请注意，SecurityBindingElements 有许多可配置的设置。 有关详细信息，请参阅[SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][安全对话和安全会话](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。  
+ 有关详细信息，请参阅[安全对话和安全会话](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。  
   
 ## <a name="procedures"></a>过程  
   

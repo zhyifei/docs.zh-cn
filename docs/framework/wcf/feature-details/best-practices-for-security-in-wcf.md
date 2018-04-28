@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 下节列出了在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 创建安全应用程序时应考虑的最佳做法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 安全，请参阅[安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[与元数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/26/2018
  确保信任元数据的源，并确保没有人篡改元数据。 使用 HTTP 协议检索到的元数据是以明文形式发送的，可能被篡改。 如果服务使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 和 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 属性，请根据服务创建者提供的 URL，使用 HTTPS 协议下载数据。  
   
 ## <a name="publish-metadata-using-security"></a>使用安全发布元数据  
- 要防止篡改服务的已发布元数据，可使用传输或消息级安全来保证元数据交换终结点的安全。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [发布元数据终结点](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)和[如何： 使用代码为服务中发布元数据](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
+ 要防止篡改服务的已发布元数据，可使用传输或消息级安全来保证元数据交换终结点的安全。 有关详细信息，请参阅[发布元数据终结点](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)和[如何： 发布元数据服务使用代码](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
   
 ## <a name="ensure-use-of-local-issuer"></a>确保使用本地颁发者  
  如果为某个给定绑定指定了颁发者地址和绑定，则不对使用该绑定的终结点使用本地颁发者。 希望始终使用本地颁发者的客户应确保不使用这样的绑定，或修改绑定以使颁发者地址为 null。  

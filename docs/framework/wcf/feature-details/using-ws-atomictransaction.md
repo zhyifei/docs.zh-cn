@@ -1,28 +1,28 @@
 ---
-title: "使用 WS-AtomicTransaction"
-ms.custom: 
+title: 使用 WS-AtomicTransaction
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 124c5dc0f6db94ae459fe140bd7a4290aa56e04a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d437b0bf3b14b60899028e293feecf5b1e36f766
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-ws-atomictransaction"></a>使用 WS-AtomicTransaction
 WS-AtomicTransaction (WS-AT) 是一种可互操作的事务协议。 它使你能够使用 Web 服务消息对分布式事务进行流处理并以可互操作的方式在异类事务基础结构之间进行协调。 WS-AT 使用两阶段提交协议在分布式应用程序、事务管理器和资源管理器之间驱动原子结果的生成。  
@@ -37,7 +37,7 @@ WS-AtomicTransaction (WS-AT) 是一种可互操作的事务协议。 它使你�
   
 -   用于在客户端的事务管理器和服务器的事务之间运行两阶段提交协议以便解析事务结果的网络协议。  
   
- 如果服务器和客户端使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 进行写入，则不需要使用 WS-AT。 可以改为使用 `NetTcpBinding` 的默认设置并启用 `TransactionFlow` 属性，此设置将使用 `OleTransactions` 协议。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。 否则，如果你要使事务流动到使用第三方技术生成的 Web 服务，则必须使用 WS-AT。  
+ 如果服务器和客户端使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 进行写入，则不需要使用 WS-AT。 可以改为使用 `NetTcpBinding` 的默认设置并启用 `TransactionFlow` 属性，此设置将使用 `OleTransactions` 协议。 有关详细信息，请参阅[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。 否则，如果你要使事务流动到使用第三方技术生成的 Web 服务，则必须使用 WS-AT。  
   
 ## <a name="see-also"></a>请参阅  
  [配置 WS-Atomic 事务支持](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

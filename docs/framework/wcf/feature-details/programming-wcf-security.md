@@ -1,13 +1,13 @@
 ---
-title: "WCF 安全编程"
-ms.custom: 
+title: WCF 安全编程
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 
+caps.latest.revision: 25
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b296d9bf9b52dfc8e782f6e324be1de8c76d349
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="programming-wcf-security"></a>WCF 安全编程
 本主题描述用于创建安全的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序的基本编程任务。 本主题介绍身份验证、 保密性和完整性，统称为*传输安全*。 本主题不涉及授权 （资源或服务的访问控制）;有关授权的信息，请参阅[授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
@@ -48,26 +48,26 @@ ms.lasthandoff: 12/22/2017
   
     1.  `Transport`  
   
-         传输安全取决于所选绑定使用的机制。 例如，如果要使用 `WSHttpBinding`，则安全机制是安全套接字层 (SSL)（它也是 HTTPS 协议的机制）。 一般说来，传输安全的主要优点是它提供了较高的吞吐量，而无论您使用哪种传输协议。 但是，它确实具有两个限制：第一个限制是传输机制指示了用于对用户进行身份验证的凭据类型。 只有当服务需要与其他要求不同类型凭据的服务交互操作时，这才是一个缺点。 第二个限制是，因为安全不是在消息级应用的，所以安全是逐个跃点实现的，而不是以端对端方式实现的。 只有当客户端和服务之间的消息路径包含中介时，后一个限制才会成为问题。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]哪种传输若要使用，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用传输安全，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
+         传输安全取决于所选绑定使用的机制。 例如，如果要使用 `WSHttpBinding`，则安全机制是安全套接字层 (SSL)（它也是 HTTPS 协议的机制）。 一般说来，传输安全的主要优点是它提供了较高的吞吐量，而无论您使用哪种传输协议。 但是，它确实具有两个限制：第一个限制是传输机制指示了用于对用户进行身份验证的凭据类型。 只有当服务需要与其他要求不同类型凭据的服务交互操作时，这才是一个缺点。 第二个限制是，因为安全不是在消息级应用的，所以安全是逐个跃点实现的，而不是以端对端方式实现的。 只有当客户端和服务之间的消息路径包含中介时，后一个限制才会成为问题。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 哪种传输若要使用，请参阅[选择传输](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用传输安全，请参阅[传输安全概述](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
   
     2.  `Message`  
   
          消息安全意味着每个消息都包含必要的标头和数据，以保证消息的安全。 因为标头的组成千变万化，所以可以包含任意数量的凭据。 如果您要与其他要求传输机制无法提供的特定凭据类型的服务交互操作，或者如果必须将消息用于多个服务（其中每个服务都要求不同的凭据类型），那么这会是一个有用的办法。  
   
-         [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
+         有关详细信息，请参阅[消息安全](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
   
     3.  `TransportWithMessageCredential`  
   
          此选择使用传输层来保证消息传输的安全，同时每个消息都包含其他服务需要的丰富凭据。 这便将传输安全的性能优点与消息安全的丰富凭据优点结合起来。 使用下列绑定可实现这一点：<xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.WSFederationHttpBinding>、<xref:System.ServiceModel.NetPeerTcpBinding> 和 <xref:System.ServiceModel.WSHttpBinding>。  
   
-3.  如果决定对 HTTP 使用传输安全（即 HTTPS），还必须用 SSL 证书配置主机并且在端口上启用 SSL。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+3.  如果决定对 HTTP 使用传输安全（即 HTTPS），还必须用 SSL 证书配置主机并且在端口上启用 SSL。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
 4.  如果您要使用 <xref:System.ServiceModel.WSHttpBinding> 并且不需要建立安全会话，请将 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 属性设置为 `false`。  
   
      当客户端和服务使用对称密钥创建通道时（客户端和服务器在整个对话过程中都使用相同的密钥，直到对话结束），将发生安全会话。  
   
 ## <a name="setting-the-client-credential-type"></a>设置客户端凭据类型  
- 选择适当的客户端凭据类型。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。 下列客户端凭据类型可用：  
+ 选择适当的客户端凭据类型。 有关详细信息，请参阅[选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。 下列客户端凭据类型可用：  
   
 -   `Windows`  
   

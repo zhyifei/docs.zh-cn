@@ -1,12 +1,13 @@
 ---
-title: "数据协定版本管理"
-ms.custom: 
+title: 数据协定版本管理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>数据协定版本管理
 随着应用程序的发展，您也可能不得不更改服务使用的数据协定。 本主题说明如何管理数据协定的版本。 本主题介绍数据协定版本管理机制。 有关完整概述和版本管理指南，请参阅[最佳做法： 数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -114,16 +116,16 @@ ms.lasthandoff: 12/22/2017
   
  如果要求严格遵从架构，许多视为非重大更改的更改实际上是重大更改。 在上面的示例中，仅具有 `CarV1` 元素的 `Model` 实例将针对 `CarV2` 架构（具有 `Model` 和 `Horsepower`，但它们都是可选的）进行验证。 但是，反过来并不成立：`CarV2` 实例无法针对 `CarV1` 架构进行验证。  
   
- 关于往返过程，还有一些其他注意事项。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]"架构注意事项"主题中[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 关于往返过程，还有一些其他注意事项。 有关详细信息，请参阅中的"架构注意事项"部分[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ### <a name="other-permitted-changes"></a>其他允许的更改  
- 实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口是非重大更改。 但是，在实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 的版本之前，类型版本不提供往返过程支持。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口是非重大更改。 但是，在实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 的版本之前，类型版本不提供往返过程支持。 有关详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ## <a name="enumerations"></a>枚举  
- 添加或移除枚举成员是重大更改。 更改枚举成员的名称是重大更改，除非使用 `EnumMemberAtttribute` 属性将其协定名称保持为与旧版本中的名称相同。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定中的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
+ 添加或移除枚举成员是重大更改。 更改枚举成员的名称是重大更改，除非使用 `EnumMemberAtttribute` 属性将其协定名称保持为与旧版本中的名称相同。 有关详细信息，请参阅[数据协定中的枚举类型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
 ## <a name="collections"></a>集合  
- 大多数集合更改是非重大更改，这是因为在数据协定模型中，大多数集合类型可以彼此互换。 但是，将非自定义集合更改为自定义集合是重大更改，反之亦然。 此外，更改集合的自定义设置（即，更改其数据协定名称和命名空间、重复元素名称、键元素名称以及值元素名称）也是重大更改。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]集合自定义项，请参阅[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
+ 大多数集合更改是非重大更改，这是因为在数据协定模型中，大多数集合类型可以彼此互换。 但是，将非自定义集合更改为自定义集合是重大更改，反之亦然。 此外，更改集合的自定义设置（即，更改其数据协定名称和命名空间、重复元素名称、键元素名称以及值元素名称）也是重大更改。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 集合自定义项，请参阅[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
 更改集合内容的数据协定（例如，从整数列表更改为字符串列表）自然也是重大更改。  
   
 ## <a name="see-also"></a>请参阅  

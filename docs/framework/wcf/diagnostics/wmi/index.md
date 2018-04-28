@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 进行诊断
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 通过 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供程序在运行时公开服务的检测数据。  
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 Whoami /user  
 ```  
   
- 此方法提供了当前用户的 SID，但是此方法不能用于获取任意用户的 SID。 另一个获取 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 资源工具包对于管理任务](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具比较两个用户（本地用户或域用户）的 SID，其副功能是将两个 SID 显示到命令行。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [已知 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
+ 此方法提供了当前用户的 SID，但是此方法不能用于获取任意用户的 SID。 另一个获取 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 资源工具包对于管理任务](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具比较两个用户（本地用户或域用户）的 SID，其副功能是将两个 SID 显示到命令行。 有关详细信息，请参阅[熟知 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>访问远程 WMI 对象实例  
  如果您需要访问远程计算机上的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 实例，就必须对您用于访问的工具启用数据包保密性。 以下部分描述如何通过使用 WMI CIM Studio、Windows Management Instrumentation 测试器以及 .NET SDK 2.0 实现这些目标。  

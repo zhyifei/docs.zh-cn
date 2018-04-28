@@ -1,20 +1,17 @@
 ---
-title: "访问控制 (F#)"
-description: "了解如何控制到编程元素，如类型、 方法和函数，F # 编程语言中的访问。"
-keywords: "visual f#, f#, 函数编程"
+title: 访问控制 (F#)
+description: '了解如何控制到编程元素，如类型、 方法和函数，F # 编程语言中的访问。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 955b06fe-d1cd-431d-8db6-93e83b697453
-ms.openlocfilehash: a02e20a585a0456577901f2762a0eeb0e3ecd2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fee5f719904b61c3082d56f73448defdea39f472
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="access-control"></a>访问控制
 
@@ -25,11 +22,11 @@ ms.lasthandoff: 10/18/2017
 在 F # 中，将访问控制说明符`public`， `internal`，和`private`可以应用于模块、 类型、 方法、 值定义、 函数、 属性和显式字段。
 
 
-- `public`指示所有调用方可以访问该实体。
+- `public` 指示所有调用方可以访问该实体。
 
-- `internal`指示该实体，可以访问只能从同一程序集。
+- `internal` 指示该实体，可以访问只能从同一程序集。
 
-- `private`指示该实体，可以访问只能从封闭类型或模块。
+- `private` 指示该实体，可以访问只能从封闭类型或模块。
 
 
 >[!NOTE] 
@@ -62,7 +59,7 @@ F # 中的签名提供另一种机制，用于控制对 F # 程序元素的访�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet2.fs)]
     
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [签名](signatures.md)

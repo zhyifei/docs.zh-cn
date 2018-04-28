@@ -1,20 +1,17 @@
 ---
-title: "文本 (F#)"
-description: "了解有关在 F # 编程语言的文本类型。"
-keywords: "visual f#, f#, 函数编程"
+title: 文本 (F#)
+description: '了解有关在 F # 编程语言的文本类型。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>文本
 
@@ -44,10 +41,10 @@ ms.lasthandoff: 10/18/2017
 |bigint|不受限制为 64 位表示形式的整数|I|`9999999999999999999999999999I`|
 |decimal|小数表示为固定的点或有理数|M 或 m|`0.7833M` 或 `0.7833m`|
 |Char|Unicode 字符|无|`'a'`|
-|字符串|Unicode 字符串|无|`"text\n"`<br /><br />或<br /><br />`@"c:\filename"`<br /><br />或<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />或<br /><br />`"string1" + "string2"`<br /><br />另请参阅[字符串](Strings.md)。|
+|String|Unicode 字符串|无|`"text\n"`<br /><br />或<br /><br />`@"c:\filename"`<br /><br />或<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />或<br /><br />`"string1" + "string2"`<br /><br />另请参阅[字符串](Strings.md)。|
 |byte|ASCII 字符|B|`'a'B`|
 |byte[]|ASCII 字符串|B|`"text"B`|
-|字符串或字节]|逐字字符串|@ 前缀|`@"\\server\share"`(Unicode)<br /><br />`@"\\server\share"B`(ASCII)|
+|字符串或字节]|逐字字符串|@ 前缀|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>备注
 Unicode 字符串可以包含你可以通过使用指定的显式编码`\u`跟一个 16 位十六进制代码或可以通过使用指定的 utf-32 编码`\U`跟 32 位十六进制表示的代码的 Unicode代理项对。
@@ -97,6 +94,6 @@ let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 let ExampleSSN = 123_456_7890
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Core.LiteralAttribute 类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)

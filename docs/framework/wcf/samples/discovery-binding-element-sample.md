@@ -1,24 +1,26 @@
 ---
-title: "发现绑定元素示例"
-ms.custom: 
+title: 发现绑定元素示例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 624209221dc8c2745afa6b4db20df6e47c7374f1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discovery-binding-element-sample"></a>发现绑定元素示例
 本示例演示如何使用发现客户端绑定元素发现服务。 开发人员使用此功能可以向其现有客户端通道堆栈添加发现客户端通道，从而使编程模型非常直观。 当关联通道打开时，会使用发现解析服务地址。 本示例包含以下项目：  
@@ -93,7 +95,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 实例化后，开发人员指定搜索服务时要使用的条件。 在本例中，发现查找条件是 `ICalculatorService` 类型。 此外，开发人员还指定一个 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>，它返回指定要在何处查找服务的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 返回新的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 实例。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][通过 Discovery 客户端通道使用自定义绑定](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)。  
+ <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 实例化后，开发人员指定搜索服务时要使用的条件。 在本例中，发现查找条件是 `ICalculatorService` 类型。 此外，开发人员还指定一个 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>，它返回指定要在何处查找服务的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 返回新的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 实例。 有关详细信息，请参阅[通过 Discovery 客户端通道使用自定义绑定](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)。  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

@@ -1,24 +1,26 @@
 ---
-title: "通过自定义绑定发布和检索元数据"
-ms.custom: 
+title: 通过自定义绑定发布和检索元数据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88495e42a57790b75c096235cda65cbedbf86a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f6226f01a284a9a24593c1be4fed2f96f3eae730
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>通过自定义绑定发布和检索元数据
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供对向服务添加元数据终结点的支持。 这些元数据终结点可以对具有的 URL 处的 HTTP GET 请求作出响应`?wsdl`查询字符串并可对 Ws-transfer GET 请求的 Ws-metadataexchange (MEX) 规范中定义。 MEX 终结点可实现 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 协定。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>通过自定义绑定检索元数据  
  可以从 HTTP Get 和 HTTPS Get 元数据终结点使用标准 HTTP 或 HTTPS GET 请求检索元数据。  
   
- 若要从 MEX 元数据终结点检索元数据，您通常可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支持的标准 MEX 绑定之一。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 类型和 Svcutil.exe 工具将根据指定元数据终结点的地址自动选择这些标准 MEX 绑定之一。  
+ 若要从 MEX 元数据终结点检索元数据，您通常可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支持的标准 MEX 绑定之一。 有关详细信息，请参阅<xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 类型和 Svcutil.exe 工具将根据指定元数据终结点的地址自动选择这些标准 MEX 绑定之一。  
   
  如果 MEX 元数据终结点使用与标准 MEX 绑定之一不同的其他绑定，则您可以使用代码或通过提供 <xref:System.ServiceModel.Description.MetadataExchangeClient> 客户端终结点配置来配置由 <xref:System.ServiceModel.Description.IMetadataExchange> 所使用的绑定。 Svcutil.exe 工具可自动从其配置文件中加载一个 <xref:System.ServiceModel.Description.IMetadataExchange> 客户端终结点配置，该配置具有与元数据终结点地址的 URI 方案相同的名称。  
   

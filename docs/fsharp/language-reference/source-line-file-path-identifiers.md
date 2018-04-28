@@ -1,20 +1,17 @@
 ---
-title: "源代码行标识符、文件标识符和路径标识符 (F#)"
-description: "了解如何使用内置 F # 标识符的值使你能够访问源行号、 目录和在代码中的文件名称。"
-keywords: "visual f#, f#, 函数编程"
+title: 源代码行标识符、文件标识符和路径标识符 (F#)
+description: '了解如何使用内置 F # 标识符的值使你能够访问源行号、 目录和在代码中的文件名称。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4cfe7439-275c-4d08-980b-784e240bbf29
-ms.openlocfilehash: 44cc0914226c120f2b877ce3decd25caa6817eec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 18a26f0aa0a0c1f9c0b448ec46eaebd540391324
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="source-line-file-and-path-identifiers"></a>源代码行标识符、文件标识符和路径标识符
 
@@ -55,7 +52,7 @@ Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\Source
 Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [编译器指令](compiler-directives.md)
 
 [F# 语言参考](index.md)

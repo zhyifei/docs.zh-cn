@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和证书来完成常见任务。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/09/2018
  证书必须由证书颁发机构（通常是第三方证书颁发机构）颁发。 在 Windows 域中，包括一个证书颁发机构，可以用来向域中的计算机颁发证书。  
   
 ## <a name="viewing-certificates"></a>查看证书  
- 若要使用证书，通常需要查看证书并检查其属性。 使用 Microsoft 管理控制台 (MMC) 管理单元工具，很容易实现这一任务。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [如何： 使用 mmc 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+ 若要使用证书，通常需要查看证书并检查其属性。 使用 Microsoft 管理控制台 (MMC) 管理单元工具，很容易实现这一任务。 有关详细信息，请参阅[如何： 使用 mmc 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 ## <a name="certificate-stores"></a>证书存储区  
  证书存放在存储区中。 主要的存储区位置有两个，它们进一步分为子存储区。 如果您是计算机的管理员，就可以使用 MMC 管理单元工具查看这两个主要存储区。 非管理员只能查看当前用户存储区。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/09/2018
   
  此外，也可以通过配置设置此属性。 下列元素用于指定验证模式：  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<身份验证 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 -   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/09/2018
 ## <a name="custom-authentication"></a>自定义身份验证  
  使用 `CertificateValidationMode` 属性，还可以对证书的身份验证方式进行自定义。 默认情况下，级别设置为 `ChainTrust`。 若要使用 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 值，还必须将 `CustomCertificateValidatorType` 属性设置为程序集和用于验证证书的类型。 若要创建自定义验证程序，必须从抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 类继承。  
   
- 在创建自定义身份验证器时，要重写的最重要方法是 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。 有关自定义身份验证的示例，请参阅[X.509 证书验证程序](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)示例。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [自定义凭据和凭据验证](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)。  
+ 在创建自定义身份验证器时，要重写的最重要方法是 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。 有关自定义身份验证的示例，请参阅[X.509 证书验证程序](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)示例。 有关详细信息，请参阅[自定义凭据和凭据验证](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)。  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>使用 Makecert.exe 生成证书链  
  证书创建工具 (Makecert.exe) 可以创建 X.509 证书和私钥/公钥对。 可以将私钥保存在磁盘上，然后用它来颁发和签名新证书，从而模拟链状证书的层次结构。 此工具仅在开发服务时用作辅助手段，决不可以用来为实际部署创建证书。 在开发 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务时，可使用 Makecert.exe 按照下列步骤生成信任链。  
@@ -183,7 +183,7 @@ ms.lasthandoff: 04/09/2018
   
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 第一版中，执行映射无需考虑域策略。 因此，如果启用了映射，而 X.509 证书不满足域策略，则在第一版下运行正常的早期应用程序，可能会失败。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.ServiceModel.Channels>  
  <xref:System.ServiceModel.Security>  
  <xref:System.ServiceModel>  

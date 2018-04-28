@@ -1,10 +1,7 @@
 ---
 title: 字符数据类型 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dca9cde0af08c4113ea9a4644efa40a721b4d9b1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: afd368c00444f136c6d69b02a733c82f0c8eafe0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="character-data-types-visual-basic"></a>字符数据类型 (Visual Basic)
 Visual Basic 提供*字符数据类型*来处理可打印和可显示的字符。 尽管它们都使用 Unicode 字符，处理`Char`包含单个字符，而`String`包含的字符数量不确定。  
@@ -32,7 +28,7 @@ Visual Basic 提供*字符数据类型*来处理可打印和可显示的字符�
 ## <a name="char-type"></a>Char 类型  
  `Char`数据类型是一个单一的两个字节 （16 位） Unicode 字符。 如果某个变量始终存储恰好一个字符，将其声明为`Char`。 例如：  
   
- [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
+ [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
  在每个可能值`Char`或`String`变量是*代码点*，或字符代码，在 Unicode 字符集。 Unicode 字符包含基本 ASCII 字符集、 各种其他字母、 重音符号、 货币符号、 分数 （竖式）、 标注字符和数学和技术符号。  
   
@@ -44,7 +40,7 @@ Visual Basic 提供*字符数据类型*来处理可打印和可显示的字符�
 ## <a name="string-type"></a>字符串类型  
  `String`数据类型是零个或多个双字节 （16 位） Unicode 字符序列。 如果变量可以包含任意个数的字符，将其声明为`String`。 例如：  
   
- [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
+ [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   
  有关详细信息，请参阅[字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)。  
   

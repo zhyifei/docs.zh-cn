@@ -33,11 +33,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ec0c7645d4d6a1affe78e23a9498ea5f5f8d5235
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概述 (WPF)
 本主题介绍 XAML 语言的功能，并演示如何使用 XAML 编写 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 应用程序。 本主题专门介绍 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 实现的 XAML。 XAML 本身是一个比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 大的语言概念。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>什么是 XAML？  
- XAML 是一种声明性标记语言。 应用于 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 编程模型时，XAML 简化了为 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 应用程序创建 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的过程。 可以在声明性 XAML 标记中创建可见的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，然后使用代码隐藏文件（通过分部类定义与标记相连接）将 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 定义与运行时逻辑相分离。 XAML 直接以程序集中定义的一组特定后备类型表示对象的实例化。 这与大多数其他标记语言不同，后者通常是与后备类型系统没有此类直接关系的解释语言。 XAML 实现了一个工作流，通过此工作流，各方可以采用不同的工具来处理 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和应用程序的逻辑。  
+ XAML 是一种声明性标记语言。 当应用的.NET Framework 编程模型，简化了 XAML 创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]为.NET Framework 应用程序。 可以在声明性 XAML 标记中创建可见的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，然后使用代码隐藏文件（通过分部类定义与标记相连接）将 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 定义与运行时逻辑相分离。 XAML 直接以程序集中定义的一组特定后备类型表示对象的实例化。 这与大多数其他标记语言不同，后者通常是与后备类型系统没有此类直接关系的解释语言。 XAML 实现了一个工作流，通过此工作流，各方可以采用不同的工具来处理 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 和应用程序的逻辑。  
   
  以文本表示时，XAML 文件是通常具有 `.xaml` 扩展名的 XML 文件。 可通过任何 XML 编码对文件进行编码，但通常以 UTF-8 编码。  
   

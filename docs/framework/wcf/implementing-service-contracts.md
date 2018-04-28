@@ -1,28 +1,28 @@
 ---
-title: "实现服务协定"
-ms.custom: 
+title: 实现服务协定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1b4085e23120ad654121f33111eda68276259096
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a9c34f67de6f4f8b4a8d22dac7e8bf1c9555498
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="implementing-service-contracts"></a>实现服务协定
 服务是一个类，会在一个或多个终结点公开客户端可用的功能。 若要创建服务，请编写一个实现 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 协定的类。 可以通过两种方法执行此操作。 可以将协定单独定义为接口，然后创建一个实现该接口的类。 或者，可以通过将 <xref:System.ServiceModel.ServiceContractAttribute> 属性放在该类本身，将 <xref:System.ServiceModel.OperationContractAttribute> 属性放在服务的客户端可用的方法上，来直接创建类和协定。  
@@ -66,9 +66,9 @@ class MathService
   
  请注意，上面的服务公开不同的协定，因为协定名称是不同的。 在第一个示例中，公开的协定命名为“`IMath`”，而在第二个示例中，协定命名为“`MathService`”。  
   
- 您可以在服务和操作实现级别设置一些配置，如并发性和实例化。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)。  
+ 您可以在服务和操作实现级别设置一些配置，如并发性和实例化。 有关详细信息，请参阅[设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)。  
   
- 在实现服务协定后，必须为该服务创建一个或多个终结点。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何运行服务，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
+ 在实现服务协定后，必须为该服务创建一个或多个终结点。 有关详细信息，请参阅[终结点创建概述](../../../docs/framework/wcf/endpoint-creation-overview.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何运行服务，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [设计和实现服务](../../../docs/framework/wcf/designing-and-implementing-services.md)  

@@ -1,20 +1,17 @@
 ---
-title: "代码引用 (F#)"
-description: "了解有关 F # 代码引用，使你可以生成并以编程方式使用 F # 的代码表达式的语言功能。"
-keywords: "visual f#, f#, 函数编程"
+title: 代码引用 (F#)
+description: '了解有关 F # 代码引用，使你可以生成并以编程方式使用 F # 的代码表达式的语言功能。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4559e659-2b04-48bd-8a0b-8527920eec95
-ms.openlocfilehash: f7a08013bc6487b570a62576bb01ca2dd65ce8b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="code-quotations"></a>代码引用
 
@@ -88,7 +85,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 ## <a name="example"></a>示例
 
 ### <a name="description"></a>描述
-你还可以使用中的三个活动模式[ExprShape 模块](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de)遍历较少活动模式与表达式树。 当你想要遍历树，但不是需要其中大部分节点中的所有信息时，这些活动模式很有用。 当你使用这些模式时，任何 F # 表达式匹配的以下三种模式之一：`ShapeVar`如果表达式是一个变量，`ShapeLambda`如果表达式是 lambda 表达式，或`ShapeCombination`如果表达式为任何其他内容。 如果通过使用如前面的代码示例所示的活动模式遍历表达式树，你需要使用更多的模式来处理所有可能的 F # 表达式类型，并且你的代码将更复杂。 有关详细信息，请参阅[ExprShape.ShapeVar &#124;ShapeLambda &#124;ShapeCombination 活动模式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)。
+你还可以使用中的三个活动模式[ExprShape 模块](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de)遍历较少活动模式与表达式树。 当你想要遍历树，但不是需要其中大部分节点中的所有信息时，这些活动模式很有用。 当你使用这些模式时，任何 F # 表达式匹配的以下三种模式之一：`ShapeVar`如果表达式是一个变量，`ShapeLambda`如果表达式是 lambda 表达式，或`ShapeCombination`如果表达式为任何其他内容。 如果通过使用如前面的代码示例所示的活动模式遍历表达式树，你需要使用更多的模式来处理所有可能的 F # 表达式类型，并且你的代码将更复杂。 有关详细信息，请参阅[ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination 活动模式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)。
 
 下面的代码示例可以用作更为复杂的遍历基础。 在此代码中，为包含函数调用的表达式创建表达式树`add`。 [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d)活动模式用于检测到任何调用`add`的表达式树中。 此活动的模式将分配到调用的自变量`exprList`值。 在这种情况下，有只有两个，因此这些拉出和的自变量以递归方式调用该函数。 结果插入到表示对的调用的代码引用`mul`使用接合运算符 (`%%`)。 `println`上一示例中的函数用于显示结果。
 
@@ -105,6 +102,6 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 1 + Module1.mul(2,Module1.mul(3,4))
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 

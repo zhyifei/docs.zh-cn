@@ -1,20 +1,17 @@
 ---
-title: "继承 (F#)"
-description: "了解如何指定使用继承关键字的 F # 继承关系。"
-keywords: "visual f#, f#, 函数编程"
+title: 继承 (F#)
+description: '了解如何指定使用继承关键字的 F # 继承关系。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: b38ab2f6-7ba7-4839-8eff-e6bd6cfd2b2f
-ms.openlocfilehash: 331c8f4e39aacd9d5e55bfbaf584f037e58d36a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4ad1494071cabb2a89321d653ec23ad513a46ef1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="inheritance"></a>继承
 
@@ -97,7 +94,7 @@ let obj2 = DerivedClass("A")
 当你创建的对象层次结构时，请考虑使用而不继承的可区分的联合。 可区分的联合还可以共享通用的总体类型的不同对象模型不同的行为。 单个可区分的联合通常可以消除对大量之间差别很小的每个其他的派生类的需要。 可区分联合有关的信息，请参阅[可区分联合](discriminated-unions.md)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [对象表达式](object-expressions.md)
 
 [F# 语言参考](index.md)

@@ -1,20 +1,17 @@
 ---
-title: "模式匹配 (F#)"
-description: "了解如何使用模式在 F # 中进行比较的逻辑结构的数据、 将数据分解为组成部分，或从数据中提取信息。"
-keywords: "visual f#, f#, 函数编程"
+title: 模式匹配 (F#)
+description: '了解如何使用模式在 F # 中进行比较的逻辑结构的数据、 将数据分解为组成部分，或从数据中提取信息。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5562ee98-e2f1-4dcd-8e2f-16ae27baaade
-ms.openlocfilehash: 7c7a3110a8f34c0c96c12d4584010a9ac4b485fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pattern-matching"></a>模式匹配
 
@@ -41,12 +38,12 @@ match expression with
 |常量模式|任何数字、 字符或字符串文本、 枚举常量或定义的文本标识符|`1.0`, `"test"`, `30`, `Color.Red`|
 |标识符模式|可区分的联合、 异常标签或活动模式用例的用例值|`Some(x)`<br /><br />`Failure(msg)`|
 |变量模式|*identifier*|`a`|
-|`as`模式|*模式*作为*标识符*|`(a, b) as tuple1`|
-|或模式|*模式 1* &#124;*模式 2*|<code>([h] &#124; [h; _])</code>|
+|`as` 模式|*模式*作为*标识符*|`(a, b) as tuple1`|
+|或模式|*模式 1* &#124; *模式 2*|<code>([h] &#124; [h; _])</code>|
 |和模式|*模式 1* &amp; *模式 2*|`(a, b) & (_, "test")`|
 |Cons 模式|*标识符*::*列表标识符*|`h :: t`|
 |列表模式|[*模式 1*;...;*模式 n* ]|`[ a; b; c ]`|
-|数组模式|[&#124;*模式 1*;..;*模式 n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|数组模式|[&#124; *模式 1*;..;*模式 n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |带括号模式|(*模式*)|`( a )`|
 |元组模式|(*模式 1*，...，*模式 n* )|`( a, b )`|
 |记录模式|{ *identifier1* = *模式 1*;...;*标识符 n* = *模式 n* }|`{ Name = name; }`|
@@ -194,7 +191,7 @@ Null 模式匹配时你正在使用允许 null 值的类型，可能出现的 nu
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [match 表达式](match-expressions.md)
 
 [活动模式](active-patterns.md)

@@ -1,27 +1,29 @@
 ---
-title: "如何：指定客户端凭据值"
-ms.custom: 
+title: 如何：指定客户端凭据值
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>如何：指定客户端凭据值
 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]，服务可以指定客户端如何向服务进行身份验证。 例如，服务可以规定客户端使用证书进行身份验证。  
@@ -32,9 +34,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  打开 XML 配置文件。 如果使用的是 Svcutil.exe 工具，则文件的默认名称为 Output.config。  
   
-3.  查找**\<安全 >**具有元素**模式**属性 (**< 安全模式 =** `MessageOrTransport`  **>** 其中`MessageOrTransport`设置为安全模式之一。  
+3.  查找**\<安全 >** 具有元素**模式**属性 (**< 安全模式 =** `MessageOrTransport` **>** 其中`MessageOrTransport`设置为安全模式之一。  
   
-4.  找到与模式值匹配的子元素。 例如，如果将模式设置为**消息**，查找**\<消息 >**中包含的元素**\<安全 >**元素。  
+4.  找到与模式值匹配的子元素。 例如，如果将模式设置为**消息**，查找**\<消息 >** 中包含的元素**\<安全 >** 元素。  
   
 5.  请注意分配给值**clientCredentialType**属性。 实际值取决于所使用的模式（传输或消息）。  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>示例：TCP 传输模式，使用证书作为客户端凭据  
- 此示例将安全模式设置为“传输”模式，并将客户端凭据值设置为 X.509 证书。 下面的过程演示如何在代码和配置中设置客户端上的客户端凭据值。 这假定你已使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)要从服务返回的元数据 （代码和配置）。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+ 此示例将安全模式设置为“传输”模式，并将客户端凭据值设置为 X.509 证书。 下面的过程演示如何在代码和配置中设置客户端上的客户端凭据值。 这假定你已使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)要从服务返回的元数据 （代码和配置）。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>在代码中指定客户端上的客户端凭据值  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  添加[ \<t i a l >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)元素[ \<c a t e >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)元素。  
   
-4.  将下列特性设置为适当的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下面的代码中所示。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]证书，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+4.  将下列特性设置为适当的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下面的代码中所示。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 证书，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
     ```xml  
     <behaviors>  
@@ -113,10 +115,10 @@ ms.lasthandoff: 12/22/2017
  [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [\<安全 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
- [\<消息 >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
+ [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
+ [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
  [\<行为 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
  [\<行为 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [\<t i a l >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)  
- [\<c a t e >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+ [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

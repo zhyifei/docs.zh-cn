@@ -1,20 +1,17 @@
 ---
-title: "类型推理 (F#)"
-description: "了解如何 F # 编译器推断出的值、 变量、 参数和返回值的类型。"
-keywords: "visual f#, f#, 函数编程"
+title: 类型推理 (F#)
+description: '了解如何 F # 编译器推断出的值、 变量、 参数和返回值的类型。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2d5fa4b1-732a-4d71-a62d-07f7ee79fe06
-ms.openlocfilehash: c23954c0a0828cc7d2aae0553d37d5ee1dfbe152
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b5f7861c0a638baebfe72c9b4cf7dca119339ae3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="type-inference"></a>类型推断
 
@@ -66,5 +63,5 @@ ms.lasthandoff: 10/18/2017
 F # 语言规范中的更详细地描述了类型推理。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [自动泛化](generics/automatic-generalization.md)

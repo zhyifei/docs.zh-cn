@@ -1,27 +1,29 @@
 ---
-title: "如何：注册和配置服务标记"
-ms.custom: 
+title: 如何：注册和配置服务标记
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e5c57927a455b5d2a253becac35b1bf9033933f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务标记
 在 COM 应用程序中使用具有类型化协定的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务标记之前，必须先向 COM 注册所需的属性化类型，然后为 COM 应用程序和标记配置所需的绑定配置。  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
     [assembly: ComVisible(true)]  
     ```  
   
-3.  将托管的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端编译为强名称程序集。 这要求使用加密密钥对进行签名。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][为程序集具有强名称签名](http://go.microsoft.com/fwlink/?LinkId=94874).NET 开发人员指南中。  
+3.  将托管的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端编译为强名称程序集。 这要求使用加密密钥对进行签名。 有关详细信息，请参阅[为程序集使用强名称签名](http://go.microsoft.com/fwlink/?LinkId=94874).NET 开发人员指南中。  
   
 4.  使用带有 `/tlb` 选项的程序集注册 (Regasm.exe) 工具向 COM 注册程序集中的类型。  
   

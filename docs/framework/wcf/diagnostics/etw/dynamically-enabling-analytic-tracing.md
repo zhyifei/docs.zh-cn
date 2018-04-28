@@ -1,35 +1,37 @@
 ---
-title: "动态启用分析跟踪"
-ms.custom: 
+title: 动态启用分析跟踪
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18dda3f63a12a9f9a2320f413137943e5864ad27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d070c66eebbf1a067254c38c6e5bfc7f40742863
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>动态启用分析跟踪
 通过 Windows 操作系统附带的工具，可以使用 Windows 事件跟踪 (ETW) 动态启用或禁用跟踪。 对于所有 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服务，可以动态启用和禁用分析跟踪，而无需修改应用程序的 Web.config 文件或重新启动服务。 这样，发出跟踪事件的应用程序就可以保持原样。  
   
  可以采用类似方式配置[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 跟踪选项。 例如，可以将严重性级别从 **Error** 更改为 **Information** 而不影响应用程序。 可以使用以下工具来实现此功能：  
   
--   **Logman** – 一个命令行工具，用于配置、控制和查询跟踪数据。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Logman 创建跟踪](http://go.microsoft.com/fwlink/?LinkId=165426)和[Logman 更新跟踪](http://go.microsoft.com/fwlink/?LinkId=165427)。  
+-   **Logman** – 一个命令行工具，用于配置、控制和查询跟踪数据。 有关详细信息，请参阅[Logman 创建跟踪](http://go.microsoft.com/fwlink/?LinkId=165426)和[Logman 更新跟踪](http://go.microsoft.com/fwlink/?LinkId=165427)。  
   
--   **EventViewer** - Windows 图形管理工具，用于查看跟踪的结果。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][WCF 服务和 Windows 事件跟踪](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)和[事件查看器](http://go.microsoft.com/fwlink/?LinkId=165428)。  
+-   **EventViewer** - Windows 图形管理工具，用于查看跟踪的结果。 有关详细信息，请参阅[WCF 服务和 Windows 事件跟踪](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)和[事件查看器](http://go.microsoft.com/fwlink/?LinkId=165428)。  
   
--   **Perfmon** – Windows 图形管理工具，它使用计数器监视跟踪计数器以及跟踪对性能的影响。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][手动创建数据收集器集](http://go.microsoft.com/fwlink/?LinkId=165429)。  
+-   **Perfmon** – Windows 图形管理工具，它使用计数器监视跟踪计数器以及跟踪对性能的影响。 有关详细信息，请参阅[数据收集器设置手动创建](http://go.microsoft.com/fwlink/?LinkId=165429)。  
   
 ### <a name="keywords"></a>关键字  
  使用 <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> 类时，通常按严重性级别（如 Error、Warning 和 Information）筛选 .NET Framework 跟踪消息。 ETW 支持严重性级别概念，但引入了使用关键字的新型灵活筛选器机制。 关键字为任意文本值，用于使跟踪事件提供有关事件含义的附加上下文。  

@@ -1,24 +1,26 @@
 ---
-title: "消息传递活动"
-ms.custom: 
+title: 消息传递活动
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ba5d49f357fe1cf56a45f733e91c1dbc2208736
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="messaging-activities"></a>消息传递活动
 消息传递活动使工作流能够发送和接收 WCF 消息。 通过将消息传递活动添加到工作流，您可以对任意复杂的消息交换模式 (MEP) 进行建模。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="messaging-activities-and-message-exchange-patterns"></a>消息传递活动和消息交换模式  
  数据报 MEP 涉及发送消息的客户端和接收消息的服务。 如果客户端为工作流，则使用 <xref:System.ServiceModel.Activities.Send> 活动发送消息。 若要接收工作流中的该消息，请使用 <xref:System.ServiceModel.Activities.Receive> 活动。 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 活动各自具有一个名为 `Content` 的属性。 此属性包含要发送或接收的数据。 实现请求-响应 MEP 时，客户端和服务都使用活动对。 客户端使用 <xref:System.ServiceModel.Activities.Send> 活动发送消息并使用 <xref:System.ServiceModel.Activities.ReceiveReply> 活动接收来自服务的响应。 这两个活动通过 <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> 属性相互关联。 该属性设置为发送原始消息的 <xref:System.ServiceModel.Activities.Send> 活动。 服务还使用一对关联的活动：<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply>。 这两个活动通过 <xref:System.ServiceModel.Activities.SendReply.Request%2A> 属性关联。 该属性设置为接收原始消息的 <xref:System.ServiceModel.Activities.Receive> 活动。 <xref:System.ServiceModel.Activities.ReceiveReply> 和 <xref:System.ServiceModel.Activities.SendReply> 活动，与 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 一样，可用于发送 <xref:System.ServiceModel.Channels.Message> 实例或消息协定类型。  
   
- 由于工作流具有长时间运行的性质，因此同时支持长时间运行的对话对于双工通信模式非常重要。 若要支持长时间运行的对话，启动对话的客户端必须提供适当的机会，使服务在以后数据变为可用时能够回拨客户端。 例如，已提交采购订单请求等待经理批准，但该请求可能一天、一周甚至一年也未被处理；管理采购订单批准的工作流必须知道在请求得到批准后恢复。 使用相关性的工作流中支持此双工通信模式。 若要实现双工模式，请使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 活动。 上<xref:System.ServiceModel.Activities.Receive>活动，初始化相关性使用的特殊键值<!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`。 在 <xref:System.ServiceModel.Activities.Send> 活动上，将该相关性句柄设置为 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 属性值。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][持久双工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)。  
+ 由于工作流具有长时间运行的性质，因此同时支持长时间运行的对话对于双工通信模式非常重要。 若要支持长时间运行的对话，启动对话的客户端必须提供适当的机会，使服务在以后数据变为可用时能够回拨客户端。 例如，已提交采购订单请求等待经理批准，但该请求可能一天、一周甚至一年也未被处理；管理采购订单批准的工作流必须知道在请求得到批准后恢复。 使用相关性的工作流中支持此双工通信模式。 若要实现双工模式，请使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 活动。 上<xref:System.ServiceModel.Activities.Receive>活动，初始化相关性使用的特殊键值<!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`。 在 <xref:System.ServiceModel.Activities.Send> 活动上，将该相关性句柄设置为 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 属性值。 有关详细信息，请参阅[持久双工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)。  
   
 > [!NOTE]
 >  使用回调相关性 （"持久双工"） 的双工的工作流实现适用于长时间运行的对话。 这与具有回调协定的 WCF 双工不同，在 WCF 双工中，对话是短时间运行的（通道的生存期）。  
@@ -112,7 +114,7 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>消息传递活动和事务  
- 调用工作流服务时，您可能希望将事务流动到服务操作中。 为此，请将 <xref:System.ServiceModel.Activities.Receive> 活动放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动中。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动包含 `Receive` 活动和主体。 流向服务的事务在执行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 的主体的整个过程中保持为环境事务。 事务在执行完主体后完成。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工作流和事务，请参阅[工作流事务](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。  
+ 调用工作流服务时，您可能希望将事务流动到服务操作中。 为此，请将 <xref:System.ServiceModel.Activities.Receive> 活动放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动中。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活动包含 `Receive` 活动和主体。 流向服务的事务在执行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 的主体的整个过程中保持为环境事务。 事务在执行完主体后完成。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 工作流和事务，请参阅[工作流事务](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何发送和接收工作流服务中的错误](http://go.microsoft.com/fwlink/?LinkId=189151)  

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ff361e89693f53c8d1baedcac749cf5178086e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: df3e207cdca3a40bb0cfaff1890f6e010bd0790c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-service-contracts"></a>设计服务协定
 本主题介绍什么是服务协定、如何定义服务协定、可用的操作（以及基础消息交换的含义）、使用的数据类型以及可帮助您设计能满足方案需求的操作的其他问题。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/26/2018
   
  使用接口创建服务协定的示例，请参阅[如何： 使用协定接口创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)。  
   
- 不过，您可以使用类来定义服务协定，并同时实现该协定。 可以通过直接向类和类上的方法分别应用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 来创建服务，这种方法的优点是快速且简便。 缺点是托管类不支持多个继承，因此，一次只能实现一个服务协定。 此外，对类或方法签名的任何修改都将修改该服务的公开协定，这可以防止未进行修改的客户端使用您的服务。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
+ 不过，您可以使用类来定义服务协定，并同时实现该协定。 可以通过直接向类和类上的方法分别应用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 来创建服务，这种方法的优点是快速且简便。 缺点是托管类不支持多个继承，因此，一次只能实现一个服务协定。 此外，对类或方法签名的任何修改都将修改该服务的公开协定，这可以防止未进行修改的客户端使用您的服务。 有关详细信息，请参阅[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
  有关使用类来创建服务协定并实现在同一时间的示例，请参阅[如何： 使用约定类创建服务](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)。  
   
@@ -193,7 +193,7 @@ End Interface
  保护级别是一个值，它指定了支持服务的消息（或消息部分）是进行签名、签名并加密，还是未经签名或加密即发送。 可以在以下多个范围设置保护级别：服务级别、针对特定操作、针对该操作内的消息或消息部分。 在一个范围设置的值会成为比该范围小的范围的默认值（除非显式重写该值）。 如果绑定配置无法提供协定中要求的最小保护级别，则将引发异常。 如果未在协定上显式设置保护级别值，并且绑定具有消息安全，则绑定配置将控制所有消息的保护级别。 这是默认行为。  
   
 > [!IMPORTANT]
->  确定是否将协定的各种范围显式设置为小于 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> 的完全保护级别的过程，通常就是牺牲部分程度的安全性来换取改善性能的过程。 在这种情况下，您的决策必须围绕您的操作以及它们所交换的数据值进行。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [保护服务](../../../docs/framework/wcf/securing-services.md)。  
+>  确定是否将协定的各种范围显式设置为小于 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> 的完全保护级别的过程，通常就是牺牲部分程度的安全性来换取改善性能的过程。 在这种情况下，您的决策必须围绕您的操作以及它们所交换的数据值进行。 有关详细信息，请参阅[服务的安全](../../../docs/framework/wcf/securing-services.md)。  
   
  例如，下面的代码示例不会设置协定的 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 或 <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> 属性。  
   
@@ -273,7 +273,7 @@ End Interface
  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 保护级别和如何使用它们，请参阅[了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 安全，请参阅[服务的安全](../../../docs/framework/wcf/securing-services.md)。  
   
 ##### <a name="other-operation-signature-requirements"></a>其他操作签名需求  
- 某些应用程序功能要求特定种类的操作签名。 例如，<xref:System.ServiceModel.NetMsmqBinding> 绑定支持持久性服务和客户端，即应用程序可以在通信期间重新启动，并在其停止的位置处拾取，不会遗漏任何消息。 ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 中的队列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)但是，持久性操作只能接受一个 `in` 参数，并且没有返回值。  
+ 某些应用程序功能要求特定种类的操作签名。 例如，<xref:System.ServiceModel.NetMsmqBinding> 绑定支持持久性服务和客户端，即应用程序可以在通信期间重新启动，并在其停止的位置处拾取，不会遗漏任何消息。 (有关详细信息，请参阅[WCF 中的队列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)但是，持久性操作只能接受一个 `in` 参数，并且没有返回值。  
   
  另一个示例是在操作中使用 <xref:System.IO.Stream> 类型。 由于 <xref:System.IO.Stream> 参数包括整个消息正文，如果输入或输出（也就是 `ref` 参数、`out` 参数或返回值）的类型为 <xref:System.IO.Stream>，则它必须是在操作中指定的唯一输入或输出。 此外，参数或返回类型必须是 <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> 或 <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 流，请参阅[大型数据和流式处理](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   

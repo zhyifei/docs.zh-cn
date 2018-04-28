@@ -1,12 +1,13 @@
 ---
-title: "联合"
-ms.custom: 
+title: 联合
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="federation"></a>联合
 本主题概要介绍联合安全概念。 本主题还说明 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 对部署联合安全体系结构的支持。 有关演示联合身份验证的示例应用，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
@@ -71,14 +73,14 @@ ms.lasthandoff: 12/22/2017
   
  在联合安全体系结构中，组织 A 中的用户知道，如果他们想访问组织 B 中的 Web 服务，就必须提供组织 B 的 STS 颁发的有效安全令牌，此令牌对用户进行身份验证并授权他们访问特定服务。  
   
- 在与 STS B 联系时，用户可通过与 STS 关联的策略获得另一级间接寻址。 用户必须提供 STS A（即客户端信任领域）颁发的有效安全令牌，STS B 才会向他们颁发安全令牌。 这是两个组织之间建立的信任关系的必然结果，同时暗示着组织 B 不必管理组织 A 中用户的标识。实际上，STS B 通常具有空的 `issuerAddress` 和 `issuerMetadataAddress`。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。 在这种情况下，客户端咨询本地策略以找到 STS a。此配置称为*主领域联合*，并且可以更好地扩展由于 STS B 不必保留有关 STS a。 信息  
+ 在与 STS B 联系时，用户可通过与 STS 关联的策略获得另一级间接寻址。 用户必须提供 STS A（即客户端信任领域）颁发的有效安全令牌，STS B 才会向他们颁发安全令牌。 这是两个组织之间建立的信任关系的必然结果，同时暗示着组织 B 不必管理组织 A 中用户的标识。实际上，STS B 通常具有空的 `issuerAddress` 和 `issuerMetadataAddress`。 有关详细信息，请参阅[如何： 配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。 在这种情况下，客户端咨询本地策略以找到 STS a。此配置称为*主领域联合*，并且可以更好地扩展由于 STS B 不必保留有关 STS a。 信息  
   
  然后，用户可与组织 A 的 STS 联系并通过提供他们通常用于访问组织 A 中任何其他资源的身份验证凭据获取安全令牌。这也会缓解用户必须保留多组凭据或在多个服务站点使用同组凭据的问题。  
   
  用户从 STS A 获取安全令牌后，他们可以将该令牌提供给 STS B。组织 B 将继续对用户的请求执行身份验证并从其自己的安全令牌集中向用户颁发安全令牌。 之后，用户可以将他们的令牌提供给组织 B 的资源并访问服务。  
   
 ## <a name="support-for-federated-security-in-wcf"></a>WCF 中的联合安全支持  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供对部署联合的安全体系结构通过的关守支持[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供对部署联合的安全体系结构通过的关守支持[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)元素提供安全、 可靠且可互操作的绑定需要使用 HTTP 作为请求-答复通信样式的底层传输机制采用文本和 XML 作为编码的联网格式。  
   
@@ -159,7 +161,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  对于 `MyService` 要求的声明，有一细微点应加以注意。 第二个图指示 `MyService` 需要具有 `accessAuthorized` 声明的 SAML 令牌。 更确切地说，这指定了 `MyService` 需要的声明类型。 此声明类型的完全限定名称为 http://tempuri.org:accessAuthorized（连同关联的命名空间），用于服务配置文件中。 此声明的值指示存在此声明并假定 STS B 将此值设置为 `true`。  
+>  对于 `MyService` 要求的声明，有一细微点应加以注意。 第二个图指示 `MyService` 需要具有 `accessAuthorized` 声明的 SAML 令牌。 更确切地说，这指定了 `MyService` 需要的声明类型。 此声明类型的完全限定名称是http://tempuri.org:accessAuthorized（以及关联的命名空间），用于在服务配置文件中。 此声明的值指示存在此声明并假定 STS B 将此值设置为 `true`。  
   
  在运行时，此策略作为 `MyServiceOperationRequirement` 一部分由 `MyService` 类强制实现。  
   
@@ -218,7 +220,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  另外，`userAuthenticated` 声明是 STS B 要求的声明类型。此声明类型的完全限定名称为 http://tempuri.org:userAuthenticated（连同关联的命名空间），用于 STS 配置文件中。 此声明的值指示存在此声明并假定 STS A 将此值设置为 `true`。  
+>  同样，`userAuthenticated`声明是 STS B 所需要的声明类型此声明类型的完全限定名称是http://tempuri.org:userAuthenticated（以及关联的命名空间），用于在 STS 配置文件中。 此声明的值指示存在此声明并假定 STS A 将此值设置为 `true`。  
   
  在运行时，此策略作为 STS B 的一部分由 `STS_B_OperationRequirement` 类强制实现。  
   
@@ -297,7 +299,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![联合身份验证](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  联合安全可以清晰划分责任范围并有助于生成安全、可伸缩的服务体系结构。 作为一种用于生成和部署分布式应用程序的平台，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 为实现联合安全提供本机支持。  
   
 ## <a name="see-also"></a>请参阅  

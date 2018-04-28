@@ -1,24 +1,26 @@
 ---
-title: "为 ASP.NET AJAX 创建 WCF 服务"
-ms.custom: 
+title: 为 ASP.NET AJAX 创建 WCF 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2e3ba1d360c55f10cde9447b3961d84ffe1cdb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64ab5c6bf4b555504562dbf68a60d032743df865
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>为 ASP.NET AJAX 创建 WCF 服务
 使用 Microsoft ASP.NET AJAX，可以通过快速响应的熟悉用户界面元素快速创建包括丰富用户体验的网页。 ASP.NET AJAX 提供了并入跨浏览器 ECMAScript (JavaScript) 和动态 HTML (DHTML) 技术的客户端脚本库，并将其与基于 ASP.NET 2.0 服务器的开发平台集成在一起。 通过使用 ASP.NET AJAX，可以改进用户体验和 Web 应用程序的效率。  
@@ -31,13 +33,13 @@ ms.lasthandoff: 12/22/2017
   
  如果未使用 Visual Studio 模板，则创建 ASP.NET AJAX 终结点有以下两种方法：  
   
--   使用动态主机激活（而不使用任何配置）创建终结点。 如果您不熟悉 WCF 配置系统，则这是最基本的方法。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 添加 ASP.NET AJAX 终结点而不使用配置](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
+-   使用动态主机激活（而不使用任何配置）创建终结点。 如果您不熟悉 WCF 配置系统，则这是最基本的方法。 有关详细信息，请参阅[如何： 添加 ASP.NET AJAX 终结点而不使用配置](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
   
--   使用配置将启用了 AJAX 的终结点添加到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。  
+-   使用配置将启用了 AJAX 的终结点添加到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 有关详细信息，请参阅[如何： 使用配置来添加 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。  
   
  Web 编程模型中所述[WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)可能的 ASP.NET AJAX 服务一起使用。 尤其是在下列情况下：  
   
--   可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性在 HTTP GET 和 HTTP POST 动词之间进行选择。 如果正确使用它们，则这可能会大大提高应用程序的性能。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 之间 HTTP POST 和 HTTP GET 请求进行选择 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)。  
+-   可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性在 HTTP GET 和 HTTP POST 动词之间进行选择。 如果正确使用它们，则这可能会大大提高应用程序的性能。 有关详细信息，请参阅[How to： 之间 HTTP POST 和 HTTP GET 请求进行选择 ASP.NET AJAX 终结点](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)。  
   
 -   可以使用 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 属性使服务返回 XML 数据而不是默认的 JavaScript 对象表示法 (JSON)。 使用 ASP.NET AJAX 框架执行此操作可导致 JavaScript 客户端接收 XML DOM 对象。  
   

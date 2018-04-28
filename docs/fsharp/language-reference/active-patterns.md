@@ -1,20 +1,17 @@
 ---
-title: "活动模式 (F#)"
-description: "了解如何使用活动模式可以定义将在 F # 编程语言的输入的数据的命名的分区。"
-keywords: "visual f#, f#, 函数编程"
+title: 活动模式 (F#)
+description: '了解如何使用活动模式可以定义将在 F # 编程语言的输入的数据的命名的分区。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 11a724ff-f9ff-4056-b5e0-87e9ed986f4a
-ms.openlocfilehash: 845184e6150cf0b93393038ca3d39f0e6d898a2e
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.openlocfilehash: 66e1e39c4822ec7262642d301ceb1deea17fcb8c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="active-patterns"></a>活动模式
 
@@ -134,7 +131,7 @@ Hello, random citizen!
 Hello, George!
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [match 表达式](match-expressions.md)

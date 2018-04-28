@@ -1,13 +1,13 @@
 ---
-title: "如何：使用传输安全和消息凭据"
-ms.custom: 
+title: 如何：使用传输安全和消息凭据
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>如何：使用传输安全和消息凭据
-同时使用传输凭据和消息凭据来保护服务，可以发挥 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全模式和消息安全模式的优点。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]设置安全模式，请参阅[如何： 将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
+同时使用传输凭据和消息凭据来保护服务，可以发挥 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全模式和消息安全模式的优点。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 设置安全模式，请参阅[如何： 将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
  在将安全模式设置为 `TransportWithMessageCredential` 时，传输会确定实际提供传输级安全的机制。 对于 HTTP，该机制为基于 HTTP 的安全套接字层 (SSL)（SSL over HTPP，或 HTTPS）；对于 TCP，该机制为 SSL over TCP 或 Windows。  
   
@@ -38,11 +38,11 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>使用 WSHttpBinding 和证书来获得传输安全（在代码中）  
   
-1.  使用 HttpCfg.exe 工具将 SSL 证书绑定到计算机上的某个端口。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+1.  使用 HttpCfg.exe 工具将 SSL 证书绑定到计算机上的某个端口。 有关详细信息，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 2.  创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并将 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 属性设置为 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
-3.  将 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 属性设置为适当的值。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)下面的代码使用 <xref:System.ServiceModel.MessageCredentialType.Certificate> 值。  
+3.  将 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 属性设置为适当的值。 (有关详细信息，请参阅[选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)下面的代码使用 <xref:System.ServiceModel.MessageCredentialType.Certificate> 值。  
   
 4.  用适当的基址创建 <xref:System.Uri> 类的一个实例。 请注意，该地址必须使用“HTTPS”方案，且必须包含计算机的实际名称以及 SSL 证书绑定到的端口号。 （也可以在配置中设置基址。）  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-use-the-wshttpbinding"></a>使用 WSHttpBinding  
   
-1.  使用绑定到某个端口的 SSL 证书配置计算机。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md))。 不需要设置 <`transport`> 使用此配置元素值。  
+1.  使用绑定到某个端口的 SSL 证书配置计算机。 (有关详细信息，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md))。 不需要设置 <`transport`> 使用此配置元素值。  
   
 2.  指定消息级安全的客户端凭据类型。 下面的示例设置`clientCredentialType`属性 <`message`> 元素`UserName`。  
   

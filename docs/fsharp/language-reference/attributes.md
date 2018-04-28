@@ -1,20 +1,17 @@
 ---
 title: 特性 (F#)
 description: '了解如何 F # 属性启用要应用到编程构造的元数据。'
-keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 95c001e6-3708-4d04-a850-d855f78eb51e
-ms.openlocfilehash: 88098e51d19a86f501c35abe3408524378f147b3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b8efc0cdc14e690bbc5c24456d0b1eaa3d55988e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="attributes"></a>特性
 
@@ -99,11 +96,11 @@ F # 中的特性可以应用于以下的编程构造： 函数、 方法、 程�
     <td>类型</td>
     <td>
         ```
-        [<type: StructLayout(Sequential)>] 键入 MyStruct = 结构 x： 字节 y: int 结束```
+        [<type: StructLayout(Sequential)>] 键入 MyStruct = 结构 x： 字节 y: int 结束 ```
     </td> 
   </tr>
 </table>
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [F# 语言参考](index.md)

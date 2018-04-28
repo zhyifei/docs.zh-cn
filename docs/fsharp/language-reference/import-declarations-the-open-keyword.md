@@ -1,20 +1,17 @@
 ---
-title: "导入声明：open 关键字 (F#)"
-description: "了解有关 F # 导入声明和如何指定模块或命名空间可以无需使用完全限定的名称引用其元素。"
-keywords: "visual f#, f#, 函数编程"
+title: 导入声明：open 关键字 (F#)
+description: '了解有关 F # 导入声明和如何指定模块或命名空间可以无需使用完全限定的名称引用其元素。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 1e98e48c-52e9-4314-8954-85d5583125f0
-ms.openlocfilehash: a6d79bed3dd202657d06956edf9499a9b21a5f03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ddbc1086e2adbe8dae408f4d39fd5af888d7fd5e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="import-declarations-the-open-keyword"></a>导入声明：`open`关键字
 
@@ -73,7 +70,7 @@ printfn "%A" empty
 可以指定某些模块、 记录或联合类型`RequireQualifiedAccess`属性。 在引用这些模块、 记录或联合中的元素时，你必须使用无论是否包括导入声明限定的名称。 如果你上使用此特性有策略地进行定义常用的类型使用的名称，帮助避免名称冲突，从而使代码更具弹性到库中的更改。 有关详细信息，请参阅[Core.RequireQualifiedAccessAttribute 类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [# 语言参考](index.md)
 
 [命名空间](namespaces.md)

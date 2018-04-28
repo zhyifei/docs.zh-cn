@@ -1,24 +1,26 @@
 ---
-title: "支持的部署方案"
-ms.custom: 
+title: 支持的部署方案
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3e6039567e4fad7fe4c014665dd3ae0c3082a9d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 82fa7e1b9619502dfdd27d2de29a502bec0af4f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="supported-deployment-scenarios"></a>支持的部署方案
 可在部分受信任的应用程序中使用的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 功能子集旨在满足使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的某些（而非全部）方案的要求。 在服务器上， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可满足 Internet 规模的共享宿主提供程序的要求，出于安全原因，这些提供程序在 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 中以“中等信任”权限集运行第三方应用程序。 在客户端上， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 部分信任支持旨在满足某些部署技术（例如 [ClickOnce Deployment](http://go.microsoft.com/fwlink/?LinkId=83712) （ClickOnce 部署）或 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的 XAML 浏览器应用程序技术）的要求，通过这些部署技术可以从不受信任的网站对桌面应用程序进行无缝和安全地部署。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  有关这些权限集支持的功能的详细信息，请参阅 [Partial Trust Feature Compatibility](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md)。  
   
 ## <a name="partial-trust-on-the-server"></a>服务器上的部分信任  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序宿主服务的许多商业提供程序要求在其服务器上的应用程序以 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 中等信任权限集来运行。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务可以在这些环境中运行，前提是它们使用<xref:System.ServiceModel.BasicHttpBinding>、 <xref:System.ServiceModel.WebHttpBinding>，或 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 使用传输级安全。  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 应用程序宿主服务的许多商业提供程序要求在其服务器上的应用程序以 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 中等信任权限集来运行。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可以在这些环境中运行，前提是它们使用<xref:System.ServiceModel.BasicHttpBinding>、 <xref:System.ServiceModel.WebHttpBinding>，或 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 使用传输级安全。  
   
  在中等信任宿主环境中运行的[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务还可以充当中间层服务，将消息发送到其他服务器以响应客户端请求。 如果宿主环境已授予应用程序适当的 <xref:System.Net.WebPermission> 以向所需服务器发出出站请求，则支持服务器上的中间层方案。  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  工作流服务需要完全信任权限并且不能在部分受信任的应用程序中使用。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 使用 ASP.NET 2.0 中的中等信任](http://go.microsoft.com/fwlink/?LinkId=84603)。  
+ 有关详细信息，请参阅[如何： 在 ASP.NET 2.0 中的使用中等信任](http://go.microsoft.com/fwlink/?LinkId=84603)。  
   
 ## <a name="partial-trust-on-the-client"></a>客户端上的部分信任  
  在从不受信任的 Internet 网站上下载和运行代码时必须采用某些安全预防措施。 [ClickOnce Deployment](http://go.microsoft.com/fwlink/?LinkId=83712) （ClickOnce 部署）和 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]的 XAML 浏览器应用程序 (XBAP) 技术都可以使用部分信任以对不受信任的代码授予受限权限（Internet 区域）。  

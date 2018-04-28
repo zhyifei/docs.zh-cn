@@ -1,24 +1,26 @@
 ---
-title: "传输：WSE 3.0 TCP 互操作性"
-ms.custom: 
+title: 传输：WSE 3.0 TCP 互操作性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>传输：WSE 3.0 TCP 互操作性
 WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定义 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 传输实现， 还演示如何通过网络，使用通道层的扩展性与已经过部署的现有系统进行交互。 下列步骤演示如何生成此自定义 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 传输：  
@@ -31,7 +33,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定
   
 4.  请确保将特定于网络的任何异常正常化为 <xref:System.ServiceModel.CommunicationException> 的相应派生类。  
   
-5.  添加一个用来向通道堆栈中添加自定义传输的绑定元素。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][添加绑定元素。]  
+5.  添加一个用来向通道堆栈中添加自定义传输的绑定元素。 有关详细信息，请参阅 [将添加一个绑定元素]。  
   
 ## <a name="creating-iduplexsessionchannel"></a>创建 IDuplexSessionChannel  
  编写 WSE 3.0 TCP 互操作性传输的第一步是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的顶部创建 <xref:System.Net.Sockets.Socket> 的实现。 `WseTcpDuplexSessionChannel` 派生自 <xref:System.ServiceModel.Channels.ChannelBase>。 消息的发送逻辑主要由以下两个部分组成：(1) 将消息编码为字节；(2) 对这些字节进行组帧并通过网络发送它们。  
@@ -63,7 +65,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定
 ## <a name="channel-factory"></a>通道工厂  
  编写 TCP 传输的下一步是为客户端通道创建 <xref:System.ServiceModel.Channels.IChannelFactory> 的实现。  
   
--   `WseTcpChannelFactory`派生自<xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >。 它是一个用来重写 `OnCreateChannel` 以生成客户端通道的工厂。  
+-   `WseTcpChannelFactory` 派生自<xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >。 它是一个用来重写 `OnCreateChannel` 以生成客户端通道的工厂。  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -73,7 +75,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel`将逻辑添加到基`WseTcpDuplexSessionChannel`以连接到 TCP 服务器在`channel.Open`时间。 首先，主机名解析为 IP 地址，如下面的代码所示。  
+-   `ClientWseTcpDuplexSessionChannel` 将逻辑添加到基`WseTcpDuplexSessionChannel`以连接到 TCP 服务器在`channel.Open`时间。 首先，主机名解析为 IP 地址，如下面的代码所示。  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -90,7 +92,7 @@ WSE 3.0 TCP 互操作性传输示例演示如何将 TCP 双工会话作为自定
 ## <a name="channel-listener"></a>通道侦听器  
  编写 TCP 传输的下一步是创建用来接受服务器通道的 <xref:System.ServiceModel.Channels.IChannelListener> 实现。  
   
--   `WseTcpChannelListener`派生自<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 和替代 [Begin] Open 和 On [Begin] Close 以控制其侦听套接字的生存期。 在 OnOpen 中，需要创建一个用来侦听 IP_ANY 的套接字。 在更高级的实现中，可以再创建一个同时侦听 IPv6 的套接字。 这些高级实现还允许在主机名中指定 IP 地址。  
+-   `WseTcpChannelListener` 派生自<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 和替代 [Begin] Open 和 On [Begin] Close 以控制其侦听套接字的生存期。 在 OnOpen 中，需要创建一个用来侦听 IP_ANY 的套接字。 在更高级的实现中，可以再创建一个同时侦听 IPv6 的套接字。 这些高级实现还允许在主机名中指定 IP 地址。  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   

@@ -1,28 +1,30 @@
 ---
-title: "Windows Communication Foundation 事务概述"
-ms.custom: 
+title: Windows Communication Foundation 事务概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb90d0f93e9bdf7dd9779ffd5d4b1288ba56e7a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 事务概述
 事务可提供一种分组方法，将一组操作分为单个不可分的执行单元。 事务是指具有下列属性的操作集合：  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 实现对 WS-AtomicTransaction (WS-AT) 协议的支持，该协议使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序能够将事务传输到可互操作应用程序中，例如使用第三方技术生成的可互操作 Web 服务。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还实现对 OLE 事务协议的支持，可以在无需互操作功能以便实现事务流式处理的情况下使用该协议。  
   
- 您可以使用应用程序配置文件来配置绑定以启用或禁用事务流，以及设置有关绑定的所需事务协定。 此外，你可以使用配置文件在服务级别设置事务超时值。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][启用事务流](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
+ 您可以使用应用程序配置文件来配置绑定以启用或禁用事务流，以及设置有关绑定的所需事务协定。 此外，你可以使用配置文件在服务级别设置事务超时值。 有关详细信息，请参阅[启用事务流](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
   
  <xref:System.ServiceModel> 命名空间中的事务属性允许您进行以下操作：  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
 -   使用协定方法上的 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 属性来要求、允许或拒绝事务流。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel 事务属性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
+ 有关详细信息，请参阅[ServiceModel 事务属性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [ServiceModel 事务特性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  

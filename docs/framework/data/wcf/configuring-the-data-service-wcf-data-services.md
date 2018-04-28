@@ -1,13 +1,13 @@
 ---
-title: "配置数据服务（WCF 数据服务）"
-ms.custom: 
+title: 配置数据服务（WCF 数据服务）
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9dd82926385ee97b05694d954b94d7821a1e638
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c3c82e1e4460e82dd7e6bd88771eae96f132c8e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>配置数据服务（WCF 数据服务）
-与[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，你可以创建公开的数据服务[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 这些源中的数据可以来自各种数据源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用数据提供程序公开此类数据作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。 这些提供程序包括一个[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序、一个反射提供程序和一组自定义数据服务提供程序接口。 提供程序实现为服务定义数据模型。 有关详细信息，请参阅[数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  
+与[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，你可以创建公开的数据服务[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 这些源中的数据可以来自各种数据源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用数据提供程序公开此类数据作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。 这些提供程序包括一个[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序、一个反射提供程序和一组自定义数据服务提供程序接口。 提供程序实现为服务定义数据模型。 有关详细信息，请参阅[数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  
   
  在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]中，数据服务是一个从 <xref:System.Data.Services.DataService%601> 类继承的类，而数据服务的类型是数据模型的实体容器。 此实体容器具有一个或多个属性，这些属性返回用于访问数据模型中的实体集的 <xref:System.Linq.IQueryable%601>。  
   
@@ -49,10 +49,10 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|用于指定在删除两个实体之间的关系链接时是否对相关实体调用注册的变更侦听器。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|用于限制单个批处理中允许的变更集和查询操作的数量。 有关详细信息，请参阅[OData： 批处理](http://go.microsoft.com/fwlink/?LinkId=185602)和[批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|用于限制单个变更集中可包含的变更的数量。 有关详细信息，请参阅[如何： 启用分页的数据服务结果](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的数量。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]请参阅[OData: URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)和[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的图深度。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]请参阅[OData: URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)和[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的数量。 有关详细信息，请参阅[OData: URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)和[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的图深度。 有关详细信息，请参阅[OData: URI 约定](http://go.microsoft.com/fwlink/?LinkId=185564)和[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|用于限制要插入的（即单个 POST 请求中可包含的）实体数量。|  
-|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|定义数据服务所使用的 Atom 协议的版本。 如果 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的值设置为小于 <xref:System.Data.Services.Common.DataServiceProtocolVersion> 的最大值，则访问该数据服务的客户端不能使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的最新功能。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据服务版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|定义数据服务所使用的 Atom 协议的版本。 如果 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的值设置为小于 <xref:System.Data.Services.Common.DataServiceProtocolVersion> 的最大值，则访问该数据服务的客户端不能使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的最新功能。 有关详细信息，请参阅[数据服务版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|用于限制响应的大小，方法是限制以数据馈送形式返回的每个实体集中实体的数量。|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|向可由数据服务识别的类型列表中添加数据类型。|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|为可用于数据服务的实体集资源设置访问权限。 通过为名称参数提供星号值 (`*`)，可将对其余所有实体集的访问权限设置为同一级别。 建议您将对实体集的访问权限设置为能够提供客户端应用程序访问数据服务资源所需的最低访问权限。 有关更多信息，请参见 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。 有关给定 URI 和 HTTP 操作所需的最低访问权限的示例，请参阅中的表[最低资源访问要求](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md#accessRequirements)部分。|  
@@ -67,8 +67,8 @@ ms.lasthandoff: 01/19/2018
 |路径/操作|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|<xref:System.Data.Services.EntitySetRights.WriteAppend>|不支持|  
-|`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>|不可用|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge> 或 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> －和－<br /><br /> `Orders``:`和<xref:System.Data.Services.EntitySetRights.WriteAppend>|不支持|  
+|`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>|n/a|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
+|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge> 或 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> －和－<br /><br /> `Orders` `:` 和 <xref:System.Data.Services.EntitySetRights.WriteAppend>|不支持|  
 |`/Customers('ALFKI')/Orders(10643)`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>|不支持|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Orders(10643)/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>；<br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend><br /><br /> －和－<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.WriteAppend> 和 <xref:System.Data.Services.EntitySetRights.ReadSingle>|不支持|  
 |`/Customers('ALFKI')/$links/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge> 或 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|不支持|  

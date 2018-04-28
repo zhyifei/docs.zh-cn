@@ -1,13 +1,13 @@
 ---
-title: "服务标识和身份验证"
-ms.custom: 
+title: 服务标识和身份验证
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: a0229ce5c6b7081ae493af22b0daeee444736783
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="service-identity-and-authentication"></a>服务标识和身份验证
 服务的*终结点标识*是从 Web 服务描述语言 (wsdl) 生成的值。 此值可传播到任何客户端，用于对服务进行身份验证。 在客户端启动与终结点的通信并且服务向客户端验证自己的身份之后，客户端将终结点标识值与终结点身份验证过程返回的实际值进行比较。 如果二者匹配，则客户端确信其已与预期的服务终结点联系。 此功能，以防*网络钓鱼*通过防止客户端重定向到由恶意服务承载的终结点。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/22/2018
  <xref:System.ServiceModel.EndpointAddress.Identity%2A> 类的 <xref:System.ServiceModel.EndpointAddress> 属性表示由客户端调用的服务的标识。 服务在其元数据中发布 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 当客户端开发人员运行时[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对服务终结点，则生成的配置包含的值的服务的<xref:System.ServiceModel.EndpointAddress.Identity%2A>属性。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基础结构（如果已进行安全配置）将验证服务是否处理指定的标识。  
   
 > [!IMPORTANT]
->  元数据包含服务的预期标识，因此建议以安全方式公开服务元数据，例如，通过创建服务的 HTTPS 终结点。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [如何： 保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
+>  元数据包含服务的预期标识，因此建议以安全方式公开服务元数据，例如，通过创建服务的 HTTPS 终结点。 有关详细信息，请参阅[如何： 保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
   
 ## <a name="identity-types"></a>标识类型  
  一种服务可以提供六种类型的标识。 每种标识类型对应于一个可以包含在配置中的 `<identity>` 元素内的元素。 使用的类型取决于方案和服务的安全要求。 下表描述每种标识类型。  

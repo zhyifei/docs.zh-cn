@@ -1,20 +1,17 @@
 ---
-title: "入口点 (F#)"
-description: "了解如何设置为正式开始执行的可执行文件作为编译的 F # 程序的入口点。"
-keywords: "visual f#, f#, 函数编程"
+title: 入口点 (F#)
+description: '了解如何设置为正式开始执行的可执行文件作为编译的 F # 程序的入口点。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 91455443-ff9d-4510-a7e9-1560bdcd0bb0
-ms.openlocfilehash: 685fd4da67119aa5fcaaffd142a0a17c8f5dc7f6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42e5fe7f85285f990ef92e9791ed5bdfacb85059
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="entry-point"></a>入口点
 
@@ -49,7 +46,7 @@ Arguments passed to function : [|"1"; "2"; "3"|]
 当程序不具有**入口点**显式指示入口点，最后一个文件中的顶级绑定要编译的属性用作入口点。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [函数](index.md)
 
 [let 绑定](let-bindings.md)

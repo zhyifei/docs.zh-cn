@@ -1,20 +1,17 @@
 ---
-title: "类型提供程序疑难解答"
-description: "发现问题的最有可能，若要在 F # 中使用类型提供程序时遇到的潜在的解决方案。"
-keywords: "visual f#, f#, 函数编程"
+title: 类型提供程序疑难解答
+description: '发现问题的最有可能，若要在 F # 中使用类型提供程序时遇到的潜在的解决方案。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 44533045-9862-43c5-81d9-3e05157e975a
-ms.openlocfilehash: 2b54454d7950dfdd6512d849fd739f505ef3317d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e7374a051ca63e003288702c6d882e72d77d71e8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-type-providers"></a>类型提供程序疑难解答
 
@@ -33,5 +30,5 @@ ms.lasthandoff: 10/18/2017
 |**不是有效的凭据**。 您必须具有有效权限的数据源或 web 服务。|对于 SQL 连接，用户名和连接字符串或配置文件中指定的密码必须是有效的数据库。 如果使用 Windows 身份验证，你必须具有对数据库的访问。 数据库管理员可以标识所需的权限对每个数据库和数据库中的每个元素的访问。<br /><br />对于 web 服务或数据服务，你必须具有相应凭据。 大多数类型提供程序提供 DataContext 对象，它包含你可以使用相应的用户名和访问密钥设置的凭据属性。|
 |**不是有效的路径**。 文件的路径无效。|验证是否路径正确无误，并且该文件存在。 此外，你必须相应地 quote 路径中的任何 backlashes 或使用原义字符串或三引号字符串。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [类型提供程序](index.md)

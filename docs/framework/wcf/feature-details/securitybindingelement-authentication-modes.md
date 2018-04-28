@@ -1,27 +1,29 @@
 ---
-title: "SecurityBindingElement 身份验证模式"
-ms.custom: 
+title: SecurityBindingElement 身份验证模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 05b44d9972a393b36a97fd5afcb6581229332df9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ca854d6b0431b5fe4972972d9d39de934f64b4d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 身份验证模式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了几种供客户端和服务互相进行身份验证的模式。 您可以通过使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上的静态方法或通过配置为这些身份验证模式创建安全绑定元素。 本主题简要说明 18 种身份验证模式。  
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  使用绑定元素创建自定义绑定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+3.  使用绑定元素创建自定义绑定。 有关详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="mode-descriptions"></a>模式说明  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 12/22/2017
  在此身份验证模式下，客户端使用 Kerberos 票证向服务进行身份验证。 该票证还提供服务器身份验证。 安全绑定元素是由 `SymmetricSecurityBindingElement` 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>。 或者，将 `authenticationMode` 属性设置为 `Kerberos`。  
   
 > [!NOTE]
->  若要使用此身份验证模式，服务帐户必须与服务主体名称 (SPN) 关联。 为此，请在 NETWORK SERVICE 帐户或 LOCAL SYSTEM 帐户下运行服务。 也可以使用 SetSpn.exe 工具为服务帐户创建一个 SPN。 在任一情况下，客户端必须使用正确的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素，或通过使用<xref:System.ServiceModel.EndpointAddress>构造函数。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+>  若要使用此身份验证模式，服务帐户必须与服务主体名称 (SPN) 关联。 为此，请在 NETWORK SERVICE 帐户或 LOCAL SYSTEM 帐户下运行服务。 也可以使用 SetSpn.exe 工具为服务帐户创建一个 SPN。 在任一情况下，客户端必须使用正确的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素，或通过使用<xref:System.ServiceModel.EndpointAddress>构造函数。 有关详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 > [!NOTE]
 >  当使用 `Kerberos` 身份验证模式时，不支持 <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> 和 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 模拟级别。  
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
  在此身份验证模式下，客户端使用 Kerberos 票证向服务进行身份验证。 Kerberos 令牌作为认可的支持令牌（即签署消息签名的令牌）显示在 SOAP 层上。 在传输层，服务是用 X.509 证书进行身份验证的。 安全绑定元素是由 `TransportSecurityBindingElement` 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A>。 或者，将 `authenticationMode` 属性设置为 `KerberosOverTransport`。  
   
 > [!NOTE]
->  若要使用此身份验证模式，服务帐户必须与 SPN 关联。 为此，请在 NETWORK SERVICE 帐户或 LOCAL SYSTEM 帐户下运行服务。 也可以使用 SetSpn.exe 工具为服务帐户创建一个 SPN。 在任一情况下，客户端必须使用正确的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素，或通过使用<xref:System.ServiceModel.EndpointAddress>构造函数。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+>  若要使用此身份验证模式，服务帐户必须与 SPN 关联。 为此，请在 NETWORK SERVICE 帐户或 LOCAL SYSTEM 帐户下运行服务。 也可以使用 SetSpn.exe 工具为服务帐户创建一个 SPN。 在任一情况下，客户端必须使用正确的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素，或通过使用<xref:System.ServiceModel.EndpointAddress>构造函数。 有关详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  在此身份验证模式中，客户端使用 X.509 证书进行身份验证，此证书作为认可的支持令牌（即签署消息签名的令牌）显示在 SOAP 层上。 同样使用 X.509 证书对服务进行身份验证。 安全绑定元素是由 `SymmetricSecurityBindingElement` 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>。 或者，将 `authenticationMode` 属性设置为 `MutualCertificate`。  

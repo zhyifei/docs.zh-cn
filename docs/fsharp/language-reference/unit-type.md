@@ -1,20 +1,17 @@
 ---
-title: "unit 类型 (F#)"
-description: "了解如何的 F # 单位类型通常用来保存其中一个值时所需的语言语法需要或所需的任何值的位置。"
-keywords: "visual f#, f#, 函数编程"
+title: unit 类型 (F#)
+description: '了解如何的 F # 单位类型通常用来保存其中一个值时所需的语言语法需要或所需的任何值的位置。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: eabbb6d7-80f3-4fa5-80b4-0f48982466a7
-ms.openlocfilehash: 60ac08c0e3f8380a8f9dec7a083ede93c68bb0e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1a8c8f74e31c5426a9fb6a7143e9d2ac9a7104c0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-type"></a>unit 类型
 
@@ -41,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 
 此警告是函数编程; 的特征它不会显示在其他.NET 编程语言。 在纯粹的函数的程序中，函数不具有任何方面的副作用，最终的返回值是函数调用的唯一结果。 因此，当结果将被忽略，它是可能的编程错误。 虽然 F # 不是纯粹的函数编程语言，所以最好遵循函数编程的方式，只要有可能。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [基元](primitive-types.md)
 
 [F# 语言参考](index.md)

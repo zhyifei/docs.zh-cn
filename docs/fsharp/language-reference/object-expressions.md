@@ -1,20 +1,17 @@
 ---
-title: "对象表达式 (F#)"
-description: "了解如何使用 F # 对象表达式，如果你想要避免额外的代码和创建一个新的所需的开销命名类型。"
-keywords: "visual f#, f#, 函数编程"
+title: 对象表达式 (F#)
+description: '了解如何使用 F # 对象表达式，如果你想要避免额外的代码和创建一个新的所需的开销命名类型。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c6dcf4c9-e7fd-4eee-9e4e-1176f4c27f57
-ms.openlocfilehash: 28660d430473de02a8a55e37a26609827b364012
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f5a728823e7abe18aeb604b3991087fd0252698e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="object-expressions"></a>对象表达式
 
@@ -47,5 +44,5 @@ ms.lasthandoff: 10/18/2017
 当你想要避免额外的代码和所需创建一个新的名为类型的开销时，您可以使用对象表达式。 如果您使用对象表达式来创建在程序中的类型的数量降至最低，可以减少的代码的行数，并防止不必要的迅速普及的类型。 而不是创建许多类型只是为了处理的特定情况下，你可以使用自定义现有类型或为特定用例手头提供正确地实现接口的对象表达式。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)

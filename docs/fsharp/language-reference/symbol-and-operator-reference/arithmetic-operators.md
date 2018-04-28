@@ -1,20 +1,17 @@
 ---
 title: 算术运算符 (F#)
 description: '了解有关 F # 编程语言中可用的算术运算符。'
-keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 04/04/2018
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 75ddcfa3-564e-4382-80a3-f9da73d0f0ea
-ms.openlocfilehash: 8f11e77457bed40cff081a73181689610871e654
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 147600751ca8f991a7d5af24d1a63beb15ccab10
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arithmetic-operators"></a>算术运算符
 
@@ -70,7 +67,7 @@ ms.lasthandoff: 04/09/2018
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
     
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [符号和运算符参考](index.md)
 
 [运算符重载](../operator-overloading.md)

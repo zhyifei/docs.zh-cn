@@ -1,28 +1,30 @@
 ---
-title: "终结点：地址、绑定和协定"
-ms.custom: 
+title: 终结点：地址、绑定和协定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>终结点：地址、绑定和协定
 与所有通信[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服务是通过*终结点*的服务。 利用终结点，客户端可访问 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务提供的功能。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
     -   一个表示服务安全标识和可选消息头集合的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 属性。 可选消息头用于提供其他更多详细寻址信息来标识终结点或与终结点交互。  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][指定终结点地址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
+     有关详细信息，请参阅[指定终结点地址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
   
 -   绑定：绑定指定如何与终结点进行通信。 这包括：  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
     -   必需的安全要求（例如，SSL 或 SOAP 消息安全）。  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF 绑定概述](../../../../docs/framework/wcf/bindings-overview.md)。 绑定在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对象模型中由抽象基类 <xref:System.ServiceModel.Channels.Binding> 表示。 大多数情况下，用户可以使用系统提供的绑定之一。 有关详细信息，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。  
+     有关详细信息，请参阅[WCF 绑定概述](../../../../docs/framework/wcf/bindings-overview.md)。 绑定在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 对象模型中由抽象基类 <xref:System.ServiceModel.Channels.Binding> 表示。 大多数情况下，用户可以使用系统提供的绑定之一。 有关详细信息，请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)。  
   
 -   协定：协定概述了终结点向客户端公开的功能。 协定指定：  
   
@@ -72,10 +74,10 @@ ms.lasthandoff: 12/22/2017
   
      有关定义协定的详细信息，请参阅[设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)。  
   
--   行为：可以使用终结点行为来自定义服务终结点的本地行为。 终结点行为来实现此过程中生成参与[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]运行时。 终结点行为的一个示例是 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 属性，可以利用该属性指定与 SOAP 或 Web 服务描述语言 (WSDL) 地址不同的侦听地址。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)。  
+-   行为：可以使用终结点行为来自定义服务终结点的本地行为。 终结点行为来实现此过程中生成参与[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]运行时。 终结点行为的一个示例是 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 属性，可以利用该属性指定与 SOAP 或 Web 服务描述语言 (WSDL) 地址不同的侦听地址。 有关详细信息，请参阅[ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)。  
   
 ## <a name="defining-endpoints"></a>定义终结点  
- 可以通过使用代码以强制方式或通过配置以声明方式指定服务的终结点。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 在配置中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)和[如何： 在代码中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  
+ 可以通过使用代码以强制方式或通过配置以声明方式指定服务的终结点。 有关详细信息，请参阅[如何： 在配置中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)和[如何： 在代码中创建服务终结点](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
  本节说明了绑定、终结点和地址的用途，演示了如何配置绑定和终结点，并演示了如何使用 `ClientVia` 行为和 `ListenUri` 属性。  

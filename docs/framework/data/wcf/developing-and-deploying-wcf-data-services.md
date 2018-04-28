@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6fbfd28931f484c5b643dad278b358e7ac2a2945
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>开发和部署 WCF 数据服务
 本主题提供有关开发和部署 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]的信息。 有关更多基本信息[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，请参阅[入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)和[概述](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/26/2018
   
 -   HTTP 检查程序在调试数据服务时会非常有帮助，通过它可以检查请求和响应消息的内容。 可以使用任何可显示原始数据包的网络数据包分析器检查发向数据服务的 HTTP 请求和来自数据服务的响应。  
   
--   与在常规操作过程中相比，在调试数据服务时可能希望获得更多有关来自数据服务的错误的信息。 通过将 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 属性设置为 `true` 并将数据服务类的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 特性的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 属性设置为 `true`，可以从数据服务获取其他错误信息。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 博文 [调试 WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=201868)。 还可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中启用跟踪以查看 HTTP 消息层中出现的异常。 有关更多信息，请参见 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
+-   与在常规操作过程中相比，在调试数据服务时可能希望获得更多有关来自数据服务的错误的信息。 通过将 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 属性设置为 `true` 并将数据服务类的 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 特性的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 属性设置为 `true`，可以从数据服务获取其他错误信息。 有关详细信息，请参阅文章[调试 WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=201868)。 还可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中启用跟踪以查看 HTTP 消息层中出现的异常。 有关更多信息，请参见 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
   
 -   数据服务通常开发为[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]应用程序项目，但你还可以创建你为数据服务[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的网站项目。 两种项目类型之间的差异的信息，请参阅[NIB: Web 应用程序项目与 Visual Studio 中的网站项目](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)。  
   

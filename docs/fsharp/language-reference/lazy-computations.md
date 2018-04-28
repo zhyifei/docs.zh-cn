@@ -1,20 +1,17 @@
 ---
-title: "延迟计算 (F#)"
-description: "了解如何 F # 延迟计算可以提高应用程序和库的性能。"
-keywords: "visual f#, f#, 函数编程"
+title: 延迟计算 (F#)
+description: '了解如何 F # 延迟计算可以提高应用程序和库的性能。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3499293e-1d53-4b02-b764-f687fbdaa7fe
-ms.openlocfilehash: 984c96ab68a8919e2382eefe8260b07f191027dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lazy-computations"></a>延迟计算
 
@@ -32,7 +29,7 @@ let identifier = lazy ( expression )
 
 延迟计算使您能够通过限制为仅需要结果时这种情况下计算执行改进性能。
 
-若要强制要执行的计算，则调用方法`Force`。 `Force`会导致将仅执行一次执行。 后续调用`Force`返回相同的结果，但不是执行任何代码。
+若要强制要执行的计算，则调用方法`Force`。 `Force` 会导致将仅执行一次执行。 后续调用`Force`返回相同的结果，但不是执行任何代码。
 
 下面的代码演示延迟计算的使用和的`Force`。 在此代码中的一种`result`是`Lazy<int>`，和`Force`方法返回`int`。
 
@@ -40,7 +37,7 @@ let identifier = lazy ( expression )
 
 迟缓计算中，但不是`Lazy`类型，也可以用来序列。 有关详细信息，请参阅[序列](sequences.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [F# 语言参考](index.md)
 

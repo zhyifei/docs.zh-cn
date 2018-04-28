@@ -1,30 +1,32 @@
 ---
-title: "使用证书客户端的消息安全"
-ms.custom: 
+title: 使用证书客户端的消息安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e778b48b3ff00c3053992f8e754f674cd7705ece
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bb7efa82e14f899ddcbb2fdfd26eba2023bdd61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>使用证书客户端的消息安全
-下面的方案演示使用消息安全模式保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。 使用证书对客户端和服务进行身份验证。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
+下面的方案演示使用消息安全模式保护的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 客户端和服务。 使用证书对客户端和服务进行身份验证。 有关详细信息，请参阅[分布式应用程序安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
   
  有关示例应用程序，请参阅[消息安全证书](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>配置  
- 下面的配置使用终结点行为指定客户端证书。 有关证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 代码还使用 <`identity`> 元素，用于指定域名系统 (DNS) 的预期的服务器标识。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]标识，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 下面的配置使用终结点行为指定客户端证书。 有关证书的详细信息，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 代码还使用 <`identity`> 元素，用于指定域名系统 (DNS) 的预期的服务器标识。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 标识，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

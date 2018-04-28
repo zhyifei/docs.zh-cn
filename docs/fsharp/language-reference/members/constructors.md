@@ -1,20 +1,17 @@
 ---
-title: "构造函数 (F#)"
-description: "了解如何定义和使用 F # 中的构造函数来创建和初始化类和结构的对象。"
-keywords: "visual f#, f#, 函数编程"
+title: 构造函数 (F#)
+description: '了解如何定义和使用 F # 中的构造函数来创建和初始化类和结构的对象。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e0da2250-29de-4145-a1be-e5faff080759
-ms.openlocfilehash: 60ed93f1c1dc15e99465d969c9e4fd3e61c28ffa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d9062ae747c37bdc14104658ad0ec7d11f5545f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="constructors"></a>构造函数
 
@@ -93,5 +90,5 @@ Created an invalid person object.
 ## <a name="static-constructors-or-type-constructors"></a>静态构造函数或类型构造函数
 除了指定用于创建对象，静态代码`let`和`do`绑定可以编写在执行之前类型首次用于执行初始化类型级别的类类型。 有关详细信息，请参阅[`let`类中的绑定](let-bindings-in-classes.md)和[`do`类中的绑定](do-bindings-in-classes.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [成员](index.md)

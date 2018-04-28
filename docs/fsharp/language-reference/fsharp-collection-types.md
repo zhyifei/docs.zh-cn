@@ -1,20 +1,17 @@
 ---
-title: "F# 集合类型"
-description: "了解有关 F # 集合类型以及它们如何与.NET Framework 中集合类型的区别。"
-keywords: "visual f#, f#, 函数编程"
+title: F# 集合类型
+description: '了解有关 F # 集合类型以及它们如何与.NET Framework 中集合类型的区别。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cdf6a7e6-6b3d-4c44-b7b6-773a2b700331
-ms.openlocfilehash: c22178641a88c304e0f666b07aca94e620161071
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0baad5bdf88e8f381240b822a3f6132898dc9ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-collection-types"></a>F# 集合类型
 
@@ -31,8 +28,8 @@ ms.lasthandoff: 10/18/2017
 |类型|描述|相关链接|
 |----|-----------|-------------|
 |[List](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|相同类型的元素的有序的、 不可变序列。 作为链接列表实现。|[列表](lists.md)<br /><br />[List 模块](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[数组](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|具有相同类型的所有连续的数据元素的固定大小，从零开始的可变集合。|[阵列](arrays.md)<br /><br />[Array 模块](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 模块](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 模块](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|逻辑的一系列是一种类型的所有的元素。 当你具有大型，排序的数据集合，但不一定是希望使用的所有元素时，序列会特别有用。 各个序列元素计算仅为必需的因此序列可以执行性能优于列表，如果不是使用的所有元素。 序列由`seq<'T>`类型，这是一个别名为`IEnumerable<T>`。 因此，任何.NET Framework 类型实现`System.Collections.Generic.IEnumerable<'T>`可用作一个序列。|[序列](sequences.md)<br /><br />[Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
+|[数组](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|具有相同类型的所有连续的数据元素的固定大小，从零开始的可变集合。|[数组](arrays.md)<br /><br />[Array 模块](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 模块](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 模块](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
+|[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|逻辑的一系列是一种类型的所有的元素。 当你具有大型，排序的数据集合，但不一定是希望使用的所有元素时，序列会特别有用。 各个序列元素计算仅为必需的因此序列可以执行性能优于列表，如果不是使用的所有元素。 序列由`seq<'T>`类型，这是一个别名为`IEnumerable<T>`。 因此，任何.NET Framework 类型实现`System.Collections.Generic.IEnumerable<'T>`可用作一个序列。|[序列](sequences.md)<br /><br />[Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[映射](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|元素的不可变字典。 由参数访问元素。|[映射模块](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
 |[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|基于二进制树，比较是 F # 结构化比较函数，它可能使用的实现的不可变集`System.IComparable`键值的接口。|[Set 模块](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
@@ -61,10 +58,10 @@ ms.lasthandoff: 10/18/2017
 |copy|O （N)|-|O （N)|-|-|将集合复制。|
 |创建|O （N)|-|-|-|-|创建所有最初都为给定的值的整个元素的数组。|
 |延迟|-|-|O （1)|-|-|返回从给定的延迟规范的序列生成的序列。|
-|差异|-|-|-|-|O （&#42; log N）|返回从第一组中删除第二个集的元素的新集。|
-|非重复|||O （1) &#42;|||返回一个序列，其中包含的项的泛型哈希和等同性比较根据没有重复项。 如果一个元素序列中出现多次，更高版本的匹配项将被丢弃。|
-|distinctBy|||O （1) &#42;|||返回一个序列，其中包含根据给定的键生成函数返回的键泛型的哈希和等同性比较没有重复项。 如果一个元素序列中出现多次，更高版本的匹配项将被丢弃。|
-|empty|O （1)|O （1)|O （1)|O （1)|O （1)|创建一个空集合。|
+|差异|-|-|-|-|O (M &#42; log N)|返回从第一组中删除第二个集的元素的新集。|
+|非重复|||O （1)&AMP;#42;|||返回一个序列，其中包含的项的泛型哈希和等同性比较根据没有重复项。 如果一个元素序列中出现多次，更高版本的匹配项将被丢弃。|
+|distinctBy|||O （1)&AMP;#42;|||返回一个序列，其中包含根据给定的键生成函数返回的键泛型的哈希和等同性比较没有重复项。 如果一个元素序列中出现多次，更高版本的匹配项将被丢弃。|
+|空|O （1)|O （1)|O （1)|O （1)|O （1)|创建一个空集合。|
 |exists|O （N)|O （N)|O （N)|O (log N)|O (log N)|测试是否序列中的任何元素满足给定的谓词。|
 |exists2|O(min(N,M))|-|O(min(N,M))|||测试是否任何对输入序列中的相应元素满足给定的谓词。|
 |fill|O （N)|||||将某个范围的数组的元素设置为给定的值。|
@@ -82,13 +79,13 @@ ms.lasthandoff: 10/18/2017
 |head|-|O （1)|O （1)|-|-|返回集合的第一个元素。|
 |init|O （N)|O （N)|O （1)|-|-|创建给定维度和一个生成器函数以便计算元素的集合。|
 |initInfinite|-|-|O （1)|-|-|生成的序列，当循环访问，通过调用给定的函数返回连续的元素。|
-|相交|-|-|-|-|O （log N &#42; 日志 M）|计算两个集的交集。|
-|intersectMany|-|-|-|-|O (N1 &#42;N2...)|计算序列的集的交集。 序列不为空。|
+|相交|-|-|-|-|O (log N&#42;日志 M)|计算两个集的交集。|
+|intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|计算序列的集的交集。 序列不为空。|
 |IsEmpty|O （1)|O （1)|O （1)|O （1)|-|返回`true`如果该集合为空。|
-|isProperSubset|-|-|-|-|O （&#42; log N）|返回`true`如果的第一个集的所有元素都均在第二组，并且至少一个元素的第二组不在第一组。|
-|isProperSuperset|-|-|-|-|O （&#42; log N）|返回`true`如果第二个集的所有元素都均在第一个组中，并且至少一个元素的第一组不在第二组。|
-|isSubset|-|-|-|-|O （&#42; log N）|返回`true`第一组的所有元素是否在第二组。|
-|isSuperset|-|-|-|-|O （&#42; log N）|返回`true`第二个集的所有元素是否采用第一个集。|
+|isProperSubset|-|-|-|-|O (M &#42; log N)|返回`true`如果的第一个集的所有元素都均在第二组，并且至少一个元素的第二组不在第一组。|
+|isProperSuperset|-|-|-|-|O (M &#42; log N)|返回`true`如果第二个集的所有元素都均在第一个组中，并且至少一个元素的第一组不在第二组。|
+|isSubset|-|-|-|-|O (M &#42; log N)|返回`true`第一组的所有元素是否在第二组。|
+|isSuperset|-|-|-|-|O (M &#42; log N)|返回`true`第二个集的所有元素是否采用第一个集。|
 |Iter|O （N)|O （N)|O （N)|O （N)|O （N)|将给定的函数应用于集合的每个元素。|
 |iteri|O （N)|O （N)|O （N)|-|-|将给定的函数应用于集合的每个元素。 传递给函数的整数指示元素的索引。|
 |iteri2|O （N)|O （N)|-|-|-|将给定的函数应用到的绘制从匹配中两个数组的索引的元素对。 传递给函数的整数指示元素的索引。 两个数组必须具有相同长度。|
@@ -145,15 +142,15 @@ ms.lasthandoff: 10/18/2017
 |tryFindKey|-|-|-|O (log N)|-|返回满足给定的谓词中，或返回的集合中的第一个映射中的键`None`如果此类元素不存在。|
 |tryPick|O （N)|O （N)|O （N)|O (log N)|-|将给定的函数应用于连续的元素，返回的第一个结果，该函数将返回其中`Some`的某些值。 如果此类元素不存在，该操作返回`None`。|
 |展开|-|-|O （N)|-|-|返回包含给定的计算生成的元素的序列。|
-|union|-|-|-|-|O （&#42; log N）|计算两个集的并集。|
-|unionMany|-|-|-|-|O (N1 &#42;N2...)|计算序列的集的并集。|
+|union|-|-|-|-|O (M &#42; log N)|计算两个集的并集。|
+|unionMany|-|-|-|-|O (N1 &AMP;#42; N2...)|计算序列的集的并集。|
 |unzip|O （N)|O （N)|O （N)|-|-|将对的列表拆分为两个列表。|
 |unzip3|O （N)|O （N)|O （N)|-|-|将三元组的列表拆分为三个列表。|
 |开窗|-|-|O （N)|-|-|返回生成的包含输入序列中绘制的元素的滑动窗口的序列。 每个窗口全新的数组的形式返回。|
 |zip|O （N)|O （N)|O （N)|-|-|将合并到一个列表的对两个的集合。 两个列表必须具有相等长度。|
 |zip3|O （N)|O （N)|O （N)|-|-|将合并到一个列表三元组的三个的集合。 这些列表必须具有相等长度。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 类型](fsharp-types.md)
 
 [F# 语言参考](index.md)

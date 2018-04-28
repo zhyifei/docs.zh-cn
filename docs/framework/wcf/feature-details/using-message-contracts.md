@@ -1,13 +1,13 @@
 ---
-title: "使用消息约定"
-ms.custom: 
+title: 使用消息约定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 
+caps.latest.revision: 46
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-message-contracts"></a>使用消息约定
-通常，在生成 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序时，开发人员会密切关注数据结构和序列化问题，而不必关心携带数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [指定在服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
+通常，在生成 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 应用程序时，开发人员会密切关注数据结构和序列化问题，而不必关心携带数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
   
  但是，有时完全控制 SOAP 消息的结构与控制其内容一样重要。 当必须提供互操作性或需要在消息或消息部分级别特别控制安全问题时，更是如此。 在这些情况下，你可以创建*消息协定*可用于指定所需的精确 SOAP 消息的结构。  
   
  本主题讨论如何使用各种消息协定属性为操作创建特定消息协定。  
   
 ## <a name="using-message-contracts-in-operations"></a>在操作中使用消息协定  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支持上建模的操作*远程过程调用 (RPC) 样式*或*消息样式*。 在 RPC 样式的操作中，可以使用任何可序列化的类型并可以访问可用于本地调用的功能，如多个参数以及 `ref` 和 `out` 参数。 在此样式中，所选的序列化形式控制基础消息中数据的结构，并且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 运行时会创建这些消息以支持操作。 这使对 SOAP 和 SOAP 消息不熟悉的开发人员能够快速容易地创建和使用服务应用程序。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持上建模的操作*远程过程调用 (RPC) 样式*或*消息样式*。 在 RPC 样式的操作中，可以使用任何可序列化的类型并可以访问可用于本地调用的功能，如多个参数以及 `ref` 和 `out` 参数。 在此样式中，所选的序列化形式控制基础消息中数据的结构，并且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 运行时会创建这些消息以支持操作。 这使对 SOAP 和 SOAP 消息不熟悉的开发人员能够快速容易地创建和使用服务应用程序。  
   
  下面的代码示例演示在 RPC 样式上建模的服务操作。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 通常，定义消息的架构时使用数据协定就足够了。 例如，在前面的示例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 具有定义基础 SOAP 消息内容的数据协定，则对于大多数应用程序就足够了。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]数据协定，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 通常，定义消息的架构时使用数据协定就足够了。 例如，在前面的示例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 具有定义基础 SOAP 消息内容的数据协定，则对于大多数应用程序就足够了。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 数据协定，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  但是，有时需要精确控制 SOAP 消息的结构如何通过网络进行传输。 对于这种情况，最常见的方案是插入自定义 SOAP 标头。 另一种常见方案是定义消息头和正文的安全属性，也就是说，确定是否对这些元素进行数字签名和加密。 最后，一些第三方 SOAP 堆栈要求消息采用特定的格式。 消息样式的操作可提供这种控制。  
   
@@ -167,7 +167,7 @@ public class BankingTransaction
 >  消息中具有多个未包装的消息正文部分不符合 WS-I 基本配置文件 1.1 的规定，在设计新消息协定时不建议这样做。 但是，在某些特定的互操作性方案中，必需要具有多个未包装的消息正文部分。 如果要在消息正文中传输多段数据，则建议使用默认（包装）模式。 未包装的消息中具有多个消息头是完全可以的。  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>在消息协定内部使用自定义类型  
- 每个单独的消息头和消息正文部分均使用为消息所使用的服务协定选择的序列化引擎进行序列化（转换为 XML）。 默认序列化引擎 `XmlFormatter` 可以显式处理（通过具有 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>）或隐式处理（通过作为基元类型而具有 <xref:System.SerializableAttribute?displayProperty=nameWithType>等）具有数据协定的任何类型。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 每个单独的消息头和消息正文部分均使用为消息所使用的服务协定选择的序列化引擎进行序列化（转换为 XML）。 默认序列化引擎 `XmlFormatter` 可以显式处理（通过具有 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>）或隐式处理（通过作为基元类型而具有 <xref:System.SerializableAttribute?displayProperty=nameWithType>等）具有数据协定的任何类型。 有关详细信息，请参阅[使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  在前面的示例中，`Operation` 和 `BankingTransactionData` 类型必须具有数据约，定且 `transactionDate` 可序列化，因为 <xref:System.DateTime> 是基元类型（因此具有隐式数据协定）。  
   
@@ -316,7 +316,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  当接收到消息然后发回该消息时，SOAP 属性设置仅对 <xref:System.ServiceModel.MessageHeader%601> 类型的标头往返一次。  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP 正文部分的顺序  
- 在某些情况下，可能需要控制正文部分的顺序。 默认情况下，正文元素采用字母顺序，但可以通过 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 属性进行控制。 此属性具有与 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 属性相同的语义，但在继承方案中的行为除外（在消息协定中，基类型正文成员不排列在派生类型正文成员之前）。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据成员顺序](../../../../docs/framework/wcf/feature-details/data-member-order.md)。  
+ 在某些情况下，可能需要控制正文部分的顺序。 默认情况下，正文元素采用字母顺序，但可以通过 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 属性进行控制。 此属性具有与 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 属性相同的语义，但在继承方案中的行为除外（在消息协定中，基类型正文成员不排列在派生类型正文成员之前）。 有关详细信息，请参阅[数据成员顺序](../../../../docs/framework/wcf/feature-details/data-member-order.md)。  
   
  在下面的示例中，`amount` 通常排在第一位，因为按字母顺序它排在第一位。 但 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> 属性将它放在了第三位。  
   

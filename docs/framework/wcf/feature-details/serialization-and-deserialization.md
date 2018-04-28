@@ -1,27 +1,29 @@
 ---
-title: "序列化和反序列化"
-ms.custom: 
+title: 序列化和反序列化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serialization-and-deserialization"></a>序列化和反序列化
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括新序列化引擎 <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 可在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行双向转换。 本主题说明序列化程序的工作原理。  
@@ -85,12 +87,12 @@ ms.lasthandoff: 12/22/2017
  可以作为字符串或 <xref:System.Xml.XmlDictionaryString> 类的实例来传递这些值，从而允许使用二进制 XML 格式对其进行优化。  
   
 ### <a name="setting-the-maximum-objects-quota"></a>设置最大对象配额  
- 一些 `DataContractSerializer` 构造函数重载具有 `maxItemsInObjectGraph` 参数。 此参数确定序列化程序在单个 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法调用中序列化或反序列化的对象的最大数目。 （该方法总是读取一个根对象，但此对象的数据成员中可以具有其他对象。 这些对象又可以具有其他对象，依此类推。）默认值为 65536。 请注意，当序列化或反序列化数组时，每个数组项都计为一个单独的对象。 此外还应注意，一些对象可以有大内存表示形式，因此，单独使用此配额可能不足以防范拒绝服务攻击。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 如果需要增加此配额以至超出默认值，则一定要在发送（序列化）和接收（反序列化）方同时增加此配额，原因是在读取和写入数据时会此配额同时应用于发送方和接收方。  
+ 一些 `DataContractSerializer` 构造函数重载具有 `maxItemsInObjectGraph` 参数。 此参数确定序列化程序在单个 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法调用中序列化或反序列化的对象的最大数目。 （该方法总是读取一个根对象，但此对象的数据成员中可以具有其他对象。 这些对象又可以具有其他对象，依此类推。）默认值为 65536。 请注意，当序列化或反序列化数组时，每个数组项都计为一个单独的对象。 此外还应注意，一些对象可以有大内存表示形式，因此，单独使用此配额可能不足以防范拒绝服务攻击。 有关详细信息，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 如果需要增加此配额以至超出默认值，则一定要在发送（序列化）和接收（反序列化）方同时增加此配额，原因是在读取和写入数据时会此配额同时应用于发送方和接收方。  
   
 ### <a name="round-trips"></a>往返行程  
  在一次操作中对对象进行反序列化和重新序列化时将发生往返行程  。 因此，往返行程是从 XML 到对象实例，然后再返回到 XML 流。  
   
- 一些 `DataContractSerializer` 构造函数重载具有 `ignoreExtensionDataObject` 参数，该参数默认设置为 `false` 。 在此默认模式中，对于一个往返行程，可以将数据从数据协定的较新版本发送到较旧版本然后再返回到较新版本而不会出现任何损失，前提是数据协定实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 例如，假设 `Person` 数据协定的版本 1 包含 `Name` 和 `PhoneNumber` 数据成员，并且版本 2 添加 `Nickname` 成员。 如果在从版本 2 向版本 1 发送信息时实现了 `IExtensibleDataObject` ，则会存储 `Nickname` 数据，并在再次序列化数据时重新发出这些数据，因此，在往返行程中不会出现数据丢失。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)和[数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。  
+ 一些 `DataContractSerializer` 构造函数重载具有 `ignoreExtensionDataObject` 参数，该参数默认设置为 `false` 。 在此默认模式中，对于一个往返行程，可以将数据从数据协定的较新版本发送到较旧版本然后再返回到较新版本而不会出现任何损失，前提是数据协定实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 接口。 例如，假设 `Person` 数据协定的版本 1 包含 `Name` 和 `PhoneNumber` 数据成员，并且版本 2 添加 `Nickname` 成员。 如果在从版本 2 向版本 1 发送信息时实现了 `IExtensibleDataObject` ，则会存储 `Nickname` 数据，并在再次序列化数据时重新发出这些数据，因此，在往返行程中不会出现数据丢失。 有关详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)和[数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>往返行程的安全性和架构有效性问题  
  往返行程可能会涉及到一些安全性问题。 例如，反序列化和存储大量外来数据可能存在安全风险。 重新发出无法验证的数据可能会存在安全问题，尤其是在涉及数字签名的情况下。 例如，在前面的方案中，版本 1 终结点可能会对包含恶意数据的 `Nickname` 值进行签名。 最后，还可能存在架构有效性问题：终结点可能需要始终发出严格符合其声明的协定并且没有任何额外值的数据。 在前面的示例中，版本 1 终结点的协定声明该终结点仅发出 `Name` 和 `PhoneNumber`，并且如果正在使用构造验证，则发出额外的 `Nickname` 值将导致验证失败。  
@@ -135,7 +137,7 @@ ms.lasthandoff: 12/22/2017
 </PurchaseOrder>  
 ```  
   
- “ser”命名空间引用标准序列化命名空间 http://schemas.microsoft.com/2003/10/Serialization/。 每一段数据只进行一次序列化并获得一个 ID 号，后续使用会导致引用已序列化的数据。  
+ "Ser"命名空间引用标准序列化命名空间， http://schemas.microsoft.com/2003/10/Serialization/。 每一段数据只进行一次序列化并获得一个 ID 号，后续使用会导致引用已序列化的数据。  
   
 > [!IMPORTANT]
 >  如果“id”和“ref”属性同时存在于数据协定 `XMLElement`中，则接受“ref”属性，而忽略“id”属性。  
@@ -152,7 +154,7 @@ ms.lasthandoff: 12/22/2017
 >  当启用 `preserveObjectReferences` 模式时，需要将 `maxItemsInObjectGraph` 值设置为正确的配额，这一点特别重要。 由于在此模式中处理数组的方式方面的原因，攻击者很容易构造一条小的恶意消息来造成内存大量消耗（仅通过 `maxItemsInObjectGraph` 配额来限制）。  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>指定数据协定代理项  
- 一些 `DataContractSerializer` 构造函数重载具有 `dataContractSurrogate` 参数，该参数可以设置为 `null`。 此外，可以使用它来指定数据协定代理项 ，数据协定代理项是一种实现 <xref:System.Runtime.Serialization.IDataContractSurrogate> 接口的类型。 然后可以使用该接口来自定义序列化和反序列化进程。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
+ 一些 `DataContractSerializer` 构造函数重载具有 `dataContractSurrogate` 参数，该参数可以设置为 `null`。 此外，可以使用它来指定数据协定代理项 ，数据协定代理项是一种实现 <xref:System.Runtime.Serialization.IDataContractSurrogate> 接口的类型。 然后可以使用该接口来自定义序列化和反序列化进程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
   
 ## <a name="serialization"></a>序列化  
  下面的信息适用于从 <xref:System.Runtime.Serialization.XmlObjectSerializer>继承的任何类，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 类。  
@@ -265,7 +267,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 方法是 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法的别名。 这些别名可以为二进制或 SOAP 序列化提供更为一致的编程模型。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]这些功能，请参阅[二进制序列化](../../../../docs/standard/serialization/binary-serialization.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些功能，请参阅[二进制序列化](../../../../docs/standard/serialization/binary-serialization.md)。  
   
  `NetDataContractSerializer` 和 `DataContractSerializer` 使用的 XML 格式通常是不兼容的。 也就是说，不支持尝试使用这些序列化程序的一种进行序列化而使用另一种序列化程序进行反序列化的情况。  
   

@@ -1,20 +1,17 @@
 ---
-title: "XML 文档 (F#)"
-description: "用于从注释生成文档，了解有关 F # 中的支持。"
-keywords: "visual f#, f#, 函数编程"
+title: XML 文档 (F#)
+description: '用于从注释生成文档，了解有关 F # 中的支持。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: d99ab1b6-e170-4ec2-a543-43ea7ab15bb2
-ms.openlocfilehash: 20768a7d4ea17c926318043f658691819a3d7d2f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c9514532904f81030752bf7a4044f70a18222cab
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xml-documentation"></a>XML 文档
 
@@ -24,7 +21,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="generating-documentation-from-comments"></a>生成文档注释
 F # 中的支持从注释生成文档为相同处于其他.NET Framework 语言。 像其他.NET Framework 语言，那样[-doc 编译器选项](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)使您能够生成 XML 文件，其中包含你可以通过将转换为文档使用 Sandcastle 等工具的信息。 通过使用适用于通常用其他.NET Framework 语言编写的程序集的设计的工具生成的文档生成基于 F # 构造的已编译形式的 Api 的一个视图。 除非专门工具支持 F #，通过这些工具生成的文档与 API 的 F # 视图不匹配。
 
-有关如何从 XML 生成文档的详细信息，请参阅[XML 文档注释 &#40;使用 c&#35;编程指南 &#41;](https://msdn.microsoft.com/library/b2s063f7).
+有关如何从 XML 生成文档的详细信息，请参阅[XML 文档注释&#40;C&#35;编程指南&#41;](https://msdn.microsoft.com/library/b2s063f7)。
 
 
 ## <a name="recommended-tags"></a>建议的标记
@@ -35,13 +32,13 @@ F # 中的支持从注释生成文档为相同处于其他.NET Framework 语言�
 |标记语法|描述|
 |----------|-----------|
 |**&lt;c&gt;***文本***&lt;/c&gt;**|指定*文本*是代码。 此标记可由文档生成器，用于以适合于代码的字体显示文本。|
-|**&lt;摘要&gt;***文本* **&lt; /摘要&gt;**|指定*文本*是程序元素的简要说明。 该说明通常为一个或两个句子。|
-|**&lt;备注&gt;***文本* **&lt; /remarks&gt;**|指定*文本*包含有关程序元素的补充信息。|
+|**&lt;摘要&gt;***文本*** &lt; /摘要&gt;**|指定*文本*是程序元素的简要说明。 该说明通常为一个或两个句子。|
+|**&lt;备注&gt;***文本*** &lt; /remarks&gt;**|指定*文本*包含有关程序元素的补充信息。|
 |**&lt;name ="***名称***"&gt;***说明***&lt;/param&gt;**|指定的名称和描述函数或方法参数。|
 |**&lt;typeparam 名称 ="***名称***"&gt;***说明***&lt;/typeparam&gt;**|指定的名称和类型参数的说明。|
-|**&lt;返回&gt;***文本* **&lt; /返回&gt;**|指定*文本*描述函数或方法的返回值。|
+|**&lt;返回&gt;***文本*** &lt; /返回&gt;**|指定*文本*描述函数或方法的返回值。|
 |**&lt;异常 cref ="***类型***"&gt;***说明***&lt;/exception&gt;**|指定在其下都会引发此错误的情况并可以生成的异常的类型。|
-|**&lt;请参阅 cref ="***引用***"&gt;***文本* **&lt; /请参阅&gt;**|指定的内联链接到另一个程序元素。 *引用*是名称，因为它显示在 XML 文档文件。 *文本*是链接中显示的文本。|
+|**&lt;请参阅 cref ="***引用***"&gt;***文本*** &lt; /请参阅&gt;**|指定的内联链接到另一个程序元素。 *引用*是名称，因为它显示在 XML 文档文件。 *文本*是链接中显示的文本。|
 |**&lt;另请参阅 cref ="***引用***"/&gt;**|指定到另一种类型的文档的另请参阅链接。 *引用*是名称，因为它显示在 XML 文档文件。 另请参阅通常出现在文档页的底部的链接。|
 |**&lt;para&gt;***文本***&lt;/para&gt;**|指定文本的段落。 这用于分隔内的文本**备注**标记。|
 
@@ -63,7 +60,7 @@ F # 中的支持从注释生成文档为相同处于其他.NET Framework 语言�
 ### <a name="code"></a>代码
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7102.fs)]
     
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [编译器选项](compiler-options.md)

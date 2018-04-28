@@ -1,20 +1,17 @@
 ---
-title: "循环：while...do 表达式 (F#)"
-description: "请参阅如何时...是否会使用表达式来指定的测试条件为 true 时执行迭代执行 （循环）。"
-keywords: "visual f#, f#, 函数编程"
+title: 循环：while...do 表达式 (F#)
+description: 请参阅如何时...是否会使用表达式来指定的测试条件为 true 时执行迭代执行 （循环）。
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 0416ffca-7ed9-4aff-9493-e001fdba8c9b
-ms.openlocfilehash: 5f10fda84a5e748856eb7b2c63ad46cc1fba44bb
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 847f99faab42c8805bd788e42e3f24ad6369ba52
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-whiledo-expression"></a>循环：while...do 表达式
 
@@ -46,7 +43,7 @@ Found a 10!
 你可以使用`while...do`序列表达式和其他计算表达式，在这种情况下的自定义的版本`while...do`使用表达式。 有关详细信息，请参阅[序列](sequences.md)，[异步工作流](asynchronous-workflows.md)，和[计算表达式](computation-expressions.md)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [循环：`for...in` 表达式](loops-for-in-expression.md)

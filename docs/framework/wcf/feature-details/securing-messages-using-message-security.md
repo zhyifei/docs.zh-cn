@@ -1,24 +1,26 @@
 ---
-title: "使用消息安全保护消息"
-ms.custom: 
+title: 使用消息安全保护消息
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-messages-using-message-security"></a>使用消息安全保护消息
 本主题讨论在使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 时的 <xref:System.ServiceModel.NetMsmqBinding> 消息安全。  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  鉴于队列有断开连接的特性，客户端和服务可能不会同时联机。 这样，客户端和服务必须在带外交换证书。 尤其是，由于客户端在其受信任存储区中存有服务的证书（可以将该证书链接到证书颁发机构），因此必须信任它将与正确的服务进行通信。 至于对客户端进行身份验证，服务使用附有消息的 X.509 证书将该客户端与其存储中的证书进行匹配来验证客户端的真实性。 该证书必须再次链接到证书颁发机构。  
   
- 在运行 Windows 的计算机上，证书存放在多类存储区中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]不同存储区，请参阅[证书存储](http://go.microsoft.com/fwlink/?LinkId=87787)。  
+ 在运行 Windows 的计算机上，证书存放在多类存储区中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 不同存储区，请参阅[证书存储](http://go.microsoft.com/fwlink/?LinkId=87787)。  
   
 ### <a name="windows"></a>Windows  
  Windows 消息凭据类型使用 Kerberos 协议。  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  请注意，在使用此凭据类型时，服务必须在 SERVICE 帐户下运行。  
   
- 默认情况下，在选择消息凭据时使用 Kerberos 协议。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][浏览 Kerberos 的协议分发在 Windows 2000 中的安全](http://go.microsoft.com/fwlink/?LinkId=87790)。  
+ 默认情况下，在选择消息凭据时使用 Kerberos 协议。 有关详细信息，请参阅[浏览 Kerberos、 Windows 2000 中的分布式安全的协议](http://go.microsoft.com/fwlink/?LinkId=87790)。  
   
 ### <a name="username-password"></a>用户名密码  
  使用此属性，可以使用消息安全标头中的用户名密码将客户端向服务器进行身份验证。  

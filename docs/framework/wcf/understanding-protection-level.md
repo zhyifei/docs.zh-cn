@@ -1,12 +1,13 @@
 ---
-title: "了解保护级别"
-ms.custom: 
+title: 了解保护级别
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-protection-level"></a>了解保护级别
 在许多不同的类中可以找到 `ProtectionLevel` 属性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 类。 此属性控制部分（或整个）消息的保护方式。 本主题说明 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 功能及其原理。  
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
  若要在层次结构中的任意点对 `ProtectionLevel` 进行编程，只需在应用此属性 (Attribute) 时将其属性 (Property) 设置为适当的值即可。 有关示例，请参阅[如何： 设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。  
   
 > [!NOTE]
->  要设置错误和消息协定的属性，需要了解这些功能的工作原理。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何： 设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)和[使用消息协定](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
+>  要设置错误和消息协定的属性，需要了解这些功能的工作原理。 有关详细信息，请参阅[如何： 设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)和[使用消息协定](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
   
 ## <a name="ws-addressing-dependency"></a>WS-Addressing 依赖性  
  在大多数情况下，使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)为生成客户端将确保客户端和服务协定是完全相同。 但是，看起来相同的协定却可能导致客户端引发异常。 只要绑定不支持 WS-Addressing 规范并且在协定上指定了多个保护级别，就会发生这种情况。 例如，<xref:System.ServiceModel.BasicHttpBinding> 类不支持此规范，或者您创建一个不支持 WS-Addressing 的自定义绑定。 `ProtectionLevel` 功能依靠 WS-Addressing 规范在单个协定上启用不同的保护级别。 如果绑定不支持 WS-Addressing 规范，所有级别都将设置为同一保护级别。 协定上所有范围的有效保护级别将设置为在协定上使用的最高保护级别。  

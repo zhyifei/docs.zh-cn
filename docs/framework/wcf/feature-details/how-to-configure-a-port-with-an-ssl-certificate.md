@@ -1,12 +1,13 @@
 ---
-title: "如何：使用 SSL 证书配置端口"
-ms.custom: 
+title: 如何：使用 SSL 证书配置端口
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>如何：使用 SSL 证书配置端口
-使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 类（使用传输安全）创建自承载 <xref:System.ServiceModel.WSHttpBinding> 服务时，还必须使用 X.509 证书配置端口。 如果不是在创建自承载服务，可以在 Internet 信息服务 (IIS) 上承载服务。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 类（使用传输安全）创建自承载 <xref:System.ServiceModel.WSHttpBinding> 服务时，还必须使用 X.509 证书配置端口。 如果不是在创建自承载服务，可以在 Internet 信息服务 (IIS) 上承载服务。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要配置端口，使用的工具取决于计算机运行的操作系统。  
   
- 如果运行的是 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，则使用 HttpCfg.exe 工具。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中已安装该工具。 与[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下载该工具在[Windows XP Service Pack 2 支持工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Httpcfg 概述](http://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支持工具文档](http://go.microsoft.com/fwlink/?LinkId=94840)说明了 Httpcfg.exe 工具的语法。  
+ 如果运行的是 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，则使用 HttpCfg.exe 工具。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中已安装该工具。 与[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下载该工具在[Windows XP Service Pack 2 支持工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 有关详细信息，请参阅[Httpcfg 概述](http://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支持工具文档](http://go.microsoft.com/fwlink/?LinkId=94840)说明了 Httpcfg.exe 工具的语法。  
   
  如果运行的是 [!INCLUDE[wv](../../../../includes/wv-md.md)]，则使用已安装的 Netsh.exe 工具。  
   
@@ -66,9 +68,9 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-get-a-certificates-thumbprint"></a>获取证书的指纹  
   
-1.  使用证书 MMC 管理单元查找用于客户端身份验证的 X.509 证书。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 使用 mmc 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+1.  使用证书 MMC 管理单元查找用于客户端身份验证的 X.509 证书。 有关详细信息，请参阅[如何： 使用 mmc 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
-2.  访问证书的指纹。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+2.  访问证书的指纹。 有关详细信息，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
 3.  将证书指纹复制到文本编辑器，如 Notepad。  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 12/22/2017
   
     -   **Certhash**参数指定证书的指纹。  
   
-    -   **Ipport**参数指定的 IP 地址和端口，并就像函数**-i**于前述 Httpcfg.exe 工具的开关。  
+    -   **Ipport**参数指定的 IP 地址和端口，并就像函数 **-i**于前述 Httpcfg.exe 工具的开关。  
   
     -   **Appid**参数是一个 GUID，用于标识所属应用程序。  
   
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具以及**删除**和**ssl**关键字。 使用**-i**开关指定`IP`:`port`数，和**-h**开关指定指纹。  
+2.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具以及**删除**和**ssl**关键字。 使用 **-i**开关指定`IP`:`port`数，和 **-h**开关指定指纹。  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

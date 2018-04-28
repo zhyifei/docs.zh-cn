@@ -1,20 +1,17 @@
 ---
-title: "数组 (F#)"
-description: "了解如何创建和使用 F # 编程语言中的数组。"
-keywords: "visual f#, f#, 函数编程"
+title: 数组 (F#)
+description: '了解如何创建和使用 F # 编程语言中的数组。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 61fa9084-abdc-4cf5-8213-91ec1211866b
-ms.openlocfilehash: 7c9d8405230f4d765d3afdeaa154ddc598d0d1ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 650321e864556ff0ba8591e09ffa34877c8a39b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arrays"></a>数组
 
@@ -68,7 +65,7 @@ API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 库模块[ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)支持上一维数组的操作。 模块`Array2D`， `Array3D`，和`Array4D`包含分别支持在阵列上的两个、 3 和四个维度的操作的函数。 你可以创建数组的秩大于使用的四个<xref:System.Array?displayProperty=nameWithType>。
 
 ### <a name="simple-functions"></a>简单函数
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)获取一个元素。 [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)给出的数组的长度。 [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)将元素设置为指定的值。 下面的代码示例演示如何使用这些函数。
+[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) 获取一个元素。 [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) 给出的数组的长度。 [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) 将元素设置为指定的值。 下面的代码示例演示如何使用这些函数。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -80,7 +77,7 @@ API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 ### <a name="functions-that-create-arrays"></a>创建数组的函数
 
-多个函数创建而无需现有数组的数组。 [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)创建一个新数组不包含任何元素。 [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)创建具有指定大小的数组，并将所有元素都设置为提供的值。 [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)创建一个数组，给定维度和函数以生成元素。 [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)创建一个在其中所有元素将都初始化为数组的类型的零值的数组。 下面的代码演示了这些函数。
+多个函数创建而无需现有数组的数组。 [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) 创建一个新数组不包含任何元素。 [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) 创建具有指定大小的数组，并将所有元素都设置为提供的值。 [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) 创建一个数组，给定维度和函数以生成元素。 [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) 创建一个在其中所有元素将都初始化为数组的类型的零值的数组。 下面的代码演示了这些函数。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -92,7 +89,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)创建一个新数组，其中包含从现有数组复制的元素。 请注意，副本是卷影副本，这意味着如果元素类型是引用类型，则复制仅引用，不是基础对象。 下面的代码示例阐释了这一点。
+[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f) 创建一个新数组，其中包含从现有数组复制的元素。 请注意，副本是卷影副本，这意味着如果元素类型是引用类型，则复制仅引用，不是基础对象。 下面的代码示例阐释了这一点。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -105,7 +102,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 字符串`Test1`仅在第一个数组中出现，因为创建一个新的元素的操作将覆盖在引用`firstArray`，但不影响原始引用为空字符串，仍然存在于`secondArray`。 字符串`Test2`显示两个数组中，因为`Insert`操作<xref:System.Text.StringBuilder?displayProperty=nameWithType>类型会影响基础<xref:System.Text.StringBuilder?displayProperty=nameWithType>对象，这两个数组中引用。
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)从数组的子范围中生成一个新数组。 通过提供的起始索引和长度指定子范围。 以下代码演示了 `Array.sub` 的用法。
+[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) 从数组的子范围中生成一个新数组。 通过提供的起始索引和长度指定子范围。 以下代码演示了 `Array.sub` 的用法。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -114,7 +111,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)通过组合两个现有数组来创建一个新数组。
+[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) 通过组合两个现有数组来创建一个新数组。
 
 下面的代码演示**Array.append**。
 
@@ -126,7 +123,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)选择数组要包含新数组中的元素。 下面的代码演示`Array.choose`。 请注意，该数组的元素类型没有匹配的选项类型返回的值的类型。 在此示例中，元素类型是`int`并且选项为多项式函数的结果`elem*elem - 1`，为浮点点数。
+[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09) 选择数组要包含新数组中的元素。 下面的代码演示`Array.choose`。 请注意，该数组的元素类型没有匹配的选项类型返回的值的类型。 在此示例中，元素类型是`int`并且选项为多项式函数的结果`elem*elem - 1`，为浮点点数。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -136,7 +133,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)在现有数组的每个数组元素上运行指定的函数然后收集由该函数生成的元素并将它们合并到新数组。 下面的代码演示`Array.collect`。
+[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) 在现有数组的每个数组元素上运行指定的函数然后收集由该函数生成的元素并将它们合并到新数组。 下面的代码演示`Array.collect`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -146,7 +143,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)构造函数采用数组的序列，并将它们合并到单个阵列中。 下面的代码演示`Array.concat`。
+[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) 构造函数采用数组的序列，并将它们合并到单个阵列中。 下面的代码演示`Array.concat`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -157,7 +154,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)获取布尔条件函数，并生成一个新数组，包含仅对从输入条件为 true 的数组的元素。 下面的代码演示`Array.filter`。
+[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) 获取布尔条件函数，并生成一个新数组，包含仅对从输入条件为 true 的数组的元素。 下面的代码演示`Array.filter`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -167,7 +164,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)反转现有数组的顺序，从而生成一个新的数组。 下面的代码演示`Array.rev`。
+[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) 反转现有数组的顺序，从而生成一个新的数组。 下面的代码演示`Array.rev`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
 
@@ -334,7 +331,7 @@ false
 
 ### <a name="searching-arrays"></a>搜索数组
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)采用布尔函数并返回该函数将为其返回的第一个元素`true`，或是引发<xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType>如果不找到满足条件的任何元素。 [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)就像`Array.find`，只不过它将返回而不是元素本身元素的索引。
+[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) 采用布尔函数并返回该函数将为其返回的第一个元素`true`，或是引发<xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType>如果不找到满足条件的任何元素。 [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) 就像`Array.find`，只不过它将返回而不是元素本身元素的索引。
 
 下面的代码使用`Array.find`和`Array.findIndex`要查找的正方形和完美的多维数据集的数字。
 
@@ -346,7 +343,7 @@ false
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9)就像`Array.find`，只不过其结果是选项类型，并返回`None`如果未找到元素。 `Array.tryFind`应使用而不是`Array.find`时你不知道匹配的元素是否是数组中。 同样， [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a)类似[ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)不同的是选项类型返回的值。 如果未找到的元素，则选择是`None`。
+[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) 就像`Array.find`，只不过其结果是选项类型，并返回`None`如果未找到元素。 `Array.tryFind` 应使用而不是`Array.find`时你不知道匹配的元素是否是数组中。 同样， [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a)类似[ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)不同的是选项类型返回的值。 如果未找到的元素，则选择是`None`。
 
 以下代码演示了 `Array.tryFind` 的用法。 此代码依赖于前面的代码。
 
@@ -380,7 +377,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 使用[ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b)或[ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd)若要获取的最大或最小的元素，如果元素类型支持它。 同样， [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045)和[ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f)允许函数首先执行，可能是为了向支持比较的类型转换。
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)添加数组的元素和[ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b)对每个元素调用函数并将结果相加。
+[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) 添加数组的元素和[ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b)对每个元素调用函数并将结果相加。
 
 若要执行的函数对数组中每个元素不存储返回值的情况下，使用[ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516)。 对于涉及两个数组的长度相等的函数，使用[ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc)。 如果你还需要保留数组的函数的结果，使用[ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45)或[ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c)，一次作用于两个数组。
 
@@ -392,7 +389,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="modifying-arrays"></a>修改数组
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)将元素设置为指定的值。 [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)设置为指定的值数组中的一系列元素。 下面的代码提供的示例`Array.fill`。
+[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) 将元素设置为指定的值。 [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) 设置为指定的值数组中的一系列元素。 下面的代码提供的示例`Array.fill`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -406,7 +403,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="converting-to-and-from-other-types"></a>转换到和从其他类型转换
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)从列表中创建一个数组。 [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)从序列创建数组。 [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)和[ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4)从数组类型转换为这些其他集合类型。
+[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b) 从列表中创建一个数组。 [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c) 从序列创建数组。 [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786) 和[ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4)从数组类型转换为这些其他集合类型。
 
 ### <a name="sorting-arrays"></a>对数组进行排序
 
@@ -414,13 +411,13 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="arrays-and-tuples"></a>数组和元组
 
-函数[ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187)和[ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48)将元组对的数组转换为元组的数组，反之亦然。 [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)和[ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677)是类似，只不过它们使用的三个元素的元组或元组的三个数组。
+函数[ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187)和[ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48)将元组对的数组转换为元组的数组，反之亦然。 [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) 和[ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677)是类似，只不过它们使用的三个元素的元组或元组的三个数组。
 
 ## <a name="parallel-computations-on-arrays"></a>在阵列上的并行计算
 
 模块[ `Array.Parallel` ](https://msdn.microsoft.com/library/60f30b77-5af4-4050-9a5c-bcdb3f5cbb09)包含用于在数组上执行并行计算的函数。 此模块不是面向之前版本 4 的.NET framework 的版本的应用程序中提供的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [F # 中;类型](fsharp-types.md)

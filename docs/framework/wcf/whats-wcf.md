@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>什么是 Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用于构建面向服务的应用程序的框架。 借助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，可以将数据作为异步消息从一个服务终结点发送至另一个服务终结点。 服务终结点可以是由 IIS 承载的持续可用的服务的一部分，也可以是应用程序中承载的服务。 终结点可以是从服务终结点请求数据的服务客户端。 简单消息可以是作为 XML 发送的单个字符或单个单词，复杂消息可以是二进制数据流。 一些示例方案包括：  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/27/2018
  虽然在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]存在之前就可以创建此类应用程序，但 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使终结点的开发比以前更容易。 总之， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 设计提供一种用于创建 Web 服务和 Web 服务客户端的可管理的方式。  
   
 ## <a name="features-of-wcf"></a>WCF 的功能  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括以下功能集。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括以下功能集。 有关详细信息，请参阅[WCF 功能详细信息](../../../docs/framework/wcf/feature-details/index.md)。  
   
 -   **服务导向**  
   
@@ -60,15 +60,15 @@ ms.lasthandoff: 04/27/2018
   
 -   **服务元数据**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用行业标准（如 WSDL、XML 架构和 WS-Policy）中指定的格式发布服务元数据。 该元数据可用于自动生成并配置客户端，以便访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 可通过 HTTP 和 HTTPS 来发布元数据，也可使用 Web 服务元数据交换标准来发布元数据。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支持使用行业标准（如 WSDL、XML 架构和 WS-Policy）中指定的格式发布服务元数据。 该元数据可用于自动生成并配置客户端，以便访问 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 可通过 HTTP 和 HTTPS 来发布元数据，也可使用 Web 服务元数据交换标准来发布元数据。 有关详细信息，请参阅[元数据](../../../docs/framework/wcf/feature-details/metadata.md)。  
   
 -   **数据协定**  
   
-     由于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]生成的，因此它也包括代码友好的方法，用于提供希望强制执行的协定。 数据协定就是其中一种通用类型的协定。 实质上，当您使用 Visual C# 或 Visual Basic 对服务进行编码时，处理数据的最简单方法是使用属于数据实体的属性创建表示该数据实体的类。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括一个以这种轻松的方式处理数据的综合系统。 在创建了表示数据的类之后，服务会自动生成使客户端能够符合所设计数据类型的元数据。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     由于 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]生成的，因此它也包括代码友好的方法，用于提供希望强制执行的协定。 数据协定就是其中一种通用类型的协定。 实质上，当您使用 Visual C# 或 Visual Basic 对服务进行编码时，处理数据的最简单方法是使用属于数据实体的属性创建表示该数据实体的类。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括一个以这种轻松的方式处理数据的综合系统。 在创建了表示数据的类之后，服务会自动生成使客户端能够符合所设计数据类型的元数据。 有关详细信息，请参阅[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **安全性**  
   
-     可对消息进加密以保护隐私，而且可以要求用户对其自身进行身份验证，然后才允许接收消息。 可使用众所周知的标准（如 SSL 或 WS-SecureConversation）实现安全性。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [安全性](../../../docs/framework/wcf/feature-details/security.md).  
+     可对消息进加密以保护隐私，而且可以要求用户对其自身进行身份验证，然后才允许接收消息。 可使用众所周知的标准（如 SSL 或 WS-SecureConversation）实现安全性。 有关详细信息，请参阅[安全性](../../../docs/framework/wcf/feature-details/security.md)。  
   
 -   **多种传输和编码方式**  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/27/2018
   
 -   **持久性消息**  
   
-     持久性消息决不会由于通信中断而丢失。 持久性消息模式的消息会始终保存到数据库中。 如果发生中断，数据库将允许您在恢复连接后恢复消息交换。 你还可以创建使用 Windows Workflow Foundation (WF) 的持久消息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     持久性消息决不会由于通信中断而丢失。 持久性消息模式的消息会始终保存到数据库中。 如果发生中断，数据库将允许您在恢复连接后恢复消息交换。 你还可以创建使用 Windows Workflow Foundation (WF) 的持久消息。 有关详细信息，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)。  
   
 -   **事务**  
   

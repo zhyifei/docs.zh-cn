@@ -1,12 +1,13 @@
 ---
-title: "数据协定已知类型"
-ms.custom: 
+title: 数据协定已知类型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-known-types"></a>数据协定已知类型
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 类允许您预先指定应该在反序列化期间包括在考虑范围内的类型。 有关工作示例，请参阅 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 示例。  
   
  通常，在客户端和服务之间传递参数和返回值时，这两个终结点共享要传输的数据的所有数据协定。 但是，在以下情况下并非如此：  
   
--   已发送的数据协定派生自预期的数据协定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]有关中的继承的部分[数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md))。 在该情况下，传输的数据没有与接收终结点所预期相同的数据协定。  
+-   已发送的数据协定派生自预期的数据协定。 有关详细信息，请参阅中的继承部分[数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md))。 在该情况下，传输的数据没有与接收终结点所预期相同的数据协定。  
   
 -   要传输的信息的声明类型是接口，而非类、结构或枚举。 因此，无法预先知道实际发送了实现接口的哪个类型，接收终结点就无法预先确定已传输数据的数据协定。  
   

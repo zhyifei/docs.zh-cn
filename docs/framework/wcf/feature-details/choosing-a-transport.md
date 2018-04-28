@@ -1,28 +1,28 @@
 ---
-title: "选择传输方式"
-ms.custom: 
+title: 选择传输方式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d41e9d2416ddbbd4c729b8c2a23754d19f0630d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="choosing-a-transport"></a>选择传输方式
 本主题讨论选择 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包含的三种主要传输的标准：HTTP、TCP 和命名管道。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还包括消息队列（也称为 MSMQ）传输，但本文档并不讨论消息队列。  
@@ -33,17 +33,17 @@ ms.lasthandoff: 12/22/2017
   
  如果必须连接到现有的客户端或服务器，则您可能不能选择使用特定传输。 不过，可使 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务可通过多个终结点（每个都有一种不同的传输方式）来访问。 当单一传输方式不能涵盖您的服务目标受众时，请考虑通过多个终结点来公开服务。 这样，客户端应用程序就可以使用最适合的终结点。  
   
- 在选择传输方式后，必须选择一个使用此传输方式的绑定。 你可以选择一个系统提供的绑定 (请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md))，也可以构建自己的自定义绑定 (请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md))。 还可以创建自己的绑定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][创建用户定义的绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。  
+ 在选择传输方式后，必须选择一个使用此传输方式的绑定。 你可以选择一个系统提供的绑定 (请参阅[系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md))，也可以构建自己的自定义绑定 (请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md))。 还可以创建自己的绑定。 有关详细信息，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。  
   
 ## <a name="advantages-of-each-transport"></a>每种传输方式的优点  
  本节介绍在三种主要传输方式中选择其中之一的主要理由，包括一个用于进行选择的详细决策表。  
   
 ### <a name="when-to-use-http-transport"></a>适合使用 HTTP 传输的情况  
- HTTP 是客户端与服务器之间的一个请求/响应协议。 最常见的应用程序包括与 Web 服务器进行通信的 Web 浏览器客户端。 该客户端向服务器发送一个请求，服务器侦听客户端请求消息。 当服务器接收到一个请求时，会返回响应，其中包含请求的状态。 如果成功，将返回可选数据，如网页、错误消息或其他信息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]HTTP 协议，请参阅[HTTP 的超文本传输协议](http://go.microsoft.com/fwlink/?LinkId=94858)。  
+ HTTP 是客户端与服务器之间的一个请求/响应协议。 最常见的应用程序包括与 Web 服务器进行通信的 Web 浏览器客户端。 该客户端向服务器发送一个请求，服务器侦听客户端请求消息。 当服务器接收到一个请求时，会返回响应，其中包含请求的状态。 如果成功，将返回可选数据，如网页、错误消息或其他信息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] HTTP 协议，请参阅[HTTP 的超文本传输协议](http://go.microsoft.com/fwlink/?LinkId=94858)。  
   
  HTTP 协议不是基于连接的 － 一旦发送了响应，就不会再维护任何状态。 要处理多页事务，应用程序必须持续保持任何必要的状态。  
   
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，HTTP 传输绑定针对与旧式非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 系统的互操作性进行了优化。 如果所有通信方都使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，则使用基于 TCP 或基于命名管道的绑定会更快。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetTcpBinding>和<xref:System.ServiceModel.NetNamedPipeBinding>。  
+ 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，HTTP 传输绑定针对与旧式非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 系统的互操作性进行了优化。 如果所有通信方都使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，则使用基于 TCP 或基于命名管道的绑定会更快。 有关详细信息，请参阅 <xref:System.ServiceModel.NetTcpBinding> 和 <xref:System.ServiceModel.NetNamedPipeBinding>。  
   
 ### <a name="when-to-use-the-tcp-transport"></a>适合使用 TCP 传输的情况  
  TCP 是一个基于连接、面向流的传递服务，具有端对端错误检测和更正功能。 *基于连接的*表示在交换数据前建立主机之间的通信会话的。 主机是 TCP/IP 网络上由逻辑 IP 地址标识的任意设备。  
@@ -66,10 +66,10 @@ ms.lasthandoff: 12/22/2017
 |特性|描述|适合的传输方式|  
 |---------------|-----------------|------------------------|  
 |诊断|使用诊断可自动检测传输的连接性问题。 所有传输方式均支持发回描述连接性的错误信息这一功能。 不过，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不包括用于调查网络问题的诊断工具。|无|  
-|宿主|所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点必须承载在应用程序内。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 和早期版本仅支持承载使用 HTTP 传输的应用程序。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)]上，还增加了对承载所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 传输（包括 TCP 和命名管道）的支持。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)和[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。|HTTP|  
+|宿主|所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 终结点必须承载在应用程序内。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 和早期版本仅支持承载使用 HTTP 传输的应用程序。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)]上，还增加了对承载所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 传输（包括 TCP 和命名管道）的支持。 有关详细信息，请参阅[在 Internet 信息服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)和[在 Windows 进程激活服务中承载](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。|HTTP|  
 |检查|检查是在传送期间从消息中提取并处理信息的功能。 HTTP 协议会从数据中分离出路由和控制信息，使得可以更方便地生成用于检查和分析消息的工具。 易于检查的传输方式还可能要求网络设备中有较低的处理能力。 使用的安全级别会影响是否可以检查消息。|HTTP|  
 |滞后时间|滞后时间是指完成消息交换所需的最少时间。 所有网络操作都具有或长或端的滞后时间，具体取决于选择的传输方式。 由于消息的强制相关性，利用固有消息交换模式为请求-答复的传输方式（如 HTTP）进行双工或单向通信会导致滞后时间增加。 这种情况下，请考虑使用固有消息交换模式为双工的传输方式，如 TCP。|TCP、命名<br /><br /> 管道|  
-|连接距离|传输的连接距离反映了传输在与其他系统连接时的能力。 命名管道传输的连接距离很小；它只能连接到在同一计算上运行的服务。 TCP 和 HTTP 传输方式都有很好的连接距离，并可以渗透某些 NAT 和防火墙配置。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用 Nat 和防火墙](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)。|HTTP、TCP|  
+|连接距离|传输的连接距离反映了传输在与其他系统连接时的能力。 命名管道传输的连接距离很小；它只能连接到在同一计算上运行的服务。 TCP 和 HTTP 传输方式都有很好的连接距离，并可以渗透某些 NAT 和防火墙配置。 有关详细信息，请参阅[使用 Nat 和防火墙](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)。|HTTP、TCP|  
 |安全性|安全性是在传输期间通过提供保密性、完整性或身份验证来保护消息的能力。 保密性使消息免于检查，完整性防止消息被修改，身份验证保证消息发送方或接收方的身份。<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在消息级别和传输级别均支持传输安全性。 如果传输支持缓冲传输模式，则消息安全性与传输组合在一起。 对传输安全性的支持会根据您所选择的传输方式而有所不同。 HTTP、TCP 和命名管道传输利用合理的奇偶校验对传输安全提供支持。|全部|  
 |吞吐量|吞吐量度量指定的时间内可以传送和处理的数据量。 与滞后时间类似，选择的传输方式会影响服务操作的吞吐量。 将传输的吞吐量最大化要求尽量减小传送内容的开销，并尽量缩短等待消息交换完成的时间。 TCP 和命名管道传输使消息正文增加的开销都不大，并支持减少消息答复等待时间的固有双工形状。|TCP、命名管道|  
 |工具|工具表示对用于开发、诊断、承载和其他活动的协议的第三方应用程序支持。 开发工具和软件以便与 HTTP 协议协同工作意味着巨大的投资。|HTTP|  

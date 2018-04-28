@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ca32eb9543498279448617e33169ddd22882702
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>将工作流和活动序列化为 XAML 和从 XAML 序列化工作流和活动
 除了可将工作流定义编译为程序集中包含的类型之外，还可将工作流定义序列化为 XAML。 这些已序列化的定义可以重新加载以供编辑或检测，可以传递给生成系统以供编译，也可以加载并调用。 本主题概述如何序列化工作流定义以及如何使用 XAML 工作流定义。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/09/2018
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- 每个 <xref:System.Activities.DynamicActivityProperty> 实例均表示工作流的一个输入参数，并且 <xref:System.Activities.ActivityBuilder.Implementation%2A> 包含构成工作流逻辑的活动。 请注意，此示例中的右值表达式是 Visual Basic 表达式。 Lambda 表达式不可序列化为 XAML，除非使用 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>。 如果序列化的工作流要在工作流设计器中打开或进行编辑，则应使用 Visual Basic 表达式。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [使用命令性代码创作工作流、 活动和表达式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
+ 每个 <xref:System.Activities.DynamicActivityProperty> 实例均表示工作流的一个输入参数，并且 <xref:System.Activities.ActivityBuilder.Implementation%2A> 包含构成工作流逻辑的活动。 请注意，此示例中的右值表达式是 Visual Basic 表达式。 Lambda 表达式不可序列化为 XAML，除非使用 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>。 如果序列化的工作流要在工作流设计器中打开或进行编辑，则应使用 Visual Basic 表达式。 有关详细信息，请参阅[创作工作流、 活动和表达式使用命令性代码](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
   
  若要将由 <xref:System.Activities.ActivityBuilder> 实例表示的工作流定义序列化为 XAML，应使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 创建 <xref:System.Xaml.XamlWriter>，然后通过 <xref:System.Xaml.XamlServices>，使用 <xref:System.Xaml.XamlWriter> 对工作流定义进行序列化。 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 提供一些方法，可以在 <xref:System.Activities.ActivityBuilder> 实例和 XAML 之间进行映射，并可加载 XAML 工作流以及返回可调用的 <xref:System.Activities.DynamicActivity>。 在下面的示例中，将上一示例中的 <xref:System.Activities.ActivityBuilder> 实例序列化为一个字符串，并将其保存到一个文件中。  
   
@@ -97,7 +97,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [C# 表达式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
+ 有关详细信息，请参阅[C# 表达式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
   
  序列化的工作流定义也可以加载到<xref:System.Activities.ActivityBuilder>实例使用<xref:System.Activities.XamlIntegration.ActivityXamlServices><xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A>方法。 在将序列化的工作流加载到 <xref:System.Activities.ActivityBuilder> 实例中后，可以对其进行检查和修改。 这对自定义工作流设计器作者很有用，并将提供用于在设计过程中保存和重新加载工作流定义的机制。 在下面的示例中，将加载上一示例中的序列化的工作流定义并检查其属性。  
   

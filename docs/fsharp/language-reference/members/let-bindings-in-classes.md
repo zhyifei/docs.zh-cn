@@ -1,20 +1,17 @@
 ---
-title: "类中的 let 绑定 (F#)"
-description: "了解如何通过使用 let 绑定的类定义中定义私有字段和私有函数对于 F # 类。"
-keywords: "visual f#, f#, 函数编程"
+title: 类中的 let 绑定 (F#)
+description: '了解如何通过使用 let 绑定的类定义中定义私有字段和私有函数对于 F # 类。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 9d3710f5-68b1-4e4c-b02b-27fe018f20e8
-ms.openlocfilehash: 1337cc0794e366e8c39745f5c45065362c9c38c9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c4511a541403dde517acaf902e86de8d48f13781
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="let-bindings-in-classes"></a>类中的 let 绑定
 
@@ -55,9 +52,9 @@ A`let`绑定，它不是静态称为实例`let`绑定。 实例`let`绑定执行
 
 可以使用成员定义和添加关键字，还定义一个类私有字段`private`到定义。 这很有用，如果您希望无需重写你的代码更改成员的可访问性。 有关详细信息，请参阅[访问控制](../access-control.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [成员](index.md)
 
 [类中的 `do` 绑定](do-bindings-in-classes.md)
 
-[`let`绑定](../functions/let-bindings.md)
+[`let` 绑定](../functions/let-bindings.md)

@@ -1,20 +1,17 @@
 ---
-title: "关键字参考 (F#)"
-description: "查找有关 F # 语言关键字的所有信息的链接。"
-keywords: "visual f#, f#, 函数编程"
+title: 关键字参考 (F#)
+description: '查找有关 F # 语言关键字的所有信息的链接。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: cdfdd86843acf05a8b33647823f934a161f6d885
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35a127a38db4874699ef7b43681cb967a139c81e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="keyword-reference"></a>关键字参考
 
@@ -24,10 +21,10 @@ ms.lasthandoff: 10/18/2017
 
 下表显示了按字母顺序，简要说明以及指向包含详细信息的相关主题的链接的所有 F # 关键字。
 
-|关键字|Link|描述|
+|关键字|链接|描述|
 |-------|----|-----------|
 |`abstract`|[成员](members/index.md)<br /><br />[抽象类](abstract-classes.md)|指示既可以在其中声明它或，其中是虚拟的但默认实现的类型中具有没有实现的方法。|
-|`and`|[`let`绑定](functions/let-bindings.md)<br /><br />[成员](members/index.md)<br /><br />[约束](generics/constraints.md)|相互递归在绑定中使用，在属性声明中，并使用泛型形参上的多个约束。|
+|`and`|[`let` 绑定](functions/let-bindings.md)<br /><br />[成员](members/index.md)<br /><br />[约束](generics/constraints.md)|相互递归在绑定中使用，在属性声明中，并使用泛型形参上的多个约束。|
 |`as`|[类](classes.md)<br /><br />[模式匹配](Pattern-Matching.md)|用于为当前类对象提供一个对象名称。 此外用于在模式匹配整个模式为提供一个名称。|
 |`assert`|[断言](assertions.md)|用于在调试期间验证代码。|
 |`base`|[类](classes.md)<br /><br />[继承](inheritance.md)|用作基类对象的名称。|
@@ -58,7 +55,7 @@ ms.lasthandoff: 10/18/2017
 |`interface`|[接口](interfaces.md)|用于声明和实现接口。|
 |`internal`|[访问控制](access-control.md)|用于指定成员是可见的程序集内但之外无效。|
 |`lazy`|[延迟计算](lazy-computations.md)|用于指定仅在需要结果时要执行的计算。|
-|`let`|[`let`绑定](functions/let-bindings.md)|用于关联，或将绑定，请为值或函数的名称。|
+|`let`|[`let` 绑定](functions/let-bindings.md)|用于关联，或将绑定，请为值或函数的名称。|
 |`let!`|[异步工作流](asynchronous-workflows.md)<br /><br />[计算表达式](computation-expressions.md)|使用异步工作流可将名称绑定到的异步计算的结果或在其他计算表达式，用于绑定到一个结果的计算类型的名称。|
 |`match`|[match 表达式](match-expressions.md)|用于通过比较值与模式的分支。|
 |`member`|[成员](members/index.md)|用于声明属性或方法中的对象类型。|
@@ -138,7 +135,7 @@ ms.lasthandoff: 10/18/2017
 * `virtual`
 * `volatile`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [符号和运算符参考](symbol-and-operator-reference/index.md)

@@ -16,16 +16,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e2afa9e868c1f561aed699a2bdf7d09c17898b3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>在托管应用程序中承载
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务可以承载于任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 应用程序中。 自承载服务是最灵活的宿主选项，因为此服务部署所需要的基础结构最少。 但是，此服务也是最不可靠的宿主选项，因为托管应用程序未提供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中其他宿主选项（如 Internet 信息服务 (IIS) 和 Windows 服务）的高级宿主和管理功能。  
   
- 若要创建自承载服务，请创建并打开 <xref:System.ServiceModel.ServiceHost>的实例以启动侦听消息的服务。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [如何： 承载于托管应用程序的 WCF 服务](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
+ 若要创建自承载服务，请创建并打开 <xref:System.ServiceModel.ServiceHost>的实例以启动侦听消息的服务。 有关详细信息，请参阅[如何： 承载 WCF 服务中托管的应用程序](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
   
  有关如何定义协定、 实现协定，以及承载托管的应用程序内的服务的完整示例，请参阅[入门教程](../../../../docs/framework/wcf/getting-started-tutorial.md)和[自承载](../../../../docs/framework/wcf/samples/self-host.md)。  
   

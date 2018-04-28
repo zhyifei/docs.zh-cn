@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db4662245f348eca795440f149160a66d87c998f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8311c558c180de5010850a982dc4cca7576382a3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-services"></a>承载服务
 要变为活动状态，服务必须承载于创建它并控制它的上下文和生存期的运行时环境中。 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务设计为在支持托管代码的任意 Windows 进程中运行。  
@@ -34,12 +34,12 @@ ms.lasthandoff: 04/26/2018
 ## <a name="hosting-options"></a>宿主选项  
   
 #### <a name="self-hosting-in-a-managed-application"></a>托管应用程序中的自承载  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务可以承载于任何托管应用程序中。 这是最灵活的选项，因为它需要部署最少的基础结构。 在托管应用程序代码内嵌入服务代码，然后创建并打开 <xref:System.ServiceModel.ServiceHost> 的实例以使服务变为可用。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 承载于托管应用程序的 WCF 服务](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务可以承载于任何托管应用程序中。 这是最灵活的选项，因为它需要部署最少的基础结构。 在托管应用程序代码内嵌入服务代码，然后创建并打开 <xref:System.ServiceModel.ServiceHost> 的实例以使服务变为可用。 有关详细信息，请参阅[如何： 承载 WCF 服务中托管的应用程序](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
   
  此选项启用两个常见方案：[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]在控制台应用程序和丰富的客户端应用程序，如内运行的服务基于 Windows Presentation Foundation (WPF) 或 Windows 窗体 (WinForms)。 在应用程序的开发阶段中，将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务承载于控制台应用程序内通常是很有用的。 这使服务变得容易调试，从中跟踪信息以查明应用程序内发生的情况变得更加方便，以及通过将其复制到新的位置进行来回移动变得更加轻松。 此宿主选项还使丰富客户端应用程序（如 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 和 WinForms 应用程序）与外部世界的通信变得很容易。 例如，一个将 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 用于其用户界面并作为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务主机的对等协作客户端，允许其他客户端连接到它并共享信息。  
   
 #### <a name="managed-windows-services"></a>托管 Windows 服务  
- 此宿主选项包括注册 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务作为托管 Windows 服务（以前称为 NT 服务）承载于其中的应用程序域 (AppDomain)，以便服务的进程生存期由 Windows 服务的服务控制管理器 (SCM) 控制。 与自承载选项一样，此类型的宿主环境要求作为应用程序的一部分编写某些宿主代码。 通过使服务从 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 类以及从 <xref:System.ServiceProcess.ServiceBase> 服务协定接口继承，将该服务同时实现为 Windows 服务和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 然后创建 <xref:System.ServiceModel.ServiceHost> ，在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法内打开它并在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法内关闭它。 还必须实现从 <xref:System.Configuration.Install.Installer> 继承的安装程序类，以允许 Installutil.exe 工具将程序安装为 Windows 服务。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 承载 WCF 服务中托管的 Windows 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 在未激活消息的安全环境中，由托管 Windows 服务宿主选项启用的方案是承载于 IIS 之外、长时间运行的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的方案。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  
+ 此宿主选项包括注册 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务作为托管 Windows 服务（以前称为 NT 服务）承载于其中的应用程序域 (AppDomain)，以便服务的进程生存期由 Windows 服务的服务控制管理器 (SCM) 控制。 与自承载选项一样，此类型的宿主环境要求作为应用程序的一部分编写某些宿主代码。 通过使服务从 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 类以及从 <xref:System.ServiceProcess.ServiceBase> 服务协定接口继承，将该服务同时实现为 Windows 服务和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务。 然后创建 <xref:System.ServiceModel.ServiceHost> ，在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法内打开它并在被重写的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法内关闭它。 还必须实现从 <xref:System.Configuration.Install.Installer> 继承的安装程序类，以允许 Installutil.exe 工具将程序安装为 Windows 服务。 有关详细信息，请参阅[如何： 承载 WCF 服务中托管的 Windows 服务](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 在未激活消息的安全环境中，由托管 Windows 服务宿主选项启用的方案是承载于 IIS 之外、长时间运行的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务的方案。 服务的生存期改由操作系统控制。 此宿主选项在 Windows 的所有版本中都是可用的。  
   
 #### <a name="internet-information-services-iis"></a>Internet 信息服务 (IIS)  
  IIS 宿主选项与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 集成在一起，并使用这些技术提供的功能，如进程回收、空闲关闭、进程状况监视和基于消息的激活。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 操作系统上，这是作为必须高度可用且高度可伸缩的 Web 服务应用程序宿主的首选解决方案。 IIS 还提供了客户期望企业级服务器产品具有的集成可管理性。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何为 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务配置 IIS 托管，请参阅 [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  

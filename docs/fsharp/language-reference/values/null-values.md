@@ -1,20 +1,17 @@
 ---
-title: "Null 值 (F#)"
-description: "了解如何在 F # 编程语言中使用 null 值。"
-keywords: "visual f#, f#, 函数编程"
+title: Null 值 (F#)
+description: '了解如何在 F # 编程语言中使用 null 值。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 68ebd261-51cf-4582-b2dc-44c84d1c2500
-ms.openlocfilehash: 01c14de00eb5efd0952145ffc8aabe69d65a3a48
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8d302cc78c5de582f58c6f9b9dea7b23ee7ddfea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="null-values"></a>Null 值
 
@@ -44,7 +41,7 @@ Null 值不通常用于在 F # 中的值或变量。 但是，在某些情况下
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet703.fs)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [值](index.md)
 
 [match 表达式](../match-expressions.md)

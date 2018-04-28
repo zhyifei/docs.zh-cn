@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f7716921be5ff97c2353b3b31d841c0c8dc01658
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-generated-client-code"></a>了解生成的客户端代码
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 可生成用于生成客户端应用程序的客户端代码和客户端应用程序配置文件。 本主题提供了有关标准服务协定方案的生成代码示例的教程。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用生成的代码生成客户端应用程序的详细信息，请参阅 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)。  
@@ -52,14 +52,14 @@ ms.lasthandoff: 04/27/2018
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 您可以使用生成的服务协定接口和 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 类一起创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道对象，使用该通道对象可调用服务操作。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)。  
+ 您可以使用生成的服务协定接口和 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 类一起创建 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道对象，使用该通道对象可调用服务操作。 有关详细信息，请参阅[如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)。  
   
 ### <a name="finding-wcf-client-classes"></a>查找 WCF 客户端类  
  若要查找实现您要使用的服务协定的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端类，请搜索 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 的扩展名，其中类型参数为您先前查找到的且扩展该接口的服务协定接口。 下面的代码示例演示类型为 <xref:System.ServiceModel.ClientBase%601> 的 `ISampleService`类。  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- 您可以使用此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端类，方法是创建它的一个新实例并调用它实现的方法。 这些方法调用服务操作，可设计和配置该服务操作以进行交互。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。  
+ 您可以使用此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端类，方法是创建它的一个新实例并调用它实现的方法。 这些方法调用服务操作，可设计和配置该服务操作以进行交互。 有关详细信息，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。  
   
 > [!NOTE]
 >  SvcUtil.exe 在生成 WCF 客户端类时会将一个 <xref:System.Diagnostics.DebuggerStepThroughAttribute> 添加到该客户端类，以防止调试器逐步调试该 WCF 客户端类。  

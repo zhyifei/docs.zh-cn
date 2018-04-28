@@ -1,12 +1,13 @@
 ---
-title: "使用数据协定"
-ms.custom: 
+title: 使用数据协定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7541f04279bbe9d85b7e2ecca841d9f5a14fc9a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 839227e9a67d904ea4613f841deac5a9a3f6f9ea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-data-contracts"></a>使用数据协定
 “数据协定”  是在服务与客户端之间达成的正式协议，用于以抽象方式描述要交换的数据。 也就是说，为了进行通信，客户端和服务不必共享相同的类型，而只需共享相同的数据协定。 数据协定为每个参数或返回类型精确定义为进行交换而序列化哪些数据（将哪些数据转换为 XML）。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="data-contract-basics"></a>数据协定基本知识  
  默认情况下，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用称为数据协定序列化程序的序列化引擎对数据进行序列化和反序列化（与 XML 进行相互转换）。 所有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基元类型（如整型和字符串型）以及某些被视为基元的类型（如 <xref:System.DateTime> 和 <xref:System.Xml.XmlElement>）无需做其他任何准备工作就可序列化并被视为拥有默认数据协定。 许多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型也具有现有数据协定。 有关可序列化类型的完整列表，请参阅 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
- 必须为所创建的新复杂类型定义数据协定才能序列化这些类型。 默认情况下， <xref:System.Runtime.Serialization.DataContractSerializer> 推断数据协定并序列化所有公共可见类型。 类型的所有公共读/写属性和字段均被序列化。 可以使用 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>从序列化中剔除某些成员。 还可以使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性显式创建数据协定。 正常情况下可通过将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用到该类型来完成该任务。 可以将此属性应用到类、结构和枚举。 然后必须将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用到数据协定类型的每个成员，以指示这些成员为数据成员， 即应进行序列化。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)。  
+ 必须为所创建的新复杂类型定义数据协定才能序列化这些类型。 默认情况下， <xref:System.Runtime.Serialization.DataContractSerializer> 推断数据协定并序列化所有公共可见类型。 类型的所有公共读/写属性和字段均被序列化。 可以使用 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>从序列化中剔除某些成员。 还可以使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性显式创建数据协定。 正常情况下可通过将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用到该类型来完成该任务。 可以将此属性应用到类、结构和枚举。 然后必须将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用到数据协定类型的每个成员，以指示这些成员为数据成员， 即应进行序列化。 有关详细信息，请参阅[可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)。  
   
 ### <a name="example"></a>示例  
  下面的示例演示已经显式应用了 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 属性的服务协定（接口）。 该示例演示基元类型不要求数据协定，而复杂类型却对此有要求。  

@@ -1,20 +1,17 @@
 ---
-title: "类中的 do 绑定 (F#)"
-description: "了解如何使用 F # do 在类定义中，该对象构造时或者如果第一次使用类型执行操作的绑定。"
-keywords: "visual f#, f#, 函数编程"
+title: 类中的 do 绑定 (F#)
+description: '了解如何使用 F # do 在类定义中，该对象构造时或者如果第一次使用类型执行操作的绑定。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 78987cb8-bdba-46e2-b5b2-994c83fe42c4
-ms.openlocfilehash: f9582338306d87c3dd799425083037cc95b31b1e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 27c2372328c8b23b91239517271c0d71a672a34d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="do-bindings-in-classes"></a>类中的 do 绑定
 
@@ -51,7 +48,7 @@ Initializing MyType.
 Initializing object 1 2 2 4 8 16
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [成员](index.md)
 
 [类](../classes.md)
@@ -60,4 +57,4 @@ Initializing object 1 2 2 4 8 16
 
 [类中的 `let` 绑定](let-bindings-in-classes.md)
 
-[`do`绑定](../functions/do-Bindings.md)
+[`do` 绑定](../functions/do-Bindings.md)

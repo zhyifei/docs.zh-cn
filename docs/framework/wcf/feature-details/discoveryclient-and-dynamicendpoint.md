@@ -1,24 +1,26 @@
 ---
-title: "DiscoveryClient 和 DynamicEndpoint"
-ms.custom: 
+title: DiscoveryClient 和 DynamicEndpoint
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e3ac334d53480ba8b63cc8e8f117dd74315963c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient 和 DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> 和 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是客户端上用来搜索服务的两个类。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 为您提供与一组特定条件相匹配的服务列表，并允许您连接到这些服务。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 执行相同的操作，另外会自动连接到所发现的服务之一。 可以将任何终结点转换为 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，也可以在配置中添加搜索条件，这样，如果您需要在解决方案中执行发现操作，但不希望修改客户端逻辑，则 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 会非常有用 – 此时您只需修改终结点。 另一方面，<xref:System.ServiceModel.Discovery.DiscoveryClient> 可用于对您的搜索操作获得更精细的控制。 下面对每个类的用途和优势加以详细说明。  
@@ -90,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]进行异步查找调用，请参阅[异步查找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 进行异步查找调用，请参阅[异步查找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)。  
   
  使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> 和 <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29> 方法可以查找基于其终结点地址的服务。 如果终结点地址不是网络可寻址地址，则此操作非常有用。 Resolve 方法接受 <xref:System.ServiceModel.Discovery.ResolveCriteria> 的实例，该实例可用于指定要解析的服务终结点地址、解析操作的最大持续时间和一组扩展。 下面的示例演示如何使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> 方法来解析服务。  
   
@@ -102,7 +104,7 @@ EndpointAddress newEp = response.EndpointDiscoveryMetadata.Address;
 ```  
   
 ## <a name="dynamicendpoint"></a>DynamicEndpoint  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint>标准终结点 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [标准终结点](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) 其执行发现并自动选择匹配的服务。 只需要创建一个传入要搜索的协定和要使用的绑定的 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，然后将 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 实例传递给 WCF 客户端。 下面的示例演示如何创建并使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 来调用计算器服务。 每次打开客户端时都会执行发现操作。 在配置中定义任何终结点还可以转换为<xref:System.ServiceModel.Discovery.DynamicEndpoint>通过添加`kind ="dynamicEndpoint"`属性设为终结点配置元素。  
+ <xref:System.ServiceModel.Discovery.DynamicEndpoint> 标准终结点 (有关详细信息，请参阅[标准终结点](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) 其执行发现并自动选择匹配的服务。 只需要创建一个传入要搜索的协定和要使用的绑定的 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，然后将 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 实例传递给 WCF 客户端。 下面的示例演示如何创建并使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 来调用计算器服务。 每次打开客户端时都会执行发现操作。 在配置中定义任何终结点还可以转换为<xref:System.ServiceModel.Discovery.DynamicEndpoint>通过添加`kind ="dynamicEndpoint"`属性设为终结点配置元素。  
   
 ```  
 DynamicEndpoint dynamicEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(ICalculatorService)), new WSHttpBinding());  

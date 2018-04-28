@@ -1,28 +1,28 @@
 ---
-title: "配置 HTTP 和 HTTPS"
-ms.custom: 
+title: 配置 HTTP 和 HTTPS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 50d4f92273a3e105fb83705bc138b06350910ccf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-http-and-https"></a>配置 HTTP 和 HTTPS
 WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Internet Information Services (IIS) 或命令行工具可以配置 HTTP/HTTPS 设置。 当某个 WCF 服务承载于 IIS 之下时，可以在 IIS 中配置 HTTP 或 HTTPS 设置（使用 inetmgr.exe 工具）。 如果 WCF 服务是自承载的，则可使用命令行工具配置 HTTP 或 HTTPS 设置。  
@@ -31,7 +31,7 @@ WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Interne
   
  用于配置 HTTP 设置的工具取决于计算机所运行的操作系统。  
   
- 运行时[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 会自动安装此工具。 运行时[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下载该工具在[Windows XP Service Pack 2 支持工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Httpcfg 概述](http://go.microsoft.com/fwlink/?LinkId=88605)。  
+ 运行时[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 会自动安装此工具。 运行时[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下载该工具在[Windows XP Service Pack 2 支持工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 有关详细信息，请参阅[Httpcfg 概述](http://go.microsoft.com/fwlink/?LinkId=88605)。  
   
  如果运行的是 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 Windows 7，则可以使用 Netsh.exe 工具配置这些设置。  
   

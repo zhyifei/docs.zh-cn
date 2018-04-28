@@ -1,12 +1,13 @@
 ---
-title: "如何：创建安全令牌服务"
-ms.custom: 
+title: 如何：创建安全令牌服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,33 +16,34 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 53ae64af0612cb905a2342491761b1e27ef19c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>如何：创建安全令牌服务
 安全令牌服务实现在 WS-Trust 规范中定义的协议。 此协议为颁发、续订、取消和验证安全令牌定义消息格式和消息交换模式。 给定的安全令牌服务提供这些功能中的一个或多个功能。 本主题考虑最常见的情况：实现令牌颁发。  
   
 ## <a name="issuing-tokens"></a>颁发令牌  
- WS-Trust 基于 `RequestSecurityToken` XML 架构定义语言 (XSD) 架构元素和用于执行令牌颁发的 `RequestSecurityTokenResponse` XSD 架构元素来定义消息格式。 此外，它还定义关联的操作统一资源标识符 (URI)。 与 `RequestSecurityToken` 消息关联的操作 URI 是 http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue。 与 `RequestSecurityTokenResponse` 消息关联的操作 URI 是 http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue。  
+ WS-Trust 基于 `RequestSecurityToken` XML 架构定义语言 (XSD) 架构元素和用于执行令牌颁发的 `RequestSecurityTokenResponse` XSD 架构元素来定义消息格式。 此外，它还定义关联的操作统一资源标识符 (URI)。 URI 与关联的操作`RequestSecurityToken`消息是http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue。 URI 与关联的操作`RequestSecurityTokenResponse`消息是http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue。  
   
 ### <a name="request-message-structure"></a>请求消息结构  
  颁发请求消息结构通常包括以下项：  
   
--   请求类型 URI，其值为 http://schemas.xmlsoap.org/ws/2005/02/trust/Issue。  
+-   请求类型 URI 值为http://schemas.xmlsoap.org/ws/2005/02/trust/Issue。  
   
--   令牌类型 URI。 对于安全断言标记语言 (SAML) 1.1 令牌，此 URI 的值为 http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1。  
+-   令牌类型 URI。 安全断言标记语言 (SAML) 1.1 令牌，此 URI 的值都是http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1。  
   
 -   密钥大小值，指示与颁发的令牌关联的密钥中的位数。  
   
--   密钥类型 URI。 对于对称密钥，此 URI 的值是：http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey。  
+-   密钥类型 URI。 对于对称密钥，此 URI 的值是http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey。  
   
  此外，可能会显示几个其他项：  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ 有关详细信息，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
 ## <a name="creating-response-messages"></a>创建响应消息  
  一旦安全令牌服务处理颁发请求并构造要随校验密钥一起颁发的令牌，就需要构造响应消息，其中至少包括请求的令牌、证明令牌和颁发的令牌引用。 此颁发的令牌通常是从 <xref:System.IdentityModel.Tokens.SamlSecurityToken> 中创建的 <xref:System.IdentityModel.Tokens.SamlAssertion>，如以下示例所示。  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何构造证明令牌，如果客户端和安全令牌服务同时提供的共享密钥的密钥材料，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何构造证明令牌，如果客户端和安全令牌服务同时提供的共享密钥的密钥材料，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
  通过创建 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> 类的实例来构造颁发的令牌的引用。  
   

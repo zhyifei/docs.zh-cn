@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3834f48c407f799fc5fede17182f47652f49747f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>排队通信的最佳做法
 本主题对 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的排队通信提供建议做法。 以下各节从方案角度讨论建议的做法。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  此外，将 <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 属性设置为 `false`，还可以选择不产生磁盘写入开销。  
   
- 安全性对性能有影响。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [性能注意事项](../../../../docs/framework/wcf/feature-details/performance-considerations.md)。  
+ 安全性对性能有影响。 有关详细信息，请参阅[性能注意事项](../../../../docs/framework/wcf/feature-details/performance-considerations.md)。  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>可靠的端对端排队消息处理  
  以下各节介绍的建议做法适用于要求进行端对端可靠消息处理的方案。  
@@ -49,21 +49,21 @@ ms.lasthandoff: 04/26/2018
   
  不建议为端对端可靠通信关闭死信队列。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用死信队列来处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)。  
+ 有关详细信息，请参阅[使用死信队列的处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)。  
   
 ### <a name="use-of-poison-message-handling"></a>病毒消息处理的使用  
  通过病毒消息处理，可从消息处理失败的状态下恢复。  
   
  在使用病毒消息处理功能时，请确保将 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 属性设置为适当的值。 将该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Drop> 表示数据丢失。 另一方面，如果该属性设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>，服务主机一旦检测到病毒消息，则被视为出现了错误。 使用 MSMQ 3.0 时，最好使用 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 来避免数据丢失并移出病毒消息。 使用 MSMQ 4.0 时，建议使用 <xref:System.ServiceModel.ReceiveErrorHandling.Move>。 <xref:System.ServiceModel.ReceiveErrorHandling.Move> 将病毒消息移出队列，以便服务可以继续处理新消息。 这样，病毒消息服务就可以单独处理病毒消息。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
+ 有关详细信息，请参阅[的病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
   
 ## <a name="achieving-high-throughput"></a>实现高吞吐量  
  若要在单个终结点上实现高吞吐量，请使用下面的方法：  
   
--   事务处理批处理。 事务处理批处理可确保在单个事务中能够读取多个消息。 这样可优化事务提交，从而提高整体性能。 批处理的代价在于，如果一个批次内某个消息出现错误，则整个批次都会回滚，并且这些消息必须逐个处理，直到可以再次安全地进行批处理为止。 大多数情况下，很少出现病毒消息，因此首选使用批处理来提高系统性能，尤其是具有参与事务的其他资源管理器时。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [对在事务中的消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)。  
+-   事务处理批处理。 事务处理批处理可确保在单个事务中能够读取多个消息。 这样可优化事务提交，从而提高整体性能。 批处理的代价在于，如果一个批次内某个消息出现错误，则整个批次都会回滚，并且这些消息必须逐个处理，直到可以再次安全地进行批处理为止。 大多数情况下，很少出现病毒消息，因此首选使用批处理来提高系统性能，尤其是具有参与事务的其他资源管理器时。 有关详细信息，请参阅[在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)。  
   
--   并发。 并发可增加吞吐量，但并发也会影响对共享资源的争用。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [并发](../../../../docs/framework/wcf/samples/concurrency.md)。  
+-   并发。 并发可增加吞吐量，但并发也会影响对共享资源的争用。 有关详细信息，请参阅[并发](../../../../docs/framework/wcf/samples/concurrency.md)。  
   
 -   遏制。 要实现最佳性能，需要遏制调度程序管线中的消息数。 有关如何执行此操作的示例，请参阅[限制](../../../../docs/framework/wcf/samples/throttling.md)。  
   
@@ -73,12 +73,12 @@ ms.lasthandoff: 04/26/2018
   
  使用场时，应注意 MSMQ 3.0 不支持远程事务处理读取。 MSMQ 4.0 支持远程事务处理读取。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [对在事务中的消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)和[Windows Vista、 Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)。  
+ 有关详细信息，请参阅[在事务中对消息进行批处理](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)和[在 Windows Vista、 Windows Server 2003 和 Windows XP 中的队列功能的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)。  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>以工作语义为单元排队  
  某些情况下，队列中的一组消息可能具有相关性，因此这些消息的顺序很重要。 在这些情况下，将一组相关消息作为单个单元进行处理：要么成功处理所有消息，要么所有消息的处理都不成功。 若要实现这样的行为，请将会话用于队列。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [分组在会话中的排队的消息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)。  
+ 有关详细信息，请参阅[分组会话中的排队消息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)。  
   
 ## <a name="correlating-request-reply-messages"></a>关联请求-回复消息  
  虽然队列一般是单向的，但在某些情况下，可能希望将接收到的回复关联到先前发送的请求。 如果需要此类关联，建议应用自己的 SOAP 消息头，它包含消息的关联信息。 通常，发送方将此标头附加到消息，接收方处理消息并在回复队列中用新消息回复时，会附加发送方的消息头，消息头包含关联信息，这样发送方就能通过请求消息识别出回复消息。  

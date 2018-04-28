@@ -1,20 +1,17 @@
 ---
-title: "记录 (F#)"
-description: "了解如何对 F # 记录表示已命名的值，并且可选择带有成员的简单聚合。"
-keywords: "visual f#, f#, 函数编程"
+title: 记录 (F#)
+description: '了解如何对 F # 记录表示已命名的值，并且可选择带有成员的简单聚合。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1270bf4eaeba99a15b0f81b5477f4c3b98644f66
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="records"></a>记录
 
@@ -114,7 +111,7 @@ Point is at (10.000000, 0.000000, -1.000000).
 ## <a name="differences-between-records-and-classes"></a>记录和类之间的差异
 因为它们会自动公开为属性，并且它们是用于创建和复制的记录，记录的字段与类不同。 记录构造也不同于类构造。 在记录类型，不能定义构造函数。 相反，本主题中所述的构造语法适用。 类具有构造函数参数、 字段和属性之间没有直接关系。
 
-与联合和结构类型，类似记录具有结构上相等语义。 类具有引用相等性语义。 下面的代码示例说明这一点。
+与联合和结构类型，类似记录具有结构上相等语义。 类具有引用相等性语义。 下面的代码示例展示了此操作。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
@@ -129,6 +126,6 @@ Point is at (10.000000, 0.000000, -1.000000).
 
 [F# 语言参考](index.md)
 
-[Reference-Equality](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+[引用相等性](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 
 [模式匹配](pattern-matching.md)

@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b34a0118c9223e8d09bf56de39e3fea1b115688f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ae5bf1088ec03229eb996b0e43b3d3395497571a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 性能
 Dustin Metzgar  
@@ -36,7 +36,7 @@ Dustin Metzgar
   
  [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是 Microsoft 为构建面向服务的应用程序而提供的统一编程模型。 它最初和 WF3 一起随 .Net 3.0 推出，目前已成为 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的关键组件之一。  
   
- Windows Server AppFabric 是一组集成技术。您可以利用这些技术更轻松地生成、缩放和管理在 IIS 上运行的 Web 应用程序和复合应用程序。 它提供用于监视和管理服务与工作流的工具。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
+ Windows Server AppFabric 是一组集成技术。您可以利用这些技术更轻松地生成、缩放和管理在 IIS 上运行的 Web 应用程序和复合应用程序。 它提供用于监视和管理服务与工作流的工具。 有关详细信息，请参阅[Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
   
 ## <a name="goals"></a>目标  
  本主题的目标是使用为不同方案测得的数据显示 WF4 的性能特征。 本文还提供 WF4 与 WF3 之间的详细比较，从而展示在新修订版中所做的重大改进。 本文所展示的方案和数据量化了 WF4 和 WF3 在不同方面的基础成本。 这些数据有助于了解 WF4 的性能特征，并有助于规划从 WF3 到 WF4 的迁移或在应用程序开发中使用 WF4。 但是，应当关注根据本文展示的数据所得出的结论。 复合工作流应用程序的性能高度依赖于工作流的实现方式和不同组件的集成方式。 必须测量每个应用程序，才能确定该应用程序的性能特征。  
@@ -67,7 +67,7 @@ Dustin Metzgar
 ### <a name="messaging"></a>消息传送  
  最初，WF3 通过外部事件或 Web 服务调用提供相当有限的消息传送支持。 在 .Net 3.5 中，工作流可通过 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 实现为 <xref:System.Workflow.Activities.SendActivity> 客户端或公开为 <xref:System.Workflow.Activities.ReceiveActivity> 服务。 在 WF4 中，通过将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 消息传送逻辑紧密集成到 WF 中，基于工作流的消息传送编程概念已得到进一步的强化。  
   
- .Net 4 中 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 所提供的统一消息处理管道使 WF4 服务能够超越 WF3 服务，具有更卓越的性能和可伸缩性。 WF4 还提供了更丰富的消息传送编程支持，可以对复杂消息交换模式 (MEP) 进行建模。 开发人员可以使用类型化的服务协定实现简单的编程，也可以使用非类型化的服务协定获得更好的性能，而无需付出序列化成本。 WF4 中通过 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 类提供的客户端通道缓存支持可帮助开发人员以最小的工作量构建快速应用程序。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [更改缓存共享级别为发送活动](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
+ .Net 4 中 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 所提供的统一消息处理管道使 WF4 服务能够超越 WF3 服务，具有更卓越的性能和可伸缩性。 WF4 还提供了更丰富的消息传送编程支持，可以对复杂消息交换模式 (MEP) 进行建模。 开发人员可以使用类型化的服务协定实现简单的编程，也可以使用非类型化的服务协定获得更好的性能，而无需付出序列化成本。 WF4 中通过 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 类提供的客户端通道缓存支持可帮助开发人员以最小的工作量构建快速应用程序。 有关详细信息，请参阅[更改发送活动的缓存共享级别](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
   
 ### <a name="declarative-programming"></a>声明性编程  
  WF4 提供一个清楚、简单的声明性编程框架，用以对业务流程和服务进行建模。 无需任何其他代码，该编程模型支持完全声明性地编写活动，极大地简化了工作流的创作。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，基于 XAML 的声明性编程框架已统一为既支持 WPF 又支持 WF 的单个程序集 System.Xaml.dll。  
@@ -314,7 +314,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  需要注意此图形中一个明显的趋势，即在 WF3 和 WF4 中，嵌套对内存使用量的影响都相对较低。  最大的内存影响来自给定工作流中的活动数。  若采用序列 1000 的数据，复杂深度 5、序列 5，复杂深度 7、序列 1 这两个变体，如果活动数达到几千时，则内存使用量会出现明显的增长。  在有大约 29000 个活动的极端情况下（深度 7、序列 1），WF4 使用的内存几乎要比 WF3 少 79%。  
   
 ### <a name="multiple-workflow-definitions-test"></a>多个工作流定义测试  
- 测量每个工作流定义的内存分为两个不同的测试，原因是 WF3 和 WF4 中可用于承载工作流的选项有所不同。  这些测试与工作流复杂程度测试采用不同的运行方式，给定工作流对于每个定义只实例化和执行一次。  这是因为工作流定义和它的主机在 AppDomain 的生存期内会保留在内存中。  运行给定的工作流实例使用的内存应当在垃圾回收期间清理。  WF4 的迁移指南包含承载选项的更多详细信息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WF 迁移实用手册： 工作流承载](http://go.microsoft.com/fwlink/?LinkID=153313)。  
+ 测量每个工作流定义的内存分为两个不同的测试，原因是 WF3 和 WF4 中可用于承载工作流的选项有所不同。  这些测试与工作流复杂程度测试采用不同的运行方式，给定工作流对于每个定义只实例化和执行一次。  这是因为工作流定义和它的主机在 AppDomain 的生存期内会保留在内存中。  运行给定的工作流实例使用的内存应当在垃圾回收期间清理。  WF4 的迁移指南包含承载选项的更多详细信息。 有关详细信息，请参阅[WF 迁移实用手册： 工作流承载](http://go.microsoft.com/fwlink/?LinkID=153313)。  
   
  为工作流定义测试创建多个工作流定义，可以通过多种方式完成。  例如，可以使用代码生成创建一组除名称外完全相同的 1000 个工作流，并将这些工作流中的每一个都保存到单独的文件中。  对于控制台承载的测试采取了这种方法。  在 WF3 中，<xref:System.Workflow.Runtime.WorkflowRuntime>类用于运行工作流定义。  WF4 可使用 <xref:System.Activities.WorkflowApplication> 创建单个工作流实例，也可以直接使用 <xref:System.Activities.WorkflowInvoker> 运行活动，如同它是方法调用一样。  <xref:System.Activities.WorkflowApplication> 是单个工作流实例的主机，并与 <xref:System.Workflow.Runtime.WorkflowRuntime> 具有相近功能，所以在此测试中进行了使用。  
   

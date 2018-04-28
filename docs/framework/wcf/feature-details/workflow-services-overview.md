@@ -1,27 +1,29 @@
 ---
-title: "工作流服务概述"
-ms.custom: 
+title: 工作流服务概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0c59c0688fca53a7c7623330f3fdba4f5defd88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-services-overview"></a>工作流服务概述
-工作流服务是使用工作流实现的基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的服务。 工作流服务是使用消息传递活动发送和接收 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息的工作流。 .NET Framework 4.5 引入了多个消息传递活动，可用于从工作流中发送和接收消息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]消息传递活动以及如何使用它们来实现不同的消息交换模式，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  
+工作流服务是使用工作流实现的基于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的服务。 工作流服务是使用消息传递活动发送和接收 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 消息的工作流。 .NET Framework 4.5 引入了多个消息传递活动，可用于从工作流中发送和接收消息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 消息传递活动以及如何使用它们来实现不同的消息交换模式，请参阅[消息传递活动](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  
   
 ## <a name="benefits-of-using-workflow-services"></a>使用工作流服务的优势  
  随着应用程序的分布越来越广泛，各服务可负责调用其他服务来减轻工作负载。 作为异步操作实现这些调用会增加代码的复杂性。 错误处理需要处理异常和提供详细跟踪信息，从而进一步增加了这些形式的复杂性。 有些服务经常长时间运行，并且在等待输入时可能会占用宝贵的系统资源。 鉴于这些问题，分布式应用程序往往非常复杂，且难以编写和维护。 工作流很自然地表示异步工作的协调，特别是对外部服务的调用。 工作流也是表示长时间运行的业务流程的有效方式。 正是这些特性使得工作流成为了在分布式环境中生成服务的一笔宝贵财富。  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  托管 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 应用程序或托管 Windows 服务中承载的工作流服务创建一个 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类的实例，并向该实例传递一个在 <xref:System.ServiceModel.Activities.WorkflowService> 属性中包含工作流定义的 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 实例。 包含消息传递活动的工作流定义公开为工作流服务。  
   
- 若要在 IIS 或 WAS 中承载工作流服务，请将包含工作流服务定义的 .xamlx 文件放置到虚拟目录中。 默认终结点 (使用<xref:System.ServiceModel.BasicHttpBinding>) 自动创建[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][简化配置](../../../../docs/framework/wcf/simplified-configuration.md)。 也可以在虚拟目录中放置 Web.config 文件以指定你自己的终结点。 如果您的工作流定义位于程序集中，则可以在虚拟目录中放置一个 .svc 文件，并在 App_Code 目录中放置该工作流程序集。 该 .svc 文件必须指定服务主机工厂以及实现该工作流服务的类。 下面的示例演示如何指定服务主机工厂以及实现该工作流服务的类。  
+ 若要在 IIS 或 WAS 中承载工作流服务，请将包含工作流服务定义的 .xamlx 文件放置到虚拟目录中。 默认终结点 (使用<xref:System.ServiceModel.BasicHttpBinding>) 是自动创建的详细信息，请参阅[简化配置](../../../../docs/framework/wcf/simplified-configuration.md)。 也可以在虚拟目录中放置 Web.config 文件以指定你自己的终结点。 如果您的工作流定义位于程序集中，则可以在虚拟目录中放置一个 .svc 文件，并在 App_Code 目录中放置该工作流程序集。 该 .svc 文件必须指定服务主机工厂以及实现该工作流服务的类。 下面的示例演示如何指定服务主机工厂以及实现该工作流服务的类。  
   
 ```  
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory  

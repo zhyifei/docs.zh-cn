@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3f48de4b4073a6b34671b3eab5e07890790c71ce
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>根据服务元数据生成 WCF 客户端
 本主题介绍如何使用 Svcutil.exe 中的各种开关，根据元数据文档生成客户端。  
@@ -60,13 +60,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |选项|描述|  
 |------------|-----------------|  
-|**/language:\<language>**|指定要用于代码生成的编程语言。 提供在 Machine.config 文件中注册的语言名称或从 <xref:System.CodeDom.Compiler.CodeDomProvider> 继承的类的完全限定名称。<br /><br /> 值：c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp<br /><br /> 默认设置：csharp<br /><br /> 缩写形式：`/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [CodeDomProvider 类](http://go.microsoft.com/fwlink/?LinkId=94778)。|  
+|**/language:\<语言 >**|指定要用于代码生成的编程语言。 提供在 Machine.config 文件中注册的语言名称或从 <xref:System.CodeDom.Compiler.CodeDomProvider> 继承的类的完全限定名称。<br /><br /> 值：c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp<br /><br /> 默认设置：csharp<br /><br /> 缩写形式：`/l`<br /><br /> 有关详细信息，请参阅[CodeDomProvider 类](http://go.microsoft.com/fwlink/?LinkId=94778)。|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>为客户端选择命名空间  
   
 |选项|描述|  
 |------------|-----------------|  
-|**/namespace:\<string,string>**|指定从 WSDL 或 XML 架构 `targetNamespace` 到公共语言运行库 (CLR) 命名空间的映射。 将通配符 (*) 用于 `targetNamespace` 将映射所有 `targetNamespaces`，而不显式映射到该 CLR 命名空间。<br /><br /> 若要确保消息协定名称不与操作名称相冲突，请用双冒号 (`::`) 限定类型引用，或者确保名称是唯一的。<br /><br /> 默认设置：派生自 `DataContracts` 的架构文档的目标命名空间。 默认命名空间用于所有其他生成的类型。<br /><br /> 缩写形式：`/n`|  
+|**/namespace:\<字符串、 字符串 >**|指定从 WSDL 或 XML 架构 `targetNamespace` 到公共语言运行库 (CLR) 命名空间的映射。 将通配符 (*) 用于 `targetNamespace` 将映射所有 `targetNamespaces`，而不显式映射到该 CLR 命名空间。<br /><br /> 若要确保消息协定名称不与操作名称相冲突，请用双冒号 (`::`) 限定类型引用，或者确保名称是唯一的。<br /><br /> 默认设置：派生自 `DataContracts` 的架构文档的目标命名空间。 默认命名空间用于所有其他生成的类型。<br /><br /> 缩写形式：`/n`|  
   
 ## <a name="choosing-a-data-binding"></a>选择数据绑定  
   
@@ -78,10 +78,10 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |选项|描述|  
 |------------|-----------------|  
-|**/config:\<configFile>**|指定已生成的配置文件的文件名。<br /><br /> 默认设置：output.config|  
+|**/config:\<configFile >**|指定已生成的配置文件的文件名。<br /><br /> 默认设置：output.config|  
 |**/mergeConfig**|将生成的配置合并到现有文件中，而不是覆盖现有文件。|  
 |**/noConfig**|不生成配置文件。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

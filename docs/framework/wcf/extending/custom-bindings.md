@@ -1,30 +1,32 @@
 ---
-title: "自定义绑定"
-ms.custom: 
+title: 自定义绑定
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a3da437f742c46a2229aa00db732b5437ec15e3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5fc38becb4a737ada5102c187ddeaac73aaceb1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="custom-bindings"></a>自定义绑定
-当系统提供的某个绑定不符合服务的要求时，可使用 <xref:System.ServiceModel.Channels.CustomBinding> 类。 所有绑定都是从绑定元素的有序集构造而来的。 自定义绑定可以从一组系统提供的绑定元素生成，也可以包含用户定义的自定义绑定元素。 例如，可以使用自定义绑定元素在服务终结点使用新的传输或编码器。 有关工作示例，请参阅[自定义绑定示例](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+当系统提供的某个绑定不符合服务的要求时，可使用 <xref:System.ServiceModel.Channels.CustomBinding> 类。 所有绑定都是从绑定元素的有序集构造而来的。 自定义绑定可以从一组系统提供的绑定元素生成，也可以包含用户定义的自定义绑定元素。 例如，可以使用自定义绑定元素在服务终结点使用新的传输或编码器。 有关工作示例，请参阅[自定义绑定示例](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)。 有关详细信息，请参阅[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
 ## <a name="construction-of-a-custom-binding"></a>自定义绑定的构造  
  自定义绑定是使用 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 构造函数并通过“堆叠”在一起的绑定元素的集合构造的，这些元素的特定顺序如下：  

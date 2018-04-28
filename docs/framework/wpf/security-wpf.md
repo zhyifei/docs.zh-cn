@@ -1,12 +1,13 @@
 ---
-title: "安全性 (WPF)"
-ms.custom: 
+title: 安全性 (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -20,23 +21,24 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fae5c8553cc395268b1c6afb1b64727014756975
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
-<a name="introduction"></a>在开发时[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]独立应用程序和浏览器承载的应用程序，你必须考虑的安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]独立应用程序使用不受限制的权限执行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**权限集)、 是否使用 Windows Installer (.msi) XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是，完全信任主机应用程序可以创建部分信任<xref:System.AppDomain>使用.NET Framework 外接程序模型。 有关详细信息，请参阅[WPF 外接程序概述](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
+<a name="introduction"></a> 在开发时[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]独立应用程序和浏览器承载的应用程序，你必须考虑的安全模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 独立应用程序使用不受限制的权限执行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**权限集)、 是否使用 Windows Installer (.msi) XCopy 部署或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支持使用 ClickOnce 部署部分信任的独立 WPF 应用程序。 但是，完全信任主机应用程序可以创建部分信任<xref:System.AppDomain>使用.NET Framework 外接程序模型。 有关详细信息，请参阅[WPF 外接程序概述](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]浏览器承载的应用程序托管的[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]或 Firefox，和可以是[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]或松散[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]文档中的详细信息，请参阅[WPF XAML 浏览器应用程序概述](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序托管的[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]或 Firefox，和可以是[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]或松散[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]文档中的详细信息，请参阅[WPF XAML 浏览器应用程序概述](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]浏览器承载的应用程序在默认情况下，仅限于默认值在部分信任安全沙盒内, 执行[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet**区域权限集。 这将有效地隔离[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]浏览器承载你希望典型 Web 应用程序隔离的相同方式中的客户端计算机的应用程序。 XBAP 最高可以将权限提升到“完全信任”，具体取决于部署 URL 的安全区域和客户端的安全配置。 有关详细信息，请参阅 [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 浏览器承载的应用程序在默认情况下，仅限于默认值在部分信任安全沙盒内, 执行[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet**区域权限集。 这将有效地隔离[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]浏览器承载你希望典型 Web 应用程序隔离的相同方式中的客户端计算机的应用程序。 XBAP 最高可以将权限提升到“完全信任”，具体取决于部署 URL 的安全区域和客户端的安全配置。 有关详细信息，请参阅 [WPF 部分信任安全性](../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
  本主题讨论的安全模型[!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)]独立和浏览器承载的应用程序。  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 |资源|添加到项目中的生成类型的文件**资源**。|`pack://application:,,,/MyResourceFile.xaml`|  
 |内容|添加到项目中的生成类型的文件**内容**。|`pack://application:,,,/MyContentFile.xaml`|  
 |源站点|添加到项目中的生成类型的文件**无**。|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|应用程序代码|具有已编译代码隐藏的 XAML 资源。<br /><br /> 或<br /><br /> 添加到项目中的生成类型的 XAML 文件**页**。|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|应用程序代码|具有已编译代码隐藏的 XAML 资源。<br /><br /> -或-<br /><br /> 添加到项目中的生成类型的 XAML 文件**页**。|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  有关应用程序数据文件和包的详细信息[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]，请参阅[WPF 应用程序资源、 内容和数据文件](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。  
@@ -100,9 +102,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="web-browsing-software-security-settings"></a>Web 浏览软件安全设置  
  计算机上的安全设置决定了任何 Web 浏览软件被授予的访问权限。 Web 浏览软件包括任何应用程序或组件，它使用[WinINet](http://go.microsoft.com/fwlink/?LinkId=179379)或[UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) Api，包括 Internet Explorer 和 PresentationHost.exe。  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]提供了你可以依据配置允许通过或从要执行的功能的机制[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]，其中包括：  
+ [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 提供了你可以依据配置允许通过或从要执行的功能的机制[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]，其中包括：  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 相关组件  
+-   .NET framework 依赖于组件  
   
 -   ActiveX 控件和插件  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  也可以从 Internet Explorer 中进入“Internet 选项”对话框。 单击**工具**，然后单击**Internet 选项**。  
   
- 从开始[!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]，专用于以下的安全设置[!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]包括：  
+ 从开始[!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]，专门为.NET Framework 的以下安全设置将包括：  
   
 -   **宽松 XAML**。 控件是否[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]可以导航到并丢失[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]文件。 （“启用”、“禁用”和“提示”选项）。  
   
@@ -231,7 +233,7 @@ ms.lasthandoff: 12/22/2017
   
  但是，很可能 APTCA 程序集安装到后出现安全漏洞[!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]。 一旦发现安全漏洞，程序集发布者可以生成安全更新来修复现有安装上的问题，还可以阻止问题发现后进行的安装操作。 其中一个更新选项是卸载程序集，即使这可能中断使用该程序集的其他完全受信任的客户端应用程序。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]提供对于部分受信任，则可以禁用依据 APTCA 程序集的机制[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]而无需卸载 APTCA 的程序集。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供对于部分受信任，则可以禁用依据 APTCA 程序集的机制[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]而无需卸载 APTCA 的程序集。  
   
  若要禁用 APTCA 程序集，必须创建一个特殊的注册表项：  
   
@@ -252,7 +254,7 @@ ms.lasthandoff: 12/22/2017
  如果必须为部分受信任的客户端应用程序禁用某程序集，可以编写一个用于创建注册表项和值的更新。  
   
 > [!NOTE]
->  核心[!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]在这种方式中禁用它们，因为它们是对托管应用程序运行所需的程序集不会影响。 对禁用 APTCA 程序集的支持主要面向第三方应用程序。  
+>  核心.NET Framework 程序集不受这种方式禁用它们，因为它们所需的托管应用程序运行。 对禁用 APTCA 程序集的支持主要面向第三方应用程序。  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>宽松 XAML 文件的沙盒行为  

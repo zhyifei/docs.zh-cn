@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从与 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 一起使用的可用架构中生成类，则使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 类。 本主题描述该过程和变体。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 04/27/2018
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  也可将任何关联视为列表。 例如，可以将上面的关联视为一个复杂的 `city` 对象列表，这些对象碰巧有两个字段（一个字符串字段和一个整数字段）。 这两种模式在 XSD 架构中都有一种表示形式。 由于无法区分列表和关联，因此始终将这种模式作为列表处理，架构中出现特定于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的特殊批注除外。 该批注指示给定模式表示一个关联。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+>  也可将任何关联视为列表。 例如，可以将上面的关联视为一个复杂的 `city` 对象列表，这些对象碰巧有两个字段（一个字符串字段和一个整数字段）。 这两种模式在 XSD 架构中都有一种表示形式。 由于无法区分列表和关联，因此始终将这种模式作为列表处理，架构中出现特定于 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的特殊批注除外。 该批注指示给定模式表示一个关联。 有关详细信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  通常情况下，将列表作为派生自泛型列表的集合数据协定导入，或作为 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数组导入，具体取决于架构是否遵循集合的标准命名模式。 此进行了更详细地描述[数据协定中的集合类型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 通常将关联作为 <xref:System.Collections.Generic.Dictionary%602> 或派生自字典对象的集合数据协定导入。 例如，考虑下面的架构。  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 04/27/2018
   
 ##### <a name="design-considerations"></a>设计注意事项  
   
--   直接使用弱类型 XML 表示形式可能有些困难。 可以考虑使用其他序列化引擎（例如 <xref:System.Xml.Serialization.XmlSerializer>），以便以强类型方式使用与数据协定不兼容的架构。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
+-   直接使用弱类型 XML 表示形式可能有些困难。 可以考虑使用其他序列化引擎（例如 <xref:System.Xml.Serialization.XmlSerializer>），以便以强类型方式使用与数据协定不兼容的架构。 有关详细信息，请参阅[使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
   
 -   某些架构构造不能通过 <xref:System.Runtime.Serialization.XsdDataContractImporter> 事件导入，即使是 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 属性设置为 `true`。 此外，在此情况下可以考虑使用 <xref:System.Xml.Serialization.XmlSerializer>。  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 04/27/2018
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 属性。 指定用于为生成的类生成代码的 <xref:System.CodeDom.Compiler.CodeDomProvider>。 导入机制尝试避免不受 <xref:System.CodeDom.Compiler.CodeDomProvider> 支持的功能。 如果未设置 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，则可以无限制地使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 功能全集。  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
 ## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

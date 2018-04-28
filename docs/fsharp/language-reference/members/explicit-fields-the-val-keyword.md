@@ -1,20 +1,17 @@
 ---
-title: "显式字段：val 关键字 (F#)"
-description: "了解有关 F # val 关键字，用于声明类或结构类型中存储一个值，而无需初始化类型的位置。"
-keywords: "visual f#, f#, 函数编程"
+title: 显式字段：val 关键字 (F#)
+description: '了解有关 F # val 关键字，用于声明类或结构类型中存储一个值，而无需初始化类型的位置。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3bdbc745-436b-407f-bf54-5d11ca829cd0
-ms.openlocfilehash: cee53a48f08aec89b0bdd40189ed331cadee877d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>显式字段：val 关键字
 
@@ -49,7 +46,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 
 >[!WARNING] 
-`Note`.NET Framework 命名空间`System.ComponentModel`包含具有相同名称的属性。 有关该属性的信息，请参见 `System.ComponentModel.DefaultValueAttribute`。
+`Note` .NET Framework 命名空间`System.ComponentModel`包含具有相同名称的属性。 有关该属性的信息，请参见 `System.ComponentModel.DefaultValueAttribute`。
 
 
 以下代码展示了显式字段的用法，作为对比，还展示了具有主构造函数的类中的 `let` 绑定。 注意：与 `let` 字段绑定的 `myInt1` 是私有的。 当从成员方法引用与 `let` 字段绑定的 `myInt1` 时，不需要自我标识符 `this`。 但如果要引用显式字段 `myInt2` 和 `myString`，则需要自我标识符。
@@ -80,7 +77,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 当关键字 `member val` 在一个类型定义中同时出现，它就是一个自动实现属性的定义。 有关详细信息，请参阅[属性](properties.md)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [属性](properties.md)
 
 [成员](index.md)

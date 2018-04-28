@@ -1,24 +1,26 @@
 ---
-title: "重播攻击"
-ms.custom: 
+title: 重播攻击
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: df2a7a78e876ec3228491569c918ad9add2e080d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="replay-attacks"></a>重播攻击
 A*重播攻击*攻击者复制双方之间的消息流并将该到一个或多个方时发生。 除非攻击得到缓解，否则，受到攻击的计算机会将该消息流作为合法消息进行处理，从而导致一系列不良后果，例如重复订购某种产品。  
@@ -43,7 +45,7 @@ A*重播攻击*攻击者复制双方之间的消息流并将该到一个或多�
   
  缓解措施包括：  
   
--   将消息模式安全与有状态安全上下文令牌结合使用（启用或不启用安全对话）。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 创建安全上下文令牌的安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+-   将消息模式安全与有状态安全上下文令牌结合使用（启用或不启用安全对话）。 有关详细信息，请参阅[如何： 为安全会话创建安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 -   将服务配置为使用传输级安全。  
   

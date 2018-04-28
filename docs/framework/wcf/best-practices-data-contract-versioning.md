@@ -1,12 +1,13 @@
 ---
-title: "最佳做法：数据协定版本管理"
-ms.custom: 
+title: 最佳做法：数据协定版本管理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：数据协定版本管理
-本主题列出了创建容易随时间而改变的数据协定的最佳做法。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]数据协定，请参阅中的主题[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+本主题列出了创建容易随时间而改变的数据协定的最佳做法。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 数据协定，请参阅中的主题[使用数据协定](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="note-on-schema-validation"></a>有关架构验证的说明  
  讨论数据协定版本管理时，注意除非元素被默认标记为可选之外，由 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 导出的数据协定架构不具有任何版本管理支持，这很重要。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  在这些示例中，虽然名称发生了改变（追加了一个“2”），但建议不要更改名称，而是通过对新命名空间追加版本号或日期来更改命名空间。 例如，`http://schemas.contoso.com/2005/05/21/PurchaseOrder` 数据协定应更改为 `http://schemas.contoso.com/2005/10/14/PurchaseOrder` 数据协定。  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]最佳做法：[服务版本控制](../../../docs/framework/wcf/service-versioning.md)。  
+ 有关详细信息，请参阅最佳实践：[服务版本控制](../../../docs/framework/wcf/service-versioning.md)。  
   
  有时，您必须保证应用程序发送的消息严格遵从架构，但不能依赖要严格遵从架构的传入消息。 在这种情况下，存在传入消息中包含某些外来数据的危险。 这些外来值由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 进行存储并返回，因此会导致发送对架构无效的消息。 若要避免此问题，应关闭往返功能。 有两种方法可以实现此目的。  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   对 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性 (Property) 设置为 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> 的服务协定应用 `true` 属性 (Attribute)。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]往返，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 往返，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>不要求进行架构验证时的版本管理  
  一般不要求严格遵从架构。 许多平台允许使用不是架构描述的其他元素。 完整的功能集，这容忍，只要中所述[数据协定版本管理](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)和[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)可用。 下面是一些建议的准则。  
@@ -65,9 +67,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  可以结合使用继承和数据协定，前提是不将继承用作版本管理机制，并且遵守某些规则。 如果某个类型派生于某个基类型，则在将来的版本中不要使它派生于其他基类型（除非版本具有相同的数据协定）。 其中存在一个例外，您可以将类型插入到数据协定类型及其基类型之间的层次结构中，但前提是该类型包含的数据成员名称与该层次结构中其他类型的任何可能版本中的其他成员名称不同。 通常情况下，在同一继承层次结构的不同级别使用具有相同名称的数据成员可导致严重的版本管理问题，因此应该避免。  
   
-3.  从数据协定的第一个版本开始，始终实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 可启用往返。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果已经释放了某个类型的一个或多个版本，而没有实现此接口，则在该类型的下一个版本中实现它。  
+3.  从数据协定的第一个版本开始，始终实现 <xref:System.Runtime.Serialization.IExtensibleDataObject> 可启用往返。 有关详细信息，请参阅[向前兼容的数据协定](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果已经释放了某个类型的一个或多个版本，而没有实现此接口，则在该类型的下一个版本中实现它。  
   
-4.  在较新的版本中，不要更改数据协定名称或命名空间。 如果更改该类型在数据协定下的名称或命名空间，请确保使用适当的机制（例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 属性）保留数据协定名称和命名空间。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]命名，请参阅[数据协定名称](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+4.  在较新的版本中，不要更改数据协定名称或命名空间。 如果更改该类型在数据协定下的名称或命名空间，请确保使用适当的机制（例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 属性）保留数据协定名称和命名空间。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 命名，请参阅[数据协定名称](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
 5.  在以后的版本中，不要更改任何数据成员的名称。 如果更改数据成员下的字段、属性或事件的名称，请使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性以保留现有数据成员名称。  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性应始终保留其默认值 `false`。  
   
-    2.  如果对于成员，默认值为 `null` 或零是不可接受的，则应使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 提供一个回调方法，以便在传入流中不存在该成员时提供一个合理的默认值。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]回调，请参阅[版本容错序列化回调](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
+    2.  如果对于成员，默认值为 `null` 或零是不可接受的，则应使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 提供一个回调方法，以便在传入流中不存在该成员时提供一个合理的默认值。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 回调，请参阅[版本容错序列化回调](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
   
     3.  应使用 `Order` 上的 `DataMemberAttribute` 属性，以确保所有新添加的数据成员显示在现有数据成员之后。 达到此目的的建议方法为：不应设置数据协定的第一个版本中的任何数据成员的 `Order` 属性。 应将添加到数据协定版本 2 中的所有数据成员的 `Order` 属性设置为 2。 将添加到数据协定版本 3 中的所有数据成员的 `Order` 设置为 3，依次类推。 允许将多个数据成员集设置为同一个 `Order` 编号。  
   

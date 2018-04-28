@@ -13,23 +13,23 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 091925dd1f505693df0d1eb770bca604cf038667
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3ca03c4529588964abe2d0d434bfd47b005e8d26
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>什么&#39;s Windows Communication Foundation 4.5 中的新增功能
 本主题讨论 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的新增功能。  
   
 ## <a name="wcf-simplification-features"></a>WCF 简化功能  
- 人们已进行了大量工作，以便更加方便地开发和维护 WCF 4.5 应用程序。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。  
+ 人们已进行了大量工作，以便更加方便地开发和维护 WCF 4.5 应用程序。 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。  
   
 ### <a name="task-based-async-support"></a>基于任务的异步支持  
  默认情况下，“添加服务应用”会生成返回任务的异步服务操作方法。 此操作是针对同步和异步方法执行的。 通过此操作，你可以使用新的基于任务的异步编程模型来异步调用服务操作。 在你调用生成的代理方法时，WCF 会构造一个 Task 对象以表示异步操作并返回该任务。 在操作完成时，在任务完成。  当实现异步操作时你可以将它作为实现基于任务的异步操作。 有关详细信息，请参阅[同步和异步操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
@@ -37,22 +37,22 @@ ms.lasthandoff: 03/23/2018
 ### <a name="simplified-generated-configuration-files"></a>简化了生成的配置文件  
  当您在 Visual Studio 中添加服务引用或使用 SvcUtil.exe工具时，将会生成一个客户端配置文件。 在以前版本的 WCF 中，这些配置文件包含每个绑定属性的值，即使该值是默认值。 在 WCF 4.5 中，生成的配置文件仅包含那些设置为非默认值的绑定属性。  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)  
+ 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)  
   
 ### <a name="contract-first-development"></a>协定优先开发  
  WCF 现在支持协定优先开发。 Svcutl.exe 具有一个 /serviceContract 开关，可用来从 WSDL 文档生成服务和数据协定。  
   
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>从可移植子集项目添加服务引用  
- 通过可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个 .NET 平台（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以在任何.NET 平台使用的.NET framework 程序集。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [可移植子集项目中添加服务引用](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)。  
+ 通过可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个 .NET 平台（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以在任何.NET 平台使用的.NET framework 程序集。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 有关详细信息，请参阅[可移植子集项目中添加服务引用](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)。  
   
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 兼容模式默认值已更改  
- WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，必须设置`aspNetCompatibilityEnabled`属性设置为 true 中[ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config 节。此外，此 appDomain 中的任何服务都需要将 `RequirementsMode` property on its <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>现在设置为<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Communication Foundation 中的新增](../../../docs/framework/wcf/whats-new.md)和[WCF 服务和 ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
+ WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，必须设置`aspNetCompatibilityEnabled`属性设置为 true 中[ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config 节。此外，此 appDomain 中的任何服务都需要将 `RequirementsMode` property on its <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>现在设置为<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。 有关详细信息，请参阅[What's New in Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md)和[WCF 服务和 ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
   
 ### <a name="new-transport-default-values"></a>新传输默认值  
- 为了简化配置，更改了多个传输属性默认值。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。  
+ 为了简化配置，更改了多个传输属性默认值。 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。  
   
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas  
- <xref:System.Xml.XmlDictionaryReaderQuotas> 包含用于 XML 字典读取器的可配置配额值，这些配额值会限制创建消息时由编码器使用的内存量。 虽然这些配额是可配置的，但默认值已更改，以减小开发人员必须显式设置这些默认值的可能性。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。  
+ <xref:System.Xml.XmlDictionaryReaderQuotas> 包含用于 XML 字典读取器的可配置配额值，这些配额值会限制创建消息时由编码器使用的内存量。 虽然这些配额是可配置的，但默认值已更改，以减小开发人员必须显式设置这些默认值的可能性。 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。  
   
 ### <a name="wcf-configuration-validation"></a>WCF 配置验证  
  作为 Visual Studio 中生成过程的一部分，现在将针对项目中定义的特性来验证 WCF 配置文件。 如果验证失败，则将在 Visual Studio 中显示验证错误或警告的列表。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/23/2018
  为了帮助新的和现有 WCF 服务开发人员配置服务，Visual Studio XML 编辑器现在为属于服务配置文件的每个配置元素及其属性提供了工具提示。  
   
 ## <a name="streaming-improvements"></a>流改进  
- 添加了对真实异步流的支持，在这种流中，如果接收方没有读取或者读取速度较慢，则发送方现在不会阻止线程，从而提高了可伸缩性。 消除了客户端向 IIS 承载的 WCF 服务发送流消息时对消息缓冲的限制。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。  
+ 添加了对真实异步流的支持，在这种流中，如果接收方没有读取或者读取速度较慢，则发送方现在不会阻止线程，从而提高了可伸缩性。 消除了客户端向 IIS 承载的 WCF 服务发送流消息时对消息缓冲的限制。 有关详细信息，请参阅[WCF 简化功能](../../../docs/framework/wcf/wcf-simplification-features.md)。  
   
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>简化通过 HTTPS 与 IIS 公开终结点  
  为了简化通过 HTTPS 来公开终结点，添加了一个 HTTPS 协议映射。 若要启用 HTTPS 终结点，请确保您的网站已配置 HTTPS 绑定和 SSL 证书，然后，只需为承载该服务的虚拟目录启用 HTTPS。 如果为服务启用了元数据，则也会通过 HTTPS 公开该元数据。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 03/23/2018
  为了帮助新的和现有 WCF 服务开发人员配置服务，Visual Studio XML 编辑器现在为属于服务配置文件的每个配置元素及其属性提供了工具提示。  
   
 ## <a name="configuring-wcf-services-in-code"></a>在代码中配置 WCF 服务  
- 通过 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]，开发人员可以使用配置文件或代码来配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 通过 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您还可以使用代码来配置服务。 在早期版本的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]（4.0 及更早版本）中，用代码来配置服务在自承载方案中十分方便，可以在调用 ServiceHost.Open 之前，使用 <xref:System.ServiceModel.ServiceHost> 类配置终结点和行为。 但是，在 Web 承载方案中，您没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，您需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET 4.5 起，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了一种使用代码来配置自承载服务和 Web 承载服务的更方便的方法。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [在代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。  
+ 通过 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]，开发人员可以使用配置文件或代码来配置服务。  当部署之后需要对服务进行配置时，配置文件十分有用。 在使用配置文件时，IT 专业人员只需要更新配置文件，无需重新编译。 不过，配置文件可能十分复杂，难以维护。 不支持对配置文件进行调试，并且将按名称来引用配置元素，这使得配置文件的创作易于出错且较为困难。 通过 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您还可以使用代码来配置服务。 在早期版本的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]（4.0 及更早版本）中，用代码来配置服务在自承载方案中十分方便，可以在调用 ServiceHost.Open 之前，使用 <xref:System.ServiceModel.ServiceHost> 类配置终结点和行为。 但是，在 Web 承载方案中，您没有访问 <xref:System.ServiceModel.ServiceHost> 类的权限。 若要配置 Web 承载的服务，您需要创建 `System.ServiceModel.ServiceHostFactory`，后者会创建 <xref:System.ServiceModel.Activation.ServiceHostFactory> 并执行任何所需的配置。 从 .NET 4.5 起，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了一种使用代码来配置自承载服务和 Web 承载服务的更方便的方法。 有关详细信息，请参阅[在代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。  
   
 ## <a name="channelfactory-caching"></a>ChannelFactory 缓存  
  WCF 客户端应用程序使用 <xref:System.ServiceModel.ChannelFactory%601> 类来创建 WCF 服务的通信通道。  创建 <xref:System.ServiceModel.ChannelFactory%601> 实例会带来一定的开销，因为这涉及以下操作：  
@@ -100,10 +100,10 @@ ms.lasthandoff: 03/23/2018
   
 4.  资源的释放  
   
- 为了尽量减少这种开销，WCF 可以缓存使用 WCF 客户端代理时的通道工厂。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [通道工厂和缓存](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)。  
+ 为了尽量减少这种开销，WCF 可以缓存使用 WCF 客户端代理时的通道工厂。 有关详细信息，请参阅[通道工厂和缓存](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)。  
   
 ## <a name="compression-and-the-binary-encoder"></a>压缩和二进制编码器  
- 从 WCF 4.5 开始，WCF 二进制编码器添加了对压缩的支持。 可使用 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> 属性来配置压缩类型。 客户端和服务都必须配置 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> 属性。 压缩对 HTTP、HTTPS 和 TCP 协议有效。 如果客户端指定要使用压缩，但服务不支持，则会引发协议异常，指示协议不匹配。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [选择消息编码器](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ 从 WCF 4.5 开始，WCF 二进制编码器添加了对压缩的支持。 可使用 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> 属性来配置压缩类型。 客户端和服务都必须配置 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> 属性。 压缩对 HTTP、HTTPS 和 TCP 协议有效。 如果客户端指定要使用压缩，但服务不支持，则会引发协议异常，指示协议不匹配。 有关详细信息，请参阅[选择消息编码器](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
   
 ## <a name="udp"></a>UDP  
  对 UDP 传输，这样，开发人员可以编写使用"发后不理"的服务添加了支持消息传送。 客户端向服务发送消息，且不希望从该服务获得响应。  

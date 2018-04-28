@@ -1,12 +1,13 @@
 ---
-title: "如何：创建联合客户端"
-ms.custom: 
+title: 如何：创建联合客户端
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +16,22 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fda534d591ae5142fb732607c7e248ef3cc71bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 38436a83bf58c4903a931ecafebf922800d230c1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>如何：创建联合客户端
 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，创建的客户端*联合服务*包括三个主要步骤：  
   
-1.  配置[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或类似的自定义绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建一个相应的绑定，请参阅[如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。 或者，运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对元数据终结点的联合服务，以生成与联合的服务和一个或多个通信配置文件安全令牌服务。  
+1.  配置[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或类似的自定义绑定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建一个相应的绑定，请参阅[如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。 或者，运行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对元数据终结点的联合服务，以生成与联合的服务和一个或多个通信配置文件安全令牌服务。  
   
 2.  设置 <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 的属性，它可以控制客户端与安全令牌服务之间交互的各个方面。  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  当客户端使用模拟凭据、<xref:System.Security.Cryptography.CryptographicException> 绑定或自定义颁发令牌以及非对称密钥时，可能会引发 <xref:System.ServiceModel.WSFederationHttpBinding>。 当将 <xref:System.ServiceModel.WSFederationHttpBinding> 和 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> 属性分别设置为 <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> 时，将非对称密钥与 <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey> 绑定和自定义颁发令牌一起使用。 当客户端尝试发送消息，而客户端模拟的标识不存在对应的用户配置文件时，将引发 <xref:System.Security.Cryptography.CryptographicException>。 若要缓解此问题，请在发送消息之前登录客户端计算机或调用 `LoadUserProfile`。  
   
- 本主题介绍有关这些过程的详细信息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]创建一个相应的绑定，请参阅[如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]联合的服务的工作原理，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ 本主题介绍有关这些过程的详细信息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 创建一个相应的绑定，请参阅[如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 联合的服务的工作原理，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>生成并检查联合服务的配置  
   
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  如果令牌缓存不是必需的设置`cacheIssuedTokens`属性 (的 <`issuedToken`> 元素) 到`false`。  
   
-3.  如果缓存令牌需要一定时间限制时，设置`maxIssuedTokenCachingTime`属性 <`issuedToken`> 为适当的值的元素。 例如:  
+3.  如果缓存令牌需要一定时间限制时，设置`maxIssuedTokenCachingTime`属性 <`issuedToken`> 为适当的值的元素。 例如：  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
 4.  如果默认值以外的值为首选，设置`issuedTokenRenewalThresholdPercentage`属性 <`issuedToken`> 元素为适当的值，例如：  
@@ -163,13 +165,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="localissuer-required"></a>必需的 LocalIssuer  
  如果客户端始终应使用一个本地颁发者，则请注意以下事项：如果链中的倒数第二个安全令牌服务指定了一个颁发者地址或颁发者元数据地址，则 Svcutil.exe 的默认输出会导致使用的不是本地颁发者。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]设置<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>， <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>，和<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A>属性<xref:System.ServiceModel.Security.IssuedTokenClientCredential>类，请参阅[如何： 配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 设置<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>， <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>，和<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A>属性<xref:System.ServiceModel.Security.IssuedTokenClientCredential>类，请参阅[如何： 配置本地颁发者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 ## <a name="scoped-certificates"></a>作用域证书  
  如果必须指定服务证书才能与任何安全令牌服务进行通信，则通常是因为没有使用证书协商，可以使用 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 类的 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> 属性来指定证书。 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> 方法采用 <xref:System.Uri> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 作为参数。 在与指定的 URI 处的终结点进行通信时将使用指定的证书。 或者，可以使用 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> 方法将证书添加到由 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 属性返回的集合中。  
   
 > [!NOTE]
->  作用域限定为给定的 URI 的证书的客户端想法仅适用于对服务（这些服务公开这些 URI 处的终结点）进行出站调用的应用程序。 它并不适用于已颁发的令牌，如在返回的集合中的服务器上配置签名的证书<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>的<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>类。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
+>  作用域限定为给定的 URI 的证书的客户端想法仅适用于对服务（这些服务公开这些 URI 处的终结点）进行出站调用的应用程序。 它并不适用于已颁发的令牌，如在返回的集合中的服务器上配置签名的证书<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>的<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>类。 有关详细信息，请参阅[如何： 在联合身份验证服务上配置凭据](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)  

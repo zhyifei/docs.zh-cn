@@ -1,24 +1,26 @@
 ---
-title: "部署承载于 Internet 信息服务中的 WCF 服务"
-ms.custom: 
+title: 部署承载于 Internet 信息服务中的 WCF 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 869e3b81e94e6efaa8d6cd9f4f021b52b6b43f48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ca37e8b3f59875ed912c02d0a8237a040bf79518
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署承载于 Internet 信息服务中的 WCF 服务
 开发和部署承载于 Internet 信息服务 (IIS) 中的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务包括以下任务：  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Windows 7：  
   
- 最后，必须确认已将 ASP.NET 配置为使用 .NET Framework 版本 4。 通过运行带 –i 选项的 ASPNET_Regiis 工具执行此操作。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ASP.NET IIS 注册工具](http://go.microsoft.com/fwlink/?LinkId=201186)  
+ 最后，必须确认已将 ASP.NET 配置为使用 .NET Framework 版本 4。 通过运行带 –i 选项的 ASPNET_Regiis 工具执行此操作。 有关详细信息，请参阅[ASP.NET IIS 注册工具](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>创建新的 IIS 应用程序或重新使用现有的 ASP.NET 应用程序  
  承载于 IIS 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务必须驻留在 IIS 应用程序内。 可以创建一个新的 IIS 应用程序专门承载 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。 或者，也可以将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务部署到现有应用程序，该应用程序已经承载 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 内容（如 .aspx 页和 ASP.NET Web 服务 [ASMX]）。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些选项，请参见 [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
@@ -89,21 +91,21 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 -   应用程序承载[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]在 IIS 外部的服务可以控制通过将一组基址 Uri 对传递这些服务的基址<xref:System.ServiceModel.ServiceHost>构造函数或通过提供[\<主机 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)中服务的配置元素。 承载于 IIS 中的服务无法控制其基址；承载于 IIS 中的服务的基址是其 .svc 文件的地址。  
   
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>承载于 IIS 中的服务的终结点地址  
- 承载于 IIS 中时，任何终结点地址始终被认为相对于表示服务的 .svc 文件的地址。 例如，如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务的基址是包含以下终结点配置的 http://localhost/Application1/MyService.svc。  
+ 承载于 IIS 中时，任何终结点地址始终被认为相对于表示服务的 .svc 文件的地址。 例如，如果的基址[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服务是http://localhost/Application1/MyService.svc使用以下终结点配置。  
   
 ```xml  
 <endpoint address="anotherEndpoint" .../>  
 ```  
   
- 这提供了一个可以在“http://localhost/Application1/MyService.svc/anotherEndpoint”上访问的终结点。  
+ 这提供终结点，可以在达到"http://localhost/Application1/MyService.svc/anotherEndpoint"。  
   
- 同样，将空字符串用作相对地址的终结点配置元素提供了一个可以在 http://localhost/Application1/MyService.svc（它是基址）上访问的终结点。  
+ 同样，使用空字符串，如提供在可访问终结点的相对地址的终结点配置元素http://localhost/Application1/MyService.svc，即的基址。  
   
 ```xml  
 <endpoint address="" ... />  
 ```  
   
- 对于承载于 IIS 中的服务的终结点，必须始终使用相对终结点地址。 如果终结点地址未指向承载公开终结点的服务的 IIS 应用程序，则提供完全限定的终结点地址（例如，http://localhost/MyService.svc）可能导致在部署服务时出错。 对所承载的服务使用相对终结点地址避免了这些潜在冲突。  
+ 对于承载于 IIS 中的服务的终结点，必须始终使用相对终结点地址。 提供完全限定的终结点地址 (例如，http://localhost/MyService.svc)如果终结点地址未指向承载公开终结点的服务 IIS 的应用程序可能会导致服务的部署中的错误。 对所承载的服务使用相对终结点地址避免了这些潜在冲突。  
   
 ### <a name="available-transports"></a>可用传输  
  承载于 IIS 5.1 和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 服务被限制为使用基于 HTTP 的通信。 在这些 IIS 平台上，将所承载的服务配置为使用非 HTTP 绑定会导致服务激活期间出错。 对于 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，支持的传输包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ 以及用于与现有 MSMQ 应用程序向后兼容的 msmq.formatname。  

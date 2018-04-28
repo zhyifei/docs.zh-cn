@@ -1,20 +1,17 @@
 ---
 title: 函数 (F#)
 description: '了解有关在 F # 和 F # 如何支持常见的函数编程构造函数。'
-keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-ms.openlocfilehash: adb2b0b3680c97582dfefda41c43735f9f09e6c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cdab85dd63cc74a4c6e7abf660f8f32cc088120
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="functions"></a>函数
 
@@ -115,7 +112,7 @@ let vol = cylinderVolume 2.0 3.0
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>递归函数
-递归函数是调用自身的函数。 它们要求在指定 **let** 关键字之后指定 **rec** 关键字。 从函数的主体内调用递归函数与调用任何函数调用是一样的。 下面的递归函数计算 *n*第斐波那契数。 斐波纳契数序列很早就为人所知，此序列中的每个连续的数字都是序列中前两个数字之和。
+递归函数是调用自身的函数。 它们要求在指定 **let** 关键字之后指定 **rec** 关键字。 从函数的主体内调用递归函数与调用任何函数调用是一样的。 以下递归函数计算第 n 个斐波纳契数。 斐波纳契数序列很早就为人所知，此序列中的每个连续的数字都是序列中前两个数字之和。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

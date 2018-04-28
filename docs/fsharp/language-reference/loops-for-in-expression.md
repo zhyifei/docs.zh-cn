@@ -1,20 +1,17 @@
 ---
-title: "循环：for...in 表达式 (F#)"
-description: "请参阅如何 F # 为..表达式中循环构造用于循环访问的可枚举集合中的模式的匹配项。"
-keywords: "visual f#, f#, 函数编程"
+title: 循环：for...in 表达式 (F#)
+description: '请参阅如何 F # 为..表达式中循环构造用于循环访问的可枚举集合中的模式的匹配项。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f54e3228-4aec-4d0a-ae37-bc3376508284
-ms.openlocfilehash: d86aeb3bdd975261e59004d636354a740bd95c47
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-forin-expression"></a>循环：for...in 表达式
 
@@ -138,10 +135,10 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 Number of elements in list1: 5
 ```
 
-`Note`你可以使用`for...in`序列表达式和其他计算表达式，在这种情况下的自定义的版本`for...in`使用表达式。 有关详细信息，请参阅[序列](sequences.md)，[异步工作流](asynchronous-workflows.md)，和[计算表达式](computation-expressions.md)。
+`Note` 你可以使用`for...in`序列表达式和其他计算表达式，在这种情况下的自定义的版本`for...in`使用表达式。 有关详细信息，请参阅[序列](sequences.md)，[异步工作流](asynchronous-workflows.md)，和[计算表达式](computation-expressions.md)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [循环：`for...to` 表达式](loops-for-to-expression.md)

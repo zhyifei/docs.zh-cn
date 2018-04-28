@@ -1,28 +1,28 @@
 ---
-title: "配置消息日志记录"
-ms.custom: 
+title: 配置消息日志记录
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-caps.latest.revision: 
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a867d5f85177ad9a19a5766c65a8f1f98c04cd17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-message-logging"></a>配置消息日志记录
 本主题描述如何针对不同的方案配置消息日志记录。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]消息日志记录设置，请参阅[建议的设置进行跟踪和消息日志记录](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 消息日志记录设置，请参阅[建议的设置进行跟踪和消息日志记录](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
   
  可以使用 `add` 指定要使用的侦听器的名称和类型。 在示例配置中，侦听器命名为“messages”，并添加了标准 .NET Framework 跟踪侦听器(`System.Diagnostics.XmlWriterTraceListener`)，作为要使用的类型。 如果使用 `System.Diagnostics.XmlWriterTraceListener`，则必须在配置文件中指定输出文件的位置和名称。 这是通过将 `initializeData` 设置为该日志文件的名称来完成的。 否则，系统将引发异常。 还可以实现能向默认文件发出日志的自定义侦听器。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- 如果希望禁用跟踪源，应该使用 `logMessagesAtServiceLevel`, `logMalformedMessages` 以及 `logMessagesAtTransportLevel` 元素的 `messageLogging` 属性。 应将所有这些属性设置为 `false`。 可以使用前面的代码示例中的配置文件、通过配置编辑器的 UI 接口或使用 WMI 来完成此操作。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]配置编辑器工具，请参阅[配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WMI，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ 如果希望禁用跟踪源，应该使用 `logMessagesAtServiceLevel`, `logMalformedMessages` 以及 `logMessagesAtTransportLevel` 元素的 `messageLogging` 属性。 应将所有这些属性设置为 `false`。 可以使用前面的代码示例中的配置文件、通过配置编辑器的 UI 接口或使用 WMI 来完成此操作。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 配置编辑器工具，请参阅[配置编辑器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
 ## <a name="logging-levels-and-options"></a>日志记录的级别和选项  
  对于传入消息，在消息形成后、在消息到达服务级别中的用户代码之前以及在检测到格式不正确的消息时，都会立即进行日志记录。  
@@ -107,7 +107,7 @@ ms.lasthandoff: 12/22/2017
   
  如果在配置文件中没有定义跟踪侦听器，则不论指定什么记录级别，都不会生成记录输出。  
   
- 对于消息日志记录选项（例如在本部分描述的属性），可以使用 Windows Management Instrumentation (WMI) 在运行时进行更改。 这可以通过访问[AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)实例，公开下列布尔属性： `LogMessagesAtServiceLevel`， `LogMessagesAtTransportLevel`，和`LogMalformedMessages`。 因此，如果为消息日志记录配置了跟踪侦听器，但是在配置中将这些选项设置为 `false`，那么可以在以后运行应用程序时将它们更改为 `true`。 这会在运行时有效地启用消息日志记录。 同样，如果在配置文件中启用了消息日志记录，可以在运行时使用 WMI 将其禁用。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ 对于消息日志记录选项（例如在本部分描述的属性），可以使用 Windows Management Instrumentation (WMI) 在运行时进行更改。 这可以通过访问[AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)实例，公开下列布尔属性： `LogMessagesAtServiceLevel`， `LogMessagesAtTransportLevel`，和`LogMalformedMessages`。 因此，如果为消息日志记录配置了跟踪侦听器，但是在配置中将这些选项设置为 `false`，那么可以在以后运行应用程序时将它们更改为 `true`。 这会在运行时有效地启用消息日志记录。 同样，如果在配置文件中启用了消息日志记录，可以在运行时使用 WMI 将其禁用。 有关详细信息，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
  消息记录中的 `source` 字段指定了在何种上下文中记录消息：在发送/接收请求消息时、在进行请求-答复或单向请求时、在服务模型或传输层上或者在发现格式不正确的消息时。  
   

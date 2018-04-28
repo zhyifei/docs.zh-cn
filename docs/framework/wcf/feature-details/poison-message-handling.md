@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="poison-message-handling"></a>病毒消息处理
 A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数量。 当基于队列的应用程序由于错误而无法处理消息时，可能会引起这种情况。 为符合可靠性要求，排队的应用程序是在事务中接收消息的。 中止已接收某个排队消息的事务时，该消息仍会保留在队列中，这样当开始一个新事务时，将对该消息重试操作。 如果导致事务中止的问题未得到更正，则直到超出最大传递尝试次数并导致产生病毒消息时，接收应用程序才会中断接收和中止同一消息的循环。  
@@ -75,7 +75,7 @@ A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数�
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>最佳方案：处理 MsmqPoisonMessageException  
  当服务确定某个消息是病毒消息时，排队传输会引发一个 <xref:System.ServiceModel.MsmqPoisonMessageException>，其中包含病毒消息的 `LookupId`。  
   
- 接收应用程序可以实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，以处理应用程序要求处理的任何错误。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [扩展对错误处理和报告的控制](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)。  
+ 接收应用程序可以实现 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，以处理应用程序要求处理的任何错误。 有关详细信息，请参阅[扩展控件通过错误处理和报表](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)。  
   
  应用程序可能要求对病毒消息能进行某种自动处理，也就是将病毒消息移动至病毒消息队列，以便服务可以访问队列中的其他消息。 唯一需要使用错误处理程序机制来侦听病毒消息异常情况的情形是 <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 设置被设置为 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 时。 Message Queuing 3.0 的病毒消息示例阐释了这一行为。 下面说明了处理病毒消息应执行的步骤，包括最佳方案：  
   
@@ -118,7 +118,7 @@ A*病毒消息*是一条消息，已超出向应用程序传递尝试最大数�
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的消息队列支持用于记录消息传递尝试次数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 会在内存中维护中止计数，所以当场中的多个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务读取同一消息时，此属性包含的值可能不精确。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [队列概述](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  [Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
  [在协定和服务中指定并处理错误](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

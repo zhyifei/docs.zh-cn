@@ -1,23 +1,24 @@
 ---
-title: "声明性约束"
-ms.custom: 
+title: 声明性约束
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a11c62c7011d7ffb13ed0d0ebf060a3cbeb7d7f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="declarative-constraints"></a>声明性约束
 声明性约束为活动及其与其他活动的关系提供了一个功能强大的验证方法。 约束是在创作过程中为活动配置的，但工作流宿主也可以指定其他约束。 本主题概述了如何使用声明性约束提供活动验证。  
@@ -146,7 +147,7 @@ public sealed class CreateState : CodeActivity
 }  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Windows Workflow Foundation[验证](../../../docs/framework/windows-workflow-foundation/samples/validation.md)示例。  
+ 有关详细信息，请参阅 Windows Workflow Foundation[验证](../../../docs/framework/windows-workflow-foundation/samples/validation.md)示例。  
   
 ## <a name="additional-constraints"></a>其他约束  
  工作流宿主创作者可以通过创建约束并将这些约束添加到 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 实例的 <xref:System.Activities.Validation.ValidationSettings> 字典中为工作流中的活动指定其他验证约束。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中的每个项目都包含应用约束的活动类型以及用于该活动类型的其他约束列表。 为工作流调用验证时，指定类型的每个活动（包括派生的类）都计算约束。 在本示例中，将上一节中的 `ActivityDisplayNameIsNotSetWarning` 约束应用于工作流中的所有活动。  
@@ -187,4 +188,4 @@ else
 }  
 ```  
   
- 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 属性为 `true`，则在通过调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 调用验证时只计算指定的其他约束。 对于检查工作流的特定验证配置，这非常有用。 但是，请注意调用工作流时，对在工作流中配置的验证逻辑进行计算并且必须传递给该工作流才能成功开始。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]调用验证，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。
+ 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 属性为 `true`，则在通过调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 调用验证时只计算指定的其他约束。 对于检查工作流的特定验证配置，这非常有用。 但是，请注意调用工作流时，对在工作流中配置的验证逻辑进行计算并且必须传递给该工作流才能成功开始。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 调用验证，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。

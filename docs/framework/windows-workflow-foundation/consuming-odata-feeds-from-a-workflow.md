@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>使用工作流中的 OData 源
 WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的一个组件，可以使用此组件创建一些服务，利用开放式数据协议 (OData) 来借助具象状态传输 (REST) 语义通过 Web 或 Intranet 公开和使用数据。 OData 将数据公开为可通过 URI 进行寻址的资源。 如果任一应用程序可发送 HTTP 请求并处理数据服务返回的 OData 源，则该应用程序可与基于 OData 的数据服务进行交互。 此外，WCF 数据服务包括多个客户端库，当从 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 应用程序使用 OData 源时，这些客户端库会提供更丰富的编程体验。 本主题概述如何在使用/未使用客户端库的情况下，在工作流中使用 OData 源。  
@@ -37,13 +37,13 @@ WCF 数据服务是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  请注意，此服务未公开任何服务操作，并且 **“服务”** 列表中包含表示由 Northwind 数据服务公开的实体的项目。 在添加服务引用时，将为这些实体生成类，并可在客户端代码中使用生成的类。 本主题中的示例使用这些类和 `NorthwindEntities` 类来执行查询。  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [生成数据服务客户端库 （WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkID=191611)。  
+>  有关详细信息，请参阅[生成数据服务客户端库 （WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkID=191611)。  
   
 ### <a name="using-asynchronous-methods"></a>使用异步方法  
  若要解决在通过 Web 访问资源时可能发生的延迟问题，建议您异步访问 WCF 数据服务。 WCF 数据服务客户端库包括用于调用查询的异步方法和 Windows Workflow Foundation (WF) 提供<xref:System.Activities.AsyncCodeActivity>用于创作异步活动的类。 可写入<xref:System.Activities.AsyncCodeActivity> 派生的活动以利用具有异步方法的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 类，或者可将要异步执行的代码放入某个方法中并使用委托进行调用。 本节提供了 <xref:System.Activities.AsyncCodeActivity> 派生的活动的两个示例；一个示例使用 WCF 数据服务客户端库的异步方法，另一个示例使用委托。  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [异步操作 （WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193396)和[创建异步活动](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。  
+>  有关详细信息，请参阅[异步操作 （WCF 数据服务）](http://go.microsoft.com/fwlink/?LinkId=193396)和[创建异步活动](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。  
   
 ### <a name="using-client-library-asynchronous-methods"></a>使用客户端库异步方法  
  <xref:System.Data.Services.Client.DataServiceQuery%601> 类提供 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 和 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法来异步查询 OData 服务。 这些方法可从 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 派生的类的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity> 重写调用。 当 <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 重写返回时，工作流会进入空闲状态（但不保持）；当完成异步工作时，运行时将调用 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 。  

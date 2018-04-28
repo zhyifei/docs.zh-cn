@@ -1,30 +1,32 @@
 ---
-title: "安全会话"
-ms.custom: 
+title: 安全会话
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 65a54c06efffb2e3167c77bd109a50a31b971add
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9506e791cf4da947eaadaff1669e5f2f975431c8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="secure-sessions"></a>安全会话
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的功能之一是可靠会话，它能够保证以发送消息的顺序接收消息。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]可靠会话，请参阅[使用会话](../../../../docs/framework/wcf/using-sessions.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的功能之一是可靠会话，它能够保证以发送消息的顺序接收消息。 本节中的主题讨论在创建可靠会话时要考虑的安全性问题。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 可靠会话，请参阅[使用会话](../../../../docs/framework/wcf/using-sessions.md)。  
   
 > [!NOTE]
->  当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态安全令牌上下文 (SCT)。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
+>  当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态安全令牌上下文 (SCT)。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

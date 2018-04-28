@@ -1,20 +1,17 @@
 ---
-title: "异常类型 (F#)"
-description: "了解如何定义和使用 F # 异常类型。"
-keywords: "visual f#, f#, 函数编程"
+title: 异常类型 (F#)
+description: '了解如何定义和使用 F # 异常类型。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e850205a-b8da-459e-8f6d-cb3510f8f173
-ms.openlocfilehash: a0864218841396c0ebdf26c7585e0e5bb778f83e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6aaa5cd1b94f829b98d5aed5dcf6e30472a8b751
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exception-types"></a>异常类型
 
@@ -45,7 +42,7 @@ F # 异常的典型定义如下所示。
 使用定义的异常类型`exception`F # 中的关键字是一种新类型，继承自`System.Exception`。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [异常处理](index.md)
 
 [异常：`raise` 函数](the-raise-function.md)

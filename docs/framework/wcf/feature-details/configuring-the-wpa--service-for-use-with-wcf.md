@@ -1,24 +1,26 @@
 ---
-title: "配置 Windows 进程激活服务以用于 Windows Communication Foundation"
-ms.custom: 
+title: 配置 Windows 进程激活服务以用于 Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 12df9e3760774b4dc8d4e8f73a09df5e79c2453e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 727ad032482829350b5cf88175c34d8ccc7b98b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>配置 Windows 进程激活服务以用于 Windows Communication Foundation
 本主题介绍在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中设置 Windows 进程激活服务（也称为 WAS）使其承载不通过 HTTP 网络协议进行通信的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务所需的步骤。 下面的部分略述此配置的步骤：  
@@ -100,7 +102,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 [InvalidOperationException: The protocol 'net.tcp' does not have an implementation of HostedTransportConfiguration type registered.]   System.ServiceModel.AsyncResult.End(IAsyncResult result) +15778592   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.End(IAsyncResult result) +15698937   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.ExecuteSynchronous(HttpApplication context, Boolean flowContext) +265   System.ServiceModel.Activation.HttpModule.ProcessRequest(Object sender, EventArgs e) +227   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171  
 ```  
   
- 如果您看到此错误，确保已安装并正确配置了用于非 HTTP 激活的 WAS。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
+ 如果您看到此错误，确保已安装并正确配置了用于非 HTTP 激活的 WAS。 有关详细信息，请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>生成一个将 WAS 用于非 HTTP 激活的 WCF 服务  
  一旦执行的步骤来安装和配置 WAS (请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md))，服务配置为使用 WAS 激活是类似于在 IIS 中配置托管服务。  

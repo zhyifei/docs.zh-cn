@@ -1,24 +1,26 @@
 ---
-title: "如何：在不使用配置的情况下添加 ASP.NET AJAX 终结点"
-ms.custom: 
+title: 如何：在不使用配置的情况下添加 ASP.NET AJAX 终结点
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b90ecd94f439472c89d0c075c8b7486abeacf38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d82febd776bfc51e3e9725701253ed19996349b5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>如何：在不使用配置的情况下添加 ASP.NET AJAX 终结点
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 允许您创建一个服务来公开一个支持 ASP.NET AJAX 的终结点，并且可以从客户端网站上的 JavaScript 中调用该终结点。 若要创建这样的终结点，可以使用配置文件（与使用所有其他 WCF 终结点一样），或使用不要求任何配置元素的方法。 本主题演示第二种方法。  
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
     %>  
     ```  
   
-2.  生成服务并从客户端调用该服务。 在调用该服务时，Internet Information Services (IIS) 会将其激活。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]承载在 IIS 中，请参阅[如何： 承载在 IIS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
+2.  生成服务并从客户端调用该服务。 在调用该服务时，Internet Information Services (IIS) 会将其激活。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 承载在 IIS 中，请参阅[如何： 承载在 IIS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
   
 ### <a name="to-call-the-service"></a>调用服务  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
  `<serviceHostingEnvironment aspNetCompatibilityEnabled="true" /> </system.serviceModel>`  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)主题。  
+ 有关详细信息，请参阅[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)主题。  
   
  <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 类是 <xref:System.ServiceModel.Activation.ServiceHostFactory> 的派生类。 该服务主机工厂机制的详细说明，请参阅[扩展承载使用 ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)主题。  
   

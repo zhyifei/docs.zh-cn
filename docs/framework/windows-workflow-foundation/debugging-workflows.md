@@ -14,20 +14,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 8fa22db7fe613279fcf8487abaf57691250b7d80
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-workflows"></a>调试工作流
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供多个用于从开发环境调试运行的工作流的选项。 可以在设计器、XAML 和代码中调试工作流。  
   
 ## <a name="debugging-in-the-workflow-designer"></a>在工作流设计器中调试  
- 可以通过突出显示活动并按工作流设计器中的活动上设置断点**F9**或通过使用活动的上下文菜单。 然后，当工作流宿主在调试模式下运行时将中断工作流的执行。 在下面的屏幕快照中，工作流执行在断点处暂停。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [使用工作流设计器调试工作流](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer)。  
+ 可以通过突出显示活动并按工作流设计器中的活动上设置断点**F9**或通过使用活动的上下文菜单。 然后，当工作流宿主在调试模式下运行时将中断工作流的执行。 在下面的屏幕快照中，工作流执行在断点处暂停。 有关详细信息，请参阅[与工作流设计器调试工作流](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer)。  
   
 ## <a name="debugging-in-xaml"></a>在 XAML 中调试  
- 如果在设计器中某个工作流已在断点处暂停，则还可以在 XAML 中调试该工作流。 若要在 XAML 中查看执行点，请选择**XAML 视图**在工作流设计器中工作流执行暂停时。 通过从解决方案资源管理器重新打开工作流可以将调试切换回设计器。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 使用工作流设计器调试 XAML](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer)。  
+ 如果在设计器中某个工作流已在断点处暂停，则还可以在 XAML 中调试该工作流。 若要在 XAML 中查看执行点，请选择**XAML 视图**在工作流设计器中工作流执行暂停时。 通过从解决方案资源管理器重新打开工作流可以将调试切换回设计器。 有关详细信息，请参阅[如何： 使用工作流设计器调试 XAML](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer)。  
   
 ## <a name="debugging-in-code"></a>在代码中调试  
  也可以在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中使用代码断点，其使用方式与在其他命令性应用程序中相同。 单击左边的距的代码窗格，以创建一个代码断点，或按**F9**光标位置处放置一个断点。  
@@ -42,4 +42,4 @@ ms.lasthandoff: 04/27/2018
 >  如果工作流应用程序针对 x86 体系结构并位于运行 64 位操作系统的计算机上远程调试将不工作，除非在远程计算机上安装 Visual Studio 或工作流应用程序的目标更改为**任何 CPU**。  
   
 ## <a name="extending-the-workflow-debugging-service"></a>扩展工作流调试服务  
- 工作流调试器服务现在以公共方式使用，可以使用该服务创建自定义应用程序，如在重新承载的设计器中进行监视、模拟和调试。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.Presentation.Debug.DebuggerService> 主题。
+ 工作流调试器服务现在以公共方式使用，可以使用该服务创建自定义应用程序，如在重新承载的设计器中进行监视、模拟和调试。 有关详细信息，请参见<xref:System.Activities.Presentation.Debug.DebuggerService>主题。

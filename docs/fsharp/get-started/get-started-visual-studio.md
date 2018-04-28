@@ -1,20 +1,17 @@
 ---
-title: "要开始使用 Visual Studio 中的 F #"
-description: "了解如何使用 Visual Studio 中使用 F #。"
-keywords: "visual f#, f#, 函数编程"
+title: '要开始使用 Visual Studio 中的 F #'
+description: '了解如何使用 Visual Studio 中使用 F #。'
 author: cartermp
 ms.author: phcart
 ms.date: 02/13/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: 818bf50507a88e1d765da8d0505ed8da4790b71f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 29e24f755e6d97c4b31c0d01b254bf90cf77bf17
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>要开始使用 Visual Studio 中的 F #
 
@@ -46,7 +43,7 @@ Visual Studio 中最基本的项目之一是控制台应用程序。  以下是�
 
 2.  在新建项目对话框中下,**模板**，你应该会看到**Visual F #**。  选择此选项可显示 F # 模板。
 
-3. 选择**.NET 核心控制台应用程序**或**控制台应用程序**。
+3. 选择 **.NET 核心控制台应用程序**或**控制台应用程序**。
 
 3. 选择**好**按钮以创建 F # 项目 ！  你现在应该看到解决方案资源管理器中的 F # 项目。
 

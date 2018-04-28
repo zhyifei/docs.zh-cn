@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 客户端概述
 本节描述客户端应用程序可以做什么，如何配置、创建和使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 客户端，以及如何保护客户端应用程序。  
@@ -83,7 +83,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  可以通过使用其中一个构造函数将此类创建为一个本地对象，并对该本地对象进行配置，然后使用它连接到 `ISampleService` 类型的服务。  
   
- 建议您首先创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象，然后使用该对象并在一个单独的 try/catch 块内将它关闭。 不应使用`using`语句 (`Using`在 Visual Basic 中) 因为它可以屏蔽处于某些失败模式的异常。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] 以下部分以及为[避免问题与 Using 语句](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+ 建议您首先创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象，然后使用该对象并在一个单独的 try/catch 块内将它关闭。 不应使用`using`语句 (`Using`在 Visual Basic 中) 因为它可以屏蔽处于某些失败模式的异常。 有关详细信息，请参阅以下部分，以及[避免问题与 Using 语句](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
 ### <a name="contracts-bindings-and-addresses"></a>协定、绑定和地址  
  在可以创建 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象之前，必须配置客户端对象。 具体而言，它必须有一个服务*终结点*使用。 终结点由服务协定、绑定和地址组成。 ([!INCLUDE[crabout](../../../includes/crabout-md.md)]终结点，请参阅[终结点： 地址、 绑定和协定](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)通常情况下，此信息是否位于[\<终结点 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)客户端应用程序配置文件，例如 Svcutil.exe 工具生成，并创建你的客户端时自动加载中的元素对象。 两种 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类型都具有使您能够以编程方式指定此信息的重载。  
@@ -140,7 +140,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- 您可以通过创建一个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象并调用其方法来调用操作，如以下代码示例所示。 请注意，打开、调用和关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象发生在一个 try/catch 块内。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)和[避免出现与 Using 语句问题](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+ 您可以通过创建一个 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象并调用其方法来调用操作，如以下代码示例所示。 请注意，打开、调用和关闭 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象发生在一个 try/catch 块内。 有关详细信息，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)和[避免问题与 Using 语句](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -167,7 +167,7 @@ End Interface
   
  双工 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象除了会公开支持回调所必需的功能（包括回调服务的配置）以外，其他的功能和它们的非双工对应项相同。  
   
- 例如，可以通过使用回调类的 <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 属性 (Attribute) 的属性 (Property)，控制回调对象运行时行为的各个方面。 另一个示例是使用 <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> 类将异常信息返回给调用回调对象的服务。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)。 有关完整示例，请参阅[双工](../../../docs/framework/wcf/samples/duplex.md)。  
+ 例如，可以通过使用回调类的 <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 属性 (Attribute) 的属性 (Property)，控制回调对象运行时行为的各个方面。 另一个示例是使用 <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> 类将异常信息返回给调用回调对象的服务。 有关详细信息，请参阅[双工服务](../../../docs/framework/wcf/feature-details/duplex-services.md)。 有关完整示例，请参阅[双工](../../../docs/framework/wcf/samples/duplex.md)。  
   
  在运行 Internet 信息服务 (IIS) 5.1 的 Windows XP 计算机上，双工客户端必须使用 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> 类指定一个客户端基址，否则会引发异常。 下面的代码示例演示如何在代码中执行此操作。  
   
@@ -179,7 +179,7 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>异步调用服务  
- 如何调用操作完全取决于客户端开发人员。 这是因为当在托管代码中表示组成操作的消息时，这些消息可以映射到同步或异步方法中。 因此，如果想要生成异步调用操作的客户端，则可以使用 Svcutil.exe 通过 `/async` 选项生成异步客户端代码。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 如何调用操作完全取决于客户端开发人员。 这是因为当在托管代码中表示组成操作的消息时，这些消息可以映射到同步或异步方法中。 因此，如果想要生成异步调用操作的客户端，则可以使用 Svcutil.exe 通过 `/async` 选项生成异步客户端代码。 有关详细信息，请参阅[如何： 以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>使用 WCF 客户端通道调用服务  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端类型扩展 <xref:System.ServiceModel.ClientBase%601>，而其自身派生自 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 接口，从而可以公开基础通道系统。 可以同时使用目标服务协定和 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 类来调用服务。 有关详细信息，请参阅[WCF 客户端体系结构](../../../docs/framework/wcf/feature-details/client-architecture.md)。  

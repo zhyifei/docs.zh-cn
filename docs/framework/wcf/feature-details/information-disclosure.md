@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0af083ba1d97fcf07eab6f9d789f023a9194070c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="information-disclosure"></a>信息泄露
 信息泄露会使攻击者获得有价值的系统相关信息。 因此，应始终考虑到您正在泄露何种信息以及恶意用户是否可能使用这些信息。 下面列出了可能的信息泄露攻击并针对每种攻击提供了缓解措施。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/26/2018
  保持策略安全是十分重要的，在联合方案中尤其如此 — 在这些方案中，会在策略中公开敏感的已颁发令牌要求或令牌颁发者信息。 在这些情况下，建议保护联合服务的策略终结点，以防止攻击者获取服务的有关信息（如要放置在已颁发令牌中的声明的类型）或是将客户端重定向到恶意的令牌颁发者。 例如，攻击者可能通过将联合信任链重新配置为终止于执行中间人攻击的颁发者处，来发现用户名/密码对。 此外，还建议通过策略检索来获取绑定的联合客户端验证是否信任所获得的联合信任链中的颁发者。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 联合身份验证方案，请参阅[联合身份验证](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>内存转储可能泄露声明信息  
- 当应用程序失败时，日志文件（如由 Dr. Watson 生成的那些日志文件）可能包含声明信息。 不应该将这些信息导出到其他实体，如支持团队；否则，包含私有数据的声明信息也会导出。 通过避免将日志文件发送到未知实体，可以减轻这一问题带来的威胁。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)。  
+ 当应用程序失败时，日志文件（如由 Dr. Watson 生成的那些日志文件）可能包含声明信息。 不应该将这些信息导出到其他实体，如支持团队；否则，包含私有数据的声明信息也会导出。 通过避免将日志文件发送到未知实体，可以减轻这一问题带来的威胁。 有关详细信息，请参阅[Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)。  
   
 ## <a name="endpoint-addresses"></a>终结点地址  
  终结点地址包含与终结点通信所需的信息。 SOAP 安全必须在安全协商消息中包含完整地址，这些消息会被交换以便在客户端与服务器之间协商一个对称密钥。 因为安全协商是一个引导过程，所以在此过程中无法对地址头进行加密。 因此，地址不应包含任何机密数据；否则，会导致信息泄露攻击。  

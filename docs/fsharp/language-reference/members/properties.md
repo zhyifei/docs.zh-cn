@@ -1,20 +1,17 @@
 ---
-title: "属性 (F#)"
-description: "了解有关 F # 属性，哪些是表示与对象相关联的值的成员。"
-keywords: "visual f#, f#, 函数编程"
+title: 属性 (F#)
+description: '了解有关 F # 属性，哪些是表示与对象相关联的值的成员。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 98b363a5-ee6a-4b7b-b8ae-b244f2a0b316
-ms.openlocfilehash: 53b93b20310c557ad9c30226bc08f85cbf2f3010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="properties"></a>属性
 
@@ -74,7 +71,7 @@ with set parameter =
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-私有值属性的数据被称为该保留*后备存储*。 要让编译器自动创建的后备存储，可以使用关键字`member val`，省略自我标识符，然后提供用于初始化属性的表达式。 如果该属性是可变的包括`with get, set`。 例如，下面的类类型包括两个自动实现的属性。 `Property1`是只读的同时初始化为到主构造函数，提供的自变量和`Property2`是初始化为空字符串可设置属性：
+私有值属性的数据被称为该保留*后备存储*。 要让编译器自动创建的后备存储，可以使用关键字`member val`，省略自我标识符，然后提供用于初始化属性的表达式。 如果该属性是可变的包括`with get, set`。 例如，下面的类类型包括两个自动实现的属性。 `Property1` 是只读的同时初始化为到主构造函数，提供的自变量和`Property2`是初始化为空字符串可设置属性：
 
 ```fsharp
 type MyClass(property1 : int) =
@@ -150,7 +147,7 @@ class1.ExplicitProperty = 1131210765
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3207.fs)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [成员](index.md)
 
 [方法](methods.md)

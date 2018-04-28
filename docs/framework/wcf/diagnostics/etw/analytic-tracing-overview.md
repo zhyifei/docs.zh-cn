@@ -1,28 +1,28 @@
 ---
-title: "分析跟踪概述"
-ms.custom: 
+title: 分析跟踪概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3492821d56f7089c2aa53bba566690ded02f8a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="analytic-tracing-overview"></a>分析跟踪概述
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 中的分析跟踪是基于 Windows 事件跟踪 (ETW) 的高性能、低详细级别的跟踪功能。 ETW 在内核级别运行，极大地减少了跟踪操作的开销。 它有效缓冲用户模式和内核模式的事件，并允许动态启用日志记录，而无需重新启动服务。 发出并接收跟踪数据之后，即可在事件日志中获取这些数据。  
@@ -54,10 +54,10 @@ ms.lasthandoff: 12/22/2017
  `ServiceModelReg.exe -i -c:etw`  
   
 ### <a name="dynamic-configuration"></a>动态配置  
- ETW 基础结构允许使用标准 Windows 工具动态启用和配置跟踪。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][动态启用分析跟踪](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。  
+ ETW 基础结构允许使用标准 Windows 工具动态启用和配置跟踪。 有关详细信息，请参阅[动态启用分析跟踪](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。  
   
 ### <a name="message-flow-tracing"></a>消息流跟踪  
  [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 如何启用消息流跟踪，请参阅 [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)（使用 ETW 改善调试和性能优化）。  
   
 ### <a name="keywords"></a>关键字  
- 关键字用于筛选跟踪消息以及定义已发出事件的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 组件。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][动态启用分析跟踪](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。
+ 关键字用于筛选跟踪消息以及定义已发出事件的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 组件。 有关详细信息，请参阅[动态启用分析跟踪](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。

@@ -1,20 +1,17 @@
 ---
-title: "let 绑定 (F#)"
-description: "了解如何使用 F # let 将标识符的值或函数与相关联的绑定。"
-keywords: "visual f#, f#, 函数编程"
+title: let 绑定 (F#)
+description: '了解如何使用 F # let 将标识符的值或函数与相关联的绑定。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: bee69edc-d5ae-46bd-8b56-f02d97725d0d
-ms.openlocfilehash: a57c5572e4bb5a3777c928dd572b7a84d4f0a334
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2abc4e05f9f2977501f01f745062e2e7cd611f68
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="let-bindings"></a>let 绑定
 
@@ -121,7 +118,7 @@ let function3 x =
 
 模块和访问控制的详细信息，请参阅[模块](../modules.md)和[访问控制](../access-control.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [函数](index.md)
 

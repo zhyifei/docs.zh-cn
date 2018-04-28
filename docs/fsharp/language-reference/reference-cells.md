@@ -1,20 +1,17 @@
 ---
-title: "引用单元格 (F#)"
-description: "了解如何使您能够创建具有引用语义的可变值的存储位置 F # 引用单元格。"
-keywords: "visual f#, f#, 函数编程"
+title: 引用单元格 (F#)
+description: '了解如何使您能够创建具有引用语义的可变值的存储位置 F # 引用单元格。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 09a0b221-ea21-45c4-bae8-5e4a339750c4
-ms.openlocfilehash: c7470c9a36cf2cd24dd89ceffcf6e90c6dc4d2dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e017adb2a031dff996892e2bb6585fc95f644ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="reference-cells"></a>引用单元格
 
@@ -134,7 +131,7 @@ let f (x: byref<int>) = &x
 
 当前没有方法来生成`ref`返回在 F # 无法在 C# 中使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [参数和自变量](parameters-and-arguments.md)

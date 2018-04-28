@@ -1,20 +1,17 @@
 ---
-title: "作为一类值的函数 (F#)"
-description: "了解如何提升到 F # 编程语言中的第一类状态的函数。"
-keywords: "visual f#, f#, 函数编程"
+title: 作为一类值的函数 (F#)
+description: '了解如何提升到 F # 编程语言中的第一类状态的函数。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 6b76b93b-a141-40f4-976c-7f0c558d6d09
-ms.openlocfilehash: bca0e09edbe0aa86f0db746282acd4f4b3237a03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7db99aa23211ce4a7af5cdfcc809017fafb1d5a1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="functions-as-first-class-values"></a>作为一类值的函数
 
@@ -198,7 +195,7 @@ F # 提供了两个运算符，`<<`和`>>`，它们构成函数。 例如，`let
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet47.fs)]
     
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [列表](../language-reference/lists.md)
 
@@ -206,6 +203,6 @@ F # 提供了两个运算符，`<<`和`>>`，它们构成函数。 例如，`let
 
 [函数](../language-reference/functions/index.md)
 
-[`let`绑定](../language-reference/functions/let-bindings.md)
+[`let` 绑定](../language-reference/functions/let-bindings.md)
 
 [Lambda 表达式：`fun`关键字](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

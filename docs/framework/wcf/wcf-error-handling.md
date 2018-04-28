@@ -1,24 +1,26 @@
 ---
-title: "WCF 错误处理"
-ms.custom: 
+title: WCF 错误处理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 860f96ee92db6a11238942202d4e202ba912d748
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b85ef2b0c077b67cc341a48c9260393e158033c5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-error-handling"></a>WCF 错误处理
 WCF 应用程序遇到的错误属于下列三组中的一组：  
@@ -46,16 +48,16 @@ WCF 应用程序遇到的错误属于下列三组中的一组：
 -   处理 <xref:System.ServiceModel.ServiceHost> 事件  
   
 ## <a name="fault-contracts"></a>错误协定  
- 利用错误协定，您可以独立于平台的方式定义服务操作期间会发生的错误。 默认情况下，所有从服务操作内引发的异常都将作为 <xref:System.ServiceModel.FaultException> 对象返回到客户端。 <xref:System.ServiceModel.FaultException> 对象将包含很少的信息。 通过定义错误协定并作为 <xref:System.ServiceModel.FaultException%601> 返回错误，可以控制发送到客户端的信息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+ 利用错误协定，您可以独立于平台的方式定义服务操作期间会发生的错误。 默认情况下，所有从服务操作内引发的异常都将作为 <xref:System.ServiceModel.FaultException> 对象返回到客户端。 <xref:System.ServiceModel.FaultException> 对象将包含很少的信息。 通过定义错误协定并作为 <xref:System.ServiceModel.FaultException%601> 返回错误，可以控制发送到客户端的信息。 有关详细信息，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- 利用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，您可以对 WCF 应用程序响应错误的方式进行更多的控制。  您可以完全控制返回到客户端的故障消息，还可以执行自定义错误处理，例如日志记录。  [!INCLUDE[crdefault](../../../includes/crabout-md.md)]<xref:System.ServiceModel.Dispatcher.IErrorHandler>和[扩展对错误处理和报告的控制](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ 利用 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 接口，您可以对 WCF 应用程序响应错误的方式进行更多的控制。  您可以完全控制返回到客户端的故障消息，还可以执行自定义错误处理，例如日志记录。  [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Dispatcher.IErrorHandler> 和[扩展对错误处理和报告的控制](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>ServiceHost 事件  
- <xref:System.ServiceModel.ServiceHost> 类承载服务，并定义处理错误可能需要的几个事件。 例如:  
+ <xref:System.ServiceModel.ServiceHost> 类承载服务，并定义处理错误可能需要的几个事件。 例如：  
   
 1.  <!--zz <xref:System.ServiceModel.ServiceHost.Faulted>-->  `System.ServiceModel.ServiceHost.Faulted`
   
 2. <!--zz  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  --> `System.ServiceModel.ServiceHost.UnknownMessageReceived`
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceHost>
+ 有关详细信息，请参阅<xref:System.ServiceModel.ServiceHost>。

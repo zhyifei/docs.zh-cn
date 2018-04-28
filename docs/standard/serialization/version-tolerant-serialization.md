@@ -15,18 +15,18 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 46a6ccde7c978fe18737c6ae8733dd2e1e1ec858
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 06df765a6b4e2d4e5450f706a5e84f5481ba039a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="version-tolerant-serialization"></a>版本容错序列化
 在 .NET Framework 1.0 和 1.1 版本中，创建可从应用程序的一个版本重用至下一个版本的可序列化类型时会产生问题。 如果通过添加额外字段来修改类型，则会出现以下问题：  
@@ -265,7 +265,7 @@ End Class
 ```  
   
 ## <a name="serializationbinder"></a>SerializationBinder  
- 由于服务器和客户端要求使用不同的类版本，因此，有些用户可能需要控制要序列化和反序列化哪些类。 <xref:System.Runtime.Serialization.SerializationBinder> 是抽象类，用于控制在序列化和反序列化期间使用的实际类型。  若要使用此类，请从 <xref:System.Runtime.Serialization.SerializationBinder> 派生类，并重写 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 和 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 方法。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [控制序列化和反序列化使用 SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)。  
+ 由于服务器和客户端要求使用不同的类版本，因此，有些用户可能需要控制要序列化和反序列化哪些类。 <xref:System.Runtime.Serialization.SerializationBinder> 是抽象类，用于控制在序列化和反序列化期间使用的实际类型。  若要使用此类，请从 <xref:System.Runtime.Serialization.SerializationBinder> 派生类，并重写 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 和 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 方法。 有关详细信息，请参阅[控制序列化和反序列化使用 SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
  要确保版本管理行为正确，修改类型版本时请遵循以下规则：  

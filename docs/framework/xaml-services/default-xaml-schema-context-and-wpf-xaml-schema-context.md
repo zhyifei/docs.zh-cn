@@ -16,11 +16,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ae7bd21f7dcb60f8cec3e9e4592969c63234cf13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>默认 XAML 架构上下文和 WPF XAML 架构上下文
 XAML 架构上下文是限定 XAML 生产环境中使用的特定 XAML 词汇如何与编写行为，包括如何类型映射解决时，程序集的加载方式、 如何某些读取器和编写器的对象进行交互的概念实体解释设置。 本主题介绍.NET Framework XAML 服务和基于 CLR 类型系统的关联的默认 XAML 架构上下文的功能。 本主题还介绍适用于 WPF XAML 架构上下文。  
@@ -70,7 +70,7 @@ XAML 架构上下文是限定 XAML 生产环境中使用的特定 XAML 词汇如
     -   如果映射中非限定名称，则调用<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask` 适用于[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]和 Windows Workflow Foundation。  
+ `XamlBuildTask` 适用于 Windows Communication Foundation (WCF) 和 Windows Workflow Foundation。  
   
  请注意，程序集引用了通过`XamlBuildTask`始终是完全限定。  
   

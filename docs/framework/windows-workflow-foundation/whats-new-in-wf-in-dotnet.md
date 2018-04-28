@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什么&#39;s.NET 4.5 中的 Windows Workflow Foundation 中的新增功能
 中的 Windows Workflow Foundation (WF)[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引入了许多新功能，如新的活动、 设计器的功能和工作流开发模型。 重新承载的工作流设计器支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的许多（但不是全部）新工作流功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 新功能支持，请参阅[重新承载工作流设计器中新 Workflow Foundation 4.5 功能的支持](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主题概述了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的新工作流功能。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/27/2018
   
 -   引入了动态更新，其提供了一种更新持久化工作流实例定义的机制。 有关详细信息，请参阅[动态更新](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)和[如何： 更新运行的工作流实例的定义](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。  
   
--   SqlWorkflowInstanceStoreSchemaUpgrade.sql 数据库脚本旨在用于升级使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 数据库脚本创建的持久性数据库。 此脚本会更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持久性数据库以支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的版本控制功能。 数据库中的持久化工作流实例将获得默认的版本控制值，然后就可以参与并行执行和动态更新。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [升级.NET Framework 4 持久性数据库以支持工作流版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。  
+-   SqlWorkflowInstanceStoreSchemaUpgrade.sql 数据库脚本旨在用于升级使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 数据库脚本创建的持久性数据库。 此脚本会更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持久性数据库以支持 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引入的版本控制功能。 数据库中的持久化工作流实例将获得默认的版本控制值，然后就可以参与并行执行和动态更新。 有关详细信息，请参阅[升级.NET Framework 4 持久性数据库到支持工作流版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。  
   
 ##  <a name="BKMK_NewActivities"></a> 活动  
  内置活动库包含新活动和现有活动的新功能。  

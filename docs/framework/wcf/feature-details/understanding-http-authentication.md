@@ -1,24 +1,26 @@
 ---
-title: "了解 HTTP 身份验证"
-ms.custom: 
+title: 了解 HTTP 身份验证
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0fe72ad1aab35a8cb384248e90500cf5410c0774
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-http-authentication"></a>了解 HTTP 身份验证
 身份验证是判断客户端是否有资格访问资源的过程。 HTTP 协议支持将身份验证作为协商访问安全资源的一种方式。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 |摘要|摘要式身份验证是质询-响应方案，用于替换基本身份验证。 服务器发送一串称为的随机数据*nonce*到客户端具有挑战性。 客户端使用在其他信息中包括用户名、密码和 Nonce 的哈希进行响应。 该交换所引入的复杂程度和数据哈希增加了窃取和重用具有此身份验证方案的用户凭据的难度。<br /><br /> 摘要式身份验证需要使用 Windows 域帐户。 摘要式*领域*是 Windows 域名。 因此，不能使用不支持 Windows 域，例如 Windows XP Home Edition，进行摘要式身份验证的操作系统上运行的服务器。 反而言之，如果客户端运行在不支持 Windows 域的操作系统上，则必须在身份验证过程中显式指定域帐户。|  
 |NTLM|NT LAN Manager (NTLM) 身份验证是质询-响应方案，是摘要式身份验证的一种更安全的变体。 NTLM 使用 Windows 凭据（而不是未编码的用户名和密码）来转换质询数据。 NTLM 身份验证需要客户端和服务器之间的多次交换。 服务器和所有参与代理都必须支持持久连接，才能成功完成身份验证。|  
 |协商|协商身份验证自动在 Kerberos 协议和 NTLM 身份验证间选择，具体取决于可用性。 如果 Kerberos 协议可用，则使用 Kerberos 协议；否则，尝试使用 NTLM。 Kerberos 身份验证比 NTLM 具有更多优势。 Kerberos 身份验证既快于 NTLM，又允许使用相互身份验证和将凭据委托至远程计算机。|  
-|Windows Live ID|基础 Windows HTTP 服务包括使用联合协议的身份验证。 但是，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的标准 HTTP 传输不支持使用联合身份验证方案，例如，Microsoft Windows Live ID。 当前，可以通过使用消息安全来获得对此功能的支持。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][联合身份验证和已颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
+|Windows Live ID|基础 Windows HTTP 服务包括使用联合协议的身份验证。 但是，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的标准 HTTP 传输不支持使用联合身份验证方案，例如，Microsoft Windows Live ID。 当前，可以通过使用消息安全来获得对此功能的支持。 有关详细信息，请参阅[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ## <a name="choosing-an-authentication-scheme"></a>选择身份验证方案  
  为 HTTP 服务器选择可能的身份验证方案时，需要考虑的事项包括以下几点：  

@@ -1,27 +1,29 @@
 ---
-title: "数据的安全考虑事项"
-ms.custom: 
+title: 数据的安全考虑事项
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aa0692c130fdfcf3685c152cdcb73a07d041ab9b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-for-data"></a>数据的安全考虑事项
 当在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]中处理数据时，必须考虑许多种类的威胁。 下表列出了与数据处理相关的最重要的威胁类。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了缓解这些威胁的工具。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  您应当确保没有任何恶意代码插入各个扩展点。 在部分信任情况下运行时、处理部分受信任的程序集中的类型时或创建可由部分受信任的代码使用的组件时，这一点尤为重要。 有关更多信息，请参见后面一节中的“部分信任威胁”。  
   
- 请注意，在部分信任情况下运行时，数据协定序列化基础结构仅支持数据协定编程模型的有限子集，例如，不支持使用 <xref:System.SerializableAttribute> 属性的私有数据成员或类型。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)。  
+ 请注意，在部分信任情况下运行时，数据协定序列化基础结构仅支持数据协定编程模型的有限子集，例如，不支持使用 <xref:System.SerializableAttribute> 属性的私有数据成员或类型。 有关详细信息，请参阅[部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)。  
   
 ## <a name="avoiding-unintentional-information-disclosure"></a>避免无意中的信息泄露  
  当在考虑到安全性的情况下设计可序列化类型时，信息泄露是一个可能需要考虑的问题。  
@@ -121,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="slow-stream-attacks"></a>慢速流式攻击  
  流式拒绝服务攻击类不涉及内存消耗。 此类攻击涉及数据的慢速发送方或接收方。 当等待发送或接收数据时，诸如线程和可用连接之类的资源将消耗殆尽。 恶意攻击或者慢速网络连接上的合法发送方/接收方均会导致这种情形的发生。  
   
- 若要缓解这样的攻击，应正确设置传输超时时间。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。 其次，当在 `Read` 中处理流时，绝不要使用同步的 `Write` 或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]操作。  
+ 若要缓解这样的攻击，应正确设置传输超时时间。 有关详细信息，请参阅[传输配额](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。 其次，当在 `Read` 中处理流时，绝不要使用同步的 `Write` 或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]操作。  
   
 ## <a name="using-xml-safely"></a>安全地使用 XML  
   
@@ -177,7 +179,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>、 `MaxStringContentLength`和 `MaxArrayLength` 属性仅限制内存消耗。 在非流式使用模式下，通常不需要它们来缓解任何威胁，因为内存使用已受 `MaxReceivedMessageSize`限制。 但是， `MaxReceivedMessageSize` 计算的是展开前的字节数。 当使用的是二进制编码时，内存消耗可以超过 `MaxReceivedMessageSize`，而仅受 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A>这一个因素的限制。 为此，当使用二进制编码时应总是设置所有的读取器配额（尤其是 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>），这一点非常重要。  
   
- 当同时使用二进制编码和 <xref:System.Runtime.Serialization.DataContractSerializer>时， `IExtensibleDataObject` 接口可能被误用来发起字典展开攻击。 此接口实质上是为并非属于协定一部分的任意数据提供不受限制的存储。 如果配额不能设置得足够低以使 `MaxSessionSize` 与 `MaxReceivedMessageSize` 的乘积不会造成问题，那么当使用二进制编码时应禁用 `IExtensibleDataObject` 功能。 为此，应当将 `IgnoreExtensionDataObject` 属性 (Attribute) 的 `true` 属性 (Property) 设置为 `ServiceBehaviorAttribute` 。 或者，不实现 `IExtensibleDataObject` 接口。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 当同时使用二进制编码和 <xref:System.Runtime.Serialization.DataContractSerializer>时， `IExtensibleDataObject` 接口可能被误用来发起字典展开攻击。 此接口实质上是为并非属于协定一部分的任意数据提供不受限制的存储。 如果配额不能设置得足够低以使 `MaxSessionSize` 与 `MaxReceivedMessageSize` 的乘积不会造成问题，那么当使用二进制编码时应禁用 `IExtensibleDataObject` 功能。 为此，应当将 `IgnoreExtensionDataObject` 属性 (Attribute) 的 `true` 属性 (Property) 设置为 `ServiceBehaviorAttribute` 。 或者，不实现 `IExtensibleDataObject` 接口。 有关详细信息，请参阅[向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ### <a name="quotas-summary"></a>配额概述  
  下表概括了关于配额的指导信息。  
@@ -259,7 +261,7 @@ ms.lasthandoff: 12/22/2017
   
 -   当 <xref:System.Runtime.Serialization.DataContractSerializer> 反序列化大多数类时，构造函数都不会运行。 因此，不要依赖在构造函数中执行的任何状态管理。  
   
--   使用回调可确保对象处于有效状态。 标记有 <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性的回调尤其有用，因为它在反序列化完成后运行，有可能检查并更正整体状态。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][版本容错序列化回调](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
+-   使用回调可确保对象处于有效状态。 标记有 <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性的回调尤其有用，因为它在反序列化完成后运行，有可能检查并更正整体状态。 有关详细信息，请参阅[版本容错序列化回调](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
   
 -   在设计数据协定类型时，不要使它依赖项属性 setter 的任何特定调用顺序。  
   
@@ -267,10 +269,10 @@ ms.lasthandoff: 12/22/2017
   
 -   考虑到状态安全性，不要依赖 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性 (Attribute) 的 `DataMemberAttribute` 属性 (Property) 来保证数据的存在。 数据可能总是 `null`、`zero` 或 `invalid`。  
   
--   在未首先验证的情况下，绝不要信任从不受信任的数据源反序列化的对象图。 每个单独的对象可能都处于一致状态，但对象图整体有可能处于不一致状态。 此外，即使禁用对象图保存模式，反序列化的对象图也可能具有对同一对象的多个引用或者具有循环引用。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+-   在未首先验证的情况下，绝不要信任从不受信任的数据源反序列化的对象图。 每个单独的对象可能都处于一致状态，但对象图整体有可能处于不一致状态。 此外，即使禁用对象图保存模式，反序列化的对象图也可能具有对同一对象的多个引用或者具有循环引用。 有关详细信息，请参阅[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
 ### <a name="using-the-netdatacontractserializer-securely"></a>安全地使用 NetDataContractSerializer  
- <xref:System.Runtime.Serialization.NetDataContractSerializer> 是一个序列化引擎，它使用类型的紧密耦合。 这类似于 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>。 也就是说，它通过从传入数据中读取 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程序集和类型名来确定要实例化的类型。 尽管它是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的一部分，但没有现成的方法来插入此序列化引擎，必须编写自定义代码。 提供 `NetDataContractSerializer` 主要是为了简化从 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的迁移过程。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]中的相关部分[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> 是一个序列化引擎，它使用类型的紧密耦合。 这类似于 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>。 也就是说，它通过从传入数据中读取 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程序集和类型名来确定要实例化的类型。 尽管它是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的一部分，但没有现成的方法来插入此序列化引擎，必须编写自定义代码。 提供 `NetDataContractSerializer` 主要是为了简化从 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 远程处理到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的迁移过程。 有关详细信息，请参阅中的相关部分[序列化和反序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
  因为消息本身可能指示可以加载的任何类型，所以 <xref:System.Runtime.Serialization.NetDataContractSerializer> 机制本质上是不安全的，应当仅与受信任的数据一起使用。 通过使用 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 属性编写安全的、类型限制的类型联编程序来仅允许加载安全类型，可使它变成安全的机制。  
   

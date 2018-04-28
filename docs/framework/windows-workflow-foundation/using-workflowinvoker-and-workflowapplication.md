@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>使用 WorkflowInvoker 和 WorkflowApplication
 Windows Workflow Foundation (WF) 提供承载工作流的若干方法。 <xref:System.Activities.WorkflowInvoker> 提供一种简单工作流调用方法，就像方法调用一样，仅可用于不使用持久性的工作流。 <xref:System.Activities.WorkflowApplication> 为执行工作流（包括生命周期事件通知、执行控制、书签恢复和持久性）提供更丰富的模型。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 为消息传递活动提供支持，主要用于工作流服务。 本主题介绍使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 的工作流承载。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 承载工作流与<xref:System.ServiceModel.Activities.WorkflowServiceHost>，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)和[承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
@@ -35,7 +35,7 @@ Windows Workflow Foundation (WF) 提供承载工作流的若干方法。 <xref:S
 > [!NOTE]
 >  仅在达到超时间隔且工作流在执行期间进入空闲状态时才会引发 <xref:System.TimeoutException>。 如果工作流未进入空闲状态，那么完成时间超过指定超时间隔的工作流将会成功完成。  
   
- <xref:System.Activities.WorkflowInvoker> 还提供了调用方法的异步版本。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> 和<xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>。  
+ <xref:System.Activities.WorkflowInvoker> 还提供了调用方法的异步版本。 有关详细信息，请参阅 <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> 和 <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>。  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>设置工作流的输入自变量  
  使用输入形参字典可将数据传入工作流，其中实参名作为键，并映射到工作流的输入实参。 在本示例中，将要调用 <xref:System.Activities.Statements.WriteLine>，并使用输入形参字典指定其 <xref:System.Activities.Statements.WriteLine.Text%2A> 实参值。  

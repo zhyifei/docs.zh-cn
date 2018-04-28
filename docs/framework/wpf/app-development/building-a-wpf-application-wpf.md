@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b7003756e5c805c21fc5f4013deccf64b5ba8811
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 应用程序可以以 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可执行文件 (.exe)、库 (.dll) 或这两类程序集相结合的形式来生成。 本主题将介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并对生成过程中的各个关键步骤进行说明。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
 ### <a name="pre-build-initializations"></a>预生成初始化  
  在生成之前，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 会先确定重要工具和库的相应位置，其中包括：  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]。  
+-   .NET Framework 中。  
   
 -   [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 目录。  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Resolving_references"></a>   
 ### <a name="resolving-references"></a>解析引用  
- 生成进程会查找并绑定生成应用程序项目所需的程序集。 这个逻辑包含在 `ResolveAssemblyReference` 任务中。 在项目文件中声明为 `Reference` 的所有程序集会连同有关搜索路径的信息以及系统上已安装的程序集的元数据一并提供给任务。 该任务会查找程序集，并使用已安装的程序集的元数据来筛选出那些无需显示在输出清单中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集。 这么做可以避免 ClickOnce 清单中出现冗余信息。 例如，由于 PresentationFramework.dll 可能会被视为代表基于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 和为其所生成的应用程序，而且每台计算机上的所有 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集都存放在 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的安装位置，因此无需将所有 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 引用程序集的所有相关信息都包含到清单中。  
+ 生成进程会查找并绑定生成应用程序项目所需的程序集。 这个逻辑包含在 `ResolveAssemblyReference` 任务中。 在项目文件中声明为 `Reference` 的所有程序集会连同有关搜索路径的信息以及系统上已安装的程序集的元数据一并提供给任务。 该任务会查找程序集，并使用已安装的程序集的元数据来筛选出那些无需显示在输出清单中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 程序集。 这么做可以避免 ClickOnce 清单中出现冗余信息。 例如，由于 PresentationFramework.dll 就被认为是代表应用程序生成在上以及为[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]和此外以来所有[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]程序集位于.NET Framework 的每台计算机上的相同位置安装，则无需包括在清单中的所有.NET Framework 引用程序集上的所有信息。  
   
 <a name="Markup_Compilation___Pass_1"></a>   
 ### <a name="markup-compilationpass-1"></a>标记编译 - 第 1 次传递  

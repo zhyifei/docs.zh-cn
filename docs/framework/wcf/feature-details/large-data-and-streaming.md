@@ -1,26 +1,26 @@
 ---
-title: "大型数据和流"
-ms.custom: 
+title: 大型数据和流
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>大型数据和流
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是基于 XML 的通信基础结构。 因为 XML 数据通常编码中定义的标准文本格式[XML 1.0 规范](http://go.microsoft.com/fwlink/?LinkId=94838)的连接系统开发人员和架构师通常关心发送的消息的网络占用内存的情况 （或大小） 跨网络和基于文本的编码的 XML 又高效传输的二进制数据带来了特殊的挑战。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  因此，要在文本与二进制之间进行选择，不能简单地认为二进制消息总是小于 XML 文本消息。  
   
- XML 文本消息的一个明确优点为：它们是基于标准的消息，并且提供最为广泛的互操作性选项和平台支持。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主题后面的“编码”一节。  
+ XML 文本消息的一个明确优点为：它们是基于标准的消息，并且提供最为广泛的互操作性选项和平台支持。 有关详细信息，请参阅本主题中后面的"编码"一节。  
   
 ### <a name="binary-content"></a>二进制内容  
  从最终的消息大小这一角度而言，二进制编码优于基于文本编码的一个方面就在于大型二进制数据项，例如，图片、视频、音效剪辑或者必须在服务与其使用者之间交换的任何其他形式的非透明二进制数据。 为了使这些类型的数据也适合 XML 文本，常用的方法就是使用 Base64 编码对其进行编码。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  MTOM SOAP 消息是在其未编码版本的基础上进行修改的，这样引用各自 MIME 部分的特殊元素标记会替代消息中包含二进制数据的原始元素。 因此，SOAP 消息通过指向随其发送的 MIME 部分来引用二进制内容，但除此之外则仅仅携带 XML 文本数据。 因为此模型与完善的 SMTP 模型基本一致，所以在多种平台上编码和解码 MTOM 消息有着广泛的工具支持，这令其成为一个极其具有可互操作性的选择。  
   
- 但是，与 Base64 一样，对于 MIME 格式，MTOM 也有一些必要的开销，这样仅在二进制数据元素的大小超过大约 1 KB 时，才能体现出使用 MTOM 的好处。 由于这一开销，如果二进制负载保持在该阈值之下，则 MTOM 编码的消息可能会大于对二进制数据使用 Base64 编码的消息。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主题后面的“编码”一节。  
+ 但是，与 Base64 一样，对于 MIME 格式，MTOM 也有一些必要的开销，这样仅在二进制数据元素的大小超过大约 1 KB 时，才能体现出使用 MTOM 的好处。 由于这一开销，如果二进制负载保持在该阈值之下，则 MTOM 编码的消息可能会大于对二进制数据使用 Base64 编码的消息。 有关详细信息，请参阅本主题中后面的"编码"一节。  
   
 ### <a name="large-data-content"></a>大型数据内容  
  即使不考虑线路需求量，前面提及的 500 MB 负载也对服务和客户端本身提出了很大的考验。 默认情况下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]处理中的消息*缓冲的模式*。 这意味着消息的整个内容在发送前或接收后都存在于内存中。 尽管对于大多数情形来说这是个很好的策略，并且是消息传递功能（如数字签名）和可靠传递所必需的，但是大型消息可能会耗尽系统资源。  
@@ -67,14 +67,14 @@ ms.lasthandoff: 02/01/2018
   
 -   当开始传输时，还不是已全部就绪。  
   
- 对于不具有上述限制条件的数据，通常最好在一个会话的范围内发送消息序列，而不是一次性地发送一个大消息。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主题后面的“数据的流模式”一节。  
+ 对于不具有上述限制条件的数据，通常最好在一个会话的范围内发送消息序列，而不是一次性地发送一个大消息。 有关详细信息，请参阅本主题后面的"流式处理数据"部分。  
   
  发送大量数据时将需要设置`maxAllowedContentLength`IIS 设置 (有关详细信息请参阅[配置 IIS 请求限制](http://go.microsoft.com/fwlink/?LinkId=253165)) 和`maxReceivedMessageSize`绑定设置 (例如[System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)或<xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>)。 `maxAllowedContentLength`属性默认为 28.6 M 和`maxReceivedMessageSize`属性默认为 64 KB。  
   
 ## <a name="encodings"></a>编码  
  *编码*定义一组有关如何在网络上显示消息的规则。 *编码器*实现此类编码，并负责，在发送端，启用<xref:System.ServiceModel.Channels.Message>到字节流或可以跨网络发送的字节缓冲区的内存中消息。 在接收方，编码器会将一系列字节转变为内存中的消息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括三个编码器，并允许您编写并插入自己的编码器，如有必要。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括三个编码器，同时也允许您进行编写并插入自己的编码器（如有必要）。  
   
  每个标准绑定都包括一个预配置编码器，因此默认情况下带 Net* 前缀的绑定使用二进制编码器（通过包括 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 类），而 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WSHttpBinding> 类则使用文本消息编码器（通过 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 类）。  
   
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  因此，这种情况下仅限制最大传入消息大小是不够的。 要限制 `MaxBufferSize` 缓冲的内存量，必须使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 属性。 进行流处理时，将此属性设置为一个安全值（或保留为默认值）很重要。 例如，假设您的服务必须接收大至 4 GB 的文件，并将其存储在本地磁盘上。 另外，还假设您的内存存在一些约束，一次只能缓冲 64 KB 的数据。 这样，您应该将 `MaxReceivedMessageSize` 设置为 4 GB，将 `MaxBufferSize` 设置为 64 KB。 另外，在您的服务实现中，必须确保仅按 64 KB 大小的块从传入流中读取数据，并且在上一块写入到磁盘并从内存中丢弃之前，不读取下一块。  
   
- 另外很重要的一点是，务必了解此配额仅限制由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 执行的缓冲，而无法防止您在自己的服务或客户端实现中执行的任何缓冲。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]其他安全注意事项，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
+ 另外很重要的一点是，务必了解此配额仅限制由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 执行的缓冲，而无法防止您在自己的服务或客户端实现中执行的任何缓冲。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 其他安全注意事项，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
   
 > [!NOTE]
 >  使用缓冲传输还是流传输是在终结点本地决定的。 对于 HTTP 传输，传输模式不会通过连接传播，也不会传播到代理服务器和其他中间方。 设置传输模式不会反映在服务接口的说明中。 在对服务生成一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端后，必须为旨在与流传输一起使用的服务编辑配置文件，以设置此模式。 对于 TCP 和命名管道传输协议，该传输模式将作为策略断言传播。  

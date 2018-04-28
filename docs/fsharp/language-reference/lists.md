@@ -1,20 +1,17 @@
 ---
-title: "列表 (F#)"
-description: "了解有关 F # 列表，相同类型的元素的有序的、 不可变序列。"
-keywords: "visual f#, f#, 函数编程"
+title: 列表 (F#)
+description: '了解有关 F # 列表，相同类型的元素的有序的、 不可变序列。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a1a6075f-064d-4aee-8222-2b59ff16cc12
-ms.openlocfilehash: 5802a5a1c48ad05c1765c4c0fa2e8a81a92dee8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e29dbdac5e920c009bf7758fd2cc1ad486041cad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lists"></a>列表
 
@@ -411,7 +408,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold`和[List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8)的差异在于`List.fold`返回额外参数的最终值但`List.scan`返回额外参数的中间值 （连同最终值） 的列表。
+`List.fold` 和[List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8)的差异在于`List.fold`返回额外参数的最终值但`List.scan`返回额外参数的中间值 （连同最终值） 的列表。
 
 其中每个函数包括反向变体，例如， [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7)，在顺序中与它不同列表的遍历和自变量的顺序。 此外，`List.fold`和`List.foldBack`具有变体， [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343)和[List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2)，它们采用两个列表的长度相等。 对每个元素执行的函数可以使用两个列表的对应元素来执行一些操作。 两个列表的元素类型可以不同（如以下示例所示），其中一个列表包含银行帐户的交易金额，而另一个列表包含交易的类型：存款或取款。
 
@@ -439,13 +436,13 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 有关更多的操作列表的信息，请参阅库参考主题[Collections.List 模块](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [F# 类型](fsharp-types.md)
 
 [序列](sequences.md)
 
-[阵列](arrays.md)
+[数组](arrays.md)
 
 [选项](options.md)

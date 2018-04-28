@@ -1,12 +1,13 @@
 ---
-title: "SAML 令牌和声明"
-ms.custom: 
+title: SAML 令牌和声明
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 令牌和声明
 安全断言标记语言 (SAML)*令牌*是声明的 XML 表示形式。 默认情况下，SAML 令牌[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]在联合的安全方案的用途是*颁发的令牌*。  
@@ -42,13 +44,13 @@ ms.lasthandoff: 12/22/2017
 4.  依赖方可通过 SAML 令牌上的签名了解到，该令牌是由安全令牌服务颁发的； 依赖方还可通过使用校验密钥创建的消息签名了解到，该令牌是颁发给客户端的。  
   
 ## <a name="from-claims-to-samlattributes"></a>从 Claim 到 SamlAttribute  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，SAML 令牌中的语句是作为 <xref:System.IdentityModel.Tokens.SamlAttribute> 对象建模的，可以直接从 <xref:System.IdentityModel.Claims.Claim> 对象填充，前提是 <xref:System.IdentityModel.Claims.Claim> 对象的 <xref:System.IdentityModel.Claims.Claim.Right%2A> 属性为 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>，并且 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 属性的类型为 <xref:System.String>。 例如:  
+ 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，SAML 令牌中的语句是作为 <xref:System.IdentityModel.Tokens.SamlAttribute> 对象建模的，可以直接从 <xref:System.IdentityModel.Claims.Claim> 对象填充，前提是 <xref:System.IdentityModel.Claims.Claim> 对象的 <xref:System.IdentityModel.Claims.Claim.Right%2A> 属性为 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>，并且 <xref:System.IdentityModel.Claims.Claim.Resource%2A> 属性的类型为 <xref:System.String>。 例如：  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
   
 > [!NOTE]
->  如果 SAML 令牌在消息中序列化，无论是在安全令牌服务颁发这些令牌时，还是在客户端将其作为身份验证的一部分提交到服务中时，最大消息大小配额都必须足够大，以便能够容纳 SAML 令牌和其他消息部分。 正常情况下，默认消息大小配额足够使用。 但是，如果 SAML 令牌由于包含数以百计的声明而过于庞大，您可能需要提高配额，以便容纳序列化的令牌。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
+>  如果 SAML 令牌在消息中序列化，无论是在安全令牌服务颁发这些令牌时，还是在客户端将其作为身份验证的一部分提交到服务中时，最大消息大小配额都必须足够大，以便能够容纳 SAML 令牌和其他消息部分。 正常情况下，默认消息大小配额足够使用。 但是，如果 SAML 令牌由于包含数以百计的声明而过于庞大，您可能需要提高配额，以便容纳序列化的令牌。 有关详细信息，请参阅[数据的安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
   
 ## <a name="from-samlattributes-to-claims"></a>从 SamlAttribute 到 Claim  
  在消息中接收到 SAML 令牌时，SAML 令牌中的各种语句将转换为 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 对象，并放置在 <xref:System.IdentityModel.Policy.AuthorizationContext> 中。 来自每个 SAML 语句的声明将由 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 的 <xref:System.IdentityModel.Policy.AuthorizationContext> 属性返回，并可对这些声明进行检查，以确定是否对该用户进行身份验证和授权。  

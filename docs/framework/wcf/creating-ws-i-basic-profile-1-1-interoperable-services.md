@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa561e5019bcf90e93da669f93cbce51d02e89dc
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fd08dca74ddb3f77e37a3aa4d67cf6d495bf5d16
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>创建 WS-I 基本配置文件 1.1 可互操作服务
 将 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务终结点配置为可与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web 服务客户端互操作：  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/27/2018
   
 -   由 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 值控制的消息安全提供符合 WS-I 基本安全配置文件 1.0 的 WS-Security 支持。 将此属性保留为其默认值（即 <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>）以便不使用 WS-Security。  
   
- 若要使元数据[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]适用于服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服务客户端生成工具： [Web 服务描述语言工具 (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)， [Web 服务发现工具 (Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)，和`Add Web Reference`Visual Studio 中的功能; 必须启用元数据发布。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [发布元数据终结点](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
+ 若要使元数据[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]适用于服务[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]，使用 Web 服务客户端生成工具： [Web 服务描述语言工具 (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)， [Web 服务发现工具 (Disco.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)，和`Add Web Reference`Visual Studio 中的功能; 必须启用元数据发布。 有关详细信息，请参阅[发布元数据终结点](../../../docs/framework/wcf/publishing-metadata-endpoints.md)。  
   
 ## <a name="example"></a>示例  
   

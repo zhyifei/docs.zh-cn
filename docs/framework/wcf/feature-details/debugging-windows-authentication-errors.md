@@ -1,12 +1,13 @@
 ---
-title: "调试 Windows 身份验证错误"
-ms.custom: 
+title: 调试 Windows 身份验证错误
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>调试 Windows 身份验证错误
 使用 Windows 验证身份作为安全机制时，安全支持提供程序接口 (SSPI) 将处理安全进程。 当 SSPI 层上发生安全错误时，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 会显示这些错误。 本主题提供一组问题以帮助诊断这些错误。  
@@ -73,11 +75,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="kerberos-protocol"></a>Kerberos 协议  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos 协议的 SPN/UPN 问题  
- 在使用 Windows 身份验证并且 SSPI 使用或协商 Kerberos 协议时，客户端终结点使用的 URL 必须包括服务主机在服务 URL 中的完全限定域名。 这假定在其下运行服务的帐户有权访问的计算机添加到 Active Directory 域中，这通常可通过下运行服务时创建的计算机 （默认值） 服务主体名称 (SPN) 密钥网络服务帐户。 如果服务不能访问计算机 SPN 密钥，则必须在客户端的终结点标识中提供在其下运行该服务的帐户的正确 SPN 或用户主体名称 (UPN)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用 SPN 和 UPN，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 在使用 Windows 身份验证并且 SSPI 使用或协商 Kerberos 协议时，客户端终结点使用的 URL 必须包括服务主机在服务 URL 中的完全限定域名。 这假定在其下运行服务的帐户有权访问的计算机添加到 Active Directory 域中，这通常可通过下运行服务时创建的计算机 （默认值） 服务主体名称 (SPN) 密钥网络服务帐户。 如果服务不能访问计算机 SPN 密钥，则必须在客户端的终结点标识中提供在其下运行该服务的帐户的正确 SPN 或用户主体名称 (UPN)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用 SPN 和 UPN，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
  在负载平衡方案（如网络场或网络园）中，常见的做法是为每个应用程序定义唯一帐户，为该帐户分配 SPN，并确保应用程序的所有服务都使用该帐户来运行。  
   
- 为了获取服务帐户的 SPN，需要具有 Active Directory 域管理员的身份。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][适用于 Windows 的 Kerberos 技术补充](http://go.microsoft.com/fwlink/?LinkID=88330)。  
+ 为了获取服务帐户的 SPN，需要具有 Active Directory 域管理员的身份。 有关详细信息，请参阅[技术补充面向 Windows 的 Kerberos](http://go.microsoft.com/fwlink/?LinkID=88330)。  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos 协议定向要求在域计算机帐户下运行服务  
  当 `ClientCredentialType` 属性设置为 `Windows` 且 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 属性设置为 `false` 时，会发生这种情况，如下面的代码所示。  
@@ -132,7 +134,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]模拟，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 模拟，请参阅[委托和模拟](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
  或者，客户端正在使用内置帐户 SYSTEM 作为 Windows 服务运行。  
   
