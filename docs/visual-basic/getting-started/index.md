@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ebaa934ffaed985439ed65b9f5308404171a91bd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入门
 文档的本节内容将帮助你了解  Visual Basic  应用程序开发的入门知识。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/26/2018
  介绍如何得到支持和提供反馈。  
   
  [Visual Studio](/visualstudio/)  
- 提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文档的链接。  
+ 在 Visual Studio 文档中提供链接。  
   
  [C#](../../csharp/index.md) 提供文档链接，该文档描述有关使用 Visual C# 进行应用程序开发的信息。  
   
@@ -72,4 +72,4 @@ ms.lasthandoff: 04/26/2018
  提供 Visual C++ 文档的链接。  
   
  [Office 和 SharePoint 开发](https://msdn.microsoft.com/library/d2tx7z6d)  
- 提供有关将 Microsoft Office 和 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 用作业务应用程序一部分的信息。
+ 提供有关将 Microsoft Office 和 Visual Studio 用作业务应用程序一部分的信息。

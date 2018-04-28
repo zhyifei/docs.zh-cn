@@ -1,17 +1,18 @@
 ---
 title: 使用 NUnit 和 .NET Core 进行 C# 单元测试
 description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案，在此交互式体验中学习 C# 和 .NET Core 中的单元测试概念。
-keywords: NUnit, .NETm, .NET Core
 author: rprouse
 ms.date: 12/01/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.openlocfilehash: b29912a58511305202a18e8da4ae57700605867a
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: db11adf265b2a08456a1bd42bc8a6847ba70a2ce
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>使用 NUnit 和 .NET Core 进行 C# 单元测试
 

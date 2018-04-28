@@ -1,20 +1,19 @@
 ---
-title: "使用 project.json 减少包依赖项"
-description: "创建基于 project.json 的库时减少包依赖项。"
-keywords: .NET, .NET Core
+title: 使用 project.json 减少包依赖项
+description: 创建基于 project.json 的库时减少包依赖项。
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.workload: dotnetcore
-ms.openlocfilehash: 858fc77d9652bfa59ed0bb3159260f40c76156a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 647d850c1629cddc1584a2044174838930b2fb1d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>使用 project.json 减少包依赖项
 

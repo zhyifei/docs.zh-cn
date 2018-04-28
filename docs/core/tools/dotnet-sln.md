@@ -1,19 +1,19 @@
 ---
-title: "dotnet sln 命令 - .NET Core CLI"
-description: "使用 dotnet-sln 命令，可以便捷地在解决方案文件中添加、删除和列出项目。"
+title: dotnet sln 命令 - .NET Core CLI
+description: 使用 dotnet-sln 命令，可以便捷地在解决方案文件中添加、删除和列出项目。
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: deb66ff52074630616c7be47f1a9751246db501d
-ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
+ms.openlocfilehash: 837d47c38119f9a7aa75c74576ed75b8ef3813dd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 

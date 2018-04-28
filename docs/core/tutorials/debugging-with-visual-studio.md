@@ -1,21 +1,20 @@
 ---
-title: "使用 Visual Studio 2017 调试 C# 或 Visual Basic Hello World .NET Core 应用程序"
-description: "了解如何使用 Visual Studio 2017 调试用 C# 或 Visual Basic 编写的 Hello World 应用程序。"
-keywords: ".NET Core, .NET Core 控制台应用程序, .NET Core 调试"
+title: 使用 Visual Studio 2017 调试 C# 或 Visual Basic Hello World .NET Core 应用程序
+description: 了解如何使用 Visual Studio 2017 调试用 C# 或 Visual Basic 编写的 Hello World 应用程序。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/15/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
-ms.workload: dotnetcore
-ms.openlocfilehash: 6c8e1de4e0053ae6f74dc6c74fe37b6d7661932e
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 20f84c049236d2d3526901466ab406c40855c269
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 调试 Hello World 应用程序
 

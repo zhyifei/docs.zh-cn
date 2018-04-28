@@ -1,21 +1,19 @@
 ---
 title: 从源生成 .NET Core
 description: 了解如何从源代码生成 .NET Core 和 .NET Core CLI。
-keywords: .NET, .NET Core, 源, 生成
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 8b49079c-6ede-429a-92d7-ecd2fda1ab0e
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: a14e8dbf3f9be9910a2c50cfbcb3f52f4e7385e1
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 36939da689a1db06a6d9f1b7e816e6e5cabcf59d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="build-net-core-from-source"></a>从源生成 .NET Core
 

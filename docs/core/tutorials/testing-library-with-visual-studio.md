@@ -1,24 +1,23 @@
 ---
-title: "使用 Visual Studio 2017 测试 .NET Core 类库"
-description: "了解如何使用 Visual Studio 2017 测试用 C# 编写的类库"
-keywords: ".NET Core, .NET Standard 类库, Visual Studio 2017, 单元测试"
+title: 使用 Visual Studio 2017 测试 .NET Core 类库
+description: 了解如何使用 Visual Studio 2017 测试用 C# 编写的类库
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
 dev_langs:
 - csharp
 - vb
-ms.workload: dotnetcore
-ms.openlocfilehash: fb5a23ccdcacadd70a58ec6c9a35fbee86af667b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0356ea286238f4b722a42795c9456f7532766f7d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 测试 .NET Core 类库
 
