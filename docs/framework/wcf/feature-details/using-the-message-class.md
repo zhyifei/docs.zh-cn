@@ -1,27 +1,29 @@
 ---
-title: "使用 Message 类"
-ms.custom: 
+title: 使用 Message 类
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>使用 Message 类
 <xref:System.ServiceModel.Channels.Message> 类是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的基本类。 客户端与服务之间的所有通信最终都会产生要进行发送和接收的 <xref:System.ServiceModel.Channels.Message> 实例。  
@@ -172,7 +174,7 @@ ms.lasthandoff: 12/22/2017
   
  使用 <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A> 方法检索特定标头。 此方法采用要查找的标头的名称和命名空间作为参数，并返回该标头的索引。 如果该标头出现了多次，则引发异常。 如果未找到该标头，则返回 –1。  
   
- 在 SOAP 标头模型中，标头可以具有一个 `Actor` 值，该值指定标头的预期接收方。 最基本的 `FindHeader` 重载仅搜索准备发送给消息的最终接收方的标头。 但是，使用另一个重载可以指定搜索中包括哪些 `Actor` 值。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] SOAP 规范。  
+ 在 SOAP 标头模型中，标头可以具有一个 `Actor` 值，该值指定标头的预期接收方。 最基本的 `FindHeader` 重载仅搜索准备发送给消息的最终接收方的标头。 但是，使用另一个重载可以指定搜索中包括哪些 `Actor` 值。 有关详细信息，请参阅 SOAP 规范。  
   
  提供了 <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> 方法，以便将标头从 <xref:System.ServiceModel.Channels.MessageHeaders> 集合复制到 <xref:System.ServiceModel.Channels.MessageHeaderInfo> 对象数组。  
   

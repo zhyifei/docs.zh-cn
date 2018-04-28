@@ -1,13 +1,13 @@
 ---
-title: "数据传输体系结构概述"
-ms.custom: 
+title: 数据传输体系结构概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb64b871b8e4ba3036d70f3b84e2fde1667f4529
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-transfer-architectural-overview"></a>数据传输体系结构概述
 可以将[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 视为一种消息传递基础结构。 它可以接收消息，处理消息，根据用户代码调度消息以便进一步操作，或者从用户代码给定的数据构造消息并将消息发送到目标。 本主题旨在向高级开发人员说明用于处理消息和所包含数据的体系结构。 有关如何发送和接收数据的面向任务的更简单介绍，请参阅 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -97,14 +97,14 @@ ms.lasthandoff: 12/22/2017
 |从流通道堆栈传入|一个 `Stream` 对象，表示通过网络传入的、具有 <xref:System.Xml.XmlReader> 的数据|使用 `XmlReader` 从存储的 `WriteNode` 中写出内容|返回存储的 `XmlReader`|  
 |从非流处理通道堆栈传入|一个缓冲区，其中包含具有 `XmlReader` 的正文数据|使用 `XmlReader` 从存储的 `WriteNode`中写出内容|返回存储的 lang|  
   
- \*这些项并不直接在实现`Message`子类，但在的子类<xref:System.ServiceModel.Channels.BodyWriter>类。 有关 <xref:System.ServiceModel.Channels.BodyWriter>的详细信息，请参阅 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
+ \* 这些项并不直接在实现`Message`子类，但在的子类<xref:System.ServiceModel.Channels.BodyWriter>类。 有关 <xref:System.ServiceModel.Channels.BodyWriter>的详细信息，请参阅 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ## <a name="message-headers"></a>消息头  
  消息可以包含标头。 标头在逻辑上由与名称、命名空间和几个其他属性相关联的 XML Infoset 组成。 在 `Headers` 上使用 <xref:System.ServiceModel.Channels.Message>属性可以访问消息头。 每个标头由一个 <xref:System.ServiceModel.Channels.MessageHeader> 类表示。 消息头通常在使用配置的通道堆栈处理 SOAP 消息时映射到 SOAP 消息头。  
   
  将信息放入消息头和从消息头中提取信息类似于使用消息正文。 由于不支持流处理，因此过程有些简化。 可以多次访问同一个标头的内容，并且可以按任意顺序访问标头，强制标头始终进行缓冲。 虽然没有可用于通过标头获取 XML 读取器的通用机制，但是 `MessageHeader` 内部具有一个 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 子类，可表示具有此功能的可读标头。 这种类型的 `MessageHeader` 是在传入具有自定义应用程序标头的消息时由通道堆栈创建的。 它使服务框架能够使用反序列化引擎（如 <xref:System.Runtime.Serialization.DataContractSerializer>）来解释这些标头。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
+ 有关详细信息，请参阅[使用 Message 类](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ## <a name="message-properties"></a>消息属性  
  消息可以包含属性。 属性  是任何与字符串名称关联的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象。 通过 `Properties` 上的 `Message`属性可以访问这些属性。  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
  例如，作为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 一部分的 HTTP 传输通道在向客户端发送答复时，能够生成多种 HTTP 状态代码，如“404（未找到）”和“500（内部服务器错误）”。 在之前发送答复消息，它检查是否`Properties`的`Message`包含名为"httpResponse"包含类型的对象的属性<xref:System.ServiceModel.Channels.HttpResponseMessageProperty>。 如果找到此属性，HTTP 传输通道将查看 <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> 属性并使用该状态代码。 如果未找到此属性，则使用默认的“200（确定）”代码。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
+ 有关详细信息，请参阅[使用 Message 类](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ### <a name="the-message-as-a-whole"></a>整体消息  
  到目前为止，我们已经讨论了用于单独访问消息各个部分的方法。 不过， <xref:System.ServiceModel.Channels.Message> 类还提供了以整体形式处理整个消息的方法。 例如， `WriteMessage` 方法可将整个消息写出到 XML 编写器。  
@@ -240,7 +240,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DataArchitecture#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#9)]
  [!code-vb[C_DataArchitecture#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#9)]  
   
- 标记为要进行序列化（使用 <xref:System.ServiceModel.MessageBodyMemberAttribute>、 <xref:System.ServiceModel.MessageHeaderAttribute>或其他相关特性）的项必须为可序列化的，以参与消息协定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 本主题后面的“序列化”一节。  
+ 标记为要进行序列化（使用 <xref:System.ServiceModel.MessageBodyMemberAttribute>、 <xref:System.ServiceModel.MessageHeaderAttribute>或其他相关特性）的项必须为可序列化的，以参与消息协定。 有关详细信息，请参阅本主题后面的"序列化"一节。  
   
 ### <a name="4-parameters"></a>4.参数  
  通常，想要说明对多段数据执行的操作的开发人员并不需要消息协定所提供的那样高的控制度。 例如，在创建新服务时，开发人员通常不需要进行空与包装决策和确定包装元素名称。 进行这些决策通常需要了解有关 Web 服务和 SOAP 的深入知识。  
@@ -255,7 +255,7 @@ ms.lasthandoff: 12/22/2017
  推荐的方法是将要发送或接收的信息作为操作协定参数的简单列表进行说明，除非存在特殊原因需要移动到更复杂的消息协定或基于 `Message` 的编程模型。  
   
 ### <a name="5-stream"></a>5.流  
- 在操作协定中使用 `Stream` 或它的一个子类或者将其作为消息协定中唯一的消息正文部分，这种方式可视为与上述模型不同的一种单独的编程模型。 以这种方式使用 `Stream` 是除了编写您自己的流兼容 `Message` 子类以外，保证协定能够以流处理方式使用的唯一途径。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][大型数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
+ 在操作协定中使用 `Stream` 或它的一个子类或者将其作为消息协定中唯一的消息正文部分，这种方式可视为与上述模型不同的一种单独的编程模型。 以这种方式使用 `Stream` 是除了编写您自己的流兼容 `Message` 子类以外，保证协定能够以流处理方式使用的唯一途径。 有关详细信息，请参阅[大型数据和流式处理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
  以这种方式使用 `Stream` 或它的一个子类时，不会调用序列化程序。 对于传出消息，会创建一个特殊流 `Message` 子类并写出流，如关于 <xref:System.Xml.IStreamProvider> 接口的一节中所述。 对于传入消息，服务框架会在传入消息上创建一个 `Stream` 子类并将该子类提供给操作。  
   

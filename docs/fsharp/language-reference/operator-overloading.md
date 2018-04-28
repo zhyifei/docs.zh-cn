@@ -1,20 +1,17 @@
 ---
-title: "运算符重载 (F#)"
-description: "了解如何重载算术运算符在类或记录类型，然后在 F # 中的全局级别。"
-keywords: "visual f#, f#, 函数编程"
+title: 运算符重载 (F#)
+description: '了解如何重载算术运算符在类或记录类型，然后在 F # 中的全局级别。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 019277ed-f649-4fa5-ad43-097865f449d9
-ms.openlocfilehash: 76ddab5339e11d71bb326b60d727017eb838ccf4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 45fcb4d2acce29caa6b38d08ae4f166884f20147
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-overloading"></a>运算符重载
 
@@ -162,5 +159,5 @@ static member (~-) (v : Vector)
 
 关键字`inline`通常会与全局运算符，这通常是最好集成到调用代码的小函数使用。 进行运算符函数内联还使他们能够使用静态解析的类型参数，以生成静态解析的泛型代码。 有关详细信息，请参阅[内联函数](functions/inline-functions.md)和[静态解析的类型参数](generics/statically-resolved-type-parameters.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [成员](members/index.md)

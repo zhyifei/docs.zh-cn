@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: ''
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ba8a2eb97b071608b16b5549ead403b578329ee5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 编程模型概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP 编程模型提供使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 生成 WEB HTTP 服务所需的基本元素。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服务旨在提供给最大范围的可能客户端（包括 Web 浏览器）访问，并且具有以下独特要求：  
@@ -33,13 +33,13 @@ ms.lasthandoff: 03/26/2018
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型将 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 扩展到覆盖 Web 样式的方案，包括 WEB HTTP 服务、AJAX 和 JSON 服务以及联合 (ATOM/RSS) 源。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] AJAX 和 JSON 服务，请参阅[AJAX 集成和 JSON 支持](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 联合，请参阅[WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
   
- 对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。 任何可序列化类型都可以从 WEB HTTP 服务操作返回。 因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。 默认情况下支持哪些类型的详细信息请参阅**UriTemplate 查询字符串参数和 Url**下面一节。 通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ 对于可从 WEB HTTP 服务返回的数据的类型没有额外的限制。 任何可序列化类型都可以从 WEB HTTP 服务操作返回。 因为 WEB HTTP 服务操作可以通过 Web 浏览器调用，所以对可在 URL 中指定的数据类型有一个限制。 默认情况下支持哪些类型的详细信息请参阅**UriTemplate 查询字符串参数和 Url**下面一节。 通过提供您自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 实现来指定如何将 URL 中指定的参数转换为实际参数类型，可以更改默认行为。 有关详细信息，请参阅<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
   
 > [!CAUTION]
 >  使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 编程模型编写的服务不使用 SOAP 消息。 由于不使用 SOAP，因此无法使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的安全功能。 然而，您可以通过使用 HTTPS 承载服务来使用基于传输的安全性。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全，请参阅[安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  为 IIS 安装 WebDAV 扩展会导致 Web HTTP 服务返回 HTTP 405 错误，因为 WebDAV 扩展试图处理所有 PUT 请求。 若要解决此问题，你可卸载 WebDAV 扩展或为网站禁用 WebDAV 扩展。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 和 WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  为 IIS 安装 WebDAV 扩展会导致 Web HTTP 服务返回 HTTP 405 错误，因为 WebDAV 扩展试图处理所有 PUT 请求。 若要解决此问题，你可卸载 WebDAV 扩展或为网站禁用 WebDAV 扩展。 有关详细信息，请参阅[IIS 和 WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>使用 UriTemplate 和 UriTemplateTable 进行 URI 处理  
  URI 模板提供了一种可以高效地表示很大的结构相似的 URI 集的语法。 例如，下面的模板表示所有以“a”开始并以“c”结束而中间段的值不限的、由三个段组成的 URI：a/{segment}/c  
@@ -130,7 +130,7 @@ interface ICustomer
 |<xref:System.Decimal>|使用标准表示法的任何小数（无指数）|  
 |<xref:System.Boolean>|True 或 False（不区分大小写）|  
 |<xref:System.String>|任何字符串（不支持空字符串，且不进行转义）|  
-|<xref:System.DateTime>|MM/DD/YYYY<br /><br /> MM/DD/YYYY HH:MM:SS [AM&#124;PM]<br /><br /> 月、日、年<br /><br /> 年月日年 hh: mm: [AM&#124;PM]|  
+|<xref:System.DateTime>|MM/DD/YYYY<br /><br /> MM/DD/YYYY HH: MM: [AM&AMP;#124;PM]<br /><br /> 月、日、年<br /><br /> 年月日年 hh: mm: [AM&#124;PM]|  
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> 此处，DD = 天、HH = 小时、MM = 分钟、SS = 秒钟|  
 |<xref:System.Guid>|一个 GUID，例如：<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/DD/YYYY HH:MM:SS MM:SS<br /><br /> 此处，DD = 天、HH = 小时、MM = 分钟、SS = 秒钟|  
@@ -156,7 +156,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 编程模型疑难解答  
  当使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 调用 WCF WEB HTTP 服务以创建通道时，即使将其他 <xref:System.ServiceModel.Description.WebHttpBehavior> 传递给 <xref:System.ServiceModel.EndpointAddress>，<xref:System.ServiceModel.EndpointAddress> 也会使用配置文件中设置的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF 联合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

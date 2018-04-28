@@ -1,20 +1,17 @@
 ---
-title: "签名 (F#)"
-description: "了解如何使用 F # 签名文件用于保存有关的公共签名的一组 F # 程序元素，如类型、 命名空间和模块的信息。"
-keywords: "visual f#, f#, 函数编程"
+title: 签名 (F#)
+description: '了解如何使用 F # 签名文件用于保存有关的公共签名的一组 F # 程序元素，如类型、 命名空间和模块的信息。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 76c84a62-b2f6-44ec-8238-e687e2f7d18e
-ms.openlocfilehash: d0f71c6472852268303a2d3af2e4b0a3c256704e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c98ac6c62fdcee51532a162596e99309a31802ec
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="signatures"></a>签名
 
@@ -34,7 +31,7 @@ ms.lasthandoff: 10/18/2017
 
 
 
-|特性|说明|
+|特性|描述|
 |---------|-----------|
 |`[<Sealed>]`|适用于没有抽象成员或不应扩展的类型。|
 |`[<Interface>]`|适用于接口类型。|
@@ -82,7 +79,7 @@ ms.lasthandoff: 10/18/2017
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
     
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [访问控制](access-control.md)

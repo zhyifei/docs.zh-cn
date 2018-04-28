@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>如何：使用 Windows 凭据保护服务的安全
 本主题说明如何在上启用传输安全[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]驻留在 Windows 域，并且由同一个域中的客户端调用的服务。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此方案中，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 有关示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/26/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>通过代码在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承自 <xref:System.ServiceModel.ClientBase%601> 类，这确保了每个客户端都具有与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务通信所需的构造函数、方法和属性。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承自 <xref:System.ServiceModel.ClientBase%601> 类，这确保了每个客户端都具有与 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服务通信所需的构造函数、方法和属性。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
   
 2.  在客户端程序的 `Main` 方法的开头插入此过程的代码。  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 04/26/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>通过配置在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  替换[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)包含上一节中的配置代码的生成的配置文件的部分。  
   

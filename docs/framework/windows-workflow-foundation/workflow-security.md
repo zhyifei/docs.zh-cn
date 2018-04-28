@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-security"></a>工作流安全性
 Windows Workflow Foundation (WF) 集成了多种不同的技术，例如 Microsoft SQL Server 和[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]。 如果操作不当，采用这些技术可能会给工作流带来安全问题。  
@@ -41,15 +41,15 @@ Windows Workflow Foundation (WF) 集成了多种不同的技术，例如 Microso
   
 -   使用大量子活动、位置、书签、宿主扩展或作用域时，或使用负载很大的书签时，可能会耗尽内存，或在持久化过程中分配过多的数据库空间。 可使用对象级和数据级的安全措施来缓解该问题。  
   
--   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 时，必须保护实例存储区的安全。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL Server 最佳做法](http://go.microsoft.com/fwlink/?LinkId=164972)。  
+-   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 时，必须保护实例存储区的安全。 有关详细信息，请参阅[SQL Server 最佳做法](http://go.microsoft.com/fwlink/?LinkId=164972)。  
   
--   应为实例存储区中的敏感数据加密。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL 安全性加密](http://go.microsoft.com/fwlink/?LinkId=164976)。  
+-   应为实例存储区中的敏感数据加密。 有关详细信息，请参阅[SQL 安全性加密](http://go.microsoft.com/fwlink/?LinkId=164976)。  
   
 -   因为数据库连接字符串通常包含在配置文件中，所以，Windows 级别的安全性 (ACL) 应该用于确保配置文件（通常是 Web.Config）是安全的，并且登录名和密码信息不包含在连接字符串中。 应改为在数据库和 Web 服务器之间使用 Windows 身份验证。  
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost 的注意事项  
   
--   应确保在工作流中使用的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 终结点的安全。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 安全概述](http://go.microsoft.com/fwlink/?LinkID=164975)。  
+-   应确保在工作流中使用的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 终结点的安全。 有关详细信息，请参阅[WCF 安全性概述](http://go.microsoft.com/fwlink/?LinkID=164975)。  
   
 -   宿主级授权可以使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 来实现。 请参阅[How To： 为服务创建自定义授权管理器](http://go.microsoft.com/fwlink/?LinkId=192228)有关详细信息。 此外说明了这一点在下面的示例：[工作流服务的安全](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。  
   

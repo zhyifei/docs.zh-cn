@@ -1,20 +1,17 @@
 ---
 title: 符号和运算符参考 (F#)
 description: '了解符号和 F # 编程语言中使用的运算符。'
-keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 04/04/2018
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 5b4b89ae29a067f2c793862a555fbcf78a800d88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
@@ -153,7 +150,7 @@ ms.lasthandoff: 04/09/2018
 |`f<`*types*`>`|左侧|
 F# 支持自定义运算符重载。 这意味着你可以自定义自己的运算符。 在上表中，*op* 可以是任何有效的运算符字符序列（可能为空），它既可以内嵌，也可以由用户定义。 因此，你可以使用此表来确定用于自定义运算符以实现所需优先级级别的字符顺序。 当编译器确定优先级时，会忽略前面的 `.` 字符。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](../index.md)
 
 [运算符重载](../operator-overloading.md)

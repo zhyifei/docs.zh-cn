@@ -1,24 +1,26 @@
 ---
-title: "在 WCF 中排队"
-ms.custom: 
+title: 在 WCF 中排队
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="queuing-in-wcf"></a>在 WCF 中排队
 本节描述如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的排队通信。  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
   
  也可以使用向 Active Directory 目录服务注册的 Windows 标识对 MSMQ 队列进行保护。 安装 MSMQ 时，可以安装 Active Directory 集成，这要求计算机加入 Windows 域网络。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ，请参阅[安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ，请参阅[安装消息队列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)是排队的绑定[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供两个[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]终结点使用 MSMQ 进行通信。 因此，该绑定将公开特定于 MSMQ 的属性。 然而，并非所有 MSMQ 功能和属性都在 `NetMsmqBinding` 中公开。 紧凑 `NetMsmqBinding` 设计为具有一组大多数客户都认为足够的最佳功能。  
   
- `NetMsmqBinding` 以绑定上的属性形式阐明了迄今为止所讨论的核心队列概念。 而这些属性又向 MSMQ 传达如何传输和传递消息。 后面几节将讨论属性类别。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]更完整地描述特定属性的概念性主题。  
+ `NetMsmqBinding` 以绑定上的属性形式阐明了迄今为止所讨论的核心队列概念。 而这些属性又向 MSMQ 传达如何传输和传递消息。 后面几节将讨论属性类别。 有关详细信息，请参阅更完整地描述特定属性的概念性主题。  
   
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce 和 Durable 属性  
  `ExactlyOnce` 和 `Durable` 属性影响消息在队列之间的传输方式：  
@@ -77,17 +79,17 @@ ms.lasthandoff: 12/22/2017
   
  绑定具有两个相关属性：  
   
--   `DeadLetterQueue`：该属性是一个枚举，指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]这些属性的解释，请参阅[使用死信队列的处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`：该属性是一个枚举，指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些属性的解释，请参阅[使用死信队列的处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`：该属性是应用程序特定死信队列的统一资源标识符 (URI) 地址。 如果这是必需`DeadLetterQueue`。`Custom` 选择。  
   
 #### <a name="poison-message-handling-properties"></a>病毒消息处理属性  
- 当服务从事务中的目标队列读取消息时，服务可能由于种种原因而无法处理消息。 然后，将消息放回队列以备再次读取。 若要处理反复失败的消息，可以在绑定中配置一组病毒消息处理属性。 有如下四个属性：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]这些属性，请参阅[的病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
+ 当服务从事务中的目标队列读取消息时，服务可能由于种种原因而无法处理消息。 然后，将消息放回队列以备再次读取。 若要处理反复失败的消息，可以在绑定中配置一组病毒消息处理属性。 有如下四个属性：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 这些属性，请参阅[的病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
   
 #### <a name="security-properties"></a>安全属性  
- MSMQ 公开其自己的安全模型，如队列上的访问控制列表 (ACL) 或发送经过验证身份的消息。 `NetMsmqBinding` 将这些安全属性作为其传输安全设置的一部分而公开。 绑定中有两个用于传输安全的属性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 这些属性中的设置取决于 MSMQ 的配置方式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
+ MSMQ 公开其自己的安全模型，如队列上的访问控制列表 (ACL) 或发送经过验证身份的消息。 `NetMsmqBinding` 将这些安全属性作为其传输安全设置的一部分而公开。 绑定中有两个用于传输安全的属性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 这些属性中的设置取决于 MSMQ 的配置方式。 有关详细信息，请参阅[使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
   
- 除了传输安全，实际的 SOAP 消息本身也可以使用消息安全来进行保护。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用消息安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)。  
+ 除了传输安全，实际的 SOAP 消息本身也可以使用消息安全来进行保护。 有关详细信息，请参阅[使用消息安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)。  
   
  `MsmqTransportSecurity` 还公开两个属性，即 `MsmqEncryptionAlgorithm` 和 `MsmqHashAlgorithm`。 这些是要为消息的队列到队列传输加密和签名的哈希选择的不同算法的枚举。  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `QueueTransferProtocol`：要用于队列到队列的消息传输的协议的枚举。 MSMQ 实现本机队列到队列的传输协议和称为 SOAP 可靠消息传输协议 (SRMP) 的基于 SOAP 的协议。 当使用 HTTP 传输进行队列到队列的传输时将使用 SRMP。 当使用 HTTPS 进行队列到队列的传输时将使用 SRMP 安全。  
   
--   `UseActiveDirectory`：一个布尔值，指示是否必须使用 Active Directory 进行队列地址解析。 默认情况下，此功能处于关闭状态。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
+-   `UseActiveDirectory`：一个布尔值，指示是否必须使用 Active Directory 进行队列地址解析。 默认情况下，此功能处于关闭状态。 有关详细信息，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  当希望 `MsmqIntegrationBinding` 终结点与用 C、C++、COM 或 System.Messaging API 编写的现有 MSMQ 应用程序通信时，请使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  

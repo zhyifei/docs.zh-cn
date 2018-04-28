@@ -1,36 +1,38 @@
 ---
-title: "如何：使用 X.509 证书保证服务的安全"
-ms.custom: 
+title: 如何：使用 X.509 证书保证服务的安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>如何：使用 X.509 证书保证服务的安全
 使用 X.509 证书保证服务的安全是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中多数绑定使用的基本技术。 本主题演练使用 X.509 证书配置自承载服务的步骤。  
   
- 先决条件是具有可用于对服务器进行身份验证的有效证书。 证书必须由受信任的证书颁发机构颁发给服务器。 如果证书无效，则尝试使用该服务的任何客户端都不会信任该服务，因此不会建立连接。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用证书，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 先决条件是具有可用于对服务器进行身份验证的有效证书。 证书必须由受信任的证书颁发机构颁发给服务器。 如果证书无效，则尝试使用该服务的任何客户端都不会信任该服务，因此不会建立连接。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用证书，请参阅[使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>使用代码用证书配置服务  
   
-1.  创建服务协定和实现的服务。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][设计和实现服务](../../../../docs/framework/wcf/designing-and-implementing-services.md)。  
+1.  创建服务协定和实现的服务。 有关详细信息，请参阅[设计和实现服务](../../../../docs/framework/wcf/designing-and-implementing-services.md)。  
   
 2.  创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并将其安全模式设置为 <xref:System.ServiceModel.SecurityMode.Message>，如下面的代码所示。  
   

@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5619041ccf4ce4d899f3c9a478d125a1a2d8d32a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-security-overview"></a>传输安全概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的传输安全机制取决于使用的绑定和传输。 例如，当使用 <xref:System.ServiceModel.WSHttpBinding> 类时，传输为 HTTP，保证传输安全的主要机制为 HTTP 上的安全套接字层 (SSL) （通常称为 HTTPS）。 本主题讨论 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 系统提供的绑定中使用的主要传输安全机制。  
@@ -72,10 +72,10 @@ ms.lasthandoff: 03/26/2018
  这对应于 IIS 中的集成 Windows 身份验证。 设置为此值时，还需要服务器位于使用 Kerberos 协议作为其域控制器的 Windows 域中。 如果服务器不在支持 Kerberos 的域中，或者如果 Kerberos 系统失败，您可以使用下一节中说明的 NT LAN Manager (NTLM) 值。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)]请参阅[集成 Windows 身份验证在 IIS 6.0 中](http://go.microsoft.com/fwlink/?LinkId=88597)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)]请参阅[IIS 7.0 Beta： 在 IIS 7.0 中配置服务器证书](http://go.microsoft.com/fwlink/?LinkId=88595)。  
   
 #### <a name="ntlm"></a>NTLM  
- 这使服务器可以在 Kerberos 协议失败时使用 NTLM 进行身份验证。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 配置中的 IIS [!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[强制 NTLM 身份验证](http://go.microsoft.com/fwlink/?LinkId=88598)。 对于 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 身份验证包括 NTLM 身份验证。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 7.0 Beta： 在 IIS 7.0 中配置服务器证书](http://go.microsoft.com/fwlink/?LinkID=88595)。  
+ 这使服务器可以在 Kerberos 协议失败时使用 NTLM 进行身份验证。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 配置中的 IIS [!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[强制 NTLM 身份验证](http://go.microsoft.com/fwlink/?LinkId=88598)。 对于 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 身份验证包括 NTLM 身份验证。 有关详细信息，请参阅[IIS 7.0 Beta： 在 IIS 7.0 中配置服务器证书](http://go.microsoft.com/fwlink/?LinkID=88595)。  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> 类专用于与实现 WS* 规范的服务进行互操作。 此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。 若要创建使用 SSL 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，请使用 IIS 承载该应用程序。 或者，如果您要创建自承载的应用程序，请使用 HttpCfg.exe 工具将 X.509 证书绑定到计算机上的特定端口。 端口号作为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的一部分以终结点地址的形式进行指定。 使用传输模式时，终结点地址必须包括 HTTPS 协议，否则运行时将引发异常。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+ <xref:System.ServiceModel.WSHttpBinding> 类专用于与实现 WS* 规范的服务进行互操作。 此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。 若要创建使用 SSL 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序，请使用 IIS 承载该应用程序。 或者，如果您要创建自承载的应用程序，请使用 HttpCfg.exe 工具将 X.509 证书绑定到计算机上的特定端口。 端口号作为 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序的一部分以终结点地址的形式进行指定。 使用传输模式时，终结点地址必须包括 HTTPS 协议，否则运行时将引发异常。 有关详细信息，请参阅[HTTP 传输安全](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  对于客户端身份验证，请将 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 类的 <xref:System.ServiceModel.HttpTransportSecurity> 属性设置为 <xref:System.ServiceModel.HttpClientCredentialType> 枚举值之一。 枚举值与 <xref:System.ServiceModel.BasicHttpBinding> 的客户端凭据类型等同，并由 IIS 服务承载。  
   
@@ -133,5 +133,5 @@ ms.lasthandoff: 03/26/2018
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding 和 NetMsmqBinding  
  有关完整的传输介绍安全与消息队列 （以前称为 MSMQ），请参阅[使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

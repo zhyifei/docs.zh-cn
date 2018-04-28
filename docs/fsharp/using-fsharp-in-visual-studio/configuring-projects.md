@@ -1,20 +1,17 @@
 ---
-title: "配置项目 （F #）"
-description: "了解如何使用项目设计器，当您使用 Visual Studio 中的 F # 项目时。"
-keywords: "visual f#, f#, 函数编程"
+title: '配置项目 （F #）'
+description: '了解如何使用项目设计器，当您使用 Visual Studio 中的 F # 项目时。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: eac5b61d6b61d2aa1cb7b1606d60995a0355e975
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-projects-in-visual-studio"></a>在 Visual Studio 中配置项目
 
@@ -28,9 +25,9 @@ ms.lasthandoff: 12/09/2017
 
 |项目设计器页|相关的链接|描述|
 |---------------------|-------------|-----------|
-|`Application`|[应用程序页、 项目设计器 &#40;C &#35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|使您能够指定应用程序级设置和属性，例如，你创建的库或可执行文件、 应用程序的目标.NET Framework 的版本，和有关其中资源文件的信息的应用程序使用存储。|
-|`Build`|[生成页，项目设计器 &#40;C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|使用此选项可控制如何编译的代码。|
-|`Build Events`|[生成事件页，项目设计器 &#40;C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|使用此选项可指定命令运行之前或之后编译。|
+|`Application`|[应用程序页，项目设计器&#40;C&#35;&#41;](https://msdn.microsoft.com/library/ms247046.aspx)|使您能够指定应用程序级设置和属性，例如，你创建的库或可执行文件、 应用程序的目标.NET Framework 的版本，和有关其中资源文件的信息的应用程序使用存储。|
+|`Build`|[生成页、 项目设计器&#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|使用此选项可控制如何编译的代码。|
+|`Build Events`|[生成事件页、 项目设计器&#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|使用此选项可指定命令运行之前或之后编译。|
 |`Debug`|[“项目设计器”->“调试”页](https://msdn.microsoft.com/library/2wcdezs5.aspx)|使用此选项可控制应用程序在调试期间的运行方式。 这包括什么使用与你的应用程序的开始目录是什么，命令行和任何特殊调试你想要启用，如本机代码和 SQL 的模式。|
 |`Reference Paths`|[管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)|使用此选项可指定要从中搜索程序集的代码，取决于。|
 
@@ -42,7 +39,7 @@ ms.lasthandoff: 12/09/2017
 |`Build`|`Generate tail calls`|如果选择，启用对尾部 Microsoft 中间语言 (MSIL) 指令的使用。 这将导致要重用为尾递归函数的堆栈帧。 等效于`--tailcalls`编译器选项。|
 |`Build`|`Other flags`|使用此选项可以指定其他编译器命令行选项。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
  [要开始使用 Visual Studio 中的 F #](../get-started/get-started-visual-studio.md)  
  [编译器选项](../language-reference/compiler-options.md)  
  [项目设计器简介](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))

@@ -1,20 +1,17 @@
 ---
-title: "类 (F#)"
-description: "了解如何表示可以具有属性、 方法和事件的对象的类型 F # 类。"
-keywords: "visual f#, f#, 函数编程"
+title: 类 (F#)
+description: '了解如何表示可以具有属性、 方法和事件的对象的类型 F # 类。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: d58679d5-7753-4b3b-a12f-6e9f00ed5ba3
-ms.openlocfilehash: 2a73baba1f7c1b0d3bd09d22c9d6d9f0524daef3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0bfb45b6481576729bfe8d4bd016fb151757660a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="classes"></a>类
 
@@ -142,7 +139,7 @@ type MyClass2(dataIn) as self =
 结构还可以用于的少量聚合数据，但它们可以将其与类和记录的区别在于它们是.NET 值类型。 类和记录是.NET 引用类型。 值类型和引用类型的语义的不同，在于，按值传递的值类型。 这意味着，它们将会复制在作为参数传递或从函数返回时的位位。 客户还存储在堆栈上或者，如果用作字段，则嵌入在父对象而不是存储在堆上其自己单独的位置。 因此，结构适于经常访问的数据访问堆的开销时出现问题。 有关结构的详细信息，请参阅[结构](structures.md)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [成员](members/index.md)

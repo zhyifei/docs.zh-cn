@@ -1,20 +1,17 @@
 ---
-title: "要开始使用 Visual Studio 代码中的 F #"
-description: "了解如何使用 F # 使用 Visual Studio Code 和 Ionide 插件套件。"
-keywords: "visual f #、 f # 中，函数编程，.NET 中，Visual Studio Code，vscode Ionide"
+title: '要开始使用 Visual Studio 代码中的 F #'
+description: '了解如何使用 F # 使用 Visual Studio Code 和 Ionide 插件套件。'
 author: cartermp
 ms.author: phcart
 ms.date: 02/28/2018
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c452e791b27bc3f32e137a515011d953005344c6
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 43fed76a57bd7749a7f22a2039ad625e3d26d132
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>要开始使用 Visual Studio 代码中的 F #
 
@@ -234,7 +231,7 @@ val it : string = "appleyay"
 
 成功！  获取与之前相同的结果，但现在从 F # 实现文件加载。  此处的主要差别在于 F # 源代码文件被编译到的任何位置，就可以不只是在 FSI 中执行程序集。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 在本文中，你已了解：
 

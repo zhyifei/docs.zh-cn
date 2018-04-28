@@ -1,20 +1,17 @@
 ---
-title: "度量单位 (F#)"
-description: "了解如何浮点并在 F # 中的带符号的整数值可以具有相关联的度量值，通常用来指示长度、 卷和大容量单位。"
-keywords: "visual f#, f#, 函数编程"
+title: 度量单位 (F#)
+description: '了解如何浮点并在 F # 中的带符号的整数值可以具有相关联的度量值，通常用来指示长度、 卷和大容量单位。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cb2eb658-df6c-422e-afad-97422609c773
-ms.openlocfilehash: 2d0683e864c5684a78c02e177c296d3067295723
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 336a1e04426fb39f5ceb98e06a06cd7eadc36e85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="units-of-measure"></a>度量单位
 
@@ -121,5 +118,5 @@ That temperature in degrees Celsius is    32.22.
 单元库是在 F # PowerPack 中可用。 单元库包含 SI 单位和物理常量。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)

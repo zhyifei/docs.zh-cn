@@ -12,23 +12,23 @@ ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-schema-reference"></a>数据协定架构参考
 本主题介绍 <xref:System.Runtime.Serialization.DataContractSerializer> 用来描述 XML 序列化的公共语言运行库 (CLR) 类型的 XML 架构 (XSD) 的子集。  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 映射  
- 在使用元数据终结点或 `DataContractSerializer` 从 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务中导出元数据时， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)将 CLR 类型映射到 XSD。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [数据协定序列化程序](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
+ 在使用元数据终结点或 `DataContractSerializer` 从 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服务中导出元数据时， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)将 CLR 类型映射到 XSD。 有关详细信息，请参阅[数据协定序列化程序](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
   
  在使用 Svcutil.exe 访问 Web 服务描述语言 (WSDL) 或 XSD 并生成服务或客户端的数据协定时， `DataContractSerializer` 还会将 XSD 映射到 CLR 类型。  
   
@@ -342,7 +342,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs:list>  
+### <a name="xslist"></a>\<xs:list >  
  `DataContractSerializer` 将用 `System.FlagsAttribute` 标记的枚举类型映射到从 `xs:list` 派生的 `xs:string`。 不支持其他 `xs:list` 变体。  
   
 ### <a name="xslist-attributes"></a>\<xs:list >： 属性  
@@ -695,7 +695,7 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  

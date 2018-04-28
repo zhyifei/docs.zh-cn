@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>什么&#39;s Windows Workflow Foundation 中的新增功能
 中的 Windows Workflow Foundation (WF)[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]从以前的版本更改多个开发范例。 现在，工作流可以更方便地创建、执行、维护和实现许多新功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 迁移.NET 3.0 和.NET 3.5 工作流应用程序以使用最新版本，请参阅[迁移指南](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/27/2018
 -   新增消息传递活动，例如 <xref:System.ServiceModel.Activities.SendContent> 和 <xref:System.ServiceModel.Activities.ReceiveReply>。  
   
 ## <a name="explicit-activity-data-model"></a>显式活动数据模型  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 包含用于存储或移动数据的新选项。 可以使用 <xref:System.Activities.Variable> 在活动中存储数据。 当在活动中移入和移出数据时，将使用专用参数类型来确定数据的移动方向。 这些类型包括 <xref:System.Activities.InArgument>、<xref:System.Activities.InOutArgument> 和 <xref:System.Activities.OutArgument>。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Workflow Foundation 数据模型](../../../docs/framework/windows-workflow-foundation/data-model.md)。  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 包含用于存储或移动数据的新选项。 可以使用 <xref:System.Activities.Variable> 在活动中存储数据。 当在活动中移入和移出数据时，将使用专用参数类型来确定数据的移动方向。 这些类型包括 <xref:System.Activities.InArgument>、<xref:System.Activities.InOutArgument> 和 <xref:System.Activities.OutArgument>。 有关详细信息，请参阅[Windows Workflow Foundation 数据模型](../../../docs/framework/windows-workflow-foundation/data-model.md)。  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>增强的宿主、持久性和跟踪选项  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 包含如下持久性增强功能：  
@@ -66,4 +66,4 @@ ms.lasthandoff: 04/27/2018
 -   现在可以使用 <xref:System.Activities.Bookmark> 对象管理对挂起的工作流的恢复。  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>简化的 WF 设计器扩展体验功能  
- 新 WF 设计器生成 Windows Presentation Foundation (WPF) 上，提供更简单的模型重新承载 WF 设计器在 Visual Studio 之外时要使用以及还提供了用于创建自定义活动设计器的方便机制。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [自定义工作流设计体验](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)。
+ 新 WF 设计器生成 Windows Presentation Foundation (WPF) 上，提供更简单的模型重新承载 WF 设计器在 Visual Studio 之外时要使用以及还提供了用于创建自定义活动设计器的方便机制。 有关详细信息，请参阅[自定义工作流设计体验](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)。

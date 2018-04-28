@@ -1,24 +1,26 @@
 ---
-title: "创建不使用 ASP.NET 的 WCF AJAX 服务"
-ms.custom: 
+title: 创建不使用 ASP.NET 的 WCF AJAX 服务
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9e321a3ea972208bb136c76e52168d89da8d162
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b652bcd522a8eea81b3d1218fbd054ee0b2caea8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>创建不使用 ASP.NET 的 WCF AJAX 服务
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] AJAX 服务可以从任何支持 JavaScript 的网页进行访问，而不需要使用 ASP.NET AJAX。 本主题描述如何创建此类 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
@@ -82,7 +84,7 @@ string[] GetCities(string firstLetters);
   
  此操作是使用 HTTP POST 到可以访问`http://serviceaddress/endpointaddress/GetCities`并返回一条 XML 消息。  
   
- 可以使用完整的 Web 编程模型来自定义这些基本方面。 例如，可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 或 <xref:System.ServiceModel.Web.WebInvokeAttribute> 特性来控制操作响应的 HTTP 谓词，或使用各个特性的 `UriTemplate` 属性来指定自定义 URI。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)主题。  
+ 可以使用完整的 Web 编程模型来自定义这些基本方面。 例如，可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 或 <xref:System.ServiceModel.Web.WebInvokeAttribute> 特性来控制操作响应的 HTTP 谓词，或使用各个特性的 `UriTemplate` 属性来指定自定义 URI。 有关详细信息，请参阅[WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)主题。  
   
  AJAX 服务中经常使用 JSON 数据格式。 若要创建返回 JSON 而非 XML 的操作，请将 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A>（或 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>）属性设置为 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。 [独立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)主题说明如何内置.NET 类型和数据协定类型映射到 JSON。  
   

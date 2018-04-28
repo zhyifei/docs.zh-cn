@@ -1,20 +1,17 @@
 ---
-title: "选项 (F#)"
-description: "了解如何使用 F # 类型时的实际值可能不存在的选项为命名的值或变量。"
-keywords: "visual f#, f#, 函数编程"
+title: 选项 (F#)
+description: '了解如何使用 F # 类型时的实际值可能不存在的选项为命名的值或变量。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a15b5cf1-9055-4481-918c-4c8a051b5829
-ms.openlocfilehash: 537ba69aecc1ab489de63d67c5f9ff857afb4a28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ce9be0793c86d8d588fb4f905394bd2383c262e1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="options"></a>选项
 
@@ -72,7 +69,7 @@ Option 模块还包含对应于所提供的列表、 数组、 序列和其他�
 选项可以转换为列表或数组。 当一个选项转换为上述任一这些数据结构时，生成的数据结构中有零个或一个元素。 若要转换为数组的一个选项，请使用[ `Option.toArray` ](https://msdn.microsoft.com/library/c8044873-ba17-4b52-8231-eb1a28318c64)。 若要将一个选项转换为列表中，使用[ `Option.toList` ](https://msdn.microsoft.com/library/5f1af295-9fa9-40ad-b4a1-3578d94d44e1)。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [F# 语言参考](index.md)
 
 [F# 类型](fsharp-types.md)

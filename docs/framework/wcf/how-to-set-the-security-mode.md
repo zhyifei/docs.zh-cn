@@ -1,12 +1,13 @@
 ---
-title: "如何：设置安全模式"
-ms.custom: 
+title: 如何：设置安全模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 84fa0e6b20f3d2b75d3182f64ddc9c70ef661f10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 34c53389694aa48742becfd713796feb8111d888
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>如何：设置安全模式
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 安全有三个常用安全模式：传输、消息和“使用消息凭据的传输”，这三种模式存在于大多数预定义绑定中。 另外，还有两种特定于两个绑定的模式：<xref:System.ServiceModel.BasicHttpBinding> 上的“transport-credential only”模式和 <xref:System.ServiceModel.NetMsmqBinding> 上的“Both”模式。 不过，本主题主要讨论三种常见安全模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 和 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
  请注意，并非所有预定义绑定都支持所有这些模式。 本主题使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 类来设置模式，并演示如何以编程方式来设置安全模式，如何通过配置来设置安全模式。  
   
- [!INCLUDE[crabout](../../../includes/crdefault-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../docs/framework/wcf/feature-details/security-overview.md)，[服务的安全](../../../docs/framework/wcf/securing-services.md)，和[保护服务和客户端](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]传输模式和消息，请参阅[传输安全](../../../docs/framework/wcf/feature-details/transport-security.md)和[消息安全](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
+ 有关详细信息，请参阅[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安全，请参阅[安全概述](../../../docs/framework/wcf/feature-details/security-overview.md)，[服务的安全](../../../docs/framework/wcf/securing-services.md)，和[保护服务和客户端](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 传输模式和消息，请参阅[传输安全](../../../docs/framework/wcf/feature-details/transport-security.md)和[消息安全](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
   
 ### <a name="to-set-the-security-mode-in-code"></a>在代码中设置安全模式  
   
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="using-transportwithmessagecredential"></a>使用 TransportWithMessageCredential  
  在将安全模式设置为 `TransportWithMessageCredential` 时，传输会确定实际提供传输级安全的机制。 例如，HTTP 协议使用基于 HTTP 的安全套接字层 (SSL)（SSL over HTPP，或 HTTPS）。 因此，对任何传输安全对象（例如 `ClientCredentialType`）的 <xref:System.ServiceModel.HttpTransportSecurity> 属性进行的设置都将被忽略。  换言之，只能设置消息安全对象（对于 `ClientCredentialType` 绑定，则是 `WSHttpBinding` 对象）的 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>。  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][如何： 使用传输安全和消息凭据](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)。  
+ 有关详细信息，请参阅[如何： 使用传输安全和消息凭据](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [如何：使用 SSL 证书配置端口](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
@@ -131,6 +133,6 @@ ms.lasthandoff: 12/22/2017
  [消息安全性](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)  
  [系统提供的绑定](../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<安全 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
- [\<安全 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
- [\<安全 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

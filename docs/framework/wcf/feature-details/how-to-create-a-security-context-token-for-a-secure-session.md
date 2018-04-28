@@ -1,27 +1,29 @@
 ---
-title: "如何：为安全会话创建安全上下文令牌"
-ms.custom: 
+title: 如何：为安全会话创建安全上下文令牌
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 3dc0e44e7f561e39128e32d3af5fbd495316fdd3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 579a980d8d71b5fe3e21e49e84a602b3be37eff1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>如何：为安全会话创建安全上下文令牌
 通过在安全会话中使用有状态安全上下文令牌 (SCT)，可以使该会话避免因为重新使用服务而受到影响。 例如，如果在安全会话中使用了无状态 SCT 并且 Internet 信息服务 (IIS) 被重置，则与该服务相关联的会话数据将丢失。 这些会话数据包括一个 SCT 令牌缓存。 因此，当客户端下一次向该服务发送无状态 SCT 时，将返回错误，这是因为无法检索到与该 SCT 相关联的密钥。 但是，如果使用有状态 SCT，则与该 SCT 相关联的密钥将包含在该 SCT 中。 由于密钥包含在 SCT 中并因而包含在消息中，因此安全会话不会因为重新使用服务而受到影响。 默认情况下，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 在安全会话中使用无状态 SCT。 本主题详细介绍如何在安全会话中使用有状态 SCT。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 >  对于在安全会话中使用有状态 SCT 的应用程序，服务的线程标识必须是具有关联用户配置文件的用户帐户。 如果服务在不具有用户配置文件的帐户下运行（如 `Local Service`），则可能引发异常。  
   
 > [!NOTE]
->  当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态 SCT。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
+>  当需要在 Windows XP 上进行模拟时，请不要在安全会话中使用有状态 SCT。 如果在模拟时使用有状态 SCT，则会引发 <xref:System.InvalidOperationException>。 有关详细信息，请参阅[不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>在安全会话中使用有状态 SCT  
   
@@ -121,4 +123,4 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

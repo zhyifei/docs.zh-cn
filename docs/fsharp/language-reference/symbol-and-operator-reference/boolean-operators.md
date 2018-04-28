@@ -1,20 +1,17 @@
 ---
-title: "布尔运算符 (F#)"
-description: "了解有关 F # 编程语言中可用的布尔运算符。"
-keywords: "visual f#, f#, 函数编程"
+title: 布尔运算符 (F#)
+description: '了解有关 F # 编程语言中可用的布尔运算符。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f79370b8-4bc2-4704-b514-d392c80942bd
-ms.openlocfilehash: 63588f2e371bf2c0f15de0b8a26a46be82f832c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0b11b5133b02b6f507c7886b2fbaebf30abf46cb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="boolean-operators"></a>布尔运算符
 
@@ -32,7 +29,7 @@ ms.lasthandoff: 10/18/2017
 
 布尔 AND 和 OR 运算符执行*短路计算*，必要以确定表达式的总体结果时，即它们评估运算符右侧的表达式。 第二个表达式`&&`运算符计算仅当第一个表达式的计算结果为`true`; 的第二个表达式`||`运算符计算仅当第一个表达式的计算结果为`false`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [位运算符](bitwise-operators.md)
 
 [算术运算符](arithmetic-operators.md)

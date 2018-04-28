@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 和 UriTemplateTable
 Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 添加了两个新类，让开发人员控制他们的 URI。 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 构成 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中基于 URI 的调度引擎的基础。 这些类还可单独使用，使开发人员能够利用模板和 URI 映射机制，而无需实现 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务。  
@@ -51,7 +51,7 @@ Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局�
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> 属性包含变量名称的集合，这些变量就是模板字符串的路径段中所使用的变量。  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> 接受一个 <xref:System.UriTemplate> 作为参数，并返回一个布尔值，该值指定两个模板是否等效。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主题后面的“模板等效性”部分。  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> 接受一个 <xref:System.UriTemplate> 作为参数，并返回一个布尔值，该值指定两个模板是否等效。 有关详细信息，请参阅本主题后面的模板等效性一节。  
   
  <xref:System.UriTemplate> 旨在处理符合 HTTP URI 语法的任意 URI 方案。 下面这些示例都是支持的 URI 方案。  
   
@@ -100,13 +100,13 @@ Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局�
   
 -   "shoe / {船} / *"  
   
--   "shoe/boat?x=2"  
+-   "shoe/船？ x = 2"  
   
 -   "shoe / {船}？ x = {平台}"  
   
 -   "shoe/{boat}?x={bed}&y=band"  
   
--   "?x={shoe}"  
+-   "？ x = {shoe}"  
   
 -   "shoe?x=3&y={var}  
   
@@ -137,7 +137,7 @@ Web 开发人员需要能够描述其服务所响应的 URI 的形状和布局�
   
  下面这些示例都是无效的复合路径段：  
   
--   /{} - 必须对变量进行命名。  
+-   /{} -变量必须名为。  
   
 -   /{shoe}{boat} - 必须用文本分隔变量。  
   
@@ -202,7 +202,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  诸如 http://localhost:8000/// 之类的 URI 与上述代码中列出的模板不匹配，但诸如 http://localhost:8000/ 之类的 URI 与其匹配。  
+>  如 URIhttp://localhost:8000///不匹配的模板已列在前面的代码中，但是如 URIhttp://localhost:8000/未。  
   
  下面的代码演示在使用模板创建 URI 时，如何处理默认变量值。  
   
@@ -345,7 +345,7 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 > [!NOTE]
 >  作为 URI 路径或 <xref:System.UriTemplate> 路径段文本的组成部分时，字符 á 和 Á 视为不同的字符（但字符 a 和 A 视为相同的字符）。 作为 <xref:System.UriTemplate> {variableName} 或查询字符串的组成部分时，字符 á 和 Á 被视为相同的字符（字符 a 和 A 也视为相同的字符）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  [WCF Web HTTP 编程对象模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  

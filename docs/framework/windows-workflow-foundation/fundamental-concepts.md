@@ -1,23 +1,24 @@
 ---
-title: "Windows 工作流基础概念"
-ms.custom: 
+title: Windows 工作流基础概念
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fca570f661b1867737cc3af295aff5fd8d4cd5ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: faeb05045049e9a53babf754f1ec058c6aac2f05
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows 工作流基础概念
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]的工作流开发中会运用一些开发人员可能还不熟悉的概念。 本主题介绍其中的一些概念以及如何实现这些概念。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/22/2017
  活动通过使用相应的 <xref:System.Activities.ActivityContext> 派生类（例如 <xref:System.Activities.NativeActivityContext> 或 <xref:System.Activities.CodeActivityContext>）获得访问工作流运行时环境的权限。 这些元素使用此类来解析参数和变量，以便安排子活动和实现多种其他用途。  
   
 ## <a name="services"></a>服务  
- 工作流提供一种自然的方式，以便使用消息活动实现和访问松耦合服务。 消息活动是在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的基础上建立的，并且是用于使数据流入和流出工作流的主要机制。 您可将消息活动组合在一起，以便对您想要的任何类型的消息交换模式进行建模。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]请参阅[消息传递活动](../../../docs/framework/wcf/feature-details/messaging-activities.md)。 使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类承载工作流服务。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]工作流服务，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ 工作流提供一种自然的方式，以便使用消息活动实现和访问松耦合服务。 消息活动是在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的基础上建立的，并且是用于使数据流入和流出工作流的主要机制。 您可将消息活动组合在一起，以便对您想要的任何类型的消息交换模式进行建模。 有关详细信息，请参阅[消息传递活动](../../../docs/framework/wcf/feature-details/messaging-activities.md)。 使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 类承载工作流服务。 有关详细信息，请参阅[承载工作流服务概述](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 工作流服务，请参阅[工作流服务](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>持久性、卸载和长时间运行的工作流  
  Windows 工作流通过提供以下功能，简化了创作长时间运行的反应式程序的过程：  

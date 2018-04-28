@@ -1,20 +1,17 @@
 ---
-title: "要开始使用 Azure 文件存储使用 F #"
-description: "在云中，而 Azure 文件存储中存储文件数据和从 Azure 虚拟机 (VM) 装载云文件共享或从本地应用程序运行 Windows。"
-keywords: "visual f #、 f # 中，函数编程，.NET，.NET 核心，Azure"
+title: '要开始使用 Azure 文件存储使用 F #'
+description: 在云中，而 Azure 文件存储中存储文件数据和从 Azure 虚拟机 (VM) 装载云文件共享或从本地应用程序运行 Windows。
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: f4eb02bc3e4aca0653a4fa991c1593f988f1d1af
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>要开始使用 Azure 文件存储使用 F # #
 

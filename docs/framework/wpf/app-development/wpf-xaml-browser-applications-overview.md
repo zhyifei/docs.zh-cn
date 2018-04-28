@@ -1,12 +1,13 @@
 ---
-title: "WPF XAML 浏览器应用程序概述"
-ms.custom: 
+title: WPF XAML 浏览器应用程序概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,20 +18,21 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0afdce00cc169a5be9224a7b675e4666c1349bd5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]将组合的 Web 应用程序和丰富的客户端应用程序的功能。 与 Web 应用程序类似，可以将 XBAP 部署到 Web 服务器并从 Internet Explorer 或 Firefox 启动。 与丰富客户端应用程序类似，XBAP 可以充分利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的功能。 开发 XBAP 也与开发丰富客户端类似。 本主题提供简单、高级的 XBAP 开发简介，并介绍 XBAP 开发与标准的丰富客户端开发的不同之处。  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 将组合的 Web 应用程序和丰富的客户端应用程序的功能。 与 Web 应用程序类似，可以将 XBAP 部署到 Web 服务器并从 Internet Explorer 或 Firefox 启动。 与丰富客户端应用程序类似，XBAP 可以充分利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的功能。 开发 XBAP 也与开发丰富客户端类似。 本主题提供简单、高级的 XBAP 开发简介，并介绍 XBAP 开发与标准的丰富客户端开发的不同之处。  
   
  本主题包含以下各节：  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
 |应用程序清单 (.manifest)|此文件包含与应用程序关联的元数据且具有 .manifest 扩展名。|  
 |部署清单 (.xbap)|此文件包含 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 用于部署应用程序的信息，且具有 .xbap 扩展名。|  
   
- 将 XBAP 部署到 Web 服务器，例如 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更高版本。 不需要在 Web 服务器上安装 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]，但是需要注册 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 类型和文件扩展名。 有关详细信息，请参阅[配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
+ 将 XBAP 部署到 Web 服务器，例如 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更高版本。 无需在 Web 服务器上，安装.NET Framework 但需要注册[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]类型和文件扩展名。 有关详细信息，请参阅[配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
   
  若要将 XBAP 准备好进行部署，请将 .exe 和关联的清单复制到 Web 服务器。 创建包含超链接的 HTML 页以打开部署清单，即扩展名为 .xbap 的文件。 用户单击指向 .xbap 文件的链接时，[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 将自动处理应用程序的下载和启动机制。 下面的代码示例显示包含指向 XBAP 的超链接的 HTML 页面。  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/19/2018
   
 -   自定义 ActiveX 控件可能会在通信方面出现问题，因为 WPF 应用程序在另一个线程上运行。  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook>不会引发因为<xref:System.Windows.Interop.HwndHost>无法在另一个线程或进程中运行的窗口的子类。  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> 不会引发因为<xref:System.Windows.Interop.HwndHost>无法在另一个线程或进程中运行的窗口的子类。  
   
 ### <a name="creating-a-full-trust-xbap"></a>创建完全信任的 XBAP  
  如果 XBAP 需要完全信任，则可以更改项目以启用此权限。 以下步骤介绍如何启用完全信任：  

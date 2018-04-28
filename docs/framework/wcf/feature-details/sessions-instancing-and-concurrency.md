@@ -1,24 +1,26 @@
 ---
-title: "会话、实例化和并发"
-ms.custom: 
+title: 会话、实例化和并发
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>会话、实例化和并发
  “会话”是在两个终结点之间发送的所有消息的一种相互关系。  “实例化”是指对用户定义的服务对象以及与其相关的 <xref:System.ServiceModel.InstanceContext> 对象的生存期的控制。  “并发”一词是指对 <xref:System.ServiceModel.InstanceContext> 中同时执行的线程数量的控制。  
@@ -93,7 +95,7 @@ public class CalculatorService : ICalculatorInstance
 -   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每个服务实例一次只能处理一个消息，但可以接受可重入的操作调用。 仅当服务通过 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 客户端对象提供服务时才会接受这些调用。  
   
 > [!NOTE]
->  理解和开发能够安全地使用多个线程的代码可能比较困难。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，应确保已针对这些模式对服务进行了适当设计。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  
+>  理解和开发能够安全地使用多个线程的代码可能比较困难。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，应确保已针对这些模式对服务进行了适当设计。 有关详细信息，请参阅<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  
   
  并发的使用与实例化模式有关。 在<xref:System.ServiceModel.InstanceContextMode.PerCall>实例化并发没有关系，因为每条消息处理由一个新<xref:System.ServiceModel.InstanceContext>和，因此，永远不会超过一个线程中处于活动状态<xref:System.ServiceModel.InstanceContext>。  
   

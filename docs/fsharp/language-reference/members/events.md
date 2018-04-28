@@ -1,20 +1,17 @@
 ---
-title: "事件 (F#)"
-description: "了解如何 F # 事件让您可以将函数调用关联与用户操作，它们是 GUI 编程的关键所在。"
-keywords: "visual f#, f#, 函数编程"
+title: 事件 (F#)
+description: '了解如何 F # 事件让您可以将函数调用关联与用户操作，它们是 GUI 编程的关键所在。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 28b588f2-0c9e-4c0d-babf-901ed934638a
-ms.openlocfilehash: 9465f33bac6fa8234f684ddefe24cbe4d6c71028
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 5c5f152830d4d91a25c79a09800263cdd85ed8b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="events"></a>事件
 
@@ -24,7 +21,7 @@ ms.lasthandoff: 12/09/2017
 事件允许您将函数调用与用户操作关联，并且是 GUI 编程的关键所在。 事件也可以由应用程序或操作系统触发。
 
 ## <a name="handling-events"></a>处理事件
-当您使用诸如 Windows 窗体或 Windows Presentation Foundation (WPF) 之类的 GUI 库时，应用程序中的大部分代码都是针对该库预定义的事件运行的。 这些预定义事件是诸如窗体和控件等 GUI 类的成员。 通过引用有意义的特定命名事件（例如，`Click` 类的 `Form` 事件）并调用 `Add` 方法，您可以向预先存在的事件（例如按钮单击）中添加自定义行为，如下面的代码所示。 如果您从 F# Interactive 运行此事件，请忽略对 `System.Windows.Forms.Application.Run(System.Windows.Forms.Form)` 的调用。
+当你使用诸如 Windows 窗体或 Windows Presentation Foundation (WPF) 之类的 GUI 库时，应用程序中的大部分代码都是针对该库预定义的事件运行的。 这些预定义事件是诸如窗体和控件等 GUI 类的成员。 通过引用有意义的特定命名事件（例如，`Click` 类的 `Form` 事件）并调用 `Add` 方法，您可以向预先存在的事件（例如按钮单击）中添加自定义行为，如下面的代码所示。 如果您从 F# Interactive 运行此事件，请忽略对 `System.Windows.Forms.Application.Run(System.Windows.Forms.Form)` 的调用。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3601.fs)]
 
@@ -33,9 +30,9 @@ ms.lasthandoff: 12/09/2017
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3602.fs)]
     
 ## <a name="creating-custom-events"></a>创建自定义事件
-F # 事件由 F #[事件](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)类，该类实现[IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)接口。 `IEvent`本身是将功能组合两个其他接口，一个接口`System.IObservable<'T>`和[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)。 因此，在其他语言中，`Event` 具有委托的同等功能，以及来自 `IObservable` 的附加功能，这意味着 F# 事件支持事件筛选并使用 F# 第一类函数和 lambda 表达式作为事件处理程序。 中提供了此功能[事件模块](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)。
+F # 事件由 F #[事件](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)类，该类实现[IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)接口。 `IEvent` 本身是将功能组合两个其他接口，一个接口`System.IObservable<'T>`和[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)。 因此，在其他语言中，`Event` 具有委托的同等功能，以及来自 `IObservable` 的附加功能，这意味着 F# 事件支持事件筛选并使用 F# 第一类函数和 lambda 表达式作为事件处理程序。 中提供了此功能[事件模块](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)。
 
-若要像任何其他 .NET Framework 事件一样为某个类创建事件，请向该类添加一个 `let` 绑定，用于将 `Event` 定义为类中的字段。 您可以将所需的事件参数类型指定为类型参数，或将其保留为空，让编译器推断出相应的类型。 还必须定义一个将事件公开为 CLI 事件的事件成员。 此成员应具有[CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333)属性。 它的声明类似属性，其实现是只需调用[发布](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e)的事件的属性。 类用户可使用已发布事件的 `Add` 方法来添加处理程序。 `Add` 方法的参数可以为 lambda 表达式。 你可以使用事件的 `Trigger` 属性来引发事件，并将参数传递给处理程序函数。 下面的代码示例阐释了这一点。 在此示例中，事件的推断类型参数是一个元组，它表示 Lambda 表达式的自变量。
+若要像任何其他 .NET Framework 事件一样为某个类创建事件，请向该类添加一个 `let` 绑定，用于将 `Event` 定义为类中的字段。 您可以将所需的事件参数类型指定为类型参数，或将其保留为空，让编译器推断出相应的类型。 还必须定义一个将事件公开为 CLI 事件的事件成员。 此成员应具有[CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333)属性。 它的声明类似属性，其实现是只需调用[发布](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e)的事件的属性。 类用户可使用已发布事件的 `Add` 方法来添加处理程序。 `Add` 方法的参数可以为 lambda 表达式。 你可以使用事件的 `Trigger` 属性来引发事件，并将参数传递给处理程序函数。 下面的代码示例阐释了这一点。 在此示例中，事件的推断类型参数是一个元组，它表示 lambda 表达式的自变量。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3605.fs)]
 
@@ -179,7 +176,7 @@ let appForm = new AppForm()
 Application.Run(appForm)
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [成员](index.md)
 
 [处理和引发事件](../../../../docs/standard/events/index.md)
@@ -188,6 +185,6 @@ Application.Run(appForm)
 
 [Control.Event 模块](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 
-[Control.Event &#60;&#62;类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
+[Control.Event&#60;无法&#62;类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 
-[Control.Event &#60;委托，Args &#62;类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+[Control.Event&#60;Delegate (这是参数&#62;类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

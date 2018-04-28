@@ -1,20 +1,17 @@
 ---
-title: "面向 Windows 8 中的 .NET Framework 2.0"
-description: "了解如何使用 F # 时以旧版本的.NET Framework 为目标。"
-keywords: "visual f#, f#, 函数编程"
+title: 面向 Windows 8 中的 .NET Framework 2.0
+description: '了解如何使用 F # 时以旧版本的.NET Framework 为目标。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 63989543-95c3-4ab7-81f3-3834a8b15010
-ms.openlocfilehash: 2c0191267da5bee7b844c11cdee168ccfb3321c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7c9bd8087da94a476105729b6f5b050fc66629a2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="targeting-older-versions-of-net"></a>面向 .NET 的较旧版本
 
@@ -55,7 +52,7 @@ This project requires the 2.0 F# runtime, but that runtime is not installed.
 2. 选择**控制面板**图标，选择**程序**图标，然后选择**打开或关闭 Windows 功能**链接。
 <br />
 
-3. 请确保**.NET Framework 3.5 （包括.NET 2.0 和 3.0）**复选框被选中，并且然后选择**确定**按钮。
+3. 请确保 **.NET Framework 3.5 （包括.NET 2.0 和 3.0）**复选框被选中，并且然后选择**确定**按钮。
 <br />  你不需要选择对应的.NET framework 的可选组件的任何子节点的复选框。
 <br />  如果尚未，启用.NET Framework 3.5。
 <br />
@@ -72,5 +69,5 @@ This project requires the 2.0 F# runtime, but that runtime is not installed.
 3. 安装程序启动后，请选择**修复**按钮。
 <br />  有关详细信息，请参阅[安装 Visual Studio](https://msdn.microsoft.com/library/e2h7fzkw.aspx)。
 <br />
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [Visual F#](../index.md)

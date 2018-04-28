@@ -17,17 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>数据协定中的集合类型
  “集合”指特定类型的项的列表。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用数组或者其他各种类型（泛型列表、泛型 <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>）来表示此类列表。 例如，集合可以容纳给定客户的地址列表。 无论这些集合的实际类型是什么，这些集合都称为“列表集合” 。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/26/2018
   
  关于集合类型的其他要求（例如，有一个名为 `Add` 的方法和一个默认构造函数）在下面各部分详细讨论。 这确保了既可以对集合类型序列化，也可以对其反序列化。 这意味着不直接支持某些集合，例如泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> （因为它没有默认构造函数）。 但是，也可以避开这些限制。有关信息，请参见本主题后面的“使用集合接口类型和只读集合”。  
   
- 包含在集合中的类型必须是数据协定类型，或者是可序列化的。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [支持的数据协定序列化程序类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ 包含在集合中的类型必须是数据协定类型，或者是可序列化的。 有关详细信息，请参阅[类型受数据协定序列化程序](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 什么被视为有效集合，什么不被视为有效集合，以及如何序列化集合的更多信息，请参见本主题“高级集合规则”部分中有关序列化集合的信息。  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 03/26/2018
 </cust_list>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 本主题后面部分中的“高级集合规则”一节。  
+ 有关详细信息，请参阅本主题中后面的"高级集合规则"部分。  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>自定义列表集合中的重复元素名称  
  列表集合包含重复项。 通常，每个重复项都表示为根据集合中包含的类型的数据协定名称而命名的元素。  
@@ -408,5 +408,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collections-and-object-reference-preservation"></a>集合和对象引用保存  
  当序列化程序在保存对象引用的模式下工作时，对象引用保存也适用于集合。 具体而言，会为整个集合以及集合中包含的各个项保存对象标识。 对于字典，会为键/值对对象以及各个键和值对象保存对象标识。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

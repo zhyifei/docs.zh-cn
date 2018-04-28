@@ -1,27 +1,29 @@
 ---
-title: "特权提升"
-ms.custom: 
+title: 特权提升
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4225460698d36b3b56b9b0b03cde34e4502b13c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="elevation-of-privilege"></a>特权提升
 *特权提升*源于使攻击者授权权限超出最初授予的权限。 例如，具有“只读”权限特权集的攻击者以某种方式将该特权集升级为包括“读取和写入”。  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>受信任的 STS 应该为 SAML 令牌声明签名  
  安全断言标记语言 (SAML) 令牌是作为已颁发令牌默认类型的通用 XML 令牌。 SAML 令牌可以由最终 Web 服务在典型交换中信任的安全令牌服务 (STS) 构造。 SAML 令牌包含语句中的声明。 攻击者可能从有效令牌复制声明，创建新的 SAML 令牌，并以其他颁发者身份为其签名。 其意图在于确定服务器是否将验证颁发者，如果不验证，则利用这一漏洞构造 SAML 令牌，这些令牌允许超过受信任 STS 所预期特权的特权。  
   
- <xref:System.IdentityModel.Tokens.SamlAssertion> 类验证 SAML 令牌中包含的数字签名，默认 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 要求由 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 类的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> 时有效的 X.509 证书为 SAML 令牌签名。 `ChainTrust` 模式本身不足以确定是否信任 SAML 令牌的颁发者。 需要更为细化的信任模型的服务可以使用授权和强制策略检查由已颁发令牌身份验证生成的声明集的颁发者，或者使用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 上的 X.509 验证设置限制允许的签名证书集。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)和[联合身份验证和已颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
+ <xref:System.IdentityModel.Tokens.SamlAssertion> 类验证 SAML 令牌中包含的数字签名，默认 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 要求由 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 类的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> 时有效的 X.509 证书为 SAML 令牌签名。 `ChainTrust` 模式本身不足以确定是否信任 SAML 令牌的颁发者。 需要更为细化的信任模型的服务可以使用授权和强制策略检查由已颁发令牌身份验证生成的声明集的颁发者，或者使用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 上的 X.509 验证设置限制允许的签名证书集。 有关详细信息，请参阅[管理声明和使用标识模型的授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)和[联合身份验证和颁发令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
   
 ## <a name="switching-identity-without-a-security-context"></a>在没有安全上下文的情况下切换标识  
  以下内容仅适用于 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。  

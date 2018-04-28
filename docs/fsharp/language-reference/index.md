@@ -1,20 +1,17 @@
 ---
 title: F# 语言参考
 description: 'F # 语言功能从查找信息语言令牌、 概念、 类型、 表达式和编译器支持的结构主题对此引用。'
-keywords: visual f#, f#, 函数编程
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: b1707be1-7b7c-4fdd-a717-d9c190bc5fb5
-ms.openlocfilehash: 0d26d5a6f47ce8a92aefe338ea8c39295d042794
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5ab0ef364696e92064209118920dff0def21e0c8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-language-reference"></a>F# 语言参考
 
@@ -78,7 +75,7 @@ ms.lasthandoff: 10/18/2017
 |[列表](lists.md)|介绍列表。 F# 中的列表是所有相同类型元素的有序、不可变系列。|
 |[选项](options.md)|介绍选项类型。 某值可能存在或可能不存在时，将使用 F# 中的选项。 选项具有基础类型，可能包含该类型的值或者可能不包含值。|
 |[序列](sequences.md)|介绍序列。 序列是同类型元素的逻辑系列。 各序列元素仅在必要时进行计算，因此表示形式可能比文本元素计数指示的小。|
-|[阵列](arrays.md)|介绍数组。 数组是连续数据元素的大小固定、从零开始的可变序列，其中数据元素都为同一类型。|
+|[数组](arrays.md)|介绍数组。 数组是连续数据元素的大小固定、从零开始的可变序列，其中数据元素都为同一类型。|
 |[记录](records.md)|介绍记录。 记录表示已命名值的简单聚合，可选择包含成员。|
 |[可区分联合](discriminated-unions.md)|介绍可区分联合，它提供对下面这种值的支持：该值可能是多种已命名用例中的一个，且每个用例可能具有不同的值和类型。|
 |[枚举](enumerations.md)|介绍枚举，枚举是具有一组已定义的已命名值的类型。 可以使用它们来代替文本，使代码更具可读性且更易维护。|
@@ -97,7 +94,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="f-expressions"></a>F# 表达式
 下表列出了介绍 F# 表达式的主题。
 
-|标题|说明|
+|标题|描述|
 |-----|-----------|
 |[条件表达式：`if...then...else`](conditional-expressions-if-then-else.md)|介绍 `if...then...else` 表达式，该表达式不仅可运行代码的不同分支，还可计算为不同的值，具体取决于给定的布尔表达式。|
 |[match 表达式](match-expressions.md)|介绍 `match` 表达式，该表达式提供基于表达式与一组模式的比较结果的分支控制。|
@@ -120,5 +117,5 @@ ms.lasthandoff: 10/18/2017
 |[编译器指令](compiler-directives.md)|介绍处理器指令和编译器指令。|
 |[源代码行标识符、文件标识符和路径标识符](source-line-file-path-identifiers.md)|介绍标识符 `__LINE__`、`__SOURCE_DIRECTORY__` 和 `__SOURCE_FILE__`，这些标识符是内置值，可在代码中使用这些值来访问源行号、目录和文件名。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [Visual F#](../index.md)

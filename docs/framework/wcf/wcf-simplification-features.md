@@ -1,24 +1,26 @@
 ---
-title: "WCF 简化功能"
-ms.custom: 
+title: WCF 简化功能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a3504e275c2c5c5f9b98d4a78e08f718f8875b8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e465713fb33d438ef6e4a508fc5192ce731b46b5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-simplification-features"></a>WCF 简化功能
 本主题讨论可使编写 WCF 应用程序更简单的新功能。  
@@ -85,16 +87,16 @@ ms.lasthandoff: 01/19/2018
  WCF 现在支持协定优先开发。 Svcutl.exe 工具具有一个 /serviceContract 开关，可用来从 WSDL 文档生成服务和数据协定。  
   
 ## <a name="add-service-reference-from-a-portable-subset-project"></a>从可移植子集项目添加服务引用  
- 可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以在任何.NET 实现中使用的.NET framework 程序集。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][可移植子集项目中添加服务引用](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)。  
+ 可移植子集项目，.NET 程序集程序员可以维护单个源树并生成系统，同时仍支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以在任何.NET 实现中使用的.NET framework 程序集。 开发人员的体验与添加任何其他 WCF 客户端应用程序内的服务引用相同。 有关详细信息，请参阅[可移植子集项目中添加服务引用](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)。  
   
 ## <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 兼容模式默认值已更改  
- WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，必须设置`aspNetCompatibilityEnabled`属性设置为 true 中[ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config 节。此外，此 appDomain 中的任何服务都需要将 `RequirementsMode` property on its <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>现在设置为<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>和默认的 WCF 服务应用程序模板集`aspNetCompatibilityEnabled`属性设为`true`。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Communication Foundation 4.5 中的新增](../../../docs/framework/wcf/whats-new.md)和[WCF 服务和 ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
+ WCF 提供了 ASP.NET 兼容模式，以向开发人员授予编写 WCF 服务时对 ASP.NET HTTP 管道中的功能的完全访问权限。 若要使用此模式，必须设置`aspNetCompatibilityEnabled`属性设置为 true 中[ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config 节。此外，此 appDomain 中的任何服务都需要将 `RequirementsMode` property on its <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 设置为 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。 默认情况下<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>现在设置为<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>和默认的 WCF 服务应用程序模板集`aspNetCompatibilityEnabled`属性设为`true`。 有关详细信息，请参阅[What's New in Windows Communication Foundation 4.5](../../../docs/framework/wcf/whats-new.md)和[WCF 服务和 ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
   
 ## <a name="streaming-improvements"></a>流改进  
   
 -   向 WCF 添加了对异步流的新支持。 若要启用异步流，请将 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> 终结点行为添加到服务主机，并将其 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> 属性设置为 `true`。  在服务将经过流处理的消息发送到多个正在缓慢读取的客户端时，这样做有益于可伸缩性。 WCF 不再阻止每个客户端的一个线程，并将释放该线程以便为另一个客户端提供服务。  
   
--   消除了服务由 IIS 承载时缓冲消息方面的限制。 在以前版本的 WCF 中，在收到关于使用流消息传输的 IIS 承载服务的消息时，ASP.NET 会在将该消息发送到 WCF 之前缓冲整个消息。 这将导致消耗大量内存。 在 .NET 4.5 中已取消这种缓冲，现在，IIS 承载的 WCF 服务可以在收到整个消息之前开始处理传入流，从而实现真正的流处理。 这样，WCF 就可立即对消息作出响应，并可以提高性能。 此外，您不必再指定 `maxRequestLength` 的值，即 ASP.NET 对传入请求的大小限制。 如果设置了此属性，则会将其忽略。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]`maxRequestLength`请参阅[ \<httpRuntime > 配置元素](http://go.microsoft.com/fwlink/?LinkId=223344)。 你将仍需要配置 maxAllowedContentLength， [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [IIS 请求限制](http://go.microsoft.com/fwlink/?LinkId=225908)。  
+-   消除了服务由 IIS 承载时缓冲消息方面的限制。 在以前版本的 WCF 中，在收到关于使用流消息传输的 IIS 承载服务的消息时，ASP.NET 会在将该消息发送到 WCF 之前缓冲整个消息。 这将导致消耗大量内存。 在 .NET 4.5 中已取消这种缓冲，现在，IIS 承载的 WCF 服务可以在收到整个消息之前开始处理传入流，从而实现真正的流处理。 这样，WCF 就可立即对消息作出响应，并可以提高性能。 此外，您不必再指定 `maxRequestLength` 的值，即 ASP.NET 对传入请求的大小限制。 如果设置了此属性，则会将其忽略。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] `maxRequestLength` 请参阅[ \<httpRuntime > 配置元素](http://go.microsoft.com/fwlink/?LinkId=223344)。 将仍需要配置 maxAllowedContentLength，有关详细信息，请参阅[IIS 请求限制](http://go.microsoft.com/fwlink/?LinkId=225908)。  
   
 ## <a name="new-transport-default-values"></a>新传输默认值  
  下表描述了已更改的设置以及可在何处找到其他信息。  
@@ -103,9 +105,9 @@ ms.lasthandoff: 01/19/2018
 |--------------|--------|-----------------|----------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|此属性确定 TCP 连接可使用 .Net Framing 协议对自身进行身份验证的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 此超时被有意设置为小于 ReceiveTimeout（10 分钟），这样，未经身份验证的恶意客户端就无法长时间保持绑到该服务器的连接。 默认值为 30 秒。 [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 处理器数目|此套接字级别的属性描述了要排队的“挂起接受”请求的数目。 如果侦听积压工作队列已满，则会拒绝新的套接字请求。 [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 传输处理器的数目<br /><br /> 4 \* smsvchost.exe 的处理器数目|此属性会限制服务器可具有的等待侦听器的通道数目。 当 MaxPendingAccepts 太低时，会有一个较小的时间间隔，在此间隔内，所有等待的通道都已开始服务连接，但没有新通道已开始侦听。 连接可在此间隔内到达，但将会因服务器上没有等待它的内容而失败。 可通过将 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> 属性设置为较大的数字来配置此属性。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>和[配置 Net.TCP 端口共享服务](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 传输处理器的数目<br /><br /> 4 \* smsvchost.exe 的处理器数目|此属性会限制服务器可具有的等待侦听器的通道数目。 当 MaxPendingAccepts 太低时，会有一个较小的时间间隔，在此间隔内，所有等待的通道都已开始服务连接，但没有新通道已开始侦听。 连接可在此间隔内到达，但将会因服务器上没有等待它的内容而失败。 可通过将 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> 属性设置为较大的数字来配置此属性。 有关详细信息，请参阅<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>和[配置 Net.TCP 端口共享服务](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 处理器数目|此属性控制一个传输已接受但 ServiceModel 调度程序尚未选取的连接的数目。 若要设置此值，请对该绑定使用 `MaxConnections` 或对该绑定元素使用 `maxOutboundConnectionsPerEndpoint`。 [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
-|receiveTimeout|SMSvcHost.exe|30 秒|此属性为读取 TCP 组帧数据并执行来自基础连接的连接调度指定超时值。 此超时值用于对该时间段施加一个限制，SMSvcHost.exe 服务将在该时段内保持从传入连接读取前导码数据。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][配置 Net.TCP 端口共享服务](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。|  
+|receiveTimeout|SMSvcHost.exe|30 秒|此属性为读取 TCP 组帧数据并执行来自基础连接的连接调度指定超时值。 此超时值用于对该时间段施加一个限制，SMSvcHost.exe 服务将在该时段内保持从传入连接读取前导码数据。 有关详细信息，请参阅[配置 Net.TCP Port Sharing Service](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)。|  
   
 > [!NOTE]
 >  只有在安装有 .NET Framework 4.5 的计算机上部署 WCF 服务时，才会使用这些新默认值。 如果在安装有 .NET Framework 4.0 的计算机上部署同一服务，则将使用 .NET Framework 4.0 默认值。 在这种情况下，建议显式配置这些设置。  

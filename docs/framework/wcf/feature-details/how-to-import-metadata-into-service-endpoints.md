@@ -1,24 +1,26 @@
 ---
-title: "如何：将元数据导入服务终结点"
-ms.custom: 
+title: 如何：将元数据导入服务终结点
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fa1831885eb24effc5f4267c208b8bffa9f0b75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b86f31217812767b0fbbd785a0f3ff96c2948854
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>如何：将元数据导入服务终结点
 本主题说明如何将元数据导入到服务终结点的集合和使用中定义的服务[入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 本主题演示如何创建从服务中导入元数据的客户端应用程序，以及之后如何对该服务调用 `Add` 方法。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  导入元数据后，将无法创建客户端通道或导出元数据。 这是因为此时没有可用的类型信息。 在实际与服务进行交互或导出元数据时需要类型信息。 若要生成类型信息，需要生成代码，如步骤 4 和 5 所示。 或者可以使用 <xref:System.ServiceModel.Description.MetadataResolver> 帮助器类。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 使用 MetadataResolver 动态获取绑定元数据](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)。  
+    >  导入元数据后，将无法创建客户端通道或导出元数据。 这是因为此时没有可用的类型信息。 在实际与服务进行交互或导出元数据时需要类型信息。 若要生成类型信息，需要生成代码，如步骤 4 和 5 所示。 或者可以使用 <xref:System.ServiceModel.Description.MetadataResolver> 帮助器类。 有关详细信息，请参阅[如何： 使用 MetadataResolver 动态获取绑定元数据到](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)。  
   
 4.  为每个协定生成类型信息。  
   

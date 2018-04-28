@@ -1,28 +1,28 @@
 ---
-title: "元数据体系结构概述"
-ms.custom: 
+title: 元数据体系结构概述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="metadata-architecture-overview"></a>元数据体系结构概述
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了丰富的基础结构，用于导出、发布、检索和导入服务元数据。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务使用元数据来描述如何与服务的终结点进行交互，以便工具（如 Svcutil.exe）可以自动生成客户端代码来访问服务。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   一个 <xref:System.ServiceModel.Description.MetadataLocation> 实例。  
   
- <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> 实例指向另一个元数据交换 (MEX) 终结点，而 <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> 实例指向使用 HTTP URL 的元数据文档。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持使用 WSDL 文件来描述服务终结点、服务协定、绑定、消息交换模式、消息以及服务实现的故障消息。 服务使用的数据类型在 WSDL 文档中使用 XML 架构进行描述。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][架构导入和导出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)。 可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 导出和导入服务行为的 WSDL 扩展、协定行为和扩展服务功能的绑定元素。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][导出 WCF 扩展的自定义元数据](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)。  
+ <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> 实例指向另一个元数据交换 (MEX) 终结点，而 <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> 实例指向使用 HTTP URL 的元数据文档。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支持使用 WSDL 文件来描述服务终结点、服务协定、绑定、消息交换模式、消息以及服务实现的故障消息。 服务使用的数据类型在 WSDL 文档中使用 XML 架构进行描述。 有关详细信息，请参阅[架构导入和导出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)。 可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 导出和导入服务行为的 WSDL 扩展、协定行为和扩展服务功能的绑定元素。 有关详细信息，请参阅[导出 WCF 扩展的自定义元数据](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)。  
   
 ## <a name="exporting-service-metadata"></a>导出服务元数据  
  在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，*元数据导出*是描述服务终结点并将它们投影到客户端可用来了解如何使用服务的并行的标准化表示形式的过程。 若要从 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例导出元数据，请使用 <xref:System.ServiceModel.Description.MetadataExporter> 抽象类的实现。 <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 实现生成包装在 <xref:System.ServiceModel.Description.MetadataSet> 实例中的元数据。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
  若要添加使用 MEX 协议的元数据终结点，请向您使用名为 IMetadataExchange 的服务协定的服务主机添加服务终结点。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定义<xref:System.ServiceModel.Description.IMetadataExchange>具有此服务协定名称的接口。 WS-MetadataExchange 终结点或 MEX 终结点可以使用由 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 类上静态工厂方法公开的四个默认绑定之一，以匹配 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工具（如 Svcutil.exe）使用的默认绑定。 也可以使用自定义绑定配置 MEX 元数据终结点。  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 来导出服务中所有服务终结点的元数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]导出元数据从一种服务，请参阅[导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 来导出服务中所有服务终结点的元数据。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 导出元数据从一种服务，请参阅[导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
  通过将 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 实例作为服务主机的扩展添加，<xref:System.ServiceModel.Description.ServiceMetadataExtension> 增强了服务主机。 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 提供了元数据发布协议的实现。 还可以使用 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 通过访问 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> 属性来在运行时获取服务的元数据。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
  默认情况下，<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 实例与单个 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 实例关联。 通过重写 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 虚拟方法，您可以更改或替换由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> 实例。 同样，通过重写 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> 虚拟方法，可以更改或替换由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> 实例以发出 HTTP/GET 请求。  
   
- 您可以检索服务元数据通过使用 Svcutil.exe 工具并传递使用 Ws-metadataexchange 或 HTTP/GET 请求**/target:metadata**开关和地址。 Svcutil.exe 下载指定位置的元数据并将文件保存到磁盘。 Svcutil.exe 在内部使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 实例，并加载其名称与传递到 Svcutil.exe 的地址的方案（如果存在）匹配的 MEX 终结点配置（从应用程序配置文件）。 否则，Svcutil.exe 默认使用由 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 静态工厂类型定义的绑定之一。  
+ 您可以检索服务元数据通过使用 Svcutil.exe 工具并传递使用 Ws-metadataexchange 或 HTTP/GET 请求 **/target:metadata**开关和地址。 Svcutil.exe 下载指定位置的元数据并将文件保存到磁盘。 Svcutil.exe 在内部使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 实例，并加载其名称与传递到 Svcutil.exe 的地址的方案（如果存在）匹配的 MEX 终结点配置（从应用程序配置文件）。 否则，Svcutil.exe 默认使用由 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 静态工厂类型定义的绑定之一。  
   
 ## <a name="importing-service-metadata"></a>导入服务元数据  
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，元数据导入是从服务的元数据生成服务或其组成部分的抽象表示的过程。 例如，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以从服务的 WSDL 文档导入 <xref:System.ServiceModel.Description.ServiceEndpoint> 实例、<xref:System.ServiceModel.Channels.Binding> 实例或 <xref:System.ServiceModel.Description.ContractDescription> 实例。 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中导入服务元数据，请使用 <xref:System.ServiceModel.Description.MetadataImporter> 抽象类的实现。 派生自 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 类的类型实现对导入元数据格式的支持，这些元数据格式利用了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 WS-Policy 导入逻辑。  

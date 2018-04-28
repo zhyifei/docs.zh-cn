@@ -5,15 +5,13 @@ author: cartermp
 ms.author: phcart
 ms.date: 04/02/2018
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 248fb2db2364cdad53e701603fd2cada33498701
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 5b7bae6f960b9cfa91188e8eb80be949cda12b65
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="type-providers"></a>类型提供程序
 
@@ -43,7 +41,7 @@ F# 类型提供程序是提供在程序中使用的类型、属性和方法的�
 
 根据需要，你可以[创建你自己的自定义类型提供程序](creating-a-type-provider.md)，或引用已由其他人创建的类型提供程序。 例如，假定你的组织具有一种数据服务，该服务提供了数量不断增长的命名数据集，每个数据集都有其自己的稳定数据架构。 你可选择创建一种类型提供程序，该程序不仅读取架构，还以强类型方式将最新的可用数据集提供给程序员。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [教程： 创建类型提供程序](creating-a-type-provider.md)
 
 [F# 语言参考](../../language-reference/index.md)

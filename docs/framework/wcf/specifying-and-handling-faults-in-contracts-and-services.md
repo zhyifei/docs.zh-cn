@@ -1,28 +1,28 @@
 ---
-title: "在协定和服务中指定和处理错误"
-ms.custom: 
+title: 在协定和服务中指定和处理错误
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>在协定和服务中指定和处理错误
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序通过以下方式来处理错误情况：将托管异常对象映射到 SOAP 错误对象，并将 SOAP 错误对象映射到托管异常对象。 本节中的主题讨论如何设计协定以将错误条件作为自定义 SOAP 错误公开、如何作为服务实现的一部分返回这些错误，以及客户端如何捕捉这些错误。  
@@ -47,12 +47,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="map-exceptions-to-soap-faults"></a>将异常映射到 SOAP 错误  
  创建用于处理错误条件的操作的第一步是：决定在什么条件下应向客户端应用程序通知有关错误的信息。 某些操作具有特定于其功能的错误条件。 例如，`PurchaseOrder` 操作可能会向不再允许其发起采购订单的用户返回特定信息。 在其他情况下（如 `Calculator` 服务），一个更宽泛的 `MathFault` SOAP 错误也许可以描述整个服务内的所有错误条件。 在标识服务客户端的错误条件之后，可以构造一个自定义 SOAP 错误，并可以将操作标记为在出现相应的 SOAP 错误条件时返回该 SOAP 错误。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]此步骤中的开发你的服务或客户端，请参阅[定义和指定错误](../../../docs/framework/wcf/defining-and-specifying-faults.md)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此步骤中的开发你的服务或客户端，请参阅[定义和指定错误](../../../docs/framework/wcf/defining-and-specifying-faults.md)。  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>客户端和服务将 SOAP 错误作为异常进行处理  
  在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序中成功进行错误处理的第一步是：标识操作错误条件，定义自定义 SOAP 错误，并将这些操作标记为返回这些错误。 下一步是正确实现这些错误的发送和接收。 通常，服务会发送错误以通知客户端应用程序有关错误条件的情况，但是双工客户端也可以向服务发送 SOAP 错误。  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
+ 有关详细信息，请参阅[发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>未声明的 SOAP 错误和调试  
  已声明的 SOAP 错误对于生成可靠的并可互操作的分布式应用程序非常有用。 但在某些情况下，服务（或双工客户端）发送未声明的 SOAP 错误（即在相应操作的 Web 服务描述语言 (WSDL) 中未提及的错误）也很有用。 例如，在开发服务时可能会出现意外情况，此时就可以将相关信息发送回客户端以方便调试。 此外，可以将 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 属性或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 属性设置为 `true`，以允许 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端获取有关内部服务操作异常的信息。 中所述同时发送单个故障和设置的调试行为属性[发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。  

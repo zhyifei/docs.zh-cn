@@ -1,27 +1,29 @@
 ---
-title: "Net.TCP 端口共享"
-ms.custom: 
+title: Net.TCP 端口共享
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 端口共享
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了一种新的用于高性能通信的、基于 TCP 的网络协议 (net.tcp://)。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 还引入了一个新的系统组件 Net.TCP Port Sharing Service，该组件使得 net.tcp 端口可以在多个用户进程之间共享。  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
  当使用 net.tcp:// 端口共享的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服务打开时，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP 传输协议基础结构不会在应用程序进程中直接打开 TCP 套接字。 传输协议基础结构而是向 Net.TCP Port Sharing Service 注册服务的基址统一资源标识符 (URI)，并且等待端口共享服务代表它侦听消息。  端口共享服务将对到达的发送给该应用程序服务的消息进行调度。  
   
 ## <a name="installing-port-sharing"></a>安装端口共享  
- Net.TCP Port Sharing Service 可用于支持 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 的所有操作系统，但是默认情况下不启用该服务。 作为一项安全预防措施，管理员必须在第一次使用前手动启用 Net.TCP Port Sharing Service。 Net.TCP Port Sharing Service 会公开一些配置选项，从而让您可以操作端口共享服务所拥有的网络套接字的若干特性。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 启用 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。  
+ Net.TCP Port Sharing Service 可用于支持 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 的所有操作系统，但是默认情况下不启用该服务。 作为一项安全预防措施，管理员必须在第一次使用前手动启用 Net.TCP Port Sharing Service。 Net.TCP Port Sharing Service 会公开一些配置选项，从而让您可以操作端口共享服务所拥有的网络套接字的若干特性。 有关详细信息，请参阅[如何： 启用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>在应用程序中使用 Net.tcp 端口共享  
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 应用程序中使用 net.tcp:// 端口共享的最简单方式是，使用 <xref:System.ServiceModel.NetTcpBinding> 公开一个服务，然后使用 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 属性启用 Net.TCP Port Sharing Service。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何执行此操作，请参阅[如何： 配置 WCF 服务以使用端口共享](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何执行此操作，请参阅[如何： 配置 WCF 服务以使用端口共享](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)。  
   
 ## <a name="security-implications-of-port-sharing"></a>端口共享的安全性影响  
  虽然 Net.TCP Port Sharing Service 在应用程序和网络之间提供了一个处理层，但是仍应对使用端口共享的应用程序进行保护，就好像这些应用程序直接在网络上进行侦听一样。 具体来说，使用端口共享的应用程序应评估运行它们所依据的进程特权。 请考虑使用内置网络服务帐户运行应用程序，该内置服务帐户将以网络通信要求的最小进程特权集运行。  

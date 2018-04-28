@@ -1,13 +1,13 @@
 ---
-title: "使用会话"
-ms.custom: 
+title: 使用会话
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-sessions"></a>使用会话
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 应用程序中，“会话”  将一组消息相互关联，从而形成对话。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 会话与 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 应用程序中提供的会话对象不同，它们支持不同的行为，并且可通过不同的方式进行控制。 本主题描述了会话在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 应用程序中启用的功能以及如何使用这些功能。  
@@ -75,13 +75,13 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供下列类型的基于会话的应用程序行为：  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> 支持基于安全的会话，其中，两个通信端采用统一的安全对话。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][保护服务](../../../docs/framework/wcf/securing-services.md)。 例如，<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 绑定（包含对安全会话和可靠会话的支持）默认情况下只使用对消息进行加密和数字签名的安全会话。  
+-   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> 支持基于安全的会话，其中，两个通信端采用统一的安全对话。 有关详细信息，请参阅[服务的安全](../../../docs/framework/wcf/securing-services.md)。 例如，<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 绑定（包含对安全会话和可靠会话的支持）默认情况下只使用对消息进行加密和数字签名的安全会话。  
   
 -   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> 绑定支持基于 TCP/IP 的会话，以确保所有消息都由套接字级别的连接进行关联。  
   
--   <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 元素实现 WS-ReliableMessaging 规范，并提供对可靠会话的支持。在可靠会话中，可以配置消息以按顺序传递并且只传递一次，从而使消息在对话期间即使经过多个节点也可以确保收到。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][可靠会话](../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
+-   <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 元素实现 WS-ReliableMessaging 规范，并提供对可靠会话的支持。在可靠会话中，可以配置消息以按顺序传递并且只传递一次，从而使消息在对话期间即使经过多个节点也可以确保收到。 有关详细信息，请参阅[可靠会话](../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
   
--   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 绑定提供 MSMQ 数据报会话。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 中的队列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。  
+-   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 绑定提供 MSMQ 数据报会话。 有关详细信息，请参阅[WCF 中的队列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。  
   
  设置 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 属性并不指定协定需要的会话类型，而只是指定协定需要一个会话。  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 01/19/2018
   
 -   通过调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 返回的通道上的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>上[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]由生成的客户端对象[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
+-   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]由生成的客户端对象[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
 -   任一类型的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象上的启动操作（默认情况下，所有操作都会启动）。 当调用第一个操作时， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 客户端对象自动打开通道并启动会话。  
   
@@ -144,10 +144,10 @@ ms.lasthandoff: 01/19/2018
   
  有关示例，请参阅 [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 以及 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 和 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 示例。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]客户端和会话，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 客户端和会话，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>会话与 InstanceContext 设置进行交互  
- 协定中的 <xref:System.ServiceModel.SessionMode> 枚举与 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性之间存在交互，该属性可控制通道和特定服务对象之间的关联。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][会话，实例化和并发](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)。  
+ 协定中的 <xref:System.ServiceModel.SessionMode> 枚举与 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性之间存在交互，该属性可控制通道和特定服务对象之间的关联。 有关详细信息，请参阅[会话、 实例存储功能和并发](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)。  
   
 ### <a name="sharing-instancecontext-objects"></a>共享 InstanceContext 对象  
  通过自己执行关联，您还可以控制将哪个基于会话的通道或调用与哪个 <xref:System.ServiceModel.InstanceContext> 对象相关联。 有关完整示例，请参阅[InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)。  

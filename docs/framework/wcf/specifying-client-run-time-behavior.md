@@ -1,13 +1,13 @@
 ---
-title: "指定客户端运行时行为"
-ms.custom: 
+title: 指定客户端运行时行为
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb6ba82af23f51e43da57adb0e65c77ee3436676
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定客户端运行时行为
-与 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务相似，可以对 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 客户端进行配置以修改运行时行为，以便适合客户端应用程序的需要。 有三个属性可用于指定客户端运行时行为。 双工客户端回调对象可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性修改其运行时行为。 另一个属性 <xref:System.ServiceModel.Description.ClientViaBehavior> 可用于将逻辑目标与直接网络目标分开。 此外，双工客户端回调类型可以使用某些服务端行为。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
+与 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服务相似，可以对 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 客户端进行配置以修改运行时行为，以便适合客户端应用程序的需要。 有三个属性可用于指定客户端运行时行为。 双工客户端回调对象可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性修改其运行时行为。 另一个属性 <xref:System.ServiceModel.Description.ClientViaBehavior> 可用于将逻辑目标与直接网络目标分开。 此外，双工客户端回调类型可以使用某些服务端行为。 有关详细信息，请参阅[指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>使用 CallbackBehaviorAttribute  
  可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 类来配置或扩展客户端应用程序中回调协定实现的执行行为。 此属性为回调类和 <xref:System.ServiceModel.ServiceBehaviorAttribute> 类执行相似的功能，不同之处在于实例化行为和事务设置。  

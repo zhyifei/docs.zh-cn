@@ -29,11 +29,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8694c646cabfd6637325035e563298b0619dac14
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 639e1bbac049e4186faa2b243200f7ef544add38
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="printing-overview"></a>打印概述
 使用 Microsoft.NET Framework 中，应用程序开发人员使用[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]具有一套丰富新的打印和打印系统管理[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]。 在 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 中，还为创建 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 应用程序的开发人员和使用非托管代码的开发人员提供了这些打印系统增强功能中的某些功能。 此新功能的核心是新的 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件格式和 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 打印路径。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 04/27/2018
   
 -   对高级颜色配置文件的本机支持（包括 32 位/通道 (bpc)、CMYK、已命名的颜色、n 墨迹）以及对透明和渐变的本机支持。  
   
--   提高了基于 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 和基于 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 的应用程序的打印性能。  
+-   改进的这两个.NET Framework 的打印性能和[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]基于应用程序。  
   
 -   行业标准 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 格式。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 04/27/2018
           [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印机驱动程序 (XPSDrv) 筛选器管道设计用于启用直接和可缩放的 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文档打印。 (查找"XPSDrv"中的[Windows 驱动程序工具包](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx)。)  
   
 ### <a name="print-path-architecture"></a>打印路径体系结构  
- 虽然两个[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]应用程序支持[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]，[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体应用程序使用[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]到[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]才能创建转换[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]格式的内容[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]打印机驱动程序 (XPSDrv)。 不要求这些应用程序使用 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径，而可以继续使用基于 [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] 的打印。 但是，大多数 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能和增强功能仅可用于面向 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径的应用程序。  
+ 虽然两个[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和.NET Framework 应用程序支持[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]，[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体应用程序使用[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]到[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]才能创建转换[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]格式的内容[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]打印机驱动程序 (XPSDrv)。 不要求这些应用程序使用 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径，而可以继续使用基于 [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] 的打印。 但是，大多数 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能和增强功能仅可用于面向 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 打印路径的应用程序。  
   
  若要启用通过基于 XPSDrv 的打印机使用[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]和 Windows 窗体应用程序，[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]打印机驱动程序 (XPSDrv) 支持的转换[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]到[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]格式。 XPSDrv 模型还提供从 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 到 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 格式的转换器，以便 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 应用程序能够打印 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档。 有关[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]应用程序、 转换[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]到[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]会自动完成格式<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>和<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>类每当目标打印队列的写入操作没有XPSDrv 驱动程序。 (Windows 窗体应用程序无法打印[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]文档。)  
   
