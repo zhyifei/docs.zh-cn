@@ -10,6 +10,5 @@
 ## [泛型委托](generic-delegates.md)
 ## [C++ 模板和 C# 泛型之间的区别](differences-between-cpp-templates-and-csharp-generics.md)
 ## [运行时中的泛型](generics-in-the-run-time.md)
-## [.NET Framework 类库中的泛型](generics-in-the-net-framework-class-library.md)
 ## [泛型和反射](generics-and-reflection.md)
 ## [泛型和特性](generics-and-attributes.md)
