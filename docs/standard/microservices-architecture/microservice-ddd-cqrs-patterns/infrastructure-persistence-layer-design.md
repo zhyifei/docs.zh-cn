@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>设计基础结构持久性层
 
-数据持久性组件提供对微服务边界（即微服务的数据库）内托管的数据的访问。 它们包含组件（例如存储库和[工作单元](http://martinfowler.com/eaaCatalog/unitOfWork.html)类）的实际实现，例如自定义 EF DBContexts。
+数据持久性组件提供对微服务边界（即微服务的数据库）内托管的数据的访问。 它们包含组件（例如存储库和[工作单元](https://martinfowler.com/eaaCatalog/unitOfWork.html)类）的实际实现，例如自定义 EF DBContexts。
 
 ## <a name="the-repository-pattern"></a>存储库模式
 
@@ -90,7 +90,7 @@ public interface IOrderRepository : IRepository<Order>
 
 工作单元亦称单个事务，涉及多个插入、更新或删除操作。 简而言之，这意味着对于特定的用户操作（例如，网站注册），所有插入、更新和删除事务都在单个事务中处理。 这比以更繁琐的方式处理多个数据库事务更有效。
 
-这几个持久性操作稍后会在应用层中的代码发出命令时，在单个操作中执行。 关于将内存中更改应用于实际数据库存储的决策通常基于[工作单元模式](http://martinfowler.com/eaaCatalog/unitOfWork.html)。 在 EF 中，工作单元模式作为 DBContext 实现。
+这几个持久性操作稍后会在应用层中的代码发出命令时，在单个操作中执行。 关于将内存中更改应用于实际数据库存储的决策通常基于[工作单元模式](https://martinfowler.com/eaaCatalog/unitOfWork.html)。 在 EF 中，工作单元模式作为 DBContext 实现。
 
 在许多情况下，这种对存储应用操作的模式或方式可以提高应用程序性能并减少出现不一致的可能性。 此外，它还能减少数据库表中的事务阻塞，因为所有预期操作都作为一个事务的一部分进行提交。 与对数据库执行许多独立操作相比，这样做效率更高。 因此，选定的 ORM 能够通过在同一个事务中对几个更新操作进行分组来优化对数据库的执行，而不是使用许多单独的小型事务执行。
 
@@ -138,21 +138,21 @@ public interface ISpecification<T>
 
 ### <a name="the-repository-pattern"></a>存储库模式
 
--   **Edward Hieatt 和 Rob Mee.存储库模式。**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt 和 Rob Mee.Repository pattern.**（存储库模式。）
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
--   **存储库模式**
-    [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
+-   **The Repository pattern**（存储库模式）
+    [https://msdn.microsoft.com/library/ff649690.aspx](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **存储库模式： 数据持久性抽象**
-    [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
+-   **Repository Pattern: A data persistence abstraction**（存储库模式：数据持久性抽象）
+    [http://deviq.com/repository-pattern/](http://deviq.com/repository-pattern/)
 
--   **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。） （本书; 包括的存储库模式的讨论） [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。） （书；包含对存储库模式的讨论）[https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>工作单元模式
 
--   **Martin Fowler。单元的工作模式。**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler。Unit of Work pattern.**（工作单元模式。）
+    [https://martinfowler.com/eaaCatalog/unitOfWork.html](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
@@ -161,13 +161,13 @@ public interface ISpecification<T>
 
 ### <a name="the-specification-pattern"></a>规范模式
 
--   **规范模式中。**
-    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+-   **规范模式。**
+    [http://deviq.com/specification-pattern/](http://deviq.com/specification-pattern/)
 
 -   **Eric Evans (2004)。域驱动设计。Addison-Wesley. p. 224。**
 
 -   **规范。Martin Fowler**
-    [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
+    [https://www.martinfowler.com/apsupp/spec.pdf/](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
 [上一篇] (domain-events-design-implementation.md) [下一篇] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)

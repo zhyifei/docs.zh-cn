@@ -1,7 +1,7 @@
 ---
-title: "每个微服务的数据主权"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 每个微服务的数据主权"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 每个微服务的数据主权
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 每个微服务的数据主权
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76265490d7cb0d53686b43b88cb797cf887d578a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f5d782a70123a66c1579a64a37bc612ccda9c1a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-sovereignty-per-microservice"></a>每个微服务的数据主权
 
@@ -37,13 +37,13 @@ ms.lasthandoff: 12/23/2017
 
 但转到微服务体系结构时，数据访问变得更为复杂。 然而，即使 ACID 事务可以或者应该用于微服务或界定上下文，每个微服务拥有的数据专用于该微服务，且仅能通过其微服务 API 进行访问。 封装该数据可确保微服务松散耦合，且可彼此独立地进行演变。 如果多个服务访问相同的数据，架构更新将需要针对所有服务的协调更新。 这会破坏微服务生命周期自治。 但分布式的数据结构意味着无法跨微服务进行单个 ACID 事务。 这反过来意味着当业务流程跨多个微服务时，必须使用最终一致性。 这执行起来比简单的 SQL 联接更为困难；同样，许多其他关系数据库功能在多个微服务间将不可用。
 
-进一步来说，不同的微服务通常使用不同类型的数据库。 现代应用程序存储和处理不同类型的数据，并且关系数据库并不总是最佳选择。 对于某些用例，相较于 SQL 数据库（如 SQL Server 或 Azure SQL 数据库），NoSQL 数据库（如 Azure DocumentDB 或 MongoDB）可能具有更为方便的数据模型，并且提供更好的性能和可伸缩性。 其他情况下，关系数据库仍是最佳方法。 因此，基于微服务的应用程序通常混合使用 SQL 和 NoSQL 数据库，这有时称为[多语言持久性](http://martinfowler.com/bliki/PolyglotPersistence.html)方法。
+进一步来说，不同的微服务通常使用不同类型的数据库。 现代应用程序存储和处理不同类型的数据，并且关系数据库并不总是最佳选择。 对于某些用例，相较于 SQL 数据库（如 SQL Server 或 Azure SQL 数据库），NoSQL 数据库（如 Azure DocumentDB 或 MongoDB）可能具有更为方便的数据模型，并且提供更好的性能和可伸缩性。 其他情况下，关系数据库仍是最佳方法。 因此，基于微服务的应用程序通常混合使用 SQL 和 NoSQL 数据库，这有时称为[多语言持久性](https://martinfowler.com/bliki/PolyglotPersistence.html)方法。
 
 数据存储的分区式多语言持久性体系结构带来诸多好处。 其中包括松散耦合的服务和更好的性能、可伸缩性、可管理性及更低的成本。 但是，它还会带来一些分布式数据管理难题，我们稍后将在本章的“[标识域模型边界](#identifying-domain-model-boundaries-for-each-microservice)”这一部分中介绍。
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>微服务和界定上下文模式之间的关系
 
-微服务的概念源自[域驱动设计 (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) 中的[界定上下文 (BC) 模式](http://martinfowler.com/bliki/BoundedContext.html)。 DDD 将大模型划分为多个 BC 并对其边界十分明确，以此处理大模型。 每个 BC 必须具有其自己的模型和数据库；同样，每个微服务拥有其相关的数据。 此外，每个 BC 通常具有其自己的[通用语言](http://martinfowler.com/bliki/UbiquitousLanguage.html)，从而帮助软件开发人员和域专业人员之间进行通信。
+微服务的概念源自[域驱动设计 (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) 中的[界定上下文 (BC) 模式](https://martinfowler.com/bliki/BoundedContext.html)。 DDD 将大模型划分为多个 BC 并对其边界十分明确，以此处理大模型。 每个 BC 必须具有其自己的模型和数据库；同样，每个微服务拥有其相关的数据。 此外，每个 BC 通常具有其自己的[通用语言](https://martinfowler.com/bliki/UbiquitousLanguage.html)，从而帮助软件开发人员和域专业人员之间进行通信。
 
 通用语言中的这些术语（主要域实体）在不同的界定上下文中具有不同的名称，即使不同域实体共享相同的标识（即用于从存储读取实体的唯一 ID）。 例如，在用户配置文件界定上下文中，用户域实体可能与买家域实体在订购界定上下文中共享标识。
 
@@ -55,16 +55,16 @@ DDD 通过获取分布式微服务形式的实际边界而从微服务中获益�
 
 ### <a name="additional-resources"></a>其他资源
 
--   **Chris Richardson.Pattern: Database per service**（模式：每个服务的数据库）
-    [*http://microservices.io/patterns/data/database-per-service.html*](http://microservices.io/patterns/data/database-per-service.html)
+-   **Chris Richardson.Pattern: Database per service**（模式：每个服务一个数据库）
+    [https://microservices.io/patterns/data/database-per-service.html](https://microservices.io/patterns/data/database-per-service.html)
 
 -   **Martin Fowler。BoundedContext**
-    [*http://martinfowler.com/bliki/BoundedContext.html*](http://martinfowler.com/bliki/BoundedContext.html)
+    [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html)
 
 -   **Martin Fowler。PolyglotPersistence**
-    [*http://martinfowler.com/bliki/PolyglotPersistence.html*](http://martinfowler.com/bliki/PolyglotPersistence.html)
+    [https://martinfowler.com/bliki/PolyglotPersistence.html](https://martinfowler.com/bliki/PolyglotPersistence.html)
 
--   **Alberto Brandolini。Strategic Domain Driven Design with Context Mapping**（含上下文映射的战略性域驱动设计）
+-   **Alberto Brandolini。Strategic Domain Driven Design with Context Mapping**（含上下文映射的策略域驱动设计）
     [https://www.infoq.com/articles/ddd-contextmapping](https://www.infoq.com/articles/ddd-contextmapping)
 
 

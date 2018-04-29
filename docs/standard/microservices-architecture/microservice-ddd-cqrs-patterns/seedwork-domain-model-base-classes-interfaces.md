@@ -1,7 +1,7 @@
 ---
-title: "Seedwork（适用于域模型的可重用基类和接口）"
-description: "容器化 .NET 应用程序的 .NET 微服务| Seedwork（域模型的可重用基类和接口）"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: Seedwork（适用于域模型的可重用基类和接口）
+description: 容器化 .NET 应用程序的 .NET 微服务| Seedwork（域模型的可重用基类和接口）
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aba336676a558f50a2669eb3ca096effb8387916
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 641439267d7fcb504965487aeed165188b2cf123
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork（适用于域模型的可重用基类和接口）
 
-解决方案文件夹包含 SeedWork 文件夹。 SeedWork 文件夹包含可以用作域实体和值对象的基础的自定义基类。 使用这些基类，从而在每个域的对象类中避免冗余代码。 这些类型的类的文件夹称为 SeedWork，而不是类似于 Framework。 它称为 SeedWork，因为该文件夹仅包含可重用类的一个小型子集，不能将其视为一个框架。  Seedwork 是由 [Michael Feathers](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的一个术语，并且由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 推广普及，但也可将该文件夹命名为 Common、SharedKernel 或类似名称。
+解决方案文件夹包含 SeedWork 文件夹。 SeedWork 文件夹包含可以用作域实体和值对象的基础的自定义基类。 使用这些基类，从而在每个域的对象类中避免冗余代码。 这些类型的类的文件夹称为 SeedWork，而不是类似于 Framework。 它称为 SeedWork，因为该文件夹仅包含可重用类的一个小型子集，不能将其视为一个框架。  Seedwork 是由 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的一个术语，并且由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 推广普及，但也可将该文件夹命名为 Common、SharedKernel 或类似名称。
 
 图 9-12 显示在排序的微服务中形成域模型的 seedwork 的类。 它还包含 Entity、ValueObject 和 Enumeration 等自定义基类，以及一些接口。 这些接口（IRepository 和 IUnitOfWork）告知基础结构层需要实现的内容。 还可通过应用程序层中的依赖关系注入使用这些接口。
 
@@ -119,7 +119,7 @@ public abstract class Entity
 
 存储库本身（包含 EF Core 代码或其他任何基础结构依赖项和代码（Linq、SQL 等）不能在域模型内实现，存储库应仅实现你定义的接口。 
 
-这种做法（在域模型层中放置存储库接口）的相关模式是分隔接口模式。 正如 Martin Fowler [所述](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)，“使用分隔接口在一个包中定义接口，但在另一个包中实现它。 这样一来，需要接口依赖项的客户端可能完全不会识别出实现。”
+这种做法（在域模型层中放置存储库接口）的相关模式是分隔接口模式。 正如 Martin Fowler [所述](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)，“使用分隔接口在一个包中定义接口，但在另一个包中实现它。 这样一来，需要接口依赖项的客户端可能完全不会识别出实现。”
 
 通过遵循分隔接口模式，应用程序层（在此情况下是微服务的 Web API 项目）可具有在域模型中定义的要求的依赖项，但没有基础结构/持久性层的直接依赖项。 此外，可以使用依赖项注入隔离实现，可在使用存储库的基础结构/持久性层中实现这一点。
 
@@ -145,8 +145,8 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Martin Fowler。Separated Interface.**（分隔的接口）
-    [*http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+-   **Martin Fowler。Separated Interface.**（分隔接口）
+    [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 
 >[!div class="step-by-step"]

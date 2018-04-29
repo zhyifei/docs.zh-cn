@@ -1,5 +1,5 @@
 ---
-title: "数据流（任务并行库）"
+title: 数据流（任务并行库）
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f91100303cb0970ed430eebe2a377a487017b47d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7671001fb63a5e09c5d7a3dc4b2414d41a790e16
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>数据流（任务并行库）
 <a name="top"></a> 任务并行库 (TPL) 提供数据流组件，可帮助提高启用并发的应用程序的可靠性。 这些数据流组件统称为 TPL 数据流库。 这种数据流模型通过向粗粒度的数据流和管道任务提供进程内消息传递来促进基于角色的编程。 数据流组件基于 TPL 的类型和计划基础结构，并与 C#、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 F# 语言支持集成，从而可以进行异步编程。 当您有必须相互异步沟通的多个操作或者想要在数据可用时对其处理时，这些数据流组件就非常有用。 例如，请考虑一个处理网络摄像机图像数据的应用程序。 通过使用数据流模型，当图像帧可用时，应用程序就可以处理它们。 如果应用程序增强图像帧（例如执行灯光修正或消除红眼），则可以创建数据流组件的管道。 管道的每个阶段可以使用更粗粒度的并行功能（例如 TPL 提供的功能）来转换图像。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/19/2018
   
  源数据流块通过调用方法 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A?displayProperty=nameWithType> 向目标数据流块提供数据。 目标块通过以下三种方式之一来回应提供的消息：它可以接受消息，拒绝消息或推迟消息。 当目标接受消息时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Accepted>。 当目标拒绝消息时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Declined>。 当目标要求它不再接收来自源的任何消息时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.DecliningPermanently>。 预定义的源块类型在这些返回值接收后不会向链接的目标提供消息，并且它们会自动取消这些目标的链接。  
   
- 当目标块推迟消息以备日后使用时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>。 推迟消息的目标数据流块稍后可以调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> 方法，以尝试暂留所提供的消息。 此时，消息仍可用，并且可由该目标块使用，否则表明该消息已由另一个目标接收。 如果目标数据流块稍后需要消息或不再需要消息，它会分别调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> 方法。 消息保留通常由以非贪婪模式运行的数据流块类型使用。 非贪婪模式将在本文档的后面详细介绍。 除了保留推迟的消息，目标块也可以使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 方法来尝试直接使用推迟的消息。  
+ 当目标块推迟消息以备日后使用时，<xref:System.Threading.Tasks.Dataflow.ITargetBlock%601.OfferMessage%2A> 方法会返回 <xref:System.Threading.Tasks.Dataflow.DataflowMessageStatus.Postponed>。 推迟消息的目标块可以稍后调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReserveMessage%2A?displayProperty=nameWithType> 方法，以尝试暂留所提供的消息。 此时，消息仍可用，并且可由该目标块使用，否则表明该消息已由另一个目标接收。 如果目标数据流块稍后需要消息或不再需要消息，它会分别调用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ReleaseReservation%2A> 方法。 消息保留通常由以非贪婪模式运行的数据流块类型使用。 非贪婪模式将在本文档的后面详细介绍。 除了保留推迟的消息，目标块也可以使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.ConsumeMessage%2A?displayProperty=nameWithType> 方法来尝试直接使用推迟的消息。  
   
 ### <a name="dataflow-block-completion"></a>数据流块完成  
  数据流块也支持完成概念。 完成状态的数据流块不执行任何进一步的工作。 每个数据流块都有相关的 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 对象（称为“完成任务”），表示数据流块的完成状态。 因为您可以使用完成任务等待 <xref:System.Threading.Tasks.Task> 对象完成，所以您可以等待数据流网络的一个或更多终端节点来完成任务。 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口定义 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> 方法（该方法向数据流块通知它完成的请求）和 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Completion%2A> 属性（该属性返回数据流块的完成任务）。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 和 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 都继承 <xref:System.Threading.Tasks.Dataflow.IDataflowBlock> 接口。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[TPLDataflow_Overview#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#11)]
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
- 您也可以使用类似延续任务主体中的属性（例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>）来确定有关数据流块的完成状态的其他信息。 若要深入了解延续任务及其与取消和错误处理如何相关，请参阅[使用延续任务链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)、[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)、[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和 [NIB：如何：处理由任务引发的异常](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)。  
+ 您也可以使用类似延续任务主体中的属性（例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>）来确定有关数据流块的完成状态的其他信息。 若要深入了解延续任务及其与取消和错误处理如何相关，请参阅[使用延续任务链接任务](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)、[任务取消](../../../docs/standard/parallel-programming/task-cancellation.md)、[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和 [NIB：如何：处理由任务引发的异常](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)。  
   
  [[转到页首](#top)]  
   
@@ -166,8 +166,8 @@ ms.lasthandoff: 01/19/2018
   
 |类型|同步委托类型|异步委托类型|  
 |----------|-------------------------------|--------------------------------|  
-|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func\<TInput, Task>`|  
-|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func\<TInput, TOutput>`2`|`System.Func<TInput, Task<TOutput>>`|  
+|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func<TInput, Task>`|  
+|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func<TInput, TOutput>`|`System.Func<TInput, Task<TOutput>>`|  
 |<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|`System.Func<TInput, IEnumerable<TOutput>>`|`System.Func<TInput, Task<IEnumerable<TOutput>>>`|  
   
  当处理执行块类型时，还可以使用 lambda 表达式。 有关如何使用 lambda 表达式处理执行块的示例，请参阅[如何：在数据流块收到数据时执行操作](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)。  

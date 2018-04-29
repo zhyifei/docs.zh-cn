@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c5e2d603062095c02af500ae74a9ea708cf9aefa
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -81,7 +82,7 @@ public class ProductsController : Controller
 
 ## <a name="working-with-dependencies"></a>处理依赖关系
 
-ASP.NET Core 内置了对[依赖关系注入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)技术的支持，并且在内部使用这一技术。 依赖关系注入技术可以在应用程序的不同部分之间实现松散耦合。 比较松散的耦合更符合需要，因为它可以更轻松地将应用程序的某些部分隔离开，然后进行测试或替换。 它还可以降低对应用程序某个部分进行更改会对应用程序中的其他位置产生意外影响的可能性。 依赖关系注入的基础是依赖关系反转原则，并且通常是实现开放/闭合原则的关键。 评估应用程序对其依赖关系的处理方式时，请注意 [static cling](http://deviq.com/static-cling/)（静态粘附）这一代码味，并请记住这句格言：[新增即粘附](http://ardalis.com/new-is-glue)。
+ASP.NET Core 内置了对[依赖关系注入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)技术的支持，并且在内部使用这一技术。 依赖关系注入技术可以在应用程序的不同部分之间实现松散耦合。 比较松散的耦合更符合需要，因为它可以更轻松地将应用程序的某些部分隔离开，然后进行测试或替换。 它还可以降低对应用程序某个部分进行更改会对应用程序中的其他位置产生意外影响的可能性。 依赖关系注入的基础是依赖关系反转原则，并且通常是实现开放/闭合原则的关键。 评估应用程序对其依赖关系的处理方式时，请注意 [static cling](http://deviq.com/static-cling/)（静态粘附）这一代码味，并请记住这句格言：[新增即粘附](https://ardalis.com/new-is-glue)。
 
 类调用静态方法或访问静态属性时，会对基础结构造成负面影响或产生依赖关系，此时会发生静态粘附。 例如，如果一个方法调用静态方法，静态方法反过来又写入数据库，则该方法与该数据库紧密耦合。 破坏该数据库调用的任何内容都会破坏该方法。 测试此类方法非常困难，因为此类测试要么需要使用商业模拟库来模拟静态调用，要么只能使用已有测试数据库进行测试。 不依赖于任何基础结构的静态调用，尤其是完全无状态的静态调用可以进行正常调用，并且对耦合或可测试性没有任何影响（超越了将代码耦合到静态调用本身）。
 
@@ -283,7 +284,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 > ### <a name="references--structuring-applications"></a>参考 - 构建应用程序
 > - **区域**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN - ASP.NET Core MVC 的功能切片**
+> - **MSDN – ASP.NET Core MVC 的功能切分**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **筛选器**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
@@ -400,7 +401,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ## <a name="client-communication"></a>客户端通信
 
-除了通过 Web API 提供页面和响应数据请求之外，ASP.NET Core 应用还能与已连接的客户端直接通信。 这种出站通信可以使用多种传输技术，其中最常见的是 WebSocket。 ASP.NET Core SignalR 是一个库，它简化了应用程序的某种实时服务器到客户端通信功能。 SignalR 支持多种传输技术，包括 WebSocket，并从开发人员处抽象出许多实现细节。
+除了通过 Web API 提供页面和响应数据请求之外，ASP.NET Core 应用还能与已连接的客户端直接通信。 这种出站通信可以使用多种传输技术，其中最常见的是 WebSocket。 ASP.NET Core SignalR 是一个库，它简化了向应用程序添加某种实时服务器到客户端的通信功能的过程。 SignalR 支持多种传输技术，包括 WebSocket，并从开发人员处抽象出许多实现细节。
 
 ASP.NET Core SignalR 目前正在开发中，将在下一版本的 ASP.NET Core 中提供。 但是，目前已有其他一些[开源 WebSocket 库](https://github.com/radu-matei/websocket-manager)可供使用。
 

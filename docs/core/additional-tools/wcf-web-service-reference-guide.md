@@ -1,18 +1,18 @@
 ---
-title: "Microsoft WCF Web Service Reference Provider 工具"
-description: "Microsoft WCF Web Service Reference Provider 工具概述，该工具添加了 .NET Core 和 ASP.NET Core 项目的功能，类似于 .NET Framework 项目的添加服务引用。"
+title: Microsoft WCF Web Service Reference Provider 工具
+description: Microsoft WCF Web Service Reference Provider 工具概述，该工具添加了 .NET Core 和 ASP.NET Core 项目的功能，类似于 .NET Framework 项目的添加服务引用。
 author: mlacouture
 manager: wpickett
 ms.author: johalex
-ms.date: 01/19/2018
+ms.date: 04/19/2018
 ms.topic: article
 ms.prod: .net-core
 ms.custom: mvc
-ms.openlocfilehash: e445361f9f4a858f4b34ca1008670fadc62b8b3c
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: acf9e97c05dabc46da26ed2ea580e7d341b0f2dc
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web Service Reference Provider 工具
 
@@ -20,6 +20,10 @@ ms.lasthandoff: 01/23/2018
 
 > [!IMPORTANT]
 > 应仅从受信任源引用服务。 从不受信任的源添加引用可能会危及安全性。 
+
+## <a name="prerequisites"></a>系统必备
+
+* [Visual Studio 2017 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 或更高版本
 
 ## <a name="how-to-use-the-extension"></a>如何使用扩展
 

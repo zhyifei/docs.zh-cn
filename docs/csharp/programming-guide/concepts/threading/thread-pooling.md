@@ -1,21 +1,22 @@
 ---
-title: "线程池 (C#)"
-ms.custom: 
+title: 线程池 (C#)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 98ae68c1-ace8-44b9-9317-8920ac9ef2b6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 09dd597e8ac7a6b336f71891ccc89984ea659614
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 56fba1197fe81e60e27f300ec43879569d0a9d48
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="thread-pooling-c"></a>线程池 (C#)
 线程池是可用于在后台执行多种任务的线程集合。 （有关背景信息，请参阅[线程处理 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)。）这使主线程可以自由地异步执行其他任务。  
@@ -60,13 +61,13 @@ private void AnotherLongTask(Object state)
 ## <a name="thread-pool-parameters-and-return-values"></a>线程池参数和返回值  
  不能直接从线程池线程返回值。 不允许使用通过函数调用来返回值的标准方法，因为 `Sub` 过程是唯一一种可以排队到线程池的过程。 一种提供参数和返回值的方法是将参数、返回值和方法包装在一个包装类中，如[多线程过程的参数和返回值 (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md) 中所述。  
   
- 一种提供参数和返回值的更简单方法是使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法的可选 `ByVal` 状态对象变量。 如果使用此变量来传递对类实例的引用，则该实例的成员可以由线程池线程修改，并用作返回值。  
+ 对于提供参数和返回值来说，使用 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 方法的可选 `ByVal` 状态对象变量是一种更为简便的方法。 如果使用此变量来传递对类实例的引用，则该实例的成员可以由线程池线程修改，并用作返回值。  
   
  最初，可以修改由值传递的变量所引用的对象可能并不明显。 由于只有对象引用由值传递，因此可以执行此操作。 当对由对象引用所引用的对象的成员进行更改时，这些更改将应用于实际的类实例。  
   
  不能使用结构在状态对象内部返回值。 由于结构属于值类型，异步进程所做的更改不会更改原始结构的成员。 如果不需要返回值，可以使用结构来提供参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
  <xref:System.Threading>  
  <xref:System.Threading.ThreadPool>  

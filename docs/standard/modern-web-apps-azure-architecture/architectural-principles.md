@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: f4f52bd3438ef9b2e0b74ee91831947a4dd6869d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="architectural-principles"></a>体系结构原则
 
@@ -108,7 +109,7 @@ ms.lasthandoff: 01/29/2018
 > ### <a name="references--modern-web-applications"></a>参考 - 新式 Web 应用程序
 > - **分离关注点**  
 > <http://deviq.com/separation-of-concerns/>
-> - **封装** <http://deviq.com/encapsulation/>
+> - **Encapsulation**（封装）<http://deviq.com/encapsulation/>
 > - **依赖关系反转原则**  
 > <http://deviq.com/dependency-inversion-principle/>
 > - **Explicit Dependencies Principle**（显式依赖关系原则）  

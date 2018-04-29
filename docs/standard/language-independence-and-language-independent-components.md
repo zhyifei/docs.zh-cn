@@ -1,12 +1,12 @@
 ---
-title: "语言独立性和与语言无关的组件"
-ms.custom: 
+title: 语言独立性和与语言无关的组件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: f64f39f91ccea7319f395e852b4535f5cba6b0a6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 .NET Framework 是独立于语言的。 这意味着，作为开发人员，您可以使用面向 .NET Framework 的多种语言（例如，C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 以及 Windows PowerShell）之一进行开发。 您可以访问针对 .NET Framework 开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果您是组件开发人员，无论组件采用哪种语言，均可由任何 .NET Framework 应用程序访问。  
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/19/2018
 |成员|[类型成员概述](#members)|全局静态字段和方法不符合 CLS。|36|  
 |成员|--|通过使用字段初始化元数据指定文本静态值。 符合 CLS 的文本必须在类型与文本（或基本类型，如果文本为 `enum`）完全相同的字段初始化元数据中指定值。|13|  
 |成员|[类型成员概述](#members)|vararg 约束不属于 CLS，并且 CLS 支持的唯一调用约定是标准托管调用约定。|15|  
-|命名约定|[命名约定](#naming)|程序集应遵守用于管理允许启用且包含在标识符中的字符集的 Unicode 标准 3.0 的技术报告 15 的附件 7（可通过访问 http://www.unicode.org/unicode/reports/tr15/tr15-18.html 获得）。 标识符应是由 Unicode 范式 C 定义的规范格式。对于 CLS，如果两个标识符的小写映射（由不区分区域设置的 Unicode、一对一小写映射指定）相同，则它们也相同。 也就是说，对于要在 CLS 下视为不同的两个标识符，它们应以大小写之外的差别进行区分。 但是，若要重写继承的定义，CLI 需要对使用的原始声明进行准确编码。|4|  
+|命名约定|[命名约定](#naming)|针对用于管理允许启用且包含在标识符中的字符集的 Unicode Standard3.0 ，程序集应遵守其技术报告 15 的附件 7（可通过访问 http://www.unicode.org/unicode/reports/tr15/tr15-18.html 在线获得）。 标识符应是由 Unicode 范式 C 定义的规范格式。对于 CLS，如果两个标识符的小写映射（由不区分区域设置的 Unicode、一对一小写映射指定）相同，则它们也相同。 也就是说，对于要在 CLS 下视为不同的两个标识符，它们应以大小写之外的差别进行区分。 但是，若要重写继承的定义，CLI 需要对使用的原始声明进行准确编码。|4|  
 |重载|[命名约定](#naming)|在符合 CLS 的范围中引入的所有名称都应是明显独立的类型，除非名称完全相同且通过重载解析。 也就是说，CTS 允许单个类型对方法和字段使用相同的名称，但 CLS 不允许。|5|  
 |重载|[命名约定](#naming)|即使 CTS 允许区分不同的签名，但字段和嵌套类型只能由标识符比较区分。 （标识符比较后）具有相同名称的方法、属性和事件应在除返回类型不同之外还具有其他差异，CLS 规则 39 中指定的差异除外。|6|  
 |重载|[重载](#overloads)|只可重载属性和方法。|37|  
@@ -236,7 +236,7 @@ ms.lasthandoff: 02/19/2018
   
  [!code-csharp[Conceptual.CLSCompliant#16](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#16)]  
   
- 编程语言识别符（例如，命名空间、类型和成员的名称）必须遵照 [Unicode 标准 3.0、技术报告 15 和附件 7](http://www.unicode.org/reports/tr15/tr15-18.html)。 这表示：  
+ 编程语言识别符（例如，命名空间、类型和成员的名称）必须遵照 [Unicode 标准 3.0、技术报告 15 和附件 7](https://www.unicode.org/reports/tr15/tr15-18.html)。 这表示：  
   
 -   标识符的第一个字符可以是任何 Unicode 大写字母、小写字母、标题大小写字母、修饰符字母、其他字母或字母数字。 有关 Unicode 字符类别的信息，请参阅 <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> 枚举。  
   
@@ -372,7 +372,7 @@ ms.lasthandoff: 02/19/2018
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
- 泛型类型名称采用 name\`n 格式进行编码，其中 name 是类型名称，\` 是字符文本，n 是在类型上声明的参数数目，或对于嵌套泛型类型为最近引入的类型参数的数目。 此泛型类型名称的编码主要对使用反射来访问库中符合 CLS 的泛型类型的开发人员很有用。  
+ 泛型类型名称采用 name\`n 格式进行编码，其中 name 是类型名称，\` 是字符文本，而 n 是针对类型声明的参数数目，或对于嵌套泛型类型为最近引入的类型参数的数目。 此泛型类型名称的编码主要对使用反射来访问库中符合 CLS 的泛型类型的开发人员很有用。  
   
  如果将约束应用于泛型类型，则任何用作约束的类型也必须符合 CLS。 下面的示例定义一个名为 `BaseClass` 的不符合 CLS 的类和一个其类型参数必须派生自 `BaseCollection` 的名为 `BaseClass` 的泛型类。 但由于 `BaseClass` 不符合 CLS，因此编译器会发出警告。  
   
@@ -572,7 +572,7 @@ csc /t:module NumberUtil.cs
   
  有关 C# 编译器的命令行语法的详细信息，请参阅[在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  
   
- 然后，使用[链接工具 (Link.exe)](http://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) 将两个模块编译到一个程序集：  
+ 然后，使用[链接工具 (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) 将两个模块编译到一个程序集：  
   
 ```  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   

@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0644e2d9e7a52dd5747c9442a4771aa7400cdcb0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8d048c89ee416de0b225d3e58cd24e73e1570785
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-parallelism-task-parallel-library"></a>数据并行（任务并行库）
 *数据并行*指的是对源集合或数组的元素同时（即，并行）执行相同操作的场景。 在数据并行操作中，对源集合进行分区，以便多个线程能够同时在不同的网段上操作。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/19/2018
   
  <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法都有多个过载，可让你停止或中断循环执行，监视其它线程上循环的状态，保持本地线程状态，完成本地线程对象，控制并发程度等等。 启用此功能的帮助器类型包括 <xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken> 和 <xref:System.Threading.CancellationTokenSource>。  
   
- 有关详细信息，请参阅[并行编程模式](http://go.microsoft.com/fwlink/p/?LinkId=265491)。  
+ 有关详细信息，请参阅[并行编程模式：了解并通过 .NET Framework 4 应用并行模式](https://www.microsoft.com/download/details.aspx?id=19222)。  
   
  PLINQ 支持使用声明性或查询类语法的数据并行。 有关详细信息，请参阅[并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 |-----------|-----------------|  
 |[如何：编写简单的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|描述如何编写遍历任何数组或可变址 <xref:System.Collections.Generic.IEnumerable%601> 源集合的 <xref:System.Threading.Tasks.Parallel.For%2A> 循环。|  
 |[如何：编写简单的 Parallel.ForEach 循环](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|描述如何编写遍历任何 <xref:System.Collections.Generic.IEnumerable%601> 源集合的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环。|  
-|[如何：停止或中断 Parallel.For 循环](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|描述如何停止或中断并行循环，以便所有线程都获得该操作的通知。|  
+|[如何：停止或中断 Parallel.For 循环](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|描述如何停止或中断并行循环，以便所有线程都获得该操作的通知。|  
 |[如何：编写具有线程局部变量的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|描述如何编写 <xref:System.Threading.Tasks.Parallel.For%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。|  
 |[如何：编写具有线程局部变量的 Parallel.ForEach 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|描述如何编写 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环，该循环中每个线程都维持有对其它任何线程不可见的私有变量，以及如何在循环完成时，同步所有线程的结果。|  
 |[如何：取消 Parallel.For 或 ForEach Loop](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|描述如何通过使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 取消并行循环|  

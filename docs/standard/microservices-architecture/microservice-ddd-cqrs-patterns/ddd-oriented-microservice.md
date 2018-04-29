@@ -1,7 +1,7 @@
 ---
-title: "设计面向 DDD 的微服务"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计面向 DDD 的微服务"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 设计面向 DDD 的微服务
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计面向 DDD 的微服务
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>设计面向 DDD 的微服务
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="the-domain-model-layer"></a>域模型层
 
-关于域模型层和应用层，Eric Evans 在其大作[域驱动设计](http://domainlanguage.com/ddd/)一书中作出了以下描述。
+关于域模型层和应用层，Eric Evans 在其大作[域驱动设计](https://domainlanguage.com/ddd/)一书中作出了以下描述。
 
 **域模型层**：负责表示业务概念、有关业务状况的信息和业务规则。 反映业务状况的状态是通过这个层进行控制和利用的，但有关状态存储的具体技术细节则由基础结构负责实施。 这一层是业务软件的核心。
 
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="the-application-layer"></a>应用层
 
-现在我们来了解应用层，这里可以再次引用 Eric Evans 的[域驱动设计](http://domainlanguage.com/ddd/)一书中的内容：
+现在我们来了解应用层，这里可以再次引用 Eric Evans 的[域驱动设计](https://domainlanguage.com/ddd/)一书中的内容：
 
 **应用层：**定义软件要完成的作业并指导富有表现力的域对象解决问题。 这一层负责执行对业务具有意义的任务或与其他系统的应用层进行交互时需执行的任务。 这一层很“薄”。 它不包含业务规则或知识，仅针对下一层中域对象之间的协作，协调任务和委派工作。 它不具有反映业务状况的状态，但它可以具有状态，用于反映用户或程序的任务的进度。
 
@@ -102,7 +102,7 @@ ms.lasthandoff: 12/23/2017
 #### <a name="additional-resources"></a>其他资源
 
 -   **DevIQ.Persistence Ignorance principle**（持久性忽略原则）
-    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
+    [http://deviq.com/persistence-ignorance/](http://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini。Infrastructure Ignorance**（基础结构忽略）
     [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)

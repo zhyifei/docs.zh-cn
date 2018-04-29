@@ -1,6 +1,6 @@
 ---
-title: "“分支和循环”教程 - C# 本地快速入门"
-description: "在“分支和循环”本快速入门教程中，编写 C# 代码，以研究支持条件分支和循环重复执行语句的语言语法。"
+title: “分支和循环”教程 - C# 本地快速入门
+description: 在“分支和循环”本快速入门教程中，编写 C# 代码，以研究支持条件分支和循环重复执行语句的语言语法。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="branches-and-loops"></a>分支和循环
 
@@ -249,11 +249,11 @@ for(int index = 0; index < 10; index++)
 - `if` 语句中的条件可用于判断是否应将数字计入总和。
 - `for` 循环有助于对 1 到 20 中的所有数字重复执行一系列步骤。
 
-亲自试一试吧。 然后，看看自己是怎么做到的。 你应获取的答案为 63。 通过[在 GitHub 上查看已完成的代码](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54)，你可以看到一个可能的答案。
+亲自试一试吧。 然后，看看自己是怎么做到的。 你应获取的答案为 63。 通过[在 GitHub 上查看已完成的代码](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54)，你可以看到一个可能的答案。
 
 已完成“分支和循环”快速入门教程。
 
-可以在自己的开发环境中继续学习[内插的字符串](interpolated-strings-local.md)快速入门教程。
+你可继续在自己的开发环境中学习[字符串内插](interpolated-strings-local.md)快速入门教程。
 
 若要详细了解这些概念，请参阅下列主题：
 

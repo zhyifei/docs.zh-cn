@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ca4bfd31b505754b508555ff2771a6380ae023b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>创建简单的数据驱动 CRUD 微服务
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/26/2018
 
 **图 8-5**。 简单的数据驱动 CRUD 微服务设计
 
-开发这种类型的服务时，只需要 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 和数据访问 API 或 ORM（如 [Entity Framework Core](https://docs.microsoft.com/ef/core/index)）。 还可以通过 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) 自动生成 [Swagger](http://swagger.io/) 元数据，用于提供有关服务功能的说明，如下一部分中所述。
+开发这种类型的服务时，只需要 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 和数据访问 API 或 ORM（如 [Entity Framework Core](https://docs.microsoft.com/ef/core/index)）。 还可以通过 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) 自动生成 [Swagger](https://swagger.io/) 元数据，用于提供有关服务功能的说明，如下一部分中所述。
 
 请注意，在 Docker 容器中运行 SQL Server 这样的数据库服务器十分适用于开发环境，因为可以设置和运行全部所需的依赖关系，而无需在云中或本地预配数据库。 这在运行集成测试时十分方便。 但是对于生产环境，则不建议在容器中运行数据库服务器，因为这种方法通常无法实现高可用性。 对于 Azure 中的生产环境，建议使用 Azure SQL 数据库或任何其他可提供高可用性和高扩展性的数据库技术。 例如，对于 NoSQL 方法，可选择 DocumentDB。
 
@@ -218,10 +218,10 @@ public void ConfigureServices(IServiceCollection services)
 ### <a name="additional-resources"></a>其他资源
 
 -   **查询数据**
-    [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
+    [https://docs.microsoft.com/ef/core/querying/index](https://docs.microsoft.com/ef/core/querying/index)
 
 -   **保存数据**
-    [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
+    [https://docs.microsoft.com/ef/core/saving/index](https://docs.microsoft.com/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker 容器使用的数据库连接字符串和环境变量
 
@@ -293,30 +293,30 @@ public class CatalogController : ControllerBase
 
 ### <a name="additional-resources"></a>其他资源
 
--   **Scott Hanselman.ASP.NET 核心变得更容易的 RESTful Web API 版本控制**
-    [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+-   **Scott Hanselman.ASP.NET Core RESTful Web API versioning made easy**（简化 ASP.NET Core RESTful Web API 版本控制）
+    [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **版本控制 RESTful web API**
-    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+-   **RESTful web API 版本控制**
+    [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding。版本控制、 超媒体和 REST**
-    [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
+-   **Roy Fielding。Versioning, Hypermedia, and REST**（版本控制、超媒体和 REST）
+    [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>从 ASP.NET Core Web API 生成 Swagger 描述元数据 
 
-[Swagger](http://swagger.io/) 是一个常用开源框架，由包含大量工具的大型“生态系统”提供支持，可帮助设计、生成、存档和使用 RESTful API。 它正逐渐变为 API 描述性元数据域的标准。 应在所有类型的微服务中，无论是数据驱动的微服务还是多个高级域驱动微服务，包含 Swagger 描述性元数据（如下一部分中所述）。
+[Swagger](https://swagger.io/) 是一个常用开源框架，由包含大量工具的大型“生态系统”提供支持，可帮助设计、生成、存档和使用 RESTful API。 它正逐渐变为 API 描述性元数据域的标准。 应在所有类型的微服务中，无论是数据驱动的微服务还是多个高级域驱动微服务，包含 Swagger 描述性元数据（如下一部分中所述）。
 
 Swagger 的核心是 Swagger 规范，它是 JSON 或 YAML 文件中的 API 描述性元数据。 该规范为 API 创建 RESTful 协定，并以人类和机器均可识别的格式详细描述其资源和操作，以简化开发、发现和集成。
 
 该规范是 OpenAPI 规范 (OAS) 的基础，开发于开放、透明和协作化的社区，旨在让 RESTful 接口定义的方式实现标准化。
 
-该规范在如何发现服务以及如何理解其功能方面对其结构进行定义。 有关详细信息，包括 web 编辑器和示例的 Swagger 规范从公司 Spotify、 Uber、 Slack，等 Microsoft，请参阅 Swagger 站点 (<http://swagger.io>)。
+该规范在如何发现服务以及如何理解其功能方面对其结构进行定义。 有关详细信息，包括 Web 编辑器以及 Spotify、Uber、Slack 和 Microsoft 等公司的 Swagger 规范的示例，请访问 Swagger 站点 (<https://swagger.io/>)。
 
 ### <a name="why-use-swagger"></a>为何使用 Swagger？
 
 为 API 生成 Swagger 元数据的主要原因如下。
 
-**为让其他产品能够自动使用和集成 API**。 许多产品和[商业工具](http://swagger.io/commercial-tools/)以及许多[库和框架](http://swagger.io/open-source-integrations/)均支持 Swagger。 Microsoft 具有高级产品和工具，可自动使用基于 Swagger 的 API，举例如下：
+**为让其他产品能够自动使用和集成 API**。 许多产品和[商业工具](https://swagger.io/commercial-tools/)以及许多[库和框架](https://swagger.io/open-source-integrations/)均支持 Swagger。 Microsoft 具有高级产品和工具，可自动使用基于 Swagger 的 API，举例如下：
 
 -   [AutoRest](https://github.com/Azure/AutoRest)。 可自动生成用于调用 Swagger 的 .NET 客户端类。 可通过 CLI 使用此工具，它也与 Visual Studio 集成以便能够通过 GUI 轻松使用。
 
@@ -415,8 +415,8 @@ public class Startup
 
 ### <a name="additional-resources"></a>其他资源
 
--   **ASP.NET Web API 帮助页使用 Swagger**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+-   **使用 Swagger 的 ASP.NET Web API 帮助页**
+    [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 
 >[!div class="step-by-step"]

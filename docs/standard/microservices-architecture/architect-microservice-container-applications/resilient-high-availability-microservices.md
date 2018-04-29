@@ -1,7 +1,7 @@
 ---
-title: "微服务中的复原和高可用性"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务中的复原和高可用性"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 微服务中的复原和高可用性
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务中的复原和高可用性
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cb78e98a01e413f31e6476dac77acdc4e5d4f78d
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 3ad3fc88a3e857f49283ff596e0385d0daad64b6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服务中的复原和高可用性
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/05/2018
 
 在基于服务器的整体式应用程序中，可简单地将日志写入磁盘上的文件（日志文件），然后使用任意工具对其进行分析。 因为应用程序限制在固定的服务器或 VM 上执行，所以它通常不会太过复杂而导致无法分析事件流。 但在分布式应用程序中，多个服务在业务流程协调程序群集中的多数节点上执行，因此关联分布式事件是一项挑战。
 
-基于微服务的应用程序不应尝试自行存储事件或日志文件的输出流，甚至不应尝试管理事件到中心位置的路由。 它应该是透明的，即每个进程只需要将其事件流写入一个标准输出，该标准输出将由运行的执行环境基础结构收集。 事件流路由器的一个示例为 [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)，该路由器从多个源收集事件流，并将其发布到输出系统。 这些可能包括开发环境或云系统（如 [Application Insights](https://azure.microsoft.com/services/application-insights/)、[OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite)（用于本地应用程序）和 [Azure 诊断](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics)）的简单标准输出。 也有一些好的第三方日志分析平台和工具（如 [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)），它们甚至可以实时搜索、提示、报告和监视日志。
+基于微服务的应用程序不应尝试自行存储事件或日志文件的输出流，甚至不应尝试管理事件到中心位置的路由。 它应该是透明的，即每个进程只需要将其事件流写入一个标准输出，该标准输出将由运行的执行环境基础结构收集。 事件流路由器的一个示例为 [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)，该路由器从多个源收集事件流，并将其发布到输出系统。 这些可能包括开发环境或云系统（如 [Application Insights](https://azure.microsoft.com/services/application-insights/)、[OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite)（用于本地应用程序）和 [Azure 诊断](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics)）的简单标准输出。 也有一些好的第三方日志分析平台和工具（如 [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)），它们甚至可以实时搜索、提示、报告和监视日志。
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>管理运行状况和诊断信息的业务流程协调程序
 
@@ -59,26 +59,26 @@ ms.lasthandoff: 03/05/2018
 
 ## <a name="additional-resources"></a>其他资源
 
--   **The Twelve-Factor App.XI.Logs: Treat logs as event streams**（Twelve-Factor 应用。XI。日志：将日志视为事件流）
-    [*https://12factor.net/logs*](https://12factor.net/logs)
+-   **The Twelve-Factor App.XI.Logs: Treat logs as event streams**（日志：将日志视为事件流）
+    [https://12factor.net/logs](https://12factor.net/logs)
 
 -   **Microsoft 诊断 EventFlow 库。** GitHub 存储库。
 
     [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
 -   **什么是 Azure 诊断**
-    [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+    [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
 
 -   **将 Windows 计算机连接到 Azure 中的 Log Analytics 服务**
-    [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+    [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Logging What You Mean: Using the Semantic Logging Application Block**（记录你的想法：使用语义记录应用程序块）
+-   **Logging What You Mean: Using the Semantic Logging Application Block**（记录你的想法：使用语义日志记录应用程序块）
     [https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 -   **Splunk。** 官方网站。
-    [*http://www.splunk.com*](http://www.splunk.com)
+    [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **EventSource 类**。 用于 Windows (ETW) 事件跟踪的 API [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
+-   **EventSource 类**。 Windows 事件跟踪 (ETW) 的 API [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 
 

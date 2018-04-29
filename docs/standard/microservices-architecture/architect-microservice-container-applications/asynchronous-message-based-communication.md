@@ -1,7 +1,7 @@
 ---
-title: "基于消息的异步通信"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 基于消息的异步通信"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 基于消息的异步通信
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 基于消息的异步通信
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>基于消息的异步通信
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/19/2018
 
 如前面的[分布式数据管理挑战和解决方案](#challenges-and-solutions-for-distributed-data-management)部分所述，可以使用集成事件来实现跨多个微服务的业务任务。 这样就可以在这些服务之间实现最终一致性。 最终一致事务由一组分布式操作组成。 在执行每个操作时，相关微服务会更新域实体，并发布另一个集成事件，以便在相同的端到端业务任务中引发下一个操作。
 
-很重要的一点是，你可能想要与订阅同一事件的多个微服务进行通信。 为此，可以使用基于事件驱动通信的发布/订阅消息传递，如图 4-19 所示。 这种发布/订阅机制并不是微服务体系结构所独有的。 它类似于 DDD 中[绑定上下文](http://martinfowler.com/bliki/BoundedContext.html)的通信方式，或者类似于在[命令和查询责任分离 (CQRS)](http://martinfowler.com/bliki/CQRS.html) 体系结构模式中将更新从写入数据库传播到读取数据库的方式。 其目标是在分布式系统中的多个数据源之间实现最终一致性。
+很重要的一点是，你可能想要与订阅同一事件的多个微服务进行通信。 为此，可以使用基于事件驱动通信的发布/订阅消息传递，如图 4-19 所示。 这种发布/订阅机制并不是微服务体系结构所独有的。 它类似于 DDD 中[绑定上下文](https://martinfowler.com/bliki/BoundedContext.html)的通信方式，或者类似于在[命令和查询责任分离 (CQRS)](https://martinfowler.com/bliki/CQRS.html) 体系结构模式中将更新从写入数据库传播到读取数据库的方式。 其目标是在分布式系统中的多个数据源之间实现最终一致性。
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/19/2018
 
 -   使用事务（基于 DTC）队列，如 MSMQ。 （不过，这是一种传统方法。）
 
--   使用[事务日志挖掘](http://www.scoop.it/t/sql-server-transaction-log-mining)。
+-   使用[事务日志挖掘](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
 -   使用完整[事件溯源](https://msdn.microsoft.com/library/dn589792.aspx)模式。
 
@@ -92,13 +92,13 @@ ms.lasthandoff: 01/19/2018
 ## <a name="additional-resources"></a>其他资源
 
 -   **Event Driven Messaging**（事件驱动的消息传递）
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Publish/Subscribe Channel**（发布/订阅通道）
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    [http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Udi Dahan.Clarified CQRS**（CQRS 说明）
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+-   **Udi Dahan.Clarified CQRS**（明确的 CQRS）
+    [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **命令和查询责任分离 (CQRS)**
     [https://docs.microsoft.com/azure/architecture/patterns/cqrs](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
@@ -106,11 +106,11 @@ ms.lasthandoff: 01/19/2018
 -   **绑定上下文之间的通信**
     [https://msdn.microsoft.com/library/jj591572.aspx](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency**
-    （最终一致性）[https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual consistency**（最终一致性）
+    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Jimmy Bogard。Refactoring Towards Resilience: Evaluating Coupling**
-    （重构复原能力：评估耦合度）[https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+-   **Jimmy Bogard。Refactoring Towards Resilience: Evaluating Coupling**（重构复原能力：评估耦合度）
+    [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 
 >[!div class="step-by-step"]

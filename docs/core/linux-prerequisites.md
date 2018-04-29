@@ -1,21 +1,21 @@
 ---
-title: "Linux 上 .NET Core 的先决条件"
-description: "支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux 计算机上开发、部署和运行 .NET Core 应用程序。"
+title: Linux 上 .NET Core 的先决条件
+description: 支持的 Linux 版本和 .NET Core 依赖项，用于在 Linux 计算机上开发、部署和运行 .NET Core 应用程序。
 keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 12/06/2017
-ms.topic: article
+ms.date: 04/19/2018
+ms.topic: conceptual
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 913d3869559b10af508e695a06d06021f8f90175
-ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
+ms.openlocfilehash: 7ce13af00a43e1ce84f7c8af70155d0c4a5bed4c
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先决条件
 
@@ -24,25 +24,28 @@ ms.lasthandoff: 02/15/2018
 * [结合使用命令行和常用编辑器](tutorials/using-with-xplat-cli.md)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
+> [!NOTE]
+> 生产服务器/环境不需要 .NET Core SDK 包。 部署到生产环境的应用只需要 .NET Core 运行时包。 .NET Core 运行时与应用一同部署为独立部署的一部分，但是，对于依赖框架的部署应用，它必须单独部署。 有关依赖框架和独立部署类型的更多信息，请参阅 [.NET Core 应用程序部署](./deploying/index.md)。 另请参阅[独立式 Linux 应用程序](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)，了解特定准则。
+
 ## <a name="supported-linux-versions"></a>支持的 Linux 版本
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-.NET Core 2.0 将 Linux 视为一个操作系统。 支持的 Linux 发行版本都对应有一个 Linux 版本（每芯片体系结构）。
+.NET Core 2.x 将 Linux 视为一个操作系统。 支持的 Linux 分发都对应有一个 Linux 内部版本（根据芯片体系结构）。
 
 以下 Linux 64 位（`x86_64` 或 `amd64`）发行版本/版本支持 NET Core 2.x：
 
- * Red Hat Enterprise Linux 7
- * CentOS 7
- * Oracle Linux 7
- * Fedora 25、Fedora 26
- * Debian 8.7 或更高版本 
- * Ubuntu 17.04、Ubuntu 16.04、Ubuntu 14.04
- * Linux Mint 18、Linux Mint 17
- * openSUSE 42.2 或更高版本
- * SUSE Enterprise Linux (SLES) 12 SP2 或更高版本
+* Red Hat Enterprise Linux 7
+* CentOS 7
+* Oracle Linux 7
+* Fedora 27、26
+* Debian 9、8.7 或更高版本
+* Ubuntu 17.10、16.04、14.04
+* Linux Mint 18、17
+* openSUSE 42.3 或更高版本
+* SUSE Enterprise Linux (SLES) 12 Service Pack 2 或更高版本
 
-有关支持 .NET Core 2.x 的操作系统、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.x - 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。
+有关 .NET Core 2.x 支持的操作系统、分发和版本、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 2.x - 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -51,12 +54,11 @@ ms.lasthandoff: 02/15/2018
 * Red Hat Enterprise Linux 7
 * CentOS 7
 * Oracle Linux 7
-* Fedora 24
+* Fedora 26
 * Debian 8.2 或更高版本
-* Ubuntu 14.04、Ubuntu 16.04、Ubuntu 16.10\*
- * 最新修补版 .NET Core 1.1 支持 Ubuntu 16.10
-* Linux Mint 17
-* openSUSE 42.1 或更高版本 (.NET Core 1.1)
+* Ubuntu 16.04、14.04
+* Linux Mint 18、17
+* openSUSE 42.3 或更高版本 (.NET Core 1.1)
 
 有关支持 .NET Core 1.x 的操作系统、不支持的 OS 版本和生命周期策略链接的完整列表，请参阅 [.NET Core 1.x - 支持的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)。
 
@@ -77,9 +79,9 @@ Ubuntu 发行版本需要安装以下库：
 * libuuid1
 * libkrb5-3
 * zlib1g
-* libicu52（对于 14.X）
-* libicu55（对于 16.X）
-* libicu57（对于 17.X）
+* libicu52（针对 14.x）
+* libicu55（针对 16.x）
+* libicu57（针对 17.x）
 
 ### <a name="centos"></a>CentOS
 
@@ -107,537 +109,288 @@ CentOS 发行版本需要安装以下库：
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>使用 .NET Core 安装程序脚本编写安装脚本
 
-`dotnet-install` 脚本用于执行 CLI 工具链和共享运行时的非管理员安装。 可从以下位置下载脚本：https://dot.net/v1/dotnet-install.sh
+[dotnet-install 脚本](./tools/dotnet-install-script.md)用于执行 CLI 工具链和共享运行时的非管理员安装。 可通过 [https://dot.net/v1/dotnet-install.sh](https://dot.net/v1/dotnet-install.sh) 下载脚本。
 
 安装程序 bash 脚本用于自动化方案和非管理员安装。 此脚本也读取 PowerShell 开关，因此可以与 Linux/OS X 系统上的脚本结合使用。
 
-> [!IMPORTANT]
-> 运行脚本前，请安装所需的[依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。
+## <a name="install-net-core-for-supported-red-hat-enterprise-linux-rhel-versions"></a>为支持的 Red Hat Enterprise Linux (RHEL) 版本安装 .NET Core
 
-## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a>为 Red Hat Enterprise Linux (RHEL) 7 安装 .NET Core
-
-在 RHEL 7 上安装 .NET Core：
-
-1. 启用 Red Hat .NET 通道（在 RHEL 7 订阅下）。
-    * 对于 Red Hat Enterprise 7 服务器，请使用：
-    
-         ```bash
-         subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-         ```
-    
-    * 对于 Red Hat Enterprise 7 工作站，请使用：
-    
-        ```bash
-        subscription-manager repos --enable=rhel-7-workstation-dotnet-rpms
-         ```
-    
-    * 对于 Red Hat Enterprise 7 HPC 计算节点，请使用：
-    
-        ```bash
-        subscription-manager repos --enable=rhel-7-hpc-node-dotnet-rpms
-        ```
-
-2. 安装 scl 工具。
-
-    ```bash
-    yum install scl-utils
-    ```
-    
-3. 安装 .NET Core
+在支持的 RHEL 版本上安装 .NET Core：
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-安装 .NET Core 2.0 SDK 和运行时：
-
-   ```bash
-   yum install rh-dotnet20
-   ```
-
-为环境启用 .NET Core 2.0 SDK/运行时：
-
-   ```bash
-   scl enable rh-dotnet20 bash
-   ```
+为确保获得最新的安装信息，请遵循适用于支持的 RHEL 版本的 [.NET Core 2.x SDK 和 Runtime 安装程序说明](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-current)。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **.NET Core 1.1**
 
-安装 .NET Core 1.1 SDK 和运行时：
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   ```bash
-   yum install rh-dotnetcore11
-   ```
-
-为环境启用 .NET Core 1.1 SDK 和运行时：
-
-   ```bash
-   scl enable rh-dotnetcore11 bash
-   ```
-
+2.  有关 Red Hat Enterprise Linux 上最新的 .NET Core 1.1 安装信息，请参阅 [.NET Core 1.1 入门指南](https://access.redhat.com/documentation/en-us/net_core/1.1/html/getting_started_guide/)
+     
 **.NET Core 1.0**
 
-安装 .NET Core 1.0 SDK 和运行时：
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   ```bash
-   yum install rh-dotnetcore10
-   ```
-
-为环境启用 .NET Core 1.0 SDK 和运行时：
-
-   ```bash
-   scl enable rh-dotnetcore10 bash
-   ```
-
----
-4. 运行 `dotnet --version` 命令，以证明安装成功。
-
-     ```bash
-     dotnet --version
-     ```
+2.  有关 Red Hat Enterprise Linux 上最新的 .NET Core 1.0 安装信息，请参阅 [.NET Core 1.0 入门指南](https://access.redhat.com/documentation/en-us/net_core/1.0/html/getting_started_guide/)
 
 若要获取 Red Hat .NET 通道访问注册方面的帮助，请参阅 Red Hat 提供的 [.NET Core 1.1 入门指南的第 1 章](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/)。
 
-## <a name="install-net-core-for-ubuntu-1404-ubuntu-1604-ubuntu-1610--linux-mint-17-linux-mint-18-64-bit"></a>为 Ubuntu 14.04、Ubuntu 16.04、Ubuntu 16.10、Linux Mint 17 和 Linux Mint 18（64 位）安装 .NET Core
+---
 
-1. 从系统中删除 .NET Core 的所有旧预览版本。
+## <a name="install-net-core-for-supported-ubuntu-and-linux-mint-distributionsversions-64-bit"></a>为支持的 Ubuntu 和 Linux Mint 分发/版本（64 位）安装 .NET Core
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-2. 注册受信任的 Microsoft 产品密钥。
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-   sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-   ```
+2. 在支持的 Ubuntu 和 Linux Mint 分发/版本（64 位）上安装 .NET Core 2.x：
 
-3. 设置所需的版本宿主包源。
+**.NET Core 2.0**
 
-   **Ubuntu 17.10**
+|Runtime / SDK          |Ubuntu 17.10  |Ubuntu 16.04 / Linux Mint 18|Ubuntu 14.04 / Linux Mint 17|
+|-------------------------|--------------|----------------------------|----------------------------|
+|.NET Core Runtime 2.0.6  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
+|.NET Core Runtime 2.0.5  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
+|.NET Core SDK 2.1.103    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
+|.NET Core SDK 2.0.3      |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
 
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
-   **Ubuntu 17.04**
+**.NET Core 2.1**
 
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-zesty-prod zesty main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
+>[!IMPORTANT]
+> 若要将 .NET Core 2.1 与 Visual Studio 一起使用，需要[安装 Visual Studio 2017 15.7 Preview 1 或更高版本](https://www.visualstudio.com/vs/preview)。
 
-   **Ubuntu 16.04 / Linux Mint 18**
+|Runtime / SDK                  |Ubuntu 17.10    |Ubuntu 16.04 / Linux Mint 18|Ubuntu 14.04 / Linux Mint 17|
+|---------------------------------|----------------|----------------------------|----------------------------|
+|.NET Core Runtime 2.1.0-preview2 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
+|.NET Core Runtime 2.1.0-preview1 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
+|.NET Core SDK 2.1.300-preview2   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)
+|.NET Core SDK 2.1.300-preview1   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
 
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
-
-   **Ubuntu 14.04 / Linux Mint 17**
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
-
-4. 安装 .NET Core。
-
-   ```bash
-   sudo apt-get install dotnet-sdk-2.1.4
-   ```
-
-4. 运行 `dotnet --version` 命令，以证明安装成功。
-
-   ```bash
-   dotnet --version
-   ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 设置所需的版本宿主包源。
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   **Ubuntu 16.10**
-   
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ yakkety main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
-   sudo apt-get update
-   ```
+2. 在支持的 Ubuntu 和 Linux Mint 分发/版本（64 位）上安装 .NET Core 1.x：
 
-  **Ubuntu 16.04 / Linux Mint 18**
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
-   sudo apt-get update
-   ```
-    
-   **Ubuntu 14.04 / Linux Mint 17**
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
-   sudo apt-get update
-   ```
-
-3. 在 Ubuntu 或 Linux Mint 上安装 .NET Core 1.x：
-
-   ```bash
-   sudo apt-get install dotnet-dev-1.0.4
-   ```
-
-4. 运行 `dotnet --version` 命令，以证明安装成功。
-
-   ```bash
-   dotnet --version
-   ```
+| Runtime / SDK         |Ubuntu 16.04 / Linux Mint 18|Ubuntu 14.04 / Linux Mint 17|
+|-------------------------|----------------------------|----------------------------|
+|.NET Core Runtime 1.1.7  |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-16.04-x64-binaries)            |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-14.04-x64-binaries)            |
+|.NET Core Runtime 1.1.6  |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-ubuntu-16.04-x64-binaries)            |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-ubuntu-14.04-x64-binaries)            |
+|.NET Core Runtime 1.0.10 |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-ubuntu-16.04-x64-binaries)            |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-ubuntu-14.04-x64-binaries)            |
+|.NET Core Runtime 1.0.9  |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-ubuntu-16.04-x64-binaries)            |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-ubuntu-14.04-x64-binaries)            |
+|.NET Core SDK 1.1.8      |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-ubuntu-16.04-x64-binaries)            |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-ubuntu-14.04-x64-binaries)            |
+|.NET Core SDK 1.1.7      |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-ubuntu-16.04-x64-binaries)            |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-ubuntu-14.04-x64-binaries)            |
+|.NET Core SDK 1.0.4      |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-ubuntu-16.04-x64-binaries)            |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-ubuntu-14.04-x64-binaries)            |
+|.NET Core SDK 1.0.1      |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-ubuntu-16.04-x64-binaries)            |[安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-ubuntu-14.04-x64-binaries)            |
 
 ---
 
- ## <a name="install-net-core-for-debian-8-or-debian-9-64-bit"></a>为 Debian 8 或 Debian 9（64 位）安装 .NET Core
+## <a name="install-net-core-for-supported-debian-versions-64-bit"></a>为支持的 Debian 版本（64 位）安装 .NET Core
 
-在 Debian 8 或 Debian 9（64 位）上安装 .NET Core 的具体步骤：
-
-1. 从系统中删除 .NET Core 的所有旧预览版本。
+在支持的 Debian 版本（64 位）上安装 .NET Core：
 
 > [!NOTE]
 > 必须有用户控制目录，才能通过 tar.gz 在 Linux 系统上进行安装。
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-2. 安装系统组件。
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   ```bash
-   sudo apt-get update
-   sudo apt-get install curl libunwind8 gettext apt-transport-https
-   ```
-   
-3. 注册受信任的 Microsoft 产品密钥。
+2. 在支持的 Debian 版本（64 位）上安装 .NET Core 2.x：
 
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-   sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-   ```
-   
-4. 注册 Microsoft 产品源。
+**.NET Core 2.0**
 
-   **Debian 9 (Stretch)**
+|Runtime / SDK          |Debian 9       |Debian 8       |
+|-------------------------|---------------|---------------|
+|.NET Core Runtime 2.0.6  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
+|.NET Core Runtime 2.0.5  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
+|.NET Core SDK 2.1.103    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
+|.NET Core SDK 2.0.3      |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
 
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/dotnetdev.list'
-   ```
-   
-   **Debian 8 (Jessie)**
-   
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/dotnetdev.list'
-   ```
-   
-5. 安装 .NET Core SDK。
+**.NET Core 2.1**
 
-   ```bash
-   sudo apt-get update
-   sudo apt-get install dotnet-sdk-2.0.0
-   ```
+>[!IMPORTANT]
+> 若要将 .NET Core 2.1 与 Visual Studio 一起使用，需要[安装 Visual Studio 2017 15.7 Preview 1 或更高版本](https://www.visualstudio.com/vs/preview)。
 
-6. 将 dotnet 添加到 PATH。
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
-   
-7. 运行 `dotnet --version` 命令，以证明安装成功。
-
-   ```bash
-   dotnet --version
-   ```   
-  
+|Runtime / SDK                  |Debian 9       |Debian 8       |
+|---------------------------------|---------------|---------------|
+|.NET Core Runtime 2.1.0-preview2 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview2)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview2)   |
+|.NET Core Runtime 2.1.0-preview1 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview1)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview1)   |
+|.NET Core SDK 2.1.300-preview2   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview2)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview2)   |
+|.NET Core SDK 2.1.300-preview1   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview1)   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview1)   |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 获取系统必备。
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   ```bash
-   sudo apt-get install curl libunwind8 gettext
-   ```
+2. 在 Debian 9 或 Debian 8 上安装 .NET Core 1.x：
 
-3. 下载 .NET Core SDK 二进制文件 (tarball)。
-
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848826
-   ```
-
-4. 提取 .NET Core SDK 二进制文件。
-
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. 将 dotnet 添加到 PATH。
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-
-6. 运行 `dotnet --version` 命令，以证明安装成功。
-
-   ```bash
-   dotnet --version
-   ```
+* .NET Core Runtime 1.1.7 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-debian-x64-binaries)
+* .NET Core Runtime 1.1.6 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-debian-x64-binaries)
+* .NET Core Runtime 1.0.10 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-debian-x64-binaries)
+* .NET Core Runtime 1.0.9 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-debian-x64-binaries)
+* .NET Core SDK 1.1.8 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-debian-x64-binaries)
+* .NET Core SDK 1.1.7 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-debian-x64-binaries)
+* .NET Core SDK 1.0.4 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-debian-x64-binaries)
+* .NET Core SDK 1.0.1 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries)
 
 ---
 
-## <a name="install-net-core-for-fedora-24-fedora-25-or-fedora-26-64-bit"></a>为 Fedora 24、Fedora 25 或 Fedora 26（64 位）安装 .NET Core
+## <a name="install-net-core-for-supported-fedora-versions-64-bit"></a>为支持的 Fedora 版本（64 位）安装 .NET Core
 
-若要在 Fedora 26 或 Fedora 25 上安装 .NET Core 2.x，或在 Fedora 24 上安装 .NET Core 1.x，请执行以下操作：
-
-1. 从系统中删除 .NET Core 的所有旧预览版本。
+在支持的 Fedora 版本上安装 .NET Core：
 
 > [!NOTE]
 > 必须有用户控制目录，才能通过 tar.gz 在 Linux 系统上进行安装。
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-**Fedora 26 或 Fedora 25**
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-2. 注册 Microsoft 签名密钥。
+2. 在支持的 Fedora 版本（64 位）上安装 .NET Core 2.x：
 
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   ```
+**.NET Core 2.0**
 
-3. 添加 dotnet 产品源。
+|Runtime / SDK          |Fedora 26 或更高版本 |Fedora 25 或以前版本 |
+|-------------------------|-------------------|----------------------|
+|.NET Core Runtime 2.0.6  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
+|.NET Core Runtime 2.0.5  |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
+|.NET Core SDK 2.1.103    |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
+|.NET Core SDK 2.0.3      |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
 
-   ```bash
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
-   ```
+**.NET Core 2.1**
 
-4. 安装 .NET Core SDK。
+>[!IMPORTANT]
+> 若要将 .NET Core 2.1 与 Visual Studio 一起使用，需要[安装 Visual Studio 2017 15.7 Preview 1 或更高版本](https://www.visualstudio.com/vs/preview)。
 
-   ```bash
-   sudo dnf update
-   sudo dnf install libunwind libicu
-   sudo dnf install dotnet-sdk-2.0.0
-   ```
-
-5. 将 dotnet 添加到 PATH。
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
+|Runtime / SDK                  |Fedora 26 或更高版本 |Fedora 25 或以前版本 |
+|---------------------------------|-------------------|----------------------|
+|.NET Core Runtime 2.1.0-preview2 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview2)           |
+|.NET Core Runtime 2.1.0-preview1 |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview1)           |
+|.NET Core SDK 2.1.300-preview2   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview2)           |
+|.NET Core SDK 2.1.300-preview1   |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview1)       |[安装链接](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview1)           |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+1. 从系统中删除 .NET Core 的所有旧预览版本。
+
+2. 在支持的 Fedora 版本（64 位）上安装 .NET Core 1.x：
 
 **Fedora 24**
 
-2. 获取系统必备。
+* .NET Core Runtime 1.1.7 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-fedora-24-x64-binaries)
+* .NET Core Runtime 1.1.6 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-fedora-24-x64-binaries)
+* .NET Core SDK 1.1.8 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-fedora-24-x64-binaries)
+* .NET Core SDK 1.1.7 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-fedora-24-x64-binaries)
+* .NET Core SDK 1.0.1 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries)
 
-   ```bash
-   sudo dnf install libunwind libicu
-   ```
+**Fedora 23**
 
-3. 下载 .NET Core SDK 二进制文件 (tarball)。
+* .NET Core Runtime 1.0.9 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-fedora-23-x64-binaries)
+* .NET Core SDK 1.0.4 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-fedora-23-x64-binaries)
+* .NET Core SDK 1.0.1 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-fedora-23-x64-binaries)
 
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848833
-   ```
-
-4. 提取 .NET Core SDK 二进制文件。
-
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. 将 dotnet 添加到 PATH。
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-   
 ---
 
-6. 运行 `dotnet --version` 命令，以证明安装成功。
+## <a name="install-net-core-for-supported-centos-and-oracle-linux-distributionsversions-64-bit"></a>为支持的 CentOS 和 Oracle Linux 分发/版本（64 位）安装 .NET Core
 
-   ```bash
-   dotnet --version
-   ```
-
-## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a>为 CentOS 7.1（64 位）和 Oracle Linux 7.1（64 位）安装 .NET Core
-
-若要为 CentOS 7.1（64 位）和 Oracle Linux 7.1（64 位）安装 .NET Core，请执行以下操作：
-
-1. 从系统中删除 .NET Core 的所有旧预览版本。
+为支持的 CentOS 和 Oracle Linux 分发/版本（64 位）安装 .NET Core：
 
 > [!NOTE]
 > 必须有用户控制目录，才能通过 tar.gz 在 Linux 系统上进行安装。
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-2. 注册 Microsoft 签名密钥。
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   ```
+2. 在支持的 CentOS 和 Oracle Linux 分发/版本（64 位）上安装 .NET Core 2.x：
 
-3. 添加 Microsoft 产品源。
+**.NET Core 2.0**
 
-   ```bash
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
-   ```
+* .NET Core Runtime 2.0.6 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
+* .NET Core Runtime 2.0.5 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5)
+* .NET Core SDK 2.1.103 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103)
+* .NET Core SDK 2.0.3 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3)
+ 
+**.NET Core 2.1**
 
-4. 安装 .NET Core SDK。
+>[!IMPORTANT]
+> 若要将 .NET Core 2.1 与 Visual Studio 一起使用，需要[安装 Visual Studio 2017 15.7 Preview 1 或更高版本](https://www.visualstudio.com/vs/preview/)。
 
-   ```bash
-   sudo yum update
-   sudo yum install libunwind libicu
-   sudo yum install dotnet-sdk-2.0.0
-   ```
-
-5. 将 dotnet 添加到 PATH
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
+* .NET Core Runtime 2.1.0-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview2)
+* .NET Core Runtime 2.1.0-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1)
+* .NET Core SDK 2.1.300-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview2)
+* .NET Core SDK 2.1.300-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 获取系统必备。
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   ```bash
-   sudo yum install libunwind libicu
-   ```
-   
-3. 下载 .NET Core SDK 二进制文件 (tarball)。
+2. 在支持的 CentOS 和 Oracle Linux 发行版本/版本（64 位）上安装 .NET Core 1.x：
 
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848821
-   ```
-
-4. 提取 .NET Core SDK 二进制文件。
-
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. 将 dotnet 添加到 PATH。
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
+* .NET Core Runtime 1.1.7 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-centos-x64-binaries)
+* .NET Core Runtime 1.1.6 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-centos-x64-binaries)
+* .NET Core Runtime 1.0.10 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-centos-x64-binaries)
+* .NET Core Runtime 1.0.9 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-centos-x64-binaries)
+* .NET Core SDK 1.1.8 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-centos-x64-binaries)
+* .NET Core SDK 1.1.7 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-centos-x64-binaries)
+* .NET Core SDK 1.0.4 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-centos-x64-binaries)
+* .NET Core SDK 1.0.1 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-centos-x64-binaries)
 
 ---
 
-6. 运行 `dotnet --version` 命令，以证明安装成功。
+## <a name="install-net-core-for-supported-suse-linux-enterprise-server-and-opensuse-distributionsversions-64-bit"></a>为支持的 SUSE Linux Enterprise Server 和 OpenSUSE 发行版本/版本（64 位）安装 .NET Core
 
-   ```bash
-   dotnet --version
-   ```
-
-## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a>为 SUSE Linux Enterprise Server（64 位）安装 .NET Core
-
-若要为 SUSE Linux Enterprise Server (SLES) 12 SP2（64 位）安装 .NET Core 2.x，请执行以下操作：
-
-1. 从系统中删除 .NET Core 的所有旧预览版本。
-
-2. 添加 dotnet 产品源。
-
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/dotnetdev.repo'
-   ```
-
-3. 安装 .NET Core SDK。
-
-   ```bash
-   sudo zypper update
-   sudo zypper install libunwind libicu
-   sudo zypper install dotnet-sdk-2.0.0
-   ```
-
-4. 将 dotnet 添加到 PATH。
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
-
-5. 运行 `dotnet --version` 命令，以证明安装成功。
-
-   ```bash
-   dotnet --version
-   ```
-   
-## <a name="install-net-core-for-opensuse-64-bit"></a>为 openSUSE（64 位）安装 .NET Core
-
-若要为 openSUSE 安装 .NET Core 2.x 或者为 openSUSE（64 位）安装 .NET Core 1.x，请执行以下操作：
-
-1. 从系统中删除 .NET Core 的所有旧预览版本。
-
-> [!NOTE]
-> 必须有用户控制目录，才能通过 tar.gz 在 Linux 系统上进行安装。
+为支持的 SUSE Linux Enterprise Server 和 OpenSUSE 发行版本/版本（64 位）安装 .NET Core 2.x：
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-2. 注册 Microsoft 签名密钥。
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   ```
+2. 在支持的 SUSE Linux Enterprise Server 和 OpenSUSE 发行版本/版本（64 位）上安装 .NET Core 2.x：
 
-3. 添加 dotnet 产品源。
+**.NET Core 2.0**
 
-   ```bash
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/dotnetdev.repo'
-   ``` 
+* .NET Core Runtime 2.0.6 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6)
+* .NET Core Runtime 2.0.5 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5)
+* .NET Core SDK 2.1.103 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.103)
+* .NET Core SDK 2.0.3 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.3)
+ 
+**.NET Core 2.1**
 
-4. 安装 .NET Core SDK。
+>[!IMPORTANT]
+> 若要将 .NET Core 2.1 与 Visual Studio 一起使用，需要[安装 Visual Studio 2017 15.7 Preview 1 或更高版本](https://www.visualstudio.com/vs/preview)。
 
-   ```bash
-   sudo zypper update
-   sudo zypper install libunwind libicu
-   sudo zypper install dotnet-sdk-2.0.0
-   ```
-
-5. 将 dotnet 添加到 PATH。
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
+* .NET Core Runtime 2.1.0-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview2)
+* .NET Core Runtime 2.1.0-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1)
+* .NET Core SDK 2.1.300-preview2 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview2)
+* .NET Core SDK 2.1.300-preview1 [安装链接](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-2. 获取系统必备。
+1. 从系统中删除 .NET Core 的所有旧预览版本。
 
-   ```bash
-   sudo zypper install libunwind libicu
-   ```
+2. 在支持的 SUSE Linux Enterprise Server 和 OpenSUSE 发行版本/版本（64 位）上安装 .NET Core 1.x：
 
-3. 下载 .NET Core SDK 二进制文件 (tarball)。
+**SUSE Linux Enterprise Server 13.2**
 
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848824
-   ```
+* .NET Core Runtime 1.1.7 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-opensuse-13.2-x64-binaries)
+* .NET Core Runtime 1.1.6 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-opensuse-13.2-x64-binaries)
+* .NET Core SDK 1.1.7 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-opensuse-13.2-x64-binaries)
 
-4. 提取 .NET Core SDK 二进制文件。
-   
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
+**openSUSE 24**
 
-5. 将 dotnet 添加到 PATH。
+* .NET Core SDK 1.0.4 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-opensuse-24-x64-binaries)
+* .NET Core SDK 1.0.1 [安装链接](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-opensuse-24-x64-binaries)
 
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-   
 ---
-
-6. 运行 `dotnet --version` 命令，以证明安装成功。
-
-   ```bash
-   dotnet --version
-   ```
 
 > [!IMPORTANT]
-> 若对在支持的 Linux 发行版本/版本上安装 .NET Core 2.x 有疑问，请参阅每个已安装的发行版本/版本对应的 [2.0 已知问题](https://github.com/dotnet/core/tree/master/release-notes/2.0)主题。 
->
-> 若对在支持的 Linux 发行版本/版本上安装 .NET Core 1.x 有疑问，请参阅每个已安装的发行版本/版本对应的 [1.0.0 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md)和 [1.0.1 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md)主题。
+> 若对在支持的 Linux 分发/版本上安装 .NET Core 有疑问，请参阅下方你所安装的分发/版本的相应主题：
+> * [.NET Core 2.1 已知问题](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+> * [.NET Core 2.0 已知问题](https://github.com/dotnet/core/tree/master/release-notes/2.0)
+> * [.NET Core 1.1 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+> * [.NET Core 1.0 已知问题](https://github.com/dotnet/core/blob/master/release-notes/1.0)

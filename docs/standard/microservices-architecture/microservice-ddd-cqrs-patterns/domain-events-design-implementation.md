@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: bec1341df85f86d5f2aa15753a11a9c4a2d0173f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>域事件：设计和实现
 
@@ -209,7 +209,7 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 跨聚合的任何规则都不会始终保持最新状态。 通过事件处理、批处理或其他更新机制，其他依赖项可在特定时间内解析。 （第 128 页）
 
-Vaughn Vernon 在 [Effective Aggregate Design.Part II: Making Aggregates Work Together](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)（有效聚合设计。第二部分：让聚合共同工作）中提到：
+Vaughn Vernon 在 [Effective Aggregate Design.Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)（有效聚合设计。第二部分：让聚合共同工作）中提到：
 
 因此，如果在一个聚合实例上执行命令需要在一个或多个聚合上执行其他业务规则，则使用最终一致性。\[...\]有一个实用方法可在 DDD 模型中支持最终一致性。 聚合方法发布及时交付到一个或多个异步订阅服务器的域事件。
 
@@ -340,20 +340,20 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 -   **Greg Young.What is a Domain Event?**
     [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)（什么是域事件？）
 
--   **Jan Stenberg.Domain Events and Eventual Consistency**
+-   **Jan Stenberg。Domain Events and Eventual Consistency**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)（域事件和最终一致性）
 
--   **Jimmy Bogard.A better domain events pattern**
+-   **Jimmy Bogard。A better domain events pattern**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)（更好的域事件模式）
 
--   **Vaughn Vernon.Effective Aggregate Design Part II: Making Aggregates Work Together**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)（高效聚合设计第二部：协同聚合）
+-   **Vaughn Vernon。Effective Aggregate Design Part II: Making Aggregates Work Together**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)（高效聚合设计第二部：协同聚合）
 
--   **Jimmy Bogard.Strengthening your domain: Domain Events**
+-   **Jimmy Bogard。Strengthening your domain: Domain Events**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>*（强化域：域事件）
 
--   **Tony Truong.Domain Events Pattern Example**
-    [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)（域事件模式示例）
+-   **Tony Truong。Domain Events Pattern Example**
+    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)（域事件模式示例）
 
 -   **Udi Dahan.How to create fully encapsulated Domain Models**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)（如何创建完全封装的域模型）

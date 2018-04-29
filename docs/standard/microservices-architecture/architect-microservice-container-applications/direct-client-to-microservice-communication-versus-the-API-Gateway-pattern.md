@@ -1,7 +1,7 @@
 ---
-title: "客户端到微服务直接通信与 API 网关模式"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 客户端到微服务直接通信与 API 网关模式"
-keywords: "Docker, 微服务, ASP.NET, 容器, API 网关"
+title: 客户端到微服务直接通信与 API 网关模式
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 客户端到微服务直接通信与 API 网关模式
+keywords: Docker, 微服务, ASP.NET, 容器, API 网关
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>客户端到微服务直接通信与 API 网关模式
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="using-an-api-gateway"></a>使用 API 网关
 
-使用多个客户端应用来设计和生成基于微服务的大型复杂应用程序时，[API 网关](http://microservices.io/patterns/apigateway.html) 是非常不错的方法。 这一服务可为某些微服务组提供单一入口点。 这类似于面向对象设计的[外观模式](https://en.wikipedia.org/wiki/Facade_pattern)，但在此情况下，它是分布式系统的一部分。 因为构建时考虑了客户端应用的需求，所以 API 网关模式有时也称为“用于前端的后端”[(BFF)](http://samnewman.io/patterns/architectural/bff/)。
+使用多个客户端应用来设计和生成基于微服务的大型复杂应用程序时，[API 网关](https://microservices.io/patterns/apigateway.html) 是非常不错的方法。 这一服务可为某些微服务组提供单一入口点。 这类似于面向对象设计的[外观模式](https://en.wikipedia.org/wiki/Facade_pattern)，但在此情况下，它是分布式系统的一部分。 因为构建时考虑了客户端应用的需求，所以 API 网关模式有时也称为“用于前端的后端”[(BFF)](https://samnewman.io/patterns/architectural/bff/)。
 
 图 4-13 演示自定义 API 网关如何适应基于微服务的体系结构。
 将使用面向多个不同客户端应用的单个自定义 API 网关服务，在该图中突出显示这一点非常重要。 这一事实可能存在很大风险，因为 API 网关服务将根据客户端应用的多种不同要求而不断增长和发展。 最终，它将因这些不同的需求而膨胀，实际上，它会类似于整体式应用程序或整体式服务。 正因如此，强烈建议将 API 网关拆分成多个服务或多个更小的 API 网关（例如每种外形规格一个网关）。
@@ -111,15 +111,15 @@ API 管理系统中提供的见解有助于理解 API 的使用方式与性能�
 ## <a name="additional-resources"></a>其他资源
 
 -   **Charles Richardson。Pattern: API Gateway / Backend for Front-End**（模式：API 网关/用于前端的后端）
-    [http://microservices.io/patterns/apigateway.html](http://microservices.io/patterns/apigateway.html)
+    [https://microservices.io/patterns/apigateway.html](https://microservices.io/patterns/apigateway.html)
 
 -   **Azure API 管理**
     [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
 
 -   **Udi Dahan.Service Oriented Composition**\（面向服务的组合）
-    [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+    [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters。Messaging and Microservices at GOTO 2016**GOTO 2016 消息和微服务（视频）[https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters。Messaging and Microservices at GOTO 2016**（GOTO 2016 的消息传递和微服务）视频[https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]

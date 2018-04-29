@@ -1,7 +1,7 @@
 ---
-title: "根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局"
-description: "适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局"
-keywords: "Docker, 微服务, ASP.NET, 容器"
+title: 根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局
+keywords: Docker, 微服务, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 55b643fa6f87e5e2b1f49ba201032df655195b46
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>根据微服务创建复合 UI，包括多个微服务生成的可视 UI 形状和布局
 
@@ -47,20 +47,20 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Composite UI using ASP.NET (Particular’s Workshop)（使用 ASP.NET（Particular 的 Workshop）复合 UI）**
+-   **Composite UI using ASP.NET (Particular’s Workshop)**（使用 ASP.NET（Particular 的 Workshop）的复合 UI）
     [http://go.particular.net/workshop-composite-ui-demo](http://go.particular.net/workshop-composite-ui-demo)
 
--   **Ruben Oostinga。The Monolithic Frontend in the Microservices Architecture（微服务体系结构中的整体式前端）**
+-   **Ruben Oostinga。The Monolithic Frontend in the Microservices Architecture**（微服务体系结构中的整体式前端）
     [http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
--   **Mauro Servienti。The secret of better UI composition**（实现更好的 UI 组合的秘密）
+-   **Mauro Servienti。The secret of better UI composition**（实现更好的 UI 组合的秘诀）
     [https://particular.net/blog/secret-of-better-ui-composition](https://particular.net/blog/secret-of-better-ui-composition)
 
 -   **Viktor Farcic。Including Front-End Web Components Into Microservices**（将前端 Web 组件包含到微服务中）
     [https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 -   **Managing Frontend in the Microservices Architecture**\（在微服务体系结构中管理前端）
-    [http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+    [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]
